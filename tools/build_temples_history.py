@@ -37,7 +37,8 @@ def build():
     assert len(chapters) >= 15
     assert len({c['art_id'] for c in chapters}) == len(chapters)
     # Check the whole inventory before modifying the public page.
-    for chapter in chapters:
+    pictures = [picture for chapter in chapters for picture in [chapter, *chapter.get('companions', [])]]
+    for chapter in pictures:
         art = ready[chapter['art_id']]
         assert art.get('reviewed') is True, f'{chapter["art_id"]}: direct visual review required'
         assert art['full'] in registered, f'{chapter["art_id"]}: required master artwork review entry missing'
@@ -47,7 +48,8 @@ def build():
             assert file.is_file(), str(file)
         with Image.open(ROOT / art['full']) as image:
             assert image.size == (art['width'], art['height']), chapter['art_id']
-        assert len(chapter['paragraphs']) >= 2 and chapter['sources']
+        assert chapter['sources']
+    assert all(len(chapter['paragraphs']) >= 2 for chapter in chapters)
     output = [BEGIN, '<section class="fc-deep-study fc-temple-history" id="temple-history" aria-labelledby="temple-history-title">',
       '<p class="fc-eyebrow">A journey through scripture and history</p>',
       '<h2 id="temple-history-title">The temple story: from the beginning to today</h2>',
@@ -71,6 +73,9 @@ def build():
           f'<figcaption><p class="fc-study-visual-label">Explore and study</p><h3>{title}</h3><p>{linked_prose(chapter["caption"])}</p>',
           '<p class="fc-study-visual-sources">' + ' '.join(source_link(s) for s in chapter['sources'][:3]) + '</p></figcaption></figure>'])
         output.extend(f'<p>{linked_prose(paragraph)}</p>' for paragraph in chapter['paragraphs'][1:])
+        for companion in chapter.get('companions', []):
+            extra = ready[companion['art_id']]
+            output.append(f'<figure class="fc-study-visual" id="picture-{esc(companion["art_id"])}" data-exclusive-artwork="{esc(companion["art_id"])}" data-topic-art="{esc(companion["art_id"])}" data-temple-companion="{esc(chapter["id"])}"><a href="../{esc(extra["full"])}" aria-label="Explore artwork: {esc(companion["title"])}" aria-haspopup="dialog" data-full-image-alt="{esc(companion["alt"])}"><img src="../{esc(extra["thumbnail"])}" srcset="../{esc(extra["thumbnail"])} 960w, ../{esc(extra["full"])} {extra["width"]}w" sizes="(max-width: 700px) calc(100vw - 36px), 640px" width="{extra["width"]}" height="{extra["height"]}" loading="lazy" decoding="async" alt="{esc(companion["alt"])}"></a><figcaption><p class="fc-study-visual-label">A companion view</p><h3>{esc(companion["title"])}</h3><p>{esc(companion["caption"])}</p><p class="fc-study-visual-sources">' + ' '.join(source_link(s) for s in companion['sources']) + '</p></figcaption></figure>')
         if len(chapter['sources']) > 3:
             output.append('<p class="fc-study-visual-sources">' + ' '.join(source_link(s) for s in chapter['sources'][3:]) + '</p>')
         if chapter.get('context_detail'):
@@ -81,6 +86,9 @@ def build():
             output.append('</details>')
         if chapter.get('reflection'):
             output.append('<details><summary>Pause and reflect</summary><p>' + esc(chapter['reflection']) + '</p></details>')
+        if chapter.get('related_study'):
+            related = chapter['related_study']
+            output.append('<p>' + esc(related['introduction']) + ' <a href="' + esc(related['url']) + '">' + esc(related['label']) + '</a></p>')
         next_id = 'temple-' + chapters[i]['id'] if i < len(chapters) else 'scripture-study'
         next_label = chapters[i]['title'] if i < len(chapters) else 'Study the meaning of temple worship'
         output.append(f'<div class="fc-actions"><a class="fc-button" href="#{esc(next_id)}">Continue: {esc(next_label)}</a><a class="fc-button" href="#temple-history">All chapters</a></div></section>')

@@ -12,6 +12,20 @@ FILES = {item['path']: item for item in CONTRACT['files']}
 VALUE = 'var(--fc-anchor-offset, 16px)'
 PATTERN = re.compile(r'(scroll-margin-top\s*:\s*)([^;}]+)')
 
+# Owner-authorized link audit: one continuous mouse/touch target for wrapped
+# search titles. Strip only this exact declaration; the historical contract
+# below must still reconstruct its original reviewed bytes.
+SEARCH_HITBOX = b'.fc-search-result h2 a {display:inline-block;'
+SEARCH_PRIOR = b'.fc-search-result h2 a {'
+SEARCH_VERSION = '20260929-result-hitbox-1'
+
+def before_search_hitbox(data):
+    if data.count(SEARCH_HITBOX) == 1:
+        prior = data.replace(SEARCH_HITBOX, SEARCH_PRIOR, 1)
+        if hashlib.sha256(prior).hexdigest() == FILES['site-search.css']['after_sha256']:
+            return prior
+    return data
+
 
 def historical_style_bytes(data):
     """Recover exact prior bytes only from an exact registered current file.
@@ -20,6 +34,7 @@ def historical_style_bytes(data):
     reviewed bytes. The mandatory current-file checks separately reject stale
     files and any mutation to the approved anchor-only transformation.
     """
+    data = before_search_hitbox(data)
     digest = hashlib.sha256(data).hexdigest()
     record = next((r for r in FILES.values() if r['after_sha256'] == digest), None)
     if not record:
@@ -47,6 +62,10 @@ def historical_style_bytes(data):
 
 def reviewed_anchor_style(name, data):
     record = FILES.get(name)
+    if name == 'site-search.css':
+        if data.count(SEARCH_HITBOX) != 1:
+            return False
+        data = before_search_hitbox(data)
     return bool(record and hashlib.sha256(data).hexdigest() == record['after_sha256']
                 and hashlib.sha256(historical_style_bytes(data)).hexdigest() == record['before_sha256'])
 
@@ -68,7 +87,8 @@ def check():
         if rel.startswith(('tools/', 'work/', 'node_modules/', '.git/')):
             continue
         for filename, version in re.findall(r'([\w-]+\.css)\?v=([\w.-]+)', path.read_text(encoding='utf-8')):
-            if filename in FILES and version != CONTRACT['version']:
+            expected = SEARCH_VERSION if filename == 'site-search.css' else CONTRACT['version']
+            if filename in FILES and version != expected:
                 errors.append('Stale anchor stylesheet: ' + rel + ': ' + filename)
     return errors
 
@@ -83,6 +103,9 @@ def self_test():
         assert not reviewed_anchor_style('unregistered.css', data), name
         assert not reviewed_anchor_style(name, historical_style_bytes(data)), name
     shared = (ROOT / 'site-system.css').read_bytes()
+    search = (ROOT / 'site-search.css').read_bytes()
+    assert not reviewed_anchor_style('site-search.css', search.replace(SEARCH_HITBOX, SEARCH_PRIOR, 1))
+    assert not reviewed_anchor_style('site-search.css', search.replace(b'display:inline-block;', b'display:inline;', 1))
     assert not reviewed_anchor_style('site-system.css', shared.replace(
         b'\nhtml { scroll-behavior: auto; }\n', b'\nhtml { scroll-behavior: smooth; }\n', 1))
     assert not reviewed_anchor_style('site-system.css', shared.replace(

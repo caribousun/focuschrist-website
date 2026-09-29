@@ -104,6 +104,8 @@ jobs:
           python tools/mobile_scene_qa.py
           python tools/art_study_enrichment_qa.py
           python tools/temples_history_qa.py
+          python tools/history_service_stories_qa.py
+          python tools/history_service_stories_qa.py --remote-previews
           python tools/desktop_hero_preservation_qa.py
           python tools/artwork_reference_repairs_qa.py
           python tools/illustrated_study_navigation_qa.py

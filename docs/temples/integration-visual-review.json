@@ -88,9 +88,9 @@
       "art_id": "temple-nephite-temple",
       "asset": "assets/page-art/temples/temple-nephite-temple-full.webp",
       "sha256": "04da3843d0818fe3826ae2ebb809600be825d841e76bc77381506aa040e61604",
-      "status": "PASS_WITH_SOURCE_BOUNDARY",
-      "note": "Modest sanctuary and village landscape contrast with Solomon. Must remain explicitly interpretive, without claiming identified geography, archaeological site or exact ancient plan.",
-      "historical_record": false
+      "status": "REJECTED_BY_OWNER",
+      "note": "Owner rejected prior generic sanctuary. Superseded by source-guided timber interpretation.",
+      "historical_record": true
     },
     {
       "art_id": "temple-apostles-gate",
@@ -235,6 +235,24 @@
       "status": "PASS",
       "note": "Compared full correction directly with previous full image: central facade clearer, visible round and arched window placement retained along with tower, buttress, scaffold and worker composition. Historical source-fit from prior architecture review retained; interpretive scene, not pixel-exact documentary reconstruction.",
       "historical_record": false
+    },
+    {
+      "art_id": "temple-nephite-temple",
+      "asset": "assets/page-art/temples/temple-nephite-timber-pattern-full.webp",
+      "sha256": "ef825a0535a5ec2ab7fe38c2f095ee9eef6508b52402e3ef96ac261c7e3f5c1d",
+      "source_sha256": "c00749c3cb5fca1e3ecbf1b4b6462195de4e7bb1719635fe6dde7a7c30a1bd2d",
+      "status": "PASS",
+      "note": "Full-pixel source comparison: finely worked timber sanctuary with long rectangular house, front porch, narrow upper windows and lower side chambers; no cement facade. Artistic interpretation of Solomon-pattern workmanship, not a known reconstruction or claim that Nephi built exclusively with wood. Exact materials, dimensions and appearance remain unknown.",
+      "historical_record": false
+    },
+    {
+      "art_id": "temple-nephite-approach",
+      "asset": "assets/page-art/temples/temple-nephite-approach-full.webp",
+      "sha256": "583b519d5fec1c1757a38dc1057d5272029a745e73ab59eab8f86a870d03bcb5",
+      "source_sha256": "b263a99082d77c7397009f12b26f9348e5e27070de9f998b41eea4876de6b019",
+      "status": "PASS",
+      "note": "Explicit owner-requested companion of same building; full pixels compared with close view and surrounding chapter context. Gentle rise is interpretive, not known hill or Noah tower. See nephi-surrounding-context-review-20260929.json.",
+      "historical_record": false
     }
   ],
   "record_policy": "Append-only review history: historical statuses apply only to their recorded hashes. current_assets below identifies integrated bytes and their current technical review; rejected variants remain historical and are not approved by later records.",
@@ -304,10 +322,10 @@
     },
     {
       "art_id": "temple-nephite-temple",
-      "asset": "assets/page-art/temples/temple-nephite-temple-full.webp",
-      "sha256": "04da3843d0818fe3826ae2ebb809600be825d841e76bc77381506aa040e61604",
-      "status": "PASS_WITH_SOURCE_BOUNDARY",
-      "review_record_index": 10
+      "asset": "assets/page-art/temples/temple-nephite-timber-pattern-full.webp",
+      "sha256": "ef825a0535a5ec2ab7fe38c2f095ee9eef6508b52402e3ef96ac261c7e3f5c1d",
+      "status": "PASS",
+      "review_record_index": 28
     },
     {
       "art_id": "temple-pioneer-temples",
@@ -378,6 +396,16 @@
       "sha256": "76fb9473d2b48484f58ab822da8d05505e2d29b37953eb39331033401a9f5a33",
       "status": "PASS",
       "review_record_index": 6
+    },
+    {
+      "art_id": "temple-nephite-approach",
+      "asset": "assets/page-art/temples/temple-nephite-approach-full.webp",
+      "sha256": "583b519d5fec1c1757a38dc1057d5272029a745e73ab59eab8f86a870d03bcb5",
+      "source_sha256": "b263a99082d77c7397009f12b26f9348e5e27070de9f998b41eea4876de6b019",
+      "status": "PASS",
+      "note": "Explicit owner-requested companion of same building; full pixels compared with close view and surrounding chapter context. Gentle rise is interpretive, not known hill or Noah tower. See nephi-surrounding-context-review-20260929.json.",
+      "historical_record": false,
+      "review_record_index": 29
     }
   ]
 }

@@ -1,0 +1,2170 @@
+{
+  "reviewer": "Fermi",
+  "date": "2026-09-29",
+  "base_release_commit": "5280c670f4d2941d7ec494a38659cae8d5dd9452",
+  "preview": "http://localhost:4187",
+  "scope": "45 canonical main/Answers pages; Newton separately owns 76 Jesus routes. Live checkout includes concurrent new stories; this is not a deployment-byte assertion.",
+  "hosted_baseline": {
+    "run": 36642983758,
+    "result": "75 successful steps including canonical desktop1366, phone390, narrow320 double-text presentation"
+  },
+  "source_summary": {
+    "pages": 45,
+    "internal_links_and_fragments": 2655,
+    "local_image_sources": 874,
+    "missing_local_destinations_fragments_assets": 0,
+    "unique_external_urls_inventoried": 1279,
+    "priority_external_urls_checked": 87,
+    "church_media_http200_with_matching_titles": 72,
+    "comeuntochrist_browser_verified_after_http403": 6,
+    "youtube_page_http200": 9,
+    "youtube_videos_and_shorts_oembed_verified": 13,
+    "other_external_urls": "All1279 fullURLs now covered by fragment-deduplicated bounded reachability pass; seeexternal-destination-audit.json. Two providerchallenges remain unverified; one confirmed404 repaired."
+  },
+  "manual_interactions": [
+    "Ask reviewed Who is Jesus Christ suggestion returned relevant answer/sources/follow-up",
+    "Phone search temples returned Temple top result and Enter opened its correct page",
+    "Phone menu opened with contained scrolling navigation"
+  ],
+  "open_findings": [
+    {
+      "id": "search-wrapped-anchor-gap",
+      "status": "repaired; Fermi and Newton independently verified actual390px mouse navigation and exact guard",
+      "evidence": "390px Temple result inline anchor wraps over two boxes with3.15px gap; mouse center click misses while Enter navigates",
+      "proposed_fix": "display:inline-block on result title link; exact cache propagation and regression",
+      "repair": "site-search.css result h2 anchor inline-block;123public cache consumers; reversible exact-byte guard and negative fixtures"
+    },
+    {
+      "id": "jane-panting-invalid-language",
+      "status": "repaired; correct official record browser verified",
+      "original": "https://history.churchofjesuschrist.org/chd/individual/jane-panting-1855?lang=en",
+      "replacement": "https://history.churchofjesuschrist.org/chd/individual/jane-panting-1855",
+      "evidence": "OriginalHTTP404 and browser404. Replacement followed official ElizabethCrook traveling-group link and displayed Jane1855–1939 and Williecompanyage1."
+    }
+  ],
+  "gallery_repair": {
+    "card_count": 39,
+    "widths_checked": [
+      1440,
+      1200,
+      1000,
+      820,
+      768,
+      700,
+      600,
+      500,
+      390,
+      320
+    ],
+    "maximum_symmetry_difference_px": 0.026,
+    "overflow": false,
+    "card_width_preserved": true,
+    "independent_reviewer": "Newton",
+    "independent_screenshots": [
+      1440,
+      768,
+      390,
+      320
+    ]
+  },
+  "limits": [
+    "Opening screenshots are not every-pixel or every-interaction manual coverage.",
+    "Long full-page screenshot backend repeats some tall regions and may omit lazy offscreen paint; these are not called missing images.",
+    "Source checks establish existence, not every destination semantic meaning.",
+    "Existing duplicate/identity/source/runtime controls and hosted profile coverage are separate evidence.",
+    "New historical story integration and Nephi revision have separate parent/Temple Build review."
+  ],
+  "pages": [
+    {
+      "page": "index.html",
+      "source_snapshot_sha256": "e726020f438beca02713eed8699ccd86d35b71630d1f521964f80b95a57046d3",
+      "internal_link_count": 54,
+      "local_image_count": 14,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "additional full-page screenshots inspected; lazy offscreen painting and tall screenshot stitching limit completeness",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "ask.html",
+      "source_snapshot_sha256": "2c7674291abaff8d0a6ff47d017fd0611d67f49631487483e3c000fb278c225c",
+      "internal_link_count": 35,
+      "local_image_count": 7,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "additional full-page screenshots inspected; lazy offscreen painting and tall screenshot stitching limit completeness",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "answers.html",
+      "source_snapshot_sha256": "11a6aa61766bb625732cb5097afaf6c3c90ddc25f929425f9d8a9c2760220ce3",
+      "internal_link_count": 103,
+      "local_image_count": 12,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "additional full-page screenshots inspected; lazy offscreen painting and tall screenshot stitching limit completeness",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "watch.html",
+      "source_snapshot_sha256": "4889ed9a4fc50e172bffc935f60a216216f16b6b1f2690f69a71fb2bc90a2422",
+      "internal_link_count": 83,
+      "local_image_count": 22,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "additional full-page screenshots inspected; lazy offscreen painting and tall screenshot stitching limit completeness",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "art.html",
+      "source_snapshot_sha256": "d1a44ce0fc6c4634f053cdfab512c13cb2c2adc48db4b1351dcc92c93249eb76",
+      "internal_link_count": 35,
+      "local_image_count": 44,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "additional full-page screenshots inspected; lazy offscreen painting and tall screenshot stitching limit completeness",
+      "confirmed_visual_defects": [
+        "art-final-row-left-aligned: repaired and independently reviewed"
+      ]
+    },
+    {
+      "page": "missionary.html",
+      "source_snapshot_sha256": "bca6c7b0120b75001059b20189cefeb908a1eb1bf534613722dfde4c93349f6c",
+      "internal_link_count": 48,
+      "local_image_count": 14,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "additional full-page screenshots inspected; lazy offscreen painting and tall screenshot stitching limit completeness",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "church-history.html",
+      "source_snapshot_sha256": "2caf81e1a7e04ad4e8128aace3b1725f9202dcd9cc8502ba4e7fb86001ff295e",
+      "internal_link_count": 85,
+      "local_image_count": 21,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "additional full-page screenshots inspected; lazy offscreen painting and tall screenshot stitching limit completeness",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "come-follow-me.html",
+      "source_snapshot_sha256": "1d033157a69aee3c4a3aed62938b5f02602d9920ef4453f437f4ce3388f07e06",
+      "internal_link_count": 59,
+      "local_image_count": 19,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "additional full-page screenshots inspected; lazy offscreen painting and tall screenshot stitching limit completeness",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "pioneers.html",
+      "source_snapshot_sha256": "aa4e5b2c8a80b1a49735a1e87bb9d1fe7a827539befdb779d65cb8bf21a05314",
+      "internal_link_count": 74,
+      "local_image_count": 33,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "additional full-page screenshots inspected; lazy offscreen painting and tall screenshot stitching limit completeness",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "about.html",
+      "source_snapshot_sha256": "1d8dd07c918edf467933f95ea0a3ee62fa01096dc91998d229d25d3b0fba8682",
+      "internal_link_count": 26,
+      "local_image_count": 2,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "not manually inspected in full",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "answers/jesus-christ-latter-day-saint-beliefs.html",
+      "source_snapshot_sha256": "6d202abdb31970d7b3ddca5f36681b299462aa955a272271803a99295bfd6524",
+      "internal_link_count": 89,
+      "local_image_count": 40,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "not manually inspected in full",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "answers/are-latter-day-saints-christian.html",
+      "source_snapshot_sha256": "10900baa70874e6b46f7113c1c01bd2eb5927056750e41d7fb1dbf1b3e002e75",
+      "internal_link_count": 40,
+      "local_image_count": 9,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "not manually inspected in full",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "answers/what-is-the-book-of-mormon.html",
+      "source_snapshot_sha256": "aa7d4c0802953250becea76129b2b641aa6dd87a687cb1141fb077dceb173bb1",
+      "internal_link_count": 142,
+      "local_image_count": 68,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "not manually inspected in full",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "answers/why-latter-day-saints-build-temples.html",
+      "source_snapshot_sha256": "eb0c60e5610fbc17c4d6f45790a0b8271e9661ad1fd0b21875fd23bb78f5f62f",
+      "internal_link_count": 129,
+      "local_image_count": 31,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "not manually inspected in full",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "answers/what-happens-after-death.html",
+      "source_snapshot_sha256": "9940de9549751d932688f6dbf5121653204332c08d267c6c2385204802a75136",
+      "internal_link_count": 85,
+      "local_image_count": 38,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "not manually inspected in full",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "answers/who-was-joseph-smith.html",
+      "source_snapshot_sha256": "ea34b3888d6b4e2fb75896cfedb958b1f803d005496af33e70df9c06ba37e5dd",
+      "internal_link_count": 58,
+      "local_image_count": 12,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "not manually inspected in full",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "answers/prayer-and-personal-revelation.html",
+      "source_snapshot_sha256": "aec6011cfb2375e96db9c684ae63bcbc33897f07e1744557949323cfd20a6d19",
+      "internal_link_count": 48,
+      "local_image_count": 11,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "not manually inspected in full",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+      "source_snapshot_sha256": "4312764533fe2e4bcce1e506aaabf75b1f04db59ccd74ce8a47484378a480d8e",
+      "internal_link_count": 57,
+      "local_image_count": 24,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "not manually inspected in full",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "answers/why-families-are-important.html",
+      "source_snapshot_sha256": "115a1bd2143f54b81386ef1f5d106e84637ba6e5636100e8bf3b42760bc48ec1",
+      "internal_link_count": 48,
+      "local_image_count": 11,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "not manually inspected in full",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "answers/what-is-eternal-marriage.html",
+      "source_snapshot_sha256": "a485e3e90c6feac1e14072903bec3c028fbcf3dbff469ecc3cfa014a0532ec67",
+      "internal_link_count": 47,
+      "local_image_count": 14,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "not manually inspected in full",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "answers/bible-and-book-of-mormon-together.html",
+      "source_snapshot_sha256": "3f38d89b8ad1e25129d4af1d90be8b4a81246a87a06d7ca65b4b4b5fe85f7d3b",
+      "internal_link_count": 64,
+      "local_image_count": 24,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "not manually inspected in full",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "answers/faith-in-jesus-christ-during-trials.html",
+      "source_snapshot_sha256": "103c2cbe298547e8373851d3dcc614915567d084eb9f7ab335e37c76dc34c9ee",
+      "internal_link_count": 54,
+      "local_image_count": 14,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "not manually inspected in full",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "art-study/the-living-christ.html",
+      "source_snapshot_sha256": "6eb83de081c621afc3cf51822bfd73bb78d748631f0a8ba842bafe22cac46547",
+      "internal_link_count": 40,
+      "local_image_count": 7,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "not manually inspected in full",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "art-study/the-good-shepherd.html",
+      "source_snapshot_sha256": "f6bae866674262b1431b0ccc3717a52c435724ae90d86cf7335351222d7e187d",
+      "internal_link_count": 41,
+      "local_image_count": 8,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "not manually inspected in full",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "art-study/suffer-the-little-children.html",
+      "source_snapshot_sha256": "a0e90a8867c47011ab6b13fe0979884a0244e60c55b16b473b1e17851645a6ea",
+      "internal_link_count": 41,
+      "local_image_count": 8,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "not manually inspected in full",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "art-study/be-still.html",
+      "source_snapshot_sha256": "8cb61dc8d458c0caa18b7e7829116a45653bcec15636671f90e4668d1159809f",
+      "internal_link_count": 41,
+      "local_image_count": 8,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "not manually inspected in full",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "answers/death-of-a-child.html",
+      "source_snapshot_sha256": "d9b4b50559b0efc5bcf36d851ab19b1b15cf7fd761c9aaeb2b2c817c1d371588",
+      "internal_link_count": 44,
+      "local_image_count": 10,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "not manually inspected in full",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "answers/divorce-and-faith.html",
+      "source_snapshot_sha256": "7711d2bb7cf0c4df5cf109a2e2cc9966a92e23e6cb196ce9db9557a64a9c1442",
+      "internal_link_count": 49,
+      "local_image_count": 13,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "not manually inspected in full",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "general-conference.html",
+      "source_snapshot_sha256": "20e418c67085fa7df49f796d648d1d94320866f37f9a99208466b27e53c3b529",
+      "internal_link_count": 48,
+      "local_image_count": 63,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "not manually inspected in full",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "answers/grief-and-faith.html",
+      "source_snapshot_sha256": "9d501792037205013e3c40c01787b85dd9093fd05e3e9b2ab3fcbd44dee1631b",
+      "internal_link_count": 44,
+      "local_image_count": 11,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "not manually inspected in full",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "answers/stand-forever.html",
+      "source_snapshot_sha256": "3930e93a17bc1a1b921545e4c23cc3cc43feea2b7cddad07f0b8c435826d4a98",
+      "internal_link_count": 46,
+      "local_image_count": 13,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "not manually inspected in full",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "answers/god-our-heavenly-father.html",
+      "source_snapshot_sha256": "178fa8feefb355e6ffba8c00e517b707fef8fd18d416130d4b9dabe66a80effe",
+      "internal_link_count": 72,
+      "local_image_count": 13,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "not manually inspected in full",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "answers/restored-church-of-jesus-christ.html",
+      "source_snapshot_sha256": "4b4fcc4765c51e834bab95eafd1155ced3eb1b76894f02af8bb784bb364305b7",
+      "internal_link_count": 52,
+      "local_image_count": 9,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "not manually inspected in full",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "art-gallery.html",
+      "source_snapshot_sha256": "10607e39b35d3a12b33d5e48a54c8ae43dce2e5417a5e61dad994b73a09b2c7e",
+      "internal_link_count": 21,
+      "local_image_count": 0,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "not manually inspected in full",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "book-of-mormon-evidences.html",
+      "source_snapshot_sha256": "e49b9cc4493b95b4a2b4d042f9ea2fd050fbe6b449e462d4ff7cdf273aad23e1",
+      "internal_link_count": 91,
+      "local_image_count": 43,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "not manually inspected in full",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "joseph-smith-likeness.html",
+      "source_snapshot_sha256": "6a4d8cb817cb84bd95ad667d9b88d7ae55fb1509e338527d24bd03e1675f30ce",
+      "internal_link_count": 42,
+      "local_image_count": 11,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "not manually inspected in full",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "search.html",
+      "source_snapshot_sha256": "9d4ccbf91b93615da7bbe931e461943e4e692b177ef66da8868cf4a1bd6536de",
+      "internal_link_count": 23,
+      "local_image_count": 0,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "not manually inspected in full",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "atonement.html",
+      "source_snapshot_sha256": "5e2fa61e923b91ed2a8583a9fe1cb497eeebe81b5108ef6cba39a2ada20e55fd",
+      "internal_link_count": 101,
+      "local_image_count": 46,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "not manually inspected in full",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "birth-of-christ.html",
+      "source_snapshot_sha256": "b6c18768f058b04a9d28d25db92f508291180d44ce83e1b99e5abbc93037fbee",
+      "internal_link_count": 67,
+      "local_image_count": 36,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "not manually inspected in full",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "answers/aaronic-priesthood-restoration.html",
+      "source_snapshot_sha256": "7fd57e1f15dd76ba20e89fdfe24527b4d6c70d265c2b65b347462eb1a1f481e2",
+      "internal_link_count": 46,
+      "local_image_count": 10,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "not manually inspected in full",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "answers/melchizedek-priesthood-restoration.html",
+      "source_snapshot_sha256": "f9d27aa9a4b11ed301e555efd658267abc904fbb42dd6c46df3431ec62e41c4d",
+      "internal_link_count": 46,
+      "local_image_count": 10,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "not manually inspected in full",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "answers/settle-this-in-your-hearts.html",
+      "source_snapshot_sha256": "35d9c8391aec6bcbb3d6ba601cbfc8a9e9feb664ef286b3051ccf961c90abeb2",
+      "internal_link_count": 71,
+      "local_image_count": 23,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "not manually inspected in full",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "answers/abrahamic-covenant.html",
+      "source_snapshot_sha256": "a92f0e83ada977e7d49d68b693890b198e06a41d8778f53f83a7326cb5994ec2",
+      "internal_link_count": 51,
+      "local_image_count": 13,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "not manually inspected in full",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "answers/holy-ghost.html",
+      "source_snapshot_sha256": "85191c82be558a677a25beece137e98de88e0cdc726d322d8a793f15e679dc9a",
+      "internal_link_count": 49,
+      "local_image_count": 16,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "not manually inspected in full",
+      "confirmed_visual_defects": []
+    },
+    {
+      "page": "answers/plan-of-salvation.html",
+      "source_snapshot_sha256": "c4e99370d89a519c06e570054d54380ea225664128637bded3ba2c54be97d353",
+      "internal_link_count": 66,
+      "local_image_count": 19,
+      "desktop_opening": "manually inspected at 1440x1000",
+      "phone_opening": "manually inspected at 390x844",
+      "long_page_composition": "not manually inspected in full",
+      "confirmed_visual_defects": []
+    }
+  ],
+  "priority_external_results": [
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2018-01-0010-peace-in-christ?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2018-01-0010-peace-in-christ?lang=eng",
+      "title": "Peace in Christ",
+      "refs": [
+        {
+          "page": "index.html",
+          "label": "▶"
+        },
+        {
+          "page": "index.html",
+          "label": "Peace in Christ"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2020-07-1020-god-wants-you-to-pray?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2020-07-1020-god-wants-you-to-pray?lang=eng",
+      "title": "God Wants You to Pray",
+      "refs": [
+        {
+          "page": "ask.html",
+          "label": "▶"
+        },
+        {
+          "page": "ask.html",
+          "label": "God Wants You to Pray"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2025-11-prayer-changed-my-life-forever?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2025-11-prayer-changed-my-life-forever?lang=eng",
+      "title": "Love, Share, and Invite: Prayer Changed My Life Forever",
+      "refs": [
+        {
+          "page": "ask.html",
+          "label": "▶"
+        },
+        {
+          "page": "ask.html",
+          "label": "Love, Share, and Invite: Prayer Changed My Life Forever"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2023-07-0070-embrace-faith-spread-love-and-change-lives?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2023-07-0070-embrace-faith-spread-love-and-change-lives?lang=eng",
+      "title": "Embrace Faith, Spread Love, and Change Lives",
+      "refs": [
+        {
+          "page": "answers.html",
+          "label": "▶"
+        },
+        {
+          "page": "answers.html",
+          "label": "Embrace Faith, Spread Love, and Change Lives"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2024-02-0110-jesus-christ-brings-hope-and-healing-for-us?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2024-02-0110-jesus-christ-brings-hope-and-healing-for-us?lang=eng",
+      "title": "Jesus Christ Brings Hope and Healing for Us",
+      "refs": [
+        {
+          "page": "answers.html",
+          "label": "▶"
+        },
+        {
+          "page": "answers.html",
+          "label": "Jesus Christ Brings Hope and Healing for Us"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2022-07-0100-jesus-christ-appears-in-the-ancient-americas-3-nephi-8-11?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2022-07-0100-jesus-christ-appears-in-the-ancient-americas-3-nephi-8-11?lang=eng",
+      "title": "Jesus Christ Appears in the Ancient Americas | 3 Nephi 8–11",
+      "refs": [
+        {
+          "page": "watch.html",
+          "label": "▶ Official Book of Mormon video"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2020-02-4100-because-of-him-easter-video?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2020-02-4100-because-of-him-easter-video?lang=eng",
+      "title": "Because of Him—Easter Video",
+      "refs": [
+        {
+          "page": "watch.html",
+          "label": "▶ Official Church video"
+        },
+        {
+          "page": "watch.html",
+          "label": "Because of Him—Easter Video"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2011-10-0021-jesus-is-resurrected?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2011-10-0021-jesus-is-resurrected?lang=eng",
+      "title": "Jesus Is Resurrected",
+      "refs": [
+        {
+          "page": "watch.html",
+          "label": "▶ Official Church video"
+        },
+        {
+          "page": "watch.html",
+          "label": "Jesus Is Resurrected"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2022-07-0510-jesus-christ-has-compassion-and-heals-the-people-3-nephi-171-10?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2022-07-0510-jesus-christ-has-compassion-and-heals-the-people-3-nephi-171-10?lang=eng",
+      "title": "Jesus Christ Has Compassion and Heals the People | 3 Nephi 17:1–10",
+      "refs": [
+        {
+          "page": "watch.html",
+          "label": "▶ Official Church video"
+        },
+        {
+          "page": "watch.html",
+          "label": "Jesus Christ Has Compassion and Heals the People | 3 Nephi 17:1–10"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2022-07-0500-jesus-christ-performs-miracles-among-the-people-of-nephi-3-nephi-17?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2022-07-0500-jesus-christ-performs-miracles-among-the-people-of-nephi-3-nephi-17?lang=eng",
+      "title": "Jesus Christ and Angels Minister with Compassion | 3 Nephi 17",
+      "refs": [
+        {
+          "page": "watch.html",
+          "label": "▶ Official Church video"
+        },
+        {
+          "page": "watch.html",
+          "label": "Jesus Christ and Angels Minister with Compassion | 3 Nephi 17"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2020-02-2001-hearhim-listen-to-the-voice-of-jesus-christ?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2020-02-2001-hearhim-listen-to-the-voice-of-jesus-christ?lang=eng",
+      "title": "#HearHim: Listen to the Voice of Jesus Christ",
+      "refs": [
+        {
+          "page": "watch.html",
+          "label": "▶ Official Church video"
+        },
+        {
+          "page": "watch.html",
+          "label": "#HearHim: Listen to the Voice of Jesus Christ"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2024-04-1050-alexander-dushku?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2024-04-1050-alexander-dushku?lang=eng",
+      "title": "Pillars and Rays",
+      "refs": [
+        {
+          "page": "watch.html",
+          "label": "▶ Official Church video"
+        },
+        {
+          "page": "watch.html",
+          "label": "Pillars and Rays"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2014-07-0006-the-hope-of-gods-light?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2014-07-0006-the-hope-of-gods-light?lang=eng",
+      "title": "The Hope of God&#x27;s Light",
+      "refs": [
+        {
+          "page": "watch.html",
+          "label": "▶ Official Church video"
+        },
+        {
+          "page": "watch.html",
+          "label": "The Hope of God's Light"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2010-05-0012-good-things-to-come?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2010-05-0012-good-things-to-come?lang=eng",
+      "title": "Good Things to Come",
+      "refs": [
+        {
+          "page": "watch.html",
+          "label": "▶ Official Church video"
+        },
+        {
+          "page": "watch.html",
+          "label": "Good Things to Come"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2014-11-0010-the-refiners-fire?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2014-11-0010-the-refiners-fire?lang=eng",
+      "title": "The Refiner&#x27;s Fire",
+      "refs": [
+        {
+          "page": "watch.html",
+          "label": "▶ Official Church video"
+        },
+        {
+          "page": "watch.html",
+          "label": "The Refiner's Fire"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2022-10-2030-kristin-yee?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2022-10-2030-kristin-yee?lang=eng",
+      "title": "Beauty for Ashes: The Healing Path of Forgiveness",
+      "refs": [
+        {
+          "page": "watch.html",
+          "label": "▶ Official Church video"
+        },
+        {
+          "page": "watch.html",
+          "label": "Beauty for Ashes: The Healing Path of Forgiveness"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2010-07-0004-the-restoration?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2010-07-0004-the-restoration?lang=eng",
+      "title": "The Restoration",
+      "refs": [
+        {
+          "page": "watch.html",
+          "label": "▶ Official Church video"
+        },
+        {
+          "page": "watch.html",
+          "label": "The Restoration"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2017-01-0100-ask-of-god-joseph-smiths-first-vision?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2017-01-0100-ask-of-god-joseph-smiths-first-vision?lang=eng",
+      "title": "Ask of God: Joseph Smith&#x27;s First Vision",
+      "refs": [
+        {
+          "page": "watch.html",
+          "label": "▶ Official Church video"
+        },
+        {
+          "page": "watch.html",
+          "label": "Ask of God: Joseph Smith's First Vision"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2016-12-0001-pioneer-journeys-more-than-a-trek?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2016-12-0001-pioneer-journeys-more-than-a-trek?lang=eng",
+      "title": "Pioneer Journeys—More Than a Trek",
+      "refs": [
+        {
+          "page": "watch.html",
+          "label": "▶ Official Church video"
+        },
+        {
+          "page": "watch.html",
+          "label": "Pioneer Journeys—More Than a Trek"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2023-10-0060-welcome-to-the-temple-video-president-nelson-elder-and-sister-christofferson?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2023-10-0060-welcome-to-the-temple-video-president-nelson-elder-and-sister-christofferson?lang=eng",
+      "title": "Welcome to the House of the Lord",
+      "refs": [
+        {
+          "page": "watch.html",
+          "label": "▶ Official Church video"
+        },
+        {
+          "page": "watch.html",
+          "label": "Welcome to the House of the Lord"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2016-04-2090-family-councils?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2016-04-2090-family-councils?lang=eng",
+      "title": "Family Councils",
+      "refs": [
+        {
+          "page": "watch.html",
+          "label": "▶ Official Church video"
+        },
+        {
+          "page": "watch.html",
+          "label": "Family Councils"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/i-feel-my-saviors-love?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/i-feel-my-saviors-love?lang=eng",
+      "title": "I Feel My Savior’s Love",
+      "refs": [
+        {
+          "page": "watch.html",
+          "label": "▶ Official Church video"
+        },
+        {
+          "page": "watch.html",
+          "label": "I Feel My Savior’s Love"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2011-10-0010-parable-of-the-good-samaritan?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2011-10-0010-parable-of-the-good-samaritan?lang=eng",
+      "title": "Parable of the Good Samaritan",
+      "refs": [
+        {
+          "page": "watch.html",
+          "label": "▶ Official Church video"
+        },
+        {
+          "page": "watch.html",
+          "label": "Parable of the Good Samaritan"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2016-02-0160-sharing-the-gospel?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2016-02-0160-sharing-the-gospel?lang=eng",
+      "title": "Sharing the Gospel",
+      "refs": [
+        {
+          "page": "watch.html",
+          "label": "▶ Official Church video"
+        },
+        {
+          "page": "watch.html",
+          "label": "Sharing the Gospel"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2016-06-0008-mitch-mobile?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2016-06-0008-mitch-mobile?lang=eng",
+      "title": "Mitch Mobile",
+      "refs": [
+        {
+          "page": "watch.html",
+          "label": "▶ Official Church video"
+        },
+        {
+          "page": "watch.html",
+          "label": "Mitch Mobile"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/comeuntochrist/believe/jesus/videos",
+      "status": 403,
+      "refs": [
+        {
+          "page": "watch.html",
+          "label": "Jesus Christ Videos Life, mission, teachings, Resurrection, and relevance of Jesus Christ."
+        }
+      ],
+      "classification": "blocked or unavailable; requires review",
+      "browser_readback": "Correct destination title, heading, and matching body verified in Chrome; raw HTTP403 is bot restriction, not evidence of a broken destination."
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/comeuntochrist/believe/bible/videos",
+      "status": 403,
+      "refs": [
+        {
+          "page": "watch.html",
+          "label": "Bible Videos Scripture stories centered on the Savior, His Apostles, miracles, and teachings."
+        }
+      ],
+      "classification": "blocked or unavailable; requires review",
+      "browser_readback": "Correct destination title, heading, and matching body verified in Chrome; raw HTTP403 is bot restriction, not evidence of a broken destination."
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/january-2025-worldwide-discussion-for-youth-look-unto-christ?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/january-2025-worldwide-discussion-for-youth-look-unto-christ?lang=eng",
+      "title": "January 2025 Worldwide Discussion for Youth - Look Unto Christ",
+      "refs": [
+        {
+          "page": "watch.html",
+          "label": "▶"
+        },
+        {
+          "page": "watch.html",
+          "label": "Look Unto Christ: January 2025 Discussion"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2025-10-look-unto-christ-worldwide-event-for-youth?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2025-10-look-unto-christ-worldwide-event-for-youth?lang=eng",
+      "title": "Look Unto Christ: Worldwide Event for Youth",
+      "refs": [
+        {
+          "page": "watch.html",
+          "label": "▶"
+        },
+        {
+          "page": "watch.html",
+          "label": "Look Unto Christ: Worldwide Event for Youth"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2013-06-1900-lively-hope-of-resurrection?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2013-06-1900-lively-hope-of-resurrection?lang=eng",
+      "title": "Lively Hope of Resurrection",
+      "refs": [
+        {
+          "page": "art.html",
+          "label": "▶"
+        },
+        {
+          "page": "art.html",
+          "label": "Lively Hope of Resurrection"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/comeuntochrist/love-share-invite",
+      "status": 403,
+      "refs": [
+        {
+          "page": "missionary.html",
+          "label": "Explore Love, Share, Invite"
+        }
+      ],
+      "classification": "blocked or unavailable; requires review",
+      "browser_readback": "Correct destination title, heading, and matching body verified in Chrome; raw HTTP403 is bot restriction, not evidence of a broken destination."
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/comeuntochrist/belong/share-goodness/what-to-expect-from-a-lesson-with-missionaries",
+      "status": 403,
+      "refs": [
+        {
+          "page": "missionary.html",
+          "label": "Know What to Expect"
+        }
+      ],
+      "classification": "blocked or unavailable; requires review",
+      "browser_readback": "Correct destination title, heading, and matching body verified in Chrome; raw HTTP403 is bot restriction, not evidence of a broken destination."
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2019-07-0010-missionaries-of-jesus-christ?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2019-07-0010-missionaries-of-jesus-christ?lang=eng",
+      "title": "What Do Missionaries Do?",
+      "refs": [
+        {
+          "page": "missionary.html",
+          "label": "▶"
+        },
+        {
+          "page": "missionary.html",
+          "label": "What Do Missionaries Do?"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2019-04-1040-dieter-f-uchtdorf?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2019-04-1040-dieter-f-uchtdorf?lang=eng",
+      "title": "Missionary Work: Sharing What Is in Your Heart",
+      "refs": [
+        {
+          "page": "missionary.html",
+          "label": "▶"
+        },
+        {
+          "page": "missionary.html",
+          "label": "Missionary Work: Sharing What Is in Your Heart"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2018-03-1000-days-of-harmony?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2018-03-1000-days-of-harmony?lang=eng",
+      "title": "Days of Harmony",
+      "refs": [
+        {
+          "page": "church-history.html",
+          "label": "▶"
+        },
+        {
+          "page": "church-history.html",
+          "label": "Days of Harmony"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2021-07-0050-sacred-grove-historic-site-part-1-the-first-vision?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2021-07-0050-sacred-grove-historic-site-part-1-the-first-vision?lang=eng",
+      "title": "Sacred Grove Historic Site, Part 1: The First Vision",
+      "refs": [
+        {
+          "page": "church-history.html",
+          "label": "▶"
+        },
+        {
+          "page": "church-history.html",
+          "label": "Sacred Grove Historic Site, Part 1: The First Vision"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=4ia3gYSvG8M",
+      "status": 200,
+      "final_url": "https://www.youtube.com/watch?v=4ia3gYSvG8M",
+      "title": "",
+      "refs": [
+        {
+          "page": "pioneers.html",
+          "label": "Listen: Come, Come, Ye Saints ↗"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=AGhxlPAHOg4",
+      "status": 200,
+      "final_url": "https://www.youtube.com/watch?v=AGhxlPAHOg4",
+      "title": "",
+      "refs": [
+        {
+          "page": "pioneers.html",
+          "label": "Listen: Dallyn Vail Bayles ↗"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2018-01-0070-finding-hope-through-the-resurrection-of-christ?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2018-01-0070-finding-hope-through-the-resurrection-of-christ?lang=eng",
+      "title": "Finding Hope Through the Resurrection of Christ",
+      "refs": [
+        {
+          "page": "about.html",
+          "label": "▶"
+        },
+        {
+          "page": "about.html",
+          "label": "Finding Hope Through the Resurrection of Christ"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2014-04-4060-president-thomas-s-monson?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2014-04-4060-president-thomas-s-monson?lang=eng",
+      "title": "Love—the Essence of the Gospel",
+      "refs": [
+        {
+          "page": "about.html",
+          "label": "▶"
+        },
+        {
+          "page": "about.html",
+          "label": "Love—the Essence of the Gospel"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2004-01-0001-finding-faith-in-christ?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2004-01-0001-finding-faith-in-christ?lang=eng",
+      "title": "Finding Faith in Christ",
+      "refs": [
+        {
+          "page": "answers/jesus-christ-latter-day-saint-beliefs.html",
+          "label": "▶"
+        },
+        {
+          "page": "answers/jesus-christ-latter-day-saint-beliefs.html",
+          "label": "Finding Faith in Christ"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2021-04-3050-dallin-h-oaks?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2021-04-3050-dallin-h-oaks?lang=eng",
+      "title": "What Has Our Savior Done for Us?",
+      "refs": [
+        {
+          "page": "answers/jesus-christ-latter-day-saint-beliefs.html",
+          "label": "▶"
+        },
+        {
+          "page": "answers/jesus-christ-latter-day-saint-beliefs.html",
+          "label": "What Has Our Savior Done for Us?"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2009-02-0007-are-we-christians?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2009-02-0007-are-we-christians?lang=eng",
+      "title": "Are We Christians?",
+      "refs": [
+        {
+          "page": "answers/are-latter-day-saints-christian.html",
+          "label": "▶"
+        },
+        {
+          "page": "answers/are-latter-day-saints-christian.html",
+          "label": "Are We Christians?"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2012-08-2490-believers-in-the-book-of-mormon?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2012-08-2490-believers-in-the-book-of-mormon?lang=eng",
+      "title": "Believers in the Book of Mormon",
+      "refs": [
+        {
+          "page": "answers/are-latter-day-saints-christian.html",
+          "label": "▶"
+        },
+        {
+          "page": "answers/are-latter-day-saints-christian.html",
+          "label": "Believers in the Book of Mormon"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2018-05-0500-what-is-the-book-of-mormon?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2018-05-0500-what-is-the-book-of-mormon?lang=eng",
+      "title": "What Is the Book of Mormon?",
+      "refs": [
+        {
+          "page": "answers/what-is-the-book-of-mormon.html",
+          "label": "▶"
+        },
+        {
+          "page": "answers/what-is-the-book-of-mormon.html",
+          "label": "What Is the Book of Mormon?"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/comeuntochrist/believe/book-of-mormon/another-testament-of-jesus-christ",
+      "status": 403,
+      "refs": [
+        {
+          "page": "answers/what-is-the-book-of-mormon.html",
+          "label": "The Book of Mormon: Another Testament of Jesus Christ"
+        },
+        {
+          "page": "answers/bible-and-book-of-mormon-together.html",
+          "label": "Another Testament of Jesus Christ"
+        }
+      ],
+      "classification": "blocked or unavailable; requires review",
+      "browser_readback": "Correct destination title, heading, and matching body verified in Chrome; raw HTTP403 is bot restriction, not evidence of a broken destination."
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/comeuntochrist/believe/book-of-mormon/how-the-bible-and-the-book-of-mormon-work-together",
+      "status": 403,
+      "refs": [
+        {
+          "page": "answers/what-is-the-book-of-mormon.html",
+          "label": "How the Bible and the Book of Mormon Work Together"
+        },
+        {
+          "page": "answers/bible-and-book-of-mormon-together.html",
+          "label": "How the Bible and the Book of Mormon Work Together"
+        }
+      ],
+      "classification": "blocked or unavailable; requires review",
+      "browser_readback": "Correct destination title, heading, and matching body verified in Chrome; raw HTTP403 is bot restriction, not evidence of a broken destination."
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2019-11-8000-temples-through-time?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2019-11-8000-temples-through-time?lang=eng",
+      "title": "Temples Through Time",
+      "refs": [
+        {
+          "page": "answers/why-latter-day-saints-build-temples.html",
+          "label": "▶"
+        },
+        {
+          "page": "answers/why-latter-day-saints-build-temples.html",
+          "label": "Temples Through Time"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2021-10-4070-russell-m-nelson?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2021-10-4070-russell-m-nelson?lang=eng",
+      "title": "The Temple and Your Spiritual Foundation",
+      "refs": [
+        {
+          "page": "answers/why-latter-day-saints-build-temples.html",
+          "label": "▶"
+        },
+        {
+          "page": "answers/why-latter-day-saints-build-temples.html",
+          "label": "The Temple and Your Spiritual Foundation"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2011-03-0001-joseph-smith-the-prophet-of-the-restoration?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2011-03-0001-joseph-smith-the-prophet-of-the-restoration?lang=eng",
+      "title": "Joseph Smith: The Prophet of the Restoration",
+      "refs": [
+        {
+          "page": "answers/who-was-joseph-smith.html",
+          "label": "▶"
+        },
+        {
+          "page": "answers/who-was-joseph-smith.html",
+          "label": "Joseph Smith: The Prophet of the Restoration"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2014-10-2030-elder-neil-l-andersen?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2014-10-2030-elder-neil-l-andersen?lang=eng",
+      "title": "Joseph Smith",
+      "refs": [
+        {
+          "page": "answers/who-was-joseph-smith.html",
+          "label": "▶"
+        },
+        {
+          "page": "answers/who-was-joseph-smith.html",
+          "label": "Joseph Smith"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2022-10-1040-dale-g-renlund?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2022-10-1040-dale-g-renlund?lang=eng",
+      "title": "A Framework for Personal Revelation",
+      "refs": [
+        {
+          "page": "answers/prayer-and-personal-revelation.html",
+          "label": "▶"
+        },
+        {
+          "page": "answers/prayer-and-personal-revelation.html",
+          "label": "A Framework for Personal Revelation"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2021-04-4090-russell-m-nelson?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2021-04-4090-russell-m-nelson?lang=eng",
+      "title": "Christ Is Risen; Faith in Him Will Move Mountains",
+      "refs": [
+        {
+          "page": "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+          "label": "▶"
+        },
+        {
+          "page": "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+          "label": "Christ Is Risen; Faith in Him Will Move Mountains"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2014-11-0024-wherefore-didst-thou-doubt?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2014-11-0024-wherefore-didst-thou-doubt?lang=eng",
+      "title": "Wherefore Didst Thou Doubt?",
+      "refs": [
+        {
+          "page": "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+          "label": "▶"
+        },
+        {
+          "page": "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+          "label": "Wherefore Didst Thou Doubt?"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2022-10-1020-dieter-f-uchtdorf?alang=eng&collectionId=1708f0e87f184f9e812608d5f51bdb13&lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2022-10-1020-dieter-f-uchtdorf?alang=eng&collectionId=1708f0e87f184f9e812608d5f51bdb13&lang=eng",
+      "title": "Jesus Christ Is the Strength of Youth",
+      "refs": [
+        {
+          "page": "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+          "label": "▶"
+        },
+        {
+          "page": "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+          "label": "Jesus Christ Is the Strength of Youth"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2025-06-look-unto-christ?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2025-06-look-unto-christ?lang=eng",
+      "title": "Look Unto Christ",
+      "refs": [
+        {
+          "page": "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+          "label": "▶"
+        },
+        {
+          "page": "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+          "label": "Look Unto Christ: Youth Music Festival"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/look-unto-christ-official-2025-theme-music-video?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/look-unto-christ-official-2025-theme-music-video?lang=eng",
+      "title": "Look Unto Christ | Official 2025 Theme Music Video",
+      "refs": [
+        {
+          "page": "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+          "label": "Listen to Look Unto Christ on the Church website"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2012-08-3100-bible-and-book-of-mormon?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2012-08-3100-bible-and-book-of-mormon?lang=eng",
+      "title": "Bible and Book of Mormon",
+      "refs": [
+        {
+          "page": "answers/bible-and-book-of-mormon-together.html",
+          "label": "▶"
+        },
+        {
+          "page": "answers/bible-and-book-of-mormon-together.html",
+          "label": "Bible and Book of Mormon"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2014-04-4050-elder-david-a-bednar?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2014-04-4050-elder-david-a-bednar?lang=eng",
+      "title": "Bear Up Their Burdens with Ease",
+      "refs": [
+        {
+          "page": "answers/faith-in-jesus-christ-during-trials.html",
+          "label": "▶"
+        },
+        {
+          "page": "answers/faith-in-jesus-christ-during-trials.html",
+          "label": "Bear Up Their Burdens with Ease"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2012-04-1070-president-henry-b-eyring?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2012-04-1070-president-henry-b-eyring?lang=eng",
+      "title": "Mountains to Climb",
+      "refs": [
+        {
+          "page": "answers/faith-in-jesus-christ-during-trials.html",
+          "label": "▶"
+        },
+        {
+          "page": "answers/faith-in-jesus-christ-during-trials.html",
+          "label": "Mountains to Climb"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2024-02-0140-a-powerful-testimony-of-the-resurrection-of-jesus-christ?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2024-02-0140-a-powerful-testimony-of-the-resurrection-of-jesus-christ?lang=eng",
+      "title": "A Powerful Testimony of the Resurrection of Jesus Christ",
+      "refs": [
+        {
+          "page": "art-study/the-living-christ.html",
+          "label": "▶"
+        },
+        {
+          "page": "art-study/the-living-christ.html",
+          "label": "A Powerful Testimony of the Resurrection of Jesus Christ"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/lcipl120p0u5px8t3ytuajgzevg2e5zdk31mdmqb?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/lcipl120p0u5px8t3ytuajgzevg2e5zdk31mdmqb?lang=eng",
+      "title": "He Is Risen! A Special 2025 Easter Season Message from the First Presidency",
+      "refs": [
+        {
+          "page": "art-study/the-living-christ.html",
+          "label": "▶"
+        },
+        {
+          "page": "art-study/the-living-christ.html",
+          "label": "He Is Risen! A Special 2025 Easter Season Message from the First Presidency"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2021-10-1040-ulisses-soares?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2021-10-1040-ulisses-soares?lang=eng",
+      "title": "The Savior’s Abiding Compassion",
+      "refs": [
+        {
+          "page": "art-study/the-good-shepherd.html",
+          "label": "▶"
+        },
+        {
+          "page": "art-study/the-good-shepherd.html",
+          "label": "The Savior’s Abiding Compassion"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2020-05-0140-president-nelson-blesses-children-with-the-lords-love?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2020-05-0140-president-nelson-blesses-children-with-the-lords-love?lang=eng",
+      "title": "President Nelson Blesses Children with the Lord’s Love",
+      "refs": [
+        {
+          "page": "art-study/suffer-the-little-children.html",
+          "label": "▶"
+        },
+        {
+          "page": "art-study/suffer-the-little-children.html",
+          "label": "President Nelson Blesses Children with the Lord’s Love"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2023-01-0020-are-you-really-there?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2023-01-0020-are-you-really-there?lang=eng",
+      "title": "Are You Really There?",
+      "refs": [
+        {
+          "page": "art-study/suffer-the-little-children.html",
+          "label": "▶"
+        },
+        {
+          "page": "art-study/suffer-the-little-children.html",
+          "label": "Are You Really There?"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2017-02-6700-principles-of-peace-prayer-princeofpeace?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2017-02-6700-principles-of-peace-prayer-princeofpeace?lang=eng",
+      "title": "Principles of Peace: Prayer #PrinceofPeace",
+      "refs": [
+        {
+          "page": "art-study/be-still.html",
+          "label": "▶"
+        },
+        {
+          "page": "art-study/be-still.html",
+          "label": "Principles of Peace: Prayer #PrinceofPeace"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2023-04-1070-henry-b-eyring?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2023-04-1070-henry-b-eyring?lang=eng",
+      "title": "Finding Personal Peace",
+      "refs": [
+        {
+          "page": "art-study/be-still.html",
+          "label": "▶"
+        },
+        {
+          "page": "art-study/be-still.html",
+          "label": "Finding Personal Peace"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=sdgI1E6WJdQ&list=PLhfh21X9suLd8AvrHpr2hrjOKXNUuXkrY",
+      "status": 200,
+      "final_url": "https://www.youtube.com/watch?v=sdgI1E6WJdQ&list=PLhfh21X9suLd8AvrHpr2hrjOKXNUuXkrY",
+      "title": "",
+      "refs": [
+        {
+          "page": "answers/stand-forever.html",
+          "label": "▶ Watch the trailer"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=dPnO2QEPrPg&list=PLhfh21X9suLd8AvrHpr2hrjOKXNUuXkrY",
+      "status": 200,
+      "final_url": "https://www.youtube.com/watch?v=dPnO2QEPrPg&list=PLhfh21X9suLd8AvrHpr2hrjOKXNUuXkrY",
+      "title": "",
+      "refs": [
+        {
+          "page": "answers/stand-forever.html",
+          "label": "Start with Episode 1"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=z32F-d_tsgg",
+      "status": 200,
+      "final_url": "https://www.youtube.com/watch?v=z32F-d_tsgg",
+      "title": "",
+      "refs": [
+        {
+          "page": "answers/god-our-heavenly-father.html",
+          "label": ""
+        },
+        {
+          "page": "answers/god-our-heavenly-father.html",
+          "label": "Stand Forever, Episode 29: Is There a God Who Is Our Father?"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=RFKePsgTNg0",
+      "status": 200,
+      "final_url": "https://www.youtube.com/watch?v=RFKePsgTNg0",
+      "title": "",
+      "refs": [
+        {
+          "page": "answers/god-our-heavenly-father.html",
+          "label": ""
+        },
+        {
+          "page": "answers/god-our-heavenly-father.html",
+          "label": "Overcome the World and Find Rest"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2020-04-4050-russell-m-nelson?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2020-04-4050-russell-m-nelson?lang=eng",
+      "title": "Hear Him",
+      "refs": [
+        {
+          "page": "answers/restored-church-of-jesus-christ.html",
+          "label": ""
+        },
+        {
+          "page": "answers/restored-church-of-jesus-christ.html",
+          "label": "Hear Him"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=APwBCEjvSJQ",
+      "status": 200,
+      "final_url": "https://www.youtube.com/watch?v=APwBCEjvSJQ",
+      "title": "",
+      "refs": [
+        {
+          "page": "answers/restored-church-of-jesus-christ.html",
+          "label": ""
+        },
+        {
+          "page": "answers/restored-church-of-jesus-christ.html",
+          "label": "Come, Join with Us"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2009-02-1012-episode-12-the-book-of-mormon-translation?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2009-02-1012-episode-12-the-book-of-mormon-translation?lang=eng",
+      "title": "Episode 12—The Book of Mormon Translation",
+      "refs": [
+        {
+          "page": "book-of-mormon-evidences.html",
+          "label": "▶"
+        },
+        {
+          "page": "book-of-mormon-evidences.html",
+          "label": "Episode 12—The Book of Mormon Translation"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2020-05-0290-the-book-of-mormon-is-tangible-evidence-of-the-restoration?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2020-05-0290-the-book-of-mormon-is-tangible-evidence-of-the-restoration?lang=eng",
+      "title": "The Book of Mormon Is Tangible Evidence of the Restoration",
+      "refs": [
+        {
+          "page": "book-of-mormon-evidences.html",
+          "label": "▶"
+        },
+        {
+          "page": "book-of-mormon-evidences.html",
+          "label": "The Book of Mormon Is Tangible Evidence of the Restoration"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2012-07-1020-the-title-page-and-translation-of-the-book-of-mormon?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2012-07-1020-the-title-page-and-translation-of-the-book-of-mormon?lang=eng",
+      "title": "The Title Page and Translation of the Book of Mormon",
+      "refs": [
+        {
+          "page": "book-of-mormon-evidences.html",
+          "label": "▶"
+        },
+        {
+          "page": "book-of-mormon-evidences.html",
+          "label": "The Title Page and Translation of the Book of Mormon"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2024-01-0730-samuel-prophecies-the-signs-of-christs-birth-and-death?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2024-01-0730-samuel-prophecies-the-signs-of-christs-birth-and-death?lang=eng",
+      "title": "Samuel Prophesies the Signs of Christ&#x27;s Birth and Death",
+      "refs": [
+        {
+          "page": "birth-of-christ.html",
+          "label": "▶"
+        },
+        {
+          "page": "birth-of-christ.html",
+          "label": "Samuel Prophesies the Signs of Christ's Birth and Death"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2019-09-0050-the-christ-child-a-nativity-story-lighttheworld?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2019-09-0050-the-christ-child-a-nativity-story-lighttheworld?lang=eng",
+      "title": "The Christ Child",
+      "refs": [
+        {
+          "page": "birth-of-christ.html",
+          "label": "▶"
+        },
+        {
+          "page": "birth-of-christ.html",
+          "label": "The Christ Child"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2012-08-3330-samuel-the-lamanites-prophecy-fulfilled?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2012-08-3330-samuel-the-lamanites-prophecy-fulfilled?lang=eng",
+      "title": "Samuel the Lamanite&#x27;s Prophecy Fulfilled",
+      "refs": [
+        {
+          "page": "birth-of-christ.html",
+          "label": "▶"
+        },
+        {
+          "page": "birth-of-christ.html",
+          "label": "Samuel the Lamanite's Prophecy Fulfilled"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2010-07-018-restoration-of-the-aaronic-priesthood?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2010-07-018-restoration-of-the-aaronic-priesthood?lang=eng",
+      "title": "Restoration of the Aaronic Priesthood",
+      "refs": [
+        {
+          "page": "answers/aaronic-priesthood-restoration.html",
+          "label": "▶"
+        },
+        {
+          "page": "answers/aaronic-priesthood-restoration.html",
+          "label": "Restoration of the Aaronic Priesthood"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2010-05-1130-restoration-of-the-priesthood?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2010-05-1130-restoration-of-the-priesthood?lang=eng",
+      "title": "Restoration of the Priesthood",
+      "refs": [
+        {
+          "page": "answers/aaronic-priesthood-restoration.html",
+          "label": "▶"
+        },
+        {
+          "page": "answers/aaronic-priesthood-restoration.html",
+          "label": "Restoration of the Priesthood"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2020-04-3060-dallin-h-oaks?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2020-04-3060-dallin-h-oaks?lang=eng",
+      "title": "The Melchizedek Priesthood and the Keys",
+      "refs": [
+        {
+          "page": "answers/melchizedek-priesthood-restoration.html",
+          "label": "▶"
+        },
+        {
+          "page": "answers/melchizedek-priesthood-restoration.html",
+          "label": "The Melchizedek Priesthood and the Keys"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2017-12-0130-the-restoration-of-the-priesthood-authority-and-organization?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2017-12-0130-the-restoration-of-the-priesthood-authority-and-organization?lang=eng",
+      "title": "The Restoration of the Priesthood Authority and Organization",
+      "refs": [
+        {
+          "page": "answers/melchizedek-priesthood-restoration.html",
+          "label": "▶"
+        },
+        {
+          "page": "answers/melchizedek-priesthood-restoration.html",
+          "label": "The Restoration of the Priesthood Authority and Organization"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://youtu.be/W23OZiA221Y",
+      "status": 200,
+      "final_url": "https://www.youtube.com/watch?v=W23OZiA221Y&feature=youtu.be",
+      "title": "",
+      "refs": [
+        {
+          "page": "answers/settle-this-in-your-hearts.html",
+          "label": "Watch the BYU Devotional"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2006-10-4060-elder-russell-m-nelson?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2006-10-4060-elder-russell-m-nelson?lang=eng",
+      "title": "The Gathering of Scattered Israel",
+      "refs": [
+        {
+          "page": "answers/abrahamic-covenant.html",
+          "label": "▶"
+        },
+        {
+          "page": "answers/abrahamic-covenant.html",
+          "label": "The Gathering of Scattered Israel"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/video/2024-04-1080-henry-b-eyring?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/video/2024-04-1080-henry-b-eyring?lang=eng",
+      "title": "All Will Be Well Because of Temple Covenants",
+      "refs": [
+        {
+          "page": "answers/abrahamic-covenant.html",
+          "label": "▶"
+        },
+        {
+          "page": "answers/abrahamic-covenant.html",
+          "label": "All Will Be Well Because of Temple Covenants"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=AGS45Fd9nmE",
+      "status": 200,
+      "final_url": "https://www.youtube.com/watch?v=AGS45Fd9nmE",
+      "title": "",
+      "refs": [
+        {
+          "page": "answers/holy-ghost.html",
+          "label": "Watch on theRisen YouTube channel"
+        }
+      ],
+      "classification": "reachable; content fit needs review"
+    }
+  ],
+  "youtube_metadata_results": [
+    {
+      "url": "https://www.youtube.com/shorts/OSgN-cSJOPs",
+      "status": 200,
+      "title": "You've Got This Because Jesus Christ Has Got You | Bradley R. Wilcox",
+      "author": "theRisen",
+      "refs": [
+        {
+          "page": "watch.html",
+          "label": "Watch You've Got This Because Jesus Christ Has Got You"
+        },
+        {
+          "page": "watch.html",
+          "label": "▶ Watch Short"
+        },
+        {
+          "page": "watch.html",
+          "label": "Open on YouTube →"
+        }
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/shorts/5g-I2nbz2d4",
+      "status": 200,
+      "title": "Joseph Smith: Faithful to the End | Elder Jeffrey R. Holland",
+      "author": "theRisen",
+      "refs": [
+        {
+          "page": "watch.html",
+          "label": "Watch Joseph Smith: Faithful to the End"
+        },
+        {
+          "page": "watch.html",
+          "label": "▶ Watch Short"
+        },
+        {
+          "page": "watch.html",
+          "label": "Open on YouTube →"
+        }
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/shorts/wRLfRFzUCEA",
+      "status": 200,
+      "title": "Joseph Smith: Called by God | Elder Lawrence E. Corbridge",
+      "author": "theRisen",
+      "refs": [
+        {
+          "page": "watch.html",
+          "label": "Watch Joseph Smith: Called by God"
+        },
+        {
+          "page": "watch.html",
+          "label": "▶ Watch Short"
+        },
+        {
+          "page": "watch.html",
+          "label": "Open on YouTube →"
+        }
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/shorts/V_-RkAMO1uU",
+      "status": 200,
+      "title": "You Are Loved | Dieter F. Uchtdorf",
+      "author": "theRisen",
+      "refs": [
+        {
+          "page": "watch.html",
+          "label": "Watch You Are Loved"
+        },
+        {
+          "page": "watch.html",
+          "label": "▶ Watch Short"
+        },
+        {
+          "page": "watch.html",
+          "label": "Open on YouTube →"
+        }
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=4ia3gYSvG8M",
+      "status": 200,
+      "title": "Come, Come, Ye Saints | The Tabernacle Choir",
+      "author": "The Tabernacle Choir at Temple Square",
+      "refs": [
+        {
+          "page": "pioneers.html",
+          "label": "Listen: Come, Come, Ye Saints ↗"
+        }
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=AGhxlPAHOg4",
+      "status": 200,
+      "title": "Savior Redeemer of My Soul - Dallyn Bayles, Jenny Oaks Baker & Lyceum Philharmonic, #Hallelujah",
+      "author": "Jenny Oaks Baker",
+      "refs": [
+        {
+          "page": "pioneers.html",
+          "label": "Listen: Dallyn Vail Bayles ↗"
+        }
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=sdgI1E6WJdQ&list=PLhfh21X9suLd8AvrHpr2hrjOKXNUuXkrY",
+      "status": 200,
+      "title": "\"Stand Forever\" Series | Official Trailer | Elder Lawrence E. Corbridge",
+      "author": "Scripture Central",
+      "refs": [
+        {
+          "page": "answers/stand-forever.html",
+          "label": "▶ Watch the trailer"
+        }
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=dPnO2QEPrPg&list=PLhfh21X9suLd8AvrHpr2hrjOKXNUuXkrY",
+      "status": 200,
+      "title": "\"Stand Forever\" Ep. 1 | Will You Stand, or Will You Go Away? | Elder Lawrence E. Corbridge",
+      "author": "Scripture Central",
+      "refs": [
+        {
+          "page": "answers/stand-forever.html",
+          "label": "Start with Episode 1"
+        }
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=z32F-d_tsgg",
+      "status": 200,
+      "title": "\"Stand Forever\" Ep. 29 | The Truth—Is There A God Who Is Our Father? | Elder Lawrence E. Corbridge",
+      "author": "Scripture Central",
+      "refs": [
+        {
+          "page": "answers/god-our-heavenly-father.html",
+          "label": ""
+        },
+        {
+          "page": "answers/god-our-heavenly-father.html",
+          "label": "Stand Forever, Episode 29: Is There a God Who Is Our Father?"
+        }
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=RFKePsgTNg0",
+      "status": 200,
+      "title": "Overcome the World and Find Rest | Russell M. Nelson | October 2022 General Conference",
+      "author": "General Conference of The Church of Jesus Christ",
+      "refs": [
+        {
+          "page": "answers/god-our-heavenly-father.html",
+          "label": ""
+        },
+        {
+          "page": "answers/god-our-heavenly-father.html",
+          "label": "Overcome the World and Find Rest"
+        }
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=APwBCEjvSJQ",
+      "status": 200,
+      "title": "Come, Join with Us",
+      "author": "The Church of Jesus Christ of Latter-day Saints",
+      "refs": [
+        {
+          "page": "answers/restored-church-of-jesus-christ.html",
+          "label": ""
+        },
+        {
+          "page": "answers/restored-church-of-jesus-christ.html",
+          "label": "Come, Join with Us"
+        }
+      ]
+    },
+    {
+      "url": "https://youtu.be/W23OZiA221Y",
+      "status": 200,
+      "title": "“Settle This in Your Hearts” | Neil L. Andersen | September 2026",
+      "author": "BYU Speeches",
+      "refs": [
+        {
+          "page": "answers/settle-this-in-your-hearts.html",
+          "label": "Watch the BYU Devotional"
+        }
+      ]
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=AGS45Fd9nmE",
+      "status": 200,
+      "title": "David A. Bednar | Is it the Holy Ghost or Me?",
+      "author": "theRisen",
+      "refs": [
+        {
+          "page": "answers/holy-ghost.html",
+          "label": "Watch on theRisen YouTube channel"
+        }
+      ]
+    }
+  ],
+  "external_final_report": "external-destination-audit.json",
+  "affected_validation": [
+    "site_search_qa PASS120publicpages/2017destinations after final rebuild",
+    "site_search_runtime_qa PASS",
+    "anchor_alignment_qa --self-test PASS",
+    "sitewide_artwork_review_qa --self-test PASS",
+    "artwork_reference_repairs_qa PASS including6negativefixtures",
+    "artwork_reference_runtime_qa PASS",
+    "git diff --check PASS"
+  ]
+}

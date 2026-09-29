@@ -1932,18 +1932,18 @@
     {
       "title": "A temple in the Book of Mormon record",
       "category": "Gospel Studies",
-      "thumbnail": "/assets/page-art/temples/temple-nephite-temple-960.webp",
-      "fullImage": "/assets/page-art/temples/temple-nephite-temple-full.webp",
-      "alt": "A modest ancient sanctuary stands among simple buildings and cultivated land.",
-      "id": "art-31061208bee9",
+      "thumbnail": "/assets/page-art/temples/temple-nephite-timber-pattern-960.webp",
+      "fullImage": "/assets/page-art/temples/temple-nephite-timber-pattern-full.webp",
+      "alt": "A finely worked timber sanctuary has a long central house, front porch, and lower side chambers.",
+      "id": "art-f649fb2784ad",
       "occurrences": [
         {
-          "id": "source-69c36b57a634",
+          "id": "source-2272f3ba1871",
           "page": "/answers/why-latter-day-saints-build-temples.html",
           "pageTitle": "Temples",
           "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"../assets/page-art/temples/temple-nephite-temple-full.webp\"]:has(img[src=\"../assets/page-art/temples/temple-nephite-temple-960.webp\"])",
+          "selector": "a[href=\"../assets/page-art/temples/temple-nephite-timber-pattern-full.webp\"]:has(img[src=\"../assets/page-art/temples/temple-nephite-timber-pattern-960.webp\"])",
           "title": "A temple in the Book of Mormon record"
         }
       ],
@@ -2614,6 +2614,28 @@
           "kind": "topic",
           "selector": "a[href=\"assets/page-art/birth-of-christ/04-benjamin-angel-full.webp\"]:has(img[src=\"assets/page-art/birth-of-christ/04-benjamin-angel-800.webp\"])",
           "title": "An angel awakens Benjamin"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "An approach to the temple",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/temples/temple-nephite-approach-960.webp",
+      "fullImage": "/assets/page-art/temples/temple-nephite-approach-full.webp",
+      "alt": "The same timber sanctuary is seen from a path rising gently through an open landscape.",
+      "id": "art-b877f477038b",
+      "occurrences": [
+        {
+          "id": "source-0fca169c4de1",
+          "page": "/answers/why-latter-day-saints-build-temples.html",
+          "pageTitle": "Temples",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/temples/temple-nephite-approach-full.webp\"]:has(img[src=\"../assets/page-art/temples/temple-nephite-approach-960.webp\"])",
+          "title": "An approach to the temple"
         }
       ],
       "categories": [
@@ -19059,14 +19081,14 @@
     }
   ],
   "stats": {
-    "artworks": 857,
-    "occurrences": 863,
+    "artworks": 858,
+    "occurrences": 864,
     "byKind": {
       "artwork": 62,
       "hero": 40,
       "legacy": 39,
       "missionary": 13,
-      "topic": 709
+      "topic": 710
     }
   }
 }

@@ -1,0 +1,1835 @@
+{
+  "status": "Bounded independent review complete; exhaustive deep manual coverage not claimed",
+  "routes": [
+    {
+      "url": "https://focuschrist.com/jesus-christ/before-bethlehem.html",
+      "desktop": "default and whole-study visual pass with compositor limitation",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "Traversed nine chapters; long capture offscreen images blank despite loaded assets; native viewport used",
+      "links_panels": "Jared panel, full-size nested view, close and Continue Lesson correct heading focus pass",
+      "static_links": 48,
+      "local_images": 10,
+      "picture_panels": 10,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/miracles-and-compassion.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 50,
+      "local_images": 12,
+      "picture_panels": 10,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/mortal-ministry.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 49,
+      "local_images": 11,
+      "picture_panels": 9,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/barren-fig.html",
+      "desktop": "default chapter complete-page visual pass",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "Default chapter, related cards, sources, footer inspected; other chapter panels pending",
+      "links_panels": "pending",
+      "static_links": 35,
+      "local_images": 3,
+      "picture_panels": 3,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/birds-lilies.html",
+      "desktop": "default chapter complete-page visual pass",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "Default chapter, related cards, sources, footer inspected; other chapter panels pending",
+      "links_panels": "pending",
+      "static_links": 35,
+      "local_images": 3,
+      "picture_panels": 3,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/blind-guides.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "PASS complete default-chapter screenshot through footer; other chapter interactions not separately reviewed",
+      "links_panels": "pending",
+      "static_links": 33,
+      "local_images": 1,
+      "picture_panels": 1,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/bridegroom.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "PASS complete default-chapter screenshot through footer; other chapter interactions not separately reviewed",
+      "links_panels": "pending",
+      "static_links": 33,
+      "local_images": 1,
+      "picture_panels": 1,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/budding-fig.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "PASS complete default-chapter screenshot through footer; other chapter interactions not separately reviewed",
+      "links_panels": "pending",
+      "static_links": 34,
+      "local_images": 2,
+      "picture_panels": 2,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/children-marketplace.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 34,
+      "local_images": 2,
+      "picture_panels": 2,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/closed-door.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 34,
+      "local_images": 2,
+      "picture_panels": 2,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/divided-house.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 33,
+      "local_images": 1,
+      "picture_panels": 1,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/doorkeeper.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 35,
+      "local_images": 3,
+      "picture_panels": 3,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/faithful-servant.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 35,
+      "local_images": 3,
+      "picture_panels": 3,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/friend-midnight.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 35,
+      "local_images": 3,
+      "picture_panels": 3,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/good-samaritan.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 41,
+      "local_images": 8,
+      "picture_panels": 8,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/good-shepherd.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 37,
+      "local_images": 4,
+      "picture_panels": 4,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/grain-wheat.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 35,
+      "local_images": 3,
+      "picture_panels": 3,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/great-supper.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 36,
+      "local_images": 4,
+      "picture_panels": 4,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/growing-seed.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 35,
+      "local_images": 3,
+      "picture_panels": 3,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/hearing.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 57,
+      "local_images": 22,
+      "picture_panels": 8,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/hen-chicks.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 33,
+      "local_images": 1,
+      "picture_panels": 1,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/hidden-treasure.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 35,
+      "local_images": 3,
+      "picture_panels": 3,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/householder.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 33,
+      "local_images": 1,
+      "picture_panels": 1,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/king-war.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 34,
+      "local_images": 2,
+      "picture_panels": 2,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/kingdom.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 55,
+      "local_images": 20,
+      "picture_panels": 8,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/laborers-vineyard.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 36,
+      "local_images": 4,
+      "picture_panels": 4,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/lamp.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 34,
+      "local_images": 2,
+      "picture_panels": 2,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/leaven.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 34,
+      "local_images": 2,
+      "picture_panels": 2,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/lost-coin.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 34,
+      "local_images": 2,
+      "picture_panels": 2,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/lost-sheep.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 35,
+      "local_images": 3,
+      "picture_panels": 3,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/mercy.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 51,
+      "local_images": 16,
+      "picture_panels": 8,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/minas.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 37,
+      "local_images": 4,
+      "picture_panels": 4,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/mote-beam.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 33,
+      "local_images": 1,
+      "picture_panels": 1,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/mustard-seed.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 34,
+      "local_images": 2,
+      "picture_panels": 2,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/neighbor.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 50,
+      "local_images": 15,
+      "picture_panels": 8,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/net.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 35,
+      "local_images": 3,
+      "picture_panels": 3,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/new-patch.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 34,
+      "local_images": 2,
+      "picture_panels": 2,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/new-wineskins.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 34,
+      "local_images": 2,
+      "picture_panels": 2,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/parent-gifts.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 34,
+      "local_images": 2,
+      "picture_panels": 2,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/pearl.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 35,
+      "local_images": 3,
+      "picture_panels": 3,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/persistent-widow.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 35,
+      "local_images": 3,
+      "picture_panels": 3,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/pharisee-publican.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 35,
+      "local_images": 3,
+      "picture_panels": 3,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/prodigal-son.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 41,
+      "local_images": 8,
+      "picture_panels": 8,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/returning-spirit.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 34,
+      "local_images": 2,
+      "picture_panels": 2,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/rich-fool.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 35,
+      "local_images": 3,
+      "picture_panels": 3,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/rich-man-lazarus.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 35,
+      "local_images": 3,
+      "picture_panels": 3,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/royal-wedding.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 36,
+      "local_images": 4,
+      "picture_panels": 4,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/salt.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 34,
+      "local_images": 2,
+      "picture_panels": 2,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/servant-duty.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 34,
+      "local_images": 2,
+      "picture_panels": 2,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/settle-adversary.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 34,
+      "local_images": 2,
+      "picture_panels": 2,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/sheep-goats.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 36,
+      "local_images": 4,
+      "picture_panels": 4,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/sheep-sabbath.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 34,
+      "local_images": 2,
+      "picture_panels": 2,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/sower.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 36,
+      "local_images": 4,
+      "picture_panels": 4,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/stewardship.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 52,
+      "local_images": 17,
+      "picture_panels": 8,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/strong-man.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 35,
+      "local_images": 3,
+      "picture_panels": 3,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/talents.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 37,
+      "local_images": 4,
+      "picture_panels": 4,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/ten-virgins.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 37,
+      "local_images": 5,
+      "picture_panels": 5,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/thief-night.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 34,
+      "local_images": 2,
+      "picture_panels": 2,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/tower-builder.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 35,
+      "local_images": 3,
+      "picture_panels": 3,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/tree-fruit.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 34,
+      "local_images": 2,
+      "picture_panels": 2,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/two-debtors.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 34,
+      "local_images": 2,
+      "picture_panels": 2,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/two-sons.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 35,
+      "local_images": 3,
+      "picture_panels": 3,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/unjust-steward.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 35,
+      "local_images": 3,
+      "picture_panels": 3,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/unmerciful-servant.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 37,
+      "local_images": 5,
+      "picture_panels": 5,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/vine-branches.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 35,
+      "local_images": 3,
+      "picture_panels": 3,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/watchful-servants.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 35,
+      "local_images": 3,
+      "picture_panels": 3,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/watchfulness.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 56,
+      "local_images": 21,
+      "picture_panels": 8,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/wedding-places.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 35,
+      "local_images": 3,
+      "picture_panels": 3,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/wheat-tares.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 36,
+      "local_images": 4,
+      "picture_panels": 4,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/wicked-tenants.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 36,
+      "local_images": 4,
+      "picture_panels": 4,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/wise-foolish-builders.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 35,
+      "local_images": 3,
+      "picture_panels": 3,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/parables/woman-childbirth.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "Phone390 actual picture panel specific title/prose/John16:21 target; no phantom onward link; full-size image loads; nested close returns panel; Continue Lesson focuses topic-art-reading-0. PASS.",
+      "static_links": 34,
+      "local_images": 2,
+      "picture_panels": 2,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/redeemer-and-risen-lord.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 46,
+      "local_images": 8,
+      "picture_panels": 8,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/restoration-and-today.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 47,
+      "local_images": 9,
+      "picture_panels": 7,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/risen-savior-in-the-book-of-mormon.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 48,
+      "local_images": 10,
+      "picture_panels": 10,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    },
+    {
+      "url": "https://focuschrist.com/jesus-christ/teachings-and-parables.html",
+      "desktop": "pending",
+      "phone": "pending",
+      "narrow_large_text": "pending",
+      "manual_composition": "pending",
+      "links_panels": "pending",
+      "static_links": 58,
+      "local_images": 19,
+      "picture_panels": 8,
+      "issues": [],
+      "desktop_opening": "PASS manual screenshot: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening",
+      "hosted_profiles": {
+        "status": "PASS reported by parent from confirmed hosted step28",
+        "run": 36642983758,
+        "profiles": [
+          "desktop",
+          "phone",
+          "narrow-large-text"
+        ],
+        "artifact_independently_read": false
+      },
+      "phone_opening": "PASS manual screenshot at 390x844: title, introductory copy, chapter controls, first section, navigation; no clipping or blank opening"
+    }
+  ],
+  "static_issue_count": 0,
+  "static_issues": [],
+  "manual_browser": "Independent Chrome, desktop 1536x735; local preview :4187",
+  "desktop_openings_reviewed": 76,
+  "manual_scope": "All 76 desktop and all 76 phone openings manually inspected. Five parable default full pages plus Before Bethlehem default/whole-study traversal inspected; deeper full-page and individual picture checks on remaining routes are not complete. Hosted three-profile canonical gate is separate evidence.",
+  "phone_openings_reviewed": 76
+}

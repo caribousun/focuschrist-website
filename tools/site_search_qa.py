@@ -25,8 +25,11 @@ for path in data['pages']+['/search.html','/404.html']:
     assert len(links)==1,path
     assert links[0].attrs.get('aria-label')=='Search focusChrist'
     assert any(n.tag=='script' and n.attrs.get('src','').endswith('site-search.js?v=20260919-focused-answers-1') for n in nodes),path
-    assert any(n.tag=='link' and n.attrs.get('href','').endswith('site-search.css?v=20260927-anchor-alignment-1') for n in nodes),path
+    assert any(n.tag=='link' and n.attrs.get('href','').endswith('site-search.css?v=20260929-result-hitbox-1') for n in nodes),path
 assert '/search.html' not in data['pages']
+css=(ROOT/'site-search.css').read_text(encoding='utf-8')
+assert '.fc-search-result h2 a {display:inline-block;' in css, 'Wrapped search titles must have one continuous clickable box'
+
 fixture=Document();fixture.feed('<main><p>Visible teaching</p><nav>SECRET NAV</nav><dialog>SECRET DIALOG</dialog><div hidden>SECRET HIDDEN</div><script>SECRET SCRIPT</script><footer>SECRET FOOTER</footer><div aria-hidden="true">SECRET ARIA</div><div style="display:none">SECRET STYLE</div></main>')
 assert 'SECRET' not in visible(fixture.root)
 assert 'Visible teaching' in visible(fixture.root)

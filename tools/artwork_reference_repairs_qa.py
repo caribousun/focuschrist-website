@@ -11,6 +11,10 @@ def check(overrides=None):
  stand=BeautifulSoup(html('answers/stand-forever.html'),'html.parser')
  cfm=BeautifulSoup(html('come-follow-me.html'),'html.parser')
  art=BeautifulSoup(html('art.html'),'html.parser')
+ assert len(art.select('.gallery > *'))==39,'Balanced Art rows require review when artwork count changes'
+ assert '--fc-gallery: 1440px;' in html('site-system.css'),'Gallery maximum width changed'
+ assert hashlib.sha256(html('art-experience.css').encode('utf-8')).hexdigest()=='ef21dea3b87e8b3e59454aba32726210a783d87d556928201ef375a3627b1c74','Reviewed Art row thresholds or offset styling changed'
+ assert art.select_one('link[href="art-experience.css?v=20260929-balanced-gallery-1"]'),'Gallery cache key not propagated'
  for r in records:
   assert r['independent_review'] is True,r['id']+' lacks independent review'
   for field in ['full','thumbnail']:
@@ -59,11 +63,13 @@ def self_test():
  changed=stand.replace('../assets/page-art/uniqueness-repairs/stand-creation-inquiry-960.webp','../assets/page-art/exclusive/stand-prayerful-question-800.webp')
  duplicated=stand.replace('<div class="fc-primary-grid fc-foundation-grid">','<div class="fc-primary-grid fc-foundation-grid"><img src="../assets/page-art/exclusive/stand-prayerful-question-1536.webp" alt="Restored duplicate">',1)
  wrong=answers.replace('come-follow-me.html#personal-study-art','general-conference.html#conference-listening-art')
- for case in [{'answers/stand-forever.html':changed},{'answers/stand-forever.html':duplicated},{'answers.html':wrong}]:
+ gallery=(ROOT/'art.html').read_text(encoding='utf8')
+ css=(ROOT/'art-experience.css').read_text(encoding='utf8')
+ for case in [{'art.html':gallery.replace('<div class="gallery">','<div class="gallery"><div class="unexpected-card"></div>',1)},{'art-experience.css':css.replace('/ 10)', '/ 9)')},{'site-system.css':(ROOT/'site-system.css').read_text(encoding='utf8').replace('--fc-gallery: 1440px;', '--fc-gallery: 1600px;')},{'answers/stand-forever.html':changed},{'answers/stand-forever.html':duplicated},{'answers.html':wrong}]:
   try:check(case)
   except AssertionError:pass
   else:raise AssertionError('Duplicate or wrong-owner mutation escaped')
- print('ARTWORK REPAIR negative fixtures PASS: restored old card, added original size variant, wrong owner destination rejected.')
+ print('ARTWORK REPAIR negative fixtures PASS: gallery count/offset/maximum-width drift, restored old card, original size duplicate, wrong owner rejected.')
 if __name__=='__main__':
  check()
  self_test()

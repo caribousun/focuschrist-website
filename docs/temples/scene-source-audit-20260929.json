@@ -1,0 +1,119 @@
+{
+  "date": "2026-09-29",
+  "reviewer": "temple_build",
+  "scope": "Fresh20-scene visual survey with chapter text/alt/caption/constraints; full-resolution additional checks of Tabernacle and Solomon; retained prior historic architecture reference reviews. Not an exhaustive archaeological reconstruction certification.",
+  "fresh_scripture_checks": [
+    "https://www.churchofjesuschrist.org/study/scriptures/ot/ex/27?lang=eng",
+    "https://www.churchofjesuschrist.org/study/scriptures/ot/1-kgs/7?lang=eng",
+    "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/5?lang=eng"
+  ],
+  "chapters": [
+    {
+      "id": "beginnings-eden",
+      "asset_sha256": "e2d8cb2e5999db5090f7148625b6ca13b83d84d31d1e1ef8d9b5f4d7bead7aff",
+      "finding": "Garden is expressly interpretive and does not assert a built temple or known geography. No concrete contradiction found."
+    },
+    {
+      "id": "covenant-altars",
+      "asset_sha256": "1fd71d5116edd0e03a0651445a116091fb107abaa5d020faa19fa252ed23cca2",
+      "finding": "Unpeopled tent and altar fit Genesis12 at this level. Stonework and location are interpretations, not an excavated design."
+    },
+    {
+      "id": "wilderness-sanctuary",
+      "asset_sha256": "7babf2d995ff1a5005106cdcb2c355efd9418161e27890f8466ddf6646c030c0",
+      "finding": "Full image inspected: portable coverings, five entrance posts, linen court, altar with corner horns and carrying poles. Exodus27 reread. Exact court dimensions/pillar totals and an entrance outside visible boundary cannot be certified from perspective."
+    },
+    {
+      "id": "solomon-prayer",
+      "asset_sha256": "9fec37ea147ffb575510181427dd978f5f187ee56b1d0f5b3e8102b1d2b63aaf",
+      "finding": "Full image inspected and 1Kings7 reread. Two bronze pillars, porch, side chambers, bronze sea on oxen and wheeled lavers convey the textual pattern. Concern: the enormous scale relative to people may overstate Kings dimensions; not measurable reliably from this perspective. Rear oxen are obscured, so exact twelve cannot be certified. Ornament/exterior finish are interpretive, not exact reconstruction. No definite count violation established."
+    },
+    {
+      "id": "return-rebuild",
+      "asset_sha256": "8fa58c435de18ef8d26662dfff1a7afadc89d447ade902ba99c407f70e25ba7d",
+      "finding": "Foundation work and mixed-age gathering match Ezra3 narrative; unseen reactions cannot be proven from faces. Scaffolding, tools, clothing and precise site interpreted."
+    },
+    {
+      "id": "nephite-temple",
+      "asset_sha256": "04da3843d0818fe3826ae2ebb809600be825d841e76bc77381506aa040e61604",
+      "finding": "OWNER REJECTED: current modest generic sanctuary does not sufficiently convey the Solomon-pattern workmanship specified in2Nephi5:16. Root owns replacement. Audit does not approve old pixels; geography/precise design remain unknown. Do not equate scarce precious materials with crude workmanship."
+    },
+    {
+      "id": "young-jesus",
+      "asset_sha256": "76fb9473d2b48484f58ab822da8d05505e2d29b37953eb39331033401a9f5a33",
+      "finding": "Young beardless Jesus seated among teachers fits Luke2 age12/event. Courtyard design and individual teachers interpretive."
+    },
+    {
+      "id": "house-prayer",
+      "asset_sha256": "a67614a5c837d4a5a6e2f1c4112d0d6054a5ddd687e302f71be7ec198fc5fbd1",
+      "finding": "Overturned table and departing merchants fit Matthew21; no imported scourge or physically attacked person. Specific expression and arrangement interpreted."
+    },
+    {
+      "id": "temple-healing",
+      "asset_sha256": "e0828ffbd3d3d7fbfb10860a417cb3068eed190dd139aae7937209664cc2db3a",
+      "finding": "Temple court healing matches Matthew21; no Bethesda pool conflation. Recipient and precise encounter details interpreted."
+    },
+    {
+      "id": "widow-offering",
+      "asset_sha256": "926bd0d04dae9a26f3a85ef1d5cfee2299920f191cf43fe8c99e4e0b5867bbd9",
+      "finding": "Seated Christ, disciples, two-coin offering fit Mark12. Treasury vessel design not supplied by Mark; not certified as exact ancient treasury."
+    },
+    {
+      "id": "widow-tender-attention",
+      "asset_sha256": "19f3f874d789816500176af41b2449c0401bd8f01b41c0315581c27de74c5765",
+      "finding": "Explicit companion of same widow encounter; gaze to offering, no invented dialogue/touch. Vessel and facial expression interpretive."
+    },
+    {
+      "id": "bountiful-covenant",
+      "asset_sha256": "249445ec789e5bc1d996db8966166fa7fdef52bb22653e84bf47258042b8a21e",
+      "finding": "Teaching scene matches3Nephi20 broad event. Bountiful temple design/location/population appearance unknown; visible columned court is interpretation, not evidence it duplicated Herodian Jerusalem. Do not claim exact architectural reconstruction."
+    },
+    {
+      "id": "apostles-gate",
+      "asset_sha256": "a48227bb778b10607148e512cdefe087c34b84bf48091455d95e5e84ccac45d9",
+      "finding": "Helping man at gate fits Acts3; no physically present Christ. Gate ornament and precise location uncertain, named ancient faces interpretive."
+    },
+    {
+      "id": "kirtland-house",
+      "asset_sha256": "b9ae83e88210501d116d76a0500e964fdd693b45cc49f05d588eb4c0297f7d25",
+      "finding": "Exterior subject compared with previously documented architecture references; period approach and people interpreted. No present-day landscaping assertion. Paint colors/dated finishes not independently established by this fresh review."
+    },
+    {
+      "id": "kirtland-christ",
+      "asset_sha256": "edc1f6c1dd4f50b1537243085cc993d374be17102b17fc4c4efa257ca69eebca",
+      "finding": "Preserved room picture explicitly separate from1836 vision account, no invented apparition. Modern light fixtures therefore not an1836 scene contradiction."
+    },
+    {
+      "id": "nauvoo-hope",
+      "asset_sha256": "700d998fa09496b40cd6c75d9c02a4b1f953d58508faabdb44f69eb516ada766",
+      "finding": "Original-style temple with horizontal vane, anonymous departure scene; not modern reconstructed temple. Exact family/date not claimed."
+    },
+    {
+      "id": "pioneer-temples",
+      "asset_sha256": "916b524d9847259a3886c1849b2f9fad13fcee7ef63c67674a616f249fd2eb9a",
+      "finding": "Short original StGeorge tower/scaffolding consistent with documented circa1876 photographic reference. Colors/workers interpreted; not present-day taller tower."
+    },
+    {
+      "id": "salt-lake-building",
+      "asset_sha256": "4fa4341765c0f70a76edf8638804ac293524df2b61377ea525be50c248394677",
+      "finding": "Scaffolded exterior and stone-handling scene fit construction theme. Prior1892 reference review retained; no claim exact worker/rigging event. Image is not tied to Moyle personally."
+    },
+    {
+      "id": "worldwide-gathering",
+      "asset_sha256": "a560fc8bc0fa7a3a4332e5d52278b1779030d690d66deadb35ded852c1d96173",
+      "finding": "Caption expressly contemporary Laie, avoiding falsely dating current landscaping to1919. No spire or named visitor."
+    },
+    {
+      "id": "temples-today",
+      "asset_sha256": "8c700352eb67daefda3f21195e2f2814f1aa4dc4f786b8920033b3bc6fe4b53e",
+      "finding": "Contemporary family-history scene, no restricted ritual or identified ancestor. Relationships illustrative rather than documented people."
+    }
+  ],
+  "encoding": "Fresh source read contained27 U+2013 en-dashes; zero cp1252/Latin1-corrupted en-dashes or U+FFFD. No correction fabricated. Clean rebuild completed; positive/negative source punctuation fixtures added to Temple QA.",
+  "nephi_followup": {
+    "current_asset": "assets/page-art/temples/temple-nephite-timber-pattern-full.webp",
+    "current_sha256": "ef825a0535a5ec2ab7fe38c2f095ee9eef6508b52402e3ef96ac261c7e3f5c1d",
+    "status": "Technical full-pixel source-fit PASS; owner aesthetic approval not inferred",
+    "detail": "Former audit row intentionally retains rejected published hash as historical evidence. Current replacement and rejected source hashes recorded in nephi-source-first-review-20260929.json."
+  }
+}

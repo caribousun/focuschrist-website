@@ -1,0 +1,37 @@
+{
+  "sources": [
+    "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/5?lang=eng&id=p15-p17#p15",
+    "https://www.churchofjesuschrist.org/study/scriptures/ot/1-kgs/6?lang=eng"
+  ],
+  "pre_generation": "Parent read exact scripture before generation; independent reviewer reread exact chapters and compared finished full pixels.",
+  "known": "Solomon pattern, fine workmanship, fewer precious materials; broader passage mentions woodworking.",
+  "unknown": "Exact temple materials, appearance, dimensions and geographic location. Timber illustration does not establish exclusively wooden historical construction.",
+  "accepted": {
+    "asset": "assets/page-art/temples/temple-nephite-timber-pattern-full.webp",
+    "sha256": "ef825a0535a5ec2ab7fe38c2f095ee9eef6508b52402e3ef96ac261c7e3f5c1d",
+    "source_original": "exec-e4492356-4886-433f-a952-aa202979920b.png",
+    "source_sha256": "c00749c3cb5fca1e3ecbf1b4b6462195de4e7bb1719635fe6dde7a7c30a1bd2d",
+    "review": "Full-pixel source comparison: finely worked timber sanctuary with long rectangular house, front porch, narrow upper windows and lower side chambers; no cement facade. Artistic interpretation of Solomon-pattern workmanship, not a known reconstruction or claim that Nephi built exclusively with wood. Exact materials, dimensions and appearance remain unknown.",
+    "owner_aesthetic_approval": false
+  },
+  "rejected": [
+    {
+      "asset": "assets/page-art/temples/temple-nephite-temple-full.webp",
+      "sha256": "04da3843d0818fe3826ae2ebb809600be825d841e76bc77381506aa040e61604",
+      "status": "REJECTED_BY_OWNER",
+      "reason": "Generic modest sanctuary insufficiently conveyed Solomon-pattern workmanship"
+    },
+    {
+      "asset": "assets/page-art/temples/temple-nephite-temple-960.webp",
+      "sha256": "e38cfc8d1dda912b6d16930b36af3a410d36125513d815bfb1ad1c7afeaa5748",
+      "status": "REJECTED_BY_OWNER",
+      "reason": "Generic modest sanctuary insufficiently conveyed Solomon-pattern workmanship"
+    },
+    {
+      "source_original": "exec-b9a9bfaf-efe3-4eaf-83fa-c7da26c6a405.png",
+      "sha256": "44820329b7ea464df2bba1602b8c7ac35ed93f8deba818d133b463e3951553f7",
+      "status": "REJECTED_BY_OWNER",
+      "reason": "Stone-heavy interpretation not selected; exact temple material inventory unknown"
+    }
+  ]
+}
