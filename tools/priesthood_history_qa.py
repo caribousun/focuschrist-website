@@ -4,7 +4,7 @@ Source/content review and rendered accessibility remain separate requirements.
 """
 from pathlib import Path
 from urllib.parse import urlsplit
-import hashlib, json, sys
+import copy, hashlib, json, sys
 from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -16,7 +16,13 @@ baseline = json.loads(read('docs/priesthood-history/existing-page-baseline.json'
 soup = BeautifulSoup(read(baseline['page']), 'html.parser')
 assert hashlib.sha256(str(soup.select_one('header')).encode()).hexdigest() == baseline['header_sha256']
 for key, digest in baseline['preserved_sections'].items():
-    assert hashlib.sha256(str(soup.select_one('#' + key)).encode()).hexdigest() == digest, ('Preserve existing section', key)
+    preserved = copy.deepcopy(soup.select_one('#' + key))
+    if key == 'continue-study':
+        cards = preserved.select('article[data-balanced-study-row="last"]')
+        assert len(cards) == 1 and cards[0].get('class') == ['fc-study-promotion'], 'Exact centered onward-card presentation required'
+        assert cards[0].select_one('h3 a').get('href') == '../church-history.html', 'Preserve the Return to Church History destination'
+        del cards[0]['class'] # Only this owner-reviewed presentation class differs from the original section.
+    assert hashlib.sha256(str(preserved).encode()).hexdigest() == digest, ('Preserve existing section', key)
 assert set(baseline['image_sources']) <= {img.get('src') for img in soup.select('img')}
 section = soup.select_one('#priesthood-and-temple-blessings')
 assert section and not section.select(':scope > section'), 'Parent must introduce the dedicated study'
