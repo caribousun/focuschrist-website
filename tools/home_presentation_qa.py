@@ -105,7 +105,10 @@ def check(home, baseline, manifest, root=ROOT):
     for card in [n for n in nodes if n.tag == 'a' and n.has('fc-card--interactive')]:
         if urlsplit(card.attrs.get('href', '')).fragment:
             errors.append('Home interactive cards must open at the page beginning')
-    for section in [n for n in nodes if n.has('fc-study-promotion') or n.has('fc-home-weekly')]:
+    preview_sections = [n for n in nodes if (n.has('fc-card') and n.has('fc-study-promotion')) or n.has('fc-home-weekly')]
+    if len(preview_sections) != 3:
+        errors.append('Home must retain two preview promotion cards and one weekly preview')
+    for section in preview_sections:
         picture_links = [n for n in section.walk() if 'data-home-reference' in n.attrs]
         primary_links = [n for n in section.walk() if n.tag == 'a' and n.has('fc-button--primary')]
         if len(picture_links) != 1 or len(primary_links) != 1 or picture_links[0].attrs.get('href') != primary_links[0].attrs.get('href'):
@@ -187,6 +190,14 @@ class HomePresentation(unittest.TestCase):
         errors = check(self.home.replace('data-home-reference="atonement" href="' + old + '"',
                                        'data-home-reference="atonement" href="' + linked + '"'), self.baseline, manifest)
         self.assertTrue(any('open the owning page from the beginning' in error for error in errors))
+
+    def test_preview_promotion_class_removal_rejected(self):
+        home = self.home.replace('fc-card fc-study-promotion', 'fc-study-promotion', 1)
+        self.assertTrue(any('two preview promotion cards' in error for error in check(home, self.baseline, self.manifest)))
+
+    def test_preview_class_order_does_not_change_contract(self):
+        home = self.home.replace('fc-card fc-study-promotion', 'fc-study-promotion fc-card')
+        self.assertEqual(check(home, self.baseline, self.manifest), [])
 
     def test_primary_direction_mismatch_rejected(self):
         home = self.home.replace('href="come-follow-me.html">Explore Come, Follow Me',
