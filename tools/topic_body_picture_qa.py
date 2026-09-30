@@ -37,16 +37,11 @@ def audit():
    if htmlratio and abs(htmlratio/(dims[0]/dims[1])-1)>.01:issues.append('HTML intrinsic ratio differs from source: '+src)
    images.append(dict(src=src,section=location,native=list(dims)))
    if key not in unique and digest not in hashes:unique.add(key);hashes.add(digest);sections.add(location)
-  # Wyatt's 2026-09-30 Church-source-only history request uses official media,
-  # not invented historical scenes. Exact-route exception; other studies retain the floor.
+  # Official media thumbnails do not count as enriched body-picture coverage.
   source_study=page.relative_to(ROOT).as_posix()=='answers/race-priesthood-and-temple-blessings.html'
-  if source_study:
-   cards=[n for n in nodes if n.has('fc-resource-card')]
-   assert len(cards)==6 and len({n.parent.parent.attrs.get('id') for n in cards})==6
-   assert all(urlsplit(n.attrs.get('src','')).hostname=='www.churchofjesuschrist.org' for n in nodes if n.tag=='img')
-  else:
-   if len(unique)<5:issues.append(f'Needs five distinct body pictures; found {len(unique)}')
-   if len(sections)<3:issues.append(f'Pictures must be distributed through at least three reading locations; found {len(sections)}')
+  minimum=12 if source_study else 5
+  if len(unique)<minimum:issues.append(f'Needs {minimum} distinct body pictures; found {len(unique)}')
+  if len(sections)<3:issues.append(f'Pictures must be distributed through at least three reading locations; found {len(sections)}')
   results.append(dict(page=page.relative_to(ROOT).as_posix(),distinct=len(unique),sections=len(sections),images=images,issues=issues))
  return results
 if __name__=='__main__':

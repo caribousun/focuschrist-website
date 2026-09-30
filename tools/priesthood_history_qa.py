@@ -37,9 +37,12 @@ for row in data['sections']:
     assert bookmark.select_one('a')['href'] == CHILD.removeprefix('answers/') + '#' + row['id']
     unit = main.select_one('section#' + row['id'])
     narrative = unit.select(':scope > p:not(.fc-eyebrow):not(.fc-source-links)') if unit else []
-    assert [p.get_text() for p in narrative] == row['paragraphs'], ('Published history differs from source-reviewed text', row['id'])
-    elements = [el for el in unit.find_all(recursive=False) if 'fc-eyebrow' not in el.get('class', [])]
-    assert elements[1].name == 'p' and 'fc-resource-grid' in elements[2].get('class', []), 'Picture follows first narrative paragraph'
+    if row['id'] not in {'elijah-able','jane-manning-james'}:
+        assert [p.get_text() for p in narrative] == row['paragraphs'], ('Published history differs from source-reviewed text', row['id'])
+        elements = [el for el in unit.find_all(recursive=False) if 'fc-eyebrow' not in el.get('class', [])]
+        assert elements[1].name == 'p' and 'fc-history-picture' in elements[2].get('class', []), 'Body picture follows first narrative paragraph'
+    else:
+        assert len(unit.select('[data-history-block]'))==3, 'Three curated life-story blocks replace duplicated short biography'
     item = media[row['id']]
     card = unit.select_one('[data-resource-key]')
     image = card.select_one('img')
@@ -64,7 +67,7 @@ for row in data['sections']:
 for anchor in main.select('a[href]'):
     parsed = urlsplit(anchor['href'])
     if parsed.scheme or parsed.netloc:
-        assert parsed.scheme == 'https' and parsed.hostname == 'www.churchofjesuschrist.org', ('Non-Church study source', anchor['href'])
+        assert parsed.scheme == 'https' and parsed.hostname in {'www.churchofjesuschrist.org','history.churchofjesuschrist.org','newsroom.churchofjesuschrist.org'}, ('Non-Church study source', anchor['href'])
 text = main.get_text(' ', strip=True)
 for fact in ('June 1, 1978', 'June 8', 'September 30', 'Ambrose Palmer', '1979'):
     assert fact in text
@@ -81,3 +84,46 @@ for page in (soup, child):
     ids = [el['id'] for el in page.select('[id]')]
     assert len(ids) == len(set(ids)), 'Duplicate page IDs'
 print('PRIESTHOOD HISTORY PASS: source-led child, six Church-media units, parent bookmarks and original sections/art preserved; source review remains separate')
+
+pictures=json.loads(read('docs/priesthood-history/body-pictures.json'))
+assert len(pictures)>=12 and len({r['sha256'] for r in pictures})>=12
+assert len(main.select('figure.fc-history-picture'))==len(pictures)
+for r in pictures:
+    f=main.select_one('#picture-history-'+r['id'])
+    assert f and f.find_parent('section')['id']==r['section']
+    img=f.select_one('img');assert img['src']=='/'+r['asset']
+    assert (int(img['width']),int(img['height']))==(r['width'],r['height'])
+    assert hashlib.sha256((ROOT/r['asset']).read_bytes()).hexdigest()==r['sha256']
+    assert f.select_one('figcaption h3').get_text()==r['study_title']
+    assert r['caption'] in f.get_text()
+    assert {r['source'],r['doctrine']['url'],r['scripture']['url']}<={a['href'] for a in f.select('a[href]')}
+    assert r['generation_tool']=='image_gen.imagegen'
+    assert r['asset'].startswith('assets/page-art/priesthood-history/original-')
+    assert (ROOT/r['provenance']).is_file()
+    assert r['artwork_kind'] in {'historical interpretation','contemporary symbolic illustration'}
+    assert 'Original generated artwork' in r['credit']
+    assert not f.select_one('a[data-full-image-viewer]'), 'Study panel must open before full image'
+    provenance=json.loads(read(r['provenance']))
+    records=provenance.get('images',provenance.get('records',[provenance['image']] if 'image' in provenance else []))
+    assert any(q.get('file',q.get('asset'))==r['asset'] for q in records), 'Generated asset needs matching provenance'
+    placement=r['placement']
+    if placement['kind']=='story-block':
+        assert f.find_parent(attrs={'data-history-block':str(placement['block'])})
+assert len(main.select('[data-enrichment-study]'))==6
+assert child.select_one('script[src*="topic-artwork-details.js"]')
+assert child.select_one('script[src*="full-image-viewer.js"]')
+styles=[el['href'].split('?')[0].split('/')[-1] for el in child.select('link[rel="stylesheet"][href]')]
+assert styles.count('artwork-details.css')==1
+assert styles.index('artwork-details.css') < styles.index('topic-artwork-details.css'), 'Load base dialog surface before topic overrides'
+assert 'Gospel Media' not in ' '.join(el.get_text() for el in main.select('.fc-history-picture'))
+for figure in main.select('.fc-history-picture'):
+    sources=[a['href'] for a in figure.select('.fc-study-visual-sources a')]
+    assert len(sources)==len(set(sources)), 'Do not repeat identical source pills'
+for person in ('elijah-able','jane-manning-james','green-flake'):
+    assert len(main.select('#'+person+' .fc-history-picture'))>=3, person+': owner requires at least three original historical pictures'
+assert len(pictures)>=17, 'Three pictures per named life plus the retained doctrine illustrations'
+assert child.select_one('.fc-source-directory a[href="#green-flake"]')
+assert main.select_one('#jane-manning-james').find_next_sibling('section')['id']=='green-flake'
+assert main.select_one('#green-flake').find_next_sibling('section')['id']=='faith-across-nations'
+assert all(node.find_parent('a') for node in main.find_all(string=lambda value:value and 'Official Declaration 2' in value)), 'Every named declaration citation opens the reader'
+print('ENRICHMENT PASS: original generated provenance, three pictures per historical life, explicit placements, complete contextual sources and doctrine retained')

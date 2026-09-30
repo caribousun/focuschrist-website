@@ -25,3 +25,19 @@
 .fc-source-history h1,.fc-source-history h2,.fc-source-history h3,.fc-source-history a,.fc-source-history summary{overflow-wrap:anywhere}
 @media(max-width:700px){.fc-source-history .nav-logo{max-width:calc(100% - 100px);white-space:normal!important;overflow-wrap:anywhere}.fc-source-history .nav{height:auto;min-height:62px}}
 @media(max-width:700px){.fc-source-opening{padding-top:36px;padding-bottom:28px}.fc-source-main .fc-resource-card{grid-template-columns:1fr}.fc-source-main .fc-resource-card__body{padding:20px}.fc-source-opening .fc-actions{flex-direction:column}.fc-source-history .fc-button{white-space:normal;height:auto;min-height:48px;max-width:100%;box-sizing:border-box;text-align:center}.fc-source-main .fc-study-grid{grid-template-columns:1fr}}
+
+/* Original artwork remains at its intrinsic proportions beside readable study. */
+.fc-source-main .fc-history-picture{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:28px;align-items:center;margin:32px 0;padding:24px;border:1px solid var(--fc-panel-border);border-radius:12px;background:var(--fc-panel-fill)}
+.fc-history-picture>a{display:block;width:100%;max-width:100%;min-width:0}
+.fc-history-picture img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;border-radius:6px}
+.fc-history-picture figcaption{min-width:0}
+.fc-history-picture h3{font:400 clamp(1.3rem,2.5vw,1.75rem)/1.25 Georgia,serif;margin:8px 0 14px}
+.fc-source-main .fc-history-picture p{font-size:1rem;line-height:1.6;margin:12px 0}
+.fc-history-picture .fc-study-visual-sources{display:flex;flex-wrap:wrap;gap:10px 16px}
+.fc-source-main .fc-history-picture-credit{font-size:.8rem;color:#c5d4d7}
+.fc-history-deeper-study>h3{font:400 1.6rem/1.3 Georgia,serif;margin:28px 0 14px}
+@media(max-width:700px){.fc-source-main .fc-history-picture{grid-template-columns:1fr;padding:16px;gap:16px}.fc-history-picture>a{max-width:420px;margin:auto}}
+
+/* Keep this study's actions at the shared compact pill scale. */
+body.fc-site.fc-source-history .fc-topic-artwork-detail .fc-artwork-detail-actions{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px}
+body.fc-site.fc-source-history .fc-topic-artwork-detail .fc-artwork-detail-actions>.fc-button{flex:0 1 auto;width:auto;height:auto;min-width:0;max-width:100%;min-height:44px;padding:10px 18px;font-size:.9rem;line-height:1.4;white-space:normal}

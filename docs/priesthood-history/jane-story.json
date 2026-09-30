@@ -1,0 +1,112 @@
+{
+  "person": "Jane Manning James",
+  "status": "Current narrative and three distinct historical interpretations independently reviewed; hospitality scene itself remains deferred.",
+  "section": "jane-manning-james",
+  "source_distinction": "Her life sketch was dictated late in life; recollections are attributed, not presented as contemporary transcripts.",
+  "subsections": [
+    {
+      "title": "A young woman determined to gather with the Saints",
+      "picture_id": "jane-journey",
+      "paragraphs": [
+        "Jane was born into a free Black family in Connecticut. She joined the Church in the winter of 1842–43 and set out to gather with the Saints.",
+        "In her later life sketch, Jane recalled that the family’s shoes wore out on the long walk to Nauvoo. Their feet cracked and bled; they prayed together, and she remembered their healing as an answer from God. She also described walking barefoot through morning frost. These are Jane’s own remembered experiences, preserved in the Church’s account of her autobiography."
+      ],
+      "sources": [
+        {
+          "label": "Jane’s biography",
+          "url": "https://www.churchofjesuschrist.org/study/history/topics/jane-elizabeth-manning-james?lang=eng"
+        },
+        {
+          "label": "Jane’s autobiographical account",
+          "url": "https://www.churchofjesuschrist.org/study/history/global-histories/united-states/stories-of-faith/us-jane-manning-james?lang=eng"
+        }
+      ]
+    },
+    {
+      "title": "A welcome in Joseph and Emma’s home",
+      "picture_id": "jane-portrait",
+      "paragraphs": [
+        "Jane recalled Emma inviting the travelers inside the Mansion House. Joseph arranged chairs and listened as Jane described their journey. The welcome included shelter while her relatives found places to live and work. When Jane remained without a home and grieved the loss of her belongings, she remembered Joseph assuring her that she could stay.",
+        "Jane lived and worked in the Smith household for several months. The Church’s account describes the friendships she formed there and the conviction she retained that Joseph was a prophet. Her story gives hospitality a human scale: a place to sit, someone willing to listen, and practical help for a traveler far from home."
+      ],
+      "sources": [
+        {
+          "label": "Jane remembers the Smith household",
+          "url": "https://www.churchofjesuschrist.org/study/history/global-histories/united-states/stories-of-faith/us-jane-manning-james?lang=eng"
+        },
+        {
+          "label": "Jane’s Journey",
+          "url": "https://www.churchofjesuschrist.org/study/friend/2017/10/janes-journey?lang=eng"
+        }
+      ]
+    },
+    {
+      "title": "A lifetime of work, generosity, and seeking",
+      "picture_id": "jane-sewing",
+      "paragraphs": [
+        "Jane married Isaac James, a free Black convert, and reached Utah in 1847. She provided for family through sewing, spinning and washing, contributed to temple construction, and participated in Relief Society.",
+        "Later family losses and separation made her questions about eternal belonging especially personal. Saints describes her appeals for temple blessings and her hope in God’s promise to bless all nations through Abraham. Remembering Jane means taking those requests seriously. Her perseverance does not make the restrictions painless, and the restrictions do not exhaust the story of her life.",
+        "Between 1884 and 1904 Jane sought temple blessings; in 1888 she received permission for baptisms for deceased relatives. She did not receive her endowment or family sealings in life. An unusual 1894 proxy sealing to Joseph Smith’s household as a servant did not fulfill those requests. She died in 1908; her endowment and family sealing ordinances were performed on her behalf in 1979."
+      ],
+      "sources": [
+        {
+          "label": "Jane’s family and life in Utah",
+          "url": "https://www.churchofjesuschrist.org/study/history/topics/jane-elizabeth-manning-james?lang=eng"
+        },
+        {
+          "label": "Saints: In the Hands of God",
+          "url": "https://www.churchofjesuschrist.org/study/history/saints-v2/part-4/39-in-the-hands-of-god?lang=eng"
+        }
+      ]
+    }
+  ],
+  "historical_corrections": [
+    {
+      "claim": "Joseph gave Emma’s horse to free Jane’s husband",
+      "finding": "Not supported by sources inspected. Current Jane biography identifies Isaac James as a free Black convert. Church History Museum recounts Joseph giving a horse to an unnamed man seeking his child’s freedom; do not conflate.",
+      "source": "https://www.churchofjesuschrist.org/learn/history/sites/church-history-museum/collections/joseph-smiths-office-sign?lang=eng"
+    }
+  ],
+  "biography_source_allocation": {
+    "words": 153,
+    "maximum": 200,
+    "countedText": "Jane was born into a free Black family in Connecticut. She joined the Church in the winter of 1842–43 and set out to gather with the Saints. Jane married Isaac James, a free Black convert, and reached Utah in 1847. She provided for family through sewing, spinning and washing, contributed to temple construction, and participated in Relief Society. Between 1884 and 1904 Jane sought temple blessings; in 1888 she received permission for baptisms for deceased relatives. She did not receive her endowment or family sealings in life. An unusual 1894 proxy sealing to Joseph Smith’s household as a servant did not fulfill those requests. She died in 1908; her endowment and family sealing ordinances were performed on her behalf in 1979. Jane’s surviving likeness accompanies the story of a lifetime of work, faith and seeking temple blessings. Jane and her family walked toward Nauvoo in 1843. This youthful interpretation recalls that difficult journey.",
+    "note": "Final Saints paragraph and attributed autobiography paragraphs use separately linked Church sources; original duplicated biography removed."
+  },
+  "rejected_images": [
+    {
+      "file": "assets/page-art/priesthood-history/original-jane-welcome.png",
+      "generatedOutput": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0f2c4-85e8-70d1-ad65-9d1e1e4b48c4\\exec-afcca7ee-a2ed-468f-a2c9-a0a46cda93cd.png",
+      "tool": "image_gen.imagegen",
+      "editSource": "exec-b7d922e5-9028-4d7f-a861-701063c12bd3.png",
+      "identityReference": "exec-38ae3ae8-995e-4fe3-a78e-8629da6e7cba.png",
+      "sha256": "a2bfece984203573f2d7bd1ecdbf64f97822211bf081c2ca29494e6dc0b420ff",
+      "promptRecord": "Exact generation/edit prompt retained in root tool transcript; no fabricated reconstruction of prompt.",
+      "review": "Prior Fermi/Newton concurrence superseded by owner rejection: softened cheeks/jaw and eye-nose-mouth proportions drift. Waiting for replacement using ownerattached Emma Smith.png.",
+      "historicalBasis": "Jane late-life account of welcome in Joseph and Emma Smith household, as published by the Church. Room arrangement, clothing and exact conversational moment are artistic interpretation.",
+      "status": "OWNER_REJECTED_DO_NOT_INTEGRATE"
+    }
+  ],
+  "hospitality_scene_status": "Deferred: rejected Emma transfer candidates remain unused; mature Jane portrait is contextual, not a depiction of the welcome.",
+  "image": {
+    "file": "assets/page-art/priesthood-history/original-jane-sewing.png",
+    "generatedOutput": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0f2c4-85e8-70d1-ad65-9d1e1e4b48c4\\exec-8cf5913f-cf21-4670-91a3-efc746bd507c.png",
+    "sha256": "5c6bc64709329c623344bb46a09a374c249c97bffd1aad3f601783f5d5f34a4d",
+    "generation_tool": "image_gen.imagegen",
+    "prompt": "Create a photorealistic historical artistic interpretation of Jane Manning James alone at practical hand sewing in a modest Utah home, circa 1872, approximately age 50. Use the LEFT photographic portrait in the first actual historical reference (ignore the handwritten right half) and the second reviewed mature portrait as likeness references. Preserve her recognizable facial proportions, broad nose, cheek and jaw structure, natural skin texture and sturdy mature build; adapt age cues conservatively to approximately 50 without changing identity or build. She sits in three-quarter view beside a plain wooden table, eyes focused gently on a simple cloth seam in her lap, holding needle and cloth naturally with anatomically clear hands. Plain modest 1870s long-sleeve cotton dress, high neckline, simple apron, period-appropriate hair; no modern sewing machine or accessories. Soft window daylight, simple cloth basket, restrained domestic background; respectful calm concentration, no looking at viewer, no exaggerated poverty or invented dramatic event. Jane is the only person. Landscape 1536x1024, realistic photographic detail, no text or watermark. The activity is documented generally; exact year, room, garment and moment are interpretive.",
+    "references": [
+      "C:/Users/wyatt/Documents/Codex/2026-09-30/cont/work/priesthood-historical-references/jane.jpg",
+      "C:/Users/wyatt/Documents/Codex/2026-09-30/cont/work/focus-priesthood/assets/page-art/priesthood-history/original-jane-portrait.png"
+    ],
+    "source": "https://www.churchofjesuschrist.org/study/history/topics/jane-elizabeth-manning-james?lang=eng",
+    "limits": "Circa1822birth, Utah clothing-making/spinning/laundry; specific1872date and room are interpretation.",
+    "review": {
+      "output": "C:/Users/wyatt/.codex/generated_images/01a0f2c4-85e8-70d1-ad65-9d1e1e4b48c4/exec-8cf5913f-cf21-4670-91a3-efc746bd507c.png",
+      "Newton": "CONCUR",
+      "Fermi": "CONCUR",
+      "Newton_findings": "Recognizable broad nose, cheeks/jaw/lips and mature sturdy build; appropriate downward gaze at seam, plausible about50, natural visible sewing hands and thread, no modern equipment. Exact year/room/garment remain interpretation; apron not separately clear and not claimed.",
+      "Fermi_evidence": "Root directly relayed Fermi exact8cf5913f concurrence: broadnose/cheeks/jaw, sturdyfigure, about50, hands/needle, period; Fermi durable review follows."
+    },
+    "status": "INDEPENDENTLY_REVIEWED_HISTORICAL_INTERPRETATION"
+  }
+}

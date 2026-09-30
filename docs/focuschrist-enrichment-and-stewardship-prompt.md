@@ -2,6 +2,8 @@
 
 ## Historical character, expression and gaze requirements
 
+Wyatt reaffirmed on September30: every created image must show each person's look, face, figure and clothing at the age and time period of the depicted event. Apply the scene-specific age and appearance gate in historical-character-identity.md and the mutual Fermi/Newton concurrence gate in AGENTS.md. Verify actual pixels and source evidence before calling a result fixed or passed.
+
 The owner explicitly includes these requirements in the standing meaning of **enriched**, in addition to every existing requirement below:
 
 - Research the historical record for every named person before creation, using reliable images AND written descriptions. Keep sources for appearance, age at the event, hair/eyes/complexion/stature when known, clothing/hair practices and event context. Distinguish evidence from artistic interpretation. Follow `docs/historical-character-identity.md`.

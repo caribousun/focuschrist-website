@@ -1,0 +1,513 @@
+[
+  {
+    "id": "family-scripture",
+    "section": "restriction-history",
+    "source": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/temples?lang=eng",
+    "source_label": "Church history and doctrine",
+    "title": "The worth of every soul",
+    "asset": "assets/page-art/priesthood-history/original-family-scripture.png",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "3636d704b7b4ae32b5e4bb6747148700c3416ed32265b07ad7b850c4a16be132",
+    "generation_tool": "image_gen.imagegen",
+    "provenance": "docs/priesthood-history/original-generation-prompts.json",
+    "artwork_kind": "contemporary symbolic illustration",
+    "study_title": "The worth of every soul",
+    "caption": "A family gathers around scripture. Begin with the truth that all are alike unto God, while listening carefully to the lives affected by the historical restrictions.",
+    "alt": "Family members studying scripture together.",
+    "credit": "Original generated artwork · Contemporary symbolic illustration",
+    "doctrine": {
+      "label": "Temples",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/temples?lang=eng"
+    },
+    "scripture": {
+      "label": "2 Nephi 26:24–33",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/26?lang=eng&id=p24-p33#p24"
+    },
+    "placement": {
+      "kind": "narrative-start"
+    }
+  },
+  {
+    "id": "christ-invitation",
+    "section": "restriction-history",
+    "source": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/race-and-the-church-of-jesus-christ-of-latter-day-saints?lang=eng",
+    "source_label": "Church history and doctrine",
+    "title": "Come unto Christ",
+    "asset": "assets/page-art/priesthood-history/original-christ-invitation.png",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "b979e7f771cfe3ace6e6730809e3af1807750c403f3d43bdc4a987ea79169268",
+    "generation_tool": "image_gen.imagegen",
+    "provenance": "docs/priesthood-history/original-generation-prompts.json",
+    "artwork_kind": "contemporary symbolic illustration",
+    "study_title": "Come unto Christ",
+    "caption": "The Savior invites all to come unto Him. Read His invitation alongside the Church’s account of race and the priesthood, and consider how you can extend His welcome to others.",
+    "alt": "Artistic illustration of the Savior’s invitation to come unto Him.",
+    "credit": "Original generated artwork · Contemporary symbolic illustration",
+    "doctrine": {
+      "label": "Race and the Church",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/race-and-the-church-of-jesus-christ-of-latter-day-saints?lang=eng"
+    },
+    "scripture": {
+      "label": "2 Nephi 26:33",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/26?lang=eng&id=p33#p33"
+    },
+    "placement": {
+      "kind": "deeper-second-heading"
+    }
+  },
+  {
+    "id": "elijah-portrait",
+    "section": "elijah-able",
+    "source": "https://www.churchofjesuschrist.org/study/history/topics/elijah-able?lang=eng",
+    "source_label": "Church history and doctrine",
+    "title": "Remember Elijah Able",
+    "asset": "assets/page-art/priesthood-history/original-elijah-portrait.png",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "8aa501db78926c0b72490c0d4677c0bc66e1673ec7b130a43c5d2c1b8edc31a8",
+    "generation_tool": "image_gen.imagegen",
+    "provenance": "docs/priesthood-history/original-historical-images.json",
+    "artwork_kind": "historical interpretation",
+    "study_title": "Remember Elijah Able",
+    "caption": "Artistic portrait based on Elijah Able’s surviving likeness.",
+    "alt": "Historical portrait interpretation of Elijah Able as a mature adult.",
+    "credit": "Original generated artwork · Historical artistic interpretation",
+    "doctrine": {
+      "label": "Elijah Able",
+      "url": "https://www.churchofjesuschrist.org/study/history/topics/elijah-able?lang=eng"
+    },
+    "scripture": {
+      "label": "Doctrine and Covenants 121:41–42",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121?lang=eng&id=p41-p42#p41"
+    },
+    "placement": {
+      "kind": "story-block",
+      "block": 0,
+      "after_paragraph": 1
+    }
+  },
+  {
+    "id": "elijah-carpentry",
+    "section": "elijah-able",
+    "source": "https://www.churchofjesuschrist.org/study/history/topics/elijah-able?lang=eng",
+    "source_label": "Church history and doctrine",
+    "title": "Faith within a working life",
+    "asset": "assets/page-art/priesthood-history/original-elijah-carpentry.png",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "bb9a8ac9a615a9d420a186e2bc0353ea9aa2bd51d1b151217e3773ef92ae4c9a",
+    "generation_tool": "image_gen.imagegen",
+    "provenance": "docs/priesthood-history/original-historical-images.json",
+    "artwork_kind": "historical interpretation",
+    "study_title": "Faith within a working life",
+    "caption": "Elijah worked as a carpenter in Cincinnati from 1842.",
+    "alt": "Historical interpretation of young adult Elijah Able working with a hand plane in a carpenter’s shop.",
+    "credit": "Original generated artwork · Historical artistic interpretation",
+    "doctrine": {
+      "label": "Priesthood",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/priesthood?lang=eng"
+    },
+    "scripture": {
+      "label": "Doctrine and Covenants 121:34–46",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121?lang=eng&id=p34-p46#p34"
+    },
+    "placement": {
+      "kind": "story-block",
+      "block": 1,
+      "after_paragraph": 1
+    }
+  },
+  {
+    "id": "jane-portrait",
+    "section": "jane-manning-james",
+    "source": "https://www.churchofjesuschrist.org/study/history/topics/jane-elizabeth-manning-james?lang=eng",
+    "source_label": "Church history and doctrine",
+    "title": "Remember Jane Manning James",
+    "asset": "assets/page-art/priesthood-history/original-jane-portrait.png",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "0494ad4272b85b04e79a1500941f6bbf01c2f5212e5300d1253f064a595084e1",
+    "generation_tool": "image_gen.imagegen",
+    "provenance": "docs/priesthood-history/original-historical-images.json",
+    "artwork_kind": "historical interpretation",
+    "study_title": "Remember Jane Manning James",
+    "caption": "Artistic portrait based on Jane Manning James’s surviving likeness.",
+    "alt": "Historical portrait interpretation of Jane Manning James as a mature adult.",
+    "credit": "Original generated artwork · Historical artistic interpretation",
+    "doctrine": {
+      "label": "Jane Elizabeth Manning James",
+      "url": "https://www.churchofjesuschrist.org/study/history/topics/jane-elizabeth-manning-james?lang=eng"
+    },
+    "scripture": {
+      "label": "Doctrine and Covenants 124:37–40",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/124?lang=eng&id=p37-p40#p37"
+    },
+    "placement": {
+      "kind": "story-block",
+      "block": 1,
+      "after_paragraph": 1
+    }
+  },
+  {
+    "id": "jane-journey",
+    "section": "jane-manning-james",
+    "source": "https://www.churchofjesuschrist.org/study/history/topics/jane-elizabeth-manning-james?lang=eng",
+    "source_label": "Church history and doctrine",
+    "title": "A journey toward a covenant community",
+    "asset": "assets/page-art/priesthood-history/original-jane-journey.png",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "f6eeb2eb0bd270021e990d7d65815dfdfc266ed005009afa27d9c7c5e220f6e6",
+    "generation_tool": "image_gen.imagegen",
+    "provenance": "docs/priesthood-history/original-historical-images.json",
+    "artwork_kind": "historical interpretation",
+    "study_title": "A journey toward a covenant community",
+    "caption": "Jane and her family walked toward Nauvoo in 1843. This youthful interpretation recalls that difficult journey.",
+    "alt": "Historical interpretation of young Jane Manning James walking toward Nauvoo with family companions.",
+    "credit": "Original generated artwork · Historical artistic interpretation",
+    "doctrine": {
+      "label": "Prayer",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/prayer-study-guide?lang=eng"
+    },
+    "scripture": {
+      "label": "3 Nephi 18:21",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/18?lang=eng&id=p21#p21"
+    },
+    "placement": {
+      "kind": "story-block",
+      "block": 0,
+      "after_paragraph": 1
+    }
+  },
+  {
+    "id": "ghana-study",
+    "section": "faith-across-nations",
+    "source": "https://www.churchofjesuschrist.org/study/history/saints-stories-billy-johnson-ghana/billy-johnson-ghana?lang=eng",
+    "source_label": "Church history and doctrine",
+    "title": "Faith across nations",
+    "asset": "assets/page-art/priesthood-history/original-ghana-study.png",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "7dce372e2454d9b0c95e3877c1a12bca878e44cfc2af3bde1389e8809d87f298",
+    "generation_tool": "image_gen.imagegen",
+    "provenance": "docs/priesthood-history/original-generation-prompts.json",
+    "artwork_kind": "contemporary symbolic illustration",
+    "study_title": "Faith across nations",
+    "caption": "Saints in Ghana studied, prayed and sought the restored gospel before missionaries arrived. The gathering shown invites us to honor that desire. Read the Church’s account to learn about Billy Johnson and the people whose faith shaped this history.",
+    "alt": "Symbolic illustration of Ghanaian adults studying together.",
+    "credit": "Original generated artwork · Contemporary symbolic illustration",
+    "doctrine": {
+      "label": "Race and the Church",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/race-and-the-church-of-jesus-christ-of-latter-day-saints?lang=eng"
+    },
+    "scripture": {
+      "label": "Official Declaration 2",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/od/2?lang=eng"
+    },
+    "placement": {
+      "kind": "narrative-start"
+    }
+  },
+  {
+    "id": "temple-family",
+    "section": "faith-across-nations",
+    "source": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/temples?lang=eng",
+    "source_label": "Church history and doctrine",
+    "title": "Blessings that reach families",
+    "asset": "assets/page-art/priesthood-history/original-temple-family.png",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "a4e1a2639e86db0b4fc6832c12c242e055065f60746ca2a4addbffe4b99852ff",
+    "generation_tool": "image_gen.imagegen",
+    "provenance": "docs/priesthood-history/original-generation-prompts.json",
+    "artwork_kind": "contemporary symbolic illustration",
+    "study_title": "Blessings that reach families",
+    "caption": "Temple covenants turn our attention toward Jesus Christ and the eternal possibilities of family life. Consider the blessings opened more widely after the 1978 revelation and what temple worship means to your own family.",
+    "alt": "A family standing together near a temple.",
+    "credit": "Original generated artwork · Contemporary symbolic illustration",
+    "doctrine": {
+      "label": "Temples",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/temples?lang=eng"
+    },
+    "scripture": {
+      "label": "Galatians 3:26–29",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/gal/3?lang=eng&id=p26-p29#p26"
+    },
+    "placement": {
+      "kind": "deeper-second-heading"
+    }
+  },
+  {
+    "id": "kimball-study",
+    "section": "revelation-1978",
+    "source": "https://www.churchofjesuschrist.org/study/manual/revelations-in-context/witnessing-the-faithfulness?lang=eng",
+    "source_label": "Church history and doctrine",
+    "title": "Seeking the Lord’s direction",
+    "asset": "assets/page-art/priesthood-history/original-kimball-study.png",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "eac6046128d69ac4db4d97864f4e8d1dbc4c85004c5f7596a1e2a50c9ca5b3d5",
+    "generation_tool": "image_gen.imagegen",
+    "provenance": "docs/priesthood-history/original-generation-prompts.json",
+    "artwork_kind": "historical interpretation",
+    "study_title": "Seeking the Lord’s direction",
+    "caption": "President Spencer W. Kimball sought the Lord’s direction concerning priesthood and temple blessings. This interpretive study scene accompanies the Church’s account of prayer and revelation; it does not recreate the sacred revelatory meeting. Read Official Declaration 2 in full.",
+    "alt": "Historical artistic interpretation of President Spencer W. Kimball in quiet study.",
+    "credit": "Original generated artwork · Historical artistic interpretation",
+    "doctrine": {
+      "label": "Witnessing the Faithfulness",
+      "url": "https://www.churchofjesuschrist.org/study/manual/revelations-in-context/witnessing-the-faithfulness?lang=eng"
+    },
+    "scripture": {
+      "label": "Official Declaration 2",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/od/2?lang=eng"
+    },
+    "placement": {
+      "kind": "narrative-start"
+    }
+  },
+  {
+    "id": "family-prayer",
+    "section": "revelation-1978",
+    "source": "https://www.churchofjesuschrist.org/study/manual/revelations-in-context/witnessing-the-faithfulness?lang=eng",
+    "source_label": "Church history and doctrine",
+    "title": "Receive the announcement with faith",
+    "asset": "assets/page-art/priesthood-history/original-family-prayer.png",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "9a288cb5c7f9be7c165888695091ff837f943bc881cb91cdf48f391032fd9e45",
+    "generation_tool": "image_gen.imagegen",
+    "provenance": "docs/priesthood-history/original-generation-prompts.json",
+    "artwork_kind": "contemporary symbolic illustration",
+    "study_title": "Receive the announcement with faith",
+    "caption": "The 1978 revelation reached real families with hopes, questions and gratitude. Read the declaration and the Church’s historical account, then reflect on the place of prayer in receiving and responding to revelation.",
+    "alt": "Contemporary symbolic illustration of a family praying together.",
+    "credit": "Original generated artwork · Contemporary symbolic illustration",
+    "doctrine": {
+      "label": "Witnessing the Faithfulness",
+      "url": "https://www.churchofjesuschrist.org/study/manual/revelations-in-context/witnessing-the-faithfulness?lang=eng"
+    },
+    "scripture": {
+      "label": "Official Declaration 2",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/od/2?lang=eng"
+    },
+    "placement": {
+      "kind": "deeper-second-heading"
+    }
+  },
+  {
+    "id": "priesthood-service",
+    "section": "belonging-and-responsibility",
+    "source": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/race-and-the-church-of-jesus-christ-of-latter-day-saints?lang=eng",
+    "source_label": "Church history and doctrine",
+    "title": "Power exercised through love",
+    "asset": "assets/page-art/priesthood-history/original-priesthood-service.png",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "47d7f214bd81d6e8821d3554e8adada05c9c6867c9ae8ea1ac2354543d24fa8b",
+    "generation_tool": "image_gen.imagegen",
+    "provenance": "docs/priesthood-history/original-generation-prompts.json",
+    "artwork_kind": "contemporary symbolic illustration",
+    "study_title": "Power exercised through love",
+    "caption": "Priesthood service is accountable to the Lord’s pattern of persuasion, gentleness, meekness and love unfeigned. Caring for another person invites reflection on the conditions of righteous priesthood influence taught in the linked passage.",
+    "alt": "Two men giving a seated man a priesthood blessing while a woman sits nearby with eyes closed.",
+    "credit": "Original generated artwork · Contemporary symbolic illustration",
+    "doctrine": {
+      "label": "Race and the Church",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/race-and-the-church-of-jesus-christ-of-latter-day-saints?lang=eng"
+    },
+    "scripture": {
+      "label": "Doctrine and Covenants 121:41–42",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121?lang=eng&id=p41-p42#p41"
+    },
+    "placement": {
+      "kind": "narrative-start"
+    }
+  },
+  {
+    "id": "welcome",
+    "section": "belonging-and-responsibility",
+    "source": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/service?lang=eng",
+    "source_label": "Church history and doctrine",
+    "title": "Make belonging visible",
+    "asset": "assets/page-art/priesthood-history/original-welcome.png",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "d4c288e76a65de07d853da6312064930289141d6705194cb9020050347dffacc",
+    "generation_tool": "image_gen.imagegen",
+    "provenance": "docs/priesthood-history/original-generation-prompts.json",
+    "artwork_kind": "contemporary symbolic illustration",
+    "study_title": "Make belonging visible",
+    "caption": "The work of belonging continues in how we welcome, listen and serve. Respond to the Church’s rejection of racism by treating each person with dignity and extending the love we hope to receive ourselves.",
+    "alt": "People greeting one another warmly in a shared gathering.",
+    "credit": "Original generated artwork · Contemporary symbolic illustration",
+    "doctrine": {
+      "label": "Service",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/service?lang=eng"
+    },
+    "scripture": {
+      "label": "Mosiah 18:8–10",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng&id=p8-p10#p8"
+    },
+    "placement": {
+      "kind": "deeper-second-heading"
+    }
+  },
+  {
+    "id": "elijah-mission",
+    "section": "elijah-able",
+    "source": "https://history.churchofjesuschrist.org/chd/individual/elijah-able-1810?lang=eng",
+    "source_label": "Historical source",
+    "title": "Continuing in missionary service",
+    "asset": "assets/page-art/priesthood-history/original-elijah-mission.png",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "45d3573f8517eb5b1249723667a10106c004b9d9d20858844a1d1d83480cf8e0",
+    "generation_tool": "image_gen.imagegen",
+    "provenance": "docs/priesthood-history/elijah-able-study.json",
+    "artwork_kind": "historical interpretation",
+    "study_title": "Continuing in missionary service",
+    "caption": "Elijah Able’s missionary service continued into his seventies.",
+    "alt": "Historical artistic interpretation of Elijah Able in later life, seated with an open book.",
+    "credit": "Original generated artwork · Historical artistic interpretation",
+    "doctrine": {
+      "label": "Church biography",
+      "url": "https://history.churchofjesuschrist.org/chd/individual/elijah-able-1810?lang=eng"
+    },
+    "scripture": {
+      "label": "John 14:1–3",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/14?lang=eng&id=p1-p3#p1"
+    },
+    "placement": {
+      "kind": "story-block",
+      "block": 2,
+      "after_paragraph": 1
+    }
+  },
+  {
+    "id": "green-flake-journey",
+    "section": "green-flake",
+    "source": "https://www.churchofjesuschrist.org/study/history/global-histories/united-states/stories-of-faith/us-in-my-fathers-house?lang=eng",
+    "source_label": "Historical source",
+    "title": "Green Flake on the westward trail",
+    "asset": "assets/page-art/priesthood-history/original-green-flake-journey.png",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "e067ea5ce243bf37ccd2c9681642170ecc6bd1ead9a1797c3c32c4d403b1e799",
+    "generation_tool": "image_gen.imagegen",
+    "provenance": "docs/priesthood-history/green-flake-study.json",
+    "artwork_kind": "historical interpretation",
+    "study_title": "Green Flake on the westward trail",
+    "caption": "Green traveled with the 1847 vanguard company while enslaved. This youthful trail scene follows that history.",
+    "alt": "Historical artistic interpretation: Green Flake on the westward trail",
+    "credit": "Original generated artwork · Historical artistic interpretation",
+    "doctrine": {
+      "label": "Church biography",
+      "url": "https://www.churchofjesuschrist.org/study/history/global-histories/united-states/stories-of-faith/us-in-my-fathers-house?lang=eng"
+    },
+    "scripture": {
+      "label": "John 14:1–3",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/14?lang=eng&id=p1-p3#p1"
+    },
+    "placement": {
+      "kind": "story-block",
+      "block": 0,
+      "after_paragraph": 1
+    }
+  },
+  {
+    "id": "green-flake-farm",
+    "section": "green-flake",
+    "source": "https://www.churchofjesuschrist.org/study/history/global-histories/united-states/stories-of-faith/us-in-my-fathers-house?lang=eng",
+    "source_label": "Historical source",
+    "title": "A life of work in Union",
+    "asset": "assets/page-art/priesthood-history/original-green-flake-farm.png",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "0171f80ef4ea3858700269e8ddea9fac97a18a9180b27d75611610c0d85625f7",
+    "generation_tool": "image_gen.imagegen",
+    "provenance": "docs/priesthood-history/green-flake-study.json",
+    "artwork_kind": "historical interpretation",
+    "study_title": "A life of work in Union",
+    "caption": "Green farmed in Union and remained active in his ward. This scene recalls that everyday labor.",
+    "alt": "Historical artistic interpretation: A life of work in Union",
+    "credit": "Original generated artwork · Historical artistic interpretation",
+    "doctrine": {
+      "label": "Church biography",
+      "url": "https://www.churchofjesuschrist.org/study/history/global-histories/united-states/stories-of-faith/us-in-my-fathers-house?lang=eng"
+    },
+    "scripture": {
+      "label": "John 14:1–3",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/14?lang=eng&id=p1-p3#p1"
+    },
+    "placement": {
+      "kind": "story-block",
+      "block": 1,
+      "after_paragraph": 1
+    }
+  },
+  {
+    "id": "green-flake-portrait",
+    "section": "green-flake",
+    "source": "https://www.churchofjesuschrist.org/study/history/global-histories/united-states/stories-of-faith/us-in-my-fathers-house?lang=eng",
+    "source_label": "Historical source",
+    "title": "Remembering Green Flake",
+    "asset": "assets/page-art/priesthood-history/original-green-flake-portrait.png",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "92a7b8d87f7f9b2164dc28c48f47d072f16233852ca194e3c9722992fc736c6b",
+    "generation_tool": "image_gen.imagegen",
+    "provenance": "docs/priesthood-history/green-flake-study.json",
+    "artwork_kind": "historical interpretation",
+    "study_title": "Remembering Green Flake",
+    "caption": "A later description remembered Green’s broad shoulders, vigor and spectacles. This portrait follows his surviving likeness.",
+    "alt": "Historical artistic interpretation: Remembering Green Flake",
+    "credit": "Original generated artwork · Historical artistic interpretation",
+    "doctrine": {
+      "label": "Church biography",
+      "url": "https://www.churchofjesuschrist.org/study/history/global-histories/united-states/stories-of-faith/us-in-my-fathers-house?lang=eng"
+    },
+    "scripture": {
+      "label": "John 14:1–3",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/14?lang=eng&id=p1-p3#p1"
+    },
+    "placement": {
+      "kind": "story-block",
+      "block": 2,
+      "after_paragraph": 1
+    }
+  },
+  {
+    "id": "jane-sewing",
+    "section": "jane-manning-james",
+    "source": "https://www.churchofjesuschrist.org/study/history/topics/jane-elizabeth-manning-james?lang=eng",
+    "source_label": "Church history and doctrine",
+    "title": "Work, care, and perseverance",
+    "asset": "assets/page-art/priesthood-history/original-jane-sewing.png",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "5c6bc64709329c623344bb46a09a374c249c97bffd1aad3f601783f5d5f34a4d",
+    "generation_tool": "image_gen.imagegen",
+    "provenance": "docs/priesthood-history/jane-story.json",
+    "artwork_kind": "historical interpretation",
+    "study_title": "Work, care, and perseverance",
+    "caption": "Jane supported her family through skilled work, including sewing. Her daily labor belongs beside her remembered journeys, generosity and requests for temple blessings.",
+    "alt": "Jane Manning James sewing a cloth seam in a modest home, shown as a mature woman.",
+    "credit": "Original generated artwork · Historical artistic interpretation",
+    "doctrine": {
+      "label": "Jane Elizabeth Manning James",
+      "url": "https://www.churchofjesuschrist.org/study/history/topics/jane-elizabeth-manning-james?lang=eng"
+    },
+    "scripture": {
+      "label": "Doctrine and Covenants 58:27",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/58?lang=eng&id=p27#p27"
+    },
+    "placement": {
+      "kind": "story-block",
+      "block": 2,
+      "after_paragraph": 1
+    }
+  }
+]

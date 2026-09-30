@@ -1,0 +1,98 @@
+{
+  "title": "Green Flake: a life beyond the trail",
+  "section_id": "green-flake",
+  "suggestedPlacement": "After Jane Manning James and before Faith across nations; root owns integration.",
+  "review_status": "draft awaiting Fermi independent source/art review and root assembled review",
+  "sources": [
+    "https://www.churchofjesuschrist.org/study/history/global-histories/united-states/stories-of-faith/us-in-my-fathers-house?lang=eng",
+    "https://history.churchofjesuschrist.org/chd/individual/green-flake-1828?lang=eng",
+    "https://newsroom.churchofjesuschrist.org/article/president-ballard-dedicates-monument-black-pioneers"
+  ],
+  "paragraphs": [
+    {
+      "heading": "A young believer, an enslaved pioneer",
+      "html": "<p>Baptized in Mississippi in 1844, Green Flake traveled west while enslaved. The Church’s history records his work preparing the road, driving a wagon into Emigration Canyon and planting crops before Brigham Young arrived. <a href=\"https://www.churchofjesuschrist.org/study/history/global-histories/united-states/stories-of-faith/us-in-my-fathers-house?lang=eng\">Read Green Flake’s history</a>.</p><p>The <a href=\"https://history.churchofjesuschrist.org/chd/individual/green-flake-1828?lang=eng\">Church History Biographical Database</a> lists his birth as January 6, 1828, and records his place in the Brigham Young Vanguard Company. Other records place his birth between 1825 and 1828. He was therefore a young adult during the journey, approximately nineteen to twenty-two. That uncertainty deserves to remain visible when we tell his story.</p>"
+    },
+    {
+      "heading": "Work, family and faith in Union",
+      "html": "<p>Green farmed in Union and participated in his ward. He and Martha raised two children. The Church’s account leaves his precise emancipation date uncertain. <a href=\"https://www.churchofjesuschrist.org/study/history/global-histories/united-states/stories-of-faith/us-in-my-fathers-house?lang=eng\">Study his life after the journey</a>.</p><p>As you read, notice the difference between what a record establishes and what we hope to understand about a person. Faithful remembrance requires room for both honest questions and the evidence that survives.</p>"
+    },
+    {
+      "heading": "A legacy remembered",
+      "html": "<p>Green spoke at pioneer commemorations and returned for the 1897 jubilee. His shared gravestone with Martha expressed hope in the Father’s house. Read <a class=\"fc-inline-scripture\" href=\"https://www.churchofjesuschrist.org/study/scriptures/nt/john/14?lang=eng&id=p1-p3#p1\">John 14:1–3</a>. <a href=\"https://www.churchofjesuschrist.org/study/history/global-histories/united-states/stories-of-faith/us-in-my-fathers-house?lang=eng\">Read the account of his later years</a>.</p><p>In July 2022, President M. Russell Ballard dedicated a monument honoring Green Flake, Jane Manning James and fellow Black pioneers at This Is The Place Heritage Park. The Church’s report describes a place intended for learning, reflection and healing. <a href=\"https://newsroom.churchofjesuschrist.org/article/president-ballard-dedicates-monument-black-pioneers\">Read the dedication report</a>. Their remembrance invites us to learn names, acknowledge the conditions people endured and recognize their contributions with care.</p>"
+    }
+  ],
+  "referenceEvidence": {
+    "photo": "https://history.churchofjesuschrist.org/church-history-people/bc/Pioneer%20Photos/Pioneers%20F/1080x1440/Flake_Green_KWVP-Q8J.jpg",
+    "engraving": "https://www.churchofjesuschrist.org/imgs/afe85c35522f61e50585e36d06537f84e0a85da2/full/!1600,/0/default",
+    "limits": "Portrait date unknown. Engraving caption says Mississippi birth, conflicting with written sources; do not adopt that caption. Color, exact clothing, younger facial details and staging interpreted.1897written account establishes broad shoulders, vigorous bearing, spectacles. Source portraits research-only, not published."
+  },
+  "images": [
+    {
+      "id": "green-flake-journey",
+      "file": "assets/page-art/priesthood-history/original-green-flake-journey.png",
+      "prompt": "Create respectful historical artistic reconstruction of Green Flake during1847 pioneerjourney, aged NINETEEN toTWENTY-TWO. Young adult, convincinglyyouthfulface without foreheadfurrows, nasolabialaging,grayhair,maturebeard or matureheavyfeatures. TWO actual laterGreenFlake likenessreferences establish broadforehead,fullnose,fullmouth,strongchin; carefully deage their structuralfeatures, doNOT copy middleagedface. Short tightlycurledhair, cleanshaven. Show youngGreen walking beside a plain1847coveredwagon on aruttedwesterntrail, onehandrestinglightly onwoodenwagonside, lookingahead with alertquietdetermination. SourceChurchhistorydocuments Green,thenenslaved,travelingwith1847vanguardcompanyandhelpingpreparetheroad; exactwalkingmoment isinterpretive. Do notinvent chains, overseer, crueltyscene or triumphantfreedomclaim. Plain periodlinen shirt,waistcoat,loosewooltrousers,sturdyboots; hatheldinfreehand leavingfacevisible. Wagonbehind anddistantmountainfoothills, not exacttopographyclaim. Noadditionalnamedpeople, no moderndetails. Naturalhandsfullfigure, lifelikephotographicclarity, warmcleardaylight, portraitidentitycloseenough tocompare, wide3:2composition. No text/frame/watermark, no painting, no glamour. Critical: this must visuallybe a youngman about20, not someone40captioned20.",
+      "output": "exec-a1dd4889-6b6b-49a4-8eea-a58501e3c077.png",
+      "age": "approximately19–22 in1847; written sources disagree1825–1828",
+      "caption": "Green traveled with the 1847 vanguard company while enslaved. This youthful trail scene follows that history.",
+      "title": "Green Flake on the westward trail",
+      "review": "Revised first older-looking candidate. Selected young-adult interpretation requires Fermi age/likeness concurrence; visible hands and clothing inspected.",
+      "sha256": "e067ea5ce243bf37ccd2c9681642170ecc6bd1ead9a1797c3c32c4d403b1e799"
+    },
+    {
+      "id": "green-flake-farm",
+      "file": "assets/page-art/priesthood-history/original-green-flake-farm.png",
+      "prompt": "Generate a photorealistic historical interpretation of Green Flake as a mature farmer in the Union area of Salt Lake Valley around1865, approximateage37–40. Actual Church portrait photo and engraved likeness supplied MUST guide recognizable face: broad forehead and face, wide substantial nose, full lips, strongchin, short curledhair with modest mustache/goatee appropriate matureage. WrittenChurchhistory calls him broadshouldered laterinlife; build sturdy natural physique, no exaggeration. Source establishes he farmed his own land and remained in Union mostofhislife. Depict an ordinary farm task, not an invented recorded incident: Green standing in small cultivated field beside simplewoodenfence holding a woodenhandledhoe, studying growing crops, modestdistant farmhouse and Wasatch foothills atmosphericbackground. Exactfield/date/clothing/color inferred. Plain practical1860s shirt,waistcoat,trousers,strawhat heldorworn leavingfaceclear. Dignity and quietpurpose, lifelikeface and taskdirectedgaze, correcthands/tool, no additionalnamedpeople, no modernobjects, no forcedsentiment. Warm softmorninglight photographicdetail, landscape3:2, no text/frame/watermark, notpainterly.",
+      "output": "exec-15a058e7-6a8e-479e-8622-2df2957c2087.png",
+      "age": "approximately37–40 around1865; exact scene year interpreted",
+      "caption": "Green farmed in Union and remained active in his ward. This scene recalls that everyday labor.",
+      "title": "A life of work in Union",
+      "review": "Broad face, natural hands/tool and plausible mature age inspected. Field and surrounding geography inferred; independent concurrence pending.",
+      "sha256": "0171f80ef4ea3858700269e8ddea9fac97a18a9180b27d75611610c0d85625f7"
+    },
+    {
+      "id": "green-flake-portrait",
+      "file": "assets/page-art/priesthood-history/original-green-flake-portrait.png",
+      "prompt": "Generate a NEW hyperrealistic historical portrait interpretation of Green Flake at approximately70 years old around1897, based on BOTH supplied Churchhistorical likeness references. Preserve his recognizable broadforehead, broad substantialnose,fullmouth,strongchin,shorttightlycurledhair,mustacheandgoatee. Written1897description in Churchhistory calls him broadshouldered,vigorous and goodnatured, wearingglasses. Depict elderlyGreen seatedcomfortably beside a modesthomewindow, smallperiodspectacles wornnaturally, dark1890scoat/waistcoat/whitecollar/simpletie, handsresting inlap. Show authentic wrinkles and grayinghair, openwarmthandquietstrength not frailtyor caricature. His face must remain specificallyGreenFlake,notgenericactor. No namelesschildren or inventedfamilyrelations, no eventclaim. Modestlate19thcenturyinterior, softnaturalwindowlight, exquisitenaturalskinandcloth, anatomicallycorrecthands. Wide3:2composition with seatedfigure slightlyleft and restfulroomcontext. No text,frame,watermark,painting,plastictexture. Reference portraitdate and exactcolorsunverified; this is artisticinterpretation, not historicalphotograph.",
+      "output": "exec-ddcc7cd6-1afc-4b5c-8c05-3ca448a731d0.png",
+      "age": "approximately69–72 around1897",
+      "caption": "A later description remembered Green’s broad shoulders, vigor and spectacles. This portrait follows his surviving likeness.",
+      "title": "Remembering Green Flake",
+      "review": "Distinct source facial features, glasses, mature age, hands and period clothing inspected; independent concurrence pending.",
+      "sha256": "92a7b8d87f7f9b2164dc28c48f47d072f16233852ca194e3c9722992fc736c6b"
+    }
+  ],
+  "rejected": [
+    {
+      "output": "exec-008adbd0-3797-4a38-97ff-186db6f117a7.png",
+      "reason": "Apparent age older than19–22; not selected."
+    }
+  ],
+  "instruction_readback": {
+    "read": [
+      "AGENTS.md",
+      "docs/focuschrist-enrichment-and-stewardship-prompt.md",
+      "docs/historical-character-identity.md",
+      "docs/section-panel-design-mandate.md",
+      "docs/layout-geometry-execution.md"
+    ],
+    "accepted": "Source fidelity, actual likeness references, natural age/expression/anatomy, full study panel first, preserved shared design, separate test/render/owner evidence. Final source and actual visuals/behavior require Newton and Fermi concurrence plus root assembled review."
+  },
+  "source_word_allocation": {
+    "global_history": {
+      "included": "All biography-dependent clauses in main prose and all three captions; exclude independently sourced database dates,2022Newsroom paragraph and original study questions.",
+      "maximum": 200,
+      "estimatedDerivedWords": 180,
+      "countedWordsIncludingSourceLabelsAndScriptureLink": 173,
+      "countedText": "Baptized in Mississippi in 1844, Green Flake traveled west while enslaved. The Church’s history records his work preparing the road, driving a wagon into Emigration Canyon and planting crops before Brigham Young arrived. Read Green Flake’s history . Green farmed in Union and participated in his ward. He and Martha raised two children. The Church’s account leaves his precise emancipation date uncertain. Study his life after the journey . Green spoke at pioneer commemorations and returned for the 1897 jubilee. His shared gravestone with Martha expressed hope in the Father’s house. Read John 14:1–3 . Read the account of his later years . Green traveled with the 1847 vanguard company while enslaved. This youthful trail scene follows that history. Green farmed in Union and remained active in his ward. This scene recalls that everyday labor. A later description remembered Green’s broad shoulders, vigor and spectacles. This portrait follows his surviving likeness. Other records place his birth between 1825 and 1828. He was therefore a young adult during the journey, approximately nineteen to twenty-two."
+    },
+    "database": {
+      "maximum": 200,
+      "supported": "1828 birthdate, vanguard company membership; actualage range uncertainty uses globalhistory allocation"
+    },
+    "newsroom": {
+      "maximum": 200,
+      "supported": "2022monument dedication/people/learning reflection healing"
+    }
+  }
+}

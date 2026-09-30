@@ -87,9 +87,18 @@ class RefParser(HTMLParser):
         self.refs: list[tuple[str, str, dict[str, str]]] = []
         self.images: list[dict[str, str]] = []
         self.blank_links: list[dict[str, str]] = []
+        self.canonicals: list[str] = []
+        self.descriptions: list[str] = []
+        self.scripts: list[dict[str, str]] = []
 
     def handle_starttag(self, tag, attrs):
         data = {k: (v or "") for k, v in attrs}
+        if tag == "link" and "canonical" in data.get("rel", "").lower().split():
+            self.canonicals.append(data.get("href", ""))
+        if tag == "meta" and data.get("name", "").lower() == "description":
+            self.descriptions.append(data.get("content", ""))
+        if tag == "script":
+            self.scripts.append(data)
         if tag == "img":
             self.images.append(data)
             if data.get("src"):
@@ -102,6 +111,10 @@ class RefParser(HTMLParser):
             self.refs.append((tag, data["href"], data))
             if data.get("target") == "_blank":
                 self.blank_links.append(data)
+
+
+def shared_controller_count(parser: RefParser, prefix: str) -> int:
+    return sum(bool(re.fullmatch(re.escape(prefix) + r"site-common\.js(?:\?v=[^\s]+)?", attrs.get("src", ""))) and "defer" in attrs for attrs in parser.scripts)
 
 
 def fail(errors: list[str], message: str):
@@ -182,11 +195,11 @@ def main() -> int:
             continue
         if text.count("<title>") != 1:
             fail(errors, f"{filename}: expected exactly one <title>")
-        if f'<link rel="canonical" href="{canonical}">' not in text:
+        if _parser.canonicals != [canonical]:
             fail(errors, f"{filename}: canonical URL missing or incorrect")
         if text.count('data-focuschrist-independence="footer"') != 1:
             fail(errors, f"{filename}: independence footer disclosure missing/duplicated")
-        if len(re.findall(r'<script src="site-common\.js(?:\?v=[^"]+)?" defer></script>', text)) != 1:
+        if shared_controller_count(_parser, "") != 1:
             fail(errors, f"{filename}: shared interaction controller missing/duplicated")
         if 'aria-controls="hamburgerMenu"' not in text:
             fail(errors, f"{filename}: hamburger ARIA controls missing")
@@ -220,13 +233,13 @@ def main() -> int:
             continue
         if text.count("<title>") != 1 or text.count("<h1") != 1:
             fail(errors, f"{answer_path}: expected one title and one h1")
-        if f'<link rel="canonical" href="{canonical}">' not in text:
+        if _parser.canonicals != [canonical]:
             fail(errors, f"{answer_path}: canonical URL missing or incorrect")
-        if '<meta name="description"' not in text:
+        if len(_parser.descriptions) != 1 or not _parser.descriptions[0].strip():
             fail(errors, f"{answer_path}: meta description missing")
         if text.count('data-focuschrist-independence="footer"') != 1:
             fail(errors, f"{answer_path}: independence footer disclosure missing/duplicated")
-        if len(re.findall(r'<script src="\.\./site-common\.js(?:\?v=[^"]+)?" defer></script>', text)) != 1:
+        if shared_controller_count(_parser, "../") != 1:
             fail(errors, f"{answer_path}: shared interaction controller missing/duplicated")
         if 'href="../ask.html"' not in text:
             fail(errors, f"{answer_path}: Ask continuation path missing")
@@ -288,13 +301,13 @@ def main() -> int:
             continue
         if text.count("<title>") != 1 or text.count("<h1") != 1:
             fail(errors, f"{study_path}: expected one title and one h1")
-        if f'<link rel="canonical" href="{canonical}">' not in text:
+        if parser.canonicals != [canonical]:
             fail(errors, f"{study_path}: canonical URL missing or incorrect")
-        if '<meta name="description"' not in text:
+        if len(parser.descriptions) != 1 or not parser.descriptions[0].strip():
             fail(errors, f"{study_path}: meta description missing")
         if text.count('data-focuschrist-independence="footer"') != 1:
             fail(errors, f"{study_path}: independence footer disclosure missing/duplicated")
-        if not re.search(r'<script src="\.\./site-common\.js(?:\?v=[^"]+)?" defer></script>', text):
+        if shared_controller_count(parser, "../") != 1:
             fail(errors, f"{study_path}: shared interaction controller missing")
         if 'href="../art.html"' not in text or 'href="../ask.html"' not in text:
             fail(errors, f"{study_path}: Art/Ask continuation path missing")

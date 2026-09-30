@@ -1,0 +1,632 @@
+{
+  "canonical_count": 125,
+  "hero_count": 46,
+  "excluded_count": 79,
+  "pages": [
+    {
+      "path": "index.html",
+      "hero": true,
+      "template": "standard"
+    },
+    {
+      "path": "ask.html",
+      "hero": true,
+      "template": "standard"
+    },
+    {
+      "path": "answers.html",
+      "hero": true,
+      "template": "standard"
+    },
+    {
+      "path": "watch.html",
+      "hero": true,
+      "template": "standard"
+    },
+    {
+      "path": "art.html",
+      "hero": true,
+      "template": "standard"
+    },
+    {
+      "path": "missionary.html",
+      "hero": true,
+      "template": "standard"
+    },
+    {
+      "path": "church-history.html",
+      "hero": true,
+      "template": "standard"
+    },
+    {
+      "path": "come-follow-me.html",
+      "hero": true,
+      "template": "cfm"
+    },
+    {
+      "path": "pioneers.html",
+      "hero": true,
+      "template": "standard"
+    },
+    {
+      "path": "about.html",
+      "hero": true,
+      "template": "standard"
+    },
+    {
+      "path": "answers/jesus-christ-latter-day-saint-beliefs.html",
+      "hero": true,
+      "template": "topic"
+    },
+    {
+      "path": "answers/are-latter-day-saints-christian.html",
+      "hero": true,
+      "template": "topic"
+    },
+    {
+      "path": "answers/what-is-the-book-of-mormon.html",
+      "hero": true,
+      "template": "topic"
+    },
+    {
+      "path": "answers/why-latter-day-saints-build-temples.html",
+      "hero": true,
+      "template": "topic"
+    },
+    {
+      "path": "answers/what-happens-after-death.html",
+      "hero": true,
+      "template": "topic"
+    },
+    {
+      "path": "answers/who-was-joseph-smith.html",
+      "hero": true,
+      "template": "topic"
+    },
+    {
+      "path": "answers/prayer-and-personal-revelation.html",
+      "hero": true,
+      "template": "topic"
+    },
+    {
+      "path": "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+      "hero": true,
+      "template": "topic"
+    },
+    {
+      "path": "answers/why-families-are-important.html",
+      "hero": true,
+      "template": "topic"
+    },
+    {
+      "path": "answers/what-is-eternal-marriage.html",
+      "hero": true,
+      "template": "topic"
+    },
+    {
+      "path": "answers/bible-and-book-of-mormon-together.html",
+      "hero": true,
+      "template": "topic"
+    },
+    {
+      "path": "answers/faith-in-jesus-christ-during-trials.html",
+      "hero": true,
+      "template": "topic"
+    },
+    {
+      "path": "art-study/the-living-christ.html",
+      "hero": true,
+      "template": "standard"
+    },
+    {
+      "path": "art-study/the-good-shepherd.html",
+      "hero": true,
+      "template": "standard"
+    },
+    {
+      "path": "art-study/suffer-the-little-children.html",
+      "hero": true,
+      "template": "standard"
+    },
+    {
+      "path": "art-study/be-still.html",
+      "hero": true,
+      "template": "standard"
+    },
+    {
+      "path": "answers/death-of-a-child.html",
+      "hero": true,
+      "template": "topic"
+    },
+    {
+      "path": "answers/divorce-and-faith.html",
+      "hero": true,
+      "template": "topic"
+    },
+    {
+      "path": "general-conference.html",
+      "hero": true,
+      "template": "conference"
+    },
+    {
+      "path": "answers/grief-and-faith.html",
+      "hero": true,
+      "template": "topic"
+    },
+    {
+      "path": "answers/stand-forever.html",
+      "hero": true,
+      "template": "topic"
+    },
+    {
+      "path": "answers/god-our-heavenly-father.html",
+      "hero": true,
+      "template": "topic"
+    },
+    {
+      "path": "answers/restored-church-of-jesus-christ.html",
+      "hero": true,
+      "template": "topic"
+    },
+    {
+      "path": "art-gallery.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "book-of-mormon-evidences.html",
+      "hero": true,
+      "template": "standard"
+    },
+    {
+      "path": "joseph-smith-likeness.html",
+      "hero": true,
+      "template": "standard"
+    },
+    {
+      "path": "search.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "atonement.html",
+      "hero": true,
+      "template": "standard"
+    },
+    {
+      "path": "birth-of-christ.html",
+      "hero": true,
+      "template": "topic"
+    },
+    {
+      "path": "answers/aaronic-priesthood-restoration.html",
+      "hero": true,
+      "template": "topic"
+    },
+    {
+      "path": "answers/melchizedek-priesthood-restoration.html",
+      "hero": true,
+      "template": "topic"
+    },
+    {
+      "path": "answers/settle-this-in-your-hearts.html",
+      "hero": true,
+      "template": "topic"
+    },
+    {
+      "path": "jesus-christ/before-bethlehem.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/miracles-and-compassion.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/mortal-ministry.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/barren-fig.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/birds-lilies.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/blind-guides.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/bridegroom.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/budding-fig.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/children-marketplace.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/closed-door.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/divided-house.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/doorkeeper.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/faithful-servant.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/friend-midnight.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/good-samaritan.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/good-shepherd.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/grain-wheat.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/great-supper.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/growing-seed.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/hearing.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/hen-chicks.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/hidden-treasure.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/householder.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/king-war.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/kingdom.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/laborers-vineyard.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/lamp.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/leaven.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/lost-coin.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/lost-sheep.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/mercy.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/minas.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/mote-beam.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/mustard-seed.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/neighbor.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/net.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/new-patch.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/new-wineskins.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/parent-gifts.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/pearl.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/persistent-widow.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/pharisee-publican.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/prodigal-son.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/returning-spirit.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/rich-fool.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/rich-man-lazarus.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/royal-wedding.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/salt.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/servant-duty.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/settle-adversary.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/sheep-goats.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/sheep-sabbath.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/sower.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/stewardship.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/strong-man.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/talents.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/ten-virgins.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/thief-night.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/tower-builder.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/tree-fruit.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/two-debtors.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/two-sons.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/unjust-steward.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/unmerciful-servant.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/vine-branches.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/watchful-servants.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/watchfulness.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/wedding-places.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/wheat-tares.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/wicked-tenants.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/wise-foolish-builders.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/parables/woman-childbirth.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/redeemer-and-risen-lord.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/restoration-and-today.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/risen-savior-in-the-book-of-mormon.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "jesus-christ/teachings-and-parables.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "answers/abrahamic-covenant.html",
+      "hero": true,
+      "template": "covenant"
+    },
+    {
+      "path": "answers/holy-ghost.html",
+      "hero": true,
+      "template": "topic"
+    },
+    {
+      "path": "answers/plan-of-salvation.html",
+      "hero": true,
+      "template": "topic"
+    },
+    {
+      "path": "history/john-tanner.html",
+      "hero": true,
+      "template": "history"
+    },
+    {
+      "path": "history/eleazer-miller.html",
+      "hero": true,
+      "template": "history"
+    },
+    {
+      "path": "history/john-rowe-moyle.html",
+      "hero": true,
+      "template": "history"
+    },
+    {
+      "path": "answers/race-priesthood-and-temple-blessings.html",
+      "hero": false,
+      "template": "excluded-no-opening-hero"
+    }
+  ]
+}

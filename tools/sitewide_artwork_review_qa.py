@@ -143,7 +143,7 @@ TOOLBAR_STYLE_SHA256 = {'site-header.css': 'a915de3ba44c8e14f127e25ec51498960fb1
 SCOPED_INTERFACE_STYLES = {
     # Owner-directed Church-source history, independently reviewed 2026-09-30.
     # Exact bytes and the single consumer are checked before CSS exclusion.
-    'priesthood-history-study.css': ('aa950d3e5ba26dcd8b86bbae50a0ed811ef952e47d48d44528a372c4fdff4377', 'answers/race-priesthood-and-temple-blessings.html'),
+    'priesthood-history-study.css': ('f59d25e1a40498a9b6d1c8c1da594e5af7cd7a42cd39dc210d787640015b2adb', 'answers/race-priesthood-and-temple-blessings.html'),
     'plan-of-salvation.css': ('214c7c4c54c67b58c986d311e2bcb69a02bda9ab19427ba26f6bef433c8105bc', 'answers/plan-of-salvation.html'),
     'come-follow-me.css': ('c242f4c3d2406bffb58c7aed59466913dba8d768c6f19ba62d84b5be20851157', 'come-follow-me.html'),
     'cfm-study-controls.css': ('35c8939f4fc950d241ecb6a62ac58c1be6e02a59f64bee9b19fd2704011b58fb', 'come-follow-me.html'),
@@ -153,6 +153,8 @@ SCOPED_INTERFACE_STYLES = {
 # Wyatt requested these exact desktop repairs and the Temple chronology.
 # Albert independently reviewed rendered composition; byte/consumer changes fail closed.
 OWNER_20260929_STYLES = {
+    # Dynamically loaded shared opening surface; source reviewed, rendered approval recorded separately.
+    'unified-opening.css': ('131c9c2f3f97155e0c0ff06b8c686a881d48bf6732b50064205d3a0913d2c734', []),
     # Owner-directed Answer Continue correction: exact CSS bytes and consumer lists.
     'answer-opening.css': ('0356c038ad2adcec7206bfcb3d57915b9e2be2cd42024770560f3d9875cc94fb', ['answers/aaronic-priesthood-restoration.html', 'answers/are-latter-day-saints-christian.html', 'answers/bible-and-book-of-mormon-together.html', 'answers/death-of-a-child.html', 'answers/divorce-and-faith.html', 'answers/faith-in-jesus-christ-during-trials.html', 'answers/god-our-heavenly-father.html', 'answers/grief-and-faith.html', 'answers/holy-ghost.html', 'answers/jesus-christ-latter-day-saint-beliefs.html', 'answers/look-unto-me-doctrine-and-covenants-6-36.html', 'answers/melchizedek-priesthood-restoration.html', 'answers/plan-of-salvation.html', 'answers/prayer-and-personal-revelation.html', 'answers/restored-church-of-jesus-christ.html', 'answers/settle-this-in-your-hearts.html', 'answers/stand-forever.html', 'answers/what-happens-after-death.html', 'answers/what-is-eternal-marriage.html', 'answers/what-is-the-book-of-mormon.html', 'answers/who-was-joseph-smith.html', 'answers/why-families-are-important.html', 'answers/why-latter-day-saints-build-temples.html']),
     'covenant-opening.css': ('a0e47a332a6144d17b9d1f6f799e5db085776dc3e55f5c89f9d376d1071db72e', ['answers/abrahamic-covenant.html']),
@@ -161,7 +163,7 @@ OWNER_20260929_STYLES = {
     'footer-navigation.css': ('3713562b2415f8b31394b46767204330777f021887621b4b7eaeae5ff1c22fee', []),
     'history-stories.css': ('baca93e6f290b179727fbdfa12fbafad586a20647bb4ef7d9e7ec59d20ceca1d', ['history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html']),
     # Owner-requested39-picture final-row balance, Fermi rendered ten widths; Newton source review.
-    'art-opening.css': ('fa6c83370112c1d6afa52052d7c11981858ba838de4851167460459de600f705', ['art.html']),
+    'art-opening.css': ('f1457bb255b14b98e122d485760d548d4802374b0e00005c05e5292bc87d6e34', ['art.html']),
     'art-experience.css': ('ef21dea3b87e8b3e59454aba32726210a783d87d556928201ef375a3627b1c74', ['art.html']),
     'desktop-hero-repairs.css': ('36270651fecfb57cb371580f1fd4df3c2910942665e356245ddf451e5c4d9ecb', ['answers/abrahamic-covenant.html', 'answers/look-unto-me-doctrine-and-covenants-6-36.html', 'answers/plan-of-salvation.html', 'art-study/be-still.html', 'art-study/suffer-the-little-children.html', 'art-study/the-good-shepherd.html', 'birth-of-christ.html', 'book-of-mormon-evidences.html', 'general-conference.html', 'joseph-smith-likeness.html']),
     'temples-history.css': ('c3aa901b47871dc2cc9aa2848bf31b871a93588e0b4ad141c4d1da7912b2125a', ['answers/why-latter-day-saints-build-temples.html']),
@@ -510,6 +512,10 @@ def main():
             check(scoped_interface_reference_allowed(name, relative, page.read_text(encoding='utf-8')), 'Scoped interface stylesheet consumed outside owner: '+relative)
     for name, (_, owners) in OWNER_20260929_STYLES.items():
         check(reviewed_owner_20260929_style(name, (ROOT/name).read_bytes()), 'Owner-reviewed stylesheet bytes changed: '+name)
+        if name == 'unified-opening.css':
+            common = (ROOT/'site-common.js').read_text(encoding='utf-8')
+            check(common.count("relativeAssetHref('unified-opening.css?v=20260930-1')") == 1, 'Unified opening CSS requires its exact shared loader/version')
+            check(common.count("relativeAssetHref('unified-opening.js?v=20260930-1')") == 1, 'Unified opening JS requires its exact shared loader/version')
         if name == 'footer-navigation.css':
             common = (ROOT/'site-common.js').read_text(encoding='utf-8')
             check(common.count("style.href = relativeAssetHref('footer-navigation.css?v=20260929-top-1');") == 1, 'Footer CSS requires its exact shared dynamic loader and version')
