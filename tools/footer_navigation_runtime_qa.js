@@ -6,7 +6,8 @@ const {JSDOM} = require('jsdom');
 const root = path.resolve(__dirname, '..');
 const read = name => fs.readFileSync(path.join(root,name),'utf8');
 const pages = [...read('sitemap.xml').matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>new URL(m[1]).pathname);
-assert.equal(pages.length,124);
+assert.equal(pages.length,125);
+assert.ok(pages.includes('/answers/race-priesthood-and-temple-blessings.html'),'new dependent study must receive the shared footer test');
 for(const route of [...pages, '/404.html']){
  const file=route==='/'?'index.html':route.slice(1);
  const dom=new JSDOM(read(file),{url:'https://focuschrist.com'+route+'?from=footer#reading',runScripts:'outside-only'});
@@ -48,4 +49,4 @@ const css=read('footer-navigation.css');
 assert(!/position\s*:\s*(?:fixed|absolute)/.test(css),'Footer control must remain in normal flow');
 assert(css.includes('max-width: 100%; white-space: normal;'));
 assert(css.includes(':focus-visible'));
-console.log('PASS:124 canonical plus404 same-page footer actions, focus/route preservation, idempotence,102 removed trails and preserved return destinations');
+console.log(`PASS:${pages.length} canonical plus404 same-page footer actions, focus/route preservation, idempotence,102 removed trails and preserved return destinations`);

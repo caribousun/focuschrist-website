@@ -17,6 +17,7 @@
     "answers/melchizedek-priesthood-restoration.html",
     "answers/plan-of-salvation.html",
     "answers/prayer-and-personal-revelation.html",
+    "answers/race-priesthood-and-temple-blessings.html",
     "answers/restored-church-of-jesus-christ.html",
     "answers/settle-this-in-your-hearts.html",
     "answers/stand-forever.html",
@@ -581,6 +582,7 @@
         "answers/melchizedek-priesthood-restoration.html",
         "answers/plan-of-salvation.html",
         "answers/prayer-and-personal-revelation.html",
+        "answers/race-priesthood-and-temple-blessings.html",
         "answers/restored-church-of-jesus-christ.html",
         "answers/settle-this-in-your-hearts.html",
         "answers/stand-forever.html",
@@ -636,6 +638,7 @@
         "answers/melchizedek-priesthood-restoration.html",
         "answers/plan-of-salvation.html",
         "answers/prayer-and-personal-revelation.html",
+        "answers/race-priesthood-and-temple-blessings.html",
         "answers/restored-church-of-jesus-christ.html",
         "answers/settle-this-in-your-hearts.html",
         "answers/stand-forever.html",
@@ -691,6 +694,7 @@
         "answers/melchizedek-priesthood-restoration.html",
         "answers/plan-of-salvation.html",
         "answers/prayer-and-personal-revelation.html",
+        "answers/race-priesthood-and-temple-blessings.html",
         "answers/restored-church-of-jesus-christ.html",
         "answers/settle-this-in-your-hearts.html",
         "answers/stand-forever.html",
@@ -746,6 +750,7 @@
         "answers/melchizedek-priesthood-restoration.html",
         "answers/plan-of-salvation.html",
         "answers/prayer-and-personal-revelation.html",
+        "answers/race-priesthood-and-temple-blessings.html",
         "answers/restored-church-of-jesus-christ.html",
         "answers/settle-this-in-your-hearts.html",
         "answers/stand-forever.html",
@@ -800,6 +805,7 @@
         "answers/melchizedek-priesthood-restoration.html",
         "answers/plan-of-salvation.html",
         "answers/prayer-and-personal-revelation.html",
+        "answers/race-priesthood-and-temple-blessings.html",
         "answers/settle-this-in-your-hearts.html",
         "answers/stand-forever.html",
         "answers/what-happens-after-death.html",
@@ -852,6 +858,7 @@
         "answers/melchizedek-priesthood-restoration.html",
         "answers/plan-of-salvation.html",
         "answers/prayer-and-personal-revelation.html",
+        "answers/race-priesthood-and-temple-blessings.html",
         "answers/restored-church-of-jesus-christ.html",
         "answers/settle-this-in-your-hearts.html",
         "answers/stand-forever.html",
@@ -1711,6 +1718,7 @@
         "answers/look-unto-me-doctrine-and-covenants-6-36.html",
         "answers/melchizedek-priesthood-restoration.html",
         "answers/prayer-and-personal-revelation.html",
+        "answers/race-priesthood-and-temple-blessings.html",
         "answers/restored-church-of-jesus-christ.html",
         "answers/settle-this-in-your-hearts.html",
         "answers/stand-forever.html",
@@ -2004,6 +2012,7 @@
         "answers/melchizedek-priesthood-restoration.html",
         "answers/plan-of-salvation.html",
         "answers/prayer-and-personal-revelation.html",
+        "answers/race-priesthood-and-temple-blessings.html",
         "answers/restored-church-of-jesus-christ.html",
         "answers/settle-this-in-your-hearts.html",
         "answers/stand-forever.html",
@@ -2156,6 +2165,7 @@
         "answers/melchizedek-priesthood-restoration.html",
         "answers/plan-of-salvation.html",
         "answers/prayer-and-personal-revelation.html",
+        "answers/race-priesthood-and-temple-blessings.html",
         "answers/restored-church-of-jesus-christ.html",
         "answers/settle-this-in-your-hearts.html",
         "answers/stand-forever.html",
@@ -2297,6 +2307,16 @@
       "disposition": "excluded_with_reason",
       "reason": "Accessibility navigation control."
     },
+    "fc-source-directory": {
+      "stylesheets": [
+        "priesthood-history-study.css"
+      ],
+      "pages": [
+        "answers/race-priesthood-and-temple-blessings.html"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Study navigation disclosure; uses shared Home panel tokens in priesthood-history-study.css."
+    },
     "fc-stand-series": {
       "stylesheets": [
         "stand-forever-study.css"
@@ -2431,6 +2451,7 @@
         "answers/melchizedek-priesthood-restoration.html",
         "answers/plan-of-salvation.html",
         "answers/prayer-and-personal-revelation.html",
+        "answers/race-priesthood-and-temple-blessings.html",
         "answers/restored-church-of-jesus-christ.html",
         "answers/settle-this-in-your-hearts.html",
         "answers/stand-forever.html",
@@ -3006,7 +3027,7 @@
       ]
     },
     ".fc-deep-study details": {
-      "count": 146,
+      "count": 150,
       "pages": [
         "answers/aaronic-priesthood-restoration.html",
         "answers/are-latter-day-saints-christian.html",
@@ -3020,6 +3041,7 @@
         "answers/look-unto-me-doctrine-and-covenants-6-36.html",
         "answers/melchizedek-priesthood-restoration.html",
         "answers/prayer-and-personal-revelation.html",
+        "answers/race-priesthood-and-temple-blessings.html",
         "answers/restored-church-of-jesus-christ.html",
         "answers/settle-this-in-your-hearts.html",
         "answers/stand-forever.html",
@@ -3212,6 +3234,7 @@
         "answers/melchizedek-priesthood-restoration.html",
         "answers/plan-of-salvation.html",
         "answers/prayer-and-personal-revelation.html",
+        "answers/race-priesthood-and-temple-blessings.html",
         "answers/restored-church-of-jesus-christ.html",
         "answers/settle-this-in-your-hearts.html",
         "answers/stand-forever.html",

@@ -88,8 +88,21 @@ assert.ok(pillBlock,'real Answers topic pills required');
 const decode = x => x.replaceAll('&amp;','&').replaceAll('&#39;',"'");
 const pills = [...pillBlock[1].matchAll(/<a[^>]*href="([^"]+)"[^>]*>([^<]+)<\/a>/g)].map(m => [decode(m[1]),decode(m[2])]);
 const foundational = new Set(['god-our-heavenly-father.html','restored-church-of-jesus-christ.html']);
+// This exact historical sub-study is reached from its parent and the separate
+// Answers link. It does not add a primary topic pill or exempt other new Answers.
+const sourceStudy = 'answers/race-priesthood-and-temple-blessings.html';
+const primaryAnswer = file => file.endsWith('.html') && ![
+  'jesus-christ-latter-day-saint-beliefs.html','holy-ghost.html',path.basename(sourceStudy)
+].includes(file);
+assert.ok(primaryAnswer('unrelated-new-study.html'),'unrelated new Answers still require a primary topic pill');
+assert.ok(fs.existsSync(path.join(root,sourceStudy)),'dedicated history study exists');
+assert.ok(!pills.some(([href]) => href === sourceStudy),'history remains a dependent study');
+assert.ok(html.replace(pillBlock[0],'').includes(`href="${sourceStudy}"`),'Answers must link the dedicated history outside its primary pills');
+const historyParent = fs.readFileSync(path.join(root,'answers/melchizedek-priesthood-restoration.html'),'utf8');
+const historyIntro = historyParent.match(/<!-- priesthood-blessings-history:start -->([\s\S]*?)<!-- priesthood-blessings-history:end -->/);
+assert.ok(historyIntro && historyIntro[1].includes(`href="${path.basename(sourceStudy)}"`),'original priesthood section must link its dependent study');
 const expectedPills = new Set(fs.readdirSync(path.join(root,'answers'))
-  .filter(file => file.endsWith('.html') && !['jesus-christ-latter-day-saint-beliefs.html','holy-ghost.html'].includes(file))
+  .filter(primaryAnswer)
   .map(file => 'answers/' + file));
 const studyDestinations = ['birth-of-christ.html','general-conference.html','book-of-mormon-evidences.html',
   'joseph-smith-likeness.html','church-history.html','pioneers.html','come-follow-me.html'];

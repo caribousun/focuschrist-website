@@ -10,6 +10,9 @@ ROOT=Path(__file__).resolve().parents[1]
 COVENANT='answers/abrahamic-covenant.html'
 FEATURED_JESUS='answers/jesus-christ-latter-day-saint-beliefs.html'
 FEATURED_HOLY_GHOST='answers/holy-ghost.html'
+# This owner-directed historical sub-study has a source-led opening. This exact
+# route exception must not exempt arbitrary new Answers from the topic directory.
+SOURCE_STUDY='answers/race-priesthood-and-temple-blessings.html'
 from holy_ghost_qa import check as check_holy_ghost
 def read(p):
  d=Document();d.feed(p.read_text(encoding="utf-8"));return list(d.root.walk())
@@ -32,7 +35,21 @@ study_destinations={
  'joseph-smith-likeness.html', 'church-history.html', 'pioneers.html',
  'come-follow-me.html',
 }
-expected=({p.relative_to(ROOT).as_posix() for p in answer_paths}-{FEATURED_JESUS,FEATURED_HOLY_GHOST,'answers/god-our-heavenly-father.html'})|study_destinations
+expected=({p.relative_to(ROOT).as_posix() for p in answer_paths}-{FEATURED_JESUS,FEATURED_HOLY_GHOST,'answers/god-our-heavenly-father.html',SOURCE_STUDY})|study_destinations
+source_nodes=read(ROOT/SOURCE_STUDY)
+source_openings=[n for n in source_nodes if n.tag=='header' and n.has('fc-source-opening')]
+assert len(source_openings)==1, 'Dedicated history requires one source-led opening'
+source_opening=source_openings[0]
+source_headings=[n for n in source_nodes if n.tag=='h1']
+assert len(source_headings)==1 and source_headings[0] in list(source_opening.walk()), 'Dedicated history title must be in its opening'
+assert not any('data-hero-viewer' in n.attrs for n in source_nodes), 'Source-led history must not borrow an artwork hero'
+source_main=next(n for n in source_nodes if n.tag=='main')
+assert source_main.order>source_opening.order and len(source_main.text().split())>200, 'Dedicated history needs substantive source study'
+assert any(n.tag=='a' and n.attrs.get('href')=='#begin-study' for n in source_opening.walk()), 'Source opening needs a begin-study action'
+assert any(n.tag=='a' and n.attrs.get('href')==SOURCE_STUDY for n in nodes), 'Dedicated study must remain discoverable from Answers'
+parent_nodes=read(ROOT/'answers/melchizedek-priesthood-restoration.html')
+parent_section=next(n for n in parent_nodes if n.attrs.get('id')=='priesthood-and-temple-blessings')
+assert any(n.tag=='a' and n.attrs.get('href')==Path(SOURCE_STUDY).name for n in parent_section.walk()), 'Dedicated history must remain connected to its original section'
 assert len(links)==28, 'Keep 28 topics including Plan of Salvation after Heavenly Father promotion'
 featured=[n for n in nodes if n.has('fc-settle-featured')]
 assert [(n.attrs.get('href'),n.text().strip()) for n in featured]==[('answers/god-our-heavenly-father.html','Heavenly Father'),(FEATURED_JESUS,'Jesus Christ'),(FEATURED_HOLY_GHOST,'Holy Ghost'),('atonement.html','The Atonement of Jesus Christ')], 'Exact Atonement, Jesus and Holy Ghost featured destinations required'

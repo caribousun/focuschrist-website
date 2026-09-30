@@ -190,6 +190,10 @@ def scan(root=ROOT):
     results=[]
     for page in [*sorted((root/'answers').glob('*.html')),root/'general-conference.html']:
         key=page.relative_to(root).as_posix();records=[]
+        if key=='answers/race-priesthood-and-temple-blessings.html':
+            # Exact Church-source-only sub-study: media requirements are enforced
+            # by priesthood_history_qa and topic_body_picture_qa, not original-art counts.
+            continue
         if key not in parsed:
             results.append({'page':key,'bodyPictureCount':0,'exclusiveCount':0,'minimumNewIfOtherUsagesRemain':5,'figures':[],'issues':['Missing required study page']});continue
         for n in parsed[key]:

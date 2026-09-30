@@ -1,0 +1,24 @@
+/* Keep the complete desktop introduction and Continue beneath the approved hero.
+   Phone framing and spacing remain owned by the existing mobile system. */
+@media (min-width: 701px) {
+  body.fc-site.fc-topic-page .fc-topic-opening .fc-page-intro {
+    padding: 16px 24px 20px !important;
+  }
+  body.fc-site.fc-topic-page .fc-topic-opening .fc-page-intro > .fc-container--standard {
+    padding: 0 !important;
+    gap: 8px;
+  }
+  body.fc-site.fc-topic-page .fc-topic-opening .fc-page-intro :is(.fc-eyebrow, .fc-display, .fc-topic-subtitle, .fc-scroll-cue) {
+    margin: 0 !important;
+  }
+  body.fc-site.fc-topic-page .fc-topic-opening .fc-page-intro .fc-display {
+    font-size: clamp(2rem, calc(50svh - 16.69921875vw - 95px), 3rem);
+    line-height: 1.12;
+  }
+  body.fc-site.fc-topic-page .fc-topic-opening .fc-page-intro .fc-father-opening-guide {
+    max-width: 1200px;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+}
+

@@ -70,6 +70,17 @@ focused_assets=[]; relocated_assets=[]
 relocated_names={'aaronic-priesthood','joseph-baptizes-oliver','oliver-baptizes-joseph','melchizedek-priesthood','apostles-ordain-joseph','apostles-ordain-oliver'}
 for page in [*sorted((ROOT/'answers').glob('*.html')),ROOT/'general-conference.html']:
  d=Document();d.feed(page.read_text(encoding='utf-8'));ns=list(d.root.walk())
+ if page.relative_to(ROOT).as_posix()=='answers/race-priesthood-and-temple-blessings.html':
+  # Official source media open their Church destinations; they are not original
+  # artwork requiring the site's picture-detail adapter. No other page is exempt.
+  cards=[n for n in ns if n.has('fc-resource-card')]
+  assert len(cards)==6 and len({n.attrs.get('data-resource-key') for n in cards})==6
+  assert not any('data-exclusive-artwork' in n.attrs or 'data-hero-viewer' in n.attrs or 'data-topic-art' in n.attrs for n in ns)
+  for card in cards:
+   anchors=[n for n in card.walk() if n.tag=='a']
+   assert len(anchors)==2 and all(urlsplit(n.attrs.get('href','')).hostname=='www.churchofjesuschrist.org' for n in anchors)
+   assert not any('data-full-image-viewer' in n.attrs or n.attrs.get('aria-haspopup')=='dialog' for n in anchors)
+  continue
  for asset,tag,attr in [('topic-artwork-details.js','script','src'),('topic-artwork-details.css','link','href')]:
   if sum(n.tag==tag and asset in n.attrs.get(attr,'') for n in ns)!=1:errors.append(f'{page.name}: missing or duplicate {asset}')
  for panel in [n for n in ns if n.has('fc-study-feature') and any(c.has('fc-study-visual') for c in n.walk())]:

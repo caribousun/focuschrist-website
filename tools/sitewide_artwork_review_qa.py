@@ -53,7 +53,7 @@ def reviewed_art_reflection(selector, body, data):
     return selector.strip() == '.fc-art-study-page .fc-reflection-prompts > .fc-art-story' and re.sub(r'\s+', '', body) == 'max-width:none!important;' and hashlib.sha256(data).hexdigest() == '557ff4b1825bdf655751cbc6491d0133db294f022b90fcda270039ff849053a3'
 
 def reviewed_wrap_consumers(consumers, expected, version):
-    return (set(consumers) == set(expected) | {'answers/holy-ghost.html', 'answers/plan-of-salvation.html', 'history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html'} and len(consumers) == 125
+    return (set(consumers) == set(expected) | {'answers/holy-ghost.html', 'answers/plan-of-salvation.html', 'history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html', 'answers/race-priesthood-and-temple-blessings.html'} and len(consumers) == 126
             and all(parse_qs(urlsplit(ref).query).get('v') == [version] for refs in consumers.values() for ref in refs))
 
 
@@ -141,6 +141,9 @@ TOOLBAR_STYLE_SHA256 = {'site-header.css': 'a915de3ba44c8e14f127e25ec51498960fb1
 # Owner-requested growing Ask composer and opt-in Holy Ghost player, independently
 # reviewed in source and rendered by Albert. Exact full bytes and single owners.
 SCOPED_INTERFACE_STYLES = {
+    # Owner-directed Church-source history, independently reviewed 2026-09-30.
+    # Exact bytes and the single consumer are checked before CSS exclusion.
+    'priesthood-history-study.css': ('aa950d3e5ba26dcd8b86bbae50a0ed811ef952e47d48d44528a372c4fdff4377', 'answers/race-priesthood-and-temple-blessings.html'),
     'plan-of-salvation.css': ('214c7c4c54c67b58c986d311e2bcb69a02bda9ab19427ba26f6bef433c8105bc', 'answers/plan-of-salvation.html'),
     'come-follow-me.css': ('c242f4c3d2406bffb58c7aed59466913dba8d768c6f19ba62d84b5be20851157', 'come-follow-me.html'),
     'cfm-study-controls.css': ('35c8939f4fc950d241ecb6a62ac58c1be6e02a59f64bee9b19fd2704011b58fb', 'come-follow-me.html'),
@@ -150,6 +153,10 @@ SCOPED_INTERFACE_STYLES = {
 # Wyatt requested these exact desktop repairs and the Temple chronology.
 # Albert independently reviewed rendered composition; byte/consumer changes fail closed.
 OWNER_20260929_STYLES = {
+    # Owner-directed Answer Continue correction: exact CSS bytes and consumer lists.
+    'answer-opening.css': ('0356c038ad2adcec7206bfcb3d57915b9e2be2cd42024770560f3d9875cc94fb', ['answers/aaronic-priesthood-restoration.html', 'answers/are-latter-day-saints-christian.html', 'answers/bible-and-book-of-mormon-together.html', 'answers/death-of-a-child.html', 'answers/divorce-and-faith.html', 'answers/faith-in-jesus-christ-during-trials.html', 'answers/god-our-heavenly-father.html', 'answers/grief-and-faith.html', 'answers/holy-ghost.html', 'answers/jesus-christ-latter-day-saint-beliefs.html', 'answers/look-unto-me-doctrine-and-covenants-6-36.html', 'answers/melchizedek-priesthood-restoration.html', 'answers/plan-of-salvation.html', 'answers/prayer-and-personal-revelation.html', 'answers/restored-church-of-jesus-christ.html', 'answers/settle-this-in-your-hearts.html', 'answers/stand-forever.html', 'answers/what-happens-after-death.html', 'answers/what-is-eternal-marriage.html', 'answers/what-is-the-book-of-mormon.html', 'answers/who-was-joseph-smith.html', 'answers/why-families-are-important.html', 'answers/why-latter-day-saints-build-temples.html']),
+    'covenant-opening.css': ('055c27b54523f6167abb288ea3f689776eab5b9836597b1e58ff7684b89c8851', ['answers/abrahamic-covenant.html']),
+
     # Dynamically loaded only by the shared footer controller; all125 public contexts tested.
     'footer-navigation.css': ('3713562b2415f8b31394b46767204330777f021887621b4b7eaeae5ff1c22fee', []),
     'history-stories.css': ('baca93e6f290b179727fbdfa12fbafad586a20647bb4ef7d9e7ec59d20ceca1d', ['history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html']),
@@ -227,7 +234,7 @@ def main():
         assert not reviewed_system_panel_style(panel_style + b'\n.fc-visual-hero{height:9px}')
         assert not reviewed_system_panel_style(panel_style.replace(b'--fc-panel-fill:', b'--fc-panel-broken:', 1))
         assert not reviewed_system_panel_style(panel_style.replace(b'--fc-opening-hero-height:', b'--fc-opening-broken-height:', 1))
-        wrap_good = {name: ['site-system.css?v=current'] for name in [*wrap_expected, 'answers/holy-ghost.html', 'answers/plan-of-salvation.html', 'history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html']}
+        wrap_good = {name: ['site-system.css?v=current'] for name in [*wrap_expected, 'answers/holy-ghost.html', 'answers/plan-of-salvation.html', 'history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html', 'answers/race-priesthood-and-temple-blessings.html']}
         assert reviewed_wrap_consumers(wrap_good, wrap_expected, 'current')
         assert not reviewed_wrap_consumers(dict(list(wrap_good.items())[1:]), wrap_expected, 'current')
         assert not reviewed_wrap_consumers(dict(wrap_good, **{'other.html': ['site-system.css?v=current']}), wrap_expected, 'current')

@@ -1,8 +1,8 @@
 {
-  "canonical_pages": 124,
+  "canonical_pages": 125,
   "selectors": {
     ".fc-study-visual-sources a:not(.fc-button--primary)": {
-      "count": 813,
+      "count": 801,
       "pages": [
         "answers/aaronic-priesthood-restoration.html",
         "answers/abrahamic-covenant.html",
@@ -141,7 +141,7 @@
       ]
     },
     ".fc-study-nav:not(.jj-local-nav) a:not(.fc-button--primary)": {
-      "count": 170,
+      "count": 185,
       "pages": [
         "answers/aaronic-priesthood-restoration.html",
         "answers/are-latter-day-saints-christian.html",
@@ -154,6 +154,7 @@
         "answers/look-unto-me-doctrine-and-covenants-6-36.html",
         "answers/melchizedek-priesthood-restoration.html",
         "answers/prayer-and-personal-revelation.html",
+        "answers/race-priesthood-and-temple-blessings.html",
         "answers/restored-church-of-jesus-christ.html",
         "answers/settle-this-in-your-hearts.html",
         "answers/stand-forever.html",
