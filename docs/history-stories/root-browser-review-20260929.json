@@ -1,0 +1,30 @@
+{
+  "date": "2026-09-29",
+  "reviewer": "Albert",
+  "status": "PASS",
+  "local_preview": "http://localhost:4187",
+  "story_routes": [
+    "history/john-tanner.html",
+    "history/eleazer-miller.html",
+    "history/john-rowe-moyle.html"
+  ],
+  "accepted_checks": [
+    "All three full reading flows at390px: five distinct pictures, each followed by at most two narrative paragraphs; three official film posters decoded at640px",
+    "All three320px openings: no horizontal overflow or clipped controls; natural heading wrap",
+    "Tanner and Miller1440px desktop hero composition",
+    "Moyle five artwork study opens/closes with focus return, wooden leg full-size view and Continue Lesson to own reading heading",
+    "Four Moyle source pills retained, exact HTTPS destinations and999px rounded corners",
+    "Tanner D&C109:1–5 actual scripture reader with complete selected passage and focus return",
+    "Priesthood1978 Official Declaration2 full reader including introduction, June8letter and Sept30acceptance",
+    "History hub desktop cards508/508px firstrow and fullwidth1040px finalcard; no blank slot",
+    "Moyle original desktop WebP with unchanged shared CSS: native browser capture at1366/1440 shows left landscape, man and handcart; no horizontal overflow"
+  ],
+  "capture_issue": {
+    "observed": "tab.screenshot clip/fullPage showed navy across left of Moyle desktop hero while nativegetScreenshot showed complete image at1366/1440",
+    "status": "Native browser surface PASS with original artwork and shared CSS; tab.screenshot discrepancy retained as capture limitation. Hosted full-width raster gate required before release.",
+    "encoding_trial": "JPEG from unchanged source did not repair tab.screenshot; reverted",
+    "layer_trial": "Nonnegative nested layers did not repair tab.screenshot and were reverted; no experimental product change retained"
+  },
+  "owner_aesthetic_approval": false,
+  "limits": "Root reviewed actual IAB interactions; Fermi and Newton independent source/art/export review is separate. Does not establish every possible site interaction."
+}

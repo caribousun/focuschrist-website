@@ -1,0 +1,18 @@
+{
+  "scope": "Owner requested substantial priesthood history and relocation of restriction discussion away from Hawaii. Existing Melchizedek restoration study retained.",
+  "content": "Six chronological units: Elijah Able, restriction history, Jane Manning James, faith across nations,1978revelation, present belonging. Newton original source-grounded prose; source-derived portions under200words per cited individual source. No invented quotations, portraits, or apparitions.",
+  "rhythm": "First narrative paragraph then meaningful official media preview then second paragraph; introduction plus first paragraph is maximum two before first picture. No generated portrait substitutes or duplicate original artwork counted.",
+  "media": "Six exact source-linked official film/study previews; independently decoded actual URLs/dimensions. Fermi brief actual playback verified, not fullfilm content review. Archivalportrait reuse not established, so none copied. Illustrated Elijah/Jane stories expressly distinguished from recordings or authenticated portraits.",
+  "preservation": "Original page header, all existing top-level sections and images hash/set protected by new QA baseline.",
+  "temple_relocation": "Restriction paragraph and its two citations removed from Laie chapter; brief history link appears in present-day temple section. No claim Hawaii originated restriction.",
+  "checks": [
+    "priesthood_history_qa static and remote-previews PASS",
+    "temples_history_qa PASS",
+    "topic_inline_scripture_qa PASS879",
+    "media_voice_qa PASS",
+    "art_study_enrichment_qa PASS"
+  ],
+  "independent_source_review": "Newton PASS: all prose preserved except approved welcome phrase; six media captions distinguish historical contexts; Laie continuity and present-day Temple cross-link accurate. Independently ran static gate.",
+  "rendered_review": "Fermi scoped browser PASS: desktop opening,390Jane/revelation,320opening/longprimaryfilm link, no overflow; all six actual DOM previews decoded; Jane actual click reached exact official watch page. All six film openings played separately. Evidence docs/priesthood-history-browser-review-20260929.json.",
+  "release": "Local work only; parent controls combined release."
+}

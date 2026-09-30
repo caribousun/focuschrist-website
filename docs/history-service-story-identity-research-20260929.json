@@ -1,0 +1,52 @@
+[
+  {
+    "name": "tanner",
+    "source_page": "https://history.churchofjesuschrist.org/chd/individual/john-tanner-1778?lang=eng",
+    "image_url": "https://history.churchofjesuschrist.org/church-history-people/bc/missionaries/portraits/T/390x520/john-tanner-1778-fs-1.jpg",
+    "alt": "John Tanner (1778 - 1850) Profile",
+    "file": "work/history-stories/references/tanner-official-profile.jpg",
+    "size": [
+      390,
+      520
+    ],
+    "status": "Decoded official profile reference; photographer/date not established; not owner-approved identity"
+  },
+  {
+    "name": "miller",
+    "source_page": "https://history.churchofjesuschrist.org/chd/individual/eleazer-miller-1795?lang=eng",
+    "image_url": "https://history.churchofjesuschrist.org/church-history-people/bc/missionaries/portraits/M/390x520/eleazer-miller-1795-fs.jpg",
+    "alt": "Eleazer Miller (1795 - 1876) Profile",
+    "file": "work/history-stories/references/miller-official-profile.jpg",
+    "size": [
+      390,
+      518
+    ],
+    "status": "Decoded official profile reference; photographer/date not established; not owner-approved identity"
+  },
+  {
+    "name": "moyle",
+    "source_page": "https://history.churchofjesuschrist.org/chd/individual/john-rowe-moyle-1808?lang=eng",
+    "image_url": "https://history.churchofjesuschrist.org/church-history-people/bc/Pioneer%20Photos/Pioneers%20M/390x520/Moyle_John%20Rowe%20KWJ1-J6F.jpg",
+    "alt": "John Rowe Moyle (1808 - 1889) Profile",
+    "status": "Image URL unavailable: HTTP Error 404: Not Found",
+    "additional_reference": {
+      "source_url": "https://yanceyfamilygenealogy.org/WOOD__ElizabethWood.pdf",
+      "file": "work/history-stories/references/moyle-family-book-portrait-plate.png",
+      "source_pdf": "work/history-stories/references/moyle-family-book-excerpt.pdf",
+      "provenance": "Scanned plate facing printed page32 in James Henry Moyle, caption identifies John Rowe Moyle and Phillippa Beer Moyle, grandparents of James H. Moyle. Hosted as book excerpt by family genealogy site.",
+      "inspection": "Full plate inspected; couple photograph. Moyle left: receding wavy hair, moustache and chin beard, angular face, long coat. No proven colors/date/photographer.",
+      "status": "Useful published historical identity reference, not owner-approved/generated identity and not a claim of complete archival authentication.",
+      "rights": "Reference-only. No publication/reproduction permission established for scan. Book likely Gordon B. Hinckley biography; excerpt lacks title/copyright leaf, so do not assert edition or public-domain status.",
+      "sha256": "624b02464d63b8f7c2b7522ede93026486e1338ed803b0219c4c6af0203531b2"
+    },
+    "prosthesis_reference": {
+      "source_page": "https://dtbradshaw.blogspot.com/2015/05/the-stories-we-tell.html?m=0",
+      "file": "work/history-stories/references/moyle-leg-replica-2015.jpg",
+      "provenance": "Photographer first-person visit account explicitly describes a friend asked to create a replica for Moyle homestead museum; photo caption identifies replica.",
+      "inspection": "Shaped wooden foot, cylindrical lower shaft, articulated ankle region, tall reddish upper socket/support. Adult man holding it is modern and not Moyle.",
+      "status": "Museum-associated replica photograph, not authenticated original artifact. Precise original side, dimensions, straps and hardware unresolved.",
+      "rights": "Reference-only third-party photograph; do not publish or copy modern visitor likeness.",
+      "sha256": "be84f9cbef4fcbc6b02838a634b47c7e2b715360addea69bf72af0693e3b93fa"
+    }
+  }
+]

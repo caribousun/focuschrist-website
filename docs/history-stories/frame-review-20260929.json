@@ -1,0 +1,17 @@
+{
+  "measurement_owner": "Root actual CUA, final wrapper and shared styles in frame-only preview",
+  "desktop": {
+    "viewport_requested": 1440,
+    "width": 1424.8,
+    "height": 475.85,
+    "shared_ratio": "2048 / 684"
+  },
+  "phone": {
+    "viewport_requested": 390,
+    "width": 390.4,
+    "height": 448.95,
+    "shared_height": "clamp(320px, 115vw, 800px)"
+  },
+  "cascade": "The initial 27vw height clamp is superseded by body --fc-opening-hero-height:auto and the shared 2048/684 aspect ratio at desktop. No page-specific height, fit, or geometry override is authorized.",
+  "limitations": "Frame-only measurement does not approve artwork crops. Each final desktop and phone scene still needs full rendered composition review."
+}

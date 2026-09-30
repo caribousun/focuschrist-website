@@ -252,6 +252,25 @@ def main() -> int:
         prefix = "../" * (len(path.relative_to(ROOT).parts) - 1)
         if 'fc-hero-fullscreen' in page:
             errors.append(f"{relative}: hero must not display an overlay pill")
+        history_pages = {f"history/{slug}.html" for slug in ("john-tanner", "eleazer-miller", "john-rowe-moyle")}
+        if relative in history_pages:
+            # These three first-scene heroes use the same topic controller as their four body pictures.
+            from bs4 import BeautifulSoup
+            dom = BeautifulSoup(page, "html.parser")
+            stories = json.loads((ROOT / "docs/history-stories/stories.json").read_text(encoding="utf-8"))["stories"]
+            story = next(x for x in stories if relative == f"history/{x['id']}.html")
+            ready = json.loads((ROOT / "docs/history-stories/art-ready.json").read_text(encoding="utf-8"))
+            if "artworks" in ready: ready = ready["artworks"]
+            unit = story["units"][0]["id"]
+            figure = dom.select_one("figure.fc-life-hero")
+            if not figure or figure.get("data-topic-art") != unit or len(dom.select("figure.fc-life-hero")) != 1:
+                errors.append(f"{relative}: missing exact first-scene topic hero")
+            elif figure.select_one("a").get("href") != "../" + ready[unit]["full"] or not figure.select_one("figcaption[data-picture-panel-copy][hidden]"):
+                errors.append(f"{relative}: hero source or study metadata differs")
+            if page.count("../topic-artwork-details.js?v=20260929-history-sources-2") != 1 or "hero-details.js" in page or "data-hero-viewer" in page:
+                errors.append(f"{relative}: hero must have exactly one topic controller")
+            hero_pages -= 1  # Preserve the separate 41-page legacy controller baseline.
+            continue
         hero_script = ("hero-details.js?v=20260927-plan-study-1" if relative in TOPIC_HERO_PAGES else "hero-details.js?v=20260927-plan-study-1" if relative == "birth-of-christ.html" else "hero-details.js?v=20260927-plan-study-1" if relative == "atonement.html" else "hero-details.js?v=20260927-plan-study-1" if relative == "joseph-smith-likeness.html" else "hero-details.js?v=20260927-plan-study-1" if relative == "book-of-mormon-evidences.html" else "hero-details.js?v=20260927-plan-study-1" if relative in ART_STUDY_PAGES else "hero-details.js?v=20260927-plan-study-1")
         if relative == "answers/settle-this-in-your-hearts.html":
             hero_script = "hero-details.js?v=20260927-plan-study-1"

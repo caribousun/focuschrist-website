@@ -53,7 +53,7 @@ def reviewed_art_reflection(selector, body, data):
     return selector.strip() == '.fc-art-study-page .fc-reflection-prompts > .fc-art-story' and re.sub(r'\s+', '', body) == 'max-width:none!important;' and hashlib.sha256(data).hexdigest() == '557ff4b1825bdf655751cbc6491d0133db294f022b90fcda270039ff849053a3'
 
 def reviewed_wrap_consumers(consumers, expected, version):
-    return (set(consumers) == set(expected) | {'answers/holy-ghost.html', 'answers/plan-of-salvation.html'} and len(consumers) == 122
+    return (set(consumers) == set(expected) | {'answers/holy-ghost.html', 'answers/plan-of-salvation.html', 'history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html'} and len(consumers) == 125
             and all(parse_qs(urlsplit(ref).query).get('v') == [version] for refs in consumers.values() for ref in refs))
 
 
@@ -148,13 +148,19 @@ SCOPED_INTERFACE_STYLES = {
 # Wyatt requested these exact desktop repairs and the Temple chronology.
 # Albert independently reviewed rendered composition; byte/consumer changes fail closed.
 OWNER_20260929_STYLES = {
+    'history-stories.css': ('2b3528f9536b3509c6d9bb42f2161823bdc97f7981f66ba1761d5ba57d19c4cd', ['history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html']),
     # Owner-requested39-picture final-row balance, Fermi rendered ten widths; Newton source review.
     'art-experience.css': ('ef21dea3b87e8b3e59454aba32726210a783d87d556928201ef375a3627b1c74', ['art.html']),
     'desktop-hero-repairs.css': ('26af1b820ab62722ad60ab124f16ccf5784304edafa375a854f0ea7f076e9e96', ['answers/abrahamic-covenant.html', 'answers/look-unto-me-doctrine-and-covenants-6-36.html', 'answers/plan-of-salvation.html', 'book-of-mormon-evidences.html', 'general-conference.html']),
-    'temples-history.css': ('764ffd7b6f877a4d5c279215a0a4d6adee464fa6eb072e7228aec1ec470f62e7', ['answers/why-latter-day-saints-build-temples.html']),
+    'temples-history.css': ('c3aa901b47871dc2cc9aa2848bf31b871a93588e0b4ad141c4d1da7912b2125a', ['answers/why-latter-day-saints-build-temples.html']),
 }
 def reviewed_owner_20260929_style(name, data):
     return name in OWNER_20260929_STYLES and hashlib.sha256(data).hexdigest() == OWNER_20260929_STYLES[name][0]
+
+TEMPLE_RELATED_HITBOX = b'.fc-temple-history__chapter a.fc-temple-history__related-link { display: inline-block; max-width: 100%; vertical-align: top; overflow-wrap: anywhere; }\n'
+def reviewed_temple_related_hitbox(data):
+    return (data.count(TEMPLE_RELATED_HITBOX) == 1
+            and hashlib.sha256(data.replace(TEMPLE_RELATED_HITBOX, b'', 1)).hexdigest() == '764ffd7b6f877a4d5c279215a0a4d6adee464fa6eb072e7228aec1ec470f62e7')
 
 # Exact owner-requested picture-source pill correction; removing only this
 # declaration/comment must recover the prior stylesheet bytes. No global waiver.
@@ -217,7 +223,7 @@ def main():
         assert not reviewed_system_panel_style(panel_style + b'\n.fc-visual-hero{height:9px}')
         assert not reviewed_system_panel_style(panel_style.replace(b'--fc-panel-fill:', b'--fc-panel-broken:', 1))
         assert not reviewed_system_panel_style(panel_style.replace(b'--fc-opening-hero-height:', b'--fc-opening-broken-height:', 1))
-        wrap_good = {name: ['site-system.css?v=current'] for name in [*wrap_expected, 'answers/holy-ghost.html', 'answers/plan-of-salvation.html']}
+        wrap_good = {name: ['site-system.css?v=current'] for name in [*wrap_expected, 'answers/holy-ghost.html', 'answers/plan-of-salvation.html', 'history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html']}
         assert reviewed_wrap_consumers(wrap_good, wrap_expected, 'current')
         assert not reviewed_wrap_consumers(dict(list(wrap_good.items())[1:]), wrap_expected, 'current')
         assert not reviewed_wrap_consumers(dict(wrap_good, **{'other.html': ['site-system.css?v=current']}), wrap_expected, 'current')
@@ -330,7 +336,7 @@ def main():
     if args.baseline_report:Path(args.baseline_report).write_text(json.dumps({'baseline':baseline,'images':preserved},indent=2),encoding='utf8')
     ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
     pages=[urlsplit(n.text).path.lstrip('/') or 'index.html' for n in ET.parse(ROOT/'sitemap.xml').findall('s:url/s:loc',ns)]
-    expected_pages={p.relative_to(ROOT).as_posix() for p in [*ROOT.glob('*.html'),*ROOT.glob('answers/*.html'),*ROOT.glob('art-study/*.html'),*ROOT.glob('jesus-christ/**/*.html')] if p.name not in {'404.html','google3fa84a4b37862f36.html'}}
+    expected_pages={p.relative_to(ROOT).as_posix() for p in [*ROOT.glob('*.html'),*ROOT.glob('answers/*.html'),*ROOT.glob('art-study/*.html'),*ROOT.glob('jesus-christ/**/*.html'),*ROOT.glob('history/*.html')] if p.name not in {'404.html','google3fa84a4b37862f36.html'}}
     check(len(pages)==len(set(pages)) and set(pages)==expected_pages,'Sitemap must expose every canonical destination exactly once')
     parsed={}
     for page in pages:
@@ -492,6 +498,11 @@ def main():
             check(scoped_interface_reference_allowed(name, relative, page.read_text(encoding='utf-8')), 'Scoped interface stylesheet consumed outside owner: '+relative)
     for name, (_, owners) in OWNER_20260929_STYLES.items():
         check(reviewed_owner_20260929_style(name, (ROOT/name).read_bytes()), 'Owner-reviewed stylesheet bytes changed: '+name)
+        if name == 'temples-history.css':
+            data = (ROOT/name).read_bytes()
+            check(reviewed_temple_related_hitbox(data), 'Temple hitbox must be the exact addition to the reviewed era stylesheet')
+            check(not reviewed_temple_related_hitbox(data.replace(b'display: inline-block;', b'display: inline;')), 'Fragmented inline hitbox mutation escaped')
+            check(not reviewed_temple_related_hitbox(data + b'\n.x{display:block}'), 'Unrelated Temple stylesheet mutation escaped')
         consumers = set()
         for page in ROOT.rglob('*.html'):
             relative = page.relative_to(ROOT).as_posix()

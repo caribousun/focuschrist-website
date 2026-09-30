@@ -78,7 +78,8 @@
     "fc-study-visual--panel": "Owner-requested Peter rescue figure uses shared panel tokens in the reviewed appendix; preserves the artwork viewer and intrinsic image.",
     "cfm-reflection-picture": "CFM illustrated study panel; exact page-owned composition contract preserves natural imagery, source controls and responsive caption containment.",
     "cfm-signature": "Existing Signature study card moved once into the CFM weekly panel; exact CFM composition contract preserves its source, artwork and destination.",
-    "fc-temple-history__era-menu": "Owner-requested native era disclosure uses shared panel fill/border/shadow tokens in sole-consumer temples-history.css; exact stylesheet and four-group chapter QA protect scope."
+    "fc-temple-history__era-menu": "Owner-requested native era disclosure uses shared panel fill/border/shadow tokens in sole-consumer temples-history.css; exact stylesheet and four-group chapter QA protect scope.",
+    "fc-life-reflection": "Dedicated History story reflection panels use the shared Home panel tokens in exact reviewed history-stories.css; three owning story pages only."
   },
   "excluded_classes": {
     "ask-scene-card": "Artwork figure; preserve artwork framing.",
@@ -117,7 +118,8 @@
     "pioneer-story-note": "Inline source note.",
     "watch-index-note": "Inline note, not panel.",
     "watch-media-note": "Inline note, not panel.",
-    "watch-reflection": "Inline reflection paragraph within existing study composition."
+    "watch-reflection": "Inline reflection paragraph within existing study composition.",
+    "fc-life-reflections": "Bare responsive layout for three meaningful reflection panels; no independent painted surface."
   },
   "runtime_selectors": {
     ".cfm-month": {

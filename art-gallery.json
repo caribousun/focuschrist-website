@@ -39,6 +39,9 @@
     "/church-history.html",
     "/come-follow-me.html",
     "/general-conference.html",
+    "/history/eleazer-miller.html",
+    "/history/john-rowe-moyle.html",
+    "/history/john-tanner.html",
     "/index.html",
     "/jesus-christ/before-bethlehem.html",
     "/jesus-christ/miracles-and-compassion.html",
@@ -454,6 +457,28 @@
       ]
     },
     {
+      "title": "A decision that moved a household",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/history-stories/tanner-journey-kirtland-960.webp",
+      "fullImage": "/assets/page-art/history-stories/tanner-journey-kirtland-full.webp",
+      "alt": "John Tanner walks beside a wagon through a snowy landscape.",
+      "id": "art-de5e7691ae2f",
+      "occurrences": [
+        {
+          "id": "source-67ba9fd148fe",
+          "page": "/history/john-tanner.html",
+          "pageTitle": "John Tanner: receiving, giving, and remembering",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/history-stories/tanner-journey-kirtland-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/tanner-journey-kirtland-960.webp\"])",
+          "title": "A decision that moved a household"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "A desire to keep serving",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/book-of-mormon-stories/29-three-disciples-960.webp",
@@ -498,6 +523,28 @@
       ]
     },
     {
+      "title": "A family on the road in 1856",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/history-stories/moyle-handcart-journey-full.webp",
+      "fullImage": "/assets/page-art/history-stories/moyle-handcart-journey-full.webp",
+      "alt": "John Rowe Moyle pulls a loaded handcart along a dry trail with travelers behind him.",
+      "id": "art-b48b6ca958fe",
+      "occurrences": [
+        {
+          "id": "source-2ef132cafe58",
+          "page": "/history/john-rowe-moyle.html",
+          "pageTitle": "John Rowe Moyle: the stonecutter and the wooden leg",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/history-stories/moyle-handcart-journey-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/moyle-handcart-journey-full.webp\"])",
+          "title": "A family on the road in 1856"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "A family receives its sons again",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/book-of-mormon-stories/02-lehi-sariah-960.webp",
@@ -513,6 +560,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/02-lehi-sariah-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/02-lehi-sariah-960.webp\"])",
           "title": "A family receives its sons again"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "A family within the gathering and displacement",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/history-stories/tanner-displacement-960.webp",
+      "fullImage": "/assets/page-art/history-stories/tanner-displacement-full.webp",
+      "alt": "John Tanner grips a trunk among packed household belongings.",
+      "id": "art-3553452b3ee0",
+      "occurrences": [
+        {
+          "id": "source-a1b039e3784c",
+          "page": "/history/john-tanner.html",
+          "pageTitle": "John Tanner: receiving, giving, and remembering",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/history-stories/tanner-displacement-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/tanner-displacement-960.webp\"])",
+          "title": "A family within the gathering and displacement"
         }
       ],
       "categories": [
@@ -733,6 +802,28 @@
           "kind": "hero",
           "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/child-loss-full.webp\"]",
           "title": "A grieving woman holds a child’s knitted cap while a friend sits beside her on a lakeside bench."
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "A hand offered in the name of Christ",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/history-stories/tanner-healing-witness-full.webp",
+      "fullImage": "/assets/page-art/history-stories/tanner-healing-witness-full.webp",
+      "alt": "John Tanner rises beside a chair while another man steadies him by the hand.",
+      "id": "art-5887e9d36740",
+      "occurrences": [
+        {
+          "id": "source-28b35b42fb72",
+          "page": "/history/john-tanner.html",
+          "pageTitle": "John Tanner: receiving, giving, and remembering",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/history-stories/tanner-healing-witness-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/tanner-healing-witness-full.webp\"])",
+          "title": "A hand offered in the name of Christ"
         }
       ],
       "categories": [
@@ -1004,6 +1095,50 @@
       ]
     },
     {
+      "title": "A life that continued westward",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/history-stories/miller-westward-service-960.webp",
+      "fullImage": "/assets/page-art/history-stories/miller-westward-service-full.webp",
+      "alt": "Eleazer Miller tightens a rope around supplies on a wagon while other travelers prepare nearby.",
+      "id": "art-6316a08a9548",
+      "occurrences": [
+        {
+          "id": "source-0d34b3a957e6",
+          "page": "/history/eleazer-miller.html",
+          "pageTitle": "Eleazer Miller: a simple witness and a continuing life",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/history-stories/miller-westward-service-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/miller-westward-service-960.webp\"])",
+          "title": "A life that continued westward"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "A listener who wanted to know",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/history-stories/miller-search-before-witness-full.webp",
+      "fullImage": "/assets/page-art/history-stories/miller-search-before-witness-full.webp",
+      "alt": "A young Brigham Young reads an open book at a wooden table.",
+      "id": "art-babb29b0491c",
+      "occurrences": [
+        {
+          "id": "source-6e47c264edd1",
+          "page": "/history/eleazer-miller.html",
+          "pageTitle": "Eleazer Miller: a simple witness and a continuing life",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/history-stories/miller-search-before-witness-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/miller-search-before-witness-full.webp\"])",
+          "title": "A listener who wanted to know"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "A man holds a closed scripture book on a broad rock outcrop and looks toward a clearing horizon.",
       "category": "Gospel Studies",
       "thumbnail": "/assets/heroes/topics/stand-forever-full.webp",
@@ -1085,6 +1220,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/mc-centurion-friends--753ff85a36c0-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/mc-centurion-friends--753ff85a36c0-thumb.webp\"])",
           "title": "A message of trust"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "A missionary before the famous encounter",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/history-stories/miller-mission-road-960.webp",
+      "fullImage": "/assets/page-art/history-stories/miller-mission-road-full.webp",
+      "alt": "Eleazer Miller walks along a country road carrying a traveling bag.",
+      "id": "art-c2bb0bd45754",
+      "occurrences": [
+        {
+          "id": "source-1768d72369c2",
+          "page": "/history/eleazer-miller.html",
+          "pageTitle": "Eleazer Miller: a simple witness and a continuing life",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/history-stories/miller-mission-road-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/miller-mission-road-960.webp\"])",
+          "title": "A missionary before the famous encounter"
         }
       ],
       "categories": [
@@ -1791,6 +1948,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/sheep-sabbath-01-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/sheep-sabbath-01-960.webp\"])",
           "title": "A sheep in a pit"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "A skill offered to a shared undertaking",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/history-stories/moyle-stonecutter-craft-960.webp",
+      "fullImage": "/assets/page-art/history-stories/moyle-stonecutter-craft-full.webp",
+      "alt": "John Rowe Moyle works a granite block with hammer and chisel before the unfinished Salt Lake Temple.",
+      "id": "art-44660b4b0ad0",
+      "occurrences": [
+        {
+          "id": "source-1a197f7c35a9",
+          "page": "/history/john-rowe-moyle.html",
+          "pageTitle": "John Rowe Moyle: the stonecutter and the wooden leg",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/history-stories/moyle-stonecutter-craft-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/moyle-stonecutter-craft-960.webp\"])",
+          "title": "A skill offered to a shared undertaking"
         }
       ],
       "categories": [
@@ -2836,6 +3015,28 @@
           "kind": "hero",
           "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/temples-full.webp\"]",
           "title": "An older woman and a younger man examine an ancestor photograph beside family-history notes."
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "An outward covenant in April 1832",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/history-stories/miller-millstream-baptism-960.webp",
+      "fullImage": "/assets/page-art/history-stories/miller-millstream-baptism-full.webp",
+      "alt": "Eleazer Miller raises his right hand beside Brigham Young in a snowy millstream before baptism.",
+      "id": "art-fa7eb00d909d",
+      "occurrences": [
+        {
+          "id": "source-b79895a2dcdb",
+          "page": "/history/eleazer-miller.html",
+          "pageTitle": "Eleazer Miller: a simple witness and a continuing life",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/history-stories/miller-millstream-baptism-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/miller-millstream-baptism-960.webp\"])",
+          "title": "An outward covenant in April 1832"
         }
       ],
       "categories": [
@@ -11210,6 +11411,28 @@
       ]
     },
     {
+      "title": "Making a way to walk again",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/history-stories/moyle-wooden-leg-960.webp",
+      "fullImage": "/assets/page-art/history-stories/moyle-wooden-leg-full.webp",
+      "alt": "An older John Rowe Moyle shapes a wooden prosthetic leg at a workbench.",
+      "id": "art-74e5b41111e8",
+      "occurrences": [
+        {
+          "id": "source-ff2ab21a547c",
+          "page": "/history/john-rowe-moyle.html",
+          "pageTitle": "John Rowe Moyle: the stonecutter and the wooden leg",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/history-stories/moyle-wooden-leg-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/moyle-wooden-leg-960.webp\"])",
+          "title": "Making a way to walk again"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Making ready at Iowa City",
       "category": "Pioneers",
       "thumbnail": "/assets/pioneers/story/05-carts-800.webp",
@@ -13674,6 +13897,28 @@
       ]
     },
     {
+      "title": "Remembering the worker beyond the obstacle",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/history-stories/moyle-return-to-craft-960.webp",
+      "fullImage": "/assets/page-art/history-stories/moyle-return-to-craft-full.webp",
+      "alt": "John Rowe Moyle stands at a granite block with a wooden prosthesis visible below one trouser leg.",
+      "id": "art-e0b2b3e5ae59",
+      "occurrences": [
+        {
+          "id": "source-78164e785445",
+          "page": "/history/john-rowe-moyle.html",
+          "pageTitle": "John Rowe Moyle: the stonecutter and the wooden leg",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/history-stories/moyle-return-to-craft-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/moyle-return-to-craft-960.webp\"])",
+          "title": "Remembering the worker beyond the obstacle"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Reopening the shared path",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/collection-neighbor-08-960.webp",
@@ -13755,6 +14000,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/prodigal-son-03-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/prodigal-son-03-960.webp\"])",
           "title": "Resources gone, need begins"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Resources put to work at Kirtland",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/history-stories/tanner-temple-support-960.webp",
+      "fullImage": "/assets/page-art/history-stories/tanner-temple-support-full.webp",
+      "alt": "John Tanner and Joseph Smith meet across a desk, with coins and papers before them and construction beyond the window.",
+      "id": "art-b3d0e9a11163",
+      "occurrences": [
+        {
+          "id": "source-9fdc6acc48f7",
+          "page": "/history/john-tanner.html",
+          "pageTitle": "John Tanner: receiving, giving, and remembering",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/history-stories/tanner-temple-support-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/tanner-temple-support-960.webp\"])",
+          "title": "Resources put to work at Kirtland"
         }
       ],
       "categories": [
@@ -15584,6 +15851,28 @@
       ]
     },
     {
+      "title": "The distance between home and the work",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/history-stories/moyle-weekly-walk-960.webp",
+      "fullImage": "/assets/page-art/history-stories/moyle-weekly-walk-full.webp",
+      "alt": "John Rowe Moyle walks a dirt road with a shoulder bag above a valley settlement beneath a brightening mountain sky.",
+      "id": "art-8c983ac7fe44",
+      "occurrences": [
+        {
+          "id": "source-afacb30b7b40",
+          "page": "/history/john-rowe-moyle.html",
+          "pageTitle": "John Rowe Moyle: the stonecutter and the wooden leg",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/history-stories/moyle-weekly-walk-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/moyle-weekly-walk-960.webp\"])",
+          "title": "The distance between home and the work"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "The father comes out to the elder son",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/prodigal-son-08-960.webp",
@@ -16686,6 +16975,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/bn-night-messengers-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/bn-night-messengers-960.webp\"])",
           "title": "The news travels through the night"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "The note that became a remembered gift",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/history-stories/tanner-debt-forgiven-960.webp",
+      "fullImage": "/assets/page-art/history-stories/tanner-debt-forgiven-full.webp",
+      "alt": "John Tanner hands a folded note to Joseph Smith as they look warmly at one another across a desk.",
+      "id": "art-3fa325d6f87d",
+      "occurrences": [
+        {
+          "id": "source-a1f739573831",
+          "page": "/history/john-tanner.html",
+          "pageTitle": "John Tanner: receiving, giving, and remembering",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/history-stories/tanner-debt-forgiven-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/tanner-debt-forgiven-960.webp\"])",
+          "title": "The note that became a remembered gift"
         }
       ],
       "categories": [
@@ -18634,6 +18945,28 @@
       ]
     },
     {
+      "title": "What Brigham remembered hearing",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/history-stories/miller-simple-witness-960.webp",
+      "fullImage": "/assets/page-art/history-stories/miller-simple-witness-full.webp",
+      "alt": "Eleazer Miller speaks to Brigham Young across a table as other listeners sit nearby.",
+      "id": "art-86947eaa454e",
+      "occurrences": [
+        {
+          "id": "source-b40e3861ca6b",
+          "page": "/history/eleazer-miller.html",
+          "pageTitle": "Eleazer Miller: a simple witness and a continuing life",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/history-stories/miller-simple-witness-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/miller-simple-witness-960.webp\"])",
+          "title": "What Brigham remembered hearing"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "What can a name tell us?",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/bom-evidences/visual-guides-20260923/names-and-attestation.svg",
@@ -19081,14 +19414,14 @@
     }
   ],
   "stats": {
-    "artworks": 858,
-    "occurrences": 864,
+    "artworks": 873,
+    "occurrences": 879,
     "byKind": {
       "artwork": 62,
       "hero": 40,
       "legacy": 39,
       "missionary": 13,
-      "topic": 710
+      "topic": 725
     }
   }
 }

@@ -1,0 +1,50 @@
+{
+  "mode": "built-in-imagegen",
+  "prompts": [
+    {
+      "key": "miller-search-before-witness",
+      "refs": [
+        "C:/Users/wyatt/Documents/Codex/2026-09-29/work/focus-temples/assets/identities/brigham-young-owner-approved-20260920.png"
+      ],
+      "prompt": "Use case: historical-scene. Create a new original near-photographic live-action study illustration, landscape 1536x1024, for Eleazer Miller's story. Reference image fixes the owner-approved Brigham Young identity: preserve his recognizable face proportions exactly while age-adapting to thirty in about1831, before his1832 baptism. Show young Brigham seated at a plain wooden table, carefully reading an early Book of Mormon, thoughtful attentive expression and eyes actually directed to the open book. An early1830s modest western New York room, natural window light, period linen shirt, simple dark waistcoat, clean-shaven with historically plausible younger version of reference hair. Three-quarter medium-wide view, central person and book within middle60percent, generous real room surroundings at sides and above for responsive hero crop. A purposeful human moment of patient study. Book pages indistinct, no readable fabricated quotation/title. Natural detailed skin and hands, physically convincing cloth, clear central focus; no haze/blurredcenter, no CGI, no painting, no modernobjects, no other namedperson, no supernaturalapparition, no text overlay or watermark. Source: Brigham's careful inquiry described in Teachings:BrighamYoung ch43, and his later remembered conversion. Room/color are interpretation."
+    },
+    {
+      "key": "miller-mission-road",
+      "refs": [
+        "C:/Users/wyatt/Documents/Codex/2026-09-29/work/focus-temples/work/history-stories/references/miller-official-profile.jpg"
+      ],
+      "prompt": "Use case: historical-scene. New original convincing live-action photograph-like historical illustration, landscape1536x1024. Actual reference is a later portrait of Eleazer Miller; age-adapt SAME distinct man to36in1832, retain broadforehead,long distinct nose,narrowlowerface,mouth proportions; younger natural brown-to-dark hair combedback, clean-shaven, no elderlywhitehair or saggingage. Scene: a modest early1830s missionary walking along a rural NewYork country road, small worn leather travelingbag, simple dark woolcoat, waistcoat/linen shirt, periodtrousers/boots, no modernBiblebaglogo. Medium-wide environmental shot with personcentral, face attentive to path, calm purposeful exertion rather than pose, trees/fences/simple distantfarmhouse. Historically plausible cool-season daylight, no exact mapped road implied. Sharp credible skindetail, hands and cloth, road texture. No floatingfeet, extralimbs, modernitems, readable signage, filmactor replacement, artwork/painterlyskin, blur in middle, watermark. This is a scene reconstruction of Miller's ministry documented in ChurchHistoryBiographicalDatabase, exactweather/road/color unrecorded."
+    },
+    {
+      "key": "miller-simple-witness",
+      "refs": [
+        "C:/Users/wyatt/Documents/Codex/2026-09-29/work/focus-temples/work/history-stories/references/miller-official-profile.jpg",
+        "C:/Users/wyatt/.codex/generated_images/01a0ef13-5f5b-7f03-b02b-ad6146c0fae7/exec-c481c79b-9515-44e9-baa2-7cf2263e12d9.png",
+        "C:/Users/wyatt/Documents/Codex/2026-09-29/work/focus-temples/assets/identities/brigham-young-owner-approved-20260920.png"
+      ],
+      "prompt": "Historical-scene, new original near-photographic live-action landscape1536x1024. Image1historicalEleazerMiller identity;image2previousMiller scene locks that age36 workingface;image3ownerapprovedBrighamYoung identity ageadapt30in1832. Preserve both distinctly recognizable faces, Miller shortcombedhair/longnose/clean-shaven asimage2; Youngclean-shaven shoulderlengthwavyhair distinct approvednose/mouth. Miller seated onleft speaking a quiet sincere testimony in a modest early1830s NewYork room to seatedBrighamonright and2unidentifiedlisteners. Medium-wide scene, bothmeninprofilethreequarter actuallyLOOKINGDIRECTLY intoeachotherseyes, slightMilleropenhandgesture, Brighamattentivethoughtful expression, no theatricalanger/broadgrin. Naturalwindowlight, plainwoodchairs, periodwool/linenclothing, authentic detailedskin/hands, physicalreallighting. A smallgathering notgrandpodium. No supernaturalrays, ghostlyChrist, inventedlegiblepage/dialogue, modernobjects, actor substitution, CGI, painting, blurredcenter, extrafingers, watermark. SourceBrigham's1854publishedremembrance ofsimpletestimony, teachingmaterialsnameMiller; precise room/attendees artisticinterpretation."
+    },
+    {
+      "key": "miller-millstream-baptism",
+      "refs": [
+        "C:/Users/wyatt/.codex/generated_images/01a0ef13-5f5b-7f03-b02b-ad6146c0fae7/exec-c481c79b-9515-44e9-baa2-7cf2263e12d9.png",
+        "C:/Users/wyatt/Documents/Codex/2026-09-29/work/focus-temples/assets/identities/brigham-young-owner-approved-20260920.png"
+      ],
+      "prompt": "Historical-scene original convincing live-action photograph-like1536x1024landscape. Image1locksEleazerMiller workingface age36. Image2locksdistinctownerBrighamface, ageadapt30forApril14,1832. Preserveexact recognizableidentities. RuralMendonNewYork millstream on cold snowy springday, baretrees, littlepatchesold snow onbanks, periodwoodenmilldistant. Show solemn baptism preparation: Miller andBrigham standing firmly waistdeep water, Miller securehandholdsBrighamwrist,otherhandsteadybehindshoulder, Brighamforearmsposednaturallypreparingimmersion, BOTHeyescalm directedtowardordinance/hands. Ordinaryperiodlightshirts/trousersnotmodernpristinewhitejumpsuits; wetclothrealistic. Mid-wideview theirfullupperbodies+horizonandwater, stablefeetimpliedunderwater, physicalbuoyancynatural, subtle ripples. Someunidentifieddistantwitnessesonthebanknotnamedrelationships. Nobroadsmiles, noglorifyinglightbeams, fantasyicebath, modernreligioussymbols, additionalduplicatefigures, anatomicalimpossibility, extralimbs, unreadabletext, painting, CGI, watermark. Baptismdate/millstream/cold-snowyweathergrounded inTeachingsBrighamch9/officialhistoricalsummary; exactclothing/stance is reconstruction."
+    },
+    {
+      "key": "tanner-healing-witness",
+      "refs": [
+        "C:/Users/wyatt/Documents/Codex/2026-09-29/work/focus-temples/work/history-stories/references/tanner-official-profile.jpg"
+      ],
+      "prompt": "Use case historical-scene. Create original convincing live-action photo-like landscape1536x1024 studyimage. Reference is a coarse institutional illustrationofJohnTanner, guide only facialstructure: curlyrecedinghair,fullbeard,longnose. Reconstruct sameperson aged54inSeptember1832 with naturalgrayingbrownbeard, life-likeskin, notcopysketchstyle. SceneofTanner carefullyrising from woodenchairandplacingweightonhisfeet inmodest1830sNewYorkhouse, missionary takeshishand offeredinfaith. SupportingmissionaryisJaredCarterbutNOidentifiablefacebecausehistoricalreferenceunresolved: showonlybackofhead/shoulderandhandfromside. Framewidefullbodycentralwithinroom, Tannerfaceeyeslooking towardhelpingperson, restrainedsurprisedrelief, naturalconnectedhandgripandbalance. No medicalinjury visible,gore, crutchesunverified, no apparitionofChrist, no magicrays, no exaggeratedmiraclepose. Periodlinen/woolcoat/breechesortrousers, simple realwindowlight, detailedhands/cloth/wood, no modernitems/readableinventedtext/watermarks, CGIorpainting, no middleblur. SourceCarterjournaltestimonyasquotedChurchD&Cstudentmanualch29. Exactroom/facecolors interpretive. Composecriticalfigure headfeet+hands withinmiddleheight60%withrealroomfloorandwallmargin forwidehero crop."
+    },
+    {
+      "key": "moyle-handcart-journey",
+      "refs": [
+        "C:/Users/wyatt/Documents/Codex/2026-09-29/work/focus-temples/work/history-stories/references/moyle-family-book-portrait-plate.png"
+      ],
+      "prompt": "Use case historical-scene. New original ultra-realistic live-action1536x1024landscape historicalstudyimage. Referencebookplate has couplephotograph lower-right: JOHNROWE MOYLE is manLEFTwithinthatcouplephoto, NOT sculpturefigures above. Use his narrowangularface/recedingwavyhair/moustache+chinbeard asactualhistoricalanchor, ageadapt48for1856. Photographicnaturalskin,colorinterpretation. ShowMoyle pushing/hauling an authentic smallwooden2wheelhandcartalong drysummerprairietrailwithhouseholdbundles, otherundistinguishedtravelersatdistance, wideprairie/riverhorizon. Realphysicalcartaxle/handlesandbelievablewheelspokes,twohandsholdinghandles,naturalwalkingstridefocusedexertion. Modestmid1850s shirtsleevesdarkwaistcoat/hattrousers/boots, no snowrescue (EllsworthcompanynotWillieMartin), no modernitems, wagon substitution, finishedSaltLakeTemple, supernaturalappearance, readablelabels, CGIpainting, extralimbsorblurredcenter. Widecompositioncentralmanandhandcartcontainedmiddle60%, broadrealprairieandcloudedsummer sky forhero. Source1856EdmundEllsworthcompanydatabase, unrecorded preciseweather/routeartisticallyreconstructed."
+    }
+  ]
+}

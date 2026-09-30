@@ -199,7 +199,7 @@
         if (document.body.classList.contains('fc-not-found')) return '/' + name;
         const path = window.location.pathname;
         if (path.startsWith('/jesus-christ/')) return '/' + name;
-        if (path.includes('/answers/') || path.includes('/art-study/')) return '../' + name;
+        if (path.includes('/answers/') || path.includes('/art-study/') || path.startsWith('/history/')) return '../' + name;
         return name;
     }
 

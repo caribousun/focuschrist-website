@@ -1,8 +1,8 @@
 {
-  "canonical_pages": 121,
+  "canonical_pages": 124,
   "selectors": {
     ".fc-study-visual-sources a:not(.fc-button--primary)": {
-      "count": 765,
+      "count": 798,
       "pages": [
         "answers/aaronic-priesthood-restoration.html",
         "answers/abrahamic-covenant.html",
@@ -32,6 +32,9 @@
         "church-history.html",
         "come-follow-me.html",
         "general-conference.html",
+        "history/eleazer-miller.html",
+        "history/john-rowe-moyle.html",
+        "history/john-tanner.html",
         "jesus-christ/before-bethlehem.html",
         "jesus-christ/miracles-and-compassion.html",
         "jesus-christ/mortal-ministry.html",
@@ -138,7 +141,7 @@
       ]
     },
     ".fc-study-nav:not(.jj-local-nav) a:not(.fc-button--primary)": {
-      "count": 169,
+      "count": 170,
       "pages": [
         "answers/aaronic-priesthood-restoration.html",
         "answers/are-latter-day-saints-christian.html",

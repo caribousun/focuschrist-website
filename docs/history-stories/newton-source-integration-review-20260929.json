@@ -1,0 +1,42 @@
+{
+  "reviewer": "Newton",
+  "date": "2026-09-29",
+  "status": "Source and integration accepted; final derived discovery and CI registration pending producer completion",
+  "scope": [
+    "Three History stories: five original scenes each; single hero never repeated in body",
+    "All fifteen narrative arrays match revised historical prose; same source URL sets",
+    "At most two narrative paragraphs per scene; separate short reflections",
+    "Local href files and fragment targets across three generated pages",
+    "Exact /history/ relativeRootHref addition and runtime footer, navigation, scripture loader checks"
+  ],
+  "verified_checks": [
+    "python tools/history_story_pages_qa.py PASS",
+    "python tools/build_history_stories.py --check PASS",
+    "node tools/history_story_runtime_qa.js PASS with jsdom",
+    "Independent BeautifulSoup local link/fragment audit: zero missing files or fragments"
+  ],
+  "historical_boundaries": [
+    "Tanner healing attributed to Carter; debt forgiveness attributed to later family account",
+    "Miller conversion May1831 is database attribution; Brigham baptism April1832 avoids conflicting exact day",
+    "Moyle injury cause, year, prosthetic side omitted; death1889 precedes1893 dedication",
+    "Heward journey details explicitly his recollection, not invented specific Miller deeds"
+  ],
+  "source_budgets": "Aggregated derived language including introductions reviewed; duplicate reprinted accounts not separate allowances; no long quoted passages",
+  "remaining": [
+    "Producer register static history_story_pages_qa.py in both workflows",
+    "Root regenerate sitemap/search and shared-script cache consumers",
+    "Root/Fermi own final rendered composition and image reviews; this review does not claim owner aesthetic approval",
+    "Candidate manifest awaits immutable SHA; no public verification before deployment"
+  ],
+  "sha256": {
+    "docs/history-stories/stories.json": "e89a0d8e7d4d42403bacad77a61a142296624e5828dfe2267fc5129086d97897",
+    "tools/build_history_stories.py": "053c2e38cb98d74d73b52a553978336eda57dbe70bc0127f62cb8f12ee72bc0b",
+    "tools/history_story_pages_qa.py": "2dea3eaa1cb266c22728e00225f4f8664730489a59332790667c4090560ce48f",
+    "tools/history_story_runtime_qa.js": "ca4e119d5ce351195db86104827a425f023e492137b45f30ccdb38a99cbe41c9",
+    "site-common.js": "818bfeb89febcc6a3704932ebe89fea0fd34d2f78b6b0bee53a71346d2e7702c",
+    "history-stories.css": "2b3528f9536b3509c6d9bb42f2161823bdc97f7981f66ba1761d5ba57d19c4cd",
+    "history/eleazer-miller.html": "c695caea4ff1fa059ae86fa5523efcb2bfc6a98b099d68db0484556cc7904851",
+    "history/john-rowe-moyle.html": "cb300c06d9cb86cfb4eac2ed60364802a386fc3153ec39a1deea29c34b622238",
+    "history/john-tanner.html": "fa0dea0fa3d4be84e84f7494674cb188c1bd254c404ea95e097e7da0084f6367"
+  }
+}

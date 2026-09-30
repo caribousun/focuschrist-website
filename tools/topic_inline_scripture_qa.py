@@ -25,6 +25,9 @@ assert len(paths)==26 and {'answers/abrahamic-covenant.html','answers/holy-ghost
 featured=sorted({n.attrs['href'] for n in nodes(ROOT/'art.html') if n.tag=='a' and 'data-artwork-detail' in n.attrs and n.attrs.get('href','').startswith('art-study/')})
 assert len(featured)==4, 'Check every Featured Art study destination'
 paths+=featured
+history_stories = ['history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html']
+assert {p.relative_to(ROOT).as_posix() for p in (ROOT/'history').glob('*.html')} == set(history_stories)
+paths += history_stories
 count=0
 for path in paths:
  ns=nodes(ROOT/path);main=next(n for n in ns if n.tag=='main')

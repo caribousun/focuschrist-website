@@ -1,0 +1,169 @@
+{
+  "reviewer": "Fermi",
+  "scope": "Three new History pages and their15originals/3desktop variants only",
+  "accepted_sources": [
+    {
+      "id": "miller-search-before-witness",
+      "role": "original",
+      "source_sha256": "d7f7d7a3dfb4b69f3b76a288190dbd963126bd05b4541e01bb3a54c7a91548a3",
+      "reviewed_source": "exec-d02ab209-70e9-49d2-87a7-fc9331929151.png"
+    },
+    {
+      "id": "miller-search-before-witness",
+      "role": "desktop_variant",
+      "source_sha256": "71873c695d65e09a0d741a8f082c3374fa71fd7b417e94dd7ff2fd9d5a7aaeb8",
+      "reviewed_source": "exec-0d84f013-663f-467b-a417-3616059a7836.png"
+    },
+    {
+      "id": "miller-mission-road",
+      "role": "original",
+      "source_sha256": "d0ced07014ad81f8c05845f3753bb7b0b5fb8b56da47f11ba99b9cb45921fc4e",
+      "reviewed_source": "exec-c481c79b-9515-44e9-baa2-7cf2263e12d9.png"
+    },
+    {
+      "id": "miller-simple-witness",
+      "role": "original",
+      "source_sha256": "c041e3f8b11db487e63b49f67647fe97fc7346a9e52c94ca8ad67fb955248308",
+      "reviewed_source": "exec-57fdecc8-442a-43ab-a1f4-08e857331080.png"
+    },
+    {
+      "id": "tanner-healing-witness",
+      "role": "original",
+      "source_sha256": "4ecb099ef171b1c3d02bf3972b8ed622a30a38067639f49f3dff9f18af612590",
+      "reviewed_source": "exec-e426d359-b365-466b-8b93-c4937746a959.png"
+    },
+    {
+      "id": "tanner-healing-witness",
+      "role": "desktop_variant",
+      "source_sha256": "3999cf4d2ca0e88c9c9c188cb18bf30171fa5e532bf7fc5979fcbf2f31756386",
+      "reviewed_source": "exec-8b4c2a1f-7316-48f7-8bf1-abc0042289f2.png"
+    },
+    {
+      "id": "moyle-handcart-journey",
+      "role": "original",
+      "source_sha256": "9dbe27ba9936822c3596f7850a43bb0c44085644359f806b90c604d1879e79ac",
+      "reviewed_source": "exec-e0dad31f-49f2-4462-ad7b-b35ebf5e6a7f.png"
+    },
+    {
+      "id": "moyle-handcart-journey",
+      "role": "desktop_variant",
+      "source_sha256": "1c145198ff3d0424e9a8a5b1e2f89dedd7c73fde0b793c3cb0e016662208df93",
+      "reviewed_source": "exec-91529cd0-be33-4bc2-8bb1-245f8e04ad38.png"
+    },
+    {
+      "id": "tanner-journey-kirtland",
+      "role": "original",
+      "source_sha256": "f07fa01563a23e66dae0c6aa83321871858869edc67cb5ab68a633272fee7231",
+      "reviewed_source": "exec-49f8b3f9-410c-4cfa-8b28-824fe9de54d1.png"
+    },
+    {
+      "id": "tanner-temple-support",
+      "role": "original",
+      "source_sha256": "c667646cb89ba45eda7504f386bc97389ed6ee0f5853ee8ab0ee79310fdd9d77",
+      "reviewed_source": "exec-585a8084-d091-4a0c-a2d2-6d453402de11.png"
+    },
+    {
+      "id": "tanner-displacement",
+      "role": "original",
+      "source_sha256": "1621c65fa82207ceccc83808bfa76913c4b4f0f2b09f21a3179393b5aa1feadf",
+      "reviewed_source": "exec-20f7d5d3-bb0e-420e-800d-f6552513166f.png"
+    },
+    {
+      "id": "tanner-debt-forgiven",
+      "role": "original",
+      "source_sha256": "bbdd13c905655f73d4855206d6f2cd1801456c42d516f0afd300b0c7008e4d7f",
+      "reviewed_source": "exec-caa8bff2-2a37-498e-a78b-08365dd247ff.png"
+    },
+    {
+      "id": "moyle-stonecutter-craft",
+      "role": "original",
+      "source_sha256": "71addc09196ae6511b55122f346dd3612f958803069a8ab50e17976db9f3d9af",
+      "reviewed_source": "exec-298fe287-f97c-4f0a-be99-7a2f2fd55846.png"
+    },
+    {
+      "id": "moyle-wooden-leg",
+      "role": "original",
+      "source_sha256": "316d8ec2edcdeb0c3082211b906aad9eeea2122e951b0b20e45c7fc8a4a3fb52",
+      "reviewed_source": "exec-b56ad883-cabc-421f-a31a-cc530befdfee.png"
+    },
+    {
+      "id": "moyle-return-to-craft",
+      "role": "original",
+      "source_sha256": "99903dfb9817d047b1c904f7bbf8ffa20f51da58bef36a36a992467d24dadbab",
+      "reviewed_source": "exec-ba29c45f-bd00-439e-8185-8c8457da0f56.png"
+    },
+    {
+      "id": "miller-westward-service",
+      "role": "original",
+      "source_sha256": "27f26cd90b65d746b455a5628038f9b71c32add23a64105ddaefe1a8f4a27420",
+      "reviewed_source": "exec-d5ff2bf7-9718-427a-84d2-0e8b0c8c5750.png"
+    },
+    {
+      "id": "miller-millstream-baptism",
+      "role": "original",
+      "source_sha256": "6c23dad50c0e6d69c418ea6eb376d3d6393ff32d6d1d78e697946a4f89dfe182",
+      "reviewed_source": "exec-cd50f3bd-907b-4719-8a7f-24f80dc32f14.png"
+    },
+    {
+      "id": "moyle-weekly-walk",
+      "role": "original",
+      "source_sha256": "d72e1a4ce7df77492231cf6e06f39891c40058dea450892a199ef31f2c22fa92",
+      "reviewed_source": "exec-5630fe8c-4a34-4a0a-95bb-d7054aa0165c.png"
+    }
+  ],
+  "original_count": 15,
+  "desktop_variant_count": 3,
+  "rejected_source_sha256_excluded": [
+    "5db31531630435320ce11c9266d0294a10ae9aa319df65f7a945a093148eed9f",
+    "7afab7716ca791155702e9565296d887725f2a103f6c84362a70e4fb10e69583"
+  ],
+  "source_navigation": [
+    {
+      "page": "history/eleazer-miller.html",
+      "local_links_resolved": 34,
+      "fragment_links_resolved": 10,
+      "artwork_figures": 5
+    },
+    {
+      "page": "history/john-rowe-moyle.html",
+      "local_links_resolved": 34,
+      "fragment_links_resolved": 10,
+      "artwork_figures": 5
+    },
+    {
+      "page": "history/john-tanner.html",
+      "local_links_resolved": 34,
+      "fragment_links_resolved": 10,
+      "artwork_figures": 5
+    }
+  ],
+  "errors": [],
+  "browser_review": {
+    "status": "blocked_in_fermi_session",
+    "reason": "Existing Chrome2 unavailable and fresh hidden IAB creation returned Browser is not available: iab. Root took390/320 rendered coverage. No Fermi rendered/mobile claim."
+  },
+  "owner_aesthetic_approval": false,
+  "release_review": {
+    "status": "pass_scoped_source_review",
+    "exports_rechecked": 33,
+    "source_controls": "15accepted originals plus3accepted desktop variants; both rejected source hashes excluded. Original WebP variants retained. No JPEG/hero-layer trial remains in final source.",
+    "scope": "History CSS retains shared hero sizing; navigation paths cover History; four-source panel exception limited to exact three story pages; source host negative fixtures retained.",
+    "independent_executed": [
+      "history_story_runtime_qa.js: all15study/full-size/source/focus/Continue contracts passed",
+      "history_hero_pixels_qa.py --self-test: varied scene accepted, navy86percent/right-strip and blank fixtures rejected",
+      "git diff --check passed"
+    ],
+    "hosted_gate_review": "Browser runner measures1440 viewport screenshots for all3pages, checks image decode/desktop source/frame ratio then independently examines raster thirds/near-solid pixels. Both workflows install pinned Playwright and preserve raster/screenshot artifacts even after failure. Hosted execution pending; no local-browser execution claim.",
+    "render_evidence_boundary": "Root reports native actual1366/1440 full scene; Fermi session unavailable. Faulty CUA fullPage/clip capture is not treated as product defect.",
+    "owner_aesthetic_approval": false
+  },
+  "post_registration_review": {
+    "hosted_status": "New Chromium raster gate execution remains pending; no hosted success claim.",
+    "producer_results": "Read17affected-rerun records; all exit0. Initial6failures addressed, not waived.",
+    "metadata": "Independently compared all3social URLs/descriptions/images to reviewed story records and first original; all3film coverage keys exact. All6priesthood URL/poster/dimension/identity/coverage mappings match earlier reviewed visuals, including verified Elijah study route.",
+    "controls": "Exact three topic-owned first-scene heroes validated separately; unchanged41legacy hero-controller baseline retained. History added to discovery and canonical runtime inventory, no pages excluded. Elijah manual-video exception constrained to exact Melchizedek route, resource key and both verified links, with wrong-route/URL negative fixtures.",
+    "status": "pass",
+    "reviewer": "Fermi",
+    "owner_aesthetic_approval": false
+  }
+}

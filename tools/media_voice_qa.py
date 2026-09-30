@@ -16,7 +16,7 @@ def public_pages(root=ROOT):
     routes = {('index.html' if urlsplit(n.text).path in {'', '/'} else urlsplit(n.text).path.lstrip('/'))
               for n in ET.parse(root / 'sitemap.xml').getroot().findall('{*}url/{*}loc')}
     routes.update(p.relative_to(root).as_posix() for p in root.glob('*.html'))
-    for directory in ('answers', 'art-study', 'jesus-christ'):
+    for directory in ('answers', 'art-study', 'jesus-christ', 'history'):
         routes.update(p.relative_to(root).as_posix() for p in (root / directory).rglob('*.html'))
     return [root / name for name in sorted(routes)]
 
