@@ -1,0 +1,51 @@
+{
+  "reviewer": "Newton",
+  "date": "2026-09-30",
+  "status": "PASS_IMPLEMENTATION_REVIEW",
+  "scope": "Dedicated Church-source history, preserved parent entry/bookmarks, discovery and exact-route QA integration",
+  "reviewed_sha256": {
+    "answers/melchizedek-priesthood-restoration.html": "0b27d5806eb301d98a415b0f1af1bad44d9d6ad700f6fb4eda8ac984827f7ff6",
+    "answers/race-priesthood-and-temple-blessings.html": "0f663a4c047e16f9e3c25a6df079eb2176508d4476c54d287e0d6073f923b52d",
+    "priesthood-history-study.css": "362821ce185bfdb70bdc7cf378e64a7b4c5bbf73cbe8a9630a12bd6cd695029b",
+    "tools/build_priesthood_study.py": "783d9bd1a3e01af832b905f8578dd7a4850b4022ea9a01e87208d4c8e77060e9"
+  },
+  "passed_checks": [
+    "priesthood_history_qa.py",
+    "priesthood_history_qa.py --remote-previews (six decoded official images)",
+    "topic_study_pages_qa.py",
+    "topic_body_picture_qa.py",
+    "topic_inline_scripture_qa.py",
+    "answer_study_qa.py",
+    "resource_thumbnail_qa.py",
+    "site_qa.py (final rerun after all three blockers corrected)",
+    "focused_answers_qa.py",
+    "site_flow_qa.py",
+    "global_video_uniqueness_qa.py",
+    "answer_video_uniqueness_qa.py",
+    "complete_card_rows_qa.py",
+    "production_hardening_qa.py",
+    "art_study_enrichment_qa.py",
+    "discovery_qa.py",
+    "site_search_qa.py",
+    "build_site_search.py --check",
+    "section_panel_surface_qa.py",
+    "study_layout_uniformity_qa.py",
+    "navigation_links_qa.py",
+    "media_voice_qa.py",
+    "study_section_balance_qa.py",
+    "Builder reproducibility via intercepted writes: both generated pages exactly match",
+    "Negative mutation: arbitrary unrelated Answer remains subject to primary-topic discovery requirement",
+    "git diff --check after LF normalization"
+  ],
+  "resolved_findings": [
+    "Shared Citation Index menu restored; body sources still restricted to Church domain",
+    "Exact child-route official-media exception in artwork inventory preserves other 25 original-art study checks",
+    "Changed tracked and new text normalized to LF"
+  ],
+  "limits": [
+    "Implementation and source-bound structural review; factual source review recorded separately by Fermi",
+    "Desktop/phone/200-percent rendering and visitor interactions reviewed separately by root",
+    "No production/deployment or owner aesthetic acceptance claimed",
+    "UTF8 enabled for legacy readers on Windows; default cp1252 failures were environmental"
+  ]
+}

@@ -297,7 +297,8 @@
     "watch-media-shell": "Integrated media player/sidebar frame.",
     "watch-short": "Video portrait frame; preserve media treatment.",
     "cfm-text-link": "Button/control; CFM page-owned study destination action styled by cfm-study-controls.css.",
-    "cfm-source-link": "CFM official-source text control in a section footer; transparent and unrounded, not an enclosing panel."
+    "cfm-source-link": "CFM official-source text control in a section footer; transparent and unrounded, not an enclosing panel.",
+    "fc-source-directory": "Study navigation disclosure; uses shared Home panel tokens in priesthood-history-study.css."
   },
   "local_copy_contrast": "Covered panels locally resolve --fc-muted to --fc-text; approved Home .fc-card remains unchanged.",
   "retired_surface_selectors": {

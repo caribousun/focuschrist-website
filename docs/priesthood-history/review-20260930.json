@@ -1,0 +1,68 @@
+{
+  "reviewer": "Fermi",
+  "date": "2026-09-30",
+  "status": "PASS_SEMANTIC_AND_SOURCE_REVIEW",
+  "scope": [
+    "sections.json narrative and parent introduction",
+    "visuals.json six media captions and official destinations",
+    "generated dedicated study HTML",
+    "generated parent introduction"
+  ],
+  "sources": [
+    "https://www.churchofjesuschrist.org/study/manual/gospel-topics-essays/race-and-the-priesthood?lang=eng",
+    "https://www.churchofjesuschrist.org/study/manual/gospel-topics/race-and-the-church-of-jesus-christ-of-latter-day-saints?lang=eng",
+    "https://www.churchofjesuschrist.org/study/history/topics/elijah-able?lang=eng",
+    "https://www.churchofjesuschrist.org/study/history/topics/jane-elizabeth-manning-james?lang=eng",
+    "https://www.churchofjesuschrist.org/study/history/global-histories/brazil/stories-of-faith/br-04-joy-of-an-eternal-covenant?lang=eng",
+    "https://www.churchofjesuschrist.org/study/history/global-histories/ghana/stories-of-faith/gh-01-weve-waited-long-for-thee?lang=eng",
+    "https://www.churchofjesuschrist.org/study/manual/revelations-in-context/witnessing-the-faithfulness?lang=eng",
+    "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/od/2?lang=eng"
+  ],
+  "media_sources": [
+    "https://www.churchofjesuschrist.org/media/video/1978-10-2010-revelation-on-priesthood-accepted-church-officers-sustained?lang=eng",
+    "https://www.churchofjesuschrist.org/media/video/2012-01-5040-a-person-and-a-sister?lang=eng",
+    "https://www.churchofjesuschrist.org/media/video/2012-01-5050-a-new-day?lang=eng",
+    "https://www.churchofjesuschrist.org/media/video/pnoyoiad43jcv4q1j6mueluogx9y23fmpust71qj?lang=eng",
+    "https://www.churchofjesuschrist.org/study/manual/doctrine-and-covenants-stories-2025/33-elijah-able?lang=eng",
+    "https://www.churchofjesuschrist.org/media/video/2018-06-1010-opening-remarks?lang=eng"
+  ],
+  "corrections": [
+    {
+      "id": "JANE_NEIGHBORS",
+      "status": "VERIFIED_APPLIED",
+      "readback": "provided for her family appears in source JSON and generated HTML"
+    },
+    {
+      "id": "ORIGIN_WORDING",
+      "status": "VERIFIED_APPLIED",
+      "readback": "without assigning causes or motives beyond what those sources document appears in source JSON and generated HTML"
+    }
+  ],
+  "findings": [
+    "No unresolved historical or doctrinal semantic finding",
+    "June 1, June 8, September 30 dates correctly distinguished",
+    "Ghana count is Johnson, Mensah, and 123 other converts; branch next morning",
+    "Able priesthood standing and denied endowment/sealing requests correctly distinguished",
+    "Jane 1894 servant sealing not misrepresented as requested family sealing",
+    "Origin limitation accurately attributed; no invented divine motive",
+    "Later biographies and global histories distinguished from declaration and conference record",
+    "Reverent framing includes Black women and men and acknowledges denied ordinances",
+    "Narrative and brief annotations remain within 200-word source budgets"
+  ],
+  "media_verification": {
+    "result": "Six destinations and caption-level descriptions match",
+    "limitation": "No audiovisual playback review; no claim to have watched or heard the videos",
+    "method": "Opened official destination pages; matched titles and descriptions; direct HTTP read for A Person and A Sister after web tool access error"
+  },
+  "limitations": [
+    "Rendered desktop/mobile QA belongs to root ongoing review",
+    "No release/publication claim",
+    "No owner aesthetic acceptance claim"
+  ],
+  "reviewed_file_sha256": {
+    "visuals": "672DA8FCB442F25B054CC803D212433712D0C78FE385ECA52E14D9196ACE9E11",
+    "parent": "0B27D5806EB301D98A415B0F1AF1BAD44D9D6AD700F6FB4EDA8AC984827F7FF6",
+    "sections": "8DAE94C48D5093D644A8DF43B8C6091FB352E6B92A0D0DCCBA0999B8510344CE",
+    "child": "948E51C18C9182105AD7AFB65F78A3397093BEDF03E9840AAF353DC3FD074B95"
+  }
+}
