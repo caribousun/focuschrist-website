@@ -3,6 +3,8 @@
 .fc-life-story .fc-life-hero > a { display: block; }
 .fc-life-story .fc-life-hero [data-picture-panel-copy] { display: none; }
 .fc-life-story .fc-life-reading { max-width: 860px; margin-inline: auto; padding: 30px 24px; }
+.fc-life-story .fc-life-opening { display: flow-root; padding-bottom: 0; }
+.fc-life-story .fc-life-body-start { padding-top: 0; }
 .fc-life-story .fc-life-reading > :is(h1, h2) { font-family: var(--fc-font-display); font-weight: 400; text-wrap: balance; overflow-wrap: anywhere; }
 .fc-life-story .fc-life-reading > h1 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.12; margin-block: 0 22px; }
 .fc-life-story .fc-life-reading > h2 { color: var(--fc-gold-light); }
@@ -18,6 +20,7 @@
 .fc-life-story .fc-life-directory li { padding-block: 6px; }
 .fc-life-story .fc-life-directory a { display: inline-block; max-width: 100%; overflow-wrap: anywhere; }
 .fc-life-story .fc-life-reflections { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.fc-life-story .fc-life-reflections + .fc-actions { margin-block: 24px; }
 .fc-life-story .fc-life-reflection { background: var(--fc-panel-fill); border: 1px solid var(--fc-panel-border); box-shadow: var(--fc-panel-shadow); border-radius: var(--fc-radius); padding: 22px; }
 .fc-life-story .fc-life-reflection p { margin: 0; }
 .fc-life-story a:focus-visible, .fc-life-story summary:focus-visible { outline: 3px solid var(--fc-gold, #f0c36a); outline-offset: 4px; }
@@ -26,6 +29,8 @@
     .fc-life-story .fc-life-reading > h1 { font-size: clamp(1.5rem, 8vw, 2rem); margin-bottom: 12px; }
     .fc-life-story .fc-life-reading > .fc-eyebrow { line-height: 1.3; margin-bottom: 8px; }
     .fc-life-story .fc-life-reading:has(> h1) { padding-top: 12px; }
+    .fc-life-story .fc-life-opening { min-height: calc(100svh - var(--fc-opening-flow-header-height) - var(--fc-mobile-hero-height)); padding-bottom: 24px; box-sizing: border-box; }
+    .fc-life-story .fc-life-body-start { padding-top: 24px; }
     .fc-life-story .fc-life-directory { margin-top: 4px; }
     .fc-life-story .fc-life-directory summary { padding-block: 10px; min-height: 44px; box-sizing: border-box; }
     .fc-life-story .fc-life-reflections { grid-template-columns: 1fr; }
