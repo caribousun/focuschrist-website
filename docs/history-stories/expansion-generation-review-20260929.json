@@ -1,0 +1,120 @@
+{
+  "tool": "built-in imagegen",
+  "owner_aesthetic_approval": false,
+  "review_status": "Eight accepted originals exported after independent review; superseded candidates remain lineage only.",
+  "scenes": [
+    {
+      "id": "tanner-mission-road-1844",
+      "refs": [
+        "exec-caa8bff2-2a37-498e-a78b-08365dd247ff.png"
+      ],
+      "prompt": "Create ONE new unique historically grounded photorealistic study artwork, landscape3:2, visually rich with sharp natural detail throughout and no soft blurry central area. Reference images supply existing character identity only, NOT scenes to duplicate. Preserve recognizable face structure/hair/character continuity with age suited to year. Natural scene-appropriate expressions and true eyelines toward the object/person engaged. Period-appropriate materials, clothing and objects. No invented miracles, modern items, dramatic divine apparitions, or text/watermark except requested sacred carving. New distinct composition and action. John Tanner is the bearded older LEFT man in reference, NOT younger Joseph on right. Show John age65 walking along an1844westernNewYork country road with modest travelbag, one companion age52 viewed fromback orfaceobscured (DavidPettegrew exactlikenessunverified). Tanner kindly resolute/natural attentive expression, windwornbutnotangry. Traveling onfoot afterPittsburghtowardBuffalo, trees/simplefarmdistance. No recognizableunverifiedlandmark,newspaperorlegibledocument. This is artisticinterpretation ofcompanion'sDecember1844report of240milewalk/preaching, not anexactroadphoto.",
+      "generated_original": "exec-775650c5-1329-473c-8bf4-8e4473401325.png",
+      "accepted_path": "exec-775650c5-1329-473c-8bf4-8e4473401325.png",
+      "root_review": "PASS: grounded scene, age adaptation and established identity retained; source reconstruction limits apply."
+    },
+    {
+      "id": "tanner-family-crossing-1848",
+      "refs": [
+        "exec-caa8bff2-2a37-498e-a78b-08365dd247ff.png"
+      ],
+      "prompt": "Create ONE new unique historically grounded photorealistic study artwork, landscape3:2, visually rich with sharp natural detail throughout and no soft blurry central area. Reference images supply existing character identity only, NOT scenes to duplicate. Preserve recognizable face structure/hair/character continuity with age suited to year. Natural scene-appropriate expressions and true eyelines toward the object/person engaged. Period-appropriate materials, clothing and objects. No invented miracles, modern items, dramatic divine apparitions, or text/watermark except requested sacred carving. New distinct composition and action. John Tanner is beardedolderLEFTman notyoungerJoseph. Age69-70 with moregray atbeard/hair butrecognizableface, quietlyencouraginghelpingsecurebelongingsbesideordinaryox-drawncoveredwagon on1848overlandfamilyjourneyWillardRichardscompany. Family membersbackground/rearviews unknownidentities, not newlyinventednamedcloseportraits. Fairweather plainswesternsunlight, distinctfromexistingwinter1835Ohiojourneys. Handsrealisticeyesontask. No rescue/snowstorm/finishedSaltLaketemple.",
+      "generated_original": "exec-9c965f61-bc80-40a9-8110-dd0da8436c1d.png",
+      "accepted_path": "exec-9c965f61-bc80-40a9-8110-dd0da8436c1d.png",
+      "root_review": "PASS: grounded scene, age adaptation and established identity retained; source reconstruction limits apply."
+    },
+    {
+      "id": "miller-conversion-1831",
+      "refs": [
+        "exec-ddd55c05-df6d-42eb-8756-153469447658.png"
+      ],
+      "prompt": "Create ONE new unique historically grounded photorealistic study artwork, landscape3:2, visually rich with sharp natural detail throughout and no soft blurry central area. Reference images supply existing character identity only, NOT scenes to duplicate. Preserve recognizable face structure/hair/character continuity with age suited to year. Natural scene-appropriate expressions and true eyelines toward the object/person engaged. Period-appropriate materials, clothing and objects. No invented miracles, modern items, dramatic divine apparitions, or text/watermark except requested sacred carving. New distinct composition and action. Eleazer Miller himselfage35 inMay1831, samecombedbrownhairandfacialidentity asreference. Seatedaloneinsimple1831ruralinterior studyinganopenBible besidea closedplainBookofMormon withnoinventedlegiblepagetext. Quiethopefulface, relaxedbrow,naturalreflectiveeyesfocusedonbook, subtlewarmlight. This is interpretivescripturestudyaccompanyingdocumentedconversion, notanexactdocumentedroom oranotherbaptism. Compositionclosehandsandbookplusupperbody, differentfromBrighamhero roomscene.",
+      "generated_original": "exec-ccf7de14-a2bc-4f17-ace8-2531743cc80e.png",
+      "accepted_path": "exec-0a4f745f-c598-4209-816f-21f868e5fb7f.png",
+      "root_review": "PASS: grounded scene, age adaptation and established identity retained; source reconstruction limits apply. Initial gaze/expression output superseded by reviewed correction.",
+      "expression_tweak": {
+        "id": "miller-conversion-1831",
+        "path": "exec-ccf7de14-a2bc-4f17-ace8-2531743cc80e.png",
+        "prompt": "Edit ONLY Eleazer's gaze and corresponding very small facial-expression muscles: direct BOTH eyes naturally down at the open scripture pages just below his pointing finger, head gently inclined enough that actual pupils clearly attend the book; quiet hopeful gentle expression with unpinched brows. He should be reading, not looking off into space. Preserve EXACT established recognizable face identity, age35, hair, clothing, seatedbody, hands/fingers/books/room/textures/light and full composition. No additional changes. Keep realistic detail sharp throughout."
+      }
+    },
+    {
+      "id": "miller-canada-grove",
+      "refs": [
+        "exec-e41c93e0-e3fb-4cd1-b0df-1fcf07af8a1d.png"
+      ],
+      "prompt": "Create ONE new unique historically grounded photorealistic study artwork, landscape3:2, visually rich with sharp natural detail throughout and no soft blurry central area. Reference images supply existing character identity only, NOT scenes to duplicate. Preserve recognizable face structure/hair/character continuity with age suited to year. Natural scene-appropriate expressions and true eyelines toward the object/person engaged. Period-appropriate materials, clothing and objects. No invented miracles, modern items, dramatic divine apparitions, or text/watermark except requested sacred carving. New distinct composition and action. OnlyMilleridentityfromreferenceLEFTshortcombedhairedspeaker; donotcopyBrighamrightlistener. Eleazerage36-37 preachinginleafygroveUpperCanadaJune1832, peoplecameinlargeenoughnumbershousecouldnotcontainmeetings asMiller/Strongreport describes. ShowwarmearnestgentleMillerstandingwithopenBible, naturaleyeline/eyecontacttowardnearestadultlistener. Attentiveadultsandfamiliesin1830sclothing, somesearchopenbooks. Distinctwidegrovescene, noexistingBrighamroomduplicate. No namedattendeesinvented, nostage/spectacle/exaggeratedsmile.",
+      "generated_original": "exec-df6fefd3-f537-4ce6-a399-d73ed9439817.png",
+      "accepted_path": "exec-c2c77b1f-5cd7-473f-8356-24ff242d3846.png",
+      "root_review": "PASS: grounded scene, age adaptation and established identity retained; source reconstruction limits apply. Initial gaze/expression output superseded by reviewed correction.",
+      "expression_tweak": {
+        "id": "miller-canada-grove",
+        "path": "exec-df6fefd3-f537-4ce6-a399-d73ed9439817.png",
+        "prompt": "Edit ONLY Eleazer Miller LEFT standing speaker's facial expression and eyeline. Relax pinched inner eyebrows and stern mouth; warm, earnest, compassionate teaching expression, faint natural smile in cheeks and mouthwhile stillspeaking. His eyes in unmistakable eye contact with the seatedadultwomanatcenter inbluegraydressandbonnet lookingupathim. Preserve his recognizableface/hair/age36 and ALL others, hands, books, gesture, bodies, grove/composition and lighting exactly. No grin, caricature, angry eyebrows or scene changes. Sharp detailed realistic full image."
+      }
+    },
+    {
+      "id": "miller-zions-camp-horses",
+      "refs": [
+        "exec-ddd55c05-df6d-42eb-8756-153469447658.png"
+      ],
+      "prompt": "Create ONE new unique historically grounded photorealistic study artwork, landscape3:2, visually rich with sharp natural detail throughout and no soft blurry central area. Reference images supply existing character identity only, NOT scenes to duplicate. Preserve recognizable face structure/hair/character continuity with age suited to year. Natural scene-appropriate expressions and true eyelines toward the object/person engaged. Period-appropriate materials, clothing and objects. No invented miracles, modern items, dramatic divine apparitions, or text/watermark except requested sacred carving. New distinct composition and action. EleazerMillerage38May30,1834, existingcombedhairface, arrivingwithTHREE healthyhorses toCampofIsraeleastofRochester. Millerforegroundholdingonebridle/leadinghorse, otherTHREEmustbetotalcounttwohorsesvisiblebehind, smallunnamedcompanionsrearviews. Woodlandcamp ordinarytents/wagoninthedistance, gentlepurposefulMillerexpressionwithoutscowl eyesonhorse/path. Primaryhistorysaysarrivedwithabouthalfdozenpeopleandthreehorses; nohorsemedicine/miraculousheal/battle/inventednamedJosephappearance. Anatomicallycorrecthorsesnotextraheads/limbs.",
+      "generated_original": "exec-37f7f573-6aac-41d7-9033-f3e950d972ac.png",
+      "accepted_path": "exec-37f7f573-6aac-41d7-9033-f3e950d972ac.png",
+      "root_review": "PASS: grounded scene, age adaptation and established identity retained; source reconstruction limits apply."
+    },
+    {
+      "id": "miller-relief-donation",
+      "refs": [
+        "exec-f0a9ff2c-cb80-489f-a9a1-4ffef0a9ed09.png"
+      ],
+      "prompt": "Create ONE new unique historically grounded photorealistic study artwork, landscape3:2, visually rich with sharp natural detail throughout and no soft blurry central area. Reference images supply existing character identity only, NOT scenes to duplicate. Preserve recognizable face structure/hair/character continuity with age suited to year. Natural scene-appropriate expressions and true eyelines toward the object/person engaged. Period-appropriate materials, clothing and objects. No invented miracles, modern items, dramatic divine apparitions, or text/watermark except requested sacred carving. New distinct composition and action. OlderEleazerMillerage58in1854SaltLakeCity, ageadaptedfromreference52existingrecognizableface slightlymoregray/wrinkles butconsistent. Quietwarmsincereexpressionlookingatmodestsilvercoinsinhishandaboveplainwoodentablebesideclosedunletteredaccountbook. Handsandcoinsvisiblenaturalnotmoderncoins/readableinventeddenominations. A simpleperiodinterior, materialactofgivingwithoutdepictingnamedrecipientorclaimedmeetingattendance. ContemporaryReliefSocietyminuteslist95centdonation,but exactmoment/recipientunrecorded. No fabricatedreceipt/dialogue or giantmoneydisplay.",
+      "generated_original": "exec-40dece9a-7a9e-41cf-a916-dae250655fcb.png",
+      "accepted_path": "exec-40dece9a-7a9e-41cf-a916-dae250655fcb.png",
+      "root_review": "PASS: grounded scene, age adaptation and established identity retained; source reconstruction limits apply."
+    },
+    {
+      "id": "moyle-atlantic-crossing",
+      "refs": [
+        "exec-e0dad31f-49f2-4462-ad7b-b35ebf5e6a7f.png"
+      ],
+      "prompt": "Create ONE new unique historically grounded photorealistic study artwork, landscape3:2, visually rich with sharp natural detail throughout and no soft blurry central area. Reference images supply existing character identity only, NOT scenes to duplicate. Preserve recognizable face structure/hair/character continuity with age suited to year. Natural scene-appropriate expressions and true eyelines toward the object/person engaged. Period-appropriate materials, clothing and objects. No invented miracles, modern items, dramatic divine apparitions, or text/watermark except requested sacred carving. New distinct composition and action. JohnRoweMoyleage48samebeardedexistingcharacter ondeckof1856woodenemigrantshipSamuelCurlingcrossingAtlanticLiverpooltoBostonApr19-May23. ShowMoyle steadyingmodestwoodentrunk/dampbundles onraindarkenedwoodendeck, periodrigging/sailsandseavisible behind, familymembersdistantrearviews/unknowngenericfaces. Naturalpatientcaringexpressionwithattentiontoluggage, steadybalancedfeet. Ownjournalrecordsstormsrollingluggage/wetbeds, doNOTdepictshipwreck/rescue/extremedrowningdanger. Closeframingnotclaimexactshipblueprint. Distinctfromhandcart.",
+      "generated_original": "exec-716e6d88-02f5-4b65-bd70-266d8f61370c.png",
+      "accepted_path": "exec-716e6d88-02f5-4b65-bd70-266d8f61370c.png",
+      "root_review": "PASS: grounded scene, age adaptation and established identity retained; source reconstruction limits apply."
+    },
+    {
+      "id": "moyle-holiness-inscription",
+      "refs": [
+        "exec-ba29c45f-bd00-439e-8185-8c8457da0f56.png",
+        "1.15.2_1.15.2.jpg"
+      ],
+      "prompt": "Create ONE new unique historically grounded photorealistic study artwork, landscape3:2, visually rich with sharp natural detail throughout and no soft blurry central area. Reference images supply existing character identity only, NOT scenes to duplicate. Preserve recognizable face structure/hair/character continuity with age suited to year. Natural scene-appropriate expressions and true eyelines toward the object/person engaged. Period-appropriate materials, clothing and objects. No invented miracles, modern items, dramatic divine apparitions, or text/watermark except requested sacred carving. New distinct composition and action. JohnRoweMoyle recognizableolderbeardedstonecutterfromreference1 withsamewoodenlowerlegprosthesis visible, calmreverentconcentration. ClosehistoricalreconstructioncarvingSaltLakeTempleeastinscriptionfromlaterfamilyremembrance. Moylebalancedonsafeheavywoodenworkplatform, hammer/chiselworkingatlargePALERstonepanel withdeepcarvedornamentalserifletters. Image2 referenceonlyactualstone/letterformdesignfamily, currentgoldfinishNOT nineteenthcenturyworkstageclaim. Readable exactFOURwords \"HOLINESS TO THE LORD\" (H O L I N E S S / T O / T H E / L O R D), largeclearcenteredornamentalserifcarvedstoneletters acrosspanel,nextchiselstrokeonletteredge. Naturalstonefacefrontandhandsrazorsharp. Cropclosecontextnotfulltempletower, NOcompletedspires/angelMoroni/1893dedication, noexactyearimplied, nofantasycarvinglight/sparks. KeepMoylefaceexpressionpeacefulfocused, eyestowardletterbeingworked. Nootherreadabletext.",
+      "generated_original": "exec-407008e8-a8f3-4838-8566-9327f7599704.png",
+      "accepted_path": "exec-e2192dc4-268f-481c-883c-f47d82d05191.png",
+      "root_review": "PASS final panel-grounded reconstruction; independent Newton and Fermi full-pixel source comparison accepted. Not an exact facsimile, known carving day, or authenticated prosthetic side.",
+      "superseded_candidate": "exec-407008e8-a8f3-4838-8566-9327f7599704.png",
+      "superseded_candidate_reason": "Rejected for inscription source fit; retained as lineage only.",
+      "accepted_sha256": "b3872bb7b3889ac26b661daf68e4926a57bd3440d6a3ab0b0285479f5a7e5845"
+    }
+  ],
+  "source_file_sha256": {
+    "exec-caa8bff2-2a37-498e-a78b-08365dd247ff.png": "bbdd13c905655f73d4855206d6f2cd1801456c42d516f0afd300b0c7008e4d7f",
+    "exec-775650c5-1329-473c-8bf4-8e4473401325.png": "d9f23a0744bf92968ae042468f2328da0922d4144936b0c23e9ccd3f62308ff4",
+    "exec-9c965f61-bc80-40a9-8110-dd0da8436c1d.png": "0975a8dda996eea72b392a5bae8769e0858ae04c4447a054de375c2d6547c15c",
+    "exec-ddd55c05-df6d-42eb-8756-153469447658.png": "f4d862c1dc069da21311a071e467c846c19f767522f4c34970a38db061afc31c",
+    "exec-ccf7de14-a2bc-4f17-ace8-2531743cc80e.png": "d6b29b2137ac83a4eca0e6c195af76106f6ce39d5e5c684d9ad78b0a1f1b872c",
+    "exec-0a4f745f-c598-4209-816f-21f868e5fb7f.png": "5d2e7c776f9ed5b29bba0b41c0c48add5663ee1e45f2622d80258d54b7b6fbe2",
+    "exec-e41c93e0-e3fb-4cd1-b0df-1fcf07af8a1d.png": "1030a65a31395e33876683bab9a12f40613f63c64af2c76ed159029e02471f75",
+    "exec-df6fefd3-f537-4ce6-a399-d73ed9439817.png": "1a89145f5c2c542f49933f53e3e8eeba03b407c92e2c0f5d246e9323711e7d7a",
+    "exec-c2c77b1f-5cd7-473f-8356-24ff242d3846.png": "4dc2147d7e0391bbb97f696dd619c4ee2ea0edd1ca6cfae762437abd4a7b90dc",
+    "exec-37f7f573-6aac-41d7-9033-f3e950d972ac.png": "22708f3e859eca06a6246e1680988b17c93ad145fab2fabd659004c2053d4314",
+    "exec-f0a9ff2c-cb80-489f-a9a1-4ffef0a9ed09.png": "f73aecedb5127097ff49545a22a2a7f448f3c9a393db1d376ed4b0ead532f35c",
+    "exec-40dece9a-7a9e-41cf-a916-dae250655fcb.png": "9716332793ef46e34b5742aff45512f50a3fd852df263752e0b94083a1572096",
+    "exec-e0dad31f-49f2-4462-ad7b-b35ebf5e6a7f.png": "9dbe27ba9936822c3596f7850a43bb0c44085644359f806b90c604d1879e79ac",
+    "exec-716e6d88-02f5-4b65-bd70-266d8f61370c.png": "90766f2c4c70f1663afaf67bd3a04f64df0361801919b2ced88696e1bc2fb8aa",
+    "exec-ba29c45f-bd00-439e-8185-8c8457da0f56.png": "99903dfb9817d047b1c904f7bbf8ffa20f51da58bef36a36a992467d24dadbab",
+    "1.15.2_1.15.2.jpg": "4039d4316f805f68fbcda6e0ab44386ab8c37582b77bb61238318492a3bf6c92",
+    "exec-407008e8-a8f3-4838-8566-9327f7599704.png": "fa854ee1dfe4b28c87241e8a03587b26b30c2701c0a4ea203c33aaf2168bbe0e"
+  }
+}

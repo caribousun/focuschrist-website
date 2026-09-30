@@ -20,7 +20,7 @@ def check():
         assert dest.h1 and dest.h1.get_text(' ',strip=True) == r['target_title'], r
         if u.fragment: assert dest.find(id=u.fragment), r
     generic = re.compile(r'(?:open|follow) (?:this|the) illustrated study', re.I)
-    controller_version = '20260929-history-sources-2'
+    controller_version = '20260929-tanner-journal-1'
     consumers = 0
     for page in ROOT.rglob('*.html'):
         if set(page.relative_to(ROOT).parts) & {'work', '.git', 'node_modules'}: continue

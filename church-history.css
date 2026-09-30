@@ -559,3 +559,14 @@ html[data-focuschrist-history-conversation-active] .fc-history-chat-shell {
 
 /* Owner-requested complete rows for thirteen meaningful suggested questions. */
 .fc-history-predictions button { flex:1 1 180px; min-width:0; white-space:normal; overflow-wrap:anywhere; }
+
+/* Owning-story previews: complete rows, intact pictures, and deliberate action spacing. */
+.fc-history-life-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.fc-history-life-card { display: flex; flex-direction: column; min-width: 0; overflow: hidden; border: 1px solid var(--fc-panel-border); border-radius: var(--fc-radius); background: var(--fc-panel-fill); box-shadow: var(--fc-panel-shadow); }
+.fc-history-life-preview { display: block; }
+.fc-history-life-preview img { display: block; width: 100%; height: auto; }
+.fc-history-life-body { display: flex; flex-direction: column; align-items: flex-start; flex: 1; padding: 24px; }
+.fc-history-life-body h3 { margin: 0 0 12px; }
+.fc-history-life-body p { margin: 0 0 24px; }
+.fc-history-life-body > .fc-button { margin-top: auto; }
+@media (max-width: 959px) { .fc-history-life-grid { grid-template-columns: 1fr; } }

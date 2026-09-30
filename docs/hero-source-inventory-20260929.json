@@ -1,0 +1,3280 @@
+{
+  "scope": "Read-only markup inventory of canonical routes; not computed CSS or rendered-size proof",
+  "owner_mobile_exception": "Preserve existing mobile Answers heroes except Abrahamic missing opening",
+  "pages": [
+    {
+      "page": "index.html",
+      "candidates": [
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-visual-hero--christ fc-visual-hero--portrait fc-home-hero"
+        }
+      ],
+      "stylesheets": [
+        "site-header.css?v=20260926-toolbar-readability-1",
+        "site-system.css?v=20260927-anchor-alignment-1",
+        "home.css?v=20260909-warm",
+        "artwork-details.css?v=20260909-warm",
+        "full-image-viewer.css?v=20260905-viewport",
+        "artwork-actions.css?v=20260929-picture-source-pills-1",
+        "connected-study.css?v=20260927-anchor-alignment-1",
+        "hero-details.css?v=20260909-warm",
+        "resource-cards.css?v=20260927-anchor-alignment-1",
+        "site-search.css?v=20260929-result-hitbox-1",
+        "complete-card-rows.css?v=20260920-1",
+        "home-presentation.css?v=20260927-readable-captions-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "ask.html",
+      "candidates": [
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-visual-hero--christ fc-visual-hero--ask"
+        }
+      ],
+      "stylesheets": [
+        "site-header.css?v=20260926-toolbar-readability-1",
+        "ask-experience.css?v=20260927-anchor-alignment-1",
+        "site-system.css?v=20260927-anchor-alignment-1",
+        "artwork-details.css?v=20260909-warm",
+        "full-image-viewer.css?v=20260905-viewport",
+        "ask-hero.css?v=20260905-approved-red",
+        "artwork-actions.css?v=20260929-picture-source-pills-1",
+        "connected-study.css?v=20260927-anchor-alignment-1",
+        "hero-details.css?v=20260909-warm",
+        "resource-cards.css?v=20260927-anchor-alignment-1",
+        "site-search.css?v=20260929-result-hitbox-1",
+        "complete-card-rows.css?v=20260920-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "answers.html",
+      "candidates": [
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-visual-hero--christ fc-visual-hero--answers"
+        },
+        {
+          "tag": "figure",
+          "id": null,
+          "class": "gc-intro-visual"
+        }
+      ],
+      "stylesheets": [
+        "site-header.css?v=20260926-toolbar-readability-1",
+        "site-system.css?v=20260927-anchor-alignment-1",
+        "answers-hero.css?v=20260927-anchor-alignment-1",
+        "artwork-details.css?v=20260909-warm",
+        "full-image-viewer.css?v=20260905-viewport",
+        "artwork-actions.css?v=20260929-picture-source-pills-1",
+        "connected-study.css?v=20260927-anchor-alignment-1",
+        "hero-details.css?v=20260909-warm",
+        "resource-cards.css?v=20260927-anchor-alignment-1",
+        "answers-artwork-dialog.css?v=20260907-pills",
+        "general-conference-section.css?v=20260927-anchor-alignment-1",
+        "site-search.css?v=20260929-result-hitbox-1",
+        "settle-heart-study.css?v=20260927-anchor-alignment-1",
+        "complete-card-rows.css?v=20260920-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "watch.html",
+      "candidates": [
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-visual-hero--christ fc-visual-hero--watch"
+        }
+      ],
+      "stylesheets": [
+        "site-header.css?v=20260926-toolbar-readability-1",
+        "site-system.css?v=20260927-anchor-alignment-1",
+        "watch-experience.css?v=20260924-narrow-reading-2",
+        "watch-library.css?v=20260927-anchor-alignment-1",
+        "connected-study.css?v=20260927-anchor-alignment-1",
+        "full-image-viewer.css?v=20260905-viewport",
+        "artwork-details.css?v=20260909-warm",
+        "hero-details.css?v=20260909-warm",
+        "artwork-actions.css?v=20260929-picture-source-pills-1",
+        "resource-cards.css?v=20260927-anchor-alignment-1",
+        "site-search.css?v=20260929-result-hitbox-1",
+        "complete-card-rows.css?v=20260920-1",
+        "watch-shorts.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "art.html",
+      "candidates": [
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-visual-hero--christ fc-visual-hero--art"
+        }
+      ],
+      "stylesheets": [
+        "site-header.css?v=20260926-toolbar-readability-1",
+        "site-system.css?v=20260927-anchor-alignment-1",
+        "art-experience.css?v=20260929-balanced-gallery-1",
+        "art-hero.css?v=20260830-6",
+        "artwork-details.css?v=20260909-warm",
+        "full-image-viewer.css?v=20260905-viewport",
+        "artwork-actions.css?v=20260929-picture-source-pills-1",
+        "connected-study.css?v=20260927-anchor-alignment-1",
+        "hero-details.css?v=20260909-warm",
+        "resource-cards.css?v=20260927-anchor-alignment-1",
+        "site-search.css?v=20260929-result-hitbox-1",
+        "complete-card-rows.css?v=20260920-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "missionary.html",
+      "candidates": [
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-visual-hero--missionary"
+        }
+      ],
+      "stylesheets": [
+        "site-header.css?v=20260926-toolbar-readability-1",
+        "site-system.css?v=20260927-anchor-alignment-1",
+        "missionary-enrichment.css?v=20260924-1",
+        "missionary.css?v=20260923-enrichment-finish-1",
+        "full-image-viewer.css?v=20260905-viewport",
+        "artwork-actions.css?v=20260929-picture-source-pills-1",
+        "connected-study.css?v=20260927-anchor-alignment-1",
+        "artwork-details.css?v=20260909-warm",
+        "hero-details.css?v=20260909-warm",
+        "resource-cards.css?v=20260927-anchor-alignment-1",
+        "site-search.css?v=20260929-result-hitbox-1",
+        "complete-card-rows.css?v=20260920-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "church-history.html",
+      "candidates": [
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-visual-hero--history fc-history-hero"
+        }
+      ],
+      "stylesheets": [
+        "site-header.css?v=20260926-toolbar-readability-1",
+        "site-system.css?v=20260927-anchor-alignment-1",
+        "church-history.css?v=20260929-pictured-entries-1",
+        "artwork-details.css?v=20260909-warm",
+        "full-image-viewer.css?v=20260905-viewport",
+        "artwork-actions.css?v=20260929-picture-source-pills-1",
+        "connected-study.css?v=20260927-anchor-alignment-1",
+        "hero-details.css?v=20260909-warm",
+        "resource-cards.css?v=20260927-anchor-alignment-1",
+        "topic-art.css?v=20260909-warm",
+        "topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "priesthood-scenes.css?v=20260914-1",
+        "site-search.css?v=20260929-result-hitbox-1",
+        "complete-card-rows.css?v=20260920-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "come-follow-me.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "cfm-hero"
+        }
+      ],
+      "stylesheets": [
+        "site-header.css?v=20260926-toolbar-readability-1",
+        "site-system.css?v=20260927-anchor-alignment-1",
+        "full-image-viewer.css?v=20260905-viewport",
+        "come-follow-me.css?v=20260928-reading-rows-1",
+        "site-search.css?v=20260929-result-hitbox-1",
+        "topic-art.css?v=20260909-warm",
+        "artwork-details.css?v=20260909-warm",
+        "topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "resource-cards.css?v=20260927-anchor-alignment-1",
+        "focused-answers.css?v=20260919-1",
+        "complete-card-rows.css?v=20260920-1",
+        "cfm-study-controls.css?v=20260928-reading-rows-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "pioneers.html",
+      "candidates": [
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-visual-hero--history"
+        }
+      ],
+      "stylesheets": [
+        "site-header.css?v=20260926-toolbar-readability-1",
+        "site-system.css?v=20260927-anchor-alignment-1",
+        "pioneer-experience.css?v=20260920-polish-2",
+        "artwork-details.css?v=20260909-warm",
+        "full-image-viewer.css?v=20260905-viewport",
+        "artwork-actions.css?v=20260929-picture-source-pills-1",
+        "connected-study.css?v=20260927-anchor-alignment-1",
+        "hero-details.css?v=20260909-warm",
+        "resource-cards.css?v=20260927-anchor-alignment-1",
+        "site-search.css?v=20260929-result-hitbox-1",
+        "pioneer-story.css?v=20260927-anchor-alignment-1",
+        "complete-card-rows.css?v=20260920-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "about.html",
+      "candidates": [
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-visual-hero--christ fc-visual-hero--about"
+        }
+      ],
+      "stylesheets": [
+        "site-header.css?v=20260926-toolbar-readability-1",
+        "site-system.css?v=20260927-anchor-alignment-1",
+        "about-hero.css?v=20260830-2",
+        "about-closing.css?v=20260914-centered-promotions-1",
+        "connected-study.css?v=20260927-anchor-alignment-1",
+        "full-image-viewer.css?v=20260905-viewport",
+        "artwork-details.css?v=20260909-warm",
+        "hero-details.css?v=20260909-warm",
+        "artwork-actions.css?v=20260929-picture-source-pills-1",
+        "resource-cards.css?v=20260927-anchor-alignment-1",
+        "site-search.css?v=20260929-result-hitbox-1",
+        "complete-card-rows.css?v=20260920-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "answers/jesus-christ-latter-day-saint-beliefs.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "fc-topic-opening"
+        },
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-visual-hero--christ fc-visual-hero--portrait fc-answer-detail-hero fc-topic-unique-hero"
+        }
+      ],
+      "stylesheets": [
+        "../answer-styles.css?v=20260909-warm",
+        "../site-system.css?v=20260927-anchor-alignment-1",
+        "../site-header.css?v=20260926-toolbar-readability-1",
+        "../connected-study.css?v=20260927-anchor-alignment-1",
+        "../full-image-viewer.css?v=20260905-viewport",
+        "../artwork-details.css?v=20260909-warm",
+        "../hero-details.css?v=20260909-warm",
+        "../artwork-actions.css?v=20260929-picture-source-pills-1",
+        "../resource-cards.css?v=20260927-anchor-alignment-1",
+        "../answer-navigation.css?v=20260927-anchor-alignment-1",
+        "../topic-study-pages.css?v=20260927-anchor-alignment-1",
+        "../foundation-study.css?v=20260908-enriched",
+        "../topic-art.css?v=20260909-warm",
+        "../topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "../site-search.css?v=20260929-result-hitbox-1",
+        "../topic-heroes.css?v=20260919-topic-heroes-1",
+        "../complete-card-rows.css?v=20260920-1",
+        "../jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "answers/are-latter-day-saints-christian.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "fc-topic-opening"
+        },
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-visual-hero--christ fc-visual-hero--portrait fc-answer-detail-hero fc-topic-unique-hero"
+        }
+      ],
+      "stylesheets": [
+        "../answer-styles.css?v=20260909-warm",
+        "../site-system.css?v=20260927-anchor-alignment-1",
+        "../site-header.css?v=20260926-toolbar-readability-1",
+        "../connected-study.css?v=20260927-anchor-alignment-1",
+        "../full-image-viewer.css?v=20260905-viewport",
+        "../artwork-details.css?v=20260909-warm",
+        "../hero-details.css?v=20260909-warm",
+        "../artwork-actions.css?v=20260929-picture-source-pills-1",
+        "../resource-cards.css?v=20260927-anchor-alignment-1",
+        "../answer-navigation.css?v=20260927-anchor-alignment-1",
+        "../topic-study-pages.css?v=20260927-anchor-alignment-1",
+        "../topic-art.css?v=20260909-warm",
+        "../topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "../site-search.css?v=20260929-result-hitbox-1",
+        "../topic-heroes.css?v=20260919-topic-heroes-1",
+        "../complete-card-rows.css?v=20260920-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "answers/what-is-the-book-of-mormon.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "fc-topic-opening"
+        },
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-visual-hero--christ fc-visual-hero--portrait fc-answer-detail-hero fc-topic-unique-hero"
+        }
+      ],
+      "stylesheets": [
+        "../answer-styles.css?v=20260909-warm",
+        "../site-system.css?v=20260927-anchor-alignment-1",
+        "../site-header.css?v=20260926-toolbar-readability-1",
+        "../connected-study.css?v=20260927-anchor-alignment-1",
+        "../full-image-viewer.css?v=20260905-viewport",
+        "../artwork-details.css?v=20260909-warm",
+        "../hero-details.css?v=20260909-warm",
+        "../artwork-actions.css?v=20260929-picture-source-pills-1",
+        "../resource-cards.css?v=20260927-anchor-alignment-1",
+        "../answer-navigation.css?v=20260927-anchor-alignment-1",
+        "../topic-study-pages.css?v=20260927-anchor-alignment-1",
+        "../topic-art.css?v=20260909-warm",
+        "../topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "../site-search.css?v=20260929-result-hitbox-1",
+        "../topic-heroes.css?v=20260919-topic-heroes-1",
+        "../bom-story-journey.css?v=20260927-anchor-alignment-1",
+        "../complete-card-rows.css?v=20260920-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "answers/why-latter-day-saints-build-temples.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "fc-topic-opening"
+        },
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-visual-hero--christ fc-visual-hero--portrait fc-answer-detail-hero fc-topic-unique-hero"
+        }
+      ],
+      "stylesheets": [
+        "../answer-styles.css?v=20260909-warm",
+        "../site-system.css?v=20260927-anchor-alignment-1",
+        "../site-header.css?v=20260926-toolbar-readability-1",
+        "../connected-study.css?v=20260927-anchor-alignment-1",
+        "../full-image-viewer.css?v=20260905-viewport",
+        "../artwork-details.css?v=20260909-warm",
+        "../hero-details.css?v=20260909-warm",
+        "../artwork-actions.css?v=20260929-picture-source-pills-1",
+        "../resource-cards.css?v=20260927-anchor-alignment-1",
+        "../answer-navigation.css?v=20260927-anchor-alignment-1",
+        "../topic-study-pages.css?v=20260927-anchor-alignment-1",
+        "../topic-art.css?v=20260909-warm",
+        "../topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "../site-search.css?v=20260929-result-hitbox-1",
+        "../topic-heroes.css?v=20260919-topic-heroes-1",
+        "../complete-card-rows.css?v=20260920-1",
+        "../temples-history.css?v=20260929-related-hitbox-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "answers/what-happens-after-death.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "fc-topic-opening"
+        },
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-visual-hero--christ fc-visual-hero--portrait fc-answer-detail-hero fc-topic-unique-hero"
+        }
+      ],
+      "stylesheets": [
+        "../answer-styles.css?v=20260909-warm",
+        "../site-system.css?v=20260927-anchor-alignment-1",
+        "../site-header.css?v=20260926-toolbar-readability-1",
+        "../connected-study.css?v=20260927-anchor-alignment-1",
+        "../full-image-viewer.css?v=20260905-viewport",
+        "../artwork-details.css?v=20260909-warm",
+        "../hero-details.css?v=20260909-warm",
+        "../artwork-actions.css?v=20260929-picture-source-pills-1",
+        "../resource-cards.css?v=20260927-anchor-alignment-1",
+        "../answer-navigation.css?v=20260927-anchor-alignment-1",
+        "../topic-study-pages.css?v=20260927-anchor-alignment-1",
+        "../topic-art.css?v=20260909-warm",
+        "../topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "../site-search.css?v=20260929-result-hitbox-1",
+        "../topic-heroes.css?v=20260919-topic-heroes-1",
+        "../complete-card-rows.css?v=20260920-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "answers/who-was-joseph-smith.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "fc-topic-opening"
+        },
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-visual-hero--christ fc-visual-hero--portrait fc-answer-detail-hero fc-topic-unique-hero"
+        }
+      ],
+      "stylesheets": [
+        "../answer-styles.css?v=20260909-warm",
+        "../site-system.css?v=20260927-anchor-alignment-1",
+        "../site-header.css?v=20260926-toolbar-readability-1",
+        "../connected-study.css?v=20260927-anchor-alignment-1",
+        "../full-image-viewer.css?v=20260905-viewport",
+        "../artwork-details.css?v=20260909-warm",
+        "../hero-details.css?v=20260909-warm",
+        "../artwork-actions.css?v=20260929-picture-source-pills-1",
+        "../resource-cards.css?v=20260927-anchor-alignment-1",
+        "../answer-navigation.css?v=20260927-anchor-alignment-1",
+        "../topic-study-pages.css?v=20260927-anchor-alignment-1",
+        "../foundation-study.css?v=20260908-enriched",
+        "../topic-art.css?v=20260909-warm",
+        "../topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "../site-search.css?v=20260929-result-hitbox-1",
+        "../topic-heroes.css?v=20260919-topic-heroes-1",
+        "../complete-card-rows.css?v=20260920-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "answers/prayer-and-personal-revelation.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "fc-topic-opening"
+        },
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-visual-hero--christ fc-visual-hero--portrait fc-answer-detail-hero fc-topic-unique-hero"
+        }
+      ],
+      "stylesheets": [
+        "../answer-styles.css?v=20260909-warm",
+        "../site-system.css?v=20260927-anchor-alignment-1",
+        "../site-header.css?v=20260926-toolbar-readability-1",
+        "../connected-study.css?v=20260927-anchor-alignment-1",
+        "../full-image-viewer.css?v=20260905-viewport",
+        "../artwork-details.css?v=20260909-warm",
+        "../hero-details.css?v=20260909-warm",
+        "../artwork-actions.css?v=20260929-picture-source-pills-1",
+        "../resource-cards.css?v=20260927-anchor-alignment-1",
+        "../answer-navigation.css?v=20260927-anchor-alignment-1",
+        "../topic-study-pages.css?v=20260927-anchor-alignment-1",
+        "../topic-art.css?v=20260909-warm",
+        "../topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "../site-search.css?v=20260929-result-hitbox-1",
+        "../topic-heroes.css?v=20260919-topic-heroes-1",
+        "../complete-card-rows.css?v=20260920-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "fc-topic-opening"
+        },
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-visual-hero--christ fc-visual-hero--portrait fc-answer-detail-hero fc-topic-unique-hero"
+        }
+      ],
+      "stylesheets": [
+        "../answer-styles.css?v=20260909-warm",
+        "../site-system.css?v=20260927-anchor-alignment-1",
+        "../site-header.css?v=20260926-toolbar-readability-1",
+        "../connected-study.css?v=20260927-anchor-alignment-1",
+        "../full-image-viewer.css?v=20260905-viewport",
+        "../hero-details.css?v=20260909-warm",
+        "../artwork-actions.css?v=20260929-picture-source-pills-1",
+        "../artwork-details.css?v=20260909-warm",
+        "../resource-cards.css?v=20260927-anchor-alignment-1",
+        "../answer-navigation.css?v=20260927-anchor-alignment-1",
+        "../stand-forever-study.css?v=20260909-warm",
+        "../topic-study-pages.css?v=20260927-anchor-alignment-1",
+        "../topic-art.css?v=20260909-warm",
+        "../topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "../site-search.css?v=20260929-result-hitbox-1",
+        "../topic-heroes.css?v=20260919-topic-heroes-1",
+        "../complete-card-rows.css?v=20260920-1",
+        "../desktop-hero-repairs.css?v=20260929-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "answers/why-families-are-important.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "fc-topic-opening"
+        },
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-visual-hero--christ fc-visual-hero--portrait fc-answer-detail-hero fc-topic-unique-hero"
+        }
+      ],
+      "stylesheets": [
+        "../answer-styles.css?v=20260909-warm",
+        "../site-system.css?v=20260927-anchor-alignment-1",
+        "../site-header.css?v=20260926-toolbar-readability-1",
+        "../connected-study.css?v=20260927-anchor-alignment-1",
+        "../full-image-viewer.css?v=20260905-viewport",
+        "../artwork-details.css?v=20260909-warm",
+        "../hero-details.css?v=20260909-warm",
+        "../artwork-actions.css?v=20260929-picture-source-pills-1",
+        "../resource-cards.css?v=20260927-anchor-alignment-1",
+        "../answer-navigation.css?v=20260927-anchor-alignment-1",
+        "../topic-study-pages.css?v=20260927-anchor-alignment-1",
+        "../topic-art.css?v=20260909-warm",
+        "../topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "../site-search.css?v=20260929-result-hitbox-1",
+        "../topic-heroes.css?v=20260919-topic-heroes-1",
+        "../complete-card-rows.css?v=20260920-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "answers/what-is-eternal-marriage.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "fc-topic-opening"
+        },
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-visual-hero--christ fc-visual-hero--portrait fc-answer-detail-hero fc-topic-unique-hero"
+        }
+      ],
+      "stylesheets": [
+        "../answer-styles.css?v=20260909-warm",
+        "../site-system.css?v=20260927-anchor-alignment-1",
+        "../site-header.css?v=20260926-toolbar-readability-1",
+        "../connected-study.css?v=20260927-anchor-alignment-1",
+        "../full-image-viewer.css?v=20260905-viewport",
+        "../artwork-details.css?v=20260909-warm",
+        "../hero-details.css?v=20260909-warm",
+        "../artwork-actions.css?v=20260929-picture-source-pills-1",
+        "../resource-cards.css?v=20260927-anchor-alignment-1",
+        "../answer-navigation.css?v=20260927-anchor-alignment-1",
+        "../eternal-marriage-study.css?v=20260907-2",
+        "../topic-study-pages.css?v=20260927-anchor-alignment-1",
+        "../topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "../site-search.css?v=20260929-result-hitbox-1",
+        "../topic-heroes.css?v=20260919-topic-heroes-1",
+        "../topic-art.css?v=20260909-warm",
+        "../complete-card-rows.css?v=20260920-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "answers/bible-and-book-of-mormon-together.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "fc-topic-opening"
+        },
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-visual-hero--christ fc-visual-hero--portrait fc-answer-detail-hero fc-topic-unique-hero"
+        }
+      ],
+      "stylesheets": [
+        "../answer-styles.css?v=20260909-warm",
+        "../site-system.css?v=20260927-anchor-alignment-1",
+        "../site-header.css?v=20260926-toolbar-readability-1",
+        "../connected-study.css?v=20260927-anchor-alignment-1",
+        "../full-image-viewer.css?v=20260905-viewport",
+        "../artwork-details.css?v=20260909-warm",
+        "../hero-details.css?v=20260909-warm",
+        "../artwork-actions.css?v=20260929-picture-source-pills-1",
+        "../resource-cards.css?v=20260927-anchor-alignment-1",
+        "../answer-navigation.css?v=20260927-anchor-alignment-1",
+        "../topic-study-pages.css?v=20260927-anchor-alignment-1",
+        "../topic-art.css?v=20260909-warm",
+        "../topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "../site-search.css?v=20260929-result-hitbox-1",
+        "../topic-heroes.css?v=20260919-topic-heroes-1",
+        "../complete-card-rows.css?v=20260920-1",
+        "../bible-together.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "answers/faith-in-jesus-christ-during-trials.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "fc-topic-opening"
+        },
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-visual-hero--christ fc-visual-hero--portrait fc-answer-detail-hero fc-topic-unique-hero"
+        }
+      ],
+      "stylesheets": [
+        "../answer-styles.css?v=20260909-warm",
+        "../site-system.css?v=20260927-anchor-alignment-1",
+        "../site-header.css?v=20260926-toolbar-readability-1",
+        "../connected-study.css?v=20260927-anchor-alignment-1",
+        "../full-image-viewer.css?v=20260905-viewport",
+        "../artwork-details.css?v=20260909-warm",
+        "../hero-details.css?v=20260909-warm",
+        "../artwork-actions.css?v=20260929-picture-source-pills-1",
+        "../resource-cards.css?v=20260927-anchor-alignment-1",
+        "../answer-navigation.css?v=20260927-anchor-alignment-1",
+        "../topic-study-pages.css?v=20260927-anchor-alignment-1",
+        "../topic-art.css?v=20260909-warm",
+        "../topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "../site-search.css?v=20260929-result-hitbox-1",
+        "../topic-heroes.css?v=20260919-topic-heroes-1",
+        "../complete-card-rows.css?v=20260920-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "art-study/the-living-christ.html",
+      "candidates": [
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-art-study-hero fc-topic-unique-hero"
+        }
+      ],
+      "stylesheets": [
+        "../answer-styles.css?v=20260909-warm",
+        "../site-system.css?v=20260927-anchor-alignment-1",
+        "../site-header.css?v=20260926-toolbar-readability-1",
+        "../full-image-viewer.css?v=20260905-viewport",
+        "../connected-study.css?v=20260927-anchor-alignment-1",
+        "../art-study-page.css?v=20260908-image-heroes",
+        "../art-study-enrichment.css?v=20260927-anchor-alignment-1",
+        "../artwork-details.css?v=20260909-warm",
+        "../hero-details.css?v=20260909-warm",
+        "../artwork-actions.css?v=20260929-picture-source-pills-1",
+        "../topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "../resource-cards.css?v=20260927-anchor-alignment-1",
+        "../site-search.css?v=20260929-result-hitbox-1",
+        "../topic-heroes.css?v=20260919-topic-heroes-1",
+        "../complete-card-rows.css?v=20260920-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "art-study/the-good-shepherd.html",
+      "candidates": [
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-art-study-hero"
+        }
+      ],
+      "stylesheets": [
+        "../answer-styles.css?v=20260909-warm",
+        "../site-system.css?v=20260927-anchor-alignment-1",
+        "../site-header.css?v=20260926-toolbar-readability-1",
+        "../full-image-viewer.css?v=20260905-viewport",
+        "../connected-study.css?v=20260927-anchor-alignment-1",
+        "../art-study-page.css?v=20260908-image-heroes",
+        "../art-study-enrichment.css?v=20260927-anchor-alignment-1",
+        "../artwork-details.css?v=20260909-warm",
+        "../hero-details.css?v=20260909-warm",
+        "../artwork-actions.css?v=20260929-picture-source-pills-1",
+        "../topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "../resource-cards.css?v=20260927-anchor-alignment-1",
+        "../site-search.css?v=20260929-result-hitbox-1",
+        "../complete-card-rows.css?v=20260920-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "art-study/suffer-the-little-children.html",
+      "candidates": [
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-art-study-hero"
+        }
+      ],
+      "stylesheets": [
+        "../answer-styles.css?v=20260909-warm",
+        "../site-system.css?v=20260927-anchor-alignment-1",
+        "../site-header.css?v=20260926-toolbar-readability-1",
+        "../full-image-viewer.css?v=20260905-viewport",
+        "../connected-study.css?v=20260927-anchor-alignment-1",
+        "../art-study-page.css?v=20260908-image-heroes",
+        "../art-study-enrichment.css?v=20260927-anchor-alignment-1",
+        "../artwork-details.css?v=20260909-warm",
+        "../hero-details.css?v=20260909-warm",
+        "../artwork-actions.css?v=20260929-picture-source-pills-1",
+        "../topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "../resource-cards.css?v=20260927-anchor-alignment-1",
+        "../site-search.css?v=20260929-result-hitbox-1",
+        "../complete-card-rows.css?v=20260920-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "art-study/be-still.html",
+      "candidates": [
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-art-study-hero"
+        }
+      ],
+      "stylesheets": [
+        "../answer-styles.css?v=20260909-warm",
+        "../site-system.css?v=20260927-anchor-alignment-1",
+        "../site-header.css?v=20260926-toolbar-readability-1",
+        "../full-image-viewer.css?v=20260905-viewport",
+        "../connected-study.css?v=20260927-anchor-alignment-1",
+        "../art-study-page.css?v=20260908-image-heroes",
+        "../art-study-enrichment.css?v=20260927-anchor-alignment-1",
+        "../artwork-details.css?v=20260909-warm",
+        "../hero-details.css?v=20260909-warm",
+        "../artwork-actions.css?v=20260929-picture-source-pills-1",
+        "../topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "../resource-cards.css?v=20260927-anchor-alignment-1",
+        "../site-search.css?v=20260929-result-hitbox-1",
+        "../complete-card-rows.css?v=20260920-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "answers/death-of-a-child.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "fc-topic-opening"
+        },
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-visual-hero--christ fc-visual-hero--portrait fc-answer-detail-hero fc-topic-unique-hero"
+        }
+      ],
+      "stylesheets": [
+        "../answer-styles.css?v=20260909-warm",
+        "../site-system.css?v=20260927-anchor-alignment-1",
+        "../site-header.css?v=20260926-toolbar-readability-1",
+        "../answers-support.css?v=20260905",
+        "../artwork-details.css?v=20260909-warm",
+        "../full-image-viewer.css?v=20260905-viewport",
+        "../connected-study.css?v=20260927-anchor-alignment-1",
+        "../hero-details.css?v=20260909-warm",
+        "../artwork-actions.css?v=20260929-picture-source-pills-1",
+        "../resource-cards.css?v=20260927-anchor-alignment-1",
+        "../answer-navigation.css?v=20260927-anchor-alignment-1",
+        "../topic-study-pages.css?v=20260927-anchor-alignment-1",
+        "../topic-art.css?v=20260909-warm",
+        "../topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "../site-search.css?v=20260929-result-hitbox-1",
+        "../topic-heroes.css?v=20260919-topic-heroes-1",
+        "../complete-card-rows.css?v=20260920-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "answers/divorce-and-faith.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "fc-topic-opening"
+        },
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-visual-hero--christ fc-visual-hero--portrait fc-answer-detail-hero fc-topic-unique-hero"
+        }
+      ],
+      "stylesheets": [
+        "../answer-styles.css?v=20260909-warm",
+        "../site-system.css?v=20260927-anchor-alignment-1",
+        "../site-header.css?v=20260926-toolbar-readability-1",
+        "../answers-support.css?v=20260905",
+        "../artwork-details.css?v=20260909-warm",
+        "../full-image-viewer.css?v=20260905-viewport",
+        "../connected-study.css?v=20260927-anchor-alignment-1",
+        "../hero-details.css?v=20260909-warm",
+        "../artwork-actions.css?v=20260929-picture-source-pills-1",
+        "../resource-cards.css?v=20260927-anchor-alignment-1",
+        "../answer-navigation.css?v=20260927-anchor-alignment-1",
+        "../topic-study-pages.css?v=20260927-anchor-alignment-1",
+        "../topic-art.css?v=20260909-warm",
+        "../topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "../site-search.css?v=20260929-result-hitbox-1",
+        "../topic-heroes.css?v=20260919-topic-heroes-1",
+        "../complete-card-rows.css?v=20260920-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "general-conference.html",
+      "candidates": [
+        {
+          "tag": "figure",
+          "id": "conference-listening-art",
+          "class": "gc-intro-visual fc-study-visual"
+        }
+      ],
+      "stylesheets": [
+        "site-header.css?v=20260926-toolbar-readability-1",
+        "site-system.css?v=20260927-anchor-alignment-1",
+        "full-image-viewer.css?v=20260905-viewport",
+        "general-conference-section.css?v=20260927-anchor-alignment-1",
+        "topic-art.css?v=20260909-warm",
+        "artwork-details.css?v=20260909-warm",
+        "topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "site-search.css?v=20260929-result-hitbox-1",
+        "focused-answers.css?v=20260919-1",
+        "complete-card-rows.css?v=20260920-1",
+        "desktop-hero-repairs.css?v=20260929-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "answers/grief-and-faith.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "fc-topic-opening"
+        },
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-visual-hero--christ fc-visual-hero--portrait fc-answer-detail-hero fc-topic-unique-hero"
+        }
+      ],
+      "stylesheets": [
+        "../answer-styles.css?v=20260909-warm",
+        "../site-system.css?v=20260927-anchor-alignment-1",
+        "../site-header.css?v=20260926-toolbar-readability-1",
+        "../connected-study.css?v=20260927-anchor-alignment-1",
+        "../full-image-viewer.css?v=20260905-viewport",
+        "../artwork-details.css?v=20260909-warm",
+        "../hero-details.css?v=20260909-warm",
+        "../artwork-actions.css?v=20260929-picture-source-pills-1",
+        "../resource-cards.css?v=20260927-anchor-alignment-1",
+        "../answer-navigation.css?v=20260927-anchor-alignment-1",
+        "../topic-study-pages.css?v=20260927-anchor-alignment-1",
+        "../topic-art.css?v=20260909-warm",
+        "../topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "../site-search.css?v=20260929-result-hitbox-1",
+        "../topic-heroes.css?v=20260919-topic-heroes-1",
+        "../complete-card-rows.css?v=20260920-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "answers/stand-forever.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "fc-topic-opening"
+        },
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-visual-hero--christ fc-visual-hero--portrait fc-answer-detail-hero fc-topic-unique-hero"
+        }
+      ],
+      "stylesheets": [
+        "../answer-styles.css?v=20260909-warm",
+        "../site-system.css?v=20260927-anchor-alignment-1",
+        "../site-header.css?v=20260926-toolbar-readability-1",
+        "../connected-study.css?v=20260927-anchor-alignment-1",
+        "../full-image-viewer.css?v=20260905-viewport",
+        "../artwork-details.css?v=20260909-warm",
+        "../hero-details.css?v=20260909-warm",
+        "../artwork-actions.css?v=20260929-picture-source-pills-1",
+        "../resource-cards.css?v=20260927-anchor-alignment-1",
+        "../answer-navigation.css?v=20260927-anchor-alignment-1",
+        "../stand-forever-study.css?v=20260909-warm",
+        "../topic-study-pages.css?v=20260927-anchor-alignment-1",
+        "../foundation-study.css?v=20260908-picture-panels",
+        "../topic-art.css?v=20260909-warm",
+        "../topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "../site-search.css?v=20260929-result-hitbox-1",
+        "../topic-heroes.css?v=20260919-topic-heroes-1",
+        "../complete-card-rows.css?v=20260920-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "answers/god-our-heavenly-father.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "fc-topic-opening"
+        },
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-visual-hero--christ fc-visual-hero--portrait fc-answer-detail-hero fc-topic-unique-hero"
+        }
+      ],
+      "stylesheets": [
+        "../answer-styles.css?v=20260909-warm",
+        "../site-system.css?v=20260927-anchor-alignment-1",
+        "../site-header.css?v=20260926-toolbar-readability-1",
+        "../connected-study.css?v=20260927-anchor-alignment-1",
+        "../full-image-viewer.css?v=20260905-viewport",
+        "../artwork-details.css?v=20260909-warm",
+        "../hero-details.css?v=20260909-warm",
+        "../artwork-actions.css?v=20260929-picture-source-pills-1",
+        "../resource-cards.css?v=20260927-anchor-alignment-1",
+        "../answer-navigation.css?v=20260927-anchor-alignment-1",
+        "../topic-study-pages.css?v=20260927-anchor-alignment-1",
+        "../foundation-study.css?v=20260908-enriched",
+        "../topic-art.css?v=20260909-warm",
+        "../topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "../site-search.css?v=20260929-result-hitbox-1",
+        "../topic-heroes.css?v=20260919-topic-heroes-1",
+        "../complete-card-rows.css?v=20260920-1",
+        "../jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "answers/restored-church-of-jesus-christ.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "fc-topic-opening"
+        },
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-visual-hero--christ fc-visual-hero--portrait fc-answer-detail-hero fc-topic-unique-hero"
+        }
+      ],
+      "stylesheets": [
+        "../answer-styles.css?v=20260909-warm",
+        "../site-system.css?v=20260927-anchor-alignment-1",
+        "../site-header.css?v=20260926-toolbar-readability-1",
+        "../connected-study.css?v=20260927-anchor-alignment-1",
+        "../full-image-viewer.css?v=20260905-viewport",
+        "../artwork-details.css?v=20260909-warm",
+        "../hero-details.css?v=20260909-warm",
+        "../artwork-actions.css?v=20260929-picture-source-pills-1",
+        "../resource-cards.css?v=20260927-anchor-alignment-1",
+        "../answer-navigation.css?v=20260927-anchor-alignment-1",
+        "../topic-study-pages.css?v=20260927-anchor-alignment-1",
+        "../foundation-study.css?v=20260908-enriched",
+        "../topic-art.css?v=20260909-warm",
+        "../topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "../site-search.css?v=20260929-result-hitbox-1",
+        "../topic-heroes.css?v=20260919-topic-heroes-1",
+        "../complete-card-rows.css?v=20260920-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "art-gallery.html",
+      "candidates": [],
+      "stylesheets": [
+        "site-header.css?v=20260926-toolbar-readability-1",
+        "site-system.css?v=20260927-anchor-alignment-1",
+        "art-gallery.css?v=20260913-2",
+        "site-search.css?v=20260929-result-hitbox-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "book-of-mormon-evidences.html",
+      "candidates": [
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-visual-hero--bom"
+        }
+      ],
+      "stylesheets": [
+        "site-header.css?v=20260926-toolbar-readability-1",
+        "site-system.css?v=20260927-anchor-alignment-1",
+        "connected-study.css?v=20260927-anchor-alignment-1",
+        "full-image-viewer.css?v=20260905-viewport",
+        "artwork-details.css?v=20260909-warm",
+        "hero-details.css?v=20260909-warm",
+        "artwork-actions.css?v=20260929-picture-source-pills-1",
+        "resource-cards.css?v=20260927-anchor-alignment-1",
+        "topic-study-pages.css?v=20260927-anchor-alignment-1",
+        "topic-art.css?v=20260909-warm",
+        "topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "bom-evidences.css?v=20260927-anchor-alignment-1",
+        "site-search.css?v=20260929-result-hitbox-1",
+        "complete-card-rows.css?v=20260920-1",
+        "desktop-hero-repairs.css?v=20260929-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "joseph-smith-likeness.html",
+      "candidates": [
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-visual-hero--portrait likeness-hero"
+        }
+      ],
+      "stylesheets": [
+        "site-header.css?v=20260926-toolbar-readability-1",
+        "site-system.css?v=20260927-anchor-alignment-1",
+        "connected-study.css?v=20260927-anchor-alignment-1",
+        "artwork-details.css?v=20260909-warm",
+        "full-image-viewer.css?v=20260905-viewport",
+        "hero-details.css?v=20260909-warm",
+        "artwork-actions.css?v=20260929-picture-source-pills-1",
+        "resource-cards.css?v=20260927-anchor-alignment-1",
+        "topic-art.css?v=20260909-warm",
+        "topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "joseph-smith-likeness.css?v=20260927-anchor-alignment-1",
+        "site-search.css?v=20260929-result-hitbox-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "search.html",
+      "candidates": [],
+      "stylesheets": [
+        "site-header.css?v=20260926-toolbar-readability-1",
+        "site-system.css?v=20260927-anchor-alignment-1",
+        "site-search.css?v=20260929-result-hitbox-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "atonement.html",
+      "candidates": [
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero"
+        }
+      ],
+      "stylesheets": [
+        "site-header.css?v=20260926-toolbar-readability-1",
+        "site-system.css?v=20260927-anchor-alignment-1",
+        "connected-study.css?v=20260927-anchor-alignment-1",
+        "artwork-details.css?v=20260909-warm",
+        "full-image-viewer.css?v=20260905-viewport",
+        "hero-details.css?v=20260909-warm",
+        "artwork-actions.css?v=20260929-picture-source-pills-1",
+        "resource-cards.css?v=20260927-anchor-alignment-1",
+        "topic-art.css?v=20260909-warm",
+        "topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "atonement.css?v=20260927-anchor-alignment-1",
+        "site-search.css?v=20260929-result-hitbox-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "birth-of-christ.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "fc-topic-opening"
+        },
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-birth-hero"
+        }
+      ],
+      "stylesheets": [
+        "answer-styles.css?v=20260909-warm",
+        "site-system.css?v=20260927-anchor-alignment-1",
+        "site-header.css?v=20260926-toolbar-readability-1",
+        "connected-study.css?v=20260927-anchor-alignment-1",
+        "full-image-viewer.css?v=20260905-viewport",
+        "artwork-details.css?v=20260909-warm",
+        "hero-details.css?v=20260909-warm",
+        "artwork-actions.css?v=20260929-picture-source-pills-1",
+        "resource-cards.css?v=20260927-anchor-alignment-1",
+        "answer-navigation.css?v=20260927-anchor-alignment-1",
+        "topic-study-pages.css?v=20260927-anchor-alignment-1",
+        "topic-art.css?v=20260909-warm",
+        "topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "site-search.css?v=20260929-result-hitbox-1",
+        "complete-card-rows.css?v=20260920-1",
+        "jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "answers/aaronic-priesthood-restoration.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "fc-topic-opening"
+        },
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-visual-hero--christ fc-visual-hero--portrait fc-answer-detail-hero fc-topic-unique-hero"
+        }
+      ],
+      "stylesheets": [
+        "../answer-styles.css?v=20260909-warm",
+        "../site-system.css?v=20260927-anchor-alignment-1",
+        "../site-header.css?v=20260926-toolbar-readability-1",
+        "../connected-study.css?v=20260927-anchor-alignment-1",
+        "../full-image-viewer.css?v=20260905-viewport",
+        "../artwork-details.css?v=20260909-warm",
+        "../hero-details.css?v=20260909-warm",
+        "../artwork-actions.css?v=20260929-picture-source-pills-1",
+        "../resource-cards.css?v=20260927-anchor-alignment-1",
+        "../answer-navigation.css?v=20260927-anchor-alignment-1",
+        "../topic-study-pages.css?v=20260927-anchor-alignment-1",
+        "../topic-art.css?v=20260909-warm",
+        "../topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "../site-search.css?v=20260929-result-hitbox-1",
+        "../topic-heroes.css?v=20260919-topic-heroes-1",
+        "../focused-answers.css?v=20260919-1",
+        "../complete-card-rows.css?v=20260920-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "answers/melchizedek-priesthood-restoration.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "fc-topic-opening"
+        },
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-visual-hero--christ fc-visual-hero--portrait fc-answer-detail-hero fc-topic-unique-hero"
+        }
+      ],
+      "stylesheets": [
+        "../answer-styles.css?v=20260909-warm",
+        "../site-system.css?v=20260927-anchor-alignment-1",
+        "../site-header.css?v=20260926-toolbar-readability-1",
+        "../connected-study.css?v=20260927-anchor-alignment-1",
+        "../full-image-viewer.css?v=20260905-viewport",
+        "../artwork-details.css?v=20260909-warm",
+        "../hero-details.css?v=20260909-warm",
+        "../artwork-actions.css?v=20260929-picture-source-pills-1",
+        "../resource-cards.css?v=20260927-anchor-alignment-1",
+        "../answer-navigation.css?v=20260927-anchor-alignment-1",
+        "../topic-study-pages.css?v=20260927-anchor-alignment-1",
+        "../topic-art.css?v=20260909-warm",
+        "../topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "../site-search.css?v=20260929-result-hitbox-1",
+        "../topic-heroes.css?v=20260919-topic-heroes-1",
+        "../focused-answers.css?v=20260919-1",
+        "../complete-card-rows.css?v=20260920-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "answers/settle-this-in-your-hearts.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "fc-topic-opening"
+        },
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-visual-hero--christ fc-visual-hero--portrait fc-answer-detail-hero fc-topic-unique-hero"
+        }
+      ],
+      "stylesheets": [
+        "../answer-styles.css?v=20260909-warm",
+        "../site-system.css?v=20260927-anchor-alignment-1",
+        "../site-header.css?v=20260926-toolbar-readability-1",
+        "../connected-study.css?v=20260927-anchor-alignment-1",
+        "../full-image-viewer.css?v=20260905-viewport",
+        "../artwork-details.css?v=20260909-warm",
+        "../hero-details.css?v=20260909-warm",
+        "../artwork-actions.css?v=20260929-picture-source-pills-1",
+        "../resource-cards.css?v=20260927-anchor-alignment-1",
+        "../answer-navigation.css?v=20260927-anchor-alignment-1",
+        "../stand-forever-study.css?v=20260909-warm",
+        "../topic-study-pages.css?v=20260927-anchor-alignment-1",
+        "../foundation-study.css?v=20260908-picture-panels",
+        "../topic-art.css?v=20260909-warm",
+        "../topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "../site-search.css?v=20260929-result-hitbox-1",
+        "../topic-heroes.css?v=20260919-topic-heroes-1",
+        "../settle-heart-study.css?v=20260927-anchor-alignment-1",
+        "../complete-card-rows.css?v=20260920-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "jesus-christ/before-bethlehem.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/miracles-and-compassion.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/mortal-ministry.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/barren-fig.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/birds-lilies.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/blind-guides.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/bridegroom.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/budding-fig.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/children-marketplace.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/closed-door.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/divided-house.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/doorkeeper.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/faithful-servant.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/friend-midnight.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/good-samaritan.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/good-shepherd.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/grain-wheat.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/great-supper.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/growing-seed.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/hearing.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/hen-chicks.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/hidden-treasure.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/householder.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/king-war.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/kingdom.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/laborers-vineyard.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/lamp.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/leaven.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/lost-coin.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/lost-sheep.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/mercy.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/minas.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/mote-beam.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/mustard-seed.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/neighbor.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/net.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/new-patch.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/new-wineskins.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/parent-gifts.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/pearl.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/persistent-widow.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/pharisee-publican.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/prodigal-son.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/returning-spirit.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/rich-fool.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/rich-man-lazarus.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/royal-wedding.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/salt.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/servant-duty.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/settle-adversary.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/sheep-goats.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/sheep-sabbath.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/sower.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/stewardship.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/strong-man.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/talents.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/ten-virgins.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/thief-night.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/tower-builder.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/tree-fruit.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/two-debtors.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/two-sons.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/unjust-steward.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/unmerciful-servant.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/vine-branches.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/watchful-servants.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/watchfulness.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/wedding-places.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/wheat-tares.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/wicked-tenants.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/wise-foolish-builders.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/parables/woman-childbirth.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/redeemer-and-risen-lord.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/restoration-and-today.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/risen-savior-in-the-book-of-mormon.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "jesus-christ/teachings-and-parables.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        }
+      ],
+      "stylesheets": [
+        "/answer-styles.css?v=20260909-warm",
+        "/site-system.css?v=20260927-anchor-alignment-1",
+        "/site-header.css?v=20260926-toolbar-readability-1",
+        "/connected-study.css?v=20260927-anchor-alignment-1",
+        "/full-image-viewer.css?v=20260905-viewport",
+        "/artwork-details.css?v=20260909-warm",
+        "/artwork-actions.css?v=20260929-picture-source-pills-1",
+        "/topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "/resource-cards.css?v=20260927-anchor-alignment-1",
+        "/site-search.css?v=20260929-result-hitbox-1",
+        "/jesus-journey.css?v=20260927-anchor-alignment-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "answers/abrahamic-covenant.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "jj-opening"
+        },
+        {
+          "tag": "figure",
+          "id": "picture-ac-jacob-ladder",
+          "class": "jj-art fc-study-visual fc-covenant-hero"
+        }
+      ],
+      "stylesheets": [
+        "../answer-styles.css?v=20260909-warm",
+        "../site-system.css?v=20260927-anchor-alignment-1",
+        "../site-header.css?v=20260926-toolbar-readability-1",
+        "../connected-study.css?v=20260927-anchor-alignment-1",
+        "../full-image-viewer.css?v=20260905-viewport",
+        "../artwork-details.css?v=20260909-warm",
+        "../artwork-actions.css?v=20260929-picture-source-pills-1",
+        "../topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "../resource-cards.css?v=20260927-anchor-alignment-1",
+        "../site-search.css?v=20260929-result-hitbox-1",
+        "../jesus-journey.css?v=20260927-anchor-alignment-1",
+        "../desktop-hero-repairs.css?v=20260929-1"
+      ],
+      "has_standard_visual_hero": false
+    },
+    {
+      "page": "answers/holy-ghost.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "fc-topic-opening"
+        },
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-visual-hero--christ fc-visual-hero--portrait fc-answer-detail-hero fc-topic-unique-hero"
+        }
+      ],
+      "stylesheets": [
+        "../answer-styles.css?v=20260909-warm",
+        "../site-system.css?v=20260927-anchor-alignment-1",
+        "../site-header.css?v=20260926-toolbar-readability-1",
+        "../connected-study.css?v=20260927-anchor-alignment-1",
+        "../full-image-viewer.css?v=20260905-viewport",
+        "../artwork-details.css?v=20260909-warm",
+        "../artwork-actions.css?v=20260929-picture-source-pills-1",
+        "../topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "../resource-cards.css?v=20260927-anchor-alignment-1",
+        "../complete-card-rows.css?v=20260920-1",
+        "../site-search.css?v=20260929-result-hitbox-1",
+        "../jesus-journey.css?v=20260927-anchor-alignment-1",
+        "../hero-details.css?v=20260909-warm",
+        "../topic-heroes.css?v=20260919-topic-heroes-1",
+        "../answer-navigation.css?v=20260927-anchor-alignment-1",
+        "../topic-study-pages.css?v=20260927-anchor-alignment-1",
+        "../holy-ghost-video.css?v=20260927-thumbnail-2"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "answers/plan-of-salvation.html",
+      "candidates": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "fc-topic-opening"
+        },
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero fc-visual-hero--christ fc-visual-hero--portrait fc-answer-detail-hero fc-topic-unique-hero"
+        }
+      ],
+      "stylesheets": [
+        "../answer-styles.css?v=20260909-warm",
+        "../site-system.css?v=20260927-anchor-alignment-1",
+        "../site-header.css?v=20260926-toolbar-readability-1",
+        "../connected-study.css?v=20260927-anchor-alignment-1",
+        "../full-image-viewer.css?v=20260905-viewport",
+        "../artwork-details.css?v=20260909-warm",
+        "../artwork-actions.css?v=20260929-picture-source-pills-1",
+        "../topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "../resource-cards.css?v=20260927-anchor-alignment-1",
+        "../complete-card-rows.css?v=20260920-1",
+        "../site-search.css?v=20260929-result-hitbox-1",
+        "../jesus-journey.css?v=20260927-anchor-alignment-1",
+        "../hero-details.css?v=20260909-warm",
+        "../topic-heroes.css?v=20260919-topic-heroes-1",
+        "../answer-navigation.css?v=20260927-anchor-alignment-1",
+        "../topic-study-pages.css?v=20260927-anchor-alignment-1",
+        "../plan-of-salvation.css?v=20260927-study-1",
+        "../desktop-hero-repairs.css?v=20260929-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "history/john-tanner.html",
+      "candidates": [
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero"
+        }
+      ],
+      "stylesheets": [
+        "../site-header.css?v=20260926-toolbar-readability-1",
+        "../site-system.css?v=20260927-anchor-alignment-1",
+        "../artwork-details.css?v=20260909-warm",
+        "../full-image-viewer.css?v=20260905-viewport",
+        "../artwork-actions.css?v=20260929-picture-source-pills-1",
+        "../connected-study.css?v=20260927-anchor-alignment-1",
+        "../hero-details.css?v=20260909-warm",
+        "../resource-cards.css?v=20260927-anchor-alignment-1",
+        "../topic-art.css?v=20260909-warm",
+        "../topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "../priesthood-scenes.css?v=20260914-1",
+        "../site-search.css?v=20260929-result-hitbox-1",
+        "../complete-card-rows.css?v=20260920-1",
+        "../history-stories.css?v=20260929-stories-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "history/eleazer-miller.html",
+      "candidates": [
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero"
+        }
+      ],
+      "stylesheets": [
+        "../site-header.css?v=20260926-toolbar-readability-1",
+        "../site-system.css?v=20260927-anchor-alignment-1",
+        "../artwork-details.css?v=20260909-warm",
+        "../full-image-viewer.css?v=20260905-viewport",
+        "../artwork-actions.css?v=20260929-picture-source-pills-1",
+        "../connected-study.css?v=20260927-anchor-alignment-1",
+        "../hero-details.css?v=20260909-warm",
+        "../resource-cards.css?v=20260927-anchor-alignment-1",
+        "../topic-art.css?v=20260909-warm",
+        "../topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "../priesthood-scenes.css?v=20260914-1",
+        "../site-search.css?v=20260929-result-hitbox-1",
+        "../complete-card-rows.css?v=20260920-1",
+        "../history-stories.css?v=20260929-stories-1"
+      ],
+      "has_standard_visual_hero": true
+    },
+    {
+      "page": "history/john-rowe-moyle.html",
+      "candidates": [
+        {
+          "tag": "a",
+          "id": null,
+          "class": "fc-visual-hero"
+        }
+      ],
+      "stylesheets": [
+        "../site-header.css?v=20260926-toolbar-readability-1",
+        "../site-system.css?v=20260927-anchor-alignment-1",
+        "../artwork-details.css?v=20260909-warm",
+        "../full-image-viewer.css?v=20260905-viewport",
+        "../artwork-actions.css?v=20260929-picture-source-pills-1",
+        "../connected-study.css?v=20260927-anchor-alignment-1",
+        "../hero-details.css?v=20260909-warm",
+        "../resource-cards.css?v=20260927-anchor-alignment-1",
+        "../topic-art.css?v=20260909-warm",
+        "../topic-artwork-details.css?v=20260927-anchor-alignment-1",
+        "../priesthood-scenes.css?v=20260914-1",
+        "../site-search.css?v=20260929-result-hitbox-1",
+        "../complete-card-rows.css?v=20260920-1",
+        "../history-stories.css?v=20260929-stories-1"
+      ],
+      "has_standard_visual_hero": true
+    }
+  ],
+  "abrahamic_cause": "desktop-hero-repairs.js places Jacob figure at opening only for min-width701; phone moves it after chapter marker, leaving opening slot empty.",
+  "home_source": "index uses fc-visual-hero fc-home-hero; shared desktop aspect2048/684 with mobile responsive overrides requires actualviewport comparison",
+  "counts": {
+    "canonical": 124,
+    "standard_visual_hero": 43,
+    "no_standard_visual_hero": 81
+  }
+}

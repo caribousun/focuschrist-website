@@ -1,0 +1,33 @@
+{
+  "state": "UNCOMMITTED_CANDIDATE_NOT_RELEASED",
+  "base_commit": "608b240f71c9400a845145d0f79578e348884175",
+  "scope": {
+    "history": "23 distinct source-reviewed scenes: Tanner7, Miller9, Moyle7; pictured owning-story entrances; four Miller expression corrections;165word aggregate Tanner source/caption allocation; attributed museum statement.",
+    "heroes": "Owner-directed Home-height desktop consistency and separately recorded responsive variants; source/identity review separate from frame/browser acceptance.",
+    "navigation": "102 redundant pathway rows removed across Answers, Birth, Art studies and Jesus journey; existing themed parent-return destinations preserved; one accessible same-page Back to top pill in shared footer; direct History picture anchors clear sticky header."
+  },
+  "evidence": {
+    "story_sources": "docs/history-stories/expansion-source-review-20260929.json",
+    "new_art": "docs/history-stories/expansion-fermi-review-20260929.json",
+    "responsive_art": "docs/hero-responsive-variant-review-20260929.json",
+    "footer": "docs/footer-navigation-review-20260929.json",
+    "hero_geometry": "docs/hero-home-height-audit-20260929.json",
+    "prior_broad_local": "work/history-stories/qa-expansion-nonbrowser/results.json",
+    "final_local_suite": "work/history-stories/qa-final-history-hero-footer/results.json",
+    "final_affected_rerun": "work/history-stories/qa-final-history-hero-footer/final-affected-rerun.json"
+  },
+  "verification_boundaries": [
+    "184 required local nonbrowser commands completed:183 initially passed; sole static-content receipt failure was resolved after independent acceptance of all102 exact breadcrumb removals. Affected final checks passed after the primary Tanner journal source addition.",
+    "125 footer runtime contexts passed; hosted18footer viewport checks remain candidate-CI evidence. Root independently accepted native footer interaction and final hero compositions.",
+    "Candidate remains uncommitted and unpublished here. Root owns commit/CI/deployment and Newton owns independent public-byte proof. No protected foundation or scheduler change."
+  ],
+  "tanner_primary_source": "Carter typescript page19, official catalog asset994fb2fe-d8b1-4156-a452-3a8fecacf538/1/42: Simeon absent at healing, praying separately. Newton primary-source and exact Tanner-only URL adapter review accepted; no unverified wife/second missionary attendance.",
+  "candidate_ci_repair": {
+    "failed_run": "36672231107",
+    "candidate_prefix": "8066",
+    "failure": "illustrated_study_navigation_qa.py retained bare controller_version history-research-1 while all public script URLs used tanner-journal-1. Earlier replacement scanned full script query strings and missed this bare version constant.",
+    "change": "One exact expected-version constant updated. No assertion removed or loosened.",
+    "verification": "All seven affected guards/builders pass in their appropriate strict publication mode; executable tools/workflows scan contains zero stale history-research-1 literals.114 public HTML script consumers plus6 builders/guards accounted for earlier120-file propagation.",
+    "local_results": "work/history-stories/qa-pr409-cache-repair/results.json"
+  }
+}

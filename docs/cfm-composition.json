@@ -2,7 +2,7 @@
   "baseline_commit": "066d5a154bc563d458e80662442b5c5a4f2b0e1d",
   "scope": "Owner explicitly requested whole-CFM visual redesign; no new art or reading/content expansion.",
   "hero_css_sha256": "b044a696446589190e03aed4951d14ee2dad180c3ec1d7c7d50ae5b21103e69e",
-  "hero_html": "<header class=\"cfm-hero\"><div class=\"cfm-hero__copy\"><p class=\"fc-eyebrow\">For Home and Church \u00b7 Old Testament 2026</p><h1>Come, Follow Me</h1><p>Walk through the Old Testament with Jesus Christ at the center. Begin with this week, choose a simple rhythm, and let scripture become part of daily discipleship.</p><div class=\"cfm-actions\"><a class=\"cfm-btn cfm-btn--gold\" href=\"#study-start\">Start studying <span aria-hidden=\"true\">\u2193</span></a><a class=\"cfm-btn\" href=\"#year-schedule\">Explore the year</a></div></div></header>",
+  "hero_html": "<header class=\"cfm-hero\"><a aria-haspopup=\"dialog\" aria-label=\"View the complete Come, Follow Me artwork\" class=\"cfm-desktop-picture\" data-full-image-viewer=\"\" href=\"assets/heroes/come-follow-me-2026-desktop.webp\"><img alt=\"Jesus Christ teaches a family gathered with an open book in an illustrative scene.\" decoding=\"async\" fetchpriority=\"high\" height=\"725\" src=\"assets/heroes/come-follow-me-2026-desktop.webp\" width=\"2170\"/></a><div class=\"cfm-hero__copy\"><p class=\"fc-eyebrow\">For Home and Church \u00b7 Old Testament 2026</p><h1>Come, Follow Me</h1><p>Walk through the Old Testament with Jesus Christ at the center. Begin with this week, choose a simple rhythm, and let scripture become part of daily discipleship.</p><div class=\"cfm-actions\"><a class=\"cfm-btn cfm-btn--gold\" href=\"#study-start\">Start studying <span aria-hidden=\"true\">\u2193</span></a><a class=\"cfm-btn\" href=\"#year-schedule\">Explore the year</a></div></div></header>",
   "nav_html": "<nav aria-label=\"Primary navigation\" class=\"nav\" data-focuschrist-header=\"standard\"><a class=\"nav-logo\" href=\"index.html\">focusChrist</a><div class=\"nav-links\"><span class=\"fc-nav-side fc-nav-side--before\"><a href=\"index.html\">Home</a><a href=\"ask.html\">Ask (Chat)</a><a href=\"answers.html\">Answers Library</a><a href=\"art.html\">Art</a><a data-focuschrist-primary-missionary=\"true\" href=\"missionary.html\">Mission</a><a aria-current=\"page\" class=\"active\" data-focuschrist-come-follow-me=\"true\" href=\"come-follow-me.html\">COME, FOLLOW ME</a></span><a aria-label=\"Christ\u2019s Atonement\" class=\"fc-nav-atonement\" href=\"atonement.html\">Christ\u2019s Atonement</a><span class=\"fc-nav-side fc-nav-side--after\"><a data-focuschrist-primary-history=\"true\" href=\"church-history.html\">History</a><a href=\"pioneers.html\">Pioneers</a><a data-focuschrist-primary-watch=\"true\" href=\"watch.html\">Watch</a><a href=\"about.html\">About</a></span></div><div class=\"hamburger-wrap\"><a aria-label=\"Search focusChrist\" class=\"fc-search-trigger\" data-site-search-trigger=\"\" href=\"search.html\"><span aria-hidden=\"true\" class=\"fc-search-icon\"></span><span class=\"fc-search-trigger-label\">Search</span></a><span aria-controls=\"hamburgerMenu\" aria-expanded=\"false\" aria-label=\"Toggle navigation menu\" class=\"hamburger\" onclick=\"toggleMenu()\" role=\"button\" tabindex=\"0\"></span><div class=\"hamburger-menu\" id=\"hamburgerMenu\"><a href=\"index.html\">Home</a><a href=\"ask.html\">Ask (Chat)</a><a href=\"answers.html\">Answers Library</a><a href=\"art.html\">Art</a><a aria-current=\"page\" class=\"active\" data-focuschrist-come-follow-me=\"true\" href=\"come-follow-me.html\">COME, FOLLOW ME</a><a data-focuschrist-primary-missionary=\"true\" href=\"missionary.html\">MISSIONARY WORK</a><a data-focuschrist-primary-history=\"true\" href=\"church-history.html\">CHURCH HISTORY</a><a href=\"pioneers.html\">Pioneers</a><a data-focuschrist-primary-watch=\"true\" href=\"watch.html\">WATCH &amp; STUDY</a><a href=\"about.html\">About</a><hr/><a href=\"https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026?lang=eng\" rel=\"noopener noreferrer\" target=\"_blank\">Official 2026 Manual</a><a href=\"https://rsc.byu.edu/my-gospel-study/come-follow-me\" rel=\"noopener noreferrer\" target=\"_blank\">BYU RSC Study Helps</a></div></div></nav>",
   "images": [
     "{\"alt\": \"\", \"class\": [\"cfm-tool__image\"], \"height\": \"400\", \"loading\": \"lazy\", \"src\": \"assets/page-art/uniqueness-repairs/cfm-family-resources-960.webp\", \"width\": \"640\"}",
@@ -23,7 +23,8 @@
     "{\"alt\": \"A teenager tightens a gate hinge while an older neighbor steadies the gate and watches the work.\", \"decoding\": \"async\", \"height\": \"1024\", \"loading\": \"lazy\", \"sizes\": \"(max-width:700px) calc(100vw - 36px), 600px\", \"src\": \"assets/page-art/sitewide-community/cfm-gate-repair-service-20260919-800.webp\", \"srcset\": \"assets/page-art/sitewide-community/cfm-gate-repair-service-20260919-800.webp 800w, assets/page-art/sitewide-community/cfm-gate-repair-service-20260919-full.webp 1536w\", \"style\": \"--study-image-ratio:1536/1024\", \"width\": \"1536\"}",
     "{\"alt\": \"An open scroll and lamp beside an ancient path leading through olive hills at dawn\", \"height\": \"1024\", \"loading\": \"lazy\", \"src\": \"assets/page-art/come-follow-me/old-testament-journey-2026.webp\", \"width\": \"1536\"}",
     "{\"alt\": \"Come, Follow Me: Vision official video preview\", \"decoding\": \"async\", \"height\": \"436\", \"loading\": \"lazy\", \"src\": \"assets/resources/cfm-study-vision.jpg\", \"width\": \"768\"}",
-    "{\"alt\": \"Hands studying an open Bible beside a notebook in early morning light\", \"height\": \"1024\", \"loading\": \"lazy\", \"src\": \"assets/page-art/come-follow-me/personal-study-2026.webp\", \"width\": \"1536\"}"
+    "{\"alt\": \"Hands studying an open Bible beside a notebook in early morning light\", \"height\": \"1024\", \"loading\": \"lazy\", \"src\": \"assets/page-art/come-follow-me/personal-study-2026.webp\", \"width\": \"1536\"}",
+    "{\"alt\": \"Jesus Christ teaches a family gathered with an open book in an illustrative scene.\", \"decoding\": \"async\", \"fetchpriority\": \"high\", \"height\": \"725\", \"src\": \"assets/heroes/come-follow-me-2026-desktop.webp\", \"width\": \"2170\"}"
   ],
   "hrefs": [
     "#explore-focus",
@@ -110,12 +111,13 @@
     "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026?lang=eng",
     "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng",
     "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/003-improve-learning?lang=eng",
-    "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/004-old-testament-overview?lang=eng"
+    "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/004-old-testament-overview?lang=eng",
+    "assets/heroes/come-follow-me-2026-desktop.webp"
   ],
   "removed_duplicate_href": "answers/look-unto-me-doctrine-and-covenants-6-36.html",
   "script_sha256": "1279ebd866b3461c9ef0ca95fb2721f85c52ccaaf9f9e74e24b3e83baf4abf1a",
   "css_sha256": {
-    "come-follow-me.css": "4ac596b6c1d0c165636f0e965794a9939a34c8333501b5bad64fad103b1bd7be",
+    "come-follow-me.css": "c242f4c3d2406bffb58c7aed59466913dba8d768c6f19ba62d84b5be20851157",
     "cfm-study-controls.css": "35c8939f4fc950d241ecb6a62ac58c1be6e02a59f64bee9b19fd2704011b58fb"
   },
   "artwork_note": "Moved existing Signature preview once; original source and all19 image attributes remain exact. Semantic prayer figure changes wrapper only.",
@@ -444,5 +446,10 @@
     "picture_controls": "Four independent picture-details controls plus unchanged official-resource anchors, with exact added source-image links/IDs.",
     "panel_copy": "Four hidden explicit panel records, each with distinct image-specific title/prose and clean official-source label; card visual copy and official routes retained.",
     "illustrated_link_label": "Owner requested destination-specific label; existing target and surrounding explanation preserved."
+  },
+  "hero_height_review_20260929": {
+    "authority": "Owner requested all desktop image heroes match Home; existing approved CFM image retained; phone rules unchanged",
+    "independent_review": "Newton actual1440/768/702/390 pass; exact701 and200percent hosted pending",
+    "change": "Desktop-only linked picture before copy; original mobile background/copy preserved"
   }
 }

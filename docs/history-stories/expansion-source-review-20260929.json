@@ -1,0 +1,35 @@
+{
+  "status": "All23 source-reviewed units built from accepted artwork. Final rendered and release QA pending.",
+  "review": {
+    "factual": "Accepted with supplied paragraph replacements and existing caption boundaries; no invented events",
+    "mandatory_integration": "Move, do not duplicate, existing chronology into added units before final budget calculation. Preserve May1831 database attribution against conflicting four-month-convert tradition. Moyle voyage ownjournal and existing railparagraph are same underlying source despite distinctURLs. Remove oldrailparagraph fromhandcartoverview whennewvoyageunit inserted.",
+    "aggregate_budget_plan": {
+      "Tanner_CHD": "Newfamilyunit approximately100words + retained baptismdate/missionappointment/companion chronology approximately60; remove old1846–1850closing. <=200",
+      "Tanner_JSP": "Existing occupational/ordination/1838–1840facts approximately150; no added duplicate CHD-derived family biography needed",
+      "Tanner_Pettegrew": "Newmissionunit104words, <=200; letterdatedDec21,1844, not precedingSamuelShawChicagoDec13letter",
+      "Miller_CHD": "Newconversionunit~100, retained1832age line/1848couple~30, newdeathclosing~25; remove oldbirth/conversion/Canada/deathparagraphs. <=200",
+      "Miller_Strong_letter": "Newgroveunit~100, ownMarch19,1833letter quotedbyRSC; combined source<=200",
+      "Miller_ZionsCamp": "Newunit~100 fromprimaryhistoryaddendum, independent source",
+      "Miller_ReliefMinutes": "~55derivedwords, newprimaryrecord",
+      "Moyle_ownjournal": "Newvoyageunit~105; remove duplicated oldrail/camp paragraph. Combined<=200",
+      "Moyle_Newsroom_family": "Newcarvingparagraph~55; oldinscriptioncarvingline remove/move, <=200",
+      "Moyle_Newsroom_2025": "Newrestoration/location~35 independentprimarymodernreport; nooriginalcarvingdate inferred"
+    },
+    "source_note": "RSC footnote67 cites ElielStrong andEleazerMiller toBrethreninZion,RutlandPA,March19,1833,EveningandMorningStarMay1833p94. Exact eventdate ofgrove meetings not established beyond1832ministry context."
+  },
+  "deduplication": "Existing mission, conversion, Canada, rail/camp, inscription and death passages moved or shortened; each new unit retains <=2 paragraphs.",
+  "chronology": "Owner accepted Moyle handcart overview followed by explicitly identified Atlantic flashback, preserving opening hero once.",
+  "original_counts": {
+    "john-tanner": 7,
+    "eleazer-miller": 9,
+    "john-rowe-moyle": 7
+  },
+  "modern_inscription_photo": "Link-only pending specific reuse verification; not a new original.",
+  "independent_prose_review": "Newton accepted final23-unit chronology,7/9/7 structure, shared-source aggregate budgets and explicit reconstruction boundaries.",
+  "final_source_corrections": {
+    "Arrington": "Three specified narrative allocations plus all three COMPLETE associated captions total165words; repeated-source editions share one allowance. Automated <=200word check added. All historical incidents retained; D&C109paragraph unaffected.",
+    "Museum": "Moyle wooden-leg display statement explicitly attributed to Ensign Peak Foundation, replacing entire former secondparagraph and avoiding implied independent museum authentication.",
+    "Inscription": "Caption calls upperpanel reconstruction, no established exactcarvingdate/prostheticside, not exactfacsimile.",
+    "PictureAnchors": "Scoped figure margin76pxdefault grows withtextsize; rootactualdirectinscriptionanchorPASS plus3sources/FullSize/Continue."
+  }
+}

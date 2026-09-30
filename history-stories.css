@@ -22,3 +22,6 @@
     .fc-life-story .fc-life-reading { padding: 24px 18px; }
     .fc-life-story .fc-life-reflections { grid-template-columns: 1fr; }
 }
+
+/* Direct gallery/story picture links clear the sticky navigation at enlarged text sizes. */
+.fc-life-story main figure[id^="picture-"] { scroll-margin-top: calc(max(52px, 3.25rem) + 24px); }

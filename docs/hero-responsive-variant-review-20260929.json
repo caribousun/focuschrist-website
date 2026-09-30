@@ -1,0 +1,91 @@
+[
+  {
+    "key": "be-still",
+    "asset": "assets/heroes/be-still-responsive-desktop-20260929.webp",
+    "source": "art/Be-Still.png",
+    "generated_original": "exec-2cb3cd82-c566-400b-9027-4b073211f4b8.png",
+    "generated_sha256": "e2b1f29f9695964e9253af1f10c47b498101eade18263d6558d0b7bb9e2298e6",
+    "asset_sha256": "a2761fe8cb49439b53eb100efd14ce60e0e5ccd53a8c15f7d773cde614530fc2",
+    "size": [
+      2172,
+      724
+    ],
+    "classification": "visually reviewed responsive variant; not decoded-pixel identical",
+    "reviewer": "Fermi",
+    "review": "Actual original and generated full images compared. Established face, age, expression, gaze, hands and action remain visually continuous; surrounding composition is expanded. Full study original remains unchanged."
+  },
+  {
+    "key": "tanner",
+    "asset": "assets/heroes/tanner-responsive-desktop-20260929.webp",
+    "source": "assets/page-art/history-stories/tanner-healing-witness-full.webp",
+    "generated_original": "exec-b3080160-1337-4c0d-8ae9-9025512b0e94.png",
+    "generated_sha256": "ad3309c70d4992785a4d064b94d52f059d297773fa629f842776b097d7d40d12",
+    "asset_sha256": "7fd94fba9ddb8af93392350d9bec75637f2a21cc361d9a84bd22db6bd7d91376",
+    "size": [
+      2172,
+      724
+    ],
+    "classification": "visually reviewed responsive variant; not decoded-pixel identical",
+    "reviewer": "Fermi",
+    "review": "Actual original and generated full images compared. Established face, age, expression, gaze, hands and action remain visually continuous; surrounding composition is expanded. Full study original remains unchanged."
+  },
+  {
+    "key": "birth",
+    "asset": "assets/heroes/birth-responsive-20260929.webp",
+    "source": "assets/page-art/birth-of-christ/12-nativity-hero-full.webp",
+    "generated_original": "exec-946dd6fc-853e-4f6b-9b9c-d9efec2e203b.png",
+    "generated_sha256": "d5c654fc545d06462105fafd68c04c9a3b09a66a6bbaf9b1390e5ab7cbe908af",
+    "asset_sha256": "6de15bea804e32e31842f665726e96bedc259d6f83d0f0e4a4f86f4a736adf64",
+    "size": [
+      2172,
+      724
+    ],
+    "classification": "visually reviewed responsive variant; not decoded-pixel identical",
+    "reviewer": "Fermi and root",
+    "review": "Actual full images compared: established faces, ages, gaze, hands and action remain visually continuous. Background composition extends naturally. Original study source retained."
+  },
+  {
+    "key": "covenant-phone",
+    "asset": "assets/heroes/covenant-phone-responsive-20260929.webp",
+    "source": "assets/page-art/abrahamic-covenant/ac-jacob-ladder-full.webp",
+    "generated_original": "exec-331f5cb3-ad6b-4eaf-9219-2f595f17e219.png",
+    "generated_sha256": "cb86130ef6d95a2c2c5b02c49fff1f386e1ce31524c8b26e2c75e1bf84e2a8c6",
+    "asset_sha256": "d9736f3309aa7dd9a71d6e47557349615705aff234276f9f58ec9f7603dcb3a1",
+    "size": [
+      1161,
+      1355
+    ],
+    "classification": "visually reviewed responsive variant; not decoded-pixel identical",
+    "reviewer": "Fermi and root",
+    "review": "Actual full images compared: established faces, ages, gaze, hands and action remain visually continuous. Background composition extends naturally. Original study source retained."
+  },
+  {
+    "key": "children-phone",
+    "asset": "assets/heroes/children-phone-responsive-20260929.webp",
+    "source": "art/Suffer-the-Little-Children-approved-20260929.webp",
+    "generated_original": "exec-29deee7a-5bfc-442c-9e0a-e9d2d54cf37a.png",
+    "generated_sha256": "7c98703628d59d53f4928279bc94e75ab05b137a506185300f299a062c833d7e",
+    "asset_sha256": "67b8b0f9aae963e61dca43158e23319210a6368c4c2ef50d8e1223615fad9697",
+    "size": [
+      978,
+      1608
+    ],
+    "classification": "visually reviewed responsive variant; not decoded-pixel identical",
+    "reviewer": "Fermi and root",
+    "review": "Actual full images compared: established faces, ages, gaze, hands and action remain visually continuous. Background composition extends naturally. Original study source retained."
+  },
+  {
+    "key": "children-desktop",
+    "asset": "assets/heroes/children-responsive-desktop-20260929.webp",
+    "source": "art/Suffer-the-Little-Children-approved-20260929.webp",
+    "generated_original": "exec-b11fe1bc-b1bb-44ee-8a10-eba039bd8283.png",
+    "asset_sha256": "17b68fc6b941ec50949fd3570dbc5ba377cc713881822d6e79a29b0414696512",
+    "size": [
+      2171,
+      724
+    ],
+    "classification": "visually reviewed responsive variant; not decoded-pixel identical",
+    "reviewer": "Fermi and root",
+    "review": "Actual approved full and wide images compared. Young Christ face and welcoming hand, all six children, flowers, clothing and feet preserved visually. Natural olive grove surrounds. Existing artwork replacement, not a new original count."
+  }
+]

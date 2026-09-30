@@ -523,6 +523,28 @@
       ]
     },
     {
+      "title": "A family journey to the valley",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/history-stories/tanner-family-crossing-1848-960.webp",
+      "fullImage": "/assets/page-art/history-stories/tanner-family-crossing-1848-full.webp",
+      "alt": "John Tanner tightens a rope around supplies on a covered wagon while other travelers stand nearby.",
+      "id": "art-fa97df06171d",
+      "occurrences": [
+        {
+          "id": "source-8d092f6f8441",
+          "page": "/history/john-tanner.html",
+          "pageTitle": "John Tanner: receiving, giving, and remembering",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/history-stories/tanner-family-crossing-1848-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/tanner-family-crossing-1848-960.webp\"])",
+          "title": "A family journey to the valley"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "A family on the road in 1856",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/history-stories/moyle-handcart-journey-full.webp",
@@ -3474,6 +3496,28 @@
       ]
     },
     {
+      "title": "Before he became a missionary",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/history-stories/miller-conversion-1831-960.webp",
+      "fullImage": "/assets/page-art/history-stories/miller-conversion-1831-full.webp",
+      "alt": "Eleazer Miller looks down at an open book with one finger resting on the page.",
+      "id": "art-328bf924e461",
+      "occurrences": [
+        {
+          "id": "source-c63b036fc8f8",
+          "page": "/history/eleazer-miller.html",
+          "pageTitle": "Eleazer Miller: a simple witness and a continuing life",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/history-stories/miller-conversion-1831-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/miller-conversion-1831-960.webp\"])",
+          "title": "Before he became a missionary"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Before reaching the magistrate",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/settle-adversary-02-960.webp",
@@ -3489,6 +3533,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/settle-adversary-02-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/settle-adversary-02-960.webp\"])",
           "title": "Before reaching the magistrate"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Before the plains: across the Atlantic",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/history-stories/moyle-atlantic-crossing-960.webp",
+      "fullImage": "/assets/page-art/history-stories/moyle-atlantic-crossing-full.webp",
+      "alt": "John Rowe Moyle braces a rope-bound bundle on a trunk aboard a wet wooden ship.",
+      "id": "art-273835f20191",
+      "occurrences": [
+        {
+          "id": "source-021cf13d9f90",
+          "page": "/history/john-rowe-moyle.html",
+          "pageTitle": "John Rowe Moyle: the stonecutter and the wooden leg",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/history-stories/moyle-atlantic-crossing-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/moyle-atlantic-crossing-960.webp\"])",
+          "title": "Before the plains: across the Atlantic"
         }
       ],
       "categories": [
@@ -8230,6 +8296,28 @@
       ]
     },
     {
+      "title": "Holiness to the Lord",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/history-stories/moyle-holiness-inscription-960.webp",
+      "fullImage": "/assets/page-art/history-stories/moyle-holiness-inscription-full.webp",
+      "alt": "John Rowe Moyle stands on a wooden platform with a wooden lower-leg prosthesis, holding a hammer and chisel beside the words Holiness to the Lord.",
+      "id": "art-9dd2c4b8a20d",
+      "occurrences": [
+        {
+          "id": "source-04f8f00077b7",
+          "page": "/history/john-rowe-moyle.html",
+          "pageTitle": "John Rowe Moyle: the stonecutter and the wooden leg",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/history-stories/moyle-holiness-inscription-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/moyle-holiness-inscription-960.webp\"])",
+          "title": "Holiness to the Lord"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Hope above the river",
       "category": "Church History",
       "thumbnail": "/assets/page-art/church-history/nauvoo-temple-960.webp",
@@ -12159,6 +12247,28 @@
       ]
     },
     {
+      "title": "Ninety-five cents in the record",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/history-stories/miller-relief-donation-960.webp",
+      "fullImage": "/assets/page-art/history-stories/miller-relief-donation-full.webp",
+      "alt": "An older Eleazer Miller holds several coins in one hand beside a closed account book.",
+      "id": "art-1deadf2e98a1",
+      "occurrences": [
+        {
+          "id": "source-040c77e9d2a9",
+          "page": "/history/eleazer-miller.html",
+          "pageTitle": "Eleazer Miller: a simple witness and a continuing life",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/history-stories/miller-relief-donation-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/miller-relief-donation-960.webp\"])",
+          "title": "Ninety-five cents in the record"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "No depth of earth",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/sower-rock-960.webp",
@@ -12394,6 +12504,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/church-history/apostles-ordain-oliver.webp\"]:has(img[src=\"../assets/page-art/church-history/apostles-ordain-oliver-960.webp\"])",
           "title": "Oliver receives the apostles’ ministry"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "On the road again, 1844",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/history-stories/tanner-mission-road-1844-960.webp",
+      "fullImage": "/assets/page-art/history-stories/tanner-mission-road-1844-full.webp",
+      "alt": "John Tanner, carrying a shoulder bag, gestures as he speaks with a companion on a country road.",
+      "id": "art-2c128e6abfda",
+      "occurrences": [
+        {
+          "id": "source-304b42bace78",
+          "page": "/history/john-tanner.html",
+          "pageTitle": "John Tanner: receiving, giving, and remembering",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/history-stories/tanner-mission-road-1844-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/tanner-mission-road-1844-960.webp\"])",
+          "title": "On the road again, 1844"
         }
       ],
       "categories": [
@@ -15426,27 +15558,27 @@
     {
       "title": "Suffer the Little Children",
       "category": "Art & Study",
-      "thumbnail": "/art/Suffer-the-Little-Children.jpg",
-      "fullImage": "/art/Suffer-the-Little-Children.jpg",
+      "thumbnail": "/art/Suffer-the-Little-Children-approved-20260929.webp",
+      "fullImage": "/art/Suffer-the-Little-Children-approved-20260929.webp",
       "alt": "Jesus Christ seated in an olive grove and welcoming a circle of children",
-      "id": "art-1ae8e785818f",
+      "id": "art-16e1e41855af",
       "occurrences": [
         {
-          "id": "source-7f970916abb8",
+          "id": "source-600e5c2af675",
           "page": "/art-study/suffer-the-little-children.html",
           "pageTitle": "Suffer the Little Children",
           "category": "Art & Study",
           "kind": "hero",
-          "selector": "a[data-hero-viewer][href=\"../art/Suffer-the-Little-Children.jpg\"]",
+          "selector": "a[data-hero-viewer][href=\"../art/Suffer-the-Little-Children-approved-20260929.webp\"]",
           "title": "Suffer the Little Children"
         },
         {
-          "id": "source-f8e08142701b",
+          "id": "source-f2ece5987b46",
           "page": "/art.html",
           "pageTitle": "Inspirational Art",
           "category": "Art & Study",
           "kind": "legacy",
-          "selector": ".gallery-item:has(img[src=\"art/thumbs/Suffer-the-Little-Children.webp\"])",
+          "selector": ".gallery-item:has(img[src=\"art/thumbs/Suffer-the-Little-Children-approved-20260929.webp\"])",
           "title": "Suffer the Little Children"
         }
       ],
@@ -18193,6 +18325,28 @@
       ]
     },
     {
+      "title": "Three horses for the camp",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/history-stories/miller-zions-camp-horses-960.webp",
+      "fullImage": "/assets/page-art/history-stories/miller-zions-camp-horses-full.webp",
+      "alt": "Eleazer Miller leads a brown horse toward a camp, with two more horses behind him.",
+      "id": "art-75ed42a75d1a",
+      "occurrences": [
+        {
+          "id": "source-f5785434b52b",
+          "page": "/history/eleazer-miller.html",
+          "pageTitle": "Eleazer Miller: a simple witness and a continuing life",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/history-stories/miller-zions-camp-horses-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/miller-zions-camp-horses-960.webp\"])",
+          "title": "Three horses for the camp"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Three questions for a metal",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/bom-evidences/visual-guides-20260923/metals-material-technique-date.svg",
@@ -19081,6 +19235,28 @@
       ]
     },
     {
+      "title": "When the gathering outgrew the house",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/history-stories/miller-canada-grove-960.webp",
+      "fullImage": "/assets/page-art/history-stories/miller-canada-grove-full.webp",
+      "alt": "Eleazer Miller holds an open book and gestures while adults and children listen in a leafy grove.",
+      "id": "art-2767001598a2",
+      "occurrences": [
+        {
+          "id": "source-6a71e61ecaf5",
+          "page": "/history/eleazer-miller.html",
+          "pageTitle": "Eleazer Miller: a simple witness and a continuing life",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/history-stories/miller-canada-grove-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/miller-canada-grove-960.webp\"])",
+          "title": "When the gathering outgrew the house"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "When the repair deepens the tear",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/new-patch-02-960.webp",
@@ -19414,14 +19590,14 @@
     }
   ],
   "stats": {
-    "artworks": 873,
-    "occurrences": 879,
+    "artworks": 881,
+    "occurrences": 887,
     "byKind": {
       "artwork": 62,
       "hero": 40,
       "legacy": 39,
       "missionary": 13,
-      "topic": 725
+      "topic": 733
     }
   }
 }

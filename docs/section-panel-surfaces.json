@@ -79,7 +79,8 @@
     "cfm-reflection-picture": "CFM illustrated study panel; exact page-owned composition contract preserves natural imagery, source controls and responsive caption containment.",
     "cfm-signature": "Existing Signature study card moved once into the CFM weekly panel; exact CFM composition contract preserves its source, artwork and destination.",
     "fc-temple-history__era-menu": "Owner-requested native era disclosure uses shared panel fill/border/shadow tokens in sole-consumer temples-history.css; exact stylesheet and four-group chapter QA protect scope.",
-    "fc-life-reflection": "Dedicated History story reflection panels use the shared Home panel tokens in exact reviewed history-stories.css; three owning story pages only."
+    "fc-life-reflection": "Dedicated History story reflection panels use the shared Home panel tokens in exact reviewed history-stories.css; three owning story pages only.",
+    "fc-history-life-card": "Three Church History owning-story preview cards use shared Home panel tokens in exact reviewed church-history.css."
   },
   "excluded_classes": {
     "ask-scene-card": "Artwork figure; preserve artwork framing.",
@@ -119,7 +120,8 @@
     "watch-index-note": "Inline note, not panel.",
     "watch-media-note": "Inline note, not panel.",
     "watch-reflection": "Inline reflection paragraph within existing study composition.",
-    "fc-life-reflections": "Bare responsive layout for three meaningful reflection panels; no independent painted surface."
+    "fc-life-reflections": "Bare responsive layout for three meaningful reflection panels; no independent painted surface.",
+    "fc-history-life-grid": "Bare three-or-one-column layout for three owning-story previews."
   },
   "runtime_selectors": {
     ".cfm-month": {

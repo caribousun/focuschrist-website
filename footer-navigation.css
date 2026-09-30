@@ -1,0 +1,4 @@
+/* Shared footer action stays in normal flow and uses the existing themed pill. */
+.fc-footer[data-focuschrist-footer="standard"] .fc-footer-top { margin: 24px auto 0; }
+.fc-footer-top > [data-focuschrist-back-to-top] { max-width: 100%; white-space: normal; }
+.fc-footer-top > [data-focuschrist-back-to-top]:focus-visible { outline: 3px solid var(--fc-gold, #f0c36a); outline-offset: 4px; }

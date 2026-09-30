@@ -1,0 +1,19 @@
+{
+  "reviewer": "Fermi",
+  "status": "source and interaction checks pass; hosted candidate pending",
+  "checks_passed": [
+    "home_hero_height_qa.py:124 routes,23 corrections,2 exact composites,6 visual variants,Children existing-original replacement",
+    "desktop_hero_preservation_qa.py:four earlier original rectangles unchanged",
+    "sitewide_artwork_review_qa.py normal and self-test",
+    "artwork_details_qa.py",
+    "anchor_alignment_qa.py",
+    "art_study_enrichment_qa.py",
+    "desktop_hero_runtime_qa.js",
+    "hero_details_runtime_qa.js",
+    "art_study_picture_runtime_qa.js",
+    "git diff --check"
+  ],
+  "browser_boundary": "Root performed current native rendered review; Fermi did not claim own browser review. Hosted700 Covenant case added after native verification.",
+  "count_policy": "Children replaces existing gallery original with matching full/desktop/phone; responsive renditions are not new-original counts.",
+  "publication": "Not committed or published by Fermi."
+}

@@ -73,3 +73,15 @@ body.fc-site.cfm-page .cfm-reflection-picture img{display:block;width:100%;heigh
 @media(max-width:700px){body.fc-site.cfm-page .cfm-reflection-picture.fc-study-visual--panel{grid-template-columns:minmax(0,1fr)}}
 
 @media(min-width:701px) and (max-width:1020px){.cfm-library>.cfm-library-card:last-child:nth-child(odd){grid-column:1/-1}}
+
+/* Keep the approved phone opening; desktop picture and copy have independent space. */
+.cfm-desktop-picture{display:none}
+@media(min-width:701px){
+ body.fc-site.cfm-page .cfm-hero{display:block;height:auto;min-height:0!important;padding:0;background:var(--fc-bg-deep)}
+ body.fc-site.cfm-page .cfm-hero::before,body.fc-site.cfm-page .cfm-hero::after{display:none}
+ body.fc-site.cfm-page .cfm-desktop-picture{display:block;width:100%;aspect-ratio:2048/684;overflow:hidden}
+ body.fc-site.cfm-page .cfm-desktop-picture img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+ body.fc-site.cfm-page .cfm-hero__copy{position:relative;inset:auto;width:min(100%,1240px);max-width:1240px;margin-inline:auto;padding:24px;text-align:center}
+ body.fc-site.cfm-page .cfm-hero__copy p{max-width:850px;margin-inline:auto}
+ body.fc-site.cfm-page .cfm-hero__copy .cfm-actions{justify-content:center}
+}

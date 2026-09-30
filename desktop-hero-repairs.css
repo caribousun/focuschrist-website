@@ -50,3 +50,25 @@
     body.fc-site.gc-page .gc-page-opening { padding-inline: 16px; }
     .fc-covenant-picture-return { display: none; }
 }
+
+/* Covenant's reviewed portrait rendition fills Home's shared phone frame. */
+@media(max-width:700px){
+ body.fc-site [data-covenant-hero-slot] .fc-covenant-hero{margin:0;padding:0;width:100%;max-width:none;border:0;border-radius:0;background:#17323f}
+ body.fc-site [data-covenant-hero-slot] .fc-covenant-hero > a,
+ body.fc-site [data-covenant-hero-slot] .fc-covenant-hero picture{display:block;width:100%;height:var(--fc-mobile-hero-height);border:0;border-radius:0}
+ body.fc-site [data-covenant-hero-slot] .fc-covenant-hero img{display:block;width:100%;height:100%;max-height:none;aspect-ratio:auto;object-fit:cover;border-radius:0}
+ body.fc-site [data-covenant-hero-slot] .fc-covenant-hero figcaption{display:none}
+}
+
+/* Reviewed desktop renditions retain established phone sources and framing. */
+.fc-visual-hero > .fc-exact-hero-picture{display:contents}
+.fc-visual-hero > .fc-exact-hero-picture > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:-2}
+@media(min-width:701px){
+ body.fc-site .fc-visual-hero:has(> .fc-exact-hero-picture){height:auto!important;min-height:0!important;max-height:none!important;aspect-ratio:2048/684}
+ .fc-art-study-hero:has(> .fc-exact-hero-picture)::before{display:none}
+}
+@media(max-width:700px){
+ .fc-art-study-hero > .fc-exact-hero-picture > img{object-fit:contain;z-index:-1}
+ .fc-art-study-hero[href$="Suffer-the-Little-Children-approved-20260929.webp"] > .fc-exact-hero-picture > img{object-fit:cover}
+ .fc-art-study-hero[href$="The-Good-Shephard.jpg"] > .fc-exact-hero-picture > img{transform:scale(1.145);transform-origin:center bottom}
+}
