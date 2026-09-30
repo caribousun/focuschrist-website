@@ -1,0 +1,29 @@
+/* Scoped reading balance; original artwork and hero rules remain unchanged. */
+body.fc-atonement-page .atonement-welcome > p:not(.fc-eyebrow) {
+  max-width: 70ch;
+  margin-inline: auto;
+}
+body.fc-bible-together .fc-bible-scene-grid {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+}
+body.fc-bible-together .fc-bible-scene .fc-bible-picture {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+}
+body.fc-bible-together .fc-bible-scene-reading {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: calc(70ch + 48px);
+  margin-inline: auto;
+  padding: 24px;
+}
+@media (max-width: 800px) {
+  body.fc-bible-together .fc-bible-scene .fc-bible-picture {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  body.fc-bible-together .fc-bible-scene-reading {
+    padding: 0 20px 20px;
+  }
+}

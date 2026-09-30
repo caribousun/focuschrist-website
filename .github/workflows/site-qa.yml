@@ -36,6 +36,7 @@ jobs:
           python tools/topic_pill_order_qa.py
           node tools/external_links_runtime_qa.js
           node tools/mobile_opening_invitation_runtime_qa.js
+          python tools/scripture_pill_labels_qa.py
 
       - name: Verify complete Jesus Christ journey
         run: |
@@ -179,6 +180,7 @@ jobs:
           python tools/unified_opening_qa.py
           NODE_PATH=/tmp/focus-row-qa/node_modules node tools/answer_opening_browser_qa.js
           NODE_PATH=/tmp/focus-row-qa/node_modules node tools/unified_opening_browser_qa.js
+          NODE_PATH=/tmp/focus-row-qa/node_modules node tools/study_alignment_browser_qa.js
           NODE_PATH=/tmp/focus-row-qa/node_modules node tools/home_hero_height_browser_qa.js
           NODE_PATH=/tmp/focus-row-qa/node_modules node tools/footer_navigation_browser_qa.js
 

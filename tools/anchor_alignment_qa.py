@@ -22,6 +22,16 @@ SEARCH_VERSION = '20260929-result-hitbox-1'
 TOPIC_DESKTOP_APPENDIX = b'\n/* Owner-requested desktop parity with Home; approved phone opening rules stay intact. */\n@media(min-width:701px){\n body.fc-site.fc-topic-page .fc-topic-opening{min-height:0;grid-template-rows:auto auto;align-content:start}\n body.fc-site.fc-topic-page .fc-topic-opening .fc-visual-hero{height:auto!important;min-height:0!important;max-height:none!important;aspect-ratio:2048/684}\n}\n'
 TOPIC_DESKTOP_VERSION = "20260929-home-height-1"
 
+STUDY_CENTER_APPENDIX = b'\n/* Owner-requested centered study choices; chapter picker keeps its own layout. */\nbody.fc-site .fc-study-nav:not(.jj-local-nav) { justify-content: center; }\n'
+STUDY_CENTER_SHA256 = '17d2b86bc2afc65b8133b6cc2831028b02590fe6874a13098345f5f5a1ec35fc'
+STUDY_CENTER_VERSION = "20260930-study-alignment-1"
+
+def before_study_center(data):
+    if hashlib.sha256(data).hexdigest() == STUDY_CENTER_SHA256 and data.endswith(STUDY_CENTER_APPENDIX):
+        return data[:-len(STUDY_CENTER_APPENDIX)]
+    return data
+
+
 def before_topic_desktop(data):
     if data.endswith(TOPIC_DESKTOP_APPENDIX):
         prior = data[:-len(TOPIC_DESKTOP_APPENDIX)]
@@ -45,7 +55,7 @@ def historical_style_bytes(data):
     reviewed bytes. The mandatory current-file checks separately reject stale
     files and any mutation to the approved anchor-only transformation.
     """
-    data = before_topic_desktop(before_search_hitbox(data))
+    data = before_study_center(before_topic_desktop(before_search_hitbox(data)))
     digest = hashlib.sha256(data).hexdigest()
     record = next((r for r in FILES.values() if r['after_sha256'] == digest), None)
     if not record:
@@ -73,6 +83,9 @@ def historical_style_bytes(data):
 
 def reviewed_anchor_style(name, data):
     record = FILES.get(name)
+    if name == 'site-system.css':
+        if hashlib.sha256(data).hexdigest() != STUDY_CENTER_SHA256: return False
+        data = before_study_center(data)
     if name == "topic-study-pages.css":
         if not data.endswith(TOPIC_DESKTOP_APPENDIX):
             return False
@@ -102,7 +115,7 @@ def check():
         if rel.startswith(('tools/', 'work/', 'node_modules/', '.git/')):
             continue
         for filename, version in re.findall(r'([\w-]+\.css)\?v=([\w.-]+)', path.read_text(encoding='utf-8')):
-            expected = SEARCH_VERSION if filename == 'site-search.css' else TOPIC_DESKTOP_VERSION if filename == 'topic-study-pages.css' else CONTRACT['version']
+            expected = STUDY_CENTER_VERSION if filename == 'site-system.css' else SEARCH_VERSION if filename == 'site-search.css' else TOPIC_DESKTOP_VERSION if filename == 'topic-study-pages.css' else CONTRACT['version']
             if filename in FILES and version != expected:
                 errors.append('Stale anchor stylesheet: ' + rel + ': ' + filename)
     return errors

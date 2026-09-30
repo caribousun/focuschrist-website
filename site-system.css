@@ -2468,3 +2468,6 @@ body.fc-site #scripture-companion,
 body.fc-site #visit-heading,
 body.fc-site #ways-to-serve,
 body.fc-site #worldwide-heading { scroll-margin-top: var(--fc-anchor-offset, 16px); }
+
+/* Owner-requested centered study choices; chapter picker keeps its own layout. */
+body.fc-site .fc-study-nav:not(.jj-local-nav) { justify-content: center; }

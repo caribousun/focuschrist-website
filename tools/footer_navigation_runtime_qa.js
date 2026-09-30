@@ -5,6 +5,7 @@ const path = require('node:path');
 const {JSDOM} = require('jsdom');
 const root = path.resolve(__dirname, '..');
 const read = name => fs.readFileSync(path.join(root,name),'utf8');
+const artworkDisclosure = 'Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.';
 const pages = [...read('sitemap.xml').matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>new URL(m[1]).pathname);
 assert.equal(pages.length,125);
 assert.ok(pages.includes('/answers/race-priesthood-and-temple-blessings.html'),'new dependent study must receive the shared footer test');
@@ -12,6 +13,16 @@ for(const route of [...pages, '/404.html']){
  const file=route==='/'?'index.html':route.slice(1);
  const dom=new JSDOM(read(file),{url:'https://focuschrist.com'+route+'?from=footer#reading',runScripts:'outside-only'});
  const w=dom.window,d=w.document;let scroll;
+ const savedDisclosure=d.querySelectorAll('footer [data-focuschrist-artwork-disclosure="footer"]');
+ assert.equal(savedDisclosure.length,1,file+' saved footer disclosure must work without scripts');
+ assert.equal(savedDisclosure[0].textContent,artworkDisclosure,file+' exact artwork disclosure');
+ const independence=[...d.querySelectorAll('footer p')].find(p=>p.textContent.startsWith('focusChrist is an independent faith-based website'));
+ assert(independence,file+' existing independence notice');
+ assert.equal(independence.nextElementSibling,savedDisclosure[0],file+' notices must be adjacent');
+ const independenceBefore=independence.outerHTML;
+ // Exercise both saved-page preservation and recovery for older generated pages.
+ if(pages.indexOf(route)%2===0) savedDisclosure[0].remove();
+
  assert.equal(d.querySelectorAll('.breadcrumbs, .jj-breadcrumbs, nav[aria-label="Breadcrumb"]').length,0,file+' must not restore pathway rows');
  w.matchMedia=()=>({matches:false,addEventListener(){},removeEventListener(){}});
  w.requestAnimationFrame=()=>0;
@@ -32,8 +43,18 @@ for(const route of [...pages, '/404.html']){
  const focused=d.activeElement;b.focus();assert(!focused.hasAttribute('tabindex'),'Temporary focus target must clean up');
  d.dispatchEvent(new w.Event('DOMContentLoaded'));
  assert.equal(d.querySelectorAll('[data-focuschrist-back-to-top]').length,1,'No duplicate action after reinitialization');
+ assert.equal(d.querySelectorAll('[data-focuschrist-artwork-disclosure]').length,1,file+' disclosure must be idempotent');
+ const disclosure=d.querySelector('[data-focuschrist-artwork-disclosure]');
+ assert.equal(disclosure.textContent,artworkDisclosure);
+ assert.equal(independence.nextElementSibling,disclosure,file+' runtime notice adjacency');
+ assert.equal(independence.outerHTML,independenceBefore,file+' independence notice preserved exactly');
+ assert.equal(disclosure.tagName,'P');
+ assert.equal(disclosure.getAttribute('style'),null,'Use existing footer formatting');
+
  dom.window.close();
 }
+const template=new JSDOM(read('docs/history-stories/footer.html.template')).window.document;
+assert.equal(template.querySelector('[data-focuschrist-artwork-disclosure]').textContent,artworkDisclosure,'History builder must preserve saved disclosure');
 const review=JSON.parse(read('docs/footer-navigation-review-20260929.json'));
 assert.equal(review.removed_breadcrumb_pages.length,102);
 for(const file of review.removed_breadcrumb_pages){

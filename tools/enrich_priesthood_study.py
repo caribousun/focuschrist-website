@@ -57,7 +57,7 @@ def enrich():
         caption=esc(item['caption']).replace('Official Declaration 2','<a class="fc-inline-scripture" href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/od/2?lang=eng">Official Declaration 2</a>')
         markup = f'''<figure class="fc-history-picture" id="picture-history-{item['id']}">
 <a href="/{item['asset']}" aria-haspopup="dialog" aria-label="Explore picture: {esc(item['study_title'])}"><img src="/{item['asset']}" width="{item['width']}" height="{item['height']}" loading="lazy" decoding="async" alt="{esc(item['alt'])}"></a>
-<figcaption><p class="fc-study-visual-label">Picture and study</p><h3>{esc(item['study_title'])}</h3><p>{caption}</p><p class="fc-study-visual-sources">{links}</p><p class="fc-history-picture-credit">{esc(item['credit'])}</p></figcaption></figure>'''
+<figcaption><p class="fc-study-visual-label">Picture and study</p><h3>{esc(item['study_title'])}</h3><p>{caption}</p><p class="fc-study-visual-sources">{links}</p></figcaption></figure>'''
         figure = BeautifulSoup(markup,'html.parser')
         unit = soup.select_one('#'+item['section'])
         placement=item['placement']
@@ -80,7 +80,7 @@ def enrich():
             tag=soup.new_tag('script',src='../'+asset,defer='');soup.body.append(tag)
     soup.select_one('link[href*="priesthood-history-study.css"]')['href']='../priesthood-history-study.css?v=20260930-enriched-4'
     common=soup.select_one('script[src*="site-common.js"]')
-    if common: common['src']='../site-common.js?v=20260930-unified-opening-1'
+    if common: common['src']='../site-common.js?v=20260930-art-disclosure-3'
     for node in list(soup.main.find_all(string=re.compile('Official Declaration 2'))):
         if node.find_parent('a'): continue
         markup=esc(str(node)).replace('Official Declaration 2','<a class="fc-inline-scripture" href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/od/2?lang=eng">Official Declaration 2</a>')

@@ -153,8 +153,9 @@ SCOPED_INTERFACE_STYLES = {
 # Wyatt requested these exact desktop repairs and the Temple chronology.
 # Albert independently reviewed rendered composition; byte/consumer changes fail closed.
 OWNER_20260929_STYLES = {
+    "study-reading-balance.css": ("fd52ec839745a75c0cde54122629134a78dbd2448e4bbae4ca6369ba81bfdb3b", ["atonement.html", "answers/bible-and-book-of-mormon-together.html"]),
     # Dynamically loaded shared opening surface; source reviewed, rendered approval recorded separately.
-    'unified-opening.css': ('131c9c2f3f97155e0c0ff06b8c686a881d48bf6732b50064205d3a0913d2c734', []),
+    'unified-opening.css': ('7fcb1456b4ff2c3372238e0baaccfa6083e4232e328956eff1e1d43f178c96e6', []),
     # Owner-directed Answer Continue correction: exact CSS bytes and consumer lists.
     'answer-opening.css': ('0356c038ad2adcec7206bfcb3d57915b9e2be2cd42024770560f3d9875cc94fb', ['answers/aaronic-priesthood-restoration.html', 'answers/are-latter-day-saints-christian.html', 'answers/bible-and-book-of-mormon-together.html', 'answers/death-of-a-child.html', 'answers/divorce-and-faith.html', 'answers/faith-in-jesus-christ-during-trials.html', 'answers/god-our-heavenly-father.html', 'answers/grief-and-faith.html', 'answers/holy-ghost.html', 'answers/jesus-christ-latter-day-saint-beliefs.html', 'answers/look-unto-me-doctrine-and-covenants-6-36.html', 'answers/melchizedek-priesthood-restoration.html', 'answers/plan-of-salvation.html', 'answers/prayer-and-personal-revelation.html', 'answers/restored-church-of-jesus-christ.html', 'answers/settle-this-in-your-hearts.html', 'answers/stand-forever.html', 'answers/what-happens-after-death.html', 'answers/what-is-eternal-marriage.html', 'answers/what-is-the-book-of-mormon.html', 'answers/who-was-joseph-smith.html', 'answers/why-families-are-important.html', 'answers/why-latter-day-saints-build-temples.html']),
     'covenant-opening.css': ('a0e47a332a6144d17b9d1f6f799e5db085776dc3e55f5c89f9d376d1071db72e', ['answers/abrahamic-covenant.html']),
@@ -514,7 +515,7 @@ def main():
         check(reviewed_owner_20260929_style(name, (ROOT/name).read_bytes()), 'Owner-reviewed stylesheet bytes changed: '+name)
         if name == 'unified-opening.css':
             common = (ROOT/'site-common.js').read_text(encoding='utf-8')
-            check(common.count("relativeAssetHref('unified-opening.css?v=20260930-1')") == 1, 'Unified opening CSS requires its exact shared loader/version')
+            check(common.count("relativeAssetHref('unified-opening.css?v=20260930-alignment-2')") == 1, 'Unified opening CSS requires its exact shared loader/version')
             check(common.count("relativeAssetHref('unified-opening.js?v=20260930-1')") == 1, 'Unified opening JS requires its exact shared loader/version')
         if name == 'footer-navigation.css':
             common = (ROOT/'site-common.js').read_text(encoding='utf-8')

@@ -101,7 +101,8 @@ for r in pictures:
     assert r['asset'].startswith('assets/page-art/priesthood-history/original-')
     assert (ROOT/r['provenance']).is_file()
     assert r['artwork_kind'] in {'historical interpretation','contemporary symbolic illustration'}
-    assert 'Original generated artwork' in r['credit']
+    assert 'credit' not in r, 'Generated-art disclosure belongs in the shared footer'
+    assert not f.select_one('.fc-history-picture-credit'), 'Do not repeat generated-art disclosure in figures or cloned panels'
     assert not f.select_one('a[data-full-image-viewer]'), 'Study panel must open before full image'
     provenance=json.loads(read(r['provenance']))
     records=provenance.get('images',provenance.get('records',[provenance['image']] if 'image' in provenance else []))
