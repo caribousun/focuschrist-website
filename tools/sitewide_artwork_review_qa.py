@@ -143,7 +143,7 @@ TOOLBAR_STYLE_SHA256 = {'site-header.css': 'a915de3ba44c8e14f127e25ec51498960fb1
 SCOPED_INTERFACE_STYLES = {
     # Owner-directed Church-source history, independently reviewed 2026-09-30.
     # Exact bytes and the single consumer are checked before CSS exclusion.
-    'priesthood-history-study.css': ('80347b94f97ae6fed40c21d1bb039e842b256c432d29c04058aa83bf764461e8', 'answers/race-priesthood-and-temple-blessings.html'),
+    'priesthood-history-study.css': ('aa950d3e5ba26dcd8b86bbae50a0ed811ef952e47d48d44528a372c4fdff4377', 'answers/race-priesthood-and-temple-blessings.html'),
     'plan-of-salvation.css': ('214c7c4c54c67b58c986d311e2bcb69a02bda9ab19427ba26f6bef433c8105bc', 'answers/plan-of-salvation.html'),
     'come-follow-me.css': ('c242f4c3d2406bffb58c7aed59466913dba8d768c6f19ba62d84b5be20851157', 'come-follow-me.html'),
     'cfm-study-controls.css': ('35c8939f4fc950d241ecb6a62ac58c1be6e02a59f64bee9b19fd2704011b58fb', 'come-follow-me.html'),
@@ -153,6 +153,10 @@ SCOPED_INTERFACE_STYLES = {
 # Wyatt requested these exact desktop repairs and the Temple chronology.
 # Albert independently reviewed rendered composition; byte/consumer changes fail closed.
 OWNER_20260929_STYLES = {
+    # Owner-directed Answer Continue correction: exact CSS bytes and consumer lists.
+    'answer-opening.css': ('63fee4cb09f447d69f7a9e4152ccccf4e9f0a51a611c8f94e2617ac3ff450f56', ['answers/aaronic-priesthood-restoration.html', 'answers/are-latter-day-saints-christian.html', 'answers/bible-and-book-of-mormon-together.html', 'answers/death-of-a-child.html', 'answers/divorce-and-faith.html', 'answers/faith-in-jesus-christ-during-trials.html', 'answers/god-our-heavenly-father.html', 'answers/grief-and-faith.html', 'answers/holy-ghost.html', 'answers/jesus-christ-latter-day-saint-beliefs.html', 'answers/look-unto-me-doctrine-and-covenants-6-36.html', 'answers/melchizedek-priesthood-restoration.html', 'answers/plan-of-salvation.html', 'answers/prayer-and-personal-revelation.html', 'answers/restored-church-of-jesus-christ.html', 'answers/settle-this-in-your-hearts.html', 'answers/stand-forever.html', 'answers/what-happens-after-death.html', 'answers/what-is-eternal-marriage.html', 'answers/what-is-the-book-of-mormon.html', 'answers/who-was-joseph-smith.html', 'answers/why-families-are-important.html', 'answers/why-latter-day-saints-build-temples.html']),
+    'covenant-opening.css': ('9d9fe0f950022e2a112725adf031eb622401fab213ccb42ae4f1fe6725087f4d', ['answers/abrahamic-covenant.html']),
+
     # Dynamically loaded only by the shared footer controller; all125 public contexts tested.
     'footer-navigation.css': ('3713562b2415f8b31394b46767204330777f021887621b4b7eaeae5ff1c22fee', []),
     'history-stories.css': ('baca93e6f290b179727fbdfa12fbafad586a20647bb4ef7d9e7ec59d20ceca1d', ['history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html']),
