@@ -9,6 +9,7 @@ const root = path.resolve(__dirname, '..');
 const out = path.join(root, '.qa-artifacts', 'history-heroes');
 const records = [];
 const openingRecords = [];
+const desktopOpeningRecords = [];
 fs.mkdirSync(out, { recursive: true });
 async function checkReflectionSpacing(page, label) {
   const geometry = await page.locator('.fc-life-reflections').evaluate(grid => {
@@ -66,6 +67,55 @@ async function checkReflectionSpacing(page, label) {
       await page.close();
     }
     assert(records.every(record => !record.raster.failures.length), 'Hero raster has a blank/near-solid region; inspect saved screenshots');
+    for (const slug of ['john-tanner', 'eleazer-miller', 'john-rowe-moyle']) {
+      for (const [width,height] of [[1280,720],[1366,768],[1536,792],[1920,990],[1920,900]]) {
+        const page=await context.newPage();
+        await page.setViewportSize({width,height});
+        await page.goto(`http://127.0.0.1:${server.address().port}/history/${slug}.html`, {waitUntil:'domcontentloaded'});
+        await page.locator('.fc-life-hero img').evaluate(img=>img.decode());
+        let normalSize;
+        for (const enlarged of [false,true]) {
+          if (enlarged) await page.evaluate(()=>{document.documentElement.style.fontSize='200%';});
+          await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+          const geometry=await page.evaluate(()=>{
+            const opening=document.querySelector('.fc-life-opening');
+            const h=opening.querySelector('h1'),button=opening.querySelector('.fc-actions .fc-button'),summary=opening.querySelector('summary');
+            const rect=n=>{const r=n.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom};};
+            return {hero:rect(document.querySelector('.fc-life-hero > a.fc-visual-hero')),heading:rect(h),button:rect(button),summary:rect(summary),fontSize:parseFloat(getComputedStyle(h).fontSize),fontFamily:getComputedStyle(h).fontFamily,fontWeight:getComputedStyle(h).fontWeight,overflow:document.documentElement.scrollWidth>innerWidth+1,readingOverflow:getComputedStyle(opening).overflowY,clipped:[h,button,summary].some(n=>n.scrollHeight>n.clientHeight+1||n.scrollWidth>n.clientWidth+1),directoryOpen:summary.parentElement.open};
+          });
+          const label=`${slug} desktop${width}x${height} ${enlarged?'200%':'100%'}`;
+          assert(Math.abs(geometry.hero.width/geometry.hero.height-2048/684)<.01,label+' standard hero frame unchanged');
+          assert(/^Georgia\b/i.test(geometry.fontFamily.replaceAll('"',''))&&geometry.fontWeight==='400',label+' standard heading theme');
+          assert(!geometry.overflow&&!geometry.clipped&&!geometry.directoryOpen,label+' opening must remain readable and collapsed');
+          for (const control of [geometry.button,geometry.summary]) assert(control.height>=44&&control.x>=-1&&control.x+control.width<=width+1,label+' complete touch targets');
+          assert([geometry.button,geometry.summary].every(control=>control.y>=geometry.heading.bottom-1),label+' both controls must follow the heading');
+          const overlapWidth=Math.min(geometry.button.x+geometry.button.width,geometry.summary.x+geometry.summary.width)-Math.max(geometry.button.x,geometry.summary.x);
+          const overlapHeight=Math.min(geometry.button.bottom,geometry.summary.bottom)-Math.max(geometry.button.y,geometry.summary.y);
+          assert(overlapWidth<=1||overlapHeight<=1,label+' opening control rectangles must not overlap');
+          if (!enlarged) {
+            normalSize=geometry.fontSize;
+            const expectedSize=Math.max(32,Math.min(48,(height-52-width*684/2048)/5));
+            assert(normalSize>=32-.1&&normalSize<=48+.1&&Math.abs(normalSize-expectedSize)<.2,label+' dynamic desktop heading follows available height within32–48px');
+            assert(geometry.button.bottom<=height-16&&geometry.summary.bottom<=height-16,label+' full Begin and directory need16px bottom clearance');
+          } else {
+            assert(geometry.fontSize>=normalSize*1.3,label+' enlarged heading must grow');
+            assert(!['hidden','clip'].includes(geometry.readingOverflow),label+' enlarged opening must scroll naturally');
+          }
+          const screenshot=path.join(out,`${slug}-desktop${width}x${height}-${enlarged?'200':'100'}.png`);
+          await page.screenshot({path:screenshot,fullPage:false,animations:'disabled'});
+          for (const selector of ['.fc-life-opening .fc-actions .fc-button','.fc-life-opening summary']) {
+            const control=page.locator(selector);await control.scrollIntoViewIfNeeded();await control.focus();
+            assert(await control.evaluate(n=>document.activeElement===n),label+' opening controls remain reachable');
+          }
+          const summary=page.locator('.fc-life-opening summary');await summary.press('Enter');
+          assert(await summary.evaluate(n=>n.parentElement.open),label+' directory opens');await summary.press('Enter');
+          assert(await summary.evaluate(n=>!n.parentElement.open),label+' directory closes');
+          desktopOpeningRecords.push({page:slug,viewport:[width,height],enlarged,...geometry,screenshot:path.relative(root,screenshot)});
+          await page.evaluate(()=>scrollTo(0,0));
+        }
+        await page.close();
+      }
+    }
     for (const slug of ['john-tanner', 'eleazer-miller', 'john-rowe-moyle']) {
       for (const [width, height] of [[390, 732], [320, 667], [412, 743], [432, 810]]) {
         const page = await context.newPage();
@@ -127,6 +177,7 @@ async function checkReflectionSpacing(page, label) {
     console.log('PASS:24 phone openings, unchanged themed headings, complete Begin/directory controls and natural enlarged-text flow');
   } finally {
     fs.writeFileSync(path.join(out, 'results.json'), JSON.stringify(records, null, 2)+'\n');
+    fs.writeFileSync(path.join(out, 'desktop-openings.json'), JSON.stringify(desktopOpeningRecords, null, 2)+'\n');
     fs.writeFileSync(path.join(out, 'phone-openings.json'), JSON.stringify(openingRecords, null, 2)+'\n');
     if (browser) await browser.close();
     await new Promise(resolve => server.close(resolve));
