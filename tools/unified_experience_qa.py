@@ -19,7 +19,8 @@ NESTED_PAGES = sorted(
 PUBLIC_PAGES = ROOT_PAGES + NESTED_PAGES
 # The standalone conference page follows the owner-requested CFM opening layout;
 # its hero and navigation are covered by general_conference_qa.py.
-IMAGE_FIRST_PAGES = [p for p in PUBLIC_PAGES if p not in {"404.html", "general-conference.html", "search.html"}]
+SOURCE_STUDY = "answers/race-priesthood-and-temple-blessings.html"
+IMAGE_FIRST_PAGES = [p for p in PUBLIC_PAGES if p not in {"404.html", "general-conference.html", "search.html", SOURCE_STUDY}]
 
 
 class VisibleTextParser(HTMLParser):
@@ -204,11 +205,19 @@ def main() -> int:
 
     approved_answer_pages = sorted(p.relative_to(ROOT).as_posix() for p in (ROOT / "answers").glob("*.html"))
     covenant_page = "answers/abrahamic-covenant.html"
-    if len(approved_answer_pages) != 24 or not {covenant_page, "answers/holy-ghost.html", "answers/plan-of-salvation.html"}.issubset(approved_answer_pages):
-        fail(errors, f"expected 24 Answer detail pages including Covenant, Holy Ghost and Plan of Salvation, found {len(approved_answer_pages)}")
+    if len(approved_answer_pages) != 25 or not {covenant_page, "answers/holy-ghost.html", "answers/plan-of-salvation.html", SOURCE_STUDY}.issubset(approved_answer_pages):
+        fail(errors, f"expected 25 Answer detail pages including the dedicated Church-source history, found {len(approved_answer_pages)}")
     # This one page owns a reviewed chapter-first journey instead of a hero.
     # Preserve the hero contract for every pre-existing Answer destination.
     from focused_answers_qa import document as opening_document, opening as reviewed_opening
+    source_nodes = opening_document(ROOT / SOURCE_STUDY)
+    source_openings = [n for n in source_nodes if n.tag == 'header' and n.has('fc-source-opening')]
+    if len(source_openings) != 1 or not any(n.tag == 'h1' for n in source_openings[0].walk()):
+        fail(errors, 'Dedicated history requires its source-led opening and title')
+    if any('data-hero-viewer' in n.attrs for n in source_nodes):
+        fail(errors, 'Dedicated history must preserve its source-led opening without an artwork hero')
+    if sum(n.has('fc-resource-card') for n in source_nodes) != 6:
+        fail(errors, 'Dedicated history requires six official contextual media cards')
     from abrahamic_covenant_qa import check as check_covenant, CHAPTERS as covenant_chapters
     try:
         covenant_nodes = opening_document(ROOT / covenant_page)
@@ -230,7 +239,7 @@ def main() -> int:
     check_father_art(check_father_structure((ROOT / "answers/god-our-heavenly-father.html").read_text(encoding="utf-8")))
     from holy_ghost_qa import check as check_holy_ghost
     check_holy_ghost()
-    approved_hero_pages = ["index.html", *(p for p in approved_answer_pages if p != covenant_page)]
+    approved_hero_pages = ["index.html", *(p for p in approved_answer_pages if p not in {covenant_page, SOURCE_STUDY})]
     approved_cache_versions: set[str] = set()
     for relative in approved_hero_pages:
         page_text = (ROOT / relative).read_text(encoding="utf-8")

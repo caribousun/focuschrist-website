@@ -53,7 +53,7 @@ def reviewed_art_reflection(selector, body, data):
     return selector.strip() == '.fc-art-study-page .fc-reflection-prompts > .fc-art-story' and re.sub(r'\s+', '', body) == 'max-width:none!important;' and hashlib.sha256(data).hexdigest() == '557ff4b1825bdf655751cbc6491d0133db294f022b90fcda270039ff849053a3'
 
 def reviewed_wrap_consumers(consumers, expected, version):
-    return (set(consumers) == set(expected) | {'answers/holy-ghost.html', 'answers/plan-of-salvation.html', 'history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html'} and len(consumers) == 125
+    return (set(consumers) == set(expected) | {'answers/holy-ghost.html', 'answers/plan-of-salvation.html', 'history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html', 'answers/race-priesthood-and-temple-blessings.html'} and len(consumers) == 126
             and all(parse_qs(urlsplit(ref).query).get('v') == [version] for refs in consumers.values() for ref in refs))
 
 
@@ -141,6 +141,9 @@ TOOLBAR_STYLE_SHA256 = {'site-header.css': 'a915de3ba44c8e14f127e25ec51498960fb1
 # Owner-requested growing Ask composer and opt-in Holy Ghost player, independently
 # reviewed in source and rendered by Albert. Exact full bytes and single owners.
 SCOPED_INTERFACE_STYLES = {
+    # Owner-directed Church-source history, independently reviewed 2026-09-30.
+    # Exact bytes and the single consumer are checked before CSS exclusion.
+    'priesthood-history-study.css': ('80347b94f97ae6fed40c21d1bb039e842b256c432d29c04058aa83bf764461e8', 'answers/race-priesthood-and-temple-blessings.html'),
     'plan-of-salvation.css': ('214c7c4c54c67b58c986d311e2bcb69a02bda9ab19427ba26f6bef433c8105bc', 'answers/plan-of-salvation.html'),
     'come-follow-me.css': ('c242f4c3d2406bffb58c7aed59466913dba8d768c6f19ba62d84b5be20851157', 'come-follow-me.html'),
     'cfm-study-controls.css': ('35c8939f4fc950d241ecb6a62ac58c1be6e02a59f64bee9b19fd2704011b58fb', 'come-follow-me.html'),
@@ -227,7 +230,7 @@ def main():
         assert not reviewed_system_panel_style(panel_style + b'\n.fc-visual-hero{height:9px}')
         assert not reviewed_system_panel_style(panel_style.replace(b'--fc-panel-fill:', b'--fc-panel-broken:', 1))
         assert not reviewed_system_panel_style(panel_style.replace(b'--fc-opening-hero-height:', b'--fc-opening-broken-height:', 1))
-        wrap_good = {name: ['site-system.css?v=current'] for name in [*wrap_expected, 'answers/holy-ghost.html', 'answers/plan-of-salvation.html', 'history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html']}
+        wrap_good = {name: ['site-system.css?v=current'] for name in [*wrap_expected, 'answers/holy-ghost.html', 'answers/plan-of-salvation.html', 'history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html', 'answers/race-priesthood-and-temple-blessings.html']}
         assert reviewed_wrap_consumers(wrap_good, wrap_expected, 'current')
         assert not reviewed_wrap_consumers(dict(list(wrap_good.items())[1:]), wrap_expected, 'current')
         assert not reviewed_wrap_consumers(dict(wrap_good, **{'other.html': ['site-system.css?v=current']}), wrap_expected, 'current')
