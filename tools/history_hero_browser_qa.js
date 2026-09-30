@@ -46,7 +46,7 @@ fs.mkdirSync(out, { recursive: true });
     }
     assert(records.every(record => !record.raster.failures.length), 'Hero raster has a blank/near-solid region; inspect saved screenshots');
     for (const slug of ['john-tanner', 'eleazer-miller', 'john-rowe-moyle']) {
-      for (const [width, height] of [[390, 732], [320, 667]]) {
+      for (const [width, height] of [[390, 732], [320, 667], [412, 743], [432, 810]]) {
         const page = await context.newPage();
         await page.setViewportSize({ width, height });
         await page.goto(`http://127.0.0.1:${server.address().port}/history/${slug}.html`, { waitUntil:'domcontentloaded' });
@@ -58,17 +58,22 @@ fs.mkdirSync(out, { recursive: true });
           const opening = await page.evaluate(() => {
             const h1 = document.querySelector('.fc-life-reading h1');
             const button = h1.parentElement.querySelector('.fc-actions .fc-button');
+            const summary = document.querySelector('.fc-life-directory summary');
             const rect = node => { const r=node.getBoundingClientRect(); return {x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom}; };
             const headings = [...document.querySelectorAll('.fc-life-reading h1, .fc-life-reading h2')].map(h => ({ text:h.textContent, family:getComputedStyle(h).fontFamily, weight:getComputedStyle(h).fontWeight }));
-            return {headings, title:rect(h1), button:rect(button), fontSize:parseFloat(getComputedStyle(h1).fontSize), overflow:document.documentElement.scrollWidth>innerWidth+1, titleClipped:h1.scrollHeight>h1.clientHeight+1, buttonClipped:button.scrollWidth>button.clientWidth+1, readingOverflow:getComputedStyle(h1.parentElement).overflowY};
+            return {headings, title:rect(h1), button:rect(button), summary:rect(summary), directoryOpen:summary.parentElement.open, summaryClipped:summary.scrollHeight>summary.clientHeight+1 || summary.scrollWidth>summary.clientWidth+1, fontSize:parseFloat(getComputedStyle(h1).fontSize), overflow:document.documentElement.scrollWidth>innerWidth+1, titleClipped:h1.scrollHeight>h1.clientHeight+1, buttonClipped:button.scrollWidth>button.clientWidth+1, readingOverflow:getComputedStyle(h1.parentElement).overflowY};
           });
           const label = `${slug} ${width} ${enlarged?'200%':'100%'}`;
           assert(opening.headings.length>1 && opening.headings.every(h => /^Georgia\b/i.test(h.family.replaceAll('"','')) && h.weight==='400'), label+' must use the shared Georgia400 heading theme');
           assert(!opening.overflow && !opening.titleClipped && !opening.buttonClipped, label+' clipped reading controls');
           assert(opening.button.height>=44 && opening.button.x>=-1 && opening.button.x+opening.button.width<=width+1, label+' accessible button geometry');
+          assert(!opening.directoryOpen && !opening.summaryClipped && opening.summary.height>=44 && opening.summary.x>=-1 && opening.summary.x+opening.summary.width<=width+1, label+' complete collapsed directory touch target');
+          assert(opening.summary.y>=opening.button.bottom-1, label+' directory/action overlap');
           assert(opening.button.y>=opening.title.bottom-1, label+' title/action overlap');
           if (!enlarged) {
             normalSize=opening.fontSize;
+            assert(Math.abs(normalSize-Math.min(32,Math.max(24,width*.08)))<.1, label+' normal heading size unchanged');
+            assert(opening.summary.bottom<=height-16, label+' entire directory summary must fit with16px bottom clearance');
             assert(opening.title.y>=0 && opening.button.bottom<=height, label+' complete opening must fit shorter phone viewport');
           } else {
             // Shared clamp(1.5rem,8vw,2rem): 390px grows from31.2px to48px at200% root text.
@@ -81,6 +86,14 @@ fs.mkdirSync(out, { recursive: true });
           await button.scrollIntoViewIfNeeded();
           await button.focus();
           assert(await button.evaluate(b=>document.activeElement===b), label+' Begin action must remain focusable');
+          const summary=page.locator('.fc-life-directory summary');
+          await summary.scrollIntoViewIfNeeded();
+          await summary.focus();
+          assert(await summary.evaluate(s=>document.activeElement===s), label+' directory remains keyboard reachable');
+          await summary.press('Enter');
+          assert(await summary.evaluate(s=>s.parentElement.open), label+' directory opens with keyboard');
+          await summary.press('Enter');
+          assert(await summary.evaluate(s=>!s.parentElement.open), label+' directory closes with keyboard');
           openingRecords.push({page:slug,viewport:[width,height],enlarged,...opening,screenshot:path.relative(root,screenshot)});
           await page.evaluate(()=>scrollTo(0,0));
         }
@@ -88,7 +101,7 @@ fs.mkdirSync(out, { recursive: true });
       }
     }
     console.log('PASS: hosted Chromium1440 rendered all three full hero regions with varied scene pixels');
-    console.log('PASS:12 shorter-phone openings, themed headings, complete normal Begin action and natural enlarged-text flow');
+    console.log('PASS:24 phone openings, unchanged themed headings, complete Begin/directory controls and natural enlarged-text flow');
   } finally {
     fs.writeFileSync(path.join(out, 'results.json'), JSON.stringify(records, null, 2)+'\n');
     fs.writeFileSync(path.join(out, 'phone-openings.json'), JSON.stringify(openingRecords, null, 2)+'\n');
