@@ -30,6 +30,11 @@ const results=[];
     assert(evidence.visible&&!evidence.clipped&&!evidence.overflow&&evidence.top>=0&&evidence.bottom<=height-8&&evidence.height>=43.5&&evidence.left>=0&&evidence.right<=width+1,JSON.stringify(results.at(-1)));
     const completeOpening=await page.locator('.'+record.kind).evaluate(opening=>{
      const controls=[...opening.querySelectorAll('a,button,summary')].filter(el=>!el.matches('[data-hero-viewer]')&&!el.closest('.fc-visual-hero')).flatMap(el=>{
+      // Closed disclosure contents may retain layout rects without being painted.
+      // Only the direct summary remains visible; test every closed ancestor.
+      for(let p=el.parentElement;p&&p!==opening.parentElement;p=p.parentElement){
+       if(p.tagName==='DETAILS'&&!p.open){const summary=[...p.children].find(c=>c.tagName==='SUMMARY');if(!summary||!summary.contains(el))return [];}
+      }
       const r=el.getBoundingClientRect(),s=getComputedStyle(el);
       if(!r.width||!r.height||s.display==='none'||s.visibility==='hidden')return [];
       let clipped=false;for(let p=el.parentElement;p;p=p.parentElement){const ps=getComputedStyle(p),b=p.getBoundingClientRect();if(/hidden|clip/.test(ps.overflowY)&&(r.bottom>b.bottom+1||r.top<b.top-1))clipped=true;}
