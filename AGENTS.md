@@ -1,4 +1,12 @@
+## Character image preflight and finished-image gates — Wyatt mandate
+
+Only the attached `C:/Users/wyatt/Desktop/Emma Smith.png` (SHA256 `7d0a07cc673d244ccd54d478c53d1e68d248e39d9b1101f87dfe3681cbb839d1`) is approved as Emma: exact likeness, facial proportions, figure and fullness. Preserve her recognizable identity; do not slim, beautify, average or substitute her face/body. Scene-appropriate age, expression and clothing remain required. For EVERY character image, Fermi AND Newton must independently concur BEFORE creation on the actual identity reference, historical date/age, figure, clothing and exact proposed prompt. After creation, BOTH must inspect the actual finished pixels and concur BEFORE use. These are separate gates; neither replaces owner acceptance or overrides rejection. The Jane/Joseph/Emma scene candidates `exec-afcca7ee-a2ed-468f-a2c9-a0a46cda93cd.png` and `exec-79fa6336-095f-416f-83ac-c8d75dcb6f5d.png` are OWNER REJECTED and must not be used or serve as identity references. The exact approved portrait may be displayed in existing Church History and Art; a dedicated enriched Emma section is deferred by Wyatt.
+
 # AGENTS.md - Your Workspace
+
+## Mutual verification — Wyatt mandate, 2026-09-30
+
+Before Fermi or Newton calls work fixed or passed, the other must independently inspect the exact proposed result and concur. Read the applicable enrichment, historical identity, layout and shared design mandates before implementation and review. Review actual source evidence, artwork pixels, visitor-facing copy, established colors and typography, desktop and phone rendering, and relevant interactions. A passing automated test or the implementer's own assurance is not concurrence. Record each reviewer's evidence, scope, limitations and unresolved findings against the final candidate; material changes invalidate affected approvals. Albert must inspect the assembled result and resolve disagreements before publication or a completion claim. This rule preserves Wyatt's protected foundation and all existing owner gates.
 
 This folder is home. Treat it that way.
 

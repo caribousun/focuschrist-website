@@ -1,4 +1,12 @@
+## Character image preflight and finished-image gates — Wyatt mandate
+
+Only the attached `C:/Users/wyatt/Desktop/Emma Smith.png` (SHA256 `7d0a07cc673d244ccd54d478c53d1e68d248e39d9b1101f87dfe3681cbb839d1`) is approved as Emma: exact likeness, facial proportions, figure and fullness. Preserve her recognizable identity; do not slim, beautify, average or substitute her face/body. Scene-appropriate age, expression and clothing remain required. For EVERY character image, Fermi AND Newton must independently concur BEFORE creation on the actual identity reference, historical date/age, figure, clothing and exact proposed prompt. After creation, BOTH must inspect the actual finished pixels and concur BEFORE use. These are separate gates; neither replaces owner acceptance or overrides rejection. The Jane/Joseph/Emma scene candidates `exec-afcca7ee-a2ed-468f-a2c9-a0a46cda93cd.png` and `exec-79fa6336-095f-416f-83ac-c8d75dcb6f5d.png` are OWNER REJECTED and must not be used or serve as identity references. The exact approved portrait may be displayed in existing Church History and Art; a dedicated enriched Emma section is deferred by Wyatt.
+
 # Mandatory historical character likenesses
+
+## Scene-specific age and appearance — Wyatt reaffirmation, 2026-09-30
+
+This mandate applies to every newly created image. Establish the depicted event and date before generation. The person's face, apparent age, figure/build, hair, clothing and surroundings must match that period and the age the person was in the scene. Preserve recognizable identity while adapting age naturally; do not copy an older portrait's age into a younger event. Research actual historical likenesses and written evidence before creation. Distinguish documented features from reconstruction and retain uncertainty where dates or appearance are unknown. Check the finished pixels, including facial proportions, lifelike expression, gaze, anatomy and period dress. Prompt wording alone is not verification. Fermi and Newton must independently concur on the exact final result, and Albert must inspect the assembled visitor experience before a fixed/passed claim. Emma's rejected September30 candidates are not approved likeness masters.
 
 ## Every owner-approved character is locked
 
@@ -7,6 +15,10 @@ Wyatt reaffirmed on 2026-09-19 that every owner-approved character identity is l
 `docs/approved-character-identities.json` separates confirmed asset provenance from unresolved mappings. A published image, technical pass, researched working reference or filename containing approved is not by itself owner approval. Where approval evidence or the person-to-reference mapping remains unresolved, reconcile it before reusing that identity; do not guess which Alma or Mary is intended. The registry is an initial evidence inventory, not a closed list of everyone protected by this mandate. Preserve all previously approved artwork while reconciling records. Only specific owner direction may replace an approved identity.
 
 Jesus Christ's canonical identity reference is `assets/heroes/home-christ-signature-approved-20260907.png`. Use its actual pixels, with scene-appropriate expression and the post-Resurrection requirements below. This faith-content identity mandate does not change the Wyatt-protected foundation.
+
+## Emma Hale Smith — owner-approved identity, 2026-09-30
+
+Canonical reference: `assets/identities/emma-smith-owner-approved-20260930.png`; SHA256 `7d0a07cc673d244ccd54d478c53d1e68d248e39d9b1101f87dfe3681cbb839d1`. Wyatt conditionally approved this exact portrait following Fermi and Newton historical review; both independently concurred on the exact pixels as a plausible interpretation of Rogers1842 and Maudsley circa1842. This locks website identity, not forensic historical certainty. Use actual reference pixels, preserving recognizable face and figure while adapting age and expression to each scene. Her clothing and hairstyle must fit the event and vary appropriately between scenes. Wyatt explicitly authorized revising every existing Emma scene, changing only Emma and preserving all other people, objects and composition. Review original and revised pixels independently before replacement. The September14 working master and rejected September30 intermediates must not guide future faces.
 
 ## Joseph Smith — owner mandated
 

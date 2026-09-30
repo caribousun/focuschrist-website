@@ -3,15 +3,35 @@ body.fc-site .fc-art-continue { display: none; }
 @media (min-width: 701px) {
   body.fc-site:not(.fc-not-found) .fc-page-intro {
     min-height: 0;
-    padding: 16px 24px;
+    padding: 16px 24px 20px !important;
   }
   body.fc-site:not(.fc-not-found) .fc-page-intro > .fc-container--standard {
-    padding: 0;
-    gap: 6px;
+    padding: 0 !important;
+    gap: 8px !important;
   }
   body.fc-site:not(.fc-not-found) .fc-page-intro > .fc-container--standard > * {
-    margin-block: 0;
+    margin: 0 !important;
   }
+  /* Match the shared Answer stack before its Continue control. Keep the
+     retained gallery guidance after that stack on desktop only. */
+  body.fc-site .fc-page-intro .fc-eyebrow {
+    font-size: .75rem;
+    line-height: 1.35 !important;
+    letter-spacing: .14em;
+  }
+  body.fc-site .fc-page-intro .fc-display {
+    font: 400 clamp(2rem, calc(50svh - 16.69921875vw - 95px), 3rem)/1.12 Georgia, serif !important;
+    letter-spacing: 0;
+    text-wrap: balance;
+  }
+  body.fc-site .fc-page-intro .fc-page-intro-copy {
+    font: 1.05rem/1.5 'Segoe UI', sans-serif !important;
+    max-width: 850px;
+    width: 100%;
+    text-align: center;
+    text-wrap: balance;
+  }
+  body.fc-site .fc-page-intro .fc-art-study-hint { order: 1; }
   body.fc-site .fc-page-intro .fc-art-continue {
     display: inline-flex;
     align-items: center;

@@ -1,0 +1,50 @@
+{
+  "status": "generated-and-visually-reviewed; independent owner review pending",
+  "tool": "image_gen.imagegen",
+  "referencePage": "https://churchhistorylibrary.churchofjesuschrist.org/blog/significant-documents-from-black-latter-day-saint-history-on-display?lang=eng",
+  "referenceCollection": "Church History Library PH 5962; portraits circa 1862–1873",
+  "referencePublication": "Research references remain outside repository; do not publish as new artwork.",
+  "historicalLimits": "These are contemporary artistic interpretations based on historical likenesses. Exact colors, setting, clothing and incidental actions are inferred. Later photographs cannot establish exact youthful appearance.",
+  "images": [
+    {
+      "file": "assets/page-art/priesthood-history/original-elijah-portrait.png",
+      "generatedOutput": "exec-4b9f9c0c-1285-46e3-80e6-59bea5d8bc48.png",
+      "source": "https://www.churchofjesuschrist.org/study/history/topics/elijah-able?lang=eng",
+      "referencePixels": "https://www.churchofjesuschrist.org/imgs/400ddff94db1ecdfeeae954747dd020f544b4e3f/full/!1600,/0/default",
+      "context": "Mature portrait around age55 using actual later portrait likeness; source gives birth range1808–1812.",
+      "promptRecordType": "summary; exact original prompt retained in generation tool transcript",
+      "promptSummary": "Photorealistic respectful mature Elijah Able portrait guided by left portrait of actual Church composite; high forehead, receding curls, slender facial features; dark period coat, waistcoat, white collar, black neckcloth; seated near window with natural hands; interpreted color and interior, no invented historical event.",
+      "review": "Face and visible hands inspected; no conspicuous anatomical defect. Exact skin/hair color not established by monochrome reference."
+    },
+    {
+      "file": "assets/page-art/priesthood-history/original-elijah-carpentry.png",
+      "generatedOutput": "exec-ebe77127-171a-4fd1-b188-6f54302ed508.png",
+      "source": "https://www.churchofjesuschrist.org/study/history/topics/elijah-able?lang=eng",
+      "referencePixels": "https://www.churchofjesuschrist.org/imgs/400ddff94db1ecdfeeae954747dd020f544b4e3f/full/!1600,/0/default",
+      "context": "Documented Cincinnati carpenter work from1842; inferred age30–34 from birth1808–1812. Generic work scene, not a documented specific incident.",
+      "promptRecordType": "summary; exact original prompt retained in generation tool transcript",
+      "promptSummary": "Actual Elijah portrait de-aged to about32, circa1842 Cincinnati carpenter, brown waistcoat and rolled white shirtsleeves using wooden plane on board in period workshop. No exact incident claim; anatomically correct hands, natural focused expression, no modern tools, no other named people.",
+      "review": "Face, plane grip, fingers and workshop inspected; mature hairline is interpretive, age cannot be certified visually."
+    },
+    {
+      "file": "assets/page-art/priesthood-history/original-jane-portrait.png",
+      "generatedOutput": "exec-cf431c19-2dd2-4933-8339-e32706c39307.png",
+      "source": "https://www.churchofjesuschrist.org/study/history/topics/jane-elizabeth-manning-james?lang=eng",
+      "referencePixels": "https://www.churchofjesuschrist.org/imgs/fc7b189845cf1c38c0b7f9226ccc9eb3fd6f259b/full/!1600,/0/default",
+      "context": "Mature portrait about45/late1860s. Source birthcirca1822; actual referencecirca1862–73.",
+      "promptRecordType": "summary; exact original prompt retained in generation tool transcript",
+      "promptSummary": "Actual Jane reference face: broad oval face, full cheeks, broad nose, full lips, strong chin, center-part hair. Respectful photoreal mature portrait about45, muted plum period dress seated in modest Utah room near window, hands naturally in lap; no undocumented event claim.",
+      "review": "Face, visible hands and period clothing inspected; portrait-like identity correspondence, no conspicuous anatomy issue."
+    },
+    {
+      "file": "assets/page-art/priesthood-history/original-jane-journey.png",
+      "generatedOutput": "exec-5565f207-eb79-4165-bd47-9640c6cfe7b8.png",
+      "source": "https://www.churchofjesuschrist.org/study/history/topics/jane-elizabeth-manning-james?lang=eng",
+      "referencePixels": "https://www.churchofjesuschrist.org/imgs/fc7b189845cf1c38c0b7f9226ccc9eb3fd6f259b/full/!1600,/0/default",
+      "context": "1843 documented walking journey toward Nauvoo after denied boat passage because of race; source birthcirca1822 implies ageabout21. Landscape and companions are contextual reconstruction.",
+      "promptRecordType": "exact",
+      "prompt": "Create a respectful, photorealistic historical ART INTERPRETATION of Jane Elizabeth Manning James on the documented 1843 journey toward Nauvoo, Illinois, as a young adult approximately 21 years old. Use the LEFT portrait of Jane in the supplied Church History Library composite as the actual identity reference: preserve her broad oval face, broad nose, full lips, strong chin and center-parted pulled-back hair, carefully de-aged from the later photograph. Do not depict the adjacent manuscript or reproduce its text. The official Church biography states Jane was born circa 1822, and that in 1843 she and family members were denied passage on a boat because of race and walked the remaining 800 miles toward Nauvoo. Show a quiet ordinary moment of that documented journey, not an invented confrontation: Jane walking steadily on a modest unpaved country road, carrying a small plain cloth bundle, wearing a modest practical 1843 dress, shawl and simple bonnet, with a few family companions farther behind, their faces indistinct. The companions are contextual unnamed figures, not claimed portraits or exact group count. Dignified, determined, natural posture and expression; no glamour, no sensational suffering, no fantasy. Clothing, landscape, exact moment and youthful appearance are acknowledged artistic reconstruction, not documented photographic fact. No completed Nauvoo temple in background, no landmark claims, no Joseph Smith or Jesus depiction. Natural soft daylight, realistic skin texture, anatomically correct hands and feet, convincing period fabric and dirt road, wide landscape composition 3:2. Leave no text, labels, watermark or frame. Do not imitate an aged photograph; this is a contemporary realistic illustration grounded in a historical likeness. CRITICAL AGE CORRECTION: Jane must visibly read as a young woman about 21, not a middle-aged woman. Use the historical portrait only to reconstruct distinctive inherited facial structure; remove mature nasolabial folds, cheek heaviness and weathering. Youthful smooth natural face, no makeup. Reference is decades later; sensitively de-age while retaining identity. Preserve dignity and plain period clothing.",
+      "review": "First output exec-eeea8610 read older and was not selected. Revised output inspected: younger face, natural visible hands, no landmark or famous-person claim. Youthful likeness remains an interpretation from later photograph."
+    }
+  ]
+}

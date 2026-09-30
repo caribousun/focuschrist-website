@@ -126,6 +126,42 @@
       ],
       "reuse_allowed_with_required_research": true,
       "constraints": "Preserve this face and lifelike skin color with event-appropriate age, expression and gaze. Owner rejected the prior washed-out appearance; do not import monochrome texture. Historical pigmentation is interpretation, not authenticated color."
+    },
+    {
+      "character": "Emma Hale Smith",
+      "owner_identity_locked": true,
+      "reference_mapping": "confirmed",
+      "reference": {
+        "asset": "assets/identities/emma-smith-owner-approved-20260930.png",
+        "sha256": "7d0a07cc673d244ccd54d478c53d1e68d248e39d9b1101f87dfe3681cbb839d1"
+      },
+      "approval_evidence": [
+        "Wyatt 2026-09-30: If so, let us lock that in as her look; preserve exact likeness except scene age and expressions; different scene-appropriate clothing; update only Emma in every existing scene.",
+        "Conditional approval satisfied by independent Fermi and Newton concurrence on exact exec-38ae3ae8-995e-4fe3-a78e-8629da6e7cba.png.",
+        "Wyatt explicit: I approve only this image of emma in the exact likeness, figure, fullness, etc. Every image of any character requires Fermi and Newton concurrence before create and use."
+      ],
+      "reuse_allowed_with_required_research": true,
+      "constraints": "Owner-approved artistic identity, not authenticated exact historical appearance. Rogers1842 and Maudsley circa1842 reviewed. Adapt age, expression, hair and clothing to documented scene; preserve other people and composition in existing scene corrections.",
+      "rejected_scene_candidates": [
+        "exec-afcca7ee-a2ed-468f-a2c9-a0a46cda93cd.png",
+        "exec-79fa6336-095f-416f-83ac-c8d75dcb6f5d.png",
+        "exec-e9702f3d-8243-49d4-a8f1-5810aff249ba.png"
+      ],
+      "approved_expression_variations": [
+        {
+          "asset": "assets/identities/emma-smith-approved-gentle-smile-20260930.png",
+          "sha256": "f6d2493babf5d2ab7a6e118a57827f7db05e6aea934feb5739256987ec186688",
+          "approval": "Wyatt: That one looks good, directly after expression-only d7f3d674 display.",
+          "role": "Approved gentle-smile expression variation; original remains sole identity and figure master, use both for future reference."
+        }
+      ],
+      "review_rejected_scene_candidates": [
+        {
+          "asset": "exec-1c6d98d6-38b4-43cb-8261-1ece5f91c273.png",
+          "decision": "Do not use",
+          "reason": "Fermi, Newton and Close rejected changed head angle, narrowed lower face and incorrect transferred lace collar. This is reviewer rejection, not an additional owner approval or rejection."
+        }
+      ]
     }
   ],
   "unresolved_other_characters": "Reconcile every additional approved character against exact saved asset and owner approval provenance before new use; do not infer approval from current publication."

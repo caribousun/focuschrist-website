@@ -1,0 +1,194 @@
+{
+  "status": "SUPERSEDED_RESEARCH_ONLY_NOT_CURRENT_BODY_ART_REVIEW",
+  "scope_note": "Historical review of12official research reference images, now archived outside published assets. Current original body art is governed by body-pictures.json and its original-generation provenance; this record is not approval of the current17images.",
+  "reviewer": "Newton",
+  "distinct_images": 12,
+  "asset_hashes": "PASS",
+  "source_http_checks": [
+    {
+      "url": "https://www.churchofjesuschrist.org/media/image/bible-and-book-of-mormon-1c14823?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/image/bible-and-book-of-mormon-1c14823?lang=eng",
+      "h1": [
+        "Scriptures"
+      ]
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/image/family-group-africa-bd65cd0?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/image/family-group-africa-bd65cd0?lang=eng",
+      "h1": [
+        "Family Portrait"
+      ]
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/image/family-praying-91c09a8?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/image/family-praying-91c09a8?lang=eng",
+      "h1": [
+        "Family Praying"
+      ]
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/image/girl-praying-4ece61a?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/image/girl-praying-4ece61a?lang=eng",
+      "h1": [
+        "Little Girl Praying"
+      ]
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/image/kirtland-ohio-temple-dc20af2?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/image/kirtland-ohio-temple-dc20af2?lang=eng",
+      "h1": [
+        "Kirtland Temple"
+      ]
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/image/nauvoo-temple-lds-2cb9aef?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/image/nauvoo-temple-lds-2cb9aef?lang=eng",
+      "h1": [
+        "Nauvoo Illinois Temple (Reconstruction of Original Nauvoo Temple; Dedicated in 2002)"
+      ]
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/image/priesthood-blessings-women-fd6bf2c?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/image/priesthood-blessings-women-fd6bf2c?lang=eng",
+      "h1": [
+        "Priesthood Blessing"
+      ]
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/image/salt-lake-tabernacle-lds-a8266f1?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/image/salt-lake-tabernacle-lds-a8266f1?lang=eng",
+      "h1": [
+        "Salt Lake Tabernacle"
+      ]
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/image/salt-lake-temple-bb20ac2?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/image/salt-lake-temple-bb20ac2?lang=eng",
+      "h1": [
+        "Salt Lake Temple"
+      ]
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/image/sao-paulo-brazil-temple-lds-249d571?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/image/sao-paulo-brazil-temple-lds-249d571?lang=eng",
+      "h1": [
+        "São Paulo Brazil Temple"
+      ]
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/image/service-d4d9f86?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/image/service-d4d9f86?lang=eng",
+      "h1": [
+        "Serving One Another"
+      ]
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/media/image/spencer-w-kimball-lds-prophet-1afcdd9?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/media/image/spencer-w-kimball-lds-prophet-1afcdd9?lang=eng",
+      "h1": [
+        "Spencer W. Kimball"
+      ]
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/study/history/global-histories/brazil/stories-of-faith/br-04-joy-of-an-eternal-covenant?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/study/history/global-histories/brazil/stories-of-faith/br-04-joy-of-an-eternal-covenant?lang=eng",
+      "h1": [
+        "Joy of an Eternal Covenant"
+      ]
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/study/history/global-histories/ghana/stories-of-faith/gh-01-weve-waited-long-for-thee?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/study/history/global-histories/ghana/stories-of-faith/gh-01-weve-waited-long-for-thee?lang=eng",
+      "h1": [
+        "“We’ve Waited Long for Thee”"
+      ]
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/study/history/topics/elijah-able?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/study/history/topics/elijah-able?lang=eng",
+      "h1": [
+        "Elijah Able"
+      ]
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/study/history/topics/jane-elizabeth-manning-james?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/study/history/topics/jane-elizabeth-manning-james?lang=eng",
+      "h1": [
+        "Jane Elizabeth Manning James"
+      ]
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/prayer-study-guide?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/prayer-study-guide?lang=eng",
+      "h1": [
+        "Prayer"
+      ]
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/priesthood?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/priesthood?lang=eng",
+      "h1": [
+        "Priesthood"
+      ]
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/race-and-the-church-of-jesus-christ-of-latter-day-saints?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/race-and-the-church-of-jesus-christ-of-latter-day-saints?lang=eng",
+      "h1": [
+        "Race and The Church of Jesus Christ of Latter-day Saints"
+      ]
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/service?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/service?lang=eng",
+      "h1": [
+        "Service"
+      ]
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/temples?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/temples?lang=eng",
+      "h1": [
+        "Temples"
+      ]
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/study/manual/revelations-in-context/witnessing-the-faithfulness?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/study/manual/revelations-in-context/witnessing-the-faithfulness?lang=eng",
+      "h1": [
+        "Witnessing the Faithfulness"
+      ]
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/od/2?lang=eng",
+      "status": 200,
+      "final_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/od/2?lang=eng",
+      "h1": []
+    }
+  ],
+  "visual_review": "Contact sheet all12 and fullsize service photograph viewed. Captions correspond to visible subjects.",
+  "historical_review": "Elijah biography directly reread:1836ordination,washing/anointing verified; distinction fromlaterNauvooendowment preserved. Jane biography directly reread:1888baptisms,1894proxyservantsealing and1979posthumousfamilyordinances; caption describes familyblessingssought and2002rebuiltNauvoo correctly.",
+  "limits": "No inventedpersonidentity orhistoricaldate assigned to modernpicture. Terms permission assessedforpersonalnoncommercialGospelMedia use; emptyitemnoticearray means no notice recorded, notpublicdomain."
+}

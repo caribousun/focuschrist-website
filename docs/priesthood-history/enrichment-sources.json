@@ -1,0 +1,314 @@
+{
+  "reviewed_at_utc": "2026-09-30T18:21:57.498268+00:00",
+  "author": "Newton",
+  "scope": "1019 added words in six deeper-study blocks with twelve subtopics; existing prose and six video cards retained unchanged at handoff.",
+  "verification_method": "Official URLs opened or searched with web tool in this run; not a claim that every external media file was fetched.",
+  "sources": [
+    {
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/race-and-the-church-of-jesus-christ-of-latter-day-saints?lang=eng",
+      "supports": "Equal worth as children of God; racial superiority rejected; repentance from prejudice.",
+      "section": "restriction-history",
+      "evidence": "Official published page text inspected in current run"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics-essays/race-and-the-priesthood?lang=eng",
+      "supports": "American racial context; historical restrictions; rejected racial theories and limits in explanatory record.",
+      "section": "restriction-history",
+      "evidence": "Official published page text inspected in current run"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/priesthood?lang=eng",
+      "supports": "Priesthood as divine power and authority entrusted for the salvation of God’s children.",
+      "section": "elijah-able",
+      "evidence": "Official published page text inspected in current run"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/study/history/topics/elijah-able?lang=eng",
+      "supports": "1832 baptism in Ohio; limited surviving information about early life; ministry and later restrictions.",
+      "section": "elijah-able",
+      "evidence": "Official published page text inspected in current run"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/temples?lang=eng",
+      "supports": "Temples as houses of the Lord; learning, covenants and ordinances centered on Jesus Christ.",
+      "section": "jane-manning-james",
+      "evidence": "Official published page text inspected in current run"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/covenant?lang=eng",
+      "supports": "Covenants include divine promises and human commitments; baptism/endowment/sealing distinctions.",
+      "section": "jane-manning-james",
+      "evidence": "Official published page text inspected in current run"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/study/history/topics/jane-elizabeth-manning-james?lang=eng",
+      "supports": "Jane’s life and efforts to receive temple blessings; preserve human and family context.",
+      "section": "jane-manning-james",
+      "evidence": "Official published page text inspected in current run"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/study/history/global-histories/brazil/stories-of-faith/br-04-joy-of-an-eternal-covenant?lang=eng",
+      "supports": "Brazilian family’s desire for temple blessings; original narrative retained.",
+      "section": "faith-across-nations",
+      "evidence": "Official published page text inspected in current run"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/study/history/saints-stories-billy-johnson-ghana/billy-johnson-ghana?lang=eng",
+      "supports": "Billy Johnson, Frank Mensah and unofficial congregations preceding formal Church establishment.",
+      "section": "faith-across-nations",
+      "evidence": "Official published page text inspected in current run"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/study/manual/revelations-in-context/witnessing-the-faithfulness?lang=eng",
+      "supports": "Personal and family experiences across Africa and the Americas contextualize revelation.",
+      "section": "revelation-1978",
+      "evidence": "Official published page text inspected in current run"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/od/2?lang=eng",
+      "supports": "Declaration contains First Presidency letter and conference presentation; original exact dates retained.",
+      "section": "revelation-1978",
+      "evidence": "Official published page text inspected in current run"
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/study/new-era/2020/03/questions-and-answers/what-is-the-churchs-stance-on-racism?lang=eng",
+      "supports": "Disciples should reject disparaging racial treatment and repent of prejudice.",
+      "section": "belonging-and-responsibility",
+      "evidence": "Official published page text inspected in current run"
+    }
+  ],
+  "scripture_connections": [
+    "2 Nephi26:24–33: invitation to all",
+    "Doctrine and Covenants121:34–46: righteous priesthood influence",
+    "Mosiah18:8–10: bearing burdens and comforting",
+    "Matthew25:34–40: care for others"
+  ],
+  "interpretive_limits": [
+    "Reflective questions are optional application, not historical claims.",
+    "Modern temple and worship images are illustrative context, never evidence of participation in1830s or1978events.",
+    "No invented scenes, named likenesses or private ceremonial details."
+  ],
+  "media_rights_basis": {
+    "url": "https://www.churchofjesuschrist.org/learn/legal/terms-of-use/go?lang=eng",
+    "verified_terms": "Gospel Media personal noncommercial posting allowed unless otherwise indicated; notices must be preserved. Non-GospelMedia reposting and organizational use require permission.",
+    "site_context": "Root confirms Wyatt personal noncommercial faith site.",
+    "individual_media_clearance": "Root owns final extraction, item-specific checks, manifest and panel integration."
+  },
+  "media_discovery_correction": {
+    "note": "Search crawl evidence was initially described too broadly as verified. Direct HTTP checks below supersede media discovery claims; a search result alone does not establish current availability.",
+    "http_audit": [
+      {
+        "slug": "scriptures-8939171",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "slug": "priesthood-blessings-women-fd6bf2c",
+        "status": 200,
+        "final": "https://www.churchofjesuschrist.org/media/image/priesthood-blessings-women-fd6bf2c?lang=eng",
+        "bytes": 83903
+      },
+      {
+        "slug": "service-d4d9f86",
+        "status": 200,
+        "final": "https://www.churchofjesuschrist.org/media/image/service-d4d9f86?lang=eng",
+        "bytes": 85457
+      },
+      {
+        "slug": "family-praying-96b18ae",
+        "status": 200,
+        "final": "https://www.churchofjesuschrist.org/media/image/family-praying-96b18ae?lang=eng",
+        "bytes": 79808
+      },
+      {
+        "slug": "family-praying-91c09a8",
+        "status": 200,
+        "final": "https://www.churchofjesuschrist.org/media/image/family-praying-91c09a8?lang=eng",
+        "bytes": 83513
+      },
+      {
+        "slug": "family-reading-scriptures-together-fce3904",
+        "status": 200,
+        "final": "https://www.churchofjesuschrist.org/media/image/family-reading-scriptures-together-fce3904?lang=eng",
+        "bytes": 85293
+      },
+      {
+        "slug": "boy-reading-e366c15",
+        "status": 200,
+        "final": "https://www.churchofjesuschrist.org/media/image/boy-reading-e366c15?lang=eng",
+        "bytes": 84758
+      },
+      {
+        "slug": "studying-scriptures-young-men-home-41dba40",
+        "status": 200,
+        "final": "https://www.churchofjesuschrist.org/media/image/studying-scriptures-young-men-home-41dba40?lang=eng",
+        "bytes": 84450
+      },
+      {
+        "slug": "spencer-w-kimball-lds-prophet-1afcdd9",
+        "status": 200,
+        "final": "https://www.churchofjesuschrist.org/media/image/spencer-w-kimball-lds-prophet-1afcdd9?lang=eng",
+        "bytes": 84830
+      },
+      {
+        "slug": "ghana-accra-temple-grounds-family-e54a460",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "slug": "elder-missionaries-ghana-west-africa-16d7860",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "slug": "girl-praying-4ece61a",
+        "status": 200,
+        "final": "https://www.churchofjesuschrist.org/media/image/girl-praying-4ece61a?lang=eng",
+        "bytes": 83147
+      },
+      {
+        "slug": "family-group-africa-bd65cd0",
+        "status": 200,
+        "final": "https://www.churchofjesuschrist.org/media/image/family-group-africa-bd65cd0?lang=eng",
+        "bytes": 84802
+      },
+      {
+        "slug": "kirtland-ohio-temple-dc20af2",
+        "status": 200,
+        "final": "https://www.churchofjesuschrist.org/media/image/kirtland-ohio-temple-dc20af2?lang=eng",
+        "bytes": 95941
+      },
+      {
+        "slug": "nauvoo-temple-lds-8e9c3de",
+        "status": 200,
+        "final": "https://www.churchofjesuschrist.org/media/image/nauvoo-temple-lds-8e9c3de?lang=eng",
+        "bytes": 83193
+      },
+      {
+        "slug": "sao-paulo-brazil-temple-lds-249d571",
+        "status": 200,
+        "final": "https://www.churchofjesuschrist.org/media/image/sao-paulo-brazil-temple-lds-249d571?lang=eng",
+        "bytes": 87620
+      },
+      {
+        "slug": "salt-lake-tabernacle-lds-a8266f1",
+        "status": 200,
+        "final": "https://www.churchofjesuschrist.org/media/image/salt-lake-tabernacle-lds-a8266f1?lang=eng",
+        "bytes": 86351
+      },
+      {
+        "slug": "accra-ghana-temple-a108bda",
+        "status": 200,
+        "final": "https://www.churchofjesuschrist.org/media/image/accra-ghana-temple-a108bda?lang=eng",
+        "bytes": 83915
+      },
+      {
+        "slug": "salt-lake-temple-bb20ac2",
+        "status": 200,
+        "final": "https://www.churchofjesuschrist.org/media/image/salt-lake-temple-bb20ac2?lang=eng",
+        "bytes": 83461
+      }
+    ],
+    "replacement_metadata": [
+      {
+        "slug": "priesthood-blessings-women-fd6bf2c",
+        "h1": [
+          "Priesthood Blessing"
+        ],
+        "images": [
+          {
+            "src": "https://www.churchofjesuschrist.org/imgs/fd6bf2c84060e7644e007cbb4432dbf71a42cc78/full/800,/0/default",
+            "alt": "A woman receiving a priesthood blessing in her home."
+          },
+          {
+            "src": "https://www.churchofjesuschrist.org/imgs/c6e9c35fd5858e9aa344f60c1a045a7c38dd9b56/full/!320,/0/default",
+            "alt": null
+          }
+        ],
+        "download_links": []
+      },
+      {
+        "slug": "service-d4d9f86",
+        "h1": [
+          "Serving One Another"
+        ],
+        "images": [
+          {
+            "src": "https://www.churchofjesuschrist.org/imgs/d4d9f86152191248db8177c6d4ab76206247229b/full/,500/0/default",
+            "alt": "Serving One Another"
+          },
+          {
+            "src": "https://www.churchofjesuschrist.org/imgs/0be2109e36c395d1209cb57ce1920dd5ddfee280/full/!320,/0/default",
+            "alt": null
+          }
+        ],
+        "download_links": []
+      },
+      {
+        "slug": "family-reading-scriptures-together-fce3904",
+        "h1": [
+          "Family Scripture Reading"
+        ],
+        "images": [
+          {
+            "src": "https://www.churchofjesuschrist.org/imgs/fce3904749a5872debaede2d3e9765606597aa99/full/,500/0/default",
+            "alt": "A family of four sits together and reads the scriptures."
+          },
+          {
+            "src": "https://www.churchofjesuschrist.org/imgs/7c9cd97225b7edad4a69c6109bc47fe9996b1267/full/!320,/0/default",
+            "alt": null
+          }
+        ],
+        "download_links": []
+      },
+      {
+        "slug": "family-praying-96b18ae",
+        "h1": [
+          "Family Prayer"
+        ],
+        "images": [
+          {
+            "src": "https://www.churchofjesuschrist.org/imgs/96b18ae48b7a8115f4e638526c8a179d24ead5f5/full/800,/0/default",
+            "alt": "A family kneels to pray together. &nbsp;"
+          },
+          {
+            "src": "https://www.churchofjesuschrist.org/imgs/c6e9c35fd5858e9aa344f60c1a045a7c38dd9b56/full/!320,/0/default",
+            "alt": null
+          }
+        ],
+        "download_links": []
+      },
+      {
+        "slug": "family-praying-91c09a8",
+        "h1": [
+          "Family Praying"
+        ],
+        "images": [
+          {
+            "src": "https://www.churchofjesuschrist.org/imgs/91c09a8c64a888b10212ba2e23fd1d77de83b306/full/800,/0/default",
+            "alt": "A little girl says a prayer with her family."
+          },
+          {
+            "src": "https://www.churchofjesuschrist.org/imgs/c6e9c35fd5858e9aa344f60c1a045a7c38dd9b56/full/!320,/0/default",
+            "alt": null
+          }
+        ],
+        "download_links": []
+      },
+      {
+        "slug": "family-group-africa-bd65cd0",
+        "h1": [
+          "Family Portrait"
+        ],
+        "images": [
+          {
+            "src": "https://www.churchofjesuschrist.org/imgs/bd65cd0ed982046e5e41391bdd39e0a858f4849f/full/800,/0/default",
+            "alt": "Family Portrait"
+          },
+          {
+            "src": "https://www.churchofjesuschrist.org/imgs/045e06321497dfa67461fb0072f810a4e3a5965e/full/!320,/0/default",
+            "alt": null
+          }
+        ],
+        "download_links": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "status": "draft-source-and-revised-art-concurred-by-Newton; final-integration-review-pending",
+  "sources": [
+    {
+      "id": "history",
+      "url": "https://www.churchofjesuschrist.org/study/history/topics/elijah-able?lang=eng",
+      "type": "Church historical synthesis",
+      "maxDerivedWords": 200
+    },
+    {
+      "id": "database",
+      "url": "https://history.churchofjesuschrist.org/chd/individual/elijah-able-1810?lang=eng",
+      "type": "Church database with linked missionary and migration records",
+      "maxDerivedWords": 200
+    },
+    {
+      "id": "mission",
+      "url": "https://www.churchofjesuschrist.org/study/manual/doctrine-and-covenants-stories-2025/33-elijah-able?lang=eng",
+      "type": "Church retrospective narrative citing Saints volume 1",
+      "maxDerivedWords": 200
+    }
+  ],
+  "sections": [
+    {
+      "title": "A life of discipleship",
+      "source": "history",
+      "paragraphs": [
+        "Elijah Able joined the Church in Ohio in September 1832. The Church’s historical biography places his birth in Maryland between 1808 and 1812. His story includes the ordinary responsibilities of work and family alongside significant service in the early Church.",
+        "In Kirtland, Ambrose Palmer ordained him to the Melchizedek Priesthood in 1836. He received washing and anointing ordinances in the Kirtland Temple, a patriarchal blessing from Joseph Smith Sr., and ordination as a Seventy by Zebedee Coltrin. He later lived among the Saints in Nauvoo.",
+        "By 1842 he was a carpenter in Cincinnati and active in the local branch. He married Mary Ann Adams in 1847. After moving to Utah, he served in his ward and worked on the Salt Lake Temple.",
+        "Elijah retained his priesthood office, yet his requests for his temple endowment and sealing to Mary Ann were denied by Brigham Young and, in 1879, John Taylor. His continued faithfulness deserves remembrance alongside the reality of the blessings he sought and could not then receive."
+      ]
+    },
+    {
+      "title": "A missionary who returned",
+      "source": "mission",
+      "paragraphs": [
+        "The Church’s account of his 1838 mission tells of Elijah teaching and baptizing Eunice and Charles Franklin. Later, while serving elsewhere, he dreamed that Eunice was struggling with her belief. He returned to visit her and invited her to hear him preach at a school. The account describes her renewed conviction as she listened.",
+        "His promise to return brought opposition. People circulated false accusations that he had killed others and offered a reward for his capture. Eunice defended him. When Elijah arrived again, a crowd gathered at the school. He faced those who wanted him arrested and offered them the opportunity to act before he taught.",
+        "No one moved. Elijah sang, prayed, and taught the gospel, then spoke with the Franklins and continued his mission. This Church-published narrative lets us remember him as a teacher attending to particular people, as well as a missionary confronting hostility. It is a retrospective account, with references to Saints, rather than a surviving transcript of every spoken word."
+      ]
+    },
+    {
+      "title": "Family journeys and a later mission",
+      "source": "database",
+      "paragraphs": [
+        "The Church History Biographical Database places Elijah and Mary Ann in the Appleton M. Harmon company in 1853. Its traveling-group record names their young children Moroni, Enoch, and Rebecca Ann. These names give the westward journey a family dimension: migration involved children and parents building a life together.",
+        "Decades later, the database records another missionary assignment. Elijah was set apart for the Northern States Mission on October 23, 1883, with Ohio listed as his place of service and Seventy as his priesthood office. It records his arrival home on December 11, 1884. He died in Salt Lake City on Christmas Day, two weeks later.",
+        "The database gives a specific birth date in 1808, while the Church’s historical biography retains a range of 1808–1812. This study therefore describes him as being in his seventies during that final mission without resolving the difference beyond the sources. The mission record establishes his service; the accompanying study scene imagines a quiet preparation moment, not a documented room or encounter."
+      ]
+    }
+  ],
+  "image": {
+    "file": "assets/page-art/priesthood-history/original-elijah-mission.png",
+    "generatedOutput": "C:/Users/wyatt/.codex/generated_images/01a0f2c9-0e8d-7592-baab-9a518f8ba1e2/exec-5b3e9aa5-9c4e-415b-b20d-4efd027377bd.png",
+    "tool": "image_gen.imagegen",
+    "reference": "C:/Users/wyatt/Documents/Codex/2026-09-30/cont/work/priesthood-historical-references/elijah.jpg",
+    "referenceCollection": "Church History Library PH5962",
+    "prompt": "Create a new original, near-photographic historical illustration, landscape 3:2. Use ONLY the LEFT portrait in the supplied historical composite as the facial identity reference for Elijah Able; do not reproduce the manuscript or text. Depict this same man carefully aged into his early-to-mid seventies during his documented 1883–1884 missionary service in Ohio. Preserve his distinctive high broad forehead, receding curly hair at the sides, slender face and long nose, restrained gentle mouth; add natural older skin texture, gray side curls, no invented beard. Respect the actual likeness, no generic replacement. Scene: a quiet, modest 1880s Ohio sitting room, Elijah seated beside a small table studying an open unlettered scripture volume in preparation to teach, three-quarter face clearly visible and dignified, attentive thoughtful expression. Period dark wool coat and waistcoat, white shirt and modest dark necktie; a simple worn travel bag beside chair, soft autumn daylight through window, wood interior. These contextual details are artistic interpretation, not a specific documented meeting. Two anatomically natural hands resting comfortably beside the open book, no gestures or extra digits. Human warmth and reverence without sentimental exaggeration. No other people, no Joseph Smith, no modern missionary name badge, no signage, no readable text, no halos. Rich realistic textures, natural light, clear face and hands at phone viewing size. Entire head and both hands comfortably inside image. Distinct from an existing formal seated portrait and young carpenter workshop illustration.",
+    "historicalBasis": "1883–1884 Ohio missionary service; surviving circa1862–1873 portrait used as facial reference and aged into seventies.",
+    "inferred": "Room, clothing colors, travel bag, book placement and particular preparation moment.",
+    "alt": "Historical artistic interpretation of Elijah Able in later life, seated with an open book.",
+    "caption": "Elijah Able’s missionary service continued into his seventies.",
+    "review": "Generator displayed result inspected for face and hands; distinct older study setting. Independent Newton concurrence required; no owner acceptance claimed.",
+    "rejectedOutput": "C:/Users/wyatt/.codex/generated_images/01a0f2c9-0e8d-7592-baab-9a518f8ba1e2/exec-14d8cf7e-69d4-4c75-b3b4-25c505cddfe5.png",
+    "rejectedReason": "Newton independent review: viewer-directed gaze and insufficient aging; revised.",
+    "revisionPrompt": "Revise the FIRST supplied image. Keep its period room, open book, hands and travel bag, but make two essential changes: Elijah Able must be visibly in his seventies, with naturally elderly facial skin, deeper age lines, more silver-gray side curls and a thinner crown; and he must look DOWN at the open book, head gently inclined, eyes directed to its pages, quietly absorbed in preparing to teach. This must read as a candid scripture-study activity, not a portrait posing at viewer. Preserve the distinctive actual Elijah facial identity from the LEFT portrait in SECOND supplied composite (high broad forehead, narrow face, prominent long nose, thin gentle lips); do not invent a beard. No exaggerated frailty, no caricature. Preserve natural anatomy, correct hands, realistic skin, photographic quality and landscape3:2. No new text or people. Artistic reconstruction of documented1883–1884Ohio missionary period, exact room/activity inferred.",
+    "sha256": "45d3573f8517eb5b1249723667a10106c004b9d9d20858844a1d1d83480cf8e0"
+  },
+  "independent_review": {
+    "reviewer": "Newton",
+    "result": "Actual revised PNG has task-directed downward gaze, older skin and grayer curls; official narrative/database match draft. Concur as historical artistic interpretation.",
+    "remaining": "Replace old Elijah prose instead of appending; keep aggregate per-source budget including captions. Actual final phone/desktop panel and behavior still require assembled review."
+  },
+  "integration_instruction": "REPLACE existing biography-dependent Elijah prose. History167words, mission164words, database165words. Biography-source image captions/annotations must fit remaining33words or use purely visual labels; count final assembled total."
+}

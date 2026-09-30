@@ -423,11 +423,12 @@
       "reason": "Artwork modifier."
     },
     "fc-history-life-card": {
-      "count": 3,
+      "count": 4,
       "pages": [
         "church-history.html"
       ],
       "tags": [
+        "figure",
         "section"
       ],
       "disposition": "coordinated_stylesheet_owner",

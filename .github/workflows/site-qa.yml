@@ -70,6 +70,7 @@ jobs:
 
       - name: Run focusChrist structural site QA
         run: |
+          python tools/site_qa_metadata_test.py
           python tools/site_qa.py
           python tools/site_flow_qa.py
           python tools/media_voice_qa.py
@@ -122,6 +123,7 @@ jobs:
         run: |
           npm install --prefix "$RUNNER_TEMP/focuschrist-dom-qa" --no-save --package-lock=false --ignore-scripts jsdom@26.1.0
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/opening_flow_and_cards_qa.js
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/unified_opening_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/father_opening_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/study_link_controls_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/art_study_picture_runtime_qa.js
@@ -174,7 +176,9 @@ jobs:
           NODE_PATH=/tmp/focus-row-qa/node_modules node tools/history_hero_browser_qa.js
           python tools/home_hero_height_qa.py
           python tools/answer_opening_qa.py
+          python tools/unified_opening_qa.py
           NODE_PATH=/tmp/focus-row-qa/node_modules node tools/answer_opening_browser_qa.js
+          NODE_PATH=/tmp/focus-row-qa/node_modules node tools/unified_opening_browser_qa.js
           NODE_PATH=/tmp/focus-row-qa/node_modules node tools/home_hero_height_browser_qa.js
           NODE_PATH=/tmp/focus-row-qa/node_modules node tools/footer_navigation_browser_qa.js
 
@@ -184,6 +188,15 @@ jobs:
         with:
           name: answer-opening-render
           path: .qa-artifacts/answer-openings.json
+          include-hidden-files: true
+          if-no-files-found: ignore
+
+      - name: Save sitewide opening viewport evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: unified-opening-render
+          path: .qa-artifacts/unified-opening*.json
           include-hidden-files: true
           if-no-files-found: ignore
 

@@ -43,4 +43,6 @@ def build():
     out+=['</ul></section><section class="fc-deep-study" id="continue-study"><h2>Continue your study</h2><div class="fc-study-grid"><article><h3><a href="melchizedek-priesthood-restoration.html#priesthood-and-temple-blessings">Return to the priesthood study</a></h3><p>Continue learning about priesthood authority and the call to serve.</p></article><article><h3><a href="why-latter-day-saints-build-temples.html">Why Latter-day Saints build temples</a></h3><p>Study the place of covenants and family sealing in temple worship.</p></article><article style="grid-column:1 / -1"><h3><a href="../church-history.html">Explore Church history</a></h3><p>Meet other Saints through their lives and recorded experiences.</p></article></div><div class="fc-actions"><a class="fc-button" href="../ask.html?question=What%20do%20official%20Church%20sources%20teach%20about%20the%201978%20revelation%3F">Ask about this study</a><a href="../answers.html">Choose another study</a></div></section></main>',str(parent.footer),'<script>function toggleMenu(){var m=document.getElementById("hamburgerMenu");if(m)m.classList.toggle("show");}</script></body></html>']
     result='\n'.join(out)
     CHILD.write_text(result,encoding='utf-8',newline='\n')
+    from enrich_priesthood_study import enrich
+    enrich()
 if __name__=='__main__':build()

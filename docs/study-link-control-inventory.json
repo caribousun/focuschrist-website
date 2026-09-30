@@ -2,7 +2,7 @@
   "canonical_pages": 125,
   "selectors": {
     ".fc-study-visual-sources a:not(.fc-button--primary)": {
-      "count": 801,
+      "count": 838,
       "pages": [
         "answers/aaronic-priesthood-restoration.html",
         "answers/abrahamic-covenant.html",
@@ -19,6 +19,7 @@
         "answers/melchizedek-priesthood-restoration.html",
         "answers/plan-of-salvation.html",
         "answers/prayer-and-personal-revelation.html",
+        "answers/race-priesthood-and-temple-blessings.html",
         "answers/restored-church-of-jesus-christ.html",
         "answers/what-happens-after-death.html",
         "answers/what-is-eternal-marriage.html",
@@ -141,7 +142,7 @@
       ]
     },
     ".fc-study-nav:not(.jj-local-nav) a:not(.fc-button--primary)": {
-      "count": 185,
+      "count": 187,
       "pages": [
         "answers/aaronic-priesthood-restoration.html",
         "answers/are-latter-day-saints-christian.html",

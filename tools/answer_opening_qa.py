@@ -37,12 +37,28 @@ def check():
             assert doc.select_one('#a-promise-to-live-by') and 'fc-button' not in cues[0].get('class',[])
             cues[0].decompose() # Only this reviewed action replaces the previously hidden Begin.
         else:assert header.select_one('a[href="#begin-study"]') and doc.select_one('#begin-study')
+        if name==SOURCE:
+            green=header.select('a[href="#green-flake"]')
+            assert len(green)==1 and green[0].get_text(strip=True)=='Green Flake' and doc.select_one('section#green-flake'), 'Only reviewed Green Flake directory addition allowed'
+            green[0].decompose()
+            pictures=json.loads((ROOT/'docs/priesthood-history/body-pictures.json').read_text(encoding='utf8'))
+            expected={('/'+p['asset']):p for p in pictures}
+            assert len(expected)==len(pictures), 'Generated study assets must be unique'
+            added=[i for i in doc.select('img') if i.get('src','').startswith('/assets/page-art/priesthood-history/')]
+            assert len(added)==len(expected) and {i['src'] for i in added}==set(expected), 'Study images must exactly match reviewed manifest'
+            for img in added:
+                picture=expected[img['src']]
+                assert img.get('alt')==picture['alt'] and img.get('width')==str(picture['width']) and img.get('height')==str(picture['height']), 'Preserve manifest image description and dimensions'
+                assert img.get('loading')=='lazy' and img.get('decoding')=='async'
+                assert hashlib.sha256((ROOT/picture['asset']).read_bytes()).hexdigest()==picture['sha256'], 'Preserve exact reviewed image bytes'
+                img.decompose()
+            assert len(doc.select('img'))==6, 'Preserve six original official media previews'
         assert digest(str(header))==r['opening_sha256'],name+': opening copy/hero markup changed'
         assert digest(''.join(str(i) for i in doc.select('img')))==r['images_sha256'],name+': approved image references/attributes changed'
         for css,owned in [('answer-opening.css',name in topics),('covenant-opening.css',name==COVENANT)]:
             links=[l for l in doc.select('link[rel="stylesheet"]') if css in l.get('href','')]
             assert len(links)==int(owned),name+': wrong opening stylesheet ownership'
-            if links:assert links[0]['href']=='../'+css+'?v='+('20260930-centered-3' if name==COVENANT else '20260930-2')
+            if links:assert links[0]['href']=='../'+css+'?v='+('20260930-boundary-4' if name==COVENANT else '20260930-2')
     css=(ROOT/'answer-opening.css').read_text(encoding='utf8')
     clean=re.sub(r'/\*.*?\*/','',css,flags=re.S).strip()
     assert clean.startswith('@media (min-width: 701px) {') and clean.count('@media')==1
