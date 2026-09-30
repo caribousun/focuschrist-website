@@ -44,7 +44,7 @@ module.exports = async function checkInteractionPresentation(page, origin, route
     await page.setViewportSize({width:1366,height:1000});
     const cases = [
       ['index.html','.fc-home-purpose-paths .fc-card'],
-      ['index.html','.fc-page-intro .fc-button'],
+      ['index.html','.fc-unified-opening-continuation .fc-button'],
       ['answers.html','.fc-answers-jumps a'],
       ['answers/faith-in-jesus-christ-during-trials.html','.notice'],
       ['answers/faith-in-jesus-christ-during-trials.html','.cta'],
@@ -59,6 +59,7 @@ module.exports = async function checkInteractionPresentation(page, origin, route
       await page.emulateMedia({reducedMotion:'no-preference'});
       await page.goto(origin+'/'+route,{waitUntil:'load'});
       if (selector === '.jj-local-nav a') await page.locator('.jj-chapter-picker > summary').click();
+      if (selector === '.fc-unified-opening-continuation .fc-button') await page.locator('[data-unified-opening] > .fc-unified-continue').waitFor({state:'visible'});
       const target=page.locator(selector).first();
       await target.hover();
       await page.waitForTimeout(240);
@@ -72,7 +73,21 @@ module.exports = async function checkInteractionPresentation(page, origin, route
     }
     await page.emulateMedia({reducedMotion:'no-preference'});
     await page.goto(origin+'/index.html');
-    const action=page.locator('.fc-page-intro .fc-button').first();
+    const cue=page.locator('[data-unified-opening] > .fc-unified-continue');
+    await cue.waitFor({state:'visible'});
+    assert.equal(await cue.count(),1,'Home must expose one current Continue cue');
+    const cueGeometry=await cue.evaluate(n=>{const r=n.getBoundingClientRect();return {left:r.left,right:r.right,top:r.top,bottom:r.bottom,height:r.height,href:n.getAttribute('href'),viewportWidth:innerWidth,viewportHeight:innerHeight};});
+    assert(cueGeometry.height>=44 && cueGeometry.left>=0 && cueGeometry.right<=cueGeometry.viewportWidth && cueGeometry.top>=0 && cueGeometry.bottom<=cueGeometry.viewportHeight-19,'Current Continue must fit complete opening');
+    assert.equal(cueGeometry.href,'#fc-opening-retained','Continue must reach retained Home actions');
+    await cue.focus();
+    await page.keyboard.press('Tab');
+    await page.keyboard.press('Shift+Tab');
+    assert(await cue.evaluate(n=>n.matches(':focus-visible') && getComputedStyle(n).outlineStyle!=='none' && parseFloat(getComputedStyle(n).outlineWidth)>=2),'Current Continue requires visible keyboard focus');
+    await cue.press('Enter');
+    await page.waitForFunction(()=>location.hash==='#fc-opening-retained');
+    const action=page.locator('.fc-unified-opening-continuation .fc-button').first();
+    assert(await action.isVisible(),'Continue must preserve original Home actions');
+    record('current-continue',{...cueGeometry,keyboardFocus:true,retainedActions:true});
     await action.focus();
     await page.keyboard.press('Tab');
     await page.keyboard.press('Shift+Tab');
