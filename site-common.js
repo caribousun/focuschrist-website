@@ -989,7 +989,6 @@
         // Owner-authorized wording repairs only; section images and geometry stay original.
         const sectionCopyPages = new Set([
             '/answers/what-is-eternal-marriage.html',
-            '/answers/look-unto-me-doctrine-and-covenants-6-36.html',
             '/answers/bible-and-book-of-mormon-together.html',
             '/answers/melchizedek-priesthood-restoration.html',
             '/birth-of-christ.html', '/joseph-smith-likeness.html',
@@ -1072,13 +1071,6 @@
             if (path === '/answers/what-is-eternal-marriage.html') {
                 moveBelow('.fc-topic-subtitle');
                 shortText('.fc-page-intro-copy', 'An eternal covenant centered on Christ.', true);
-            }
-            if (path === '/answers/look-unto-me-doctrine-and-covenants-6-36.html') {
-                moveBelow('.fc-topic-subtitle');
-                moveBelow('.fc-page-intro-copy');
-                moveBelow('.fc-page-intro-copy + .fc-page-intro-copy');
-                shortText('.fc-actions > a:first-child', 'Read D&C 6');
-                shortText('.fc-actions > a:nth-child(2)', 'Rejoice in Christ');
             }
             if (path === '/answers/bible-and-book-of-mormon-together.html') {
                 shortText('.fc-eyebrow', 'Study Jesus Christ');
