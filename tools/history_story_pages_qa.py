@@ -85,7 +85,14 @@ assert any('wooden' in p.lower() for u in moyle['units'] for p in u['paragraphs'
 assert 'wooden' in ready['moyle-wooden-leg']['alt'].lower(), 'Required wooden-leg scene must be visibly described'
 css = (ROOT/'history-stories.css').read_text(encoding='utf-8')
 assert all(token in css for token in ('var(--fc-panel-fill)', 'var(--fc-panel-border)', 'var(--fc-panel-shadow)'))
-assert not re.search(r'(?:^|[;{])\s*(?:height|min-height|max-height|object-fit)\s*:', css), 'Shared standard hero geometry must remain authoritative'
+# Only the reviewed mobile directory touch target may set a minimum height.
+summary_rule = '.fc-life-story .fc-life-directory summary { padding-block: 10px; min-height: 44px; box-sizing: border-box; }'
+assert css.count(summary_rule) == 1, 'Exact reviewed summary touch-target declaration required'
+mobile_start = css.index('@media (max-width: 700px) {')
+summary_start = css.index(summary_rule)
+assert summary_start > mobile_start and '\n}' not in css[mobile_start:summary_start], 'Summary target must remain inside the mobile block'
+geometry_css = css.replace(summary_rule, summary_rule.replace(' min-height: 44px;', ''), 1)
+assert not re.search(r'(?:^|[;{])\s*(?:height|min-height|max-height|object-fit)\s*:', geometry_css), 'Shared standard hero geometry must remain authoritative'
 shared_css = (ROOT/'site-system.css').read_text(encoding='utf-8')
 assert 'aspect-ratio: 2048 / 684;' in shared_css and '--fc-mobile-hero-height: clamp(320px, 115vw, 800px)' in shared_css
 frame = json.loads((DATA/'frame-review-20260929.json').read_text(encoding='utf-8'))
