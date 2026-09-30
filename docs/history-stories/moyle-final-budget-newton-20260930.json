@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-30",
+  "method": "Conservative factual derivative excerpts across final narrative, intro and rendered captions. Counts repeated substantive facts even in reflective paragraphs; excludes independent reader reflection, caveats about missing evidence, visual reconstruction limits, Ensign Peak museum/son/horse details, primary travel journal and independently documented inscription/death facts. Underlying Holland/Uchtdorf family account treated together.",
+  "segments": {
+    "weekly_schedule": "Later accounts remember a Monday departure before daylight, a working week in Salt Lake City, and a Friday walk home.",
+    "cow_facts": "In the later family account retold by Jeffrey R. Holland, a cow bolted during milking and kicked Moyle below the knee, shattering the bone. Family and friends used a door as an operating table, and the injured leg was amputated.",
+    "recovery": "As the wound healed, Moyle began shaping a wooden leg. The replacement included a joint for the ankle and foot. Walking hurt. He practiced inside the house, then in the yard, and eventually farther around his property, extending what he could manage a little at a time.",
+    "return": "In the family account, Moyle gradually regained enough strength to resume the journey to temple work. Returning meant putting his practiced hands to use again.",
+    "intro": "later family memories tell of the injury, patient recovery and return to temple work for which he is remembered.",
+    "weekly_caption": "Moyle on the road between home and work.",
+    "cow_caption": "An imagined aftermath of the cow’s kick in the later family account.",
+    "wood_caption": "Moyle shapes a wooden leg;",
+    "return_caption": "The stonecutter at work again, with a wooden leg.",
+    "repeated_care": "Family and friends had a place in his survival",
+    "repeated_recovery": "Learning to use it belonged to the recovery as much as making it."
+  },
+  "counts": {
+    "weekly_schedule": 20,
+    "cow_facts": 40,
+    "recovery": 47,
+    "return": 25,
+    "intro": 19,
+    "weekly_caption": 8,
+    "cow_caption": 12,
+    "wood_caption": 5,
+    "return_caption": 9,
+    "repeated_care": 9,
+    "repeated_recovery": 13
+  },
+  "total": 207,
+  "tests": {
+    "history_story_runtime": "PASS24 including exact source equality after root reduced five sources to three",
+    "topic_sources": "PASS",
+    "illustrated_navigation_source_and_runtime": "PASS",
+    "art_study_picture": "PASS20",
+    "temple_history": "PASS21",
+    "artwork_reference": "PASS",
+    "desktop_hero": "PASS",
+    "evidences": "PASS12",
+    "legacy_unregistered_onward": "KNOWN_PREEXISTING_FAIL: expects removed guessed page-level route; untouched as root instructed"
+  },
+  "attribution": "Cow expressly later family tradition, pictured aftermath imagined, travel journal does not establish occurrence/date/side. Not authenticated eyewitness incident."
+}

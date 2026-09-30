@@ -1,0 +1,76 @@
+{
+  "date": "2026-09-30",
+  "reviewer": "Fermi",
+  "verdict": "PASS_WITH_DOCUMENTED_SOURCE_LIMITS",
+  "scope": "Independent actual final narrative, captions, source attribution and emitted three History pages; no new browser or aesthetic acceptance claimed.",
+  "reviewed_source_sha256": {
+    "docs/history-stories/stories.json": "b5689b0159aaca4e00bc058cec10bc232087caf6e1776c1d5335756cae343e8a",
+    "docs/history-stories/art-ready.json": "a2bb265a351518b4755198ab77f41a44dbfba0329f7170448bea161982f7074f"
+  },
+  "published_pages": [
+    {
+      "path": "history/john-tanner.html",
+      "before_published_text_sha256": "5c7d7c4a8a609a8698645c9a5e85f541787b64e335d3165c5febc09d77753c64",
+      "published_text_sha256": "923900dda8caf6ffd35751f3128876b17850f23d728e63b9122bd42b261e6bfa",
+      "narrative_and_caption_match": true,
+      "units": 7
+    },
+    {
+      "path": "history/eleazer-miller.html",
+      "before_published_text_sha256": "3bd14caf2666e952c72046a591425fe9795996d10b2623e34f83b27b47716070",
+      "published_text_sha256": "21e7e9918e4a0caba4c8c20b8135e1cd369ae0053afeac57607c9e119df392e4",
+      "narrative_and_caption_match": true,
+      "units": 9
+    },
+    {
+      "path": "history/john-rowe-moyle.html",
+      "before_published_text_sha256": "3f71a81b1cbb997f868112bd432b663159048f34e5a9774cde177ecfcd77056a",
+      "published_text_sha256": "e2c3bf4a4d5e95dcd4e3abd2bc71f92796565060f4da1d1372cea66cdda4ce98",
+      "narrative_and_caption_match": true,
+      "units": 8
+    }
+  ],
+  "source_checks": [
+    "Tanner: Carter journal governs the offered hand and Simeon praying elsewhere. Scraps of Biography (1883) is explicitly retrospective, not a Tanner diary. The public-domain text supplies later life and the quoted debt exchange; JSP editorial chronology avoids a single rushed property sale. Pettegrew December21,1844 letter distinguished from the next unrelated letter. D&C109 dedication context retained.",
+    "Miller: Brigham household care and cold April baptism match the official biographical chapter; later testimony is framed as recollection. BYU source supports visits and grove preaching; James Lake location broadened to Upper Canada. Primary Camp history supports three horses. Heward hardship/help concerns Heward own group. Relief minutes support the gift and Rebecca membership without inventing her attendance that day.",
+    "Moyle: voyage detail derives from the surviving journal transcription. Cow injury, amputation, recovery and return expressly derive from a later family tradition. The travel journal is not represented as recording the injury. No injury year, leg side or authenticated eyewitness account is asserted. Site-history museum claim remains attributed; inscription report supplies the modern restoration facts."
+  ],
+  "source_budget_method": "Sentence-level factual derivation, with caption, title and introductory factual portions included; independent reflection and image-description wording are not additional historical paraphrase. Retellings of the same account are aggregated. Superseded prose is replaced rather than appended. Bounds below are conservative allocations, not whole-page word counts.",
+  "miller_modern_source_upper_bounds": {
+    "official_Brigham_biography": 194,
+    "Miller_CHD": 190,
+    "BYU_Young_family": 195,
+    "Young_testimony_and_Maxwell_retelling": 165,
+    "James_Lake_JSP": 56,
+    "Camp_history": 141,
+    "Heward_transcript": 100,
+    "Rebecca_CHD": 60,
+    "Relief_minutes": 140
+  },
+  "miller_largest_bound_detail": "Young-family narrative allocation132 + both whole road/grove captions43 + source-dependent title/introduction reserve20 =195. Biographical age/death facts and Lake material charged separately to their cited sources.",
+  "tanner_budgets": {
+    "1883_account": "Public-domain 1883 publication; retrospective provenance explicit. Not charged as modern Arrington paraphrase.",
+    "Carter": "Under200 including healing account, attendance and caption; published direct quote7words.",
+    "JSP_modern_biography_and_editorial_context": "Combined source-dependent portions under200.",
+    "Arrington_legacy_captions": "Three complete surviving related captions total37words; no new narrative assigned to this modern retelling.",
+    "Pettegrew": "1844 letter published1845, public domain; two narrative paragraphs108words and caption20. Quoted grief sentence13words."
+  },
+  "moyle_budgets": {
+    "shared_family_tradition": 194,
+    "shared_family_method": "Independently compared Newton207-word excerpt allocation with actual emitted text. The13-word repeated recovery sentence is absent;194remain. This includes source-derived intro and five caption portions. Snapshot docs/history-stories/moyle-final-budget-newton-20260930.json retains pre-cut207 for audit trail.",
+    "voyage": "Complete Atlantic narrative175 + wholecaption14 + six-word introduction journal attribution=195; original nineteenth-century journal distinct from modern editorial material. Handcart family/arrival facts independently allocated to CHD/Ellsworth.",
+    "site_history": "Factual house/farm/horse/lodging/artifact portions, factual caption portions and repeated horse detail remain below200; original connecting reflections are excluded.",
+    "modern_inscription_and_CHD": "Separate modern report and biographical sources; each under200."
+  },
+  "limits": [
+    "Possible1888 newspaper lead was unavailable as an inspectable original; person identity and relationship to the later cow tradition remain unresolved. No claim of contradiction or validation is made.",
+    "No newly inspected unpublished diary is claimed. Archival Carter attendance relies on previously recorded actual-page review; this final pass checked its use.",
+    "Historical paintings are reconstructions, not authenticated photographs or exact original artifacts. Independent technical review does not equal owner aesthetic approval."
+  ],
+  "validation": {
+    "history_story_pages_qa": "PASS24; fixed previous23 source/full/thumbnail hashes preserved",
+    "emitted_text": "All24 unit paragraphs and captions match final reviewed source",
+    "git_diff_check": "PASS"
+  },
+  "receipt_changes": "Only the three History records in content-audit.json were refreshed after semantic review."
+}

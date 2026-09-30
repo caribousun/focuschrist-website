@@ -1,0 +1,58 @@
+{
+  "reviewer": "Fermi",
+  "date": "2026-09-30",
+  "reviewed_file": "work\\miller-warmth-research.json",
+  "reviewed_sha256": "7479134c5ebc190a4fabdad17887549a60644b0a48010bff07f94a18e4c24c50",
+  "verdict": "PASS_WITH_SMALL_EDITORIAL_AND_LINK_RECOMMENDATIONS",
+  "production_edits": false,
+  "facts_and_warmth": [
+    "Official Brigham chapter independently confirms breakfast, daughters, rocking chair, evening care, two-year inquiry, cold snowy baptism and Miriam death. Human detail is sourced, not imagined.",
+    "BYU chapter independently confirms five missionaries, January1832weeklongfamilyvisit, Canadian groves and scripture study.",
+    "Brigham later testimony independently confirms Miller identification, spiritual light and joy. Retrospective framing maintained; gratitude is clearly reading of recollection rather than invented1832dialogue.",
+    "JSP manuscript pages569/570 independently confirm three horses nearRochester May30, sickness and Miller publicexhortation.",
+    "Heward official transcript independently fetched after webtool error; confirms travel with Miller then explicitly switches to Pulsipher company. Draft correctly confines exhaustedteams/help to Heward own group.",
+    "Official Relief Society minutes confirm May28donation95cents; Rebecca member/meeting participation and carpet context separately supported. Draft does not invent herMay28attendance or Millerrecipient/poverty.",
+    "Official biography independently confirms Rebecca1797\u20131886, marriage1816,1848companyage50; Miller1795\u20131876andage52 consistent."
+  ],
+  "budget_review": {
+    "verdict": "PASS_REPLACEMENT_ONLY",
+    "method": "Checked sentence-level allocation rather than conservative whole-unit attribution repeated acrosssources. All finalreserved totals<=200. Camp pages grouped asone underlying history. All excerpts<=25/source. No narrative quotation invented.",
+    "largest_reserved": {
+      "brigham_home": 194,
+      "miller_bio": 178,
+      "young_family": 165
+    },
+    "required_final_integration_condition": "Replace oldunitprose; include actual rendered caption/panel/title copy and anynewmetadata in finalsource ledger. Do not addold andnew narratives or duplicate excerpt blocks publicly.",
+    "documentation_note": "conservative_whole_unit_counts miller_bio282 is a deliberately overinclusive count, not final allocation. Rename that field to avoid presenting it as a contradictory compliance result."
+  },
+  "recommendations": [
+    {
+      "priority": "small factual precision",
+      "unit": "miller-canada-grove",
+      "existing": "a father living in Ernestown",
+      "suggested": "a father living in Upper Canada",
+      "reason": "JSP placesLake inErnestown circa1793; BYUchapter specifiesCamden immediatelynorthofErnestown in1832. Broaderlocation avoids asserting precise1832residence from earliermove."
+    },
+    {
+      "priority": "link reliability",
+      "unit": "miller-zions-camp-horses",
+      "suggested_urls": [
+        "https://www.josephsmithpapers.org/paper-summary/history-1838-1856-volume-a-1-23-december-1805%EF%BB%BF-30-august-1834/569",
+        "https://www.josephsmithpapers.org/paper-summary/history-1838-1856-volume-a-1-23-december-1805%EF%BB%BF-30-august-1834/570"
+      ],
+      "reason": "Search-indexed JSPcanonical slug contains encodedBOM; those fetched successfully. Plain slug returned webtool internalerror; not proof ordinarybrowserbroken, but use verifiedcanonical URLs."
+    },
+    {
+      "priority": "reader-facing polish",
+      "unit": "source labels",
+      "suggested": "Add spaces to May30,1844 / 1848journey / minutes,1854 labels",
+      "reason": "JSONlabel strings contain compressed words; metadata should read naturally."
+    }
+  ],
+  "limits": [
+    "No claim to view unpublishedMillerdiary.",
+    "No manuscriptimagepaleography recheck; authoritativepublishedtranscriptions read.",
+    "No publishedproduct mutated.",
+    "Moyle factfinalization remains paused pending resolution ofprimaryloginjury vs latercowtradition."
+  ]
+}

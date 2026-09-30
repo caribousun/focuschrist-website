@@ -3,14 +3,14 @@
     {
       "id": "john-tanner",
       "title": "John Tanner: receiving, giving, and remembering",
-      "introduction": "John Tanner joined the Church in New York in 1832. Over the next eighteen years, his path led through Kirtland, Missouri, the Mississippi settlements, and the Salt Lake Valley. Along the way he gave money, endured violence and displacement, preached the gospel, and helped build two temples.",
+      "introduction": "John Tanner’s story begins with a hand he needed someone else to offer. It continues through gifts, losses, long roads and repeated beginnings. His companions’ accounts and his family’s memories help us see the person behind the familiar story of his generosity.",
       "units": [
         {
           "id": "tanner-healing-witness",
-          "title": "A hand offered in the name of Christ",
+          "title": "The hand he accepted",
           "paragraphs": [
-            "John Tanner was a farmer and timberland owner in Bolton, New York, when missionaries brought him the restored gospel. He was fifty-four years old. Jared Carter recorded finding him unable to put weight on one foot after months of lameness. Tanner already believed in the Book of Mormon. Carter invited him to try walking in the name of Jesus Christ, took his hand, and commanded him to walk. In Carter’s account, Tanner was healed. Carter also recorded that Simeon was absent at that moment, praying separately for Tanner.",
-            "Tanner was baptized at Bolton Landing on September 17, 1832. The following February, Orson Pratt ordained him a priest. His new faith soon changed where he would live and what he would do with the property he had accumulated. The prosperous New York landowner began preparing to join the Saints in Ohio."
+            "Before John Tanner became known for what he gave, he needed help himself. At fifty-four, he could not bear his weight on one foot. Jared Carter found that the man before him already believed in the Book of Mormon. He asked Tanner to try walking in the name of Christ. Tanner agreed. Carter’s journal remembers the next moment simply: “I then took him by the hand.” In Carter’s account, Tanner was enabled to walk through the power of Christ.",
+            "That offered hand belongs at the beginning of Tanner’s story. His faith grew from receiving as well as giving. Carter also remembered his brother Simeon praying elsewhere while he was with Tanner. Tanner was baptized at Bolton Landing on September 17, 1832. The man who had been unable to put weight on his foot would soon begin a journey that carried his household far beyond New York."
           ],
           "sources": [
             {
@@ -22,10 +22,6 @@
               "url": "https://www.josephsmithpapers.org/person/john-tanner"
             },
             {
-              "label": "John Tanner — Church History Biographical Database",
-              "url": "https://history.churchofjesuschrist.org/chd/individual/john-tanner-1778?lang=eng"
-            },
-            {
               "label": "Jared Carter’s journal — typescript, page 19",
               "url": "https://catalog.churchofjesuschrist.org/assets/994fb2fe-d8b1-4156-a452-3a8fecacf538/1/42"
             }
@@ -35,15 +31,19 @@
         },
         {
           "id": "tanner-journey-kirtland",
-          "title": "A decision that moved a household",
+          "title": "Leaving home on Christmas Day",
           "paragraphs": [
-            "In December 1834, Tanner felt an urgent need to go to Kirtland. He disposed of property and left with his household on Christmas morning. Their journey covered roughly five hundred miles; they arrived in January 1835.",
-            "Money was due on the temple land. Tanner lent Joseph Smith $2,000 to meet that need and received a note for the loan."
+            "Tanner had more than money to leave behind in New York. His son Nathan remembered mills, houses, barns and abundant orchards. Selling property meant loosening his hold on an established way of life. Joseph Smith Papers editors trace several sales across 1833 and 1834, rather than one hurried sale of everything. A later account says that, in December 1834, Tanner felt impressed to go to Kirtland without waiting until spring.",
+            "On Christmas Day the household began its journey west. The 1883 account remembers neighbors trying to dissuade him and a winter journey of about five hundred miles. They reached Kirtland in January. There Tanner learned of the money needed for the temple land and lent Joseph Smith $2,000. The note he received would remain part of his story for years."
           ],
           "sources": [
             {
-              "label": "The John Tanner Family",
-              "url": "https://www.churchofjesuschrist.org/study/ensign/1979/03/the-john-tanner-family?lang=eng"
+              "label": "January 1835 minutes and Tanner family recollections",
+              "url": "https://www.josephsmithpapers.org/paper-summary/minutes-18-january-1835/1"
+            },
+            {
+              "label": "Scraps of Biography (1883) — later account of John Tanner",
+              "url": "https://www.gutenberg.org/cache/epub/46734/pg46734-images.html"
             }
           ],
           "caption_boundary": "The Tanner household’s move toward Kirtland, recalled in a later family history. The landscape and travel arrangements are interpretive.",
@@ -51,15 +51,15 @@
         },
         {
           "id": "tanner-temple-support",
-          "title": "Resources put to work at Kirtland",
+          "title": "Helping others build a house of worship",
           "paragraphs": [
-            "Tanner advanced funds to the temple committee and helped back purchases of goods. His financial commitments put his resources at risk. He also became a stockholder in the Kirtland Safety Society.",
-            "The temple was a shared undertaking. The revelation now recorded in Doctrine and Covenants 109 preserves Joseph Smith’s dedication prayer, offered on March 27, 1836. It speaks of the Saints’ poverty, their work, and their desire to build a house to God’s name. Tanner’s contributions helped meet material needs within that larger effort of worship and sacrifice."
+            "The loan for the land was only part of Tanner’s help. The later account describes merchandise supplied to the temple committee and his signature on another obligation for goods. These were practical contributions: things the builders could use and commitments for which Tanner could be held responsible. He also made donations as the work continued.",
+            "When the Kirtland Temple was completed, Tanner joined its dedication, according to the later account. Doctrine and Covenants 109 preserves the prayer offered there: the Saints brought their poverty, labor and love before the Lord. Tanner could worship in the house he had helped build. The years that followed brought financial losses, including his investment in the Kirtland Safety Society. Giving generously had not made his family immune to hardship."
           ],
           "sources": [
             {
-              "label": "The John Tanner Family",
-              "url": "https://www.churchofjesuschrist.org/study/ensign/1979/03/the-john-tanner-family?lang=eng"
+              "label": "Scraps of Biography (1883) — later account of John Tanner",
+              "url": "https://www.gutenberg.org/cache/epub/46734/pg46734-images.html"
             },
             {
               "label": "John Tanner — Joseph Smith Papers",
@@ -75,19 +75,19 @@
         },
         {
           "id": "tanner-displacement",
-          "title": "A family within the gathering and displacement",
+          "title": "A father, a son, and the road ahead",
           "paragraphs": [
-            "Tanner left Kirtland for Far West in 1838. In Missouri, he was severely beaten during the violence against the Saints. By the following spring he had moved again, this time to New Liberty in Illinois. In March 1840 he settled near Montrose, across the Mississippi River from Nauvoo.",
-            "He again helped with temple construction, contributing to the Nauvoo Temple while rebuilding his family’s life."
+            "The journey to Missouri brought Tanner’s family into need. The 1883 narrative recalls borrowed equipment and occasions when they asked people along the road for food. It also remembers a daughter dying during the journey. Later that year, while returning from a mill with his son Myron, Tanner saw armed men approaching and sent the boy to hide. Myron escaped into brush; his father was struck in the head and taken prisoner.",
+            "For the family, persecution meant more than losing a place on a map. It meant finding one another again and beginning the work of feeding a household after another move. They left Missouri in 1839, stopped at New Liberty, and settled near Montrose in 1840. Across the river from Nauvoo, Tanner farmed again and helped with another temple. The family account follows him through both the hurt and the ordinary work of starting over."
           ],
           "sources": [
             {
-              "label": "John Tanner — Joseph Smith Papers",
-              "url": "https://www.josephsmithpapers.org/person/john-tanner"
+              "label": "Scraps of Biography (1883) — later account of John Tanner",
+              "url": "https://www.gutenberg.org/cache/epub/46734/pg46734-images.html"
             },
             {
-              "label": "John Tanner — Church History Biographical Database",
-              "url": "https://history.churchofjesuschrist.org/chd/individual/john-tanner-1778?lang=eng"
+              "label": "John Tanner — Joseph Smith Papers",
+              "url": "https://www.josephsmithpapers.org/person/john-tanner"
             }
           ],
           "caption_boundary": "An interpretive migration scene recalling the Tanner family’s displacement during the Missouri period; no specific attack is portrayed.",
@@ -95,18 +95,15 @@
         },
         {
           "id": "tanner-debt-forgiven",
-          "title": "The note that became a remembered gift",
+          "title": "A gift remembered in a few words",
           "paragraphs": [
-            "According to the later family account, Tanner met Joseph Smith in Nauvoo before his 1844 mission and returned the $2,000 note. Joseph asked what to do with it. Tanner forgave the debt, making the loan an outright gift."
+            "Before leaving on his mission in 1844, Tanner met Joseph Smith in Nauvoo. In the later account, he handed back the note for the $2,000 lent in Kirtland. Joseph asked what he wanted done with it. Tanner answered, “Brother Joseph, you are welcome to it.” He offered the note as a gift.",
+            "The account remembers Joseph placing a hand on Tanner’s shoulder and blessing him and his children. The note had accompanied years of temple building, financial loss and another move west. Tanner now handed it back without asking for payment. His family preserved the exchange as one of the ways they remembered his generosity."
           ],
           "sources": [
             {
-              "label": "The John Tanner Family",
-              "url": "https://www.churchofjesuschrist.org/study/ensign/1979/03/the-john-tanner-family?lang=eng"
-            },
-            {
-              "label": "John Tanner — Church History Biographical Database",
-              "url": "https://history.churchofjesuschrist.org/chd/individual/john-tanner-1778?lang=eng"
+              "label": "Scraps of Biography (1883) — later account of John Tanner",
+              "url": "https://www.gutenberg.org/cache/epub/46734/pg46734-images.html"
             }
           ],
           "caption_boundary": "The release of the 1835 debt, as remembered in the family account of an 1844 meeting. This is an artistic reconstruction.",
@@ -114,10 +111,10 @@
         },
         {
           "id": "tanner-mission-road-1844",
-          "title": "On the road again, 1844",
+          "title": "Good news carried through grief",
           "paragraphs": [
-            "In April 1844, Tanner left on a mission with David Pettegrew. Their journey took them by river to Pittsburgh, then on foot toward Buffalo. Pettegrew later reported walking 240 miles with Tanner and preaching along the way. From Buffalo they continued by boat toward Troy, carrying their message into New York and New England.",
-            "While they were still in the East, news reached them that Joseph and Hyrum Smith had been killed. Pettegrew’s December account describes their decision to visit acquaintances, bear testimony, and then turn westward. Tanner had left Nauvoo before the deaths; this was news received during his mission, far from Carthage."
+            "At sixty-five, Tanner set out with David Pettegrew. Pettegrew’s December 1844 report follows them by river to Pittsburgh and then on foot for 240 miles to Buffalo, preaching whenever they had an opportunity. On the boat toward Troy, fellow passengers arranged for preaching in the cabin. Their work unfolded among people who welcomed them, listened, argued or asked for baptism.",
+            "Then news of Joseph and Hyrum Smith’s deaths reached them in the East. Pettegrew wrote, “We hardly knew what to do, or how to act, for a while.” Eventually they decided to visit the people they knew, bear testimony and travel west, continuing to speak along the way."
           ],
           "sources": [
             {
@@ -129,19 +126,19 @@
         },
         {
           "id": "tanner-family-crossing-1848",
-          "title": "A family journey to the valley",
+          "title": "Making room for another beginning",
           "paragraphs": [
-            "After leaving Nauvoo, Tanner reached the Council Bluffs area in 1846. Two years later he traveled with Elizabeth and other family members in the Willard Richards company. The company’s journey ran from July 3 to October 10, 1848. Tanner began it at sixty-nine and turned seventy along the way.",
-            "The family’s next home was South Cottonwood in the Salt Lake Valley. Tanner died there in 1850, aged seventy-one. His record had carried him from New York through Kirtland, Missouri, the Mississippi settlements, and finally Utah. The westward crossing was the last great move in that succession of homes."
+            "Leaving the Nauvoo area in 1846, Tanner helped pay the way for two other families as well as his own, according to the 1883 account. Near Winter Quarters he tended community livestock. Then fire destroyed his house, wagon boxes used as sleeping rooms, clothing and provisions. The narrative says that beds and some bedding survived. It next finds him helping outfit the pioneers and planting another crop.",
+            "In 1848 he brought his household west in the Willard Richards company. They settled in South Cottonwood, where Tanner spent the last part of his life. He died on April 13, 1850. The surviving accounts leave us with more than a list of donations: a man accepting help, protecting his child, returning to work after loss, and making room on the journey for others. His story invites a quiet question about the people we can help with the strength and means we have today."
           ],
           "sources": [
             {
-              "label": "John Tanner — Church History Biographical Database",
-              "url": "https://history.churchofjesuschrist.org/chd/individual/john-tanner-1778?lang=eng"
+              "label": "Scraps of Biography (1883) — later account of John Tanner",
+              "url": "https://www.gutenberg.org/cache/epub/46734/pg46734-images.html"
             },
             {
-              "label": "John Tanner — Joseph Smith Papers",
-              "url": "https://www.josephsmithpapers.org/person/john-tanner"
+              "label": "John Tanner — Church History Biographical Database",
+              "url": "https://history.churchofjesuschrist.org/chd/individual/john-tanner-1778?lang=eng"
             }
           ],
           "caption_boundary": "Interpretive1848 wagon journey; no exact pictured place or named family likeness inferred."
@@ -185,12 +182,12 @@
           "id": "miller-search-before-witness",
           "title": "A listener who wanted to know",
           "paragraphs": [
-            "Brigham Young encountered the Book of Mormon soon after its publication in 1830. Copies reached his family through the missionary work of Samuel Smith. Brigham examined the message for about two years before accepting baptism. He was a working craftsman in Mendon, New York, making and repairing furniture and fitting doors, windows, and other woodwork.",
-            "At home, his wife Miriam was ill with tuberculosis. Alongside earning a living, Brigham helped care for her and their two young daughters. His search for religious truth unfolded within those daily responsibilities. He read, listened, and considered what the missionaries taught before committing himself to the Church."
+            "Brigham Young cared for a sick wife and two little girls. Miriam had tuberculosis. He prepared breakfast, dressed the children, and helped her into a rocking chair near the fireplace before going to work. In the evening he cooked supper.",
+            "The Book of Mormon reached Brigham’s family in 1830. Some relatives accepted it readily; he spent about two years studying its teachings. He wanted to know for himself."
           ],
           "sources": [
             {
-              "label": "The Ministry of Brigham Young",
+              "label": "Brigham Young’s family life and conversion",
               "url": "https://www.churchofjesuschrist.org/study/manual/teachings-brigham-young/chapter-1?lang=eng"
             }
           ],
@@ -201,8 +198,8 @@
           "id": "miller-conversion-1831",
           "title": "Before he became a missionary",
           "paragraphs": [
-            "Eleazer Miller was born in Coeymans, New York, in 1795, and married Rebecca Van Zant in 1816. The Church’s biographical database dates his baptism to May 1831, when he was thirty-five. Before he became the missionary remembered in Brigham Young’s conversion, he was himself a new convert.",
-            "His first recorded missions followed that same year, taking him into New York and Pennsylvania. In 1832 he would continue preaching in New York and cross into Upper Canada. The man who carried a testimony to other households had recently made his own commitment to the Church."
+            "Miller had only recently taken that step himself. Born in Coeymans, New York, he married Rebecca Van Zant in 1816. In May 1831, aged thirty-five, he was baptized. That same year he began missionary work in New York and Pennsylvania.",
+            "Within months, this new convert was visiting other people with the faith he had embraced. By the spring of 1832 he was thirty-six. Brigham, the carpenter he would baptize, was thirty. Their meeting belonged to the beginning of Miller’s own years of service."
           ],
           "sources": [
             {
@@ -216,12 +213,13 @@
           "id": "miller-mission-road",
           "title": "A missionary before the famous encounter",
           "paragraphs": [
-            "Miller carried his new faith beyond his own household. In the spring of 1832 he was thirty-six, and Brigham Young was thirty. Their paths met during this early period of missionary service in New York."
+            "Miller was one of five missionaries from Pennsylvania who visited the Mendon area in late 1831. Their listeners included members of the Young family and Heber C. Kimball. Conversations continued beyond that first visit.",
+            "In January 1832, Brigham and Miriam traveled with relatives and Kimball to meet the believers in Columbia, Pennsylvania. They stayed about a week. Brigham remembered returning more convinced and eager to learn; on the journey home, they shared what they had heard with friends and relatives."
           ],
           "sources": [
             {
-              "label": "Eleazer Miller — Church History Biographical Database",
-              "url": "https://history.churchofjesuschrist.org/chd/individual/eleazer-miller-1795?lang=eng"
+              "label": "Young family recollections and the missionaries’ Canadian report",
+              "url": "https://rsc.byu.edu/witness-restoration/brigham-young-family"
             }
           ],
           "caption_boundary": "A reconstruction recalling Miller’s early missionary travels in New York and Pennsylvania, without identifying a particular road.",
@@ -231,16 +229,12 @@
           "id": "miller-simple-witness",
           "title": "What Brigham remembered hearing",
           "paragraphs": [
-            "Brigham later described hearing a man who lacked polished speech or conspicuous learning bear a simple testimony of the Book of Mormon and Joseph Smith’s prophetic calling. Church teaching materials identify that missionary as Eleazer Miller. What stayed with Brigham was the conviction with which the witness was offered and the spiritual confirmation he himself experienced.",
-            "In his recollection, the Holy Ghost illuminated his understanding. He became convinced that the testimony was true. Miller’s words reached a man who had already spent a long time examining the gospel. The remembered encounter joins those two parts of Brigham’s conversion: patient inquiry and a personal witness of the Spirit."
+            "Years afterward, Brigham could still remember what Miller’s testimony had meant to him. Miller had little polish as a speaker. He bore witness that the Book of Mormon was true and that Joseph Smith was a prophet. As Brigham listened, he experienced the spiritual assurance he had been seeking.",
+            "In telling the story, Brigham spoke of his understanding being illuminated and his soul filled with joy. He then pointed out the man who had baptized him: Eleazer Miller. The gratitude in that recollection reaches across the intervening years. Brigham remembered a person who had helped him know for himself."
           ],
           "sources": [
             {
-              "label": "Brigham Young: seeking truth and testimony",
-              "url": "https://www.churchofjesuschrist.org/study/manual/teachings-brigham-young/chapter-43?lang=eng"
-            },
-            {
-              "label": "Teaching by the Spirit: The Language of Inspiration",
+              "label": "Brigham Young recalls Eleazer Miller’s testimony",
               "url": "https://www.churchofjesuschrist.org/study/manual/teaching-seminary-preservice-readings-religion-370-471-and-475/teaching-by-the-spirit-the-language-of-inspiration?lang=eng"
             }
           ],
@@ -251,20 +245,12 @@
           "id": "miller-millstream-baptism",
           "title": "An outward covenant in April 1832",
           "paragraphs": [
-            "On a cold, snowy day in April 1832, Miller baptized Brigham in Brigham’s own millstream. Brigham later remembered feeling humble and childlike, with an assurance that his sins were forgiven. He was confirmed and ordained an elder, and soon began preaching himself.",
-            "Miriam was baptized within a few weeks. Other members of the Young family and their neighbors also joined the growing Mendon branch. That September, Miriam died. Brigham’s first months in the Church held both the beginning of a new ministry and the loss of his wife, leaving him with their two daughters."
+            "In April 1832, Miller baptized Brigham in the millstream beside Brigham’s home. It was cold and snowy. Brigham remembered the humble assurance that his sins were forgiven.",
+            "Miriam was baptized a few weeks later. By September she had died. Brigham’s new life in the Church began amid both spiritual joy and the loss of his wife."
           ],
           "sources": [
             {
-              "label": "Brigham Young: repentance and baptism",
-              "url": "https://www.churchofjesuschrist.org/study/manual/teachings-brigham-young/chapter-9?lang=eng"
-            },
-            {
-              "label": "Living in a Chapter of History — the Mendon branch",
-              "url": "https://www.churchofjesuschrist.org/study/ensign/2007/10/living-in-a-chapter-of-history?lang=eng"
-            },
-            {
-              "label": "The Ministry of Brigham Young",
+              "label": "Brigham Young’s family life and conversion",
               "url": "https://www.churchofjesuschrist.org/study/manual/teachings-brigham-young/chapter-1?lang=eng"
             }
           ],
@@ -275,17 +261,17 @@
           "id": "miller-canada-grove",
           "title": "When the gathering outgrew the house",
           "paragraphs": [
-            "In 1832, Miller’s missionary work carried him into Upper Canada. A Church historical account places him at Ernesttown in June. A report he sent with fellow missionary Elial Strong describes people coming in such numbers that houses could not hold the meetings. They met in groves instead.",
-            "The missionaries also reported that hundreds were searching the scriptures. Some listeners were partly persuaded, while others had accepted their message. Their letter, dated March 19, 1833, recalled a field of work that had carried Miller beyond the communities of New York into gatherings under the trees of Upper Canada."
+            "That summer, Miller traveled into Upper Canada with other missionaries, including members of the Young family. Their preaching drew more listeners than houses could hold. They moved their gatherings into groves.",
+            "Miller and Elial Strong later reported that hundreds were searching the scriptures. Some listeners were still considering the message; others believed. Among those Miller baptized was James Lake, a father living in Upper Canada. The mission reached households whose lives would soon become bound up with the Saints in Kirtland."
           ],
           "sources": [
             {
-              "label": "Early Canadian missions — Church historical transcript",
-              "url": "https://history.churchofjesuschrist.org/chd/transcript?lang=eng&name=transcript-for-andrew-jenson-canadian-mission-encyclopedic-history-of-the-church"
+              "label": "Young family recollections and the missionaries’ Canadian report",
+              "url": "https://rsc.byu.edu/witness-restoration/brigham-young-family"
             },
             {
-              "label": "Miller and Strong’s report, discussed in The Brigham Young Family",
-              "url": "https://rsc.byu.edu/witness-restoration/brigham-young-family"
+              "label": "James Lake — Joseph Smith Papers",
+              "url": "https://www.josephsmithpapers.org/person/james-lake"
             }
           ],
           "caption_boundary": "Grove teaching supported by missionaries’ report; exact grove, listeners and words unknown."
@@ -294,13 +280,17 @@
           "id": "miller-zions-camp-horses",
           "title": "Three horses for the camp",
           "paragraphs": [
-            "On May 30, 1834, Miller joined the Camp of Israel, often called Zion’s Camp, east of Rochester. The history records his arrival with about half a dozen others and three horses. Several horses already with the camp were ailing, so the additional animals were welcome.",
-            "Two years after the baptisms in Mendon, Miller was again on the road with fellow believers. This time his arrival brought practical help to a traveling company. The history pauses to record the three horses because the camp needed animals able to continue the journey."
+            "By May 1834, Miller was traveling toward Missouri with the Camp of Israel. Around noon on May 30, he and about half a dozen others joined the company just east of Rochester. They brought three horses. The timing mattered: several horses already in the camp were sick after changes in feed and country.",
+            "Miller’s arrival meant more animals able to carry the journey forward. The same history also remembers him addressing a public gathering during the expedition. The missionary Brigham had recalled for his plain testimony continued to speak among his fellow travelers and the people who came to hear them."
           ],
           "sources": [
             {
-              "label": "History entry for May 30, 1834 — Joseph Smith Papers",
-              "url": "https://www.josephsmithpapers.org/paper-summary/history-1838-1856-volume-a-1-23-december-1805-30-august-1834/569"
+              "label": "Camp of Israel history — May 30, 1834",
+              "url": "https://www.josephsmithpapers.org/paper-summary/history-1838-1856-volume-a-1-23-december-1805%EF%BB%BF-30-august-1834/569"
+            },
+            {
+              "label": "Camp gathering and Miller’s exhortation",
+              "url": "https://www.josephsmithpapers.org/paper-summary/history-1838-1856-volume-a-1-23-december-1805%EF%BB%BF-30-august-1834/570"
             }
           ],
           "caption_boundary": "Reconstruction of documented arrival with three horses; no invented horse treatment, battle or named companion."
@@ -309,17 +299,21 @@
           "id": "miller-westward-service",
           "title": "A life that continued westward",
           "paragraphs": [
-            "In 1848, Miller and Rebecca traveled west in Brigham Young’s company. Miller was fifty-two. John Heward, writing about his own journey, remembered starting west in company with Miller and spending several days at Winter Quarters before moving onward. Heward described the larger journey’s practical demands: finding feed, using buffalo chips for fuel, caring for footsore cattle, and receiving help with teams as the travelers approached the mountains.",
-            "The company reached the Salt Lake Valley in September. Miller and Rebecca had made the long journey from the settlements along the Missouri River to a new home in the West."
+            "In 1848, Eleazer and Rebecca crossed the plains in Brigham Young’s company. They had been married for more than thirty years; he was fifty-two and she was fifty. John Heward remembered starting west with Miller that May and stopping for several days at Winter Quarters.",
+            "Heward’s account gives the journey its everyday texture: grazing cattle along the Platte, buffalo chips for fuel, and animals made footsore by gravelly roads. When Heward’s own group could no longer move for lack of teams, help came from the valley. Eleazer and Rebecca reached the Salt Lake Valley that September."
           ],
           "sources": [
+            {
+              "label": "John Heward remembers the 1848 journey",
+              "url": "https://history.churchofjesuschrist.org/chd/transcript?lang=eng&name=transcript-for-john-heward-autobiography-circa-1871"
+            },
             {
               "label": "Eleazer Miller — Church History Biographical Database",
               "url": "https://history.churchofjesuschrist.org/chd/individual/eleazer-miller-1795?lang=eng"
             },
             {
-              "label": "John Heward’s autobiography — the 1848 journey",
-              "url": "https://history.churchofjesuschrist.org/chd/transcript?name=transcript-for-john-heward-autobiography-circa-1871"
+              "label": "Rebecca Van Zant — Church History Biographical Database",
+              "url": "https://history.churchofjesuschrist.org/chd/individual/rebecca-van-zant-1797?lang=eng"
             }
           ],
           "caption_boundary": "An interpretive view of preparations during the westward gathering. The historical record places Miller in Brigham Young’s 1848 company.",
@@ -329,17 +323,21 @@
           "id": "miller-relief-donation",
           "title": "Ninety-five cents in the record",
           "paragraphs": [
-            "A small entry carries Miller’s story into life in Utah. The Great Salt Lake City Relief Society’s minutes for May 28, 1854 list a donation of ninety-five cents from “Elezor” Miller, identified in the published edition as Eleazer Miller. He was fifty-eight.",
-            "His gift appears among contributions of different amounts recorded by the society. Miller continued to live in Salt Lake City and died there on April 12, 1876, aged eighty. His surviving record reaches beyond his early missionary witness to the westward migration and a modest contribution to community relief."
+            "Six years later, Eleazer’s name appears beside a gift of ninety-five cents in the Great Salt Lake City Relief Society’s minutes. Rebecca’s name appears in the society’s membership list and meeting records. The women gathered in one another’s homes, prayed, and worked on a rag carpet to raise money for clothing for Native women and children.",
+            "The May 28, 1854 donation list preserves Eleazer’s contribution alongside gifts from other neighbors. It is a small, concrete glimpse of life after the long journeys. He lived until April 12, 1876, dying in Salt Lake City at eighty. Rebecca survived him and lived another ten years."
           ],
           "sources": [
             {
-              "label": "Great Salt Lake City Relief Society minutes, May 28, 1854",
+              "label": "Great Salt Lake City Relief Society minutes, 1854",
               "url": "https://www.churchhistorianspress.org/the-first-fifty-years-of-relief-society/part-2/2-1?lang=eng"
             },
             {
               "label": "Eleazer Miller — Church History Biographical Database",
               "url": "https://history.churchofjesuschrist.org/chd/individual/eleazer-miller-1795?lang=eng"
+            },
+            {
+              "label": "Rebecca Van Zant — Church History Biographical Database",
+              "url": "https://history.churchofjesuschrist.org/chd/individual/rebecca-van-zant-1797?lang=eng"
             }
           ],
           "caption_boundary": "Minutes establish95cent donation, not attendance, recipient or hand-to-hand moment."
@@ -379,14 +377,14 @@
     {
       "id": "john-rowe-moyle",
       "title": "John Rowe Moyle: the stonecutter and the wooden leg",
-      "introduction": "John Rowe Moyle brought his family from England in 1856 and settled in Alpine, Utah. A skilled stonecutter, he traveled to Salt Lake City to work on the temple. After losing a leg, he fashioned a wooden replacement and eventually returned to the work.",
+      "introduction": "John Rowe Moyle crossed an ocean with his family and brought his skill as a stonecutter to Utah. His journal records the journey; later family memories tell of the injury, patient recovery and return to temple work for which he is remembered.",
       "units": [
         {
           "id": "moyle-handcart-journey",
           "title": "A family on the road in 1856",
           "paragraphs": [
-            "John Rowe Moyle and his wife joined the Church in England in 1851. Five years later, they emigrated with their children. Moyle was forty-eight when the family joined Edmund Ellsworth’s handcart company for the overland journey to Utah.",
-            "The company reached Salt Lake City on September 26, 1856. Their overland journey was the final stage of a migration that had begun across the Atlantic. Before following Moyle into his work in Utah, we can return to his own account of that earlier crossing."
+            "John Rowe Moyle’s journey to Utah was a family journey. The Church’s migration record places him, his wife and five children in Edmund Ellsworth’s company in 1856. John was forty-eight; the children ranged from five-year-old John to nineteen-year-old Elizabeth. The record preserves their names together, reminding us that the handcart carried the needs of a household, not merely the possessions of one determined traveler. They reached Salt Lake City on September 26.",
+            "For the children, the journey meant leaving the home they had known and traveling with their parents toward a new one. Their ages help us see the family behind the familiar handcart image. Before following John into his Utah home and temple work, we can turn back to the sea crossing he described in his own journal."
           ],
           "sources": [
             {
@@ -413,8 +411,8 @@
           "id": "moyle-atlantic-crossing",
           "title": "Before the plains: across the Atlantic",
           "paragraphs": [
-            "Before the handcarts came an ocean voyage. Moyle’s own journal records leaving Liverpool aboard the Samuel Curling on April 19, 1856. He and his family were bound for a new home far from England. At sea, storms rolled their luggage about and left beds wet.",
-            "They reached Boston on May 23. Three days later they continued by rail, arriving in Iowa on June 2. After about a week in camp, they set out with Ellsworth’s first handcart company. The ocean crossing, the railway journey, and the preparations in Iowa brought them to the beginning of the long walk across the plains."
+            "Moyle sailed from Liverpool aboard the Samuel Curling on April 19, 1856. His journal remembers the Saints gathering on deck the following day to hear Dan Jones and records his appreciation for the instruction. The passengers were organized into wards. These details give the voyage a human shape: people were trying to sustain a worshipping community while they traveled toward an unfamiliar home. The ship carried their luggage, but it also carried the habits of faith and fellowship they were taking with them.",
+            "The crossing was far from a steady passage over quiet water. In an early-May storm, water reached the sleeping places and left beds wet for several days. During another rough stretch, the vessel rolled and luggage was thrown about. Moyle’s account records the discomfort alongside gratitude for his family’s preservation. Boston came into view in May, and they landed on May 23. On May 26 they continued by rail, reaching Iowa on June 2. After about a week in camp, the family began the next stage of its journey with the handcarts."
           ],
           "sources": [
             {
@@ -428,8 +426,8 @@
           "id": "moyle-stonecutter-craft",
           "title": "A skill offered to a shared undertaking",
           "paragraphs": [
-            "The Moyles settled in Alpine, south of Salt Lake City. Their home and farm were there, while the temple site lay about twenty-two miles away. Moyle was an accomplished stonecutter, and his skill was wanted for the temple. He undertook the journey on foot, leaving the family’s horse available for work at home.",
-            "His stone house survives at the historic Moyle property, now an Alpine city park. The home preserves the setting of the family life and farm work that continued alongside his temple service."
+            "The Moyles made their Utah home in Alpine, where farm work and family life continued alongside John’s work as a stonecutter. His stone house still stands at the historic property. The surviving home helps us picture the two settings of his service: a household that needed daily care and a temple that needed the practiced work of his hands. The Ensign Peak Foundation’s site history describes him leaving the family’s horse for work on the farm while he made his way to Salt Lake City.",
+            "The work at home and the work on the temple were part of one family’s life. Keeping a horse on the farm made a difference to the people there. At the building site, Moyle offered the skill of a man accustomed to shaping stubborn material patiently, a little at a time."
           ],
           "sources": [
             {
@@ -448,8 +446,8 @@
           "id": "moyle-weekly-walk",
           "title": "The distance between home and the work",
           "paragraphs": [
-            "The weekly journey began before daylight. In the account retold by Dieter F. Uchtdorf, Moyle left home at about two o’clock on Monday morning to reach work by eight. He stayed in Salt Lake City during the week. After work ended on Friday evening, he walked home again, arriving around midnight.",
-            "During those working weeks he lodged with a son in Salt Lake City. Friday’s return took him back to the farm and family in Alpine; Monday brought the long outward journey again."
+            "Later accounts remember a Monday departure before daylight, a working week in Salt Lake City, and a Friday walk home. The Ensign Peak Foundation’s history says that he lodged with a son during the working week. Home and workplace belonged to the same life, even though they were separated by a long journey. The walk joined them: outward toward the building site, then back toward the household in Alpine.",
+            "That rhythm gave his service a place in ordinary life: a road out, a week of work, and a road home. The miles connected the temple with the household that shared the cost of his time away. Behind the finished stone was a family living through those working weeks."
           ],
           "sources": [
             {
@@ -465,11 +463,30 @@
           "alt_boundary": "Write concrete alt after viewing final asset. Do not infer unpictured emotion/action, claim exact likeness, or reproduce caption caveats as alt."
         },
         {
+          "id": "moyle-cow-injury",
+          "title": "The injury his family remembered",
+          "caption_boundary": "Illustrates a later family tradition retold in Church addresses, not a contemporaneous injury journal. Exact date, circumstances and injured side are not independently established.",
+          "paragraphs": [
+            "In the later family account retold by Jeffrey R. Holland, a cow bolted during milking and kicked Moyle below the knee, shattering the bone. Family and friends used a door as an operating table, and the injured leg was amputated. This is how the accident was remembered in that account; Moyle’s surviving travel journal does not describe it.",
+            "The story pauses here with a man in need of care. The hands that had worked stone could not put the broken leg right. Family and friends had a place in his survival, and their help deserves to remain beside the better-known story of his determination."
+          ],
+          "sources": [
+            {
+              "label": "Jeffrey R. Holland recounts the family tradition",
+              "url": "https://www.churchofjesuschrist.org/study/general-conference/2000/04/as-doves-to-our-windows?lang=eng"
+            },
+            {
+              "label": "Dieter F. Uchtdorf — Lift Where You Stand",
+              "url": "https://www.churchofjesuschrist.org/study/general-conference/2008/10/lift-where-you-stand?lang=eng"
+            }
+          ]
+        },
+        {
           "id": "moyle-wooden-leg",
           "title": "Making a way to walk again",
           "paragraphs": [
-            "An injury eventually cost Moyle a leg. During his recovery, he made a wooden replacement with an articulated ankle and foot. He practiced walking on it, gradually rebuilding the endurance needed for the journey to Salt Lake City. Uchtdorf’s account describes pain and persistence as he learned to use it.",
-            "The Ensign Peak Foundation’s site history reports that Moyle’s wooden leg is displayed at the Daughters of Utah Pioneers Museum in Salt Lake City."
+            "As the wound healed, Moyle began shaping a wooden leg. The replacement included a joint for the ankle and foot. Walking hurt. He practiced inside the house, then in the yard, and eventually farther around his property, extending what he could manage a little at a time.",
+            "The Ensign Peak Foundation’s site history reports that Moyle’s wooden leg is displayed at the Daughters of Utah Pioneers Museum in Salt Lake City. In the picture, the task has become close and personal: a craftsman shaping something he will depend on with every step."
           ],
           "sources": [
             {
@@ -479,6 +496,10 @@
             {
               "label": "Moyle Park, Alpine — Ensign Peak Foundation site history",
               "url": "https://ensignpeakfoundation.org/moyle-park-alpine-utah/"
+            },
+            {
+              "label": "The family account of recovery — Jeffrey R. Holland",
+              "url": "https://www.churchofjesuschrist.org/study/general-conference/2000/04/as-doves-to-our-windows?lang=eng"
             }
           ],
           "caption_boundary": "An interpretation of Moyle’s handmade wooden prosthesis, including the ankle-like joint described in the later account. Its precise side and hardware are not authenticated.",
@@ -488,7 +509,8 @@
           "id": "moyle-return-to-craft",
           "title": "Remembering the worker beyond the obstacle",
           "paragraphs": [
-            "Moyle returned to temple work. Learning to walk with the wooden leg enabled him to take up the journeys and skilled labor that had filled his working weeks. The story remembered his persistence through the loss of a leg and his effort to keep serving."
+            "In the family account, Moyle gradually regained enough strength to resume the journey to temple work. Returning meant putting his practiced hands to use again.",
+            "He returned with the knowledge and skill he had spent a lifetime learning. The injury had changed how he moved, but he still had work to offer. Remembering him at the stone brings the familiar account back to a person: a craftsman finding his way into useful work again, with the cost of recovery behind each step."
           ],
           "sources": [
             {
@@ -500,12 +522,8 @@
               "url": "https://ensignpeakfoundation.org/moyle-park-alpine-utah/"
             },
             {
-              "label": "John Rowe Moyle — Church History Biographical Database",
-              "url": "https://history.churchofjesuschrist.org/chd/individual/john-rowe-moyle-1808?lang=eng"
-            },
-            {
-              "label": "Salt Lake Temple — dedication history",
-              "url": "https://www.churchofjesuschrist.org/temples/details/salt-lake-temple?lang=eng"
+              "label": "The family account of recovery — Jeffrey R. Holland",
+              "url": "https://www.churchofjesuschrist.org/study/general-conference/2000/04/as-doves-to-our-windows?lang=eng"
             }
           ],
           "caption_boundary": "Moyle’s continued contribution with a wooden leg, interpreted from the later account of his service. He died in 1889, before the temple dedication.",
@@ -515,8 +533,8 @@
           "id": "moyle-holiness-inscription",
           "title": "Holiness to the Lord",
           "paragraphs": [
-            "The words associated with Moyle’s most remembered work are “Holiness to the Lord.” A later account supplied by his family describes him climbing scaffolding on the east side of the Salt Lake Temple to carve the inscription. His work gave lasting expression to the purpose of the building he had helped construct.",
-            "The inscription remains part of the temple. An official 2025 restoration report credits Moyle and describes renewed gilding of the panel on the east center tower. Moyle died on February 15, 1889, before the temple’s 1893 dedication. The words he carved outlasted him, still identifying the temple as a house of the Lord."
+            "The temple’s inscription gives this story a place to rest: “Holiness to the Lord.” An official 2025 restoration report credits John Rowe Moyle with the carving and describes renewed gilding of the east-center-tower panel. His life ended on February 15, 1889, before the temple’s 1893 dedication. The inscription remained, part of a building whose completion he did not live to see.",
+            "Those words turn our attention from the achievement of a builder to the One the house was built to honor. Moyle did not live to attend its dedication. People who came afterward would look up and read the inscription, often without knowing the name or the story of the man remembered for carving it."
           ],
           "sources": [
             {
@@ -559,6 +577,7 @@
         "moyle-atlantic-crossing",
         "moyle-stonecutter-craft",
         "moyle-weekly-walk",
+        "moyle-cow-injury",
         "moyle-wooden-leg",
         "moyle-return-to-craft",
         "moyle-holiness-inscription"
@@ -566,44 +585,19 @@
     }
   ],
   "editorial_boundaries": [
-    "Exact reviewed scene sets: seven Tanner, nine Miller, seven Moyle. Maximum two narrative paragraphs per illustrated unit; no repeated hero or added filler.",
-    "No exact Moyle accident cause/year/leg side; wooden lower-leg prosthesis explicit. No1893dedication presence.",
+    "Exact reviewed scene sets: seven Tanner, nine Miller, eight Moyle. Maximum two narrative paragraphs per illustrated unit; no repeated hero or added filler.",
     "Miller no precise baptism day or disputed conversion interval. Thirty-six/Youngaboutthirty is1832age boundary.",
-    "Tanner debt forgiveness retrospective; no invented dialogue or universal promise of wealth. Arrington-derived material across units under200words; identical excerpts republished in Kirtland manual not used to multiply source allowance.",
     "Titles shown as source keys are producer-facing; replace with descriptive human-readable source labels.",
-    "Moyle exact injurycause/year and prosthetic side/hardware uncertainties belong in concise artwork captions/source note; narrative avoids asserting them."
+    "Moyle cow injury is explicitly a later family tradition; travel journal does not establish injury circumstances/date/side. Do not promote the illustration or retelling into a contemporaneous record.",
+    "Tanner 1883 narrative is retrospective and public domain; contemporary Carter journal controls healing attendance. Modern source budgets remain separate."
   ],
   "source_budget_map": {
-    "john-tanner": {
-      "Carter": "tanner-healing-witness first paragraph factual healing account under80words.",
-      "JosephSmithPapers": "Occupational/ordination/stockholder/1838–1840 chronology across healing/support/displacement approximately150words; do not charge same facts again as new material.",
-      "Arrington": "Conservative full allocation: revised journey both paragraphs, support first paragraph and debt paragraph plus all THREE COMPLETE related captions total165words, including independently sourced JSP stockholder sentence. D&C109 second paragraph remains separate. No reprint allowance;35word headroom retained.",
-      "TannerCHD": "Baptism/mission chronology plus tanner-family-crossing-1848 approximately160words combined.",
-      "PettegrewTimesAndSeasons": "tanner-mission-road-1844 both paragraphs104words; one December21,1844 companion letter.",
-      "DoctrineAndCovenants109": "tanner-temple-support second paragraph under80words."
-    },
-    "eleazer-miller": {
-      "YoungBiography": "miller-search-before-witness103 + baptism family context52 =155words; no extra allowance for reprints.",
-      "MillerCHD": "miller-conversion-1831 approximately94 + mission-road35 + westward identity/age and relief-unit death chronology under70; aggregate below200.",
-      "YoungTestimony": "miller-simple-witness under140words; shared account across Young43/Maxwell treated jointly.",
-      "YoungBaptism": "miller-millstream-baptism first paragraph under65words.",
-      "Mendon": "Miriam/branch chronology under35words, independently sourced.",
-      "Heward": "miller-westward-service larger journey details under90words, attributed to Heward not asserted specific Miller incidents.",
-      "CanadaMissionaryLetter": "miller-canada-grove97words; March19,1833 Miller/Strong letter cited by RSC; underlying letter shares allowance across transcriptions.",
-      "CanadaJenson": "Ernesttown June1832 contextual placement under20words.",
-      "ZionsCampHistory": "miller-zions-camp-horses90words from May30,1834 history addendum.",
-      "ReliefMinutes": "miller-relief-donation first paragraph42words plus brief list context; contemporary May28,1854 minutes."
-    },
-    "john-rowe-moyle": {
-      "MoyleJournal": "moyle-atlantic-crossing101words; former rail/camp paragraph removed. CHD and SaintsBySea are the SAME journal allowance.",
-      "Uchtdorf": "weekly-walk51 + wooden-leg50 + return-to-craft45 =146; conservative existing introduction44 totals190. No further source-derived additions.",
-      "EnsignPeakHeritage": "craft85 + weekly lodging32 + artifact32 + conversion38 =187 conservative; conversion also CHD. Craft facts charged here, not added to Uchtdorf.",
-      "MoyleCHD": "1856age/family and1889death under60words.",
-      "EllsworthCompany": "September26,1856arrival under35words.",
-      "NewsroomFamily": "moyle-holiness-inscription first paragraph approximately55words; later family remembrance explicitly attributed.",
-      "Newsroom2025": "Modern panel restoration/location approximately35words; no original carvingdate inferred."
-    },
-    "boundary": "Aggregate factual derivation across narrative, metadata and captions; repeated versions of the same account do not increase allowance. Technical depiction caveats and original connective wording do not introduce new historical facts."
+    "revision": "2026-09-30 replacement narratives; prior September 29 prose allocations superseded, archived in Git.",
+    "john-tanner": "1883 public-domain retrospective account is the principal later-life source; Carter journal governs the healing. Modern critical/biographical sources and surviving Arrington captions accounted separately in final independent review.",
+    "eleazer-miller": "Replacement-only sentence allocations with actual captions/metadata reviewed; largest protected-source allocation below200. See warmth-final-fermi-review-20260930.json and miller-warmth-research-20260930.json.",
+    "john-rowe-moyle": "Shared later-family account194 derived words after removing repeated recovery sentence, independently counted by Newton. Primary voyage journal, site history, biography and modern inscription report remain separate sources.",
+    "review": "docs/history-stories/warmth-final-fermi-review-20260930.json",
+    "limits": "Do not add these totals to superseded narratives. Retellings of the same underlying account do not create additional allowances. No historical validation is inferred from a hash."
   },
-  "revision_note": "Expanded September29 with eight independently sourced episodes; exact23-scene plan. Previous chronology moved rather than repeated. Source budgets aggregate original accounts across different URLs and reprints. Moyle opens with a handcart overview followed by an explicit Atlantic flashback. Unknown accident/carving dates and reconstructed scene details remain bounded in picture captions."
+  "revision_note": "September 30: warmer journal-informed replacement narratives, distinct contemporary versus retrospective sources, one new Moyle family-tradition injury illustration. Existing approved scene sources and heroes preserved."
 }

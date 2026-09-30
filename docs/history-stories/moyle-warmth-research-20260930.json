@@ -1,0 +1,200 @@
+{
+  "status": "EXPANDED_RESEARCH_DRAFT_REQUIRES_PRIMARY_CONFLICT_RECONCILIATION",
+  "date": "2026-09-30",
+  "objective": "Warmer source-grounded Moyle story, new cow-injury scene before wooden-leg recovery; maximum two paragraphs per pictured unit.",
+  "sources": [
+    {
+      "id": "moyle-journal",
+      "url": "https://saintsbysea.byu.edu/mii/account/1141",
+      "primary_catalog": "https://catalog.churchofjesuschrist.org/assets/48dc2ad5-f294-4f55-b32d-cfbb0a9eaf85/0/0",
+      "citation": "John Rowe Moyle journal,1856–1858,MS332,pp6–8,Church History Library",
+      "type": "Primary journal transcribed by BYU; catalog identity linked from official CHD",
+      "verified": "Read full displayed BYU transcript and official CHD excerpt. Catalog URL resolves but returns JavaScript shell without inspectable scan here. Do not claim original manuscript pixels reviewed.",
+      "supports": [
+        "Liverpool April19,1856",
+        "address by Dan Jones on deck",
+        "storm May2–3, beds wet for days",
+        "later rolling ship and luggage thrown about",
+        "Boston May23, railMay26,IowaJune2,camp approximatelyweek"
+      ],
+      "limits": "Transcript has illegible marks; use only unambiguous clauses. CHD excerpt andBYU are SAME underlying account, one budget."
+    },
+    {
+      "id": "holland-2000",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2000/04/as-doves-to-our-windows?lang=eng",
+      "type": "Later Church retelling of family tradition",
+      "verified": "Read Moyle paragraphs and footnote8 in current official page. Footnote names Theodore Moyle Burton, Two Traditions of John Rowe Moyle, in Biographies and Reminiscences,edGeneA.Sessions1974,pp202–203; also Featherstone1998pp140–141.",
+      "supports": [
+        "cow bolted during milking",
+        "kick shattered bone below knee",
+        "family/friends used door as improvised operating table",
+        "amputation below knee",
+        "recovery progression house,yard,property",
+        "return to work and inscription"
+      ],
+      "limits": "Not contemporaneous injury diary. No injuryyear, exactage, legside or recoveryduration stated. Underlying Burton manuscript not directly inspected."
+    },
+    {
+      "id": "uchtdorf-2008",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2008/10/lift-where-you-stand?lang=eng",
+      "type": "Later Church retelling; overlapping family collection",
+      "verified": "Read paragraphs about Monday2am/Friday5pm,injury,recovery,prosthetic ankle; footnote5 cites same Sessionscollectionp203.",
+      "supports": [
+        "cowkick while chores",
+        "compoundfracture",
+        "homemade articulated ankle/foot",
+        "painful practice and return"
+      ],
+      "limits": "Aggregate shared family-account derivation with Holland; do not claim independent second eyewitness."
+    },
+    {
+      "id": "chd",
+      "url": "https://history.churchofjesuschrist.org/chd/individual/john-rowe-moyle-1808?lang=eng",
+      "type": "Official compiled biographical database",
+      "verified": "Current page givesFeb22,1808 birth,Feb15,1889death,age48Ellsworthcompany1856,travelgroup wife40/children19,15,12,9,5 and primarycatalogjournal link.",
+      "limits": "Cannot calculate injuryage without injuryyear; journalJune8campdeparture anddatabaseJune9companyformation are separate dating details."
+    },
+    {
+      "id": "family-newsroom",
+      "url": "https://newsroom.churchofjesuschrist.org/additional-resource/stories-of-sacrifice-and-devotion-the-people-who-built-and-loved-a-temple",
+      "type": "Later family remembrance published byChurch",
+      "verified": "Read Moyleparagraphs186–191; expressly says accountprovidedbyfamily; eastscaffolding/carving.",
+      "limits": "20mile rounded distance differsfromconference22; useabout22. CurrentbodymentionsJamesMoyle quarryworker elsewhere—do notassignhis quotation toJohnRowe."
+    }
+  ],
+  "primary_vs_tradition": "Own journal directly supports voyage, not injury. The cow/amputation/recovery narrative is explicitly later family remembrance mediated by Church conference accounts. No original injury diary was located or inspected.",
+  "uncertainties": [
+    "No verified injury year or age; do not label1874,76 or77 withoutnewprimaryproof.",
+    "No verified left/right injuredside. Preserve establishedartvisualcontinuity as interpretation, not factualsideclaim.",
+    "No exact cowcolor/breed,stablearchitecture,season,helpersidentity or words spoken.",
+    "Do not confuse JohnRowe1808 with sonJohnRowe1851 or quarryworkerJamesMoyle.",
+    "Do not present film staging as documentary evidence."
+  ],
+  "units": [
+    {
+      "id": "moyle-handcart-journey",
+      "paragraphs": [
+        "John Rowe Moyle’s journey to Utah was a family journey. The Church’s migration record places him, his wife and five children in Edmund Ellsworth’s company in 1856. John was forty-eight; the children ranged from five-year-old John to nineteen-year-old Elizabeth. The record preserves their names together, reminding us that the handcart carried the needs of a household, not merely the possessions of one determined traveler. They reached Salt Lake City on September 26.",
+        "Looking at this family on the road, we can ask what we sometimes leave out of pioneer stories. An arrival date cannot show every ordinary task involved in moving a household. Yet the names and ages help us see parents and children rather than a distant crowd. Before following Moyle into his Utah home and temple work, his own journal takes us back to the sea crossing that brought them to America."
+      ],
+      "action": "replace listed paragraphs; preserve current scene and sources, add named applicable source links",
+      "editorial_boundary": "Two paragraphs only. Reflective passages are original reader-facing interpretation, not claims about unrecorded thoughts or events."
+    },
+    {
+      "id": "moyle-atlantic-crossing",
+      "paragraphs": [
+        "Moyle sailed from Liverpool aboard the Samuel Curling on April 19, 1856. His journal remembers the Saints gathering on deck the following day to hear Dan Jones and records his appreciation for the instruction. The passengers were organized into wards. These details give the voyage a human shape: people were trying to sustain a worshipping community while they traveled toward an unfamiliar home. The ship carried their luggage, but it also carried the habits of faith and fellowship they were taking with them.",
+        "The crossing was far from a steady passage over quiet water. In an early-May storm, water reached the sleeping places and left beds wet for several days. During another rough stretch, the vessel rolled and luggage was thrown about. Moyle’s account records the discomfort alongside gratitude for his family’s preservation. Boston came into view inMay, and they landed onMay 23. OnMay 26 they continued by rail, reaching Iowa onJune 2. After about a week in camp, the family began the next stage of its journey with the handcarts."
+      ],
+      "action": "replace listed paragraphs; preserve current scene and sources, add named applicable source links",
+      "editorial_boundary": "Two paragraphs only. Reflective passages are original reader-facing interpretation, not claims about unrecorded thoughts or events."
+    },
+    {
+      "id": "moyle-stonecutter-craft",
+      "paragraphs": [
+        "The Moyles made their Utah home in Alpine, where farm work and family life continued alongside John’s work as a stonecutter. His stone house still stands at the historic property. The surviving home helps us picture the two settings of his service: a household that needed daily care and a temple that needed the practiced work of his hands. The Ensign Peak Foundation’s site history describes him leaving the family’s horse for work on the farm while he made his way to Salt Lake City.",
+        "There is something worth pausing over in that combination of home, farm and skilled work. A beautiful building is never made by skill alone; it also rests on the daily arrangements that make the work possible. As we look at the stonecutter’s tools, we can remember the less visible work of keeping a household going. Honoring Moyle’s contribution need not make that shared effort disappear behind the story of one man."
+      ],
+      "action": "replace listed paragraphs; preserve current scene and sources, add named applicable source links",
+      "editorial_boundary": "Two paragraphs only. Reflective passages are original reader-facing interpretation, not claims about unrecorded thoughts or events."
+    },
+    {
+      "id": "moyle-weekly-walk",
+      "paragraphs": [
+        "Later accounts remember a Monday departure before daylight, a working week in Salt Lake City, and a Friday walk home. The Ensign Peak Foundation’s history says that he lodged with a son during the working week. Home and workplace belonged to the same life, even though they were separated by a long journey. The walk joined them: outward toward the building site, then back toward the household in Alpine.",
+        "A repeated journey can be easy to overlook because it has no single dramatic ending. This picture invites us to notice the ordinary persistence between memorable events. We can honor the time that service takes—the preparation, the travel, the return home—and the family life around it. The road matters here because it connects people and responsibilities, not because distance alone measures anyone’s faith."
+      ],
+      "action": "replace listed paragraphs; preserve current scene and sources, add named applicable source links",
+      "editorial_boundary": "Two paragraphs only. Reflective passages are original reader-facing interpretation, not claims about unrecorded thoughts or events."
+    },
+    {
+      "id": "moyle-cow-injury",
+      "title": "An ordinary chore, a life-changing injury",
+      "paragraphs": [
+        "The family tradition retold by Jeffrey R. Holland places the accident during milking. A cow bolted and kicked Moyle below the knee, shattering the bone. His family and friends had little medical help available. They removed a door from its hinges to make an operating table, and his leg was amputated below the knee. Recovery began at home, among the people who had helped him survive.",
+        "This is the point in the story where the familiar pattern of home and work gives way to a need for care. We should let the injury be serious without making it a spectacle. A man who had used his strength to help build a temple now needed other people’s help. Remembering those family members and friends keeps their care beside his later perseverance; neither part of the story needs to eclipse the other."
+      ],
+      "source_ids": [
+        "holland-2000",
+        "uchtdorf-2008"
+      ],
+      "new_original_required": true,
+      "editorial_boundary": "Two paragraphs only. Reflective passages are original reader-facing interpretation, not claims about unrecorded thoughts or events."
+    },
+    {
+      "id": "moyle-wooden-leg",
+      "paragraphs": [
+        "As the wound healed, Moyle began shaping a wooden leg. The replacement included a joint for the ankle and foot. Walking hurt. He practiced inside the house, then in the yard, and eventually farther around his property, extending what he could manage a little at a time.",
+        "The Ensign Peak Foundation’s site history reports that Moyle’s wooden leg is displayed at the Daughters of Utah Pioneers Museum in Salt Lake City. For a reader, the handmade replacement invites a quieter kind of attention than a triumphant ending. We can think about the work of adapting, practicing and beginning again. Progress need not be effortless to be meaningful, and a person receiving help has not lost the worth of the gifts he can share."
+      ],
+      "action": "replace listed paragraphs; preserve current scene and sources, add named applicable source links",
+      "editorial_boundary": "Two paragraphs only. Reflective passages are original reader-facing interpretation, not claims about unrecorded thoughts or events."
+    },
+    {
+      "id": "moyle-return-to-craft",
+      "paragraphs": [
+        "When he could bear the journey, Moyle took up the road to temple work again. The remembered return connects the patient practice at home with the skilled labor he could once more offer. The wooden leg became part of the way he worked.",
+        "His return is an invitation to value a worker as a whole person. Disability did not erase his knowledge of stone, and the account does not need us to pretend that pain was easy. We can admire the contribution he resumed while respecting people whose recovery follows a different course. The lesson is not that everyone must accomplish the same journey; it is that care, patient effort and room to contribute belong together."
+      ],
+      "action": "replace listed paragraphs; preserve current scene and sources, add named applicable source links",
+      "editorial_boundary": "Two paragraphs only. Reflective passages are original reader-facing interpretation, not claims about unrecorded thoughts or events."
+    },
+    {
+      "id": "moyle-holiness-inscription",
+      "paragraphs": [
+        "The temple’s inscription gives this story a place to rest: “Holiness to the Lord.” An official 2025restoration report credits John Rowe Moyle with the carving and describes renewed gilding of the east-center-tower panel. His life ended onFebruary 15, 1889, before the temple’s 1893dedication. The inscription remained, part of a building whose completion he did not live to see.",
+        "We can read those words and remember a person rather than only an impressive building. Moyle’s story includes a family’s migration, practiced skill, ordinary work and the help required after injury. The temple brings those strands into view without making his life simple. For us, the words can become a question about our own work: how might care for people and faithful use of our abilities give lasting meaning to what we help build?"
+      ],
+      "action": "replace listed paragraphs; preserve current scene and sources, add named applicable source links",
+      "editorial_boundary": "Two paragraphs only. Reflective passages are original reader-facing interpretation, not claims about unrecorded thoughts or events."
+    }
+  ],
+  "source_budgets": {
+    "moyle_journal": {
+      "draft_prose_words": 171,
+      "limit": 200,
+      "reserve": "Allow remaining margin for fullcaption and any journal-derived intro/metadata; CHD+BYUshareallowance."
+    },
+    "shared_family_tradition": {
+      "cow_leg_return_words": 156,
+      "weekly_words": 20,
+      "total_factual_prose_words": 176,
+      "limit": 200,
+      "mandatory": "Remove all old overlapping family-account captions/prose/introduction. Remaining margin only for source-derivedcaptionwords; neutral visible-scene metadata and explicitly original reflection separatelyreview. Inscription revised to2025report andCHD, not reusedfamilysequence."
+    },
+    "other_sources": "Herofamilyages CHD; craft/lodging/museum EnsignPeak preexisting near-limit allocation must be recounted. Inscription secondparagraph existing2025report+CHD sourceallocation unchanged."
+  },
+  "prompt_brief": {
+    "scene_id": "moyle-cow-injury",
+    "placement": "Between weeklywalk and woodenleg",
+    "depiction": "Non-graphic reconstructed moment immediately following the kick during milking. Established older Moyle face; physically coherent seated or partly fallen pose beside a low milking stool, one hand bracing on ground/stall edge and other reaching toward intact trouser-covered lower leg. Cow at plausible close lateral distance with all four limbs anatomically coherent; one hind leg settling after short side kick. Pail and stool make milking context readable. No gore, exposed fracture, surgery or amputated limb. Both human legs still present in this before-amputation scene.",
+    "composition": "Landscape3:2, whole body and cow relationship legible, no melodramatic flying body, no implausible backward horse-style kick, no smilinginjuredman. Keep clear separation of bovine/human limbs.",
+    "identity": "Use approved Moyle originals as actual image references. His precise injuryageunknown; retain older adult likeness, do not assert numericage.",
+    "unknowns": "Cowcoat,roomlayout,clothingandprecisemoment artisticinterpretation; no named companion without source.",
+    "caption": "A reconstructed farmyard moment after the cow’s kick, as described in a later family account.",
+    "source_panel": "Holland2000footnote8 andUchtdorf2008footnote5; state laterfamilytradition, no exactdate/sideclaim."
+  },
+  "review_needed": [
+    "Independentsourceandaggregatewordbudgetreview",
+    "Rootdecision whetherstronger primaryfamilymanuscript retrieval needed",
+    "Finishedfullpixel identity/anatomy/legcontinuity review beforeexport"
+  ],
+  "revision_note": "Substantially expanded to full paragraphs; concrete injury/recovery narrative plus original reader-facing reflection. No product edits. Replaces tersev1.",
+  "original_reflection_note": "Reflective paragraphs use we/can/invites to signal the reader’s reflection. They do not invent Moyle’s feelings, intentions, conversations, weather, duration or helpers. Not a device for hiding extra historical paraphrase; independenteditor must verifyallocation.",
+  "primary_research_lead": {
+    "status": "UNRESOLVED_NOT_A_FACTUAL_CONCLUSION",
+    "lead": "Secondary commentary reproduces1888newspaper reports about JohnMoyleofAlpine injuredbylog; identity1808father vs1851son and relationtoamputation unverified. Do not assertcowaccountdisproved orlogaccountsameevent.",
+    "primary_urls": [
+      "https://newspapers.lib.utah.edu/details?id=1403340",
+      "https://newspapers.lib.utah.edu/details?id=2670395"
+    ],
+    "claimed_dates": [
+      "UtahEnquirerJune12,1888",
+      "DeseretNewsJune27,1888"
+    ],
+    "verification": "Directwebfetchreturned418; originalscans notread. Parent informedbeforefactualfreeze.",
+    "relevance": "Cow narrative mustremain explicitly attributed laterfamilytradition whileprimaryidentity/date investigated."
+  },
+  "journal_copyright_provenance": "Original account attributed toJohnRoweMoyle1808–1889, journal1856–1858,CHLMS332pp6–8; nineteenth-century original distinctfrommodernBYUtranscription/editorialmaterial. This draft staysunder200derivedwords anyway, so no broad public-domain or moderntranscription reuse claim is needed.",
+  "word_count": 1114
+}

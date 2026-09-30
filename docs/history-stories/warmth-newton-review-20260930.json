@@ -1,0 +1,73 @@
+{
+  "date": "2026-09-30",
+  "reviewer": "Newton",
+  "scope": "Independent visual and source/editorial review; no product edits, no owner acceptance claim",
+  "moyle_art": {
+    "candidate": "exec-50cb63d4-a73e-49ce-a5b6-f17fcf11505b.png",
+    "reference": "assets/page-art/history-stories/moyle-wooden-leg-full.webp",
+    "visual_verdict": "PASS",
+    "historical_verdict": "CONDITIONAL_PENDING_INJURY_SOURCE_RECONCILIATION",
+    "inspection": "Full images visually inspected; same accepted character continuity, not proof of an authenticated portrait.",
+    "findings": [
+      "Balding hairline, forehead, nose, beard, apparent age and clothing consistent with existing wooden-leg scene.",
+      "Seated body, supporting hand, bent leg and boots coherent; restrained discomfort, no inappropriate smile or gore.",
+      "Cow hindquarters, udder and visible legs coherent with occlusion; no evident merged human/animal anatomy.",
+      "Tipped stool and pail convey an accident aftermath. Cow is not visibly kicking; caption must not claim image catches the kick."
+    ],
+    "historical_boundary": "Explicit later family tradition. Unread alleged 1888 newspaper log-injury report may concern father or son; neither cause/date nor identity reconciled here. Hold factual finalization, retain source distinction."
+  },
+  "tanner": {
+    "draft_sha256": "3ffaf2fa068a442eccffaa1b3768a386c78276714ab0757f0183d1245332a252",
+    "verdict": "ACCEPT_AFTER_TWO_FACTUAL_WORDING_CORRECTIONS_AND_FINAL_AGGREGATE_BUDGET",
+    "required_corrections": [
+      {
+        "unit": "tanner-healing-witness",
+        "old": "The man who had been unable to stand",
+        "replacement": "The man who had been unable to put weight on one foot",
+        "reason": "Carter describes one-foot weight-bearing impairment, not complete inability to stand."
+      },
+      {
+        "unit": "tanner-debt-forgiven",
+        "old": "A debt that could still have been collected became a gift.",
+        "replacement": "Tanner gave up repayment of the loan.",
+        "reason": "The later account supports forgiveness, not a present legal collectibility determination."
+      }
+    ],
+    "attendance_boundary": "Carter excludes Simeon at the immediate moment and reports his separate prayer. This does not establish absence of every unnamed witness. Wife attendance remains unknown.",
+    "warmth": "Substantially stronger concrete story: offered hand, Christmas departure, Myron hiding, debt note, cabin sermon, grief, fire and renewed work. No invented dialogue found; the short quotations are attributed. Some interpretive bridges still sound academic and should yield to recorded actions.",
+    "editorial_recommendations": [
+      {
+        "unit": "tanner-mission-road-1844",
+        "action": "Delete That pause makes room for the grief inside the journey and final report-describes contrast. The attributed bewilderment followed by their decision carries the emotion."
+      },
+      {
+        "unit": "tanner-debt-forgiven",
+        "action": "Trim Its tenderness lies in the small exchange; the note, words and shoulder already show it."
+      },
+      {
+        "unit": "tanner-family-crossing-1848",
+        "action": "Rename A new beginning after the fire; avoid repeated making room language and keep reflection separate from historical ending."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.gutenberg.org/ebooks/46734",
+        "verified": "Catalog identifies public domain in USA. This applies to the original historical text, not modern automated summary/editorial material."
+      },
+      {
+        "url": "https://www.gutenberg.org/cache/epub/46734/pg46734-images.html",
+        "verified": "1883 title imprint and Tanner chapters read. Supports later narrative of property, aid, Missouri violence, note forgiveness, 1846 assistance, January1847 fire and subsequent farm/pioneer help. Retrospective source must remain identified; PD status does not establish eyewitness reliability."
+      },
+      {
+        "url": "https://www.fairlatterdaysaints.org/answers/Times_and_Seasons/5/24",
+        "verified": "Signed December21,1844 Pettegrew letter pp764–765 checked independently: Pittsburgh/Buffalo240-mile walk, Troy cabin sermon, martyrdom news and renewed testimony route. Next December27 letter is Benjamin Brown, not Tanner/Pettegrew. FAIR transcription is a carrier of the primary1845 text; original scan not inspected in this review."
+      },
+      {
+        "url": "https://www.josephsmithpapers.org/paper-summary/minutes-18-january-1835/1",
+        "verified": "Contemporary minutes and scholarly introduction support avoiding exact retrospective January20 arrival; multiple property sales and Nathan reminiscence remain distinctly attributed."
+      }
+    ],
+    "copyright": "Original1883/1845 historical works are public domain in USA. Modern manual/JSP/CHD summaries retain per-source200-word aggregate and25-word quotation limits. Draft allocations appear below limits but final captions, intro, panels and repeated derivatives must be totaled before integration. Do not append new draft to old prose; replace.",
+    "fiction_boundary": "No invented quoted dialogue, weather or specific private thoughts found. Interpretive claims such as faith grew from receiving are editorial reflection, not diary testimony."
+  }
+}

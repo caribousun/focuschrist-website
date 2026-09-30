@@ -267,7 +267,7 @@ def main() -> int:
                 errors.append(f"{relative}: missing exact first-scene topic hero")
             elif figure.select_one("a").get("href") != "../" + ready[unit]["full"] or not figure.select_one("figcaption[data-picture-panel-copy][hidden]"):
                 errors.append(f"{relative}: hero source or study metadata differs")
-            if page.count("../topic-artwork-details.js?v=20260929-tanner-journal-1") != 1 or "hero-details.js" in page or "data-hero-viewer" in page:
+            if page.count("../topic-artwork-details.js?v=20260930-history-records-1") != 1 or "hero-details.js" in page or "data-hero-viewer" in page:
                 errors.append(f"{relative}: hero must have exactly one topic controller")
             hero_pages -= 1  # Preserve the separate 41-page legacy controller baseline.
             continue

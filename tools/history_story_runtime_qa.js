@@ -46,6 +46,17 @@ for (const route of ['john-tanner', 'eleazer-miller', 'unapproved']) {
   assert.deepEqual([...d.window.document.querySelectorAll('[data-topic-art-source]')].map(a=>a.href),route==='john-tanner'&&body==='fc-life-story'?[journal]:[],'Only exact Tanner journal URL in its owning story is permitted');d.window.close();
  }
 }
+const biography = 'https://www.gutenberg.org/cache/epub/46734/pg46734-images.html';
+for (const route of ['john-tanner', 'eleazer-miller', 'john-rowe-moyle', 'unapproved']) {
+ for (const body of ['fc-life-story', 'unapproved']) {
+  const urls = [biography, biography.replace('https:', 'http:'), biography.replace('www.gutenberg.org', 'gutenberg.org'), biography.replace('www.gutenberg.org', 'www.gutenberg.org.evil.example'), biography.replace('www.gutenberg.org', 'sub.www.gutenberg.org'), biography.replace('46734-images', '46734'), biography + '?other=1', biography + '#other'];
+  const markup = '<body class="'+body+'"><main><figure><a href="/picture.webp"><img src="/picture.webp" alt="Record"></a><figcaption><h3>Biography</h3><p>Historical record.</p>'+urls.map(url=>`<a href="${url}">Biography</a>`).join('')+'</figcaption></figure></main></body>';
+  const d = setup(markup, `https://focuschrist.com/history/${route}.html`);
+  d.window.document.querySelector('figure>a').click();
+  assert.deepEqual([...d.window.document.querySelectorAll('[data-topic-art-source]')].map(a=>a.href), route === 'john-tanner' && body === 'fc-life-story' ? [biography] : [], 'Only exact HTTPS Tanner biography URL in its owning story/body is permitted');
+  d.window.close();
+ }
+}
 if (!process.argv.includes('--source-host-only')) {
   const allStories = ['john-tanner', 'eleazer-miller', 'john-rowe-moyle'];
   const storyOption = process.argv.indexOf('--story');
@@ -62,7 +73,7 @@ if (!process.argv.includes('--source-host-only')) {
       if (url.origin === 'https://focuschrist.com' && /\.html$/.test(url.pathname)) assert(fs.existsSync(path.join(root, url.pathname)), 'Broken runtime navigation: ' + url.pathname);
     }
     const pictures = [...d.querySelectorAll('main figure>a')];
-    assert.equal(pictures.length, { 'john-tanner': 7, 'eleazer-miller': 9, 'john-rowe-moyle': 7 }[slug]);
+    assert.equal(pictures.length, { 'john-tanner': 7, 'eleazer-miller': 9, 'john-rowe-moyle': 8 }[slug]);
     assert.equal(pictures.filter(a => a.classList.contains('fc-visual-hero')).length, 1);
     for (const trigger of pictures) {
       trigger.focus(); trigger.click();

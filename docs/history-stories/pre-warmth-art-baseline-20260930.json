@@ -1,0 +1,190 @@
+{
+  "scope": "Exact23 pre-warmth original scene exports and source identities; responsive hero variants are separate.",
+  "baseline_commit": "d72ee501c10d75c5c9901d234c30c9ac39fd08ea",
+  "scenes": {
+    "miller-search-before-witness": {
+      "full": "assets/page-art/history-stories/miller-search-before-witness-full.webp",
+      "thumbnail": "assets/page-art/history-stories/miller-search-before-witness-960.webp",
+      "sha256": "ea3c121b77e438ac22c828b3fdc5577e3c795d2f853b5ec4776b2c60b0e8c081",
+      "thumbnail_sha256": "5d21d2fd2d801fff0d6cc5197b73150f6180db914f7d3deac0bec81273740752",
+      "source_original": "exec-d02ab209-70e9-49d2-87a7-fc9331929151.png",
+      "source_sha256": "d7f7d7a3dfb4b69f3b76a288190dbd963126bd05b4541e01bb3a54c7a91548a3"
+    },
+    "miller-mission-road": {
+      "full": "assets/page-art/history-stories/miller-mission-road-full.webp",
+      "thumbnail": "assets/page-art/history-stories/miller-mission-road-960.webp",
+      "sha256": "72ea4e5b266f42c24879d7915852b4712559c6bd7504d0a42a78c040cc428b6e",
+      "thumbnail_sha256": "0883a253351684d187c6ba4b60faafbe449b7c892749fca4c41f1a39f996c36e",
+      "source_original": "exec-ddd55c05-df6d-42eb-8756-153469447658.png",
+      "source_sha256": "f4d862c1dc069da21311a071e467c846c19f767522f4c34970a38db061afc31c"
+    },
+    "miller-simple-witness": {
+      "full": "assets/page-art/history-stories/miller-simple-witness-full.webp",
+      "thumbnail": "assets/page-art/history-stories/miller-simple-witness-960.webp",
+      "sha256": "094f16c337bf1c89456b956728b3d56097bea6387b0f781a1221a4dfd2e68525",
+      "thumbnail_sha256": "caf27a075ef4620b66b78d00585176ffacd987f444a522e813ed2475d3fafb0a",
+      "source_original": "exec-e41c93e0-e3fb-4cd1-b0df-1fcf07af8a1d.png",
+      "source_sha256": "1030a65a31395e33876683bab9a12f40613f63c64af2c76ed159029e02471f75"
+    },
+    "tanner-healing-witness": {
+      "full": "assets/page-art/history-stories/tanner-healing-witness-full.webp",
+      "thumbnail": "assets/page-art/history-stories/tanner-healing-witness-960.webp",
+      "sha256": "79efcbf2e91804b6b5e22e942723d04cd475b79f3a4a0a8c86315ca84c40f51c",
+      "thumbnail_sha256": "a5d41dd0198d574738072fd14ed6e3b812413f29cf6cc327d1865f5a271c9454",
+      "source_original": "exec-e426d359-b365-466b-8b93-c4937746a959.png",
+      "source_sha256": "4ecb099ef171b1c3d02bf3972b8ed622a30a38067639f49f3dff9f18af612590"
+    },
+    "moyle-handcart-journey": {
+      "full": "assets/page-art/history-stories/moyle-handcart-journey-full.webp",
+      "thumbnail": "assets/page-art/history-stories/moyle-handcart-journey-960.webp",
+      "sha256": "f0fdf1cb9d34a53563a70c46b6a5f9d795c7f9f7de3a28e145b0603f520addce",
+      "thumbnail_sha256": "17d53510dfd94229957566abbe562bc5a2f6b88b440feeaf24b4523b95f5dcbe",
+      "source_original": "exec-e0dad31f-49f2-4462-ad7b-b35ebf5e6a7f.png",
+      "source_sha256": "9dbe27ba9936822c3596f7850a43bb0c44085644359f806b90c604d1879e79ac"
+    },
+    "tanner-journey-kirtland": {
+      "full": "assets/page-art/history-stories/tanner-journey-kirtland-full.webp",
+      "thumbnail": "assets/page-art/history-stories/tanner-journey-kirtland-960.webp",
+      "sha256": "5ee4dc0f852789ea09aa0f1bd1ee32e1e0cf92bfecc8d2e2a8787fff92b49fb7",
+      "thumbnail_sha256": "030ffcef785e24e904bfbd34886cf185dfd11fce5d3ec3f7c52de0e5b80c8b3b",
+      "source_original": "exec-49f8b3f9-410c-4cfa-8b28-824fe9de54d1.png",
+      "source_sha256": "f07fa01563a23e66dae0c6aa83321871858869edc67cb5ab68a633272fee7231"
+    },
+    "tanner-temple-support": {
+      "full": "assets/page-art/history-stories/tanner-temple-support-full.webp",
+      "thumbnail": "assets/page-art/history-stories/tanner-temple-support-960.webp",
+      "sha256": "993daceaf5946e6d28324c8527ea1f7e2d8bc1e517d64f3f187a3482281f20bd",
+      "thumbnail_sha256": "e1d711b3c3b270e090fa751ba7cf2fe47219c3d9237336022afa396a50cdceb8",
+      "source_original": "exec-585a8084-d091-4a0c-a2d2-6d453402de11.png",
+      "source_sha256": "c667646cb89ba45eda7504f386bc97389ed6ee0f5853ee8ab0ee79310fdd9d77"
+    },
+    "tanner-displacement": {
+      "full": "assets/page-art/history-stories/tanner-displacement-full.webp",
+      "thumbnail": "assets/page-art/history-stories/tanner-displacement-960.webp",
+      "sha256": "7f9868ac70480eaf5c718a7d87305339290a1da40ce1965a35b5578a216fb116",
+      "thumbnail_sha256": "2249d49db9b1214211e742be2a4ec41cbc79e37bec8a530309f6379e0eb0608f",
+      "source_original": "exec-20f7d5d3-bb0e-420e-800d-f6552513166f.png",
+      "source_sha256": "1621c65fa82207ceccc83808bfa76913c4b4f0f2b09f21a3179393b5aa1feadf"
+    },
+    "tanner-debt-forgiven": {
+      "full": "assets/page-art/history-stories/tanner-debt-forgiven-full.webp",
+      "thumbnail": "assets/page-art/history-stories/tanner-debt-forgiven-960.webp",
+      "sha256": "05730366e5b409ef89dd41462416403666e52f7e19874347f2f35f88d4057826",
+      "thumbnail_sha256": "b409447e2c674caefd7aaee3a7b2e8d2e7cbba01a087d605792ba30854f35c60",
+      "source_original": "exec-caa8bff2-2a37-498e-a78b-08365dd247ff.png",
+      "source_sha256": "bbdd13c905655f73d4855206d6f2cd1801456c42d516f0afd300b0c7008e4d7f"
+    },
+    "moyle-stonecutter-craft": {
+      "full": "assets/page-art/history-stories/moyle-stonecutter-craft-full.webp",
+      "thumbnail": "assets/page-art/history-stories/moyle-stonecutter-craft-960.webp",
+      "sha256": "4dc05f877633db340ab1a44bd235cbc53aad1295b37f270cffa783a34e0fbbd1",
+      "thumbnail_sha256": "509f4db0f9e9880cdcd5b4d120f80d01e3e49bbb24dd81e0881ffc2c45d58ea2",
+      "source_original": "exec-298fe287-f97c-4f0a-be99-7a2f2fd55846.png",
+      "source_sha256": "71addc09196ae6511b55122f346dd3612f958803069a8ab50e17976db9f3d9af"
+    },
+    "moyle-wooden-leg": {
+      "full": "assets/page-art/history-stories/moyle-wooden-leg-full.webp",
+      "thumbnail": "assets/page-art/history-stories/moyle-wooden-leg-960.webp",
+      "sha256": "995c6e914c4bdaa83178ab5eddd080246f48fb439b91ee5ab05ac2b801988354",
+      "thumbnail_sha256": "4ec365dc49f17629483d31cb610100d83c6bb1d9c2531963b3f980d9ef3e3ed7",
+      "source_original": "exec-b56ad883-cabc-421f-a31a-cc530befdfee.png",
+      "source_sha256": "316d8ec2edcdeb0c3082211b906aad9eeea2122e951b0b20e45c7fc8a4a3fb52"
+    },
+    "moyle-return-to-craft": {
+      "full": "assets/page-art/history-stories/moyle-return-to-craft-full.webp",
+      "thumbnail": "assets/page-art/history-stories/moyle-return-to-craft-960.webp",
+      "sha256": "dcfe05958264160d0857ff6f51e1ebfc63216f852efe0055bcaef77a40398abe",
+      "thumbnail_sha256": "78b166daf3a1467ad752b0f6890a3470930db7ba16e924e6aa9aeb15f6918355",
+      "source_original": "exec-ba29c45f-bd00-439e-8185-8c8457da0f56.png",
+      "source_sha256": "99903dfb9817d047b1c904f7bbf8ffa20f51da58bef36a36a992467d24dadbab"
+    },
+    "miller-westward-service": {
+      "full": "assets/page-art/history-stories/miller-westward-service-full.webp",
+      "thumbnail": "assets/page-art/history-stories/miller-westward-service-960.webp",
+      "sha256": "a4414163a1ff8d73af22a9a9ac6a4b31d513f3e03cfbd70500f710c83f02229b",
+      "thumbnail_sha256": "045719f7d59fb7036b269e79132b5f260858b5ad3c72303ee7fa1beaf1c26022",
+      "source_original": "exec-f0a9ff2c-cb80-489f-a9a1-4ffef0a9ed09.png",
+      "source_sha256": "f73aecedb5127097ff49545a22a2a7f448f3c9a393db1d376ed4b0ead532f35c"
+    },
+    "miller-millstream-baptism": {
+      "full": "assets/page-art/history-stories/miller-millstream-baptism-full.webp",
+      "thumbnail": "assets/page-art/history-stories/miller-millstream-baptism-960.webp",
+      "sha256": "ef4b9f4d73799d37072e19f395318890f322be4e16bafb7e4b8089c807aaa8e9",
+      "thumbnail_sha256": "a0bcdff2b3fb3a3259f666f05e0b14763a0c70e859f05079507351ff188e9d08",
+      "source_original": "exec-f370160a-a6f5-4a84-958e-cda8e24e47f6.png",
+      "source_sha256": "f268e8e38d8c7947e835a7c8539514bc671d32633702a5c03112233f674d6832"
+    },
+    "moyle-weekly-walk": {
+      "full": "assets/page-art/history-stories/moyle-weekly-walk-full.webp",
+      "thumbnail": "assets/page-art/history-stories/moyle-weekly-walk-960.webp",
+      "sha256": "9ebf004152de35c2ecc6a7889be50f09030d597a61bf163c790ca1b2aeac7434",
+      "thumbnail_sha256": "e84aecb7441c58e91d79c671ab8d6ee1ff454e3e4d6f24a263087318e8c4d2d0",
+      "source_original": "exec-5630fe8c-4a34-4a0a-95bb-d7054aa0165c.png",
+      "source_sha256": "d72e1a4ce7df77492231cf6e06f39891c40058dea450892a199ef31f2c22fa92"
+    },
+    "tanner-mission-road-1844": {
+      "full": "assets/page-art/history-stories/tanner-mission-road-1844-full.webp",
+      "thumbnail": "assets/page-art/history-stories/tanner-mission-road-1844-960.webp",
+      "sha256": "103897cd67c6d763c0aea58d19db3e3b589a69d3ca9667f09b34bd92f9932f7b",
+      "thumbnail_sha256": "dfaa3c5bd89cd840097277291be93519bcdb3542648b4e94af7553456e3a6d10",
+      "source_original": "exec-775650c5-1329-473c-8bf4-8e4473401325.png",
+      "source_sha256": "d9f23a0744bf92968ae042468f2328da0922d4144936b0c23e9ccd3f62308ff4"
+    },
+    "tanner-family-crossing-1848": {
+      "full": "assets/page-art/history-stories/tanner-family-crossing-1848-full.webp",
+      "thumbnail": "assets/page-art/history-stories/tanner-family-crossing-1848-960.webp",
+      "sha256": "a922543fe66d9902e02a5686034dcdca169267eae62c15f4375ec51032065fd0",
+      "thumbnail_sha256": "9995f517899982422564ff7a9611bac0e4ef1f60f7b634d0ffc1189a5d18e01b",
+      "source_original": "exec-9c965f61-bc80-40a9-8110-dd0da8436c1d.png",
+      "source_sha256": "0975a8dda996eea72b392a5bae8769e0858ae04c4447a054de375c2d6547c15c"
+    },
+    "miller-conversion-1831": {
+      "full": "assets/page-art/history-stories/miller-conversion-1831-full.webp",
+      "thumbnail": "assets/page-art/history-stories/miller-conversion-1831-960.webp",
+      "sha256": "21858e3505166f380cff550bc08f392c8fd70e71cac3d02df0e26fec49358012",
+      "thumbnail_sha256": "f31a6e141c5334846fadf2c13ac0f4dcae5b314c553ca10ad488b735efe1ba15",
+      "source_original": "exec-0a4f745f-c598-4209-816f-21f868e5fb7f.png",
+      "source_sha256": "5d2e7c776f9ed5b29bba0b41c0c48add5663ee1e45f2622d80258d54b7b6fbe2"
+    },
+    "miller-canada-grove": {
+      "full": "assets/page-art/history-stories/miller-canada-grove-full.webp",
+      "thumbnail": "assets/page-art/history-stories/miller-canada-grove-960.webp",
+      "sha256": "0662c1f0c6643aa8410adb4b00a8382a73d9b8263c0bb848fc147aa138ac687e",
+      "thumbnail_sha256": "73bd34ed73add69f6fc1a1411f17aac64f12aac5f71fb5aa45b0cdbf2d05e280",
+      "source_original": "exec-c2c77b1f-5cd7-473f-8356-24ff242d3846.png",
+      "source_sha256": "4dc2147d7e0391bbb97f696dd619c4ee2ea0edd1ca6cfae762437abd4a7b90dc"
+    },
+    "miller-zions-camp-horses": {
+      "full": "assets/page-art/history-stories/miller-zions-camp-horses-full.webp",
+      "thumbnail": "assets/page-art/history-stories/miller-zions-camp-horses-960.webp",
+      "sha256": "db0868a5052756254bf9fcb4c96af076a2ad07ab16d851e8f60a1abe60436d9f",
+      "thumbnail_sha256": "f1aab420ea07351245cebbddc4bfa9c61db6b26c111b40283c4ec37e8bb93a53",
+      "source_original": "exec-37f7f573-6aac-41d7-9033-f3e950d972ac.png",
+      "source_sha256": "22708f3e859eca06a6246e1680988b17c93ad145fab2fabd659004c2053d4314"
+    },
+    "miller-relief-donation": {
+      "full": "assets/page-art/history-stories/miller-relief-donation-full.webp",
+      "thumbnail": "assets/page-art/history-stories/miller-relief-donation-960.webp",
+      "sha256": "77e3414002d099caf845854d4d020c44218f82127a0b85fe8a87c145503dd2e2",
+      "thumbnail_sha256": "3b397f9f624a3b4e2e175b8101c6d1b9fa192ec26e40536f309530b8bb7e807b",
+      "source_original": "exec-40dece9a-7a9e-41cf-a916-dae250655fcb.png",
+      "source_sha256": "9716332793ef46e34b5742aff45512f50a3fd852df263752e0b94083a1572096"
+    },
+    "moyle-atlantic-crossing": {
+      "full": "assets/page-art/history-stories/moyle-atlantic-crossing-full.webp",
+      "thumbnail": "assets/page-art/history-stories/moyle-atlantic-crossing-960.webp",
+      "sha256": "b7200a34754215eff83e1945f16f7ada005ea4e9743fad7e3371eb143cb2762f",
+      "thumbnail_sha256": "ed6996e52228aa02ca1e6bdadee9a10208ee7e76e16452d96be835cafabbf9d4",
+      "source_original": "exec-716e6d88-02f5-4b65-bd70-266d8f61370c.png",
+      "source_sha256": "90766f2c4c70f1663afaf67bd3a04f64df0361801919b2ced88696e1bc2fb8aa"
+    },
+    "moyle-holiness-inscription": {
+      "full": "assets/page-art/history-stories/moyle-holiness-inscription-full.webp",
+      "thumbnail": "assets/page-art/history-stories/moyle-holiness-inscription-960.webp",
+      "sha256": "35a0f0993f62f6ff2e052b098729a5d8722cf7abf72d9e0375c59796b0acec90",
+      "thumbnail_sha256": "4d5adfca5e4c5ddef7a57bcdb9ad19ad6a8e0652f3c708d6519ca4adf5dbb65b",
+      "source_original": "exec-e2192dc4-268f-481c-883c-f47d82d05191.png",
+      "source_sha256": "b3872bb7b3889ac26b661daf68e4926a57bd3440d6a3ab0b0285479f5a7e5845"
+    }
+  }
+}

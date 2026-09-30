@@ -112,7 +112,7 @@ def build():
         content = re.sub(r'<link rel="stylesheet" href="\.\./temples-history\.css\?v=[^"]+">', style, content)
     elif style not in content:
         content = content.replace('</head>', style + '\n</head>', 1)
-    content = re.sub(r'topic-artwork-details\.js\?v=[A-Za-z0-9-]+', 'topic-artwork-details.js?v=20260929-tanner-journal-1', content)
+    content = re.sub(r'topic-artwork-details\.js\?v=[A-Za-z0-9-]+', 'topic-artwork-details.js?v=20260930-history-records-1', content)
     PAGE.write_text(content, encoding='utf-8', newline='\n')
     print(f'Integrated {len(chapters)} reviewed original temple-history picture studies.')
 

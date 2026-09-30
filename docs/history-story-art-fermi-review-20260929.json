@@ -285,6 +285,16 @@
       "result": "pass",
       "observations": "Arched HOLINESS / decorative To The / angular LORD. arrangement corresponds to official upper inscription; image is partial work-stage reconstruction, not fullpanel facsimile. Lower historical text outside frame. Warm gray ungilded carving does not assert present goldfinish existed then. Recognizable older Moyle, focused down-to-chisel eyeline, natural hammer/grip, one prosthesis and one boot, no extra limb. No exact carving year or artifact hardware claimed; later-remembrance attribution retained.",
       "review_reference": "docs/history-stories/expansion-fermi-review-20260929.json"
+    },
+    {
+      "source_original": "exec-50cb63d4-a73e-49ce-a5b6-f17fcf11505b.png",
+      "sha256": "a5296ca10cdbb0c4784ccd559976021a81bc935a08a022efe6e917dddf5262b4",
+      "id": "moyle-cow-injury",
+      "result": "pass",
+      "reviewer": "Newton",
+      "observations": "Independent likeness, mature age, restrained discomfort, human/cow anatomy and readable accident aftermath pass.",
+      "limitation": "Reconstruction of explicitly attributed later family tradition, not an authenticated incident or date. A possible same-name 1888 newspaper lead remains unverified; no conclusion is drawn from it.",
+      "reference": "Existing moyle-wooden-leg-full.webp and historical family portrait plate."
     }
   ]
 }
