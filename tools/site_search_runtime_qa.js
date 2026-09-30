@@ -28,8 +28,8 @@ async function run(){
     assert.equal(d.querySelector('[data-search-results] h2 a').getAttribute('href'),top('priesthood restoration')[0]);
     assert.match(d.getElementById('fc-search-status').textContent,/best match/);
     const submit=q=>{d.getElementById('fc-results-query').value=q;d.getElementById('fc-results-search-form').dispatchEvent(new w.Event('submit',{cancelable:true,bubbles:true}));};
-    assert.equal(search.groupMatches(data.records,'priesthood').best.length,2);
-    submit('priesthood');await tick();assert.equal(d.querySelector('[data-search-results]').children.length,2);assert.equal(d.querySelector('.fc-search-supporting').open,false);assert.equal(d.getElementById('fc-search-more').hidden,true);d.querySelector('.fc-search-supporting summary').click();assert.equal(d.querySelector('.fc-search-supporting').open,true);assert.ok(d.querySelector('.fc-search-supporting ol').children.length>0);
+    assert.deepEqual(new Set(search.groupMatches(data.records,'priesthood').best.map(r=>r.url)),new Set(['/answers/aaronic-priesthood-restoration.html','/answers/melchizedek-priesthood-restoration.html','/answers/race-priesthood-and-temple-blessings.html']));
+    submit('priesthood');await tick();assert.equal(d.querySelector('[data-search-results]').children.length,3);assert.equal(d.querySelector('.fc-search-supporting').open,false);assert.equal(d.getElementById('fc-search-more').hidden,true);d.querySelector('.fc-search-supporting summary').click();assert.equal(d.querySelector('.fc-search-supporting').open,true);assert.ok(d.querySelector('.fc-search-supporting ol').children.length>0);
     submit('grief');await tick();assert.equal(new URL(w.location).searchParams.get('q'),'grief');
     assert.equal(d.querySelector('[data-search-results] h2 a').getAttribute('href'),top('grief')[0]);
     const ask=new URL(d.getElementById('fc-search-ask').href);assert.equal(ask.searchParams.get('search-question'),'grief');assert.equal(ask.hash,'#ask-question');
