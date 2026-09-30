@@ -16,7 +16,7 @@ for record in inventory['pages']:
     actual = bool(doc.select_one('.fc-visual-hero,[data-covenant-hero-slot],.cfm-desktop-picture,.gc-intro-visual'))
     assert actual == record['hero'], record['path'] + ': opening hero inventory drift'
     common = [s['src'] for s in doc.select('script[src]') if 'site-common.js' in s['src']]
-    assert len(common) == 1 and common[0].endswith('site-common.js?v=20260930-study-alignment-2'), record['path']
+    assert len(common) == 1 and common[0].endswith('site-common.js?v=20260930-art-disclosure-3'), record['path']
 common = (ROOT / 'site-common.js').read_text(encoding='utf8')
 assert common.count("relativeAssetHref('unified-opening.css?v=20260930-alignment-2')") == 1
 assert common.count("relativeAssetHref('unified-opening.js?v=20260930-1')") == 1

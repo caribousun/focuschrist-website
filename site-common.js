@@ -651,9 +651,18 @@
     function normalizeFooterIdentity() {
         const footer = document.querySelector('.fc-footer[data-focuschrist-footer="standard"]');
         if (!footer) return;
+        if (!footer.querySelector('[data-focuschrist-artwork-disclosure]')) {
+            const disclosure = document.createElement('p');
+            disclosure.setAttribute('data-focuschrist-artwork-disclosure', 'footer');
+            disclosure.textContent = 'Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.';
+            const independence = footer.querySelector('[data-focuschrist-independence="footer"]') || Array.from(footer.children).find(function (child) {
+                return child.tagName === 'P' && child.textContent.startsWith('focusChrist is an independent faith-based website');
+            });
+            if (independence) independence.after(disclosure); else footer.appendChild(disclosure);
+        }
         const standardText = '© ' + new Date().getFullYear() + ' focusChrist. All are welcome here.';
         let identity = Array.from(footer.children).find(function (child) {
-            return child.tagName === 'P' && !child.hasAttribute('data-focuschrist-independence');
+            return child.tagName === 'P' && !child.hasAttribute('data-focuschrist-independence') && !child.hasAttribute('data-focuschrist-artwork-disclosure');
         });
         if (!identity) {
             identity = document.createElement('p');
