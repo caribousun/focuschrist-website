@@ -35,6 +35,14 @@ for story in stories:
     page = ROOT/f'history/{slug}.html'
     soup = BeautifulSoup(page.read_text(encoding='utf-8'), 'html.parser')
     assert soup.select_one(f'link[rel="canonical"][href="https://focuschrist.com/history/{slug}.html"]')
+    opening = soup.select_one('.fc-life-reading.fc-life-opening')
+    body_start = soup.select_one('.fc-life-reading.fc-life-body-start')
+    assert opening and body_start and opening.find_next_sibling() is body_start, 'Opening and first narrative must be semantic siblings'
+    assert opening.select_one(':scope > h1') and opening.select_one('.fc-actions a') and opening.select_one('details.fc-life-directory')
+    assert not opening.select('h2, p:not(.fc-eyebrow)'), 'First narrative must not creep into the opening container'
+    first_heading = body_start.select_one(':scope > h2[id]')
+    assert first_heading and body_start.select_one(':scope > p')
+    assert opening.select_one('.fc-actions a')['href'] == '#' + first_heading['id'], 'Begin retains existing first narrative target'
     ids = [node['id'] for node in soup.select('[id]')]
     assert len(ids) == len(set(ids)), 'Duplicate IDs'
     expected_count = {'john-tanner': 7, 'eleazer-miller': 9, 'john-rowe-moyle': 8}[slug]
@@ -91,7 +99,12 @@ assert css.count(summary_rule) == 1, 'Exact reviewed summary touch-target declar
 mobile_start = css.index('@media (max-width: 700px) {')
 summary_start = css.index(summary_rule)
 assert summary_start > mobile_start and '\n}' not in css[mobile_start:summary_start], 'Summary target must remain inside the mobile block'
+opening_rule = '.fc-life-story .fc-life-opening { min-height: calc(100svh - var(--fc-opening-flow-header-height) - var(--fc-mobile-hero-height)); padding-bottom: 24px; box-sizing: border-box; }'
+assert css.count(opening_rule) == 1
+opening_start = css.index(opening_rule)
+assert opening_start > mobile_start and '\n}' not in css[mobile_start:opening_start], 'Opening minimum belongs only to mobile reading flow'
 geometry_css = css.replace(summary_rule, summary_rule.replace(' min-height: 44px;', ''), 1)
+geometry_css = geometry_css.replace(opening_rule, opening_rule.replace(' min-height: calc(100svh - var(--fc-opening-flow-header-height) - var(--fc-mobile-hero-height));', ''), 1)
 assert not re.search(r'(?:^|[;{])\s*(?:height|min-height|max-height|object-fit)\s*:', geometry_css), 'Shared standard hero geometry must remain authoritative'
 shared_css = (ROOT/'site-system.css').read_text(encoding='utf-8')
 assert 'aspect-ratio: 2048 / 684;' in shared_css and '--fc-mobile-hero-height: clamp(320px, 115vw, 800px)' in shared_css

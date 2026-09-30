@@ -44,7 +44,7 @@ def render(story, ready):
     base = (ROOT / 'church-history.html').read_text(encoding='utf-8')
     css = re.findall(r'<link[^>]+rel="stylesheet"[^>]+href="([^"]+)"', base)
     css = [x for x in css if not x.startswith('church-history.css')]
-    css.append('history-stories.css?v=20260930-history-opening-2')
+    css.append('history-stories.css?v=20260930-history-opening-3')
     scripts = ['site-common.js?v=20260929-footer-top-1', 'full-image-viewer.js?v=20260914-reopen-1', 'topic-artwork-details.js?v=20260930-history-records-1', 'site-search.js?v=20260919-focused-answers-1']
     out = ['<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">', f'<title>{esc(story["name"])} | Church History | focusChrist</title>', f'<meta name="description" content="{esc(story["introduction"])}"><link rel="canonical" href="https://focuschrist.com/history/{slug}.html">']
     out += [f'<meta property="og:url" content="https://focuschrist.com/history/{slug}.html">', f'<meta property="og:title" content="{esc(story["name"])} | Church History | focusChrist">', f'<meta property="og:description" content="{esc(story["introduction"])}">', f'<meta property="og:image" content="https://focuschrist.com/{ready[story["units"][0]["id"]]["full"]}">', '<meta name="twitter:card" content="summary_large_image">']
@@ -54,9 +54,9 @@ def render(story, ready):
     for index, unit in enumerate(story['units']):
         out += [f'<section id="{unit["id"]}" aria-labelledby="heading-{unit["id"]}">']
         if index == 0:
-            out += [figure(unit, ready[unit['id']], True), '<div class="fc-life-reading">', '<p class="fc-eyebrow"><a href="../church-history.html#faithful-lives">Church History</a></p>', f'<h1>{esc(story["title"])}</h1>', f'<div class="fc-actions"><a class="fc-button fc-button--primary" href="#heading-{unit["id"]}">Begin the story</a></div>', '<details class="fc-life-directory"><summary>Explore this story</summary><ol>']
+            out += [figure(unit, ready[unit['id']], True), '<div class="fc-life-reading fc-life-opening">', '<p class="fc-eyebrow"><a href="../church-history.html#faithful-lives">Church History</a></p>', f'<h1>{esc(story["title"])}</h1>', f'<div class="fc-actions"><a class="fc-button fc-button--primary" href="#heading-{unit["id"]}">Begin the story</a></div>', '<details class="fc-life-directory"><summary>Explore this story</summary><ol>']
             out += [f'<li><a href="#{"heading-" if i == 0 else ""}{u["id"]}">{esc(u["title"])}</a></li>' for i, u in enumerate(story['units'])]
-            out += ['<li><a href="#official-film">Watch the official film</a></li><li><a href="#reflect">Pause and reflect</a></li></ol></details>', f'<h2 id="heading-{unit["id"]}">{esc(unit["title"])}</h2>']
+            out += ['<li><a href="#official-film">Watch the official film</a></li><li><a href="#reflect">Pause and reflect</a></li></ol></details></div><div class="fc-life-reading fc-life-body-start">', f'<h2 id="heading-{unit["id"]}">{esc(unit["title"])}</h2>']
         else:
             out += ['<div class="fc-life-reading">', figure(unit, ready[unit['id']]), f'<h2 id="heading-{unit["id"]}">{esc(unit["title"])}</h2>']
         out += [f'<p>{prose(p, unit["sources"])}</p>' for p in unit['paragraphs']]

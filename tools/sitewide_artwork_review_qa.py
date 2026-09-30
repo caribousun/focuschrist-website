@@ -152,7 +152,7 @@ SCOPED_INTERFACE_STYLES = {
 OWNER_20260929_STYLES = {
     # Dynamically loaded only by the shared footer controller; all125 public contexts tested.
     'footer-navigation.css': ('3713562b2415f8b31394b46767204330777f021887621b4b7eaeae5ff1c22fee', []),
-    'history-stories.css': ('917259b60a47b783a9ed224675c3bd817715b3f779d3f05422b15b178625eabe', ['history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html']),
+    'history-stories.css': ('ea7fcee9495f0e39d8c5728f134f435eb4aa201ae8259c4d4bb290637ee181f9', ['history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html']),
     # Owner-requested39-picture final-row balance, Fermi rendered ten widths; Newton source review.
     'art-experience.css': ('ef21dea3b87e8b3e59454aba32726210a783d87d556928201ef375a3627b1c74', ['art.html']),
     'desktop-hero-repairs.css': ('36270651fecfb57cb371580f1fd4df3c2910942665e356245ddf451e5c4d9ecb', ['answers/abrahamic-covenant.html', 'answers/look-unto-me-doctrine-and-covenants-6-36.html', 'answers/plan-of-salvation.html', 'art-study/be-still.html', 'art-study/suffer-the-little-children.html', 'art-study/the-good-shepherd.html', 'birth-of-christ.html', 'book-of-mormon-evidences.html', 'general-conference.html', 'joseph-smith-likeness.html']),

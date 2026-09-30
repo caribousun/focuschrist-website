@@ -10,6 +10,26 @@ const out = path.join(root, '.qa-artifacts', 'history-heroes');
 const records = [];
 const openingRecords = [];
 fs.mkdirSync(out, { recursive: true });
+async function checkReflectionSpacing(page, label) {
+  const geometry = await page.locator('.fc-life-reflections').evaluate(grid => {
+    const actions=grid.nextElementSibling;
+    const returnRow=actions.nextElementSibling;
+    const g=grid.getBoundingClientRect(), a=actions.getBoundingClientRect(), r=returnRow.getBoundingClientRect();
+    return {before:a.top-g.bottom,after:r.top-a.bottom,links:[...actions.querySelectorAll('a'),returnRow.querySelector('a')].map(link=>{const box=link.getBoundingClientRect();return {width:box.width,height:box.height,left:box.left,right:box.right,clipped:link.scrollWidth>link.clientWidth+1 && getComputedStyle(link).display!=='inline'};}),viewport:innerWidth};
+  });
+  assert(geometry.before>=23.5 && geometry.after>=23.5, label+' reflection/scripture/return gaps must be at least24px');
+  assert(geometry.links.every(link=>link.width>0 && link.height>0 && link.left>=-1 && link.right<=geometry.viewport+1 && !link.clipped), label+' closing links contained and readable');
+  const links=page.locator('.fc-life-reflections + .fc-actions a, .fc-life-reflections + .fc-actions + p a');
+  for (let i=0;i<await links.count();i++) {
+    const link=links.nth(i);await link.scrollIntoViewIfNeeded();await link.focus();
+    assert(await link.evaluate(a=>document.activeElement===a), label+' closing links remain reachable');
+  }
+  await links.last().evaluate(link=>link.scrollIntoView({block:'end'}));
+  geometry.screenshot=path.join(out,label.replace(/[^a-z0-9]+/gi,'-')+'-reflection.png');
+  await page.screenshot({path:geometry.screenshot,fullPage:false,animations:'disabled'});
+  await page.evaluate(()=>scrollTo(0,0));
+  return geometry;
+}
 (async () => {
   const server = http.createServer((request, response) => {
     const filename = path.resolve(root, '.' + decodeURIComponent(new URL(request.url, 'http://localhost').pathname));
@@ -42,6 +62,7 @@ fs.mkdirSync(out, { recursive: true });
       const inspected = spawnSync('python', [path.join(root, 'tools/history_hero_pixels_qa.py'), screenshot, JSON.stringify(bounds)], { encoding:'utf8' });
       const raster = inspected.stdout.trim() ? JSON.parse(inspected.stdout.trim()) : { failures:[inspected.stderr || 'Raster inspection produced no result'] };
       records.push({ page:slug, viewport:[1440,1000], bounds, source, screenshot:path.relative(root, screenshot), raster });
+      records[records.length-1].reflection=await checkReflectionSpacing(page, slug+' desktop1440');
       await page.close();
     }
     assert(records.every(record => !record.raster.failures.length), 'Hero raster has a blank/near-solid region; inspect saved screenshots');
@@ -61,7 +82,7 @@ fs.mkdirSync(out, { recursive: true });
             const summary = document.querySelector('.fc-life-directory summary');
             const rect = node => { const r=node.getBoundingClientRect(); return {x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom}; };
             const headings = [...document.querySelectorAll('.fc-life-reading h1, .fc-life-reading h2')].map(h => ({ text:h.textContent, family:getComputedStyle(h).fontFamily, weight:getComputedStyle(h).fontWeight }));
-            return {headings, title:rect(h1), button:rect(button), summary:rect(summary), directoryOpen:summary.parentElement.open, summaryClipped:summary.scrollHeight>summary.clientHeight+1 || summary.scrollWidth>summary.clientWidth+1, fontSize:parseFloat(getComputedStyle(h1).fontSize), overflow:document.documentElement.scrollWidth>innerWidth+1, titleClipped:h1.scrollHeight>h1.clientHeight+1, buttonClipped:button.scrollWidth>button.clientWidth+1, readingOverflow:getComputedStyle(h1.parentElement).overflowY};
+            return {headings, title:rect(h1), button:rect(button), summary:rect(summary), firstBodyHeading:rect(document.querySelector('.fc-life-body-start > h2')), directoryOpen:summary.parentElement.open, summaryClipped:summary.scrollHeight>summary.clientHeight+1 || summary.scrollWidth>summary.clientWidth+1, fontSize:parseFloat(getComputedStyle(h1).fontSize), overflow:document.documentElement.scrollWidth>innerWidth+1, titleClipped:h1.scrollHeight>h1.clientHeight+1, buttonClipped:button.scrollWidth>button.clientWidth+1, readingOverflow:getComputedStyle(h1.parentElement).overflowY};
           });
           const label = `${slug} ${width} ${enlarged?'200%':'100%'}`;
           assert(opening.headings.length>1 && opening.headings.every(h => /^Georgia\b/i.test(h.family.replaceAll('"','')) && h.weight==='400'), label+' must use the shared Georgia400 heading theme');
@@ -72,6 +93,7 @@ fs.mkdirSync(out, { recursive: true });
           assert(opening.button.y>=opening.title.bottom-1, label+' title/action overlap');
           if (!enlarged) {
             normalSize=opening.fontSize;
+            assert(opening.firstBodyHeading.y>=height+16, label+' first story heading must begin below the initial screen');
             assert(Math.abs(normalSize-Math.min(32,Math.max(24,width*.08)))<.1, label+' normal heading size unchanged');
             assert(opening.summary.bottom<=height-16, label+' entire directory summary must fit with16px bottom clearance');
             assert(opening.title.y>=0 && opening.button.bottom<=height, label+' complete opening must fit shorter phone viewport');
@@ -94,6 +116,7 @@ fs.mkdirSync(out, { recursive: true });
           assert(await summary.evaluate(s=>s.parentElement.open), label+' directory opens with keyboard');
           await summary.press('Enter');
           assert(await summary.evaluate(s=>!s.parentElement.open), label+' directory closes with keyboard');
+          opening.reflection=await checkReflectionSpacing(page,label);
           openingRecords.push({page:slug,viewport:[width,height],enlarged,...opening,screenshot:path.relative(root,screenshot)});
           await page.evaluate(()=>scrollTo(0,0));
         }
