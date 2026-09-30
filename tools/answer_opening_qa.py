@@ -31,6 +31,7 @@ def check():
             cue=header.select_one('a.fc-scroll-cue[href="#main-content"]')
             assert cue and doc.select_one('#main-content'),name+': valid Continue'
         elif name==COVENANT:
+            assert not header.select('a[href="/answers.html"]'), 'Owner removed Covenant opening breadcrumb'
             cues=header.select('a.fc-covenant-continue')
             assert len(cues)==1 and cues[0].get('href')=='#a-promise-to-live-by'
             assert doc.select_one('#a-promise-to-live-by') and 'fc-button' not in cues[0].get('class',[])
@@ -41,7 +42,7 @@ def check():
         for css,owned in [('answer-opening.css',name in topics),('covenant-opening.css',name==COVENANT)]:
             links=[l for l in doc.select('link[rel="stylesheet"]') if css in l.get('href','')]
             assert len(links)==int(owned),name+': wrong opening stylesheet ownership'
-            if links:assert links[0]['href']=='../'+css+'?v='+('20260930-continue-2' if name==COVENANT else '20260930-2')
+            if links:assert links[0]['href']=='../'+css+'?v='+('20260930-centered-3' if name==COVENANT else '20260930-2')
     css=(ROOT/'answer-opening.css').read_text(encoding='utf8')
     clean=re.sub(r'/\*.*?\*/','',css,flags=re.S).strip()
     assert clean.startswith('@media (min-width: 701px) {') and clean.count('@media')==1

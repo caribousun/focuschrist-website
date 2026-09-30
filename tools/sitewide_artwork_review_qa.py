@@ -155,12 +155,13 @@ SCOPED_INTERFACE_STYLES = {
 OWNER_20260929_STYLES = {
     # Owner-directed Answer Continue correction: exact CSS bytes and consumer lists.
     'answer-opening.css': ('0356c038ad2adcec7206bfcb3d57915b9e2be2cd42024770560f3d9875cc94fb', ['answers/aaronic-priesthood-restoration.html', 'answers/are-latter-day-saints-christian.html', 'answers/bible-and-book-of-mormon-together.html', 'answers/death-of-a-child.html', 'answers/divorce-and-faith.html', 'answers/faith-in-jesus-christ-during-trials.html', 'answers/god-our-heavenly-father.html', 'answers/grief-and-faith.html', 'answers/holy-ghost.html', 'answers/jesus-christ-latter-day-saint-beliefs.html', 'answers/look-unto-me-doctrine-and-covenants-6-36.html', 'answers/melchizedek-priesthood-restoration.html', 'answers/plan-of-salvation.html', 'answers/prayer-and-personal-revelation.html', 'answers/restored-church-of-jesus-christ.html', 'answers/settle-this-in-your-hearts.html', 'answers/stand-forever.html', 'answers/what-happens-after-death.html', 'answers/what-is-eternal-marriage.html', 'answers/what-is-the-book-of-mormon.html', 'answers/who-was-joseph-smith.html', 'answers/why-families-are-important.html', 'answers/why-latter-day-saints-build-temples.html']),
-    'covenant-opening.css': ('055c27b54523f6167abb288ea3f689776eab5b9836597b1e58ff7684b89c8851', ['answers/abrahamic-covenant.html']),
+    'covenant-opening.css': ('a0e47a332a6144d17b9d1f6f799e5db085776dc3e55f5c89f9d376d1071db72e', ['answers/abrahamic-covenant.html']),
 
     # Dynamically loaded only by the shared footer controller; all125 public contexts tested.
     'footer-navigation.css': ('3713562b2415f8b31394b46767204330777f021887621b4b7eaeae5ff1c22fee', []),
     'history-stories.css': ('baca93e6f290b179727fbdfa12fbafad586a20647bb4ef7d9e7ec59d20ceca1d', ['history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html']),
     # Owner-requested39-picture final-row balance, Fermi rendered ten widths; Newton source review.
+    'art-opening.css': ('fa6c83370112c1d6afa52052d7c11981858ba838de4851167460459de600f705', ['art.html']),
     'art-experience.css': ('ef21dea3b87e8b3e59454aba32726210a783d87d556928201ef375a3627b1c74', ['art.html']),
     'desktop-hero-repairs.css': ('36270651fecfb57cb371580f1fd4df3c2910942665e356245ddf451e5c4d9ecb', ['answers/abrahamic-covenant.html', 'answers/look-unto-me-doctrine-and-covenants-6-36.html', 'answers/plan-of-salvation.html', 'art-study/be-still.html', 'art-study/suffer-the-little-children.html', 'art-study/the-good-shepherd.html', 'birth-of-christ.html', 'book-of-mormon-evidences.html', 'general-conference.html', 'joseph-smith-likeness.html']),
     'temples-history.css': ('c3aa901b47871dc2cc9aa2848bf31b871a93588e0b4ad141c4d1da7912b2125a', ['answers/why-latter-day-saints-build-temples.html']),

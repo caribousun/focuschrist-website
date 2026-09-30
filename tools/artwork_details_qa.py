@@ -143,7 +143,7 @@ def main() -> int:
         if not target.is_relative_to(ROOT.resolve()) or not target.exists():
             errors.append(f"art.html: complete study page does not exist: {study_path}")
 
-    gallery_section = art.split('<div class="gallery">', 1)[1].split('data-focuschrist-featured-art-study', 1)[0]
+    gallery_section = art.split('<div class="gallery" id="art-gallery">', 1)[1].split('data-focuschrist-featured-art-study', 1)[0]
     if "data-artwork-detail=" in gallery_section:
         errors.append("art.html: main gallery must retain its existing dedicated viewer")
 

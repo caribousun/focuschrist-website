@@ -29,6 +29,14 @@ const results=[];
     const {height:controlHeight,...controlEvidence}=evidence;
     results.push({file,viewportWidth:width,viewportHeight:height,controlHeight,...controlEvidence});
     assert(evidence.visible&&!evidence.clipped&&!evidence.overflow&&evidence.top>=0&&evidence.bottom<=height-8&&evidence.height>=43.5&&evidence.left>=0&&evidence.right<=width+1,JSON.stringify(results.at(-1)));
+    if(record.kind==='jj-opening'){
+     const alignment=await page.locator('.jj-opening').evaluate(opening=>{
+      const title=opening.querySelector('h1'),cue=opening.querySelector('.fc-covenant-continue'),r=cue.getBoundingClientRect(),s=getComputedStyle(title);
+      return {titleAlign:s.textAlign,titleFont:s.fontFamily,titleWeight:s.fontWeight,cueCenter:(r.left+r.right)/2,viewportCenter:innerWidth/2,breadcrumb:!!opening.querySelector('a[href="/answers.html"]')};
+     });
+     Object.assign(results.at(-1),{alignment});
+     assert(alignment.titleAlign==='center'&&alignment.titleFont.includes('Georgia')&&alignment.titleWeight==='400'&&Math.abs(alignment.cueCenter-alignment.viewportCenter)<=8&&!alignment.breadcrumb,file+': owner-requested centered shared Answer opening '+JSON.stringify(alignment));
+    }
     const completeOpening=await page.locator('.'+record.kind).evaluate(opening=>{
      const controls=[...opening.querySelectorAll('a,button,summary')].filter(el=>!el.matches('[data-hero-viewer]')&&!el.closest('.fc-visual-hero')).flatMap(el=>{
       // Closed disclosure contents may retain layout rects without being painted.
@@ -50,7 +58,36 @@ const results=[];
     assert.equal(new URL(page.url()).hash,evidence.href,file+': same-page Continue target');
    }
   }
-  console.log(`ANSWER OPENING BROWSER PASS: ${results.length} desktop cases; complete opening and all visible controls,44px Continue,8px cue clearance,no clipping/overflow,and same-page navigation`);
+  // Focused owner regressions retain the full 100-case Answer matrix above.
+  for(const file of ['art.html','answers/abrahamic-covenant.html']){
+   for(const [width,height] of [[1918,991],[1536,792],[1366,768],[1920,900],[320,740],[390,844],[432,936]]){
+    await page.setViewportSize({width,height});
+    await page.goto(`http://127.0.0.1:${server.address().port}/${file}`,{waitUntil:'domcontentloaded'});
+    await page.evaluate(()=>document.fonts.ready);await page.waitForTimeout(100);
+    const evidence=await page.evaluate(({file,width})=>{
+     const art=file==='art.html',opening=document.querySelector(art?'.fc-page-intro':'.jj-opening');
+     const visible=el=>{const r=el.getBoundingClientRect(),s=getComputedStyle(el);return r.width&&r.height&&s.display!=='none'&&s.visibility!=='hidden';};
+     const cues=[...opening.querySelectorAll('.fc-art-continue,.fc-covenant-continue,.fc-mobile-scroll-cue')].filter(visible);
+     const controls=cues.map(el=>{const r=el.getBoundingClientRect();let clipped=false;for(let p=el.parentElement;p;p=p.parentElement){const s=getComputedStyle(p),b=p.getBoundingClientRect();if(/hidden|clip/.test(s.overflowY)&&(r.bottom>b.bottom+1||r.top<b.top-1))clipped=true;}return {href:el.getAttribute('href'),top:r.top,bottom:r.bottom,left:r.left,right:r.right,height:r.height,clipped};});
+     const title=getComputedStyle(opening.querySelector('h1')),href=controls[0]?.href,target=href&&document.querySelector(href);
+     return {file,kind:'focused-owner-opening',viewportWidth:width,viewportHeight:innerHeight,controls,openingBottom:opening.getBoundingClientRect().bottom,overflow:document.documentElement.scrollWidth>innerWidth+1,oldArtCue:!!document.querySelector('.art-scroll-cue'),breadcrumb:!!opening.querySelector('a[href="/answers.html"]'),titleAlign:title.textAlign,titleFont:title.fontFamily,titleWeight:title.fontWeight,targetExists:!!target,phoneHint:!!target?.querySelector('.fc-art-study-hint'),targetText:target?.textContent.trim().slice(0,200)};
+    },{file,width});
+    results.push(evidence);
+    assert.equal(evidence.controls.length,1,JSON.stringify(evidence));
+    const cue=evidence.controls[0];
+    assert(!cue.clipped&&!evidence.overflow&&cue.top>=0&&cue.bottom<=height-8&&cue.height>=43.5&&cue.left>=0&&cue.right<=width+1&&evidence.openingBottom<=height+16&&evidence.targetExists,JSON.stringify(evidence));
+    if(file==='art.html'){
+     assert(!evidence.oldArtCue,JSON.stringify(evidence));
+     if(width>700)assert(cue.href==='#art-gallery'&&Math.abs((cue.left+cue.right)/2-width/2)<=8,JSON.stringify(evidence));
+     else assert(evidence.phoneHint,JSON.stringify(evidence));
+    }else{
+     assert(!evidence.breadcrumb&&evidence.titleAlign==='center'&&evidence.titleFont.includes('Georgia')&&evidence.titleWeight==='400'&&Math.abs((cue.left+cue.right)/2-width/2)<=8&&cue.href==='#a-promise-to-live-by',JSON.stringify(evidence));
+    }
+    await page.locator(file==='art.html'?(width>700?'.fc-art-continue':'.fc-mobile-scroll-cue'):'.fc-covenant-continue:visible').click();
+    assert.equal(new URL(page.url()).hash,cue.href,file+': focused same-page Continue target');
+   }
+  }
+  console.log(`ANSWER OPENING BROWSER PASS: ${results.length} cases; full100 Answer desktop matrix plus14 Art/Covenant desktop/phone cases; complete opening,44px Continue,8px clearance,preserved targets and centered owner openings`);
  }finally{
   fs.mkdirSync(path.join(root,'.qa-artifacts'),{recursive:true});fs.writeFileSync(path.join(root,'.qa-artifacts/answer-openings.json'),JSON.stringify(results,null,2));
   if(browser)await browser.close();await new Promise(r=>server.close(r));
