@@ -155,7 +155,7 @@ SCOPED_INTERFACE_STYLES = {
 OWNER_20260929_STYLES = {
     # Owner-directed Answer Continue correction: exact CSS bytes and consumer lists.
     'answer-opening.css': ('63fee4cb09f447d69f7a9e4152ccccf4e9f0a51a611c8f94e2617ac3ff450f56', ['answers/aaronic-priesthood-restoration.html', 'answers/are-latter-day-saints-christian.html', 'answers/bible-and-book-of-mormon-together.html', 'answers/death-of-a-child.html', 'answers/divorce-and-faith.html', 'answers/faith-in-jesus-christ-during-trials.html', 'answers/god-our-heavenly-father.html', 'answers/grief-and-faith.html', 'answers/holy-ghost.html', 'answers/jesus-christ-latter-day-saint-beliefs.html', 'answers/look-unto-me-doctrine-and-covenants-6-36.html', 'answers/melchizedek-priesthood-restoration.html', 'answers/plan-of-salvation.html', 'answers/prayer-and-personal-revelation.html', 'answers/restored-church-of-jesus-christ.html', 'answers/settle-this-in-your-hearts.html', 'answers/stand-forever.html', 'answers/what-happens-after-death.html', 'answers/what-is-eternal-marriage.html', 'answers/what-is-the-book-of-mormon.html', 'answers/who-was-joseph-smith.html', 'answers/why-families-are-important.html', 'answers/why-latter-day-saints-build-temples.html']),
-    'covenant-opening.css': ('9d9fe0f950022e2a112725adf031eb622401fab213ccb42ae4f1fe6725087f4d', ['answers/abrahamic-covenant.html']),
+    'covenant-opening.css': ('055c27b54523f6167abb288ea3f689776eab5b9836597b1e58ff7684b89c8851', ['answers/abrahamic-covenant.html']),
 
     # Dynamically loaded only by the shared footer controller; all125 public contexts tested.
     'footer-navigation.css': ('3713562b2415f8b31394b46767204330777f021887621b4b7eaeae5ff1c22fee', []),

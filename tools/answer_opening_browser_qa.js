@@ -26,7 +26,8 @@ const results=[];
      for(let p=el.parentElement;p;p=p.parentElement){const ps=getComputedStyle(p),b=p.getBoundingClientRect();if(/hidden|clip/.test(ps.overflowY)&&(r.bottom>b.bottom+1||r.top<b.top-1))clipped=true;}
      return {top:r.top,bottom:r.bottom,height:r.height,left:r.left,right:r.right,visible:s.display!=='none'&&s.visibility!=='hidden',clipped,href:el.getAttribute('href'),overflow:document.documentElement.scrollWidth>innerWidth+1};
     });
-    results.push({file,width,height,...evidence});
+    const {height:controlHeight,...controlEvidence}=evidence;
+    results.push({file,viewportWidth:width,viewportHeight:height,controlHeight,...controlEvidence});
     assert(evidence.visible&&!evidence.clipped&&!evidence.overflow&&evidence.top>=0&&evidence.bottom<=height-8&&evidence.height>=43.5&&evidence.left>=0&&evidence.right<=width+1,JSON.stringify(results.at(-1)));
     const completeOpening=await page.locator('.'+record.kind).evaluate(opening=>{
      const controls=[...opening.querySelectorAll('a,button,summary')].filter(el=>!el.matches('[data-hero-viewer]')&&!el.closest('.fc-visual-hero')).flatMap(el=>{

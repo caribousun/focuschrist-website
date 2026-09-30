@@ -41,7 +41,7 @@ def check():
         for css,owned in [('answer-opening.css',name in topics),('covenant-opening.css',name==COVENANT)]:
             links=[l for l in doc.select('link[rel="stylesheet"]') if css in l.get('href','')]
             assert len(links)==int(owned),name+': wrong opening stylesheet ownership'
-            if links:assert links[0]['href']=='../'+css+'?v='+('20260930-continue-1' if name==COVENANT else '20260930-1')
+            if links:assert links[0]['href']=='../'+css+'?v='+('20260930-continue-2' if name==COVENANT else '20260930-1')
     css=(ROOT/'answer-opening.css').read_text(encoding='utf8')
     clean=re.sub(r'/\*.*?\*/','',css,flags=re.S).strip()
     assert clean.startswith('@media (min-width: 701px) {') and clean.count('@media')==1

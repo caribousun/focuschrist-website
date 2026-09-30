@@ -20,7 +20,7 @@ body.fc-site.fc-jesus-journey .jj-opening .fc-covenant-continue {
   outline-offset: 4px;
 }
 @media (min-width: 701px) {
-  body.fc-site.fc-jesus-journey .jj-opening { padding: 8px 0 10px; }
+  body.fc-site.fc-jesus-journey .jj-opening { padding: 6px 0 10px; }
   body.fc-site.fc-jesus-journey .jj-opening h1 {
     font-size: clamp(1.9rem, 2.8vw, 2.5rem);
     line-height: 1.12;
