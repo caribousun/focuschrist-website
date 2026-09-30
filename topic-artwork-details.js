@@ -72,7 +72,8 @@
                         && document.body.classList.contains('fc-life-story');
                     const researchedHistoryHost = historyOwner && ['saintsbysea.byu.edu', 'rsc.byu.edu', 'www.churchhistorianspress.org', 'www.fairlatterdaysaints.org'].includes(url.hostname);
                     const tannerJournal = historyOwner && location.pathname === '/history/john-tanner.html' && url.href === 'https://catalog.churchofjesuschrist.org/assets/994fb2fe-d8b1-4156-a452-3a8fecacf538/1/42';
-                    return url.protocol === 'https:' && (standardHost || researchedHistoryHost || tannerJournal) && !link.querySelector('img');
+                    const tannerBiography = historyOwner && location.pathname === '/history/john-tanner.html' && url.href === 'https://www.gutenberg.org/cache/epub/46734/pg46734-images.html';
+                    return url.protocol === 'https:' && (standardHost || researchedHistoryHost || tannerJournal || tannerBiography) && !link.querySelector('img');
                 } catch (error) { return false; }
             });
         }

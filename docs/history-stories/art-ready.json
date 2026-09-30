@@ -205,7 +205,7 @@
     "independent_reviewer": "Fermi",
     "owner_aesthetic_approval": false,
     "alt": "An older John Rowe Moyle shapes a wooden prosthetic leg at a workbench.",
-    "caption": "Accounts remember Moyle making a wooden leg after losing his lower leg. This reconstruction draws on a later replica; the exact original fittings remain uncertain.",
+    "caption": "Moyle shapes a wooden leg; the fittings are reconstructed.",
     "review_reference": "docs/history-story-art-fermi-review-20260929.json"
   },
   "moyle-return-to-craft": {
@@ -221,7 +221,7 @@
     "independent_reviewer": "Fermi",
     "owner_aesthetic_approval": false,
     "alt": "John Rowe Moyle stands at a granite block with a wooden prosthesis visible below one trouser leg.",
-    "caption": "Later accounts describe Moyle returning to temple work with a wooden leg. The scene imagines that determination; the prosthesis side and fittings are not established.",
+    "caption": "The stonecutter at work again, with a wooden leg.",
     "review_reference": "docs/history-story-art-fermi-review-20260929.json"
   },
   "miller-westward-service": {
@@ -269,7 +269,7 @@
     "independent_reviewer": "Fermi",
     "owner_aesthetic_approval": false,
     "alt": "John Rowe Moyle walks a dirt road with a shoulder bag above a valley settlement beneath a brightening mountain sky.",
-    "caption": "Later accounts remember Moyle walking between Alpine and his temple work in Salt Lake City. This imagined landscape recalls the persistence of those journeys.",
+    "caption": "Moyle on the road between home and work.",
     "review_reference": "docs/history-story-art-fermi-review-20260929.json"
   },
   "tanner-mission-road-1844": {
@@ -399,5 +399,21 @@
     "alt": "John Rowe Moyle stands on a wooden platform with a wooden lower-leg prosthesis, holding a hammer and chisel beside the words Holiness to the Lord.",
     "caption": "Moyle works on the upper inscription panel in a reconstruction of his family’s later account. The exact carving date and prosthetic side are not established here; the pictured panel is not an exact facsimile.",
     "review_reference": "docs/history-stories/expansion-fermi-review-20260929.json"
+  },
+  "moyle-cow-injury": {
+    "full": "assets/page-art/history-stories/moyle-cow-injury-full.webp",
+    "thumbnail": "assets/page-art/history-stories/moyle-cow-injury-960.webp",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "3b9b1c93773a84d93fec674fd5a5fd55514d8b1795358f8e4a40d2639275e3e9",
+    "thumbnail_sha256": "91bec094c95ca6d74a74edc1b29244619ef8b748868d2b0f0990b2ea3d7ccfca",
+    "source_original": "exec-50cb63d4-a73e-49ce-a5b6-f17fcf11505b.png",
+    "source_sha256": "a5296ca10cdbb0c4784ccd559976021a81bc935a08a022efe6e917dddf5262b4",
+    "reviewed": true,
+    "independent_reviewer": "Newton",
+    "owner_aesthetic_approval": false,
+    "alt": "John Rowe Moyle sits beside a milking shed holding his trouser-covered leg; a cow, tipped stool and pail are nearby.",
+    "caption": "An imagined aftermath of the cow’s kick in the later family account. The precise date and circumstances are not established by Moyle’s travel journal.",
+    "review_reference": "docs/history-stories/warmth-newton-review-20260930.json"
   }
 }

@@ -9297,9 +9297,9 @@
     {
       "path": "history/john-tanner.html",
       "status": "verified",
-      "published_text_sha256": "5c7d7c4a8a609a8698645c9a5e85f541787b64e335d3165c5febc09d77753c64",
-      "reviewed_on": "2026-09-29",
-      "review_standard": "Owner requested a dedicated History story with five distinct scene-specific pictures and at most two narrative paragraphs before each picture. Newton independently reviewed original source-grounded chronology and integrated page; Fermi independently reviewed all fifteen full originals and same-original desktop variants. Testimony, later family remembrance, and reconstructed visual details remain distinguished. No invented quotations, authenticated likeness claims, or placement at events after death. Technical source/art review is separate from owner aesthetic approval. Evidence: docs/history-stories/stories.json, docs/history-story-art-fermi-review-20260929.json. September29 pictured hub and23-scene expansion: Newton reviewed source attribution, chronology and aggregate budgets; prior passages moved rather than duplicated. Owner-directed pathway removal independently compared by Newton; remaining visible text preserved. Tanner primary Carter journal separate-prayer detail independently source reviewed.",
+      "published_text_sha256": "923900dda8caf6ffd35751f3128876b17850f23d728e63b9122bd42b261e6bfa",
+      "reviewed_on": "2026-09-30",
+      "review_standard": "Owner requested a dedicated History story with five distinct scene-specific pictures and at most two narrative paragraphs before each picture. Newton independently reviewed original source-grounded chronology and integrated page; Fermi independently reviewed all fifteen full originals and same-original desktop variants. Testimony, later family remembrance, and reconstructed visual details remain distinguished. No invented quotations, authenticated likeness claims, or placement at events after death. Technical source/art review is separate from owner aesthetic approval. Evidence: docs/history-stories/stories.json, docs/history-story-art-fermi-review-20260929.json. September29 pictured hub and23-scene expansion: Newton reviewed source attribution, chronology and aggregate budgets; prior passages moved rather than duplicated. Owner-directed pathway removal independently compared by Newton; remaining visible text preserved. Tanner primary Carter journal separate-prayer detail independently source reviewed. September 30 replacement narrative reviewed independently by Fermi against the actual source JSON, image captions and emitted HTML: primary accounts, later retrospection and artistic reconstruction distinguished; modern-source allocations include captions and introductory factual language. Tanner Carter attendance and D&C109 context retained; Miller Heward travel details confined to Heward own group; Moyle cow injury expressly later family tradition, not established by the travel journal. Previous 23 image hashes preserved; new 24th scene remains a labeled reconstruction. Evidence: docs/history-stories/warmth-final-fermi-review-20260930.json.",
       "authoritative_sources": [
         "https://history.churchofjesuschrist.org/chd/individual/john-tanner-1778?lang=eng",
         "https://www.churchofjesuschrist.org/study/ensign/1979/03/the-john-tanner-family?lang=eng",
@@ -9307,15 +9307,19 @@
         "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/109?lang=eng&id=p1-p5#p1",
         "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/109?lang=eng&id=p5#p5",
         "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/95?lang=eng&id=p11#p11",
-        "https://www.josephsmithpapers.org/person/john-tanner"
+        "https://www.josephsmithpapers.org/person/john-tanner",
+        "https://catalog.churchofjesuschrist.org/assets/994fb2fe-d8b1-4156-a452-3a8fecacf538/1/42",
+        "https://www.josephsmithpapers.org/paper-summary/minutes-18-january-1835/1",
+        "https://www.gutenberg.org/cache/epub/46734/pg46734-images.html",
+        "https://www.fairlatterdaysaints.org/answers/Times_and_Seasons/5/24"
       ]
     },
     {
       "path": "history/eleazer-miller.html",
       "status": "verified",
-      "published_text_sha256": "3bd14caf2666e952c72046a591425fe9795996d10b2623e34f83b27b47716070",
-      "reviewed_on": "2026-09-29",
-      "review_standard": "Owner requested a dedicated History story with five distinct scene-specific pictures and at most two narrative paragraphs before each picture. Newton independently reviewed original source-grounded chronology and integrated page; Fermi independently reviewed all fifteen full originals and same-original desktop variants. Testimony, later family remembrance, and reconstructed visual details remain distinguished. No invented quotations, authenticated likeness claims, or placement at events after death. Technical source/art review is separate from owner aesthetic approval. Evidence: docs/history-stories/stories.json, docs/history-story-art-fermi-review-20260929.json. September29 pictured hub and23-scene expansion: Newton reviewed source attribution, chronology and aggregate budgets; prior passages moved rather than duplicated.",
+      "published_text_sha256": "21e7e9918e4a0caba4c8c20b8135e1cd369ae0053afeac57607c9e119df392e4",
+      "reviewed_on": "2026-09-30",
+      "review_standard": "Owner requested a dedicated History story with five distinct scene-specific pictures and at most two narrative paragraphs before each picture. Newton independently reviewed original source-grounded chronology and integrated page; Fermi independently reviewed all fifteen full originals and same-original desktop variants. Testimony, later family remembrance, and reconstructed visual details remain distinguished. No invented quotations, authenticated likeness claims, or placement at events after death. Technical source/art review is separate from owner aesthetic approval. Evidence: docs/history-stories/stories.json, docs/history-story-art-fermi-review-20260929.json. September29 pictured hub and23-scene expansion: Newton reviewed source attribution, chronology and aggregate budgets; prior passages moved rather than duplicated. September 30 replacement narrative reviewed independently by Fermi against the actual source JSON, image captions and emitted HTML: primary accounts, later retrospection and artistic reconstruction distinguished; modern-source allocations include captions and introductory factual language. Tanner Carter attendance and D&C109 context retained; Miller Heward travel details confined to Heward own group; Moyle cow injury expressly later family tradition, not established by the travel journal. Previous 23 image hashes preserved; new 24th scene remains a labeled reconstruction. Evidence: docs/history-stories/warmth-final-fermi-review-20260930.json.",
       "authoritative_sources": [
         "https://history.churchofjesuschrist.org/chd/individual/eleazer-miller-1795?lang=eng",
         "https://history.churchofjesuschrist.org/chd/transcript?name=transcript-for-john-heward-autobiography-circa-1871",
@@ -9325,15 +9329,22 @@
         "https://www.churchofjesuschrist.org/study/manual/teachings-brigham-young/chapter-43?lang=eng",
         "https://www.churchofjesuschrist.org/study/manual/teachings-brigham-young/chapter-9?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/42?lang=eng&id=p14#p14",
-        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/50?lang=eng&id=p17-p22#p17"
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/50?lang=eng&id=p17-p22#p17",
+        "https://rsc.byu.edu/witness-restoration/brigham-young-family",
+        "https://www.josephsmithpapers.org/person/james-lake",
+        "https://www.josephsmithpapers.org/paper-summary/history-1838-1856-volume-a-1-23-december-1805%EF%BB%BF-30-august-1834/569",
+        "https://www.josephsmithpapers.org/paper-summary/history-1838-1856-volume-a-1-23-december-1805%EF%BB%BF-30-august-1834/570",
+        "https://history.churchofjesuschrist.org/chd/transcript?lang=eng&name=transcript-for-john-heward-autobiography-circa-1871",
+        "https://history.churchofjesuschrist.org/chd/individual/rebecca-van-zant-1797?lang=eng",
+        "https://www.churchhistorianspress.org/the-first-fifty-years-of-relief-society/part-2/2-1?lang=eng"
       ]
     },
     {
       "path": "history/john-rowe-moyle.html",
       "status": "verified",
-      "published_text_sha256": "3f71a81b1cbb997f868112bd432b663159048f34e5a9774cde177ecfcd77056a",
-      "reviewed_on": "2026-09-29",
-      "review_standard": "Owner requested a dedicated History story with five distinct scene-specific pictures and at most two narrative paragraphs before each picture. Newton independently reviewed original source-grounded chronology and integrated page; Fermi independently reviewed all fifteen full originals and same-original desktop variants. Testimony, later family remembrance, and reconstructed visual details remain distinguished. No invented quotations, authenticated likeness claims, or placement at events after death. Technical source/art review is separate from owner aesthetic approval. Evidence: docs/history-stories/stories.json, docs/history-story-art-fermi-review-20260929.json. September29 pictured hub and23-scene expansion: Newton reviewed source attribution, chronology and aggregate budgets; prior passages moved rather than duplicated.",
+      "published_text_sha256": "e2c3bf4a4d5e95dcd4e3abd2bc71f92796565060f4da1d1372cea66cdda4ce98",
+      "reviewed_on": "2026-09-30",
+      "review_standard": "Owner requested a dedicated History story with five distinct scene-specific pictures and at most two narrative paragraphs before each picture. Newton independently reviewed original source-grounded chronology and integrated page; Fermi independently reviewed all fifteen full originals and same-original desktop variants. Testimony, later family remembrance, and reconstructed visual details remain distinguished. No invented quotations, authenticated likeness claims, or placement at events after death. Technical source/art review is separate from owner aesthetic approval. Evidence: docs/history-stories/stories.json, docs/history-story-art-fermi-review-20260929.json. September29 pictured hub and23-scene expansion: Newton reviewed source attribution, chronology and aggregate budgets; prior passages moved rather than duplicated. September 30 replacement narrative reviewed independently by Fermi against the actual source JSON, image captions and emitted HTML: primary accounts, later retrospection and artistic reconstruction distinguished; modern-source allocations include captions and introductory factual language. Tanner Carter attendance and D&C109 context retained; Miller Heward travel details confined to Heward own group; Moyle cow injury expressly later family tradition, not established by the travel journal. Previous 23 image hashes preserved; new 24th scene remains a labeled reconstruction. Evidence: docs/history-stories/warmth-final-fermi-review-20260930.json.",
       "authoritative_sources": [
         "https://ensignpeakfoundation.org/moyle-park-alpine-utah/",
         "https://history.churchofjesuschrist.org/chd/individual/john-rowe-moyle-1808?lang=eng",
@@ -9342,7 +9353,11 @@
         "https://www.churchofjesuschrist.org/study/general-conference/2008/10/lift-where-you-stand?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/123?lang=eng&id=p17#p17",
         "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/64?lang=eng&id=p33-p34#p33",
-        "https://www.churchofjesuschrist.org/temples/details/salt-lake-temple?lang=eng"
+        "https://www.churchofjesuschrist.org/temples/details/salt-lake-temple?lang=eng",
+        "https://saintsbysea.byu.edu/mii/account/1141",
+        "https://www.churchofjesuschrist.org/study/general-conference/2000/04/as-doves-to-our-windows?lang=eng",
+        "https://newsroom.churchofjesuschrist.org/additional-resource/stories-of-sacrifice-and-devotion-the-people-who-built-and-loved-a-temple",
+        "https://newsroom.churchofjesuschrist.org/article/temple-square-renovation-update-august-2025"
       ]
     }
   ]

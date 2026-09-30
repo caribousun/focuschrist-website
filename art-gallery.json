@@ -457,28 +457,6 @@
       ]
     },
     {
-      "title": "A decision that moved a household",
-      "category": "Gospel Studies",
-      "thumbnail": "/assets/page-art/history-stories/tanner-journey-kirtland-960.webp",
-      "fullImage": "/assets/page-art/history-stories/tanner-journey-kirtland-full.webp",
-      "alt": "John Tanner walks beside a wagon through a snowy landscape.",
-      "id": "art-de5e7691ae2f",
-      "occurrences": [
-        {
-          "id": "source-67ba9fd148fe",
-          "page": "/history/john-tanner.html",
-          "pageTitle": "John Tanner: receiving, giving, and remembering",
-          "category": "Gospel Studies",
-          "kind": "topic",
-          "selector": "a[href=\"../assets/page-art/history-stories/tanner-journey-kirtland-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/tanner-journey-kirtland-960.webp\"])",
-          "title": "A decision that moved a household"
-        }
-      ],
-      "categories": [
-        "Gospel Studies"
-      ]
-    },
-    {
       "title": "A desire to keep serving",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/book-of-mormon-stories/29-three-disciples-960.webp",
@@ -516,28 +494,6 @@
           "kind": "hero",
           "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/look-unto-full.webp\"]",
           "title": "A devotional portrait of Jesus Christ on a rocky hillside path with one hand over His heart."
-        }
-      ],
-      "categories": [
-        "Gospel Studies"
-      ]
-    },
-    {
-      "title": "A family journey to the valley",
-      "category": "Gospel Studies",
-      "thumbnail": "/assets/page-art/history-stories/tanner-family-crossing-1848-960.webp",
-      "fullImage": "/assets/page-art/history-stories/tanner-family-crossing-1848-full.webp",
-      "alt": "John Tanner tightens a rope around supplies on a covered wagon while other travelers stand nearby.",
-      "id": "art-fa97df06171d",
-      "occurrences": [
-        {
-          "id": "source-8d092f6f8441",
-          "page": "/history/john-tanner.html",
-          "pageTitle": "John Tanner: receiving, giving, and remembering",
-          "category": "Gospel Studies",
-          "kind": "topic",
-          "selector": "a[href=\"../assets/page-art/history-stories/tanner-family-crossing-1848-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/tanner-family-crossing-1848-960.webp\"])",
-          "title": "A family journey to the valley"
         }
       ],
       "categories": [
@@ -589,28 +545,6 @@
       ]
     },
     {
-      "title": "A family within the gathering and displacement",
-      "category": "Gospel Studies",
-      "thumbnail": "/assets/page-art/history-stories/tanner-displacement-960.webp",
-      "fullImage": "/assets/page-art/history-stories/tanner-displacement-full.webp",
-      "alt": "John Tanner grips a trunk among packed household belongings.",
-      "id": "art-3553452b3ee0",
-      "occurrences": [
-        {
-          "id": "source-a1b039e3784c",
-          "page": "/history/john-tanner.html",
-          "pageTitle": "John Tanner: receiving, giving, and remembering",
-          "category": "Gospel Studies",
-          "kind": "topic",
-          "selector": "a[href=\"../assets/page-art/history-stories/tanner-displacement-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/tanner-displacement-960.webp\"])",
-          "title": "A family within the gathering and displacement"
-        }
-      ],
-      "categories": [
-        "Gospel Studies"
-      ]
-    },
-    {
       "title": "A father shares the mercy he remembers",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/sitewide/bom-alma-helaman-960.webp",
@@ -626,6 +560,28 @@
           "kind": "topic",
           "selector": "a[href=\"assets/page-art/sitewide/bom-alma-helaman-full.webp\"]:has(img[src=\"assets/page-art/sitewide/bom-alma-helaman-960.webp\"])",
           "title": "A father shares the mercy he remembers"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "A father, a son, and the road ahead",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/history-stories/tanner-displacement-960.webp",
+      "fullImage": "/assets/page-art/history-stories/tanner-displacement-full.webp",
+      "alt": "John Tanner grips a trunk among packed household belongings.",
+      "id": "art-3553452b3ee0",
+      "occurrences": [
+        {
+          "id": "source-a1b039e3784c",
+          "page": "/history/john-tanner.html",
+          "pageTitle": "John Tanner: receiving, giving, and remembering",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/history-stories/tanner-displacement-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/tanner-displacement-960.webp\"])",
+          "title": "A father, a son, and the road ahead"
         }
       ],
       "categories": [
@@ -674,6 +630,28 @@
       ],
       "categories": [
         "Pioneers"
+      ]
+    },
+    {
+      "title": "A gift remembered in a few words",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/history-stories/tanner-debt-forgiven-960.webp",
+      "fullImage": "/assets/page-art/history-stories/tanner-debt-forgiven-full.webp",
+      "alt": "John Tanner hands a folded note to Joseph Smith as they look warmly at one another across a desk.",
+      "id": "art-3fa325d6f87d",
+      "occurrences": [
+        {
+          "id": "source-a1f739573831",
+          "page": "/history/john-tanner.html",
+          "pageTitle": "John Tanner: receiving, giving, and remembering",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/history-stories/tanner-debt-forgiven-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/tanner-debt-forgiven-960.webp\"])",
+          "title": "A gift remembered in a few words"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -824,28 +802,6 @@
           "kind": "hero",
           "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/child-loss-full.webp\"]",
           "title": "A grieving woman holds a child’s knitted cap while a friend sits beside her on a lakeside bench."
-        }
-      ],
-      "categories": [
-        "Gospel Studies"
-      ]
-    },
-    {
-      "title": "A hand offered in the name of Christ",
-      "category": "Gospel Studies",
-      "thumbnail": "/assets/page-art/history-stories/tanner-healing-witness-full.webp",
-      "fullImage": "/assets/page-art/history-stories/tanner-healing-witness-full.webp",
-      "alt": "John Tanner rises beside a chair while another man steadies him by the hand.",
-      "id": "art-5887e9d36740",
-      "occurrences": [
-        {
-          "id": "source-28b35b42fb72",
-          "page": "/history/john-tanner.html",
-          "pageTitle": "John Tanner: receiving, giving, and remembering",
-          "category": "Gospel Studies",
-          "kind": "topic",
-          "selector": "a[href=\"../assets/page-art/history-stories/tanner-healing-witness-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/tanner-healing-witness-full.webp\"])",
-          "title": "A hand offered in the name of Christ"
         }
       ],
       "categories": [
@@ -7394,6 +7350,28 @@
       ]
     },
     {
+      "title": "Good news carried through grief",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/history-stories/tanner-mission-road-1844-960.webp",
+      "fullImage": "/assets/page-art/history-stories/tanner-mission-road-1844-full.webp",
+      "alt": "John Tanner, carrying a shoulder bag, gestures as he speaks with a companion on a country road.",
+      "id": "art-2c128e6abfda",
+      "occurrences": [
+        {
+          "id": "source-304b42bace78",
+          "page": "/history/john-tanner.html",
+          "pageTitle": "John Tanner: receiving, giving, and remembering",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/history-stories/tanner-mission-road-1844-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/tanner-mission-road-1844-960.webp\"])",
+          "title": "Good news carried through grief"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Good news on the road home",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/mc-official-servants-960.webp",
@@ -8135,6 +8113,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/exclusive/divorce-practical-help-1536.webp\"]:has(img[src=\"../assets/page-art/exclusive/divorce-practical-help-800.webp\"])",
           "title": "Help with what matters today"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Helping others build a house of worship",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/history-stories/tanner-temple-support-960.webp",
+      "fullImage": "/assets/page-art/history-stories/tanner-temple-support-full.webp",
+      "alt": "John Tanner and Joseph Smith meet across a desk, with coins and papers before them and construction beyond the window.",
+      "id": "art-b3d0e9a11163",
+      "occurrences": [
+        {
+          "id": "source-9fdc6acc48f7",
+          "page": "/history/john-tanner.html",
+          "pageTitle": "John Tanner: receiving, giving, and remembering",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/history-stories/tanner-temple-support-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/tanner-temple-support-960.webp\"])",
+          "title": "Helping others build a house of worship"
         }
       ],
       "categories": [
@@ -10397,6 +10397,28 @@
       ]
     },
     {
+      "title": "Leaving home on Christmas Day",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/history-stories/tanner-journey-kirtland-960.webp",
+      "fullImage": "/assets/page-art/history-stories/tanner-journey-kirtland-full.webp",
+      "alt": "John Tanner walks beside a wagon through a snowy landscape.",
+      "id": "art-de5e7691ae2f",
+      "occurrences": [
+        {
+          "id": "source-67ba9fd148fe",
+          "page": "/history/john-tanner.html",
+          "pageTitle": "John Tanner: receiving, giving, and remembering",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/history-stories/tanner-journey-kirtland-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/tanner-journey-kirtland-960.webp\"])",
+          "title": "Leaving home on Christmas Day"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Leaving Nauvoo, 1846",
       "category": "Pioneers",
       "thumbnail": "/assets/pioneers/leaving-nauvoo-800.webp",
@@ -11565,6 +11587,28 @@
       ]
     },
     {
+      "title": "Making room for another beginning",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/history-stories/tanner-family-crossing-1848-960.webp",
+      "fullImage": "/assets/page-art/history-stories/tanner-family-crossing-1848-full.webp",
+      "alt": "John Tanner tightens a rope around supplies on a covered wagon while other travelers stand nearby.",
+      "id": "art-fa97df06171d",
+      "occurrences": [
+        {
+          "id": "source-8d092f6f8441",
+          "page": "/history/john-tanner.html",
+          "pageTitle": "John Tanner: receiving, giving, and remembering",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/history-stories/tanner-family-crossing-1848-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/tanner-family-crossing-1848-960.webp\"])",
+          "title": "Making room for another beginning"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Making room for communication",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/collection-neighbor-03-960.webp",
@@ -12504,28 +12548,6 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/church-history/apostles-ordain-oliver.webp\"]:has(img[src=\"../assets/page-art/church-history/apostles-ordain-oliver-960.webp\"])",
           "title": "Oliver receives the apostles’ ministry"
-        }
-      ],
-      "categories": [
-        "Gospel Studies"
-      ]
-    },
-    {
-      "title": "On the road again, 1844",
-      "category": "Gospel Studies",
-      "thumbnail": "/assets/page-art/history-stories/tanner-mission-road-1844-960.webp",
-      "fullImage": "/assets/page-art/history-stories/tanner-mission-road-1844-full.webp",
-      "alt": "John Tanner, carrying a shoulder bag, gestures as he speaks with a companion on a country road.",
-      "id": "art-2c128e6abfda",
-      "occurrences": [
-        {
-          "id": "source-304b42bace78",
-          "page": "/history/john-tanner.html",
-          "pageTitle": "John Tanner: receiving, giving, and remembering",
-          "category": "Gospel Studies",
-          "kind": "topic",
-          "selector": "a[href=\"../assets/page-art/history-stories/tanner-mission-road-1844-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/tanner-mission-road-1844-960.webp\"])",
-          "title": "On the road again, 1844"
         }
       ],
       "categories": [
@@ -14132,28 +14154,6 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/prodigal-son-03-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/prodigal-son-03-960.webp\"])",
           "title": "Resources gone, need begins"
-        }
-      ],
-      "categories": [
-        "Gospel Studies"
-      ]
-    },
-    {
-      "title": "Resources put to work at Kirtland",
-      "category": "Gospel Studies",
-      "thumbnail": "/assets/page-art/history-stories/tanner-temple-support-960.webp",
-      "fullImage": "/assets/page-art/history-stories/tanner-temple-support-full.webp",
-      "alt": "John Tanner and Joseph Smith meet across a desk, with coins and papers before them and construction beyond the window.",
-      "id": "art-b3d0e9a11163",
-      "occurrences": [
-        {
-          "id": "source-9fdc6acc48f7",
-          "page": "/history/john-tanner.html",
-          "pageTitle": "John Tanner: receiving, giving, and remembering",
-          "category": "Gospel Studies",
-          "kind": "topic",
-          "selector": "a[href=\"../assets/page-art/history-stories/tanner-temple-support-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/tanner-temple-support-960.webp\"])",
-          "title": "Resources put to work at Kirtland"
         }
       ],
       "categories": [
@@ -16410,6 +16410,28 @@
       ]
     },
     {
+      "title": "The hand he accepted",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/history-stories/tanner-healing-witness-full.webp",
+      "fullImage": "/assets/page-art/history-stories/tanner-healing-witness-full.webp",
+      "alt": "John Tanner rises beside a chair while another man steadies him by the hand.",
+      "id": "art-5887e9d36740",
+      "occurrences": [
+        {
+          "id": "source-28b35b42fb72",
+          "page": "/history/john-tanner.html",
+          "pageTitle": "John Tanner: receiving, giving, and remembering",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/history-stories/tanner-healing-witness-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/tanner-healing-witness-full.webp\"])",
+          "title": "The hand he accepted"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "The Handcart Journey, 1856",
       "category": "Pioneers",
       "thumbnail": "/assets/pioneers/handcart-journey-800.webp",
@@ -16601,6 +16623,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/prodigal-son-01-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/prodigal-son-01-960.webp\"])",
           "title": "The inheritance divided"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "The injury his family remembered",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/history-stories/moyle-cow-injury-960.webp",
+      "fullImage": "/assets/page-art/history-stories/moyle-cow-injury-full.webp",
+      "alt": "John Rowe Moyle sits beside a milking shed holding his trouser-covered leg; a cow, tipped stool and pail are nearby.",
+      "id": "art-d11f5606e1e4",
+      "occurrences": [
+        {
+          "id": "source-b083f02352b2",
+          "page": "/history/john-rowe-moyle.html",
+          "pageTitle": "John Rowe Moyle: the stonecutter and the wooden leg",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/history-stories/moyle-cow-injury-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/moyle-cow-injury-960.webp\"])",
+          "title": "The injury his family remembered"
         }
       ],
       "categories": [
@@ -17107,28 +17151,6 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/bn-night-messengers-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/bn-night-messengers-960.webp\"])",
           "title": "The news travels through the night"
-        }
-      ],
-      "categories": [
-        "Gospel Studies"
-      ]
-    },
-    {
-      "title": "The note that became a remembered gift",
-      "category": "Gospel Studies",
-      "thumbnail": "/assets/page-art/history-stories/tanner-debt-forgiven-960.webp",
-      "fullImage": "/assets/page-art/history-stories/tanner-debt-forgiven-full.webp",
-      "alt": "John Tanner hands a folded note to Joseph Smith as they look warmly at one another across a desk.",
-      "id": "art-3fa325d6f87d",
-      "occurrences": [
-        {
-          "id": "source-a1f739573831",
-          "page": "/history/john-tanner.html",
-          "pageTitle": "John Tanner: receiving, giving, and remembering",
-          "category": "Gospel Studies",
-          "kind": "topic",
-          "selector": "a[href=\"../assets/page-art/history-stories/tanner-debt-forgiven-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/tanner-debt-forgiven-960.webp\"])",
-          "title": "The note that became a remembered gift"
         }
       ],
       "categories": [
@@ -19590,14 +19612,14 @@
     }
   ],
   "stats": {
-    "artworks": 881,
-    "occurrences": 887,
+    "artworks": 882,
+    "occurrences": 888,
     "byKind": {
       "artwork": 62,
       "hero": 40,
       "legacy": 39,
       "missionary": 13,
-      "topic": 733
+      "topic": 734
     }
   }
 }
