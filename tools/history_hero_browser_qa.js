@@ -8,6 +8,7 @@ const { chromium } = require('playwright');
 const root = path.resolve(__dirname, '..');
 const out = path.join(root, '.qa-artifacts', 'history-heroes');
 const records = [];
+const openingRecords = [];
 fs.mkdirSync(out, { recursive: true });
 (async () => {
   const server = http.createServer((request, response) => {
@@ -44,9 +45,53 @@ fs.mkdirSync(out, { recursive: true });
       await page.close();
     }
     assert(records.every(record => !record.raster.failures.length), 'Hero raster has a blank/near-solid region; inspect saved screenshots');
+    for (const slug of ['john-tanner', 'eleazer-miller', 'john-rowe-moyle']) {
+      for (const [width, height] of [[390, 732], [320, 667]]) {
+        const page = await context.newPage();
+        await page.setViewportSize({ width, height });
+        await page.goto(`http://127.0.0.1:${server.address().port}/history/${slug}.html`, { waitUntil:'domcontentloaded' });
+        await page.locator('.fc-life-hero img').evaluate(img => img.decode());
+        let normalSize;
+        for (const enlarged of [false, true]) {
+          if (enlarged) await page.evaluate(() => { document.documentElement.style.fontSize = '200%'; });
+          await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+          const opening = await page.evaluate(() => {
+            const h1 = document.querySelector('.fc-life-reading h1');
+            const button = h1.parentElement.querySelector('.fc-actions .fc-button');
+            const rect = node => { const r=node.getBoundingClientRect(); return {x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom}; };
+            const headings = [...document.querySelectorAll('.fc-life-reading h1, .fc-life-reading h2')].map(h => ({ text:h.textContent, family:getComputedStyle(h).fontFamily, weight:getComputedStyle(h).fontWeight }));
+            return {headings, title:rect(h1), button:rect(button), fontSize:parseFloat(getComputedStyle(h1).fontSize), overflow:document.documentElement.scrollWidth>innerWidth+1, titleClipped:h1.scrollHeight>h1.clientHeight+1, buttonClipped:button.scrollWidth>button.clientWidth+1, readingOverflow:getComputedStyle(h1.parentElement).overflowY};
+          });
+          const label = `${slug} ${width} ${enlarged?'200%':'100%'}`;
+          assert(opening.headings.length>1 && opening.headings.every(h => /^Georgia\b/i.test(h.family.replaceAll('"','')) && h.weight==='400'), label+' must use the shared Georgia400 heading theme');
+          assert(!opening.overflow && !opening.titleClipped && !opening.buttonClipped, label+' clipped reading controls');
+          assert(opening.button.height>=44 && opening.button.x>=-1 && opening.button.x+opening.button.width<=width+1, label+' accessible button geometry');
+          assert(opening.button.y>=opening.title.bottom-1, label+' title/action overlap');
+          if (!enlarged) {
+            normalSize=opening.fontSize;
+            assert(opening.title.y>=0 && opening.button.bottom<=height, label+' complete opening must fit shorter phone viewport');
+          } else {
+            // Shared clamp(1.5rem,8vw,2rem): 390px grows from31.2px to48px at200% root text.
+            assert(opening.fontSize>=normalSize*1.4, label+' headings must respond meaningfully to enlarged text');
+            assert(!['hidden','clip'].includes(opening.readingOverflow), label+' enlarged opening must grow naturally');
+          }
+          const screenshot=path.join(out,`${slug}-${width}x${height}-${enlarged?'200':'100'}.png`);
+          await page.screenshot({path:screenshot,fullPage:false,animations:'disabled'});
+          const button=page.locator('.fc-life-reading').first().locator('.fc-actions .fc-button').first();
+          await button.scrollIntoViewIfNeeded();
+          await button.focus();
+          assert(await button.evaluate(b=>document.activeElement===b), label+' Begin action must remain focusable');
+          openingRecords.push({page:slug,viewport:[width,height],enlarged,...opening,screenshot:path.relative(root,screenshot)});
+          await page.evaluate(()=>scrollTo(0,0));
+        }
+        await page.close();
+      }
+    }
     console.log('PASS: hosted Chromium1440 rendered all three full hero regions with varied scene pixels');
+    console.log('PASS:12 shorter-phone openings, themed headings, complete normal Begin action and natural enlarged-text flow');
   } finally {
     fs.writeFileSync(path.join(out, 'results.json'), JSON.stringify(records, null, 2)+'\n');
+    fs.writeFileSync(path.join(out, 'phone-openings.json'), JSON.stringify(openingRecords, null, 2)+'\n');
     if (browser) await browser.close();
     await new Promise(resolve => server.close(resolve));
   }

@@ -3,6 +3,9 @@
 .fc-life-story .fc-life-hero > a { display: block; }
 .fc-life-story .fc-life-hero [data-picture-panel-copy] { display: none; }
 .fc-life-story .fc-life-reading { max-width: 860px; margin-inline: auto; padding: 30px 24px; }
+.fc-life-story .fc-life-reading > :is(h1, h2) { font-family: var(--fc-font-display); font-weight: 400; text-wrap: balance; overflow-wrap: anywhere; }
+.fc-life-story .fc-life-reading > h1 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.12; margin-block: 0 22px; }
+.fc-life-story .fc-life-reading > h2 { color: var(--fc-gold-light); }
 .fc-life-story .fc-life-reading > p { line-height: 1.85; margin-block: 0 1.3em; }
 .fc-life-story .fc-life-reading > h2 { line-height: 1.3; margin-block: 0 24px; }
 .fc-life-story main :is(section[id], h2[id]) { scroll-margin-top: var(--fc-anchor-offset, 16px); }
@@ -20,6 +23,8 @@
 .fc-life-story a:focus-visible, .fc-life-story summary:focus-visible { outline: 3px solid var(--fc-gold, #f0c36a); outline-offset: 4px; }
 @media (max-width: 700px) {
     .fc-life-story .fc-life-reading { padding: 24px 18px; }
+    .fc-life-story .fc-life-reading > h1 { font-size: clamp(1.5rem, 8vw, 2rem); margin-bottom: 18px; }
+    .fc-life-story .fc-life-reading > .fc-eyebrow { line-height: 1.3; margin-bottom: 12px; }
     .fc-life-story .fc-life-reflections { grid-template-columns: 1fr; }
 }
 
