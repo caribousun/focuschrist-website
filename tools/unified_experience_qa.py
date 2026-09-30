@@ -264,7 +264,7 @@ def main() -> int:
             fail(errors, f"{relative}: site-system cache revision missing")
         else:
             approved_cache_versions.add(cache_match.group(1))
-    if approved_cache_versions != {"20260927-anchor-alignment-1"}:
+    if approved_cache_versions != {"20260930-study-alignment-1"}:
         fail(errors, f"approved hero pages have inconsistent site-system cache revisions: {sorted(approved_cache_versions)}")
 
     for relative in PUBLIC_PAGES:
