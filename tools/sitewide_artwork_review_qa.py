@@ -12,7 +12,7 @@ BIBLE_STYLE = 'bible-together.css'
 BIBLE_STYLE_SHA256 = '128b2a54bf1a285497ea11d6c8e9040c55baa996ec75aa376b29463f854a9121'
 BIBLE_STYLE_OWNER = 'answers/bible-and-book-of-mormon-together.html'
 MISSION_ENRICHMENT_STYLE = 'missionary-enrichment.css'
-MISSION_ENRICHMENT_STYLE_SHA256 = 'e40315cfc4994ba862cd7bf3c1d4f0fa77db5bd1ba59d8ca0eedfd8cdd8b875c'
+MISSION_ENRICHMENT_STYLE_SHA256 = '6f74e5f8b3df9c15bcfbfe8cbc193a8666b58bf864ec010ddeeeb394d4b1ddbe'
 WATCH_SHORTS_STYLE = 'watch-shorts.css'
 # Owner-requested three-Short disclosure; centered 310px cards and controls,
 # independently checked on desktop and enlarged phone text. Exact Watch-only bytes.
@@ -153,7 +153,7 @@ SCOPED_INTERFACE_STYLES = {
 # Wyatt requested these exact desktop repairs and the Temple chronology.
 # Albert independently reviewed rendered composition; byte/consumer changes fail closed.
 OWNER_20260929_STYLES = {
-    "study-reading-balance.css": ("fd52ec839745a75c0cde54122629134a78dbd2448e4bbae4ca6369ba81bfdb3b", ["atonement.html", "answers/bible-and-book-of-mormon-together.html"]),
+    "study-reading-balance.css": ("fb547af5c883050d743204c0d05372863143a1fa0dffd2df370b728f1a9ff005", ["atonement.html", "answers/bible-and-book-of-mormon-together.html", "answers.html", "index.html", "ask.html"]),
     # Dynamically loaded shared opening surface; source reviewed, rendered approval recorded separately.
     'unified-opening.css': ('7fcb1456b4ff2c3372238e0baaccfa6083e4232e328956eff1e1d43f178c96e6', []),
     # Owner-directed Answer Continue correction: exact CSS bytes and consumer lists.
