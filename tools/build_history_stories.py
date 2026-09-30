@@ -44,8 +44,8 @@ def render(story, ready):
     base = (ROOT / 'church-history.html').read_text(encoding='utf-8')
     css = re.findall(r'<link[^>]+rel="stylesheet"[^>]+href="([^"]+)"', base)
     css = [x for x in css if not x.startswith('church-history.css')]
-    css.append('history-stories.css?v=20260929-stories-1')
-    scripts = ['site-common.js?v=20260929-history-paths-1', 'full-image-viewer.js?v=20260914-reopen-1', 'topic-artwork-details.js?v=20260929-history-sources-2', 'site-search.js?v=20260919-focused-answers-1']
+    css.append('history-stories.css?v=20260929-picture-anchors-1')
+    scripts = ['site-common.js?v=20260929-footer-top-1', 'full-image-viewer.js?v=20260914-reopen-1', 'topic-artwork-details.js?v=20260929-tanner-journal-1', 'site-search.js?v=20260919-focused-answers-1']
     out = ['<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">', f'<title>{esc(story["name"])} | Church History | focusChrist</title>', f'<meta name="description" content="{esc(story["introduction"])}"><link rel="canonical" href="https://focuschrist.com/history/{slug}.html">']
     out += [f'<meta property="og:url" content="https://focuschrist.com/history/{slug}.html">', f'<meta property="og:title" content="{esc(story["name"])} | Church History | focusChrist">', f'<meta property="og:description" content="{esc(story["introduction"])}">', f'<meta property="og:image" content="https://focuschrist.com/{ready[story["units"][0]["id"]]["full"]}">', '<meta name="twitter:card" content="summary_large_image">']
     out += [f'<link rel="stylesheet" href="../{x}">' for x in css]
@@ -74,10 +74,14 @@ def render_hub(stories):
         'eleazer-miller': 'Meet the missionary whose simple witness reached Brigham Young, and follow his service from the small branches of New York to the journey west.',
         'john-rowe-moyle': 'Travel with the English handcart pioneer, see the work of a skilled stonecutter, and follow his return to the temple site with a handmade wooden leg.'
     }
-    out = ['<!-- faithful-lives:start -->', '<section class="fc-section" id="faithful-lives" aria-labelledby="faithful-lives-title"><div class="fc-container--standard"><p class="fc-eyebrow">Lives of faith and service</p><h2 class="fc-section-heading" id="faithful-lives-title">Three lives, told through pictures and records</h2><p>Explore each life through five scenes, the historical accounts, and an official Church film.</p><div class="fc-study-grid">']
+    out = ['<!-- faithful-lives:start -->', '<section class="fc-section" id="faithful-lives" aria-labelledby="faithful-lives-title"><div class="fc-container--standard"><p class="fc-eyebrow">Lives of faith and service</p><h2 class="fc-section-heading" id="faithful-lives-title">Three lives, told through pictures and records</h2><p>Explore each life through illustrated scenes, the historical accounts, and an official Church film.</p><div class="fc-history-life-grid">']
     for story in stories:
         slug = story['id']
-        out += [f'<section class="fc-card" id="{slug}" aria-labelledby="{slug}-entry-title"><h3 id="{slug}-entry-title">{esc(story["name"])}</h3><p>{esc(descriptions[slug])}</p><a class="fc-button" href="history/{slug}.html">Read {esc(story["name"])}’s story</a></section>']
+        scene = {'john-tanner': 'tanner-healing-witness', 'eleazer-miller': 'miller-simple-witness', 'john-rowe-moyle': 'moyle-wooden-leg'}[slug]
+        ready = json.loads((DATA/'art-ready.json').read_text(encoding='utf-8'))
+        art = ready[scene]
+        destination = f'history/{slug}.html#picture-{scene}'
+        out += [f'<section class="fc-history-life-card" id="{slug}" aria-labelledby="{slug}-entry-title" data-linked-picture-reference="{scene}"><a class="fc-history-life-preview" href="{destination}" aria-label="Explore {esc(story["name"])}’s illustrated story"><img src="{esc(art["thumbnail"])}" width="960" height="640" loading="lazy" decoding="async" alt="{esc(art["alt"])}"></a><div class="fc-history-life-body"><h3 id="{slug}-entry-title">{esc(story["name"])}</h3><p>{esc(descriptions[slug])}</p><a class="fc-button" href="history/{slug}.html">Read {esc(story["name"])}’s story</a></div></section>']
     out += ['</div></div></section>', '<!-- faithful-lives:end -->']
     assert source.count('<!-- faithful-lives:start -->') == source.count('<!-- faithful-lives:end -->') == 1
     return re.sub(r'<!-- faithful-lives:start -->.*?<!-- faithful-lives:end -->', '\n'.join(out), source, flags=re.S)
@@ -86,14 +90,15 @@ def build():
     stories = json.loads((DATA/'stories.json').read_text(encoding='utf-8'))['stories']
     ready = json.loads((DATA/'art-ready.json').read_text(encoding='utf-8'))
     ids = [u['id'] for s in stories for u in s['units']]
-    assert len(ids) == len(set(ids)) == 15
+    assert len(ids) == len(set(ids)) == 23
     preview_only = '--story' in sys.argv
     if preview_only:
         slug = sys.argv[sys.argv.index('--story') + 1]
         stories = [s for s in stories if s['id'] == slug]
         assert len(stories) == 1, 'Unknown story preview'
     for story in stories:
-        assert len(story['units']) == 5 and story['hero_unit_id'] == story['units'][0]['id']
+        assert len(story['units']) == {'john-tanner': 7, 'eleazer-miller': 9, 'john-rowe-moyle': 7}[story['id']] and story['hero_unit_id'] == story['units'][0]['id']
+        assert [u['id'] for u in story['units']] == story['reviewed_scene_ids']
         for unit in story['units']:
             assert 1 <= len(unit['paragraphs']) <= 2
             art = ready[unit['id']]
@@ -114,7 +119,7 @@ def build():
         else:
             path.parent.mkdir(exist_ok=True)
             path.write_text(content, encoding='utf-8', newline='\n')
-    print(f'PASS: {len(stories)} stories, {len(stories)*5} reviewed distinct scene records' + ('; unlinked local preview only' if preview_only else ''))
+    print(f'PASS: {len(stories)} stories, {sum(len(s['units']) for s in stories)} reviewed distinct scene records' + ('; unlinked local preview only' if preview_only else ''))
 
 if __name__ == '__main__':
     build()

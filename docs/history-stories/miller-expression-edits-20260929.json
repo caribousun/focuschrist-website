@@ -1,0 +1,114 @@
+{
+  "date": "2026-09-29T20:46:19.561978-06:00",
+  "scope": "Owner requested expression-only revision of four Eleazer Miller scenes. Opening hero depicts Brigham and remains unchanged.",
+  "root_visual_review": "PASS: relaxed scene-appropriate expressions, recognizable existing identity, poses, role assignments, other people and compositions preserved. Not owner aesthetic approval.",
+  "owner_aesthetic_approval": false,
+  "edits": [
+    {
+      "id": "miller-mission-road",
+      "file": "exec-c481c79b-9515-44e9-baa2-7cf2263e12d9.png",
+      "change": "The sole foreground man Eleazer: calm, hopeful attention, relaxed inner eyebrows, open attentive eyes, relaxed mouth with a very subtle pleasant expression. No grin.",
+      "path": "exec-c481c79b-9515-44e9-baa2-7cf2263e12d9.png",
+      "prompt": "Use case: identity-preserve. Edit target: attached original full scene. Change only Eleazer Miller's facial expression, preserving his recognizable facial identity, apparent age, hair, skin texture, clothing, body, pose, hands, all other people, backdrop, lighting and entire original composition. The sole foreground man Eleazer: calm, hopeful attention, relaxed inner eyebrows, open attentive eyes, relaxed mouth with a very subtle pleasant expression. No grin. Remove the scowl: no pinched angry inner eyebrows, no pressed downturned stern mouth. Natural nuanced expression appropriate to this historical action, not cartoon smiling, no exaggerated grin. Preserve photorealistic detail and focus throughout. Do not replace or redesign any faces or swap roles. Keep image same landscape framing. No text or watermark.",
+      "editedPath": "exec-ddd55c05-df6d-42eb-8756-153469447658.png",
+      "path_sha256": "d0ced07014ad81f8c05845f3753bb7b0b5fb8b56da47f11ba99b9cb45921fc4e",
+      "editedPath_sha256": "f4d862c1dc069da21311a071e467c846c19f767522f4c34970a38db061afc31c",
+      "independent_review": {
+        "findings": "Scene-appropriate softened expression; established identity, gaze target, hands, roles and composition visually preserved. No identical-pixel claim.",
+        "reviewer": "Fermi",
+        "result": "pass",
+        "actual_full_file_viewed": true,
+        "owner_aesthetic_approval": false
+      },
+      "superseded_export": {
+        "source_original": "exec-c481c79b-9515-44e9-baa2-7cf2263e12d9.png",
+        "source_sha256": "d0ced07014ad81f8c05845f3753bb7b0b5fb8b56da47f11ba99b9cb45921fc4e",
+        "sha256": "72bb7819634ce367b2952b262957b3f8c1404f6b202190084a508059b8f3512f",
+        "thumbnail_sha256": "67a5f9de43e6c784d65f75c5c98ef1f19086beffeb6fbcbd0763e91f409ca32b",
+        "reason": "Owner requested softer scene-appropriate Miller expression; earlier expression is superseded, not approved for reintroduction."
+      }
+    },
+    {
+      "id": "miller-simple-witness",
+      "file": "exec-57fdecc8-442a-43ab-a1f4-08e857331080.png",
+      "change": "Only Eleazer, the short-combed-haired speaker on LEFT: warm earnest testimony, gently relaxed inner brows, a faint natural welcoming smile or natural softly speaking lips. Keep his eyes in real eye contact with Brigham on RIGHT. The long-haired man on RIGHT is Brigham: preserve him entirely.",
+      "path": "exec-57fdecc8-442a-43ab-a1f4-08e857331080.png",
+      "prompt": "Use case: identity-preserve. Edit target: attached original full scene. Change only Eleazer Miller's facial expression, preserving his recognizable facial identity, apparent age, hair, skin texture, clothing, body, pose, hands, all other people, backdrop, lighting and entire original composition. Only Eleazer, the short-combed-haired speaker on LEFT: warm earnest testimony, gently relaxed inner brows, a faint natural welcoming smile or natural softly speaking lips. Keep his eyes in real eye contact with Brigham on RIGHT. The long-haired man on RIGHT is Brigham: preserve him entirely. Remove the scowl: no pinched angry inner eyebrows, no pressed downturned stern mouth. Natural nuanced expression appropriate to this historical action, not cartoon smiling, no exaggerated grin. Preserve photorealistic detail and focus throughout. Do not replace or redesign any faces or swap roles. Keep image same landscape framing. No text or watermark.",
+      "editedPath": "exec-e41c93e0-e3fb-4cd1-b0df-1fcf07af8a1d.png",
+      "path_sha256": "c041e3f8b11db487e63b49f67647fe97fc7346a9e52c94ca8ad67fb955248308",
+      "editedPath_sha256": "1030a65a31395e33876683bab9a12f40613f63c64af2c76ed159029e02471f75",
+      "independent_review": {
+        "findings": "Scene-appropriate softened expression; established identity, gaze target, hands, roles and composition visually preserved. No identical-pixel claim.",
+        "reviewer": "Fermi",
+        "result": "pass",
+        "actual_full_file_viewed": true,
+        "owner_aesthetic_approval": false
+      },
+      "superseded_export": {
+        "source_original": "exec-57fdecc8-442a-43ab-a1f4-08e857331080.png",
+        "source_sha256": "c041e3f8b11db487e63b49f67647fe97fc7346a9e52c94ca8ad67fb955248308",
+        "sha256": "8ff5bfbed008ac5fb4c678d56d06430212c18fe80171d10421642f443c40e65b",
+        "thumbnail_sha256": "aa9175c5868d0c6ca279abcab0a8b3df30a45f9a4d6ae1719e7999be4b3ec47d",
+        "reason": "Owner requested softer scene-appropriate Miller expression; earlier expression is superseded, not approved for reintroduction."
+      }
+    },
+    {
+      "id": "miller-millstream-baptism",
+      "file": "exec-cd50f3bd-907b-4719-8a7f-24f80dc32f14.png",
+      "change": "Only Eleazer the short-haired LEFT officiant, whose RIGHT hand is raised: peaceful reverence, relaxed inner brow and forehead, softly attentive eyes and relaxed mouth, no grin. Preserve his raised RIGHT hand and role exactly. The long-haired RIGHT recipient holding his nose is Brigham: preserve him entirely.",
+      "path": "exec-cd50f3bd-907b-4719-8a7f-24f80dc32f14.png",
+      "prompt": "Use case: identity-preserve. Edit target: attached original full scene. Change only Eleazer Miller's facial expression, preserving his recognizable facial identity, apparent age, hair, skin texture, clothing, body, pose, hands, all other people, backdrop, lighting and entire original composition. Only Eleazer the short-haired LEFT officiant, whose RIGHT hand is raised: peaceful reverence, relaxed inner brow and forehead, softly attentive eyes and relaxed mouth, no grin. Preserve his raised RIGHT hand and role exactly. The long-haired RIGHT recipient holding his nose is Brigham: preserve him entirely. Remove the scowl: no pinched angry inner eyebrows, no pressed downturned stern mouth. Natural nuanced expression appropriate to this historical action, not cartoon smiling, no exaggerated grin. Preserve photorealistic detail and focus throughout. Do not replace or redesign any faces or swap roles. Keep image same landscape framing. No text or watermark.",
+      "editedPath": "exec-f370160a-a6f5-4a84-958e-cda8e24e47f6.png",
+      "path_sha256": "6c23dad50c0e6d69c418ea6eb376d3d6393ff32d6d1d78e697946a4f89dfe182",
+      "editedPath_sha256": "f268e8e38d8c7947e835a7c8539514bc671d32633702a5c03112233f674d6832",
+      "independent_review": {
+        "findings": "Scene-appropriate softened expression; established identity, gaze target, hands, roles and composition visually preserved. No identical-pixel claim.",
+        "reviewer": "Fermi",
+        "result": "pass",
+        "actual_full_file_viewed": true,
+        "owner_aesthetic_approval": false
+      },
+      "superseded_export": {
+        "source_original": "exec-cd50f3bd-907b-4719-8a7f-24f80dc32f14.png",
+        "source_sha256": "6c23dad50c0e6d69c418ea6eb376d3d6393ff32d6d1d78e697946a4f89dfe182",
+        "sha256": "f62a73f92c15796b8e3b27cc7ba484adc5c9bcd248aeff4d7065b7b694c11efd",
+        "thumbnail_sha256": "1210fec5f4549cdde0ece073027da578da7b2e1441912b383284a6735e05ed72",
+        "reason": "Owner requested softer scene-appropriate Miller expression; earlier expression is superseded, not approved for reintroduction."
+      }
+    },
+    {
+      "id": "miller-westward-service",
+      "file": "exec-d5ff2bf7-9718-427a-84d2-0e8b0c8c5750.png",
+      "change": "Only older Eleazer, the sole foreground knot-worker: quietly content and encouraging while concentrating on his work, soften the pinched inner brow and tight jaw, faint natural contentment in mouth. Keep eyes directed toward the rope and hands.",
+      "path": "exec-d5ff2bf7-9718-427a-84d2-0e8b0c8c5750.png",
+      "prompt": "Use case: identity-preserve. Edit target: attached original full scene. Change only Eleazer Miller's facial expression, preserving his recognizable facial identity, apparent age, hair, skin texture, clothing, body, pose, hands, all other people, backdrop, lighting and entire original composition. Only older Eleazer, the sole foreground knot-worker: quietly content and encouraging while concentrating on his work, soften the pinched inner brow and tight jaw, faint natural contentment in mouth. Keep eyes directed toward the rope and hands. Remove the scowl: no pinched angry inner eyebrows, no pressed downturned stern mouth. Natural nuanced expression appropriate to this historical action, not cartoon smiling, no exaggerated grin. Preserve photorealistic detail and focus throughout. Do not replace or redesign any faces or swap roles. Keep image same landscape framing. No text or watermark.",
+      "editedPath": "exec-f0a9ff2c-cb80-489f-a9a1-4ffef0a9ed09.png",
+      "path_sha256": "27f26cd90b65d746b455a5628038f9b71c32add23a64105ddaefe1a8f4a27420",
+      "editedPath_sha256": "f73aecedb5127097ff49545a22a2a7f448f3c9a393db1d376ed4b0ead532f35c",
+      "independent_review": {
+        "findings": "Scene-appropriate softened expression; established identity, gaze target, hands, roles and composition visually preserved. No identical-pixel claim.",
+        "reviewer": "Fermi",
+        "result": "pass",
+        "actual_full_file_viewed": true,
+        "owner_aesthetic_approval": false
+      },
+      "superseded_export": {
+        "source_original": "exec-d5ff2bf7-9718-427a-84d2-0e8b0c8c5750.png",
+        "source_sha256": "27f26cd90b65d746b455a5628038f9b71c32add23a64105ddaefe1a8f4a27420",
+        "sha256": "20dff8f8eb33aef7cd3f4664b5c6073939675f82264a6194112245bdaa5bb3db",
+        "thumbnail_sha256": "87a5579dc53431fe01e33620427feb04f99eab65c218e07751e8ba5cf9b6d3fe",
+        "reason": "Owner requested softer scene-appropriate Miller expression; earlier expression is superseded, not approved for reintroduction."
+      }
+    }
+  ],
+  "source_file_sha256": {
+    "exec-c481c79b-9515-44e9-baa2-7cf2263e12d9.png": "d0ced07014ad81f8c05845f3753bb7b0b5fb8b56da47f11ba99b9cb45921fc4e",
+    "exec-ddd55c05-df6d-42eb-8756-153469447658.png": "f4d862c1dc069da21311a071e467c846c19f767522f4c34970a38db061afc31c",
+    "exec-57fdecc8-442a-43ab-a1f4-08e857331080.png": "c041e3f8b11db487e63b49f67647fe97fc7346a9e52c94ca8ad67fb955248308",
+    "exec-e41c93e0-e3fb-4cd1-b0df-1fcf07af8a1d.png": "1030a65a31395e33876683bab9a12f40613f63c64af2c76ed159029e02471f75",
+    "exec-cd50f3bd-907b-4719-8a7f-24f80dc32f14.png": "6c23dad50c0e6d69c418ea6eb376d3d6393ff32d6d1d78e697946a4f89dfe182",
+    "exec-f370160a-a6f5-4a84-958e-cda8e24e47f6.png": "f268e8e38d8c7947e835a7c8539514bc671d32633702a5c03112233f674d6832",
+    "exec-d5ff2bf7-9718-427a-84d2-0e8b0c8c5750.png": "27f26cd90b65d746b455a5628038f9b71c32add23a64105ddaefe1a8f4a27420",
+    "exec-f0a9ff2c-cb80-489f-a9a1-4ffef0a9ed09.png": "f73aecedb5127097ff49545a22a2a7f448f3c9a393db1d376ed4b0ead532f35c"
+  }
+}

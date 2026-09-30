@@ -24,3 +24,9 @@ body.fc-site.fc-topic-page main .fc-study-lead > :is(h2,h3){margin-top:0}
 
 /* Preserve intrinsic proportions when legacy body artwork is narrowed by its container. */
 body.fc-site.fc-topic-page main figure img:not(.fc-resource-card img){max-width:100%;height:auto;max-height:none;aspect-ratio:auto var(--study-image-ratio,3/2);object-fit:contain}
+
+/* Owner-requested desktop parity with Home; approved phone opening rules stay intact. */
+@media(min-width:701px){
+ body.fc-site.fc-topic-page .fc-topic-opening{min-height:0;grid-template-rows:auto auto;align-content:start}
+ body.fc-site.fc-topic-page .fc-topic-opening .fc-visual-hero{height:auto!important;min-height:0!important;max-height:none!important;aspect-ratio:2048/684}
+}

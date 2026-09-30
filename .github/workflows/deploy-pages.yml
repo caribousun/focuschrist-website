@@ -101,6 +101,7 @@ jobs:
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/art_study_picture_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/temples_history_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/history_story_runtime_qa.js
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/footer_navigation_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/artwork_reference_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/illustrated_study_navigation_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/desktop_hero_runtime_qa.js
@@ -247,6 +248,18 @@ jobs:
         run: |
           python tools/history_hero_pixels_qa.py --self-test
           NODE_PATH=/tmp/focus-row-qa/node_modules node tools/history_hero_browser_qa.js
+          python tools/home_hero_height_qa.py
+          NODE_PATH=/tmp/focus-row-qa/node_modules node tools/home_hero_height_browser_qa.js
+          NODE_PATH=/tmp/focus-row-qa/node_modules node tools/footer_navigation_browser_qa.js
+
+      - name: Save footer navigation viewport evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: footer-navigation-render
+          path: .qa-artifacts/footer-navigation/
+          include-hidden-files: true
+          if-no-files-found: ignore
 
       - name: Save historical hero screenshots and raster evidence
         if: always()

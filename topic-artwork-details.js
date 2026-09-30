@@ -66,9 +66,13 @@
             return Array.from(container.querySelectorAll('a[href]')).filter(function (link) {
                 try {
                     const url = new URL(link.href);
-                    return url.protocol === 'https:' && ['www.churchofjesuschrist.org', 'newsroom.churchofjesuschrist.org', 'history.churchofjesuschrist.org',
-                        'www.josephsmithpapers.org', 'churchhistorylibrary.churchofjesuschrist.org', 'ensignpeakfoundation.org'].includes(url.hostname)
-                        && !link.querySelector('img');
+                    const standardHost = ['www.churchofjesuschrist.org', 'newsroom.churchofjesuschrist.org', 'history.churchofjesuschrist.org',
+                        'www.josephsmithpapers.org', 'churchhistorylibrary.churchofjesuschrist.org', 'ensignpeakfoundation.org'].includes(url.hostname);
+                    const historyOwner = ['/history/john-tanner.html', '/history/eleazer-miller.html', '/history/john-rowe-moyle.html'].includes(location.pathname)
+                        && document.body.classList.contains('fc-life-story');
+                    const researchedHistoryHost = historyOwner && ['saintsbysea.byu.edu', 'rsc.byu.edu', 'www.churchhistorianspress.org', 'www.fairlatterdaysaints.org'].includes(url.hostname);
+                    const tannerJournal = historyOwner && location.pathname === '/history/john-tanner.html' && url.href === 'https://catalog.churchofjesuschrist.org/assets/994fb2fe-d8b1-4156-a452-3a8fecacf538/1/42';
+                    return url.protocol === 'https:' && (standardHost || researchedHistoryHost || tannerJournal) && !link.querySelector('img');
                 } catch (error) { return false; }
             });
         }

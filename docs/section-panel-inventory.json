@@ -270,7 +270,7 @@
       "reason": "Named existing section panel; shared Home-derived surface only."
     },
     "fc-card": {
-      "count": 95,
+      "count": 92,
       "pages": [
         "about.html",
         "answers.html",
@@ -284,8 +284,7 @@
       "tags": [
         "a",
         "article",
-        "div",
-        "section"
+        "div"
       ],
       "disposition": "approved_reference_unchanged",
       "reason": "Existing approved Home surface remains unchanged."
@@ -421,6 +420,17 @@
       ],
       "disposition": "excluded_with_reason",
       "reason": "Artwork modifier."
+    },
+    "fc-history-life-card": {
+      "count": 3,
+      "pages": [
+        "church-history.html"
+      ],
+      "tags": [
+        "section"
+      ],
+      "disposition": "coordinated_stylesheet_owner",
+      "reason": "Three Church History owning-story preview cards use shared Home panel tokens in exact reviewed church-history.css."
     },
     "fc-home-card-action": {
       "count": 6,
@@ -1865,6 +1875,15 @@
         "church-history.html"
       ],
       "disposition": "shared_surface"
+    },
+    "fc-history-life-card": {
+      "stylesheets": [
+        "church-history.css"
+      ],
+      "pages": [
+        "church-history.html"
+      ],
+      "disposition": "coordinated_stylesheet_owner"
     },
     "fc-history-source-lock": {
       "stylesheets": [

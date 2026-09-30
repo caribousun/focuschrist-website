@@ -1,0 +1,1138 @@
+{
+  "scope": "124 canonical openings; image-bearing heroes compared with Home; body study illustrations and text-only openings excluded explicitly",
+  "baseline_method": "124 distinct ordinary public navigations in Chrome5 via allowed CUA tab.playwright.evaluate read-only DOM; no shell browser automation",
+  "baseline_home": {
+    "width": 1424.800048828125,
+    "height": 475.8500061035156,
+    "top": 52
+  },
+  "pages": [
+    {
+      "page": "index.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Frame height matches Home; composition not certified by geometry",
+      "baseline_height": 475.8500061035156,
+      "desktop_repair": false
+    },
+    {
+      "page": "ask.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Frame height matches Home; composition not certified by geometry",
+      "baseline_height": 475.8500061035156,
+      "desktop_repair": false
+    },
+    {
+      "page": "answers.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Frame height matches Home; composition not certified by geometry",
+      "baseline_height": 475.8500061035156,
+      "desktop_repair": false
+    },
+    {
+      "page": "watch.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Frame height matches Home; composition not certified by geometry",
+      "baseline_height": 475.8500061035156,
+      "desktop_repair": false
+    },
+    {
+      "page": "art.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Frame height matches Home; composition not certified by geometry",
+      "baseline_height": 475.8500061035156,
+      "desktop_repair": false
+    },
+    {
+      "page": "missionary.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Frame height matches Home; composition not certified by geometry",
+      "baseline_height": 475.8500061035156,
+      "desktop_repair": false
+    },
+    {
+      "page": "church-history.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Frame height matches Home; composition not certified by geometry",
+      "baseline_height": 475.8500061035156,
+      "desktop_repair": false
+    },
+    {
+      "page": "come-follow-me.html",
+      "selector": ".cfm-desktop-picture",
+      "baseline_classification": "Text opening .cfm-hero; not a picture hero",
+      "baseline_height": 183.4750061035156,
+      "desktop_repair": true,
+      "corrected_classification": "Image-bearing background verified by Newton; replaced desktop background with same-image linked frame and separate copy.",
+      "desktop_assets": [
+        {
+          "path": "assets/heroes/come-follow-me-2026-desktop.webp",
+          "size": [
+            2170,
+            725
+          ],
+          "review": "Actual full image inspected: essentially same Home aspect, Christ head/teaching hand and family/book remain within fullframe."
+        }
+      ]
+    },
+    {
+      "page": "pioneers.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Frame height matches Home; composition not certified by geometry",
+      "baseline_height": 475.8500061035156,
+      "desktop_repair": false
+    },
+    {
+      "page": "about.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Frame height matches Home; composition not certified by geometry",
+      "baseline_height": 475.8500061035156,
+      "desktop_repair": false
+    },
+    {
+      "page": "answers/jesus-christ-latter-day-saint-beliefs.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Desktop picture hero differs from Home",
+      "baseline_height": 672.6375122070312,
+      "desktop_repair": true,
+      "desktop_assets": [
+        {
+          "path": "assets/heroes/topics/jesus-desktop.webp",
+          "size": [
+            1920,
+            640
+          ]
+        }
+      ]
+    },
+    {
+      "page": "answers/are-latter-day-saints-christian.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Desktop picture hero differs from Home",
+      "baseline_height": 672.6375122070312,
+      "desktop_repair": true,
+      "desktop_assets": [
+        {
+          "path": "assets/heroes/topics/christian-desktop.webp",
+          "size": [
+            1920,
+            640
+          ]
+        }
+      ]
+    },
+    {
+      "page": "answers/what-is-the-book-of-mormon.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Desktop picture hero differs from Home",
+      "baseline_height": 672.6375122070312,
+      "desktop_repair": true,
+      "desktop_assets": [
+        {
+          "path": "assets/heroes/topics/book-of-mormon-desktop.webp",
+          "size": [
+            1920,
+            640
+          ]
+        }
+      ]
+    },
+    {
+      "page": "answers/why-latter-day-saints-build-temples.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Desktop picture hero differs from Home",
+      "baseline_height": 672.6375122070312,
+      "desktop_repair": true,
+      "desktop_assets": [
+        {
+          "path": "assets/heroes/topics/temples-desktop.webp",
+          "size": [
+            1920,
+            640
+          ]
+        }
+      ]
+    },
+    {
+      "page": "answers/what-happens-after-death.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Desktop picture hero differs from Home",
+      "baseline_height": 672.6375122070312,
+      "desktop_repair": true,
+      "desktop_assets": [
+        {
+          "path": "assets/heroes/topics/life-after-death-desktop.webp",
+          "size": [
+            1920,
+            640
+          ]
+        }
+      ]
+    },
+    {
+      "page": "answers/who-was-joseph-smith.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Desktop picture hero differs from Home",
+      "baseline_height": 672.6375122070312,
+      "desktop_repair": true,
+      "desktop_assets": [
+        {
+          "path": "assets/heroes/topics/joseph-desktop.webp",
+          "size": [
+            1920,
+            640
+          ]
+        }
+      ]
+    },
+    {
+      "page": "answers/prayer-and-personal-revelation.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Desktop picture hero differs from Home",
+      "baseline_height": 672.6375122070312,
+      "desktop_repair": true,
+      "desktop_assets": [
+        {
+          "path": "assets/heroes/topics/prayer-desktop.webp",
+          "size": [
+            1920,
+            640
+          ]
+        }
+      ]
+    },
+    {
+      "page": "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Frame height matches Home; composition not certified by geometry",
+      "baseline_height": 475.8500061035156,
+      "desktop_repair": false
+    },
+    {
+      "page": "answers/why-families-are-important.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Desktop picture hero differs from Home",
+      "baseline_height": 672.6375122070312,
+      "desktop_repair": true,
+      "desktop_assets": [
+        {
+          "path": "assets/heroes/topics/families-desktop.webp",
+          "size": [
+            1920,
+            640
+          ]
+        }
+      ]
+    },
+    {
+      "page": "answers/what-is-eternal-marriage.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Desktop picture hero differs from Home",
+      "baseline_height": 638.2374877929688,
+      "desktop_repair": true,
+      "desktop_assets": [
+        {
+          "path": "assets/heroes/topics/marriage-desktop.webp",
+          "size": [
+            1920,
+            640
+          ]
+        }
+      ]
+    },
+    {
+      "page": "answers/bible-and-book-of-mormon-together.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Desktop picture hero differs from Home",
+      "baseline_height": 672.6375122070312,
+      "desktop_repair": true,
+      "desktop_assets": [
+        {
+          "path": "assets/heroes/topics/bible-bom-desktop.webp",
+          "size": [
+            1920,
+            640
+          ]
+        }
+      ]
+    },
+    {
+      "page": "answers/faith-in-jesus-christ-during-trials.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Desktop picture hero differs from Home",
+      "baseline_height": 672.6375122070312,
+      "desktop_repair": true,
+      "desktop_assets": [
+        {
+          "path": "assets/heroes/topics/trials-desktop.webp",
+          "size": [
+            1920,
+            640
+          ]
+        }
+      ]
+    },
+    {
+      "page": "art-study/the-living-christ.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Frame height matches Home; composition not certified by geometry",
+      "baseline_height": 475.8500061035156,
+      "desktop_repair": false
+    },
+    {
+      "page": "art-study/the-good-shepherd.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Frame height matches Home; composition not certified by geometry",
+      "baseline_height": 475.8500061035156,
+      "desktop_repair": false
+    },
+    {
+      "page": "art-study/suffer-the-little-children.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Frame height matches Home; composition not certified by geometry",
+      "baseline_height": 475.8500061035156,
+      "desktop_repair": false
+    },
+    {
+      "page": "art-study/be-still.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Frame height matches Home; composition not certified by geometry",
+      "baseline_height": 475.8500061035156,
+      "desktop_repair": false
+    },
+    {
+      "page": "answers/death-of-a-child.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Desktop picture hero differs from Home",
+      "baseline_height": 672.6375122070312,
+      "desktop_repair": true,
+      "desktop_assets": [
+        {
+          "path": "assets/heroes/topics/child-loss-desktop.webp",
+          "size": [
+            1920,
+            640
+          ]
+        }
+      ]
+    },
+    {
+      "page": "answers/divorce-and-faith.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Desktop picture hero differs from Home",
+      "baseline_height": 672.6375122070312,
+      "desktop_repair": true,
+      "desktop_assets": [
+        {
+          "path": "assets/heroes/topics/divorce-desktop.webp",
+          "size": [
+            1920,
+            640
+          ]
+        }
+      ]
+    },
+    {
+      "page": "general-conference.html",
+      "selector": ".gc-intro-visual",
+      "baseline_classification": "Frame height matches Home; composition not certified by geometry",
+      "baseline_height": 475.8500061035156,
+      "desktop_repair": false
+    },
+    {
+      "page": "answers/grief-and-faith.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Desktop picture hero differs from Home",
+      "baseline_height": 672.6375122070312,
+      "desktop_repair": true,
+      "desktop_assets": [
+        {
+          "path": "assets/heroes/topics/grief-desktop.webp",
+          "size": [
+            1920,
+            640
+          ]
+        }
+      ]
+    },
+    {
+      "page": "answers/stand-forever.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Desktop picture hero differs from Home",
+      "baseline_height": 709.8375244140625,
+      "desktop_repair": true,
+      "desktop_assets": [
+        {
+          "path": "assets/heroes/topics/stand-forever-desktop.webp",
+          "size": [
+            1920,
+            640
+          ]
+        }
+      ]
+    },
+    {
+      "page": "answers/god-our-heavenly-father.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Desktop picture hero differs from Home",
+      "baseline_height": 610.2374877929688,
+      "desktop_repair": true,
+      "desktop_assets": [
+        {
+          "path": "assets/heroes/topics/father-desktop.webp",
+          "size": [
+            1920,
+            640
+          ]
+        }
+      ]
+    },
+    {
+      "page": "answers/restored-church-of-jesus-christ.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Desktop picture hero differs from Home",
+      "baseline_height": 672.6375122070312,
+      "desktop_repair": true,
+      "desktop_assets": [
+        {
+          "path": "assets/heroes/topics/restoration-desktop.webp",
+          "size": [
+            1920,
+            640
+          ]
+        }
+      ]
+    },
+    {
+      "page": "art-gallery.html",
+      "selector": null,
+      "baseline_classification": "No hero found; utility page layout requires product-scope decision",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "book-of-mormon-evidences.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Frame height matches Home; composition not certified by geometry",
+      "baseline_height": 475.8500061035156,
+      "desktop_repair": false
+    },
+    {
+      "page": "joseph-smith-likeness.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Frame height matches Home; composition not certified by geometry",
+      "baseline_height": 475.8500061035156,
+      "desktop_repair": false
+    },
+    {
+      "page": "search.html",
+      "selector": null,
+      "baseline_classification": "No hero found; utility page layout requires product-scope decision",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "atonement.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Frame height matches Home; composition not certified by geometry",
+      "baseline_height": 475.8500061035156,
+      "desktop_repair": false
+    },
+    {
+      "page": "birth-of-christ.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Desktop picture hero differs from Home",
+      "baseline_height": 672.6375122070312,
+      "desktop_repair": true,
+      "desktop_assets": [
+        {
+          "path": "assets/page-art/birth-of-christ/12-nativity-hero-full.webp",
+          "size": [
+            1869,
+            842
+          ],
+          "review": "Needs wider variant to preserve Joseph head and full infant/manger action in Home frame; root notified."
+        }
+      ]
+    },
+    {
+      "page": "answers/aaronic-priesthood-restoration.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Desktop picture hero differs from Home",
+      "baseline_height": 672.6375122070312,
+      "desktop_repair": true,
+      "desktop_assets": [
+        {
+          "path": "assets/heroes/topics/aaronic-desktop.webp",
+          "size": [
+            2172,
+            724
+          ]
+        }
+      ]
+    },
+    {
+      "page": "answers/melchizedek-priesthood-restoration.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Desktop picture hero differs from Home",
+      "baseline_height": 672.6375122070312,
+      "desktop_repair": true,
+      "desktop_assets": [
+        {
+          "path": "assets/heroes/topics/melchizedek-desktop.webp",
+          "size": [
+            2172,
+            724
+          ]
+        }
+      ]
+    },
+    {
+      "page": "answers/settle-this-in-your-hearts.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Desktop picture hero differs from Home",
+      "baseline_height": 709.8375244140625,
+      "desktop_repair": true,
+      "desktop_assets": [
+        {
+          "path": "assets/page-art/settle-heart/01-settled-path-wide-20260920-full.webp",
+          "size": [
+            2172,
+            724
+          ]
+        }
+      ]
+    },
+    {
+      "page": "jesus-christ/before-bethlehem.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/miracles-and-compassion.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/mortal-ministry.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/barren-fig.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/birds-lilies.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/blind-guides.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/bridegroom.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/budding-fig.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/children-marketplace.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/closed-door.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/divided-house.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/doorkeeper.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/faithful-servant.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/friend-midnight.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/good-samaritan.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/good-shepherd.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/grain-wheat.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/great-supper.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/growing-seed.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/hearing.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/hen-chicks.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/hidden-treasure.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/householder.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/king-war.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/kingdom.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/laborers-vineyard.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/lamp.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/leaven.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/lost-coin.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/lost-sheep.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/mercy.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/minas.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/mote-beam.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/mustard-seed.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/neighbor.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/net.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/new-patch.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/new-wineskins.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/parent-gifts.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/pearl.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/persistent-widow.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/pharisee-publican.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/prodigal-son.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/returning-spirit.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/rich-fool.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/rich-man-lazarus.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/royal-wedding.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/salt.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/servant-duty.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/settle-adversary.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/sheep-goats.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/sheep-sabbath.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/sower.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/stewardship.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/strong-man.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/talents.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/ten-virgins.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/thief-night.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/tower-builder.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/tree-fruit.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/two-debtors.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/two-sons.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/unjust-steward.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/unmerciful-servant.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/vine-branches.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/watchful-servants.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/watchfulness.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/wedding-places.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/wheat-tares.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/wicked-tenants.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/wise-foolish-builders.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/parables/woman-childbirth.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/redeemer-and-risen-lord.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/restoration-and-today.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/risen-savior-in-the-book-of-mormon.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "jesus-christ/teachings-and-parables.html",
+      "selector": null,
+      "baseline_classification": "Chapter-study layout: no hero class; in-flow pictures, not classified as missing by selector alone",
+      "baseline_height": null,
+      "desktop_repair": false
+    },
+    {
+      "page": "answers/abrahamic-covenant.html",
+      "selector": "[data-covenant-hero-slot] .fc-covenant-hero",
+      "baseline_classification": "Frame height matches Home; composition not certified by geometry",
+      "baseline_height": 475.8500061035156,
+      "desktop_repair": false
+    },
+    {
+      "page": "answers/holy-ghost.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Desktop picture hero differs from Home",
+      "baseline_height": 672.6375122070312,
+      "desktop_repair": true,
+      "desktop_assets": [
+        {
+          "path": "assets/heroes/holy-ghost-hero-1600.webp",
+          "size": [
+            1600,
+            535
+          ]
+        }
+      ]
+    },
+    {
+      "page": "answers/plan-of-salvation.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Frame height matches Home; composition not certified by geometry",
+      "baseline_height": 475.8500061035156,
+      "desktop_repair": false
+    },
+    {
+      "page": "history/john-tanner.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Frame height matches Home; composition not certified by geometry",
+      "baseline_height": 475.8500061035156,
+      "desktop_repair": false
+    },
+    {
+      "page": "history/eleazer-miller.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Frame height matches Home; composition not certified by geometry",
+      "baseline_height": 475.8500061035156,
+      "desktop_repair": false
+    },
+    {
+      "page": "history/john-rowe-moyle.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Frame height matches Home; composition not certified by geometry",
+      "baseline_height": 475.8500061035156,
+      "desktop_repair": false
+    }
+  ],
+  "topic_preserved_prefix": {
+    "sha256": "1c48e3f016f500eb4c6ddeb0a86fea00f75e2fb88a473fdbc76b828c5df0e744",
+    "bytes": 3588,
+    "scope": "All preexisting desktop and phone rules preserved verbatim; appended desktop-only correction."
+  },
+  "source_subject_review": {
+    "reviewer": "Fermi",
+    "method": "Actual21asset contact-sheet pixels; Birth fullsource separately inspected",
+    "wide_assets": "Faces, hands and story actions fit the existing wide compositions; ratio restoration reveals formerly clipped width. No new subject crop introduced.",
+    "birth": "Needs wider desktop composition; Joseph head and full infant/manger action span more height than standard frame safely holds. Root producing variant.",
+    "covenant_phone": "Needs portrait variant; temporary contain preserves complete source but letterbox is not release-approved."
+  },
+  "cfm_preserved_prefix": {
+    "sha256": "4ac596b6c1d0c165636f0e965794a9939a34c8333501b5bad64fad103b1bd7be",
+    "bytes": 12936
+  },
+  "responsive_variant_evidence": {
+    "exact_center_proof": "docs/hero-extension-pixel-proof-20260929.json",
+    "visual_continuity_review": "docs/hero-responsive-variant-review-20260929.json",
+    "prior_four_exact_centers": "docs/desktop-hero-pixel-proof-20260929.json",
+    "scope_note": "Earlier four whole-center preservation promises remain exact. Additional owner-authorized responsive compositions are separately classified; visual identity continuity is not a claim of pixel equality.",
+    "pending": [
+      "Hosted geometry/flow checks on committed candidate"
+    ],
+    "children_replacement": "docs/children-artwork-replacement-20260929.json",
+    "root_native_review": {
+      "desktop1440": [
+        "Children",
+        "Be Still",
+        "Shepherd",
+        "Joseph",
+        "Birth",
+        "Tanner"
+      ],
+      "phone": {
+        "Children": [
+          320,
+          390,
+          700
+        ],
+        "Covenant": [
+          390,
+          700
+        ]
+      },
+      "result": "Root reports actual native screenshots preserve faces, hands and relevant feet/actions with no overflow; Children desktop frame475.85px and Covenant700 frame502px match Home.",
+      "evidence_class": "Root actual native browser observation, separate from hosted checks and owner aesthetic approval."
+    }
+  }
+}

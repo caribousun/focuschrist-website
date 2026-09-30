@@ -1,53 +1,73 @@
 {
-  "scope": "Wyatt requested three dedicated Church History stories with at least five meaningful scene-specific pictures each, frequent pictures within the reading flow, and Moyle’s wooden leg explicitly pictured. Existing Church History bookmarks remain compact entrances.",
-  "originals": "Exactly fifteen independently reviewed originals. The opening picture is also the first story unit and is not repeated in its page body. Three desktop variants are the same original scenes, not extra artworks. Official film previews are source-linked media and do not count as originals.",
+  "scope": "Owner expanded the three dedicated History stories and requested pictured hub entrances, fuller primary-source narrative and Miller expression corrections.",
+  "originals": "Exactly23 distinct reviewed originals: Tanner7, Miller9, Moyle7. Three responsive desktop variants remain the same original scenes. Hub thumbnails are intentional links to owning picture anchors, not new originals.",
   "sources": "Newton original narrative and source review in stories.json; source-first scene/identity research and Fermi independent full-pixel records retained. Historical witness, later recollection, and reconstructed visual details are distinguished. No newly researched likeness is represented as owner aesthetic approval.",
-  "independent_source_review": "Newton accepted all fifteen paragraph arrays, sources, integrated story pages, local anchors, and narrow official history host/navigation resolver additions.",
-  "interaction": "All fifteen picture dialogs passed source/full-size/nested-close/focus-return/Continue checks. Dynamic header/footer/scripture-library paths are tested from all three History routes. Directory reaches the body picture before its narrative; panel Continue returns to its own reading heading.",
+  "independent_source_review": "Newton accepted final23-unit chronology and shared-source aggregate budgets; root/Fermi accepted eight new full images and four expression corrections. Technical acceptance is not owner aesthetic approval.",
+  "interaction": "All23 picture dialogs passed exact source/full-size/nested-close/focus-return/Continue checks. Native directory derives all accepted scene IDs; one hero per story remains unrepeated.",
   "rejected_sources": "Original reversed-role Miller baptism and anachronistic Moyle walking scene are retained only as rejected source records; final artwork manifest excludes both and QA blocks their reintroduction.",
   "shared_changes": "Exact official history source hostname in topic artwork adapter; exact History relative-root case in site-common. Shared consumers and authoritative builders receive new cache versions. No shared hero geometry changes.",
-  "checks": [
-    "Three-story static gate PASS",
-    "All fifteen picture runtime checks PASS",
-    "Official three film previews remote HTTP/image decode PASS",
-    "Inline scripture destinations PASS887",
-    "Artwork enrichment/master hashes PASS",
-    "Media voice PASS",
-    "Static content audit PASS128",
-    "Sitewide artwork review PASS124 canonical pages/842 protected images",
-    "Section panel and control inventories rebuilt",
-    "Gallery rebuilt873 originals/879 occurrences",
-    "Search index rebuilt"
-  ],
-  "rendered_review": "Root accepted all three390/320 views and Tanner/Miller desktop. With original shared stacking and WebP restored, root native getScreenshot after ControlHome shows Moyle whole man/cart/left landscape at1440. Evidence work/history-stories/root-browser/moyle-native-desktop-final.png. Hosted Chromium1440 full-width screenshot/raster corroboration is prepared in both workflows and remains pending CI.",
   "publication": "Local candidate only; parent controls final browser acceptance and release.",
-  "reading_rhythm": "Each body picture is followed by a single section heading and at most two narrative paragraphs. All artwork captions/source lists are retained in hidden data-picture-panel-copy records for the picture dialog and gallery, eliminating repeated visible titles/caption paragraphs/source strips. All fifteen dialogs passed after this change.",
+  "reading_rhythm": "Each scene has one picture, one visible heading and one or two paragraphs. Detailed captions/source lists remain in picture panels. Moyle first gives a handcart overview, then explicitly returns to the Atlantic voyage.",
   "capture_discrepancy": "Native getScreenshot and tab.screenshot APIs disagreed: native actual viewport showed the full scene, while tab.screenshot repeatedly showed a navy/edge-strip artifact. Direct image and DOM geometry were also correct. Ineffective image-only and combined stacking trials were fully reverted. JPEG/lossless candidates were removed. Final product retains original accepted WebP, original shared hero layering, geometry, and fitting.",
-  "source_access": "Picture-panel allowlist includes exact HTTPS ensignpeakfoundation.org for the reviewed Moyle Park source. HTTP, www/subdomains, and lookalike hosts fail regression. Every source in all fifteen story records is asserted present in its dialog, including the official CHD journal. Only the three exact History routes with the story body class may show four sources; all other pages retain the three-source limit. Controller cache 20260929-history-sources-2 propagated and verified.",
+  "source_access": "Four additional exactHTTPSresearch hosts are allowed only on the three exact History routes with fc-life-story; other pages remain unchanged. Positive plus insecure/subdomain/lookalike/wrong-route/wrong-body fixtures pass. Source cap remains4 only on these routes. Controller cache20260929-history-research-1.",
   "hosted_raster_gate": {
     "script": "tools/history_hero_browser_qa.js",
     "pixel_checker": "tools/history_hero_pixels_qa.py",
     "artifacts": ".qa-artifacts/history-heroes/",
     "contract": "Hosted Chromium at1440; decoded desktop source and exact2048:684 frame; save viewport screenshots; reject>=80%near-solid hero or broad-third loss of scene variation. Fixture reproduces86%navy/right-strip and is rejected. This is rendering evidence, not identity/aesthetic approval."
   },
-  "final_nonbrowser_closure": {
-    "initial_suite": {
-      "commands": 182,
-      "passed": 176,
-      "failed": 6,
-      "evidence": "work/history-stories/qa-final-nonbrowser/results.json"
-    },
-    "corrections": [
-      "Registered three topic-owned History heroes separately from unchanged 41 legacy hero controllers.",
-      "Added History routes to canonical discovery and reused reviewed prose/art for social metadata.",
-      "Registered three exact official film previews and six priesthood source previews in source/coverage ledgers.",
-      "Registered six priesthood media identities; accepted only the verified Elijah Able manual destination with negative fixtures."
+  "prior_release_evidence": {
+    "checks": [
+      "Three-story static gate PASS",
+      "All fifteen picture runtime checks PASS",
+      "Official three film previews remote HTTP/image decode PASS",
+      "Inline scripture destinations PASS887",
+      "Artwork enrichment/master hashes PASS",
+      "Media voice PASS",
+      "Static content audit PASS128",
+      "Sitewide artwork review PASS124 canonical pages/842 protected images",
+      "Section panel and control inventories rebuilt",
+      "Gallery rebuilt873 originals/879 occurrences",
+      "Search index rebuilt"
     ],
-    "affected_rerun": {
-      "passed": 17,
-      "failed": 0,
-      "evidence": "work/history-stories/qa-final-nonbrowser/affected-rerun.json"
+    "rendered_review": "Root accepted all three390/320 views and Tanner/Miller desktop. With original shared stacking and WebP restored, root native getScreenshot after ControlHome shows Moyle whole man/cart/left landscape at1440. Evidence work/history-stories/root-browser/moyle-native-desktop-final.png. Hosted Chromium1440 full-width screenshot/raster corroboration is prepared in both workflows and remains pending CI.",
+    "final_nonbrowser_closure": {
+      "initial_suite": {
+        "commands": 182,
+        "passed": 176,
+        "failed": 6,
+        "evidence": "work/history-stories/qa-final-nonbrowser/results.json"
+      },
+      "corrections": [
+        "Registered three topic-owned History heroes separately from unchanged 41 legacy hero controllers.",
+        "Added History routes to canonical discovery and reused reviewed prose/art for social metadata.",
+        "Registered three exact official film previews and six priesthood source previews in source/coverage ledgers.",
+        "Registered six priesthood media identities; accepted only the verified Elijah Able manual destination with negative fixtures."
+      ],
+      "affected_rerun": {
+        "passed": 17,
+        "failed": 0,
+        "evidence": "work/history-stories/qa-final-nonbrowser/affected-rerun.json"
+      },
+      "hosted_browser_raster": "Pending CI; local native screenshot acceptance is separate. Original WebP assets and shared hero geometry retained."
+    }
+  },
+  "current_expansion_checks": {
+    "source_static": "PASS23 exact originals, scene order, source hashes, superseded-expression protection, paragraph limits and builder reproducibility.",
+    "runtime": "PASS23 picture dialogs and scoped source-host negative fixtures.",
+    "gallery": "881 originals,887 occurrences; eight new originals, zero new owners for hub previews.",
+    "broad_nonbrowser": {
+      "commands": 183,
+      "initial_pass": 176,
+      "initial_fail": 7,
+      "evidence": "work/history-stories/qa-expansion-nonbrowser/results.json",
+      "resolved_history_failures": [
+        "Tanner caption voice, without weakening voice guard.",
+        "Exact ChurchHistory newstylesheet version in three existing guards."
+      ],
+      "remaining_at_record": "Hero exact-style transformation guards and CFM reviewed-content receipt handled by Fermi; affected closure pending."
     },
-    "hosted_browser_raster": "Pending CI; local native screenshot acceptance is separate. Original WebP assets and shared hero geometry retained."
+    "rendered": "Current expansion pending root review; prior release screenshots are historical evidence only.",
+    "publication": "Not committed or published by integration agent."
   }
 }

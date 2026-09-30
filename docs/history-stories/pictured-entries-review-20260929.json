@@ -1,0 +1,34 @@
+{
+  "scope": "Owner requested one meaningful picture on each Church History story entrance and clearer paragraph-to-action spacing.",
+  "references": [
+    {
+      "owner": "history/john-tanner.html",
+      "scene": "tanner-healing-witness"
+    },
+    {
+      "owner": "history/eleazer-miller.html",
+      "scene": "miller-simple-witness"
+    },
+    {
+      "owner": "history/john-rowe-moyle.html",
+      "scene": "moyle-wooden-leg"
+    }
+  ],
+  "ownership": "Intentional linked previews of existing owning scene studies; no new originals or duplicate study controllers. Each image opens its exact picture anchor; reading action opens story beginning.",
+  "css": {
+    "path": "church-history.css",
+    "sha256": "fe961e0f9c0c7abaff84da078bbec85e56458fab734c9553ac2a7bcdef136ce6",
+    "unchanged_prefix_bytes": 18810,
+    "unchanged_prefix_sha256": "5b7e4c13945dcae80da5c278192b2d846e1d03f31aa4eeb4de133fa697613937",
+    "layout": "Three equal columns from960px; one column below960px. Natural uncropped image dimensions.24px minimum paragraph-to-action margin; aligned flex action feet."
+  },
+  "source_tests": "Builder, exact three ownership references, existing15 original scene controls, panel classification, control inventory, resource previews, media voice, artwork-reference repairs and842 protected images PASS. CSS appended/unrelated-prefix rejection fixtures PASS.",
+  "gallery": {
+    "originals": 873,
+    "occurrences": 879,
+    "unchanged": true
+  },
+  "independent_source_review": "Newton accepted exact scene destinations, alt text and960x640 intrinsic thumbnails; no new ownership/controller; exact CSS appendix/prefix protection. Rendered acceptance remains separate.",
+  "native_browser_review": "Pending root1440/390/320",
+  "release_status": "Held for owner-requested fuller historical research and additional scene units in each story; pictured hub changes retained."
+}

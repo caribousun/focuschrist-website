@@ -28,7 +28,7 @@ ART_STUDY_PAGES = (
 ART_STUDY_HEROES = {
     "art-study/the-living-christ.html": ("../assets/heroes/topics/living-christ-full.webp", "topic-living-christ"),
     "art-study/the-good-shepherd.html": ("../art/The-Good-Shephard.jpg", "good-shepherd-art"),
-    "art-study/suffer-the-little-children.html": ("../art/Suffer-the-Little-Children.jpg", "little-children-art"),
+    "art-study/suffer-the-little-children.html": ("../art/Suffer-the-Little-Children-approved-20260929.webp", "little-children-art"),
     "art-study/be-still.html": ("../art/Be-Still.png", "be-still-art"),
 }
 
@@ -155,7 +155,7 @@ def main() -> int:
             errors.append(f"{relative}: dedicated study page artwork should retain direct full-size behavior")
         asset, record = ART_STUDY_HEROES[relative]
         intrinsic = relative != 'art-study/the-living-christ.html'
-        hero = re.search(r'<a[^>]*data-hero-viewer[^>]*>' + (r'\s*(?:<picture>\s*<source[^>]*>\s*)?<img[^>]*>\s*(?:</picture>\s*)?</a>' if intrinsic else ''), text, re.S)
+        hero = re.search(r'<a[^>]*data-hero-viewer[^>]*>' + (r'\s*(?:<picture(?: class="fc-exact-hero-picture")?>\s*(?:<source[^>]*>\s*)+)?<img[^>]*>\s*(?:</picture>\s*)?</a>' if intrinsic else ''), text, re.S)
         if not hero:
             errors.append(f"{relative}: featured artwork hero with intrinsic image is missing")
         else:
@@ -267,7 +267,7 @@ def main() -> int:
                 errors.append(f"{relative}: missing exact first-scene topic hero")
             elif figure.select_one("a").get("href") != "../" + ready[unit]["full"] or not figure.select_one("figcaption[data-picture-panel-copy][hidden]"):
                 errors.append(f"{relative}: hero source or study metadata differs")
-            if page.count("../topic-artwork-details.js?v=20260929-history-sources-2") != 1 or "hero-details.js" in page or "data-hero-viewer" in page:
+            if page.count("../topic-artwork-details.js?v=20260929-tanner-journal-1") != 1 or "hero-details.js" in page or "data-hero-viewer" in page:
                 errors.append(f"{relative}: hero must have exactly one topic controller")
             hero_pages -= 1  # Preserve the separate 41-page legacy controller baseline.
             continue

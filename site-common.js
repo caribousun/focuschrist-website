@@ -682,6 +682,38 @@
         }
     }
 
+    function initFooterTop() {
+        const footer = document.querySelector('.fc-footer[data-focuschrist-footer="standard"]');
+        if (!footer || footer.querySelector('[data-focuschrist-back-to-top]')) return;
+        if (!document.querySelector('link[data-focuschrist-footer-navigation]')) {
+            const style = document.createElement('link');
+            style.rel = 'stylesheet';
+            style.href = relativeAssetHref('footer-navigation.css?v=20260929-top-1');
+            style.setAttribute('data-focuschrist-footer-navigation', '');
+            document.head.appendChild(style);
+        }
+        const row = document.createElement('p');
+        row.className = 'fc-footer-top';
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'fc-button';
+        button.textContent = 'Back to top';
+        button.setAttribute('data-focuschrist-back-to-top', '');
+        button.addEventListener('click', function () {
+            const top = document.querySelector('.nav[data-focuschrist-header="standard"]') || document.querySelector('main') || document.body;
+            const hadTabIndex = top.hasAttribute('tabindex');
+            if (!hadTabIndex) {
+                top.setAttribute('tabindex', '-1');
+                top.addEventListener('blur', function () { top.removeAttribute('tabindex'); }, { once: true });
+            }
+            top.focus({ preventScroll: true });
+            // Keep the route, query and fragment intact, and respect reduced motion.
+            window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        });
+        row.appendChild(button);
+        footer.appendChild(row);
+    }
+
     /*
      * Shared source-integrity contract for every AI answer surface.
      * A list of links is not evidence that the model read those sources. Generated
@@ -1181,6 +1213,7 @@
         appendScript(relativeAssetHref('header-scroll.js?v=20260927-anchor-fade-1'), 'data-focuschrist-header-scroll');
         ensureMainLandmark();
         normalizeFooterIdentity();
+        initFooterTop();
         ensurePrimaryStudyNavigation();
         ensureConferenceTopicShortcut();
         initOfficialResourceMenu();

@@ -26,6 +26,26 @@ const outsideStory = setup(fourSources, 'https://focuschrist.com/history/unappro
 outsideStory.window.document.querySelector('figure>a').click();
 assert.equal(outsideStory.window.document.querySelectorAll('[data-topic-art-source]').length, 3, 'Four-source exception must not expand to other pages');
 outsideStory.window.close();
+const researchHosts = ['saintsbysea.byu.edu', 'rsc.byu.edu', 'www.churchhistorianspress.org', 'www.fairlatterdaysaints.org'];
+for (const route of ['john-tanner', 'eleazer-miller', 'john-rowe-moyle', 'unapproved']) {
+  for (const bodyClass of ['fc-life-story', 'unapproved']) {
+    const links = researchHosts.flatMap(host => [`https://${host}/record`, `http://${host}/record`, `https://sub.${host}/record`, `https://${host}.evil.example/record`]);
+    const markup = '<body class="'+bodyClass+'"><main><section><h2>Record</h2><figure><a href="/picture.webp"><img src="/picture.webp" alt="Study"></a><figcaption><h3>Historical sources</h3><p>Read the record.</p>'+links.map(url => `<a href="${url}">Historical record</a>`).join('')+'</figcaption></figure></section></main></body>';
+    const d = setup(markup, `https://focuschrist.com/history/${route}.html`);
+    d.window.document.querySelector('figure>a').click();
+    assert.deepEqual([...d.window.document.querySelectorAll('[data-topic-art-source]')].map(a => a.hostname), route !== 'unapproved' && bodyClass === 'fc-life-story' ? researchHosts : [], 'Research hosts require exact approved History route and body class; HTTPS and exact host only');
+    d.window.close();
+  }
+}
+const journal = 'https://catalog.churchofjesuschrist.org/assets/994fb2fe-d8b1-4156-a452-3a8fecacf538/1/42';
+for (const route of ['john-tanner', 'eleazer-miller', 'unapproved']) {
+ for (const body of ['fc-life-story', 'unapproved']) {
+  const urls=[journal,journal.replace('/42','/43'),journal.replace('https:','http:'),journal.replace('catalog.','sub.catalog.'),journal+'?other=1'];
+  const markup='<body class="'+body+'"><main><figure><a href="/picture.webp"><img src="/picture.webp" alt="Record"></a><figcaption><h3>Journal</h3><p>Primary record.</p>'+urls.map(url=>`<a href="${url}">Journal</a>`).join('')+'</figcaption></figure></main></body>';
+  const d=setup(markup,`https://focuschrist.com/history/${route}.html`);d.window.document.querySelector('figure>a').click();
+  assert.deepEqual([...d.window.document.querySelectorAll('[data-topic-art-source]')].map(a=>a.href),route==='john-tanner'&&body==='fc-life-story'?[journal]:[],'Only exact Tanner journal URL in its owning story is permitted');d.window.close();
+ }
+}
 if (!process.argv.includes('--source-host-only')) {
   const allStories = ['john-tanner', 'eleazer-miller', 'john-rowe-moyle'];
   const storyOption = process.argv.indexOf('--story');
@@ -42,7 +62,7 @@ if (!process.argv.includes('--source-host-only')) {
       if (url.origin === 'https://focuschrist.com' && /\.html$/.test(url.pathname)) assert(fs.existsSync(path.join(root, url.pathname)), 'Broken runtime navigation: ' + url.pathname);
     }
     const pictures = [...d.querySelectorAll('main figure>a')];
-    assert.equal(pictures.length, 5);
+    assert.equal(pictures.length, { 'john-tanner': 7, 'eleazer-miller': 9, 'john-rowe-moyle': 7 }[slug]);
     assert.equal(pictures.filter(a => a.classList.contains('fc-visual-hero')).length, 1);
     for (const trigger of pictures) {
       trigger.focus(); trigger.click();

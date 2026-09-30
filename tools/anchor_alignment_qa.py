@@ -19,6 +19,17 @@ SEARCH_HITBOX = b'.fc-search-result h2 a {display:inline-block;'
 SEARCH_PRIOR = b'.fc-search-result h2 a {'
 SEARCH_VERSION = '20260929-result-hitbox-1'
 
+TOPIC_DESKTOP_APPENDIX = b'\n/* Owner-requested desktop parity with Home; approved phone opening rules stay intact. */\n@media(min-width:701px){\n body.fc-site.fc-topic-page .fc-topic-opening{min-height:0;grid-template-rows:auto auto;align-content:start}\n body.fc-site.fc-topic-page .fc-topic-opening .fc-visual-hero{height:auto!important;min-height:0!important;max-height:none!important;aspect-ratio:2048/684}\n}\n'
+TOPIC_DESKTOP_VERSION = "20260929-home-height-1"
+
+def before_topic_desktop(data):
+    if data.endswith(TOPIC_DESKTOP_APPENDIX):
+        prior = data[:-len(TOPIC_DESKTOP_APPENDIX)]
+        if hashlib.sha256(prior).hexdigest() == FILES["topic-study-pages.css"]["after_sha256"]:
+            return prior
+    return data
+
+
 def before_search_hitbox(data):
     if data.count(SEARCH_HITBOX) == 1:
         prior = data.replace(SEARCH_HITBOX, SEARCH_PRIOR, 1)
@@ -34,7 +45,7 @@ def historical_style_bytes(data):
     reviewed bytes. The mandatory current-file checks separately reject stale
     files and any mutation to the approved anchor-only transformation.
     """
-    data = before_search_hitbox(data)
+    data = before_topic_desktop(before_search_hitbox(data))
     digest = hashlib.sha256(data).hexdigest()
     record = next((r for r in FILES.values() if r['after_sha256'] == digest), None)
     if not record:
@@ -62,6 +73,10 @@ def historical_style_bytes(data):
 
 def reviewed_anchor_style(name, data):
     record = FILES.get(name)
+    if name == "topic-study-pages.css":
+        if not data.endswith(TOPIC_DESKTOP_APPENDIX):
+            return False
+        data = before_topic_desktop(data)
     if name == 'site-search.css':
         if data.count(SEARCH_HITBOX) != 1:
             return False
@@ -87,7 +102,7 @@ def check():
         if rel.startswith(('tools/', 'work/', 'node_modules/', '.git/')):
             continue
         for filename, version in re.findall(r'([\w-]+\.css)\?v=([\w.-]+)', path.read_text(encoding='utf-8')):
-            expected = SEARCH_VERSION if filename == 'site-search.css' else CONTRACT['version']
+            expected = SEARCH_VERSION if filename == 'site-search.css' else TOPIC_DESKTOP_VERSION if filename == 'topic-study-pages.css' else CONTRACT['version']
             if filename in FILES and version != expected:
                 errors.append('Stale anchor stylesheet: ' + rel + ': ' + filename)
     return errors

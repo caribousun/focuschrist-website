@@ -1,0 +1,40 @@
+[
+  {
+    "key": "shepherd",
+    "source": "art/The-Good-Shephard.jpg",
+    "source_crop_top": 110,
+    "asset": "assets/heroes/shepherd-desktop-exact-20260929.webp",
+    "size": [
+      2310,
+      770
+    ],
+    "center_box": [
+      571,
+      0,
+      1739,
+      770
+    ],
+    "source_decoded_sha256": "702d37865ff78ac0f3fc7216f04903a0e9da05a13556ea3f9e7f47520e2073b5",
+    "asset_sha256": "a119a924e60f9bafd320dbe5ee6f6884023f6068473466a636dee8ea1e04636f",
+    "review": "Root reviewed actual aligned candidate; exact original content preserved. Shepherd excluded original110pxblacktop in hero only; original file unchanged."
+  },
+  {
+    "key": "joseph-portrait",
+    "source": "assets/identities/joseph-smith-owner-approved-20260914.png",
+    "source_crop_top": 0,
+    "asset": "assets/heroes/joseph-portrait-desktop-exact-20260929.webp",
+    "size": [
+      3597,
+      1199
+    ],
+    "center_box": [
+      1142,
+      0,
+      2454,
+      1199
+    ],
+    "source_decoded_sha256": "8d34cd94c419b1d0deb99c40c03267bc9aade6fcb37f25c155a8625989e89ad6",
+    "asset_sha256": "ad673ac3f9ccfc7388c4c6db6408ab99006420752bf9314cc46c0894fb13b237",
+    "review": "Root reviewed actual aligned candidate; the complete original portrait rectangle is preserved without resampling. Technical review does not add owner aesthetic approval."
+  }
+]

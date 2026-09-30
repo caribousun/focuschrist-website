@@ -165,8 +165,8 @@ def history_story_review_errors(reviewed_pages, root=ROOT):
     for story in stories:
         entries = reviewed_pages.get('history/'+story['id']+'.html', [])
         expected = [ready[u['id']] for u in story['units']]
-        if len(entries) != 5 or [e.get('asset') for e in entries] != [e['full'] for e in expected]:
-            errors.append('Dedicated History story must register its exact five distinct originals: '+story['id'])
+        if len(entries) != {'john-tanner': 7, 'eleazer-miller': 9, 'john-rowe-moyle': 7}[story['id']] or [e.get('asset') for e in entries] != [e['full'] for e in expected]:
+            errors.append('Dedicated History story must register its exact reviewed distinct originals: '+story['id'])
             continue
         for entry, record in zip(entries, expected):
             asset = root/entry['asset']

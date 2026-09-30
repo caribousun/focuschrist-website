@@ -102,6 +102,8 @@ def journey_style_reference_allowed(relative, text, owners):
 BOUNDARY_WRAP_STYLES = {'.fc-history-page main': ('church-history.css', '5b7e4c13945dcae80da5c278192b2d846e1d03f31aa4eeb4de133fa697613937'), '.fc-missionary-page main': ('missionary.css', '1fc685047557e7d077b8c25c833731dca799335add20d3b139cf626f72357e21')}
 
 def reviewed_boundary_wrap(selector, body, data):
+    if reviewed_narrow_reading_style('church-history.css', data):
+        data = data[:18810]
     data = historical_style_bytes(data)
     entry = BOUNDARY_WRAP_STYLES.get(selector.strip())
     return bool(entry and re.sub(r"\s+", "", body) == "overflow-wrap:anywhere;" and hashlib.sha256(data).hexdigest() == entry[1])
@@ -126,7 +128,7 @@ class Tags(HTMLParser):
 # independently reviewed intrinsic trigger width, nowrap label and fixed-size icon;
 # M063 removes only the mobile title/second-row rules, retaining the first-row grid.
 # Full-file and updated base-prefix pins both apply.
-NARROW_READING_STYLES = {'site-search.css': {'base_bytes': 4716, 'base_sha256': '13550e00846fb8c2a81204d71fb3e131c71e3e9f74f0fa94791bbc1e8a5e0492', 'sha256': 'ca09d2ce90471be8c404efc4c8a27aeb756fdc1d30276aa3d112705595ffa32e'}, 'watch-experience.css': {'base_bytes': 12132, 'base_sha256': '3dfc3ac65f176f0c3c3f8c21dbb5c504f4d9dee1302074f6c396790982446a53', 'sha256': 'ec9e99bdb5c0e39daa0b59c65866b1cbd09ed6b451ffafc15f76b60778846f3e'}}
+NARROW_READING_STYLES = {'church-history.css': {'base_bytes': 18810, 'base_sha256': '5b7e4c13945dcae80da5c278192b2d846e1d03f31aa4eeb4de133fa697613937', 'sha256': 'fe961e0f9c0c7abaff84da078bbec85e56458fab734c9553ac2a7bcdef136ce6'}, 'site-search.css': {'base_bytes': 4716, 'base_sha256': '13550e00846fb8c2a81204d71fb3e131c71e3e9f74f0fa94791bbc1e8a5e0492', 'sha256': 'ca09d2ce90471be8c404efc4c8a27aeb756fdc1d30276aa3d112705595ffa32e'}, 'watch-experience.css': {'base_bytes': 12132, 'base_sha256': '3dfc3ac65f176f0c3c3f8c21dbb5c504f4d9dee1302074f6c396790982446a53', 'sha256': 'ec9e99bdb5c0e39daa0b59c65866b1cbd09ed6b451ffafc15f76b60778846f3e'}}
 def reviewed_narrow_reading_style(name, data):
     data = historical_style_bytes(data)
     entry=NARROW_READING_STYLES.get(name)
@@ -140,7 +142,7 @@ TOOLBAR_STYLE_SHA256 = {'site-header.css': 'a915de3ba44c8e14f127e25ec51498960fb1
 # reviewed in source and rendered by Albert. Exact full bytes and single owners.
 SCOPED_INTERFACE_STYLES = {
     'plan-of-salvation.css': ('214c7c4c54c67b58c986d311e2bcb69a02bda9ab19427ba26f6bef433c8105bc', 'answers/plan-of-salvation.html'),
-    'come-follow-me.css': ('4ac596b6c1d0c165636f0e965794a9939a34c8333501b5bad64fad103b1bd7be', 'come-follow-me.html'),
+    'come-follow-me.css': ('c242f4c3d2406bffb58c7aed59466913dba8d768c6f19ba62d84b5be20851157', 'come-follow-me.html'),
     'cfm-study-controls.css': ('35c8939f4fc950d241ecb6a62ac58c1be6e02a59f64bee9b19fd2704011b58fb', 'come-follow-me.html'),
     'ask-experience.css': ('62b8578e09c01fc8bd6eb4b46de4337a39aaa33280c8ba6b51606f57481d6df6', 'ask.html'),
     'holy-ghost-video.css': ('1fd7cb06db86e03a95cdc1a0420535d73fab5ddda5e2533e06b61613a5efae50', 'answers/holy-ghost.html'),
@@ -148,10 +150,12 @@ SCOPED_INTERFACE_STYLES = {
 # Wyatt requested these exact desktop repairs and the Temple chronology.
 # Albert independently reviewed rendered composition; byte/consumer changes fail closed.
 OWNER_20260929_STYLES = {
-    'history-stories.css': ('2b3528f9536b3509c6d9bb42f2161823bdc97f7981f66ba1761d5ba57d19c4cd', ['history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html']),
+    # Dynamically loaded only by the shared footer controller; all125 public contexts tested.
+    'footer-navigation.css': ('3713562b2415f8b31394b46767204330777f021887621b4b7eaeae5ff1c22fee', []),
+    'history-stories.css': ('d0ec3a88d9cea4e213338e79dd9d2cc7046f186c49482ffcaf166ea86f2f823d', ['history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html']),
     # Owner-requested39-picture final-row balance, Fermi rendered ten widths; Newton source review.
     'art-experience.css': ('ef21dea3b87e8b3e59454aba32726210a783d87d556928201ef375a3627b1c74', ['art.html']),
-    'desktop-hero-repairs.css': ('26af1b820ab62722ad60ab124f16ccf5784304edafa375a854f0ea7f076e9e96', ['answers/abrahamic-covenant.html', 'answers/look-unto-me-doctrine-and-covenants-6-36.html', 'answers/plan-of-salvation.html', 'book-of-mormon-evidences.html', 'general-conference.html']),
+    'desktop-hero-repairs.css': ('36270651fecfb57cb371580f1fd4df3c2910942665e356245ddf451e5c4d9ecb', ['answers/abrahamic-covenant.html', 'answers/look-unto-me-doctrine-and-covenants-6-36.html', 'answers/plan-of-salvation.html', 'art-study/be-still.html', 'art-study/suffer-the-little-children.html', 'art-study/the-good-shepherd.html', 'birth-of-christ.html', 'book-of-mormon-evidences.html', 'general-conference.html', 'joseph-smith-likeness.html']),
     'temples-history.css': ('c3aa901b47871dc2cc9aa2848bf31b871a93588e0b4ad141c4d1da7912b2125a', ['answers/why-latter-day-saints-build-temples.html']),
 }
 def reviewed_owner_20260929_style(name, data):
@@ -498,6 +502,9 @@ def main():
             check(scoped_interface_reference_allowed(name, relative, page.read_text(encoding='utf-8')), 'Scoped interface stylesheet consumed outside owner: '+relative)
     for name, (_, owners) in OWNER_20260929_STYLES.items():
         check(reviewed_owner_20260929_style(name, (ROOT/name).read_bytes()), 'Owner-reviewed stylesheet bytes changed: '+name)
+        if name == 'footer-navigation.css':
+            common = (ROOT/'site-common.js').read_text(encoding='utf-8')
+            check(common.count("style.href = relativeAssetHref('footer-navigation.css?v=20260929-top-1');") == 1, 'Footer CSS requires its exact shared dynamic loader and version')
         if name == 'temples-history.css':
             data = (ROOT/name).read_bytes()
             check(reviewed_temple_related_hitbox(data), 'Temple hitbox must be the exact addition to the reviewed era stylesheet')

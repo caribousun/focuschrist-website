@@ -2705,7 +2705,7 @@
         "technical_review_passed": true,
         "owner_approved": false,
         "review_record": "docs/history-story-art-fermi-review-20260929.json",
-        "review_notes": "Independent source/pixel review; owner requested five original story scenes. Hero appears once and responsive variant remains the same original. Technical review is separate from owner aesthetic approval."
+        "review_notes": "Independent full-image source/identity review. Each scene is an artistic reconstruction with recorded limits; responsive hero remains same original. Owner-requested expansion does not imply aesthetic approval."
       },
       {
         "order": 2,
@@ -2720,12 +2720,12 @@
         "source_urls": [
           "https://www.churchofjesuschrist.org/study/ensign/1979/03/the-john-tanner-family?lang=eng"
         ],
-        "tone": "The later family account describes a winter move from New York to Kirtland. The road, weather, and traveling arrangements are imagined details of that journey.",
+        "tone": "The household travels toward Kirtland in a reconstruction of the later family account.",
         "reviewed": true,
         "technical_review_passed": true,
         "owner_approved": false,
         "review_record": "docs/history-story-art-fermi-review-20260929.json",
-        "review_notes": "Independent source/pixel review; owner requested five original story scenes. Hero appears once and responsive variant remains the same original. Technical review is separate from owner aesthetic approval."
+        "review_notes": "Independent full-image source/identity review. Each scene is an artistic reconstruction with recorded limits; responsive hero remains same original. Owner-requested expansion does not imply aesthetic approval."
       },
       {
         "order": 3,
@@ -2742,12 +2742,12 @@
           "https://www.josephsmithpapers.org/person/john-tanner",
           "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/109?lang=eng&id=p1-p5#p1"
         ],
-        "tone": "Tanner’s resources helped meet the demands of building the Kirtland Temple. The meeting and ordinary papers suggest that support without reproducing a surviving transaction document.",
+        "tone": "Tanner meets with Joseph Smith beside ordinary papers; the pictured transaction is reconstructed.",
         "reviewed": true,
         "technical_review_passed": true,
         "owner_approved": false,
         "review_record": "docs/history-story-art-fermi-review-20260929.json",
-        "review_notes": "Independent source/pixel review; owner requested five original story scenes. Hero appears once and responsive variant remains the same original. Technical review is separate from owner aesthetic approval."
+        "review_notes": "Independent full-image source/identity review. Each scene is an artistic reconstruction with recorded limits; responsive hero remains same original. Owner-requested expansion does not imply aesthetic approval."
       },
       {
         "order": 4,
@@ -2768,7 +2768,7 @@
         "technical_review_passed": true,
         "owner_approved": false,
         "review_record": "docs/history-story-art-fermi-review-20260929.json",
-        "review_notes": "Independent source/pixel review; owner requested five original story scenes. Hero appears once and responsive variant remains the same original. Technical review is separate from owner aesthetic approval."
+        "review_notes": "Independent full-image source/identity review. Each scene is an artistic reconstruction with recorded limits; responsive hero remains same original. Owner-requested expansion does not imply aesthetic approval."
       },
       {
         "order": 5,
@@ -2784,12 +2784,53 @@
           "https://www.churchofjesuschrist.org/study/ensign/1979/03/the-john-tanner-family?lang=eng",
           "https://history.churchofjesuschrist.org/chd/individual/john-tanner-1778?lang=eng"
         ],
-        "tone": "In the later family account, Tanner returned the Kirtland loan note and forgave the debt. This scene imagines that remembered gift in Nauvoo.",
+        "tone": "A returned note recalls the gift remembered in Tanner’s family account.",
         "reviewed": true,
         "technical_review_passed": true,
         "owner_approved": false,
         "review_record": "docs/history-story-art-fermi-review-20260929.json",
-        "review_notes": "Independent source/pixel review; owner requested five original story scenes. Hero appears once and responsive variant remains the same original. Technical review is separate from owner aesthetic approval."
+        "review_notes": "Independent full-image source/identity review. Each scene is an artistic reconstruction with recorded limits; responsive hero remains same original. Owner-requested expansion does not imply aesthetic approval."
+      },
+      {
+        "order": 6,
+        "key": "tanner-mission-road-1844",
+        "asset": "assets/page-art/history-stories/tanner-mission-road-1844-full.webp",
+        "responsive": "assets/page-art/history-stories/tanner-mission-road-1844-960.webp",
+        "sha256": "103897cd67c6d763c0aea58d19db3e3b589a69d3ca9667f09b34bd92f9932f7b",
+        "source_sha256": "d9f23a0744bf92968ae042468f2328da0922d4144936b0c23e9ccd3f62308ff4",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://www.fairlatterdaysaints.org/answers/Times_and_Seasons/5/24"
+        ],
+        "tone": "Tanner speaks with his companion on the road. Pettegrew recorded their missionary travels in 1844; the pictured conversation is imagined.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/history-stories/expansion-fermi-review-20260929.json",
+        "review_notes": "Independent full-image source/identity review. Each scene is an artistic reconstruction with recorded limits; responsive hero remains same original. Owner-requested expansion does not imply aesthetic approval."
+      },
+      {
+        "order": 7,
+        "key": "tanner-family-crossing-1848",
+        "asset": "assets/page-art/history-stories/tanner-family-crossing-1848-full.webp",
+        "responsive": "assets/page-art/history-stories/tanner-family-crossing-1848-960.webp",
+        "sha256": "a922543fe66d9902e02a5686034dcdca169267eae62c15f4375ec51032065fd0",
+        "source_sha256": "0975a8dda996eea72b392a5bae8769e0858ae04c4447a054de375c2d6547c15c",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://history.churchofjesuschrist.org/chd/individual/john-tanner-1778?lang=eng",
+          "https://www.josephsmithpapers.org/person/john-tanner"
+        ],
+        "tone": "Preparing supplies for the road, Tanner joins the westward journey with his family in 1848.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/history-stories/expansion-fermi-review-20260929.json",
+        "review_notes": "Independent full-image source/identity review. Each scene is an artistic reconstruction with recorded limits; responsive hero remains same original. Owner-requested expansion does not imply aesthetic approval."
       }
     ],
     "history/eleazer-miller.html": [
@@ -2811,15 +2852,35 @@
         "technical_review_passed": true,
         "owner_approved": false,
         "review_record": "docs/history-story-art-fermi-review-20260929.json",
-        "review_notes": "Independent source/pixel review; owner requested five original story scenes. Hero appears once and responsive variant remains the same original. Technical review is separate from owner aesthetic approval."
+        "review_notes": "Independent full-image source/identity review. Each scene is an artistic reconstruction with recorded limits; responsive hero remains same original. Owner-requested expansion does not imply aesthetic approval."
       },
       {
         "order": 2,
+        "key": "miller-conversion-1831",
+        "asset": "assets/page-art/history-stories/miller-conversion-1831-full.webp",
+        "responsive": "assets/page-art/history-stories/miller-conversion-1831-960.webp",
+        "sha256": "21858e3505166f380cff550bc08f392c8fd70e71cac3d02df0e26fec49358012",
+        "source_sha256": "5d2e7c776f9ed5b29bba0b41c0c48add5663ee1e45f2622d80258d54b7b6fbe2",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://history.churchofjesuschrist.org/chd/individual/eleazer-miller-1795?lang=eng"
+        ],
+        "tone": "Quiet scripture study accompanies this reflection on Miller’s conversion in 1831; the room and moment are imagined.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/history-stories/expansion-fermi-review-20260929.json",
+        "review_notes": "Independent full-image source/identity review. Each scene is an artistic reconstruction with recorded limits; responsive hero remains same original. Owner-requested expansion does not imply aesthetic approval."
+      },
+      {
+        "order": 3,
         "key": "miller-mission-road",
         "asset": "assets/page-art/history-stories/miller-mission-road-full.webp",
         "responsive": "assets/page-art/history-stories/miller-mission-road-960.webp",
-        "sha256": "72bb7819634ce367b2952b262957b3f8c1404f6b202190084a508059b8f3512f",
-        "source_sha256": "d0ced07014ad81f8c05845f3753bb7b0b5fb8b56da47f11ba99b9cb45921fc4e",
+        "sha256": "72ea4e5b266f42c24879d7915852b4712559c6bd7504d0a42a78c040cc428b6e",
+        "source_sha256": "f4d862c1dc069da21311a071e467c846c19f767522f4c34970a38db061afc31c",
         "width": 1536,
         "height": 1024,
         "christ": false,
@@ -2830,16 +2891,16 @@
         "reviewed": true,
         "technical_review_passed": true,
         "owner_approved": false,
-        "review_record": "docs/history-story-art-fermi-review-20260929.json",
-        "review_notes": "Independent source/pixel review; owner requested five original story scenes. Hero appears once and responsive variant remains the same original. Technical review is separate from owner aesthetic approval."
+        "review_record": "docs/history-stories/miller-expression-edits-20260929.json",
+        "review_notes": "Independent full-image source/identity review. Each scene is an artistic reconstruction with recorded limits; responsive hero remains same original. Owner-requested expansion does not imply aesthetic approval."
       },
       {
-        "order": 3,
+        "order": 4,
         "key": "miller-simple-witness",
         "asset": "assets/page-art/history-stories/miller-simple-witness-full.webp",
         "responsive": "assets/page-art/history-stories/miller-simple-witness-960.webp",
-        "sha256": "8ff5bfbed008ac5fb4c678d56d06430212c18fe80171d10421642f443c40e65b",
-        "source_sha256": "c041e3f8b11db487e63b49f67647fe97fc7346a9e52c94ca8ad67fb955248308",
+        "sha256": "094f16c337bf1c89456b956728b3d56097bea6387b0f781a1221a4dfd2e68525",
+        "source_sha256": "1030a65a31395e33876683bab9a12f40613f63c64af2c76ed159029e02471f75",
         "width": 1536,
         "height": 1024,
         "christ": false,
@@ -2851,16 +2912,16 @@
         "reviewed": true,
         "technical_review_passed": true,
         "owner_approved": false,
-        "review_record": "docs/history-story-art-fermi-review-20260929.json",
-        "review_notes": "Independent source/pixel review; owner requested five original story scenes. Hero appears once and responsive variant remains the same original. Technical review is separate from owner aesthetic approval."
+        "review_record": "docs/history-stories/miller-expression-edits-20260929.json",
+        "review_notes": "Independent full-image source/identity review. Each scene is an artistic reconstruction with recorded limits; responsive hero remains same original. Owner-requested expansion does not imply aesthetic approval."
       },
       {
-        "order": 4,
+        "order": 5,
         "key": "miller-millstream-baptism",
         "asset": "assets/page-art/history-stories/miller-millstream-baptism-full.webp",
         "responsive": "assets/page-art/history-stories/miller-millstream-baptism-960.webp",
-        "sha256": "f62a73f92c15796b8e3b27cc7ba484adc5c9bcd248aeff4d7065b7b694c11efd",
-        "source_sha256": "6c23dad50c0e6d69c418ea6eb376d3d6393ff32d6d1d78e697946a4f89dfe182",
+        "sha256": "ef4b9f4d73799d37072e19f395318890f322be4e16bafb7e4b8089c807aaa8e9",
+        "source_sha256": "f268e8e38d8c7947e835a7c8539514bc671d32633702a5c03112233f674d6832",
         "width": 1536,
         "height": 1024,
         "christ": false,
@@ -2873,16 +2934,57 @@
         "reviewed": true,
         "technical_review_passed": true,
         "owner_approved": false,
-        "review_record": "docs/history-story-art-fermi-review-20260929.json",
-        "review_notes": "Independent source/pixel review; owner requested five original story scenes. Hero appears once and responsive variant remains the same original. Technical review is separate from owner aesthetic approval."
+        "review_record": "docs/history-stories/miller-expression-edits-20260929.json",
+        "review_notes": "Independent full-image source/identity review. Each scene is an artistic reconstruction with recorded limits; responsive hero remains same original. Owner-requested expansion does not imply aesthetic approval."
       },
       {
-        "order": 5,
+        "order": 6,
+        "key": "miller-canada-grove",
+        "asset": "assets/page-art/history-stories/miller-canada-grove-full.webp",
+        "responsive": "assets/page-art/history-stories/miller-canada-grove-960.webp",
+        "sha256": "0662c1f0c6643aa8410adb4b00a8382a73d9b8263c0bb848fc147aa138ac687e",
+        "source_sha256": "4dc2147d7e0391bbb97f696dd619c4ee2ea0edd1ca6cfae762437abd4a7b90dc",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://history.churchofjesuschrist.org/chd/transcript?lang=eng&name=transcript-for-andrew-jenson-canadian-mission-encyclopedic-history-of-the-church",
+          "https://rsc.byu.edu/witness-restoration/brigham-young-family"
+        ],
+        "tone": "Miller teaches in a grove in Canada, where his report described gatherings too large for a house.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/history-stories/expansion-fermi-review-20260929.json",
+        "review_notes": "Independent full-image source/identity review. Each scene is an artistic reconstruction with recorded limits; responsive hero remains same original. Owner-requested expansion does not imply aesthetic approval."
+      },
+      {
+        "order": 7,
+        "key": "miller-zions-camp-horses",
+        "asset": "assets/page-art/history-stories/miller-zions-camp-horses-full.webp",
+        "responsive": "assets/page-art/history-stories/miller-zions-camp-horses-960.webp",
+        "sha256": "db0868a5052756254bf9fcb4c96af076a2ad07ab16d851e8f60a1abe60436d9f",
+        "source_sha256": "22708f3e859eca06a6246e1680988b17c93ad145fab2fabd659004c2053d4314",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://www.josephsmithpapers.org/paper-summary/history-1838-1856-volume-a-1-23-december-1805-30-august-1834/569"
+        ],
+        "tone": "Three horses accompany Miller’s arrival at the Camp of Israel in 1834.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/history-stories/expansion-fermi-review-20260929.json",
+        "review_notes": "Independent full-image source/identity review. Each scene is an artistic reconstruction with recorded limits; responsive hero remains same original. Owner-requested expansion does not imply aesthetic approval."
+      },
+      {
+        "order": 8,
         "key": "miller-westward-service",
         "asset": "assets/page-art/history-stories/miller-westward-service-full.webp",
         "responsive": "assets/page-art/history-stories/miller-westward-service-960.webp",
-        "sha256": "20dff8f8eb33aef7cd3f4664b5c6073939675f82264a6194112245bdaa5bb3db",
-        "source_sha256": "27f26cd90b65d746b455a5628038f9b71c32add23a64105ddaefe1a8f4a27420",
+        "sha256": "a4414163a1ff8d73af22a9a9ac6a4b31d513f3e03cfbd70500f710c83f02229b",
+        "source_sha256": "f73aecedb5127097ff49545a22a2a7f448f3c9a393db1d376ed4b0ead532f35c",
         "width": 1536,
         "height": 1024,
         "christ": false,
@@ -2894,8 +2996,29 @@
         "reviewed": true,
         "technical_review_passed": true,
         "owner_approved": false,
-        "review_record": "docs/history-story-art-fermi-review-20260929.json",
-        "review_notes": "Independent source/pixel review; owner requested five original story scenes. Hero appears once and responsive variant remains the same original. Technical review is separate from owner aesthetic approval."
+        "review_record": "docs/history-stories/miller-expression-edits-20260929.json",
+        "review_notes": "Independent full-image source/identity review. Each scene is an artistic reconstruction with recorded limits; responsive hero remains same original. Owner-requested expansion does not imply aesthetic approval."
+      },
+      {
+        "order": 9,
+        "key": "miller-relief-donation",
+        "asset": "assets/page-art/history-stories/miller-relief-donation-full.webp",
+        "responsive": "assets/page-art/history-stories/miller-relief-donation-960.webp",
+        "sha256": "77e3414002d099caf845854d4d020c44218f82127a0b85fe8a87c145503dd2e2",
+        "source_sha256": "9716332793ef46e34b5742aff45512f50a3fd852df263752e0b94083a1572096",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://www.churchhistorianspress.org/the-first-fifty-years-of-relief-society/part-2/2-1?lang=eng",
+          "https://history.churchofjesuschrist.org/chd/individual/eleazer-miller-1795?lang=eng"
+        ],
+        "tone": "A modest gift recalls Miller’s recorded contribution to the Relief Society in 1854.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/history-stories/expansion-fermi-review-20260929.json",
+        "review_notes": "Independent full-image source/identity review. Each scene is an artistic reconstruction with recorded limits; responsive hero remains same original. Owner-requested expansion does not imply aesthetic approval."
       }
     ],
     "history/john-rowe-moyle.html": [
@@ -2920,10 +3043,30 @@
         "technical_review_passed": true,
         "owner_approved": false,
         "review_record": "docs/history-story-art-fermi-review-20260929.json",
-        "review_notes": "Independent source/pixel review; owner requested five original story scenes. Hero appears once and responsive variant remains the same original. Technical review is separate from owner aesthetic approval."
+        "review_notes": "Independent full-image source/identity review. Each scene is an artistic reconstruction with recorded limits; responsive hero remains same original. Owner-requested expansion does not imply aesthetic approval."
       },
       {
         "order": 2,
+        "key": "moyle-atlantic-crossing",
+        "asset": "assets/page-art/history-stories/moyle-atlantic-crossing-full.webp",
+        "responsive": "assets/page-art/history-stories/moyle-atlantic-crossing-960.webp",
+        "sha256": "b7200a34754215eff83e1945f16f7ada005ea4e9743fad7e3371eb143cb2762f",
+        "source_sha256": "90766f2c4c70f1663afaf67bd3a04f64df0361801919b2ced88696e1bc2fb8aa",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://saintsbysea.byu.edu/mii/account/1141"
+        ],
+        "tone": "Moyle’s Atlantic crossing brought wet decks and shifting belongings before the overland journey began.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/history-stories/expansion-fermi-review-20260929.json",
+        "review_notes": "Independent full-image source/identity review. Each scene is an artistic reconstruction with recorded limits; responsive hero remains same original. Owner-requested expansion does not imply aesthetic approval."
+      },
+      {
+        "order": 3,
         "key": "moyle-stonecutter-craft",
         "asset": "assets/page-art/history-stories/moyle-stonecutter-craft-full.webp",
         "responsive": "assets/page-art/history-stories/moyle-stonecutter-craft-960.webp",
@@ -2941,10 +3084,10 @@
         "technical_review_passed": true,
         "owner_approved": false,
         "review_record": "docs/history-story-art-fermi-review-20260929.json",
-        "review_notes": "Independent source/pixel review; owner requested five original story scenes. Hero appears once and responsive variant remains the same original. Technical review is separate from owner aesthetic approval."
+        "review_notes": "Independent full-image source/identity review. Each scene is an artistic reconstruction with recorded limits; responsive hero remains same original. Owner-requested expansion does not imply aesthetic approval."
       },
       {
-        "order": 3,
+        "order": 4,
         "key": "moyle-weekly-walk",
         "asset": "assets/page-art/history-stories/moyle-weekly-walk-full.webp",
         "responsive": "assets/page-art/history-stories/moyle-weekly-walk-960.webp",
@@ -2962,10 +3105,10 @@
         "technical_review_passed": true,
         "owner_approved": false,
         "review_record": "docs/history-story-art-fermi-review-20260929.json",
-        "review_notes": "Independent source/pixel review; owner requested five original story scenes. Hero appears once and responsive variant remains the same original. Technical review is separate from owner aesthetic approval."
+        "review_notes": "Independent full-image source/identity review. Each scene is an artistic reconstruction with recorded limits; responsive hero remains same original. Owner-requested expansion does not imply aesthetic approval."
       },
       {
-        "order": 4,
+        "order": 5,
         "key": "moyle-wooden-leg",
         "asset": "assets/page-art/history-stories/moyle-wooden-leg-full.webp",
         "responsive": "assets/page-art/history-stories/moyle-wooden-leg-960.webp",
@@ -2983,10 +3126,10 @@
         "technical_review_passed": true,
         "owner_approved": false,
         "review_record": "docs/history-story-art-fermi-review-20260929.json",
-        "review_notes": "Independent source/pixel review; owner requested five original story scenes. Hero appears once and responsive variant remains the same original. Technical review is separate from owner aesthetic approval."
+        "review_notes": "Independent full-image source/identity review. Each scene is an artistic reconstruction with recorded limits; responsive hero remains same original. Owner-requested expansion does not imply aesthetic approval."
       },
       {
-        "order": 5,
+        "order": 6,
         "key": "moyle-return-to-craft",
         "asset": "assets/page-art/history-stories/moyle-return-to-craft-full.webp",
         "responsive": "assets/page-art/history-stories/moyle-return-to-craft-960.webp",
@@ -3006,7 +3149,29 @@
         "technical_review_passed": true,
         "owner_approved": false,
         "review_record": "docs/history-story-art-fermi-review-20260929.json",
-        "review_notes": "Independent source/pixel review; owner requested five original story scenes. Hero appears once and responsive variant remains the same original. Technical review is separate from owner aesthetic approval."
+        "review_notes": "Independent full-image source/identity review. Each scene is an artistic reconstruction with recorded limits; responsive hero remains same original. Owner-requested expansion does not imply aesthetic approval."
+      },
+      {
+        "order": 7,
+        "key": "moyle-holiness-inscription",
+        "asset": "assets/page-art/history-stories/moyle-holiness-inscription-full.webp",
+        "responsive": "assets/page-art/history-stories/moyle-holiness-inscription-960.webp",
+        "sha256": "35a0f0993f62f6ff2e052b098729a5d8722cf7abf72d9e0375c59796b0acec90",
+        "source_sha256": "b3872bb7b3889ac26b661daf68e4926a57bd3440d6a3ab0b0285479f5a7e5845",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://newsroom.churchofjesuschrist.org/additional-resource/stories-of-sacrifice-and-devotion-the-people-who-built-and-loved-a-temple",
+          "https://newsroom.churchofjesuschrist.org/article/temple-square-renovation-update-august-2025",
+          "https://history.churchofjesuschrist.org/chd/individual/john-rowe-moyle-1808?lang=eng"
+        ],
+        "tone": "Moyle works on the upper inscription panel in a reconstruction of his family’s later account. The exact carving date and prosthetic side are not established here; the pictured panel is not an exact facsimile.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/history-stories/expansion-fermi-review-20260929.json",
+        "review_notes": "Independent full-image source/identity review. Each scene is an artistic reconstruction with recorded limits; responsive hero remains same original. Owner-requested expansion does not imply aesthetic approval."
       }
     ]
   },
