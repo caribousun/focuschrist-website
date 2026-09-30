@@ -24,6 +24,9 @@ def check():
             main=doc.select_one('main#main-content')
             continuation=main.find(recursive=False)
             assert continuation and 'fc-opening-continuation' in continuation.get('class',[])
+            action=continuation.select_one(':scope > .fc-actions')
+            assert action and action.get('class')==['fc-actions','fc-actions--center','fc-actions--content'], 'Retained actions require the established content gap'
+            action['class']=['fc-actions','fc-actions--center'] # Only the reviewed spacing class is normalized for the original content hash.
             blocks=continuation.find_all(recursive=False)
             assert len(blocks)==3 and digest(''.join(str(b) for b in blocks))==r['continuation_blocks_sha256'], 'Preserve both introduction paragraphs and all secondary actions in order'
             assert not header.select('.fc-page-intro-copy,.fc-actions'), 'Retained introduction must follow Continue in main'

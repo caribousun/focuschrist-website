@@ -181,6 +181,7 @@ jobs:
           NODE_PATH=/tmp/focus-row-qa/node_modules node tools/answer_opening_browser_qa.js
           NODE_PATH=/tmp/focus-row-qa/node_modules node tools/unified_opening_browser_qa.js
           NODE_PATH=/tmp/focus-row-qa/node_modules node tools/study_alignment_browser_qa.js
+          NODE_PATH=/tmp/focus-row-qa/node_modules node tools/content_boundaries_browser_qa.js
           NODE_PATH=/tmp/focus-row-qa/node_modules node tools/home_hero_height_browser_qa.js
           NODE_PATH=/tmp/focus-row-qa/node_modules node tools/footer_navigation_browser_qa.js
 
@@ -198,7 +199,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: unified-opening-render
-          path: .qa-artifacts/unified-opening*.json
+          path: |
+            .qa-artifacts/unified-opening*.json
+            .qa-artifacts/content-boundaries.json
           include-hidden-files: true
           if-no-files-found: ignore
 

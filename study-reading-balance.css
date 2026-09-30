@@ -27,3 +27,21 @@ body.fc-bible-together .fc-bible-scene-reading {
     padding: 0 20px 20px;
   }
 }
+
+/* Answers conference preview follows the neighboring standard content rails. */
+body.fc-site:not(.gc-page) .fc-conference-section { padding-inline: 0; }
+body.fc-site:not(.gc-page) .fc-conference-inner {
+  width: min(var(--fc-standard), calc(100% - 2 * var(--fc-body-gutter)));
+  max-width: var(--fc-standard);
+  margin-inline: auto;
+}
+
+/* Existing supporting captions belong below their complete pictures. */
+body.fc-site .fc-answers-family-art > figcaption,
+body.fc-site .ask-emmaus-art > figcaption,
+body.fc-site .fc-home-featured-art > figcaption,
+body.fc-site .fc-home-purpose-art > figcaption {
+  position: static;
+  padding: 16px 24px;
+  background: transparent;
+}
