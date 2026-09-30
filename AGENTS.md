@@ -73,6 +73,8 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 
 ## System-wide artwork uniqueness mandate
 
+- Before generating scripture or historical artwork, search and read the exact source passage, its surrounding chapters, and relevant cross-references; record what they establish and what remains unknown. Compare the finished image pixels with that context before acceptance. Do not turn an artistic interpretation of materials, architecture, geography, or appearance into a historical claim.
+
 Wyatt clarified on 2026-09-19: each original picture has exactly one owning page and section. Do not repeat it in another section of that page or use it as another page’s own study artwork. The sole reuse exception is a reference image on ANOTHER page that links directly back to the picture’s owning page or section. Such a reference does not count toward the receiving page’s unique-picture minimum. Same-page navigation-card duplication, including the Stand Forever examples, is not this exception. Renaming, cropping, resizing, format conversion or a changed caption does not make a new original. Responsive variants and the detail/full-size views of one picture are one artwork, not additional artworks. Check source lineage and decoded pixels as well as filenames; inspect the complete page inventory. Preserve this rule across new chats and all future site work.
 
 ## Scripture-specific scene, age and atmosphere mandate — Wyatt, 2026-09-22

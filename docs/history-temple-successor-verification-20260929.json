@@ -1,0 +1,26 @@
+{
+  "scope": "Successor to PR406: three history stories and films, source-grounded Nephi correction and companion, whole-site audit repairs",
+  "combined_checks": {
+    "total": 176,
+    "initial_passed": 175,
+    "initial_failure": "Nephi alt text used distant interpretation phrasing; corrected visible description, uncertainty retained in caption",
+    "final_failure_retest": "media_voice_qa.py PASS123pages858galleryrecords",
+    "affected_final_checks": "History remote preview decode, Temple completeness, gallery freshness, search freshness, static125documents, diff whitespace all PASS"
+  },
+  "root_browser": {
+    "companion": "1440 and390: images decoded, no overflow, Jacob2 verses2/8/11, rounded999px panel links, Continue focuses temple-heading-nephite-temple",
+    "stories": "1440 Tanner,390 Miller,320 Moyle reading layouts and scripture readers reviewed earlier; final390 all3official posters decoded and displayed with correct existing resource styling",
+    "films": "All3actualofficial player playback confirmed earlier; moving times and readyState4 recorded",
+    "preview_defect": "Miller and Moyle social preview cropURLs returned400. Actualofficial player posters substituted and explicit3image remote decode gate required in bothCI."
+  },
+  "independent_reviews": [
+    "docs/whole-site-review-20260929/fermi-main-answers.json",
+    "docs/whole-site-review-20260929/newton-jesus-route-coverage.json",
+    "docs/whole-site-review-20260929/newton-companion-search-review.json"
+  ],
+  "limits": [
+    "Hosted successor CI and public-byte verification still pending at candidate preparation.",
+    "121manual openings plus sampled deeper interactions are not exhaustive human review of every interaction.",
+    "Owner conditional acceptance of timber interpretation is not an assertion of exact historical appearance."
+  ]
+}

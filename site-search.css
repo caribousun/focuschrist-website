@@ -28,7 +28,7 @@
 .fc-search-result {display:flex;gap:20px;padding:26px 0;border-bottom:1px solid #f0c36a26;}
 .fc-search-result-copy {min-width:0;}
 .fc-search-result h2 {font:normal clamp(23px,3vw,29px)/1.25 Georgia,serif;margin:6px 0 10px;overflow-wrap:anywhere;text-align:left;}
-.fc-search-result h2 a {color:#f0c36a;text-decoration:none;}
+.fc-search-result h2 a {display:inline-block;color:#f0c36a;text-decoration:none;}
 .fc-search-result h2 a:hover {text-decoration:underline;}
 .fc-search-category {font:600 12px/1.5 Arial,sans-serif;letter-spacing:.7px;color:#bfd0c6;margin:0;}
 .fc-search-excerpt {font-size:16px;line-height:1.65;margin:0;overflow-wrap:anywhere;}

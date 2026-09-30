@@ -2351,10 +2351,10 @@
       {
         "order": 6,
         "key": "temple-nephite-temple",
-        "asset": "assets/page-art/temples/temple-nephite-temple-full.webp",
-        "responsive": "assets/page-art/temples/temple-nephite-temple-960.webp",
-        "sha256": "04da3843d0818fe3826ae2ebb809600be825d841e76bc77381506aa040e61604",
-        "source_sha256": "025e773fc7a4e95cf63ea340bc77f6c7e56906266e3f7b04773adc818d13f851",
+        "asset": "assets/page-art/temples/temple-nephite-timber-pattern-full.webp",
+        "responsive": "assets/page-art/temples/temple-nephite-timber-pattern-960.webp",
+        "sha256": "ef825a0535a5ec2ab7fe38c2f095ee9eef6508b52402e3ef96ac261c7e3f5c1d",
+        "source_sha256": "c00749c3cb5fca1e3ecbf1b4b6462195de4e7bb1719635fe6dde7a7c30a1bd2d",
         "width": 1536,
         "height": 1024,
         "christ": false,
@@ -2362,12 +2362,12 @@
           "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/5?lang=eng&id=p15-p17#p15",
           "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/2?lang=eng&id=p1-p9#p1"
         ],
-        "tone": "Nephi records a temple patterned after Solomon's, built with the materials his people could obtain.",
+        "tone": "An artistic interpretation guided by Nephi’s account: a temple after the manner of Solomon’s, with fine workmanship and fewer precious materials. The exact appearance and materials are not recorded.",
         "reviewed": true,
         "technical_review_passed": true,
         "owner_approved": false,
         "review_record": "docs/temples/integration-visual-review.json",
-        "review_notes": "Independent full original and source-fit review; Christ images compared with actual Home reference. Only two newest corrected images have direct owner favorable selection; other images remain technical review only."
+        "review_notes": "Full-pixel source comparison: finely worked timber sanctuary with long rectangular house, front porch, narrow upper windows and lower side chambers; no cement facade. Artistic interpretation of Solomon-pattern workmanship, not a known reconstruction or claim that Nephi built exclusively with wood. Exact materials, dimensions and appearance remain unknown."
       },
       {
         "order": 7,
@@ -2662,6 +2662,26 @@
         "owner_approved": false,
         "review_record": "docs/temples/integration-visual-review.json",
         "review_notes": "Independent full original and source-fit review; Christ images compared with actual Home reference. Only two newest corrected images have direct owner favorable selection; other images remain technical review only."
+      },
+      {
+        "order": 21,
+        "key": "temple-nephite-approach",
+        "asset": "assets/page-art/temples/temple-nephite-approach-full.webp",
+        "responsive": "assets/page-art/temples/temple-nephite-approach-960.webp",
+        "sha256": "583b519d5fec1c1757a38dc1057d5272029a745e73ab59eab8f86a870d03bcb5",
+        "source_sha256": "b263a99082d77c7397009f12b26f9348e5e27070de9f998b41eea4876de6b019",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/scriptures/bofm/jacob/2?lang=eng&id=p2,p8,p11#p2"
+        ],
+        "tone": "A wider artistic view of the same timber interpretation. Jacob describes going up into the temple; the gentle rise pictured here is an interpretation, not a known location or recorded hill profile.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/temples/nephi-surrounding-context-review-20260929.json",
+        "review_notes": "Owner explicitly requested companion view of the same consistent building; not a new historical event or an artwork quota claim."
       }
     ]
   },

@@ -2,8 +2,16 @@
    Artwork keeps its intrinsic proportions; this file never changes a hero. */
 .fc-temple-history { margin-block: var(--fc-body-section-gap); }
 .fc-temple-history__directory { margin-block: 24px 32px; }
-.fc-temple-history__directory .fc-actions { gap: 10px; }
-.fc-temple-history__directory a { white-space: normal; min-width: 0; height: auto; text-align: center; overflow-wrap: anywhere; }
+.fc-temple-history__directory .fc-actions { margin-top: 20px; }
+.fc-temple-history__directory a { white-space: normal; min-width: 0; height: auto; overflow-wrap: anywhere; }
+.fc-temple-history__directory .fc-temple-history__era-menu { margin: 12px 0; padding: 0; border: 1px solid var(--fc-panel-border); border-radius: var(--fc-radius); background: var(--fc-panel-fill); box-shadow: var(--fc-panel-shadow); }
+.fc-temple-history__era-menu > summary { display: list-item; padding: 18px 22px; cursor: pointer; color: var(--fc-cream); font-family: var(--fc-font-display); font-size: 1.2rem; line-height: 1.45; overflow-wrap: anywhere; }
+.fc-temple-history__range { display: block; margin-top: 4px; font-family: var(--fc-font-body); font-size: .85rem; color: var(--fc-muted); }
+.fc-temple-history__era-menu > ol { margin: 0; padding: 0 24px 18px 50px; }
+.fc-temple-history__era-menu li { padding-left: 4px; margin: 0; }
+.fc-temple-history__era-menu li::marker { color: var(--fc-gold); }
+.fc-temple-history__era-menu li > a { display: block; padding: 12px 4px; color: var(--fc-cream); line-height: 1.5; text-decoration: underline; text-decoration-color: var(--fc-line-strong); text-underline-offset: .2em; }
+.fc-temple-history__era-menu :is(summary, a):focus-visible { outline: 2px solid var(--fc-gold); outline-offset: 3px; border-radius: 4px; }
 .fc-temple-history__chapter { margin-block: var(--fc-body-section-gap); padding-top: 12px; border-top: 1px solid var(--fc-line); scroll-margin-top: 110px; }
 .fc-temple-history__chapter > h3 { font-family: var(--fc-font-display); font-size: clamp(1.45rem, 3vw, 2rem); line-height: 1.25; color: var(--fc-cream); }
 .fc-temple-history__chapter .fc-study-visual { align-items: start; }
@@ -16,5 +24,5 @@
 @media (max-width: 700px) {
   .fc-temple-history__chapter .fc-study-visual > a,
   .fc-temple-history__chapter .fc-study-visual figcaption { flex-basis: 100%; }
-  .fc-temple-history__directory .fc-actions { justify-content: center; }
+  .fc-temple-history__era-menu > summary { padding: 16px 18px; }
 }

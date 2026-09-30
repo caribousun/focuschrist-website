@@ -90,3 +90,28 @@ body.fc-site [data-focuschrist-featured-art-study="true"] > div > a span {
 @media (max-width: 700px) {
     body.fc-site .gallery { width: calc(100% - 24px); padding-top: 26px; }
 }
+
+/* Center the final row of the 39-picture gallery without resizing any artwork. */
+body.fc-site .gallery {
+    container: art-picture-grid / inline-size;
+    --art-row-gap: clamp(14px, 2vw, 22px);
+}
+@media (min-width: 769px) {
+    @container art-picture-grid (min-width: 1338px) {
+        .gallery > :nth-child(n + 36) { position: relative; left: calc((100cqw + var(--art-row-gap)) / 10); }
+    }
+    @container art-picture-grid (min-width: 1066px) and (max-width: 1337.99px) {
+        .gallery > :nth-child(n + 37) { position: relative; left: calc((100cqw + var(--art-row-gap)) / 8); }
+    }
+    @container art-picture-grid (width < calc(750px + 2 * clamp(14px, 2vw, 22px))) {
+        .gallery > :last-child { position: relative; left: calc((100cqw + var(--art-row-gap)) / 4); }
+    }
+}
+@media (max-width: 768px) {
+    @container art-picture-grid (width >= calc(600px + 3 * clamp(14px, 2vw, 22px))) {
+        .gallery > :nth-child(n + 37) { position: relative; left: calc((100cqw + var(--art-row-gap)) / 8); }
+    }
+    @container art-picture-grid (width >= calc(300px + clamp(14px, 2vw, 22px))) and (width < calc(450px + 2 * clamp(14px, 2vw, 22px))) {
+        .gallery > :last-child { position: relative; left: calc((100cqw + var(--art-row-gap)) / 4); }
+    }
+}

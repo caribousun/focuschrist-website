@@ -144,9 +144,10 @@ def temple_review_errors(reviewed_pages, root=ROOT):
     chapters = json.loads((root / 'docs/temples/chapters.json').read_text(encoding='utf-8'))
     ready = json.loads((root / 'docs/temples/art-ready.json').read_text(encoding='utf-8'))
     entries = reviewed_pages.get(TEMPLE_PAGE, [])
-    expected = {ready[c['art_id']]['full']: ready[c['art_id']] for c in chapters}
-    if len(expected) < 15 or len(entries) != len(expected) or {e.get('asset') for e in entries} != set(expected):
-        return ['Temple artwork review must match every chronological chapter and at least fifteen additional originals']
+    pictures = [picture for chapter in chapters for picture in [chapter, *chapter.get('companions', [])]]
+    expected = {ready[c['art_id']]['full']: ready[c['art_id']] for c in pictures}
+    if len(chapters) != 20 or len(expected) != 21 or len(entries) != len(expected) or {e.get('asset') for e in entries} != set(expected):
+        return ['Temple artwork review must match twenty chronological chapters and the one owner-requested companion']
     for entry in entries:
         record = expected[entry['asset']]
         asset = root / entry['asset']

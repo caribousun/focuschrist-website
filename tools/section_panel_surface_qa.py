@@ -129,6 +129,6 @@ if __name__=='__main__':
     config=json.loads(CONFIG.read_text(encoding='utf-8'))
     if '--self-test' in sys.argv:self_test()
     actual=inventory(config);check(config,actual)
-    if '--write-inventory' in sys.argv:INVENTORY.write_text(json.dumps(actual,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    if '--write-inventory' in sys.argv:INVENTORY.write_text(json.dumps(actual,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
     else:assert json.loads(INVENTORY.read_text(encoding='utf-8'))==actual,'Panel inventory drift; classify new panels deliberately.'
     print('SECTION PANEL QA PASS:',len(actual['canonical_pages']),'canonical pages,',len(actual['candidate_classes']),'classified panel-like classes,',len(actual['surface_selectors']),'shared selectors. Rendered QA remains separate.')

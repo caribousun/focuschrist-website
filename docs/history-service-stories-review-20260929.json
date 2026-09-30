@@ -1,0 +1,92 @@
+{
+  "date": "2026-09-29",
+  "scope": "Owner-authorized John Tanner, Eleazer Miller, and John Rowe Moyle history enrichment; existing heroes and original artwork preserved.",
+  "sources": {
+    "john-tanner": {
+      "narrative_sources": [
+        {
+          "label": "Jared Carter’s account",
+          "url": "https://www.churchofjesuschrist.org/study/manual/doctrine-and-covenants-student-manual-2017/chapter-29-doctrine-and-covenants-77-80?lang=eng"
+        },
+        {
+          "label": "John Tanner biography",
+          "url": "https://www.josephsmithpapers.org/person/john-tanner"
+        },
+        {
+          "label": "The John Tanner Family",
+          "url": "https://www.churchofjesuschrist.org/study/ensign/1979/03/the-john-tanner-family?lang=eng"
+        },
+        {
+          "label": "Kirtland Temple historical setting",
+          "url": "https://www.churchofjesuschrist.org/study/manual/foundations-of-the-restoration-class-preparation-material-2019/lesson-16-class-preparation-material-the-kirtland-temple-and-priesthood-keys?lang=eng"
+        }
+      ],
+      "film": "https://www.churchofjesuschrist.org/media/video/2010-07-0139-treasure-in-heaven-the-john-tanner-story?lang=eng",
+      "verified_player_duration": "20:31",
+      "narrative_words": 284
+    },
+    "eleazer-miller": {
+      "narrative_sources": [
+        {
+          "label": "Eleazer Miller historical record",
+          "url": "https://history.churchofjesuschrist.org/chd/individual/eleazer-miller-1795?lang=eng"
+        },
+        {
+          "label": "Brigham Young: Our Search for Truth and Personal Testimony",
+          "url": "https://www.churchofjesuschrist.org/study/manual/teachings-brigham-young/chapter-43?lang=eng"
+        },
+        {
+          "label": "Brigham Young’s baptism account",
+          "url": "https://www.churchofjesuschrist.org/study/manual/teachings-brigham-young/chapter-9?lang=eng"
+        },
+        {
+          "label": "Teaching by the Spirit: Miller identified in Brigham’s account",
+          "url": "https://www.churchofjesuschrist.org/study/manual/teaching-seminary-preservice-readings-religion-370-471-and-475/teaching-by-the-spirit-the-language-of-inspiration?lang=eng"
+        }
+      ],
+      "film": "https://www.churchofjesuschrist.org/media/video/2010-07-0048-a-man-without-eloquence?lang=eng",
+      "verified_player_duration": "6:06",
+      "narrative_words": 284
+    },
+    "john-rowe-moyle": {
+      "narrative_sources": [
+        {
+          "label": "John Rowe Moyle historical record",
+          "url": "https://history.churchofjesuschrist.org/chd/individual/john-rowe-moyle-1808?lang=eng"
+        },
+        {
+          "label": "Dieter F. Uchtdorf: Lift Where You Stand",
+          "url": "https://www.churchofjesuschrist.org/study/general-conference/2008/10/lift-where-you-stand?lang=eng"
+        },
+        {
+          "label": "The Church in the West",
+          "url": "https://www.churchofjesuschrist.org/study/manual/foundations-of-the-restoration-class-preparation-material-2019/lesson-26-class-preparation-material-the-church-in-the-west?lang=eng"
+        }
+      ],
+      "film": "https://www.churchofjesuschrist.org/media/video/2010-07-0140-only-a-stonecutter?lang=eng",
+      "verified_player_duration": "15:03",
+      "narrative_words": 298
+    }
+  },
+  "historical_boundaries": [
+    "Tanner healing explicitly attributed to Jared Carter’s reported witness; debt forgiveness attributed to retrospective family history; no invented dialogue, medical diagnosis, or universal financial promise.",
+    "Canonical Eleazer Miller (1795–1876), not William Miller, Joseph Millett, or Artemus Millet. Omit uncertain precise conversion interval and baptism day; Brigham’s search involved study and personal choice.",
+    "John Rowe Moyle (1808–1889), not his similarly named son. Injury, weekly walk, and carved inscription attributed to Uchtdorf’s retelling. He died before the 1893 dedication. Disability is not a faith comparison.",
+    "Films identified as dramatizations; actors are not authenticated historical portraits. Scripture connections are invitations to reflection, not revelations addressed to these three men."
+  ],
+  "media_use": {
+    "basis": "Personal noncommercial focusChrist use of Gospel Media previews, unaltered official source URLs, each image links to its exact film and credits the Church. No contrary asset-specific restriction observed. This is the documented scope of the terms, not a blanket license for other collections or commercial use.",
+    "terms": "https://www.churchofjesuschrist.org/learn/legal/terms-of-use/go?lang=eng",
+    "faq": "https://www.churchofjesuschrist.org/tools/help/frequently-asked-questions-about-gospel-media?lang=eng"
+  },
+  "verification": {
+    "official_playback": "Parent directly played all three official films: readyState 4, advancing time, no errors; evidence work/history-stories/official-video-playback.json.",
+    "focused_gate": "tools/history_service_stories_qa.py PASS",
+    "temple_gate": "tools/temples_history_qa.py PASS 20 originals preserved",
+    "independent_review": "Newton independently accepted source/code review and both contextual Temple links; independently ran history_service_stories_qa and temples_history_qa PASS.",
+    "browser_composition": "Pending parent",
+    "preview_decode": "Official og:image1200x630 variants for Miller and Moyle returned400JSON; current official video poster/thumbnail !640, variants independently fetched/decode-validated200JPEG for all3. Miller640x480, Moyle/Tanner640x360. No local copies saved. Earlier staticQA and film playback did not test preview decode; optional networkgate added."
+  },
+  "integration": "Three full-width story cards following existing Kirtland section, exact anchor navigation, existing resource-card and pill styles. Two contextual Temple links generated from authoritative chapters.json. No new CSS, generated portrait, or duplicated original artwork.",
+  "source_paraphrase_review": "No verbatim quotations. Moyle paragraphs 2–3 derive approximately 128 words from Uchtdorf; biography/migration/death from CHD and remaining reflection original. Tanner separates Carter witness (~68 words), Kirtland account (~80), JSP biography (~40), and Arrington debt recollection (~40). Miller source-derived portions split among CHD, Brigham chapter 43, chapter 9 and Maxwell quotation; no single page reaches 200 words."
+}

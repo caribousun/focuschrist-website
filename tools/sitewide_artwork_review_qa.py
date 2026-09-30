@@ -148,8 +148,10 @@ SCOPED_INTERFACE_STYLES = {
 # Wyatt requested these exact desktop repairs and the Temple chronology.
 # Albert independently reviewed rendered composition; byte/consumer changes fail closed.
 OWNER_20260929_STYLES = {
+    # Owner-requested39-picture final-row balance, Fermi rendered ten widths; Newton source review.
+    'art-experience.css': ('ef21dea3b87e8b3e59454aba32726210a783d87d556928201ef375a3627b1c74', ['art.html']),
     'desktop-hero-repairs.css': ('26af1b820ab62722ad60ab124f16ccf5784304edafa375a854f0ea7f076e9e96', ['answers/abrahamic-covenant.html', 'answers/look-unto-me-doctrine-and-covenants-6-36.html', 'answers/plan-of-salvation.html', 'book-of-mormon-evidences.html', 'general-conference.html']),
-    'temples-history.css': ('55e75a39ef5e01699307df18932ac7dd83771216cd144fb59c119b4b1e9da030', ['answers/why-latter-day-saints-build-temples.html']),
+    'temples-history.css': ('764ffd7b6f877a4d5c279215a0a4d6adee464fa6eb072e7228aec1ec470f62e7', ['answers/why-latter-day-saints-build-temples.html']),
 }
 def reviewed_owner_20260929_style(name, data):
     return name in OWNER_20260929_STYLES and hashlib.sha256(data).hexdigest() == OWNER_20260929_STYLES[name][0]

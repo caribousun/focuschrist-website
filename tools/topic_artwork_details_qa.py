@@ -205,7 +205,7 @@ assert len(covenant_assets)==len(set(covenant_assets))==12 and set(covenant_asse
 expected_journey={k for k,v in journey_review.items() if v['owner'].startswith('answers/')}
 assert len(journey_assets)==len(set(journey_assets)) and set(journey_assets)==expected_journey, 'Journey parent exact artwork inventory mismatch'
 assert len(hg_assets)==len(set(hg_assets))==16 and set(hg_assets)==set(hg_review), 'Holy Ghost exact body inventory mismatch'
-assert len(temple_assets)==len(set(temple_assets))==len(temple_review)==20 and set(temple_assets)==set(temple_review), 'All twenty reviewed temple originals must reach the shared study adapter'
+assert len(temple_assets)==len(set(temple_assets))==len(temple_review)==21 and set(temple_assets)==set(temple_review), 'Twenty chapter pictures and the owner-requested Nephi companion must reach the shared study adapter'
 assert (count-len(temple_assets)-len(father_assets)-len(plan_assets)-len(hg_assets)-len(covenant_assets)-len(journey_assets)-len(bible_assets)-len(settle_assets)-len(life_assets)-len(gap_assets)-len(sitewide_assets)-len(focused_assets)-len(relocated_assets)-len(bom_assets),preserved)==(99,3),(count,preserved)
 # Life After Death lifted its old illustrated feature panel into full reading
 # sections. All twelve remaining panels still undergo the structural checks.

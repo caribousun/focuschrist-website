@@ -177,15 +177,15 @@
     "source_sha256": "5ca75f26283cfc296f53683d1e5a4a3d12fa1fecd45d3b635005ddda64034214"
   },
   "temple-nephite-temple": {
-    "full": "assets/page-art/temples/temple-nephite-temple-full.webp",
-    "thumbnail": "assets/page-art/temples/temple-nephite-temple-960.webp",
+    "full": "assets/page-art/temples/temple-nephite-timber-pattern-full.webp",
+    "thumbnail": "assets/page-art/temples/temple-nephite-timber-pattern-960.webp",
     "width": 1536,
     "height": 1024,
     "reviewed": true,
-    "source_original": "exec-2933c3b4-05a4-4bf4-bbc8-f77ba1427129.png",
-    "sha256": "04da3843d0818fe3826ae2ebb809600be825d841e76bc77381506aa040e61604",
+    "source_original": "exec-e4492356-4886-433f-a952-aa202979920b.png",
+    "sha256": "ef825a0535a5ec2ab7fe38c2f095ee9eef6508b52402e3ef96ac261c7e3f5c1d",
     "technical_review": "docs/temples/integration-visual-review.json",
-    "source_sha256": "025e773fc7a4e95cf63ea340bc77f6c7e56906266e3f7b04773adc818d13f851"
+    "source_sha256": "c00749c3cb5fca1e3ecbf1b4b6462195de4e7bb1719635fe6dde7a7c30a1bd2d"
   },
   "temple-bountiful-covenant": {
     "full": "assets/page-art/temples/temple-bountiful-covenant-full.webp",
@@ -220,5 +220,16 @@
     "technical_review": "docs/temples/integration-visual-review.json",
     "owner_favorable_selection": true,
     "source_sha256": "deccb0d9c671e3500c95a3640e6dbe5eb49e57929c527d2f52ac7b2d4c41d03b"
+  },
+  "temple-nephite-approach": {
+    "full": "assets/page-art/temples/temple-nephite-approach-full.webp",
+    "thumbnail": "assets/page-art/temples/temple-nephite-approach-960.webp",
+    "width": 1536,
+    "height": 1024,
+    "reviewed": true,
+    "source_original": "exec-f547e8ea-2766-4afc-b6fd-5e9a947440a1.png",
+    "sha256": "583b519d5fec1c1757a38dc1057d5272029a745e73ab59eab8f86a870d03bcb5",
+    "source_sha256": "b263a99082d77c7397009f12b26f9348e5e27070de9f998b41eea4876de6b019",
+    "technical_review": "docs/temples/nephi-surrounding-context-review-20260929.json"
   }
 }

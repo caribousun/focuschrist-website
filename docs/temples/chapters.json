@@ -112,7 +112,7 @@
     "era": "Nephi and later Nephite worship",
     "art_id": "temple-nephite-temple",
     "paragraphs": [
-      "The Book of Mormon preserves a second scriptural setting for temple worship. Nephi says his people built a temple after the manner of Solomon's, while explaining that they lacked the same precious materials. His account links the work with learning skills and building a community after separation from his brothers.",
+      "The Book of Mormon preserves a second scriptural setting for temple worship. Nephi says his people built a temple after the manner of Solomon’s, without all the same precious materials, and describes its fine workmanship. The surrounding passage mentions learning to work in wood and other materials; it does not give an exhaustive list of what was used in this temple. This picture interprets the building in timber, while its exact materials and appearance remain unknown.",
       "Later, King Benjamin gathers his people at a temple to teach them about Christ and their responsibility to one another. The record supplies these acts of worship and teaching, but few architectural details. We can follow its spiritual narrative without assigning a particular surviving ruin or modern map location to the temple."
     ],
     "sources": [
@@ -125,9 +125,24 @@
         "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/2?lang=eng&id=p1-p9#p1"
       }
     ],
-    "alt": "A modest ancient sanctuary stands among simple buildings and cultivated land.",
-    "caption": "Nephi records a temple patterned after Solomon's, built with the materials his people could obtain.",
-    "scene_constraints": "Interpretive architecture; NO identified Maya pyramid, archaeological site, anachronistic stepped ziggurat, or asserted geography. Material restraint compared with Solomon. No named person needed."
+    "alt": "A finely worked timber sanctuary has a long central house, front porch, and lower side chambers.",
+    "caption": "An artistic interpretation guided by Nephi’s account: a temple after the manner of Solomon’s, with fine workmanship and fewer precious materials. The exact appearance and materials are not recorded.",
+    "scene_constraints": "Source-first 2 Nephi 5:15–17: Solomon pattern and fine workmanship, fewer precious materials. Wood mentioned in surrounding skills passage, not proof temple exclusively wooden. 1 Kings 6 guides interpretive elongated sanctuary, porch, lower side chambers; no claim exact dimensions/species/appearance/location. Owner rejected former generic sanctuary and stone-heavy candidate.",
+    "companions": [
+      {
+        "art_id": "temple-nephite-approach",
+        "title": "An approach to the temple",
+        "alt": "The same timber sanctuary is seen from a path rising gently through an open landscape.",
+        "caption": "A wider artistic view of the same timber interpretation. Jacob describes going up into the temple; the gentle rise pictured here is an interpretation, not a known location or recorded hill profile.",
+        "sources": [
+          {
+            "label": "Jacob 2:2, 8, 11",
+            "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/jacob/2?lang=eng&id=p2,p8,p11#p2"
+          }
+        ],
+        "reason": "Owner explicitly requested companion view of the same consistent building; not a new historical event or an artwork quota claim."
+      }
+    ]
   },
   {
     "id": "young-jesus",
@@ -293,7 +308,12 @@
     ],
     "alt": "The completed Kirtland Temple stands above a simple nineteenth-century road as worshippers approach.",
     "caption": "The Saints gather at Kirtland after years of shared labor. Their dedicatory prayer asks for learning, faith, and strength to serve.",
-    "scene_constraints": "Historic exterior requires official architecture reference; 1836 clothing and unpaved street. Anonymous attendees, no modern spire changes or modern landscaping. Distinct from existing church-history stone-lifting artwork."
+    "scene_constraints": "Historic exterior requires official architecture reference; 1836 clothing and unpaved street. Anonymous attendees, no modern spire changes or modern landscaping. Distinct from existing church-history stone-lifting artwork.",
+    "related_study": {
+      "introduction": "Meet one of the people whose generosity helped the Kirtland work move forward.",
+      "label": "Read John Tanner’s story",
+      "url": "../church-history.html#john-tanner"
+    }
   },
   {
     "id": "kirtland-christ",
@@ -391,7 +411,12 @@
     "alt": "Workers guide a granite block beside the scaffolded Salt Lake Temple during its construction.",
     "caption": "A heavy stone and patient labor recall the decades needed to raise the Salt Lake Temple. The work included rebuilding foundations as well as lifting walls.",
     "scene_constraints": "Early1892 exterior based on official historic capstone photograph. Anonymous late19th-century workers and timber sled; no named portraits. No modern cranes or finished present-day landscaping.",
-    "reflection": "What does the willingness to repair a foundation teach you about preparing a life for lasting commitments?"
+    "reflection": "What does the willingness to repair a foundation teach you about preparing a life for lasting commitments?",
+    "related_study": {
+      "introduction": "Follow the life of a stonecutter who contributed to this long building effort.",
+      "label": "Read John Rowe Moyle’s story",
+      "url": "../church-history.html#john-rowe-moyle"
+    }
   },
   {
     "id": "worldwide-gathering",

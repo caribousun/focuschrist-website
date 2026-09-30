@@ -1,0 +1,24 @@
+{
+  "reviewer": "Fermi",
+  "date": "2026-09-29",
+  "result": "pass",
+  "preview": "http://localhost:4187/answers/why-latter-day-saints-build-temples.html#temple-history",
+  "stylesheet_version": "20260929-era-directory-1",
+  "actual_viewports": [
+    {"width":1440,"height":1000,"collapsed_directory":"pass","expanded_list":"pass"},
+    {"width":390,"height":844,"collapsed_directory":"pass","all_four_expanded_groups":"pass","horizontal_overflow":false},
+    {"width":320,"height":844,"collapsed_directory":"pass","expanded_wrapped_links":"pass","horizontal_overflow":false}
+  ],
+  "keyboard": {
+    "enter_toggles_native_summary": "pass",
+    "tab_enters_first_expanded_link": "pass",
+    "visible_focus": "pass",
+    "chapter_links_actually_activated": 20,
+    "matching_destination_hashes_and_headings": 20,
+    "begin_action_reaches_eden": "pass"
+  },
+  "preservation": "Four groups retain ordered chapter counts6/7/5/2. All twenty destinations exist and were activated. No artwork or hero change belongs to this directory revision.",
+  "composition": "Shared navy background, green-teal disclosure rows, gold/cream type, numbered text links, and one Begin action form a coherent directory. Long chapter titles wrap naturally on narrow phones.",
+  "limitation": "A browser zoom shortcut did not change measured text or device pixel ratio; this review does not claim fresh200percent text verification. Hosted enlarged-text checks remain a separate release requirement.",
+  "product_mutations": false
+}
