@@ -6,7 +6,7 @@
   }
   body.fc-site.fc-topic-page .fc-topic-opening .fc-page-intro > .fc-container--standard {
     padding: 0 !important;
-    gap: 10px;
+    gap: 8px;
   }
   body.fc-site.fc-topic-page .fc-topic-opening .fc-page-intro :is(.fc-eyebrow, .fc-display, .fc-topic-subtitle, .fc-scroll-cue) {
     margin: 0 !important;
