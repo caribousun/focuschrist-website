@@ -425,7 +425,7 @@
     "art_id": "temple-worldwide-gathering",
     "paragraphs": [
       "The Laie Hawaii Temple, dedicated in 1919, brought temple worship closer to Saints across the Pacific. Bern Switzerland, dedicated in 1955, marked another step as temples served communities across national and language boundaries. Temples increasingly came nearer to the places where Church members lived.",
-      "That story also includes a painful restriction: Black men of African descent were restricted from priesthood ordination, and Black men and women of African descent from temple endowment and sealing. Official Declaration 2 records the 1978 revelation extending these blessings to all worthy members without regard to race or color. A truthful account of worldwide gathering includes both that earlier exclusion and its end."
+      "The gathering reaches across languages and long travel distances. Each new temple belongs within the lives of the people who worship there, including families who have made sacrifices to attend. The story continues as communities prepare for temples nearer their homes."
     ],
     "sources": [
       {
@@ -435,14 +435,6 @@
       {
         "label": "Bern Switzerland Temple",
         "url": "https://www.churchofjesuschrist.org/temples/details/bern-switzerland-temple?lang=eng"
-      },
-      {
-        "label": "Official Declaration 2",
-        "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/od/2?lang=eng"
-      },
-      {
-        "url": "https://www.churchofjesuschrist.org/study/history/topics/priesthood-and-temple-restriction?lang=eng",
-        "label": "Priesthood and Temple Restriction"
       }
     ],
     "alt": "The Laie Hawaii Temple stands among palms and tropical greenery with visitors on its grounds.",
@@ -480,6 +472,11 @@
     ],
     "alt": "A family studies old photographs and family records together at a table.",
     "caption": "Names on a page lead back to individual lives. Learning an ancestor's story can give temple service a more personal meaning.",
-    "scene_constraints": "Contemporary multi-generation research scene, not generic dishwashing or neighbor-help duplicate; no real personal data legible, no invented ancestor identity. Anonymous family ages clear adults/older adult, relationships caption only if composition supports."
+    "scene_constraints": "Contemporary multi-generation research scene, not generic dishwashing or neighbor-help duplicate; no real personal data legible, no invented ancestor identity. Anonymous family ages clear adults/older adult, relationships caption only if composition supports.",
+    "related_study": {
+      "introduction": "For the history of racial restrictions, the lives of Black Latter-day Saints, and the 1978 revelation, continue with the priesthood study.",
+      "label": "Explore priesthood and temple blessings",
+      "url": "melchizedek-priesthood-restoration.html#priesthood-and-temple-blessings"
+    }
   }
 ]

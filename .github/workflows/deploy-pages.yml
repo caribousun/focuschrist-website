@@ -80,7 +80,10 @@ jobs:
           python tools/art_study_enrichment_qa.py
           python tools/temples_history_qa.py
           python tools/history_service_stories_qa.py
+          python tools/history_story_pages_qa.py
           python tools/history_service_stories_qa.py --remote-previews
+          python tools/priesthood_history_qa.py
+          python tools/priesthood_history_qa.py --remote-previews
           python tools/desktop_hero_preservation_qa.py
           python tools/artwork_reference_repairs_qa.py
           python tools/illustrated_study_navigation_qa.py
@@ -97,6 +100,7 @@ jobs:
           npm install --prefix "$RUNNER_TEMP/focuschrist-dom-qa" --no-save --package-lock=false --ignore-scripts jsdom@26.1.0
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/art_study_picture_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/temples_history_runtime_qa.js
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/history_story_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/artwork_reference_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/illustrated_study_navigation_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/desktop_hero_runtime_qa.js
@@ -233,6 +237,25 @@ jobs:
 
       - name: Validate Pioneer experience JavaScript
         run: node --check pioneer-experience.js
+
+      - name: Install historical hero browser dependencies
+        run: |
+          npm install --prefix /tmp/focus-row-qa --no-save --package-lock=false --ignore-scripts playwright@1.55.1
+          /tmp/focus-row-qa/node_modules/.bin/playwright install --with-deps chromium
+
+      - name: Verify historical story hero pixels in Chromium
+        run: |
+          python tools/history_hero_pixels_qa.py --self-test
+          NODE_PATH=/tmp/focus-row-qa/node_modules node tools/history_hero_browser_qa.js
+
+      - name: Save historical hero screenshots and raster evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: history-hero-render
+          path: .qa-artifacts/history-heroes/
+          include-hidden-files: true
+          if-no-files-found: ignore
 
       - name: Rebuild public search index for publication
         run: python tools/build_site_search.py

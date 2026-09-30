@@ -12,6 +12,16 @@ from PIL import Image
 from answer_study_qa import Document
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+ELIJAH_MANUAL_VIDEO = 'https://www.churchofjesuschrist.org/study/manual/doctrine-and-covenants-stories-2025/33-elijah-able?lang=eng'
+def reviewed_elijah_video(route, key, links):
+    if route != 'answers/melchizedek-priesthood-restoration.html' or key != 'priesthood-history-elijah-able':
+        return False
+    reviewed = json.loads((ROOT/'docs/priesthood-history/visuals.json').read_text(encoding='utf-8'))['elijah-able']
+    return (reviewed.get('reviewed') is True and reviewed.get('resource_key') == key
+            and reviewed['url'] == ELIJAH_MANUAL_VIDEO
+            and len(links) == 2 and all(url == ELIJAH_MANUAL_VIDEO for url in links))
 NEW = {f'answers/{kind}-priesthood-restoration.html' for kind in ('aaronic', 'melchizedek')}
 
 def document(path):
@@ -111,7 +121,10 @@ def check():
         cards = [n for n in ns if n.has('fc-resource-card')]
         assert len(cards) >= 2, route+': two contextual video cards required'
         for card in cards:
-            assert any(n.tag == 'a' and '/media/video/' in n.attrs.get('href','') for n in card.walk()), route+': official video route missing'
+            links = [n.attrs.get('href','') for n in card.walk() if n.tag == 'a']
+            assert any('/media/video/' in href for href in links) or reviewed_elijah_video(route, card.attrs.get('data-resource-key'), links), route+': official video route missing'
+            assert not reviewed_elijah_video(route, card.attrs.get('data-resource-key'), [ELIJAH_MANUAL_VIDEO, ELIJAH_MANUAL_VIDEO + '&wrong=1']), 'Unreviewed manual URL escaped'
+            assert not reviewed_elijah_video('answers/aaronic-priesthood-restoration.html', 'priesthood-history-elijah-able', [ELIJAH_MANUAL_VIDEO]*2), 'Elijah exception escaped its owning study'
             assert any(n.has('fc-resource-card__image') and any(c.tag == 'img' for c in n.walk()) for n in card.walk()), route+': contained preview missing'
         onward = {n.attrs.get('href') for n in ids['continue-study'].walk() if n.tag == 'a' and '.html' in n.attrs.get('href','') and 'ask.html' not in n.attrs['href'] and 'answers.html' not in n.attrs['href']}
         assert len(onward) >= 3, route+': three onward studies required'

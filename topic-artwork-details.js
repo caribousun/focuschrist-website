@@ -66,8 +66,8 @@
             return Array.from(container.querySelectorAll('a[href]')).filter(function (link) {
                 try {
                     const url = new URL(link.href);
-                    return url.protocol === 'https:' && ['www.churchofjesuschrist.org', 'newsroom.churchofjesuschrist.org',
-                        'www.josephsmithpapers.org', 'churchhistorylibrary.churchofjesuschrist.org'].includes(url.hostname)
+                    return url.protocol === 'https:' && ['www.churchofjesuschrist.org', 'newsroom.churchofjesuschrist.org', 'history.churchofjesuschrist.org',
+                        'www.josephsmithpapers.org', 'churchhistorylibrary.churchofjesuschrist.org', 'ensignpeakfoundation.org'].includes(url.hostname)
                         && !link.querySelector('img');
                 } catch (error) { return false; }
             });
@@ -120,8 +120,10 @@
                 if (!sources.length && figure.closest('.gc-intro')) sources = officialLinks(main).filter(function (link) { return new URL(link.href).pathname === '/study/general-conference'; }).slice(0, 1);
             }
             const seen = new Set();
+            const storyPages = ['/history/john-tanner.html', '/history/eleazer-miller.html', '/history/john-rowe-moyle.html'];
+            const sourceLimit = storyPages.includes(location.pathname) && document.body.classList.contains('fc-life-story') ? 4 : 3;
             sources.forEach(function (link) {
-                if (seen.has(link.href) || record.sources.length >= 3) return;
+                if (seen.has(link.href) || record.sources.length >= sourceLimit) return;
                 seen.add(link.href);
                 record.sources.push({ href: link.href, label: link.textContent.trim() || 'Read the official source' });
             });

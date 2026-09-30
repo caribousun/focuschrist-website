@@ -1,0 +1,194 @@
+{
+  "reviewer": "Fermi",
+  "date": "2026-09-29",
+  "policy": "Independent technical source/visual review only; does not constitute owner approval.",
+  "images": [
+    {
+      "source_original": "exec-d02ab209-70e9-49d2-87a7-fc9331929151.png",
+      "limitation": "Full composition passes; wide cover hero may crop hair or book/hands. Actual hero framing remains to be tested.",
+      "sha256": "d7f7d7a3dfb4b69f3b76a288190dbd963126bd05b4541e01bb3a54c7a91548a3",
+      "id": "miller-search-before-witness",
+      "observations": "Approved facial identity preserved. Plausible younger adult; attentive downward reading gaze, concentrated expression, natural hands and book grip. Interior is an illustration, not a documented room.",
+      "result": "pass",
+      "reference": "assets/identities/brigham-young-owner-approved-20260920.png"
+    },
+    {
+      "source_original": "exec-c481c79b-9515-44e9-baa2-7cf2263e12d9.png",
+      "limitation": "Road, season, clothing details and journey moment are interpretation, not documented exact location or event. Not an authenticated photographic likeness at age36.",
+      "sha256": "d0ced07014ad81f8c05845f3753bb7b0b5fb8b56da47f11ba99b9cb45921fc4e",
+      "id": "miller-mission-road",
+      "observations": "Older official portrait compared directly. Long nose, broad forehead, mouth/chin and swept hair recognizable with age reduction. Late-thirties adult plausible. Purposeful roadward gaze; natural grip and relaxed hand. No anatomy defect seen.",
+      "result": "pass",
+      "reference": "work/history-stories/references/miller-official-profile.jpg"
+    },
+    {
+      "observations": "Recognizable identities and plausible ages36/30. Clear mutual eye contact, modest speaking gesture and attentive listening. Natural visible hands, limbs and seated posture.",
+      "limitation": "Exact room, clothing, arrangement and unidentified listeners are illustrative; no invented quotation or named identity for other people.",
+      "reference": "Miller official portrait and reviewed mission-road original; Brigham owner-approved identity",
+      "sha256": "c041e3f8b11db487e63b49f67647fe97fc7346a9e52c94ca8ad67fb955248308",
+      "source_original": "exec-57fdecc8-442a-43ab-a1f4-08e857331080.png",
+      "id": "miller-simple-witness",
+      "result": "pass"
+    },
+    {
+      "observations": "Plausible age54; curly hair/beard grounded conservatively in coarse drawing. Hopeful appreciative gaze toward helper. Natural assisted grip, supporting chair hand, legs and feet. Helper predominantly back view, no claimed authenticated Carter likeness.",
+      "limitation": "Tanner drawing does not establish exact photographic likeness. Healing is depicted as the attributed historical account, not documentary proof. Full critical figure extends almost full image height; wide hero cover crop requires separate correction/verification.",
+      "reference": "work/history-stories/references/tanner-official-profile.jpg",
+      "sha256": "4ecb099ef171b1c3d02bf3972b8ed622a30a38067639f49f3dff9f18af612590",
+      "source_original": "exec-e426d359-b365-466b-8b93-c4937746a959.png",
+      "id": "tanner-healing-witness",
+      "result": "pass"
+    },
+    {
+      "id": "moyle-handcart-journey",
+      "reference": "work/history-stories/references/moyle-family-book-portrait-plate.png",
+      "sha256": "9dbe27ba9936822c3596f7850a43bb0c44085644359f806b90c604d1879e79ac",
+      "result": "pass",
+      "source_original": "exec-e0dad31f-49f2-4462-ad7b-b35ebf5e6a7f.png",
+      "observations": "Historical plate compared. Receding wavy hair, angular face and beard plausibly retained at48. Forward purposeful gaze, coherent hands/stride and two-wheel shaft/cart structure. Dry fair-weather landscape avoids conflating Ellsworth journey with Willie/Martin winter disaster.",
+      "limitation": "Exact river, location, cargo, clothing and companions are illustrative. Background woman is not identified as Phillippa. Source photograph date is unknown."
+    },
+    {
+      "id": "miller-millstream-baptism",
+      "sha256": "7afab7716ca791155702e9565296d887725f2a103f6c84362a70e4fb10e69583",
+      "result": "rejected",
+      "source_original": "exec-d998803e-419c-4d98-8600-3e48e4f00dfe.png",
+      "observations": "Roles reversed: long-haired Brigham on left supports/officiates; short-haired Miller on right folds arms as recipient. Historical requirement is Miller baptizing Brigham.",
+      "limitation": "Withheld from publication. Root independently rejected and is regenerating."
+    },
+    {
+      "observations": "Working identity preserved with winter clothing; natural forward gaze, gloved grip and stride. January winter migration illustrated; precise road, cargo, weather and unnamed companions are interpretive.",
+      "id": "tanner-journey-kirtland",
+      "source_original": "exec-49f8b3f9-410c-4cfa-8b28-824fe9de54d1.png",
+      "sha256": "f07fa01563a23e66dae0c6aa83321871858869edc67cb5ab68a633272fee7231",
+      "limitation": "Technical visual/source review only; not owner approval or proof of exact historical appearance/event details.",
+      "result": "pass"
+    },
+    {
+      "observations": "Tanner continuity and actual approved Joseph identity compared/preserved; plausible ages56/29; mutual attentive gaze, natural hands. Window shows unfinished rough stone/scaffold, no completed white temple or tower. Coins and papers suggest financial support without asserting exact document or transaction setting.",
+      "id": "tanner-temple-support",
+      "source_original": "exec-585a8084-d091-4a0c-a2d2-6d453402de11.png",
+      "sha256": "c667646cb89ba45eda7504f386bc97389ed6ee0f5853ee8ab0ee79310fdd9d77",
+      "limitation": "Technical visual/source review only; not owner approval or proof of exact historical appearance/event details.",
+      "result": "pass"
+    },
+    {
+      "observations": "Working identity preserved; natural strenuous trunk-handling grip and posture, focused expression. Exact house, luggage and unidentified companions are interpretive. Distinct action from journey scene.",
+      "id": "tanner-displacement",
+      "source_original": "exec-20f7d5d3-bb0e-420e-800d-f6552513166f.png",
+      "sha256": "1621c65fa82207ceccc83808bfa76913c4b4f0f2b09f21a3179393b5aa1feadf",
+      "limitation": "Technical visual/source review only; not owner approval or proof of exact historical appearance/event details.",
+      "result": "pass"
+    },
+    {
+      "observations": "Same healing action/identity/gaze preserved in expanded room. Source2066x761 at centered desktop ratio2048/684 retains approximately y35-725. Tanner head/feet approximately y100-668 remain inside. Helper rear head is already source-truncated; does not pass whole-helper-figure framing. Actual rendered desktop proof remains separate. This is same original scene variant, not an additional original.",
+      "id": "tanner-healing-desktop-variant",
+      "source_original": "exec-8b4c2a1f-7316-48f7-8bf1-abc0042289f2.png",
+      "sha256": "3999cf4d2ca0e88c9c9c188cb18bf30171fa5e532bf7fc5979fcbf2f31756386",
+      "limitation": "Technical visual/source review only; not owner approval or proof of exact historical appearance/event details.",
+      "result": "pass"
+    },
+    {
+      "limitation": "Later family account attribution required; exact room/document/gesture is reconstructed. Technical review is not owner approval.",
+      "observations": "Both faces remain recognizable. Tanner grey beard/older face plausible65, Joseph plausible38. Warm mutual gaze, natural transfer of folded paper and resting hands. No invented legible facsimile or coins.",
+      "sha256": "bbdd13c905655f73d4855206d6f2cd1801456c42d516f0afd300b0c7008e4d7f",
+      "alt": "John Tanner hands a folded note to Joseph Smith as they look warmly at one another across a desk.",
+      "reference": "Tanner reviewed healing working identity; assets/identities/joseph-smith-owner-approved-20260914.png",
+      "id": "tanner-debt-forgiven",
+      "caption": "In the later family account, Tanner returned the Kirtland loan note and forgave the debt. This scene imagines that remembered gift in Nauvoo.",
+      "source_original": "exec-caa8bff2-2a37-498e-a78b-08365dd247ff.png",
+      "result": "pass"
+    },
+    {
+      "id": "moyle-stonecutter-craft",
+      "caption": "Moyle brought his skills as a stonecutter to the long work of building the Salt Lake Temple. The unfinished walls recall its construction years.",
+      "source_original": "exec-298fe287-f97c-4f0a-be99-7a2f2fd55846.png",
+      "limitation": "Source interpretation and technical review only, not owner approval. Exact original prosthesis dimensions/side/hardware are unverified.",
+      "result": "pass",
+      "observations": "Working Moyle identity retained, plausible60s. Natural focused gaze/tool grips. Unfinished shell and derricks align with ca1870-1880 reference, no completed spires.",
+      "alt": "John Rowe Moyle works a granite block with hammer and chisel before the unfinished Salt Lake Temple.",
+      "sha256": "71addc09196ae6511b55122f346dd3612f958803069a8ab50e17976db9f3d9af"
+    },
+    {
+      "id": "moyle-weekly-walk",
+      "caption": "",
+      "source_original": "exec-04cd4786-7ccd-44cc-bf04-26049ac7a8e4.png",
+      "limitation": "Source interpretation and technical review only, not owner approval. Exact original prosthesis dimensions/side/hardware are unverified.",
+      "result": "rejected",
+      "observations": "Distant temple has finished pointed towers/central spire and small gold finial. Incompatible with Moyle lifetime before1889. Regenerate background without completed temple; figure anatomy/identity otherwise plausible.",
+      "alt": "",
+      "sha256": "5db31531630435320ce11c9266d0294a10ae9aa319df65f7a945a093148eed9f"
+    },
+    {
+      "id": "moyle-wooden-leg",
+      "caption": "Accounts remember Moyle making a wooden leg after losing his lower leg. This reconstruction draws on a later replica; the exact original fittings remain uncertain.",
+      "source_original": "exec-b56ad883-cabc-421f-a31a-cc530befdfee.png",
+      "limitation": "Source interpretation and technical review only, not owner approval. Exact original prosthesis dimensions/side/hardware are unverified.",
+      "result": "pass",
+      "observations": "Plausible older70s face with continuity; attentive task gaze, natural grip/tool action, clear shaped wooden foot/shaft rather than generic peg. No extra limb visible.",
+      "alt": "An older John Rowe Moyle shapes a wooden prosthetic leg at a workbench.",
+      "sha256": "316d8ec2edcdeb0c3082211b906aad9eeea2122e951b0b20e45c7fc8a4a3fb52"
+    },
+    {
+      "id": "moyle-return-to-craft",
+      "caption": "Later accounts describe Moyle returning to temple work with a wooden leg. The scene imagines that determination; the prosthesis side and fittings are not established.",
+      "source_original": "exec-ba29c45f-bd00-439e-8185-8c8457da0f56.png",
+      "limitation": "Source interpretation and technical review only, not owner approval. Exact original prosthesis dimensions/side/hardware are unverified.",
+      "result": "pass",
+      "observations": "Working identity plausibly older; exactly one natural leg and one prosthesis, coherent stance, focused gaze and tool grip. Cropped rough masonry/scaffold avoids anachronistic finished temple.",
+      "alt": "John Rowe Moyle stands at a granite block with a wooden prosthesis visible below one trouser leg.",
+      "sha256": "99903dfb9817d047b1c904f7bbf8ffa20f51da58bef36a36a992467d24dadbab"
+    },
+    {
+      "alt": "Eleazer Miller tightens a rope around supplies on a wagon while other travelers prepare nearby.",
+      "caption": "Miller crossed the plains in 1848. This imagined moment of preparing a wagon recalls the practical work shared along the journey.",
+      "sha256": "27f26cd90b65d746b455a5628038f9b71c32add23a64105ddaefe1a8f4a27420",
+      "result": "pass",
+      "observations": "Miller long nose/brow/mouth and swept hair remain continuous with earlier working scenes; plausible middle-aged52 with modest graying, not aged as late-life portrait. Eyes focus on rope; coherent practical two-handed knot/load action and bent-knee support. Wagon/camp material context plausible.",
+      "source_original": "exec-d5ff2bf7-9718-427a-84d2-0e8b0c8c5750.png",
+      "limitation": "Exact knot, supplies, companions and campsite are illustrative, not a recorded incident. Technical review only, not owner approval.",
+      "id": "miller-westward-service"
+    },
+    {
+      "caption": "Brigham remembered being baptized by Eleazer Miller in his millstream in April1832. The winter setting recalls his account; the scene is reconstructed.",
+      "observations": "Roles corrected: short-combed Miller left raises anatomical right hand; long-haired Brigham right receives baptism. Preserved identities, solemn expressions, coherent arms/hands. Earlier rejected candidate remains historical record only.",
+      "alt": "Eleazer Miller raises his right hand beside Brigham Young in a snowy millstream before baptism.",
+      "result": "pass",
+      "id": "miller-millstream-baptism",
+      "source_original": "exec-cd50f3bd-907b-4719-8a7f-24f80dc32f14.png",
+      "sha256": "6c23dad50c0e6d69c418ea6eb376d3d6393ff32d6d1d78e697946a4f89dfe182",
+      "limitation": "Technical source/pixel review, not owner approval. Actual rendered hero evidence remains separate."
+    },
+    {
+      "caption": "",
+      "observations": "Same approved Brigham reading identity/action/gaze in expanded room. Source2167x725 at2.994crop loses approximately1pixel at top/bottom; full head, book and hands comfortably remain. Same scene variant, not a new original.",
+      "alt": "",
+      "result": "pass",
+      "id": "miller-reading-desktop-variant",
+      "source_original": "exec-0d84f013-663f-467b-a417-3616059a7836.png",
+      "sha256": "71873c695d65e09a0d741a8f082c3374fa71fd7b417e94dd7ff2fd9d5a7aaeb8",
+      "limitation": "Technical source/pixel review, not owner approval. Actual rendered hero evidence remains separate."
+    },
+    {
+      "caption": "",
+      "observations": "Same reviewed Moyle handcart identity/action in expanded landscape. Source2156x729 at2.994crop loses approximately4.5pixels top/bottom; head, feet, hands and cart remain well inside. Same scene variant, not new original.",
+      "alt": "",
+      "result": "pass",
+      "id": "moyle-handcart-desktop-variant",
+      "source_original": "exec-91529cd0-be33-4bc2-8bb1-245f8e04ad38.png",
+      "sha256": "1c145198ff3d0424e9a8a5b1e2f89dedd7c73fde0b793c3cb0e016662208df93",
+      "limitation": "Technical source/pixel review, not owner approval. Actual rendered hero evidence remains separate."
+    },
+    {
+      "source_original": "exec-5630fe8c-4a34-4a0a-95bb-d7054aa0165c.png",
+      "caption": "Later accounts remember Moyle walking between Alpine and his temple work in Salt Lake City. This imagined landscape recalls the persistence of those journeys.",
+      "limitation": "Exact route, viewpoint, buildings and time of day are interpretive. No assertion of identical preserved pixels. Technical review only, not owner approval.",
+      "observations": "Corrected background contains ordinary low roofs/trees with no finished temple spires. Recognizable working Moyle identity, purposeful forward gaze, natural shoulder-strap grip/free hand and walking posture. Foreground is clear and scene coherent.",
+      "id": "moyle-weekly-walk",
+      "sha256": "d72e1a4ce7df77492231cf6e06f39891c40058dea450892a199ef31f2c22fa92",
+      "supersedes_rejected_source": "exec-04cd4786-7ccd-44cc-bf04-26049ac7a8e4.png",
+      "result": "pass",
+      "alt": "John Rowe Moyle walks a dirt road with a shoulder bag above a valley settlement beneath a brightening mountain sky."
+    }
+  ]
+}

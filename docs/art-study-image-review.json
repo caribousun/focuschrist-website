@@ -2683,6 +2683,331 @@
         "review_record": "docs/temples/nephi-surrounding-context-review-20260929.json",
         "review_notes": "Owner explicitly requested companion view of the same consistent building; not a new historical event or an artwork quota claim."
       }
+    ],
+    "history/john-tanner.html": [
+      {
+        "order": 1,
+        "key": "tanner-healing-witness",
+        "asset": "assets/page-art/history-stories/tanner-healing-witness-full.webp",
+        "responsive": "assets/page-art/history-stories/tanner-healing-witness-960.webp",
+        "sha256": "79efcbf2e91804b6b5e22e942723d04cd475b79f3a4a0a8c86315ca84c40f51c",
+        "source_sha256": "4ecb099ef171b1c3d02bf3972b8ed622a30a38067639f49f3dff9f18af612590",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/manual/doctrine-and-covenants-student-manual-2017/chapter-29-doctrine-and-covenants-77-80?lang=eng",
+          "https://www.josephsmithpapers.org/person/john-tanner",
+          "https://history.churchofjesuschrist.org/chd/individual/john-tanner-1778?lang=eng"
+        ],
+        "tone": "Jared Carter reported taking Tanner’s hand and inviting him to walk in the name of Jesus Christ. This scene gives a visual telling of Carter’s account.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/history-story-art-fermi-review-20260929.json",
+        "review_notes": "Independent source/pixel review; owner requested five original story scenes. Hero appears once and responsive variant remains the same original. Technical review is separate from owner aesthetic approval."
+      },
+      {
+        "order": 2,
+        "key": "tanner-journey-kirtland",
+        "asset": "assets/page-art/history-stories/tanner-journey-kirtland-full.webp",
+        "responsive": "assets/page-art/history-stories/tanner-journey-kirtland-960.webp",
+        "sha256": "5ee4dc0f852789ea09aa0f1bd1ee32e1e0cf92bfecc8d2e2a8787fff92b49fb7",
+        "source_sha256": "f07fa01563a23e66dae0c6aa83321871858869edc67cb5ab68a633272fee7231",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/ensign/1979/03/the-john-tanner-family?lang=eng"
+        ],
+        "tone": "The later family account describes a winter move from New York to Kirtland. The road, weather, and traveling arrangements are imagined details of that journey.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/history-story-art-fermi-review-20260929.json",
+        "review_notes": "Independent source/pixel review; owner requested five original story scenes. Hero appears once and responsive variant remains the same original. Technical review is separate from owner aesthetic approval."
+      },
+      {
+        "order": 3,
+        "key": "tanner-temple-support",
+        "asset": "assets/page-art/history-stories/tanner-temple-support-full.webp",
+        "responsive": "assets/page-art/history-stories/tanner-temple-support-960.webp",
+        "sha256": "993daceaf5946e6d28324c8527ea1f7e2d8bc1e517d64f3f187a3482281f20bd",
+        "source_sha256": "c667646cb89ba45eda7504f386bc97389ed6ee0f5853ee8ab0ee79310fdd9d77",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/ensign/1979/03/the-john-tanner-family?lang=eng",
+          "https://www.josephsmithpapers.org/person/john-tanner",
+          "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/109?lang=eng&id=p1-p5#p1"
+        ],
+        "tone": "Tanner’s resources helped meet the demands of building the Kirtland Temple. The meeting and ordinary papers suggest that support without reproducing a surviving transaction document.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/history-story-art-fermi-review-20260929.json",
+        "review_notes": "Independent source/pixel review; owner requested five original story scenes. Hero appears once and responsive variant remains the same original. Technical review is separate from owner aesthetic approval."
+      },
+      {
+        "order": 4,
+        "key": "tanner-displacement",
+        "asset": "assets/page-art/history-stories/tanner-displacement-full.webp",
+        "responsive": "assets/page-art/history-stories/tanner-displacement-960.webp",
+        "sha256": "7f9868ac70480eaf5c718a7d87305339290a1da40ce1965a35b5578a216fb116",
+        "source_sha256": "1621c65fa82207ceccc83808bfa76913c4b4f0f2b09f21a3179393b5aa1feadf",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://www.josephsmithpapers.org/person/john-tanner",
+          "https://history.churchofjesuschrist.org/chd/individual/john-tanner-1778?lang=eng"
+        ],
+        "tone": "Tanner’s family moved through Missouri hardship and into Illinois. Packed belongings bring the work of leaving and beginning again into view; the exact home and arrangement are imagined.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/history-story-art-fermi-review-20260929.json",
+        "review_notes": "Independent source/pixel review; owner requested five original story scenes. Hero appears once and responsive variant remains the same original. Technical review is separate from owner aesthetic approval."
+      },
+      {
+        "order": 5,
+        "key": "tanner-debt-forgiven",
+        "asset": "assets/page-art/history-stories/tanner-debt-forgiven-full.webp",
+        "responsive": "assets/page-art/history-stories/tanner-debt-forgiven-960.webp",
+        "sha256": "05730366e5b409ef89dd41462416403666e52f7e19874347f2f35f88d4057826",
+        "source_sha256": "bbdd13c905655f73d4855206d6f2cd1801456c42d516f0afd300b0c7008e4d7f",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/ensign/1979/03/the-john-tanner-family?lang=eng",
+          "https://history.churchofjesuschrist.org/chd/individual/john-tanner-1778?lang=eng"
+        ],
+        "tone": "In the later family account, Tanner returned the Kirtland loan note and forgave the debt. This scene imagines that remembered gift in Nauvoo.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/history-story-art-fermi-review-20260929.json",
+        "review_notes": "Independent source/pixel review; owner requested five original story scenes. Hero appears once and responsive variant remains the same original. Technical review is separate from owner aesthetic approval."
+      }
+    ],
+    "history/eleazer-miller.html": [
+      {
+        "order": 1,
+        "key": "miller-search-before-witness",
+        "asset": "assets/page-art/history-stories/miller-search-before-witness-full.webp",
+        "responsive": "assets/page-art/history-stories/miller-search-before-witness-960.webp",
+        "sha256": "ea3c121b77e438ac22c828b3fdc5577e3c795d2f853b5ec4776b2c60b0e8c081",
+        "source_sha256": "d7f7d7a3dfb4b69f3b76a288190dbd963126bd05b4541e01bb3a54c7a91548a3",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/manual/teachings-brigham-young/chapter-1?lang=eng"
+        ],
+        "tone": "Brigham Young studied the Book of Mormon before joining the Church. This room imagines a quiet moment within that longer search.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/history-story-art-fermi-review-20260929.json",
+        "review_notes": "Independent source/pixel review; owner requested five original story scenes. Hero appears once and responsive variant remains the same original. Technical review is separate from owner aesthetic approval."
+      },
+      {
+        "order": 2,
+        "key": "miller-mission-road",
+        "asset": "assets/page-art/history-stories/miller-mission-road-full.webp",
+        "responsive": "assets/page-art/history-stories/miller-mission-road-960.webp",
+        "sha256": "72bb7819634ce367b2952b262957b3f8c1404f6b202190084a508059b8f3512f",
+        "source_sha256": "d0ced07014ad81f8c05845f3753bb7b0b5fb8b56da47f11ba99b9cb45921fc4e",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://history.churchofjesuschrist.org/chd/individual/eleazer-miller-1795?lang=eng"
+        ],
+        "tone": "Miller carried his new faith to communities in New York, Pennsylvania, and Upper Canada. The road and surroundings imagine the journeys recorded in his missionary history.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/history-story-art-fermi-review-20260929.json",
+        "review_notes": "Independent source/pixel review; owner requested five original story scenes. Hero appears once and responsive variant remains the same original. Technical review is separate from owner aesthetic approval."
+      },
+      {
+        "order": 3,
+        "key": "miller-simple-witness",
+        "asset": "assets/page-art/history-stories/miller-simple-witness-full.webp",
+        "responsive": "assets/page-art/history-stories/miller-simple-witness-960.webp",
+        "sha256": "8ff5bfbed008ac5fb4c678d56d06430212c18fe80171d10421642f443c40e65b",
+        "source_sha256": "c041e3f8b11db487e63b49f67647fe97fc7346a9e52c94ca8ad67fb955248308",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/manual/teachings-brigham-young/chapter-43?lang=eng",
+          "https://www.churchofjesuschrist.org/study/manual/teaching-seminary-preservice-readings-religion-370-471-and-475/teaching-by-the-spirit-the-language-of-inspiration?lang=eng"
+        ],
+        "tone": "Brigham remembered the power of a simple testimony. The room and gathered listeners give a setting to that recollection; their exact arrangement is not recorded.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/history-story-art-fermi-review-20260929.json",
+        "review_notes": "Independent source/pixel review; owner requested five original story scenes. Hero appears once and responsive variant remains the same original. Technical review is separate from owner aesthetic approval."
+      },
+      {
+        "order": 4,
+        "key": "miller-millstream-baptism",
+        "asset": "assets/page-art/history-stories/miller-millstream-baptism-full.webp",
+        "responsive": "assets/page-art/history-stories/miller-millstream-baptism-960.webp",
+        "sha256": "f62a73f92c15796b8e3b27cc7ba484adc5c9bcd248aeff4d7065b7b694c11efd",
+        "source_sha256": "6c23dad50c0e6d69c418ea6eb376d3d6393ff32d6d1d78e697946a4f89dfe182",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/manual/teachings-brigham-young/chapter-9?lang=eng",
+          "https://www.churchofjesuschrist.org/study/ensign/2007/10/living-in-a-chapter-of-history?lang=eng",
+          "https://www.churchofjesuschrist.org/study/manual/teachings-brigham-young/chapter-1?lang=eng"
+        ],
+        "tone": "Brigham remembered being baptized by Eleazer Miller in his millstream in April 1832. The winter setting recalls his account; the scene is reconstructed.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/history-story-art-fermi-review-20260929.json",
+        "review_notes": "Independent source/pixel review; owner requested five original story scenes. Hero appears once and responsive variant remains the same original. Technical review is separate from owner aesthetic approval."
+      },
+      {
+        "order": 5,
+        "key": "miller-westward-service",
+        "asset": "assets/page-art/history-stories/miller-westward-service-full.webp",
+        "responsive": "assets/page-art/history-stories/miller-westward-service-960.webp",
+        "sha256": "20dff8f8eb33aef7cd3f4664b5c6073939675f82264a6194112245bdaa5bb3db",
+        "source_sha256": "27f26cd90b65d746b455a5628038f9b71c32add23a64105ddaefe1a8f4a27420",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://history.churchofjesuschrist.org/chd/individual/eleazer-miller-1795?lang=eng",
+          "https://history.churchofjesuschrist.org/chd/transcript?name=transcript-for-john-heward-autobiography-circa-1871"
+        ],
+        "tone": "Miller crossed the plains in 1848. Preparing supplies for a wagon brings the practical work of that journey into view. The campsite and task are reconstructed.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/history-story-art-fermi-review-20260929.json",
+        "review_notes": "Independent source/pixel review; owner requested five original story scenes. Hero appears once and responsive variant remains the same original. Technical review is separate from owner aesthetic approval."
+      }
+    ],
+    "history/john-rowe-moyle.html": [
+      {
+        "order": 1,
+        "key": "moyle-handcart-journey",
+        "asset": "assets/page-art/history-stories/moyle-handcart-journey-full.webp",
+        "responsive": "assets/page-art/history-stories/moyle-handcart-journey-960.webp",
+        "sha256": "f0fdf1cb9d34a53563a70c46b6a5f9d795c7f9f7de3a28e145b0603f520addce",
+        "source_sha256": "9dbe27ba9936822c3596f7850a43bb0c44085644359f806b90c604d1879e79ac",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://ensignpeakfoundation.org/moyle-park-alpine-utah/",
+          "https://history.churchofjesuschrist.org/chd/individual/john-rowe-moyle-1808?lang=eng",
+          "https://history.churchofjesuschrist.org/chd/transcript?name=transcript-for-moyle-john-rowe-journal-1856-1858",
+          "https://history.churchofjesuschrist.org/chd/organization/pioneer-company/edmund-ellsworth-company-1856?lang=eng"
+        ],
+        "tone": "Moyle traveled with the Ellsworth handcart company in 1856. The trail and unnamed travelers imagine the overland journey recorded in his journal.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/history-story-art-fermi-review-20260929.json",
+        "review_notes": "Independent source/pixel review; owner requested five original story scenes. Hero appears once and responsive variant remains the same original. Technical review is separate from owner aesthetic approval."
+      },
+      {
+        "order": 2,
+        "key": "moyle-stonecutter-craft",
+        "asset": "assets/page-art/history-stories/moyle-stonecutter-craft-full.webp",
+        "responsive": "assets/page-art/history-stories/moyle-stonecutter-craft-960.webp",
+        "sha256": "4dc05f877633db340ab1a44bd235cbc53aad1295b37f270cffa783a34e0fbbd1",
+        "source_sha256": "71addc09196ae6511b55122f346dd3612f958803069a8ab50e17976db9f3d9af",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://ensignpeakfoundation.org/moyle-park-alpine-utah/",
+          "https://www.churchofjesuschrist.org/study/general-conference/2008/10/lift-where-you-stand?lang=eng"
+        ],
+        "tone": "Moyle brought his skills as a stonecutter to the long work of building the Salt Lake Temple. The unfinished walls recall its construction years.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/history-story-art-fermi-review-20260929.json",
+        "review_notes": "Independent source/pixel review; owner requested five original story scenes. Hero appears once and responsive variant remains the same original. Technical review is separate from owner aesthetic approval."
+      },
+      {
+        "order": 3,
+        "key": "moyle-weekly-walk",
+        "asset": "assets/page-art/history-stories/moyle-weekly-walk-full.webp",
+        "responsive": "assets/page-art/history-stories/moyle-weekly-walk-960.webp",
+        "sha256": "9ebf004152de35c2ecc6a7889be50f09030d597a61bf163c790ca1b2aeac7434",
+        "source_sha256": "d72e1a4ce7df77492231cf6e06f39891c40058dea450892a199ef31f2c22fa92",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/general-conference/2008/10/lift-where-you-stand?lang=eng",
+          "https://ensignpeakfoundation.org/moyle-park-alpine-utah/"
+        ],
+        "tone": "Later accounts remember Moyle walking between Alpine and his temple work in Salt Lake City. This imagined landscape recalls the persistence of those journeys.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/history-story-art-fermi-review-20260929.json",
+        "review_notes": "Independent source/pixel review; owner requested five original story scenes. Hero appears once and responsive variant remains the same original. Technical review is separate from owner aesthetic approval."
+      },
+      {
+        "order": 4,
+        "key": "moyle-wooden-leg",
+        "asset": "assets/page-art/history-stories/moyle-wooden-leg-full.webp",
+        "responsive": "assets/page-art/history-stories/moyle-wooden-leg-960.webp",
+        "sha256": "995c6e914c4bdaa83178ab5eddd080246f48fb439b91ee5ab05ac2b801988354",
+        "source_sha256": "316d8ec2edcdeb0c3082211b906aad9eeea2122e951b0b20e45c7fc8a4a3fb52",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/general-conference/2008/10/lift-where-you-stand?lang=eng",
+          "https://ensignpeakfoundation.org/moyle-park-alpine-utah/"
+        ],
+        "tone": "Accounts remember Moyle making a wooden leg after losing his lower leg. This reconstruction draws on a later replica; the exact original fittings remain uncertain.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/history-story-art-fermi-review-20260929.json",
+        "review_notes": "Independent source/pixel review; owner requested five original story scenes. Hero appears once and responsive variant remains the same original. Technical review is separate from owner aesthetic approval."
+      },
+      {
+        "order": 5,
+        "key": "moyle-return-to-craft",
+        "asset": "assets/page-art/history-stories/moyle-return-to-craft-full.webp",
+        "responsive": "assets/page-art/history-stories/moyle-return-to-craft-960.webp",
+        "sha256": "dcfe05958264160d0857ff6f51e1ebfc63216f852efe0055bcaef77a40398abe",
+        "source_sha256": "99903dfb9817d047b1c904f7bbf8ffa20f51da58bef36a36a992467d24dadbab",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/general-conference/2008/10/lift-where-you-stand?lang=eng",
+          "https://ensignpeakfoundation.org/moyle-park-alpine-utah/",
+          "https://history.churchofjesuschrist.org/chd/individual/john-rowe-moyle-1808?lang=eng",
+          "https://www.churchofjesuschrist.org/temples/details/salt-lake-temple?lang=eng"
+        ],
+        "tone": "Later accounts describe Moyle returning to temple work with a wooden leg. The scene imagines that determination; the prosthesis side and fittings are not established.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/history-story-art-fermi-review-20260929.json",
+        "review_notes": "Independent source/pixel review; owner requested five original story scenes. Hero appears once and responsive variant remains the same original. Technical review is separate from owner aesthetic approval."
+      }
     ]
   },
   "responsive_hero_variants_20260929": [

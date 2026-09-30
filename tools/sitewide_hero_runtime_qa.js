@@ -27,7 +27,7 @@ function collectPages(folder, recursive = false) {
         if (entry.isFile() && entry.name.endsWith('.html') && !['404.html', 'google3fa84a4b37862f36.html'].includes(entry.name)) canonicalFiles.push(relative === 'index.html' ? '/' : '/' + relative);
     }
 }
-for (const folder of ['', 'answers', 'art-study']) collectPages(folder);
+for (const folder of ['', 'answers', 'art-study', 'history']) collectPages(folder);
 collectPages('jesus-christ', true);
 assert.equal(canonical.length, new Set(canonical).size, 'Canonical inventory has no duplicate URLs');
 assert.deepEqual(new Set(canonical), new Set(canonicalFiles), 'Discover the complete canonical inventory');

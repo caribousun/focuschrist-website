@@ -39,7 +39,7 @@ def check():
     assert [len(item.select('li a')) for item in era_menus] == [6, 7, 5, 2]
     assert [a['href'] for item in era_menus for a in item.select('li a')] == ['#temple-' + c['id'] for c in chapters], 'Preserve all chapter IDs and chronological order'
     assert len(directory.select('.fc-button')) == 1 and directory.select_one('.fc-button')['href'] == '#temple-beginnings-eden', 'Single gold begin action, not twenty chapter pills'
-    assert soup.select_one('link[href="../temples-history.css?v=20260929-era-directory-1"]')
+    assert soup.select_one('link[href="../temples-history.css?v=20260929-related-hitbox-1"]')
     ready = json.loads((ROOT / 'docs/temples/art-ready.json').read_text(encoding='utf-8-sig'))
     nephi_review = json.loads((ROOT / 'docs/temples/nephi-source-first-review-20260929.json').read_text(encoding='utf-8'))
     rejected_hashes = {item['sha256'] for item in nephi_review['rejected']}
@@ -63,6 +63,11 @@ def check():
     expected = {c['art_id'] for c in pictures}
     assert {f.get('data-exclusive-artwork') for f in figures} == expected
     assert len(soup.select('#temple-history .fc-temple-history__chapter')) == len(chapters)
+    assert len(soup.select('#temple-history a.fc-temple-history__era-return')) == 4
+    assert [a.find_parent('section')['id'] for a in soup.select('a.fc-temple-history__era-return')] == ['temple-' + chapters[i]['id'] for i in (5, 12, 17, 19)]
+    assert not soup.select('.fc-temple-history__chapter > .fc-actions'), 'Remove repeated next/all-sections page controls; picture controls remain separate'
+    assert all('Sections ' in menu.select_one('.fc-temple-history__range').get_text() for menu in era_menus)
+    assert 'All chapters' not in soup.select_one('#temple-history').get_text()
     ids = Counter(el.get('id') for el in soup.select('[id]'))
     assert all(count == 1 for count in ids.values()), 'Unique chapter/picture/heading IDs'
     pixels = set()

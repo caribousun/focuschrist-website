@@ -26,7 +26,7 @@ def clean(s): return re.sub(r'\s+', ' ', s).strip()
 def category(path):
     if path.startswith('/answers/'): return 'Answer'
     if path.startswith('/art-study/') or path in {'/art.html', '/art-gallery.html'}: return 'Art'
-    if path in {'/church-history.html', '/joseph-smith-likeness.html', '/pioneers.html'}: return 'History'
+    if path.startswith('/history/') or path in {'/church-history.html', '/joseph-smith-likeness.html', '/pioneers.html'}: return 'History'
     if path == '/watch.html': return 'Watch'
     return 'Study'
 

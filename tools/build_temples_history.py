@@ -54,11 +54,11 @@ def build():
       '<p class="fc-eyebrow">A journey through scripture and history</p>',
       '<h2 id="temple-history-title">The temple story: from the beginning to today</h2>',
       '<p>Follow the story of sacred places, covenant worship, and Jesus Christ across scripture and the history of the Church. The linked passages let you read each account in its own setting.</p>',
-      '<nav class="fc-temple-history__directory" aria-label="Temple history chapters">',
-      '<p>Choose an era to explore its chapters, or begin with the first story.</p>']
+      '<nav class="fc-temple-history__directory" aria-label="Temple history eras">',
+      '<p>Choose an era to explore its sections, or begin with the first story.</p>']
     eras = [('Scriptural beginnings', 0, 6), ('Jesus Christ and temple worship', 6, 13), ('Restoration and pioneer temples', 13, 18), ('Temples throughout the world', 18, 20)]
     for label, start, end in eras:
-        output.append(f'<details class="fc-temple-history__era-menu"><summary><span>{esc(label)}</span><span class="fc-temple-history__range">Chapters {start + 1}–{end}</span></summary><ol start="{start + 1}">')
+        output.append(f'<details class="fc-temple-history__era-menu"><summary><span>{esc(label)}</span><span class="fc-temple-history__range">Sections {start + 1}–{end}</span></summary><ol start="{start + 1}">')
         for chapter in chapters[start:end]:
             output.append(f'<li><a href="#temple-{esc(chapter["id"])}">{esc(chapter["title"])}</a></li>')
         output.append('</ol></details>')
@@ -93,10 +93,10 @@ def build():
             output.append('<details><summary>Pause and reflect</summary><p>' + esc(chapter['reflection']) + '</p></details>')
         if chapter.get('related_study'):
             related = chapter['related_study']
-            output.append('<p>' + esc(related['introduction']) + ' <a href="' + esc(related['url']) + '">' + esc(related['label']) + '</a></p>')
-        next_id = 'temple-' + chapters[i]['id'] if i < len(chapters) else 'scripture-study'
-        next_label = chapters[i]['title'] if i < len(chapters) else 'Study the meaning of temple worship'
-        output.append(f'<div class="fc-actions"><a class="fc-button" href="#{esc(next_id)}">Continue: {esc(next_label)}</a><a class="fc-button" href="#temple-history">All chapters</a></div></section>')
+            output.append('<p>' + esc(related['introduction']) + ' <a class="fc-temple-history__related-link" href="' + esc(related['url']) + '">' + esc(related['label']) + '</a></p>')
+        if i in (6, 13, 18, 20):
+            output.append('<p><a class="fc-temple-history__era-return" href="#temple-history">Back to temple eras</a></p>')
+        output.append('</section>')
     output.extend(['</section>', END])
     content = PAGE.read_text(encoding='utf-8')
     block = '\n'.join(output)
@@ -107,12 +107,12 @@ def build():
         assert anchor in content
         content = content.replace(anchor, block + '\n' + anchor, 1)
         content = content.replace('<a href="#watch-study">Watch and study</a>', '<a href="#temple-history">Temples through time</a><a href="#watch-study">Watch and study</a>', 1)
-    style = '<link rel="stylesheet" href="../temples-history.css?v=20260929-era-directory-1">'
+    style = '<link rel="stylesheet" href="../temples-history.css?v=20260929-related-hitbox-1">'
     if re.search(r'<link rel="stylesheet" href="\.\./temples-history\.css\?v=[^"]+">', content):
         content = re.sub(r'<link rel="stylesheet" href="\.\./temples-history\.css\?v=[^"]+">', style, content)
     elif style not in content:
         content = content.replace('</head>', style + '\n</head>', 1)
-    content = re.sub(r'topic-artwork-details\.js\?v=[A-Za-z0-9-]+', 'topic-artwork-details.js?v=20260929-picture-flow-1', content)
+    content = re.sub(r'topic-artwork-details\.js\?v=[A-Za-z0-9-]+', 'topic-artwork-details.js?v=20260929-history-sources-2', content)
     PAGE.write_text(content, encoding='utf-8', newline='\n')
     print(f'Integrated {len(chapters)} reviewed original temple-history picture studies.')
 

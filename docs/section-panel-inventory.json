@@ -39,6 +39,9 @@
     "church-history.html",
     "come-follow-me.html",
     "general-conference.html",
+    "history/eleazer-miller.html",
+    "history/john-rowe-moyle.html",
+    "history/john-tanner.html",
     "index.html",
     "jesus-christ/before-bethlehem.html",
     "jesus-christ/miracles-and-compassion.html",
@@ -267,7 +270,7 @@
       "reason": "Named existing section panel; shared Home-derived surface only."
     },
     "fc-card": {
-      "count": 92,
+      "count": 95,
       "pages": [
         "about.html",
         "answers.html",
@@ -281,7 +284,8 @@
       "tags": [
         "a",
         "article",
-        "div"
+        "div",
+        "section"
       ],
       "disposition": "approved_reference_unchanged",
       "reason": "Existing approved Home surface remains unchanged."
@@ -451,6 +455,32 @@
       "disposition": "excluded_with_reason",
       "reason": "Approved Home image card; preserve pixels and image treatment."
     },
+    "fc-life-reflection": {
+      "count": 9,
+      "pages": [
+        "history/eleazer-miller.html",
+        "history/john-rowe-moyle.html",
+        "history/john-tanner.html"
+      ],
+      "tags": [
+        "div"
+      ],
+      "disposition": "coordinated_stylesheet_owner",
+      "reason": "Dedicated History story reflection panels use the shared Home panel tokens in exact reviewed history-stories.css; three owning story pages only."
+    },
+    "fc-life-reflections": {
+      "count": 3,
+      "pages": [
+        "history/eleazer-miller.html",
+        "history/john-rowe-moyle.html",
+        "history/john-tanner.html"
+      ],
+      "tags": [
+        "div"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Bare responsive layout for three meaningful reflection panels; no independent painted surface."
+    },
     "fc-mission-reflection": {
       "count": 4,
       "pages": [
@@ -522,7 +552,7 @@
       "reason": "Disclosure group; individual details receive surface."
     },
     "fc-resource-card": {
-      "count": 144,
+      "count": 150,
       "pages": [
         "about.html",
         "answers.html",
@@ -561,6 +591,9 @@
         "book-of-mormon-evidences.html",
         "church-history.html",
         "come-follow-me.html",
+        "history/eleazer-miller.html",
+        "history/john-rowe-moyle.html",
+        "history/john-tanner.html",
         "index.html",
         "joseph-smith-likeness.html",
         "missionary.html",
@@ -574,7 +607,7 @@
       "reason": "Named existing section panel; shared Home-derived surface only."
     },
     "fc-resource-card__body": {
-      "count": 144,
+      "count": 150,
       "pages": [
         "about.html",
         "answers.html",
@@ -613,6 +646,9 @@
         "book-of-mormon-evidences.html",
         "church-history.html",
         "come-follow-me.html",
+        "history/eleazer-miller.html",
+        "history/john-rowe-moyle.html",
+        "history/john-tanner.html",
         "index.html",
         "joseph-smith-likeness.html",
         "missionary.html",
@@ -626,7 +662,7 @@
       "reason": "Resource copy wrapper; parent card owns surface."
     },
     "fc-resource-card__image": {
-      "count": 144,
+      "count": 150,
       "pages": [
         "about.html",
         "answers.html",
@@ -665,6 +701,9 @@
         "book-of-mormon-evidences.html",
         "church-history.html",
         "come-follow-me.html",
+        "history/eleazer-miller.html",
+        "history/john-rowe-moyle.html",
+        "history/john-tanner.html",
         "index.html",
         "joseph-smith-likeness.html",
         "missionary.html",
@@ -678,7 +717,7 @@
       "reason": "Image container; preserve letterboxing and fit."
     },
     "fc-resource-card__kind": {
-      "count": 144,
+      "count": 150,
       "pages": [
         "about.html",
         "answers.html",
@@ -717,6 +756,9 @@
         "book-of-mormon-evidences.html",
         "church-history.html",
         "come-follow-me.html",
+        "history/eleazer-miller.html",
+        "history/john-rowe-moyle.html",
+        "history/john-tanner.html",
         "index.html",
         "joseph-smith-likeness.html",
         "missionary.html",
@@ -730,7 +772,7 @@
       "reason": "Text label within resource."
     },
     "fc-resource-card__play": {
-      "count": 105,
+      "count": 111,
       "pages": [
         "about.html",
         "answers.html",
@@ -766,6 +808,9 @@
         "book-of-mormon-evidences.html",
         "church-history.html",
         "come-follow-me.html",
+        "history/eleazer-miller.html",
+        "history/john-rowe-moyle.html",
+        "history/john-tanner.html",
         "index.html",
         "missionary.html",
         "pioneers.html",
@@ -778,7 +823,7 @@
       "reason": "Play control, not panel."
     },
     "fc-resource-card__source": {
-      "count": 139,
+      "count": 145,
       "pages": [
         "about.html",
         "answers.html",
@@ -817,6 +862,9 @@
         "book-of-mormon-evidences.html",
         "church-history.html",
         "come-follow-me.html",
+        "history/eleazer-miller.html",
+        "history/john-rowe-moyle.html",
+        "history/john-tanner.html",
         "index.html",
         "joseph-smith-likeness.html",
         "missionary.html",
@@ -1674,6 +1722,9 @@
         "church-history.html",
         "come-follow-me.html",
         "general-conference.html",
+        "history/eleazer-miller.html",
+        "history/john-rowe-moyle.html",
+        "history/john-tanner.html",
         "index.html",
         "jesus-christ/before-bethlehem.html",
         "jesus-christ/miracles-and-compassion.html",
@@ -1843,6 +1894,17 @@
       ],
       "disposition": "shared_surface"
     },
+    "fc-life-reflection": {
+      "stylesheets": [
+        "history-stories.css"
+      ],
+      "pages": [
+        "history/eleazer-miller.html",
+        "history/john-rowe-moyle.html",
+        "history/john-tanner.html"
+      ],
+      "disposition": "coordinated_stylesheet_owner"
+    },
     "fc-marriage-covenant": {
       "stylesheets": [
         "eternal-marriage-study.css"
@@ -1945,6 +2007,9 @@
         "church-history.html",
         "come-follow-me.html",
         "general-conference.html",
+        "history/eleazer-miller.html",
+        "history/john-rowe-moyle.html",
+        "history/john-tanner.html",
         "index.html",
         "jesus-christ/before-bethlehem.html",
         "jesus-christ/miracles-and-compassion.html",
@@ -2092,6 +2157,9 @@
         "book-of-mormon-evidences.html",
         "church-history.html",
         "come-follow-me.html",
+        "history/eleazer-miller.html",
+        "history/john-rowe-moyle.html",
+        "history/john-tanner.html",
         "index.html",
         "joseph-smith-likeness.html",
         "missionary.html",
@@ -2366,6 +2434,9 @@
         "church-history.html",
         "come-follow-me.html",
         "general-conference.html",
+        "history/eleazer-miller.html",
+        "history/john-rowe-moyle.html",
+        "history/john-tanner.html",
         "index.html",
         "jesus-christ/before-bethlehem.html",
         "jesus-christ/miracles-and-compassion.html",
@@ -3103,7 +3174,7 @@
       ]
     },
     ".fc-resource-card": {
-      "count": 144,
+      "count": 150,
       "pages": [
         "about.html",
         "answers.html",
@@ -3142,6 +3213,9 @@
         "book-of-mormon-evidences.html",
         "church-history.html",
         "come-follow-me.html",
+        "history/eleazer-miller.html",
+        "history/john-rowe-moyle.html",
+        "history/john-tanner.html",
         "index.html",
         "joseph-smith-likeness.html",
         "missionary.html",
