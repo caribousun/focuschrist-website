@@ -269,7 +269,7 @@ def main() -> int:
 
     for relative in PUBLIC_PAGES:
         public_text = (ROOT / relative).read_text(encoding="utf-8")
-        if 'site-system.css?v=20260927-anchor-alignment-1' not in public_text:
+        if 'site-system.css?v=20260930-study-alignment-1' not in public_text:
             fail(errors, f"{relative}: shared hero/menu cache revision is not globally locked")
 
     for relative in PUBLIC_PAGES:

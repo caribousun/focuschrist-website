@@ -1193,7 +1193,7 @@
         initMobileOpening();
         const openingStyle = document.createElement('link');
         openingStyle.rel = 'stylesheet';
-        openingStyle.href = relativeAssetHref('unified-opening.css?v=20260930-1');
+        openingStyle.href = relativeAssetHref('unified-opening.css?v=20260930-alignment-2');
         // Measure only after the opening stylesheet is ready. A failed stylesheet
         // leaves the established page opening intact instead of applying half a layout.
         openingStyle.addEventListener('load', function () {
