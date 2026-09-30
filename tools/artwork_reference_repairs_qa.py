@@ -65,7 +65,7 @@ def self_test():
  wrong=answers.replace('come-follow-me.html#personal-study-art','general-conference.html#conference-listening-art')
  gallery=(ROOT/'art.html').read_text(encoding='utf8')
  css=(ROOT/'art-experience.css').read_text(encoding='utf8')
- for case in [{'art.html':gallery.replace('<div class="gallery">','<div class="gallery"><div class="unexpected-card"></div>',1)},{'art-experience.css':css.replace('/ 10)', '/ 9)')},{'site-system.css':(ROOT/'site-system.css').read_text(encoding='utf8').replace('--fc-gallery: 1440px;', '--fc-gallery: 1600px;')},{'answers/stand-forever.html':changed},{'answers/stand-forever.html':duplicated},{'answers.html':wrong}]:
+ for case in [{'art.html':gallery.replace('<div class="gallery" id="art-gallery">','<div class="gallery" id="art-gallery"><div class="unexpected-card"></div>',1)},{'art-experience.css':css.replace('/ 10)', '/ 9)')},{'site-system.css':(ROOT/'site-system.css').read_text(encoding='utf8').replace('--fc-gallery: 1440px;', '--fc-gallery: 1600px;')},{'answers/stand-forever.html':changed},{'answers/stand-forever.html':duplicated},{'answers.html':wrong}]:
   try:check(case)
   except AssertionError:pass
   else:raise AssertionError('Duplicate or wrong-owner mutation escaped')
