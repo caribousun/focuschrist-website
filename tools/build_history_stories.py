@@ -44,7 +44,7 @@ def render(story, ready):
     base = (ROOT / 'church-history.html').read_text(encoding='utf-8')
     css = re.findall(r'<link[^>]+rel="stylesheet"[^>]+href="([^"]+)"', base)
     css = [x for x in css if not x.startswith('church-history.css')]
-    css.append('history-stories.css?v=20260930-history-opening-3')
+    css.append('history-stories.css?v=20260930-history-opening-4')
     scripts = ['site-common.js?v=20260929-footer-top-1', 'full-image-viewer.js?v=20260914-reopen-1', 'topic-artwork-details.js?v=20260930-history-records-1', 'site-search.js?v=20260919-focused-answers-1']
     out = ['<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">', f'<title>{esc(story["name"])} | Church History | focusChrist</title>', f'<meta name="description" content="{esc(story["introduction"])}"><link rel="canonical" href="https://focuschrist.com/history/{slug}.html">']
     out += [f'<meta property="og:url" content="https://focuschrist.com/history/{slug}.html">', f'<meta property="og:title" content="{esc(story["name"])} | Church History | focusChrist">', f'<meta property="og:description" content="{esc(story["introduction"])}">', f'<meta property="og:image" content="https://focuschrist.com/{ready[story["units"][0]["id"]]["full"]}">', '<meta name="twitter:card" content="summary_large_image">']
