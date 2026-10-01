@@ -54,7 +54,7 @@ const server = http.createServer((req,res) => {
           const s=getComputedStyle(a);return {style:s.outlineStyle,width:s.outlineWidth,offset:s.outlineOffset};
         });
         assert.notEqual(focus.style,'none');assert(parseFloat(focus.width)>=2);
-        await nav.screenshot({path:path.join(out,width+'-'+scale+'x-focus.png')});
+        await page.screenshot({path:path.join(out,width+'-'+scale+'x-focus.png')});
         for(const a of candidate.links){
           await page.locator('.fc-life-after-death-journey a[href="'+a.href+'"]').click();
           assert.equal(new URL(page.url()).hash,a.href);
