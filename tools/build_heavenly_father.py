@@ -2,6 +2,7 @@
 from pathlib import Path
 from urllib.parse import urlencode
 from bs4 import BeautifulSoup
+from scripture_reference_preservation_qa import check_text_reference
 import html, json, re, sys
 ROOT=Path(__file__).resolve().parents[1]
 DATA=ROOT/'docs/heavenly-father'
@@ -10,6 +11,11 @@ esc=html.escape
 data=json.loads((DATA/'content-plan.json').read_text(encoding='utf-8'))
 base=BeautifulSoup((DATA/'original-page.txt').read_text(encoding='utf-8'),'html.parser')
 current=BeautifulSoup(PAGE.read_text(encoding='utf-8'),'html.parser')
+# Preserve Wyatt's approved text-only link instead of restoring the retired preview.
+retired=base.select('[data-linked-picture-reference="modern-scripture"]')
+assert len(retired)==1
+approved=check_text_reference(current)
+retired[0].replace_with(BeautifulSoup(str(approved),'html.parser').article)
 plan=BeautifulSoup((ROOT/'answers/plan-of-salvation.html').read_text(encoding='utf-8'),'html.parser')
 route='/answers/god-our-heavenly-father.html'
 art={
