@@ -80,7 +80,7 @@ def enrich():
             tag=soup.new_tag('script',src='../'+asset,defer='');soup.body.append(tag)
     soup.select_one('link[href*="priesthood-history-study.css"]')['href']='../priesthood-history-study.css?v=20260930-enriched-4'
     common=soup.select_one('script[src*="site-common.js"]')
-    if common: common['src']='../site-common.js?v=20260930-art-disclosure-3'
+    if common: common['src']='../site-common.js?v=20261001-art-entry-1'
     for node in list(soup.main.find_all(string=re.compile('Official Declaration 2'))):
         if node.find_parent('a'): continue
         markup=esc(str(node)).replace('Official Declaration 2','<a class="fc-inline-scripture" href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/od/2?lang=eng">Official Declaration 2</a>')

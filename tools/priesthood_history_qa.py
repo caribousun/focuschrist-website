@@ -18,6 +18,10 @@ soup = BeautifulSoup(read(baseline['page']), 'html.parser')
 assert hashlib.sha256(str(soup.select_one('header')).encode()).hexdigest() == baseline['header_sha256']
 for key, digest in baseline['preserved_sections'].items():
     preserved = copy.deepcopy(soup.select_one('#' + key))
+    if key == 'melchizedek-priesthood-restoration':
+        art_links = [a for a in preserved.select('a[href]') if a.get_text() == 'the artwork gallery']
+        assert len(art_links) == 1 and art_links[0]['href'] == '../art.html', 'Generic Art entry must match the approved Art page'
+        art_links[0]['href'] = '../art-gallery.html' # Restore only this reviewed navigation href for the original section hash.
     if key == 'guided-practice':
         normalize_reviewed_reference(preserved) # Exact approved change only; retain original section digest.
     if key == 'continue-study':
