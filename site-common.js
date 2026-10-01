@@ -673,12 +673,14 @@
         if (!footer.querySelector('[data-focuschrist-art-gallery]')) {
             const gallery = document.createElement('p');
             const link = document.createElement('a');
-            link.href = relativeAssetHref('art-gallery.html');
+            link.href = relativeAssetHref('art.html');
             link.textContent = 'Art Gallery';
             link.setAttribute('data-focuschrist-art-gallery', '');
             gallery.appendChild(link);
             identity.after(gallery);
         }
+        // Keep saved and older footer entries aligned with the menu's Art destination.
+        footer.querySelector('[data-focuschrist-art-gallery]').href = relativeAssetHref('art.html');
         if (!footer.querySelector('[data-focuschrist-evidences]')) {
             const entry = document.createElement('p');
             const link = document.createElement('a');

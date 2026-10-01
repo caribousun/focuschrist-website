@@ -9,10 +9,27 @@ const artworkDisclosure = 'Artwork on focusChrist includes AI-generated artistic
 const pages = [...read('sitemap.xml').matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>new URL(m[1]).pathname);
 assert.equal(pages.length,125);
 assert.ok(pages.includes('/answers/race-priesthood-and-temple-blessings.html'),'new dependent study must receive the shared footer test');
+let bareGalleryEntries=0;
+for(const route of [...pages,'/404.html','/search.html']){
+ const file=route==='/'?'index.html':route.slice(1),dom=new JSDOM(read(file),{url:'https://focuschrist.com'+route});
+ for(const a of dom.window.document.querySelectorAll('a[href]')){
+  const url=new URL(a.href);
+  if(url.origin==='https://focuschrist.com'&&url.pathname==='/art-gallery.html'&&!url.search&&!url.hash){
+   assert.equal(file,'art.html','Generic Art destinations must not skip the approved opening: '+file);
+   assert.equal(a.textContent.trim(),'Browse All Artwork','Only the explicit complete-gallery action bypasses Art');bareGalleryEntries++;
+  }
+ }
+ dom.window.close();
+}
+assert.equal(bareGalleryEntries,1,'Art must retain its one explicit complete-gallery entry');
 for(const route of [...pages, '/404.html']){
  const file=route==='/'?'index.html':route.slice(1);
  const dom=new JSDOM(read(file),{url:'https://focuschrist.com'+route+'?from=footer#reading',runScripts:'outside-only'});
  const w=dom.window,d=w.document;let scroll;
+ const savedArt=d.querySelectorAll('footer [data-focuschrist-art-gallery]');
+ for(const a of savedArt)assert.equal(new URL(a.href).pathname,'/art.html',file+' any saved Art entry must use approved page');
+ const artCase=([...pages,'/404.html'].indexOf(route))%3;
+ if(artCase!==0){const p=d.createElement('p'),a=d.createElement('a');a.setAttribute('data-focuschrist-art-gallery','');a.href=artCase===1?'/art-gallery.html':'/art.html';a.textContent='Art Gallery';p.append(a);d.querySelector('footer').append(p);}
  const savedDisclosure=d.querySelectorAll('footer [data-focuschrist-artwork-disclosure="footer"]');
  assert.equal(savedDisclosure.length,1,file+' saved footer disclosure must work without scripts');
  assert.equal(savedDisclosure[0].textContent,artworkDisclosure,file+' exact artwork disclosure');
@@ -44,6 +61,10 @@ for(const route of [...pages, '/404.html']){
  d.dispatchEvent(new w.Event('DOMContentLoaded'));
  assert.equal(d.querySelectorAll('[data-focuschrist-back-to-top]').length,1,'No duplicate action after reinitialization');
  assert.equal(d.querySelectorAll('[data-focuschrist-artwork-disclosure]').length,1,file+' disclosure must be idempotent');
+ const art=d.querySelectorAll('footer [data-focuschrist-art-gallery]');
+ assert.equal(art.length,1,file+' Art footer entry must remain unique');
+ assert.equal(new URL(art[0].href).pathname,'/art.html',file+' Art footer and menu share destination');
+ assert([...d.querySelectorAll('.nav a[href]')].some(a=>new URL(a.href).pathname==='/art.html'),file+' matching Art menu destination');
  const disclosure=d.querySelector('[data-focuschrist-artwork-disclosure]');
  assert.equal(disclosure.textContent,artworkDisclosure);
  assert.equal(independence.nextElementSibling,disclosure,file+' runtime notice adjacency');
@@ -54,6 +75,8 @@ for(const route of [...pages, '/404.html']){
  dom.window.close();
 }
 const template=new JSDOM(read('docs/history-stories/footer.html.template')).window.document;
+const artPage=new JSDOM(read('art.html')).window.document;
+assert(artPage.querySelector('a[href="art-gallery.html"]'),'Separate gallery remains available from Art');
 assert.equal(template.querySelector('[data-focuschrist-artwork-disclosure]').textContent,artworkDisclosure,'History builder must preserve saved disclosure');
 const review=JSON.parse(read('docs/footer-navigation-review-20260929.json'));
 assert.equal(review.removed_breadcrumb_pages.length,102);
