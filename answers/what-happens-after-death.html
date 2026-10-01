@@ -16,11 +16,11 @@
 <style>
 /* Keep the numbered reading journey orderly on phones. */
 @media (max-width: 700px) {
-  body.fc-site .fc-life-after-death-journey {
+  body.fc-site .fc-study-nav.fc-life-after-death-journey:not(.jj-local-nav) {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
   }
-  body.fc-site .fc-life-after-death-journey > a {
+  body.fc-site .fc-study-nav.fc-life-after-death-journey:not(.jj-local-nav) > a:not(.fc-button--primary) {
     box-sizing: border-box;
     width: 100%;
     min-width: 0;
