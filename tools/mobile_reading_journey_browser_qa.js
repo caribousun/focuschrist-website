@@ -31,7 +31,7 @@ const server = http.createServer((req,res) => {
             links:[...nav.querySelectorAll('a')].map(a=>{
               const r=a.getBoundingClientRect(),s=getComputedStyle(a);
               return {text:a.textContent,href:a.getAttribute('href'),target:!!document.querySelector(a.getAttribute('href')),
-                x:r.x,y:r.y,width:r.width,height:r.height,scrollWidth:a.scrollWidth,clientWidth:a.clientWidth,
+                x:r.x,y:r.y-nav.getBoundingClientRect().y,width:r.width,height:r.height,scrollWidth:a.scrollWidth,clientWidth:a.clientWidth,
                 color:s.color,background:s.backgroundImage,border:s.borderColor,align:s.textAlign};
             })};
         });
