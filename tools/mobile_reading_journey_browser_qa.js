@@ -46,6 +46,11 @@ const server = http.createServer((req,res) => {
             if(i) assert(a.y>=candidate.links[i-1].y+candidate.links[i-1].height+8);
           }
         }
+        if(width>700){
+          await page.evaluate(()=>[...document.querySelectorAll('style')].find(s=>s.textContent.includes('fc-life-after-death-journey')).remove());
+          const baseline=await read();
+          assert.deepEqual(candidate,baseline,'Desktop must match existing layout');
+        }
         const nav=page.locator('.fc-life-after-death-journey');
         await nav.scrollIntoViewIfNeeded();
         await nav.screenshot({path:path.join(out,width+'-'+scale+'x.png')});
@@ -58,11 +63,6 @@ const server = http.createServer((req,res) => {
         for(const a of candidate.links){
           await page.locator('.fc-life-after-death-journey a[href="'+a.href+'"]').click();
           assert.equal(new URL(page.url()).hash,a.href);
-        }
-        if(width>700){
-          await page.evaluate(()=>[...document.querySelectorAll('style')].find(s=>s.textContent.includes('fc-life-after-death-journey')).remove());
-          const baseline=await read();
-          assert.deepEqual(candidate,baseline,'Desktop must match existing layout');
         }
         results.push({width,scale,focus,...candidate});
         await page.close();
