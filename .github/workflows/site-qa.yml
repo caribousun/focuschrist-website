@@ -171,6 +171,18 @@ jobs:
           npm install --prefix /tmp/focus-row-qa --no-save --package-lock=false --ignore-scripts playwright@1.55.1
           /tmp/focus-row-qa/node_modules/.bin/playwright install --with-deps chromium
 
+      - name: Verify centered marriage study and unique scripture artwork
+        run: NODE_PATH=/tmp/focus-row-qa/node_modules node tools/marriage_study_browser_qa.js
+
+      - name: Save marriage study viewport evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: marriage-study-render
+          path: .qa-artifacts/marriage-study/
+          include-hidden-files: true
+          if-no-files-found: ignore
+
       - name: Verify historical story hero pixels in Chromium
         run: |
           python tools/history_hero_pixels_qa.py --self-test
