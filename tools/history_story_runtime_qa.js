@@ -65,7 +65,7 @@ if (!process.argv.includes('--source-host-only')) {
   for (const slug of selected) {
     const dom = setup(read(`history/${slug}.html`), `https://focuschrist.com/history/${slug}.html`);
     const d = dom.window.document;
-    assert.equal(new URL(d.querySelector('[data-focuschrist-art-gallery]').href).pathname, '/art-gallery.html');
+    assert.equal(new URL(d.querySelector('[data-focuschrist-art-gallery]').href).pathname, '/art.html', 'History footer must use the approved Art opening');
     assert.equal(new URL(d.querySelector('[data-focuschrist-evidences]').href).pathname, '/book-of-mormon-evidences.html');
     assert.equal(new URL(d.querySelector('[data-focuschrist-scripture-library]').src).pathname, '/scripture-library.js');
     for (const a of d.querySelectorAll('nav[data-focuschrist-header] a[href]')) {
