@@ -26,6 +26,16 @@ STUDY_CENTER_APPENDIX = b'\n/* Owner-requested centered study choices; chapter p
 STUDY_CENTER_SHA256 = '17d2b86bc2afc65b8133b6cc2831028b02590fe6874a13098345f5f5a1ec35fc'
 STUDY_CENTER_VERSION = "20260930-study-alignment-1"
 
+PIONEER_SOURCE_APPENDIX = b'\n/* Source-note disclosures use the shared source controls and reading rhythm. */\nbody.fc-site .pioneer-source-notes { padding: 18px; }\nbody.fc-site .pioneer-source-notes > summary { padding: 0; }\nbody.fc-site .pioneer-source-notes[open] > summary { margin-bottom: 18px; }\nbody.fc-site .pioneer-source-notes > p { margin: 0 0 1em; }\nbody.fc-site .pioneer-source-notes > .fc-actions { margin-block: 18px 24px; }\n'
+PIONEER_SOURCE_SHA256 = 'bac16e7b45f6d0151ac7092ee2afcd5f22286c2f84a8866a70a675e44fc33809'
+PIONEER_SOURCE_VERSION = '20260930-source-controls-1'
+
+def before_pioneer_sources(data):
+    if hashlib.sha256(data).hexdigest() == PIONEER_SOURCE_SHA256 and data.endswith(PIONEER_SOURCE_APPENDIX):
+        return data[:-len(PIONEER_SOURCE_APPENDIX)]
+    return data
+
+
 def before_study_center(data):
     if hashlib.sha256(data).hexdigest() == STUDY_CENTER_SHA256 and data.endswith(STUDY_CENTER_APPENDIX):
         return data[:-len(STUDY_CENTER_APPENDIX)]
@@ -55,7 +65,7 @@ def historical_style_bytes(data):
     reviewed bytes. The mandatory current-file checks separately reject stale
     files and any mutation to the approved anchor-only transformation.
     """
-    data = before_study_center(before_topic_desktop(before_search_hitbox(data)))
+    data = before_pioneer_sources(before_study_center(before_topic_desktop(before_search_hitbox(data))))
     digest = hashlib.sha256(data).hexdigest()
     record = next((r for r in FILES.values() if r['after_sha256'] == digest), None)
     if not record:
@@ -83,6 +93,9 @@ def historical_style_bytes(data):
 
 def reviewed_anchor_style(name, data):
     record = FILES.get(name)
+    if name == 'pioneer-story.css':
+        if hashlib.sha256(data).hexdigest() != PIONEER_SOURCE_SHA256: return False
+        data = before_pioneer_sources(data)
     if name == 'site-system.css':
         if hashlib.sha256(data).hexdigest() != STUDY_CENTER_SHA256: return False
         data = before_study_center(data)
@@ -115,7 +128,7 @@ def check():
         if rel.startswith(('tools/', 'work/', 'node_modules/', '.git/')):
             continue
         for filename, version in re.findall(r'([\w-]+\.css)\?v=([\w.-]+)', path.read_text(encoding='utf-8')):
-            expected = STUDY_CENTER_VERSION if filename == 'site-system.css' else SEARCH_VERSION if filename == 'site-search.css' else TOPIC_DESKTOP_VERSION if filename == 'topic-study-pages.css' else CONTRACT['version']
+            expected = PIONEER_SOURCE_VERSION if filename == 'pioneer-story.css' else STUDY_CENTER_VERSION if filename == 'site-system.css' else SEARCH_VERSION if filename == 'site-search.css' else TOPIC_DESKTOP_VERSION if filename == 'topic-study-pages.css' else CONTRACT['version']
             if filename in FILES and version != expected:
                 errors.append('Stale anchor stylesheet: ' + rel + ': ' + filename)
     return errors

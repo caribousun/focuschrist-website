@@ -183,6 +183,18 @@ jobs:
           include-hidden-files: true
           if-no-files-found: ignore
 
+      - name: Verify Pioneer source controls match shared presentation
+        run: NODE_PATH=/tmp/focus-row-qa/node_modules node tools/pioneer_source_controls_browser_qa.js
+
+      - name: Save Pioneer source control viewport evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pioneer-source-controls-render
+          path: .qa-artifacts/pioneer-sources/
+          include-hidden-files: true
+          if-no-files-found: ignore
+
       - name: Verify historical story hero pixels in Chromium
         run: |
           python tools/history_hero_pixels_qa.py --self-test

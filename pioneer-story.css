@@ -236,3 +236,10 @@ body.fc-site .pioneer-music-jump { text-align: center; margin-top: 18px; }
     }
     body.fc-site .pioneer-art-grid--three > .pioneer-art-card:last-child > a { min-width: 0; }
 }
+
+/* Source-note disclosures use the shared source controls and reading rhythm. */
+body.fc-site .pioneer-source-notes { padding: 18px; }
+body.fc-site .pioneer-source-notes > summary { padding: 0; }
+body.fc-site .pioneer-source-notes[open] > summary { margin-bottom: 18px; }
+body.fc-site .pioneer-source-notes > p { margin: 0 0 1em; }
+body.fc-site .pioneer-source-notes > .fc-actions { margin-block: 18px 24px; }

@@ -146,7 +146,7 @@ def boundary_errors(mission, history, pioneer, css):
         errors.append('History must retain seven artwork panels, including the four corrected figures, without offset modifiers')
     links = [n.attrs.get('href', '') for n in nodes(pioneer) if n.tag == 'link'
              and urlsplit(n.attrs.get('href', '')).path == 'pioneer-story.css']
-    if len(links) != 1 or parse_qs(urlsplit(links[0]).query).get('v') != ['20260927-anchor-alignment-1']:
+    if len(links) != 1 or parse_qs(urlsplit(links[0]).query).get('v') != ['20260930-source-controls-1']:
         errors.append('Pioneer boundary stylesheet version must be current and unique')
     clean = re.sub(r'/\*.*?\*/', '', css, flags=re.S)
     def rule(query, selector, expected):
@@ -177,7 +177,7 @@ def boundary_fixture_tests(mission, history, pioneer, css):
     assert boundary_errors(mission, history.replace('<figure class="fc-history-art-panel', '<figure class="fc-history-art-panel fc-history-art-panel--offset-left', 1), pioneer, css)
     assert boundary_errors(mission, history, pioneer, css.replace('var(--fc-body-gutter, 24px)', 'var(--fc-body-gutter, 14px)'))
     assert boundary_errors(mission, history, pioneer, css.replace('width: 100%;\n        display: grid;', 'width: 560px;\n        display: grid;'))
-    assert boundary_errors(mission, history, pioneer.replace('20260927-anchor-alignment-1', 'stale'), css)
+    assert boundary_errors(mission, history, pioneer.replace('20260930-source-controls-1', 'stale'), css)
 
 
 def page_wrap_errors(html, css, stylesheet, selector):
