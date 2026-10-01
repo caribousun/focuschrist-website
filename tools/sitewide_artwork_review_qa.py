@@ -47,8 +47,11 @@ ANSWERS_FEATURED_RULES = {
 def reviewed_marriage_body_style(data):
     appendix=b'\n/* Keep the numbered study grid on the same centered rail as its section. */\n.fc-marriage-practice>li:last-child{grid-column:1 / -1}\n#practice>.fc-eyebrow,#practice>h2,#scripture-path>.fc-eyebrow,#scripture-path>h2,#scripture-path>p{text-align:center}\n'
     if not data.endswith(appendix):return False
-    original=data[:-len(appendix)].replace(b'gap:14px;margin:24px 0;padding:0;list-style:none',b'gap:14px;margin:24px 0',1)
-    return (hashlib.sha256(data).hexdigest()=='72c28c5020b5b240fdb4f7eff339543f7f62e07d21e8629ebb821ff141530376'
+    original=(data[:-len(appendix)]
+              .replace(b'gap:14px;margin:24px 0;padding:0;list-style:none',b'gap:14px;margin:24px 0',1)
+              .replace(b'padding:18px 18px 18px calc(30px + 1.75em)',b'padding:18px 18px 18px 58px',1)
+              .replace(b'width:1.75em;height:1.75em;line-height:1;border-radius:50%',b'width:28px;height:28px;border-radius:50%',1))
+    return (hashlib.sha256(data).hexdigest()=='0ee7e8ac7887d354e0543c9ef0432289ef7ddb6e50f74fd696eb8bd5a3fd4c25'
             and hashlib.sha256(original).hexdigest()=='c8e02337250660714d95801f4998efc017541a618cfd45f0e244a58ef3073f13')
 
 def reviewed_answers_featured(selector, body, data):
