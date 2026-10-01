@@ -2282,6 +2282,22 @@
       "width": 640,
       "height": 360,
       "verified_date": "2026-09-29"
+    },
+    {
+      "key": "still-bednar-be-still",
+      "url": "https://www.churchofjesuschrist.org/media/video/2024-04-2010-david-a-bednar?lang=eng",
+      "transcript_url": "https://www.churchofjesuschrist.org/study/general-conference/2024/04/21bednar?lang=eng",
+      "title": "“Be Still, and Know That I Am God”",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/1d544fb4f45b11ee8a11eeeeac1e85ad8d9c20c3/full/1200,630/0/default",
+      "local_thumbnail": "assets/resources/still-bednar-be-still.jpg",
+      "width": 1200,
+      "height": 630,
+      "sha256": "aa1e22f898ef362c0f56c99c83f8effaf2ef1cf8cb8b0b3b3efd30448ce416ed",
+      "status": 200,
+      "thumbnail_status": 200,
+      "verified_date": "2026-10-01",
+      "kind": "General Conference",
+      "description": "Elder David A. Bednar, April 2024. Official native preview downloaded unchanged from this video page."
     }
   ],
   "reviewed_on": "2026-09-07",

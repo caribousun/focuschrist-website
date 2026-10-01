@@ -564,7 +564,7 @@
       "reason": "Disclosure group; individual details receive surface."
     },
     "fc-resource-card": {
-      "count": 150,
+      "count": 151,
       "pages": [
         "about.html",
         "answers.html",
@@ -620,7 +620,7 @@
       "reason": "Named existing section panel; shared Home-derived surface only."
     },
     "fc-resource-card__body": {
-      "count": 150,
+      "count": 151,
       "pages": [
         "about.html",
         "answers.html",
@@ -676,7 +676,7 @@
       "reason": "Resource copy wrapper; parent card owns surface."
     },
     "fc-resource-card__image": {
-      "count": 150,
+      "count": 151,
       "pages": [
         "about.html",
         "answers.html",
@@ -732,7 +732,7 @@
       "reason": "Image container; preserve letterboxing and fit."
     },
     "fc-resource-card__kind": {
-      "count": 150,
+      "count": 151,
       "pages": [
         "about.html",
         "answers.html",
@@ -788,7 +788,7 @@
       "reason": "Text label within resource."
     },
     "fc-resource-card__play": {
-      "count": 111,
+      "count": 112,
       "pages": [
         "about.html",
         "answers.html",
@@ -840,7 +840,7 @@
       "reason": "Play control, not panel."
     },
     "fc-resource-card__source": {
-      "count": 145,
+      "count": 146,
       "pages": [
         "about.html",
         "answers.html",
@@ -3216,7 +3216,7 @@
       ]
     },
     ".fc-resource-card": {
-      "count": 150,
+      "count": 151,
       "pages": [
         "about.html",
         "answers.html",
