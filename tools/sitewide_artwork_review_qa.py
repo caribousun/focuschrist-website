@@ -43,6 +43,17 @@ ANSWERS_FEATURED_RULES = {
     },
 }
 
+
+def reviewed_marriage_body_style(data):
+    appendix=b'\n/* Keep the numbered study grid on the same centered rail as its section. */\n.fc-marriage-practice>li:last-child{grid-column:1 / -1}\n#practice>.fc-eyebrow,#practice>h2,#scripture-path>.fc-eyebrow,#scripture-path>h2,#scripture-path>p{text-align:center}\n'
+    if not data.endswith(appendix):return False
+    original=(data[:-len(appendix)]
+              .replace(b'gap:14px;margin:24px 0;padding:0;list-style:none',b'gap:14px;margin:24px 0',1)
+              .replace(b'padding:18px 18px 18px calc(30px + 1.75em)',b'padding:18px 18px 18px 58px',1)
+              .replace(b'width:1.75em;height:1.75em;line-height:1;border-radius:50%',b'width:28px;height:28px;border-radius:50%',1))
+    return (hashlib.sha256(data).hexdigest()=='0ee7e8ac7887d354e0543c9ef0432289ef7ddb6e50f74fd696eb8bd5a3fd4c25'
+            and hashlib.sha256(original).hexdigest()=='c8e02337250660714d95801f4998efc017541a618cfd45f0e244a58ef3073f13')
+
 def reviewed_answers_featured(selector, body, data):
     data = historical_style_bytes(data)
     return (re.sub(r'\s+', '', body) in ANSWERS_FEATURED_RULES.get(selector.strip(), set())
@@ -212,6 +223,10 @@ def main():
     ap=argparse.ArgumentParser();ap.add_argument('--self-test',action='store_true');ap.add_argument('--baseline-report');args=ap.parse_args()
     composition_check()
     if args.self_test:
+        marriage=(ROOT/'eternal-marriage-study.css').read_bytes()
+        assert reviewed_marriage_body_style(marriage)
+        assert not reviewed_marriage_body_style(marriage+b'\n.fc-topic-unique-hero{height:9px}')
+        assert not reviewed_marriage_body_style(marriage.replace(b'padding:0',b'padding:9px'))
         anchor_self_test()
         answers_css = (ROOT/'answers-hero.css').read_bytes()
         for selector, bodies in ANSWERS_FEATURED_RULES.items():
@@ -533,12 +548,18 @@ def main():
         check(consumers == set(owners), 'Owner-reviewed stylesheet consumer set changed: '+name)
     for name in ANCHOR_STYLES:
         check(reviewed_anchor_style(name, (ROOT/name).read_bytes()), 'Anchor-only transformation differs from exact reviewed bytes: '+name)
+    marriage_css=(ROOT/'eternal-marriage-study.css').read_bytes()
+    check(reviewed_marriage_body_style(marriage_css), 'Marriage body rules differ from exact reviewed change or preserved original CSS')
+    check(not reviewed_marriage_body_style(marriage_css+b'\n.fc-topic-unique-hero{height:9px}'), 'Marriage hero mutation escaped')
+    marriage_owners={p.relative_to(ROOT).as_posix() for p in ROOT.rglob('*.html') if 'eternal-marriage-study.css' in p.read_text(encoding='utf-8') and not set(p.parts)&{'tools','.git','node_modules'}}
+    check(marriage_owners=={'answers/what-is-eternal-marriage.html'}, 'Marriage stylesheet escaped its single owner')
     excluded_styles={MISSION_ENRICHMENT_STYLE,WATCH_SHORTS_STYLE,'missionary.css',HOME_STYLE,'focused-answers.css',tool_style,bom_style,pioneer_style,pioneer_ask_style,settle_style,row_style,BIBLE_STYLE,JOURNEY_STYLE,'site-system.css','site-header.css','study-navigation.css'}
     picture_pill_bytes = (ROOT/'artwork-actions.css').read_bytes()
     check(reviewed_picture_pill_style(picture_pill_bytes), 'Picture source pills differ from exact scoped reviewed change')
     check(not reviewed_picture_pill_style(picture_pill_bytes.replace(b'999px;', b'10px;', 1)), 'Picture pill radius mutation escaped')
     check(not reviewed_picture_pill_style(picture_pill_bytes+b'\n.x{height:1px}'), 'Unrelated picture stylesheet mutation escaped')
     excluded_styles.add('artwork-actions.css')
+    excluded_styles.add('eternal-marriage-study.css')
     excluded_styles.update(SCOPED_INTERFACE_STYLES)
     excluded_styles.update(OWNER_20260929_STYLES)
     # These files have just passed the exact full-byte AND reconstructed baseline

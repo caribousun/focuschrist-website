@@ -1,6 +1,7 @@
 """Exact Answer opening inventory and preserved-art contract; rendering is separate."""
 from pathlib import Path
-import hashlib,json,re
+import hashlib,json,re,copy
+from scripture_reference_preservation_qa import normalize_reviewed_reference
 from bs4 import BeautifulSoup
 ROOT=Path(__file__).resolve().parents[1]
 BASELINE=json.loads((ROOT/'docs/answer-opening-baseline.json').read_text(encoding='utf8'))
@@ -57,7 +58,10 @@ def check():
                 img.decompose()
             assert len(doc.select('img'))==6, 'Preserve six original official media previews'
         assert digest(str(header))==r['opening_sha256'],name+': opening copy/hero markup changed'
-        assert digest(''.join(str(i) for i in doc.select('img')))==r['images_sha256'],name+': approved image references/attributes changed'
+        images=copy.deepcopy(doc)
+        if images.select('[data-linked-study-reference="modern-scripture"]'):
+            normalize_reviewed_reference(images) # Exact retired preview only; retain original whole-image digest.
+        assert digest(''.join(str(i) for i in images.select('img')))==r['images_sha256'],name+': approved image references/attributes changed'
         for css,owned in [('answer-opening.css',name in topics),('covenant-opening.css',name==COVENANT)]:
             links=[l for l in doc.select('link[rel="stylesheet"]') if css in l.get('href','')]
             assert len(links)==int(owned),name+': wrong opening stylesheet ownership'

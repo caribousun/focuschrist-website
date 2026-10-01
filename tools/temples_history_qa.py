@@ -6,6 +6,7 @@ import json
 from urllib.parse import urlsplit
 from bs4 import BeautifulSoup
 from PIL import Image
+from scripture_reference_preservation_qa import RETIRED_SOURCE, check_text_reference
 
 ROOT = Path(__file__).resolve().parents[1]
 PAGE = 'answers/why-latter-day-saints-build-temples.html'
@@ -18,7 +19,8 @@ def check():
     soup = BeautifulSoup((ROOT / PAGE).read_text(encoding='utf-8'), 'html.parser')
     baseline = json.loads((ROOT / 'docs/temples/existing-page-baseline.json').read_text(encoding='utf-8'))
     current_sources = {img.get('src') for img in soup.select('img')}
-    assert set(baseline['required_image_srcs']) <= current_sources, 'Preserve existing images and reference links'
+    check_text_reference(soup)
+    assert set(baseline['required_image_srcs']) - {RETIRED_SOURCE} <= current_sources, 'Preserve every other existing image and reference link'
     assert hashlib.sha256(str(soup.select_one('header')).encode()).hexdigest() == baseline['header_sha256'], 'Temple expansion must preserve existing hero markup'
     source_text = (ROOT / 'docs/temples/chapters.json').read_text(encoding='utf-8-sig')
     assert_clean_source_text(source_text)

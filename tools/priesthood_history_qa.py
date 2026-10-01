@@ -7,6 +7,7 @@ from urllib.parse import urlsplit
 import copy, hashlib, json, sys
 from bs4 import BeautifulSoup
 
+from scripture_reference_preservation_qa import RETIRED_SOURCE, check_text_reference, normalize_reviewed_reference
 ROOT = Path(__file__).resolve().parents[1]
 CHILD = 'answers/race-priesthood-and-temple-blessings.html'
 read = lambda p: (ROOT / p).read_text(encoding='utf-8')
@@ -17,13 +18,16 @@ soup = BeautifulSoup(read(baseline['page']), 'html.parser')
 assert hashlib.sha256(str(soup.select_one('header')).encode()).hexdigest() == baseline['header_sha256']
 for key, digest in baseline['preserved_sections'].items():
     preserved = copy.deepcopy(soup.select_one('#' + key))
+    if key == 'guided-practice':
+        normalize_reviewed_reference(preserved) # Exact approved change only; retain original section digest.
     if key == 'continue-study':
         cards = preserved.select('article[data-balanced-study-row="last"]')
         assert len(cards) == 1 and cards[0].get('class') == ['fc-study-promotion'], 'Exact centered onward-card presentation required'
         assert cards[0].select_one('h3 a').get('href') == '../church-history.html', 'Preserve the Return to Church History destination'
         del cards[0]['class'] # Only this owner-reviewed presentation class differs from the original section.
     assert hashlib.sha256(str(preserved).encode()).hexdigest() == digest, ('Preserve existing section', key)
-assert set(baseline['image_sources']) <= {img.get('src') for img in soup.select('img')}
+check_text_reference(soup)
+assert set(baseline['image_sources']) - {RETIRED_SOURCE} <= {img.get('src') for img in soup.select('img')}
 section = soup.select_one('#priesthood-and-temple-blessings')
 assert section and not section.select(':scope > section'), 'Parent must introduce the dedicated study'
 assert len(section.select(':scope > p')) >= 2

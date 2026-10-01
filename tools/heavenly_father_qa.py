@@ -28,6 +28,16 @@ def check_structure(text):
  for im in old.select('img'):
   # Nelson is the sole explicitly reviewed native thumbnail upgrade.
   if im.find_parent(attrs={'data-resource-key':'god-overcome-world'}):continue
+  # Wyatt removed this repeated preview; preserve its exact owning study instead.
+  if im.find_parent(attrs={'data-linked-picture-reference':'modern-scripture'}):
+   assert im.get('src')=='/assets/page-art/jesus-journey/modern-scripture-960.webp'
+   refs=s.select('[data-linked-study-reference="modern-scripture"]')
+   assert len(refs)==1 and not refs[0].select('img'),'Removed preview must remain text-only'
+   dest='/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-scripture'
+   assert refs[0].select_one('.fc-actions.fc-actions--content > a.fc-button[href="'+dest+'"]'),'Exact scripture owning-study path preserved'
+   owner=BeautifulSoup((ROOT/'answers/jesus-christ-latter-day-saint-beliefs.html').read_text(encoding='utf-8'),'html.parser')
+   assert owner.select_one('#picture-modern-scripture img[src="'+im['src']+'"]'),'Original picture retained on owner'
+   continue
   assert any(n.get('src')==im.get('src') for n in s.select('img')),'Existing image source changed'
  guide=s.select('.fc-topic-opening p.fc-father-opening-guide');assert len(guide)==1 and guide[0].get_text()=='Explore scripture about our Heavenly Father, His love, and our relationship with Him. Follow the passages and questions throughout the study.' and guide[0].get('class')==['fc-topic-subtitle','fc-father-opening-guide'] and not guide[0].has_attr('hidden'),'Exact permanent owner-requested opening guide'
  opening=copy.deepcopy(s.select_one('.fc-topic-opening'));opening.select_one('.fc-father-opening-guide').decompose()
@@ -60,7 +70,7 @@ def check_art(s,review=None):
   assert f.select_one('img')['src']=='/'+thumb and f.select_one('a')['href']=='/'+full,'Reviewed delivery mismatch'
 
 def selftest(text):
- mutations=[('enos-prayer-960.webp','wrong.webp'),('#keepers-of-the-record','#wrong'),('class="hf-owned-reference','data-full-image-viewer class="hf-owned-reference'),('id="abraham-inherited-records"','id="bad"'),('hf-adam-eve-teach','hf-wrong'),('kept-record-v2-800.webp','kept-record-800.webp'),('href="holy-ghost.html"','href="wrong.html"')]
+ mutations=[('enos-prayer-960.webp','wrong.webp'),('#keepers-of-the-record','#wrong'),('class="hf-owned-reference','data-full-image-viewer class="hf-owned-reference'),('id="abraham-inherited-records"','id="bad"'),('hf-adam-eve-teach','hf-wrong'),('kept-record-v2-800.webp','kept-record-800.webp'),('href="holy-ghost.html"','href="wrong.html"'),('#picture-modern-scripture','#wrong-scripture-owner'),('data-linked-study-reference="modern-scripture">','data-linked-study-reference="modern-scripture"><img src="/assets/page-art/jesus-journey/modern-scripture-960.webp">')]
  for old,new in mutations:
   assert old in text,old
   try:check_art(check_structure(text.replace(old,new,1)))
@@ -70,7 +80,7 @@ def selftest(text):
  try:check_art(check_structure(text),review)
  except AssertionError:pass
  else:raise AssertionError('Hash mutation escaped')
- print('PASS 8 Father mutation fixtures')
+ print('PASS 10 Father mutation fixtures')
 if __name__=='__main__':
  text=(ROOT/PAGE).read_text(encoding='utf-8');check_art(check_structure(text))
  if '--selftest' in sys.argv:selftest(text)
