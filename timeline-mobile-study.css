@@ -1,0 +1,51 @@
+/* One contained study area: the map stays above the independently scrolling reader. */
+.timeline-mobile-tabs{display:none}
+body.fc-timeline-experience{overflow-anchor:none}
+@media(max-width:1020px){body.fc-timeline-experience nav[data-focuschrist-header="standard"]{position:sticky!important;top:0!important;z-index:1100}}
+@media(max-width:900px){
+ body.fc-timeline-experience [data-timeline-workspace]{height:calc(100dvh - var(--timeline-menu-height,64px) - 24px);min-height:300px;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(100px,28dvh) auto minmax(96px,1fr);gap:8px;overflow:visible;margin-top:18px;scroll-margin-top:calc(var(--timeline-menu-height,64px) + 12px)}
+ [data-timeline-workspace] [data-timeline-pane-grid],[data-timeline-workspace] .main-col,[data-timeline-workspace] .rail{display:contents!important}
+ body.fc-timeline-experience [data-timeline-workspace]>.controls{position:static!important;grid-row:1;max-height:20dvh;overflow:auto;overscroll-behavior:contain;margin:0;padding:6px;border-radius:10px;min-width:0}
+ [data-timeline-workspace] [data-timeline-pane]{position:relative!important;inset:auto!important;min-width:0;min-height:0;max-height:none!important;width:auto!important;height:auto!important;margin:0!important;overflow:auto!important;overscroll-behavior:contain;scrollbar-gutter:stable}
+ [data-timeline-workspace] [data-timeline-pane="map"]{grid-row:2;grid-column:1;display:flex!important;flex-direction:column}
+ [data-timeline-pane="map"] #map{min-height:0!important;height:auto!important;flex:1;touch-action:pan-x pan-y}
+ [data-timeline-pane="map"] .legend,[data-timeline-pane="map"] .map-pin-note{display:none}
+ [data-timeline-workspace] [data-timeline-pane="events"],[data-timeline-workspace] [data-timeline-pane="detail"]{grid-row:4;grid-column:1;padding:12px}
+ [data-timeline-workspace][data-mobile-view="events"] [data-timeline-pane="detail"],[data-timeline-workspace][data-mobile-view="story"] [data-timeline-pane="events"]{display:none!important}
+ [data-timeline-workspace][data-mobile-view="story"] [data-timeline-pane="detail"]{display:block!important}
+ [data-timeline-workspace] .detail-panel{transform:none!important;opacity:1!important;pointer-events:auto!important;transition:none!important}
+ [data-timeline-workspace] #detail-close{display:none!important}
+ .timeline-mobile-tabs{display:grid;grid-template-columns:1fr 1fr 1.3fr;gap:6px;grid-row:3;grid-column:1;min-width:0}
+ .timeline-mobile-tabs button{appearance:none;min-height:44px;min-width:0;padding:6px;border:1px solid var(--hairline);border-radius:12px;background:var(--bg-deep);color:var(--cream);font:inherit;font-size:.9em;line-height:1.25;overflow-wrap:anywhere;cursor:pointer}
+ .timeline-mobile-tabs button[aria-pressed="true"]{background:var(--gold);color:#182d35}
+ body.fc-timeline-experience [data-timeline-workspace].timeline-map-collapsed{grid-template-rows:auto 0 auto minmax(96px,1fr)}
+ [data-timeline-workspace].timeline-map-collapsed [data-timeline-pane="map"]{display:none!important}
+ .fc-timeline-experience .sheet,.fc-timeline-experience .mobile-sheet{display:none!important}
+}
+@media(max-width:1099px){
+ body.fc-timeline-experience .history-workspace{height:calc(100dvh - var(--timeline-menu-height,64px) - 24px);min-height:300px;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(100px,28dvh) auto minmax(96px,1fr);gap:8px;scroll-margin-top:calc(var(--timeline-menu-height,64px) + 12px)}
+ .history-workspace .history-browser,.history-workspace #historyDirectory{display:contents!important}
+ .history-workspace #historyDirectory>summary{display:none}
+ .history-workspace .history-controls{grid-row:1;padding:8px!important;max-height:20dvh;overflow:auto;overscroll-behavior:contain}
+ .history-workspace #historyMapPane{grid-row:2;grid-column:1;position:relative;min-height:0;display:flex;flex-direction:column;overflow:hidden}
+ .history-workspace #historyMapCanvas{height:auto!important;min-height:0!important;flex:1}
+ .history-workspace .history-map-copy{max-height:30%;overflow:auto;padding:4px 8px;display:flex;flex-direction:column}
+ .history-workspace #historyMapStatus{order:-1;flex-shrink:0;margin:0}
+ .history-workspace .history-map-copy>p:not(#historyMapStatus){display:none}
+ .history-workspace #historyMapStatus{max-height:40%;overflow:auto;padding:4px 8px;font-size:.85em}
+ .history-workspace #eventDirectory,.history-workspace .history-reading{grid-row:4;grid-column:1;position:relative!important;inset:auto;max-height:none!important;min-height:0;overflow:auto!important;overscroll-behavior:contain;margin:0;padding:6px}
+ .history-workspace .history-reading .timeline{margin-top:0}
+ .history-workspace [data-timeline-pane="events"]{display:grid!important}
+ .history-workspace[data-mobile-view="events"] .history-reading,.history-workspace[data-mobile-view="story"] #eventDirectory{display:none!important}
+ .history-workspace .timeline-mobile-tabs{display:grid;grid-template-columns:1fr 1fr 1.3fr;gap:6px;grid-row:3;min-width:0}
+ .history-workspace .timeline-mobile-tabs button{min-height:44px;min-width:0;padding:6px;border:1px solid var(--hairline);border-radius:12px;background:var(--bg-deep);color:var(--cream);font:inherit;font-size:.9em;line-height:1.25;overflow-wrap:anywhere;cursor:pointer}
+ .history-workspace .timeline-mobile-tabs button[aria-pressed="true"]{background:var(--gold);color:#182d35}
+ body.fc-timeline-experience .history-workspace.timeline-map-collapsed{grid-template-rows:auto 0 auto minmax(96px,1fr)}
+ .history-workspace.timeline-map-collapsed #historyMapPane{display:none!important}
+}
+
+@media(max-width:1099px) and (max-height:560px){
+ body.fc-timeline-experience [data-timeline-workspace],body.fc-timeline-experience .history-workspace{min-height:0;grid-template-rows:auto minmax(60px,20dvh) auto minmax(48px,1fr);gap:4px}
+ body.fc-timeline-experience [data-timeline-workspace]>.controls,.history-workspace .history-controls{max-height:12dvh!important;padding:2px!important}
+ body.fc-timeline-experience [data-timeline-workspace].timeline-map-collapsed{grid-template-rows:auto 0 auto minmax(48px,1fr)}
+}
