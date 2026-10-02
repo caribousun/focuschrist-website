@@ -588,8 +588,16 @@
     });
   }
 
-  function showFallback(){
-    mapEl.innerHTML = '<div class="map-fallback">The interactive map could not load here. Every stop on this map is listed in order beside this panel, with its place, date, and story, so the full journey can still be followed from Liverpool to Salt Lake City.</div>';
+  function showFallback(renderer){
+    // Keep the map library's owned children intact for its later cleanup.
+    // A callback from an older filter must not replace the current map.
+    if(renderer.parentNode !== mapEl) return;
+    renderer.hidden = true;
+    if(mapEl.querySelector('.map-fallback')) return;
+    var fallback = document.createElement("div");
+    fallback.className = "map-fallback";
+    fallback.textContent = "The interactive map could not load here. Every stop on this map is listed in order beside this panel, with its place, date, and story, so the full journey can still be followed from Liverpool to Salt Lake City.";
+    mapEl.appendChild(fallback);
   }
 
   function mount(rows){
@@ -597,17 +605,21 @@
       try{ mapHandle.destroy(); }catch(e){}
       mapHandle = null;
     }
-    mapEl.innerHTML = "";
+    var renderer = document.createElement("div");
+    renderer.style.width = "100%";
+    renderer.style.height = "100%";
+    mapEl.replaceChildren(renderer);
+    var unavailable = function(){ showFallback(renderer); };
     var rowEls = rows.map(function(r){ return r.el; });
     try{
-      mapHandle = MapHelpers.mountPlaceListMap(mapEl, {
+      mapHandle = MapHelpers.mountPlaceListMap(renderer, {
         places: placesFor(rows),
         rows: rowEls,
         overlays: overlays,
         baseStyle: "light"
-      }, showFallback);
+      }, unavailable);
     }catch(e){
-      showFallback();
+      unavailable();
     }
   }
 

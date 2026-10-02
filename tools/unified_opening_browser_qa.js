@@ -77,5 +77,5 @@ const root = path.resolve(__dirname, '..');
   console.log(JSON.stringify({cases:results.length,failures},null,2));
   const enlargedFailures=enlarged.filter(x=>x.cutoff||x.overflow||x.cueBottom>x.openingBottom||x.openingBottom<x.height-1);
   console.log(JSON.stringify({enlargedCases:enlarged.length,enlargedFailures},null,2));
-  if(failures.length||enlargedFailures.length||(!process.env.QA_PATHS && !process.env.QA_PROFILES && (results.length!==276||enlarged.length!==92)))process.exitCode=1;
+  if(failures.length||enlargedFailures.length||(!process.env.QA_PATHS && !process.env.QA_PROFILES && (results.length!==282||enlarged.length!==94)))process.exitCode=1;
 })().catch(e=>{console.error(e);process.exitCode=1;});

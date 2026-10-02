@@ -100,6 +100,7 @@ a{color:var(--sky)}
 .presidents h2,.sources h2{font-family:Georgia,serif;font-weight:400;font-size:28px;color:var(--cream-bright);margin:0 0 8px}
 .presidents>p,.sources>p{color:var(--muted);max-width:680px;margin:0 0 20px}
 .prophet-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+@media(min-width:980px){.prophet-grid>:nth-last-child(-n+2){grid-column:span 2}}
 .prophet{background:linear-gradient(150deg,rgba(49,85,71,.75),rgba(29,59,56,.85));border:1px solid var(--hairline);border-radius:14px;padding:14px 16px}
 .prophet b{display:block;font-family:Georgia,serif;font-weight:400;font-size:17px;color:var(--cream-bright)}
 .prophet span{font-size:13px;color:var(--faint)}
