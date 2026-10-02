@@ -423,6 +423,7 @@ document.getElementById('search').addEventListener('input', function(e){
 
 function buildDirectory(){
   var directory=document.getElementById('eventDirectory');
+  if(!EVENTS.some(matches)){directory.innerHTML='<p role="status">No events match. Try a different search or choose All eras.</p>';return;}
   directory.innerHTML=EVENTS.filter(matches).map(function(ev){
     return '<button type="button" data-event="history-event-'+EVENTS.indexOf(ev)+'"><span>'+ev.date+'</span><strong>'+ev.title+'</strong></button>';
   }).join('');

@@ -714,8 +714,8 @@
       currentFilter = chip.getAttribute("data-filter");
       rows = buildRows();
       mount(rows);
-      if(rows.length)selectStop(rows[0].index,null,true,false);
       window.dispatchEvent(new CustomEvent("timeline:filter",{detail:{indices:rows.map(function(r){return r.index;})}}));
+      if(rows.length)selectStop(rows[0].index,null,true,false);
     });
   });
   window.HandcartTimeline={

@@ -83,6 +83,6 @@
     draw();showMatching();
     canvas.addEventListener('timeline:map-resize',function(){map.invalidateSize({pan:false});});
     if(window.ResizeObserver)new ResizeObserver(function(){map.invalidateSize({pan:false});}).observe(canvas);
-  }catch(error){canvas.hidden=true;status.textContent='The map could not load. Every event and its geographic explanation remain available in the timeline and event list.';}
+  }catch(error){canvas.hidden=true;document.getElementById('historyMapReset').hidden=true;status.textContent='The map could not load. Every event and its geographic explanation remain available in the timeline and event list.';}
   window.HistoryTimelineMap={select:choose,showMatching:showMatching,get visibleIndices(){return indices.slice();},get selectedIndex(){return selected;}};
 })();

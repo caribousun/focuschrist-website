@@ -1,5 +1,6 @@
 /* One contained study area: the map stays above the independently scrolling reader. */
 .timeline-mobile-tabs{display:none}
+#historyMapPane:has(#historyMapCanvas[hidden]) .history-map-copy{max-height:100%}
 body.fc-timeline-experience{overflow-anchor:none}
 @media(max-width:1020px){body.fc-timeline-experience nav[data-focuschrist-header="standard"]{position:sticky!important;top:0!important;z-index:1100}}
 @media(max-width:900px){
@@ -32,7 +33,7 @@ body.fc-timeline-experience{overflow-anchor:none}
  .history-workspace .history-map-copy{max-height:30%;overflow:auto;padding:4px 8px;display:flex;flex-direction:column}
  .history-workspace #historyMapStatus{order:-1;flex-shrink:0;margin:0}
  .history-workspace .history-map-copy>p:not(#historyMapStatus){display:none}
- .history-workspace #historyMapStatus{max-height:40%;overflow:auto;padding:4px 8px;font-size:.85em}
+ .history-workspace #historyMapStatus{max-height:none;overflow:visible;padding:4px 0;font-size:.85em}
  .history-workspace #eventDirectory,.history-workspace .history-reading{grid-row:4;grid-column:1;position:relative!important;inset:auto;max-height:none!important;min-height:0;overflow:auto!important;overscroll-behavior:contain;margin:0;padding:6px}
  .history-workspace .history-reading .timeline{margin-top:0}
  .history-workspace [data-timeline-pane="events"]{display:grid!important}

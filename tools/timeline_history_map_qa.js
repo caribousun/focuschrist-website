@@ -19,8 +19,8 @@ for(const provider of [true,false]){
  const visible=Array.from(api.visibleIndices());assert(visible.length>0&&visible.length<51);assert.deepEqual(Array.from(w.HistoryTimelineMap.visibleIndices),visible);
  const before=api.selectedIndex;assert.equal(api.select(50),false);w.HistoryTimelineMap.select(50);assert.equal(api.selectedIndex,before);assert.equal(w.HistoryTimelineMap.selectedIndex,null);
  if(provider)for(const l of layers)for(const b of l.popup.querySelectorAll('[data-history-event]'))assert(visible.includes(Number(b.dataset.historyEvent)));
- else assert.equal(d.getElementById('historyMapCanvas').hidden,true);
- search.value='no-such-event-zzzz';search.dispatchEvent(new w.Event('input'));assert.equal(api.visibleIndices().length,0);if(provider)assert.equal(layers.size,0);
+ else {assert.equal(d.getElementById('historyMapCanvas').hidden,true);assert.equal(d.getElementById('historyMapReset').hidden,true,'Unavailable map has no ineffective reset control');}
+ search.value='no-such-event-zzzz';search.dispatchEvent(new w.Event('input'));assert.equal(api.visibleIndices().length,0);if(provider)assert.equal(layers.size,0);assert(d.querySelector('#eventDirectory [role="status"]')?.textContent.includes('No events match'),'Empty Events pane explains search result');assert.equal(d.querySelectorAll('#eventDirectory button').length,0);search.value='';search.dispatchEvent(new w.Event('input'));assert.equal(d.querySelector('#eventDirectory [role="status"]'),null,'Clear search removes stale empty message');assert.equal(d.querySelectorAll('#eventDirectory button').length,51,'Clear search restores all event controls');
  w.dispatchEvent(new w.Event('pagehide'));dom.window.close();
 }
 console.log('PASS: all 51 exact event selections, geographic kinds, clustered chooser callbacks, filter synchronization, empty results and unavailable-library access. Provider pixels remain separate.');

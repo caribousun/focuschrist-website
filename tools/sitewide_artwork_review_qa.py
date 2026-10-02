@@ -171,7 +171,7 @@ SCOPED_INTERFACE_STYLES = {
 # Albert independently reviewed rendered composition; byte/consumer changes fail closed.
 OWNER_20260929_STYLES = {
     # Owner-requested mobile map/reader layout and linked existing-art references; exact three-route scope.
-    'timeline-mobile-study.css': ('5fd1f1920fbbc7d33d63c01bfe4b15d7cb1bcbceebcd3f6f0d4010f4ea59f06d', ['timelines/latter-day-saint-church-history-timeline.html', 'timelines/willie-and-martin-handcart-map.html', 'timelines/life-of-christ-journey-map.html']),
+    'timeline-mobile-study.css': ('0bcb9cadc0f47dcbe378610c731523e4d0c152a505d2a0d9a4f68ff966663bec', ['timelines/latter-day-saint-church-history-timeline.html', 'timelines/willie-and-martin-handcart-map.html', 'timelines/life-of-christ-journey-map.html']),
     'timeline-images.css': ('563df3d37fcd96b58ea4d163b12ec478ed07f1467333d543958ba16333a40b25', ['timelines/latter-day-saint-church-history-timeline.html', 'timelines/willie-and-martin-handcart-map.html', 'timelines/life-of-christ-journey-map.html']),
     # Owner-requested bounded independent Timeline panes; exact source-reviewed route sets.
     'timeline-workspace.css': ('23c8c475d100fe59e62182000e2d97575a24de4ad861b246bb16f5c6a39536ea', ['timelines/willie-and-martin-handcart-map.html', 'timelines/life-of-christ-journey-map.html']),
