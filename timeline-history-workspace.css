@@ -26,7 +26,7 @@
   .history-workspace{display:grid;grid-template-columns:minmax(250px,.36fr) minmax(0,1fr);gap:24px;height:calc(100dvh - var(--history-menu-height,64px) - 24px);min-height:260px;align-items:stretch;scroll-margin-top:calc(var(--history-menu-height,64px) + 12px)}
   .history-browser{min-height:0;min-width:0;display:flex;flex-direction:column;gap:12px;overflow:auto;overscroll-behavior:contain}
   .history-controls{flex:0 0 auto}
-  #historyDirectory{position:relative;min-height:80px;flex:1;overflow:hidden}
+  #historyDirectory{position:relative;min-height:80px;flex:1}
   #historyDirectory>summary{display:none}
   #eventDirectory{position:absolute;inset:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable}
   .history-reading{overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable;padding:4px 12px 20px 4px}
