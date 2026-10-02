@@ -9395,9 +9395,9 @@
     {
       "path": "timelines/latter-day-saint-church-history-timeline.html",
       "status": "verified",
-      "published_text_sha256": "a8b3365f7b0e7b24a3f1705995b68d022f9be6587444aa67315995b053223f16",
+      "published_text_sha256": "da73c39828c2cb49b153806b24199c9e80b197c245d0969663cb0b260b1bfb19",
       "reviewed_on": "2026-10-02",
-      "review_standard": "Targeted source review of Merlin-delivered experience, not comprehensive verification of every statement: exact documented factual repairs verified against official Church sources; delivered source references and design retained. Static hash excludes script-embedded event/stop text. Factual review scope and exact before/after recorded in docs/reviews/timeline-source-review-20261002.json; runtime behavior and owner visual acceptance are separate. The verified status denotes this documented targeted review scope only.",
+      "review_standard": "Targeted source review of Merlin-delivered experience, not comprehensive verification of every statement: exact documented factual repairs verified against official Church sources; delivered source references and design retained. Static hash excludes script-embedded event/stop text. Factual review scope and exact before/after recorded in docs/reviews/timeline-source-review-20261002.json; runtime behavior and owner visual acceptance are separate. The verified status denotes this documented targeted review scope only. Follow-up navigation-only review: Search focusChrist accessible label and link added beside Return to Timeline, with shared search assets and wrapping navigation row; normalized line diff confirms all event/stop content unchanged.",
       "review_scope": "targeted-source-corrections-not-comprehensive",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/manual/teachings-of-presidents-of-the-church-lorenzo-snow/chapter-12-tithing-a-law-for-our-protection-and-advancement?lang=eng",
@@ -9417,9 +9417,9 @@
     {
       "path": "timelines/willie-and-martin-handcart-map.html",
       "status": "verified",
-      "published_text_sha256": "7be03f5452906320bc3536d87a140cf1150ef3e29f5e09d967096cbff402ea08",
+      "published_text_sha256": "b16e4f93ea5c1c8ff46d00ed9872a09811dd3b7d3212b73cfd7132bd2aea5425",
       "reviewed_on": "2026-10-02",
-      "review_standard": "Targeted source review of Merlin-delivered experience, not comprehensive verification of every statement: exact documented factual repairs verified against official Church sources; delivered source references and design retained. Static hash excludes script-embedded event/stop text. Factual review scope and exact before/after recorded in docs/reviews/timeline-source-review-20261002.json; runtime behavior and owner visual acceptance are separate. The verified status denotes this documented targeted review scope only.",
+      "review_standard": "Targeted source review of Merlin-delivered experience, not comprehensive verification of every statement: exact documented factual repairs verified against official Church sources; delivered source references and design retained. Static hash excludes script-embedded event/stop text. Factual review scope and exact before/after recorded in docs/reviews/timeline-source-review-20261002.json; runtime behavior and owner visual acceptance are separate. The verified status denotes this documented targeted review scope only. Follow-up navigation-only review: Search focusChrist accessible label and link added beside Return to Timeline, with shared search assets and wrapping navigation row; normalized line diff confirms all event/stop content unchanged.",
       "review_scope": "targeted-source-corrections-not-comprehensive",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/manual/teachings-of-presidents-of-the-church-lorenzo-snow/chapter-12-tithing-a-law-for-our-protection-and-advancement?lang=eng",

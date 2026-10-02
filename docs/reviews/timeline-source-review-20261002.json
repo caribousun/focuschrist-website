@@ -119,5 +119,12 @@
     "published_text_changed": 126,
     "result": "Only Timeline link labels inserted; exact normalized text after removing new anchor matches HEAD.",
     "ledger_scope": "Preserved prior review, updated only changed hashes; new records explicitly describe targeted review."
+  },
+  "search_navigation_review": {
+    "changed_published_hashes": [
+      "timelines/latter-day-saint-church-history-timeline.html",
+      "timelines/willie-and-martin-handcart-map.html"
+    ],
+    "result": "Only new Search focusChrist labels; content unchanged. Both pages wrap navigation row; hub only adds search assets. Section panel QA requires no new class classification."
   }
 }
