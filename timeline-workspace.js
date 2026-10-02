@@ -8,44 +8,69 @@
   var breakpoint=Number(workspace.getAttribute('data-mobile-breakpoint'))||900;
   var wide=window.matchMedia('(min-width:'+(breakpoint+1)+'px)');
   var events=workspace.querySelector('[data-timeline-pane="events"]');
+  // Chromium can retain wheel scrolling in History's nested directory at its edge.
+  // Handoff only after every containing scroll pane has exhausted this direction.
+  if(events&&workspace.classList.contains('history-workspace'))events.addEventListener('wheel',function(event){
+    if(!wide.matches||event.ctrlKey||event.shiftKey||!event.deltaY||Math.abs(event.deltaX)>Math.abs(event.deltaY))return;
+    var down=event.deltaY>0;
+    for(var node=event.target;node&&node!==document.body&&node!==document.documentElement;node=node.parentElement){
+      var style=getComputedStyle(node),remaining=down?node.scrollHeight-node.clientHeight-node.scrollTop:node.scrollTop;
+      if(/^(auto|scroll)$/.test(style.overflowY)&&remaining>1)return;
+    }
+    var delta=event.deltaY*(event.deltaMode===1?parseFloat(getComputedStyle(events).lineHeight)||16:event.deltaMode===2?window.innerHeight:1);
+    event.preventDefault();window.scrollBy({top:delta,left:0,behavior:'instant'});
+  },{passive:false});
   var story=workspace.querySelector('[data-timeline-pane="detail"],[data-timeline-pane="timeline"]');
   var choicePanel=null,previousEventScroll=0;
   function clearChoices(){if(!choicePanel)return;choicePanel.remove();choicePanel=null;events.classList.remove('timeline-choice-mode');events.scrollTop=previousEventScroll;}
   function showChoices(title,choices,onSelect){
-    if(wide.matches||!events)return false;
+    if(!events)return false;
     clearChoices();previousEventScroll=events.scrollTop;
     choicePanel=document.createElement('div');choicePanel.className='timeline-place-choices';
     var heading=document.createElement('h3');heading.textContent=title;heading.tabIndex=-1;choicePanel.appendChild(heading);
     var back=document.createElement('button');back.type='button';back.className='timeline-choices-back';back.textContent='Back to all matching events';back.addEventListener('click',function(){clearChoices();});choicePanel.appendChild(back);
     choices.forEach(function(choice){var button=document.createElement('button');button.type='button';button.textContent=choice.label;button.addEventListener('click',function(){clearChoices();onSelect(choice.index);});choicePanel.appendChild(button);});
-    events.classList.add('timeline-choice-mode');events.appendChild(choicePanel);showView('events');events.scrollTop=0;heading.focus({preventScroll:true});return true;
+    events.classList.add('timeline-choice-mode');events.appendChild(choicePanel);showView('events');events.scrollTop=0;heading.focus({preventScroll:true});revealReader();return true;
   }
   var tabs=document.createElement('div');
   tabs.className='timeline-mobile-tabs';tabs.setAttribute('aria-label','Study view');
   tabs.innerHTML='<button type="button" data-study-view="events" aria-pressed="true">Events</button><button type="button" data-study-view="story" aria-pressed="false">Story</button><button type="button" class="timeline-map-toggle" aria-expanded="true">Collapse map</button>';
-  workspace.appendChild(tabs);
+  var mapPane=workspace.querySelector('[data-timeline-pane="map"]');
+  var dock=document.createElement('div');dock.className='timeline-map-dock';
+  if(mapPane){mapPane.before(dock);dock.appendChild(mapPane);}else workspace.appendChild(dock);
+  var interact=document.createElement('button');interact.type='button';interact.className='timeline-map-interact';interact.textContent='Interact with map';interact.setAttribute('aria-pressed','false');dock.appendChild(interact);dock.appendChild(tabs);
+  var interacting=false;
+  function mapInteraction(enabled){interacting=!wide.matches&&enabled;interact.textContent=interacting?'Done moving map':'Interact with map';interact.setAttribute('aria-pressed',String(interacting));dock.classList.toggle('timeline-map-passive',!wide.matches&&!interacting);if(map)map.dispatchEvent(new CustomEvent('timeline:map-interaction',{detail:{enabled:wide.matches||interacting}}));}
+  interact.addEventListener('click',function(){mapInteraction(!interacting);});
+  var notes=document.createElement('details');notes.className='timeline-map-notes';notes.innerHTML='<summary>Map information</summary>';dock.after(notes);
+  var noteItems=mapPane?Array.from(mapPane.querySelectorAll('.history-map-copy,.legend,.map-pin-note')).map(function(node){var placeholder=document.createComment('map information position');node.before(placeholder);return {node:node,placeholder:placeholder};}):[];
+  var controls=workspace.querySelector('.controls'),filters=null;
+  if(controls){filters=document.createElement('details');filters.className='timeline-filter-disclosure';var filterSummary=document.createElement('summary');filterSummary.textContent=workspace.classList.contains('history-workspace')?'Search and filter events':'Filter journey';filters.appendChild(filterSummary);controls.before(filters);filters.appendChild(controls);}
+  function syncLayout(){workspace.classList.toggle('timeline-mobile',!wide.matches);clearChoices();if(filters)filters.open=wide.matches;notes.hidden=wide.matches||!noteItems.length;noteItems.forEach(function(item){if(wide.matches)item.placeholder.after(item.node);else notes.appendChild(item.node);});mapInteraction(false);schedule();}
+  function revealReader(){if(wide.matches)return;requestAnimationFrame(function(){var target=workspace.dataset.mobileView==='story'?story:events;if(!target)return;if(target===story&&window.HistoryTimeline){target=document.getElementById('history-event-'+window.HistoryTimeline.selectedIndex)||target;}var headerHeight=header?header.getBoundingClientRect().height:0;var dockHeight=getComputedStyle(dock).position==='sticky'?dock.getBoundingClientRect().height:0;window.scrollTo({top:scrollY+target.getBoundingClientRect().top-headerHeight-dockHeight-12,behavior:'instant'});});}
+
   workspace.setAttribute('data-mobile-view','events');
   function showView(view){
     if(view==='story')clearChoices();
     workspace.setAttribute('data-mobile-view',view);
     tabs.querySelectorAll('[data-study-view]').forEach(function(b){b.setAttribute('aria-pressed',String(b.getAttribute('data-study-view')===view));});
-    if(view==='story'&&story&&story.getAttribute('data-timeline-pane')==='detail')story.scrollTop=0;
+    if(wide.matches&&view==='story'&&story&&story.getAttribute('data-timeline-pane')==='detail')story.scrollTop=0;
   }
-  tabs.querySelectorAll('[data-study-view]').forEach(function(b){b.addEventListener('click',function(){showView(b.getAttribute('data-study-view'));});});
+  tabs.querySelectorAll('[data-study-view]').forEach(function(b){b.addEventListener('click',function(){showView(b.getAttribute('data-study-view'));revealReader();});});
   var mapToggle=tabs.querySelector('.timeline-map-toggle');
-  function collapseMap(collapsed){workspace.classList.toggle('timeline-map-collapsed',collapsed);mapToggle.textContent=collapsed?'Show map':'Collapse map';mapToggle.setAttribute('aria-expanded',String(!collapsed));schedule();}
+  function collapseMap(collapsed){workspace.classList.toggle('timeline-map-collapsed',collapsed);mapToggle.textContent=collapsed?'Show map':'Collapse map';if(collapsed)mapInteraction(false);mapToggle.setAttribute('aria-expanded',String(!collapsed));schedule();}
   mapToggle.addEventListener('click',function(){collapseMap(!workspace.classList.contains('timeline-map-collapsed'));});
   if(window.innerHeight<560)collapseMap(true);
-  window.addEventListener('timeline:select',function(e){if(!wide.matches&&(!e.detail||e.detail.showStory!==false))showView('story');});
+  window.addEventListener('timeline:select',function(e){if(!wide.matches&&(!e.detail||e.detail.showStory!==false)){showView('story');revealReader();}});
   window.addEventListener('timeline:filter',function(){clearChoices();if(!wide.matches)showView('events');});
-  var previousMapSize='';
+  var previousMapSize='',wasUnavailable=false;
   var pending=false;
   function measure(){
     pending=false;
     var height=header?header.getBoundingClientRect().height:0;
-    workspace.style.setProperty('--timeline-menu-height',Math.ceil(height)+'px');
+    workspace.style.setProperty('--timeline-menu-height',Math.ceil(height)+'px');workspace.style.setProperty('--timeline-dock-height',Math.ceil(dock.getBoundingClientRect().height)+'px');
     if(map){
-      var rect=map.getBoundingClientRect();
+      var unavailable=map.hidden||!!map.querySelector('.map-fallback')||!!(document.getElementById('mapFallback')&&!document.getElementById('mapFallback').hidden&&getComputedStyle(document.getElementById('mapFallback')).display!=='none');dock.classList.toggle('timeline-map-unavailable',unavailable);if(unavailable&&!wasUnavailable&&!wide.matches&&noteItems.length)notes.open=true;wasUnavailable=unavailable;var rect=map.getBoundingClientRect();
       var size=rect.width+':'+rect.height;
       if(size!==previousMapSize){
         previousMapSize=size;
@@ -81,14 +106,16 @@
   });
   if(window.ResizeObserver){var observer=new ResizeObserver(schedule);if(header)observer.observe(header);observer.observe(workspace);if(map)observer.observe(map);}
   window.addEventListener('resize',schedule);
-  wide.addEventListener('change',clearChoices);
+  wide.addEventListener('change',syncLayout);
   if(window.visualViewport)window.visualViewport.addEventListener('resize',schedule);
   window.TimelineWorkspace={showChoices:showChoices,clearChoices:clearChoices,showStory:function(){clearChoices();if(!wide.matches)showView('story');},showEvents:function(){clearChoices();showView('events');},scrollRow:function(row){
     var pane=row.closest('[data-timeline-pane="events"]');
-    if(!pane){row.scrollIntoView({block:'nearest'});return;}
+    if(!pane||!wide.matches){row.scrollIntoView({block:'nearest'});return;}
     var p=pane.getBoundingClientRect(),r=row.getBoundingClientRect();
     if(r.top<p.top)pane.scrollTop-=p.top-r.top+3;
     else if(r.bottom>p.bottom)pane.scrollTop+=r.bottom-p.bottom+3;
   }};
-  schedule();
+  if(window.MutationObserver&&mapPane)new MutationObserver(schedule).observe(mapPane,{childList:true,subtree:true,attributes:true,attributeFilter:['hidden']});
+  syncLayout();
+  if(!wide.matches&&window.HistoryTimeline&&Number.isInteger(window.HistoryTimeline.selectedIndex))showView('story');
 })();

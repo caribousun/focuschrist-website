@@ -1,0 +1,40 @@
+{
+  "entries": [
+    {
+      "index": 9,
+      "file": "assets/timeline/wood-river-loc.jpg",
+      "source": "https://www.loc.gov/item/2021757717/",
+      "credit": "Carol M. Highsmith; Library of Congress",
+      "rights": "No known restrictions on publication; exact LOC item rights advisory",
+      "evidence": "work/wood-river-loc-source.json",
+      "sha256": "75fbe15b66853376306b6d0eef3b4f8b339950ae58ea9807d85d488417d2a94f",
+      "caption": "A present-day farmstead in Wood River, Nebraska, photographed in 2021.",
+      "fermiPixelsViewed": true,
+      "assembledReview": "pending"
+    },
+    {
+      "index": 11,
+      "file": "assets/timeline/platte-confluence-nasa.jpg",
+      "source": "https://science.nasa.gov/earth/earth-observatory/north-and-south-platte-rivers-nebraska-8105/",
+      "credit": "NASA / Expedition 15 crew / ISS Crew Earth Observations",
+      "rights": "NASA educational/informational personal-Web-page permission; acknowledgement required; no third-party copyright identified",
+      "evidence": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "sha256": "f99b685765ca5ffe31576aff0f72c27ffb0509dbbf2187230be69e1611f21613",
+      "caption": "The North and South Platte river valleys meet near the upper right in this September 2007 astronaut photograph; modern fields trace the floodplains.",
+      "fermiPixelsViewed": true,
+      "assembledReview": "pending"
+    },
+    {
+      "index": 24,
+      "file": "assets/timeline/pacific-springs-nps.jpg",
+      "source": "https://npgallery.nps.gov/AssetDetail/8f0fda00-155d-451f-67e9-7b583e965c8a",
+      "credit": "National Park Service",
+      "rights": "Public domain; full rights per NPS asset metadata",
+      "evidence": "work/nps-pony-search.json",
+      "sha256": "ef201d51487b70f7da6c3f1ba477fe019c50a24681efc0281f052b773c8936d3",
+      "caption": "The remains of the later Pacific Springs Hotel and Pony Express station stand in open country near Pacific Springs.",
+      "fermiPixelsViewed": true,
+      "assembledReview": "pending"
+    }
+  ]
+}

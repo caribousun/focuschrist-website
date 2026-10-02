@@ -1,2 +1,23 @@
 /* Keep the shared Focus menu above each independent Merlin experience. */
 @media(min-width:1021px){body.fc-timeline-experience .controls{top:max(52px,3.25rem);}}
+
+/* The three study readers share the site's established content boundary. */
+body.fc-timeline-experience>.wrap{box-sizing:border-box;width:100%;max-width:calc(var(--fc-standard) + 2 * var(--fc-body-gutter));padding-inline:var(--fc-body-gutter);margin-inline:auto}
+body.fc-timeline-experience .timeline-navigation{box-sizing:border-box;max-width:calc(var(--fc-standard) + 2 * var(--fc-body-gutter));margin-inline:auto;padding-inline:var(--fc-body-gutter)}
+
+body.fc-timeline-experience>.wrap>.hero{margin-inline:0;border-radius:var(--fc-radius)}
+
+/* Subdued map tiles; original artwork and map labels/markers stay separate. */
+body.fc-timeline-experience .leaflet-container{background:var(--fc-bg-deep)}
+body.fc-timeline-experience .leaflet-tile-pane{filter:invert(.9) hue-rotate(180deg) saturate(.65) contrast(.8) brightness(1.2)}
+body.fc-timeline-experience .leaflet-bar a{background:var(--fc-bg-deep);color:var(--fc-gold-light);border-color:var(--fc-line-strong)}
+body.fc-timeline-experience .leaflet-bar a:hover,body.fc-timeline-experience .leaflet-bar a:focus{background:var(--fc-surface)}
+body.fc-timeline-experience .leaflet-control-attribution{background:var(--fc-bg-deep);color:var(--fc-cream)}
+body.fc-timeline-experience .leaflet-control-attribution a{color:var(--fc-gold-light)}
+body.fc-timeline-experience #historyMapReset{background:var(--fc-bg-deep);color:var(--fc-cream);border-color:var(--fc-line-strong)}
+
+/* At the ends of desktop panes, scrolling can continue into the page. */
+@media(min-width:901px){body.fc-timeline-experience [data-timeline-pane],body.fc-timeline-experience .history-browser,body.fc-timeline-experience #eventDirectory,body.fc-timeline-experience .history-reading{overscroll-behavior:auto}}
+
+/* Keep a visible shared frame around compact phone maps. */
+body.fc-timeline-experience .timeline-mobile [data-timeline-pane="map"]{border:1px solid var(--fc-line-strong);border-radius:var(--fc-radius);isolation:isolate}

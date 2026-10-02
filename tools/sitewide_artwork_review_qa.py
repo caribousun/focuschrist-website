@@ -171,14 +171,14 @@ SCOPED_INTERFACE_STYLES = {
 # Albert independently reviewed rendered composition; byte/consumer changes fail closed.
 OWNER_20260929_STYLES = {
     # Owner-requested mobile map/reader layout and linked existing-art references; exact three-route scope.
-    'timeline-mobile-study.css': ('ca210424e15d4723d5620e279148ecd727c4dff63fcd01a4637b0fa13b7eebee', ['timelines/latter-day-saint-church-history-timeline.html', 'timelines/willie-and-martin-handcart-map.html', 'timelines/life-of-christ-journey-map.html']),
-    'timeline-images.css': ('563df3d37fcd96b58ea4d163b12ec478ed07f1467333d543958ba16333a40b25', ['timelines/latter-day-saint-church-history-timeline.html', 'timelines/willie-and-martin-handcart-map.html', 'timelines/life-of-christ-journey-map.html']),
+    'timeline-mobile-study.css': ('bd12193698c8b282ade58af33964d72dc3ce85f7f01d776da69ad9425e217009', ['timelines/latter-day-saint-church-history-timeline.html', 'timelines/willie-and-martin-handcart-map.html', 'timelines/life-of-christ-journey-map.html']),
+    'timeline-images.css': ('6d1aadc6c63012f5055db262354cdac21109bbd1fcc93799aefbba478a6454ec', ['timelines/latter-day-saint-church-history-timeline.html', 'timelines/willie-and-martin-handcart-map.html', 'timelines/life-of-christ-journey-map.html']),
     # Owner-requested bounded independent Timeline panes; exact source-reviewed route sets.
-    'timeline-workspace.css': ('23c8c475d100fe59e62182000e2d97575a24de4ad861b246bb16f5c6a39536ea', ['timelines/willie-and-martin-handcart-map.html', 'timelines/life-of-christ-journey-map.html']),
+    'timeline-workspace.css': ('893d32689b5547742b93e472c4c9d4647ac4ea4748be14c965976996616f2114', ['timelines/willie-and-martin-handcart-map.html', 'timelines/life-of-christ-journey-map.html']),
     'timeline-history-workspace.css': ('acecf66d917b13cc4548e23ff8ab348974423342ba00840f37d1c73d6eb5c173', ['timelines/latter-day-saint-church-history-timeline.html']),
 
     # Owner requested shared headers on these three preserved experiences; exact scoped desktop offset.
-    "timeline-experiences.css": ("baa81f4c63d3e81f4ca26fab1db7202c3c700549e781d72996c28bf721bb3be4", ["timelines/latter-day-saint-church-history-timeline.html", "timelines/willie-and-martin-handcart-map.html", "timelines/life-of-christ-journey-map.html"]),
+    "timeline-experiences.css": ("a2d86284e4ec7f6d39b0d78a524d3851fe2bb2c9fdb32d4728a5189c15db2f63", ["timelines/latter-day-saint-church-history-timeline.html", "timelines/willie-and-martin-handcart-map.html", "timelines/life-of-christ-journey-map.html"]),
     "study-reading-balance.css": ("fb547af5c883050d743204c0d05372863143a1fa0dffd2df370b728f1a9ff005", ["atonement.html", "answers/bible-and-book-of-mormon-together.html", "answers.html", "index.html", "ask.html"]),
     # Dynamically loaded shared opening surface; source reviewed, rendered approval recorded separately.
     'unified-opening.css': ('7fcb1456b4ff2c3372238e0baaccfa6083e4232e328956eff1e1d43f178c96e6', []),

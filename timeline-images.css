@@ -4,3 +4,6 @@
 .timeline-waypoint-image figcaption{font-size:.85em;line-height:1.5;margin-top:8px;color:inherit;overflow-wrap:anywhere;}
 .timeline-waypoint-image figcaption a{color:#68420f;text-decoration:underline;}
 .timeline-waypoint-image a:focus-visible{outline:3px solid #a96f16;outline-offset:3px;}
+/* Owner-authorized presentation frame excludes this archive scan's mount and color strip; source bytes remain intact. */
+.timeline-waypoint-image>a[data-image-frame="banias-photo"]{position:relative;aspect-ratio:762/547;overflow:hidden;border-radius:10px;}
+.timeline-waypoint-image>a[data-image-frame="banias-photo"] img{position:absolute;width:134.3832%;max-width:none;height:auto;left:-17.7165%;top:-30.5302%;border-radius:0;}
