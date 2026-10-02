@@ -16,7 +16,8 @@ body.fc-timeline-experience .timeline-mobile [data-timeline-pane]{position:relat
 .timeline-mobile #eventDirectory{display:grid;align-content:start}
 .timeline-mobile .history-reading .timeline{margin-top:0}
 .timeline-mobile .timeline-map-dock{display:block;order:1;position:sticky;top:var(--timeline-menu-height,64px);z-index:100;background:var(--bg,#142a35);padding:6px 0;align-self:stretch}
-body.fc-timeline-experience .timeline-mobile .timeline-map-dock [data-timeline-pane="map"]{display:block!important;overflow:hidden!important}
+.timeline-mobile .timeline-map-dock [data-timeline-pane="map"]{display:block!important}
+body.fc-timeline-experience .timeline-mobile .timeline-map-dock [data-timeline-pane="map"]{overflow:hidden!important}
 .timeline-mobile #map,.timeline-mobile #historyMapCanvas{height:clamp(100px,24svh,190px)!important;min-height:0!important;width:100%;flex:none!important}
 .timeline-mobile .timeline-map-passive .leaflet-container{touch-action:pan-y!important}
 .timeline-mobile .timeline-map-interact{display:block;min-height:44px;width:100%;font:inherit;font-size:.9em;line-height:1.3;color:var(--cream);border:1px solid var(--hairline);border-radius:10px;background:var(--bg-deep);cursor:pointer;margin:6px 0}
