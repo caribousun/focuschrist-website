@@ -46,6 +46,13 @@ for(const route of [...pages, '/404.html']){
  w.scrollTo=options=>{scroll=options};
  w.eval(read('site-common.js'));
  d.dispatchEvent(new w.Event('DOMContentLoaded'));
+ for(const container of d.querySelectorAll('.nav-links,#hamburgerMenu')){
+  const timeline=container.querySelector('[data-focuschrist-primary-timeline]');
+  assert(timeline,file+' runtime Timeline entry');
+  assert.equal(container.querySelectorAll('[data-focuschrist-primary-timeline]').length,1,file+' no duplicate Timeline entry');
+  assert.equal(new URL(timeline.href).pathname,'/timeline.html',file+' Timeline destination');
+  assert.equal(new URL(timeline.nextElementSibling.href).pathname,'/about.html',file+' Timeline immediately before About after dynamic navigation');
+ }
  const buttons=d.querySelectorAll('[data-focuschrist-back-to-top]');
  assert.equal(buttons.length,1,file);
  const b=buttons[0];assert.equal(b.type,'button');assert.equal(b.textContent,'Back to top');
