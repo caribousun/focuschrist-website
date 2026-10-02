@@ -21,6 +21,13 @@ const root=path.resolve(__dirname,'..'),out=path.join(root,'.qa-artifacts/timeli
   for(const target of ['latter-day-saint-church-history-timeline.html','willie-and-martin-handcart-map.html'])assert(await page.locator('a[href$="'+target+'"]').count(),target+' accessible from hub');
   assert.equal(await page.locator('a[href*="life-of-christ"]').count(),0,'Life of Christ remains held');
   await measure('hub');
+  const hero=page.locator('[data-hero-record="timeline"]');assert.equal(await hero.count(),1,'One standard Timeline hero');
+  const reference=await context.newPage();await reference.goto(origin+'/church-history.html',{waitUntil:'load'});const referenceBox=await reference.locator('.fc-visual-hero').first().boundingBox();const heroBox=await hero.boundingBox();assert(heroBox&&referenceBox&&Math.abs(heroBox.height-referenceBox.height)<=1&&Math.abs(heroBox.width-referenceBox.width)<=1,'Timeline hero uses exact shared Church History frame');await reference.close();
+  const heroImage=hero.locator('img');await heroImage.evaluate(img=>img.decode());assert(await heroImage.evaluate(img=>img.naturalWidth>0),'Hero loads');
+  assert((await heroImage.evaluate(img=>img.currentSrc)).endsWith(profile.width<=700?'timeline-phone.png':'timeline.png'),'Correct desktop/phone hero rendition');
+  await hero.click();assert(await page.locator('#heroDetailDialog').evaluate(n=>n.open),'Hero detail opens');await page.locator('#heroDetailDialog [data-hero-close]').first().click();assert.equal(await page.locator('#heroDetailDialog').evaluate(n=>n.open),false,'Hero detail closes');
+  const continuation=page.locator('.fc-unified-continue');assert.equal(await continuation.count(),1,'Shared Continue pill');await continuation.click();assert(await page.locator('#choose-timeline').isVisible(),'Continue reaches choices');
+
   if(profile.name==='desktop'){await page.setViewportSize({width:1920,height:1080});
   assert.equal(await page.locator('.fc-nav-side--before a').count(),5,'Five links before central Atonement');assert.equal(await page.locator('.fc-nav-side--after a').count(),5,'Five links after central Atonement');
   assert.deepEqual(await page.locator('.fc-nav-side--after a').evaluateAll(nodes=>nodes.map(n=>n.textContent.trim())),['History','Pioneers','Watch','Timeline','About']);

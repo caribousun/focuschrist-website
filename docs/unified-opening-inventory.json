@@ -1,7 +1,7 @@
 {
   "canonical_count": 128,
-  "hero_count": 46,
-  "excluded_count": 82,
+  "hero_count": 47,
+  "excluded_count": 81,
   "pages": [
     {
       "path": "index.html",
@@ -630,9 +630,9 @@
     },
     {
       "path": "timeline.html",
-      "hero": false,
-      "template": "excluded-navigation-hub",
-      "reason": "Timeline navigation hub links to standalone experiences; no new artwork requested."
+      "hero": true,
+      "template": "standard",
+      "reason": "Wyatt requested a standard Focus hero for Timeline on 2026-10-02; shared geometry and new still-life artwork."
     },
     {
       "path": "timelines/latter-day-saint-church-history-timeline.html",

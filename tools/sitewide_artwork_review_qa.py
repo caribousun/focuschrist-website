@@ -157,7 +157,7 @@ TOOLBAR_STYLE_SHA256 = {'site-header.css': 'a915de3ba44c8e14f127e25ec51498960fb1
 # reviewed in source and rendered by Albert. Exact full bytes and single owners.
 SCOPED_INTERFACE_STYLES = {
     # Newton source-reviewed hub-only CSS; hosted geometry and owner acceptance remain separate.
-    'timeline.css': ('9b558e454e838818bd078658f4bf4416c31b9c98ff1476ff062124fa63cb494f', 'timeline.html'),
+    'timeline.css': ('5aefac78e15d324cb4f5a9b44c5f0a1bdb26d951f4e7b5078569be67103048d1', 'timeline.html'),
     # Owner-directed Church-source history, independently reviewed 2026-09-30.
     # Exact bytes and the single consumer are checked before CSS exclusion.
     'priesthood-history-study.css': ('f59d25e1a40498a9b6d1c8c1da594e5af7cd7a42cd39dc210d787640015b2adb', 'answers/race-priesthood-and-temple-blessings.html'),

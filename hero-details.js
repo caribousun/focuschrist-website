@@ -2,6 +2,11 @@
     'use strict';
     if (typeof HTMLDialogElement === 'undefined' || document.getElementById('heroDetailDialog')) return;
     const records = {
+        timeline: {
+            title: 'Remember the journey',
+            paragraphs: ['An open journal, a folded map, and a brass compass rest beside a window overlooking a sunlit mountain trail.', 'Each recorded date belongs to people who faced choices, carried hopes, and sought the Lord. Explore their accounts, and consider how remembering the past can deepen your faith in Jesus Christ today.'],
+            source: 'https://www.churchofjesuschrist.org/study/church-history?lang=eng', sourceLabel: 'Explore Church History Sources', study: 'timeline.html#choose-timeline', studyLabel: 'Choose a Timeline'
+        },
         'holy-ghost': {
             title: 'A witness of Jesus Christ',
             paragraphs: ['Jesus and a disciple sit beneath an olive tree, looking at one another as they talk.', 'In John 15:26, Jesus teaches that the Comforter will testify of Him. Read that promise, then explore how the Holy Ghost helps us learn of Christ and follow Him.'],

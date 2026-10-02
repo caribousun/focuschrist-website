@@ -52,19 +52,22 @@ for(const route of [...pages, '/404.html']){
  assert(b.closest('footer[data-focuschrist-footer="standard"]'));
  assert.equal(d.querySelectorAll('link[data-focuschrist-footer-navigation]').length,1);
  assert.equal(new URL(d.querySelector('link[data-focuschrist-footer-navigation]').href).pathname,'/footer-navigation.css','Nested footer stylesheet must resolve at site root');
- const before=w.location.href;b.focus();b.click();
+ const before=w.location.href;const topTarget=d.querySelector('.nav[data-focuschrist-header="standard"]')||d.querySelector('main')||d.body;const priorTabIndex=topTarget.getAttribute('tabindex');b.focus();b.click();
  assert.equal(w.location.href,before,'Back to top must not change page, query, or fragment');
  assert.equal(scroll.top,0);assert.equal(scroll.left,0);assert.equal(scroll.behavior,'instant');
  assert(d.activeElement.matches('.nav[data-focuschrist-header="standard"], main, body'),file+' focus did not return to top');
  assert(!d.activeElement.contains(b),'Focus must leave the footer');
- const focused=d.activeElement;b.focus();assert(!focused.hasAttribute('tabindex'),'Temporary focus target must clean up');
+ const focused=d.activeElement;b.focus();assert.equal(focused.getAttribute('tabindex'),priorTabIndex,file+' focus target must preserve existing tabindex or remove temporary tabindex');
  d.dispatchEvent(new w.Event('DOMContentLoaded'));
  assert.equal(d.querySelectorAll('[data-focuschrist-back-to-top]').length,1,'No duplicate action after reinitialization');
  assert.equal(d.querySelectorAll('[data-focuschrist-artwork-disclosure]').length,1,file+' disclosure must be idempotent');
  const art=d.querySelectorAll('footer [data-focuschrist-art-gallery]');
  assert.equal(art.length,1,file+' Art footer entry must remain unique');
  assert.equal(new URL(art[0].href).pathname,'/art.html',file+' Art footer and menu share destination');
- assert([...d.querySelectorAll('.nav a[href]')].some(a=>new URL(a.href).pathname==='/art.html'),file+' matching Art menu destination');
+ if(file.startsWith('timelines/')){
+  assert(['timelines/latter-day-saint-church-history-timeline.html','timelines/willie-and-martin-handcart-map.html'].includes(file),'Only owner-preserved standalone experiences omit the global header');
+  assert(d.querySelector('a[href="../timeline.html"]'),file+' return to Timeline');
+ } else assert([...d.querySelectorAll('.nav a[href]')].some(a=>new URL(a.href).pathname==='/art.html'),file+' matching Art menu destination');
  const disclosure=d.querySelector('[data-focuschrist-artwork-disclosure]');
  assert.equal(disclosure.textContent,artworkDisclosure);
  assert.equal(independence.nextElementSibling,disclosure,file+' runtime notice adjacency');

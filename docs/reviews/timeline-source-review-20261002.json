@@ -126,5 +126,24 @@
       "timelines/willie-and-martin-handcart-map.html"
     ],
     "result": "Only new Search focusChrist labels; content unchanged. Both pages wrap navigation row; hub only adds search assets. Section panel QA requires no new class classification."
+  },
+  "hero_review": {
+    "owner_scope": "Timeline hub standard horizontal and vertical hero requested after initial hub review.",
+    "reviewer": "Fermi",
+    "assets": [
+      {
+        "path": "assets/heroes/timeline.png",
+        "sha256": "55538bb86602d1ea6a854e04b37d0632128541a09fc6aaa317e0c96d5eacf0ee"
+      },
+      {
+        "path": "assets/heroes/timeline-phone.png",
+        "sha256": "a9d648a25e95fe5d40242ff6e1e6377cb4eec955ac74d3d7e40ebaf286119366"
+      }
+    ],
+    "identity": "Symbolic still life, no people or named historical artifact. Portrait reframes matching journal, folded map, compass and dawn mountain scene.",
+    "wide_source": "C:/Users/wyatt/.codex/generated_images/01a0fcfd-0e0b-7543-b7c0-244623ad8f54/exec-392b2fcc-7763-4201-b474-0f7cff682b09.png",
+    "pixel_observation": "Both images independently viewed; blank pages/nonlegible map linework, coherent photographic still life. Portrait retains journal and compass.",
+    "alt_and_record": "timeline.html image alts describe actual scene; hero-details.js timeline record describes scene and labels reflective invitation, links Church history sources and timeline choices. Site footer identifies artistic interpretations.",
+    "limitations": "Not a photograph, authenticated artifact, eyewitness scene, named geography, owner acceptance or browser geometry proof."
   }
 }
