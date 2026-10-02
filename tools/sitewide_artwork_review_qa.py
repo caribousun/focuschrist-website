@@ -65,10 +65,10 @@ def reviewed_art_reflection(selector, body, data):
 
 # Additive 2026-10-02 owner-requested Timeline routes. The dated September
 # review remains unchanged; source inclusion is distinct from rendered approval.
-TIMELINE_ROUTES = {'timeline.html', 'timelines/latter-day-saint-church-history-timeline.html', 'timelines/willie-and-martin-handcart-map.html'}
+TIMELINE_ROUTES = {'timeline.html', 'timelines/latter-day-saint-church-history-timeline.html', 'timelines/willie-and-martin-handcart-map.html', 'timelines/life-of-christ-journey-map.html'}
 
 def reviewed_wrap_consumers(consumers, expected, version):
-    return (set(consumers) == set(expected) | {'answers/holy-ghost.html', 'answers/plan-of-salvation.html', 'history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html', 'answers/race-priesthood-and-temple-blessings.html'} | TIMELINE_ROUTES and len(consumers) == 129
+    return (set(consumers) == set(expected) | {'answers/holy-ghost.html', 'answers/plan-of-salvation.html', 'history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html', 'answers/race-priesthood-and-temple-blessings.html'} | TIMELINE_ROUTES and len(consumers) == 130
             and all(parse_qs(urlsplit(ref).query).get('v') == [version] for refs in consumers.values() for ref in refs))
 
 
@@ -170,6 +170,8 @@ SCOPED_INTERFACE_STYLES = {
 # Wyatt requested these exact desktop repairs and the Temple chronology.
 # Albert independently reviewed rendered composition; byte/consumer changes fail closed.
 OWNER_20260929_STYLES = {
+    # Owner requested shared headers on these three preserved experiences; exact scoped desktop offset.
+    "timeline-experiences.css": ("baa81f4c63d3e81f4ca26fab1db7202c3c700549e781d72996c28bf721bb3be4", ["timelines/latter-day-saint-church-history-timeline.html", "timelines/willie-and-martin-handcart-map.html", "timelines/life-of-christ-journey-map.html"]),
     "study-reading-balance.css": ("fb547af5c883050d743204c0d05372863143a1fa0dffd2df370b728f1a9ff005", ["atonement.html", "answers/bible-and-book-of-mormon-together.html", "answers.html", "index.html", "ask.html"]),
     # Dynamically loaded shared opening surface; source reviewed, rendered approval recorded separately.
     'unified-opening.css': ('7fcb1456b4ff2c3372238e0baaccfa6083e4232e328956eff1e1d43f178c96e6', []),

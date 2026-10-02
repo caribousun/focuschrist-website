@@ -1,7 +1,7 @@
 {
-  "canonical_count": 128,
+  "canonical_count": 129,
   "hero_count": 47,
-  "excluded_count": 81,
+  "excluded_count": 82,
   "pages": [
     {
       "path": "index.html",
@@ -645,6 +645,12 @@
       "hero": false,
       "template": "excluded-owner-preserved-timeline-experience",
       "reason": "Wyatt requested preserving Merlin standalone experience design on 2026-10-02."
+    },
+    {
+      "path": "timelines/life-of-christ-journey-map.html",
+      "hero": false,
+      "template": "excluded-owner-preserved-timeline-experience",
+      "reason": "Wyatt authorized the delivered standalone Life of Christ timeline on 2026-10-02; its original experience design remains independent."
     }
   ]
 }

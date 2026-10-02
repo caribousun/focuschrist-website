@@ -9387,17 +9387,17 @@
     {
       "path": "timeline.html",
       "status": "non-source-dependent",
-      "published_text_sha256": "3629fc263bed42c9c81a5a11bdfa4b2108f968b44575a723403b0731345aacfc",
+      "published_text_sha256": "2678f08c486c497809ab0428048eff02d3bdceb4c65a4a16910283134b52182c",
       "reviewed_on": "2026-10-02",
-      "review_standard": "Navigation hub labels, standalone destinations, independent-site footer and artwork disclosure reviewed; no historical claims added. Owner-requested standard hero review: wide and portrait generated still-life pixels independently inspected; journal/map/compass/dawn scene and alt text agree, no people or authenticated historical artifact claim. New navigation introduction and hero interpretation invite reflection rather than assert historical events. Original timeline destinations preserved; owner aesthetic acceptance and rendered geometry remain separate.",
+      "review_standard": "Navigation hub labels, standalone destinations, independent-site footer and artwork disclosure reviewed; no historical claims added. Owner-requested standard hero review: wide and portrait generated still-life pixels independently inspected; journal/map/compass/dawn scene and alt text agree, no people or authenticated historical artifact claim. New navigation introduction and hero interpretation invite reflection rather than assert historical events. Original timeline destinations preserved; owner aesthetic acceptance and rendered geometry remain separate. 2026-10-02 owner-authorized follow-up: standard navigation added to standalone experiences; third Life of Christ hub link added. Existing narrative content unchanged by header integration; marker selection repair changes interaction only.",
       "review_scope": "navigation-only"
     },
     {
       "path": "timelines/latter-day-saint-church-history-timeline.html",
       "status": "verified",
-      "published_text_sha256": "da73c39828c2cb49b153806b24199c9e80b197c245d0969663cb0b260b1bfb19",
+      "published_text_sha256": "d928f6487234231b707db72e00b0aac6de085e513ecdcd1d39c7a79ef9431bd7",
       "reviewed_on": "2026-10-02",
-      "review_standard": "Targeted source review of Merlin-delivered experience, not comprehensive verification of every statement: exact documented factual repairs verified against official Church sources; delivered source references and design retained. Static hash excludes script-embedded event/stop text. Factual review scope and exact before/after recorded in docs/reviews/timeline-source-review-20261002.json; runtime behavior and owner visual acceptance are separate. The verified status denotes this documented targeted review scope only. Follow-up navigation-only review: Search focusChrist accessible label and link added beside Return to Timeline, with shared search assets and wrapping navigation row; normalized line diff confirms all event/stop content unchanged.",
+      "review_standard": "Targeted source review of Merlin-delivered experience, not comprehensive verification of every statement: exact documented factual repairs verified against official Church sources; delivered source references and design retained. Static hash excludes script-embedded event/stop text. Factual review scope and exact before/after recorded in docs/reviews/timeline-source-review-20261002.json; runtime behavior and owner visual acceptance are separate. The verified status denotes this documented targeted review scope only. Follow-up navigation-only review: Search focusChrist accessible label and link added beside Return to Timeline, with shared search assets and wrapping navigation row; normalized line diff confirms all event/stop content unchanged. 2026-10-02 owner-authorized follow-up: standard navigation added to standalone experiences; third Life of Christ hub link added. Existing narrative content unchanged by header integration; marker selection repair changes interaction only.",
       "review_scope": "targeted-source-corrections-not-comprehensive",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/manual/teachings-of-presidents-of-the-church-lorenzo-snow/chapter-12-tithing-a-law-for-our-protection-and-advancement?lang=eng",
@@ -9417,9 +9417,9 @@
     {
       "path": "timelines/willie-and-martin-handcart-map.html",
       "status": "verified",
-      "published_text_sha256": "b16e4f93ea5c1c8ff46d00ed9872a09811dd3b7d3212b73cfd7132bd2aea5425",
+      "published_text_sha256": "f0e9e64ca6de97475ec273d26dc9ea6ece690bf4a2eb9ecd871c271922ea6f96",
       "reviewed_on": "2026-10-02",
-      "review_standard": "Targeted source review of Merlin-delivered experience, not comprehensive verification of every statement: exact documented factual repairs verified against official Church sources; delivered source references and design retained. Static hash excludes script-embedded event/stop text. Factual review scope and exact before/after recorded in docs/reviews/timeline-source-review-20261002.json; runtime behavior and owner visual acceptance are separate. The verified status denotes this documented targeted review scope only. Follow-up navigation-only review: Search focusChrist accessible label and link added beside Return to Timeline, with shared search assets and wrapping navigation row; normalized line diff confirms all event/stop content unchanged.",
+      "review_standard": "Targeted source review of Merlin-delivered experience, not comprehensive verification of every statement: exact documented factual repairs verified against official Church sources; delivered source references and design retained. Static hash excludes script-embedded event/stop text. Factual review scope and exact before/after recorded in docs/reviews/timeline-source-review-20261002.json; runtime behavior and owner visual acceptance are separate. The verified status denotes this documented targeted review scope only. Follow-up navigation-only review: Search focusChrist accessible label and link added beside Return to Timeline, with shared search assets and wrapping navigation row; normalized line diff confirms all event/stop content unchanged. 2026-10-02 owner-authorized follow-up: standard navigation added to standalone experiences; third Life of Christ hub link added. Existing narrative content unchanged by header integration; marker selection repair changes interaction only.",
       "review_scope": "targeted-source-corrections-not-comprehensive",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/manual/teachings-of-presidents-of-the-church-lorenzo-snow/chapter-12-tithing-a-law-for-our-protection-and-advancement?lang=eng",
@@ -9434,6 +9434,20 @@
         "https://newsroom.churchofjesuschrist.org/article/2025-statistical-report",
         "https://newsroom.churchofjesuschrist.org/article/president-nelson-and-the-house-of-the-lord",
         "https://www.churchofjesuschrist.org/learn/history/hcvc-2-2?lang=eng"
+      ]
+    },
+    {
+      "path": "timelines/life-of-christ-journey-map.html",
+      "status": "verified",
+      "published_text_sha256": "da89fef0c793c73a259442152b95c1e70fc38cc35d3253edf277a792bc8942ab",
+      "reviewed_on": "2026-10-02",
+      "review_standard": "Targeted source and hosting review only; not comprehensive verification of every statement. The verified status denotes this bounded review. Exact scope and repairs in docs/reviews/life-of-christ-source-review-20261002.json. Static text hash excludes script stop narratives; rendering and owner acceptance remain separate.",
+      "review_scope": "targeted-source-corrections-not-comprehensive",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/book-of-mormon-geography?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bd/emmaus?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/new-testament-student-manual/introduction-to-the-gospel-according-to-st-luke/chapter-20-luke-23-24?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/19?lang=eng&id=p18#p18"
       ]
     }
   ]

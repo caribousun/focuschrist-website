@@ -7,7 +7,7 @@ const root = path.resolve(__dirname, '..');
 const read = name => fs.readFileSync(path.join(root,name),'utf8');
 const artworkDisclosure = 'Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.';
 const pages = [...read('sitemap.xml').matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>new URL(m[1]).pathname);
-assert.equal(pages.length,128);
+assert.equal(pages.length,129);
 assert.ok(pages.includes('/answers/race-priesthood-and-temple-blessings.html'),'new dependent study must receive the shared footer test');
 let bareGalleryEntries=0;
 for(const route of [...pages,'/404.html','/search.html']){
@@ -71,10 +71,7 @@ for(const route of [...pages, '/404.html']){
  const art=d.querySelectorAll('footer [data-focuschrist-art-gallery]');
  assert.equal(art.length,1,file+' Art footer entry must remain unique');
  assert.equal(new URL(art[0].href).pathname,'/art.html',file+' Art footer and menu share destination');
- if(file.startsWith('timelines/')){
-  assert(['timelines/latter-day-saint-church-history-timeline.html','timelines/willie-and-martin-handcart-map.html'].includes(file),'Only owner-preserved standalone experiences omit the global header');
-  assert(d.querySelector('a[href="../timeline.html"]'),file+' return to Timeline');
- } else assert([...d.querySelectorAll('.nav a[href]')].some(a=>new URL(a.href).pathname==='/art.html'),file+' matching Art menu destination');
+ assert([...d.querySelectorAll('.nav a[href]')].some(a=>new URL(a.href).pathname==='/art.html'),file+' matching Art menu destination');
  const disclosure=d.querySelector('[data-focuschrist-artwork-disclosure]');
  assert.equal(disclosure.textContent,artworkDisclosure);
  assert.equal(independence.nextElementSibling,disclosure,file+' runtime notice adjacency');
