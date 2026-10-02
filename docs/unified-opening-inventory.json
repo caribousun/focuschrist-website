@@ -1,7 +1,7 @@
 {
-  "canonical_count": 125,
+  "canonical_count": 128,
   "hero_count": 46,
-  "excluded_count": 79,
+  "excluded_count": 82,
   "pages": [
     {
       "path": "index.html",
@@ -627,6 +627,24 @@
       "path": "answers/race-priesthood-and-temple-blessings.html",
       "hero": false,
       "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "timeline.html",
+      "hero": false,
+      "template": "excluded-navigation-hub",
+      "reason": "Timeline navigation hub links to standalone experiences; no new artwork requested."
+    },
+    {
+      "path": "timelines/latter-day-saint-church-history-timeline.html",
+      "hero": false,
+      "template": "excluded-owner-preserved-timeline-experience",
+      "reason": "Wyatt requested preserving Merlin standalone experience design on 2026-10-02."
+    },
+    {
+      "path": "timelines/willie-and-martin-handcart-map.html",
+      "hero": false,
+      "template": "excluded-owner-preserved-timeline-experience",
+      "reason": "Wyatt requested preserving Merlin standalone experience design on 2026-10-02."
     }
   ]
 }

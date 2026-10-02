@@ -47,7 +47,7 @@ for e,u in zip(entries,urls):
   except ValueError:errors.append(f'{p.name}: invalid structured data JSON')
  modified=e.findtext('s:lastmod',namespaces=ns)
  if modified and date.fromisoformat(modified)>datetime.now(timezone.utc).date():errors.append(f'{p.name}: future modification date')
-expected={p.resolve() for p in [*ROOT.glob('*.html'),*ROOT.glob('answers/*.html'),*ROOT.glob('art-study/*.html'),*ROOT.glob('history/*.html'),*ROOT.glob('jesus-christ/**/*.html')] if p.name not in ['404.html','google3fa84a4b37862f36.html']}
+expected={p.resolve() for p in [*ROOT.glob('*.html'),*ROOT.glob('answers/*.html'),*ROOT.glob('art-study/*.html'),*ROOT.glob('history/*.html'),*ROOT.glob('timelines/*.html'),*ROOT.glob('jesus-christ/**/*.html')] if p.name not in ['404.html','google3fa84a4b37862f36.html']}
 if expected!=seen:errors.append('Published content and sitemap coverage differ')
 robots=(ROOT/'robots.txt').read_text()
 if 'Sitemap: '+ORIGIN+'/sitemap.xml' not in robots:errors.append('Robots lacks canonical sitemap')

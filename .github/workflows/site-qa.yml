@@ -241,6 +241,19 @@ jobs:
       - name: Verify mobile study headers preserve navigation
         run: NODE_PATH=/tmp/focus-row-qa/node_modules node tools/mobile_study_header_browser_qa.js
 
+      - name: Verify standalone Timeline experiences at desktop, phone, and enlarged text
+        if: ${{ !cancelled() && steps.presentation_dependencies.outcome == 'success' }}
+        run: NODE_PATH=/tmp/focus-row-qa/node_modules node tools/timeline_runtime_qa.js
+
+      - name: Save Timeline interaction and rendering evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: timeline-experiences
+          path: .qa-artifacts/timeline/
+          include-hidden-files: true
+          if-no-files-found: ignore
+
       - name: Inspect every canonical page at desktop, phone, and enlarged text
         if: ${{ !cancelled() && steps.presentation_dependencies.outcome == 'success' }}
         run: NODE_PATH=/tmp/focus-row-qa/node_modules node tools/canonical_presentation_browser_qa.js

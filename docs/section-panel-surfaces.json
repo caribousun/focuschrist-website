@@ -80,7 +80,20 @@
     "cfm-signature": "Existing Signature study card moved once into the CFM weekly panel; exact CFM composition contract preserves its source, artwork and destination.",
     "fc-temple-history__era-menu": "Owner-requested native era disclosure uses shared panel fill/border/shadow tokens in sole-consumer temples-history.css; exact stylesheet and four-group chapter QA protect scope.",
     "fc-life-reflection": "Dedicated History story reflection panels use the shared Home panel tokens in exact reviewed history-stories.css; three owning story pages only.",
-    "fc-history-life-card": "Three Church History owning-story preview cards use shared Home panel tokens in exact reviewed church-history.css."
+    "fc-history-life-card": "Three Church History owning-story preview cards use shared Home panel tokens in exact reviewed church-history.css.",
+    "controls-card": "Merlin standalone timeline experience, preserved by Wyatt on 2026-10-02; scoped inline design and timeline runtime checks own this surface.",
+    "card": "Merlin standalone timeline experience, preserved by Wyatt on 2026-10-02; scoped inline design and timeline runtime checks own this surface.",
+    "callout": "Merlin standalone timeline experience, preserved by Wyatt on 2026-10-02; scoped inline design and timeline runtime checks own this surface.",
+    "detail-panel": "Merlin standalone timeline experience, preserved by Wyatt on 2026-10-02; scoped inline design and timeline runtime checks own this surface.",
+    "detail-panel__body": "Merlin standalone timeline experience, preserved by Wyatt on 2026-10-02; scoped inline design and timeline runtime checks own this surface.",
+    "stop-card": "Merlin standalone timeline experience, preserved by Wyatt on 2026-10-02; scoped inline design and timeline runtime checks own this surface.",
+    "co-card": "Merlin standalone map surface, preserved by owner direction 2026-10-02; scoped inline styles and timeline interaction review.",
+    "detail-card": "Merlin standalone map surface, preserved by owner direction 2026-10-02; scoped inline styles and timeline interaction review.",
+    "detail-header": "Merlin standalone map surface, preserved by owner direction 2026-10-02; scoped inline styles and timeline interaction review.",
+    "detail-footer": "Merlin standalone map surface, preserved by owner direction 2026-10-02; scoped inline styles and timeline interaction review.",
+    "detail-note": "Merlin standalone map surface, preserved by owner direction 2026-10-02; scoped inline styles and timeline interaction review.",
+    "map-note": "Merlin standalone map surface, preserved by owner direction 2026-10-02; scoped inline styles and timeline interaction review.",
+    "notes": "Merlin standalone map surface, preserved by owner direction 2026-10-02; scoped inline styles and timeline interaction review."
   },
   "excluded_classes": {
     "ask-scene-card": "Artwork figure; preserve artwork framing.",
@@ -121,7 +134,11 @@
     "watch-media-note": "Inline note, not panel.",
     "watch-reflection": "Inline reflection paragraph within existing study composition.",
     "fc-life-reflections": "Bare responsive layout for three meaningful reflection panels; no independent painted surface.",
-    "fc-history-life-grid": "Bare three-or-one-column layout for three owning-story previews."
+    "fc-history-life-grid": "Bare three-or-one-column layout for three owning-story previews.",
+    "fc-timeline-note": "Timeline text or structural wrapper; preserved independent experience, no shared panel repaint.",
+    "count-note": "Timeline text or structural wrapper; preserved independent experience, no shared panel repaint.",
+    "detail-panel-inner": "Timeline text or structural wrapper; preserved independent experience, no shared panel repaint.",
+    "detail-panel-head": "Timeline text or structural wrapper; preserved independent experience, no shared panel repaint."
   },
   "runtime_selectors": {
     ".cfm-month": {

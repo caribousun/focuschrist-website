@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<meta name="color-scheme" content="dark"/>
+<link rel="icon" href="data:,"/>
+<title>Latter-day Saint Church History Timeline</title>
+<meta name="description" content="Explore 51 moments in Church history, from the First Vision to the present, with stories, era filters, and the succession of Church Presidents.">
+<meta name="robots" content="index, follow"><link rel="canonical" href="https://focuschrist.com/timelines/latter-day-saint-church-history-timeline.html">
+<meta property="og:title" content="Latter-day Saint Church History Timeline"><meta property="og:description" content="Explore 51 moments in Church history, from the First Vision to the present, with stories, era filters, and the succession of Church Presidents.">
+<meta property="og:url" content="https://focuschrist.com/timelines/latter-day-saint-church-history-timeline.html"><meta property="og:image" content="https://focuschrist.com/assets/timelines/church-history-grove.webp"><meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../site-system.css?v=20260930-study-alignment-1">
+<script src="../site-common.js?v=20261002-timeline-1" defer></script>
+<style>
+:root{
+  --bg:#142a35; --bg-deep:#10252d; --surface-1:#315547; --surface-2:#1d3b38;
+  --gold:#e8b54d; --gold-light:#f3cf83; --gold-deep:#b87d24;
+  --cream:#f0e8d9; --cream-bright:#fff2dc; --muted:#d2d2bb; --faint:#92a6a8;
+  --sky:#86afc8; --sage:#71805c; --ember:#b76848;
+  --hairline:rgba(210,185,121,.36);
+  --paper:#f3eddf; --paper-bright:#fffaf0; --ink:#203b3e; --ink-muted:#465c59; --ink-link:#245d62; --paper-line:#c5c4ae;
+  --radius:18px; --shadow:0 22px 60px rgba(5,17,23,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg-deep);color:var(--cream);font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.55}
+a{color:var(--sky)}
+.hero{position:relative;min-height:520px;display:flex;align-items:flex-end;overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,37,45,.12) 0%,rgba(16,37,45,.18) 42%,rgba(16,37,45,.94) 88%,var(--bg-deep) 100%)}
+.hero-inner{position:relative;z-index:1;max-width:1080px;margin:0 auto;width:100%;padding:120px 24px 44px}
+.kicker{letter-spacing:.14em;text-transform:uppercase;font-size:12px;color:var(--gold-light);font-weight:700;margin:0 0 14px}
+.hero h1{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:clamp(36px,6vw,64px);line-height:1.04;color:var(--cream-bright);margin:0 0 18px;max-width:760px;text-shadow:0 2px 24px rgba(16,37,45,.45)}
+.hero p.lede{font-size:clamp(16px,2vw,19px);color:#e9e2cd;max-width:680px;margin:0 0 28px;text-shadow:0 1px 16px rgba(16,37,45,.55)}
+.stats{display:flex;flex-wrap:wrap;gap:12px}
+.stat{background:linear-gradient(160deg,rgba(49,85,71,.92),rgba(29,59,56,.92));border:1px solid var(--hairline);border-radius:14px;padding:14px 18px;min-width:132px;box-shadow:var(--shadow)}
+.stat b{display:block;font-family:Georgia,serif;font-size:26px;color:var(--gold-light);font-weight:400;line-height:1.1}
+.stat span{font-size:12.5px;color:var(--muted);letter-spacing:.02em}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px 90px}
+.intro{max-width:760px;margin:34px 0 8px}
+.intro h2{font-family:Georgia,serif;font-weight:400;font-size:28px;color:var(--cream-bright);margin:0 0 10px}
+.intro p{color:var(--muted);margin:0}
+.controls{position:sticky;top:0;z-index:40;background:linear-gradient(180deg,var(--bg-deep) 78%,transparent);padding:22px 0 14px;margin-top:26px}
+.controls-card{background:linear-gradient(150deg,var(--surface-1),var(--surface-2));border:1px solid var(--hairline);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px}
+.search-row{display:flex;gap:10px;flex-wrap:wrap}
+.search-row input{flex:1 1 220px;background:var(--bg-deep);border:1px solid var(--hairline);border-radius:12px;color:var(--cream-bright);padding:12px 14px;font:inherit;font-size:15px;outline:none}
+.search-row input:focus{border-color:var(--gold)}
+.search-row input::placeholder{color:var(--faint)}
+.count-label{align-self:center;font-size:13.5px;color:var(--faint);white-space:nowrap}
+.era-pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.pill{appearance:none;border:1px solid var(--hairline);background:rgba(16,37,45,.45);color:var(--muted);padding:8px 14px;border-radius:999px;font:inherit;font-size:13.5px;font-weight:600;cursor:pointer;transition:all .15s}
+.pill:hover{color:var(--cream-bright);border-color:var(--gold)}
+.pill[aria-pressed="true"]{background:linear-gradient(180deg,#f7d77f,#e9b846 55%,#dda334);color:#2a2106;border-color:transparent}
+.era-nav{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.era-nav a{font-size:13px;color:var(--sky);text-decoration:none;border-bottom:1px dotted rgba(134,175,200,.5);padding-bottom:1px}
+.era-nav a:hover{color:var(--gold-light)}
+.timeline{position:relative;margin-top:36px}
+.timeline::before{content:"";position:absolute;left:19px;top:8px;bottom:8px;width:2px;background:linear-gradient(180deg,var(--gold-deep),rgba(210,185,121,.28) 12%,rgba(210,185,121,.28) 88%,var(--gold-deep))}
+@media(min-width:820px){.timeline::before{left:50%;margin-left:-1px}}
+.era-block{margin-top:52px}
+.era-block:first-child{margin-top:8px}
+.era-head{position:relative;padding-left:52px;margin-bottom:20px}
+@media(min-width:820px){.era-head{padding-left:0;text-align:center}}
+.era-head .era-years{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-light);font-weight:700}
+.era-head h2{font-family:Georgia,serif;font-weight:400;font-size:clamp(26px,3.4vw,34px);color:var(--cream-bright);margin:4px 0 6px}
+.era-head p{color:var(--muted);max-width:620px;margin:0}
+@media(min-width:820px){.era-head p{margin:0 auto}}
+.event{position:relative;padding:0 0 22px 52px}
+@media(min-width:820px){.event{width:50%;padding:0 44px 26px 0;text-align:left}
+.event.right{padding-left:52px}
+@media(min-width:820px){.event.right{margin-left:50%;padding:0 0 26px 44px}}}
+.dot{position:absolute;left:12px;top:22px;width:16px;height:16px;border-radius:50%;background:linear-gradient(180deg,#f7d77f,#dda334);border:2px solid var(--bg-deep);box-shadow:0 0 0 2px var(--hairline);z-index:2}
+@media(min-width:820px){.event .dot{left:auto;right:-9px}.event.right .dot{left:-9px;right:auto}}
+.card{background:linear-gradient(155deg,var(--surface-1),var(--surface-2));border:1px solid var(--hairline);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.card-top{padding:20px 20px 16px;cursor:pointer;width:100%;text-align:left;background:none;border:none;color:inherit;font:inherit;display:block}
+.card-top:focus-visible{outline:2px solid var(--gold);outline-offset:-2px}
+.year-line{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.year{font-family:Georgia,serif;font-size:22px;color:var(--gold-light)}
+.place{font-size:13px;color:var(--faint)}
+.tag{font-size:11px;letter-spacing:.09em;text-transform:uppercase;font-weight:700;padding:3px 8px;border-radius:999px;border:1px solid var(--hairline);color:var(--gold-light)}
+.tag.persecution{color:#e8a487;border-color:rgba(183,104,72,.55)}
+.tag.temple{color:#b9cba4;border-color:rgba(113,128,92,.7)}
+.tag.global{color:#a8cade;border-color:rgba(134,175,200,.5)}
+.card h3{font-family:Georgia,serif;font-weight:400;font-size:21px;line-height:1.25;color:var(--cream-bright);margin:8px 0 8px}
+.card .summary{color:var(--muted);font-size:15px;margin:0}
+.read-more{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13.5px;font-weight:700;color:var(--gold-light)}
+.read-more .chev{transition:transform .2s;font-size:11px}
+.card.open .read-more .chev{transform:rotate(180deg)}
+.detail{display:none;border-top:1px solid var(--paper-line);background:linear-gradient(180deg,var(--paper-bright),var(--paper));color:var(--ink);padding:20px}
+.card.open .detail{display:block}
+.detail p{margin:0 0 12px;font-size:15.5px;color:var(--ink)}
+.detail p:last-of-type{margin-bottom:0}
+.detail .ref{margin-top:14px;padding-top:12px;border-top:1px solid var(--paper-line);font-size:13.5px;color:var(--ink-muted)}
+.detail .ref b{color:var(--ink)}
+.detail .ref a{color:var(--ink-link);font-weight:600}
+.no-results{display:none;text-align:center;padding:48px 20px;color:var(--muted)}
+.no-results.show{display:block}
+.presidents{margin-top:64px}
+.presidents h2,.sources h2{font-family:Georgia,serif;font-weight:400;font-size:28px;color:var(--cream-bright);margin:0 0 8px}
+.presidents>p,.sources>p{color:var(--muted);max-width:680px;margin:0 0 20px}
+.prophet-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.prophet{background:linear-gradient(150deg,rgba(49,85,71,.75),rgba(29,59,56,.85));border:1px solid var(--hairline);border-radius:14px;padding:14px 16px}
+.prophet b{display:block;font-family:Georgia,serif;font-weight:400;font-size:17px;color:var(--cream-bright)}
+.prophet span{font-size:13px;color:var(--faint)}
+.prophet em{font-style:normal;font-size:12.5px;color:var(--gold-light);display:block;margin-top:4px}
+.sources{margin-top:64px;background:linear-gradient(180deg,var(--paper-bright),var(--paper));color:var(--ink);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+.sources h2{color:var(--ink)}
+.sources p{color:var(--ink-muted)}
+.sources ul{margin:0;padding-left:20px;color:var(--ink)}
+.sources li{margin-bottom:8px;font-size:15px}
+.sources a{color:var(--ink-link);font-weight:600}
+footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--hairline);color:var(--faint);font-size:13.5px;max-width:720px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.read-more .chev{transition:none}}
+/* Minimal hosting and accessibility repairs; Merlin's experience remains independent. */
+.timeline-return {display:block;width:fit-content;max-width:calc(100% - 40px);margin:16px 20px;padding:10px 18px;min-height:44px;border:1px solid rgba(210,185,121,.6);border-radius:999px;color:#f3cf83;font-weight:600;text-decoration:none;line-height:1.5;}
+.timeline-return:focus-visible {outline:2px solid #f3cf83;outline-offset:3px;}
+.fc-footer {max-width:1080px;margin:48px auto 0;padding:24px 20px 48px;font-size:14px;line-height:1.7;}
+.fc-footer a {color:#f3cf83;}
+@media(max-width:700px){.controls{position:relative;top:auto;} .search-row input{min-width:0;max-width:100%;} .prophet-grid{grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));} .hero-cap{position:relative;background:var(--panel-deep);padding:20px;} }
+</style>
+</head>
+<body>
+<nav aria-label="Timeline navigation"><a class="timeline-return" href="../timeline.html">Return to Timeline</a></nav>
+
+<header class="hero">
+  <img src="../assets/timelines/church-history-grove.webp" alt="Painterly illustration of a sunlit grove of tall trees in spring, golden light falling through fresh green leaves"/>
+  <div class="hero-inner">
+    <p class="kicker">1820 to today · Two centuries of Restoration history</p>
+    <h1>From a grove in New York to a worldwide faith</h1>
+    <p class="lede">The history of The Church of Jesus Christ of Latter-day Saints, from Joseph Smith's First Vision in 1820 through the pioneer exodus, the Utah years, and the growth of a global church of more than 17 million members. Tap any event to read its story right where you are.</p>
+    <div class="stats">
+      <div class="stat"><b>1820</b><span>First Vision, Palmyra, New York</span></div>
+      <div class="stat"><b>1830</b><span>Church organized, April 6</span></div>
+      <div class="stat"><b>17.5M+</b><span>Members worldwide (2024)</span></div>
+      <div class="stat"><b>350+</b><span>Temples dedicated, under construction, or announced (Oct 2024)</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="intro">
+    <h2>How to read this timeline</h2>
+    <p>Events are grouped into eight eras. Use the era buttons or search to jump to what you are studying, and open any card for the fuller account, with the scripture or record it rests on. Details open inside the card itself, so you never have to scroll away from the event you picked.</p>
+  </div>
+
+  <div class="controls">
+    <div class="controls-card">
+      <div class="search-row">
+        <input id="search" aria-label="Search Church history" type="search" placeholder="Search events, places, people…  try &quot;temple&quot; or &quot;Nauvoo&quot;" aria-label="Search timeline events"/>
+        <span class="count-label" id="countLabel"></span>
+      </div>
+      <div class="era-pills" id="eraPills" role="group" aria-label="Filter by era"></div>
+      <nav class="era-nav" id="eraNav" aria-label="Jump to era"></nav>
+    </div>
+  </div>
+
+  <main class="timeline" id="timeline"></main>
+  <div class="no-results" id="noResults"><p>No events match that search in the selected era. Try a different word, or choose “All eras.”</p></div>
+
+  <section class="presidents">
+    <h2>Presidents of the Church</h2>
+    <p>Eighteen prophets have led the Church since 1830. The First Presidency is reorganized after each president's death, with the senior apostle called as his successor.</p>
+    <div class="prophet-grid" id="prophetGrid"></div>
+  </section>
+
+  <section class="sources">
+    <h2>Sources and further study</h2>
+    <p>This timeline follows the Church's own published histories. Dates, places, and quotations were checked against these records.</p>
+    <ul>
+      <li><a href="https://www.churchofjesuschrist.org/study/history/topics" target="_blank" rel="noopener noreferrer">Church History Topics</a> at ChurchofJesusChrist.org</li>
+      <li><a href="https://www.churchofjesuschrist.org/study/manual/saints-v1" target="_blank" rel="noopener noreferrer"><i>Saints, Vol. 1: The Standard of Truth, 1815–1846</i></a></li>
+      <li><a href="https://www.churchofjesuschrist.org/study/manual/saints-v2" target="_blank" rel="noopener noreferrer"><i>Saints, Vol. 2: No Unhallowed Hand, 1846–1893</i></a></li>
+      <li><a href="https://www.churchofjesuschrist.org/study/manual/saints-v3" target="_blank" rel="noopener noreferrer"><i>Saints, Vol. 3: Boldly, Nobly, and Independent, 1893–1955</i></a></li>
+      <li><a href="https://www.churchofjesuschrist.org/study/manual/saints-v4" target="_blank" rel="noopener noreferrer"><i>Saints, Vol. 4: Sounded in Every Ear, 1955–2020</i></a></li>
+      <li><a href="https://www.josephsmithpapers.org" target="_blank" rel="noopener noreferrer">The Joseph Smith Papers</a>, the Church's documentary edition of the Prophet's records</li>
+      <li><a href="https://newsroom.churchofjesuschrist.org/facts-and-statistics" target="_blank" rel="noopener noreferrer">Church Newsroom facts and statistics</a> for current membership and temple figures</li>
+    </ul>
+  </section>
+
+  <div class="experience-credit">
+    <p>Prepared as a study companion in the spirit of focuschrist.com: source material drawn from the Church's official histories and scriptures. Traditional sites are identified as traditional where the exact location is not known by revelation. Temple and membership figures are the Church's published year-end counts for 2024, the most recent complete year at the time of writing.</p>
+  </div>
+</div>
+
+<script>
+var ERAS=[
+ {id:"beginnings",years:"1820 – 1830",name:"Restoration Dawns",desc:"A young man's prayer, a buried record brought to light, and a church organized with six members in a New York farmhouse."},
+ {id:"gathering",years:"1831 – 1838",name:"Kirtland and Missouri",desc:"The Saints gather to Ohio and Missouri, build their first temple, and meet joy and violent opposition in both places."},
+ {id:"nauvoo",years:"1839 – 1846",name:"Nauvoo and Martyrdom",desc:"A swamp on the Mississippi becomes a city of thousands, a temple rises, and the Prophet Joseph Smith seals his testimony with his life."},
+ {id:"exodus",years:"1846 – 1869",name:"Exodus and Settlement",desc:"Driven from Nauvoo, the Saints cross plains and mountains to a desert valley, then build settlements across the American West."},
+ {id:"utah",years:"1870 – 1907",name:"Utah and Transition",desc:"Railroads, statehood, the end of plural marriage, and a temple forty years in the building reshape the Church for a new century."},
+ {id:"expansion",years:"1908 – 1977",name:"Strengthening and Outreach",desc:"Welfare, correlation, and missionary work carry the Church through two world wars and a depression, and its membership passes one million."},
+ {id:"worldwide",years:"1978 – 2007",name:"A Worldwide Church",desc:"The priesthood is extended to all worthy men, new scriptures are published, and more members soon live outside the United States than in it."},
+ {id:"today",years:"2008 – 2026",name:"The Church Today",desc:"Ministering, Come, Follow Me, an emphasis on the Church's revealed name, and temples announced across the earth mark the current era."}
+];
+
+var EVENTS=[
+ // ---- BEGINNINGS 1820-1830 ----
+ {era:"beginnings",year:"1820",date:"Spring 1820",title:"The First Vision",place:"Palmyra, New York",tag:"Revelation",summary:"Fourteen-year-old Joseph Smith, confused by competing churches, prays in a grove near his home and sees God the Father and Jesus Christ.",detail:"Joseph had read James 1:5: “If any of you lack wisdom, let him ask of God.” In answer to his prayer he saw “two Personages, whose brightness and glory defy all description, standing above me in the air.” One said, pointing to the other: “This is My Beloved Son. Hear Him!” He was told to join none of the existing churches, for the fulness of the gospel would be made known to him in due time. The grove, now called the Sacred Grove, is preserved beside the Smith family farm in Manchester, near Palmyra.",ref:"Joseph Smith—History 1:11–20"},
+ {era:"beginnings",year:"1823",date:"21–22 September 1823",title:"The Angel Moroni and the Golden Plates",place:"Manchester, New York",tag:"Revelation",summary:"The angel Moroni visits Joseph through the night and shows him where an ancient record is buried in a nearby hill.",detail:"Moroni, the last prophet of the Book of Mormon record, appeared in Joseph's room three times in one night and again the next day at the hill. The record, engraved on gold plates, lay with two stones in silver bows (the Urim and Thummim) and a breastplate. Joseph visited the Hill Cumorah each year on 22 September for four years before he was permitted to take the plates.",ref:"Joseph Smith—History 1:27–54"},
+ {era:"beginnings",year:"1827",date:"22 September 1827",title:"Joseph Receives the Plates",place:"Hill Cumorah, New York",tag:"Scripture",summary:"After four years of preparation, Joseph is entrusted with the golden plates and begins the work of translation.",detail:"Joseph and his wife Emma went to the hill shortly after midnight. He removed the plates from their stone box and carried the responsibility of guarding them through attempts to steal them, hiding them in a cooper's shop, a hearth, and under floorboards. Translation began in earnest that December in Harmony, Pennsylvania, with Emma and then Oliver Cowdery as scribes.",ref:"Joseph Smith—History 1:59–60"},
+ {era:"beginnings",year:"1829",date:"15 May 1829",title:"The Aaronic Priesthood Restored",place:"Harmony (now Oakland), Pennsylvania",tag:"Priesthood",summary:"John the Baptist appears to Joseph Smith and Oliver Cowdery on the banks of the Susquehanna River and confers the Aaronic Priesthood.",detail:"While translating the plates, Joseph and Oliver read of baptism for the remission of sins and retired to the woods to pray about it. John the Baptist descended in a cloud of light, laid his hands on their heads, and conferred “the Priesthood of Aaron, which holds the keys of the ministering of angels, and of the gospel of repentance, and of baptism by immersion for the remission of sins.” They then baptized each other in the Susquehanna River. The higher, or Melchizedek, Priesthood was restored shortly afterward by Peter, James, and John along the same river.",ref:"Joseph Smith—History 1:68–73; Doctrine and Covenants 13"},
+ {era:"beginnings",year:"1830",date:"26 March 1830",title:"The Book of Mormon Is Published",place:"Palmyra, New York",tag:"Scripture",summary:"Five thousand copies of the Book of Mormon come off E. B. Grandin's press, financed by Martin Harris mortgaging his farm.",detail:"Translation had finished in June 1829, with Joseph dictating to Oliver Cowdery at a pace of roughly eight to ten printed pages a day. Eleven witnesses saw and handled the plates and left written testimony printed in every copy. Martin Harris's $3,000 mortgage guaranteed the printing bill; the first copies went on sale at Grandin's Palmyra bookstore on 26 March 1830.",ref:"2 Nephi 27; Testimonies of the Three and Eight Witnesses"},
+ {era:"beginnings",year:"1830",date:"6 April 1830",title:"The Church Is Organized",place:"Fayette, New York",tag:"Organization",summary:"About sixty people gather at the Peter Whitmer Sr. home as the Church of Christ is formally organized with six charter members.",detail:"Revelation had directed that the Church be organized on 6 April, a date Latter-day Saints also recognize as the anniversary of the Savior's birth (Doctrine and Covenants 20:1). Joseph and Oliver were sustained as first and second elders, the sacrament was administered, and several present received spiritual confirmations. The small log home in Fayette, now restored, is where much of the Book of Mormon was also translated.",ref:"Doctrine and Covenants 20; 21"},
+
+ // ---- GATHERING 1831-1838 ----
+ {era:"gathering",year:"1831",date:"February 1831",title:"The Saints Gather to Kirtland, Ohio",place:"Kirtland, Ohio",tag:"Gathering",summary:"Following revelation, Joseph Smith and the New York Saints move to Kirtland, where converts from Sidney Rigdon's congregations have swelled the Church.",detail:"Missionaries including Parley P. Pratt had converted over a hundred Ohio residents in late 1830. In Kirtland the Church grew rapidly, built its first temple, established the School of the Prophets, and received many of the revelations now in the Doctrine and Covenants. Another revelation designated Independence, Missouri, as the center place of Zion, and Saints gathered in both locations through the decade.",ref:"Doctrine and Covenants 37; 38; 57"},
+ {era:"gathering",year:"1832",date:"16 February 1832",title:"The Vision of the Degrees of Glory",place:"Hiram, Ohio",tag:"Revelation",summary:"Joseph Smith and Sidney Rigdon see the celestial, terrestrial, and telestial kingdoms and testify, “He lives! For we saw him.”",detail:"While pondering John 5:29 on the resurrection of the just and unjust, Joseph and Sidney received the vision now canonized as Doctrine and Covenants 76. It taught that heaven comprises degrees of glory and that nearly all of God's children will inherit a kingdom of glory, a sweeping expansion of the era's usual heaven-and-hell teaching.",ref:"Doctrine and Covenants 76"},
+ {era:"gathering",year:"1833",date:"27 February 1833",title:"The Word of Wisdom",place:"Kirtland, Ohio",tag:"Revelation",summary:"In the School of the Prophets, Joseph receives the Lord's law of health: no alcohol, tobacco, or hot drinks, with grain, fruit, and sparing meat commended.",detail:"Emma Smith's concern over tobacco smoke and residue in the school room prompted Joseph to inquire of the Lord. The revelation, given “for a principle with promise,” was at first taught as counsel and was gradually adopted as a binding standard of worthiness over the following century. Its promise: those who keep it “shall find wisdom and great treasures of knowledge.”",ref:"Doctrine and Covenants 89"},
+ {era:"gathering",year:"1833",date:"November 1833",title:"Saints Expelled from Jackson County, Missouri",place:"Independence, Missouri",tag:"Persecution",summary:"After the Church's printing office is destroyed, armed mobs drive some 1,200 Saints from their Missouri homes across the river in winter.",detail:"Tensions over slavery, land, and the Saints' belief that Missouri was their Zion boiled over in 1833. A mob destroyed W. W. Phelps's printing office, tarred and feathered Bishop Edward Partridge, and by November had driven the settlers from Jackson County. Most crossed the Missouri River into Clay County with what they could carry, beginning a decade of Missouri hardship.",ref:"Doctrine and Covenants 101; Saints, Vol. 1"},
+ {era:"gathering",year:"1835",date:"February 1835",title:"The Quorum of the Twelve Apostles Organized",place:"Kirtland, Ohio",tag:"Organization",summary:"The Three Witnesses, under direction, choose the first Twelve Apostles of this dispensation, including Brigham Young and Heber C. Kimball.",detail:"The Twelve were called to be “special witnesses of the name of Christ in all the world.” That summer they served missions together in the eastern states and Canada, gaining the experience that would matter when several of them later led the Church. Brigham Young, second in seniority, would succeed Joseph Smith.",ref:"Doctrine and Covenants 18; 107:23"},
+ {era:"gathering",year:"1836",date:"27 March – 3 April 1836",title:"The Kirtland Temple Dedicated; Keys Restored",place:"Kirtland, Ohio",tag:"Temple",summary:"Nearly a thousand Saints crowd into the first temple of the dispensation. A week later, Christ, Moses, Elias, and Elijah appear and restore priesthood keys.",detail:"Built by sacrifice, with women sewing and men quarrying sandstone, the Kirtland Temple was dedicated 27 March with a dedicatory prayer (Doctrine and Covenants 109) and the Hosanna Shout. On 3 April, Joseph Smith and Oliver Cowdery testified that the Savior appeared and accepted the house, followed by Moses (keys of gathering), Elias, and Elijah, who restored the sealing keys foretold by Malachi. The temple, long owned by Community of Christ, was acquired by the Church in March 2024 and remains open to visitors as a historic site.",ref:"Doctrine and Covenants 109; 110"},
+ {era:"gathering",year:"1837",date:"July 1837",title:"First Mission to Great Britain",place:"Preston, England",tag:"Global",summary:"Heber C. Kimball and Orson Hyde lead the first overseas mission; the first baptisms are performed in the River Ribble at Preston.",detail:"Arriving in Liverpool with almost no money, the missionaries were directed to Preston, where a banner reading “Truth Will Prevail” hung over a hall they were offered. On 30 July 1837 nine converts were baptized in the River Ribble before curious crowds. The British mission opened the door to tens of thousands of converts who emigrated and strengthened the Church for a century.",ref:"Saints, Vol. 1"},
+ {era:"gathering",year:"1838",date:"October – November 1838",title:"Extermination Order, Haun's Mill, and Liberty Jail",place:"Northern Missouri",tag:"Persecution",summary:"Governor Lilburn W. Boggs orders the Saints “exterminated or driven from the state.” Seventeen Saints are killed at Haun's Mill, and Joseph Smith is imprisoned in Liberty Jail.",detail:"The governor's order of 27 October 1838 (not formally rescinded until 1976) unleashed militia violence. Three days later attackers killed seventeen men and boys at Haun's Mill. Joseph and other leaders, surrendered under a flag of truce, were held through the winter in the dungeon-like lower level of Liberty Jail. There, in March 1839, he received the consoling words now in Doctrine and Covenants 121–123: “know thou, my son, that all these things shall give thee experience, and shall be for thy good.” Some 10,000 Saints fled Missouri for Illinois that winter.",ref:"Doctrine and Covenants 121–123"},
+
+ // ---- NAUVOO 1839-1846 ----
+ {era:"nauvoo",year:"1839",date:"1839",title:"The Saints Build Nauvoo",place:"Commerce (Nauvoo), Illinois",tag:"Gathering",summary:"Refugees from Missouri drain a swampy bend of the Mississippi and raise a city that within five years rivals Chicago in size.",detail:"Joseph Smith, having escaped custody in April 1839, directed the purchase of land at Commerce, Illinois, which he renamed Nauvoo, a Hebrew word suggesting beauty and rest. The city charter granted Nauvoo unusual self-governing powers, its own militia (the Nauvoo Legion), and a university. British converts arrived by the shipload. Joseph also sent most of the Twelve to England (1839–41), where they baptized thousands.",ref:"Doctrine and Covenants 124; Saints, Vol. 1"},
+ {era:"nauvoo",year:"1842",date:"17 March 1842",title:"The Relief Society Is Organized",place:"Nauvoo, Illinois",tag:"Organization",summary:"Twenty women meet above Joseph Smith's store; the Prophet organizes the Female Relief Society of Nauvoo with Emma Smith as president.",detail:"What began as a sewing society offering to make shirts for temple workers became, under Joseph Smith's direction, a formally organized society “after the pattern of the priesthood.” Emma Smith was elected president with the charge to look after the poor and the moral welfare of the community. The Relief Society is today one of the oldest and largest women's organizations in the world, with millions of members.",ref:"Daughters in My Kingdom; Saints, Vol. 1"},
+ {era:"nauvoo",year:"1842",date:"May 1842",title:"The Temple Endowment Introduced",place:"Nauvoo, Illinois",tag:"Temple",summary:"Joseph Smith introduces the temple endowment to nine men in the upper room of his Red Brick Store; faithful women receive it the following year.",detail:"As the Nauvoo Temple walls rose, Joseph administered the endowment, a ceremony of instruction and covenant he had revealed, to nine men on 4 May 1842, with women admitted the following year. After the temple's completion in late 1845, more than 5,500 Saints received their endowment in its dedicated rooms before the exodus west.",ref:"Doctrine and Covenants 124; Saints, Vol. 1"},
+ {era:"nauvoo",year:"1844",date:"27 June 1844",title:"The Martyrdom of Joseph and Hyrum Smith",place:"Carthage, Illinois",tag:"Persecution",summary:"A mob with blackened faces storms Carthage Jail and murders Joseph and Hyrum Smith. John Taylor is wounded; Willard Richards is unharmed.",detail:"Joseph and Hyrum had surrendered to Illinois authorities on charges arising from the destruction of the Nauvoo Expositor press. On the afternoon of 27 June, some 150–200 men attacked the unguarded jail. Hyrum was shot first; Joseph, after defending himself, fell from the second-story window. John Taylor later wrote the tribute now printed as Doctrine and Covenants 135: “Joseph Smith, the Prophet and Seer of the Lord, has done more, save Jesus only, for the salvation of men in this world, than any other man that ever lived in it.”",ref:"Doctrine and Covenants 135"},
+ {era:"nauvoo",year:"1844",date:"8 August 1844",title:"The Twelve Lead the Church",place:"Nauvoo, Illinois",tag:"Organization",summary:"The Saints sustain the Quorum of the Twelve, under Brigham Young, to lead the Church after the Prophet's death.",detail:"With Joseph dead and no written successor named, Sidney Rigdon claimed guardianship of the Church. On 8 August 1844 Brigham Young spoke plainly: the keys of the kingdom rested with the Twelve. Many present later testified that Brigham's voice and appearance seemed transformed into Joseph's. The congregation voted unanimously to follow the Twelve, and Brigham Young led the Church for three years before being sustained as President in 1847.",ref:"Saints, Vol. 1"},
+ {era:"nauvoo",year:"1846",date:"February 1846",title:"The Exodus from Nauvoo Begins",place:"Nauvoo, Illinois, to Winter Quarters, Nebraska",tag:"Migration",summary:"Facing renewed violence, the first wagons cross the frozen Mississippi. Some 12,000 Saints abandon their city and temple through the year.",detail:"The Illinois legislature had repealed Nauvoo's charter, and mobs burned outlying farms. Beginning 4 February 1846, Brigham Young led companies across Iowa, establishing way stations at Sugar Creek, Garden Grove, and Mount Pisgah. By winter the main body reached the Missouri River and built Winter Quarters on the west bank (now Omaha, Nebraska), where hundreds died of cold, scurvy, and disease, and where their cemetery still stands.",ref:"Saints, Vol. 2"},
+
+ // ---- EXODUS 1846-1869 ----
+ {era:"exodus",year:"1846",date:"July 1846",title:"The Mormon Battalion Marches",place:"Council Bluffs, Iowa, to San Diego, California",tag:"Migration",summary:"Five hundred men enlist in the U.S. Army for the Mexican-American War, completing one of the longest infantry marches in American history.",detail:"Recruited at the request of the federal government, the battalion marched some 2,000 miles from Council Bluffs to San Diego, enduring thirst and near-starvation, never fighting a battle but building roads and outposts. Their pay, sent back to families, helped finance the migration west. Battalion members were present in northern California when gold was discovered at Sutter's Mill in 1848.",ref:"Saints, Vol. 2"},
+ {era:"exodus",year:"1847",date:"24 July 1847",title:"Pioneers Enter the Salt Lake Valley",place:"Great Salt Lake Valley, Utah",tag:"Migration",summary:"Brigham Young's advance company of 148 pioneers reaches the valley. “This is the right place,” he declares, in words remembered by the Church ever since.",detail:"The company had traveled 1,031 miles from Winter Quarters in 111 days. Orson Pratt and Erastus Snow scouted ahead on 21 July; Brigham Young, ill with fever, entered on 24 July. Within days the settlers dammed City Creek, planted crops, and laid out a city grid around a temple block. The 24th of July is still celebrated as Pioneer Day in Utah and by Saints worldwide.",ref:"Doctrine and Covenants 136; Saints, Vol. 2"},
+ {era:"exodus",year:"1848",date:"June 1848",title:"Crickets, Seagulls, and the First Harvest",place:"Salt Lake Valley, Utah",tag:"Settlement",summary:"Swarms of crickets threaten the pioneers' first full crop; flocks of seagulls devour the insects, and enough of the harvest is saved.",detail:"The settlers had survived their first winter partly on sego lily roots and thistle tops. When crickets blackened the fields in late spring 1848, prayer was followed by the arrival of California gulls that ate the crickets for weeks. The rescued harvest averted famine for the valley's roughly 5,000 residents, and the seagull remains Utah's state bird and a symbol on Temple Square.",ref:"Saints, Vol. 2"},
+ {era:"exodus",year:"1856",date:"October – November 1856",title:"The Willie and Martin Handcart Rescue",place:"Wyoming plains",tag:"Migration",summary:"Two late-starting handcart companies are caught by early winter storms. Brigham Young sends rescue parties that bring the survivors in.",detail:"Of the ten handcart companies (1856–60), the Willie and Martin companies left Iowa dangerously late. Blizzards on the high Wyoming plains killed more than 200 of their roughly 1,075 members, many near Rocky Ridge and Martin's Cove. When word reached Salt Lake City during general conference, Brigham Young suspended the meetings: the congregation's religion, he said, was to go and bring in the people on the plains. Rescuers reached the companies in late October and November. The handcart story remains the Church's emblem of faith in adversity and of rescue.",ref:"Saints, Vol. 2"},
+ {era:"exodus",year:"1857",date:"11 September 1857",title:"The Mountain Meadows Massacre",place:"Mountain Meadows, southern Utah",tag:"Persecution",summary:"In the fever of the Utah War, local militiamen and Paiute allies murder some 120 Arkansas emigrants. The Church has condemned the atrocity and worked with descendants to memorialize the victims.",detail:"As U.S. troops advanced on Utah in 1857, rumors and war hysteria spread through the territory's southern settlements. Members of the local militia, with Paiute participants, deceived a wagon train under a flag of truce and killed the emigrants, sparing only young children. The massacre is the darkest episode in the Church's history. The Church has expressed deep regret, maintained the site as a memorial with the State of Utah, and published full historical accounts of what happened.",ref:"Saints, Vol. 2; Church History Topics, “Mountain Meadows Massacre”"},
+ {era:"exodus",year:"1869",date:"10 May 1869",title:"The Transcontinental Railroad Completed",place:"Promontory Summit, Utah",tag:"Settlement",summary:"The golden spike joins the Central Pacific and Union Pacific railroads. The pioneer era of wagon migration ends, and emigration becomes faster and safer.",detail:"Church members had graded much of the railroad's route through Utah under contract with the rail companies. Brigham Young, whose crews had graded roadbed under contract, did not attend the ceremony at Promontory Summit, where Leland Stanford drove the golden spike. Thereafter, converts from Europe crossed America by rail in days rather than walking a thousand miles, and the Perpetual Emigrating Fund (1849) gave way to modern transportation. The same year saw the organization of what became the Young Women program.",ref:"Saints, Vol. 2"},
+
+ // ---- UTAH 1870-1907 ----
+ {era:"utah",year:"1877",date:"April – August 1877",title:"First Utah Temple Dedicated; Brigham Young Dies",place:"St. George and Salt Lake City, Utah",tag:"Temple",summary:"The St. George Temple, first temple completed in Utah, is dedicated in April. Brigham Young, who led the Church for 33 years, dies 29 August at age 76.",detail:"Brigham Young directed the colonization of more than 350 settlements across the Intermountain West and supervised construction of the Salt Lake Tabernacle and the beginnings of the Salt Lake Temple. “Brother Brigham” was succeeded after a three-year apostolic interregnum by John Taylor, who had been wounded beside Joseph Smith at Carthage.",ref:"Saints, Vol. 2"},
+ {era:"utah",year:"1878",date:"25 August 1878",title:"The Primary Is Organized",place:"Farmington, Utah",tag:"Organization",summary:"Aurelia Spencer Rogers organizes the first Primary for children, concerned about giving boys and girls religious instruction and order.",detail:"With Bishop John Hess's approval, Rogers gathered some 224 children in Farmington. The Primary spread Churchwide within two years and today serves millions of children ages 18 months to 11 years, meeting during Sunday services and in weekday activities.",ref:"Saints, Vol. 2"},
+ {era:"utah",year:"1890",date:"24 September 1890",title:"The Manifesto Ends Plural Marriage",place:"Salt Lake City, Utah",tag:"Revelation",summary:"President Wilford Woodruff issues the Manifesto advising the Saints to refrain from contracting marriages forbidden by the law of the land.",detail:"Federal laws had disincorporated the Church, seized its property, and imprisoned hundreds of men for plural marriage. Woodruff, having seen in vision what continued practice would cost the temples and the work, announced: “I now publicly declare that my advice to the Latter-day Saints is to refrain from contracting any marriage forbidden by the law of the land.” The Saints sustained it 6 October 1890. It is printed as Official Declaration 1 in the Doctrine and Covenants. A second manifesto in 1904 ended all new plural marriages.",ref:"Official Declaration 1; Doctrine and Covenants"},
+ {era:"utah",year:"1893",date:"6 April 1893",title:"The Salt Lake Temple Dedicated",place:"Salt Lake City, Utah",tag:"Temple",summary:"Forty years to the day after its cornerstone was laid, the Salt Lake Temple is dedicated. The same summer the Mormon Tabernacle Choir sings at the Chicago World's Fair.",detail:"Begun in 1853 under Brigham Young and architect Truman O. Angell, the granite temple took four decades: work paused for the Utah War (the foundation was buried in earth to look like a plowed field) and stones arrived first by ox cart, then by rail. President Woodruff offered the dedicatory prayer in services attended by some 2,500 members. The temple closed in 2019 for a major seismic renovation, with rededication planned after construction completes.",ref:"Saints, Vol. 2 and 3"},
+ {era:"utah",year:"1896",date:"4 January 1896",title:"Utah Becomes the 45th State",place:"Salt Lake City, Utah",tag:"Settlement",summary:"After nearly fifty years as a territory and six failed petitions, Utah enters the Union. Statehood marks the Church's full accommodation with the nation that once expelled it.",detail:"The 1894 Enabling Act required Utah's constitution to ban polygamy permanently, which it did. Lorenzo Snow became Church President in 1898 and, facing crushing Church debt, received and taught the revelation-driven call of 1899 for members to pay a full tithing, promising that the Lord would open the windows of heaven. Within a decade the Church was debt free.",ref:"Saints, Vol. 3"},
+ {era:"utah",year:"1899",date:"May 1899",title:"President Lorenzo Snow's Tithing Revelation",place:"St. George, Utah",tag:"Revelation",summary:"Amid drought and Church debt, President Snow promises that if the Saints pay tithing, the rains will come and the Church will be freed from debt. The people of St. George receive relief from the drought in August 1899.",detail:"On 17 May 1899, in the St. George Tabernacle, Lorenzo Snow announced that the time had come for every member to pay a full tithe. The short film The Windows of Heaven later dramatized the promise. Tithing compliance rose markedly, and by 1907 the Church had paid its debts, a financial footing that underwrote its twentieth-century expansion.",ref:"Saints, Vol. 3; <a href=\"https://www.churchofjesuschrist.org/study/manual/teachings-of-presidents-of-the-church-lorenzo-snow/chapter-12-tithing-a-law-for-our-protection-and-advancement?lang=eng\" target=\"_blank\" rel=\"noopener noreferrer\">Teachings of Presidents: Lorenzo Snow, chapter 12</a>"},
+
+ // ---- EXPANSION 1908-1977 ----
+ {era:"expansion",year:"1915",date:"1915",title:"Family Home Evening Introduced",place:"Salt Lake City, Utah",tag:"Organization",summary:"The First Presidency calls families to set aside one evening a week for gospel instruction, music, and family time.",detail:"President Joseph F. Smith promised blessings of love, obedience, and faith to families who held weekly home evenings. The practice, later fixed on Monday nights (from 1970, Monday evenings are kept free of Church meetings), became a signature of Latter-day Saint family life and an early anchor of home-centered worship.",ref:"Saints, Vol. 3"},
+ {era:"expansion",year:"1918",date:"3 October 1918",title:"Vision of the Redemption of the Dead",place:"Salt Lake City, Utah",tag:"Revelation",summary:"President Joseph F. Smith, pondering 1 Peter 3–4, sees the Savior's ministry to the spirits in prison and the organization of missionary work among the dead.",detail:"Joseph F. Smith, grieving the deaths of family members and the millions dying in war and influenza, received the vision on 3 October 1918, in the closing weeks of his life; he died on 19 November 1918. He saw Christ preaching to the righteous spirits and appointing messengers to carry the gospel to all the dead. The account was canonized in the Pearl of Great Price in 1976 and later included as section 138 in the 1981 edition of the Doctrine and Covenants.",ref:"Doctrine and Covenants 138; <a href=\"https://www.churchofjesuschrist.org/bc/content/shared/content/english/pdf/doctrine-and-covenants-teacher-manual-2017_2.2.18.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">Doctrine and Covenants Teacher Manual</a>"},
+ {era:"expansion",year:"1936",date:"1936",title:"The Church Welfare Program Launched",place:"Salt Lake City, Utah",tag:"Organization",summary:"In the depths of the Great Depression, President Heber J. Grant announces a welfare plan to “help the people help themselves.”",detail:"The program, which President Grant said would be the Church's answer to government relief, built bishop's storehouses, employment offices, and production projects where members worked for what they received. It grew into today's global humanitarian and welfare system: Deseret Industries, canneries, farms, and emergency response that ships aid worldwide within hours of disasters.",ref:"Saints, Vol. 3"},
+ {era:"expansion",year:"1947",date:"1947",title:"One Million Members; Pioneer Centennial",place:"Salt Lake City, Utah",tag:"Global",summary:"A century after the pioneers entered the Salt Lake Valley, Church membership passes one million, and Utah reenacts the trek with a covered-wagon caravan.",detail:"Most of the first million members still lived in the American West, but postwar growth was accelerating: missionary work resumed abroad, the first stakes were organized overseas within the next two decades, and in 1958 the first temple outside North America and Europe was dedicated in New Zealand.",ref:"Saints, Vol. 4"},
+ {era:"expansion",year:"1961",date:"1961",title:"Correlation Brings the Programs Together",place:"Salt Lake City, Utah",tag:"Organization",summary:"Under President David O. McKay, Harold B. Lee leads a correlation effort to align curricula, priesthood direction, and auxiliaries across a growing church.",detail:"As membership spread across languages and cultures, correlation standardized lesson manuals, teaching, and administration so that a member in Manila and a member in Mesa learned the same doctrine on roughly the same schedule. Missionary lessons were likewise standardized, and in 1963 language training for missionaries was centralized, a forerunner of today's Missionary Training Centers.",ref:"Saints, Vol. 4"},
+ {era:"expansion",year:"1971",date:"1971",title:"First Area Conference Held in Manchester, England",place:"Manchester, England",tag:"Global",summary:"General conferences begin to travel: members from across Britain gather to hear President Joseph Fielding Smith and other General Authorities.",detail:"Area (later regional) conferences multiplied through the 1970s, taking general conference to the Saints rather than requiring pilgrimage to Salt Lake City. Satellite broadcasts followed, and in 1980 the three-hour Sunday schedule was consolidated into the block format that lasted until the two-hour schedule of 2019.",ref:"Saints, Vol. 4"},
+
+ // ---- WORLDWIDE 1978-2007 ----
+ {era:"worldwide",year:"1978",date:"1 June 1978",title:"Revelation Extends the Priesthood to All Worthy Men",place:"Salt Lake City, Utah",tag:"Revelation",summary:"President Spencer W. Kimball and his brethren receive a revelation removing the restriction on priesthood ordination and temple blessings based on race.",detail:"After extended prayer in the Salt Lake Temple, President Kimball and the First Presidency and Twelve received the revelation announced in a letter dated 8 June 1978: “every faithful, worthy man in the Church may receive the holy priesthood … without regard for race or color.” The news broke during the São Paulo Brazil Temple's open preparations and sparked worldwide rejoicing. Canonized as Official Declaration 2, it opened full Church participation in Africa and across the African diaspora and preceded explosive growth there.",ref:"Official Declaration 2; Doctrine and Covenants"},
+ {era:"worldwide",year:"1979",date:"1979 – 1981",title:"New Editions of the Scriptures Published",place:"Salt Lake City, Utah",tag:"Scripture",summary:"The Church publishes its own edition of the King James Bible, followed by a new triple combination with study aids, cross-references, and the Bible Dictionary.",detail:"Thousands of footnotes cross-reference the Bible with the Book of Mormon, Doctrine and Covenants, and Pearl of Great Price, physically binding the Restoration's scriptures together. Two revelations were canonized in the Pearl of Great Price in 1976 and later included as sections 137 and 138 in the 1981 edition of the Doctrine and Covenants, and the Book of Mormon received its subtitle, “Another Testament of Jesus Christ,” in 1982.",ref:"Saints, Vol. 4; <a href=\"https://www.churchofjesuschrist.org/study/manual/the-pearl-of-great-price-student-manual-2018/the-pearl-of-great-price?lang=eng\" target=\"_blank\" rel=\"noopener noreferrer\">Pearl of Great Price student manual</a>; <a href=\"https://www.churchofjesuschrist.org/bc/content/shared/content/english/pdf/doctrine-and-covenants-teacher-manual-2017_2.2.18.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">Doctrine and Covenants Teacher Manual</a>"},
+ {era:"worldwide",year:"1995",date:"23 September 1995",title:"“The Family: A Proclamation to the World”",place:"Salt Lake City, Utah",tag:"Revelation",summary:"President Gordon B. Hinckley reads the family proclamation in the Relief Society general meeting, declaring the family's eternal nature and roles.",detail:"Issued by the First Presidency and Council of the Twelve, the proclamation teaches that marriage between a man and a woman is ordained of God, that gender is an essential characteristic of eternal identity, and that parents have a sacred duty to rear children in love. It has been translated into scores of languages and quoted in general conference more than any comparable document of its era.",ref:"The Family: A Proclamation to the World (1995)"},
+ {era:"worldwide",year:"1996",date:"February 1996",title:"More Members Outside the United States Than Inside",place:"Worldwide",tag:"Global",summary:"The Church passes a milestone in February 1996: a majority of members now live outside the United States.",detail:"Growth in Latin America, the Philippines, and Africa drove the shift. The first stake outside the contiguous United States had been organized in Oahu, Hawaii, in 1935. At the 1997 sesquicentennial, a pioneer trek reenactment crossed the plains. President Hinckley's temple-building program soon announced smaller temples to bring ordinances within reach of members everywhere.",ref:"Saints, Vol. 4; <a href=\"https://www.churchofjesuschrist.org/study/ensign/2007/06/news-of-the-church/membership-retention-on-the-rise?lang=eng\" target=\"_blank\" rel=\"noopener noreferrer\">Membership, Retention on the Rise</a>"},
+ {era:"worldwide",year:"2000",date:"1 January 2000",title:"“The Living Christ” Testimony Issued",place:"Salt Lake City, Utah",tag:"Revelation",summary:"The First Presidency and Twelve publish their testimony of Jesus Christ to open the new millennium, the year the Church turns 170.",detail:"“As we commemorate the birth of Jesus Christ two millennia ago, we offer our testimony of the reality of His matchless life,” the document begins. It affirms His birth, ministry, atoning sacrifice, and Resurrection, and that He appeared in this dispensation to Joseph Smith. It remains the Church's defining Christological statement of the modern era.",ref:"The Living Christ: The Testimony of the Apostles (2000)"},
+ {era:"worldwide",year:"2001",date:"31 March 2001",title:"The Perpetual Education Fund Announced",place:"Salt Lake City, Utah",tag:"Organization",summary:"President Hinckley announces a revolving fund to lend returned missionaries in developing countries the means for vocational education.",detail:"Modeled on the Perpetual Emigrating Fund of 1849, the PEF lent tuition funds that recipients repaid into the fund for others. The Perpetual Education Fund continues to assist qualifying Church members with approved educational programs that help them earn a living and become self-reliant.",ref:"Saints, Vol. 4; <a href=\"https://www.churchofjesuschrist.org/life/education/perpetual-education-fund?lang=eng\" target=\"_blank\" rel=\"noopener noreferrer\">Perpetual Education Fund</a>"},
+
+ // ---- TODAY 2008-2026 ----
+ {era:"today",year:"2012",date:"6 October 2012",title:"Missionary Age Lowered; a Generation Responds",place:"Salt Lake City, Utah",tag:"Global",summary:"President Thomas S. Monson announces that young men may serve at 18 and young women at 19. Applications surge within weeks.",detail:"The number of missionaries climbed from about 58,500 to a peak near 89,000 by 2014, and the proportion of women serving rose sharply. The change reshaped mission culture and accelerated growth in Africa and Latin America, where many new missions were created.",ref:"Church Newsroom"},
+ {era:"today",year:"2018",date:"January – October 2018",title:"A New Prophet and a Course Correction",place:"Salt Lake City, Utah",tag:"Organization",summary:"President Russell M. Nelson, sustained at age 93, replaces home and visiting teaching with ministering, emphasizes the Church's revealed name, and announces a two-hour Sunday schedule.",detail:"President Thomas S. Monson died 2 January 2018. President Nelson, a former heart surgeon, asked members to use the name The Church of Jesus Christ of Latter-day Saints rather than nicknames, taught that revelation is ongoing, and introduced ministering as “a holier approach” to caring. Come, Follow Me home study followed in 2019, shifting the center of gospel learning to the home, supported by the Church.",ref:"General conference addresses, 2018"},
+ {era:"today",year:"2020",date:"April 2020",title:"Bicentennial of the First Vision",place:"Worldwide (conference broadcast from Salt Lake City)",tag:"Revelation",summary:"Two hundred years after the First Vision, President Nelson introduces a new symbol of the Church centered on the risen Christ and reads “The Restoration of the Fulness of the Gospel of Jesus Christ: A Bicentennial Proclamation.”",detail:"The April 2020 general conference, held in small broadcast studios because of the COVID-19 pandemic, concluded with a worldwide solemn assembly and Hosanna Shout. The new symbol places the Christus figure within the arch of the resurrected Lord coming forth. Through the pandemic the Church sustained worship at home, humanitarian aid, and, in 2021, the largest single-year temple announcement pace in its history.",ref:"General conference, April 2020"},
+ {era:"today",year:"2023",date:"2023",title:"Growth Continues: Membership Passes 17.2 Million",place:"Worldwide",tag:"Global",summary:"Year-end reports count 17,255,394 members, 30,000+ congregations, and temples operating, under construction, or announced on every inhabited continent.",detail:"Africa became the Church's fastest-growing region, with new temples announced for cities from Lagos to Nairobi. Subsequently, on March 5, 2024, ownership of the Kirtland Temple and other historic properties transferred to the Church, bringing the first temple of the dispensation under its stewardship, where it remains open to all visitors.",ref:"Church Newsroom, 2023 statistical report; <a href=\"https://newsroom.churchofjesuschrist.org/article/sacred-sites-and-historic-documents-transfer-to-church-of-jesus-christ\" target=\"_blank\" rel=\"noopener noreferrer\">March 5, 2024 transfer statement</a>"},
+ {era:"today",year:"2025",date:"2025",title:"Temples Across the Earth",place:"Worldwide",tag:"Temple",summary:"The pace of temple building set under President Nelson continues, with more than 350 temples dedicated, under construction, or announced.",detail:"President Nelson announced 200 temples during his ministry, more than any president before him, placing temples within reach of members in places such as Papua New Guinea, Cambodia, and the Middle East (Dubai). The Salt Lake Temple's multi-year renovation, including seismic base isolators beneath its foundations, neared completion, with an extended public open house scheduled for April to October 2027 ahead of its rededication. The Church reported 17,887,212 members and 32,046 wards and branches as of December 31, 2025. The Book of Mormon is available in more than 100 languages.",ref:"<a href=\"https://newsroom.churchofjesuschrist.org/article/2025-statistical-report\" target=\"_blank\" rel=\"noopener noreferrer\">2025 Statistical Report</a>; <a href=\"https://newsroom.churchofjesuschrist.org/article/president-nelson-and-the-house-of-the-lord\" target=\"_blank\" rel=\"noopener noreferrer\">President Nelson and the House of the Lord</a>; <a href=\"https://www.churchofjesuschrist.org/learn/history/hcvc-2-2?lang=eng\" target=\"_blank\" rel=\"noopener noreferrer\">Translations of the Book of Mormon</a>"},
+ {era:"today",year:"2025",date:"27 September – 14 October 2025",title:"President Nelson Dies; President Oaks Leads the Church",place:"Salt Lake City, Utah",tag:"Organization",summary:"President Russell M. Nelson dies at 101; Elder Dallin H. Oaks is sustained as the eighteenth President of the Church.",detail:"President Nelson died on 27 September 2025, the oldest President of the Church in this dispensation, having led since January 2018. On 14 October 2025, President Dallin H. Oaks, who had served as an Apostle since 1984 and as First Counselor to President Nelson, was set apart as the eighteenth President of the Church, with President Henry B. Eyring and President D. Todd Christofferson as his counselors.",ref:"Church Newsroom"},
+ {era:"today",year:"2026",date:"2026",title:"The Church Today",place:"Worldwide",tag:"Global",summary:"Nearly two centuries after six members organized a church in Fayette, New York, Latter-day Saints worship in more than 170 countries and territories.",detail:"The story that began in a grove continues each week: missionaries teach in scores of languages, Come, Follow Me study circles the globe, humanitarian partnerships respond to disasters within hours, and family history work connects millions to their ancestors. The timeline's first entry and its latest are the same testimony, that God speaks again and that Jesus Christ leads His Church today.",ref:"ChurchofJesusChrist.org"}
+];
+
+var PROPHETS=[
+ ["Joseph Smith", "1830 – 1844", "Founder and first President; martyred at Carthage"],
+ ["Brigham Young", "1847 – 1877", "Led the exodus west; colonizer of the Intermountain West"],
+ ["John Taylor", "1880 – 1887", "Wounded at Carthage; led the Church under federal pressure"],
+ ["Wilford Woodruff", "1889 – 1898", "Received the Manifesto; dedicated the Salt Lake Temple"],
+ ["Lorenzo Snow", "1898 – 1901", "Tithing revelation restored the Church's finances"],
+ ["Joseph F. Smith", "1901 – 1918", "Received the vision of the redemption of the dead (D&C 138)"],
+ ["Heber J. Grant", "1918 – 1945", "Launched the welfare program; guided the Church through Depression and war"],
+ ["George Albert Smith", "1945 – 1951", "Postwar humanitarian relief to Europe"],
+ ["David O. McKay", "1951 – 1970", "“Every member a missionary”; global building era"],
+ ["Joseph Fielding Smith", "1970 – 1972", "Doctrinal scholar; first area conferences"],
+ ["Harold B. Lee", "1972 – 1973", "Architect of correlation and the welfare system"],
+ ["Spencer W. Kimball", "1973 – 1985", "Received the 1978 revelation on priesthood"],
+ ["Ezra Taft Benson", "1985 – 1994", "Called the Church to flood the earth with the Book of Mormon"],
+ ["Howard W. Hunter", "1994 – 1995", "Invited all to be temple worthy"],
+ ["Gordon B. Hinckley", "1995 – 2008", "Family proclamation; worldwide temple building; media outreach"],
+ ["Thomas S. Monson", "2008 – 2018", "Missionary age change; lifelong service to widows and the poor"],
+ ["Russell M. Nelson", "2018 – 2025", "Ministering, Come, Follow Me, the Church's name, and 200 temples announced; died at 101"],
+ ["Dallin H. Oaks", "2025 – present", "Eighteenth President; Apostle since 1984"]
+];
+
+var ARTICLES = {
+  beginnings: "Six years of preparation precede the organization of the Church. Joseph Smith receives the plates, translates the Book of Mormon by the gift and power of God, and restores priesthood authority with Oliver Cowdery. By April 1830 the foundation is laid: scripture, authority, and a church.",
+  gathering: "In Kirtland the Church learns to be a temple-building, revelation-receiving people; in Missouri it learns persecution. Zion's Camp, the first missions abroad, and Liberty Jail all belong to this proving ground.",
+  nauvoo: "Nauvoo, 'beautiful place,' held the Church's first full temple program, the Relief Society, and its largest city. It also held its deepest grief, the murder of its prophet, and the question every Restoration movement must answer: who leads next?",
+  exodus: "The exodus is the Church's Exodus story retold: a people driven into the wilderness who cross a thousand miles of plains, plant a desert, and rescue their own from winter storms. It forged the Saints' identity for a century.",
+  utah: "In one generation the Church went from an outlawed territory to a U.S. state, ending plural marriage by revelation, dedicating a temple forty years in the making, and clearing its debts through tithing. The pioneer church became an American church.",
+  expansion: "Through depression and world war the Church built welfare farms and storehouses, correlated its teaching, and crossed a million members. It entered the second half of the twentieth century positioned to become a world church.",
+  worldwide: "The 1978 revelation is the hinge of modern Church history. Scripture editions, the family proclamation, and a temple-building program under President Hinckley carried the Church to the moment when most of its members lived outside the United States.",
+  today: "Under President Nelson the Church emphasized its revealed name, moved gospel study into the home, and announced temples at an unprecedented pace. The Restoration, its leaders teach, is ongoing, and this era is still being written."
+};
+
+var state = {era:"all", q:""};
+
+function eraById(id){ for(var i=0;i<ERAS.length;i++) if(ERAS[i].id===id) return ERAS[i]; return ERAS[0]; }
+
+function buildPills(){
+  var html = '<button class="pill" data-era="all" aria-pressed="true">All eras</button>';
+  ERAS.forEach(function(e){ html += '<button class="pill" data-era="'+e.id+'" aria-pressed="false">'+e.years+' · '+e.name+'</button>'; });
+  document.getElementById('eraPills').innerHTML = html;
+  var nav = ERAS.map(function(e){ return '<a href="#era-'+e.id+'">'+e.name+'</a>'; }).join('');
+  document.getElementById('eraNav').innerHTML = nav;
+  var pills = document.querySelectorAll('.pill');
+  pills.forEach(function(p){
+    p.addEventListener('click', function(){
+      state.era = p.getAttribute('data-era');
+      pills.forEach(function(x){ x.setAttribute('aria-pressed', x===p ? 'true':'false'); });
+      render();
+    });
+  });
+}
+
+function matches(ev){
+  if(state.era!=="all" && ev.era!==state.era) return false;
+  if(!state.q) return true;
+  var hay = (ev.year+" "+ev.title+" "+ev.place+" "+ev.summary+" "+ev.detail+" "+ev.tag).toLowerCase();
+  return hay.indexOf(state.q) > -1;
+}
+
+function render(){
+  var total = EVENTS.filter(matches).length;
+  document.getElementById('countLabel').textContent = total + (total===1 ? ' event' : ' events') + (state.era==='all' && !state.q ? ' · 1820–2026' : '');
+  var html = '';
+  ERAS.forEach(function(era){
+    var list = EVENTS.filter(function(e){ return e.era===era.id && matches(e); });
+    if(!list.length) return;
+    html += '<section class="era-block" id="era-'+era.id+'">';
+    html += '<div class="era-head"><div class="era-years">'+era.years+'</div><h2>'+era.name+'</h2><p>'+ARTICLES[era.id]+'</p></div>';
+    list.forEach(function(ev, i){
+      var side = (i % 2 === 1) ? ' right' : '';
+      html += '<article class="event'+side+'"><span class="dot" aria-hidden="true"></span><div class="card" data-card>';
+      html += '<button class="card-top" aria-expanded="false"><span class="year-line"><span class="year">'+ev.date+'</span><span class="place">'+ev.place+'</span><span class="tag '+(ev.tag==='Persecution'?'persecution':ev.tag==='Temple'?'temple':ev.tag==='Global'?'global':'')+'">'+ev.tag+'</span></span>';
+      html += '<h3>'+ev.title+'</h3><p class="summary">'+ev.summary+'</p>';
+      html += '<span class="read-more">Read the story <span class="chev">▾</span></span></button>';
+      html += '<div class="detail"><p>'+ev.detail+'</p><p class="ref"><b>Record:</b> '+ev.ref+'</p></div>';
+      html += '</div></article>';
+    });
+    html += '</section>';
+  });
+  document.getElementById('timeline').innerHTML = html;
+  document.getElementById('noResults').className = 'no-results' + (total===0 ? ' show' : '');
+  document.querySelectorAll('[data-card] .card-top').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var card = btn.parentElement;
+      var open = card.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.querySelector('.read-more').firstChild.textContent = open ? 'Close ' : 'Read the story ';
+    });
+  });
+}
+
+function buildProphets(){
+  document.getElementById('prophetGrid').innerHTML = PROPHETS.map(function(p){
+    return '<div class="prophet"><b>'+p[0]+'</b><span>'+p[1]+'</span><em>'+p[2]+'</em></div>';
+  }).join('');
+}
+
+document.getElementById('search').addEventListener('input', function(e){
+  state.q = e.target.value.trim().toLowerCase();
+  render();
+});
+
+buildPills();
+buildProphets();
+render();
+</script>
+<footer class="fc-footer" data-focuschrist-footer="standard"><p>© 2026 focusChrist. All are welcome here.</p><p><a href="../timeline.html">Timeline</a> · <a href="../index.html">Home</a></p><p><a href="https://www.youtube.com/@theRisen636" target="_blank" rel="noopener noreferrer">@theRisen636</a></p><p data-focuschrist-independence="footer">focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit <a href="https://www.churchofjesuschrist.org/" target="_blank" rel="noopener noreferrer">ChurchofJesusChrist.org</a>.</p><p data-focuschrist-artwork-disclosure="footer">Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.</p></footer>
+</body>
+</html>

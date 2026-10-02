@@ -199,7 +199,7 @@
         if (document.body.classList.contains('fc-not-found')) return '/' + name;
         const path = window.location.pathname;
         if (path.startsWith('/jesus-christ/')) return '/' + name;
-        if (path.includes('/answers/') || path.includes('/art-study/') || path.startsWith('/history/')) return '../' + name;
+        if (path.includes('/answers/') || path.includes('/art-study/') || path.startsWith('/history/') || path.startsWith('/timelines/')) return '../' + name;
         return name;
     }
 
@@ -317,6 +317,20 @@
         }
 
         const menu = document.getElementById('hamburgerMenu');
+        [desktop, menu].forEach(function (container) {
+            if (!container || container.querySelector('[data-focuschrist-primary-timeline]')) return;
+            const link = document.createElement('a');
+            link.href = relativeRootHref('timeline.html');
+            link.textContent = 'Timeline';
+            link.setAttribute('data-focuschrist-primary-timeline', 'true');
+            if (window.location.pathname.endsWith('/timeline.html')) {
+                link.classList.add('active'); link.setAttribute('aria-current', 'page');
+            }
+            const about = Array.from(container.querySelectorAll('a')).find(function (a) {
+                return /(?:^|\/)about\.html$/.test(new URL(a.href, document.baseURI).pathname);
+            });
+            if (about) about.before(link); else container.appendChild(link);
+        });
         if (menu && !menu.querySelector('[data-focuschrist-come-follow-me]')) {
             const comeFollowMe = createComeFollowMeLink('Come, Follow Me');
             const answers = Array.from(menu.querySelectorAll('a')).find(function (link) {

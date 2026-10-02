@@ -1,0 +1,9 @@
+/* Standalone directory. Individual experiences preserve Merlin's designs. */
+.fc-timeline-main { max-width:calc(var(--fc-standard) + 2 * var(--fc-body-gutter)); margin:0 auto; padding:clamp(64px,12vh,132px) var(--fc-body-gutter) 80px; min-height:calc(100svh - 100px); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; }
+.fc-timeline-main h1 {font:400 clamp(38px,6vw,64px)/1.12 Georgia,serif; color:var(--fc-cream); margin:12px 0 24px;}
+.fc-timeline-main .fc-eyebrow {color:var(--fc-gold-light); font-size:13px;letter-spacing:.12em; text-transform:uppercase;}
+.fc-timeline-intro {max-width:660px; color:var(--fc-muted);font-size:clamp(17px,2vw,20px);line-height:1.75;margin:0 auto 36px;}
+.fc-timeline-choices {gap:16px; width:100%; margin:0 auto;}
+.fc-timeline-choices .fc-button {white-space:normal; text-align:center; min-height:52px; height:auto; line-height:1.5;padding:14px 26px;max-width:100%;}
+.fc-timeline-note {color:var(--fc-muted); max-width:560px;font-size:15px;line-height:1.7;margin:30px auto 0;}
+@media(max-width:700px){.fc-timeline-main {min-height:calc(100svh - 62px);padding-top:48px;padding-bottom:56px;} .fc-timeline-choices {flex-direction:column;align-items:stretch;max-width:480px;} }

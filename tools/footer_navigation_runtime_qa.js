@@ -7,7 +7,7 @@ const root = path.resolve(__dirname, '..');
 const read = name => fs.readFileSync(path.join(root,name),'utf8');
 const artworkDisclosure = 'Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.';
 const pages = [...read('sitemap.xml').matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>new URL(m[1]).pathname);
-assert.equal(pages.length,125);
+assert.equal(pages.length,128);
 assert.ok(pages.includes('/answers/race-priesthood-and-temple-blessings.html'),'new dependent study must receive the shared footer test');
 let bareGalleryEntries=0;
 for(const route of [...pages,'/404.html','/search.html']){
