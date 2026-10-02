@@ -1,0 +1,50 @@
+{
+  "reviewed_on": "2026-10-02",
+  "reviewer": "Fermi",
+  "scope": "Targeted source and integration review; not exhaustive verification of all 31 narratives or geographic coordinates. Runtime/provider rendering and owner acceptance remain separate.",
+  "source_delivery": "M-2026-10-02-077",
+  "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-26\\albert-channel-read\\work\\albert-channel\\work\\life-of-christ-map\\life-of-christ-journey-map.html",
+  "source_sha256": "26b141a0a32cc7ac9fd6c95c175d7ba478cee7ab9cb41a421af6227a4003a8af",
+  "destination": "timelines/life-of-christ-journey-map.html",
+  "stop_count": 31,
+  "artwork": "No image assets occur in delivered file; none created or imported.",
+  "sources": [
+    "https://www.churchofjesuschrist.org/study/manual/gospel-topics/book-of-mormon-geography?lang=eng",
+    "https://www.churchofjesuschrist.org/study/scriptures/bd/emmaus?lang=eng",
+    "https://www.churchofjesuschrist.org/study/manual/new-testament-student-manual/introduction-to-the-gospel-according-to-st-luke/chapter-20-luke-23-24?lang=eng",
+    "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/19?lang=eng&id=p18#p18"
+  ],
+  "content_repairs": [
+    "Overview includes Egypt, rather than describing first29 stops as small Holy Land area; dotted connection explicitly study sequence, not exact travel route.",
+    "Americas note retains representative Mesoamerica coordinates but removes unsourced scholarly-support implication and explicitly identifies illustrative placeholders; official Church geography link added.",
+    "Emmaus removes unsupported most-common traditional identification claim; pin remains a traditional proposal, distinguished from established location; Church Bible Dictionary linked.",
+    "Gethsemane scripture reference adds Doctrine and Covenants19:18 to ground bleed-at-every-pore wording. Source note includes D&C and direct official scripture links.",
+    "Regional pins including Egypt identified as approximate study locations."
+  ],
+  "hosting_repairs": [
+    "Native standalone imported HTML; standard metadata, shared search entry, return navigation and footer. Root adds standard Focus header and shared header stylesheet.",
+    "Internal .nav renamed .journey-nav to avoid shared menu collision.",
+    "31 retained markers close over original immutable stop index; filtering and zoom do not renumber. No marker mapping change required in Life source.",
+    "44px minimum mobile close target, narrow card/tag/text wrapping, no fixed-font reduction or overflow hiding.",
+    "Arrow navigation ignores editing fields/dialogs and is scoped to experience controls; Escape closes sheet; sheet opens only on narrow screens.",
+    "Original Leaflet unavailable-library fallback is separate sibling, safe from renderer ownership issues.",
+    "Owner-reported overlap reproduced by root: Americas pins30/31 intercepted clicks. spreadNearbyPins projects visible geographic points and moves only icon anchors to nearest available screen centers at least40px apart after zoom/move/filter. All31 geographic coordinates remain unchanged. Explanatory map note added.",
+    "Initial maps anchors navigate to Nazareth even before script initialization; existing symbolic Timeline hero supplies social discovery image (no new artwork).",
+    "Root and Fermi independently observed pale-gold map links losing contrast on parchment phone sheets. Scoped detail/sheet links restored to dark brown #574018 with darker hover/focus, underlining retained."
+  ],
+  "limitations": [
+    "Targeted research, not complete canonical/archaeological audit.",
+    "No claim of exact Book of Mormon geographic locations.",
+    "Current static text hash excludes JavaScript stop narratives; source SHA and documented corrections preserve provenance.",
+    "No pixels, deployment or owner aesthetic acceptance claimed by this record yet.",
+    "Pin-spacing algorithm requires actual Leaflet browser hit-target verification; DOM adapter tests separately verify coordinate preservation and callbacks."
+  ],
+  "visual_review": {
+    "captures": [
+      "outputs/timeline-life-phone-pin31.png",
+      "outputs/timeline-life-phone-pin30-afterzoom.png"
+    ],
+    "observed": "Correct31 and30 story numbers/titles and readable phone story layout; link contrast defect identified jointly and repaired in source. Actual pin click and zoom behavior reported separately by root.",
+    "pending": "Fresh pixels after scoped link-color repair; hosted200percent text and final release checks."
+  }
+}

@@ -126,6 +126,7 @@
     "search.html",
     "timeline.html",
     "timelines/latter-day-saint-church-history-timeline.html",
+    "timelines/life-of-christ-journey-map.html",
     "timelines/willie-and-martin-handcart-map.html",
     "watch.html"
   ],
@@ -1377,6 +1378,39 @@
       "disposition": "shared_surface",
       "reason": "Named existing section panel; shared Home-derived surface only."
     },
+    "map-pin-note": {
+      "count": 1,
+      "pages": [
+        "timelines/life-of-christ-journey-map.html"
+      ],
+      "tags": [
+        "p"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Life of Christ map explanatory text for visual pin separation; plain reading copy, not a card or panel."
+    },
+    "note": {
+      "count": 2,
+      "pages": [
+        "timelines/life-of-christ-journey-map.html"
+      ],
+      "tags": [
+        "div"
+      ],
+      "disposition": "coordinated_stylesheet_owner",
+      "reason": "Merlin Life of Christ standalone experience, preserved by Wyatt on 2026-10-02; scoped inline design and dedicated Timeline runtime checks own this surface."
+    },
+    "panel": {
+      "count": 1,
+      "pages": [
+        "timelines/life-of-christ-journey-map.html"
+      ],
+      "tags": [
+        "div"
+      ],
+      "disposition": "coordinated_stylesheet_owner",
+      "reason": "Merlin Life of Christ standalone experience, preserved by Wyatt on 2026-10-02; scoped inline design and dedicated Timeline runtime checks own this surface."
+    },
     "pioneer-art-card": {
       "count": 10,
       "pages": [
@@ -2191,6 +2225,9 @@
         "pioneers.html",
         "search.html",
         "timeline.html",
+        "timelines/latter-day-saint-church-history-timeline.html",
+        "timelines/life-of-christ-journey-map.html",
+        "timelines/willie-and-martin-handcart-map.html",
         "watch.html"
       ],
       "disposition": "excluded_with_reason",
@@ -2631,6 +2668,9 @@
         "pioneers.html",
         "search.html",
         "timeline.html",
+        "timelines/latter-day-saint-church-history-timeline.html",
+        "timelines/life-of-christ-journey-map.html",
+        "timelines/willie-and-martin-handcart-map.html",
         "watch.html"
       ],
       "disposition": "excluded_with_reason",

@@ -93,7 +93,9 @@
     "detail-footer": "Merlin standalone map surface, preserved by owner direction 2026-10-02; scoped inline styles and timeline interaction review.",
     "detail-note": "Merlin standalone map surface, preserved by owner direction 2026-10-02; scoped inline styles and timeline interaction review.",
     "map-note": "Merlin standalone map surface, preserved by owner direction 2026-10-02; scoped inline styles and timeline interaction review.",
-    "notes": "Merlin standalone map surface, preserved by owner direction 2026-10-02; scoped inline styles and timeline interaction review."
+    "notes": "Merlin standalone map surface, preserved by owner direction 2026-10-02; scoped inline styles and timeline interaction review.",
+    "panel": "Merlin Life of Christ standalone experience, preserved by Wyatt on 2026-10-02; scoped inline design and dedicated Timeline runtime checks own this surface.",
+    "note": "Merlin Life of Christ standalone experience, preserved by Wyatt on 2026-10-02; scoped inline design and dedicated Timeline runtime checks own this surface."
   },
   "excluded_classes": {
     "ask-scene-card": "Artwork figure; preserve artwork framing.",
@@ -138,7 +140,8 @@
     "fc-timeline-note": "Timeline text or structural wrapper; preserved independent experience, no shared panel repaint.",
     "count-note": "Timeline text or structural wrapper; preserved independent experience, no shared panel repaint.",
     "detail-panel-inner": "Timeline text or structural wrapper; preserved independent experience, no shared panel repaint.",
-    "detail-panel-head": "Timeline text or structural wrapper; preserved independent experience, no shared panel repaint."
+    "detail-panel-head": "Timeline text or structural wrapper; preserved independent experience, no shared panel repaint.",
+    "map-pin-note": "Life of Christ map explanatory text for visual pin separation; plain reading copy, not a card or panel."
   },
   "runtime_selectors": {
     ".cfm-month": {

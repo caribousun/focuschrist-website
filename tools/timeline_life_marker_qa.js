@@ -1,0 +1,21 @@
+/* Exercise actual Life of Christ marker callbacks after zoom/filter changes without a tile provider. */
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),{JSDOM}=require('jsdom');
+const html=fs.readFileSync(path.join(__dirname,'../timelines/life-of-christ-journey-map.html'),'utf8');
+for(const narrow of [false,true]){
+ const dom=new JSDOM(html,{url:'https://focuschrist.com/timelines/life-of-christ-journey-map.html',runScripts:'outside-only'}),w=dom.window,d=w.document;w.matchMedia=()=>({matches:narrow});w.HTMLElement.prototype.scrollIntoView=function(){};
+ const layers=new Set(),markers=[],events={};let zoom=8;const project=coords=>({x:(coords[1]+180)/360*(narrow?320:800),y:(90-coords[0])/180*500});
+ const map={setView(){return this},on(names,fn){names.split(' ').forEach(n=>events[n]=fn);return this},getSize(){return {x:narrow?320:800,y:500}},latLngToContainerPoint:project,scrollWheelZoom:{enable(){},disable(){}},hasLayer(x){return layers.has(x)},removeLayer(x){layers.delete(x)},getZoom(){return zoom},flyTo(coords,z){zoom=z;return this},fitBounds(){return this},flyToBounds(){return this},invalidateSize(){},zoomIn(){zoom++;if(events.zoomend)events.zoomend();return this}};
+ w.L={map(){return map},tileLayer(){return {addTo(){return this},on(){return this}}},divIcon(v){return v},latLngBounds(){return {pad(){return this}}},polyline(){return {addTo(){return this},bringToBack(){}}},marker(coords,options){const el=d.createElement('div');el.innerHTML=options.icon.html;const m={coords,options,el,handlers:{},on(name,fn){this.handlers[name]=fn;return this},addTo(){layers.add(this);return this},getElement(){return el},setIcon(icon){this.options.icon=icon;el.innerHTML=icon.html;return this},setZIndexOffset(){return this}};markers.push(m);return m}};
+ const source=[...d.scripts].find(s=>s.textContent.includes('var STOPS ='));assert(source);w.eval(source.textContent);assert.equal(markers.length,31);assert.equal(w.STOPS.length,31);
+ for(const phase of ['all','beginnings','ministry','final','risen','americas']){
+  d.querySelector('#filters [data-filter="'+phase+'"]').click();map.zoomIn().zoomIn();
+  const centers=markers.filter(m=>layers.has(m)).map(m=>{const p=project(m.coords),a=m.options.icon.iconAnchor;return{x:p.x+15-a[0],y:p.y+15-a[1]};});for(let a=0;a<centers.length;a++)for(let b=a+1;b<centers.length;b++)assert(Math.hypot(centers[a].x-centers[b].x,centers[a].y-centers[b].y)>=39.999,'Visible pin centers remain separated');
+  for(let i=0;i<markers.length;i++){
+   assert.equal(markers[i].coords[0],w.STOPS[i].lat);assert.equal(markers[i].coords[1],w.STOPS[i].lng,'Geographical coordinates unchanged');
+   const expected=phase==='all'||w.STOPS[i].phase===phase;assert.equal(layers.has(markers[i]),expected,'Filtered marker membership');if(!expected)continue;
+   assert.equal(markers[i].el.querySelector('.pin').textContent.trim(),String(i+1),'Pin displays original journey number');markers[i].handlers.click();assert.equal(d.querySelector(narrow?'#sNum':'#dNum').textContent,String(i+1));assert.equal(d.querySelector(narrow?'#sTitle':'#dTitle').textContent,w.STOPS[i].title,'Pin number maps to exact story after zoom/filter');
+  }
+ }
+ d.querySelector('#filters [data-filter="all"]').click();d.querySelector('#nextBtn').click();assert.equal(d.querySelector('#dNum').textContent,'2');d.querySelector('#prevBtn').click();assert.equal(d.querySelector('#dNum').textContent,'1');dom.window.close();
+}
+console.log('PASS: all31 original marker numbers map to exact stories after zoom and every phase filter, desktop and phone callback paths. Provider rendering remains separate.');

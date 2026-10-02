@@ -1,0 +1,2 @@
+/* Keep the shared Focus menu above each independent Merlin experience. */
+@media(min-width:1021px){body.fc-timeline-experience .controls{top:max(52px,3.25rem);}}
