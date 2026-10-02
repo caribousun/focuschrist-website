@@ -124,6 +124,9 @@
     "/missionary.html",
     "/pioneers.html",
     "/search.html",
+    "/timeline.html",
+    "/timelines/latter-day-saint-church-history-timeline.html",
+    "/timelines/willie-and-martin-handcart-map.html",
     "/watch.html"
   ],
   "artworks": [
@@ -14294,6 +14297,28 @@
       ]
     },
     {
+      "title": "Remember the journey",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/heroes/timeline.png",
+      "fullImage": "/assets/heroes/timeline.png",
+      "alt": "An open journal, map, and compass beside a window looking toward mountains at dawn",
+      "id": "art-810750af1a35",
+      "occurrences": [
+        {
+          "id": "source-7ad4f93ff473",
+          "page": "/timeline.html",
+          "pageTitle": "Timeline",
+          "category": "Gospel Studies",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"assets/heroes/timeline.png\"]",
+          "title": "Remember the journey"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Remember what you are defending",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/book-of-mormon-stories/37-captain-moroni-960.webp",
@@ -20009,11 +20034,11 @@
     }
   ],
   "stats": {
-    "artworks": 900,
-    "occurrences": 906,
+    "artworks": 901,
+    "occurrences": 907,
     "byKind": {
       "artwork": 63,
-      "hero": 40,
+      "hero": 41,
       "legacy": 39,
       "missionary": 13,
       "topic": 751

@@ -124,6 +124,9 @@
     "missionary.html",
     "pioneers.html",
     "search.html",
+    "timeline.html",
+    "timelines/latter-day-saint-church-history-timeline.html",
+    "timelines/willie-and-martin-handcart-map.html",
     "watch.html"
   ],
   "candidate_classes": {
@@ -170,6 +173,17 @@
       ],
       "disposition": "coordinated_stylesheet_owner",
       "reason": "Ask owner applies shared panel tokens."
+    },
+    "callout": {
+      "count": 1,
+      "pages": [
+        "timelines/willie-and-martin-handcart-map.html"
+      ],
+      "tags": [
+        "aside"
+      ],
+      "disposition": "coordinated_stylesheet_owner",
+      "reason": "Merlin standalone timeline experience, preserved by Wyatt on 2026-10-02; scoped inline design and timeline runtime checks own this surface."
     },
     "cfm-library-card": {
       "count": 9,
@@ -225,6 +239,50 @@
       ],
       "disposition": "shared_surface",
       "reason": "Named existing section panel; shared Home-derived surface only."
+    },
+    "co-card": {
+      "count": 2,
+      "pages": [
+        "timelines/willie-and-martin-handcart-map.html"
+      ],
+      "tags": [
+        "article"
+      ],
+      "disposition": "coordinated_stylesheet_owner",
+      "reason": "Merlin standalone map surface, preserved by owner direction 2026-10-02; scoped inline styles and timeline interaction review."
+    },
+    "controls-card": {
+      "count": 1,
+      "pages": [
+        "timelines/latter-day-saint-church-history-timeline.html"
+      ],
+      "tags": [
+        "div"
+      ],
+      "disposition": "coordinated_stylesheet_owner",
+      "reason": "Merlin standalone timeline experience, preserved by Wyatt on 2026-10-02; scoped inline design and timeline runtime checks own this surface."
+    },
+    "count-note": {
+      "count": 1,
+      "pages": [
+        "timelines/willie-and-martin-handcart-map.html"
+      ],
+      "tags": [
+        "p"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Timeline text or structural wrapper; preserved independent experience, no shared panel repaint."
+    },
+    "detail-panel": {
+      "count": 1,
+      "pages": [
+        "timelines/willie-and-martin-handcart-map.html"
+      ],
+      "tags": [
+        "aside"
+      ],
+      "disposition": "coordinated_stylesheet_owner",
+      "reason": "Merlin standalone timeline experience, preserved by Wyatt on 2026-10-02; scoped inline design and timeline runtime checks own this surface."
     },
     "fc-answers-jump-panel": {
       "count": 1,
@@ -952,6 +1010,17 @@
       ],
       "disposition": "coordinated_stylesheet_owner",
       "reason": "Owner-requested Peter rescue figure uses shared panel tokens in the reviewed appendix; preserves the artwork viewer and intrinsic image."
+    },
+    "fc-timeline-note": {
+      "count": 1,
+      "pages": [
+        "timeline.html"
+      ],
+      "tags": [
+        "p"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Timeline text or structural wrapper; preserved independent experience, no shared panel repaint."
     },
     "gc-pathway": {
       "count": 9,
@@ -1825,6 +1894,7 @@
         "missionary.html",
         "pioneers.html",
         "search.html",
+        "timeline.html",
         "watch.html"
       ],
       "disposition": "excluded_with_reason",
@@ -2120,6 +2190,7 @@
         "missionary.html",
         "pioneers.html",
         "search.html",
+        "timeline.html",
         "watch.html"
       ],
       "disposition": "excluded_with_reason",
@@ -2559,6 +2630,7 @@
         "missionary.html",
         "pioneers.html",
         "search.html",
+        "timeline.html",
         "watch.html"
       ],
       "disposition": "excluded_with_reason",
@@ -2772,7 +2844,8 @@
       "pages": [
         "answers/grief-and-faith.html",
         "answers/settle-this-in-your-hearts.html",
-        "answers/stand-forever.html"
+        "answers/stand-forever.html",
+        "timelines/latter-day-saint-church-history-timeline.html"
       ],
       "disposition": "excluded_with_reason",
       "reason": "Source lists inside chat or page appendix; context-specific text container."

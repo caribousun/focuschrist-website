@@ -3,7 +3,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const {JSDOM}=require('jsdom');
 const root=path.resolve(__dirname,'..'),source=fs.readFileSync(path.join(root,'unified-opening.js'),'utf8');
 const inventory=JSON.parse(fs.readFileSync(path.join(root,'docs/unified-opening-inventory.json')));
-assert.equal(inventory.pages.length,125);assert.equal(inventory.pages.filter(x=>x.hero).length,46);
+assert.equal(inventory.pages.length,128);assert.equal(inventory.pages.filter(x=>x.hero).length,47);
 let checks=0;
 for(const file of ['answers/abrahamic-covenant.html','answers/prayer-and-personal-revelation.html','art.html','come-follow-me.html','general-conference.html','history/john-tanner.html','jesus-christ/parables/barren-fig.html']){
  const dom=new JSDOM(fs.readFileSync(path.join(root,file),'utf8'),{url:'https://focuschrist.com/'+file,runScripts:'outside-only',pretendToBeVisual:true});

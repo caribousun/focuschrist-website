@@ -7,7 +7,7 @@ const root = path.resolve(__dirname, '..');
 const read = name => fs.readFileSync(path.join(root,name),'utf8');
 const artworkDisclosure = 'Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.';
 const pages = [...read('sitemap.xml').matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>new URL(m[1]).pathname);
-assert.equal(pages.length,125);
+assert.equal(pages.length,128);
 assert.ok(pages.includes('/answers/race-priesthood-and-temple-blessings.html'),'new dependent study must receive the shared footer test');
 let bareGalleryEntries=0;
 for(const route of [...pages,'/404.html','/search.html']){
@@ -46,25 +46,35 @@ for(const route of [...pages, '/404.html']){
  w.scrollTo=options=>{scroll=options};
  w.eval(read('site-common.js'));
  d.dispatchEvent(new w.Event('DOMContentLoaded'));
+ for(const container of d.querySelectorAll('.nav-links,#hamburgerMenu')){
+  const timeline=container.querySelector('[data-focuschrist-primary-timeline]');
+  assert(timeline,file+' runtime Timeline entry');
+  assert.equal(container.querySelectorAll('[data-focuschrist-primary-timeline]').length,1,file+' no duplicate Timeline entry');
+  assert.equal(new URL(timeline.href).pathname,'/timeline.html',file+' Timeline destination');
+  assert.equal(new URL(timeline.nextElementSibling.href).pathname,'/about.html',file+' Timeline immediately before About after dynamic navigation');
+ }
  const buttons=d.querySelectorAll('[data-focuschrist-back-to-top]');
  assert.equal(buttons.length,1,file);
  const b=buttons[0];assert.equal(b.type,'button');assert.equal(b.textContent,'Back to top');
  assert(b.closest('footer[data-focuschrist-footer="standard"]'));
  assert.equal(d.querySelectorAll('link[data-focuschrist-footer-navigation]').length,1);
  assert.equal(new URL(d.querySelector('link[data-focuschrist-footer-navigation]').href).pathname,'/footer-navigation.css','Nested footer stylesheet must resolve at site root');
- const before=w.location.href;b.focus();b.click();
+ const before=w.location.href;const topTarget=d.querySelector('.nav[data-focuschrist-header="standard"]')||d.querySelector('main')||d.body;const priorTabIndex=topTarget.getAttribute('tabindex');b.focus();b.click();
  assert.equal(w.location.href,before,'Back to top must not change page, query, or fragment');
  assert.equal(scroll.top,0);assert.equal(scroll.left,0);assert.equal(scroll.behavior,'instant');
  assert(d.activeElement.matches('.nav[data-focuschrist-header="standard"], main, body'),file+' focus did not return to top');
  assert(!d.activeElement.contains(b),'Focus must leave the footer');
- const focused=d.activeElement;b.focus();assert(!focused.hasAttribute('tabindex'),'Temporary focus target must clean up');
+ const focused=d.activeElement;b.focus();assert.equal(focused.getAttribute('tabindex'),priorTabIndex,file+' focus target must preserve existing tabindex or remove temporary tabindex');
  d.dispatchEvent(new w.Event('DOMContentLoaded'));
  assert.equal(d.querySelectorAll('[data-focuschrist-back-to-top]').length,1,'No duplicate action after reinitialization');
  assert.equal(d.querySelectorAll('[data-focuschrist-artwork-disclosure]').length,1,file+' disclosure must be idempotent');
  const art=d.querySelectorAll('footer [data-focuschrist-art-gallery]');
  assert.equal(art.length,1,file+' Art footer entry must remain unique');
  assert.equal(new URL(art[0].href).pathname,'/art.html',file+' Art footer and menu share destination');
- assert([...d.querySelectorAll('.nav a[href]')].some(a=>new URL(a.href).pathname==='/art.html'),file+' matching Art menu destination');
+ if(file.startsWith('timelines/')){
+  assert(['timelines/latter-day-saint-church-history-timeline.html','timelines/willie-and-martin-handcart-map.html'].includes(file),'Only owner-preserved standalone experiences omit the global header');
+  assert(d.querySelector('a[href="../timeline.html"]'),file+' return to Timeline');
+ } else assert([...d.querySelectorAll('.nav a[href]')].some(a=>new URL(a.href).pathname==='/art.html'),file+' matching Art menu destination');
  const disclosure=d.querySelector('[data-focuschrist-artwork-disclosure]');
  assert.equal(disclosure.textContent,artworkDisclosure);
  assert.equal(independence.nextElementSibling,disclosure,file+' runtime notice adjacency');

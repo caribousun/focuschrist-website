@@ -14,6 +14,14 @@ def check(html=None,css=None,controls=None):
  assert digest(controls)==CONTRACT['css_sha256']['cfm-study-controls.css'],'Unreviewed controls CSS'
  assert digest(css.split('/* One page composition',1)[0])==CONTRACT['hero_css_sha256'],'Hero rules changed'
  s=BeautifulSoup(html,'html.parser');assert str(s.select_one('header.cfm-hero'))==CONTRACT['hero_html'],'Hero markup changed'
+ # Wyatt's 2026-10-02 Timeline addition is checked exactly, then removed only
+ # from the comparison tree so the dated composition proof stays immutable.
+ timeline=s.select('nav.nav a[data-focuschrist-primary-timeline]')
+ assert len(timeline)==2,'Exactly desktop and menu Timeline entries required'
+ for link in timeline:
+  assert dict(link.attrs)=={'href':'timeline.html','data-focuschrist-primary-timeline':'true'} and link.get_text()=='Timeline','Timeline entry changed'
+  assert link.find_next_sibling('a') and link.find_next_sibling('a').get('href')=='about.html','Timeline must immediately precede About'
+  link.decompose()
  assert str(s.select_one('nav.nav'))==CONTRACT['nav_html'],'Header navigation changed'
  assert sorted(json.dumps(dict(x.attrs),sort_keys=True) for x in s.select('img'))==CONTRACT['images'],'Image identity/count/attributes changed'
  expected=Counter(CONTRACT['hrefs']);expected[CONTRACT['removed_duplicate_href']]-=1

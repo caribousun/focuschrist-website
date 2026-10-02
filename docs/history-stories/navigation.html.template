@@ -1,6 +1,6 @@
 <nav aria-label="Primary navigation" class="nav" data-focuschrist-header="standard">
 <a class="nav-logo" href="../index.html">focusChrist</a>
-<div class="nav-links"><span class="fc-nav-side fc-nav-side--before"><a href="../index.html">Home</a><a href="../ask.html">Ask (Chat)</a><a href="../answers.html">Answers Library</a><a href="../art.html">Art</a><a data-focuschrist-primary-missionary="true" href="../missionary.html">Mission</a></span><a aria-label="Christ’s Atonement" class="fc-nav-atonement" href="../atonement.html">Christ’s Atonement</a><span class="fc-nav-side fc-nav-side--after"><a aria-current="page" class="active" data-focuschrist-primary-history="true" href="../church-history.html">History</a><a href="../pioneers.html">Pioneers</a><a data-focuschrist-primary-watch="true" href="../watch.html">Watch</a><a href="../about.html">About</a></span></div>
+<div class="nav-links"><span class="fc-nav-side fc-nav-side--before"><a href="../index.html">Home</a><a href="../ask.html">Ask (Chat)</a><a href="../answers.html">Answers Library</a><a href="../art.html">Art</a><a data-focuschrist-primary-missionary="true" href="../missionary.html">Mission</a></span><a aria-label="Christ’s Atonement" class="fc-nav-atonement" href="../atonement.html">Christ’s Atonement</a><span class="fc-nav-side fc-nav-side--after"><a aria-current="page" class="active" data-focuschrist-primary-history="true" href="../church-history.html">History</a><a href="../pioneers.html">Pioneers</a><a data-focuschrist-primary-watch="true" href="../watch.html">Watch</a><a href="../timeline.html" data-focuschrist-primary-timeline="true">Timeline</a><a href="../about.html">About</a></span></div>
 <div class="hamburger-wrap"><a aria-label="Search focusChrist" class="fc-search-trigger" data-site-search-trigger="" href="../search.html"><span aria-hidden="true" class="fc-search-icon"></span><span class="fc-search-trigger-label">Search</span></a>
 <span aria-controls="hamburgerMenu" aria-expanded="false" aria-label="Toggle navigation menu" class="hamburger" onclick="toggleMenu()" role="button" tabindex="0"></span>
 <div class="hamburger-menu" id="hamburgerMenu">
@@ -10,7 +10,7 @@
 <a href="../art.html">Art</a>
 <a aria-current="page" class="active" data-focuschrist-primary-history="true" href="../church-history.html">CHURCH HISTORY</a>
 <a href="../pioneers.html">Pioneers</a>
-<a href="../about.html">About</a>
+<a href="../timeline.html" data-focuschrist-primary-timeline="true">Timeline</a><a href="../about.html">About</a>
 <hr/>
 </div>
 </div>

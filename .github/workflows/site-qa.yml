@@ -127,6 +127,7 @@ jobs:
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/unified_opening_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/father_opening_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/study_link_controls_qa.js
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/timeline_map_lifecycle_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/art_study_picture_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/temples_history_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/history_story_runtime_qa.js
@@ -454,3 +455,23 @@ jobs:
       - name: Verify deployed production Ask contracts
         if: github.event_name == 'push'
         run: node tools/live_production_ask_qa.js
+
+  timeline:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+      - name: Install pinned Timeline browser dependencies
+        run: |
+          npm install --prefix /tmp/focus-timeline-qa --no-save --package-lock=false --ignore-scripts playwright@1.55.1
+          /tmp/focus-timeline-qa/node_modules/.bin/playwright install --with-deps chromium
+      - name: Verify standalone Timeline experiences at desktop, phone, and enlarged text
+        run: NODE_PATH=/tmp/focus-timeline-qa/node_modules node tools/timeline_runtime_qa.js
+      - name: Save Timeline interaction and rendering evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: timeline-experiences
+          path: .qa-artifacts/timeline/
+          include-hidden-files: true
+          if-no-files-found: ignore

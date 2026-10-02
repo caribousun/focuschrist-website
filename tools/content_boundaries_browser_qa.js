@@ -15,7 +15,7 @@ const root = path.resolve(__dirname, '..');
   const assert=require('node:assert/strict'),results=[];
   const origin=`http://127.0.0.1:${server.address().port}`;
   const routes=[...fs.readFileSync(path.join(root,'sitemap.xml'),'utf8').matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>new URL(m[1]).pathname);
-  assert.equal(routes.length,125);
+  assert.equal(routes.length,128);
   let onward=0;
   for(const route of routes){const source=fs.readFileSync(path.join(root,route==='/'?'index.html':route.slice(1)),'utf8');
     for(const section of source.matchAll(/<section\b[^>]*id="(?:continue-study|connected-study)"[^>]*>([\s\S]*?)<\/section>/g)){

@@ -1,7 +1,7 @@
 {
-  "canonical_count": 125,
-  "hero_count": 46,
-  "excluded_count": 79,
+  "canonical_count": 128,
+  "hero_count": 47,
+  "excluded_count": 81,
   "pages": [
     {
       "path": "index.html",
@@ -627,6 +627,24 @@
       "path": "answers/race-priesthood-and-temple-blessings.html",
       "hero": false,
       "template": "excluded-no-opening-hero"
+    },
+    {
+      "path": "timeline.html",
+      "hero": true,
+      "template": "standard",
+      "reason": "Wyatt requested a standard Focus hero for Timeline on 2026-10-02; shared geometry and new still-life artwork."
+    },
+    {
+      "path": "timelines/latter-day-saint-church-history-timeline.html",
+      "hero": false,
+      "template": "excluded-owner-preserved-timeline-experience",
+      "reason": "Wyatt requested preserving Merlin standalone experience design on 2026-10-02."
+    },
+    {
+      "path": "timelines/willie-and-martin-handcart-map.html",
+      "hero": false,
+      "template": "excluded-owner-preserved-timeline-experience",
+      "reason": "Wyatt requested preserving Merlin standalone experience design on 2026-10-02."
     }
   ]
 }

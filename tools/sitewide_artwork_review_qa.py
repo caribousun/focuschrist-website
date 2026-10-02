@@ -63,8 +63,12 @@ def reviewed_art_reflection(selector, body, data):
     data = historical_style_bytes(data)
     return selector.strip() == '.fc-art-study-page .fc-reflection-prompts > .fc-art-story' and re.sub(r'\s+', '', body) == 'max-width:none!important;' and hashlib.sha256(data).hexdigest() == '557ff4b1825bdf655751cbc6491d0133db294f022b90fcda270039ff849053a3'
 
+# Additive 2026-10-02 owner-requested Timeline routes. The dated September
+# review remains unchanged; source inclusion is distinct from rendered approval.
+TIMELINE_ROUTES = {'timeline.html', 'timelines/latter-day-saint-church-history-timeline.html', 'timelines/willie-and-martin-handcart-map.html'}
+
 def reviewed_wrap_consumers(consumers, expected, version):
-    return (set(consumers) == set(expected) | {'answers/holy-ghost.html', 'answers/plan-of-salvation.html', 'history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html', 'answers/race-priesthood-and-temple-blessings.html'} and len(consumers) == 126
+    return (set(consumers) == set(expected) | {'answers/holy-ghost.html', 'answers/plan-of-salvation.html', 'history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html', 'answers/race-priesthood-and-temple-blessings.html'} | TIMELINE_ROUTES and len(consumers) == 129
             and all(parse_qs(urlsplit(ref).query).get('v') == [version] for refs in consumers.values() for ref in refs))
 
 
@@ -152,6 +156,8 @@ TOOLBAR_STYLE_SHA256 = {'site-header.css': 'a915de3ba44c8e14f127e25ec51498960fb1
 # Owner-requested growing Ask composer and opt-in Holy Ghost player, independently
 # reviewed in source and rendered by Albert. Exact full bytes and single owners.
 SCOPED_INTERFACE_STYLES = {
+    # Newton source-reviewed hub-only CSS; hosted geometry and owner acceptance remain separate.
+    'timeline.css': ('5aefac78e15d324cb4f5a9b44c5f0a1bdb26d951f4e7b5078569be67103048d1', 'timeline.html'),
     # Owner-directed Church-source history, independently reviewed 2026-09-30.
     # Exact bytes and the single consumer are checked before CSS exclusion.
     'priesthood-history-study.css': ('f59d25e1a40498a9b6d1c8c1da594e5af7cd7a42cd39dc210d787640015b2adb', 'answers/race-priesthood-and-temple-blessings.html'),
@@ -253,8 +259,10 @@ def main():
         assert not reviewed_system_panel_style(panel_style + b'\n.fc-visual-hero{height:9px}')
         assert not reviewed_system_panel_style(panel_style.replace(b'--fc-panel-fill:', b'--fc-panel-broken:', 1))
         assert not reviewed_system_panel_style(panel_style.replace(b'--fc-opening-hero-height:', b'--fc-opening-broken-height:', 1))
-        wrap_good = {name: ['site-system.css?v=current'] for name in [*wrap_expected, 'answers/holy-ghost.html', 'answers/plan-of-salvation.html', 'history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html', 'answers/race-priesthood-and-temple-blessings.html']}
+        wrap_good = {name: ['site-system.css?v=current'] for name in [*wrap_expected, *TIMELINE_ROUTES, 'answers/holy-ghost.html', 'answers/plan-of-salvation.html', 'history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html', 'answers/race-priesthood-and-temple-blessings.html']}
         assert reviewed_wrap_consumers(wrap_good, wrap_expected, 'current')
+        for required_route in TIMELINE_ROUTES:
+            assert not reviewed_wrap_consumers({k:v for k,v in wrap_good.items() if k != required_route}, wrap_expected, 'current')
         assert not reviewed_wrap_consumers(dict(list(wrap_good.items())[1:]), wrap_expected, 'current')
         assert not reviewed_wrap_consumers(dict(wrap_good, **{'other.html': ['site-system.css?v=current']}), wrap_expected, 'current')
         assert not reviewed_wrap_consumers(dict(wrap_good, **{'page-0.html': ['site-system.css?v=stale']}), wrap_expected, 'current')
@@ -366,7 +374,7 @@ def main():
     if args.baseline_report:Path(args.baseline_report).write_text(json.dumps({'baseline':baseline,'images':preserved},indent=2),encoding='utf8')
     ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
     pages=[urlsplit(n.text).path.lstrip('/') or 'index.html' for n in ET.parse(ROOT/'sitemap.xml').findall('s:url/s:loc',ns)]
-    expected_pages={p.relative_to(ROOT).as_posix() for p in [*ROOT.glob('*.html'),*ROOT.glob('answers/*.html'),*ROOT.glob('art-study/*.html'),*ROOT.glob('jesus-christ/**/*.html'),*ROOT.glob('history/*.html')] if p.name not in {'404.html','google3fa84a4b37862f36.html'}}
+    expected_pages={p.relative_to(ROOT).as_posix() for p in [*ROOT.glob('*.html'),*ROOT.glob('answers/*.html'),*ROOT.glob('art-study/*.html'),*ROOT.glob('jesus-christ/**/*.html'),*ROOT.glob('history/*.html'),*ROOT.glob('timelines/*.html')] if p.name not in {'404.html','google3fa84a4b37862f36.html'}}
     check(len(pages)==len(set(pages)) and set(pages)==expected_pages,'Sitemap must expose every canonical destination exactly once')
     parsed={}
     for page in pages:
