@@ -36,7 +36,7 @@ const root=path.resolve(__dirname,'..'),out=path.join(root,'.qa-artifacts/timeli
   await page.locator('#prophetGrid').scrollIntoViewIfNeeded();await measure('presidents');
   await visit('timelines/willie-and-martin-handcart-map.html');
   assert.equal(await page.locator('.stop-card').count(),33);const stop=page.locator('.stop-card').first();await stop.click();assert(await page.locator('#detail-panel.is-open').isVisible());assert(!(await page.locator('#detail-title').textContent()).includes('Choose a stop'));assert((await page.locator('#detail-body').innerText()).length>100);await measure('handcart-open');
-  if(profile.width<=700){assert.equal(await page.locator('#detail-panel').evaluate(el=>getComputedStyle(el).position),'fixed');await page.locator('#detail-close').click();assert.equal(await page.locator('#detail-panel.is-open').count(),0);}
+  if(profile.width<=700){assert.equal(await page.locator('#detail-panel').evaluate(el=>getComputedStyle(el).position),'fixed');assert((await page.locator('#detail-close').boundingBox()).height>=44,'Phone close touch target at least44px');await page.locator('#detail-close').click();assert.equal(await page.locator('#detail-panel.is-open').count(),0);}
   await page.locator('[data-filter="willie"]').click();const count=await page.locator('.stop-card').count();assert(count>0&&count<33);await page.locator('[data-filter="all"]').click();assert.equal(await page.locator('.stop-card').count(),33);
   assert.deepEqual(errors,[],profile.name+' uncaught errors');results.push({profile:profile.name,events:51,presidents:18,stops:33,filters:true,search:true,keyboardStory:true,providerUnavailableFallback:true});await context.close();
  }
