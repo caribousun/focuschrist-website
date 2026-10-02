@@ -259,8 +259,10 @@ def main():
         assert not reviewed_system_panel_style(panel_style + b'\n.fc-visual-hero{height:9px}')
         assert not reviewed_system_panel_style(panel_style.replace(b'--fc-panel-fill:', b'--fc-panel-broken:', 1))
         assert not reviewed_system_panel_style(panel_style.replace(b'--fc-opening-hero-height:', b'--fc-opening-broken-height:', 1))
-        wrap_good = {name: ['site-system.css?v=current'] for name in [*wrap_expected, 'answers/holy-ghost.html', 'answers/plan-of-salvation.html', 'history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html', 'answers/race-priesthood-and-temple-blessings.html']}
+        wrap_good = {name: ['site-system.css?v=current'] for name in [*wrap_expected, *TIMELINE_ROUTES, 'answers/holy-ghost.html', 'answers/plan-of-salvation.html', 'history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html', 'answers/race-priesthood-and-temple-blessings.html']}
         assert reviewed_wrap_consumers(wrap_good, wrap_expected, 'current')
+        for required_route in TIMELINE_ROUTES:
+            assert not reviewed_wrap_consumers({k:v for k,v in wrap_good.items() if k != required_route}, wrap_expected, 'current')
         assert not reviewed_wrap_consumers(dict(list(wrap_good.items())[1:]), wrap_expected, 'current')
         assert not reviewed_wrap_consumers(dict(wrap_good, **{'other.html': ['site-system.css?v=current']}), wrap_expected, 'current')
         assert not reviewed_wrap_consumers(dict(wrap_good, **{'page-0.html': ['site-system.css?v=stale']}), wrap_expected, 'current')

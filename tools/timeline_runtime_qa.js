@@ -24,7 +24,7 @@ const root=path.resolve(__dirname,'..'),out=path.join(root,'.qa-artifacts/timeli
   if(profile.name==='desktop'){await page.setViewportSize({width:1920,height:1080});
   assert.equal(await page.locator('.fc-nav-side--before a').count(),5,'Five links before central Atonement');assert.equal(await page.locator('.fc-nav-side--after a').count(),5,'Five links after central Atonement');
   assert.deepEqual(await page.locator('.fc-nav-side--after a').evaluateAll(nodes=>nodes.map(n=>n.textContent.trim())),['History','Pioneers','Watch','Timeline','About']);
-  const center=await page.locator('.fc-nav-atonement').boundingBox();assert(center&&Math.abs(center.x+center.width/2-960)<4,'Atonement centered at wide desktop');
+  const center=await page.locator('.fc-nav-atonement').boundingBox();assert(center&&Math.abs(center.x+center.width/2-(await page.evaluate(()=>document.documentElement.clientWidth))/2)<4,'Atonement centered at wide desktop');
   assert(await page.locator('#hamburgerMenu a').evaluateAll(nodes=>{const labels=nodes.map(n=>n.textContent.trim());return labels.indexOf('Timeline')+1===labels.indexOf('About');}),'Menu Timeline immediately before About');
   await page.setViewportSize({width:profile.width,height:profile.height});}
   const choice=page.locator('.fc-timeline-choices a').first();await choice.focus();assert(await choice.evaluate(n=>n===document.activeElement),'Timeline pill keyboard focus');await choice.press('Enter');assert(page.url().endsWith('/timelines/latter-day-saint-church-history-timeline.html'),'Keyboard opens standalone experience');
