@@ -241,19 +241,6 @@ jobs:
       - name: Verify mobile study headers preserve navigation
         run: NODE_PATH=/tmp/focus-row-qa/node_modules node tools/mobile_study_header_browser_qa.js
 
-      - name: Verify standalone Timeline experiences at desktop, phone, and enlarged text
-        if: ${{ !cancelled() && steps.presentation_dependencies.outcome == 'success' }}
-        run: NODE_PATH=/tmp/focus-row-qa/node_modules node tools/timeline_runtime_qa.js
-
-      - name: Save Timeline interaction and rendering evidence
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: timeline-experiences
-          path: .qa-artifacts/timeline/
-          include-hidden-files: true
-          if-no-files-found: ignore
-
       - name: Inspect every canonical page at desktop, phone, and enlarged text
         if: ${{ !cancelled() && steps.presentation_dependencies.outcome == 'success' }}
         run: NODE_PATH=/tmp/focus-row-qa/node_modules node tools/canonical_presentation_browser_qa.js
@@ -467,3 +454,23 @@ jobs:
       - name: Verify deployed production Ask contracts
         if: github.event_name == 'push'
         run: node tools/live_production_ask_qa.js
+
+  timeline:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+      - name: Install pinned Timeline browser dependencies
+        run: |
+          npm install --prefix /tmp/focus-timeline-qa --no-save --package-lock=false --ignore-scripts playwright@1.55.1
+          /tmp/focus-timeline-qa/node_modules/.bin/playwright install --with-deps chromium
+      - name: Verify standalone Timeline experiences at desktop, phone, and enlarged text
+        run: NODE_PATH=/tmp/focus-timeline-qa/node_modules node tools/timeline_runtime_qa.js
+      - name: Save Timeline interaction and rendering evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: timeline-experiences
+          path: .qa-artifacts/timeline/
+          include-hidden-files: true
+          if-no-files-found: ignore

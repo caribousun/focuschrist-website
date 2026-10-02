@@ -286,6 +286,8 @@ def main() -> int:
             hero_script = "hero-details.js?v=20260927-plan-study-1"
         if relative == "answers/holy-ghost.html":
             hero_script = "hero-details.js?v=20260927-plan-study-1"
+        if relative == "timeline.html":
+            hero_script = "hero-details.js?v=20261002-timeline-1"
         for asset in ("full-image-viewer.css?v=20260905-viewport", "full-image-viewer.js?v=20260914-reopen-1", hero_script, "hero-details.css?v=20260909-warm", "artwork-details.css?v=20260909-warm"):
             if page.count(prefix + asset) != 1:
                 errors.append(f"{relative}: hero study dependency missing or duplicated: {asset}")
@@ -302,8 +304,8 @@ def main() -> int:
                 errors.append(f"{relative}: missing hero study metadata: {marker}")
         if 'data-full-image-viewer' in hero_link:
             errors.append(f"{relative}: hero must open study before full-size viewer")
-    if hero_pages != 41:
-        errors.append(f"expected41 image-first pages including404, Evidences, Joseph likeness, Atonement, Birth of Christ and Holy Ghost, found{hero_pages}")
+    if hero_pages != 42:
+        errors.append(f"expected42 image-first pages including404, Evidences, Joseph likeness, Atonement, Birth of Christ, Holy Ghost and Timeline, found{hero_pages}")
 
     full_assets: list[str] = []
     for relative in (*PAGES, "missionary.html"):
