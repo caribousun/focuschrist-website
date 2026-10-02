@@ -1,0 +1,820 @@
+{
+  "reviewed_on": "2026-10-02",
+  "reviewer": "Fermi",
+  "status": "IMPLEMENTED_PENDING_INDEPENDENT_REVIEW",
+  "scope": "Geographic layer only; original51 event narratives unchanged. No imagery or generated artwork.",
+  "coordinate_policy": "Manually placed approximate area coordinates, rounded to two decimal places. Church sources establish named-place associations; they are not claimed to supply these numerical coordinates. Regional rectangles are contextual extents, not historical boundaries.",
+  "sources_reviewed": {
+    "atlas": "https://www.churchofjesuschrist.org/study/scriptures/history-maps/index?lang=eng",
+    "kirtland": "https://www.churchofjesuschrist.org/learn/locations/historic-kirtland?lang=eng",
+    "nauvoo": "https://www.churchofjesuschrist.org/learn/history/sites/historic-nauvoo/all-locations?lang=eng",
+    "england": "https://www.churchofjesuschrist.org/study/history/global-histories/england/xe-chronology?lang=eng",
+    "manchester": "https://www.churchofjesuschrist.org/study/manual/presidents-of-the-church-student-manual/chapter-10?lang=eng",
+    "winter": "https://www.churchofjesuschrist.org/study/history/topics/winter-quarters?lang=eng",
+    "battalion": "https://newsroom.churchofjesuschrist.org/additional-resource/mormon-battalion-fact-sheet",
+    "wyoming": "https://history.churchofjesuschrist.org/article/mormon-handcart-historic-sites?lang=eng",
+    "southwest": "https://www.churchofjesuschrist.org/learn/history/sites/southwest-utah/what-to-expect?lang=eng",
+    "railroad": "https://www.churchofjesuschrist.org/study/history/topics/railroad?lang=eng",
+    "primary": "https://www.churchofjesuschrist.org/study/history/topics/primary?lang=eng",
+    "headquarters": "https://www.churchofjesuschrist.org/study/history/topics/church-headquarters?lang=eng"
+  },
+  "locations": {
+    "palmyra": {
+      "label": "Palmyra, New York",
+      "lat": 43.06,
+      "lng": -77.23,
+      "precision": "Approximate area location; not an exact event building",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/history-maps/index?lang=eng"
+    },
+    "manchester_ny": {
+      "label": "Manchester area, New York",
+      "lat": 42.98,
+      "lng": -77.23,
+      "precision": "Approximate area location; not an exact event building",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/history-maps/index?lang=eng"
+    },
+    "cumorah": {
+      "label": "Hill Cumorah area, New York",
+      "lat": 43.0,
+      "lng": -77.22,
+      "precision": "Approximate area location; not an exact event building",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/history-maps/index?lang=eng"
+    },
+    "harmony": {
+      "label": "Harmony / Oakland area, Pennsylvania",
+      "lat": 41.96,
+      "lng": -75.64,
+      "precision": "Approximate area location; not an exact event building",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/history-maps/index?lang=eng"
+    },
+    "fayette": {
+      "label": "Fayette area, New York",
+      "lat": 42.82,
+      "lng": -76.8,
+      "precision": "Approximate area location; not an exact event building",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/history-maps/index?lang=eng"
+    },
+    "kirtland": {
+      "label": "Kirtland, Ohio",
+      "lat": 41.63,
+      "lng": -81.36,
+      "precision": "Approximate area location; not an exact event building",
+      "source": "https://www.churchofjesuschrist.org/learn/locations/historic-kirtland?lang=eng"
+    },
+    "hiram": {
+      "label": "Hiram, Ohio",
+      "lat": 41.31,
+      "lng": -81.15,
+      "precision": "Approximate area location; not an exact event building",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/history-maps/index?lang=eng"
+    },
+    "independence": {
+      "label": "Independence, Missouri",
+      "lat": 39.09,
+      "lng": -94.42,
+      "precision": "Approximate area location; not an exact event building",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/history-maps/index?lang=eng"
+    },
+    "preston": {
+      "label": "Preston, England",
+      "lat": 53.76,
+      "lng": -2.7,
+      "precision": "Approximate area location; not an exact event building",
+      "source": "https://www.churchofjesuschrist.org/study/history/global-histories/england/xe-chronology?lang=eng"
+    },
+    "nauvoo": {
+      "label": "Nauvoo, Illinois",
+      "lat": 40.55,
+      "lng": -91.38,
+      "precision": "Approximate area location; not an exact event building",
+      "source": "https://www.churchofjesuschrist.org/learn/history/sites/historic-nauvoo/all-locations?lang=eng"
+    },
+    "carthage": {
+      "label": "Carthage, Illinois",
+      "lat": 40.42,
+      "lng": -91.14,
+      "precision": "Approximate area location; not an exact event building",
+      "source": "https://www.churchofjesuschrist.org/learn/history/sites/historic-nauvoo/all-locations?lang=eng"
+    },
+    "winter": {
+      "label": "Winter Quarters / Florence area, Nebraska",
+      "lat": 41.34,
+      "lng": -95.97,
+      "precision": "Approximate area location; not an exact event building",
+      "source": "https://www.churchofjesuschrist.org/study/history/topics/winter-quarters?lang=eng"
+    },
+    "council_bluffs": {
+      "label": "Council Bluffs, Iowa",
+      "lat": 41.26,
+      "lng": -95.86,
+      "precision": "Approximate area location; not an exact event building",
+      "source": "https://newsroom.churchofjesuschrist.org/additional-resource/mormon-battalion-fact-sheet"
+    },
+    "san_diego": {
+      "label": "San Diego, California",
+      "lat": 32.75,
+      "lng": -117.2,
+      "precision": "Approximate area location; not an exact event building",
+      "source": "https://newsroom.churchofjesuschrist.org/additional-resource/mormon-battalion-fact-sheet"
+    },
+    "salt_lake": {
+      "label": "Salt Lake City, Utah",
+      "lat": 40.76,
+      "lng": -111.89,
+      "precision": "Approximate area location; not an exact event building",
+      "source": "https://www.churchofjesuschrist.org/study/history/topics/church-headquarters?lang=eng"
+    },
+    "mountain_meadows": {
+      "label": "Mountain Meadows area, Utah",
+      "lat": 37.48,
+      "lng": -113.64,
+      "precision": "Approximate area location; not an exact event building",
+      "source": "https://www.churchofjesuschrist.org/learn/history/sites/southwest-utah/what-to-expect?lang=eng"
+    },
+    "promontory": {
+      "label": "Promontory Summit area, Utah",
+      "lat": 41.62,
+      "lng": -112.55,
+      "precision": "Approximate area location; not an exact event building",
+      "source": "https://www.churchofjesuschrist.org/study/history/topics/railroad?lang=eng"
+    },
+    "st_george": {
+      "label": "St. George, Utah",
+      "lat": 37.1,
+      "lng": -113.58,
+      "precision": "Approximate area location; not an exact event building",
+      "source": "https://www.churchofjesuschrist.org/learn/history/sites/southwest-utah/what-to-expect?lang=eng"
+    },
+    "farmington": {
+      "label": "Farmington, Utah",
+      "lat": 40.98,
+      "lng": -111.89,
+      "precision": "Approximate area location; not an exact event building",
+      "source": "https://www.churchofjesuschrist.org/study/history/topics/primary?lang=eng"
+    },
+    "manchester_uk": {
+      "label": "Manchester, England",
+      "lat": 53.48,
+      "lng": -2.24,
+      "precision": "Approximate area location; not an exact event building",
+      "source": "https://www.churchofjesuschrist.org/study/manual/presidents-of-the-church-student-manual/chapter-10?lang=eng"
+    }
+  },
+  "event_mappings": [
+    {
+      "index": 0,
+      "expectedTitle": "The First Vision",
+      "kind": "places",
+      "places": [
+        "palmyra"
+      ],
+      "note": "Approximate place locations; not exact buildings or one connected travel route.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/history-maps/index?lang=eng"
+      ]
+    },
+    {
+      "index": 1,
+      "expectedTitle": "The Angel Moroni and the Golden Plates",
+      "kind": "places",
+      "places": [
+        "manchester_ny"
+      ],
+      "note": "Approximate place locations; not exact buildings or one connected travel route.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/history-maps/index?lang=eng"
+      ]
+    },
+    {
+      "index": 2,
+      "expectedTitle": "Joseph Receives the Plates",
+      "kind": "places",
+      "places": [
+        "cumorah"
+      ],
+      "note": "Approximate place locations; not exact buildings or one connected travel route.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/history-maps/index?lang=eng"
+      ]
+    },
+    {
+      "index": 3,
+      "expectedTitle": "The Aaronic Priesthood Restored",
+      "kind": "places",
+      "places": [
+        "harmony"
+      ],
+      "note": "Approximate place locations; not exact buildings or one connected travel route.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/history-maps/index?lang=eng"
+      ]
+    },
+    {
+      "index": 4,
+      "expectedTitle": "The Book of Mormon Is Published",
+      "kind": "places",
+      "places": [
+        "palmyra"
+      ],
+      "note": "Approximate place locations; not exact buildings or one connected travel route.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/history-maps/index?lang=eng"
+      ]
+    },
+    {
+      "index": 5,
+      "expectedTitle": "The Church Is Organized",
+      "kind": "places",
+      "places": [
+        "fayette"
+      ],
+      "note": "Approximate place locations; not exact buildings or one connected travel route.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/history-maps/index?lang=eng"
+      ]
+    },
+    {
+      "index": 6,
+      "expectedTitle": "The Saints Gather to Kirtland, Ohio",
+      "kind": "places",
+      "places": [
+        "kirtland"
+      ],
+      "note": "Approximate place locations; not exact buildings or one connected travel route.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/learn/locations/historic-kirtland?lang=eng"
+      ]
+    },
+    {
+      "index": 7,
+      "expectedTitle": "The Vision of the Degrees of Glory",
+      "kind": "places",
+      "places": [
+        "hiram"
+      ],
+      "note": "Approximate place locations; not exact buildings or one connected travel route.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/history-maps/index?lang=eng"
+      ]
+    },
+    {
+      "index": 8,
+      "expectedTitle": "The Word of Wisdom",
+      "kind": "places",
+      "places": [
+        "kirtland"
+      ],
+      "note": "Approximate place locations; not exact buildings or one connected travel route.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/learn/locations/historic-kirtland?lang=eng"
+      ]
+    },
+    {
+      "index": 9,
+      "expectedTitle": "Saints Expelled from Jackson County, Missouri",
+      "kind": "places",
+      "places": [
+        "independence"
+      ],
+      "note": "Approximate place locations; not exact buildings or one connected travel route.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/history-maps/index?lang=eng"
+      ]
+    },
+    {
+      "index": 10,
+      "expectedTitle": "The Quorum of the Twelve Apostles Organized",
+      "kind": "places",
+      "places": [
+        "kirtland"
+      ],
+      "note": "Approximate place locations; not exact buildings or one connected travel route.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/learn/locations/historic-kirtland?lang=eng"
+      ]
+    },
+    {
+      "index": 11,
+      "expectedTitle": "The Kirtland Temple Dedicated; Keys Restored",
+      "kind": "places",
+      "places": [
+        "kirtland"
+      ],
+      "note": "Approximate place locations; not exact buildings or one connected travel route.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/learn/locations/historic-kirtland?lang=eng"
+      ]
+    },
+    {
+      "index": 12,
+      "expectedTitle": "First Mission to Great Britain",
+      "kind": "places",
+      "places": [
+        "preston"
+      ],
+      "note": "Approximate place locations; not exact buildings or one connected travel route.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/history/global-histories/england/xe-chronology?lang=eng"
+      ]
+    },
+    {
+      "index": 13,
+      "expectedTitle": "Extermination Order, Haun's Mill, and Liberty Jail",
+      "kind": "region",
+      "places": [],
+      "note": "The shaded rectangle gives regional context only, not an exact historical boundary or pinpoint location.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/history-maps/index?lang=eng"
+      ],
+      "region": {
+        "label": "Northern Missouri",
+        "bounds": [
+          [
+            38.9,
+            -94.7
+          ],
+          [
+            40.0,
+            -93.2
+          ]
+        ]
+      }
+    },
+    {
+      "index": 14,
+      "expectedTitle": "The Saints Build Nauvoo",
+      "kind": "places",
+      "places": [
+        "nauvoo"
+      ],
+      "note": "Approximate place locations; not exact buildings or one connected travel route.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/learn/history/sites/historic-nauvoo/all-locations?lang=eng"
+      ]
+    },
+    {
+      "index": 15,
+      "expectedTitle": "The Relief Society Is Organized",
+      "kind": "places",
+      "places": [
+        "nauvoo"
+      ],
+      "note": "Approximate place locations; not exact buildings or one connected travel route.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/learn/history/sites/historic-nauvoo/all-locations?lang=eng"
+      ]
+    },
+    {
+      "index": 16,
+      "expectedTitle": "The Temple Endowment Introduced",
+      "kind": "places",
+      "places": [
+        "nauvoo"
+      ],
+      "note": "Approximate place locations; not exact buildings or one connected travel route.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/learn/history/sites/historic-nauvoo/all-locations?lang=eng"
+      ]
+    },
+    {
+      "index": 17,
+      "expectedTitle": "The Martyrdom of Joseph and Hyrum Smith",
+      "kind": "places",
+      "places": [
+        "carthage"
+      ],
+      "note": "Approximate place locations; not exact buildings or one connected travel route.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/learn/history/sites/historic-nauvoo/all-locations?lang=eng"
+      ]
+    },
+    {
+      "index": 18,
+      "expectedTitle": "The Twelve Lead the Church",
+      "kind": "places",
+      "places": [
+        "nauvoo"
+      ],
+      "note": "Approximate place locations; not exact buildings or one connected travel route.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/learn/history/sites/historic-nauvoo/all-locations?lang=eng"
+      ]
+    },
+    {
+      "index": 19,
+      "expectedTitle": "The Exodus from Nauvoo Begins",
+      "kind": "places",
+      "places": [
+        "nauvoo",
+        "winter"
+      ],
+      "note": "The marked areas are journey endpoints. No straight line or reconstructed route is asserted by this map.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/learn/history/sites/historic-nauvoo/all-locations?lang=eng",
+        "https://www.churchofjesuschrist.org/study/history/topics/winter-quarters?lang=eng"
+      ]
+    },
+    {
+      "index": 20,
+      "expectedTitle": "The Mormon Battalion Marches",
+      "kind": "places",
+      "places": [
+        "council_bluffs",
+        "san_diego"
+      ],
+      "note": "The marked areas are journey endpoints. No straight line or reconstructed route is asserted by this map.",
+      "sources": [
+        "https://newsroom.churchofjesuschrist.org/additional-resource/mormon-battalion-fact-sheet"
+      ]
+    },
+    {
+      "index": 21,
+      "expectedTitle": "Pioneers Enter the Salt Lake Valley",
+      "kind": "region",
+      "places": [],
+      "note": "The shaded rectangle gives regional context only, not an exact historical boundary or pinpoint location.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/history-maps/index?lang=eng"
+      ],
+      "region": {
+        "label": "Salt Lake Valley",
+        "bounds": [
+          [
+            40.5,
+            -112.2
+          ],
+          [
+            40.9,
+            -111.7
+          ]
+        ]
+      }
+    },
+    {
+      "index": 22,
+      "expectedTitle": "Crickets, Seagulls, and the First Harvest",
+      "kind": "region",
+      "places": [],
+      "note": "The shaded rectangle gives regional context only, not an exact historical boundary or pinpoint location.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/history-maps/index?lang=eng"
+      ],
+      "region": {
+        "label": "Salt Lake Valley",
+        "bounds": [
+          [
+            40.5,
+            -112.2
+          ],
+          [
+            40.9,
+            -111.7
+          ]
+        ]
+      }
+    },
+    {
+      "index": 23,
+      "expectedTitle": "The Willie and Martin Handcart Rescue",
+      "kind": "region",
+      "places": [],
+      "note": "The shaded rectangle gives regional context only, not an exact historical boundary or pinpoint location.",
+      "sources": [
+        "https://history.churchofjesuschrist.org/article/mormon-handcart-historic-sites?lang=eng"
+      ],
+      "region": {
+        "label": "Central Wyoming trail region",
+        "bounds": [
+          [
+            42.2,
+            -109.8
+          ],
+          [
+            43.0,
+            -105.8
+          ]
+        ]
+      }
+    },
+    {
+      "index": 24,
+      "expectedTitle": "The Mountain Meadows Massacre",
+      "kind": "places",
+      "places": [
+        "mountain_meadows"
+      ],
+      "note": "Approximate place locations; not exact buildings or one connected travel route.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/learn/history/sites/southwest-utah/what-to-expect?lang=eng"
+      ]
+    },
+    {
+      "index": 25,
+      "expectedTitle": "The Transcontinental Railroad Completed",
+      "kind": "places",
+      "places": [
+        "promontory"
+      ],
+      "note": "Approximate place locations; not exact buildings or one connected travel route.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/railroad?lang=eng"
+      ]
+    },
+    {
+      "index": 26,
+      "expectedTitle": "First Utah Temple Dedicated; Brigham Young Dies",
+      "kind": "places",
+      "places": [
+        "st_george",
+        "salt_lake"
+      ],
+      "note": "This entry combines two events in different cities; both approximate city locations are shown.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/learn/history/sites/southwest-utah/what-to-expect?lang=eng",
+        "https://www.churchofjesuschrist.org/study/history/topics/church-headquarters?lang=eng"
+      ]
+    },
+    {
+      "index": 27,
+      "expectedTitle": "The Primary Is Organized",
+      "kind": "places",
+      "places": [
+        "farmington"
+      ],
+      "note": "Approximate place locations; not exact buildings or one connected travel route.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/primary?lang=eng"
+      ]
+    },
+    {
+      "index": 28,
+      "expectedTitle": "The Manifesto Ends Plural Marriage",
+      "kind": "places",
+      "places": [
+        "salt_lake"
+      ],
+      "note": "Salt Lake City is the stated setting or announcement location; the event’s influence may extend worldwide. This is a city-level pin, not an exact building.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/church-headquarters?lang=eng"
+      ]
+    },
+    {
+      "index": 29,
+      "expectedTitle": "The Salt Lake Temple Dedicated",
+      "kind": "places",
+      "places": [
+        "salt_lake"
+      ],
+      "note": "Salt Lake City is the stated setting or announcement location; the event’s influence may extend worldwide. This is a city-level pin, not an exact building.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/church-headquarters?lang=eng"
+      ]
+    },
+    {
+      "index": 30,
+      "expectedTitle": "Utah Becomes the 45th State",
+      "kind": "places",
+      "places": [
+        "salt_lake"
+      ],
+      "note": "Salt Lake City is the stated setting or announcement location; the event’s influence may extend worldwide. This is a city-level pin, not an exact building.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/church-headquarters?lang=eng"
+      ]
+    },
+    {
+      "index": 31,
+      "expectedTitle": "President Lorenzo Snow's Tithing Revelation",
+      "kind": "places",
+      "places": [
+        "st_george"
+      ],
+      "note": "Approximate place locations; not exact buildings or one connected travel route.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/learn/history/sites/southwest-utah/what-to-expect?lang=eng"
+      ]
+    },
+    {
+      "index": 32,
+      "expectedTitle": "Family Home Evening Introduced",
+      "kind": "places",
+      "places": [
+        "salt_lake"
+      ],
+      "note": "Salt Lake City is the stated setting or announcement location; the event’s influence may extend worldwide. This is a city-level pin, not an exact building.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/church-headquarters?lang=eng"
+      ]
+    },
+    {
+      "index": 33,
+      "expectedTitle": "Vision of the Redemption of the Dead",
+      "kind": "places",
+      "places": [
+        "salt_lake"
+      ],
+      "note": "Salt Lake City is the stated setting or announcement location; the event’s influence may extend worldwide. This is a city-level pin, not an exact building.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/church-headquarters?lang=eng"
+      ]
+    },
+    {
+      "index": 34,
+      "expectedTitle": "The Church Welfare Program Launched",
+      "kind": "places",
+      "places": [
+        "salt_lake"
+      ],
+      "note": "Salt Lake City is the stated setting or announcement location; the event’s influence may extend worldwide. This is a city-level pin, not an exact building.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/church-headquarters?lang=eng"
+      ]
+    },
+    {
+      "index": 35,
+      "expectedTitle": "One Million Members; Pioneer Centennial",
+      "kind": "places",
+      "places": [
+        "salt_lake"
+      ],
+      "note": "Salt Lake City is the stated setting or announcement location; the event’s influence may extend worldwide. This is a city-level pin, not an exact building.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/church-headquarters?lang=eng"
+      ]
+    },
+    {
+      "index": 36,
+      "expectedTitle": "Correlation Brings the Programs Together",
+      "kind": "places",
+      "places": [
+        "salt_lake"
+      ],
+      "note": "Salt Lake City is the stated setting or announcement location; the event’s influence may extend worldwide. This is a city-level pin, not an exact building.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/church-headquarters?lang=eng"
+      ]
+    },
+    {
+      "index": 37,
+      "expectedTitle": "First Area Conference Held in Manchester, England",
+      "kind": "places",
+      "places": [
+        "manchester_uk"
+      ],
+      "note": "Approximate place locations; not exact buildings or one connected travel route.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/manual/presidents-of-the-church-student-manual/chapter-10?lang=eng"
+      ]
+    },
+    {
+      "index": 38,
+      "expectedTitle": "Revelation Extends the Priesthood to All Worthy Men",
+      "kind": "places",
+      "places": [
+        "salt_lake"
+      ],
+      "note": "Salt Lake City is the stated setting or announcement location; the event’s influence may extend worldwide. This is a city-level pin, not an exact building.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/church-headquarters?lang=eng"
+      ]
+    },
+    {
+      "index": 39,
+      "expectedTitle": "New Editions of the Scriptures Published",
+      "kind": "places",
+      "places": [
+        "salt_lake"
+      ],
+      "note": "Salt Lake City is the stated setting or announcement location; the event’s influence may extend worldwide. This is a city-level pin, not an exact building.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/church-headquarters?lang=eng"
+      ]
+    },
+    {
+      "index": 40,
+      "expectedTitle": "“The Family: A Proclamation to the World”",
+      "kind": "places",
+      "places": [
+        "salt_lake"
+      ],
+      "note": "Salt Lake City is the stated setting or announcement location; the event’s influence may extend worldwide. This is a city-level pin, not an exact building.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/church-headquarters?lang=eng"
+      ]
+    },
+    {
+      "index": 41,
+      "expectedTitle": "More Members Outside the United States Than Inside",
+      "kind": "worldwide",
+      "places": [],
+      "note": "Worldwide event: no single geographic point represents its scope. Read the timeline account for the setting and significance.",
+      "sources": []
+    },
+    {
+      "index": 42,
+      "expectedTitle": "“The Living Christ” Testimony Issued",
+      "kind": "places",
+      "places": [
+        "salt_lake"
+      ],
+      "note": "Salt Lake City is the stated setting or announcement location; the event’s influence may extend worldwide. This is a city-level pin, not an exact building.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/church-headquarters?lang=eng"
+      ]
+    },
+    {
+      "index": 43,
+      "expectedTitle": "The Perpetual Education Fund Announced",
+      "kind": "places",
+      "places": [
+        "salt_lake"
+      ],
+      "note": "Salt Lake City is the stated setting or announcement location; the event’s influence may extend worldwide. This is a city-level pin, not an exact building.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/church-headquarters?lang=eng"
+      ]
+    },
+    {
+      "index": 44,
+      "expectedTitle": "Missionary Age Lowered; a Generation Responds",
+      "kind": "places",
+      "places": [
+        "salt_lake"
+      ],
+      "note": "Salt Lake City is the stated setting or announcement location; the event’s influence may extend worldwide. This is a city-level pin, not an exact building.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/church-headquarters?lang=eng"
+      ]
+    },
+    {
+      "index": 45,
+      "expectedTitle": "A New Prophet and a Course Correction",
+      "kind": "places",
+      "places": [
+        "salt_lake"
+      ],
+      "note": "Salt Lake City is the stated setting or announcement location; the event’s influence may extend worldwide. This is a city-level pin, not an exact building.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/church-headquarters?lang=eng"
+      ]
+    },
+    {
+      "index": 46,
+      "expectedTitle": "Bicentennial of the First Vision",
+      "kind": "worldwide",
+      "places": [],
+      "note": "Worldwide commemoration. The conference broadcast setting was Salt Lake City; no single pin represents its worldwide scope.",
+      "sources": []
+    },
+    {
+      "index": 47,
+      "expectedTitle": "Growth Continues: Membership Passes 17.2 Million",
+      "kind": "worldwide",
+      "places": [],
+      "note": "Worldwide event: no single geographic point represents its scope. Read the timeline account for the setting and significance.",
+      "sources": []
+    },
+    {
+      "index": 48,
+      "expectedTitle": "Temples Across the Earth",
+      "kind": "worldwide",
+      "places": [],
+      "note": "Worldwide event: no single geographic point represents its scope. Read the timeline account for the setting and significance.",
+      "sources": []
+    },
+    {
+      "index": 49,
+      "expectedTitle": "President Nelson Dies; President Oaks Leads the Church",
+      "kind": "places",
+      "places": [
+        "salt_lake"
+      ],
+      "note": "Salt Lake City is the stated setting or announcement location; the event’s influence may extend worldwide. This is a city-level pin, not an exact building.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/church-headquarters?lang=eng"
+      ]
+    },
+    {
+      "index": 50,
+      "expectedTitle": "The Church Today",
+      "kind": "worldwide",
+      "places": [],
+      "note": "Worldwide event: no single geographic point represents its scope. Read the timeline account for the setting and significance.",
+      "sources": []
+    }
+  ],
+  "limitations": [
+    "Sources substantiate named locations, not exact numerical geocoding.",
+    "Regional extents are broad context, not surveyed boundaries.",
+    "Original prose preserved, not newly exhaustively verified.",
+    "Worldwide records intentionally have no pins.",
+    "Provider interaction and independent rendering evidence pending."
+  ],
+  "validation": {
+    "syntax": "node --check both new scripts passed",
+    "dom": "tools/timeline_history_map_qa.js PASS: actual 51 index selections and matching story title, event dispatch after open, clustered choices, filter synchronization, zero results, worldwide without pins, unavailable Leaflet preserves timeline",
+    "preservation": "Original EVENTS/ERAS/PROPHETS/ARTICLES declaration source compared to HEAD unchanged; original data counts retained",
+    "limits": "Official sources substantiate named geographic associations. Coordinates are rounded area context, not authoritative geocoding. No native map/provider pixel verification by Fermi yet; root/Newton integration review pending.",
+    "tileAvailability": "Three tile errors or10-second no-load timeout explicitly announces unavailable imagery while preserving marker choices and event descriptions; tileload clears warning. Unit failure/recovery passed."
+  }
+}

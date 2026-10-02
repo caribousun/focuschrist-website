@@ -170,9 +170,12 @@ SCOPED_INTERFACE_STYLES = {
 # Wyatt requested these exact desktop repairs and the Temple chronology.
 # Albert independently reviewed rendered composition; byte/consumer changes fail closed.
 OWNER_20260929_STYLES = {
+    # Owner-requested mobile map/reader layout and linked existing-art references; exact three-route scope.
+    'timeline-mobile-study.css': ('ca210424e15d4723d5620e279148ecd727c4dff63fcd01a4637b0fa13b7eebee', ['timelines/latter-day-saint-church-history-timeline.html', 'timelines/willie-and-martin-handcart-map.html', 'timelines/life-of-christ-journey-map.html']),
+    'timeline-images.css': ('563df3d37fcd96b58ea4d163b12ec478ed07f1467333d543958ba16333a40b25', ['timelines/latter-day-saint-church-history-timeline.html', 'timelines/willie-and-martin-handcart-map.html', 'timelines/life-of-christ-journey-map.html']),
     # Owner-requested bounded independent Timeline panes; exact source-reviewed route sets.
     'timeline-workspace.css': ('23c8c475d100fe59e62182000e2d97575a24de4ad861b246bb16f5c6a39536ea', ['timelines/willie-and-martin-handcart-map.html', 'timelines/life-of-christ-journey-map.html']),
-    'timeline-history-workspace.css': ('7e1ff9c78383d866514619e9372d232f3796ee52578e12d27ef933a735681090', ['timelines/latter-day-saint-church-history-timeline.html']),
+    'timeline-history-workspace.css': ('acecf66d917b13cc4548e23ff8ab348974423342ba00840f37d1c73d6eb5c173', ['timelines/latter-day-saint-church-history-timeline.html']),
 
     # Owner requested shared headers on these three preserved experiences; exact scoped desktop offset.
     "timeline-experiences.css": ("baa81f4c63d3e81f4ca26fab1db7202c3c700549e781d72996c28bf721bb3be4", ["timelines/latter-day-saint-church-history-timeline.html", "timelines/willie-and-martin-handcart-map.html", "timelines/life-of-christ-journey-map.html"]),

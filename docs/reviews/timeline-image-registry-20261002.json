@@ -1,0 +1,586 @@
+{
+  "status": "IMPLEMENTED_PENDING_RENDER_REVIEW",
+  "scope": "18 Life, 7 handcart and 8 history image references. Existing identity pixels unchanged; one primary museum public-domain painting. All local assets and owning-page fragment targets verified. No duplicate source within an experience.",
+  "registry": {
+    "life": {
+      "0": {
+        "src": "/assets/page-art/birth-of-christ/08-annunciation-800.webp",
+        "alt": "Mary listens to Gabriel in a modest room.",
+        "href": "/birth-of-christ.html#mary-and-elisabeth",
+        "caption": "Existing focusChrist artistic interpretation.",
+        "inventoryRow": 145
+      },
+      "1": {
+        "src": "/assets/page-art/birth-of-christ/09-mary-elisabeth-800.webp",
+        "alt": "Mary and Elisabeth greet one another, holding each other’s arms.",
+        "href": "/birth-of-christ.html#mary-and-elisabeth",
+        "caption": "Existing focusChrist artistic interpretation.",
+        "inventoryRow": 146
+      },
+      "2": {
+        "src": "/assets/page-art/birth-of-christ/14-shepherds-find-800.webp",
+        "alt": "Shepherds enter and find Mary, Joseph, and the infant lying in a manger.",
+        "href": "/birth-of-christ.html#savior-born",
+        "caption": "Existing focusChrist artistic interpretation.",
+        "inventoryRow": 151
+      },
+      "3": {
+        "src": "/assets/page-art/birth-of-christ/15-simeon-800.webp",
+        "alt": "Simeon holds the infant Jesus and speaks with Mary as Joseph listens.",
+        "href": "/birth-of-christ.html#temple-witnesses",
+        "caption": "Existing focusChrist artistic interpretation.",
+        "inventoryRow": 154
+      },
+      "4": {
+        "src": "/assets/page-art/birth-of-christ/18-egypt-800.webp",
+        "alt": "Joseph and Mary travel at night while Mary carries the child close to her.",
+        "href": "/birth-of-christ.html#wise-men-and-egypt",
+        "caption": "Existing focusChrist artistic interpretation.",
+        "inventoryRow": 158
+      },
+      "5": {
+        "src": "/assets/page-art/birth-of-christ/23-nazareth-return-800.webp",
+        "alt": "Joseph carries the young Jesus beside Mary at a village doorway.",
+        "href": "/birth-of-christ.html#wise-men-and-egypt",
+        "caption": "Existing focusChrist artistic interpretation.",
+        "inventoryRow": 159
+      },
+      "9": {
+        "src": "/assets/page-art/jesus-journey/mm-cana-jars-960.webp",
+        "alt": "Jesus watches a servant pour water from a clay pitcher into one of six large stone jars.",
+        "href": "/jesus-christ/mortal-ministry.html#cana",
+        "caption": "Existing focusChrist artistic interpretation.",
+        "inventoryRow": 82
+      },
+      "12": {
+        "src": "/assets/page-art/jesus-journey/mc-peters-mother-in-law-960.webp",
+        "alt": "Jesus takes an older woman by the hand and helps her rise from bedding as they look toward one another.",
+        "href": "/jesus-christ/miracles-and-compassion.html#home",
+        "caption": "Existing focusChrist artistic interpretation.",
+        "inventoryRow": 69
+      },
+      "16": {
+        "src": "/assets/page-art/jesus-journey/mm-transfiguration-960.webp",
+        "alt": "Jesus touches Peter's shoulder as Peter, James and John look up from the rocky mountainside.",
+        "href": "/jesus-christ/mortal-ministry.html#transfiguration",
+        "caption": "Existing focusChrist artistic interpretation.",
+        "inventoryRow": 88
+      },
+      "19": {
+        "src": "/assets/page-art/jesus-journey/mm-jerusalem-tears-960.webp",
+        "alt": "Jesus looks toward Jerusalem with tearful eyes while a disciple stands quietly behind Him.",
+        "href": "/jesus-christ/mortal-ministry.html#jerusalem",
+        "caption": "Existing focusChrist artistic interpretation.",
+        "inventoryRow": 89
+      },
+      "21": {
+        "src": "/assets/page-art/jesus-journey/rr-judas-morsel-960.webp",
+        "alt": "Jesus extends a dipped morsel toward Judas while two disciples watch from behind.",
+        "href": "/jesus-christ/redeemer-and-risen-lord.html#sacrament",
+        "caption": "Existing focusChrist artistic interpretation.",
+        "inventoryRow": 91
+      },
+      "22": {
+        "src": "/assets/page-art/jesus-journey/rr-sleeping-disciples-960.webp",
+        "alt": "Jesus speaks earnestly to Peter beneath olive trees while James and John sleep behind them.",
+        "href": "/jesus-christ/redeemer-and-risen-lord.html#gethsemane",
+        "caption": "Existing focusChrist artistic interpretation.",
+        "inventoryRow": 92
+      },
+      "23": {
+        "src": "/assets/page-art/jesus-journey/rr-before-pilate-960.webp",
+        "alt": "Jesus inclines His head toward Pilate, who questions Him from his seat.",
+        "href": "/jesus-christ/redeemer-and-risen-lord.html#pilate",
+        "caption": "Existing focusChrist artistic interpretation.",
+        "inventoryRow": 93
+      },
+      "24": {
+        "src": "/assets/page-art/jesus-journey/rr-linen-burial-960.webp",
+        "alt": "Joseph of Arimathea and Nicodemus draw linen over Jesus's body inside a stone tomb.",
+        "href": "/jesus-christ/redeemer-and-risen-lord.html#burial",
+        "caption": "Existing focusChrist artistic interpretation.",
+        "inventoryRow": 95
+      },
+      "26": {
+        "src": "/assets/page-art/jesus-journey/rr-broiled-fish--199ddf7a530d-thumb.webp",
+        "alt": "The risen Jesus turns toward a disciple while holding a piece of fish, with another disciple watching beside him.",
+        "href": "/jesus-christ/redeemer-and-risen-lord.html#risen-witness",
+        "caption": "Existing focusChrist artistic interpretation.",
+        "inventoryRow": 96
+      },
+      "28": {
+        "src": "/assets/page-art/jesus-journey/rr-cloud-receives-960.webp",
+        "alt": "Jesus rises above an olive-covered hillside, looking tenderly down toward the disciples watching Him.",
+        "href": "/jesus-christ/redeemer-and-risen-lord.html#ascension",
+        "caption": "Existing focusChrist artistic interpretation.",
+        "inventoryRow": 97
+      },
+      "29": {
+        "src": "/assets/page-art/jesus-journey/bn-hear-the-voice-960.webp",
+        "alt": "People gathered near the temple lift their faces toward the sky.",
+        "href": "/jesus-christ/risen-savior-in-the-book-of-mormon.html#voice",
+        "caption": "Existing focusChrist artistic interpretation.",
+        "inventoryRow": 107
+      },
+      "30": {
+        "src": "/assets/page-art/jesus-journey/bn-scriptures-explained-960.webp",
+        "alt": "Jesus speaks with seated listeners while an older man holds a bound set of metal plates.",
+        "href": "/jesus-christ/risen-savior-in-the-book-of-mormon.html#scriptures",
+        "caption": "Existing focusChrist artistic interpretation.",
+        "inventoryRow": 114
+      }
+    },
+    "handcart": {
+      "0": {
+        "src": "/assets/pioneers/story/04-atlantic-800.webp",
+        "alt": "British emigrant families stand on the deck of a nineteenth-century sailing ship.",
+        "href": "/pioneers.html#pioneer-story-04-atlantic",
+        "caption": "Artistic interpretation of British emigrants aboard a sailing ship; context for departure from Liverpool.",
+        "inventoryRow": 9
+      },
+      "5": {
+        "src": "/assets/pioneers/story/05-carts-800.webp",
+        "alt": "A carpenter fits a wooden wheel to a handcart beside travelers’ bundles.",
+        "href": "/pioneers.html#pioneer-story-05-carts",
+        "caption": "Existing focusChrist artistic interpretation.",
+        "inventoryRow": 10
+      },
+      "6": {
+        "src": "/assets/pioneers/story/06-florence-800.webp",
+        "alt": "Emigrant families gather for a discussion beside their handcarts in late summer.",
+        "href": "/pioneers.html#pioneer-story-06-florence",
+        "caption": "Existing focusChrist artistic interpretation.",
+        "inventoryRow": 11
+      },
+      "16": {
+        "src": "/assets/pioneers/story/16-martin-river-800.webp",
+        "alt": "Martin company adults guide a handcart through cold river water.",
+        "href": "/pioneers.html#pioneer-story-16-martin-river",
+        "caption": "Existing focusChrist artistic interpretation.",
+        "inventoryRow": 21
+      },
+      "22": {
+        "src": "/assets/pioneers/story/15-rocky-ridge-800.webp",
+        "alt": "Weary emigrants pull a handcart up a low rocky ridge through blowing snow.",
+        "href": "/pioneers.html#pioneer-story-15-rocky-ridge",
+        "caption": "Existing focusChrist artistic interpretation.",
+        "inventoryRow": 20
+      },
+      "32": {
+        "src": "/assets/pioneers/story/18-welcome-800.webp",
+        "alt": "Residents help weary emigrants down from a wagon and offer a blanket beside a home.",
+        "href": "/pioneers.html#pioneer-story-18-welcome",
+        "caption": "Existing focusChrist artistic interpretation.",
+        "inventoryRow": 26
+      },
+      "1": {
+        "src": "/assets/timeline/new-york-harbor-staten-island-1855.jpg",
+        "alt": "A nineteenth-century painting of sailing ships and steam vessels in the harbor, viewed from a wooded Staten Island shore.",
+        "href": "https://www.metmuseum.org/art/collection/search/14836",
+        "caption": "View from Staten Island, ca. 1855. Public domain, The Metropolitan Museum of Art. Contemporary harbor context; not a depiction of the handcart companies or their arrival.",
+        "credit": "The Edward W. C. Arnold Collection of New York Prints, Maps, and Pictures, Bequest of Edward W. C. Arnold, 1954"
+      }
+    },
+    "history": {
+      "0": {
+        "src": "/assets/history/first-vision-1400.webp",
+        "alt": "Joseph Smith kneeling in a wooded grove as God the Father and Jesus Christ appear in heavenly light",
+        "href": "/church-history.html#history-first-vision-title",
+        "caption": "Existing focusChrist artistic interpretation.",
+        "inventoryRow": 34
+      },
+      "11": {
+        "src": "/assets/page-art/church-history/kirtland-temple-960.webp",
+        "alt": "Worshippers approach the Kirtland Temple along a muddy path, beneath its red roof and pale blue-gray walls.",
+        "href": "/church-history.html#kirtland-temple",
+        "caption": "Existing focusChrist artistic interpretation.",
+        "inventoryRow": 39
+      },
+      "13": {
+        "src": "/assets/page-art/church-history/liberty-prayer-960.webp",
+        "alt": "Joseph sits among straw beneath a narrow barred window, looking upward in earnest prayer.",
+        "href": "/church-history.html#liberty-jail-study",
+        "caption": "Artistic interpretation of prayer at Liberty Jail, one part of the broader Missouri persecution described in this event.",
+        "inventoryRow": 45
+      },
+      "15": {
+        "src": "/assets/page-art/church-history/relief-society-960.webp",
+        "alt": "Emma speaks with women gathered in a simple meeting room, meeting the gaze of a seated listener.",
+        "href": "/church-history.html#relief-society-organization",
+        "caption": "Existing focusChrist artistic interpretation.",
+        "inventoryRow": 48
+      },
+      "19": {
+        "src": "/assets/pioneers/story/01-mississippi-800.webp",
+        "alt": "A family and wagon aboard a wooden ferry on the Mississippi near Nauvoo.",
+        "href": "/pioneers.html#pioneer-story-01-mississippi",
+        "caption": "Artistic interpretation of crossing the Mississippi during the departure from Nauvoo.",
+        "inventoryRow": 3
+      },
+      "21": {
+        "src": "/assets/pioneers/first-view-valley-800.webp",
+        "alt": "A pioneer husband and wife overlooking the Salt Lake Valley beside their wagon and oxen",
+        "href": "/pioneers.html#pioneer-valley-heading",
+        "caption": "Existing focusChrist artistic interpretation.",
+        "inventoryRow": 23
+      },
+      "23": {
+        "src": "/assets/pioneers/story/13-brigham-appeal-approved-likeness-20260920-800.webp",
+        "alt": "Brigham Young appeals for practical help for the emigrants still on the plains.",
+        "href": "/pioneers.html#pioneer-story-13-brigham-appeal",
+        "caption": "Artistic interpretation of Brigham Young’s call to rescue the emigrants still on the plains.",
+        "inventoryRow": 18
+      },
+      "25": {
+        "src": "/assets/pioneers/story/19-railroad-800.webp",
+        "alt": "An immigrant family with trunks stands beside a nineteenth-century train in Utah.",
+        "href": "/pioneers.html#pioneer-story-19-railroad",
+        "caption": "Artistic interpretation of an immigrant family traveling by rail. This provides railroad-era context, not a depiction of the golden-spike ceremony.",
+        "inventoryRow": 28
+      }
+    }
+  },
+  "limitations": "Existing owner-approved imagery reused without modification. Native assembled rendering and final owner acceptance pending.",
+  "validation": "tools/timeline_images_qa.js PASS33 unique references, actual files and fragment targets, exact selected containers, initial rules, no stale filter/nonpictured images, narrative preservation; syntax passed",
+  "source_pixel_review": {
+    "reviewer": "Fermi",
+    "status": "CONCUR_SOURCE_REFERENCE_SCOPE",
+    "count": 33,
+    "method": "Opened every registry asset through view_image in18Life+7handcart+8History sequence; compared visible subject to actual stop/event titles.",
+    "findings": "All mapped subjects support assigned story or clearly captioned contextual component. Original pixels remain unchanged. No scene treated as an eyewitness photograph. Broader events can include one pictured component: ministry/healing, Jerusalem tears/entry, trial/Pilate, burial/resurrection, Bountiful teaching. Railroad-family image explicitly contextual rather than ceremony.",
+    "assembled_evidence": "Independently viewed con/outputs/timeline-mobile-life-local.png: actual tile map pin2 above story, Mary/Elisabeth image natural ratio, readable lower scroller. Redundant caption sentence observed and removed from registry; updated assembled pixels still pending.",
+    "limits": "This is source-pixel/reference-suitability concurrence, not owner aesthetic acceptance or universal runtime verification."
+  },
+  "asset_evidence": [
+    {
+      "kind": "life",
+      "index": 0,
+      "src": "/assets/page-art/birth-of-christ/08-annunciation-800.webp",
+      "sha256": "6495e93753139bffc6f94563545958aac56c267ecbca43fcddce09aee40242d4",
+      "dimensions": [
+        800,
+        533
+      ]
+    },
+    {
+      "kind": "life",
+      "index": 1,
+      "src": "/assets/page-art/birth-of-christ/09-mary-elisabeth-800.webp",
+      "sha256": "ca8d60a536a2b78fb14916d2c00eded57726078a4b7c3fe94620658b5b337f82",
+      "dimensions": [
+        800,
+        533
+      ]
+    },
+    {
+      "kind": "life",
+      "index": 2,
+      "src": "/assets/page-art/birth-of-christ/14-shepherds-find-800.webp",
+      "sha256": "92499e517fe3de43c71c8b33f9c69d532b6d1fc9d4ad761c0dfb3d556f69bfa2",
+      "dimensions": [
+        800,
+        533
+      ]
+    },
+    {
+      "kind": "life",
+      "index": 3,
+      "src": "/assets/page-art/birth-of-christ/15-simeon-800.webp",
+      "sha256": "8af13949e175d1586dd0eff472b6ce2b9b6997339e0e1cadcce8cf9fa29c201c",
+      "dimensions": [
+        800,
+        533
+      ]
+    },
+    {
+      "kind": "life",
+      "index": 4,
+      "src": "/assets/page-art/birth-of-christ/18-egypt-800.webp",
+      "sha256": "c24c07b2dc8b6d8f9c47910105547dbb623f8f7733cdd51db729e5f8bb5572ef",
+      "dimensions": [
+        800,
+        533
+      ]
+    },
+    {
+      "kind": "life",
+      "index": 5,
+      "src": "/assets/page-art/birth-of-christ/23-nazareth-return-800.webp",
+      "sha256": "cd8c384e7ab8e308e35b2ad93b2b37c011a9eb86e4ed0c14a81fa3fc4b2e2c99",
+      "dimensions": [
+        800,
+        533
+      ]
+    },
+    {
+      "kind": "life",
+      "index": 9,
+      "src": "/assets/page-art/jesus-journey/mm-cana-jars-960.webp",
+      "sha256": "89982e59ee1ce0937969a87ccaa6bf047bf6e46999b482517e0a4d324ac4652f",
+      "dimensions": [
+        960,
+        640
+      ]
+    },
+    {
+      "kind": "life",
+      "index": 12,
+      "src": "/assets/page-art/jesus-journey/mc-peters-mother-in-law-960.webp",
+      "sha256": "ea66482b43736fc36d229e63235c5980d39c5132a7f03c8c8be204790471d058",
+      "dimensions": [
+        960,
+        640
+      ]
+    },
+    {
+      "kind": "life",
+      "index": 16,
+      "src": "/assets/page-art/jesus-journey/mm-transfiguration-960.webp",
+      "sha256": "e82d0ff12a039b2ee448c03423de5a665d0aa9d67cd582c689aff83195754e6e",
+      "dimensions": [
+        960,
+        640
+      ]
+    },
+    {
+      "kind": "life",
+      "index": 19,
+      "src": "/assets/page-art/jesus-journey/mm-jerusalem-tears-960.webp",
+      "sha256": "b0d832c7db7e79939a4b0883aa6b1dbc15771fcd50beac41e53e86afb2c7a59f",
+      "dimensions": [
+        960,
+        640
+      ]
+    },
+    {
+      "kind": "life",
+      "index": 21,
+      "src": "/assets/page-art/jesus-journey/rr-judas-morsel-960.webp",
+      "sha256": "3e3918163d90def78c7c743b690018c2e4d7f5d866cf514dd34126cd51be8ef4",
+      "dimensions": [
+        960,
+        640
+      ]
+    },
+    {
+      "kind": "life",
+      "index": 22,
+      "src": "/assets/page-art/jesus-journey/rr-sleeping-disciples-960.webp",
+      "sha256": "0f601b3666ca8c1db7224c5b6ec2bef8ff36965589941bc5789b8ed39210ac80",
+      "dimensions": [
+        960,
+        640
+      ]
+    },
+    {
+      "kind": "life",
+      "index": 23,
+      "src": "/assets/page-art/jesus-journey/rr-before-pilate-960.webp",
+      "sha256": "ca7b40564b3318ad09437f0c1d345e0fe9928cc053f197c391e881c551451b45",
+      "dimensions": [
+        960,
+        640
+      ]
+    },
+    {
+      "kind": "life",
+      "index": 24,
+      "src": "/assets/page-art/jesus-journey/rr-linen-burial-960.webp",
+      "sha256": "9f5151f877d69ebe6c7ea732abe03933195d132c771ef2a2a3498457ab28b033",
+      "dimensions": [
+        960,
+        640
+      ]
+    },
+    {
+      "kind": "life",
+      "index": 26,
+      "src": "/assets/page-art/jesus-journey/rr-broiled-fish--199ddf7a530d-thumb.webp",
+      "sha256": "18cb0e6cf362d5fbf16576ac43d762353b3e89a85ba4c87846e99c285fda124f",
+      "dimensions": [
+        960,
+        640
+      ]
+    },
+    {
+      "kind": "life",
+      "index": 28,
+      "src": "/assets/page-art/jesus-journey/rr-cloud-receives-960.webp",
+      "sha256": "7fffa9e7b6afa952628055acf69df4b3411b470b075cd3518c7c410c77737f08",
+      "dimensions": [
+        960,
+        640
+      ]
+    },
+    {
+      "kind": "life",
+      "index": 29,
+      "src": "/assets/page-art/jesus-journey/bn-hear-the-voice-960.webp",
+      "sha256": "e84649ce75cd21bd1fcaa8a48e4685429b80850a790c5962b55aab485bfc6f99",
+      "dimensions": [
+        960,
+        640
+      ]
+    },
+    {
+      "kind": "life",
+      "index": 30,
+      "src": "/assets/page-art/jesus-journey/bn-scriptures-explained-960.webp",
+      "sha256": "74bc8e2f9439f4ed64c57c8908ffad84f4a273adae0c39c7d2c34ed99ad49a35",
+      "dimensions": [
+        960,
+        640
+      ]
+    },
+    {
+      "kind": "handcart",
+      "index": 0,
+      "src": "/assets/pioneers/story/04-atlantic-800.webp",
+      "sha256": "ec2d436183da6ea917dec9d9a91e8ce72c41ec21bc485924613ad866ced33c65",
+      "dimensions": [
+        800,
+        533
+      ]
+    },
+    {
+      "kind": "handcart",
+      "index": 5,
+      "src": "/assets/pioneers/story/05-carts-800.webp",
+      "sha256": "e1060079718a38a3153cd17796d79c157e36dca39be245b1a7a69966c4b14390",
+      "dimensions": [
+        800,
+        533
+      ]
+    },
+    {
+      "kind": "handcart",
+      "index": 6,
+      "src": "/assets/pioneers/story/06-florence-800.webp",
+      "sha256": "ebacf9a43a875f93dc18640c2706cedf946b458505a7f7e82f957ec609ca4528",
+      "dimensions": [
+        800,
+        533
+      ]
+    },
+    {
+      "kind": "handcart",
+      "index": 16,
+      "src": "/assets/pioneers/story/16-martin-river-800.webp",
+      "sha256": "397486f5f3b568b0309955ee69606fc007b00bfb7886cafa3b333cf56b05c531",
+      "dimensions": [
+        800,
+        533
+      ]
+    },
+    {
+      "kind": "handcart",
+      "index": 22,
+      "src": "/assets/pioneers/story/15-rocky-ridge-800.webp",
+      "sha256": "18c59a184955cba2af43358c247ec3368c1c16237ac4c5b0c70f1c220b26e2e3",
+      "dimensions": [
+        800,
+        533
+      ]
+    },
+    {
+      "kind": "handcart",
+      "index": 32,
+      "src": "/assets/pioneers/story/18-welcome-800.webp",
+      "sha256": "765d51b0971b9cc91d64c04db0233a3d7bae2c9d89c3c79dfc3e2a9a2dbf15e6",
+      "dimensions": [
+        800,
+        533
+      ]
+    },
+    {
+      "kind": "handcart",
+      "index": 1,
+      "src": "/assets/timeline/new-york-harbor-staten-island-1855.jpg",
+      "sha256": "2192f28860ccc0624b86c343e755f071be58ea7728562dae70158604b5aa9b99",
+      "dimensions": [
+        1200,
+        901
+      ]
+    },
+    {
+      "kind": "history",
+      "index": 0,
+      "src": "/assets/history/first-vision-1400.webp",
+      "sha256": "c7a9967157256a635efb3b5b9f7c9e61fb9c3ab75afef5a7d1b01c211655b82b",
+      "dimensions": [
+        1400,
+        468
+      ]
+    },
+    {
+      "kind": "history",
+      "index": 11,
+      "src": "/assets/page-art/church-history/kirtland-temple-960.webp",
+      "sha256": "e1f70f2a2e3e383aea27bc3a29725a6b547a2f1ad4c8d687e5da4786ec17983c",
+      "dimensions": [
+        960,
+        640
+      ]
+    },
+    {
+      "kind": "history",
+      "index": 13,
+      "src": "/assets/page-art/church-history/liberty-prayer-960.webp",
+      "sha256": "d88268c045c9ea255fe00d6d389feab3b4304f305fec48cbea9312036dda0b24",
+      "dimensions": [
+        960,
+        640
+      ]
+    },
+    {
+      "kind": "history",
+      "index": 15,
+      "src": "/assets/page-art/church-history/relief-society-960.webp",
+      "sha256": "e6fdcbe19646d14ec368c622470aa742658bedc968e8dc3846cca154a408666f",
+      "dimensions": [
+        960,
+        540
+      ]
+    },
+    {
+      "kind": "history",
+      "index": 19,
+      "src": "/assets/pioneers/story/01-mississippi-800.webp",
+      "sha256": "8511566ec71ea68515f1394d931bcc248800e626fe839918ff08e2d6cbcfb211",
+      "dimensions": [
+        800,
+        533
+      ]
+    },
+    {
+      "kind": "history",
+      "index": 21,
+      "src": "/assets/pioneers/first-view-valley-800.webp",
+      "sha256": "05130b4b2557ce4d40f2c5c8a3e9715b227ceb9855eb742538dee112357d43d3",
+      "dimensions": [
+        800,
+        450
+      ]
+    },
+    {
+      "kind": "history",
+      "index": 23,
+      "src": "/assets/pioneers/story/13-brigham-appeal-approved-likeness-20260920-800.webp",
+      "sha256": "ee579a4dfb8981ded354468c70079c8fdb40ee479c6e66de6e6fc803db4d51ab",
+      "dimensions": [
+        800,
+        533
+      ]
+    },
+    {
+      "kind": "history",
+      "index": 25,
+      "src": "/assets/pioneers/story/19-railroad-800.webp",
+      "sha256": "0db0f93c6beede00b0de57d2320d2493494c62c8f346a93acbff74de08267bc7",
+      "dimensions": [
+        800,
+        533
+      ]
+    }
+  ]
+}

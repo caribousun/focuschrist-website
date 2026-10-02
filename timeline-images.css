@@ -1,0 +1,6 @@
+.timeline-waypoint-image{margin:18px 0 0;padding:0;max-width:100%;clear:both;}
+.timeline-waypoint-image>a{display:block;}
+.timeline-waypoint-image img{display:block;width:100%;height:auto;max-width:100%;border-radius:10px;object-fit:contain;}
+.timeline-waypoint-image figcaption{font-size:.85em;line-height:1.5;margin-top:8px;color:inherit;overflow-wrap:anywhere;}
+.timeline-waypoint-image figcaption a{color:#68420f;text-decoration:underline;}
+.timeline-waypoint-image a:focus-visible{outline:3px solid #a96f16;outline-offset:3px;}

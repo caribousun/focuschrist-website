@@ -121,11 +121,32 @@ footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--hairline);col
 .fc-footer {max-width:1080px;margin:48px auto 0;padding:24px 20px 48px;font-size:14px;line-height:1.7;}
 .fc-footer a {color:#f3cf83;}
 @media(max-width:700px){.wrap,.hero-inner,.timeline-navigation{overflow-wrap:anywhere;} .count-label{white-space:normal;min-width:0;max-width:100%;} .pill{min-width:0;max-width:100%;} .stat{min-width:0;max-width:100%;} .controls{position:relative;top:auto;} .search-row input{min-width:0;max-width:100%;} .prophet-grid{grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));} .hero-cap{position:relative;background:var(--panel-deep);padding:20px;} }
+
+#historyMapPane{min-width:0;min-height:0;overflow:auto;border:1px solid var(--hairline);border-radius:16px;background:var(--bg-deep);overscroll-behavior:contain;}
+#historyMapCanvas{height:360px;min-height:220px;max-width:100%;background:#152d37;}
+.history-map-copy{padding:12px;font-size:13px;overflow-wrap:anywhere;}
+.history-map-copy p{margin:10px 0;}
+#historyMapSelection>a{display:block;margin:8px 0;}
+#historyMapReset,.history-map-choices button{min-height:44px;max-width:100%;padding:8px 12px;border:1px solid #b87d24;border-radius:12px;background:#f3eddf;color:#203b3e;font:inherit;white-space:normal;cursor:pointer;text-align:left;}
+.history-map-icon{background:none;border:0;}
+.history-map-pin{display:grid;place-items:center;align-content:center;width:58px;height:44px;border-radius:22px;background:#e8b54d;border:2px solid #fff5db;color:#203b3e;font:700 16px Georgia,serif;box-shadow:0 2px 8px #0005;}
+.history-map-pin small{font:700 10px/1.1 "Segoe UI",sans-serif;}
+.history-map-pin.is-selected{background:#b76848;color:white;}
+.history-map-choices{display:grid;gap:8px;max-width:280px;color:#203b3e;}
+.history-map-choices strong{font-family:Georgia,serif;}
 </style>
 <link rel="stylesheet" href="../site-search.css?v=20260929-result-hitbox-1"><script src="../site-search.js?v=20260919-focused-answers-1" defer></script>
 <link rel="stylesheet" href="../site-header.css?v=20260926-toolbar-readability-1">
 <link rel="stylesheet" href="../timeline-experiences.css?v=20261002-menu-1">
-<link rel="stylesheet" href="../timeline-history-workspace.css?v=20261002-panes-1">
+<link rel="stylesheet" href="../timeline-history-workspace.css?v=20261002-map-2">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+<script src="../timeline-history-locations.js?v=20261002-map-1" defer></script>
+<script src="../timeline-history-map.js?v=20261002-map-1" defer></script>
+<script src="../timeline-workspace.js?v=20261002-mobile-2" defer></script>
+<link rel="stylesheet" href="../timeline-mobile-study.css?v=20261002-mobile-2">
+<link rel="stylesheet" href="../timeline-images.css?v=20261002-images-1">
+<script src="../timeline-images.js?v=20261002-images-1" defer></script>
 </head>
 <body class="fc-site fc-timeline-experience">
 <nav class="nav" data-focuschrist-header="standard" aria-label="Primary navigation"><a href="../index.html" class="nav-logo">focusChrist</a><div class="nav-links"><span class="fc-nav-side fc-nav-side--before"><a href="../index.html">Home</a><a href="../ask.html">Ask (Chat)</a><a href="../answers.html">Answers Library</a><a href="../art.html">Art</a><a href="../missionary.html" data-focuschrist-primary-missionary="true">Mission</a></span><a class="fc-nav-atonement" href="../atonement.html" aria-label="Christ’s Atonement">Christ’s Atonement</a><span class="fc-nav-side fc-nav-side--after"><a href="../church-history.html" data-focuschrist-primary-history="true">History</a><a href="../pioneers.html">Pioneers</a><a href="../watch.html" data-focuschrist-primary-watch="true">Watch</a><a href="../timeline.html" data-focuschrist-primary-timeline="true" aria-current="page" class="active">Timeline</a><a href="../about.html">About</a></span></div><div class="hamburger-wrap"><a class="fc-search-trigger" data-site-search-trigger href="../search.html" aria-label="Search focusChrist"><span class="fc-search-icon" aria-hidden="true"></span><span class="fc-search-trigger-label">Search</span></a><span class="hamburger" onclick="toggleMenu()" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="hamburgerMenu"></span><div class="hamburger-menu" id="hamburgerMenu"><a href="../index.html">Home</a><a href="../ask.html">Ask (Chat)</a><a href="../answers.html">Answers Library</a><a href="../art.html">Art</a><a href="../pioneers.html">Pioneers</a><a href="../timeline.html" data-focuschrist-primary-timeline="true" aria-current="page" class="active">Timeline</a><a href="../about.html">About</a><hr><a href="https://www.churchofjesuschrist.org/?lang=eng" target="_blank" rel="noopener noreferrer">Church Website</a><a href="https://www.churchofjesuschrist.org/study?lang=eng&amp;platform=web" target="_blank" rel="noopener noreferrer">Gospel Library</a><a href="https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng" target="_blank" rel="noopener noreferrer">Come Follow Me</a><a href="https://www.churchofjesuschrist.org/temples?lang=eng" target="_blank" rel="noopener noreferrer">Temples</a><a href="https://www.churchofjesuschrist.org/welcome/our-history?lang=eng" target="_blank" rel="noopener noreferrer">Church History</a><a href="https://scriptures.byu.edu/" target="_blank" rel="noopener noreferrer">Citation Index</a><a href="https://www.churchofjesuschrist.org/tools?lang=eng&amp;activeTab=all" target="_blank" rel="noopener noreferrer">All Resources</a><hr><div class="menu-label">YouTube</div><a href="https://www.youtube.com/@theRisen636" target="_blank" rel="noopener noreferrer">@theRisen636</a></div></div></nav>
@@ -153,7 +174,7 @@ footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--hairline);col
   </div>
 
   <p><a class="timeline-return" href="#historyWorkspace">Explore the timeline</a></p>
-  <section id="historyWorkspace" class="history-workspace" data-timeline-workspace aria-label="Explore Church history">
+  <section id="historyWorkspace" class="history-workspace" data-timeline-workspace data-mobile-breakpoint="1099" aria-label="Explore Church history">
     <aside class="history-browser" aria-label="Find an event">
       <div class="controls history-controls">
         <label for="search">Find an event</label>
@@ -163,11 +184,17 @@ footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--hairline);col
         </details>
         <span class="count-label" id="countLabel" role="status"></span>
       </div>
-      <details id="historyDirectory" open>
-        <summary>Events</summary>
+      <div id="historyDirectory">
         <nav id="eventDirectory" data-timeline-pane="events" tabindex="0" aria-label="Church history events"></nav>
-      </details>
+      </div>
     </aside>
+    <section id="historyMapPane" data-timeline-pane="map" tabindex="0" aria-label="Church history event locations">
+      <div id="historyMapCanvas" role="region" aria-label="Interactive map of Church history locations"></div>
+      <div class="history-map-copy"><button id="historyMapReset" type="button">Show matching places</button>
+      <p id="historyMapStatus" role="status">Loading geographic context. The complete timeline remains available.</p>
+      <p>Circles show the number of matching events at a place or nearby places. Open a circle to choose an event. Pins are approximate area locations; shaded regions are context, not exact historical boundaries. No line connects these separate events into one journey.</p>
+      <div id="historyMapSelection" aria-live="polite">Choose an event or a map location to explore its geographic context.</div></div>
+    </section>
     <div class="history-reading" data-timeline-pane="timeline" tabindex="0" role="region" aria-label="Church history timeline">
       <main class="timeline" id="timeline"></main>
       <div class="no-results" id="noResults"><p>No events match that search in the selected era. Try a different word, or choose “All eras.”</p></div>
@@ -312,6 +339,7 @@ var ARTICLES = {
   today: "Under President Nelson the Church emphasized its revealed name, moved gospel study into the home, and announced temples at an unprecedented pace. The Restoration, its leaders teach, is ongoing, and this era is still being written."
 };
 
+var historySelectedIndex = null;
 var state = {era:"all", q:""};
 
 function eraById(id){ for(var i=0;i<ERAS.length;i++) if(ERAS[i].id===id) return ERAS[i]; return ERAS[0]; }
@@ -341,6 +369,7 @@ function matches(ev){
 }
 
 function render(){
+  historySelectedIndex=null;
   var total = EVENTS.filter(matches).length;
   document.getElementById('countLabel').textContent = total + (total===1 ? ' event' : ' events') + (state.era==='all' && !state.q ? ' · 1820–2026' : '');
   var html = '';
@@ -363,6 +392,7 @@ function render(){
   document.getElementById('timeline').innerHTML = html;
   buildDirectory();
   document.querySelector('.history-reading').scrollTop=0;
+  window.dispatchEvent(new CustomEvent('timeline:filter',{detail:{indices:EVENTS.map(function(ev,i){return matches(ev)?i:-1;}).filter(function(i){return i>=0;})}}));
   document.getElementById('noResults').className = 'no-results' + (total===0 ? ' show' : '');
   document.querySelectorAll('[data-card] .card-top').forEach(function(btn){
     btn.addEventListener('click', function(){
@@ -373,6 +403,8 @@ function render(){
       var open = card.classList.toggle('open');
       btn.setAttribute('aria-expanded', open ? 'true' : 'false');
       btn.querySelector('.read-more').firstChild.textContent = open ? 'Close ' : 'Read the story ';
+      historySelectedIndex=Number(btn.closest('.event').id.replace('history-event-',''));
+      window.dispatchEvent(new CustomEvent('timeline:select',{detail:{index:historySelectedIndex}}));
     });
   });
 }
@@ -391,26 +423,30 @@ document.getElementById('search').addEventListener('input', function(e){
 
 function buildDirectory(){
   var directory=document.getElementById('eventDirectory');
+  if(!EVENTS.some(matches)){directory.innerHTML='<p role="status">No events match. Try a different search or choose All eras.</p>';return;}
   directory.innerHTML=EVENTS.filter(matches).map(function(ev){
     return '<button type="button" data-event="history-event-'+EVENTS.indexOf(ev)+'"><span>'+ev.date+'</span><strong>'+ev.title+'</strong></button>';
   }).join('');
   directory.querySelectorAll('button').forEach(function(button){
     button.addEventListener('click',function(){
-      var target=document.getElementById(button.dataset.event);
-      var story=target.querySelector('.card-top');
-      if(story.getAttribute('aria-expanded')!=='true')story.click();
-      directory.querySelectorAll('button').forEach(function(item){item.removeAttribute('aria-current');});
-      button.setAttribute('aria-current','true');
-      var reader=document.querySelector('.history-reading');
-      if(window.matchMedia('(min-width:1100px)').matches){
-        reader.scrollTop+=target.getBoundingClientRect().top-reader.getBoundingClientRect().top-12;
-      }else{
-        document.getElementById('historyDirectory').open=false;
-        target.scrollIntoView({block:'start',behavior:'auto'});
-      }
+      selectHistoryEvent(Number(button.dataset.event.replace('history-event-','')));
     });
   });
 }
+
+function selectHistoryEvent(index){
+  if(!Number.isInteger(index)||!EVENTS[index]||!matches(EVENTS[index]))return false;
+  var target=document.getElementById('history-event-'+index);if(!target)return false;
+  var story=target.querySelector('.card-top');
+  if(story.getAttribute('aria-expanded')!=='true')story.click();
+  else{historySelectedIndex=index;window.dispatchEvent(new CustomEvent('timeline:select',{detail:{index:index}}));}
+  document.querySelectorAll('#eventDirectory button').forEach(function(item){item.toggleAttribute('aria-current',Number(item.dataset.event.replace('history-event-',''))===index);if(item.hasAttribute('aria-current'))item.setAttribute('aria-current','true');});
+  var reader=document.querySelector('.history-reading');
+  if(window.matchMedia('(min-width:1100px)').matches||['auto','scroll'].indexOf(getComputedStyle(reader).overflowY)>=0){reader.scrollTop+=target.getBoundingClientRect().top-reader.getBoundingClientRect().top-12;}
+  else{document.getElementById('historyDirectory').open=false;target.scrollIntoView({block:'start',behavior:'auto'});}
+  return true;
+}
+window.HistoryTimeline={events:EVENTS,select:selectHistoryEvent,visibleIndices:function(){return EVENTS.map(function(ev,i){return matches(ev)?i:-1;}).filter(function(i){return i>=0;});},get selectedIndex(){return historySelectedIndex;}};
 
 var historyDesktop=window.matchMedia('(min-width:1100px)');
 function sizeHistoryWorkspace(){

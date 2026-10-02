@@ -1,0 +1,29 @@
+{
+  "reviewers": [
+    "Newton",
+    "Fermi"
+  ],
+  "status": "TARGETED_CHANGED_UI_WORDING_REVIEWED",
+  "reviewed_on": "2026-10-02",
+  "priorCandidate": "db8b780c4511f6ad687f439456b7be14ee528965",
+  "changes": [
+    {
+      "path": "timelines/latter-day-saint-church-history-timeline.html",
+      "previousHash": "87dd462161f53b72b60e1af41c024bbe33d957e0e0bedfcdd38beab08058f5b9",
+      "currentHash": "352ff42c575258a87626ed083fde4491c8ccf71fe6651994ff96555ac879b0c5",
+      "scope": "Owner-authorized PR430 geographic-context follow-up reviewed by Newton and Fermi: new map accessible labels, matching-place control and explicit approximate-place/regional-context explanation; removed obsolete Events details label after mobile tabs replaced it. Circles count matching events and no invented route joins separate Church history events. Geography source associations are recorded in docs/reviews/timeline-history-location-sources-20261002.json. This is a targeted UI/map-explanation review, not renewed comprehensive verification of historical narratives. Static hash excludes script-embedded wording; map/controller units and rendered evidence remain separate."
+    },
+    {
+      "path": "timelines/willie-and-martin-handcart-map.html",
+      "previousHash": "c3db223450270d71d9e16626294430a80b9e1557b34abc012ac5793be6757dce",
+      "currentHash": "33154da22c7e9732da000012c63bed85d7b3ad3e9241efe50fbb72040b6069d5",
+      "scope": "Owner-authorized PR430 mobile interaction wording reviewed by Newton and Fermi: replaced obsolete fixed-bottom story-card instructions with map-above-Events/Story and Collapse map reading-room instructions. Original33 stops and all six data/route blocks preserved after newline normalization. This review covers the changed visible UI explanation only; existing targeted historical-source review limits remain. Actual map provider and rendered geometry evidence are separate."
+    }
+  ],
+  "unchangedOtherEntries": true,
+  "limitations": [
+    "Hash establishes exact reviewed visible wording, not truth of all religious/historical claims.",
+    "Script-embedded data and map behavior have separate source/unit/render review.",
+    "Upcoming mobile cluster chooser candidate still requires hosted and native rendering validation."
+  ]
+}
