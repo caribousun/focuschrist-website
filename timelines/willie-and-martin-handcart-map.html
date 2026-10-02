@@ -174,10 +174,12 @@
 <link rel="stylesheet" href="../site-search.css?v=20260929-result-hitbox-1"><script src="../site-search.js?v=20260919-focused-answers-1" defer></script>
 <link rel="stylesheet" href="../site-header.css?v=20260926-toolbar-readability-1">
 <link rel="stylesheet" href="../timeline-experiences.css?v=20261002-menu-1">
+<link rel="stylesheet" href="../timeline-workspace.css?v=20261002-panes-1">
+<script src="../timeline-workspace.js?v=20261002-panes-1" defer></script>
 </head>
 <body class="fc-site fc-timeline-experience">
 <nav class="nav" data-focuschrist-header="standard" aria-label="Primary navigation"><a href="../index.html" class="nav-logo">focusChrist</a><div class="nav-links"><span class="fc-nav-side fc-nav-side--before"><a href="../index.html">Home</a><a href="../ask.html">Ask (Chat)</a><a href="../answers.html">Answers Library</a><a href="../art.html">Art</a><a href="../missionary.html" data-focuschrist-primary-missionary="true">Mission</a></span><a class="fc-nav-atonement" href="../atonement.html" aria-label="Christ’s Atonement">Christ’s Atonement</a><span class="fc-nav-side fc-nav-side--after"><a href="../church-history.html" data-focuschrist-primary-history="true">History</a><a href="../pioneers.html">Pioneers</a><a href="../watch.html" data-focuschrist-primary-watch="true">Watch</a><a href="../timeline.html" data-focuschrist-primary-timeline="true" aria-current="page" class="active">Timeline</a><a href="../about.html">About</a></span></div><div class="hamburger-wrap"><a class="fc-search-trigger" data-site-search-trigger href="../search.html" aria-label="Search focusChrist"><span class="fc-search-icon" aria-hidden="true"></span><span class="fc-search-trigger-label">Search</span></a><span class="hamburger" onclick="toggleMenu()" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="hamburgerMenu"></span><div class="hamburger-menu" id="hamburgerMenu"><a href="../index.html">Home</a><a href="../ask.html">Ask (Chat)</a><a href="../answers.html">Answers Library</a><a href="../art.html">Art</a><a href="../pioneers.html">Pioneers</a><a href="../timeline.html" data-focuschrist-primary-timeline="true" aria-current="page" class="active">Timeline</a><a href="../about.html">About</a><hr><a href="https://www.churchofjesuschrist.org/?lang=eng" target="_blank" rel="noopener noreferrer">Church Website</a><a href="https://www.churchofjesuschrist.org/study?lang=eng&amp;platform=web" target="_blank" rel="noopener noreferrer">Gospel Library</a><a href="https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng" target="_blank" rel="noopener noreferrer">Come Follow Me</a><a href="https://www.churchofjesuschrist.org/temples?lang=eng" target="_blank" rel="noopener noreferrer">Temples</a><a href="https://www.churchofjesuschrist.org/welcome/our-history?lang=eng" target="_blank" rel="noopener noreferrer">Church History</a><a href="https://scriptures.byu.edu/" target="_blank" rel="noopener noreferrer">Citation Index</a><a href="https://www.churchofjesuschrist.org/tools?lang=eng&amp;activeTab=all" target="_blank" rel="noopener noreferrer">All Resources</a><hr><div class="menu-label">YouTube</div><a href="https://www.youtube.com/@theRisen636" target="_blank" rel="noopener noreferrer">@theRisen636</a></div></div></nav>
-<nav class="timeline-navigation" aria-label="Timeline navigation"><a class="timeline-return" href="../timeline.html">All timelines</a></nav>
+<nav class="timeline-navigation" aria-label="Timeline navigation"><a class="timeline-return" href="../timeline.html">All timelines</a><a class="timeline-return" href="#journeyWorkspace">Explore journey</a></nav>
 <main class="wrap" id="handcart-main">
 
   <div class="hero">
@@ -210,7 +212,8 @@
     </aside>
   </div>
 
-  <div class="controls">
+  <section id="journeyWorkspace" data-timeline-workspace aria-label="Journey study workspace">
+  <div class="controls" tabindex="0" aria-label="Journey filters">
     <div class="controls-row" role="group" aria-label="Filter stops by company">
       <span class="lbl" id="filter-lbl">Show</span>
       <button class="chip" data-filter="all" aria-pressed="true">All stops</button>
@@ -222,8 +225,8 @@
     <p class="count-note" id="count-note" aria-live="polite"></p>
   </div>
 
-  <div class="map-layout">
-    <div class="map-box">
+  <div class="map-layout" data-timeline-pane-grid>
+    <div class="map-box" data-timeline-pane="map" tabindex="0" role="region" aria-label="Journey map and legend">
       <div id="map" role="application" aria-label="Interactive map of the 1856 Willie and Martin handcart company journey from Liverpool, England to Salt Lake City, Utah"></div>
       <div class="legend" aria-label="Map legend">
         <span><i class="dot w"></i> Willie Company</span>
@@ -233,8 +236,8 @@
         <span><i class="route-key"></i> Handcart trail route</span>
       </div>
     </div>
-    <div class="stop-list" id="stop-list" aria-label="Journey stops in order"></div>
-    <aside class="detail-panel" id="detail-panel" aria-label="Story of the selected stop" aria-live="polite">
+    <div class="stop-list" id="stop-list" data-timeline-pane="events" tabindex="0" role="region" aria-label="Journey stops in order"></div>
+    <aside class="detail-panel" id="detail-panel" data-timeline-pane="detail" tabindex="0" aria-label="Story of the selected stop" aria-live="polite">
       <button class="detail-close" id="detail-close" type="button" aria-label="Close stop details" hidden>&times; Close</button>
       <p class="detail-kicker" id="detail-kicker">Stop details</p>
       <h3 id="detail-title">Choose a stop</h3>
@@ -243,6 +246,8 @@
       <div class="detail-body" id="detail-body"><p class="detail-hint">The story of the stop you choose will appear here and stay in view while you keep exploring the map and the list. You will not need to scroll back up to read it.</p></div>
     </aside>
   </div>
+
+  </section>
 
   <section class="block" aria-labelledby="companies-h">
     <h2 id="companies-h">The two companies</h2>
@@ -535,8 +540,9 @@
   function selectStop(globalIndex, card, fromMap){
     currentRows.forEach(function(row){ row.el.classList.toggle("map-selected", row.index === globalIndex); });
     showDetail(globalIndex);
+    if(window.matchMedia("(min-width:901px)").matches) detailPanel.scrollTop = 0;
     if(fromMap){
-      if(card) card.scrollIntoView({block:"nearest"});
+      if(card){ if(window.TimelineWorkspace) window.TimelineWorkspace.scrollRow(card); else card.scrollIntoView({block:"nearest"}); }
     }else if(mapHandle && typeof mapHandle.selectPlace === "function"){
       var localIndex = currentRows.findIndex(function(row){ return row.index === globalIndex; });
       if(localIndex !== -1) mapHandle.selectPlace(localIndex);

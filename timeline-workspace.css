@@ -1,0 +1,23 @@
+/* Independent study panes; narrow screens retain the original story sheets. */
+[data-timeline-workspace]{scroll-margin-top:calc(var(--timeline-menu-height,56px) + 12px);}
+[data-timeline-pane]:focus-visible{outline:2px solid var(--gold);outline-offset:2px;}
+@media(min-width:901px){
+  [data-timeline-workspace]{position:relative;top:auto;scroll-margin-top:calc(var(--timeline-menu-height,56px) + 12px);height:calc(100dvh - var(--timeline-menu-height,56px) - 24px);display:flex;flex-direction:column;gap:12px;margin-top:18px;min-height:0;}
+  body.fc-timeline-experience [data-timeline-workspace]>.controls{position:relative;top:auto;margin:0;padding:8px 0;flex:0 1 auto;max-height:40%;overflow:auto;overscroll-behavior:contain;}
+  [data-timeline-pane-grid]{display:grid!important;grid-template-columns:minmax(0,.95fr) minmax(0,1.15fr) minmax(0,1fr)!important;grid-template-rows:minmax(0,1fr);gap:14px!important;flex:1;min-height:0;min-width:0;margin:0!important;align-items:stretch!important;}
+  [data-timeline-pane-grid]>.main-col,[data-timeline-pane-grid]>.rail{display:contents;}
+  [data-timeline-pane]{position:relative!important;top:auto!important;bottom:auto!important;min-height:0;min-width:0;max-height:none!important;height:100%;overflow:auto!important;overscroll-behavior:contain;scrollbar-gutter:stable;overflow-wrap:anywhere;}
+  [data-timeline-pane="events"]{grid-column:1;grid-row:1;padding:3px;}
+  [data-timeline-pane="map"]{grid-column:2;grid-row:1;display:flex;flex-direction:column;}
+  [data-timeline-pane="detail"]{grid-column:3!important;grid-row:1;}
+  [data-timeline-pane="map"] #map{height:auto;min-height:220px;flex:1 0 220px;}
+  [data-timeline-pane="map"] #map:has(>.map-fallback){flex:0 0 auto;min-height:220px;height:auto;}
+  [data-timeline-pane="map"] .legend,[data-timeline-pane="map"] .map-pin-note,[data-timeline-pane="map"] #mapFallback{flex-shrink:0;}
+  [data-timeline-pane="events"] .card{grid-template-columns:36px minmax(0,1fr);}
+  [data-timeline-pane="events"] .card .tag{grid-column:2;justify-self:start;white-space:normal;max-width:100%;}
+  [data-timeline-pane="detail"] .detail-top{display:block;}
+  [data-timeline-pane="detail"] .detail-top>div{min-width:0!important;max-width:100%;}
+  [data-timeline-pane="detail"] .detail-top>div>div{min-width:0;}
+  [data-timeline-pane="detail"] .journey-nav{flex-wrap:wrap;margin-top:12px;}
+  [data-timeline-workspace]+.panel{margin-top:24px;}
+}

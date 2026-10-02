@@ -114,10 +114,12 @@ body.fc-site .detail a:hover,body.fc-site .sheet a:hover,body.fc-site .detail a:
 </style>
 <link rel="stylesheet" href="../site-header.css?v=20260926-toolbar-readability-1">
 <link rel="stylesheet" href="../timeline-experiences.css?v=20261002-menu-1">
+<link rel="stylesheet" href="../timeline-workspace.css?v=20261002-panes-1">
+<script src="../timeline-workspace.js?v=20261002-panes-1" defer></script>
 </head>
 <body class="fc-site fc-timeline-experience">
 <nav class="nav" data-focuschrist-header="standard" aria-label="Primary navigation"><a href="../index.html" class="nav-logo">focusChrist</a><div class="nav-links"><span class="fc-nav-side fc-nav-side--before"><a href="../index.html">Home</a><a href="../ask.html">Ask (Chat)</a><a href="../answers.html">Answers Library</a><a href="../art.html">Art</a><a href="../missionary.html" data-focuschrist-primary-missionary="true">Mission</a></span><a class="fc-nav-atonement" href="../atonement.html" aria-label="Christ’s Atonement">Christ’s Atonement</a><span class="fc-nav-side fc-nav-side--after"><a href="../church-history.html" data-focuschrist-primary-history="true">History</a><a href="../pioneers.html">Pioneers</a><a href="../watch.html" data-focuschrist-primary-watch="true">Watch</a><a href="../timeline.html" data-focuschrist-primary-timeline="true" aria-current="page" class="active">Timeline</a><a href="../about.html">About</a></span></div><div class="hamburger-wrap"><a class="fc-search-trigger" data-site-search-trigger href="../search.html" aria-label="Search focusChrist"><span class="fc-search-icon" aria-hidden="true"></span><span class="fc-search-trigger-label">Search</span></a><span class="hamburger" onclick="toggleMenu()" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="hamburgerMenu"></span><div class="hamburger-menu" id="hamburgerMenu"><a href="../index.html">Home</a><a href="../ask.html">Ask (Chat)</a><a href="../answers.html">Answers Library</a><a href="../art.html">Art</a><a href="../pioneers.html">Pioneers</a><a href="../timeline.html" data-focuschrist-primary-timeline="true" aria-current="page" class="active">Timeline</a><a href="../about.html">About</a><hr><a href="https://www.churchofjesuschrist.org/?lang=eng" target="_blank" rel="noopener noreferrer">Church Website</a><a href="https://www.churchofjesuschrist.org/study?lang=eng&amp;platform=web" target="_blank" rel="noopener noreferrer">Gospel Library</a><a href="https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng" target="_blank" rel="noopener noreferrer">Come Follow Me</a><a href="https://www.churchofjesuschrist.org/temples?lang=eng" target="_blank" rel="noopener noreferrer">Temples</a><a href="https://www.churchofjesuschrist.org/welcome/our-history?lang=eng" target="_blank" rel="noopener noreferrer">Church History</a><a href="https://scriptures.byu.edu/" target="_blank" rel="noopener noreferrer">Citation Index</a><a href="https://www.churchofjesuschrist.org/tools?lang=eng&amp;activeTab=all" target="_blank" rel="noopener noreferrer">All Resources</a><hr><div class="menu-label">YouTube</div><a href="https://www.youtube.com/@theRisen636" target="_blank" rel="noopener noreferrer">@theRisen636</a></div></div></nav>
-<nav class="timeline-navigation" aria-label="Timeline navigation"><a class="timeline-return" href="../timeline.html">All timelines</a></nav>
+<nav class="timeline-navigation" aria-label="Timeline navigation"><a class="timeline-return" href="../timeline.html">All timelines</a><a class="timeline-return" href="#journeyWorkspace">Explore journey</a></nav>
 <div class="wrap">
   <header class="hero">
     <p class="kicker">From Nazareth to the Americas</p>
@@ -131,7 +133,8 @@ body.fc-site .detail a:hover,body.fc-site .sheet a:hover,body.fc-site .detail a:
     </div>
   </header>
 
-  <div class="controls">
+  <section id="journeyWorkspace" data-timeline-workspace aria-label="Journey study workspace">
+  <div class="controls" tabindex="0" aria-label="Journey filters">
     <div class="controls-inner">
       <div class="filters" id="filters" role="group" aria-label="Filter by phase">
         <button class="pill" data-filter="all" aria-pressed="true">All</button>
@@ -148,19 +151,19 @@ body.fc-site .detail a:hover,body.fc-site .sheet a:hover,body.fc-site .detail a:
     </div>
   </div>
 
-  <div class="layout">
+  <div class="layout" data-timeline-pane-grid>
     <div class="main-col">
-      <section class="map-shell" aria-label="Map of the life of Christ">
+      <section class="map-shell" data-timeline-pane="map" tabindex="0" aria-label="Map of the life of Christ">
         <div id="map"></div>
         <p class="map-pin-note">Nearby numbered pins spread apart on screen so each can be selected. Geographic coordinates are unchanged.</p>
-        <div id="mapFallback" class="map-fallback">Map unavailable on this device. The full journey list below remains complete, with a maps link on the selected stop.</div>
+        <div id="mapFallback" class="map-fallback">Map unavailable on this device. The full journey list remains complete, with a maps link on the selected stop.</div>
       </section>
-      <main id="main-content">
+      <main id="main-content" data-timeline-pane="events" tabindex="0" aria-label="Life of Christ events in order">
         <div class="timeline" id="timeline"></div>
       </main>
     </div>
     <aside class="rail">
-  <section class="detail" id="detail" aria-live="polite">
+  <section class="detail" id="detail" data-timeline-pane="detail" tabindex="0" aria-label="Story of the selected stop" aria-live="polite">
     <div class="detail-top">
       <div style="display:flex;gap:12px;align-items:flex-start;min-width:260px;flex:1">
         <div class="num" id="dNum">1</div>
@@ -179,6 +182,10 @@ body.fc-site .detail a:hover,body.fc-site .sheet a:hover,body.fc-site .detail a:
     <p style="margin:12px 0 0"><a id="dMaps" href="https://www.google.com/maps/search/?api=1&amp;query=Nazareth" target="_blank" rel="noopener noreferrer">Open in maps</a> <span style="color:var(--paper-muted)"> · </span> <span id="dCoords" style="color:var(--paper-muted);font-size:13px"></span></p>
   </section>
 
+    </aside>
+  </div>
+
+  </section>
       <div class="panel">
         <h4>How to read this map</h4>
         <p>The first 29 stops follow places in the Holy Land and Egypt. The final two stops represent the ministry in the Americas recorded in 3 Nephi. The dotted line connects the study sequence; it does not establish an exact travel route.</p>
@@ -196,8 +203,6 @@ body.fc-site .detail a:hover,body.fc-site .sheet a:hover,body.fc-site .detail a:
           Scripture references are from the King James Bible, the Book of Mormon, and the Doctrine and Covenants. Read the <a href="https://www.churchofjesuschrist.org/study/scriptures/nt?lang=eng" target="_blank" rel="noopener noreferrer">New Testament</a>, <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne?lang=eng" target="_blank" rel="noopener noreferrer">3 Nephi</a>, and <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/19?lang=eng&amp;id=p18#p18" target="_blank" rel="noopener noreferrer">Doctrine and Covenants 19:18</a> in Gospel Library. Most Holy Land places use standard Bible atlas identifications such as Nazareth, Bethlehem, Capernaum, Bethsaida, Caesarea Philippi, Jericho, and Bethany. A few pins are traditional or representative rather than certain: the Gospels do not name the mountain of the Transfiguration, the exact road and village for Emmaus is disputed, and the precise tomb location is not known with certainty. Those stops are labeled accordingly in their descriptions. Egypt and other regional pins are approximate study locations. See also the Church’s <a href="https://www.churchofjesuschrist.org/study/scriptures/bd/emmaus?lang=eng" target="_blank" rel="noopener noreferrer">Bible Dictionary entry on Emmaus</a>.
         </div>
       </div>
-    </aside>
-  </div>
 
   <div class="sheet" id="sheet" aria-hidden="true">
     <button class="sheet-close" id="sheetClose" aria-label="Close stop details">&times;</button>
@@ -283,6 +288,7 @@ var markers = [];
 var routeLine = null;
 function updateDetail(i){
   current = i;
+  if(!isNarrow()) document.getElementById('detail').scrollTop = 0;
   var s = STOPS[i];
   document.getElementById('dNum').textContent = i+1;
   document.getElementById('dPlace').textContent = s.place;
@@ -326,17 +332,18 @@ function selectStop(i, pan, showSheet){
   }
 }
 rows.forEach(function(r,i){ r.addEventListener('click', function(){ selectStop(i, true); }); });
+function scrollJourneyRow(row){ if(window.TimelineWorkspace) window.TimelineWorkspace.scrollRow(row); else row.scrollIntoView({block:'nearest'}); }
 function goPrev(){
   var n = (current - 1 + STOPS.length) % STOPS.length;
   while(rows[n].classList.contains('hidden')){ n = (n - 1 + STOPS.length) % STOPS.length; }
   selectStop(n, true);
-  if(!isNarrow()) rows[n].scrollIntoView({block:'nearest', behavior:'smooth'});
+  if(!isNarrow()) scrollJourneyRow(rows[n]);
 }
 function goNext(){
   var n = (current + 1) % STOPS.length;
   while(rows[n].classList.contains('hidden')){ n = (n + 1) % STOPS.length; }
   selectStop(n, true);
-  if(!isNarrow()) rows[n].scrollIntoView({block:'nearest', behavior:'smooth'});
+  if(!isNarrow()) scrollJourneyRow(rows[n]);
 }
 document.getElementById('prevBtn').addEventListener('click', goPrev);
 document.getElementById('nextBtn').addEventListener('click', goNext);
@@ -424,6 +431,7 @@ function spreadNearbyPins(){
     marker.setIcon(stopIcon(i,target.x-point.x,target.y-point.y));
   });
 }
+document.getElementById('map').addEventListener('timeline:map-resize',function(){ if(leafletMap){leafletMap.invalidateSize({pan:false});spreadNearbyPins();} });
 function holyLandBounds(){
   var pts = STOPS.filter(function(s){ return s.phase !== 'americas'; }).map(function(s){ return [s.lat, s.lng]; });
   return L.latLngBounds(pts);
@@ -446,7 +454,7 @@ try{
     var m = L.marker([s.lat, s.lng], {icon: icon, title: (i+1) + '. ' + s.title, keyboard: true});
     m.on('click', function(){
       selectStop(i, false);
-      if(!isNarrow()) rows[i].scrollIntoView({block:'nearest', behavior:'smooth'});
+      if(!isNarrow()) scrollJourneyRow(rows[i]);
     });
     m.addTo(leafletMap);
     markers.push(m);
@@ -463,14 +471,14 @@ document.getElementById('btnHoly').addEventListener('click', function(){
     var allBtn = document.querySelector('#filters .pill[data-filter="all"]');
     if(allBtn) allBtn.click();
   }
-  document.getElementById('map').scrollIntoView({behavior:'smooth', block:'center'});
+  if(isNarrow()) document.getElementById('map').scrollIntoView({behavior:'smooth', block:'center'});
   if(leafletMap){
     leafletMap.flyToBounds(holyLandBounds().pad(0.08), {duration:.8});
     if(STOPS[current].phase === 'americas') selectStop(0, false);
   }
 });
 document.getElementById('btnWorld').addEventListener('click', function(){
-  document.getElementById('map').scrollIntoView({behavior:'smooth', block:'center'});
+  if(isNarrow()) document.getElementById('map').scrollIntoView({behavior:'smooth', block:'center'});
   if(leafletMap){
     leafletMap.flyToBounds(fullBounds().pad(0.05), {duration:.8});
   }

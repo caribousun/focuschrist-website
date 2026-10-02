@@ -170,6 +170,10 @@ SCOPED_INTERFACE_STYLES = {
 # Wyatt requested these exact desktop repairs and the Temple chronology.
 # Albert independently reviewed rendered composition; byte/consumer changes fail closed.
 OWNER_20260929_STYLES = {
+    # Owner-requested bounded independent Timeline panes; exact source-reviewed route sets.
+    'timeline-workspace.css': ('23c8c475d100fe59e62182000e2d97575a24de4ad861b246bb16f5c6a39536ea', ['timelines/willie-and-martin-handcart-map.html', 'timelines/life-of-christ-journey-map.html']),
+    'timeline-history-workspace.css': ('bfbaaeb8886581e1215a227b7f26b1cd00c8b5ee4d5ddd57b1be5060cf5f4a61', ['timelines/latter-day-saint-church-history-timeline.html']),
+
     # Owner requested shared headers on these three preserved experiences; exact scoped desktop offset.
     "timeline-experiences.css": ("baa81f4c63d3e81f4ca26fab1db7202c3c700549e781d72996c28bf721bb3be4", ["timelines/latter-day-saint-church-history-timeline.html", "timelines/willie-and-martin-handcart-map.html", "timelines/life-of-christ-journey-map.html"]),
     "study-reading-balance.css": ("fb547af5c883050d743204c0d05372863143a1fa0dffd2df370b728f1a9ff005", ["atonement.html", "answers/bible-and-book-of-mormon-together.html", "answers.html", "index.html", "ask.html"]),
