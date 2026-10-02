@@ -113,12 +113,12 @@ body.fc-site .detail a:hover,body.fc-site .sheet a:hover,body.fc-site .detail a:
 @media(max-width:700px){.wrap,.timeline-navigation{overflow-wrap:anywhere;}.controls{position:relative;top:auto;}.view-btns{flex-wrap:wrap;}.pill,.view-btn,.meta{min-width:0;max-width:100%;}.card{grid-template-columns:36px minmax(0,1fr);}.card .tag{grid-column:2;justify-self:start;white-space:normal;max-width:100%;}.panel{min-width:0;}}
 </style>
 <link rel="stylesheet" href="../site-header.css?v=20260926-toolbar-readability-1">
-<link rel="stylesheet" href="../timeline-experiences.css?v=20261002-menu-1">
-<link rel="stylesheet" href="../timeline-workspace.css?v=20261002-panes-1">
-<script src="../timeline-workspace.js?v=20261002-mobile-2" defer></script>
-<link rel="stylesheet" href="../timeline-mobile-study.css?v=20261002-mobile-2">
-<link rel="stylesheet" href="../timeline-images.css?v=20261002-images-1">
-<script src="../timeline-images.js?v=20261002-images-1" defer></script>
+<link rel="stylesheet" href="../timeline-experiences.css?v=20261002-correction-1">
+<link rel="stylesheet" href="../timeline-workspace.css?v=20261002-correction-1">
+<script src="../timeline-workspace.js?v=20261002-correction-1" defer></script>
+<link rel="stylesheet" href="../timeline-mobile-study.css?v=20261002-correction-1">
+<link rel="stylesheet" href="../timeline-images.css?v=20261002-correction-1">
+<script src="../timeline-images.js?v=20261002-correction-1" defer></script>
 </head>
 <body class="fc-site fc-timeline-experience">
 <nav class="nav" data-focuschrist-header="standard" aria-label="Primary navigation"><a href="../index.html" class="nav-logo">focusChrist</a><div class="nav-links"><span class="fc-nav-side fc-nav-side--before"><a href="../index.html">Home</a><a href="../ask.html">Ask (Chat)</a><a href="../answers.html">Answers Library</a><a href="../art.html">Art</a><a href="../missionary.html" data-focuschrist-primary-missionary="true">Mission</a></span><a class="fc-nav-atonement" href="../atonement.html" aria-label="Christ’s Atonement">Christ’s Atonement</a><span class="fc-nav-side fc-nav-side--after"><a href="../church-history.html" data-focuschrist-primary-history="true">History</a><a href="../pioneers.html">Pioneers</a><a href="../watch.html" data-focuschrist-primary-watch="true">Watch</a><a href="../timeline.html" data-focuschrist-primary-timeline="true" aria-current="page" class="active">Timeline</a><a href="../about.html">About</a></span></div><div class="hamburger-wrap"><a class="fc-search-trigger" data-site-search-trigger href="../search.html" aria-label="Search focusChrist"><span class="fc-search-icon" aria-hidden="true"></span><span class="fc-search-trigger-label">Search</span></a><span class="hamburger" onclick="toggleMenu()" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="hamburgerMenu"></span><div class="hamburger-menu" id="hamburgerMenu"><a href="../index.html">Home</a><a href="../ask.html">Ask (Chat)</a><a href="../answers.html">Answers Library</a><a href="../art.html">Art</a><a href="../pioneers.html">Pioneers</a><a href="../timeline.html" data-focuschrist-primary-timeline="true" aria-current="page" class="active">Timeline</a><a href="../about.html">About</a><hr><a href="https://www.churchofjesuschrist.org/?lang=eng" target="_blank" rel="noopener noreferrer">Church Website</a><a href="https://www.churchofjesuschrist.org/study?lang=eng&amp;platform=web" target="_blank" rel="noopener noreferrer">Gospel Library</a><a href="https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng" target="_blank" rel="noopener noreferrer">Come Follow Me</a><a href="https://www.churchofjesuschrist.org/temples?lang=eng" target="_blank" rel="noopener noreferrer">Temples</a><a href="https://www.churchofjesuschrist.org/welcome/our-history?lang=eng" target="_blank" rel="noopener noreferrer">Church History</a><a href="https://scriptures.byu.edu/" target="_blank" rel="noopener noreferrer">Citation Index</a><a href="https://www.churchofjesuschrist.org/tools?lang=eng&amp;activeTab=all" target="_blank" rel="noopener noreferrer">All Resources</a><hr><div class="menu-label">YouTube</div><a href="https://www.youtube.com/@theRisen636" target="_blank" rel="noopener noreferrer">@theRisen636</a></div></div></nav>
@@ -335,7 +335,7 @@ function selectStop(i, pan, showSheet){
     leafletMap.flyTo([s.lat, s.lng], targetZoom, {duration: .6});
   }
 }
-window.LifeTimeline={select:function(i){if(Number.isInteger(i)&&i>=0&&i<STOPS.length)selectStop(i,true);},stops:STOPS};
+window.LifeTimeline={select:function(i){if(Number.isInteger(i)&&i>=0&&i<STOPS.length)selectStop(i,true);},stops:STOPS,get current(){return current;}};
 rows.forEach(function(r,i){ r.addEventListener('click', function(){ selectStop(i, true); }); });
 function scrollJourneyRow(row){ if(window.TimelineWorkspace) window.TimelineWorkspace.scrollRow(row); else row.scrollIntoView({block:'nearest'}); }
 function goPrev(){
@@ -449,12 +449,17 @@ updateDetail(0);
 try{
   if(typeof L === 'undefined') throw new Error('Leaflet unavailable');
   leafletMap = L.map('map', {scrollWheelZoom:false}).setView([32.0, 35.25], 8);
-  leafletMap.on('focus', function(){ leafletMap.scrollWheelZoom.enable(); });
-  leafletMap.on('blur', function(){ leafletMap.scrollWheelZoom.disable(); });
+  document.getElementById('map').addEventListener('timeline:map-interaction',function(event){
+    ['dragging','touchZoom','doubleClickZoom'].forEach(function(name){var handler=leafletMap[name];if(handler)handler[event.detail.enabled?'enable':'disable']();});
+  });
+  var tileLoaded=false,tileErrors=0,tileTimer;
+  var tileStatus=document.createElement('p');tileStatus.className='map-pin-note';tileStatus.setAttribute('role','status');tileStatus.hidden=true;document.getElementById('map').after(tileStatus);
+  function tileUnavailable(){if(!tileLoaded){tileStatus.textContent='Map imagery is unavailable here. Numbered places and all journey stories remain usable.';tileStatus.hidden=false;var information=tileStatus.closest('details');if(information)information.open=true;}}
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> contributors'
-  }).addTo(leafletMap);
+  }).on('tileload',function(){tileLoaded=true;tileStatus.hidden=true;clearTimeout(tileTimer);}).on('tileerror',function(){if(++tileErrors>=3)tileUnavailable();}).addTo(leafletMap);
+  tileTimer=setTimeout(tileUnavailable,10000);window.addEventListener('pagehide',function(){clearTimeout(tileTimer);});
   STOPS.forEach(function(s,i){
     var icon = stopIcon(i, 0, 0);
     var m = L.marker([s.lat, s.lng], {icon: icon, title: (i+1) + '. ' + s.title, keyboard: true});
@@ -477,14 +482,12 @@ document.getElementById('btnHoly').addEventListener('click', function(){
     var allBtn = document.querySelector('#filters .pill[data-filter="all"]');
     if(allBtn) allBtn.click();
   }
-  if(isNarrow()) document.getElementById('map').scrollIntoView({behavior:'smooth', block:'center'});
   if(leafletMap){
     leafletMap.flyToBounds(holyLandBounds().pad(0.08), {duration:.8});
     if(STOPS[current].phase === 'americas') selectStop(0, false);
   }
 });
 document.getElementById('btnWorld').addEventListener('click', function(){
-  if(isNarrow()) document.getElementById('map').scrollIntoView({behavior:'smooth', block:'center'});
   if(leafletMap){
     leafletMap.flyToBounds(fullBounds().pad(0.05), {duration:.8});
   }

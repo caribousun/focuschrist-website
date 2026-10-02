@@ -1709,6 +1709,18 @@
       "disposition": "excluded_with_reason",
       "reason": "Chat application surface."
     },
+    "controls": {
+      "stylesheets": [
+        "timeline-mobile-study.css"
+      ],
+      "pages": [
+        "timelines/latter-day-saint-church-history-timeline.html",
+        "timelines/life-of-christ-journey-map.html",
+        "timelines/willie-and-martin-handcart-map.html"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Timeline filter controls reset their mobile border, radius and background to zero/none; this is a control group, not a section panel. Requires the three Timeline runtime profiles and rendered review."
+    },
     "cta": {
       "stylesheets": [
         "answer-styles.css"

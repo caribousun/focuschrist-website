@@ -1,0 +1,1454 @@
+{
+  "scope": "51 distinct History references:31 previously approved site artworks and20 unchanged archival/Gospel Media originals. Source pixels reviewed individually; assembled framing and final candidate concurrence pending.",
+  "sources": [
+    {
+      "index": 17,
+      "path": "work\\history-image-coverage\\carthage-jail.jpg",
+      "downloadURL": "https://www.nps.gov/npgallery/GetAsset/00e7e7cd-155d-451f-67fe-478e24602de8/original",
+      "sourceURL": "https://npgallery.nps.gov/AssetDetail/00e7e7cd-155d-451f-67fe-478e24602de8",
+      "dimensions": [
+        1839,
+        1224
+      ],
+      "sha256": "c547b456bedaeb806169547ab196211834dabe009a79323228c8f379cc412162",
+      "rights": "Public domain",
+      "credit": "National Park Service",
+      "rightsEvidence": "NPS album API ConstraintsInformation: Public domain; GrantingRights Full.",
+      "title": "carthage-jail",
+      "date": "2010 file creation metadata; actual photography date not independently established",
+      "context": "Historic site landscape; not the violent event itself.",
+      "pixelReview": "pending",
+      "fermiPixelsViewed": true,
+      "runtimeFile": "/assets/timeline/history/carthage-jail.jpg",
+      "runtimeCaption": "The stone walls of Carthage Jail preserve the place where Joseph and Hyrum’s mortal lives ended, and where their witness is remembered."
+    },
+    {
+      "index": 24,
+      "path": "work\\history-image-coverage\\mountain-meadows-landscape.jpg",
+      "downloadURL": "https://www.nps.gov/npgallery/GetAsset/a269aa71a8cd40e2bbbabc86be6c61a1/original",
+      "sourceURL": "https://npgallery.nps.gov/AssetDetail/a269aa71a8cd40e2bbbabc86be6c61a1",
+      "dimensions": [
+        1200,
+        929
+      ],
+      "sha256": "07139e3dd1c416a94c26aa8cec462ad59d26a78b1ed58917db2e9ddd00de46a9",
+      "rights": "Public domain",
+      "credit": "Courtesy Zion National Park, Photographer Roland H. Wauer, Museum Catalog Number ZION 9098.",
+      "rightsEvidence": "Exact public-domain statement on source detail page; requires stated credit.",
+      "title": "mountain-meadows-landscape",
+      "date": "June 1964",
+      "context": "Historic site landscape; not the violent event itself.",
+      "pixelReview": "pending",
+      "fermiPixelsViewed": true,
+      "runtimeFile": "/assets/timeline/history/mountain-meadows-landscape.jpg",
+      "runtimeCaption": "Sagebrush and open ground mark Mountain Meadows in this 1964 photograph—a quiet place to remember lives lost and the weight of this history."
+    },
+    {
+      "index": 18,
+      "path": "work\\history-image-coverage\\brigham-young-brady-handy.jpg",
+      "downloadURL": "https://tile.loc.gov/storage-services/service/pnp/cwpbh/01600/01671v.jpg",
+      "sourceURL": "https://www.loc.gov/item/2017895830/",
+      "title": "Brigham Young",
+      "rights": "No known restrictions on publication. For information, see \"Brady-Handy photograph collection,\" https://www.loc.gov/rr/print/res/389_bhan.html",
+      "rightsEvidenceFile": "work\\history-image-coverage\\2017895830.json",
+      "credit": "Library of Congress, Prints and Photographs Division; Brady-Handy photograph collection",
+      "date": "1855",
+      "dimensions": [
+        1024,
+        783
+      ],
+      "sha256": "52029fb2e1fe3af84c7ca621440d7c0f856ed3afdeae8972fbf7af3814a6e6ef",
+      "sourceFormat": "Unaltered largest source JPEG; LOC also offers archival TIFF.",
+      "context": "Later portrait of Brigham Young, not the 1844 succession meeting.",
+      "pixelReview": "pending",
+      "fermiPixelsViewed": true,
+      "runtimeFile": "/assets/timeline/history/brigham-young-brady-handy.jpg",
+      "runtimeCaption": "Two views of Brigham Young appear on this archival portrait plate, photographed after he began leading the Saints following Joseph Smith’s death."
+    },
+    {
+      "index": 22,
+      "path": "work\\history-image-coverage\\seagull-monument-plaque.jpg",
+      "downloadURL": "https://tile.loc.gov/storage-services/service/pnp/highsm/71100/71124v.jpg",
+      "sourceURL": "https://www.loc.gov/item/2023697755/",
+      "title": "Illustrative plaque on the Seagull Monument next to Temple Square's Assembly Hall in Salt Lake City, the capital and largest city in the western state of Utah",
+      "rights": "No known restrictions on publication.",
+      "rightsEvidenceFile": "work\\history-image-coverage\\2023697755.json",
+      "credit": "Library of Congress, Prints and Photographs Division; Carol M. Highsmith",
+      "date": "2022",
+      "dimensions": [
+        904,
+        1024
+      ],
+      "sha256": "49524aac46a8f8f4d49dfaf82b0b1363200787ed3eba207ee74323a2d1d49939",
+      "sourceFormat": "Unaltered largest source JPEG; LOC also offers archival TIFF.",
+      "context": "2022 photograph of the monument commemorating 1848 crop rescue, not an 1848 image.",
+      "pixelReview": "pending",
+      "fermiPixelsViewed": true,
+      "runtimeFile": "/assets/timeline/history/seagull-monument-plaque.jpg",
+      "runtimeCaption": "A relief on the Seagull Monument remembers the struggle to save the settlers’ crops in 1848."
+    },
+    {
+      "index": 5,
+      "path": "work\\history-image-coverage\\peter-whitmer-home-55a1412.jpg",
+      "title": "Peter Whitmer Home",
+      "description": "An exterior view of the Peter Whitmer home, where the Church was organized on April 6, 1830.",
+      "alt": "An exterior view of a log cabin surrounded by a wooden fence and green trees.",
+      "sourceURL": "https://www.churchofjesuschrist.org/media/image/peter-whitmer-home-55a1412?lang=eng",
+      "downloadURL": "https://www.churchofjesuschrist.org/imgs/55a141204f3286308be6109ab69a388b94db5fcc/full/,1280/0/default?download=true",
+      "rights": "Gospel Media personal noncommercial reposting permission; not public domain.",
+      "rightsEvidenceFile": "work\\history-image-coverage\\peter-whitmer-home-55a1412.json",
+      "creditLine": {
+        "ipCode": "CODE_0",
+        "includeYear": true
+      },
+      "rightsConditions": "Personal noncommercial website use; permission revocable; organizations/legal entities must request permission. Preserve any item-specific conditions.",
+      "dimensions": [
+        960,
+        1280
+      ],
+      "sha256": "cf8f94884147b053f0ff85d3da9db35f636629f208f2f35b7fbf3727804591e6",
+      "sourceFormat": "Unaltered largest download supplied by Gospel Media.",
+      "pixelReview": "pending",
+      "context": "Modern photograph of reconstructed Whitmer home; do not call the visible structure the surviving original 1830 house.",
+      "fermiPixelsViewed": true,
+      "runtimeFile": "/assets/timeline/history/peter-whitmer-home-55a1412.jpg",
+      "runtimeCaption": "The reconstructed Whitmer home stands among trees and a wooden fence, recalling the small household where the Church was organized."
+    },
+    {
+      "index": 27,
+      "path": "work\\history-image-coverage\\aurelia-spencer-rogers-portrait-83ea2b2.jpg",
+      "title": "Aurelia Spencer Rogers",
+      "description": "A photograph of Aurelia Spencer Rogers, who is known as the founder of the Primary, which was organized in 1878.",
+      "alt": "A portrait of Aurelia Spencer Rogers against a black background, wearing a black dress with a high collar and a brooch.",
+      "sourceURL": "https://www.churchofjesuschrist.org/media/image/aurelia-spencer-rogers-portrait-83ea2b2?lang=eng",
+      "downloadURL": "https://www.churchofjesuschrist.org/imgs/83ea2b2db83f0b5ee42f3a5739d6ef1bfeb95e0e/full/,1280/0/default?download=true",
+      "rights": "Gospel Media personal noncommercial reposting permission; not public domain.",
+      "rightsEvidenceFile": "work\\history-image-coverage\\aurelia-spencer-rogers-portrait-83ea2b2.json",
+      "creditLine": {
+        "ipCode": "CODE_0",
+        "includeYear": true
+      },
+      "rightsConditions": "Personal noncommercial website use; permission revocable; organizations/legal entities must request permission. Preserve any item-specific conditions.",
+      "dimensions": [
+        1018,
+        1280
+      ],
+      "sha256": "459af49913454d633b0a14eeb0774ed0f6fc08c8f43dc9bea227301496aeb30a",
+      "sourceFormat": "Unaltered largest download supplied by Gospel Media.",
+      "pixelReview": "pending",
+      "context": "Historical portrait of Aurelia Spencer Rogers, founder of Primary; not the first Primary meeting.",
+      "fermiPixelsViewed": true,
+      "runtimeFile": "/assets/timeline/history/aurelia-spencer-rogers-portrait-83ea2b2.jpg",
+      "runtimeCaption": "Aurelia Spencer Rogers appears in a painted portrait wearing a dark dress and cameo brooch, remembered for her care for children and the beginnings of Primary."
+    },
+    {
+      "index": 28,
+      "path": "work\\history-image-coverage\\wilford-woodruff-a04d784.jpg",
+      "title": "Wilford Woodruff",
+      "description": "Wilford Woodruff, by H. E. Peterson; GAK 509; Our Heritage, 98–102",
+      "alt": "A painting by H. E. Peterson of President Wilford Woodruff in a black suit sitting in a red armchair and resting one arm on a table.",
+      "sourceURL": "https://www.churchofjesuschrist.org/media/image/wilford-woodruff-a04d784?lang=eng",
+      "downloadURL": "https://www.churchofjesuschrist.org/imgs/a04d7847bcd709212255f78872bd36569b94a6d5/full/,1280/0/default?download=true",
+      "rights": "Gospel Media personal noncommercial reposting permission; not public domain.",
+      "rightsEvidenceFile": "work\\history-image-coverage\\wilford-woodruff-a04d784.json",
+      "creditLine": {
+        "ipCode": "CODE_0",
+        "includeYear": true
+      },
+      "rightsConditions": "Personal noncommercial website use; permission revocable; organizations/legal entities must request permission. Preserve any item-specific conditions.",
+      "dimensions": [
+        984,
+        1280
+      ],
+      "sha256": "a4e60781c70909e0df3aca6d41724628453a23873123b93ffdead2a77e926474",
+      "sourceFormat": "Unaltered largest download supplied by Gospel Media.",
+      "pixelReview": "pending",
+      "context": "Painted portrait of Wilford Woodruff; not the Manifesto document or signing event.",
+      "fermiPixelsViewed": true,
+      "runtimeFile": "/assets/timeline/history/wilford-woodruff-a04d784.jpg",
+      "runtimeCaption": "Wilford Woodruff sits beside a table in H. E. Peterson’s portrait, the prophet who issued the 1890 Manifesto."
+    },
+    {
+      "index": 31,
+      "path": "work\\history-image-coverage\\lorenzo-snow-cb940d3.jpg",
+      "title": "Lorenzo Snow",
+      "description": "Lorenzo Snow",
+      "alt": "A portrait photograph by Charles Roscoe Savage of Lorenzo Snow in a dark suit.",
+      "sourceURL": "https://www.churchofjesuschrist.org/media/image/lorenzo-snow-cb940d3?lang=eng",
+      "downloadURL": "https://www.churchofjesuschrist.org/imgs/cb940d396b82fe7e2591f8e8b4216703a94557f7/full/,1280/0/default?download=true",
+      "rights": "Gospel Media personal noncommercial reposting permission; not public domain.",
+      "rightsEvidenceFile": "work\\history-image-coverage\\lorenzo-snow-cb940d3.json",
+      "creditLine": {
+        "ipCode": "CODE_0",
+        "includeYear": true
+      },
+      "rightsConditions": "Personal noncommercial website use; permission revocable; organizations/legal entities must request permission. Preserve any item-specific conditions.",
+      "dimensions": [
+        1006,
+        1280
+      ],
+      "sha256": "33e2c5c64b6be04dc738f9bd680f50a22b71bb327f2496aab91113263ab280dd",
+      "sourceFormat": "Unaltered largest download supplied by Gospel Media.",
+      "pixelReview": "pending",
+      "context": "Portrait of Lorenzo Snow; not the St. George tithing sermon itself.",
+      "fermiPixelsViewed": true,
+      "runtimeFile": "/assets/timeline/history/lorenzo-snow-cb940d3.jpg",
+      "runtimeCaption": "Lorenzo Snow appears in a painted portrait, remembered here for his teaching on tithing."
+    },
+    {
+      "index": 43,
+      "path": "work\\history-image-coverage\\gordon-b-hinckley-f26378f.jpg",
+      "title": "Gordon B. Hinckley",
+      "description": "Gordon B. Hinckley; GAK 520; GAB 136; Our Heritage, 117, 139–43",
+      "alt": "A portrait of President Gordon B. Hinckley smiling in a black suit, white shirt, and glasses.",
+      "sourceURL": "https://www.churchofjesuschrist.org/media/image/gordon-b-hinckley-f26378f?lang=eng",
+      "downloadURL": "https://www.churchofjesuschrist.org/imgs/f26378f949f423734983084e9897c299a5f4e92e/full/,1280/0/default?download=true",
+      "rights": "Gospel Media personal noncommercial reposting permission; not public domain.",
+      "rightsEvidenceFile": "work\\history-image-coverage\\gordon-b-hinckley-f26378f.json",
+      "creditLine": {
+        "ipCode": "CODE_0",
+        "includeYear": true
+      },
+      "rightsConditions": "Personal noncommercial website use; permission revocable; organizations/legal entities must request permission. Preserve any item-specific conditions.",
+      "dimensions": [
+        1025,
+        1280
+      ],
+      "sha256": "8290d55253c7d2d65af132ad5836b3d7e70596b3fe05aa2dac489251856ec361",
+      "sourceFormat": "Unaltered largest download supplied by Gospel Media.",
+      "pixelReview": "pending",
+      "context": "Official portrait of Gordon B. Hinckley, who announced the Perpetual Education Fund; not an image of fund beneficiaries.",
+      "fermiPixelsViewed": true,
+      "runtimeFile": "/assets/timeline/history/gordon-b-hinckley-f26378f.jpg",
+      "runtimeCaption": "Gordon B. Hinckley smiles in his official portrait, remembered here for opening new opportunities through the Perpetual Education Fund."
+    },
+    {
+      "index": 49,
+      "path": "work\\history-image-coverage\\dallin-oaks-official-portrait-2018-56caf7d.jpg",
+      "title": "Dallin H. Oaks",
+      "description": "The official portrait of Dallin H. Oaks. 2018.",
+      "alt": "The official portrait of Dallin H. Oaks.",
+      "sourceURL": "https://www.churchofjesuschrist.org/media/image/dallin-oaks-official-portrait-2018-56caf7d?lang=eng",
+      "downloadURL": "https://www.churchofjesuschrist.org/imgs/56caf7ddec731dba5099d953caadae556ba7652a/full/,1280/0/default?download=true",
+      "rights": "Gospel Media personal noncommercial reposting permission; not public domain.",
+      "rightsEvidenceFile": "work\\history-image-coverage\\dallin-oaks-official-portrait-2018-56caf7d.json",
+      "creditLine": {
+        "ipCode": "CODE_0",
+        "includeYear": true
+      },
+      "rightsConditions": "Personal noncommercial website use; permission revocable; organizations/legal entities must request permission. Preserve any item-specific conditions.",
+      "dimensions": [
+        1024,
+        1280
+      ],
+      "sha256": "fb7be201a0becca18da9e0d6f15de0c31be9cf3c6da3a6c880dfa5d327274ea6",
+      "sourceFormat": "Unaltered largest download supplied by Gospel Media.",
+      "pixelReview": "pending",
+      "context": "Official 2018 portrait of Dallin H. Oaks; portrait date predates the 2025 succession.",
+      "fermiPixelsViewed": true,
+      "runtimeFile": "/assets/timeline/history/dallin-oaks-official-portrait-2018-56caf7d.jpg",
+      "runtimeCaption": "Dallin H. Oaks appears in his official 2018 portrait, several years before the succession remembered in this entry."
+    },
+    {
+      "index": 20,
+      "path": "work\\history-image-coverage\\mormon-battalion-monument.jpg",
+      "title": "The Mormon Battalion Monument outside the Utah State Capitol in Salt Lake City salutes the approximately 500 Mormon pioneer volunteers who joined the U.S. Army during the Mexican-American War of 1846-48",
+      "sourceURL": "https://www.loc.gov/item/2023697767/",
+      "downloadURL": "https://tile.loc.gov/storage-services/service/pnp/highsm/71100/71137v.jpg",
+      "rights": "No known restrictions on publication.",
+      "rightsEvidenceFile": "work\\history-image-coverage\\2023697767.json",
+      "credit": "Carol M. Highsmith, Library of Congress, Prints and Photographs Division",
+      "dimensions": [
+        1024,
+        683
+      ],
+      "sha256": "84fbda7a99163af145ca9ca49d5399444c59ea712d1883922cfb67bcc548b3e6",
+      "context": "Modern photograph of monument commemorating the battalion; not a depiction of the actual march.",
+      "pixelReview": "pending",
+      "fermiPixelsViewed": true,
+      "runtimeFile": "/assets/timeline/history/mormon-battalion-monument.jpg",
+      "runtimeCaption": "The Mormon Battalion monument honors the volunteers whose long march became part of the Saints’ westward story."
+    },
+    {
+      "index": 35,
+      "path": "work\\history-image-coverage\\george-albert-smith-cf3844a.jpg",
+      "title": "George Albert Smith",
+      "description": "George Albert Smith",
+      "alt": "A painted portrait by Lee Greene Richards of President George Albert Smith with a short beard, wearing a black suit and tan tie.",
+      "sourceURL": "https://www.churchofjesuschrist.org/media/image/george-albert-smith-cf3844a?lang=eng",
+      "downloadURL": "https://www.churchofjesuschrist.org/imgs/cf3844aa83478b1e0865365a67275dc287e65ccc/full/,1280/0/default?download=true",
+      "rights": "Gospel Media personal noncommercial reposting permission; not public domain.",
+      "rightsEvidenceFile": "work\\history-image-coverage\\george-albert-smith-cf3844a.json",
+      "creditLine": {
+        "ipCode": "CODE_0",
+        "includeYear": true
+      },
+      "dimensions": [
+        995,
+        1280
+      ],
+      "sha256": "f8340e9b736884a4e39fb9414cdc31f8d83c60a20515dcdffdf773e03d0fd16e",
+      "context": "Portrait of the Church president during this event; not an image of the actual event.",
+      "pixelReview": "pending",
+      "fermiPixelsViewed": true,
+      "runtimeFile": "/assets/timeline/history/george-albert-smith-cf3844a.jpg",
+      "runtimeCaption": "George Albert Smith’s painted portrait recalls the president who led the Church through its pioneer centennial and the million-member milestone."
+    },
+    {
+      "index": 36,
+      "path": "work\\history-image-coverage\\david-o-mckay-11055d9.jpg",
+      "title": "David O. McKay",
+      "description": "David O. McKay, by Alvin Gittins; GAK 514; GAB 130; Primary manual 3-19; Our Heritage, 114–19",
+      "alt": "A painted portrait by Alvin Gittins of President David O. McKay in a black suit, sitting in a chair with his fingers clasped together.",
+      "sourceURL": "https://www.churchofjesuschrist.org/media/image/david-o-mckay-11055d9?lang=eng",
+      "downloadURL": "https://www.churchofjesuschrist.org/imgs/11055d9b82d8fa41917b5317172392dd8b120bca/full/,1280/0/default?download=true",
+      "rights": "Gospel Media personal noncommercial reposting permission; not public domain.",
+      "rightsEvidenceFile": "work\\history-image-coverage\\david-o-mckay-11055d9.json",
+      "creditLine": {
+        "ipCode": "CODE_0",
+        "includeYear": true
+      },
+      "dimensions": [
+        994,
+        1280
+      ],
+      "sha256": "f89b0577c05c3d2cc5b21dfde922d4a782afbd687bee3398854f603c7237942f",
+      "context": "Portrait of the Church president during this event; not an image of the actual event.",
+      "pixelReview": "pending",
+      "fermiPixelsViewed": true,
+      "runtimeFile": "/assets/timeline/history/david-o-mckay-11055d9.jpg",
+      "runtimeCaption": "David O. McKay rests his clasped hands in Alvin Gittins’s portrait, recalling his leadership during the growth of correlation."
+    },
+    {
+      "index": 37,
+      "path": "work\\history-image-coverage\\joseph-fielding-smith-dc8268e.jpg",
+      "title": "Joseph Fielding Smith",
+      "description": "Joseph Fielding Smith",
+      "alt": "A painted portrait by Shauna Clinger of Joseph Fielding Smith in a blue suit and red tie, sitting in a leather chair.",
+      "sourceURL": "https://www.churchofjesuschrist.org/media/image/joseph-fielding-smith-dc8268e?lang=eng",
+      "downloadURL": "https://www.churchofjesuschrist.org/imgs/dc8268ecf82ce892b559c8b7cadecf241a2484fe/full/,1280/0/default?download=true",
+      "rights": "Gospel Media personal noncommercial reposting permission; not public domain.",
+      "rightsEvidenceFile": "work\\history-image-coverage\\joseph-fielding-smith-dc8268e.json",
+      "creditLine": {
+        "ipCode": "CODE_0",
+        "includeYear": true
+      },
+      "dimensions": [
+        995,
+        1280
+      ],
+      "sha256": "17d361dac3abe7e3ec046f502511dfa419e8404738e231cff647d3640b84a80a",
+      "context": "Portrait of the Church president during this event; not an image of the actual event.",
+      "pixelReview": "pending",
+      "fermiPixelsViewed": true,
+      "runtimeFile": "/assets/timeline/history/joseph-fielding-smith-dc8268e.jpg",
+      "runtimeCaption": "Joseph Fielding Smith sits in a leather chair in Shauna Clinger’s portrait, the Church’s president when members gathered in Manchester in 1971."
+    },
+    {
+      "index": 46,
+      "path": "work\\history-image-coverage\\pd80007757-000-coverart-png-991a641.jpg",
+      "title": "Restoration Proclamation",
+      "description": "Restoration Proclamation 8.5x11",
+      "alt": "Restoration Proclamation 8.5x11",
+      "sourceURL": "https://www.churchofjesuschrist.org/media/image/pd80007757-000-coverart-png-991a641?lang=eng",
+      "downloadURL": "https://www.churchofjesuschrist.org/imgs/991a6415c6c311ee847ceeeeac1e240c052b72e3/full/,1280/0/default?download=true",
+      "rights": "Gospel Media personal noncommercial reposting permission; not public domain.",
+      "rightsEvidenceFile": "work\\history-image-coverage\\pd80007757-000-coverart-png-991a641.json",
+      "creditLine": {
+        "ipCode": "CODE_0",
+        "includeYear": true
+      },
+      "dimensions": [
+        989,
+        1280
+      ],
+      "sha256": "3821a889e5e5b9fa89d6ea545f5f042a19979a72ae4c09781d4b1be297ae910e",
+      "context": "Official Restoration Proclamation text issued for the 2020 bicentennial. Document image; needs legibility review.",
+      "pixelReview": "pending",
+      "fermiPixelsViewed": true,
+      "runtimeFile": "/assets/timeline/history/pd80007757-000-coverart-png-991a641.jpg",
+      "runtimeCaption": "The Restoration proclamation sets the Church’s bicentennial testimony on a single page, inviting renewed faith in Jesus Christ."
+    },
+    {
+      "index": 30,
+      "path": "work\\history-image-coverage\\utah-statehood-herald1896.jpg",
+      "title": "The Salt Lake Herald, January 5, 1896, front page",
+      "sourceURL": "https://www.loc.gov/resource/sn85058130/1896-01-05/ed-1/?sp=1",
+      "downloadURL": "https://tile.loc.gov/image-services/iiif/service:ndnp:uuml:batch_uuml_collins_ver01:data:sn85058130:2065344540:1896010501:0039/full/pct:12.5/0/default.jpg",
+      "rights": "Public domain: United States newspaper published in1896. LOC rights statement explicitly covers newspapers more than95years old.",
+      "rightsEvidenceFile": "work\\history-image-coverage\\utah-statehood1896.json",
+      "credit": "Library of Congress; digitized by University of Utah, Marriott Library",
+      "dimensions": [
+        792,
+        1096
+      ],
+      "sha256": "67586f1a227c6810f7cc78e98b10ff8d871674ac86114df8ad4ef1b9f9bd5c46",
+      "context": "Contemporary front page celebrating Utah statehood the previous day; original newspaper layout, not a modern Capitol.",
+      "pixelReview": "pending",
+      "fermiPixelsViewed": true,
+      "runtimeFile": "/assets/timeline/history/utah-statehood-herald1896.jpg",
+      "runtimeCaption": "The Salt Lake Herald’s January 5, 1896 front page announces Utah’s admission to statehood the preceding day."
+    },
+    {
+      "index": 10,
+      "path": "work\\history-image-coverage\\kirtland-temple-6aca5ae.jpg",
+      "title": "Kirtland Temple Exterior",
+      "alt": "The Kirtland Temple seen from the side between two large green trees, with a small wooden fence running around the grounds.",
+      "sourceURL": "https://www.churchofjesuschrist.org/media/image/kirtland-temple-6aca5ae?lang=eng",
+      "downloadURL": "https://www.churchofjesuschrist.org/imgs/6aca5ae2acaa26f072cad3576d7e6f13607554b2/full/1920,/0/default?download=true",
+      "rights": "Gospel Media personal noncommercial reposting permission; not public domain.",
+      "rightsEvidenceFile": "work\\history-image-coverage\\kirtland-temple-6aca5ae.json",
+      "creditLine": {
+        "ipCode": "CODE_0",
+        "includeYear": true
+      },
+      "dimensions": [
+        1920,
+        1440
+      ],
+      "sha256": "09e8e1b858449f012e0e94eda785295a4782ed652dcb24b35f48144b99d93666",
+      "context": "Later photograph of Kirtland Temple, town context. Twelve organized1835 in printing office west of temple; do not imply photo shows exact event or room.",
+      "pixelReview": "pending",
+      "fermiPixelsViewed": true,
+      "runtimeFile": "/assets/timeline/history/kirtland-temple-6aca5ae.jpg",
+      "runtimeCaption": "The Kirtland Temple stands between green trees in a later photograph of the town where the Twelve were first organized."
+    },
+    {
+      "index": 9,
+      "path": "work\\history-image-coverage\\independence-courthouse-square2003.jpg",
+      "title": "Independence Courthouse Square, Missouri (2003)",
+      "alt": "A brick courthouse and clock tower beside a street in Independence, Missouri.",
+      "sourceURL": "https://www.nps.gov/media/photo/gallery-item.htm?gid=C9CDB9A0-AC19-44DA-A2FE-1AD807FC92E2&id=29931ac7-54ad-45eb-a4e9-62fb9fb7b121",
+      "downloadURL": "https://www.nps.gov/npgallery/GetAsset/29931ac7-54ad-45eb-a4e9-62fb9fb7b121/original",
+      "rights": "Public domain",
+      "rightsEvidenceFile": "work\\history-image-coverage\\independence-album.json",
+      "credit": "NPS",
+      "dimensions": [
+        2048,
+        1536
+      ],
+      "sha256": "2a6a5943293e309e8f917d9f240b4e315b0e56e8ae7279df56cf3b53811337d6",
+      "context": "Independence town context photographed2003; courthouse is later than1833. Do not imply the pictured building was present during expulsion.",
+      "pixelReview": "pending",
+      "fermiPixelsViewed": true,
+      "runtimeFile": "/assets/timeline/history/independence-courthouse-square2003.jpg",
+      "runtimeCaption": "Independence’s courthouse square appears here in 2003, a present-day view of the community from which the Saints were driven in 1833."
+    },
+    {
+      "index": 6,
+      "path": "work\\history-image-coverage\\newel-whitney-store-6faf4c5-1920.jpg",
+      "downloadURL": "https://www.churchofjesuschrist.org/imgs/6faf4c505d2f2560aefb2a13bed42b26146bcf0b/full/1920,/0/default?download=true",
+      "dimensions": [
+        1920,
+        1445
+      ],
+      "sha256": "e6e86de7921d86e14896d0c10d3da2e65df512e399f3bba2ee3249b70b27f11a",
+      "title": "Newel K. Whitney Store Exterior",
+      "description": "The outside of the Newel K. Whitney store in Kirtland, Ohio.",
+      "alt": "A front exterior view of the Newel K. Whitney store, made of white wood with black shingles.",
+      "sourceURL": "https://www.churchofjesuschrist.org/media/image/newel-whitney-store-6faf4c5?lang=eng",
+      "rights": "Church Gospel Media permission for individuals to repost for personal noncommercial use; revocable; not public domain.",
+      "rightsEvidenceFile": "C:/Users/wyatt/Documents/Codex/2026-10-02/con/outputs/timeline-whitney-image-use-readback.json",
+      "sourceMetadataFile": "work\\history-image-coverage\\newel-whitney-store-6faf4c5.json",
+      "rightsVerification": "Root inspected the exact source and opened Download menu; explicit personal noncommercial other-website permission and no additional restriction displayed. CODE_9 itself is not interpreted.",
+      "credit": "The Church of Jesus Christ of Latter-day Saints, Gospel Media",
+      "creditLine": {
+        "ipCode": "CODE_9",
+        "includeYear": true
+      },
+      "variants": [
+        {
+          "path": "work\\history-image-coverage\\newel-whitney-store-6faf4c5-800.jpg",
+          "downloadURL": "https://www.churchofjesuschrist.org/imgs/6faf4c505d2f2560aefb2a13bed42b26146bcf0b/full/800,/0/default?download=true",
+          "dimensions": [
+            800,
+            602
+          ],
+          "sha256": "310184a1fe459e75a7c86917371f0e8d8edc01fd174a6f738e141a2807417d59"
+        },
+        {
+          "path": "work\\history-image-coverage\\newel-whitney-store-6faf4c5-1920.jpg",
+          "downloadURL": "https://www.churchofjesuschrist.org/imgs/6faf4c505d2f2560aefb2a13bed42b26146bcf0b/full/1920,/0/default?download=true",
+          "dimensions": [
+            1920,
+            1445
+          ],
+          "sha256": "e6e86de7921d86e14896d0c10d3da2e65df512e399f3bba2ee3249b70b27f11a"
+        }
+      ],
+      "context": "Later photograph of the restored historic store; not a photograph of the1831arrival.",
+      "caption": "The white wooden Whitney store recalls the welcome Joseph and Emma found when they arrived in Kirtland, where a new community of Saints was gathering.",
+      "pixelReview": "pending Fermi/Newton",
+      "fermiPixelsViewed": true,
+      "runtimeFile": "/assets/timeline/history/newel-whitney-store-6faf4c5-1920.jpg",
+      "runtimeCaption": "The white wooden Whitney store recalls the welcome Joseph and Emma found when they arrived in Kirtland, where a new community of Saints was gathering."
+    },
+    {
+      "index": 8,
+      "path": "work\\history-image-coverage\\newel-k-whitney-store-ac5e72d-1920.jpg",
+      "downloadURL": "https://www.churchofjesuschrist.org/imgs/ac5e72db57cf5957e9cfdee864dd30008da8b291/full/1920,/0/default?download=true",
+      "dimensions": [
+        1920,
+        1280
+      ],
+      "sha256": "b81297ca3f506d8494474cb699a64a29c50b86f41912f7516b569f21ffbb5491",
+      "title": "Interior of the Newel K. Whitney Store",
+      "description": "The interior of the Newel K. Whitney store in Kirtland, Ohio.",
+      "alt": "A small wooden store filled with goods from the pioneer era, such as barrels, brooms, saws, pots, and pans.",
+      "sourceURL": "https://www.churchofjesuschrist.org/media/image/newel-k-whitney-store-ac5e72d?lang=eng",
+      "rights": "Church Gospel Media permission for individuals to repost for personal noncommercial use; revocable; not public domain.",
+      "rightsEvidenceFile": "C:/Users/wyatt/Documents/Codex/2026-10-02/con/outputs/timeline-whitney-image-use-readback.json",
+      "sourceMetadataFile": "work\\history-image-coverage\\newel-k-whitney-store-ac5e72d.json",
+      "rightsVerification": "Root inspected the exact source and opened Download menu; explicit personal noncommercial other-website permission and no additional restriction displayed. CODE_9 itself is not interpreted.",
+      "credit": "The Church of Jesus Christ of Latter-day Saints, Gospel Media",
+      "creditLine": {
+        "ipCode": "CODE_9",
+        "includeYear": true
+      },
+      "variants": [
+        {
+          "path": "work\\history-image-coverage\\newel-k-whitney-store-ac5e72d-800.jpg",
+          "downloadURL": "https://www.churchofjesuschrist.org/imgs/ac5e72db57cf5957e9cfdee864dd30008da8b291/full/800,/0/default?download=true",
+          "dimensions": [
+            800,
+            533
+          ],
+          "sha256": "735e4109a204b51961308ac2575db0b7d2f20837f45e778142946b99dba396e2"
+        },
+        {
+          "path": "work\\history-image-coverage\\newel-k-whitney-store-ac5e72d-1920.jpg",
+          "downloadURL": "https://www.churchofjesuschrist.org/imgs/ac5e72db57cf5957e9cfdee864dd30008da8b291/full/1920,/0/default?download=true",
+          "dimensions": [
+            1920,
+            1280
+          ],
+          "sha256": "b81297ca3f506d8494474cb699a64a29c50b86f41912f7516b569f21ffbb5491"
+        }
+      ],
+      "context": "Later photograph of the downstairs store interior; the Word of Wisdom was received upstairs, not in the pictured shop room.",
+      "caption": "Barrels and household goods fill the Whitney store, the building where Joseph received the Word of Wisdom in an upstairs room.",
+      "pixelReview": "pending Fermi/Newton",
+      "fermiPixelsViewed": true,
+      "runtimeFile": "/assets/timeline/history/newel-k-whitney-store-ac5e72d-1920.jpg",
+      "runtimeCaption": "Barrels and household goods fill the Whitney store, the building where Joseph received the Word of Wisdom in an upstairs room."
+    }
+  ],
+  "references": [
+    {
+      "index": 0,
+      "eventTitle": "The First Vision",
+      "status": "preserve-existing-reference",
+      "candidate": {
+        "src": "/assets/history/first-vision-1400.webp",
+        "alt": "Joseph Smith kneeling in a wooded grove as God the Father and Jesus Christ appear in heavenly light",
+        "href": "/church-history.html#history-first-vision-title",
+        "caption": "Joseph kneels among the trees as heavenly light fills the grove. His prayer began the Restoration story.",
+        "galleryId": "art-52dc5f55c32e",
+        "ownerLinkVerified": true,
+        "assetSHA256": "c7a9967157256a635efb3b5b9f7c9e61fb9c3ab75afef5a7d1b01c211655b82b",
+        "contextLimit": null
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; inventory text only in this proposal."
+    },
+    {
+      "index": 1,
+      "eventTitle": "The Angel Moroni and the Golden Plates",
+      "status": "proposed-event-reference",
+      "candidate": {
+        "src": "/assets/page-art/bible-together/moroni-quotes-malachi-960.webp",
+        "alt": "Seventeen-year-old Joseph Smith listens from his bed as Moroni speaks in a softly illuminated room.",
+        "href": "/answers/bible-and-book-of-mormon-together.html#study-moroni-quotes-malachi",
+        "caption": "Seventeen-year-old Joseph listens from his bed as Moroni speaks of the work that lay ahead.",
+        "galleryId": "art-e51655f6579a",
+        "ownerSelector": "a[href=\"../assets/page-art/bible-together/moroni-quotes-malachi-full.webp\"]:has(img[src=\"../assets/page-art/bible-together/moroni-quotes-malachi-960.webp\"])",
+        "ownerLinkVerified": true,
+        "assetSHA256": "ed6423fb7905143e1dd4d9adc28c99fa21775215713bfc0003a4dae71df6d014",
+        "contextLimit": null
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; inventory text only in this proposal."
+    },
+    {
+      "index": 2,
+      "eventTitle": "Joseph Receives the Plates",
+      "status": "proposed-event-reference",
+      "candidate": {
+        "src": "/assets/page-art/book-of-mormon-stories/40-moroni-joseph-960.webp",
+        "alt": "A youthful Joseph Smith receives a cloth-wrapped stack of plates from Moroni on a wooded hillside at night.",
+        "href": "/answers/what-is-the-book-of-mormon.html#moroni-and-joseph",
+        "caption": "On the wooded hillside, Joseph receives the plates from Moroni, beginning a new responsibility to protect and translate the record.",
+        "galleryId": "art-61a73b7c8aa7",
+        "ownerSelector": "a[href=\"../assets/page-art/book-of-mormon-stories/40-moroni-joseph-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/40-moroni-joseph-960.webp\"])",
+        "ownerLinkVerified": true,
+        "assetSHA256": "aee30e5167fe8f9d7da5a608c3267076223952cfa3e8f12458a0b49c112d327c",
+        "contextLimit": null
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; inventory text only in this proposal."
+    },
+    {
+      "index": 3,
+      "eventTitle": "The Aaronic Priesthood Restored",
+      "status": "proposed-event-reference",
+      "candidate": {
+        "src": "/assets/page-art/church-history/aaronic-priesthood-960.webp",
+        "alt": "Joseph and Oliver kneel with bowed heads as John the Baptist places a hand on each man’s head.",
+        "href": "/answers/aaronic-priesthood-restoration.html#aaronic-priesthood-restoration",
+        "caption": "Joseph and Oliver kneel beneath John the Baptist’s hands as authority to baptize is restored.",
+        "galleryId": "art-d98ccbf176b8",
+        "ownerSelector": "a[href=\"../assets/page-art/church-history/aaronic-priesthood.webp\"]:has(img[src=\"../assets/page-art/church-history/aaronic-priesthood-960.webp\"])",
+        "ownerLinkVerified": true,
+        "assetSHA256": "52703f62cb43e537bde2bff86c53988aeb64b3a7bbd27fb9588e4be93a783a51",
+        "contextLimit": null
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; inventory text only in this proposal."
+    },
+    {
+      "index": 4,
+      "eventTitle": "The Book of Mormon Is Published",
+      "status": "proposed-event-reference",
+      "candidate": {
+        "src": "/assets/history/restoration-print-shop-1400.webp",
+        "alt": "Historical and symbolic portrayal of workers printing the Book of Mormon",
+        "href": "/church-history.html",
+        "caption": "Printers labor over type, paper, and presses as the translated record becomes a book that others can read.",
+        "galleryId": "art-6e45c602be15",
+        "ownerSelector": "a[data-artwork-detail=\"history-print-shop\"]",
+        "ownerLinkVerified": true,
+        "assetSHA256": "22066d36727408ea79f01ac2631a21e69a5c4577efe9a2aa4ae07bc460b04bf8",
+        "contextLimit": null,
+        "ownerLinkLimitation": "Existing print-shop owning section has no ID. Page destination is verified; a specific section anchor must be added by its owner before section-level navigation is possible."
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; inventory text only in this proposal."
+    },
+    {
+      "index": 5,
+      "eventTitle": "The Church Is Organized",
+      "status": "proposed-downloaded-source",
+      "candidate": {
+        "src": "work/history-image-coverage/peter-whitmer-home-55a1412.jpg",
+        "href": "https://www.churchofjesuschrist.org/media/image/peter-whitmer-home-55a1412?lang=eng",
+        "alt": "An exterior view of a log cabin surrounded by a wooden fence and green trees.",
+        "caption": "The reconstructed Whitmer home stands among trees and a wooden fence, recalling the small household where the Church was organized.",
+        "sourceLedger": "work/history-image-coverage/downloaded-sources.json",
+        "assetSHA256": "cf8f94884147b053f0ff85d3da9db35f636629f208f2f35b7fbf3727804591e6",
+        "contextLimit": "Modern photograph of reconstructed Whitmer home; do not call the visible structure the surviving original 1830 house.",
+        "ownerLinkVerified": "External primary source; no Focus owning page assigned",
+        "downloadedOriginal": true
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; captions derived from primary source metadata, not pixel approval."
+    },
+    {
+      "index": 6,
+      "eventTitle": "The Saints Gather to Kirtland, Ohio",
+      "status": "proposed-downloaded-source",
+      "candidate": {
+        "src": "work/history-image-coverage/newel-whitney-store-6faf4c5-1920.jpg",
+        "mediumSrc": "work/history-image-coverage/newel-whitney-store-6faf4c5-800.jpg",
+        "href": "https://www.churchofjesuschrist.org/media/image/newel-whitney-store-6faf4c5?lang=eng",
+        "alt": "A front exterior view of the Newel K. Whitney store, made of white wood with black shingles.",
+        "caption": "The white wooden Whitney store recalls the welcome Joseph and Emma found when they arrived in Kirtland, where a new community of Saints was gathering.",
+        "sourceLedger": "work/history-image-coverage/downloaded-sources.json",
+        "assetSHA256": "e6e86de7921d86e14896d0c10d3da2e65df512e399f3bba2ee3249b70b27f11a",
+        "contextLimit": "Later photograph of the restored historic store; not a photograph of the1831arrival.",
+        "ownerLinkVerified": "External primary source; no Focus owning page assigned",
+        "downloadedOriginal": true,
+        "rightsEvidenceFile": "C:/Users/wyatt/Documents/Codex/2026-10-02/con/outputs/timeline-whitney-image-use-readback.json"
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; source permission verified by root in browser."
+    },
+    {
+      "index": 7,
+      "eventTitle": "The Vision of the Degrees of Glory",
+      "status": "proposed-event-reference",
+      "candidate": {
+        "src": "/assets/page-art/jesus-journey/rt-vision-1832-960.webp",
+        "alt": "Joseph Smith and Sidney Rigdon look toward the risen Savior in a vision above their scriptural work.",
+        "href": "/jesus-christ/restoration-and-today.html#picture-rt-vision-1832",
+        "caption": "Joseph Smith and Sidney Rigdon look toward the risen Savior while studying the scriptures together.",
+        "galleryId": "art-c7761e72c36e",
+        "ownerSelector": "a[href=\"/assets/page-art/jesus-journey/rt-vision-1832-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/rt-vision-1832-960.webp\"])",
+        "ownerLinkVerified": true,
+        "assetSHA256": "bf55c28c46a2e0da255ec90075c84a9ce86a1a292c56c71c2abe0c26b0b304f6",
+        "contextLimit": null
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; inventory text only in this proposal."
+    },
+    {
+      "index": 8,
+      "eventTitle": "The Word of Wisdom",
+      "status": "proposed-downloaded-source",
+      "candidate": {
+        "src": "work/history-image-coverage/newel-k-whitney-store-ac5e72d-1920.jpg",
+        "mediumSrc": "work/history-image-coverage/newel-k-whitney-store-ac5e72d-800.jpg",
+        "href": "https://www.churchofjesuschrist.org/media/image/newel-k-whitney-store-ac5e72d?lang=eng",
+        "alt": "A small wooden store filled with goods from the pioneer era, such as barrels, brooms, saws, pots, and pans.",
+        "caption": "Barrels and household goods fill the Whitney store, the building where Joseph received the Word of Wisdom in an upstairs room.",
+        "sourceLedger": "work/history-image-coverage/downloaded-sources.json",
+        "assetSHA256": "b81297ca3f506d8494474cb699a64a29c50b86f41912f7516b569f21ffbb5491",
+        "contextLimit": "Later photograph of the downstairs store interior; the Word of Wisdom was received upstairs, not in the pictured shop room.",
+        "ownerLinkVerified": "External primary source; no Focus owning page assigned",
+        "downloadedOriginal": true,
+        "rightsEvidenceFile": "C:/Users/wyatt/Documents/Codex/2026-10-02/con/outputs/timeline-whitney-image-use-readback.json"
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; source permission verified by root in browser."
+    },
+    {
+      "index": 9,
+      "eventTitle": "Saints Expelled from Jackson County, Missouri",
+      "status": "proposed-downloaded-source",
+      "candidate": {
+        "src": "work/history-image-coverage/independence-courthouse-square2003.jpg",
+        "href": "https://www.nps.gov/media/photo/gallery-item.htm?gid=C9CDB9A0-AC19-44DA-A2FE-1AD807FC92E2&id=29931ac7-54ad-45eb-a4e9-62fb9fb7b121",
+        "alt": "A brick courthouse and clock tower beside a street in Independence, Missouri.",
+        "caption": "Independence’s courthouse square appears here in 2003, a present-day view of the community from which the Saints were driven in 1833.",
+        "sourceLedger": "work/history-image-coverage/downloaded-sources.json",
+        "assetSHA256": "2a6a5943293e309e8f917d9f240b4e315b0e56e8ae7279df56cf3b53811337d6",
+        "contextLimit": "Independence town context photographed2003; courthouse is later than1833. Do not imply the pictured building was present during expulsion.",
+        "ownerLinkVerified": "External primary source; no Focus owning page assigned",
+        "downloadedOriginal": true
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; captions derived from primary source metadata, not pixel approval."
+    },
+    {
+      "index": 10,
+      "eventTitle": "The Quorum of the Twelve Apostles Organized",
+      "status": "proposed-downloaded-source",
+      "candidate": {
+        "src": "work/history-image-coverage/kirtland-temple-6aca5ae.jpg",
+        "href": "https://www.churchofjesuschrist.org/media/image/kirtland-temple-6aca5ae?lang=eng",
+        "alt": "The Kirtland Temple seen from the side between two large green trees, with a small wooden fence running around the grounds.",
+        "caption": "The Kirtland Temple stands between green trees in a later photograph of the town where the Twelve were first organized.",
+        "sourceLedger": "work/history-image-coverage/downloaded-sources.json",
+        "assetSHA256": "09e8e1b858449f012e0e94eda785295a4782ed652dcb24b35f48144b99d93666",
+        "contextLimit": "Later photograph of Kirtland Temple, town context. Twelve organized1835 in printing office west of temple; do not imply photo shows exact event or room.",
+        "ownerLinkVerified": "External primary source; no Focus owning page assigned",
+        "downloadedOriginal": true
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; captions derived from primary source metadata, not pixel approval."
+    },
+    {
+      "index": 11,
+      "eventTitle": "The Kirtland Temple Dedicated; Keys Restored",
+      "status": "preserve-existing-reference",
+      "candidate": {
+        "src": "/assets/page-art/church-history/kirtland-temple-960.webp",
+        "alt": "Worshippers approach the Kirtland Temple along a muddy path, beneath its red roof and pale blue-gray walls.",
+        "href": "/church-history.html#kirtland-temple",
+        "caption": "Worshippers make their way toward the Kirtland Temple, a house raised through the sacrifice of the early Saints.",
+        "galleryId": "art-85a07f6b9325",
+        "ownerLinkVerified": true,
+        "assetSHA256": "e1f70f2a2e3e383aea27bc3a29725a6b547a2f1ad4c8d687e5da4786ec17983c",
+        "contextLimit": null
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; inventory text only in this proposal."
+    },
+    {
+      "index": 12,
+      "eventTitle": "First Mission to Great Britain",
+      "status": "proposed-context-reference",
+      "candidate": {
+        "src": "/assets/missionary/early-missionaries-liverpool-1400.webp",
+        "alt": "Historical portrayal of early missionaries arriving at Liverpool by sailing ship",
+        "href": "/missionary.html#early-missionaries-heading",
+        "caption": "Early missionaries step ashore at Liverpool after crossing the Atlantic to share their witness in Britain.",
+        "galleryId": "art-ade36c4f04b4",
+        "ownerSelector": "a[data-missionary-detail=\"crossing-oceans\"]",
+        "ownerLinkVerified": true,
+        "assetSHA256": "cdd35e183d18c1e2939a1a26dcc0fca359925e467f3f5a35cc1035fef7de7e2b",
+        "contextLimit": "British mission context; existing artwork is not established as the precise 1837 arrival. Verify image chronology before final use."
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; inventory text only in this proposal."
+    },
+    {
+      "index": 13,
+      "eventTitle": "Extermination Order, Haun's Mill, and Liberty Jail",
+      "status": "preserve-existing-reference",
+      "candidate": {
+        "src": "/assets/page-art/church-history/liberty-prayer-960.webp",
+        "alt": "Joseph sits among straw beneath a narrow barred window, looking upward in earnest prayer.",
+        "href": "/church-history.html#liberty-jail-study",
+        "caption": "Joseph looks upward in prayer beneath the narrow window at Liberty Jail, seeking comfort for a suffering people.",
+        "galleryId": "art-cf16adc08ee1",
+        "ownerLinkVerified": true,
+        "assetSHA256": "d88268c045c9ea255fe00d6d389feab3b4304f305fec48cbea9312036dda0b24",
+        "contextLimit": null
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; inventory text only in this proposal."
+    },
+    {
+      "index": 14,
+      "eventTitle": "The Saints Build Nauvoo",
+      "status": "proposed-context-reference",
+      "candidate": {
+        "src": "/assets/page-art/church-history/nauvoo-temple-960.webp",
+        "alt": "The original Nauvoo Temple rises above wooden homes near the Mississippi River, with a horizontal angel weather vane on its tower.",
+        "href": "/church-history.html#nauvoo-temple",
+        "caption": "The Nauvoo Temple rises above homes near the Mississippi, part of the city the Saints built together.",
+        "galleryId": "art-de52b61d82e8",
+        "ownerSelector": "a[href=\"assets/page-art/church-history/nauvoo-temple.webp\"]:has(img[src=\"assets/page-art/church-history/nauvoo-temple-960.webp\"])",
+        "ownerLinkVerified": true,
+        "assetSHA256": "85f555717fc24fcd4622b1c99c7fcfdf302abbf9c86a07304779cddce79fd5e9",
+        "contextLimit": "Later Nauvoo temple/city view, not the 1839 arrival moment."
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; inventory text only in this proposal."
+    },
+    {
+      "index": 15,
+      "eventTitle": "The Relief Society Is Organized",
+      "status": "preserve-existing-reference",
+      "candidate": {
+        "src": "/assets/page-art/church-history/relief-society-960.webp",
+        "alt": "Emma speaks with women gathered in a simple meeting room, meeting the gaze of a seated listener.",
+        "href": "/church-history.html#relief-society-organization",
+        "caption": "Emma speaks with the women gathered around her as the Relief Society begins its work of faith and care.",
+        "galleryId": "art-82ed9c00b587",
+        "ownerLinkVerified": true,
+        "assetSHA256": "e6fdcbe19646d14ec368c622470aa742658bedc968e8dc3846cca154a408666f",
+        "contextLimit": null
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; inventory text only in this proposal."
+    },
+    {
+      "index": 16,
+      "eventTitle": "The Temple Endowment Introduced",
+      "status": "proposed-context-reference",
+      "candidate": {
+        "src": "/assets/page-art/temples/temple-nauvoo-hope-960.webp",
+        "alt": "An early Nauvoo family pauses with travel belongings as the temple rises behind them.",
+        "href": "/answers/why-latter-day-saints-build-temples.html#picture-temple-nauvoo-hope",
+        "caption": "A family pauses near the Nauvoo Temple with their belongings, holding to the promise of blessings that reach beyond death.",
+        "galleryId": "art-9bdd8608f45c",
+        "ownerSelector": "a[href=\"../assets/page-art/temples/temple-nauvoo-hope-full.webp\"]:has(img[src=\"../assets/page-art/temples/temple-nauvoo-hope-960.webp\"])",
+        "ownerLinkVerified": true,
+        "assetSHA256": "51f482e9ce3701621227c3d18800fd39c26eaad408eb0b577c963a393446a316",
+        "contextLimit": "Exterior temple and family context, not portrayal of sacred ordinance or the 1842 introduction room."
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; inventory text only in this proposal."
+    },
+    {
+      "index": 17,
+      "eventTitle": "The Martyrdom of Joseph and Hyrum Smith",
+      "status": "proposed-downloaded-source",
+      "candidate": {
+        "src": "work/history-image-coverage/carthage-jail.jpg",
+        "href": "https://npgallery.nps.gov/AssetDetail/00e7e7cd-155d-451f-67fe-478e24602de8",
+        "alt": "carthage-jail",
+        "caption": "The stone walls of Carthage Jail preserve the place where Joseph and Hyrum’s mortal lives ended, and where their witness is remembered.",
+        "sourceLedger": "work/history-image-coverage/downloaded-sources.json",
+        "assetSHA256": "c547b456bedaeb806169547ab196211834dabe009a79323228c8f379cc412162",
+        "contextLimit": "Historic site landscape; not the violent event itself.",
+        "ownerLinkVerified": "External primary source; no Focus owning page assigned",
+        "downloadedOriginal": true
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; captions derived from primary source metadata, not pixel approval."
+    },
+    {
+      "index": 18,
+      "eventTitle": "The Twelve Lead the Church",
+      "status": "proposed-downloaded-source",
+      "candidate": {
+        "src": "work/history-image-coverage/brigham-young-brady-handy.jpg",
+        "href": "https://www.loc.gov/item/2017895830/",
+        "alt": "Brigham Young",
+        "caption": "Brigham Young appears in this later portrait, the leader who guided the Saints after Joseph Smith’s death.",
+        "sourceLedger": "work/history-image-coverage/downloaded-sources.json",
+        "assetSHA256": "52029fb2e1fe3af84c7ca621440d7c0f856ed3afdeae8972fbf7af3814a6e6ef",
+        "contextLimit": "Later portrait of Brigham Young, not the 1844 succession meeting.",
+        "ownerLinkVerified": "External primary source; no Focus owning page assigned",
+        "downloadedOriginal": true
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; captions derived from primary source metadata, not pixel approval."
+    },
+    {
+      "index": 19,
+      "eventTitle": "The Exodus from Nauvoo Begins",
+      "status": "preserve-existing-reference",
+      "candidate": {
+        "src": "/assets/pioneers/story/01-mississippi-800.webp",
+        "alt": "A family and wagon aboard a wooden ferry on the Mississippi near Nauvoo.",
+        "href": "/pioneers.html#pioneer-story-01-mississippi",
+        "caption": "A family and its wagon cross the Mississippi by ferry, leaving Nauvoo for an uncertain road west.",
+        "galleryId": "art-1bff6987275b",
+        "ownerLinkVerified": true,
+        "assetSHA256": "8511566ec71ea68515f1394d931bcc248800e626fe839918ff08e2d6cbcfb211",
+        "contextLimit": null
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; inventory text only in this proposal."
+    },
+    {
+      "index": 20,
+      "eventTitle": "The Mormon Battalion Marches",
+      "status": "proposed-downloaded-source",
+      "candidate": {
+        "src": "work/history-image-coverage/mormon-battalion-monument.jpg",
+        "href": "https://www.loc.gov/item/2023697767/",
+        "alt": "The Mormon Battalion Monument outside the Utah State Capitol in Salt Lake City salutes the approximately 500 Mormon pioneer volunteers who joined the U.S. Army during the Mexican-American War of 1846-48",
+        "caption": "The Mormon Battalion monument honors the volunteers whose long march became part of the Saints’ westward story.",
+        "sourceLedger": "work/history-image-coverage/downloaded-sources.json",
+        "assetSHA256": "84fbda7a99163af145ca9ca49d5399444c59ea712d1883922cfb67bcc548b3e6",
+        "contextLimit": "Modern photograph of monument commemorating the battalion; not a depiction of the actual march.",
+        "ownerLinkVerified": "External primary source; no Focus owning page assigned",
+        "downloadedOriginal": true
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; captions derived from primary source metadata, not pixel approval."
+    },
+    {
+      "index": 21,
+      "eventTitle": "Pioneers Enter the Salt Lake Valley",
+      "status": "preserve-existing-reference",
+      "candidate": {
+        "src": "/assets/pioneers/first-view-valley-800.webp",
+        "alt": "A pioneer husband and wife overlooking the Salt Lake Valley beside their wagon and oxen",
+        "href": "/pioneers.html#pioneer-valley-heading",
+        "caption": "A husband and wife pause beside their wagon to look across the Salt Lake Valley after the long journey west.",
+        "galleryId": "art-f44b3a832404",
+        "ownerLinkVerified": true,
+        "assetSHA256": "05130b4b2557ce4d40f2c5c8a3e9715b227ceb9855eb742538dee112357d43d3",
+        "contextLimit": null
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; inventory text only in this proposal."
+    },
+    {
+      "index": 22,
+      "eventTitle": "Crickets, Seagulls, and the First Harvest",
+      "status": "proposed-downloaded-source",
+      "candidate": {
+        "src": "work/history-image-coverage/seagull-monument-plaque.jpg",
+        "href": "https://www.loc.gov/item/2023697755/",
+        "alt": "Illustrative plaque on the Seagull Monument next to Temple Square's Assembly Hall in Salt Lake City, the capital and largest city in the western state of Utah",
+        "caption": "A relief on the Seagull Monument remembers the struggle to save the settlers’ crops in 1848.",
+        "sourceLedger": "work/history-image-coverage/downloaded-sources.json",
+        "assetSHA256": "49524aac46a8f8f4d49dfaf82b0b1363200787ed3eba207ee74323a2d1d49939",
+        "contextLimit": "2022 photograph of the monument commemorating 1848 crop rescue, not an 1848 image.",
+        "ownerLinkVerified": "External primary source; no Focus owning page assigned",
+        "downloadedOriginal": true
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; captions derived from primary source metadata, not pixel approval."
+    },
+    {
+      "index": 23,
+      "eventTitle": "The Willie and Martin Handcart Rescue",
+      "status": "preserve-existing-reference",
+      "candidate": {
+        "src": "/assets/pioneers/story/13-brigham-appeal-approved-likeness-20260920-800.webp",
+        "alt": "Brigham Young appeals for practical help for the emigrants still on the plains.",
+        "href": "/pioneers.html#pioneer-story-13-brigham-appeal",
+        "caption": "Brigham Young calls for food, clothing, and wagons to reach the emigrants still stranded on the plains.",
+        "galleryId": "art-05abec60a2a3",
+        "ownerLinkVerified": true,
+        "assetSHA256": "ee579a4dfb8981ded354468c70079c8fdb40ee479c6e66de6e6fc803db4d51ab",
+        "contextLimit": null
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; inventory text only in this proposal."
+    },
+    {
+      "index": 24,
+      "eventTitle": "The Mountain Meadows Massacre",
+      "status": "proposed-downloaded-source",
+      "candidate": {
+        "src": "work/history-image-coverage/mountain-meadows-landscape.jpg",
+        "href": "https://npgallery.nps.gov/AssetDetail/a269aa71a8cd40e2bbbabc86be6c61a1",
+        "alt": "mountain-meadows-landscape",
+        "caption": "Sagebrush and open ground mark Mountain Meadows in this 1964 photograph—a quiet place to remember lives lost and the weight of this history.",
+        "sourceLedger": "work/history-image-coverage/downloaded-sources.json",
+        "assetSHA256": "07139e3dd1c416a94c26aa8cec462ad59d26a78b1ed58917db2e9ddd00de46a9",
+        "contextLimit": "Historic site landscape; not the violent event itself.",
+        "ownerLinkVerified": "External primary source; no Focus owning page assigned",
+        "downloadedOriginal": true
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; captions derived from primary source metadata, not pixel approval."
+    },
+    {
+      "index": 25,
+      "eventTitle": "The Transcontinental Railroad Completed",
+      "status": "preserve-existing-reference",
+      "candidate": {
+        "src": "/assets/pioneers/story/19-railroad-800.webp",
+        "alt": "An immigrant family with trunks stands beside a nineteenth-century train in Utah.",
+        "href": "/pioneers.html#pioneer-story-19-railroad",
+        "caption": "An immigrant family stands with its trunks beside a train in Utah as rail travel changes the journey west.",
+        "galleryId": "art-04d53038a59e",
+        "ownerLinkVerified": true,
+        "assetSHA256": "0db0f93c6beede00b0de57d2320d2493494c62c8f346a93acbff74de08267bc7",
+        "contextLimit": "Railroad-era immigrant journey, not golden-spike ceremony."
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; inventory text only in this proposal."
+    },
+    {
+      "index": 26,
+      "eventTitle": "First Utah Temple Dedicated; Brigham Young Dies",
+      "status": "proposed-context-reference",
+      "candidate": {
+        "src": "/assets/page-art/temples/temple-pioneer-temples-960.webp",
+        "alt": "Craftsmen work beside timber scaffolding around the St. George Temple during its construction.",
+        "href": "/answers/why-latter-day-saints-build-temples.html#picture-temple-pioneer-temples",
+        "caption": "Craftsmen work around the rising St. George Temple, preparing the first completed temple in Utah for worship.",
+        "galleryId": "art-18e67438d8c5",
+        "ownerSelector": "a[href=\"../assets/page-art/temples/temple-pioneer-temples-full.webp\"]:has(img[src=\"../assets/page-art/temples/temple-pioneer-temples-960.webp\"])",
+        "ownerLinkVerified": true,
+        "assetSHA256": "98832031d92e5a2052b267ac24ab0e3cbd7566ab432fbd232ad5f4835d0434bc",
+        "contextLimit": "Temple construction context, not dedication ceremony or Brigham Young death."
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; inventory text only in this proposal."
+    },
+    {
+      "index": 27,
+      "eventTitle": "The Primary Is Organized",
+      "status": "proposed-downloaded-source",
+      "candidate": {
+        "src": "work/history-image-coverage/aurelia-spencer-rogers-portrait-83ea2b2.jpg",
+        "href": "https://www.churchofjesuschrist.org/media/image/aurelia-spencer-rogers-portrait-83ea2b2?lang=eng",
+        "alt": "A portrait of Aurelia Spencer Rogers against a black background, wearing a black dress with a high collar and a brooch.",
+        "caption": "Aurelia Spencer Rogers faces the viewer in a dark dress and brooch, remembered for her care for children and the beginnings of Primary.",
+        "sourceLedger": "work/history-image-coverage/downloaded-sources.json",
+        "assetSHA256": "459af49913454d633b0a14eeb0774ed0f6fc08c8f43dc9bea227301496aeb30a",
+        "contextLimit": "Historical portrait of Aurelia Spencer Rogers, founder of Primary; not the first Primary meeting.",
+        "ownerLinkVerified": "External primary source; no Focus owning page assigned",
+        "downloadedOriginal": true
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; captions derived from primary source metadata, not pixel approval."
+    },
+    {
+      "index": 28,
+      "eventTitle": "The Manifesto Ends Plural Marriage",
+      "status": "proposed-downloaded-source",
+      "candidate": {
+        "src": "work/history-image-coverage/wilford-woodruff-a04d784.jpg",
+        "href": "https://www.churchofjesuschrist.org/media/image/wilford-woodruff-a04d784?lang=eng",
+        "alt": "A painting by H. E. Peterson of President Wilford Woodruff in a black suit sitting in a red armchair and resting one arm on a table.",
+        "caption": "Wilford Woodruff sits beside a table in H. E. Peterson’s portrait, the prophet who issued the 1890 Manifesto.",
+        "sourceLedger": "work/history-image-coverage/downloaded-sources.json",
+        "assetSHA256": "a4e60781c70909e0df3aca6d41724628453a23873123b93ffdead2a77e926474",
+        "contextLimit": "Painted portrait of Wilford Woodruff; not the Manifesto document or signing event.",
+        "ownerLinkVerified": "External primary source; no Focus owning page assigned",
+        "downloadedOriginal": true
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; captions derived from primary source metadata, not pixel approval."
+    },
+    {
+      "index": 29,
+      "eventTitle": "The Salt Lake Temple Dedicated",
+      "status": "proposed-context-reference",
+      "candidate": {
+        "src": "/assets/pioneers/salt-lake-temple-800.webp",
+        "alt": "Distinct nineteenth-century workers constructing the Salt Lake Temple",
+        "href": "/pioneers.html#pioneer-valley-heading",
+        "caption": "Workers labor around the Salt Lake Temple, whose completion followed forty years of patient effort.",
+        "galleryId": "art-4bee76727d47",
+        "ownerSelector": "a[data-artwork-detail=\"pioneer-salt-lake-temple\"]",
+        "ownerLinkVerified": true,
+        "assetSHA256": "a25a7b6fb18ce34b6b5ea2d9cf558dfd663aad6e331727b8ddfe03d8c577ef07",
+        "contextLimit": "Construction preceding dedication, not the dedication ceremony."
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; inventory text only in this proposal."
+    },
+    {
+      "index": 30,
+      "eventTitle": "Utah Becomes the 45th State",
+      "status": "proposed-downloaded-source",
+      "candidate": {
+        "src": "work/history-image-coverage/utah-statehood-herald1896.jpg",
+        "href": "https://www.loc.gov/resource/sn85058130/1896-01-05/ed-1/?sp=1",
+        "alt": "The Salt Lake Herald, January 5, 1896, front page",
+        "caption": "The Salt Lake Herald’s front page announces Utah’s statehood on January 5, 1896, carrying the news to its readers the following morning.",
+        "sourceLedger": "work/history-image-coverage/downloaded-sources.json",
+        "assetSHA256": "67586f1a227c6810f7cc78e98b10ff8d871674ac86114df8ad4ef1b9f9bd5c46",
+        "contextLimit": "Contemporary front page celebrating Utah statehood the previous day; original newspaper layout, not a modern Capitol.",
+        "ownerLinkVerified": "External primary source; no Focus owning page assigned",
+        "downloadedOriginal": true
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; captions derived from primary source metadata, not pixel approval."
+    },
+    {
+      "index": 31,
+      "eventTitle": "President Lorenzo Snow's Tithing Revelation",
+      "status": "proposed-downloaded-source",
+      "candidate": {
+        "src": "work/history-image-coverage/lorenzo-snow-cb940d3.jpg",
+        "href": "https://www.churchofjesuschrist.org/media/image/lorenzo-snow-cb940d3?lang=eng",
+        "alt": "A portrait photograph by Charles Roscoe Savage of Lorenzo Snow in a dark suit.",
+        "caption": "Lorenzo Snow looks toward the camera in Charles Roscoe Savage’s portrait, remembered here for his teaching on tithing.",
+        "sourceLedger": "work/history-image-coverage/downloaded-sources.json",
+        "assetSHA256": "33e2c5c64b6be04dc738f9bd680f50a22b71bb327f2496aab91113263ab280dd",
+        "contextLimit": "Portrait of Lorenzo Snow; not the St. George tithing sermon itself.",
+        "ownerLinkVerified": "External primary source; no Focus owning page assigned",
+        "downloadedOriginal": true
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; captions derived from primary source metadata, not pixel approval."
+    },
+    {
+      "index": 32,
+      "eventTitle": "Family Home Evening Introduced",
+      "status": "proposed-context-reference",
+      "candidate": {
+        "src": "/assets/page-art/topics/family-study-800.webp",
+        "alt": "A multigenerational family listening to a teenager during a shared reading",
+        "href": "/answers/why-families-are-important.html#hope-reflection",
+        "caption": "A family listens to a teenager during shared reading. Time together at home remains at the heart of family home evening.",
+        "galleryId": "art-88af70985f7c",
+        "ownerSelector": "a[href=\"../assets/page-art/topics/family-study-1536.webp\"]:has(img[src=\"../assets/page-art/topics/family-study-800.webp\"])",
+        "ownerLinkVerified": true,
+        "assetSHA256": "6e85b1fad1fe3e2a6167b36d08242eac1b106cc0ecb457d35a7f1e33e6c5476c",
+        "contextLimit": "Present-day practice, not a 1915 family."
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; inventory text only in this proposal."
+    },
+    {
+      "index": 33,
+      "eventTitle": "Vision of the Redemption of the Dead",
+      "status": "proposed-event-reference",
+      "candidate": {
+        "src": "/assets/page-art/plan-of-salvation/redemption-dead-800.webp",
+        "alt": "Joseph F. Smith sits with an open Bible.",
+        "href": "/answers/plan-of-salvation.html#picture-pos-redemption-dead",
+        "caption": "Joseph F. Smith sits with an open Bible as he ponders the Savior’s work among the dead.",
+        "galleryId": "art-5e7d2eaa1e3a",
+        "ownerSelector": "a[href=\"/assets/page-art/plan-of-salvation/redemption-dead-full.webp\"]:has(img[src=\"/assets/page-art/plan-of-salvation/redemption-dead-800.webp\"])",
+        "ownerLinkVerified": true,
+        "assetSHA256": "a37cb5cf68129bb3b8e8704068a11abde78c35f93c2d07574006bcaaf8ec9d28",
+        "contextLimit": null
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; inventory text only in this proposal."
+    },
+    {
+      "index": 34,
+      "eventTitle": "The Church Welfare Program Launched",
+      "status": "proposed-context-reference",
+      "candidate": {
+        "src": "/assets/missionary/service-missionaries-food-pantry-1400.webp",
+        "alt": "Portrayal of young and senior service missionaries helping at a food pantry",
+        "href": "/missionary.html#ways-to-serve",
+        "caption": "Service missionaries work together in a food pantry, continuing the practical care at the heart of Church welfare.",
+        "galleryId": "art-45e710bbdf57",
+        "ownerSelector": "a[data-missionary-detail=\"service-missionaries\"]",
+        "ownerLinkVerified": true,
+        "assetSHA256": "a51802c12e8c007341f4cb87a8a30e8bfc9aaa4ed5e7deca12fe4ea83493c3fa",
+        "contextLimit": "Present-day welfare service, not 1936 launch."
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; inventory text only in this proposal."
+    },
+    {
+      "index": 35,
+      "eventTitle": "One Million Members; Pioneer Centennial",
+      "status": "proposed-downloaded-source",
+      "candidate": {
+        "src": "work/history-image-coverage/george-albert-smith-cf3844a.jpg",
+        "href": "https://www.churchofjesuschrist.org/media/image/george-albert-smith-cf3844a?lang=eng",
+        "alt": "A painted portrait by Lee Greene Richards of President George Albert Smith with a short beard, wearing a black suit and tan tie.",
+        "caption": "George Albert Smith’s painted portrait recalls the president who led the Church through its pioneer centennial and the million-member milestone.",
+        "sourceLedger": "work/history-image-coverage/downloaded-sources.json",
+        "assetSHA256": "f8340e9b736884a4e39fb9414cdc31f8d83c60a20515dcdffdf773e03d0fd16e",
+        "contextLimit": "Portrait of the Church president during this event; not an image of the actual event.",
+        "ownerLinkVerified": "External primary source; no Focus owning page assigned",
+        "downloadedOriginal": true
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; captions derived from primary source metadata, not pixel approval."
+    },
+    {
+      "index": 36,
+      "eventTitle": "Correlation Brings the Programs Together",
+      "status": "proposed-downloaded-source",
+      "candidate": {
+        "src": "work/history-image-coverage/david-o-mckay-11055d9.jpg",
+        "href": "https://www.churchofjesuschrist.org/media/image/david-o-mckay-11055d9?lang=eng",
+        "alt": "A painted portrait by Alvin Gittins of President David O. McKay in a black suit, sitting in a chair with his fingers clasped together.",
+        "caption": "David O. McKay rests his clasped hands in Alvin Gittins’s portrait, recalling his leadership during the growth of correlation.",
+        "sourceLedger": "work/history-image-coverage/downloaded-sources.json",
+        "assetSHA256": "f89b0577c05c3d2cc5b21dfde922d4a782afbd687bee3398854f603c7237942f",
+        "contextLimit": "Portrait of the Church president during this event; not an image of the actual event.",
+        "ownerLinkVerified": "External primary source; no Focus owning page assigned",
+        "downloadedOriginal": true
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; captions derived from primary source metadata, not pixel approval."
+    },
+    {
+      "index": 37,
+      "eventTitle": "First Area Conference Held in Manchester, England",
+      "status": "proposed-downloaded-source",
+      "candidate": {
+        "src": "work/history-image-coverage/joseph-fielding-smith-dc8268e.jpg",
+        "href": "https://www.churchofjesuschrist.org/media/image/joseph-fielding-smith-dc8268e?lang=eng",
+        "alt": "A painted portrait by Shauna Clinger of Joseph Fielding Smith in a blue suit and red tie, sitting in a leather chair.",
+        "caption": "Joseph Fielding Smith sits in a leather chair in Shauna Clinger’s portrait, the Church’s president when members gathered in Manchester in 1971.",
+        "sourceLedger": "work/history-image-coverage/downloaded-sources.json",
+        "assetSHA256": "17d361dac3abe7e3ec046f502511dfa419e8404738e231cff647d3640b84a80a",
+        "contextLimit": "Portrait of the Church president during this event; not an image of the actual event.",
+        "ownerLinkVerified": "External primary source; no Focus owning page assigned",
+        "downloadedOriginal": true
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; captions derived from primary source metadata, not pixel approval."
+    },
+    {
+      "index": 38,
+      "eventTitle": "Revelation Extends the Priesthood to All Worthy Men",
+      "status": "proposed-event-reference",
+      "candidate": {
+        "src": "/assets/page-art/priesthood-history/original-kimball-study.png",
+        "alt": "Historical artistic interpretation of President Spencer W. Kimball in quiet study.",
+        "href": "/answers/race-priesthood-and-temple-blessings.html#picture-history-kimball-study",
+        "caption": "President Spencer W. Kimball studies quietly while seeking the Lord’s direction.",
+        "galleryId": "art-7e4fd69ad4f8",
+        "ownerSelector": "a[href=\"/assets/page-art/priesthood-history/original-kimball-study.png\"]:has(img[src=\"/assets/page-art/priesthood-history/original-kimball-study.png\"])",
+        "ownerLinkVerified": true,
+        "assetSHA256": "eac6046128d69ac4db4d97864f4e8d1dbc4c85004c5f7596a1e2a50c9ca5b3d5",
+        "contextLimit": null
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; inventory text only in this proposal."
+    },
+    {
+      "index": 39,
+      "eventTitle": "New Editions of the Scriptures Published",
+      "status": "proposed-event-reference",
+      "candidate": {
+        "src": "/assets/page-art/exclusive/two-witnesses-readers-800.webp",
+        "alt": "An older woman and an adult man discussing their open scripture books on a park bench",
+        "href": "/answers/bible-and-book-of-mormon-together.html#guided-practice",
+        "caption": "Two readers compare open scripture volumes on a park bench, continuing the connected study encouraged by the Church’s scripture editions.",
+        "galleryId": "art-e827a6264f85",
+        "ownerSelector": "a[href=\"../assets/page-art/exclusive/two-witnesses-readers-1536.webp\"]:has(img[src=\"../assets/page-art/exclusive/two-witnesses-readers-800.webp\"])",
+        "ownerLinkVerified": true,
+        "assetSHA256": "80a0c8ceabf176e8727e6d9c05f44d60a4ee12a8a152de2b0649147bbc8ab143",
+        "contextLimit": "Present-day scripture study, not a dated1979or1981edition or release event."
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; inventory text only in this proposal."
+    },
+    {
+      "index": 40,
+      "eventTitle": "“The Family: A Proclamation to the World”",
+      "status": "proposed-context-reference",
+      "candidate": {
+        "src": "/assets/heroes/topics/families-full.webp",
+        "alt": "A grandmother, father, and young daughter knead bread together in a home kitchen.",
+        "href": "/answers/why-families-are-important.html#nested-page-title",
+        "caption": "A grandmother, father, and young daughter work bread dough together, sharing the daily care of family life.",
+        "galleryId": "art-3334c3fb6909",
+        "ownerSelector": "a[data-hero-viewer][href=\"../assets/heroes/topics/families-full.webp\"]",
+        "ownerLinkVerified": true,
+        "assetSHA256": "c7ee2ae7d49ea73d926f75334a4b8082ab99416f4dcf784f8f60484f80bbe844",
+        "contextLimit": "Present-day family life, not the proclamation announcement."
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; inventory text only in this proposal."
+    },
+    {
+      "index": 41,
+      "eventTitle": "More Members Outside the United States Than Inside",
+      "status": "proposed-context-reference",
+      "candidate": {
+        "src": "/assets/missionary/light-across-world.webp",
+        "alt": "Symbolic artwork of missionary companionships serving communities across a world map",
+        "href": "/missionary.html#worldwide-heading",
+        "caption": "Missionary companionships serve communities across a world map as the gospel reaches people in many nations.",
+        "galleryId": "art-14bef8b3622b",
+        "ownerSelector": "a[data-missionary-detail=\"worldwide-work\"]",
+        "ownerLinkVerified": true,
+        "assetSHA256": "8c1bb68160892de2fd36d3ae7b3a0a9a5a4b7d496b60a3df1c5954e1ba7ba065",
+        "contextLimit": "Symbolic worldwide ministry, not a geographic membership data visualization."
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; inventory text only in this proposal."
+    },
+    {
+      "index": 42,
+      "eventTitle": "“The Living Christ” Testimony Issued",
+      "status": "proposed-context-reference",
+      "candidate": {
+        "src": "/art/thumbs/The-Living-Christ.webp",
+        "alt": "The Living Christ",
+        "href": "/art.html#art-gallery",
+        "caption": "The Savior’s portrait accompanies the Apostles’ witness that He lives.",
+        "galleryId": "art-d12945c2d847",
+        "ownerSelector": ".gallery-item:has(img[src=\"art/thumbs/The-Living-Christ.webp\"])",
+        "ownerLinkVerified": true,
+        "assetSHA256": "d3863cbb679f0ac8a65950bff632152495f76383d2c06b829b6b7c7587d9ed6b",
+        "contextLimit": "Devotional portrait, not the signatories or original proclamation document."
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; inventory text only in this proposal."
+    },
+    {
+      "index": 43,
+      "eventTitle": "The Perpetual Education Fund Announced",
+      "status": "proposed-downloaded-source",
+      "candidate": {
+        "src": "work/history-image-coverage/gordon-b-hinckley-f26378f.jpg",
+        "href": "https://www.churchofjesuschrist.org/media/image/gordon-b-hinckley-f26378f?lang=eng",
+        "alt": "A portrait of President Gordon B. Hinckley smiling in a black suit, white shirt, and glasses.",
+        "caption": "Gordon B. Hinckley smiles in his official portrait, remembered here for opening new opportunities through the Perpetual Education Fund.",
+        "sourceLedger": "work/history-image-coverage/downloaded-sources.json",
+        "assetSHA256": "8290d55253c7d2d65af132ad5836b3d7e70596b3fe05aa2dac489251856ec361",
+        "contextLimit": "Official portrait of Gordon B. Hinckley, who announced the Perpetual Education Fund; not an image of fund beneficiaries.",
+        "ownerLinkVerified": "External primary source; no Focus owning page assigned",
+        "downloadedOriginal": true
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; captions derived from primary source metadata, not pixel approval."
+    },
+    {
+      "index": 44,
+      "eventTitle": "Missionary Age Lowered; a Generation Responds",
+      "status": "proposed-context-reference",
+      "candidate": {
+        "src": "/assets/missionary/sister-missionaries-teaching-1400.webp",
+        "alt": "Portrayal of sister missionaries listening to and teaching a family",
+        "href": "/missionary.html#ways-to-serve",
+        "caption": "Sister missionaries listen and teach together as they share the gospel with a family.",
+        "galleryId": "art-59ac2f38de36",
+        "ownerSelector": "a[data-missionary-detail=\"teaching-families\"]",
+        "ownerLinkVerified": true,
+        "assetSHA256": "23d9c1ffbb1488f101f28cb5b33d4f8706deb64005d54c137eb149127ceb39bb",
+        "contextLimit": "Present-day missionary service, not identifiable age-change announcement participants."
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; inventory text only in this proposal."
+    },
+    {
+      "index": 45,
+      "eventTitle": "A New Prophet and a Course Correction",
+      "status": "proposed-context-reference",
+      "candidate": {
+        "src": "/assets/page-art/uniqueness-repairs/cfm-family-resources-960.webp",
+        "alt": "A woman and a teenager preparing a basket of home study supplies",
+        "href": "/come-follow-me.html#cfm-family-resources",
+        "caption": "A woman and a teenager gather supplies for scripture study at home, part of the renewed emphasis on learning together.",
+        "galleryId": "art-4001c2d17e20",
+        "ownerSelector": "a[href=\"assets/page-art/uniqueness-repairs/cfm-family-resources-full.webp\"]:has(img[src=\"assets/page-art/uniqueness-repairs/cfm-family-resources-960.webp\"])",
+        "ownerLinkVerified": true,
+        "assetSHA256": "cb279b458e75e2164d3eb0be0edfc1184aebbbf99f9bf509bcdfc1648d0c0762",
+        "contextLimit": "Home-study practice, not depiction of the prophet or announcement."
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; inventory text only in this proposal."
+    },
+    {
+      "index": 46,
+      "eventTitle": "Bicentennial of the First Vision",
+      "status": "proposed-downloaded-source",
+      "candidate": {
+        "src": "work/history-image-coverage/pd80007757-000-coverart-png-991a641.jpg",
+        "href": "https://www.churchofjesuschrist.org/media/image/pd80007757-000-coverart-png-991a641?lang=eng",
+        "alt": "Restoration Proclamation 8.5x11",
+        "caption": "The Restoration proclamation sets the Church’s bicentennial testimony on a single page, inviting renewed faith in Jesus Christ.",
+        "sourceLedger": "work/history-image-coverage/downloaded-sources.json",
+        "assetSHA256": "3821a889e5e5b9fa89d6ea545f5f042a19979a72ae4c09781d4b1be297ae910e",
+        "contextLimit": "Official Restoration Proclamation text issued for the 2020 bicentennial. Document image; needs legibility review.",
+        "ownerLinkVerified": "External primary source; no Focus owning page assigned",
+        "downloadedOriginal": true
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; captions derived from primary source metadata, not pixel approval."
+    },
+    {
+      "index": 47,
+      "eventTitle": "Growth Continues: Membership Passes 17.2 Million",
+      "status": "proposed-context-reference",
+      "candidate": {
+        "src": "/assets/page-art/priesthood-history/original-ghana-study.png",
+        "alt": "Symbolic illustration of Ghanaian adults studying together.",
+        "href": "/answers/race-priesthood-and-temple-blessings.html#picture-history-ghana-study",
+        "caption": "Adults in Ghana gather around their scriptures, one local expression of a growing worldwide Church.",
+        "galleryId": "art-5032dd394b0d",
+        "ownerSelector": "a[href=\"/assets/page-art/priesthood-history/original-ghana-study.png\"]:has(img[src=\"/assets/page-art/priesthood-history/original-ghana-study.png\"])",
+        "ownerLinkVerified": true,
+        "assetSHA256": "7dce372e2454d9b0c95e3877c1a12bca878e44cfc2af3bde1389e8809d87f298",
+        "contextLimit": "Local Ghanaian study scene, not membership statistics or specific census year."
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; inventory text only in this proposal."
+    },
+    {
+      "index": 48,
+      "eventTitle": "Temples Across the Earth",
+      "status": "proposed-context-reference",
+      "candidate": {
+        "src": "/assets/page-art/temples/temple-worldwide-gathering-960.webp",
+        "alt": "The Laie Hawaii Temple stands among palms and tropical greenery with visitors on its grounds.",
+        "href": "/answers/why-latter-day-saints-build-temples.html#picture-temple-worldwide-gathering",
+        "caption": "Visitors walk among palms on the grounds of the Laie Hawaii Temple, one of the houses of the Lord serving Saints around the world.",
+        "galleryId": "art-2d33f4194e1f",
+        "ownerSelector": "a[href=\"../assets/page-art/temples/temple-worldwide-gathering-full.webp\"]:has(img[src=\"../assets/page-art/temples/temple-worldwide-gathering-960.webp\"])",
+        "ownerLinkVerified": true,
+        "assetSHA256": "9456b38c9c10ee0b389109b2ad0a0fbc6f5850b2b5dd01b2fbfd6e33b358b5c7",
+        "contextLimit": "Existing Laie temple portrayal; not exhaustive worldwide temple inventory."
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; inventory text only in this proposal."
+    },
+    {
+      "index": 49,
+      "eventTitle": "President Nelson Dies; President Oaks Leads the Church",
+      "status": "proposed-downloaded-source",
+      "candidate": {
+        "src": "work/history-image-coverage/dallin-oaks-official-portrait-2018-56caf7d.jpg",
+        "href": "https://www.churchofjesuschrist.org/media/image/dallin-oaks-official-portrait-2018-56caf7d?lang=eng",
+        "alt": "The official portrait of Dallin H. Oaks.",
+        "caption": "Dallin H. Oaks appears in his official 2018 portrait, several years before the succession remembered in this entry.",
+        "sourceLedger": "work/history-image-coverage/downloaded-sources.json",
+        "assetSHA256": "fb7be201a0becca18da9e0d6f15de0c31be9cf3c6da3a6c880dfa5d327274ea6",
+        "contextLimit": "Official 2018 portrait of Dallin H. Oaks; portrait date predates the 2025 succession.",
+        "ownerLinkVerified": "External primary source; no Focus owning page assigned",
+        "downloadedOriginal": true
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; captions derived from primary source metadata, not pixel approval."
+    },
+    {
+      "index": 50,
+      "eventTitle": "The Church Today",
+      "status": "proposed-context-reference",
+      "candidate": {
+        "src": "/assets/page-art/priesthood-history/original-welcome.png",
+        "alt": "People greeting one another warmly in a shared gathering.",
+        "href": "/answers/race-priesthood-and-temple-blessings.html#picture-history-welcome",
+        "caption": "People welcome one another at a shared gathering, where belonging begins with personal kindness.",
+        "galleryId": "art-bb9906af80ff",
+        "ownerSelector": "a[href=\"/assets/page-art/priesthood-history/original-welcome.png\"]:has(img[src=\"/assets/page-art/priesthood-history/original-welcome.png\"])",
+        "ownerLinkVerified": true,
+        "assetSHA256": "d4c288e76a65de07d853da6312064930289141d6705194cb9020050347dffacc",
+        "contextLimit": "Present-day community scene; not statistical documentation."
+      },
+      "gap": null,
+      "pixelReview": "Pending independent Fermi and Newton inspection; inventory text only in this proposal."
+    }
+  ],
+  "whitneyPermissionReadback": "con/outputs/timeline-whitney-image-use-readback.json"
+}

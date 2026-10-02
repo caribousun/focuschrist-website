@@ -52,6 +52,8 @@ jobs:
       - name: Verify anatomy review rejection and annotation safeguards
         run: node tools/anatomy-review/core.test.js
 
+      - name: Verify Timeline reference ownership
+        run: python tools/test_timeline_reference_ownership.py
       - name: Verify global artwork scanner regression fixtures
         run: python tools/topic_artwork_uniqueness_runtime_qa.py
       - name: Verify Home artwork preservation and reference previews
@@ -467,7 +469,7 @@ jobs:
         uses: actions/checkout@v5
       - name: Install pinned Timeline browser dependencies
         run: |
-          npm install --prefix /tmp/focus-timeline-qa --no-save --package-lock=false --ignore-scripts playwright@1.55.1
+          npm install --prefix /tmp/focus-timeline-qa --no-save --package-lock=false --ignore-scripts playwright@1.55.1 leaflet@1.9.4
           /tmp/focus-timeline-qa/node_modules/.bin/playwright install --with-deps chromium
       - name: Verify standalone Timeline experiences at desktop, phone, and enlarged text
         run: NODE_PATH=/tmp/focus-timeline-qa/node_modules node tools/timeline_runtime_qa.js

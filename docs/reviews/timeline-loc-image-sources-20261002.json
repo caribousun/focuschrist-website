@@ -1,0 +1,69 @@
+[
+  {
+    "stop": 3,
+    "file": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-02\\con\\work\\city-image-sources\\boston-harbor-loc.jpg",
+    "source": "https://www.loc.gov/item/2018756541/",
+    "download": "https://tile.loc.gov/storage-services/service/pnp/ppmsca/58700/58712v.jpg",
+    "title": "Entering Boston Harbor",
+    "created": [
+      "Boston :  American Art Publishing Co.,  1883."
+    ],
+    "rights": "No known restrictions on publication. For information see: \"Popular Graphic Arts,\" https://hdl.loc.gov/loc.pnp/res.248.pga",
+    "caption": "Entering Boston Harbor, an 1883 lithograph published by American Art Publishing Co. A later view of the arrival port; it does not depict the Horizon or the 1856 company.",
+    "sha256": "008df3e3c3f89c7b37659310baad7479a0ab1a896a4e21ee407879c67efcfc3d",
+    "root_pixel_review": "Inspected downloaded original in image viewer; correct city/harbor scene, no wrong-city substitution. Historical date limitations explicit.",
+    "runtimeFile": "assets/timeline/boston-harbor-loc.jpg",
+    "fermiPixelsViewed": true,
+    "newtonPixelsPending": true
+  },
+  {
+    "stop": 4,
+    "file": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-02\\con\\work\\city-image-sources\\albany-hudson-1846-loc.jpg",
+    "source": "https://www.loc.gov/item/2011647342/",
+    "download": "https://tile.loc.gov/storage-services/service/pnp/ppmsca/31300/31359v.jpg",
+    "title": "The Hudson River at Albany, U.S. Saturday July 18th 1846",
+    "created": [
+      "1846 July 18."
+    ],
+    "rights": "No known restrictions on publication.",
+    "caption": "Michael Seymour’s watercolor of the Hudson River at Albany, July 18, 1846. It shows the river setting ten years before the company’s journey.",
+    "sha256": "5c274efa78f8045521d08e965468ded27f795fdeb9bd130963a0b3b2cd287abe",
+    "root_pixel_review": "Inspected downloaded original in image viewer; correct city/harbor scene, no wrong-city substitution. Historical date limitations explicit.",
+    "runtimeFile": "assets/timeline/albany-hudson-1846-loc.jpg",
+    "fermiPixelsViewed": true,
+    "newtonPixelsPending": true
+  },
+  {
+    "stop": 5,
+    "file": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-02\\con\\work\\city-image-sources\\buffalo-harbor-loc.jpg",
+    "source": "https://www.loc.gov/item/2016814971/",
+    "download": "https://cdn.loc.gov/service/pnp/det/4a20000/4a25000/4a25200/4a25256v.jpg",
+    "title": "[Harbor entrance & lights, Buffalo, N.Y.]",
+    "created": [
+      "[between 1900 and 1915]"
+    ],
+    "rights": "No known restrictions on publication.",
+    "caption": "Buffalo harbor entrance and lighthouses, photographed between 1900 and 1915. A later view of this Lake Erie city; it does not depict the 1856 journey.",
+    "sha256": "20cbd5325d6f7950fd3c3079065d1c3ee5ac2c85a10911426b291ad56daefe03",
+    "root_pixel_review": "Inspected downloaded original in image viewer; correct city/harbor scene, no wrong-city substitution. Historical date limitations explicit.",
+    "runtimeFile": "assets/timeline/buffalo-harbor-loc.jpg",
+    "fermiPixelsViewed": true,
+    "newtonPixelsPending": true
+  },
+  {
+    "kind": "life",
+    "index": 15,
+    "runtimeFile": "assets/timeline/banias-frith-1862-loc.jpg",
+    "source": "https://www.loc.gov/item/00653006/",
+    "metadata": "work/banias-loc-source.json",
+    "download": "https://tile.loc.gov/storage-services/service/pnp/cph/3g00000/3g08000/3g08600/3g08610v.jpg",
+    "title": "Banias, the ancient Caesarea Philippi / Frith.",
+    "date": "1862",
+    "rights": "No known restrictions on publication.",
+    "caption": "Stone buildings and vegetation at Banias, ancient Caesarea Philippi, in Francis Frith’s 1862 photograph.",
+    "sha256": "3195be74956887b5d60da0e3aec08b974d7e56bdbf6ef7dc836e511aad809b1b",
+    "fermiPixelsViewed": true,
+    "newtonPixelsPending": true,
+    "limitation": "LOC archival scan retains mount and color strip; exact source bytes unchanged."
+  }
+]

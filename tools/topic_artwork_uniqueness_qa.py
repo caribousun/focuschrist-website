@@ -60,6 +60,21 @@ def is_owning_page_reference(ref,owner,parsed,identities,root=ROOT):
         if identities.get(asset)==ref['family']:return True
     return False
 
+TIMELINE_REFERENCE_ROUTES = {
+    'timelines/life-of-christ-journey-map.html': 'life',
+    'timelines/willie-and-martin-handcart-map.html': 'handcart',
+    'timelines/latter-day-saint-church-history-timeline.html': 'history',
+}
+
+def timeline_registry_references(text, key):
+    """Account only the exact route's runtime registry, retaining verified owner links."""
+    kind = TIMELINE_REFERENCE_ROUTES.get(key)
+    if not kind:return None
+    match = re.search(r'var registry\s*=\s*(\{.*?\});\s*var route', text, re.S)
+    if not match:raise ValueError('Timeline image registry must remain statically auditable')
+    registry = json.loads(match[1])
+    return registry[kind].values()
+
 def scan(root=ROOT):
     pages=public_pages(root);parsed={};references=[];asset_paths=set();asset_issues={}
     def add_reference(page, value, key, tag, attr):
@@ -96,7 +111,19 @@ def scan(root=ROOT):
                 if css:css_refs(css,key,set())
             if n.tag=='script':
                 js=local_file(page,n.attrs.get('src',''),{'.js'})
-                script_refs(js.read_text(encoding='utf-8') if js and js.is_file() else n.text(),page,key)
+                script_text=js.read_text(encoding='utf-8') if js and js.is_file() else n.text()
+                entries=timeline_registry_references(script_text,key) if js==root/'timeline-images.js' else None
+                if entries is None:script_refs(script_text,page,key)
+                else:
+                    for entry in entries:
+                        asset=local_asset(page,entry['src'],root)
+                        if not asset:continue
+                        asset_paths.add(asset)
+                        destination=None;u=urlsplit(entry.get('href',''))
+                        if not u.scheme and not u.netloc and u.path.endswith('.html'):
+                            target=(root/u.path.lstrip('/') if u.path.startswith('/') else page.parent/u.path).resolve()
+                            if target.is_relative_to(root.resolve()) and target!=page.resolve():destination={'owner':target.relative_to(root.resolve()).as_posix(),'fragment':unquote(u.fragment)}
+                        references.append({'page':key,'asset':asset,'tag':'script','attribute':'timeline-registry-src','linked_reference':destination})
             if n.tag=='style':
                 for value in re.findall(r'url\([\s\"\']*([^\)\"\']+)',n.text()):
                     asset=local_asset(page,value,root)

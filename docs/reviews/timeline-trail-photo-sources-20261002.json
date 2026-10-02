@@ -1,0 +1,1531 @@
+{
+  "scope": "Eighteen distinct trail-site references, exact NPS files unchanged; some show modern buildings or nearby documented trail landmarks with explicit captions. No complete coverage claim.",
+  "entries": [
+    {
+      "index": 19,
+      "file": "assets\\timeline\\devils-gate-nps.jpg",
+      "source": {
+        "AltText": "B-5. Devil's Gate (west of Independence Rock) on the California, Mormon Pioneer, and Oregon National Historic Trails (2007).  ",
+        "AssetBaseType": "File",
+        "AssetID": "45898a46-c844-40c1-ac05-96ec25972b19",
+        "AssetType": "Standard File",
+        "Comment": "ATR-Across Wyoming-B-5",
+        "ConstraintsInformation": {
+          "Constraint": "Public domain",
+          "GrantingRights": "Unknown"
+        },
+        "FileInfo": {
+          "Original": {
+            "Kind": "Original",
+            "FileType": "jpg",
+            "Size": 1284839,
+            "Width": 2272,
+            "Height": 1704
+          },
+          "ProxyHiRes": {
+            "Kind": "ProxyHiRes",
+            "FileType": "jpg",
+            "Size": 107124,
+            "Width": 1000,
+            "Height": 750
+          },
+          "ProxyLoRes": {
+            "Kind": "ProxyLoRes",
+            "FileType": "jpg",
+            "Size": 32744,
+            "Width": 500,
+            "Height": 375
+          },
+          "ThumbXLarge": {
+            "Kind": "ThumbXLarge",
+            "FileType": "png",
+            "Size": 69061,
+            "Width": 200,
+            "Height": 150
+          },
+          "ThumbLarge": {
+            "Kind": "ThumbLarge",
+            "FileType": "png",
+            "Size": 33652,
+            "Width": 135,
+            "Height": 101
+          },
+          "ThumbMedium": {
+            "Kind": "ThumbMedium",
+            "FileType": "png",
+            "Size": 19008,
+            "Width": 100,
+            "Height": 75
+          },
+          "ThumbSmall": {
+            "Kind": "ThumbSmall",
+            "FileType": "png",
+            "Size": 10882,
+            "Width": 75,
+            "Height": 56
+          }
+        },
+        "ImageCreateDate": {
+          "Date": "06/17/2007"
+        },
+        "ImageCreateDateTime": "06/17/2007 12:00:00 AM",
+        "Keywords": [
+          "devil's gate",
+          "cali",
+          "california national historic trail",
+          "mopi",
+          "mormon pioneer national historic trail",
+          "oreg",
+          "oregon national historic trail"
+        ],
+        "NPSUnits": [
+          {
+            "Name": "California National Historic Trail",
+            "Type": "National Historic Trail",
+            "Code": "CALI"
+          },
+          {
+            "Name": "Mormon Pioneer National Historic Trail",
+            "Type": "National Historic Trail",
+            "Code": "MOPI"
+          },
+          {
+            "Name": "Oregon National Historic Trail",
+            "Type": "National Historic Trail",
+            "Code": "OREG"
+          }
+        ],
+        "PhotoCredit": "NPS",
+        "PrimaryType": "image",
+        "Submitter": "jcannella",
+        "SubType": "jpeg",
+        "Title": "B-5. Devil's Gate (west of Independence Rock) on the California, Mormon Pioneer, and Oregon National Historic Trails (2007)"
+      },
+      "download": "https://npgallery.nps.gov/GetAsset/45898a46-c844-40c1-ac05-96ec25972b19/proxymdres.jpg",
+      "sha256": "14cf084fbf6b6efcadb1b3325d2a9e0ba54b7b7bd5a6f360a4c44ba18ec86ef7",
+      "fermiPixelsViewed": true,
+      "newtonPixelsPending": true
+    },
+    {
+      "index": 14,
+      "file": "assets\\timeline\\scotts-bluff-nps.jpg",
+      "source": {
+        "AltText": "Image of a wagon in front of a bluff.",
+        "AssetBaseType": "File",
+        "AssetID": "b25e0315-2213-41b1-a8fa-6867556b9382",
+        "AssetType": "Standard File",
+        "ConstraintsInformation": {
+          "Constraint": "Public domain",
+          "GrantingRights": "Unknown"
+        },
+        "FileInfo": {
+          "Original": {
+            "Kind": "Original",
+            "FileType": "jpg",
+            "Size": 2623738,
+            "Width": 3264,
+            "Height": 2448
+          },
+          "ProxyHiRes": {
+            "Kind": "ProxyHiRes",
+            "FileType": "jpg",
+            "Size": 921306,
+            "Width": 2000,
+            "Height": 1500
+          },
+          "ProxyMdRes": {
+            "Kind": "ProxyMdRes",
+            "FileType": "jpg",
+            "Size": 276599,
+            "Width": 1000,
+            "Height": 750
+          },
+          "ProxyLoRes": {
+            "Kind": "ProxyLoRes",
+            "FileType": "jpg",
+            "Size": 98176,
+            "Width": 500,
+            "Height": 375
+          },
+          "ThumbXLarge": {
+            "Kind": "ThumbXLarge",
+            "FileType": "png",
+            "Size": 118414,
+            "Width": 200,
+            "Height": 150
+          },
+          "ThumbLarge": {
+            "Kind": "ThumbLarge",
+            "FileType": "png",
+            "Size": 75054,
+            "Width": 135,
+            "Height": 101
+          },
+          "ThumbMedium": {
+            "Kind": "ThumbMedium",
+            "FileType": "png",
+            "Size": 59064,
+            "Width": 100,
+            "Height": 75
+          },
+          "ThumbSmall": {
+            "Kind": "ThumbSmall",
+            "FileType": "png",
+            "Size": 50144,
+            "Width": 75,
+            "Height": 56
+          }
+        },
+        "ImageCreateDate": {
+          "Date": "10/19/2005"
+        },
+        "ImageCreateDateTime": "10/19/2005 10:24:45 AM",
+        "NPSUnits": [
+          {
+            "Name": "California National Historic Trail",
+            "Type": "National Historic Trail",
+            "Code": "CALI"
+          }
+        ],
+        "PrimaryType": "image",
+        "Submitter": "serivera",
+        "SubType": "jpeg",
+        "Title": "Scotts Bluff National Monument"
+      },
+      "download": "https://npgallery.nps.gov/GetAsset/b25e0315-2213-41b1-a8fa-6867556b9382/proxymdres.jpg",
+      "sha256": "89f38e31ebaf2190169ca40418f76fed7c8b5cd6ba5824753aa43a73484882a1",
+      "fermiPixelsViewed": true,
+      "newtonPixelsPending": true
+    },
+    {
+      "index": 26,
+      "file": "assets\\timeline\\fort-bridger-nps.jpg",
+      "source": {
+        "AltText": "Image of historic buildings and trail marker.",
+        "AssetBaseType": "File",
+        "AssetID": "4d283a2a-e9bb-4421-9a6b-2ef7cf15e783",
+        "AssetType": "Standard File",
+        "ConstraintsInformation": {
+          "Constraint": "Public domain",
+          "GrantingRights": "Unknown"
+        },
+        "CustomTextFields": [
+          {
+            "Name": "XmpMetadataDate",
+            "Value": "2017-07-14T12:05:24-06:00"
+          }
+        ],
+        "Description": "Image of Fort Bridger National Historic Site.",
+        "FileInfo": {
+          "Original": {
+            "Kind": "Original",
+            "FileType": "jpg",
+            "Size": 2706292,
+            "Width": 3248,
+            "Height": 1827
+          },
+          "ProxyHiRes": {
+            "Kind": "ProxyHiRes",
+            "FileType": "jpg",
+            "Size": 849216,
+            "Width": 2000,
+            "Height": 1125
+          },
+          "ProxyMdRes": {
+            "Kind": "ProxyMdRes",
+            "FileType": "jpg",
+            "Size": 229631,
+            "Width": 1000,
+            "Height": 562
+          },
+          "ProxyLoRes": {
+            "Kind": "ProxyLoRes",
+            "FileType": "jpg",
+            "Size": 69302,
+            "Width": 500,
+            "Height": 281
+          },
+          "ThumbXLarge": {
+            "Kind": "ThumbXLarge",
+            "FileType": "png",
+            "Size": 64932,
+            "Width": 200,
+            "Height": 112
+          },
+          "ThumbLarge": {
+            "Kind": "ThumbLarge",
+            "FileType": "png",
+            "Size": 30713,
+            "Width": 135,
+            "Height": 75
+          },
+          "ThumbMedium": {
+            "Kind": "ThumbMedium",
+            "FileType": "png",
+            "Size": 18355,
+            "Width": 100,
+            "Height": 56
+          },
+          "ThumbSmall": {
+            "Kind": "ThumbSmall",
+            "FileType": "png",
+            "Size": 11369,
+            "Width": 75,
+            "Height": 42
+          }
+        },
+        "ImageCreateDate": {
+          "Date": "09/13/2015"
+        },
+        "ImageCreateDateTime": "09/13/2015 05:14:14 PM",
+        "Keywords": [
+          "CALI"
+        ],
+        "NPSUnits": [
+          {
+            "Name": "California National Historic Trail",
+            "Type": "National Historic Trail",
+            "Code": "CALI"
+          }
+        ],
+        "PrimaryType": "image",
+        "Submitter": "serivera",
+        "SubType": "jpeg",
+        "Title": "Fort Bridger State Historic Site"
+      },
+      "download": "https://npgallery.nps.gov/GetAsset/4d283a2a-e9bb-4421-9a6b-2ef7cf15e783/proxymdres.jpg",
+      "sha256": "c21a2299beadebbb02f3a8e80477dab450542dc5dfa678bcb60476aaa9ef7245",
+      "fermiPixelsViewed": true,
+      "newtonPixelsPending": true
+    },
+    {
+      "index": 23,
+      "file": "assets\\timeline\\south-pass-nps.jpg",
+      "source": {
+        "AltText": "Image of a historical trail site with waysides.",
+        "AssetBaseType": "File",
+        "AssetID": "eab101cb-f48c-45ad-afa8-df6d2cb9261e",
+        "AssetType": "Standard File",
+        "ConstraintsInformation": {
+          "Constraint": "Public domain",
+          "GrantingRights": "Unknown"
+        },
+        "Description": "Image of South Pass Overlook",
+        "FileInfo": {
+          "Original": {
+            "Kind": "Original",
+            "FileType": "jpg",
+            "Size": 3016561,
+            "Width": 2816,
+            "Height": 1880
+          },
+          "ProxyMdRes": {
+            "Kind": "ProxyMdRes",
+            "FileType": "jpg",
+            "Size": 246785,
+            "Width": 1000,
+            "Height": 667
+          },
+          "ProxyLoRes": {
+            "Kind": "ProxyLoRes",
+            "FileType": "jpg",
+            "Size": 75963,
+            "Width": 500,
+            "Height": 333
+          },
+          "ThumbXLarge": {
+            "Kind": "ThumbXLarge",
+            "FileType": "png",
+            "Size": 89194,
+            "Width": 200,
+            "Height": 133
+          },
+          "ThumbLarge": {
+            "Kind": "ThumbLarge",
+            "FileType": "png",
+            "Size": 49820,
+            "Width": 135,
+            "Height": 90
+          },
+          "ThumbMedium": {
+            "Kind": "ThumbMedium",
+            "FileType": "png",
+            "Size": 34424,
+            "Width": 100,
+            "Height": 66
+          },
+          "ThumbSmall": {
+            "Kind": "ThumbSmall",
+            "FileType": "png",
+            "Size": 26714,
+            "Width": 75,
+            "Height": 50
+          }
+        },
+        "ImageCreateDate": {
+          "Date": "09/19/2011"
+        },
+        "ImageCreateDateTime": "09/19/2011 04:34:06 PM",
+        "Keywords": [
+          "CALI"
+        ],
+        "NPSUnits": [
+          {
+            "Name": "California National Historic Trail",
+            "Type": "National Historic Trail",
+            "Code": "CALI"
+          }
+        ],
+        "PrimaryType": "image",
+        "Submitter": "serivera",
+        "SubType": "jpeg",
+        "Title": "South Pass Overlook"
+      },
+      "download": "https://npgallery.nps.gov/GetAsset/eab101cb-f48c-45ad-afa8-df6d2cb9261e/proxymdres.jpg",
+      "sha256": "f2a818369166821c075812a95293f69f48ab5be3f64b61a96f7abc61af0a3051",
+      "fermiPixelsViewed": true,
+      "newtonPixelsPending": true
+    },
+    {
+      "index": 20,
+      "file": "assets\\timeline\\martins-cove-nps.jpg",
+      "source": {
+        "AltText": "Image of rocky landscape.",
+        "AssetBaseType": "File",
+        "AssetID": "b5cb96c9-50aa-48c3-b357-57a3400f2e79",
+        "AssetType": "Standard File",
+        "ConstraintsInformation": {
+          "Constraint": "Public domain",
+          "GrantingRights": "Unknown"
+        },
+        "Copyright": "public domain",
+        "Description": "Image of Martin's Cove",
+        "FileInfo": {
+          "Original": {
+            "Kind": "Original",
+            "FileType": "jpg",
+            "Size": 7968315,
+            "Width": 5184,
+            "Height": 3456
+          },
+          "ProxyHiRes": {
+            "Kind": "ProxyHiRes",
+            "FileType": "jpg",
+            "Size": 1311610,
+            "Width": 2592,
+            "Height": 1728
+          },
+          "ProxyMdRes": {
+            "Kind": "ProxyMdRes",
+            "FileType": "jpg",
+            "Size": 381984,
+            "Width": 1296,
+            "Height": 864
+          },
+          "ProxyLoRes": {
+            "Kind": "ProxyLoRes",
+            "FileType": "jpg",
+            "Size": 116610,
+            "Width": 648,
+            "Height": 432
+          },
+          "ThumbXLarge": {
+            "Kind": "ThumbXLarge",
+            "FileType": "png",
+            "Size": 93245,
+            "Width": 200,
+            "Height": 133
+          },
+          "ThumbLarge": {
+            "Kind": "ThumbLarge",
+            "FileType": "png",
+            "Size": 55008,
+            "Width": 135,
+            "Height": 90
+          },
+          "ThumbMedium": {
+            "Kind": "ThumbMedium",
+            "FileType": "png",
+            "Size": 40045,
+            "Width": 100,
+            "Height": 66
+          },
+          "ThumbSmall": {
+            "Kind": "ThumbSmall",
+            "FileType": "png",
+            "Size": 32259,
+            "Width": 75,
+            "Height": 50
+          }
+        },
+        "ImageCreateDate": {
+          "Date": "06/04/2013"
+        },
+        "ImageCreateDateTime": "06/04/2013 02:28:13 PM",
+        "Keywords": [
+          "CALI",
+          "MOPI",
+          "OREG",
+          "POEX"
+        ],
+        "NPSUnits": [
+          {
+            "Name": "California National Historic Trail",
+            "Type": "National Historic Trail",
+            "Code": "CALI"
+          }
+        ],
+        "PhotoCredit": "nps",
+        "PrimaryType": "image",
+        "Submitter": "serivera",
+        "SubType": "jpeg",
+        "Title": "Martin's Cove"
+      },
+      "download": "https://npgallery.nps.gov/GetAsset/b5cb96c9-50aa-48c3-b357-57a3400f2e79/proxymdres.jpg",
+      "sha256": "a1eb9dc56188caae8a41087b0eab472ed8f8b3760d9e18435d367e606ceb6771",
+      "fermiPixelsViewed": true,
+      "newtonPixelsPending": true
+    },
+    {
+      "index": 18,
+      "file": "assets\\timeline\\independence-rock-nps.jpg",
+      "source": {
+        "AltText": "Image of welcome sign and rock landscape.",
+        "AssetBaseType": "File",
+        "AssetID": "0b9b2cdf-d2fa-473a-9723-af88f3e87801",
+        "AssetType": "Standard File",
+        "ConstraintsInformation": {
+          "Constraint": "Public domain",
+          "GrantingRights": "Unknown"
+        },
+        "Description": "Image of Independence Rock State Historic Site",
+        "FileInfo": {
+          "Original": {
+            "Kind": "Original",
+            "FileType": "jpg",
+            "Size": 917153,
+            "Width": 2560,
+            "Height": 1704
+          },
+          "ProxyMdRes": {
+            "Kind": "ProxyMdRes",
+            "FileType": "jpg",
+            "Size": 199076,
+            "Width": 1000,
+            "Height": 665
+          },
+          "ProxyLoRes": {
+            "Kind": "ProxyLoRes",
+            "FileType": "jpg",
+            "Size": 63543,
+            "Width": 500,
+            "Height": 332
+          },
+          "ThumbXLarge": {
+            "Kind": "ThumbXLarge",
+            "FileType": "png",
+            "Size": 89461,
+            "Width": 200,
+            "Height": 133
+          },
+          "ThumbLarge": {
+            "Kind": "ThumbLarge",
+            "FileType": "png",
+            "Size": 47533,
+            "Width": 135,
+            "Height": 89
+          },
+          "ThumbMedium": {
+            "Kind": "ThumbMedium",
+            "FileType": "png",
+            "Size": 32148,
+            "Width": 100,
+            "Height": 66
+          },
+          "ThumbSmall": {
+            "Kind": "ThumbSmall",
+            "FileType": "png",
+            "Size": 23941,
+            "Width": 75,
+            "Height": 49
+          }
+        },
+        "ImageCreateDate": {
+          "Date": "05/27/2004"
+        },
+        "ImageCreateDateTime": "05/27/2004 02:43:06 PM",
+        "Keywords": [
+          "CALI"
+        ],
+        "NPSUnits": [
+          {
+            "Name": "California National Historic Trail",
+            "Type": "National Historic Trail",
+            "Code": "CALI"
+          }
+        ],
+        "PhotoCredit": "NPS/Lee Kreutzer",
+        "PrimaryType": "image",
+        "Submitter": "serivera",
+        "SubType": "jpeg",
+        "Title": "Independence Rock State Historic Site"
+      },
+      "download": "https://npgallery.nps.gov/GetAsset/0b9b2cdf-d2fa-473a-9723-af88f3e87801/proxymdres.jpg",
+      "sha256": "1318c66e58c91085623e17ba9441c8b452efe92ad06c376258b4c95e116ea24b",
+      "fermiPixelsViewed": true,
+      "newtonPixelsPending": true
+    },
+    {
+      "index": 15,
+      "file": "assets\\timeline\\fort-laramie-nps.jpg",
+      "source": {
+        "AltText": "Image of historic buildings.",
+        "AssetBaseType": "File",
+        "AssetID": "87ecb685-4aa2-475d-a7ce-2fb0388ec03e",
+        "AssetType": "Standard File",
+        "ConstraintsInformation": {
+          "Constraint": "Public domain",
+          "GrantingRights": "Unknown"
+        },
+        "FileInfo": {
+          "Original": {
+            "Kind": "Original",
+            "FileType": "jpg",
+            "Size": 3811189,
+            "Width": 2592,
+            "Height": 1944
+          },
+          "ProxyMdRes": {
+            "Kind": "ProxyMdRes",
+            "FileType": "jpg",
+            "Size": 243617,
+            "Width": 1000,
+            "Height": 750
+          },
+          "ProxyLoRes": {
+            "Kind": "ProxyLoRes",
+            "FileType": "jpg",
+            "Size": 86584,
+            "Width": 500,
+            "Height": 375
+          },
+          "ThumbXLarge": {
+            "Kind": "ThumbXLarge",
+            "FileType": "png",
+            "Size": 113182,
+            "Width": 200,
+            "Height": 150
+          },
+          "ThumbLarge": {
+            "Kind": "ThumbLarge",
+            "FileType": "png",
+            "Size": 73296,
+            "Width": 135,
+            "Height": 101
+          },
+          "ThumbMedium": {
+            "Kind": "ThumbMedium",
+            "FileType": "png",
+            "Size": 58210,
+            "Width": 100,
+            "Height": 75
+          },
+          "ThumbSmall": {
+            "Kind": "ThumbSmall",
+            "FileType": "png",
+            "Size": 49967,
+            "Width": 75,
+            "Height": 56
+          }
+        },
+        "ImageCreateDate": {
+          "Date": "09/12/2006"
+        },
+        "ImageCreateDateTime": "09/12/2006 01:28:57 PM",
+        "NPSUnits": [
+          {
+            "Name": "California National Historic Trail",
+            "Type": "National Historic Trail",
+            "Code": "CALI"
+          }
+        ],
+        "PrimaryType": "image",
+        "Submitter": "serivera",
+        "SubType": "jpeg",
+        "Title": "Fort Laramie National Historic Site"
+      },
+      "download": "https://npgallery.nps.gov/GetAsset/87ecb685-4aa2-475d-a7ce-2fb0388ec03e/proxymdres.jpg",
+      "sha256": "e50af61e3f952c6847cb5da52d2440b1aea12a1da8de88ccaba102855f2ea3b9",
+      "fermiPixelsViewed": true,
+      "newtonPixelsPending": true
+    },
+    {
+      "index": 12,
+      "file": "assets\\timeline\\ash-hollow-nps.jpg",
+      "source": {
+        "AltText": "Image of wagon ruts and field.",
+        "AssetBaseType": "File",
+        "AssetID": "d725282b-2c48-4932-b6e3-2f5afbcdf371",
+        "AssetType": "Standard File",
+        "ConstraintsInformation": {
+          "Constraint": "Public domain",
+          "GrantingRights": "Unknown"
+        },
+        "Copyright": "public domain",
+        "Description": "Ash Hollow descent ruts, view from bottom",
+        "FileInfo": {
+          "Original": {
+            "Kind": "Original",
+            "FileType": "jpg",
+            "Size": 2627953,
+            "Width": 3264,
+            "Height": 2448
+          },
+          "ProxyHiRes": {
+            "Kind": "ProxyHiRes",
+            "FileType": "jpg",
+            "Size": 1141661,
+            "Width": 2000,
+            "Height": 1500
+          },
+          "ProxyMdRes": {
+            "Kind": "ProxyMdRes",
+            "FileType": "jpg",
+            "Size": 312549,
+            "Width": 1000,
+            "Height": 750
+          },
+          "ProxyLoRes": {
+            "Kind": "ProxyLoRes",
+            "FileType": "jpg",
+            "Size": 89723,
+            "Width": 500,
+            "Height": 375
+          },
+          "ThumbXLarge": {
+            "Kind": "ThumbXLarge",
+            "FileType": "png",
+            "Size": 93236,
+            "Width": 200,
+            "Height": 150
+          },
+          "ThumbLarge": {
+            "Kind": "ThumbLarge",
+            "FileType": "png",
+            "Size": 52788,
+            "Width": 135,
+            "Height": 101
+          },
+          "ThumbMedium": {
+            "Kind": "ThumbMedium",
+            "FileType": "png",
+            "Size": 37613,
+            "Width": 100,
+            "Height": 75
+          },
+          "ThumbSmall": {
+            "Kind": "ThumbSmall",
+            "FileType": "png",
+            "Size": 29403,
+            "Width": 75,
+            "Height": 56
+          }
+        },
+        "ImageCreateDate": {
+          "Date": "10/20/2005"
+        },
+        "ImageCreateDateTime": "10/20/2005 08:49:27 AM",
+        "Keywords": [
+          "cali",
+          "oreg",
+          "poex",
+          "trail trace"
+        ],
+        "NPSUnits": [
+          {
+            "Name": "California National Historic Trail",
+            "Type": "National Historic Trail",
+            "Code": "CALI"
+          }
+        ],
+        "PhotoCredit": "nps",
+        "PrimaryType": "image",
+        "Submitter": "serivera",
+        "SubType": "jpeg",
+        "Title": "Ash Hollow State Park"
+      },
+      "download": "https://npgallery.nps.gov/GetAsset/d725282b-2c48-4932-b6e3-2f5afbcdf371/proxymdres.jpg",
+      "sha256": "18ca3f238ea54a0533f6a8298c2d5d77599c9fefe13eea1f7f2042b7009da698",
+      "fermiPixelsViewed": true,
+      "newtonPixelsPending": true
+    },
+    {
+      "index": 13,
+      "file": "assets\\timeline\\chimney-rock-nps.jpg",
+      "source": {
+        "AltText": "Image of Chimney Rock",
+        "AssetBaseType": "File",
+        "AssetID": "282d8078-ebb5-402d-bea7-63e7c51208a9",
+        "AssetType": "Standard File",
+        "ConstraintsInformation": {
+          "Constraint": "Public domain",
+          "GrantingRights": "Unknown"
+        },
+        "Description": "Image of Chimney Rock National Historic Site",
+        "FileInfo": {
+          "Original": {
+            "Kind": "Original",
+            "FileType": "jpg",
+            "Size": 585499,
+            "Width": 2560,
+            "Height": 1704
+          },
+          "ProxyMdRes": {
+            "Kind": "ProxyMdRes",
+            "FileType": "jpg",
+            "Size": 234661,
+            "Width": 1000,
+            "Height": 665
+          },
+          "ProxyLoRes": {
+            "Kind": "ProxyLoRes",
+            "FileType": "jpg",
+            "Size": 77166,
+            "Width": 500,
+            "Height": 332
+          },
+          "ThumbXLarge": {
+            "Kind": "ThumbXLarge",
+            "FileType": "png",
+            "Size": 57367,
+            "Width": 200,
+            "Height": 133
+          },
+          "ThumbLarge": {
+            "Kind": "ThumbLarge",
+            "FileType": "png",
+            "Size": 29913,
+            "Width": 135,
+            "Height": 89
+          },
+          "ThumbMedium": {
+            "Kind": "ThumbMedium",
+            "FileType": "png",
+            "Size": 19701,
+            "Width": 100,
+            "Height": 66
+          },
+          "ThumbSmall": {
+            "Kind": "ThumbSmall",
+            "FileType": "png",
+            "Size": 14045,
+            "Width": 75,
+            "Height": 49
+          }
+        },
+        "ImageCreateDate": {
+          "Date": "08/07/2007"
+        },
+        "ImageCreateDateTime": "08/07/2007 10:12:10 AM",
+        "Keywords": [
+          "CALI"
+        ],
+        "NPSUnits": [
+          {
+            "Name": "California National Historic Trail",
+            "Type": "National Historic Trail",
+            "Code": "CALI"
+          }
+        ],
+        "PrimaryType": "image",
+        "Submitter": "serivera",
+        "SubType": "jpeg",
+        "Title": "Chimney Rock National Historic Site"
+      },
+      "download": "https://npgallery.nps.gov/GetAsset/282d8078-ebb5-402d-bea7-63e7c51208a9/proxymdres.jpg",
+      "sha256": "ddcdc3c6eb6bced7a68bb5e294e48a185067ad9b9e5dcf2c30dfe96116b80e9e",
+      "fermiPixelsViewed": true,
+      "newtonPixelsPending": true
+    },
+    {
+      "index": 7,
+      "file": "assets\\timeline\\elkhorn-crossing-nps.jpg",
+      "source": {
+        "AltText": "B-6. Elkhorn Ferry Crossing (Elkhorn Crossing State Recreation Area, 252nd Street & Bennington Road) on the California and Mormon Pioneer National Historic Trails (2004). ",
+        "AssetBaseType": "File",
+        "AssetID": "c8978772-bf73-4f0e-9452-ba829c8513dc",
+        "AssetType": "Standard File",
+        "Brandings": [
+          {
+            "Name": "MAIN"
+          }
+        ],
+        "Comment": "ATR-Nebraska and Northeastern Colorado-B-6",
+        "ConstraintsInformation": {
+          "Constraint": "Public domain",
+          "GrantingRights": "Unknown"
+        },
+        "Contacts": [
+          {
+            "Organization": "National Trails Intermountain Region",
+            "Address": "National Trails Intermountain Region PO Box 728 Santa Fe, NM 87504-0728",
+            "Email": "lodi_administration@nps.gov"
+          }
+        ],
+        "Contributors": [
+          {}
+        ],
+        "ImageCreateDate": {
+          "Date": "09/29/2004"
+        },
+        "ImageCreateDateTime": "09/29/2004 12:00:00 AM",
+        "Keywords": [
+          "elkhorn ferry crossing",
+          "cali",
+          "california national historic trail",
+          "mopi",
+          "mormon pioneer national historic trail"
+        ],
+        "NPSUnits": [
+          {
+            "Name": "California National Historic Trail",
+            "Type": "National Historic Trail",
+            "Code": "CALI"
+          },
+          {
+            "Name": "Mormon Pioneer National Historic Trail",
+            "Type": "National Historic Trail",
+            "Code": "MOPI"
+          }
+        ],
+        "PhotoCredit": "NPS",
+        "PrimaryType": "image",
+        "Rating": 3,
+        "RelatedCollections": [
+          "National Historic Trails Auto Tour Route Interpretive Guide Image Collection Nebraska and Northeastern Colorado",
+          "National Historic Trails Auto Tour Route Interpretive Guide Image Collection"
+        ],
+        "ResourceFormat": "jpg",
+        "ResourceType": "Image",
+        "Submitter": "jcannella",
+        "SubType": "jpeg",
+        "Title": "B-6. Elkhorn Ferry Crossing (Elkhorn Crossing State Recreation Area, 252nd Street & Bennington Road) on the California and Mormon Pioneer National Historic Trails (2004)"
+      },
+      "download": "https://www.nps.gov/npgallery/GetAsset/c8978772-bf73-4f0e-9452-ba829c8513dc/proxymdres.jpg",
+      "sha256": "a53f7ca59a1121277adb6ce5e74766c81e9ed4f6de1a855821d267fd19680d84",
+      "fermiPixelsViewed": true,
+      "newtonPixelsPending": true
+    },
+    {
+      "index": 17,
+      "file": "assets\\timeline\\red-buttes-nps.jpg",
+      "source": {
+        "AltText": "B-3. Red Buttes Crossing/Bessemer Bend (south of Casper) on the California, Mormon Pioneer, Oregon, and Pony Express National Historic Trails (2006). ",
+        "AssetBaseType": "File",
+        "AssetID": "a1fdf41c-aaec-4808-bb8b-c1f4878d889d",
+        "AssetType": "Standard File",
+        "Brandings": [
+          {
+            "Name": "MAIN"
+          }
+        ],
+        "Comment": "ATR-Across Wyoming-B-3",
+        "ConstraintsInformation": {
+          "Constraint": "Public domain",
+          "GrantingRights": "Unknown"
+        },
+        "Contacts": [
+          {
+            "Organization": "National Trails Intermountain Region",
+            "Address": "National Trails Intermountain Region PO Box 728 Santa Fe, NM 87504-0728",
+            "Email": "lodi_administration@nps.gov"
+          }
+        ],
+        "Contributors": [
+          {}
+        ],
+        "ImageCreateDate": {
+          "Date": "09/13/2006"
+        },
+        "ImageCreateDateTime": "09/13/2006 12:00:00 AM",
+        "Keywords": [
+          "red buttes crossing/bessemer bend",
+          "cali",
+          "california national historic trail",
+          "mopi",
+          "mormon pioneer national historic trail",
+          "oreg",
+          "oregon national historic trail",
+          "poex",
+          "pony express national historic trail"
+        ],
+        "NPSUnits": [
+          {
+            "Name": "California National Historic Trail",
+            "Type": "National Historic Trail",
+            "Code": "CALI"
+          },
+          {
+            "Name": "Mormon Pioneer National Historic Trail",
+            "Type": "National Historic Trail",
+            "Code": "MOPI"
+          },
+          {
+            "Name": "Oregon National Historic Trail",
+            "Type": "National Historic Trail",
+            "Code": "OREG"
+          },
+          {
+            "Name": "Pony Express National Historic Trail",
+            "Type": "National Historic Trail",
+            "Code": "POEX"
+          }
+        ],
+        "PhotoCredit": "NPS",
+        "PrimaryType": "image",
+        "Rating": 3,
+        "RelatedCollections": [
+          "National Historic Trails Auto Tour Route Interpretive Guide Image Collection Across Wyoming",
+          "National Historic Trails Auto Tour Route Interpretive Guide Image Collection"
+        ],
+        "ResourceFormat": "jpg",
+        "ResourceType": "Image",
+        "Submitter": "jcannella",
+        "SubType": "jpeg",
+        "Title": "B-3. Red Buttes Crossing/Bessemer Bend (south of Casper) on the California, Mormon Pioneer, Oregon, and Pony Express National Historic Trails (2006)"
+      },
+      "download": "https://www.nps.gov/npgallery/GetAsset/a1fdf41c-aaec-4808-bb8b-c1f4878d889d/proxymdres.jpg",
+      "sha256": "943e4f3added78d135bf82387997029562a6acde35bd36ed144ccbab3159996b",
+      "fermiPixelsViewed": true,
+      "newtonPixelsPending": true
+    },
+    {
+      "index": 21,
+      "file": "assets\\timeline\\sixth-crossing-nps.jpg",
+      "source": {
+        "AltText": "B-11. Willie Handcart Historic Site (Sweetwater Junction, WY) on the California, Mormon Pioneer, Oregon, and Pony Express National Historic Trails (2006). ",
+        "AssetBaseType": "File",
+        "AssetID": "07e2fc96-0a1e-4972-82ef-f70f8ced5a5d",
+        "AssetType": "Standard File",
+        "Brandings": [
+          {
+            "Name": "MAIN"
+          }
+        ],
+        "Comment": "ATR-Across Wyoming-B-11",
+        "ConstraintsInformation": {
+          "Constraint": "Public domain",
+          "GrantingRights": "Unknown"
+        },
+        "Contacts": [
+          {
+            "Organization": "National Trails Intermountain Region",
+            "Address": "National Trails Intermountain Region PO Box 728 Santa Fe, NM 87504-0728",
+            "Email": "lodi_administration@nps.gov"
+          }
+        ],
+        "Contributors": [
+          {}
+        ],
+        "ImageCreateDate": {
+          "Date": "09/14/2006"
+        },
+        "ImageCreateDateTime": "09/14/2006 12:00:00 AM",
+        "Keywords": [
+          "willie handcart historic site",
+          "cali",
+          "california national historic trail",
+          "mopi",
+          "mormon pioneer national historic trail",
+          "oreg",
+          "oregon national historic trail",
+          "poex",
+          "pony express national historic trail"
+        ],
+        "NPSUnits": [
+          {
+            "Name": "California National Historic Trail",
+            "Type": "National Historic Trail",
+            "Code": "CALI"
+          },
+          {
+            "Name": "Mormon Pioneer National Historic Trail",
+            "Type": "National Historic Trail",
+            "Code": "MOPI"
+          },
+          {
+            "Name": "Oregon National Historic Trail",
+            "Type": "National Historic Trail",
+            "Code": "OREG"
+          },
+          {
+            "Name": "Pony Express National Historic Trail",
+            "Type": "National Historic Trail",
+            "Code": "POEX"
+          }
+        ],
+        "PhotoCredit": "NPS",
+        "PrimaryType": "image",
+        "Rating": 3,
+        "RelatedCollections": [
+          "National Historic Trails Auto Tour Route Interpretive Guide Image Collection Across Wyoming",
+          "National Historic Trails Auto Tour Route Interpretive Guide Image Collection"
+        ],
+        "ResourceFormat": "jpg",
+        "ResourceType": "Image",
+        "Submitter": "jcannella",
+        "SubType": "jpeg",
+        "Title": "B-11. Willie Handcart Historic Site (Sweetwater Junction, WY) on the California, Mormon Pioneer, Oregon, and Pony Express National Historic Trails (2006)"
+      },
+      "download": "https://www.nps.gov/npgallery/GetAsset/07e2fc96-0a1e-4972-82ef-f70f8ced5a5d/proxymdres.jpg",
+      "sha256": "56ae01038f7f4fc3db65530e1091067fd8cd646729665ab197abec8ad631233b",
+      "fermiPixelsViewed": true,
+      "newtonPixelsPending": true
+    },
+    {
+      "index": 25,
+      "file": "assets\\timeline\\green-river-ferry-nps.jpg",
+      "source": {
+        "AltText": "B-20. Lombard Ferry/Mormon Ferry (Seedskadee National Wildlife Refuge) on the California, Mormon Pioneer, and Oregon National Historic Trails (2003). ",
+        "AssetBaseType": "File",
+        "AssetID": "2e585715-fe81-47cc-9ed5-4ee9b45708a6",
+        "AssetType": "Standard File",
+        "Brandings": [
+          {
+            "Name": "MAIN"
+          }
+        ],
+        "Comment": "ATR-Across Wyoming-B-20",
+        "ConstraintsInformation": {
+          "Constraint": "Public domain",
+          "GrantingRights": "Unknown"
+        },
+        "Contacts": [
+          {
+            "Organization": "National Trails Intermountain Region",
+            "Address": "National Trails Intermountain Region PO Box 728 Santa Fe, NM 87504-0728",
+            "Email": "lodi_administration@nps.gov"
+          }
+        ],
+        "Contributors": [
+          {}
+        ],
+        "ImageCreateDate": {
+          "Date": "05/14/2003"
+        },
+        "ImageCreateDateTime": "05/14/2003 12:00:00 AM",
+        "Keywords": [
+          "lombard ferry/mormon ferry",
+          "cali",
+          "california national historic trail",
+          "mopi",
+          "mormon pioneer national historic trail",
+          "oreg",
+          "oregon national historic trail"
+        ],
+        "NPSUnits": [
+          {
+            "Name": "California National Historic Trail",
+            "Type": "National Historic Trail",
+            "Code": "CALI"
+          },
+          {
+            "Name": "Mormon Pioneer National Historic Trail",
+            "Type": "National Historic Trail",
+            "Code": "MOPI"
+          },
+          {
+            "Name": "Oregon National Historic Trail",
+            "Type": "National Historic Trail",
+            "Code": "OREG"
+          }
+        ],
+        "PhotoCredit": "NPS",
+        "PrimaryType": "image",
+        "Rating": 3,
+        "RelatedCollections": [
+          "National Historic Trails Auto Tour Route Interpretive Guide Image Collection Across Wyoming",
+          "National Historic Trails Auto Tour Route Interpretive Guide Image Collection"
+        ],
+        "ResourceFormat": "jpg",
+        "ResourceType": "Image",
+        "Submitter": "jcannella",
+        "SubType": "jpeg",
+        "Title": "B-20. Lombard Ferry/Mormon Ferry (Seedskadee National Wildlife Refuge) on the California, Mormon Pioneer, and Oregon National Historic Trails (2003)"
+      },
+      "download": "https://www.nps.gov/npgallery/GetAsset/2e585715-fe81-47cc-9ed5-4ee9b45708a6/proxymdres.jpg",
+      "sha256": "82d8319c7465dfbb5c974c51539e77f8cb3c20e72b5d4b927f3b8cd28a0c90aa",
+      "fermiPixelsViewed": true,
+      "newtonPixelsPending": true
+    },
+    {
+      "index": 29,
+      "file": "assets\\timeline\\echo-canyon-nps.jpg",
+      "source": {
+        "AltText": "A-2. Echo Canyon Road on the California, Mormon Pioneer, and Pony Express National Historic Trails (2008). ",
+        "AssetBaseType": "File",
+        "AssetID": "26105b91-0b5f-4073-8e99-64a10bc6e728",
+        "AssetType": "Standard File",
+        "Brandings": [
+          {
+            "Name": "MAIN"
+          }
+        ],
+        "Comment": "ATR-Utah-Crossroads of the West-A-2",
+        "ConstraintsInformation": {
+          "Constraint": "Public domain",
+          "GrantingRights": "Unknown"
+        },
+        "Contacts": [
+          {
+            "Organization": "National Trails Intermountain Region",
+            "Address": "National Trails Intermountain Region PO Box 728 Santa Fe, NM 87504-0728",
+            "Email": "lodi_administration@nps.gov"
+          }
+        ],
+        "Contributors": [
+          {}
+        ],
+        "ImageCreateDate": {
+          "Date": "07/28/2008"
+        },
+        "ImageCreateDateTime": "07/28/2008 12:00:00 AM",
+        "Keywords": [
+          "echo canyon road",
+          "cali",
+          "california national historic trail",
+          "mopi",
+          "mormon pioneer national historic trail",
+          "poex",
+          "pony express national historic trail"
+        ],
+        "NPSUnits": [
+          {
+            "Name": "California National Historic Trail",
+            "Type": "National Historic Trail",
+            "Code": "CALI"
+          },
+          {
+            "Name": "Mormon Pioneer National Historic Trail",
+            "Type": "National Historic Trail",
+            "Code": "MOPI"
+          },
+          {
+            "Name": "Pony Express National Historic Trail",
+            "Type": "National Historic Trail",
+            "Code": "POEX"
+          }
+        ],
+        "PhotoCredit": "NPS",
+        "PrimaryType": "image",
+        "Rating": 3,
+        "RelatedCollections": [
+          "National Historic Trails Auto Tour Route Interpretive Guide Image Collection Utah – Crossroads of the West",
+          "National Historic Trails Auto Tour Route Interpretive Guide Image Collection"
+        ],
+        "ResourceFormat": "jpg",
+        "ResourceType": "Image",
+        "Submitter": "jcannella",
+        "SubType": "jpeg",
+        "Title": "A-2. Echo Canyon Road on the California, Mormon Pioneer, and Pony Express National Historic Trails (2008)"
+      },
+      "download": "https://www.nps.gov/npgallery/GetAsset/26105b91-0b5f-4073-8e99-64a10bc6e728/proxymdres.jpg",
+      "sha256": "28b50178224ad2d5969a60ab4fa64fe6d14564d34f201d5780358ad3a82d834f",
+      "fermiPixelsViewed": true,
+      "newtonPixelsPending": true
+    },
+    {
+      "index": 30,
+      "file": "assets\\timeline\\big-mountain-nps.jpg",
+      "source": {
+        "AltText": "A-17. Big Mountain Pass on the California and Mormon Pioneer National Historic Trails (2008). ",
+        "AssetBaseType": "File",
+        "AssetID": "82a6113c-9ece-418d-8402-1715a4475a38",
+        "AssetType": "Standard File",
+        "Brandings": [
+          {
+            "Name": "MAIN"
+          }
+        ],
+        "Comment": "ATR-Utah-Crossroads of the West-A-17",
+        "ConstraintsInformation": {
+          "Constraint": "Public domain",
+          "GrantingRights": "Unknown"
+        },
+        "Contacts": [
+          {
+            "Organization": "National Trails Intermountain Region",
+            "Address": "National Trails Intermountain Region PO Box 728 Santa Fe, NM 87504-0728",
+            "Email": "lodi_administration@nps.gov"
+          }
+        ],
+        "Contributors": [
+          {}
+        ],
+        "ImageCreateDate": {
+          "Date": "07/28/2008"
+        },
+        "ImageCreateDateTime": "07/28/2008 12:00:00 AM",
+        "Keywords": [
+          "big mountain pass",
+          "cali",
+          "california national historic trail",
+          "mopi",
+          "mormon pioneer national historic trail"
+        ],
+        "NPSUnits": [
+          {
+            "Name": "California National Historic Trail",
+            "Type": "National Historic Trail",
+            "Code": "CALI"
+          },
+          {
+            "Name": "Mormon Pioneer National Historic Trail",
+            "Type": "National Historic Trail",
+            "Code": "MOPI"
+          }
+        ],
+        "PhotoCredit": "NPS",
+        "PrimaryType": "image",
+        "Rating": 3,
+        "RelatedCollections": [
+          "National Historic Trails Auto Tour Route Interpretive Guide Image Collection Utah – Crossroads of the West",
+          "National Historic Trails Auto Tour Route Interpretive Guide Image Collection"
+        ],
+        "ResourceFormat": "jpg",
+        "ResourceType": "Image",
+        "Submitter": "jcannella",
+        "SubType": "jpeg",
+        "Title": "A-17. Big Mountain Pass on the California and Mormon Pioneer National Historic Trails (2008)"
+      },
+      "download": "https://www.nps.gov/npgallery/GetAsset/82a6113c-9ece-418d-8402-1715a4475a38/proxymdres.jpg",
+      "sha256": "b06626b5c5b5f615cb3b05a2c979a3af367e65fd3110f0a49b78e449cf52f0f1",
+      "fermiPixelsViewed": true,
+      "newtonPixelsPending": true
+    },
+    {
+      "index": 31,
+      "file": "assets\\timeline\\emigration-road-nps.jpg",
+      "source": {
+        "AltText": "A-21. Little Mountain Summit (Emigration Canyon Road) on the California and Mormon Pioneer National Historic Trails (2008). ",
+        "AssetBaseType": "File",
+        "AssetID": "7cd060ef-fd47-4f68-91ec-f8afb44ebbfa",
+        "AssetType": "Standard File",
+        "Brandings": [
+          {
+            "Name": "MAIN"
+          }
+        ],
+        "Comment": "ATR-Utah-Crossroads of the West-A-21",
+        "ConstraintsInformation": {
+          "Constraint": "Public domain",
+          "GrantingRights": "Unknown"
+        },
+        "Contacts": [
+          {
+            "Organization": "National Trails Intermountain Region",
+            "Address": "National Trails Intermountain Region PO Box 728 Santa Fe, NM 87504-0728",
+            "Email": "lodi_administration@nps.gov"
+          }
+        ],
+        "Contributors": [
+          {}
+        ],
+        "ImageCreateDate": {
+          "Date": "07/28/2008"
+        },
+        "ImageCreateDateTime": "07/28/2008 12:00:00 AM",
+        "Keywords": [
+          "little mountain summit",
+          "cali",
+          "california national historic trail",
+          "mopi",
+          "mormon pioneer national historic trail"
+        ],
+        "NPSUnits": [
+          {
+            "Name": "California National Historic Trail",
+            "Type": "National Historic Trail",
+            "Code": "CALI"
+          },
+          {
+            "Name": "Mormon Pioneer National Historic Trail",
+            "Type": "National Historic Trail",
+            "Code": "MOPI"
+          }
+        ],
+        "PhotoCredit": "NPS",
+        "PrimaryType": "image",
+        "Rating": 3,
+        "RelatedCollections": [
+          "National Historic Trails Auto Tour Route Interpretive Guide Image Collection Utah – Crossroads of the West",
+          "National Historic Trails Auto Tour Route Interpretive Guide Image Collection"
+        ],
+        "ResourceFormat": "jpg",
+        "ResourceType": "Image",
+        "Submitter": "jcannella",
+        "SubType": "jpeg",
+        "Title": "A-21. Little Mountain Summit (Emigration Canyon Road) on the California and Mormon Pioneer National Historic Trails (2008)"
+      },
+      "download": "https://www.nps.gov/npgallery/GetAsset/7cd060ef-fd47-4f68-91ec-f8afb44ebbfa/proxymdres.jpg",
+      "sha256": "3b8eeb64f752521a804ecf378b331e0ffe44f3b0ef02baaa06c1b7eb59a40a92",
+      "fermiPixelsViewed": true,
+      "newtonPixelsPending": true
+    },
+    {
+      "index": 8,
+      "file": "assets\\timeline\\genoa-ruts-nps.jpg",
+      "source": {
+        "AltText": "B-8. Genoa Ruts (1.5 miles southeast of Genoa) on the Mormon Pioneer National Historic Trail (2005). ",
+        "AssetBaseType": "File",
+        "AssetID": "6d5632af-2ed0-4254-98de-e044b4861d1e",
+        "AssetType": "Standard File",
+        "Brandings": [
+          {
+            "Name": "MAIN"
+          }
+        ],
+        "Comment": "ATR-Nebraska and Northeastern Colorado-B-8",
+        "ConstraintsInformation": {
+          "Constraint": "Public domain",
+          "GrantingRights": "Unknown"
+        },
+        "Contacts": [
+          {
+            "Organization": "National Trails Intermountain Region",
+            "Address": "National Trails Intermountain Region PO Box 728 Santa Fe, NM 87504-0728",
+            "Email": "lodi_administration@nps.gov"
+          }
+        ],
+        "Contributors": [
+          {}
+        ],
+        "ImageCreateDate": {
+          "Date": "10/22/2005"
+        },
+        "ImageCreateDateTime": "10/22/2005 12:00:00 AM",
+        "Keywords": [
+          "genoa ruts",
+          "mopi",
+          "mormon pioneer national historic trail"
+        ],
+        "NPSUnits": [
+          {
+            "Name": "Mormon Pioneer National Historic Trail",
+            "Type": "National Historic Trail",
+            "Code": "MOPI"
+          }
+        ],
+        "PhotoCredit": "NPS",
+        "PrimaryType": "image",
+        "Rating": 3,
+        "RelatedCollections": [
+          "National Historic Trails Auto Tour Route Interpretive Guide Image Collection Nebraska and Northeastern Colorado",
+          "National Historic Trails Auto Tour Route Interpretive Guide Image Collection"
+        ],
+        "ResourceFormat": "jpg",
+        "ResourceType": "Image",
+        "Submitter": "jcannella",
+        "SubType": "jpeg",
+        "Title": "B-8. Genoa Ruts (1.5 miles southeast of Genoa) on the Mormon Pioneer National Historic Trail (2005)"
+      },
+      "download": "https://www.nps.gov/npgallery/GetAsset/6d5632af-2ed0-4254-98de-e044b4861d1e/proxymdres.jpg",
+      "sha256": "3b51ad0589e55fe84e021a28acb93834ca9524b2860715ce79c1f362dced0551",
+      "fermiPixelsViewed": true,
+      "newtonPixelsPending": true
+    },
+    {
+      "index": 10,
+      "file": "assets\\timeline\\fort-kearny-nps.jpg",
+      "source": {
+        "AltText": "Ft Kearny was established by the federal government.",
+        "AssetBaseType": "File",
+        "AssetID": "658de764-155d-451f-677d-0ecf872974a0",
+        "AssetType": "Standard File",
+        "ConstraintsInformation": {
+          "Constraint": "Public domain",
+          "GrantingRights": "Full"
+        },
+        "Description": "Ft Kearny was established by the fededral government after outcries from newspapers demanding protection for emigrants traveling the Oregon & California trails.",
+        "FileInfo": {
+          "Original": {
+            "Kind": "Original",
+            "FileType": "jpg",
+            "Size": 1356448,
+            "Width": 1632,
+            "Height": 1224
+          },
+          "ProxyHiRes": {
+            "Kind": "ProxyHiRes",
+            "FileType": "jpg",
+            "Size": 332368,
+            "Width": 1000,
+            "Height": 750
+          },
+          "ProxyLoRes": {
+            "Kind": "ProxyLoRes",
+            "FileType": "jpg",
+            "Size": 87505,
+            "Width": 500,
+            "Height": 375
+          },
+          "ThumbXLarge": {
+            "Kind": "ThumbXLarge",
+            "FileType": "png",
+            "Size": 86871,
+            "Width": 200,
+            "Height": 150
+          },
+          "ThumbLarge": {
+            "Kind": "ThumbLarge",
+            "FileType": "png",
+            "Size": 43856,
+            "Width": 135,
+            "Height": 101
+          },
+          "ThumbMedium": {
+            "Kind": "ThumbMedium",
+            "FileType": "png",
+            "Size": 27867,
+            "Width": 100,
+            "Height": 75
+          },
+          "ThumbSmall": {
+            "Kind": "ThumbSmall",
+            "FileType": "png",
+            "Size": 18883,
+            "Width": 75,
+            "Height": 56
+          }
+        },
+        "ImageCreateDate": {
+          "Text": "7/16/2010 12:18:42 PM"
+        },
+        "Keywords": [
+          "california national trail",
+          "california",
+          "historic trails",
+          "national park service",
+          "nebraska",
+          "nps centennial"
+        ],
+        "NPSUnits": [
+          {
+            "Name": "California National Historic Trail",
+            "Type": "National Historic Trail",
+            "Code": "CALI"
+          }
+        ],
+        "PhotoCredit": ".",
+        "PrimaryType": "image",
+        "Submitter": "gglitten",
+        "SubType": "jpeg",
+        "Title": "Fort Kearny"
+      },
+      "download": "https://www.nps.gov/npgallery/GetAsset/658de764-155d-451f-677d-0ecf872974a0/proxymdres.jpg",
+      "sha256": "4eac0bed0e37facf0a78ce4cadf6073f9074d001c739770139a8abecef6d8ca4",
+      "fermiPixelsViewed": true,
+      "newtonPixelsPending": true
+    }
+  ]
+}

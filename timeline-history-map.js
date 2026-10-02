@@ -7,7 +7,7 @@
   if(data.events.length!==api.events.length||data.events.some(function(r,i){return r.index!==i||r.expectedTitle!==api.events[i].title;})){
     status.textContent='Geographic context is unavailable. The complete event timeline remains usable.';return;
   }
-  var map=null,layers=[],indices=api.visibleIndices(),selected=null,groups=[],generation=0,tileLoaded=false,tileFailed=false,tileTimer=null;
+  var map=null,layers=[],indices=api.visibleIndices(),selected=null,groups=[],generation=0,filterGeneration=0,tileLoaded=false,tileFailed=false,tileTimer=null;
   function description(index){
     var record=data.events[index];summary.replaceChildren();
     var heading=document.createElement('strong');heading.textContent=api.events[index].title;summary.appendChild(heading);
@@ -15,18 +15,12 @@
     record.sources.forEach(function(url,i){var a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener noreferrer';a.textContent='Church location source'+(record.sources.length>1?' '+(i+1):'');summary.appendChild(a);});
   }
   function choose(index){if(indices.indexOf(index)<0)return;api.select(index);if(map)map.closePopup();}
-  function lowerChoices(title,eventIndices,captured){
+  function lowerChoices(title,eventIndices){
+    var filterCaptured=filterGeneration;
     var workspace=window.TimelineWorkspace;
     if(!workspace||typeof workspace.showChoices!=='function')return false;
-    var handled=workspace.showChoices(title,eventIndices.map(function(index){return {index:index,label:api.events[index].date+' \u2014 '+api.events[index].title};}),function(index){if(captured===generation)choose(index);});
+    var handled=workspace.showChoices(title,eventIndices.map(function(index){return {index:index,label:api.events[index].date+' \u2014 '+api.events[index].title};}),function(index){if(filterCaptured===filterGeneration&&eventIndices.indexOf(index)>=0)choose(index);});
     if(handled&&map)map.closePopup();return handled;
-  }
-  function chooser(title,eventIndices){
-    var captured=generation;
-    var box=document.createElement('div');box.className='history-map-choices';
-    var strong=document.createElement('strong');strong.textContent=title;box.appendChild(strong);
-    eventIndices.forEach(function(index){var button=document.createElement('button');button.type='button';button.dataset.historyEvent=index;button.textContent=api.events[index].date+' \u2014 '+api.events[index].title;button.addEventListener('click',function(){if(captured===generation)choose(index);});box.appendChild(button);});
-    return box;
   }
   function icon(group){return L.divIcon({className:'history-map-icon',html:'<span class="history-map-pin'+(group.indices.indexOf(selected)>=0?' is-selected':'')+'">'+group.indices.length+'<small>'+(group.indices.length===1?'event':'events')+'</small></span>',iconSize:[58,44],iconAnchor:[29,22]});}
   function draw(){
@@ -47,16 +41,14 @@
       var place=data.places[keys[0]],group={keys:keys,indices:eventIndices};groups.push(group);
       var captured=generation;
       var title=keys.length===1?place.label:keys.length+' nearby places';
-      var popup=chooser(title,eventIndices);
-      if(keys.length>1){var zoom=document.createElement('button');zoom.type='button';zoom.textContent='Zoom to these places';zoom.addEventListener('click',function(){if(captured!==generation)return;map.fitBounds(L.latLngBounds(keys.map(function(key){var p=data.places[key];return[p.lat,p.lng];})),{padding:[35,35],maxZoom:13});});popup.prepend(zoom);}
       var marker=L.marker([place.lat,place.lng],{icon:icon(group),keyboard:true,title:title+': '+eventIndices.length+' events; approximate context'});
-      marker.on('click',function(){if(captured!==generation)return;if(eventIndices.length===1){choose(eventIndices[0]);return;}if(lowerChoices(title,eventIndices,captured))return;L.popup({maxHeight:240,maxWidth:300}).setLatLng([place.lat,place.lng]).setContent(popup).openOn(map);});
+      marker.on('click',function(){if(captured!==generation)return;if(eventIndices.length===1){choose(eventIndices[0]);return;}lowerChoices(title,eventIndices);});
       marker.addTo(map);group.marker=marker;layers.push(marker);
     });
     // Regional extents remain visibly different from approximate place pins.
     var regionGroups={};
     indices.forEach(function(index){var r=data.events[index];if(r.kind==='region'){var key=r.region.label;(regionGroups[key]||(regionGroups[key]={region:r.region,indices:[]})).indices.push(index);}});
-    Object.keys(regionGroups).forEach(function(key){var g=regionGroups[key],box=L.rectangle(g.region.bounds,{color:'#b87d24',weight:2,dashArray:'5 5',fillOpacity:.09});var captured=generation,title=g.region.label+' \u2014 regional context';box.on('click',function(event){if(captured!==generation)return;if(g.indices.length===1){choose(g.indices[0]);return;}if(lowerChoices(title,g.indices,captured))return;L.popup({maxHeight:240,maxWidth:300}).setLatLng(event.latlng).setContent(chooser(title,g.indices)).openOn(map);});box.addTo(map);layers.push(box);});
+    Object.keys(regionGroups).forEach(function(key){var g=regionGroups[key],box=L.rectangle(g.region.bounds,{color:'#b87d24',weight:2,dashArray:'5 5',fillOpacity:.09});var captured=generation,title=g.region.label+' \u2014 regional context';box.on('click',function(event){if(captured!==generation)return;if(g.indices.length===1){choose(g.indices[0]);return;}lowerChoices(title,g.indices);});box.addTo(map);layers.push(box);});
     var worldwide=indices.filter(function(i){return data.events[i].kind==='worldwide';}).length;
     status.textContent=(tileFailed?'Map imagery is unavailable here. Geographic markers and event descriptions remain usable. ':'')+indices.length+' matching events. '+Object.keys(byPlace).length+' approximate places; '+Object.keys(regionGroups).length+' contextual regions; '+worldwide+' worldwide events without pins.';
   }
@@ -75,7 +67,7 @@
     if(points.length)map.fitBounds(L.latLngBounds(points),{padding:[24,24],maxZoom:8});else map.setView([20,0],2);
   }
   window.addEventListener('timeline:select',function(event){if(Number.isInteger(event.detail.index)&&data.events[event.detail.index])focus(event.detail.index);});
-  window.addEventListener('timeline:filter',function(event){indices=event.detail.indices.slice();if(indices.indexOf(selected)<0){selected=null;summary.textContent='Choose an event or a map location to explore its geographic context.';}draw();showMatching();});
+  window.addEventListener('timeline:filter',function(event){filterGeneration++;indices=event.detail.indices.slice();if(indices.indexOf(selected)<0){selected=null;summary.textContent='Choose an event or a map location to explore its geographic context.';}draw();showMatching();});
   document.getElementById('historyMapReset').addEventListener('click',showMatching);
   try{
     if(!window.L)throw new Error('Leaflet unavailable');
@@ -87,7 +79,9 @@
     map.on('zoomend',draw);
     draw();showMatching();
     canvas.addEventListener('timeline:map-resize',function(){map.invalidateSize({pan:false});});
+    canvas.addEventListener('timeline:map-interaction',function(event){['dragging','touchZoom','doubleClickZoom'].forEach(function(name){var handler=map[name];if(handler)handler[event.detail.enabled?'enable':'disable']();});});
     if(window.ResizeObserver)new ResizeObserver(function(){map.invalidateSize({pan:false});}).observe(canvas);
   }catch(error){canvas.hidden=true;document.getElementById('historyMapReset').hidden=true;status.textContent='The map could not load. Every event and its geographic explanation remain available in the timeline and event list.';}
+  if(Number.isInteger(api.selectedIndex))focus(api.selectedIndex);
   window.HistoryTimelineMap={select:choose,showMatching:showMatching,get visibleIndices(){return indices.slice();},get selectedIndex(){return selected;}};
 })();
