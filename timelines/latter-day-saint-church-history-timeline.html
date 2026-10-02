@@ -125,6 +125,7 @@ footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--hairline);col
 <link rel="stylesheet" href="../site-search.css?v=20260929-result-hitbox-1"><script src="../site-search.js?v=20260919-focused-answers-1" defer></script>
 <link rel="stylesheet" href="../site-header.css?v=20260926-toolbar-readability-1">
 <link rel="stylesheet" href="../timeline-experiences.css?v=20261002-menu-1">
+<link rel="stylesheet" href="../timeline-history-workspace.css?v=20261002-panes-1">
 </head>
 <body class="fc-site fc-timeline-experience">
 <nav class="nav" data-focuschrist-header="standard" aria-label="Primary navigation"><a href="../index.html" class="nav-logo">focusChrist</a><div class="nav-links"><span class="fc-nav-side fc-nav-side--before"><a href="../index.html">Home</a><a href="../ask.html">Ask (Chat)</a><a href="../answers.html">Answers Library</a><a href="../art.html">Art</a><a href="../missionary.html" data-focuschrist-primary-missionary="true">Mission</a></span><a class="fc-nav-atonement" href="../atonement.html" aria-label="Christ’s Atonement">Christ’s Atonement</a><span class="fc-nav-side fc-nav-side--after"><a href="../church-history.html" data-focuschrist-primary-history="true">History</a><a href="../pioneers.html">Pioneers</a><a href="../watch.html" data-focuschrist-primary-watch="true">Watch</a><a href="../timeline.html" data-focuschrist-primary-timeline="true" aria-current="page" class="active">Timeline</a><a href="../about.html">About</a></span></div><div class="hamburger-wrap"><a class="fc-search-trigger" data-site-search-trigger href="../search.html" aria-label="Search focusChrist"><span class="fc-search-icon" aria-hidden="true"></span><span class="fc-search-trigger-label">Search</span></a><span class="hamburger" onclick="toggleMenu()" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="hamburgerMenu"></span><div class="hamburger-menu" id="hamburgerMenu"><a href="../index.html">Home</a><a href="../ask.html">Ask (Chat)</a><a href="../answers.html">Answers Library</a><a href="../art.html">Art</a><a href="../pioneers.html">Pioneers</a><a href="../timeline.html" data-focuschrist-primary-timeline="true" aria-current="page" class="active">Timeline</a><a href="../about.html">About</a><hr><a href="https://www.churchofjesuschrist.org/?lang=eng" target="_blank" rel="noopener noreferrer">Church Website</a><a href="https://www.churchofjesuschrist.org/study?lang=eng&amp;platform=web" target="_blank" rel="noopener noreferrer">Gospel Library</a><a href="https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng" target="_blank" rel="noopener noreferrer">Come Follow Me</a><a href="https://www.churchofjesuschrist.org/temples?lang=eng" target="_blank" rel="noopener noreferrer">Temples</a><a href="https://www.churchofjesuschrist.org/welcome/our-history?lang=eng" target="_blank" rel="noopener noreferrer">Church History</a><a href="https://scriptures.byu.edu/" target="_blank" rel="noopener noreferrer">Citation Index</a><a href="https://www.churchofjesuschrist.org/tools?lang=eng&amp;activeTab=all" target="_blank" rel="noopener noreferrer">All Resources</a><hr><div class="menu-label">YouTube</div><a href="https://www.youtube.com/@theRisen636" target="_blank" rel="noopener noreferrer">@theRisen636</a></div></div></nav>
@@ -151,19 +152,27 @@ footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--hairline);col
     <p>Events are grouped into eight eras. Use the era buttons or search to jump to what you are studying, and open any card for the fuller account, with the scripture or record it rests on. Details open inside the card itself, so you never have to scroll away from the event you picked.</p>
   </div>
 
-  <div class="controls">
-    <div class="controls-card">
-      <div class="search-row">
-        <input id="search" aria-label="Search Church history" type="search" placeholder="Search events, places, people…  try &quot;temple&quot; or &quot;Nauvoo&quot;" aria-label="Search timeline events"/>
-        <span class="count-label" id="countLabel"></span>
+  <p><a class="timeline-return" href="#historyWorkspace">Explore the timeline</a></p>
+  <section id="historyWorkspace" class="history-workspace" data-timeline-workspace aria-label="Explore Church history">
+    <aside class="history-browser" aria-label="Find an event">
+      <div class="controls history-controls">
+        <label for="search">Find an event</label>
+        <div class="search-row"><input id="search" type="search" placeholder="Search events, places, people…" aria-label="Search Church history"/></div>
+        <details id="historyFilters"><summary>Filter by era <span id="selectedEra">All eras</span></summary>
+          <div class="era-pills" id="eraPills" role="group" aria-label="Filter by era"></div>
+        </details>
+        <span class="count-label" id="countLabel" role="status"></span>
       </div>
-      <div class="era-pills" id="eraPills" role="group" aria-label="Filter by era"></div>
-      <nav class="era-nav" id="eraNav" aria-label="Jump to era"></nav>
+      <details id="historyDirectory" open>
+        <summary>Events</summary>
+        <nav id="eventDirectory" data-timeline-pane="events" tabindex="0" aria-label="Church history events"></nav>
+      </details>
+    </aside>
+    <div class="history-reading" data-timeline-pane="timeline" tabindex="0" role="region" aria-label="Church history timeline">
+      <main class="timeline" id="timeline"></main>
+      <div class="no-results" id="noResults"><p>No events match that search in the selected era. Try a different word, or choose “All eras.”</p></div>
     </div>
-  </div>
-
-  <main class="timeline" id="timeline"></main>
-  <div class="no-results" id="noResults"><p>No events match that search in the selected era. Try a different word, or choose “All eras.”</p></div>
+  </section>
 
   <section class="presidents">
     <h2>Presidents of the Church</h2>
@@ -311,14 +320,15 @@ function buildPills(){
   var html = '<button class="pill" data-era="all" aria-pressed="true">All eras</button>';
   ERAS.forEach(function(e){ html += '<button class="pill" data-era="'+e.id+'" aria-pressed="false">'+e.years+' · '+e.name+'</button>'; });
   document.getElementById('eraPills').innerHTML = html;
-  var nav = ERAS.map(function(e){ return '<a href="#era-'+e.id+'">'+e.name+'</a>'; }).join('');
-  document.getElementById('eraNav').innerHTML = nav;
+
   var pills = document.querySelectorAll('.pill');
   pills.forEach(function(p){
     p.addEventListener('click', function(){
       state.era = p.getAttribute('data-era');
+      document.getElementById('selectedEra').textContent = state.era==='all' ? 'All eras' : eraById(state.era).name;
       pills.forEach(function(x){ x.setAttribute('aria-pressed', x===p ? 'true':'false'); });
       render();
+      document.getElementById('historyFilters').open=false;
     });
   });
 }
@@ -338,22 +348,27 @@ function render(){
     var list = EVENTS.filter(function(e){ return e.era===era.id && matches(e); });
     if(!list.length) return;
     html += '<section class="era-block" id="era-'+era.id+'">';
-    html += '<div class="era-head"><div class="era-years">'+era.years+'</div><h2>'+era.name+'</h2><p>'+ARTICLES[era.id]+'</p></div>';
+    html += '<div class="era-head"><div class="era-years">'+era.years+'</div><h2>'+era.name+'</h2><p>'+ARTICLES[era.id]+'</p></div><div class="era-events">';
     list.forEach(function(ev, i){
       var side = (i % 2 === 1) ? ' right' : '';
-      html += '<article class="event'+side+'"><span class="dot" aria-hidden="true"></span><div class="card" data-card>';
+      html += '<article id="history-event-'+EVENTS.indexOf(ev)+'" class="event'+side+'"><span class="dot" aria-hidden="true"></span><div class="card" data-card>';
       html += '<button class="card-top" aria-expanded="false"><span class="year-line"><span class="year">'+ev.date+'</span><span class="place">'+ev.place+'</span><span class="tag '+(ev.tag==='Persecution'?'persecution':ev.tag==='Temple'?'temple':ev.tag==='Global'?'global':'')+'">'+ev.tag+'</span></span>';
       html += '<h3>'+ev.title+'</h3><p class="summary">'+ev.summary+'</p>';
       html += '<span class="read-more">Read the story <span class="chev">▾</span></span></button>';
       html += '<div class="detail"><p>'+ev.detail+'</p><p class="ref"><b>Record:</b> '+ev.ref+'</p></div>';
       html += '</div></article>';
     });
-    html += '</section>';
+    html += '</div></section>';
   });
   document.getElementById('timeline').innerHTML = html;
+  buildDirectory();
+  document.querySelector('.history-reading').scrollTop=0;
   document.getElementById('noResults').className = 'no-results' + (total===0 ? ' show' : '');
   document.querySelectorAll('[data-card] .card-top').forEach(function(btn){
     btn.addEventListener('click', function(){
+      document.querySelectorAll('#eventDirectory button').forEach(function(item){item.removeAttribute('aria-current');});
+      var item=document.querySelector('#eventDirectory [data-event="'+btn.closest('.event').id+'"]');
+      if(item)item.setAttribute('aria-current','true');
       var card = btn.parentElement;
       var open = card.classList.toggle('open');
       btn.setAttribute('aria-expanded', open ? 'true' : 'false');
@@ -372,6 +387,45 @@ document.getElementById('search').addEventListener('input', function(e){
   state.q = e.target.value.trim().toLowerCase();
   render();
 });
+
+
+function buildDirectory(){
+  var directory=document.getElementById('eventDirectory');
+  directory.innerHTML=EVENTS.filter(matches).map(function(ev){
+    return '<button type="button" data-event="history-event-'+EVENTS.indexOf(ev)+'"><span>'+ev.date+'</span><strong>'+ev.title+'</strong></button>';
+  }).join('');
+  directory.querySelectorAll('button').forEach(function(button){
+    button.addEventListener('click',function(){
+      var target=document.getElementById(button.dataset.event);
+      var story=target.querySelector('.card-top');
+      if(story.getAttribute('aria-expanded')!=='true')story.click();
+      directory.querySelectorAll('button').forEach(function(item){item.removeAttribute('aria-current');});
+      button.setAttribute('aria-current','true');
+      var reader=document.querySelector('.history-reading');
+      if(window.matchMedia('(min-width:1100px)').matches){
+        reader.scrollTop+=target.getBoundingClientRect().top-reader.getBoundingClientRect().top-12;
+      }else{
+        document.getElementById('historyDirectory').open=false;
+        target.scrollIntoView({block:'start',behavior:'auto'});
+      }
+    });
+  });
+}
+
+var historyDesktop=window.matchMedia('(min-width:1100px)');
+function sizeHistoryWorkspace(){
+  var menu=document.querySelector('[data-focuschrist-header="standard"]');
+  var height=menu ? menu.getBoundingClientRect().height : 0;
+  document.documentElement.style.setProperty('--history-menu-height',height+'px');
+}
+function arrangeHistoryDirectory(){
+  document.getElementById('historyDirectory').open=historyDesktop.matches;
+  sizeHistoryWorkspace();
+}
+historyDesktop.addEventListener('change',arrangeHistoryDirectory);
+window.addEventListener('resize',sizeHistoryWorkspace);
+if(window.ResizeObserver)new ResizeObserver(sizeHistoryWorkspace).observe(document.querySelector('[data-focuschrist-header="standard"]'));
+arrangeHistoryDirectory();
 
 buildPills();
 buildProphets();

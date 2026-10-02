@@ -1,0 +1,40 @@
+/* Keep navigation separate from the reading canvas and each era's timeline. */
+.history-workspace{margin-top:28px;min-width:0}
+.controls.history-controls{position:static!important;top:auto!important;margin:0;padding:16px;background:var(--bg-deep);border:1px solid var(--hairline);border-radius:16px}
+.history-controls label{display:block;font-weight:700;color:var(--gold-light);margin-bottom:8px}
+.history-controls .search-row input{min-width:0;width:100%;flex-basis:100%}
+.history-controls summary,#historyDirectory>summary{cursor:pointer;color:var(--gold-light);font-weight:600;min-height:44px;padding:10px 2px}
+.history-controls summary span{display:block;font-weight:400;font-size:.85em;color:var(--muted)}
+.history-controls .count-label{display:block;white-space:normal;margin-top:8px}
+.history-controls .era-pills{margin:8px 0;max-height:32dvh;overflow:auto;overscroll-behavior:contain;padding:4px}
+.history-controls .pill{white-space:normal;text-align:left;max-width:100%;min-height:44px}
+#eventDirectory{display:grid;align-content:start;gap:8px;padding:4px}
+#eventDirectory button{appearance:none;width:100%;text-align:left;background:var(--bg-deep);color:var(--cream);border:1px solid var(--hairline);border-radius:12px;padding:12px;font:inherit;cursor:pointer;min-width:0;overflow-wrap:anywhere}
+#eventDirectory button span{display:block;color:var(--gold-light);font-size:.8em;margin-bottom:3px}
+#eventDirectory button strong{font-family:Georgia,serif;font-weight:400;line-height:1.3;display:block}
+#eventDirectory button[aria-current="true"]{border-color:var(--gold);box-shadow:inset 3px 0 var(--gold)}
+.history-workspace :focus-visible{outline:2px solid var(--gold-light);outline-offset:2px}
+.history-reading{min-width:0}
+.history-reading .timeline::before{display:none}
+.era-events{position:relative}
+.era-events::before{content:"";position:absolute;left:19px;top:22px;bottom:22px;width:2px;background:linear-gradient(var(--gold-deep),rgba(210,185,121,.4),var(--gold-deep))}
+.history-reading .era-head{padding-left:0;text-align:left}
+.history-reading .era-head p{margin:0}
+.history-reading .event,.history-reading .event.right{width:100%;margin-left:0;padding:0 0 22px 52px;scroll-margin-top:calc(var(--history-menu-height,64px) + 16px)}
+.history-reading .event .dot,.history-reading .event.right .dot{left:12px;right:auto}
+@media(min-width:1100px){
+  .history-workspace{display:grid;grid-template-columns:minmax(250px,.36fr) minmax(0,1fr);gap:24px;height:calc(100dvh - var(--history-menu-height,64px) - 24px);min-height:260px;align-items:stretch;scroll-margin-top:calc(var(--history-menu-height,64px) + 12px)}
+  .history-browser{min-height:0;min-width:0;display:flex;flex-direction:column;gap:12px;overflow:auto;overscroll-behavior:contain}
+  .history-controls{flex:0 0 auto}
+  #historyDirectory{position:relative;min-height:80px;flex:1}
+  #historyDirectory>summary{display:none}
+  #eventDirectory{position:absolute;inset:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable}
+  .history-reading{overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable;padding:4px 12px 20px 4px}
+  .history-reading .timeline{margin-top:0}
+  .history-reading .era-block:first-child{margin-top:0}
+}
+@media(max-width:1099px){
+  #historyDirectory{margin:12px 0;border-bottom:1px solid var(--hairline)}
+  #eventDirectory{max-height:45dvh;overflow-y:auto;overscroll-behavior:contain;margin-bottom:12px}
+  .history-reading .timeline{margin-top:24px}
+}

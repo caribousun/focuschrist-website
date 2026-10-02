@@ -2,7 +2,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),{JSDOM}=require('jsdom');
 const html=fs.readFileSync(path.join(__dirname,'../timelines/willie-and-martin-handcart-map.html'),'utf8');
 const dom=new JSDOM(html,{url:'https://focuschrist.com/timelines/willie-and-martin-handcart-map.html',runScripts:'outside-only'}),w=dom.window,d=w.document;
-w.HTMLElement.prototype.scrollIntoView=function(){};
+w.HTMLElement.prototype.scrollIntoView=function(){};w.matchMedia=()=>({matches:true});
 const instances=[];let destroyed=0;const violations=[];
 w.MapHelpers={mountMap(renderer,options,unavailable){const child=d.createElement('div');child.textContent='Library-owned map';renderer.appendChild(child);const record={renderer,child,unavailable,options,count:options.places.length};instances.push(record);return {destroy(){if(child.parentNode!==renderer)violations.push('Owned child removed before library disposal');else renderer.removeChild(child);destroyed++;}};}};
 const script=[...d.scripts].find(s=>s.textContent.includes('var STOPS ='));assert(script);w.eval(script.textContent);
