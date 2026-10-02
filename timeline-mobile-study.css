@@ -1,5 +1,9 @@
 /* One contained study area: the map stays above the independently scrolling reader. */
 .timeline-mobile-tabs{display:none}
+.timeline-choice-mode>:not(.timeline-place-choices){display:none!important}
+.timeline-place-choices{display:grid;align-content:start;gap:10px;min-width:0}
+.timeline-place-choices h3{margin:0;color:var(--gold-light);font:600 1.2em/1.35 Georgia,serif}
+.timeline-place-choices button{min-height:44px;max-width:100%;padding:12px;border:1px solid var(--hairline);border-radius:12px;background:var(--bg-deep);color:var(--cream);font:inherit;text-align:left;white-space:normal;overflow-wrap:anywhere;cursor:pointer}
 #historyMapPane:has(#historyMapCanvas[hidden]) .history-map-copy{max-height:100%}
 body.fc-timeline-experience{overflow-anchor:none}
 @media(max-width:1020px){body.fc-timeline-experience nav[data-focuschrist-header="standard"]{position:sticky!important;top:0!important;z-index:1100}}

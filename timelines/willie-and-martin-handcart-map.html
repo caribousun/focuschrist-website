@@ -643,6 +643,11 @@
   }
   function clusterChoice(group,point,generation){
     if(closed || generation!==renderGeneration) return;
+    if(window.TimelineWorkspace&&window.TimelineWorkspace.showChoices&&window.TimelineWorkspace.showChoices('Nearby journey stops',group.map(function(index){return {index:index,label:(index+1)+'. '+STOPS[index].name};}),function(index){
+      if(closed||generation!==renderGeneration||group.indexOf(index)<0)return;
+      var row=currentRows.find(function(r){return r.index===index;});if(row)selectStop(index,row.el,true);
+    })){leafletMap.closePopup();return;}
+
     var content=document.createElement('div');content.className='handcart-stop-chooser';
     var heading=document.createElement('strong');heading.textContent='Nearby journey stops';content.appendChild(heading);
     group.forEach(function(index){
