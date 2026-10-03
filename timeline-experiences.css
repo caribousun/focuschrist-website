@@ -95,6 +95,8 @@ body.fc-site.fc-timeline-experience .timeline-life-intro .timeline-opening-conti
 body.fc-site.fc-timeline-experience .timeline-life-intro[data-unified-opening][data-unified-opening] > .fc-unified-continue{display:none!important}
 body.fc-site.fc-timeline-experience .timeline-life-intro[data-unified-opening] h1{max-width:none;width:100%}
 @media(min-width:701px){
+ body.fc-site.fc-timeline-experience .timeline-life-intro[data-unified-opening][data-unified-opening]{padding-top:8px!important;gap:4px!important}
+ body.fc-site.fc-timeline-experience .timeline-life-intro[data-unified-opening] .timeline-navigation{padding-top:0}
  body.fc-site.fc-timeline-experience .timeline-life-intro[data-unified-opening][data-unified-opening] h1{font-size:clamp(2.05rem,3.7dvh,2.95rem)!important}
 }
 @media(max-width:700px){
