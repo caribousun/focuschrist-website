@@ -69,8 +69,8 @@
     },
     {
       "path": "site-search-index.json",
-      "sha256": "a3fa2878a38c6974759b9a45f042579589d73cfb865d4a9ac1541f0a5e4fe3ae",
-      "bytes": 2988458
+      "sha256": "a915e97c5008e4a758864cd030a4b29c7a401673cf5d12b053af2e9a2d99e8cd",
+      "bytes": 2988477
     },
     {
       "path": ".github/workflows/site-qa.yml",
@@ -81,6 +81,16 @@
       "path": "content-audit.json",
       "sha256": "2970b2fc04a1353a4ebbd0f5ebc231c753e3da004d2866343451e5a7cb2fddde",
       "bytes": 1458957
+    },
+    {
+      "path": "art-gallery.json",
+      "sha256": "a75cad1b5dd400db756063109212b1f68dff6dd9b75751df31823a4b0ba66428",
+      "bytes": 834769
+    },
+    {
+      "path": "tools/sitewide_artwork_review_qa.py",
+      "sha256": "6711c7543df0bcdf88b8fbbb3e77190b14040296335f98d27eaf47bb4ec3f5de",
+      "bytes": 58240
     }
   ],
   "browser": "Root-owned desktop, phone and enlarged-text evidence is recorded separately; exact candidate review remains required.",
@@ -101,7 +111,11 @@
     "Research parity gate now enforced in existing Joseph CI step",
     "JavaScript search runtime requires unavailable local jsdom; hosted CI remains required",
     "Publication-preparation git diff --check PASS",
-    "Static-content ledger updated only for independently reviewed Joseph page; exact normalized wording hash checked"
+    "Static-content ledger updated only for independently reviewed Joseph page; exact normalized wording hash checked",
+    "Gallery inventory regenerated after reviewed Hyrum iris asset change; one Hyrum record changed, counts901artworks907occurrences unchanged",
+    "Dependent search regenerated; artwork detail QA, search QA, static ledger and source inventory PASS",
+    "Sitewide artwork guard classification repaired via existing exact-byte/single-owner registry; mutation/foreign-owner/hero-selector fixtures and actual129page842protectedimage check PASS",
+    "Gallery/search dependencies, artwork details, mobile scenes, art-study, Joseph parity/likeness, source inventory, static ledger, search QA and diff checks PASS"
   ],
   "owner_acceptance": "Publication authority is separate from final aesthetic and physical-phone acceptance."
 }

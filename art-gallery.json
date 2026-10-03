@@ -8765,18 +8765,18 @@
     {
       "title": "Hyrum: an artistic reconstruction",
       "category": "Church History",
-      "thumbnail": "/assets/page-art/joseph-smith-likeness/hyrum-reconstruction.png",
-      "fullImage": "/assets/page-art/joseph-smith-likeness/hyrum-reconstruction.png",
+      "thumbnail": "/assets/page-art/joseph-smith-likeness/hyrum-reconstruction-blue-eyes-20261003.png",
+      "fullImage": "/assets/page-art/joseph-smith-likeness/hyrum-reconstruction-blue-eyes-20261003.png",
       "alt": "Artistic reconstruction of Hyrum Smith at age forty-four",
-      "id": "art-1c1178b09dc1",
+      "id": "art-eeae166b54dc",
       "occurrences": [
         {
-          "id": "source-dbe3dea58d2c",
+          "id": "source-d880150544e9",
           "page": "/joseph-smith-likeness.html",
           "pageTitle": "The Face Behind the History",
           "category": "Church History",
           "kind": "topic",
-          "selector": "a[href=\"assets/page-art/joseph-smith-likeness/hyrum-reconstruction.png\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/hyrum-reconstruction.png\"])",
+          "selector": "a[href=\"assets/page-art/joseph-smith-likeness/hyrum-reconstruction-blue-eyes-20261003.png\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/hyrum-reconstruction-blue-eyes-20261003.png\"])",
           "title": "Hyrum: an artistic reconstruction"
         }
       ],
