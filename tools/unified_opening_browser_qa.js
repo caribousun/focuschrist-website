@@ -1,3 +1,4 @@
+const assert=require('node:assert/strict');
 const fs = require('node:fs'), path = require('node:path'), http = require('node:http');
 const {chromium} = require('playwright');
 const root = path.resolve(__dirname, '..');
