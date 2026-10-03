@@ -46,4 +46,23 @@ body.fc-timeline-experience .timeline-mobile .timeline-map-dock [data-timeline-p
 
 .timeline-mobile .timeline-map-unavailable [data-timeline-pane="map"]:has(#historyMapCanvas[hidden]){display:none!important}
 
-.timeline-mobile [data-timeline-pane="events"] button{scroll-margin-top:calc(var(--timeline-menu-height,64px) + var(--timeline-dock-height,240px) + 12px)}
+.timeline-mobile [data-timeline-pane="events"] button,.timeline-mobile .timeline-group-nav button{scroll-margin-top:calc(var(--timeline-menu-height,64px) + var(--timeline-dock-height,240px) + 12px)}
+
+.timeline-group-nav{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px;min-width:0}
+.timeline-group-nav p{flex-basis:100%;margin:0;font-weight:600}
+.timeline-group-nav button{min-height:44px;max-width:100%;padding:10px 12px;border:1px solid var(--fc-line-strong);border-radius:12px;background:var(--fc-bg-deep);color:var(--fc-cream);font:inherit;white-space:normal;overflow-wrap:anywhere;cursor:pointer}
+.timeline-group-nav button:disabled{opacity:.5;cursor:default}
+.timeline-group-active #prevBtn,.timeline-group-active #nextBtn{display:none}
+
+/* The Americas diagram has no Earth coordinates; preserve its complete composition. */
+.internal-map-view[hidden]{display:none!important}
+.internal-map-view{position:absolute;inset:0;z-index:500;display:flex;flex-direction:column;gap:8px;padding:12px;background:var(--bg-deep,#10252d);min-height:0}
+.internal-map-image{display:block;flex:1;min-height:0;text-align:center}
+.internal-map-image img{width:100%;height:100%;object-fit:contain;display:block}
+.internal-map-actions{display:flex;flex-direction:column;gap:6px;flex:none;font-size:13px;line-height:1.35;color:var(--cream)}
+.internal-map-actions button{min-height:44px;padding:8px 12px;font:inherit;color:var(--cream);background:var(--warm);border:1px solid var(--gold);border-radius:12px;cursor:pointer}
+.life-internal-view #map,.life-internal-view>.map-pin-note,.life-internal-view>#mapFallback{visibility:hidden}
+.life-internal-active .timeline-map-interact{display:none!important}
+.timeline-mobile .internal-map-view{padding:6px;gap:4px;flex-direction:row}
+.timeline-mobile .internal-map-image{height:100%;flex:1 1 40%}
+.timeline-mobile .internal-map-actions{flex:1 1 60%;justify-content:center;font-size:12px}

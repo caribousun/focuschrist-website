@@ -1,6 +1,6 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),{JSDOM}=require('jsdom');
 const root=path.join(__dirname,'..'),source=fs.readFileSync(path.join(root,'timeline-images.js'),'utf8');
-for(const [route,kind,count] of [['life-of-christ-journey-map.html','life',31],['willie-and-martin-handcart-map.html','handcart',33],['latter-day-saint-church-history-timeline.html','history',51]]){
+for(const [route,kind,count] of [['life-of-christ-journey-map.html','life',38],['willie-and-martin-handcart-map.html','handcart',33],['latter-day-saint-church-history-timeline.html','history',51]]){
  const dom=new JSDOM('<div data-timeline-pane="detail"><p id="story">Original narrative</p></div>'+Array.from({length:51},(_,i)=>'<article id="history-event-'+i+'"><div class="detail"><p>Original story '+i+'</p></div></article>').join(''),{url:'https://focuschrist.com/timelines/'+route,runScripts:'outside-only'}),w=dom.window,d=w.document;w.eval(source);
  const registry=w.TimelineImages.registry[kind];assert.equal(Object.keys(registry).length,count);assert.equal(d.querySelectorAll('[data-timeline-image]').length,kind==='history'?0:1);assert.equal(new Set(Object.values(registry).map(r=>r.src)).size,count);
  assert.deepEqual(Object.keys(registry),Array.from({length:count},(_,i)=>String(i)),'Every original index has one image');
@@ -15,4 +15,4 @@ for(const [route,kind,count] of [['life-of-christ-journey-map.html','life',31],[
  w.TimelineImages.render(0);w.dispatchEvent(new w.CustomEvent('timeline:filter',{detail:{indices:[]}}));assert.equal(d.querySelectorAll('[data-timeline-image]').length,0);
  w.HistoryTimeline={selectedIndex:8};w.LifeTimeline={current:8};w.HandcartTimeline={current:8};w.eval(source);assert.equal(d.querySelector('[data-timeline-image]').dataset.timelineImage,'8','Early selected story receives its matching image');dom.window.close();
 }
-console.log('PASS115 image references unique per experience, assets/owning links valid, visible credits, exact selected container, initial selection rules, stale image removal, narrative retained.');
+console.log('PASS122 image references unique per experience, assets/owning links valid, visible credits, exact selected container, initial selection rules, stale image removal, narrative retained.');

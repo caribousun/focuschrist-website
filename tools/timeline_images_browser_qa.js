@@ -4,7 +4,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 module.exports=async function(page,origin,out){
  const dir=path.join(out,'image-coverage');fs.mkdirSync(dir,{recursive:true});const records=[];
  const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
- for(const [kind,route,total,api] of [['life','life-of-christ-journey-map.html',31,'LifeTimeline'],['handcart','willie-and-martin-handcart-map.html',33,'HandcartTimeline'],['history','latter-day-saint-church-history-timeline.html',51,'HistoryTimeline']]){
+ for(const [kind,route,total,api] of [['life','life-of-christ-journey-map.html',38,'LifeTimeline'],['handcart','willie-and-martin-handcart-map.html',33,'HandcartTimeline'],['history','latter-day-saint-church-history-timeline.html',51,'HistoryTimeline']]){
   await page.setViewportSize({width:390,height:844});await page.goto(origin+'/timelines/'+route,{waitUntil:'load'});await page.waitForFunction(api=>window[api]&&window.TimelineImages&&window.TimelineWorkspace,api);await page.evaluate(()=>document.fonts.ready);
   const coverage=await page.evaluate(kind=>Object.keys(window.TimelineImages.registry[kind]).map(Number),kind);assert.deepEqual(coverage,Array.from({length:total},(_,i)=>i),'Complete exact registry '+kind);
   for(let index=0;index<total;index++){
@@ -22,7 +22,7 @@ module.exports=async function(page,origin,out){
    records.push(record);
   }
  }
- fs.writeFileSync(path.join(out,'image-coverage-report.json'),JSON.stringify({expected:115,records},null,2));
- fs.writeFileSync(path.join(out,'image-coverage-contact-sheet.html'),'<!doctype html><meta charset="utf-8"><title>115 assembled timeline pictures</title><style>body{margin:20px;background:#07191d;color:#f3ead6;font:16px Georgia}main{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}article{min-width:0;border:1px solid #8a733f;padding:12px}img{width:100%;height:auto}a{color:#ead49b}</style><h1>115 assembled phone story pictures</h1><p>Actual rendered figures, original source links and captions; provider behavior and owner phone acceptance remain separate evidence.</p><main>'+records.map(r=>'<article><h2>'+escape(r.kind+' '+r.number)+'</h2><p>'+escape(r.evidence?.title||r.error)+'</p>'+(r.screenshot?'<img loading="lazy" src="'+escape(r.screenshot)+'">':'')+'<p>'+escape(r.status)+'</p></article>').join('')+'</main>');
- assert.equal(records.length,115);assert(records.every(r=>r.status==='passed'),'All115 assembled pictures must pass; see image-coverage-report.json');return records;
+ fs.writeFileSync(path.join(out,'image-coverage-report.json'),JSON.stringify({expected:122,records},null,2));
+ fs.writeFileSync(path.join(out,'image-coverage-contact-sheet.html'),'<!doctype html><meta charset="utf-8"><title>122 assembled timeline pictures</title><style>body{margin:20px;background:#07191d;color:#f3ead6;font:16px Georgia}main{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}article{min-width:0;border:1px solid #8a733f;padding:12px}img{width:100%;height:auto}a{color:#ead49b}</style><h1>122 assembled phone story pictures</h1><p>Actual rendered figures, original source links and captions; provider behavior and owner phone acceptance remain separate evidence.</p><main>'+records.map(r=>'<article><h2>'+escape(r.kind+' '+r.number)+'</h2><p>'+escape(r.evidence?.title||r.error)+'</p>'+(r.screenshot?'<img loading="lazy" src="'+escape(r.screenshot)+'">':'')+'<p>'+escape(r.status)+'</p></article>').join('')+'</main>');
+ assert.equal(records.length,122);assert(records.every(r=>r.status==='passed'),'All122 assembled pictures must pass; see image-coverage-report.json');return records;
 };

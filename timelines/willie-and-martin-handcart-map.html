@@ -700,7 +700,7 @@
         overlays.forEach(function(overlay){var paint=overlay.layers[0].paint;L.geoJSON(overlay.data,{style:{color:paint['line-color'],weight:paint['line-width'],opacity:paint['line-opacity'],dashArray:paint['line-dasharray']?paint['line-dasharray'].map(function(n){return n*paint['line-width'];}).join(' '):null}}).addTo(leafletMap);});
         STOPS.forEach(function(stop,index){
           var m=L.marker([stop.lat,stop.lng],{icon:stopIcon(index),keyboard:true,autoPanOnFocus:false,title:'Stop '+(index+1)+': '+stop.name});
-          m.on('click',function(){var row=currentRows.find(function(r){return r.index===index;});if(row)selectStop(index,row.el,true);});markers.push(m);
+          m.on('click',function(){var row=currentRows.find(function(r){return r.index===index;});if(row){if(window.TimelineWorkspace&&window.TimelineWorkspace.clearGroup)window.TimelineWorkspace.clearGroup();selectStop(index,row.el,true);}});markers.push(m);
         });
         leafletMap.on('zoomend moveend',renderMarkers);
       }catch(error){if(leafletMap){leafletMap.remove();leafletMap=null;}showFallback();}
