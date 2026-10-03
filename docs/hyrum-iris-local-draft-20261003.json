@@ -1,0 +1,14 @@
+{
+  "status": "LOCAL_DRAFT_FOR_OWNER_REVIEW",
+  "scope": "The owner explicitly authorized source-supported blue eyes and direct pixel-preserving iris recoloring. This integrates the reviewed candidate only in the existing Hyrum portrait/mask comparison.",
+  "baseline_asset": "assets/page-art/joseph-smith-likeness/hyrum-reconstruction.png",
+  "baseline_sha256": "93cc6192e6b06a6bdba588e2585e38791977ae776cd0e3bb237f96ad9fe490ad",
+  "candidate_asset": "assets/page-art/joseph-smith-likeness/hyrum-reconstruction-blue-eyes-20261003.png",
+  "candidate_sha256": "47b35f55b805ee0cc7c914cc1adb59273b2405402d4a50e284d0bb456bd9cb32",
+  "dimensions": [1122, 1402],
+  "independent_pixel_findings": {"changed_pixels":1214,"outside_iris_masks":0,"excluded_pupils_and_catchlights":0},
+  "reviews": ["docs/hyrum-iris-fermi-review-20261003.json","docs/hyrum-iris-newton-review-20261003.json"],
+  "source": "https://www.gutenberg.org/cache/epub/46602/pg46602-images.html",
+  "source_classification": "Susa Young Gates, Lydia Knight's History, 1883; retrospective mediated description of Hyrum in the Kirtland period. Not an 1844 measured color record.",
+  "limits": ["Exact blue-gray shade remains artistic","No additional facial reshaping established by this edit","No original asset overwritten","Owner aesthetic review and publication remain separate","Assembled website review remains required"]
+}

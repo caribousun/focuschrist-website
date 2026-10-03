@@ -969,7 +969,7 @@
       "reason": "Named existing section panel; shared Home-derived surface only."
     },
     "fc-study-panel": {
-      "count": 22,
+      "count": 28,
       "pages": [
         "answers/are-latter-day-saints-christian.html",
         "answers/bible-and-book-of-mormon-together.html",
@@ -981,10 +981,13 @@
         "answers/what-is-the-book-of-mormon.html",
         "answers/who-was-joseph-smith.html",
         "answers/why-families-are-important.html",
-        "answers/why-latter-day-saints-build-temples.html"
+        "answers/why-latter-day-saints-build-temples.html",
+        "joseph-smith-likeness.html"
       ],
       "tags": [
-        "div"
+        "aside",
+        "div",
+        "nav"
       ],
       "disposition": "shared_surface",
       "reason": "Named existing section panel; shared Home-derived surface only."
@@ -2488,7 +2491,8 @@
         "answers/what-is-the-book-of-mormon.html",
         "answers/who-was-joseph-smith.html",
         "answers/why-families-are-important.html",
-        "answers/why-latter-day-saints-build-temples.html"
+        "answers/why-latter-day-saints-build-temples.html",
+        "joseph-smith-likeness.html"
       ],
       "disposition": "shared_surface"
     },
@@ -3501,7 +3505,7 @@
       ]
     },
     ".fc-study-panel": {
-      "count": 22,
+      "count": 28,
       "pages": [
         "answers/are-latter-day-saints-christian.html",
         "answers/bible-and-book-of-mormon-together.html",
@@ -3513,10 +3517,13 @@
         "answers/what-is-the-book-of-mormon.html",
         "answers/who-was-joseph-smith.html",
         "answers/why-families-are-important.html",
-        "answers/why-latter-day-saints-build-temples.html"
+        "answers/why-latter-day-saints-build-temples.html",
+        "joseph-smith-likeness.html"
       ],
       "tags": [
-        "div"
+        "aside",
+        "div",
+        "nav"
       ]
     },
     ".fc-voice-grid article": {

@@ -1,0 +1,85 @@
+{
+  "state": "LOCAL_DRAFT_FOR_INDEPENDENT_REVIEW",
+  "base": "7b4ca20f1dd23b1c0e2b3c41e528a127a40deb04",
+  "files": [
+    {
+      "path": "joseph-smith-likeness.html",
+      "sha256": "2b7104a68c3816db0b9bd6030bc12996047c030d23bdf1a88ca3ea0933f0d9c5",
+      "bytes": 68546
+    },
+    {
+      "path": "joseph-smith-research.css",
+      "sha256": "b86ecba8e2c1670e4e485f3219fc227de2a599b85d964f6d415e83ee183f862f",
+      "bytes": 2681
+    },
+    {
+      "path": "assets/research/focuschrist-joseph-evidence.pdf",
+      "sha256": "f366890009fdd623a70aded34175b67507db19deb619cdd1cb8bfcf7dffdbdf8",
+      "bytes": 3791922
+    },
+    {
+      "path": "assets/page-art/joseph-smith-likeness/hyrum-reconstruction-blue-eyes-20261003.png",
+      "sha256": "47b35f55b805ee0cc7c914cc1adb59273b2405402d4a50e284d0bb456bd9cb32",
+      "bytes": 2164290
+    },
+    {
+      "path": "docs/joseph-portrait-research-content.json",
+      "sha256": "d9d4426e51ba55b8f8699cc46879cca9d6ba76677b2dd18428944a28fc1fb984",
+      "bytes": 45828
+    },
+    {
+      "path": "docs/joseph-portrait-research-implementation.md",
+      "sha256": "ebe8751b7092ab774976ef0e193a8e2b604ef9bc388eaf6a72d73cc48bcb1143",
+      "bytes": 4527
+    },
+    {
+      "path": "docs/section-panel-inventory.json",
+      "sha256": "ce30aa9dd50f8445eb1f5034a71034446a9624bfdc88139cae0d4df05d2570a3",
+      "bytes": 118295
+    },
+    {
+      "path": "docs/hyrum-iris-local-draft-20261003.json",
+      "sha256": "b93372b308253b926f1a5df75a82a46981fabe7f515861889187041c9389a0d6",
+      "bytes": 1387
+    },
+    {
+      "path": "docs/hyrum-iris-fermi-review-20261003.json",
+      "sha256": "ffe694411b1cd551ef888a84973df0509535270b06630a2581f49a453250ded1",
+      "bytes": 2781
+    },
+    {
+      "path": "docs/hyrum-iris-newton-review-20261003.json",
+      "sha256": "77efaa655ab457ef100bd4f97904cc56bb5d0641a7023289d2001b6d3b0275c5",
+      "bytes": 3063
+    },
+    {
+      "path": "tools/build_joseph_portrait_research.py",
+      "sha256": "e7d87b5badb4cc4cdb1552090995aa359ea1cd55077636a4141acfca6c1ce972",
+      "bytes": 6557
+    },
+    {
+      "path": "tools/joseph_portrait_research_qa.py",
+      "sha256": "e8e9e624f56c3285e68ded59810e4f2768572e0b401cbcc8a91649708492ecc6",
+      "bytes": 2787
+    },
+    {
+      "path": "tools/joseph_smith_likeness_qa.py",
+      "sha256": "955819c60be0a15194c90a373c3c92faa9d4d9f9416ffb8fbd19a8d0c26860f6",
+      "bytes": 12411
+    }
+  ],
+  "browser": "Parent Albert review pending",
+  "publication": "No commit, push, or deployment",
+  "baseline_portrait": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827",
+  "checks": [
+    "research parity164textitems/16traits/15sections PASS",
+    "section panel inventory PASS",
+    "media voice PASS",
+    "navigation links PASS",
+    "Joseph likeness and collection duplicate negative fixture PASS",
+    "git diff --check PASS",
+    "full site QA PASS on final Hyrum/mask-action candidate",
+    "Neutral mask-caption correction synced; parity and scoped likeness QA PASS",
+    "Narrow final caption git diff --check PASS"
+  ]
+}
