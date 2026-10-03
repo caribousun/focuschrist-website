@@ -90,3 +90,13 @@ body.fc-timeline-experience .handcart-cluster{position:absolute;left:50%;top:50%
 body.fc-timeline-experience .history-map-pin{min-width:58px}
 body.fc-timeline-experience .history-map-pin small,
 body.fc-timeline-experience .handcart-cluster small{white-space:nowrap}
+
+/* Full journey numbers stay on one line at enlarged text sizes. */
+body.fc-timeline-experience .leaflet-marker-icon .pin{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);box-sizing:border-box;width:max-content;height:auto;min-width:30px;min-height:30px;padding:3px;border-radius:50%;white-space:nowrap;overflow-wrap:normal;line-height:1.2}
+body.fc-timeline-experience .handcart-pin-icon .pin{min-width:44px;min-height:44px}
+body.fc-timeline-experience .handcart-pin-icon .pin > *{transform:none;white-space:nowrap}
+
+body.fc-timeline-experience .life-cluster-icon .handcart-cluster{display:flex;flex-direction:column;align-items:center;justify-content:center;background:#8d601e;color:#fff;border:2px solid #fff6dd;font:700 16px/1.2 "Segoe UI",sans-serif;box-shadow:0 2px 7px #17333d88}
+body.fc-timeline-experience .life-cluster-icon .handcart-cluster small{font:600 9px/1.2 "Segoe UI",sans-serif}
+body.fc-timeline-experience .life-cluster-icon.is-selected .handcart-cluster,
+body.fc-timeline-experience .life-cluster-icon .handcart-cluster.is-selected{border-color:#f0c36a;box-shadow:0 0 0 3px rgba(240,195,106,.4),0 2px 7px #17333d88}

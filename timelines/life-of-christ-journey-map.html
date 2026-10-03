@@ -165,7 +165,7 @@ body.fc-site .detail a:hover,body.fc-site .sheet a:hover,body.fc-site .detail a:
           </a>
           <div class="internal-map-actions"><span>Interpretive diagram · no modern location</span><button type="button" id="bountifulEvents">Bountiful · 2 events</button></div>
         </div>
-        <p class="map-pin-note">Nearby numbered pins spread apart on screen so each can be selected. Geographic coordinates are unchanged.</p>
+        <p class="map-pin-note">Nearby places share a count marker. Open it to choose an event, then use Previous, Next, or Back to stay with that group. Individual pins retain their original journey numbers and geographic coordinates.</p>
         <div id="mapFallback" class="map-fallback">Map unavailable on this device. The full journey list remains complete, with a maps link on the selected stop.</div>
       </section>
       <main id="main-content" data-timeline-pane="events" tabindex="0" aria-label="Life of Christ events in order">
@@ -200,7 +200,7 @@ body.fc-site .detail a:hover,body.fc-site .sheet a:hover,body.fc-site .detail a:
         <h4>How to read this map</h4>
         <p>The first 29 stops follow places in the Holy Land and Egypt. Stops 30 and 31 follow the ministry recorded in 3 Nephi without assigning it a modern geographic location. Seven later entries show where witnesses received appearances and visions. The dotted study sequence stays within the first 29 stops; no route joins the later visions.</p>
         <ul>
-          <li>Numbers on the map match the numbers in the list.</li>
+          <li>Individual numbered pins match the list; count markers open nearby events.</li>
           <li>Use the phase filters to study one part of the life at a time.</li>
           <li>Full journey shows the mapped places and later witness locations. Choose Americas to study the two Bountiful accounts beside an internal map.</li>
         </ul>
@@ -305,6 +305,7 @@ var current = 0;
 var leafletMap = null;
 var markers = [];
 var routeLine = null;
+var lifeClusters=[],lifeGroups=[],lifeFilterGeneration=0,lifeRenderGeneration=0;
 function updateDetail(i){
   current = i;
   if(!isNarrow()) document.getElementById('detail').scrollTop = 0;
@@ -328,6 +329,7 @@ function updateDetail(i){
   slink.href = mapsUrl(s);
   slink.textContent = s.unlocated ? 'Read the scripture account' : 'Open in maps: ' + s.place;
   rows.forEach(function(r,j){ r.classList.toggle('map-selected', j===i); });
+  lifeClusters.forEach(function(m){var e=m.getElement();if(e)e.classList.toggle('is-selected',m.lifeIndices.indexOf(i)>=0);});
   markers.forEach(function(m,j){
     if(!m) return;
     var el = m.getElement();
@@ -353,7 +355,7 @@ function selectStop(i, pan, showSheet){
     leafletMap.flyTo([s.lat, s.lng], targetZoom, {duration: .6});
   }
 }
-window.LifeTimeline={select:function(i){if(Number.isInteger(i)&&i>=0&&i<STOPS.length)selectStop(i,true);},stops:STOPS,get current(){return current;}};
+window.LifeTimeline={select:function(i){if(Number.isInteger(i)&&i>=0&&i<STOPS.length)selectStop(i,true);},stops:STOPS,get current(){return current;},get mappedGroups(){return lifeGroups.map(function(g){return g.slice();});}};
 function showInternalMap(show){
   document.getElementById('internalMap').hidden=!show;
   document.querySelector('.map-shell').classList.toggle('life-internal-view',show);
@@ -401,7 +403,7 @@ filterBtns.forEach(function(b){
   b.addEventListener('click', function(){
     filterBtns.forEach(function(x){ x.setAttribute('aria-pressed','false'); });
     b.setAttribute('aria-pressed','true');
-    activeFilter = b.getAttribute('data-filter');
+    activeFilter = b.getAttribute('data-filter');lifeFilterGeneration++;
     rows.forEach(function(r,i){
       var show = (activeFilter==='all' || STOPS[i].phase===activeFilter);
       r.classList.toggle('hidden', !show);
@@ -435,7 +437,7 @@ function drawRoute(){
   routeLine = L.polyline(pts, {color:'#b87d24', weight:2.5, opacity:.75, dashArray:'1 6', lineCap:'round'}).addTo(leafletMap);
   routeLine.bringToBack();
 }
-// Move only icon anchors in screen space; scripture geography is never changed.
+// Singleton pins keep original coordinates; nearby places share a count marker and exact event choices.
 function stopIcon(i, dx, dy){
   var s = STOPS[i];
   return L.divIcon({className:'pin-icon',
@@ -444,27 +446,19 @@ function stopIcon(i, dx, dy){
 }
 function spreadNearbyPins(){
   if(!leafletMap) return;
-  var size=leafletMap.getSize(), placed=[], gap=40, inset=22;
-  markers.forEach(function(marker,i){
-    if(!marker || !leafletMap.hasLayer(marker)) return;
-    var point=leafletMap.latLngToContainerPoint([STOPS[i].lat,STOPS[i].lng]);
-    if(point.x < -15 || point.y < -15 || point.x > size.x+15 || point.y > size.y+15){
-      marker.setIcon(stopIcon(i,0,0)); return;
-    }
-    var origin={x:Math.max(inset,Math.min(size.x-inset,point.x)),y:Math.max(inset,Math.min(size.y-inset,point.y))};
-    var options=[origin];
-    for(var ring=1;ring<=STOPS.length;ring++){
-      for(var x=-ring;x<=ring;x++) for(var y=-ring;y<=ring;y++){
-        if(Math.max(Math.abs(x),Math.abs(y))!==ring) continue;
-        var candidate={x:origin.x+x*gap,y:origin.y+y*gap};
-        if(candidate.x>=inset && candidate.x<=size.x-inset && candidate.y>=inset && candidate.y<=size.y-inset) options.push(candidate);
-      }
-      if(options.some(function(c){return placed.every(function(a){return Math.hypot(c.x-a.x,c.y-a.y)>=gap;});})) break;
-    }
-    options.sort(function(a,b){return Math.hypot(a.x-point.x,a.y-point.y)-Math.hypot(b.x-point.x,b.y-point.y);});
-    var target=options.find(function(c){return placed.every(function(a){return Math.hypot(c.x-a.x,c.y-a.y)>=gap;});}) || origin;
-    placed.push(target);
-    marker.setIcon(stopIcon(i,target.x-point.x,target.y-point.y));
+  var renderGeneration=++lifeRenderGeneration;
+  lifeClusters.forEach(function(m){leafletMap.removeLayer(m);});lifeClusters=[];
+  markers.forEach(function(m){if(m)leafletMap.removeLayer(m);});
+  var gap=Math.max(76,parseFloat(getComputedStyle(document.getElementById('map')).fontSize)*5),groups=[];
+  STOPS.forEach(function(s,i){if(s.unlocated||(activeFilter!=='all'&&s.phase!==activeFilter))return;var p=leafletMap.latLngToContainerPoint([s.lat,s.lng]);groups.push({indices:[i],x:p.x,y:p.y});});
+  var changed=true;while(changed){changed=false;outer:for(var a=0;a<groups.length;a++)for(var b=a+1;b<groups.length;b++){if(Math.hypot(groups[a].x-groups[b].x,groups[a].y-groups[b].y)<gap){var one=groups[a],two=groups[b],n=one.indices.length,m=two.indices.length;one.x=(one.x*n+two.x*m)/(n+m);one.y=(one.y*n+two.y*m)/(n+m);one.indices=one.indices.concat(two.indices).sort(function(x,y){return x-y;});groups.splice(b,1);changed=true;break outer;}}}
+  lifeGroups=groups.map(function(g){return g.indices.slice();});
+  groups.forEach(function(g){if(g.indices.length===1){var i=g.indices[0];markers[i].setIcon(stopIcon(i,0,0));markers[i].addTo(leafletMap);return;}
+    var center=leafletMap.containerPointToLatLng([g.x,g.y]),coords=[center.lat,center.lng];
+    var icon=L.divIcon({className:'life-cluster-icon',iconSize:[44,44],iconAnchor:[22,22],html:'<span class="handcart-cluster'+(g.indices.indexOf(current)>=0?' is-selected':'')+'">'+g.indices.length+'<small>stops</small></span>'});
+    var groupMarker=L.marker(coords,{icon:icon,keyboard:true,title:g.indices.length+' nearby journey stops'}),generation=lifeFilterGeneration;
+    groupMarker.lifeIndices=g.indices.slice();
+    groupMarker.on('click',function(){if(generation!==lifeFilterGeneration||renderGeneration!==lifeRenderGeneration)return;if(window.TimelineWorkspace)window.TimelineWorkspace.showChoices('Nearby journey stops',g.indices.map(function(i){return {index:i,label:(i+1)+'. '+STOPS[i].title};}),function(i){if(generation===lifeFilterGeneration&&g.indices.indexOf(i)!==-1)selectStop(i,false);});});groupMarker.addTo(leafletMap);var element=groupMarker.getElement();if(element){element.setAttribute('role','button');element.setAttribute('aria-label',g.indices.length+' nearby journey stops. Open the numbered event list.');}lifeClusters.push(groupMarker);
   });
 }
 document.getElementById('map').addEventListener('timeline:map-resize',function(){ if(leafletMap){leafletMap.invalidateSize({pan:false});spreadNearbyPins();} });
