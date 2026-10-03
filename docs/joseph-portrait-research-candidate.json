@@ -1,5 +1,5 @@
 {
-  "state": "LOCAL_DRAFT_FOR_INDEPENDENT_REVIEW",
+  "state": "OWNER_AUTHORIZED_PUBLICATION_PENDING_RELEASE_VERIFICATION",
   "base": "7b4ca20f1dd23b1c0e2b3c41e528a127a40deb04",
   "files": [
     {
@@ -66,10 +66,20 @@
       "path": "tools/joseph_smith_likeness_qa.py",
       "sha256": "955819c60be0a15194c90a373c3c92faa9d4d9f9416ffb8fbd19a8d0c26860f6",
       "bytes": 12411
+    },
+    {
+      "path": "site-search-index.json",
+      "sha256": "a3fa2878a38c6974759b9a45f042579589d73cfb865d4a9ac1541f0a5e4fe3ae",
+      "bytes": 2988458
+    },
+    {
+      "path": ".github/workflows/site-qa.yml",
+      "sha256": "a13ab2fc057d80be1a713df807b7e2d8b8ce5c9956e3a0e9347ec270f7fbe6d0",
+      "bytes": 21543
     }
   ],
-  "browser": "Parent Albert review pending",
-  "publication": "No commit, push, or deployment",
+  "browser": "Root-owned desktop, phone and enlarged-text evidence is recorded separately; exact candidate review remains required.",
+  "publication": "Wyatt directly authorized publication to review live: just publish so I can see. Root owns release checks, commit, push and publication; this worker has not published.",
   "baseline_portrait": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827",
   "checks": [
     "research parity164textitems/16traits/15sections PASS",
@@ -80,6 +90,12 @@
     "git diff --check PASS",
     "full site QA PASS on final Hyrum/mask-action candidate",
     "Neutral mask-caption correction synced; parity and scoped likeness QA PASS",
-    "Narrow final caption git diff --check PASS"
-  ]
+    "Narrow final caption git diff --check PASS",
+    "Search index --check PASS;21records changed all Joseph likeness route;16added none removed;pageinventory unchanged",
+    "Python search QA PASS:128publicpages,2142validdestinations",
+    "Research parity gate now enforced in existing Joseph CI step",
+    "JavaScript search runtime requires unavailable local jsdom; hosted CI remains required",
+    "Publication-preparation git diff --check PASS"
+  ],
+  "owner_acceptance": "Publication authority is separate from final aesthetic and physical-phone acceptance."
 }
