@@ -174,7 +174,7 @@ OWNER_20260929_STYLES = {
     'timeline-mobile-study.css': ('c21e5012a1e86a58b08eaa9383c45d3be7b357bd0d5cd747668699ac54c76cbf', ['timelines/latter-day-saint-church-history-timeline.html', 'timelines/willie-and-martin-handcart-map.html', 'timelines/life-of-christ-journey-map.html']),
     'timeline-images.css': ('6d1aadc6c63012f5055db262354cdac21109bbd1fcc93799aefbba478a6454ec', ['timelines/latter-day-saint-church-history-timeline.html', 'timelines/willie-and-martin-handcart-map.html', 'timelines/life-of-christ-journey-map.html']),
     # Owner-requested bounded independent Timeline panes; exact source-reviewed route sets.
-    'timeline-workspace.css': ('893d32689b5547742b93e472c4c9d4647ac4ea4748be14c965976996616f2114', ['timelines/willie-and-martin-handcart-map.html', 'timelines/life-of-christ-journey-map.html']),
+    'timeline-workspace.css': ('fb945135a563c94ff6f3cdd5b724e1250824e6ad4e37bfa54a8a55d746917aac', ['timelines/willie-and-martin-handcart-map.html', 'timelines/life-of-christ-journey-map.html']),
     'timeline-history-workspace.css': ('acecf66d917b13cc4548e23ff8ab348974423342ba00840f37d1c73d6eb5c173', ['timelines/latter-day-saint-church-history-timeline.html']),
 
     # Owner requested shared headers on these three preserved experiences; exact scoped desktop offset.
