@@ -60,9 +60,10 @@ body.fc-timeline-experience .timeline-mobile .timeline-map-dock [data-timeline-p
 .internal-map-image{display:block;flex:1;min-height:0;text-align:center}
 .internal-map-image img{width:100%;height:100%;object-fit:contain;display:block}
 .internal-map-actions{display:flex;flex-direction:column;gap:6px;flex:none;font-size:13px;line-height:1.35;color:var(--cream)}
-.internal-map-actions button{min-height:44px;padding:8px 12px;font:inherit;color:var(--cream);background:var(--warm);border:1px solid var(--gold);border-radius:12px;cursor:pointer}
+.internal-map-actions button{min-height:44px;flex-shrink:0;padding:8px 12px;font:inherit;color:var(--cream);background:var(--warm);border:1px solid var(--gold);border-radius:12px;cursor:pointer}
 .life-internal-view #map,.life-internal-view>.map-pin-note,.life-internal-view>#mapFallback{visibility:hidden}
 .life-internal-active .timeline-map-interact{display:none!important}
-.timeline-mobile .internal-map-view{padding:6px;gap:4px;flex-direction:row}
-.timeline-mobile .internal-map-image{height:100%;flex:1 1 40%}
+.timeline-mobile .internal-map-view{position:relative;inset:auto;padding:6px;gap:4px;flex-direction:row}
+.timeline-mobile .life-internal-view #map{display:none!important}
+.timeline-mobile .internal-map-image{height:clamp(100px,24svh,190px);flex:1 1 40%}
 .timeline-mobile .internal-map-actions{flex:1 1 60%;justify-content:center;font-size:12px}
