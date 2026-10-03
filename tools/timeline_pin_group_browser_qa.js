@@ -15,6 +15,7 @@ module.exports=async function(page,origin,out){
    const enlarge=()=>page.evaluate(scale=>{if(scale===1)return;const nodes=[...document.body.querySelectorAll('*')];nodes.forEach(n=>{if(n.dataset.qaGroupScaled)n.style.fontSize=n.dataset.qaGroupOriginal;});const sizes=nodes.map(n=>parseFloat(getComputedStyle(n).fontSize));nodes.forEach((n,i)=>{if(!n.dataset.qaGroupScaled)n.dataset.qaGroupOriginal=n.style.fontSize;n.style.fontSize=sizes[i]*scale+'px';n.dataset.qaGroupScaled='true';});},scale);await enlarge();
    record.headerGeometry=await require('./timeline_header_geometry_qa')(page);
    record.creditGeometry=await require('./timeline_attribution_geometry_qa')(page,width);
+   record.initialMarkerGeometry=await require('./timeline_marker_geometry_qa')(page);
    const current=()=>page.evaluate(kind=>kind==='history'?window.HistoryTimeline.selectedIndex:kind==='handcart'?window.HandcartTimeline.current:window.LifeTimeline.current,kind);
    if(kind==='life'){
     await page.evaluate(()=>window.__qaLeafletMaps[0].setView([32.7,35.3],7,{animate:false}));
@@ -45,6 +46,7 @@ module.exports=async function(page,origin,out){
     await nav.scrollIntoViewIfNeeded();await page.screenshot({path:path.join(out,'pin-group-'+kind+'-'+width+'-scale'+scale+'.png'),animations:'disabled'});
     const disclosure=page.locator('.timeline-filter-disclosure');if(!(await disclosure.evaluate(n=>n.open)))await disclosure.locator(':scope > summary').click();if(kind==='history'){await page.locator('#search').fill('temple');}else await page.locator('[data-filter="willie"]').click();assert.equal(await nav.count(),0,'Filter clears old group');assert.equal(await page.locator('.timeline-place-choices').count(),0);record.filterCleared=true;
    }
+   await enlarge();record.finalMarkerGeometry=await require('./timeline_marker_geometry_qa')(page);
    record.status='PASS';
   }catch(error){record.error=String(error);record.stack=error.stack;await page.screenshot({path:path.join(out,'pin-group-'+kind+'-'+width+'-scale'+scale+'-failure.png'),animations:'disabled'}).catch(()=>{});}records.push(record);
  }}finally{await page.unroute('https://**',intercept);fs.writeFileSync(path.join(out,'pin-groups.json'),JSON.stringify({evidence:'Real pinned Leaflet markers; simulated tiles; not physical-device acceptance',records},null,2));}

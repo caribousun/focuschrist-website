@@ -1,0 +1,9 @@
+/* Visible badge text must fit the badge, independently of Leaflet's anchor wrapper. */
+'use strict';
+const assert=require('node:assert/strict');
+const contained=(outer,inner)=>inner.left>=outer.left+1&&inner.right<=outer.right-1&&inner.top>=outer.top+1&&inner.bottom<=outer.bottom-1;
+assert.equal(contained({left:0,right:44,top:0,bottom:44},{left:10,right:35,top:36,bottom:55}),false,'Old enlarged unit outside fixed circle is rejected');
+module.exports=async function(page){
+ const records=await page.locator('.history-map-pin,.handcart-cluster,.leaflet-marker-icon .pin').evaluateAll(nodes=>nodes.map(n=>{const r=n.getBoundingClientRect(),walker=document.createTreeWalker(n,NodeFilter.SHOW_TEXT),texts=[];while(walker.nextNode()){const t=walker.currentNode;if(!t.textContent.trim())continue;const range=document.createRange();range.selectNodeContents(t);for(const b of range.getClientRects())texts.push({text:t.textContent,left:b.left,right:b.right,top:b.top,bottom:b.bottom});}const c=n.closest('.leaflet-container').getBoundingClientRect();return {canvas:{left:c.left,right:c.right,top:c.top,bottom:c.bottom},label:n.textContent,badge:{left:r.left,right:r.right,top:r.top,bottom:r.bottom},texts};}));
+ assert(records.length>0,'Actual map badges required');for(const r of records){assert(r.texts.length>0);assert(r.texts.every(t=>contained(r.badge,t)),'Full marker label remains inside badge with buffer: '+JSON.stringify(r));}const visible=records.filter(r=>r.badge.left>=r.canvas.left&&r.badge.right<=r.canvas.right&&r.badge.top>=r.canvas.top&&r.badge.bottom<=r.canvas.bottom);for(let i=0;i<visible.length;i++)for(let j=i+1;j<visible.length;j++){const a=visible[i].badge,b=visible[j].badge;assert(!(Math.min(a.right,b.right)-Math.max(a.left,b.left)>1&&Math.min(a.bottom,b.bottom)-Math.max(a.top,b.top)>1),'Visible neighboring badges do not overlap: '+visible[i].label+' / '+visible[j].label);}return records;
+};
