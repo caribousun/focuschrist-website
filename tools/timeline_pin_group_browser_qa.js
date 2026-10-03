@@ -1,9 +1,12 @@
 /* Hosted real Leaflet group selection; tile pixels are simulated, not provider evidence. */
 'use strict';
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+function instrumentLeaflet(source){return source+'\n;window.__qaLeafletMaps=[];var make=L.map;L.map=function(){var m=make.apply(this,arguments);window.__qaLeafletMaps.push(m);return m;};';}
+// Real Leaflet ends with a source-map line comment. The observer must start a new line.
+const fixture={window:{}};require('node:vm').runInNewContext(instrumentLeaflet('var L={map:function(){return {identity:42};}};\n//# sourceMappingURL=leaflet.js.map'),fixture);assert.equal(fixture.L.map().identity,42);assert.equal(fixture.window.__qaLeafletMaps.length,1,'Map observer survives a trailing source-map comment');
 module.exports=async function(page,origin,out){
  const records=[],dist=path.dirname(require.resolve('leaflet'));
- const intercept=async r=>{const u=r.request().url();if(u.includes('leaflet')&&u.endsWith('.js'))return r.fulfill({contentType:'text/javascript',body:fs.readFileSync(path.join(dist,'leaflet.js'),'utf8')+';window.__qaLeafletMaps=[];var make=L.map;L.map=function(){var m=make.apply(this,arguments);window.__qaLeafletMaps.push(m);return m;};'});if(u.includes('leaflet')&&u.endsWith('.css'))return r.fulfill({contentType:'text/css',body:fs.readFileSync(path.join(dist,'leaflet.css'),'utf8')});if(u.includes('tile.openstreetmap.org'))return r.fulfill({contentType:'image/svg+xml',body:'<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256"><rect width="256" height="256" fill="#54717a"/></svg>'});return r.abort();};
+ const intercept=async r=>{const u=r.request().url();if(u.includes('leaflet')&&u.endsWith('.js'))return r.fulfill({contentType:'text/javascript',body:instrumentLeaflet(fs.readFileSync(path.join(dist,'leaflet.js'),'utf8'))});if(u.includes('leaflet')&&u.endsWith('.css'))return r.fulfill({contentType:'text/css',body:fs.readFileSync(path.join(dist,'leaflet.css'),'utf8')});if(u.includes('tile.openstreetmap.org'))return r.fulfill({contentType:'image/svg+xml',body:'<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256"><rect width="256" height="256" fill="#54717a"/></svg>'});return r.abort();};
  await page.route('https://**',intercept);
  try{for(const [width,height,scale] of [[1366,720,1],[390,844,1],[320,900,2]])for(const kind of ['history','handcart','life','americas']){
   const route={history:'latter-day-saint-church-history-timeline',handcart:'willie-and-martin-handcart-map',life:'life-of-christ-journey-map',americas:'life-of-christ-journey-map'}[kind],record={kind,width,height,scale};
