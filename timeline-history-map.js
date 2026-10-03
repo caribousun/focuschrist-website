@@ -52,19 +52,39 @@
     var worldwide=indices.filter(function(i){return data.events[i].kind==='worldwide';}).length;
     status.textContent=(tileFailed?'Map imagery is unavailable here. Geographic markers and event descriptions remain usable. ':'')+indices.length+' matching events. '+Object.keys(byPlace).length+' approximate places; '+Object.keys(regionGroups).length+' contextual regions; '+worldwide+' worldwide events without pins.';
   }
+  function reducedMotion(){return window.matchMedia('(prefers-reduced-motion: reduce)').matches;}
   function focus(index){
     var r=data.events[index];selected=index;description(index);
     if(!map)return;
+    map.stop();
     groups.forEach(function(g){g.marker.setIcon(icon(g));});
-    if(r.kind==='worldwide'){map.setView([20,0],2);return;}
-    if(r.kind==='region'){map.fitBounds(r.region.bounds,{padding:[24,24],maxZoom:7});return;}
+    var immediate=reducedMotion();
+    if(r.kind==='worldwide'){
+      if(immediate)map.setView([20,0],2,{animate:false});else map.flyTo([20,0],2,{duration:.6});
+      return;
+    }
+    if(r.kind==='region'){
+      var regionOptions={padding:[24,24],maxZoom:7,animate:!immediate,duration:.8};
+      if(immediate)map.fitBounds(r.region.bounds,regionOptions);else map.flyToBounds(r.region.bounds,regionOptions);
+      return;
+    }
     var points=r.places.map(function(key){var p=data.places[key];return[p.lat,p.lng];});
-    if(points.length)map.fitBounds(L.latLngBounds(points),{padding:[30,30],maxZoom:10});
+    if(points.length===1){
+      var distance=map.distance(map.getCenter(),points[0]),zoom=map.getZoom();
+      // These are approximate place locations: retain a nearby area view, never street-level precision.
+      var targetZoom=distance<75000&&zoom>=8?Math.min(zoom,10):10;
+      if(distance<25&&Math.abs(zoom-targetZoom)<.01)return;
+      if(immediate)map.setView(points[0],targetZoom,{animate:false});else map.flyTo(points[0],targetZoom,{duration:.6});
+    }else if(points.length){
+      var options={padding:[30,30],maxZoom:10,animate:!immediate,duration:.8};
+      if(immediate)map.fitBounds(L.latLngBounds(points),options);else map.flyToBounds(L.latLngBounds(points),options);
+    }
   }
   function showMatching(){
     if(!map)return;
+    map.stop();
     var points=[];indices.forEach(function(i){var r=data.events[i];r.places.forEach(function(key){var p=data.places[key];points.push([p.lat,p.lng]);});if(r.region)points.push.apply(points,r.region.bounds);});
-    if(points.length)map.fitBounds(L.latLngBounds(points),{padding:[24,24],maxZoom:8});else map.setView([20,0],2);
+    if(points.length)map.fitBounds(L.latLngBounds(points),{padding:[24,24],maxZoom:8,animate:false});else map.setView([20,0],2,{animate:false});
   }
   window.addEventListener('timeline:select',function(event){if(Number.isInteger(event.detail.index)&&data.events[event.detail.index])focus(event.detail.index);});
   window.addEventListener('timeline:filter',function(event){filterGeneration++;indices=event.detail.indices.slice();if(indices.indexOf(selected)<0){selected=null;summary.textContent='Choose an event or a map location to explore its geographic context.';}draw();showMatching();});

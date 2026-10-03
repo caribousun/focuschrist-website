@@ -59,7 +59,7 @@ const root=path.resolve(__dirname,'..'),out=path.join(root,'.qa-artifacts/timeli
   assert.deepEqual(errors,[],profile.name+' uncaught errors');results.push({profile:profile.name,events:51,presidents:18,stops:33,lifeOfChristStops:38,lifePhaseFilters:true,lifePreviousNext:true,filters:true,search:true,keyboardStory:true,providerUnavailableFallback:true,handcartFallbackGeometry:fallbackMetrics});}catch(error){results.push({profile:profile.name,error:String(error),stack:error.stack,pageErrors:errors});await page.screenshot({path:path.join(out,profile.name+'-failure.png'),fullPage:false,animations:'disabled'}).catch(()=>{});}finally{await context.close();}
  }
  // Independent suites run even after a failed baseline profile, each in a fresh context.
- for(const name of ['timeline_leaflet_touch_qa','timeline_mobile_browser_qa','timeline_panes_browser_qa','timeline_images_browser_qa','timeline_pin_group_browser_qa','timeline_opening_browser_qa']){
+ for(const name of ['timeline_leaflet_touch_qa','timeline_mobile_browser_qa','timeline_panes_browser_qa','timeline_images_browser_qa','timeline_pin_group_browser_qa','timeline_opening_browser_qa','timeline_history_camera_browser_qa']){
   const context=await browser.newContext({viewport:{width:1366,height:900},reducedMotion:'reduce'}),page=await context.newPage(),errors=[];
   page.on('pageerror',e=>errors.push({message:String(e),stack:e.stack,url:page.url()}));
   await context.route('https://**',r=>r.abort());
@@ -68,5 +68,5 @@ const root=path.resolve(__dirname,'..'),out=path.join(root,'.qa-artifacts/timeli
   finally{await context.close();}
  }
  }finally{if(browser)await browser.close();await new Promise(r=>server.close(r));fs.writeFileSync(path.join(out,'report.json'),JSON.stringify({results,suites,limitations:['Hosted Chromium does not establish owner phone approval.','Remote map tiles intentionally blocked; provider-backed map needs separate live inspection.']},null,2)+'\n');}
- assert.equal(results.length,3);assert.equal(suites.length,6);assert.deepEqual([...results,...suites].filter(r=>r.error),[],'Every baseline profile and independent suite must pass');console.log('PASS: Timeline hub and standalone interactions across desktop, phone and enlarged text; remote-provider fallback verified.');
+ assert.equal(results.length,3);assert.equal(suites.length,7);assert.deepEqual([...results,...suites].filter(r=>r.error),[],'Every baseline profile and independent suite must pass');console.log('PASS: Timeline hub and standalone interactions across desktop, phone and enlarged text; remote-provider fallback verified.');
 })().catch(e=>{console.error(e);process.exitCode=1;});

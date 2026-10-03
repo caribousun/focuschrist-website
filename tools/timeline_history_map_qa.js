@@ -1,10 +1,11 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),{JSDOM}=require('jsdom');
 const root=path.join(__dirname,'..'),html=fs.readFileSync(path.join(root,'timelines/latter-day-saint-church-history-timeline.html'),'utf8');
-for(const provider of [true,false]){
+for(const provider of [true,false]) for(const reduced of [true,false]){
  const dom=new JSDOM(html,{url:'https://focuschrist.com/timelines/latter-day-saint-church-history-timeline.html',runScripts:'outside-only'}),w=dom.window,d=w.document;
- w.matchMedia=()=>({matches:true,addEventListener(){}});w.HTMLElement.prototype.scrollIntoView=function(){};
+ w.matchMedia=q=>({matches:q.includes('prefers-reduced-motion')?reduced:true,addEventListener(){}});w.HTMLElement.prototype.scrollIntoView=function(){};
  const layers=new Set(),handlers={},tile={},views=[];let popup=null,popupOpens=0;
- const map={setView(p,z){views.push({p,z});return this},latLngToContainerPoint(p){return{x:p[1]*2,y:p[0]*2}},removeLayer(l){layers.delete(l)},fitBounds(b){views.push({bounds:b});return this},closePopup(){popup=null;},on(n,f){handlers[n]=f;return this},invalidateSize(){}};
+ let center={lat:38,lng:-70},zoom=3;const camera=[];function update(p,z){center={lat:p[0],lng:p[1]};zoom=z;}
+ const map={stop(){camera.push({method:'stop'});return this},getCenter(){return center},getZoom(){return zoom},distance(a,b){const r=Math.PI/180,x=(b[1]-a.lng)*r*Math.cos((a.lat+b[0])*r/2),y=(b[0]-a.lat)*r;return 6371000*Math.hypot(x,y)},flyTo(p,z,o){camera.push({method:'flyTo',p,z,o});update(p,z);return this},flyToBounds(b,o){camera.push({method:'flyToBounds',b,o});return this},setView(p,z,o){camera.push({method:'setView',p,z,o});update(p,z);views.push({p,z});return this},latLngToContainerPoint(p){return{x:p[1]*2,y:p[0]*2}},removeLayer(l){layers.delete(l)},fitBounds(b,o){camera.push({method:'fitBounds',b,o});views.push({bounds:b});return this},closePopup(){popup=null;},on(n,f){handlers[n]=f;return this},invalidateSize(){}};
  function layer(coords,opts){return{coords,opts,popup:null,handlers:{},bindPopup(p){this.popup=p;return this},addTo(){layers.add(this);return this},on(n,f){this.handlers[n]=f;return this},setIcon(i){this.opts.icon=i;return this}}}
  if(provider)w.L={map:()=>map,tileLayer:()=>({addTo(){return this},on(n,f){tile[n]=f;return this}}),divIcon:o=>o,latLngBounds:p=>p,marker:layer,rectangle:layer,popup:()=>({setLatLng(){return this},setContent(p){this.content=p;return this},openOn(){popup=this.content;popupOpens++;return this}})};
  w.eval([...d.scripts].find(s=>s.textContent.includes('var EVENTS')).textContent);
@@ -17,6 +18,13 @@ for(const provider of [true,false]){
  assert(data.events.filter(r=>r.kind==='worldwide').every(r=>r.places.length===0));assert(data.events.some(r=>r.places.length>1));assert(data.events.some(r=>r.kind==='region'));
  let staleChoice=null;
  if(provider){
+  const singles=data.events.filter(e=>e.places.length===1&&e.kind!=='worldwide'&&e.kind!=='region'),a=singles[0],place=data.places[a.places[0]],target=[place.lat,place.lng];
+  map.setView([0,0],3);camera.length=0;api.select(a.index);assert.equal(camera[0].method,'stop');assert.equal(camera.at(-1).method,reduced?'setView':'flyTo');assert.deepEqual(Array.from(camera.at(-1).p),target);assert.equal(camera.at(-1).z,10);
+  camera.length=0;api.select(a.index);assert(!camera.some(c=>c.method==='flyTo'||c.method==='flyToBounds'),'Repeated same place never makes artificial flight');
+  map.setView([place.lat+.05,place.lng],9);camera.length=0;api.select(a.index);assert.equal(camera.at(-1).z,9,'Nearby selection preserves useful zoom');
+  for(const kind of ['region','worldwide']){const event=data.events.find(e=>e.kind===kind);camera.length=0;api.select(event.index);assert.equal(camera[0].method,'stop');assert.equal(camera.at(-1).method,kind==='region'?(reduced?'fitBounds':'flyToBounds'):(reduced?'setView':'flyTo'));if(kind==='worldwide')assert.equal(camera.at(-1).z,2);}
+  const multi=data.events.find(e=>e.places.length>1&&e.kind!=='region');camera.length=0;api.select(multi.index);assert.equal(camera.at(-1).method,reduced?'fitBounds':'flyToBounds');assert.equal(camera.at(-1).b.length,multi.places.length,'All multi-place extents retained');
+  camera.length=0;w.HistoryTimelineMap.showMatching();assert.equal(camera[0].method,'stop','Reset cancels pending camera');assert.equal(camera.at(-1).method,'fitBounds');
   for(let n=0;n<3;n++)tile.tileerror();assert.match(d.getElementById('historyMapStatus').textContent,/imagery is unavailable/);tile.tileload();assert.doesNotMatch(d.getElementById('historyMapStatus').textContent,/imagery is unavailable/);
   let choices=null;w.TimelineWorkspace={showChoices(title,items,onSelect){choices={title,items,onSelect};return true;}};
   for(const width of [390,1366]){
