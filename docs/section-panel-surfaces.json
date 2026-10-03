@@ -320,7 +320,8 @@
     "cfm-source-link": "CFM official-source text control in a section footer; transparent and unrounded, not an enclosing panel.",
     "fc-source-directory": "Study navigation disclosure; uses shared Home panel tokens in priesthood-history-study.css.",
     "history-controls": "Owner-requested Church History search and collapsible era toolbar; dedicated Timeline workspace runtime checks own geometry and interaction.",
-    "controls": "Timeline filter controls reset their mobile border, radius and background to zero/none; this is a control group, not a section panel. Requires the three Timeline runtime profiles and rendered review."
+    "controls": "Timeline filter controls reset their mobile border, radius and background to zero/none; this is a control group, not a section panel. Requires the three Timeline runtime profiles and rendered review.",
+    "timeline-opening-continue": "Timeline opening navigation pill, not a content panel; shared opening geometry and rendered touch/focus containment checks apply."
   },
   "local_copy_contrast": "Covered panels locally resolve --fc-muted to --fc-text; approved Home .fc-card remains unchanged.",
   "retired_surface_selectors": {

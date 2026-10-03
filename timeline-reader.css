@@ -1,0 +1,25 @@
+/* One reading and navigation pattern for map and directory selections. */
+body.fc-timeline-experience .timeline-event-navigation{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 16px}
+body.fc-timeline-experience .timeline-event-navigation button{appearance:none;min-height:44px;max-width:100%;padding:10px 16px;border:1px solid #c8c0a8;border-radius:999px;background:#fffaf0;color:#203f43;font:inherit;line-height:1.35;white-space:normal;overflow-wrap:anywhere;cursor:pointer}
+body.fc-timeline-experience .timeline-event-navigation button:disabled{opacity:.5;cursor:default}
+body.fc-timeline-experience .timeline-event-navigation button:focus-visible,body.fc-timeline-experience .timeline-group-nav button:focus-visible{outline:2px solid #a66b10;outline-offset:2px}
+body.fc-timeline-experience .history-reading.timeline-single-story .era-block{margin:0}
+body.fc-timeline-experience .history-reading.timeline-single-story .era-block:not(:has(.is-current-story)),body.fc-timeline-experience .history-reading.timeline-single-story .event:not(.is-current-story){display:none}
+body.fc-timeline-experience .history-reading.timeline-single-story .timeline::before,body.fc-timeline-experience .history-reading.timeline-single-story .event .dot{display:none}
+body.fc-timeline-experience .history-reading.timeline-single-story .event{width:100%;margin:0;padding:0}
+body.fc-timeline-experience .history-reading.timeline-single-story .card{background:linear-gradient(180deg,#fbf7ed,#f0ecdf);border:1px solid #c8c0a8;color:#203f43;padding:22px;overflow:visible;box-shadow:none}
+body.fc-timeline-experience .history-reading.timeline-single-story .card-top{padding:0;cursor:default}
+body.fc-timeline-experience .history-reading.timeline-single-story .card h3{font:700 1.7rem/1.15 Georgia,serif;color:#203f43}
+body.fc-timeline-experience .history-reading.timeline-single-story .year{font-size:1rem;font-weight:700;color:#965f0a}
+body.fc-timeline-experience .history-reading.timeline-single-story .place,body.fc-timeline-experience .history-reading.timeline-single-story .summary{color:#496064}
+body.fc-timeline-experience .history-reading.timeline-single-story .tag{color:#765315;border-color:#c8c0a8}
+body.fc-timeline-experience .history-reading.timeline-single-story .detail{padding:0;border:0;background:none}
+body.fc-timeline-experience .history-reading.timeline-single-story .era-context{margin-top:20px;color:var(--fc-cream,#efe6ce)}
+body.fc-timeline-experience .history-reading.timeline-single-story .era-context summary{min-height:44px;cursor:pointer;display:flex;align-items:center;font-weight:600}
+body.fc-timeline-experience .history-reading.timeline-single-story .era-head{padding:0;margin:8px 0;text-align:left}
+body.fc-timeline-experience .history-reading.timeline-single-story .era-head h2,body.fc-timeline-experience .history-reading.timeline-single-story .era-head p{color:var(--fc-cream,#efe6ce)}
+
+/* Shared tokens exist on every experience; Merlin's legacy color names do not. */
+body.fc-timeline-experience .timeline-mobile :is(.timeline-mobile-tabs button,.timeline-map-interact),body.fc-timeline-experience .timeline-place-choices button{box-sizing:border-box;min-height:44px;border:1px solid var(--fc-line-strong);border-radius:12px;background:var(--fc-bg-deep);color:var(--fc-cream)}
+body.fc-timeline-experience .timeline-mobile :is(.timeline-mobile-tabs button,.timeline-map-interact)[aria-pressed="true"]{background:var(--fc-gold);color:var(--fc-bg-deep)}
+body.fc-timeline-experience :is(.timeline-mobile-tabs button,.timeline-map-interact,.timeline-place-choices button):focus-visible{outline:2px solid var(--fc-gold-light);outline-offset:2px}

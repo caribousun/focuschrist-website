@@ -2911,6 +2911,18 @@
       "disposition": "excluded_with_reason",
       "reason": "Legacy historical timeline row, separate story format."
     },
+    "timeline-opening-continue": {
+      "stylesheets": [
+        "timeline-experiences.css"
+      ],
+      "pages": [
+        "timelines/latter-day-saint-church-history-timeline.html",
+        "timelines/life-of-christ-journey-map.html",
+        "timelines/willie-and-martin-handcart-map.html"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Timeline opening navigation pill, not a content panel; shared opening geometry and rendered touch/focus containment checks apply."
+    },
     "watch-feature-study": {
       "stylesheets": [
         "watch-library.css"

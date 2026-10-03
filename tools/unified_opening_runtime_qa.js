@@ -3,7 +3,8 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const {JSDOM}=require('jsdom');
 const root=path.resolve(__dirname,'..'),source=fs.readFileSync(path.join(root,'unified-opening.js'),'utf8');
 const inventory=JSON.parse(fs.readFileSync(path.join(root,'docs/unified-opening-inventory.json')));
-assert.equal(inventory.pages.length,129);assert.equal(inventory.pages.filter(x=>x.hero).length,47);
+assert.equal(inventory.pages.length,129);assert.equal(new Set(inventory.pages.map(x=>x.path)).size,129,'Canonical routes remain unique');assert.equal(inventory.pages.filter(x=>x.hero).length,50);
+for(const route of ['timelines/latter-day-saint-church-history-timeline.html','timelines/willie-and-martin-handcart-map.html','timelines/life-of-christ-journey-map.html'])assert.equal(inventory.pages.find(x=>x.path===route)?.hero,true,'Each timeline experience is included');
 let checks=0;
 for(const file of ['answers/abrahamic-covenant.html','answers/prayer-and-personal-revelation.html','art.html','come-follow-me.html','general-conference.html','history/john-tanner.html','jesus-christ/parables/barren-fig.html']){
  const dom=new JSDOM(fs.readFileSync(path.join(root,file),'utf8'),{url:'https://focuschrist.com/'+file,runScripts:'outside-only',pretendToBeVisual:true});

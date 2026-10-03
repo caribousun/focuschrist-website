@@ -39,6 +39,42 @@ def local_target(page: Path, value: str) -> Path:
     return (ROOT / asset_path.lstrip("/") if asset_path.startswith("/") else page.parent / asset_path).resolve()
 
 
+TIMELINE_STUDY_HEROES = {
+    "timelines/life-of-christ-journey-map.html": ("../answers/jesus-christ-latter-day-saint-beliefs.html#nested-page-title", "../assets/heroes/topics/jesus-desktop.webp", "../assets/heroes/topics/jesus-mobile.webp"),
+    "timelines/latter-day-saint-church-history-timeline.html": ("../church-history.html#history-first-vision-title", "../assets/timelines/church-history-grove.webp", None),
+    "timelines/willie-and-martin-handcart-map.html": ("../pioneers.html#pioneer-page-title", "../assets/heroes/pioneers.webp", None),
+}
+
+
+def timeline_study_hero_errors(relative: str, page: str) -> list[str]:
+    from bs4 import BeautifulSoup
+    href, src, mobile = TIMELINE_STUDY_HEROES[relative]
+    dom = BeautifulSoup(page, "html.parser")
+    heroes = dom.select(".fc-visual-hero")
+    if len(heroes) != 1:
+        return [f"{relative}: expected one exact timeline study-reference hero"]
+    hero = heroes[0]
+    errors = []
+    if hero.name != "a" or hero.get("href") != href or not hero.get("aria-label"):
+        errors.append(f"{relative}: timeline hero must link accessibly to its exact study")
+    images = hero.select("img")
+    if len(images) != 1 or images[0].get("src") != src or not images[0].get("alt"):
+        errors.append(f"{relative}: timeline hero image or alternative text differs")
+    sources = [n.get("srcset") for n in hero.select("source")]
+    if sources != ([mobile] if mobile else []):
+        errors.append(f"{relative}: timeline hero responsive source differs")
+    if any(hero.has_attr(a) for a in ("data-hero-viewer", "data-full-image-viewer", "data-artwork-detail", "onclick")):
+        errors.append(f"{relative}: study reference must not be intercepted as a local artwork modal")
+    path = ROOT / relative
+    for asset in [src] + ([mobile] if mobile else []):
+        if not local_target(path, asset).is_file():
+            errors.append(f"{relative}: timeline hero asset missing: {asset}")
+    target = local_target(path, href)
+    if not target.is_file() or not BeautifulSoup(target.read_text(encoding="utf-8"), "html.parser").find(id=urlsplit(href).fragment):
+        errors.append(f"{relative}: exact study destination missing")
+    return errors
+
+
 def main() -> int:
     assert local_target(ROOT / "404.html", "/assets/heroes/home.webp") == (ROOT / "assets/heroes/home.webp").resolve()
     assert local_target(ROOT / "answers/example.html", "../assets/heroes/home.webp?x=1") == (ROOT / "assets/heroes/home.webp").resolve()
@@ -253,12 +289,18 @@ def main() -> int:
         errors.append("Pioneer page must retain ten artwork fallbacks, and the detail-dialog full-size action")
 
     hero_pages = 0
+    timeline_references = set()
     for path in ROOT.rglob("*.html"):
         page = path.read_text(encoding="utf-8")
         if not re.search(r'class="[^\"]*\bfc-visual-hero\b', page):
             continue
         hero_pages += 1
         relative = path.relative_to(ROOT).as_posix()
+        if relative in TIMELINE_STUDY_HEROES:
+            timeline_references.add(relative)
+            errors.extend(timeline_study_hero_errors(relative, page))
+            hero_pages -= 1  # These exact study links retain the 42 local-modal hero contracts.
+            continue
         prefix = "../" * (len(path.relative_to(ROOT).parts) - 1)
         if 'fc-hero-fullscreen' in page:
             errors.append(f"{relative}: hero must not display an overlay pill")
@@ -304,6 +346,14 @@ def main() -> int:
                 errors.append(f"{relative}: missing hero study metadata: {marker}")
         if 'data-full-image-viewer' in hero_link:
             errors.append(f"{relative}: hero must open study before full-size viewer")
+    if timeline_references != set(TIMELINE_STUDY_HEROES):
+        errors.append("expected all three exact timeline study-reference heroes")
+    for relative, (href, src, mobile) in TIMELINE_STUDY_HEROES.items():
+        page = (ROOT / relative).read_text(encoding="utf-8")
+        assert timeline_study_hero_errors(relative, page.replace(href, "../index.html", 1)), "Wrong study link must fail"
+        assert timeline_study_hero_errors(relative, page.replace(href, href.split("#")[0], 1)), "Missing study fragment must fail"
+        assert timeline_study_hero_errors(relative, page.replace(src, "../assets/heroes/home.webp", 1)), "Wrong artwork must fail"
+        assert timeline_study_hero_errors(relative, page.replace('class="fc-visual-hero', 'data-hero-viewer class="fc-visual-hero', 1)), "Modal interception must fail"
     if hero_pages != 42:
         errors.append(f"expected42 image-first pages including404, Evidences, Joseph likeness, Atonement, Birth of Christ, Holy Ghost and Timeline, found{hero_pages}")
 

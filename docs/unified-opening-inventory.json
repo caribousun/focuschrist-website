@@ -1,7 +1,7 @@
 {
   "canonical_count": 129,
-  "hero_count": 47,
-  "excluded_count": 82,
+  "hero_count": 50,
+  "excluded_count": 79,
   "pages": [
     {
       "path": "index.html",
@@ -636,21 +636,21 @@
     },
     {
       "path": "timelines/latter-day-saint-church-history-timeline.html",
-      "hero": false,
-      "template": "excluded-owner-preserved-timeline-experience",
-      "reason": "Wyatt requested preserving Merlin standalone experience design on 2026-10-02."
+      "hero": true,
+      "template": "standard-timeline-study-reference",
+      "reason": "Wyatt requested uniform Life-style image-first timeline openings in PR433; shared Focus frame and explicit Continue, complete original introduction below, artwork links to the related or owning study. No new unique-art claim."
     },
     {
       "path": "timelines/willie-and-martin-handcart-map.html",
-      "hero": false,
-      "template": "excluded-owner-preserved-timeline-experience",
-      "reason": "Wyatt requested preserving Merlin standalone experience design on 2026-10-02."
+      "hero": true,
+      "template": "standard-timeline-study-reference",
+      "reason": "Wyatt requested uniform Life-style image-first timeline openings in PR433; shared Focus frame and explicit Continue, complete original introduction below, artwork links to the related or owning study. No new unique-art claim."
     },
     {
       "path": "timelines/life-of-christ-journey-map.html",
-      "hero": false,
-      "template": "excluded-owner-preserved-timeline-experience",
-      "reason": "Wyatt authorized the delivered standalone Life of Christ timeline on 2026-10-02; its original experience design remains independent."
+      "hero": true,
+      "template": "standard-timeline-study-reference",
+      "reason": "Wyatt requested uniform Life-style image-first timeline openings in PR433; shared Focus frame and explicit Continue, complete original introduction below, artwork links to the related or owning study. No new unique-art claim."
     }
   ]
 }

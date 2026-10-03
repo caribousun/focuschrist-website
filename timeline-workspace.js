@@ -8,9 +8,9 @@
   var breakpoint=Number(workspace.getAttribute('data-mobile-breakpoint'))||900;
   var wide=window.matchMedia('(min-width:'+(breakpoint+1)+'px)');
   var events=workspace.querySelector('[data-timeline-pane="events"]');
-  // Chromium can retain wheel scrolling in History's nested directory at its edge.
+  // Chromium can retain wheel scrolling in a desktop event directory at its edge.
   // Handoff only after every containing scroll pane has exhausted this direction.
-  if(events&&workspace.classList.contains('history-workspace'))events.addEventListener('wheel',function(event){
+  if(events)events.addEventListener('wheel',function(event){
     if(!wide.matches||event.ctrlKey||event.shiftKey||!event.deltaY||Math.abs(event.deltaX)>Math.abs(event.deltaY))return;
     var down=event.deltaY>0;
     for(var node=event.target;node&&node!==document.body&&node!==document.documentElement;node=node.parentElement){
@@ -23,18 +23,26 @@
   var story=workspace.querySelector('[data-timeline-pane="detail"],[data-timeline-pane="timeline"]');
   var choicePanel=null,previousEventScroll=0,group=null,groupNav=null;
   function clearChoices(){if(!choicePanel)return;choicePanel.remove();choicePanel=null;events.classList.remove('timeline-choice-mode');events.scrollTop=previousEventScroll;}
-  function clearGroup(){clearChoices();group=null;if(groupNav)groupNav.remove();groupNav=null;workspace.classList.remove('timeline-group-active');}
+  var eventNav=null;
+  function adapter(){return window.TimelineNavigationAdapter;}
+  function clearGroup(){clearChoices();group=null;if(groupNav)groupNav.remove();groupNav=null;workspace.classList.remove('timeline-group-active');renderEventNav();}
   function selectGroup(index,context){if(group!==context||!context.choices.some(function(c){return c.index===index;}))return;clearChoices();context.onSelect(index);}
-  function stepGroup(direction){if(!group)return false;var at=group.choices.findIndex(function(c){return c.index===group.selected;}),next=at+direction;if(at>=0&&next>=0&&next<group.choices.length)selectGroup(group.choices[next].index,group);return true;}
+  function stepEvent(direction){var api=adapter();if(!api)return false;var indices=api.visibleIndices(),at=indices.indexOf(api.current()),next=at+direction;if(at>=0&&next>=0&&next<indices.length)api.select(indices[next]);return true;}
+  function navigationHost(){var current=adapter()&&adapter().current(),article=window.HistoryTimeline&&document.getElementById('history-event-'+current);return (article||story)&&((article||story).querySelector('.timeline-event-navigation-slot')||(article||story));}
+  function renderEventNav(){
+    var action=eventNav&&eventNav.contains(document.activeElement)?document.activeElement.getAttribute('data-event-direction'):null;
+    if(eventNav)eventNav.remove();eventNav=null;var api=adapter(),host=navigationHost();if(!api||!host)return;
+    var indices=api.visibleIndices(),at=indices.indexOf(api.current());if(at<0)return;
+    eventNav=document.createElement('nav');eventNav.className='timeline-event-navigation journey-nav';eventNav.setAttribute('aria-label','Timeline event navigation');
+    [-1,1].forEach(function(direction){var button=document.createElement('button');button.type='button';button.textContent=direction<0?'Previous':'Next';button.setAttribute('data-event-direction',String(direction));button.disabled=at+direction<0||at+direction>=indices.length;button.addEventListener('click',function(){stepEvent(direction);});eventNav.appendChild(button);});host.appendChild(eventNav);
+    if(action){var button=eventNav.querySelector('[data-event-direction="'+action+'"]');var focusTarget=button&&!button.disabled?button:eventNav.querySelector('button:not(:disabled)');if(focusTarget)focusTarget.focus({preventScroll:true});}
+  }
   function renderGroupNav(){
-    var focusedAction=groupNav&&groupNav.contains(document.activeElement)?document.activeElement.getAttribute('data-group-action'):null;
-    if(groupNav)groupNav.remove();groupNav=null;if(!group||!Number.isInteger(group.selected))return;
-    var context=group,at=context.choices.findIndex(function(c){return c.index===context.selected;});if(at<0)return;
-    var host=story;if(window.HistoryTimeline)host=document.getElementById('history-event-'+context.selected)||story;if(!host)return;
+    if(groupNav)groupNav.remove();groupNav=null;var host=navigationHost();if(!group||!Number.isInteger(group.selected)||!host){renderEventNav();return;}
+    var context=group,at=context.choices.findIndex(function(c){return c.index===context.selected;});
     groupNav=document.createElement('nav');groupNav.className='timeline-group-nav';groupNav.setAttribute('aria-label','Events at this map pin');
-    var label=document.createElement('p');label.textContent=context.title+' · '+(at+1)+' of '+context.choices.length;groupNav.appendChild(label);
-    var back=document.createElement('button');back.type='button';back.textContent="Back to this pin’s events";back.setAttribute('data-group-action','back');back.addEventListener('click',function(){if(group===context)renderChoices(context);});groupNav.appendChild(back);
-    [-1,1].forEach(function(direction){var button=document.createElement('button');button.type='button';button.textContent=direction<0?'Previous event':'Next event';button.setAttribute('data-group-action',direction<0?'previous':'next');button.disabled=at+direction<0||at+direction>=context.choices.length;button.addEventListener('click',function(){if(group===context)stepGroup(direction);});groupNav.appendChild(button);});host.prepend(groupNav);if(focusedAction){var focusTarget=groupNav.querySelector('[data-group-action="'+focusedAction+'"]');(focusTarget&&!focusTarget.disabled?focusTarget:back).focus({preventScroll:true});}
+    var label=document.createElement('p');label.textContent=context.title+(at>=0?' · '+(at+1)+' of '+context.choices.length:' · '+context.choices.length+' events');groupNav.appendChild(label);
+    var back=document.createElement('button');back.type='button';back.textContent="Back to this pin’s events";back.setAttribute('data-group-action','back');back.addEventListener('click',function(){if(group===context)renderChoices(context);});groupNav.appendChild(back);host.prepend(groupNav);renderEventNav();
   }
   function renderChoices(context){
     if(group!==context)return;clearChoices();previousEventScroll=events.scrollTop;
@@ -76,7 +84,7 @@
   function collapseMap(collapsed){workspace.classList.toggle('timeline-map-collapsed',collapsed);mapToggle.textContent=collapsed?'Show map':'Collapse map';if(collapsed)mapInteraction(false);mapToggle.setAttribute('aria-expanded',String(!collapsed));schedule();}
   mapToggle.addEventListener('click',function(){collapseMap(!workspace.classList.contains('timeline-map-collapsed'));});
   if(window.innerHeight<560)collapseMap(true);
-  window.addEventListener('timeline:select',function(e){if(group){if(e.detail&&group.choices.some(function(c){return c.index===e.detail.index;})){group.selected=e.detail.index;renderGroupNav();}else clearGroup();}if(!wide.matches&&(!e.detail||e.detail.showStory!==false)){showView('story');revealReader();}});
+  window.addEventListener('timeline:select',function(e){if(group&&e.detail){group.selected=e.detail.index;renderGroupNav();}else renderEventNav();if(!wide.matches&&(!e.detail||e.detail.showStory!==false)){showView('story');revealReader();}});
   window.addEventListener('timeline:filter',function(){clearGroup();if(!wide.matches)showView('events');});
   var previousMapSize='',wasUnavailable=false;
   var pending=false;
@@ -135,7 +143,7 @@
   window.addEventListener('resize',schedule);
   wide.addEventListener('change',syncLayout);
   if(window.visualViewport)window.visualViewport.addEventListener('resize',schedule);
-  window.TimelineWorkspace={showChoices:showChoices,clearChoices:clearGroup,clearGroup:clearGroup,stepGroup:stepGroup,showStory:function(){clearChoices();if(!wide.matches)showView('story');},showEvents:function(){if(group)renderChoices(group);else{clearChoices();showView('events');}},scrollRow:function(row){
+  window.TimelineWorkspace={showChoices:showChoices,clearChoices:clearGroup,clearGroup:clearGroup,stepGroup:stepEvent,stepEvent:stepEvent,showStory:function(){clearChoices();if(!wide.matches)showView('story');},showEvents:function(){if(group)renderChoices(group);else{clearChoices();showView('events');}},scrollRow:function(row){
     var pane=row.closest('[data-timeline-pane="events"]');
     if(!pane||!wide.matches){row.scrollIntoView({block:'nearest'});return;}
     var p=pane.getBoundingClientRect(),r=row.getBoundingClientRect();
@@ -144,5 +152,6 @@
   }};
   if(window.MutationObserver&&mapPane)new MutationObserver(schedule).observe(mapPane,{childList:true,subtree:true,attributes:true,attributeFilter:['hidden']});
   syncLayout();
+  renderEventNav();
   if(!wide.matches&&window.HistoryTimeline&&Number.isInteger(window.HistoryTimeline.selectedIndex))showView('story');
 })();
