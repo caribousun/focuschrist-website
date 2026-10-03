@@ -67,3 +67,19 @@ body.fc-timeline-experience .timeline-mobile .timeline-map-dock [data-timeline-p
 .timeline-mobile .life-internal-view #map{display:none!important}
 .timeline-mobile .internal-map-image{height:clamp(100px,24svh,190px);flex:1 1 40%}
 .timeline-mobile .internal-map-actions{flex:1 1 60%;justify-content:center;font-size:12px}
+
+/* Timeline-only header: retain enlarged text and reserve separate pointer targets. */
+@media(max-width:1020px){
+ body.fc-timeline-experience .nav[data-focuschrist-header="standard"]{height:auto!important;column-gap:12px!important;box-sizing:border-box}
+ body.fc-timeline-experience .nav[data-focuschrist-header="standard"] .nav-logo{flex:none;width:max-content;max-width:100%;overflow-wrap:anywhere}
+ body.fc-timeline-experience .nav[data-focuschrist-header="standard"] .hamburger-wrap{display:flex!important;align-items:center;gap:8px;min-width:96px}
+ body.fc-timeline-experience .nav[data-focuschrist-header="standard"] .fc-search-trigger{position:relative!important;inset:auto!important;transform:none!important;width:44px;min-width:44px;min-height:44px;padding:0!important}
+ body.fc-timeline-experience .nav[data-focuschrist-header="standard"] .hamburger{box-sizing:border-box;width:44px;min-width:44px;height:44px;min-height:44px;margin:0!important}
+ body.fc-timeline-experience .nav[data-focuschrist-header="standard"].timeline-header-wrap{flex-wrap:wrap!important;row-gap:8px!important}
+ body.fc-timeline-experience .nav[data-focuschrist-header="standard"].timeline-header-wrap .nav-logo{flex-basis:100%;width:auto}
+ body.fc-timeline-experience .nav[data-focuschrist-header="standard"].timeline-header-wrap .hamburger-wrap{margin-left:auto}
+}
+
+body.fc-timeline-experience .timeline-map-attribution{float:none;clear:both;position:static;box-sizing:border-box;flex:0 0 auto;margin:0!important;padding:6px 8px;width:100%;max-width:100%;font-size:1em;line-height:1.35;white-space:normal;overflow-wrap:anywhere;background:var(--fc-bg-deep,#10252d);color:var(--fc-cream,#f5efdf)}
+body.fc-timeline-experience .timeline-map-attribution a{color:var(--fc-gold,#f0c36a)}
+.life-internal-view .timeline-map-attribution{display:none}

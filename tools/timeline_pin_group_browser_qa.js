@@ -13,6 +13,8 @@ module.exports=async function(page,origin,out){
   try{
    await page.setViewportSize({width,height});await page.goto(origin+'/timelines/'+route+'.html',{waitUntil:'load'});await page.waitForFunction(()=>window.__qaLeafletMaps&&window.__qaLeafletMaps.length===1&&window.TimelineWorkspace);await page.locator('.leaflet-tile-loaded').first().waitFor();
    const enlarge=()=>page.evaluate(scale=>{if(scale===1)return;const nodes=[...document.body.querySelectorAll('*')];nodes.forEach(n=>{if(n.dataset.qaGroupScaled)n.style.fontSize=n.dataset.qaGroupOriginal;});const sizes=nodes.map(n=>parseFloat(getComputedStyle(n).fontSize));nodes.forEach((n,i)=>{if(!n.dataset.qaGroupScaled)n.dataset.qaGroupOriginal=n.style.fontSize;n.style.fontSize=sizes[i]*scale+'px';n.dataset.qaGroupScaled='true';});},scale);await enlarge();
+   record.headerGeometry=await require('./timeline_header_geometry_qa')(page);
+   record.creditGeometry=await require('./timeline_attribution_geometry_qa')(page,width);
    const current=()=>page.evaluate(kind=>kind==='history'?window.HistoryTimeline.selectedIndex:kind==='handcart'?window.HandcartTimeline.current:window.LifeTimeline.current,kind);
    if(kind==='life'){
     await page.evaluate(()=>window.__qaLeafletMaps[0].setView([32.7,35.3],7,{animate:false}));

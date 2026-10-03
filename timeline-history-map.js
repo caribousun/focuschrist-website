@@ -72,6 +72,8 @@
   try{
     if(!window.L)throw new Error('Leaflet unavailable');
     map=L.map(canvas,{scrollWheelZoom:false}).setView([38,-70],3);
+  // Keep live provider credits visible outside the interactive map canvas.
+  if(map.attributionControl&&map.attributionControl.getContainer){var attribution=map.attributionControl.getContainer();attribution.classList.add('timeline-map-attribution');canvas.after(attribution);}
     var tileErrors=0;
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> contributors'}).on('tileload',function(){var recovering=tileFailed;tileLoaded=true;tileFailed=false;clearTimeout(tileTimer);if(recovering)draw();}).on('tileerror',function(){if(++tileErrors>=3&&!tileLoaded){tileFailed=true;draw();}}).addTo(map);
     tileTimer=setTimeout(function(){if(!tileLoaded){tileFailed=true;draw();}},10000);

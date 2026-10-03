@@ -80,8 +80,20 @@
   window.addEventListener('timeline:filter',function(){clearGroup();if(!wide.matches)showView('events');});
   var previousMapSize='',wasUnavailable=false;
   var pending=false;
+  function fitHeader(){
+    if(!header)return;
+    var logo=header.querySelector('.nav-logo'),controls=header.querySelector('.hamburger-wrap');
+    if(!logo||!controls)return;
+    var narrow=window.matchMedia('(max-width:1020px)').matches;
+    var style=getComputedStyle(header),available=header.clientWidth-parseFloat(style.paddingLeft)-parseFloat(style.paddingRight);
+    // Intrinsic wordmark width remains independent of the wrapped layout.
+    var textRange=document.createRange();textRange.selectNodeContents(logo);
+    var needed=textRange.getBoundingClientRect().width+controls.scrollWidth+12;
+    header.classList.toggle('timeline-header-wrap',narrow&&needed>available);
+  }
   function measure(){
     pending=false;
+    fitHeader();
     var height=header?header.getBoundingClientRect().height:0;
     workspace.style.setProperty('--timeline-menu-height',Math.ceil(height)+'px');workspace.style.setProperty('--timeline-dock-height',Math.ceil(dock.getBoundingClientRect().height)+'px');
     if(map){
@@ -119,7 +131,7 @@
       alignEntry();
     });
   });
-  if(window.ResizeObserver){var observer=new ResizeObserver(schedule);if(header)observer.observe(header);observer.observe(workspace);if(map)observer.observe(map);}
+  if(window.ResizeObserver){var observer=new ResizeObserver(schedule);if(header){observer.observe(header);var logo=header.querySelector('.nav-logo');if(logo)observer.observe(logo);}observer.observe(workspace);if(map)observer.observe(map);}
   window.addEventListener('resize',schedule);
   wide.addEventListener('change',syncLayout);
   if(window.visualViewport)window.visualViewport.addEventListener('resize',schedule);

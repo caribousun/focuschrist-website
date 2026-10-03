@@ -479,6 +479,8 @@ updateDetail(0);
 try{
   if(typeof L === 'undefined') throw new Error('Leaflet unavailable');
   leafletMap = L.map('map', {scrollWheelZoom:false}).setView([32.0, 35.25], 8);
+  // Keep live provider credits visible outside the interactive map canvas.
+  if(leafletMap.attributionControl&&leafletMap.attributionControl.getContainer){var attribution=leafletMap.attributionControl.getContainer();attribution.classList.add('timeline-map-attribution');document.getElementById('map').after(attribution);}
   document.getElementById('map').addEventListener('timeline:map-interaction',function(event){
     ['dragging','touchZoom','doubleClickZoom'].forEach(function(name){var handler=leafletMap[name];if(handler)handler[event.detail.enabled?'enable':'disable']();});
   });
