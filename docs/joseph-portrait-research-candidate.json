@@ -91,6 +91,16 @@
       "path": "tools/sitewide_artwork_review_qa.py",
       "sha256": "6711c7543df0bcdf88b8fbbb3e77190b14040296335f98d27eaf47bb4ec3f5de",
       "bytes": 58240
+    },
+    {
+      "path": "docs/study-link-control-inventory.json",
+      "sha256": "945bf37180e7db3ed7932b734bafc53150f23df1270603d890374ac9ce1631b7",
+      "bytes": 12996
+    },
+    {
+      "path": "tools/topic_artwork_sources_runtime_qa.js",
+      "sha256": "51fc94918ccfa064a0f20fbe0f34ed8bfb154be3e98c94d238ec7a8d154cf331",
+      "bytes": 9355
     }
   ],
   "browser": "Root-owned desktop, phone and enlarged-text evidence is recorded separately; exact candidate review remains required.",
@@ -115,7 +125,9 @@
     "Gallery inventory regenerated after reviewed Hyrum iris asset change; one Hyrum record changed, counts901artworks907occurrences unchanged",
     "Dependent search regenerated; artwork detail QA, search QA, static ledger and source inventory PASS",
     "Sitewide artwork guard classification repaired via existing exact-byte/single-owner registry; mutation/foreign-owner/hero-selector fixtures and actual129page842protectedimage check PASS",
-    "Gallery/search dependencies, artwork details, mobile scenes, art-study, Joseph parity/likeness, source inventory, static ledger, search QA and diff checks PASS"
+    "Gallery/search dependencies, artwork details, mobile scenes, art-study, Joseph parity/likeness, source inventory, static ledger, search QA and diff checks PASS",
+    "Named study-link inventory regenerated with existingtool: only source-family count838to835 changed, three authorized duplicate Joseph mask-source pills removed;129pages12families/fixtures PASS",
+    "Artwork source runtime fixture reconciled with authorized collection-action consolidation: exact masks retain BYU citation, adopted Joseph retains exact identity, all3 return to shared source; nine panels and hostile-domain tests PASS"
   ],
   "owner_acceptance": "Publication authority is separate from final aesthetic and physical-phone acceptance."
 }

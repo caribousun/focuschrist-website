@@ -51,17 +51,39 @@ document.dispatchEvent(new window.Event('DOMContentLoaded'));
 const panel = document.getElementById('topicArtworkDetailDialog');
 const click = node => node.dispatchEvent(new window.MouseEvent('click', { bubbles: true, cancelable: true, button: 0 }));
 let checked = 0;
+const maskImages = new Set(['joseph-death-mask.jpg', 'hyrum-death-mask.jpg']);
+const maskCitation = 'https://website-files-bucket.s3.us-west-2.amazonaws.com/articles/article_pdfs/Physical_Evidence_at_Carthage_Jail_and_What_It_Reveals_about_the_Assassination_of_Joseph_and_Hyrum_Smith.pdf#page=27';
+let masksChecked = 0;
 for (const figure of document.querySelectorAll('figure[data-enriched-study-art^="likeness-"], figure.likeness-comparison-item')) {
     const expected = [...figure.querySelectorAll('figcaption a[href]')].filter(a =>
         ['www.churchofjesuschrist.org', 'www.josephsmithpapers.org', 'churchhistorylibrary.churchofjesuschrist.org'].includes(new URL(a.href).hostname)).map(a => a.href);
-    assert(expected.length > 0, 'Each real scene supplies its historical source');
+    const isMask = maskImages.has(figure.querySelector('img').getAttribute('src').split('/').pop());
+    const isAdoptedPortrait = figure.querySelector(':scope > a').id === 'joseph-comparison-open';
+    if (isMask) {
+        assert.equal(figure.querySelector(':scope > a').dataset.topicStudy, 'joseph-smith-likeness.html#death-masks');
+        assert(figure.querySelector(`figcaption a[href="${maskCitation}"]`), 'Each mask retains its exact museum photograph citation');
+        assert.equal(expected.length, 0, 'Mask collection action is centralized, not duplicated');
+        masksChecked++;
+    } else if (isAdoptedPortrait) {
+        assert.equal(figure.querySelector('img').getAttribute('src'), 'assets/identities/joseph-smith-owner-approved-20260914.png');
+        assert.equal(figure.querySelector(':scope > a').dataset.topicStudy, 'joseph-smith-likeness.html#death-masks');
+        assert.equal(expected.length, 0, 'Adopted comparison portrait uses the same centralized mask collection action');
+    } else assert(expected.length > 0, 'Each real scene supplies its historical source');
     click(figure.querySelector(':scope > a'));
     assert(panel.open, 'Real picture opens the native study panel');
+    if (isMask) {
+        assert(panel.querySelector(`a[href="${maskCitation}"]`), 'Museum photograph citation survives in the mask panel');
+    }
+    if (isMask || isAdoptedPortrait) {
+        assert(panel.querySelector('a[href="joseph-smith-likeness.html#death-masks"]'), 'Mask panel returns to the contextual collection source');
+    }
     assert.deepEqual([...panel.querySelectorAll('[data-topic-art-source]')].map(a => a.href), expected,
         figure.dataset.enrichedStudyArt + ': exact historical source must survive into panel');
     panel.close(); checked++;
 }
 assert.equal(checked, 9, 'Five scenes and four comparison pictures retain native source panels');
+assert.equal(masksChecked, 2, 'Both exact historical mask photographs retain citation and contextual return');
+assert.equal(document.querySelectorAll('#death-masks a[href="https://churchhistorylibrary.churchofjesuschrist.org/joseph-and-hyrum-death-masks?lang=eng"]:not(.fc-resource-card__image)').length, 1, 'One contextual mask collection text action');
 click(fixture.querySelector(':scope > a'));
 const pills = [...panel.querySelectorAll('[data-topic-art-source]')];
 assert.deepEqual(pills.map(a => a.href), allowed, 'Only exact HTTPS institutional hosts become source pills');
