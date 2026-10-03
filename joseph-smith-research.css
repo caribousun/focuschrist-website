@@ -1,0 +1,32 @@
+/* The research is part of the existing likeness study, with the same reading
+   boundaries and Home-derived panel surface. No hero geometry changes. */
+.joseph-research { min-width:0; }
+.joseph-research .research-contents { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); column-gap:32px; row-gap:0; margin:12px 0 0; padding-left:24px; }
+.joseph-research .research-contents li { min-width:0; padding-left:4px; }
+.joseph-research .research-contents a { min-height:44px; display:flex; align-items:center; padding:7px 0; line-height:1.5; }
+.joseph-research .research-part { margin:32px 0; scroll-margin-top:var(--fc-anchor-offset,16px); }
+.joseph-research .research-part > h3 { font:400 clamp(1.55rem,2.6vw,2rem)/1.3 var(--fc-font-display); color:var(--fc-gold-light); margin:0 0 20px; }
+.joseph-research .research-part h4 { color:var(--fc-cream); font-size:1.16rem; line-height:1.45; margin:24px 0 10px; }
+.joseph-research .research-part p,.joseph-research .research-part li { line-height:1.75; }
+.joseph-research .fc-study-panel { padding:clamp(20px,3vw,28px); margin:24px 0; border:1px solid var(--fc-panel-border); border-radius:var(--fc-radius); }
+.joseph-research .fc-study-panel > :first-child { margin-top:0; }
+.joseph-research .fc-study-panel > :last-child { margin-bottom:0; }
+.joseph-research .research-trait { padding-bottom:10px; }
+.joseph-research .research-source { scroll-margin-top:var(--fc-anchor-offset,16px); padding:12px 0; }
+.joseph-research .research-source a { overflow-wrap:anywhere; }
+.joseph-research .research-table-wrap { width:100%; overflow-x:auto; margin:24px 0; }
+.joseph-research table { width:100%; border-collapse:collapse; font-size:.98rem; }
+.joseph-research th,.joseph-research td { padding:16px; text-align:left; vertical-align:top; border:1px solid var(--fc-line); line-height:1.65; }
+.joseph-research th { color:var(--fc-gold-light); }
+.joseph-research .research-reference { margin:20px 0; }
+.joseph-research .research-reference a { display:inline-flex; align-items:center; min-height:44px; }
+.joseph-research .research-return { margin-top:22px; }
+@media(max-width:650px) {
+ .joseph-research table,.joseph-research tbody,.joseph-research tr,.joseph-research td { display:block; width:100%; }
+ .joseph-research thead { display:none; }
+ .joseph-research tr { margin-bottom:18px; }
+ .joseph-research td { box-sizing:border-box; border-bottom:0; }
+ .joseph-research td:last-child { border-bottom:1px solid var(--fc-line); }
+ .joseph-research td::before { content:attr(data-label); display:block; font-weight:600; color:var(--fc-gold-light); margin-bottom:6px; }
+ .joseph-research .research-contents { grid-template-columns:1fr; }
+}

@@ -156,6 +156,9 @@ TOOLBAR_STYLE_SHA256 = {'site-header.css': 'a915de3ba44c8e14f127e25ec51498960fb1
 # Owner-requested growing Ask composer and opt-in Holy Ghost player, independently
 # reviewed in source and rendered by Albert. Exact full bytes and single owners.
 SCOPED_INTERFACE_STYLES = {
+    # Owner-requested Joseph research reading panels, independently reviewed on
+    # desktop/phone. Exact bytes and sole page owner; no hero-rule exemption.
+    'joseph-smith-research.css': ('b86ecba8e2c1670e4e485f3219fc227de2a599b85d964f6d415e83ee183f862f', 'joseph-smith-likeness.html'),
     # Newton source-reviewed hub-only CSS; hosted geometry and owner acceptance remain separate.
     'timeline.css': ('5aefac78e15d324cb4f5a9b44c5f0a1bdb26d951f4e7b5078569be67103048d1', 'timeline.html'),
     # Owner-directed Church-source history, independently reviewed 2026-09-30.
@@ -339,6 +342,8 @@ def main():
             assert not reviewed_scoped_interface_style(name,data+b'\n.x{height:1px}')
             assert scoped_interface_reference_allowed(name,owner,name)
             assert not scoped_interface_reference_allowed(name,'unrelated.html',name)
+        research_css = (ROOT/'joseph-smith-research.css').read_bytes()
+        assert not reviewed_scoped_interface_style('joseph-smith-research.css', research_css.replace(b'.joseph-research', b'.fc-topic-unique-hero', 1))
         search_css = (ROOT/"site-search.css").read_bytes()
         assert b"width:max-content;white-space:nowrap;" in search_css
         assert not reviewed_narrow_reading_style("site-search.css", search_css.replace(b"white-space:nowrap;", b"", 1))

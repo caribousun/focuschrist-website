@@ -1,0 +1,55 @@
+{
+  "reviewer": "Newton",
+  "status": "CONCUR_EXACT_FINISHED_IRIS_ONLY_CANDIDATE",
+  "explicit_concurrence": true,
+  "candidate": "outputs/hyrum-blue-eyes-iris-only.png",
+  "candidate_sha256": "47b35f55b805ee0cc7c914cc1adb59273b2405402d4a50e284d0bb456bd9cb32",
+  "baseline_sha256": "93cc6192e6b06a6bdba588e2585e38791977ae776cd0e3bb237f96ad9fe490ad",
+  "mandates_read": true,
+  "mandate_hashes": {
+    "AGENTS.md": "88ce06d6d71057faa99c00a807aec8b953387b14da5e20d471f06fadc7b4a15f",
+    "docs/historical-character-identity.md": "d10617d35e23469b533fb1cad784d1861b620363370d2c8e336cfb17d22c3ac9",
+    "docs/enriched-picture-owner-mandate.md": "c237fb14c7dd57f04d7d9ad063f3f0e93daf0a5c9844f9c3682407b4c80b363d",
+    "docs/section-panel-design-mandate.md": "26a8028ec7c7393d070e6f8006662861e1651643dbf925092b19d364ace797fc",
+    "docs/focuschrist-enrichment-and-stewardship-prompt.md": "4d5b6f5d4891e35d3b26976d26fd7715382b36ecafffbe2be431c6d0b3115995"
+  },
+  "master": {
+    "id": "1yN5fRSVUTpgIhdjmwXQ55MA6JbjPmCXb1qg3ppYzluo",
+    "retrieved_through": "connected Google Drive fetch independently during this review",
+    "modified_time": "2026-10-03T18:00:35.484Z",
+    "read": [
+      "protected foundation exact text",
+      "standing Albert-Merlin coordination",
+      "mandatory mandate readback and concurrence",
+      "current operating map"
+    ],
+    "foundation_preserved": true
+  },
+  "preflight": "work/hyrum-pixel-preflight-newton.json",
+  "actual_evidence": [
+    "Full1122x1402candidate viewed",
+    "Enlargedboth-eye crop viewed",
+    "Originalapprovedportrait previouslyviewed atfullresolution andmaskedeyeplanviewed",
+    "IndependentRGBdifferencecomputation fromoriginal/output,notjust implementerreceipt",
+    "Actualedit scriptread"
+  ],
+  "independent_checks": {
+    "dimensions": [
+      1122,
+      1402
+    ],
+    "changed_pixels": 1214,
+    "outside_approved_iris_polygons_changed": 0,
+    "excluded_pupils_and_catchlights_changed": 0,
+    "max_luminance_rounding_difference": 0.4802000000000001
+  },
+  "pixel_judgment": "Muted blue-gray irises appear natural in retainedwarm lighting; preservedpupils/catchlights,texture,asymmetry,gaze andlidshape. Allnonirispixels identical,thusfacegeometry,age,clothing,hair,background,crop andidentity preserved. No visibleartifact requiring rejection.",
+  "historical_judgment": "Blueeye choice supported by1883Gates/Knight mediatedretrospective account; exactshade remains artistic. No forensiccertaintyclaimed. Noadditionalanatomicalrevisionwarranted.",
+  "concurrence_statement": "I have read the current applicable mandatefiles and explicitly concur that this exactfinished iris-onlycandidate follows theauthorizedscope and themandates. Bothpreflight andfinishedpixelgates independentlyperformed.",
+  "limitations": [
+    "This doesnotassert authenticatedhistoricalappearance",
+    "Ownerfinalaestheticacceptance andanypublication remain separate",
+    "No websitebrowser orphone QAclaimed",
+    "No broaderface realismchanges approved"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "reviewer": "Fermi",
+  "status": "CONCUR_EXACT_FINISHED_IMAGE_FOR_LOCAL_DRAFT_AND_OWNER_REVIEW",
+  "candidate": "outputs/hyrum-blue-eyes-iris-only.png",
+  "sha256": "47b35f55b805ee0cc7c914cc1adb59273b2405402d4a50e284d0bb456bd9cb32",
+  "source_sha256": "93cc6192e6b06a6bdba588e2585e38791977ae776cd0e3bb237f96ad9fe490ad",
+  "independent_pixel_check": {
+    "dimensions_equal": true,
+    "changed_pixels": 1214,
+    "outside_mask": 0,
+    "excluded_pupil_catchlight": 0,
+    "max_luminance_rounding_delta": 0.4802000000000001
+  },
+  "mandates_read": {
+    "work\\site-baseline\\AGENTS.md": "88ce06d6d71057faa99c00a807aec8b953387b14da5e20d471f06fadc7b4a15f",
+    "work\\site-baseline\\docs\\historical-character-identity.md": "d10617d35e23469b533fb1cad784d1861b620363370d2c8e336cfb17d22c3ac9",
+    "work\\site-baseline\\docs\\enriched-picture-owner-mandate.md": "c237fb14c7dd57f04d7d9ad063f3f0e93daf0a5c9844f9c3682407b4c80b363d",
+    "work\\site-baseline\\docs\\section-panel-design-mandate.md": "26a8028ec7c7393d070e6f8006662861e1651643dbf925092b19d364ace797fc",
+    "work\\site-baseline\\docs\\focuschrist-enrichment-and-stewardship-prompt.md": "4d5b6f5d4891e35d3b26976d26fd7715382b36ecafffbe2be431c6d0b3115995"
+  },
+  "current_master": {
+    "id": "1yN5fRSVUTpgIhdjmwXQ55MA6JbjPmCXb1qg3ppYzluo",
+    "access": "fresh connected Google Drive fetch",
+    "modified_time": "2026-10-03T18:00:35.484Z",
+    "scope_read": "Protected foundation, current operating map, independent concurrence, Focus and helper-chain requirements; standing coordination clause preserves owner gates"
+  },
+  "actual_pixels_reviewed": [
+    "Full output1122x1402",
+    "Original full reference",
+    "Enlarged edited eye detail",
+    "Previously reviewed exact iris mask boundaries"
+  ],
+  "visual_findings": [
+    "Muted blue-gray iris color reads naturally at full portrait size",
+    "Original pupil positions, catchlights, lid shadows and iris texture retained",
+    "No visible halo or coloring of sclera or skin",
+    "Distinct Hyrum face, asymmetry, pores, hair, mature age, cleft chin and clothing preserved exactly outside iris masks"
+  ],
+  "source_limits": [
+    "Blue eyes supported by Lydia Knight account of1835 Hyrum in Gates1883 retrospective biography",
+    "Exact blue-gray shade remains artistic; no historical exactness claim",
+    "Late-Nauvoo age approximately44 and dark coat/white collar/cravat preserved; no new dated event asserted",
+    "No justified additional geometry change from this research"
+  ],
+  "scope_limits": [
+    "Owner aesthetic acceptance separate",
+    "No publication approval",
+    "Assembled website desktop/phone review remains separate",
+    "No claim original portrait is forensically authenticated"
+  ]
+}

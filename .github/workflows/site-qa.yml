@@ -323,7 +323,9 @@ jobs:
           python tools/study_section_balance_qa.py
 
       - name: Verify Joseph Smith likeness study and provenance
-        run: python tools/joseph_smith_likeness_qa.py
+        run: |
+          python tools/joseph_smith_likeness_qa.py
+          python tools/joseph_portrait_research_qa.py
 
       - name: Run scripture grounding QA
         run: python tools/scripture_grounding_qa.py

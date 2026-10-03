@@ -11,6 +11,8 @@ ROOT = Path(__file__).resolve().parents[1]
 PAGE = 'joseph-smith-likeness.html'
 MASTER = 'assets/identities/joseph-smith-owner-approved-20260914.png'
 MASTER_SHA = '518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827'
+HYRUM_DRAFT = 'assets/page-art/joseph-smith-likeness/hyrum-reconstruction-blue-eyes-20261003.png'
+HYRUM_DRAFT_SHA = '47b35f55b805ee0cc7c914cc1adb59273b2405402d4a50e284d0bb456bd9cb32'
 SLOTS = {'portrait-sitting', 'writing', 'warmth', 'conversation', 'brothers'}
 SECTIONS = {'living-portrait', 'death-masks', 'portraits-from-life',
             'our-portrait', 'face-in-motion', 'continue-study'}
@@ -25,6 +27,21 @@ def document(path):
     doc = Document()
     doc.feed(path.read_text(encoding='utf-8'))
     return list(doc.root.walk())
+
+
+def mask_collection_valid(mask_section):
+    links=[n for n in mask_section.walk() if n.tag=='a' and urlsplit(n.attrs.get('href','')).path=='/joseph-and-hyrum-death-masks']
+    return (len(links)==2 and
+            sum(any(c.tag=='img' for c in n.walk()) for n in links)==1 and
+            sum(n.attrs.get('id')=='mask-collection-source' for n in links)==1)
+
+
+def mask_collection_negative_test():
+    url='https://churchhistorylibrary.churchofjesuschrist.org/joseph-and-hyrum-death-masks?lang=eng'
+    good=f'<section><a href="{url}"><img src="masks.jpg"></a><a id="mask-collection-source" href="{url}">Explore the collection</a></section>'
+    for markup, expected in [(good,True),(good.replace('</section>',f'<p><a href="{url}">Explore the collection again</a></p></section>'),False)]:
+        doc=Document();doc.feed(markup)
+        assert mask_collection_valid(next(n for n in doc.root.walk() if n.tag=='section'))==expected
 
 
 def check():
@@ -97,12 +114,12 @@ def check():
     comparisons = [n for n in nodes if n.tag == 'figure' and n.has('likeness-comparison-item')]
     require(len(comparisons) == 4, 'two portrait and own-mask pairs required')
     comparison_assets = [MASTER, 'assets/page-art/joseph-smith-likeness/joseph-death-mask.jpg',
-                         'assets/page-art/joseph-smith-likeness/hyrum-reconstruction.png',
+                         HYRUM_DRAFT,
                          'assets/page-art/joseph-smith-likeness/hyrum-death-mask.jpg']
     for figure, asset in zip(comparisons, comparison_assets):
         anchors = [n for n in figure.children if n.tag == 'a']
         require(len(anchors) == 1 and anchors[0].attrs.get('href') == asset,
-                'comparison must open its own unchanged portrait or mask: ' + asset)
+                'comparison must open its own reviewed portrait or mask: ' + asset)
         if anchors:
             require(anchors[0].attrs.get('aria-haspopup') == 'dialog' and
                     bool(anchors[0].attrs.get('data-topic-study')),
@@ -117,6 +134,17 @@ def check():
     for entry in comparison_record['references']:
         require(hashlib.sha256((ROOT / entry['asset']).read_bytes()).hexdigest() == entry['sha256'],
                 'comparison reference bytes changed: ' + entry['asset'])
+    require(hashlib.sha256((ROOT / HYRUM_DRAFT).read_bytes()).hexdigest() == HYRUM_DRAFT_SHA,
+            'reviewed iris-only Hyrum draft bytes changed')
+    masks=next(n for n in nodes if n.attrs.get('id')=='death-masks')
+    require(mask_collection_valid(masks),'mask collection duplicated or section-level action missing')
+    museum_links=[n for n in masks.walk() if n.tag=='a' and urlsplit(n.attrs.get('href','')).path=='/joseph-and-hyrum-death-masks']
+    require(len(museum_links)==2,'mask collection must have one text action and one linked artifact image')
+    require(sum(any(c.tag=='img' for c in n.walk()) for n in museum_links)==1,'museum artifact image must keep its original destination')
+    require(sum(n.attrs.get('id')=='mask-collection-source' for n in museum_links)==1,'one section-level collection action required')
+    for figure in comparisons:
+        require(not any(n.tag=='a' and urlsplit(n.attrs.get('href','')).path=='/joseph-and-hyrum-death-masks' for n in figure.walk()),
+                'repeated mask collection action inside portrait/mask figure')
 
     entries = json.loads((ROOT / 'docs/art-study-image-review.json').read_text(encoding='utf-8'))['pages'].get(PAGE, [])
     require(len(entries) == 5 and {e.get('slot') for e in entries} == SLOTS, 'five scene review records required')
@@ -150,6 +178,7 @@ def check():
 
 
 if __name__ == '__main__':
+    mask_collection_negative_test()
     errors = check()
     if errors:
         raise SystemExit('\n'.join(errors))
