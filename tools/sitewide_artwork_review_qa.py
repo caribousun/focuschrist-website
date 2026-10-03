@@ -178,7 +178,9 @@ OWNER_20260929_STYLES = {
     'timeline-history-workspace.css': ('acecf66d917b13cc4548e23ff8ab348974423342ba00840f37d1c73d6eb5c173', ['timelines/latter-day-saint-church-history-timeline.html']),
 
     # Owner requested shared headers on these three preserved experiences; exact scoped desktop offset.
-    "timeline-experiences.css": ("a2d86284e4ec7f6d39b0d78a524d3851fe2bb2c9fdb32d4728a5189c15db2f63", ["timelines/latter-day-saint-church-history-timeline.html", "timelines/willie-and-martin-handcart-map.html", "timelines/life-of-christ-journey-map.html"]),
+    "timeline-experiences.css": ("1fae043f3b7b1114ffc94c85806b1c57b02aa03f6846bdb9c61f6bed3667bd93", ["timelines/latter-day-saint-church-history-timeline.html", "timelines/willie-and-martin-handcart-map.html", "timelines/life-of-christ-journey-map.html"]),
+    # Owner-requested uniform selected-story and accessible mobile controls; exact three routes.
+    "timeline-reader.css": ("4bbcf89e17c653fc9fd24268412b292b2bd4b92a09032777e0563d2967ebb115", ["timelines/latter-day-saint-church-history-timeline.html", "timelines/willie-and-martin-handcart-map.html", "timelines/life-of-christ-journey-map.html"]),
     "study-reading-balance.css": ("fb547af5c883050d743204c0d05372863143a1fa0dffd2df370b728f1a9ff005", ["atonement.html", "answers/bible-and-book-of-mormon-together.html", "answers.html", "index.html", "ask.html"]),
     # Dynamically loaded shared opening surface; source reviewed, rendered approval recorded separately.
     'unified-opening.css': ('7fcb1456b4ff2c3372238e0baaccfa6083e4232e328956eff1e1d43f178c96e6', []),

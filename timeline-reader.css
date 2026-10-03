@@ -18,3 +18,8 @@ body.fc-timeline-experience .history-reading.timeline-single-story .era-context{
 body.fc-timeline-experience .history-reading.timeline-single-story .era-context summary{min-height:44px;cursor:pointer;display:flex;align-items:center;font-weight:600}
 body.fc-timeline-experience .history-reading.timeline-single-story .era-head{padding:0;margin:8px 0;text-align:left}
 body.fc-timeline-experience .history-reading.timeline-single-story .era-head h2,body.fc-timeline-experience .history-reading.timeline-single-story .era-head p{color:var(--fc-cream,#efe6ce)}
+
+/* Shared tokens exist on every experience; Merlin's legacy color names do not. */
+body.fc-timeline-experience .timeline-mobile :is(.timeline-mobile-tabs button,.timeline-map-interact),body.fc-timeline-experience .timeline-place-choices button{box-sizing:border-box;min-height:44px;border:1px solid var(--fc-line-strong);border-radius:12px;background:var(--fc-bg-deep);color:var(--fc-cream)}
+body.fc-timeline-experience .timeline-mobile :is(.timeline-mobile-tabs button,.timeline-map-interact)[aria-pressed="true"]{background:var(--fc-gold);color:var(--fc-bg-deep)}
+body.fc-timeline-experience :is(.timeline-mobile-tabs button,.timeline-map-interact,.timeline-place-choices button):focus-visible{outline:2px solid var(--fc-gold-light);outline-offset:2px}
