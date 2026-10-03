@@ -667,13 +667,16 @@
     if(!leafletMap || closed) return;
     leafletMap.closePopup();
     var generation=++renderGeneration;
+    // Measure current rendered badges before replacing them; keep an eight-pixel gap.
+    var badgeGap=52*Math.max(1,(parseFloat(getComputedStyle(mapEl).fontSize)||16)/16);
+    mapEl.querySelectorAll('.handcart-cluster,.handcart-pin-icon .pin').forEach(function(badge){var r=badge.getBoundingClientRect();badgeGap=Math.max(badgeGap,Math.max(r.width,r.height)+8);});
     clusterMarkers.forEach(function(m){leafletMap.removeLayer(m);});clusterMarkers=[];
     markers.forEach(function(m){if(leafletMap.hasLayer(m))leafletMap.removeLayer(m);});
     // Screen-space clusters avoid overlapping touch targets without changing stored geography.
     var groups=[];
     currentRows.forEach(function(row){
       var stop=STOPS[row.index],p=leafletMap.latLngToContainerPoint([stop.lat,stop.lng]);
-      var group=groups.find(function(g){return Math.hypot(g.point.x-p.x,g.point.y-p.y)<52;});
+      var group=groups.find(function(g){return Math.hypot(g.point.x-p.x,g.point.y-p.y)<badgeGap;});
       if(group)group.indices.push(row.index);else groups.push({point:p,indices:[row.index]});
     });
     groups.forEach(function(group){
@@ -692,6 +695,8 @@
       try{
         if(typeof L==='undefined')throw new Error('Leaflet unavailable');
         leafletMap=L.map(renderer,{scrollWheelZoom:false}).setView([41,-55],3);
+  // Keep live provider credits visible outside the interactive map canvas.
+  if(leafletMap.attributionControl&&leafletMap.attributionControl.getContainer){var attribution=leafletMap.attributionControl.getContainer();attribution.classList.add('timeline-map-attribution');mapEl.after(attribution);}
         var errors=0,loaded=0;
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> contributors'})
           .on('tileload',function(){loaded++;restoreMap();})
@@ -700,7 +705,7 @@
         overlays.forEach(function(overlay){var paint=overlay.layers[0].paint;L.geoJSON(overlay.data,{style:{color:paint['line-color'],weight:paint['line-width'],opacity:paint['line-opacity'],dashArray:paint['line-dasharray']?paint['line-dasharray'].map(function(n){return n*paint['line-width'];}).join(' '):null}}).addTo(leafletMap);});
         STOPS.forEach(function(stop,index){
           var m=L.marker([stop.lat,stop.lng],{icon:stopIcon(index),keyboard:true,autoPanOnFocus:false,title:'Stop '+(index+1)+': '+stop.name});
-          m.on('click',function(){var row=currentRows.find(function(r){return r.index===index;});if(row)selectStop(index,row.el,true);});markers.push(m);
+          m.on('click',function(){var row=currentRows.find(function(r){return r.index===index;});if(row){if(window.TimelineWorkspace&&window.TimelineWorkspace.clearGroup)window.TimelineWorkspace.clearGroup();selectStop(index,row.el,true);}});markers.push(m);
         });
         leafletMap.on('zoomend moveend',renderMarkers);
       }catch(error){if(leafletMap){leafletMap.remove();leafletMap=null;}showFallback();}

@@ -42,13 +42,13 @@
       var captured=generation;
       var title=keys.length===1?place.label:keys.length+' nearby places';
       var marker=L.marker([place.lat,place.lng],{icon:icon(group),keyboard:true,title:title+': '+eventIndices.length+' events; approximate context'});
-      marker.on('click',function(){if(captured!==generation)return;if(eventIndices.length===1){choose(eventIndices[0]);return;}lowerChoices(title,eventIndices);});
+      marker.on('click',function(){if(captured!==generation)return;if(eventIndices.length===1){if(window.TimelineWorkspace&&window.TimelineWorkspace.clearGroup)window.TimelineWorkspace.clearGroup();choose(eventIndices[0]);return;}lowerChoices(title,eventIndices);});
       marker.addTo(map);group.marker=marker;layers.push(marker);
     });
     // Regional extents remain visibly different from approximate place pins.
     var regionGroups={};
     indices.forEach(function(index){var r=data.events[index];if(r.kind==='region'){var key=r.region.label;(regionGroups[key]||(regionGroups[key]={region:r.region,indices:[]})).indices.push(index);}});
-    Object.keys(regionGroups).forEach(function(key){var g=regionGroups[key],box=L.rectangle(g.region.bounds,{color:'#b87d24',weight:2,dashArray:'5 5',fillOpacity:.09});var captured=generation,title=g.region.label+' \u2014 regional context';box.on('click',function(event){if(captured!==generation)return;if(g.indices.length===1){choose(g.indices[0]);return;}lowerChoices(title,g.indices);});box.addTo(map);layers.push(box);});
+    Object.keys(regionGroups).forEach(function(key){var g=regionGroups[key],box=L.rectangle(g.region.bounds,{color:'#b87d24',weight:2,dashArray:'5 5',fillOpacity:.09});var captured=generation,title=g.region.label+' \u2014 regional context';box.on('click',function(event){if(captured!==generation)return;if(g.indices.length===1){if(window.TimelineWorkspace&&window.TimelineWorkspace.clearGroup)window.TimelineWorkspace.clearGroup();choose(g.indices[0]);return;}lowerChoices(title,g.indices);});box.addTo(map);layers.push(box);});
     var worldwide=indices.filter(function(i){return data.events[i].kind==='worldwide';}).length;
     status.textContent=(tileFailed?'Map imagery is unavailable here. Geographic markers and event descriptions remain usable. ':'')+indices.length+' matching events. '+Object.keys(byPlace).length+' approximate places; '+Object.keys(regionGroups).length+' contextual regions; '+worldwide+' worldwide events without pins.';
   }
@@ -72,6 +72,8 @@
   try{
     if(!window.L)throw new Error('Leaflet unavailable');
     map=L.map(canvas,{scrollWheelZoom:false}).setView([38,-70],3);
+  // Keep live provider credits visible outside the interactive map canvas.
+  if(map.attributionControl&&map.attributionControl.getContainer){var attribution=map.attributionControl.getContainer();attribution.classList.add('timeline-map-attribution');canvas.after(attribution);}
     var tileErrors=0;
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> contributors'}).on('tileload',function(){var recovering=tileFailed;tileLoaded=true;tileFailed=false;clearTimeout(tileTimer);if(recovering)draw();}).on('tileerror',function(){if(++tileErrors>=3&&!tileLoaded){tileFailed=true;draw();}}).addTo(map);
     tileTimer=setTimeout(function(){if(!tileLoaded){tileFailed=true;draw();}},10000);

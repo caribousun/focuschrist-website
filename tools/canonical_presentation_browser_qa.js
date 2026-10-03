@@ -139,6 +139,8 @@ async function main() {
                         await Promise.race([Promise.all(local.map(n=>n.decode().catch(()=>{}))),new Promise(resolve=>setTimeout(resolve,10000))]);
                         await Promise.race([document.fonts.ready,new Promise(resolve=>setTimeout(resolve,5000))]);
                     });
+                    // Allow resize observers and their scheduled layout frame after text scaling.
+                    await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
                     const measured=await page.evaluate(inspectPresentation);
                     if(route==='come-follow-me.html')measured.cfmPalette=await page.evaluate(require('./cfm_palette_contract.js').inspectCfmPalette);
                     const failures=[];

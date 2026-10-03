@@ -9439,9 +9439,9 @@
     {
       "path": "timelines/life-of-christ-journey-map.html",
       "status": "verified",
-      "published_text_sha256": "e94bf35f83fbd73ff8dd8de1e2149b175969544e7b96552ba4ddeab7e38a6ed3",
+      "published_text_sha256": "9687646c37f8aa645c43209d5c55e69f6e019422bb5d15597cc488f56a2b7322",
       "reviewed_on": "2026-10-02",
-      "review_standard": "Targeted source and hosting review only; not comprehensive verification of every statement. The verified status denotes this bounded review. Exact scope and repairs in docs/reviews/life-of-christ-source-review-20261002.json. Static text hash excludes script stop narratives; rendering and owner acceptance remain separate. Owner-directed independent-pane update: unchanged full STOPS data block; existing explanatory text moved after the workspace; focusable pane and filter labels added. Layout/runtime verification remains separate.",
+      "review_standard": "Targeted source and hosting review only; not comprehensive verification of every statement. The verified status denotes this bounded review. Exact scope and repairs in docs/reviews/life-of-christ-source-review-20261002.json. Static text hash excludes script stop narratives; rendering and owner acceptance remain separate. Owner-directed independent-pane update: unchanged full STOPS data block; existing explanatory text moved after the workspace; focusable pane and filter labels added. Layout/runtime verification remains separate. Current scoped expansion: seven scriptural/attributed Church history accounts reviewed against direct sources in life-restoration-source-review-20261002.json; existing29 unchanged, two Americas coordinates removed; supplied internal diagram explicitly interpretive, optional Great Lakes proposal attributed with assumptions, no Church endorsement. New text/caption review only; final interactive rendering pending.",
       "review_scope": "targeted-source-corrections-not-comprehensive",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/manual/gospel-topics/book-of-mormon-geography?lang=eng",

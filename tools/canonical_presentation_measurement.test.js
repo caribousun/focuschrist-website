@@ -4,7 +4,7 @@ const fs=require('node:fs');
 const {JSDOM}=require('jsdom');
 const source=fs.readFileSync(require('node:path').join(__dirname,'canonical_presentation_browser_qa.js'),'utf8');
 const measure=source.slice(source.indexOf('function inspectPresentation()'),source.indexOf('\nasync function main()'));
-function inspect(html){
+function inspect(html,documentWidth=320){
     const dom=new JSDOM('<h1>Study</h1><main>'+html+'</main>',{runScripts:'outside-only',url:'https://focuschrist.com/test.html'});
     const w=dom.window;
     const box=node=>{const left=Number(node.dataset.left || 0),top=Number(node.dataset.top || 0),right=Number(node.dataset.right || 300),bottom=Number(node.dataset.bottom || 1000);return {left,top,right,bottom,width:right-left,height:bottom-top};};
@@ -17,7 +17,7 @@ function inspect(html){
         Object.defineProperty(node,'clientWidth',{value:300});
     }
     Object.defineProperty(w,'innerWidth',{value:320});
-    Object.defineProperty(w.document.documentElement,'scrollWidth',{value:320});
+    Object.defineProperty(w.document.documentElement,'scrollWidth',{value:documentWidth});
     w.getComputedStyle=node=>({display:node.dataset.display || 'block',visibility:'visible',opacity:'1',overflowX:node.dataset.clip || 'visible',overflowY:node.dataset.clipY || 'visible'});
     w.document.createRange=()=>({selectNodeContents(text){this.node=text.parentElement;},getClientRects(){const left=Number(this.node.dataset.textLeft || 0),right=Number(this.node.dataset.textRight || 100),top=Number(this.node.dataset.textTop || 0),bottom=Number(this.node.dataset.textBottom || 20);return [{left,right,top,bottom,width:right-left,height:bottom-top}];}});
     w.eval(measure+'\nwindow.measure=inspectPresentation;');
@@ -43,3 +43,12 @@ assert.equal(inspect('<section hidden><figure data-clip="hidden"><figcaption><p 
 assert.equal(inspect('<section data-display="none"><figure data-clip="hidden"><figcaption><p data-text-right="700">Inactive panel caption</p></figcaption></figure></section>').clippedCaptions.length,0,'CSS-hidden panel caption is excluded');
 assert.equal(inspect('<figure data-clip="hidden"><a href="art.webp"><img data-right="700" alt="Intentionally cropped art"></a><figcaption><p>Readable caption</p></figcaption></figure>').clippedCaptions.length,0,'Decorative image cropping does not fail caption text measurement');
 console.log('Caption ancestor clipping PASS: partial/full/vertical negatives; contained, closed, hidden and image-crop positives.');
+
+// Text enlargement must settle before measurement; actual persistent overflow still fails.
+const scaleAt=source.indexOf("document.documentElement.style.fontSize=100*scale+'%'");
+const settleAt=source.indexOf('await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))))');
+const measureAt=source.indexOf('const measured=await page.evaluate(inspectPresentation)');
+assert(scaleAt>=0&&settleAt>scaleAt&&measureAt>settleAt,'Font scaling settles two frames before presentation measurement');
+assert(source.includes("if(measured.horizontalOverflow>3)failures.push('horizontal-overflow')"),'Persistent overflow threshold remains unchanged');
+
+assert.equal(inspect('<p>Persistent overflow</p>',371).horizontalOverflow,51,'Settling cannot hide actual 51px document overflow');

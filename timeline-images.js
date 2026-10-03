@@ -282,6 +282,69 @@ var registry={
       "inventoryRow": 114,
       "width": 960,
       "height": 640
+    },
+    "31": {
+      "src": "/assets/history/first-vision-1400.webp",
+      "href": "/church-history.html#history-first-vision-title",
+      "alt": "Joseph Smith kneeling in a wooded grove as God the Father and Jesus Christ appear in heavenly light",
+      "caption": "Joseph kneels among the trees as heavenly light fills the grove. His prayer began the Restoration story.",
+      "artworkId": "art-52dc5f55c32e",
+      "width": 1400,
+      "height": 468
+    },
+    "32": {
+      "src": "/assets/page-art/jesus-journey/rt-vision-1832-960.webp",
+      "href": "/jesus-christ/restoration-and-today.html#picture-rt-vision-1832",
+      "alt": "Joseph Smith and Sidney Rigdon look toward the risen Savior in a vision above their scriptural work.",
+      "caption": "Joseph Smith and Sidney Rigdon look toward the risen Savior while studying the scriptures together.",
+      "artworkId": "art-c7761e72c36e",
+      "width": 960,
+      "height": 640
+    },
+    "33": {
+      "src": "/assets/timeline/history/newel-whitney-store-6faf4c5-1920.jpg",
+      "href": "https://www.churchofjesuschrist.org/media/image/newel-whitney-store-6faf4c5?lang=eng",
+      "alt": "The white wooden Whitney store stands in Kirtland, where members of the School of the Prophets gathered upstairs.",
+      "caption": "The white wooden Whitney store stands in Kirtland, where members of the School of the Prophets gathered upstairs.",
+      "credit": "The Church of Jesus Christ of Latter-day Saints, Gospel Media",
+      "width": 1920,
+      "height": 1445
+    },
+    "34": {
+      "src": "/assets/timeline/history/kirtland-temple-6aca5ae.jpg",
+      "href": "https://www.churchofjesuschrist.org/media/image/kirtland-temple-6aca5ae?lang=eng",
+      "alt": "The Kirtland Temple stands among green trees, recalling the house where Joseph received the vision of the celestial kingdom.",
+      "caption": "The Kirtland Temple stands among green trees, recalling the house where Joseph received the vision of the celestial kingdom.",
+      "credit": "The Church of Jesus Christ of Latter-day Saints, Gospel Media",
+      "width": 1920,
+      "height": 1440
+    },
+    "35": {
+      "src": "/assets/page-art/church-history/kirtland-temple-960.webp",
+      "href": "/church-history.html#kirtland-temple",
+      "alt": "Worshippers approach the Kirtland Temple along a muddy path, beneath its red roof and pale blue-gray walls.",
+      "caption": "Worshippers make their way toward the Kirtland Temple, a house raised through the sacrifice of the early Saints.",
+      "artworkId": "art-85a07f6b9325",
+      "width": 960,
+      "height": 640
+    },
+    "36": {
+      "src": "/assets/timeline/history/lorenzo-snow-cb940d3.jpg",
+      "href": "https://www.churchofjesuschrist.org/media/image/lorenzo-snow-cb940d3?lang=eng",
+      "alt": "Lorenzo Snow appears in a painted portrait, remembered here for his testimony of seeing the Savior in the temple.",
+      "caption": "Lorenzo Snow appears in a painted portrait, remembered here for his testimony of seeing the Savior in the temple.",
+      "credit": "The Church of Jesus Christ of Latter-day Saints, Gospel Media",
+      "width": 1006,
+      "height": 1280
+    },
+    "37": {
+      "src": "/assets/page-art/plan-of-salvation/redemption-dead-800.webp",
+      "href": "/answers/plan-of-salvation.html#picture-pos-redemption-dead",
+      "alt": "Joseph F. Smith sits with an open Bible.",
+      "caption": "Joseph F. Smith sits with an open Bible as he ponders the Savior’s work among the dead.",
+      "artworkId": "art-5e7d2eaa1e3a",
+      "width": 800,
+      "height": 533
     }
   },
   "handcart": {

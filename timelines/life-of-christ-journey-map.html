@@ -7,9 +7,9 @@
 <link rel="icon" href="data:," />
 <title>Life of Christ Journey Map</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<meta name="description" content="Explore 31 stops in the life and ministry of Jesus Christ, with Merlin’s journey map, scripture references, and stories from the New Testament and Book of Mormon.">
+<meta name="description" content="Explore 38 stops in the life and ministry of Jesus Christ, with Merlin’s journey map, scripture references, and stories from the New Testament and Book of Mormon.">
 <meta name="robots" content="index, follow"><link rel="canonical" href="https://focuschrist.com/timelines/life-of-christ-journey-map.html">
-<meta property="og:title" content="Life of Christ Journey Map"><meta property="og:description" content="Explore 31 stops in the life and ministry of Jesus Christ, with scripture references and stories.">
+<meta property="og:title" content="Life of Christ Journey Map"><meta property="og:description" content="Explore 38 stops in the life and ministry of Jesus Christ, with scripture references and stories.">
 <meta property="og:url" content="https://focuschrist.com/timelines/life-of-christ-journey-map.html"><meta property="og:image" content="https://focuschrist.com/assets/heroes/timeline.png"><meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="../site-system.css?v=20260930-study-alignment-1">
 <script src="../site-common.js?v=20261002-timeline-1" defer></script>
@@ -125,13 +125,13 @@ body.fc-site .detail a:hover,body.fc-site .sheet a:hover,body.fc-site .detail a:
 <nav class="timeline-navigation" aria-label="Timeline navigation"><a class="timeline-return" href="../timeline.html">All timelines</a><a class="timeline-return" href="#journeyWorkspace">Explore journey</a></nav>
 <div class="wrap">
   <header class="hero">
-    <p class="kicker">From Nazareth to the Americas</p>
+    <p class="kicker">His earthly ministry and continuing witness</p>
     <h1>The Life of Christ,<br>place by place.</h1>
-    <p class="lede">Follow the Savior from the home of Mary and Joseph, through His birth, ministry, final week in Jerusalem, Resurrection and appearances, and then across the ocean to His ministry among the people of the Book of Mormon.</p>
+    <p class="lede">Follow the Savior from the home of Mary and Joseph, through His birth, ministry, final week in Jerusalem, Resurrection and appearances, His ministry among the people of the Book of Mormon, and later appearances and visions recorded in scripture and Church history.</p>
     <div class="meta-row">
-      <span class="meta">31 stops</span>
+      <span class="meta">38 stops</span>
       <span class="meta">Holy Land and the Americas</span>
-      <span class="meta">Scriptures on every stop</span>
+      <span class="meta">Scripture and Church sources</span>
       <span class="meta">Tap a card or a pin to move</span>
     </div>
   </header>
@@ -146,6 +146,7 @@ body.fc-site .detail a:hover,body.fc-site .sheet a:hover,body.fc-site .detail a:
         <button class="pill" data-filter="final" aria-pressed="false">Final week</button>
         <button class="pill" data-filter="risen" aria-pressed="false">Risen Lord</button>
         <button class="pill" data-filter="americas" aria-pressed="false">Americas</button>
+        <button class="pill" data-filter="restoration" aria-pressed="false">Restoration visions</button>
       </div>
       <div class="view-btns">
         <button class="view-btn" id="btnHoly">Holy Land view</button>
@@ -158,7 +159,13 @@ body.fc-site .detail a:hover,body.fc-site .sheet a:hover,body.fc-site .detail a:
     <div class="main-col">
       <section class="map-shell" data-timeline-pane="map" tabindex="0" aria-label="Map of the life of Christ">
         <div id="map"></div>
-        <p class="map-pin-note">Nearby numbered pins spread apart on screen so each can be selected. Geographic coordinates are unchanged.</p>
+        <div id="internalMap" class="internal-map-view" hidden>
+          <a class="internal-map-image" href="../assets/timeline/book-of-mormon-internal-map.png" target="_blank" rel="noopener noreferrer" aria-label="Open the complete internal Book of Mormon study map">
+            <img src="../assets/timeline/book-of-mormon-internal-map.png" width="3072" height="4608" loading="lazy" alt="Illustrative internal Book of Mormon geography: land northward, narrow neck, Bountiful, Zarahemla and Nephi, without a modern map overlay.">
+          </a>
+          <div class="internal-map-actions"><span>Interpretive diagram · no modern location</span><button type="button" id="bountifulEvents">Bountiful · 2 events</button></div>
+        </div>
+        <p class="map-pin-note">Nearby places share a count marker. Open it to choose an event, then use Previous, Next, or Back to stay with that group. Individual pins retain their original journey numbers and geographic coordinates.</p>
         <div id="mapFallback" class="map-fallback">Map unavailable on this device. The full journey list remains complete, with a maps link on the selected stop.</div>
       </section>
       <main id="main-content" data-timeline-pane="events" tabindex="0" aria-label="Life of Christ events in order">
@@ -191,15 +198,17 @@ body.fc-site .detail a:hover,body.fc-site .sheet a:hover,body.fc-site .detail a:
   </section>
       <div class="panel">
         <h4>How to read this map</h4>
-        <p>The first 29 stops follow places in the Holy Land and Egypt. The final two stops represent the ministry in the Americas recorded in 3 Nephi. The dotted line connects the study sequence; it does not establish an exact travel route.</p>
+        <p>The first 29 stops follow places in the Holy Land and Egypt. Stops 30 and 31 follow the ministry recorded in 3 Nephi without assigning it a modern geographic location. Seven later entries show where witnesses received appearances and visions. The dotted study sequence stays within the first 29 stops; no route joins the later visions.</p>
         <ul>
-          <li>Numbers on the map match the numbers in the list.</li>
+          <li>Individual numbered pins match the list; count markers open nearby events.</li>
           <li>Use the phase filters to study one part of the life at a time.</li>
-          <li>Use Full journey to see the Holy Land and the Americas together.</li>
+          <li>Full journey shows the mapped places and later witness locations. Choose Americas to study the two Bountiful accounts beside an internal map.</li>
         </ul>
         <div class="note">
           <strong style="color:var(--ink)">About the Americas location:</strong>
-          The Book of Mormon does not give a modern map location for the land Bountiful. The pins in Mesoamerica are illustrative placeholders, not identified locations of Book of Mormon events. The Church does not take a position on specific geographic locations in the ancient Americas. <a href="https://www.churchofjesuschrist.org/study/manual/gospel-topics/book-of-mormon-geography?lang=eng" target="_blank" rel="noopener noreferrer">Read the Church’s explanation of Book of Mormon geography.</a>
+          The Book of Mormon does not give a modern map location for the land Bountiful. These events are not assigned modern geographic coordinates. The Church does not take a position on specific geographic locations in the ancient Americas. <a href="https://www.churchofjesuschrist.org/study/manual/gospel-topics/book-of-mormon-geography?lang=eng" target="_blank" rel="noopener noreferrer">Read the Church’s explanation of Book of Mormon geography.</a>
+          <p>The internal map supplied for this study illustrates relationships among places described in the text. Its shapes, scale and placements are a reconstruction, not an official Church map or an identification of modern lands. <a href="../assets/timeline/book-of-mormon-internal-map.png" target="_blank" rel="noopener noreferrer">Open the complete internal map.</a></p>
+          <p>Readers have proposed locations in North, Central and South America. The accompanying Eastern Great Lakes presentation explores one working hypothesis and compares several alternatives, including Mesoamerica. Its conclusions depend on the author’s map and comparison assumptions; they do not establish where the events occurred or rule out other proposals. <a href="https://1drv.ms/f/c/242b9e996eb2d7b8/IgCf1xbP6XqsQoqZVYK4wwBqAbuXw1CN9p5kC1OdMLpbytQ?e=hHFRXV" target="_blank" rel="noopener noreferrer">Eastern Great Lakes comparison — a personal proposal.</a></p>
         </div>
         <div class="note">
           <strong style="color:var(--ink)">Sources and certainty:</strong>
@@ -227,7 +236,7 @@ body.fc-site .detail a:hover,body.fc-site .sheet a:hover,body.fc-site .detail a:
     </div>
   </div>
 
-  <p class="foot">Built as a study companion for focuschrist.com. Most Holy Land points follow standard historical identifications. A small number are traditional or representative where the exact ancient location is not certain. The Americas marker is representative, not a doctrinal claim about exact Book of Mormon geography.</p>
+  <p class="foot">Built as a study companion for focuschrist.com. Most Holy Land points follow standard historical identifications. A small number are traditional or representative where the exact ancient location is not certain. The Americas events have no identified modern geographic coordinates. Later vision pins mark approximate witness locations.</p>
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -262,15 +271,22 @@ var STOPS = [
   {phase:"risen", place:"Jerusalem, Upper Room", title:"Appears to the Apostles and to Thomas", scripture:"Luke 24:36 to 49; John 20:19 to 29", lat:31.771, lng:35.229, desc:"Jesus appears among His Apostles in a locked room, shows His hands and side, and breathes the Holy Ghost upon them. A week later He appears again for Thomas, who declares, My Lord and my God."},
   {phase:"risen", place:"Sea of Galilee", title:"Appears at the Sea of Galilee", scripture:"John 21:1 to 23", lat:32.79, lng:35.53, desc:"Seven disciples fish all night and catch nothing. At morning Jesus stands on the shore, directs them to a miraculous catch of 153 fishes, shares bread and fish with them, and restores Peter with the charge, Feed my sheep."},
   {phase:"risen", place:"Mount of Olives, near Bethany", title:"The Ascension", scripture:"Luke 24:50 to 53; Acts 1:9 to 11", lat:31.774, lng:35.257, desc:"Forty days after His Resurrection, Jesus leads His Apostles to the Mount of Olives near Bethany, blesses them, and ascends into heaven. Two angels declare He will return in like manner as He was seen to go."},
-  {phase:"americas", place:"Land Bountiful, the Americas", title:"Descends to the Nephites at Bountiful", scripture:"3 Nephi 11", lat:17.2, lng:-93.5, desc:"After great destruction and three days of darkness in the Americas at the time of the Crucifixion, a multitude gathered at the temple in the land Bountiful hears the voice of the Father. Jesus Christ descends from heaven, shows the wounds in His hands and side, and invites each person to feel them, one by one."},
-  {phase:"americas", place:"Land Bountiful, the Americas", title:"Teaches, heals, and blesses the children", scripture:"3 Nephi 12 to 26; 3 Nephi 17; 3 Nephi 19", lat:17.35, lng:-93.35, desc:"Over successive days at Bountiful, Jesus teaches a sermon like the Sermon on the Mount, administers the sacrament, heals the sick and afflicted, prays with words that cannot be written, blesses the little children as angels descend around them, and institutes His church among the Nephites. He later appears again, expounds all scriptures, and His disciples continue the ministry recorded in 4 Nephi."}
+  {phase:"americas", place:"Land Bountiful, the Americas", title:"Descends to the Nephites at Bountiful", scripture:"3 Nephi 11", lat:null, lng:null, unlocated:true, source:"https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng", desc:"After great destruction and three days of darkness in the Americas at the time of the Crucifixion, a multitude gathered at the temple in the land Bountiful hears the voice of the Father. Jesus Christ descends from heaven, shows the wounds in His hands and side, and invites each person to feel them, one by one."},
+  {phase:"americas", place:"Land Bountiful, the Americas", title:"Teaches, heals, and blesses the children", scripture:"3 Nephi 12 to 26; 3 Nephi 17; 3 Nephi 19", lat:null, lng:null, unlocated:true, source:"https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng", desc:"Over successive days at Bountiful, Jesus teaches a sermon like the Sermon on the Mount, administers the sacrament, heals the sick and afflicted, prays with words that cannot be written, blesses the little children as angels descend around them, and institutes His church among the Nephites. He later appears again, expounds all scriptures, and His disciples continue the ministry recorded in 4 Nephi."},
+  {"phase": "restoration", "place": "Sacred Grove, Manchester/Palmyra area (approximate witness area)", "title": "The Father and Son appear to Joseph Smith", "scripture": "Joseph Smith—History 1:14–20", "date": "Spring 1820", "lat": 43.03, "lng": -77.24, "desc": "In the spring of 1820, fourteen-year-old Joseph Smith went into the woods near his family home to pray. God the Father and Jesus Christ appeared to him. The Father introduced His Beloved Son, and Joseph received an answer to his question about which church to join. The approximate area shown marks where Joseph received the vision; the account does not identify an exact clearing.", "source": "https://www.churchofjesuschrist.org/study/scriptures/pgp/js-h/1?lang=eng&id=p14-p20#p14", "witnessLocation": true},
+  {"phase": "restoration", "place": "John Johnson home, Hiram area (approximate witness area)", "title": "Joseph Smith and Sidney Rigdon behold the Son", "scripture": "Doctrine and Covenants 76:11–24", "date": "16 February 1832", "lat": 41.31, "lng": -81.15, "desc": "While translating the Bible in the John Johnson home at Hiram, Joseph Smith and Sidney Rigdon pondered John 5:29. Their understanding was opened in a heavenly vision, and they saw the Son at the right hand of the Father. They testified that He lives and learned of the resurrection and the degrees of glory. This pin marks the witnesses’ approximate earthly location, not the heavenly scene.", "source": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/76?lang=eng&id=p11-p24#p11", "witnessLocation": true},
+  {"phase": "restoration", "place": "Whitney store, Kirtland area (approximate witness area)", "title": "A shared vision in the School of the Prophets", "scripture": "Minutes, 18 March 1833; Church history account", "date": "18 March 1833", "lat": 41.63, "lng": -81.36, "desc": "The minutes of the School of the Prophets meeting on March 18, 1833, record that many present beheld a heavenly vision of the Savior and angels. The school met in Kirtland, including an upstairs room in the Whitney store. Zebedee Coltrin described an appearance of the Father and Son in a recollection recorded in 1883. Church historians consider that recollection likely connected with this meeting, but its later details and uncertain dating remain distinct from the contemporary minutes.", "source": "https://www.josephsmithpapers.org/paper-summary/minutes-18-march-1833/2", "witnessLocation": true},
+  {"phase": "restoration", "place": "Kirtland Temple, Kirtland area (approximate witness area)", "title": "Joseph sees the celestial kingdom", "scripture": "Doctrine and Covenants 137:1–10", "date": "21 January 1836", "lat": 41.63, "lng": -81.36, "desc": "On January 21, 1836, while ordinances were being administered in preparation for the Kirtland Temple dedication, Joseph Smith saw the celestial kingdom in vision. He beheld the Father and Son upon the throne and saw his brother Alvin. The Lord taught that those who died without the gospel, but would have received it, could inherit the celestial kingdom. This pin marks the place where Joseph received the vision.", "source": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/137?lang=eng", "witnessLocation": true},
+  {"phase": "restoration", "place": "Kirtland Temple, Kirtland area (approximate witness area)", "title": "The Savior accepts the Kirtland Temple", "scripture": "Doctrine and Covenants 110:1–10", "date": "3 April 1836", "lat": 41.63, "lng": -81.36, "desc": "After administering the sacrament on Easter Sunday, Joseph Smith and Oliver Cowdery prayed behind the veils at the Kirtland Temple pulpit. They saw the Lord, who declared that He lives, forgave their sins, and accepted the house built in His name. Moses, Elias, and Elijah subsequently appeared and committed priesthood keys. The approximate Kirtland pin marks the witnesses’ location.", "source": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/110?lang=eng&id=p1-p10#p1", "witnessLocation": true},
+  {"phase": "restoration", "place": "Salt Lake Temple, Salt Lake City area (approximate witness area)", "title": "Lorenzo Snow testifies of seeing the Savior", "scripture": "Lorenzo Snow account published by the Church", "date": "1898", "lat": 40.76, "lng": -111.89, "desc": "An account published by the Church recounts Lorenzo Snow’s testimony that Jesus Christ appeared to him in the Salt Lake Temple near the time of President Wilford Woodruff’s death in 1898. His son LeRoi preserved the account, including granddaughter Allie Young Pond’s recollection of what her grandfather told her. President Snow said the Savior instructed him to reorganize the First Presidency without delay. This is an attributed Church history account; the pin marks the temple’s city.", "source": "https://www.churchofjesuschrist.org/study/liahona/2015/09/a-visit-from-the-savior?lang=eng", "witnessLocation": true},
+  {"phase": "restoration", "place": "Salt Lake City, Utah (approximate witness area)", "title": "Joseph F. Smith sees the Savior minister to the dead", "scripture": "Doctrine and Covenants 138:1–37", "date": "3 October 1918", "lat": 40.76, "lng": -111.89, "desc": "On October 3, 1918, President Joseph F. Smith pondered the scriptures in Salt Lake City. He saw in vision the righteous dead awaiting deliverance and the Savior ministering among them while His body lay in the tomb. He learned how the Lord organized messengers to carry the gospel to others in the spirit world. The 1918 date belongs to Joseph F. Smith’s vision, not a new earthly visit by Christ. The pin marks the witness’s city, not the location of the spirit world.", "source": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/138?lang=eng", "witnessLocation": true}
 ];
-var PHASES = {beginnings:"Beginnings", ministry:"Ministry", final:"Final week", risen:"Risen Lord", americas:"Americas"};
+var PHASES = {beginnings:"Beginnings", ministry:"Ministry", final:"Final week", risen:"Risen Lord", americas:"Americas", restoration:"Restoration visions"};
 var timeline = document.getElementById('timeline');
 var rows = [];
 var places = STOPS.map(function(s){ return {label:s.title, venue:s.place, locality:s.place, lat:s.lat, lng:s.lng}; });
 function mapsUrl(s){
-  return 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(s.place);
+  return s.unlocated ? s.source : 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(s.place);
 }
 STOPS.forEach(function(s,i){
   var btn = document.createElement('button');
@@ -289,6 +305,7 @@ var current = 0;
 var leafletMap = null;
 var markers = [];
 var routeLine = null;
+var lifeClusters=[],lifeGroups=[],lifeFilterGeneration=0,lifeRenderGeneration=0;
 function updateDetail(i){
   current = i;
   if(!isNarrow()) document.getElementById('detail').scrollTop = 0;
@@ -296,21 +313,23 @@ function updateDetail(i){
   document.getElementById('dNum').textContent = i+1;
   document.getElementById('dPlace').textContent = s.place;
   document.getElementById('dTitle').textContent = s.title;
-  document.getElementById('dScripture').textContent = s.scripture + ' · ' + PHASES[s.phase];
+  document.getElementById('dScripture').textContent = (s.date ? s.date + ' · ' : '') + s.scripture + ' · ' + PHASES[s.phase];
   document.getElementById('dDesc').textContent = s.desc;
-  document.getElementById('dCoords').textContent = s.lat.toFixed(4) + ', ' + s.lng.toFixed(4);
+  ['dDesc','sDesc'].forEach(function(id){var old=document.getElementById(id+'Source');if(old)old.remove();if(s.source&&!s.unlocated){var a=document.createElement('a');a.id=id+'Source';a.href=s.source;a.target='_blank';a.rel='noopener noreferrer';a.textContent='Read the source account';document.getElementById(id).after(a);}});
+  document.getElementById('dCoords').textContent = s.unlocated ? 'Modern geographic location not identified' : s.lat.toFixed(s.witnessLocation?2:4) + ', ' + s.lng.toFixed(s.witnessLocation?2:4) + (s.witnessLocation ? ' · Approximate witness area' : '');
   var link = document.getElementById('dMaps');
   link.href = mapsUrl(s);
-  link.textContent = 'Open in maps: ' + s.place;
+  link.textContent = s.unlocated ? 'Read the scripture account' : 'Open in maps: ' + s.place;
   document.getElementById('sNum').textContent = i+1;
   document.getElementById('sPlace').textContent = s.place;
   document.getElementById('sTitle').textContent = s.title;
-  document.getElementById('sScripture').textContent = s.scripture + ' · ' + PHASES[s.phase];
+  document.getElementById('sScripture').textContent = (s.date ? s.date + ' · ' : '') + s.scripture + ' · ' + PHASES[s.phase];
   document.getElementById('sDesc').textContent = s.desc;
   var slink = document.getElementById('sMaps');
   slink.href = mapsUrl(s);
-  slink.textContent = 'Open in maps: ' + s.place;
+  slink.textContent = s.unlocated ? 'Read the scripture account' : 'Open in maps: ' + s.place;
   rows.forEach(function(r,j){ r.classList.toggle('map-selected', j===i); });
+  lifeClusters.forEach(function(m){var e=m.getElement();if(e)e.classList.toggle('is-selected',m.lifeIndices.indexOf(i)>=0);});
   markers.forEach(function(m,j){
     if(!m) return;
     var el = m.getElement();
@@ -326,6 +345,7 @@ function closeSheet(){ var sh = document.getElementById('sheet'); sh.classList.r
 function isNarrow(){ return window.matchMedia('(max-width: 900px)').matches; }
 function selectStop(i, pan, showSheet){
   updateDetail(i);
+  showInternalMap(!!STOPS[i].unlocated);
   window.dispatchEvent(new CustomEvent('timeline:select',{detail:{index:i,showStory:showSheet!==false}}));
   if(showSheet !== false && isNarrow()) openSheet();
   if(pan && leafletMap && markers[i]){
@@ -335,16 +355,27 @@ function selectStop(i, pan, showSheet){
     leafletMap.flyTo([s.lat, s.lng], targetZoom, {duration: .6});
   }
 }
-window.LifeTimeline={select:function(i){if(Number.isInteger(i)&&i>=0&&i<STOPS.length)selectStop(i,true);},stops:STOPS,get current(){return current;}};
+window.LifeTimeline={select:function(i){if(Number.isInteger(i)&&i>=0&&i<STOPS.length)selectStop(i,true);},stops:STOPS,get current(){return current;},get mappedGroups(){return lifeGroups.map(function(g){return g.slice();});}};
+function showInternalMap(show){
+  document.getElementById('internalMap').hidden=!show;
+  document.querySelector('.map-shell').classList.toggle('life-internal-view',show);
+  document.getElementById('journeyWorkspace').classList.toggle('life-internal-active',show);
+  if(!show&&leafletMap)leafletMap.invalidateSize({pan:false});
+}
+document.getElementById('bountifulEvents').addEventListener('click',function(){
+  if(window.TimelineWorkspace)window.TimelineWorkspace.showChoices('Bountiful · modern location unknown',[29,30].map(function(i){return {index:i,label:(i+1)+'. '+STOPS[i].title};}),function(i){selectStop(i,false);});
+});
 rows.forEach(function(r,i){ r.addEventListener('click', function(){ selectStop(i, true); }); });
 function scrollJourneyRow(row){ if(window.TimelineWorkspace) window.TimelineWorkspace.scrollRow(row); else row.scrollIntoView({block:'nearest'}); }
 function goPrev(){
+  if(window.TimelineWorkspace&&window.TimelineWorkspace.stepGroup&&window.TimelineWorkspace.stepGroup(-1))return;
   var n = (current - 1 + STOPS.length) % STOPS.length;
   while(rows[n].classList.contains('hidden')){ n = (n - 1 + STOPS.length) % STOPS.length; }
   selectStop(n, true);
   if(!isNarrow()) scrollJourneyRow(rows[n]);
 }
 function goNext(){
+  if(window.TimelineWorkspace&&window.TimelineWorkspace.stepGroup&&window.TimelineWorkspace.stepGroup(1))return;
   var n = (current + 1) % STOPS.length;
   while(rows[n].classList.contains('hidden')){ n = (n + 1) % STOPS.length; }
   selectStop(n, true);
@@ -372,7 +403,7 @@ filterBtns.forEach(function(b){
   b.addEventListener('click', function(){
     filterBtns.forEach(function(x){ x.setAttribute('aria-pressed','false'); });
     b.setAttribute('aria-pressed','true');
-    activeFilter = b.getAttribute('data-filter');
+    activeFilter = b.getAttribute('data-filter');lifeFilterGeneration++;
     rows.forEach(function(r,i){
       var show = (activeFilter==='all' || STOPS[i].phase===activeFilter);
       r.classList.toggle('hidden', !show);
@@ -383,6 +414,7 @@ filterBtns.forEach(function(b){
     if(firstVisible){
       selectStop(rows.indexOf(firstVisible), false, false);
     }
+    if(activeFilter==='restoration'&&leafletMap)leafletMap.fitBounds(L.latLngBounds(STOPS.filter(function(s){return s.phase==='restoration';}).map(function(s){return [s.lat,s.lng];})).pad(.12));
   });
 });
 function showFallback(){
@@ -399,13 +431,13 @@ function visibleStops(){
 function drawRoute(){
   if(!leafletMap) return;
   if(routeLine){ leafletMap.removeLayer(routeLine); routeLine = null; }
-  var idx = visibleStops();
+  var idx = visibleStops().filter(function(i){return i<29;});
   if(idx.length < 2) return;
   var pts = idx.map(function(i){ return [STOPS[i].lat, STOPS[i].lng]; });
   routeLine = L.polyline(pts, {color:'#b87d24', weight:2.5, opacity:.75, dashArray:'1 6', lineCap:'round'}).addTo(leafletMap);
   routeLine.bringToBack();
 }
-// Move only icon anchors in screen space; scripture geography is never changed.
+// Singleton pins keep original coordinates; nearby places share a count marker and exact event choices.
 function stopIcon(i, dx, dy){
   var s = STOPS[i];
   return L.divIcon({className:'pin-icon',
@@ -414,41 +446,35 @@ function stopIcon(i, dx, dy){
 }
 function spreadNearbyPins(){
   if(!leafletMap) return;
-  var size=leafletMap.getSize(), placed=[], gap=40, inset=22;
-  markers.forEach(function(marker,i){
-    if(!leafletMap.hasLayer(marker)) return;
-    var point=leafletMap.latLngToContainerPoint([STOPS[i].lat,STOPS[i].lng]);
-    if(point.x < -15 || point.y < -15 || point.x > size.x+15 || point.y > size.y+15){
-      marker.setIcon(stopIcon(i,0,0)); return;
-    }
-    var origin={x:Math.max(inset,Math.min(size.x-inset,point.x)),y:Math.max(inset,Math.min(size.y-inset,point.y))};
-    var options=[origin];
-    for(var ring=1;ring<=STOPS.length;ring++){
-      for(var x=-ring;x<=ring;x++) for(var y=-ring;y<=ring;y++){
-        if(Math.max(Math.abs(x),Math.abs(y))!==ring) continue;
-        var candidate={x:origin.x+x*gap,y:origin.y+y*gap};
-        if(candidate.x>=inset && candidate.x<=size.x-inset && candidate.y>=inset && candidate.y<=size.y-inset) options.push(candidate);
-      }
-      if(options.some(function(c){return placed.every(function(a){return Math.hypot(c.x-a.x,c.y-a.y)>=gap;});})) break;
-    }
-    options.sort(function(a,b){return Math.hypot(a.x-point.x,a.y-point.y)-Math.hypot(b.x-point.x,b.y-point.y);});
-    var target=options.find(function(c){return placed.every(function(a){return Math.hypot(c.x-a.x,c.y-a.y)>=gap;});}) || origin;
-    placed.push(target);
-    marker.setIcon(stopIcon(i,target.x-point.x,target.y-point.y));
+  var renderGeneration=++lifeRenderGeneration;
+  lifeClusters.forEach(function(m){leafletMap.removeLayer(m);});lifeClusters=[];
+  markers.forEach(function(m){if(m)leafletMap.removeLayer(m);});
+  var gap=Math.max(76,parseFloat(getComputedStyle(document.getElementById('map')).fontSize)*5),groups=[];
+  STOPS.forEach(function(s,i){if(s.unlocated||(activeFilter!=='all'&&s.phase!==activeFilter))return;var p=leafletMap.latLngToContainerPoint([s.lat,s.lng]);groups.push({indices:[i],x:p.x,y:p.y});});
+  var changed=true;while(changed){changed=false;outer:for(var a=0;a<groups.length;a++)for(var b=a+1;b<groups.length;b++){if(Math.hypot(groups[a].x-groups[b].x,groups[a].y-groups[b].y)<gap){var one=groups[a],two=groups[b],n=one.indices.length,m=two.indices.length;one.x=(one.x*n+two.x*m)/(n+m);one.y=(one.y*n+two.y*m)/(n+m);one.indices=one.indices.concat(two.indices).sort(function(x,y){return x-y;});groups.splice(b,1);changed=true;break outer;}}}
+  lifeGroups=groups.map(function(g){return g.indices.slice();});
+  groups.forEach(function(g){if(g.indices.length===1){var i=g.indices[0];markers[i].setIcon(stopIcon(i,0,0));markers[i].addTo(leafletMap);return;}
+    var center=leafletMap.containerPointToLatLng([g.x,g.y]),coords=[center.lat,center.lng];
+    var icon=L.divIcon({className:'life-cluster-icon',iconSize:[44,44],iconAnchor:[22,22],html:'<span class="handcart-cluster'+(g.indices.indexOf(current)>=0?' is-selected':'')+'">'+g.indices.length+'<small>stops</small></span>'});
+    var groupMarker=L.marker(coords,{icon:icon,keyboard:true,title:g.indices.length+' nearby journey stops'}),generation=lifeFilterGeneration;
+    groupMarker.lifeIndices=g.indices.slice();
+    groupMarker.on('click',function(){if(generation!==lifeFilterGeneration||renderGeneration!==lifeRenderGeneration)return;if(window.TimelineWorkspace)window.TimelineWorkspace.showChoices('Nearby journey stops',g.indices.map(function(i){return {index:i,label:(i+1)+'. '+STOPS[i].title};}),function(i){if(generation===lifeFilterGeneration&&g.indices.indexOf(i)!==-1)selectStop(i,false);});});groupMarker.addTo(leafletMap);var element=groupMarker.getElement();if(element){element.setAttribute('role','button');element.setAttribute('aria-label',g.indices.length+' nearby journey stops. Open the numbered event list.');}lifeClusters.push(groupMarker);
   });
 }
 document.getElementById('map').addEventListener('timeline:map-resize',function(){ if(leafletMap){leafletMap.invalidateSize({pan:false});spreadNearbyPins();} });
 function holyLandBounds(){
-  var pts = STOPS.filter(function(s){ return s.phase !== 'americas'; }).map(function(s){ return [s.lat, s.lng]; });
+  var pts = STOPS.filter(function(s){ return s.phase !== 'americas' && s.phase !== 'restoration'; }).map(function(s){ return [s.lat, s.lng]; });
   return L.latLngBounds(pts);
 }
 function fullBounds(){
-  return L.latLngBounds(STOPS.map(function(s){ return [s.lat, s.lng]; }));
+  return L.latLngBounds(STOPS.filter(function(s){return !s.unlocated;}).map(function(s){ return [s.lat, s.lng]; }));
 }
 updateDetail(0);
 try{
   if(typeof L === 'undefined') throw new Error('Leaflet unavailable');
   leafletMap = L.map('map', {scrollWheelZoom:false}).setView([32.0, 35.25], 8);
+  // Keep live provider credits visible outside the interactive map canvas.
+  if(leafletMap.attributionControl&&leafletMap.attributionControl.getContainer){var attribution=leafletMap.attributionControl.getContainer();attribution.classList.add('timeline-map-attribution');document.getElementById('map').after(attribution);}
   document.getElementById('map').addEventListener('timeline:map-interaction',function(event){
     ['dragging','touchZoom','doubleClickZoom'].forEach(function(name){var handler=leafletMap[name];if(handler)handler[event.detail.enabled?'enable':'disable']();});
   });
@@ -461,9 +487,11 @@ try{
   }).on('tileload',function(){tileLoaded=true;tileStatus.hidden=true;clearTimeout(tileTimer);}).on('tileerror',function(){if(++tileErrors>=3)tileUnavailable();}).addTo(leafletMap);
   tileTimer=setTimeout(tileUnavailable,10000);window.addEventListener('pagehide',function(){clearTimeout(tileTimer);});
   STOPS.forEach(function(s,i){
+    if(s.unlocated){markers.push(null);return;}
     var icon = stopIcon(i, 0, 0);
     var m = L.marker([s.lat, s.lng], {icon: icon, title: (i+1) + '. ' + s.title, keyboard: true});
     m.on('click', function(){
+      if(window.TimelineWorkspace&&window.TimelineWorkspace.clearGroup)window.TimelineWorkspace.clearGroup();
       selectStop(i, false);
       if(!isNarrow()) scrollJourneyRow(rows[i]);
     });
@@ -478,16 +506,18 @@ try{
   setTimeout(function(){ try{ leafletMap.invalidateSize(); }catch(e){} }, 300);
 }catch(e){ showFallback(); }
 document.getElementById('btnHoly').addEventListener('click', function(){
-  if(activeFilter === 'americas'){
+  if(activeFilter === 'americas' || activeFilter === 'restoration'){
     var allBtn = document.querySelector('#filters .pill[data-filter="all"]');
     if(allBtn) allBtn.click();
   }
   if(leafletMap){
     leafletMap.flyToBounds(holyLandBounds().pad(0.08), {duration:.8});
-    if(STOPS[current].phase === 'americas') selectStop(0, false);
+    if(STOPS[current].phase === 'americas' || STOPS[current].phase === 'restoration') selectStop(0, false);
   }
 });
 document.getElementById('btnWorld').addEventListener('click', function(){
+  if(activeFilter!=='all')document.querySelector('#filters .pill[data-filter="all"]').click();
+  showInternalMap(false);
   if(leafletMap){
     leafletMap.flyToBounds(fullBounds().pad(0.05), {duration:.8});
   }
