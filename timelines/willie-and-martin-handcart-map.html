@@ -668,7 +668,7 @@
     leafletMap.closePopup();
     var generation=++renderGeneration;
     // Measure current rendered badges before replacing them; keep an eight-pixel gap.
-    var badgeGap=52;
+    var badgeGap=52*Math.max(1,(parseFloat(getComputedStyle(mapEl).fontSize)||16)/16);
     mapEl.querySelectorAll('.handcart-cluster,.handcart-pin-icon .pin').forEach(function(badge){var r=badge.getBoundingClientRect();badgeGap=Math.max(badgeGap,Math.max(r.width,r.height)+8);});
     clusterMarkers.forEach(function(m){leafletMap.removeLayer(m);});clusterMarkers=[];
     markers.forEach(function(m){if(leafletMap.hasLayer(m))leafletMap.removeLayer(m);});

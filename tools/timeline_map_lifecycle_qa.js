@@ -15,6 +15,9 @@ function setup(provider=true){
 }
 const t=setup(),{w,d,state:s}=t,original=s.markers.filter(m=>m.options.title.startsWith('Stop '));
 assert.equal(original.length,33);assert.equal(s.routes.length,4);assert.equal(s.url,'https://tile.openstreetmap.org/{z}/{x}/{y}.png');
+// Repeated redraws must retain enlarged spacing even when freshly created badges have default font metrics.
+const mapElement=d.getElementById('map'),nativeStyle=w.getComputedStyle;let enlargedGapChecks=0;w.getComputedStyle=function(node){const result=nativeStyle.call(w,node);if(node===mapElement){enlargedGapChecks++;return new Proxy(result,{get(target,key){return key==='fontSize'?'32px':Reflect.get(target,key);}});}return result;};
+for(let n=0;n<3;n++){s.handlers.moveend();const active=[...s.layers];for(let a=0;a<active.length;a++)for(let b=a+1;b<active.length;b++)assert(Math.hypot((active[a].coords[0]-active[b].coords[0])*5,(active[a].coords[1]-active[b].coords[1])*5)>=104,'Repeated enlarged redraw keeps104px grouping gap');}assert(enlargedGapChecks>=3,'Every redraw derives spacing from stable inherited map text size');w.getComputedStyle=nativeStyle;
 const coordinates=original.map(m=>JSON.stringify(m.coords));assert.equal(coordinates[0],'[53.4084,-2.9916]');
 assert.equal(w.HandcartTimeline.current,0);assert.equal(s.events.at(-1).showStory,false);assert.equal(s.shows,0);
 const titles=new Map([...d.querySelectorAll('.stop-card')].map(c=>[Number(c.dataset.stopIndex),c.querySelector('h3').textContent]));
