@@ -90,5 +90,6 @@ for (const page of pages) {
 assert(pages.includes('answers/holy-ghost.html'), 'New Holy Ghost opening must be included');
 assert(pages.includes('answers/plan-of-salvation.html'), 'New Plan of Salvation opening must be included');
 assert(pages.includes('timeline.html'), 'New Timeline opening must be included');
-assert.equal(openings, 44, 'Every canonical opening, including Timeline, must retain its invitation');
-console.log('Opening flow and cards QA PASS: 44 opening invitations; complete Answers rows.');
+for(const page of ['timelines/latter-day-saint-church-history-timeline.html','timelines/willie-and-martin-handcart-map.html','timelines/life-of-christ-journey-map.html'])assert(pages.includes(page),'New timeline experience opening must be included: '+page);
+assert.equal(openings, 47, 'Every canonical opening, including the three timeline experiences, must retain its invitation');
+console.log('Opening flow and cards QA PASS: 47 opening invitations; complete Answers rows.');
