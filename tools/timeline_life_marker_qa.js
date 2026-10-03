@@ -22,6 +22,6 @@ for(const narrow of [false,true]){
   if(choices){const saved=choices;d.querySelector('#filters [data-filter="beginnings"]').click();const before=w.LifeTimeline.current;saved.callback(saved.items[0].index);assert.equal(w.LifeTimeline.current,before,'Filter invalidates detached choices');}
 
  }
- w.TimelineWorkspace=null;d.querySelector('#filters [data-filter="all"]').click();d.querySelector('#nextBtn').click();assert.equal(d.querySelector('#dNum').textContent,'2');d.querySelector('#prevBtn').click();assert.equal(d.querySelector('#dNum').textContent,'1');dom.window.close();
+ w.TimelineWorkspace=null;d.querySelector('#filters [data-filter="all"]').click();assert.deepEqual(Array.from(w.TimelineNavigationAdapter.visibleIndices()),Array.from({length:38},(_,i)=>i));w.TimelineNavigationAdapter.select(1);assert.equal(d.querySelector('#dNum').textContent,'2');w.TimelineNavigationAdapter.select(0);assert.equal(d.querySelector('#dNum').textContent,'1');dom.window.close();
 }
 console.log('PASS: all36 geographic marker numbers across38 stories map to exact stories after zoom and every phase filter, desktop and phone callback paths. Provider rendering remains separate.');

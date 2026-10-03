@@ -21,3 +21,72 @@ body.fc-timeline-experience #historyMapReset{background:var(--fc-bg-deep);color:
 
 /* Keep a visible shared frame around compact phone maps. */
 body.fc-timeline-experience .timeline-mobile [data-timeline-pane="map"]{border:1px solid var(--fc-line-strong);border-radius:var(--fc-radius);isolation:isolate}
+
+/* Scoped reuse of site-system.css shared 2048:684 hero and mobile opening budget.
+   These experiences retain their original study-body styling. */
+body.fc-timeline-experience .timeline-life-hero{display:block;position:relative;width:100%;height:auto;min-height:0;aspect-ratio:2048/684;overflow:hidden;background:#10252d}
+body.fc-timeline-experience .timeline-life-hero picture{display:block;position:absolute;inset:0}
+body.fc-timeline-experience .timeline-life-hero img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+body.fc-timeline-experience .timeline-life-intro{box-sizing:border-box;min-height:max(0px,calc(100dvh - 52px - 33.3984375vw + 8px));padding:clamp(8px,1.25dvh,14px) 0 24px;background:#10252d}
+body.fc-timeline-experience .timeline-life-intro h1{font-size:clamp(2.05rem,3.7dvh,2.95rem);line-height:1.12}
+body.fc-timeline-experience .timeline-life-intro .kicker{color:#f0c36a;background:#10252d;line-height:1.5}
+body.fc-timeline-experience .timeline-history-opening-copy{background:#10252d;border-radius:14px;padding:24px; margin-block:24px;max-width:1080px}
+body.fc-timeline-experience .timeline-history-opening-copy .kicker{color:#f0c36a;background:#10252d;line-height:1.5}
+@media(max-width:1020px){body.fc-timeline-experience .timeline-life-intro{min-height:max(0px,calc(100dvh - 62px - 33.3984375vw + 8px))}}
+@media(max-width:700px){
+ body.fc-timeline-experience .timeline-life-hero{aspect-ratio:auto;height:max(180px,min(115vw,600px,calc(100svh - 62px - 280px)))}
+ body.fc-timeline-experience .timeline-life-hero img{object-position:center 40%}
+ body.fc-timeline-experience .timeline-life-intro{min-height:max(0px,calc(100dvh - 62px - max(180px,min(115vw,600px,calc(100svh - 62px - 280px)))));padding:10px 0 12px}
+ body.fc-timeline-experience .timeline-life-intro h1{font-size:clamp(1.5rem,8vw,2rem)}
+ body.fc-timeline-experience .timeline-history-opening-copy{margin:16px;padding:20px;width:auto}
+}
+
+body.fc-timeline-experience .timeline-life-intro .timeline-return{box-sizing:border-box;min-height:44px;display:inline-flex;align-items:center}
+
+body.fc-timeline-experience .timeline-life-intro .timeline-navigation{padding:10px 0 0;gap:10px}
+body.fc-timeline-experience .timeline-life-overview{padding:24px 0}
+
+body.fc-timeline-experience .timeline-life-intro .timeline-opening-continue{display:inline-flex;align-items:center;gap:8px;min-height:44px;color:#f0c36a;text-decoration:none}
+body.fc-timeline-experience .timeline-life-intro .fc-mobile-scroll-cue{display:none}
+
+body.fc-timeline-experience .timeline-history-intro{display:block;overflow:visible;position:relative}
+body.fc-timeline-experience .timeline-history-intro::after{display:none}
+body.fc-timeline-experience .timeline-history-intro h1{max-width:none;margin:0;line-height:1.12}
+body.fc-timeline-experience .timeline-history-intro .lede{margin:12px 0;max-width:none;font-size:16px;line-height:1.5}
+body.fc-timeline-experience .timeline-history-hero>img{position:absolute;inset:0}
+
+/* Ordinary study resources use the approved Home panel surface, not scripture parchment. */
+body.fc-timeline-experience .timeline-history-sources{background:var(--fc-panel-fill);border:1px solid var(--fc-panel-border);box-shadow:var(--fc-panel-shadow);color:var(--fc-cream)}
+body.fc-timeline-experience .timeline-history-sources :is(h2,p,ul,li){color:var(--fc-cream)}
+body.fc-timeline-experience .timeline-history-sources a{color:var(--fc-gold-light);text-decoration:underline;text-underline-offset:3px}
+
+body.fc-site.fc-timeline-experience .timeline-life-intro .timeline-opening-continue{display:inline-flex!important;min-height:44px;margin:0!important;padding:0;align-items:center}
+body.fc-site.fc-timeline-experience .timeline-life-intro .timeline-navigation{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:8px;padding:6px 0 0;max-width:none;width:100%}
+body.fc-site.fc-timeline-experience .timeline-life-intro .timeline-navigation .timeline-return{width:auto!important;flex:0 1 auto;margin:0;padding:8px 10px;font-size:14px;min-height:44px}
+@media(max-width:700px){
+ body.fc-site.fc-timeline-experience .timeline-history-intro{padding:8px 0 10px!important;gap:4px!important}
+ body.fc-site.fc-timeline-experience .timeline-history-intro h1{font-size:clamp(1.5rem,7.2vw,1.8rem)!important;line-height:1.1!important}
+ body.fc-site.fc-timeline-experience .timeline-history-intro .kicker{font-size:11px;line-height:1.3;margin:0 0 4px;letter-spacing:.08em}
+ body.fc-site.fc-timeline-experience .timeline-history-intro .lede{margin:6px 0;font-size:15px;line-height:1.4}
+}
+
+body.fc-site.fc-timeline-experience .timeline-life-intro :is(.fc-scroll-cue,.fc-mobile-scroll-cue):not(.timeline-opening-continue){display:none!important}
+
+/* Handcart uses the same image-first opening and reading sequence as the other timelines. */
+body.fc-timeline-experience .timeline-handcart-hero>img{position:absolute;inset:0}
+body.fc-timeline-experience .timeline-handcart-intro{position:relative;overflow:visible;box-shadow:none;margin-inline:0}
+body.fc-timeline-experience .timeline-handcart-intro h1{margin:0;max-width:none;color:var(--fc-cream)}
+body.fc-timeline-experience .timeline-handcart-intro .lede{margin:8px 0;line-height:1.4}
+@media(max-width:700px){
+ body.fc-timeline-experience .timeline-handcart-hero img{object-position:right center}
+ body.fc-site.fc-timeline-experience .timeline-handcart-intro{padding:8px 0 10px!important;gap:4px!important}
+ body.fc-site.fc-timeline-experience .timeline-handcart-intro h1{font-size:clamp(1.5rem,7.2vw,1.8rem)!important;line-height:1.1!important}
+ body.fc-site.fc-timeline-experience .timeline-handcart-intro .kicker{font-size:11px;line-height:1.3;margin:0 0 4px;letter-spacing:.08em}
+ body.fc-site.fc-timeline-experience .timeline-handcart-intro .lede{font-size:15px;margin:6px 0}
+}
+
+/* Explicit opening cue is the same bounded, bordered action on all three journeys. */
+body.fc-site.fc-timeline-experience .timeline-life-intro .timeline-opening-continue{box-sizing:border-box;border:1px solid var(--fc-gold);border-radius:999px;padding:8px 16px;min-height:44px;line-height:1.2;background:var(--fc-bg-deep);color:var(--fc-gold-light);text-decoration:none;justify-content:center}
+body.fc-site.fc-timeline-experience .timeline-life-intro .timeline-opening-continue:focus-visible{outline:2px solid var(--fc-gold-light);outline-offset:3px}
+
+body.fc-site.fc-timeline-experience .timeline-life-intro .fc-unified-continue{display:none!important}
