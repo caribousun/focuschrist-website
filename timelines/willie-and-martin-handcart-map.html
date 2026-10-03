@@ -667,13 +667,16 @@
     if(!leafletMap || closed) return;
     leafletMap.closePopup();
     var generation=++renderGeneration;
+    // Measure current rendered badges before replacing them; keep an eight-pixel gap.
+    var badgeGap=52;
+    mapEl.querySelectorAll('.handcart-cluster,.handcart-pin-icon .pin').forEach(function(badge){var r=badge.getBoundingClientRect();badgeGap=Math.max(badgeGap,Math.max(r.width,r.height)+8);});
     clusterMarkers.forEach(function(m){leafletMap.removeLayer(m);});clusterMarkers=[];
     markers.forEach(function(m){if(leafletMap.hasLayer(m))leafletMap.removeLayer(m);});
     // Screen-space clusters avoid overlapping touch targets without changing stored geography.
     var groups=[];
     currentRows.forEach(function(row){
       var stop=STOPS[row.index],p=leafletMap.latLngToContainerPoint([stop.lat,stop.lng]);
-      var group=groups.find(function(g){return Math.hypot(g.point.x-p.x,g.point.y-p.y)<52;});
+      var group=groups.find(function(g){return Math.hypot(g.point.x-p.x,g.point.y-p.y)<badgeGap;});
       if(group)group.indices.push(row.index);else groups.push({point:p,indices:[row.index]});
     });
     groups.forEach(function(group){
