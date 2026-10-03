@@ -16,6 +16,7 @@ const root = path.resolve(__dirname, '..');
   const records = JSON.parse(fs.readFileSync(path.join(root,'docs/unified-opening-inventory.json'))).pages.filter(x=>x.hero && (!process.env.QA_PATHS || process.env.QA_PATHS.split(",").includes(x.path)));
   const authoredRoutes=new Set(['timelines/latter-day-saint-church-history-timeline.html','timelines/willie-and-martin-handcart-map.html','timelines/life-of-christ-journey-map.html']);
   const authoredCue=record=>{const authored=authoredRoutes.has(record.path);assert.equal(record.template==='standard-timeline-study-reference',authored,'Only exact reviewed timeline routes use authored cue contract');return authored;};
+  assert.equal(records.length,new Set(records.map(r=>r.path)).size,'Every discovered illustrated route is unique');if(!process.env.QA_PATHS)assert.equal(records.length,50,'All50 illustrated routes included');
   const results=[],enlarged=[];
   const heroGeometry=()=>{const e=document.querySelector('.fc-visual-hero,[data-covenant-hero-slot],.cfm-desktop-picture,.gc-intro-visual'),r=e.getBoundingClientRect();return {width:r.width,height:r.height,top:r.top+scrollY};};
   try {
@@ -80,5 +81,5 @@ const root = path.resolve(__dirname, '..');
   console.log(JSON.stringify({cases:results.length,failures},null,2));
   const enlargedFailures=enlarged.filter(x=>x.cutoff||x.overflow||x.cueBottom>x.openingBottom||x.openingBottom<x.height-1);
   console.log(JSON.stringify({enlargedCases:enlarged.length,enlargedFailures},null,2));
-  if(failures.length||enlargedFailures.length||(!process.env.QA_PATHS && !process.env.QA_PROFILES && (results.length!==282||enlarged.length!==94)))process.exitCode=1;
+  if(failures.length||enlargedFailures.length||(!process.env.QA_PATHS && !process.env.QA_PROFILES && (results.length!==300||enlarged.length!==100)))process.exitCode=1;
 })().catch(e=>{console.error(e);process.exitCode=1;});
