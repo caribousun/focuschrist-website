@@ -76,6 +76,11 @@
       "path": ".github/workflows/site-qa.yml",
       "sha256": "a13ab2fc057d80be1a713df807b7e2d8b8ce5c9956e3a0e9347ec270f7fbe6d0",
       "bytes": 21543
+    },
+    {
+      "path": "content-audit.json",
+      "sha256": "2970b2fc04a1353a4ebbd0f5ebc231c753e3da004d2866343451e5a7cb2fddde",
+      "bytes": 1458957
     }
   ],
   "browser": "Root-owned desktop, phone and enlarged-text evidence is recorded separately; exact candidate review remains required.",
@@ -95,7 +100,8 @@
     "Python search QA PASS:128publicpages,2142validdestinations",
     "Research parity gate now enforced in existing Joseph CI step",
     "JavaScript search runtime requires unavailable local jsdom; hosted CI remains required",
-    "Publication-preparation git diff --check PASS"
+    "Publication-preparation git diff --check PASS",
+    "Static-content ledger updated only for independently reviewed Joseph page; exact normalized wording hash checked"
   ],
   "owner_acceptance": "Publication authority is separate from final aesthetic and physical-phone acceptance."
 }
