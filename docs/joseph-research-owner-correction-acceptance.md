@@ -1,0 +1,47 @@
+# Joseph research correction: acceptance and prior review failure
+
+Status: work in progress; this document is not concurrence on the finished page.
+
+The project-specific execution commitment is `docs/joseph-portrait-execution-standard.md`. Newton freshly loaded live Master, 00B, Focus Current and applicable 00I/00C through connected Drive in the October 3 continuation, and reread AGENTS.md plus the enriched-picture, historical-character, supporting-artwork and section-panel mandates. Exact current file hashes belong in the final concurrence receipt; no old hash is a standing approval.
+
+The later direct owner instruction requires a source-led study of Joseph's masks, likeness evidence and documented portrait process, prohibits generic filler, and explicitly removes the half-Christ quota. For this exact research companion the generated-original minimum is not applicable: no new original scenes are requested or counted. Authentic source images and repeated detail views remain references, never ten purported originals or independent evidence. General artwork requirements on other pages are unchanged; new character generation would still require independent preflight and finished-pixel review. This is a documented application of direct owner purpose, not a sitewide waiver or a claim of general ten-original compliance.
+
+## Why the earlier review failed
+
+The prior builder appended the full report to the illustrated page and replaced its image blocks with links to distant existing images. The prior QA expressly asserted that the research contained no `img` element. That assertion enforced the implementation choice instead of the requested reading experience. It turned the valid concern about repeated original artwork into an invalid prohibition on local evidence imagery.
+
+The review verified text parity, sources, protected image bytes, link destinations and lack of clipping, but did not treat coherent reading composition and relevant image placement as acceptance conditions. My earlier concurrence therefore overstated readiness. Recording known artwork mandate debt beside a scoped concurrence did not resolve the requirements or authorize a waiver. The absence of overflow and successful automated checks were insufficient. The corrected page needs fresh exact-candidate review; the old concurrence does not cover it.
+
+## Executable regression conditions
+
+- The substantive research lives at `joseph-smith-portrait-research.html`, retaining its content, sixteen trait audits, source links, limits and PDF download.
+- The original study contains no appended research sections, trait tables or source bibliography. Its portrait section contains a clearly labeled research pill to the new route. A retained legacy anchor is only a brief landing. The 120-word/two-paragraph cap is a reviewer guardrail for that landing, not a verbatim owner limit.
+- Reading uses explicit image-supported blocks: normally two ordinary narrative paragraphs, or a short pair of traits or one table, beside an actual relevant image. Explicit short source keys, synthesis, unavailable manuscript tables and proposed-work summaries may use independently reviewed per-slot rationale records bound to exact normalized text hashes; these cannot hide trait audits, long prose, a table stack or arbitrary unillustrated material. This does not require a picture per trait or table row. The actual whole-chapter reading length and relevance are decisive; dividing prose into artificial wrappers cannot justify a long wall of text. Captions, navigation and bibliography entries are recorded separately rather than counted as ordinary narrative paragraphs. Their rendered readability still requires review.
+- Every actual image has local bytes, positive intrinsic dimensions, meaningful alternative text, visible placement, a caption and a relevant action. Distant links or diagrams cannot satisfy actual-image cadence. Diagram usefulness is reviewed separately.
+- New original artworks require a complete ownership and exact-image review manifest. References, crops, resized exports, repeated assets and diagrams do not inflate the unique-original count. Any applicable original-count requirement must be reconciled with the exact current owner instruction. The earlier rounded-up half-Christ allocation is explicitly superseded for this page. Actual relevance and truthful source/creation context are mandatory.
+- Tests retain complete research-text parity, protected Joseph bytes, genuine PDF bytes and internal destination checks. Focus-only research must not silently acquire locket or Weber material.
+- Wyatt subsequently required both selectable chapters and a complete linear **Read All** view. Both modes must expose the same full research, source material and images. Mode changes must preserve useful place and hash/navigation behavior. Without JavaScript the complete study must remain accessible. Merely rendering two buttons is not proof that either mode works.
+
+`tools/test_joseph_research_acceptance.py` includes negative fixtures for the actual appended-section failure, fragment-only entry, non-pill entry, overlong landing, link-only or diagram-only imagery, excessive prose, unaccounted paragraphs and stacked traits served by a single image. These regression fixtures cannot prove image relevance, historical fidelity or finished visual quality. Additional fixtures distinguish numbered chapter eyebrows from prose, permit an explicit no-identity-reference declaration only for unnamed contemporary scenes, and require each review receipt to concur on the exact scene, prompt and finished asset hash. The Christ reference hash must match the approved Home identity.
+
+## Required rendered and independent acceptance
+
+Albert must operate the exact candidate in a real browser on desktop and narrow/wide phone views. Follow the main-page pill, new-page entry, table of contents, every image path, full-size and return actions, PDF download and return to the original study. Inspect ordinary scrolling through the entire research, image cadence, narrow component widths, source/table readability, borders, clipping, keyboard focus and enlarged text. Check actual image loading and intrinsic proportions. A contact sheet or DOM count alone is not this verification.
+
+Traverse both chapter mode and Read All, switch modes partway through, follow and reload deep links, and test browser Back/Forward. Verify the complete source and picture study/full-size/return paths in both modes; hidden chapters must not swallow a source target. Verify the no-JavaScript full-study fallback separately. Do not duplicate or omit research text/images to simulate mode parity.
+
+Fermi and Newton must each read the current mandates and inspect the exact final content, sources, all new pixels, image ownership/counts and rendered evidence. Character generation needs the separate preflight gate before creation and finished-pixel gate afterward. Neither a successful generator nor these structural tests supplies concurrence. Record unresolved failures; do not call the candidate ready while a material mandate remains unmet. Wyatt's physical-phone and aesthetic review remain separate.
+
+## Direct owner relevance correction
+
+Wyatt's latest words, relayed directly by Albert: "half christ and half others - That is not needed on this page...deep enriched study of the mask and our portrait...All pictures need to be around that...Christ pictures if they fit...showing how we got to our portrait."
+
+The half-Christ ratio is therefore not an acceptance requirement for this page. Christ imagery is appropriate only when it contributes to this specific study. The five generic modern method images are owner-rejected and excluded, even where their physical pixels previously passed review. Their apparent realism was insufficient editorial judgment. The gate now rejects their identities and exact hashes, including renamed copies. Repairs are stopped.
+
+The study must use actual Joseph mask/portrait/profile/source-description evidence and honestly document creation. Official museum photogrammetry records surviving casts; it is not a performed test of the focusChrist portrait. Our current trait audit is qualitative. Pose-matched measurements, blind controls and restrained hair/lash studies remain proposed unless a real completed record is supplied. Do not create a staged test or imply recovered creation steps.
+
+## October 3 continuation: prevention changes
+
+The specific research route now verifies every image against the authentic historical scan ledger or an exact source/approved-reference byte baseline. It rejects unknown assets, changed bytes, a generated scene disguised as evidence, missing provenance and the five owner-rejected generic candidates even if renamed. Repeated references are reported separately from unique references, with zero new originals. The general ten-original/Christ checks and their negative tests remain intact for their original scope.
+
+`tools/test_joseph_research_acceptance.py` additionally rejects out-of-route use of the evidence-study path and stale, duplicate, overlong or unbounded cadence exceptions. Hosted QA runs this suite, the actual Chapter/Read All state test, and the narrow research-source host test. These executable checks remain distinct from historical-source review, complete rendered desktop/phone inspection, final Fermi/Newton concurrence, publication and owner aesthetic acceptance.

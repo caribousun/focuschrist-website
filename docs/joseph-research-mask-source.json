@@ -1,0 +1,245 @@
+{
+  "asset": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
+  "sha256": "f69d497dc7bceeab0c3b459e30e4f31c7d1173e1fd56ddd7179783db105ce8b0",
+  "source_url": "https://contentdm.lib.byu.edu/digital/collection/RelEd/id/4109/rec/5",
+  "image_url": "https://contentdm.lib.byu.edu/iiif/2/RelEd:4109/full/full/0/default.jpg",
+  "rights": "Public Domain, Courtesy of LDS Church Archives",
+  "role": "Newly consulted reference, not established as original portrait creation input",
+  "metadata": {
+    "contentType": "image/jpeg",
+    "filename": "701.jpg",
+    "fields": [
+      {
+        "key": "title",
+        "label": "Title",
+        "controlledVocab": false,
+        "searchable": true,
+        "value": "Death masks of Joseph and Hyrum Smith",
+        "controlledVocabList": null
+      },
+      {
+        "key": "contri",
+        "label": "Contributor",
+        "controlledVocab": true,
+        "searchable": false,
+        "value": "LDS Church Archives; Mays, Kenneth R.",
+        "controlledVocabList": null
+      },
+      {
+        "key": "descri",
+        "label": "Description",
+        "controlledVocab": false,
+        "searchable": true,
+        "value": "The death masks of Joseph (left) and Hyrum Smith were created in the Mansion House in Nauvoo by George Cannon folllowing the martrydom of the Prophet and the Patriarch. They were donated to the Church by the (Wilford C.) Wood Foundation.",
+        "controlledVocabList": null
+      },
+      {
+        "key": "publis",
+        "label": "Publisher Original",
+        "controlledVocab": false,
+        "searchable": false,
+        "value": "Church of Jesus Christ of Latter-day Saints",
+        "controlledVocabList": null
+      },
+      {
+        "key": "date",
+        "label": "Date Original",
+        "controlledVocab": true,
+        "searchable": true,
+        "value": "2001",
+        "controlledVocabList": null
+      },
+      {
+        "key": "publia",
+        "label": "Publisher Digital",
+        "controlledVocab": true,
+        "searchable": false,
+        "value": "Brigham Young University. Harold B. Lee Library",
+        "controlledVocabList": null
+      },
+      {
+        "key": "data",
+        "label": "Date Digital",
+        "controlledVocab": false,
+        "searchable": false,
+        "value": "2002-10-16",
+        "controlledVocabList": null
+      },
+      {
+        "key": "editio",
+        "label": "Edition",
+        "controlledVocab": false,
+        "searchable": false,
+        "value": "Electronic reproduction;",
+        "controlledVocabList": null
+      },
+      {
+        "key": "subjeb",
+        "label": "Genre",
+        "controlledVocab": true,
+        "searchable": true,
+        "value": "Photographs;",
+        "controlledVocabList": null
+      },
+      {
+        "key": "collec",
+        "label": "Collection",
+        "controlledVocab": true,
+        "searchable": true,
+        "value": "Religious Education LDS Church History and Doctrine",
+        "controlledVocabList": null
+      },
+      {
+        "key": "owning",
+        "label": "Owning Institution",
+        "controlledVocab": false,
+        "searchable": false,
+        "value": "Brigham Young University",
+        "controlledVocabList": null
+      },
+      {
+        "key": "subjec",
+        "label": "Subject",
+        "controlledVocab": true,
+        "searchable": true,
+        "value": "Smith, Joseph, 1805-1844--Death and burial; Smith, Hyrum, 1800-1844;",
+        "controlledVocabList": null
+      },
+      {
+        "key": "subjea",
+        "label": "Subject Complete",
+        "controlledVocab": false,
+        "searchable": true,
+        "value": "Smith, Joseph, 1805-1844--Death and burial; Smith, Hyrum, 1800-1844;",
+        "controlledVocabList": null
+      },
+      {
+        "key": "subjed",
+        "label": "Geography",
+        "controlledVocab": true,
+        "searchable": true,
+        "value": "Nauvoo (Ill.);",
+        "controlledVocabList": null
+      },
+      {
+        "key": "subjee",
+        "label": "Geography Complete",
+        "controlledVocab": false,
+        "searchable": true,
+        "value": "Nauvoo (Ill.); Commerce (Ill.); Commerce City (Ill.); Venus (Ill.);",
+        "controlledVocabList": null
+      },
+      {
+        "key": "covera",
+        "label": "Time Period",
+        "controlledVocab": false,
+        "searchable": false,
+        "value": "1844",
+        "controlledVocabList": null
+      },
+      {
+        "key": "descra",
+        "label": "Scripture",
+        "controlledVocab": false,
+        "searchable": true,
+        "value": "D&C 135; D&C 136: 37-39",
+        "controlledVocabList": null
+      },
+      {
+        "key": "descrb",
+        "label": "Course",
+        "controlledVocab": true,
+        "searchable": true,
+        "value": "REL C 341",
+        "controlledVocabList": null
+      },
+      {
+        "key": "descrc",
+        "label": "Hierarchy",
+        "controlledVocab": true,
+        "searchable": true,
+        "value": "LDS ChurchHistory; People; Smith, Joseph, 1805-1844; LDS ChurchHistory; People; Smith, Hyrum, 1800-1844; LDS ChurchHistory; Geography; United States; Illinois;",
+        "controlledVocabList": null
+      },
+      {
+        "key": "notes",
+        "label": "Notes",
+        "controlledVocab": false,
+        "searchable": false,
+        "value": "Church Educational System; CES Slide Set G-71",
+        "controlledVocabList": null
+      },
+      {
+        "key": "patron",
+        "label": "Patron Usage Instructions",
+        "controlledVocab": false,
+        "searchable": false,
+        "value": "c2002 Brigham Young University. All rights reserved. <BR> <BR> The information available on this site, including any text, computer codes, data, artwork, video, audio, images or graphics (collectively, the \"Material\") may be protected by copyright and other intellectual property laws.  Also, parties other than Brigham Young University (\"BYU\") may own copyright in portions of the Material and the reproduction of some Materials may be restricted by privacy and/or publicity rights. <BR> <BR> We encourage use of this Material only for non-profit and educational purposes, such as personal research, teaching and private study.  For these limited purposes, Material from this web site may be displayed and printed, and all copies must include any copyright notice originally included with the Material. <BR> <BR> Except as provided above, or any use beyond what is allowed by fair use (Title 17, Section 107 U.S.C.), you may not reproduce, republish, post, transmit or distribute any Material from this web site in any physical or digital form without the permission of BYU and any other copyright owner of the Material.  If you wish to publish or reproduce any Material for any other purposes, including commercial purposes, you must obtain prior written permission.  Requests for permission should be addressed to the Copyright Licensing Office, 3830 HBLL, BYU, Provo, UT  84602. <BR> <BR> Through the descriptive records in the \"Religious Education\" digital collection, the contributing institutions/individuals are providing information from their records regarding authors, publishers, or other information associated with each item digitized.  This information is provided as a service to aid patrons in determining the appropriate use of an item.  The contributing institutions/individuals appreciate hearing from anyone who may have additional information about any of the items in the collection.",
+        "controlledVocabList": null
+      },
+      {
+        "key": "copyri",
+        "label": "Copyright Status/Owner",
+        "controlledVocab": true,
+        "searchable": true,
+        "value": "Public Domain, Courtesy of LDS Church Archives",
+        "controlledVocabList": null
+      },
+      {
+        "key": "type",
+        "label": "Type",
+        "controlledVocab": false,
+        "searchable": true,
+        "value": "Image",
+        "controlledVocabList": null
+      },
+      {
+        "key": "typa",
+        "label": "Format",
+        "controlledVocab": false,
+        "searchable": false,
+        "value": "image/jpeg",
+        "controlledVocabList": null
+      },
+      {
+        "key": "system",
+        "label": "System Requirements",
+        "controlledVocab": false,
+        "searchable": false,
+        "value": "Internet connectivity. Worldwide web browser",
+        "controlledVocabList": null
+      },
+      {
+        "key": "file",
+        "label": "File Size",
+        "controlledVocab": false,
+        "searchable": false,
+        "value": "384.321 kb",
+        "controlledVocabList": null
+      },
+      {
+        "key": "identi",
+        "label": "File",
+        "controlledVocab": false,
+        "searchable": true,
+        "value": "Death Masks - CES - 01.jpg",
+        "controlledVocabList": null
+      }
+    ],
+    "text": null,
+    "thumbnailUri": "/api/singleitem/collection/RelEd/id/4109/thumbnail",
+    "downloadUri": "/api/collection/RelEd/id/4109/download",
+    "imageUri": "https://contentdm.lib.byu.edu/iiif/2/RelEd:4109/full/full/0/default.jpg",
+    "url": null,
+    "streamUri": null,
+    "iiifInfoUri": "/iiif/2/RelEd:4109/info.json",
+    "parentId": "-1",
+    "objectInfo": {
+      "code": "-2",
+      "message": "Requested item is not compound"
+    },
+    "hasPrintPDF": false,
+    "fullrsEnabled": false,
+    "cdmalt": null
+  }
+}

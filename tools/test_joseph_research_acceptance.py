@@ -1,0 +1,93 @@
+"""Reject the actual appended/text-only regression and cadence workarounds."""
+import unittest
+from bs4 import BeautifulSoup
+from joseph_research_acceptance import ROUTE, check_entry_and_brevity, check_reading_cadence, check_original_manifest, check_reference_scope, check_exact_review, check_evidence_inventory
+
+def soup(markup): return BeautifulSoup(markup,'html.parser')
+
+class AcceptanceTests(unittest.TestCase):
+    def test_cadence_rationale_is_bounded_and_exact(self):
+        import hashlib
+        markup='<section class="research-part"><div data-research-reading-block="section-2-1"><div class="research-reading-copy"><p>Supported means constrained by an actual source.</p></div></div></section>'
+        record={'slot':'section-2-1','purpose':'source-key','reason':'A short evidence-label key needs no invented photograph.','content_sha256':hashlib.sha256(b'Supported means constrained by an actual source.').hexdigest()}
+        check_reading_cadence(soup(markup),[record])
+        for change in [markup.replace('Supported','Unsupported'),markup.replace('</p>','</p><p>Extra prose.</p><p>More prose.</p>'),markup.replace('<p>','<article class="research-trait"><p>').replace('</p>','</p></article>')]:
+            with self.assertRaises(AssertionError):check_reading_cadence(soup(change),[record])
+        with self.assertRaises(AssertionError):check_reading_cadence(soup(markup),[dict(record,purpose='anything')])
+        with self.assertRaises(AssertionError):check_reading_cadence(soup(self.block),[record])
+
+    def test_evidence_route_cannot_launder_generated_or_untracked_images(self):
+        reference={'asset':'source.png','sha256':'a'*64,'kind':'historical_document','source_url':'https://archive.org/details/example','rights_basis':'US public domain','processing':'Faithful full-page render','publication_year':'1874'}
+        placed={'src':'source.png','sha256':'a'*64}
+        result=check_evidence_inventory([placed,placed],[reference],ROUTE)
+        self.assertEqual(result,{'unique_reference_assets':1,'reference_placements':2,'new_original_artworks':0})
+        for field,value in [('kind','original_scene'),('sha256','b'*64),('rights_basis',''),('source_url','')]:
+            with self.assertRaises(AssertionError):check_evidence_inventory([placed],[dict(reference,**{field:value})],ROUTE)
+        with self.assertRaises(AssertionError):check_evidence_inventory([dict(placed,src='unknown.png')],[reference],ROUTE)
+        with self.assertRaises(AssertionError):check_evidence_inventory([placed],[reference],'other.html')
+        with self.assertRaises(AssertionError):check_evidence_inventory([placed],[reference,reference],ROUTE)
+
+    entry='<section id="our-portrait"><a class="fc-button" href="joseph-smith-portrait-research.html">Portrait research</a></section>'
+    block='<section class="research-part"><div data-research-reading-block><p>One paragraph.</p><p>Second paragraph.</p><figure><img src="real.jpg"><figcaption>Source context.</figcaption></figure></div></section>'
+
+    def test_entry_and_append_regression(self):
+        check_entry_and_brevity(soup(self.entry))
+        for bad in [self.entry+'<section class="research-part">Full appended text</section>',self.entry.replace('joseph-smith-portrait-research.html','#portrait-research'),self.entry.replace('fc-button','plain-link'),self.entry+'<section id="portrait-research"><p>'+('word '*121)+'</p></section>']:
+            with self.assertRaises(AssertionError):check_entry_and_brevity(soup(bad))
+
+    def test_actual_image_and_cadence(self):
+        self.assertEqual(check_reading_cadence(soup(self.block)),1)
+        for bad in [self.block.replace('<img src="real.jpg">','<svg role="img"></svg>'),self.block.replace('<figure>','<p>Third unsupported paragraph.</p><figure>'),self.block.replace('</section>','<p>Unaccounted reading.</p></section>'),self.block.replace('<img src="real.jpg">','<a href="other.html#picture">Look elsewhere</a>')]:
+            with self.assertRaises(AssertionError):check_reading_cadence(soup(bad))
+
+    def test_short_trait_pair_allowed_but_not_stack(self):
+        trait='<article class="research-trait"><p>Observed</p><p>Evidence</p><p>Decision</p></article>'
+        good=self.block.replace('<p>One paragraph.</p><p>Second paragraph.</p>',trait)
+        check_reading_cadence(soup(good))
+        check_reading_cadence(soup(good.replace(trait,trait+trait)))
+        with self.assertRaises(AssertionError):check_reading_cadence(soup(good.replace(trait,trait+trait+trait)))
+
+    def test_originals_cannot_be_counted_from_duplicates_or_references(self):
+        import copy
+        good=[{'id':str(i),'sha256':str(i),'kind':'original_scene','owning_page':ROUTE,'owning_section':'chapter','depicts_christ':i<5} for i in range(10)]
+        check_original_manifest(good)
+        bads=[good[:9]]
+        for key,value in [('sha256','1'),('kind','reference'),('depicts_christ',False),('owning_page','other.html')]:
+            bad=copy.deepcopy(good);bad[0][key]=value;bads.append(bad)
+        for bad in bads:
+            with self.assertRaises(AssertionError):check_original_manifest(bad)
+
+    def test_owner_ratio_override_does_not_allow_rejected_filler(self):
+        good=[{'id':str(i),'sha256':str(i),'kind':'original_scene','owning_page':ROUTE,'owning_section':'chapter','depicts_christ':False} for i in range(10)]
+        check_original_manifest(good,require_half_christ=False)
+        with self.assertRaises(AssertionError):check_original_manifest(good)
+        for key,val in [('id','research-source-independence'),('sha256','84c152a2ce978289c0ec5bd05f5e1fcb2154c7d36cc47395b7a27715f368f2eb')]:
+            rejected=[dict(x) for x in good];rejected[0][key]=val
+            with self.assertRaises(AssertionError):check_original_manifest(rejected,require_half_christ=False)
+
+    def test_bibliography_exception_cannot_hide_history(self):
+        notes='<section class="research-part" id="portrait-section-15"><details class="research-source-index"><p class="research-source-note">Source coverage note.</p></details></section>'
+        check_reading_cadence(soup(self.block+notes))
+        with self.assertRaises(AssertionError):check_reading_cadence(soup(self.block+notes.replace('portrait-section-15','portrait-section-6')))
+
+    def test_numbered_eyebrow_is_metadata_not_prose(self):
+        good=self.block.replace('<div data-research-reading-block>','<p class="fc-eyebrow">01 · The research</p><div data-research-reading-block>')
+        check_reading_cadence(soup(good))
+        with self.assertRaises(AssertionError):check_reading_cadence(soup(good.replace('01 · The research','A historical claim cannot escape as an eyebrow.')))
+
+    def test_modern_identity_exception_is_explicit_and_limited(self):
+        good={'identity_scope':'unnamed_contemporary_only','depicts_christ':False,'reference_sha256':[],'reference_not_applicable_reason':'No named historical character depicted.'}
+        check_reference_scope(good)
+        for key,val in [('depicts_christ',True),('identity_scope','Joseph'),('reference_not_applicable_reason',''),('reference_sha256',None)]:
+            with self.assertRaises(AssertionError):check_reference_scope(dict(good,**{key:val}))
+        with self.assertRaises(AssertionError):check_reference_scope({'depicts_christ':True,'reference_sha256':'0'*64})
+        check_reference_scope({'depicts_christ':True,'reference_sha256':'4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b'})
+
+    def test_receipt_presence_cannot_replace_exact_concurrence(self):
+        record={'id':'scene','preflight_prompt_sha256':'prompt','sha256':'pixels'}
+        review={'id':'scene','prompt_sha256':'prompt','sha256':'pixels','concur':True}
+        check_exact_review(record,{'scenes':[review]},finished=True)
+        for key,val in [('id','other'),('prompt_sha256','old'),('sha256','old'),('concur',False)]:
+            with self.assertRaises(AssertionError):check_exact_review(record,{'scenes':[dict(review,**{key:val})]},finished=True)
+
+if __name__=='__main__':unittest.main()

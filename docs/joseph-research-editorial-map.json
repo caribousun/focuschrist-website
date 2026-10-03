@@ -1,0 +1,29 @@
+{
+  "changes": [
+    {
+      "original": "The unchanged owner-approved portrait. A modern artistic interpretation, not an authenticated photograph or a forensic identification. [20]",
+      "replacement": "Our adopted portrait remains unchanged. It is a modern artistic interpretation, not an authenticated photograph or a forensic identification. [20]",
+      "reason": "Visitor wording preserves adopted baseline and exact interpretive limits; the identical caption is shown once beside the portrait rather than repeated in the reading."
+    },
+    {
+      "original": "Retain the approved Joseph",
+      "replacement": "Why we kept this likeness",
+      "reason": "Owner-facing research instruction becomes a visitor-facing explanation; the complete finding and limits remain beside it."
+    },
+    {
+      "original": "EVIDENCE, INTERPRETATION AND THE CASE FOR RETAINING HIM",
+      "replacement": "A portrait informed by history",
+      "reason": "Inviting chapter eyebrow; all evidence and interpretive qualifications remain in the unchanged body."
+    },
+    {
+      "original": "A consolidated study of the approved portrait: what the historical record supports, what it leaves uncertain, and what would justify a change.",
+      "replacement": "What did Joseph Smith look like? No single surviving source answers the whole question. A cast preserves contours; a portrait records an artist’s choices; a description captures what one observer noticed. Here we follow those records to see what supports our portrait, what remains uncertain, and what could justify a change.",
+      "reason": "Root-directed narrative opening preserves support, uncertainty and change threshold while inviting the reader into the distinct evidence types. Detailed casting/art/document limits remain in the ensuing study."
+    },
+    {
+      "original": "Joseph death-mask reference as used in the current focusChrist study. The mask photograph is provided for source context, not as a pose-matched overlay or proof of agreement. [1, 20]",
+      "replacement": "The <a href=\"joseph-smith-likeness.html#joseph-mask-comparison\">Joseph death-mask photograph in the original portrait study</a> remains available for source context, not as a pose-matched overlay or proof of agreement. The photograph displayed here is a different, newly consulted BYU reference. [1,20]",
+      "reason": "Preserve original reference access and its limitations while distinguishing the newly consulted public-domain photograph from documented creation inputs."
+    }
+  ]
+}

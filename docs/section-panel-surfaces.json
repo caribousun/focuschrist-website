@@ -98,6 +98,8 @@
     "note": "Merlin Life of Christ standalone experience, preserved by Wyatt on 2026-10-02; scoped inline design and dedicated Timeline runtime checks own this surface."
   },
   "excluded_classes": {
+    "research-comparison-note": "Inline limitations attached to separately labelled source views; plain reading note, not a section panel.",
+    "research-source-note": "Bibliographic source qualification inside the research index; plain reading text.",
     "ask-scene-card": "Artwork figure; preserve artwork framing.",
     "cfm-library-card__body": "Child copy container; parent library card owns surface.",
     "cfm-source-note": "Inline source paragraph, not a section panel.",
