@@ -78,7 +78,7 @@ body.fc-timeline-experience .timeline-handcart-intro{position:relative;overflow:
 body.fc-timeline-experience .timeline-handcart-intro h1{margin:0;max-width:none;color:var(--fc-cream)}
 body.fc-timeline-experience .timeline-handcart-intro .lede{margin:8px 0;line-height:1.4}
 @media(max-width:700px){
- body.fc-timeline-experience .timeline-handcart-hero img{object-position:right center}
+ body.fc-timeline-experience .timeline-handcart-hero img{object-position:90% center}
  body.fc-site.fc-timeline-experience .timeline-handcart-intro{padding:8px 0 10px!important;gap:4px!important}
  body.fc-site.fc-timeline-experience .timeline-handcart-intro h1{font-size:clamp(1.5rem,7.2vw,1.8rem)!important;line-height:1.1!important}
  body.fc-site.fc-timeline-experience .timeline-handcart-intro .kicker{font-size:11px;line-height:1.3;margin:0 0 4px;letter-spacing:.08em}
@@ -89,4 +89,15 @@ body.fc-timeline-experience .timeline-handcart-intro .lede{margin:8px 0;line-hei
 body.fc-site.fc-timeline-experience .timeline-life-intro .timeline-opening-continue{box-sizing:border-box;border:1px solid var(--fc-gold);border-radius:999px;padding:8px 16px;min-height:44px;line-height:1.2;background:var(--fc-bg-deep);color:var(--fc-gold-light);text-decoration:none;justify-content:center}
 body.fc-site.fc-timeline-experience .timeline-life-intro .timeline-opening-continue:focus-visible{outline:2px solid var(--fc-gold-light);outline-offset:3px}
 
-body.fc-site.fc-timeline-experience .timeline-life-intro .fc-unified-continue{display:none!important}
+/* The shared enhancer adds a second cue; these authored introductions already
+   retain their own complete overview and 44px Continue invitation. Match the
+   enhancer's actual specificity so only the authored cue remains visible. */
+body.fc-site.fc-timeline-experience .timeline-life-intro[data-unified-opening][data-unified-opening] > .fc-unified-continue{display:none!important}
+body.fc-site.fc-timeline-experience .timeline-life-intro[data-unified-opening] h1{max-width:none;width:100%}
+@media(min-width:701px){
+ body.fc-site.fc-timeline-experience .timeline-life-intro[data-unified-opening][data-unified-opening] h1{font-size:clamp(2.05rem,3.7dvh,2.95rem)!important}
+}
+@media(max-width:700px){
+ body.fc-site.fc-timeline-experience .timeline-life-intro[data-unified-opening][data-unified-opening]{padding-top:8px!important;gap:4px!important}
+ body.fc-site.fc-timeline-experience .timeline-life-intro[data-unified-opening][data-unified-opening] h1{font-size:clamp(1.5rem,7.2vw,1.8rem)!important;line-height:1.1!important}
+}

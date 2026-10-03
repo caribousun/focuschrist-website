@@ -8,9 +8,9 @@
   var breakpoint=Number(workspace.getAttribute('data-mobile-breakpoint'))||900;
   var wide=window.matchMedia('(min-width:'+(breakpoint+1)+'px)');
   var events=workspace.querySelector('[data-timeline-pane="events"]');
-  // Chromium can retain wheel scrolling in History's nested directory at its edge.
+  // Chromium can retain wheel scrolling in a desktop event directory at its edge.
   // Handoff only after every containing scroll pane has exhausted this direction.
-  if(events&&workspace.classList.contains('history-workspace'))events.addEventListener('wheel',function(event){
+  if(events)events.addEventListener('wheel',function(event){
     if(!wide.matches||event.ctrlKey||event.shiftKey||!event.deltaY||Math.abs(event.deltaX)>Math.abs(event.deltaY))return;
     var down=event.deltaY>0;
     for(var node=event.target;node&&node!==document.body&&node!==document.documentElement;node=node.parentElement){

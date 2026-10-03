@@ -10,9 +10,9 @@ for(const provider of [true,false]){
  w.eval([...d.scripts].find(s=>s.textContent.includes('var EVENTS')).textContent);
  w.eval(fs.readFileSync(path.join(root,'timeline-history-locations.js'),'utf8'));
  d.querySelector('#eventDirectory button').click();assert.equal(w.HistoryTimeline.selectedIndex,0,'Directory can be selected before deferred map initializes');
- w.eval(fs.readFileSync(path.join(root,'timeline-history-map.js'),'utf8'));assert.equal(w.HistoryTimelineMap.selectedIndex,0,'Deferred map consumes preexisting selection');assert.equal(d.querySelector('#history-event-0 .card-top').getAttribute('aria-expanded'),'true','Map initialization preserves opened story');
+ w.eval(fs.readFileSync(path.join(root,'timeline-history-map.js'),'utf8'));assert.equal(w.HistoryTimelineMap.selectedIndex,0,'Deferred map consumes preexisting selection');assert.equal(d.querySelector('#history-event-0 .card').classList.contains('open'),true,'Map initialization preserves opened story');
  const api=w.HistoryTimeline,data=w.HISTORY_LOCATIONS;assert.equal(api.events.length,51);assert.equal(data.events.length,51);
- let observed=null;w.addEventListener('timeline:select',e=>{observed=e.detail.index;assert.equal(d.querySelector('#history-event-'+observed+' .card-top').getAttribute('aria-expanded'),'true','Selection event follows opened story');});
+ let observed=null;w.addEventListener('timeline:select',e=>{observed=e.detail.index;assert.equal(d.querySelector('#history-event-'+observed+' .card').classList.contains('open'),true,'Selection event follows opened story');});
  for(let i=0;i<51;i++){assert.equal(data.events[i].expectedTitle,api.events[i].title);assert.equal(api.select(i),true);assert.equal(observed,i);assert.equal(d.querySelectorAll('#timeline .event:not([hidden])').length,1);assert.equal(d.querySelector('#history-event-'+i).hidden,false);assert(d.querySelector('#history-event-'+i+' .timeline-event-navigation-slot'));assert.equal(w.TimelineNavigationAdapter.current(),i);assert.equal(w.HistoryTimelineMap.selectedIndex,i);assert.equal(d.querySelector('#historyMapSelection strong').textContent,api.events[i].title);}
  assert(data.events.filter(r=>r.kind==='worldwide').every(r=>r.places.length===0));assert(data.events.some(r=>r.places.length>1));assert(data.events.some(r=>r.kind==='region'));
  let staleChoice=null;
