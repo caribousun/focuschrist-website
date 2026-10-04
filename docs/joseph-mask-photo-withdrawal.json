@@ -1,0 +1,23 @@
+{
+  "reason": "Owner-authorized withdrawal of three legacy mask photographs with no recovered item-specific reuse permission; replaced by BYU4109 public-domain photograph. Historical approval of generated portraits remains unchanged.",
+  "retired": [
+    {
+      "asset": "assets/page-art/joseph-smith-likeness/hyrum-death-mask.jpg",
+      "sha256": "115362472822ab048333fdc6115992eb4dd87fd2925c7d968b12841b8cab4464",
+      "git_blob_sha1": "fc5d6713c6c620c92b83355b8c97c18afad5e401",
+      "archive_verified": true
+    },
+    {
+      "asset": "assets/page-art/joseph-smith-likeness/joseph-death-mask.jpg",
+      "sha256": "0354d0114d31c09b9a1735a027c8eeee2b08dc435c129d70b9d3fb41384f070c",
+      "git_blob_sha1": "e8c099a38cd19c58d1f7c527305c8e8af02c7d8f",
+      "archive_verified": true
+    },
+    {
+      "asset": "assets/page-art/joseph-smith-likeness/museum-dibble-masks.jpg",
+      "sha256": "e5666a6999b174a7e283c9d7f50acb5459a95f20c776d12f5d7bbcce99707b1e",
+      "git_blob_sha1": "0260f0bd39d0b3fcb911531507a8f5a65b44ff11",
+      "archive_verified": true
+    }
+  ]
+}

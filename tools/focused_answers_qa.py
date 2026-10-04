@@ -7,6 +7,7 @@ import hashlib
 import json
 import re
 from pathlib import Path
+from joseph_mask_photo_withdrawal import withdrawn_mask_photo
 from urllib.parse import parse_qs, urlsplit
 from PIL import Image
 from answer_study_qa import Document
@@ -133,12 +134,13 @@ def check():
     baseline = json.loads((ROOT/'tools/focused_answers_baseline.json').read_text())
     assert baseline['commit'] == '1302ed7f8aaaab004ad4da97a09c5c605942608f' and len(baseline['images']) == 853
     for entry in baseline['images']:
+        if withdrawn_mask_photo(entry['path'], entry['git_blob_sha1'], ROOT): continue
         data = (ROOT/entry['path']).read_bytes()
         digest = hashlib.sha1(b'blob '+str(len(data)).encode()+b'\0'+data).hexdigest()
         assert digest == entry['git_blob_sha1'], entry['path']+': approved baseline image changed'
     review = (ROOT/'docs/focused-answers-art-review.json').read_text(encoding='utf-8')
     assert not re.search(r'[A-Za-z]:\\|/Users/|/home/', review), 'Focused art manifest must not publish private machine paths'
     if errors: raise AssertionError('\n'.join(errors))
-    print('FOCUSED ANSWERS QA PASS: 28 own destinations/openings, two complete priesthood studies, 853 unchanged baseline images; editorial and rendered review remain separate')
+    print('FOCUSED ANSWERS QA PASS: 28 own destinations/openings, two complete priesthood studies, 850 unchanged baseline images and 3 exact owner-authorized photograph withdrawals; editorial and rendered review remain separate')
 
 if __name__ == '__main__': check()

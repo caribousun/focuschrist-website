@@ -19,6 +19,12 @@ assert(!allows('/joseph-smith-likeness.html','https://commons.wikimedia.org/wiki
 assert(!allows(route,'https://commons.wikimedia.org.evil.example/wiki/File:Joseph.jpg'));
 assert(!allows(route,'http://commons.wikimedia.org/wiki/File:Joseph.jpg'));
 assert(!allows('/joseph-smith-likeness.html','https://contentdm.lib.byu.edu/digital/collection/RelEd/id/4109'));
+const maskCatalogue='https://contentdm.lib.byu.edu/digital/collection/RelEd/id/4109/rec/5';
+assert(allows('/joseph-smith-likeness.html',maskCatalogue));
+assert(!allows('/index.html',maskCatalogue));
+assert(!allows('/joseph-smith-likeness.html',maskCatalogue.replace('https:','http:')));
+assert(!allows('/joseph-smith-likeness.html',maskCatalogue.replace('.edu/','.edu.evil.example/')));
+assert(!allows('/joseph-smith-likeness.html',maskCatalogue.replace('4109','4110')));
 assert(!allows(route,'https://contentdm.lib.byu.edu.evil.example/digital/collection/RelEd/id/4109'));
 assert(!allows(route,'http://contentdm.lib.byu.edu/digital/collection/RelEd/id/4109'));
 assert(!allows('/joseph-smith-likeness.html','https://archive.org/details/example'));

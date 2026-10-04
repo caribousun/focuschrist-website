@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Static release gate for the sitewide hero review. Does not grant visual/owner approval."""
 from pathlib import Path
+from joseph_mask_photo_withdrawal import withdrawn_mask_photo
 from html.parser import HTMLParser
 from urllib.parse import urlsplit, unquote, parse_qs
 import argparse, hashlib, json, re, subprocess, sys, xml.etree.ElementTree as ET
@@ -385,6 +386,7 @@ def main():
         meta,name=entry.split(b'\t',1); name=name.decode('utf8'); path=ROOT/name
         if path.suffix.lower() not in IMAGE_EXT: continue
         old=meta.decode().split()[2]
+        if withdrawn_mask_photo(name, old, ROOT): continue
         if not path.is_file():errors.append('Protected image missing: '+name);continue
         data=path.read_bytes(); current=hashlib.sha1(b'blob '+str(len(data)).encode()+b'\0'+data).hexdigest()
         check(current==old,'Protected image bytes changed: '+name)

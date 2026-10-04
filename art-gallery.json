@@ -9182,28 +9182,6 @@
       ]
     },
     {
-      "title": "Hyrum: the historical cast",
-      "category": "Church History",
-      "thumbnail": "/assets/page-art/joseph-smith-likeness/hyrum-death-mask.jpg",
-      "fullImage": "/assets/page-art/joseph-smith-likeness/hyrum-death-mask.jpg",
-      "alt": "Frontal museum photograph of Hyrum Smith’s Dibble death mask",
-      "id": "art-ff71d6d35e67",
-      "occurrences": [
-        {
-          "id": "source-6d3c0adaeffc",
-          "page": "/joseph-smith-likeness.html",
-          "pageTitle": "The Face Behind the History",
-          "category": "Church History",
-          "kind": "topic",
-          "selector": "a[href=\"assets/page-art/joseph-smith-likeness/hyrum-death-mask.jpg\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/hyrum-death-mask.jpg\"])",
-          "title": "Hyrum: the historical cast"
-        }
-      ],
-      "categories": [
-        "Church History"
-      ]
-    },
-    {
       "title": "Imagining years of ease",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/rich-fool-03-960.webp",
@@ -10304,6 +10282,38 @@
       ]
     },
     {
+      "title": "Joseph: detail of the historical cast",
+      "category": "Church History",
+      "thumbnail": "/assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
+      "fullImage": "/assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
+      "alt": "Complete BYU photograph: Joseph’s death mask at left, Hyrum’s at right",
+      "id": "art-76cbb00c0a26",
+      "occurrences": [
+        {
+          "id": "source-076b52365f45",
+          "page": "/joseph-smith-likeness.html",
+          "pageTitle": "The Face Behind the History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg\"]:has(img[src=\"assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg\"])",
+          "title": "Hyrum: detail of the historical cast"
+        },
+        {
+          "id": "source-41fd2b525dfd",
+          "page": "/joseph-smith-portrait-research.html",
+          "pageTitle": "The evidence behind our Joseph",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg\"]:has(img[src=\"assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg\"])",
+          "title": "The documented reference roles"
+        }
+      ],
+      "categories": [
+        "Church History",
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Joseph: our adopted portrait",
       "category": "Church History",
       "thumbnail": "/assets/identities/joseph-smith-owner-approved-20260914.png",
@@ -10341,50 +10351,6 @@
       ],
       "categories": [
         "Church History",
-        "Gospel Studies"
-      ]
-    },
-    {
-      "title": "Joseph: the historical cast",
-      "category": "Church History",
-      "thumbnail": "/assets/page-art/joseph-smith-likeness/joseph-death-mask.jpg",
-      "fullImage": "/assets/page-art/joseph-smith-likeness/joseph-death-mask.jpg",
-      "alt": "Frontal museum photograph of Joseph Smith’s Dibble death mask",
-      "id": "art-99a0288641e3",
-      "occurrences": [
-        {
-          "id": "source-31eef5f57374",
-          "page": "/joseph-smith-likeness.html",
-          "pageTitle": "The Face Behind the History",
-          "category": "Church History",
-          "kind": "topic",
-          "selector": "a[href=\"assets/page-art/joseph-smith-likeness/joseph-death-mask.jpg\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/joseph-death-mask.jpg\"])",
-          "title": "Joseph: the historical cast"
-        }
-      ],
-      "categories": [
-        "Church History"
-      ]
-    },
-    {
-      "title": "Joseph’s death mask",
-      "category": "Gospel Studies",
-      "thumbnail": "/assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
-      "fullImage": "/assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
-      "alt": "Joseph’s cast at the left of the BYU-catalogued photograph; a detail window of the complete pair",
-      "id": "art-76cbb00c0a26",
-      "occurrences": [
-        {
-          "id": "source-41fd2b525dfd",
-          "page": "/joseph-smith-portrait-research.html",
-          "pageTitle": "The evidence behind our Joseph",
-          "category": "Gospel Studies",
-          "kind": "topic",
-          "selector": "a[href=\"assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg\"]:has(img[src=\"assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg\"])",
-          "title": "The documented reference roles"
-        }
-      ],
-      "categories": [
         "Gospel Studies"
       ]
     },
@@ -20750,8 +20716,8 @@
     }
   ],
   "stats": {
-    "artworks": 933,
-    "occurrences": 940,
+    "artworks": 931,
+    "occurrences": 939,
     "byKind": {
       "artwork": 63,
       "hero": 41,

@@ -75,12 +75,15 @@
                     const tannerBiography = historyOwner && location.pathname === '/history/john-tanner.html' && url.href === 'https://www.gutenberg.org/cache/epub/46734/pg46734-images.html';
                     const portraitResearchScan = location.pathname === '/joseph-smith-portrait-research.html'
                         && ['archive.org', 'contentdm.lib.byu.edu', 'commons.wikimedia.org'].includes(url.hostname);
+                    const josephMaskCatalogue = location.pathname === '/joseph-smith-likeness.html'
+                        && url.hostname === 'contentdm.lib.byu.edu'
+                        && url.pathname === '/digital/collection/RelEd/id/4109/rec/5';
                     const josephReliefMinutes = location.pathname === '/joseph-smith-likeness.html' && url.hostname === 'www.churchhistorianspress.org' && url.pathname === '/the-first-fifty-years-of-relief-society/part-1/1-2/1-2-1';
                     const josephByuStudy = url.hostname === 'byustudies.byu.edu' && (
                         (location.pathname === '/joseph-smith-portrait-research.html' && url.pathname === '/article/josiah-quincys-1844-visit-with-joseph-smith') ||
                         (location.pathname === '/joseph-smith-likeness.html' && url.pathname === '/article/david-hales-store-ledger-new-details-about-joseph-and-emma-smith-the-hale-family-and-the-book-of-mormon')
                     );
-                    return url.protocol === 'https:' && (standardHost || researchedHistoryHost || tannerJournal || tannerBiography || portraitResearchScan || josephByuStudy || josephReliefMinutes) && !link.querySelector('img');
+                    return url.protocol === 'https:' && (standardHost || researchedHistoryHost || tannerJournal || tannerBiography || portraitResearchScan || josephMaskCatalogue || josephByuStudy || josephReliefMinutes) && !link.querySelector('img');
                 } catch (error) { return false; }
             });
         }

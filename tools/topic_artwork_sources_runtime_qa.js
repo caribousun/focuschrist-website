@@ -51,18 +51,18 @@ document.dispatchEvent(new window.Event('DOMContentLoaded'));
 const panel = document.getElementById('topicArtworkDetailDialog');
 const click = node => node.dispatchEvent(new window.MouseEvent('click', { bubbles: true, cancelable: true, button: 0 }));
 let checked = 0;
-const maskImages = new Set(['joseph-death-mask.jpg', 'hyrum-death-mask.jpg']);
-const maskCitation = 'https://website-files-bucket.s3.us-west-2.amazonaws.com/articles/article_pdfs/Physical_Evidence_at_Carthage_Jail_and_What_It_Reveals_about_the_Assassination_of_Joseph_and_Hyrum_Smith.pdf#page=27';
+const maskImages = new Set(['byu-reled-4109-mask-pair.jpg']);
+const maskCitation = 'https://contentdm.lib.byu.edu/digital/collection/RelEd/id/4109/rec/5';
 let masksChecked = 0;
 for (const figure of document.querySelectorAll('figure[data-enriched-study-art^="likeness-"], figure.likeness-comparison-item')) {
     const expected = [...figure.querySelectorAll('figcaption a[href]')].filter(a =>
-        ['www.churchofjesuschrist.org', 'www.josephsmithpapers.org', 'churchhistorylibrary.churchofjesuschrist.org'].includes(new URL(a.href).hostname)).map(a => a.href);
+        ['www.churchofjesuschrist.org', 'www.josephsmithpapers.org', 'churchhistorylibrary.churchofjesuschrist.org', 'contentdm.lib.byu.edu'].includes(new URL(a.href).hostname)).map(a => a.href);
     const isMask = maskImages.has(figure.querySelector('img').getAttribute('src').split('/').pop());
     const isAdoptedPortrait = figure.querySelector(':scope > a').id === 'joseph-comparison-open';
     if (isMask) {
         assert.equal(figure.querySelector(':scope > a').dataset.topicStudy, 'joseph-smith-likeness.html#death-masks');
         assert(figure.querySelector(`figcaption a[href="${maskCitation}"]`), 'Each mask retains its exact museum photograph citation');
-        assert.equal(expected.length, 0, 'Mask collection action is centralized, not duplicated');
+        assert.deepEqual(expected, [maskCitation], 'Each detail cites its exact public-domain source');
         masksChecked++;
     } else if (isAdoptedPortrait) {
         assert.equal(figure.querySelector('img').getAttribute('src'), 'assets/identities/joseph-smith-owner-approved-20260914.png');
