@@ -18,6 +18,9 @@ class MediaVoiceRegression(unittest.TestCase):
             self.assertTrue(self.flagged('<figure><figcaption>'+copy+'</figcaption></figure>'))
     def test_hidden_modal_records_are_not_skipped(self):
         self.assertTrue(self.flagged('<section hidden><p data-detail-paragraph>Let this imagined encounter begin your study.</p></section>'))
+    def test_resource_artwork_disclaimer_is_rejected(self):
+        self.assertTrue(self.flagged('<article class="fc-resource-card"><p>The original artwork illustrates receiving attentive help; it does not portray a particular person from the talk.</p></article>'))
+        self.assertFalse(self.flagged('<article class="fc-resource-card"><p>Elder Jeffrey R. Holland teaches compassion, patience, and the value of qualified care during mental and emotional suffering.</p></article>'))
     def test_modal_alt_and_custom_caption_are_covered(self):
         for html in ['<img alt="An artistic interpretation of Jesus walking.">',
                      '<a data-full-image-alt="Devotional interpretation of Jesus teaching."></a>',

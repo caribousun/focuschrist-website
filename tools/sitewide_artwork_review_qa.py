@@ -177,7 +177,8 @@ SCOPED_INTERFACE_STYLES = {
 # Albert independently reviewed rendered composition; byte/consumer changes fail closed.
 OWNER_20260929_STYLES = {
     # Owner-requested mobile map/reader layout and linked existing-art references; exact three-route scope.
-    'timeline-mobile-study.css': ('c21e5012a1e86a58b08eaa9383c45d3be7b357bd0d5cd747668699ac54c76cbf', ['timelines/latter-day-saint-church-history-timeline.html', 'timelines/willie-and-martin-handcart-map.html', 'timelines/life-of-christ-journey-map.html']),
+    # Reviewed handcart count line-height repair; exact prior bytes checked below.
+    'timeline-mobile-study.css': ('f5e1c8db70b76d09194cba78c289783c51d01dfb1a78c5aa5a602293f7d33822', ['timelines/latter-day-saint-church-history-timeline.html', 'timelines/willie-and-martin-handcart-map.html', 'timelines/life-of-christ-journey-map.html']),
     'timeline-images.css': ('6d1aadc6c63012f5055db262354cdac21109bbd1fcc93799aefbba478a6454ec', ['timelines/latter-day-saint-church-history-timeline.html', 'timelines/willie-and-martin-handcart-map.html', 'timelines/life-of-christ-journey-map.html']),
     # Owner-requested bounded independent Timeline panes; exact source-reviewed route sets.
     'timeline-workspace.css': ('fb945135a563c94ff6f3cdd5b724e1250824e6ad4e37bfa54a8a55d746917aac', ['timelines/willie-and-martin-handcart-map.html', 'timelines/life-of-christ-journey-map.html']),
@@ -334,6 +335,11 @@ def main():
         assert not reviewed_scoped_interface_style('cfm-study-controls.css', cfm_controls.replace(b'--fc-study-control-radius:6px', b'--fc-study-control-radius:999px'))
         ask_css=(ROOT/'ask-experience.css').read_bytes()
         assert not reviewed_scoped_interface_style('ask-experience.css', ask_css.replace(b'position:static;padding:16px 17px', b'position:absolute;padding:16px 17px'))
+        timeline_css = (ROOT/'timeline-mobile-study.css').read_bytes()
+        handcart_count_fix = b'body.fc-timeline-experience .handcart-cluster{line-height:1.2}\n'
+        assert timeline_css.count(handcart_count_fix) == 1
+        assert hashlib.sha256(timeline_css.replace(handcart_count_fix, b'', 1)).hexdigest() == 'c21e5012a1e86a58b08eaa9383c45d3be7b357bd0d5cd747668699ac54c76cbf'
+        assert not reviewed_owner_20260929_style('timeline-mobile-study.css', timeline_css.replace(handcart_count_fix, handcart_count_fix.replace(b'1.2', b'2.4')))
         for name in OWNER_20260929_STYLES:
             data = (ROOT/name).read_bytes()
             assert reviewed_owner_20260929_style(name, data)
