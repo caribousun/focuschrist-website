@@ -1,0 +1,38 @@
+{
+  "reviewer": "Newton",
+  "utc": "2026-10-04T19:45:14.906305+00:00",
+  "scope": "Independent Newton concurrence on exact cache-only source-binding renewal; not PDF regeneration or fresh pixel review",
+  "base": "00f5125e6249aba2e3888d2177d3cf70790ed910",
+  "candidate": "c43211734a004826769d5159ea311ef8b738164f",
+  "old_source_sha256": "94485808da246618eeeb2882a97c6160972704ce27180cb4e140b7e5f4d09efb",
+  "new_source_sha256": "edfb13494432b4dcf84b899a6a9165c074323c665f6ea3c3cd111b1c47ca2bae",
+  "old_token_count": 1,
+  "new_token_count": 1,
+  "exact_single_token_only": true,
+  "pdf_sha256": "109bacb657025cd2f4dcc98b29ca98e97afb97bc8b1b15d5d5a1d460006b2946",
+  "pdf_same_as_base": true,
+  "builder_scope": "Build function selects .joseph-research sections and footer disclosures; external stylesheet link in head is not consumed. Fresh complete PDF QA remains required.",
+  "concur": true,
+  "mandates_read": [
+    "AGENTS.md",
+    "docs/focuschrist-enrichment-and-stewardship-prompt.md",
+    "docs/historical-character-identity.md",
+    "docs/section-panel-design-mandate.md",
+    "docs/art-study-current-mandate-control.md"
+  ],
+  "mandate_concurrence": "Read current applicable mandates. This exact source-binding renewal preserves prior finished PDF/source review, source truth, identities, standard footer, and owner boundaries. No visitor content or PDF pixels change.",
+  "old_review_fields_preserved": true,
+  "changed_fields": [
+    "source_html_sha256",
+    "cache_only_source_compatibility"
+  ],
+  "source_checker_unchanged": true,
+  "historical_pixel_receipts_preserved": true,
+  "mutual_fermi": "Pending independent exact-receipt concurrence; root must obtain before publication.",
+  "required_followup": "Fresh Joseph source/PDF QA, renewed final candidate binding, exact-head hosted CI and release verification.",
+  "limitations": [
+    "No new PDF rendering or pixel review asserted; prior identical-PDF evidence applies.",
+    "Not owner aesthetic acceptance, full-site acceptance or proof of historical authenticity.",
+    "This receipt alone does not authorize publication."
+  ]
+}
