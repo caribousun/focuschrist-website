@@ -397,7 +397,7 @@
     "independent_reviewer": "Fermi",
     "owner_aesthetic_approval": false,
     "alt": "John Rowe Moyle stands on a wooden platform with a wooden lower-leg prosthesis, holding a hammer and chisel beside the words Holiness to the Lord.",
-    "caption": "Moyle works on the upper inscription panel. The exact carving date and prosthetic side are not established here.",
+    "caption": "Moyle works on the upper inscription panel.",
     "review_reference": "docs/history-stories/expansion-fermi-review-20260929.json"
   },
   "moyle-cow-injury": {
@@ -413,7 +413,7 @@
     "independent_reviewer": "Newton",
     "owner_aesthetic_approval": false,
     "alt": "John Rowe Moyle sits beside a milking shed holding his trouser-covered leg; a cow, tipped stool and pail are nearby.",
-    "caption": "The aftermath of the cow’s kick described in the later family account. The precise date and circumstances are not established by Moyle’s travel journal.",
+    "caption": "The aftermath of the cow’s kick described in the later family account.",
     "review_reference": "docs/history-stories/warmth-newton-review-20260930.json"
   }
 }
