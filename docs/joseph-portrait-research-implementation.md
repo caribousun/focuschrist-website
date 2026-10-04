@@ -1,5 +1,11 @@
 # Joseph portrait research: separate evidence study
 
+## Current authority and superseded implementation history
+
+The implementation notes below describe the earlier source-only candidate, not the current production study or its acceptance requirements. Wyatt explicitly rejected the zero-new-original interpretation. Only the research page's half-Christ ratio is waived; the ten-new-original requirement was not waived. See `joseph-research-owner-correction-acceptance.md`, `joseph-portrait-execution-standard.md`, and the current live Focus record for the controlling direction and subsequent release evidence. The source-only inventory and zero-original sentence below are preserved as historical failure evidence and must not guide new work.
+
+## Historical source-only candidate, superseded
+
 Current correction, October 3, 2026: the research now lives at `joseph-smith-portrait-research.html`, linked by Portrait Research pills from the parent study. Chapter View and Read All progressively enhance one complete evidence DOM; the no-script page retains the full study. The builder remains `tools/build_joseph_portrait_research.py`.
 
 The current implementation preserves 164 substantive exported items, sixteen traits, fifteen source sections and the reviewed PDF. Thirty-seven reference placements use thirteen distinct source assets: the retained approved portrait, a BYU-catalogued public-domain mask photograph, a qualified Pelton engraving detail, and ten historical publication pages. Uniform CSS viewing windows expose facial details without altering source bytes. They are not new originals, measurements, registrations or independent anatomical evidence.
