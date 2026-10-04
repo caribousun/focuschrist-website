@@ -1128,7 +1128,8 @@
       ],
       "tags": [
         "a",
-        "article"
+        "article",
+        "div"
       ],
       "disposition": "coordinated_stylesheet_owner",
       "reason": "jesus-journey.css owner applies shared panel tokens."
@@ -1215,6 +1216,7 @@
         "jesus-christ/teachings-and-parables.html"
       ],
       "tags": [
+        "a",
         "span"
       ],
       "disposition": "excluded_with_reason",
