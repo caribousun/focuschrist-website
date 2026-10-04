@@ -1,0 +1,64 @@
+{
+  "reviewer": "Fermi",
+  "concur": true,
+  "pdf_sha256": "d7c8c2513f41f3018af65a03acc3cbba2d58cefdd5612836b6cf16f59db38ad1",
+  "source_html_sha256": "7724e9cbe8af9307384601be8f8ba0f44a31ec14937aa196933ee2e4d689fcba",
+  "pages": 58,
+  "sections": 15,
+  "feature_studies": 16,
+  "figure_placements": 75,
+  "distinct_new_originals": 10,
+  "substantive_text_blocks_checked": 551,
+  "expected_external_links": 39,
+  "link_annotations": 480,
+  "bookmarks": 33,
+  "pdf_image_placements_including_cover": 76,
+  "text_coverage_pass": true,
+  "links_pass": true,
+  "visual_review": {
+    "all_page_contact_sheets": [
+      "contact-001-012.png",
+      "contact-013-024.png",
+      "contact-025-036.png",
+      "contact-037-048.png",
+      "contact-049-058.png"
+    ],
+    "render_directory": "work/gary/pdf-render-v4",
+    "full_page_inspection": [
+      3,
+      6,
+      8,
+      9,
+      18,
+      25,
+      30,
+      45,
+      49,
+      53,
+      57,
+      58
+    ],
+    "findings": [
+      "Earlier separated figure titles captions and source links repaired; full blocks intact",
+      "All58 page overview has consistent headers footers margins and restrained parchment texture",
+      "Full-page samples confirm readable body text source notes and correct picture proportions",
+      "Comparison pairs retain distinct evidence labels; generated illustrations not represented as original historical evidence",
+      "Closing reflections links and edition disclaimer kept together on page58",
+      "Contents closing page58 correct; no clipping overlap or broken image seen"
+    ],
+    "open_defects": []
+  },
+  "verification": [
+    "Independently executed tools/joseph_research_pdf_qa.py on frozen bytes: PASS",
+    "Independently parsed HTML:15 sections16 traits75 figures10 distinct data-research-art identifiers",
+    "Reviewed PDF QA source: normalized substantive HTML text coverage and external URL inclusion, valid internal destinations, empty-page and page-bound checks",
+    "Reviewed portrait research QA freshness gate: source HTML and PDF hashes, coverage counts and explicit Fermi Newton Albert concurrence required"
+  ],
+  "limits": [
+    "Rendered review uses all58 contact regions plus listed full-size pages, not a claim every source scan can be read at unzoomed thumbnail size",
+    "Structural checks establish included text links and geometry; external destinations were not all opened during PDF review",
+    "Historical uncertainties and unperformed tests remain explicitly qualified",
+    "No merge or publication performed by Fermi"
+  ],
+  "supersedes": "work/fermi/pdf-review-05cd-held.json"
+}

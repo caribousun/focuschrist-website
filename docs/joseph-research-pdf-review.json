@@ -1,0 +1,36 @@
+{
+  "source_html_sha256": "7724e9cbe8af9307384601be8f8ba0f44a31ec14937aa196933ee2e4d689fcba",
+  "pdf_sha256": "d7c8c2513f41f3018af65a03acc3cbba2d58cefdd5612836b6cf16f59db38ad1",
+  "pages": 58,
+  "sections": 15,
+  "feature_studies": 16,
+  "figure_placements": 75,
+  "distinct_new_originals": 10,
+  "text_coverage_pass": true,
+  "links_pass": true,
+  "substantive_text_blocks_checked": 551,
+  "external_urls_checked": 39,
+  "pdf_image_placements_including_cover": 76,
+  "bookmarks": 33,
+  "reviewers": {
+    "Fermi": {
+      "concur": true,
+      "receipt": "docs/reviews/2026-10-03-joseph-pdf/fermi.json",
+      "receipt_sha256": "0e9ef634e6ccb5cb3b10038581ba877c2de5c112f476580f91f833bcad2afeab"
+    },
+    "Newton": {
+      "concur": true,
+      "receipt": "docs/reviews/2026-10-03-joseph-pdf/newton.json",
+      "receipt_sha256": "830918a5a07d7862a4b78f4a057d53855b2f5822045807ffbfdccc92a9caf03b"
+    },
+    "Albert": {
+      "concur": true,
+      "receipt": "docs/reviews/2026-10-03-joseph-pdf/albert.json",
+      "receipt_sha256": "1e779f464902feea231eb5804e51bad935b23cff1a19d456ac14bea9301fcc4f"
+    }
+  },
+  "source_of_truth": "joseph-smith-portrait-research.html",
+  "build": "python tools/build_joseph_research_pdf.py",
+  "independent_qa": "python tools/joseph_research_pdf_qa.py",
+  "limitations": "Team and technical review are not owner aesthetic acceptance or proof of historical authenticity. Source photographs, document scans, repeated comparisons and new illustrations retain distinct labels."
+}
