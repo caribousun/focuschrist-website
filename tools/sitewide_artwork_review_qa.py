@@ -157,9 +157,11 @@ TOOLBAR_STYLE_SHA256 = {'site-header.css': 'a915de3ba44c8e14f127e25ec51498960fb1
 # Owner-requested growing Ask composer and opt-in Holy Ghost player, independently
 # reviewed in source and rendered by Albert. Exact full bytes and single owners.
 SCOPED_INTERFACE_STYLES = {
+    # WHO-only family styling and native menus, source and desktop/phone reviewed.
+    'joseph-family-life.css': ('af4eac66d90a94a370010dae71cd4e0d2430fd07a049ce0ce7d253454c249a2f', 'answers/who-was-joseph-smith.html'),
     # Owner-requested Joseph research reading panels, independently reviewed on
     # desktop/phone. Exact bytes and two Joseph page owners; no hero-rule exemption.
-    'joseph-smith-research.css': ('02f8c949d6db9670636a9ff2fc4dc8ad5d92455d5ed0971ba1e71061d5f35eb3', 'joseph-smith-likeness.html'),
+    'joseph-smith-research.css': ('bc3cf1e7f24c047c0c1454c2c62a9b104031618418da884ecde698ab115b0add', 'joseph-smith-likeness.html'),
     # Newton source-reviewed hub-only CSS; hosted geometry and owner acceptance remain separate.
     'timeline.css': ('5aefac78e15d324cb4f5a9b44c5f0a1bdb26d951f4e7b5078569be67103048d1', 'timeline.html'),
     # Owner-directed Church-source history, independently reviewed 2026-09-30.

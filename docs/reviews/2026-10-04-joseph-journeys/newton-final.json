@@ -1,0 +1,40 @@
+{
+  "reviewer": "Newton",
+  "concur": true,
+  "scope": "Bounded independent semantic, artwork, PDF, runtime and specifically observed rendered checks; exact candidate commit binding follows root freeze.",
+  "file_sha256": {
+    "answers/who-was-joseph-smith.html": "d21fc01c640f6377137d56e675fa972050da5afc64a8ed227c6de53b6e8a6b16",
+    "joseph-smith-likeness.html": "bcb8c7f4486ecd0b18ee8789f97dc042143adf6d692c510ce7694e43da80c43b",
+    "joseph-smith-portrait-research.html": "7bdbd53799cc36af18cc4d1e6d882044959ce39d89ea8c8e003a95dc73484458",
+    "docs/joseph-research-manuscript.html.inc": "da0cc9f2c57a9d4bb19c392f0cb6193bff05da89853a3ff798ec7daca1416edd",
+    "joseph-family-life.css": "af4eac66d90a94a370010dae71cd4e0d2430fd07a049ce0ce7d253454c249a2f",
+    "joseph-smith-likeness.css": "b5daaca7404233c075ece4d9b05aa2986d26db2d638e428aa53bca74b2b5d165",
+    "joseph-smith-research.css": "bc3cf1e7f24c047c0c1454c2c62a9b104031618418da884ecde698ab115b0add",
+    "joseph-smith-research.js": "7ec2d4492c1e8b9bb8f9d0f237a95c28ead1e8cfee44f32370ae586e4825c279",
+    "topic-artwork-details.js": "22f50cb4340d335bfffdf1a530db3dae1118c049368599b27833a964bef5a947",
+    "assets/research/focuschrist-joseph-evidence.pdf": "b2be29625bce0b1d8a4883db8770b08344b61431a01148d9c7edc229d3fd7245"
+  },
+  "evidence": [
+    "work/newton/final-scoped-qa.json",
+    "work/newton/pdf-review-final.json",
+    "work/newton/lucy-first-two-finished-review.json",
+    "work/newton/lucy-four-corrected-finished-review.json",
+    "work/newton/lucy-last-four-finished-review.json",
+    "work/newton/family-menu-integration-review.json",
+    "work/newton/feature-reading-width-review.json",
+    "work/newton/family-css-review.json"
+  ],
+  "actual_review": [
+    "All ten final Lucy story original images independently viewed whole and hashed, including age/gaze/identity/hands/anatomy/period action and distinct purpose.",
+    "Entire46-page PDF overview plus affected full pages reviewed; unchanged b2be PDF, source-specific limits and source coverage retained.",
+    "Actual phone390 family archival and scene landing, desktop1280 family records and scene landing with image-load stability, back-to-top.",
+    "Actual phone390 and desktop1366 corrected research feature paragraph and images; inherited three-column gap fixed.",
+    "Actual phone390 compact gateway, both primary journey buttons fully visible by469px, no overflow or old hero gap."
+  ],
+  "limitations": [
+    "No claim of personally viewing every current WHO/research section at every viewport. Complete desktop and additional phone/short/enlarged evidence is distributed among root/Fermi/Gary and must retain its actual bounds.",
+    "Automated geometry/source paths are not substituted for visual acceptance.",
+    "No publication/deployment/public-byte verification yet."
+  ],
+  "foundation": "No protected foundation, schedules or unrelated commercial work changed; source facts preserved, original artwork only in explicitly authorized faith-content scope."
+}

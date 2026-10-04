@@ -30,6 +30,12 @@ fs.mkdirSync(out, { recursive: true });
     for (const record of inventory.pages) {
       await page.goto(`${base}/${record.page}`, {waitUntil:'domcontentloaded'});
       await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+      if(record.page==='joseph-smith-likeness.html'){
+        assert.equal(record.selector,null,'Compact gateway is explicitly classified without a hero');
+        assert.equal(await page.locator('.joseph-bridge-intro h1').textContent(),'Explore his life and the portrait');
+        assert.deepEqual(await page.locator('#joseph-study-entrance .fc-button--primary').evaluateAll(nodes=>nodes.map(n=>n.getAttribute('href'))),['answers/who-was-joseph-smith.html#joseph-family-life','joseph-smith-portrait-research.html']);
+        assert.equal(await page.locator('main img,.fc-visual-hero,.fc-unified-continue').count(),0);
+      }
       if (!record.selector) {
         assert.equal(await page.locator('.fc-visual-hero').count(), 0, `${record.page}: new designated hero requires classification`);
         records.push({page:record.page, classification:record.baseline_classification, compared:false});

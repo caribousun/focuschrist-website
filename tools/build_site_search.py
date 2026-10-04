@@ -73,7 +73,7 @@ def build():
             headingtext = clean(visible(heading))
             if not bodytext or not headingtext: continue
             if bodytext.startswith(headingtext): bodytext=bodytext[len(headingtext):].strip()
-            records.append(dict(base, url=path+'#'+quote(target.attrs['id']),title=headingtext,text=bodytext,excerpt='',keywords=target.attrs['id'].replace('-',' ')))
+            records.append(dict(base, url=path+'#'+quote(target.attrs['id']),title=headingtext,text=bodytext,excerpt='',keywords=clean(target.attrs['id'].replace('-',' ')+' '+next((n.attrs['data-search-keywords'] for n in lineage if n.attrs.get('data-search-keywords')), ''))))
     # Artwork routes use the existing gallery's own stable picture IDs and detail panels.
     gallery=json.loads((ROOT/'art-gallery.json').read_text(encoding='utf-8'))
     for art in gallery['artworks']:

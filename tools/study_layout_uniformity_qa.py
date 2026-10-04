@@ -283,13 +283,11 @@ for page, (stylesheet, rail) in PAGES.items():
     require(sum(n.tag == "link" and urlsplit(n.attrs.get("href", "")).path == stylesheet for n in nodes) == 1,
             page + ": intended stylesheet must load once")
     if page == "joseph-smith-likeness.html":
-        navs = [n for n in nodes if n.tag == "nav" and n.has("likeness-path")]
-        links = [n for nav in navs for n in nav.walk() if n.tag == "a"]
-        require(len(navs) == 1 and len(links) == 7, "Joseph: seven directory pills required")
-        ids = {n.attrs.get("id") for n in nodes}
-        require(all(n.has("fc-button") and n.attrs.get("href", "").startswith("#") and n.attrs["href"][1:] in ids for n in links),
-                "Joseph: directory pills must use shared buttons and existing section targets")
-        require({n.attrs.get("href") for n in links} == {"#living-portrait", "#death-masks", "#portraits-from-life", "#our-portrait", "#face-in-motion", "#continue-study", "#joseph-family-life"}, "Joseph: directory destinations must be unique")
+        entrances = [n for n in nodes if n.attrs.get("id") == "joseph-study-entrance"]
+        links = [n for root in entrances for n in root.walk() if n.tag == "a" and n.has("fc-button--primary")]
+        require(len(entrances) == 1 and len(links) == 2, "Joseph bridge: two clear journey entrances required")
+        require({n.attrs.get("href") for n in links} == {"answers/who-was-joseph-smith.html#joseph-family-life", "joseph-smith-portrait-research.html"}, "Joseph bridge: exact biography and portrait destinations required")
+        require(all(n.has("fc-button") for n in links), "Joseph bridge: entrances must use shared controls")
 
 contract('jesus-journey.css', 'body.fc-jesus-journey .jj-wrap', {
     'width': 'min(var(--fc-standard,1040px),calc(100% - 2 * var(--fc-body-gutter,18px)))',
@@ -339,4 +337,4 @@ if '--self-test' in sys.argv:
 
 if ERRORS:
     raise SystemExit("\n".join(ERRORS))
-print("STUDY LAYOUT QA PASS: five shared rails, Joseph spacing and seven centered study pills; all 82 journey consumers use full-width reading and current CSS; rendered geometry requires browser review")
+print("STUDY LAYOUT QA PASS: five shared rails, Joseph spacing and two journey entrances; all 82 journey consumers use full-width reading and current CSS; rendered geometry requires browser review")

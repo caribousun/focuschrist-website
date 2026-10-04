@@ -1,0 +1,40 @@
+[
+  {
+    "id": "lucy-hyrum-brings-chest-1827-age-only",
+    "prompt": "Edit the supplied historical scene, reference1, with one narrow correction: make Hyrum read credibly as a young adult of27, preserving his recognizable identity from reference2. Reduce the deep mature forehead lines, outer-eye creasing and accumulated age weathering currently making him appear middle-aged. Retain realistic pores, natural fine skin texture, asymmetry and expression; do not airbrush, beautify, reshape bone structure, change nose, jaw, eye shape, iris color or hairline, or make him a teenager. Preserve every other part of the scene as closely as possible: exact action, pose, gaze, hands, anatomy, clothing, objects, light, background, framing and photographic realism. Preserve the securely shoulder-borne chest, both hand grips, purposeful gaze through the doorway, and walking posture.",
+    "prompt_sha256": "c3c8c7147058a9eb76c66d6cd7e8ed9eb9cbe56e90f4da501fa0c228de27c956",
+    "references": [
+      {
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-c321ee06-7989-4875-a810-ee0d7b1642fe.png",
+        "sha256": "e38204209f77f7b25ea3b43972a264bfdfd772a2489317f82c7d2e7d2146baf1"
+      },
+      {
+        "person": "Hyrum",
+        "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\joseph-smith-likeness\\hyrum-reconstruction-blue-eyes-20261003.png",
+        "sha256": "47b35f55b805ee0cc7c914cc1adb59273b2405402d4a50e284d0bb456bd9cb32"
+      }
+    ],
+    "fermi_generation_only_concur": true,
+    "parent_finished_concur": false,
+    "reason": "Whole pixels otherwise strong; current face reads too mature for event age."
+  },
+  {
+    "id": "lucy-father-baptism-embrace-1830-age-only",
+    "prompt": "Edit the supplied historical scene, reference1, with one narrow correction: make Joseph read credibly as a young adult of24, preserving his recognizable identity from reference2. Reduce the deep mature forehead lines, outer-eye creasing and accumulated age weathering currently making him appear middle-aged. Retain realistic pores, natural fine skin texture, asymmetry and expression; do not airbrush, beautify, reshape bone structure, change nose, jaw, eye shape, iris color or hairline, or make him a teenager. Preserve every other part of the scene as closely as possible: exact action, pose, gaze, hands, anatomy, clothing, objects, light, background, framing and photographic realism. Preserve his closed eyes, quiet tears, tender embrace, and his father's age, back-of-head position, damp shirt and body. Do not change father or invent his face.",
+    "prompt_sha256": "8532f9769d1411dca85886d948a8126e415c22c0b2282acb9b97c001c06eaaf2",
+    "references": [
+      {
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-61e3772e-ce8d-4926-b6f5-89c3c7fbc30e.png",
+        "sha256": "b8f5ad2213a7b6aaf24196c086722b2fa603de0e4fc7faa78cf0bb7d98ce5d3d"
+      },
+      {
+        "person": "Joseph",
+        "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\identities\\joseph-smith-owner-approved-20260914.png",
+        "sha256": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+      }
+    ],
+    "fermi_generation_only_concur": true,
+    "parent_finished_concur": false,
+    "reason": "Whole pixels otherwise strong; current face reads too mature for event age."
+  }
+]

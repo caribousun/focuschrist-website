@@ -1,0 +1,42 @@
+[
+  {
+    "command": "python tools/build_joseph_portrait_research.py --check",
+    "exit_code": 0,
+    "output": "{\"output\": \"joseph-smith-portrait-research.html\", \"canonical_source\": \"docs\\\\joseph-research-manuscript.html.inc\", \"sections\": 15, \"manuscript_sha256\": \"da0cc9f2c57a9d4bb19c392f0cb6193bff05da89853a3ff798ec7daca1416edd\", \"status\": \"current\"}\n"
+  },
+  {
+    "command": "python tools/test_joseph_research_acceptance.py",
+    "exit_code": 0,
+    "output": "...................\n----------------------------------------------------------------------\nRan 19 tests in 0.286s\n\nOK\n"
+  },
+  {
+    "command": "python tools/joseph_lucy_stories_qa.py",
+    "exit_code": 0,
+    "output": "LUCY STORY QA PASS: 10 of 10 complete; all ten required stories illustrated\n"
+  },
+  {
+    "command": "python tools/joseph_smith_likeness_qa.py",
+    "exit_code": 0,
+    "output": "Joseph journeys PASS: exact legacy bridge destinations, unchanged five reviewed originals and identities, migrated sources, guidance and native image controls\n"
+  },
+  {
+    "command": "python tools/illustrated_study_navigation_qa.py",
+    "exit_code": 0,
+    "output": "PICTURE CACHE PASS: 116 consumers and three authoritative builders use 20260930-history-records-1.\nILLUSTRATED NAVIGATION PASS: 94 specific labels, exact destination titles/fragments, no generic CTA recurrence.\n"
+  },
+  {
+    "command": "node tools/joseph_research_modes_runtime_qa.js",
+    "exit_code": 0,
+    "output": "PASS actual chapter/Read All behavior, one-DOM content/image/link parity, source hashes, history events, position anchor and no-JS full study. Pixel geometry and complete artwork interactions remain separate browser gates.\nPASS 162 actual research picture paths across both modes: titles, sources, full originals, nested close, focus and lesson return.\nPASS exact Hyrum biography allowance with protocol, path, query, fragment, hostile-host and other-route negatives.\n"
+  },
+  {
+    "command": "node tools/joseph_life_runtime_qa.js",
+    "exit_code": 0,
+    "output": "PASS current family detail/fullsize/source/close paths and exact individual-scene Continue focus; five archival source paths and strict URL negatives pass; rendered geometry remains separate.\n"
+  },
+  {
+    "command": "python tools/anchor_alignment_qa.py --self-test",
+    "exit_code": 0,
+    "output": "PASS: exact anchor transform, stale offsets, unrelated edits, unknown files, breakpoint, enlarged-text, root smooth-scroll and reduced-motion fixtures\n{\n  \"stylesheets\": 22,\n  \"existing_targets\": 37,\n  \"errors\": []\n}\n"
+  }
+]

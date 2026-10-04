@@ -1,0 +1,48 @@
+[
+  {
+    "id": "family-evening-circle-1823-correction",
+    "prompt": "Edit the supplied family-circle scene with the following precise corrections while preserving its warm conversational story, loose circle, furniture, framing and photographic realism. The central speaker Joseph must read as17, the seated listener Hyrum to his right as23. Use reference2 Joseph and reference3 Hyrum for recognizable structure, but remove middle-aged forehead/eye creasing and age weathering; keep natural skin texture, no airbrushing and no miniature adult faces. Turn Joseph's head and both eyes just enough so he looks directly at Hyrum's eyes rather than above or beyond him; Hyrum must look back attentively. Preserve their natural conversational hand gestures and anatomically coherent bodies. The older man at far left must turn more fully away so only back-of-head/ear and shoulder remain visible, no invented identifiable father face. The woman at far right is Lucy48: use reference4 historical Lucy drawing to correct her broad facial structure and natural age48, with a plain linen cap and simple early1820s gown; keep her attention toward Joseph and retain a visible humane face rather than hiding everyone. Other foreground listeners stay from behind, no extra people and no Emma. Replace the glass-chimney lamp with a plain lit tallow candle in simple metal holder, keeping warm illumination. No plates, angels, invented readable text or additional props. Do not alter approved facial bone proportions or iris colors. This is a bounded historical scene correction, not a new canonical face.",
+    "prompt_sha256": "002d5b74fe053e478b64aa4448631e5645bee55940c07f4c618f9368e6b5aef6",
+    "references": [
+      {
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-c261e027-71e5-4cc2-8d25-6f89c55467c8.png",
+        "sha256": "d629aa92cabbded0d377835bcf166f2695348ed411281b50af6ce7332f52b909"
+      },
+      {
+        "person": "Joseph",
+        "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\identities\\joseph-smith-owner-approved-20260914.png",
+        "sha256": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+      },
+      {
+        "person": "Hyrum",
+        "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\joseph-smith-likeness\\hyrum-reconstruction-blue-eyes-20261003.png",
+        "sha256": "47b35f55b805ee0cc7c914cc1adb59273b2405402d4a50e284d0bb456bd9cb32"
+      },
+      {
+        "person": "Lucy",
+        "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\focus-joseph-curated-continuation\\work\\fermi\\family-sources\\lucy-mack-smith-gea11724.jpg",
+        "sha256": "0c572bfd2ce45d2bb8de7b5c4b3a42d7fb9e4bc80655f9a66f188f9414ca8adb"
+      }
+    ],
+    "fermi_generation_only_concur": true,
+    "parent_finished_concur": false
+  },
+  {
+    "id": "lucy-mother-farewell-1816-correction",
+    "prompt": "Edit only Lucy Mack Smith, the woman facing the viewer at left in this farewell scene, to read credibly as41 in1816. Reference2 is the later historical Lucy drawing, a broad identity anchor rather than a template for elderly skin. Reduce prominent mature forehead/outer-eye/mouth wrinkles, graying hair and aged hand veining on Lucy only; retain natural pores, fine texture, recognizable facial proportions, real adult maturity and respectful expression. Do not make her a teenager, beauty-model or porcelain face. Preserve her direct personal eye contact with her mother and the tender embrace, all hand/finger positions and natural garment/body fullness. Her mother Lydia at right remains84, entirely back-view; preserve her gray hair, elderly hands, cap, shawl and position. Preserve the early1810s clothes, doorway, luggage, light, composition, photographic detail and all other objects. No new people, symbols or text.",
+    "prompt_sha256": "c1ac488e0e409bdba3a15f91c19c7cd0d240b4db1fa30f59efa130af625acacf",
+    "references": [
+      {
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-138e128f-38e5-42db-ad1a-109096f4ac84.png",
+        "sha256": "511429de7c7c5f4529f5eeeaa40537fc056664810612a990af3eb0a9b43cabfc"
+      },
+      {
+        "person": "Lucy",
+        "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\focus-joseph-curated-continuation\\work\\fermi\\family-sources\\lucy-mack-smith-gea11724.jpg",
+        "sha256": "0c572bfd2ce45d2bb8de7b5c4b3a42d7fb9e4bc80655f9a66f188f9414ca8adb"
+      }
+    ],
+    "fermi_generation_only_concur": true,
+    "parent_finished_concur": false
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "reviewer": "Newton",
+  "concur": true,
+  "scope": "Independent semantic mapping and bounded cadence review; not final rendered publication concurrence",
+  "manuscript_sha256": "da0cc9f2c57a9d4bb19c392f0cb6193bff05da89853a3ff798ec7daca1416edd",
+  "baseline_sha256": "23724949768c40951657d0a6233cf9e281930047fa9c03d5449d7fbe4bd0343b",
+  "coverage_records_sha256": "edd67cdcfde56e9b0dee0fa310dfccadd8a4ea3b2a8a1688ab88978afa4c9e26",
+  "records_reviewed": 164,
+  "presentation_retired": 44,
+  "findings": [
+    "Earlier unrelated target mappings corrected; source-conflict synthesis now truthfully consolidated, not preserved verbatim.",
+    "Retired headings, glossary and internal approval/reviewer instructions do not replace historical evidence.",
+    "Sixteen feature narratives retain source limitations, conflicting eye descriptions, date/transmission distinctions and cast/color boundaries.",
+    "Ten cadence exceptions remain bounded short passages; section5-2 reason corrected to singular passage."
+  ],
+  "limits": [
+    "No claim all164 old prose fields survive verbatim.",
+    "Current six-image migration is separately gated against published75 and prior likeness source pixels.",
+    "Final desktop/phone and PDF rendering pending."
+  ],
+  "attribute_renewal": "Exact search-keyword and sole BYU link-target/rel additions reverse to prior07ab bytes. Fragment renamed .html.inc without byte change. No prose/sourceURI/art/order changes."
+}

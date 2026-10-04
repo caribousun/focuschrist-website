@@ -1,0 +1,57 @@
+{
+  "reviewer": "Fermi",
+  "merlin_reply": "M-2026-10-04-009",
+  "concur": true,
+  "scope": "Point-by-point reconciliation of ten-story source fit and adjacent chronology; no site edits.",
+  "basis": [
+    "Previously independently read Lucy primary pages saved in work/fermi/lucy-primary-pages.json",
+    "Exact chronological/source plan work/fermi/lucy-ten-story-plan.md",
+    "Primary JSP family chronology used in family-roster-and-scene-evidence.md and canonical roster"
+  ],
+  "points": [
+    {
+      "story": 1,
+      "response": "Identification is covered by primary page27, which explicitly names Sophronia and Lebanon and inserts1813; pages28–29 continue prayer/recovery. Existing research range27–29 covers context. Current visitor links28–29 reach the episode; adding27 as context would improve direct discoverability but is not a factual correction."
+    },
+    {
+      "story": 2,
+      "response": "Page30 gives the action;1813 and ages derive from the preceding illness sequence and verified sibling birth dates. No claim the date label is literally printed on30."
+    },
+    {
+      "story": 3,
+      "response": "Page35 gives maternal farewell. Lydia Gates Mack identification follows verified Lucy parentage;1816/Palmyra framing is the surrounding migration chronology. No new invented identification or exact farewell-day claim."
+    },
+    {
+      "story": 4,
+      "response": "Rough draft16<19> is explicitly recorded as unresolved editorial age in our original research plan. Visitor prose states no age. Autumn1823 is narrative chronology, not a transcription of that inconsistent number. Do not later insert19 from this line."
+    },
+    {
+      "story": 5,
+      "response": "Action on46; death19November1823 and age25 derive from established Alvin chronology shown in roster. Adjacent rough-draft1822 error was explicitly recognized, not adopted or silently described as source date."
+    },
+    {
+      "story": 6,
+      "response": "Night21st, lockable chest, prayer and breakfast directly supported by60; September1827 from event chronology. No additional factual correction."
+    },
+    {
+      "story": 7,
+      "response": "Carlos is Joseph’s younger brother Don Carlos in context, not Joseph’s later-born son. Hyrum chest action directly supported by1845faircopy119; lateSeptember1827 comes from plates narrative chronology."
+    },
+    {
+      "story": 8,
+      "response": "Page86 supports Lucy’s reassurance after Harris’s report. Summer1828 follows manuscript-loss chronology; no exact day invented."
+    },
+    {
+      "story": 9,
+      "response": "Page116 explicitly gives6April1830 and tears against father; direct support."
+    },
+    {
+      "story": 10,
+      "response": "Page230 names caregivers and knee injury/night watches. Winter1840–41 follows widowhood and illness sequence; JosephSr death14September1840 separately verified. Does not claim the numeric date appears on230."
+    }
+  ],
+  "infant_name": "M008 question remains resolved: unnamed1828son latercalledAlvin, later-Bible naming note. No need to substitute customary DonAlvin as contemporaneous recorded name.",
+  "required_factual_changes": [],
+  "optional_citation_improvement": "Add primary27 as an illness-context link to story1 if root wants every identifying detail within the immediately linked page set; existing27–29 research context supports current wording.",
+  "limits": "Merlin concurrence is historical/source review, not pixel or publication approval. Date labels are chronological framing supported across sources, not always literal dates on single linked leaves."
+}

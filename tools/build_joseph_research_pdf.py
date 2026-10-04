@@ -1,6 +1,6 @@
 """Build the illustrated research edition from the current assembled study HTML.
 
-The HTML remains canonical. No historical text or image pixels are generated.
+Build from the shared reader-journey manuscript via the assembled research page. Image pixels remain untouched.
 Use Python with reportlab, BeautifulSoup, Pillow, pypdf and pypdfium2 available.
 """
 from pathlib import Path
@@ -31,7 +31,7 @@ LEFT, RIGHT, TOP, BOTTOM = 49, 49, 92, 63
 CONTENT_WIDTH = WIDTH-LEFT-RIGHT
 RECEIPT = {'sections': [], 'features': [], 'figures': [], 'text_blocks': [], 'links': []}
 IDS = set()
-HEADER_NAV = [('Cover','pdf-cover'),('Contents','pdf-contents'),('Evidence','portrait-section-4'),('Facial Features','portrait-section-6'),('Creation','portrait-section-11'),('Sources','portrait-section-13')]
+HEADER_NAV = [('Cover','pdf-cover'),('Contents','pdf-contents'),('Evidence','portrait-section-4'),('Facial Features','portrait-section-6'),('The Portrait','portrait-section-11'),('Sources','portrait-section-13')]
 
 def fonts():
     candidates = [Path(os.environ['JOSEPH_PDF_FONT_DIR'])] if os.environ.get('JOSEPH_PDF_FONT_DIR') else [Path('C:/Windows/Fonts'), Path('/usr/share/fonts/truetype/msttcorefonts'), Path('/usr/share/fonts/truetype/liberation2'), Path('/usr/share/fonts/truetype/dejavu')]
@@ -153,15 +153,15 @@ def figure_group(figures):
     result=[];i=0
     while i<len(figures):
         f=figures[i];original=f.get('data-research-art');nxt=figures[i+1] if i+1<len(figures) else None
-        pair=nxt is not None and not original and not nxt.get('data-research-art')
+        pair=nxt is not None
         if pair:
             w=(CONTENT_WIDTH-20)/2
-            cells=[figure_parts(x,w,235) for x in (f,nxt)]
+            cells=[figure_parts(x,w,190) for x in (f,nxt)]
             table=Table([cells],colWidths=[w+10,w+10],hAlign='CENTER')
             table.setStyle(TableStyle([('VALIGN',(0,0),(-1,-1),'TOP'),('LEFTPADDING',(0,0),(-1,-1),5),('RIGHTPADDING',(0,0),(-1,-1),5),('TOPPADDING',(0,0),(-1,-1),8),('BOTTOMPADDING',(0,0),(-1,-1),8)]))
-            result.extend([CondPageBreak(310),table,Spacer(1,14)]);i+=2
+            result.extend([CondPageBreak(190),table,Spacer(1,14)]);i+=2
         else:
-            result.extend([KeepTogether(figure_parts(f,CONTENT_WIDTH,320 if original else 270)),Spacer(1,16)]);i+=1
+            result.extend([KeepTogether(figure_parts(f,CONTENT_WIDTH,210 if original else 230)),Spacer(1,16)]);i+=1
     return result
 
 def walk(node):
@@ -173,7 +173,7 @@ def walk(node):
     if node.name=='article' and 'research-feature-study' in classes:
         key=node['id'];RECEIPT['features'].append(node['data-research-feature'])
         title=node.find('h3').get_text(' ',strip=True)
-        out=[CondPageBreak(260),para('Look closely · Follow the evidence','label'),Heading(title,key,1)]
+        out=[CondPageBreak(180),para('Look closely · Follow the evidence','label'),Heading(title,key,1)]
         for child in node.find_all(recursive=False):
             if child.name=='header':continue
             out+=walk(child)
@@ -198,8 +198,15 @@ def walk(node):
     direct=node.find_all(recursive=False)
     if direct and all(isinstance(x,Tag) and x.name=='figure' for x in direct):return figure_group(direct)
     if node.name=='summary':return []
-    out=[]
-    for child in direct:out+=walk(child)
+    out=[]; pending_figures=[]
+    for child in direct:
+        if child.name=='figure':
+            pending_figures.append(child)
+            continue
+        if pending_figures:
+            out+=figure_group(pending_figures);pending_figures=[]
+        out+=walk(child)
+    if pending_figures:out+=figure_group(pending_figures)
     return out
 
 def bind_subhead_paragraphs(story):
@@ -226,7 +233,7 @@ def bind_subhead_paragraphs(story):
 class Edition(BaseDocTemplate):
     def __init__(self,path):
         super().__init__(str(path),pagesize=(WIDTH,HEIGHT),leftMargin=LEFT,rightMargin=RIGHT,topMargin=TOP,bottomMargin=BOTTOM,
-            title='The Evidence Behind Our Joseph',author='focusChrist',subject='Historical evidence, artistic interpretation, and the adopted Joseph Smith portrait',pageCompression=1)
+            title='In Search of Joseph’s Likeness',author='focusChrist',subject='A reader journey through portraits, casts, written memories, and Joseph Smith’s likeness',pageCompression=1)
         self.addPageTemplates(PageTemplate(id='parchment',frames=[Frame(LEFT,BOTTOM,CONTENT_WIDTH,HEIGHT-TOP-BOTTOM,id='text',leftPadding=0,rightPadding=0,topPadding=0,bottomPadding=0)],onPage=self.page_art))
         self.current_heading='An illustrated research edition';self.section_pages={}
     def page_art(self,c,doc):
@@ -262,19 +269,19 @@ def build(output):
     # Every actual section/feature gets its named destination, and source headings
     # are emitted inline. Link-only web controls are mapped to the owning webpage.
     IDS={x for x in IDS if not x.endswith('-title')}
-    story=[Spacer(1,45),para('A FOCUSCHRIST RESEARCH EDITION','label'),Paragraph('The Evidence<br/>Behind Our Joseph',STYLES['h1']),
-           para('History, interpretation, and the face we chose to remember','h3'),Spacer(1,15)]
+    story=[Spacer(1,45),para('A FOCUSCHRIST RESEARCH EDITION','label'),Paragraph('In Search of<br/>Joseph’s Likeness',STYLES['h1']),
+           para('A journey through portraits, casts, and remembered encounters','h3'),Spacer(1,15)]
     hero=ROOT/'assets/identities/joseph-smith-owner-approved-20260914.png'
     story+=[SourceImage(hero,340,315,target=urljoin(ORIGIN,'assets/identities/joseph-smith-owner-approved-20260914.png')),Spacer(1,14),
-            para('This edition distinguishes the historical record, the choices visible in our artwork, and what remains uncertain.','body'),
+            para('A painted face, a plaster cast, a remembered pair of eyes. Each brings us closer to Joseph Smith in a different way. Follow these traces through the people who saw him and the likeness they help us understand.','body'),
             para('Independent faith-based study. Not an official publication of The Church of Jesus Christ of Latter-day Saints.','small'),PageBreak(),Heading('Contents','pdf-contents')]
     toc=TableOfContents();toc.levelStyles=[style('toc0',fontSize=10.1,leading=15,spaceBefore=7,leftIndent=0,textColor=TEAL),style('toc1',fontSize=8.8,leading=12.6,leftIndent=16,spaceBefore=3,textColor=TEAL)]
     story += [para('Use the six outlined buttons repeated at the top of every page to return to the cover, contents, evidence, facial features, creation, or sources. Source links appear in gold; a small outward arrow marks links that open online records. Contents titles and page numbers move within this PDF; source numbers lead to the source shelf. Select an image to open its complete source file.','small'),toc]
     for section in sections:
         key=section['id'];title=section.find('h2').get_text(' ',strip=True)
-        RECEIPT['sections'].append({'id':key,'title':title});story += [CondPageBreak(400 if key in {'portrait-section-6','portrait-section-7','portrait-section-8','portrait-section-9'} else 220 if key=='portrait-section-2' else 270),Spacer(1,18),para('HISTORICAL EVIDENCE  /  '+key.rsplit('-',1)[-1].zfill(2),'label'),Heading(title,key)]
+        RECEIPT['sections'].append({'id':key,'title':title});story += [CondPageBreak(350 if key in {'portrait-section-6','portrait-section-7','portrait-section-8','portrait-section-9'} else 220),Spacer(1,18),para('FOLLOWING THE EVIDENCE','label'),Heading(title,key)]
         for child in section.find_all(recursive=False):
-            if child.name=='h2':continue
+            if child.name=='h2' or 'fc-eyebrow' in child.get('class',[]):continue
             if key=='portrait-section-2':
                 # The source's web navigation table is retained, but adapted to
                 # actual named PDF destinations rather than obsolete page numbers.
@@ -283,7 +290,7 @@ def build(output):
     closing_start=len(story)
     onward=root.select_one('.research-study-onward')
     if onward:
-        story += [CondPageBreak(300),Spacer(1,18),Heading('Keep studying with care','pdf-continue')]
+        story += [CondPageBreak(300),Spacer(1,18),Heading(onward.find('h2').get_text(' ',strip=True),'pdf-continue')]
         for child in onward.find_all(recursive=False):
             if child.name in ('h2','nav'):continue
             story+=walk(child)
@@ -293,8 +300,8 @@ def build(output):
         if p:story.append(p)
     story[closing_start:]=[KeepTogether(story[closing_start:])]
     assert len(RECEIPT['features'])==16
-    assert len(RECEIPT['figures'])==75
-    assert len({x['original_id'] for x in RECEIPT['figures'] if x['original_id']})==10
+    assert len(RECEIPT['figures'])==81
+    assert len({x['original_id'] for x in RECEIPT['figures'] if x['original_id']})==14
     doc=Edition(output);doc.multiBuild(bind_subhead_paragraphs(story))
     RECEIPT['source_html_sha256']=hashlib.sha256(SOURCE.read_bytes()).hexdigest()
     RECEIPT['pdf_sha256']=hashlib.sha256(output.read_bytes()).hexdigest();RECEIPT['section_pages']=doc.section_pages

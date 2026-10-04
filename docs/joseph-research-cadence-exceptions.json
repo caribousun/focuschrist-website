@@ -3,62 +3,62 @@
     {
       "slot": "section-2-1",
       "purpose": "source-key",
-      "reason": "This short key defines supported, plausible and unverified; another photograph would add no evidence to these definitions.",
-      "content_sha256": "41da02c70e61e091b6c923a7fd0e793da7ae9ef916b85f17a07c5b8840db59ae"
-    },
-    {
-      "slot": "section-3-3",
-      "purpose": "research-limits",
-      "reason": "Two paragraphs delimit the illustrated verdict immediately above; repeating the portrait would imply no additional evidence.",
-      "content_sha256": "03e012ae027b5d3c6a81b4b79baa558e7e57b08a3d1ea508cb94101f20d1b4b3"
+      "reason": "Short reader orientation explains source actions and differing record dates; it introduces the evidence path without an unrelated picture.",
+      "content_sha256": "cf7174da926295e1e81fb64079944bea9a9dd46228c4be2f9ca8173a89ae5b3a"
     },
     {
       "slot": "section-5-1",
       "purpose": "source-key",
-      "reason": "One introductory paragraph separates meeting dates from record dates before the actual source table.",
-      "content_sha256": "d070e0b2575936aa0034c7c64a1c2ee157eeb2db7315d776057b0590ed87dbb1"
+      "reason": "One short transition introduces written observations and their meeting versus publication dates before the source records.",
+      "content_sha256": "9f852b8cfa8607d0400c899e5472cbfb91b28aa45c103753b7bda2d8541ae038"
     },
     {
       "slot": "section-5-2",
-      "purpose": "unavailable-source-table",
-      "reason": "The three contemporary letters are linked to their sources. Original manuscript images have not been recovered; later book scans must not impersonate them.",
-      "content_sha256": "ea90b7445c62ef5024b072975104f205bb0cad2322e6879a8bc39d3c382d3cb5"
+      "purpose": "short-synthesis",
+      "reason": "A concise passage compares three dated letters; no verified manuscript images are available and an unrelated document image would mislead.",
+      "content_sha256": "688e84941044ceef73a2b5f30932fbbdc3cd78877a4978953aa899a618b211e3"
     },
     {
       "slot": "section-5-9",
       "purpose": "short-synthesis",
-      "reason": "One paragraph weighs the four source groups illustrated immediately above without inventing a majority vote.",
+      "reason": "One short synthesis explains why independent accounts and color conflict cannot be counted as votes.",
       "content_sha256": "cbf6aafc294da00f21b98f17f3bdb2ec4375a50d9159f93a3fd7613780a15f45"
     },
     {
-      "slot": "section-10-2",
-      "purpose": "proposed-work",
-      "reason": "This bounded future comparison protocol has not been carried out; staged images would falsely imply a performed test.",
-      "content_sha256": "4eb1085d1327de96b1cb27bb23bd6722473b8fc7bb25cbd231805b91b4499234"
-    },
-    {
-      "slot": "section-10-3",
-      "purpose": "proposed-work",
-      "reason": "Two paragraphs define what future evidence could change the verdict, not a completed result to illustrate.",
-      "content_sha256": "148f6e2f444eabaddb89445f98784f3c67901eb0d8556ed61216386dbf9f7852"
-    },
-    {
       "slot": "section-11-3",
-      "purpose": "research-limits",
-      "reason": "Two paragraphs separate documented creation, later research and missing records after the illustrated reference discussion.",
-      "content_sha256": "f923110875627721acdefd00be5b1637f3c0cf4aa273a4f4b63b9b1a4c3927fb"
+      "purpose": "short-synthesis",
+      "reason": "Two concise paragraphs distinguish actual creation records from later research; no invented workflow image is appropriate.",
+      "content_sha256": "6e181b39bdb8cb059741a516a9c941a6fba96db22324eb46951036b0fd4e98fe"
     },
     {
       "slot": "section-12-2",
       "purpose": "short-synthesis",
-      "reason": "This short discussion compares Davis and Hatch interpretations using exact source citations; no unlicensed artwork substitutes for either argument.",
-      "content_sha256": "56ed75a96a2814fe3a6051d4d21ba1f1c12d9da6b0dc0ac49ffa47b424da2303"
+      "reason": "Two concise paragraphs connect source-object criticism and conflicting witness impressions; source links supply the relevant records.",
+      "content_sha256": "01cbcf49a7c7b7867d38664dc90b117a9d51599501241048389f3e48b55ad1e1"
     },
     {
       "slot": "section-12-3",
       "purpose": "research-limits",
-      "reason": "The closing gap statement preserves unavailable manuscript and measurement evidence; an invented document or testing photograph would mislead.",
-      "content_sha256": "66ce943be76a6ce9a48f8d6c261a20e09f9be2e3c2f805ccd8b4897e001f9bc3"
+      "reason": "Two short closing paragraphs identify unresolved original sources and future discovery without illustrating unavailable evidence.",
+      "content_sha256": "0352d17000787d65f1c7dd5337f4b3db06d983dabfb62f26ce9a117a2d4a32cb"
+    },
+    {
+      "slot": "section-3-3",
+      "purpose": "research-limits",
+      "reason": "Two short synthesis paragraphs preserve uncertainty in eye shade and individual marks after the preceding illustrated comparisons.",
+      "content_sha256": "c08c1c75b2cd0be2a3ea8ebb8895b7ca6ff2ff517324797ca94c144a45901538"
+    },
+    {
+      "slot": "section-10-2",
+      "purpose": "proposed-work",
+      "reason": "Two paragraphs describe viewing limitations and a future hair comparison, explicitly not a performed experiment.",
+      "content_sha256": "aba8ef7120157ec91ea2498c9788d335db8328768e05058bd23119c3ade2ae9e"
+    },
+    {
+      "slot": "section-10-3",
+      "purpose": "proposed-work",
+      "reason": "Two short closing paragraphs invite source-led future discovery rather than an unrelated illustration.",
+      "content_sha256": "3fde0ca3118dfceee1abda42a1786f25a7a2e24359925d9482d0c9f2179fb917"
     }
   ]
 }

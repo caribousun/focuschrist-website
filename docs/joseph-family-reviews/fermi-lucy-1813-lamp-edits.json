@@ -1,0 +1,30 @@
+[
+  {
+    "id": "lucy-prayer-for-sophronia-candle",
+    "prompt": "Edit only the visible table lamp in the supplied scene. Replace the bulbous glass-chimney lamp and its reservoir with one plain, modest tallow candle burning in a simple early-nineteenth-century metal candlestick. Remove the glass chimney and modern-looking burner completely. Keep the candle in the same position and retain the existing gentle warm illumination as closely as possible, with a believable small natural flame. Preserve every person, exact face, event age, gaze, pose, hands, anatomy, garments, bedding, room, furniture, composition and photographic realism without alteration. Do not add people, props or text. The scene is set in1813; this is a narrowly bounded period-lighting correction only.",
+    "prompt_sha256": "f45a1047ab17fcd735d4bcd5b4b1fbabde13cb79dd8d79620b11332877e32086",
+    "references": [
+      {
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-3a17cee4-7156-4624-9110-c7cd3c66feea.png",
+        "sha256": "5083c7579d96323a443dddd3b3e1532cc3be9326491e938c13c5d1bee63a2138"
+      }
+    ],
+    "fermi_generation_only_concur": true,
+    "reason": "Specific generated lamp form unverified for1813; simple candle suitable. Not a categorical rejection of all earlyglasschimneys.",
+    "source": "https://www.metmuseum.org/art/collection/search/203797"
+  },
+  {
+    "id": "lucy-hyrum-night-watch-candle",
+    "prompt": "Edit only the visible table lamp in the supplied scene. Replace the bulbous glass-chimney lamp and its reservoir with one plain, modest tallow candle burning in a simple early-nineteenth-century metal candlestick. Remove the glass chimney and modern-looking burner completely. Keep the candle in the same position and retain the existing gentle warm illumination as closely as possible, with a believable small natural flame. Preserve every person, exact face, event age, gaze, pose, hands, anatomy, garments, bedding, room, furniture, composition and photographic realism without alteration. Do not add people, props or text. The scene is set in1813; this is a narrowly bounded period-lighting correction only.",
+    "prompt_sha256": "f45a1047ab17fcd735d4bcd5b4b1fbabde13cb79dd8d79620b11332877e32086",
+    "references": [
+      {
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-c005f686-39cc-49ca-a801-fc3c0cc73a52.png",
+        "sha256": "6cdb5e43ff2a3ab0d9dd1d896286abd7ca81f01852973d5ef65914eeb498fdff"
+      }
+    ],
+    "fermi_generation_only_concur": true,
+    "reason": "Specific generated lamp form unverified for1813; simple candle suitable. Not a categorical rejection of all earlyglasschimneys.",
+    "source": "https://www.metmuseum.org/art/collection/search/203797"
+  }
+]

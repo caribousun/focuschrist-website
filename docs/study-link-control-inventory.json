@@ -2,7 +2,7 @@
   "canonical_pages": 130,
   "selectors": {
     ".fc-study-visual-sources a:not(.fc-button--primary)": {
-      "count": 1013,
+      "count": 964,
       "pages": [
         "answers/aaronic-priesthood-restoration.html",
         "answers/abrahamic-covenant.html",
@@ -112,7 +112,6 @@
         "jesus-christ/restoration-and-today.html",
         "jesus-christ/risen-savior-in-the-book-of-mormon.html",
         "jesus-christ/teachings-and-parables.html",
-        "joseph-smith-likeness.html",
         "joseph-smith-portrait-research.html"
       ]
     },
@@ -143,7 +142,7 @@
       ]
     },
     ".fc-study-nav:not(.jj-local-nav) a:not(.fc-button--primary)": {
-      "count": 187,
+      "count": 189,
       "pages": [
         "answers/aaronic-priesthood-restoration.html",
         "answers/are-latter-day-saints-christian.html",

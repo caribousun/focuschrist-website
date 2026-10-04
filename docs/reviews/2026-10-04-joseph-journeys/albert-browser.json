@@ -1,0 +1,24 @@
+{
+  "reviewer": "Albert",
+  "observed_at": "2026-10-04T07:50:35.997432+00:00",
+  "scope": "Actual local browser inspection, not publication",
+  "hashes": {
+    "answers/who-was-joseph-smith.html": "d21fc01c640f6377137d56e675fa972050da5afc64a8ed227c6de53b6e8a6b16",
+    "joseph-smith-likeness.html": "bcb8c7f4486ecd0b18ee8789f97dc042143adf6d692c510ce7694e43da80c43b",
+    "joseph-smith-portrait-research.html": "7bdbd53799cc36af18cc4d1e6d882044959ce39d89ea8c8e003a95dc73484458",
+    "joseph-family-life.css": "af4eac66d90a94a370010dae71cd4e0d2430fd07a049ce0ce7d253454c249a2f",
+    "joseph-smith-likeness.css": "b5daaca7404233c075ece4d9b05aa2986d26db2d638e428aa53bca74b2b5d165",
+    "joseph-smith-research.css": "bc3cf1e7f24c047c0c1454c2c62a9b104031618418da884ecde698ab115b0add"
+  },
+  "checks": [
+    "WHO phone390x844 Lucy section and mercy story jumps land at sectiontop140 heading211; source/art modal readable, corrected mutual gaze visible; close restores exact picturelink focus.",
+    "WHO desktop1366x768 nightwatch story jump top140, text/image cadence and no horizontal overflow inspected.",
+    "Research desktop chapterjump top135, corrected70ch feature reading copy and cast/portrait comparison viewed. Readall exposes every section; Backtotop reaches scroll0.",
+    "Gateway phone390x844 final concise title and two primary destinations visible by469px; old mobilehero and mojibake absent. Family destination actualjump top140. Desktop prior concise structure viewed."
+  ],
+  "concur": true,
+  "limitations": [
+    "Bounded browser views plus separately recorded agent whole-image, source and runtime reviews. Not a claim each biography image viewed at every viewport.",
+    "Final source-link and manuscript packaging changes remain technical checks."
+  ]
+}

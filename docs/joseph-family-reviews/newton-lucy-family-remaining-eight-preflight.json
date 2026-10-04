@@ -1,0 +1,167 @@
+{
+  "scenes": [
+    {
+      "id": "sophronia-prayer-1813",
+      "prompt_sha256": "126152c066116f591cc41d3637b57a86f39029d3b08ea5760bc425f6f1d5991c",
+      "reference_sha256": [
+        "0c572bfd2ce45d2bb8de7b5c4b3a42d7fb9e4bc80655f9a66f188f9414ca8adb"
+      ],
+      "concur": true,
+      "scope": "Generation-only exact preflight; whole finished pixels require fresh review",
+      "references_actually_inspected": true,
+      "source": "https://www.josephsmithpapers.org/paper-summary/lucy-mack-smith-history-1844-1845/28",
+      "independent_source_read": "work/newton/sophronia-prayer-1813-source.html",
+      "constraints": [
+        "Age must read as specified, not the older reference age.",
+        "Identity facial structure, natural skin and family resemblance preserved; Lucy drawing is historical reference, not verified photograph.",
+        "Purposeful gaze/action, coherent full hands, credible period dress, unchanged source facts required.",
+        "No unsupported recognizable rear-facing relative or exact childhood likeness claimed.",
+        "No new original workflow claim or visible disclaimer label."
+      ],
+      "finished_pixels_concur": false
+    },
+    {
+      "id": "hyrum-night-watch-1813",
+      "prompt_sha256": "a98615321abbf38a83019fd7591ac95e5751f0e320d6ed5eec600f2f63a8a151",
+      "reference_sha256": [
+        "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827",
+        "47b35f55b805ee0cc7c914cc1adb59273b2405402d4a50e284d0bb456bd9cb32"
+      ],
+      "concur": true,
+      "scope": "Generation-only exact preflight; whole finished pixels require fresh review",
+      "references_actually_inspected": true,
+      "source": "https://www.josephsmithpapers.org/paper-summary/lucy-mack-smith-history-1844-1845/30",
+      "independent_source_read": "work/newton/hyrum-night-watch-1813-source.html",
+      "constraints": [
+        "Age must read as specified, not the older reference age.",
+        "Identity facial structure, natural skin and family resemblance preserved; Lucy drawing is historical reference, not verified photograph.",
+        "Purposeful gaze/action, coherent full hands, credible period dress, unchanged source facts required.",
+        "No unsupported recognizable rear-facing relative or exact childhood likeness claimed.",
+        "No new original workflow claim or visible disclaimer label."
+      ],
+      "finished_pixels_concur": false
+    },
+    {
+      "id": "lucy-mother-farewell-1816",
+      "prompt_sha256": "92122db820c5110d1a75ce4f74f9d9752db72fdaa470ecba21a2bd54f0c91ce2",
+      "reference_sha256": [
+        "0c572bfd2ce45d2bb8de7b5c4b3a42d7fb9e4bc80655f9a66f188f9414ca8adb"
+      ],
+      "concur": true,
+      "scope": "Generation-only exact preflight; whole finished pixels require fresh review",
+      "references_actually_inspected": true,
+      "source": "https://www.josephsmithpapers.org/paper-summary/lucy-mack-smith-history-1844-1845/35",
+      "independent_source_read": "work/newton/lucy-mother-farewell-1816-source.html",
+      "constraints": [
+        "Age must read as specified, not the older reference age.",
+        "Identity facial structure, natural skin and family resemblance preserved; Lucy drawing is historical reference, not verified photograph.",
+        "Purposeful gaze/action, coherent full hands, credible period dress, unchanged source facts required.",
+        "No unsupported recognizable rear-facing relative or exact childhood likeness claimed.",
+        "No new original workflow claim or visible disclaimer label."
+      ],
+      "finished_pixels_concur": false
+    },
+    {
+      "id": "family-evening-circle-1823",
+      "prompt_sha256": "6fef536a91f6f0ceb6e092fb785447f188979a544e5a290f94413209bc7c3ebd",
+      "reference_sha256": [
+        "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827",
+        "47b35f55b805ee0cc7c914cc1adb59273b2405402d4a50e284d0bb456bd9cb32"
+      ],
+      "concur": true,
+      "scope": "Generation-only exact preflight; whole finished pixels require fresh review",
+      "references_actually_inspected": true,
+      "source": "https://www.josephsmithpapers.org/paper-summary/lucy-mack-smith-history-1844-1845/43",
+      "independent_source_read": "work/newton/family-evening-circle-1823-source.html",
+      "constraints": [
+        "Age must read as specified, not the older reference age.",
+        "Identity facial structure, natural skin and family resemblance preserved; Lucy drawing is historical reference, not verified photograph.",
+        "Purposeful gaze/action, coherent full hands, credible period dress, unchanged source facts required.",
+        "No unsupported recognizable rear-facing relative or exact childhood likeness claimed.",
+        "No new original workflow claim or visible disclaimer label."
+      ],
+      "finished_pixels_concur": false
+    },
+    {
+      "id": "alvin-last-counsel-1823",
+      "prompt_sha256": "7ef2d41e7a23a7ee49016247156e13d9f10c67c1db65698ce52919d9c2db8c6c",
+      "reference_sha256": [
+        "47b35f55b805ee0cc7c914cc1adb59273b2405402d4a50e284d0bb456bd9cb32"
+      ],
+      "concur": true,
+      "scope": "Generation-only exact preflight; whole finished pixels require fresh review",
+      "references_actually_inspected": true,
+      "source": "https://www.josephsmithpapers.org/paper-summary/lucy-mack-smith-history-1844-1845/46",
+      "independent_source_read": "work/newton/alvin-last-counsel-1823-source.html",
+      "constraints": [
+        "Age must read as specified, not the older reference age.",
+        "Identity facial structure, natural skin and family resemblance preserved; Lucy drawing is historical reference, not verified photograph.",
+        "Purposeful gaze/action, coherent full hands, credible period dress, unchanged source facts required.",
+        "No unsupported recognizable rear-facing relative or exact childhood likeness claimed.",
+        "No new original workflow claim or visible disclaimer label."
+      ],
+      "finished_pixels_concur": false
+    },
+    {
+      "id": "lucy-night-prayer-1827",
+      "prompt_sha256": "1ac149cd0729ed0c0be635f2718cf061fbe8f4defd2eafc13a9dcda297ebad97",
+      "reference_sha256": [
+        "0c572bfd2ce45d2bb8de7b5c4b3a42d7fb9e4bc80655f9a66f188f9414ca8adb"
+      ],
+      "concur": true,
+      "scope": "Generation-only exact preflight; whole finished pixels require fresh review",
+      "references_actually_inspected": true,
+      "source": "https://www.josephsmithpapers.org/paper-summary/lucy-mack-smith-history-1844-1845/60",
+      "independent_source_read": "work/newton/lucy-night-prayer-1827-source.html",
+      "constraints": [
+        "Age must read as specified, not the older reference age.",
+        "Identity facial structure, natural skin and family resemblance preserved; Lucy drawing is historical reference, not verified photograph.",
+        "Purposeful gaze/action, coherent full hands, credible period dress, unchanged source facts required.",
+        "No unsupported recognizable rear-facing relative or exact childhood likeness claimed.",
+        "No new original workflow claim or visible disclaimer label."
+      ],
+      "finished_pixels_concur": false
+    },
+    {
+      "id": "lucy-comforts-joseph-1828",
+      "prompt_sha256": "6d5018c2ac691ea7618e38f88d5e006c042386177344b490b3d1b858f00f9134",
+      "reference_sha256": [
+        "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827",
+        "0c572bfd2ce45d2bb8de7b5c4b3a42d7fb9e4bc80655f9a66f188f9414ca8adb"
+      ],
+      "concur": true,
+      "scope": "Generation-only exact preflight; whole finished pixels require fresh review",
+      "references_actually_inspected": true,
+      "source": "https://www.josephsmithpapers.org/paper-summary/lucy-mack-smith-history-1844-1845/86",
+      "independent_source_read": "work/newton/lucy-comforts-joseph-1828-source.html",
+      "constraints": [
+        "Age must read as specified, not the older reference age.",
+        "Identity facial structure, natural skin and family resemblance preserved; Lucy drawing is historical reference, not verified photograph.",
+        "Purposeful gaze/action, coherent full hands, credible period dress, unchanged source facts required.",
+        "No unsupported recognizable rear-facing relative or exact childhood likeness claimed.",
+        "No new original workflow claim or visible disclaimer label."
+      ],
+      "finished_pixels_concur": false
+    },
+    {
+      "id": "children-nurse-lucy-1840",
+      "prompt_sha256": "dde947ffd55fbc42dd68eaff3fa3406d7b788cbfe613ae0c19e6cf79aba3e109",
+      "reference_sha256": [
+        "0c572bfd2ce45d2bb8de7b5c4b3a42d7fb9e4bc80655f9a66f188f9414ca8adb"
+      ],
+      "concur": true,
+      "scope": "Generation-only exact preflight; whole finished pixels require fresh review",
+      "references_actually_inspected": true,
+      "source": "https://www.josephsmithpapers.org/paper-summary/lucy-mack-smith-history-1844-1845/230",
+      "independent_source_read": "work/newton/children-nurse-lucy-1840-source.html",
+      "constraints": [
+        "Age must read as specified, not the older reference age.",
+        "Identity facial structure, natural skin and family resemblance preserved; Lucy drawing is historical reference, not verified photograph.",
+        "Purposeful gaze/action, coherent full hands, credible period dress, unchanged source facts required.",
+        "No unsupported recognizable rear-facing relative or exact childhood likeness claimed.",
+        "No new original workflow claim or visible disclaimer label."
+      ],
+      "finished_pixels_concur": false
+    }
+  ]
+}

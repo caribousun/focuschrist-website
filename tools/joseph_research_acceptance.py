@@ -101,7 +101,11 @@ REJECTED_GENERIC_HASHES={
 def section_label(p):
     """Only the numbered direct-child chapter eyebrow is navigation metadata."""
     parent=p.parent
-    return bool(parent and 'research-part' in parent.get('class',[]) and 'fc-eyebrow' in p.get('class',[]) and re.fullmatch(r'\d{2}\s*·\s*The research',p.get_text(' ',strip=True)))
+    if not (parent and 'research-part' in parent.get('class',[]) and 'fc-eyebrow' in p.get('class',[])):return False
+    from joseph_research_narrative_qa import SECTION_ORDER
+    try:number=int(parent['id'].rsplit('-',1)[1]);position=SECTION_ORDER.index(number)+1
+    except (KeyError,ValueError):return False
+    return p.get_text(' ',strip=True)==f'Chapter {position:02d}'
 
 def bibliography_paragraph(p):
     section=p.find_parent(class_='research-part')
@@ -110,6 +114,15 @@ def bibliography_paragraph(p):
 
 def check_entry_and_brevity(main):
     assert not main.select('.research-part, .research-trait, .research-table-wrap, .research-source'), 'Complete research must not be appended to main study'
+    bridge=main.select_one('#joseph-study-entrance')
+    if bridge:
+        assert not main.select('main figure, main img'),'Concise bridge cannot duplicate artwork ownership'
+        pills={a.get('href') for a in bridge.select('.fc-actions a.fc-button')}
+        assert {ROUTE,'answers/who-was-joseph-smith.html#joseph-family-life'}<=pills,'Bridge needs both complete reader journeys'
+        assert len(bridge.get_text(' ',strip=True).split())<=500,'Bridge must remain a concise entry'
+        assert bridge.select_one('#our-portrait a[href="'+ROUTE+'#portrait-section-11"]'),'Legacy portrait anchor must reach portrait-making chapter'
+        assert bridge.select_one('#portrait-research a[href="'+ROUTE+'"]'),'Legacy research anchor must reach complete journey'
+        return
     entry=main.select_one('#our-portrait')
     assert entry is not None, 'Missing portrait entry section'
     assert any(a.get('href','').split('#')[0]==ROUTE and 'fc-button' in a.get('class',[]) and 'research' in a.get_text().lower() for a in entry.select('a[href]')), 'Main portrait section needs a clear research pill to the separate route'

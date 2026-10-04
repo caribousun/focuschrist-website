@@ -1,0 +1,53 @@
+{
+  "reviewer": "Fermi",
+  "concur": true,
+  "scope": "Scoped independent historical/editorial, artwork, PDF, desktop-render and QA concurrence. Not a claim of complete current phone pixel review or publication.",
+  "candidate_files": {
+    "answers/who-was-joseph-smith.html": "d21fc01c640f6377137d56e675fa972050da5afc64a8ed227c6de53b6e8a6b16",
+    "joseph-smith-likeness.html": "bcb8c7f4486ecd0b18ee8789f97dc042143adf6d692c510ce7694e43da80c43b",
+    "joseph-smith-portrait-research.html": "b8275ebc6da0747510c06dfb9f31327848572f85a626404467f04a32c84e8a21",
+    "joseph-family-life.css": "af4eac66d90a94a370010dae71cd4e0d2430fd07a049ce0ce7d253454c249a2f",
+    "joseph-smith-research.css": "bc3cf1e7f24c047c0c1454c2c62a9b104031618418da884ecde698ab115b0add",
+    "docs/joseph-lucy-family-stories.json": "869e68ddc56d0b15a71828503459eed265d76b2ee5f841f75146e61b9eb604d9",
+    "docs/joseph-family-records.json": "d113f2e1afe800dfccfe45baad86f7c9a8d47f151e74eecb21514d3473b27445",
+    "docs/joseph-research-manuscript.html": "8587ead6f5cbf4c7728022a9c5e56ab8316137bbc8bc56f72a21d698c07728f5",
+    "tools/joseph_lucy_stories_qa.py": "ef4396e2c99400aa48b3f220939ed3fedeaba2a796252c6a24f5511ef07cc60b",
+    "joseph-smith-likeness.css": "b5daaca7404233c075ece4d9b05aa2986d26db2d638e428aa53bca74b2b5d165",
+    "joseph-study-bridge.js": "ce1fd057263862b617af42d4af3b34d15a70ccd7850505fa19164ef3cdc997c3",
+    "tools/build_joseph_life_enrichment.py": "6a59dd52354da7a5634769823250fe60a49df906ffb2a94c04e59548d28b9dbd"
+  },
+  "mandates": [
+    "Live Master and protected foundation read through connected Drive; preserved",
+    "Current 00B, Focus, 00I and 00C read",
+    "Latest direct owner presenter-voice, footer-only generic artwork disclosure, meaningful Lucy stories and whole-image review directions applied"
+  ],
+  "evidence": [
+    "Ten Lucy stories primary-source relationship and final captions independently reviewed; chronology, named relationships and actions preserved",
+    "All ten final generated images independently reviewed across identity, plausible event age, garments, gaze, hands, anatomy, source action and distinct purpose; exact receipts linked below",
+    "All sixteen research feature panels actually inspected at desktop1366; inherited narrow paragraph grid flagged, then corrected eye-color panel personally rechecked at70ch readable width",
+    "WHO native desktop article views01-05 inspected with actual art; prayer, mercy, baptism and care full-picture dialogs inspected with source/full-image/return controls",
+    "WHO care Continue Lesson closes modal and restores focus to exact story; URL hash remained empty in observed state",
+    "Prior phone archive/CSS views inspected; current WHO390 screenshot transport repeatedly timed out after refresh, so no claim of complete current phone pixel review",
+    "Final research PDF v7 all46 page regions plus six full pages independently inspected, source/factual limits and exact QA separately reviewed",
+    "Lucy QA exact default membership, derivative hashes/dimensions, srcset/original attributes and cross-page reuse guard reviewed; ten-story release requirement retained",
+    "Gateway mobile correction independently source-reviewed: replaces inherited fc-page-intro with scoped joseph-bridge-intro, concise margins and responsive heading; builder recognizes both classes and refreshes stylesheet token. No shared mobile hero behavior changed. Actual final phone pixels reviewed by root/Gary/Newton, not claimed by Fermi.",
+    "Gateway runtime independently read: fixed same-site legacy anchor routing via own-property lookup, malformed hash decode safely ignored.",
+    "Manuscript sole search-keywords attribute removed in memory reproduces exact previously semantically reviewed07ab bytes; narrative receipt renewed8587.",
+    "Read local Merlin M-2026-10-04-008 architecture review; infant-name question already answered by unnamed1828son/laterAlvin roster and later-Bible naming explanation. This reply is not a ten-story review."
+  ],
+  "receipts": [
+    "work/fermi/lucy-first-two-finished-review.json",
+    "work/fermi/lucy-four-corrected-finished-review.json",
+    "work/fermi/lucy-last-four-finished-review.json",
+    "work/fermi/lucy-ten-narrative-review.json",
+    "work/fermi/narrative-coverage-review.json",
+    "work/fermi/reader-journey-pdf-final-review.json",
+    "work/fermi/family-css-review.json"
+  ],
+  "open_content_defects": [],
+  "limitations": [
+    "Current phone final pixel coverage supplied independently by root/Newton, not falsely attributed to Fermi",
+    "Whole release readiness additionally requires final freeze, remaining QA, deployment and public verification by root",
+    "No claim missing original generation process or original Gazette issue recovered"
+  ]
+}

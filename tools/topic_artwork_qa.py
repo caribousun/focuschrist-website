@@ -57,6 +57,11 @@ allfigures=sum(sum(n.tag=='figure' and 'data-enriched-study-art' in n.attrs for 
 moved_ids = {"history-aaronic-priesthood", "history-joseph-baptizes-oliver", "history-oliver-baptizes-joseph", "history-melchizedek-priesthood", "history-apostles-ordain-joseph", "history-apostles-ordain-oliver"}
 moved = [n.attrs["data-enriched-study-art"] for p in (ROOT/"answers").glob("*.html") for n in nodes(p) if n.tag == "figure" and n.attrs.get("data-enriched-study-art") in moved_ids]
 assert len(moved) == 6 and set(moved) == moved_ids, "All six preserved historical figures must appear once in Answers"
-assert allfigures == len(placements) + len(moved_ids)
+family = json.loads((ROOT/'docs/joseph-life-enrichment.json').read_text(encoding='utf-8'))['scenes']
+family_ids = {'likeness-brothers' if s['id']=='joseph-hyrum-bond' else 'life-'+s['id'] for s in family}
+family_figures = [(p.relative_to(ROOT).as_posix(), n.attrs['data-enriched-study-art']) for p in (ROOT/'answers').glob('*.html') for n in nodes(p) if n.tag=='figure' and n.attrs.get('data-enriched-study-art') in family_ids]
+assert len(family_ids)==len(family_figures)==11 and {key for _,key in family_figures}==family_ids, 'Exact eleven reviewed family figures required'
+assert all(page=='answers/who-was-joseph-smith.html' for page,_ in family_figures), 'Family figures belong to Joseph biography'
+assert allfigures == len(placements) + len(moved_ids) + len(family_ids)
 css=(ROOT/'topic-art.css').read_text();assert 'object-fit:contain' in css and 'height:auto' in css
 print('TOPIC ARTWORK QA PASS: 21 contextual placements, individually approved assets, exact sources, responsive full-image viewing')

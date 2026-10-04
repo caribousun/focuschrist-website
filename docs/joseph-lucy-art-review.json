@@ -1,0 +1,581 @@
+{
+  "owning_page": "answers/who-was-joseph-smith.html",
+  "required_story_ids": [
+    "lucy-prayer-for-sophronia",
+    "lucy-hyrum-night-watch",
+    "lucy-lucy-farewell-mother",
+    "lucy-family-evening-circle",
+    "lucy-alvin-care-for-parents",
+    "lucy-lucy-night-prayer",
+    "lucy-hyrum-brings-chest",
+    "lucy-lucy-hope-forgiveness",
+    "lucy-father-baptism-embrace",
+    "lucy-children-care-for-lucy"
+  ],
+  "items": [
+    {
+      "id": "lucy-hyrum-brings-chest",
+      "asset": "assets/page-art/joseph-family/lucy-hyrum-brings-chest-20261004-v2.png",
+      "sha256": "8be9b6af26a08f6cc9771b34b7ea2ecbedffd510c588fac2a33e1b38ae40f6f0",
+      "width": 1122,
+      "height": 1402,
+      "reviews": [
+        {
+          "reviewer": "fermi",
+          "receipt": "docs/joseph-family-reviews/fermi-lucy-first-two-finished-review.json",
+          "sha256": "37f4e1eb763df8b6fd3b18f9d39f0455ec5c7947185cd4775473e0e2552d7c72"
+        },
+        {
+          "reviewer": "newton",
+          "receipt": "docs/joseph-family-reviews/newton-lucy-first-two-finished-review.json",
+          "sha256": "e623ed2097c866c5b51cad1f44eeb62c0f65f91ebdbfb115dc959271ab6a0823"
+        }
+      ],
+      "delivery": {
+        "default": "assets/page-art/joseph-family/lucy-hyrum-brings-chest-20261004-v2-960.webp",
+        "variants": [
+          {
+            "asset": "assets/page-art/joseph-family/lucy-hyrum-brings-chest-20261004-v2-480.webp",
+            "width": 480,
+            "height": 600,
+            "sha256": "c63ca3bcce3ae37da797be3947d8376eadbc3c7bca6b2529989c8b834724d5e3",
+            "bytes": 53524
+          },
+          {
+            "asset": "assets/page-art/joseph-family/lucy-hyrum-brings-chest-20261004-v2-960.webp",
+            "width": 960,
+            "height": 1200,
+            "sha256": "ac33dc7574c53c2295f06212cf571100f76bf7b60de40c926f5c124a34823684",
+            "bytes": 144728
+          },
+          {
+            "asset": "assets/page-art/joseph-family/lucy-hyrum-brings-chest-20261004-v2-1122.webp",
+            "width": 1122,
+            "height": 1402,
+            "sha256": "74ef56f24646657b99d3502cdba70dc0a31b783ac76660cbcc65bb710433c832",
+            "bytes": 174688
+          }
+        ]
+      }
+    },
+    {
+      "id": "lucy-father-baptism-embrace",
+      "asset": "assets/page-art/joseph-family/lucy-father-baptism-embrace-20261004-v2.png",
+      "sha256": "2673838f6f39bd77e0a0a96c88daf3769571221365de78001ea87b2d5fdc1bec",
+      "width": 1312,
+      "height": 1199,
+      "reviews": [
+        {
+          "reviewer": "fermi",
+          "receipt": "docs/joseph-family-reviews/fermi-lucy-first-two-finished-review.json",
+          "sha256": "37f4e1eb763df8b6fd3b18f9d39f0455ec5c7947185cd4775473e0e2552d7c72"
+        },
+        {
+          "reviewer": "newton",
+          "receipt": "docs/joseph-family-reviews/newton-lucy-first-two-finished-review.json",
+          "sha256": "e623ed2097c866c5b51cad1f44eeb62c0f65f91ebdbfb115dc959271ab6a0823"
+        }
+      ],
+      "delivery": {
+        "default": "assets/page-art/joseph-family/lucy-father-baptism-embrace-20261004-v2-960.webp",
+        "variants": [
+          {
+            "asset": "assets/page-art/joseph-family/lucy-father-baptism-embrace-20261004-v2-480.webp",
+            "width": 480,
+            "height": 439,
+            "sha256": "497da63d6cc726dd459002acb1ea370b59d1d942027fc7cefadf47a0136963a0",
+            "bytes": 33206
+          },
+          {
+            "asset": "assets/page-art/joseph-family/lucy-father-baptism-embrace-20261004-v2-960.webp",
+            "width": 960,
+            "height": 877,
+            "sha256": "8769febba713341c605cc30cc9c6dd6bc86cd1d821ac165765cfc7e291fff546",
+            "bytes": 103570
+          },
+          {
+            "asset": "assets/page-art/joseph-family/lucy-father-baptism-embrace-20261004-v2-1312.webp",
+            "width": 1312,
+            "height": 1199,
+            "sha256": "a0d72a08a7606c9cb7aee9ea1700250b525da3820e83d4387061547fe5a92b91",
+            "bytes": 165520
+          }
+        ]
+      }
+    },
+    {
+      "id": "lucy-prayer-for-sophronia",
+      "asset": "assets/page-art/joseph-family/lucy-prayer-for-sophronia-20261004-v2.png",
+      "sha256": "9fd5094dcded65f1406479bac45370960ed90e368fd86902e7f798d401b7524c",
+      "width": 1312,
+      "height": 1199,
+      "reviews": [
+        {
+          "reviewer": "fermi",
+          "receipt": "docs/joseph-family-reviews/fermi-lucy-four-corrected-finished-review.json",
+          "sha256": "0edde2c0c7a0427a7620ad7dd46211a5b8c99ce7e5cb50bb0ff0d4500a2dfa6c"
+        },
+        {
+          "reviewer": "newton",
+          "receipt": "docs/joseph-family-reviews/newton-lucy-four-corrected-finished-review.json",
+          "sha256": "37b5232bfda8edfcbc810de614de5ce0e2e04c5076b860b95f6da1b9a5f3c0a0"
+        }
+      ],
+      "delivery": {
+        "default": "assets/page-art/joseph-family/lucy-prayer-for-sophronia-20261004-v2-960.webp",
+        "variants": [
+          {
+            "asset": "assets/page-art/joseph-family/lucy-prayer-for-sophronia-20261004-v2-480.webp",
+            "width": 480,
+            "height": 439,
+            "sha256": "6b1e9072f291d6fa18091d15f59f906ba08ba3403d13ece53fd2e34202003cde",
+            "bytes": 28752
+          },
+          {
+            "asset": "assets/page-art/joseph-family/lucy-prayer-for-sophronia-20261004-v2-960.webp",
+            "width": 960,
+            "height": 877,
+            "sha256": "b9b9a4c3d17110a13d168b5c55397a5aea22d8d90dba5b82c66a1ef60e48f300",
+            "bytes": 73268
+          },
+          {
+            "asset": "assets/page-art/joseph-family/lucy-prayer-for-sophronia-20261004-v2-1312.webp",
+            "width": 1312,
+            "height": 1199,
+            "sha256": "fe9e7b36a338b72ebc20fc82a1e0ac96e07940306542a5a74eddc89896e15f22",
+            "bytes": 110556
+          }
+        ]
+      }
+    },
+    {
+      "id": "lucy-hyrum-night-watch",
+      "asset": "assets/page-art/joseph-family/lucy-hyrum-night-watch-20261004-v2.png",
+      "sha256": "11c233e11120fb4a0c139c38b74c982d8a5d9b1f26297f812bc534ec10f4c6eb",
+      "width": 1312,
+      "height": 1199,
+      "reviews": [
+        {
+          "reviewer": "fermi",
+          "receipt": "docs/joseph-family-reviews/fermi-lucy-four-corrected-finished-review.json",
+          "sha256": "0edde2c0c7a0427a7620ad7dd46211a5b8c99ce7e5cb50bb0ff0d4500a2dfa6c"
+        },
+        {
+          "reviewer": "newton",
+          "receipt": "docs/joseph-family-reviews/newton-lucy-four-corrected-finished-review.json",
+          "sha256": "37b5232bfda8edfcbc810de614de5ce0e2e04c5076b860b95f6da1b9a5f3c0a0"
+        }
+      ],
+      "delivery": {
+        "default": "assets/page-art/joseph-family/lucy-hyrum-night-watch-20261004-v2-960.webp",
+        "variants": [
+          {
+            "asset": "assets/page-art/joseph-family/lucy-hyrum-night-watch-20261004-v2-480.webp",
+            "width": 480,
+            "height": 439,
+            "sha256": "9c86543e099eb511f35fa04683bef9ead095d2dabc2f094e97b5f78b0b6880e6",
+            "bytes": 33508
+          },
+          {
+            "asset": "assets/page-art/joseph-family/lucy-hyrum-night-watch-20261004-v2-960.webp",
+            "width": 960,
+            "height": 877,
+            "sha256": "d276fe68b8cd1c1b33fe70a2b738f09637c9a187c7cab2db3c87cc5bbc252f5d",
+            "bytes": 96528
+          },
+          {
+            "asset": "assets/page-art/joseph-family/lucy-hyrum-night-watch-20261004-v2-1312.webp",
+            "width": 1312,
+            "height": 1199,
+            "sha256": "ed6fa6440efb5ef1d9a7bdb8ca3cbe51f0d3249b42167bd5608d8a796281f499",
+            "bytes": 144580
+          }
+        ]
+      }
+    },
+    {
+      "id": "lucy-family-evening-circle",
+      "asset": "assets/page-art/joseph-family/lucy-family-evening-circle-20261004-v2.png",
+      "sha256": "22140b52fe63db45595283d8a46693d63eda6cfea689289d3bbf49f5d069ef42",
+      "width": 1536,
+      "height": 1024,
+      "reviews": [
+        {
+          "reviewer": "fermi",
+          "receipt": "docs/joseph-family-reviews/fermi-lucy-four-corrected-finished-review.json",
+          "sha256": "0edde2c0c7a0427a7620ad7dd46211a5b8c99ce7e5cb50bb0ff0d4500a2dfa6c"
+        },
+        {
+          "reviewer": "newton",
+          "receipt": "docs/joseph-family-reviews/newton-lucy-four-corrected-finished-review.json",
+          "sha256": "37b5232bfda8edfcbc810de614de5ce0e2e04c5076b860b95f6da1b9a5f3c0a0"
+        }
+      ],
+      "delivery": {
+        "default": "assets/page-art/joseph-family/lucy-family-evening-circle-20261004-v2-960.webp",
+        "variants": [
+          {
+            "asset": "assets/page-art/joseph-family/lucy-family-evening-circle-20261004-v2-480.webp",
+            "width": 480,
+            "height": 320,
+            "sha256": "e6c90f36a21587c3f069077a008f70676d5e0f62897e676f78a9a69742944c67",
+            "bytes": 29586
+          },
+          {
+            "asset": "assets/page-art/joseph-family/lucy-family-evening-circle-20261004-v2-960.webp",
+            "width": 960,
+            "height": 640,
+            "sha256": "f51cd45e36471e744c7faa379d25beff095d07231f17cfc3b68705cd38fba91f",
+            "bytes": 75292
+          },
+          {
+            "asset": "assets/page-art/joseph-family/lucy-family-evening-circle-20261004-v2-1536.webp",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "699f614b3b6ee2e1aa884eb8fdb7f9883c5cd1eee7d33cc8cf3358f96fc910fc",
+            "bytes": 139538
+          }
+        ]
+      }
+    },
+    {
+      "id": "lucy-lucy-farewell-mother",
+      "asset": "assets/page-art/joseph-family/lucy-lucy-farewell-mother-20261004-v2.png",
+      "sha256": "aba0b4f95a558ae3ab2baf690f34dbe504ba6de627b834cf49e6ff3fac82e51e",
+      "width": 1010,
+      "height": 1557,
+      "reviews": [
+        {
+          "reviewer": "fermi",
+          "receipt": "docs/joseph-family-reviews/fermi-lucy-four-corrected-finished-review.json",
+          "sha256": "0edde2c0c7a0427a7620ad7dd46211a5b8c99ce7e5cb50bb0ff0d4500a2dfa6c"
+        },
+        {
+          "reviewer": "newton",
+          "receipt": "docs/joseph-family-reviews/newton-lucy-four-corrected-finished-review.json",
+          "sha256": "37b5232bfda8edfcbc810de614de5ce0e2e04c5076b860b95f6da1b9a5f3c0a0"
+        }
+      ],
+      "delivery": {
+        "default": "assets/page-art/joseph-family/lucy-lucy-farewell-mother-20261004-v2-960.webp",
+        "variants": [
+          {
+            "asset": "assets/page-art/joseph-family/lucy-lucy-farewell-mother-20261004-v2-480.webp",
+            "width": 480,
+            "height": 740,
+            "sha256": "d125e7b8ade3253ea015b75c5846a97cd937b9cb811af081dcb7ca092ef353e3",
+            "bytes": 69440
+          },
+          {
+            "asset": "assets/page-art/joseph-family/lucy-lucy-farewell-mother-20261004-v2-960.webp",
+            "width": 960,
+            "height": 1480,
+            "sha256": "1a6189eb8154a2e04a2b6078533b1765e8e057c1c2ede316036cdbb7f98b5998",
+            "bytes": 178402
+          },
+          {
+            "asset": "assets/page-art/joseph-family/lucy-lucy-farewell-mother-20261004-v2-1010.webp",
+            "width": 1010,
+            "height": 1557,
+            "sha256": "c8e2ae948d223c18588b068df147e9f81ffbb12e3f0031fd615b17be676f2d45",
+            "bytes": 190958
+          }
+        ]
+      }
+    },
+    {
+      "id": "lucy-alvin-care-for-parents",
+      "asset": "assets/page-art/joseph-family/lucy-alvin-care-for-parents-20261004-v2.png",
+      "sha256": "918406125bba7e104a27fb6d46c16b046ce811eabeac68f23c7d782b17c2d9ca",
+      "width": 1122,
+      "height": 1402,
+      "reviews": [
+        {
+          "reviewer": "fermi",
+          "receipt": "docs/joseph-family-reviews/fermi-lucy-last-four-finished-review.json",
+          "sha256": "4c274cda7e87fdc13a287bd494b0d8a805b13d7adcc4bdfdf62c564cfaa6f896"
+        },
+        {
+          "reviewer": "newton",
+          "receipt": "docs/joseph-family-reviews/newton-lucy-last-four-finished-review.json",
+          "sha256": "344cf8c1c4a1e76f570917610303e161a51d60005511db3a083ffb1b46265299"
+        }
+      ],
+      "delivery": {
+        "default": "assets/page-art/joseph-family/lucy-alvin-care-for-parents-20261004-v2-960.webp",
+        "variants": [
+          {
+            "asset": "assets/page-art/joseph-family/lucy-alvin-care-for-parents-20261004-v2-480.webp",
+            "width": 480,
+            "height": 600,
+            "sha256": "7ceaa34bd3789b5b0dfbe2452e961d881f33bc9aa70c9cd0e29f83cabbd07416",
+            "bytes": 29650
+          },
+          {
+            "asset": "assets/page-art/joseph-family/lucy-alvin-care-for-parents-20261004-v2-960.webp",
+            "width": 960,
+            "height": 1200,
+            "sha256": "8c04119b7a1dc6458bdeb1ab2c54871083b51b3faa08a8ce18db12a80d7e1b4e",
+            "bytes": 78426
+          },
+          {
+            "asset": "assets/page-art/joseph-family/lucy-alvin-care-for-parents-20261004-v2-1122.webp",
+            "width": 1122,
+            "height": 1402,
+            "sha256": "9eb88477f35c4b12132d6e37160c12d48bcf167ea5a8f77b3988f1c66b42918b",
+            "bytes": 96332
+          }
+        ]
+      }
+    },
+    {
+      "id": "lucy-lucy-night-prayer",
+      "asset": "assets/page-art/joseph-family/lucy-lucy-night-prayer-20261004-v2.png",
+      "sha256": "c9099ba2a38341e5748ac899f46e1778f1c2afdd6e9c1670bddae002ed2cebbc",
+      "width": 1010,
+      "height": 1557,
+      "reviews": [
+        {
+          "reviewer": "fermi",
+          "receipt": "docs/joseph-family-reviews/fermi-lucy-last-four-finished-review.json",
+          "sha256": "4c274cda7e87fdc13a287bd494b0d8a805b13d7adcc4bdfdf62c564cfaa6f896"
+        },
+        {
+          "reviewer": "newton",
+          "receipt": "docs/joseph-family-reviews/newton-lucy-last-four-finished-review.json",
+          "sha256": "344cf8c1c4a1e76f570917610303e161a51d60005511db3a083ffb1b46265299"
+        }
+      ],
+      "delivery": {
+        "default": "assets/page-art/joseph-family/lucy-lucy-night-prayer-20261004-v2-960.webp",
+        "variants": [
+          {
+            "asset": "assets/page-art/joseph-family/lucy-lucy-night-prayer-20261004-v2-480.webp",
+            "width": 480,
+            "height": 740,
+            "sha256": "789cf0a3a74bbdb9db5d8d566bde513d149202695519aed4b8c211e8aca3b2de",
+            "bytes": 49788
+          },
+          {
+            "asset": "assets/page-art/joseph-family/lucy-lucy-night-prayer-20261004-v2-960.webp",
+            "width": 960,
+            "height": 1480,
+            "sha256": "6a420ef856030755308123da0133b70de49e1776d766a5032b23807e0b89403e",
+            "bytes": 130690
+          },
+          {
+            "asset": "assets/page-art/joseph-family/lucy-lucy-night-prayer-20261004-v2-1010.webp",
+            "width": 1010,
+            "height": 1557,
+            "sha256": "02f18e692e69634d5b3dde8300385cfd958188e4b6669f035f17893bffe43a4f",
+            "bytes": 140306
+          }
+        ]
+      }
+    },
+    {
+      "id": "lucy-lucy-hope-forgiveness",
+      "asset": "assets/page-art/joseph-family/lucy-lucy-hope-forgiveness-20261004-v2.png",
+      "sha256": "a5df4364518543bc111508738426fefbb46a28260d2d99bf6469ad6b06125838",
+      "width": 1312,
+      "height": 1199,
+      "reviews": [
+        {
+          "reviewer": "fermi",
+          "receipt": "docs/joseph-family-reviews/fermi-lucy-last-four-finished-review.json",
+          "sha256": "4c274cda7e87fdc13a287bd494b0d8a805b13d7adcc4bdfdf62c564cfaa6f896"
+        },
+        {
+          "reviewer": "newton",
+          "receipt": "docs/joseph-family-reviews/newton-lucy-last-four-finished-review.json",
+          "sha256": "344cf8c1c4a1e76f570917610303e161a51d60005511db3a083ffb1b46265299"
+        }
+      ],
+      "delivery": {
+        "default": "assets/page-art/joseph-family/lucy-lucy-hope-forgiveness-20261004-v2-960.webp",
+        "variants": [
+          {
+            "asset": "assets/page-art/joseph-family/lucy-lucy-hope-forgiveness-20261004-v2-480.webp",
+            "width": 480,
+            "height": 439,
+            "sha256": "1a1d02a6c5ba752683644ccae4b007787320ea2041d01f72011f22f53b7fa3ff",
+            "bytes": 38728
+          },
+          {
+            "asset": "assets/page-art/joseph-family/lucy-lucy-hope-forgiveness-20261004-v2-960.webp",
+            "width": 960,
+            "height": 877,
+            "sha256": "95b916dded462535977ac5c58394686c70e9ac3ff3c1df9c68fbea42c3b22bcd",
+            "bytes": 116948
+          },
+          {
+            "asset": "assets/page-art/joseph-family/lucy-lucy-hope-forgiveness-20261004-v2-1312.webp",
+            "width": 1312,
+            "height": 1199,
+            "sha256": "3f52824ce514776a8ad1dab04de36758e89aea7d3b7228b6f9c506f90028f543",
+            "bytes": 174076
+          }
+        ]
+      }
+    },
+    {
+      "id": "lucy-children-care-for-lucy",
+      "asset": "assets/page-art/joseph-family/lucy-children-care-for-lucy-20261004-v2.png",
+      "sha256": "2af1b05d23813e455dff6f5f059c12b7c5816ea5287d81ef7ddb4cb88b913db3",
+      "width": 1374,
+      "height": 1145,
+      "reviews": [
+        {
+          "reviewer": "fermi",
+          "receipt": "docs/joseph-family-reviews/fermi-lucy-last-four-finished-review.json",
+          "sha256": "4c274cda7e87fdc13a287bd494b0d8a805b13d7adcc4bdfdf62c564cfaa6f896"
+        },
+        {
+          "reviewer": "newton",
+          "receipt": "docs/joseph-family-reviews/newton-lucy-last-four-finished-review.json",
+          "sha256": "344cf8c1c4a1e76f570917610303e161a51d60005511db3a083ffb1b46265299"
+        }
+      ],
+      "delivery": {
+        "default": "assets/page-art/joseph-family/lucy-children-care-for-lucy-20261004-v2-960.webp",
+        "variants": [
+          {
+            "asset": "assets/page-art/joseph-family/lucy-children-care-for-lucy-20261004-v2-480.webp",
+            "width": 480,
+            "height": 400,
+            "sha256": "96ddaeeb24a97955e531490613168d6b6c13c8f4e03d91e1a43bab5fd91a8de5",
+            "bytes": 33970
+          },
+          {
+            "asset": "assets/page-art/joseph-family/lucy-children-care-for-lucy-20261004-v2-960.webp",
+            "width": 960,
+            "height": 800,
+            "sha256": "1958e4e222ff4cce9b14ee0749803e5b3d9ee9b7a7ee59e9694b7445c46a743f",
+            "bytes": 89452
+          },
+          {
+            "asset": "assets/page-art/joseph-family/lucy-children-care-for-lucy-20261004-v2-1374.webp",
+            "width": 1374,
+            "height": 1145,
+            "sha256": "e13303019149556406c0a34527e3f3bc214e3ee9576b8bd97e1500ebc1cd637d",
+            "bytes": 139978
+          }
+        ]
+      }
+    }
+  ],
+  "generation_records": [
+    {
+      "path": "docs/joseph-family-reviews/fermi-lucy-family-first-two-prompts.json",
+      "sha256": "7c473a26ad343ac8e8f674afd16188ef2323d47b4ad163be3472e24894b89698",
+      "role": "base-generation-prompts"
+    },
+    {
+      "path": "docs/joseph-family-reviews/fermi-lucy-family-remaining-eight-prompts.json",
+      "sha256": "7a8c895927978f23039be8db60013b1ba58a628900f536b08229fd5c4aa663b7",
+      "role": "base-generation-prompts"
+    },
+    {
+      "path": "docs/joseph-family-reviews/newton-lucy-1813-lamp-edit-preflight.json",
+      "sha256": "529e44e12669787ce492b1eb77f08875199dfd586c1f733a6309ebf75c116193",
+      "role": "independent-preflight"
+    },
+    {
+      "path": "docs/joseph-family-reviews/newton-lucy-alvin-prayer-preflight.json",
+      "sha256": "c0777a6b4bddc943f5a730b02b24502b749b336b84494d19c9693d2cd4527a45",
+      "role": "independent-preflight"
+    },
+    {
+      "path": "docs/joseph-family-reviews/newton-lucy-circle-farewell-preflight.json",
+      "sha256": "93d613658cdbe8619f2dbe13b7a98ed2a03f2b6557d5493ba8760b9eb2bcbe33",
+      "role": "independent-preflight"
+    },
+    {
+      "path": "docs/joseph-family-reviews/newton-lucy-family-first-two-preflight.json",
+      "sha256": "16cb875fa664a12a85b8531aecac39097e51bd5e0328871078bd57d5bebdf204",
+      "role": "independent-preflight"
+    },
+    {
+      "path": "docs/joseph-family-reviews/newton-lucy-family-remaining-eight-preflight.json",
+      "sha256": "cda0ed3263573c6a11dfbea418b3de5fae6521ab8041a2588f15562d0fe1060c",
+      "role": "independent-preflight"
+    },
+    {
+      "path": "docs/joseph-family-reviews/newton-lucy-first-two-age-edit-preflight.json",
+      "sha256": "a41b4ba60323ae8e712b53d49f5d345c22e1c32366ce2d7d56b30ae7a1fed78c",
+      "role": "independent-preflight"
+    },
+    {
+      "path": "docs/joseph-family-reviews/newton-lucy-mercy-nursing-preflight.json",
+      "sha256": "3d79d6ab2d597d53029300ee9353da3633767cf11c17b32dce56f7d28b582d57",
+      "role": "independent-preflight"
+    },
+    {
+      "path": "docs/joseph-family-reviews/fermi-lucy-1813-lamp-edits.json",
+      "sha256": "515947cba36b51a262194776ed8f33275f4e701028602636aece9a007cdfe4f8",
+      "role": "exact-correction-prompts"
+    },
+    {
+      "path": "docs/joseph-family-reviews/fermi-lucy-alvin-prayer-corrections.json",
+      "sha256": "7b61b54bc095fb94abe1b65bea05adbb08b14e879612e809e46b6ae88835ab34",
+      "role": "exact-correction-prompts"
+    },
+    {
+      "path": "docs/joseph-family-reviews/fermi-lucy-circle-farewell-corrections.json",
+      "sha256": "3d7b00e43a32b5d977398dafc7c423a8283035247dd5a6093455503552bc6a80",
+      "role": "exact-correction-prompts"
+    },
+    {
+      "path": "docs/joseph-family-reviews/fermi-lucy-first-two-age-edits.json",
+      "sha256": "a1c80a05d559e5ad7cdcd1e9f991e22ad305e5e36971aac5aec499714f433808",
+      "role": "exact-correction-prompts"
+    },
+    {
+      "path": "docs/joseph-family-reviews/fermi-lucy-mercy-nursing-corrections.json",
+      "sha256": "ababb67e11306661ee3a415e46cbf7c51dc0e282d2bdc58c0cd6344e0ef3d44a",
+      "role": "exact-correction-prompts"
+    }
+  ],
+  "story_generation_mapping": {
+    "lucy-prayer-for-sophronia": {
+      "base_prompt_id": "sophronia-prayer-1813",
+      "correction_prompt_id": "lucy-prayer-for-sophronia-candle"
+    },
+    "lucy-hyrum-night-watch": {
+      "base_prompt_id": "hyrum-night-watch-1813",
+      "correction_prompt_id": "lucy-hyrum-night-watch-candle"
+    },
+    "lucy-lucy-farewell-mother": {
+      "base_prompt_id": "lucy-mother-farewell-1816",
+      "correction_prompt_id": "lucy-mother-farewell-1816-correction"
+    },
+    "lucy-family-evening-circle": {
+      "base_prompt_id": "family-evening-circle-1823",
+      "correction_prompt_id": "family-evening-circle-1823-correction"
+    },
+    "lucy-alvin-care-for-parents": {
+      "base_prompt_id": "alvin-last-counsel-1823",
+      "correction_prompt_id": "alvin-last-counsel-1823-correction"
+    },
+    "lucy-lucy-night-prayer": {
+      "base_prompt_id": "lucy-night-prayer-1827",
+      "correction_prompt_id": "lucy-night-prayer-1827-correction"
+    },
+    "lucy-hyrum-brings-chest": {
+      "base_prompt_id": "lucy-hyrum-brings-chest-1827",
+      "correction_prompt_id": "lucy-hyrum-brings-chest-1827-age-only"
+    },
+    "lucy-lucy-hope-forgiveness": {
+      "base_prompt_id": "lucy-comforts-joseph-1828",
+      "correction_prompt_id": "lucy-comforts-joseph-1828-correction"
+    },
+    "lucy-father-baptism-embrace": {
+      "base_prompt_id": "lucy-father-baptism-embrace-1830",
+      "correction_prompt_id": "lucy-father-baptism-embrace-1830-age-only"
+    },
+    "lucy-children-care-for-lucy": {
+      "base_prompt_id": "children-nurse-lucy-1840",
+      "correction_prompt_id": "children-nurse-lucy-1840-correction"
+    }
+  }
+}

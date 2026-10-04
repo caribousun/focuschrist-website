@@ -1,0 +1,38 @@
+{
+  "concur_source_diff": true,
+  "scope": "Exact Joseph architecture QA consumer repairs; no product mutation",
+  "file_sha256": {
+    "docs/answer-opening-baseline.json": "f04e26c45030211dcb27b5d4fd86d1fa02611f00d3e4b3a218a9017e45f204f6",
+    "docs/hero-home-height-audit-20260929.json": "4192f2b4b1bfba0ff159c80d874a2640b2aa34f2df54224d7d8d58e28500591d",
+    "tools/focused_answers_qa.py": "fe57725430c6be1fdcbe6b5e73dc3826517f0b9a61a517a0625ec0280b48319b",
+    "tools/production_hardening_qa.py": "a90f6c92525ca5fa740151bc38b4cd8e7b8fee488fa8af8d86a25fb934b10976",
+    "tools/topic_artwork_details_qa.py": "cf810e2d8d3367326f3d6d0f850b9e0f74ca13996926e7ec93cec7e6b143ac27",
+    "tools/topic_artwork_qa.py": "fbe9e8f72589d2210fc345e2787a4517378bd3dad43e106ab976fe88ba6f6b12",
+    "tools/home_hero_height_browser_qa.js": "8cd27a6df78545c4b7d54702cb2c9133f0a0bff70c23629670f3fb1acb18821d",
+    "tools/unified_opening_browser_qa.js": "eaa6fd27aa19cdde703048c83ec0514db36dd066bb05f933c4474ea446fc48cf"
+  },
+  "who_baseline_independent_digest": "5ea994c4556fc05a2aeffadd8383d26e35a22f8f4c8f934d52db98f5fc828a16",
+  "who_image_count_normalized": 38,
+  "retained_contracts": [
+    "49 complete hero geometry checks at6ordinary/2enlarged profiles",
+    "Five additive compact gateway cases",
+    "26 exact registry-backed WHO study adapters; existing99/3 inventory retained",
+    "11 exact migrated family enriched figures",
+    "JPEG real format verification and positive dimensions",
+    "Strict existing bridge helper for exact gateway route",
+    "Only one home-height record changed; all other records preserved"
+  ],
+  "execution_status": "All11 final isolated Chromium suites exit0; each script hash matches final file. Initial failed fixture attempts preserved separately.",
+  "failed_ci_preserved": "37188887130",
+  "browser_results": {
+    "unified-opening.json": 294,
+    "unified-opening-enlarged.json": 98,
+    "unified-opening-gateway.json": 5,
+    "canonical-presentation.json": {
+      "pages": 130,
+      "checks": 390,
+      "failures": 0
+    }
+  },
+  "all_final_hashes_verified": true
+}

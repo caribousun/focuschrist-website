@@ -11,20 +11,29 @@ def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def check():
  data=json.loads((ROOT/'docs/joseph-life-enrichment.json').read_text(encoding='utf-8-sig'))['scenes']
  records=json.loads((ROOT/'docs/joseph-life-art-review.json').read_text())['originals']
- assert {r['id'] for r in data}=={r['id'] for r in records}==EXPECTED and len(data)==len(records)==10,'Ten deliberate family scenes required'
+ assert {r['id'] for r in data}==EXPECTED|{'joseph-hyrum-bond'} and {r['id'] for r in records}==EXPECTED and len(data)==11 and len(records)==10,'Ten deliberate family scenes required'
  assert len({r['sha256'] for r in records})==10,'Repeated bytes cannot count as originals'
- doc=BeautifulSoup((ROOT/'joseph-smith-likeness.html').read_text(encoding='utf-8'),'html.parser')
+ doc=BeautifulSoup((ROOT/'answers/who-was-joseph-smith.html').read_text(encoding='utf-8'),'html.parser')
+ # Normalize nested-route local assets for existing exact source-delivery assertions.
+ for node in doc.select('[src], [href], [data-source-original]'):
+  for key in ('src','href','data-source-original'):
+   if node.get(key,'').startswith('../'):node[key]=node[key][3:]
  check_artwork_badges_and_footer(doc)
  closing=json.loads((ROOT/'docs/joseph-life-enrichment.json').read_text(encoding='utf-8-sig'))['closing']
  assert closing['visitor_source_note']=='The original letter to Phelps is not extant; a contemporary letterbook copy survives.'
  assert closing['visitor_source_note'] in doc.get_text(' ',strip=True), 'Substantive Phelps source limitation must remain visible'
  assert closing.get('interpretation_limit'), 'Closing internal provenance must remain preserved'
  assert len(doc.select('img'))>=20,'Main study needs at least20 meaningful picture placements; count is necessary only'
- assert len(doc.select('.joseph-life-scene'))==10,'Ten enriched scene articles required'
+ assert len([n for n in doc.select('.joseph-life-scene') if not n.find_parent(id='lucy-family-stories')])==11,'Original ten family scenes plus reviewed brothers scene remain; Lucy ten have their separate strict gate'
  for row in data:
+  if row['id']=='joseph-hyrum-bond':
+   prior=next(r for r in json.loads((ROOT/'docs/art-study-image-review.json').read_text())['pages']['joseph-smith-likeness.html'] if r['slot']=='brothers')
+   assert prior['reviewed'] and prior['owner_approved'] and prior['sha256']==row['image']['sha256']==digest(ROOT/prior['asset'])
+   assert doc.select_one('#life-joseph-hyrum-bond a[href="'+prior['asset']+'"]'),'Moved brothers full-size action missing'
+   continue
   r=next(x for x in records if x['id']==row['id']);im=row['image'];section=doc.select_one('#life-'+row['id']);assert section
   assert row['image_status']=='accepted' and r['sha256']==im['sha256']==digest(ROOT/im['src'])
-  assert r['asset']==im['src'] and r['owning_page']=='joseph-smith-likeness.html' and r['owning_section']==section['id']
+  assert r['asset']==im['src'] and r['owning_page']=='answers/who-was-joseph-smith.html' and r['owning_section']==section['id']
   figure=section.select_one('figure');assert figure and figure.get('data-exclusive-artwork')==section['id']
   title=section.select_one('h3');duplicate=figure.select_one('h4.joseph-life-caption-title')
   assert title and not title.has_attr('hidden') and title.get_text(strip=True)==row['heading'],'Visible scene title required'
@@ -40,6 +49,16 @@ def check():
   for key in ['fermi_preflight','newton_preflight','fermi_finished_pixels','newton_finished_pixels']:
    receipt=json.loads((ROOT/r[key]).read_text());check_exact_review(r,receipt,finished=key.endswith('finished_pixels'))
    if key.endswith('finished_pixels'):assert receipt.get('whole_image_review') is True,'Whole exact final-image review missing'
+ archives=json.loads((ROOT/'docs/joseph-family-archival-art.json').read_text(encoding='utf-8'))['items']
+ assert len(archives)==5 and len({a['asset'] for a in archives})==5,'Five distinct historical family references required'
+ for archive in archives:
+  assert archive['kind']=='historical_reference' and archive['owning_page']=='answers/who-was-joseph-smith.html'
+  asset=ROOT/archive['asset'];assert digest(asset)==archive['sha256'],'Archival source bytes changed'
+  with Image.open(asset) as image:assert image.size==(archive['width'],archive['height'])
+  section=doc.find(id=archive['owning_section']);assert section is not None
+  image=section.select_one('img[src="'+archive['asset']+'"]');assert image and image['alt']==archive['alt']
+  figure=image.find_parent('figure');assert archive['caption'] in figure.get_text(' ',strip=True),'Dated source caption missing'
+  assert figure.select_one('a[href="'+archive['asset']+'"]') and figure.select_one('a[href="'+archive['source_url']+'"]'),'Archive full image and actual catalogue required'
  delivery=json.loads((ROOT/'docs/joseph-art-delivery.json').read_text()); owners={}
  for manifest in ['joseph-life-art-review.json','joseph-portrait-research-art-review.json']:
   for r in json.loads((ROOT/'docs'/manifest).read_text())['originals']:owners[r['asset']]=r['owning_page']
@@ -53,9 +72,9 @@ def check():
    with Image.open(p) as image:assert image.format=='WEBP' and image.size==(v['width'],v['height'])
    assert abs(v['width']/v['height']-d['width']/d['height'])<0.005,'Delivery must preserve source proportions'
    hashes.append({'sha256':v['sha256'],'owning_page':owners[source]})
-  page=BeautifulSoup((ROOT/owners[source]).read_text(encoding='utf-8'),'html.parser');images=page.select('img[data-source-original="'+source+'"]');assert len(images)==1
-  img=images[0];assert img['src']==d['default'] and img.get('loading')=='lazy' and img.get('decoding')=='async'
-  assert img.get('srcset')==', '.join(v['asset']+' '+str(v['width'])+'w' for v in d['variants']) and img.get('sizes')
+  page=BeautifulSoup((ROOT/owners[source]).read_text(encoding='utf-8'),'html.parser');images=page.select('img[data-source-original="'+source+'"], img[data-source-original="../'+source+'"]');assert len(images)==1
+  img=images[0];assert img['src'].removeprefix('../')==d['default'] and img.get('loading')=='lazy' and img.get('decoding')=='async'
+  assert img.get('srcset','').replace('../','')==', '.join(v['asset']+' '+str(v['width'])+'w' for v in d['variants']) and img.get('sizes')
  sizes={ (ROOT/s).stat().st_size for s in delivery }|{v['bytes'] for d in delivery.values() for v in d['variants']};pages={};cache={}
  for p in ROOT.rglob('*.html'):
   if any(t in {'work','outputs','node_modules','.git'} for t in p.relative_to(ROOT).parts):continue

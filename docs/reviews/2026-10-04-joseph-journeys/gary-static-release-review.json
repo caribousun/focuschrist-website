@@ -1,0 +1,21 @@
+{
+  "terminal_commands": 88,
+  "terminal_exit_zero": 88,
+  "raw_batch_exit": 1,
+  "raw_snapshot_drift_reason": "Generated browser QA reports changed concurrently; raw evidence preserved.",
+  "source_inputs_stable": true,
+  "source_input_snapshot_sha256": "0480f0b73273321929792bfdd229e9060d8fd88f4d53743efc4a21c2d422bf79",
+  "all_static_commands_pass": true,
+  "source_files_modified": [
+    "docs/answer-opening-baseline.json",
+    "tools/topic_artwork_qa.py",
+    "tools/topic_body_picture_qa.py dependency tools/production_hardening_qa.py",
+    "tools/topic_artwork_details_qa.py",
+    "tools/focused_answers_qa.py"
+  ],
+  "peer_reviews": [
+    "Fermi exact scope and valid/invalid JPEG checks affirmative",
+    "Newton exact static contracts affirmative"
+  ],
+  "product_files_changed": false
+}

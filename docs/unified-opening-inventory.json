@@ -1,7 +1,7 @@
 {
   "canonical_count": 130,
-  "hero_count": 50,
-  "excluded_count": 80,
+  "hero_count": 49,
+  "excluded_count": 81,
   "pages": [
     {
       "path": "index.html",
@@ -180,8 +180,9 @@
     },
     {
       "path": "joseph-smith-likeness.html",
-      "hero": true,
-      "template": "standard"
+      "hero": false,
+      "template": "compact-gateway",
+      "reason": "Compact two-destination Joseph gateway; illustrated evidence and family stories belong to their owning journeys."
     },
     {
       "path": "search.html",

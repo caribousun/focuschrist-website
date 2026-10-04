@@ -1,0 +1,23 @@
+{
+  "scope": "WHO family and Lucy narrative only; no publication",
+  "hashes": {
+    "answers/who-was-joseph-smith.html": "d21fc01c640f6377137d56e675fa972050da5afc64a8ed227c6de53b6e8a6b16",
+    "joseph-family-life.css": "af4eac66d90a94a370010dae71cd4e0d2430fd07a049ce0ce7d253454c249a2f",
+    "tools/build_joseph_life_enrichment.py": "fbab84d5ae0e1647bd58b32d98688720972dc28bad6df7947e84ad1a21b816c3",
+    "docs/joseph-lucy-family-stories.json": "869e68ddc56d0b15a71828503459eed265d76b2ee5f841f75146e61b9eb604d9",
+    "docs/joseph-lucy-art-review.json": "f3695a4f7eceb46df7baddf18d7453643ca74fa0a65fbd41e0ad60a0318dbd2f"
+  },
+  "lucy_stories": 10,
+  "lucy_originals": 10,
+  "previous_family_scenes": 11,
+  "archival_family_images": 5,
+  "total_img_elements": 37,
+  "footer_unchanged": true,
+  "builder_idempotent": true,
+  "native_review": {
+    "desktop": "1366x900: heading clear of52px fixed header, ten-story menu, full-image/source/return panel inspected",
+    "phone": "390x844: compact menu and final-story click y210 heading, no horizontal overflow, readable story paragraphs and whole-image mercy panel/source/return controls",
+    "whole_pixels": "All ten exact originals have independent Fermi and Newton final-image receipts"
+  },
+  "release_gate": "joseph_lucy_stories_qa.py PASS 10/10"
+}

@@ -1,0 +1,36 @@
+/* Family content belongs to the Joseph biography; styles stay within its section. */
+.joseph-life-enrichment .joseph-life-nav{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}
+.joseph-life-enrichment .joseph-life-nav a{border:1px solid var(--fc-line);border-radius:var(--fc-radius);padding:10px 14px;color:var(--fc-gold-light);text-decoration:none}
+.joseph-life-enrichment .joseph-life-nav a:hover,.joseph-life-enrichment .joseph-life-nav a:focus-visible{background:rgba(255,255,255,.06);text-decoration:underline}
+.joseph-life-enrichment .joseph-life-scene,.joseph-life-enrichment .joseph-life-closing,.joseph-life-enrichment .joseph-family-record{padding:32px 0;border-top:1px solid var(--fc-line);scroll-margin-top:120px}
+.joseph-life-enrichment h3,.joseph-life-enrichment h4{color:var(--fc-gold-light)}
+.joseph-life-enrichment p{line-height:1.7}
+.joseph-life-enrichment .joseph-life-reflection{border-left:3px solid var(--fc-gold-light);padding:12px 18px;margin:24px 0}
+.joseph-life-enrichment .joseph-life-source-note{font-size:.94rem}
+.joseph-life-enrichment .likeness-art{display:block;margin:28px 0}
+.joseph-life-enrichment .likeness-art>a{display:block;width:100%}
+.joseph-life-enrichment .likeness-art img{display:block;width:100%;height:auto;object-fit:contain}
+.joseph-life-enrichment .likeness-art figcaption{padding-top:18px}
+.joseph-life-enrichment .joseph-family-table{width:100%;margin:20px 0}
+.joseph-life-enrichment table{width:100%;border-collapse:collapse;table-layout:fixed}
+.joseph-life-enrichment th,.joseph-life-enrichment td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--fc-line);overflow-wrap:anywhere}
+.joseph-life-enrichment th:first-child{width:46%}
+.joseph-life-enrichment .joseph-life-caption-title[hidden]{display:none!important}
+@media(max-width:580px){.joseph-life-enrichment .joseph-life-nav a{width:100%;box-sizing:border-box}.joseph-life-enrichment .joseph-life-scene,.joseph-life-enrichment .joseph-life-closing,.joseph-life-enrichment .joseph-family-record{padding:24px 0}.joseph-life-enrichment th,.joseph-life-enrichment td{padding:10px 8px;font-size:.94rem}}
+
+.joseph-life-enrichment .joseph-family-archives{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:24px;margin:28px 0}
+.joseph-life-enrichment .joseph-family-archive{margin:0;min-width:0}
+.joseph-life-enrichment .joseph-family-archive>a{display:block;text-align:center}
+.joseph-life-enrichment .joseph-family-archive img{width:auto;max-width:100%;height:auto;max-height:640px;object-fit:contain;margin-inline:auto}
+.joseph-life-enrichment .joseph-family-archive figcaption{padding-top:16px}
+
+.joseph-life-enrichment .joseph-family-list{margin:20px 0;border:1px solid var(--fc-line);border-radius:12px;padding:14px 18px}
+.joseph-life-enrichment .joseph-family-list summary{cursor:pointer;color:var(--fc-gold-light);font-weight:600;line-height:1.5}
+
+/* Compact, keyboard-accessible menus keep the story visible on small screens. */
+.joseph-page-menu,.joseph-life-enrichment .joseph-story-menu{margin:24px 0;border:1px solid var(--fc-line);border-radius:12px;padding:14px 18px}
+.joseph-page-menu>summary,.joseph-life-enrichment .joseph-story-menu>summary{cursor:pointer;color:var(--fc-gold-light);font-weight:600;line-height:1.5}
+.joseph-page-menu .fc-study-nav,.joseph-life-enrichment .joseph-story-menu .joseph-life-nav{margin:16px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.joseph-page-menu .fc-study-nav a,.joseph-life-enrichment .joseph-story-menu .joseph-life-nav a{border:0;border-radius:0;padding:8px;text-align:left}
+body.fc-answer-depth main section[id],.joseph-life-enrichment article[id]{scroll-margin-top:140px}
+@media(max-width:580px){.joseph-page-menu .fc-study-nav,.joseph-life-enrichment .joseph-story-menu .joseph-life-nav{grid-template-columns:1fr}}

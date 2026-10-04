@@ -1,0 +1,11 @@
+{
+  "result": "PASS",
+  "commands": 36,
+  "all_terminal_exit_zero": true,
+  "all_inputs_stable": true,
+  "commit": "81922bf594c5536294cce26e010e3f89fd6010b6",
+  "working_input_snapshot_sha256": "392b5845b43cfb1db4cd091904ed44c5cb9dedc2b0a50233ac01eb48edf89469",
+  "results_sha256": "b018c238d4123d8baac2c04fa72971be3d95664a97cffa717d4130a26d4a4b7d",
+  "failure_history": "first-pass-failed-results.json",
+  "correction": "Prior runtime pass belonged to pre-inventory-edit inputs and was incorrectly carried forward. Current complete CIgroup rerun supersedes it."
+}

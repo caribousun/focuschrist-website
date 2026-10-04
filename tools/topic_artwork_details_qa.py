@@ -19,6 +19,12 @@ def parents(n):
  while n.parent:
   n=n.parent;yield n
 errors=[];count=0;preserved=0;panels=0;life_assets=[];gap_assets=[];sitewide_assets=[]
+joseph_family=json.loads((ROOT/'docs/joseph-life-enrichment.json').read_text(encoding='utf-8'))['scenes']
+joseph_lucy=json.loads((ROOT/'docs/joseph-lucy-family-stories.json').read_text(encoding='utf-8'))['stories']
+joseph_archive=json.loads((ROOT/'docs/joseph-family-archival-art.json').read_text(encoding='utf-8'))['items']
+joseph_review={s['image']['src'] for s in joseph_family+joseph_lucy} | {s['asset'] for s in joseph_archive}
+assert len(joseph_family)==11 and len(joseph_lucy)==10 and len(joseph_archive)==5 and len(joseph_review)==26, 'Exact reviewed Joseph family additions required'
+joseph_assets=[]
 temple_records=json.loads((ROOT/'docs/temples/art-ready.json').read_text(encoding='utf-8'))
 temple_review={v['full']:(k,v) for k,v in temple_records.items()}
 temple_assets=[]
@@ -197,6 +203,10 @@ for page in [*sorted((ROOT/'answers').glob('*.html')),ROOT/'general-conference.h
    if 'data-full-image-viewer' in a.attrs:errors.append(page.name+': new picture must open study options first')
    if a.attrs.get('aria-haspopup')!='dialog':errors.append(page.name+': new picture dialog semantics missing')
    (life_assets if 'data-life-after-death-art' in container.attrs else gap_assets).append(relative_asset)
+  elif relative_asset in joseph_review:
+   assert page.relative_to(ROOT).as_posix()=='answers/who-was-joseph-smith.html', 'Joseph family artwork ownership mismatch'
+   assert a.attrs.get('aria-haspopup')=='dialog' and a.attrs.get('data-topic-study'), 'Joseph family contextual study adapter missing'
+   joseph_assets.append(relative_asset)
   elif 'data-full-image-viewer' not in a.attrs:errors.append(page.name+': native image fallback missing')
   if not local_asset(page,a.attrs['href']).is_file():errors.append(page.name+': full image missing')
 life_review=json.loads((ROOT/'docs/life-after-death-art-review.json').read_text(encoding='utf-8'))['artworks']
@@ -217,7 +227,8 @@ expected_journey={k for k,v in journey_review.items() if v['owner'].startswith('
 assert len(journey_assets)==len(set(journey_assets)) and set(journey_assets)==expected_journey, 'Journey parent exact artwork inventory mismatch'
 assert len(hg_assets)==len(set(hg_assets))==16 and set(hg_assets)==set(hg_review), 'Holy Ghost exact body inventory mismatch'
 assert len(temple_assets)==len(set(temple_assets))==len(temple_review)==21 and set(temple_assets)==set(temple_review), 'Twenty chapter pictures and the owner-requested Nephi companion must reach the shared study adapter'
-assert (count-len(temple_assets)-len(father_assets)-len(plan_assets)-len(hg_assets)-len(covenant_assets)-len(journey_assets)-len(bible_assets)-len(settle_assets)-len(life_assets)-len(gap_assets)-len(sitewide_assets)-len(focused_assets)-len(relocated_assets)-len(bom_assets),preserved)==(99,3),(count,preserved)
+assert len(joseph_assets)==len(set(joseph_assets))==26 and set(joseph_assets)==joseph_review, 'All reviewed Joseph family pictures must reach study details exactly once'
+assert (count-len(joseph_assets)-len(temple_assets)-len(father_assets)-len(plan_assets)-len(hg_assets)-len(covenant_assets)-len(journey_assets)-len(bible_assets)-len(settle_assets)-len(life_assets)-len(gap_assets)-len(sitewide_assets)-len(focused_assets)-len(relocated_assets)-len(bom_assets),preserved)==(99,3),(count,preserved)
 # Life After Death lifted its old illustrated feature panel into full reading
 # sections. All twelve remaining panels still undergo the structural checks.
 assert set(plan_assets)==set(plan_review) and len(plan_assets)==16, 'All sixteen Plan originals must reach the shared study adapter'

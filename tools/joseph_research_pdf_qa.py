@@ -18,11 +18,18 @@ def norm(value):
 def navigation_checks(document):
     """Inspect actual PDF annotations and painted labels, not builder receipts."""
     titles = {norm(row[1]): row[2]-1 for row in document.get_toc()}
-    destinations = [('Cover', 0), ('Contents', titles.get(norm('Contents'))),
-        ('Evidence', titles.get(norm('Masks and life-derived art'))),
-        ('Facial Features', titles.get(norm('Trait audit: facial structure'))),
-        ('Creation', titles.get(norm('How our portrait was created'))),
-        ('Sources', titles.get(norm('Sources: original records and art')))]
+    manuscript=BeautifulSoup(HTML.read_text(encoding='utf-8'),'html.parser')
+    def section_page(key):
+        section=manuscript.find(id=key)
+        assert section is not None, 'Missing PDF navigation source '+key
+        heading=section.find(['h2','h3','h4'])
+        assert heading is not None, 'Missing PDF navigation heading '+key
+        return titles.get(norm(heading.get_text(' ',strip=True)))
+    destinations = [('Cover',0),('Contents',titles.get(norm('Contents'))),
+        ('Evidence',section_page('portrait-section-4')),
+        ('Facial Features',section_page('portrait-section-6')),
+        ('The Portrait',section_page('portrait-section-11')),
+        ('Sources',section_page('portrait-section-13'))]
     failures, cue_failures, panel_failures = [], [], []
     checked_buttons = checked_source_links = 0
     for number, page in enumerate(document, 1):
@@ -173,7 +180,7 @@ def main():
               'image_placements':image_placements,'expected_image_placements':expected_image_placements,
               'original_image_links':len(original_uris),'missing_original_image_links':missing_original_uris,
               'limits':'Text/link/geometry checks do not replace independent rendered-page visual review.'}
-    report['pass'] = not (missing or missing_uris or missing_original_uris or bad_internal or empty_pages or out_of_bounds) and image_placements == expected_image_placements and len(bookmarks) == expected_bookmarks and len(original_uris) == 10
+    report['pass'] = not (missing or missing_uris or missing_original_uris or bad_internal or empty_pages or out_of_bounds) and image_placements == expected_image_placements and len(bookmarks) == expected_bookmarks and len(original_uris) == 14
     report.update(navigation)
     report['orphan_headings'] = orphan_headings
     report['pass'] = report['pass'] and not (navigation['header_navigation_errors'] or navigation['link_cue_errors'] or navigation['panel_clearance_errors'] or orphan_headings)

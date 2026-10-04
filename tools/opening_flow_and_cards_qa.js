@@ -13,7 +13,7 @@ const sectionCopyPages = new Set([
   'answers/look-unto-me-doctrine-and-covenants-6-36.html',
   'answers/bible-and-book-of-mormon-together.html',
   'answers/melchizedek-priesthood-restoration.html',
-  'birth-of-christ.html', 'joseph-smith-likeness.html',
+  'birth-of-christ.html',
   'art-study/the-living-christ.html', 'art-study/the-good-shepherd.html',
   'art-study/suffer-the-little-children.html', 'art-study/be-still.html'
 ]);
@@ -40,6 +40,12 @@ for (const page of pages) {
     assert(!artCopy.closest('.fc-mobile-opening-notes'), page + ': Art introduction must not move below Continue');
   }
   const opening = w.document.querySelector('.fc-mobile-cued-opening');
+  if(page==='joseph-smith-likeness.html'){
+    assert(!opening,'Compact gateway must not acquire the former mobile hero');
+    assert.equal(w.document.querySelector('.joseph-bridge-intro h1').textContent,'Explore his life and the portrait');
+    assert.deepEqual([...w.document.querySelectorAll('#joseph-study-entrance .fc-button--primary')].map(a=>a.getAttribute('href')),['answers/who-was-joseph-smith.html#joseph-family-life','joseph-smith-portrait-research.html']);
+    assert(!w.document.querySelector('.fc-mobile-scroll-cue'),'Compact gateway must expose destinations directly');
+  }
   if (opening) {
     assert.equal(w.document.querySelectorAll('.fc-mobile-hero-surround').length, 0, page + ': owner rejected side treatment');
     const cue = opening.querySelector('.fc-mobile-scroll-cue');
@@ -91,5 +97,5 @@ assert(pages.includes('answers/holy-ghost.html'), 'New Holy Ghost opening must b
 assert(pages.includes('answers/plan-of-salvation.html'), 'New Plan of Salvation opening must be included');
 assert(pages.includes('timeline.html'), 'New Timeline opening must be included');
 for(const page of ['timelines/latter-day-saint-church-history-timeline.html','timelines/willie-and-martin-handcart-map.html','timelines/life-of-christ-journey-map.html'])assert(pages.includes(page),'New timeline experience opening must be included: '+page);
-assert.equal(openings, 47, 'Every canonical opening, including the three timeline experiences, must retain its invitation');
-console.log('Opening flow and cards QA PASS: 47 opening invitations; complete Answers rows.');
+assert.equal(openings, 46, 'Every canonical opening, including the three timeline experiences, must retain its invitation');
+console.log('Opening flow and cards QA PASS: 46 opening invitations and the compact Joseph gateway; complete Answers rows.');

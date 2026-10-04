@@ -23,6 +23,17 @@ sources.update({r['key']:r for r in json.loads((ROOT/'docs/resource-thumbnail-le
 coverage=json.loads((ROOT/'docs/resource-page-coverage.json').read_text()); errors=[];count=0
 canonical={urlsplit(x.text).path.lstrip('/') or 'index.html' for x in ET.parse(ROOT/'sitemap.xml').getroot().findall('{*}url/{*}loc')}
 assert set(coverage)==canonical,'Every canonical page needs explicit coverage'
+# The former mask card is now a source-linked figure in the complete portrait journey.
+from bs4 import BeautifulSoup
+bridge=BeautifulSoup((ROOT/'joseph-smith-likeness.html').read_text(encoding='utf-8'),'html.parser')
+assert not bridge.select('main img, [data-resource-key]'), 'Compact bridge must not duplicate source pictures'
+assert coverage['answers/who-was-joseph-smith.html']==['unique-joseph-film','unique-joseph-andersen'], 'Biography retains its two contextual official video sources'
+mask=sources['joseph-hyrum-byu-4109-masks']
+research=BeautifulSoup((ROOT/'joseph-smith-portrait-research.html').read_text(encoding='utf-8'),'html.parser')
+figures=[f for f in research.select('figure') if f.select_one('img[src="'+mask['local_thumbnail']+'"]')]
+assert figures and all(f.select_one('a[href="'+mask['photograph_source_url']+'"]') for f in figures), 'Migrated cast figures must retain exact BYU catalogue and rights source'
+assert hashlib.sha256((ROOT/mask['local_thumbnail']).read_bytes()).hexdigest()==mask['sha256'], 'Reviewed cast photograph bytes changed'
+assert all(f.find('img').get('width')==str(mask['width']) and f.find('img').get('height')==str(mask['height']) for f in figures), 'Migrated cast intrinsic dimensions changed'
 for file,keys in coverage.items():
  p=ROOT/file;parser=Cards();parser.feed(p.read_text());actual=[x['key'] for x in parser.cards]
  if actual!=keys:errors.append(f'{file}: coverage differs: {actual}')

@@ -199,6 +199,28 @@
       ]
     },
     {
+      "title": "A brother keeps watch",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/joseph-family/lucy-hyrum-night-watch-20261004-v2-960.webp",
+      "fullImage": "/assets/page-art/joseph-family/lucy-hyrum-night-watch-20261004-v2.png",
+      "alt": "Young Hyrum sits beside Joseph’s bed, gently supporting his brother’s covered leg.",
+      "id": "art-8892487b6d8c",
+      "occurrences": [
+        {
+          "id": "source-3e5294584618",
+          "page": "/answers/who-was-joseph-smith.html",
+          "pageTitle": "Joseph Smith",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/joseph-family/lucy-hyrum-night-watch-20261004-v2.png\"]:has(img[src=\"../assets/page-art/joseph-family/lucy-hyrum-night-watch-20261004-v2-960.webp\"])",
+          "title": "A brother keeps watch"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "A careful handoff at night",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/collection-watchfulness-05-960.webp",
@@ -1243,7 +1265,7 @@
         {
           "id": "source-a35d69af221a",
           "page": "/joseph-smith-portrait-research.html",
-          "pageTitle": "The evidence behind our Joseph",
+          "pageTitle": "In Search of Joseph’s Likeness",
           "category": "Gospel Studies",
           "kind": "topic",
           "selector": "a[href=\"assets/research/joseph-documents/pratt-1874-p47.png\"]:has(img[src=\"assets/research/joseph-documents/pratt-1874-p47.png\"])",
@@ -1300,24 +1322,68 @@
     },
     {
       "title": "A moment of warmth",
-      "category": "Church History",
+      "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/joseph-smith-likeness/warmth-960.webp",
       "fullImage": "/assets/page-art/joseph-smith-likeness/warmth.webp",
       "alt": "Joseph Smith rests a hand on a wooden fence in warm daylight",
       "id": "art-867edfb106f6",
       "occurrences": [
         {
-          "id": "source-f97ad5f57892",
-          "page": "/joseph-smith-likeness.html",
-          "pageTitle": "The Face Behind the History",
-          "category": "Church History",
+          "id": "source-efeadb52cda4",
+          "page": "/joseph-smith-portrait-research.html",
+          "pageTitle": "In Search of Joseph’s Likeness",
+          "category": "Gospel Studies",
           "kind": "topic",
           "selector": "a[href=\"assets/page-art/joseph-smith-likeness/warmth.webp\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/warmth-960.webp\"])",
           "title": "A moment of warmth"
         }
       ],
       "categories": [
-        "Church History"
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "A mother speaks of mercy",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/joseph-family/lucy-lucy-hope-forgiveness-20261004-v2-960.webp",
+      "fullImage": "/assets/page-art/joseph-family/lucy-lucy-hope-forgiveness-20261004-v2.png",
+      "alt": "Lucy sits close to Joseph and speaks with compassion as he looks toward her.",
+      "id": "art-85d6919b0261",
+      "occurrences": [
+        {
+          "id": "source-f34d5014d43f",
+          "page": "/answers/who-was-joseph-smith.html",
+          "pageTitle": "Joseph Smith",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/joseph-family/lucy-lucy-hope-forgiveness-20261004-v2.png\"]:has(img[src=\"../assets/page-art/joseph-family/lucy-lucy-hope-forgiveness-20261004-v2-960.webp\"])",
+          "title": "A mother speaks of mercy"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "A mother’s faith travels with her daughter",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/joseph-family/lucy-lucy-farewell-mother-20261004-v2-960.webp",
+      "fullImage": "/assets/page-art/joseph-family/lucy-lucy-farewell-mother-20261004-v2.png",
+      "alt": "Lucy Mack Smith embraces her elderly mother, Lydia, at a doorway.",
+      "id": "art-c2a035768be6",
+      "occurrences": [
+        {
+          "id": "source-87704172e52f",
+          "page": "/answers/who-was-joseph-smith.html",
+          "pageTitle": "Joseph Smith",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/joseph-family/lucy-lucy-farewell-mother-20261004-v2.png\"]:has(img[src=\"../assets/page-art/joseph-family/lucy-lucy-farewell-mother-20261004-v2-960.webp\"])",
+          "title": "A mother’s faith travels with her daughter"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -1707,7 +1773,7 @@
         {
           "id": "source-62c141af0aa1",
           "page": "/joseph-smith-portrait-research.html",
-          "pageTitle": "The evidence behind our Joseph",
+          "pageTitle": "In Search of Joseph’s Likeness",
           "category": "Gospel Studies",
           "kind": "topic",
           "selector": "a[href=\"assets/research/joseph-originals/profile-sitting-1842-retry.png\"]:has(img[src=\"assets/research/joseph-originals/profile-sitting-1842-retry-1536.webp\"])",
@@ -1830,24 +1896,24 @@
     },
     {
       "title": "A quiet page",
-      "category": "Church History",
+      "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/joseph-smith-likeness/writing-960.webp",
       "fullImage": "/assets/page-art/joseph-smith-likeness/writing.webp",
       "alt": "Joseph Smith writes beside a sunlit window",
       "id": "art-536451e8d1e8",
       "occurrences": [
         {
-          "id": "source-561c877d1dae",
-          "page": "/joseph-smith-likeness.html",
-          "pageTitle": "The Face Behind the History",
-          "category": "Church History",
+          "id": "source-8e7175c90a45",
+          "page": "/joseph-smith-portrait-research.html",
+          "pageTitle": "In Search of Joseph’s Likeness",
+          "category": "Gospel Studies",
           "kind": "topic",
           "selector": "a[href=\"assets/page-art/joseph-smith-likeness/writing.webp\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/writing-960.webp\"])",
           "title": "A quiet page"
         }
       ],
       "categories": [
-        "Church History"
+        "Gospel Studies"
       ]
     },
     {
@@ -2094,24 +2160,24 @@
     },
     {
       "title": "A small gift amid demanding work",
-      "category": "Church History",
+      "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-wardrobe-v2-1536.webp",
       "fullImage": "/assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-wardrobe-v2.png",
       "alt": "Joseph offers a small comb to Emma, who looks toward the gift, both wearing earthy period clothing",
       "id": "art-30da387593ee",
       "occurrences": [
         {
-          "id": "source-379db927a746",
-          "page": "/joseph-smith-likeness.html",
-          "pageTitle": "The Face Behind the History",
-          "category": "Church History",
+          "id": "source-9ef33a38a3ec",
+          "page": "/answers/who-was-joseph-smith.html",
+          "pageTitle": "Joseph Smith",
+          "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-wardrobe-v2.png\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-wardrobe-v2-1536.webp\"])",
+          "selector": "a[href=\"../assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-wardrobe-v2.png\"]:has(img[src=\"../assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-wardrobe-v2-1536.webp\"])",
           "title": "A small gift amid demanding work"
         }
       ],
       "categories": [
-        "Church History"
+        "Gospel Studies"
       ]
     },
     {
@@ -2125,7 +2191,7 @@
         {
           "id": "source-4b8ba31230b8",
           "page": "/joseph-smith-portrait-research.html",
-          "pageTitle": "The evidence behind our Joseph",
+          "pageTitle": "In Search of Joseph’s Likeness",
           "category": "Gospel Studies",
           "kind": "topic",
           "selector": "a[href=\"assets/research/joseph-originals/expression-mouth-cheek-comparison.png\"]:has(img[src=\"assets/research/joseph-originals/expression-mouth-cheek-comparison-1536.webp\"])",
@@ -2178,6 +2244,28 @@
       ],
       "categories": [
         "Pioneers"
+      ]
+    },
+    {
+      "title": "A son’s joy at his father’s baptism",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/joseph-family/lucy-father-baptism-embrace-20261004-v2-960.webp",
+      "fullImage": "/assets/page-art/joseph-family/lucy-father-baptism-embrace-20261004-v2.png",
+      "alt": "Joseph embraces his father beside the water after his father’s baptism.",
+      "id": "art-9153415ca9ff",
+      "occurrences": [
+        {
+          "id": "source-e8b5aec9aff4",
+          "page": "/answers/who-was-joseph-smith.html",
+          "pageTitle": "Joseph Smith",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/joseph-family/lucy-father-baptism-embrace-20261004-v2.png\"]:has(img[src=\"../assets/page-art/joseph-family/lucy-father-baptism-embrace-20261004-v2-960.webp\"])",
+          "title": "A son’s joy at his father’s baptism"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -2235,7 +2323,7 @@
         {
           "id": "source-c389304a1329",
           "page": "/joseph-smith-portrait-research.html",
-          "pageTitle": "The evidence behind our Joseph",
+          "pageTitle": "In Search of Joseph’s Likeness",
           "category": "Gospel Studies",
           "kind": "topic",
           "selector": "a[href=\"assets/research/joseph-originals/adopted-hair-study.png\"]:has(img[src=\"assets/research/joseph-originals/adopted-hair-study-1536.webp\"])",
@@ -2394,28 +2482,6 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/04-nephi-sees-healing-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/04-nephi-sees-healing-960.webp\"])",
           "title": "A vision of the Savior’s compassion"
-        }
-      ],
-      "categories": [
-        "Gospel Studies"
-      ]
-    },
-    {
-      "title": "A visit does not freeze a lifetime of grooming",
-      "category": "Gospel Studies",
-      "thumbnail": "/assets/research/joseph-originals/quincy-stubble-study-1536.webp",
-      "fullImage": "/assets/research/joseph-originals/quincy-stubble-study.png",
-      "alt": "A visit does not freeze a lifetime of grooming",
-      "id": "art-de3ed6e3981b",
-      "occurrences": [
-        {
-          "id": "source-d2862608f84a",
-          "page": "/joseph-smith-portrait-research.html",
-          "pageTitle": "The evidence behind our Joseph",
-          "category": "Gospel Studies",
-          "kind": "topic",
-          "selector": "a[href=\"assets/research/joseph-originals/quincy-stubble-study.png\"]:has(img[src=\"assets/research/joseph-originals/quincy-stubble-study-1536.webp\"])",
-          "title": "A visit does not freeze a lifetime of grooming"
         }
       ],
       "categories": [
@@ -2706,7 +2772,7 @@
         {
           "id": "source-8d77f50f8b97",
           "page": "/joseph-smith-portrait-research.html",
-          "pageTitle": "The evidence behind our Joseph",
+          "pageTitle": "In Search of Joseph’s Likeness",
           "category": "Gospel Studies",
           "kind": "topic",
           "selector": "a[href=\"assets/research/joseph-originals/adopted-mouth-study.png\"]:has(img[src=\"assets/research/joseph-originals/adopted-mouth-study-1536.webp\"])",
@@ -2785,24 +2851,24 @@
     },
     {
       "title": "Across the table",
-      "category": "Church History",
+      "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/joseph-smith-likeness/conversation-960.webp",
       "fullImage": "/assets/page-art/joseph-smith-likeness/conversation.webp",
       "alt": "Joseph Smith speaks with two listeners around a table",
       "id": "art-30cf86e83e2c",
       "occurrences": [
         {
-          "id": "source-361ed4a2b96d",
-          "page": "/joseph-smith-likeness.html",
-          "pageTitle": "The Face Behind the History",
-          "category": "Church History",
+          "id": "source-4bfe28294404",
+          "page": "/joseph-smith-portrait-research.html",
+          "pageTitle": "In Search of Joseph’s Likeness",
+          "category": "Gospel Studies",
           "kind": "topic",
           "selector": "a[href=\"assets/page-art/joseph-smith-likeness/conversation.webp\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/conversation-960.webp\"])",
           "title": "Across the table"
         }
       ],
       "categories": [
-        "Church History"
+        "Gospel Studies"
       ]
     },
     {
@@ -2821,6 +2887,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/plan-of-salvation/labor-full.webp\"]:has(img[src=\"/assets/page-art/plan-of-salvation/labor-800.webp\"])",
           "title": "Adam and Eve begin life outside Eden"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Alexander Hale Smith",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/research/joseph-family/alexander-hale-later-life.jpg",
+      "fullImage": "/assets/research/joseph-family/alexander-hale-later-life.jpg",
+      "alt": "Alexander Hale Smith in later life, reproduced in the 1915 History of Decatur County, Iowa.",
+      "id": "art-9e061cc5ed71",
+      "occurrences": [
+        {
+          "id": "source-ce7e80a1ac81",
+          "page": "/answers/who-was-joseph-smith.html",
+          "pageTitle": "Joseph Smith",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/research/joseph-family/alexander-hale-later-life.jpg\"]:has(img[src=\"../assets/research/joseph-family/alexander-hale-later-life.jpg\"])",
+          "title": "Alexander Hale Smith"
         }
       ],
       "categories": [
@@ -2916,6 +3004,28 @@
       ]
     },
     {
+      "title": "Alvin’s charge to his family",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/joseph-family/lucy-alvin-care-for-parents-20261004-v2-960.webp",
+      "fullImage": "/assets/page-art/joseph-family/lucy-alvin-care-for-parents-20261004-v2.png",
+      "alt": "Hyrum holds Alvin’s hand and listens beside his bed.",
+      "id": "art-d76a4cd6d1ca",
+      "occurrences": [
+        {
+          "id": "source-8771301a3153",
+          "page": "/answers/who-was-joseph-smith.html",
+          "pageTitle": "Joseph Smith",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/joseph-family/lucy-alvin-care-for-parents-20261004-v2.png\"]:has(img[src=\"../assets/page-art/joseph-family/lucy-alvin-care-for-parents-20261004-v2-960.webp\"])",
+          "title": "Alvin’s charge to his family"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "An 1842 engraving after Maudsley",
       "category": "Gospel Studies",
       "thumbnail": "/assets/research/joseph-documents/pelton-after-maudsley-1842.jpg",
@@ -2926,7 +3036,7 @@
         {
           "id": "source-defb77a295f1",
           "page": "/joseph-smith-portrait-research.html",
-          "pageTitle": "The evidence behind our Joseph",
+          "pageTitle": "In Search of Joseph’s Likeness",
           "category": "Gospel Studies",
           "kind": "topic",
           "selector": "a[href=\"assets/research/joseph-documents/pelton-after-maudsley-1842.jpg\"]:has(img[src=\"assets/research/joseph-documents/pelton-after-maudsley-1842.jpg\"])",
@@ -2948,7 +3058,7 @@
         {
           "id": "source-fb6253750d8e",
           "page": "/joseph-smith-portrait-research.html",
-          "pageTitle": "The evidence behind our Joseph",
+          "pageTitle": "In Search of Joseph’s Likeness",
           "category": "Gospel Studies",
           "kind": "topic",
           "selector": "a[href=\"assets/research/joseph-documents/haven-1890-p621.png\"]:has(img[src=\"assets/research/joseph-documents/haven-1890-p621.png\"])",
@@ -3280,7 +3390,7 @@
         {
           "id": "source-d799fc387f08",
           "page": "/joseph-smith-portrait-research.html",
-          "pageTitle": "The evidence behind our Joseph",
+          "pageTitle": "In Search of Joseph’s Likeness",
           "category": "Gospel Studies",
           "kind": "topic",
           "selector": "a[href=\"assets/research/joseph-documents/gazette-transmission-1916-p101.png\"]:has(img[src=\"assets/research/joseph-documents/gazette-transmission-1916-p101.png\"])",
@@ -3965,24 +4075,24 @@
     },
     {
       "title": "Beside my brother",
-      "category": "Church History",
+      "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/joseph-smith-likeness/brothers-960.webp",
       "fullImage": "/assets/page-art/joseph-smith-likeness/brothers.webp",
       "alt": "Joseph smiles at Hyrum with an arm around his shoulders; both wear shirts with rolled sleeves and suspenders",
       "id": "art-9e1c46263385",
       "occurrences": [
         {
-          "id": "source-ce05796c976f",
-          "page": "/joseph-smith-likeness.html",
-          "pageTitle": "The Face Behind the History",
-          "category": "Church History",
+          "id": "source-bcb9475b0da8",
+          "page": "/answers/who-was-joseph-smith.html",
+          "pageTitle": "Joseph Smith",
+          "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"assets/page-art/joseph-smith-likeness/brothers.webp\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/brothers-960.webp\"])",
+          "selector": "a[href=\"../assets/page-art/joseph-smith-likeness/brothers.webp\"]:has(img[src=\"../assets/page-art/joseph-smith-likeness/brothers-960.webp\"])",
           "title": "Beside my brother"
         }
       ],
       "categories": [
-        "Church History"
+        "Gospel Studies"
       ]
     },
     {
@@ -4282,7 +4392,7 @@
         {
           "id": "source-20dd5e1ae756",
           "page": "/joseph-smith-portrait-research.html",
-          "pageTitle": "The evidence behind our Joseph",
+          "pageTitle": "In Search of Joseph’s Likeness",
           "category": "Gospel Studies",
           "kind": "topic",
           "selector": "a[href=\"assets/research/joseph-originals/viewpoint-jaw-outline-comparison.png\"]:has(img[src=\"assets/research/joseph-originals/viewpoint-jaw-outline-comparison-1536.webp\"])",
@@ -4326,7 +4436,7 @@
         {
           "id": "source-687241fede6c",
           "page": "/joseph-smith-portrait-research.html",
-          "pageTitle": "The evidence behind our Joseph",
+          "pageTitle": "In Search of Joseph’s Likeness",
           "category": "Gospel Studies",
           "kind": "topic",
           "selector": "a[href=\"assets/research/joseph-originals/adopted-nose-study.png\"]:has(img[src=\"assets/research/joseph-originals/adopted-nose-study-1536.webp\"])",
@@ -5309,24 +5419,24 @@
     },
     {
       "title": "Choosing a life together",
-      "category": "Church History",
+      "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-wardrobe-v2-1536.webp",
       "fullImage": "/assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-wardrobe-v2.png",
       "alt": "Young Joseph and Emma pose together with joined hands in brown winter clothing",
       "id": "art-c2a7f9036414",
       "occurrences": [
         {
-          "id": "source-26f7b2d3b65e",
-          "page": "/joseph-smith-likeness.html",
-          "pageTitle": "The Face Behind the History",
-          "category": "Church History",
+          "id": "source-44bc8f90e9cf",
+          "page": "/answers/who-was-joseph-smith.html",
+          "pageTitle": "Joseph Smith",
+          "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-wardrobe-v2.png\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-wardrobe-v2-1536.webp\"])",
+          "selector": "a[href=\"../assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-wardrobe-v2.png\"]:has(img[src=\"../assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-wardrobe-v2-1536.webp\"])",
           "title": "Choosing a life together"
         }
       ],
       "categories": [
-        "Church History"
+        "Gospel Studies"
       ]
     },
     {
@@ -6388,6 +6498,28 @@
       ]
     },
     {
+      "title": "David Hyrum Smith",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/research/joseph-family/david-hyrum-adult.jpg",
+      "fullImage": "/assets/research/joseph-family/david-hyrum-adult.jpg",
+      "alt": "David Hyrum Smith as a young adult, photographed around 1870 by Charles R. Savage.",
+      "id": "art-32ac1df25e5b",
+      "occurrences": [
+        {
+          "id": "source-b215c78f2430",
+          "page": "/answers/who-was-joseph-smith.html",
+          "pageTitle": "Joseph Smith",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/research/joseph-family/david-hyrum-adult.jpg\"]:has(img[src=\"../assets/research/joseph-family/david-hyrum-adult.jpg\"])",
+          "title": "David Hyrum Smith"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Death is not the end of a person",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/plan-of-salvation/between-800.webp",
@@ -6697,24 +6829,24 @@
     },
     {
       "title": "Emma’s work as a scribe",
-      "category": "Church History",
+      "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-wardrobe-v2-1536.webp",
       "fullImage": "/assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-wardrobe-v2.png",
       "alt": "Emma in a printed cotton dress writes with a quill while Joseph sits nearby",
       "id": "art-d117f116ef39",
       "occurrences": [
         {
-          "id": "source-a194e18d7c3d",
-          "page": "/joseph-smith-likeness.html",
-          "pageTitle": "The Face Behind the History",
-          "category": "Church History",
+          "id": "source-6d9341ce7a52",
+          "page": "/answers/who-was-joseph-smith.html",
+          "pageTitle": "Joseph Smith",
+          "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-wardrobe-v2.png\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-wardrobe-v2-1536.webp\"])",
+          "selector": "a[href=\"../assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-wardrobe-v2.png\"]:has(img[src=\"../assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-wardrobe-v2-1536.webp\"])",
           "title": "Emma’s work as a scribe"
         }
       ],
       "categories": [
-        "Church History"
+        "Gospel Studies"
       ]
     },
     {
@@ -7598,6 +7730,28 @@
       ]
     },
     {
+      "title": "Gathering to listen",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/joseph-family/lucy-family-evening-circle-20261004-v2-960.webp",
+      "fullImage": "/assets/page-art/joseph-family/lucy-family-evening-circle-20261004-v2.png",
+      "alt": "Joseph speaks to his family as they gather around him by candlelight.",
+      "id": "art-22adda6eb1d0",
+      "occurrences": [
+        {
+          "id": "source-33843da198cf",
+          "page": "/answers/who-was-joseph-smith.html",
+          "pageTitle": "Joseph Smith",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/joseph-family/lucy-family-evening-circle-20261004-v2.png\"]:has(img[src=\"../assets/page-art/joseph-family/lucy-family-evening-circle-20261004-v2-960.webp\"])",
+          "title": "Gathering to listen"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Gazette Transmission 1916 Date",
       "category": "Gospel Studies",
       "thumbnail": "/assets/research/joseph-documents/gazette-transmission-1916-date.png",
@@ -7608,7 +7762,7 @@
         {
           "id": "source-475963de7149",
           "page": "/joseph-smith-portrait-research.html",
-          "pageTitle": "The evidence behind our Joseph",
+          "pageTitle": "In Search of Joseph’s Likeness",
           "category": "Gospel Studies",
           "kind": "topic",
           "selector": "a[href=\"assets/research/joseph-documents/gazette-transmission-1916-date.png\"]:has(img[src=\"assets/research/joseph-documents/gazette-transmission-1916-date.png\"])",
@@ -7630,7 +7784,7 @@
         {
           "id": "source-097be0b40e1b",
           "page": "/joseph-smith-portrait-research.html",
-          "pageTitle": "The evidence behind our Joseph",
+          "pageTitle": "In Search of Joseph’s Likeness",
           "category": "Gospel Studies",
           "kind": "topic",
           "selector": "a[href=\"assets/research/joseph-documents/gazette-transmission-1916-p103.png\"]:has(img[src=\"assets/research/joseph-documents/gazette-transmission-1916-p103.png\"])",
@@ -7652,7 +7806,7 @@
         {
           "id": "source-6868b4a1c154",
           "page": "/joseph-smith-portrait-research.html",
-          "pageTitle": "The evidence behind our Joseph",
+          "pageTitle": "In Search of Joseph’s Likeness",
           "category": "Gospel Studies",
           "kind": "topic",
           "selector": "a[href=\"assets/research/joseph-documents/gazette-transmission-book-title.png\"]:has(img[src=\"assets/research/joseph-documents/gazette-transmission-book-title.png\"])",
@@ -9138,47 +9292,69 @@
       ]
     },
     {
+      "title": "Hyrum comes when he is needed",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/joseph-family/lucy-hyrum-brings-chest-20261004-v2-960.webp",
+      "fullImage": "/assets/page-art/joseph-family/lucy-hyrum-brings-chest-20261004-v2.png",
+      "alt": "Hyrum carries a wooden chest toward the doorway, ready to help Joseph.",
+      "id": "art-d12db5e123f8",
+      "occurrences": [
+        {
+          "id": "source-584ce32ffca4",
+          "page": "/answers/who-was-joseph-smith.html",
+          "pageTitle": "Joseph Smith",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/joseph-family/lucy-hyrum-brings-chest-20261004-v2.png\"]:has(img[src=\"../assets/page-art/joseph-family/lucy-hyrum-brings-chest-20261004-v2-960.webp\"])",
+          "title": "Hyrum comes when he is needed"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Hyrum reflects beside scripture",
-      "category": "Church History",
+      "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/joseph-smith-likeness/family/hyrum-reading-before-carthage-1844-1536.webp",
       "fullImage": "/assets/page-art/joseph-smith-likeness/family/hyrum-reading-before-carthage-1844.png",
       "alt": "Hyrum Smith pausing reflectively beside an open book",
       "id": "art-beff1a7c0a81",
       "occurrences": [
         {
-          "id": "source-97473cb6a802",
-          "page": "/joseph-smith-likeness.html",
-          "pageTitle": "The Face Behind the History",
-          "category": "Church History",
+          "id": "source-4f0f7e54485b",
+          "page": "/answers/who-was-joseph-smith.html",
+          "pageTitle": "Joseph Smith",
+          "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"assets/page-art/joseph-smith-likeness/family/hyrum-reading-before-carthage-1844.png\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/family/hyrum-reading-before-carthage-1844-1536.webp\"])",
+          "selector": "a[href=\"../assets/page-art/joseph-smith-likeness/family/hyrum-reading-before-carthage-1844.png\"]:has(img[src=\"../assets/page-art/joseph-smith-likeness/family/hyrum-reading-before-carthage-1844-1536.webp\"])",
           "title": "Hyrum reflects beside scripture"
         }
       ],
       "categories": [
-        "Church History"
+        "Gospel Studies"
       ]
     },
     {
       "title": "Hyrum: our portrait",
-      "category": "Church History",
+      "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/joseph-smith-likeness/hyrum-reconstruction-blue-eyes-20261003.png",
       "fullImage": "/assets/page-art/joseph-smith-likeness/hyrum-reconstruction-blue-eyes-20261003.png",
       "alt": "Artistic reconstruction of Hyrum Smith at age forty-four",
       "id": "art-eeae166b54dc",
       "occurrences": [
         {
-          "id": "source-d880150544e9",
-          "page": "/joseph-smith-likeness.html",
-          "pageTitle": "The Face Behind the History",
-          "category": "Church History",
+          "id": "source-577d75127f54",
+          "page": "/joseph-smith-portrait-research.html",
+          "pageTitle": "In Search of Joseph’s Likeness",
+          "category": "Gospel Studies",
           "kind": "topic",
           "selector": "a[href=\"assets/page-art/joseph-smith-likeness/hyrum-reconstruction-blue-eyes-20261003.png\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/hyrum-reconstruction-blue-eyes-20261003.png\"])",
           "title": "Hyrum: our portrait"
         }
       ],
       "categories": [
-        "Church History"
+        "Gospel Studies"
       ]
     },
     {
@@ -9351,6 +9527,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/wedding-places-03-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/wedding-places-03-960.webp\"])",
           "title": "Invited to a higher place"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Isaac Hale Home",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/research/joseph-family/hale-family-home.jpg",
+      "fullImage": "/assets/research/joseph-family/hale-family-home.jpg",
+      "alt": "The Hale family home in a photograph catalogued around 1897–1899.",
+      "id": "art-bb0cd2122c19",
+      "occurrences": [
+        {
+          "id": "source-8d4b03ae7cb4",
+          "page": "/answers/who-was-joseph-smith.html",
+          "pageTitle": "Joseph Smith",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/research/joseph-family/hale-family-home.jpg\"]:has(img[src=\"../assets/research/joseph-family/hale-family-home.jpg\"])",
+          "title": "Isaac Hale Home"
         }
       ],
       "categories": [
@@ -10128,6 +10326,28 @@
       ]
     },
     {
+      "title": "Joseph during Quincy’s visit",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/research/joseph-originals/quincy-stubble-study-1536.webp",
+      "fullImage": "/assets/research/joseph-originals/quincy-stubble-study.png",
+      "alt": "A visit does not freeze a lifetime of grooming",
+      "id": "art-de3ed6e3981b",
+      "occurrences": [
+        {
+          "id": "source-d2862608f84a",
+          "page": "/joseph-smith-portrait-research.html",
+          "pageTitle": "In Search of Joseph’s Likeness",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/research/joseph-originals/quincy-stubble-study.png\"]:has(img[src=\"assets/research/joseph-originals/quincy-stubble-study-1536.webp\"])",
+          "title": "Joseph during Quincy’s visit"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Joseph receives reassurance in a dream",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/birth-of-christ/10-joseph-dream-800.webp",
@@ -10216,6 +10436,28 @@
       ]
     },
     {
+      "title": "Joseph Smith III",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/research/joseph-family/joseph-smith-iii-later-life.jpg",
+      "fullImage": "/assets/research/joseph-family/joseph-smith-iii-later-life.jpg",
+      "alt": "Joseph Smith III in later life, reproduced in the 1915 History of Decatur County, Iowa.",
+      "id": "art-9e0a52ea8e26",
+      "occurrences": [
+        {
+          "id": "source-39896ac3f491",
+          "page": "/answers/who-was-joseph-smith.html",
+          "pageTitle": "Joseph Smith",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/research/joseph-family/joseph-smith-iii-later-life.jpg\"]:has(img[src=\"../assets/research/joseph-family/joseph-smith-iii-later-life.jpg\"])",
+          "title": "Joseph Smith III"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Joseph Smith's account in his own words",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/exclusive/joseph-account-reading-800.webp",
@@ -10282,75 +10524,24 @@
       ]
     },
     {
-      "title": "Joseph: detail of the historical cast",
-      "category": "Church History",
+      "title": "Joseph’s death mask",
+      "category": "Gospel Studies",
       "thumbnail": "/assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
       "fullImage": "/assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
-      "alt": "Complete BYU photograph: Joseph’s death mask at left, Hyrum’s at right",
+      "alt": "Joseph’s cast at the left of the BYU-catalogued photograph; a detail window of the complete pair",
       "id": "art-76cbb00c0a26",
       "occurrences": [
         {
-          "id": "source-076b52365f45",
-          "page": "/joseph-smith-likeness.html",
-          "pageTitle": "The Face Behind the History",
-          "category": "Church History",
+          "id": "source-41fd2b525dfd",
+          "page": "/joseph-smith-portrait-research.html",
+          "pageTitle": "In Search of Joseph’s Likeness",
+          "category": "Gospel Studies",
           "kind": "topic",
           "selector": "a[href=\"assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg\"]:has(img[src=\"assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg\"])",
           "title": "Hyrum: detail of the historical cast"
-        },
-        {
-          "id": "source-41fd2b525dfd",
-          "page": "/joseph-smith-portrait-research.html",
-          "pageTitle": "The evidence behind our Joseph",
-          "category": "Gospel Studies",
-          "kind": "topic",
-          "selector": "a[href=\"assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg\"]:has(img[src=\"assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg\"])",
-          "title": "The documented reference roles"
         }
       ],
       "categories": [
-        "Church History",
-        "Gospel Studies"
-      ]
-    },
-    {
-      "title": "Joseph: our adopted portrait",
-      "category": "Church History",
-      "thumbnail": "/assets/identities/joseph-smith-owner-approved-20260914.png",
-      "fullImage": "/assets/identities/joseph-smith-owner-approved-20260914.png",
-      "alt": "The adopted artistic portrait of Joseph Smith",
-      "id": "art-5fb216d048a9",
-      "occurrences": [
-        {
-          "id": "source-f7d576189cb8",
-          "page": "/joseph-smith-likeness.html",
-          "pageTitle": "The Face Behind the History",
-          "category": "Church History",
-          "kind": "topic",
-          "selector": "a[id=\"joseph-comparison-open\"]",
-          "title": "Joseph: our adopted portrait"
-        },
-        {
-          "id": "source-4380955b7da6",
-          "page": "/joseph-smith-portrait-research.html",
-          "pageTitle": "The evidence behind our Joseph",
-          "category": "Gospel Studies",
-          "kind": "topic",
-          "selector": "a[href=\"assets/identities/joseph-smith-owner-approved-20260914.png\"]:has(img[src=\"assets/identities/joseph-smith-owner-approved-20260914.png\"])",
-          "title": "The living features the cast cannot supply"
-        },
-        {
-          "id": "source-b11affe42eb8",
-          "page": "/joseph-smith-likeness.html",
-          "pageTitle": "The Face Behind the History",
-          "category": "Church History",
-          "kind": "hero",
-          "selector": "a[data-hero-viewer][href=\"assets/identities/joseph-smith-owner-approved-20260914.png\"]",
-          "title": "The Face Behind the History"
-        }
-      ],
-      "categories": [
-        "Church History",
         "Gospel Studies"
       ]
     },
@@ -11511,7 +11702,7 @@
         {
           "id": "source-9cd25afaef76",
           "page": "/joseph-smith-portrait-research.html",
-          "pageTitle": "The evidence behind our Joseph",
+          "pageTitle": "In Search of Joseph’s Likeness",
           "category": "Gospel Studies",
           "kind": "topic",
           "selector": "a[href=\"assets/research/joseph-originals/light-and-nose-relief-comparison.png\"]:has(img[src=\"assets/research/joseph-originals/light-and-nose-relief-comparison-1536.webp\"])",
@@ -12010,24 +12201,46 @@
     },
     {
       "title": "Love carried across separation",
-      "category": "Church History",
+      "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-wardrobe-v2-1536.webp",
       "fullImage": "/assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-wardrobe-v2.png",
       "alt": "Emma in a burgundy dress and shawl reads a folded family letter",
       "id": "art-71d0e77d29ca",
       "occurrences": [
         {
-          "id": "source-da7f40420ae1",
-          "page": "/joseph-smith-likeness.html",
-          "pageTitle": "The Face Behind the History",
-          "category": "Church History",
+          "id": "source-8dace3b6bf78",
+          "page": "/answers/who-was-joseph-smith.html",
+          "pageTitle": "Joseph Smith",
+          "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-wardrobe-v2.png\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-wardrobe-v2-1536.webp\"])",
+          "selector": "a[href=\"../assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-wardrobe-v2.png\"]:has(img[src=\"../assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-wardrobe-v2-1536.webp\"])",
           "title": "Love carried across separation"
         }
       ],
       "categories": [
-        "Church History"
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Lucy Mack Smith",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/research/joseph-family/lucy-mack-smith-copy.jpg",
+      "fullImage": "/assets/research/joseph-family/lucy-mack-smith-copy.jpg",
+      "alt": "Lucy Mack Smith, in a later photographic copy of a drawing.",
+      "id": "art-829616478431",
+      "occurrences": [
+        {
+          "id": "source-1bf60c223474",
+          "page": "/answers/who-was-joseph-smith.html",
+          "pageTitle": "Joseph Smith",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/research/joseph-family/lucy-mack-smith-copy.jpg\"]:has(img[src=\"../assets/research/joseph-family/lucy-mack-smith-copy.jpg\"])",
+          "title": "Lucy Mack Smith"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -12164,24 +12377,24 @@
     },
     {
       "title": "Making a new home",
-      "category": "Church History",
+      "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-corrected-v2-1536.webp",
       "fullImage": "/assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-corrected-v2.png",
       "alt": "Joseph attends to driving the wagon while Emma looks along their direction of travel, wearing winter layers and a bonnet",
       "id": "art-b0d390116e40",
       "occurrences": [
         {
-          "id": "source-2f81e0227676",
-          "page": "/joseph-smith-likeness.html",
-          "pageTitle": "The Face Behind the History",
-          "category": "Church History",
+          "id": "source-94d28fae2282",
+          "page": "/answers/who-was-joseph-smith.html",
+          "pageTitle": "Joseph Smith",
+          "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-corrected-v2.png\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-corrected-v2-1536.webp\"])",
+          "selector": "a[href=\"../assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-corrected-v2.png\"]:has(img[src=\"../assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-corrected-v2-1536.webp\"])",
           "title": "Making a new home"
         }
       ],
       "categories": [
-        "Church History"
+        "Gospel Studies"
       ]
     },
     {
@@ -13879,25 +14092,47 @@
       ]
     },
     {
+      "title": "Praying beside their daughter",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/joseph-family/lucy-prayer-for-sophronia-20261004-v2-960.webp",
+      "fullImage": "/assets/page-art/joseph-family/lucy-prayer-for-sophronia-20261004-v2.png",
+      "alt": "Lucy and Joseph Sr. kneel beside their daughter’s bed in prayer.",
+      "id": "art-a4f4e9e4cdc6",
+      "occurrences": [
+        {
+          "id": "source-005e8c540500",
+          "page": "/answers/who-was-joseph-smith.html",
+          "pageTitle": "Joseph Smith",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/joseph-family/lucy-prayer-for-sophronia-20261004-v2.png\"]:has(img[src=\"../assets/page-art/joseph-family/lucy-prayer-for-sophronia-20261004-v2-960.webp\"])",
+          "title": "Praying beside their daughter"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Praying together through uncertainty",
-      "category": "Church History",
+      "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-1536.webp",
       "fullImage": "/assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830.png",
       "alt": "Emma kneels in prayer beside a chair, with another woman partly visible behind her",
       "id": "art-e3bea40c689d",
       "occurrences": [
         {
-          "id": "source-6a72d9b5ad75",
-          "page": "/joseph-smith-likeness.html",
-          "pageTitle": "The Face Behind the History",
-          "category": "Church History",
+          "id": "source-a6b610e8d1ce",
+          "page": "/answers/who-was-joseph-smith.html",
+          "pageTitle": "Joseph Smith",
+          "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830.png\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-1536.webp\"])",
+          "selector": "a[href=\"../assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830.png\"]:has(img[src=\"../assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-1536.webp\"])",
           "title": "Praying together through uncertainty"
         }
       ],
       "categories": [
-        "Church History"
+        "Gospel Studies"
       ]
     },
     {
@@ -14351,7 +14586,7 @@
         {
           "id": "source-a2537242a2c0",
           "page": "/joseph-smith-portrait-research.html",
-          "pageTitle": "The evidence behind our Joseph",
+          "pageTitle": "In Search of Joseph’s Likeness",
           "category": "Gospel Studies",
           "kind": "topic",
           "selector": "a[href=\"assets/research/joseph-documents/quincy-1883-p380.png\"]:has(img[src=\"assets/research/joseph-documents/quincy-1883-p380.png\"])",
@@ -15781,24 +16016,24 @@
     },
     {
       "title": "Seeking out those in need",
-      "category": "Church History",
+      "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-wardrobe-v2-1536.webp",
       "fullImage": "/assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-wardrobe-v2.png",
       "alt": "Emma in a deep green day dress speaks earnestly to seated women",
       "id": "art-89e864cd34e4",
       "occurrences": [
         {
-          "id": "source-0925d1d88c22",
-          "page": "/joseph-smith-likeness.html",
-          "pageTitle": "The Face Behind the History",
-          "category": "Church History",
+          "id": "source-d203f8844981",
+          "page": "/answers/who-was-joseph-smith.html",
+          "pageTitle": "Joseph Smith",
+          "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-wardrobe-v2.png\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-wardrobe-v2-1536.webp\"])",
+          "selector": "a[href=\"../assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-wardrobe-v2.png\"]:has(img[src=\"../assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-wardrobe-v2-1536.webp\"])",
           "title": "Seeking out those in need"
         }
       ],
       "categories": [
-        "Church History"
+        "Gospel Studies"
       ]
     },
     {
@@ -16142,7 +16377,7 @@
         {
           "id": "source-481991229c80",
           "page": "/joseph-smith-portrait-research.html",
-          "pageTitle": "The evidence behind our Joseph",
+          "pageTitle": "In Search of Joseph’s Likeness",
           "category": "Gospel Studies",
           "kind": "topic",
           "selector": "a[href=\"assets/research/joseph-originals/painted-likeness-1842.png\"]:has(img[src=\"assets/research/joseph-originals/painted-likeness-1842-1536.webp\"])",
@@ -16155,24 +16390,24 @@
     },
     {
       "title": "Sitting in the light",
-      "category": "Church History",
+      "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/joseph-smith-likeness/portrait-sitting-960.webp",
       "fullImage": "/assets/page-art/joseph-smith-likeness/portrait-sitting.webp",
       "alt": "Joseph Smith sits for a portrait, with an artist’s blurred hand in the foreground",
       "id": "art-e844a54c76a5",
       "occurrences": [
         {
-          "id": "source-9be8f80e412f",
-          "page": "/joseph-smith-likeness.html",
-          "pageTitle": "The Face Behind the History",
-          "category": "Church History",
+          "id": "source-ff695a40b792",
+          "page": "/joseph-smith-portrait-research.html",
+          "pageTitle": "In Search of Joseph’s Likeness",
+          "category": "Gospel Studies",
           "kind": "topic",
           "selector": "a[href=\"assets/page-art/joseph-smith-likeness/portrait-sitting.webp\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/portrait-sitting-960.webp\"])",
           "title": "Sitting in the light"
         }
       ],
       "categories": [
-        "Church History"
+        "Gospel Studies"
       ]
     },
     {
@@ -16309,24 +16544,24 @@
     },
     {
       "title": "Staying close in sorrow",
-      "category": "Church History",
+      "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-wardrobe-v2-1536.webp",
       "fullImage": "/assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-wardrobe-v2.png",
       "alt": "Joseph in a brown waistcoat supports Emma’s hand as she rests in light recovery clothing; they look tenderly toward one another",
       "id": "art-8626a0013555",
       "occurrences": [
         {
-          "id": "source-caa4d4f72aa6",
-          "page": "/joseph-smith-likeness.html",
-          "pageTitle": "The Face Behind the History",
-          "category": "Church History",
+          "id": "source-e30c8ddd579a",
+          "page": "/answers/who-was-joseph-smith.html",
+          "pageTitle": "Joseph Smith",
+          "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-wardrobe-v2.png\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-wardrobe-v2-1536.webp\"])",
+          "selector": "a[href=\"../assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-wardrobe-v2.png\"]:has(img[src=\"../assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-wardrobe-v2-1536.webp\"])",
           "title": "Staying close in sorrow"
         }
       ],
       "categories": [
-        "Church History"
+        "Gospel Studies"
       ]
     },
     {
@@ -16860,6 +17095,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/eternal-marriage/timeline/01-eden-desktop-v2.webp\"]:has(img[src=\"../assets/page-art/eternal-marriage/timeline/01-eden-desktop-v2.webp\"])",
           "title": "The beginning: companionship and shared stewardship"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "The care comes home",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/joseph-family/lucy-children-care-for-lucy-20261004-v2-960.webp",
+      "fullImage": "/assets/page-art/joseph-family/lucy-children-care-for-lucy-20261004-v2.png",
+      "alt": "Lucy’s youngest daughter tends to her mother, drawing a cover across her lap.",
+      "id": "art-e71efa9f14ad",
+      "occurrences": [
+        {
+          "id": "source-909b13046434",
+          "page": "/answers/who-was-joseph-smith.html",
+          "pageTitle": "Joseph Smith",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/joseph-family/lucy-children-care-for-lucy-20261004-v2.png\"]:has(img[src=\"../assets/page-art/joseph-family/lucy-children-care-for-lucy-20261004-v2-960.webp\"])",
+          "title": "The care comes home"
         }
       ],
       "categories": [
@@ -17810,7 +18067,7 @@
         {
           "id": "source-0eb1bf651411",
           "page": "/joseph-smith-portrait-research.html",
-          "pageTitle": "The evidence behind our Joseph",
+          "pageTitle": "In Search of Joseph’s Likeness",
           "category": "Gospel Studies",
           "kind": "topic",
           "selector": "a[href=\"assets/research/joseph-documents/quincy-1883-title.png\"]:has(img[src=\"assets/research/joseph-documents/quincy-1883-title.png\"])",
@@ -17876,7 +18133,7 @@
         {
           "id": "source-3184d995ca8b",
           "page": "/joseph-smith-portrait-research.html",
-          "pageTitle": "The evidence behind our Joseph",
+          "pageTitle": "In Search of Joseph’s Likeness",
           "category": "Gospel Studies",
           "kind": "topic",
           "selector": "a[href=\"assets/research/joseph-originals/adopted-blue-eye-study.png\"]:has(img[src=\"assets/research/joseph-originals/adopted-blue-eye-study-1536.webp\"])",
@@ -18299,6 +18556,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/bb-tent-cloud-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/bb-tent-cloud-960.webp\"])",
           "title": "The people watch from their tent doors"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "The portrait being examined",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/identities/joseph-smith-owner-approved-20260914.png",
+      "fullImage": "/assets/identities/joseph-smith-owner-approved-20260914.png",
+      "alt": "The focusChrist Joseph Smith portrait, with light brown hair, a white neckcloth and a dark coat",
+      "id": "art-5fb216d048a9",
+      "occurrences": [
+        {
+          "id": "source-4380955b7da6",
+          "page": "/joseph-smith-portrait-research.html",
+          "pageTitle": "In Search of Joseph’s Likeness",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/identities/joseph-smith-owner-approved-20260914.png\"]:has(img[src=\"assets/identities/joseph-smith-owner-approved-20260914.png\"])",
+          "title": "A face considered alongside its sources"
         }
       ],
       "categories": [
@@ -18998,7 +19277,7 @@
         {
           "id": "source-f93a5c8bdd15",
           "page": "/joseph-smith-portrait-research.html",
-          "pageTitle": "The evidence behind our Joseph",
+          "pageTitle": "In Search of Joseph’s Likeness",
           "category": "Gospel Studies",
           "kind": "topic",
           "selector": "a[href=\"assets/research/joseph-documents/gazette-transmission-1916-p102.png\"]:has(img[src=\"assets/research/joseph-documents/gazette-transmission-1916-p102.png\"])",
@@ -19961,6 +20240,28 @@
       ]
     },
     {
+      "title": "Waiting through the night",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/joseph-family/lucy-lucy-night-prayer-20261004-v2-960.webp",
+      "fullImage": "/assets/page-art/joseph-family/lucy-lucy-night-prayer-20261004-v2.png",
+      "alt": "Lucy Mack Smith prays alone in the quiet hours before dawn.",
+      "id": "art-29f7bfba1676",
+      "occurrences": [
+        {
+          "id": "source-35b3bb0936fa",
+          "page": "/answers/who-was-joseph-smith.html",
+          "pageTitle": "Joseph Smith",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/joseph-family/lucy-lucy-night-prayer-20261004-v2.png\"]:has(img[src=\"../assets/page-art/joseph-family/lucy-lucy-night-prayer-20261004-v2-960.webp\"])",
+          "title": "Waiting through the night"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Walk beside someone who is rebuilding",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/topics/supportive-walk-800.webp",
@@ -20349,7 +20650,7 @@
         {
           "id": "source-c7875eec2f4e",
           "page": "/joseph-smith-portrait-research.html",
-          "pageTitle": "The evidence behind our Joseph",
+          "pageTitle": "In Search of Joseph’s Likeness",
           "category": "Gospel Studies",
           "kind": "topic",
           "selector": "a[href=\"assets/research/joseph-documents/gazette-transmission-1916-p100.png\"]:has(img[src=\"assets/research/joseph-documents/gazette-transmission-1916-p100.png\"])",
@@ -20606,24 +20907,24 @@
     },
     {
       "title": "Work that sustained a household",
-      "category": "Church History",
+      "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/joseph-smith-likeness/family/joseph-household-labor-1828-1536.webp",
       "fullImage": "/assets/page-art/joseph-smith-likeness/family/joseph-household-labor-1828.png",
       "alt": "Joseph carries split wood toward a wagon in a work shirt and russet waistcoat",
       "id": "art-15e455e98e23",
       "occurrences": [
         {
-          "id": "source-c93a93d65856",
-          "page": "/joseph-smith-likeness.html",
-          "pageTitle": "The Face Behind the History",
-          "category": "Church History",
+          "id": "source-399a196a8ad6",
+          "page": "/answers/who-was-joseph-smith.html",
+          "pageTitle": "Joseph Smith",
+          "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"assets/page-art/joseph-smith-likeness/family/joseph-household-labor-1828.png\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/family/joseph-household-labor-1828-1536.webp\"])",
+          "selector": "a[href=\"../assets/page-art/joseph-smith-likeness/family/joseph-household-labor-1828.png\"]:has(img[src=\"../assets/page-art/joseph-smith-likeness/family/joseph-household-labor-1828-1536.webp\"])",
           "title": "Work that sustained a household"
         }
       ],
       "categories": [
-        "Church History"
+        "Gospel Studies"
       ]
     },
     {
@@ -20716,14 +21017,14 @@
     }
   ],
   "stats": {
-    "artworks": 931,
-    "occurrences": 939,
+    "artworks": 946,
+    "occurrences": 951,
     "byKind": {
       "artwork": 63,
-      "hero": 41,
+      "hero": 40,
       "legacy": 39,
       "missionary": 13,
-      "topic": 836
+      "topic": 849
     }
   }
 }

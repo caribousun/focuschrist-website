@@ -28,8 +28,10 @@ STUDY_CENTER_VERSION = "20260930-study-alignment-1"
 
 # Owner-authorized Joseph family study appendix. Full bytes and original prefix
 # are pinned; no existing artwork or anchor geometry is exempted.
-JOSEPH_LIFE_SHA256 = 'b6e1a46b6b3318e47a398b50fbff98066e3b3ab66aacbf19ba6e2d32b6344df4'
+JOSEPH_LIFE_SHA256 = 'b5daaca7404233c075ece4d9b05aa2986d26db2d638e428aa53bca74b2b5d165'
 JOSEPH_LIFE_APPENDIX = b'.joseph-life-nav{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}\n.joseph-life-nav a{border:1px solid var(--fc-line);border-radius:var(--fc-radius);padding:10px 14px;color:var(--fc-gold-light);text-decoration:none}\n.joseph-life-nav a:hover,.joseph-life-nav a:focus-visible{background:rgba(255,255,255,.06);text-decoration:underline}\n.joseph-life-scene,.joseph-life-closing{padding:32px 0;border-top:1px solid var(--fc-line);scroll-margin-top:120px}\n.joseph-life-scene>h3,.joseph-life-closing>h3{color:var(--fc-gold-light);font-size:clamp(1.35rem,3vw,1.85rem)}\n.joseph-life-enrichment p{line-height:1.7}\n.joseph-life-reflection{border-left:3px solid var(--fc-gold-light);padding:12px 18px;margin:24px 0}\n.joseph-life-source-note{font-size:.94rem}\n.joseph-life-scene .likeness-art img{width:100%;height:auto;object-fit:contain}\n@media(max-width:580px){.joseph-life-nav a{width:100%;box-sizing:border-box}.joseph-life-scene,.joseph-life-closing{padding:24px 0}}\n\n.joseph-life-caption-title{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}\n'
+
+JOSEPH_LIFE_APPENDIX += b'\n/* The former illustrated opening is now a compact two-journey entrance. */\nbody.fc-likeness-page .joseph-bridge-intro{max-width:var(--fc-standard);margin:32px auto 24px;padding:0 var(--fc-body-gutter);text-align:center}\nbody.fc-likeness-page .joseph-bridge-intro h1{font-family:var(--fc-font-display);font-size:clamp(2rem,5vw,3.2rem);line-height:1.16;color:var(--fc-gold-light);margin:12px 0 18px}\nbody.fc-likeness-page .joseph-bridge-intro p{max-width:760px;margin:12px auto;line-height:1.65}\nbody.fc-likeness-page #joseph-study-entrance{margin-top:24px}\n@media(max-width:600px){body.fc-likeness-page .joseph-bridge-intro{margin:24px auto}body.fc-likeness-page #joseph-study-entrance h2{font-size:1.5rem}}\n'
 
 def before_joseph_life(data):
     if hashlib.sha256(data).hexdigest() == JOSEPH_LIFE_SHA256 and data.endswith(JOSEPH_LIFE_APPENDIX):
@@ -131,7 +133,7 @@ def check():
         if rel.startswith(('tools/', 'work/', 'node_modules/', '.git/')):
             continue
         for filename, version in re.findall(r'([\w-]+\.css)\?v=([\w.-]+)', path.read_text(encoding='utf-8')):
-            expected = STUDY_CENTER_VERSION if filename == 'site-system.css' else SEARCH_VERSION if filename == 'site-search.css' else TOPIC_DESKTOP_VERSION if filename == 'topic-study-pages.css' else CONTRACT['version']
+            expected = '20261004-compact-bridge-1' if filename == 'joseph-smith-likeness.css' and rel == 'joseph-smith-likeness.html' else STUDY_CENTER_VERSION if filename == 'site-system.css' else SEARCH_VERSION if filename == 'site-search.css' else TOPIC_DESKTOP_VERSION if filename == 'topic-study-pages.css' else CONTRACT['version']
             if filename in FILES and version != expected:
                 errors.append('Stale anchor stylesheet: ' + rel + ': ' + filename)
     return errors

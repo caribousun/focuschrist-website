@@ -1,0 +1,36 @@
+{
+  "reviewer": "Fermi",
+  "concur": true,
+  "scope": "Independent source-level peer review of eight exact QA/registry repairs after approved Joseph migration; not new product or rendered acceptance.",
+  "files": {
+    "docs/answer-opening-baseline.json": "f04e26c45030211dcb27b5d4fd86d1fa02611f00d3e4b3a218a9017e45f204f6",
+    "docs/hero-home-height-audit-20260929.json": "4192f2b4b1bfba0ff159c80d874a2640b2aa34f2df54224d7d8d58e28500591d",
+    "tools/focused_answers_qa.py": "fe57725430c6be1fdcbe6b5e73dc3826517f0b9a61a517a0625ec0280b48319b",
+    "tools/home_hero_height_browser_qa.js": "8cd27a6df78545c4b7d54702cb2c9133f0a0bff70c23629670f3fb1acb18821d",
+    "tools/production_hardening_qa.py": "a90f6c92525ca5fa740151bc38b4cd8e7b8fee488fa8af8d86a25fb934b10976",
+    "tools/topic_artwork_details_qa.py": "cf810e2d8d3367326f3d6d0f850b9e0f74ca13996926e7ec93cec7e6b143ac27",
+    "tools/topic_artwork_qa.py": "fbe9e8f72589d2210fc345e2787a4517378bd3dad43e106ab976fe88ba6f6b12",
+    "tools/unified_opening_browser_qa.js": "eaa6fd27aa19cdde703048c83ec0514db36dd066bb05f933c4474ea446fc48cf"
+  },
+  "findings": [
+    "Unified opening49hero count yields294standard and98enlarged cases; every prior geometry, clipping, cue, destination and retained-content assertion unchanged. Five separate compact gateway cases add exact title/two destination/legacy absence/image absence/overflow/visibility checks.",
+    "Home hero inventory changes only Joseph to explicitly image-free gateway; existing124 route classification contract retained and positive gateway assertions added.",
+    "Topic artwork adds exact eleven unique reviewed migrated family figures, all owned by WHO; no arbitrary count tolerance.",
+    "Topic details adds exact26 unique registry assets (11moved family,10Lucy,5archival), enforces soleWHO ownership and shared contextual dialog; previous99baseline remains unchanged.",
+    "Focused Answers replaces only exact image-free gateway pixel requirement with full strict bridge checker; all other opening uniqueness checks retained.",
+    "JPEG dimension support verifies actualJPEG format, image integrity and positive size; PNG/WebP branches unchanged.",
+    "WHO image baseline is one deliberate normalized hash update matching current accepted image markup; opening hash unchanged."
+  ],
+  "independently_executed": [
+    "WHO BeautifulSoup image serialization after existing reference normalization exactly reproduces new baseline hash",
+    "ValidJPEG returns expected3x4",
+    "PNG bytes named.jpg rejected",
+    "Invalidbytes named.jpg rejected"
+  ],
+  "reported_checks_not_claimed_as_own": [
+    "Gary five repaired static gates pass; full88batch running",
+    "Newton nine browser suites pass; unified/fullcanonical still running at review"
+  ],
+  "open_findings": [],
+  "boundary": "Existing artwork/source/render receipts remain authoritative; these contracts do not grant approval to arbitrary future registry edits. Root must wait for final full-suite completion."
+}

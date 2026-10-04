@@ -94,6 +94,12 @@ def check():
     for route in routes:
         page = local(ROOT/'answers.html', route); ns = document(page); pages[route] = ns
         try:
+            if route == 'joseph-smith-likeness.html':
+                from joseph_smith_likeness_qa import check as check_joseph_bridge
+                assert not check_joseph_bridge(), 'Joseph compact gateway contract failed'
+                assert len([n for n in ns if n.has('joseph-bridge-intro')])==1, 'Exact compact gateway introduction required'
+                assert not any(n.tag=='a' and 'data-hero-viewer' in n.attrs for n in ns), 'Compact gateway must not regain an image hero'
+                continue
             hero = opening(page, ns)
             with Image.open(hero) as image:
                 image = image.convert('RGB')
