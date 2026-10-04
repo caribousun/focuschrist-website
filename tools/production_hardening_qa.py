@@ -74,6 +74,16 @@ def png_dimensions(path: Path) -> tuple[int, int]:
 def image_dimensions(path: Path) -> tuple[int, int]:
     if path.suffix.lower() == ".png":
         return png_dimensions(path)
+    if path.suffix.lower() in {".jpg", ".jpeg"}:
+        from PIL import Image
+        with Image.open(path) as image:
+            if image.format != "JPEG":
+                raise ValueError("JPEG extension does not contain JPEG data")
+            dimensions = image.size
+            image.verify()
+        if min(dimensions) <= 0:
+            raise ValueError("JPEG dimensions must be positive")
+        return dimensions
     return webp_dimensions(path)
 
 

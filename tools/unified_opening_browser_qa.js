@@ -16,10 +16,31 @@ const root = path.resolve(__dirname, '..');
   const records = JSON.parse(fs.readFileSync(path.join(root,'docs/unified-opening-inventory.json'))).pages.filter(x=>x.hero && (!process.env.QA_PATHS || process.env.QA_PATHS.split(",").includes(x.path)));
   const authoredRoutes=new Set(['timelines/latter-day-saint-church-history-timeline.html','timelines/willie-and-martin-handcart-map.html','timelines/life-of-christ-journey-map.html']);
   const authoredCue=record=>{const authored=authoredRoutes.has(record.path);assert.equal(record.template==='standard-timeline-study-reference',authored,'Only exact reviewed timeline routes use authored cue contract');return authored;};
-  assert.equal(records.length,new Set(records.map(r=>r.path)).size,'Every discovered illustrated route is unique');if(!process.env.QA_PATHS)assert.equal(records.length,50,'All50 illustrated routes included');
-  const results=[],enlarged=[];
+  assert.equal(records.length,new Set(records.map(r=>r.path)).size,'Every discovered illustrated route is unique');if(!process.env.QA_PATHS)assert.equal(records.length,49,'All49 illustrated routes included');
+  const results=[],enlarged=[],gateway=[];
   const heroGeometry=()=>{const e=document.querySelector('.fc-visual-hero,[data-covenant-hero-slot],.cfm-desktop-picture,.gc-intro-visual'),r=e.getBoundingClientRect();return {width:r.width,height:r.height,top:r.top+scrollY};};
   try {
+    // The image-free Joseph gateway has a positive compact-opening contract.
+    if(!process.env.QA_PATHS || process.env.QA_PATHS.split(',').includes('joseph-smith-likeness.html')){
+      for(const [width,height,scale] of [[1366,768,100],[390,844,100],[320,568,100],[320,740,200],[1280,720,200]]){
+        await page.setViewportSize({width,height});
+        await page.goto(`http://127.0.0.1:${server.address().port}/joseph-smith-likeness.html`,{waitUntil:'networkidle'});
+        await page.evaluate(scale=>document.documentElement.style.fontSize=scale+'%',scale);
+        await page.evaluate(()=>document.fonts.ready);
+        const row=await page.evaluate(()=>{
+          const intro=document.querySelector('.joseph-bridge-intro'),title=intro.querySelector('h1');
+          const links=[...document.querySelectorAll('#joseph-study-entrance .fc-button--primary')];
+          const rects=[title,...links].map(x=>{const r=x.getBoundingClientRect();return {left:r.left,right:r.right,top:r.top,bottom:r.bottom,width:r.width,height:r.height};});
+          return {title:title.textContent,hrefs:links.map(x=>x.getAttribute('href')),rects,clientWidth:document.documentElement.clientWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,legacy:document.querySelectorAll('.fc-visual-hero,.fc-page-intro,[data-unified-opening],.fc-unified-continue').length,images:document.querySelectorAll('main img').length};
+        });
+        assert.equal(row.title,'Explore his life and the portrait');
+        assert.deepEqual(row.hrefs,['answers/who-was-joseph-smith.html#joseph-family-life','joseph-smith-portrait-research.html']);
+        assert.equal(row.legacy,0);assert.equal(row.images,0);assert.equal(row.overflow,false);
+        assert(row.rects.every(r=>r.width>0&&r.height>0&&r.left>=-1&&r.right<=row.clientWidth+1),'Gateway controls remain visible and within page');
+        if(scale===100)assert(row.rects[2].bottom<height,'Both gateway choices visible in the opening viewport');
+        gateway.push({width,height,scale,...row});
+      }
+    }
     for(const [width,height] of (process.env.QA_PROFILES ? JSON.parse(process.env.QA_PROFILES) : [[1536,792],[1920,900],[1366,768],[320,740],[390,844],[432,810]])) {
       await page.setViewportSize({width,height});
       for(const record of records) {
@@ -75,11 +96,12 @@ const root = path.resolve(__dirname, '..');
     fs.mkdirSync(path.join(root,'.qa-artifacts'),{recursive:true});
     fs.writeFileSync(path.join(root,'.qa-artifacts/unified-opening.json'),JSON.stringify(results,null,2));
     fs.writeFileSync(path.join(root,'.qa-artifacts/unified-opening-enlarged.json'),JSON.stringify(enlarged,null,2));
+    fs.writeFileSync(path.join(root,'.qa-artifacts/unified-opening-gateway.json'),JSON.stringify(gateway,null,2));
     await browser.close();await new Promise(r=>server.close(r));
   }
   const failures=results.filter(x=>(x.authored?(x.bottom>x.height-8||x.top<0||x.targetTop<x.height-1):Math.abs(x.bottom-(x.height-20))>1)||Math.abs(x.center-x.clientCenter)>1||x.openingBottom<x.height-1||x.overflow||x.contentClipped||!x.href||x.cueCount!==1||!x.targetExists||!x.retainedEntered||['width','height','top'].some(k=>Math.abs(x.heroBefore[k]-x.heroAfter[k])>1));
   console.log(JSON.stringify({cases:results.length,failures},null,2));
   const enlargedFailures=enlarged.filter(x=>x.cutoff||x.overflow||x.cueBottom>x.openingBottom||x.openingBottom<x.height-1);
   console.log(JSON.stringify({enlargedCases:enlarged.length,enlargedFailures},null,2));
-  if(failures.length||enlargedFailures.length||(!process.env.QA_PATHS && !process.env.QA_PROFILES && (results.length!==300||enlarged.length!==100)))process.exitCode=1;
+  if(failures.length||enlargedFailures.length||(!process.env.QA_PATHS && !process.env.QA_PROFILES && (results.length!==294||enlarged.length!==98||gateway.length!==5)))process.exitCode=1;
 })().catch(e=>{console.error(e);process.exitCode=1;});
