@@ -20,6 +20,9 @@ def check():
   assert row['image_status']=='accepted' and r['sha256']==im['sha256']==digest(ROOT/im['src'])
   assert r['asset']==im['src'] and r['owning_page']=='joseph-smith-likeness.html' and r['owning_section']==section['id']
   figure=section.select_one('figure');assert figure and figure.get('data-exclusive-artwork')==section['id']
+  title=section.select_one('h3');duplicate=figure.select_one('h4.joseph-life-caption-title')
+  assert title and not title.has_attr('hidden') and title.get_text(strip=True)==row['heading'],'Visible scene title required'
+  assert duplicate and duplicate.has_attr('hidden') and duplicate.get_text(strip=True)==row['heading'],'Redundant modal-title data must be explicitly hidden, not a clipped caption'
   assert figure.select_one('a[href="'+im['src']+'"][aria-haspopup="dialog"]')
   img=figure.select_one('img');assert img and img.get('data-source-original',img.get('src'))==im['src'] and img.get('alt')==im['alt']
   actual=' '.join(section.stripped_strings)

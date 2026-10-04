@@ -3,17 +3,18 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const {JSDOM}=require('jsdom');
 const root=path.resolve(__dirname,'..'),source=fs.readFileSync(path.join(root,'unified-opening.js'),'utf8');
 const inventory=JSON.parse(fs.readFileSync(path.join(root,'docs/unified-opening-inventory.json')));
-assert.equal(inventory.pages.length,129);assert.equal(new Set(inventory.pages.map(x=>x.path)).size,129,'Canonical routes remain unique');assert.equal(inventory.pages.filter(x=>x.hero).length,50);
+assert.equal(inventory.pages.length,130);assert.equal(new Set(inventory.pages.map(x=>x.path)).size,130,'Canonical routes remain unique');assert.equal(inventory.pages.filter(x=>x.hero).length,50);
 for(const route of ['timelines/latter-day-saint-church-history-timeline.html','timelines/willie-and-martin-handcart-map.html','timelines/life-of-christ-journey-map.html'])assert.equal(inventory.pages.find(x=>x.path===route)?.hero,true,'Each timeline experience is included');
+assert.equal(inventory.pages.find(x=>x.path==='joseph-smith-portrait-research.html')?.hero,false,'Text-led research opening is explicitly inventoried');
 let checks=0;
-for(const file of ['answers/abrahamic-covenant.html','answers/prayer-and-personal-revelation.html','art.html','come-follow-me.html','general-conference.html','history/john-tanner.html','jesus-christ/parables/barren-fig.html']){
+for(const file of ['answers/abrahamic-covenant.html','answers/prayer-and-personal-revelation.html','art.html','come-follow-me.html','general-conference.html','history/john-tanner.html','jesus-christ/parables/barren-fig.html','joseph-smith-portrait-research.html']){
  const dom=new JSDOM(fs.readFileSync(path.join(root,file),'utf8'),{url:'https://focuschrist.com/'+file,runScripts:'outside-only',pretendToBeVisual:true});
  const w=dom.window,d=w.document,media={matches:false,addEventListener(){}};
  w.matchMedia=()=>media;w.ResizeObserver=class{observe(){}};w.requestAnimationFrame=fn=>{fn();return 1;};
  const images=[...d.images].map(x=>x.outerHTML),text=d.body.textContent;
  w.eval(source);d.dispatchEvent(new w.Event('DOMContentLoaded'));
  const cue=d.querySelector('.fc-unified-continue');
- if(file.includes('/parables/')){assert.equal(cue,null);dom.window.close();continue;}
+ if(file.includes('/parables/') || file==='joseph-smith-portrait-research.html'){assert.equal(cue,null);dom.window.close();continue;}
  assert(cue&&cue.getAttribute('href'),file+': working invitation target');
  assert.equal(d.querySelectorAll('.fc-unified-continue').length,1);
  assert.deepEqual([...d.images].map(x=>x.outerHTML),images,file+': image markup retained');
