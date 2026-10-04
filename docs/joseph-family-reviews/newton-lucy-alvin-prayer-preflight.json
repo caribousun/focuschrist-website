@@ -1,0 +1,44 @@
+[
+  {
+    "id": "alvin-last-counsel-1823-correction",
+    "prompt": "Edit only Hyrum, the seated man facing us, so he clearly reads as a23-year-old young adult, not a middle-aged man. Preserve the supplied approved Hyrum identity from reference2, including blue eyes, nose, jaw, facial proportions and hairline. Remove the mature etched forehead lines, deep outer-eye wrinkles and accumulated face/neck weathering. Use naturally youthful early-twenties skin with real pores and fine texture, no airbrush or cosmetic beautification. Preserve serious compassionate expression, directed attention to Alvin, exact handhold, bodyposition, periodclothes, bedding, lighting, room and framing. Keep Alvin25 at right turned away; do not invent his face or change his position. The existing candle is appropriate and stays. No additional objects, people or text.",
+    "prompt_sha256": "b59754e5f07eacfc54e6e9df52911bf61cfe4b264ffdf1ea712f111ebe8d3377",
+    "references": [
+      {
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-6e927a23-44f1-46a1-a86a-b724ffe6d622.png",
+        "sha256": "20b06bd701ded048b717cf90053aff619b99f06d63a27a2c86b8768334f74e63"
+      },
+      {
+        "person": "Hyrum",
+        "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\joseph-smith-likeness\\hyrum-reconstruction-blue-eyes-20261003.png",
+        "sha256": "47b35f55b805ee0cc7c914cc1adb59273b2405402d4a50e284d0bb456bd9cb32"
+      }
+    ],
+    "fermi_generation_only_concur": true,
+    "parent_finished_concur": false,
+    "newton_generation_only_concur": true,
+    "finished_image_concurrence": false,
+    "newton_review": "Independently viewed whole parent. Hyrum mature forehead/eye texture needs credible23 adaptation; Lucy face/hands read older than52 and lamp replacement is appropriate. Existing purposeful attention, coherent handhold/prayer gesture, full natural figure and period clothing must remain."
+  },
+  {
+    "id": "lucy-night-prayer-1827-correction",
+    "prompt": "Make two narrowly bounded corrections to this night-prayer scene. Lucy must read as52, a mature middle-aged woman rather than elderly65\u201375. Use reference2 historical Lucy drawing for recognizable broad facial structure, not its elderly wrinkles. Reduce heavy forehead furrows, sagging around mouth/jaw, deep eye creases and advanced hand/forearm wrinkling; retain real skin texture, fine age-appropriate lines and full natural face/body, never beauty-model smoothing. Preserve her closed eyes, bowedhead, claspedhands, kneelingposture, reverent expression, exact garments and cap. Replace the glass-chimney lamp at rearleft with a single plain burning tallow candle in simple metal holder, preserving gentle warm illumination and cool windowlight. No other changes to room, chair, bedding, composition or photographic realism. No text or extra people.",
+    "prompt_sha256": "d4267aea972dcf6fc273bd89f8224a59ca7348d2134a2b8c1d2727ff89239aa6",
+    "references": [
+      {
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-0f981477-3a2f-4eab-87cc-d52de9b37558.png",
+        "sha256": "80328cbb5537380e7741f89c5b646e2fec906d2f10f1b12589abdd2d600b7ed0"
+      },
+      {
+        "person": "Lucy",
+        "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\focus-joseph-curated-continuation\\work\\fermi\\family-sources\\lucy-mack-smith-gea11724.jpg",
+        "sha256": "0c572bfd2ce45d2bb8de7b5c4b3a42d7fb9e4bc80655f9a66f188f9414ca8adb"
+      }
+    ],
+    "fermi_generation_only_concur": true,
+    "parent_finished_concur": false,
+    "newton_generation_only_concur": true,
+    "finished_image_concurrence": false,
+    "newton_review": "Independently viewed whole parent. Hyrum mature forehead/eye texture needs credible23 adaptation; Lucy face/hands read older than52 and lamp replacement is appropriate. Existing purposeful attention, coherent handhold/prayer gesture, full natural figure and period clothing must remain."
+  }
+]

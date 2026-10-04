@@ -4,8 +4,17 @@
   const root = document.getElementById('portrait-research');
   if (!root || !document.body.classList.contains('fc-portrait-research-page')) return;
   const sections = Array.from(root.querySelectorAll('.research-part'));
-  const groups = [[1,2,3],[4,5],[6,7,8,9],[10,11],[12,13,14,15]];
-  const labels = ['Meet the portrait','What survives','Look feature by feature','How the image was made','Keep the sources in view'];
+  const chapterCards = Array.from(root.querySelectorAll('.research-chapters > a'));
+  let groups;
+  try { groups = chapterCards.map(card => JSON.parse(card.dataset.researchSections)); }
+  catch (_) { return; } // Invalid metadata leaves the complete no-JS reading path available.
+  const sectionNumbers = sections.map(section => Number(section.id.replace('portrait-section-','')));
+  const sequence = groups.flat();
+  if (!groups.length || groups.some(group => !Array.isArray(group) || !group.length || group.some(n => !Number.isInteger(n))) ||
+      sequence.length !== sectionNumbers.length || new Set(sequence).size !== sequence.length ||
+      sequence.some((number,index) => number !== sectionNumbers[index]) ||
+      chapterCards.some((card,index) => card.getAttribute('href') !== '#portrait-section-'+groups[index][0] || !card.querySelector('strong')?.textContent.trim())) return;
+  const labels = chapterCards.map(card => card.querySelector('strong').textContent.trim());
   const switcher = root.querySelector('.research-mode-switch');
   const status = root.querySelector('.research-mode-status');
   const controls = root.querySelector('.research-chapter-controls');

@@ -1,0 +1,44 @@
+{
+  "reviewer": "Albert",
+  "observed_at": "2026-10-04T07:35:06.705678+00:00",
+  "pdf_sha256": "b2be29625bce0b1d8a4883db8770b08344b61431a01148d9c7edc229d3fd7245",
+  "source_html_sha256": "e7c103505a70375a60870a0e93daa6f4cb527ea818d844d8022c3c57d625d8f0",
+  "concur": true,
+  "pages": 46,
+  "checks": {
+    "pdf_sha256": "b2be29625bce0b1d8a4883db8770b08344b61431a01148d9c7edc229d3fd7245",
+    "html_sha256": "e7c103505a70375a60870a0e93daa6f4cb527ea818d844d8022c3c57d625d8f0",
+    "pages": 46,
+    "substantive_text_blocks_checked": 424,
+    "missing_text": [],
+    "expected_external_links": 40,
+    "missing_external_links": [],
+    "link_annotations": 665,
+    "bad_internal_links": [],
+    "empty_pages": [],
+    "out_of_page_text": [],
+    "bookmarks": 33,
+    "expected_bookmarks": 33,
+    "image_placements": 82,
+    "expected_image_placements": 82,
+    "original_image_links": 14,
+    "missing_original_image_links": [],
+    "limits": "Text/link/geometry checks do not replace independent rendered-page visual review.",
+    "pass": true,
+    "header_buttons_checked": 276,
+    "header_navigation_errors": [],
+    "external_text_links_checked": 113,
+    "link_cue_errors": [],
+    "panel_clearance_errors": [],
+    "orphan_headings": []
+  },
+  "rendered_review": [
+    "All four final v7 contact sheets covering every page inspected; full pages17 and44 inspected after final pagination, with earlier full-page density checks during candidate refinement.",
+    "Historical evidence and original artwork are paired in a reader journey with consistent teal, green, cream and gold design.",
+    "No isolated headings, clipped text or controls, distorted images or near-empty intermediate pages found."
+  ],
+  "limitations": [
+    "Team visual review does not replace owner aesthetic acceptance.",
+    "Website final layout and publication verified separately."
+  ]
+}

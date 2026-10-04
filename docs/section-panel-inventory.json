@@ -613,7 +613,7 @@
       "reason": "Disclosure group; individual details receive surface."
     },
     "fc-resource-card": {
-      "count": 151,
+      "count": 150,
       "pages": [
         "about.html",
         "answers.html",
@@ -657,7 +657,6 @@
         "history/john-rowe-moyle.html",
         "history/john-tanner.html",
         "index.html",
-        "joseph-smith-likeness.html",
         "missionary.html",
         "pioneers.html",
         "watch.html"
@@ -669,7 +668,7 @@
       "reason": "Named existing section panel; shared Home-derived surface only."
     },
     "fc-resource-card__body": {
-      "count": 151,
+      "count": 150,
       "pages": [
         "about.html",
         "answers.html",
@@ -713,7 +712,6 @@
         "history/john-rowe-moyle.html",
         "history/john-tanner.html",
         "index.html",
-        "joseph-smith-likeness.html",
         "missionary.html",
         "pioneers.html",
         "watch.html"
@@ -725,7 +723,7 @@
       "reason": "Resource copy wrapper; parent card owns surface."
     },
     "fc-resource-card__image": {
-      "count": 151,
+      "count": 150,
       "pages": [
         "about.html",
         "answers.html",
@@ -769,7 +767,6 @@
         "history/john-rowe-moyle.html",
         "history/john-tanner.html",
         "index.html",
-        "joseph-smith-likeness.html",
         "missionary.html",
         "pioneers.html",
         "watch.html"
@@ -781,7 +778,7 @@
       "reason": "Image container; preserve letterboxing and fit."
     },
     "fc-resource-card__kind": {
-      "count": 151,
+      "count": 150,
       "pages": [
         "about.html",
         "answers.html",
@@ -825,7 +822,6 @@
         "history/john-rowe-moyle.html",
         "history/john-tanner.html",
         "index.html",
-        "joseph-smith-likeness.html",
         "missionary.html",
         "pioneers.html",
         "watch.html"
@@ -889,7 +885,7 @@
       "reason": "Play control, not panel."
     },
     "fc-resource-card__source": {
-      "count": 146,
+      "count": 145,
       "pages": [
         "about.html",
         "answers.html",
@@ -933,7 +929,6 @@
         "history/john-rowe-moyle.html",
         "history/john-tanner.html",
         "index.html",
-        "joseph-smith-likeness.html",
         "missionary.html",
         "pioneers.html",
         "watch.html"
@@ -970,7 +965,7 @@
       "reason": "Named existing section panel; shared Home-derived surface only."
     },
     "fc-study-panel": {
-      "count": 38,
+      "count": 35,
       "pages": [
         "answers/are-latter-day-saints-christian.html",
         "answers/bible-and-book-of-mormon-together.html",
@@ -1339,9 +1334,9 @@
       "reason": "jesus-journey.css owner applies shared panel tokens."
     },
     "joseph-life-reflection": {
-      "count": 11,
+      "count": 12,
       "pages": [
-        "joseph-smith-likeness.html"
+        "answers/who-was-joseph-smith.html"
       ],
       "tags": [
         "p"
@@ -1352,7 +1347,7 @@
     "joseph-life-source-note": {
       "count": 1,
       "pages": [
-        "joseph-smith-likeness.html"
+        "answers/who-was-joseph-smith.html"
       ],
       "tags": [
         "p"
@@ -1367,28 +1362,6 @@
       ],
       "tags": [
         "article"
-      ],
-      "disposition": "shared_surface",
-      "reason": "Named existing section panel; shared Home-derived surface only."
-    },
-    "likeness-note": {
-      "count": 1,
-      "pages": [
-        "joseph-smith-likeness.html"
-      ],
-      "tags": [
-        "p"
-      ],
-      "disposition": "excluded_with_reason",
-      "reason": "Inline source note."
-    },
-    "likeness-reflection": {
-      "count": 3,
-      "pages": [
-        "joseph-smith-likeness.html"
-      ],
-      "tags": [
-        "details"
       ],
       "disposition": "shared_surface",
       "reason": "Named existing section panel; shared Home-derived surface only."
@@ -1504,7 +1477,7 @@
       "reason": "Named existing section panel; shared Home-derived surface only."
     },
     "research-comparison-note": {
-      "count": 3,
+      "count": 2,
       "pages": [
         "joseph-smith-portrait-research.html"
       ],
@@ -1515,7 +1488,7 @@
       "reason": "Inline limitations attached to separately labelled source views; plain reading note, not a section panel."
     },
     "research-source-note": {
-      "count": 2,
+      "count": 1,
       "pages": [
         "joseph-smith-portrait-research.html"
       ],
@@ -2350,7 +2323,6 @@
         "history/john-rowe-moyle.html",
         "history/john-tanner.html",
         "index.html",
-        "joseph-smith-likeness.html",
         "missionary.html",
         "pioneers.html",
         "watch.html"
@@ -2834,34 +2806,6 @@
       ],
       "disposition": "shared_surface"
     },
-    "likeness-evidence": {
-      "stylesheets": [
-        "joseph-smith-likeness.css"
-      ],
-      "pages": [
-        "joseph-smith-likeness.html"
-      ],
-      "disposition": "shared_surface"
-    },
-    "likeness-museum": {
-      "stylesheets": [
-        "joseph-smith-likeness.css"
-      ],
-      "pages": [
-        "joseph-smith-likeness.html"
-      ],
-      "disposition": "excluded_with_reason",
-      "reason": "Integrated museum image-and-reading frame."
-    },
-    "likeness-reflection": {
-      "stylesheets": [
-        "joseph-smith-likeness.css"
-      ],
-      "pages": [
-        "joseph-smith-likeness.html"
-      ],
-      "disposition": "shared_surface"
-    },
     "map-container": {
       "stylesheets": [
         "pioneer-experience.css"
@@ -3225,7 +3169,7 @@
       ]
     },
     ".fc-deep-study details": {
-      "count": 150,
+      "count": 155,
       "pages": [
         "answers/aaronic-priesthood-restoration.html",
         "answers/are-latter-day-saints-christian.html",
@@ -3411,7 +3355,7 @@
       ]
     },
     ".fc-resource-card": {
-      "count": 151,
+      "count": 150,
       "pages": [
         "about.html",
         "answers.html",
@@ -3455,7 +3399,6 @@
         "history/john-rowe-moyle.html",
         "history/john-tanner.html",
         "index.html",
-        "joseph-smith-likeness.html",
         "missionary.html",
         "pioneers.html",
         "watch.html"
@@ -3560,7 +3503,7 @@
       ]
     },
     ".fc-study-panel": {
-      "count": 38,
+      "count": 35,
       "pages": [
         "answers/are-latter-day-saints-christian.html",
         "answers/bible-and-book-of-mormon-together.html",
@@ -3624,24 +3567,6 @@
       ],
       "tags": [
         "article"
-      ]
-    },
-    ".likeness-evidence": {
-      "count": 4,
-      "pages": [
-        "joseph-smith-likeness.html"
-      ],
-      "tags": [
-        "details"
-      ]
-    },
-    ".likeness-reflection": {
-      "count": 3,
-      "pages": [
-        "joseph-smith-likeness.html"
-      ],
-      "tags": [
-        "details"
       ]
     },
     ".notice": {

@@ -5,25 +5,17 @@ const path = require('node:path');
 const { JSDOM } = require('jsdom');
 const root = path.resolve(__dirname, '..');
 const read = file => fs.readFileSync(path.join(root, file), 'utf8');
-const dom = new JSDOM(read('joseph-smith-likeness.html'), {
-    url: 'https://focuschrist.com/joseph-smith-likeness.html', runScripts: 'outside-only'
+const dom = new JSDOM(read('joseph-smith-portrait-research.html'), {
+    url: 'https://focuschrist.com/joseph-smith-portrait-research.html', runScripts: 'outside-only'
 });
 const { window } = dom;
 const { document } = window;
 window.HTMLDialogElement.prototype.showModal = function () { this.setAttribute('open', ''); };
 window.HTMLDialogElement.prototype.close = function () { this.removeAttribute('open'); this.dispatchEvent(new window.Event('close')); };
 window.HTMLElement.prototype.scrollIntoView = function () {};
-window.eval(read('hero-details.js'));
-const hero = document.querySelector('a[data-hero-viewer]');
-assert.equal(hero.dataset.heroRecord, 'joseph-likeness', 'Actual hero binds its named record');
-hero.dispatchEvent(new window.MouseEvent('click', { bubbles: true, cancelable: true, button: 0 }));
-const heroPanel = document.getElementById('heroDetailDialog');
-assert(heroPanel.open, 'Joseph hero opens the study panel rather than the raw image');
-assert.equal(new URL(heroPanel.querySelector('[data-hero-source-link]').href).hostname,
-    'churchhistorylibrary.churchofjesuschrist.org');
-assert.equal(new URL(heroPanel.querySelector('[data-hero-study-link]').href).hash, '#our-portrait');
-heroPanel.close();
-assert.equal(document.activeElement, hero, 'Hero close restores focus');
+// The former likeness route is now a concise bridge; actual migrated pictures are tested here.
+const bridge=new JSDOM(read('joseph-smith-likeness.html')).window.document;
+assert.equal(bridge.querySelectorAll('main img').length,0,'Bridge must not duplicate artwork ownership');
 const allowed = [
     'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/135?lang=eng&id=p3#p3',
     'https://www.josephsmithpapers.org/paper-summary/journal-december-1841-december-1842/30',
@@ -51,39 +43,14 @@ document.dispatchEvent(new window.Event('DOMContentLoaded'));
 const panel = document.getElementById('topicArtworkDetailDialog');
 const click = node => node.dispatchEvent(new window.MouseEvent('click', { bubbles: true, cancelable: true, button: 0 }));
 let checked = 0;
-const maskImages = new Set(['byu-reled-4109-mask-pair.jpg']);
-const maskCitation = 'https://contentdm.lib.byu.edu/digital/collection/RelEd/id/4109/rec/5';
-let masksChecked = 0;
-for (const figure of document.querySelectorAll('figure[data-enriched-study-art^="likeness-"], figure.likeness-comparison-item')) {
-    const expected = [...figure.querySelectorAll('figcaption a[href]')].filter(a =>
-        ['www.churchofjesuschrist.org', 'www.josephsmithpapers.org', 'churchhistorylibrary.churchofjesuschrist.org', 'contentdm.lib.byu.edu'].includes(new URL(a.href).hostname)).map(a => a.href);
-    const isMask = maskImages.has(figure.querySelector('img').getAttribute('src').split('/').pop());
-    const isAdoptedPortrait = figure.querySelector(':scope > a').id === 'joseph-comparison-open';
-    if (isMask) {
-        assert.equal(figure.querySelector(':scope > a').dataset.topicStudy, 'joseph-smith-likeness.html#death-masks');
-        assert(figure.querySelector(`figcaption a[href="${maskCitation}"]`), 'Each mask retains its exact museum photograph citation');
-        assert.deepEqual(expected, [maskCitation], 'Each detail cites its exact public-domain source');
-        masksChecked++;
-    } else if (isAdoptedPortrait) {
-        assert.equal(figure.querySelector('img').getAttribute('src'), 'assets/identities/joseph-smith-owner-approved-20260914.png');
-        assert.equal(figure.querySelector(':scope > a').dataset.topicStudy, 'joseph-smith-likeness.html#death-masks');
-        assert.equal(expected.length, 0, 'Adopted comparison portrait uses the same centralized mask collection action');
-    } else assert(expected.length > 0, 'Each real scene supplies its historical source');
+for (const figure of document.querySelectorAll('figure[data-research-art^="likeness-"]')) {
+    const expected=[...figure.querySelectorAll('figcaption a[href]')].map(a=>a.href);
     click(figure.querySelector(':scope > a'));
-    assert(panel.open, 'Real picture opens the native study panel');
-    if (isMask) {
-        assert(panel.querySelector(`a[href="${maskCitation}"]`), 'Museum photograph citation survives in the mask panel');
-    }
-    if (isMask || isAdoptedPortrait) {
-        assert(panel.querySelector('a[href="joseph-smith-likeness.html#death-masks"]'), 'Mask panel returns to the contextual collection source');
-    }
-    assert.deepEqual([...panel.querySelectorAll('[data-topic-art-source]')].map(a => a.href), expected,
-        figure.dataset.enrichedStudyArt + ': exact historical source must survive into panel');
-    panel.close(); checked++;
+    assert(panel.open,'Migrated real picture opens its study panel');
+    assert.deepEqual([...panel.querySelectorAll('[data-topic-art-source]')].map(a=>a.href),expected,'Exact migrated source survives');
+    panel.close();checked++;
 }
-assert.equal(checked, 9, 'Five scenes and four comparison pictures retain native source panels');
-assert.equal(masksChecked, 2, 'Both exact historical mask photographs retain citation and contextual return');
-assert.equal(document.querySelectorAll('#death-masks a[href="https://churchhistorylibrary.churchofjesuschrist.org/joseph-and-hyrum-death-masks?lang=eng"]:not(.fc-resource-card__image)').length, 1, 'One contextual mask collection text action');
+assert.equal(checked,4,'All four migrated portrait scenes retain source panels');
 click(fixture.querySelector(':scope > a'));
 const pills = [...panel.querySelectorAll('[data-topic-art-source]')];
 assert.deepEqual(pills.map(a => a.href), allowed, 'Only exact HTTPS institutional hosts become source pills');
@@ -136,3 +103,17 @@ assert.equal(document.activeElement, fullTriggers[1], 'Actual full-image close r
 assert.equal(fullImage.getAttribute('src'), null, 'Actual full-image close clears its image');
 dom.window.close();
 console.log('Historical artwork source QA PASS: four real scene panels plus exact HTTPS host boundary, query/fragment preservation and scripture routing');
+
+// The bridge follows only its explicit legacy anchors; no-JS links remain in markup.
+const vm=require('node:vm');
+const bridgeScript=read('joseph-study-bridge.js');
+const bridgeRoutes=JSON.parse(bridgeScript.match(/const routes=(\{.*?\});/)[1]);
+for(const [id,target] of Object.entries(bridgeRoutes)){
+ let destination=null;const context={URL,location:{hash:'#'+id,href:'https://focuschrist.com/joseph-smith-likeness.html#'+id,replace:url=>destination=url},window:{addEventListener(){}}};
+ vm.runInNewContext(bridgeScript,context);assert.equal(destination,new URL(target,context.location.href).href);
+ assert(bridge.querySelector('#'+id+' a[href="'+target+'"]'),'No-JS legacy link agrees with runtime destination');
+}
+for(const hash of ['','#unknown','#https://evil.example','#%E0%A4%A','#constructor','#__proto__']){
+ let destination=null;vm.runInNewContext(bridgeScript,{URL,location:{hash,href:'https://focuschrist.com/joseph-smith-likeness.html'+hash,replace:url=>destination=url},window:{addEventListener(){}}});assert.equal(destination,null,'Unknown or malformed hashes cannot redirect');
+}
+console.log('PASS exact legacy bridge redirects, matching no-JS links and unknown/malformed/prototype negatives.');

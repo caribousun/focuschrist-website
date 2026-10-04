@@ -95,9 +95,9 @@ class AcceptanceTests(unittest.TestCase):
         with self.assertRaises(AssertionError):check_reading_cadence(soup(self.block+notes.replace('portrait-section-15','portrait-section-6')))
 
     def test_numbered_eyebrow_is_metadata_not_prose(self):
-        good=self.block.replace('<div data-research-reading-block>','<p class="fc-eyebrow">01 · The research</p><div data-research-reading-block>')
+        good=self.block.replace('<section class="research-part">','<section class="research-part" id="portrait-section-1">').replace('<div data-research-reading-block>','<p class="fc-eyebrow">Chapter 01</p><div data-research-reading-block>')
         check_reading_cadence(soup(good))
-        with self.assertRaises(AssertionError):check_reading_cadence(soup(good.replace('01 · The research','A historical claim cannot escape as an eyebrow.')))
+        with self.assertRaises(AssertionError):check_reading_cadence(soup(good.replace('Chapter 01','A historical claim cannot escape as an eyebrow.')))
 
     def test_modern_identity_exception_is_explicit_and_limited(self):
         good={'identity_scope':'unnamed_contemporary_only','depicts_christ':False,'reference_sha256':[],'reference_not_applicable_reason':'No named historical character depicted.'}
@@ -134,5 +134,48 @@ class AcceptanceTests(unittest.TestCase):
         check_original_page_exclusivity(records,{'research.html':['exact-pixels'],'main.html':['source-reference']})
         with self.assertRaises(AssertionError):
             check_original_page_exclusivity(records,{'research.html':['exact-pixels'],'main.html':['exact-pixels']})
+
+class NarrativeCoverageTests(unittest.TestCase):
+    def test_missing_duplicate_and_changed_evidence_fail(self):
+        from joseph_research_narrative_qa import check_coverage
+        import copy,hashlib
+        original='The original sitting drawing remains unidentified.'
+        item=dict(id='section-4/blocks/5/html',original=original,original_sha256=hashlib.sha256(original.encode()).hexdigest(),feature_id=None,field='html')
+        root=soup('<section id="evidence"><p>'+original+'</p></section>')
+        record=dict(id=item['id'],original_sha256=item['original_sha256'],disposition='preserved',targets=[dict(id='evidence',excerpt=original)],reason='The original drawing uncertainty remains explicit beside the profile.')
+        check_coverage(root,[item],{'records':[record]})
+        for records in ([],[record,record]):
+            with self.assertRaises(AssertionError):check_coverage(root,[item],{'records':records})
+        changed=copy.deepcopy(record);changed['targets'][0]['excerpt']='The original sitting drawing has been found.'
+        with self.assertRaises(AssertionError):check_coverage(root,[item],{'records':[changed]})
+        changed=copy.deepcopy(record);changed['original_sha256']='forged'
+        with self.assertRaises(AssertionError):check_coverage(root,[item],{'records':[changed]})
+    def test_feature_evidence_cannot_be_replaced_by_distant_source_note(self):
+        from joseph_research_narrative_qa import check_coverage
+        import hashlib
+        value='The eye color accounts conflict.'
+        item=dict(id='trait/eye/evidence',original=value,original_sha256=hashlib.sha256(value.encode()).hexdigest(),feature_id='research-feature-06',field='evidence')
+        record=dict(id=item['id'],original_sha256=item['original_sha256'],disposition='preserved',targets=[dict(id='source',excerpt=value)],reason='Conflicting observations are retained with their source context.')
+        root=soup('<article id="research-feature-06">Blue eyes</article><p id="source">'+value+'</p>')
+        with self.assertRaises(AssertionError):check_coverage(root,[item],{'records':[record]})
+
+class MigrationTests(unittest.TestCase):
+    def test_missing_replaced_or_misplaced_migrated_art_fails(self):
+        from pathlib import Path
+        from joseph_research_narrative_qa import check_art_migration
+        site=Path(__file__).resolve().parents[1]
+        markup=(site/'docs/joseph-research-manuscript.html.inc').read_text(encoding='utf-8')
+        check_art_migration(soup(markup),site)
+        for fault in ('remove','crop','full_link','reference_destination'):
+            root=soup(markup)
+            if fault=='reference_destination':
+                figure=next(f for f in root.select('#portrait-section-11 figure') if 'hyrum-reconstruction-blue' in f.select_one('img')['src'])
+                root.select_one('#portrait-section-1').append(figure.extract())
+            else:
+                figure=root.select_one('figure[data-research-art="likeness-warmth"]')
+                if fault=='remove':figure.decompose()
+                elif fault=='crop':figure.select_one('img')['style']='object-fit:cover'
+                else:figure.select_one('a:has(img)')['href']='unrelated.webp'
+            with self.assertRaises(AssertionError,msg=fault):check_art_migration(root,site)
 
 if __name__=='__main__':unittest.main()

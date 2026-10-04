@@ -1,5 +1,5 @@
 {
-  "status": "Local enrichment; only accepted images with existing files render",
+  "status": "Existing reviewed family artwork and sourced life narrative, owned by the Joseph biography",
   "scene_plan": "work/fermi/main-ten-original-plan.json",
   "prompt_versions_read": [
     "v1",
@@ -342,6 +342,45 @@
       },
       "image_status": "accepted",
       "visitor_caption": "Emma joins another woman in prayer while Joseph is in custody."
+    },
+    {
+      "id": "joseph-hyrum-bond",
+      "heading": "Beside my brother",
+      "date_label": "Joseph and Hyrum",
+      "paragraphs": [
+        "Joseph and Hyrum shared the work and trials of the Restoration. Their relationship also belonged to the daily life of a family: two brothers whose affection and loyalty endured through difficulty."
+      ],
+      "reflection": "How can affection and loyalty strengthen the relationships closest to you?",
+      "sources": [
+        {
+          "label": "Read about Joseph and Hyrum’s bond",
+          "url": "https://www.churchofjesuschrist.org/study/manual/teachings-of-presidents-of-the-church-joseph-fielding-smith/chapter-7-joseph-and-hyrum-smith-witnesses-for-christ?lang=eng"
+        }
+      ],
+      "image": {
+        "src": "assets/page-art/joseph-smith-likeness/brothers.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Joseph smiles at Hyrum with an arm around his shoulders; both wear shirts with rolled sleeves and suspenders",
+        "sha256": "8655582d10ad6c33f3973df15844123190053c1d8fa1d4175c14b5a0dcf43159"
+      },
+      "image_status": "accepted",
+      "existing_art_id": "likeness-brothers",
+      "visitor_caption": "Joseph rests an arm around Hyrum’s shoulders, and the brothers smile at each other.",
+      "provenance": "Existing published artwork moved intact from the likeness page to its family study; no new image generated.",
+      "delivery": {
+        "default": "assets/page-art/joseph-smith-likeness/brothers-960.webp",
+        "variants": [
+          {
+            "asset": "assets/page-art/joseph-smith-likeness/brothers-960.webp",
+            "width": 960
+          },
+          {
+            "asset": "assets/page-art/joseph-smith-likeness/brothers.webp",
+            "width": 1536
+          }
+        ]
+      }
     }
   ],
   "closing": {
@@ -369,5 +408,19 @@
     ],
     "editorial_source_note": "Publication citation verified in official essay note13: Joseph Smith, Times and Seasons5 no14,1Aug1844,p607. Original607scan not inspected here. No invented Phelps face or hymn-composition scene required; no long lyric quotation.",
     "visitor_source_note": "The original letter to Phelps is not extant; a contemporary letterbook copy survives."
-  }
+  },
+  "owning_page": "answers/who-was-joseph-smith.html",
+  "scene_order": [
+    "marriage-partnership-1827",
+    "journey-to-harmony-1827",
+    "emma-early-scribe-1828",
+    "care-after-loss-1828",
+    "joseph-household-labor-1828",
+    "household-gift-harmony-1828",
+    "emma-prayer-during-arrest-1830",
+    "emma-family-letter-1838",
+    "emma-relief-service-1842",
+    "joseph-hyrum-bond",
+    "hyrum-reading-before-carthage-1844"
+  ]
 }

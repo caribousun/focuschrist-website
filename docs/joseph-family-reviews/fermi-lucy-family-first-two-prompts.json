@@ -1,0 +1,47 @@
+[
+  {
+    "id": "lucy-hyrum-brings-chest-1827",
+    "date": "Late September 1827",
+    "ages": {
+      "Hyrum": 27
+    },
+    "source": "https://www.josephsmithpapers.org/paper-summary/lucy-mack-smith-history-1845/119",
+    "source_page": "Lucy Mack Smith, History, 1845, p112",
+    "source_action": "Hyrum immediately empties his chest and leaves with it on his shoulder after a messenger arrives.",
+    "prompt": "Create a reverent photorealistic historical scene of Hyrum Smith carrying an emptied wooden chest out of his modest New York home in late September 1827, responding immediately to his brother Joseph's need to secure the record. Use the supplied Hyrum reference for recognizable facial structure and blue eyes, adapting age to a credible 27-year-old adult, without mature middle-aged creases. Show Hyrum alone as the clear central figure, three-quarter side view, torso and full hands visible, stepping purposefully through an open doorway. The modest closed wooden chest rests securely on one shoulder, supported naturally by both hands; it must have plausible weight and a simple iron lock, no fantasy decoration. His gaze is directed clearly along his path through the doorway, not at camera or into blank space. An emptied folded linen item lies on a nearby floor, a quiet sign of his haste, without clutter. Warm domestic light gives way to cool outdoor daylight. Dress him in a plain late-1820s cream linen shirt with full sleeves, russet wool waistcoat and gray-brown high-waisted trousers; no modern tailoring, uniform or Nauvoo-era ceremonial clothing. Preserve reference facial proportions and asymmetry, not the reference costume. Keep head, chest and hands entirely within the frame with breathing room. No other identifiable people, no visible plates, no readable text, no violence. The image should tell the specific story of a brother ready to help, with natural anatomy, purposeful motion and restrained Christian reverence. This is a newly made scene, not a recovered documentary picture. Use realistic camera perspective, natural light, believable skin texture and photographic detail, not painterly brushwork.",
+    "limits": "Exact chest design, garments and room arrangement not recorded. No invented face for messenger or Jerusha. Scene depicts source action, not plates themselves.",
+    "prompt_sha256": "0e970fd3df50cb71090788e12f4c2e72e429bdecd0eb0694d8ef373405b77a0d",
+    "references": [
+      {
+        "person": "Hyrum",
+        "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\joseph-smith-likeness\\hyrum-reconstruction-blue-eyes-20261003.png",
+        "sha256": "47b35f55b805ee0cc7c914cc1adb59273b2405402d4a50e284d0bb456bd9cb32"
+      }
+    ],
+    "fermi_generation_only_concur": true,
+    "finished_pixels_concur": false
+  },
+  {
+    "id": "lucy-father-baptism-embrace-1830",
+    "date": "6 April 1830",
+    "ages": {
+      "Joseph": 24,
+      "Joseph Sr": 58
+    },
+    "source": "https://www.josephsmithpapers.org/paper-summary/lucy-mack-smith-history-1844-1845/116",
+    "source_page": "Lucy Mack Smith, History, 1844\u20131845, bk9 p12",
+    "source_action": "Joseph weeps for joy and buries his face against his father after his father is baptized.",
+    "prompt": "Create a tender photorealistic historical scene of Joseph Smith embracing his father after his father's baptism on 6 April 1830. Use the supplied approved Joseph portrait as the identity reference, preserving recognizable face shape, nose, jaw, hairline and natural asymmetry, with credible age24 and blue-gray eyes. Show a close waist-up embrace, Joseph on the viewer's left in a soft three-quarter view, his eyes naturally closed and his face resting against his father's shoulder, moved by quiet tears of joy. His father is58, shown entirely from behind and slightly to the right so that no invented recognizable facial likeness is visible; thinning gray-brown hair and a natural older neck are sufficient. Their arms support each other in a coherent human embrace, all visible hands anatomically natural. A subdued early-spring New York setting with an indistinct water edge and bare branches may remain softly out of focus; do not identify a specific historic building or exact baptism location. Joseph wears a plain dark-brown early-1830 wool coat over cream shirt and muted waistcoat. His father wears simple pale shirt and gray-brown trousers, cloth subtly damp after baptism. Avoid modern white baptism jumpsuits, dramatic theatrical beams or a crowd. Their full heads and arms have comfortable margins. The focus is a son's gratitude that his father has turned to Jesus Christ, not a posed portrait; do not direct either person toward the viewer. No text, no halos, no extra people. This is a newly made historical scene based on Lucy's recollection, not a recovered visual record. Use realistic camera perspective, natural light, believable skin texture and photographic detail, not painterly brushwork.",
+    "limits": "Lucy dates this April6. Exact site and garments not specified; use no named-location claim. Father face must not be invented.",
+    "prompt_sha256": "3248cc0f970daf28c52fbf1cf0dc882fcff8cd5704bc852525197c4bf0b72d1e",
+    "references": [
+      {
+        "person": "Joseph",
+        "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\identities\\joseph-smith-owner-approved-20260914.png",
+        "sha256": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+      }
+    ],
+    "fermi_generation_only_concur": true,
+    "finished_pixels_concur": false
+  }
+]

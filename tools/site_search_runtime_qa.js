@@ -9,7 +9,7 @@ const data=require('../site-search-index.json');
 const top=q=>search.rank(data.records,q).slice(0,5).map(r=>r.url);
 assert.deepEqual(top('priesthood restoration').slice(0,2),['/answers/aaronic-priesthood-restoration.html','/answers/melchizedek-priesthood-restoration.html']);
 assert.equal(top('Restoration')[0],'/answers/restored-church-of-jesus-christ.html');
-assert.equal(top('Joseph Smith death mask')[0],'/joseph-smith-likeness.html#death-masks');
+assert.equal(top('Joseph Smith death mask')[0],'/joseph-smith-portrait-research.html#portrait-section-4');
 assert.equal(top('D&C 6:36')[0],'/answers/look-unto-me-doctrine-and-covenants-6-36.html');
 assert.equal(top('grief')[0],'/answers/grief-and-faith.html');
 for (const query of ['Settle Your Heart','Settle This in Your Hearts','Neil Andersen']) assert.equal(search.groupMatches(data.records,query).best[0].url,'/answers/settle-this-in-your-hearts.html');

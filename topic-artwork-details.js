@@ -73,17 +73,21 @@
                     const researchedHistoryHost = historyOwner && ['saintsbysea.byu.edu', 'rsc.byu.edu', 'www.churchhistorianspress.org', 'www.fairlatterdaysaints.org'].includes(url.hostname);
                     const tannerJournal = historyOwner && location.pathname === '/history/john-tanner.html' && url.href === 'https://catalog.churchofjesuschrist.org/assets/994fb2fe-d8b1-4156-a452-3a8fecacf538/1/42';
                     const tannerBiography = historyOwner && location.pathname === '/history/john-tanner.html' && url.href === 'https://www.gutenberg.org/cache/epub/46734/pg46734-images.html';
+                    const hyrumBiography = location.pathname === '/joseph-smith-portrait-research.html'
+                        && url.href === 'https://www.gutenberg.org/cache/epub/46602/pg46602-images.html';
+                    const familyArchive = location.pathname === '/answers/who-was-joseph-smith.html'
+                        && ["https://contentdm.lib.byu.edu/digital/collection/GEA/id/11724", "https://contentdm.lib.byu.edu/digital/collection/GEA/id/11719", "https://contentdm.lib.byu.edu/digital/collection/Savage2/id/1825", "https://archive.org/details/historyofdecatur02howe/page/n96/mode/1up", "https://archive.org/details/historyofdecatur02howe/page/n150/mode/1up"].includes(url.href);
                     const portraitResearchScan = location.pathname === '/joseph-smith-portrait-research.html'
                         && ['archive.org', 'contentdm.lib.byu.edu', 'commons.wikimedia.org'].includes(url.hostname);
                     const josephMaskCatalogue = location.pathname === '/joseph-smith-likeness.html'
                         && url.hostname === 'contentdm.lib.byu.edu'
                         && url.pathname === '/digital/collection/RelEd/id/4109/rec/5';
-                    const josephReliefMinutes = location.pathname === '/joseph-smith-likeness.html' && url.hostname === 'www.churchhistorianspress.org' && url.pathname === '/the-first-fifty-years-of-relief-society/part-1/1-2/1-2-1';
+                    const josephReliefMinutes = location.pathname === '/answers/who-was-joseph-smith.html' && url.hostname === 'www.churchhistorianspress.org' && url.pathname === '/the-first-fifty-years-of-relief-society/part-1/1-2/1-2-1';
                     const josephByuStudy = url.hostname === 'byustudies.byu.edu' && (
                         (location.pathname === '/joseph-smith-portrait-research.html' && url.pathname === '/article/josiah-quincys-1844-visit-with-joseph-smith') ||
-                        (location.pathname === '/joseph-smith-likeness.html' && url.pathname === '/article/david-hales-store-ledger-new-details-about-joseph-and-emma-smith-the-hale-family-and-the-book-of-mormon')
+                        (location.pathname === '/answers/who-was-joseph-smith.html' && url.pathname === '/article/david-hales-store-ledger-new-details-about-joseph-and-emma-smith-the-hale-family-and-the-book-of-mormon')
                     );
-                    return url.protocol === 'https:' && (standardHost || researchedHistoryHost || tannerJournal || tannerBiography || portraitResearchScan || josephMaskCatalogue || josephByuStudy || josephReliefMinutes) && !link.querySelector('img');
+                    return url.protocol === 'https:' && (standardHost || researchedHistoryHost || tannerJournal || tannerBiography || hyrumBiography || familyArchive || portraitResearchScan || josephMaskCatalogue || josephByuStudy || josephReliefMinutes) && !link.querySelector('img');
                 } catch (error) { return false; }
             });
         }
@@ -97,7 +101,7 @@
                     return cardHeading;
                 }
             }
-            const familyScene = location.pathname === '/joseph-smith-likeness.html' && figure.closest('article.joseph-life-scene[id]');
+            const familyScene = location.pathname === '/answers/who-was-joseph-smith.html' && figure.closest('article.joseph-life-scene[id]');
             if (familyScene) {
                 familyScene.setAttribute('data-topic-reading-target', '');
                 return familyScene;

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "lucy-comforts-joseph-1828-correction",
+    "prompt": "Edit this mother-and-son scene in three bounded ways, preserving the strong compassionate action. Joseph at left must clearly read as22, with youthful early-twenties skin rather than mature forehead/outer-eye creasing; use reference2 for his recognizable bone structure, blue-gray eyes, nose, jaw and hairline without altering identity. Lucy at right must read as52\u201353 rather than65plus; use reference3 historical Lucy drawing for broad identity, reducing advanced wrinkles and excess gray hair while retaining real middle-aged texture, natural fullness and maternal warmth. Turn Joseph's head and eyes gently toward Lucy's eyes so he listens personally to her, with coherent mutual eye contact; adjust Lucy's pupils/head minimally if needed. Keep his grief and her compassion, not smiles or vacant poses. Preserve the hands exactly where they can remain anatomically natural, including Lucy's forearm touch, and retain his chair-supported posture. If the head turn requires slight movement of his hand near his mouth, make only the minimal natural adjustment. Preserve all garments, full bodies, lighting, room, candle, frame and photographic realism. No new people, objects or text; no airbrushing or beauty-model changes.",
+    "prompt_sha256": "71d8b2d639107731f7c447d7aac189717227df67216ca85bf24e5f386391cbe2",
+    "references": [
+      {
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-d9e86844-49be-404a-b8f1-b6e4aa423e54.png",
+        "sha256": "95c3b7edabf2adbef98989700e069ca282b419cfa379acb0f9bce91fa67554fd"
+      },
+      {
+        "person": "Joseph",
+        "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\identities\\joseph-smith-owner-approved-20260914.png",
+        "sha256": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+      },
+      {
+        "person": "Lucy",
+        "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\focus-joseph-curated-continuation\\work\\fermi\\family-sources\\lucy-mack-smith-gea11724.jpg",
+        "sha256": "0c572bfd2ce45d2bb8de7b5c4b3a42d7fb9e4bc80655f9a66f188f9414ca8adb"
+      }
+    ],
+    "fermi_generation_only_concur": true,
+    "parent_finished_concur": false,
+    "newton_generation_only_concur": true,
+    "finished_image_concurrence": false,
+    "newton_review": "Independently viewed whole parent. Mercy Joseph/Lucy need younger event ages and mutual attention while retaining grief. Nursing elderly mother and rear-view daughter are appropriate, gentle care and hands coherent; only uncertain lamp form requires replacement. Exact bounded prompt accepted for generation, new whole pixels still required."
+  },
+  {
+    "id": "children-nurse-lucy-1840-correction",
+    "prompt": "Edit only the lamp at far left in the supplied mother-and-daughter care scene. Replace the bulbous glass-chimney lamp, wick mechanism and reservoir with a single burning tallow candle in a simple period metal holder at the same tabletop location. Preserve gentle warm light and realistic shadows as closely as possible. Keep every other pixel appearance as stable as possible: motherLucy65 and her grateful expression/gaze, daughter19 viewedfrombehind, faces, hair, caps, hands arranging the cover, anatomy, early1840s garments, bedding, furniture, room and framing. Do not rejuvenate the elderly mother or reveal the daughter's unsupported facial likeness. No new objects, people or text. This is a narrow lighting-fixture correction only.",
+    "prompt_sha256": "7fa52a133e8e664395f1a24183e906e04f488deaea976be558bcd5afa0b1b54c",
+    "references": [
+      {
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-929e5403-aff3-4304-a73b-404354d7d6a4.png",
+        "sha256": "a262a77f4c3355c5d1d98e3cc0c90b35b84743a2066dd1bb90db7b59da170f72"
+      }
+    ],
+    "fermi_generation_only_concur": true,
+    "parent_finished_concur": false,
+    "newton_generation_only_concur": true,
+    "finished_image_concurrence": false,
+    "newton_review": "Independently viewed whole parent. Mercy Joseph/Lucy need younger event ages and mutual attention while retaining grief. Nursing elderly mother and rear-view daughter are appropriate, gentle care and hands coherent; only uncertain lamp form requires replacement. Exact bounded prompt accepted for generation, new whole pixels still required."
+  }
+]

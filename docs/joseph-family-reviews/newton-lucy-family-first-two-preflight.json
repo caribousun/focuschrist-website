@@ -1,0 +1,46 @@
+{
+  "scenes": [
+    {
+      "id": "lucy-hyrum-brings-chest-1827",
+      "prompt_sha256": "0e970fd3df50cb71090788e12f4c2e72e429bdecd0eb0694d8ef373405b77a0d",
+      "reference_sha256": [
+        "47b35f55b805ee0cc7c914cc1adb59273b2405402d4a50e284d0bb456bd9cb32"
+      ],
+      "concur": true,
+      "scope": "Generation-only preflight; finished exact image independent whole review required",
+      "source": "https://www.josephsmithpapers.org/paper-summary/lucy-mack-smith-history-1845/119",
+      "independent_source_read": "Direct primary HTML fetched after web timeout and saved under work/newton/lucy-hyrum-brings-chest-1827-source.html",
+      "actual_references_visually_inspected": true,
+      "checks": [
+        "Named age arithmetic correct for date.",
+        "Recognizable named face uses exact approved master or authorized blue-eye Hyrum sibling.",
+        "Source describes the central chest-carrying or baptism-embrace action.",
+        "Unrecorded garments/setting treated as artistic choices, not recovered facts.",
+        "Father face excluded to avoid invented approved likeness; source chest contents not depicted as plates.",
+        "Photorealistic style, purposeful gaze/closed eyes appropriate to action, complete hands and framing required."
+      ],
+      "finished_pixels_concur": false
+    },
+    {
+      "id": "lucy-father-baptism-embrace-1830",
+      "prompt_sha256": "3248cc0f970daf28c52fbf1cf0dc882fcff8cd5704bc852525197c4bf0b72d1e",
+      "reference_sha256": [
+        "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+      ],
+      "concur": true,
+      "scope": "Generation-only preflight; finished exact image independent whole review required",
+      "source": "https://www.josephsmithpapers.org/paper-summary/lucy-mack-smith-history-1844-1845/116",
+      "independent_source_read": "Direct primary HTML fetched after web timeout and saved under work/newton/lucy-father-baptism-embrace-1830-source.html",
+      "actual_references_visually_inspected": true,
+      "checks": [
+        "Named age arithmetic correct for date.",
+        "Recognizable named face uses exact approved master or authorized blue-eye Hyrum sibling.",
+        "Source describes the central chest-carrying or baptism-embrace action.",
+        "Unrecorded garments/setting treated as artistic choices, not recovered facts.",
+        "Father face excluded to avoid invented approved likeness; source chest contents not depicted as plates.",
+        "Photorealistic style, purposeful gaze/closed eyes appropriate to action, complete hands and framing required."
+      ],
+      "finished_pixels_concur": false
+    }
+  ]
+}

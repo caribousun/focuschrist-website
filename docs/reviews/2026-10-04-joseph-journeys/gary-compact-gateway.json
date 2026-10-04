@@ -1,0 +1,20 @@
+{
+  "hashes": {
+    "joseph-smith-likeness.html": "bcb8c7f4486ecd0b18ee8789f97dc042143adf6d692c510ce7694e43da80c43b",
+    "joseph-smith-likeness.css": "b5daaca7404233c075ece4d9b05aa2986d26db2d638e428aa53bca74b2b5d165",
+    "tools/build_joseph_life_enrichment.py": "6a59dd52354da7a5634769823250fe60a49df906ffb2a94c04e59548d28b9dbd"
+  },
+  "scope": "Only bridge intro renamed to bypass legacy mobilehero transformer, new scoped CSS and builder preservation. Shared JS untouched.",
+  "phone": {
+    "viewport": [
+      390,
+      844
+    ],
+    "intro_height": 203.49,
+    "last_primary_button_bottom": 469.29,
+    "old_mobile_text": false,
+    "continue_below": false,
+    "horizontal_overflow": false
+  },
+  "footer_exact_head": true
+}

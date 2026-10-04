@@ -18,15 +18,38 @@ assert([...fd.querySelectorAll('.research-part')].every(s=>!s.hidden),'No-JS mus
 assert(fd.querySelector('.research-mode-switch').hidden,'Nonfunctional mode controls hidden without JS');
 const baseline=signature(fd);
 fallback.window.close();
+for(const invalid of ['not-json','[1,1]','[]']){
+ const broken=setup('',false),bd=broken.window.document;
+ bd.querySelector('.research-chapters > a').dataset.researchSections=invalid;
+ broken.window.eval(script);
+ assert([...bd.querySelectorAll('.research-part')].every(s=>!s.hidden),'Invalid chapter metadata must retain all content');
+ assert(bd.querySelector('.research-mode-switch').hidden,'Invalid metadata must not expose nonfunctional controls');
+ broken.window.close();
+}
 const dom=setup(),w=dom.window,d=w.document,r=d.getElementById('portrait-research');
 assert.equal(r.dataset.readingMode,'chapters');
 const chapterLinks=[...d.querySelectorAll('.research-chapters > a')];
 assert.equal(chapterLinks.length,5);
+const expectedGroups=[[1,2],[4,5],[6,7,8,9],[11,12],[3,10,13,14,15]];
+assert.deepEqual(chapterLinks.map(a=>JSON.parse(a.dataset.researchSections)),expectedGroups,'Reviewed reader-journey chapter coverage');
+assert.deepEqual([...d.querySelectorAll('.research-part')].map(s=>Number(s.id.replace('portrait-section-',''))),expectedGroups.flat(),'Reader order must follow the evidence before synthesis');
+for(const [i,a] of chapterLinks.entries()){
+ assert.equal(a.getAttribute('href'),'#portrait-section-'+expectedGroups[i][0]);
+ assert(a.querySelector('strong').textContent.trim(),'Chapter label belongs to canonical card');
+}
+
 for(const a of chapterLinks){
  a.click();const section=d.querySelector(a.getAttribute('href'));
  assert(!section.hidden,'Selected chapter must be visible');
  assert.equal(a.getAttribute('aria-current'),'step');
+ const group=expectedGroups[chapterLinks.indexOf(a)];
+ assert.deepEqual([...d.querySelectorAll('.research-part')].filter(s=>!s.hidden).map(s=>Number(s.id.replace('portrait-section-',''))),group);
+ assert(d.querySelector('.research-mode-status').textContent.endsWith(a.querySelector('strong').textContent.trim()+'.'),'Status label must follow manuscript card');
  assert.deepEqual(signature(d),baseline,'Chapter mode must preserve all text/images/source paths in one DOM');
+}
+for(const target of d.querySelectorAll('.research-part[id],.research-feature-study[id],.research-source[id]')){
+ w.history.replaceState(null,'','#'+target.id);w.dispatchEvent(new w.HashChangeEvent('hashchange'));
+ assert(!target.closest('.research-part').hidden,'Every feature/source/section deep link must reveal its actual group');
 }
 const source=d.querySelector('.research-source[id]');
 assert(source,'Actual source deep-link target required');
@@ -81,7 +104,7 @@ for(const mode of ['chapters','all']){
   trigger.focus();click(trigger);
   const panel=doc.getElementById('topicArtworkDetailDialog'),viewer=doc.querySelector('.fc-full-image-viewer');
   assert(panel.open&&!viewer.open,'Study first, then full size');
-  assert.equal(panel.querySelector('h2').textContent.trim(),trigger.closest('figure').querySelector('h4').textContent.trim());
+  assert.equal(panel.querySelector('h2').textContent.trim(),trigger.closest('figure').querySelector('figcaption h3, figcaption h4').textContent.trim());
   assert.equal(panel.querySelector('img').src,trigger.href,'Detail window must reveal full unchanged source');
   const sourceLinks=[...panel.querySelectorAll('[data-topic-art-source]')];
   const expected=[...trigger.closest('figure').querySelectorAll('figcaption a[href]')].filter(a=>new URL(a.href).origin!==win.location.origin).map(a=>a.href);
@@ -105,3 +128,17 @@ for(const mode of ['chapters','all']){
  app.window.close();
 }
 console.log(`PASS ${picturePaths} actual research picture paths across both modes: titles, sources, full originals, nested close, focus and lesson return.`);
+
+// Only the exact reviewed Hyrum biography belongs to this research route.
+const biography='https://www.gutenberg.org/cache/epub/46602/pg46602-images.html';
+const variants=[biography,biography.replace('https:','http:'),biography+'?other=1',biography+'#other',biography.replace('www.gutenberg.org','www.gutenberg.org.evil.example'),biography.replace('46602-images','46602'),biography.replace('46602','46734')];
+for(const route of ['/joseph-smith-portrait-research.html','/joseph-smith-likeness.html','/answers/who-was-joseph-smith.html']){
+ const fixture=new JSDOM('<main><figure><a href="assets/test.webp"><img src="assets/test.webp" alt="Test"></a><figcaption><h3>Source boundary</h3>'+variants.map(url=>'<a href="'+url+'">Biography</a>').join('')+'</figcaption></figure></main>',{url:'https://focuschrist.com'+route,runScripts:'outside-only'});
+ const fw=fixture.window,fd=fw.document;
+ fw.HTMLDialogElement.prototype.showModal=function(){this.setAttribute('open','');};fw.HTMLElement.prototype.scrollIntoView=function(){};
+ fw.eval(fs.readFileSync(path.join(root,'topic-artwork-details.js'),'utf8'));fd.dispatchEvent(new fw.Event('DOMContentLoaded'));
+ fd.querySelector('figure>a').dispatchEvent(new fw.MouseEvent('click',{bubbles:true,cancelable:true,button:0}));
+ assert.deepEqual([...fd.querySelectorAll('[data-topic-art-source]')].map(a=>a.href),route==='/joseph-smith-portrait-research.html'?[biography]:[],'Biography URL and owner route must both match exactly');
+ fixture.window.close();
+}
+console.log('PASS exact Hyrum biography allowance with protocol, path, query, fragment, hostile-host and other-route negatives.');

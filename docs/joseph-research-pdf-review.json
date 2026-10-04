@@ -1,41 +1,45 @@
 {
-  "source_html_sha256": "5ef0d46ff62e825d51faf4ceab1d2a0d3cfff992336fbd7af673fac25209839a",
-  "pdf_sha256": "516cf1658d0e9294d24197dbab378339a70b58054263edb34820288eecae2773",
-  "pages": 59,
+  "source_html_sha256": "7bdbd53799cc36af18cc4d1e6d882044959ce39d89ea8c8e003a95dc73484458",
+  "pdf_sha256": "b2be29625bce0b1d8a4883db8770b08344b61431a01148d9c7edc229d3fd7245",
+  "pages": 46,
   "sections": 15,
   "feature_studies": 16,
-  "figure_placements": 75,
-  "distinct_new_originals": 10,
+  "figure_placements": 81,
+  "distinct_new_originals": 14,
   "text_coverage_pass": true,
   "links_pass": true,
-  "substantive_text_blocks_checked": 541,
-  "external_urls_checked": 39,
-  "pdf_image_placements_including_cover": 76,
+  "substantive_text_blocks_checked": 424,
+  "external_urls_checked": 40,
+  "pdf_image_placements_including_cover": 82,
   "bookmarks": 33,
   "reviewers": {
     "Fermi": {
       "concur": true,
-      "receipt": "docs/reviews/2026-10-03-joseph-pdf/fermi.json",
-      "receipt_sha256": "49d65d172f91118873cf349f0c15c1b7107e2280888825b0fefe3ea19a995b0f"
+      "receipt": "docs/reviews/2026-10-04-joseph-journey-pdf/fermi.json",
+      "receipt_sha256": "1bd1f055f240296fae9926d3694961499ae2ea5e5f8ce843e69682f879faf4e6"
     },
     "Newton": {
       "concur": true,
-      "receipt": "docs/reviews/2026-10-03-joseph-pdf/newton.json",
-      "receipt_sha256": "92b7dd0d12c6b56f442d4dd940fc99335b876316c8a08c74db5aaf646c484201"
+      "receipt": "docs/reviews/2026-10-04-joseph-journey-pdf/newton.json",
+      "receipt_sha256": "e655ee0cdeba105a942629b4e5e07ec4eb2faf60ab4d3bc0c7acb6b7840c84ae"
     },
     "Albert": {
       "concur": true,
-      "receipt": "docs/reviews/2026-10-03-joseph-pdf/albert.json",
-      "receipt_sha256": "88bec34000918658dcc10bb1defaa64936bd677e696ac1b52862b413f54aae56"
+      "receipt": "docs/reviews/2026-10-04-joseph-journey-pdf/albert.json",
+      "receipt_sha256": "ce6bf2ce3c24192d4477d6377de05cbd761a35b311cfe6cd54e1ce511b08efaa"
     }
   },
   "source_of_truth": "joseph-smith-portrait-research.html",
   "build": "python tools/build_joseph_research_pdf.py",
   "independent_qa": "python tools/joseph_research_pdf_qa.py",
-  "limitations": "Team and technical review are not owner aesthetic acceptance or proof of historical authenticity. Source photographs, document scans, repeated comparisons and new illustrations retain distinct labels.",
-  "header_buttons_checked": 354,
+  "limitations": "Independent team review is not owner aesthetic acceptance or proof of historical authenticity; source provenance remains available through citations.",
+  "header_buttons_checked": 276,
   "navigation_pass": true,
   "link_cues_pass": true,
   "orphan_headings_pass": true,
-  "appearance": "Website palette: deep teal and green, cream text, restrained gold navigation and non-underlined source links"
+  "appearance": "Website palette: deep teal and green, cream text, restrained gold navigation and non-underlined source links",
+  "source_revalidation": {
+    "reason": "Final HTML-only search metadata, cache token and safe external-link target/rel changes preserve all PDF text, links, images and navigation. Current source QA passes.",
+    "qa_receipt": "docs/reviews/2026-10-04-joseph-journey-pdf/final-source-qa.json"
+  }
 }

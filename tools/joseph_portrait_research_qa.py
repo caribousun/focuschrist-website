@@ -8,15 +8,7 @@ from joseph_research_acceptance import ROUTE, REJECTED_GENERIC_SCENES, REJECTED_
 
 ROOT=Path(__file__).resolve().parents[1]
 data=json.loads((ROOT/'docs/joseph-portrait-research-content.json').read_text(encoding='utf-8'))
-editorial=json.loads((ROOT/'docs/joseph-research-editorial-map.json').read_text(encoding='utf-8'))
-# Individually reviewed semantic edit, not a general license to rewrite evidence.
-approved_editorial={'The unchanged owner-approved portrait. A modern artistic interpretation, not an authenticated photograph or a forensic identification. [20]': 'Our adopted portrait remains unchanged. [20]', 'Retain the approved Joseph': 'Why we kept this likeness', 'EVIDENCE, INTERPRETATION AND THE CASE FOR RETAINING HIM': 'A portrait informed by history', 'A consolidated study of the approved portrait: what the historical record supports, what it leaves uncertain, and what would justify a change.': 'What did Joseph Smith look like? No single surviving source answers the whole question. A cast preserves contours; a portrait records an artist’s choices; a description captures what one observer noticed. Here we follow those records to see what supports our portrait, what remains uncertain, and what could justify a change.', 'Joseph death-mask reference as used in the current focusChrist study. The mask photograph is provided for source context, not as a pose-matched overlay or proof of agreement. [1, 20]': 'The <a href="joseph-smith-likeness.html#joseph-mask-comparison">mask comparison in the portrait study</a> now uses this same newly consulted BYU photograph. It supplies source context, not a pose-matched overlay or proof of agreement, and is not established as an original creation input. [1,20]'}
-approved_editorial.update({
-    'No demonstrated structural defect requires replacing him. Exact historical fidelity remains unverified. The evidence supports a cautious artistic interpretation and an optional, limited hair study.': 'The sources we compared give us no clear reason to change the portrait’s facial structure. They leave room to explore a straighter hairstyle, while several details of Joseph’s appearance remain uncertain.',
-    'No replacement identity is proposed for approval now. Preserve this portrait and its honest interpretive labeling.': 'No replacement identity is proposed for approval now. Preserve this portrait.',
-    'The approved portrait is defensible as an openly labeled artistic representation. A stronger claim - exact anatomy or recognition by a contemporary - is not established.': 'The evidence supports retaining the approved portrait. Exact anatomy or recognition by a contemporary is not established.',
-})
-assert {e['original']:e['replacement'] for e in editorial['changes']}==approved_editorial, 'New editorial mapping requires independent semantic review'
+from joseph_research_narrative_qa import check_narrative, check_narrative_features, check_art_migration
 main_page=(ROOT/'joseph-smith-likeness.html').read_text(encoding='utf-8')
 assert (ROOT/ROUTE).is_file(), 'Research requires its own HTML route'
 page=(ROOT/ROUTE).read_text(encoding='utf-8')
@@ -34,32 +26,15 @@ def norm(s):
     s=html.unescape(re.sub('<[^>]+>',' ',s))
     s=re.sub(r'\[\s*[0-9]+(?:\s*[-,]\s*[0-9]+)*\s*\]','',s)
     return re.sub(r'\s+',' ',s).strip()
-flat=norm(research)
-checked=0
-omitted=[]
-for section in data['sections']:
-    for block in section['blocks']:
-        if section['id']=='section-2' and block['kind']!='box':continue
-        if block['kind']=='paragraph':
-            if block['style']=='title':continue
-            if block['html'].startswith('Prepared for Wyatt. Use the navigation bar'):
-                omitted.append('Paper navigation instruction replaced by HTML navigation');continue
-            values=[block['html']]
-        elif block['kind']=='box':values=[block['title'],block['html']]
-        elif block['kind']=='trait':values=[block['title'],block['observed'],block['evidence'],block['verdict']]
-        elif block['kind']=='table':values=block['headers']+[x for row in block['rows'] for x in row]
-        elif block['kind']=='image':values=[block['caption']] if block.get('caption') else []
-        else:raise AssertionError(block['kind'])
-        for value in values:
-            value=approved_editorial.get(value,value)
-            assert norm(value) in flat,'Missing research text: '+value[:100]
-            checked+=1
+migration=check_art_migration(root,ROOT)
+checked, narrative_coverage=check_narrative(root,ROOT)
+omitted=['Historical audit presentation consolidated into independently reviewed reader narrative; all164baselinefields remain mapped.']
 ids=re.findall(r'\bid="([^"]+)"',page)
 assert len(ids)==len(set(ids)),'Duplicate HTML ids'
 for target in re.findall(r'href="#(portrait-[^"]+)"',research):assert target in ids,'Missing research target '+target
 features=json.loads((ROOT/'docs/joseph-research-feature-studies.json').read_text(encoding='utf-8'))
 traits={b['title'].split()[0]:b for section in data['sections'] for b in section['blocks'] if b['kind']=='trait'}
-verified_features=check_feature_studies(root,features,traits)
+verified_features=check_narrative_features(root,features,narrative_coverage)
 assert not re.search(r'locket|daguerreotype|Curtis Weber',research,re.I),'Comparison research leaked into focused study'
 assert root.select('figure img'), 'Research needs actual relevant imagery beside its reading, not only distant image links'
 assert doc.select_one('a[href="joseph-smith-likeness.html#our-portrait"]'), 'Research needs a return to the owning portrait study'
@@ -103,11 +78,16 @@ check_original_manifest(originals,require_half_christ=False)
 # Verify exact-byte exclusivity across actual rendered image references, including
 # renamed copies. Full-size hyperlinks to the sole owning study remain allowed.
 from urllib.parse import unquote, urlsplit
-original_sizes={(ROOT/r['asset']).stat().st_size for r in originals}
+exclusive_records=list(originals)
+for move in migration['moves']:
+    for asset in (move['baseline']['src'],move['baseline']['full_asset']):
+        exclusive_records.append(dict(asset=asset,sha256=hashlib.sha256((ROOT/asset).read_bytes()).hexdigest(),owning_page=ROUTE))
+original_sizes={(ROOT/r['asset']).stat().st_size for r in exclusive_records}
 rendered_images={}
 image_hash_cache={}
 for html_path in ROOT.rglob('*.html'):
     relative=html_path.relative_to(ROOT).as_posix()
+    if relative=='docs/joseph-research-manuscript.html.inc': continue
     if any(part.startswith('.') or part in {'node_modules','work','outputs'} for part in html_path.relative_to(ROOT).parts):
         continue
     image_hashes=[]
@@ -121,9 +101,9 @@ for html_path in ROOT.rglob('*.html'):
         if target not in image_hash_cache: image_hash_cache[target]=hashlib.sha256(target.read_bytes()).hexdigest()
         image_hashes.append(image_hash_cache[target])
     rendered_images[relative]=image_hashes
-check_original_page_exclusivity(originals,rendered_images)
+check_original_page_exclusivity(exclusive_records,rendered_images)
 
-placed=root.select('figure[data-research-art]')
+placed=[f for f in root.select('figure[data-research-art]') if not f['data-research-art'].startswith('likeness-')]
 assert len(placed)==len(originals), 'Original artwork placement count differs from review'
 assert {f['data-research-art'] for f in placed}=={r['id'] for r in originals}, 'Original placement identities differ from manifest'
 for record in originals:
@@ -143,6 +123,7 @@ reference_records=[dict(r,kind='historical_document') for r in json.loads((ROOT/
 pelton=json.loads((ROOT/'docs/joseph-research-pelton-source.json').read_text(encoding='utf-8'))
 assert pelton['sha256']=='6eb0a2759c0e78e6c934db0465b5d26b6c9b674e983679c3c3105a2925c01c3b', 'Pelton derivative bytes require renewed source review'
 reference_records.append(dict(pelton,kind='historical_document'))
+reference_records += [dict(asset=r['baseline']['src'],sha256=r['baseline']['sha256'],kind='existing_reference',owning_study=ROUTE+'#'+r['target']) for r in migration['reference_moves'] if 'hyrum-reconstruction' in r['baseline']['src']]
 reference_records += [
     {'asset':'assets/identities/joseph-smith-owner-approved-20260914.png','sha256':'518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827','kind':'existing_reference','owning_study':'joseph-smith-likeness.html#our-portrait'},
     {'asset':'assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg','sha256':'f69d497dc7bceeab0c3b459e30e4f31c7d1173e1fd56ddd7179783db105ce8b0','kind':'existing_reference','source_url':'https://contentdm.lib.byu.edu/digital/collection/RelEd/id/4109/rec/5'},
@@ -161,7 +142,7 @@ pdf_review=json.loads((ROOT/'docs/joseph-research-pdf-review.json').read_text(en
 assert pdf_review['source_html_sha256']==hashlib.sha256((ROOT/ROUTE).read_bytes()).hexdigest(), 'Research page changed: rebuild and review the complete downloadable PDF'
 assert pdf_review['pdf_sha256']==hashlib.sha256(pdf.read_bytes()).hexdigest(), 'PDF bytes changed after completeness and rendered review'
 assert pdf_review['sections']==15 and pdf_review['feature_studies']==16, 'Complete PDF research coverage missing'
-assert pdf_review['figure_placements']==len(root.select('figure')) and pdf_review['distinct_new_originals']==10, 'Complete PDF picture coverage missing'
+assert pdf_review['figure_placements']==len(root.select('figure')) and pdf_review['distinct_new_originals']==len(originals)+len(migration['moves']), 'Complete PDF picture coverage missing'
 assert pdf_review['text_coverage_pass'] and pdf_review['links_pass'], 'PDF text or hyperlink verification missing'
 assert all(pdf_review['reviewers'].get(name,{}).get('concur') is True for name in ('Fermi','Newton','Albert')), 'Finished PDF needs independent rendered concurrence'
 for reviewer in pdf_review['reviewers'].values():

@@ -1,0 +1,46 @@
+{
+  "scenes": [
+    {
+      "id": "lucy-hyrum-brings-chest-1827-age-only",
+      "prompt_sha256": "c3c8c7147058a9eb76c66d6cd7e8ed9eb9cbe56e90f4da501fa0c228de27c956",
+      "reference_sha256": [
+        "e38204209f77f7b25ea3b43972a264bfdfd772a2489317f82c7d2e7d2146baf1",
+        "47b35f55b805ee0cc7c914cc1adb59273b2405402d4a50e284d0bb456bd9cb32"
+      ],
+      "concur": true,
+      "scope": "Generation-only exact preflight; whole finished pixels require fresh review",
+      "references_actually_inspected": true,
+      "source": null,
+      "independent_source_read": "Prior scene action independently read from exact primary pages; age-only repair",
+      "constraints": [
+        "Age must read as specified, not the older reference age.",
+        "Identity facial structure, natural skin and family resemblance preserved; Lucy drawing is historical reference, not verified photograph.",
+        "Purposeful gaze/action, coherent full hands, credible period dress, unchanged source facts required.",
+        "No unsupported recognizable rear-facing relative or exact childhood likeness claimed.",
+        "No new original workflow claim or visible disclaimer label."
+      ],
+      "finished_pixels_concur": false
+    },
+    {
+      "id": "lucy-father-baptism-embrace-1830-age-only",
+      "prompt_sha256": "8532f9769d1411dca85886d948a8126e415c22c0b2282acb9b97c001c06eaaf2",
+      "reference_sha256": [
+        "b8f5ad2213a7b6aaf24196c086722b2fa603de0e4fc7faa78cf0bb7d98ce5d3d",
+        "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+      ],
+      "concur": true,
+      "scope": "Generation-only exact preflight; whole finished pixels require fresh review",
+      "references_actually_inspected": true,
+      "source": null,
+      "independent_source_read": "Prior scene action independently read from exact primary pages; age-only repair",
+      "constraints": [
+        "Age must read as specified, not the older reference age.",
+        "Identity facial structure, natural skin and family resemblance preserved; Lucy drawing is historical reference, not verified photograph.",
+        "Purposeful gaze/action, coherent full hands, credible period dress, unchanged source facts required.",
+        "No unsupported recognizable rear-facing relative or exact childhood likeness claimed.",
+        "No new original workflow claim or visible disclaimer label."
+      ],
+      "finished_pixels_concur": false
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "command": "python -X utf8 tools/site_qa.py",
+    "exit": 0,
+    "output": "FocusChrist SITE QA PASSED\nCore pages checked: 11\nPermanent answer pages checked: 25\nFeatured Art study pages checked: 4\nArt gallery images checked: 44\nSearch Console verification, sitemap, local references, Answer Library sources, model migration, disclosures, accessibility markers, and Ask rendering verified.\n"
+  },
+  {
+    "command": "python -X utf8 tools/navigation_links_qa.py",
+    "exit": 0,
+    "output": "NAVIGATION QA PASS: 131 centered headers, 5131 external links\n"
+  },
+  {
+    "command": "python -X utf8 tools/topic_pill_order_qa.py",
+    "exit": 0,
+    "output": "TOPIC PILL ORDER PASS: 10 topic groups\n"
+  },
+  {
+    "command": "python -X utf8 tools/study_layout_uniformity_qa.py",
+    "exit": 0,
+    "output": "STUDY LAYOUT QA PASS: five shared rails, Joseph spacing and two journey entrances; all 82 journey consumers use full-width reading and current CSS; rendered geometry requires browser review\n"
+  },
+  {
+    "command": "python -X utf8 tools/build_art_gallery.py --check",
+    "exit": 0,
+    "output": "Art gallery inventory is current.\n"
+  },
+  {
+    "command": "python -X utf8 tools/build_site_search.py --check",
+    "exit": 0,
+    "output": "SEARCH INDEX PASS: public pages, sections and artwork are current\n"
+  },
+  {
+    "command": "python -X utf8 tools/site_search_qa.py",
+    "exit": 0,
+    "output": "SEARCH QA PASS: 129 public pages, 2230 valid destinations; hidden/internal content excluded\n"
+  },
+  {
+    "command": "python -X utf8 tools/joseph_smith_likeness_qa.py",
+    "exit": 0,
+    "output": "Joseph journeys PASS: exact legacy bridge destinations, unchanged five reviewed originals and identities, migrated sources, guidance and native image controls\n"
+  },
+  {
+    "command": "python -X utf8 tools/joseph_lucy_stories_qa.py",
+    "exit": 0,
+    "output": "LUCY STORY QA PASS: 10 of 10 complete; all ten required stories illustrated\n"
+  },
+  {
+    "command": "python -X utf8 tools/section_panel_surface_qa.py",
+    "exit": 0,
+    "output": "SECTION PANEL QA PASS: 130 canonical pages, 81 classified panel-like classes, 60 shared selectors. Rendered QA remains separate.\n"
+  }
+]

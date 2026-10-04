@@ -1,0 +1,699 @@
+{
+  "moves": [
+    {
+      "id": "likeness-warmth",
+      "from": "joseph-smith-likeness.html",
+      "to": "joseph-smith-portrait-research.html#research-feature-14",
+      "source": "assets/page-art/joseph-smith-likeness/warmth-960.webp",
+      "baseline": {
+        "src": "assets/page-art/joseph-smith-likeness/warmth-960.webp",
+        "sha256": "405cce02bd1816b46080ef9a2024cbc84a406be143aa95fd6eaea70bd417ba72",
+        "original_id": null,
+        "image_style": "--study-image-ratio:1536/1024",
+        "window_style": "",
+        "full_asset": "assets/page-art/joseph-smith-likeness/warmth.webp"
+      },
+      "legacy_review": "docs/art-study-image-review.json",
+      "legacy_slot": "warmth"
+    },
+    {
+      "id": "likeness-portrait-sitting",
+      "from": "joseph-smith-likeness.html",
+      "to": "joseph-smith-portrait-research.html#research-block-section-4-2",
+      "source": "assets/page-art/joseph-smith-likeness/portrait-sitting-960.webp",
+      "baseline": {
+        "src": "assets/page-art/joseph-smith-likeness/portrait-sitting-960.webp",
+        "sha256": "d8fbf04987dd2816d96b54e23675d6df7523875f04a1223c9d0af943f9f3c15c",
+        "original_id": null,
+        "image_style": "--study-image-ratio:1536/1024",
+        "window_style": "",
+        "full_asset": "assets/page-art/joseph-smith-likeness/portrait-sitting.webp"
+      },
+      "legacy_review": "docs/art-study-image-review.json",
+      "legacy_slot": "portrait-sitting"
+    },
+    {
+      "id": "likeness-writing",
+      "from": "joseph-smith-likeness.html",
+      "to": "joseph-smith-portrait-research.html#research-feature-07",
+      "source": "assets/page-art/joseph-smith-likeness/writing-960.webp",
+      "baseline": {
+        "src": "assets/page-art/joseph-smith-likeness/writing-960.webp",
+        "sha256": "7245da11becd1a698d10b301c62aec15802852a55333a0f49fd219a642ef74c4",
+        "original_id": null,
+        "image_style": "--study-image-ratio:1536/1024",
+        "window_style": "",
+        "full_asset": "assets/page-art/joseph-smith-likeness/writing.webp"
+      },
+      "legacy_review": "docs/art-study-image-review.json",
+      "legacy_slot": "writing"
+    },
+    {
+      "id": "likeness-conversation",
+      "from": "joseph-smith-likeness.html",
+      "to": "joseph-smith-portrait-research.html#research-feature-16",
+      "source": "assets/page-art/joseph-smith-likeness/conversation-960.webp",
+      "baseline": {
+        "src": "assets/page-art/joseph-smith-likeness/conversation-960.webp",
+        "sha256": "9b715d7a44e63c0af05c6e24f0b0795824a5af14c168a27e6ac77592d17a7e5d",
+        "original_id": null,
+        "image_style": "--study-image-ratio:1536/1024",
+        "window_style": "",
+        "full_asset": "assets/page-art/joseph-smith-likeness/conversation.webp"
+      },
+      "legacy_review": "docs/art-study-image-review.json",
+      "legacy_slot": "conversation"
+    }
+  ],
+  "additional_reference_placements": 2,
+  "existing_research_figures": 75,
+  "total_research_figures": 81,
+  "research_originals": 14,
+  "baseline_commit": "c2d6b8d159021aa7651cee137389cce18a9f7107",
+  "baseline_research_figures": [
+    {
+      "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+      "sha256": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827",
+      "original_id": null,
+      "image_style": "",
+      "window_style": "",
+      "full_asset": "assets/identities/joseph-smith-owner-approved-20260914.png"
+    },
+    {
+      "src": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
+      "sha256": "f69d497dc7bceeab0c3b459e30e4f31c7d1173e1fd56ddd7179783db105ce8b0",
+      "original_id": null,
+      "image_style": "width:235.294118%;max-width:none;position:absolute;left:-7.352941%;top:0.000000%;height:auto",
+      "window_style": "aspect-ratio:340/535;max-width:360px;margin-inline:auto",
+      "full_asset": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg"
+    },
+    {
+      "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+      "sha256": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827",
+      "original_id": null,
+      "image_style": "width:186.099291%;max-width:none;position:absolute;left:-37.588652%;top:0.000000%;height:auto",
+      "window_style": "aspect-ratio:705/875;max-width:705px;margin-inline:auto",
+      "full_asset": "assets/identities/joseph-smith-owner-approved-20260914.png"
+    },
+    {
+      "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+      "sha256": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827",
+      "original_id": null,
+      "image_style": "width:190.144928%;max-width:none;position:absolute;left:-39.130435%;top:0.000000%;height:auto",
+      "window_style": "aspect-ratio:690/365;max-width:690px;margin-inline:auto",
+      "full_asset": "assets/identities/joseph-smith-owner-approved-20260914.png"
+    },
+    {
+      "src": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
+      "sha256": "f69d497dc7bceeab0c3b459e30e4f31c7d1173e1fd56ddd7179783db105ce8b0",
+      "original_id": null,
+      "image_style": "",
+      "window_style": "",
+      "full_asset": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg"
+    },
+    {
+      "src": "assets/research/joseph-documents/pelton-after-maudsley-1842.jpg",
+      "sha256": "6eb0a2759c0e78e6c934db0465b5d26b6c9b674e983679c3c3105a2925c01c3b",
+      "original_id": null,
+      "image_style": "width:254px;max-width:100%;height:auto;margin-inline:auto",
+      "window_style": "",
+      "full_asset": "assets/research/joseph-documents/pelton-after-maudsley-1842.jpg"
+    },
+    {
+      "src": "assets/research/joseph-originals/painted-likeness-1842-1536.webp",
+      "sha256": "3a26859d94a376f1b11dd26bf305f136c16f90d626251e1877c761d2aa07091b",
+      "original_id": "painted-likeness-1842",
+      "image_style": "",
+      "window_style": "",
+      "full_asset": "assets/research/joseph-originals/painted-likeness-1842.png"
+    },
+    {
+      "src": "assets/research/joseph-originals/profile-sitting-1842-retry-1536.webp",
+      "sha256": "8732e27804e7b3fffde224563a35038579600e791b1dc141fa9f793692240688",
+      "original_id": "profile-sitting-1842-retry",
+      "image_style": "",
+      "window_style": "",
+      "full_asset": "assets/research/joseph-originals/profile-sitting-1842-retry.png"
+    },
+    {
+      "src": "assets/research/joseph-documents/quincy-1883-p380.png",
+      "sha256": "b97535f3b93d3a6d75605d7886656b7f3337288ab75f785d9b5a479c8a318abe",
+      "original_id": null,
+      "image_style": "",
+      "window_style": "",
+      "full_asset": "assets/research/joseph-documents/quincy-1883-p380.png"
+    },
+    {
+      "src": "assets/research/joseph-documents/quincy-1883-title.png",
+      "sha256": "e6d87ce6fc3a13f3da6700833cb64ad813d816af4e34712dc8926c855bc2ca00",
+      "original_id": null,
+      "image_style": "",
+      "window_style": "",
+      "full_asset": "assets/research/joseph-documents/quincy-1883-title.png"
+    },
+    {
+      "src": "assets/research/joseph-documents/pratt-1874-p47.png",
+      "sha256": "a10c9219539860f6e8303cb3f560f2451ecbe6cc4390bfe6bdf50a5538723da1",
+      "original_id": null,
+      "image_style": "",
+      "window_style": "",
+      "full_asset": "assets/research/joseph-documents/pratt-1874-p47.png"
+    },
+    {
+      "src": "assets/research/joseph-documents/gazette-transmission-1916-p100.png",
+      "sha256": "b2fc41ea676f6662ae28d2fd766341e46780483ca278130c2515b6a1d442cca0",
+      "original_id": null,
+      "image_style": "",
+      "window_style": "",
+      "full_asset": "assets/research/joseph-documents/gazette-transmission-1916-p100.png"
+    },
+    {
+      "src": "assets/research/joseph-documents/haven-1890-p621.png",
+      "sha256": "bfbe21493f246434ecd12e3c540a4c2b67b50869a5f2cb08a5fe74133550eaa6",
+      "original_id": null,
+      "image_style": "",
+      "window_style": "",
+      "full_asset": "assets/research/joseph-documents/haven-1890-p621.png"
+    },
+    {
+      "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+      "sha256": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827",
+      "original_id": null,
+      "image_style": "width:215.081967%;max-width:none;position:absolute;left:-50.819672%;top:-18.620690%;height:auto",
+      "window_style": "aspect-ratio:610/725;max-width:610px;margin-inline:auto",
+      "full_asset": "assets/identities/joseph-smith-owner-approved-20260914.png"
+    },
+    {
+      "src": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
+      "sha256": "f69d497dc7bceeab0c3b459e30e4f31c7d1173e1fd56ddd7179783db105ce8b0",
+      "original_id": null,
+      "image_style": "width:250.000000%;max-width:none;position:absolute;left:-10.937500%;top:-6.122449%;height:auto",
+      "window_style": "aspect-ratio:320/490;max-width:360px;margin-inline:auto",
+      "full_asset": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg"
+    },
+    {
+      "src": "assets/research/joseph-documents/gazette-transmission-1916-p101.png",
+      "sha256": "4e87de3bf5d58a57d1d65f57acd14a02db698cbfd0f9c57580566ca29ea955b4",
+      "original_id": null,
+      "image_style": "width:121.118012%;max-width:none;position:absolute;left:-10.869565%;top:-419.230769%;height:auto",
+      "window_style": "aspect-ratio:322/104;max-width:360px;margin-inline:auto",
+      "full_asset": "assets/research/joseph-documents/gazette-transmission-1916-p101.png"
+    },
+    {
+      "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+      "sha256": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827",
+      "original_id": null,
+      "image_style": "width:294.170404%;max-width:none;position:absolute;left:-91.255605%;top:-57.851240%;height:auto",
+      "window_style": "aspect-ratio:446/242;max-width:446px;margin-inline:auto",
+      "full_asset": "assets/identities/joseph-smith-owner-approved-20260914.png"
+    },
+    {
+      "src": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
+      "sha256": "f69d497dc7bceeab0c3b459e30e4f31c7d1173e1fd56ddd7179783db105ce8b0",
+      "original_id": null,
+      "image_style": "width:338.983051%;max-width:none;position:absolute;left:-31.779661%;top:-38.461538%;height:auto",
+      "window_style": "aspect-ratio:236/130;max-width:360px;margin-inline:auto",
+      "full_asset": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg"
+    },
+    {
+      "src": "assets/research/joseph-documents/quincy-1883-p380.png",
+      "sha256": "b97535f3b93d3a6d75605d7886656b7f3337288ab75f785d9b5a479c8a318abe",
+      "original_id": null,
+      "image_style": "width:153.333333%;max-width:none;position:absolute;left:-27.291667%;top:-887.654321%;height:auto",
+      "window_style": "aspect-ratio:480/81;max-width:480px;margin-inline:auto",
+      "full_asset": "assets/research/joseph-documents/quincy-1883-p380.png"
+    },
+    {
+      "src": "assets/research/joseph-originals/light-and-nose-relief-comparison-1536.webp",
+      "sha256": "03a337cf2bf2091c1cbdf5dd9f4eb51070e50963ee79c70156ad393035af2a87",
+      "original_id": "light-and-nose-relief-comparison",
+      "image_style": "",
+      "window_style": "",
+      "full_asset": "assets/research/joseph-originals/light-and-nose-relief-comparison.png"
+    },
+    {
+      "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+      "sha256": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827",
+      "original_id": null,
+      "image_style": "width:814.906832%;max-width:none;position:absolute;left:-365.217391%;top:-142.259414%;height:auto",
+      "window_style": "aspect-ratio:161/239;max-width:322px;margin-inline:auto",
+      "full_asset": "assets/identities/joseph-smith-owner-approved-20260914.png"
+    },
+    {
+      "src": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
+      "sha256": "f69d497dc7bceeab0c3b459e30e4f31c7d1173e1fd56ddd7179783db105ce8b0",
+      "original_id": null,
+      "image_style": "width:776.699029%;max-width:none;position:absolute;left:-134.951456%;top:-122.758621%;height:auto",
+      "window_style": "aspect-ratio:103/145;max-width:206px;margin-inline:auto",
+      "full_asset": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg"
+    },
+    {
+      "src": "assets/research/joseph-documents/pelton-after-maudsley-1842.jpg",
+      "sha256": "6eb0a2759c0e78e6c934db0465b5d26b6c9b674e983679c3c3105a2925c01c3b",
+      "original_id": null,
+      "image_style": "width:254px;max-width:100%;height:auto;margin-inline:auto",
+      "window_style": "",
+      "full_asset": "assets/research/joseph-documents/pelton-after-maudsley-1842.jpg"
+    },
+    {
+      "src": "assets/research/joseph-originals/adopted-nose-study-1536.webp",
+      "sha256": "62a397e0d63bcd3f7304bf34acbb2a8c14cac83cb440f8ea727244042f6682af",
+      "original_id": "adopted-nose-study",
+      "image_style": "",
+      "window_style": "",
+      "full_asset": "assets/research/joseph-originals/adopted-nose-study.png"
+    },
+    {
+      "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+      "sha256": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827",
+      "original_id": null,
+      "image_style": "width:588.340807%;max-width:none;position:absolute;left:-247.982063%;top:-375.167785%;height:auto",
+      "window_style": "aspect-ratio:223/149;max-width:360px;margin-inline:auto",
+      "full_asset": "assets/identities/joseph-smith-owner-approved-20260914.png"
+    },
+    {
+      "src": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
+      "sha256": "f69d497dc7bceeab0c3b459e30e4f31c7d1173e1fd56ddd7179783db105ce8b0",
+      "original_id": null,
+      "image_style": "width:484.848485%;max-width:none;position:absolute;left:-66.060606%;top:-346.315789%;height:auto",
+      "window_style": "aspect-ratio:165/95;max-width:330px;margin-inline:auto",
+      "full_asset": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg"
+    },
+    {
+      "src": "assets/research/joseph-documents/gazette-transmission-1916-p102.png",
+      "sha256": "acc4e1268bb93776a3d59489eaa0525ecdd3179c0733dd1fe31b9a820eca79f8",
+      "original_id": null,
+      "image_style": "width:122.257053%;max-width:none;position:absolute;left:-14.420063%;top:-210.588235%;height:auto",
+      "window_style": "aspect-ratio:319/85;max-width:360px;margin-inline:auto",
+      "full_asset": "assets/research/joseph-documents/gazette-transmission-1916-p102.png"
+    },
+    {
+      "src": "assets/research/joseph-originals/adopted-mouth-study-1536.webp",
+      "sha256": "6739a58f3269ba0645321902a1dfb974ce809e6331163d8970b4f427982256fc",
+      "original_id": "adopted-mouth-study",
+      "image_style": "",
+      "window_style": "",
+      "full_asset": "assets/research/joseph-originals/adopted-mouth-study.png"
+    },
+    {
+      "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+      "sha256": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827",
+      "original_id": null,
+      "image_style": "width:313.126492%;max-width:none;position:absolute;left:-100.000000%;top:-363.101604%;height:auto",
+      "window_style": "aspect-ratio:419/187;max-width:419px;margin-inline:auto",
+      "full_asset": "assets/identities/joseph-smith-owner-approved-20260914.png"
+    },
+    {
+      "src": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
+      "sha256": "f69d497dc7bceeab0c3b459e30e4f31c7d1173e1fd56ddd7179783db105ce8b0",
+      "original_id": null,
+      "image_style": "width:366.972477%;max-width:none;position:absolute;left:-37.614679%;top:-299.236641%;height:auto",
+      "window_style": "aspect-ratio:218/131;max-width:360px;margin-inline:auto",
+      "full_asset": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg"
+    },
+    {
+      "src": "assets/research/joseph-originals/viewpoint-jaw-outline-comparison-1536.webp",
+      "sha256": "08163fa5dda6d4f860c96ac03e32fdfc54279b14f99efe18105b12a15dbc964a",
+      "original_id": "viewpoint-jaw-outline-comparison",
+      "image_style": "",
+      "window_style": "",
+      "full_asset": "assets/research/joseph-originals/viewpoint-jaw-outline-comparison.png"
+    },
+    {
+      "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+      "sha256": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827",
+      "original_id": null,
+      "image_style": "width:1338.775510%;max-width:none;position:absolute;left:-502.040816%;top:-598.360656%;height:auto",
+      "window_style": "aspect-ratio:98/61;max-width:196px;margin-inline:auto",
+      "full_asset": "assets/identities/joseph-smith-owner-approved-20260914.png"
+    },
+    {
+      "src": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
+      "sha256": "f69d497dc7bceeab0c3b459e30e4f31c7d1173e1fd56ddd7179783db105ce8b0",
+      "original_id": null,
+      "image_style": "width:313.725490%;max-width:none;position:absolute;left:-24.705882%;top:-230.666667%;height:auto",
+      "window_style": "aspect-ratio:255/75;max-width:360px;margin-inline:auto",
+      "full_asset": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg"
+    },
+    {
+      "src": "assets/research/joseph-documents/haven-1890-p621.png",
+      "sha256": "bfbe21493f246434ecd12e3c540a4c2b67b50869a5f2cb08a5fe74133550eaa6",
+      "original_id": null,
+      "image_style": "width:281.215470%;max-width:none;position:absolute;left:-32.596685%;top:-398.913043%;height:auto",
+      "window_style": "aspect-ratio:362/92;max-width:362px;margin-inline:auto",
+      "full_asset": "assets/research/joseph-documents/haven-1890-p621.png"
+    },
+    {
+      "src": "assets/research/joseph-documents/gazette-transmission-1916-p102.png",
+      "sha256": "acc4e1268bb93776a3d59489eaa0525ecdd3179c0733dd1fe31b9a820eca79f8",
+      "original_id": null,
+      "image_style": "width:121.495327%;max-width:none;position:absolute;left:-14.641745%;top:-459.493671%;height:auto",
+      "window_style": "aspect-ratio:321/79;max-width:360px;margin-inline:auto",
+      "full_asset": "assets/research/joseph-documents/gazette-transmission-1916-p102.png"
+    },
+    {
+      "src": "assets/research/joseph-originals/adopted-blue-eye-study-1536.webp",
+      "sha256": "d16530f90e4e82e5cba74c73adc2d76220d49fdb8473a792646878e160c10250",
+      "original_id": "adopted-blue-eye-study",
+      "image_style": "width:180.705882%;max-width:none;position:absolute;left:-41.176471%;top:-94.230769%;height:auto",
+      "window_style": "aspect-ratio:850/260;max-width:850px;margin-inline:auto",
+      "full_asset": "assets/research/joseph-originals/adopted-blue-eye-study.png"
+    },
+    {
+      "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+      "sha256": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827",
+      "original_id": null,
+      "image_style": "width:917.482517%;max-width:none;position:absolute;left:-333.566434%;top:-383.333333%;height:auto",
+      "window_style": "aspect-ratio:143/96;max-width:286px;margin-inline:auto",
+      "full_asset": "assets/identities/joseph-smith-owner-approved-20260914.png"
+    },
+    {
+      "src": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
+      "sha256": "f69d497dc7bceeab0c3b459e30e4f31c7d1173e1fd56ddd7179783db105ce8b0",
+      "original_id": null,
+      "image_style": "width:313.725490%;max-width:none;position:absolute;left:-24.705882%;top:-230.666667%;height:auto",
+      "window_style": "aspect-ratio:255/75;max-width:360px;margin-inline:auto",
+      "full_asset": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg"
+    },
+    {
+      "src": "assets/research/joseph-documents/haven-1890-p621.png",
+      "sha256": "bfbe21493f246434ecd12e3c540a4c2b67b50869a5f2cb08a5fe74133550eaa6",
+      "original_id": null,
+      "image_style": "width:281.215470%;max-width:none;position:absolute;left:-32.596685%;top:-324.778761%;height:auto",
+      "window_style": "aspect-ratio:362/113;max-width:362px;margin-inline:auto",
+      "full_asset": "assets/research/joseph-documents/haven-1890-p621.png"
+    },
+    {
+      "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+      "sha256": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827",
+      "original_id": null,
+      "image_style": "width:776.331361%;max-width:none;position:absolute;left:-276.923077%;top:-300.000000%;height:auto",
+      "window_style": "aspect-ratio:169/107;max-width:338px;margin-inline:auto",
+      "full_asset": "assets/identities/joseph-smith-owner-approved-20260914.png"
+    },
+    {
+      "src": "assets/research/joseph-documents/gazette-transmission-1916-p102.png",
+      "sha256": "acc4e1268bb93776a3d59489eaa0525ecdd3179c0733dd1fe31b9a820eca79f8",
+      "original_id": null,
+      "image_style": "width:121.118012%;max-width:none;position:absolute;left:-14.285714%;top:-343.965517%;height:auto",
+      "window_style": "aspect-ratio:322/116;max-width:360px;margin-inline:auto",
+      "full_asset": "assets/research/joseph-documents/gazette-transmission-1916-p102.png"
+    },
+    {
+      "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+      "sha256": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827",
+      "original_id": null,
+      "image_style": "width:316.144578%;max-width:none;position:absolute;left:-93.253012%;top:-9.039548%;height:auto",
+      "window_style": "aspect-ratio:415/177;max-width:415px;margin-inline:auto",
+      "full_asset": "assets/identities/joseph-smith-owner-approved-20260914.png"
+    },
+    {
+      "src": "assets/research/joseph-documents/pratt-1874-p47.png",
+      "sha256": "a10c9219539860f6e8303cb3f560f2451ecbe6cc4390bfe6bdf50a5538723da1",
+      "original_id": null,
+      "image_style": "width:129.685363%;max-width:none;position:absolute;left:-6.703146%;top:-329.729730%;height:auto",
+      "window_style": "aspect-ratio:731/111;max-width:731px;margin-inline:auto",
+      "full_asset": "assets/research/joseph-documents/pratt-1874-p47.png"
+    },
+    {
+      "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+      "sha256": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827",
+      "original_id": null,
+      "image_style": "width:412.578616%;max-width:none;position:absolute;left:-85.849057%;top:-14.946619%;height:auto",
+      "window_style": "aspect-ratio:318/281;max-width:360px;margin-inline:auto",
+      "full_asset": "assets/identities/joseph-smith-owner-approved-20260914.png"
+    },
+    {
+      "src": "assets/research/joseph-documents/gazette-transmission-1916-p102.png",
+      "sha256": "acc4e1268bb93776a3d59489eaa0525ecdd3179c0733dd1fe31b9a820eca79f8",
+      "original_id": null,
+      "image_style": "width:124.203822%;max-width:none;position:absolute;left:-15.605096%;top:-406.818182%;height:auto",
+      "window_style": "aspect-ratio:314/44;max-width:360px;margin-inline:auto",
+      "full_asset": "assets/research/joseph-documents/gazette-transmission-1916-p102.png"
+    },
+    {
+      "src": "assets/research/joseph-documents/pelton-after-maudsley-1842.jpg",
+      "sha256": "6eb0a2759c0e78e6c934db0465b5d26b6c9b674e983679c3c3105a2925c01c3b",
+      "original_id": null,
+      "image_style": "width:254px;max-width:100%;height:auto;margin-inline:auto",
+      "window_style": "",
+      "full_asset": "assets/research/joseph-documents/pelton-after-maudsley-1842.jpg"
+    },
+    {
+      "src": "assets/research/joseph-originals/adopted-hair-study-1536.webp",
+      "sha256": "2631751da0a177e36250cf4780fe233b1af8097148bfaf5ec40d1910e01197cb",
+      "original_id": "adopted-hair-study",
+      "image_style": "",
+      "window_style": "",
+      "full_asset": "assets/research/joseph-originals/adopted-hair-study.png"
+    },
+    {
+      "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+      "sha256": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827",
+      "original_id": null,
+      "image_style": "width:1338.775510%;max-width:none;position:absolute;left:-769.387755%;top:-295.364238%;height:auto",
+      "window_style": "aspect-ratio:98/151;max-width:196px;margin-inline:auto",
+      "full_asset": "assets/identities/joseph-smith-owner-approved-20260914.png"
+    },
+    {
+      "src": "assets/research/joseph-documents/pratt-1874-p47.png",
+      "sha256": "a10c9219539860f6e8303cb3f560f2451ecbe6cc4390bfe6bdf50a5538723da1",
+      "original_id": null,
+      "image_style": "width:130.219780%;max-width:none;position:absolute;left:-6.593407%;top:-378.571429%;height:auto",
+      "window_style": "aspect-ratio:728/98;max-width:728px;margin-inline:auto",
+      "full_asset": "assets/research/joseph-documents/pratt-1874-p47.png"
+    },
+    {
+      "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+      "sha256": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827",
+      "original_id": null,
+      "image_style": "width:470.250896%;max-width:none;position:absolute;left:-184.946237%;top:-216.091954%;height:auto",
+      "window_style": "aspect-ratio:279/261;max-width:360px;margin-inline:auto",
+      "full_asset": "assets/identities/joseph-smith-owner-approved-20260914.png"
+    },
+    {
+      "src": "assets/research/joseph-documents/quincy-1883-p380.png",
+      "sha256": "b97535f3b93d3a6d75605d7886656b7f3337288ab75f785d9b5a479c8a318abe",
+      "original_id": null,
+      "image_style": "width:152.380952%;max-width:none;position:absolute;left:-26.915114%;top:-781.372549%;height:auto",
+      "window_style": "aspect-ratio:483/102;max-width:483px;margin-inline:auto",
+      "full_asset": "assets/research/joseph-documents/quincy-1883-p380.png"
+    },
+    {
+      "src": "assets/research/joseph-originals/quincy-stubble-study-1536.webp",
+      "sha256": "94b92ef728c461ba084ca6413b471d4618ca9ac86b90c4c7acae6d1fdc398b0c",
+      "original_id": "quincy-stubble-study",
+      "image_style": "",
+      "window_style": "",
+      "full_asset": "assets/research/joseph-originals/quincy-stubble-study.png"
+    },
+    {
+      "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+      "sha256": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827",
+      "original_id": null,
+      "image_style": "width:290.909091%;max-width:none;position:absolute;left:-93.126386%;top:-64.052288%;height:auto",
+      "window_style": "aspect-ratio:451/459;max-width:451px;margin-inline:auto",
+      "full_asset": "assets/identities/joseph-smith-owner-approved-20260914.png"
+    },
+    {
+      "src": "assets/research/joseph-documents/haven-1890-p621.png",
+      "sha256": "bfbe21493f246434ecd12e3c540a4c2b67b50869a5f2cb08a5fe74133550eaa6",
+      "original_id": null,
+      "image_style": "width:279.670330%;max-width:none;position:absolute;left:-32.142857%;top:-509.722222%;height:auto",
+      "window_style": "aspect-ratio:364/72;max-width:364px;margin-inline:auto",
+      "full_asset": "assets/research/joseph-documents/haven-1890-p621.png"
+    },
+    {
+      "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+      "sha256": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827",
+      "original_id": null,
+      "image_style": "width:358.469945%;max-width:none;position:absolute;left:-128.961749%;top:-91.223404%;height:auto",
+      "window_style": "aspect-ratio:366/376;max-width:366px;margin-inline:auto",
+      "full_asset": "assets/identities/joseph-smith-owner-approved-20260914.png"
+    },
+    {
+      "src": "assets/research/joseph-documents/pratt-1874-p47.png",
+      "sha256": "a10c9219539860f6e8303cb3f560f2451ecbe6cc4390bfe6bdf50a5538723da1",
+      "original_id": null,
+      "image_style": "width:129.685363%;max-width:none;position:absolute;left:-6.566347%;top:-344.520548%;height:auto",
+      "window_style": "aspect-ratio:731/146;max-width:731px;margin-inline:auto",
+      "full_asset": "assets/research/joseph-documents/pratt-1874-p47.png"
+    },
+    {
+      "src": "assets/research/joseph-originals/expression-mouth-cheek-comparison-1536.webp",
+      "sha256": "bbf695e03cb28c0f837be1354adc84d56f4751c42a56bdab7c2d2273dfccc970",
+      "original_id": "expression-mouth-cheek-comparison",
+      "image_style": "",
+      "window_style": "",
+      "full_asset": "assets/research/joseph-originals/expression-mouth-cheek-comparison.png"
+    },
+    {
+      "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+      "sha256": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827",
+      "original_id": null,
+      "image_style": "width:317.675545%;max-width:none;position:absolute;left:-110.653753%;top:-250.781250%;height:auto",
+      "window_style": "aspect-ratio:413/128;max-width:413px;margin-inline:auto",
+      "full_asset": "assets/identities/joseph-smith-owner-approved-20260914.png"
+    },
+    {
+      "src": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
+      "sha256": "f69d497dc7bceeab0c3b459e30e4f31c7d1173e1fd56ddd7179783db105ce8b0",
+      "original_id": null,
+      "image_style": "width:296.296296%;max-width:none;position:absolute;left:-22.962963%;top:-94.610778%;height:auto",
+      "window_style": "aspect-ratio:270/167;max-width:360px;margin-inline:auto",
+      "full_asset": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg"
+    },
+    {
+      "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+      "sha256": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827",
+      "original_id": null,
+      "image_style": "width:135.817805%;max-width:none;position:absolute;left:-17.080745%;top:-204.314721%;height:auto",
+      "window_style": "aspect-ratio:966/394;max-width:966px;margin-inline:auto",
+      "full_asset": "assets/identities/joseph-smith-owner-approved-20260914.png"
+    },
+    {
+      "src": "assets/research/joseph-documents/pratt-1874-p47.png",
+      "sha256": "a10c9219539860f6e8303cb3f560f2451ecbe6cc4390bfe6bdf50a5538723da1",
+      "original_id": null,
+      "image_style": "width:129.685363%;max-width:none;position:absolute;left:-6.703146%;top:-484.210526%;height:auto",
+      "window_style": "aspect-ratio:731/76;max-width:731px;margin-inline:auto",
+      "full_asset": "assets/research/joseph-documents/pratt-1874-p47.png"
+    },
+    {
+      "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+      "sha256": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827",
+      "original_id": null,
+      "image_style": "",
+      "window_style": "",
+      "full_asset": "assets/identities/joseph-smith-owner-approved-20260914.png"
+    },
+    {
+      "src": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
+      "sha256": "f69d497dc7bceeab0c3b459e30e4f31c7d1173e1fd56ddd7179783db105ce8b0",
+      "original_id": null,
+      "image_style": "",
+      "window_style": "",
+      "full_asset": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg"
+    },
+    {
+      "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+      "sha256": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827",
+      "original_id": null,
+      "image_style": "width:190.144928%;max-width:none;position:absolute;left:-39.130435%;top:0.000000%;height:auto",
+      "window_style": "aspect-ratio:690/470;max-width:690px;margin-inline:auto",
+      "full_asset": "assets/identities/joseph-smith-owner-approved-20260914.png"
+    },
+    {
+      "src": "assets/research/joseph-documents/haven-1890-p621.png",
+      "sha256": "bfbe21493f246434ecd12e3c540a4c2b67b50869a5f2cb08a5fe74133550eaa6",
+      "original_id": null,
+      "image_style": "",
+      "window_style": "",
+      "full_asset": "assets/research/joseph-documents/haven-1890-p621.png"
+    },
+    {
+      "src": "assets/research/joseph-documents/pratt-1874-p47.png",
+      "sha256": "a10c9219539860f6e8303cb3f560f2451ecbe6cc4390bfe6bdf50a5538723da1",
+      "original_id": null,
+      "image_style": "",
+      "window_style": "",
+      "full_asset": "assets/research/joseph-documents/pratt-1874-p47.png"
+    },
+    {
+      "src": "assets/research/joseph-documents/quincy-1883-p380.png",
+      "sha256": "b97535f3b93d3a6d75605d7886656b7f3337288ab75f785d9b5a479c8a318abe",
+      "original_id": null,
+      "image_style": "",
+      "window_style": "",
+      "full_asset": "assets/research/joseph-documents/quincy-1883-p380.png"
+    },
+    {
+      "src": "assets/research/joseph-documents/haven-1890-p621.png",
+      "sha256": "bfbe21493f246434ecd12e3c540a4c2b67b50869a5f2cb08a5fe74133550eaa6",
+      "original_id": null,
+      "image_style": "",
+      "window_style": "",
+      "full_asset": "assets/research/joseph-documents/haven-1890-p621.png"
+    },
+    {
+      "src": "assets/research/joseph-documents/gazette-transmission-1916-p100.png",
+      "sha256": "b2fc41ea676f6662ae28d2fd766341e46780483ca278130c2515b6a1d442cca0",
+      "original_id": null,
+      "image_style": "",
+      "window_style": "",
+      "full_asset": "assets/research/joseph-documents/gazette-transmission-1916-p100.png"
+    },
+    {
+      "src": "assets/research/joseph-documents/gazette-transmission-1916-p101.png",
+      "sha256": "4e87de3bf5d58a57d1d65f57acd14a02db698cbfd0f9c57580566ca29ea955b4",
+      "original_id": null,
+      "image_style": "",
+      "window_style": "",
+      "full_asset": "assets/research/joseph-documents/gazette-transmission-1916-p101.png"
+    },
+    {
+      "src": "assets/research/joseph-documents/gazette-transmission-1916-p102.png",
+      "sha256": "acc4e1268bb93776a3d59489eaa0525ecdd3179c0733dd1fe31b9a820eca79f8",
+      "original_id": null,
+      "image_style": "",
+      "window_style": "",
+      "full_asset": "assets/research/joseph-documents/gazette-transmission-1916-p102.png"
+    },
+    {
+      "src": "assets/research/joseph-documents/gazette-transmission-1916-p103.png",
+      "sha256": "4fce39b02ecf8fa23814031a2da5dd1e10997d910a6fff63a0167b128a6926c2",
+      "original_id": null,
+      "image_style": "",
+      "window_style": "",
+      "full_asset": "assets/research/joseph-documents/gazette-transmission-1916-p103.png"
+    },
+    {
+      "src": "assets/research/joseph-documents/quincy-1883-title.png",
+      "sha256": "e6d87ce6fc3a13f3da6700833cb64ad813d816af4e34712dc8926c855bc2ca00",
+      "original_id": null,
+      "image_style": "",
+      "window_style": "",
+      "full_asset": "assets/research/joseph-documents/quincy-1883-title.png"
+    },
+    {
+      "src": "assets/research/joseph-documents/gazette-transmission-book-title.png",
+      "sha256": "61afc5ab0bad1a12c3cf2f5d3eb11f5dc4ce8ad816e68902db40bc4505621bf5",
+      "original_id": null,
+      "image_style": "",
+      "window_style": "",
+      "full_asset": "assets/research/joseph-documents/gazette-transmission-book-title.png"
+    },
+    {
+      "src": "assets/research/joseph-documents/gazette-transmission-1916-date.png",
+      "sha256": "ffda49cb37dfb2850beade6a3e312b504dfd0d3c9720dfa8643b6b7a516a8b58",
+      "original_id": null,
+      "image_style": "",
+      "window_style": "",
+      "full_asset": "assets/research/joseph-documents/gazette-transmission-1916-date.png"
+    }
+  ],
+  "reference_moves": [
+    {
+      "target": "portrait-section-11",
+      "baseline": {
+        "src": "assets/page-art/joseph-smith-likeness/hyrum-reconstruction-blue-eyes-20261003.png",
+        "sha256": "47b35f55b805ee0cc7c914cc1adb59273b2405402d4a50e284d0bb456bd9cb32",
+        "original_id": null,
+        "image_style": "",
+        "window_style": "",
+        "full_asset": "assets/page-art/joseph-smith-likeness/hyrum-reconstruction-blue-eyes-20261003.png"
+      }
+    },
+    {
+      "target": "portrait-section-11",
+      "baseline": {
+        "src": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
+        "sha256": "f69d497dc7bceeab0c3b459e30e4f31c7d1173e1fd56ddd7179783db105ce8b0",
+        "original_id": null,
+        "image_style": "width:210.526316%;max-width:none;position:absolute;left:-102.631579%;top:0;height:auto",
+        "window_style": "position:relative;display:block;overflow:hidden;aspect-ratio:380/535;max-width:380px;margin-inline:auto",
+        "full_asset": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg"
+      }
+    }
+  ]
+}

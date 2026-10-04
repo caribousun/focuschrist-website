@@ -141,13 +141,13 @@
 .joseph-research .research-evidence-stages dd { margin:0; line-height:1.65; }
 .joseph-research .research-feature-study { margin:32px 0 48px; padding:28px; border:1px solid var(--fc-line); border-radius:var(--fc-radius); background:rgba(0,0,0,.08); }
 .joseph-research .research-feature-study > header h3 { font-size:clamp(1.5rem,3vw,2.1rem); margin-top:8px; }
-.joseph-research .research-feature-reasoning { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; }
+.joseph-research .research-feature-reasoning { display:block; max-width:70ch; }
 .joseph-research .research-feature-reasoning strong { display:block; color:var(--fc-gold-light); margin-bottom:6px; }
 .joseph-research .research-feature-images { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px; align-items:start; margin-top:24px; }
 .joseph-research .research-feature-images > figure { min-width:0; margin:0; }
 .joseph-research .research-feature-images > figure:last-child:nth-child(odd) { grid-column:1/-1; max-width:780px; width:100%; justify-self:center; }
 .joseph-research .research-feature-limits { border-top:1px solid var(--fc-line); padding-top:16px; margin-top:24px; }
-@media(max-width:760px) { .joseph-research .research-feature-reasoning { grid-template-columns:1fr; gap:0; } .joseph-research .research-feature-study { padding:18px; } }
+@media(max-width:760px) { .joseph-research .research-feature-study { padding:18px; } }
 @media(max-width:550px) { .joseph-research .research-feature-images { grid-template-columns:1fr; } }
 .joseph-research .research-study-onward { border-top:1px solid var(--fc-line); padding-top:28px; margin-top:32px; }
 @media(max-width:760px) { .joseph-research .research-evidence-stages { grid-template-columns:1fr; } }
