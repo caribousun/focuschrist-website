@@ -2586,6 +2586,28 @@
       ]
     },
     {
+      "title": "A Witness Carried to Others",
+      "category": "Art & Study",
+      "thumbnail": "/assets/page-art/art-study/thumbs/living-mary-reports-20261004.webp",
+      "fullImage": "/assets/page-art/art-study/full/living-mary-reports-20261004.webp",
+      "alt": "Mary Magdalene speaks to two attentive listeners in a simple room.",
+      "id": "art-21c0177e4dbf",
+      "occurrences": [
+        {
+          "id": "source-eb0f229f7f59",
+          "page": "/art-study/the-living-christ.html",
+          "pageTitle": "The Living Christ",
+          "category": "Art & Study",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/art-study/full/living-mary-reports-20261004.webp\"]:has(img[src=\"../assets/page-art/art-study/thumbs/living-mary-reports-20261004.webp\"])",
+          "title": "A Witness Carried to Others"
+        }
+      ],
+      "categories": [
+        "Art & Study"
+      ]
+    },
+    {
       "title": "A witness of Jesus Christ",
       "category": "Gospel Studies",
       "thumbnail": "/assets/heroes/holy-ghost-hero-full.webp",
@@ -6366,6 +6388,28 @@
       ]
     },
     {
+      "title": "Courage in the Night",
+      "category": "Art & Study",
+      "thumbnail": "/assets/page-art/art-study/thumbs/living-paul-courage-20261004.webp",
+      "fullImage": "/assets/page-art/art-study/full/living-paul-courage-20261004.webp",
+      "alt": "The risen Jesus Christ stands beside Paul in a lamplit room as Paul looks up at Him.",
+      "id": "art-d4e08b79b7a9",
+      "occurrences": [
+        {
+          "id": "source-58fc181adcb4",
+          "page": "/art-study/the-living-christ.html",
+          "pageTitle": "The Living Christ",
+          "category": "Art & Study",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/art-study/full/living-paul-courage-20261004.webp\"]:has(img[src=\"../assets/page-art/art-study/thumbs/living-paul-courage-20261004.webp\"])",
+          "title": "Courage in the Night"
+        }
+      ],
+      "categories": [
+        "Art & Study"
+      ]
+    },
+    {
       "title": "Courage in the room at Richmond",
       "category": "Church History",
       "thumbnail": "/assets/page-art/church-history/richmond-rebuke-960.webp",
@@ -9157,6 +9201,28 @@
       ],
       "categories": [
         "Pioneers"
+      ]
+    },
+    {
+      "title": "Hope Gives Today's Work Purpose",
+      "category": "Art & Study",
+      "thumbnail": "/assets/page-art/art-study/thumbs/living-steadfast-service-20261004.webp",
+      "fullImage": "/assets/page-art/art-study/full/living-steadfast-service-20261004.webp",
+      "alt": "Two neighbors fit a handrail beside entrance steps while an older resident joins their conversation.",
+      "id": "art-5d44626bff9b",
+      "occurrences": [
+        {
+          "id": "source-81690f2605d4",
+          "page": "/art-study/the-living-christ.html",
+          "pageTitle": "The Living Christ",
+          "category": "Art & Study",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/art-study/full/living-steadfast-service-20261004.webp\"]:has(img[src=\"../assets/page-art/art-study/thumbs/living-steadfast-service-20261004.webp\"])",
+          "title": "Hope Gives Today's Work Purpose"
+        }
+      ],
+      "categories": [
+        "Art & Study"
       ]
     },
     {
@@ -20328,6 +20394,28 @@
       ]
     },
     {
+      "title": "Walk in Newness of Life",
+      "category": "Art & Study",
+      "thumbnail": "/assets/page-art/art-study/thumbs/living-newness-baptism-20261004.webp",
+      "fullImage": "/assets/page-art/art-study/full/living-newness-baptism-20261004.webp",
+      "alt": "An adult woman and man in opaque white clothing stand apart in a baptismal font, smiling toward one another.",
+      "id": "art-684644ba0bbe",
+      "occurrences": [
+        {
+          "id": "source-68585b765138",
+          "page": "/art-study/the-living-christ.html",
+          "pageTitle": "The Living Christ",
+          "category": "Art & Study",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/art-study/full/living-newness-baptism-20261004.webp\"]:has(img[src=\"../assets/page-art/art-study/thumbs/living-newness-baptism-20261004.webp\"])",
+          "title": "Walk in Newness of Life"
+        }
+      ],
+      "categories": [
+        "Art & Study"
+      ]
+    },
+    {
       "title": "Walk together and listen",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/bom-evidences/joseph-emma-walk-960.webp",
@@ -21061,14 +21149,14 @@
     }
   ],
   "stats": {
-    "artworks": 948,
-    "occurrences": 953,
+    "artworks": 952,
+    "occurrences": 957,
     "byKind": {
       "artwork": 63,
       "hero": 42,
       "legacy": 39,
       "missionary": 13,
-      "topic": 849
+      "topic": 853
     }
   }
 }

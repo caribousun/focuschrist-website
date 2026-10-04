@@ -1,0 +1,30 @@
+{
+  "reviewer": "Newton",
+  "time": "2026-10-04T15:30:27.709776+00:00",
+  "scope": "ActualfullPNG plus face/hand/garment crops, source and approvedreference comparison; nativepage review separate",
+  "images": {
+    "LC1": {
+      "path": "work/art/living-mary-reports.png",
+      "sha256": "46142fc6d10a4e778d450abf8a92311a2b2b5857033dd4d02187c90c361999d7",
+      "concur": false,
+      "finding": "Male listener strongly echoes approvedChrist curlyhair/brow/nose/cheek/beard visual identity. Maryrear/robe/headcover/hands credible and female listener natural; need clearly distinct anonymous male before use."
+    },
+    "LC3": {
+      "path": "work/art/living-newness-of-life.png",
+      "sha256": "5515cec2d418f28894b09e8757c466babd6f80c63b786035eadb6451324c19e6",
+      "concur": false,
+      "finding": "Woman wetgarment yoke/sleeves and upperchest translucent, undergarment outline visible. No exposed intimate anatomy but exact opaqueclothing requirement fails. Faces/gaze/separatehands/support distinct and credible. Narrow opaquegarment correction required."
+    },
+    "LC4": {
+      "path": "work/art/living-steadfast-service.png",
+      "sha256": "4fe7d3960853a93e765a679674de0a97a02e08039aea3b0ff7ccb9fc269b5ed0",
+      "concur": true,
+      "finding": "Individualized faces/age/clothing, coherent mutualgaze standinghelper/resident, plausible kneelinghelper/bracket contact and complete limbs, levelpaused, railgeometry coherent. Resident active with clear pointinggesture, distinct practical act. No supernatural presence/text. Finishedpixels source-congruent application; nativephone/framing and ownershipintegration remain."
+    }
+  },
+  "limits": [
+    "No owneraesthetic or physicalphone approval",
+    "Bothreviewers required for correctionprompts and correctedpixels",
+    "No exact neworiginal count until ownership/lineage and assembledpage checks"
+  ]
+}

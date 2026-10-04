@@ -1,0 +1,25 @@
+{
+  "accepted_for_combined_evidence": true,
+  "html_sha256": "8597354ee3eb7f967f92e5460109b29a2e4dc426e7ba4c91dbbb364f8ff00886",
+  "evidence_files": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\living-christ-enriched-verification\\work\\newton\\living-exact-inventory-newton.json",
+      "sha256": "742e01e945abd3bdf7f503d158818f5c17e195806b51fe2a8013ed32d7caa79f"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\living-christ-enriched-verification\\work\\newton\\living-new-four-near-pixels.json",
+      "sha256": "8ddb7960901239a639745eb7db22ad95f01b36b4024d52a02003be8f5073ff03"
+    }
+  ],
+  "larger_supporting_scan_files": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\living-christ-enriched-verification\\work\\newton\\living-current-ownership-scan.json",
+      "sha256": "7332c9c23efd76b9405bca3d1159b19c89ffb1ad530547c4c331868f47d24d2b"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\living-christ-enriched-verification\\work\\newton\\living-current-pixel-corpus.json",
+      "sha256": "04890a14a401f9e257e2cb164a8fc6030531aa61b476fe5e2338906e9e4123d4"
+    }
+  ],
+  "scope": "Both independent receipts explicitly agree every bound original field and exact complete page inventory; underlying prior finished pixels reused at unchanged hashes. Large scan provenance retained locally; compact target matches included."
+}

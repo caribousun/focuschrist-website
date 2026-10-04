@@ -1,0 +1,31 @@
+{
+  "reviewer": "Newton",
+  "time": "2026-10-04T15:43:04.628112+00:00",
+  "mandates_read": [
+    "Live Master protected foundation/operating map",
+    "Latest00B/Focus/START",
+    "AGENTS.md",
+    "docs/historical-character-identity.md",
+    "docs/focuschrist-enrichment-and-stewardship-prompt.md"
+  ],
+  "scope": "Actual finished full pixels plus native detailed regions, compared to held originals and actual Home/Mary references; no native integration review yet",
+  "images": {
+    "LC1": {
+      "path": "work\\art\\living-mary-reports-v2.png",
+      "sha256": "bd42de3d58d14181fd0f788d68140c38e3fb6319ecf0434d050ba32fe5802df5",
+      "result": "CONCUR",
+      "finding": "CONCUR: older male listener is visibly distinct from Home Christ; shorter graying hair, no full beard, different face/age. Attentive surprised expression and gaze toward Mary coherent. Mary partial-view identity/build/garments and seated woman preserved; believable hands, room and interaction intact. Hair retains slight natural wave and light stubble, not materially inconsistent with identity-correction goal."
+    },
+    "LC3": {
+      "path": "work\\art\\living-newness-of-life-v2.png",
+      "sha256": "d243df465938c63d5993809aeed3526ab9ff9365c87abf04ce627bfcb1c9be3c",
+      "result": "CONCUR",
+      "finding": "CONCUR: woman garment visibly opaque across yoke/shoulders/bodice/sleeves/lower portion; prior visible undergarment outline resolved. Wet fabric folds and droplets remain believable. Faces/gaze, separated arms/hands and independent stance preserved, man clothing/font/room retained."
+    }
+  },
+  "limits": [
+    "Fermi independent concurrence also required",
+    "Owner aesthetic and physical phone acceptance separate",
+    "Production/page exclusivity, source captions, responsive framing and interactions still require integration review"
+  ]
+}

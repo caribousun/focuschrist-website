@@ -1,0 +1,17 @@
+{
+  "kind": "original",
+  "original_id": "assets/page-art/art-study/full/living-newness-baptism-20261004",
+  "asset": "assets/page-art/art-study/full/living-newness-baptism-20261004.webp",
+  "sha256": "c08da311c1b8a1f676329018ee29d37e8bbb31899afc7976e585564f06b1ef23",
+  "owner_route": "art-study/the-living-christ.html",
+  "owner_section": "living-newness-baptism-20261004",
+  "depicts_christ": false,
+  "reviewers": [
+    "Fermi",
+    "Newton"
+  ],
+  "lineage_and_cross_page_ownership_reviewed": true,
+  "ownership_scope": "all canonical site routes",
+  "pixels_reviewed_for_christ_classification": true,
+  "review_boundary": "Exact hashes bind previously completed direct pixel reviews and refreshed lineage/inventory; no new owner/native/public acceptance."
+}

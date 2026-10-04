@@ -1,0 +1,17 @@
+{
+  "kind": "original",
+  "original_id": "assets/page-art/art-study/full/living-breakfast-shore-20260919",
+  "asset": "assets/page-art/art-study/full/living-breakfast-shore-20260919.webp",
+  "sha256": "8d49d722fe4b91f452a545a08a875e623b19e2c803396cac54704a58ff0b09f5",
+  "owner_route": "art-study/the-living-christ.html",
+  "owner_section": "personal-study",
+  "depicts_christ": true,
+  "reviewers": [
+    "Fermi",
+    "Newton"
+  ],
+  "lineage_and_cross_page_ownership_reviewed": true,
+  "ownership_scope": "all canonical site routes",
+  "pixels_reviewed_for_christ_classification": true,
+  "review_boundary": "Exact hashes bind previously completed direct pixel reviews and refreshed lineage/inventory; no new owner/native/public acceptance."
+}

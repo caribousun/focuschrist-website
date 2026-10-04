@@ -1,0 +1,49 @@
+{
+  "reviewer": "Newton",
+  "stage": "EXACT_EDIT_PROMPT_PREFLIGHT",
+  "time": "2026-10-04T15:39:42.025197+00:00",
+  "result": "CONCUR",
+  "mandates_read": {
+    "AGENTS.md": "d00c5315d1588e57b4529379d41552e67db84202052a2c0a4eef69ec807a3710",
+    "docs/historical-character-identity.md": "69f0f51400ba102dfb5df9a9ec9fb6e738255dc496b84dc5dd684f3f5886c8c4",
+    "docs/focuschrist-enrichment-and-stewardship-prompt.md": "8f413b19ab94093c1f4a489bddb7829468d77b335b79be017f71e6db31e4f311"
+  },
+  "actual_pixels_inspected": [
+    "LC1 original full",
+    "LC3 original full",
+    "Home approved Christ full",
+    "Mary at tomb full"
+  ],
+  "prompts": [
+    {
+      "key": "LC1_EDIT_V1",
+      "prompt_sha256": "5f52a9b69cbed634eb10b8b12e7a12c90e9619a389877a341b044cc019a6f7c4",
+      "target_sha256": "46142fc6d10a4e778d450abf8a92311a2b2b5857033dd4d02187c90c361999d7",
+      "result": "CONCUR",
+      "exact_prompt": "Edit Image 1 only. Image 1 is the complete room scene to preserve; Image 2 is solely the continuity reference for Mary Magdalene, the foreground woman seen from behind, and is not a composition or male-face reference. Correct only the anonymous male listener at the right of Image 1 so that he is clearly a different person from Jesus Christ. Replace his head and facial identity with a natural older adult man: short straight graying hair, a clean-shaven rounder face, a broader nose and individually distinct brow, eyes, cheeks and jaw. Keep believable first-century Judean grooming and natural photographic skin detail. He remains an anonymous listener, not Peter, John, Thomas or another named historical person; his precise age is not a historical claim. Preserve his existing attentive surprise, gaze toward Mary, head direction, leaning posture, body scale, clothing, hands and position. Preserve Mary exactly as visible in Image 1, including her partial back/profile angle, dark hair, beige head covering, dusty-rose and beige clothes, build, gesture and hand anatomy; Image 2 confirms this continuity but must not introduce Christ or the tomb. Preserve the seated woman's identity, face, expression, gaze, garments and hands. Preserve the entire room, table, objects, daylight, camera angle, framing, photographic realism and 1536x1024 landscape composition. This remains Mary reporting that she has seen the risen Lord, corresponding to John 20:18; Jesus is not physically present. Do not add people, halos, lettering or any new action. Change only the right-hand male listener's head and facial identity, leaving the rest of the picture unchanged.",
+      "references": {
+        "C:/Users/wyatt/Documents/Codex/2026-10-04/joseph-enriched-production-continuation/work/art/living-mary-reports.png": "46142fc6d10a4e778d450abf8a92311a2b2b5857033dd4d02187c90c361999d7",
+        "C:/Users/wyatt/Documents/Codex/2026-10-03/joseph-research-site/assets/page-art/art-study/full/living-mary-at-tomb.webp": "e27a0710f7506eb56ef34f0fc10bda24f0bf0336546995800dfaba38196e6669"
+      }
+    },
+    {
+      "key": "LC3_EDIT_V1",
+      "prompt_sha256": "b883861861b34cbf5d0b56f89908c351a397e10f79793ede101524b62e97cf11",
+      "target_sha256": "5515cec2d418f28894b09e8757c466babd6f80c63b786035eadb6451324c19e6",
+      "result": "CONCUR",
+      "exact_prompt": "Edit the attached photograph only to correct the opacity of the adult woman's white baptismal clothing. Replace the thin translucent fabric of her existing garment with dense, fully opaque, plain white lined baptismal fabric throughout the shoulders, upper chest, bodice, sleeves and lower garment, including the wet areas. Preserve the existing modest neckline, long sleeves, garment shape and coverage. Show natural cloth weave, seams, folds, weight and water droplets, but no skin color, underwear outlines or intimate body details visible through the fabric, and no transparent or cling-film appearance. Keep this the quiet moment immediately after full immersion: she stands independently beside the man with a clear gap between them. Preserve both people's exact faces, natural expressions, reciprocal eye contact, wet hair, body scale, poses, separate arms and hands; do not retouch their identities or skin. Preserve the man's opaque white clothing unchanged. Preserve the water level, falling droplets, font, steps, rail, background, lighting, camera angle, photographic realism and 1536x1024 landscape framing. This is a contemporary application accompanying Romans 6:3-5, with anonymous adults; do not add Jesus, other people, symbols, text or new actions. Change only the woman's garment material and its local folds as necessary to make all of her clothing convincingly opaque while wet; leave everything else unchanged.",
+      "references": {
+        "C:/Users/wyatt/Documents/Codex/2026-10-04/joseph-enriched-production-continuation/work/art/living-newness-of-life.png": "5515cec2d418f28894b09e8757c466babd6f80c63b786035eadb6451324c19e6"
+      }
+    }
+  ],
+  "limits": [
+    "Preflight only; both reviewers must inspect corrected full pixels and details before use",
+    "No owner aesthetic or production acceptance",
+    "Unknown ancient ages and scene furnishings remain interpretation"
+  ],
+  "source_context_freshly_read": {
+    "John20": "18 reports Mary told disciples; 19 subsequent evening appearance remains distinct.",
+    "Romans6": "3-5 relates baptism to death/resurrection and walking in newness of life; image is modern application."
+  }
+}

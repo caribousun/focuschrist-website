@@ -194,8 +194,6 @@ def main() -> int:
         errors.append("art.html: main gallery must retain its existing dedicated viewer")
 
     for relative in ART_STUDY_PAGES:
-        from study_gap_art_qa import sitewide_entries
-        expected_supporting = 4 + sum(e['page'] == relative and not e['talk'] for e in sitewide_entries())
         text = (ROOT / relative).read_text(encoding="utf-8")
         if "data-artwork-detail=" in text:
             errors.append(f"{relative}: dedicated study page artwork should retain direct full-size behavior")
@@ -274,7 +272,10 @@ def main() -> int:
     # general_conference_qa.py verifies that migrated trigger explicitly.
     if viewer_triggers != 19:
         errors.append(f"same-page full-image viewer must have exactly 19 scoped triggers, found {viewer_triggers}")
+    from study_gap_art_qa import sitewide_entries
+    reviewed_supporting = sitewide_entries()
     for relative in ART_STUDY_PAGES:
+        expected_supporting = 4 + sum(e['page'] == relative and not e['talk'] for e in reviewed_supporting)
         text = (ROOT / relative).read_text(encoding="utf-8")
         supporting = [anchor for anchor in re.findall(r'<a\b[^>]*>', text) if 'data-art-study-supporting' in anchor]
         if len(supporting) != expected_supporting or any('data-full-image-viewer' in anchor for anchor in supporting):

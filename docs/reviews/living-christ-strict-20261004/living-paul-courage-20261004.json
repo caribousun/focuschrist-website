@@ -1,0 +1,17 @@
+{
+  "kind": "original",
+  "original_id": "assets/page-art/art-study/full/living-paul-courage-20261004",
+  "asset": "assets/page-art/art-study/full/living-paul-courage-20261004.webp",
+  "sha256": "4b23e29cdb0f6d728783c847de4d88dded877031fde40606a456853f7f4f79a9",
+  "owner_route": "art-study/the-living-christ.html",
+  "owner_section": "living-paul-courage-20261004",
+  "depicts_christ": true,
+  "reviewers": [
+    "Fermi",
+    "Newton"
+  ],
+  "lineage_and_cross_page_ownership_reviewed": true,
+  "ownership_scope": "all canonical site routes",
+  "pixels_reviewed_for_christ_classification": true,
+  "review_boundary": "Exact hashes bind previously completed direct pixel reviews and refreshed lineage/inventory; no new owner/native/public acceptance."
+}

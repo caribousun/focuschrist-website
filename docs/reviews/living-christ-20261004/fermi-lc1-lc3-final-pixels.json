@@ -1,0 +1,25 @@
+{
+  "reviewer": "Fermi",
+  "date": "2026-10-04",
+  "stage": "ACTUAL_FINISHED_PIXELS",
+  "mandate_readback": "mandate-readback.json",
+  "results": [
+    {
+      "key": "LC1_EDIT_V1",
+      "file": "C:/Users/wyatt/Documents/Codex/2026-10-04/enriched-art-corrections-production-audit/work/art/living-mary-reports-v2.png",
+      "sha256": "bd42de3d58d14181fd0f788d68140c38e3fb6319ecf0434d050ba32fe5802df5",
+      "result": "CONCUR",
+      "evidence": "Full 1536x1024 pixels and lc1-v2-face.png inspected against original, actual Home reference and actual Mary-at-tomb reference already inspected this turn. The anonymous male now has short graying hair, a clean-shaven broader older face and distinct nose/brow/jaw; he no longer reads as Home Christ. His attentive expression and gaze remain directed at Mary. Mary retains partial back/profile view, visible hair, build, beige/dusty-rose garments and gesture; seated listener remains distinct and attentive. Hands, table, room, natural light and composition remain coherent. No new Christ figure or named-listener assertion.",
+      "prompt_following": "Exact permitted identity correction accomplished. Minor hair texture remains natural rather than rigidly straight; this does not defeat distinct identity or period plausibility. No material new visual defect observed."
+    },
+    {
+      "key": "LC3_EDIT_V1",
+      "file": "C:/Users/wyatt/Documents/Codex/2026-10-04/enriched-art-corrections-production-audit/work/art/living-newness-of-life-v2.png",
+      "sha256": "d243df465938c63d5993809aeed3526ab9ff9365c87abf04ce627bfcb1c9be3c",
+      "result": "CONCUR",
+      "evidence": "Full 1536x1024 pixels and lc3-v2-clothing.png inspected against original. Yoke/shoulders, bodice and sleeves are now opaque white rather than skin-transmitting wet cloth. Bodice shading reads as ordinary folds without a distinct visible undergarment outline. Modest neckline and coverage remain intact, with natural cloth folds and droplets. Both faces, expressions, mutual gaze, wet hair, separate arms/hands and clear body gap are preserved. Man's white garments, font water, steps, rail and framing remain coherent. No additional characters or symbolic overlays.",
+      "prompt_following": "Requested opacity repair visibly achieved without material identity, pose or setting drift."
+    }
+  ],
+  "limits": "Fermi independent pixel concurrence only. Newton independent concurrence remains separately required. No native assembled desktop/phone placement, detail-panel paths, production verification or owner aesthetic acceptance established by this receipt. Originals remain preserved as held history. Protected foundation unchanged."
+}

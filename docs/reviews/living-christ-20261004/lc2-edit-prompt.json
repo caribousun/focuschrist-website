@@ -1,0 +1,13 @@
+{
+  "key": "LC2_EDIT_V1",
+  "reviewer": "Fermi",
+  "status": "FERMI_CONCUR_PENDING_NEWTON",
+  "edit_target": "C:/Users/wyatt/Documents/Codex/2026-10-04/enriched-art-corrections-production-audit/work/art/living-paul-courage.png",
+  "target_sha256": "e6c5e970ed09427ab20f71b4784be1dcef93e85f5efd6069f27aabc369526916",
+  "referenced_image_paths": [
+    "C:/Users/wyatt/Documents/Codex/2026-10-04/enriched-art-corrections-production-audit/work/art/living-paul-courage.png"
+  ],
+  "prompt": "Edit this exact image with one narrowly localized correction: add a small subtle fully healed nail scar to each of Jesus Christ's two exposed wrist regions, at the wrist joint just above each hand. Both wrists are visible below His linen sleeves; the existing marks on the backs of His hands do not replace the required wrist scars. Render the wrist scars as natural closed, slightly pale or softly indented healed skin, integrated with the existing light and perspective, without blood, fresh cuts, open holes, inflammation, dramatic contrast or additional scattered marks. Keep the existing hand marks and all anatomy unchanged. His palms are naturally turned inward and mostly hidden: do not rotate His arms or hands or expose hidden surfaces. If a palm area is genuinely visible, preserve a subtle healed palm mark there without changing the pose. Preserve exactly Jesus' face, hair, beard, expression, gaze toward Paul, body, undyed linen and warm ash-rose mantle. Preserve Paul entirely, including his face, mature age, gray beard, expression, gaze, clothing and hands on his knees. Preserve the room, lamp, night window, bench, lighting, photographic detail, all objects, camera angle and 1536x1024 composition. No new people, symbols, text, halos, blood, gesture or action. Change only the tiny local skin regions necessary for clearly visible healed scars on both wrists; leave the rest of the image unchanged.",
+  "acceptance": "Both visible wrist scars must be independently verified in actual output pixels while identity, anatomy and composition remain preserved. Prompt approval alone is not output approval.",
+  "prompt_sha256": "6b8a759810ecf0f2f7696bce6d8992358194790dcb612e98b60c5600e373cc72"
+}

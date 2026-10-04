@@ -1,0 +1,762 @@
+{
+  "reviewer": "Fermi",
+  "result": "CONCUR_EXACT_INVENTORY_AND_CLASSIFICATION",
+  "route": "art-study/the-living-christ.html",
+  "html_sha256": "8597354ee3eb7f967f92e5460109b29a2e4dc426e7ba4c91dbbb364f8ff00886",
+  "complete_page_image_inventory_reviewed": true,
+  "no_unregistered_qualifying_originals": true,
+  "original_count": 10,
+  "christ_count": 7,
+  "originals": [
+    {
+      "asset": "assets/page-art/art-study/full/living-breakfast-shore-20260919.webp",
+      "sha256": "8d49d722fe4b91f452a545a08a875e623b19e2c803396cac54704a58ff0b09f5",
+      "kind": "original",
+      "original_id": "assets/page-art/art-study/full/living-breakfast-shore-20260919",
+      "owner_route": "art-study/the-living-christ.html",
+      "owner_section": "personal-study",
+      "depicts_christ": true,
+      "pixels_reviewed_for_christ_classification": true,
+      "pixel_findings": "Christ in blue-gray mantle hands bread toward a disciple beside fish and coals on shore; distinct meal scene.",
+      "lineage_and_cross_page_ownership_reviewed": true,
+      "ownership_scope": "all canonical site routes",
+      "reviewer": "Fermi"
+    },
+    {
+      "asset": "assets/page-art/art-study/full/living-mary-at-tomb.webp",
+      "sha256": "e27a0710f7506eb56ef34f0fc10bda24f0bf0336546995800dfaba38196e6669",
+      "kind": "original",
+      "original_id": "assets/page-art/art-study/full/living-mary-at-tomb",
+      "owner_route": "art-study/the-living-christ.html",
+      "owner_section": "begin",
+      "depicts_christ": true,
+      "pixels_reviewed_for_christ_classification": true,
+      "pixel_findings": "Christ standing outside tomb facing Mary in partial rear view, recognition encounter.",
+      "lineage_and_cross_page_ownership_reviewed": true,
+      "ownership_scope": "all canonical site routes",
+      "reviewer": "Fermi"
+    },
+    {
+      "asset": "assets/page-art/art-study/full/living-thomas-witness.webp",
+      "sha256": "f77739780ae55f08ccdbf98d7c5b043f11198c34872ae214bcd6ba5ed2086761",
+      "kind": "original",
+      "original_id": "assets/page-art/art-study/full/living-thomas-witness",
+      "owner_route": "art-study/the-living-christ.html",
+      "owner_section": "artwork-study",
+      "depicts_christ": true,
+      "pixels_reviewed_for_christ_classification": true,
+      "pixel_findings": "Christ facing Thomas as Thomas reaches toward His palm; distinct gesture and composition from gathered disciples.",
+      "lineage_and_cross_page_ownership_reviewed": true,
+      "ownership_scope": "all canonical site routes",
+      "reviewer": "Fermi"
+    },
+    {
+      "asset": "assets/page-art/art-study/full/living-beside-grief.webp",
+      "sha256": "f72203fe48b5598fe23762e13d4a1a9886cfa41b41a6fb7e2af534bc99afbbb0",
+      "kind": "original",
+      "original_id": "assets/page-art/art-study/full/living-beside-grief",
+      "owner_route": "art-study/the-living-christ.html",
+      "owner_section": "artwork-study",
+      "depicts_christ": true,
+      "pixels_reviewed_for_christ_classification": true,
+      "pixel_findings": "Christ visibly sits beside modern grieving woman and open Bible; devotional application, not historical appearance claim.",
+      "lineage_and_cross_page_ownership_reviewed": true,
+      "ownership_scope": "all canonical site routes",
+      "reviewer": "Fermi"
+    },
+    {
+      "asset": "assets/page-art/art-study/full/living-peace-to-disciples.webp",
+      "sha256": "6c33ad0e03313afee009ec8e71091e8d2686b292137a30c0c0712d341f594d72",
+      "kind": "original",
+      "original_id": "assets/page-art/art-study/full/living-peace-to-disciples",
+      "owner_route": "art-study/the-living-christ.html",
+      "owner_section": "witnesses",
+      "depicts_christ": true,
+      "pixels_reviewed_for_christ_classification": true,
+      "pixel_findings": "Christ central among listeners with open hands, peaceful indoor gathering.",
+      "lineage_and_cross_page_ownership_reviewed": true,
+      "ownership_scope": "all canonical site routes",
+      "reviewer": "Fermi"
+    },
+    {
+      "asset": "assets/heroes/topics/living-christ-full.webp",
+      "sha256": "bb8539992ea3a171be50588f861c17cb237a76565c09ecef91e79836db906e3b",
+      "kind": "original",
+      "original_id": "assets/heroes/topics/living-christ-full",
+      "owner_route": "art-study/the-living-christ.html",
+      "owner_section": "living-christ-hero",
+      "depicts_christ": true,
+      "pixels_reviewed_for_christ_classification": true,
+      "pixel_findings": "Distinct devotional portrait with hand over heart and olive/Jerusalem setting; visibly Christ, unlike golden-background legacy gallery portrait or Home portrait.",
+      "lineage_and_cross_page_ownership_reviewed": true,
+      "ownership_scope": "all canonical site routes",
+      "reviewer": "Fermi"
+    },
+    {
+      "kind": "original",
+      "original_id": "assets/page-art/art-study/full/living-mary-reports-20261004",
+      "asset": "assets/page-art/art-study/full/living-mary-reports-20261004.webp",
+      "sha256": "0768a55320fc357b27770523f6113241195a3ad229e09af679cee12350ba8c36",
+      "owner_route": "art-study/the-living-christ.html",
+      "owner_section": "living-mary-reports-20261004",
+      "depicts_christ": false
+    },
+    {
+      "kind": "original",
+      "original_id": "assets/page-art/art-study/full/living-paul-courage-20261004",
+      "asset": "assets/page-art/art-study/full/living-paul-courage-20261004.webp",
+      "sha256": "4b23e29cdb0f6d728783c847de4d88dded877031fde40606a456853f7f4f79a9",
+      "owner_route": "art-study/the-living-christ.html",
+      "owner_section": "living-paul-courage-20261004",
+      "depicts_christ": true
+    },
+    {
+      "kind": "original",
+      "original_id": "assets/page-art/art-study/full/living-newness-baptism-20261004",
+      "asset": "assets/page-art/art-study/full/living-newness-baptism-20261004.webp",
+      "sha256": "c08da311c1b8a1f676329018ee29d37e8bbb31899afc7976e585564f06b1ef23",
+      "owner_route": "art-study/the-living-christ.html",
+      "owner_section": "living-newness-baptism-20261004",
+      "depicts_christ": false
+    },
+    {
+      "kind": "original",
+      "original_id": "assets/page-art/art-study/full/living-steadfast-service-20261004",
+      "asset": "assets/page-art/art-study/full/living-steadfast-service-20261004.webp",
+      "sha256": "cc77485a8e089fa24b6febf9234b31e9aedae4626bc8388e43f98c5b7636a3c8",
+      "owner_route": "art-study/the-living-christ.html",
+      "owner_section": "living-steadfast-service-20261004",
+      "depicts_christ": false
+    }
+  ],
+  "whole_page_inventory": {
+    "img_elements": [
+      {
+        "src": "../assets/page-art/art-study/thumbs/living-mary-at-tomb.webp",
+        "srcset": "../assets/page-art/art-study/thumbs/living-mary-at-tomb.webp 800w, ../assets/page-art/art-study/full/living-mary-at-tomb.webp 1536w",
+        "sizes": "(max-width: 650px) calc(100vw - 60px), (max-width: 960px) calc((100vw - 80px) / 2), 440px",
+        "width": "800",
+        "height": "533",
+        "loading": "lazy",
+        "decoding": "async",
+        "alt": "Mary Magdalene turning toward the risen Jesus Christ at the tomb"
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/living-mary-reports-20261004.webp",
+        "srcset": "../assets/page-art/art-study/thumbs/living-mary-reports-20261004.webp 800w, ../assets/page-art/art-study/full/living-mary-reports-20261004.webp 1536w",
+        "sizes": "(max-width: 700px) calc(100vw - 36px), 900px",
+        "width": "800",
+        "height": "533",
+        "loading": "lazy",
+        "decoding": "async",
+        "alt": "Mary Magdalene speaks to two attentive listeners in a simple room."
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/living-peace-to-disciples.webp",
+        "srcset": "../assets/page-art/art-study/thumbs/living-peace-to-disciples.webp 800w, ../assets/page-art/art-study/full/living-peace-to-disciples.webp 1536w",
+        "sizes": "(max-width: 650px) calc(100vw - 60px), (max-width: 960px) calc((100vw - 80px) / 2), 440px",
+        "width": "800",
+        "height": "533",
+        "loading": "lazy",
+        "decoding": "async",
+        "alt": "The risen Jesus Christ speaking peace among His disciples"
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/living-paul-courage-20261004.webp",
+        "srcset": "../assets/page-art/art-study/thumbs/living-paul-courage-20261004.webp 800w, ../assets/page-art/art-study/full/living-paul-courage-20261004.webp 1536w",
+        "sizes": "(max-width: 700px) calc(100vw - 36px), 900px",
+        "width": "800",
+        "height": "533",
+        "loading": "lazy",
+        "decoding": "async",
+        "alt": "The risen Jesus Christ stands beside Paul in a lamplit room as Paul looks up at Him."
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/living-thomas-witness.webp",
+        "srcset": "../assets/page-art/art-study/thumbs/living-thomas-witness.webp 800w, ../assets/page-art/art-study/full/living-thomas-witness.webp 1536w",
+        "sizes": "(max-width: 650px) calc(100vw - 60px), (max-width: 960px) calc((100vw - 80px) / 2), 440px",
+        "width": "800",
+        "height": "533",
+        "loading": "lazy",
+        "decoding": "async",
+        "alt": "Thomas meeting the risen Jesus Christ among the disciples"
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/living-beside-grief.webp",
+        "srcset": "../assets/page-art/art-study/thumbs/living-beside-grief.webp 800w, ../assets/page-art/art-study/full/living-beside-grief.webp 1536w",
+        "sizes": "(max-width: 650px) calc(100vw - 60px), (max-width: 960px) calc((100vw - 80px) / 2), 440px",
+        "width": "800",
+        "height": "533",
+        "loading": "lazy",
+        "decoding": "async",
+        "alt": "Jesus Christ sitting beside a grieving woman at sunrise"
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/living-newness-baptism-20261004.webp",
+        "srcset": "../assets/page-art/art-study/thumbs/living-newness-baptism-20261004.webp 800w, ../assets/page-art/art-study/full/living-newness-baptism-20261004.webp 1536w",
+        "sizes": "(max-width: 700px) calc(100vw - 36px), 900px",
+        "width": "800",
+        "height": "533",
+        "loading": "lazy",
+        "decoding": "async",
+        "alt": "An adult woman and man in opaque white clothing stand apart in a baptismal font, smiling toward one another."
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/living-breakfast-shore-20260919.webp",
+        "srcset": "../assets/page-art/art-study/thumbs/living-breakfast-shore-20260919.webp 800w, ../assets/page-art/art-study/full/living-breakfast-shore-20260919.webp 1536w",
+        "sizes": "(max-width: 700px) calc(100vw - 36px), 680px",
+        "width": "800",
+        "height": "533",
+        "loading": "lazy",
+        "decoding": "async",
+        "alt": "The risen Jesus Christ shares bread with disciples beside a small fire on the shore."
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/living-steadfast-service-20261004.webp",
+        "srcset": "../assets/page-art/art-study/thumbs/living-steadfast-service-20261004.webp 800w, ../assets/page-art/art-study/full/living-steadfast-service-20261004.webp 1536w",
+        "sizes": "(max-width: 700px) calc(100vw - 36px), 900px",
+        "width": "800",
+        "height": "533",
+        "loading": "lazy",
+        "decoding": "async",
+        "alt": "Two neighbors fit a handrail beside entrance steps while an older resident joins their conversation."
+      },
+      {
+        "src": "../assets/resources/living-powerful-testimony.jpg",
+        "width": "1200",
+        "height": "630",
+        "alt": "A Powerful Testimony of the Resurrection of Jesus Christ official video preview",
+        "loading": "lazy",
+        "decoding": "async"
+      },
+      {
+        "src": "../assets/resources/living-he-is-risen-2025.jpg",
+        "width": "1200",
+        "height": "630",
+        "alt": "He Is Risen! A Special 2025 Easter Season Message from the First Presidency official video preview",
+        "loading": "lazy",
+        "decoding": "async"
+      }
+    ],
+    "source_elements": [],
+    "inline_styles": [
+      "--topic-hero-desktop:url('../assets/heroes/topics/living-christ-desktop.webp');--topic-hero-mobile:url('../assets/heroes/topics/living-christ-mobile.webp')",
+      "max-width:680px;margin:1.5rem auto 0"
+    ],
+    "scripts": [
+      "../site-common.js?v=20261002-timeline-1",
+      "../full-image-viewer.js?v=20260914-reopen-1",
+      "../hero-details.js?v=20260927-plan-study-1",
+      "../topic-artwork-details.js?v=20260930-history-records-1",
+      "../site-search.js?v=20260919-focused-answers-1"
+    ],
+    "resource_exclusions": [
+      "assets/resources/living-powerful-testimony.jpg",
+      "assets/resources/living-he-is-risen-2025.jpg"
+    ],
+    "qualifying_hero": 1,
+    "qualifying_supporting": 9
+  },
+  "lineage": [
+    {
+      "asset": "assets/page-art/art-study/full/living-mary-reports-20261004.webp",
+      "source_png": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\art\\living-mary-reports-v2.png",
+      "source_sha256": "bd42de3d58d14181fd0f788d68140c38e3fb6319ecf0434d050ba32fe5802df5",
+      "full_sha256": "0768a55320fc357b27770523f6113241195a3ad229e09af679cee12350ba8c36",
+      "decoded_rgb_equal": true,
+      "size": [
+        1536,
+        1024
+      ],
+      "decoded_rgb_sha256": "d9a92fae673aea2f2dd0469d87387b75ef0301fad84a49231419b2db1fa425ec"
+    },
+    {
+      "asset": "assets/page-art/art-study/full/living-paul-courage-20261004.webp",
+      "source_png": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\art\\living-paul-courage-v2.png",
+      "source_sha256": "afeb7cf8f7d1f39e4186101bd2a7ed266ae30bdead346a83141daed547bed4ae",
+      "full_sha256": "4b23e29cdb0f6d728783c847de4d88dded877031fde40606a456853f7f4f79a9",
+      "decoded_rgb_equal": true,
+      "size": [
+        1536,
+        1024
+      ],
+      "decoded_rgb_sha256": "1cd5e37fb89358d5b4b9ff2371d6591a0b0f1a99cb6d81458a1023d38f7b5f9a"
+    },
+    {
+      "asset": "assets/page-art/art-study/full/living-newness-baptism-20261004.webp",
+      "source_png": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\art\\living-newness-of-life-v2.png",
+      "source_sha256": "d243df465938c63d5993809aeed3526ab9ff9365c87abf04ce627bfcb1c9be3c",
+      "full_sha256": "c08da311c1b8a1f676329018ee29d37e8bbb31899afc7976e585564f06b1ef23",
+      "decoded_rgb_equal": true,
+      "size": [
+        1536,
+        1024
+      ],
+      "decoded_rgb_sha256": "33d9e684d4c1603db5f6a649c7bf16117bc8509801f1957b6d948b09e235d085"
+    },
+    {
+      "asset": "assets/page-art/art-study/full/living-steadfast-service-20261004.webp",
+      "source_png": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\joseph-enriched-production-continuation\\work\\art\\living-steadfast-service.png",
+      "source_sha256": "4fe7d3960853a93e765a679674de0a97a02e08039aea3b0ff7ccb9fc269b5ed0",
+      "full_sha256": "cc77485a8e089fa24b6febf9234b31e9aedae4626bc8388e43f98c5b7636a3c8",
+      "decoded_rgb_equal": true,
+      "size": [
+        1536,
+        1024
+      ],
+      "decoded_rgb_sha256": "4c436dce767e49bd9070de645746b1f7613c74deec47e4599f0162d4fbae22e1"
+    }
+  ],
+  "routes_scanned": [
+    "about.html",
+    "answers.html",
+    "answers/aaronic-priesthood-restoration.html",
+    "answers/abrahamic-covenant.html",
+    "answers/are-latter-day-saints-christian.html",
+    "answers/bible-and-book-of-mormon-together.html",
+    "answers/death-of-a-child.html",
+    "answers/divorce-and-faith.html",
+    "answers/faith-in-jesus-christ-during-trials.html",
+    "answers/god-our-heavenly-father.html",
+    "answers/grief-and-faith.html",
+    "answers/holy-ghost.html",
+    "answers/jesus-christ-latter-day-saint-beliefs.html",
+    "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+    "answers/melchizedek-priesthood-restoration.html",
+    "answers/plan-of-salvation.html",
+    "answers/prayer-and-personal-revelation.html",
+    "answers/race-priesthood-and-temple-blessings.html",
+    "answers/restored-church-of-jesus-christ.html",
+    "answers/settle-this-in-your-hearts.html",
+    "answers/stand-forever.html",
+    "answers/what-happens-after-death.html",
+    "answers/what-is-eternal-marriage.html",
+    "answers/what-is-the-book-of-mormon.html",
+    "answers/who-was-joseph-smith.html",
+    "answers/why-families-are-important.html",
+    "answers/why-latter-day-saints-build-temples.html",
+    "art-gallery.html",
+    "art-study/be-still.html",
+    "art-study/suffer-the-little-children.html",
+    "art-study/the-good-shepherd.html",
+    "art-study/the-living-christ.html",
+    "art.html",
+    "ask.html",
+    "atonement.html",
+    "birth-of-christ.html",
+    "book-of-mormon-evidences.html",
+    "church-history.html",
+    "come-follow-me.html",
+    "general-conference.html",
+    "history/eleazer-miller.html",
+    "history/john-rowe-moyle.html",
+    "history/john-tanner.html",
+    "index.html",
+    "jesus-christ/before-bethlehem.html",
+    "jesus-christ/miracles-and-compassion.html",
+    "jesus-christ/mortal-ministry.html",
+    "jesus-christ/parables/barren-fig.html",
+    "jesus-christ/parables/birds-lilies.html",
+    "jesus-christ/parables/blind-guides.html",
+    "jesus-christ/parables/bridegroom.html",
+    "jesus-christ/parables/budding-fig.html",
+    "jesus-christ/parables/children-marketplace.html",
+    "jesus-christ/parables/closed-door.html",
+    "jesus-christ/parables/divided-house.html",
+    "jesus-christ/parables/doorkeeper.html",
+    "jesus-christ/parables/faithful-servant.html",
+    "jesus-christ/parables/friend-midnight.html",
+    "jesus-christ/parables/good-samaritan.html",
+    "jesus-christ/parables/good-shepherd.html",
+    "jesus-christ/parables/grain-wheat.html",
+    "jesus-christ/parables/great-supper.html",
+    "jesus-christ/parables/growing-seed.html",
+    "jesus-christ/parables/hearing.html",
+    "jesus-christ/parables/hen-chicks.html",
+    "jesus-christ/parables/hidden-treasure.html",
+    "jesus-christ/parables/householder.html",
+    "jesus-christ/parables/king-war.html",
+    "jesus-christ/parables/kingdom.html",
+    "jesus-christ/parables/laborers-vineyard.html",
+    "jesus-christ/parables/lamp.html",
+    "jesus-christ/parables/leaven.html",
+    "jesus-christ/parables/lost-coin.html",
+    "jesus-christ/parables/lost-sheep.html",
+    "jesus-christ/parables/mercy.html",
+    "jesus-christ/parables/minas.html",
+    "jesus-christ/parables/mote-beam.html",
+    "jesus-christ/parables/mustard-seed.html",
+    "jesus-christ/parables/neighbor.html",
+    "jesus-christ/parables/net.html",
+    "jesus-christ/parables/new-patch.html",
+    "jesus-christ/parables/new-wineskins.html",
+    "jesus-christ/parables/parent-gifts.html",
+    "jesus-christ/parables/pearl.html",
+    "jesus-christ/parables/persistent-widow.html",
+    "jesus-christ/parables/pharisee-publican.html",
+    "jesus-christ/parables/prodigal-son.html",
+    "jesus-christ/parables/returning-spirit.html",
+    "jesus-christ/parables/rich-fool.html",
+    "jesus-christ/parables/rich-man-lazarus.html",
+    "jesus-christ/parables/royal-wedding.html",
+    "jesus-christ/parables/salt.html",
+    "jesus-christ/parables/servant-duty.html",
+    "jesus-christ/parables/settle-adversary.html",
+    "jesus-christ/parables/sheep-goats.html",
+    "jesus-christ/parables/sheep-sabbath.html",
+    "jesus-christ/parables/sower.html",
+    "jesus-christ/parables/stewardship.html",
+    "jesus-christ/parables/strong-man.html",
+    "jesus-christ/parables/talents.html",
+    "jesus-christ/parables/ten-virgins.html",
+    "jesus-christ/parables/thief-night.html",
+    "jesus-christ/parables/tower-builder.html",
+    "jesus-christ/parables/tree-fruit.html",
+    "jesus-christ/parables/two-debtors.html",
+    "jesus-christ/parables/two-sons.html",
+    "jesus-christ/parables/unjust-steward.html",
+    "jesus-christ/parables/unmerciful-servant.html",
+    "jesus-christ/parables/vine-branches.html",
+    "jesus-christ/parables/watchful-servants.html",
+    "jesus-christ/parables/watchfulness.html",
+    "jesus-christ/parables/wedding-places.html",
+    "jesus-christ/parables/wheat-tares.html",
+    "jesus-christ/parables/wicked-tenants.html",
+    "jesus-christ/parables/wise-foolish-builders.html",
+    "jesus-christ/parables/woman-childbirth.html",
+    "jesus-christ/redeemer-and-risen-lord.html",
+    "jesus-christ/restoration-and-today.html",
+    "jesus-christ/risen-savior-in-the-book-of-mormon.html",
+    "jesus-christ/teachings-and-parables.html",
+    "joseph-smith-likeness.html",
+    "joseph-smith-portrait-research.html",
+    "missionary.html",
+    "pioneers.html",
+    "search.html",
+    "timeline.html",
+    "timelines/latter-day-saint-church-history-timeline.html",
+    "timelines/life-of-christ-journey-map.html",
+    "timelines/willie-and-martin-handcart-map.html",
+    "watch.html"
+  ],
+  "cross_page_scan": {
+    "assets/page-art/art-study/full/living-breakfast-shore-20260919.webp": {
+      "literal_family_hits": [
+        "art-study/the-living-christ.html"
+      ],
+      "gallery_records": [
+        {
+          "title": "Breakfast on the Shore",
+          "category": "Art & Study",
+          "thumbnail": "/assets/page-art/art-study/thumbs/living-breakfast-shore-20260919.webp",
+          "fullImage": "/assets/page-art/art-study/full/living-breakfast-shore-20260919.webp",
+          "alt": "The risen Jesus Christ shares bread with disciples beside a small fire on the shore.",
+          "id": "art-f6d313c50a8b",
+          "occurrences": [
+            {
+              "id": "source-ce0bedf22fb4",
+              "page": "/art-study/the-living-christ.html",
+              "pageTitle": "The Living Christ",
+              "category": "Art & Study",
+              "kind": "topic",
+              "selector": "a[href=\"../assets/page-art/art-study/full/living-breakfast-shore-20260919.webp\"]:has(img[src=\"../assets/page-art/art-study/thumbs/living-breakfast-shore-20260919.webp\"])",
+              "title": "Breakfast on the Shore"
+            }
+          ],
+          "categories": [
+            "Art & Study"
+          ]
+        }
+      ]
+    },
+    "assets/page-art/art-study/full/living-mary-at-tomb.webp": {
+      "literal_family_hits": [
+        "art-study/the-living-christ.html"
+      ],
+      "gallery_records": [
+        {
+          "title": "Called by Name",
+          "category": "Art & Study",
+          "thumbnail": "/assets/page-art/art-study/thumbs/living-mary-at-tomb.webp",
+          "fullImage": "/assets/page-art/art-study/full/living-mary-at-tomb.webp",
+          "alt": "Mary Magdalene turning toward the risen Jesus Christ outside the open tomb at dawn",
+          "id": "art-8cf3ce56a92a",
+          "occurrences": [
+            {
+              "id": "source-d836d9eb44f0",
+              "page": "/art-study/the-living-christ.html",
+              "pageTitle": "The Living Christ",
+              "category": "Art & Study",
+              "kind": "topic",
+              "selector": "a[href=\"../assets/page-art/art-study/full/living-mary-at-tomb.webp\"]:has(img[src=\"../assets/page-art/art-study/thumbs/living-mary-at-tomb.webp\"])",
+              "title": "Called by Name"
+            }
+          ],
+          "categories": [
+            "Art & Study"
+          ]
+        }
+      ]
+    },
+    "assets/page-art/art-study/full/living-thomas-witness.webp": {
+      "literal_family_hits": [
+        "art-study/the-living-christ.html"
+      ],
+      "gallery_records": [
+        {
+          "title": "Faith Met with Patience",
+          "category": "Art & Study",
+          "thumbnail": "/assets/page-art/art-study/thumbs/living-thomas-witness.webp",
+          "fullImage": "/assets/page-art/art-study/full/living-thomas-witness.webp",
+          "alt": "Thomas meeting the patient gaze of the risen Jesus Christ while other disciples watch",
+          "id": "art-e3b96840c6b5",
+          "occurrences": [
+            {
+              "id": "source-daa2adcb349d",
+              "page": "/art-study/the-living-christ.html",
+              "pageTitle": "The Living Christ",
+              "category": "Art & Study",
+              "kind": "topic",
+              "selector": "a[href=\"../assets/page-art/art-study/full/living-thomas-witness.webp\"]:has(img[src=\"../assets/page-art/art-study/thumbs/living-thomas-witness.webp\"])",
+              "title": "Faith Met with Patience"
+            }
+          ],
+          "categories": [
+            "Art & Study"
+          ]
+        }
+      ]
+    },
+    "assets/page-art/art-study/full/living-beside-grief.webp": {
+      "literal_family_hits": [
+        "art-study/the-living-christ.html"
+      ],
+      "gallery_records": [
+        {
+          "title": "Hope That Does Not Rush Grief",
+          "category": "Art & Study",
+          "thumbnail": "/assets/page-art/art-study/thumbs/living-beside-grief.webp",
+          "fullImage": "/assets/page-art/art-study/full/living-beside-grief.webp",
+          "alt": "Jesus Christ sitting quietly beside a grieving woman and her open Bible at sunrise",
+          "id": "art-64d0221bd9b1",
+          "occurrences": [
+            {
+              "id": "source-22b0bdf53e4a",
+              "page": "/art-study/the-living-christ.html",
+              "pageTitle": "The Living Christ",
+              "category": "Art & Study",
+              "kind": "topic",
+              "selector": "a[href=\"../assets/page-art/art-study/full/living-beside-grief.webp\"]:has(img[src=\"../assets/page-art/art-study/thumbs/living-beside-grief.webp\"])",
+              "title": "Hope That Does Not Rush Grief"
+            }
+          ],
+          "categories": [
+            "Art & Study"
+          ]
+        }
+      ]
+    },
+    "assets/page-art/art-study/full/living-peace-to-disciples.webp": {
+      "literal_family_hits": [
+        "art-study/the-living-christ.html"
+      ],
+      "gallery_records": [
+        {
+          "title": "Peace Behind Closed Doors",
+          "category": "Art & Study",
+          "thumbnail": "/assets/page-art/art-study/thumbs/living-peace-to-disciples.webp",
+          "fullImage": "/assets/page-art/art-study/full/living-peace-to-disciples.webp",
+          "alt": "The risen Jesus Christ speaking peace to astonished disciples in an upper room",
+          "id": "art-17c1bb1b3aac",
+          "occurrences": [
+            {
+              "id": "source-67353942db5b",
+              "page": "/art-study/the-living-christ.html",
+              "pageTitle": "The Living Christ",
+              "category": "Art & Study",
+              "kind": "topic",
+              "selector": "a[href=\"../assets/page-art/art-study/full/living-peace-to-disciples.webp\"]:has(img[src=\"../assets/page-art/art-study/thumbs/living-peace-to-disciples.webp\"])",
+              "title": "Peace Behind Closed Doors"
+            }
+          ],
+          "categories": [
+            "Art & Study"
+          ]
+        }
+      ]
+    },
+    "assets/heroes/topics/living-christ-full.webp": {
+      "literal_family_hits": [
+        "art-study/the-living-christ.html"
+      ],
+      "gallery_records": [
+        {
+          "title": "The risen Jesus Christ offers a warm, reassuring smile with one hand resting over His heart.",
+          "category": "Art & Study",
+          "thumbnail": "/assets/heroes/topics/living-christ-full.webp",
+          "fullImage": "/assets/heroes/topics/living-christ-full.webp",
+          "alt": "The risen Jesus Christ offers a warm, reassuring smile with one hand resting over His heart.",
+          "id": "art-e99268a32ea9",
+          "occurrences": [
+            {
+              "id": "source-0d06979021fe",
+              "page": "/art-study/the-living-christ.html",
+              "pageTitle": "The Living Christ",
+              "category": "Art & Study",
+              "kind": "hero",
+              "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/living-christ-full.webp\"]",
+              "title": "The risen Jesus Christ offers a warm, reassuring smile with one hand resting over His heart."
+            }
+          ],
+          "categories": [
+            "Art & Study"
+          ]
+        }
+      ]
+    },
+    "assets/page-art/art-study/full/living-mary-reports-20261004.webp": {
+      "literal_family_hits": [
+        "art-study/the-living-christ.html"
+      ],
+      "gallery_records": [
+        {
+          "title": "A Witness Carried to Others",
+          "category": "Art & Study",
+          "thumbnail": "/assets/page-art/art-study/thumbs/living-mary-reports-20261004.webp",
+          "fullImage": "/assets/page-art/art-study/full/living-mary-reports-20261004.webp",
+          "alt": "Mary Magdalene speaks to two attentive listeners in a simple room.",
+          "id": "art-21c0177e4dbf",
+          "occurrences": [
+            {
+              "id": "source-eb0f229f7f59",
+              "page": "/art-study/the-living-christ.html",
+              "pageTitle": "The Living Christ",
+              "category": "Art & Study",
+              "kind": "topic",
+              "selector": "a[href=\"../assets/page-art/art-study/full/living-mary-reports-20261004.webp\"]:has(img[src=\"../assets/page-art/art-study/thumbs/living-mary-reports-20261004.webp\"])",
+              "title": "A Witness Carried to Others"
+            }
+          ],
+          "categories": [
+            "Art & Study"
+          ]
+        }
+      ]
+    },
+    "assets/page-art/art-study/full/living-paul-courage-20261004.webp": {
+      "literal_family_hits": [
+        "art-study/the-living-christ.html"
+      ],
+      "gallery_records": [
+        {
+          "title": "Courage in the Night",
+          "category": "Art & Study",
+          "thumbnail": "/assets/page-art/art-study/thumbs/living-paul-courage-20261004.webp",
+          "fullImage": "/assets/page-art/art-study/full/living-paul-courage-20261004.webp",
+          "alt": "The risen Jesus Christ stands beside Paul in a lamplit room as Paul looks up at Him.",
+          "id": "art-d4e08b79b7a9",
+          "occurrences": [
+            {
+              "id": "source-58fc181adcb4",
+              "page": "/art-study/the-living-christ.html",
+              "pageTitle": "The Living Christ",
+              "category": "Art & Study",
+              "kind": "topic",
+              "selector": "a[href=\"../assets/page-art/art-study/full/living-paul-courage-20261004.webp\"]:has(img[src=\"../assets/page-art/art-study/thumbs/living-paul-courage-20261004.webp\"])",
+              "title": "Courage in the Night"
+            }
+          ],
+          "categories": [
+            "Art & Study"
+          ]
+        }
+      ]
+    },
+    "assets/page-art/art-study/full/living-newness-baptism-20261004.webp": {
+      "literal_family_hits": [
+        "art-study/the-living-christ.html"
+      ],
+      "gallery_records": [
+        {
+          "title": "Walk in Newness of Life",
+          "category": "Art & Study",
+          "thumbnail": "/assets/page-art/art-study/thumbs/living-newness-baptism-20261004.webp",
+          "fullImage": "/assets/page-art/art-study/full/living-newness-baptism-20261004.webp",
+          "alt": "An adult woman and man in opaque white clothing stand apart in a baptismal font, smiling toward one another.",
+          "id": "art-684644ba0bbe",
+          "occurrences": [
+            {
+              "id": "source-68585b765138",
+              "page": "/art-study/the-living-christ.html",
+              "pageTitle": "The Living Christ",
+              "category": "Art & Study",
+              "kind": "topic",
+              "selector": "a[href=\"../assets/page-art/art-study/full/living-newness-baptism-20261004.webp\"]:has(img[src=\"../assets/page-art/art-study/thumbs/living-newness-baptism-20261004.webp\"])",
+              "title": "Walk in Newness of Life"
+            }
+          ],
+          "categories": [
+            "Art & Study"
+          ]
+        }
+      ]
+    },
+    "assets/page-art/art-study/full/living-steadfast-service-20261004.webp": {
+      "literal_family_hits": [
+        "art-study/the-living-christ.html"
+      ],
+      "gallery_records": [
+        {
+          "title": "Hope Gives Today's Work Purpose",
+          "category": "Art & Study",
+          "thumbnail": "/assets/page-art/art-study/thumbs/living-steadfast-service-20261004.webp",
+          "fullImage": "/assets/page-art/art-study/full/living-steadfast-service-20261004.webp",
+          "alt": "Two neighbors fit a handrail beside entrance steps while an older resident joins their conversation.",
+          "id": "art-5d44626bff9b",
+          "occurrences": [
+            {
+              "id": "source-81690f2605d4",
+              "page": "/art-study/the-living-christ.html",
+              "pageTitle": "The Living Christ",
+              "category": "Art & Study",
+              "kind": "topic",
+              "selector": "a[href=\"../assets/page-art/art-study/full/living-steadfast-service-20261004.webp\"]:has(img[src=\"../assets/page-art/art-study/thumbs/living-steadfast-service-20261004.webp\"])",
+              "title": "Hope Gives Today's Work Purpose"
+            }
+          ],
+          "categories": [
+            "Art & Study"
+          ]
+        }
+      ]
+    }
+  },
+  "reused_existing_evidence": {
+    "fermi_sha256": "2722cf1abb0733c3f20188b6ccbaad65344b0e2b704248362d5c92b3dad14603",
+    "newton_sha256": "00ded24839b2001ce3988a4f4e8bef02ebc599514dad531b996b0ff4486b42c5"
+  },
+  "limits": [
+    "Exact source inventory and inherited unchanged-pixel classification; no native runtime or production acceptance.",
+    "Existing six visual-family audit reused after exact full asset hashes checked.",
+    "New four source PNGs match finished-pixel receipt hashes and decoded full WebPs exactly.",
+    "Cross-page scan covers all 130 canonical sources plus current generated gallery; dynamic references remain indexed owner links, not additional owners.",
+    "Arbitrary unseen transforms cannot be mathematically excluded. Existing scar bulk-review deferral preserved."
+  ],
+  "dynamic_inventory_review": {
+    "finding": "Hero-details, topic-artwork-details and full-image-viewer use the selected trigger href; their display repeats the registered original. Search results use thumbnail links to owning result URLs and do not supply receiving-page originals. Timeline breakfast record links exact owner section. Study-journey, unified-opening, scripture-reader and header-scroll have no new raster image creation. Gallery bridge selects existing owner pictures. Shared CSS image rules for other page classes do not apply to Living unique hero; inline topic hero variants remain one original.",
+    "reviewed_files": {
+      "hero-details.js": "3a57384da7931f41b9fcb9d9f7e09be964045779222ca2ab8e99c4d5f6d524df",
+      "topic-artwork-details.js": "22f50cb4340d335bfffdf1a530db3dae1118c049368599b27833a964bef5a947",
+      "full-image-viewer.js": "aba3506b68cdd0fe1e00aaafe475f791ab398f7dcdb8e7a1c82b5bb575704882",
+      "site-search.js": "2722b477848556bb05ecf0487b890c1d0e25840f912f8ea6140382a340eae099",
+      "timeline-images.js": "3966722e0e66e82a94a58d3dfa4a599f1e02ae78dc4d4f729ee35103cc90cf65",
+      "site-common.js": "17b5f3e316970de6d545e190caa00ee22034797b6ce790253cc3e392cdf51654",
+      "site-system.css": "17d2b86bc2afc65b8133b6cc2831028b02590fe6874a13098345f5f5a1ec35fc",
+      "study-journey.js": "a6fd85b61e6b557c1f80ad5c0c06492b8c4765d699f55c9550c86c396a3cfe88",
+      "unified-opening.js": "a3313dd5c5ae81110d23fab725d724143db1a49f89201d53e773f4840fc3d743",
+      "art-gallery-bridge.js": "3b27bcc83c12ce4cf67b2c6a29a7937aaa9e00cb733bc32ee9f577fc640ac4f7",
+      "scripture-reader.js": "43d98b32a5dc2f8e4df95b53ab1b18a869b839017db0a2f0001498851ccfe9e6",
+      "header-scroll.js": "9f1866141a1b0753bebc1546fea9353fd84d9e74799f4eec0138fc922efdfa7c"
+    }
+  }
+}

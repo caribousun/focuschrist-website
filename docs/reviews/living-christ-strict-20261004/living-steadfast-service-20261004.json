@@ -1,0 +1,17 @@
+{
+  "kind": "original",
+  "original_id": "assets/page-art/art-study/full/living-steadfast-service-20261004",
+  "asset": "assets/page-art/art-study/full/living-steadfast-service-20261004.webp",
+  "sha256": "cc77485a8e089fa24b6febf9234b31e9aedae4626bc8388e43f98c5b7636a3c8",
+  "owner_route": "art-study/the-living-christ.html",
+  "owner_section": "living-steadfast-service-20261004",
+  "depicts_christ": false,
+  "reviewers": [
+    "Fermi",
+    "Newton"
+  ],
+  "lineage_and_cross_page_ownership_reviewed": true,
+  "ownership_scope": "all canonical site routes",
+  "pixels_reviewed_for_christ_classification": true,
+  "review_boundary": "Exact hashes bind previously completed direct pixel reviews and refreshed lineage/inventory; no new owner/native/public acceptance."
+}
