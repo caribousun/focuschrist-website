@@ -3,8 +3,11 @@ import hashlib,json
 from pathlib import Path
 from urllib.parse import urlsplit
 from answer_study_qa import Document
+from bs4 import BeautifulSoup
+from joseph_research_acceptance import check_artwork_badges_and_footer
 ROOT=Path(__file__).resolve().parents[1]
 page=ROOT/'atonement.html';text=page.read_text(encoding='utf-8');d=Document();d.feed(text);nodes=list(d.root.walk())
+check_artwork_badges_and_footer(BeautifulSoup(text, 'html.parser'))
 def require(condition,message):
     if not condition: raise AssertionError(message)
 required={'before-the-world','need-a-savior','promise','sacrifice','resurrection','book-of-mormon','living-voice','repentance','grace','healing','remember','continue-study','main-content'}

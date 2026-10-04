@@ -8,6 +8,8 @@ REJECTED_ARTWORK_BADGES = ('New artistic interpretation', 'New artwork · histor
 ARTWORK_FOOTER_DISCLOSURE = ('Artwork on focusChrist includes AI-generated artistic interpretations. '
     'Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.')
 REJECTED_SCENE_BOILERPLATE = (
+    'The artwork offers reverent, imaginative scenes; the linked scriptures provide the accounts we study.',
+    'Let the quiet of this imagined landscape lead you to the scriptures',
     'Jesus does not specify the merchandise or the particular transactions',
     "this scene illustrates the story's action without claiming to show the devil's physical appearance",
     'without claiming a particular family dispute or its outcome',
@@ -87,7 +89,7 @@ def check_caption_evidence_metacommentary(text):
     assert not any(normalize(x) in normalize(text) for x in rejected), 'Owner-rejected caption evidence-status commentary returned'
 
 def check_artwork_badges_and_footer(doc):
-    accessible_text = ' '.join(str(node.get(attr,'')) for node in doc.find_all(True) for attr in ('alt','title','aria-label'))
+    accessible_text = ' '.join(str(node.get(attr,'')) for node in doc.find_all(True) for attr in ('alt','title','aria-label','data-full-image-alt'))
     check_artwork_disclosure_text(doc.get_text(' ',strip=True)+' '+accessible_text)
     for caption in doc.select('figcaption'): check_caption_evidence_metacommentary(caption.get_text(' ',strip=True))
     footer = doc.select_one('footer [data-focuschrist-artwork-disclosure="footer"]')
