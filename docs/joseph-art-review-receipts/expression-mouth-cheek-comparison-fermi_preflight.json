@@ -1,0 +1,30 @@
+{
+  "reviewer": "Fermi",
+  "id": "expression-mouth-cheek-comparison",
+  "source_review_id": "expression-mouth-cheek-comparison",
+  "prompt_sha256": "bc8c46ea139506a5a6af6dc7bcdc84e18ab8d7fe929956e5fd9e840516b83ff4",
+  "concur": true,
+  "source_receipt_path": "work\\fermi\\research-method-prompts-v1.json",
+  "source_receipt_sha256": "f0a9d71b232d18eed1cc1f4e8b0dc43ce37c8337935360d046c5ea0c0fddc101",
+  "source_record": {
+    "id": "expression-mouth-cheek-comparison",
+    "prompt": "Create one new photographic educational illustration using the supplied actual owner-approved Joseph Smith portrait as the sole identity reference. Show this exact recognizable Joseph at approximately38; preserve nose, eyes, blue-gray iris shade, brows, lips, chin, hairline, light-brown hair and natural asymmetry. No beautification, generic actor, invented scar or changed anatomy. Real pores and human eyes, restrained texture, plausible optics. This is newly made interpretive artwork about portrait-reading limits, not recovered creation work, an actual experiment, an anatomical scan, historical evidence or proof of accuracy. No text, labels, diagrams, arrows, rulers, numerical measurements, masks or overlay. Landscape3:2 with two deliberate equal panels separated by a narrow quiet margin. The paired views must teach the specified visual distinction and retain recognizable identity; they are not guaranteed perfectly controlled images. Two close lower-face views from lower nose through chin, with complete cheeks and mouth. Left: neutral resting closed lips. Right: a modest warm closed-mouth conversational smile, slight mouth-corner and cheek lift, no visible teeth or broad grin. Keep the same age, skin, lip shape and chin character; change the expression naturally without shrinking the face or making him younger. Lighting soft and neutral in both, no strong dramatic shadow. This visibly explains why lip corners and cheek contours in a living expression need not look like a fixed cast. It does not reconstruct a documented historical smile or prove how his face moved.",
+    "prompt_sha256": "bc8c46ea139506a5a6af6dc7bcdc84e18ab8d7fe929956e5fd9e840516b83ff4",
+    "actual_references": [
+      {
+        "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\identities\\joseph-smith-owner-approved-20260914.png",
+        "sha256": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+      }
+    ],
+    "placement": "Research expression and living soft tissue",
+    "reasoning": "Traits4/5/14: expression changes visible contours; generated pairs cannot establish isolated muscle motion or validate likeness.",
+    "source_context": "Compare actual cast/reference limitations already documented in research; this is explanatory reasoning rather than a new historical claim.",
+    "fermi_generation_only_concur": true,
+    "newton_concur": false,
+    "finished_review": "Reject unintended age/anatomy/hair drift or unreadable intended contrast. One diptych equals one original, not two."
+  },
+  "normalization": "Maps reviewed exact asset/prompt to final placement id; preserves explicit decision and full source record. Not a new review or broader approval.",
+  "reference_sha256": [
+    "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+  ]
+}

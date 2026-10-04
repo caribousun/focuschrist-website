@@ -1,0 +1,18 @@
+{
+  "reviewer": "Fermi",
+  "id": "light-and-nose-relief-comparison",
+  "source_review_id": "illumination",
+  "prompt_sha256": "0191e297aa761af896ccf17084132b07506f84fecfaf5b4a6b1fa8e561584df4",
+  "concur": true,
+  "source_receipt_path": "work\\fermi\\research-method-finished-review.json",
+  "source_receipt_sha256": "2d37869396b2beb41a6dbd3b647251d699b6c5e22153c404e10a5543bbe99e6d",
+  "source_record": {
+    "id": "illumination",
+    "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-d75e9019-861f-4f46-8e49-a9e725dad2cf.png",
+    "sha256": "08dcb2442e5f4eff026b26cabd0f1251a222bb89bb20e0d2a54573126bf1df4d",
+    "finished_pixels_concur": true,
+    "reason": "Broad even vs side illumination visibly alters nose/cheek shadow impression. Eyes retain detail, no exaggerated theater. Minor generated differences preclude isolated-variable claim."
+  },
+  "normalization": "Maps reviewed exact asset/prompt to final placement id; preserves explicit decision and full source record. Not a new review or broader approval.",
+  "sha256": "08dcb2442e5f4eff026b26cabd0f1251a222bb89bb20e0d2a54573126bf1df4d"
+}

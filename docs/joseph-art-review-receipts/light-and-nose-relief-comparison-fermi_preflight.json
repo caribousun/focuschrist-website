@@ -1,0 +1,30 @@
+{
+  "reviewer": "Fermi",
+  "id": "light-and-nose-relief-comparison",
+  "source_review_id": "light-and-nose-relief-comparison",
+  "prompt_sha256": "0191e297aa761af896ccf17084132b07506f84fecfaf5b4a6b1fa8e561584df4",
+  "concur": true,
+  "source_receipt_path": "work\\fermi\\research-method-prompts-v1.json",
+  "source_receipt_sha256": "f0a9d71b232d18eed1cc1f4e8b0dc43ce37c8337935360d046c5ea0c0fddc101",
+  "source_record": {
+    "id": "light-and-nose-relief-comparison",
+    "prompt": "Create one new photographic educational illustration using the supplied actual owner-approved Joseph Smith portrait as the sole identity reference. Show this exact recognizable Joseph at approximately38; preserve nose, eyes, blue-gray iris shade, brows, lips, chin, hairline, light-brown hair and natural asymmetry. No beautification, generic actor, invented scar or changed anatomy. Real pores and human eyes, restrained texture, plausible optics. This is newly made interpretive artwork about portrait-reading limits, not recovered creation work, an actual experiment, an anatomical scan, historical evidence or proof of accuracy. No text, labels, diagrams, arrows, rulers, numerical measurements, masks or overlay. Landscape3:2 with two deliberate equal panels separated by a narrow quiet margin. The paired views must teach the specified visual distinction and retain recognizable identity; they are not guaranteed perfectly controlled images. Two matched near-frontal central-face views of Joseph from brows through closed mouth. Left: broad even daylight clearly exposing both sides of the distinctive nose. Right: natural soft side light from image-left makes the far side of the same nose and cheek fall into readable shadow, with detail preserved. The lighting contrast must be obvious enough to teach how shadow changes the impression of bridge width and cheek relief. Do not actually narrow, straighten, enlarge or rotate the nose; do not change age, expression, hair or iris color. No spotlight, split-face gimmick, colored lighting, blacked-out eye or theatrical drama. This illustrates an optical caution and does not claim only illumination changed in a measured controlled test.",
+    "prompt_sha256": "0191e297aa761af896ccf17084132b07506f84fecfaf5b4a6b1fa8e561584df4",
+    "actual_references": [
+      {
+        "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\identities\\joseph-smith-owner-approved-20260914.png",
+        "sha256": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+      }
+    ],
+    "placement": "Research light and shape-reading limits",
+    "reasoning": "Traits1/2/3/11: shadow alters impression, but generated pair is not a controlled relighting test or recovered historical lighting.",
+    "source_context": "Compare actual cast/reference limitations already documented in research; this is explanatory reasoning rather than a new historical claim.",
+    "fermi_generation_only_concur": true,
+    "newton_concur": false,
+    "finished_review": "Reject unintended age/anatomy/hair drift or unreadable intended contrast. One diptych equals one original, not two."
+  },
+  "normalization": "Maps reviewed exact asset/prompt to final placement id; preserves explicit decision and full source record. Not a new review or broader approval.",
+  "reference_sha256": [
+    "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+  ]
+}

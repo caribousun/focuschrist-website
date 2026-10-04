@@ -1,0 +1,19 @@
+{
+  "reviewer": "Newton",
+  "id": "light-and-nose-relief-comparison",
+  "source_review_id": "light-and-nose-relief-comparison",
+  "prompt_sha256": "0191e297aa761af896ccf17084132b07506f84fecfaf5b4a6b1fa8e561584df4",
+  "concur": true,
+  "source_receipt_path": "work\\newton\\method-light-viewpoint-finished-review.json",
+  "source_receipt_sha256": "9c5baa5eab4530d12a7c54e1cdc5ec975d6818819e8bc4d9a5fb360b6cc36663",
+  "source_record": {
+    "id": "light-and-nose-relief-comparison",
+    "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-d75e9019-861f-4f46-8e49-a9e725dad2cf.png",
+    "sha256": "08dcb2442e5f4eff026b26cabd0f1251a222bb89bb20e0d2a54573126bf1df4d",
+    "prompt_sha256": "0191e297aa761af896ccf17084132b07506f84fecfaf5b4a6b1fa8e561584df4",
+    "concur": true,
+    "notes": "Accept: clear even versus directional shadow contrast, retained nose/face character and readable far-eye detail. Some expression/view variation remains, so not an isolated-variable relighting test. Broader framing still teaches intended relief caution. One diptych counts as one original."
+  },
+  "normalization": "Maps reviewed exact asset/prompt to final placement id; preserves explicit decision and full source record. Not a new review or broader approval.",
+  "sha256": "08dcb2442e5f4eff026b26cabd0f1251a222bb89bb20e0d2a54573126bf1df4d"
+}

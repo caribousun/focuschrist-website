@@ -1,0 +1,662 @@
+{
+  "assets/research/joseph-originals/painted-likeness-1842.png": {
+    "source_sha256": "1f344ac8596d3e626c7e5dc3e80f0df9e7492265719e8176916010a838935921",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "asset": "assets/research/joseph-originals/painted-likeness-1842-640.webp",
+        "width": 640,
+        "height": 427,
+        "sha256": "b9cc2022c27fdd009b1bbd5b0b26c60d3084b9dd9bc866461dd7db7974af0eab",
+        "bytes": 22756,
+        "quality": 84
+      },
+      {
+        "asset": "assets/research/joseph-originals/painted-likeness-1842-960.webp",
+        "width": 960,
+        "height": 640,
+        "sha256": "1f8f6bcfd7cb32d2cdb3ddbfb3134fab1a15f5878f5646b69c3553970bcbf9d8",
+        "bytes": 40510,
+        "quality": 84
+      },
+      {
+        "asset": "assets/research/joseph-originals/painted-likeness-1842-1536.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "3a26859d94a376f1b11dd26bf305f136c16f90d626251e1877c761d2aa07091b",
+        "bytes": 84892,
+        "quality": 84
+      }
+    ],
+    "default": "assets/research/joseph-originals/painted-likeness-1842-1536.webp",
+    "processing": "Format/resolution delivery only; no crop, retouch, recoloring or generated content. Exact reviewed PNG remains full-size source."
+  },
+  "assets/research/joseph-originals/adopted-nose-study.png": {
+    "source_sha256": "5e5a81c2733256451e82cd04b34caf90c175a38367c8908d26c83597fd087156",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "asset": "assets/research/joseph-originals/adopted-nose-study-640.webp",
+        "width": 640,
+        "height": 427,
+        "sha256": "3589833d38c36e851aa23a33bd7dd9af79c54a5fc723651753877b2787166339",
+        "bytes": 32506,
+        "quality": 84
+      },
+      {
+        "asset": "assets/research/joseph-originals/adopted-nose-study-960.webp",
+        "width": 960,
+        "height": 640,
+        "sha256": "d9d69427d78d7f0ec383764fec4ac42221b95f780cbe0ccd909d2e85366066f2",
+        "bytes": 63862,
+        "quality": 84
+      },
+      {
+        "asset": "assets/research/joseph-originals/adopted-nose-study-1536.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "62a397e0d63bcd3f7304bf34acbb2a8c14cac83cb440f8ea727244042f6682af",
+        "bytes": 104390,
+        "quality": 80
+      }
+    ],
+    "default": "assets/research/joseph-originals/adopted-nose-study-1536.webp",
+    "processing": "Format/resolution delivery only; no crop, retouch, recoloring or generated content. Exact reviewed PNG remains full-size source."
+  },
+  "assets/research/joseph-originals/adopted-mouth-study.png": {
+    "source_sha256": "faace4a2216ac262a32332bb3172fb44fe5623fa46f63162123cd3dc78527973",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "asset": "assets/research/joseph-originals/adopted-mouth-study-640.webp",
+        "width": 640,
+        "height": 427,
+        "sha256": "18535b6a95eb5e9a17548e76ea45a8ab2ca35b853b4dda46c46329795c892a8f",
+        "bytes": 29622,
+        "quality": 84
+      },
+      {
+        "asset": "assets/research/joseph-originals/adopted-mouth-study-960.webp",
+        "width": 960,
+        "height": 640,
+        "sha256": "230710f227a33b92d82af64446821ceb9dbf38cbfd23e9553e36a5b3eb971b12",
+        "bytes": 58522,
+        "quality": 84
+      },
+      {
+        "asset": "assets/research/joseph-originals/adopted-mouth-study-1536.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "6739a58f3269ba0645321902a1dfb974ce809e6331163d8970b4f427982256fc",
+        "bytes": 120632,
+        "quality": 84
+      }
+    ],
+    "default": "assets/research/joseph-originals/adopted-mouth-study-1536.webp",
+    "processing": "Format/resolution delivery only; no crop, retouch, recoloring or generated content. Exact reviewed PNG remains full-size source."
+  },
+  "assets/research/joseph-originals/expression-mouth-cheek-comparison.png": {
+    "source_sha256": "f9885c6e2c9d2367fa61faccafc7c8ab6cad7a8b5aae2d6ec2f4e3eca878722f",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "asset": "assets/research/joseph-originals/expression-mouth-cheek-comparison-640.webp",
+        "width": 640,
+        "height": 427,
+        "sha256": "83467d2b4dea0bf2527880d022b192f8d5a53754dbcb55f9cb2417d62d03991f",
+        "bytes": 41222,
+        "quality": 84
+      },
+      {
+        "asset": "assets/research/joseph-originals/expression-mouth-cheek-comparison-960.webp",
+        "width": 960,
+        "height": 640,
+        "sha256": "f908150a883d022dff76e560644a4fc3cfb589d91f088e6765a445dbc5efec96",
+        "bytes": 82684,
+        "quality": 84
+      },
+      {
+        "asset": "assets/research/joseph-originals/expression-mouth-cheek-comparison-1536.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "bbf695e03cb28c0f837be1354adc84d56f4751c42a56bdab7c2d2273dfccc970",
+        "bytes": 104768,
+        "quality": 76
+      }
+    ],
+    "default": "assets/research/joseph-originals/expression-mouth-cheek-comparison-1536.webp",
+    "processing": "Format/resolution delivery only; no crop, retouch, recoloring or generated content. Exact reviewed PNG remains full-size source."
+  },
+  "assets/research/joseph-originals/light-and-nose-relief-comparison.png": {
+    "source_sha256": "08dcb2442e5f4eff026b26cabd0f1251a222bb89bb20e0d2a54573126bf1df4d",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "asset": "assets/research/joseph-originals/light-and-nose-relief-comparison-640.webp",
+        "width": 640,
+        "height": 427,
+        "sha256": "68218f8fd5c5f0258b19775b0100f14d71e2614f22f36da0a97db2f39b58169e",
+        "bytes": 34644,
+        "quality": 84
+      },
+      {
+        "asset": "assets/research/joseph-originals/light-and-nose-relief-comparison-960.webp",
+        "width": 960,
+        "height": 640,
+        "sha256": "0127bfe9bb513211cfdb4f6ad6b65433d963a25ad1d8c8f0d67274e099d5620b",
+        "bytes": 72736,
+        "quality": 84
+      },
+      {
+        "asset": "assets/research/joseph-originals/light-and-nose-relief-comparison-1536.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "03a337cf2bf2091c1cbdf5dd9f4eb51070e50963ee79c70156ad393035af2a87",
+        "bytes": 101368,
+        "quality": 76
+      }
+    ],
+    "default": "assets/research/joseph-originals/light-and-nose-relief-comparison-1536.webp",
+    "processing": "Format/resolution delivery only; no crop, retouch, recoloring or generated content. Exact reviewed PNG remains full-size source."
+  },
+  "assets/research/joseph-originals/viewpoint-jaw-outline-comparison.png": {
+    "source_sha256": "44449aedd2ed29b206da1f3fab65c5bf0ccf6a36bb80acbf55ff894e14663d70",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "asset": "assets/research/joseph-originals/viewpoint-jaw-outline-comparison-640.webp",
+        "width": 640,
+        "height": 427,
+        "sha256": "eca9d7430d8c7be2dadf65c1c947c9490b0f4905a2149fd830e7da83d866b1df",
+        "bytes": 32114,
+        "quality": 84
+      },
+      {
+        "asset": "assets/research/joseph-originals/viewpoint-jaw-outline-comparison-960.webp",
+        "width": 960,
+        "height": 640,
+        "sha256": "fd9c01c2f7ce29971a57515d29edae3e4a73435d541e5d02a5aa7e277a658738",
+        "bytes": 70468,
+        "quality": 84
+      },
+      {
+        "asset": "assets/research/joseph-originals/viewpoint-jaw-outline-comparison-1536.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "08163fa5dda6d4f860c96ac03e32fdfc54279b14f99efe18105b12a15dbc964a",
+        "bytes": 100970,
+        "quality": 76
+      }
+    ],
+    "default": "assets/research/joseph-originals/viewpoint-jaw-outline-comparison-1536.webp",
+    "processing": "Format/resolution delivery only; no crop, retouch, recoloring or generated content. Exact reviewed PNG remains full-size source."
+  },
+  "assets/research/joseph-originals/adopted-blue-eye-study.png": {
+    "source_sha256": "75c235f7e7eb79a4cf4e51be94cf90fc7c4ab94e1ba0e17d5f3669654e8a39a6",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "asset": "assets/research/joseph-originals/adopted-blue-eye-study-640.webp",
+        "width": 640,
+        "height": 427,
+        "sha256": "ff18f426844d33410de403b681543ad1927d50ffe01bbe5ea2022f554ffb1ced",
+        "bytes": 39658,
+        "quality": 84
+      },
+      {
+        "asset": "assets/research/joseph-originals/adopted-blue-eye-study-960.webp",
+        "width": 960,
+        "height": 640,
+        "sha256": "af7553bab01d51f97d99c3c99b15e47b03a6f7e7b61b97364751e758632074ca",
+        "bytes": 77232,
+        "quality": 84
+      },
+      {
+        "asset": "assets/research/joseph-originals/adopted-blue-eye-study-1536.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "d16530f90e4e82e5cba74c73adc2d76220d49fdb8473a792646878e160c10250",
+        "bytes": 121768,
+        "quality": 80
+      }
+    ],
+    "default": "assets/research/joseph-originals/adopted-blue-eye-study-1536.webp",
+    "processing": "Format/resolution delivery only; no crop, retouch, recoloring or generated content. Exact reviewed PNG remains full-size source."
+  },
+  "assets/research/joseph-originals/adopted-hair-study.png": {
+    "source_sha256": "a5b0d48f59d2f7ddb185c947c2828e10d48baa0d8a63fa25b41c5b4d470912ac",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "asset": "assets/research/joseph-originals/adopted-hair-study-640.webp",
+        "width": 640,
+        "height": 427,
+        "sha256": "053d1c3e3964c73f935c2be55a5e176fe57556030fbf81d0041d01da194e80b6",
+        "bytes": 27020,
+        "quality": 84
+      },
+      {
+        "asset": "assets/research/joseph-originals/adopted-hair-study-960.webp",
+        "width": 960,
+        "height": 640,
+        "sha256": "0cb9390564002583bf84669d997f55028f86e39800229294ae4db9ec3e756a3e",
+        "bytes": 59110,
+        "quality": 84
+      },
+      {
+        "asset": "assets/research/joseph-originals/adopted-hair-study-1536.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "2631751da0a177e36250cf4780fe233b1af8097148bfaf5ec40d1910e01197cb",
+        "bytes": 101580,
+        "quality": 80
+      }
+    ],
+    "default": "assets/research/joseph-originals/adopted-hair-study-1536.webp",
+    "processing": "Format/resolution delivery only; no crop, retouch, recoloring or generated content. Exact reviewed PNG remains full-size source."
+  },
+  "assets/research/joseph-originals/profile-sitting-1842-retry.png": {
+    "source_sha256": "8e905ef175094e9d1db5a9e36940d7cc8af3091dcfbc54c87d3f6bc513ecc3ec",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "asset": "assets/research/joseph-originals/profile-sitting-1842-retry-640.webp",
+        "width": 640,
+        "height": 427,
+        "sha256": "454322f0f8b4760e8ecf7d3a966b3c7eb21199200cc543137ef9e8186c93e79b",
+        "bytes": 21652,
+        "quality": 84
+      },
+      {
+        "asset": "assets/research/joseph-originals/profile-sitting-1842-retry-960.webp",
+        "width": 960,
+        "height": 640,
+        "sha256": "47cecc5fe5b559e09fc53422dc23cb7f111cb492eafa1391fdd6a54e7ad6a36f",
+        "bytes": 45140,
+        "quality": 84
+      },
+      {
+        "asset": "assets/research/joseph-originals/profile-sitting-1842-retry-1536.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "8732e27804e7b3fffde224563a35038579600e791b1dc141fa9f793692240688",
+        "bytes": 98492,
+        "quality": 84
+      }
+    ],
+    "default": "assets/research/joseph-originals/profile-sitting-1842-retry-1536.webp",
+    "processing": "Format/resolution delivery only; no crop, retouch, recoloring or generated content. Exact reviewed PNG remains full-size source."
+  },
+  "assets/research/joseph-originals/quincy-stubble-study.png": {
+    "source_sha256": "8b3dfa5615a23d6a3f0d4cf2ec3c6324b7935f89e4ca331beaddc34981c71599",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "asset": "assets/research/joseph-originals/quincy-stubble-study-640.webp",
+        "width": 640,
+        "height": 427,
+        "sha256": "0b6796cffb2400e62ca48b9a6eb991f2a48944d568bf66186c36d3ff0cbea89e",
+        "bytes": 34118,
+        "quality": 84
+      },
+      {
+        "asset": "assets/research/joseph-originals/quincy-stubble-study-960.webp",
+        "width": 960,
+        "height": 640,
+        "sha256": "33e0bd4dca5cfc8bdf8f46b72b04f95da56af551226c5542bcbe0cb0e697daa8",
+        "bytes": 63992,
+        "quality": 84
+      },
+      {
+        "asset": "assets/research/joseph-originals/quincy-stubble-study-1536.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "94b92ef728c461ba084ca6413b471d4618ca9ac86b90c4c7acae6d1fdc398b0c",
+        "bytes": 104010,
+        "quality": 80
+      }
+    ],
+    "default": "assets/research/joseph-originals/quincy-stubble-study-1536.webp",
+    "processing": "Format/resolution delivery only; no crop, retouch, recoloring or generated content. Exact reviewed PNG remains full-size source."
+  },
+  "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-wardrobe-v2.png": {
+    "source_sha256": "61b714143419b5f0f4db7ca7cb3ace09fa36c3cca1299c21112c7eab92afddfa",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "asset": "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-wardrobe-v2-640.webp",
+        "width": 640,
+        "height": 427,
+        "sha256": "a6317641fd258c34a7e363f88183b334b05b523c93222b463401313cbec8ef3f",
+        "bytes": 45394,
+        "quality": 84
+      },
+      {
+        "asset": "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-wardrobe-v2-960.webp",
+        "width": 960,
+        "height": 640,
+        "sha256": "2105db146b61d910f3b083074e0af0f5032b2c1a0b4d217df41aeb59a862664b",
+        "bytes": 89772,
+        "quality": 84
+      },
+      {
+        "asset": "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-wardrobe-v2-1536.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "d89af507c6323f0e1133bda50a55a79850a8e51f7dc1cfe9b500849220aed41e",
+        "bytes": 112052,
+        "quality": 76
+      }
+    ],
+    "default": "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-wardrobe-v2-1536.webp",
+    "processing": "Format/resolution delivery only; no crop, retouch, recoloring or generated content. Exact reviewed PNG remains full-size source."
+  },
+  "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-wardrobe-v2.png": {
+    "source_sha256": "cf1b964c75b6a49536968eaf9a8d19186ce846262e0b9adcc86d053644ca9db6",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "asset": "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-wardrobe-v2-640.webp",
+        "width": 640,
+        "height": 427,
+        "sha256": "c38292920d00c45179988fbf4794014e7a1ec4369e688fb184a03d6cfa8bed28",
+        "bytes": 48788,
+        "quality": 84
+      },
+      {
+        "asset": "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-wardrobe-v2-960.webp",
+        "width": 960,
+        "height": 640,
+        "sha256": "87af96cb3ba6aa567e9e2d9a65470a99c536c0be99d3e10e80565436c9691695",
+        "bytes": 97348,
+        "quality": 84
+      },
+      {
+        "asset": "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-wardrobe-v2-1536.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "a1228b34eaa163fc8a42b85e027486983574d6169fae7cebd748d3b52b18183f",
+        "bytes": 127788,
+        "quality": 76
+      }
+    ],
+    "default": "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-wardrobe-v2-1536.webp",
+    "processing": "Format/resolution delivery only; no crop, retouch, recoloring or generated content. Exact reviewed PNG remains full-size source."
+  },
+  "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-wardrobe-v2.png": {
+    "source_sha256": "bb026ec8537b0a5f0b20e5f98db41c91336345356a0a3c11cd08b9d96e234972",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "asset": "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-wardrobe-v2-640.webp",
+        "width": 640,
+        "height": 427,
+        "sha256": "8f39c0faaa025a76fc1b45893434b9500084158cb6efdad21a1a1c1aa23d5240",
+        "bytes": 37004,
+        "quality": 84
+      },
+      {
+        "asset": "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-wardrobe-v2-960.webp",
+        "width": 960,
+        "height": 640,
+        "sha256": "d2b2c7eb22e5d872a2404d9e42049c25c4cd1a973ba2317de45f9743ecc06aca",
+        "bytes": 69286,
+        "quality": 84
+      },
+      {
+        "asset": "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-wardrobe-v2-1536.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "e8e4ed84cad4f66dc2200b6894969532d2b91a24055742988c9e1d88ca9d4282",
+        "bytes": 107516,
+        "quality": 80
+      }
+    ],
+    "default": "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-wardrobe-v2-1536.webp",
+    "processing": "Format/resolution delivery only; no crop, retouch, recoloring or generated content. Exact reviewed PNG remains full-size source."
+  },
+  "assets/page-art/joseph-smith-likeness/family/hyrum-reading-before-carthage-1844.png": {
+    "source_sha256": "b906c5c27cd36aa90b68fd1899355fe88c79fe53deb9c2b6ee571805cdb0ca83",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "asset": "assets/page-art/joseph-smith-likeness/family/hyrum-reading-before-carthage-1844-640.webp",
+        "width": 640,
+        "height": 427,
+        "sha256": "658b9f6b62d8e9960c50adb8fc7be6ed984ec4da54214af352520ec3cb0b48ae",
+        "bytes": 27790,
+        "quality": 84
+      },
+      {
+        "asset": "assets/page-art/joseph-smith-likeness/family/hyrum-reading-before-carthage-1844-960.webp",
+        "width": 960,
+        "height": 640,
+        "sha256": "e083f2727c42a5e5dc11023cf81214f85e4fd5d58ec2e1c7c469b8dfb98727b2",
+        "bytes": 52734,
+        "quality": 84
+      },
+      {
+        "asset": "assets/page-art/joseph-smith-likeness/family/hyrum-reading-before-carthage-1844-1536.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "5a623160774be608b1346a0c3d105ec3eaea7437f718df23b9052a74753a4e7f",
+        "bytes": 103428,
+        "quality": 84
+      }
+    ],
+    "default": "assets/page-art/joseph-smith-likeness/family/hyrum-reading-before-carthage-1844-1536.webp",
+    "processing": "Format/resolution delivery only; no crop, retouch, recoloring or generated content. Exact reviewed PNG remains full-size source."
+  },
+  "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-wardrobe-v2.png": {
+    "source_sha256": "72d6f3eb51f8d27570079ad43266f6058f1ca34c008295c201336f5ea810b7da",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "asset": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-wardrobe-v2-640.webp",
+        "width": 640,
+        "height": 427,
+        "sha256": "2345660aa74784329157cd87ea686edeeb99b5cd40d8de6d96e9f33ee6e94fc9",
+        "bytes": 26118,
+        "quality": 84
+      },
+      {
+        "asset": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-wardrobe-v2-960.webp",
+        "width": 960,
+        "height": 640,
+        "sha256": "24e387beaf1c3cb794aaa28032e4d394f1c99052c0582b690aded54704c719ee",
+        "bytes": 46926,
+        "quality": 84
+      },
+      {
+        "asset": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-wardrobe-v2-1536.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "a40fa6ad5a82fc58f11b8070953d8efbf1159c5ca6ff4d4c9b44256bcd2deef0",
+        "bytes": 87284,
+        "quality": 84
+      }
+    ],
+    "default": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-wardrobe-v2-1536.webp",
+    "processing": "Format/resolution delivery only; no crop, retouch, recoloring or generated content. Exact reviewed PNG remains full-size source."
+  },
+  "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-wardrobe-v2.png": {
+    "source_sha256": "12a9638ec8dda79b872c17350af964e7994e57f82ac25afc77df282f5fc12068",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "asset": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-wardrobe-v2-640.webp",
+        "width": 640,
+        "height": 427,
+        "sha256": "f2a1be9ed66f698d17abe121647f39e72050762cda81e4df6ec4ff5cb15a444e",
+        "bytes": 34720,
+        "quality": 84
+      },
+      {
+        "asset": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-wardrobe-v2-960.webp",
+        "width": 960,
+        "height": 640,
+        "sha256": "819276772094c45e4de93bbb4aa491120a9eea0e0c567fb8672628fcdca5a25b",
+        "bytes": 61808,
+        "quality": 84
+      },
+      {
+        "asset": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-wardrobe-v2-1536.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "ecdfe34ead7319e050f1ca2467e1d040c73a2733b053ee70bd485b8015370eac",
+        "bytes": 114690,
+        "quality": 84
+      }
+    ],
+    "default": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-wardrobe-v2-1536.webp",
+    "processing": "Format/resolution delivery only; no crop, retouch, recoloring or generated content. Exact reviewed PNG remains full-size source."
+  },
+  "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-wardrobe-v2.png": {
+    "source_sha256": "0440c07de9541b20fa23680d60932b742fc85665f651d7330ac511aaee299905",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "asset": "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-wardrobe-v2-640.webp",
+        "width": 640,
+        "height": 427,
+        "sha256": "b0f314f4d0194f9b5cd0770ace1e7598131b5b4da92d1a91698224e61fb0431b",
+        "bytes": 36086,
+        "quality": 84
+      },
+      {
+        "asset": "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-wardrobe-v2-960.webp",
+        "width": 960,
+        "height": 640,
+        "sha256": "498cfe2d43fdf8efd542a7324b4dbc36d707bd9b677af32481aec289b7bfcd1c",
+        "bytes": 65170,
+        "quality": 84
+      },
+      {
+        "asset": "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-wardrobe-v2-1536.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "2a7bc98869ea600a66b7c0f5c516038e99965da65fc17434f49264e46ec0eaa1",
+        "bytes": 103714,
+        "quality": 80
+      }
+    ],
+    "default": "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-wardrobe-v2-1536.webp",
+    "processing": "Format/resolution delivery only; no crop, retouch, recoloring or generated content. Exact reviewed PNG remains full-size source."
+  },
+  "assets/page-art/joseph-smith-likeness/family/joseph-household-labor-1828.png": {
+    "source_sha256": "7a9dce413b46985159df1b3bfb2fe9bba67cca4d640b7c1db774796bc4978036",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "asset": "assets/page-art/joseph-smith-likeness/family/joseph-household-labor-1828-640.webp",
+        "width": 640,
+        "height": 427,
+        "sha256": "6a1f23927cdd241b45e4dcb536a1f7d36eb7cd4e545d5a5a1678dac27bf00a86",
+        "bytes": 58190,
+        "quality": 84
+      },
+      {
+        "asset": "assets/page-art/joseph-smith-likeness/family/joseph-household-labor-1828-960.webp",
+        "width": 960,
+        "height": 640,
+        "sha256": "d241b38ddcec13c769234706f9154132ad4c5552171d3f9a2be543a6e686a962",
+        "bytes": 104960,
+        "quality": 84
+      },
+      {
+        "asset": "assets/page-art/joseph-smith-likeness/family/joseph-household-labor-1828-1536.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "2185b1b45e062c6a19c3b42958d916634743839ea978fae7766ccb5142dc7442",
+        "bytes": 142626,
+        "quality": 76
+      }
+    ],
+    "default": "assets/page-art/joseph-smith-likeness/family/joseph-household-labor-1828-1536.webp",
+    "processing": "Format/resolution delivery only; no crop, retouch, recoloring or generated content. Exact reviewed PNG remains full-size source."
+  },
+  "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-corrected-v2.png": {
+    "source_sha256": "1f5870584dcc4c83e83ee40957a3863ae00a076c8ae52997ea5bbe42b5cd4433",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "asset": "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-corrected-v2-640.webp",
+        "width": 640,
+        "height": 427,
+        "sha256": "032fbf6a241ea1020d305760c9523bd05930a5cb04b5961096a77c3c38696cbe",
+        "bytes": 48856,
+        "quality": 84
+      },
+      {
+        "asset": "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-corrected-v2-960.webp",
+        "width": 960,
+        "height": 640,
+        "sha256": "4e39828e27aa05e1c6e56c5404f3b79ec7135c995e5fcb3be71a4a98c307e914",
+        "bytes": 95838,
+        "quality": 84
+      },
+      {
+        "asset": "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-corrected-v2-1536.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "08e26d9c628d9fa68839c299ade5cc425904394d2fe2afe2e6213f22c667d11e",
+        "bytes": 123476,
+        "quality": 76
+      }
+    ],
+    "default": "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-corrected-v2-1536.webp",
+    "processing": "Format/resolution delivery only; no crop, retouch, recoloring or generated content. Exact reviewed PNG remains full-size source."
+  },
+  "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830.png": {
+    "source_sha256": "1140b40f93c00ce61ab60841b46b03b823485c84bd086818f9407200d7d6e68f",
+    "width": 1536,
+    "height": 1024,
+    "variants": [
+      {
+        "asset": "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-640.webp",
+        "width": 640,
+        "height": 427,
+        "sha256": "977bf8e43bb7363ad5d599e97231c6b05c237d087a58676b5a10de28450c0024",
+        "bytes": 35122,
+        "quality": 84
+      },
+      {
+        "asset": "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-960.webp",
+        "width": 960,
+        "height": 640,
+        "sha256": "edbef61be4a60e875c1686cd4c178d038e655ea47511be5ede0f95e4306f3598",
+        "bytes": 65926,
+        "quality": 84
+      },
+      {
+        "asset": "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-1536.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "159930b7c1e580ae4d1bff1eb36012e21ef560ba4d74955c358878678efabd8e",
+        "bytes": 104924,
+        "quality": 80
+      }
+    ],
+    "default": "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-1536.webp",
+    "processing": "Format/resolution delivery only; no crop, retouch, recoloring or generated content. Exact reviewed PNG remains full-size source."
+  }
+}

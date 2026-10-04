@@ -1,8 +1,8 @@
 {
-  "canonical_pages": 129,
+  "canonical_pages": 130,
   "selectors": {
     ".fc-study-visual-sources a:not(.fc-button--primary)": {
-      "count": 835,
+      "count": 1013,
       "pages": [
         "answers/aaronic-priesthood-restoration.html",
         "answers/abrahamic-covenant.html",
@@ -112,7 +112,8 @@
         "jesus-christ/restoration-and-today.html",
         "jesus-christ/risen-savior-in-the-book-of-mormon.html",
         "jesus-christ/teachings-and-parables.html",
-        "joseph-smith-likeness.html"
+        "joseph-smith-likeness.html",
+        "joseph-smith-portrait-research.html"
       ]
     },
     ".pioneer-source-links a:not(.fc-button--primary)": {

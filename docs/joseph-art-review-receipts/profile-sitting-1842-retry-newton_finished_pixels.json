@@ -1,0 +1,18 @@
+{
+  "reviewer": "Newton",
+  "id": "profile-sitting-1842-retry",
+  "source_review_id": "profile-sitting-1842-retry",
+  "prompt_sha256": "a7987c0ad0fd207b3dd5b1355ac9396fca1105e8cb24fe4c6592c878f701a04a",
+  "concur": true,
+  "source_receipt_path": "work\\newton\\hair-profile-finished-pixels.json",
+  "source_receipt_sha256": "86e350dfa70111ca88840c4c5ea4192c2fbc341a12b8692f209a350332738d2e",
+  "source_record": {
+    "id": "profile-sitting-1842-retry",
+    "sha256": "8e905ef175094e9d1db5a9e36940d7cc8af3091dcfbc54c87d3f6bc513ecc3ec",
+    "prompt_sha256": "a7987c0ad0fd207b3dd5b1355ac9396fca1105e8cb24fe4c6592c878f701a04a",
+    "concur": true,
+    "notes": "Improved nearprofile; fariris hidden, clear forehead/nose/lips/chin silhouette, recognizable approvedidentity. Plainboardedge and absentartist avoid prior drawing-surface conflict. Accept interpreted June1842sitting, not certified90degree pose or historicalsidegeometry. Room/clothes/apparatusremain inventedstaging."
+  },
+  "normalization": "Maps reviewed exact asset/prompt to final placement id; preserves explicit decision and full source record. Not a new review or broader approval.",
+  "sha256": "8e905ef175094e9d1db5a9e36940d7cc8af3091dcfbc54c87d3f6bc513ecc3ec"
+}

@@ -1,0 +1,26 @@
+{
+  "reviewer": "Newton",
+  "id": "hyrum-reading-before-carthage-1844",
+  "source_review_id": "hyrum-reading-before-carthage-1844",
+  "prompt_sha256": "f9d4708513ffbf5b6045bb7e0e4d54b5b588a32325a570f0a0f83be0cdffc971",
+  "concur": true,
+  "source_receipt_path": "work\\newton\\hyrum-reading-revised-preflight.json",
+  "source_receipt_sha256": "630fce7111c41476eb09ceece54fdbf8c822f035def5f386fe5ce9a86a8bbb6f",
+  "source_record": {
+    "reviewer": "Newton",
+    "id": "hyrum-reading-before-carthage-1844",
+    "prompt_sha256": "f9d4708513ffbf5b6045bb7e0e4d54b5b588a32325a570f0a0f83be0cdffc971",
+    "reference_sha256": [
+      "47b35f55b805ee0cc7c914cc1adb59273b2405402d4a50e284d0bb456bd9cb32",
+      "93cc6192e6b06a6bdba588e2585e38791977ae776cd0e3bb237f96ad9fe490ad"
+    ],
+    "concur": true,
+    "scope": "Revised exact preflight only; blue-eye sibling actually inspected, baseline anatomy preserved. Authorized iris correction is not promoted to new ownerapproved master.",
+    "source_checked": "D&C135:4-6 live; age44 and reading beforedeparture supported, noJune27prison claim. Room/bookbinding/pose interpretive; taskdirectedgaze and correcthands needed."
+  },
+  "normalization": "Final placement id mapped to exact prompt/final bytes; source decision preserved, no new broader concurrence.",
+  "reference_sha256": [
+    "47b35f55b805ee0cc7c914cc1adb59273b2405402d4a50e284d0bb456bd9cb32",
+    "93cc6192e6b06a6bdba588e2585e38791977ae776cd0e3bb237f96ad9fe490ad"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "reviewer": "Fermi",
+  "id": "hyrum-reading-before-carthage-1844",
+  "source_review_id": "hyrum-reading-before-carthage-1844",
+  "prompt_sha256": "f9d4708513ffbf5b6045bb7e0e4d54b5b588a32325a570f0a0f83be0cdffc971",
+  "concur": true,
+  "source_receipt_path": "work\\fermi\\main-family-prompts-v1.json",
+  "source_receipt_sha256": "dc314d208716de5f7fe02328a0e9e1ad3a01b04ef01b3caa3146d57035dc490c",
+  "source_record": {
+    "id": "hyrum-reading-before-carthage-1844",
+    "prompt": "Create one new ultra-realistic photographic historical illustration for the Joseph Smith family study. Use the supplied identity references in the stated order; the Hyrum blue-eye sibling is an explicitly authorized iris correction and reviewed local draft, while the unchanged baseline supplies his established facial structure. Keep each person recognizably themselves with separate facial structure, natural asymmetry, eye color, hair color and character; never blend the identities or substitute attractive generic actors. Adapt age gently to the stated event without reshaping identity. Preserve Emma's natural fuller figure and facial fullness; do not slim her. Real skin texture, natural human eyes, correct hands, physically believable daylight and fabric. No painterly finish, CGI, glamour lighting, beauty smoothing or modern objects. This newly made artwork interprets documented history; it is not a historical photograph, recovered source or record of the creation of the modern portraits. Exact clothing, room, pose and gestures are interpretive unless expressly specified. No text, watermark, readable invented manuscript or facsimile. Landscape 3:2 with recognizable faces and meaningful action. Reference 1 is the authorized blue-eye Hyrum sibling; reference 2 is the unchanged Hyrum baseline for facial structure only, not its superseded brown iris color. Both depict Hyrum, not Joseph. Show Hyrum at 44 in June 1844, on the morning of departure for Carthage, as a quiet interpretation of his reading near the close of Ether 12. Hyrum is the only person in view. Half-length scene at a modest table, head inclined enough to read an open small period bound book while his distinctive face remains clearly recognizable. His hand lightly holds the page edge, ready to mark his place; no exaggerated gesture or dramatized last words. Plain dark 1840s coat, waistcoat, white high collar and neckcloth. Soft early daylight, composed earnest expression, no glowing book, angel, prison bars, violence or readable generated scripture. Preserve Hyrum's authorized natural blue eyes, distinct nose, cheek structure, chin and wavy light-brown hair from the supplied approved reference; never substitute Joseph's eye shape or face. The book and room are plausible interpretations; the scene must not claim a particular original book binding or exact room has been reconstructed.",
+    "prompt_sha256": "f9d4708513ffbf5b6045bb7e0e4d54b5b588a32325a570f0a0f83be0cdffc971",
+    "actual_references": [
+      {
+        "person": "Hyrum authorized blue-eye sibling",
+        "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\joseph-smith-likeness\\hyrum-reconstruction-blue-eyes-20261003.png",
+        "sha256": "47b35f55b805ee0cc7c914cc1adb59273b2405402d4a50e284d0bb456bd9cb32"
+      },
+      {
+        "person": "Hyrum",
+        "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\joseph-smith-likeness\\hyrum-reconstruction.png",
+        "sha256": "93cc6192e6b06a6bdba588e2585e38791977ae776cd0e3bb237f96ad9fe490ad"
+      }
+    ],
+    "placement": "Main Joseph: Hyrum, scripture and shared witness",
+    "source": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/135?lang=eng",
+    "uncertainty": "D&C135:4-5 recounts Hyrum reading and marking Ether before departure. Specific day not supplied by this source alone, so caption June1844 before departure, not June27 prison reading. Joseph presence not asserted.",
+    "fermi_generation_only_concur": true,
+    "newton_concur": false,
+    "finished_review_required": true,
+    "superseded_prompt_sha256": "cc04c09ecf0b66e529270dc9e33f153d71d7f6bcf4439e81b687b2c50edc4494",
+    "identity_authority": "docs/hyrum-iris-local-draft-20261003.json plus root latest blue direction; no claim of newly owner-approved canonical master"
+  },
+  "normalization": "Final placement id mapped to exact prompt/final bytes; source decision preserved, no new broader concurrence.",
+  "reference_sha256": [
+    "47b35f55b805ee0cc7c914cc1adb59273b2405402d4a50e284d0bb456bd9cb32",
+    "93cc6192e6b06a6bdba588e2585e38791977ae776cd0e3bb237f96ad9fe490ad"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "reviewer": "Fermi",
+  "id": "painted-likeness-1842",
+  "source_review_id": "painted-likeness-1842",
+  "prompt_sha256": "410e24804022ac8b4e4da5d0955e3ebe162fa4afa1c2b7fe2655e99460cd61cb",
+  "concur": true,
+  "source_receipt_path": "work\\fermi\\selected-historical-preflight.json",
+  "source_receipt_sha256": "afc7b77d2e181218447c39f7a07e566fe9b8a8599bd31e0d89d0f35c11e6579e",
+  "source_record": {
+    "id": "painted-likeness-1842",
+    "prompt_sha256": "410e24804022ac8b4e4da5d0955e3ebe162fa4afa1c2b7fe2655e99460cd61cb",
+    "reference_sha256": [
+      "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+    ],
+    "concur": true,
+    "scope": "Exact prompt and actualreference preflight for generation ONLY; not final pixels, historical authentication or publication",
+    "reason": "Documented dated sitting/occasion; Joseph age and locked reference correct; unrecorded room,clothing/pose details bounded as interpretation; other named faces omitted; no original drawing/canvas invented",
+    "required_finished_review": [
+      "Recognizable approved Joseph identity with sceneappropriateage",
+      "Coherent eyes,gaze,anatomy,garmentdetails",
+      "No source-record fabrication or originalcreationclaim",
+      "Independent fullimage and facedetail review by Fermi/Newton before use"
+    ]
+  },
+  "normalization": "Maps reviewed exact asset/prompt to final placement id; preserves explicit decision and full source record. Not a new review or broader approval.",
+  "reference_sha256": [
+    "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+  ]
+}

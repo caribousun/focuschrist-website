@@ -121,6 +121,7 @@
     "jesus-christ/risen-savior-in-the-book-of-mormon.html",
     "jesus-christ/teachings-and-parables.html",
     "joseph-smith-likeness.html",
+    "joseph-smith-portrait-research.html",
     "missionary.html",
     "pioneers.html",
     "search.html",
@@ -969,7 +970,7 @@
       "reason": "Named existing section panel; shared Home-derived surface only."
     },
     "fc-study-panel": {
-      "count": 28,
+      "count": 38,
       "pages": [
         "answers/are-latter-day-saints-christian.html",
         "answers/bible-and-book-of-mormon-together.html",
@@ -982,12 +983,12 @@
         "answers/who-was-joseph-smith.html",
         "answers/why-families-are-important.html",
         "answers/why-latter-day-saints-build-temples.html",
-        "joseph-smith-likeness.html"
+        "joseph-smith-portrait-research.html"
       ],
       "tags": [
+        "a",
         "aside",
-        "div",
-        "nav"
+        "div"
       ],
       "disposition": "shared_surface",
       "reason": "Named existing section panel; shared Home-derived surface only."
@@ -1337,6 +1338,28 @@
       "disposition": "coordinated_stylesheet_owner",
       "reason": "jesus-journey.css owner applies shared panel tokens."
     },
+    "joseph-life-reflection": {
+      "count": 11,
+      "pages": [
+        "joseph-smith-likeness.html"
+      ],
+      "tags": [
+        "p"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Inline reflection paragraph in Joseph family narrative; a left reading accent only, not an enclosing panel. Page-owned typography and responsive review apply."
+    },
+    "joseph-life-source-note": {
+      "count": 1,
+      "pages": [
+        "joseph-smith-likeness.html"
+      ],
+      "tags": [
+        "p"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Inline provenance paragraph in the remembrance closing; no independent panel surface. Preserve reading flow and source context."
+    },
     "journal-card": {
       "count": 3,
       "pages": [
@@ -1479,6 +1502,28 @@
       ],
       "disposition": "shared_surface",
       "reason": "Named existing section panel; shared Home-derived surface only."
+    },
+    "research-comparison-note": {
+      "count": 3,
+      "pages": [
+        "joseph-smith-portrait-research.html"
+      ],
+      "tags": [
+        "div"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Inline limitations attached to separately labelled source views; plain reading note, not a section panel."
+    },
+    "research-source-note": {
+      "count": 2,
+      "pages": [
+        "joseph-smith-portrait-research.html"
+      ],
+      "tags": [
+        "p"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Bibliographic source qualification inside the research index; plain reading text."
     },
     "watch-index-note": {
       "count": 1,
@@ -1929,6 +1974,7 @@
         "jesus-christ/risen-savior-in-the-book-of-mormon.html",
         "jesus-christ/teachings-and-parables.html",
         "joseph-smith-likeness.html",
+        "joseph-smith-portrait-research.html",
         "missionary.html",
         "pioneers.html",
         "search.html",
@@ -2225,6 +2271,7 @@
         "jesus-christ/risen-savior-in-the-book-of-mormon.html",
         "jesus-christ/teachings-and-parables.html",
         "joseph-smith-likeness.html",
+        "joseph-smith-portrait-research.html",
         "missionary.html",
         "pioneers.html",
         "search.html",
@@ -2492,7 +2539,7 @@
         "answers/who-was-joseph-smith.html",
         "answers/why-families-are-important.html",
         "answers/why-latter-day-saints-build-temples.html",
-        "joseph-smith-likeness.html"
+        "joseph-smith-portrait-research.html"
       ],
       "disposition": "shared_surface"
     },
@@ -2669,6 +2716,7 @@
         "jesus-christ/risen-savior-in-the-book-of-mormon.html",
         "jesus-christ/teachings-and-parables.html",
         "joseph-smith-likeness.html",
+        "joseph-smith-portrait-research.html",
         "missionary.html",
         "pioneers.html",
         "search.html",
@@ -2890,6 +2938,15 @@
         "atonement.html"
       ],
       "disposition": "shared_surface"
+    },
+    "research-feature-study": {
+      "stylesheets": [
+        "joseph-smith-research.css"
+      ],
+      "pages": [
+        "joseph-smith-portrait-research.html"
+      ],
+      "disposition": "coordinated_stylesheet_owner"
     },
     "sources": {
       "stylesheets": [
@@ -3505,7 +3562,7 @@
       ]
     },
     ".fc-study-panel": {
-      "count": 28,
+      "count": 38,
       "pages": [
         "answers/are-latter-day-saints-christian.html",
         "answers/bible-and-book-of-mormon-together.html",
@@ -3518,12 +3575,12 @@
         "answers/who-was-joseph-smith.html",
         "answers/why-families-are-important.html",
         "answers/why-latter-day-saints-build-temples.html",
-        "joseph-smith-likeness.html"
+        "joseph-smith-portrait-research.html"
       ],
       "tags": [
+        "a",
         "aside",
-        "div",
-        "nav"
+        "div"
       ]
     },
     ".fc-voice-grid article": {

@@ -1,0 +1,17 @@
+{
+  "reviewer": "Fermi",
+  "id": "adopted-nose-study",
+  "source_review_id": null,
+  "prompt_sha256": "e1e9c4e9ebaf67f1d6cea722390ecd0d6691a9ee5b420525889dcae1b74cd0b9",
+  "concur": true,
+  "source_receipt_path": "work\\fermi\\eye-nose-mouth-finished-review.json",
+  "source_receipt_sha256": "4d8228f6985a4946a4ba2249709154b7ccfe926d16f1479970cd796142065754",
+  "source_record": {
+    "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-c5c820d8-a453-474c-a5d4-28fbfb58f090.png",
+    "sha256": "5e5a81c2733256451e82cd04b34caf90c175a38367c8908d26c83597fd087156",
+    "decision": "CONCUR_CENTRAL_FACE_USE",
+    "reason": "Nose bridge, tip, wings, eyes and mouth clearly readable; identity recognizable. Central-face illustration only, not measured cast correspondence."
+  },
+  "normalization": "Maps reviewed exact asset/prompt to final placement id; preserves explicit decision and full source record. Not a new review or broader approval.",
+  "sha256": "5e5a81c2733256451e82cd04b34caf90c175a38367c8908d26c83597fd087156"
+}

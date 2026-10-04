@@ -30,9 +30,14 @@ for file,keys in coverage.items():
   count+=1;r=sources[c['key']]
   inline_expected=r.get('inline_scripture_urls_by_page',{}).get(file,r.get('inline_scripture_urls',[]))
   reference_action=r.get('study_reference_action_url')
+  photograph_source=r.get('photograph_source_url')
+  if photograph_source:
+   assert c['key']=='joseph-hyrum-byu-4109-masks' and file=='joseph-smith-likeness.html' and photograph_source=='https://contentdm.lib.byu.edu/digital/collection/RelEd/id/4109/rec/5', 'Unreviewed photograph provenance link'
+
   if reference_action and (c['key'] not in {'settle-choice','settle-joseph'} or reference_action!=r['url'] or urlsplit(reference_action).scheme or not urlsplit(reference_action).fragment):errors.append(f'{file}: invalid owning-study action')
-  if len(c['images'])!=1 or len(c['links'])!=((3 if r.get('transcript_url') or reference_action else 2)+len(inline_expected)):errors.append(f'{file}: malformed resource card {c["key"]}');continue
+  if len(c['images'])!=1 or len(c['links'])!=((3 if r.get('transcript_url') or reference_action or photograph_source else 2)+len(inline_expected)):errors.append(f'{file}: malformed resource card {c["key"]}');continue
   expected_links=[r['url'],r['url']]+([r['transcript_url']] if r.get('transcript_url') else [reference_action] if reference_action else [])
+  if photograph_source:expected_links=[r['url'],photograph_source,r['url']]
   inline_links=[a for a in c['links'] if 'fc-inline-scripture' in a.get('class','').split()]
   if [a.get('href') for a in inline_links]!=inline_expected:errors.append(f'{file}: unreviewed inline scripture')
   if [a.get('href') for a in c['links'] if a not in inline_links]!=expected_links:errors.append(f'{file}: mismatched source {c["key"]}')

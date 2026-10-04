@@ -121,6 +121,7 @@
     "/jesus-christ/risen-savior-in-the-book-of-mormon.html",
     "/jesus-christ/teachings-and-parables.html",
     "/joseph-smith-likeness.html",
+    "/joseph-smith-portrait-research.html",
     "/missionary.html",
     "/pioneers.html",
     "/search.html",
@@ -1232,6 +1233,28 @@
       ]
     },
     {
+      "title": "A memoir published in 1874",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/research/joseph-documents/pratt-1874-p47.png",
+      "fullImage": "/assets/research/joseph-documents/pratt-1874-p47.png",
+      "alt": "Parley P. Pratt, Autobiography, 1874, printed p. 47. Retrospective memoir; this is the published book page, not a contemporary diary.",
+      "id": "art-2c5e3576f618",
+      "occurrences": [
+        {
+          "id": "source-a35d69af221a",
+          "page": "/joseph-smith-portrait-research.html",
+          "pageTitle": "The evidence behind our Joseph",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/research/joseph-documents/pratt-1874-p47.png\"]:has(img[src=\"assets/research/joseph-documents/pratt-1874-p47.png\"])",
+          "title": "Pratt 1874 P47"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "A message of trust",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/mc-centurion-friends--753ff85a36c0-thumb.webp",
@@ -1674,6 +1697,28 @@
       ]
     },
     {
+      "title": "A profile offers a different view",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/research/joseph-originals/profile-sitting-1842-retry-1536.webp",
+      "fullImage": "/assets/research/joseph-originals/profile-sitting-1842-retry.png",
+      "alt": "A profile offers a different view — newly made interpretive Joseph artwork",
+      "id": "art-6150b8a0f745",
+      "occurrences": [
+        {
+          "id": "source-62c141af0aa1",
+          "page": "/joseph-smith-portrait-research.html",
+          "pageTitle": "The evidence behind our Joseph",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/research/joseph-originals/profile-sitting-1842-retry.png\"]:has(img[src=\"assets/research/joseph-originals/profile-sitting-1842-retry-1536.webp\"])",
+          "title": "A profile offers a different view"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "A promise at Haran",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/abrahamic-covenant/ac-jehovah-haran-960.webp",
@@ -2048,6 +2093,50 @@
       ]
     },
     {
+      "title": "A small gift amid demanding work",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-wardrobe-v2-1536.webp",
+      "fullImage": "/assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-wardrobe-v2.png",
+      "alt": "Joseph offers a small comb to Emma, who looks toward the gift, both wearing earthy period clothing",
+      "id": "art-30da387593ee",
+      "occurrences": [
+        {
+          "id": "source-379db927a746",
+          "page": "/joseph-smith-likeness.html",
+          "pageTitle": "The Face Behind the History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-wardrobe-v2.png\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-wardrobe-v2-1536.webp\"])",
+          "title": "A small gift amid demanding work"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
+      "title": "A small smile changes the face",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/research/joseph-originals/expression-mouth-cheek-comparison-1536.webp",
+      "fullImage": "/assets/research/joseph-originals/expression-mouth-cheek-comparison.png",
+      "alt": "A small smile changes the face — newly made interpretive Joseph artwork",
+      "id": "art-349f01313597",
+      "occurrences": [
+        {
+          "id": "source-4b8ba31230b8",
+          "page": "/joseph-smith-portrait-research.html",
+          "pageTitle": "The evidence behind our Joseph",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/research/joseph-originals/expression-mouth-cheek-comparison.png\"]:has(img[src=\"assets/research/joseph-originals/expression-mouth-cheek-comparison-1536.webp\"])",
+          "title": "A small smile changes the face"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "A society ready to serve",
       "category": "Church History",
       "thumbnail": "/assets/page-art/church-history/relief-society-960.webp",
@@ -2129,6 +2218,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/strong-man-01-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/strong-man-01-960.webp\"])",
           "title": "A strong man guards his house"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "A sweep made from individual strands",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/research/joseph-originals/adopted-hair-study-1536.webp",
+      "fullImage": "/assets/research/joseph-originals/adopted-hair-study.png",
+      "alt": "A sweep made from individual strands — newly made interpretive Joseph artwork",
+      "id": "art-ccfbb3c53c70",
+      "occurrences": [
+        {
+          "id": "source-c389304a1329",
+          "page": "/joseph-smith-portrait-research.html",
+          "pageTitle": "The evidence behind our Joseph",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/research/joseph-originals/adopted-hair-study.png\"]:has(img[src=\"assets/research/joseph-originals/adopted-hair-study-1536.webp\"])",
+          "title": "A sweep made from individual strands"
         }
       ],
       "categories": [
@@ -2283,6 +2394,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/04-nephi-sees-healing-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/04-nephi-sees-healing-960.webp\"])",
           "title": "A vision of the Savior’s compassion"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "A visit does not freeze a lifetime of grooming",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/research/joseph-originals/quincy-stubble-study-1536.webp",
+      "fullImage": "/assets/research/joseph-originals/quincy-stubble-study.png",
+      "alt": "A visit does not freeze a lifetime of grooming — newly made interpretive Joseph artwork",
+      "id": "art-de3ed6e3981b",
+      "occurrences": [
+        {
+          "id": "source-d2862608f84a",
+          "page": "/joseph-smith-portrait-research.html",
+          "pageTitle": "The evidence behind our Joseph",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/research/joseph-originals/quincy-stubble-study.png\"]:has(img[src=\"assets/research/joseph-originals/quincy-stubble-study-1536.webp\"])",
+          "title": "A visit does not freeze a lifetime of grooming"
         }
       ],
       "categories": [
@@ -2563,6 +2696,28 @@
       ]
     },
     {
+      "title": "Above the mouth and within the lips",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/research/joseph-originals/adopted-mouth-study-1536.webp",
+      "fullImage": "/assets/research/joseph-originals/adopted-mouth-study.png",
+      "alt": "Above the mouth and within the lips in a new illustration using our adopted Joseph likeness",
+      "id": "art-850b1c465cda",
+      "occurrences": [
+        {
+          "id": "source-8d77f50f8b97",
+          "page": "/joseph-smith-portrait-research.html",
+          "pageTitle": "The evidence behind our Joseph",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/research/joseph-originals/adopted-mouth-study.png\"]:has(img[src=\"assets/research/joseph-originals/adopted-mouth-study-1536.webp\"])",
+          "title": "Above the mouth and within the lips"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Abraham seeks what his fathers knew",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/heavenly-father/abraham-records-800.webp",
@@ -2754,6 +2909,50 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/temples/temple-covenant-altars-full.webp\"]:has(img[src=\"../assets/page-art/temples/temple-covenant-altars-960.webp\"])",
           "title": "Altars along the covenant journey"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "An 1842 engraving after Maudsley",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/research/joseph-documents/pelton-after-maudsley-1842.jpg",
+      "fullImage": "/assets/research/joseph-documents/pelton-after-maudsley-1842.jpg",
+      "alt": "Upper-bust detail of Oliver Pelton’s engraved right-facing profile of Joseph Smith in uniform, after Maudsley",
+      "id": "art-21451d4168b9",
+      "occurrences": [
+        {
+          "id": "source-defb77a295f1",
+          "page": "/joseph-smith-portrait-research.html",
+          "pageTitle": "The evidence behind our Joseph",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/research/joseph-documents/pelton-after-maudsley-1842.jpg\"]:has(img[src=\"assets/research/joseph-documents/pelton-after-maudsley-1842.jpg\"])",
+          "title": "An 1842 engraving after Maudsley"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "An 1843-dated letter, printed in 1890",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/research/joseph-documents/haven-1890-p621.png",
+      "fullImage": "/assets/research/joseph-documents/haven-1890-p621.png",
+      "alt": "Charlotte Haven, A Girl’s Letters from Nauvoo, published December 1890, printed p. 621. The letter is dated January 1843; its autograph and editorial transmission have not been inspected.",
+      "id": "art-6219b467b948",
+      "occurrences": [
+        {
+          "id": "source-fb6253750d8e",
+          "page": "/joseph-smith-portrait-research.html",
+          "pageTitle": "The evidence behind our Joseph",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/research/joseph-documents/haven-1890-p621.png\"]:has(img[src=\"assets/research/joseph-documents/haven-1890-p621.png\"])",
+          "title": "Haven 1890 P621"
         }
       ],
       "categories": [
@@ -3064,6 +3263,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/history-stories/miller-millstream-baptism-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/miller-millstream-baptism-960.webp\"])",
           "title": "An outward covenant in April 1832"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "An oval described in a later transcription",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/research/joseph-documents/gazette-transmission-1916-p101.png",
+      "fullImage": "/assets/research/joseph-documents/gazette-transmission-1916-p101.png",
+      "alt": "An oval described in a later transcription — The Birth of Mormonism, 1916, appendix C, printed p. 101. This later book attributes the description to an April 1844 letter printed in the Saint Louis Weekly Gazette; the original newspaper issue remains unverified.",
+      "id": "art-6d8e011fc13a",
+      "occurrences": [
+        {
+          "id": "source-d799fc387f08",
+          "page": "/joseph-smith-portrait-research.html",
+          "pageTitle": "The evidence behind our Joseph",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/research/joseph-documents/gazette-transmission-1916-p101.png\"]:has(img[src=\"assets/research/joseph-documents/gazette-transmission-1916-p101.png\"])",
+          "title": "Gazette Transmission 1916 P101"
         }
       ],
       "categories": [
@@ -4051,6 +4272,28 @@
       ]
     },
     {
+      "title": "Breadth from the front, projection from the side",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/research/joseph-originals/viewpoint-jaw-outline-comparison-1536.webp",
+      "fullImage": "/assets/research/joseph-originals/viewpoint-jaw-outline-comparison.png",
+      "alt": "Breadth from the front, projection from the side — newly made interpretive Joseph artwork",
+      "id": "art-30ad40dc1b1f",
+      "occurrences": [
+        {
+          "id": "source-20dd5e1ae756",
+          "page": "/joseph-smith-portrait-research.html",
+          "pageTitle": "The evidence behind our Joseph",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/research/joseph-originals/viewpoint-jaw-outline-comparison.png\"]:has(img[src=\"assets/research/joseph-originals/viewpoint-jaw-outline-comparison-1536.webp\"])",
+          "title": "Breadth from the front, projection from the side"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Breakfast on the Shore",
       "category": "Art & Study",
       "thumbnail": "/assets/page-art/art-study/thumbs/living-breakfast-shore-20260919.webp",
@@ -4070,6 +4313,28 @@
       ],
       "categories": [
         "Art & Study"
+      ]
+    },
+    {
+      "title": "Bridge, tip and breadth",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/research/joseph-originals/adopted-nose-study-1536.webp",
+      "fullImage": "/assets/research/joseph-originals/adopted-nose-study.png",
+      "alt": "Bridge, tip and breadth in a new illustration using our adopted Joseph likeness",
+      "id": "art-7ba5dad8af89",
+      "occurrences": [
+        {
+          "id": "source-687241fede6c",
+          "page": "/joseph-smith-portrait-research.html",
+          "pageTitle": "The evidence behind our Joseph",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/research/joseph-originals/adopted-nose-study.png\"]:has(img[src=\"assets/research/joseph-originals/adopted-nose-study-1536.webp\"])",
+          "title": "Bridge, tip and breadth"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -5040,6 +5305,28 @@
       ],
       "categories": [
         "General Conference"
+      ]
+    },
+    {
+      "title": "Choosing a life together",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-wardrobe-v2-1536.webp",
+      "fullImage": "/assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-wardrobe-v2.png",
+      "alt": "Young Joseph and Emma pose together with joined hands in brown winter clothing",
+      "id": "art-c2a7f9036414",
+      "occurrences": [
+        {
+          "id": "source-26f7b2d3b65e",
+          "page": "/joseph-smith-likeness.html",
+          "pageTitle": "The Face Behind the History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-wardrobe-v2.png\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-wardrobe-v2-1536.webp\"])",
+          "title": "Choosing a life together"
+        }
+      ],
+      "categories": [
+        "Church History"
       ]
     },
     {
@@ -6409,6 +6696,28 @@
       ]
     },
     {
+      "title": "Emma’s work as a scribe",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-wardrobe-v2-1536.webp",
+      "fullImage": "/assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-wardrobe-v2.png",
+      "alt": "Emma in a printed cotton dress writes with a quill while Joseph sits nearby",
+      "id": "art-d117f116ef39",
+      "occurrences": [
+        {
+          "id": "source-a194e18d7c3d",
+          "page": "/joseph-smith-likeness.html",
+          "pageTitle": "The Face Behind the History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-wardrobe-v2.png\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-wardrobe-v2-1536.webp\"])",
+          "title": "Emma’s work as a scribe"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
       "title": "Encircled as if by fire",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/bn-fire-disciples-960.webp",
@@ -7286,6 +7595,72 @@
       ],
       "categories": [
         "Art & Study"
+      ]
+    },
+    {
+      "title": "Gazette Transmission 1916 Date",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/research/joseph-documents/gazette-transmission-1916-date.png",
+      "fullImage": "/assets/research/joseph-documents/gazette-transmission-1916-date.png",
+      "alt": "Publication statement dated 1916 in The Birth of Mormonism. The original Gazette issue has not been verified; this date belongs to the later transmission.",
+      "id": "art-fc31593cbe08",
+      "occurrences": [
+        {
+          "id": "source-475963de7149",
+          "page": "/joseph-smith-portrait-research.html",
+          "pageTitle": "The evidence behind our Joseph",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/research/joseph-documents/gazette-transmission-1916-date.png\"]:has(img[src=\"assets/research/joseph-documents/gazette-transmission-1916-date.png\"])",
+          "title": "Gazette Transmission 1916 Date"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Gazette Transmission 1916 P103",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/research/joseph-documents/gazette-transmission-1916-p103.png",
+      "fullImage": "/assets/research/joseph-documents/gazette-transmission-1916-p103.png",
+      "alt": "The Birth of Mormonism, 1916, appendix C, printed p. 103. This later book attributes the description to an April 1844 letter printed in the Saint Louis Weekly Gazette; the original newspaper issue remains unverified.",
+      "id": "art-6d76efca4967",
+      "occurrences": [
+        {
+          "id": "source-097be0b40e1b",
+          "page": "/joseph-smith-portrait-research.html",
+          "pageTitle": "The evidence behind our Joseph",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/research/joseph-documents/gazette-transmission-1916-p103.png\"]:has(img[src=\"assets/research/joseph-documents/gazette-transmission-1916-p103.png\"])",
+          "title": "Gazette Transmission 1916 P103"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Gazette Transmission Book Title",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/research/joseph-documents/gazette-transmission-book-title.png",
+      "fullImage": "/assets/research/joseph-documents/gazette-transmission-book-title.png",
+      "alt": "Title page of The Birth of Mormonism, by John Quincy Adams. This is the later book transmitting the Gazette description, not the original newspaper.",
+      "id": "art-73405205c5c9",
+      "occurrences": [
+        {
+          "id": "source-6868b4a1c154",
+          "page": "/joseph-smith-portrait-research.html",
+          "pageTitle": "The evidence behind our Joseph",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/research/joseph-documents/gazette-transmission-book-title.png\"]:has(img[src=\"assets/research/joseph-documents/gazette-transmission-book-title.png\"])",
+          "title": "Gazette Transmission Book Title"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -8763,6 +9138,28 @@
       ]
     },
     {
+      "title": "Hyrum reflects beside scripture",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/joseph-smith-likeness/family/hyrum-reading-before-carthage-1844-1536.webp",
+      "fullImage": "/assets/page-art/joseph-smith-likeness/family/hyrum-reading-before-carthage-1844.png",
+      "alt": "Hyrum Smith pausing reflectively beside an open book",
+      "id": "art-beff1a7c0a81",
+      "occurrences": [
+        {
+          "id": "source-97473cb6a802",
+          "page": "/joseph-smith-likeness.html",
+          "pageTitle": "The Face Behind the History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/joseph-smith-likeness/family/hyrum-reading-before-carthage-1844.png\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/family/hyrum-reading-before-carthage-1844-1536.webp\"])",
+          "title": "Hyrum reflects beside scripture"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
       "title": "Hyrum: an artistic reconstruction",
       "category": "Church History",
       "thumbnail": "/assets/page-art/joseph-smith-likeness/hyrum-reconstruction-blue-eyes-20261003.png",
@@ -8778,28 +9175,6 @@
           "kind": "topic",
           "selector": "a[href=\"assets/page-art/joseph-smith-likeness/hyrum-reconstruction-blue-eyes-20261003.png\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/hyrum-reconstruction-blue-eyes-20261003.png\"])",
           "title": "Hyrum: an artistic reconstruction"
-        }
-      ],
-      "categories": [
-        "Church History"
-      ]
-    },
-    {
-      "title": "Hyrum: the historical cast",
-      "category": "Church History",
-      "thumbnail": "/assets/page-art/joseph-smith-likeness/hyrum-death-mask.jpg",
-      "fullImage": "/assets/page-art/joseph-smith-likeness/hyrum-death-mask.jpg",
-      "alt": "Frontal museum photograph of Hyrum Smith’s Dibble death mask",
-      "id": "art-ff71d6d35e67",
-      "occurrences": [
-        {
-          "id": "source-6d3c0adaeffc",
-          "page": "/joseph-smith-likeness.html",
-          "pageTitle": "The Face Behind the History",
-          "category": "Church History",
-          "kind": "topic",
-          "selector": "a[href=\"assets/page-art/joseph-smith-likeness/hyrum-death-mask.jpg\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/hyrum-death-mask.jpg\"])",
-          "title": "Hyrum: the historical cast"
         }
       ],
       "categories": [
@@ -9907,6 +10282,38 @@
       ]
     },
     {
+      "title": "Joseph: detail of the historical cast",
+      "category": "Church History",
+      "thumbnail": "/assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
+      "fullImage": "/assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
+      "alt": "Complete BYU photograph: Joseph’s death mask at left, Hyrum’s at right",
+      "id": "art-76cbb00c0a26",
+      "occurrences": [
+        {
+          "id": "source-076b52365f45",
+          "page": "/joseph-smith-likeness.html",
+          "pageTitle": "The Face Behind the History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg\"]:has(img[src=\"assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg\"])",
+          "title": "Hyrum: detail of the historical cast"
+        },
+        {
+          "id": "source-41fd2b525dfd",
+          "page": "/joseph-smith-portrait-research.html",
+          "pageTitle": "The evidence behind our Joseph",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg\"]:has(img[src=\"assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg\"])",
+          "title": "The documented reference roles"
+        }
+      ],
+      "categories": [
+        "Church History",
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Joseph: our adopted portrait",
       "category": "Church History",
       "thumbnail": "/assets/identities/joseph-smith-owner-approved-20260914.png",
@@ -9924,6 +10331,15 @@
           "title": "Joseph: our adopted portrait"
         },
         {
+          "id": "source-4380955b7da6",
+          "page": "/joseph-smith-portrait-research.html",
+          "pageTitle": "The evidence behind our Joseph",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/identities/joseph-smith-owner-approved-20260914.png\"]:has(img[src=\"assets/identities/joseph-smith-owner-approved-20260914.png\"])",
+          "title": "The living features the cast cannot supply"
+        },
+        {
           "id": "source-b11affe42eb8",
           "page": "/joseph-smith-likeness.html",
           "pageTitle": "The Face Behind the History",
@@ -9934,29 +10350,8 @@
         }
       ],
       "categories": [
-        "Church History"
-      ]
-    },
-    {
-      "title": "Joseph: the historical cast",
-      "category": "Church History",
-      "thumbnail": "/assets/page-art/joseph-smith-likeness/joseph-death-mask.jpg",
-      "fullImage": "/assets/page-art/joseph-smith-likeness/joseph-death-mask.jpg",
-      "alt": "Frontal museum photograph of Joseph Smith’s Dibble death mask",
-      "id": "art-99a0288641e3",
-      "occurrences": [
-        {
-          "id": "source-31eef5f57374",
-          "page": "/joseph-smith-likeness.html",
-          "pageTitle": "The Face Behind the History",
-          "category": "Church History",
-          "kind": "topic",
-          "selector": "a[href=\"assets/page-art/joseph-smith-likeness/joseph-death-mask.jpg\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/joseph-death-mask.jpg\"])",
-          "title": "Joseph: the historical cast"
-        }
-      ],
-      "categories": [
-        "Church History"
+        "Church History",
+        "Gospel Studies"
       ]
     },
     {
@@ -11106,6 +11501,28 @@
       ]
     },
     {
+      "title": "Light changes what seems prominent",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/research/joseph-originals/light-and-nose-relief-comparison-1536.webp",
+      "fullImage": "/assets/research/joseph-originals/light-and-nose-relief-comparison.png",
+      "alt": "Light changes what seems prominent — newly made interpretive Joseph artwork",
+      "id": "art-f9bb6f457c23",
+      "occurrences": [
+        {
+          "id": "source-9cd25afaef76",
+          "page": "/joseph-smith-portrait-research.html",
+          "pageTitle": "The evidence behind our Joseph",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/research/joseph-originals/light-and-nose-relief-comparison.png\"]:has(img[src=\"assets/research/joseph-originals/light-and-nose-relief-comparison-1536.webp\"])",
+          "title": "Light changes what seems prominent"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Light in the Grove",
       "category": "Church History",
       "thumbnail": "/assets/heroes/church-history.webp",
@@ -11592,6 +12009,28 @@
       ]
     },
     {
+      "title": "Love carried across separation",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-wardrobe-v2-1536.webp",
+      "fullImage": "/assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-wardrobe-v2.png",
+      "alt": "Emma in a burgundy dress and shawl reads a folded family letter",
+      "id": "art-71d0e77d29ca",
+      "occurrences": [
+        {
+          "id": "source-da7f40420ae1",
+          "page": "/joseph-smith-likeness.html",
+          "pageTitle": "The Face Behind the History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-wardrobe-v2.png\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-wardrobe-v2-1536.webp\"])",
+          "title": "Love carried across separation"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
       "title": "Make a Joyful Noise Unto God",
       "category": "Art & Study",
       "thumbnail": "/art/thumbs/new/make-a-joyful-noise-unto-god-psalm-66-1-2.webp",
@@ -11721,6 +12160,28 @@
       ],
       "categories": [
         "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Making a new home",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-corrected-v2-1536.webp",
+      "fullImage": "/assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-corrected-v2.png",
+      "alt": "Joseph attends to driving the wagon while Emma looks along their direction of travel, wearing winter layers and a bonnet",
+      "id": "art-b0d390116e40",
+      "occurrences": [
+        {
+          "id": "source-2f81e0227676",
+          "page": "/joseph-smith-likeness.html",
+          "pageTitle": "The Face Behind the History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-corrected-v2.png\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-corrected-v2-1536.webp\"])",
+          "title": "Making a new home"
+        }
+      ],
+      "categories": [
+        "Church History"
       ]
     },
     {
@@ -13418,6 +13879,28 @@
       ]
     },
     {
+      "title": "Praying together through uncertainty",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-1536.webp",
+      "fullImage": "/assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830.png",
+      "alt": "Emma kneels in prayer beside a chair, with another woman partly visible behind her",
+      "id": "art-e3bea40c689d",
+      "occurrences": [
+        {
+          "id": "source-6a72d9b5ad75",
+          "page": "/joseph-smith-likeness.html",
+          "pageTitle": "The Face Behind the History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830.png\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-1536.webp\"])",
+          "title": "Praying together through uncertainty"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
       "title": "Prepare a week of study",
       "category": "Come, Follow Me",
       "thumbnail": "/assets/page-art/uniqueness-repairs/cfm-weekly-preparation-960.webp",
@@ -13851,6 +14334,28 @@
           "kind": "artwork",
           "selector": "a[data-artwork-detail=\"answers-quiet-prayer\"]",
           "title": "Quiet Prayer"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Quincy remembers the visit",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/research/joseph-documents/quincy-1883-p380.png",
+      "fullImage": "/assets/research/joseph-documents/quincy-1883-p380.png",
+      "alt": "Josiah Quincy, Figures of the Past, 1883, printed p. 380. A later memoir, distinct from his May 1844 letter.",
+      "id": "art-43ece46ddea9",
+      "occurrences": [
+        {
+          "id": "source-a2537242a2c0",
+          "page": "/joseph-smith-portrait-research.html",
+          "pageTitle": "The evidence behind our Joseph",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/research/joseph-documents/quincy-1883-p380.png\"]:has(img[src=\"assets/research/joseph-documents/quincy-1883-p380.png\"])",
+          "title": "Quincy 1883 P380"
         }
       ],
       "categories": [
@@ -15275,6 +15780,28 @@
       ]
     },
     {
+      "title": "Seeking out those in need",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-wardrobe-v2-1536.webp",
+      "fullImage": "/assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-wardrobe-v2.png",
+      "alt": "Emma in a deep green day dress speaks earnestly to seated women",
+      "id": "art-89e864cd34e4",
+      "occurrences": [
+        {
+          "id": "source-0925d1d88c22",
+          "page": "/joseph-smith-likeness.html",
+          "pageTitle": "The Face Behind the History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-wardrobe-v2.png\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-wardrobe-v2-1536.webp\"])",
+          "title": "Seeking out those in need"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
       "title": "Seeking the Lord’s direction",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/priesthood-history/original-kimball-study.png",
@@ -15605,6 +16132,28 @@
       ]
     },
     {
+      "title": "Sitting for a painted likeness",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/research/joseph-originals/painted-likeness-1842-1536.webp",
+      "fullImage": "/assets/research/joseph-originals/painted-likeness-1842.png",
+      "alt": "Sitting for a painted likeness in a new illustration using our adopted Joseph likeness",
+      "id": "art-a897b0073c33",
+      "occurrences": [
+        {
+          "id": "source-481991229c80",
+          "page": "/joseph-smith-portrait-research.html",
+          "pageTitle": "The evidence behind our Joseph",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/research/joseph-originals/painted-likeness-1842.png\"]:has(img[src=\"assets/research/joseph-originals/painted-likeness-1842-1536.webp\"])",
+          "title": "Sitting for a painted likeness"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Sitting in the light",
       "category": "Church History",
       "thumbnail": "/assets/page-art/joseph-smith-likeness/portrait-sitting-960.webp",
@@ -15756,6 +16305,28 @@
       ],
       "categories": [
         "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Staying close in sorrow",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-wardrobe-v2-1536.webp",
+      "fullImage": "/assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-wardrobe-v2.png",
+      "alt": "Joseph in a brown waistcoat supports Emma’s hand as she rests in light recovery clothing; they look tenderly toward one another",
+      "id": "art-8626a0013555",
+      "occurrences": [
+        {
+          "id": "source-caa4d4f72aa6",
+          "page": "/joseph-smith-likeness.html",
+          "pageTitle": "The Face Behind the History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-wardrobe-v2.png\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-wardrobe-v2-1536.webp\"])",
+          "title": "Staying close in sorrow"
+        }
+      ],
+      "categories": [
+        "Church History"
       ]
     },
     {
@@ -17229,6 +17800,28 @@
       ]
     },
     {
+      "title": "The letter and the later book",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/research/joseph-documents/quincy-1883-title.png",
+      "fullImage": "/assets/research/joseph-documents/quincy-1883-title.png",
+      "alt": "Title page of Josiah Quincy’s Figures of the Past, 1883. Publication date distinguishes this memoir from his 1844 letter. The contemporary letter discussed alongside it is a separate source; this title page cannot stand in for that letter.",
+      "id": "art-d8491760c2a3",
+      "occurrences": [
+        {
+          "id": "source-0eb1bf651411",
+          "page": "/joseph-smith-portrait-research.html",
+          "pageTitle": "The evidence behind our Joseph",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/research/joseph-documents/quincy-1883-title.png\"]:has(img[src=\"assets/research/joseph-documents/quincy-1883-title.png\"])",
+          "title": "Quincy 1883 Title"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "The Living Christ",
       "category": "Art & Study",
       "thumbnail": "/assets/page-art/uniqueness-repairs/art-living-testimony-card-960.webp",
@@ -17270,6 +17863,28 @@
       ],
       "categories": [
         "Art & Study"
+      ]
+    },
+    {
+      "title": "The living color the cast cannot retain",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/research/joseph-originals/adopted-blue-eye-study-1536.webp",
+      "fullImage": "/assets/research/joseph-originals/adopted-blue-eye-study.png",
+      "alt": "The living color the cast cannot retain — newly made interpretive Joseph artwork",
+      "id": "art-970ee3150685",
+      "occurrences": [
+        {
+          "id": "source-3184d995ca8b",
+          "page": "/joseph-smith-portrait-research.html",
+          "pageTitle": "The evidence behind our Joseph",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/research/joseph-originals/adopted-blue-eye-study.png\"]:has(img[src=\"assets/research/joseph-originals/adopted-blue-eye-study-1536.webp\"])",
+          "title": "The living color the cast cannot retain"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -18366,6 +18981,28 @@
           "kind": "topic",
           "selector": "a[href=\"assets/page-art/atonement/empty-tomb.webp\"]:has(img[src=\"assets/page-art/atonement/empty-tomb-960.webp\"])",
           "title": "The tomb was empty"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "The transmitted lip description",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/research/joseph-documents/gazette-transmission-1916-p102.png",
+      "fullImage": "/assets/research/joseph-documents/gazette-transmission-1916-p102.png",
+      "alt": "The transmitted lip description — The Birth of Mormonism, 1916, appendix C, printed p. 102. This later book attributes the description to an April 1844 letter printed in the Saint Louis Weekly Gazette; the original newspaper issue remains unverified.",
+      "id": "art-dd8bfa3c8c41",
+      "occurrences": [
+        {
+          "id": "source-f93a5c8bdd15",
+          "page": "/joseph-smith-portrait-research.html",
+          "pageTitle": "The evidence behind our Joseph",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/research/joseph-documents/gazette-transmission-1916-p102.png\"]:has(img[src=\"assets/research/joseph-documents/gazette-transmission-1916-p102.png\"])",
+          "title": "Gazette Transmission 1916 P102"
         }
       ],
       "categories": [
@@ -19702,6 +20339,28 @@
       ]
     },
     {
+      "title": "Where the later book gives its attribution",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/research/joseph-documents/gazette-transmission-1916-p100.png",
+      "fullImage": "/assets/research/joseph-documents/gazette-transmission-1916-p100.png",
+      "alt": "The Birth of Mormonism, 1916, appendix C, printed p. 100. This later book attributes the description to an April 1844 letter printed in the Saint Louis Weekly Gazette; the original newspaper issue remains unverified.",
+      "id": "art-420cf3c759f8",
+      "occurrences": [
+        {
+          "id": "source-c7875eec2f4e",
+          "page": "/joseph-smith-portrait-research.html",
+          "pageTitle": "The evidence behind our Joseph",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/research/joseph-documents/gazette-transmission-1916-p100.png\"]:has(img[src=\"assets/research/joseph-documents/gazette-transmission-1916-p100.png\"])",
+          "title": "Gazette Transmission 1916 P100"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Who is in the comparison?",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/bom-evidences/visual-guides-20260923/authorship-candidate-limits.svg",
@@ -19946,6 +20605,28 @@
       ]
     },
     {
+      "title": "Work that sustained a household",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/joseph-smith-likeness/family/joseph-household-labor-1828-1536.webp",
+      "fullImage": "/assets/page-art/joseph-smith-likeness/family/joseph-household-labor-1828.png",
+      "alt": "Joseph carries split wood toward a wagon in a work shirt and russet waistcoat",
+      "id": "art-15e455e98e23",
+      "occurrences": [
+        {
+          "id": "source-c93a93d65856",
+          "page": "/joseph-smith-likeness.html",
+          "pageTitle": "The Face Behind the History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/joseph-smith-likeness/family/joseph-household-labor-1828.png\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/family/joseph-household-labor-1828-1536.webp\"])",
+          "title": "Work that sustained a household"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
       "title": "Work, care, and perseverance",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/priesthood-history/original-jane-sewing.png",
@@ -20035,14 +20716,14 @@
     }
   ],
   "stats": {
-    "artworks": 901,
-    "occurrences": 907,
+    "artworks": 931,
+    "occurrences": 939,
     "byKind": {
       "artwork": 63,
       "hero": 41,
       "legacy": 39,
       "missionary": 13,
-      "topic": 751
+      "topic": 836
     }
   }
 }

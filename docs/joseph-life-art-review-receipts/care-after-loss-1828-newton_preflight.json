@@ -1,0 +1,22 @@
+{
+  "reviewer": "Newton",
+  "id": "care-after-loss-1828",
+  "source_review_id": "bedside-wardrobe-1828",
+  "prompt_sha256": "410cb9c04357a9ffdd375078d74b3e21c5c93d9a63d1c09ed9cfb06205fb9b1f",
+  "concur": true,
+  "source_receipt_path": "work\\newton\\main-wardrobe-edits-v1-preflight.json",
+  "source_receipt_sha256": "d7e10679837bbdbc3c4a05f77bca2cbd462e476690b6431dd572a9a1efbfedf1",
+  "source_record": {
+    "id": "bedside-wardrobe-1828",
+    "prompt_sha256": "410cb9c04357a9ffdd375078d74b3e21c5c93d9a63d1c09ed9cfb06205fb9b1f",
+    "reference_sha256": [
+      "1de04bc299097c52f61678931634e6aef0c6638953aecad0a806f40c3ca6366b"
+    ],
+    "concur": true,
+    "notes": "Generation-only. Museum1828 cotton and1828-1835 high-waist full-sleeve descriptions independently read; bonnet1825-1840 is straw shape context only, not winter fabric proof. Exact colors, possessions and hairstyle unverified interpretations. Finished review must distinguish era silhouette/waist/sleeve/neckline from mere recoloring, retain identity/body/action and bedside accepted reciprocal gaze. No automatic outfit/body slimming. Existing later-period structure retained where appropriate, not copied into earlier dates."
+  },
+  "normalization": "Final placement id mapped to exact prompt/final bytes; source decision preserved, no new broader concurrence.",
+  "reference_sha256": [
+    "1de04bc299097c52f61678931634e6aef0c6638953aecad0a806f40c3ca6366b"
+  ]
+}

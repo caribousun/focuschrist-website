@@ -1,4 +1,16 @@
-# Joseph portrait research draft
+# Joseph portrait research: separate evidence study
+
+Current correction, October 3, 2026: the research now lives at `joseph-smith-portrait-research.html`, linked by Portrait Research pills from the parent study. Chapter View and Read All progressively enhance one complete evidence DOM; the no-script page retains the full study. The builder remains `tools/build_joseph_portrait_research.py`.
+
+The current implementation preserves 164 substantive exported items, sixteen traits, fifteen source sections and the reviewed PDF. Thirty-seven reference placements use thirteen distinct source assets: the retained approved portrait, a BYU-catalogued public-domain mask photograph, a qualified Pelton engraving detail, and ten historical publication pages. Uniform CSS viewing windows expose facial details without altering source bytes. They are not new originals, measurements, registrations or independent anatomical evidence.
+
+The latest page-specific owner direction requires relevant Joseph evidence and forbids filler; the half-Christ quota is explicitly waived. This source-led research companion therefore records zero new original scenes. The general site original-art gates remain intact elsewhere. Ten exact short text-only blocks have independent content-hash/rationale review: source definitions, unavailable manuscript rows, limited synthesis and proposed or unperformed work. All trait blocks have relevant image views. `docs/joseph-research-cadence-exceptions.json` records those bounded decisions.
+
+Source provenance is in `joseph-research-document-sources.json`, `joseph-research-mask-source.json` and `joseph-research-pelton-source.json`. The new mask photograph is a newly consulted reference, not a recovered creation input. Original prompt/intermediate construction logs remain unrecovered; the later qualitative audit and proposed controlled tests are visibly distinguished from documented creation.
+
+Actual browser review, exact independent final concurrence, hosted QA, publication and ordinary public-file verification are separate acceptance events. This implementation description alone claims none of them. Preserve the historical rejected approach below as failure evidence.
+
+## Historical PR436 approach, superseded by the correction above
 
 The owner requested the complete focusChrist-only PDF research as HTML within the Joseph likeness study, with a PDF download. This is a local review candidate. A later explicitly authorized Hyrum iris-color correction and mask-source action consolidation are included below. No site publication or Joseph identity change is included.
 

@@ -1,0 +1,17 @@
+{
+  "reviewer": "Fermi",
+  "id": "profile-sitting-1842-retry",
+  "source_review_id": null,
+  "prompt_sha256": "a7987c0ad0fd207b3dd5b1355ac9396fca1105e8cb24fe4c6592c878f701a04a",
+  "concur": true,
+  "source_receipt_path": "work\\fermi\\hair-profile-finished-review.json",
+  "source_receipt_sha256": "b81aaacc6f29792262b3cc3ca0f7685a9eb2875396fe7280b22556a08d38b945",
+  "source_record": {
+    "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-3f5fb065-25d5-4563-b991-9568b97762fc.png",
+    "sha256": "8e905ef175094e9d1db5a9e36940d7cc8af3091dcfbc54c87d3f6bc513ecc3ec",
+    "finished_pixels_concur": true,
+    "reason": "Near-profile silhouette clear, far iris hidden, recognizable adopted face. Artist absent and board edge avoids prior impossible hand/paper geometry. Accept interpretive sitting; no measured true-profile reconstruction or recovered original drawing. Room, clothing and exact pose unknown."
+  },
+  "normalization": "Maps reviewed exact asset/prompt to final placement id; preserves explicit decision and full source record. Not a new review or broader approval.",
+  "sha256": "8e905ef175094e9d1db5a9e36940d7cc8af3091dcfbc54c87d3f6bc513ecc3ec"
+}

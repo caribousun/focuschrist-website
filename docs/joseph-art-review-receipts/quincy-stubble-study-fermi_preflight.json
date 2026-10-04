@@ -1,0 +1,43 @@
+{
+  "reviewer": "Fermi",
+  "id": "quincy-stubble-study",
+  "source_review_id": "quincy-stubble-correction",
+  "prompt_sha256": "c7839d4f1f2ba2d501cad35274cfb2b031f6c74dfa75e302313fae0968a06ac1",
+  "concur": true,
+  "source_receipt_path": "work\\fermi\\quincy-stubble-edit-preflight.json",
+  "source_receipt_sha256": "15ae5ab864b936a2d990ecb835175ccb3d4b92aa31757b00050e69c1a1ea32c3",
+  "source_record": {
+    "id": "quincy-stubble-correction",
+    "status": "EXACT_EDIT_PROPOSAL_PENDING_NEWTON_PREFLIGHT",
+    "prompt": "Edit reference image2, the generated doorway scene of Joseph Smith, while using reference image1 as the actual locked identity master. Preserve the complete scene, exact recognizable face, age38, nose, eyes, brows, hairline and hairstyle, natural expression, check-pattern coat, waistcoat, white neckcloth, light trousers, doorway, river background, light, framing and all other pixels as closely as possible. Make one narrow grooming correction: add clearly visible, modest several-day facial stubble across his chin, jaw and upper-lip region, with natural sparse short individual hairs and a perceptible beard shadow. It must remain short growth, not a full beard or shaped moustache, and must be visible at ordinary page size. Do not merely darken the skin or add dirt; do not alter chin or jaw shape, age the face, change skin marks, recolor irises or beauty-smooth the skin. This illustrates the several-day beard growth described in Quincy's contemporary May1844 letter. Exact hair density and color remain artistic interpretation. Preserve photographic realism, natural pores and lighting. No text, watermark, invented document or claim of a historical photograph. This is an edit of newly created interpretive artwork, not a change to the approved identity master.",
+    "prompt_sha256": "c7839d4f1f2ba2d501cad35274cfb2b031f6c74dfa75e302313fae0968a06ac1",
+    "actual_references": [
+      {
+        "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\identities\\joseph-smith-owner-approved-20260914.png",
+        "sha256": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+      },
+      {
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-e8630034-a327-4b5d-ba39-0618f2147654.png",
+        "sha256": "571b47eb0e1414147c74870d303a8af768df203cc21e26a600091e1f05a0bf41"
+      }
+    ],
+    "source": "https://byustudies.byu.edu/article/josiah-quincys-1844-visit-with-joseph-smith",
+    "fermi_preflight_concur": true,
+    "scope": "Generation/edit only; finished pixels must be independently reviewed",
+    "original_output_review": {
+      "sha256": "571b47eb0e1414147c74870d303a8af768df203cc21e26a600091e1f05a0bf41",
+      "concur": false,
+      "reason": "Effectively clean-shaven appearance fails source-specific several-day growth lesson; do not repair only with caption"
+    },
+    "limits": [
+      "Exact beard density/color not established",
+      "No other feature change authorized",
+      "Retain original rejected candidate separately"
+    ]
+  },
+  "normalization": "Maps reviewed exact asset/prompt to final placement id; preserves explicit decision and full source record. Not a new review or broader approval.",
+  "reference_sha256": [
+    "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827",
+    "571b47eb0e1414147c74870d303a8af768df203cc21e26a600091e1f05a0bf41"
+  ]
+}

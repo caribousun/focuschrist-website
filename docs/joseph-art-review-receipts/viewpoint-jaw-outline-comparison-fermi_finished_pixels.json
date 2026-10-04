@@ -1,0 +1,18 @@
+{
+  "reviewer": "Fermi",
+  "id": "viewpoint-jaw-outline-comparison",
+  "source_review_id": "viewpoint",
+  "prompt_sha256": "6e01a3436a8ebce4101555c5f57ff5b0398690c67195e1f3ac76705c2f668611",
+  "concur": true,
+  "source_receipt_path": "work\\fermi\\research-method-finished-review.json",
+  "source_receipt_sha256": "2d37869396b2beb41a6dbd3b647251d699b6c5e22153c404e10a5543bbe99e6d",
+  "source_record": {
+    "id": "viewpoint",
+    "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-15d0aebd-a580-4d97-9cfb-38fa9a572149.png",
+    "sha256": "44449aedd2ed29b206da1f3fab65c5bf0ccf6a36bb80acbf55ff894e14663d70",
+    "finished_pixels_concur": true,
+    "reason": "Front breadth and near-profile projection meaningfully contrasted. Far iris hidden, recognizable face and hair; synthetic profile remains interpretation, not calibrated anatomy."
+  },
+  "normalization": "Maps reviewed exact asset/prompt to final placement id; preserves explicit decision and full source record. Not a new review or broader approval.",
+  "sha256": "44449aedd2ed29b206da1f3fab65c5bf0ccf6a36bb80acbf55ff894e14663d70"
+}

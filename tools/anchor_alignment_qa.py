@@ -26,6 +26,19 @@ STUDY_CENTER_APPENDIX = b'\n/* Owner-requested centered study choices; chapter p
 STUDY_CENTER_SHA256 = '17d2b86bc2afc65b8133b6cc2831028b02590fe6874a13098345f5f5a1ec35fc'
 STUDY_CENTER_VERSION = "20260930-study-alignment-1"
 
+# Owner-authorized Joseph family study appendix. Full bytes and original prefix
+# are pinned; no existing artwork or anchor geometry is exempted.
+JOSEPH_LIFE_SHA256 = 'b6e1a46b6b3318e47a398b50fbff98066e3b3ab66aacbf19ba6e2d32b6344df4'
+JOSEPH_LIFE_APPENDIX = b'.joseph-life-nav{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}\n.joseph-life-nav a{border:1px solid var(--fc-line);border-radius:var(--fc-radius);padding:10px 14px;color:var(--fc-gold-light);text-decoration:none}\n.joseph-life-nav a:hover,.joseph-life-nav a:focus-visible{background:rgba(255,255,255,.06);text-decoration:underline}\n.joseph-life-scene,.joseph-life-closing{padding:32px 0;border-top:1px solid var(--fc-line);scroll-margin-top:120px}\n.joseph-life-scene>h3,.joseph-life-closing>h3{color:var(--fc-gold-light);font-size:clamp(1.35rem,3vw,1.85rem)}\n.joseph-life-enrichment p{line-height:1.7}\n.joseph-life-reflection{border-left:3px solid var(--fc-gold-light);padding:12px 18px;margin:24px 0}\n.joseph-life-source-note{font-size:.94rem}\n.joseph-life-scene .likeness-art img{width:100%;height:auto;object-fit:contain}\n@media(max-width:580px){.joseph-life-nav a{width:100%;box-sizing:border-box}.joseph-life-scene,.joseph-life-closing{padding:24px 0}}\n\n.joseph-life-caption-title{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}\n'
+
+def before_joseph_life(data):
+    if hashlib.sha256(data).hexdigest() == JOSEPH_LIFE_SHA256 and data.endswith(JOSEPH_LIFE_APPENDIX):
+        prior = data[:-len(JOSEPH_LIFE_APPENDIX)]
+        if hashlib.sha256(prior).hexdigest() == FILES['joseph-smith-likeness.css']['after_sha256']:
+            return prior
+    return data
+
+
 def before_study_center(data):
     if hashlib.sha256(data).hexdigest() == STUDY_CENTER_SHA256 and data.endswith(STUDY_CENTER_APPENDIX):
         return data[:-len(STUDY_CENTER_APPENDIX)]
@@ -55,7 +68,7 @@ def historical_style_bytes(data):
     reviewed bytes. The mandatory current-file checks separately reject stale
     files and any mutation to the approved anchor-only transformation.
     """
-    data = before_study_center(before_topic_desktop(before_search_hitbox(data)))
+    data = before_joseph_life(before_study_center(before_topic_desktop(before_search_hitbox(data))))
     digest = hashlib.sha256(data).hexdigest()
     record = next((r for r in FILES.values() if r['after_sha256'] == digest), None)
     if not record:
@@ -83,6 +96,9 @@ def historical_style_bytes(data):
 
 def reviewed_anchor_style(name, data):
     record = FILES.get(name)
+    if name == 'joseph-smith-likeness.css':
+        if hashlib.sha256(data).hexdigest() != JOSEPH_LIFE_SHA256: return False
+        data = before_joseph_life(data)
     if name == 'site-system.css':
         if hashlib.sha256(data).hexdigest() != STUDY_CENTER_SHA256: return False
         data = before_study_center(data)

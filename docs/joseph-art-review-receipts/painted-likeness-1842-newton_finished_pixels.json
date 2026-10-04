@@ -1,0 +1,26 @@
+{
+  "reviewer": "Newton",
+  "id": "painted-likeness-1842",
+  "source_review_id": "painted-likeness-1842",
+  "prompt_sha256": "410e24804022ac8b4e4da5d0955e3ebe162fa4afa1c2b7fe2655e99460cd61cb",
+  "concur": true,
+  "source_receipt_path": "work\\newton\\first-two-finished-pixels.json",
+  "source_receipt_sha256": "62a99d5fe9f1fcf95c4fc2d033f9f98d0e7743aa1e9073aa394e9c6ba8581c98",
+  "source_record": {
+    "id": "painted-likeness-1842",
+    "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-127f2ce9-0748-4f25-9e21-cdd3b2b3d74a.png",
+    "sha256": "1f344ac8596d3e626c7e5dc3e80f0df9e7492265719e8176916010a838935921",
+    "preflight_prompt_sha256": "410e24804022ac8b4e4da5d0955e3ebe162fa4afa1c2b7fe2655e99460cd61cb",
+    "concur": true,
+    "decision": "ACCEPT_INTERPRETIVE_ARTWORK",
+    "observations": [
+      "Recognizable owner-approved facial identity: nose, brow, jaw, hair and blue-gray eye interpretation retained.",
+      "Near-frontal sitter, wooden chair, palette, paintbrushes and back of easel convey a painted sitting; no fabricated artist face or recovered canvas.",
+      "Hands/clothes/materials visually plausible, age36 plausible; no scientific age or geometry claim.",
+      "Concur only as newly generated interpretation of September1842 painting sessions. Room, bed, furnishings, clothing and pose unverified staging; no actual1842photograph or identified-original-painting claim."
+    ],
+    "prompt_sha256": "410e24804022ac8b4e4da5d0955e3ebe162fa4afa1c2b7fe2655e99460cd61cb"
+  },
+  "normalization": "Maps reviewed exact asset/prompt to final placement id; preserves explicit decision and full source record. Not a new review or broader approval.",
+  "sha256": "1f344ac8596d3e626c7e5dc3e80f0df9e7492265719e8176916010a838935921"
+}

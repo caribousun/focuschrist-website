@@ -1,0 +1,18 @@
+{
+  "reviewer": "Newton",
+  "id": "adopted-hair-study",
+  "source_review_id": "adopted-hair-study",
+  "prompt_sha256": "2a61b741450808fdc5d2761f66b8f1b41fcbbbd9443952defe12565eba8cda13",
+  "concur": true,
+  "source_receipt_path": "work\\newton\\hair-profile-finished-pixels.json",
+  "source_receipt_sha256": "86e350dfa70111ca88840c4c5ea4192c2fbc341a12b8692f209a350332738d2e",
+  "source_record": {
+    "id": "adopted-hair-study",
+    "sha256": "a5b0d48f59d2f7ddb185c947c2828e10d48baa0d8a63fa25b41c5b4d470912ac",
+    "prompt_sha256": "2a61b741450808fdc5d2761f66b8f1b41fcbbbd9443952defe12565eba8cda13",
+    "concur": true,
+    "notes": "Wholecrown/hairline/waves/strands visible with recognizable facial context; preserves brown/lightstrands and adopted swept arrangement. Good hair-specific original, though displaywindow may focusupperhead. No proof historicaltexture/pigment or alternativehairstyle experiment."
+  },
+  "normalization": "Maps reviewed exact asset/prompt to final placement id; preserves explicit decision and full source record. Not a new review or broader approval.",
+  "sha256": "a5b0d48f59d2f7ddb185c947c2828e10d48baa0d8a63fa25b41c5b4d470912ac"
+}

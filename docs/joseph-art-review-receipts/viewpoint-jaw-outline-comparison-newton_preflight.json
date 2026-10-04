@@ -1,0 +1,22 @@
+{
+  "reviewer": "Newton",
+  "id": "viewpoint-jaw-outline-comparison",
+  "source_review_id": "viewpoint-jaw-outline-comparison",
+  "prompt_sha256": "6e01a3436a8ebce4101555c5f57ff5b0398690c67195e1f3ac76705c2f668611",
+  "concur": true,
+  "source_receipt_path": "work\\newton\\research-method-prompts-v1-preflight.json",
+  "source_receipt_sha256": "dbc336d2ab9203ba46c059cb827cff8c5917cfe3b1ba6b4d3821b3b9b7a6b71a",
+  "source_record": {
+    "id": "viewpoint-jaw-outline-comparison",
+    "prompt_sha256": "6e01a3436a8ebce4101555c5f57ff5b0398690c67195e1f3ac76705c2f668611",
+    "reference_sha256": [
+      "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+    ],
+    "concur": true,
+    "notes": "Distinct explanatorypurpose supports featurechain. Finishedpair must preserve recognizableidentity and clearly show intendedcontrast without misleading unrelatedvariation. Onecomposition is oneoriginal; no actualtest/isolatedvariable/calibratedprojection or recoveredcreation claim. Authentic evidence and approvednativefeaturedetails must remain separately labelled."
+  },
+  "normalization": "Maps reviewed exact asset/prompt to final placement id; preserves explicit decision and full source record. Not a new review or broader approval.",
+  "reference_sha256": [
+    "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+  ]
+}

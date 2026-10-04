@@ -1,0 +1,30 @@
+{
+  "reviewer": "Fermi",
+  "id": "emma-early-scribe-1828",
+  "source_review_id": "scribe-wardrobe-1828",
+  "prompt_sha256": "6736e13a0086b4293aa61540c762702cc557e4ed68103aefd45907ad05d0dae3",
+  "concur": true,
+  "source_receipt_path": "work\\fermi\\five-final-wardrobe-whole-image-review.json",
+  "source_receipt_sha256": "f09721c664e8b6ddd24ed70728bcb2ffd7a2c727516c4a3f8ead2524af62841c",
+  "source_record": {
+    "id": "scribe-wardrobe-1828",
+    "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-6796b0b9-aa49-4dfc-94e4-dc718ed6f150.png",
+    "sha256": "bb026ec8537b0a5f0b20e5f98db41c91336345356a0a3c11cd08b9d96e234972",
+    "prompt_sha256": "6736e13a0086b4293aa61540c762702cc557e4ed68103aefd45907ad05d0dae3",
+    "review_scope": "WHOLE_FINISHED_IMAGE_ALL_REQUIRED_VISUAL_DIMENSIONS",
+    "checks": {
+      "realism": "Whole image inspected: natural photographic materials and lighting, no conspicuous synthetic artifact.",
+      "identity_age_body": "Young22/23 identities retained, Emma supported pregnancy/fullness preserved; no slimming.",
+      "era_garments_hair": "Cotton smallprint/simple neckline/raised gathering and pinnedhair plausible1828 domesticform; Josephgraywaistcoat.",
+      "gaze_expression_hands": "Emma looks at writing, Joseph partial speaking; coherent quillgrip and supporthand, no forced mutualgaze.",
+      "anatomy": "Visible limb/face proportions and joints coherent; no extra fingers or impossible overlap observed.",
+      "context": "Earlyscribe role documented; no translationapparatus depicted, generatedpage not actualsurviving manuscript.",
+      "nonclone_purpose": "Distinct jointscribal action and lightprint, not letterreading or bedside image."
+    },
+    "whole_image_concur": true,
+    "proposed_owning_route": "joseph-smith-likeness.html"
+  },
+  "normalization": "Final placement id mapped to exact prompt/final bytes; source decision preserved, no new broader concurrence.",
+  "sha256": "bb026ec8537b0a5f0b20e5f98db41c91336345356a0a3c11cd08b9d96e234972",
+  "whole_image_review": true
+}

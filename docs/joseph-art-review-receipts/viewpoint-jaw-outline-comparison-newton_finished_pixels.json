@@ -1,0 +1,19 @@
+{
+  "reviewer": "Newton",
+  "id": "viewpoint-jaw-outline-comparison",
+  "source_review_id": "viewpoint-jaw-outline-comparison",
+  "prompt_sha256": "6e01a3436a8ebce4101555c5f57ff5b0398690c67195e1f3ac76705c2f668611",
+  "concur": true,
+  "source_receipt_path": "work\\newton\\method-light-viewpoint-finished-review.json",
+  "source_receipt_sha256": "9c5baa5eab4530d12a7c54e1cdc5ec975d6818819e8bc4d9a5fb360b6cc36663",
+  "source_record": {
+    "id": "viewpoint-jaw-outline-comparison",
+    "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-15d0aebd-a580-4d97-9cfb-38fa9a572149.png",
+    "sha256": "44449aedd2ed29b206da1f3fab65c5bf0ccf6a36bb80acbf55ff894e14663d70",
+    "prompt_sha256": "6e01a3436a8ebce4101555c5f57ff5b0398690c67195e1f3ac76705c2f668611",
+    "concur": true,
+    "notes": "Accept: frontal breadth versus strong near-profile projection, far iris hidden and recognizable identity. Near-profile is not measured ninety-degree view. Newly imagined unseen geometry is not calibrated three-dimensional or historical evidence. One diptych counts as one original."
+  },
+  "normalization": "Maps reviewed exact asset/prompt to final placement id; preserves explicit decision and full source record. Not a new review or broader approval.",
+  "sha256": "44449aedd2ed29b206da1f3fab65c5bf0ccf6a36bb80acbf55ff894e14663d70"
+}

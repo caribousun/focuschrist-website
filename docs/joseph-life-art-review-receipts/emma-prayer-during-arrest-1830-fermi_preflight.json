@@ -1,0 +1,37 @@
+{
+  "reviewer": "Fermi",
+  "id": "emma-prayer-during-arrest-1830",
+  "source_review_id": "emma-prayer-during-arrest-1830",
+  "prompt_sha256": "a8ade4f3ef50314b0398955b72fbb5023e891fc1ea62b38fd0cc2a58d524585d",
+  "concur": true,
+  "source_receipt_path": "work\\fermi\\main-remaining-wardrobe-prompts-v1.json",
+  "source_receipt_sha256": "c5923a3d727dff05b33baf745e7d2a4a478227565f36a2d76fabaaaf4426b8c4",
+  "source_record": {
+    "id": "emma-prayer-during-arrest-1830",
+    "prompt": "Create one new ultra-realistic photographic historical illustration for the Joseph Smith family study. Use the supplied approved identity reference images in the stated order. Keep each person recognizably themselves with separate facial structure, natural asymmetry, eye color, hair color and character; never blend the identities or substitute attractive generic actors. Adapt age gently to the stated event without reshaping identity. Preserve Emma's natural fuller figure and facial fullness; do not slim her. Real skin texture, natural human eyes, correct hands, physically believable daylight and fabric. No painterly finish, CGI, glamour lighting, beauty smoothing or modern objects. This newly made artwork interprets documented history; it is not a historical photograph, recovered source or record of the creation of the modern portraits. Exact clothing, room, pose and gestures are interpretive unless expressly specified. No text, watermark, readable invented manuscript or facsimile. Landscape 3:2 with recognizable faces and meaningful action. The reference is Emma Smith, age25 in lateJune1830 during Joseph's arrests and trials. Reverent intimate scene of Emma kneeling beside a plain chair in a modest room, hands gently joined, eyes naturally closed, face clearly recognizable in three-quarter view. Preserve her natural full face and body; a modest muted plum-brown cotton1830 day dress with raised waist and restrained full sleeves tapering toward wrists, simple pale neckline, no ornate brooch or copied1842lace ensemble. Her unchanged dark hair is neatly pinned at the back with restrained side arrangement, not identical long ringlets. No pregnancy-shaped abdomen; preserve her natural figure without slimming. A second kneeling woman's shoulder and back appear softly at the far edge only, with no identifiable invented face. Joseph is absent because this represents the women praying while awaiting his release. Gentle daylight, sincere quiet concern, no theatrical halo, vision, glowing pages, miracle spectacle or invented dialogue. Room and pose interpretive; the documented point is Emma joining women in prayer during uncertainty, not a known visual record of this moment. Exact colors, garment possession and hair arrangement are period-plausible artistic selections, not documented personal wardrobe for this date. Preserve identity while giving this activity its own credible clothing.",
+    "prompt_sha256": "a8ade4f3ef50314b0398955b72fbb5023e891fc1ea62b38fd0cc2a58d524585d",
+    "actual_references": [
+      {
+        "person": "Emma",
+        "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\identities\\emma-smith-owner-approved-20260930.png",
+        "sha256": "7d0a07cc673d244ccd54d478c53d1e68d248e39d9b1101f87dfe3681cbb839d1"
+      }
+    ],
+    "placement": "Main: faith amid uncertainty",
+    "source": "https://www.churchofjesuschrist.org/study/church-historians-press/the-first-fifty-years-of-relief-society/part-1/1-1?lang=eng",
+    "uncertainty": "CHP1.1 introduction records women praying during custody; exact room, companions, pose unknown; youngage appearance must be reviewed.",
+    "fermi_generation_only_concur": true,
+    "newton_concur": false,
+    "status": "AMENDED_PENDING_DUAL_PREFLIGHT",
+    "hold_reason": "Latest Wyatt directs confirmed varied clothing colors, hats/bonnets/scarves/hairstyles; Gary personal-vs-period evidence pending. Do not generate old prompt.",
+    "wardrobe_sources": [
+      "https://www.metmuseum.org/art/collection/search/108029",
+      "https://emuseum.colonialwilliamsburg.org/objects/5757/dress",
+      "https://emuseum.colonialwilliamsburg.org/objects/41221/bonnet"
+    ]
+  },
+  "normalization": "Final placement id mapped to exact prompt/final bytes; source decision preserved, no new broader concurrence.",
+  "reference_sha256": [
+    "7d0a07cc673d244ccd54d478c53d1e68d248e39d9b1101f87dfe3681cbb839d1"
+  ]
+}

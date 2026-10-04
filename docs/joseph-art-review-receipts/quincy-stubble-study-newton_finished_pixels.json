@@ -1,0 +1,18 @@
+{
+  "reviewer": "Newton",
+  "id": "quincy-stubble-study",
+  "source_review_id": "quincy-stubble-correction",
+  "prompt_sha256": "c7839d4f1f2ba2d501cad35274cfb2b031f6c74dfa75e302313fae0968a06ac1",
+  "concur": true,
+  "source_receipt_path": "work\\newton\\family-first-two-and-quincy-finished.json",
+  "source_receipt_sha256": "57cb26e7889acf1a9d9fae29d5e387e74a2985b6b9c1a2aa34fe7229f32b1b0c",
+  "source_record": {
+    "id": "quincy-stubble-correction",
+    "sha256": "8b3dfa5615a23d6a3f0d4cf2ec3c6324b7935f89e4ca331beaddc34981c71599",
+    "prompt_sha256": "c7839d4f1f2ba2d501cad35274cfb2b031f6c74dfa75e302313fae0968a06ac1",
+    "concur": true,
+    "notes": "Short hairs/chin shadow now visibly convey severaldaygrowth without shaped/fullbeard. Recognizable approvedidentity, checkcoat and paletrousers preserved. Vestpatternchanged so do not claim pixelidentical scene. Exacthairdensity/color and staginginterpretive."
+  },
+  "normalization": "Maps reviewed exact asset/prompt to final placement id; preserves explicit decision and full source record. Not a new review or broader approval.",
+  "sha256": "8b3dfa5615a23d6a3f0d4cf2ec3c6324b7935f89e4ca331beaddc34981c71599"
+}

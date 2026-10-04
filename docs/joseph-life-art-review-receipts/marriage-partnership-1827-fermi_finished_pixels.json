@@ -1,0 +1,30 @@
+{
+  "reviewer": "Fermi",
+  "id": "marriage-partnership-1827",
+  "source_review_id": "marriage-wardrobe-1827",
+  "prompt_sha256": "589c2ebc3571733ea3d93dedf1cd1caa93847695e4db4bbd4b80f2a427b8eef4",
+  "concur": true,
+  "source_receipt_path": "work\\fermi\\five-final-wardrobe-whole-image-review.json",
+  "source_receipt_sha256": "f09721c664e8b6ddd24ed70728bcb2ffd7a2c727516c4a3f8ead2524af62841c",
+  "source_record": {
+    "id": "marriage-wardrobe-1827",
+    "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-680a5611-29a4-4c93-97c0-4e92a10d58c5.png",
+    "sha256": "61b714143419b5f0f4db7ca7cb3ace09fa36c3cca1299c21112c7eab92afddfa",
+    "prompt_sha256": "589c2ebc3571733ea3d93dedf1cd1caa93847695e4db4bbd4b80f2a427b8eef4",
+    "review_scope": "WHOLE_FINISHED_IMAGE_ALL_REQUIRED_VISUAL_DIMENSIONS",
+    "checks": {
+      "realism": "Whole image inspected: natural photographic materials and lighting, no conspicuous synthetic artifact.",
+      "identity_age_body": "Young21/22 identities retained, naturalfullness and no clearunsupported pregnancy dome.",
+      "era_garments_hair": "Raisedwaist brown1820sdress/simple neckcovering, wintershawl/browncoat, reducedsidecurls plausible.",
+      "gaze_expression_hands": "Natural viewer-facing posedcouple; coherent joinedhands. Caption mustnotcall candid reciprocal conversation.",
+      "anatomy": "Visible limb/face proportions and joints coherent; no extra fingers or impossible overlap observed.",
+      "context": "Marriage documented; representative partnership portrait, no recoveredweddingroom/outfit claim.",
+      "nonclone_purpose": "Distinct winterposedcouple, joinedhands andwarmclothes; not otheraction or crosspagereusedneworiginal."
+    },
+    "whole_image_concur": true,
+    "proposed_owning_route": "joseph-smith-likeness.html"
+  },
+  "normalization": "Final placement id mapped to exact prompt/final bytes; source decision preserved, no new broader concurrence.",
+  "sha256": "61b714143419b5f0f4db7ca7cb3ace09fa36c3cca1299c21112c7eab92afddfa",
+  "whole_image_review": true
+}

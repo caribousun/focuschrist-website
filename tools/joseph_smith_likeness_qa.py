@@ -55,6 +55,10 @@ def check():
     if not path.is_file():
         return [PAGE + ': missing dedicated study page']
     nodes = document(path)
+    # Necessary lower bound only: purpose, distinctness and rendered visibility
+    # still require independent review of the actual twenty-picture inventory.
+    require(sum(n.tag == 'img' for n in nodes) >= 20,
+            'owner requires at least twenty meaningful pictures in this study; raw image count is only a necessary lower bound')
     ids = [n.attrs['id'] for n in nodes if n.attrs.get('id')]
     require(len(ids) == len(set(ids)), 'duplicate IDs')
     require(SECTIONS.issubset(ids), 'missing study sections: ' + ', '.join(sorted(SECTIONS - set(ids))))
@@ -111,11 +115,15 @@ def check():
             with Image.open(thumb) as im:
                 require(im.format == 'WEBP' and im.width == 960, slot + ': invalid responsive image')
 
+    for retired in ('museum-dibble-masks.jpg', 'joseph-death-mask.jpg', 'hyrum-death-mask.jpg'):
+        require(not (ROOT / 'assets/page-art/joseph-smith-likeness' / retired).exists(), 'Withdrawn mask photo returned: ' + retired)
+        require(retired not in (ROOT / PAGE).read_text(encoding='utf8'), 'Withdrawn mask photo display returned: ' + retired)
+
     comparisons = [n for n in nodes if n.tag == 'figure' and n.has('likeness-comparison-item')]
     require(len(comparisons) == 4, 'two portrait and own-mask pairs required')
-    comparison_assets = [MASTER, 'assets/page-art/joseph-smith-likeness/joseph-death-mask.jpg',
+    comparison_assets = [MASTER, 'assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg',
                          HYRUM_DRAFT,
-                         'assets/page-art/joseph-smith-likeness/hyrum-death-mask.jpg']
+                         'assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg']
     for figure, asset in zip(comparisons, comparison_assets):
         anchors = [n for n in figure.children if n.tag == 'a']
         require(len(anchors) == 1 and anchors[0].attrs.get('href') == asset,

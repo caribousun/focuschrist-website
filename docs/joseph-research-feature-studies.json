@@ -1,0 +1,1266 @@
+{
+  "01": {
+    "explanation": [
+      "The portrait has a long oval outline, broad above and narrower toward the chin. Joseph’s surviving cast offers a useful contour reference; the later transmission of the Gazette description also calls his head an oblong oval. [1,11]",
+      "This explains a resemblance visible today. It does not recover the original artist’s individual decisions."
+    ],
+    "limits": "Different views, postmortem changes and cast condition prevent a measured face-width match.",
+    "visuals": [
+      {
+        "kind": "reference",
+        "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+        "width": 1312,
+        "height": 1199,
+        "title": "The adopted face outline",
+        "alt": "The adopted face outline in the unchanged adopted Joseph portrait",
+        "caption": "The upper and lower face can be compared without changing the artwork. Detail window of the unchanged modern portrait; open the complete image for context.",
+        "owner": "#portrait-section-6",
+        "sources": [],
+        "detail_window": [
+          310,
+          135,
+          610,
+          725
+        ],
+        "label": "Adopted portrait · native-source detail",
+        "owner_label": "Continue this research chapter"
+      },
+      {
+        "kind": "reference",
+        "src": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
+        "width": 800,
+        "height": 540,
+        "title": "Joseph’s surviving face outline",
+        "alt": "Joseph’s surviving face outline in Joseph’s cast at the left of the complete photograph",
+        "caption": "The complete facial contour remains visible, including surface damage. BYU item 4109, catalogued 2001; courtesy of LDS Church Archives, public-domain designation. This photograph is a later comparison source, not an established original creation input.",
+        "owner": "#portrait-section-6",
+        "sources": [
+          {
+            "label": "View the BYU catalogue and rights record",
+            "url": "https://contentdm.lib.byu.edu/digital/collection/RelEd/id/4109/rec/5"
+          },
+          {
+            "label": "Read the museum’s mask history",
+            "url": "https://www.churchofjesuschrist.org/learn/history/sites/church-history-museum/collections/joseph-and-hyrum-smith-death-masks?lang=eng"
+          }
+        ],
+        "detail_window": [
+          35,
+          30,
+          320,
+          490
+        ],
+        "label": "Historical cast photograph · detail",
+        "owner_label": "Continue this research chapter"
+      },
+      {
+        "kind": "reference",
+        "src": "assets/research/joseph-documents/gazette-transmission-1916-p101.png",
+        "width": 390,
+        "height": 628,
+        "title": "An oval described in a later transcription",
+        "alt": "An oval described in a later transcription — The Birth of Mormonism, 1916, appendix C, printed p. 101. This later book attributes the description to an April 1844 letter printed in the Saint Louis Weekly Gazette; the original newspaper issue remains unverified.",
+        "caption": "The closing lines describe shape; the accompanying phrenological claims are not accepted anatomical evidence. The Birth of Mormonism, 1916, appendix C, printed p. 101. This later book attributes the description to an April 1844 letter printed in the Saint Louis Weekly Gazette; the original newspaper issue remains unverified.",
+        "label": "Historical document · later printing",
+        "native_display": true,
+        "owner": "#portrait-section-6",
+        "sources": [
+          {
+            "label": "Read the complete source page",
+            "url": "https://archive.org/details/birthofmormonism00adam_0/page/n102/mode/1up"
+          },
+          {
+            "label": "Read the later book’s attribution",
+            "url": "https://archive.org/details/birthofmormonism00adam_0/page/n101/mode/1up"
+          }
+        ],
+        "detail_window": [
+          35,
+          436,
+          322,
+          104
+        ],
+        "owner_label": "Continue this research chapter"
+      }
+    ]
+  },
+  "02": {
+    "explanation": [
+      "The adopted forehead is broad, with restrained lines and a substantial brow. The cast preserves surface contour, while Quincy’s later memoir describes a retreating forehead. These are different kinds of evidence. [1,8]"
+    ],
+    "limits": "A forehead’s apparent slope depends on viewpoint. Neither the cast photograph nor a verbal description fixes living wrinkles or hairline.",
+    "visuals": [
+      {
+        "kind": "reference",
+        "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+        "width": 1312,
+        "height": 1199,
+        "title": "Forehead and brow in the artwork",
+        "alt": "Forehead and brow in the artwork in the unchanged adopted Joseph portrait",
+        "caption": "Fine lines and brow texture are visible artistic choices. Detail window of the unchanged modern portrait; open the complete image for context.",
+        "owner": "#portrait-section-6",
+        "sources": [],
+        "detail_window": [
+          407,
+          140,
+          446,
+          242
+        ],
+        "label": "Adopted portrait · native-source detail",
+        "owner_label": "Continue this research chapter"
+      },
+      {
+        "kind": "reference",
+        "src": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
+        "width": 800,
+        "height": 540,
+        "title": "Forehead above the cast’s brows",
+        "alt": "Forehead above the cast’s brows in Joseph’s cast at the left of the complete photograph",
+        "caption": "The cast provides contour, not a living hairline. BYU item 4109, catalogued 2001; courtesy of LDS Church Archives, public-domain designation. This photograph is a later comparison source, not an established original creation input.",
+        "owner": "#portrait-section-6",
+        "sources": [
+          {
+            "label": "View the BYU catalogue and rights record",
+            "url": "https://contentdm.lib.byu.edu/digital/collection/RelEd/id/4109/rec/5"
+          },
+          {
+            "label": "Read the museum’s mask history",
+            "url": "https://www.churchofjesuschrist.org/learn/history/sites/church-history-museum/collections/joseph-and-hyrum-smith-death-masks?lang=eng"
+          }
+        ],
+        "detail_window": [
+          75,
+          50,
+          236,
+          130
+        ],
+        "label": "Historical cast photograph · detail",
+        "owner_label": "Continue this research chapter"
+      },
+      {
+        "kind": "reference",
+        "src": "assets/research/joseph-documents/quincy-1883-p380.png",
+        "width": 736,
+        "height": 1110,
+        "title": "Quincy’s later description of the forehead",
+        "alt": "Quincy’s later description of the forehead — Josiah Quincy, Figures of the Past, 1883, printed p. 380. A later memoir, distinct from his May 1844 letter.",
+        "caption": "This anatomical description belongs to the 1883 memoir, not the separate 1844 letter. Josiah Quincy, Figures of the Past, 1883, printed p. 380. A later memoir, distinct from his May 1844 letter.",
+        "label": "Historical document · later printing",
+        "native_display": true,
+        "owner": "#portrait-section-6",
+        "sources": [
+          {
+            "label": "Read the complete source page",
+            "url": "https://archive.org/details/figurespast00quingoog/page/n393/mode/1up"
+          }
+        ],
+        "detail_window": [
+          131,
+          719,
+          480,
+          81
+        ],
+        "owner_label": "Continue this research chapter"
+      },
+      {
+        "kind": "original",
+        "id": "light-and-nose-relief-comparison",
+        "src": "assets/research/joseph-originals/light-and-nose-relief-comparison.png",
+        "width": 1536,
+        "height": 1024,
+        "title": "Light changes what seems prominent",
+        "alt": "Light changes what seems prominent — newly made interpretive Joseph artwork",
+        "caption": "Even light and side light give different impressions of the nose, brow and cheek. This explanatory pair reminds us to consider illumination before treating a shadow as a structural difference. It is not a controlled relighting test.",
+        "owner": "#portrait-section-6",
+        "owner_label": "Continue this research chapter",
+        "label": "New artwork · explanatory interpretation",
+        "sources": [
+          {
+            "label": "Read the history and limits of the casts",
+            "url": "https://www.churchofjesuschrist.org/learn/history/sites/church-history-museum/collections/joseph-and-hyrum-smith-death-masks?lang=eng"
+          }
+        ]
+      }
+    ]
+  },
+  "03": {
+    "explanation": [
+      "The portrait retains a prominent bridge and rounded nasal tip. The cast and the profile engraving provide different views of this central feature. [1,3]"
+    ],
+    "limits": "The engraving passes through an artist and engraver; the cast photograph has its own angle and lighting. No exact profile registration was performed.",
+    "visuals": [
+      {
+        "kind": "reference",
+        "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+        "width": 1312,
+        "height": 1199,
+        "title": "Bridge, tip and nasal breadth",
+        "alt": "Bridge, tip and nasal breadth in the unchanged adopted Joseph portrait",
+        "caption": "This detail shows the adopted shape, not a measurement. Detail window of the unchanged modern portrait; open the complete image for context.",
+        "owner": "#portrait-section-6",
+        "sources": [],
+        "detail_window": [
+          588,
+          340,
+          161,
+          239
+        ],
+        "label": "Adopted portrait · native-source detail",
+        "owner_label": "Continue this research chapter"
+      },
+      {
+        "kind": "reference",
+        "src": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
+        "width": 800,
+        "height": 540,
+        "title": "Nose in the surviving cast",
+        "alt": "Nose in the surviving cast in Joseph’s cast at the left of the complete photograph",
+        "caption": "Observe the bridge and nostril region with the photograph’s lighting in mind. BYU item 4109, catalogued 2001; courtesy of LDS Church Archives, public-domain designation. This photograph is a later comparison source, not an established original creation input.",
+        "owner": "#portrait-section-6",
+        "sources": [
+          {
+            "label": "View the BYU catalogue and rights record",
+            "url": "https://contentdm.lib.byu.edu/digital/collection/RelEd/id/4109/rec/5"
+          },
+          {
+            "label": "Read the museum’s mask history",
+            "url": "https://www.churchofjesuschrist.org/learn/history/sites/church-history-museum/collections/joseph-and-hyrum-smith-death-masks?lang=eng"
+          }
+        ],
+        "detail_window": [
+          139,
+          178,
+          103,
+          145
+        ],
+        "label": "Historical cast photograph · detail",
+        "owner_label": "Continue this research chapter"
+      },
+      {
+        "kind": "reference",
+        "src": "assets/research/joseph-documents/pelton-after-maudsley-1842.jpg",
+        "width": 254,
+        "height": 324,
+        "native_display": true,
+        "title": "An 1842 engraving after Maudsley",
+        "label": "Historical engraving · cropped detail",
+        "alt": "Upper-bust detail of Oliver Pelton’s engraved right-facing profile of Joseph Smith in uniform, after Maudsley",
+        "caption": "A detail of Oliver Pelton’s engraving after Maudsley, published in Bennett’s The History of the Saints (1842). Hatch’s reproduced figure corroborates the image; the exact scan ancestry of this small reproduction remains unresolved. It is not the unidentified sitting drawing, a photograph, or a calibrated anatomical reference.",
+        "owner": "#portrait-section-6",
+        "owner_label": "Continue this research chapter",
+        "sources": [
+          {
+            "label": "Read the museum’s original-versus-copy account",
+            "url": "https://history.churchofjesuschrist.org/media-exhibit/sutcliffe-maudsley/lt-general-joseph-smith?from=home&lang=eng"
+          },
+          {
+            "label": "Read Hatch’s illustrated chapter (PDF)",
+            "url": "https://contentdm.lib.byu.edu/digital/api/collection/rsc/id/2135/download"
+          },
+          {
+            "label": "Image provenance and public-domain record",
+            "url": "https://commons.wikimedia.org/wiki/File:Joseph_Smith_Maudsley_Portrait_1842-06-25.jpg"
+          }
+        ]
+      },
+      {
+        "kind": "original",
+        "id": "adopted-nose-study",
+        "src": "assets/research/joseph-originals/adopted-nose-study.png",
+        "width": 1536,
+        "height": 1024,
+        "title": "Bridge, tip and breadth",
+        "alt": "Bridge, tip and breadth in a new illustration using our adopted Joseph likeness",
+        "caption": "The light follows the bridge to the rounded tip and the sides of the nose. This new illustration makes those choices easier to see; it does not establish a measured fit to the cast.",
+        "owner": "#portrait-section-6",
+        "owner_label": "Continue this research chapter",
+        "label": "New artwork · feature study",
+        "sources": [
+          {
+            "label": "Read the history and limits of the casts",
+            "url": "https://www.churchofjesuschrist.org/learn/history/sites/church-history-museum/collections/joseph-and-hyrum-smith-death-masks?lang=eng"
+          },
+          {
+            "label": "Read the museum account of Maudsley’s profile",
+            "url": "https://history.churchofjesuschrist.org/media-exhibit/sutcliffe-maudsley/lt-general-joseph-smith?from=home&lang=eng"
+          }
+        ]
+      }
+    ]
+  },
+  "04": {
+    "explanation": [
+      "The skin between nose and mouth is distinct from the red part of the upper lip. The portrait shows a moderate upper lip and fuller lower lip; the later Gazette transcription describes thin lips. These statements should not be treated as one measurement. [11]"
+    ],
+    "limits": "A closed postmortem mouth cannot determine every living mouth position or the appearance of a smile.",
+    "visuals": [
+      {
+        "kind": "reference",
+        "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+        "width": 1312,
+        "height": 1199,
+        "title": "Upper-lip distance and mouth",
+        "alt": "Upper-lip distance and mouth in the unchanged adopted Joseph portrait",
+        "caption": "The space above the lip and the lip itself are both visible. Detail window of the unchanged modern portrait; open the complete image for context.",
+        "owner": "#portrait-section-6",
+        "sources": [],
+        "detail_window": [
+          553,
+          559,
+          223,
+          149
+        ],
+        "label": "Adopted portrait · native-source detail",
+        "owner_label": "Continue this research chapter"
+      },
+      {
+        "kind": "reference",
+        "src": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
+        "width": 800,
+        "height": 540,
+        "title": "Mouth in the cast",
+        "alt": "Mouth in the cast in Joseph’s cast at the left of the complete photograph",
+        "caption": "The closed cast mouth supplies limited contour evidence. BYU item 4109, catalogued 2001; courtesy of LDS Church Archives, public-domain designation. This photograph is a later comparison source, not an established original creation input.",
+        "owner": "#portrait-section-6",
+        "sources": [
+          {
+            "label": "View the BYU catalogue and rights record",
+            "url": "https://contentdm.lib.byu.edu/digital/collection/RelEd/id/4109/rec/5"
+          },
+          {
+            "label": "Read the museum’s mask history",
+            "url": "https://www.churchofjesuschrist.org/learn/history/sites/church-history-museum/collections/joseph-and-hyrum-smith-death-masks?lang=eng"
+          }
+        ],
+        "detail_window": [
+          109,
+          329,
+          165,
+          95
+        ],
+        "label": "Historical cast photograph · detail",
+        "owner_label": "Continue this research chapter"
+      },
+      {
+        "kind": "reference",
+        "src": "assets/research/joseph-documents/gazette-transmission-1916-p102.png",
+        "width": 390,
+        "height": 628,
+        "title": "The transmitted lip description",
+        "alt": "The transmitted lip description — The Birth of Mormonism, 1916, appendix C, printed p. 102. This later book attributes the description to an April 1844 letter printed in the Saint Louis Weekly Gazette; the original newspaper issue remains unverified.",
+        "caption": "The passage distinguishes complexion, cheeks and lips, then adds the writer’s judgments. The Birth of Mormonism, 1916, appendix C, printed p. 102. This later book attributes the description to an April 1844 letter printed in the Saint Louis Weekly Gazette; the original newspaper issue remains unverified.",
+        "label": "Historical document · later printing",
+        "native_display": true,
+        "owner": "#portrait-section-6",
+        "sources": [
+          {
+            "label": "Read the complete source page",
+            "url": "https://archive.org/details/birthofmormonism00adam_0/page/n103/mode/1up"
+          },
+          {
+            "label": "Read the later book’s attribution",
+            "url": "https://archive.org/details/birthofmormonism00adam_0/page/n101/mode/1up"
+          }
+        ],
+        "detail_window": [
+          46,
+          179,
+          319,
+          85
+        ],
+        "owner_label": "Continue this research chapter"
+      },
+      {
+        "kind": "original",
+        "id": "adopted-mouth-study",
+        "src": "assets/research/joseph-originals/adopted-mouth-study.png",
+        "width": 1536,
+        "height": 1024,
+        "title": "Above the mouth and within the lips",
+        "alt": "Above the mouth and within the lips in a new illustration using our adopted Joseph likeness",
+        "caption": "The skin between nose and mouth is distinct from the colored surface of the upper lip. Keeping those regions separate helps us read a verbal description more carefully. New explanatory artwork.",
+        "owner": "#portrait-section-6",
+        "owner_label": "Continue this research chapter",
+        "label": "New artwork · feature study",
+        "sources": [
+          {
+            "label": "Read the later Gazette description",
+            "url": "https://archive.org/details/birthofmormonism00adam_0/page/n103/mode/1up"
+          },
+          {
+            "label": "Read the history and limits of the casts",
+            "url": "https://www.churchofjesuschrist.org/learn/history/sites/church-history-museum/collections/joseph-and-hyrum-smith-death-masks?lang=eng"
+          }
+        ]
+      }
+    ]
+  },
+  "05": {
+    "explanation": [
+      "The adopted chin has rounded-square corners and a firm lower contour. The cast offers a physical reference for discussing that shape. [1]"
+    ],
+    "limits": "Cast damage, coverage and orientation limit chin-width and projection comparisons. No corrective measurement is established.",
+    "visuals": [
+      {
+        "kind": "reference",
+        "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+        "width": 1312,
+        "height": 1199,
+        "title": "Chin and lower jaw",
+        "alt": "Chin and lower jaw in the unchanged adopted Joseph portrait",
+        "caption": "The retained lower-face shape can be inspected in the original pixels. Detail window of the unchanged modern portrait; open the complete image for context.",
+        "owner": "#portrait-section-7",
+        "sources": [],
+        "detail_window": [
+          419,
+          679,
+          419,
+          187
+        ],
+        "label": "Adopted portrait · native-source detail",
+        "owner_label": "Continue this research chapter"
+      },
+      {
+        "kind": "reference",
+        "src": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
+        "width": 800,
+        "height": 540,
+        "title": "Chin and jaw in the cast",
+        "alt": "Chin and jaw in the cast in Joseph’s cast at the left of the complete photograph",
+        "caption": "Surface condition is part of the evidence and must remain visible. BYU item 4109, catalogued 2001; courtesy of LDS Church Archives, public-domain designation. This photograph is a later comparison source, not an established original creation input.",
+        "owner": "#portrait-section-7",
+        "sources": [
+          {
+            "label": "View the BYU catalogue and rights record",
+            "url": "https://contentdm.lib.byu.edu/digital/collection/RelEd/id/4109/rec/5"
+          },
+          {
+            "label": "Read the museum’s mask history",
+            "url": "https://www.churchofjesuschrist.org/learn/history/sites/church-history-museum/collections/joseph-and-hyrum-smith-death-masks?lang=eng"
+          }
+        ],
+        "detail_window": [
+          82,
+          392,
+          218,
+          131
+        ],
+        "label": "Historical cast photograph · detail",
+        "owner_label": "Continue this research chapter"
+      },
+      {
+        "kind": "original",
+        "id": "viewpoint-jaw-outline-comparison",
+        "src": "assets/research/joseph-originals/viewpoint-jaw-outline-comparison.png",
+        "width": 1536,
+        "height": 1024,
+        "title": "Breadth from the front, projection from the side",
+        "alt": "Breadth from the front, projection from the side — newly made interpretive Joseph artwork",
+        "caption": "A frontal view reveals breadth; a near-profile reveals the forehead, nose, lips and chin in silhouette. These newly imagined views explain why viewpoint matters. They are not calibrated projections or evidence of Joseph’s unseen anatomy.",
+        "owner": "#portrait-section-7",
+        "owner_label": "Continue this research chapter",
+        "label": "New artwork · explanatory interpretation",
+        "sources": [
+          {
+            "label": "Read the history and limits of the casts",
+            "url": "https://www.churchofjesuschrist.org/learn/history/sites/church-history-museum/collections/joseph-and-hyrum-smith-death-masks?lang=eng"
+          },
+          {
+            "label": "Read the museum account of Maudsley’s profile",
+            "url": "https://history.churchofjesuschrist.org/media-exhibit/sutcliffe-maudsley/lt-general-joseph-smith?from=home&lang=eng"
+          }
+        ]
+      }
+    ]
+  },
+  "06": {
+    "explanation": [
+      "The adopted eyes are blue-gray. Haven’s 1843-dated letter, printed in 1890, describes blue eyes; the later Gazette transcription describes light hazel. [11,21]",
+      "Blue-gray remains an artistic interpretation within conflicting descriptions. It was not recovered from plaster."
+    ],
+    "limits": "Neither a death cast nor a monochrome portrait establishes pigmentation. Haven’s autograph and the original Gazette issue were not inspected.",
+    "visuals": [
+      {
+        "kind": "reference",
+        "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+        "width": 1312,
+        "height": 1199,
+        "title": "The adopted blue-gray iris",
+        "alt": "The adopted blue-gray iris in the unchanged adopted Joseph portrait",
+        "caption": "A close window of one eye in the unchanged portrait; its exact color is interpretive. Detail window of the unchanged modern portrait; open the complete image for context.",
+        "owner": "#portrait-section-7",
+        "sources": [],
+        "detail_window": [
+          492,
+          365,
+          98,
+          61
+        ],
+        "label": "Adopted portrait · native-source detail",
+        "owner_label": "Continue this research chapter"
+      },
+      {
+        "kind": "reference",
+        "src": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
+        "width": 800,
+        "height": 540,
+        "title": "What the closed lids can preserve",
+        "alt": "Closed lids in Joseph’s cast in Joseph’s cast at the left of the complete photograph",
+        "caption": "The cast preserves closed eyelids and surrounding form, not the color of a living iris. Read the blue and hazel descriptions beside the modern artistic choice. This photograph was consulted in the later research, not recovered as an original creation input.",
+        "owner": "#portrait-section-7",
+        "sources": [
+          {
+            "label": "View the BYU catalogue and rights record",
+            "url": "https://contentdm.lib.byu.edu/digital/collection/RelEd/id/4109/rec/5"
+          },
+          {
+            "label": "Read the museum’s mask history",
+            "url": "https://www.churchofjesuschrist.org/learn/history/sites/church-history-museum/collections/joseph-and-hyrum-smith-death-masks?lang=eng"
+          }
+        ],
+        "detail_window": [
+          63,
+          173,
+          255,
+          75
+        ],
+        "label": "Historical cast photograph · detail",
+        "owner_label": "Continue this research chapter"
+      },
+      {
+        "kind": "reference",
+        "src": "assets/research/joseph-documents/haven-1890-p621.png",
+        "width": 1018,
+        "height": 1500,
+        "title": "Blue eyes in Haven’s published letter",
+        "alt": "Blue eyes in Haven’s published letter — Charlotte Haven, A Girl’s Letters from Nauvoo, published December 1890, printed p. 621. The letter is dated January 1843; its autograph and editorial transmission have not been inspected.",
+        "caption": "The dated-letter text was printed decades later; its moral judgments do not validate anatomy. Charlotte Haven, A Girl’s Letters from Nauvoo, published December 1890, printed p. 621. The letter is dated January 1843; its autograph and editorial transmission have not been inspected.",
+        "label": "Historical document · later printing",
+        "native_display": true,
+        "owner": "#portrait-section-7",
+        "sources": [
+          {
+            "label": "Read the complete source page",
+            "url": "https://archive.org/details/sim_overland-monthly-and-out-west-magazine_1890-12_16_96/page/n64/mode/1up"
+          }
+        ],
+        "detail_window": [
+          118,
+          367,
+          362,
+          92
+        ],
+        "owner_label": "Continue this research chapter"
+      },
+      {
+        "kind": "reference",
+        "src": "assets/research/joseph-documents/gazette-transmission-1916-p102.png",
+        "width": 390,
+        "height": 628,
+        "title": "Hazel in the later Gazette transmission",
+        "alt": "Hazel in the later Gazette transmission — The Birth of Mormonism, 1916, appendix C, printed p. 102. This later book attributes the description to an April 1844 letter printed in the Saint Louis Weekly Gazette; the original newspaper issue remains unverified.",
+        "caption": "The color description is visible here; the original newspaper remains unverified. The Birth of Mormonism, 1916, appendix C, printed p. 102. This later book attributes the description to an April 1844 letter printed in the Saint Louis Weekly Gazette; the original newspaper issue remains unverified.",
+        "label": "Historical document · later printing",
+        "native_display": true,
+        "owner": "#portrait-section-7",
+        "sources": [
+          {
+            "label": "Read the complete source page",
+            "url": "https://archive.org/details/birthofmormonism00adam_0/page/n103/mode/1up"
+          },
+          {
+            "label": "Read the later book’s attribution",
+            "url": "https://archive.org/details/birthofmormonism00adam_0/page/n101/mode/1up"
+          }
+        ],
+        "detail_window": [
+          47,
+          363,
+          321,
+          79
+        ],
+        "owner_label": "Continue this research chapter"
+      },
+      {
+        "kind": "original",
+        "id": "adopted-blue-eye-study",
+        "src": "assets/research/joseph-originals/adopted-blue-eye-study.png",
+        "width": 1536,
+        "height": 1024,
+        "title": "The living color the cast cannot retain",
+        "alt": "The living color the cast cannot retain — newly made interpretive Joseph artwork",
+        "caption": "Blue-gray irises bring the adopted face to life. This new illustration clarifies the artistic choice; the plaster contains no evidence of iris color. The full artwork remains available when opened.",
+        "owner": "#portrait-section-7",
+        "owner_label": "Continue this research chapter",
+        "label": "New artwork · explanatory interpretation",
+        "sources": [
+          {
+            "label": "Read Haven’s published blue-eye description",
+            "url": "https://archive.org/details/sim_overland-monthly-and-out-west-magazine_1890-12_16_96/page/n64/mode/1up"
+          },
+          {
+            "label": "Read the later hazel-eye description",
+            "url": "https://archive.org/details/birthofmormonism00adam_0/page/n103/mode/1up"
+          }
+        ],
+        "detail_window": [
+          350,
+          245,
+          850,
+          260
+        ]
+      }
+    ]
+  },
+  "07": {
+    "explanation": [
+      "The portrait gives Joseph open, attentive eyes with natural lid folds. The cast records closed lids; Haven’s printed description gives an impression of eyes set back in the head. [1,21]"
+    ],
+    "limits": "Closed lids cannot fix living eye opening. Light and head angle also change the apparent depth of the eyes.",
+    "visuals": [
+      {
+        "kind": "reference",
+        "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+        "width": 1312,
+        "height": 1199,
+        "title": "Living eyelids and lower folds",
+        "alt": "Living eyelids and lower folds in the unchanged adopted Joseph portrait",
+        "caption": "The opening and folds belong to the living-face interpretation. Detail window of the unchanged modern portrait; open the complete image for context.",
+        "owner": "#portrait-section-7",
+        "sources": [],
+        "detail_window": [
+          477,
+          368,
+          143,
+          96
+        ],
+        "label": "Adopted portrait · native-source detail",
+        "owner_label": "Continue this research chapter"
+      },
+      {
+        "kind": "reference",
+        "src": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
+        "width": 800,
+        "height": 540,
+        "title": "Closed lids in Joseph’s cast",
+        "alt": "Closed lids in Joseph’s cast in Joseph’s cast at the left of the complete photograph",
+        "caption": "The cast cannot supply a living gaze. BYU item 4109, catalogued 2001; courtesy of LDS Church Archives, public-domain designation. This photograph is a later comparison source, not an established original creation input.",
+        "owner": "#portrait-section-7",
+        "sources": [
+          {
+            "label": "View the BYU catalogue and rights record",
+            "url": "https://contentdm.lib.byu.edu/digital/collection/RelEd/id/4109/rec/5"
+          },
+          {
+            "label": "Read the museum’s mask history",
+            "url": "https://www.churchofjesuschrist.org/learn/history/sites/church-history-museum/collections/joseph-and-hyrum-smith-death-masks?lang=eng"
+          }
+        ],
+        "detail_window": [
+          63,
+          173,
+          255,
+          75
+        ],
+        "label": "Historical cast photograph · detail",
+        "owner_label": "Continue this research chapter"
+      },
+      {
+        "kind": "reference",
+        "src": "assets/research/joseph-documents/haven-1890-p621.png",
+        "width": 1018,
+        "height": 1500,
+        "title": "An observer’s impression of eye depth",
+        "alt": "An observer’s impression of eye depth — Charlotte Haven, A Girl’s Letters from Nauvoo, published December 1890, printed p. 621. The letter is dated January 1843; its autograph and editorial transmission have not been inspected.",
+        "caption": "Read the physical description separately from the writer’s character judgments. Charlotte Haven, A Girl’s Letters from Nauvoo, published December 1890, printed p. 621. The letter is dated January 1843; its autograph and editorial transmission have not been inspected.",
+        "label": "Historical document · later printing",
+        "native_display": true,
+        "owner": "#portrait-section-7",
+        "sources": [
+          {
+            "label": "Read the complete source page",
+            "url": "https://archive.org/details/sim_overland-monthly-and-out-west-magazine_1890-12_16_96/page/n64/mode/1up"
+          }
+        ],
+        "detail_window": [
+          118,
+          367,
+          362,
+          113
+        ],
+        "owner_label": "Continue this research chapter"
+      }
+    ]
+  },
+  "08": {
+    "explanation": [
+      "The portrait has substantial brows and relatively unobtrusive lashes. The Gazette description transmitted in 1916 emphasizes long, light lashes and light, thick brows. [11]"
+    ],
+    "limits": "This is one transmitted observer’s description, not a count or measurement of hairs. The cast does not resolve their color or living appearance.",
+    "visuals": [
+      {
+        "kind": "reference",
+        "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+        "width": 1312,
+        "height": 1199,
+        "title": "Brow hairs and lashes",
+        "alt": "Brow hairs and lashes in the unchanged adopted Joseph portrait",
+        "caption": "Native portrait detail preserves the current brow and lash treatment. Detail window of the unchanged modern portrait; open the complete image for context.",
+        "owner": "#portrait-section-7",
+        "sources": [],
+        "detail_window": [
+          468,
+          321,
+          169,
+          107
+        ],
+        "label": "Adopted portrait · native-source detail",
+        "owner_label": "Continue this research chapter"
+      },
+      {
+        "kind": "reference",
+        "src": "assets/research/joseph-documents/gazette-transmission-1916-p102.png",
+        "width": 390,
+        "height": 628,
+        "title": "Lashes and brows in the transmitted account",
+        "alt": "Lashes and brows in the transmitted account — The Birth of Mormonism, 1916, appendix C, printed p. 102. This later book attributes the description to an April 1844 letter printed in the Saint Louis Weekly Gazette; the original newspaper issue remains unverified.",
+        "caption": "The lower passage describes lashes and brows; subjective judgments remain the narrator’s. The Birth of Mormonism, 1916, appendix C, printed p. 102. This later book attributes the description to an April 1844 letter printed in the Saint Louis Weekly Gazette; the original newspaper issue remains unverified.",
+        "label": "Historical document · later printing",
+        "native_display": true,
+        "owner": "#portrait-section-7",
+        "sources": [
+          {
+            "label": "Read the complete source page",
+            "url": "https://archive.org/details/birthofmormonism00adam_0/page/n103/mode/1up"
+          },
+          {
+            "label": "Read the later book’s attribution",
+            "url": "https://archive.org/details/birthofmormonism00adam_0/page/n101/mode/1up"
+          }
+        ],
+        "detail_window": [
+          46,
+          399,
+          322,
+          116
+        ],
+        "owner_label": "Continue this research chapter"
+      }
+    ]
+  },
+  "09": {
+    "explanation": [
+      "The artwork uses brown hair with lighter strands. Pratt’s retrospective account describes light hair, and Haven’s published letter also uses a broad light-hair description. [9,21]"
+    ],
+    "limits": "These words do not determine an exact brown or blond shade. Age, illumination and terminology can affect the descriptions.",
+    "visuals": [
+      {
+        "kind": "reference",
+        "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+        "width": 1312,
+        "height": 1199,
+        "title": "Brown hair and lighter strands",
+        "alt": "Brown hair and lighter strands in the unchanged adopted Joseph portrait",
+        "caption": "The selected color is visible in the original artwork. Detail window of the unchanged modern portrait; open the complete image for context.",
+        "owner": "#portrait-section-8",
+        "sources": [],
+        "detail_window": [
+          387,
+          16,
+          415,
+          177
+        ],
+        "label": "Adopted portrait · native-source detail",
+        "owner_label": "Continue this research chapter"
+      },
+      {
+        "kind": "reference",
+        "src": "assets/research/joseph-documents/pratt-1874-p47.png",
+        "width": 948,
+        "height": 1450,
+        "title": "Light hair in Pratt’s memoir",
+        "alt": "Light hair in Pratt’s memoir — Parley P. Pratt, Autobiography, 1874, printed p. 47. Retrospective memoir; this is the published book page, not a contemporary diary.",
+        "caption": "The physical description is retrospective and posthumously published. Parley P. Pratt, Autobiography, 1874, printed p. 47. Retrospective memoir; this is the published book page, not a contemporary diary.",
+        "label": "Historical document · later printing",
+        "native_display": true,
+        "owner": "#portrait-section-8",
+        "sources": [
+          {
+            "label": "Read the complete source page",
+            "url": "https://archive.org/details/autobiographyofp1874prat/page/n64/mode/1up"
+          }
+        ],
+        "detail_window": [
+          49,
+          366,
+          731,
+          111
+        ],
+        "owner_label": "Continue this research chapter"
+      }
+    ]
+  },
+  "10": {
+    "explanation": [
+      "The adopted hair is swept back with visible wave and volume. A description of fine hair concerns strand quality; a hairstyle concerns how the hair is arranged. The two should be considered separately. [11]"
+    ],
+    "limits": "The cast provides no scalp hairstyle, and an engraved coiffure cannot prove natural curl or a single everyday arrangement.",
+    "visuals": [
+      {
+        "kind": "reference",
+        "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+        "width": 1312,
+        "height": 1199,
+        "title": "The arranged sweep of the hair",
+        "alt": "The arranged sweep of the hair in the unchanged adopted Joseph portrait",
+        "caption": "The visible waves are part of this portrait’s styling. Detail window of the unchanged modern portrait; open the complete image for context.",
+        "owner": "#portrait-section-8",
+        "sources": [],
+        "detail_window": [
+          273,
+          42,
+          318,
+          281
+        ],
+        "label": "Adopted portrait · native-source detail",
+        "owner_label": "Continue this research chapter"
+      },
+      {
+        "kind": "reference",
+        "src": "assets/research/joseph-documents/gazette-transmission-1916-p102.png",
+        "width": 390,
+        "height": 628,
+        "title": "Fine hair in the transmitted account",
+        "alt": "Fine hair in the transmitted account — The Birth of Mormonism, 1916, appendix C, printed p. 102. This later book attributes the description to an April 1844 letter printed in the Saint Louis Weekly Gazette; the original newspaper issue remains unverified.",
+        "caption": "This passage describes hair quality and lightness, without measuring curl. The Birth of Mormonism, 1916, appendix C, printed p. 102. This later book attributes the description to an April 1844 letter printed in the Saint Louis Weekly Gazette; the original newspaper issue remains unverified.",
+        "label": "Historical document · later printing",
+        "native_display": true,
+        "owner": "#portrait-section-8",
+        "sources": [
+          {
+            "label": "Read the complete source page",
+            "url": "https://archive.org/details/birthofmormonism00adam_0/page/n103/mode/1up"
+          },
+          {
+            "label": "Read the later book’s attribution",
+            "url": "https://archive.org/details/birthofmormonism00adam_0/page/n101/mode/1up"
+          }
+        ],
+        "detail_window": [
+          49,
+          179,
+          314,
+          44
+        ],
+        "owner_label": "Continue this research chapter"
+      },
+      {
+        "kind": "reference",
+        "src": "assets/research/joseph-documents/pelton-after-maudsley-1842.jpg",
+        "width": 254,
+        "height": 324,
+        "native_display": true,
+        "title": "An 1842 engraving after Maudsley",
+        "label": "Historical engraving · cropped detail",
+        "alt": "Upper-bust detail of Oliver Pelton’s engraved right-facing profile of Joseph Smith in uniform, after Maudsley",
+        "caption": "A detail of Oliver Pelton’s engraving after Maudsley, published in Bennett’s The History of the Saints (1842). Hatch’s reproduced figure corroborates the image; the exact scan ancestry of this small reproduction remains unresolved. It is not the unidentified sitting drawing, a photograph, or a calibrated anatomical reference.",
+        "owner": "#portrait-section-8",
+        "owner_label": "Continue this research chapter",
+        "sources": [
+          {
+            "label": "Read the museum’s original-versus-copy account",
+            "url": "https://history.churchofjesuschrist.org/media-exhibit/sutcliffe-maudsley/lt-general-joseph-smith?from=home&lang=eng"
+          },
+          {
+            "label": "Read Hatch’s illustrated chapter (PDF)",
+            "url": "https://contentdm.lib.byu.edu/digital/api/collection/rsc/id/2135/download"
+          },
+          {
+            "label": "Image provenance and public-domain record",
+            "url": "https://commons.wikimedia.org/wiki/File:Joseph_Smith_Maudsley_Portrait_1842-06-25.jpg"
+          }
+        ]
+      },
+      {
+        "kind": "original",
+        "id": "adopted-hair-study",
+        "src": "assets/research/joseph-originals/adopted-hair-study.png",
+        "width": 1536,
+        "height": 1024,
+        "title": "A sweep made from individual strands",
+        "alt": "A sweep made from individual strands — newly made interpretive Joseph artwork",
+        "caption": "The new illustration makes the sweep, waves and lighter strands easy to inspect. Arrangement is an artistic choice; descriptions of fine or light hair do not fix an exact hairstyle.",
+        "owner": "#portrait-section-8",
+        "owner_label": "Continue this research chapter",
+        "label": "New artwork · explanatory interpretation",
+        "sources": [
+          {
+            "label": "Read the later Gazette description",
+            "url": "https://archive.org/details/birthofmormonism00adam_0/page/n103/mode/1up"
+          },
+          {
+            "label": "Read Pratt’s remembered appearance and manner",
+            "url": "https://archive.org/details/autobiographyofp1874prat/page/n64/mode/1up"
+          }
+        ]
+      }
+    ]
+  },
+  "11": {
+    "explanation": [
+      "The portrait uses fair, warm skin with visible pores and reddish cheeks. Historical light-complexion descriptions offer broad support for a light palette, but not for each mark or degree of warmth. [9,21]"
+    ],
+    "limits": "Plaster supplies no living skin color. Individual freckles, pores, redness and fine lines remain artistic choices.",
+    "visuals": [
+      {
+        "kind": "reference",
+        "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+        "width": 1312,
+        "height": 1199,
+        "title": "Cheek color and skin texture",
+        "alt": "Cheek color and skin texture in the unchanged adopted Joseph portrait",
+        "caption": "This detail exposes the artwork’s individual skin marks and color choices. Detail window of the unchanged modern portrait; open the complete image for context.",
+        "owner": "#portrait-section-8",
+        "sources": [],
+        "detail_window": [
+          754,
+          446,
+          98,
+          151
+        ],
+        "label": "Adopted portrait · native-source detail",
+        "owner_label": "Continue this research chapter"
+      },
+      {
+        "kind": "reference",
+        "src": "assets/research/joseph-documents/pratt-1874-p47.png",
+        "width": 948,
+        "height": 1450,
+        "title": "A broad complexion description",
+        "alt": "A broad complexion description — Parley P. Pratt, Autobiography, 1874, printed p. 47. Retrospective memoir; this is the published book page, not a contemporary diary.",
+        "caption": "Pratt’s later memoir supplies descriptive words, not a calibrated skin sample. Parley P. Pratt, Autobiography, 1874, printed p. 47. Retrospective memoir; this is the published book page, not a contemporary diary.",
+        "label": "Historical document · later printing",
+        "native_display": true,
+        "owner": "#portrait-section-8",
+        "sources": [
+          {
+            "label": "Read the complete source page",
+            "url": "https://archive.org/details/autobiographyofp1874prat/page/n64/mode/1up"
+          }
+        ],
+        "detail_window": [
+          48,
+          371,
+          728,
+          98
+        ],
+        "owner_label": "Continue this research chapter"
+      }
+    ]
+  },
+  "12": {
+    "explanation": [
+      "The adopted portrait is clean-shaven. Pratt remembered very little beard, while Quincy described several days of growth during his May 1844 visit. Grooming can change between occasions. [8,9]"
+    ],
+    "limits": "Quincy’s 1883 memoir is shown here as a later source; his contemporary letter is separate. Neither requires a permanent bearded identity.",
+    "visuals": [
+      {
+        "kind": "reference",
+        "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+        "width": 1312,
+        "height": 1199,
+        "title": "The clean-shaven mouth and chin",
+        "alt": "The clean-shaven mouth and chin in the unchanged adopted Joseph portrait",
+        "caption": "Grooming in this portrait is an artistic choice for this presentation. Detail window of the unchanged modern portrait; open the complete image for context.",
+        "owner": "#portrait-section-8",
+        "sources": [],
+        "detail_window": [
+          516,
+          564,
+          279,
+          261
+        ],
+        "label": "Adopted portrait · native-source detail",
+        "owner_label": "Continue this research chapter"
+      },
+      {
+        "kind": "reference",
+        "src": "assets/research/joseph-documents/quincy-1883-p380.png",
+        "width": 736,
+        "height": 1110,
+        "title": "Beard growth in Quincy’s later memoir",
+        "alt": "Beard growth in Quincy’s later memoir — Josiah Quincy, Figures of the Past, 1883, printed p. 380. A later memoir, distinct from his May 1844 letter.",
+        "caption": "The printed passage describes temporary growth. Its clothing wording differs from the contemporary letter. Josiah Quincy, Figures of the Past, 1883, printed p. 380. A later memoir, distinct from his May 1844 letter.",
+        "label": "Historical document · later printing",
+        "native_display": true,
+        "owner": "#portrait-section-8",
+        "sources": [
+          {
+            "label": "Read the complete source page",
+            "url": "https://archive.org/details/figurespast00quingoog/page/n393/mode/1up"
+          }
+        ],
+        "detail_window": [
+          130,
+          797,
+          483,
+          102
+        ],
+        "owner_label": "Continue this research chapter"
+      },
+      {
+        "kind": "original",
+        "id": "quincy-stubble-study",
+        "src": "assets/research/joseph-originals/quincy-stubble-study.png",
+        "width": 1536,
+        "height": 1024,
+        "title": "A visit does not freeze a lifetime of grooming",
+        "alt": "A visit does not freeze a lifetime of grooming — newly made interpretive Joseph artwork",
+        "caption": "Quincy described several days of beard growth during his May 1844 visit. This new scene interprets that temporary appearance; it does not establish an exact beard length or replace the clean-shaven adopted portrait. [8]",
+        "owner": "#portrait-section-8",
+        "owner_label": "Continue this research chapter",
+        "label": "New artwork · explanatory interpretation",
+        "sources": [
+          {
+            "label": "Read Quincy’s May 1844 letter",
+            "url": "https://byustudies.byu.edu/article/josiah-quincys-1844-visit-with-joseph-smith"
+          }
+        ]
+      }
+    ]
+  },
+  "13": {
+    "explanation": [
+      "Joseph was 38 when he died in June 1844. Observers’ estimates of his apparent age differed: Davis thought him older in 1840, while Haven’s published letter called him youthful. [7,21]"
+    ],
+    "limits": "An observer’s age impression is not his birth date. The portrait’s late-thirties appearance remains an interpretation.",
+    "visuals": [
+      {
+        "kind": "reference",
+        "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+        "width": 1312,
+        "height": 1199,
+        "title": "Age in the eyes and cheeks",
+        "alt": "Age in the eyes and cheeks in the unchanged adopted Joseph portrait",
+        "caption": "Fine lines and texture give this interpretation its apparent age. Detail window of the unchanged modern portrait; open the complete image for context.",
+        "owner": "#portrait-section-9",
+        "sources": [],
+        "detail_window": [
+          420,
+          294,
+          451,
+          459
+        ],
+        "label": "Adopted portrait · native-source detail",
+        "owner_label": "Continue this research chapter"
+      },
+      {
+        "kind": "reference",
+        "src": "assets/research/joseph-documents/haven-1890-p621.png",
+        "width": 1018,
+        "height": 1500,
+        "title": "A youthful impression in the published letter",
+        "alt": "A youthful impression in the published letter — Charlotte Haven, A Girl’s Letters from Nauvoo, published December 1890, printed p. 621. The letter is dated January 1843; its autograph and editorial transmission have not been inspected.",
+        "caption": "This is the 1890 printing of an 1843-dated description. Charlotte Haven, A Girl’s Letters from Nauvoo, published December 1890, printed p. 621. The letter is dated January 1843; its autograph and editorial transmission have not been inspected.",
+        "label": "Historical document · later printing",
+        "native_display": true,
+        "owner": "#portrait-section-9",
+        "sources": [
+          {
+            "label": "Read the complete source page",
+            "url": "https://archive.org/details/sim_overland-monthly-and-out-west-magazine_1890-12_16_96/page/n64/mode/1up"
+          }
+        ],
+        "detail_window": [
+          117,
+          367,
+          364,
+          72
+        ],
+        "owner_label": "Continue this research chapter"
+      }
+    ]
+  },
+  "14": {
+    "explanation": [
+      "The portrait’s calm attention is one chosen expression. Pratt’s memoir remembers an affable manner and an unforced smile; those impressions suggest movement and variety rather than one permanent look. [9]"
+    ],
+    "limits": "A fixed cast cannot recover personality or a living smile. A new expression study is contemporary explanatory art, not an eyewitness record.",
+    "visuals": [
+      {
+        "kind": "reference",
+        "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+        "width": 1312,
+        "height": 1199,
+        "title": "The portrait’s attentive expression",
+        "alt": "The portrait’s attentive expression in the unchanged adopted Joseph portrait",
+        "caption": "The relationship of eyes and mouth gives this portrait its present expression. Detail window of the unchanged modern portrait; open the complete image for context.",
+        "owner": "#portrait-section-9",
+        "sources": [],
+        "detail_window": [
+          472,
+          343,
+          366,
+          376
+        ],
+        "label": "Adopted portrait · native-source detail",
+        "owner_label": "Continue this research chapter"
+      },
+      {
+        "kind": "reference",
+        "src": "assets/research/joseph-documents/pratt-1874-p47.png",
+        "width": 948,
+        "height": 1450,
+        "title": "A remembered manner and smile",
+        "alt": "A remembered manner and smile — Parley P. Pratt, Autobiography, 1874, printed p. 47. Retrospective memoir; this is the published book page, not a contemporary diary.",
+        "caption": "This retrospective account describes manner rather than a single posed instant. Parley P. Pratt, Autobiography, 1874, printed p. 47. Retrospective memoir; this is the published book page, not a contemporary diary.",
+        "label": "Historical document · later printing",
+        "native_display": true,
+        "owner": "#portrait-section-9",
+        "sources": [
+          {
+            "label": "Read the complete source page",
+            "url": "https://archive.org/details/autobiographyofp1874prat/page/n64/mode/1up"
+          }
+        ],
+        "detail_window": [
+          48,
+          503,
+          731,
+          146
+        ],
+        "owner_label": "Continue this research chapter"
+      },
+      {
+        "kind": "original",
+        "id": "expression-mouth-cheek-comparison",
+        "src": "assets/research/joseph-originals/expression-mouth-cheek-comparison.png",
+        "width": 1536,
+        "height": 1024,
+        "title": "A small smile changes the face",
+        "alt": "A small smile changes the face — newly made interpretive Joseph artwork",
+        "caption": "Look at the corners of the mouth and the lifted cheeks. This newly made pair illustrates the effect of expression; it is not a recovered smile or a controlled anatomical experiment.",
+        "owner": "#portrait-section-9",
+        "owner_label": "Continue this research chapter",
+        "label": "New artwork · explanatory interpretation",
+        "sources": [
+          {
+            "label": "Read Pratt’s remembered appearance and manner",
+            "url": "https://archive.org/details/autobiographyofp1874prat/page/n64/mode/1up"
+          },
+          {
+            "label": "Read the history and limits of the casts",
+            "url": "https://www.churchofjesuschrist.org/learn/history/sites/church-history-museum/collections/joseph-and-hyrum-smith-death-masks?lang=eng"
+          }
+        ]
+      }
+    ]
+  },
+  "15": {
+    "explanation": [
+      "The adopted eyes, brows and mouth are not perfectly symmetrical. Retaining these visible differences avoids turning a living face into an idealized mirror image."
+    ],
+    "limits": "No reliable evidence reviewed here establishes a prominent diagnostic facial scar. Uneven cast surfaces cannot simply be transferred into living scars.",
+    "visuals": [
+      {
+        "kind": "reference",
+        "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+        "width": 1312,
+        "height": 1199,
+        "title": "Unequal eye and brow contours",
+        "alt": "Unequal eye and brow contours in the unchanged adopted Joseph portrait",
+        "caption": "The two sides are shown together without mirroring or retouching. Detail window of the unchanged modern portrait; open the complete image for context.",
+        "owner": "#portrait-section-9",
+        "sources": [],
+        "detail_window": [
+          457,
+          321,
+          413,
+          128
+        ],
+        "label": "Adopted portrait · native-source detail",
+        "owner_label": "Continue this research chapter"
+      },
+      {
+        "kind": "reference",
+        "src": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
+        "width": 800,
+        "height": 540,
+        "title": "Uneven cast surface and contours",
+        "alt": "Uneven cast surface and contours in Joseph’s cast at the left of the complete photograph",
+        "caption": "Damage and material texture must not be mistaken for documented living scars. BYU item 4109, catalogued 2001; courtesy of LDS Church Archives, public-domain designation. This photograph is a later comparison source, not an established original creation input.",
+        "owner": "#portrait-section-9",
+        "sources": [
+          {
+            "label": "View the BYU catalogue and rights record",
+            "url": "https://contentdm.lib.byu.edu/digital/collection/RelEd/id/4109/rec/5"
+          },
+          {
+            "label": "Read the museum’s mask history",
+            "url": "https://www.churchofjesuschrist.org/learn/history/sites/church-history-museum/collections/joseph-and-hyrum-smith-death-masks?lang=eng"
+          }
+        ],
+        "detail_window": [
+          62,
+          158,
+          270,
+          167
+        ],
+        "label": "Historical cast photograph · detail",
+        "owner_label": "Continue this research chapter"
+      }
+    ]
+  },
+  "16": {
+    "explanation": [
+      "The bust shows a dark coat and white neckcloth. Descriptions of Joseph’s stature and strength concern his whole body; they cannot be verified from this crop. Clothing descriptions also belong to particular occasions. [8,9]"
+    ],
+    "limits": "This portrait does not establish height, weight or body proportions. Quincy’s later work clothes do not prescribe the clothes for every Joseph scene.",
+    "visuals": [
+      {
+        "kind": "reference",
+        "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+        "width": 1312,
+        "height": 1199,
+        "title": "Coat, shoulders and neckcloth",
+        "alt": "Coat, shoulders and neckcloth in the unchanged adopted Joseph portrait",
+        "caption": "The visible garment details are the extent of the bust’s clothing evidence. Detail window of the unchanged modern portrait; open the complete image for context.",
+        "owner": "#portrait-section-9",
+        "sources": [],
+        "detail_window": [
+          165,
+          805,
+          966,
+          394
+        ],
+        "label": "Adopted portrait · native-source detail",
+        "owner_label": "Continue this research chapter"
+      },
+      {
+        "kind": "reference",
+        "src": "assets/research/joseph-documents/pratt-1874-p47.png",
+        "width": 948,
+        "height": 1450,
+        "title": "Build in a retrospective description",
+        "alt": "Build in a retrospective description — Parley P. Pratt, Autobiography, 1874, printed p. 47. Retrospective memoir; this is the published book page, not a contemporary diary.",
+        "caption": "Pratt describes stature, build and strength in words; this is not a body measurement. Parley P. Pratt, Autobiography, 1874, printed p. 47. Retrospective memoir; this is the published book page, not a contemporary diary.",
+        "label": "Historical document · later printing",
+        "native_display": true,
+        "owner": "#portrait-section-9",
+        "sources": [
+          {
+            "label": "Read the complete source page",
+            "url": "https://archive.org/details/autobiographyofp1874prat/page/n64/mode/1up"
+          }
+        ],
+        "detail_window": [
+          49,
+          368,
+          731,
+          76
+        ],
+        "owner_label": "Continue this research chapter"
+      }
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "reviewer": "Newton",
+  "id": "painted-likeness-1842",
+  "source_review_id": "painted-likeness-1842",
+  "prompt_sha256": "410e24804022ac8b4e4da5d0955e3ebe162fa4afa1c2b7fe2655e99460cd61cb",
+  "concur": true,
+  "source_receipt_path": "work\\newton\\combined-originals-preflight-review.json",
+  "source_receipt_sha256": "2219c62988240445beceb3efa30991e3be7b358f2ebb10f6d925e9190df87e91",
+  "source_record": {
+    "id": "painted-likeness-1842",
+    "prompt_sha256": "410e24804022ac8b4e4da5d0955e3ebe162fa4afa1c2b7fe2655e99460cd61cb",
+    "actual_references": [
+      {
+        "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\identities\\joseph-smith-owner-approved-20260914.png",
+        "sha256": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+      }
+    ],
+    "concur": true,
+    "decision": "APPROVED_FOR_GENERATION_ONLY",
+    "notes": "Concur for interpretive generation: September16-20 painting entries freshly checked at JSP p205; Joseph36 correct. Exact pose/easel/room are staging. Do not identify resulting painting as a recovered canvas or treat this as proof of attributed oil fidelity."
+  },
+  "normalization": "Maps reviewed exact asset/prompt to final placement id; preserves explicit decision and full source record. Not a new review or broader approval.",
+  "reference_sha256": [
+    "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+  ]
+}

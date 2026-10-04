@@ -1,0 +1,17 @@
+{
+  "reviewer": "Fermi",
+  "id": "adopted-hair-study",
+  "source_review_id": null,
+  "prompt_sha256": "2a61b741450808fdc5d2761f66b8f1b41fcbbbd9443952defe12565eba8cda13",
+  "concur": true,
+  "source_receipt_path": "work\\fermi\\hair-profile-finished-review.json",
+  "source_receipt_sha256": "b81aaacc6f29792262b3cc3ca0f7685a9eb2875396fe7280b22556a08d38b945",
+  "source_record": {
+    "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-a29f0666-2206-4947-aacd-511f0c9a7117.png",
+    "sha256": "a5b0d48f59d2f7ddb185c947c2828e10d48baa0d8a63fa25b41c5b4d470912ac",
+    "finished_pixels_concur": true,
+    "reason": "Hair crown, swept waves, light-brown strands and hairline readable with recognizable face. Accept for adopted hair arrangement, not an alternative straight-hair test; historical texture tension remains written."
+  },
+  "normalization": "Maps reviewed exact asset/prompt to final placement id; preserves explicit decision and full source record. Not a new review or broader approval.",
+  "sha256": "a5b0d48f59d2f7ddb185c947c2828e10d48baa0d8a63fa25b41c5b4d470912ac"
+}

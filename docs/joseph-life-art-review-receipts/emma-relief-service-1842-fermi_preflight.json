@@ -1,0 +1,32 @@
+{
+  "reviewer": "Fermi",
+  "id": "emma-relief-service-1842",
+  "source_review_id": "service-wardrobe-1842",
+  "prompt_sha256": "8851346d1af369e5f19f24cc460385672da6dca06738dc0ea6c2fac29e2f3477",
+  "concur": true,
+  "source_receipt_path": "work\\fermi\\main-wardrobe-edits-v1.json",
+  "source_receipt_sha256": "bdfa7bedcb4199e1d8d3759f94dbe5f79aac832c81d31de9e560a4d72f02cc62",
+  "source_record": {
+    "id": "service-wardrobe-1842",
+    "prompt": "Make a bounded wardrobe edit to the supplied accepted historical illustration. Preserve every recognizable face, apparent age, eye color, gaze, expression, facial anatomy, natural body fullness, hand and finger positions, action, composition, room and light. Do not slim Emma, change pregnancy/postpartum appearance, or replace anyone with a new actor. The supplied master-derived face is identity evidence, not an instruction to copy one later outfit into every year. Change only the specified clothes and arranged hair; preserve hair color and hairline exactly. Clothing is a researched period-plausible interpretation, not a claim the named people personally owned these precise garments. Natural photographic cloth and folds, no fashion-magazine styling, modern fasteners or modern hat. No text or new scene props. Preserve original input; this replacement does not add a second original count. March1842, Emma37. Preserve exact speaking gesture, face, natural fullness and attendees. Give her formal day dress a deep subdued green wool-silk appearance, retaining a modest white collar and era-appropriate1840s bodice/sleeve structure, without changing body size. Her dark hair is neatly pinned with restrained side curls; do not change hairline or face. Avoid reproducing the same long uniform ringlets and blue cloth of every earlier scene. No bonnet indoors, no new jewelry, crown or institutional badge. Exact fabric and color are artistic choices, not clothing recorded in the minutes.",
+    "prompt_sha256": "8851346d1af369e5f19f24cc460385672da6dca06738dc0ea6c2fac29e2f3477",
+    "actual_references": [
+      {
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-c9357e49-fbbb-4f39-a626-e63209cd31e1.png",
+        "sha256": "fb7c293cc8d0977cb850a44f73b186ec424b11d592df576823c0ef6993bcb755"
+      }
+    ],
+    "source_urls": [
+      "https://www.metmuseum.org/art/collection/search/108029",
+      "https://emuseum.colonialwilliamsburg.org/objects/5757/dress",
+      "https://emuseum.colonialwilliamsburg.org/objects/41221/bonnet"
+    ],
+    "source_limits": "Period garment categories/forms only; exact individual colors, cloth, hairstyle and possession not documented. Garment references do not authorize body measurement claims.",
+    "fermi_generation_only_concur": true,
+    "newton_concur": false
+  },
+  "normalization": "Final placement id mapped to exact prompt/final bytes; source decision preserved, no new broader concurrence.",
+  "reference_sha256": [
+    "fb7c293cc8d0977cb850a44f73b186ec424b11d592df576823c0ef6993bcb755"
+  ]
+}

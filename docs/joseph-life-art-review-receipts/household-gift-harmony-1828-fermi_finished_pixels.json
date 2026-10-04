@@ -1,0 +1,37 @@
+{
+  "reviewer": "Fermi",
+  "id": "household-gift-harmony-1828",
+  "source_review_id": null,
+  "prompt_sha256": "44382e7a01ee126c940400870f1fe32ad437fdcb1a2996ddca1056167e525b5f",
+  "concur": true,
+  "source_receipt_path": "work\\fermi\\comb-wardrobe-whole-image-review.json",
+  "source_receipt_sha256": "e14cd3337ee956620ab1b670c5e538e10ff7f2acad4188d24570ca08aebb58d9",
+  "source_record": {
+    "reviewer": "Fermi",
+    "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-fc587147-0ce5-4961-9397-2ae1406344aa.png",
+    "sha256": "cf1b964c75b6a49536968eaf9a8d19186ce846262e0b9adcc86d053644ca9db6",
+    "prompt_sha256": "44382e7a01ee126c940400870f1fe32ad437fdcb1a2996ddca1056167e525b5f",
+    "review_scope": "WHOLE_FINISHED_IMAGE_ALL_REQUIRED_VISUAL_DIMENSIONS",
+    "checks": {
+      "realism": "Natural photographic skin, cloth, wood and coherent daylight; no visible wax/CGI or rendering artifact.",
+      "identity": "Recognizable Joseph and Emma, separate facial features and original iris/hair colors retained.",
+      "age": "Credible young-adult treatment for22/24, no substantial age regression from accepted parent; exact age not measurable.",
+      "era_garments": "Simple high modest neckline, raised waistband, restrained print and tapered sleeves present; Joseph practical earthy coat/waistcoat and shirt. Plausible1828 interpretation, not exact documented personal costume.",
+      "hair": "Emma pinned back with side curls, original hairline/color retained. Some side ringlets remain; no identical total wardrobe and no new identity.",
+      "gaze": "Joseph attends to Emma while she attends to the offered comb; coherent gift action, no forced eye contact needed.",
+      "expression": "Restrained warmth fits personal gift without exaggerated sentiment.",
+      "hands": "Natural open palm supporting comb, Emma receiving grip and resting hand, Joseph hat-holding hand all coherent; no visible extra digits.",
+      "anatomy": "Body proportions/arms/wrists coherent; natural Emma fullness retained, no obvious unsupported late-pregnancy dome.",
+      "context": "Documented gift purchase after work supported by official home history; exact handoff/doorway/clothing remain interpretation.",
+      "nonclone_visual": "Distinct comb-gift action and earthy wardrobe distinguish from marriage, bedside, writing/service and researchface studies. Replaces its earlier generated parent; parent not counted separately.",
+      "purpose": "Shows household care through a documented modest gift, not generic decorative object."
+    },
+    "whole_image_concur": true,
+    "publication_concur": false,
+    "proposed_owning_route": "joseph-smith-likeness.html",
+    "remaining": "Exact final integrated route uniqueness and desktop/phone assembled checks pending. This whole-image receipt is not a whole-project completion claim."
+  },
+  "normalization": "Final placement id mapped to exact prompt/final bytes; source decision preserved, no new broader concurrence.",
+  "sha256": "cf1b964c75b6a49536968eaf9a8d19186ce846262e0b9adcc86d053644ca9db6",
+  "whole_image_review": true
+}

@@ -1,0 +1,29 @@
+{
+  "reviewer": "Newton",
+  "id": "emma-early-scribe-1828",
+  "source_review_id": "scribe-wardrobe-1828",
+  "prompt_sha256": "6736e13a0086b4293aa61540c762702cc557e4ed68103aefd45907ad05d0dae3",
+  "concur": true,
+  "source_receipt_path": "work\\newton\\main-first-three-final-whole-image-review.json",
+  "source_receipt_sha256": "92998e87c7e94802414197d73ae69232c0e8e2f2bc24508ae49aad9bc05f73f4",
+  "source_record": {
+    "id": "scribe-wardrobe-1828",
+    "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-6796b0b9-aa49-4dfc-94e4-dc718ed6f150.png",
+    "sha256": "bb026ec8537b0a5f0b20e5f98db41c91336345356a0a3c11cd08b9d96e234972",
+    "prompt_sha256": "6736e13a0086b4293aa61540c762702cc557e4ed68103aefd45907ad05d0dae3",
+    "concur": true,
+    "notes": "Accepted: simple high-neck printed cotton, raised gathered waist accommodating pregnancy, fuller upper sleeves narrowing to wrist, pinned hair; actual structure changed rather than blue recolor. Recognizable young-adult faces, attentive writing action, quill and hands retained. Joseph shirt/waistcoat now domestic; no translation apparatus. Exact pregnancy size and garments remain interpretation. Replacement counts once.",
+    "whole_image_checks": {
+      "realism": "Natural skin, paper, quill, woven printed cotton and light.",
+      "likeness_age": "Distinct recognizable Joseph22 and Emma23, prior age improvement retained.",
+      "era_clothing_hair": "Raised gathered waist, simple high neckline and tapered cuffs; restrained print, pinned hair, Joseph domestic waistcoat/shirt. Supported pregnancy context, exact stage silhouette unverified.",
+      "gaze_expression": "Emma attends writing; Joseph speaks toward her, no required mutual gaze for this task.",
+      "anatomy": "Coherent quill grip, resting fingers, seated posture; natural fullness retained.",
+      "context_purpose": "Her supported early scribal role; apparatus absent, page not surviving facsimile; distinct source-grounded work scene."
+    },
+    "scope": "Same exact final pixels independently inspected as a whole; not combined approvals of different versions. Root and assembled-page concurrence pending."
+  },
+  "normalization": "Final placement id mapped to exact prompt/final bytes; source decision preserved, no new broader concurrence.",
+  "sha256": "bb026ec8537b0a5f0b20e5f98db41c91336345356a0a3c11cd08b9d96e234972",
+  "whole_image_review": true
+}

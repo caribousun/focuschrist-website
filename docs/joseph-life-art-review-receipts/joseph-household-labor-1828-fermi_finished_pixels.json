@@ -1,0 +1,26 @@
+{
+  "reviewer": "Fermi",
+  "id": "joseph-household-labor-1828",
+  "source_review_id": "joseph-household-labor-1828",
+  "prompt_sha256": "9e7ee4eff3d6364cd7bc5ed58aac7e3e194a4fc0cea36fb98eee26f8c8e75a92",
+  "concur": true,
+  "source_receipt_path": "work\\fermi\\labor-journey-whole-image-review.json",
+  "source_receipt_sha256": "2b23edd4508445214624f4e2c683127aaf3a452c19d1ebcc5263bcb27c0c4a05",
+  "source_record": {
+    "id": "joseph-household-labor-1828",
+    "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-cbc4006e-0236-4720-bcc5-e703e75259af.png",
+    "sha256": "7a9dce413b46985159df1b3bfb2fe9bba67cca4d640b7c1db774796bc4978036",
+    "review_scope": "WHOLE_FINISHED_IMAGE",
+    "whole_image_concur": true,
+    "checks": {
+      "realism_identity_age": "Natural physical scene, recognizable Joseph with credible youngadult22 treatment; same blue-grayeyes/hairline/nose.",
+      "era_hair": "Offwhite workshirt/russetwaistcoat/graybrowntrousers plausible1828 labor; hair naturally disturbed, no formalmaster suit. Exact clothes not documented.",
+      "gaze_expression": "Attentive toward direction of movement, purposeful exertion without vacant fixed stare or artificial grin.",
+      "hands_anatomy": "Both hands and bent arms plausibly support manageable wood; fingers coherent, body weight and wagon realistic.",
+      "context_purpose_nonclone": "Official home history supports haulingwood; specific moment/equipment interpretive. Distinct outdoor labor action, not duplicate posedface/writing scene."
+    }
+  },
+  "normalization": "Final placement id mapped to exact prompt/final bytes; source decision preserved, no new broader concurrence.",
+  "sha256": "7a9dce413b46985159df1b3bfb2fe9bba67cca4d640b7c1db774796bc4978036",
+  "whole_image_review": true
+}

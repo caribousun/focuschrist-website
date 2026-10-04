@@ -1,0 +1,604 @@
+{
+  "section-1-1": {
+    "kind": "reference",
+    "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+    "width": 1312,
+    "height": 1199,
+    "title": "The portrait being examined",
+    "alt": "The approved focusChrist Joseph Smith portrait, with light brown hair, a white neckcloth and a dark coat",
+    "caption": "The unchanged owner-approved portrait. A modern artistic interpretation, not an authenticated photograph or a forensic identification. [20]",
+    "owner": "joseph-smith-likeness.html#our-portrait",
+    "sources": [],
+    "companions": [
+      {
+        "kind": "reference",
+        "src": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
+        "width": 800,
+        "height": 540,
+        "title": "Joseph’s death mask",
+        "alt": "Joseph’s cast at the left of the BYU-catalogued photograph; a detail window of the complete pair",
+        "caption": "Joseph’s cast, shown as a detail of a different, newly consulted photograph. It is not established as an original creation input. Closed lids and cast condition limit comparisons to a living face. Open the complete pair for context. Courtesy of LDS Church Archives; BYU item 4109, catalogue date 2001, public-domain designation.",
+        "owner": "joseph-smith-likeness.html#joseph-mask-comparison",
+        "sources": [
+          {
+            "label": "View the BYU catalogue and rights record",
+            "url": "https://contentdm.lib.byu.edu/digital/collection/RelEd/id/4109/rec/5"
+          },
+          {
+            "label": "Read the museum’s mask history",
+            "url": "https://www.churchofjesuschrist.org/learn/history/sites/church-history-museum/collections/joseph-and-hyrum-smith-death-masks?lang=eng"
+          }
+        ],
+        "detail_window": [
+          25,
+          0,
+          340,
+          535
+        ]
+      }
+    ]
+  },
+  "section-5-6": {
+    "kind": "reference",
+    "label": "Historical document · later publication",
+    "src": "assets/research/joseph-documents/pratt-1874-p47.png",
+    "width": 948,
+    "height": 1450,
+    "title": "A memoir published in 1874",
+    "alt": "Parley P. Pratt, Autobiography, 1874, printed p. 47. Retrospective memoir; this is the published book page, not a contemporary diary.",
+    "caption": "Parley P. Pratt, Autobiography, 1874, printed p. 47. Retrospective memoir; this is the published book page, not a contemporary diary.",
+    "owner": "#portrait-section-5",
+    "owner_label": "Continue this research chapter",
+    "sources": [
+      {
+        "url": "https://archive.org/details/autobiographyofp1874prat/page/n64/mode/1up",
+        "label": "Read this scan in the archive"
+      }
+    ]
+  },
+  "section-5-5": {
+    "kind": "reference",
+    "label": "Historical document · later publication",
+    "src": "assets/research/joseph-documents/quincy-1883-p380.png",
+    "width": 736,
+    "height": 1110,
+    "title": "Quincy remembers the visit",
+    "alt": "Josiah Quincy, Figures of the Past, 1883, printed p. 380. A later memoir, distinct from his May 1844 letter.",
+    "caption": "Josiah Quincy, Figures of the Past, 1883, printed p. 380. A later memoir, distinct from his May 1844 letter.",
+    "owner": "#portrait-section-5",
+    "owner_label": "Continue this research chapter",
+    "sources": [
+      {
+        "url": "https://archive.org/details/figurespast00quingoog/page/n393/mode/1up",
+        "label": "Read this scan in the archive"
+      }
+    ],
+    "companions": [
+      {
+        "kind": "reference",
+        "label": "Historical document · publication record",
+        "src": "assets/research/joseph-documents/quincy-1883-title.png",
+        "width": 736,
+        "height": 1110,
+        "title": "The letter and the later book",
+        "alt": "Title page of Josiah Quincy’s Figures of the Past, 1883. Publication date distinguishes this memoir from his 1844 letter. The contemporary letter discussed alongside it is a separate source; this title page cannot stand in for that letter.",
+        "caption": "Title page of the 1883 memoir, shown with its description on page 380. This is not Quincy’s separate May 1844 letter.",
+        "owner": "#portrait-section-5",
+        "owner_label": "Continue this research chapter",
+        "sources": [
+          {
+            "url": "https://archive.org/details/figurespast00quingoog/page/n8/mode/1up",
+            "label": "Read this scan in the archive"
+          }
+        ]
+      }
+    ]
+  },
+  "section-5-8": {
+    "kind": "reference",
+    "label": "Historical document · later publication",
+    "src": "assets/research/joseph-documents/haven-1890-p621.png",
+    "width": 1018,
+    "height": 1500,
+    "title": "An 1843-dated letter, printed in 1890",
+    "alt": "Charlotte Haven, A Girl’s Letters from Nauvoo, published December 1890, printed p. 621. The letter is dated January 1843; its autograph and editorial transmission have not been inspected.",
+    "caption": "Charlotte Haven, A Girl’s Letters from Nauvoo, published December 1890, printed p. 621. The letter is dated January 1843; its autograph and editorial transmission have not been inspected.",
+    "owner": "#portrait-section-5",
+    "owner_label": "Continue this research chapter",
+    "sources": [
+      {
+        "url": "https://archive.org/details/sim_overland-monthly-and-out-west-magazine_1890-12_16_96/page/n64/mode/1up",
+        "label": "Read this scan in the archive"
+      }
+    ]
+  },
+  "section-5-7": {
+    "kind": "reference",
+    "label": "Historical document · later publication",
+    "src": "assets/research/joseph-documents/gazette-transmission-1916-p100.png",
+    "width": 390,
+    "height": 628,
+    "title": "Where the later book gives its attribution",
+    "alt": "The Birth of Mormonism, 1916, appendix C, printed p. 100. This later book attributes the description to an April 1844 letter printed in the Saint Louis Weekly Gazette; the original newspaper issue remains unverified.",
+    "caption": "The Birth of Mormonism, 1916, appendix C, printed p. 100. This later book attributes the description to an April 1844 letter printed in the Saint Louis Weekly Gazette; the original newspaper issue remains unverified. The narrator’s personal judgments are not anatomical evidence. Read the attribution and surrounding pages together.",
+    "owner": "#portrait-section-5",
+    "owner_label": "Continue this research chapter",
+    "sources": [
+      {
+        "url": "https://archive.org/details/birthofmormonism00adam_0/page/n101/mode/1up",
+        "label": "Read this scan in the archive"
+      },
+      {
+        "url": "https://archive.org/details/birthofmormonism00adam_0/page/n101/mode/1up",
+        "label": "Read the appendix from its attribution"
+      }
+    ]
+  },
+  "section-6-1": {
+    "kind": "reference",
+    "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+    "width": 1312,
+    "height": 1199,
+    "title": "The portrait’s outline and brow",
+    "alt": "The portrait’s outline and brow; a detail of the adopted artistic portrait",
+    "caption": "The upper face narrows toward the chin. No controlled ratio was established for this portrait. [20] This is a viewing window into the unchanged source. Open it to inspect the complete image.",
+    "owner": "#portrait-section-6",
+    "sources": [],
+    "detail_window": [
+      265,
+      0,
+      705,
+      875
+    ],
+    "label": "Source detail · unchanged image",
+    "owner_label": "Continue this research chapter",
+    "companions": [
+      {
+        "kind": "reference",
+        "src": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
+        "width": 800,
+        "height": 540,
+        "title": "The cast’s surviving face outline",
+        "alt": "Joseph’s cast at the left of the BYU-catalogued photograph; a detail window of the complete pair",
+        "caption": "Joseph’s surviving cast outline in a different photograph and view. Missing regions and postmortem condition limit literal comparison. Detail of BYU item 4109; courtesy of LDS Church Archives, catalogued public domain. Open for the complete pair.",
+        "owner": "#portrait-section-6",
+        "sources": [
+          {
+            "label": "View the BYU catalogue and rights record",
+            "url": "https://contentdm.lib.byu.edu/digital/collection/RelEd/id/4109/rec/5"
+          },
+          {
+            "label": "Read the museum’s mask history",
+            "url": "https://www.churchofjesuschrist.org/learn/history/sites/church-history-museum/collections/joseph-and-hyrum-smith-death-masks?lang=eng"
+          }
+        ],
+        "detail_window": [
+          25,
+          0,
+          340,
+          535
+        ],
+        "label": "Source detail · unchanged image",
+        "owner_label": "Continue this research chapter"
+      }
+    ]
+  },
+  "section-7-2": {
+    "kind": "reference",
+    "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+    "width": 1312,
+    "height": 1199,
+    "title": "Living eyes, lids and brows",
+    "alt": "Living eyes, lids and brows; a detail of the adopted artistic portrait",
+    "caption": "The open eyes, folds and unequal contours belong to this artistic interpretation. Their exact color and living aperture are unverified. [20] This is a viewing window into the unchanged source. Open it to inspect the complete image.",
+    "owner": "#portrait-section-7",
+    "sources": [],
+    "detail_window": [
+      375,
+      295,
+      535,
+      200
+    ],
+    "label": "Source detail · unchanged image",
+    "owner_label": "Continue this research chapter",
+    "companions": [
+      {
+        "kind": "reference",
+        "src": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
+        "width": 800,
+        "height": 540,
+        "title": "Closed lids in the cast",
+        "alt": "Joseph’s cast at the left of the BYU-catalogued photograph; a detail window of the complete pair",
+        "caption": "Closed plaster lids do not determine living eye opening, expression or iris color. Detail of BYU item 4109; courtesy of LDS Church Archives, catalogued public domain. Open for the complete pair.",
+        "owner": "#portrait-section-7",
+        "sources": [
+          {
+            "label": "View the BYU catalogue and rights record",
+            "url": "https://contentdm.lib.byu.edu/digital/collection/RelEd/id/4109/rec/5"
+          },
+          {
+            "label": "Read the museum’s mask history",
+            "url": "https://www.churchofjesuschrist.org/learn/history/sites/church-history-museum/collections/joseph-and-hyrum-smith-death-masks?lang=eng"
+          }
+        ],
+        "detail_window": [
+          45,
+          155,
+          285,
+          95
+        ],
+        "label": "Source detail · unchanged image",
+        "owner_label": "Continue this research chapter"
+      }
+    ]
+  },
+  "section-9-1": {
+    "kind": "reference",
+    "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+    "width": 1312,
+    "height": 1199,
+    "title": "Age and expression in this image",
+    "alt": "Age and expression in this image; a detail of the adopted artistic portrait",
+    "caption": "The calm, attentive expression is this portrait’s choice. Contemporary impressions of Joseph’s apparent age differed. [6,7,20] This is a viewing window into the unchanged source. Open it to inspect the complete image.",
+    "owner": "#portrait-section-9",
+    "sources": [],
+    "detail_window": [
+      325,
+      275,
+      600,
+      530
+    ],
+    "label": "Source detail · unchanged image",
+    "owner_label": "Continue this research chapter"
+  },
+  "section-4-1": {
+    "kind": "reference",
+    "src": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
+    "width": 800,
+    "height": 540,
+    "title": "Two distinct faces",
+    "alt": "Museum photograph showing the death masks of Joseph and Hyrum Smith",
+    "caption": "Joseph is on the left and Hyrum on the right in this photograph, identified by BYU’s catalogue. This newly consulted reference illustrates the surviving casts; it is not established as an original portrait-creation input. Courtesy of LDS Church Archives; BYU item 4109, catalogue date 2001, public-domain designation.",
+    "owner": "joseph-smith-likeness.html#death-masks",
+    "sources": [
+      {
+        "label": "View the BYU catalogue and rights record",
+        "url": "https://contentdm.lib.byu.edu/digital/collection/RelEd/id/4109/rec/5"
+      },
+      {
+        "label": "Read the museum’s mask history",
+        "url": "https://www.churchofjesuschrist.org/learn/history/sites/church-history-museum/collections/joseph-and-hyrum-smith-death-masks?lang=eng"
+      }
+    ]
+  },
+  "section-3-1": {
+    "kind": "reference",
+    "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+    "width": 1312,
+    "height": 1199,
+    "title": "Look at the face we retained",
+    "alt": "Look at the face we retained; a detail of the adopted artistic portrait",
+    "caption": "The long oval face, individual skin texture and unequal contours are visible in the adopted portrait. This qualitative inspection supports the description beside it; it is not an authentication. [20] This is a viewing window into the unchanged source. Open it to inspect the complete image.",
+    "owner": "#portrait-section-3",
+    "sources": [],
+    "detail_window": [
+      265,
+      0,
+      705,
+      875
+    ],
+    "label": "Source detail · unchanged image",
+    "owner_label": "Continue this research chapter"
+  },
+  "section-3-2": {
+    "kind": "reference",
+    "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+    "width": 1312,
+    "height": 1199,
+    "title": "The optional question is in the hair",
+    "alt": "The optional question is in the hair; a detail of the adopted artistic portrait",
+    "caption": "The swept waves and volume are visible artistic choices. A straighter-haired study has been proposed, not made or proven more accurate. [12] This is a viewing window into the unchanged source. Open it to inspect the complete image.",
+    "owner": "#portrait-section-3",
+    "sources": [],
+    "detail_window": [
+      270,
+      0,
+      690,
+      365
+    ],
+    "label": "Source detail · unchanged image",
+    "owner_label": "Continue this research chapter"
+  },
+  "section-6-2": {
+    "kind": "reference",
+    "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+    "width": 1312,
+    "height": 1199,
+    "title": "Nose and mouth in the portrait",
+    "alt": "Nose and mouth in the portrait; a detail of the adopted artistic portrait",
+    "caption": "Inspect the prominent bridge, rounded tip and closed lips. Their shapes can be described without claiming a measured match. [20] This is a viewing window into the unchanged source. Open it to inspect the complete image.",
+    "owner": "#portrait-section-6",
+    "sources": [],
+    "detail_window": [
+      445,
+      330,
+      420,
+      405
+    ],
+    "label": "Source detail · unchanged image",
+    "owner_label": "Continue this research chapter",
+    "companions": [
+      {
+        "kind": "reference",
+        "src": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
+        "width": 800,
+        "height": 540,
+        "title": "Nose and mouth in the cast",
+        "alt": "Joseph’s cast at the left of the BYU-catalogued photograph; a detail window of the complete pair",
+        "caption": "The cast’s bridge, nose tip and lip region. Perspective and postmortem contours preclude a measured match from these views. Detail of BYU item 4109; courtesy of LDS Church Archives, catalogued public domain. Open for the complete pair.",
+        "owner": "#portrait-section-6",
+        "sources": [
+          {
+            "label": "View the BYU catalogue and rights record",
+            "url": "https://contentdm.lib.byu.edu/digital/collection/RelEd/id/4109/rec/5"
+          },
+          {
+            "label": "Read the museum’s mask history",
+            "url": "https://www.churchofjesuschrist.org/learn/history/sites/church-history-museum/collections/joseph-and-hyrum-smith-death-masks?lang=eng"
+          }
+        ],
+        "detail_window": [
+          95,
+          165,
+          235,
+          285
+        ],
+        "label": "Source detail · unchanged image",
+        "owner_label": "Continue this research chapter"
+      }
+    ]
+  },
+  "section-7-1": {
+    "kind": "reference",
+    "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+    "width": 1312,
+    "height": 1199,
+    "title": "Chin and jaw in the portrait",
+    "alt": "Chin and jaw in the portrait; a detail of the adopted artistic portrait",
+    "caption": "Rounded-square chin corners and the lower face are visible here. Verbal labels do not supply anatomical measurements. [20] This is a viewing window into the unchanged source. Open it to inspect the complete image.",
+    "owner": "#portrait-section-7",
+    "sources": [],
+    "detail_window": [
+      325,
+      545,
+      580,
+      340
+    ],
+    "label": "Source detail · unchanged image",
+    "owner_label": "Continue this research chapter",
+    "companions": [
+      {
+        "kind": "reference",
+        "src": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
+        "width": 800,
+        "height": 540,
+        "title": "Chin and jaw in the cast",
+        "alt": "Joseph’s cast at the left of the BYU-catalogued photograph; a detail window of the complete pair",
+        "caption": "The lower-face contour in the surviving cast. Its condition and angle limit chin comparisons; it gives no eye-color evidence. Detail of BYU item 4109; courtesy of LDS Church Archives, catalogued public domain. Open for the complete pair.",
+        "owner": "#portrait-section-7",
+        "sources": [
+          {
+            "label": "View the BYU catalogue and rights record",
+            "url": "https://contentdm.lib.byu.edu/digital/collection/RelEd/id/4109/rec/5"
+          },
+          {
+            "label": "Read the museum’s mask history",
+            "url": "https://www.churchofjesuschrist.org/learn/history/sites/church-history-museum/collections/joseph-and-hyrum-smith-death-masks?lang=eng"
+          }
+        ],
+        "detail_window": [
+          70,
+          345,
+          250,
+          185
+        ],
+        "label": "Source detail · unchanged image",
+        "owner_label": "Continue this research chapter"
+      }
+    ]
+  },
+  "section-8-1": {
+    "kind": "reference",
+    "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+    "width": 1312,
+    "height": 1199,
+    "title": "Hair color and arrangement",
+    "alt": "Hair color and arrangement; a detail of the adopted artistic portrait",
+    "caption": "Lighter strands and arranged waves are visible. Historical color descriptions and hair arrangement are separate questions; the cast cannot resolve either. [9,11,12] This is a viewing window into the unchanged source. Open it to inspect the complete image.",
+    "owner": "#portrait-section-8",
+    "sources": [],
+    "detail_window": [
+      270,
+      0,
+      690,
+      365
+    ],
+    "label": "Source detail · unchanged image",
+    "owner_label": "Continue this research chapter"
+  },
+  "section-8-2": {
+    "kind": "reference",
+    "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+    "width": 1312,
+    "height": 1199,
+    "title": "Skin and grooming choices",
+    "alt": "Skin and grooming choices; a detail of the adopted artistic portrait",
+    "caption": "Pores, warm cheeks and a clean-shaven face are visible. Individual marks and this degree of redness remain interpretation; beard descriptions belong to particular occasions. [8,20,21] This is a viewing window into the unchanged source. Open it to inspect the complete image.",
+    "owner": "#portrait-section-8",
+    "sources": [],
+    "detail_window": [
+      375,
+      410,
+      510,
+      355
+    ],
+    "label": "Source detail · unchanged image",
+    "owner_label": "Continue this research chapter"
+  },
+  "section-9-2": {
+    "kind": "reference",
+    "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+    "width": 1312,
+    "height": 1199,
+    "title": "What a bust can show",
+    "alt": "What a bust can show; a detail of the adopted artistic portrait",
+    "caption": "The dark coat and white neckcloth are visible; a bust cannot establish full height or build. This image does not establish diagnostic scars. [20] This is a viewing window into the unchanged source. Open it to inspect the complete image.",
+    "owner": "#portrait-section-9",
+    "sources": [],
+    "detail_window": [
+      85,
+      725,
+      1135,
+      474
+    ],
+    "label": "Source detail · unchanged image",
+    "owner_label": "Continue this research chapter"
+  },
+  "section-10-1": {
+    "kind": "reference",
+    "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+    "width": 1312,
+    "height": 1199,
+    "title": "The retained comparison baseline",
+    "alt": "The approved focusChrist Joseph Smith portrait, with light brown hair, a white neckcloth and a dark coat",
+    "caption": "This exact portrait remains the baseline for any later study. Proposed variants or measurements are not completed results. [20]",
+    "owner": "#portrait-section-10",
+    "sources": [],
+    "owner_label": "Continue this research chapter"
+  },
+  "section-11-1": {
+    "kind": "reference",
+    "src": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
+    "width": 800,
+    "height": 540,
+    "title": "The documented reference roles",
+    "alt": "Museum photograph showing the death masks of Joseph and Hyrum Smith",
+    "caption": "Joseph is on the left and Hyrum on the right in this photograph, identified by BYU’s catalogue. This newly consulted reference illustrates the surviving casts; it is not established as an original portrait-creation input. Courtesy of LDS Church Archives; BYU item 4109, catalogue date 2001, public-domain designation.",
+    "owner": "#portrait-section-11",
+    "sources": [
+      {
+        "label": "View the BYU catalogue and rights record",
+        "url": "https://contentdm.lib.byu.edu/digital/collection/RelEd/id/4109/rec/5"
+      },
+      {
+        "label": "Read the museum’s mask history",
+        "url": "https://www.churchofjesuschrist.org/learn/history/sites/church-history-museum/collections/joseph-and-hyrum-smith-death-masks?lang=eng"
+      }
+    ],
+    "owner_label": "Continue this research chapter"
+  },
+  "section-11-2": {
+    "kind": "reference",
+    "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+    "width": 1312,
+    "height": 1199,
+    "title": "The living features the cast cannot supply",
+    "alt": "The living features the cast cannot supply; a detail of the adopted artistic portrait",
+    "caption": "Hair, living eyes, skin color and lighting are visible choices in the finished artwork. They were not mechanically recovered from plaster. [27] This is a viewing window into the unchanged source. Open it to inspect the complete image.",
+    "owner": "#portrait-section-11",
+    "sources": [],
+    "detail_window": [
+      270,
+      0,
+      690,
+      470
+    ],
+    "label": "Source detail · unchanged image",
+    "owner_label": "Continue this research chapter"
+  },
+  "section-12-1": {
+    "kind": "reference",
+    "label": "Historical document · later publication",
+    "src": "assets/research/joseph-documents/haven-1890-p621.png",
+    "width": 1018,
+    "height": 1500,
+    "title": "A recovered publication, with a remaining gap",
+    "alt": "Charlotte Haven, A Girl’s Letters from Nauvoo, published December 1890, printed p. 621. The letter is dated January 1843; its autograph and editorial transmission have not been inspected.",
+    "caption": "The inspected 1890 publication transmits a letter dated 1843. The original manuscript was not checked, so the printed page adds evidence without closing that gap. [21]",
+    "owner": "#portrait-section-12",
+    "owner_label": "Continue this research chapter",
+    "sources": [
+      {
+        "url": "https://archive.org/details/sim_overland-monthly-and-out-west-magazine_1890-12_16_96/page/n64/mode/1up",
+        "label": "Read this scan in the archive"
+      }
+    ]
+  },
+  "section-4-2": {
+    "kind": "reference",
+    "src": "assets/research/joseph-documents/pelton-after-maudsley-1842.jpg",
+    "width": 254,
+    "height": 324,
+    "native_display": true,
+    "title": "An 1842 engraving after Maudsley",
+    "label": "Historical engraving · cropped detail",
+    "alt": "Upper-bust detail of Oliver Pelton’s engraved right-facing profile of Joseph Smith in uniform, after Maudsley",
+    "caption": "A detail of Oliver Pelton’s engraving after Maudsley, published in Bennett’s The History of the Saints (1842). Hatch’s reproduced figure corroborates the image; the exact scan ancestry of this small reproduction remains unresolved. It is not the unidentified sitting drawing, a photograph, or a calibrated anatomical reference.",
+    "owner": "#portrait-section-4",
+    "owner_label": "Continue this research chapter",
+    "sources": [
+      {
+        "label": "Read the museum’s original-versus-copy account",
+        "url": "https://history.churchofjesuschrist.org/media-exhibit/sutcliffe-maudsley/lt-general-joseph-smith?from=home&lang=eng"
+      },
+      {
+        "label": "Read Hatch’s illustrated chapter (PDF)",
+        "url": "https://contentdm.lib.byu.edu/digital/api/collection/rsc/id/2135/download"
+      },
+      {
+        "label": "Image provenance and public-domain record",
+        "url": "https://commons.wikimedia.org/wiki/File:Joseph_Smith_Maudsley_Portrait_1842-06-25.jpg"
+      }
+    ],
+    "companions": [
+      {
+        "kind": "original",
+        "id": "painted-likeness-1842",
+        "src": "assets/research/joseph-originals/painted-likeness-1842.png",
+        "width": 1536,
+        "height": 1024,
+        "title": "Sitting for a painted likeness",
+        "alt": "Sitting for a painted likeness in a new illustration using our adopted Joseph likeness",
+        "caption": "Joseph faces us beside the back of an easel. His journal records painting sittings in September 1842; the room, pose and furnishings here are an artistic interpretation. [4]",
+        "owner": "#portrait-section-4",
+        "owner_label": "Continue this research chapter",
+        "label": "New artwork · historical interpretation",
+        "sources": [
+          {
+            "label": "Read the September 1842 sitting record",
+            "url": "https://www.josephsmithpapers.org/paper-summary/journal-december-1841-december-1842/82"
+          }
+        ]
+      },
+      {
+        "kind": "original",
+        "id": "profile-sitting-1842-retry",
+        "src": "assets/research/joseph-originals/profile-sitting-1842-retry.png",
+        "width": 1536,
+        "height": 1024,
+        "title": "A profile offers a different view",
+        "alt": "A profile offers a different view — newly made interpretive Joseph artwork",
+        "caption": "An interpretive profile-sitting scene recalls Maudsley’s work in 1842. It shows how the forehead, nose, lips and chin form a silhouette. The newly imagined side view is not a measured reconstruction of the historical profile. [3]",
+        "owner": "#portrait-section-4",
+        "owner_label": "Continue this research chapter",
+        "label": "New artwork · explanatory interpretation",
+        "sources": [
+          {
+            "label": "Read the museum account of Maudsley’s profile",
+            "url": "https://history.churchofjesuschrist.org/media-exhibit/sutcliffe-maudsley/lt-general-joseph-smith?from=home&lang=eng"
+          }
+        ]
+      }
+    ]
+  }
+}

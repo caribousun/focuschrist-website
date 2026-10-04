@@ -1,0 +1,29 @@
+{
+  "reviewer": "Newton",
+  "id": "emma-relief-service-1842",
+  "source_review_id": "service-wardrobe-1842",
+  "prompt_sha256": "8851346d1af369e5f19f24cc460385672da6dca06738dc0ea6c2fac29e2f3477",
+  "concur": true,
+  "source_receipt_path": "work\\newton\\letter-service-wardrobe-whole-image-review.json",
+  "source_receipt_sha256": "65002cb8f591bc7e1154467ca07c406e490856bbdacc6b816bef4e88eb94e080",
+  "source_record": {
+    "id": "service-wardrobe-1842",
+    "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-a7269c71-781f-49e8-a47f-1838aeed53c0.png",
+    "sha256": "72d6f3eb51f8d27570079ad43266f6058f1ca34c008295c201336f5ea810b7da",
+    "prompt_sha256": "8851346d1af369e5f19f24cc460385672da6dca06738dc0ea6c2fac29e2f3477",
+    "concur": true,
+    "whole_image_checks": {
+      "realism": "Natural face and hands, daylight, garment folds and room depth.",
+      "likeness_age": "Recognizable mature Emma37 and retained natural face/figure, no actor substitution.",
+      "era_clothing_hair": "Deep green modest day dress, fitted bodice/full skirt, tapered wrist cuffs and restrained collar, shorter pinned curls. Period-plausible1840s formal day interpretation; exact sleeves/fabric/color not documented in minutes.",
+      "gaze_expression": "Earnest speaking expression and audience-directed attention; open gestures purposeful.",
+      "anatomy_fullness": "Both hands and visible fingers coherent, natural posture and fullness retained; skirt gathers do not imply pregnancy.",
+      "context": "Women audience and no men consistent with remarks after withdrawal; postpartum context retained without medical/body-size claim. Exact room/gesture interpretation.",
+      "distinct_purpose": "Emma leadership and service, distinct from private letter or family gift scenes."
+    },
+    "scope": "Whole same exact finished pixels; root concurrence and assembled-page review remain pending. Replacement counts once."
+  },
+  "normalization": "Final placement id mapped to exact prompt/final bytes; source decision preserved, no new broader concurrence.",
+  "sha256": "72d6f3eb51f8d27570079ad43266f6058f1ca34c008295c201336f5ea810b7da",
+  "whole_image_review": true
+}

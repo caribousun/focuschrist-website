@@ -1,0 +1,22 @@
+{
+  "reviewer": "Newton",
+  "id": "profile-sitting-1842-retry",
+  "source_review_id": "profile-sitting-1842-retry",
+  "prompt_sha256": "a7987c0ad0fd207b3dd5b1355ac9396fca1105e8cb24fe4c6592c878f701a04a",
+  "concur": true,
+  "source_receipt_path": "work\\newton\\feature-prompts-v1-preflight.json",
+  "source_receipt_sha256": "0a11c277b7dfcabce3aa6d7f126e70c593a2f88be9a9a02df00587cc0d28bf88",
+  "source_record": {
+    "id": "profile-sitting-1842-retry",
+    "prompt_sha256": "a7987c0ad0fd207b3dd5b1355ac9396fca1105e8cb24fe4c6592c878f701a04a",
+    "concur": true,
+    "reference_sha256": [
+      "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+    ],
+    "notes": "Actual approved identity pixels reviewed; age36 historical profile / age38 adopted-feature interpretation. Exact prompt preserves locked face, forbids fabricated evidence or measured reconstruction. Fresh generated result must retain identity and visibly teach named feature; canonical native detail and actual source evidence remain alongside. Original sole owning page must be selected before integration; no double count across studies."
+  },
+  "normalization": "Maps reviewed exact asset/prompt to final placement id; preserves explicit decision and full source record. Not a new review or broader approval.",
+  "reference_sha256": [
+    "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+  ]
+}

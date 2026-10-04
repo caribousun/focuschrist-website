@@ -1,0 +1,22 @@
+{
+  "reviewer": "Newton",
+  "id": "emma-relief-service-1842",
+  "source_review_id": "service-wardrobe-1842",
+  "prompt_sha256": "8851346d1af369e5f19f24cc460385672da6dca06738dc0ea6c2fac29e2f3477",
+  "concur": true,
+  "source_receipt_path": "work\\newton\\main-wardrobe-edits-v1-preflight.json",
+  "source_receipt_sha256": "d7e10679837bbdbc3c4a05f77bca2cbd462e476690b6431dd572a9a1efbfedf1",
+  "source_record": {
+    "id": "service-wardrobe-1842",
+    "prompt_sha256": "8851346d1af369e5f19f24cc460385672da6dca06738dc0ea6c2fac29e2f3477",
+    "reference_sha256": [
+      "fb7c293cc8d0977cb850a44f73b186ec424b11d592df576823c0ef6993bcb755"
+    ],
+    "concur": true,
+    "notes": "Generation-only. Museum1828 cotton and1828-1835 high-waist full-sleeve descriptions independently read; bonnet1825-1840 is straw shape context only, not winter fabric proof. Exact colors, possessions and hairstyle unverified interpretations. Finished review must distinguish era silhouette/waist/sleeve/neckline from mere recoloring, retain identity/body/action and bedside accepted reciprocal gaze. No automatic outfit/body slimming. Existing later-period structure retained where appropriate, not copied into earlier dates."
+  },
+  "normalization": "Final placement id mapped to exact prompt/final bytes; source decision preserved, no new broader concurrence.",
+  "reference_sha256": [
+    "fb7c293cc8d0977cb850a44f73b186ec424b11d592df576823c0ef6993bcb755"
+  ]
+}

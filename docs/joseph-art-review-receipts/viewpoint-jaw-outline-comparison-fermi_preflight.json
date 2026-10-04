@@ -1,0 +1,30 @@
+{
+  "reviewer": "Fermi",
+  "id": "viewpoint-jaw-outline-comparison",
+  "source_review_id": "viewpoint-jaw-outline-comparison",
+  "prompt_sha256": "6e01a3436a8ebce4101555c5f57ff5b0398690c67195e1f3ac76705c2f668611",
+  "concur": true,
+  "source_receipt_path": "work\\fermi\\research-method-prompts-v1.json",
+  "source_receipt_sha256": "f0a9d71b232d18eed1cc1f4e8b0dc43ce37c8337935360d046c5ea0c0fddc101",
+  "source_record": {
+    "id": "viewpoint-jaw-outline-comparison",
+    "prompt": "Create one new photographic educational illustration using the supplied actual owner-approved Joseph Smith portrait as the sole identity reference. Show this exact recognizable Joseph at approximately38; preserve nose, eyes, blue-gray iris shade, brows, lips, chin, hairline, light-brown hair and natural asymmetry. No beautification, generic actor, invented scar or changed anatomy. Real pores and human eyes, restrained texture, plausible optics. This is newly made interpretive artwork about portrait-reading limits, not recovered creation work, an actual experiment, an anatomical scan, historical evidence or proof of accuracy. No text, labels, diagrams, arrows, rulers, numerical measurements, masks or overlay. Landscape3:2 with two deliberate equal panels separated by a narrow quiet margin. The paired views must teach the specified visual distinction and retain recognizable identity; they are not guaranteed perfectly controlled images. Two head-and-upper-neck views of the recognizable Joseph, whole hair crown, ears where naturally visible, chin and neckcloth comfortably in frame. Left: nearly frontal face, calm closed mouth. Right: genuine right-facing near-profile, far iris hidden behind nose bridge, clear forehead-nose-lips-chin silhouette. Both views use soft neutral light, ordinary portrait perspective and the same natural age, hair and expression. Make the contrast in viewpoint clear and purposeful: front view shows breadth while side view shows projection and silhouette. Preserve identity; do not invent a stronger jaw, slimmer nose or different ear to make profile attractive. No camera gear or measurement graphics. These newly imagined views are explanatory and must never be used as calibrated projections of a verified3D model.",
+    "prompt_sha256": "6e01a3436a8ebce4101555c5f57ff5b0398690c67195e1f3ac76705c2f668611",
+    "actual_references": [
+      {
+        "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\identities\\joseph-smith-owner-approved-20260914.png",
+        "sha256": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+      }
+    ],
+    "placement": "Research viewpoint and proportional limits",
+    "reasoning": "Traits1/3/5/13/15: frontal breadth and profile projection provide different observations; generated new viewpoint is unverified interpretation, not recovered unseen anatomy.",
+    "source_context": "Compare actual cast/reference limitations already documented in research; this is explanatory reasoning rather than a new historical claim.",
+    "fermi_generation_only_concur": true,
+    "newton_concur": false,
+    "finished_review": "Reject unintended age/anatomy/hair drift or unreadable intended contrast. One diptych equals one original, not two."
+  },
+  "normalization": "Maps reviewed exact asset/prompt to final placement id; preserves explicit decision and full source record. Not a new review or broader approval.",
+  "reference_sha256": [
+    "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+  ]
+}

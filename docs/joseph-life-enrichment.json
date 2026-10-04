@@ -1,0 +1,362 @@
+{
+  "status": "Local enrichment; only accepted images with existing files render",
+  "scene_plan": "work/fermi/main-ten-original-plan.json",
+  "prompt_versions_read": [
+    "v1",
+    "v2",
+    "v3"
+  ],
+  "scenes": [
+    {
+      "id": "marriage-partnership-1827",
+      "heading": "Choosing a life together",
+      "date_label": "18 January 1827 · Joseph 21, Emma 22",
+      "paragraphs": [
+        "Joseph and Emma married in South Bainbridge, New York. Joseph’s history records their marriage despite opposition from Emma’s family, then their move to his parents’ home. Their partnership began before the translation and publication of the Book of Mormon."
+      ],
+      "interpretation_limit": "Joined hands express the partnership Joseph and Emma began in January 1827. This posed illustration imagines the young couple after their marriage; their clothing, setting and gesture are not a record of the wedding.",
+      "reflection": "What does it mean to begin a shared life without knowing all it will require?",
+      "sources": [
+        {
+          "label": "Read Joseph’s account of their marriage",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/js-h/1?lang=eng&id=p57-p58#p57"
+        }
+      ],
+      "editorial_source_note": "Primary retrospective history, now canonized; do not imply contemporaneous wedding photograph or recovered room.",
+      "image": {
+        "src": "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-wardrobe-v2.png",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Young Joseph and Emma pose together with joined hands in brown winter clothing",
+        "sha256": "61b714143419b5f0f4db7ca7cb3ace09fa36c3cca1299c21112c7eab92afddfa",
+        "original_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-680a5611-29a4-4c93-97c0-4e92a10d58c5.png"
+      },
+      "image_status": "accepted"
+    },
+    {
+      "id": "household-gift-harmony-1828",
+      "heading": "A small gift amid demanding work",
+      "date_label": "Harmony · autumn 1828",
+      "paragraphs": [
+        "The Church’s home history recounts Joseph earning three dollars for four days of work and spending twenty-five cents on a comb for Emma. A modest purchase brings their household concerns into view."
+      ],
+      "interpretation_limit": "A small gift makes Joseph’s care for Emma tangible amid the demands of earning a living. The comb purchase is recorded; its appearance, the handoff and the couple’s clothing are interpreted.",
+      "reflection": "Which small act of thoughtfulness could express care in your home?",
+      "sources": [
+        {
+          "label": "Read the history of their home",
+          "url": "https://www.churchofjesuschrist.org/learn/history/sites/new-york-and-pennsylvania/discover/joseph-and-emma-smiths-home?lang=eng"
+        },
+        {
+          "label": "Examine the ledger research and transcription",
+          "url": "https://byustudies.byu.edu/article/david-hales-store-ledger-new-details-about-joseph-and-emma-smith-the-hale-family-and-the-book-of-mormon"
+        }
+      ],
+      "editorial_source_note": "Official synthesis draws on David Hale’s ledger study. Do not claim the pictured handoff or threshold appears in the ledger.",
+      "image": {
+        "src": "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-wardrobe-v2.png",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Joseph offers a small comb to Emma, who looks toward the gift, both wearing earthy period clothing",
+        "sha256": "cf1b964c75b6a49536968eaf9a8d19186ce846262e0b9adcc86d053644ca9db6",
+        "original_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-fc587147-0ce5-4961-9397-2ae1406344aa.png"
+      },
+      "image_status": "accepted",
+      "retained_previous_images": [
+        {
+          "width": 1536,
+          "height": 1024,
+          "alt": "Joseph offers Emma a small comb at their home",
+          "sha256": "44cb9ebcaaca0f3a9ebdfc1ae3474a18395e4a2d8c412f89d2efe74ef7b58559",
+          "original_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-f04e4bda-18a6-4fc2-8ee5-f365ae21ba52.png",
+          "archived_from_public_asset": "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828.png",
+          "retained_archive_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\focus-joseph-curated-continuation\\work\\newton\\retired-public-candidates\\household-gift-harmony-1828.png"
+        }
+      ]
+    },
+    {
+      "id": "emma-early-scribe-1828",
+      "heading": "Emma’s work as a scribe",
+      "date_label": "Harmony · early 1828",
+      "paragraphs": [
+        "Emma helped Joseph as an early scribe. Martin Harris took over that role in April 1828. Her writing belongs within the history of the translation, as well as the history of their marriage.",
+        "Emma was expecting their first child during this early scribal work."
+      ],
+      "interpretation_limit": "Emma’s attentive writing brings her early contribution to the Book of Mormon translation into view. She was expecting their first child. The clothing and session are interpreted; the pictured page is not a surviving manuscript in her hand.",
+      "reflection": "Whose quiet work helps make a larger undertaking possible?",
+      "sources": [
+        {
+          "label": "Read the official account of Emma’s early work",
+          "url": "https://www.churchofjesuschrist.org/learn/history/sites/new-york-and-pennsylvania/discover/joseph-and-emma-smiths-home?lang=eng"
+        },
+        {
+          "label": "Read the Church Historian’s Press introduction",
+          "url": "https://www.churchofjesuschrist.org/study/church-historians-press/the-first-fifty-years-of-relief-society/part-1/1-1?lang=eng"
+        }
+      ],
+      "editorial_source_note": "Both institutional histories discuss early scribal service; this is not proof of an exact illustrated session.",
+      "image": {
+        "src": "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-wardrobe-v2.png",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Emma in a printed cotton dress writes with a quill while Joseph sits nearby",
+        "sha256": "bb026ec8537b0a5f0b20e5f98db41c91336345356a0a3c11cd08b9d96e234972",
+        "original_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-6796b0b9-aa49-4dfc-94e4-dc718ed6f150.png"
+      },
+      "image_status": "accepted"
+    },
+    {
+      "id": "hyrum-reading-before-carthage-1844",
+      "heading": "Hyrum reflects beside scripture",
+      "date_label": "June 1844 · Hyrum 44",
+      "paragraphs": [
+        "Doctrine and Covenants 135 remembers Hyrum reading near the close of Ether 12 on the morning he prepared to leave for Carthage. He marked the passage by turning down the page. Its words of charity, faithfulness and strength in weakness place his final journey within his devotion to Jesus Christ."
+      ],
+      "interpretation_limit": "Hyrum’s quiet pause invites reflection on the scripture he read before leaving for Carthage. The reading is recorded in Doctrine and Covenants 135; this reflective scene imagines the room, book and pose.",
+      "reflection": "What passage of scripture helps you remain faithful when the way ahead is uncertain?",
+      "sources": [
+        {
+          "label": "Read the account in Doctrine and Covenants 135",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/135?lang=eng&id=p4-p5#p4"
+        },
+        {
+          "label": "Read Ether 12",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/12?lang=eng"
+        }
+      ],
+      "editorial_source_note": "D&C135 published1844; do not assign its authorship certainly to John Taylor. Art shows Hyrum alone, not Joseph or a prison reading.",
+      "image": {
+        "src": "assets/page-art/joseph-smith-likeness/family/hyrum-reading-before-carthage-1844.png",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Hyrum Smith pausing reflectively beside an open book",
+        "sha256": "b906c5c27cd36aa90b68fd1899355fe88c79fe53deb9c2b6ee571805cdb0ca83",
+        "original_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-ec328664-3526-4259-9d33-263d014fb828.png"
+      },
+      "image_status": "accepted"
+    },
+    {
+      "id": "emma-relief-service-1842",
+      "heading": "Seeking out those in need",
+      "date_label": "Nauvoo · 17 March 1842",
+      "paragraphs": [
+        "At the first meeting of the Female Relief Society of Nauvoo, Emma was elected president. After the men withdrew, she urged the women to find and relieve people in distress, do good, and care for one another’s character and reputation. The minutes preserve leadership expressed through practical service.",
+        "She undertook this service about six weeks after giving birth to a son who did not survive. The meeting record’s historical notes preserve this recent loss alongside her public work."
+      ],
+      "interpretation_limit": "Emma turns concern for others into a call to act. The minutes record her urging the women to seek out people in distress after the men withdrew; her clothing, gestures and the room are interpreted.",
+      "reflection": "Who nearby needs to be noticed, treated fairly, or helped?",
+      "sources": [
+        {
+          "label": "Read the founding meeting’s minutes",
+          "url": "https://www.churchhistorianspress.org/the-first-fifty-years-of-relief-society/part-1/1-2/1-2-1"
+        }
+      ],
+      "editorial_source_note": "Use the later portion of that meeting, after gentlemen withdrew. Do not caption as the earlier extraordinary remark or imply Joseph listening in frame. Surviving minute book likely fair copy.",
+      "image": {
+        "src": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-wardrobe-v2.png",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Emma in a deep green day dress speaks earnestly to seated women",
+        "sha256": "72d6f3eb51f8d27570079ad43266f6058f1ca34c008295c201336f5ea810b7da",
+        "original_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-a7269c71-781f-49e8-a47f-1838aeed53c0.png"
+      },
+      "image_status": "accepted",
+      "retained_previous_images": [
+        {
+          "width": 1536,
+          "height": 1024,
+          "alt": "Emma Smith speaking to seated women in a modest meeting room",
+          "sha256": "fb7c293cc8d0977cb850a44f73b186ec424b11d592df576823c0ef6993bcb755",
+          "original_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-c9357e49-fbbb-4f39-a626-e63209cd31e1.png",
+          "archived_from_public_asset": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842.png",
+          "retained_archive_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\focus-joseph-curated-continuation\\work\\newton\\retired-public-candidates\\emma-relief-service-1842.png"
+        }
+      ]
+    },
+    {
+      "id": "care-after-loss-1828",
+      "heading": "Staying close in sorrow",
+      "date_label": "Harmony · June 1828",
+      "paragraphs": [
+        "Their first child died shortly after his birth on 15 June 1828. Emma became seriously ill, and Joseph cared for her through the following two weeks."
+      ],
+      "interpretation_limit": "Joseph’s presence beside Emma expresses the tenderness of care after their child’s death and her serious illness. His care is documented. The source does not record their exact pose, furnishings or garments.",
+      "reflection": "How can steady presence help when words cannot remove another person’s grief?",
+      "sources": [
+        {
+          "label": "Read the account of their family loss",
+          "url": "https://www.churchofjesuschrist.org/learn/history/sites/new-york-and-pennsylvania/discover/joseph-and-emma-smiths-home?lang=eng"
+        }
+      ],
+      "editorial_source_note": "Official historical synthesis; no infant likeness, medical treatment or exact witnessed bedside gesture is asserted.",
+      "image": {
+        "src": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-wardrobe-v2.png",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Joseph in a brown waistcoat supports Emma’s hand as she rests in light recovery clothing; they look tenderly toward one another",
+        "sha256": "12a9638ec8dda79b872c17350af964e7994e57f82ac25afc77df282f5fc12068",
+        "original_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-cd002ab4-a863-47e5-8d8a-40e21414b434.png"
+      },
+      "image_status": "accepted"
+    },
+    {
+      "id": "emma-family-letter-1838",
+      "heading": "Love carried across separation",
+      "date_label": "November 1838 · Emma 34",
+      "paragraphs": [
+        "On 12 November 1838, Joseph wrote to Emma while held in Richmond, Missouri. He expressed affection for her, addressed their children, and hoped for their reunion. His invitation to visit left room for Emma’s own judgment. The letter makes the family’s separation personal.",
+        "Their youngest living child, Alexander, had been born that June. Concern for the children formed part of the separation these letters sought to bridge."
+      ],
+      "interpretation_limit": "A letter carries affection and concern across the family’s separation. Joseph’s November 1838 letter survives; Emma’s reading moment, expression, clothing and surroundings are imagined.",
+      "reflection": "What can a thoughtful letter offer someone you cannot be with?",
+      "sources": [
+        {
+          "label": "Read Joseph’s letter and its history",
+          "url": "https://www.josephsmithpapers.org/paper-summary/letter-to-emma-smith-12-november-1838/1"
+        },
+        {
+          "label": "Read his invitation to Emma",
+          "url": "https://www.josephsmithpapers.org/paper-summary/letter-to-emma-smith-12-november-1838/2"
+        },
+        {
+          "label": "Read the family history",
+          "url": "https://www.churchofjesuschrist.org/study/history/topics/joseph-and-emma-hale-smith-family?lang=eng"
+        }
+      ],
+      "editorial_source_note": "Original in Joseph handwriting survives. Correspondence screened by captors; do not transplant this letter to Liberty Jail or assert an exact recipient pose.",
+      "image": {
+        "src": "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-wardrobe-v2.png",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Emma in a burgundy dress and shawl reads a folded family letter",
+        "sha256": "0440c07de9541b20fa23680d60932b742fc85665f651d7330ac511aaee299905",
+        "original_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-a3aeac1b-68a5-4950-ab27-f12eb5ec8267.png"
+      },
+      "image_status": "accepted",
+      "retained_previous_images": [
+        {
+          "width": 1536,
+          "height": 1024,
+          "alt": "Emma Smith thoughtfully reading a folded letter near a window",
+          "sha256": "77ad3ac3e6b4b7f857a8da1695615895a76ee1b08d8c467fe37a866bf0846250",
+          "original_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-889af154-a84d-45cc-a86e-387c2f740e79.png",
+          "archived_from_public_asset": "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838.png",
+          "retained_archive_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\focus-joseph-curated-continuation\\work\\newton\\retired-public-candidates\\emma-family-letter-1838.png"
+        }
+      ]
+    },
+    {
+      "id": "joseph-household-labor-1828",
+      "heading": "Work that sustained a household",
+      "date_label": "Harmony · autumn 1828",
+      "paragraphs": [
+        "Joseph supported the household through hired farm labor, including hauling wood. The ledger places this work alongside the demands of translation and family life."
+      ],
+      "interpretation_limit": "Carrying wood places Joseph’s physical work alongside his responsibilities to family and faith. His hired labor is documented; this particular task moment, wagon, clothing and path are interpreted.",
+      "reflection": "How can necessary everyday work become an expression of love?",
+      "sources": [
+        {
+          "label": "Read the home history",
+          "url": "https://www.churchofjesuschrist.org/learn/history/sites/new-york-and-pennsylvania/discover/joseph-and-emma-smiths-home?lang=eng"
+        },
+        {
+          "label": "Read the ledger study",
+          "url": "https://byustudies.byu.edu/article/david-hales-store-ledger-new-details-about-joseph-and-emma-smith-the-hale-family-and-the-book-of-mormon"
+        }
+      ],
+      "editorial_source_note": "Scene aligns with documented wood hauling, not proof of an exact employer/day or particular wagon.",
+      "image": {
+        "src": "assets/page-art/joseph-smith-likeness/family/joseph-household-labor-1828.png",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Joseph carries split wood toward a wagon in a work shirt and russet waistcoat",
+        "sha256": "7a9dce413b46985159df1b3bfb2fe9bba67cca4d640b7c1db774796bc4978036",
+        "original_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-cbc4006e-0236-4720-bcc5-e703e75259af.png"
+      },
+      "image_status": "accepted"
+    },
+    {
+      "id": "journey-to-harmony-1827",
+      "heading": "Making a new home",
+      "date_label": "Early December 1827 · Joseph 21, Emma 23",
+      "paragraphs": [
+        "Joseph and Emma arrived in Pennsylvania’s Susquehanna Valley in early December 1827. They moved toward Emma’s family while seeking a place to live, work and continue the translation. Historical accounts also credit her brother Alva with helping the move.",
+        "Emma was expecting their first child when they arrived in Pennsylvania."
+      ],
+      "interpretation_limit": "Joseph and Emma travel toward a new home and the work ahead of them. Their move to Harmony is documented; the wagon, clothing, route and weather are interpreted, and the image does not show every traveler.",
+      "reflection": "What help makes a difficult move or new beginning possible?",
+      "sources": [
+        {
+          "label": "Read the research on their move",
+          "url": "https://byustudies.byu.edu/article/david-hales-store-ledger-new-details-about-joseph-and-emma-smith-the-hale-family-and-the-book-of-mormon"
+        },
+        {
+          "label": "Explore the history of their home",
+          "url": "https://www.churchofjesuschrist.org/learn/history/sites/new-york-and-pennsylvania/discover/joseph-and-emma-smiths-home?lang=eng"
+        }
+      ],
+      "editorial_source_note": "EarlyDecember precedes Joseph’s23December birthday. Alva assistance must not be erased by two-person image framing; synthesis cites multiple historical accounts.",
+      "image": {
+        "src": "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-corrected-v2.png",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Joseph attends to driving the wagon while Emma looks along their direction of travel, wearing winter layers and a bonnet",
+        "sha256": "1f5870584dcc4c83e83ee40957a3863ae00a076c8ae52997ea5bbe42b5cd4433",
+        "original_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-30b9bd1e-2ead-40f5-8987-55bdd0cb7db0.png"
+      },
+      "image_status": "accepted",
+      "rejected_predecessor_sha256": "5cb2de70e69784f681112dcbf01de4df9a29365ce90596d50e30cd8b18f313e2"
+    },
+    {
+      "id": "emma-prayer-during-arrest-1830",
+      "heading": "Praying together through uncertainty",
+      "date_label": "Late June 1830 · Emma 25",
+      "paragraphs": [
+        "Emma was baptized on 28 June 1830, but Joseph’s arrest disrupted the planned confirmation meeting. While he faced custody and court proceedings, she joined other women in prayer. Their shared worship offered a way to turn toward God amid anxiety."
+      ],
+      "interpretation_limit": "Emma joins another woman in prayer while awaiting news of Joseph. His later history records the women praying during his custody; their posture, clothing and room are interpreted.",
+      "reflection": "Who could you join in prayer when someone is facing uncertainty?",
+      "sources": [
+        {
+          "label": "Read the historical setting of the revelation to Emma",
+          "url": "https://www.churchofjesuschrist.org/study/church-historians-press/the-first-fifty-years-of-relief-society/part-1/1-1?lang=eng"
+        }
+      ],
+      "editorial_source_note": "CHP introduction cites retrospective JS History1838–1856 volA-1. Trials/acquittals precede reunion; do not claim exact prison or a documented vision.",
+      "image": {
+        "src": "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830.png",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Emma kneels in prayer beside a chair, with another woman partly visible behind her",
+        "sha256": "1140b40f93c00ce61ab60841b46b03b823485c84bd086818f9407200d7d6e68f",
+        "original_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-ae3ec3c9-3025-4f60-8531-bff95f3b03fd.png"
+      },
+      "image_status": "accepted"
+    }
+  ],
+  "closing": {
+    "id": "forgiveness-and-remembrance",
+    "heading": "Forgiveness and remembrance",
+    "paragraphs": [
+      "In July 1840, William W. Phelps sought reconciliation after his break with the Church. Joseph’s reply welcomed his return and expressed joy in renewed friendship. The surviving letterbook copy preserves that act of forgiveness.",
+      "After Joseph and Hyrum were killed, Phelps’s poem, now known as “Praise to the Man,” appeared in the Times and Seasons on 1 August 1844. It joined remembrance of Joseph’s ministry with hope in his work beyond death. Love and gratitude can inspire careful study: honoring a person also means being truthful about what the record preserves."
+    ],
+    "interpretation_limit": "The original letter to Phelps is not extant; a contemporary letterbook copy survives. The hymn’s publication is distinct from an undocumented scene of its composition.",
+    "reflection": "How can remembrance move us toward mercy, gratitude and greater faithfulness to Jesus Christ?",
+    "sources": [
+      {
+        "label": "Read Joseph’s letter to Phelps, 22 July 1840",
+        "url": "https://www.josephsmithpapers.org/paper-summary/letter-to-william-w-phelps-22-july-1840/1/"
+      },
+      {
+        "label": "Read the history of mourning and remembrance",
+        "url": "https://www.churchofjesuschrist.org/study/manual/revelations-in-context/remembering-the-martyrdom?lang=eng"
+      },
+      {
+        "label": "Read or listen to the official hymn",
+        "url": "https://www.churchofjesuschrist.org/study/manual/hymns/praise-to-the-man?lang=eng"
+      }
+    ],
+    "editorial_source_note": "Publication citation verified in official essay note13: Joseph Smith, Times and Seasons5 no14,1Aug1844,p607. Original607scan not inspected here. No invented Phelps face or hymn-composition scene required; no long lyric quotation."
+  }
+}

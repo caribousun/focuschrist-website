@@ -30,12 +30,23 @@
     "source": "https://churchhistorylibrary.churchofjesuschrist.org/joseph-and-hyrum-death-masks?lang=eng",
     "image": "https://www.churchofjesuschrist.org/imgs/529faa4c5c591efbe498e3d3dda95c46d5296526/full/%21672%2C378/0/default",
     "attribution": "The Church of Jesus Christ of Latter-day Saints",
-    "description": "Dibble casts, Joseph left and Hyrum right. Historical artifact photograph, not generated art."
+    "description": "Dibble casts, Joseph left and Hyrum right. Historical artifact photograph, not generated art.",
+    "display_status": "Retired from page display; retained here as original source history, not a reuse permission claim."
   },
   "evidence_limits": [
     "George Cannon made molds June 29, 1844; surviving cast production dates are unknown.",
     "Photogrammetry models depict surviving museum objects, not a living face.",
     "June 25, 1842 journal entry and annotation document a sitting for Sutcliffe Maudsley.",
     "Our process account is based on the repository historical-character identity record; it does not claim a forensic reconstruction or an authenticated photograph."
-  ]
+  ],
+  "current_mask_reference": {
+    "asset": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
+    "source": "https://contentdm.lib.byu.edu/digital/collection/RelEd/id/4109/rec/5",
+    "catalogue_date": "2001",
+    "rights": "Public Domain, Courtesy of LDS Church Archives",
+    "sha256": "f69d497dc7bceeab0c3b459e30e4f31c7d1173e1fd56ddd7179783db105ce8b0",
+    "display": "One photograph displayed as a full pair and two proportional CSS details; details are not separate original artworks.",
+    "creation_limit": "Newly consulted comparison reference; not established as an original portrait creation input.",
+    "object_limit": "Do not assign Dibble or Pedestal identity without source-specific evidence."
+  }
 }

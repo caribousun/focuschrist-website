@@ -1,0 +1,30 @@
+{
+  "reviewer": "Newton",
+  "id": "care-after-loss-1828",
+  "source_review_id": "bedside-wardrobe-1828",
+  "prompt_sha256": "410cb9c04357a9ffdd375078d74b3e21c5c93d9a63d1c09ed9cfb06205fb9b1f",
+  "concur": true,
+  "source_receipt_path": "work\\newton\\main-first-three-final-whole-image-review.json",
+  "source_receipt_sha256": "92998e87c7e94802414197d73ae69232c0e8e2f2bc24508ae49aad9bc05f73f4",
+  "source_record": {
+    "reviewer": "Newton",
+    "id": "bedside-wardrobe-1828",
+    "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-cd002ab4-a863-47e5-8d8a-40e21414b434.png",
+    "sha256": "12a9638ec8dda79b872c17350af964e7994e57f82ac25afc77df282f5fc12068",
+    "prompt_sha256": "410cb9c04357a9ffdd375078d74b3e21c5c93d9a63d1c09ed9cfb06205fb9b1f",
+    "concur": true,
+    "notes": "Accepted reciprocal eye connection, young-adult identities, tenderness and hand support visibly retained. Meaningful wardrobe change: plain modest gathered cream recovery garment, secured hair instead of matching formal ringlets, Joseph brown waistcoat and worklike shirt instead of black formal coat. Natural fullness retained under quilt; no invented medical accessories. Period-plausible interpretation only, not authenticated personal garments. Neckcloth remains somewhat dressy but not enough to undermine the bounded domestic composition. Replacement counts once.",
+    "whole_image_checks": {
+      "realism": "Natural daylight, textured skin and soft cotton/quilt folds.",
+      "likeness_age": "Recognizable separate approved identities, plausible22/23 young adults.",
+      "era_clothing_hair": "Plain cream closed-neck recovery garment, long sleeves, secured hair; brown waistcoat and shirt. Period interpretation, no actual garment claim.",
+      "gaze_expression": "Accepted downward reciprocal connection preserved; tender restrained expression, tired Emma.",
+      "anatomy": "Supporting hands coherent, head/body positions plausible, natural fullness beneath bedding preserved.",
+      "context_purpose": "Care after documented June1828 birth/loss and illness, not continuing pregnancy or exact recorded bedside moment; distinct family-care story."
+    },
+    "scope": "Same exact final pixels independently inspected as a whole; not combined approvals of different versions. Root and assembled-page concurrence pending."
+  },
+  "normalization": "Final placement id mapped to exact prompt/final bytes; source decision preserved, no new broader concurrence.",
+  "sha256": "12a9638ec8dda79b872c17350af964e7994e57f82ac25afc77df282f5fc12068",
+  "whole_image_review": true
+}

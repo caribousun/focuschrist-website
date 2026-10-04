@@ -95,9 +95,12 @@
     "map-note": "Merlin standalone map surface, preserved by owner direction 2026-10-02; scoped inline styles and timeline interaction review.",
     "notes": "Merlin standalone map surface, preserved by owner direction 2026-10-02; scoped inline styles and timeline interaction review.",
     "panel": "Merlin Life of Christ standalone experience, preserved by Wyatt on 2026-10-02; scoped inline design and dedicated Timeline runtime checks own this surface.",
-    "note": "Merlin Life of Christ standalone experience, preserved by Wyatt on 2026-10-02; scoped inline design and dedicated Timeline runtime checks own this surface."
+    "note": "Merlin Life of Christ standalone experience, preserved by Wyatt on 2026-10-02; scoped inline design and dedicated Timeline runtime checks own this surface.",
+    "research-feature-study": "Joseph research feature comparison surface owned by joseph-smith-research.css; groups original artwork, physical evidence and reasoning. Uses shared border/radius tokens; scoped desktop and phone review verifies its own layout and contrast."
   },
   "excluded_classes": {
+    "research-comparison-note": "Inline limitations attached to separately labelled source views; plain reading note, not a section panel.",
+    "research-source-note": "Bibliographic source qualification inside the research index; plain reading text.",
     "ask-scene-card": "Artwork figure; preserve artwork framing.",
     "cfm-library-card__body": "Child copy container; parent library card owns surface.",
     "cfm-source-note": "Inline source paragraph, not a section panel.",
@@ -141,7 +144,9 @@
     "count-note": "Timeline text or structural wrapper; preserved independent experience, no shared panel repaint.",
     "detail-panel-inner": "Timeline text or structural wrapper; preserved independent experience, no shared panel repaint.",
     "detail-panel-head": "Timeline text or structural wrapper; preserved independent experience, no shared panel repaint.",
-    "map-pin-note": "Life of Christ map explanatory text for visual pin separation; plain reading copy, not a card or panel."
+    "map-pin-note": "Life of Christ map explanatory text for visual pin separation; plain reading copy, not a card or panel.",
+    "joseph-life-reflection": "Inline reflection paragraph in Joseph family narrative; a left reading accent only, not an enclosing panel. Page-owned typography and responsive review apply.",
+    "joseph-life-source-note": "Inline provenance paragraph in the remembrance closing; no independent panel surface. Preserve reading flow and source context."
   },
   "runtime_selectors": {
     ".cfm-month": {

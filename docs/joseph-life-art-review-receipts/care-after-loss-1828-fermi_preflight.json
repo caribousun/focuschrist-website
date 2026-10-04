@@ -1,0 +1,32 @@
+{
+  "reviewer": "Fermi",
+  "id": "care-after-loss-1828",
+  "source_review_id": "bedside-wardrobe-1828",
+  "prompt_sha256": "410cb9c04357a9ffdd375078d74b3e21c5c93d9a63d1c09ed9cfb06205fb9b1f",
+  "concur": true,
+  "source_receipt_path": "work\\fermi\\main-wardrobe-edits-v1.json",
+  "source_receipt_sha256": "bdfa7bedcb4199e1d8d3759f94dbe5f79aac832c81d31de9e560a4d72f02cc62",
+  "source_record": {
+    "id": "bedside-wardrobe-1828",
+    "prompt": "Make a bounded wardrobe edit to the supplied accepted historical illustration. Preserve every recognizable face, apparent age, eye color, gaze, expression, facial anatomy, natural body fullness, hand and finger positions, action, composition, room and light. Do not slim Emma, change pregnancy/postpartum appearance, or replace anyone with a new actor. The supplied master-derived face is identity evidence, not an instruction to copy one later outfit into every year. Change only the specified clothes and arranged hair; preserve hair color and hairline exactly. Clothing is a researched period-plausible interpretation, not a claim the named people personally owned these precise garments. Natural photographic cloth and folds, no fashion-magazine styling, modern fasteners or modern hat. No text or new scene props. Preserve original input; this replacement does not add a second original count. LateJune1828 bedside after birth and loss, Joseph22 and Emma23. The accepted mutual eye contact and young faces are inviolable: leave them exactly as they look. Emma wears a simple modest light cream cotton recovery garment with closed neckline and long sleeves, practical soft folds, no ornate lace brooch or copied blue formal day dress. Her dark hair remains the same color/hairline but is softly secured back with a few natural side strands; do not invent a medical cap. Preserve body fullness under the identical quilt. Joseph's visible dark formal coat becomes a plain brown waistcoat over an off-white shirt and simple understated neckcloth. Preserve all touching hands and bodily closeness. No medical objects or change to bedding.",
+    "prompt_sha256": "410cb9c04357a9ffdd375078d74b3e21c5c93d9a63d1c09ed9cfb06205fb9b1f",
+    "actual_references": [
+      {
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-06c60ff1-7d3c-4fb7-b047-fe6362b02fb6.png",
+        "sha256": "1de04bc299097c52f61678931634e6aef0c6638953aecad0a806f40c3ca6366b"
+      }
+    ],
+    "source_urls": [
+      "https://www.metmuseum.org/art/collection/search/108029",
+      "https://emuseum.colonialwilliamsburg.org/objects/5757/dress",
+      "https://emuseum.colonialwilliamsburg.org/objects/41221/bonnet"
+    ],
+    "source_limits": "Period garment categories/forms only; exact individual colors, cloth, hairstyle and possession not documented. Garment references do not authorize body measurement claims.",
+    "fermi_generation_only_concur": true,
+    "newton_concur": false
+  },
+  "normalization": "Final placement id mapped to exact prompt/final bytes; source decision preserved, no new broader concurrence.",
+  "reference_sha256": [
+    "1de04bc299097c52f61678931634e6aef0c6638953aecad0a806f40c3ca6366b"
+  ]
+}

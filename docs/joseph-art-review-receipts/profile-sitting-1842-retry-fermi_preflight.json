@@ -1,0 +1,31 @@
+{
+  "reviewer": "Fermi",
+  "id": "profile-sitting-1842-retry",
+  "source_review_id": "profile-sitting-1842-retry",
+  "prompt_sha256": "a7987c0ad0fd207b3dd5b1355ac9396fca1105e8cb24fe4c6592c878f701a04a",
+  "concur": true,
+  "source_receipt_path": "work\\fermi\\feature-prompts-v1-fermi-preflight.json",
+  "source_receipt_sha256": "0097b1d47110f533eb45e3d5b13fb3d543aba13afabf506c749d1b632aa5ff00",
+  "source_record": {
+    "id": "profile-sitting-1842-retry",
+    "prompt_sha256": "a7987c0ad0fd207b3dd5b1355ac9396fca1105e8cb24fe4c6592c878f701a04a",
+    "reference_sha256": [
+      "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+    ],
+    "concur": true,
+    "scope": "Exact prompt/reference approval for generation ONLY",
+    "reason": "Actual approvedJoseph reference independently inspected; datedprofileage36 and featureinterpretationage38 valid; original/adopted/reconstructed evidence kept separate; no iris/hair/shape correction or invented measurement",
+    "finished_rejection_conditions": [
+      "Identity drift or changed designated feature",
+      "Macro optics altering proportions",
+      "Artificial skin,eyes,lashes or anatomy",
+      "Failure to visibly isolate intended feature",
+      "Misleading historical/process/measurement caption",
+      "Profile retry showing far iris/three-quarter instead of trueprofile"
+    ]
+  },
+  "normalization": "Maps reviewed exact asset/prompt to final placement id; preserves explicit decision and full source record. Not a new review or broader approval.",
+  "reference_sha256": [
+    "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+  ]
+}

@@ -1226,16 +1226,18 @@
       "uniqueness_matches_before_integration": []
     },
     {
-      "key": "joseph-hyrum-dibble-masks",
+      "key": "joseph-hyrum-byu-4109-masks",
       "url": "https://churchhistorylibrary.churchofjesuschrist.org/joseph-and-hyrum-death-masks?lang=eng",
       "title": "Joseph and Hyrum Death Masks",
-      "thumbnail": "https://www.churchofjesuschrist.org/imgs/529faa4c5c591efbe498e3d3dda95c46d5296526/full/%21672%2C378/0/default",
-      "local_thumbnail": "assets/page-art/joseph-smith-likeness/museum-dibble-masks.jpg",
-      "width": 672,
-      "height": 378,
-      "sha256": "e5666a6999b174a7e283c9d7f50acb5459a95f20c776d12f5d7bbcce99707b1e",
+      "thumbnail": "https://contentdm.lib.byu.edu/digital/collection/RelEd/id/4109/rec/5",
+      "local_thumbnail": "assets/research/joseph-documents/byu-reled-4109-mask-pair.jpg",
+      "width": 800,
+      "height": 540,
+      "sha256": "f69d497dc7bceeab0c3b459e30e4f31c7d1173e1fd56ddd7179783db105ce8b0",
       "status": 200,
-      "verified_date": "2026-09-14"
+      "verified_date": "2026-10-03",
+      "photograph_source_url": "https://contentdm.lib.byu.edu/digital/collection/RelEd/id/4109/rec/5",
+      "rights": "Public Domain, Courtesy of LDS Church Archives; item-specific catalogue designation"
     },
     {
       "key": "atonement-atonement-guide",
