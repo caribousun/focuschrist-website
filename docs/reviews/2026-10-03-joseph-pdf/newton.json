@@ -1,0 +1,53 @@
+{
+  "reviewer": "Newton",
+  "status": "EXACT_WEBSITE_STYLE_PDF_RENDERED_AND_CONTENT_CONCURRENCE",
+  "concur": true,
+  "pdf_sha256": "d45a151ca3730dd9ee17296c867b2c21670e53957c33d47212b3906445d799ee",
+  "source_html_sha256": "7724e9cbe8af9307384601be8f8ba0f44a31ec14937aa196933ee2e4d689fcba",
+  "pages": 60,
+  "authority_readback": {
+    "master": "Fresh connected Drive read, modified2026-10-03T20:57:03.835Z; exact protected foundation preserved.",
+    "current_project": "Current Master/00B/Focus read in this task. Latest direct owner explicitly selected website appearance: deep teal/green, cream text, restrained gold pills, familiar fonts; six repeating jump controls, visible link cues and no underlines. This supersedes earlier pale parchment style request. Protected foundation unchanged.",
+    "local": "AGENTS.md mutual verification and mandate readback; Joseph execution standard full content/source preservation and traceable uncertainty; enrichment identity/source requirements; section-panel design scope; PDF skill read and applied for rendered review. PDF typography is not imported into website CSS."
+  },
+  "visual_review": {
+    "coverage": "All60 page regions inspected across5 contact sheets on e944; final d45a bounded repair renewed on full34/35, contents3 and contact25-36. Prior whole style review included full2/7/19/30/31/53/59 on59page candidate; final60page review included full7/8/31/32/60. Gary confirms all final60 PNGs freshly rendered from d45a. No exact per-page binary sameness is claimed.",
+    "findings": "Deep teal background, green inset panels, cream Segoe UI text and Georgia gold headings match latest explicit owner website-style choice. Six restrained gold outline buttons visibly spaced on every page. Gold source links carry outward arrow cues without underlines; front key explains navigation. Header/body and panel edges have clear space. Proportional images retain intended source windows; captions and source links remain together. Original7/31 heading orphans and34 section-title orphan repaired; no remaining clipping, overlap, missing labels or isolated heading found.",
+    "source_plates": "Full archival scans are deliberately smaller reference plates with complete source links; new art, authentic records and unchanged detail windows retain distinct labels. Available space follows complete source/figure groups, not missing content.",
+    "historical_limits": "Modern interpretation and source uncertainty preserved; no simulated historical-artifact claim, invented original workflow, or controlled-test claim introduced."
+  },
+  "independent_checks": {
+    "pdf_sha256": "d45a151ca3730dd9ee17296c867b2c21670e53957c33d47212b3906445d799ee",
+    "html_sha256": "7724e9cbe8af9307384601be8f8ba0f44a31ec14937aa196933ee2e4d689fcba",
+    "pages": 60,
+    "substantive_text_blocks_checked": 551,
+    "missing_text": [],
+    "expected_external_links": 39,
+    "missing_external_links": [],
+    "link_annotations": 842,
+    "bad_internal_links": [],
+    "empty_pages": [],
+    "out_of_page_text": [],
+    "bookmarks": 33,
+    "expected_bookmarks": 33,
+    "image_placements": 76,
+    "expected_image_placements": 76,
+    "original_image_links": 10,
+    "missing_original_image_links": [],
+    "limits": "Text/link/geometry checks do not replace independent rendered-page visual review.",
+    "pass": true,
+    "header_buttons_checked": 360,
+    "header_navigation_errors": [],
+    "external_text_links_checked": 110,
+    "link_cue_errors": [],
+    "panel_clearance_errors": [],
+    "orphan_headings": []
+  },
+  "qa_review": {
+    "navigation": "Actual PDF label text, six exact hit rectangles and bookmark-derived destinations checked on all60 pages,360 controls.110 text URI groups have outward arrows. Panel painted-text inset and orphan headings checked; trailing research eyebrows cannot hide orphan.",
+    "negative_tests": "Valid real-page extraction plus five deliberate faults missing button/wrong destination/wrong rectangle/inset/cue PASS. Previous e944 negative receipt proves orphan34 detection.",
+    "freshness": "Reviewed root exact committed receipt SHA256 check plus true concurrence and exact PDF hash. Existing HTML/PDF hash and all-three-reviewer gate retained.",
+    "sitewide_style_baseline": "Fermi sole Joseph stylesheet registry hash update independently reviewed; exact24px closing-row rule recovers prior protected baseline when removed. No unrelated owner paths or assertions changed."
+  },
+  "limits": "Authoring-time fitz QA and rendered review. CI retains strict hash/receipt binding without new full-PDF dependency. Final commit binding, CI, publication and public byte checks remain separate. No new artwork approval inferred."
+}

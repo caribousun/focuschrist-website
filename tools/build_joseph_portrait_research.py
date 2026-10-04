@@ -125,7 +125,7 @@ def build():
                     parts.append('<div class="research-feature-images">'+''.join(visual(record) for record in feature['visuals'])+'</div>')
                     for paragraph in feature.get('explanation',[]):
                         parts.append(f'<p class="research-feature-explanation">{inline(paragraph)}</p>')
-                    parts.append('<div class="research-feature-limits"><h4>What this can—and cannot—tell us</h4><p>'+inline(feature['limits'])+'</p></div></article>')
+                    parts.append('<div class="research-feature-limits"><h4>What this can and cannot tell us</h4><p>'+inline(feature['limits'])+'</p></div></article>')
                     continue
                 if pending and not trait_count:flush()
                 pending.append(f'<article class="research-trait"><h3>{html.escape(b["title"])}</h3><p><strong>What is visible.</strong> {inline(b["observed"])}</p><p><strong>Evidence.</strong> {inline(b["evidence"])}</p><p><strong>Decision.</strong> {inline(b["verdict"])}</p></article>');trait_count+=1
@@ -185,6 +185,7 @@ def build():
     if 'href="'+ROUTE+'">PORTRAIT RESEARCH</a>' not in main:
         main=main.replace('aria-current="page">JOSEPH SMITH</a>','aria-current="page">JOSEPH SMITH</a><a href="'+ROUTE+'">PORTRAIT RESEARCH</a>')
     main=main.replace('joseph-smith-research.css?v=20261003-research-1','joseph-smith-research.css?v=20261003-separate-research-2')
+    main=main.replace('joseph-smith-research.css?v=20261003-separate-research-2','joseph-smith-research.css?v=20261003-closing-spacing-3')
     PAGE.write_text(main,encoding='utf-8',newline='\n')
     head=main.split('<a class="fc-visual-hero')[0]
     head=re.sub(r'<title>.*?</title>','<title>Joseph Smith Portrait Research | focusChrist</title>',head)
