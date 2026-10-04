@@ -47,10 +47,12 @@ def visual(record, describedby=None):
         crop_style=f' class="research-detail-window" style="aspect-ratio:{w}/{h};max-width:{max(w,min(w*2,360))}px;margin-inline:auto"'
         img_style=f' style="width:{record["width"]/w*100:.6f}%;max-width:none;position:absolute;left:{-x/w*100:.6f}%;top:{-y/h*100:.6f}%;height:auto"'
     description=f' aria-describedby="{describedby}"' if describedby else ''
+    label=record.get('label','Research reference')
+    label_markup='' if original and label in {'New artwork · explanatory interpretation','New artwork · feature study','New artwork · historical interpretation'} else f'<p class="fc-study-visual-label">{label}</p>'
     return (f'<figure class="fc-study-visual research-visual" {attrs}{description}>'
         f'<a href="{src}"{crop_style} aria-haspopup="dialog" aria-label="Explore artwork: {html.escape(title,quote=True)}" data-topic-study="{target}" data-topic-study-label="{html.escape(record.get("owner_label","Visit the owning portrait study"),quote=True)}">'
         f'<img src="{image_src}"{responsive} width="{record["width"]}" height="{record["height"]}" alt="{html.escape(record["alt"],quote=True)}" loading="lazy" decoding="async"{img_style}></a>'
-        f'<figcaption><p class="fc-study-visual-label">{record.get("label","Research reference")}</p><h4>{html.escape(title)}</h4><p>{inline(caption)}</p>'
+        f'<figcaption>{label_markup}<h4>{html.escape(title)}</h4><p>{inline(caption)}</p>'
         '<p class="fc-study-visual-sources">'+''.join(f'<a href="{html.escape(x["url"],quote=True)}"'+(' target="_blank" rel="noopener noreferrer"' if x['url'].startswith('https:') else '')+'>'+html.escape(x['label'])+'</a>' for x in record.get('sources',[]))+
         f'<a href="{target}">{html.escape(record.get("owner_label","Visit the owning portrait study"))}</a></p></figcaption></figure>')
 

@@ -4,6 +4,7 @@ import copy, hashlib, json, re, sys, unicodedata
 from urllib.parse import urljoin
 from bs4 import BeautifulSoup
 import fitz
+from joseph_research_acceptance import check_artwork_disclosure_text
 
 ROOT = Path(__file__).resolve().parents[1]
 HTML = ROOT / 'joseph-smith-portrait-research.html'
@@ -126,6 +127,7 @@ def main():
             if norm(value) in heading_texts:
                 orphan_headings.append({'page':number,'heading':value})
     text = '\n'.join(page.get_text() for page in document)
+    check_artwork_disclosure_text(text)
     normalized = norm(text)
     missing = []
     checked = 0

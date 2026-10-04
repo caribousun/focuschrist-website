@@ -25,7 +25,7 @@ def render(data):
         assert all(isinstance(s[k], str) and s[k].strip() for k in ('title', 'speaker', 'description'))
         url = 'https://www.youtube.com/shorts/' + s['id']
         cards.append(f'''<article class="watch-short" data-short-id="{s['id']}">
-<div class="watch-short-media"><a class="watch-short-preview" data-short-play="{s['id']}" href="{url}" aria-label="Watch {esc(s['title'])}" target="_blank" rel="noopener noreferrer"><img src="{esc(s['thumbnail'])}" width="405" height="720" alt="{esc(s['title'])} — YouTube Short preview" loading="lazy" decoding="async"></a></div>
+<div class="watch-short-media"><a class="watch-short-preview" data-short-play="{s['id']}" href="{url}" aria-label="Watch {esc(s['title'])}" target="_blank" rel="noopener noreferrer"><img src="{esc(s['thumbnail'])}" width="405" height="720" alt="{esc(s['title'])}: YouTube Short preview" loading="lazy" decoding="async"></a></div>
 <div class="watch-short-copy"><a class="watch-short-open" data-short-play="{s['id']}" href="{url}" aria-label="Play {esc(s['title'])}" target="_blank" rel="noopener noreferrer">▶ Watch Short</a><p class="watch-short-speaker">{esc(s['speaker'])}</p><h3>{esc(s['title'])}</h3><p>{esc(s['description'])}</p><a href="{url}" target="_blank" rel="noopener noreferrer">Open on YouTube →</a></div>
 </article>''')
     date = datetime.date.fromisoformat(data['verified_at'])

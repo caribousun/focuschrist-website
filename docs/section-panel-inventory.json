@@ -3369,16 +3369,14 @@
       ]
     },
     ".fc-notice": {
-      "count": 4,
+      "count": 3,
       "pages": [
         "about.html",
         "answers.html",
-        "book-of-mormon-evidences.html",
         "missionary.html"
       ],
       "tags": [
-        "div",
-        "p"
+        "div"
       ]
     },
     ".fc-priesthood-evidence": {

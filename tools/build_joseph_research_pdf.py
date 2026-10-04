@@ -266,7 +266,7 @@ def build(output):
            para('History, interpretation, and the face we chose to remember','h3'),Spacer(1,15)]
     hero=ROOT/'assets/identities/joseph-smith-owner-approved-20260914.png'
     story+=[SourceImage(hero,340,315,target=urljoin(ORIGIN,'assets/identities/joseph-smith-owner-approved-20260914.png')),Spacer(1,14),
-            para('The adopted focusChrist portrait is a modern artistic interpretation. This edition distinguishes the historical record, the choices visible in our artwork, and what remains uncertain.','body'),
+            para('This edition distinguishes the historical record, the choices visible in our artwork, and what remains uncertain.','body'),
             para('Independent faith-based study. Not an official publication of The Church of Jesus Christ of Latter-day Saints.','small'),PageBreak(),Heading('Contents','pdf-contents')]
     toc=TableOfContents();toc.levelStyles=[style('toc0',fontSize=10.1,leading=15,spaceBefore=7,leftIndent=0,textColor=TEAL),style('toc1',fontSize=8.8,leading=12.6,leftIndent=16,spaceBefore=3,textColor=TEAL)]
     story += [para('Use the six outlined buttons repeated at the top of every page to return to the cover, contents, evidence, facial features, creation, or sources. Source links appear in gold; a small outward arrow marks links that open online records. Contents titles and page numbers move within this PDF; source numbers lead to the source shelf. Select an image to open its complete source file.','small'),toc]

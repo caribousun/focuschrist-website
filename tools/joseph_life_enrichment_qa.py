@@ -4,6 +4,7 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 from PIL import Image
 from joseph_research_acceptance import check_exact_review,check_original_page_exclusivity
+from joseph_research_acceptance import check_artwork_badges_and_footer
 ROOT=Path(__file__).resolve().parents[1]
 EXPECTED={'marriage-partnership-1827','household-gift-harmony-1828','emma-early-scribe-1828','hyrum-reading-before-carthage-1844','emma-relief-service-1842','care-after-loss-1828','emma-family-letter-1838','joseph-household-labor-1828','journey-to-harmony-1827','emma-prayer-during-arrest-1830'}
 def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
@@ -13,6 +14,11 @@ def check():
  assert {r['id'] for r in data}=={r['id'] for r in records}==EXPECTED and len(data)==len(records)==10,'Ten deliberate family scenes required'
  assert len({r['sha256'] for r in records})==10,'Repeated bytes cannot count as originals'
  doc=BeautifulSoup((ROOT/'joseph-smith-likeness.html').read_text(encoding='utf-8'),'html.parser')
+ check_artwork_badges_and_footer(doc)
+ closing=json.loads((ROOT/'docs/joseph-life-enrichment.json').read_text(encoding='utf-8-sig'))['closing']
+ assert closing['visitor_source_note']=='The original letter to Phelps is not extant; a contemporary letterbook copy survives.'
+ assert closing['visitor_source_note'] in doc.get_text(' ',strip=True), 'Substantive Phelps source limitation must remain visible'
+ assert closing.get('interpretation_limit'), 'Closing internal provenance must remain preserved'
  assert len(doc.select('img'))>=20,'Main study needs at least20 meaningful picture placements; count is necessary only'
  assert len(doc.select('.joseph-life-scene'))==10,'Ten enriched scene articles required'
  for row in data:
@@ -26,7 +32,9 @@ def check():
   assert figure.select_one('a[href="'+im['src']+'"][aria-haspopup="dialog"]')
   img=figure.select_one('img');assert img and img.get('data-source-original',img.get('src'))==im['src'] and img.get('alt')==im['alt']
   actual=' '.join(section.stripped_strings)
-  for value in [row['heading'],row['date_label'],*row['paragraphs'],row['interpretation_limit'],row['reflection']]:assert value in actual,'Missing local scene content: '+row['id']
+  assert row.get('interpretation_limit'), 'Internal scene provenance must remain preserved'
+  assert row.get('visitor_caption'), 'Owner-reviewed visitor caption required'
+  for value in [row['heading'],row['date_label'],*row['paragraphs'],row['visitor_caption'],row['reflection']]:assert value in actual,'Missing local scene content: '+row['id']
   assert all(section.select_one('a[href="'+s['url']+'"]') for s in row['sources'])
   assert doc.select_one('nav.joseph-life-nav a[href="#life-'+row['id']+'"]')
   for key in ['fermi_preflight','newton_preflight','fermi_finished_pixels','newton_finished_pixels']:

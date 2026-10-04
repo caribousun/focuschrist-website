@@ -6,6 +6,30 @@ from joseph_research_acceptance import ROUTE, check_entry_and_brevity, check_rea
 def soup(markup): return BeautifulSoup(markup,'html.parser')
 
 class AcceptanceTests(unittest.TestCase):
+    def test_sitewide_disclosure_guard_preserves_source_geography_and_footer(self):
+        from joseph_research_acceptance import check_no_repeated_artwork_disclosure, ARTWORK_FOOTER_DISCLOSURE
+        check_no_repeated_artwork_disclosure('Pin positions mark named places; some crossings use the nearest modern town. The date of Moyle’s injury and details of his prosthetic remain uncertain. A contemporary letterbook copy survives. '+ARTWORK_FOOTER_DISCLOSURE)
+        with self.assertRaises(AssertionError):check_no_repeated_artwork_disclosure('The exact home and arrangement are imagined.')
+    def test_caption_status_guard_does_not_ban_research_findings(self):
+        from joseph_research_acceptance import check_artwork_badges_and_footer, ARTWORK_FOOTER_DISCLOSURE
+        markup='<p>His care is documented. A contemporary letterbook copy survives.</p><figure><figcaption>Joseph stays beside Emma.</figcaption></figure><footer><p data-focuschrist-artwork-disclosure="footer">'+ARTWORK_FOOTER_DISCLOSURE+'</p></footer>'
+        check_artwork_badges_and_footer(soup(markup))
+        with self.assertRaises(AssertionError):check_artwork_badges_and_footer(soup(markup.replace('Joseph stays beside Emma.','His care is documented.')))
+
+    def test_generic_artwork_badges_absent_but_footer_and_source_limits_preserved(self):
+        from joseph_research_acceptance import check_artwork_badges_and_footer, check_artwork_disclosure_text, ARTWORK_FOOTER_DISCLOSURE, REJECTED_ARTWORK_BADGES, REJECTED_SCENE_BOILERPLATE
+        markup='<p>The surviving cast cannot establish iris color.</p><footer><p data-focuschrist-artwork-disclosure="footer">'+ARTWORK_FOOTER_DISCLOSURE+'</p></footer>'
+        check_artwork_badges_and_footer(soup(markup))
+        check_artwork_disclosure_text(soup(markup).get_text(' ',strip=True))
+        for badge in REJECTED_ARTWORK_BADGES:
+            with self.assertRaises(AssertionError):check_artwork_badges_and_footer(soup('<p>'+badge+'</p>'+markup))
+            with self.assertRaises(AssertionError):check_artwork_disclosure_text(badge+'\n'+ARTWORK_FOOTER_DISCLOSURE)
+        for phrase in REJECTED_SCENE_BOILERPLATE:
+            with self.assertRaises(AssertionError):check_artwork_badges_and_footer(soup('<p>'+phrase+'</p>'+markup))
+            with self.assertRaises(AssertionError):check_artwork_badges_and_footer(soup('<img alt="'+phrase+'">'+markup))
+        for changed in (markup.replace(ARTWORK_FOOTER_DISCLOSURE,''),markup.replace('<p data-','<p hidden data-'),markup.replace('<footer>','<div>').replace('</footer>','</div>')):
+            with self.assertRaises(AssertionError):check_artwork_badges_and_footer(soup(changed))
+
     def test_cadence_rationale_is_bounded_and_exact(self):
         import hashlib
         markup='<section class="research-part"><div data-research-reading-block="section-2-1"><div class="research-reading-copy"><p>Supported means constrained by an actual source.</p></div></div></section>'

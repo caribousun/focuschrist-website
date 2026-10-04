@@ -3,13 +3,19 @@ import hashlib, html, json, re
 from pathlib import Path
 from bs4 import BeautifulSoup
 from PIL import Image
+from joseph_research_acceptance import check_artwork_badges_and_footer
 from joseph_research_acceptance import ROUTE, REJECTED_GENERIC_SCENES, REJECTED_GENERIC_HASHES, check_entry_and_brevity, check_reading_cadence, check_original_manifest, check_reference_scope, check_exact_review, check_evidence_inventory, check_feature_studies, check_original_page_exclusivity
 
 ROOT=Path(__file__).resolve().parents[1]
 data=json.loads((ROOT/'docs/joseph-portrait-research-content.json').read_text(encoding='utf-8'))
 editorial=json.loads((ROOT/'docs/joseph-research-editorial-map.json').read_text(encoding='utf-8'))
 # Individually reviewed semantic edit, not a general license to rewrite evidence.
-approved_editorial={'The unchanged owner-approved portrait. A modern artistic interpretation, not an authenticated photograph or a forensic identification. [20]': 'Our adopted portrait remains unchanged. It is a modern artistic interpretation, not an authenticated photograph or a forensic identification. [20]', 'Retain the approved Joseph': 'Why we kept this likeness', 'EVIDENCE, INTERPRETATION AND THE CASE FOR RETAINING HIM': 'A portrait informed by history', 'A consolidated study of the approved portrait: what the historical record supports, what it leaves uncertain, and what would justify a change.': 'What did Joseph Smith look like? No single surviving source answers the whole question. A cast preserves contours; a portrait records an artist’s choices; a description captures what one observer noticed. Here we follow those records to see what supports our portrait, what remains uncertain, and what could justify a change.', 'Joseph death-mask reference as used in the current focusChrist study. The mask photograph is provided for source context, not as a pose-matched overlay or proof of agreement. [1, 20]': 'The <a href="joseph-smith-likeness.html#joseph-mask-comparison">mask comparison in the portrait study</a> now uses this same newly consulted BYU photograph. It supplies source context, not a pose-matched overlay or proof of agreement, and is not established as an original creation input. [1,20]'}
+approved_editorial={'The unchanged owner-approved portrait. A modern artistic interpretation, not an authenticated photograph or a forensic identification. [20]': 'Our adopted portrait remains unchanged. [20]', 'Retain the approved Joseph': 'Why we kept this likeness', 'EVIDENCE, INTERPRETATION AND THE CASE FOR RETAINING HIM': 'A portrait informed by history', 'A consolidated study of the approved portrait: what the historical record supports, what it leaves uncertain, and what would justify a change.': 'What did Joseph Smith look like? No single surviving source answers the whole question. A cast preserves contours; a portrait records an artist’s choices; a description captures what one observer noticed. Here we follow those records to see what supports our portrait, what remains uncertain, and what could justify a change.', 'Joseph death-mask reference as used in the current focusChrist study. The mask photograph is provided for source context, not as a pose-matched overlay or proof of agreement. [1, 20]': 'The <a href="joseph-smith-likeness.html#joseph-mask-comparison">mask comparison in the portrait study</a> now uses this same newly consulted BYU photograph. It supplies source context, not a pose-matched overlay or proof of agreement, and is not established as an original creation input. [1,20]'}
+approved_editorial.update({
+    'No demonstrated structural defect requires replacing him. Exact historical fidelity remains unverified. The evidence supports a cautious artistic interpretation and an optional, limited hair study.': 'The sources we compared give us no clear reason to change the portrait’s facial structure. They leave room to explore a straighter hairstyle, while several details of Joseph’s appearance remain uncertain.',
+    'No replacement identity is proposed for approval now. Preserve this portrait and its honest interpretive labeling.': 'No replacement identity is proposed for approval now. Preserve this portrait.',
+    'The approved portrait is defensible as an openly labeled artistic representation. A stronger claim - exact anatomy or recognition by a contemporary - is not established.': 'The evidence supports retaining the approved portrait. Exact anatomy or recognition by a contemporary is not established.',
+})
 assert {e['original']:e['replacement'] for e in editorial['changes']}==approved_editorial, 'New editorial mapping requires independent semantic review'
 main_page=(ROOT/'joseph-smith-likeness.html').read_text(encoding='utf-8')
 assert (ROOT/ROUTE).is_file(), 'Research requires its own HTML route'
@@ -17,6 +23,8 @@ page=(ROOT/ROUTE).read_text(encoding='utf-8')
 assert not any(bad in page for bad in ('\ufffd', '\u00e2\u20ac\u2122', '\u00c3\u00a9')), 'Encoding corruption in research page'
 main_doc=BeautifulSoup(main_page,'html.parser')
 doc=BeautifulSoup(page,'html.parser')
+check_artwork_badges_and_footer(main_doc)
+check_artwork_badges_and_footer(doc)
 root=doc.select_one('#portrait-research')
 assert root is not None,'Separate page lacks complete research'
 research=str(root)

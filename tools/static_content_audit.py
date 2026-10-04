@@ -17,6 +17,7 @@ import json
 from pathlib import Path
 import re
 import sys
+from joseph_research_acceptance import check_no_repeated_artwork_disclosure, check_caption_evidence_metacommentary
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -131,6 +132,15 @@ def validate() -> int:
         errors.append("ledger paths no longer present: " + ", ".join(extra))
 
     for name, path in actual.items():
+        try:
+            # Published extraction includes visible copy and accessible text.
+            # Exact rejected phrases only: shared footer and substantive source
+            # or geographic uncertainty are not blanket-banned vocabulary.
+            check_no_repeated_artwork_disclosure(published_text(path))
+            for caption in re.findall(r'<figcaption\b[^>]*>(.*?)</figcaption>', path.read_text(encoding='utf-8'), flags=re.S|re.I):
+                check_caption_evidence_metacommentary(html.unescape(re.sub(r'<[^>]+>', ' ', caption)))
+        except AssertionError as exc:
+            errors.append(f"{name}: {exc}")
         record = by_path.get(name)
         if not record:
             continue
