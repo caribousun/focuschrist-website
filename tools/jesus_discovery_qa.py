@@ -46,13 +46,40 @@ def expected_directories(page):
     if page.get('related'):rows.append(tuple(card[0] for card in page['related']))
     return Counter(rows)
 
+def card_destination(node):
+    if node.tag=='a':return node.attrs.get('href','')
+    if node.tag=='div' and node.has('jj-card'):
+        links=[n for n in node.children if n.tag=='a']
+        if len(links)==2 and links[1].has('jj-card-action') and any(n.tag=='h3' for n in links[0].walk()):
+            destination=links[0].attrs.get('href','')
+            if destination and links[1].attrs.get('href')==destination:return destination
+    return ''
+
+def directory_rows(grids):
+    return Counter(tuple(card_destination(n) for n in grid.children) for grid in grids)
+
+# Source-bearing cards must retain both matching local-study actions. A source
+# link inside the description must never substitute for the onward destination.
+fixture='<div class="jj-directory"><div class="jj-card"><a href="/study.html"><h3>Study</h3></a><p><a href="https://example.org/source">Source</a></p><a class="jj-card-action" href="/study.html">Open study</a></div></div>'
+def fixture_rows(text):
+    doc=Document();doc.feed(text)
+    return directory_rows([n for n in doc.root.walk() if n.has('jj-directory')])
+assert fixture_rows(fixture)==Counter({('/study.html',):1})
+for mutant in (
+    fixture.replace('<a class="jj-card-action" href="/study.html">Open study</a>',''),
+    fixture.replace('class="jj-card-action" href="/study.html"','class="jj-card-action" href="/wrong.html"'),
+    fixture.replace('</p>','</p><a href="/study.html">Duplicate</a>'),
+    fixture.replace('class="jj-card"','class="unrecognized"'),
+):
+    assert fixture_rows(mutant)!=Counter({('/study.html',):1}), 'Source-bearing directory negative fixture failed'
+
 directory_count=0
 for page in pages:
     doc=Document();doc.feed((ROOT/page['url'].lstrip('/')).read_text(encoding='utf-8'))
     nodes=list(doc.root.walk())
     grids=[n for n in nodes if n.has('jj-directory')]
     expected=expected_directories(page)
-    actual=Counter(tuple(n.attrs.get('href','') for n in grid.children if n.tag=='a') for grid in grids)
+    actual=directory_rows(grids)
     if actual!=expected:errors.append('Journey directory destinations or row inventory differ: '+page['url'])
     # Equal row counts must not hide a missing, duplicated, or misdirected reference.
     if expected:
