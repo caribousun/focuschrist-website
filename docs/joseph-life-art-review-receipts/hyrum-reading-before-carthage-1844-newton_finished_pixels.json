@@ -1,0 +1,30 @@
+{
+  "reviewer": "Newton",
+  "id": "hyrum-reading-before-carthage-1844",
+  "source_review_id": "hyrum-reading-before-carthage-1844",
+  "prompt_sha256": "f9d4708513ffbf5b6045bb7e0e4d54b5b588a32325a570f0a0f83be0cdffc971",
+  "concur": true,
+  "source_receipt_path": "work\\newton\\hyrum-final-whole-image-review.json",
+  "source_receipt_sha256": "4442c95dd86c17eaaa98417246022415d12317aa134be22c3eefc79b83a33ca7",
+  "source_record": {
+    "reviewer": "Newton",
+    "id": "hyrum-reading-before-carthage-1844",
+    "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-ec328664-3526-4259-9d33-263d014fb828.png",
+    "sha256": "b906c5c27cd36aa90b68fd1899355fe88c79fe53deb9c2b6ee571805cdb0ca83",
+    "prompt_sha256": "f9d4708513ffbf5b6045bb7e0e4d54b5b588a32325a570f0a0f83be0cdffc971",
+    "concur": true,
+    "whole_image_checks": {
+      "realism": "Natural skin, hair, cloth, book and diffuse window light.",
+      "likeness_age": "Distinct approved Hyrum anatomy and authorized blue irises, plausible44; not Joseph substitution.",
+      "era_clothing_hair": "Restrained1840s formal coat/waistcoat/highcollar and wavy hair, plausible interpretation.",
+      "gaze_expression": "Eyes turn left above open book in reflective pause; must never caption active eyes-on-page reading. Serious calm expression coherent for reflection.",
+      "anatomy": "Hands hold book/page edge naturally, seated body and fingers coherent.",
+      "context": "Interprets pre-departure Ether reading described in D&C135; exact pause/room/binding unrecorded, noJune27jail claim.",
+      "distinct_purpose": "Hyrum scripture and shared witness, unique person/context within family series."
+    },
+    "scope": "Fresh whole exact-image review; root and assembled gates pending."
+  },
+  "normalization": "Final placement id mapped to exact prompt/final bytes; source decision preserved, no new broader concurrence.",
+  "sha256": "b906c5c27cd36aa90b68fd1899355fe88c79fe53deb9c2b6ee571805cdb0ca83",
+  "whole_image_review": true
+}

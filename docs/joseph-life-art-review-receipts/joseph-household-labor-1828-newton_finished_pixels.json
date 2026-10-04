@@ -1,0 +1,29 @@
+{
+  "reviewer": "Newton",
+  "id": "joseph-household-labor-1828",
+  "source_review_id": "joseph-household-labor-1828",
+  "prompt_sha256": "9e7ee4eff3d6364cd7bc5ed58aac7e3e194a4fc0cea36fb98eee26f8c8e75a92",
+  "concur": true,
+  "source_receipt_path": "work\\newton\\labor-journey-whole-image-review.json",
+  "source_receipt_sha256": "b9cf0db4bfd809bc56c7ee00b1f7a4d2e54fa1bd6924fb32ccea24f4c00bb6ae",
+  "source_record": {
+    "id": "joseph-household-labor-1828",
+    "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-cbc4006e-0236-4720-bcc5-e703e75259af.png",
+    "sha256": "7a9dce413b46985159df1b3bfb2fe9bba67cca4d640b7c1db774796bc4978036",
+    "prompt_sha256": "9e7ee4eff3d6364cd7bc5ed58aac7e3e194a4fc0cea36fb98eee26f8c8e75a92",
+    "concur": true,
+    "whole_image_checks": {
+      "realism": "Natural daylight, textured wood/bark, garment folds and human skin.",
+      "likeness_age": "Recognizable Joseph facial structure and hair; young-adult22 interpretation plausible, no deep mature forehead creases.",
+      "era_clothing_hair": "Plain off-white workshirt, rolled cuffs, brown waistcoat and gray-brown trousers; no formalcoat, modern denim or invented tool. Hair natural and task-appropriate.",
+      "gaze_expression": "Alert look toward wagon-side travel direction, slightly parted mouth with exertion; coherent action attention rather than required reciprocal gaze.",
+      "anatomy": "Both hands support stacked manageable wood, forearms/load/body lean coherent; no extra fingers or floating logs visible.",
+      "context": "Documented wood-hauling labor, not exact task photograph; wagon/site/clothes/seasonal staging interpreted.",
+      "distinct_purpose": "Physical paid work supporting household, visibly different from gift scene and formal portraits."
+    },
+    "scope": "Whole exact finished pixels; root and assembled gates separate."
+  },
+  "normalization": "Final placement id mapped to exact prompt/final bytes; source decision preserved, no new broader concurrence.",
+  "sha256": "7a9dce413b46985159df1b3bfb2fe9bba67cca4d640b7c1db774796bc4978036",
+  "whole_image_review": true
+}

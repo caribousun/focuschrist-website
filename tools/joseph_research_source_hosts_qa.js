@@ -29,3 +29,20 @@ assert(!allows(route,'javascript:alert(1)'));
 assert(allows('/joseph-smith-likeness.html','https://www.josephsmithpapers.org/person/joseph-smith-jr'));
 assert(allows(route,'https://www.churchofjesuschrist.org/study/scriptures/nt/john/5'));
 console.log('PASS: exact research-route Archive.org/BYU/Commons sources; host spoof, other-route, insecure protocol negatives; existing official hosts preserved.');
+
+const quincy='/article/josiah-quincys-1844-visit-with-joseph-smith';
+const ledger='/article/david-hales-store-ledger-new-details-about-joseph-and-emma-smith-the-hale-family-and-the-book-of-mormon';
+assert(allows(route,'https://byustudies.byu.edu'+quincy));
+assert(allows('/joseph-smith-likeness.html','https://byustudies.byu.edu'+ledger));
+for (const url of ['https://byustudies.byu.edu/unrelated','https://byustudies.byu.edu.evil.example'+quincy,'http://byustudies.byu.edu'+quincy,'https://byustudies.byu.edu@evil.example'+quincy]) assert(!allows(route,url));
+assert(!allows('/index.html','https://byustudies.byu.edu'+quincy));
+assert(!allows('/joseph-smith-likeness.html','https://byustudies.byu.edu'+quincy));
+assert(!allows(route,'https://byustudies.byu.edu'+ledger));
+console.log('PASS exact Joseph route/article BYU Studies destinations, unrelated paths/routes and spoof/insecure negatives.');
+
+const minutes='https://www.churchhistorianspress.org/the-first-fifty-years-of-relief-society/part-1/1-2/1-2-1';
+assert(allows('/joseph-smith-likeness.html',minutes));
+assert(!allows('/index.html',minutes));
+assert(!allows('/joseph-smith-likeness.html',minutes.replace('https:','http:')));
+assert(!allows('/joseph-smith-likeness.html',minutes.replace('.org/','.org.evil.example/')));
+assert(!allows('/joseph-smith-likeness.html','https://www.churchhistorianspress.org/unrelated'));

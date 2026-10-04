@@ -68,7 +68,7 @@ def reviewed_art_reflection(selector, body, data):
 TIMELINE_ROUTES = {'timeline.html', 'timelines/latter-day-saint-church-history-timeline.html', 'timelines/willie-and-martin-handcart-map.html', 'timelines/life-of-christ-journey-map.html'}
 
 def reviewed_wrap_consumers(consumers, expected, version):
-    return (set(consumers) == set(expected) | {'answers/holy-ghost.html', 'answers/plan-of-salvation.html', 'history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html', 'answers/race-priesthood-and-temple-blessings.html'} | TIMELINE_ROUTES and len(consumers) == 130
+    return (set(consumers) == set(expected) | {'answers/holy-ghost.html', 'answers/plan-of-salvation.html', 'history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html', 'answers/race-priesthood-and-temple-blessings.html'} | TIMELINE_ROUTES | {'joseph-smith-portrait-research.html'} and len(consumers) == 131
             and all(parse_qs(urlsplit(ref).query).get('v') == [version] for refs in consumers.values() for ref in refs))
 
 
@@ -157,8 +157,8 @@ TOOLBAR_STYLE_SHA256 = {'site-header.css': 'a915de3ba44c8e14f127e25ec51498960fb1
 # reviewed in source and rendered by Albert. Exact full bytes and single owners.
 SCOPED_INTERFACE_STYLES = {
     # Owner-requested Joseph research reading panels, independently reviewed on
-    # desktop/phone. Exact bytes and sole page owner; no hero-rule exemption.
-    'joseph-smith-research.css': ('b86ecba8e2c1670e4e485f3219fc227de2a599b85d964f6d415e83ee183f862f', 'joseph-smith-likeness.html'),
+    # desktop/phone. Exact bytes and two Joseph page owners; no hero-rule exemption.
+    'joseph-smith-research.css': ('4f4dc3eec0a3fec597b09e9d544216eaab520be1164808444ac9cd62d6fd1757', 'joseph-smith-likeness.html'),
     # Newton source-reviewed hub-only CSS; hosted geometry and owner acceptance remain separate.
     'timeline.css': ('5aefac78e15d324cb4f5a9b44c5f0a1bdb26d951f4e7b5078569be67103048d1', 'timeline.html'),
     # Owner-directed Church-source history, independently reviewed 2026-09-30.
@@ -197,7 +197,7 @@ OWNER_20260929_STYLES = {
     # Owner-requested39-picture final-row balance, Fermi rendered ten widths; Newton source review.
     'art-opening.css': ('f1457bb255b14b98e122d485760d548d4802374b0e00005c05e5292bc87d6e34', ['art.html']),
     'art-experience.css': ('ef21dea3b87e8b3e59454aba32726210a783d87d556928201ef375a3627b1c74', ['art.html']),
-    'desktop-hero-repairs.css': ('36270651fecfb57cb371580f1fd4df3c2910942665e356245ddf451e5c4d9ecb', ['answers/abrahamic-covenant.html', 'answers/look-unto-me-doctrine-and-covenants-6-36.html', 'answers/plan-of-salvation.html', 'art-study/be-still.html', 'art-study/suffer-the-little-children.html', 'art-study/the-good-shepherd.html', 'birth-of-christ.html', 'book-of-mormon-evidences.html', 'general-conference.html', 'joseph-smith-likeness.html']),
+    'desktop-hero-repairs.css': ('36270651fecfb57cb371580f1fd4df3c2910942665e356245ddf451e5c4d9ecb', ['answers/abrahamic-covenant.html', 'answers/look-unto-me-doctrine-and-covenants-6-36.html', 'answers/plan-of-salvation.html', 'art-study/be-still.html', 'art-study/suffer-the-little-children.html', 'art-study/the-good-shepherd.html', 'birth-of-christ.html', 'book-of-mormon-evidences.html', 'general-conference.html', 'joseph-smith-likeness.html', 'joseph-smith-portrait-research.html']),
     'temples-history.css': ('c3aa901b47871dc2cc9aa2848bf31b871a93588e0b4ad141c4d1da7912b2125a', ['answers/why-latter-day-saints-build-temples.html']),
 }
 def reviewed_owner_20260929_style(name, data):
@@ -220,7 +220,8 @@ def reviewed_scoped_interface_style(name, data):
     data = historical_style_bytes(data)
     return name in SCOPED_INTERFACE_STYLES and hashlib.sha256(data).hexdigest()==SCOPED_INTERFACE_STYLES[name][0]
 def scoped_interface_reference_allowed(name, relative, text):
-    return relative==SCOPED_INTERFACE_STYLES[name][1] or name not in text
+    joseph_research_owner = name == 'joseph-smith-research.css' and relative == 'joseph-smith-portrait-research.html'
+    return relative==SCOPED_INTERFACE_STYLES[name][1] or joseph_research_owner or name not in text
 
 def reviewed_toolbar_style(name, data):
     data = historical_style_bytes(data)
@@ -273,9 +274,9 @@ def main():
         assert not reviewed_system_panel_style(panel_style + b'\n.fc-visual-hero{height:9px}')
         assert not reviewed_system_panel_style(panel_style.replace(b'--fc-panel-fill:', b'--fc-panel-broken:', 1))
         assert not reviewed_system_panel_style(panel_style.replace(b'--fc-opening-hero-height:', b'--fc-opening-broken-height:', 1))
-        wrap_good = {name: ['site-system.css?v=current'] for name in [*wrap_expected, *TIMELINE_ROUTES, 'answers/holy-ghost.html', 'answers/plan-of-salvation.html', 'history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html', 'answers/race-priesthood-and-temple-blessings.html']}
+        wrap_good = {name: ['site-system.css?v=current'] for name in [*wrap_expected, *TIMELINE_ROUTES, 'joseph-smith-portrait-research.html', 'answers/holy-ghost.html', 'answers/plan-of-salvation.html', 'history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html', 'answers/race-priesthood-and-temple-blessings.html']}
         assert reviewed_wrap_consumers(wrap_good, wrap_expected, 'current')
-        for required_route in TIMELINE_ROUTES:
+        for required_route in TIMELINE_ROUTES | {'joseph-smith-portrait-research.html'}:
             assert not reviewed_wrap_consumers({k:v for k,v in wrap_good.items() if k != required_route}, wrap_expected, 'current')
         assert not reviewed_wrap_consumers(dict(list(wrap_good.items())[1:]), wrap_expected, 'current')
         assert not reviewed_wrap_consumers(dict(wrap_good, **{'other.html': ['site-system.css?v=current']}), wrap_expected, 'current')
@@ -342,6 +343,7 @@ def main():
             assert not reviewed_scoped_interface_style(name,data+b'\n.x{height:1px}')
             assert scoped_interface_reference_allowed(name,owner,name)
             assert not scoped_interface_reference_allowed(name,'unrelated.html',name)
+        assert scoped_interface_reference_allowed('joseph-smith-research.css', 'joseph-smith-portrait-research.html', 'joseph-smith-research.css')
         research_css = (ROOT/'joseph-smith-research.css').read_bytes()
         assert not reviewed_scoped_interface_style('joseph-smith-research.css', research_css.replace(b'.joseph-research', b'.fc-topic-unique-hero', 1))
         search_css = (ROOT/"site-search.css").read_bytes()

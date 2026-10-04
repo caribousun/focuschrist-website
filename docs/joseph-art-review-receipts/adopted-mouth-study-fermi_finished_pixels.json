@@ -1,0 +1,17 @@
+{
+  "reviewer": "Fermi",
+  "id": "adopted-mouth-study",
+  "source_review_id": null,
+  "prompt_sha256": "39f343edbcc0a13b8ca54e3e153fe0a15047db1154554b2080ca5a7ec883cecd",
+  "concur": true,
+  "source_receipt_path": "work\\fermi\\eye-nose-mouth-finished-review.json",
+  "source_receipt_sha256": "4d8228f6985a4946a4ba2249709154b7ccfe926d16f1479970cd796142065754",
+  "source_record": {
+    "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-34479564-bc63-4a87-819b-09667ce44416.png",
+    "sha256": "faace4a2216ac262a32332bb3172fb44fe5623fa46f63162123cd3dc78527973",
+    "decision": "CONCUR_MOUTH_DETAIL_USE",
+    "reason": "Clearly focused lower face with complete closed lips, philtrum and chin. Appropriate feature attention; no teeth or measurement claim. Fine hair is ordinary skin detail, not a three-day beard demonstration."
+  },
+  "normalization": "Maps reviewed exact asset/prompt to final placement id; preserves explicit decision and full source record. Not a new review or broader approval.",
+  "sha256": "faace4a2216ac262a32332bb3172fb44fe5623fa46f63162123cd3dc78527973"
+}

@@ -1,0 +1,226 @@
+{
+  "status": "PENDING_ROOT_AND_ASSEMBLED_REVIEW",
+  "originals": [
+    {
+      "id": "marriage-partnership-1827",
+      "kind": "original_scene",
+      "asset": "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-wardrobe-v2.png",
+      "sha256": "61b714143419b5f0f4db7ca7cb3ace09fa36c3cca1299c21112c7eab92afddfa",
+      "owning_page": "joseph-smith-likeness.html",
+      "owning_section": "life-marriage-partnership-1827",
+      "preflight_prompt_sha256": "589c2ebc3571733ea3d93dedf1cd1caa93847695e4db4bbd4b80f2a427b8eef4",
+      "reference_sha256": [
+        "7f93288097809a0794cd490575ca9134f56cd719846cb8eb87f9ebb609394ed9"
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/pgp/js-h/1?lang=eng&id=p57-p58#p57"
+      ],
+      "depicts_christ": false,
+      "assembled_review_status": "PENDING",
+      "fermi_preflight": "docs/joseph-life-art-review-receipts/marriage-partnership-1827-fermi_preflight.json",
+      "newton_preflight": "docs/joseph-life-art-review-receipts/marriage-partnership-1827-newton_preflight.json",
+      "fermi_finished_pixels": "docs/joseph-life-art-review-receipts/marriage-partnership-1827-fermi_finished_pixels.json",
+      "newton_finished_pixels": "docs/joseph-life-art-review-receipts/marriage-partnership-1827-newton_finished_pixels.json"
+    },
+    {
+      "id": "household-gift-harmony-1828",
+      "kind": "original_scene",
+      "asset": "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-wardrobe-v2.png",
+      "sha256": "cf1b964c75b6a49536968eaf9a8d19186ce846262e0b9adcc86d053644ca9db6",
+      "owning_page": "joseph-smith-likeness.html",
+      "owning_section": "life-household-gift-harmony-1828",
+      "preflight_prompt_sha256": "44382e7a01ee126c940400870f1fe32ad437fdcb1a2996ddca1056167e525b5f",
+      "reference_sha256": [
+        "44cb9ebcaaca0f3a9ebdfc1ae3474a18395e4a2d8c412f89d2efe74ef7b58559"
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/learn/history/sites/new-york-and-pennsylvania/discover/joseph-and-emma-smiths-home?lang=eng",
+        "https://byustudies.byu.edu/article/david-hales-store-ledger-new-details-about-joseph-and-emma-smith-the-hale-family-and-the-book-of-mormon"
+      ],
+      "depicts_christ": false,
+      "assembled_review_status": "PENDING",
+      "fermi_preflight": "docs/joseph-life-art-review-receipts/household-gift-harmony-1828-fermi_preflight.json",
+      "newton_preflight": "docs/joseph-life-art-review-receipts/household-gift-harmony-1828-newton_preflight.json",
+      "fermi_finished_pixels": "docs/joseph-life-art-review-receipts/household-gift-harmony-1828-fermi_finished_pixels.json",
+      "newton_finished_pixels": "docs/joseph-life-art-review-receipts/household-gift-harmony-1828-newton_finished_pixels.json"
+    },
+    {
+      "id": "emma-early-scribe-1828",
+      "kind": "original_scene",
+      "asset": "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-wardrobe-v2.png",
+      "sha256": "bb026ec8537b0a5f0b20e5f98db41c91336345356a0a3c11cd08b9d96e234972",
+      "owning_page": "joseph-smith-likeness.html",
+      "owning_section": "life-emma-early-scribe-1828",
+      "preflight_prompt_sha256": "6736e13a0086b4293aa61540c762702cc557e4ed68103aefd45907ad05d0dae3",
+      "reference_sha256": [
+        "f68291299be19108862c7fe752539613ea58f569f96cb2ef6eeacd55139af506"
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/learn/history/sites/new-york-and-pennsylvania/discover/joseph-and-emma-smiths-home?lang=eng",
+        "https://www.churchofjesuschrist.org/study/church-historians-press/the-first-fifty-years-of-relief-society/part-1/1-1?lang=eng"
+      ],
+      "depicts_christ": false,
+      "assembled_review_status": "PENDING",
+      "fermi_preflight": "docs/joseph-life-art-review-receipts/emma-early-scribe-1828-fermi_preflight.json",
+      "newton_preflight": "docs/joseph-life-art-review-receipts/emma-early-scribe-1828-newton_preflight.json",
+      "fermi_finished_pixels": "docs/joseph-life-art-review-receipts/emma-early-scribe-1828-fermi_finished_pixels.json",
+      "newton_finished_pixels": "docs/joseph-life-art-review-receipts/emma-early-scribe-1828-newton_finished_pixels.json"
+    },
+    {
+      "id": "hyrum-reading-before-carthage-1844",
+      "kind": "original_scene",
+      "asset": "assets/page-art/joseph-smith-likeness/family/hyrum-reading-before-carthage-1844.png",
+      "sha256": "b906c5c27cd36aa90b68fd1899355fe88c79fe53deb9c2b6ee571805cdb0ca83",
+      "owning_page": "joseph-smith-likeness.html",
+      "owning_section": "life-hyrum-reading-before-carthage-1844",
+      "preflight_prompt_sha256": "f9d4708513ffbf5b6045bb7e0e4d54b5b588a32325a570f0a0f83be0cdffc971",
+      "reference_sha256": [
+        "47b35f55b805ee0cc7c914cc1adb59273b2405402d4a50e284d0bb456bd9cb32",
+        "93cc6192e6b06a6bdba588e2585e38791977ae776cd0e3bb237f96ad9fe490ad"
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/135?lang=eng&id=p4-p5#p4",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/12?lang=eng"
+      ],
+      "depicts_christ": false,
+      "assembled_review_status": "PENDING",
+      "fermi_preflight": "docs/joseph-life-art-review-receipts/hyrum-reading-before-carthage-1844-fermi_preflight.json",
+      "newton_preflight": "docs/joseph-life-art-review-receipts/hyrum-reading-before-carthage-1844-newton_preflight.json",
+      "fermi_finished_pixels": "docs/joseph-life-art-review-receipts/hyrum-reading-before-carthage-1844-fermi_finished_pixels.json",
+      "newton_finished_pixels": "docs/joseph-life-art-review-receipts/hyrum-reading-before-carthage-1844-newton_finished_pixels.json"
+    },
+    {
+      "id": "emma-relief-service-1842",
+      "kind": "original_scene",
+      "asset": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-wardrobe-v2.png",
+      "sha256": "72d6f3eb51f8d27570079ad43266f6058f1ca34c008295c201336f5ea810b7da",
+      "owning_page": "joseph-smith-likeness.html",
+      "owning_section": "life-emma-relief-service-1842",
+      "preflight_prompt_sha256": "8851346d1af369e5f19f24cc460385672da6dca06738dc0ea6c2fac29e2f3477",
+      "reference_sha256": [
+        "fb7c293cc8d0977cb850a44f73b186ec424b11d592df576823c0ef6993bcb755"
+      ],
+      "source_urls": [
+        "https://www.churchhistorianspress.org/the-first-fifty-years-of-relief-society/part-1/1-2/1-2-1"
+      ],
+      "depicts_christ": false,
+      "assembled_review_status": "PENDING",
+      "fermi_preflight": "docs/joseph-life-art-review-receipts/emma-relief-service-1842-fermi_preflight.json",
+      "newton_preflight": "docs/joseph-life-art-review-receipts/emma-relief-service-1842-newton_preflight.json",
+      "fermi_finished_pixels": "docs/joseph-life-art-review-receipts/emma-relief-service-1842-fermi_finished_pixels.json",
+      "newton_finished_pixels": "docs/joseph-life-art-review-receipts/emma-relief-service-1842-newton_finished_pixels.json"
+    },
+    {
+      "id": "care-after-loss-1828",
+      "kind": "original_scene",
+      "asset": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-wardrobe-v2.png",
+      "sha256": "12a9638ec8dda79b872c17350af964e7994e57f82ac25afc77df282f5fc12068",
+      "owning_page": "joseph-smith-likeness.html",
+      "owning_section": "life-care-after-loss-1828",
+      "preflight_prompt_sha256": "410cb9c04357a9ffdd375078d74b3e21c5c93d9a63d1c09ed9cfb06205fb9b1f",
+      "reference_sha256": [
+        "1de04bc299097c52f61678931634e6aef0c6638953aecad0a806f40c3ca6366b"
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/learn/history/sites/new-york-and-pennsylvania/discover/joseph-and-emma-smiths-home?lang=eng"
+      ],
+      "depicts_christ": false,
+      "assembled_review_status": "PENDING",
+      "fermi_preflight": "docs/joseph-life-art-review-receipts/care-after-loss-1828-fermi_preflight.json",
+      "newton_preflight": "docs/joseph-life-art-review-receipts/care-after-loss-1828-newton_preflight.json",
+      "fermi_finished_pixels": "docs/joseph-life-art-review-receipts/care-after-loss-1828-fermi_finished_pixels.json",
+      "newton_finished_pixels": "docs/joseph-life-art-review-receipts/care-after-loss-1828-newton_finished_pixels.json"
+    },
+    {
+      "id": "emma-family-letter-1838",
+      "kind": "original_scene",
+      "asset": "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-wardrobe-v2.png",
+      "sha256": "0440c07de9541b20fa23680d60932b742fc85665f651d7330ac511aaee299905",
+      "owning_page": "joseph-smith-likeness.html",
+      "owning_section": "life-emma-family-letter-1838",
+      "preflight_prompt_sha256": "4dd7fbf2a8462f3913c622a2415bffa17b88ddbfc4336a73aafa6c8e5b42a698",
+      "reference_sha256": [
+        "77ad3ac3e6b4b7f857a8da1695615895a76ee1b08d8c467fe37a866bf0846250"
+      ],
+      "source_urls": [
+        "https://www.josephsmithpapers.org/paper-summary/letter-to-emma-smith-12-november-1838/1",
+        "https://www.josephsmithpapers.org/paper-summary/letter-to-emma-smith-12-november-1838/2",
+        "https://www.churchofjesuschrist.org/study/history/topics/joseph-and-emma-hale-smith-family?lang=eng"
+      ],
+      "depicts_christ": false,
+      "assembled_review_status": "PENDING",
+      "fermi_preflight": "docs/joseph-life-art-review-receipts/emma-family-letter-1838-fermi_preflight.json",
+      "newton_preflight": "docs/joseph-life-art-review-receipts/emma-family-letter-1838-newton_preflight.json",
+      "fermi_finished_pixels": "docs/joseph-life-art-review-receipts/emma-family-letter-1838-fermi_finished_pixels.json",
+      "newton_finished_pixels": "docs/joseph-life-art-review-receipts/emma-family-letter-1838-newton_finished_pixels.json"
+    },
+    {
+      "id": "joseph-household-labor-1828",
+      "kind": "original_scene",
+      "asset": "assets/page-art/joseph-smith-likeness/family/joseph-household-labor-1828.png",
+      "sha256": "7a9dce413b46985159df1b3bfb2fe9bba67cca4d640b7c1db774796bc4978036",
+      "owning_page": "joseph-smith-likeness.html",
+      "owning_section": "life-joseph-household-labor-1828",
+      "preflight_prompt_sha256": "9e7ee4eff3d6364cd7bc5ed58aac7e3e194a4fc0cea36fb98eee26f8c8e75a92",
+      "reference_sha256": [
+        "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/learn/history/sites/new-york-and-pennsylvania/discover/joseph-and-emma-smiths-home?lang=eng",
+        "https://byustudies.byu.edu/article/david-hales-store-ledger-new-details-about-joseph-and-emma-smith-the-hale-family-and-the-book-of-mormon"
+      ],
+      "depicts_christ": false,
+      "assembled_review_status": "PENDING",
+      "fermi_preflight": "docs/joseph-life-art-review-receipts/joseph-household-labor-1828-fermi_preflight.json",
+      "newton_preflight": "docs/joseph-life-art-review-receipts/joseph-household-labor-1828-newton_preflight.json",
+      "fermi_finished_pixels": "docs/joseph-life-art-review-receipts/joseph-household-labor-1828-fermi_finished_pixels.json",
+      "newton_finished_pixels": "docs/joseph-life-art-review-receipts/joseph-household-labor-1828-newton_finished_pixels.json"
+    },
+    {
+      "id": "journey-to-harmony-1827",
+      "kind": "original_scene",
+      "asset": "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-corrected-v2.png",
+      "sha256": "1f5870584dcc4c83e83ee40957a3863ae00a076c8ae52997ea5bbe42b5cd4433",
+      "owning_page": "joseph-smith-likeness.html",
+      "owning_section": "life-journey-to-harmony-1827",
+      "preflight_prompt_sha256": "acfb47f098e94bb9065eeeafe05f24e368495336e1351a7a396f5f0e9595e76f",
+      "reference_sha256": [
+        "5cb2de70e69784f681112dcbf01de4df9a29365ce90596d50e30cd8b18f313e2",
+        "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827",
+        "7d0a07cc673d244ccd54d478c53d1e68d248e39d9b1101f87dfe3681cbb839d1"
+      ],
+      "source_urls": [
+        "https://byustudies.byu.edu/article/david-hales-store-ledger-new-details-about-joseph-and-emma-smith-the-hale-family-and-the-book-of-mormon",
+        "https://www.churchofjesuschrist.org/learn/history/sites/new-york-and-pennsylvania/discover/joseph-and-emma-smiths-home?lang=eng"
+      ],
+      "depicts_christ": false,
+      "assembled_review_status": "PENDING",
+      "fermi_preflight": "docs/joseph-life-art-review-receipts/journey-to-harmony-1827-fermi_preflight.json",
+      "newton_preflight": "docs/joseph-life-art-review-receipts/journey-to-harmony-1827-newton_preflight.json",
+      "fermi_finished_pixels": "docs/joseph-life-art-review-receipts/journey-to-harmony-1827-fermi_finished_pixels.json",
+      "newton_finished_pixels": "docs/joseph-life-art-review-receipts/journey-to-harmony-1827-newton_finished_pixels.json"
+    },
+    {
+      "id": "emma-prayer-during-arrest-1830",
+      "kind": "original_scene",
+      "asset": "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830.png",
+      "sha256": "1140b40f93c00ce61ab60841b46b03b823485c84bd086818f9407200d7d6e68f",
+      "owning_page": "joseph-smith-likeness.html",
+      "owning_section": "life-emma-prayer-during-arrest-1830",
+      "preflight_prompt_sha256": "a8ade4f3ef50314b0398955b72fbb5023e891fc1ea62b38fd0cc2a58d524585d",
+      "reference_sha256": [
+        "7d0a07cc673d244ccd54d478c53d1e68d248e39d9b1101f87dfe3681cbb839d1"
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/church-historians-press/the-first-fifty-years-of-relief-society/part-1/1-1?lang=eng"
+      ],
+      "depicts_christ": false,
+      "assembled_review_status": "PENDING",
+      "fermi_preflight": "docs/joseph-life-art-review-receipts/emma-prayer-during-arrest-1830-fermi_preflight.json",
+      "newton_preflight": "docs/joseph-life-art-review-receipts/emma-prayer-during-arrest-1830-newton_preflight.json",
+      "fermi_finished_pixels": "docs/joseph-life-art-review-receipts/emma-prayer-during-arrest-1830-fermi_finished_pixels.json",
+      "newton_finished_pixels": "docs/joseph-life-art-review-receipts/emma-prayer-during-arrest-1830-newton_finished_pixels.json"
+    }
+  ],
+  "limits": "Exact independent reviews, not final rendered or publication concurrence. Ten distinct added scene originals; preserved older five tracked separately."
+}

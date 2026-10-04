@@ -1,0 +1,22 @@
+{
+  "reviewer": "Newton",
+  "id": "emma-prayer-during-arrest-1830",
+  "source_review_id": "emma-prayer-during-arrest-1830",
+  "prompt_sha256": "a8ade4f3ef50314b0398955b72fbb5023e891fc1ea62b38fd0cc2a58d524585d",
+  "concur": true,
+  "source_receipt_path": "work\\newton\\main-remaining-wardrobe-prompts-v1-preflight.json",
+  "source_receipt_sha256": "56975179874998951b9c2a07774e3527c2890a6c20f1d99003d2941f961c90e2",
+  "source_record": {
+    "id": "emma-prayer-during-arrest-1830",
+    "prompt_sha256": "a8ade4f3ef50314b0398955b72fbb5023e891fc1ea62b38fd0cc2a58d524585d",
+    "reference_sha256": [
+      "7d0a07cc673d244ccd54d478c53d1e68d248e39d9b1101f87dfe3681cbb839d1"
+    ],
+    "concur": true,
+    "notes": "Generation-only. Museum1828 cotton and1828-1835 high-waist full-sleeve descriptions independently read; bonnet1825-1840 is straw shape context only, not winter fabric proof. Exact colors, possessions and hairstyle unverified interpretations. Finished review must distinguish era silhouette/waist/sleeve/neckline from mere recoloring, retain identity/body/action and bedside accepted reciprocal gaze. No automatic outfit/body slimming. Existing later-period structure retained where appropriate, not copied into earlier dates."
+  },
+  "normalization": "Final placement id mapped to exact prompt/final bytes; source decision preserved, no new broader concurrence.",
+  "reference_sha256": [
+    "7d0a07cc673d244ccd54d478c53d1e68d248e39d9b1101f87dfe3681cbb839d1"
+  ]
+}

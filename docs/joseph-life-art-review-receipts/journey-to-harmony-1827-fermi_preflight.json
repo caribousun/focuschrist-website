@@ -1,0 +1,39 @@
+{
+  "reviewer": "Fermi",
+  "id": "journey-to-harmony-1827",
+  "source_review_id": "journey-attentive-young-fullhat-replacement",
+  "prompt_sha256": "acfb47f098e94bb9065eeeafe05f24e368495336e1351a7a396f5f0e9595e76f",
+  "concur": true,
+  "source_receipt_path": "work\\fermi\\journey-correction-preflight.json",
+  "source_receipt_sha256": "f5f2646f7d1858d50cc5c106dd79edfaa65aa0e462a6d98dc42bf84adc294b0f",
+  "source_record": {
+    "id": "journey-attentive-young-fullhat-replacement",
+    "prompt": "Correct this supplied journey artwork, reference1, in three bounded ways: purposeful driving attention, credible event ages, and full hat framing. Joseph is21 and Emma23 during their move toward Harmony in earlyDecember1827. Reference2 is Joseph's established identity and reference3 Emma's; those older masters constrain recognizable identity, not event age. Joseph must visibly attend to the road immediately ahead and the horse drawing the wagon, with a naturally concentrated driving expression, modest downward-forward head angle and eyes focused toward the path near the horse rather than a vacant gaze into distant space. His pupils and eyelids must show believable focused attention, not a wide blank stare, cross-eye or camera gaze. Do not manufacture mutual conversation or eye contact with Emma; she may look attentively along their direction of travel. Reduce mature forehead/outer-eye creasing and weathering so Joseph21 and Emma23 read as young adults, preserving pores, distinctive noses, eye shape/color, mouths, facial bone structure, natural asymmetry and Emma's full face/body. No beauty smoothing, thinning, infantilizing or new actors. Expand or reframe the composition slightly upward so Joseph's entire period felt hat crown and brim fit comfortably inside the image with clear margin; do not crop it or shrink the hat into a different type. Preserve the accepted browncoat, warm olive wrap, bonnet, hairstyle/hairline, wagon, horse partialview, background, natural light, hands and rein grip. Do not alter rein anatomy, add people or expose hidden artifacts. No text. Exact travel staging remains interpretive, not recovered history. Preserve all original input files; replacement counts once.",
+    "prompt_sha256": "acfb47f098e94bb9065eeeafe05f24e368495336e1351a7a396f5f0e9595e76f",
+    "actual_references": [
+      {
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-a981717a-22f9-4712-9164-16bd5359e4af.png",
+        "sha256": "5cb2de70e69784f681112dcbf01de4df9a29365ce90596d50e30cd8b18f313e2"
+      },
+      {
+        "person": "Joseph",
+        "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\identities\\joseph-smith-owner-approved-20260914.png",
+        "sha256": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+      },
+      {
+        "person": "Emma",
+        "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\identities\\emma-smith-owner-approved-20260930.png",
+        "sha256": "7d0a07cc673d244ccd54d478c53d1e68d248e39d9b1101f87dfe3681cbb839d1"
+      }
+    ],
+    "fermi_generation_only_concur": true,
+    "newton_concur": false,
+    "owner_direction": "Explicit rejection of staringoff; purposeful driving not invented conversation."
+  },
+  "normalization": "Final placement id mapped to exact prompt/final bytes; source decision preserved, no new broader concurrence.",
+  "reference_sha256": [
+    "5cb2de70e69784f681112dcbf01de4df9a29365ce90596d50e30cd8b18f313e2",
+    "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827",
+    "7d0a07cc673d244ccd54d478c53d1e68d248e39d9b1101f87dfe3681cbb839d1"
+  ]
+}

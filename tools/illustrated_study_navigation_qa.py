@@ -26,7 +26,8 @@ def check():
         if set(page.relative_to(ROOT).parts) & {'work', '.git', 'node_modules'}: continue
         for script in soup(page.relative_to(ROOT).as_posix()).select('script[src]'):
             if 'topic-artwork-details.js' in script['src']:
-                assert script['src'].endswith('topic-artwork-details.js?v='+controller_version), ('Stale picture controller', page)
+                expected_version={'joseph-smith-portrait-research.html':'20261003-research-sources-1','joseph-smith-likeness.html':'20261003-joseph-family-sources-1'}.get(page.relative_to(ROOT).as_posix(),controller_version)
+                assert script['src'].endswith('topic-artwork-details.js?v='+expected_version), ('Stale picture controller', page)
                 consumers += 1
         for a in soup(page.relative_to(ROOT).as_posix()).select('a'):
             assert not generic.search(a.get_text(' ',strip=True)+' '+a.get('aria-label','')), page

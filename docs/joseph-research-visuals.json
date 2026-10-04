@@ -559,6 +559,46 @@
         "label": "Image provenance and public-domain record",
         "url": "https://commons.wikimedia.org/wiki/File:Joseph_Smith_Maudsley_Portrait_1842-06-25.jpg"
       }
+    ],
+    "companions": [
+      {
+        "kind": "original",
+        "id": "painted-likeness-1842",
+        "src": "assets/research/joseph-originals/painted-likeness-1842.png",
+        "width": 1536,
+        "height": 1024,
+        "title": "Sitting for a painted likeness",
+        "alt": "Sitting for a painted likeness in a new illustration using our adopted Joseph likeness",
+        "caption": "Joseph faces us beside the back of an easel. His journal records painting sittings in September 1842; the room, pose and furnishings here are an artistic interpretation. [4]",
+        "owner": "#portrait-section-4",
+        "owner_label": "Continue this research chapter",
+        "label": "New artwork · historical interpretation",
+        "sources": [
+          {
+            "label": "Read the September 1842 sitting record",
+            "url": "https://www.josephsmithpapers.org/paper-summary/journal-december-1841-december-1842/82"
+          }
+        ]
+      },
+      {
+        "kind": "original",
+        "id": "profile-sitting-1842-retry",
+        "src": "assets/research/joseph-originals/profile-sitting-1842-retry.png",
+        "width": 1536,
+        "height": 1024,
+        "title": "A profile offers a different view",
+        "alt": "A profile offers a different view — newly made interpretive Joseph artwork",
+        "caption": "An interpretive profile-sitting scene recalls Maudsley’s work in 1842. It shows how the forehead, nose, lips and chin form a silhouette. The newly imagined side view is not a measured reconstruction of the historical profile. [3]",
+        "owner": "#portrait-section-4",
+        "owner_label": "Continue this research chapter",
+        "label": "New artwork · explanatory interpretation",
+        "sources": [
+          {
+            "label": "Read the museum account of Maudsley’s profile",
+            "url": "https://history.churchofjesuschrist.org/media-exhibit/sutcliffe-maudsley/lt-general-joseph-smith?from=home&lang=eng"
+          }
+        ]
+      }
     ]
   }
 }

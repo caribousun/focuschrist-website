@@ -1,0 +1,22 @@
+{
+  "reviewer": "Newton",
+  "id": "joseph-household-labor-1828",
+  "source_review_id": "joseph-household-labor-1828",
+  "prompt_sha256": "9e7ee4eff3d6364cd7bc5ed58aac7e3e194a4fc0cea36fb98eee26f8c8e75a92",
+  "concur": true,
+  "source_receipt_path": "work\\newton\\main-remaining-wardrobe-prompts-v1-preflight.json",
+  "source_receipt_sha256": "56975179874998951b9c2a07774e3527c2890a6c20f1d99003d2941f961c90e2",
+  "source_record": {
+    "id": "joseph-household-labor-1828",
+    "prompt_sha256": "9e7ee4eff3d6364cd7bc5ed58aac7e3e194a4fc0cea36fb98eee26f8c8e75a92",
+    "reference_sha256": [
+      "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+    ],
+    "concur": true,
+    "notes": "Generation-only. Museum1828 cotton and1828-1835 high-waist full-sleeve descriptions independently read; bonnet1825-1840 is straw shape context only, not winter fabric proof. Exact colors, possessions and hairstyle unverified interpretations. Finished review must distinguish era silhouette/waist/sleeve/neckline from mere recoloring, retain identity/body/action and bedside accepted reciprocal gaze. No automatic outfit/body slimming. Existing later-period structure retained where appropriate, not copied into earlier dates."
+  },
+  "normalization": "Final placement id mapped to exact prompt/final bytes; source decision preserved, no new broader concurrence.",
+  "reference_sha256": [
+    "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+  ]
+}

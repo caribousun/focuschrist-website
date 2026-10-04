@@ -1,0 +1,28 @@
+{
+  "reviewer": "Newton",
+  "id": "journey-to-harmony-1827",
+  "source_review_id": "journey-attentive-young-fullhat-replacement",
+  "prompt_sha256": "acfb47f098e94bb9065eeeafe05f24e368495336e1351a7a396f5f0e9595e76f",
+  "concur": true,
+  "source_receipt_path": "work\\newton\\journey-correction-preflight.json",
+  "source_receipt_sha256": "ad6911a54e9f458ddbb26601eea4d41703e26b55c5f3b37c3dc0068fec338b4b",
+  "source_record": {
+    "reviewer": "Newton",
+    "id": "journey-attentive-young-fullhat-replacement",
+    "prompt_sha256": "acfb47f098e94bb9065eeeafe05f24e368495336e1351a7a396f5f0e9595e76f",
+    "reference_sha256": [
+      "5cb2de70e69784f681112dcbf01de4df9a29365ce90596d50e30cd8b18f313e2",
+      "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827",
+      "7d0a07cc673d244ccd54d478c53d1e68d248e39d9b1101f87dfe3681cbb839d1"
+    ],
+    "concur": true,
+    "scope": "Generation-only; whole finished image review required",
+    "notes": "Addresses owner rejection with concrete driving attention plus natural21/23 age adaptation and uncropped hat. Preserves distinct approved identities, fullness, coherent rein action and sourced-period wardrobe; exact travel staging remains interpretation. Replacement counts once."
+  },
+  "normalization": "Final placement id mapped to exact prompt/final bytes; source decision preserved, no new broader concurrence.",
+  "reference_sha256": [
+    "5cb2de70e69784f681112dcbf01de4df9a29365ce90596d50e30cd8b18f313e2",
+    "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827",
+    "7d0a07cc673d244ccd54d478c53d1e68d248e39d9b1101f87dfe3681cbb839d1"
+  ]
+}

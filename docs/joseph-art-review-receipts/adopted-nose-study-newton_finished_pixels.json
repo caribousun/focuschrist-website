@@ -1,0 +1,19 @@
+{
+  "reviewer": "Newton",
+  "id": "adopted-nose-study",
+  "source_review_id": "adopted-nose-study",
+  "prompt_sha256": "e1e9c4e9ebaf67f1d6cea722390ecd0d6691a9ee5b420525889dcae1b74cd0b9",
+  "concur": true,
+  "source_receipt_path": "work\\newton\\eye-nose-finished-pixels.json",
+  "source_receipt_sha256": "39d0a3b9f2905a2220a173dd530b64c36c7357c85695ead0e82354810c9ced2d",
+  "source_record": {
+    "id": "adopted-nose-study",
+    "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-c5c820d8-a453-474c-a5d4-28fbfb58f090.png",
+    "sha256": "5e5a81c2733256451e82cd04b34caf90c175a38367c8908d26c83597fd087156",
+    "prompt_sha256": "e1e9c4e9ebaf67f1d6cea722390ecd0d6691a9ee5b420525889dcae1b74cd0b9",
+    "concur": true,
+    "notes": "Recognizable identity, natural texture, nose bridge/tip/ala clearly resolved with eyes/brows/mouth context. Accept as new central-face nose illustration only; no calibrated correspondence or untouched-master claim. Pair with real mask and unchanged master detail; rejected eye twin cannot inflate distinctness."
+  },
+  "normalization": "Maps reviewed exact asset/prompt to final placement id; preserves explicit decision and full source record. Not a new review or broader approval.",
+  "sha256": "5e5a81c2733256451e82cd04b34caf90c175a38367c8908d26c83597fd087156"
+}

@@ -37,6 +37,14 @@ jobs:
       - name: Install shared QA dependencies
         run: python -m pip install -r tools/qa-requirements.txt
 
+      - name: Verify Joseph studies and exact artwork review gates
+        run: |
+          python tools/joseph_smith_likeness_qa.py
+          python tools/joseph_life_enrichment_qa.py
+          python tools/joseph_portrait_research_qa.py
+          python -m unittest discover -s tools -p test_joseph_research_acceptance.py
+          node tools/joseph_research_source_hosts_qa.js
+
       - name: Verify anatomy review rejection and annotation safeguards
         run: node tools/anatomy-review/core.test.js
 

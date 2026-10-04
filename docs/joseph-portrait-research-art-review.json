@@ -1,0 +1,254 @@
+{
+  "status": "DUAL_PREFLIGHT_AND_PIXELS_REVIEWED_ASSEMBLED_REVIEW_PENDING",
+  "originals": [
+    {
+      "id": "painted-likeness-1842",
+      "asset": "assets/research/joseph-originals/painted-likeness-1842.png",
+      "sha256": "1f344ac8596d3e626c7e5dc3e80f0df9e7492265719e8176916010a838935921",
+      "generated_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-127f2ce9-0748-4f25-9e21-cdd3b2b3d74a.png",
+      "status": "dual pixel reviewed; assembled review pending",
+      "kind": "original_scene",
+      "owning_page": "joseph-smith-portrait-research.html",
+      "owning_section": "research-block-section-4-2",
+      "depicts_christ": false,
+      "preflight_prompt_sha256": "410e24804022ac8b4e4da5d0955e3ebe162fa4afa1c2b7fe2655e99460cd61cb",
+      "reference_sha256": [
+        "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+      ],
+      "source_urls": [
+        "https://www.josephsmithpapers.org/paper-summary/journal-december-1841-december-1842/82"
+      ],
+      "source_role": "Historical occasion where dated; otherwise contextual evidence for a new explanatory illustration, not source pixels or recovered creation record",
+      "fermi_preflight": "docs/joseph-art-review-receipts/painted-likeness-1842-fermi_preflight.json",
+      "newton_preflight": "docs/joseph-art-review-receipts/painted-likeness-1842-newton_preflight.json",
+      "fermi_finished_pixels": "docs/joseph-art-review-receipts/painted-likeness-1842-fermi_finished_pixels.json",
+      "newton_finished_pixels": "docs/joseph-art-review-receipts/painted-likeness-1842-newton_finished_pixels.json",
+      "assembled_review_status": "PENDING"
+    },
+    {
+      "id": "adopted-nose-study",
+      "asset": "assets/research/joseph-originals/adopted-nose-study.png",
+      "sha256": "5e5a81c2733256451e82cd04b34caf90c175a38367c8908d26c83597fd087156",
+      "generated_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-c5c820d8-a453-474c-a5d4-28fbfb58f090.png",
+      "status": "dual pixel reviewed; assembled review pending",
+      "kind": "original_scene",
+      "owning_page": "joseph-smith-portrait-research.html",
+      "owning_section": "research-feature-03",
+      "depicts_christ": false,
+      "preflight_prompt_sha256": "e1e9c4e9ebaf67f1d6cea722390ecd0d6691a9ee5b420525889dcae1b74cd0b9",
+      "reference_sha256": [
+        "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/learn/history/sites/church-history-museum/collections/joseph-and-hyrum-smith-death-masks?lang=eng"
+      ],
+      "source_role": "Historical occasion where dated; otherwise contextual evidence for a new explanatory illustration, not source pixels or recovered creation record",
+      "fermi_preflight": "docs/joseph-art-review-receipts/adopted-nose-study-fermi_preflight.json",
+      "newton_preflight": "docs/joseph-art-review-receipts/adopted-nose-study-newton_preflight.json",
+      "fermi_finished_pixels": "docs/joseph-art-review-receipts/adopted-nose-study-fermi_finished_pixels.json",
+      "newton_finished_pixels": "docs/joseph-art-review-receipts/adopted-nose-study-newton_finished_pixels.json",
+      "assembled_review_status": "PENDING"
+    },
+    {
+      "id": "adopted-mouth-study",
+      "asset": "assets/research/joseph-originals/adopted-mouth-study.png",
+      "sha256": "faace4a2216ac262a32332bb3172fb44fe5623fa46f63162123cd3dc78527973",
+      "generated_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-34479564-bc63-4a87-819b-09667ce44416.png",
+      "status": "dual pixel reviewed; assembled review pending",
+      "kind": "original_scene",
+      "owning_page": "joseph-smith-portrait-research.html",
+      "owning_section": "research-feature-04",
+      "depicts_christ": false,
+      "preflight_prompt_sha256": "39f343edbcc0a13b8ca54e3e153fe0a15047db1154554b2080ca5a7ec883cecd",
+      "reference_sha256": [
+        "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/learn/history/sites/church-history-museum/collections/joseph-and-hyrum-smith-death-masks?lang=eng"
+      ],
+      "source_role": "Historical occasion where dated; otherwise contextual evidence for a new explanatory illustration, not source pixels or recovered creation record",
+      "fermi_preflight": "docs/joseph-art-review-receipts/adopted-mouth-study-fermi_preflight.json",
+      "newton_preflight": "docs/joseph-art-review-receipts/adopted-mouth-study-newton_preflight.json",
+      "fermi_finished_pixels": "docs/joseph-art-review-receipts/adopted-mouth-study-fermi_finished_pixels.json",
+      "newton_finished_pixels": "docs/joseph-art-review-receipts/adopted-mouth-study-newton_finished_pixels.json",
+      "assembled_review_status": "PENDING"
+    },
+    {
+      "id": "expression-mouth-cheek-comparison",
+      "asset": "assets/research/joseph-originals/expression-mouth-cheek-comparison.png",
+      "sha256": "f9885c6e2c9d2367fa61faccafc7c8ab6cad7a8b5aae2d6ec2f4e3eca878722f",
+      "generated_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-18c9caa2-c87f-4038-93ed-6ab81235488a.png",
+      "status": "dual pixels reviewed; assembled review pending",
+      "kind": "original_scene",
+      "owning_page": "joseph-smith-portrait-research.html",
+      "owning_section": "research-feature-14",
+      "depicts_christ": false,
+      "preflight_prompt_sha256": "bc8c46ea139506a5a6af6dc7bcdc84e18ab8d7fe929956e5fd9e840516b83ff4",
+      "reference_sha256": [
+        "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/learn/history/sites/church-history-museum/collections/joseph-and-hyrum-smith-death-masks?lang=eng"
+      ],
+      "source_role": "Historical occasion where dated; otherwise contextual evidence for a new explanatory illustration, not source pixels or recovered creation record",
+      "fermi_preflight": "docs/joseph-art-review-receipts/expression-mouth-cheek-comparison-fermi_preflight.json",
+      "newton_preflight": "docs/joseph-art-review-receipts/expression-mouth-cheek-comparison-newton_preflight.json",
+      "fermi_finished_pixels": "docs/joseph-art-review-receipts/expression-mouth-cheek-comparison-fermi_finished_pixels.json",
+      "newton_finished_pixels": "docs/joseph-art-review-receipts/expression-mouth-cheek-comparison-newton_finished_pixels.json",
+      "assembled_review_status": "PENDING"
+    },
+    {
+      "id": "light-and-nose-relief-comparison",
+      "asset": "assets/research/joseph-originals/light-and-nose-relief-comparison.png",
+      "sha256": "08dcb2442e5f4eff026b26cabd0f1251a222bb89bb20e0d2a54573126bf1df4d",
+      "generated_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-d75e9019-861f-4f46-8e49-a9e725dad2cf.png",
+      "status": "dual pixels reviewed; assembled review pending",
+      "kind": "original_scene",
+      "owning_page": "joseph-smith-portrait-research.html",
+      "owning_section": "research-feature-02",
+      "depicts_christ": false,
+      "preflight_prompt_sha256": "0191e297aa761af896ccf17084132b07506f84fecfaf5b4a6b1fa8e561584df4",
+      "reference_sha256": [
+        "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/learn/history/sites/church-history-museum/collections/joseph-and-hyrum-smith-death-masks?lang=eng"
+      ],
+      "source_role": "Historical occasion where dated; otherwise contextual evidence for a new explanatory illustration, not source pixels or recovered creation record",
+      "fermi_preflight": "docs/joseph-art-review-receipts/light-and-nose-relief-comparison-fermi_preflight.json",
+      "newton_preflight": "docs/joseph-art-review-receipts/light-and-nose-relief-comparison-newton_preflight.json",
+      "fermi_finished_pixels": "docs/joseph-art-review-receipts/light-and-nose-relief-comparison-fermi_finished_pixels.json",
+      "newton_finished_pixels": "docs/joseph-art-review-receipts/light-and-nose-relief-comparison-newton_finished_pixels.json",
+      "assembled_review_status": "PENDING"
+    },
+    {
+      "id": "viewpoint-jaw-outline-comparison",
+      "asset": "assets/research/joseph-originals/viewpoint-jaw-outline-comparison.png",
+      "sha256": "44449aedd2ed29b206da1f3fab65c5bf0ccf6a36bb80acbf55ff894e14663d70",
+      "generated_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-15d0aebd-a580-4d97-9cfb-38fa9a572149.png",
+      "status": "dual pixels reviewed; assembled review pending",
+      "kind": "original_scene",
+      "owning_page": "joseph-smith-portrait-research.html",
+      "owning_section": "research-feature-05",
+      "depicts_christ": false,
+      "preflight_prompt_sha256": "6e01a3436a8ebce4101555c5f57ff5b0398690c67195e1f3ac76705c2f668611",
+      "reference_sha256": [
+        "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/learn/history/sites/church-history-museum/collections/joseph-and-hyrum-smith-death-masks?lang=eng"
+      ],
+      "source_role": "Historical occasion where dated; otherwise contextual evidence for a new explanatory illustration, not source pixels or recovered creation record",
+      "fermi_preflight": "docs/joseph-art-review-receipts/viewpoint-jaw-outline-comparison-fermi_preflight.json",
+      "newton_preflight": "docs/joseph-art-review-receipts/viewpoint-jaw-outline-comparison-newton_preflight.json",
+      "fermi_finished_pixels": "docs/joseph-art-review-receipts/viewpoint-jaw-outline-comparison-fermi_finished_pixels.json",
+      "newton_finished_pixels": "docs/joseph-art-review-receipts/viewpoint-jaw-outline-comparison-newton_finished_pixels.json",
+      "assembled_review_status": "PENDING"
+    },
+    {
+      "id": "adopted-blue-eye-study",
+      "asset": "assets/research/joseph-originals/adopted-blue-eye-study.png",
+      "sha256": "75c235f7e7eb79a4cf4e51be94cf90fc7c4ab94e1ba0e17d5f3669654e8a39a6",
+      "generated_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-99497b00-9c00-49d4-8158-53292eb54c84.png",
+      "status": "DUAL_EYE_DISPLAY_PURPOSE_ACCEPTED",
+      "kind": "original_scene",
+      "owning_page": "joseph-smith-portrait-research.html",
+      "owning_section": "research-feature-06",
+      "depicts_christ": false,
+      "preflight_prompt_sha256": "21165daeed04991a2fb940706d713ebb598a06ec61e1c6c0eff250cbb56a1651",
+      "reference_sha256": [
+        "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/learn/history/sites/church-history-museum/collections/joseph-and-hyrum-smith-death-masks?lang=eng"
+      ],
+      "source_role": "Historical occasion where dated; otherwise contextual evidence for a new explanatory illustration, not source pixels or recovered creation record",
+      "fermi_preflight": "docs/joseph-art-review-receipts/adopted-blue-eye-study-fermi_preflight.json",
+      "newton_preflight": "docs/joseph-art-review-receipts/adopted-blue-eye-study-newton_preflight.json",
+      "fermi_finished_pixels": "docs/joseph-art-review-receipts/adopted-blue-eye-study-fermi_finished_pixels.json",
+      "newton_finished_pixels": "docs/joseph-art-review-receipts/adopted-blue-eye-study-newton_finished_pixels.json",
+      "assembled_review_status": "PENDING",
+      "view_window": [
+        350,
+        245,
+        850,
+        260
+      ],
+      "newton_display_receipt": "docs/joseph-art-review-receipts/adopted-blue-eye-study-newton_finished_pixels.json"
+    },
+    {
+      "id": "adopted-hair-study",
+      "asset": "assets/research/joseph-originals/adopted-hair-study.png",
+      "sha256": "a5b0d48f59d2f7ddb185c947c2828e10d48baa0d8a63fa25b41c5b4d470912ac",
+      "generated_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-a29f0666-2206-4947-aacd-511f0c9a7117.png",
+      "status": "dual pixels reviewed; assembled review pending",
+      "kind": "original_scene",
+      "owning_page": "joseph-smith-portrait-research.html",
+      "owning_section": "research-feature-10",
+      "depicts_christ": false,
+      "preflight_prompt_sha256": "2a61b741450808fdc5d2761f66b8f1b41fcbbbd9443952defe12565eba8cda13",
+      "reference_sha256": [
+        "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/learn/history/sites/church-history-museum/collections/joseph-and-hyrum-smith-death-masks?lang=eng"
+      ],
+      "source_role": "Historical occasion where dated; otherwise contextual evidence for a new explanatory illustration, not source pixels or recovered creation record",
+      "fermi_preflight": "docs/joseph-art-review-receipts/adopted-hair-study-fermi_preflight.json",
+      "newton_preflight": "docs/joseph-art-review-receipts/adopted-hair-study-newton_preflight.json",
+      "fermi_finished_pixels": "docs/joseph-art-review-receipts/adopted-hair-study-fermi_finished_pixels.json",
+      "newton_finished_pixels": "docs/joseph-art-review-receipts/adopted-hair-study-newton_finished_pixels.json",
+      "assembled_review_status": "PENDING"
+    },
+    {
+      "id": "profile-sitting-1842-retry",
+      "asset": "assets/research/joseph-originals/profile-sitting-1842-retry.png",
+      "sha256": "8e905ef175094e9d1db5a9e36940d7cc8af3091dcfbc54c87d3f6bc513ecc3ec",
+      "generated_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-3f5fb065-25d5-4563-b991-9568b97762fc.png",
+      "status": "dual pixels reviewed; assembled review pending",
+      "kind": "original_scene",
+      "owning_page": "joseph-smith-portrait-research.html",
+      "owning_section": "research-block-section-4-2",
+      "depicts_christ": false,
+      "preflight_prompt_sha256": "a7987c0ad0fd207b3dd5b1355ac9396fca1105e8cb24fe4c6592c878f701a04a",
+      "reference_sha256": [
+        "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+      ],
+      "source_urls": [
+        "https://www.josephsmithpapers.org/paper-summary/journal-december-1841-december-1842/30"
+      ],
+      "source_role": "Historical occasion where dated; otherwise contextual evidence for a new explanatory illustration, not source pixels or recovered creation record",
+      "fermi_preflight": "docs/joseph-art-review-receipts/profile-sitting-1842-retry-fermi_preflight.json",
+      "newton_preflight": "docs/joseph-art-review-receipts/profile-sitting-1842-retry-newton_preflight.json",
+      "fermi_finished_pixels": "docs/joseph-art-review-receipts/profile-sitting-1842-retry-fermi_finished_pixels.json",
+      "newton_finished_pixels": "docs/joseph-art-review-receipts/profile-sitting-1842-retry-newton_finished_pixels.json",
+      "assembled_review_status": "PENDING"
+    },
+    {
+      "id": "quincy-stubble-study",
+      "asset": "assets/research/joseph-originals/quincy-stubble-study.png",
+      "sha256": "8b3dfa5615a23d6a3f0d4cf2ec3c6324b7935f89e4ca331beaddc34981c71599",
+      "generated_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-a557d48d-f3c7-487f-bd16-12cc623e5e90.png",
+      "status": "dual pixels reviewed; assembled review pending",
+      "kind": "original_scene",
+      "owning_page": "joseph-smith-portrait-research.html",
+      "owning_section": "research-feature-12",
+      "depicts_christ": false,
+      "preflight_prompt_sha256": "c7839d4f1f2ba2d501cad35274cfb2b031f6c74dfa75e302313fae0968a06ac1",
+      "reference_sha256": [
+        "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827",
+        "571b47eb0e1414147c74870d303a8af768df203cc21e26a600091e1f05a0bf41"
+      ],
+      "source_urls": [
+        "https://byustudies.byu.edu/article/josiah-quincys-1844-visit-with-joseph-smith"
+      ],
+      "source_role": "Historical occasion where dated; otherwise contextual evidence for a new explanatory illustration, not source pixels or recovered creation record",
+      "fermi_preflight": "docs/joseph-art-review-receipts/quincy-stubble-study-fermi_preflight.json",
+      "newton_preflight": "docs/joseph-art-review-receipts/quincy-stubble-study-newton_preflight.json",
+      "fermi_finished_pixels": "docs/joseph-art-review-receipts/quincy-stubble-study-fermi_finished_pixels.json",
+      "newton_finished_pixels": "docs/joseph-art-review-receipts/quincy-stubble-study-newton_finished_pixels.json",
+      "assembled_review_status": "PENDING"
+    }
+  ],
+  "limits": "Ten unique generated originals with exact dual preflight and pixel/purpose concurrence. Count is not meaningful whole-page coverage certification. Full assembled review of both modes and pages remains required."
+}

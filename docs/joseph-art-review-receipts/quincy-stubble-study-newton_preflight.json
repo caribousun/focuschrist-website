@@ -1,0 +1,25 @@
+{
+  "reviewer": "Newton",
+  "id": "quincy-stubble-study",
+  "source_review_id": "quincy-stubble-correction",
+  "prompt_sha256": "c7839d4f1f2ba2d501cad35274cfb2b031f6c74dfa75e302313fae0968a06ac1",
+  "concur": true,
+  "source_receipt_path": "work\\newton\\quincy-stubble-edit-preflight.json",
+  "source_receipt_sha256": "badc6dbfd80085e9408e106545b02b4dfcb4fe5cf9f20c4e710f709ba270d815",
+  "source_record": {
+    "reviewer": "Newton",
+    "id": "quincy-stubble-correction",
+    "prompt_sha256": "c7839d4f1f2ba2d501cad35274cfb2b031f6c74dfa75e302313fae0968a06ac1",
+    "concur": true,
+    "reference_sha256": [
+      "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827",
+      "571b47eb0e1414147c74870d303a8af768df203cc21e26a600091e1f05a0bf41"
+    ],
+    "scope": "Exact narrow stubble edit preflight only; both actual images previously independently inspected. Finished pixels and ordinary page-size visibility required."
+  },
+  "normalization": "Maps reviewed exact asset/prompt to final placement id; preserves explicit decision and full source record. Not a new review or broader approval.",
+  "reference_sha256": [
+    "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827",
+    "571b47eb0e1414147c74870d303a8af768df203cc21e26a600091e1f05a0bf41"
+  ]
+}

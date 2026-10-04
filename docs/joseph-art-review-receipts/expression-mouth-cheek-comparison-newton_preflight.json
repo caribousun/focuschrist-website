@@ -1,0 +1,22 @@
+{
+  "reviewer": "Newton",
+  "id": "expression-mouth-cheek-comparison",
+  "source_review_id": "expression-mouth-cheek-comparison",
+  "prompt_sha256": "bc8c46ea139506a5a6af6dc7bcdc84e18ab8d7fe929956e5fd9e840516b83ff4",
+  "concur": true,
+  "source_receipt_path": "work\\newton\\research-method-prompts-v1-preflight.json",
+  "source_receipt_sha256": "dbc336d2ab9203ba46c059cb827cff8c5917cfe3b1ba6b4d3821b3b9b7a6b71a",
+  "source_record": {
+    "id": "expression-mouth-cheek-comparison",
+    "prompt_sha256": "bc8c46ea139506a5a6af6dc7bcdc84e18ab8d7fe929956e5fd9e840516b83ff4",
+    "reference_sha256": [
+      "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+    ],
+    "concur": true,
+    "notes": "Distinct explanatorypurpose supports featurechain. Finishedpair must preserve recognizableidentity and clearly show intendedcontrast without misleading unrelatedvariation. Onecomposition is oneoriginal; no actualtest/isolatedvariable/calibratedprojection or recoveredcreation claim. Authentic evidence and approvednativefeaturedetails must remain separately labelled."
+  },
+  "normalization": "Maps reviewed exact asset/prompt to final placement id; preserves explicit decision and full source record. Not a new review or broader approval.",
+  "reference_sha256": [
+    "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+  ]
+}

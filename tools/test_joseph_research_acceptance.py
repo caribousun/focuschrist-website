@@ -1,7 +1,7 @@
 """Reject the actual appended/text-only regression and cadence workarounds."""
 import unittest
 from bs4 import BeautifulSoup
-from joseph_research_acceptance import ROUTE, check_entry_and_brevity, check_reading_cadence, check_original_manifest, check_reference_scope, check_exact_review, check_evidence_inventory
+from joseph_research_acceptance import ROUTE, check_entry_and_brevity, check_reading_cadence, check_original_manifest, check_reference_scope, check_exact_review, check_evidence_inventory, check_feature_studies
 
 def soup(markup): return BeautifulSoup(markup,'html.parser')
 
@@ -89,5 +89,26 @@ class AcceptanceTests(unittest.TestCase):
         check_exact_review(record,{'scenes':[review]},finished=True)
         for key,val in [('id','other'),('prompt_sha256','old'),('sha256','old'),('concur',False)]:
             with self.assertRaises(AssertionError):check_exact_review(record,{'scenes':[dict(review,**{key:val})]},finished=True)
+
+    def test_feature_count_cannot_replace_local_evidence_or_actual_images(self):
+        master='assets/identities/joseph-smith-owner-approved-20260914.png'
+        features={}; traits={}; markup=''
+        for i in range(1,17):
+            key=f'{i:02d}'
+            traits[key]={'title':key+' trait','observed':'observed '+key,'evidence':'evidence '+key,'verdict':'verdict '+key}
+            visuals=[{'src':master,'caption':'adopted','owner':'#owner','sources':[]},{'src':'source.png','caption':'source','owner':'#owner','sources':[{'url':'https://example.org/source'}]}]
+            features[key]={'explanation':['reason '+key],'limits':'limit '+key,'visuals':visuals}
+            figures=''.join('<figure><a href="'+v['src']+'"><img src="'+v['src']+'"></a><figcaption>'+v['caption']+'<a href="#owner">Return</a><a href="https://example.org/source">Source</a></figcaption></figure>' for v in visuals)
+            markup+='<article class="research-feature-study" data-research-feature="'+key+'" id="research-feature-'+key+'">'+' '.join(traits[key].values())+' reason '+key+' limit '+key+figures+'</article>'
+        self.assertEqual(len(check_feature_studies(soup(markup),features,traits)),16)
+        for bad in [markup.replace('evidence 01','omitted',1),markup.replace('<img src="source.png">','<a href="source.png">View elsewhere</a>',1),markup.replace('data-research-feature="16"','data-research-feature="15"'),markup.replace('https://example.org/source','https://example.org/unrelated')]:
+            with self.assertRaises(AssertionError):check_feature_studies(soup(bad),features,traits)
+
+    def test_renamed_original_cannot_be_rendered_on_another_page(self):
+        from joseph_research_acceptance import check_original_page_exclusivity
+        records=[{'sha256':'exact-pixels','owning_page':'research.html'}]
+        check_original_page_exclusivity(records,{'research.html':['exact-pixels'],'main.html':['source-reference']})
+        with self.assertRaises(AssertionError):
+            check_original_page_exclusivity(records,{'research.html':['exact-pixels'],'main.html':['exact-pixels']})
 
 if __name__=='__main__':unittest.main()

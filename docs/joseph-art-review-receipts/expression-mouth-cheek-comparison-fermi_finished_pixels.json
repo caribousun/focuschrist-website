@@ -1,0 +1,18 @@
+{
+  "reviewer": "Fermi",
+  "id": "expression-mouth-cheek-comparison",
+  "source_review_id": "expression",
+  "prompt_sha256": "bc8c46ea139506a5a6af6dc7bcdc84e18ab8d7fe929956e5fd9e840516b83ff4",
+  "concur": true,
+  "source_receipt_path": "work\\fermi\\research-method-finished-review.json",
+  "source_receipt_sha256": "2d37869396b2beb41a6dbd3b647251d699b6c5e22153c404e10a5543bbe99e6d",
+  "source_record": {
+    "id": "expression",
+    "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-18c9caa2-c87f-4038-93ed-6ab81235488a.png",
+    "sha256": "f9885c6e2c9d2367fa61faccafc7c8ab6cad7a8b5aae2d6ec2f4e3eca878722f",
+    "finished_pixels_concur": true,
+    "reason": "Closed-mouth smile creates clear mouth-corner/cheek contrast without teeth, age or actor replacement. Framing wider than proposed but useful exact contrast."
+  },
+  "normalization": "Maps reviewed exact asset/prompt to final placement id; preserves explicit decision and full source record. Not a new review or broader approval.",
+  "sha256": "f9885c6e2c9d2367fa61faccafc7c8ab6cad7a8b5aae2d6ec2f4e3eca878722f"
+}

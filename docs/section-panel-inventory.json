@@ -1338,6 +1338,28 @@
       "disposition": "coordinated_stylesheet_owner",
       "reason": "jesus-journey.css owner applies shared panel tokens."
     },
+    "joseph-life-reflection": {
+      "count": 11,
+      "pages": [
+        "joseph-smith-likeness.html"
+      ],
+      "tags": [
+        "p"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Inline reflection paragraph in Joseph family narrative; a left reading accent only, not an enclosing panel. Page-owned typography and responsive review apply."
+    },
+    "joseph-life-source-note": {
+      "count": 1,
+      "pages": [
+        "joseph-smith-likeness.html"
+      ],
+      "tags": [
+        "p"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Inline provenance paragraph in the remembrance closing; no independent panel surface. Preserve reading flow and source context."
+    },
     "journal-card": {
       "count": 3,
       "pages": [
@@ -1482,7 +1504,7 @@
       "reason": "Named existing section panel; shared Home-derived surface only."
     },
     "research-comparison-note": {
-      "count": 6,
+      "count": 3,
       "pages": [
         "joseph-smith-portrait-research.html"
       ],
@@ -2916,6 +2938,15 @@
         "atonement.html"
       ],
       "disposition": "shared_surface"
+    },
+    "research-feature-study": {
+      "stylesheets": [
+        "joseph-smith-research.css"
+      ],
+      "pages": [
+        "joseph-smith-portrait-research.html"
+      ],
+      "disposition": "coordinated_stylesheet_owner"
     },
     "sources": {
       "stylesheets": [

@@ -137,6 +137,7 @@ jobs:
           node tools/timeline_life_restoration_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/art_study_picture_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/joseph_research_modes_runtime_qa.js
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/joseph_life_runtime_qa.js
           node tools/joseph_research_source_hosts_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/temples_history_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/history_story_runtime_qa.js
@@ -327,6 +328,7 @@ jobs:
       - name: Verify Joseph Smith likeness study and provenance
         run: |
           python tools/joseph_smith_likeness_qa.py
+          python tools/joseph_life_enrichment_qa.py
           python tools/joseph_portrait_research_qa.py
           python -m unittest discover -s tools -p 'test_joseph_research_acceptance.py'
 

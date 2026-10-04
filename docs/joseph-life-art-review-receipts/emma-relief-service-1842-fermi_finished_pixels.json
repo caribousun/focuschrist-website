@@ -1,0 +1,30 @@
+{
+  "reviewer": "Fermi",
+  "id": "emma-relief-service-1842",
+  "source_review_id": "service-wardrobe-1842",
+  "prompt_sha256": "8851346d1af369e5f19f24cc460385672da6dca06738dc0ea6c2fac29e2f3477",
+  "concur": true,
+  "source_receipt_path": "work\\fermi\\five-final-wardrobe-whole-image-review.json",
+  "source_receipt_sha256": "f09721c664e8b6ddd24ed70728bcb2ffd7a2c727516c4a3f8ead2524af62841c",
+  "source_record": {
+    "id": "service-wardrobe-1842",
+    "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-a7269c71-781f-49e8-a47f-1838aeed53c0.png",
+    "sha256": "72d6f3eb51f8d27570079ad43266f6058f1ca34c008295c201336f5ea810b7da",
+    "prompt_sha256": "8851346d1af369e5f19f24cc460385672da6dca06738dc0ea6c2fac29e2f3477",
+    "review_scope": "WHOLE_FINISHED_IMAGE_ALL_REQUIRED_VISUAL_DIMENSIONS",
+    "checks": {
+      "realism": "Whole image inspected: natural photographic materials and lighting, no conspicuous synthetic artifact.",
+      "identity_age_body": "Emma37 recognizable, body/full face retained without pregnancy assertion; haircolor/iris unchanged.",
+      "era_garments_hair": "Deepgreen formal daydress, fitted gathered bodice, full sleeves narrowing at wrist and pale collar plausible early1840s; pinned side curls vary prior styling. Period full/bishop sleeves documented near1840; no claim exactEmma garment.",
+      "gaze_expression_hands": "Natural speaking attention toward attendees, coherent openhand gestures and expression; no forced mutual gaze to unseen people.",
+      "anatomy": "Visible limb/face proportions and joints coherent; no extra fingers or impossible overlap observed.",
+      "context": "March17 service remarks after men withdrew; other women seen fromback, no fabricated identifiable faces. Exact gesture/room unknown.",
+      "nonclone_purpose": "Distinct leadership/action with attendees, green clothing; not cloned reading or household scene."
+    },
+    "whole_image_concur": true,
+    "proposed_owning_route": "joseph-smith-likeness.html"
+  },
+  "normalization": "Final placement id mapped to exact prompt/final bytes; source decision preserved, no new broader concurrence.",
+  "sha256": "72d6f3eb51f8d27570079ad43266f6058f1ca34c008295c201336f5ea810b7da",
+  "whole_image_review": true
+}

@@ -1,0 +1,29 @@
+{
+  "reviewer": "Newton",
+  "id": "journey-to-harmony-1827",
+  "source_review_id": "journey-attentive-young-fullhat-replacement",
+  "prompt_sha256": "acfb47f098e94bb9065eeeafe05f24e368495336e1351a7a396f5f0e9595e76f",
+  "concur": true,
+  "source_receipt_path": "work\\newton\\prayer-journey-final-whole-image-review.json",
+  "source_receipt_sha256": "22de0bfc5a9184917d44708b5c458e9128b54fbfeb5a87de289c4fba77491844",
+  "source_record": {
+    "id": "journey-attentive-young-fullhat-replacement",
+    "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-30b9bd1e-2ead-40f5-8987-55bdd0cb7db0.png",
+    "sha256": "1f5870584dcc4c83e83ee40957a3863ae00a076c8ae52997ea5bbe42b5cd4433",
+    "prompt_sha256": "acfb47f098e94bb9065eeeafe05f24e368495336e1351a7a396f5f0e9595e76f",
+    "concur": true,
+    "whole_image_checks": {
+      "realism": "Coherent winter light, cloth texture and wagon/reins materials.",
+      "likeness_age": "Distinct approved-derived Joseph and Emma; younger21/23 appearance improved without generic actor substitution.",
+      "era_clothing_hair": "Full felt hat now clear of frame, brown wool coat, restrained bonnet/warm wrap; hairline/color preserved. Exact garments and snow unrecorded staging.",
+      "gaze_expression": "Joseph lowered head and focused brow/eye direction now reads as attentive driving along road/horse direction, not prior elevated vacant stare. Emma independently attends travel direction; mutual gaze is not required.",
+      "anatomy_fullness": "Hands/rein grips and seated bodies coherent; no altered or extra fingers. Emma natural fullness retained beneath wrap, no near-term silhouette.",
+      "historical_context": "Documented move earlyDecember1827; exact wagon/road/weather/companions outside frame remain interpretation. No exposed plates or invented historic document.",
+      "distinct_purpose": "Shared journey and practical attentiveness, separate from stationary partnership and labor scenes."
+    },
+    "scope": "Whole exact final image; root and owner correction acceptance plus assembled-page gates separate."
+  },
+  "normalization": "Final placement id mapped to exact prompt/final bytes; source decision preserved, no new broader concurrence.",
+  "sha256": "1f5870584dcc4c83e83ee40957a3863ae00a076c8ae52997ea5bbe42b5cd4433",
+  "whole_image_review": true
+}

@@ -28,9 +28,14 @@ def inline(value, references=True):
 
 ROUTE='joseph-smith-portrait-research.html'
 VISUALS=ROOT/'docs/joseph-research-visuals.json'
+FEATURES=ROOT/'docs/joseph-research-feature-studies.json'
 
 def visual(record, describedby=None):
     src=record['src']; target=record['owner']; title=record['title']; caption=record['caption']
+    delivery_path=ROOT/'docs/joseph-art-delivery.json'
+    delivery=json.loads(delivery_path.read_text(encoding='utf-8')).get(src) if delivery_path.exists() else None
+    image_src=delivery['default'] if delivery else src
+    responsive=(' data-source-original="'+src+'" srcset="'+', '.join(v['asset']+' '+str(v['width'])+'w' for v in delivery['variants'])+'" sizes="(max-width: 600px) 94vw, 100vw"') if delivery else ''
     original=record.get('kind')=='original'
     attrs=(f'data-enriched-study-art="{record["id"]}" data-exclusive-artwork="{record["id"]}" data-research-art="{record["id"]}"' if original else 'data-research-reference="true"')
     detail=record.get('detail_window')
@@ -39,12 +44,12 @@ def visual(record, describedby=None):
     if detail:
         x,y,w,h=detail
         assert 0<=x and 0<=y and w>0 and h>0 and x+w<=record['width'] and y+h<=record['height']
-        crop_style=f' class="research-detail-window" style="aspect-ratio:{w}/{h}"'
+        crop_style=f' class="research-detail-window" style="aspect-ratio:{w}/{h};max-width:{max(w,min(w*2,360))}px;margin-inline:auto"'
         img_style=f' style="width:{record["width"]/w*100:.6f}%;max-width:none;position:absolute;left:{-x/w*100:.6f}%;top:{-y/h*100:.6f}%;height:auto"'
     description=f' aria-describedby="{describedby}"' if describedby else ''
     return (f'<figure class="fc-study-visual research-visual" {attrs}{description}>'
         f'<a href="{src}"{crop_style} aria-haspopup="dialog" aria-label="Explore artwork: {html.escape(title,quote=True)}" data-topic-study="{target}" data-topic-study-label="{html.escape(record.get("owner_label","Visit the owning portrait study"),quote=True)}">'
-        f'<img src="{src}" width="{record["width"]}" height="{record["height"]}" alt="{html.escape(record["alt"],quote=True)}" loading="lazy" decoding="async"{img_style}></a>'
+        f'<img src="{image_src}"{responsive} width="{record["width"]}" height="{record["height"]}" alt="{html.escape(record["alt"],quote=True)}" loading="lazy" decoding="async"{img_style}></a>'
         f'<figcaption><p class="fc-study-visual-label">{record.get("label","Research reference")}</p><h4>{html.escape(title)}</h4><p>{inline(caption)}</p>'
         '<p class="fc-study-visual-sources">'+''.join(f'<a href="{html.escape(x["url"],quote=True)}"'+(' target="_blank" rel="noopener noreferrer"' if x['url'].startswith('https:') else '')+'>'+html.escape(x['label'])+'</a>' for x in record.get('sources',[]))+
         f'<a href="{target}">{html.escape(record.get("owner_label","Visit the owning portrait study"))}</a></p></figcaption></figure>')
@@ -52,6 +57,7 @@ def visual(record, describedby=None):
 def build():
     data=json.loads(CONTENT.read_text(encoding='utf-8'))
     visuals=json.loads(VISUALS.read_text(encoding='utf-8')) if VISUALS.exists() else {}
+    features=json.loads(FEATURES.read_text(encoding='utf-8')) if FEATURES.exists() else {}
     image_captions=[r.get('caption') for r in visuals.values()]+[c.get('caption') for r in visuals.values() for c in r.get('companions',[])]
     parts=[BEGIN,'<section id="portrait-research" class="joseph-research" aria-labelledby="portrait-research-title">',
       '<header class="research-opening"><p class="fc-eyebrow">Joseph Smith · Portrait Research</p><h1 id="portrait-research-title">The evidence behind our Joseph</h1><p>What history supports, what remains uncertain, and how we made our portrait.</p><div class="research-mode-switch fc-actions" role="group" aria-label="Reading view" hidden><button class="fc-button fc-button--primary" type="button" data-research-mode="chapters" aria-pressed="true">Chapter view</button><button class="fc-button" type="button" data-research-mode="all" aria-pressed="false">Read all</button></div><nav class="research-opening-links" aria-label="Study downloads and return"><a href="assets/research/focuschrist-joseph-evidence.pdf" download>Download the PDF</a><a href="joseph-smith-likeness.html#our-portrait">Return to the portrait study</a></nav></header>',
@@ -79,6 +85,9 @@ def build():
                 documents=all('/joseph-documents/' in c['src'] and 'mask-pair' not in c['src'] for c in [visuals[slot],*visuals[slot]['companions']])
                 note='These pages identify the publication and its description. The publication date is separate from the remembered event and from any earlier letter.' if documents else 'Separate source views retain their own proportions. They are not aligned, warped, or matched to an anatomical scale. Keep pose, lighting and the cast’s condition in mind.'
                 group_label='Publication pages and source context' if documents else 'Separate source views, without anatomical registration'
+                if any(c.get('kind')=='original' for c in [visuals[slot],*visuals[slot]['companions']]):
+                    note='The historical image and newly made artwork have different roles. Labels identify the surviving source and the interpreted scenes; neither is an anatomically registered comparison.'
+                    group_label='Historical evidence and new interpretive artwork'
                 v=f'<div class="research-comparison-group" aria-label="{group_label}">'+visual(visuals[slot],note_id)+''.join(visual(c,note_id) for c in visuals[slot]['companions'])+f'<div role="note" id="{note_id}" class="research-comparison-note">{note}</div></div>'
             parts.append(f'<div class="research-reading-block{ " research-reading-block--illustrated" if v else ""}{ " research-reading-block--comparison" if comparison else ""}" id="research-block-{slot}" data-research-reading-block="{slot}"><div class="research-reading-copy">'+''.join(pending)+'</div>'+v+'</div>')
             pending=[]; count=0; trait_count=0
@@ -108,6 +117,16 @@ def build():
                 # Image records are displayed through the explicit, source-labelled visual map.
                 continue
             elif kind=='trait':
+                feature_id=b['title'].split()[0]
+                if feature_id in features:
+                    flush()
+                    feature=features[feature_id]
+                    parts.append(f'<article class="research-feature-study" id="research-feature-{feature_id}" data-research-feature="{feature_id}"><header><p class="fc-eyebrow">Look closely · Follow the evidence</p><h3>{html.escape(b["title"])}</h3></header><div class="research-feature-reasoning"><p><strong>In our portrait.</strong> {inline(b["observed"])}</p><p><strong>The historical evidence.</strong> {inline(b["evidence"])}</p><p><strong>Our assessment.</strong> {inline(b["verdict"])}</p></div>')
+                    parts.append('<div class="research-feature-images">'+''.join(visual(record) for record in feature['visuals'])+'</div>')
+                    for paragraph in feature.get('explanation',[]):
+                        parts.append(f'<p class="research-feature-explanation">{inline(paragraph)}</p>')
+                    parts.append('<div class="research-feature-limits"><h4>What this can—and cannot—tell us</h4><p>'+inline(feature['limits'])+'</p></div></article>')
+                    continue
                 if pending and not trait_count:flush()
                 pending.append(f'<article class="research-trait"><h3>{html.escape(b["title"])}</h3><p><strong>What is visible.</strong> {inline(b["observed"])}</p><p><strong>Evidence.</strong> {inline(b["evidence"])}</p><p><strong>Decision.</strong> {inline(b["verdict"])}</p></article>');trait_count+=1
                 if trait_count==2:flush()
@@ -140,7 +159,7 @@ def build():
         following=f'<a href="#portrait-section-{n+1}">Next: {html.escape(data["sections"][n]["title"])} →</a>' if n<15 else '<a href="joseph-smith-likeness.html#our-portrait">Return to the portrait study →</a>'
         parts.append(f'<nav class="research-section-nav" aria-label="Continue from {html.escape(sec["title"],quote=True)}">{previous}{following}</nav></section>')
     parts.append('<nav class="research-chapter-controls" aria-label="Continue through the research chapters" hidden><a class="fc-button" data-research-previous href="#portrait-section-1">Previous chapter</a><a class="fc-button fc-button--primary" data-research-next href="#portrait-section-4">Next chapter</a></nav><div class="fc-actions"><a class="fc-button fc-button--primary" href="assets/research/focuschrist-joseph-evidence.pdf" download>Download the complete PDF</a><a class="fc-button" href="joseph-smith-likeness.html#our-portrait">Return to the portrait study</a></div></section>'+END)
-    parts.insert(-1,'<section class="research-study-onward" aria-labelledby="research-study-onward-title"><h2 id="research-study-onward-title">Keep studying with care</h2><dl class="research-evidence-stages"><div class="fc-study-panel"><dt>Read the witness in context</dt><dd>Choose one description. What was written at the time, and what reached us through a later publication?</dd></div><div class="fc-study-panel"><dt>Separate confidence from faith</dt><dd>Which conclusions belong to historical evidence, which to artistic interpretation, and which to spiritual conviction? Read <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/1-thes/5?lang=eng&amp;id=p21#p21">1 Thessalonians 5:21</a>.</dd></div><div class="fc-study-panel"><dt>Leave room for correction</dt><dd>What new source would change your view? Follow the invitation to seek learning in <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/88?lang=eng&amp;id=p118#p118">Doctrine and Covenants 88:118</a>.</dd></div></dl><div class="fc-actions"><a class="fc-button" href="joseph-smith-likeness.html">Joseph’s portrait study</a><a class="fc-button" href="church-history.html">Church History</a><a class="fc-button" href="answers/melchizedek-priesthood-restoration.html">Restoration history and sources</a><a class="fc-button" href="ask.html?topic=Joseph+Smith+portraits+and+death+masks&amp;return=%2Fjoseph-smith-portrait-research.html#ask-question">Ask about Joseph’s appearance</a></div></section>')
+    parts.insert(-1,'<section class="research-study-onward" aria-labelledby="research-study-onward-title"><h2 id="research-study-onward-title">Keep studying with care</h2><dl class="research-evidence-stages"><div class="fc-study-panel"><dt>Read the witness in context</dt><dd>Choose one description. What was written at the time, and what reached us through a later publication?</dd></div><div class="fc-study-panel"><dt>Separate confidence from faith</dt><dd>Which conclusions belong to historical evidence, which to artistic interpretation, and which to spiritual conviction? Read <a target="_blank" rel="noopener noreferrer" href="https://www.churchofjesuschrist.org/study/scriptures/nt/1-thes/5?lang=eng&amp;id=p21#p21">1 Thessalonians 5:21</a>.</dd></div><div class="fc-study-panel"><dt>Leave room for correction</dt><dd>What new source would change your view? Follow the invitation to seek learning in <a target="_blank" rel="noopener noreferrer" href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/88?lang=eng&amp;id=p118#p118">Doctrine and Covenants 88:118</a>.</dd></div></dl><div class="fc-actions"><a class="fc-button" href="joseph-smith-likeness.html">Joseph’s portrait study</a><a class="fc-button" href="church-history.html">Church History</a><a class="fc-button" href="answers/melchizedek-priesthood-restoration.html">Restoration history and sources</a><a class="fc-button" href="ask.html?topic=Joseph+Smith+portraits+and+death+masks&amp;return=%2Fjoseph-smith-portrait-research.html#ask-question">Ask about Joseph’s appearance</a></div></section>')
     # Keep the view selector available while reading without duplicating controls.
     opening_index=next(i for i,x in enumerate(parts) if '<header class="research-opening"' in x)
     opening=parts[opening_index]
@@ -174,7 +193,7 @@ def build():
     head=head.replace('Joseph Smith: The Face Behind the History','Joseph Smith Portrait Research')
     head=head.replace('class="fc-site fc-likeness-page"','class="fc-site fc-likeness-page fc-portrait-research-page"')
     head=head.replace('<a href="joseph-smith-likeness.html" class="active" aria-current="page">JOSEPH SMITH</a>','<a href="joseph-smith-likeness.html">JOSEPH SMITH</a>').replace('<a href="'+ROUTE+'">PORTRAIT RESEARCH</a>','<a href="'+ROUTE+'" class="active" aria-current="page">PORTRAIT RESEARCH</a>')
-    head=head.replace('topic-artwork-details.js?v=20260930-history-records-1','topic-artwork-details.js?v=20261003-research-sources-1')
+    head=head.replace('topic-artwork-details.js?v=20260930-history-records-1','topic-artwork-details.js?v=20261003-research-sources-1').replace('topic-artwork-details.js?v=20261003-joseph-family-sources-1','topic-artwork-details.js?v=20261003-research-sources-1')
     head=head.replace('</head>','<script src="joseph-smith-research.js?v=20261003-chapters-1" defer></script>\n</head>')
     footer=main.split('</main>',1)[1]
     (ROOT/ROUTE).write_text(head+'<main id="main-content" class="likeness-main">\n'+'\n'.join(parts)+'\n</main>'+footer,encoding='utf-8',newline='\n')

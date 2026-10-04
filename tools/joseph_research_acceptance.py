@@ -36,7 +36,39 @@ def check_entry_and_brevity(main):
         assert len(legacy.select('p'))<=2, 'Legacy research landing is not a short entry'
         assert any(a.get('href','').split('#')[0]==ROUTE for a in legacy.select('a[href]')), 'Legacy research anchor must lead to separate page'
 
-def check_reading_cadence(root, exceptions=()):
+def check_feature_studies(root, features, traits):
+    """Check the complete evidence-to-choice units, not just sixteen headings."""
+    expected={f'{i:02d}' for i in range(1,17)}
+    assert set(features)==expected and set(traits)==expected, 'All sixteen feature specifications and trait records are required'
+    articles=root.select('.research-feature-study[data-research-feature]')
+    assert len(articles)==16 and {a['data-research-feature'] for a in articles}==expected, 'All sixteen distinct feature studies must be present'
+    assert not root.select('.research-trait'), 'Old trait blocks must not duplicate new feature studies'
+    def text(value):
+        from bs4 import BeautifulSoup
+        value=BeautifulSoup(value,'html.parser').get_text(' ',strip=True)
+        value=re.sub(r'\[\s*[0-9]+(?:\s*[-,]\s*[0-9]+)*\s*\]','',value)
+        return re.sub(r'\s+',' ',value).strip()
+    for article in articles:
+        key=article['data-research-feature']; spec=features[key]; trait=traits[key]
+        assert article.get('id')=='research-feature-'+key, 'Feature deep-link identity differs'
+        assert 1<=len(spec['explanation'])<=2 and spec.get('limits'), 'Each feature needs bounded explanation and explicit limits'
+        actual=text(str(article))
+        for value in [trait['title'],trait['observed'],trait['evidence'],trait['verdict'],*spec['explanation'],spec['limits']]:
+            assert text(value) in actual, 'Feature-local evidence or reasoning missing: '+key
+        figures=article.select('figure')
+        assert len(figures)==len(spec['visuals'])>=2, 'Each feature needs its actual reviewed visual set'
+        assert any(v['src']=='assets/identities/joseph-smith-owner-approved-20260914.png' for v in spec['visuals']), 'Feature lacks unchanged adopted detail'
+        assert any(v.get('sources') for v in spec['visuals']), 'Feature lacks direct historical-source access'
+        for figure, visual in zip(figures,spec['visuals']):
+            image=figure.select_one('img')
+            assert image and image.get('data-source-original',image.get('src'))==visual['src'], 'Feature visual missing or replaced by distant link'
+            assert text(visual['caption']) in text(str(figure)), 'Feature visual context changed'
+            destinations={a.get('href') for a in figure.select('a[href]')}
+            assert visual['src'] in destinations and visual['owner'] in destinations, 'Feature full-size/return action missing'
+            assert all(s['url'] in destinations for s in visual.get('sources',[])), 'Feature historical-source action missing'
+    return expected
+
+def check_reading_cadence(root, exceptions=(), verified_features=()):
     blocks=root.select('[data-research-reading-block]')
     assert blocks, 'Reading must be divided into image-supported blocks'
     allowed = {e['slot']:e for e in exceptions}
@@ -70,6 +102,8 @@ def check_reading_cadence(root, exceptions=()):
     assert seen==set(allowed), 'Unused or stale cadence exception'
     for p in root.select('.research-part p'):
         if p.find_parent('figure') or 'research-return' in p.get('class',[]) or bibliography_paragraph(p) or section_label(p):continue
+        feature=p.find_parent(class_='research-feature-study')
+        if feature and feature.get('data-research-feature') in verified_features:continue
         assert p.find_parent(attrs={'data-research-reading-block':True}), 'Narrative paragraph escaped image-cadence accounting'
     return len(blocks)
 
@@ -130,3 +164,12 @@ def check_exact_review(record, receipt, finished=False):
     assert review.get('prompt_sha256')==record['preflight_prompt_sha256'], 'Review covers another prompt'
     if finished:
         assert review.get('sha256')==record['sha256'], 'Finished review covers other asset bytes'
+
+
+def check_original_page_exclusivity(records, rendered_images):
+    """Rendered-image hashes catch renamed clones; source citations are allowed."""
+    owners={r['sha256']:r['owning_page'] for r in records}
+    for page, hashes in rendered_images.items():
+        for digest in hashes:
+            if digest in owners:
+                assert page==owners[digest], 'Original artwork cloned onto another page: '+page

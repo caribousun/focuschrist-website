@@ -1,0 +1,29 @@
+{
+  "reviewer": "Newton",
+  "id": "emma-family-letter-1838",
+  "source_review_id": "letter-wardrobe-1838",
+  "prompt_sha256": "4dd7fbf2a8462f3913c622a2415bffa17b88ddbfc4336a73aafa6c8e5b42a698",
+  "concur": true,
+  "source_receipt_path": "work\\newton\\letter-service-wardrobe-whole-image-review.json",
+  "source_receipt_sha256": "65002cb8f591bc7e1154467ca07c406e490856bbdacc6b816bef4e88eb94e080",
+  "source_record": {
+    "id": "letter-wardrobe-1838",
+    "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-a3aeac1b-68a5-4950-ab27-f12eb5ec8267.png",
+    "sha256": "0440c07de9541b20fa23680d60932b742fc85665f651d7330ac511aaee299905",
+    "prompt_sha256": "4dd7fbf2a8462f3913c622a2415bffa17b88ddbfc4336a73aafa6c8e5b42a698",
+    "concur": true,
+    "whole_image_checks": {
+      "realism": "Natural skin/light, paper folds and textile texture; no conspicuous generated artifact.",
+      "likeness_age": "Recognizable Emma, plausible34, dark hair/brown eyes and natural facial fullness.",
+      "era_clothing_hair": "Burgundy fitted day bodice, full gathered skirt and sleeves narrowing to cuffs, modest collar/shawl; pinned shorter side arrangement. Form and color distinct from earlier domestic and1842 service scenes. Exact garment ownership unverified.",
+      "gaze_expression": "Attentive eyes directed toward held letter, restrained concern, no distant stare.",
+      "anatomy_fullness": "Coherent two-handed paper grip, wrists and posture. Defined garment waist does not introduce obvious body thinning; no unsupported pregnancy dome.",
+      "context": "Representative reading of family correspondence during1838 imprisonment; no generated signature/text or exact receipt-moment claim.",
+      "distinct_purpose": "Separation and written family care; visually and substantively different from other scenes."
+    },
+    "scope": "Whole same exact finished pixels; root concurrence and assembled-page review remain pending. Replacement counts once."
+  },
+  "normalization": "Final placement id mapped to exact prompt/final bytes; source decision preserved, no new broader concurrence.",
+  "sha256": "0440c07de9541b20fa23680d60932b742fc85665f651d7330ac511aaee299905",
+  "whole_image_review": true
+}

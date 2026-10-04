@@ -1,0 +1,24 @@
+{
+  "reviewer": "Newton",
+  "id": "adopted-mouth-study",
+  "source_review_id": "adopted-mouth-study",
+  "prompt_sha256": "39f343edbcc0a13b8ca54e3e153fe0a15047db1154554b2080ca5a7ec883cecd",
+  "concur": true,
+  "source_receipt_path": "work\\newton\\mouth-finished-pixels.json",
+  "source_receipt_sha256": "f7b3f53d8c79c8d9fe568b365b55bfe0f45aa68d54849900bf7272ffb02714dc",
+  "source_record": {
+    "reviewer": "Newton",
+    "id": "adopted-mouth-study",
+    "prompt_sha256": "39f343edbcc0a13b8ca54e3e153fe0a15047db1154554b2080ca5a7ec883cecd",
+    "sha256": "faace4a2216ac262a32332bb3172fb44fe5623fa46f63162123cd3dc78527973",
+    "concur": true,
+    "scope": "Finished pixels only; integration and complete coverage not approved",
+    "notes": [
+      "Specific mouth/philtrum/redlip/chin framing visibly differs from broad eye/nose outputs.",
+      "Recognizable lower-face identity, natural asymmetric mouthcorners, closedmouth, fullphiltrum and chin retained; no visible teeth or invented structuralcorrection.",
+      "Accept as newly generated explanatory mouthregion. Exact relative heights/shape are not measurements; keep actual approvedportrait detail and authentic source alongside."
+    ]
+  },
+  "normalization": "Maps reviewed exact asset/prompt to final placement id; preserves explicit decision and full source record. Not a new review or broader approval.",
+  "sha256": "faace4a2216ac262a32332bb3172fb44fe5623fa46f63162123cd3dc78527973"
+}

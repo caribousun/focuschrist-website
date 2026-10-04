@@ -1,0 +1,22 @@
+{
+  "reviewer": "Newton",
+  "id": "marriage-partnership-1827",
+  "source_review_id": "marriage-wardrobe-1827",
+  "prompt_sha256": "589c2ebc3571733ea3d93dedf1cd1caa93847695e4db4bbd4b80f2a427b8eef4",
+  "concur": true,
+  "source_receipt_path": "work\\newton\\main-wardrobe-edits-v1-preflight.json",
+  "source_receipt_sha256": "d7e10679837bbdbc3c4a05f77bca2cbd462e476690b6431dd572a9a1efbfedf1",
+  "source_record": {
+    "id": "marriage-wardrobe-1827",
+    "prompt_sha256": "589c2ebc3571733ea3d93dedf1cd1caa93847695e4db4bbd4b80f2a427b8eef4",
+    "reference_sha256": [
+      "7f93288097809a0794cd490575ca9134f56cd719846cb8eb87f9ebb609394ed9"
+    ],
+    "concur": true,
+    "notes": "Generation-only. Museum1828 cotton and1828-1835 high-waist full-sleeve descriptions independently read; bonnet1825-1840 is straw shape context only, not winter fabric proof. Exact colors, possessions and hairstyle unverified interpretations. Finished review must distinguish era silhouette/waist/sleeve/neckline from mere recoloring, retain identity/body/action and bedside accepted reciprocal gaze. No automatic outfit/body slimming. Existing later-period structure retained where appropriate, not copied into earlier dates."
+  },
+  "normalization": "Final placement id mapped to exact prompt/final bytes; source decision preserved, no new broader concurrence.",
+  "reference_sha256": [
+    "7f93288097809a0794cd490575ca9134f56cd719846cb8eb87f9ebb609394ed9"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "reviewer": "Fermi",
+  "id": "painted-likeness-1842",
+  "source_review_id": "painted-likeness-1842",
+  "prompt_sha256": "410e24804022ac8b4e4da5d0955e3ebe162fa4afa1c2b7fe2655e99460cd61cb",
+  "concur": true,
+  "source_receipt_path": "work\\fermi\\first-two-finished-image-review.json",
+  "source_receipt_sha256": "e0de3ce9036136365f0514101aa4994f8d48e17a960b7e8df4d3ec4c6f1d82e6",
+  "source_record": {
+    "id": "painted-likeness-1842",
+    "prompt_sha256": "410e24804022ac8b4e4da5d0955e3ebe162fa4afa1c2b7fe2655e99460cd61cb",
+    "sha256": "1f344ac8596d3e626c7e5dc3e80f0df9e7492265719e8176916010a838935921",
+    "concur": true,
+    "status": "FINISHED_PIXELS_CONCURRED_INTERPRETIVE_SCENE_ONLY",
+    "findings": [
+      "Recognizable approved Joseph identity and plausibleage36",
+      "Natural attentive eyes, lifelike skin/hair, coherentvisiblehand, plausiblecoat/collar",
+      "Canvasback visible; no fabricated originalpaintedportrait visible",
+      "Seated composition and garmenttexture consistent with educationalhistoricalinterpretation"
+    ],
+    "limits": [
+      "Exactroom,furniture,garments,poseunrecorded",
+      "Not photograph of actual1842sitting or authentication",
+      "No page/rendered/publicationconcurrence"
+    ]
+  },
+  "normalization": "Maps reviewed exact asset/prompt to final placement id; preserves explicit decision and full source record. Not a new review or broader approval.",
+  "sha256": "1f344ac8596d3e626c7e5dc3e80f0df9e7492265719e8176916010a838935921"
+}

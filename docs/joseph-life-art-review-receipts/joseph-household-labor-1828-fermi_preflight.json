@@ -1,0 +1,37 @@
+{
+  "reviewer": "Fermi",
+  "id": "joseph-household-labor-1828",
+  "source_review_id": "joseph-household-labor-1828",
+  "prompt_sha256": "9e7ee4eff3d6364cd7bc5ed58aac7e3e194a4fc0cea36fb98eee26f8c8e75a92",
+  "concur": true,
+  "source_receipt_path": "work\\fermi\\main-remaining-wardrobe-prompts-v1.json",
+  "source_receipt_sha256": "c5923a3d727dff05b33baf745e7d2a4a478227565f36a2d76fabaaaf4426b8c4",
+  "source_record": {
+    "id": "joseph-household-labor-1828",
+    "prompt": "Create one new ultra-realistic photographic historical illustration for the Joseph Smith family study. Use the supplied approved identity reference images in the stated order. Keep each person recognizably themselves with separate facial structure, natural asymmetry, eye color, hair color and character; never blend the identities or substitute attractive generic actors. Adapt age gently to the stated event without reshaping identity. Preserve Emma's natural fuller figure and facial fullness; do not slim her. Real skin texture, natural human eyes, correct hands, physically believable daylight and fabric. No painterly finish, CGI, glamour lighting, beauty smoothing or modern objects. This newly made artwork interprets documented history; it is not a historical photograph, recovered source or record of the creation of the modern portraits. Exact clothing, room, pose and gestures are interpretive unless expressly specified. No text, watermark, readable invented manuscript or facsimile. Landscape 3:2 with recognizable faces and meaningful action. The reference is Joseph Smith, age22, Harmony in autumn1828. Show the recognizable young adult Joseph carrying a manageable armful of split firewood toward a small plain wood wagon on a farm path. His face is readable in three-quarter view with the approved blue-gray eyes and distinctive nose, younger skin without changing his identity. Off-white linen work shirt with rolled cuffs, muted russet-brown waistcoat, gray-brown trousers and sturdy boots, no formal black coat or elaborate white formal neckcloth; natural realistic exertion, no heroic bodybuilder anatomy or theatrical hardship. Both hands naturally support the wood with safe coherent weight. Modest farm surroundings, autumn light. No second person, modern tools, fake historic document or grand building. This interprets the documented wood-hauling work by which he supported the household; the precise wagon, path, task moment and costume are not claimed as recovered history. Exact colors, garment possession and hair arrangement are period-plausible artistic selections, not documented personal wardrobe for this date. Preserve identity while giving this activity its own credible clothing.",
+    "prompt_sha256": "9e7ee4eff3d6364cd7bc5ed58aac7e3e194a4fc0cea36fb98eee26f8c8e75a92",
+    "actual_references": [
+      {
+        "person": "Joseph",
+        "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\identities\\joseph-smith-owner-approved-20260914.png",
+        "sha256": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+      }
+    ],
+    "placement": "Main: work supporting a household",
+    "source": "https://www.churchofjesuschrist.org/learn/history/sites/new-york-and-pennsylvania/discover/joseph-and-emma-smiths-home?lang=eng",
+    "uncertainty": "Official home history documents hired husking/threshing/hauling hay and wood; exact employment day/site/equipment unknown.",
+    "fermi_generation_only_concur": true,
+    "newton_concur": false,
+    "status": "AMENDED_PENDING_DUAL_PREFLIGHT",
+    "hold_reason": "Latest Wyatt directs confirmed varied clothing colors, hats/bonnets/scarves/hairstyles; Gary personal-vs-period evidence pending. Do not generate old prompt.",
+    "wardrobe_sources": [
+      "https://www.metmuseum.org/art/collection/search/108029",
+      "https://emuseum.colonialwilliamsburg.org/objects/5757/dress",
+      "https://emuseum.colonialwilliamsburg.org/objects/41221/bonnet"
+    ]
+  },
+  "normalization": "Final placement id mapped to exact prompt/final bytes; source decision preserved, no new broader concurrence.",
+  "reference_sha256": [
+    "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "reviewer": "Fermi",
+  "id": "adopted-blue-eye-study",
+  "sha256": "75c235f7e7eb79a4cf4e51be94cf90fc7c4ab94e1ba0e17d5f3669654e8a39a6",
+  "prompt_sha256": "21165daeed04991a2fb940706d713ebb598a06ec61e1c6c0eff250cbb56a1651",
+  "concur": true,
+  "source_receipt_path": "work\\fermi\\eye-window-purpose-review.json",
+  "source_receipt_sha256": "40c6dc18adf0278d041faf42cf2b10eae02112c4103707f4327567cf6ea771d0",
+  "source_record": {
+    "reviewer": "Fermi",
+    "purpose_concur": true,
+    "source_sha256": "75c235f7e7eb79a4cf4e51be94cf90fc7c4ab94e1ba0e17d5f3669654e8a39a6",
+    "display_window": [
+      350,
+      245,
+      850,
+      260
+    ],
+    "screenshot_sha256": "bbb26de7c2f2652f76f5c98b89b7f83c2487fe08e3760fa9381aeb23b0e3bf64",
+    "finding": "Rendered window distinctly concentrates on both blue-gray irises, lids, brow region and bridge; nose tip/mouth excluded. Source unchanged and full image available per root interaction verification. Caption explicitly new interpretation, plaster contains no color evidence.",
+    "count": "Underlying eye artwork once; display window not another original.",
+    "limits": "Screenshot purpose concurrence, not my own modal interaction test or full-page/phone acceptance.",
+    "publication_concur": false
+  },
+  "normalization": "Explicit renewed purpose concurrence for unchanged exact original in reviewed window; earlier broad-frame hold retained historically."
+}

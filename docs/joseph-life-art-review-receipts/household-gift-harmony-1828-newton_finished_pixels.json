@@ -1,0 +1,32 @@
+{
+  "reviewer": "Newton",
+  "id": "household-gift-harmony-1828",
+  "source_review_id": "comb-wardrobe-1828",
+  "prompt_sha256": "44382e7a01ee126c940400870f1fe32ad437fdcb1a2996ddca1056167e525b5f",
+  "concur": true,
+  "source_receipt_path": "work\\newton\\comb-wardrobe-whole-image-review.json",
+  "source_receipt_sha256": "26a9199a246c6361345c3d4ca99f9be8cb01c48b8ea254efc18d9bdfcc9507bf",
+  "source_record": {
+    "reviewer": "Newton",
+    "id": "comb-wardrobe-1828",
+    "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-fc587147-0ce5-4961-9397-2ae1406344aa.png",
+    "sha256": "cf1b964c75b6a49536968eaf9a8d19186ce846262e0b9adcc86d053644ca9db6",
+    "prompt_sha256": "44382e7a01ee126c940400870f1fe32ad437fdcb1a2996ddca1056167e525b5f",
+    "concur": true,
+    "scope": "Whole exact finished image, all visible aspects together; assembled page and root concurrence still required",
+    "checks": {
+      "realism": "Natural light, pores, cloth wear/folds and scene depth; no conspicuous CGI or wax finish.",
+      "likeness": "Separate recognizable Joseph and Emma structures retained without actor substitution.",
+      "age": "Young-adult22/24 appearance plausible; modest brow expression lines do not require older age.",
+      "era_clothing_hair": "Russet printed raised-waist gathered dress with full upper sleeve and narrowing cuff, simple neck trim; earthy working coat/waistcoat and plain shirt. Emma rear-pinned hair retains longer side curls; not identical complete later master ensemble. Period-plausible rather than authenticated personal garment.",
+      "gaze_expression": "Joseph warmly attends Emma; Emma looks down at the comb she receives. Action-directed gaze coherent; no mutual-eye requirement for gift action.",
+      "anatomy": "Visible hands, grip on hat, offered palm and comb-receiving fingers plausible; natural full Emma figure preserved, no unsupported pronounced pregnancy dome.",
+      "context": "Documented modest comb purchase after paid labor; handoff, exact comb, threshold, clothing and weather interpretive.",
+      "distinct_purpose": "Concrete domestic care through small useful gift; not generic portrait or duplicate artwork purpose."
+    },
+    "limits": "One replacement original. Exact historical costume ownership/body size/pose not established; full assembled context and root final concurrence remain open."
+  },
+  "normalization": "Final placement id mapped to exact prompt/final bytes; source decision preserved, no new broader concurrence.",
+  "sha256": "cf1b964c75b6a49536968eaf9a8d19186ce846262e0b9adcc86d053644ca9db6",
+  "whole_image_review": true
+}

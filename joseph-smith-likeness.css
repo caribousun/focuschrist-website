@@ -46,3 +46,15 @@
  .likeness-path{gap:10px}
  .likeness-path a{flex-basis:calc(50% - 5px);font-size:.83rem;padding:10px 12px}
 }
+.joseph-life-nav{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}
+.joseph-life-nav a{border:1px solid var(--fc-line);border-radius:var(--fc-radius);padding:10px 14px;color:var(--fc-gold-light);text-decoration:none}
+.joseph-life-nav a:hover,.joseph-life-nav a:focus-visible{background:rgba(255,255,255,.06);text-decoration:underline}
+.joseph-life-scene,.joseph-life-closing{padding:32px 0;border-top:1px solid var(--fc-line);scroll-margin-top:120px}
+.joseph-life-scene>h3,.joseph-life-closing>h3{color:var(--fc-gold-light);font-size:clamp(1.35rem,3vw,1.85rem)}
+.joseph-life-enrichment p{line-height:1.7}
+.joseph-life-reflection{border-left:3px solid var(--fc-gold-light);padding:12px 18px;margin:24px 0}
+.joseph-life-source-note{font-size:.94rem}
+.joseph-life-scene .likeness-art img{width:100%;height:auto;object-fit:contain}
+@media(max-width:580px){.joseph-life-nav a{width:100%;box-sizing:border-box}.joseph-life-scene,.joseph-life-closing{padding:24px 0}}
+
+.joseph-life-caption-title{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}

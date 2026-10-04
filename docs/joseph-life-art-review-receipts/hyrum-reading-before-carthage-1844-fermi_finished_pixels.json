@@ -1,0 +1,36 @@
+{
+  "reviewer": "Fermi",
+  "id": "hyrum-reading-before-carthage-1844",
+  "source_review_id": "hyrum-reading-before-carthage-1844",
+  "prompt_sha256": "f9d4708513ffbf5b6045bb7e0e4d54b5b588a32325a570f0a0f83be0cdffc971",
+  "concur": true,
+  "source_receipt_path": "work\\fermi\\hyrum-final-whole-image-review.json",
+  "source_receipt_sha256": "beb82bc45e3ca97d9da7c5b1f76b1ca68fc8e0ff2c76f26bf391ae0bfd3b10ae",
+  "source_record": {
+    "reviewer": "Fermi",
+    "id": "hyrum-reading-before-carthage-1844",
+    "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-ec328664-3526-4259-9d33-263d014fb828.png",
+    "sha256": "b906c5c27cd36aa90b68fd1899355fe88c79fe53deb9c2b6ee571805cdb0ca83",
+    "review_scope": "WHOLE_FINISHED_IMAGE_ALL_REQUIRED_VISUAL_DIMENSIONS",
+    "whole_image_concur": true,
+    "publication_concur": false,
+    "checks": {
+      "realism": "Natural facial texture, cloth, wood and daylight; no conspicuous rendering artifact.",
+      "identity": "Recognizable approved Hyrum structure, distinct from Joseph; authorized blue-eye direction preserved.",
+      "apparent_age": "Mature adult44 plausible; no youth or elderly mismatch.",
+      "body": "Natural seated proportions and shoulder/arm relationship.",
+      "era_garments_hair": "Dark wool formal coat, waistcoat, white neckcloth and swept wavy hair plausible1844; exact ensemble and room unrecorded.",
+      "gaze_expression": "Reflective pause looking beyond the book, not active reading; calm intent appropriate only to revised caption.",
+      "hands_anatomy": "Visible fingers support book edges coherently, wrists and elbows plausible, no obvious duplicated digits.",
+      "context": "Inspired by D&C135 reading before departure for Carthage; not June27 prison reading or recovered visual record.",
+      "nonclone": "Distinct Hyrum identity/open-book reflection rather than repeated Joseph scene.",
+      "purpose": "Main-page Hyrum character/context scene with explicit interpretive reflection caption.",
+      "whole_image": "All dimensions inspected together on exact final pixels, not assembled from intermediate passes."
+    },
+    "caption_bound": "Hyrum reflecting with an open book, inspired by his reading before departure; the illustration does not show active reading. Room, clothing, book and pose are artistic interpretation.",
+    "rendered_page_gate": "Pending exact assembled candidate."
+  },
+  "normalization": "Final placement id mapped to exact prompt/final bytes; source decision preserved, no new broader concurrence.",
+  "sha256": "b906c5c27cd36aa90b68fd1899355fe88c79fe53deb9c2b6ee571805cdb0ca83",
+  "whole_image_review": true
+}

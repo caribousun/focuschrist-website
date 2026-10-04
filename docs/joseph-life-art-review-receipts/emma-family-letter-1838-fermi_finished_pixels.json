@@ -1,0 +1,30 @@
+{
+  "reviewer": "Fermi",
+  "id": "emma-family-letter-1838",
+  "source_review_id": "letter-wardrobe-1838",
+  "prompt_sha256": "4dd7fbf2a8462f3913c622a2415bffa17b88ddbfc4336a73aafa6c8e5b42a698",
+  "concur": true,
+  "source_receipt_path": "work\\fermi\\five-final-wardrobe-whole-image-review.json",
+  "source_receipt_sha256": "f09721c664e8b6ddd24ed70728bcb2ffd7a2c727516c4a3f8ead2524af62841c",
+  "source_record": {
+    "id": "letter-wardrobe-1838",
+    "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-a3aeac1b-68a5-4950-ab27-f12eb5ec8267.png",
+    "sha256": "0440c07de9541b20fa23680d60932b742fc85665f651d7330ac511aaee299905",
+    "prompt_sha256": "4dd7fbf2a8462f3913c622a2415bffa17b88ddbfc4336a73aafa6c8e5b42a698",
+    "review_scope": "WHOLE_FINISHED_IMAGE_ALL_REQUIRED_VISUAL_DIMENSIONS",
+    "checks": {
+      "realism": "Whole image inspected: natural photographic materials and lighting, no conspicuous synthetic artifact.",
+      "identity_age_body": "Emma34 recognizable, natural facial/body fullness retained.",
+      "era_garments_hair": "Burgundy gathered dress, shaped bodice and full sleeves tapering to cuffs, pale collar and shawl plausible late1830s; pinned dark hair preserves hairline.",
+      "gaze_expression_hands": "Gaze reads down toward held sheet; attentive restrained expression. Both letter-holding hands, wrists and fingers coherent.",
+      "anatomy": "Visible limb/face proportions and joints coherent; no extra fingers or impossible overlap observed.",
+      "context": "Family correspondence reception interpretation, not documented receipt moment or generated sheet as original manuscript.",
+      "nonclone_purpose": "Distinct solo reading action, burgundy/shawl, no clone of scribe action or research studies."
+    },
+    "whole_image_concur": true,
+    "proposed_owning_route": "joseph-smith-likeness.html"
+  },
+  "normalization": "Final placement id mapped to exact prompt/final bytes; source decision preserved, no new broader concurrence.",
+  "sha256": "0440c07de9541b20fa23680d60932b742fc85665f651d7330ac511aaee299905",
+  "whole_image_review": true
+}

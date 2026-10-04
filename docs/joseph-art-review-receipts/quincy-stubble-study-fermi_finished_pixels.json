@@ -1,0 +1,18 @@
+{
+  "reviewer": "Fermi",
+  "id": "quincy-stubble-study",
+  "source_review_id": null,
+  "prompt_sha256": "c7839d4f1f2ba2d501cad35274cfb2b031f6c74dfa75e302313fae0968a06ac1",
+  "concur": true,
+  "source_receipt_path": "work\\fermi\\quincy-stubble-finished-review.json",
+  "source_receipt_sha256": "9a3f72c3881bf7a4b75ae8d91497ed4e040c7ba96e6bbe0e2a21ffd43649690e",
+  "source_record": {
+    "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-a557d48d-f3c7-487f-bd16-12cc623e5e90.png",
+    "sha256": "8b3dfa5615a23d6a3f0d4cf2ec3c6324b7935f89e4ca331beaddc34981c71599",
+    "finished_pixels_concur": true,
+    "reason": "Now visibly short stubble across chin and jaw with subtler upper-lip hair. Recognizable Joseph, checked coat and light trousers retained. Appropriate illustration of several days without shaving, not exact measured beard length or authentic historical photograph.",
+    "publication_concur": false
+  },
+  "normalization": "Maps reviewed exact asset/prompt to final placement id; preserves explicit decision and full source record. Not a new review or broader approval.",
+  "sha256": "8b3dfa5615a23d6a3f0d4cf2ec3c6324b7935f89e4ca331beaddc34981c71599"
+}
