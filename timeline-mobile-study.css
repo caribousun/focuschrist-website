@@ -87,6 +87,7 @@ body.fc-timeline-experience .timeline-map-attribution a{color:var(--fc-gold,#f0c
 /* Count/unit badges grow with user text while retaining their geographic anchor. */
 body.fc-timeline-experience .history-map-pin,
 body.fc-timeline-experience .handcart-cluster{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);box-sizing:border-box;width:max-content;height:auto;min-width:44px;min-height:44px;padding:4px 8px;border-radius:999px;white-space:nowrap}
+body.fc-timeline-experience .handcart-cluster{line-height:1.2}
 body.fc-timeline-experience .history-map-pin{min-width:58px}
 body.fc-timeline-experience .history-map-pin small,
 body.fc-timeline-experience .handcart-cluster small{white-space:nowrap}

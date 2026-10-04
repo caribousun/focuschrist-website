@@ -118,6 +118,62 @@ for (const card of cards) {
     }
     dom.window.close();
 }
+// Exercise the active legacy gallery functions, not a copied viewer implementation.
+const legacy = new JSDOM(read('art.html'), { url: 'https://focuschrist.com/art.html', runScripts: 'dangerously' });
+const legacyWindow = legacy.window;
+const legacyDocument = legacyWindow.document;
+const originals = [...legacyDocument.querySelectorAll('.gallery-item')];
+assert.equal(originals.length, 39, 'Every original gallery picture is covered');
+const originalAssets = originals.map(item => item.querySelector('img').getAttribute('data-full-src'));
+const originalTitles = originals.map(item => item.querySelector('.caption').textContent.trim());
+const modalImage = legacyDocument.getElementById('modalImage');
+const legacyModal = legacyDocument.getElementById('imageModal');
+const closeLegacy = legacyModal.querySelector('.close');
+const key = (target, value) => target.dispatchEvent(new legacyWindow.KeyboardEvent('keydown', { key: value, bubbles: true, cancelable: true }));
+for (let index = 0; index < originals.length; index++) {
+    const item = originals[index];
+    const picture = item.querySelector('img');
+    assert.equal(item.getAttribute('aria-label'), 'View ' + originalTitles[index], 'Visible title remains the gallery button name');
+    assert(picture.alt.length > originalTitles[index].length, 'Original artwork has a scene description, not only its title');
+    item.focus();
+    key(item, index % 2 ? ' ' : 'Enter');
+    assert(legacyModal.classList.contains('active'), 'Keyboard opens the real gallery');
+    assert.equal(legacyDocument.activeElement, closeLegacy, 'Open puts focus on the close control');
+    const visibleControls = [...legacyModal.querySelectorAll('[tabindex="0"]')];
+    const lastControl = visibleControls[visibleControls.length - 1];
+    closeLegacy.dispatchEvent(new legacyWindow.KeyboardEvent('keydown', { key: 'Tab', shiftKey: true, bubbles: true, cancelable: true }));
+    assert.equal(legacyDocument.activeElement, lastControl, 'Shift+Tab at first control stays inside the modal');
+    key(lastControl, 'Tab');
+    assert.equal(legacyDocument.activeElement, closeLegacy, 'Tab at last control wraps to close');
+    assert.equal(modalImage.getAttribute('src'), originalAssets[index]);
+    assert.equal(modalImage.alt, picture.alt, 'Selected image description follows opening');
+    key(legacyDocument, 'ArrowRight');
+    assert.equal(modalImage.alt, originals[(index + 1) % originals.length].querySelector('img').alt, 'Next updates description including wraparound');
+    key(legacyDocument, 'ArrowLeft');
+    assert.equal(modalImage.alt, picture.alt, 'Previous restores selected description');
+    key(legacyDocument, 'ArrowRight');
+    if (index % 3 === 0) key(legacyDocument, 'Escape');
+    else if (index % 3 === 1) key(closeLegacy, 'Enter');
+    else legacyModal.click();
+    assert(!legacyModal.classList.contains('active'), 'Escape, close control and backdrop each close');
+    assert.equal(legacyDocument.activeElement, item, 'Close returns to exact original trigger after navigation');
+    assert.equal(legacyDocument.body.style.overflow, 'auto', 'Close restores page scrolling');
+}
+assert.deepEqual(originals.map(item => item.querySelector('img').getAttribute('data-full-src')), originalAssets);
+assert.deepEqual(originals.map(item => item.querySelector('.caption').textContent.trim()), originalTitles);
+// The study drawer can append controls after initial opening; include only visible ones.
+legacyWindow.openModal(originals[0]);
+const drawer = legacyDocument.createElement('div');
+drawer.innerHTML = '<a href="#study">Study link</a><button hidden>Hidden action</button>';
+legacyModal.append(drawer);
+closeLegacy.dispatchEvent(new legacyWindow.KeyboardEvent('keydown', { key: 'Tab', shiftKey: true, bubbles: true, cancelable: true }));
+assert.equal(legacyDocument.activeElement, drawer.querySelector('a'), 'Dynamic visible drawer link participates in focus wrap; hidden controls do not');
+key(drawer.querySelector('a'), 'Tab');
+assert.equal(legacyDocument.activeElement, closeLegacy);
+key(legacyDocument, 'Escape');
+assert.equal(legacyDocument.activeElement, originals[0]);
+legacyWindow.close();
 gallery.window.close();
 assert.equal(checked, 20);
 console.log('Art study picture DOM QA passed: 4 featured paths, 20 study panels, exact titles and scripture, nested full-size viewer, repeated opening, focus and lesson return.');
+console.log('Legacy gallery DOM QA passed: 39 descriptions, stable title labels/assets, next/previous/wraparound, keyboard opening and exact original-trigger return across three close paths.');

@@ -44,6 +44,7 @@ DISTANT_MEDIA_PATTERNS = (
 # Narrow caption-production constructions, not a ban on uncertainty or on words
 # like "historical", "imagined" or "records" in ordinary teaching prose.
 PRODUCTION_NOTE_PATTERNS = (
+    r"\b(?:this|the|original) artwork illustrates\b[^.!?]{0,140}\bdoes not portray a particular person\b",
     r"\b(?:this|the|an?) (?:imagined|interpretive|devotional|symbolic)(?: (?:devotional|symbolic))? (?:scene|encounter|moment|portrayal|setting|composition|gathering|community)\b",
     r"\bthis devotional interpretation (?:looks to|invites|depicts|portrays)\b",
     r"\b(?:historical|scriptural|scripture|source) (?:accounts|records|sources) (?:guide|inform|ground) (?:this|the) (?:scene|image|composition|portrayal)\b",
