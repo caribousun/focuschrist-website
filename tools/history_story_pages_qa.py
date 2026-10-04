@@ -6,10 +6,12 @@ import re
 import subprocess
 import sys
 from bs4 import BeautifulSoup
+from static_content_audit import content_hash, load_ledger
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT/'docs/history-stories'
 stories = json.loads((DATA/'stories.json').read_text(encoding='utf-8'))['stories']
+reviewed_content = load_ledger()['documents']
 ready = json.loads((DATA/'art-ready.json').read_text(encoding='utf-8'))
 reviews = json.loads((ROOT/'docs/history-story-art-fermi-review-20260929.json').read_text(encoding='utf-8'))['images']
 accepted = {(entry['source_original'], entry['sha256']) for entry in reviews if entry['result'] == 'pass'}
@@ -33,6 +35,9 @@ hub = BeautifulSoup((ROOT/'church-history.html').read_text(encoding='utf-8'), 'h
 for story in stories:
     slug = story['id']
     page = ROOT/f'history/{slug}.html'
+    ledger_entries = [entry for entry in reviewed_content if entry['path'] == page.relative_to(ROOT).as_posix()]
+    assert len(ledger_entries) == 1, 'Historical story requires exactly one reviewed ledger entry'
+    assert ledger_entries[0]['published_text_sha256'] == content_hash(page), 'Historical wording changed after ledger review; renew the scoped review before release'
     soup = BeautifulSoup(page.read_text(encoding='utf-8'), 'html.parser')
     assert soup.select_one(f'link[rel="canonical"][href="https://focuschrist.com/history/{slug}.html"]')
     opening = soup.select_one('.fc-life-reading.fc-life-opening')
@@ -89,6 +94,18 @@ for story in stories:
     assert len(entry.get_text(' ', strip=True).split()) < 100, 'History hub remains a compact entrance'
 assert len(set(all_hashes)) == 24, 'Twenty-four distinct originals, not renamed copies'
 moyle = next(s for s in stories if s['id'] == 'john-rowe-moyle')
+# Keep scene-production caveats in the standard footer, while preserving the
+# substantive travel-journal/family-account distinction in the narrative.
+moyle_caption_retirements = (
+    'The precise date and circumstances are not established by Moyle’s travel journal.',
+    'The exact carving date and prosthetic side are not established here.',
+)
+for relative in ('history/john-rowe-moyle.html', 'docs/history-stories/art-ready.json',
+                 'docs/art-study-image-review.json'):
+    content = (ROOT / relative).read_text(encoding='utf-8')
+    assert not any(sentence in content for sentence in moyle_caption_retirements), relative + ': retired Moyle caption caveat returned'
+moyle_accident = next(u for u in moyle['units'] if u['id'] == 'moyle-cow-injury')
+assert any('later' in p and 'journal' in p for p in moyle_accident['paragraphs']), 'Preserve the substantive family-account and journal distinction'
 assert any('wooden' in p.lower() for u in moyle['units'] for p in u['paragraphs'])
 assert 'wooden' in ready['moyle-wooden-leg']['alt'].lower(), 'Required wooden-leg scene must be visibly described'
 css = (ROOT/'history-stories.css').read_text(encoding='utf-8')
