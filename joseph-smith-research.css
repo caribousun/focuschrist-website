@@ -54,6 +54,7 @@
 .joseph-research .research-source-index summary { min-height:44px; padding:14px 0; cursor:pointer; color:var(--fc-gold-light); font-size:1.12rem; }
 .joseph-research .research-contents a, .joseph-research .fc-button { overflow-wrap:anywhere; height:auto; white-space:normal; }
 .joseph-research .fc-actions { flex-wrap:wrap; }
+.joseph-research > .fc-actions:last-child { margin-top:24px; }
 @media(max-width:760px) {
  .joseph-research .research-reading-block--illustrated { grid-template-columns:1fr; gap:22px; }
  .joseph-research .research-part { margin-block:32px; }

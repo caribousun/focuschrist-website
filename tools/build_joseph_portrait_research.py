@@ -185,6 +185,7 @@ def build():
     if 'href="'+ROUTE+'">PORTRAIT RESEARCH</a>' not in main:
         main=main.replace('aria-current="page">JOSEPH SMITH</a>','aria-current="page">JOSEPH SMITH</a><a href="'+ROUTE+'">PORTRAIT RESEARCH</a>')
     main=main.replace('joseph-smith-research.css?v=20261003-research-1','joseph-smith-research.css?v=20261003-separate-research-2')
+    main=main.replace('joseph-smith-research.css?v=20261003-separate-research-2','joseph-smith-research.css?v=20261003-closing-spacing-3')
     PAGE.write_text(main,encoding='utf-8',newline='\n')
     head=main.split('<a class="fc-visual-hero')[0]
     head=re.sub(r'<title>.*?</title>','<title>Joseph Smith Portrait Research | focusChrist</title>',head)
