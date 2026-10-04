@@ -21,6 +21,26 @@ class MediaVoiceRegression(unittest.TestCase):
     def test_resource_artwork_disclaimer_is_rejected(self):
         self.assertTrue(self.flagged('<article class="fc-resource-card"><p>The original artwork illustrates receiving attentive help; it does not portray a particular person from the talk.</p></article>'))
         self.assertFalse(self.flagged('<article class="fc-resource-card"><p>Elder Jeffrey R. Holland teaches compassion, patience, and the value of qualified care during mental and emotional suffering.</p></article>'))
+    def test_hidden_picture_panel_imagined_room_note_is_rejected(self):
+        for copy in ['This room imagines a quiet moment within that longer search.',
+                     'The setting imagines a moment before the journey.',
+                     'This scene imagines the hymn’s hope in the daily work of continuing together.']:
+            self.assertTrue(self.flagged('<figcaption data-picture-panel-copy hidden><p>'+copy+'</p></figcaption>'))
+        for copy in ['Brigham Young studied the Book of Mormon before joining the Church.',
+                     'The record does not establish which room the visitors entered.',
+                     'The family imagined what their new home might be like.']:
+            self.assertFalse(self.flagged('<figcaption data-picture-panel-copy hidden><p>'+copy+'</p></figcaption>'))
+    def test_pioneer_music_visible_and_detail_notes_are_covered(self):
+        note='This scene imagines the hymn’s hope in the daily work of continuing together.'
+        self.assertTrue(self.flagged('<article class="pioneer-music-card"><p>'+note+'</p></article>'))
+        self.assertTrue(self.flagged('<article hidden><p data-detail-paragraph>'+note+'</p></article>'))
+        self.assertFalse(self.flagged('<article class="pioneer-music-card"><p>A mother and child share a glance as their family walks beside the wagon. The road still stretches ahead.</p></article>'))
+    def test_alt_adopted_likeness_production_note_is_rejected(self):
+        self.assertTrue(self.flagged('<img alt="Sitting for a painted likeness in a new illustration using our adopted Joseph likeness">'))
+        for text in ['An 1842 painted likeness of Joseph Smith.',
+                     'A portrait with disputed identification.',
+                     'Close view of Joseph Smith’s mouth, upper lip and chin.']:
+            self.assertFalse(self.flagged('<img alt="'+text+'">'))
     def test_modal_alt_and_custom_caption_are_covered(self):
         for html in ['<img alt="An artistic interpretation of Jesus walking.">',
                      '<a data-full-image-alt="Devotional interpretation of Jesus teaching."></a>',

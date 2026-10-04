@@ -1,5 +1,5 @@
 {
-  "source_html_sha256": "b005690c9754fce2737bcdd14eb2a6cb3e8450805d1444f1da2c2e198e578655",
+  "source_html_sha256": "94485808da246618eeeb2882a97c6160972704ce27180cb4e140b7e5f4d09efb",
   "pdf_sha256": "109bacb657025cd2f4dcc98b29ca98e97afb97bc8b1b15d5d5a1d460006b2946",
   "pages": 47,
   "sections": 15,
@@ -41,5 +41,15 @@
   "source_revalidation": {
     "reason": "Opening hero and cache changes do not enter the body/PDF; grouped section4 manuscript now matches this PDF. Exact final source QA verifies text, links, image coverage and navigation.",
     "qa_receipt": "docs/reviews/2026-10-04-joseph-heroes-pdf/final-source-qa.json"
+  },
+  "alt_only_source_compatibility": {
+    "date": "2026-10-04",
+    "previous_source_html_sha256": "b005690c9754fce2737bcdd14eb2a6cb3e8450805d1444f1da2c2e198e578655",
+    "current_source_html_sha256": "94485808da246618eeeb2882a97c6160972704ce27180cb4e140b7e5f4d09efb",
+    "pdf_rebuilt": false,
+    "pdf_bytes_unchanged": true,
+    "proof": "Exact three img-alt replacements only. All other HTML bytes, visible text, image paths and layout unchanged. PDF builder consumes figures and figcaptions, not img alt. Original PDF pixel-review receipts remain bound to the identical PDF.",
+    "fermi_receipt": "docs/joseph-research-reviews/narrative-fermi-alt-cleanup.json",
+    "newton_renewal": "docs/joseph-research-reviews/narrative-newton-alt-cleanup.json"
   }
 }
