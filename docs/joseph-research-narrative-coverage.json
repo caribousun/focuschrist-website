@@ -1,6 +1,6 @@
 {
   "baseline_sha256": "23724949768c40951657d0a6233cf9e281930047fa9c03d5449d7fbe4bd0343b",
-  "manuscript_sha256": "996c540f5dece27ca02fa5cea4de6b0d0b20174f8f3a4c98baf53f120acb4665",
+  "manuscript_sha256": "d926cf4c615e4dd8d6a69af323fba3d8e4f5deecde44ea52a81177ccf1afc36f",
   "status": "Independent semantic coverage reviewed with deliberate presentation retirements; rendered review separate",
   "records": [
     {
@@ -1943,13 +1943,13 @@
   "reviewers": {
     "Fermi": {
       "concur": true,
-      "receipt": "docs/joseph-research-reviews/narrative-fermi.json",
-      "receipt_sha256": "cff9411b9deae61c511067a08581493948c91966e61268df45b7eb247a0c475a"
+      "receipt": "docs/joseph-research-reviews/narrative-fermi-alt-cleanup.json",
+      "receipt_sha256": "083eac9e81d23d7908bc237bb63d4e9694edcf5e3de59b61409e0cfc60bb7d8b"
     },
     "Newton": {
       "concur": true,
-      "receipt": "docs/joseph-research-reviews/narrative-newton.json",
-      "receipt_sha256": "d08dd3d61725cab26955a41910c8cb838a3ca856f08bb775f0776044d41712b6"
+      "receipt": "docs/joseph-research-reviews/narrative-newton-alt-cleanup.json",
+      "receipt_sha256": "9babf62803cce0df0c1c94fb84deabc70c78bfa8bfd2778bdc22aeb549023fb6"
     }
   }
 }

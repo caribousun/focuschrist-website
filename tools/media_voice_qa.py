@@ -44,6 +44,7 @@ DISTANT_MEDIA_PATTERNS = (
 # Narrow caption-production constructions, not a ban on uncertainty or on words
 # like "historical", "imagined" or "records" in ordinary teaching prose.
 PRODUCTION_NOTE_PATTERNS = (
+    r"\b(?:this|the) (?:room|setting|scene|composition) imagines?\b",
     r"\b(?:this|the|original) artwork illustrates\b[^.!?]{0,140}\bdoes not portray a particular person\b",
     r"\b(?:this|the|an?) (?:imagined|interpretive|devotional|symbolic)(?: (?:devotional|symbolic))? (?:scene|encounter|moment|portrayal|setting|composition|gathering|community)\b",
     r"\bthis devotional interpretation (?:looks to|invites|depicts|portrays)\b",
@@ -53,6 +54,7 @@ PRODUCTION_NOTE_PATTERNS = (
 )
 
 ALT_PRODUCTION_PATTERNS = (
+    r"\bin a new illustration using our adopted (?:[\w'-]+ )?likeness\b",
     r"^\s*(?:an? )?(?:artistic|devotional) interpretation of\b",
 )
 
@@ -76,7 +78,7 @@ class MediaVoiceParser(HTMLParser):
 
     def _inside_resource_card(self) -> bool:
         return any(
-            frame["tag"] == "article" and "fc-resource-card" in frame["classes"]
+            frame["tag"] == "article" and bool({"fc-resource-card", "pioneer-music-card"}.intersection(frame["classes"]))
             for frame in self.stack
         )
 

@@ -1,0 +1,44 @@
+{
+  "reviewer": "Fermi",
+  "concur": true,
+  "scope": "Three inspected-image alt replacements only; exact byte transformation preserves entire narrative, historical qualifications, source links, figure structure, image bytes, footer and all164 semantic coverage records. No historical-source rereview or PDF rerender claimed.",
+  "baseline_sha256": "23724949768c40951657d0a6233cf9e281930047fa9c03d5449d7fbe4bd0343b",
+  "manuscript_sha256": "d926cf4c615e4dd8d6a69af323fba3d8e4f5deecde44ea52a81177ccf1afc36f",
+  "coverage_records_sha256": "8dd8ec71ad5554cc9964f434c9370d479fcbfc59126e576dcec5b638ef888b48",
+  "prior_receipt": {
+    "concur": true,
+    "receipt": "docs/joseph-research-reviews/narrative-fermi.json",
+    "receipt_sha256": "cff9411b9deae61c511067a08581493948c91966e61268df45b7eb247a0c475a"
+  },
+  "preservation": [
+    {
+      "file": "joseph-smith-portrait-research.html",
+      "only_exact_alt_replacements": true,
+      "count": 3,
+      "before_sha256": "b005690c9754fce2737bcdd14eb2a6cb3e8450805d1444f1da2c2e198e578655",
+      "after_sha256": "94485808da246618eeeb2882a97c6160972704ce27180cb4e140b7e5f4d09efb"
+    },
+    {
+      "file": "docs/joseph-research-manuscript.html.inc",
+      "only_exact_alt_replacements": true,
+      "count": 3,
+      "before_sha256": "996c540f5dece27ca02fa5cea4de6b0d0b20174f8f3a4c98baf53f120acb4665",
+      "after_sha256": "d926cf4c615e4dd8d6a69af323fba3d8e4f5deecde44ea52a81177ccf1afc36f"
+    },
+    {
+      "file": "docs/joseph-research-visuals.json",
+      "only_exact_alt_replacements": true,
+      "count": 1,
+      "before_sha256": "2d9b61ee753a505c0be529c7d6f1fa2f1f47de4669fd399ff71a6e4c26cf1029",
+      "after_sha256": "03c2b29fcc340047e4d64689aca9a86b052d268b383565ad979b863c5284b85c"
+    },
+    {
+      "file": "docs/joseph-research-feature-studies.json",
+      "only_exact_alt_replacements": true,
+      "count": 2,
+      "before_sha256": "bd0d31ed425f8c438f16aaddbd4dac7a44d98b72f5fd2a0d38dbf945aa119cf4",
+      "after_sha256": "653eecdd73c24b32bc3174d587a716c3763d0de82b62f911a7035280b3854422"
+    }
+  ],
+  "mandates": "Current Master protected foundation,Focus,AGENTS and enrichment reviewed; only exact owner-prohibited process-alt wording removed, useful descriptions verified against actual3image pixels."
+}
