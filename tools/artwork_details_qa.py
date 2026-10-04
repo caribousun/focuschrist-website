@@ -299,7 +299,7 @@ def main() -> int:
         if relative in TIMELINE_STUDY_HEROES:
             timeline_references.add(relative)
             errors.extend(timeline_study_hero_errors(relative, page))
-            hero_pages -= 1  # These exact study links retain the 42 local-modal hero contracts.
+            hero_pages -= 1  # These exact study links retain the 41 local-modal hero contracts.
             continue
         prefix = "../" * (len(path.relative_to(ROOT).parts) - 1)
         if 'fc-hero-fullscreen' in page:
@@ -354,8 +354,12 @@ def main() -> int:
         assert timeline_study_hero_errors(relative, page.replace(href, href.split("#")[0], 1)), "Missing study fragment must fail"
         assert timeline_study_hero_errors(relative, page.replace(src, "../assets/heroes/home.webp", 1)), "Wrong artwork must fail"
         assert timeline_study_hero_errors(relative, page.replace('class="fc-visual-hero', 'data-hero-viewer class="fc-visual-hero', 1)), "Modal interception must fail"
-    if hero_pages != 42:
-        errors.append(f"expected42 image-first pages including404, Evidences, Joseph likeness, Atonement, Birth of Christ, Holy Ghost and Timeline, found{hero_pages}")
+    # The former Joseph illustrated page is now a text-only two-journey gateway.
+    # Retain positive gateway/legacy-destination checks rather than skipping the route.
+    from joseph_smith_likeness_qa import check as check_joseph_gateway
+    errors.extend(check_joseph_gateway())
+    if hero_pages != 41:
+        errors.append(f"expected41 image-first pages plus the separately checked compact Joseph gateway, found{hero_pages}")
 
     full_assets: list[str] = []
     for relative in (*PAGES, "missionary.html"):

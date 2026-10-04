@@ -111,7 +111,12 @@ def build():
         image_src=esc('../'+delivered['default'])
         srcset=esc(', '.join('../'+v['asset']+' '+str(v['width'])+'w' for v in delivered['variants']))
         out.append(f'<article id="{sid}" class="joseph-life-scene"><p class="fc-eyebrow">{esc(s["date_label"])}</p><h3>{title}</h3>')
-        out.extend('<p>'+esc(p)+'</p>' for p in s['paragraphs'])
+        for paragraph in s['paragraphs']:
+            paragraph_html=esc(paragraph)
+            if s['id']=='hyrum-reading-before-carthage-1844':
+                paragraph_html=paragraph_html.replace('Doctrine and Covenants 135','<a class="fc-inline-scripture" target="_blank" rel="noopener noreferrer" href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/135?lang=eng">Doctrine and Covenants 135</a>')
+                paragraph_html=paragraph_html.replace('Ether 12','<a class="fc-inline-scripture" target="_blank" rel="noopener noreferrer" href="https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/12?lang=eng">Ether 12</a>')
+            out.append('<p>'+paragraph_html+'</p>')
         out.append(f'<figure class="fc-study-visual likeness-art" data-enriched-study-art="{art_id}" data-exclusive-artwork="{art_id}"><a href="{src}" aria-haspopup="dialog" aria-label="Explore artwork: {title}" data-full-image-alt="{alt}" data-topic-study="who-was-joseph-smith.html#{sid}" data-topic-study-label="Return to this family study"><img src="{image_src}" data-source-original="{src}" srcset="{srcset}" sizes="(max-width: 600px) 94vw, 100vw" width="{im["width"]}" height="{im["height"]}" alt="{alt}" loading="lazy" decoding="async"></a><figcaption><h4 class="joseph-life-caption-title" hidden>{title}</h4><p>{esc(s["visitor_caption"])}</p>{sources(s)}</figcaption></figure>')
         out.append('<p class="joseph-life-reflection"><strong>Consider:</strong> '+esc(s['reflection'])+'</p></article>')
     c=data['closing'];out.append('<section id="life-remembrance" class="joseph-life-closing"><h3>'+esc(c['heading'])+'</h3>')

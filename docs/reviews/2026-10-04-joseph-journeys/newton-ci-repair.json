@@ -1,0 +1,20 @@
+{
+  "reviewer": "Newton",
+  "concur": true,
+  "scope": "PR440 downstream compact-gateway QA migration and two explicit official scripture links.",
+  "ledger_changed_routes": [
+    "answers/who-was-joseph-smith.html",
+    "joseph-smith-likeness.html",
+    "joseph-smith-portrait-research.html"
+  ],
+  "who_sha256": "f2b7310ca01f67e7beb14c9c2f6b95562399d0a1065b618ba32c4d9e8ea4dd3a",
+  "visible_text_identical_to_candidate": true,
+  "checks": "Original14 consumer batch found5 failures; Gary fixed2opening, thumbnail and scripture, Newton fixed exacthero-count. All5 rerun PASS; remaining9 alreadyPASS.",
+  "positive_preservation": [
+    "Only gateway removed from image-first set with explicit two-destination/nohero/legacy checks.",
+    "Mask actual source/copyright URL and hash/dim retained on research; WHOtwoofficialcards retained.",
+    "D&C135 and Ether12 now standard reader links, same visible wording.",
+    "Other131 ledger records unchanged; source evidence bound to current Joseph review receipts."
+  ],
+  "render_limit": "No new picture or layout change; prior actual rendering remains applicable. New anchors require live interaction in final release check."
+}

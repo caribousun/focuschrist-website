@@ -1,0 +1,26 @@
+{
+  "scope": "PR440 compactgateway classification and migratedthumbnail contract; existing scripture words linked after actualtopicQA failure",
+  "files": {
+    "tools/unified_experience_qa.py": "093e99bf6bcfcac962e954fc8d580b8ada3cbfc9acb4fc7cd8ff393c8cef1a61",
+    "tools/unified_opening_qa.py": "25277736dba5e58c224e4c7168e6d05a8472d6b7ba2e19b1a9424b66fb292b29",
+    "tools/opening_flow_and_cards_qa.js": "e7e7dcf6fa435bdee071aecddb952b76eb0cc33d5339493a5676c6ffa445458a",
+    "docs/unified-opening-inventory.json": "d118c8a70e9ef9c2ab14b30d212a3030ad1ee90b24075cec5d73bd2032adfefc",
+    "tools/resource_thumbnail_qa.py": "32c5d893b31bfd7f305b054e0c7f1c08d803730ca771fb9a3da24fe892edbcc7",
+    "docs/resource-page-coverage.json": "3f9b6d7d36eda6d4f60921d6142ba321c239c22560285c0b67277184e7163518",
+    "tools/build_joseph_life_enrichment.py": "1576574a85b67638b2256feb17f4f2aad53594021c6db59282581b4e5a455287",
+    "answers/who-was-joseph-smith.html": "f2b7310ca01f67e7beb14c9c2f6b95562399d0a1065b618ba32c4d9e8ea4dd3a"
+  },
+  "terminal_pass": [
+    "unified_experience_qa.py",
+    "unified_opening_qa.py",
+    "unified_opening_runtime_qa.js",
+    "opening_flow_and_cards_qa.js",
+    "resource_thumbnail_qa.py",
+    "topic_study_pages_qa.py",
+    "artwork_details_qa.py",
+    "build_art_gallery.py --check",
+    "build_site_search.py --check",
+    "git diff --check"
+  ],
+  "peer_artwork_details_review": "Concur: exactly one removed gateway modal hero, remaining41 preserved, full positive gateway check added."
+}

@@ -13,8 +13,9 @@ assert len(inventory['pages']) == len({p['path'] for p in inventory['pages']}) =
 assert set(pages) == {p['path'] for p in inventory['pages']}
 assert sum(bool(p['hero']) for p in inventory['pages']) == inventory['hero_count']
 assert sum(not p['hero'] for p in inventory['pages']) == inventory['excluded_count']
-assert inventory['hero_count'] == 50 and inventory['excluded_count'] == 80
+assert inventory['hero_count'] == 49 and inventory['excluded_count'] == 81
 assert next(p for p in inventory['pages'] if p['path'] == 'joseph-smith-portrait-research.html')['hero'] is False, 'Research opening is text-led; no hero may be invented'
+assert next(p for p in inventory['pages'] if p['path'] == 'joseph-smith-likeness.html')['hero'] is False, 'Compact Joseph gateway has no image hero'
 for record in inventory['pages']:
     doc = BeautifulSoup((ROOT / record['path']).read_text(encoding='utf8'), 'html.parser')
     actual = bool(doc.select_one('.fc-visual-hero,[data-covenant-hero-slot],.cfm-desktop-picture,.gc-intro-visual'))
@@ -28,4 +29,4 @@ script = (ROOT / 'unified-opening.js').read_text(encoding='utf8')
 assert '\\u2193' in script and 'Ãƒ' not in script, 'Continue arrow encoding'
 assert "opening.matches('.jj-opening') ? []" in script, 'Covenant invitation must remain in opening'
 assert 'getBoundingClientRect().bottom + scrollY' in script, 'Fit must use document coordinates'
-print('UNIFIED OPENING STATIC PASS: 130 canonical routes, 50 illustrated openings, 80 explicit exclusions, current shared versions and protected Covenant invitation')
+print('UNIFIED OPENING STATIC PASS: 130 canonical routes, 49 illustrated openings, 81 explicit exclusions, current shared versions and protected Covenant invitation')

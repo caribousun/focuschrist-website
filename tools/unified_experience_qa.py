@@ -20,7 +20,8 @@ PUBLIC_PAGES = ROOT_PAGES + NESTED_PAGES
 # The standalone conference page follows the owner-requested CFM opening layout;
 # its hero and navigation are covered by general_conference_qa.py.
 SOURCE_STUDY = "answers/race-priesthood-and-temple-blessings.html"
-IMAGE_FIRST_PAGES = [p for p in PUBLIC_PAGES if p not in {"404.html", "general-conference.html", "search.html", SOURCE_STUDY}]
+COMPACT_GATEWAY = "joseph-smith-likeness.html"
+IMAGE_FIRST_PAGES = [p for p in PUBLIC_PAGES if p not in {"404.html", "general-conference.html", "search.html", SOURCE_STUDY, COMPACT_GATEWAY}]
 
 
 class VisibleTextParser(HTMLParser):
@@ -292,6 +293,24 @@ def main() -> int:
         rendered = visible_text(text)
         if re.search(r"\bFocusChrist\b|\bFocuschrist\b|\bFOCUSCHRIST\b", rendered):
             fail(errors, f"{relative}: public brand casing drift detected; use focusChrist")
+
+    # This exact former study now links to two complete, separately owned journeys.
+    from bs4 import BeautifulSoup
+    gateway = BeautifulSoup((ROOT / COMPACT_GATEWAY).read_text(encoding="utf-8"), "html.parser")
+    intro = gateway.select('.joseph-bridge-intro')
+    links = gateway.select('#joseph-study-entrance .fc-button--primary')
+    if len(intro) != 1 or intro[0].find('h1').get_text(strip=True) != 'Explore his life and the portrait':
+        fail(errors, 'Joseph gateway: one concise authored opening required')
+    if gateway.select('.fc-visual-hero, .fc-page-intro, .fc-topic-opening, .fc-mobile-scroll-cue'):
+        fail(errors, 'Joseph gateway: legacy image/mobile hero must not return')
+    if len(links) != 2 or {link.get('href') for link in links} != {'answers/who-was-joseph-smith.html#joseph-family-life', 'joseph-smith-portrait-research.html'}:
+        fail(errors, 'Joseph gateway: exact life and portrait destinations required')
+    if not gateway.select_one('nav[data-focuschrist-header="standard"]') or not gateway.select_one('footer[data-focuschrist-footer="standard"]'):
+        fail(errors, 'Joseph gateway: shared navigation and footer required')
+    if len(gateway.select('main img, main figure')) or len(gateway.select_one('main').get_text(' ', strip=True).split()) > 500:
+        fail(errors, 'Joseph gateway: concise text-only bridge required')
+    from joseph_smith_likeness_qa import check as check_gateway
+    errors.extend(check_gateway())  # Exact legacy routes, native destinations, protected moved assets.
 
     for relative in IMAGE_FIRST_PAGES:
         if relative == covenant_page:
