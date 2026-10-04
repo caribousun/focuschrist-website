@@ -161,7 +161,7 @@ SCOPED_INTERFACE_STYLES = {
     'joseph-family-life.css': ('af4eac66d90a94a370010dae71cd4e0d2430fd07a049ce0ce7d253454c249a2f', 'answers/who-was-joseph-smith.html'),
     # Owner-requested Joseph research reading panels, independently reviewed on
     # desktop/phone. Exact bytes and two Joseph page owners; no hero-rule exemption.
-    'joseph-smith-research.css': ('bc3cf1e7f24c047c0c1454c2c62a9b104031618418da884ecde698ab115b0add', 'joseph-smith-likeness.html'),
+    'joseph-smith-research.css': ('8b891efdc90ad0155fc1df8e157cc92ab56c6cbf67d19d001e128250904a9923', 'joseph-smith-likeness.html'),
     # Newton source-reviewed hub-only CSS; hosted geometry and owner acceptance remain separate.
     'timeline.css': ('5aefac78e15d324cb4f5a9b44c5f0a1bdb26d951f4e7b5078569be67103048d1', 'timeline.html'),
     # Owner-directed Church-source history, independently reviewed 2026-09-30.
@@ -561,7 +561,7 @@ def main():
         if name == 'unified-opening.css':
             common = (ROOT/'site-common.js').read_text(encoding='utf-8')
             check(common.count("relativeAssetHref('unified-opening.css?v=20260930-alignment-2')") == 1, 'Unified opening CSS requires its exact shared loader/version')
-            check(common.count("relativeAssetHref('unified-opening.js?v=20260930-1')") == 1, 'Unified opening JS requires its exact shared loader/version')
+            check(common.count("relativeAssetHref('unified-opening.js?v=20261004-joseph-openings-1')") == 1, 'Unified opening JS requires its exact shared loader/version')
         if name == 'footer-navigation.css':
             common = (ROOT/'site-common.js').read_text(encoding='utf-8')
             check(common.count("style.href = relativeAssetHref('footer-navigation.css?v=20260929-top-1');") == 1, 'Footer CSS requires its exact shared dynamic loader and version')

@@ -22,7 +22,7 @@ fs.mkdirSync(out, { recursive: true });
     const context = await browser.newContext({ viewport:{ width:1440, height:1000 }, deviceScaleFactor:1 });
     await context.route('https://**', route => route.abort()); // Remote film/font checks are separate; original hero pixels are local.
     const inventory = JSON.parse(fs.readFileSync(path.join(root, 'docs/hero-home-height-audit-20260929.json'), 'utf8'));
-    assert.equal(inventory.pages.length, 124, 'Every canonical route must be classified');
+    assert.equal(inventory.pages.length, 125, 'Historical route set plus Joseph research is classified');
     const page = await context.newPage();
     const base = `http://127.0.0.1:${server.address().port}`;
     await page.goto(`${base}/index.html`, {waitUntil:'domcontentloaded'});
@@ -31,10 +31,11 @@ fs.mkdirSync(out, { recursive: true });
       await page.goto(`${base}/${record.page}`, {waitUntil:'domcontentloaded'});
       await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
       if(record.page==='joseph-smith-likeness.html'){
-        assert.equal(record.selector,null,'Compact gateway is explicitly classified without a hero');
+        assert.equal(record.selector,'.fc-visual-hero','Joseph gateway reviewed hero is explicitly classified');
         assert.equal(await page.locator('.joseph-bridge-intro h1').textContent(),'Explore his life and the portrait');
         assert.deepEqual(await page.locator('#joseph-study-entrance .fc-button--primary').evaluateAll(nodes=>nodes.map(n=>n.getAttribute('href'))),['answers/who-was-joseph-smith.html#joseph-family-life','joseph-smith-portrait-research.html']);
-        assert.equal(await page.locator('main img,.fc-visual-hero,.fc-unified-continue').count(),0);
+        assert.equal(await page.locator('main img').count(),0);
+        assert.equal(await page.locator('.fc-visual-hero[data-hero-viewer]').count(),1);
       }
       if (!record.selector) {
         assert.equal(await page.locator('.fc-visual-hero').count(), 0, `${record.page}: new designated hero requires classification`);

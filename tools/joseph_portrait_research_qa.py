@@ -15,6 +15,9 @@ page=(ROOT/ROUTE).read_text(encoding='utf-8')
 assert not any(bad in page for bad in ('\ufffd', '\u00e2\u20ac\u2122', '\u00c3\u00a9')), 'Encoding corruption in research page'
 main_doc=BeautifulSoup(main_page,'html.parser')
 doc=BeautifulSoup(page,'html.parser')
+from joseph_hero_contract import check_hero,check_grouping
+check_hero(ROUTE,doc)
+check_grouping(doc)
 check_artwork_badges_and_footer(main_doc)
 check_artwork_badges_and_footer(doc)
 root=doc.select_one('#portrait-research')

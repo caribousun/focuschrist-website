@@ -9,6 +9,7 @@ import argparse
 import hashlib
 import json
 import re
+from joseph_hero_openings import hero_markup
 
 ROOT = Path(__file__).resolve().parents[1]
 MANUSCRIPT = ROOT / 'docs/joseph-research-manuscript.html.inc'
@@ -26,6 +27,9 @@ def build(check=False):
     if ids != expected:
         raise ValueError('Research narrative section order differs from reviewed reading journey')
     result = MAIN.sub(lambda _: manuscript, page, count=1)
+    result = re.sub(r'<!-- BEGIN JOSEPH RESEARCH HERO -->[\s\S]*?<!-- END JOSEPH RESEARCH HERO -->\s*', '', result)
+    leading = '<!-- BEGIN JOSEPH RESEARCH HERO -->' + hero_markup('research') + '<!-- END JOSEPH RESEARCH HERO -->\n'
+    result = result.replace('<main', leading+'<main', 1)
     if check:
         if result != page:
             raise SystemExit('Research page is stale; rebuild from the canonical manuscript')

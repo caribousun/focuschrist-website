@@ -3,7 +3,7 @@
   function init() {
     const hero = document.querySelector('.fc-visual-hero,[data-covenant-hero-slot],.cfm-desktop-picture,.gc-intro-visual');
     if (!hero) return;
-    const opening = document.querySelector('.fc-life-opening,.jj-opening,.fc-topic-opening .fc-page-intro,.fc-page-intro,.cfm-hero__copy,.gc-page-opening > div');
+    const opening = document.querySelector('.fc-life-opening,.jj-opening,.fc-topic-opening .fc-page-intro,.fc-page-intro,.cfm-hero__copy,.gc-page-opening > div,.joseph-bridge-intro,.research-opening');
     if (!opening || opening.hasAttribute('data-unified-opening')) return;
     opening.setAttribute('data-unified-opening', '');
     const briefDescriptions = {
@@ -52,7 +52,9 @@
     const mobile = matchMedia('(max-width:700px)');
     function destination() {
       const old = previous.find(el => mobile.matches ? el.matches('.fc-mobile-scroll-cue') : !el.matches('.fc-mobile-scroll-cue')) || previous[0];
-      let href = old && old.getAttribute('href');
+      const josephStarts = {'/joseph-smith-likeness.html':'#joseph-study-entrance','/joseph-smith-portrait-research.html':'#portrait-section-1'};
+      const explicitStart = josephStarts[location.pathname];
+      let href = explicitStart && document.getElementById(explicitStart.slice(1)) ? explicitStart : old && old.getAttribute('href');
       if (!href) {
         const action = opening.querySelector('a[href^="#"]:not(.fc-unified-continue)');
         href = action && action.getAttribute('href');
@@ -69,7 +71,7 @@
       }
       if (href) cue.setAttribute('href', href);
     }
-    const optional = opening.matches('.jj-opening') ? [] : [...opening.querySelectorAll('.fc-page-intro-copy,.fc-opening-explanation')].map(el => { const marker = document.createComment('Retained opening description'); el.before(marker); return {el,marker}; });
+    const optional = opening.matches('.jj-opening') ? [] : [...opening.querySelectorAll('.fc-page-intro-copy,.fc-opening-explanation,.joseph-bridge-intro > p:last-of-type,.research-opening > p:last-of-type')].map(el => { const marker = document.createComment('Retained opening description'); el.before(marker); return {el,marker}; });
     let queued = false;
     function measure() {
       queued = false;

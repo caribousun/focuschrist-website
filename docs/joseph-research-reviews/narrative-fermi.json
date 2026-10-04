@@ -3,7 +3,7 @@
   "scope": "Independent semantic review of 164 original evidence scalars, exact revised mapping and ten bounded cadence exceptions; not final rendered approval",
   "concur": true,
   "rendered_concur": false,
-  "manuscript_sha256": "da0cc9f2c57a9d4bb19c392f0cb6193bff05da89853a3ff798ec7daca1416edd",
+  "manuscript_sha256": "996c540f5dece27ca02fa5cea4de6b0d0b20174f8f3a4c98baf53f120acb4665",
   "mapping_sha256": "90a6f1b5820176afdfd1c6ed9598867bd8a17230af8e1821116620a043b70b88",
   "findings": [
     "Earlier false target mappings corrected by Gary. Historical claims and material uncertainty preserved through actual narrative targets.",
@@ -11,11 +11,12 @@
     "Gazette letter date April26 and issue May18 correctly distinct;1916 transmission and uninspected original issue explicit. Haven1843 letter and1890 publication distinct.",
     "Missing complete original generation prompt and measurement record acknowledged without inventing intermediate steps. Later evidence not recast as original input.",
     "All16 feature subjects retained. Full original directive wording need not survive in visitor prose.",
-    "Ten no-image slots are genuinely short source orientation, synthesis or future questions; unrelated filler would not help. Section5-2 exception reason should say concise passage, as actual copy has one paragraph, not two."
+    "Ten no-image slots are genuinely short source orientation, synthesis or future questions; unrelated filler would not help. Section5-2 exception reason should say concise passage, as actual copy has one paragraph, not two.",
+    "2026-10-04 M010: profile sitting and frontal painted likeness now own coherent separate reading units; no historical claim or source text changed."
   ],
   "boundary": "Exact semantic review only. Final browser/PDF rendering and unchanged source/citation mechanics need separate verification.",
   "baseline_sha256": "23724949768c40951657d0a6233cf9e281930047fa9c03d5449d7fbe4bd0343b",
-  "coverage_records_sha256": "edd67cdcfde56e9b0dee0fa310dfccadd8a4ea3b2a8a1688ab88978afa4c9e26",
-  "renewal": "Independently removed sole search metadata attribute and sole newly added BYU anchor target/rel pair in memory; recovered exact07ab5c95df16f487d66e3c719d3d99ca8bfe698c89cd2c48ea89703b6f85c334 bytes. Rename and attributes alter no visitor text or source URI. Semantic concurrence renewed.",
+  "coverage_records_sha256": "8dd8ec71ad5554cc9964f434c9370d479fcbfc59126e576dcec5b638ef888b48",
+  "renewal": "Fermi independently verified current M010 grouping: all text leaves, all81exactfiguremarkups and allsourcehrefs equal HEAD multisets. Only2coverage targets changed; Maudsley paragraph remains in4-2 and Rogers paragraph now in4-3, each with its corresponding heading and illustration. Every164coverage entry resolves to actual preserved excerpt. Current source grouping is semantically sound; final renderedcandidate separate.",
   "manuscript_path": "docs/joseph-research-manuscript.html.inc"
 }

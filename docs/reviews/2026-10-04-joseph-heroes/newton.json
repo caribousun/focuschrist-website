@@ -1,0 +1,153 @@
+{
+  "reviewer": "Newton",
+  "status": "CONCUR_JOSEPH_CANDIDATE_SCOPED",
+  "verified_utc": "2026-10-04T13:59:21.111174+00:00",
+  "base": "f088e524c3df480d662ff0cb11e0d8feaf1a9fda",
+  "release_files_sha256": {
+    "answers/who-was-joseph-smith.html": "fc9e19a88223dc254383a19de92c23ba36280b940e9557fb5a50149515732f9d",
+    "art-gallery.json": "45b46536d1bd22636b482340e0cbd0a822c25fde90249d79684ae22940e0c6c7",
+    "assets/heroes/joseph-gateway-20261004-1280.webp": "d2432aba20e0bba0e04005552d19237bca6d24ea7ac0a9dd5e616586a5a90e78",
+    "assets/heroes/joseph-gateway-20261004-1920.webp": "8963f32c7ceac296d7486afc46e6be78736b0150b1d99dcbaad50427b7a6d7b0",
+    "assets/heroes/joseph-gateway-20261004-640.webp": "27f52468fe4e1e1b7b134ef0f983bb951c93c8bfc430f6c7f4a65e441716773e",
+    "assets/heroes/joseph-gateway-20261004.png": "064817c39cdd0b59782a2b5d70d2250798c786a08022115534f9fabb62b7b059",
+    "assets/heroes/joseph-research-20261004-1280.webp": "fddcc970f974ca768f311dc4ff6f7b0ca5df84600c54d7cd2881c8ea2ba5c575",
+    "assets/heroes/joseph-research-20261004-1920.webp": "e3d8f9fe7717e0d85950e4e0f8480d5091c9954c424ef3c231b4b6ab77253047",
+    "assets/heroes/joseph-research-20261004-640.webp": "08446cb53a1268b434495f36c369be7af724f03109f0fa8318ca001c1238a79a",
+    "assets/heroes/joseph-research-20261004.png": "a0843f406e0b8d991739d8e3a80922bcdd42042a352642f24729dc55aa52573a",
+    "assets/research/focuschrist-joseph-evidence.pdf": "109bacb657025cd2f4dcc98b29ca98e97afb97bc8b1b15d5d5a1d460006b2946",
+    "docs/answer-opening-baseline.json": "da4bd6b4c4a0612bd2f36785a084ae36d9daf692d4f6afa6f7482993a74f2b1a",
+    "docs/hero-home-height-audit-20260929.json": "47fe29038dffda7bba457859aec7a810f6d0efa1968ba25ad684ae74ab0ec4b9",
+    "docs/illustrated-study-navigation-review-20260929.json": "3c3666e4e1d82d67defb95c4c59e199075ca96588634facf41f6f0087e90c5f3",
+    "docs/joseph-hero-openings.json": "9bf042199a1b2f94749aa9b7ce00b238cc8ee77b9f59020393057d39c51a12fe",
+    "docs/joseph-portrait-research-art-review.json": "e59dd88ce40ecf607e0a4253811cecdd5a6b1c2e97f64cae819267379c14f15e",
+    "docs/joseph-research-manuscript.html.inc": "996c540f5dece27ca02fa5cea4de6b0d0b20174f8f3a4c98baf53f120acb4665",
+    "docs/joseph-research-narrative-coverage.json": "6f3b93b95d7a2aa9b6297e6e56743e46545d26aa893cdd4d881d39a477890cad",
+    "docs/joseph-research-pdf-build.json": "08ce0d1aac6855bf4f7ff7ea8e36aa722f17302be44b3c27819ed562d2e42697",
+    "docs/joseph-research-pdf-review.json": "02b235668e329f9d68384df10eced79becda3bde56c1b302548533e2087040a5",
+    "docs/joseph-research-reviews/narrative-fermi.json": "cff9411b9deae61c511067a08581493948c91966e61268df45b7eb247a0c475a",
+    "docs/joseph-research-reviews/narrative-newton.json": "d08dd3d61725cab26955a41910c8cb838a3ca856f08bb775f0776044d41712b6",
+    "docs/joseph-topical-fit-review.json": "65f49243518daccf431ef5e0bec6253ff22de89967ddb482976b9074c0759930",
+    "docs/reviews/2026-10-04-joseph-heroes-pdf/albert.json": "cc9748c1ff5625d87106f88927dcd9389cf8d89971bdf78283c1a5aa3094ca8b",
+    "docs/reviews/2026-10-04-joseph-heroes-pdf/fermi.json": "4c99f4f7a035a3e2e52831102b88caa4fba440f132f72cbb7920ac3073c61b7f",
+    "docs/reviews/2026-10-04-joseph-heroes-pdf/final-source-qa.json": "18e18a3fa8390d15358662037f687f2768aa576f48d94159e93e4c23da09c96a",
+    "docs/reviews/2026-10-04-joseph-heroes-pdf/newton.json": "74d99de2d597d148b29485fd789de01bb5e139e522bec9481ca113d94533037c",
+    "docs/unified-opening-inventory.json": "1e2a014c1a3b7fb3995855abaa4587441c95efdef640801d7bf49ee3d3239b78",
+    "hero-details.js": "3a57384da7931f41b9fcb9d9f7e09be964045779222ca2ab8e99c4d5f6d524df",
+    "joseph-smith-likeness.css": "f0d485eafec25578228e1f69222c6ecc04b06ae5a4de33be50489c819b53c6a9",
+    "joseph-smith-likeness.html": "c244ee2026e72a6e61dfa8ff4b5abf79a5125d3a5095b80034f5e2be70b6c1a1",
+    "joseph-smith-portrait-research.html": "b005690c9754fce2737bcdd14eb2a6cb3e8450805d1444f1da2c2e198e578655",
+    "joseph-smith-research.css": "8b891efdc90ad0155fc1df8e157cc92ab56c6cbf67d19d001e128250904a9923",
+    "site-common.js": "17b5f3e316970de6d545e190caa00ee22034797b6ce790253cc3e392cdf51654",
+    "site-search-index.json": "c1eed22713d6c1012099da7da3e39fa57a21b54cb5873223b0417c337ca5521c",
+    "tools/anchor_alignment_qa.py": "0f844c8236e79b5eb275ca4647b86773e8c56f8122b3f27148c8833b8f9f1f6f",
+    "tools/artwork_details_qa.py": "69db54f4199414815d3399bfe17bed032ac4a6453a0aed855c4c655e1a4d4cc2",
+    "tools/build_joseph_life_enrichment.py": "3221483d1ee9c9f250c035d5b9ce891e2f7b5b03dd7592c0f9e51d78d05a9ad7",
+    "tools/build_joseph_portrait_research.py": "beee2a56f6adb5ced979aa33e822d57ce9150b1c0b2018964cb911619a6b4017",
+    "tools/build_joseph_research_pdf.py": "e13a3dc2e19a237c6937ac477acb391833ce0cf621da39aa372873d8e9612769",
+    "tools/focused_answers_qa.py": "f1fb3ac391b90b093e147ff7f900ea0c509c9abbb96447f6e231b14844ceb77d",
+    "tools/hero_details_runtime_qa.js": "4b332232910d7faecf0f4bda6640f50da586bc13d43b764242078a08c652d22e",
+    "tools/home_hero_height_browser_qa.js": "e069b9893f164474821fbac60e634cdfe98a3e7b596061fa4706638f7795fb55",
+    "tools/home_hero_height_qa.py": "bea0207476305ea74d4127bcb86913da2d5d3c9cf1b5a63c7092641381c5a401",
+    "tools/illustrated_study_navigation_qa.py": "c5e6fe1d98eb4a146346ba6cbaeec35938e35c2a536bfeeeb1fca5de26c27eaf",
+    "tools/joseph_hero_contract.py": "6a7012dc0e1a488dd6644bedf04503bc37b73c343f35636b41a1221387e0cb0e",
+    "tools/joseph_hero_openings.py": "0088fb7fc496210a06966edd0560d48412f148f75d3f82baad49f3623b9fb4a9",
+    "tools/joseph_life_enrichment_qa.py": "867c73ccb4a186a0fd77f00433bd117d7e8ae5b40f62005d58a9f39adeba1628",
+    "tools/joseph_portrait_research_qa.py": "1c4131cff4322c2a9b6ed3de9c8032e8afb397266adfab609a1d3b7e552c7f36",
+    "tools/joseph_smith_likeness_qa.py": "1b1a4b4f35d716667deb351297f9b332525b3d87dbfe255e648aeb7a6649f1f8",
+    "tools/opening_flow_and_cards_qa.js": "b389c9b3b81d3b80719afd7aeb07c30cc90c2768c24e55fa4651bede7ba2fbc0",
+    "tools/sitewide_artwork_review_qa.py": "a07fc4b078ba411950a85cbf7aa0362cb10a766666abf3a79496ac0c5771c429",
+    "tools/unified_experience_qa.py": "6f6b970ae7824dec43a7412e17b33cf3b13cb10f7b8373baf7ca03b0fded5609",
+    "tools/unified_opening_browser_qa.js": "f0a2a65c4ec585e4c5e9d7af7ff03e02827dc6748fc4d76d0a50122aea1d4dc9",
+    "tools/unified_opening_qa.py": "f60fef682b49b7dd106f03a2fd92f5f28bc12a2d2f14b87d3b533cd90e95a269",
+    "tools/unified_opening_runtime_qa.js": "3f4d77ab7586beafed994a435c4bab5f8c8e9b59db4578bea9cb3aae91a8eb0a",
+    "unified-opening.js": "a3313dd5c5ae81110d23fab725d724143db1a49f89201d53e773f4840fc3d743"
+  },
+  "57_files_working_and_index_match_prior_review": true,
+  "fermi_receipt_sha256": "7b75faccea9ca79f2af61a8104fcbf8980a0b6b9c33209118f18eeaf52042e6f",
+  "fermi_manifest_equal": true,
+  "current_mandates_read": {
+    "AGENTS.md": "d00c5315d1588e57b4529379d41552e67db84202052a2c0a4eef69ec807a3710",
+    "docs/focuschrist-enrichment-and-stewardship-prompt.md": "8f413b19ab94093c1f4a489bddb7829468d77b335b79be017f71e6db31e4f311",
+    "docs/historical-character-identity.md": "69f0f51400ba102dfb5df9a9ec9fb6e738255dc496b84dc5dd684f3f5886c8c4",
+    "docs/section-panel-design-mandate.md": "26a8028ec7c7393d070e6f8006662861e1651643dbf925092b19d364ace797fc",
+    "docs/enriched-picture-owner-mandate.md": "c237fb14c7dd57f04d7d9ad063f3f0e93daf0a5c9844f9c3682407b4c80b363d"
+  },
+  "live_authority_read": {
+    "master": "1yN5fRSVUTpgIhdjmwXQ55MA6JbjPmCXb1qg3ppYzluo",
+    "00B": "1_MM3rZXC_PbHMQ3leUSweESrAxmC2Evc3dslVLLVlFI",
+    "Focus": "1QCEQ43UFyBivMbE8MwqTZ0e7WFdRuE_6ZQMlnGit5-g",
+    "00C": "1J320Pt-6s1LtiTsg1d7ovumqebQ2ahFloFY9nZEkPVA",
+    "00I": "1fyMkn0cYzyTOx_zQZzlGTGi64whx6_OT3EBoymLnCMA"
+  },
+  "mandate_concurrence": "Read current applicable mandates. Exact unchanged Joseph candidate follows applicable identity, source truth, disclosure/footer, natural prose, unique ownership, shared design, grouping and interaction requirements within the direct owner scope. Prior final Newton source/pixel/assembled/PDF reviews remain bound by exact hashes; no gratuitous rebuild or fresh claim of full-site compliance. Fermi final receipt independently inspected and consistent. Foundation untouched.",
+  "reused_evidence": {
+    "static": 88,
+    "browser_suites": 11,
+    "normal_opening_cases": 308,
+    "enlarged_opening_cases": 102,
+    "assembled_profiles": 8,
+    "pdf_rendered_pages": 47,
+    "pdf_sha256": "109bacb657025cd2f4dcc98b29ca98e97afb97bc8b1b15d5d5a1d460006b2946",
+    "source": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\continue-the-authorized-focuschrist-joseph-project\\work\\newton"
+  },
+  "timeline": {
+    "classification": "VERIFIED_BASELINE_DEFECT",
+    "method": "Unmodified pin-group suite run against exact baseline git-show HTTP bytes and working candidate separately with same browser and real Leaflet; simulated tiles. No source mutation.",
+    "cases": {
+      "baseline": {
+        "total": 12,
+        "passed": 11,
+        "failures": [
+          {
+            "kind": "handcart",
+            "width": 320,
+            "height": 900,
+            "scale": 2,
+            "error": "AssertionError [ERR_ASSERTION]: Full marker label remains inside badge with buffer: {\"canvas\":{\"left\":17,\"right\":303,\"top\":354.765625,\"bottom\":544.765625},\"label\":\"4stops\",\"badge\":{\"left\":-1843.7578125,\"right\":-1780.2421875,\"top\":936.96875,\"bottom\":1002.5625},\"texts\":[{\"text\":\"4\",\"left\":-1821.2109375,\"right\":-1802.8046875,\"top\":936.96875,\"bottom\":979.96875},{\"text\":\"stops\",\"left\":-1833.7578125,\"right\":-1790.2421875,\"top\":972.96875,\"bottom\":996.96875}]}"
+          }
+        ]
+      },
+      "candidate": {
+        "total": 12,
+        "passed": 11,
+        "failures": [
+          {
+            "kind": "handcart",
+            "width": 320,
+            "height": 900,
+            "scale": 2,
+            "error": "AssertionError [ERR_ASSERTION]: Full marker label remains inside badge with buffer: {\"canvas\":{\"left\":17,\"right\":303,\"top\":354.765625,\"bottom\":544.765625},\"label\":\"25stops\",\"badge\":{\"left\":-1694.7578125,\"right\":-1631.2421875,\"top\":896.96875,\"bottom\":962.5625},\"texts\":[{\"text\":\"25\",\"left\":-1681.4140625,\"right\":-1644.6015625,\"top\":896.96875,\"bottom\":939.96875},{\"text\":\"stops\",\"left\":-1684.7578125,\"right\":-1641.2421875,\"top\":932.96875,\"bottom\":956.96875}]}"
+          }
+        ]
+      }
+    },
+    "unchanged_inputs": [
+      {
+        "path": "timelines/willie-and-martin-handcart-map.html",
+        "unchanged_from_base": true
+      },
+      {
+        "path": "timeline-mobile-study.css",
+        "unchanged_from_base": true
+      },
+      {
+        "path": "tools/timeline_pin_group_browser_qa.js",
+        "unchanged_from_base": true
+      },
+      {
+        "path": "tools/timeline_marker_geometry_qa.js",
+        "unchanged_from_base": true
+      }
+    ],
+    "interpretation": "Both fail only handcart320x900 scale2 numeric glyph top equals badge top, lacking required1px buffer. Group label differs4 versus25 due camera/group timing; same geometry class. Candidate introduces no observed timeline regression in this bounded comparison.",
+    "remediation_recommendation": "Root should test narrow handcart badge line-height or padding adjustment; handcart16px/1 differs life16px/1.2. Retain1px assertion and all12cases; review visible phone/desktop marker pixels and collisions before fixing. No fix applied here."
+  },
+  "continuity_addition_concurrence": "Concur exact additive owner quote and before-compaction/slowing continuation wording supplied by Albert; preserve original paragraph and foundation, revision guard and fresh readback. No new authority.",
+  "remaining": [
+    "Exact final commit and CI",
+    "Deployment and ordinary public bytes",
+    "Actual live rendered interactions/PDF download",
+    "Root retains timeline defect for full-site sanity scope",
+    "Owner aesthetic acceptance separate"
+  ]
+}

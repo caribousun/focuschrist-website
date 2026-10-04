@@ -10326,6 +10326,28 @@
       ]
     },
     {
+      "title": "Joseph beside the river",
+      "category": "Church History",
+      "thumbnail": "/assets/heroes/joseph-gateway-20261004-1920.webp",
+      "fullImage": "/assets/heroes/joseph-gateway-20261004.png",
+      "alt": "Joseph Smith in a black civilian coat beside the river.",
+      "id": "art-ffb3024c9f25",
+      "occurrences": [
+        {
+          "id": "source-985dc948cc17",
+          "page": "/joseph-smith-likeness.html",
+          "pageTitle": "Explore his life and the portrait",
+          "category": "Church History",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"assets/heroes/joseph-gateway-20261004.png\"]",
+          "title": "Joseph beside the river"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
       "title": "Joseph during Quincy’s visit",
       "category": "Gospel Studies",
       "thumbnail": "/assets/research/joseph-originals/quincy-stubble-study-1536.webp",
@@ -12149,6 +12171,28 @@
           "kind": "topic",
           "selector": "a[href=\"assets/page-art/bom-evidences/visual-guides-20260923/critical-text-comparison.svg\"]:has(img[src=\"assets/page-art/bom-evidences/visual-guides-20260923/critical-text-comparison.svg\"])",
           "title": "Look closely at the witness"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Looking closely at Joseph",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/heroes/joseph-research-20261004-1920.webp",
+      "fullImage": "/assets/heroes/joseph-research-20261004.png",
+      "alt": "Joseph Smith in a three-quarter portrait with soft light across his face.",
+      "id": "art-86562fb87be0",
+      "occurrences": [
+        {
+          "id": "source-bf721267b3ab",
+          "page": "/joseph-smith-portrait-research.html",
+          "pageTitle": "In Search of Joseph’s Likeness",
+          "category": "Gospel Studies",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"assets/heroes/joseph-research-20261004.png\"]",
+          "title": "Looking closely at Joseph"
         }
       ],
       "categories": [
@@ -21017,11 +21061,11 @@
     }
   ],
   "stats": {
-    "artworks": 946,
-    "occurrences": 951,
+    "artworks": 948,
+    "occurrences": 953,
     "byKind": {
       "artwork": 63,
-      "hero": 40,
+      "hero": 42,
       "legacy": 39,
       "missionary": 13,
       "topic": 849

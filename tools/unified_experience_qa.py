@@ -301,8 +301,10 @@ def main() -> int:
     links = gateway.select('#joseph-study-entrance .fc-button--primary')
     if len(intro) != 1 or intro[0].find('h1').get_text(strip=True) != 'Explore his life and the portrait':
         fail(errors, 'Joseph gateway: one concise authored opening required')
-    if gateway.select('.fc-visual-hero, .fc-page-intro, .fc-topic-opening, .fc-mobile-scroll-cue'):
-        fail(errors, 'Joseph gateway: legacy image/mobile hero must not return')
+    if len(gateway.select('.fc-visual-hero[data-hero-viewer]')) != 1:
+        fail(errors, 'Joseph gateway: exactly one reviewed leading artwork required')
+    if gateway.select('.fc-page-intro, .fc-topic-opening, .fc-mobile-scroll-cue'):
+        fail(errors, 'Joseph gateway: obsolete duplicate intro/mobile cue must not return')
     if len(links) != 2 or {link.get('href') for link in links} != {'answers/who-was-joseph-smith.html#joseph-family-life', 'joseph-smith-portrait-research.html'}:
         fail(errors, 'Joseph gateway: exact life and portrait destinations required')
     if not gateway.select_one('nav[data-focuschrist-header="standard"]') or not gateway.select_one('footer[data-focuschrist-footer="standard"]'):

@@ -1,0 +1,253 @@
+{
+  "reviewer": "Albert",
+  "concur": true,
+  "pdf_sha256": "109bacb657025cd2f4dcc98b29ca98e97afb97bc8b1b15d5d5a1d460006b2946",
+  "pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47
+  ],
+  "visual_evidence": "All47pages rendered with PyMuPDF and reviewed in eight contact sheets; pages7and9 separately viewed at full render scale.",
+  "findings": [
+    "Website palette and repeatingnavigation retained",
+    "Profileandfront headings now share page with own image/caption/sources and narrative",
+    "No visible clipping/overlap/new orphanheading",
+    "Source QA424textblocks40URLs82images33bookmarks282headerbuttons passes"
+  ],
+  "failed_previous_pdf": "bee145c33f53ed4c0366b7e8f9c8aaabc59dab48af14cad777c463a9e63fd811 had orphanheadings6/8; rejected and fixed",
+  "rendered_pages": [
+    {
+      "page": 1,
+      "sha256": "b9cfb42794cf26f5f9c5e944dc025ae70816be60dda411446d1a87e50ba2b8b2"
+    },
+    {
+      "page": 2,
+      "sha256": "4c5ae1bb9cc766b651e80a059e9f49ec024f473a99ff97ca45ddf7542d841705"
+    },
+    {
+      "page": 3,
+      "sha256": "4329af1d7b3f19570e1db6d7707911678537ff94e20331419232009955bf153f"
+    },
+    {
+      "page": 4,
+      "sha256": "32bf8f0b32d76e39f3afbef42294497042c824fc5d8f87e91aa501cb8ab209af"
+    },
+    {
+      "page": 5,
+      "sha256": "fc4d1576a05660262a9f894b87a930ea0898774f668faf40c558764007b96f2d"
+    },
+    {
+      "page": 6,
+      "sha256": "896ccc973569535eb9675a6550449ae41f32faf7eba722b4af5284a0ecdcf68f"
+    },
+    {
+      "page": 7,
+      "sha256": "6f714d67e891df0648c09f85f6535dc2ad52ce845088f875d18661eb53524543"
+    },
+    {
+      "page": 8,
+      "sha256": "25607eff2275c3d5af8620d4d859a1a02f5786e19d12f5d7b9c5506107bae05f"
+    },
+    {
+      "page": 9,
+      "sha256": "64484fe011a779646bea284783c138fe759f4764d48b26e8915e1c203fad5787"
+    },
+    {
+      "page": 10,
+      "sha256": "2941f9d052edec190d16065c4c99e969004a5ff480c419e80ce21f36592874fc"
+    },
+    {
+      "page": 11,
+      "sha256": "b05c51ccd607830eb911519845a03c0b1526e2264b28e597fb085d8596723362"
+    },
+    {
+      "page": 12,
+      "sha256": "67509b4be4493d0d87c9309a56904c4c09279759b111f5e478c7b80188ef16e2"
+    },
+    {
+      "page": 13,
+      "sha256": "1a6fcb2c7ccf9f459f8154840845e55fa827e329ea02659095e26d976be8bb73"
+    },
+    {
+      "page": 14,
+      "sha256": "21fc7d8f315b9ffa6a63b1be16ef2de18e5182708973da93afa643adb058e438"
+    },
+    {
+      "page": 15,
+      "sha256": "bc2367fdf63d7293c63d6bdc361166d4e3ea39043456ea541cd0676ef6563e36"
+    },
+    {
+      "page": 16,
+      "sha256": "eb9f475c967eedb82b4d326143e2536151f8ae95b55bf9abbe715606b4c03a37"
+    },
+    {
+      "page": 17,
+      "sha256": "06a271d8cd1ec66aaf98a1fb8bc895d35c16828c27f2d951eb75b1a7ef317fe5"
+    },
+    {
+      "page": 18,
+      "sha256": "fe44b7c493cd04b9d1cfbe13608f7fd65bb6c4ee77dfa7c38f3d3461093b98c7"
+    },
+    {
+      "page": 19,
+      "sha256": "e72fb99022f84750b88758b8cd8922d5c0d5e60d83132f8e4c717a6a1ccd3fd9"
+    },
+    {
+      "page": 20,
+      "sha256": "2fad33fe617d62c49fcbba6f19c7bdc78fad1eff50812fa93d1b45fb59c7b72b"
+    },
+    {
+      "page": 21,
+      "sha256": "acc450ccd7c0a247e5843d576358a7efa4b13e3a2bb211dc7bb65ee562ac62b6"
+    },
+    {
+      "page": 22,
+      "sha256": "a729d6beae96e7da383641dce71a7742e4a755cc70e077e46dbea1d29b310e30"
+    },
+    {
+      "page": 23,
+      "sha256": "4c0bd7dc2d7be573f055aa9f2a974f359d34260ed9737b8f874835b833c89806"
+    },
+    {
+      "page": 24,
+      "sha256": "5523d095216316a96c398212bc94262265a12c3464d1ca48ee9661f973552a12"
+    },
+    {
+      "page": 25,
+      "sha256": "5ed310337664d5a78ec903d350cc98f91bc7bacef93fd120f4a41f0e1b6c48b8"
+    },
+    {
+      "page": 26,
+      "sha256": "c2f95134a05614ac5f453a8d3fc2f58786ba541575515fd8efa2170321a68059"
+    },
+    {
+      "page": 27,
+      "sha256": "c9f0b54d2fc2b3fa78a695a90e6ae3b3229b9cb8b4ce1e59af1b059621965eeb"
+    },
+    {
+      "page": 28,
+      "sha256": "cf21c390340e4e9f14cea68a1575afdbc393a5b4172ab3300ddc5b5149acaefb"
+    },
+    {
+      "page": 29,
+      "sha256": "30b8e65a9e53163bd061c4f7b43d6439c776e762c0f6a276b9bdd98de6a50a0f"
+    },
+    {
+      "page": 30,
+      "sha256": "56c93a67dcc304e1cef85a64fc24ac41aa7cc79727e325e8d10c63bfc40df1ae"
+    },
+    {
+      "page": 31,
+      "sha256": "1f49279c4441ed89409b4f65a9c67221ea20c351b93fadc0dd70765148099adc"
+    },
+    {
+      "page": 32,
+      "sha256": "fab494250bf7833dd358d26ce213862039cce1089e89cf068df1f4e8db33dca6"
+    },
+    {
+      "page": 33,
+      "sha256": "7c979c7ba36a2c396441db26eb752db5411102ea8ca97bf455815406a5db9652"
+    },
+    {
+      "page": 34,
+      "sha256": "5c9b1a01a6e50e87da2be8ac68de75dfbe6c701c26da30a0d46f4cd5793249ca"
+    },
+    {
+      "page": 35,
+      "sha256": "a4d28a93bf80f3f023c0320e6f2e8617d1120c87da3f1277d00c41cb8ce25b66"
+    },
+    {
+      "page": 36,
+      "sha256": "03d7e3074a006fa7d9366f9a5fd42371673c155cce654548300f12b375344807"
+    },
+    {
+      "page": 37,
+      "sha256": "f658a682d4dc39ffb4c6b5e9e7c8a00545272499282bf517ba723dfe10336743"
+    },
+    {
+      "page": 38,
+      "sha256": "cf45641f8c3cb10f143a19cc0e5ba4c9a28009037f3039ceeeb845cca6a32b3b"
+    },
+    {
+      "page": 39,
+      "sha256": "99cd0fe19202e7b053a7a5c4cc63dff1b44bcf051f316a4f1ec8854127052ffa"
+    },
+    {
+      "page": 40,
+      "sha256": "b3172bdd1a43129a767df4870f1b6c77a7ab01b60f92f769cbc1ff5a88fb98ad"
+    },
+    {
+      "page": 41,
+      "sha256": "1796f90cfc90a693498eb8067fb5d8510cd8826d33c2b16aab3f18206cf18ee7"
+    },
+    {
+      "page": 42,
+      "sha256": "dcc5d4f1d09b6d942d615e27aaefa923547c8b9da8e3cd7c55b819eb9ed33986"
+    },
+    {
+      "page": 43,
+      "sha256": "24b7d33020a54a36c84b3c0115bf86934f8cf66c2f2934990c081a61a9a40a4c"
+    },
+    {
+      "page": 44,
+      "sha256": "315c31d85d33eddc39bbcbe6b934307a33989a931e63d1b6a8ea961ff1007f6b"
+    },
+    {
+      "page": 45,
+      "sha256": "986df0b2bc1f5ebd41a9b5ae9a514a6eba8e0fbc4b275c2486b795697ea0cd49"
+    },
+    {
+      "page": 46,
+      "sha256": "cce714dd579d59cbec206ede2811eb0af57d194e19ead502a84ed78f3f27c170"
+    },
+    {
+      "page": 47,
+      "sha256": "a6a25ad3820c09d9c5dcbf8bf705bb44714b0e3ea705d9c82676f37e87b518ca"
+    }
+  ],
+  "limitations": "Team render review is not owner aesthetic acceptance or historical authenticity proof."
+}

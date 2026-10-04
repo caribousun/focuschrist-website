@@ -1,7 +1,7 @@
 {
-  "source_html_sha256": "7bdbd53799cc36af18cc4d1e6d882044959ce39d89ea8c8e003a95dc73484458",
-  "pdf_sha256": "b2be29625bce0b1d8a4883db8770b08344b61431a01148d9c7edc229d3fd7245",
-  "pages": 46,
+  "source_html_sha256": "b005690c9754fce2737bcdd14eb2a6cb3e8450805d1444f1da2c2e198e578655",
+  "pdf_sha256": "109bacb657025cd2f4dcc98b29ca98e97afb97bc8b1b15d5d5a1d460006b2946",
+  "pages": 47,
   "sections": 15,
   "feature_studies": 16,
   "figure_placements": 81,
@@ -15,31 +15,31 @@
   "reviewers": {
     "Fermi": {
       "concur": true,
-      "receipt": "docs/reviews/2026-10-04-joseph-journey-pdf/fermi.json",
-      "receipt_sha256": "1bd1f055f240296fae9926d3694961499ae2ea5e5f8ce843e69682f879faf4e6"
+      "receipt": "docs/reviews/2026-10-04-joseph-heroes-pdf/fermi.json",
+      "receipt_sha256": "4c99f4f7a035a3e2e52831102b88caa4fba440f132f72cbb7920ac3073c61b7f"
     },
     "Newton": {
       "concur": true,
-      "receipt": "docs/reviews/2026-10-04-joseph-journey-pdf/newton.json",
-      "receipt_sha256": "e655ee0cdeba105a942629b4e5e07ec4eb2faf60ab4d3bc0c7acb6b7840c84ae"
+      "receipt": "docs/reviews/2026-10-04-joseph-heroes-pdf/newton.json",
+      "receipt_sha256": "74d99de2d597d148b29485fd789de01bb5e139e522bec9481ca113d94533037c"
     },
     "Albert": {
       "concur": true,
-      "receipt": "docs/reviews/2026-10-04-joseph-journey-pdf/albert.json",
-      "receipt_sha256": "ce6bf2ce3c24192d4477d6377de05cbd761a35b311cfe6cd54e1ce511b08efaa"
+      "receipt": "docs/reviews/2026-10-04-joseph-heroes-pdf/albert.json",
+      "receipt_sha256": "cc9748c1ff5625d87106f88927dcd9389cf8d89971bdf78283c1a5aa3094ca8b"
     }
   },
   "source_of_truth": "joseph-smith-portrait-research.html",
   "build": "python tools/build_joseph_research_pdf.py",
   "independent_qa": "python tools/joseph_research_pdf_qa.py",
   "limitations": "Independent team review is not owner aesthetic acceptance or proof of historical authenticity; source provenance remains available through citations.",
-  "header_buttons_checked": 276,
+  "header_buttons_checked": 282,
   "navigation_pass": true,
   "link_cues_pass": true,
   "orphan_headings_pass": true,
   "appearance": "Website palette: deep teal and green, cream text, restrained gold navigation and non-underlined source links",
   "source_revalidation": {
-    "reason": "Final HTML-only search metadata, cache token and safe external-link target/rel changes preserve all PDF text, links, images and navigation. Current source QA passes.",
-    "qa_receipt": "docs/reviews/2026-10-04-joseph-journey-pdf/final-source-qa.json"
+    "reason": "Opening hero and cache changes do not enter the body/PDF; grouped section4 manuscript now matches this PDF. Exact final source QA verifies text, links, image coverage and navigation.",
+    "qa_receipt": "docs/reviews/2026-10-04-joseph-heroes-pdf/final-source-qa.json"
   }
 }

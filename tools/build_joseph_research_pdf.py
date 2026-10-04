@@ -221,6 +221,11 @@ def bind_subhead_paragraphs(story):
         current=story[i]
         if isinstance(current,Paragraph) and not isinstance(current,Heading) and current.style.name in ('h3','h4') and i+1<len(story):
             following=story[i+1]
+            if isinstance(following,KeepTogether) and following._content and isinstance(following._content[0],SourceImage):
+                # Image-led sections need their heading on the same page as
+                # the complete first picture and its caption/source context.
+                current.keepWithNext=0
+                result.append(KeepTogether([current,*following._content]));i+=2;continue
             if isinstance(following,KeepTogether) and len(following._content)==1 and isinstance(following._content[0],Paragraph):
                 current.keepWithNext=0
                 result.append(KeepTogether([current,*following._content]));i+=2;continue

@@ -98,8 +98,7 @@ def check():
                 from joseph_smith_likeness_qa import check as check_joseph_bridge
                 assert not check_joseph_bridge(), 'Joseph compact gateway contract failed'
                 assert len([n for n in ns if n.has('joseph-bridge-intro')])==1, 'Exact compact gateway introduction required'
-                assert not any(n.tag=='a' and 'data-hero-viewer' in n.attrs for n in ns), 'Compact gateway must not regain an image hero'
-                continue
+                assert len([n for n in ns if n.tag=='a' and 'data-hero-viewer' in n.attrs])==1, 'Joseph gateway requires one reviewed hero'
             hero = opening(page, ns)
             with Image.open(hero) as image:
                 image = image.convert('RGB')

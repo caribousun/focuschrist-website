@@ -10,7 +10,7 @@ def check():
     def soup(page):
         if page not in cache: cache[page] = BeautifulSoup((ROOT/page).read_text(encoding='utf8'), 'html.parser')
         return cache[page]
-    assert len(records) == 94
+    assert len(records) == 92
     for r in records:
         anchors = [a for a in soup(r['page']).select('a[href]') if a['href'] == r['href']]
         assert any(r['new_label'] in (a.get_text(' ', strip=True) + ' ' + a.get('aria-label', '')) for a in anchors), r
@@ -35,5 +35,5 @@ def check():
     for name in ['build_jesus_journey.py', 'build_jesus_parent.py', 'build_temples_history.py']:
         assert 'topic-artwork-details.js?v='+controller_version in (ROOT/'tools'/name).read_text(encoding='utf8'), name
     print(f'PICTURE CACHE PASS: {consumers} consumers and three authoritative builders use {controller_version}.')
-    print('ILLUSTRATED NAVIGATION PASS: 94 specific labels, exact destination titles/fragments, no generic CTA recurrence.')
+    print('ILLUSTRATED NAVIGATION PASS: 92 specific labels plus two explicitly retired Joseph references, exact destination titles/fragments, no generic CTA recurrence.')
 if __name__ == '__main__': check()

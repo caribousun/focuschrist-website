@@ -16,13 +16,13 @@ const root = path.resolve(__dirname, '..');
   const records = JSON.parse(fs.readFileSync(path.join(root,'docs/unified-opening-inventory.json'))).pages.filter(x=>x.hero && (!process.env.QA_PATHS || process.env.QA_PATHS.split(",").includes(x.path)));
   const authoredRoutes=new Set(['timelines/latter-day-saint-church-history-timeline.html','timelines/willie-and-martin-handcart-map.html','timelines/life-of-christ-journey-map.html']);
   const authoredCue=record=>{const authored=authoredRoutes.has(record.path);assert.equal(record.template==='standard-timeline-study-reference',authored,'Only exact reviewed timeline routes use authored cue contract');return authored;};
-  assert.equal(records.length,new Set(records.map(r=>r.path)).size,'Every discovered illustrated route is unique');if(!process.env.QA_PATHS)assert.equal(records.length,49,'All49 illustrated routes included');
+  assert.equal(records.length,new Set(records.map(r=>r.path)).size,'Every discovered illustrated route is unique');if(!process.env.QA_PATHS)assert.equal(records.length,51,'All51 illustrated routes included');
   const results=[],enlarged=[],gateway=[];
   const heroGeometry=()=>{const e=document.querySelector('.fc-visual-hero,[data-covenant-hero-slot],.cfm-desktop-picture,.gc-intro-visual'),r=e.getBoundingClientRect();return {width:r.width,height:r.height,top:r.top+scrollY};};
   try {
-    // The image-free Joseph gateway has a positive compact-opening contract.
+    // The Joseph gateway retains both study destinations beneath its reviewed hero opening.
     if(!process.env.QA_PATHS || process.env.QA_PATHS.split(',').includes('joseph-smith-likeness.html')){
-      for(const [width,height,scale] of [[1366,768,100],[390,844,100],[320,568,100],[320,740,200],[1280,720,200]]){
+      for(const [width,height,scale] of [[1366,768,100],[390,844,100],[305,568,100],[320,568,100],[320,740,200],[1280,720,200]]){
         await page.setViewportSize({width,height});
         await page.goto(`http://127.0.0.1:${server.address().port}/joseph-smith-likeness.html`,{waitUntil:'networkidle'});
         await page.evaluate(scale=>document.documentElement.style.fontSize=scale+'%',scale);
@@ -31,19 +31,20 @@ const root = path.resolve(__dirname, '..');
           const intro=document.querySelector('.joseph-bridge-intro'),title=intro.querySelector('h1');
           const links=[...document.querySelectorAll('#joseph-study-entrance .fc-button--primary')];
           const rects=[title,...links].map(x=>{const r=x.getBoundingClientRect();return {left:r.left,right:r.right,top:r.top,bottom:r.bottom,width:r.width,height:r.height};});
-          return {title:title.textContent,hrefs:links.map(x=>x.getAttribute('href')),rects,clientWidth:document.documentElement.clientWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,legacy:document.querySelectorAll('.fc-visual-hero,.fc-page-intro,[data-unified-opening],.fc-unified-continue').length,images:document.querySelectorAll('main img').length};
+          return {title:title.textContent,hrefs:links.map(x=>x.getAttribute('href')),rects,clientWidth:document.documentElement.clientWidth,overflow:document.documentElement.scrollWidth>innerWidth+1,heroes:document.querySelectorAll('.fc-visual-hero[data-hero-viewer]').length,cues:document.querySelectorAll('.fc-unified-continue').length,images:document.querySelectorAll('main img').length};
         });
         assert.equal(row.title,'Explore his life and the portrait');
         assert.deepEqual(row.hrefs,['answers/who-was-joseph-smith.html#joseph-family-life','joseph-smith-portrait-research.html']);
-        assert.equal(row.legacy,0);assert.equal(row.images,0);assert.equal(row.overflow,false);
+        assert.equal(row.heroes,1);assert.equal(row.cues,1);assert.equal(row.images,0);assert.equal(row.overflow,false);
         assert(row.rects.every(r=>r.width>0&&r.height>0&&r.left>=-1&&r.right<=row.clientWidth+1),'Gateway controls remain visible and within page');
-        if(scale===100)assert(row.rects[2].bottom<height,'Both gateway choices visible in the opening viewport');
+        // Full shared-opening geometry is checked below; both choices remain in normal flow.
         gateway.push({width,height,scale,...row});
       }
     }
-    for(const [width,height] of (process.env.QA_PROFILES ? JSON.parse(process.env.QA_PROFILES) : [[1536,792],[1920,900],[1366,768],[320,740],[390,844],[432,810]])) {
+    for(const [width,height] of (process.env.QA_PROFILES ? JSON.parse(process.env.QA_PROFILES) : [[1536,792],[1920,900],[1366,768],[305,568],[320,740],[390,844],[432,810]])) {
       await page.setViewportSize({width,height});
       for(const record of records) {
+        if(width===305 && height===568 && !['joseph-smith-likeness.html','joseph-smith-portrait-research.html'].includes(record.path))continue; // Exact native scrollbar regression; original full-site profiles remain unchanged.
         const url=`http://127.0.0.1:${server.address().port}/${record.path}`;
         await page.route('**/unified-opening*',r=>r.abort());
         await page.goto(url,{waitUntil:'domcontentloaded'});
@@ -103,5 +104,5 @@ const root = path.resolve(__dirname, '..');
   console.log(JSON.stringify({cases:results.length,failures},null,2));
   const enlargedFailures=enlarged.filter(x=>x.cutoff||x.overflow||x.cueBottom>x.openingBottom||x.openingBottom<x.height-1);
   console.log(JSON.stringify({enlargedCases:enlarged.length,enlargedFailures},null,2));
-  if(failures.length||enlargedFailures.length||(!process.env.QA_PATHS && !process.env.QA_PROFILES && (results.length!==294||enlarged.length!==98||gateway.length!==5)))process.exitCode=1;
+  if(failures.length||enlargedFailures.length||(!process.env.QA_PATHS && !process.env.QA_PROFILES && (results.length!==308||enlarged.length!==102||gateway.length!==6)))process.exitCode=1;
 })().catch(e=>{console.error(e);process.exitCode=1;});
