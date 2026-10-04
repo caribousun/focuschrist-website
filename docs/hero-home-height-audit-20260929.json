@@ -1,5 +1,5 @@
 {
-  "scope": "124 canonical openings; image-bearing heroes compared with Home; body study illustrations and text-only openings excluded explicitly",
+  "scope": "124 historical canonical openings plus the new Joseph research route; current125route comparison, historical baseline method retained",
   "baseline_method": "124 distinct ordinary public navigations in Chrome5 via allowed CUA tab.playwright.evaluate read-only DOM; no shell browser automation",
   "baseline_home": {
     "width": 1424.800048828125,
@@ -418,8 +418,8 @@
     },
     {
       "page": "joseph-smith-likeness.html",
-      "selector": null,
-      "baseline_classification": "Reviewed compact text gateway to life and portrait research; no image hero",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Owner-directed new Joseph hero; compare current geometry with Home; historical compact baseline remains recorded",
       "baseline_height": null,
       "desktop_repair": false
     },
@@ -1083,6 +1083,13 @@
       "selector": ".fc-visual-hero",
       "baseline_classification": "Frame height matches Home; composition not certified by geometry",
       "baseline_height": 475.8500061035156,
+      "desktop_repair": false
+    },
+    {
+      "page": "joseph-smith-portrait-research.html",
+      "selector": ".fc-visual-hero",
+      "baseline_classification": "Owner-directed new Joseph research hero; compare current geometry with Home",
+      "baseline_height": null,
       "desktop_repair": false
     }
   ],

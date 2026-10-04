@@ -1,22 +1,21 @@
 {
   "reviewer": "Newton",
   "concur": true,
-  "scope": "Independent semantic mapping and bounded cadence review; not final rendered publication concurrence",
-  "manuscript_sha256": "da0cc9f2c57a9d4bb19c392f0cb6193bff05da89853a3ff798ec7daca1416edd",
+  "scope": "Independent exact semantic delta and full preservation review; no final rendered publication concurrence",
+  "manuscript_sha256": "996c540f5dece27ca02fa5cea4de6b0d0b20174f8f3a4c98baf53f120acb4665",
   "baseline_sha256": "23724949768c40951657d0a6233cf9e281930047fa9c03d5449d7fbe4bd0343b",
-  "coverage_records_sha256": "edd67cdcfde56e9b0dee0fa310dfccadd8a4ea3b2a8a1688ab88978afa4c9e26",
+  "coverage_records_sha256": "8dd8ec71ad5554cc9964f434c9370d479fcbfc59126e576dcec5b638ef888b48",
   "records_reviewed": 164,
   "presentation_retired": 44,
   "findings": [
-    "Earlier unrelated target mappings corrected; source-conflict synthesis now truthfully consolidated, not preserved verbatim.",
-    "Retired headings, glossary and internal approval/reviewer instructions do not replace historical evidence.",
-    "Sixteen feature narratives retain source limitations, conflicting eye descriptions, date/transmission distinctions and cast/color boundaries.",
-    "Ten cadence exceptions remain bounded short passages; section5-2 reason corrected to singular passage."
+    "All81figure markup, every text leaf and everyhref preserved exactly as multisets against publishedHEAD.",
+    "All164records validate against actual narrative;162records unchanged byte-for-structured-data; two changed excerpts individually matched to preserved profile and frontal passages.",
+    "Profile record preserves June25,1842sitting, original drawing uncertainty, map-painting object distinction and silhouette scope.",
+    "Frontal record preserves September1842sitting, Rogers attribution and Davis/Hatch scaling-camera dispute.",
+    "Structural split puts separate narrative headings with their respective pictures; source evidence and manuscript prose unchanged."
   ],
   "limits": [
-    "No claim all164 old prose fields survive verbatim.",
-    "Current six-image migration is separately gated against published75 and prior likeness source pixels.",
-    "Final desktop/phone and PDF rendering pending."
-  ],
-  "attribute_renewal": "Exact search-keyword and sole BYU link-target/rel additions reverse to prior07ab bytes. Fragment renamed .html.inc without byte change. No prose/sourceURI/art/order changes."
+    "Rendered grouping, full page cadence and finalPDF review remain separate.",
+    "No claim all164old prose fields survive verbatim; existing presentation retirements preserved."
+  ]
 }

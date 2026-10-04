@@ -1,6 +1,6 @@
 {
   "baseline_sha256": "23724949768c40951657d0a6233cf9e281930047fa9c03d5449d7fbe4bd0343b",
-  "manuscript_sha256": "da0cc9f2c57a9d4bb19c392f0cb6193bff05da89853a3ff798ec7daca1416edd",
+  "manuscript_sha256": "996c540f5dece27ca02fa5cea4de6b0d0b20174f8f3a4c98baf53f120acb4665",
   "status": "Independent semantic coverage reviewed with deliberate presentation retirements; rendered review separate",
   "records": [
     {
@@ -240,7 +240,7 @@
       "targets": [
         {
           "id": "research-block-section-4-2",
-          "excerpt": "A profile sitting in Nauvoo Now turn to a picture made during Joseph’s life. He sat for a profile on 25 June 1842, two years before the molds were taken. The journal gives us that encounter with an artist; the surviving pictures require a further journey through their object histories. The museum identifies the original sitting drawing as still unlocated. Hatch describes a painting rediscovered in 1982 as the probable source for a map image. That painting, its later copies, and the sitting drawing should be kept distinct. The resulting profile tradition is especially useful for studying silhouette. 2 · 3 · 5 · 23 A face painted from life Next, look at the face from the front. September 1842 journal entries bring us to further painting sessions and the familiar oil attributed to David Rogers. Its frontal view offers another way of seeing Joseph. Curator Robert O. Davis argues that this painting deserves greater weight than Hatch allowed, questioning comparisons that depend on scaling and camera angle. Their disagreement reminds us to look closely at how a comparison was made, as well as at the pictures themselves. 4 · 5 · 22"
+          "excerpt": "Now turn to a picture made during Joseph’s life. He sat for a profile on 25 June 1842, two years before the molds were taken. The journal gives us that encounter with an artist; the surviving pictures require a further journey through their object histories. The museum identifies the original sitting drawing as still unlocated. Hatch describes a painting rediscovered in 1982 as the probable source for a map image. That painting, its later copies, and the sitting drawing should be kept distinct. The resulting profile tradition is especially useful for studying silhouette. 2 · 3 · 5 · 23"
         }
       ],
       "reason": "The mapped passage preserves the substantive observation and its source-specific limits in the evidence-first narrative. Internal retention or testing directives are replaced with an explanation of what the sources allow us to see."
@@ -258,8 +258,8 @@
       "disposition": "paraphrased",
       "targets": [
         {
-          "id": "research-block-section-4-2",
-          "excerpt": "A profile sitting in Nauvoo Now turn to a picture made during Joseph’s life. He sat for a profile on 25 June 1842, two years before the molds were taken. The journal gives us that encounter with an artist; the surviving pictures require a further journey through their object histories. The museum identifies the original sitting drawing as still unlocated. Hatch describes a painting rediscovered in 1982 as the probable source for a map image. That painting, its later copies, and the sitting drawing should be kept distinct. The resulting profile tradition is especially useful for studying silhouette. 2 · 3 · 5 · 23 A face painted from life Next, look at the face from the front. September 1842 journal entries bring us to further painting sessions and the familiar oil attributed to David Rogers. Its frontal view offers another way of seeing Joseph. Curator Robert O. Davis argues that this painting deserves greater weight than Hatch allowed, questioning comparisons that depend on scaling and camera angle. Their disagreement reminds us to look closely at how a comparison was made, as well as at the pictures themselves. 4 · 5 · 22"
+          "id": "research-block-section-4-3",
+          "excerpt": "Next, look at the face from the front. September 1842 journal entries bring us to further painting sessions and the familiar oil attributed to David Rogers. Its frontal view offers another way of seeing Joseph. Curator Robert O. Davis argues that this painting deserves greater weight than Hatch allowed, questioning comparisons that depend on scaling and camera angle. Their disagreement reminds us to look closely at how a comparison was made, as well as at the pictures themselves. 4 · 5 · 22"
         }
       ],
       "reason": "The mapped passage preserves the substantive observation and its source-specific limits in the evidence-first narrative. Internal retention or testing directives are replaced with an explanation of what the sources allow us to see."
@@ -1944,12 +1944,12 @@
     "Fermi": {
       "concur": true,
       "receipt": "docs/joseph-research-reviews/narrative-fermi.json",
-      "receipt_sha256": "1a7fb333c8f674bbe29355ecda0ddc310714d32252b154a109a86b90e4d0af78"
+      "receipt_sha256": "cff9411b9deae61c511067a08581493948c91966e61268df45b7eb247a0c475a"
     },
     "Newton": {
       "concur": true,
       "receipt": "docs/joseph-research-reviews/narrative-newton.json",
-      "receipt_sha256": "be3ba99fd11196a2f8bbe627d3e542301e0d7aaf6c93ca0569501acf666f2c1a"
+      "receipt_sha256": "d08dd3d61725cab26955a41910c8cb838a3ca856f08bb775f0776044d41712b6"
     }
   }
 }

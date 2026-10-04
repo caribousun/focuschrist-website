@@ -1222,7 +1222,7 @@
         // Measure only after the opening stylesheet is ready. A failed stylesheet
         // leaves the established page opening intact instead of applying half a layout.
         openingStyle.addEventListener('load', function () {
-            appendScript(relativeAssetHref('unified-opening.js?v=20260930-1'), 'data-focuschrist-unified-opening');
+            appendScript(relativeAssetHref('unified-opening.js?v=20261004-joseph-openings-1'), 'data-focuschrist-unified-opening');
         }, { once: true });
         document.head.appendChild(openingStyle);
         if (/[?&]gallery-(?:art|position)=/.test(window.location.search)) {

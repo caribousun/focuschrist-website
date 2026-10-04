@@ -41,7 +41,7 @@ for (const page of pages) {
   }
   const opening = w.document.querySelector('.fc-mobile-cued-opening');
   if(page==='joseph-smith-likeness.html'){
-    assert(!opening,'Compact gateway must not acquire the former mobile hero');
+    assert.equal(w.document.querySelectorAll('.fc-visual-hero[data-hero-viewer]').length,1,'Joseph gateway retains its reviewed artwork');
     assert.equal(w.document.querySelector('.joseph-bridge-intro h1').textContent,'Explore his life and the portrait');
     assert.deepEqual([...w.document.querySelectorAll('#joseph-study-entrance .fc-button--primary')].map(a=>a.getAttribute('href')),['answers/who-was-joseph-smith.html#joseph-family-life','joseph-smith-portrait-research.html']);
     assert(!w.document.querySelector('.fc-mobile-scroll-cue'),'Compact gateway must expose destinations directly');

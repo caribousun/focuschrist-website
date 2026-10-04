@@ -3,10 +3,10 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const {JSDOM}=require('jsdom');
 const root=path.resolve(__dirname,'..'),source=fs.readFileSync(path.join(root,'unified-opening.js'),'utf8');
 const inventory=JSON.parse(fs.readFileSync(path.join(root,'docs/unified-opening-inventory.json')));
-assert.equal(inventory.pages.length,130);assert.equal(new Set(inventory.pages.map(x=>x.path)).size,130,'Canonical routes remain unique');assert.equal(inventory.pages.filter(x=>x.hero).length,49);
+assert.equal(inventory.pages.length,130);assert.equal(new Set(inventory.pages.map(x=>x.path)).size,130,'Canonical routes remain unique');assert.equal(inventory.pages.filter(x=>x.hero).length,51);
 for(const route of ['timelines/latter-day-saint-church-history-timeline.html','timelines/willie-and-martin-handcart-map.html','timelines/life-of-christ-journey-map.html'])assert.equal(inventory.pages.find(x=>x.path===route)?.hero,true,'Each timeline experience is included');
-assert.equal(inventory.pages.find(x=>x.path==='joseph-smith-portrait-research.html')?.hero,false,'Text-led research opening is explicitly inventoried');
-assert.deepEqual(inventory.pages.filter(x=>x.path==='joseph-smith-likeness.html').map(x=>[x.hero,x.template]),[[false,'compact-gateway']],'Joseph gateway has an explicit nonhero contract');
+assert.equal(inventory.pages.find(x=>x.path==='joseph-smith-portrait-research.html')?.hero,true,'Research hero is explicitly inventoried');
+assert.deepEqual(inventory.pages.filter(x=>x.path==='joseph-smith-likeness.html').map(x=>[x.hero,x.template]),[[true,'standard-joseph']],'Joseph gateway has an explicit reviewed hero contract');
 let checks=0;
 for(const file of ['answers/abrahamic-covenant.html','answers/prayer-and-personal-revelation.html','art.html','come-follow-me.html','general-conference.html','history/john-tanner.html','jesus-christ/parables/barren-fig.html','joseph-smith-portrait-research.html','joseph-smith-likeness.html']){
  const dom=new JSDOM(fs.readFileSync(path.join(root,file),'utf8'),{url:'https://focuschrist.com/'+file,runScripts:'outside-only',pretendToBeVisual:true});
@@ -16,14 +16,14 @@ for(const file of ['answers/abrahamic-covenant.html','answers/prayer-and-persona
  w.eval(source);d.dispatchEvent(new w.Event('DOMContentLoaded'));
  const cue=d.querySelector('.fc-unified-continue');
  if(file==='joseph-smith-likeness.html'){
-  assert.equal(cue,null,'Compact gateway must not acquire a Continue hero');
+  assert(cue&&cue.getAttribute('href'),'Joseph gateway has a working shared Continue');
   assert.equal(d.querySelector('.joseph-bridge-intro h1').textContent,'Explore his life and the portrait');
   assert.deepEqual([...d.querySelectorAll('#joseph-study-entrance .fc-button--primary')].map(a=>a.getAttribute('href')),['answers/who-was-joseph-smith.html#joseph-family-life','joseph-smith-portrait-research.html']);
-  assert.equal(d.querySelectorAll('.fc-visual-hero,.fc-page-intro,[data-unified-opening]').length,0);
+  assert.equal(d.querySelectorAll('.fc-visual-hero').length,1);
+  assert.equal(d.querySelectorAll('[data-unified-opening]').length,1);
   assert.deepEqual([...d.images].map(x=>x.outerHTML),images);
-  dom.window.close();continue;
  }
- if(file.includes('/parables/') || file==='joseph-smith-portrait-research.html'){assert.equal(cue,null);dom.window.close();continue;}
+ if(file.includes('/parables/')){assert.equal(cue,null);dom.window.close();continue;}
  assert(cue&&cue.getAttribute('href'),file+': working invitation target');
  assert.equal(d.querySelectorAll('.fc-unified-continue').length,1);
  assert.deepEqual([...d.images].map(x=>x.outerHTML),images,file+': image markup retained');

@@ -1,0 +1,113 @@
+{
+  "generation": "Built-in image_gen; two separate calls with exact actual owner identity reference. Initial larger candidates rejected for phone framing. Revised generation prompts separately concurred before creation.",
+  "heroes": {
+    "gateway": {
+      "status": "accepted",
+      "asset": "assets/heroes/joseph-gateway-20261004.png",
+      "record": "joseph-gateway-20261004",
+      "owner": "joseph-smith-likeness.html",
+      "alt": "Joseph Smith in a black civilian coat beside the river.",
+      "width": 2170,
+      "height": 725,
+      "sha256": "064817c39cdd0b59782a2b5d70d2250798c786a08022115534f9fabb62b7b059",
+      "prompt": "Create one new photorealistic historical portrait for a wide website hero, approximately3:1 panorama, target2048x684 pixels. Use the attached owner-approved Joseph Smith portrait as the sole facial identity reference. Preserve his recognizable face: blue-gray eyes, light brown swept wavy hair and hairline, forehead, brows, nose, lips, cheek structure, jaw and chin. Keep the same mature adult age, about37–38, with natural skin texture and a clean-shaven face. Do not beautify, harden, slim, age upward, or replace him with a generic actor. Real photographic light, believable cloth and skin, no painted or illustrated rendering, no text, logo, border, watermark or fake archival marks. Keep the entire hair silhouette and both shoulders within the frame with generous top and side margins. Compose for the full3:1 desktop panorama and a300px-high phone frame with a centered viewing crop. Keep every essential part of Joseph, including the complete hair silhouette, head, shoulders and specified torso framing, wholly inside the central33–35percent of the image width with a little safety margin. Only decorative outer background may fall outside the mobile window. Keep Joseph large enough to remain legible on a390px-wide phone. Fill the entire panorama naturally with scenery or studio background, never baked-in blank borders or letterboxing. The full uncropped original will remain available in the picture viewer. Show Joseph waist-up beside the Mississippi River in the Nauvoo setting, standing naturally with his torso turned slightly toward image-left and his face meeting the viewer with a warm, attentive, restrained expression. His eyes have a definite engaged focus on the viewer, never a distant vacant look. Place Joseph exactly near the horizontal center, his head and torso contained in the central third of the frame. Show a broad calm river and soft distant wooded bank to image-left, with a modest suggestion of an unpaved riverbank; no recognizable invented buildings, completed temple, bridge, modern vessel or staged historical event. Soft early-morning daylight gives gentle depth to his features. Dress him in a well-fitted black wool civilian coat, dark waistcoat, white linen shirt and modest white neckcloth of the early1840s. No military uniform or medals; no hat is necessary. His arms rest naturally at his sides, hands outside the waist-up composition rather than posed on an object. Keep his upper body distinctly smaller in the frame than a close portrait, with real environmental space. This must be a fresh composition, not a widened copy of the reference or any existing focusChrist scene.\nFraming correction, mandatory: The previous candidate made Joseph too wide for a narrow phone. Make the entire person 20 percent smaller within the same wide canvas, including head, shoulders and torso, while keeping him horizontally centered. The complete visible figure must occupy no more than the central 28 percent of canvas width (approximately x=780 to x=1390 on a2170px-wide canvas), including the coat at the bottom edge. Preserve headroom and fill the outer canvas naturally with the specified background. Do not introduce borders, blur extensions, or resize the canvas. Keep a clear natural face with the identical reference identity. This smaller-person composition takes priority over close-up scale.",
+      "prompt_sha256": "ebb4b9456cc1534bd41822e1ab4a2e4918b0325a73a935d8917a5c0591e01c1e",
+      "reference_asset": "assets/identities/joseph-smith-owner-approved-20260914.png",
+      "reference_sha256": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827",
+      "source_basis": [
+        "https://history.churchofjesuschrist.org/media-exhibit/sutcliffe-maudsley/joseph-smith-in-black-suit-and-top-hat?from=home&lang=eng"
+      ],
+      "source_limits": "Museum portrait supports black civilian suit tradition; river setting/light and specific pose are composition choices, not a recorded event or exact outfit.",
+      "phone_object_position": "45% 50%",
+      "delivery": {
+        "default": "assets/heroes/joseph-gateway-20261004-1920.webp",
+        "variants": [
+          {
+            "asset": "assets/heroes/joseph-gateway-20261004-640.webp",
+            "width": 640,
+            "sha256": "27f52468fe4e1e1b7b134ef0f983bb951c93c8bfc430f6c7f4a65e441716773e"
+          },
+          {
+            "asset": "assets/heroes/joseph-gateway-20261004-1280.webp",
+            "width": 1280,
+            "sha256": "d2432aba20e0bba0e04005552d19237bca6d24ea7ac0a9dd5e616586a5a90e78"
+          },
+          {
+            "asset": "assets/heroes/joseph-gateway-20261004-1920.webp",
+            "width": 1920,
+            "sha256": "8963f32c7ceac296d7486afc46e6be78736b0150b1d99dcbaad50427b7a6d7b0"
+          }
+        ]
+      },
+      "reviews": {
+        "Fermi": {
+          "original_pixels": true,
+          "320_and_390_phone_crops": true
+        },
+        "Newton": {
+          "original_pixels": true,
+          "320_and_390_phone_crops": true
+        },
+        "Albert": {
+          "original_pixels": true,
+          "320_phone_crops": true
+        }
+      },
+      "limits": "Team acceptance of these exact pixels and phone crop; assembled-page review and owner aesthetic acceptance remain separate."
+    },
+    "research": {
+      "status": "accepted",
+      "asset": "assets/heroes/joseph-research-20261004.png",
+      "record": "joseph-research-20261004",
+      "owner": "joseph-smith-portrait-research.html",
+      "alt": "Joseph Smith in a three-quarter portrait with soft light across his face.",
+      "width": 2170,
+      "height": 725,
+      "sha256": "a0843f406e0b8d991739d8e3a80922bcdd42042a352642f24729dc55aa52573a",
+      "prompt": "Create one new photorealistic historical portrait for a wide website hero, approximately3:1 panorama, target2048x684 pixels. Use the attached owner-approved Joseph Smith portrait as the sole facial identity reference. Preserve his recognizable face: blue-gray eyes, light brown swept wavy hair and hairline, forehead, brows, nose, lips, cheek structure, jaw and chin. Keep the same mature adult age, about37–38, with natural skin texture and a clean-shaven face. Do not beautify, harden, slim, age upward, or replace him with a generic actor. Real photographic light, believable cloth and skin, no painted or illustrated rendering, no text, logo, border, watermark or fake archival marks. Keep the entire hair silhouette and both shoulders within the frame with generous top and side margins. Compose for the full3:1 desktop panorama and a300px-high phone frame with a centered viewing crop. Keep every essential part of Joseph, including the complete hair silhouette, head, shoulders and specified torso framing, wholly inside the central33–35percent of the image width with a little safety margin. Only decorative outer background may fall outside the mobile window. Keep Joseph large enough to remain legible on a390px-wide phone. Fill the entire panorama naturally with scenery or studio background, never baked-in blank borders or letterboxing. The full uncropped original will remain available in the picture viewer. Show a close head-and-upper-chest portrait of Joseph at a clear three-quarter angle: his torso and head turned about25degrees toward image-right, while his eyes engage the viewer naturally without extreme sideways strain. Both eyes remain anatomically plausible and the nearer cheek, nose projection and jaw contour are legible. Calm, thoughtful expression with relaxed closed lips, distinct from an outdoor welcoming waist-up pose. Set him against a softly receding quiet charcoal-olive studio wall, gently graded natural daylight from image-left with soft reflected fill, no dramatic theatrical black shadows. Dress him in the reference’s dark civilian wool coat, dark waistcoat and white linen neckcloth, appropriate to the early1840s. Center the head within the central third of the wide frame, leaving breathing room on both sides and above the hair; do not enlarge the face until the forehead or chin is clipped. No hands, desk, writing materials, documents, maps, masks, casts, measuring instruments, easel, lamps, people or historical evidence objects. The image should make the face itself worth studying. Create a genuinely new angle and light composition, not a crop, mirror, recoloring or duplicate of the supplied frontal portrait or other existing artwork.\nFraming correction, mandatory: The previous candidate made Joseph too wide for a narrow phone. Make the entire person 20 percent smaller within the same wide canvas, including head, shoulders and torso, while keeping him horizontally centered. The complete visible figure must occupy no more than the central 28 percent of canvas width (approximately x=780 to x=1390 on a2170px-wide canvas), including the coat at the bottom edge. Preserve headroom and fill the outer canvas naturally with the specified background. Do not introduce borders, blur extensions, or resize the canvas. Keep a clear natural face with the identical reference identity. This smaller-person composition takes priority over close-up scale.",
+      "prompt_sha256": "4bd0bbef4229f815cd7f6c6ad8bfd13be4917fa345cc10ddc1bc7e8c2628701f",
+      "reference_asset": "assets/identities/joseph-smith-owner-approved-20260914.png",
+      "reference_sha256": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827",
+      "source_basis": [
+        "https://history.churchofjesuschrist.org/media-exhibit/sutcliffe-maudsley/joseph-smith-in-black-suit-and-top-hat?from=home&lang=eng"
+      ],
+      "source_limits": "New portrait composition; not an original-process intermediate, measurement, historical photograph or recovered sitting.",
+      "phone_object_position": "45% 50%",
+      "delivery": {
+        "default": "assets/heroes/joseph-research-20261004-1920.webp",
+        "variants": [
+          {
+            "asset": "assets/heroes/joseph-research-20261004-640.webp",
+            "width": 640,
+            "sha256": "08446cb53a1268b434495f36c369be7af724f03109f0fa8318ca001c1238a79a"
+          },
+          {
+            "asset": "assets/heroes/joseph-research-20261004-1280.webp",
+            "width": 1280,
+            "sha256": "fddcc970f974ca768f311dc4ff6f7b0ca5df84600c54d7cd2881c8ea2ba5c575"
+          },
+          {
+            "asset": "assets/heroes/joseph-research-20261004-1920.webp",
+            "width": 1920,
+            "sha256": "e3d8f9fe7717e0d85950e4e0f8480d5091c9954c424ef3c231b4b6ab77253047"
+          }
+        ]
+      },
+      "reviews": {
+        "Fermi": {
+          "original_pixels": true,
+          "320_and_390_phone_crops": true
+        },
+        "Newton": {
+          "original_pixels": true,
+          "320_and_390_phone_crops": true
+        },
+        "Albert": {
+          "original_pixels": true,
+          "320_phone_crops": true
+        }
+      },
+      "limits": "Team acceptance of these exact pixels and phone crop; assembled-page review and owner aesthetic acceptance remain separate."
+    }
+  }
+}

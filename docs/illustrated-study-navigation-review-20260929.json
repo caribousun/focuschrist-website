@@ -1166,20 +1166,6 @@
       "page": "answers/who-was-joseph-smith.html",
       "text": "Open this illustrated study \u2192",
       "aria": "",
-      "href": "/jesus-christ/before-bethlehem.html#picture-bb-philip-isaiah",
-      "context": "A traveler asks about Isaiah",
-      "target_title": "Jesus Christ Before Bethlehem",
-      "fragment_exists": true,
-      "connection": "A traveler asks Philip about Isaiah. Their conversation offers a scriptural example of reading with a question and seeking understanding.",
-      "section": null,
-      "new_label": "Read \u201cA traveler asks about Isaiah\u201d in Jesus Christ Before Bethlehem",
-      "decision": "Retain authored contextual picture reference; name scene and destination before navigation.",
-      "target_changed": false
-    },
-    {
-      "page": "answers/who-was-joseph-smith.html",
-      "text": "Open this illustrated study \u2192",
-      "aria": "",
       "href": "/jesus-christ/restoration-and-today.html#picture-rt-persuasion",
       "context": "Listening with patience",
       "target_title": "Jesus Christ in the Restoration and Today",
@@ -1187,20 +1173,6 @@
       "connection": "One person listens while another shares a concern. Explore persuasion, gentleness and respect for another person\u2019s agency.",
       "section": "personal-reflections",
       "new_label": "Read \u201cListening with patience\u201d in Jesus Christ in the Restoration and Today",
-      "decision": "Retain authored contextual picture reference; name scene and destination before navigation.",
-      "target_changed": false
-    },
-    {
-      "page": "answers/who-was-joseph-smith.html",
-      "text": "Open this illustrated study \u2192",
-      "aria": "",
-      "href": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-prayer",
-      "context": "Turn to God before the day begins",
-      "target_title": "Jesus Christ",
-      "fragment_exists": true,
-      "connection": "A man pauses to pray before the day begins. Continue with an invitation to bring our concerns to the Father.",
-      "section": "continue-study",
-      "new_label": "Read \u201cTurn to God before the day begins\u201d in Jesus Christ",
       "decision": "Retain authored contextual picture reference; name scene and destination before navigation.",
       "target_changed": false
     },
@@ -1326,5 +1298,35 @@
     "explicit_dynamic_study_labels": 40,
     "controller_cache_version": "20260929-picture-flow-1",
     "cache_propagation_files": 115
-  }
+  },
+  "owner_retired_joseph_references_20261004": [
+    {
+      "page": "answers/who-was-joseph-smith.html",
+      "text": "Open this illustrated study \u2192",
+      "aria": "",
+      "href": "/jesus-christ/before-bethlehem.html#picture-bb-philip-isaiah",
+      "context": "A traveler asks about Isaiah",
+      "target_title": "Jesus Christ Before Bethlehem",
+      "fragment_exists": true,
+      "connection": "A traveler asks Philip about Isaiah. Their conversation offers a scriptural example of reading with a question and seeking understanding.",
+      "section": null,
+      "new_label": "Read \u201cA traveler asks about Isaiah\u201d in Jesus Christ Before Bethlehem",
+      "decision": "Retain authored contextual picture reference; name scene and destination before navigation.",
+      "target_changed": false
+    },
+    {
+      "page": "answers/who-was-joseph-smith.html",
+      "text": "Open this illustrated study \u2192",
+      "aria": "",
+      "href": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-prayer",
+      "context": "Turn to God before the day begins",
+      "target_title": "Jesus Christ",
+      "fragment_exists": true,
+      "connection": "A man pauses to pray before the day begins. Continue with an invitation to bring our concerns to the Father.",
+      "section": "continue-study",
+      "new_label": "Read \u201cTurn to God before the day begins\u201d in Jesus Christ",
+      "decision": "Retain authored contextual picture reference; name scene and destination before navigation.",
+      "target_changed": false
+    }
+  ]
 }

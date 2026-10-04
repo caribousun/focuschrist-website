@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 audit = json.loads((ROOT/'docs/hero-home-height-audit-20260929.json').read_text(encoding='utf-8'))
-assert len(audit['pages']) == len({r['page'] for r in audit['pages']}) == 124
+assert len(audit['pages']) == len({r['page'] for r in audit['pages']}) == 125
 assert sum(r['desktop_repair'] for r in audit['pages']) == 23
 data = (ROOT/'topic-study-pages.css').read_bytes()
 prefix = audit['topic_preserved_prefix']
@@ -22,7 +22,7 @@ for r in audit['pages']:
             assert asset+'?v=20260929-home-height-1' in text, (r['page'], asset, 'stale cache key')
     if r['page'].startswith('answers/jesus-christ/'):
         assert r['selector'] is None, 'Body pictures are not newly invented heroes'
-print('PASS:124 route classifications,23 desktop corrections, preserved mobile/base bytes and current cache keys')
+print('PASS:125 route classifications,23 desktop corrections, preserved mobile/base bytes and current cache keys')
 
 # Each new canvas is a rendition of its owning original, never a replacement study image.
 from PIL import Image

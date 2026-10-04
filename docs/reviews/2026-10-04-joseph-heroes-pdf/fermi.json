@@ -1,0 +1,23 @@
+{
+  "reviewer": "Fermi",
+  "pdf_sha256": "109bacb657025cd2f4dcc98b29ca98e97afb97bc8b1b15d5d5a1d460006b2946",
+  "source_html_sha256": "e55480e788fde7150ca64776b361af923eacee07e0111d342a75d7e799a21940",
+  "manuscript_sha256": "996c540f5dece27ca02fa5cea4de6b0d0b20174f8f3a4c98baf53f120acb4665",
+  "concur": true,
+  "scope": "Independent exact PDF narrative, source preservation and actual Poppler rendered layout review. Final whole-site candidate, publication and live verification are separate.",
+  "mandates_read": ["Live Master and protected foundation through connected Drive, modified2026-10-04T13:20:17.364Z", "Live00B and Focus current records", "AGENTS.md", "docs/historical-character-identity.md", "docs/focuschrist-enrichment-and-stewardship-prompt.md", "docs/section-panel-design-mandate.md", "docs/approved-character-identities.json"],
+  "visual_review": {
+    "all_pages": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47],
+    "method": "Independent Poppler rendering at1100px; eight6page contact sheets inspected in full, plus individual fullsize pages7,9,47. Text bounds scanned independently with PyMuPDF, zero outside-page blocks and zero empty pages.",
+    "findings": "Profile heading, illustration, caption, sources and explanatory paragraph now remain together on page7; frontal painted-likeness unit remains together on page9. No orphan heading, clipped prose, image distortion, overlap, detached picture caption or broken glyph found in reviewed render. Consistent teal/green, cream/gold, Georgia/Segoe design. The closing AI disclosure remains once at end. Historical source qualifications and uncertainty remain intact; source plates remain distinct from artistic pictures.",
+    "evidence": "Originating task work/fermi/pdf/page-01.png through page-47.png and contact-1.jpg through contact-8.jpg"
+  },
+  "semantic_review": "Independent source counters establish exact preservation of all81figure markups, alltextleaves and allhrefs relative to HEAD manuscript. All164coverage records checked against current narrative; only2target remaps separate Maudsley and Rogers reading units. Renewed receipt docs/joseph-research-reviews/narrative-fermi.json.",
+  "prior_attempt": {
+    "pdf_sha256": "bee145c33f53ed4c0366b7e8f9c8aaabc59dab48af14cad777c463a9e63fd811",
+    "status": "REJECTED",
+    "finding": "Pages6and8 orphaned the two changed headings from their following illustrations and explanatory paragraphs. Current109bac fixes both in actual pixels."
+  },
+  "qa": {"pass": true, "substantive_text_blocks_checked": 424, "expected_external_links": 40, "missing_external_links": [], "link_annotations": 672, "bad_internal_links": [], "bookmarks": 33, "image_placements": 82, "original_image_links": 14, "header_buttons_checked": 282, "header_navigation_errors": [], "external_text_links_checked": 114, "link_cue_errors": [], "panel_clearance_errors": [], "orphan_headings": []},
+  "limitations": "Independent technical and team review does not establish owner aesthetic acceptance or historical photographic authenticity. SourceURI reachability and final whole-site live behavior remain separate."
+}

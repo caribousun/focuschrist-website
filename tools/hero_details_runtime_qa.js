@@ -32,6 +32,8 @@ dialog.showModal = () => { dialog.open = true; };
 dialog.close = () => { dialog.open = false; dialog.listeners.close(); };
 
 const cases = [
+    ['joseph-gateway-20261004', '/assets/heroes/joseph-gateway-20261004.png', 'Joseph beside the river', '/joseph-smith-likeness.html#joseph-study-entrance'],
+    ['joseph-research-20261004', '/assets/heroes/joseph-research-20261004.png', 'Looking closely at Joseph', '/joseph-smith-portrait-research.html#portrait-section-1'],
     ['birth-of-christ', '/assets/page-art/birth-of-christ/12-nativity-hero-full.webp', 'Mary lays her newborn Son in a manger', '/birth-of-christ.html#promised-son'],
     ['topic-living-christ', '/assets/heroes/topics/living-christ-full.webp', 'He lives and ministers', '/art-study/the-living-christ.html#scripture-study'],
     ['good-shepherd-art', '/art/The-Good-Shephard.jpg', 'The Good Shepherd', '/art-study/the-good-shepherd.html#scripture-study'],
@@ -68,7 +70,7 @@ vm.runInNewContext(fs.readFileSync('hero-details.js', 'utf8'), {
 });
 
 cases.forEach(([record, href, expectedTitle, expectedStudy], index) => {
-    window.location.pathname = record === 'birth-of-christ' ? '/birth-of-christ.html' : '/art-study/the-good-shepherd.html';
+    window.location.pathname = record.startsWith('joseph-') ? expectedStudy.split('#')[0] : record === 'birth-of-christ' ? '/birth-of-christ.html' : '/art-study/the-good-shepherd.html';
     let prevented = false;
     triggers[index].listeners.click({ button: 0, preventDefault() { prevented = true; } });
     assert(prevented && dialog.open, `${record} must open the hero detail dialog`);
@@ -78,6 +80,7 @@ cases.forEach(([record, href, expectedTitle, expectedStudy], index) => {
     assert.strictEqual(new URL(selectors['[data-hero-study-link]'].href).pathname + new URL(selectors['[data-hero-study-link]'].href).hash, expectedStudy);
     assert.strictEqual(selectors['[data-full-image-viewer]'].href, `https://focuschrist.com${href}`);
     assert.strictEqual(new URL(selectors['[data-hero-ask-link]'].href).searchParams.get('return'), window.location.pathname + '?hero=1');
+    if(record.startsWith('joseph-')) assert.strictEqual(selectors['[data-hero-source-link]'].href,'https://history.churchofjesuschrist.org/media-exhibit/sutcliffe-maudsley/joseph-smith-in-black-suit-and-top-hat?from=home&lang=eng');
     if (record === 'birth-of-christ') {
         assert.strictEqual(selectors['[data-hero-source-link]'].href, 'https://www.churchofjesuschrist.org/study/scriptures/nt/luke/2?lang=eng&id=p6-p7#p6');
         assert(new URL(selectors['[data-hero-ask-link]'].href).searchParams.get('topic').includes('newborn'));

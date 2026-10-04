@@ -88,5 +88,16 @@ def check():
     ds.append(cache[target])
   pages[p.relative_to(ROOT).as_posix()]=ds
  check_original_page_exclusivity(hashes,pages)
+ # Owner-rejected unrelated references are absent here, preserved at their owners.
+ for key,owner in [('bb-philip-isaiah','jesus-christ/before-bethlehem.html'),('modern-prayer','answers/jesus-christ-latter-day-saint-beliefs.html')]:
+  assert not doc.select('[data-linked-picture-reference="'+key+'"]'), 'Unrelated reference returned to Joseph biography: '+key
+  assert not any(key in img.get('src','') for img in doc.select('img')), 'Unrelated image returned to Joseph biography: '+key
+  owning=BeautifulSoup((ROOT/owner).read_text(encoding='utf-8'),'html.parser')
+  picture=owning.find(id='picture-'+key)
+  assert picture and picture.select_one('img'), 'Owner artwork must remain available: '+key
+ for key in ['rt-vision-1832','rt-persuasion']:
+  assert doc.select_one('[data-linked-picture-reference="'+key+'"]'), 'Direct Joseph Restoration reference lost: '+key
+ counsel=doc.select_one('[data-linked-picture-reference="rt-persuasion"]').get_text(' ',strip=True)
+ assert 'Joseph' in counsel and 'Liberty Jail' in counsel, 'Retained persuasion card must identify Joseph historical context'
  return {'result':'STRUCTURAL_PASS_NOT_RENDERED_CONCURRENCE','new_main_originals':10,'main_picture_placements':len(doc.select('img')),'new_delivery_sources':20,'responsive_variants':sum(len(d['variants']) for d in delivery.values())}
 if __name__=='__main__':print(json.dumps(check(),indent=2))

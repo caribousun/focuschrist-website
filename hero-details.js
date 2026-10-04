@@ -2,6 +2,16 @@
     'use strict';
     if (typeof HTMLDialogElement === 'undefined' || document.getElementById('heroDetailDialog')) return;
     const records = {
+        'joseph-gateway-20261004': {
+            title: 'Joseph beside the river',
+            paragraphs: ['Joseph stands beside the river in a black coat and white neckcloth. His gaze invites us to pause and meet the person whose life we are about to explore.', 'Follow Joseph and Emma through the family stories, or begin with the portraits and written accounts that help us look more closely at his face.'],
+            source: 'https://history.churchofjesuschrist.org/media-exhibit/sutcliffe-maudsley/joseph-smith-in-black-suit-and-top-hat?from=home&lang=eng', sourceLabel: 'Explore a Historical Joseph Portrait', study: 'joseph-smith-likeness.html#joseph-study-entrance', studyLabel: 'Choose a Joseph Study'
+        },
+        'joseph-research-20261004': {
+            title: 'Looking closely at Joseph',
+            paragraphs: ['Soft light falls across Joseph’s face, bringing his brow, cheek and jaw into view. The quiet setting gives us room to notice those familiar features.', 'Begin the portrait journey with the people who saw him. Keep the pictures beside their sources as you explore what each witness contributes to our understanding.'],
+            source: 'https://history.churchofjesuschrist.org/media-exhibit/sutcliffe-maudsley/joseph-smith-in-black-suit-and-top-hat?from=home&lang=eng', sourceLabel: 'Explore a Historical Joseph Portrait', study: 'joseph-smith-portrait-research.html#portrait-section-1', studyLabel: 'Begin the Portrait Journey'
+        },
         timeline: {
             title: 'Remember the journey',
             paragraphs: ['An open journal, a folded map, and a brass compass rest beside a window overlooking a sunlit mountain trail.', 'Each recorded date belongs to people who faced choices, carried hopes, and sought the Lord. Explore their accounts, and consider how remembering the past can deepen your faith in Jesus Christ today.'],

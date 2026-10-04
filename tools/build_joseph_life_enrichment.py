@@ -2,6 +2,7 @@
 import html
 import json
 import re
+from joseph_hero_openings import hero_markup
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -46,7 +47,9 @@ def build_bridge(data):
     # The former full study remains a stable entrance for saved and shared links.
     page=re.sub(r'<a\b[^>]*class="fc-visual-hero[^"<>]*"[^>]*>[\s\S]*?</a>', '',page,count=1)
     intro='<section class="joseph-bridge-intro"><p class="fc-eyebrow">Joseph Smith</p><h1>Explore his life and the portrait</h1><p>Follow Joseph and Emma through their family story, or look closely at the evidence behind our Joseph.</p></section>'
-    page=re.sub(r'<section\b[^>]*class="(?:fc-page-intro|joseph-bridge-intro)"[^>]*>[\s\S]*?</section>',lambda _:intro,page,count=1)
+    page=re.sub(r'<!-- BEGIN JOSEPH GATEWAY HERO -->[\s\S]*?<!-- END JOSEPH GATEWAY HERO -->\s*','',page)
+    leading='<!-- BEGIN JOSEPH GATEWAY HERO -->'+hero_markup('gateway')+'<!-- END JOSEPH GATEWAY HERO -->\n'
+    page=re.sub(r'<section\b[^>]*class="(?:fc-page-intro|joseph-bridge-intro)"[^>]*>[\s\S]*?</section>',lambda _:leading+intro,page,count=1)
     block='<main id="main-content" class="likeness-main"><section class="likeness-chapter" id="joseph-study-entrance"><h2>Where would you like to begin?</h2><div class="fc-actions"><a class="fc-button fc-button--primary" href="answers/who-was-joseph-smith.html#joseph-family-life">Joseph, Emma and their families</a><a class="fc-button fc-button--primary" href="joseph-smith-portrait-research.html">The journey to our Joseph</a></div><p><a href="answers/who-was-joseph-smith.html">Explore Joseph’s life and ministry</a>, including his parents, siblings, marriage, children and the people who shared his work.</p><p><a href="joseph-smith-portrait-research.html">Follow the illustrated portrait journey</a> through casts, portraits, remembered encounters and the making of our Joseph.</p><details><summary>Find an earlier study link</summary><ul>'
     for ident,target in routes.items():
         label=ident.replace('life-','').replace('-',' ').capitalize()
@@ -61,6 +64,13 @@ def build_bridge(data):
     script="/* Preserve old study anchors while each picture has one owning page. */\n(function(){'use strict';\nconst routes="+json.dumps(routes,ensure_ascii=False,separators=(',',':'))+";\nfunction follow(){let id;try{id=decodeURIComponent(location.hash.slice(1));}catch(_){return;}if(Object.prototype.hasOwnProperty.call(routes,id)){location.replace(new URL(routes[id],location.href).href);}}\nwindow.addEventListener('hashchange',follow);follow();\n})();\n"
     (ROOT/'joseph-study-bridge.js').write_text(script,encoding='utf-8',newline='\n')
     path.write_text(page,encoding='utf-8',newline='\n')
+
+def remove_unrelated_biography_cards(page):
+    """Preserve Wyatt's Joseph-specific scope when reusing the biography shell."""
+    for picture in ('bb-philip-isaiah', 'modern-prayer'):
+        page = re.sub(r'<article\b[^>]*\bdata-linked-picture-reference="' + picture + r'"[^>]*>[\s\S]*?</article>\s*', '', page)
+    return page
+
 
 def build():
     data = json.loads((ROOT/'docs/joseph-life-enrichment.json').read_text(encoding='utf-8-sig'))
@@ -122,7 +132,7 @@ def build():
     c=data['closing'];out.append('<section id="life-remembrance" class="joseph-life-closing"><h3>'+esc(c['heading'])+'</h3>')
     out.extend('<p>'+esc(p)+'</p>' for p in c['paragraphs'])
     out.extend(['<p class="joseph-life-source-note">'+esc(c['visitor_source_note'])+'</p>',sources(c),'<p class="joseph-life-reflection"><strong>Consider:</strong> '+esc(c['reflection'])+'</p></section></section>',END])
-    block='\n'.join(out);path=ROOT/data['owning_page'];page=path.read_text(encoding='utf-8')
+    block='\n'.join(out);path=ROOT/data['owning_page'];page=remove_unrelated_biography_cards(path.read_text(encoding='utf-8'))
     if START in page:
         a=page.index(START);b=page.index(END,a)+len(END);page=page[:a]+block+page[b:]
     else:

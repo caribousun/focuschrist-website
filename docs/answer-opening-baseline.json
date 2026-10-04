@@ -115,7 +115,8 @@
     "answers/who-was-joseph-smith.html": {
       "kind": "fc-topic-opening",
       "opening_sha256": "9be05f1b5e21633a6ea6f233900ad6fe19023108495a9b9c6f102502e7a37070",
-      "images_sha256": "5ea994c4556fc05a2aeffadd8383d26e35a22f8f4c8f934d52db98f5fc828a16"
+      "images_sha256": "0496e9a59b12f44514a70b236853e705b8cb17c2f0f5132c600a3307cdf1ae4f",
+      "image_inventory_change": "2026-10-04: owner-rejected unrelatedPhilip/Isaiah and genericmodern-prayer references removed; everyotherimage markup retainedexactly."
     },
     "answers/why-families-are-important.html": {
       "kind": "fc-topic-opening",

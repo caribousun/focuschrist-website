@@ -328,6 +328,8 @@ def main() -> int:
             hero_script = "hero-details.js?v=20260927-plan-study-1"
         if relative == "answers/holy-ghost.html":
             hero_script = "hero-details.js?v=20260927-plan-study-1"
+        if relative in {"joseph-smith-likeness.html","joseph-smith-portrait-research.html"}:
+            hero_script = "hero-details.js?v=20261004-joseph-heroes-1"
         if relative == "timeline.html":
             hero_script = "hero-details.js?v=20261002-timeline-1"
         for asset in ("full-image-viewer.css?v=20260905-viewport", "full-image-viewer.js?v=20260914-reopen-1", hero_script, "hero-details.css?v=20260909-warm", "artwork-details.css?v=20260909-warm"):
@@ -354,12 +356,12 @@ def main() -> int:
         assert timeline_study_hero_errors(relative, page.replace(href, href.split("#")[0], 1)), "Missing study fragment must fail"
         assert timeline_study_hero_errors(relative, page.replace(src, "../assets/heroes/home.webp", 1)), "Wrong artwork must fail"
         assert timeline_study_hero_errors(relative, page.replace('class="fc-visual-hero', 'data-hero-viewer class="fc-visual-hero', 1)), "Modal interception must fail"
-    # The former Joseph illustrated page is now a text-only two-journey gateway.
+    # Preserve the exact gateway destinations alongside the two reviewed new heroes.
     # Retain positive gateway/legacy-destination checks rather than skipping the route.
     from joseph_smith_likeness_qa import check as check_joseph_gateway
     errors.extend(check_joseph_gateway())
-    if hero_pages != 41:
-        errors.append(f"expected41 image-first pages plus the separately checked compact Joseph gateway, found{hero_pages}")
+    if hero_pages != 43:
+        errors.append(f"expected43 local-modal hero pages including both Joseph openings, found{hero_pages}")
 
     full_assets: list[str] = []
     for relative in (*PAGES, "missionary.html"):

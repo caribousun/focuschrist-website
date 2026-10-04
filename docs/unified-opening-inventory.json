@@ -1,7 +1,7 @@
 {
   "canonical_count": 130,
-  "hero_count": 49,
-  "excluded_count": 81,
+  "hero_count": 51,
+  "excluded_count": 79,
   "pages": [
     {
       "path": "index.html",
@@ -180,9 +180,9 @@
     },
     {
       "path": "joseph-smith-likeness.html",
-      "hero": false,
-      "template": "compact-gateway",
-      "reason": "Compact two-destination Joseph gateway; illustrated evidence and family stories belong to their owning journeys."
+      "hero": true,
+      "template": "standard-joseph",
+      "reason": "Owner-directed distinct Joseph leading artwork, shared Continue opening and preserved journey content."
     },
     {
       "path": "search.html",
@@ -655,8 +655,9 @@
     },
     {
       "path": "joseph-smith-portrait-research.html",
-      "hero": false,
-      "template": "excluded-no-opening-hero"
+      "hero": true,
+      "template": "standard-joseph",
+      "reason": "Owner-directed distinct Joseph leading artwork, shared Continue opening and preserved journey content."
     }
   ]
 }

@@ -54,6 +54,12 @@ def check():
     routes=[PAGE,'joseph-smith-portrait-research.html','answers/who-was-joseph-smith.html']
     docs={r:BeautifulSoup((ROOT/r).read_text(encoding='utf-8'),'html.parser') for r in routes}
     bridge=docs[PAGE];research=docs[routes[1]];family=docs[routes[2]]
+    from joseph_hero_contract import check_hero,check_grouping
+    for route in routes[:2]:
+        try:check_hero(route,docs[route])
+        except AssertionError as error:require(False,str(error))
+    try:check_grouping(research)
+    except AssertionError as error:require(False,str(error))
     require(not bridge.select('main img, main figure'),'Bridge must not duplicate artwork ownership')
     require(len(bridge.select_one('main').get_text(' ',strip=True).split())<=500,'Bridge must remain concise')
     expected={'living-portrait':routes[1]+'#portrait-section-1','death-masks':routes[1]+'#portrait-section-4','joseph-mask-comparison':routes[1]+'#portrait-section-4','hyrum-mask-comparison':routes[1]+'#portrait-section-11','portraits-from-life':routes[1]+'#portrait-section-4','our-portrait':routes[1]+'#portrait-section-11','face-in-motion':routes[1]+'#research-feature-14','joseph-family-life':routes[2]+'#joseph-family-life','life-remembrance':routes[2]+'#life-remembrance','continue-study':routes[2]+'#continue-study','portrait-research':routes[1]}

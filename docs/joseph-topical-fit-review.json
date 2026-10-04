@@ -1,0 +1,241 @@
+{
+  "date": "2026-10-04",
+  "owner_correction": "Wyatt rejected the Acts8 Philip/Ethiopian illustrated card in the Joseph biography. Keep each Joseph section and image directly useful to Joseph study; preserve relevant Christ-centered Joseph narrative.",
+  "scope": "answers/who-was-joseph-smith.html and its preserving builder only; original owning studies and artwork unchanged",
+  "protected_foundation": "Loaded exact live Master. No foundation text or authority changed.",
+  "cause": "Generic study-method crosslinks were retained in the biography shell; route/source validity did not establish topical usefulness.",
+  "removed": [
+    {
+      "id": "bb-philip-isaiah",
+      "reason": "Acts8 traveler scene is unrelated to the Joseph FirstVision record discussion",
+      "owning_route": "jesus-christ/before-bethlehem.html#picture-bb-philip-isaiah"
+    },
+    {
+      "id": "modern-prayer",
+      "reason": "Generic Matthew6 modern-prayer crosslink does not add Joseph-specific history or evidence",
+      "owning_route": "answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-prayer"
+    }
+  ],
+  "retained_direct_christ_connections": [
+    "Joseph and Sidney Rigdon’s 1832 vision, Doctrine and Covenants 76",
+    "First Vision",
+    "Book of Mormon publication",
+    "Doctrine and Covenants 6 prayer and study application",
+    "Joseph’s Liberty Jail counsel in Doctrine and Covenants 121"
+  ],
+  "surrounding_method_review": "FirstVisionessay, historicalquestions, workedexample and records-study prose explicitly concern Joseph. Preserved.",
+  "illustration_inventory": [
+    {
+      "title": "Consider the work of publishing a book",
+      "image": "../assets/page-art/exclusive/joseph-printing-work-800.webp",
+      "disposition": "retained",
+      "basis": "Joseph biography, family, historical evidence, or explicitly related Joseph scripture and study application"
+    },
+    {
+      "title": "We saw Him",
+      "image": "/assets/page-art/jesus-journey/rt-vision-1832-960.webp",
+      "disposition": "retained",
+      "basis": "Joseph biography, family, historical evidence, or explicitly related Joseph scripture and study application"
+    },
+    {
+      "title": "Joseph Smith's account in his own words",
+      "image": "../assets/page-art/exclusive/joseph-account-reading-800.webp",
+      "disposition": "retained",
+      "basis": "Joseph biography, family, historical evidence, or explicitly related Joseph scripture and study application"
+    },
+    {
+      "title": "Joseph Smith's accounts across time",
+      "image": "../assets/page-art/topics/historical-study-desk-800.webp",
+      "disposition": "retained",
+      "basis": "Joseph biography, family, historical evidence, or explicitly related Joseph scripture and study application"
+    },
+    {
+      "title": "Oliver Cowdery joins the work",
+      "image": "../assets/page-art/exclusive/joseph-shared-reading-800.webp",
+      "disposition": "retained",
+      "basis": "Joseph biography, family, historical evidence, or explicitly related Joseph scripture and study application"
+    },
+    {
+      "title": "Praying beside their daughter",
+      "image": "../assets/page-art/joseph-family/lucy-prayer-for-sophronia-20261004-v2-960.webp",
+      "disposition": "retained",
+      "basis": "Joseph biography, family, historical evidence, or explicitly related Joseph scripture and study application"
+    },
+    {
+      "title": "A brother keeps watch",
+      "image": "../assets/page-art/joseph-family/lucy-hyrum-night-watch-20261004-v2-960.webp",
+      "disposition": "retained",
+      "basis": "Joseph biography, family, historical evidence, or explicitly related Joseph scripture and study application"
+    },
+    {
+      "title": "A mother’s faith travels with her daughter",
+      "image": "../assets/page-art/joseph-family/lucy-lucy-farewell-mother-20261004-v2-960.webp",
+      "disposition": "retained",
+      "basis": "Joseph biography, family, historical evidence, or explicitly related Joseph scripture and study application"
+    },
+    {
+      "title": "Gathering to listen",
+      "image": "../assets/page-art/joseph-family/lucy-family-evening-circle-20261004-v2-960.webp",
+      "disposition": "retained",
+      "basis": "Joseph biography, family, historical evidence, or explicitly related Joseph scripture and study application"
+    },
+    {
+      "title": "Alvin’s charge to his family",
+      "image": "../assets/page-art/joseph-family/lucy-alvin-care-for-parents-20261004-v2-960.webp",
+      "disposition": "retained",
+      "basis": "Joseph biography, family, historical evidence, or explicitly related Joseph scripture and study application"
+    },
+    {
+      "title": "Waiting through the night",
+      "image": "../assets/page-art/joseph-family/lucy-lucy-night-prayer-20261004-v2-960.webp",
+      "disposition": "retained",
+      "basis": "Joseph biography, family, historical evidence, or explicitly related Joseph scripture and study application"
+    },
+    {
+      "title": "Hyrum comes when he is needed",
+      "image": "../assets/page-art/joseph-family/lucy-hyrum-brings-chest-20261004-v2-960.webp",
+      "disposition": "retained",
+      "basis": "Joseph biography, family, historical evidence, or explicitly related Joseph scripture and study application"
+    },
+    {
+      "title": "A mother speaks of mercy",
+      "image": "../assets/page-art/joseph-family/lucy-lucy-hope-forgiveness-20261004-v2-960.webp",
+      "disposition": "retained",
+      "basis": "Joseph biography, family, historical evidence, or explicitly related Joseph scripture and study application"
+    },
+    {
+      "title": "A son’s joy at his father’s baptism",
+      "image": "../assets/page-art/joseph-family/lucy-father-baptism-embrace-20261004-v2-960.webp",
+      "disposition": "retained",
+      "basis": "Joseph biography, family, historical evidence, or explicitly related Joseph scripture and study application"
+    },
+    {
+      "title": "The care comes home",
+      "image": "../assets/page-art/joseph-family/lucy-children-care-for-lucy-20261004-v2-960.webp",
+      "disposition": "retained",
+      "basis": "Joseph biography, family, historical evidence, or explicitly related Joseph scripture and study application"
+    },
+    {
+      "title": "Lucy Mack Smith",
+      "image": "../assets/research/joseph-family/lucy-mack-smith-copy.jpg",
+      "disposition": "retained",
+      "basis": "Joseph biography, family, historical evidence, or explicitly related Joseph scripture and study application"
+    },
+    {
+      "title": "Isaac Hale Home",
+      "image": "../assets/research/joseph-family/hale-family-home.jpg",
+      "disposition": "retained",
+      "basis": "Joseph biography, family, historical evidence, or explicitly related Joseph scripture and study application"
+    },
+    {
+      "title": "David Hyrum Smith",
+      "image": "../assets/research/joseph-family/david-hyrum-adult.jpg",
+      "disposition": "retained",
+      "basis": "Joseph biography, family, historical evidence, or explicitly related Joseph scripture and study application"
+    },
+    {
+      "title": "Joseph Smith III",
+      "image": "../assets/research/joseph-family/joseph-smith-iii-later-life.jpg",
+      "disposition": "retained",
+      "basis": "Joseph biography, family, historical evidence, or explicitly related Joseph scripture and study application"
+    },
+    {
+      "title": "Alexander Hale Smith",
+      "image": "../assets/research/joseph-family/alexander-hale-later-life.jpg",
+      "disposition": "retained",
+      "basis": "Joseph biography, family, historical evidence, or explicitly related Joseph scripture and study application"
+    },
+    {
+      "title": "Choosing a life together",
+      "image": "../assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-wardrobe-v2-1536.webp",
+      "disposition": "retained",
+      "basis": "Joseph biography, family, historical evidence, or explicitly related Joseph scripture and study application"
+    },
+    {
+      "title": "Making a new home",
+      "image": "../assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-corrected-v2-1536.webp",
+      "disposition": "retained",
+      "basis": "Joseph biography, family, historical evidence, or explicitly related Joseph scripture and study application"
+    },
+    {
+      "title": "Emma’s work as a scribe",
+      "image": "../assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-wardrobe-v2-1536.webp",
+      "disposition": "retained",
+      "basis": "Joseph biography, family, historical evidence, or explicitly related Joseph scripture and study application"
+    },
+    {
+      "title": "Staying close in sorrow",
+      "image": "../assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-wardrobe-v2-1536.webp",
+      "disposition": "retained",
+      "basis": "Joseph biography, family, historical evidence, or explicitly related Joseph scripture and study application"
+    },
+    {
+      "title": "Work that sustained a household",
+      "image": "../assets/page-art/joseph-smith-likeness/family/joseph-household-labor-1828-1536.webp",
+      "disposition": "retained",
+      "basis": "Joseph biography, family, historical evidence, or explicitly related Joseph scripture and study application"
+    },
+    {
+      "title": "A small gift amid demanding work",
+      "image": "../assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-wardrobe-v2-1536.webp",
+      "disposition": "retained",
+      "basis": "Joseph biography, family, historical evidence, or explicitly related Joseph scripture and study application"
+    },
+    {
+      "title": "Praying together through uncertainty",
+      "image": "../assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-1536.webp",
+      "disposition": "retained",
+      "basis": "Joseph biography, family, historical evidence, or explicitly related Joseph scripture and study application"
+    },
+    {
+      "title": "Love carried across separation",
+      "image": "../assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-wardrobe-v2-1536.webp",
+      "disposition": "retained",
+      "basis": "Joseph biography, family, historical evidence, or explicitly related Joseph scripture and study application"
+    },
+    {
+      "title": "Seeking out those in need",
+      "image": "../assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-wardrobe-v2-1536.webp",
+      "disposition": "retained",
+      "basis": "Joseph biography, family, historical evidence, or explicitly related Joseph scripture and study application"
+    },
+    {
+      "title": "Beside my brother",
+      "image": "../assets/page-art/joseph-smith-likeness/brothers-960.webp",
+      "disposition": "retained",
+      "basis": "Joseph biography, family, historical evidence, or explicitly related Joseph scripture and study application"
+    },
+    {
+      "title": "Hyrum reflects beside scripture",
+      "image": "../assets/page-art/joseph-smith-likeness/family/hyrum-reading-before-carthage-1844-1536.webp",
+      "disposition": "retained",
+      "basis": "Joseph biography, family, historical evidence, or explicitly related Joseph scripture and study application"
+    },
+    {
+      "title": "Bring the question to God",
+      "image": "../assets/page-art/exclusive/joseph-inquiry-prayer-800.webp",
+      "disposition": "retained",
+      "basis": "Joseph biography, family, historical evidence, or explicitly related Joseph scripture and study application"
+    },
+    {
+      "title": "Listening with patience",
+      "image": "/assets/page-art/jesus-journey/rt-persuasion-960.webp",
+      "disposition": "retained",
+      "basis": "Joseph biography, family, historical evidence, or explicitly related Joseph scripture and study application"
+    }
+  ],
+  "biography_sha256": "fc9e19a88223dc254383a19de92c23ba36280b940e9557fb5a50149515732f9d",
+  "verification": {
+    "existing_footer_unchanged": true,
+    "remaining_linked_cards_unchanged": false,
+    "publication": "pending",
+    "remaining_linked_images_unchanged": true
+  },
+  "caption_revision": {
+    "id": "rt-persuasion",
+    "new": "Joseph’s counsel from Liberty Jail teaches persuasion, gentleness and love. As you discuss questions about his life, consider how those teachings can guide the conversation.",
+    "source": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121?lang=eng&id=p41-p44#p41",
+    "source_support": "Official section heading identifies epistles dictated by Joseph in Liberty Jail. Verses 41–44 teach persuasion, gentleness and love.",
+    "image_unchanged": true
+  }
+}
