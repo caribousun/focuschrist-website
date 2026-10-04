@@ -32,6 +32,10 @@ class Page(HTMLParser):
 
 def verify(pages,registry):
     errors=[];owners={};missing=[];hashes={}
+    # The current caption includes both imagined ease (19) and death (20).
+    # Historical generation/review records about ease alone retain verse 19.
+    if registry.get('rich-fool-03',{}).get('refs') != [['nt/luke/12','Luke 12:19–20','19-20']]:
+        errors.append('Rich Fool final caption source must include Luke 12:19–20')
     urls=[p['url'] for p in pages]
     if len(pages)!=76 or len(set(urls))!=76:errors.append('Expected exactly 76 distinct descendants: seven journeys, six collections, 63 individual studies')
     collection_urls={p['url'] for p in read('parable-collections-reviewed.json')}

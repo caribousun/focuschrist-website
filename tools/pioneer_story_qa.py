@@ -9,6 +9,10 @@ topics=lambda s:re.findall(r'data-topic="([^"]+)"',s)
 assert topics(page)==topics(baseline),'Existing29 topic identifiers/order changed'
 assert len(re.findall(r'data-focus-expand="(?:timeline|trail)"',page))==29
 assert page.count('class="pioneer-timeline-group"')==3
+# Bind the timeline summary to the official successful-arrival denominator.
+handcart_timeline=re.search(r'<div class="timeline-item"[^>]*data-topic="handcart".*?<p class="timeline-desc">(.*?)</p>',page,re.S)
+assert handcart_timeline, 'Handcart timeline entry missing'
+assert handcart_timeline.group(1)=='About 3,000 pioneers successfully made the trek in handcart companies by 1860. The Martin and Willie handcart companies face tragic rescues in 1856.', 'Preserve official handcart qualifier, successful-arrival denominator and period'
 assert page.count('class="pioneer-story-card"')==18
 triggers=re.findall(r'data-artwork-detail="([^"]+)"',page)
 records=re.findall(r'data-artwork-detail-content="([^"]+)"',page)

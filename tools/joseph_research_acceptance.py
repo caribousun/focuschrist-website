@@ -8,6 +8,11 @@ REJECTED_ARTWORK_BADGES = ('New artistic interpretation', 'New artwork · histor
 ARTWORK_FOOTER_DISCLOSURE = ('Artwork on focusChrist includes AI-generated artistic interpretations. '
     'Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.')
 REJECTED_SCENE_BOILERPLATE = (
+    'without claiming a particular family dispute or its outcome',
+    'without claiming to display everything he owned',
+    'This is an illustration of His parable.',
+    'This cloth-market exchange is an illustration of that activity, not merchandise specified in the parable.',
+    'The father watching at the gate is an artistic detail that gives the departure a personal setting.',
     'their clothing, setting and gesture are not a record of the wedding',
     'its appearance, the handoff and the couple’s clothing are interpreted',
     'The clothing and session are interpreted',
