@@ -1,0 +1,20 @@
+{
+  "reviewer": "Fermi",
+  "status": "SCOPED_MUTUAL_INVENTORY_CONCURRENCE",
+  "own_receipt": {
+    "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-candidate-verification\\work\\fermi\\strict-inventory-review.json",
+    "sha256": "94f7e7e55dd59543c7b7df2164f60c00d83cb6aca85259809b3716f4f73b6f99"
+  },
+  "newton_receipt": {
+    "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-candidate-verification\\work\\newton\\strict-inventory-review.json",
+    "sha256": "aeb1e608e05ce06252055032036c586f6d9d039a796c220099f8fed869900170"
+  },
+  "concurrence": "Read Newton exact receipt and independently verified technical evidence hash, matching exact page hashes, counts, classification/exclusion evidence. Agree scoped ownership, original classification and delivery inventory requirements are met. Both reviewers concur within this scope.",
+  "page_hashes": {
+    "art-study/be-still.html": "832f2c73e4632c35bffe8b72d5ca07289a493f200360bdf1932cc01293f35bc8",
+    "art-study/suffer-the-little-children.html": "1d4cfe03d86758d7cea99b4897d3fa4ac465e0ed75d4c21aaf6cf92363027ad9",
+    "art-study/the-good-shepherd.html": "0e3cf97723df9127cfbcd7d0484a2b6fa79a6ef697eac4b43531f7763ef2bf46"
+  },
+  "release_status": "INCOMPLETE",
+  "remaining": "Sticky-nav lesson-return defect independently found by Newton/root requires repair; native full review, generated gallery/search, strict package, candidate/release/public checks remain separate. This receipt does not waive that defect or authorize a readiness claim."
+}

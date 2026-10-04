@@ -1,0 +1,8 @@
+{
+  "reviewer": "Newton",
+  "result": "HOLD",
+  "candidate_sha256": "71f7514766914a946fb1983af4f0dc072ddf89fd8fc0e5a37026fa431599116b",
+  "finding": "Full output and enlarged actual wrist crop inspected. Screen-right wrist has compact oval healed mark. Screen-left wrist still retains two elongated pale wrapping/branching bands; exact requested removal not achieved. Recognizable Home identity, downturned task gaze, pose, sheep, mantle and hand anatomy remain materially preserved. Do not accept as corrected or insert.",
+  "inspection_crop": "work/newton/gs1-v3-wrists.png",
+  "limits": "Direct actual pixel failure, not generation tool failure. No SITE changes; no new repair authorization."
+}

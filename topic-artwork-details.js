@@ -245,7 +245,17 @@
                     target.addEventListener('blur', function () { target.removeAttribute('tabindex'); }, { once: true });
                 }
                 target.focus({ preventScroll: true });
-                target.scrollIntoView({ block: 'start', behavior: 'auto' });
+                const studyNav = main.classList.contains('fc-art-study-page') && main.querySelector('.fc-study-nav');
+                const navStyle = studyNav && window.getComputedStyle(studyNav);
+                if (navStyle && (navStyle.position === 'sticky' || navStyle.position === 'fixed')) {
+                    // The local study navigation can wrap, so measure its actual clearance.
+                    const navTop = parseFloat(navStyle.top) || 0;
+                    const targetMargin = parseFloat(window.getComputedStyle(target).scrollMarginTop) || 0;
+                    const clearance = Math.max(targetMargin, navTop + studyNav.getBoundingClientRect().height + 16);
+                    window.scrollTo({ top: Math.max(0, window.scrollY + target.getBoundingClientRect().top - clearance), behavior: 'instant' });
+                } else {
+                    target.scrollIntoView({ block: 'start', behavior: 'auto' });
+                }
             } else if (returnFocus) returnFocus.focus({ preventScroll: true });
             returnFocus = null;
             continueTarget = null;

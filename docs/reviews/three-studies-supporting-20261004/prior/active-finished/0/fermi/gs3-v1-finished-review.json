@@ -1,0 +1,28 @@
+{
+  "reviewer": "Fermi",
+  "key": "GS3",
+  "stage": "FINISHED_PIXEL_REVIEW",
+  "candidate": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\gs3-candidate-v1.png",
+  "candidate_sha256": "6a01f16b128969e7a5877ec7827a24049e025d00c79fb49ee1d627ff3f9ffeb6",
+  "prompt_sha256": "6bdee4f165c2b1a3295ff26e19a406e593e73b38dfd23b321ee0ac98d6c366cd",
+  "plan_sha256": "d6b81ca9f96d0f539c155debf65e91ce2953124ecd449cb9f978b6f28bfa5914",
+  "result": "PASS_FERMI_PIXEL_CONCURRENCE",
+  "defects": [],
+  "passed": [
+    "Two main contemporary adults have distinct natural faces/appropriate adult ages; no Christ or established named-character identity transfer.",
+    "Man looks to stitching and woman looks downward toward shared repair; expressions are attentive and unforced.",
+    "Full and hand-detail views show man controlling needle/thread at opened coat seam with separate right/left hands. Woman holds coat lining clear with a separate traceable hand; no fused digits or impossible reach detected.",
+    "Coat is empty, opened on table with exposed lining; sewing kit/thread make repair visible. No sewing on a clothed body, staged donation or money exchange.",
+    "Photographic natural daylight, aged skin/hair/fabric and modest ordinary clothing; no readable private/brand details.",
+    "Cooperative seam repair is distinguishable from prior Jane solitary sewing, coat distribution and shoe-tying comparator pixels. James2 and Mosiah4 application preserved without historical or cure claim.",
+    "Essential faces and shared seam within3:2 margins; no cropping of critical action in supplied full asset."
+  ],
+  "inspection": [
+    "Full original1536x1024 viewed",
+    "Hands/seam and both faces cropped from exact source and inspected in detail"
+  ],
+  "required_correction": null,
+  "SITE_use_approved": false,
+  "limits": "Image-only review. No page/native/public/owner aesthetic acceptance. Revisions invalidate affected pixel conclusions and require exact new-hash review.",
+  "preserved": "No SITE/Docs/canonical/generation edits, spending, schedules or foundation changes."
+}

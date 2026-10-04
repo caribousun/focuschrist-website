@@ -1,0 +1,799 @@
+{
+  "reviewer": "Fermi",
+  "status": "SCOPED_CURRENT_SNAPSHOT_LINEAGE_REVIEW_COMPLETE_NOT_FINAL_CANDIDATE_PASS",
+  "scope": "Retained15 plus accepted12; excludes held GS1/CH5 and forthcoming final BS1 delivery family. Final30 freeze coverage remains pending.",
+  "evidence": {
+    "pixel_scan": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-integration-continuation\\work\\fermi\\lineage-candidate-scan.json",
+    "pixel_scan_sha256": "b11057840df44a52c04a416892dff68212a000b09c37b58b7e44360e14bb13b7",
+    "asset_metrics": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-integration-continuation\\work\\fermi\\lineage-assets-current.json",
+    "asset_metrics_sha256": "ba14bab84c6babe1a9f754dc87b713df33e391d9bfebd35ca9916781bd757a22",
+    "occurrence_ledger": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-integration-continuation\\work\\fermi\\current-occurrences\\occurrence-ledger.json",
+    "occurrence_sha256": "330de51d889be6429b66dd8f22ffd6afdabd9157a27139a4f54e4107531a0684",
+    "registry_references": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-integration-continuation\\work\\fermi\\lineage-registry-references.json",
+    "registry_references_sha256": "4dbc761a4e98ffdc430aaf34cd43c51fef80ef39b3b20602165644cf1a260c75"
+  },
+  "coverage": {
+    "canonical_routes": 130,
+    "raster_assets": 2328,
+    "revalidated_prior_pixel_metrics": 2010,
+    "fresh_pixel_decodes": 318,
+    "fresh_sift_representatives": 2305,
+    "raster_read_errors": 0,
+    "broader_html_documents": 132,
+    "extra_documents": [
+      "404.html",
+      "google3fa84a4b37862f36.html"
+    ],
+    "broader_image_inline_occurrences": 1410,
+    "gallery_records": 952
+  },
+  "targets": [
+    {
+      "key": "assets/page-art/art-study/full/shepherd-sees-one.webp",
+      "original_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\art-study\\full\\shepherd-sees-one.webp",
+      "sha256": "fc1523a72660dd51c6ba2d9018b04ebcd932adf43835897b3c93af98d89af4a6",
+      "intended_owner": "art-study/the-good-shepherd.html",
+      "retained": true,
+      "adjudication": "Own full/thumbnail delivery family only; all hits visually same composition and sole HTML owner confirmed",
+      "canonical_occurrences": {
+        "assets/page-art/art-study/full/shepherd-sees-one.webp": [
+          {
+            "route": "art-study/the-good-shepherd.html",
+            "tag": "a",
+            "attribute": "href",
+            "section": null,
+            "class": []
+          },
+          {
+            "route": "art-study/the-good-shepherd.html",
+            "tag": "img",
+            "attribute": "srcset",
+            "section": null,
+            "class": []
+          }
+        ],
+        "assets/page-art/art-study/thumbs/shepherd-sees-one.webp": [
+          {
+            "route": "art-study/the-good-shepherd.html",
+            "tag": "img",
+            "attribute": "src",
+            "section": null,
+            "class": []
+          },
+          {
+            "route": "art-study/the-good-shepherd.html",
+            "tag": "img",
+            "attribute": "srcset",
+            "section": null,
+            "class": []
+          }
+        ]
+      }
+    },
+    {
+      "key": "assets/page-art/art-study/full/shepherd-carries-lamb.webp",
+      "original_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\art-study\\full\\shepherd-carries-lamb.webp",
+      "sha256": "7747830e7335539a881b235dedf001f704c73d237f290c98fd61a9448a7f78ba",
+      "intended_owner": "art-study/the-good-shepherd.html",
+      "retained": true,
+      "adjudication": "Own full/thumbnail delivery family only; all hits visually same composition and sole HTML owner confirmed",
+      "canonical_occurrences": {
+        "assets/page-art/art-study/full/shepherd-carries-lamb.webp": [
+          {
+            "route": "art-study/the-good-shepherd.html",
+            "tag": "a",
+            "attribute": "href",
+            "section": null,
+            "class": []
+          },
+          {
+            "route": "art-study/the-good-shepherd.html",
+            "tag": "img",
+            "attribute": "srcset",
+            "section": null,
+            "class": []
+          }
+        ],
+        "assets/page-art/art-study/thumbs/shepherd-carries-lamb.webp": [
+          {
+            "route": "art-study/the-good-shepherd.html",
+            "tag": "img",
+            "attribute": "src",
+            "section": null,
+            "class": []
+          },
+          {
+            "route": "art-study/the-good-shepherd.html",
+            "tag": "img",
+            "attribute": "srcset",
+            "section": null,
+            "class": []
+          }
+        ]
+      }
+    },
+    {
+      "key": "assets/page-art/art-study/full/shepherd-shares-burden.webp",
+      "original_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\art-study\\full\\shepherd-shares-burden.webp",
+      "sha256": "d7aeb93b9a83147993c7933180d2ea73e7cfd4461c40c778793172927a0d6b5a",
+      "intended_owner": "art-study/the-good-shepherd.html",
+      "retained": true,
+      "adjudication": "Own full/thumbnail delivery family only; all hits visually same composition and sole HTML owner confirmed",
+      "canonical_occurrences": {
+        "assets/page-art/art-study/full/shepherd-shares-burden.webp": [
+          {
+            "route": "art-study/the-good-shepherd.html",
+            "tag": "a",
+            "attribute": "href",
+            "section": null,
+            "class": []
+          },
+          {
+            "route": "art-study/the-good-shepherd.html",
+            "tag": "img",
+            "attribute": "srcset",
+            "section": null,
+            "class": []
+          }
+        ],
+        "assets/page-art/art-study/thumbs/shepherd-shares-burden.webp": [
+          {
+            "route": "art-study/the-good-shepherd.html",
+            "tag": "img",
+            "attribute": "src",
+            "section": null,
+            "class": []
+          },
+          {
+            "route": "art-study/the-good-shepherd.html",
+            "tag": "img",
+            "attribute": "srcset",
+            "section": null,
+            "class": []
+          }
+        ]
+      }
+    },
+    {
+      "key": "assets/page-art/art-study/full/shepherd-calls-zacchaeus.webp",
+      "original_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\art-study\\full\\shepherd-calls-zacchaeus.webp",
+      "sha256": "db1509ed08bfe12b04e4de33a3b6a728e8427895c6a3b567c01a517e91891041",
+      "intended_owner": "art-study/the-good-shepherd.html",
+      "retained": true,
+      "adjudication": "Own full/thumbnail delivery family only; all hits visually same composition and sole HTML owner confirmed",
+      "canonical_occurrences": {
+        "assets/page-art/art-study/full/shepherd-calls-zacchaeus.webp": [
+          {
+            "route": "art-study/the-good-shepherd.html",
+            "tag": "a",
+            "attribute": "href",
+            "section": null,
+            "class": []
+          },
+          {
+            "route": "art-study/the-good-shepherd.html",
+            "tag": "img",
+            "attribute": "srcset",
+            "section": null,
+            "class": []
+          }
+        ],
+        "assets/page-art/art-study/thumbs/shepherd-calls-zacchaeus.webp": [
+          {
+            "route": "art-study/the-good-shepherd.html",
+            "tag": "img",
+            "attribute": "src",
+            "section": null,
+            "class": []
+          },
+          {
+            "route": "art-study/the-good-shepherd.html",
+            "tag": "img",
+            "attribute": "srcset",
+            "section": null,
+            "class": []
+          }
+        ]
+      }
+    },
+    {
+      "key": "assets/page-art/art-study/full/shepherd-seeks-one-20260919.webp",
+      "original_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\art-study\\full\\shepherd-seeks-one-20260919.webp",
+      "sha256": "029684658fd2fd404729db71ee451862ffb67ea6aae62ae50ed1e2254a8f946f",
+      "intended_owner": "art-study/the-good-shepherd.html",
+      "retained": true,
+      "adjudication": "Own full/thumbnail delivery family only; all hits visually same composition and sole HTML owner confirmed",
+      "canonical_occurrences": {
+        "assets/page-art/art-study/full/shepherd-seeks-one-20260919.webp": [
+          {
+            "route": "art-study/the-good-shepherd.html",
+            "tag": "a",
+            "attribute": "href",
+            "section": null,
+            "class": []
+          },
+          {
+            "route": "art-study/the-good-shepherd.html",
+            "tag": "img",
+            "attribute": "srcset",
+            "section": null,
+            "class": []
+          }
+        ],
+        "assets/page-art/art-study/thumbs/shepherd-seeks-one-20260919.webp": [
+          {
+            "route": "art-study/the-good-shepherd.html",
+            "tag": "img",
+            "attribute": "src",
+            "section": null,
+            "class": []
+          },
+          {
+            "route": "art-study/the-good-shepherd.html",
+            "tag": "img",
+            "attribute": "srcset",
+            "section": null,
+            "class": []
+          }
+        ]
+      }
+    },
+    {
+      "key": "assets/page-art/art-study/full/children-gather-close.webp",
+      "original_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\art-study\\full\\children-gather-close.webp",
+      "sha256": "85d4a603bd46ef7b1f73c281f0eff4f634206c0bd9d288dce7fa0129b5410cd1",
+      "intended_owner": "art-study/suffer-the-little-children.html",
+      "retained": true,
+      "adjudication": "Own full/thumbnail delivery family only; all hits visually same composition and sole HTML owner confirmed",
+      "canonical_occurrences": {
+        "assets/page-art/art-study/full/children-gather-close.webp": [
+          {
+            "route": "art-study/suffer-the-little-children.html",
+            "tag": "a",
+            "attribute": "href",
+            "section": null,
+            "class": []
+          },
+          {
+            "route": "art-study/suffer-the-little-children.html",
+            "tag": "img",
+            "attribute": "srcset",
+            "section": null,
+            "class": []
+          }
+        ],
+        "assets/page-art/art-study/thumbs/children-gather-close.webp": [
+          {
+            "route": "art-study/suffer-the-little-children.html",
+            "tag": "img",
+            "attribute": "src",
+            "section": null,
+            "class": []
+          },
+          {
+            "route": "art-study/suffer-the-little-children.html",
+            "tag": "img",
+            "attribute": "srcset",
+            "section": null,
+            "class": []
+          }
+        ]
+      }
+    },
+    {
+      "key": "assets/page-art/art-study/full/children-welcome-shy-child.webp",
+      "original_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\art-study\\full\\children-welcome-shy-child.webp",
+      "sha256": "c95205d67cbcb8ab0337511ec2a5801ccaa3fe417197b79fb379b05b875f7256",
+      "intended_owner": "art-study/suffer-the-little-children.html",
+      "retained": true,
+      "adjudication": "Own full/thumbnail delivery family only; all hits visually same composition and sole HTML owner confirmed",
+      "canonical_occurrences": {
+        "assets/page-art/art-study/full/children-welcome-shy-child.webp": [
+          {
+            "route": "art-study/suffer-the-little-children.html",
+            "tag": "a",
+            "attribute": "href",
+            "section": null,
+            "class": []
+          },
+          {
+            "route": "art-study/suffer-the-little-children.html",
+            "tag": "img",
+            "attribute": "srcset",
+            "section": null,
+            "class": []
+          }
+        ],
+        "assets/page-art/art-study/thumbs/children-welcome-shy-child.webp": [
+          {
+            "route": "art-study/suffer-the-little-children.html",
+            "tag": "img",
+            "attribute": "src",
+            "section": null,
+            "class": []
+          },
+          {
+            "route": "art-study/suffer-the-little-children.html",
+            "tag": "img",
+            "attribute": "srcset",
+            "section": null,
+            "class": []
+          }
+        ]
+      }
+    },
+    {
+      "key": "assets/page-art/art-study/full/children-listen-under-tree.webp",
+      "original_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\art-study\\full\\children-listen-under-tree.webp",
+      "sha256": "193a5ecda7f4bbda37ae92b26c064edc08aa58442ef98d3b58c6b822f5987805",
+      "intended_owner": "art-study/suffer-the-little-children.html",
+      "retained": true,
+      "adjudication": "Own full/thumbnail delivery family only; all hits visually same composition and sole HTML owner confirmed",
+      "canonical_occurrences": {
+        "assets/page-art/art-study/full/children-listen-under-tree.webp": [
+          {
+            "route": "art-study/suffer-the-little-children.html",
+            "tag": "a",
+            "attribute": "href",
+            "section": null,
+            "class": []
+          },
+          {
+            "route": "art-study/suffer-the-little-children.html",
+            "tag": "img",
+            "attribute": "srcset",
+            "section": null,
+            "class": []
+          }
+        ],
+        "assets/page-art/art-study/thumbs/children-listen-under-tree.webp": [
+          {
+            "route": "art-study/suffer-the-little-children.html",
+            "tag": "img",
+            "attribute": "src",
+            "section": null,
+            "class": []
+          },
+          {
+            "route": "art-study/suffer-the-little-children.html",
+            "tag": "img",
+            "attribute": "srcset",
+            "section": null,
+            "class": []
+          }
+        ]
+      }
+    },
+    {
+      "key": "assets/page-art/art-study/full/children-quiet-water.webp",
+      "original_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\art-study\\full\\children-quiet-water.webp",
+      "sha256": "e50fc2b7e243ffa4e442d29fa970a9169c6211a00d625db45ba548fca83b1336",
+      "intended_owner": "art-study/suffer-the-little-children.html",
+      "retained": true,
+      "adjudication": "Own full/thumbnail delivery family only; all hits visually same composition and sole HTML owner confirmed",
+      "canonical_occurrences": {
+        "assets/page-art/art-study/full/children-quiet-water.webp": [
+          {
+            "route": "art-study/suffer-the-little-children.html",
+            "tag": "a",
+            "attribute": "href",
+            "section": null,
+            "class": []
+          },
+          {
+            "route": "art-study/suffer-the-little-children.html",
+            "tag": "img",
+            "attribute": "srcset",
+            "section": null,
+            "class": []
+          }
+        ],
+        "assets/page-art/art-study/thumbs/children-quiet-water.webp": [
+          {
+            "route": "art-study/suffer-the-little-children.html",
+            "tag": "img",
+            "attribute": "src",
+            "section": null,
+            "class": []
+          },
+          {
+            "route": "art-study/suffer-the-little-children.html",
+            "tag": "img",
+            "attribute": "srcset",
+            "section": null,
+            "class": []
+          }
+        ]
+      }
+    },
+    {
+      "key": "assets/page-art/art-study/full/children-listen-at-home-20260919.webp",
+      "original_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\art-study\\full\\children-listen-at-home-20260919.webp",
+      "sha256": "afde94ae47f90109be64adba21ed2c6f9f5a3d5e8e00d125d5f0352812c34d1e",
+      "intended_owner": "art-study/suffer-the-little-children.html",
+      "retained": true,
+      "adjudication": "Own full/thumbnail delivery family only; all hits visually same composition and sole HTML owner confirmed",
+      "canonical_occurrences": {
+        "assets/page-art/art-study/full/children-listen-at-home-20260919.webp": [
+          {
+            "route": "art-study/suffer-the-little-children.html",
+            "tag": "a",
+            "attribute": "href",
+            "section": null,
+            "class": []
+          },
+          {
+            "route": "art-study/suffer-the-little-children.html",
+            "tag": "img",
+            "attribute": "srcset",
+            "section": null,
+            "class": []
+          }
+        ],
+        "assets/page-art/art-study/thumbs/children-listen-at-home-20260919.webp": [
+          {
+            "route": "art-study/suffer-the-little-children.html",
+            "tag": "img",
+            "attribute": "src",
+            "section": null,
+            "class": []
+          },
+          {
+            "route": "art-study/suffer-the-little-children.html",
+            "tag": "img",
+            "attribute": "srcset",
+            "section": null,
+            "class": []
+          }
+        ]
+      }
+    },
+    {
+      "key": "assets/page-art/art-study/full/still-city-companion.webp",
+      "original_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\art-study\\full\\still-city-companion.webp",
+      "sha256": "cff36c78346ed712f39a5b81207cd5784d233dac1e800dedbc8a63a425d814e0",
+      "intended_owner": "art-study/be-still.html",
+      "retained": true,
+      "adjudication": "Own full/thumbnail delivery family only; all hits visually same composition and sole HTML owner confirmed",
+      "canonical_occurrences": {
+        "assets/page-art/art-study/full/still-city-companion.webp": [
+          {
+            "route": "art-study/be-still.html",
+            "tag": "a",
+            "attribute": "href",
+            "section": null,
+            "class": []
+          },
+          {
+            "route": "art-study/be-still.html",
+            "tag": "img",
+            "attribute": "srcset",
+            "section": null,
+            "class": []
+          }
+        ],
+        "assets/page-art/art-study/thumbs/still-city-companion.webp": [
+          {
+            "route": "art-study/be-still.html",
+            "tag": "img",
+            "attribute": "src",
+            "section": null,
+            "class": []
+          },
+          {
+            "route": "art-study/be-still.html",
+            "tag": "img",
+            "attribute": "srcset",
+            "section": null,
+            "class": []
+          }
+        ]
+      }
+    },
+    {
+      "key": "assets/page-art/art-study/full/still-storm-boat.webp",
+      "original_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\art-study\\full\\still-storm-boat.webp",
+      "sha256": "fdb60ec2ecdee51a24264fc53f0c1aed7cbde5d10dcaec32a6e3d8840b42911c",
+      "intended_owner": "art-study/be-still.html",
+      "retained": true,
+      "adjudication": "Own full/thumbnail delivery family only; all hits visually same composition and sole HTML owner confirmed",
+      "canonical_occurrences": {
+        "assets/page-art/art-study/full/still-storm-boat.webp": [
+          {
+            "route": "art-study/be-still.html",
+            "tag": "a",
+            "attribute": "href",
+            "section": null,
+            "class": []
+          },
+          {
+            "route": "art-study/be-still.html",
+            "tag": "img",
+            "attribute": "srcset",
+            "section": null,
+            "class": []
+          }
+        ],
+        "assets/page-art/art-study/thumbs/still-storm-boat.webp": [
+          {
+            "route": "art-study/be-still.html",
+            "tag": "img",
+            "attribute": "src",
+            "section": null,
+            "class": []
+          },
+          {
+            "route": "art-study/be-still.html",
+            "tag": "img",
+            "attribute": "srcset",
+            "section": null,
+            "class": []
+          }
+        ]
+      }
+    },
+    {
+      "key": "assets/page-art/art-study/full/still-lakeside-pause.webp",
+      "original_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\art-study\\full\\still-lakeside-pause.webp",
+      "sha256": "67fcb39e322e93f2389d465a20b73b6f059b41a1557cc627405c5781a796b724",
+      "intended_owner": "art-study/be-still.html",
+      "retained": true,
+      "adjudication": "Own full/thumbnail delivery family only; all hits visually same composition and sole HTML owner confirmed",
+      "canonical_occurrences": {
+        "assets/page-art/art-study/full/still-lakeside-pause.webp": [
+          {
+            "route": "art-study/be-still.html",
+            "tag": "a",
+            "attribute": "href",
+            "section": null,
+            "class": []
+          },
+          {
+            "route": "art-study/be-still.html",
+            "tag": "img",
+            "attribute": "srcset",
+            "section": null,
+            "class": []
+          }
+        ],
+        "assets/page-art/art-study/thumbs/still-lakeside-pause.webp": [
+          {
+            "route": "art-study/be-still.html",
+            "tag": "img",
+            "attribute": "src",
+            "section": null,
+            "class": []
+          },
+          {
+            "route": "art-study/be-still.html",
+            "tag": "img",
+            "attribute": "srcset",
+            "section": null,
+            "class": []
+          }
+        ]
+      }
+    },
+    {
+      "key": "assets/page-art/art-study/full/still-shared-lift.webp",
+      "original_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\art-study\\full\\still-shared-lift.webp",
+      "sha256": "a9c935fab827fcc3e2b6b3c53d748373f9cc7660020a2089c992ab0b741da869",
+      "intended_owner": "art-study/be-still.html",
+      "retained": true,
+      "adjudication": "Own full/thumbnail delivery family only; all hits visually same composition and sole HTML owner confirmed",
+      "canonical_occurrences": {
+        "assets/page-art/art-study/full/still-shared-lift.webp": [
+          {
+            "route": "art-study/be-still.html",
+            "tag": "a",
+            "attribute": "href",
+            "section": null,
+            "class": []
+          },
+          {
+            "route": "art-study/be-still.html",
+            "tag": "img",
+            "attribute": "srcset",
+            "section": null,
+            "class": []
+          }
+        ],
+        "assets/page-art/art-study/thumbs/still-shared-lift.webp": [
+          {
+            "route": "art-study/be-still.html",
+            "tag": "img",
+            "attribute": "src",
+            "section": null,
+            "class": []
+          },
+          {
+            "route": "art-study/be-still.html",
+            "tag": "img",
+            "attribute": "srcset",
+            "section": null,
+            "class": []
+          }
+        ]
+      }
+    },
+    {
+      "key": "assets/page-art/art-study/full/still-phone-down-scripture-20260919.webp",
+      "original_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\art-study\\full\\still-phone-down-scripture-20260919.webp",
+      "sha256": "09123ea02209812f8158a257fbc0ac5562231f3cb6a14bc0303951bd992fae18",
+      "intended_owner": "art-study/be-still.html",
+      "retained": true,
+      "adjudication": "Own full/thumbnail delivery family only; all hits visually same composition and sole HTML owner confirmed",
+      "canonical_occurrences": {
+        "assets/page-art/art-study/full/still-phone-down-scripture-20260919.webp": [
+          {
+            "route": "art-study/be-still.html",
+            "tag": "a",
+            "attribute": "href",
+            "section": null,
+            "class": []
+          },
+          {
+            "route": "art-study/be-still.html",
+            "tag": "img",
+            "attribute": "srcset",
+            "section": null,
+            "class": []
+          }
+        ],
+        "assets/page-art/art-study/thumbs/still-phone-down-scripture-20260919.webp": [
+          {
+            "route": "art-study/be-still.html",
+            "tag": "img",
+            "attribute": "src",
+            "section": null,
+            "class": []
+          },
+          {
+            "route": "art-study/be-still.html",
+            "tag": "img",
+            "attribute": "srcset",
+            "section": null,
+            "class": []
+          }
+        ]
+      }
+    },
+    {
+      "key": "GS3",
+      "original_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\gs3-candidate-v1.png",
+      "sha256": "6a01f16b128969e7a5877ec7827a24049e025d00c79fb49ee1d627ff3f9ffeb6",
+      "intended_owner": "art-study/the-good-shepherd.html",
+      "retained": false,
+      "adjudication": "No existing site exact/decoded/pHash/SIFT candidate; new twelve contact compositions independently inspected and mutually distinct; not yet integrated",
+      "canonical_occurrences": {}
+    },
+    {
+      "key": "GS5",
+      "original_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\gs5-candidate-v1.png",
+      "sha256": "d0babc7bf03ef3133c731479d9c3170191ddecdf10843bd2fc2ea0184293c9c5",
+      "intended_owner": "art-study/the-good-shepherd.html",
+      "retained": false,
+      "adjudication": "No existing site exact/decoded/pHash/SIFT candidate; new twelve contact compositions independently inspected and mutually distinct; not yet integrated",
+      "canonical_occurrences": {}
+    },
+    {
+      "key": "GS2",
+      "original_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\gs2-candidate-v2.png",
+      "sha256": "651e693f7c84c0948bff58bebf11291d1d86ea58948aa6834a29366059cca7c5",
+      "intended_owner": "art-study/the-good-shepherd.html",
+      "retained": false,
+      "adjudication": "No existing site exact/decoded/pHash/SIFT candidate; new twelve contact compositions independently inspected and mutually distinct; not yet integrated",
+      "canonical_occurrences": {}
+    },
+    {
+      "key": "GS4",
+      "original_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\gs4-candidate-v2.png",
+      "sha256": "f09aa044fa31f94e65a1a0d6e7cbd1b97bdddea269c707496ca99b571f73d808",
+      "intended_owner": "art-study/the-good-shepherd.html",
+      "retained": false,
+      "adjudication": "No existing site exact/decoded/pHash/SIFT candidate; new twelve contact compositions independently inspected and mutually distinct; not yet integrated",
+      "canonical_occurrences": {}
+    },
+    {
+      "key": "CH1",
+      "original_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\ch1-candidate-v1.png",
+      "sha256": "fc4079d49649d1ac88a3bd2e2f69a8e205b1731436effd4b8c902deac47a92c1",
+      "intended_owner": "art-study/suffer-the-little-children.html",
+      "retained": false,
+      "adjudication": "No existing site exact/decoded/pHash/SIFT candidate; new twelve contact compositions independently inspected and mutually distinct; not yet integrated",
+      "canonical_occurrences": {}
+    },
+    {
+      "key": "CH3",
+      "original_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\ch3-candidate-v1.png",
+      "sha256": "8d22d7b07969c14d94968108fd36a210a7f7d333a7cfeb372a8daccac27a23a0",
+      "intended_owner": "art-study/suffer-the-little-children.html",
+      "retained": false,
+      "adjudication": "No existing site exact/decoded/pHash/SIFT candidate; new twelve contact compositions independently inspected and mutually distinct; not yet integrated",
+      "canonical_occurrences": {}
+    },
+    {
+      "key": "CH2",
+      "original_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-enriched-continuation\\work\\gary\\generated\\ch2-candidate-v2.png",
+      "sha256": "12ac73978b43eed0dc24db02529424d7d2ac2338494291716b7a6dc9abb6006b",
+      "intended_owner": "art-study/suffer-the-little-children.html",
+      "retained": false,
+      "adjudication": "No existing site exact/decoded/pHash/SIFT candidate; new twelve contact compositions independently inspected and mutually distinct; not yet integrated",
+      "canonical_occurrences": {}
+    },
+    {
+      "key": "CH4",
+      "original_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-enriched-continuation\\work\\gary\\generated\\ch4-candidate-v1.png",
+      "sha256": "5cc23a24311c8bbb95c33e8032c8cbfcd09964344f9b93f8baa7ab3ba5e7d6aa",
+      "intended_owner": "art-study/suffer-the-little-children.html",
+      "retained": false,
+      "adjudication": "No existing site exact/decoded/pHash/SIFT candidate; new twelve contact compositions independently inspected and mutually distinct; not yet integrated",
+      "canonical_occurrences": {}
+    },
+    {
+      "key": "BS2",
+      "original_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-enriched-continuation\\work\\gary\\generated\\bs2-candidate-v1.png",
+      "sha256": "ffb4b79a8e3e4c6c3d539ec46f6c10ab7fdd55431d40594fe1da5dfc082babd7",
+      "intended_owner": "art-study/be-still.html",
+      "retained": false,
+      "adjudication": "No existing site exact/decoded/pHash/SIFT candidate; new twelve contact compositions independently inspected and mutually distinct; not yet integrated",
+      "canonical_occurrences": {}
+    },
+    {
+      "key": "BS3",
+      "original_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-enriched-continuation\\work\\gary\\generated\\bs3-candidate-v1.png",
+      "sha256": "a1007bf3a7f40e3dfb3efa1d8cb2a6a8fe3072bad565898aa3811c7dfd4668b7",
+      "intended_owner": "art-study/be-still.html",
+      "retained": false,
+      "adjudication": "No existing site exact/decoded/pHash/SIFT candidate; new twelve contact compositions independently inspected and mutually distinct; not yet integrated",
+      "canonical_occurrences": {}
+    },
+    {
+      "key": "BS4",
+      "original_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-enriched-continuation\\work\\gary\\generated\\bs4-candidate-v1.png",
+      "sha256": "5e0da18e670f73a983b92e39cbf0824e1e5782e753961dc60e5aeb0f3b75d1a3",
+      "intended_owner": "art-study/be-still.html",
+      "retained": false,
+      "adjudication": "No existing site exact/decoded/pHash/SIFT candidate; new twelve contact compositions independently inspected and mutually distinct; not yet integrated",
+      "canonical_occurrences": {}
+    },
+    {
+      "key": "BS5",
+      "original_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-enriched-continuation\\work\\gary\\generated\\bs5-candidate-v1.png",
+      "sha256": "1904a0cb7c0bb79c3fbe27cecec7401524e9514d7cbd0404c9168410a2bdf4e3",
+      "intended_owner": "art-study/be-still.html",
+      "retained": false,
+      "adjudication": "No existing site exact/decoded/pHash/SIFT candidate; new twelve contact compositions independently inspected and mutually distinct; not yet integrated",
+      "canonical_occurrences": {}
+    }
+  ],
+  "specific_adjudications": [
+    {
+      "asset": "assets/page-art/art-study/full/still-storm-boat.webp",
+      "type": "dynamic_owner_reference",
+      "evidence": "timeline-images.js life13 uses same-family thumbnail and assigns href /art-study/be-still.html#psalm-context. render builds image link and Explore related story link to entry.href; owning section independently found by both scans. Loaded by three timeline pages but route-kind select confines this registry entry to life timeline.",
+      "not_claimed": "No fresh runtime click or exhaustive lazy state review performed."
+    },
+    {
+      "asset": "assets/page-art/art-study/full/shepherd-calls-zacchaeus.webp",
+      "type": "identity_reference_not_same_original",
+      "evidence": "Four Jesus-journey registries list it in referenced_image_paths for tp-zacchaeus-response. Exact review describes later house conversation/open-hand commitment, distinct from tree invitation; current corpus found no duplicate crop. Its metadata mention is not owning display."
+    },
+    {
+      "type": "gallery_index",
+      "evidence": "Generated art-gallery.json lists owning artwork records for discovery; neither index nor full/thumb views creates additional originals."
+    }
+  ],
+  "retained_provenance_limits": "Prior exact receipt has3September19 original PNG logs verified and12 historical generation logs not reconstructed. This new scan confirms current families/placement and does not fabricate missing originals.",
+  "visual_evidence": [
+    "retained-family-contact.jpg: independently viewed all15full/thumb pairs, all same composition",
+    "new12-lineage-contact.jpg: independently viewed12distinct actions/compositions; no reuse among retained15"
+  ],
+  "limits": [
+    "Similarity screening nominates likely crops/derivatives, not mathematical proof of absence under arbitrary transformations",
+    "Final candidate page/image bytes and all30families still need freeze review",
+    "CSS/JS actual visibility and complete native page interactions remain separate",
+    "No strict review booleans or final-compliance claim written",
+    "No new artwork generation, SITE or canonical mutation"
+  ]
+}

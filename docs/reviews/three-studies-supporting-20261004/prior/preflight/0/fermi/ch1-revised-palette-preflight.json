@@ -1,0 +1,29 @@
+{
+  "reviewer": "Fermi",
+  "result": "PASS_EXACT_PROMPT_PREFLIGHT_ONLY",
+  "prompt_sha256": "b4d4f4544b714bec9bcab3d19ce91b9aa7e40dd4ad9d18a69d9baeb69cbeb83e",
+  "input_file": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\living-christ-enriched-verification\\work\\gary\\ch1-palette-proposal.json",
+  "input_sha256": "02e51656d6e041aa6c46766c442aa3227317b361e5ce2dd3b29c57c25a17f079",
+  "comparison": "Fresh full IsaiahNazareth pixels show medium/dark slate blue-gray; full LookUnto smoke-lilac pixels read muted warm pink-mauve. Fresh sheets show Martha/Mary dusty plum and LivingPaul warm ash-rose. Proposed very pale cool gray with faint blue-violet cast differs in value from Isaiah and temperature from LookUnto/Martha/Paul. The no-pink/red/plum-brown/warm-rose wording prevents the prior intended overlap. This is a distinguishable generation target, not proof that a future rendering will implement it.",
+  "source": "Complete Matthew21 reread: children praise, priests/scribes object and Christ answers. Illustrative ages/count/faces/architecture remain explicitly unknown. No blessing queue/healing-event substitution.",
+  "comparator_files": [
+    {
+      "path": "assets/page-art/bible-together/christ-isaiah-nazareth-full.webp",
+      "sha256": "ccb8c152ded8f3b5f8de5d434db9584a94b762e030a0aa728002c81f7694984d"
+    },
+    {
+      "path": "assets/heroes/topics/look-unto-full.webp",
+      "sha256": "2fcd4923869bb80a6c0727e13fd1450f0b7287a026c69be4dfe6390f60d44753"
+    }
+  ],
+  "prior_hold": "Exact v3 dusty mulberry-brown CH1 remains HOLD. Only this exact revised prompt passes Fermi preflight.",
+  "remaining": [
+    "Newton independent exact proposal concurrence",
+    "Cohesive v4 frozen and both exact manifest reviews",
+    "Root generation authorization under owner controls",
+    "Both finished-pixel reviews with actual references and palette comparison",
+    "Root integration/native/public checks"
+  ],
+  "generation_clearance": false,
+  "writes": "Only current work/fermi receipts; no source/canonical/SITE/generation edits."
+}

@@ -1,0 +1,17 @@
+{
+  "reviewer": "Newton",
+  "result": "CONCUR_SCOPED_FINISHED_PIXELS",
+  "candidate": "work/gary/generated/gs3-candidate-v1.png",
+  "sha256": "6a01f16b128969e7a5877ec7827a24049e025d00c79fb49ee1d627ff3f9ffeb6",
+  "prompt_sha256": "6bdee4f165c2b1a3295ff26e19a406e593e73b38dfd23b321ee0ac98d6c366cd",
+  "actual_pixels_reviewed": "Full1536x1024 actual candidate",
+  "findings": {
+    "source_and_action": "Empty winter coat on table; man visibly stitches lining while older woman actively holds upper edge clear. Both gaze toward repair. Sewing kit/thread corroborate practical action, distinct from distribution/handing-over pictures. Suitable modern application of James2:14-18 and Mosiah4 care principles, not a recorded scriptural event.",
+    "people": "Fictional contemporary adults with individually plausible faces, modest clothing and life stages. No Christ or named historical identity claim.",
+    "anatomy": "Separate natural hands and fingers at seam and coat edge; no fusion, clothing-on-body sewing or impossible tool contact observed.",
+    "composition": "Dignified cooperative action, clear coat/lining, natural indoor community setting, good margins and photographic detail. No staged charity handover or money exchange.",
+    "copy": "Proposed caption accurately describes visible joint repair and links practical warmth to James; no poverty diagnosis or ungrounded family relationship."
+  },
+  "errors": [],
+  "limits": ["Newton finished-pixel concurrence only, pending Fermi independent concurrence and root assembled desktop/phone review.", "No publication, strict per-page inventory or owner aesthetic acceptance claim.", "Future crop/format variants must retain scene and exact-source lineage and be reviewed as delivered."]
+}

@@ -1,0 +1,16 @@
+{
+  "key": "GS4",
+  "status": "PROPOSED_NARROW_EDIT_REQUIRES_DUAL_EXACT_PREFLIGHT_AND_ROOT_AUTHORIZATION",
+  "input_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\gs4-candidate-v1.png",
+  "input_sha256": "4775e1ab5198ac4051fc312ab87ce58057be8ba0c7b39860ab632623055a387e",
+  "reference_roles": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\gs4-candidate-v1.png",
+      "role": "Exact edit target; fictional unnamed people retained unchanged."
+    }
+  ],
+  "prompt": "Edit only the tiny junction where the retrieval tool tip meets the steel key ring in this exact photograph. Remove the small connecting loop or clasp between the cylindrical tool tip and the main steel ring. Show the flat end face of the small cylindrical magnet directly touching the upper outside edge of the steel key ring, with no hook, clip, extra ring, loop, chain or threaded mechanical connector. Keep the main steel key ring and its two ordinary brass house keys; the two keys hang freely from the ring under gravity. Keep the existing slender tool shaft straight, naturally aligned and continuous with the magnet tip. Preserve both people, their exact faces, expressions, gaze, hands and poses, their clothing, dry courtyard, fixed grate and visible shallow drainage channel, lighting and camera framing unchanged. Preserve the existing size and placement of the tool and keys as closely as possible, changing only the tiny contact junction required to remove the connecting loop and establish direct magnet-to-ring contact. No new objects, text, branding, lock, open manhole, danger, miracle effect or other alteration. Retain exact 1536x1024 landscape composition and convincing live-action photographic appearance.",
+  "prompt_sha256": "8b08d34d0333789df765dfa0ac732af466fa8f48160d8fa2a9cdedf92900c800",
+  "scope": "Only incorrect loop/clasp at magnet-ring junction; direct physical contact. All other content preserved.",
+  "generation_clearance": false
+}

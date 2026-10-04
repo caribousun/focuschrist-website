@@ -1,0 +1,22 @@
+{
+  "reviewer": "Fermi",
+  "result": "CONCUR_EXACT_NARROW_CORRECTION",
+  "file": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\art.html",
+  "before_sha256": "1f3b9436947b67add0e01cd8892d87c4d745c80ef6dd7fb41d2a8b29f1843a35",
+  "after_sha256": "5874cff5142ea55c152336040fb234ff3116966789e80c1dbdebf8968a5603c4",
+  "changes": [
+    {
+      "old": "Psalm 66:1â€“2.",
+      "new": "Psalm 66:1–2.",
+      "occurrences": 1
+    },
+    {
+      "old": "Matthew 11:28â€“30.",
+      "new": "Matthew 11:28–30.",
+      "occurrences": 1
+    }
+  ],
+  "defect": "Actual UTF8 decoded codepoints U+00E2 U+20AC U+201C occur in both alt-text numeric verse ranges. This is real mojibake in source, not terminal encoding.",
+  "byte_preservation": "Current root-edited bytes exactly equal in-memory two intended replacements from HEAD, with every other byte including line endings preserved. Ten bytes shorter in total.",
+  "scope": "Local HEAD source defect and current correction independently verified. No public DOM or exact public-byte check performed by Fermi. No SITE write performed."
+}

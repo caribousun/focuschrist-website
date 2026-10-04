@@ -1,0 +1,431 @@
+{
+  "reviewer": "Gary",
+  "scope": "Exact CH1 palette proposal and chapter source hash-domain verification only",
+  "live_authority_loaded": [
+    "Master 1yN5fRSVUTpgIhdjmwXQ55MA6JbjPmCXb1qg3ppYzluo",
+    "00B 1_MM3rZXC_PbHMQ3leUSweESrAxmC2Evc3dslVLLVlFI",
+    "Focus 1QCEQ43UFyBivMbE8MwqTZ0e7WFdRuE_6ZQMlnGit5-g"
+  ],
+  "foundation_preserved": true,
+  "plan_v3_sha256": "9f0d28898d744afac996080a63f04da30469475baef61cc8d3892ed219b1e45e",
+  "proposal_file": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\living-christ-enriched-verification\\work\\gary\\ch1-palette-proposal.json",
+  "proposal_file_sha256": "02e51656d6e041aa6c46766c442aa3227317b361e5ce2dd3b29c57c25a17f079",
+  "proposal_prompt_sha256": "b4d4f4544b714bec9bcab3d19ce91b9aa7e40dd4ad9d18a69d9baeb69cbeb83e",
+  "prompt_hash_matches": true,
+  "proposed_palette": "very pale cool lavender-blue-gray with faint blue-violet cast; no pink, red, plum-brown or warm rose",
+  "palette_decision": "BOUNDED_PREFLIGHT_SUPPORT_PENDING_EXACT_DUAL_CONCURRENCE",
+  "reason": "The text specifies an intentionally distinct combination of pale value and cool blue-violet hue relative to the four actual comparator images. This is a prospective constraint, not proof of finished-image color or exhaustive all-site visual uniqueness. Final pixels must be compared under rendered lighting.",
+  "comparators": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\bible-together\\christ-isaiah-nazareth-full.webp",
+      "sha256": "ccb8c152ded8f3b5f8de5d434db9584a94b762e030a0aa728002c81f7694984d",
+      "actual_pixels_viewed": true,
+      "observation": "Viewed actual full image: medium-to-dark slate blue-gray mantle. Proposed CH1 is substantially paler, with violet rather than slate cast."
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\heroes\\topics\\look-unto-full.webp",
+      "sha256": "2fcd4923869bb80a6c0727e13fd1450f0b7287a026c69be4dfe6390f60d44753",
+      "actual_pixels_viewed": true,
+      "observation": "Viewed actual full image: muted warm mauve/pink-lilac mantle in golden daylight. This IS the smoke-lilac comparator named by sitewide-hero-production-plan.json, not an additional distinct image. Proposed CH1 explicitly excludes pink/red/warm rose and seeks a cool blue-violet cast."
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\jesus-journey\\martha-and-mary-full.webp",
+      "sha256": "9b8410f8753444d6ddb5252fe1126fcc49d92d20c0828f42f4118fe7474df02a",
+      "actual_pixels_viewed": true,
+      "observation": "Viewed actual full image: muted medium/dark brown-plum mantle. Old mulberry proposal was too close; pale cool proposal avoids both hue warmth and value."
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\art-study\\full\\living-paul-courage-20261004.webp",
+      "sha256": "4b23e29cdb0f6d728783c847de4d88dded877031fde40606a456853f7f4f79a9",
+      "actual_pixels_viewed": true,
+      "observation": "Viewed actual full image: warm muted ashrose mantle under warm room light. Proposed CH1 excludes warm rose/pink and requires a much paler cool cast."
+    }
+  ],
+  "identity_reference": {
+    "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\heroes\\home-christ-signature-approved-20260907.png",
+    "expected_sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+    "actual_sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+    "actual_pixels_viewed": true,
+    "restriction": "Exact approved Home identity; expressions adapt; comparison references must not replace identity."
+  },
+  "source_domain": {
+    "algorithm": "sha256 of UTF-8 text remaining after first newline following read_text(encoding=utf8) universal-newline normalization; first line is source URL wrapper. Raw file hash is separate.",
+    "count": 30,
+    "all_pass": true,
+    "rows": [
+      {
+        "path": "ot/ezek/33",
+        "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\ot-ezek-33.txt",
+        "saved_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ezek/33?lang=eng",
+        "expected_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ezek/33?lang=eng",
+        "url_matches": true,
+        "chapter_body_sha256": "aa578054dbfa09d9c9a845791253539b2ca0bc665c1822d3850c76166574757f",
+        "legacy_sha256": "aa578054dbfa09d9c9a845791253539b2ca0bc665c1822d3850c76166574757f",
+        "body_hash_matches": true,
+        "body_chars_match": true,
+        "file_sha256": "ec562ee24fa55f272b46cf6940fa1de1ebc67015269eb45814f18a22acd84ed6"
+      },
+      {
+        "path": "ot/ezek/34",
+        "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\ot-ezek-34.txt",
+        "saved_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ezek/34?lang=eng",
+        "expected_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ezek/34?lang=eng",
+        "url_matches": true,
+        "chapter_body_sha256": "0bf939dfd7c09e62eeac4c3c41a5f1f0d48d27579a7fc2088a79f8e53da49cf8",
+        "legacy_sha256": "0bf939dfd7c09e62eeac4c3c41a5f1f0d48d27579a7fc2088a79f8e53da49cf8",
+        "body_hash_matches": true,
+        "body_chars_match": true,
+        "file_sha256": "1d333ed538f0d92e85491a7392eb468261e3aa34f0cc586ab87dfd8a45100709"
+      },
+      {
+        "path": "ot/ezek/35",
+        "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\ot-ezek-35.txt",
+        "saved_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ezek/35?lang=eng",
+        "expected_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ezek/35?lang=eng",
+        "url_matches": true,
+        "chapter_body_sha256": "e222fac383115611efddb842d59a8e3afa7adc78250a9c6a9574265a66a6e97f",
+        "legacy_sha256": "e222fac383115611efddb842d59a8e3afa7adc78250a9c6a9574265a66a6e97f",
+        "body_hash_matches": true,
+        "body_chars_match": true,
+        "file_sha256": "af8a03d92420dfaeb1007d4fc9d089dd488907eb2d18f4473588e553336ab283"
+      },
+      {
+        "path": "nt/john/9",
+        "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-john-9.txt",
+        "saved_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/9?lang=eng",
+        "expected_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/9?lang=eng",
+        "url_matches": true,
+        "chapter_body_sha256": "440ce40f8e968ef0361af1cbf5c88aba9e0fb1a5901e417793d90ca7d058ef32",
+        "legacy_sha256": "440ce40f8e968ef0361af1cbf5c88aba9e0fb1a5901e417793d90ca7d058ef32",
+        "body_hash_matches": true,
+        "body_chars_match": true,
+        "file_sha256": "0c9d6d315d360c82d2eb3b62b46d38d801e3ae237d6afa215cb383113594dcda"
+      },
+      {
+        "path": "nt/john/10",
+        "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-john-10.txt",
+        "saved_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng",
+        "expected_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng",
+        "url_matches": true,
+        "chapter_body_sha256": "7c2f6fe2a0876b6dc9c4f76b41a81fd8b9dc67308b6c1010168ad3675adebc88",
+        "legacy_sha256": "7c2f6fe2a0876b6dc9c4f76b41a81fd8b9dc67308b6c1010168ad3675adebc88",
+        "body_hash_matches": true,
+        "body_chars_match": true,
+        "file_sha256": "9a149aff67464f6ab0f2d974361123e0388bc6fe1e6aa9d0b314a0582d9d0776"
+      },
+      {
+        "path": "nt/john/11",
+        "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-john-11.txt",
+        "saved_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/11?lang=eng",
+        "expected_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/11?lang=eng",
+        "url_matches": true,
+        "chapter_body_sha256": "d8011c3edabb1b227853cfd1483f19eca2f0238ea75e5104f5a4fbabfbe9fe30",
+        "legacy_sha256": "d8011c3edabb1b227853cfd1483f19eca2f0238ea75e5104f5a4fbabfbe9fe30",
+        "body_hash_matches": true,
+        "body_chars_match": true,
+        "file_sha256": "372ff33d10cfd9ca430572a983429d537d5570112f823cf55e1f2afc276c3c73"
+      },
+      {
+        "path": "nt/matt/20",
+        "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-matt-20.txt",
+        "saved_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/20?lang=eng",
+        "expected_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/20?lang=eng",
+        "url_matches": true,
+        "chapter_body_sha256": "6dfcc3c53d69276f89a99eba639b3f0bb23406b02f76230f9ffdf8262d148f35",
+        "legacy_sha256": "6dfcc3c53d69276f89a99eba639b3f0bb23406b02f76230f9ffdf8262d148f35",
+        "body_hash_matches": true,
+        "body_chars_match": true,
+        "file_sha256": "b54453e0dd54aff83038f2cea68c7a96ac27b69ebd6db3d40f6798668da8ed8b"
+      },
+      {
+        "path": "nt/matt/21",
+        "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-matt-21.txt",
+        "saved_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/21?lang=eng",
+        "expected_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/21?lang=eng",
+        "url_matches": true,
+        "chapter_body_sha256": "fc9058c49390c478cbab332de0e540310a34f2de13605c99da3cde155cb28ece",
+        "legacy_sha256": "fc9058c49390c478cbab332de0e540310a34f2de13605c99da3cde155cb28ece",
+        "body_hash_matches": true,
+        "body_chars_match": true,
+        "file_sha256": "b8b9866b6540d55ef925e181cb999dd67b56a5e717f8be563ec8817fc45b2d26"
+      },
+      {
+        "path": "nt/matt/22",
+        "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-matt-22.txt",
+        "saved_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/22?lang=eng",
+        "expected_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/22?lang=eng",
+        "url_matches": true,
+        "chapter_body_sha256": "79cea7d0f3b8a5490ff10f10df3fc9dcbf83e49d90a21fa2706c020516a3e6cf",
+        "legacy_sha256": "79cea7d0f3b8a5490ff10f10df3fc9dcbf83e49d90a21fa2706c020516a3e6cf",
+        "body_hash_matches": true,
+        "body_chars_match": true,
+        "file_sha256": "0bcc23f739cae492897ce51958d6c89e05856d6036333aa38657a0522efbb02e"
+      },
+      {
+        "path": "nt/mark/5",
+        "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-mark-5.txt",
+        "saved_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/5?lang=eng",
+        "expected_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/5?lang=eng",
+        "url_matches": true,
+        "chapter_body_sha256": "a87f3c3051482be8c347036856236dc8fd47cf32799e2fd376eb096e4e43d3d5",
+        "legacy_sha256": "a87f3c3051482be8c347036856236dc8fd47cf32799e2fd376eb096e4e43d3d5",
+        "body_hash_matches": true,
+        "body_chars_match": true,
+        "file_sha256": "d515498d93a0460553338beb1e9e7f2aff3362d5eef17d592276bf4f1024d7ba"
+      },
+      {
+        "path": "nt/mark/6",
+        "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-mark-6.txt",
+        "saved_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/6?lang=eng",
+        "expected_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/6?lang=eng",
+        "url_matches": true,
+        "chapter_body_sha256": "3a976dad4679fe8273a51c0fe455cd3289e06d33d2d165bdebae2c7c6763d410",
+        "legacy_sha256": "3a976dad4679fe8273a51c0fe455cd3289e06d33d2d165bdebae2c7c6763d410",
+        "body_hash_matches": true,
+        "body_chars_match": true,
+        "file_sha256": "c36643073ed6a3dffbcb610334b3b805765e3049ec9d491bf5936b3f0202ae10"
+      },
+      {
+        "path": "nt/mark/7",
+        "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-mark-7.txt",
+        "saved_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/7?lang=eng",
+        "expected_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/7?lang=eng",
+        "url_matches": true,
+        "chapter_body_sha256": "97ac11c4bf7d2f7e4ecf4eeb4f5ab9fc531d76b719e90e62a18520d28207abba",
+        "legacy_sha256": "97ac11c4bf7d2f7e4ecf4eeb4f5ab9fc531d76b719e90e62a18520d28207abba",
+        "body_hash_matches": true,
+        "body_chars_match": true,
+        "file_sha256": "d7b42ad419168144cc5a0cec6aab17215021614f829faec647d8f8de3a55e73d"
+      },
+      {
+        "path": "nt/james/1",
+        "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-james-1.txt",
+        "saved_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/1?lang=eng",
+        "expected_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/1?lang=eng",
+        "url_matches": true,
+        "chapter_body_sha256": "94c47fcdb95501856615463debcb7ea07180e535b988a246b6e8c2d5cc43d123",
+        "legacy_sha256": "94c47fcdb95501856615463debcb7ea07180e535b988a246b6e8c2d5cc43d123",
+        "body_hash_matches": true,
+        "body_chars_match": true,
+        "file_sha256": "9c4fc8ea3be29922843a09365c24451f9c4ca1a614ab12212b4db61735796cb5"
+      },
+      {
+        "path": "nt/james/2",
+        "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-james-2.txt",
+        "saved_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/2?lang=eng",
+        "expected_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/2?lang=eng",
+        "url_matches": true,
+        "chapter_body_sha256": "f571582e133e3e8e8445961709fe183effbfb466773d26961bea4da88409c749",
+        "legacy_sha256": "f571582e133e3e8e8445961709fe183effbfb466773d26961bea4da88409c749",
+        "body_hash_matches": true,
+        "body_chars_match": true,
+        "file_sha256": "60fc4a3decd89d000c446d2576c8a863f15e507fd21c69e99dafedad6f9d2b8d"
+      },
+      {
+        "path": "nt/james/3",
+        "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-james-3.txt",
+        "saved_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/3?lang=eng",
+        "expected_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/3?lang=eng",
+        "url_matches": true,
+        "chapter_body_sha256": "be63e41c5235a216eae64befd691eb318c5b8091ccbebe657a609dbd8eda72c6",
+        "legacy_sha256": "be63e41c5235a216eae64befd691eb318c5b8091ccbebe657a609dbd8eda72c6",
+        "body_hash_matches": true,
+        "body_chars_match": true,
+        "file_sha256": "2561ceb88b9a023d91d3c33ad8f71f84661c80cf771b5961ed83d17007993b19"
+      },
+      {
+        "path": "nt/mark/9",
+        "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-mark-9.txt",
+        "saved_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/9?lang=eng",
+        "expected_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/9?lang=eng",
+        "url_matches": true,
+        "chapter_body_sha256": "5888597b64ae4e4e2220c659e5227d9579b55337f4d8236738a3683ca3c57461",
+        "legacy_sha256": "5888597b64ae4e4e2220c659e5227d9579b55337f4d8236738a3683ca3c57461",
+        "body_hash_matches": true,
+        "body_chars_match": true,
+        "file_sha256": "77d303ee9c976e3d55192dd35ae2409640744f601a775e39031ab878047507d8"
+      },
+      {
+        "path": "nt/mark/10",
+        "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-mark-10.txt",
+        "saved_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng",
+        "expected_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng",
+        "url_matches": true,
+        "chapter_body_sha256": "b55b8b3d7acf4c5a57da5a2e8c60e0c704ae54f8b752c51da0cd5e7047499346",
+        "legacy_sha256": "b55b8b3d7acf4c5a57da5a2e8c60e0c704ae54f8b752c51da0cd5e7047499346",
+        "body_hash_matches": true,
+        "body_chars_match": true,
+        "file_sha256": "5463378834d7a4ab6e8354f08771526271776a55362835aa15cfae041d392eae"
+      },
+      {
+        "path": "nt/mark/11",
+        "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-mark-11.txt",
+        "saved_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/11?lang=eng",
+        "expected_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/11?lang=eng",
+        "url_matches": true,
+        "chapter_body_sha256": "2203c1e65d7d79a18062d08e0ad3fbdb74d164b754c156fa86184af676fd1f41",
+        "legacy_sha256": "2203c1e65d7d79a18062d08e0ad3fbdb74d164b754c156fa86184af676fd1f41",
+        "body_hash_matches": true,
+        "body_chars_match": true,
+        "file_sha256": "c298e16f36ba9e1d5a9b86f2fdc7cf7df5a73fe81cf969a81a60e0932247bc70"
+      },
+      {
+        "path": "bofm/mosiah/4",
+        "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\bofm-mosiah-4.txt",
+        "saved_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng",
+        "expected_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng",
+        "url_matches": true,
+        "chapter_body_sha256": "5849b91d5a189d85c0c39b157636d1854b802075234dc9c14e33b3c57c39a59c",
+        "legacy_sha256": "5849b91d5a189d85c0c39b157636d1854b802075234dc9c14e33b3c57c39a59c",
+        "body_hash_matches": true,
+        "body_chars_match": true,
+        "file_sha256": "d0a8d8b8b65dfcd5941125f55baed3b0f3933ea9a5a46e53172acdf8980b5208"
+      },
+      {
+        "path": "ot/ps/46",
+        "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\ot-ps-46.txt",
+        "saved_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng",
+        "expected_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng",
+        "url_matches": true,
+        "chapter_body_sha256": "097ba00007bb524b19bc386b8a575e27c5ceed8ed7f1dc9edb53afb538cba176",
+        "legacy_sha256": "097ba00007bb524b19bc386b8a575e27c5ceed8ed7f1dc9edb53afb538cba176",
+        "body_hash_matches": true,
+        "body_chars_match": true,
+        "file_sha256": "28764fb274550443fe24e82d21fb4b874ffd86f3921f60f62bcb1f2bb1573709"
+      },
+      {
+        "path": "nt/philip/3",
+        "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-philip-3.txt",
+        "saved_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/philip/3?lang=eng",
+        "expected_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/philip/3?lang=eng",
+        "url_matches": true,
+        "chapter_body_sha256": "5579734412871720c72b088dcddb45b55a01b3c1128d177548706387878c025f",
+        "legacy_sha256": "5579734412871720c72b088dcddb45b55a01b3c1128d177548706387878c025f",
+        "body_hash_matches": true,
+        "body_chars_match": true,
+        "file_sha256": "00f59d6ae54aec5e2cbab9fc9e94cf2e77060ed751a878ea3e2ef00c65774259"
+      },
+      {
+        "path": "nt/philip/4",
+        "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-philip-4.txt",
+        "saved_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/philip/4?lang=eng",
+        "expected_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/philip/4?lang=eng",
+        "url_matches": true,
+        "chapter_body_sha256": "3c69abb12b1fe26e740d40e7b8a36e6f31b7f25db92c7ac8ad90ef2abd07e016",
+        "legacy_sha256": "3c69abb12b1fe26e740d40e7b8a36e6f31b7f25db92c7ac8ad90ef2abd07e016",
+        "body_hash_matches": true,
+        "body_chars_match": true,
+        "file_sha256": "6813a91ea6a2ab6cc0699aa42ae9999c7eae47aa98809874336d23dc441ed21d"
+      },
+      {
+        "path": "ot/ps/45",
+        "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\ot-ps-45.txt",
+        "saved_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/45?lang=eng",
+        "expected_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/45?lang=eng",
+        "url_matches": true,
+        "chapter_body_sha256": "430f2ddad53bef2a26dc76f608014c634da481a52d1dc62e5b7d4d81c0de9a54",
+        "legacy_sha256": "430f2ddad53bef2a26dc76f608014c634da481a52d1dc62e5b7d4d81c0de9a54",
+        "body_hash_matches": true,
+        "body_chars_match": true,
+        "file_sha256": "6a968e0859a09b5441d208e4930612e79e2833243ee10dc3e7c5db73cec5333e"
+      },
+      {
+        "path": "ot/ps/47",
+        "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\ot-ps-47.txt",
+        "saved_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/47?lang=eng",
+        "expected_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/47?lang=eng",
+        "url_matches": true,
+        "chapter_body_sha256": "ffbbca74273d875f6965dc6b542589276db9d37d57e283e9c3e884aa8f61e44f",
+        "legacy_sha256": "ffbbca74273d875f6965dc6b542589276db9d37d57e283e9c3e884aa8f61e44f",
+        "body_hash_matches": true,
+        "body_chars_match": true,
+        "file_sha256": "a0a712dfbc5f1eb8572c9414aebc243683e7bec9ada4f253ad6dab9a75193d41"
+      },
+      {
+        "path": "bofm/mosiah/3",
+        "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\bofm-mosiah-3.txt",
+        "saved_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/3?lang=eng",
+        "expected_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/3?lang=eng",
+        "url_matches": true,
+        "chapter_body_sha256": "0e94e967b803afd8ef30f35bff27ea3ba9157487e0ea9da76ed1684fa0b06fce",
+        "legacy_sha256": "0e94e967b803afd8ef30f35bff27ea3ba9157487e0ea9da76ed1684fa0b06fce",
+        "body_hash_matches": true,
+        "body_chars_match": true,
+        "file_sha256": "2b794c7ab081c22feacea3371b40aba6114fc5511fbebd52d563d72d264893dd"
+      },
+      {
+        "path": "bofm/mosiah/5",
+        "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\bofm-mosiah-5.txt",
+        "saved_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/5?lang=eng",
+        "expected_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/5?lang=eng",
+        "url_matches": true,
+        "chapter_body_sha256": "a3cfd5c886001629dae357a33b242ae5456b9e1e877c9d8776ebaccd2bd58b24",
+        "legacy_sha256": "a3cfd5c886001629dae357a33b242ae5456b9e1e877c9d8776ebaccd2bd58b24",
+        "body_hash_matches": true,
+        "body_chars_match": true,
+        "file_sha256": "963b0deae3226198b064f5e3723ad75ff80b675856399a5553a2c75a3491e021"
+      },
+      {
+        "path": "nt/rom/9",
+        "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-rom-9.txt",
+        "saved_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/rom/9?lang=eng",
+        "expected_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/rom/9?lang=eng",
+        "url_matches": true,
+        "chapter_body_sha256": "c2a0e68223311d3607f011d4bdbd90a510bbe4667bb0ccf8d655f812ad4323da",
+        "legacy_sha256": "c2a0e68223311d3607f011d4bdbd90a510bbe4667bb0ccf8d655f812ad4323da",
+        "body_hash_matches": true,
+        "body_chars_match": true,
+        "file_sha256": "102a6ba48b4bb77479133c36bb140feec568bc5fc4f1af9c5b6567183f73379d"
+      },
+      {
+        "path": "nt/rom/10",
+        "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-rom-10.txt",
+        "saved_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/rom/10?lang=eng",
+        "expected_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/rom/10?lang=eng",
+        "url_matches": true,
+        "chapter_body_sha256": "a999d4fef6dbfd708f4e4a5af1132795a78a2144812af125ef0b96d0d2335edd",
+        "legacy_sha256": "a999d4fef6dbfd708f4e4a5af1132795a78a2144812af125ef0b96d0d2335edd",
+        "body_hash_matches": true,
+        "body_chars_match": true,
+        "file_sha256": "eb9bedc16a76599261145292206eba7507b65748145a981b1e41323e15e8c74d"
+      },
+      {
+        "path": "nt/rom/11",
+        "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-rom-11.txt",
+        "saved_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/rom/11?lang=eng",
+        "expected_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/rom/11?lang=eng",
+        "url_matches": true,
+        "chapter_body_sha256": "acd81f8a26cc0d9a1ca0c236d61b6e64b73bfb4d0404b85a945e1e9af62e475c",
+        "legacy_sha256": "acd81f8a26cc0d9a1ca0c236d61b6e64b73bfb4d0404b85a945e1e9af62e475c",
+        "body_hash_matches": true,
+        "body_chars_match": true,
+        "file_sha256": "1f3cf37067d1c57ac7637b9b04602992c2c7a03ce8893503b4377c8653e0054d"
+      },
+      {
+        "path": "nt/luke/3",
+        "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-luke-3.txt",
+        "saved_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/3?lang=eng",
+        "expected_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/3?lang=eng",
+        "url_matches": true,
+        "chapter_body_sha256": "f47759ad791ace4edd6b315585035952a5704af502708ccd18fd6c18263420eb",
+        "legacy_sha256": "f47759ad791ace4edd6b315585035952a5704af502708ccd18fd6c18263420eb",
+        "body_hash_matches": true,
+        "body_chars_match": true,
+        "file_sha256": "3a5f0f9c68a92a4148a71e779fe57541c67d251ef78425596d40545e6d952362"
+      }
+    ]
+  },
+  "preservation": {
+    "other14_entries": "No change",
+    "CH1_source_event_identity_caption_title": "No change; U+2019 preserved",
+    "SITE_canonical_schedules": "No writes",
+    "generation": "None"
+  },
+  "remaining_gates": [
+    "Fermi exact final receipt including independent body-hash review and CH1 comparator review",
+    "Newton exact final CH1 proposal review",
+    "Freeze cohesive v4 with explicit chapter-body and raw-file hash domains, preserving other14 entries",
+    "Both reviewers concur on exact frozen v4 before generation",
+    "Both reviewers inspect actual finished pixels before use; root assembled browser review before publication"
+  ]
+}

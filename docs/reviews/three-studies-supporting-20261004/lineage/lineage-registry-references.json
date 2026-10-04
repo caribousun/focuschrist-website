@@ -1,0 +1,404 @@
+{
+  "shepherd-sees-one.webp": [
+    {
+      "path": "docs/art-study-current-mandate-inventory.json",
+      "sha256": "430ce150f2d357529c0312f8f60e1f2b3df6cbbbc844ece35b7902fd019caec2"
+    },
+    {
+      "path": "docs/art-study-image-review.json",
+      "sha256": "b025516902f1a2c3fed6996ac3bf6cca8c4660440cf3eb434e0de973895c3fa2"
+    },
+    {
+      "path": "docs/good-shepherd-concise-copy-review-20260923.json",
+      "sha256": "f5d40a75019341593f808cc4e682ac4d4f8da4ca5192822adc3b9da312427668"
+    },
+    {
+      "path": "docs/good-shepherd-concise-copy-review-20260927.json",
+      "sha256": "692d9f9df5b9e029b96a6f046f65b16faeec8083100049fe1ad6213a2707be20"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/final-occurrences.json",
+      "sha256": "a608c16d7075ec7ed4c74ae5321b67248bb993d60de2ce4b9e602bafc12b964d"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/occurrence-ledger.json",
+      "sha256": "218c261a4a5acb39b048a117e6f2c795fa8c468fd3eb286006918f074b0bdb0f"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/pixel-families.json",
+      "sha256": "481b6e91b203da3f6a7794901edf5d3a414f40cbabd752c93b4939e88789ed79"
+    }
+  ],
+  "shepherd-carries-lamb.webp": [
+    {
+      "path": "docs/art-study-current-mandate-inventory.json",
+      "sha256": "430ce150f2d357529c0312f8f60e1f2b3df6cbbbc844ece35b7902fd019caec2"
+    },
+    {
+      "path": "docs/art-study-image-review.json",
+      "sha256": "b025516902f1a2c3fed6996ac3bf6cca8c4660440cf3eb434e0de973895c3fa2"
+    },
+    {
+      "path": "docs/good-shepherd-concise-copy-review-20260923.json",
+      "sha256": "f5d40a75019341593f808cc4e682ac4d4f8da4ca5192822adc3b9da312427668"
+    },
+    {
+      "path": "docs/good-shepherd-concise-copy-review-20260927.json",
+      "sha256": "692d9f9df5b9e029b96a6f046f65b16faeec8083100049fe1ad6213a2707be20"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/final-occurrences.json",
+      "sha256": "a608c16d7075ec7ed4c74ae5321b67248bb993d60de2ce4b9e602bafc12b964d"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/occurrence-ledger.json",
+      "sha256": "218c261a4a5acb39b048a117e6f2c795fa8c468fd3eb286006918f074b0bdb0f"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/pixel-families.json",
+      "sha256": "481b6e91b203da3f6a7794901edf5d3a414f40cbabd752c93b4939e88789ed79"
+    }
+  ],
+  "shepherd-shares-burden.webp": [
+    {
+      "path": "docs/art-study-current-mandate-inventory.json",
+      "sha256": "430ce150f2d357529c0312f8f60e1f2b3df6cbbbc844ece35b7902fd019caec2"
+    },
+    {
+      "path": "docs/art-study-image-review.json",
+      "sha256": "b025516902f1a2c3fed6996ac3bf6cca8c4660440cf3eb434e0de973895c3fa2"
+    },
+    {
+      "path": "docs/good-shepherd-concise-copy-review-20260923.json",
+      "sha256": "f5d40a75019341593f808cc4e682ac4d4f8da4ca5192822adc3b9da312427668"
+    },
+    {
+      "path": "docs/good-shepherd-concise-copy-review-20260927.json",
+      "sha256": "692d9f9df5b9e029b96a6f046f65b16faeec8083100049fe1ad6213a2707be20"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/final-occurrences.json",
+      "sha256": "a608c16d7075ec7ed4c74ae5321b67248bb993d60de2ce4b9e602bafc12b964d"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/occurrence-ledger.json",
+      "sha256": "218c261a4a5acb39b048a117e6f2c795fa8c468fd3eb286006918f074b0bdb0f"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/pixel-families.json",
+      "sha256": "481b6e91b203da3f6a7794901edf5d3a414f40cbabd752c93b4939e88789ed79"
+    }
+  ],
+  "shepherd-calls-zacchaeus.webp": [
+    {
+      "path": "docs/art-study-current-mandate-inventory.json",
+      "sha256": "430ce150f2d357529c0312f8f60e1f2b3df6cbbbc844ece35b7902fd019caec2"
+    },
+    {
+      "path": "docs/art-study-image-review.json",
+      "sha256": "b025516902f1a2c3fed6996ac3bf6cca8c4660440cf3eb434e0de973895c3fa2"
+    },
+    {
+      "path": "docs/good-shepherd-concise-copy-review-20260923.json",
+      "sha256": "f5d40a75019341593f808cc4e682ac4d4f8da4ca5192822adc3b9da312427668"
+    },
+    {
+      "path": "docs/good-shepherd-concise-copy-review-20260927.json",
+      "sha256": "692d9f9df5b9e029b96a6f046f65b16faeec8083100049fe1ad6213a2707be20"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/final-occurrences.json",
+      "sha256": "a608c16d7075ec7ed4c74ae5321b67248bb993d60de2ce4b9e602bafc12b964d"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/occurrence-ledger.json",
+      "sha256": "218c261a4a5acb39b048a117e6f2c795fa8c468fd3eb286006918f074b0bdb0f"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/pixel-families.json",
+      "sha256": "481b6e91b203da3f6a7794901edf5d3a414f40cbabd752c93b4939e88789ed79"
+    },
+    {
+      "path": "docs/jesus-journey/art-batch-64.json",
+      "sha256": "3103aabd8753d3b0c7c2d5ac179c98e9e6939a750bb202ab05efdad02eea8099"
+    },
+    {
+      "path": "docs/jesus-journey/artworks.json",
+      "sha256": "f06f2a6bbc3cd17a323424e8449c4c90bf71bd713952907b8f1c0ef75d422725"
+    },
+    {
+      "path": "docs/jesus-journey/branch-art-plan.json",
+      "sha256": "d8cbfbc279d4d12d4ee0b2614830cfb967640599968ce79a4a31f8fc3356b0e2"
+    },
+    {
+      "path": "docs/jesus-journey/new-art-review-tp-zacchaeus-response.json",
+      "sha256": "9ef31a9757b35872bb2ff3bf1c4631944d0cdcb9cd013455372d81af8aa28281"
+    }
+  ],
+  "shepherd-seeks-one-20260919.webp": [
+    {
+      "path": "docs/art-study-current-mandate-inventory.json",
+      "sha256": "430ce150f2d357529c0312f8f60e1f2b3df6cbbbc844ece35b7902fd019caec2"
+    },
+    {
+      "path": "docs/art-study-image-review.json",
+      "sha256": "b025516902f1a2c3fed6996ac3bf6cca8c4660440cf3eb434e0de973895c3fa2"
+    },
+    {
+      "path": "docs/good-shepherd-concise-copy-review-20260923.json",
+      "sha256": "f5d40a75019341593f808cc4e682ac4d4f8da4ca5192822adc3b9da312427668"
+    },
+    {
+      "path": "docs/good-shepherd-concise-copy-review-20260927.json",
+      "sha256": "692d9f9df5b9e029b96a6f046f65b16faeec8083100049fe1ad6213a2707be20"
+    },
+    {
+      "path": "docs/sitewide-supporting-review.json",
+      "sha256": "1dedd012c96f938c1acaccf39861667c6ba7d458c48250c1d06ee264e0eabc7d"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/final-occurrences.json",
+      "sha256": "a608c16d7075ec7ed4c74ae5321b67248bb993d60de2ce4b9e602bafc12b964d"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/occurrence-ledger.json",
+      "sha256": "218c261a4a5acb39b048a117e6f2c795fa8c468fd3eb286006918f074b0bdb0f"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/pixel-families.json",
+      "sha256": "481b6e91b203da3f6a7794901edf5d3a414f40cbabd752c93b4939e88789ed79"
+    }
+  ],
+  "children-gather-close.webp": [
+    {
+      "path": "docs/art-study-current-mandate-inventory.json",
+      "sha256": "430ce150f2d357529c0312f8f60e1f2b3df6cbbbc844ece35b7902fd019caec2"
+    },
+    {
+      "path": "docs/art-study-image-review.json",
+      "sha256": "b025516902f1a2c3fed6996ac3bf6cca8c4660440cf3eb434e0de973895c3fa2"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/final-occurrences.json",
+      "sha256": "a608c16d7075ec7ed4c74ae5321b67248bb993d60de2ce4b9e602bafc12b964d"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/occurrence-ledger.json",
+      "sha256": "218c261a4a5acb39b048a117e6f2c795fa8c468fd3eb286006918f074b0bdb0f"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/pixel-families.json",
+      "sha256": "481b6e91b203da3f6a7794901edf5d3a414f40cbabd752c93b4939e88789ed79"
+    }
+  ],
+  "children-welcome-shy-child.webp": [
+    {
+      "path": "docs/art-study-current-mandate-inventory.json",
+      "sha256": "430ce150f2d357529c0312f8f60e1f2b3df6cbbbc844ece35b7902fd019caec2"
+    },
+    {
+      "path": "docs/art-study-image-review.json",
+      "sha256": "b025516902f1a2c3fed6996ac3bf6cca8c4660440cf3eb434e0de973895c3fa2"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/final-occurrences.json",
+      "sha256": "a608c16d7075ec7ed4c74ae5321b67248bb993d60de2ce4b9e602bafc12b964d"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/occurrence-ledger.json",
+      "sha256": "218c261a4a5acb39b048a117e6f2c795fa8c468fd3eb286006918f074b0bdb0f"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/pixel-families.json",
+      "sha256": "481b6e91b203da3f6a7794901edf5d3a414f40cbabd752c93b4939e88789ed79"
+    }
+  ],
+  "children-listen-under-tree.webp": [
+    {
+      "path": "docs/art-study-current-mandate-inventory.json",
+      "sha256": "430ce150f2d357529c0312f8f60e1f2b3df6cbbbc844ece35b7902fd019caec2"
+    },
+    {
+      "path": "docs/art-study-image-review.json",
+      "sha256": "b025516902f1a2c3fed6996ac3bf6cca8c4660440cf3eb434e0de973895c3fa2"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/final-occurrences.json",
+      "sha256": "a608c16d7075ec7ed4c74ae5321b67248bb993d60de2ce4b9e602bafc12b964d"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/occurrence-ledger.json",
+      "sha256": "218c261a4a5acb39b048a117e6f2c795fa8c468fd3eb286006918f074b0bdb0f"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/pixel-families.json",
+      "sha256": "481b6e91b203da3f6a7794901edf5d3a414f40cbabd752c93b4939e88789ed79"
+    }
+  ],
+  "children-quiet-water.webp": [
+    {
+      "path": "docs/art-study-current-mandate-inventory.json",
+      "sha256": "430ce150f2d357529c0312f8f60e1f2b3df6cbbbc844ece35b7902fd019caec2"
+    },
+    {
+      "path": "docs/art-study-image-review.json",
+      "sha256": "b025516902f1a2c3fed6996ac3bf6cca8c4660440cf3eb434e0de973895c3fa2"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/final-occurrences.json",
+      "sha256": "a608c16d7075ec7ed4c74ae5321b67248bb993d60de2ce4b9e602bafc12b964d"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/occurrence-ledger.json",
+      "sha256": "218c261a4a5acb39b048a117e6f2c795fa8c468fd3eb286006918f074b0bdb0f"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/pixel-families.json",
+      "sha256": "481b6e91b203da3f6a7794901edf5d3a414f40cbabd752c93b4939e88789ed79"
+    }
+  ],
+  "children-listen-at-home-20260919.webp": [
+    {
+      "path": "docs/art-study-current-mandate-inventory.json",
+      "sha256": "430ce150f2d357529c0312f8f60e1f2b3df6cbbbc844ece35b7902fd019caec2"
+    },
+    {
+      "path": "docs/art-study-image-review.json",
+      "sha256": "b025516902f1a2c3fed6996ac3bf6cca8c4660440cf3eb434e0de973895c3fa2"
+    },
+    {
+      "path": "docs/sitewide-supporting-review.json",
+      "sha256": "1dedd012c96f938c1acaccf39861667c6ba7d458c48250c1d06ee264e0eabc7d"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/final-occurrences.json",
+      "sha256": "a608c16d7075ec7ed4c74ae5321b67248bb993d60de2ce4b9e602bafc12b964d"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/occurrence-ledger.json",
+      "sha256": "218c261a4a5acb39b048a117e6f2c795fa8c468fd3eb286006918f074b0bdb0f"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/pixel-families.json",
+      "sha256": "481b6e91b203da3f6a7794901edf5d3a414f40cbabd752c93b4939e88789ed79"
+    }
+  ],
+  "still-city-companion.webp": [
+    {
+      "path": "docs/art-study-current-mandate-inventory.json",
+      "sha256": "430ce150f2d357529c0312f8f60e1f2b3df6cbbbc844ece35b7902fd019caec2"
+    },
+    {
+      "path": "docs/art-study-image-review.json",
+      "sha256": "b025516902f1a2c3fed6996ac3bf6cca8c4660440cf3eb434e0de973895c3fa2"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/final-occurrences.json",
+      "sha256": "a608c16d7075ec7ed4c74ae5321b67248bb993d60de2ce4b9e602bafc12b964d"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/occurrence-ledger.json",
+      "sha256": "218c261a4a5acb39b048a117e6f2c795fa8c468fd3eb286006918f074b0bdb0f"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/pixel-families.json",
+      "sha256": "481b6e91b203da3f6a7794901edf5d3a414f40cbabd752c93b4939e88789ed79"
+    }
+  ],
+  "still-storm-boat.webp": [
+    {
+      "path": "docs/art-study-current-mandate-inventory.json",
+      "sha256": "430ce150f2d357529c0312f8f60e1f2b3df6cbbbc844ece35b7902fd019caec2"
+    },
+    {
+      "path": "docs/art-study-image-review.json",
+      "sha256": "b025516902f1a2c3fed6996ac3bf6cca8c4660440cf3eb434e0de973895c3fa2"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/final-occurrences.json",
+      "sha256": "a608c16d7075ec7ed4c74ae5321b67248bb993d60de2ce4b9e602bafc12b964d"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/occurrence-ledger.json",
+      "sha256": "218c261a4a5acb39b048a117e6f2c795fa8c468fd3eb286006918f074b0bdb0f"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/pixel-families.json",
+      "sha256": "481b6e91b203da3f6a7794901edf5d3a414f40cbabd752c93b4939e88789ed79"
+    },
+    {
+      "path": "docs/reviews/timeline-image-coverage-20261002.json",
+      "sha256": "f9d3ff93c3744114f5fd4b6557d3d6514829363a0f3cf46b650e81bf9ba0bdc3"
+    }
+  ],
+  "still-lakeside-pause.webp": [
+    {
+      "path": "docs/art-study-current-mandate-inventory.json",
+      "sha256": "430ce150f2d357529c0312f8f60e1f2b3df6cbbbc844ece35b7902fd019caec2"
+    },
+    {
+      "path": "docs/art-study-image-review.json",
+      "sha256": "b025516902f1a2c3fed6996ac3bf6cca8c4660440cf3eb434e0de973895c3fa2"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/final-occurrences.json",
+      "sha256": "a608c16d7075ec7ed4c74ae5321b67248bb993d60de2ce4b9e602bafc12b964d"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/occurrence-ledger.json",
+      "sha256": "218c261a4a5acb39b048a117e6f2c795fa8c468fd3eb286006918f074b0bdb0f"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/pixel-families.json",
+      "sha256": "481b6e91b203da3f6a7794901edf5d3a414f40cbabd752c93b4939e88789ed79"
+    }
+  ],
+  "still-shared-lift.webp": [
+    {
+      "path": "docs/art-study-current-mandate-inventory.json",
+      "sha256": "430ce150f2d357529c0312f8f60e1f2b3df6cbbbc844ece35b7902fd019caec2"
+    },
+    {
+      "path": "docs/art-study-image-review.json",
+      "sha256": "b025516902f1a2c3fed6996ac3bf6cca8c4660440cf3eb434e0de973895c3fa2"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/final-occurrences.json",
+      "sha256": "a608c16d7075ec7ed4c74ae5321b67248bb993d60de2ce4b9e602bafc12b964d"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/occurrence-ledger.json",
+      "sha256": "218c261a4a5acb39b048a117e6f2c795fa8c468fd3eb286006918f074b0bdb0f"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/pixel-families.json",
+      "sha256": "481b6e91b203da3f6a7794901edf5d3a414f40cbabd752c93b4939e88789ed79"
+    }
+  ],
+  "still-phone-down-scripture-20260919.webp": [
+    {
+      "path": "docs/art-study-current-mandate-inventory.json",
+      "sha256": "430ce150f2d357529c0312f8f60e1f2b3df6cbbbc844ece35b7902fd019caec2"
+    },
+    {
+      "path": "docs/art-study-image-review.json",
+      "sha256": "b025516902f1a2c3fed6996ac3bf6cca8c4660440cf3eb434e0de973895c3fa2"
+    },
+    {
+      "path": "docs/sitewide-supporting-review.json",
+      "sha256": "1dedd012c96f938c1acaccf39861667c6ba7d458c48250c1d06ee264e0eabc7d"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/final-occurrences.json",
+      "sha256": "a608c16d7075ec7ed4c74ae5321b67248bb993d60de2ce4b9e602bafc12b964d"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/occurrence-ledger.json",
+      "sha256": "218c261a4a5acb39b048a117e6f2c795fa8c468fd3eb286006918f074b0bdb0f"
+    },
+    {
+      "path": "docs/artwork-uniqueness-audit-20260929/pixel-families.json",
+      "sha256": "481b6e91b203da3f6a7794901edf5d3a414f40cbabd752c93b4939e88789ed79"
+    }
+  ]
+}

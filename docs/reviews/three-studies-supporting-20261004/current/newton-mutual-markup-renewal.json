@@ -1,0 +1,24 @@
+{
+  "reviewer": "Newton",
+  "status": "MUTUAL_SCOPED_MARKUP_RENEWAL_CONCURRENCE",
+  "page_hashes": {
+    "art-study/be-still.html": "569c8b49c6e2a6e8fdf1036698e63d2024b5e1c36b2f0946a3e39e93fc82e81c",
+    "art-study/suffer-the-little-children.html": "454a2f833f86bc4ddacf6e99e39afa2907dee83fb17df4dde984f3b9c9ee8258",
+    "art-study/the-good-shepherd.html": "e94c59f33033f7c2b970bb878282250d0c7378b99dde7f418856965337c71d05"
+  },
+  "evidence": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-candidate-verification\\work\\newton\\final-inventory-declaration-after-markup.json",
+      "sha256": "b30be031440e4e8e2a80dff8965ea693c37c2ec2dc0a10d4959e2ceefd255cc4"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-candidate-verification\\work\\fermi\\final-inventory-declaration-after-markup.json",
+      "sha256": "bc866d7d7fd5fba5ef9c65f1fbd8505c01185c6a387b06fae33a45674570c420"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-candidate-verification\\work\\newton\\living-coverage-renewal.json",
+      "sha256": "9209d64e48c9cf302f867afbe5253c58d8220ae1a0625f9562cfddc44bda4498"
+    }
+  ],
+  "concurrence": "Read Fermi exact final declaration and independently verified evidence hashes, matching all3current page hashes and exact allowed before/after deltas; Living separately identical metadata-only change. Both renew inventory coverage, not release acceptance."
+}

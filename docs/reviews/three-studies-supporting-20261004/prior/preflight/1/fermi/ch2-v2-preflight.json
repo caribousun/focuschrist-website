@@ -1,0 +1,20 @@
+{
+  "prompt_sha256": "279726fd41664263524702ae282abd83e42940dc7f30632f2046e824b2d38f48",
+  "input_sha256": "1cfe585d868902f317580df497b86d42e87e56c7259e9d650d1f06bb75c5ada0",
+  "limitations": "Preflight only; Newton concurrence and root authorization required. Actual output and assembled desktop/phone verification remain pending. No SITE use or owner acceptance.",
+  "result": "PASS",
+  "proposal_sha256": "77ddf12396398786745c9390c2995d53e90b332450b6784ff5cd0a55ad4056b0",
+  "mandates_read": [
+    "AGENTS.md",
+    "docs/historical-character-identity.md",
+    "docs/focuschrist-enrichment-and-stewardship-prompt.md"
+  ],
+  "generation_clearance": false,
+  "source_scope": "Modern application of Mark9:33-37/Mark10:13-16 retained from exact v4; this repair adds no historical or medical claim. Full chapter preflight in prior receipt remains historical source evidence, not a new live source verification.",
+  "concurrence": "Exact prompt follows applicable mandates for a narrow framing repair. Independently viewed CH2v1 full image: adult crown and upper forehead clipped. Modest wider framing with complete head and at least five percent background addresses defect. Fictional contemporary people retain age, distinct faces, clothing, engaged task gaze and active wheelchair-user agency; no named historical identity or exact historical date applies.",
+  "prompt_hash_matches": true,
+  "actual_pixels_inspected": true,
+  "key": "CH2v2",
+  "stage": "EXACT_PREFLIGHT",
+  "reviewer": "Fermi"
+}

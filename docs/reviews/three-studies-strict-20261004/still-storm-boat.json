@@ -1,0 +1,17 @@
+{
+  "kind": "original",
+  "original_id": "assets/page-art/art-study/full/still-storm-boat",
+  "asset": "assets/page-art/art-study/full/still-storm-boat.webp",
+  "sha256": "fdb60ec2ecdee51a24264fc53f0c1aed7cbde5d10dcaec32a6e3d8840b42911c",
+  "owner_route": "art-study/be-still.html",
+  "owner_section": "psalm-context",
+  "depicts_christ": true,
+  "reviewers": [
+    "Fermi",
+    "Newton"
+  ],
+  "lineage_and_cross_page_ownership_reviewed": true,
+  "ownership_scope": "all canonical site routes",
+  "pixels_reviewed_for_christ_classification": true,
+  "review_boundary": "Root verified exact independent Fermi/Newton inventory and reciprocal concurrence with renewed HTML bindings. All30 originals and delivery variants,3 gallery-owned references and7 resource exclusions reviewed across canonical routes. Source detailed identity/anatomy evidence remains inherited and hash-bound; fresh composition/encoding/ownership checks separate. Heuristic alias detection cannot exclude arbitrary transformations;12 historical generation logs remain unavailable. Native assembled review and final release/public/owner acceptance are separate, not established by this package."
+}

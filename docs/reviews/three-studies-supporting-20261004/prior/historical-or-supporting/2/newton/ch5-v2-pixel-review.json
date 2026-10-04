@@ -1,0 +1,20 @@
+{
+  "reviewer": "Newton",
+  "result": "HOLD",
+  "candidate_path": "work\\gary\\generated\\ch5-candidate-v2.png",
+  "candidate_sha256": "7f3b4eb61eef0bc20dde0bed65205c3c75d0270508824bf60300b452bf502a4a",
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "depicts_christ": false,
+  "actual_full_pixels_inspected": true,
+  "actual_detail_pixels_inspected": true,
+  "finding": "Logo and right outer shell improved, but small raised oval on screen-left outer cup has a power-like ring/mark. This remains recognizably a control, contradicting plain passive ear defenders. Faces, mutual gaze, child reaching, adult open support hand, natural anatomy and open return path remain intact.",
+  "next_action": "Remove only remaining raised oval/control and its mark from outer left cup, replacing with smooth continuous matte shell; preserve attachment structure and every person/hand. Exact revised proposal needs dual preflight.",
+  "limits": [
+    "Exact candidate-only finished-pixel review; not derived-variant lineage, assembled desktop/phone or release acceptance.",
+    "No generation/retry authorized by this receipt.",
+    "Identity comparison is artistic continuity, not historical authentication."
+  ]
+}

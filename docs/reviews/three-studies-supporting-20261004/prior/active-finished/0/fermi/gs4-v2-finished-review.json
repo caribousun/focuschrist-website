@@ -1,0 +1,13 @@
+{
+  "reviewer": "Fermi",
+  "stage": "FINISHED_PIXEL_REPAIR_REVIEW",
+  "key": "GS4",
+  "candidate": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\gs4-candidate-v2.png",
+  "candidate_sha256": "f09aa044fa31f94e65a1a0d6e7cbd1b97bdddea269c707496ca99b571f73d808",
+  "result": "PASS_FERMI_PIXEL_CONCURRENCE",
+  "prompt_sha256": "8b08d34d0333789df765dfa0ac732af466fa8f48160d8fa2a9cdedf92900c800",
+  "finding": "Full and enlarged contact crop show connecting loop removed; cylindrical magnet flat end now touches upper steel-ring edge directly. Ring and two keys hang under gravity; straight shaft remains continuous. Both adults, faces, attentive downward gaze, independent hands/pointing and stable crouch/kneel preserved recognizably. Shallow dry fixed grate/courtyard remains coherent. No new lock/brand/danger. Full composition/content retained with minor rendering texture changes; do not claim every unaffected pixel is byte-identical.",
+  "exact_prior_reviews": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\fermi\\gs4-v1-finished-review.json",
+  "limits": "Independent image-only decision; requires Newton concurrence/root integration. No SITE/native/public/owner acceptance.",
+  "SITE_use_approved": false
+}

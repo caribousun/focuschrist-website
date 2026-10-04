@@ -1,0 +1,22 @@
+{
+  "art-study/the-good-shepherd.html": {
+    "before": "0e3cf97723df9127cfbcd7d0484a2b6fa79a6ef697eac4b43531f7763ef2bf46",
+    "after": "e94c59f33033f7c2b970bb878282250d0c7378b99dde7f418856965337c71d05",
+    "external_attrs_added": 20
+  },
+  "art-study/suffer-the-little-children.html": {
+    "before": "1d4cfe03d86758d7cea99b4897d3fa4ac465e0ed75d4c21aaf6cf92363027ad9",
+    "after": "454a2f833f86bc4ddacf6e99e39afa2907dee83fb17df4dde984f3b9c9ee8258",
+    "external_attrs_added": 17
+  },
+  "art-study/be-still.html": {
+    "before": "832f2c73e4632c35bffe8b72d5ca07289a493f200360bdf1932cc01293f35bc8",
+    "after": "569c8b49c6e2a6e8fdf1036698e63d2024b5e1c36b2f0946a3e39e93fc82e81c",
+    "external_attrs_added": 20
+  },
+  "art-study/the-living-christ.html": {
+    "before": "8597354ee3eb7f967f92e5460109b29a2e4dc426e7ba4c91dbbb364f8ff00886",
+    "after": "1343c0278d535940717b175f33ee2fd88444984c5c408e245e34abc1fc3df8c4",
+    "external_attrs_added": 0
+  }
+}

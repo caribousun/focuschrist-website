@@ -1,0 +1,16 @@
+{
+  "reviewer": "Newton",
+  "result": "PASS_EXACT_PREFLIGHT",
+  "proposal_sha256": "234f073f0bff8c1a80488948eeb2d055b6fbc23aaf49a1fd4edc2ae78e076bbb",
+  "prompt_sha256": "cf3c921dd23a77977d890727e796b7d75c13cb2f1ac1b47916a2369848ccd9ab",
+  "references": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-enriched-continuation\\work\\gary\\generated\\ch5-candidate-v1.png",
+      "sha256": "784aaf979e541b79db24734b6263c5be189e001f8466075d56b9f44f98174a6e",
+      "actual_pixels_inspected": true
+    }
+  ],
+  "finding": "Actual target object and original full image inspected. Object-only replacement defines plain passive small earmuffs without logo or controls and retains scale/orientation, both faces/mutual gaze/hands and voluntary choice/open return path. No new identity or health claim.",
+  "generation_authorization": false,
+  "limits": "Exact preflight, not generation authority or finished pixel acceptance. All output requires dual review and root assembled desktop/phone."
+}

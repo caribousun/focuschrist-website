@@ -5,226 +5,457 @@
   "scope": "Four featured Art routes only. Observed placements, not certified originality or Christ classification.",
   "pages": {
     "art-study/be-still.html": {
-      "html_sha256": "8dd243c82316e00a7e748148e3d4b240282405a514a49359823243c720d9f70a",
-      "coverage_evidence": null,
+      "html_sha256": "ed90acad612bc12e0008d498a37f3f8d2a9b27e068212bec475555ee5a723423",
+      "coverage_evidence": {
+        "path": "docs/reviews/artwork-explicit-grid-20261004/be-still-coverage.json",
+        "sha256": "4729ee0d023fda25ad217e32e3010936b809b6a85d90ee34140e262325954083"
+      },
       "placements": [
         {
+          "kind": "reference",
           "asset": "art/Be-Still.png",
           "sha256": "4297877d988bdd154a92644550227d5cf6f2f1c57105507004f526ae9144bec4",
-          "kind": "unverified",
-          "original_id": null,
-          "owner_route": null,
-          "owner_section": null,
-          "depicts_christ": null,
-          "evidence": null,
-          "note": "Observed hero/support candidate; no lineage, ownership or pixel classification inferred from path/label."
+          "reference_target": "../art.html#gallery-original-be-still",
+          "evidence": {
+            "path": "docs/reviews/three-studies-strict-20261004/Be-Still.json",
+            "sha256": "6ab495a8bab9f7ccac10112599f6ddde3a271189e1cecc06a5bab3827cc0b955"
+          }
         },
         {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/still-city-companion",
           "asset": "assets/page-art/art-study/full/still-city-companion.webp",
           "sha256": "cff36c78346ed712f39a5b81207cd5784d233dac1e800dedbc8a63a425d814e0",
-          "kind": "unverified",
-          "original_id": null,
-          "owner_route": null,
-          "owner_section": null,
-          "depicts_christ": null,
-          "evidence": null,
-          "note": "Observed hero/support candidate; no lineage, ownership or pixel classification inferred from path/label."
+          "owner_route": "art-study/be-still.html",
+          "owner_section": "begin",
+          "depicts_christ": true,
+          "evidence": {
+            "path": "docs/reviews/three-studies-strict-20261004/still-city-companion.json",
+            "sha256": "fa95c93719a3b8e2bdb8e5a1fb390f01492cb64adcfa562d518863dd71b9d5b9"
+          }
         },
         {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/still-storm-boat",
           "asset": "assets/page-art/art-study/full/still-storm-boat.webp",
           "sha256": "fdb60ec2ecdee51a24264fc53f0c1aed7cbde5d10dcaec32a6e3d8840b42911c",
-          "kind": "unverified",
-          "original_id": null,
-          "owner_route": null,
-          "owner_section": null,
-          "depicts_christ": null,
-          "evidence": null,
-          "note": "Observed hero/support candidate; no lineage, ownership or pixel classification inferred from path/label."
+          "owner_route": "art-study/be-still.html",
+          "owner_section": "psalm-context",
+          "depicts_christ": true,
+          "evidence": {
+            "path": "docs/reviews/three-studies-strict-20261004/still-storm-boat.json",
+            "sha256": "97d0946fa9fe69e86b1939f4a584b1ec09fbc066d02a223270787951961d6406"
+          }
         },
         {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/still-wars-cease-20261004",
+          "asset": "assets/page-art/art-study/full/still-wars-cease-20261004.webp",
+          "sha256": "a7d7fa59adb4ddf1bd7e4eb2788ecaf1d89c19334402763961e2c60205bf7979",
+          "owner_route": "art-study/be-still.html",
+          "owner_section": "still-wars-cease-20261004",
+          "depicts_christ": false,
+          "evidence": {
+            "path": "docs/reviews/three-studies-strict-20261004/still-wars-cease-20261004.json",
+            "sha256": "a89a8c474bd632a8dd9aeb35ab54b3c373d024e61e2aead7082e1d9e2915b96f"
+          }
+        },
+        {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/still-depart-for-rest-20261004",
+          "asset": "assets/page-art/art-study/full/still-depart-for-rest-20261004.webp",
+          "sha256": "8ca49a7424f7467906230d0d9f5b0db08b8b57969f996f0726420fec2499f942",
+          "owner_route": "art-study/be-still.html",
+          "owner_section": "still-depart-for-rest-20261004",
+          "depicts_christ": true,
+          "evidence": {
+            "path": "docs/reviews/three-studies-strict-20261004/still-depart-for-rest-20261004.json",
+            "sha256": "25249a1a8c84e24535b4d6d63ce0442788403e79afadb5109b44d9eee186e739"
+          }
+        },
+        {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/still-lakeside-pause",
           "asset": "assets/page-art/art-study/full/still-lakeside-pause.webp",
           "sha256": "67fcb39e322e93f2389d465a20b73b6f059b41a1557cc627405c5781a796b724",
-          "kind": "unverified",
-          "original_id": null,
-          "owner_route": null,
-          "owner_section": null,
-          "depicts_christ": null,
-          "evidence": null,
-          "note": "Observed hero/support candidate; no lineage, ownership or pixel classification inferred from path/label."
+          "owner_route": "art-study/be-still.html",
+          "owner_section": "artwork-study",
+          "depicts_christ": true,
+          "evidence": {
+            "path": "docs/reviews/three-studies-strict-20261004/still-lakeside-pause.json",
+            "sha256": "0c6ddc87076dfc9d64dc31c12c16f632fa0692d5bddbe75d957af8a6752965ec"
+          }
         },
         {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/still-shared-lift",
           "asset": "assets/page-art/art-study/full/still-shared-lift.webp",
           "sha256": "a9c935fab827fcc3e2b6b3c53d748373f9cc7660020a2089c992ab0b741da869",
-          "kind": "unverified",
-          "original_id": null,
-          "owner_route": null,
-          "owner_section": null,
-          "depicts_christ": null,
-          "evidence": null,
-          "note": "Observed hero/support candidate; no lineage, ownership or pixel classification inferred from path/label."
+          "owner_route": "art-study/be-still.html",
+          "owner_section": "artwork-study",
+          "depicts_christ": true,
+          "evidence": {
+            "path": "docs/reviews/three-studies-strict-20261004/still-shared-lift.json",
+            "sha256": "aea6ebde2a4d65695d4aa0bdb5cbd567b4747abca176e1d3bcdc463261edb081"
+          }
         },
         {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/still-pause-work-20261004",
+          "asset": "assets/page-art/art-study/full/still-pause-work-20261004.webp",
+          "sha256": "dcb354027d6b26f8e6e0051774095ef46cde88768a8b1acd3f31ea824e9f19b5",
+          "owner_route": "art-study/be-still.html",
+          "owner_section": "still-pause-work-20261004",
+          "depicts_christ": false,
+          "evidence": {
+            "path": "docs/reviews/three-studies-strict-20261004/still-pause-work-20261004.json",
+            "sha256": "6797a73def91b740af6344fdf7a92d3327f05a6056f90c7c09896e96149997ae"
+          }
+        },
+        {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/still-phone-down-scripture-20260919",
           "asset": "assets/page-art/art-study/full/still-phone-down-scripture-20260919.webp",
           "sha256": "09123ea02209812f8158a257fbc0ac5562231f3cb6a14bc0303951bd992fae18",
-          "kind": "unverified",
-          "original_id": null,
-          "owner_route": null,
-          "owner_section": null,
-          "depicts_christ": null,
-          "evidence": null,
-          "note": "Observed hero/support candidate; no lineage, ownership or pixel classification inferred from path/label."
+          "owner_route": "art-study/be-still.html",
+          "owner_section": "personal-study",
+          "depicts_christ": false,
+          "evidence": {
+            "path": "docs/reviews/three-studies-strict-20261004/still-phone-down-scripture-20260919.json",
+            "sha256": "d9d0c4b9fc891aba90aab8bab71de270115c4c84f397624fb6bf0706ac9ad0fa"
+          }
+        },
+        {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/still-listen-workshop-20261004",
+          "asset": "assets/page-art/art-study/full/still-listen-workshop-20261004.webp",
+          "sha256": "68e2ef2239f5f14971f7b169bce3d1bdedee45c88785d4a64d5e9e5bd906945c",
+          "owner_route": "art-study/be-still.html",
+          "owner_section": "still-listen-workshop-20261004",
+          "depicts_christ": false,
+          "evidence": {
+            "path": "docs/reviews/three-studies-strict-20261004/still-listen-workshop-20261004.json",
+            "sha256": "233e734857f989be43c59a6cd77d6c18fe535e935aa733c70895511b709ee0fe"
+          }
+        },
+        {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/still-neighbor-peace-20261004",
+          "asset": "assets/page-art/art-study/full/still-neighbor-peace-20261004.webp",
+          "sha256": "5aee429ac2d34f32475e0045dd23bf0d8d255b681e4717eb9154198a80256731",
+          "owner_route": "art-study/be-still.html",
+          "owner_section": "still-neighbor-peace-20261004",
+          "depicts_christ": false,
+          "evidence": {
+            "path": "docs/reviews/three-studies-strict-20261004/still-neighbor-peace-20261004.json",
+            "sha256": "4232b5242a470902cf7776aaf1a064a4675e2d867bc551686cd9b498356def1f"
+          }
         }
       ]
     },
     "art-study/suffer-the-little-children.html": {
-      "html_sha256": "a39ff9ff9c0585c1addfefcce4099f37bdfeef8089bc970340122d0bf9ddd887",
-      "coverage_evidence": null,
+      "html_sha256": "4d2dfed3b3443118c8908736b3048a410b2e80217509e42465ee8894a7ca10d2",
+      "coverage_evidence": {
+        "path": "docs/reviews/artwork-explicit-grid-20261004/suffer-the-little-children-coverage.json",
+        "sha256": "f4bded3a66f6d0d85a87d190e51731ffe31a1d511fe10f95bd28d02a633ca75d"
+      },
       "placements": [
         {
+          "kind": "reference",
           "asset": "art/Suffer-the-Little-Children-approved-20260929.webp",
           "sha256": "a104e8efc2e25a2eb70a8fa53fa8b250f1d13ab856165e3c906aa919c6ac0fdd",
-          "kind": "unverified",
-          "original_id": null,
-          "owner_route": null,
-          "owner_section": null,
-          "depicts_christ": null,
-          "evidence": null,
-          "note": "Observed hero/support candidate; no lineage, ownership or pixel classification inferred from path/label."
+          "reference_target": "../art.html#gallery-original-suffer-the-little-children",
+          "evidence": {
+            "path": "docs/reviews/three-studies-strict-20261004/Suffer-the-Little-Children-approved-20260929.json",
+            "sha256": "6252cd26258eded9d2dd0d7311eb5b269471978c28c0b198819bf86a3a78d7ab"
+          }
         },
         {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/children-gather-close",
           "asset": "assets/page-art/art-study/full/children-gather-close.webp",
           "sha256": "85d4a603bd46ef7b1f73c281f0eff4f634206c0bd9d288dce7fa0129b5410cd1",
-          "kind": "unverified",
-          "original_id": null,
-          "owner_route": null,
-          "owner_section": null,
-          "depicts_christ": null,
-          "evidence": null,
-          "note": "Observed hero/support candidate; no lineage, ownership or pixel classification inferred from path/label."
+          "owner_route": "art-study/suffer-the-little-children.html",
+          "owner_section": "begin",
+          "depicts_christ": true,
+          "evidence": {
+            "path": "docs/reviews/three-studies-strict-20261004/children-gather-close.json",
+            "sha256": "7669ad779383118c26a5eeddf703f780ae9c4be8f450bf30812834fd0fad1b38"
+          }
         },
         {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/children-welcome-shy-child",
           "asset": "assets/page-art/art-study/full/children-welcome-shy-child.webp",
           "sha256": "c95205d67cbcb8ab0337511ec2a5801ccaa3fe417197b79fb379b05b875f7256",
-          "kind": "unverified",
-          "original_id": null,
-          "owner_route": null,
-          "owner_section": null,
-          "depicts_christ": null,
-          "evidence": null,
-          "note": "Observed hero/support candidate; no lineage, ownership or pixel classification inferred from path/label."
+          "owner_route": "art-study/suffer-the-little-children.html",
+          "owner_section": "welcome",
+          "depicts_christ": true,
+          "evidence": {
+            "path": "docs/reviews/three-studies-strict-20261004/children-welcome-shy-child.json",
+            "sha256": "8970fd67b779c634d422790bb494edb8ce3848ec13ea69610a66fdf0afe1df08"
+          }
         },
         {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/children-temple-praise-20261004",
+          "asset": "assets/page-art/art-study/full/children-temple-praise-20261004.webp",
+          "sha256": "dfc4c29d26b0c5f5f08317226204a49e575798db5d75e2d0a11e950dd58ab742",
+          "owner_route": "art-study/suffer-the-little-children.html",
+          "owner_section": "children-temple-praise-20261004",
+          "depicts_christ": true,
+          "evidence": {
+            "path": "docs/reviews/three-studies-strict-20261004/children-temple-praise-20261004.json",
+            "sha256": "c7f75ac932fa4ba3483b7f939bdc896948571e890b6768c9a4c3b93df0b23300"
+          }
+        },
+        {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/children-listen-under-tree",
           "asset": "assets/page-art/art-study/full/children-listen-under-tree.webp",
           "sha256": "193a5ecda7f4bbda37ae92b26c064edc08aa58442ef98d3b58c6b822f5987805",
-          "kind": "unverified",
-          "original_id": null,
-          "owner_route": null,
-          "owner_section": null,
-          "depicts_christ": null,
-          "evidence": null,
-          "note": "Observed hero/support candidate; no lineage, ownership or pixel classification inferred from path/label."
+          "owner_route": "art-study/suffer-the-little-children.html",
+          "owner_section": "artwork-study",
+          "depicts_christ": true,
+          "evidence": {
+            "path": "docs/reviews/three-studies-strict-20261004/children-listen-under-tree.json",
+            "sha256": "07d59b22fd8016a4b75ad83ad1a2c0460af13b440180044aeba9f21a9500554d"
+          }
         },
         {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/children-quiet-water",
           "asset": "assets/page-art/art-study/full/children-quiet-water.webp",
           "sha256": "e50fc2b7e243ffa4e442d29fa970a9169c6211a00d625db45ba548fca83b1336",
-          "kind": "unverified",
-          "original_id": null,
-          "owner_route": null,
-          "owner_section": null,
-          "depicts_christ": null,
-          "evidence": null,
-          "note": "Observed hero/support candidate; no lineage, ownership or pixel classification inferred from path/label."
+          "owner_route": "art-study/suffer-the-little-children.html",
+          "owner_section": "artwork-study",
+          "depicts_christ": true,
+          "evidence": {
+            "path": "docs/reviews/three-studies-strict-20261004/children-quiet-water.json",
+            "sha256": "ccb2f168ebf4bea8ef2428eadbe223d5cd77cfed67b37d2fe614e2bf11087c34"
+          }
         },
         {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/children-accessible-game-20261004",
+          "asset": "assets/page-art/art-study/full/children-accessible-game-20261004.webp",
+          "sha256": "e9da26360a45ad26f0b05219c52d913bcb53654e88d7be352df40bb630355a39",
+          "owner_route": "art-study/suffer-the-little-children.html",
+          "owner_section": "children-accessible-game-20261004",
+          "depicts_christ": false,
+          "evidence": {
+            "path": "docs/reviews/three-studies-strict-20261004/children-accessible-game-20261004.json",
+            "sha256": "659f0315a86d700aeaea454877fea1e3596e0ceb7e599b8c57401f4f468db236"
+          }
+        },
+        {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/children-toy-repair-20261004",
+          "asset": "assets/page-art/art-study/full/children-toy-repair-20261004.webp",
+          "sha256": "64d6683277eb2a95d8a4b1a049fde2e8fe246f66664557a863a4360e7e9c6dcd",
+          "owner_route": "art-study/suffer-the-little-children.html",
+          "owner_section": "children-toy-repair-20261004",
+          "depicts_christ": false,
+          "evidence": {
+            "path": "docs/reviews/three-studies-strict-20261004/children-toy-repair-20261004.json",
+            "sha256": "58af193757acf50d3f4a1f4182118e778fe3ed101ac3cf3fa11c0d060d91b10b"
+          }
+        },
+        {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/children-listen-at-home-20260919",
           "asset": "assets/page-art/art-study/full/children-listen-at-home-20260919.webp",
           "sha256": "afde94ae47f90109be64adba21ed2c6f9f5a3d5e8e00d125d5f0352812c34d1e",
-          "kind": "unverified",
-          "original_id": null,
-          "owner_route": null,
-          "owner_section": null,
-          "depicts_christ": null,
-          "evidence": null,
-          "note": "Observed hero/support candidate; no lineage, ownership or pixel classification inferred from path/label."
+          "owner_route": "art-study/suffer-the-little-children.html",
+          "owner_section": "personal-study",
+          "depicts_christ": false,
+          "evidence": {
+            "path": "docs/reviews/three-studies-strict-20261004/children-listen-at-home-20260919.json",
+            "sha256": "201db21e8798d98920ec434ae4f838bf44e3c4a52f71d6debab29f46f8adcdfc"
+          }
+        },
+        {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/children-share-snack-20261004",
+          "asset": "assets/page-art/art-study/full/children-share-snack-20261004.webp",
+          "sha256": "fc59308427c122a84faef422ff48465b33ed08071df30b0cfa68974283eb609e",
+          "owner_route": "art-study/suffer-the-little-children.html",
+          "owner_section": "children-share-snack-20261004",
+          "depicts_christ": false,
+          "evidence": {
+            "path": "docs/reviews/three-studies-strict-20261004/children-share-snack-20261004.json",
+            "sha256": "1a293a8f7c3718e8017f8c0859c2d1c3fbf71bbabf6dd41d84fbf03b71640ed5"
+          }
+        },
+        {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/children-quiet-welcome-20261004",
+          "asset": "assets/page-art/art-study/full/children-quiet-welcome-20261004.webp",
+          "sha256": "b70434f824bafdb970246e314c8177f7509f8522d9d2cfa5039c66512ab92b1d",
+          "owner_route": "art-study/suffer-the-little-children.html",
+          "owner_section": "children-quiet-welcome-20261004",
+          "depicts_christ": false,
+          "evidence": {
+            "path": "docs/reviews/three-studies-strict-20261004/children-quiet-welcome-20261004.json",
+            "sha256": "b1427c40480031138b5095edc354535b893403f2f492bab261b0c1d94657847b"
+          }
         }
       ]
     },
     "art-study/the-good-shepherd.html": {
-      "html_sha256": "48349542dea69cf28a0a5cf400a5c74b2330c93131924f73e1a146a69f5f4a72",
-      "coverage_evidence": null,
+      "html_sha256": "5fe506ab086c140fef457e9f53f3b3cc5a54ee0711885e4a72144a4cd689cf55",
+      "coverage_evidence": {
+        "path": "docs/reviews/artwork-explicit-grid-20261004/the-good-shepherd-coverage.json",
+        "sha256": "cf08becbd648adc919af32ea7268be63ae94d231e9a1f04d5bdc445353472ae5"
+      },
       "placements": [
         {
+          "kind": "reference",
           "asset": "art/The-Good-Shephard.jpg",
           "sha256": "d1146be308c5f28ccb34ca992012f62bfbf56083ab11425c934763ead05d5ca7",
-          "kind": "unverified",
-          "original_id": null,
-          "owner_route": null,
-          "owner_section": null,
-          "depicts_christ": null,
-          "evidence": null,
-          "note": "Observed hero/support candidate; no lineage, ownership or pixel classification inferred from path/label."
+          "reference_target": "../art.html#gallery-original-the-good-shepherd",
+          "evidence": {
+            "path": "docs/reviews/three-studies-strict-20261004/The-Good-Shephard.json",
+            "sha256": "fb7248a1655e5af0698a5b2a4058139243dbe9635c4978d1cdab2674b912eef2"
+          }
         },
         {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/shepherd-sees-one",
           "asset": "assets/page-art/art-study/full/shepherd-sees-one.webp",
           "sha256": "fc1523a72660dd51c6ba2d9018b04ebcd932adf43835897b3c93af98d89af4a6",
-          "kind": "unverified",
-          "original_id": null,
-          "owner_route": null,
-          "owner_section": null,
-          "depicts_christ": null,
-          "evidence": null,
-          "note": "Observed hero/support candidate; no lineage, ownership or pixel classification inferred from path/label."
+          "owner_route": "art-study/the-good-shepherd.html",
+          "owner_section": "begin",
+          "depicts_christ": true,
+          "evidence": {
+            "path": "docs/reviews/three-studies-strict-20261004/shepherd-sees-one.json",
+            "sha256": "2c945e212fa4dbe26166318b773a88e6a71eac45af5eec64834045bef2f5fe10"
+          }
         },
         {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/shepherd-carries-lamb",
           "asset": "assets/page-art/art-study/full/shepherd-carries-lamb.webp",
           "sha256": "7747830e7335539a881b235dedf001f704c73d237f290c98fd61a9448a7f78ba",
-          "kind": "unverified",
-          "original_id": null,
-          "owner_route": null,
-          "owner_section": null,
-          "depicts_christ": null,
-          "evidence": null,
-          "note": "Observed hero/support candidate; no lineage, ownership or pixel classification inferred from path/label."
+          "owner_route": "art-study/the-good-shepherd.html",
+          "owner_section": "shepherd-words",
+          "depicts_christ": true,
+          "evidence": {
+            "path": "docs/reviews/three-studies-strict-20261004/shepherd-carries-lamb.json",
+            "sha256": "df47830f498991d250b0c6da21715423d15c1ceb901e8ede4c43a96038afe5ca"
+          }
         },
         {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/shepherd-binds-hurt-20261004",
+          "asset": "assets/page-art/art-study/full/shepherd-binds-hurt-20261004.webp",
+          "sha256": "2d619476a87cb983da80c0c0e05e7d6d1ab19ddd89df89caca76dd41594fd76f",
+          "owner_route": "art-study/the-good-shepherd.html",
+          "owner_section": "shepherd-binds-hurt-20261004",
+          "depicts_christ": true,
+          "evidence": {
+            "path": "docs/reviews/three-studies-strict-20261004/shepherd-binds-hurt-20261004.json",
+            "sha256": "ed4b47f95318e45a847d3e9e26a0d4e3f6e7f59e1c8f2cf12c181d95a5f977a8"
+          }
+        },
+        {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/shepherd-room-at-water-20261004",
+          "asset": "assets/page-art/art-study/full/shepherd-room-at-water-20261004.webp",
+          "sha256": "5f222f65d114f0cb9874b1d2ee33e3aef035a81555ea27ddcab4d23130a79572",
+          "owner_route": "art-study/the-good-shepherd.html",
+          "owner_section": "shepherd-room-at-water-20261004",
+          "depicts_christ": false,
+          "evidence": {
+            "path": "docs/reviews/three-studies-strict-20261004/shepherd-room-at-water-20261004.json",
+            "sha256": "c0a9e9325efaf5184e959393df39cd8ee58737d466af5c6e0d9c12689381b953"
+          }
+        },
+        {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/shepherd-shares-burden",
           "asset": "assets/page-art/art-study/full/shepherd-shares-burden.webp",
           "sha256": "d7aeb93b9a83147993c7933180d2ea73e7cfd4461c40c778793172927a0d6b5a",
-          "kind": "unverified",
-          "original_id": null,
-          "owner_route": null,
-          "owner_section": null,
-          "depicts_christ": null,
-          "evidence": null,
-          "note": "Observed hero/support candidate; no lineage, ownership or pixel classification inferred from path/label."
+          "owner_route": "art-study/the-good-shepherd.html",
+          "owner_section": "artwork-study",
+          "depicts_christ": true,
+          "evidence": {
+            "path": "docs/reviews/three-studies-strict-20261004/shepherd-shares-burden.json",
+            "sha256": "02b3722e61b4b63cb49da208bb0380ee664b3c7082d6a09b42ca97bb6c44b563"
+          }
         },
         {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/shepherd-calls-zacchaeus",
           "asset": "assets/page-art/art-study/full/shepherd-calls-zacchaeus.webp",
           "sha256": "db1509ed08bfe12b04e4de33a3b6a728e8427895c6a3b567c01a517e91891041",
-          "kind": "unverified",
-          "original_id": null,
-          "owner_route": null,
-          "owner_section": null,
-          "depicts_christ": null,
-          "evidence": null,
-          "note": "Observed hero/support candidate; no lineage, ownership or pixel classification inferred from path/label."
+          "owner_route": "art-study/the-good-shepherd.html",
+          "owner_section": "artwork-study",
+          "depicts_christ": true,
+          "evidence": {
+            "path": "docs/reviews/three-studies-strict-20261004/shepherd-calls-zacchaeus.json",
+            "sha256": "5317daae537c92b11fcdfeaf80dfc95b0930f5aedc79a17110ee70645b94a4d6"
+          }
         },
         {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/shepherd-coat-repair-20261004",
+          "asset": "assets/page-art/art-study/full/shepherd-coat-repair-20261004.webp",
+          "sha256": "2262d19504bafcd26b64ee3ae164fcc7c2148f95d38d8699fd76c2ac75853668",
+          "owner_route": "art-study/the-good-shepherd.html",
+          "owner_section": "shepherd-coat-repair-20261004",
+          "depicts_christ": false,
+          "evidence": {
+            "path": "docs/reviews/three-studies-strict-20261004/shepherd-coat-repair-20261004.json",
+            "sha256": "4570d4e2ea95f47d7fd241f42a9074237389e3783ab3407cdd3b936d487e8d85"
+          }
+        },
+        {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/shepherd-seeks-one-20260919",
           "asset": "assets/page-art/art-study/full/shepherd-seeks-one-20260919.webp",
           "sha256": "029684658fd2fd404729db71ee451862ffb67ea6aae62ae50ed1e2254a8f946f",
-          "kind": "unverified",
-          "original_id": null,
-          "owner_route": null,
-          "owner_section": null,
-          "depicts_christ": null,
-          "evidence": null,
-          "note": "Observed hero/support candidate; no lineage, ownership or pixel classification inferred from path/label."
+          "owner_route": "art-study/the-good-shepherd.html",
+          "owner_section": "personal-study",
+          "depicts_christ": true,
+          "evidence": {
+            "path": "docs/reviews/three-studies-strict-20261004/shepherd-seeks-one-20260919.json",
+            "sha256": "a7286df750e486ab544e684af6c9287ae7f0c510567c27ffb0ddf58c196b0f08"
+          }
+        },
+        {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/shepherd-key-recovery-20261004",
+          "asset": "assets/page-art/art-study/full/shepherd-key-recovery-20261004.webp",
+          "sha256": "88b3046e9cca01aa5b31f4acb569ec111641dabf991441076559d700964769c4",
+          "owner_route": "art-study/the-good-shepherd.html",
+          "owner_section": "shepherd-key-recovery-20261004",
+          "depicts_christ": false,
+          "evidence": {
+            "path": "docs/reviews/three-studies-strict-20261004/shepherd-key-recovery-20261004.json",
+            "sha256": "24b1f983bdab93fc619f118aa7132ee8abbd29e28bc369e4a1678485fd6eaa1f"
+          }
+        },
+        {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/shepherd-audio-access-20261004",
+          "asset": "assets/page-art/art-study/full/shepherd-audio-access-20261004.webp",
+          "sha256": "21a2588ae548dec1bb0b6f928aa9246d61fbc01167f846b346808b8bcca189e2",
+          "owner_route": "art-study/the-good-shepherd.html",
+          "owner_section": "shepherd-audio-access-20261004",
+          "depicts_christ": false,
+          "evidence": {
+            "path": "docs/reviews/three-studies-strict-20261004/shepherd-audio-access-20261004.json",
+            "sha256": "642b1fbf719d5d65e7bece88d901e1c2b7d820e5ebfc68a6732d7da3d90de436"
+          }
         }
       ]
     },
     "art-study/the-living-christ.html": {
-      "html_sha256": "8597354ee3eb7f967f92e5460109b29a2e4dc426e7ba4c91dbbb364f8ff00886",
+      "html_sha256": "1c1c6310ec7469244b87d4cdc7c79086a93c945b237346d2341132532a05c83b",
       "coverage_evidence": {
-        "path": "docs/reviews/living-christ-strict-20261004/coverage.json",
-        "sha256": "245c45bee6f14cdf069c9fcdf40b5b0aafff708329c67aaf1c41db7f5f751531"
+        "path": "docs/reviews/artwork-explicit-grid-20261004/the-living-christ-coverage.json",
+        "sha256": "0e2d28d73bdb675c64973af8779eea8b6633ec7f2bf70d864215fc4a4b5599d4"
       },
       "placements": [
         {

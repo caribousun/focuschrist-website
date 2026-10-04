@@ -1,0 +1,11 @@
+{
+  "kind": "reference",
+  "asset": "art/The-Good-Shephard.jpg",
+  "sha256": "d1146be308c5f28ccb34ca992012f62bfbf56083ab11425c934763ead05d5ca7",
+  "reference_target": "../art.html#gallery-original-the-good-shepherd",
+  "reviewers": [
+    "Fermi",
+    "Newton"
+  ],
+  "exclusion_classification_reviewed": true
+}

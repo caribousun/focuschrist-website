@@ -639,6 +639,28 @@
       ]
     },
     {
+      "title": "A Game Everyone Can Join",
+      "category": "Art & Study",
+      "thumbnail": "/assets/page-art/art-study/thumbs/children-accessible-game-20261004.webp",
+      "fullImage": "/assets/page-art/art-study/full/children-accessible-game-20261004.webp",
+      "alt": "A girl using a wheelchair rolls a blue ball across a table toward a boy while another child waits and an adult moves an unused chair.",
+      "id": "art-0193e5c099ed",
+      "occurrences": [
+        {
+          "id": "source-cdb1d95d1179",
+          "page": "/art-study/suffer-the-little-children.html",
+          "pageTitle": "Suffer the Little Children",
+          "category": "Art & Study",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/art-study/full/children-accessible-game-20261004.webp\"]:has(img[src=\"../assets/page-art/art-study/thumbs/children-accessible-game-20261004.webp\"])",
+          "title": "A Game Everyone Can Join"
+        }
+      ],
+      "categories": [
+        "Art & Study"
+      ]
+    },
+    {
       "title": "A gift meant to be shared",
       "category": "Pioneers",
       "thumbnail": "/assets/pioneers/story/11-sharing-meat-approved-20260920-800.webp",
@@ -1521,6 +1543,28 @@
       ]
     },
     {
+      "title": "A Pause in the Work",
+      "category": "Art & Study",
+      "thumbnail": "/assets/page-art/art-study/thumbs/still-pause-work-20261004.webp",
+      "fullImage": "/assets/page-art/art-study/full/still-pause-work-20261004.webp",
+      "alt": "A woman sits with her eyes closed and both hands in her lap beside a still sewing machine and unfinished curtain.",
+      "id": "art-60b282216117",
+      "occurrences": [
+        {
+          "id": "source-78c60e9b0723",
+          "page": "/art-study/be-still.html",
+          "pageTitle": "Be Still",
+          "category": "Art & Study",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/art-study/full/still-pause-work-20261004.webp\"]:has(img[src=\"../assets/page-art/art-study/thumbs/still-pause-work-20261004.webp\"])",
+          "title": "A Pause in the Work"
+        }
+      ],
+      "categories": [
+        "Art & Study"
+      ]
+    },
+    {
       "title": "A pause to notice living things",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/collection-watchfulness-08-960.webp",
@@ -2200,6 +2244,28 @@
       ],
       "categories": [
         "Gospel Studies"
+      ]
+    },
+    {
+      "title": "A Small Thing Worth Caring For",
+      "category": "Art & Study",
+      "thumbnail": "/assets/page-art/art-study/thumbs/children-toy-repair-20261004.webp",
+      "fullImage": "/assets/page-art/art-study/full/children-toy-repair-20261004.webp",
+      "alt": "A child holds a spool and watches an older woman sew a torn seam in a stuffed bear.",
+      "id": "art-08dc984ffc3b",
+      "occurrences": [
+        {
+          "id": "source-37030ca4a86f",
+          "page": "/art-study/suffer-the-little-children.html",
+          "pageTitle": "Suffer the Little Children",
+          "category": "Art & Study",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/art-study/full/children-toy-repair-20261004.webp\"]:has(img[src=\"../assets/page-art/art-study/thumbs/children-toy-repair-20261004.webp\"])",
+          "title": "A Small Thing Worth Caring For"
+        }
+      ],
+      "categories": [
+        "Art & Study"
       ]
     },
     {
@@ -5088,6 +5154,28 @@
       ]
     },
     {
+      "title": "Care That Keeps Someone Warm",
+      "category": "Art & Study",
+      "thumbnail": "/assets/page-art/art-study/thumbs/shepherd-coat-repair-20261004.webp",
+      "fullImage": "/assets/page-art/art-study/full/shepherd-coat-repair-20261004.webp",
+      "alt": "A man stitches a coat lining while an older woman holds the fabric steady at a table.",
+      "id": "art-a0e68908fe73",
+      "occurrences": [
+        {
+          "id": "source-16ad3d32199e",
+          "page": "/art-study/the-good-shepherd.html",
+          "pageTitle": "The Good Shepherd",
+          "category": "Art & Study",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/art-study/full/shepherd-coat-repair-20261004.webp\"]:has(img[src=\"../assets/page-art/art-study/thumbs/shepherd-coat-repair-20261004.webp\"])",
+          "title": "Care That Keeps Someone Warm"
+        }
+      ],
+      "categories": [
+        "Art & Study"
+      ]
+    },
+    {
       "title": "Care when the room is quiet",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/collection-stewardship-06-960.webp",
@@ -5767,6 +5855,28 @@
       ],
       "categories": [
         "Home"
+      ]
+    },
+    {
+      "title": "Come Apart and Rest",
+      "category": "Art & Study",
+      "thumbnail": "/assets/page-art/art-study/thumbs/still-depart-for-rest-20261004.webp",
+      "fullImage": "/assets/page-art/art-study/full/still-depart-for-rest-20261004.webp",
+      "alt": "Jesus sits in a boat facing a headband-wearing companion while one man rows and another rests behind Him.",
+      "id": "art-4d44a6a4adb8",
+      "occurrences": [
+        {
+          "id": "source-ee11963097e2",
+          "page": "/art-study/be-still.html",
+          "pageTitle": "Be Still",
+          "category": "Art & Study",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/art-study/full/still-depart-for-rest-20261004.webp\"]:has(img[src=\"../assets/page-art/art-study/thumbs/still-depart-for-rest-20261004.webp\"])",
+          "title": "Come Apart and Rest"
+        }
+      ],
+      "categories": [
+        "Art & Study"
       ]
     },
     {
@@ -8302,6 +8412,28 @@
       ]
     },
     {
+      "title": "He Binds What Is Hurt",
+      "category": "Art & Study",
+      "thumbnail": "/assets/page-art/art-study/thumbs/shepherd-binds-hurt-20261004.webp",
+      "fullImage": "/assets/page-art/art-study/full/shepherd-binds-hurt-20261004.webp",
+      "alt": "Jesus kneels beside a resting sheep and finishes wrapping a bandage around its lower foreleg.",
+      "id": "art-3731ddc1438d",
+      "occurrences": [
+        {
+          "id": "source-6c9c0ec58936",
+          "page": "/art-study/the-good-shepherd.html",
+          "pageTitle": "The Good Shepherd",
+          "category": "Art & Study",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/art-study/full/shepherd-binds-hurt-20261004.webp\"]:has(img[src=\"../assets/page-art/art-study/thumbs/shepherd-binds-hurt-20261004.webp\"])",
+          "title": "He Binds What Is Hurt"
+        }
+      ],
+      "categories": [
+        "Art & Study"
+      ]
+    },
+    {
       "title": "He eats before them",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/rr-broiled-fish--199ddf7a530d-thumb.webp",
@@ -8497,6 +8629,28 @@
       ],
       "categories": [
         "Gospel Studies"
+      ]
+    },
+    {
+      "title": "He Makes Wars Cease",
+      "category": "Art & Study",
+      "thumbnail": "/assets/page-art/art-study/thumbs/still-wars-cease-20261004.webp",
+      "fullImage": "/assets/page-art/art-study/full/still-wars-cease-20261004.webp",
+      "alt": "A broken bow, a broken spear and a charred wheel lie still on open ground.",
+      "id": "art-249794df7458",
+      "occurrences": [
+        {
+          "id": "source-860fa83a950d",
+          "page": "/art-study/be-still.html",
+          "pageTitle": "Be Still",
+          "category": "Art & Study",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/art-study/full/still-wars-cease-20261004.webp\"]:has(img[src=\"../assets/page-art/art-study/thumbs/still-wars-cease-20261004.webp\"])",
+          "title": "He Makes Wars Cease"
+        }
+      ],
+      "categories": [
+        "Art & Study"
       ]
     },
     {
@@ -8871,6 +9025,28 @@
       ],
       "categories": [
         "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Help With What Is Needed",
+      "category": "Art & Study",
+      "thumbnail": "/assets/page-art/art-study/thumbs/shepherd-key-recovery-20261004.webp",
+      "fullImage": "/assets/page-art/art-study/full/shepherd-key-recovery-20261004.webp",
+      "alt": "A man lifts a key ring from a drain with a magnetic tool while a woman points toward the opening.",
+      "id": "art-4dd267c00dd3",
+      "occurrences": [
+        {
+          "id": "source-4a254ad81512",
+          "page": "/art-study/the-good-shepherd.html",
+          "pageTitle": "The Good Shepherd",
+          "category": "Art & Study",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/art-study/full/shepherd-key-recovery-20261004.webp\"]:has(img[src=\"../assets/page-art/art-study/thumbs/shepherd-key-recovery-20261004.webp\"])",
+          "title": "Help With What Is Needed"
+        }
+      ],
+      "categories": [
+        "Art & Study"
       ]
     },
     {
@@ -11208,6 +11384,50 @@
       ]
     },
     {
+      "title": "Learning to Share",
+      "category": "Art & Study",
+      "thumbnail": "/assets/page-art/art-study/thumbs/children-share-snack-20261004.webp",
+      "fullImage": "/assets/page-art/art-study/full/children-share-snack-20261004.webp",
+      "alt": "A boy offers a sealed snack packet to a girl across a lunch table while an adult watches nearby.",
+      "id": "art-354bcc1dc074",
+      "occurrences": [
+        {
+          "id": "source-15302a01fde1",
+          "page": "/art-study/suffer-the-little-children.html",
+          "pageTitle": "Suffer the Little Children",
+          "category": "Art & Study",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/art-study/full/children-share-snack-20261004.webp\"]:has(img[src=\"../assets/page-art/art-study/thumbs/children-share-snack-20261004.webp\"])",
+          "title": "Learning to Share"
+        }
+      ],
+      "categories": [
+        "Art & Study"
+      ]
+    },
+    {
+      "title": "Leave Room at the Water",
+      "category": "Art & Study",
+      "thumbnail": "/assets/page-art/art-study/thumbs/shepherd-room-at-water-20261004.webp",
+      "fullImage": "/assets/page-art/art-study/full/shepherd-room-at-water-20261004.webp",
+      "alt": "A smaller sheep waits behind two larger sheep at a narrow approach to water, with three more sheep on the bank.",
+      "id": "art-573f687811aa",
+      "occurrences": [
+        {
+          "id": "source-05422370eb07",
+          "page": "/art-study/the-good-shepherd.html",
+          "pageTitle": "The Good Shepherd",
+          "category": "Art & Study",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/art-study/full/shepherd-room-at-water-20261004.webp\"]:has(img[src=\"../assets/page-art/art-study/thumbs/shepherd-room-at-water-20261004.webp\"])",
+          "title": "Leave Room at the Water"
+        }
+      ],
+      "categories": [
+        "Art & Study"
+      ]
+    },
+    {
       "title": "Leaven worked into the dough",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/leaven-01-960.webp",
@@ -11553,6 +11773,28 @@
           "kind": "legacy",
           "selector": ".gallery-item:has(img[src=\"art/thumbs/Let-It-Go.webp\"])",
           "title": "Let It Go"
+        }
+      ],
+      "categories": [
+        "Art & Study"
+      ]
+    },
+    {
+      "title": "Let Peace Become a Choice",
+      "category": "Art & Study",
+      "thumbnail": "/assets/page-art/art-study/thumbs/still-neighbor-peace-20261004.webp",
+      "fullImage": "/assets/page-art/art-study/full/still-neighbor-peace-20261004.webp",
+      "alt": "A person turns a speaker dial while a neighbor gestures toward an ear and they look at one another.",
+      "id": "art-1471e1b5595b",
+      "occurrences": [
+        {
+          "id": "source-6fc346627ddd",
+          "page": "/art-study/be-still.html",
+          "pageTitle": "Be Still",
+          "category": "Art & Study",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/art-study/full/still-neighbor-peace-20261004.webp\"]:has(img[src=\"../assets/page-art/art-study/thumbs/still-neighbor-peace-20261004.webp\"])",
+          "title": "Let Peace Become a Choice"
         }
       ],
       "categories": [
@@ -12358,7 +12600,7 @@
       "category": "Art & Study",
       "thumbnail": "/art/thumbs/new/make-a-joyful-noise-unto-god-psalm-66-1-2.webp",
       "fullImage": "/art/new/make-a-joyful-noise-unto-god-psalm-66-1-2.webp",
-      "alt": "Jesus sits with laughing children and adults beside a stream, beneath Make a joyful noise unto God and Sing forth the honour of his name, Psalm 66:1â€“2.",
+      "alt": "Jesus sits with laughing children and adults beside a stream, beneath Make a joyful noise unto God and Sing forth the honour of his name, Psalm 66:1–2.",
       "id": "art-3c17f9935072",
       "occurrences": [
         {
@@ -12461,6 +12703,28 @@
       ],
       "categories": [
         "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Make the Word Easier to Hear",
+      "category": "Art & Study",
+      "thumbnail": "/assets/page-art/art-study/thumbs/shepherd-audio-access-20261004.webp",
+      "fullImage": "/assets/page-art/art-study/full/shepherd-audio-access-20261004.webp",
+      "alt": "An older woman presses an audio player’s large play button while a woman beside her points toward the controls.",
+      "id": "art-8d45b6a03457",
+      "occurrences": [
+        {
+          "id": "source-e8653a389172",
+          "page": "/art-study/the-good-shepherd.html",
+          "pageTitle": "The Good Shepherd",
+          "category": "Art & Study",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/art-study/full/shepherd-audio-access-20261004.webp\"]:has(img[src=\"../assets/page-art/art-study/thumbs/shepherd-audio-access-20261004.webp\"])",
+          "title": "Make the Word Easier to Hear"
+        }
+      ],
+      "categories": [
+        "Art & Study"
       ]
     },
     {
@@ -15610,6 +15874,28 @@
       ]
     },
     {
+      "title": "Room for a Quieter Moment",
+      "category": "Art & Study",
+      "thumbnail": "/assets/page-art/art-study/thumbs/children-quiet-welcome-20261004.webp",
+      "fullImage": "/assets/page-art/art-study/full/children-quiet-welcome-20261004.webp",
+      "alt": "A child seated on a floor cushion reaches toward ear defenders offered by an adult, with a gathering visible through an open doorway.",
+      "id": "art-5b83540abd72",
+      "occurrences": [
+        {
+          "id": "source-c4cdf22b06cb",
+          "page": "/art-study/suffer-the-little-children.html",
+          "pageTitle": "Suffer the Little Children",
+          "category": "Art & Study",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/art-study/full/children-quiet-welcome-20261004.webp\"]:has(img[src=\"../assets/page-art/art-study/thumbs/children-quiet-welcome-20261004.webp\"])",
+          "title": "Room for a Quieter Moment"
+        }
+      ],
+      "categories": [
+        "Art & Study"
+      ]
+    },
+    {
       "title": "Room for hope",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/atonement/new-heart-960.webp",
@@ -16521,6 +16807,28 @@
       ]
     },
     {
+      "title": "Slow Enough to Hear",
+      "category": "Art & Study",
+      "thumbnail": "/assets/page-art/art-study/thumbs/still-listen-workshop-20261004.webp",
+      "fullImage": "/assets/page-art/art-study/full/still-listen-workshop-20261004.webp",
+      "alt": "A man pauses beside a wooden board and a resting sanding block to listen to a teenager.",
+      "id": "art-4012da85b208",
+      "occurrences": [
+        {
+          "id": "source-ee6abafdd0be",
+          "page": "/art-study/be-still.html",
+          "pageTitle": "Be Still",
+          "category": "Art & Study",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/art-study/full/still-listen-workshop-20261004.webp\"]:has(img[src=\"../assets/page-art/art-study/thumbs/still-listen-workshop-20261004.webp\"])",
+          "title": "Slow Enough to Hear"
+        }
+      ],
+      "categories": [
+        "Art & Study"
+      ]
+    },
+    {
       "title": "Speak honestly in hardship",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/settle-heart/13-liberty-prayer-800.webp",
@@ -17275,6 +17583,28 @@
       ],
       "categories": [
         "Gospel Studies"
+      ]
+    },
+    {
+      "title": "The Children’s Praise",
+      "category": "Art & Study",
+      "thumbnail": "/assets/page-art/art-study/thumbs/children-temple-praise-20261004.webp",
+      "fullImage": "/assets/page-art/art-study/full/children-temple-praise-20261004.webp",
+      "alt": "Three children praise Jesus in the temple as He turns toward two religious leaders.",
+      "id": "art-2f1689f4b1f2",
+      "occurrences": [
+        {
+          "id": "source-0ffaee63ef76",
+          "page": "/art-study/suffer-the-little-children.html",
+          "pageTitle": "Suffer the Little Children",
+          "category": "Art & Study",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/art-study/full/children-temple-praise-20261004.webp\"]:has(img[src=\"../assets/page-art/art-study/thumbs/children-temple-praise-20261004.webp\"])",
+          "title": "The Children’s Praise"
+        }
+      ],
+      "categories": [
+        "Art & Study"
       ]
     },
     {
@@ -19601,7 +19931,7 @@
       "category": "Art & Study",
       "thumbnail": "/art/thumbs/new/there-is-a-greater-victory-ahead.webp",
       "fullImage": "/art/new/there-is-a-greater-victory-ahead.webp",
-      "alt": "Jesus extends his hand toward a tall armored warrior, beside There is a greater victory ahead. Turn away, and follow Me and text from Matthew 11:28â€“30.",
+      "alt": "Jesus extends his hand toward a tall armored warrior, beside There is a greater victory ahead. Turn away, and follow Me and text from Matthew 11:28–30.",
       "id": "art-4eaefcb1ed43",
       "occurrences": [
         {
@@ -21149,14 +21479,14 @@
     }
   ],
   "stats": {
-    "artworks": 952,
-    "occurrences": 957,
+    "artworks": 967,
+    "occurrences": 972,
     "byKind": {
       "artwork": 63,
       "hero": 42,
       "legacy": 39,
       "missionary": 13,
-      "topic": 853
+      "topic": 868
     }
   }
 }

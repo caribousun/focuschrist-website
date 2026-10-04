@@ -1,0 +1,18 @@
+{
+  "reviewer": "Newton",
+  "result": "CONCUR_SCOPED_FINISHED_PIXELS",
+  "candidate": "work/gary/generated/gs5-candidate-v1.png",
+  "sha256": "d0babc7bf03ef3133c731479d9c3170191ddecdf10843bd2fc2ea0184293c9c5",
+  "prompt_sha256": "c2847368890f4a6bdb5eb30c08bb10f177d3e992340ba13be3fe5e8498df0150",
+  "actual_pixels_reviewed": "Full1536x1024 actual candidate",
+  "findings": {
+    "action_agency": "Older woman independently reaches large tactile play control with her own finger. Friend points without covering or moving that hand. Separate natural fingers and believable device contact.",
+    "gaze": "Older woman attends toward device/action; friend looks supportively toward her rather than camera. Do not claim both gaze exactly at button. Patient engaged teaching interaction remains legible.",
+    "source_scope": "Audio device, headphones and unlettered closed book support present-day scripture-access application of Romans10 and John10. Image does not assert a recorded scriptural incident, medical diagnosis or hearing as prerequisite to faith.",
+    "appearance": "Distinct fictional contemporary adults, natural life-stage appearance, modest clothing, lifelike photographic skin/hair/light, no named historical identity or Christ.",
+    "composition": "Clear voluntary task with dignified participation; no museum/search/sales/miracle scene, prominent branding or readable private information. Useful margins and intact action.",
+    "copy": "Proposed caption accurately describes trying audio player with patient friend and offers modest scripture-access connection."
+  },
+  "errors": [],
+  "limits": ["Newton scoped pixel concurrence pending Fermi independent review and root assembled desktop/phone interactions.", "No per-page quota, publication or owner aesthetic acceptance claimed.", "Delivered variants must preserve exact source lineage and visible action."]
+}

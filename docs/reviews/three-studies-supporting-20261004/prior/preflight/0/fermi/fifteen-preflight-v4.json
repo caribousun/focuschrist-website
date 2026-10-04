@@ -1,0 +1,403 @@
+{
+  "reviewer": "Fermi",
+  "result": "15_OF_15_PASS_EXACT_V4_PREFLIGHT",
+  "input_file": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\three-study-plans-v4.json",
+  "input_sha256": "d6b81ca9f96d0f539c155debf65e91ce2953124ecd449cb9f978b6f28bfa5914",
+  "stage": "PRE_GENERATION_EXACT_PROMPT_REFERENCE_SOURCE_CONCURRENCE",
+  "rows": [
+    {
+      "key": "GS1",
+      "status": "PASS",
+      "prompt_sha256": "e52bed9c946ccac75bf0abf9c072ae75cb78103937ba3603bfdbc4952f0c019d",
+      "owner_route": "art-study/the-good-shepherd.html",
+      "reference_inputs": [
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\heroes\\home-christ-signature-approved-20260907.png",
+          "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+          "role": "Exact owner-approved Jesus identity. Actual pixels required; expression adapts to scene. Not an authenticated historical portrait."
+        }
+      ],
+      "source_passages": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ezek/34?lang=eng",
+          "verses": "11–16,23–31",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\ot-ezek-34.txt"
+        },
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng",
+          "verses": "11–18",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-john-10.txt"
+        }
+      ],
+      "finding": "Ezekiel34 full chapter explicitly binds/heals the flock and identifies people as flock; John10 Good Shepherd links support devotional illustration, not recorded animal-care event. Bandage finishing differs from carrying/seeking/pit-rescue actual comparators. Home actual pixels bind identity; risen visible-palm/wrist marks required. Pale gray slight yellow-green target is distinguishable from darker olive/sage; reject generated drift into generic sage."
+    },
+    {
+      "key": "GS2",
+      "status": "PASS",
+      "prompt_sha256": "fe35dc39081c97c32e93a5c5a1483aa6d9ecb91db4b7ca4a32dd49a607158e1a",
+      "owner_route": "art-study/the-good-shepherd.html",
+      "reference_inputs": [],
+      "source_passages": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ezek/34?lang=eng",
+          "verses": "17–22",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\ot-ezek-34.txt"
+        }
+      ],
+      "finding": "Ezekiel34:17-22 condemns fouled water and shoulder/horn obstruction within the flock. Six-sheep access scene differs from doorway/following/wolf/rescue actual comparators. Revised no-human boilerplate now consistent. Need actual finished six-animal anatomy and clear water access, not aggression caricature."
+    },
+    {
+      "key": "GS3",
+      "status": "PASS",
+      "prompt_sha256": "6bdee4f165c2b1a3295ff26e19a406e593e73b38dfd23b321ee0ac98d6c366cd",
+      "owner_route": "art-study/the-good-shepherd.html",
+      "reference_inputs": [],
+      "source_passages": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/2?lang=eng",
+          "verses": "14–18",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-james-2.txt"
+        },
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng",
+          "verses": "16–27",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\bofm-mosiah-4.txt"
+        }
+      ],
+      "finding": "James2 full chapter links living faith to tangible necessities; Mosiah4 grounds care in grace, need, capacity and wisdom. Cooperative repair of owned lining is distinct from actual coat distribution, solitary Jane sewing and adult garment parable. Contemporary anonymous adult participants, coat empty on table, task-directed gaze specified."
+    },
+    {
+      "key": "GS4",
+      "status": "PASS",
+      "prompt_sha256": "33393c3d6f612d11e624e78dc5f507eb4280edc18e28569edecafc74e4d6b36b",
+      "owner_route": "art-study/the-good-shepherd.html",
+      "reference_inputs": [],
+      "source_passages": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng",
+          "verses": "16,26–27",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\bofm-mosiah-4.txt"
+        }
+      ],
+      "finding": "Mosiah4:16,26-27 supports practical relief without alleging this fictional event is scripture. Actual bicycle repair comparator confirms withdrawn concept too close; key recovery differs in action, tool, object, posture and setting. Current gallery text search found no matching key-ring/drain/magnet scene. Steel ring contact avoids brass magnet error; shallow dry channel and above-grate hands form plausible geometry. Full tool/ring/grate construction remains finished-pixel gate."
+    },
+    {
+      "key": "GS5",
+      "status": "PASS",
+      "prompt_sha256": "c2847368890f4a6bdb5eb30c08bb10f177d3e992340ba13be3fe5e8498df0150",
+      "owner_route": "art-study/the-good-shepherd.html",
+      "reference_inputs": [],
+      "source_passages": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/rom/10?lang=eng",
+          "verses": "14–17",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-rom-10.txt"
+        },
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng",
+          "verses": "3–5,27",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-john-10.txt"
+        }
+      ],
+      "finding": "Romans10 concerns hearing preached gospel and responding, not merely audio technology; John10 concerns recognizing Shepherd. Application appropriately helps independent audio access without cure claims. Actual museum tactile model and conference headphones/notes differ from learning one home-player control. Closed volume and friend pointing without grasping preserve clear action."
+    },
+    {
+      "key": "CH1",
+      "status": "PASS",
+      "prompt_sha256": "b4d4f4544b714bec9bcab3d19ce91b9aa7e40dd4ad9d18a69d9baeb69cbeb83e",
+      "owner_route": "art-study/suffer-the-little-children.html",
+      "reference_inputs": [
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\heroes\\home-christ-signature-approved-20260907.png",
+          "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+          "role": "Exact owner-approved Jesus identity. Actual pixels required; expression adapts to scene. Not an authenticated historical portrait."
+        }
+      ],
+      "source_passages": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/21?lang=eng",
+          "verses": "12–17",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-matt-21.txt"
+        }
+      ],
+      "finding": "Fresh full IsaiahNazareth pixels show medium/dark slate blue-gray; full LookUnto smoke-lilac pixels read muted warm pink-mauve. Fresh sheets show Martha/Mary dusty plum and LivingPaul warm ash-rose. Proposed very pale cool gray with faint blue-violet cast differs in value from Isaiah and temperature from LookUnto/Martha/Paul. The no-pink/red/plum-brown/warm-rose wording prevents the prior intended overlap. This is a distinguishable generation target, not proof that a future rendering will implement it. Complete Matthew21 reread: children praise, priests/scribes object and Christ answers. Illustrative ages/count/faces/architecture remain explicitly unknown. No blessing queue/healing-event substitution."
+    },
+    {
+      "key": "CH2",
+      "status": "PASS",
+      "prompt_sha256": "4f32a9dcef143d1d83f863de01453c86d51ecd6c1e85e7bb5fc0ec553fef087c",
+      "owner_route": "art-study/suffer-the-little-children.html",
+      "reference_inputs": [],
+      "source_passages": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/9?lang=eng",
+          "verses": "33–37",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-mark-9.txt"
+        },
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng",
+          "verses": "13–16",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-mark-10.txt"
+        }
+      ],
+      "finding": "Mark9 service/receiving child and Mark10 welcome/blessing support contemporary inclusive application, not historical event or cure. Active tabletop ball game differs from actual drawing-table entrance and adult wheelchair doorway planning/bus ramp. Clear knee space, no transfers, agency and task gaze are coherent; finished pixels must keep all four roles and wheelchair structure distinct."
+    },
+    {
+      "key": "CH3",
+      "status": "PASS",
+      "prompt_sha256": "6270dc81372733391b982864137c760a023a16bc9cf0d1badcb3cbcb119a4f19",
+      "owner_route": "art-study/suffer-the-little-children.html",
+      "reference_inputs": [],
+      "source_passages": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/9?lang=eng",
+          "verses": "36–37",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-mark-9.txt"
+        },
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/1?lang=eng",
+          "verses": "19–22",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-james-1.txt"
+        }
+      ],
+      "finding": "Mark9:36-37 and James1 listening/doing support patient attention as application. Toy-bear seam repair with child holding spool differs from actual shoe-tying, bridge model and adult coat repair. Adult alone controls needle; child participates separately, no commercial character or dramatic distress."
+    },
+    {
+      "key": "CH4",
+      "status": "PASS",
+      "prompt_sha256": "5c5e8edbcb073c3c620ee5ed23ffe828f6eafa4fd6f9b7c7e583ba3cdd98f87f",
+      "owner_route": "art-study/suffer-the-little-children.html",
+      "reference_inputs": [],
+      "source_passages": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng",
+          "verses": "13–16",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\bofm-mosiah-4.txt"
+        }
+      ],
+      "finding": "Mosiah4:13-16 links peace, child care, teaching love/service and helping need. Revised prompt opens lunchbox, offers still-sealed packet, with no contradictory opening of packet. Peer lunch sharing is distinct from actual coat distribution and indexed adult pantry/crowd feeding; no claim of hunger, allergy safety or sacramental action. Mutual gaze and separate offering/receiving hands are explicit."
+    },
+    {
+      "key": "CH5",
+      "status": "PASS",
+      "prompt_sha256": "1d96a96e8da3f99f521e8db69fb6fd6cf77ebe4a5931808488188c88f3b2a3e6",
+      "owner_route": "art-study/suffer-the-little-children.html",
+      "reference_inputs": [],
+      "source_passages": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng",
+          "verses": "13–16",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-mark-10.txt"
+        },
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/1?lang=eng",
+          "verses": "19",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-james-1.txt"
+        }
+      ],
+      "finding": "Mark10 welcome and James1 listening support quiet-space/access application without diagnosing a child. Offered ear defenders with choice and open return path differ from actual shy-child invitation/drawing-table/porch-listening comparisons. No forced embrace, restraint, cure or isolation claim."
+    },
+    {
+      "key": "BS1",
+      "status": "PASS",
+      "prompt_sha256": "3322c5c19e4fe0e6f9bf3d57d26bc6606f6e1953992494bfd97bcebfa9a9a64c",
+      "owner_route": "art-study/be-still.html",
+      "reference_inputs": [
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\heroes\\home-christ-signature-approved-20260907.png",
+          "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+          "role": "Exact owner-approved Jesus identity. Actual pixels required; expression adapts to scene. Not an authenticated historical portrait."
+        },
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\art-study\\full\\still-storm-boat.webp",
+          "sha256": "fdb60ec2ecdee51a24264fc53f0c1aed7cbde5d10dcaec32a6e3d8840b42911c",
+          "role": "Continuity only for three unnamed adult companions: A foreground-left headband man; B behind-left bearded man; C far-right rear man. Omit D, the lower-right foreground man. Do not alter or transfer D identity. Do not copy reference Jesus, storm, poses, frightened expressions or clothing colors. No named apostle mapping or complete apostolic headcount is claimed."
+        }
+      ],
+      "source_passages": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/6?lang=eng",
+          "verses": "30–34",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-mark-6.txt"
+        }
+      ],
+      "finding": "PASS exact v3. Fresh full Home and storm pixels confirm A headband, B behind A and C far-right rear are anonymous continuity references. D remains omitted rather than reshaped. Home alone controls Christ. Mark6 complete chapter reread: departure for rest precedes crowd and feeding; this is not storm-calming. Exactly three visible companions is expressly a framed subset, not historical headcount. New side view/seated departure/action differs from storm and shore meal. Final faces, pale apricot-gray rather than gold/rose, dry boat anatomy and non-scarred mortal Christ require finished-pixel review."
+    },
+    {
+      "key": "BS2",
+      "status": "PASS",
+      "prompt_sha256": "583ccdc7d390ff8037b7552c7a9aa75ee628373f8b3dfe83e466c9c4e5491e53",
+      "owner_route": "art-study/be-still.html",
+      "reference_inputs": [],
+      "source_passages": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/philip/4?lang=eng",
+          "verses": "4–9,11–14",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-philip-4.txt"
+        }
+      ],
+      "finding": "Philippians4 full chapter joins prayer/peace with continuing affliction, learned contentment and assistance. Unfinished sewing work remains unfinished; no claim prayer cures anxiety. Machine off and hands in lap differ from actual kitchen prayer, notebook/scripture or lakeshore scenes."
+    },
+    {
+      "key": "BS3",
+      "status": "PASS",
+      "prompt_sha256": "ddf42651d9425fabf7704251e3962ad7046badf68fbb051b5c5048f90b7d4279",
+      "owner_route": "art-study/be-still.html",
+      "reference_inputs": [],
+      "source_passages": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/1?lang=eng",
+          "verses": "19–22",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-james-1.txt"
+        },
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/3?lang=eng",
+          "verses": "13–18",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-james-3.txt"
+        }
+      ],
+      "finding": "James1 and3 full chapters support listening, doing, restrained speech and peaceable wisdom. Stopped hand-sanding, laid-down block, turned body and teen conversation differ from actual porch listening, bridge model and committee workbench discussion. Manual task clearly interrupted, no active tools; mutual gaze appropriate."
+    },
+    {
+      "key": "BS4",
+      "status": "PASS",
+      "prompt_sha256": "3263cc84e8e9645edb660bdbde9a1e360b8d61eff9fffe82b9453886dcfc03be",
+      "owner_route": "art-study/be-still.html",
+      "reference_inputs": [],
+      "source_passages": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/3?lang=eng",
+          "verses": "13–18",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-james-3.txt"
+        },
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng",
+          "verses": "13",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\bofm-mosiah-4.txt"
+        }
+      ],
+      "finding": "James3 peaceable wisdom and Mosiah4:13 peaceful conduct ground fictional neighbor courtesy. Physical volume-dial turn visibly answers request; differs from actual picnic-table reconciliation, shared kitchen task and indexed tool return. No dramatic resolution, threatening pose, readable private information or magical agency."
+    },
+    {
+      "key": "BS5",
+      "status": "PASS",
+      "prompt_sha256": "c0f526f8a2a66b2df42d306322488f04b1bbc73530e35bfd8920fdb902cee1d8",
+      "owner_route": "art-study/be-still.html",
+      "reference_inputs": [],
+      "source_passages": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng",
+          "verses": "6–11",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\ot-ps-46.txt"
+        }
+      ],
+      "finding": "Psalm46 full chapter moves from upheaval to destroyed weapons, war ending and divine exaltation. Revised6-11 range and8-10 focus coherent. Broken bow/splintered spear/charred wheel are an inert poetic still life, distinct from actual still-lakeside pause and indexed occupied chariots. No claim of recorded battle/artifact or Christ physically depicted; no-human boilerplate consistent."
+    }
+  ],
+  "delta_verified": [
+    {
+      "key": "CH1",
+      "fields": [
+        "prompt",
+        "prompt_sha256",
+        "robe_color"
+      ]
+    }
+  ],
+  "source_metadata_result": "All30 prior source fields preserved exactly; explicit domains correct; normalized chapter BODY hashes/lengths/URLs and raw file hashes independently reverified.",
+  "mandates_read_and_hash_verified": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\AGENTS.md",
+      "sha256": "d00c5315d1588e57b4529379d41552e67db84202052a2c0a4eef69ec807a3710",
+      "role": "Read current applicable mandate"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\docs\\historical-character-identity.md",
+      "sha256": "69f0f51400ba102dfb5df9a9ec9fb6e738255dc496b84dc5dd684f3f5886c8c4",
+      "role": "Read current applicable mandate"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\docs\\approved-character-identities.json",
+      "sha256": "8585b6adebe55ce27ad3a938f3d8d82bc4797543a03003f66cbdc53bb9f4af77",
+      "role": "Read current applicable mandate"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\docs\\focuschrist-enrichment-and-stewardship-prompt.md",
+      "sha256": "8f413b19ab94093c1f4a489bddb7829468d77b335b79be017f71e6db31e4f311",
+      "role": "Read current applicable mandate"
+    }
+  ],
+  "mandate_concurrence": "I have read current applicable mandate text and verified its exact hashes. The exact v4 prompts/reference mappings/source records comply with applicable pre-generation identity, age/time uncertainty, clothing, scene/action uniqueness, expression/gaze, source-context, palette, noncommercial and protected-foundation requirements. This does not certify nonexistent finished pixels or later page integration.",
+  "fresh_source_read": {
+    "chapters": [
+      "ot/ezek/33",
+      "ot/ezek/34",
+      "ot/ezek/35",
+      "nt/john/9",
+      "nt/john/10",
+      "nt/john/11",
+      "nt/matt/20",
+      "nt/matt/21",
+      "nt/matt/22",
+      "nt/mark/5",
+      "nt/mark/6",
+      "nt/mark/7",
+      "nt/james/1",
+      "nt/james/2",
+      "nt/james/3",
+      "nt/mark/9",
+      "nt/mark/10",
+      "nt/mark/11",
+      "bofm/mosiah/4",
+      "ot/ps/46",
+      "nt/philip/3",
+      "nt/philip/4",
+      "ot/ps/45",
+      "ot/ps/47",
+      "bofm/mosiah/3",
+      "bofm/mosiah/5",
+      "nt/rom/9",
+      "nt/rom/10",
+      "nt/rom/11",
+      "nt/luke/3"
+    ],
+    "all_30_complete_local_chapter_extracts_read": true,
+    "chars": 127454,
+    "scope": "Fresh complete text reading across this continuation: Matthew21/Mark6 in first preflight turn, all28 others in v4 review turn. Previously fetched official Church chapter extracts, independently hash-bound; no fresh remote chapter-fetch claim.",
+    "context_findings": [
+      "Ezekiel33-35 surrounds shepherd care with accountability, repentance and judgment; Ezekiel34 explicitly identifies flock as people. Bandaging sheep is devotional metaphor, not recorded Christ animal-care event.",
+      "John9-11 preserves signs, division, shepherd testimony and Lazarus context; audio access is contemporary application, not a cure or recorded scene.",
+      "Matthew20-22 locates children praise amid final Jerusalem temple ministry; three children/two questioners are illustrative rather than exact census or named likenesses.",
+      "Mark5-7 distinguishes departure for rest from healings, later feeding and walking-on-water; no conflation with storm-calming.",
+      "Mark9-11 grounds receiving children and servant leadership; fictional games/toy repair/access choices do not illustrate documented medical events.",
+      "James1-3 ties hearing to doing, care, impartiality and peaceable wisdom; fictional repair/listening/volume scenes are applications.",
+      "Mosiah3-5 places care for children/poor within Christ atonement, forgiveness, covenant and capacity/wisdom. No implication good deeds alone purchase salvation or unlimited giving is required.",
+      "Philippians3-4 joins prayer/peace with continuing need, affliction and learned contentment; unfinished sewing remains unfinished.",
+      "Psalms45-47 retains kingship, upheaval and cessation of war; broken weapons is poetic reflection, not documented artifact/event.",
+      "Romans9-11 concerns mercy, Israel/Gentiles, preaching and response; hearing is not reduced to audio technology or a physical ability threshold.",
+      "Luke3:23 supports about30 at ministry beginning, not an exact date/age for each scene."
+    ]
+  },
+  "actual_pixel_review_receipts": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\fermi\\fifteen-preflight-v3.json",
+      "sha256": "c07a4676b59939357e15beaad7676750744caf3398c4397ce466f43ff39b860c"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\fermi\\ch1-revised-palette-preflight.json",
+      "sha256": "6c7a46a5b521862f2f667e6938a563f9d5647b1f2890bbe393d9a94939d59d75"
+    }
+  ],
+  "generation_concurrence": "FERMI_CONCURS_ON_ALL15_EXACT_V4_FOR_GENERATION_SUBJECT_TO_NEWTON_EXACT_V4_AND_ROOT_AUTHORIZATION",
+  "no_new_owner_authority": true,
+  "finished_pixel_acceptance": false,
+  "page_count_acceptance": false,
+  "production_acceptance": false,
+  "limits": "Scoped actual scene/palette comparison and prior indexed semantic screen do not establish exhaustive sitewide uniqueness. Recheck rendered colors, identity, separate faces, every visible hand/eye, tool/grate geometry, animal counts, source fidelity and phone crop after generation. Existing conditional counts require independent owning-page inventory certification. No original/canonical/SITE assets changed. No cost/schedule/publication action.",
+  "remaining_gates": [
+    "Newton exact frozen v4 concurrence",
+    "Root authorized generation with actual unchanged reference files",
+    "Both finished-image reviewers on exact hashes",
+    "Complete enriched integration and root desktop/phone/native/public verification"
+  ]
+}

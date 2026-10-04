@@ -1,0 +1,17 @@
+{
+  "prompt_sha256": "3263cc84e8e9645edb660bdbde9a1e360b8d61eff9fffe82b9453886dcfc03be",
+  "limitations": "Independent image-only concurrence; Newton exact concurrence and root assembled/native/source/release checks remain. No owner acceptance.",
+  "stage": "FINISHED_PIXEL_REVIEW",
+  "candidate_sha256": "5e0da18e670f73a983b92e39cbf0824e1e5782e753961dc60e5aeb0f3b75d1a3",
+  "result": "PASS",
+  "actual_pixels_inspected": true,
+  "reviewer": "Fermi",
+  "candidate": "work/gary/generated/bs4-candidate-v1.png",
+  "key": "BS4v1",
+  "finding": "Full actual pixels show resident touching top physical speaker dial, neighbor relaxed hand at ear, mutual eye contact, comfortable separation and open doorway/clear corridor. Ordinary modern clothes/real skin and hands, no threat or readable brand/private display. Tiny control markings next to front knob are not readable branding. Physical action is coherent; lowering sound remains narrative moment not something a static image acoustically proves.",
+  "mandates_read": [
+    "AGENTS.md",
+    "docs/historical-character-identity.md",
+    "docs/focuschrist-enrichment-and-stewardship-prompt.md"
+  ]
+}

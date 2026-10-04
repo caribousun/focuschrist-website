@@ -1,0 +1,50 @@
+{
+  "key": "GS1v3",
+  "stage": "EXACT_PREFLIGHT",
+  "concurrence": "Exact prompt follows applicable identity, age, clothing, scar and expression mandates for this narrow edit. Both exposed wrists receive compact healed spots; hidden palms remain hidden. Home reference is identity-only. Full v2 actual pixels independently confirm pale wrapping scars need correction and preservation of the other scene elements is appropriate.",
+  "live_authority_read": [
+    "Master protected foundation and operating map",
+    "00B current-first",
+    "Focus Current State current-first"
+  ],
+  "proposal_sha256": "b79b320ab589c9da7c06d60ee027a14ee4311803a2c506f6cfe192d6200d86e1",
+  "result": "PASS",
+  "generation_clearance": false,
+  "prompt_hash_matches": true,
+  "mandates": [
+    {
+      "sha256": "d00c5315d1588e57b4529379d41552e67db84202052a2c0a4eef69ec807a3710",
+      "read": true,
+      "path": "C:/Users/wyatt/Documents/Codex/2026-10-03/joseph-research-site/AGENTS.md"
+    },
+    {
+      "sha256": "69f0f51400ba102dfb5df9a9ec9fb6e738255dc496b84dc5dd684f3f5886c8c4",
+      "read": true,
+      "path": "C:/Users/wyatt/Documents/Codex/2026-10-03/joseph-research-site/docs/historical-character-identity.md"
+    },
+    {
+      "sha256": "8f413b19ab94093c1f4a489bddb7829468d77b335b79be017f71e6db31e4f311",
+      "read": true,
+      "path": "C:/Users/wyatt/Documents/Codex/2026-10-03/joseph-research-site/docs/focuschrist-enrichment-and-stewardship-prompt.md"
+    }
+  ],
+  "prompt_sha256": "f63fb06082e78aac459ba3822cc26c0d8298b0dd7f32eaed0731c76f72454a65",
+  "source_review": "Read full saved official Ezekiel34 and John10 chapter extracts. Shepherd binding is prophetic devotional metaphor, not documented veterinary episode; risen adult Christ has no asserted exact age. Preserved lichen-stone mantle and task gaze fit scene.",
+  "limitations": "Preflight only. Newton exact concurrence and root authorization still required before generation. Actual output needs both fresh finished-pixel decisions; assembled native desktop/phone and source/candidate/release gates remain. No owner acceptance or SITE use authorization.",
+  "independent_actual_pixels_read": true,
+  "reference_inputs": [
+    {
+      "actual_sha256": "5b1518cc5f3ae639a7ad787f8c9374116fb7abbfeb31a741e3edfe08ca3378dc",
+      "role": "Image 1 exact edit target; only wrist marks change.",
+      "expected_sha256": "5b1518cc5f3ae639a7ad787f8c9374116fb7abbfeb31a741e3edfe08ca3378dc",
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\gs1-candidate-v2.png"
+    },
+    {
+      "actual_sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+      "role": "Image 2 actual approved Home identity only; no portrait pose/background transfer.",
+      "expected_sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\heroes\\home-christ-signature-approved-20260907.png"
+    }
+  ],
+  "reviewer": "Fermi"
+}

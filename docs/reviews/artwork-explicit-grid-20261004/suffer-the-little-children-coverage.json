@@ -1,0 +1,22 @@
+{
+  "route": "art-study/suffer-the-little-children.html",
+  "html_sha256": "4d2dfed3b3443118c8908736b3048a410b2e80217509e42465ee8894a7ca10d2",
+  "complete_page_image_inventory_reviewed": true,
+  "no_unregistered_qualifying_originals": true,
+  "reviewers": [
+    "Fermi",
+    "Newton"
+  ],
+  "unique_originals": 10,
+  "christ_originals": 5,
+  "resource_preview_exclusions": [
+    "assets/resources/children-lords-love.jpg",
+    "assets/resources/children-heartfelt-prayer.jpg"
+  ],
+  "review_boundary": "Root verified exact independent Fermi/Newton inventory and reciprocal concurrence with renewed HTML bindings. All30 originals and delivery variants,3 gallery-owned references and7 resource exclusions reviewed across canonical routes. Source detailed identity/anatomy evidence remains inherited and hash-bound; fresh composition/encoding/ownership checks separate. Heuristic alias detection cannot exclude arbitrary transformations;12 historical generation logs remain unavailable. Native assembled review and final release/public/owner acceptance are separate, not established by this package.",
+  "prior_coverage_evidence": {
+    "path": "docs/reviews/three-studies-strict-20261004/suffer-the-little-children-coverage.json",
+    "sha256": "24a031fb975b7bbf152aea5de686874313d3cc67b6471620fbf6424cf0cf2ecc"
+  },
+  "renewal_boundary": "Exact stylesheet cache-token-only HTML change independently read back by Fermi and Newton; all image placements, classifications and source copy preserved. Shared CSS repair native and hosted acceptance remain separate."
+}

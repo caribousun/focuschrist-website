@@ -1,0 +1,21 @@
+{
+  "reviewer": "Newton",
+  "time": "2026-10-04T16:59:13.312179+00:00",
+  "result": "CONCUR_SCOPED_FINISHED_PIXELS",
+  "candidate": "work\\gary\\generated\\ch1-candidate-v1.png",
+  "sha256": "fc4079d49649d1ac88a3bd2e2f69a8e205b1731436effd4b8c902deac47a92c1",
+  "prompt_sha256": "b4d4f4544b714bec9bcab3d19ce91b9aa7e40dd4ad9d18a69d9baeb69cbeb83e",
+  "actual_review": "Full1536x1024 candidate against actual Home reference and four prior palette comparator images",
+  "findings": {
+    "source_action": "Three children actively praise with open mouths/raised faces; Christ turns toward two distinct adult questioners. This is Matthew21:15-16 scene rather than generic child blessing/teaching. Precise ages/count/architecture remain illustrative.",
+    "identity_age": "Recognizable Home face, eyes/nose/beard/hair retained with warm adult mortal-ministry expression. No nail scars/wounds or supernatural glow visible.",
+    "palette": "Actual mantle is very pale cool blue-violet-gray, distinctly paler and more violet than Isaiah slateblue; lacks warm mauve/ashrose/plum of named other comparisons.",
+    "anatomy": "Separately traceable hands, natural fingers and open mouths, coherent child upward gaze and adult interaction. No definite fused/extra limb found.",
+    "setting_clothing": "Plausible woven ancient clothing and stone-column temple interpretation; no overturned tables/healing distractions, caricature or villain expressions. No historical photograph claim."
+  },
+  "errors": [],
+  "limits": [
+    "Exact pixel concurrence only; dual reviewer and root assembled desktop/phone gates remain.",
+    "No exhaustive sitewide pixel uniqueness or owner aesthetic approval claim."
+  ]
+}

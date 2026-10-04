@@ -1,0 +1,20 @@
+{
+  "reviewer": "Newton",
+  "time": "2026-10-04T17:04:02.992445+00:00",
+  "result": "HOLD_FRAMING_REPAIR",
+  "candidate": "work/gary/generated/ch2-candidate-v1.png",
+  "sha256": "1cfe585d868902f317580df497b86d42e87e56c7259e9d650d1f06bb75c5ada0",
+  "prompt_sha256": "4f32a9dcef143d1d83f863de01453c86d51ecd6c1e85e7bb5fc0ec553fef087c",
+  "actual_review": "Full1536x1024",
+  "passes": [
+    "Three children visibly play one tabletop ball game; wheelchair user actively rolls ball, no transfer or passive congratulation",
+    "Natural visible hands and task gaze, adult moves empty chair, usable knee approach and fixed supported feet",
+    "Dignified fictional modern application with no diagnosis or miracle claim"
+  ],
+  "hold": "Adult clearing the chair is a required active participant, but crown/upper head is clipped by top border with no top margin. This fails exact prompt essential faces/generous margins and full-figure-role framing gate.",
+  "repair_scope": "Reframe modestly wider or extend top enough to retain complete adult head with breathing room while preserving children, table accessibility, faces, hands, game and empty-chair action. Exact dual preflight before edit.",
+  "limits": [
+    "No use approval.",
+    "CH3 arrived during stop request and has not been reviewed by Newton."
+  ]
+}

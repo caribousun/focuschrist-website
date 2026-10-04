@@ -1,0 +1,26 @@
+{
+  "reviewer": "Newton",
+  "status": "CONCUR_SCOPED_FINAL_INVENTORY",
+  "page_hashes": {
+    "art-study/be-still.html": "569c8b49c6e2a6e8fdf1036698e63d2024b5e1c36b2f0946a3e39e93fc82e81c",
+    "art-study/suffer-the-little-children.html": "454a2f833f86bc4ddacf6e99e39afa2907dee83fb17df4dde984f3b9c9ee8258",
+    "art-study/the-good-shepherd.html": "e94c59f33033f7c2b970bb878282250d0c7378b99dde7f418856965337c71d05"
+  },
+  "scope": "Renew exact original inventory, classification, lineage, delivery variant and exclusions after only approved57external anchor attribute and3cache-query edits. Native/runtime/release/owner acceptance excluded.",
+  "evidence": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-candidate-verification\\work\\newton\\final-inventory-declaration.json",
+      "sha256": "96b4c42e8fd50f50c0386e8b4664a9b1d47ec1c0582e11be552a69b95dc913a1"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-candidate-verification\\work\\newton\\strict-inventory-review.json",
+      "sha256": "aeb1e608e05ce06252055032036c586f6d9d039a796c220099f8fed869900170"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-candidate-verification\\work\\newton\\markup-renewal-proof.json",
+      "sha256": "c56329e185f35f2ff35aa9ac2cbbe57b9377e1f49824eaf38a146d464715a742"
+    }
+  ],
+  "concurrence": "Old pages from immutable prior staged-site each match original independently reviewed page SHA; exact permitted transform reproduces current bytes. Existing inventory review therefore remains valid at new page hashes. Underlying asset/hero hashes freshly rechecked.",
+  "remaining": "Mutual markup concurrence and final candidate gates; no whole-site or publication acceptance."
+}

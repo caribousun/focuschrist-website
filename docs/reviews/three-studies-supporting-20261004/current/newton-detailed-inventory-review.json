@@ -1,0 +1,139 @@
+{
+  "reviewer": "Newton",
+  "status": "SCOPED_INVENTORY_CLASSIFICATION_OWNERSHIP_CONCURRENCE",
+  "scope": "Exact three pages complete image inventory, originals, gallery ownership and resource exclusions, delivery variants, cross-canonical ownership; NOT release readiness",
+  "live_authority": "Current Master protected foundation and operating map, latest00B and Focus first block read through connected Google Drive this turn. No authority writes.",
+  "read_and_followed_applicable_mandates": true,
+  "mandates": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "d00c5315d1588e57b4529379d41552e67db84202052a2c0a4eef69ec807a3710"
+    },
+    {
+      "path": "docs/focuschrist-enrichment-and-stewardship-prompt.md",
+      "sha256": "8f413b19ab94093c1f4a489bddb7829468d77b335b79be017f71e6db31e4f311"
+    },
+    {
+      "path": "docs/historical-character-identity.md",
+      "sha256": "69f0f51400ba102dfb5df9a9ec9fb6e738255dc496b84dc5dd684f3f5886c8c4"
+    },
+    {
+      "path": "docs/enriched-picture-owner-mandate.md",
+      "sha256": "c237fb14c7dd57f04d7d9ad063f3f0e93daf0a5c9844f9c3682407b4c80b363d"
+    },
+    {
+      "path": "docs/section-panel-design-mandate.md",
+      "sha256": "26a8028ec7c7393d070e6f8006662861e1651643dbf925092b19d364ace797fc"
+    },
+    {
+      "path": "docs/art-study-current-mandate-control.md",
+      "sha256": "f2b01fd8f11f737f5e317a4a772d49432050d7fdde53c47f3dca5386566ef8f2"
+    }
+  ],
+  "page_hashes": {
+    "art-study/be-still.html": "832f2c73e4632c35bffe8b72d5ca07289a493f200360bdf1932cc01293f35bc8",
+    "art-study/suffer-the-little-children.html": "1d4cfe03d86758d7cea99b4897d3fa4ac465e0ed75d4c21aaf6cf92363027ad9",
+    "art-study/the-good-shepherd.html": "0e3cf97723df9127cfbcd7d0484a2b6fa79a6ef697eac4b43531f7763ef2bf46"
+  },
+  "complete_page_image_inventory_reviewed": true,
+  "no_unregistered_qualifying_originals": true,
+  "counts": {
+    "art-study/be-still.html": {
+      "originals": 10,
+      "christ": 5,
+      "resources": 3
+    },
+    "art-study/suffer-the-little-children.html": {
+      "originals": 10,
+      "christ": 5,
+      "resources": 2
+    },
+    "art-study/the-good-shepherd.html": {
+      "originals": 10,
+      "christ": 6,
+      "resources": 2
+    }
+  },
+  "reference_targets": {
+    "art-study/be-still.html": "../art.html#gallery-original-be-still",
+    "art-study/suffer-the-little-children.html": "../art.html#gallery-original-suffer-the-little-children",
+    "art-study/the-good-shepherd.html": "../art.html#gallery-original-the-good-shepherd"
+  },
+  "resource_exclusions": {
+    "art-study/be-still.html": [
+      {
+        "asset": "assets/resources/still-bednar-be-still.jpg",
+        "sha256": "aa1e22f898ef362c0f56c99c83f8effaf2ef1cf8cb8b0b3b3efd30448ce416ed"
+      },
+      {
+        "asset": "assets/resources/still-principles-prayer.jpg",
+        "sha256": "025775432fdca9204d4976fc807b560d4e70e95ae65751d08870296db977f3fa"
+      },
+      {
+        "asset": "assets/resources/still-personal-peace.jpg",
+        "sha256": "da3128052fa9a82da68bcfeca69aebaa3cf67c697fc8feeeb34599119bbee8fd"
+      }
+    ],
+    "art-study/suffer-the-little-children.html": [
+      {
+        "asset": "assets/resources/children-lords-love.jpg",
+        "sha256": "1f8ec2d4ff645d8a6696cd1d2a963043ef43154410445a1360c71697525247eb"
+      },
+      {
+        "asset": "assets/resources/children-heartfelt-prayer.jpg",
+        "sha256": "1cd47070b2cecdf86cfdca61ba95079ed5dad3ee1131b10a8f459fa4b2a673c5"
+      }
+    ],
+    "art-study/the-good-shepherd.html": [
+      {
+        "asset": "assets/resources/shepherd-abiding-compassion.jpg",
+        "sha256": "f5705de6c3113e4e1bfce20040ea77c90494e59e46f985e2900439b105af63e0"
+      },
+      {
+        "asset": "assets/resources/good-shepherd.jpg",
+        "sha256": "55f0e89e5f1d9e7326d8f0562d04b42ed45c686ea1e94f19fc939a1e1d28bbfd"
+      }
+    ]
+  },
+  "technical_evidence": {
+    "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-candidate-verification\\work\\newton\\inventory-recheck.json",
+    "sha256": "7639795c0220db2938903d8211d73e9fe59b88ebe4f9b7ef2ad665450eacbaf5"
+  },
+  "fermi_concurrence": {
+    "receipt": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-candidate-verification\\work\\fermi\\strict-inventory-review.json",
+    "sha256": "94f7e7e55dd59543c7b7df2164f60c00d83cb6aca85259809b3716f4f73b6f99",
+    "independently_matches_all30_classifications_and_3page_hashes": true
+  },
+  "fresh_visual_evidence": "Viewed all30 full-image composition contacts in six scratch sheets; individually classified16Christ/14other originals. Viewed all3gallery heroes and7resource previews. Direct gallery DOM fragment inspection maps each reference to exactly same full asset as receiving hero. Reproduced all15new full+thumb encodings exactly; no crop. Fresh435 cross-original pHash/SIFT homography pairs retrieved zero alias candidates.",
+  "inherited_evidence": {
+    "prior27": {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-integration-continuation\\work\\newton\\alias-inventory-independent.json",
+      "sha256": "5c074506ec468abe348947f8b2552f24c3f8d25ce705dafbdba2c52b84208bd2"
+    },
+    "final3_scan": {
+      "rehashed_assets": 2328,
+      "final3_snapshot_matches_prior27_exact": true,
+      "final3_sha256": "e3718925f9806a3c06a2c5fee44bd829c83ce2b93ecf0ad3566aff6bcb626007",
+      "snapshot_sha256": "ba14bab84c6babe1a9f754dc87b713df33e391d9bfebd35ca9916781bd757a22"
+    },
+    "checkpoint": {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-integration-continuation\\work\\newton\\CONTINUATION-STOP.json",
+      "sha256": "6639c55bf93d9fb955ae8fcb39a049b38aedb6d48cbb6f276c6f612b7ba03a50"
+    },
+    "scope": "Earlier detailed source-pixel facial/anatomy and repaired3fullWebP reviews remain inherited exact-byte evidence; not claimed newly repeated full-detail here. Prior27 adjudication preserved with fresh2328corpus byte reconciliation."
+  },
+  "findings_outside_inventory": [
+    {
+      "state": "VERIFIED_DEFECT",
+      "description": "Native1280x720 GS1 Continue Lesson focuses correct heading at68.09..116.96 behind sticky nav74..145.2. Root notified, repair required before release."
+    }
+  ],
+  "limits": [
+    "Heuristic retrieval is not mathematical exclusion of arbitrary transformations.",
+    "Twelve historical original generation logs unavailable; never fabricated.",
+    "No whole-site substantive acceptance, owner aesthetic approval, release/native complete/publication/live acceptance.",
+    "Final gallery/search regeneration and page/asset changes require affected renewed review.",
+    "Inventory concurrence does not waive identified sticky-nav defect."
+  ],
+  "mandate_concurrence": "Exact inventory follows uniqueness/count/classification/reference-exclusion and delivery requirements within the recorded review scope. Full enriched release remains pending interaction repair and all remaining gates."
+}

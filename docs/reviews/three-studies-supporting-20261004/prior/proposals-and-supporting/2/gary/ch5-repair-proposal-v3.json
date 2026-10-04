@@ -1,0 +1,16 @@
+{
+  "key": "CH5",
+  "version": 3,
+  "status": "EXACT_DUAL_PREFLIGHT_REQUIRED",
+  "generation_clearance": false,
+  "prompt": "Image 1 is the sole edit target. Make one tiny strictly localized repair on the outside shell of the far, screen-LEFT ear cup of the dark gray hearing-protection earmuffs, directly below the child's fingertips. Remove the remaining raised oval button and power-symbol-like marking entirely, including its rim, inset and shadow. Fill that tiny patch with smooth uninterrupted matte dark-gray shell surface matching the surrounding curvature, material and lighting. The outside shell must be plain passive hearing protection with no control, button, symbol, lettering, jack, light or electronics. Preserve every other feature as closely as possible: both ear cups, cushions, headband, size and position, all child and adult fingers and hands, faces, eyes, mutual gaze, expressions, hair, clothing, seated bodies, cushion, room, doorway, people in the adjoining gathering, clear return path, lamp, colors, lighting and exact 1536x1024 framing. Do not move, add or reshape any finger or hand. Change only the small button-bearing patch of the screen-left shell. Preserve natural photographic detail.",
+  "prompt_sha256": "cce01f31f137168b1e570cff4f91e5f097509a7c9480baa776b8a433e477264e",
+  "reference_roles": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-integration-continuation\\work\\gary\\generated\\ch5-candidate-v2.png",
+      "sha256": "7f3b4eb61eef0bc20dde0bed65205c3c75d0270508824bf60300b452bf502a4a",
+      "role": "Image 1 sole edit target; remove remaining small button-like mark only."
+    }
+  ],
+  "repair_basis": "Root held CH5v2 after actual full/object crop: raised oval power-like marking remains on far screen-left cup below child fingertips."
+}

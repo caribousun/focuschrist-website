@@ -1,0 +1,56 @@
+{
+  "reviewer": "Newton",
+  "time": "2026-10-04T16:49:50.148665+00:00",
+  "result": "CONCUR_THREE_EXACT_REPAIR_PREFLIGHTS",
+  "rows": [
+    {
+      "key": "GS1",
+      "proposal_sha256": "546738bd5bfefab662d99042e6ed1e1cc649f61f72ae0a184b8b4205b8980ecc",
+      "prompt_sha256": "27bd16790f084d96b68bc6cf74d7bdf68da5423e5a441202186a5124480372ff",
+      "reference_inputs": [
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\gs1-candidate-v1.png",
+          "sha256": "83fbea06128764a9bb3f21b01070f8934df4fb2d722ad14ad9daa93986f86237",
+          "role": "Image 1: Exact edit target. Preserve original composition and all content outside the specified marks."
+        },
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\heroes\\home-christ-signature-approved-20260907.png",
+          "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+          "role": "Image 2: Actual owner-approved Home identity reference only. Preserve recognizable identity already present in image 1; do not transfer the portrait pose, smile, robe, background, lighting or composition."
+        }
+      ],
+      "decision": "CONCUR_EXACT_REPAIR_PREFLIGHT"
+    },
+    {
+      "key": "GS2",
+      "proposal_sha256": "c08687301628d88d4b5b32d3119007777cd7fa9846ee534ba69c3e1fa4d10837",
+      "prompt_sha256": "45ab8047a0de505113f11e74efca25d278d75a23b842cb065a8cbc8b07caaeaf",
+      "reference_inputs": [],
+      "decision": "CONCUR_EXACT_REPAIR_PREFLIGHT"
+    },
+    {
+      "key": "GS4",
+      "proposal_sha256": "5d5323da242e526d7ef83dd6615c724c6e570e642f4c8a36da2f1c12f5121a87",
+      "prompt_sha256": "8b08d34d0333789df765dfa0ac732af466fa8f48160d8fa2a9cdedf92900c800",
+      "reference_inputs": [
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\gs4-candidate-v1.png",
+          "sha256": "4775e1ab5198ac4051fc312ab87ce58057be8ba0c7b39860ab632623055a387e",
+          "role": "Exact edit target; fictional unnamed people retained unchanged."
+        }
+      ],
+      "decision": "CONCUR_EXACT_REPAIR_PREFLIGHT"
+    }
+  ],
+  "reasoning": {
+    "GS1": "Exact original target plus actual Home identity-only reference; wrist joint placement, closed pale healed scars, wrong dorsal slit removal, hidden palms and all other content preservation resolve scope defects.",
+    "GS2": "Six-count composition includes single narrow blocked approach with waiting smaller sheep, obstructing pair, muddy hoof edge and distinct remaining three; makes intended source metaphor legible without attack or historical census claim.",
+    "GS4": "Direct cylindrical magnet-to-steel-ring contact removes impossible connector while retaining two keys/gravity and all people/setting."
+  },
+  "errors": [],
+  "limits": [
+    "Root generation gate and both actual repaired-pixel reviews remain required.",
+    "No finished repair or use/publication approval.",
+    "No SITE/Docs mutations or generation performed by Newton."
+  ]
+}

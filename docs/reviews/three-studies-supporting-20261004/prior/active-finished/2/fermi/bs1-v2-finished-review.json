@@ -1,0 +1,25 @@
+{
+  "reviewer": "Fermi",
+  "key": "BS1",
+  "version": 2,
+  "stage": "FINISHED_PIXEL_REVIEW",
+  "status": "PASS_SCOPED_ACTUAL_PIXELS",
+  "candidate_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-integration-continuation\\work\\gary\\generated\\bs1-candidate-v2.png",
+  "candidate_sha256": "b38bc8ff679a3a11bf819a7c362f13336c4a58e076895ee9db153bced8cb9d25",
+  "finding": "Full1536x1024 image plus far-right face crop independently compared with full actual storm reference and Home. Far-right companion now follows upper rear C: narrower long nose/brow profile, dark wavy hair and tapered beard, distinct from lower foreground D. Exactly Christ and three companions; headband A and rowing B retained, calm conversation gaze/boat/dry daylight coherent. Christ adult recognizable Home likeness, no resurrected nail marks in this mortal scene. Source only establishes retreat by ship, not exact passenger identities or count; named-apostle claims remain excluded.",
+  "source_and_reference_evidence": "Complete supplied Mark6 reread; actual full storm and Home pixels inspected. Artistic continuity of C is judged from partly obscured reference, not biographical identification.",
+  "mandates_read": [
+    "Live exact Master/foundation/map and latest00B/FocusCurrent",
+    "SITE AGENTS.md",
+    "docs/historical-character-identity.md",
+    "docs/focuschrist-enrichment-and-stewardship-prompt.md",
+    "docs/enriched-picture-owner-mandate.md",
+    "docs/section-panel-design-mandate.md",
+    "docs/art-study-current-mandate-control.md"
+  ],
+  "limits": [
+    "Scoped independent Fermi review; Newton concurrence and root assembled native review remain separate",
+    "No SITE write, generation or publication authorization",
+    "No owner aesthetic acceptance"
+  ]
+}

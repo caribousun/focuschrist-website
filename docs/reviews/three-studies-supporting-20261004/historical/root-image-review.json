@@ -1,0 +1,12 @@
+{
+  "reviewer": "Albert",
+  "scope": "Current exact originals inspected; older accepted candidates recovered from hash-bound handoff, not falsely claimed as freshly viewed",
+  "results": [
+    {"key":"BS5v1","sha256":"1904a0cb7c0bb79c3fbe27cecec7401524e9514d7cbd0404c9168410a2bdf4e3","result":"PASS_SCOPED_PIXELS","finding":"Full image shows broken bow and spear and inert charred wheel, no people or implied archaeological authentication. Caption and Psalm46 interpretation align."},
+    {"key":"BS1v2","sha256":"b38bc8ff679a3a11bf819a7c362f13336c4a58e076895ee9db153bced8cb9d25","result":"PASS_SCOPED_PIXELS","finding":"Full calm image compared with full storm and actual approved Home. Four participants, far-right companion follows upper rear C rather than foreground D; source face is partly obscured and soft, limiting precision. Home likeness and attentive expressions retained. No named apostle assertion."},
+    {"key":"GS1v5","sha256":"875fe190b3b589712f5e4da9cafa699e66ac980b6b8cd5eaed39a1d8537ddee1","result":"HOLD","finding":"Full and enlarged wrists inspected. Screen-left repaired, but side-by-side old/new screen-right wrist comparison reveals unchanged broad pale descending and branching track beneath healed oval. First full view alone insufficient; Newton finding independently confirmed and Fermi retracted earlier PASS."},
+    {"key":"CH5v2","sha256":"7f3b4eb61eef0bc20dde0bed65205c3c75d0270508824bf60300b452bf502a4a","result":"HOLD","finding":"Full and enlarged object show raised power-like oval below child's fingertips on screen-left cup. Smooth opposite shell does not resolve passive-object requirement."},
+    {"key":"CH5v3","sha256":"f7b0d9e0ee9dde7bb1ece702a638dce21865e47d822fe52d467482495c732f27","result":"HOLD","finding":"Full and enlarged object still show same raised control. Entire object reconstruction proposed after tiny edit method failed twice."}
+  ],
+  "limits": ["No SITE image insertion or publication yet.","Dual reviews, derived variants, complete inventory, assembled native review, public verification and owner aesthetic acceptance remain separate."]
+}

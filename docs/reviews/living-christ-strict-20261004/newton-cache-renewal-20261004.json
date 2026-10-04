@@ -1,0 +1,25 @@
+{
+  "reviewer": "Newton",
+  "status": "CONCUR_SCOPED_LIVING_COVERAGE_CACHE_ONLY_RENEWAL",
+  "page_hashes": {
+    "art-study/the-living-christ.html": "1343c0278d535940717b175f33ee2fd88444984c5c408e245e34abc1fc3df8c4"
+  },
+  "previous_page_sha256": "8597354ee3eb7f967f92e5460109b29a2e4dc426e7ba4c91dbbb364f8ff00886",
+  "exact_delta": "One topic-artwork-details.js cache-query token only; exact HEAD bytes reconstructed by reversing token. All content, source links, image markup, ownership and exclusions unchanged.",
+  "existing_coverage_evidence": {
+    "path": "docs/reviews/living-christ-strict-20261004/coverage.json",
+    "sha256": "245c45bee6f14cdf069c9fcdf40b5b0aafff708329c67aaf1c41db7f5f751531"
+  },
+  "existing_placement_asset_hashes_rechecked": 10,
+  "authority_boundary": "Renew existing PR445 hash-bound inventory coverage only. Shared JS behavior change has separate focused regression/native evidence; this renewal is not new owner approval or complete release acceptance.",
+  "evidence": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\docs\\art-study-current-mandate-inventory.json",
+      "sha256": "430ce150f2d357529c0312f8f60e1f2b3df6cbbbc844ece35b7902fd019caec2"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-candidate-verification\\work\\newton\\lesson-return-native-recheck.json",
+      "sha256": "a05886208728005519b311aec0193612810548c3452b74d39c1079f0780c4706"
+    }
+  ]
+}

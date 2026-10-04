@@ -1,0 +1,24 @@
+{
+  "reviewer": "Newton",
+  "result": "HOLD_REPAIR_REQUIRED",
+  "candidate": "work/gary/generated/gs1-candidate-v1.png",
+  "sha256": "83fbea06128764a9bb3f21b01070f8934df4fb2d722ad14ad9daa93986f86237",
+  "prompt_sha256": "e52bed9c946ccac75bf0abf9c072ae75cb78103937ba3603bfdbc4952f0c019d",
+  "plan_v4_sha256": "d6b81ca9f96d0f539c155debf65e91ce2953124ecd449cb9f978b6f28bfa5914",
+  "actual_pixels_reviewed": ["full1536x1024", "native-resolution face crop", "native-resolution hands/wrists crop", "approved Home identity actual reference"],
+  "passes": {
+    "source_action": "Patient bandaging of an already-found resting sheep expresses Ezekiel34 and John10 metaphor; no literal recorded veterinary episode claim.",
+    "identity": "Recognizable approved Home Christ nose, brow, eye spacing, beard, hair and face retained; downward task-directed gaze and concentrated expression fit.",
+    "anatomy": "Two separately traceable human hands; visible fingers and forelegs plausible. Sheep hindlegs naturally occluded; this alone is not evidence of missing/extra limbs.",
+    "palette": "Mantle appears pale restrained gray with slight lichen yellowgreen cast, distinct from darker olive/sage comparisons retained from preflight.",
+    "composition": "Clear single act, no crowd or generic carried-lamb scene, modest garments, natural photographic detail and useful margins."
+  },
+  "hold": {
+    "location": "Christ anatomical left wrist, screenright hand/forearm",
+    "finding": "Visible reddish slit is on dorsal hand below wrist; exposed dorsal wrist lacks verifiable required healed mark. Existing marks read as dark incisions rather than clearly healed scars.",
+    "required_repair": "Exact dual-reviewed edit should place subtle healed scar at each visible wrist, remove incised/open appearance, preserve all identity, anatomy, pose, sheep, garment colors, setting and source action. Do not force hidden palms into view.",
+    "palms": "Naturally hidden; do not expose or add visible palm evidence."
+  },
+  "mutual_review": "Fermi independently reported matching wrist-location/healed-appearance HOLD before reconciliation.",
+  "limits": ["No use/publication approval.", "Repaired exact prompt needs dual preflight, followed by actual repaired-pixel dual review.", "No native assembled page review performed here."]
+}

@@ -1,0 +1,25 @@
+{
+  "reviewer": "Fermi",
+  "status": "CORRECTED_AWAITING_NEWTON_EXACT_HASH_CONCURRENCE",
+  "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-enriched-continuation\\work\\fermi\\three-study-copy.json",
+  "source_sha256": "4d251ac09439976633d5c13965544924dd776c733ff8b96ffc2529f51e80903a",
+  "final_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-integration-continuation\\work\\fermi\\three-study-copy.json",
+  "final_sha256": "0896f09a2803e0208f2acf20a7276173de1880151af33aa377ed121e4656bd47",
+  "changes": [
+    "BS5 paragraphs_html[0]: first Psalm 46 text replaced by inline Psalm 46:1-3 reader anchor",
+    "BS5 sources: added exact Psalm 46:1-3 source record"
+  ],
+  "preservation": "All other JSON fields and source bytes outside these two replacements unchanged; 14 other entries identical. Existing source_reads and past review limits preserved as historical metadata, not new claims.",
+  "source_read_this_turn": {
+    "path": "C:/Users/wyatt/Documents/Codex/2026-10-04/enriched-art-corrections-production-audit/work/gary/ot-ps-46.txt",
+    "sha256": "28764fb274550443fe24e82d21fb4b874ffd86f3921f60f62bcb1f2bb1573709",
+    "scope": "Complete supplied official Psalm 46 extract read; verses 1-3 support refuge and earth/water upheaval"
+  },
+  "authority": "Exact live Master foundation and operating map; latest 00B, Focus Current, 00I and 00C fetched via connected Drive. SITE AGENTS, SOUL, USER, BRAIN-LOCATION, enrichment and historical identity read.",
+  "limits": [
+    "No SITE or canonical write",
+    "No new image approval or generation authorization",
+    "GS1 CH5 BS1 holds preserved; twelve accepted candidates untouched",
+    "No assembled rendering or production acceptance"
+  ]
+}

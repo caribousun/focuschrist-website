@@ -70,7 +70,7 @@ def enrich():
         elif placement['kind']=='deeper-second-heading':
             deeper=unit.select_one('[data-enrichment-study]')
             deeper.select('h3')[1].insert_before(figure)
-    for asset in ['artwork-details.css?v=20260909-warm','artwork-actions.css?v=20260929-picture-source-pills-1','topic-artwork-details.css?v=20260927-anchor-alignment-1','full-image-viewer.css?v=20260905-viewport']:
+    for asset in ['artwork-details.css?v=20260909-warm','artwork-actions.css?v=20261004-explicit-grid-1','topic-artwork-details.css?v=20260927-anchor-alignment-1','full-image-viewer.css?v=20260905-viewport']:
         filename=asset.split('?')[0]
         for old in list(soup.select('link[href]')):
             if old['href'].split('?')[0].split('/')[-1]==filename: old.decompose()

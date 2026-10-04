@@ -1,0 +1,27 @@
+{
+  "reviewer": "Fermi",
+  "status": "PASS_SCOPED_ACTUAL_PIXELS",
+  "key": "GS1v6",
+  "candidate_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-integration-continuation\\work\\gary\\generated\\gs1-candidate-v6.png",
+  "candidate_sha256": "9d18647148c27b803fd263dab2ef05c43ae958ba7e55794db3b74807474eaa82",
+  "evidence": [
+    "Exact full1536x1024output independently inspected",
+    "work/fermi/gs1-v5-v6-comparison.png: exact same-coordinate crops v5left/v6right",
+    "Home reference and prior fullv5 independently inspected earlier current turn"
+  ],
+  "finding": "Direct near-wrist comparison now shows broad pale descending/branching track substantially removed and compact healed oval isolated above surrounding ordinary skin texture. Remaining fine wrist creases are faint/local and no longer form the connected pale track held in v3/v5. Far wrist retains small closed oval and natural skin. Hidden palms stay hidden; no dorsal hand marks, fresh blood or dark open puncture. Approved face/eyes, concentrated gaze, natural hand anatomy, bandage/sheep and woven garments remain visually coherent and recognizable. Full composition has no inset/collage.",
+  "source_context": "Complete supplied John10/Ezek34 read this turn; shepherd-care interpretation, not claimed documented physical episode. Exact date and clothing colors are interpretive.",
+  "mandates_read": [
+    "Live Master/foundation/map and latest00B/Focus",
+    "SITE AGENTS.md",
+    "docs/historical-character-identity.md",
+    "docs/focuschrist-enrichment-and-stewardship-prompt.md",
+    "docs/enriched-picture-owner-mandate.md"
+  ],
+  "limits": [
+    "Independent scoped Fermi finished review only; requires Newton exact concurrence and root assembled desktop/phone",
+    "Not pixel-identical outside repair and no such claim",
+    "Prior GS1v5 initial pass retraction preserved",
+    "No SITE/publication/owner-aesthetic claim"
+  ]
+}

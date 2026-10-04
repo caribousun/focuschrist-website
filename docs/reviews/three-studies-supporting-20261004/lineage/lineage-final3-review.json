@@ -1,0 +1,35 @@
+{
+  "reviewer": "Fermi",
+  "status": "SCOPED_FINAL3_SOURCE_LINEAGE_CONCURRENCE_NOT_FROZEN_PAGE_ACCEPTANCE",
+  "scan": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-integration-continuation\\work\\fermi\\lineage-final3-scan.json",
+  "scan_sha256": "e3718925f9806a3c06a2c5fee44bd829c83ce2b93ecf0ad3566aff6bcb626007",
+  "scope": "GS1v6 CH5v4 BS1v2 exact original PNGs compared with pre-integration2328site assets/2305fresh feature representatives",
+  "findings": [
+    {
+      "key": "GS1",
+      "sha256": "9d18647148c27b803fd263dab2ef05c43ae958ba7e55794db3b74807474eaa82",
+      "owner": "art-study/the-good-shepherd.html",
+      "decision": "Distinct new original for intended owner; no retrieved existing-site alias. Actual full pixels independently inspected, distinct from retained15 and new12 scenes.",
+      "scene": "Bandaging sheep distinct from carried/seeking lamb and modern service scenes."
+    },
+    {
+      "key": "CH5",
+      "sha256": "1a0a1e7ac15667f583aedbd3c5e3b6c1b4f07e944cf3088b132a0ef01efa60b4",
+      "owner": "art-study/suffer-the-little-children.html",
+      "decision": "Distinct new original for intended owner; no retrieved existing-site alias. Actual full pixels independently inspected, distinct from retained15 and new12 scenes.",
+      "scene": "Quiet passive ear-defender offer distinct from retained welcome/listening and other new child service scenes."
+    },
+    {
+      "key": "BS1",
+      "sha256": "b38bc8ff679a3a11bf819a7c362f13336c4a58e076895ee9db153bced8cb9d25",
+      "owner": "art-study/be-still.html",
+      "decision": "Distinct new original for intended owner; no retrieved existing-site alias. Actual full pixels independently inspected, distinct from retained15 and new12 scenes.",
+      "scene": "Calm retreat boat has shared character continuity but different setting, action, pose and framing from retained storm-boat source; not a crop or reformatted same picture."
+    }
+  ],
+  "limits": [
+    "Source-snapshot scan completed while root later integrated delivery variants; final full/thumb/page hashes require separate freeze review",
+    "Heuristic similarity coverage not mathematical proof against arbitrary transformations",
+    "No strict final page booleans or publication acceptance"
+  ]
+}

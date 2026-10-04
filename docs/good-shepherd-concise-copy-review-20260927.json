@@ -1,10 +1,10 @@
 {
   "page": "art-study/the-good-shepherd.html",
   "ownerRequest": "Shorter wording explicitly requested; image/link preservation required",
-  "review": "Scoped owner-requested removal of production-note phrasing. Only Strength Shared Under Strain wording changes; all five source selections and artwork identities remain unchanged. Independent verification recorded in the 2026-09-27 media voice review.",
+  "review": "Preserved existing captions with justified shared-work count correction; five new independently source-reviewed scenes. Native and final candidate checks remain separate.",
   "heroExact": true,
-  "allImageMarkupExact": true,
-  "allHrefMultisetExact": true,
+  "allImageMarkupExact": false,
+  "allHrefMultisetExact": false,
   "records": [
     {
       "asset": "../assets/page-art/art-study/full/shepherd-sees-one.webp",
@@ -12,7 +12,7 @@
       "copy": "Jesus pauses beside one man. Remember the Shepherd seeking His lost sheep in Luke 15:3-7.",
       "copy_sha256": "9f3b164fdf5f9319fa40711cc8f3962d18611f27fee9803a01513507d75d12e5",
       "words": 15,
-      "caption_html_sha256": "b725084216a112b58aff366bfaa397956701c821d875e0b5c027eabf7dd0c358",
+      "caption_html_sha256": "ffb0d8046b11583799217ffd8e55b48734420a009487967c41b4b3b06e9e914b",
       "parser_text": "The One Is Not Overlooked Jesus pauses beside one man. Remember the Shepherd seeking His lost sheep in Luke 15:3-7 ."
     },
     {
@@ -21,16 +21,35 @@
       "copy": "The lamb rests in His arms, recalling the Shepherd’s tender care in Isaiah 40:11.",
       "copy_sha256": "16473666f0c8e410506a618f66c412b8002fd3dc84bdb8452f215be437725e89",
       "words": 14,
-      "caption_html_sha256": "d483e54faf95a779a4cffadeb5cdc006306391eef8f5e33cbfe4c792e204446e",
+      "caption_html_sha256": "7d0fa339e11e7ac32cb21c8991adf87a3fdcc0a7236b72add36460aa0c039d92",
       "parser_text": "Gathered into His Arms The lamb rests in His arms, recalling the Shepherd’s tender care in Isaiah 40:11 ."
+    },
+    {
+      "asset": "../assets/page-art/art-study/full/shepherd-binds-hurt-20261004.webp",
+      "title": "He Binds What Is Hurt",
+      "copy": "The sheep rests while the Shepherd tends its leg. Ezekiel 34:11–16 brings seeking, gathering, rest and healing into one promise of care.",
+      "copy_sha256": "745adbf18bed04f2f830e737d3dd8daf26ca3ac7be722bca08ffd379099444fa",
+      "words": 22,
+      "caption_html_sha256": "9a3e07d5649fb4ee9b9804fb06ad9f6ca45da0e9812b917e3daebaaab2d2ce3f",
+      "parser_text": "He Binds What Is Hurt The sheep rests while the Shepherd tends its leg. Ezekiel 34:11–16 brings seeking, gathering, rest and healing into one promise of care."
+    },
+    {
+      "asset": "../assets/page-art/art-study/full/shepherd-room-at-water-20261004.webp",
+      "title": "Leave Room at the Water",
+      "copy": "The water is close, but the smaller sheep waits behind the others. Ezekiel 34:17–22 asks how members of the flock treat one another.",
+      "copy_sha256": "d8f1e044d3ba5adb1aa93db5631a067bb827d68a9ffaf12f2d994776bbcce7dd",
+      "words": 23,
+      "caption_html_sha256": "cf81e052ac09e97714b9f8787f51649f7daaf4c3c1d5ecdeba272b85d0373495",
+      "parser_text": "Leave Room at the Water The water is close, but the smaller sheep waits behind the others. Ezekiel 34:17–22 asks how members of the flock treat one another."
     },
     {
       "asset": "../assets/page-art/art-study/full/shepherd-shares-burden.webp",
       "title": "Strength Shared Under Strain",
-      "copy": "As two people share the work, consider Christ’s invitation to the weary in Matthew 11:28-30.",
-      "copy_sha256": "ab0302cfb5b952da1ede0d055ae8f536bb3c83d374913561c658e2fc28667a47",
-      "words": 15,
-      "parser_text": "Strength Shared Under Strain As two people share the work, consider Christ’s invitation to the weary in Matthew 11:28-30 ."
+      "copy": "As they share the work, consider Christ’s invitation to the weary in Matthew 11:28-30.",
+      "copy_sha256": "c44ab48b13f91d9a6fb06193d20cd560489654550d541ded4340ed98db5f79c4",
+      "words": 14,
+      "caption_html_sha256": "0af6e27407d1369983d4ed71c9d7832bba0b092edd6c1e77ab3c6eb6b41ef8eb",
+      "parser_text": "Strength Shared Under Strain As they share the work, consider Christ’s invitation to the weary in Matthew 11:28-30 ."
     },
     {
       "asset": "../assets/page-art/art-study/full/shepherd-calls-zacchaeus.webp",
@@ -38,8 +57,17 @@
       "copy": "Amid the crowd, Jesus calls Zacchaeus by name. Read their encounter in Luke 19:1-10.",
       "copy_sha256": "ad67396e1bdb301a7ef8b191060200c30c6bcca46a57ba161d3b6dc174d6a5a2",
       "words": 14,
-      "caption_html_sha256": "9cdf598015468f817950df11cffd9142b66a47447b7c9a5e42ea34c1c138a764",
+      "caption_html_sha256": "2a2515bc9d3ee7690befba95815764819961b48cdf7512e5f4202c95fccef83d",
       "parser_text": "Known in a Crowd Amid the crowd, Jesus calls Zacchaeus by name. Read their encounter in Luke 19:1-10 ."
+    },
+    {
+      "asset": "../assets/page-art/art-study/full/shepherd-coat-repair-20261004.webp",
+      "title": "Care That Keeps Someone Warm",
+      "copy": "One pair of hands steadies the coat while another repairs its lining. James 2:14–18 asks what faith does when someone needs warmth.",
+      "copy_sha256": "8b90a5ebf35b2a717575cf3ff621faccc4af6709bb4e6c390feb614ec4d54679",
+      "words": 22,
+      "caption_html_sha256": "909096d85df3bd31c3cec52fbe51476f11c486d8e54107f2eb65ab0582df9252",
+      "parser_text": "Care That Keeps Someone Warm One pair of hands steadies the coat while another repairs its lining. James 2:14–18 asks what faith does when someone needs warmth."
     },
     {
       "asset": "../assets/page-art/art-study/full/shepherd-seeks-one-20260919.webp",
@@ -47,8 +75,26 @@
       "copy": "The Shepherd seeks one sheep among the rocks. Read His parable in Luke 15:4–7.",
       "copy_sha256": "44896d3370b64daa71d1ca5fe9dc9f2b1ea8e2fcabdd80d9a191ba276780331d",
       "words": 14,
-      "caption_html_sha256": "68b5ab3a42eab916b693dfc785833609cafaea048947c1b6b7b3506a5db2685c",
+      "caption_html_sha256": "dda5c3939411e8112b1b84b406662a29561e5b91f0c808639485f50d8a749af4",
       "parser_text": "Until He Finds It The Shepherd seeks one sheep among the rocks. Read His parable in Luke 15:4–7 ."
+    },
+    {
+      "asset": "../assets/page-art/art-study/full/shepherd-key-recovery-20261004.webp",
+      "title": "Help With What Is Needed",
+      "copy": "The key ring rises from the drain as two people attend to the same small task. Mosiah 4:26–27 connects willing help with wisdom and order.",
+      "copy_sha256": "4f03dc6ad45e1b243d86db77a3953ade0be53b238e1b72f18da535d5acfdea62",
+      "words": 25,
+      "caption_html_sha256": "136c69bcae96cf512645bc01e323e64a73243292482d638179617e1ea13f6df9",
+      "parser_text": "Help With What Is Needed The key ring rises from the drain as two people attend to the same small task. Mosiah 4:26–27 connects willing help with wisdom and order."
+    },
+    {
+      "asset": "../assets/page-art/art-study/full/shepherd-audio-access-20261004.webp",
+      "title": "Make the Word Easier to Hear",
+      "copy": "She tries the player herself while her companion stays beside her. Romans 10:14–17 invites us to consider how the word of Christ reaches people.",
+      "copy_sha256": "d798f076df39c07ef70fd8526894b45b098e986c96091c2180465bf4032fa801",
+      "words": 24,
+      "caption_html_sha256": "101d847aafb35aba4447caf126b0c9a9b974d75368734d33452b489234fed305",
+      "parser_text": "Make the Word Easier to Hear She tries the player herself while her companion stays beside her. Romans 10:14–17 invites us to consider how the word of Christ reaches people."
     }
   ],
   "page_sha256": "81e369c4366de78701ad95651e44ae09bacdba0c6464488a5544b07d1f792188",

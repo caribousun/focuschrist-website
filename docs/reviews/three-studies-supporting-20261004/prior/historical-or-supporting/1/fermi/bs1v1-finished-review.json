@@ -1,0 +1,17 @@
+{
+  "finding": "Four seated people and calm departure action, Home Christ, headband A and rowing B are recognizable. However rightmost companion strongly resembles expressly omitted lower-right foreground D: same longer narrow face, long nose, dark defined beard and temple curls. Required C is the partly obscured farther rear man with a fuller coarser face; continuity to C is not established. Fresh reference C/D crop and candidate crop inspected. Hold exact identity mapping for independent reconciliation; do not silently accept D as C.",
+  "prompt_sha256": "3322c5c19e4fe0e6f9bf3d57d26bc6606f6e1953992494bfd97bcebfa9a9a64c",
+  "candidate_sha256": "6a96f12c6847b49a25088df64e4d2fb1054cbb3a5777d3aaa2dace99fa4ff504",
+  "candidate": "work/gary/generated/bs1-candidate-v1.png",
+  "mandates_read": [
+    "AGENTS.md",
+    "docs/historical-character-identity.md",
+    "docs/focuschrist-enrichment-and-stewardship-prompt.md"
+  ],
+  "key": "BS1v1",
+  "result": "HOLD",
+  "actual_pixels_inspected": true,
+  "reviewer": "Fermi",
+  "stage": "FINISHED_PIXEL_REVIEW",
+  "limitations": "Independent image-only result; Newton exact concurrence/root assembly/native/source/release checks remain; no owner aesthetic acceptance."
+}

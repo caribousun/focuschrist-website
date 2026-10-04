@@ -1,0 +1,28 @@
+{
+  "reviewer": "Newton",
+  "status": "CONCUR_SCOPED_FINAL_INVENTORY",
+  "page_hashes": {
+    "art-study/be-still.html": "832f2c73e4632c35bffe8b72d5ca07289a493f200360bdf1932cc01293f35bc8",
+    "art-study/suffer-the-little-children.html": "1d4cfe03d86758d7cea99b4897d3fa4ac465e0ed75d4c21aaf6cf92363027ad9",
+    "art-study/the-good-shepherd.html": "0e3cf97723df9127cfbcd7d0484a2b6fa79a6ef697eac4b43531f7763ef2bf46"
+  },
+  "scope": "Complete image inventory, pixel classification, source lineage, delivery variants, gallery-reference and resource exclusions only; not native or release acceptance.",
+  "evidence": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-candidate-verification\\work\\newton\\strict-inventory-review.json",
+      "sha256": "aeb1e608e05ce06252055032036c586f6d9d039a796c220099f8fed869900170"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-candidate-verification\\work\\fermi\\mutual-inventory-concurrence.json",
+      "sha256": "c854ad12c9fda577e482e7b216886d07358e8733d36b0186b99adc10efd2e6b7"
+    }
+  ],
+  "concurrence": "Read reciprocal Fermi receipt; both exact scoped analyses concur. Preserve earlier pending/historical status records untouched. Renew page hash bindings after any HTML changes; underlying unchanged asset evidence may be retained.",
+  "excludes": [
+    "Whole-site substantive acceptance",
+    "native complete review",
+    "sticky-nav repair acceptance",
+    "release/publication/live checks",
+    "owner aesthetic acceptance"
+  ]
+}

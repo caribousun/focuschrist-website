@@ -1,0 +1,20 @@
+{
+  "reviewer": "Newton",
+  "result": "HOLD",
+  "candidate_path": "work\\gary\\generated\\gs1-candidate-v5.png",
+  "candidate_sha256": "875fe190b3b589712f5e4da9cafa699e66ac980b6b8cd5eaed39a1d8537ddee1",
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "depicts_christ": true,
+  "actual_full_pixels_inspected": true,
+  "actual_detail_pixels_inspected": true,
+  "finding": "Screen-left anatomical-right wrist bands substantially removed with compact healed oval. Screen-right anatomical-left wrist retains pale descending/branching line below compact oval, visible in independent v3/v5 same-region comparison; do not certify complete removal. Approved Home facial structure, attentive expression, gaze, sheep/bandage and anatomy remain coherent.",
+  "next_action": "Reconcile exact comparison with root/Fermi before next action. If confirmed, localized removal of residual descending branch beneath screen-right oval, preserving healed oval and ordinary skin folds; no retry without exact dual preflight/root authorization.",
+  "limits": [
+    "Exact candidate-only finished-pixel review; not derived-variant lineage, assembled desktop/phone or release acceptance.",
+    "No generation/retry authorized by this receipt.",
+    "Identity comparison is artistic continuity, not historical authentication."
+  ]
+}

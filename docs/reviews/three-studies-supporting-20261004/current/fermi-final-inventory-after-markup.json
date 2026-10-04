@@ -1,0 +1,62 @@
+{
+  "reviewer": "Fermi",
+  "status": "CONCUR_SCOPED_FINAL_INVENTORY",
+  "page_hashes": {
+    "art-study/be-still.html": "569c8b49c6e2a6e8fdf1036698e63d2024b5e1c36b2f0946a3e39e93fc82e81c",
+    "art-study/suffer-the-little-children.html": "454a2f833f86bc4ddacf6e99e39afa2907dee83fb17df4dde984f3b9c9ee8258",
+    "art-study/the-good-shepherd.html": "e94c59f33033f7c2b970bb878282250d0c7378b99dde7f418856965337c71d05"
+  },
+  "evidence": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-candidate-verification\\work\\fermi\\strict-inventory-review.json",
+      "sha256": "94f7e7e55dd59543c7b7df2164f60c00d83cb6aca85259809b3716f4f73b6f99"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-candidate-verification\\work\\fermi\\mutual-inventory-concurrence.json",
+      "sha256": "c854ad12c9fda577e482e7b216886d07358e8733d36b0186b99adc10efd2e6b7"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-candidate-verification\\work\\fermi\\final-inventory-declaration.json",
+      "sha256": "679aa5746212ce797a6b800edc3ecc7e64c258aa7b7e799eebca38f38a88e8bb"
+    }
+  ],
+  "scope": "Exact bound three-page complete inventory, Christ classification, cross-page ownership/lineage, full/thumbnail variants, gallery-reference and resource-preview exclusions. Prior detailed source-pixel review remains inherited and hash-bound as recorded, fresh composition/delivery review separate.",
+  "native_and_release_acceptance": false,
+  "limits": "Excludes assembled native interaction/layout, generated gallery/search, release readiness, publication, public verification and owner aesthetic or physical-phone acceptance. Sticky-nav defect needs root/native repair verification. Material page/image changes invalidate affected coverage.",
+  "markup_renewal": [
+    {
+      "route": "art-study/be-still.html",
+      "before_sha256": "832f2c73e4632c35bffe8b72d5ca07289a493f200360bdf1932cc01293f35bc8",
+      "after_sha256": "569c8b49c6e2a6e8fdf1036698e63d2024b5e1c36b2f0946a3e39e93fc82e81c",
+      "exact_only_target_rel_and_script_token_changes": true,
+      "target_rel_added": 20,
+      "script_token_replacements": 1
+    },
+    {
+      "route": "art-study/suffer-the-little-children.html",
+      "before_sha256": "1d4cfe03d86758d7cea99b4897d3fa4ac465e0ed75d4c21aaf6cf92363027ad9",
+      "after_sha256": "454a2f833f86bc4ddacf6e99e39afa2907dee83fb17df4dde984f3b9c9ee8258",
+      "exact_only_target_rel_and_script_token_changes": true,
+      "target_rel_added": 17,
+      "script_token_replacements": 1
+    },
+    {
+      "route": "art-study/the-good-shepherd.html",
+      "before_sha256": "0e3cf97723df9127cfbcd7d0484a2b6fa79a6ef697eac4b43531f7763ef2bf46",
+      "after_sha256": "e94c59f33033f7c2b970bb878282250d0c7378b99dde7f418856965337c71d05",
+      "exact_only_target_rel_and_script_token_changes": true,
+      "target_rel_added": 20,
+      "script_token_replacements": 1
+    },
+    {
+      "route": "art-study/the-living-christ.html",
+      "before_sha256": "8597354ee3eb7f967f92e5460109b29a2e4dc426e7ba4c91dbbb364f8ff00886",
+      "after_sha256": "1343c0278d535940717b175f33ee2fd88444984c5c408e245e34abc1fc3df8c4",
+      "exact_only_target_rel_and_script_token_changes": true,
+      "target_rel_added": 0,
+      "script_token_replacements": 1
+    }
+  ],
+  "equivalence": "Exact byte comparison reproduced final pages by only adding target=_blank/rel=noopener noreferrer on57existing HTTPS anchors and changing shared script cache token once per4featured page. No visitor prose, asset paths, image bytes, ownership placement, classifications, source destinations or source ordering changed. Prior completed inventory remains valid at renewed page hashes.",
+  "separate_living_christ_scope": "Living Christ exact entire page differs solely in script cache token, old8597354e to new1343c027. This validates byte-preserving metadata renewal only; its10/7 coverage remains prior exact evidence, not newly re-reviewed artwork."
+}

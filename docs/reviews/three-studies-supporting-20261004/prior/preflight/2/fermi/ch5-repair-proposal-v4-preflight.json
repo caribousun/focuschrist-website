@@ -1,0 +1,26 @@
+{
+  "reviewer": "Fermi",
+  "result": "PASS_SCOPED_PREFLIGHT",
+  "proposal_sha256": "9c3c77bb2dd134e183789c72e2ac115f79e17029bf9d27f7e223c23319f869c3",
+  "prompt_sha256": "7ef9b15b5eb9ef6e0dc2efe03a98ad4fcbf6bb5bd096a4f17fe6d26c599e944e",
+  "reference_roles": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-integration-continuation\\work\\gary\\generated\\ch5-candidate-v3.png",
+      "sha256": "f7b0d9e0ee9dde7bb1ece702a638dce21865e47d822fe52d467482495c732f27",
+      "role": "Image 1 full target; replace complete earmuff object while preserving all actual people/hand contact."
+    }
+  ],
+  "finding": "Actual full CH5v3 and enlarged object inspected independently. v4 materially changes repair from ineffective tiny control removal to rebuilding entire passive earmuff object with smooth yellow closed shells, cushions and structural support arms. Exact existing fingers, contact points, scale, identities, age, mutual gaze and scene preserved. No controls/logos/medical claims permitted. Plausible contemporary passive protection construction; no named historical age or product claim.",
+  "mandates_read": [
+    "Live Master foundation/map and latest00B/Focus",
+    "SITE AGENTS.md",
+    "docs/historical-character-identity.md",
+    "docs/focuschrist-enrichment-and-stewardship-prompt.md",
+    "docs/enriched-picture-owner-mandate.md"
+  ],
+  "limits": [
+    "Final fingers/contact/anatomy and absence of electronics must be checked in actual output",
+    "Independent Fermi preflight only; Newton/root authorization separate",
+    "No SITE/generation/publication action"
+  ]
+}

@@ -109,6 +109,8 @@ def local_target(page: Path, href: str) -> Path | None:
     parsed = urlsplit(href)
     if parsed.scheme or href.startswith(('#', 'mailto:', 'tel:')):
         return None
+    if parsed.path.startswith('/'):
+        return (ROOT / parsed.path.lstrip('/')).resolve()
     return (page.parent / parsed.path).resolve()
 
 

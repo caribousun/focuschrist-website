@@ -1,0 +1,17 @@
+{
+  "prompt_sha256": "ddf42651d9425fabf7704251e3962ad7046badf68fbb051b5c5048f90b7d4279",
+  "limitations": "Independent image-only concurrence; Newton exact concurrence and root assembled/native/source/release checks remain. No owner acceptance.",
+  "stage": "FINISHED_PIXEL_REVIEW",
+  "candidate_sha256": "a1007bf3a7f40e3dfb3efa1d8cb2a6a8fe3072bad565898aa3811c7dfd4668b7",
+  "result": "PASS",
+  "actual_pixels_inspected": true,
+  "reviewer": "Fermi",
+  "candidate": "work/gary/generated/bs3-candidate-v1.png",
+  "key": "BS3v1",
+  "finding": "Full actual pixels show adult and teenager beside hand-sanding bench, mutual attentive gaze, relaxed individualized expressions, block laid flat and both adult hands away from board. Coherent separate gesturing hands, ordinary aprons/clothes and unused tools; no running machinery or crisis implication. Faces and hands complete inside frame.",
+  "mandates_read": [
+    "AGENTS.md",
+    "docs/historical-character-identity.md",
+    "docs/focuschrist-enrichment-and-stewardship-prompt.md"
+  ]
+}

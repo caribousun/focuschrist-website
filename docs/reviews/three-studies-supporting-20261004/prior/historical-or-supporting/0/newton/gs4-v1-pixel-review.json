@@ -1,0 +1,13 @@
+{
+  "reviewer": "Newton",
+  "result": "HOLD_NARROW_TOOL_CONTACT_REPAIR",
+  "candidate": "work/gary/generated/gs4-candidate-v1.png",
+  "sha256": "4775e1ab5198ac4051fc312ab87ce58057be8ba0c7b39860ab632623055a387e",
+  "prompt_sha256": "33393c3d6f612d11e624e78dc5f507eb4280edc18e28569edecafc74e4d6b36b",
+  "actual_pixels_reviewed": ["full1536x1024", "enlarged native tool/ring detail"],
+  "passes": ["Two contemporary adults with plausible anatomy and task-directed gaze", "Kneeling/crouching on dry paving, hands above fixed grate, no traffic or deep shaft", "Two ordinary keys on visible ring", "Dignified cooperative help, owner points toward task, natural photographic clarity"],
+  "hold": "The tool tip and key ring are joined by an apparent small closed metal loop/clasp. This reads as a mechanically threaded connection, not a magnet directly contacting the steel key ring as explicitly prompted. It undermines the actual retrieval mechanism.",
+  "repair_scope": "Preserve the entire scene except tool-tip/ring junction: no hook, clip or connecting loop; cylindrical magnet face directly touches steel ring, two keys still hang freely and the tool remains naturally aligned. Dual exact repair-prompt and finished-pixel review required.",
+  "source_scope": "Fictional contemporary application of practical care in Mosiah4, not scripture incident or historical claim.",
+  "limits": ["No use/publication approval", "No SITE, Docs or generation changes by Newton"]
+}

@@ -1,0 +1,16 @@
+{
+  "reviewer": "Newton",
+  "result": "HOLD",
+  "candidate_sha256": "f7b0d9e0ee9dde7bb1ece702a638dce21865e47d822fe52d467482495c732f27",
+  "candidate_path": "work\\gary\\generated\\ch5-candidate-v3.png",
+  "actual_full_pixels_inspected": true,
+  "actual_detail_pixels_inspected": true,
+  "depicts_christ": false,
+  "finding": "Same dark raised oval/power-like marking persists on far screen-left outer ear cup below child fingertips. Image full/detail clearly retains the held object; exact prompt repair failed. All people, gesture, gaze and setting remain coherent.",
+  "inspection_aid": "work/newton/ch5-v3-object.png",
+  "next_action": "Root reconcile actual pixels and require broader tiny shell patch reconstruction or correct targeted reference location in a new exact dual-preflight proposal; do not reuse unchanged tiny-removal wording as a blind retry. Preserve fingers and headband attachment.",
+  "limits": [
+    "No retry execution authorized.",
+    "No SITE/integration/native/public acceptance."
+  ]
+}

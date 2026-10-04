@@ -1,0 +1,26 @@
+{
+  "reviewer": "Fermi",
+  "key": "GS2",
+  "stage": "FINISHED_PIXEL_REVIEW",
+  "candidate": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\gs2-candidate-v1.png",
+  "candidate_sha256": "a4b6518781e9c192bd7e2b1625509a96eb71dc185ff78133a7d9e4ed20c9cd45",
+  "prompt_sha256": "fe35dc39081c97c32e93a5c5a1483aa6d9ecb91db4b7ca4a32dd49a607158e1a",
+  "plan_sha256": "d6b81ca9f96d0f539c155debf65e91ce2953124ecd449cb9f978b6f28bfa5914",
+  "result": "HOLD",
+  "defects": [
+    "Exactly3 sheep visible rather than the exact6 requested. Two drink on left and one approaches from right; no other sheep visible.",
+    "Clear broad water edge remains accessible in foreground/right. The small sheep appears simply to approach; the two large sheep do not unmistakably obstruct its route. Core access-exclusion action is not adequately shown."
+  ],
+  "passed": [
+    "Three visible sheep appear anatomically plausible, with ordinary wool/eyes/ears/hooves and no human facial caricature.",
+    "Natural landscape light, shallow water and calm animal action; no wounds or dangerous scene.",
+    "No human or Christ depicted; source is Ezekiel34 ethical flock metaphor rather than documentary event."
+  ],
+  "inspection": [
+    "Full original1536x1024 viewed at original detail"
+  ],
+  "required_correction": "Exact revised prompt must visibly compose six anatomically distinct sheep and make one constrained water-entry route clearly blocked by two larger bodies while a smaller sheep waits on dry land. Preserve literal source limits and avoid aggression caricature. Dual revised-prompt concurrence before generation.",
+  "SITE_use_approved": false,
+  "limits": "Image-only review. No page/native/public/owner aesthetic acceptance. Revisions invalidate affected pixel conclusions and require exact new-hash review.",
+  "preserved": "No SITE/Docs/canonical/generation edits, spending, schedules or foundation changes."
+}

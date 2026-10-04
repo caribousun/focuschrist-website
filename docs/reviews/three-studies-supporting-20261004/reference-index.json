@@ -1,0 +1,1544 @@
+{
+  "schema": 1,
+  "scope": "Exact project evidence materialization; not independent authentication or release acceptance.",
+  "page_hashes": {
+    "art-study/the-good-shepherd.html": "e94c59f33033f7c2b970bb878282250d0c7378b99dde7f418856965337c71d05",
+    "art-study/suffer-the-little-children.html": "454a2f833f86bc4ddacf6e99e39afa2907dee83fb17df4dde984f3b9c9ee8258",
+    "art-study/be-still.html": "569c8b49c6e2a6e8fdf1036698e63d2024b5e1c36b2f0946a3e39e93fc82e81c"
+  },
+  "files": [
+    {
+      "id": "e001",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/generation/0/generated/generation-manifest.json",
+      "sha256": "3a2299d5ba391848d7c3a016e4ac82886b9f77d3bfa44aa62dbb41f975199e86",
+      "category": "generation",
+      "bytes": 27264,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e002",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/generation/1/generated/generation-manifest.json",
+      "sha256": "b53bcc543b3bcc2c1c662daf0b0514603a7ad33ab7cafb3da239f85a87e715f4",
+      "category": "generation",
+      "bytes": 25041,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e003",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/generation/2/generated/generation-manifest.json",
+      "sha256": "2269fff5d09f8758c06e7a6db4ce09228feac12669cf55bcbd34c121e34c91d6",
+      "category": "generation",
+      "bytes": 19539,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e004",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/active-finished/2/fermi/gs1-v6-finished-review.json",
+      "sha256": "2022e9050ddf29fec539eb1941431c9af30547f8867c1e2a8ee3624afbc33bcc",
+      "category": "active-finished",
+      "bytes": 1960,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e005",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/active-finished/2/newton/gs1-v6-pixel-review.json",
+      "sha256": "a1a7cc5609cd9ad769df2e68209701232c485a3e45bbe374626a81ef24dfc04a",
+      "category": "active-finished",
+      "bytes": 1074,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e006",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/active-finished/0/fermi/gs2-v2-finished-review.json",
+      "sha256": "2bd619153905f2892b0ac0ae1442c1b3aebff3ee865f8daa4da1dc2f5a5ed440",
+      "category": "active-finished",
+      "bytes": 1495,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e007",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/active-finished/0/newton/gs1-gs2-gs4-v2-pixel-review.json",
+      "sha256": "584292edf749f1d89c6a22d4464c4b6aef577582df667fe93778f18567f27ebd",
+      "category": "active-finished",
+      "bytes": 2424,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e008",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/active-finished/0/fermi/gs3-v1-finished-review.json",
+      "sha256": "20fd0722251c2c9020dedd10242756ffd77a2409496cfc9414fe0e172548c7e9",
+      "category": "active-finished",
+      "bytes": 2173,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e009",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/active-finished/0/newton/gs3-v1-pixel-review.json",
+      "sha256": "af357a180154970dbb73083742831e572242110b199bee5098b3694da1d016f3",
+      "category": "active-finished",
+      "bytes": 1747,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e010",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/active-finished/0/fermi/gs4-v2-finished-review.json",
+      "sha256": "5534d906c6af1f3f12f806f9b1abf5f33d71921d9006a10f7130784116b0a6bf",
+      "category": "active-finished",
+      "bytes": 1337,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e011",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/active-finished/0/fermi/gs5-v1-finished-review.json",
+      "sha256": "d28e1954c773b8e930285bf68026036540be9997684000351b1731c72bd45f0a",
+      "category": "active-finished",
+      "bytes": 2027,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e012",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/active-finished/0/newton/gs5-v1-pixel-review.json",
+      "sha256": "58f363c71486177fbbf8ee78568f91a227406d98c12ea0a87c9338e888fbe6fa",
+      "category": "active-finished",
+      "bytes": 1881,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e013",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/active-finished/0/fermi/ch1-v1-finished-review.json",
+      "sha256": "41631cf2681e26ff47356b1cf4a5aa0424a5e64f4318097c19cf7502285d3f62",
+      "category": "active-finished",
+      "bytes": 1504,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e014",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/active-finished/0/newton/ch1-v1-pixel-review.json",
+      "sha256": "fb2e5ba0d099cbd675caafb7852b7420296993aa365c31ac327bbd180189d019",
+      "category": "active-finished",
+      "bytes": 1714,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e015",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/active-finished/1/fermi/ch2-v2-finished-review.json",
+      "sha256": "c4201ac5d3fa14cad1a742b3d8e16142e314d93b2c5fc971c9cfa0aae553b6a1",
+      "category": "active-finished",
+      "bytes": 1463,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e016",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/active-finished/1/newton/ch2-v2-pixel-review.json",
+      "sha256": "cccc9a1ecb4888fb74146b2c96130e5a5568a903cd9ff8b8af6e6356e6942622",
+      "category": "active-finished",
+      "bytes": 974,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e017",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/active-finished/0/fermi/ch3-v1-finished-review.json",
+      "sha256": "5ab346d91a33b52a77c7d11f901ce7108942b185b281c2c6386fe00651fb1062",
+      "category": "active-finished",
+      "bytes": 1407,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e018",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/active-finished/1/newton/ch3-v1-pixel-review.json",
+      "sha256": "5928a295915881a016321569fc06f64c6be8b4676501fe5c54d1beb5c6017352",
+      "category": "active-finished",
+      "bytes": 1112,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e019",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/active-finished/1/fermi/ch4-v1-finished-review-rechecked.json",
+      "sha256": "33e6ed641f80957b7f24a0a700794a632d3f7d4bfa148e28a29d6c7590de24e0",
+      "category": "active-finished",
+      "bytes": 1397,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e020",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/active-finished/1/newton/ch4-v1-pixel-review.json",
+      "sha256": "70d70e9a1f2a3f0537b436d922e25f404c57ce433a946378627e877f76131a7f",
+      "category": "active-finished",
+      "bytes": 848,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e021",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/active-finished/2/fermi/ch5-v4-finished-review.json",
+      "sha256": "cd839a3e2c6f13ea6862a84b3f8bf207c0d560913110d1e145a8b79e1c7333bc",
+      "category": "active-finished",
+      "bytes": 1799,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e022",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/active-finished/2/newton/ch5-v4-pixel-review.json",
+      "sha256": "9776314f8bd973a71864ea1a9a805bfd3936b1d07ad5d819cfdfaa05c4863f35",
+      "category": "active-finished",
+      "bytes": 1043,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e023",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/active-finished/2/fermi/bs1-v2-finished-review.json",
+      "sha256": "7a4c972d2028493b2013548e41e46c35d08321b42d68b7ae13901e7cba70fd3f",
+      "category": "active-finished",
+      "bytes": 1813,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e024",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/active-finished/2/newton/bs1-v2-pixel-review.json",
+      "sha256": "cba951315692ff22f8e49bba60ecea5a6f6b7a012219c73a9ecc96b0b96a67d4",
+      "category": "active-finished",
+      "bytes": 1318,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e025",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/active-finished/1/fermi/bs2v1-finished-review.json",
+      "sha256": "737fac69e943a320d8ee844557ab25d368ab653edc1057758613cb356ed2bfb7",
+      "category": "active-finished",
+      "bytes": 1255,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e026",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/active-finished/1/newton/bs2-v1-pixel-review.json",
+      "sha256": "5933a97e79295e16a28b88566c5bcabfc707d3efa562afce38f9bfd0b179d160",
+      "category": "active-finished",
+      "bytes": 870,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e027",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/active-finished/1/fermi/bs3v1-finished-review.json",
+      "sha256": "c5875c2d5a9d79ceff16507a6f28f690b29d538389b52c683d0e6cf367152a47",
+      "category": "active-finished",
+      "bytes": 1053,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e028",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/active-finished/1/newton/bs3-v1-pixel-review.json",
+      "sha256": "339a564ef8a07145d2b4e1d8657ac990d90f940fc46a330d3ef7b52865875fd9",
+      "category": "active-finished",
+      "bytes": 855,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e029",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/active-finished/1/fermi/bs4v1-finished-review.json",
+      "sha256": "c18484a73fa6a81c872770f9c2a08b090b5881cbe4c571436388a50c1a6fd0ba",
+      "category": "active-finished",
+      "bytes": 1162,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e030",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/active-finished/1/newton/bs4-v1-pixel-review.json",
+      "sha256": "1d0b39c2764f25ffe25be65473347d06748678b7fe48ae6f11d8899e39cde8b6",
+      "category": "active-finished",
+      "bytes": 923,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e031",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/active-finished/1/fermi/bs5v1-finished-review.json",
+      "sha256": "f300120277a51241b75d7bf6be6437fad088b9849b3a0edec496b5e9d1173554",
+      "category": "active-finished",
+      "bytes": 1099,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e032",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/active-finished/1/newton/bs5-v1-pixel-review.json",
+      "sha256": "6d5dd951911efb790f190af406b08e75211c29ae891380fcc82f6da951e6adf6",
+      "category": "active-finished",
+      "bytes": 904,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e033",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/preflight/0/fermi/art-alt-range-correction-preflight.json",
+      "sha256": "9290659d6ff0c60b080cdae270edcea5c5a6c99c3117627b396b609c4686d572",
+      "category": "preflight",
+      "bytes": 1133,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e034",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/preflight/0/fermi/ch1-revised-palette-preflight.json",
+      "sha256": "6c7a46a5b521862f2f667e6938a563f9d5647b1f2890bbe393d9a94939d59d75",
+      "category": "preflight",
+      "bytes": 2085,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e035",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/historical-or-supporting/0/fermi/ch2-v1-finished-review.json",
+      "sha256": "ff90f9bd86f5744f3ec0b6b423ca61b40384f669a8246101f427e36d6225cf10",
+      "category": "historical-or-supporting",
+      "bytes": 1225,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e036",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/preflight/0/fermi/fifteen-preflight-v3.json",
+      "sha256": "c07a4676b59939357e15beaad7676750744caf3398c4397ce466f43ff39b860c",
+      "category": "preflight",
+      "bytes": 29575,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e037",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/preflight/0/fermi/fifteen-preflight-v4.json",
+      "sha256": "e6a604169628b941fd5351401775487eb1842a9db33e30d322176c588298a5e9",
+      "category": "preflight",
+      "bytes": 26043,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e038",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/preflight/0/fermi/gs1-gs2-gs4-repair-preflight.json",
+      "sha256": "2a0d4cb30f3bd15d9de7c634f8f43f0c6e1e596dee530a45d10a4de126c4a9c8",
+      "category": "preflight",
+      "bytes": 3117,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e039",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/historical-or-supporting/0/fermi/gs1-v1-finished-review.json",
+      "sha256": "fee5eac1c77f035450647ef7196d91ff5eae2c6ae514ed065bee92bcea74d303",
+      "category": "historical-or-supporting",
+      "bytes": 2484,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e040",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/historical-or-supporting/0/fermi/gs1-v2-finished-review.json",
+      "sha256": "a50f3294a06c08dcfb2ca2143cc66e6bce37c1e920892ffe8fee96153f2d92f5",
+      "category": "historical-or-supporting",
+      "bytes": 1367,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e041",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/historical-or-supporting/0/fermi/gs2-v1-finished-review.json",
+      "sha256": "0f24026a2848273ecfca43e21be82f8f8fd6e91d5b2323f655df95089ecd4ee0",
+      "category": "historical-or-supporting",
+      "bytes": 1989,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e042",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/historical-or-supporting/0/fermi/gs4-v1-finished-review.json",
+      "sha256": "2b1bac1ba3a3c15956fd215e319ee7bfea07f4aa9e72fca1dce44399db13306b",
+      "category": "historical-or-supporting",
+      "bytes": 1804,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e043",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/historical-or-supporting/0/fermi/source-hash-domain-independent.json",
+      "sha256": "8ec4c0745fe351da05be4d3de00ef8306eb9a7e8c3539bfc67fba71160d446ed",
+      "category": "historical-or-supporting",
+      "bytes": 19277,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e044",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/preflight/0/newton/ch1-palette-preflight.json",
+      "sha256": "83a697438459e08ca8ce8870c00abb2bd5df8a12bc5a81b49c5fc7be53635ada",
+      "category": "preflight",
+      "bytes": 3040,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e045",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/historical-or-supporting/0/newton/ch2-v1-pixel-review.json",
+      "sha256": "07ddb563925f01c145f33db98e29424af8515ad5422f7f7055c182fc6080e173",
+      "category": "historical-or-supporting",
+      "bytes": 1326,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e046",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/preflight/0/newton/fifteen-preflight-v4.json",
+      "sha256": "d1c35a5cb079e63142de756dffdb8879900858ba5416a64a5660ce288ac2e4e0",
+      "category": "preflight",
+      "bytes": 11778,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e047",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/preflight/0/newton/gs1-gs2-gs4-repair-preflight.json",
+      "sha256": "63fdfbe787900a2ed07c5fd53df332ed6dff3e263e98ffc6301fe3fa6d7677c3",
+      "category": "preflight",
+      "bytes": 3198,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e048",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/historical-or-supporting/0/newton/gs1-v1-pixel-review.json",
+      "sha256": "0f1e9ce0b80d0498d281ca6f221cc71e7a5480ef888ca44926040eccaae0364e",
+      "category": "historical-or-supporting",
+      "bytes": 2320,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e049",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/historical-or-supporting/0/newton/gs2-v1-pixel-review.json",
+      "sha256": "3c793a5c9be12de8d73ac07dcad83f9eafbd877e0e974dda923268f1dd13cdd0",
+      "category": "historical-or-supporting",
+      "bytes": 1432,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e050",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/historical-or-supporting/0/newton/gs4-v1-pixel-review.json",
+      "sha256": "30cec8ebd3a553616b3b7638e4db6e3df3f8db0a461ade40a2f67ebda239f49a",
+      "category": "historical-or-supporting",
+      "bytes": 1465,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e051",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/proposals-and-supporting/0/gary/ch1-comparator-source-domain-review.json",
+      "sha256": "61ea7b4bec7ce1f5efec5fd4ef5f7f33670a25643f9d11763bf974c1e9c423b5",
+      "category": "proposals-and-supporting",
+      "bytes": 28025,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e052",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/proposals-and-supporting/0/gary/gs1-repair-proposal-v3.json",
+      "sha256": "b79b320ab589c9da7c06d60ee027a14ee4311803a2c506f6cfe192d6200d86e1",
+      "category": "proposals-and-supporting",
+      "bytes": 2681,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e053",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/proposals-and-supporting/0/gary/gs1-repair-proposal.json",
+      "sha256": "546738bd5bfefab662d99042e6ed1e1cc649f61f72ae0a184b8b4205b8980ecc",
+      "category": "proposals-and-supporting",
+      "bytes": 3071,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e054",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/proposals-and-supporting/0/gary/gs2-repair-proposal.json",
+      "sha256": "c08687301628d88d4b5b32d3119007777cd7fa9846ee534ba69c3e1fa4d10837",
+      "category": "proposals-and-supporting",
+      "bytes": 2567,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e055",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/proposals-and-supporting/0/gary/gs4-repair-proposal.json",
+      "sha256": "5d5323da242e526d7ef83dd6615c724c6e570e642f4c8a36da2f1c12f5121a87",
+      "category": "proposals-and-supporting",
+      "bytes": 2112,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e056",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/preflight/1/fermi/bs1-repair-proposal-v2-preflight.json",
+      "sha256": "8c8090fa518e0cc373e356d9a5505a3a6ba684f783273a8ec895d447f1c34a67",
+      "category": "preflight",
+      "bytes": 2324,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e057",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/historical-or-supporting/1/fermi/bs1v1-finished-review.json",
+      "sha256": "d9fd37a42e2ffda60dcd6501942c95246ddd2c68ca2675c856fc9c5815c3a82a",
+      "category": "historical-or-supporting",
+      "bytes": 1236,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e058",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/preflight/1/fermi/ch2-v2-preflight.json",
+      "sha256": "0c293656ea9a8997b8dc3ef4ccd37412362ec9d5b237f7f4a03a951f1a963877",
+      "category": "preflight",
+      "bytes": 1516,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e059",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/historical-or-supporting/1/fermi/ch4-v1-finished-review.json",
+      "sha256": "12ebebd6edc8121b9d22619b42fd04caeb9b5813d46bc1feb57f8faf2d0b4317",
+      "category": "historical-or-supporting",
+      "bytes": 1220,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e060",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/preflight/1/fermi/ch5-repair-proposal-v2-preflight.json",
+      "sha256": "1200caef7094ebac6a9ec0b3431ce90b1ac6b3df0f073e5124b72febb1d03ca3",
+      "category": "preflight",
+      "bytes": 1396,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e061",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/historical-or-supporting/1/fermi/ch5-v1-finished-review.json",
+      "sha256": "1b4b151e68c4a7054976c505a795efbb40aa70672ab1153cfb30d6f8c5e0237e",
+      "category": "historical-or-supporting",
+      "bytes": 1435,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e062",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/preflight/1/fermi/gs1-repair-proposal-v4-preflight.json",
+      "sha256": "d5696c956b1d9713f7c19cd16d518feabee75274ad585950ad63d02f0c60bc28",
+      "category": "preflight",
+      "bytes": 1872,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e063",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/historical-or-supporting/1/fermi/gs1-v3-finished-review.json",
+      "sha256": "0110a5a9cbedd462f83b4ddca90f2e01d2109284b2b38e4893d000b2086e0754",
+      "category": "historical-or-supporting",
+      "bytes": 1426,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e064",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/preflight/1/fermi/gs1-v3-preflight.json",
+      "sha256": "a8fac0c731fd8b74f5f44a752aaf718609aa76a2c00d78d028170af2c401d0bf",
+      "category": "preflight",
+      "bytes": 3119,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e065",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/preflight/1/newton/bs1-preflight-v2.json",
+      "sha256": "f7d5609cd9a6a84463b91156e64d7387704fda2b3d614f9446fa8d8da0fc7fec",
+      "category": "preflight",
+      "bytes": 1754,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e066",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/historical-or-supporting/1/newton/bs1-v1-pixel-review.json",
+      "sha256": "46acc5fed6cee9213183b3bc132c382ca26377e61e77c895b12c50198dc88977",
+      "category": "historical-or-supporting",
+      "bytes": 933,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e067",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/preflight/1/newton/ch2-v2-preflight.json",
+      "sha256": "898f6533c95eb25c1c2ae20989b82e07862d2b913d109e80dd03b1c8b91a1435",
+      "category": "preflight",
+      "bytes": 997,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e068",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/preflight/1/newton/ch5-preflight-v2.json",
+      "sha256": "a2f71add9c717cd59bbb9418a15af4fa8cde57f32557b0eea052025dfef8f82e",
+      "category": "preflight",
+      "bytes": 1042,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e069",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/historical-or-supporting/1/newton/ch5-v1-pixel-review.json",
+      "sha256": "b143a749931b21b61caf684acd3ce74f92fd89fb9f1f9d71c4662abd52786934",
+      "category": "historical-or-supporting",
+      "bytes": 851,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e070",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/preflight/1/newton/gs1-preflight-v4.json",
+      "sha256": "92830d8bcb54ddc1069f931a279d32acf98f785a8f2cda128f31a5170fc5364b",
+      "category": "preflight",
+      "bytes": 1421,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e071",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/historical-or-supporting/1/newton/gs1-v3-pixel-review.json",
+      "sha256": "69326dcb6433ee0f591cb9fdafa51d529772e4145f2a3f23504a33d5b3042439",
+      "category": "historical-or-supporting",
+      "bytes": 706,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e072",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/preflight/1/newton/gs1-v3-preflight.json",
+      "sha256": "e070e35c636e563e668878bede796a0c61e9b62bab4ef270eb9a3be0cbd8e21d",
+      "category": "preflight",
+      "bytes": 1601,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e073",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/historical-or-supporting/1/newton/prompt-encoding-independent-review.json",
+      "sha256": "421813708c86f36c3b83851fd7cc4b6601be34715c846f176869321beb23e463",
+      "category": "historical-or-supporting",
+      "bytes": 2960,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e074",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/historical-or-supporting/1/newton/three-study-copy-review.json",
+      "sha256": "d733d4debedee8aeba544984756a17d4d0803a116a396177c5473e43fad94e85",
+      "category": "historical-or-supporting",
+      "bytes": 5881,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e075",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/proposals-and-supporting/1/gary/bs1-repair-proposal-v2.json",
+      "sha256": "2bc6e8b518f942b165496aa8b8735d53bb55c7f0fb7e66b97ec692fcbd781cf7",
+      "category": "proposals-and-supporting",
+      "bytes": 3155,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e076",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/proposals-and-supporting/1/gary/ch2-repair-proposal-v2.json",
+      "sha256": "77ddf12396398786745c9390c2995d53e90b332450b6784ff5cd0a55ad4056b0",
+      "category": "proposals-and-supporting",
+      "bytes": 2825,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e077",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/proposals-and-supporting/1/gary/ch5-repair-proposal-v2.json",
+      "sha256": "234f073f0bff8c1a80488948eeb2d055b6fbc23aaf49a1fd4edc2ae78e076bbb",
+      "category": "proposals-and-supporting",
+      "bytes": 2014,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e078",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/proposals-and-supporting/1/gary/executed-prompts-recovery.json",
+      "sha256": "80068d62fe5be722766a473418f6f4f847adaff125ce72708f64461159171f9b",
+      "category": "proposals-and-supporting",
+      "bytes": 8603,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e079",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/proposals-and-supporting/1/gary/gs1-repair-proposal-v4.json",
+      "sha256": "14e6389f52b3c243ae7132003dde33beda58fee56539c2dd0539ec1e88da7579",
+      "category": "proposals-and-supporting",
+      "bytes": 2636,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e080",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/proposals-and-supporting/1/gary/prompt-encoding-repair-receipt.json",
+      "sha256": "fa873917be531bcd5007e38dfac31c46435e6f3c546a811fbd11d28a517ed037",
+      "category": "proposals-and-supporting",
+      "bytes": 1521,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e081",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/historical-or-supporting/2/fermi/bs5-copy-correction-receipt.json",
+      "sha256": "098c22658ad54b1a4eaea470b4545b0695d7f128ba92b73a93f41dd045b7d349",
+      "category": "historical-or-supporting",
+      "bytes": 1785,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e082",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/preflight/2/fermi/ch5-repair-proposal-v3-preflight.json",
+      "sha256": "3ae33a208ee951e1900175f3a602ee99ec695e4b041f51e36ad56691f635e9e2",
+      "category": "preflight",
+      "bytes": 1743,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e083",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/preflight/2/fermi/ch5-repair-proposal-v4-preflight.json",
+      "sha256": "ad729848ab1c5c3fa2778e957031bb9afafa6e5180a0b795524d1b6d5e27a980",
+      "category": "preflight",
+      "bytes": 1650,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e084",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/historical-or-supporting/2/fermi/ch5-v2-finished-review.json",
+      "sha256": "2b98ed8211c22f90a552494917972abe34787186b872fcaa0309405ec3331c4e",
+      "category": "historical-or-supporting",
+      "bytes": 1635,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e085",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/historical-or-supporting/2/fermi/ch5-v3-finished-review.json",
+      "sha256": "5dd8cf652be06e3387b451e66d7163e7dfc7975a90af50560b57bd54c95a8e67",
+      "category": "historical-or-supporting",
+      "bytes": 859,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e086",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/preflight/2/fermi/gs1-repair-proposal-v5-preflight.json",
+      "sha256": "aa47147a995fa15402ec243df8caec101c49f76993b89efef675f2b0a08940a0",
+      "category": "preflight",
+      "bytes": 2830,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e087",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/preflight/2/fermi/gs1-repair-proposal-v6-preflight.json",
+      "sha256": "9edfaffa8aa8f101854cf6972cec4f45448129d3b2b29f73853fb9164c223637",
+      "category": "preflight",
+      "bytes": 2041,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e088",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/historical-or-supporting/2/fermi/gs1-v5-finished-review-rechecked.json",
+      "sha256": "53f8b486789d1a61bd9366899ef0138fc707a4e9fff19aef462921f54938386e",
+      "category": "historical-or-supporting",
+      "bytes": 1365,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e089",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/historical-or-supporting/2/fermi/gs1-v5-finished-review.json",
+      "sha256": "ba0c53a8922a69991bf234cc096113ec017e52a86ed725b0dff9e9f136b4b1d0",
+      "category": "historical-or-supporting",
+      "bytes": 1642,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e090",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/preflight/2/newton/ch5-preflight-v3.json",
+      "sha256": "1258d62330eab2d2df0b2ff553b5b022cdff0c4396cdf24b12e72d10ead1cd9b",
+      "category": "preflight",
+      "bytes": 1122,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e091",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/preflight/2/newton/ch5-preflight-v4.json",
+      "sha256": "dbfe73c66295b078bffafc261393bbe8cb7e16d831f2824f4f54bcc79077d467",
+      "category": "preflight",
+      "bytes": 1246,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e092",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/historical-or-supporting/2/newton/ch5-v2-pixel-review.json",
+      "sha256": "3fe9fa0095e87dac64d23be015047c6d33b484199575383923eb17a295ba525d",
+      "category": "historical-or-supporting",
+      "bytes": 1218,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e093",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/historical-or-supporting/2/newton/ch5-v3-pixel-review.json",
+      "sha256": "c4260532ee8e635284840d47c42ea14e046c2daefe4e36dfc87e0f23bc762150",
+      "category": "historical-or-supporting",
+      "bytes": 1032,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e094",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/preflight/2/newton/gs1-preflight-v5.json",
+      "sha256": "eef4364cc84c85eb955f5d5ec445e748637ff772275871e56287428edd54a0db",
+      "category": "preflight",
+      "bytes": 1663,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e095",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/preflight/2/newton/gs1-preflight-v6.json",
+      "sha256": "4894e6545040b3af8c6c7d5995b0e0f30196e462801c0f5aa81fac173f6909e8",
+      "category": "preflight",
+      "bytes": 1806,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e096",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/historical-or-supporting/2/newton/gs1-v5-pixel-review.json",
+      "sha256": "47afcbf32a5e011b2a50806a447c0710057c48fb13fe103c0a0e2fdb31ccf757",
+      "category": "historical-or-supporting",
+      "bytes": 1322,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e097",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/historical-or-supporting/2/newton/three-study-copy-final-review.json",
+      "sha256": "6a6923c540dae3244043d43f0839bfa4e27ba012790f8823b7a4df909f7f80d4",
+      "category": "historical-or-supporting",
+      "bytes": 922,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e098",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/proposals-and-supporting/2/gary/ch5-repair-proposal-v3.json",
+      "sha256": "f10e912bd779b2c1c560ce4b51cb7501560db7b6b76f317b8072d092d120c845",
+      "category": "proposals-and-supporting",
+      "bytes": 1846,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e099",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/proposals-and-supporting/2/gary/ch5-repair-proposal-v4.json",
+      "sha256": "9c3c77bb2dd134e183789c72e2ac115f79e17029bf9d27f7e223c23319f869c3",
+      "category": "proposals-and-supporting",
+      "bytes": 2639,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e100",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/proposals-and-supporting/2/gary/gs1-repair-proposal-v5.json",
+      "sha256": "5ef7908b70d4140b05f5443f2c4d92d02ddf127d640884126e956a8a53895d89",
+      "category": "proposals-and-supporting",
+      "bytes": 2976,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e101",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/proposals-and-supporting/2/gary/gs1-repair-proposal-v6.json",
+      "sha256": "bac29ab5aab919559e6fa7f1e14bb44af407460ae08684ebdcc5c8941260c1ed",
+      "category": "proposals-and-supporting",
+      "bytes": 3360,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e102",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/proposals-and-supporting/2/gary/repair-proposal-reconciliation.json",
+      "sha256": "70ec5db7df3e452fb074d4153cd7427b3c628cd37331fe2b887fb29a298570b5",
+      "category": "proposals-and-supporting",
+      "bytes": 4359,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e103",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/frozen-plan/0/gary/three-study-plans-v4.json",
+      "sha256": "d6b81ca9f96d0f539c155debf65e91ce2953124ecd449cb9f978b6f28bfa5914",
+      "category": "frozen-plan",
+      "bytes": 81752,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e104",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/bofm-mosiah-3.txt",
+      "sha256": "2b794c7ab081c22feacea3371b40aba6114fc5511fbebd52d563d72d264893dd",
+      "category": "source-copies",
+      "bytes": 6220,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e105",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/bofm-mosiah-4.txt",
+      "sha256": "d0a8d8b8b65dfcd5941125f55baed3b0f3933ea9a5a46e53172acdf8980b5208",
+      "category": "source-copies",
+      "bytes": 8588,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e106",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/bofm-mosiah-5.txt",
+      "sha256": "963b0deae3226198b064f5e3723ad75ff80b675856399a5553a2c75a3491e021",
+      "category": "source-copies",
+      "bytes": 3920,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e107",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/nt-1-cor-14.txt",
+      "sha256": "58d40fc5710a1e83564538c01b311054ee43ab3e9da0d2c1b6194f8e103ae639",
+      "category": "source-copies",
+      "bytes": 4933,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e108",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/nt-1-cor-15.txt",
+      "sha256": "3448c1ce9729b3abea7e610129c960a52947ed41a059f75ca5b85574c5b8e325",
+      "category": "source-copies",
+      "bytes": 6263,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e109",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/nt-1-cor-16.txt",
+      "sha256": "e9434df5fe35dd65b25ac2ea73cf18c2db86e3eb551d4ec545e451062deadb77",
+      "category": "source-copies",
+      "bytes": 2562,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e110",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/nt-acts-22.txt",
+      "sha256": "e5c9b947ac6cd76f559b88d39cd555e02d15952ef5a04d9031fd7977267a599a",
+      "category": "source-copies",
+      "bytes": 4146,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e111",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/nt-acts-23.txt",
+      "sha256": "1f2c2a433bfd5d8ea5b7d1fd6412ab42485f0f42d0083065a524fc236dddd8d8",
+      "category": "source-copies",
+      "bytes": 5098,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e112",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/nt-acts-24.txt",
+      "sha256": "21f93ba92951a7666bd874876092df7b1e7c543ba623bb0c0a56593d98714d02",
+      "category": "source-copies",
+      "bytes": 3668,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e113",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/nt-james-1.txt",
+      "sha256": "9c4fc8ea3be29922843a09365c24451f9c4ca1a614ab12212b4db61735796cb5",
+      "category": "source-copies",
+      "bytes": 3052,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e114",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/nt-james-2.txt",
+      "sha256": "60fc4a3decd89d000c446d2576c8a863f15e507fd21c69e99dafedad6f9d2b8d",
+      "category": "source-copies",
+      "bytes": 2917,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e115",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/nt-james-3.txt",
+      "sha256": "2561ceb88b9a023d91d3c33ad8f71f84661c80cf771b5961ed83d17007993b19",
+      "category": "source-copies",
+      "bytes": 2160,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e116",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/nt-john-10.txt",
+      "sha256": "9a149aff67464f6ab0f2d974361123e0388bc6fe1e6aa9d0b314a0582d9d0776",
+      "category": "source-copies",
+      "bytes": 4317,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e117",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/nt-john-11.txt",
+      "sha256": "372ff33d10cfd9ca430572a983429d537d5570112f823cf55e1f2afc276c3c73",
+      "category": "source-copies",
+      "bytes": 6312,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e118",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/nt-john-19.txt",
+      "sha256": "fe1a3db01be0132ac941119b252a47c7aacb021d1e50459416b79d75a2aa8e7a",
+      "category": "source-copies",
+      "bytes": 5654,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e119",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/nt-john-20.txt",
+      "sha256": "646d044b9708c530d6ec936a0f8f66cb24a3149a262b29229515f642bf61ab02",
+      "category": "source-copies",
+      "bytes": 4132,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e120",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/nt-john-21.txt",
+      "sha256": "567732e235b97e32d1033905ff05db0de9af485d1b9550953642e4cc4e90bbff",
+      "category": "source-copies",
+      "bytes": 3810,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e121",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/nt-john-9.txt",
+      "sha256": "0c9d6d315d360c82d2eb3b62b46d38d801e3ae237d6afa215cb383113594dcda",
+      "category": "source-copies",
+      "bytes": 4582,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e122",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/nt-luke-3.txt",
+      "sha256": "3a5f0f9c68a92a4148a71e779fe57541c67d251ef78425596d40545e6d952362",
+      "category": "source-copies",
+      "bytes": 5360,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e123",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/nt-mark-10.txt",
+      "sha256": "5463378834d7a4ab6e8354f08771526271776a55362835aa15cfae041d392eae",
+      "category": "source-copies",
+      "bytes": 6587,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e124",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/nt-mark-11.txt",
+      "sha256": "c298e16f36ba9e1d5a9b86f2fdc7cf7df5a73fe81cf969a81a60e0932247bc70",
+      "category": "source-copies",
+      "bytes": 4238,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e125",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/nt-mark-5.txt",
+      "sha256": "d515498d93a0460553338beb1e9e7f2aff3362d5eef17d592276bf4f1024d7ba",
+      "category": "source-copies",
+      "bytes": 5138,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e126",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/nt-mark-6.txt",
+      "sha256": "c36643073ed6a3dffbcb610334b3b805765e3049ec9d491bf5936b3f0202ae10",
+      "category": "source-copies",
+      "bytes": 7113,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e127",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/nt-mark-7.txt",
+      "sha256": "d7b42ad419168144cc5a0cec6aab17215021614f829faec647d8f8de3a55e73d",
+      "category": "source-copies",
+      "bytes": 4502,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e128",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/nt-mark-9.txt",
+      "sha256": "77d303ee9c976e3d55192dd35ae2409640744f601a775e39031ab878047507d8",
+      "category": "source-copies",
+      "bytes": 6255,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e129",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/nt-matt-20.txt",
+      "sha256": "b54453e0dd54aff83038f2cea68c7a96ac27b69ebd6db3d40f6798668da8ed8b",
+      "category": "source-copies",
+      "bytes": 4193,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e130",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/nt-matt-21.txt",
+      "sha256": "b8b9866b6540d55ef925e181cb999dd67b56a5e717f8be563ec8817fc45b2d26",
+      "category": "source-copies",
+      "bytes": 6134,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e131",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/nt-matt-22.txt",
+      "sha256": "0bcc23f739cae492897ce51958d6c89e05856d6036333aa38657a0522efbb02e",
+      "category": "source-copies",
+      "bytes": 4660,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e132",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/nt-phil-4.txt",
+      "sha256": "61efc95079466b3c953042127ebcc315ef4ec65b171daf78303215f576de3cf8",
+      "category": "source-copies",
+      "bytes": 43817,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e133",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/nt-philip-3.txt",
+      "sha256": "00f59d6ae54aec5e2cbab9fc9e94cf2e77060ed751a878ea3e2ef00c65774259",
+      "category": "source-copies",
+      "bytes": 2747,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e134",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/nt-philip-4.txt",
+      "sha256": "6813a91ea6a2ab6cc0699aa42ae9999c7eae47aa98809874336d23dc441ed21d",
+      "category": "source-copies",
+      "bytes": 2798,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e135",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/nt-rom-10.txt",
+      "sha256": "eb9bedc16a76599261145292206eba7507b65748145a981b1e41323e15e8c74d",
+      "category": "source-copies",
+      "bytes": 2592,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e136",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/nt-rom-11.txt",
+      "sha256": "1f3cf37067d1c57ac7637b9b04602992c2c7a03ce8893503b4377c8653e0054d",
+      "category": "source-copies",
+      "bytes": 4490,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e137",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/nt-rom-5.txt",
+      "sha256": "b9fb87a3c04a35272dcb97b39428be31e274d97e7d3f9172b7c6b4efc4299cdb",
+      "category": "source-copies",
+      "bytes": 2695,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e138",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/nt-rom-6.txt",
+      "sha256": "4f311e0b983f96ccc6418be3914988a78f11b7e4d1296bd0bf737f5ea6917200",
+      "category": "source-copies",
+      "bytes": 2719,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e139",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/nt-rom-7.txt",
+      "sha256": "4fca87497f7a6124f564a2dbed175debccbc8b26fede4cfadd0af2519b9776f1",
+      "category": "source-copies",
+      "bytes": 3074,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e140",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/nt-rom-9.txt",
+      "sha256": "102a6ba48b4bb77479133c36bb140feec568bc5fc4f1af9c5b6567183f73379d",
+      "category": "source-copies",
+      "bytes": 3969,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e141",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/ot-ezek-33.txt",
+      "sha256": "ec562ee24fa55f272b46cf6940fa1de1ebc67015269eb45814f18a22acd84ed6",
+      "category": "source-copies",
+      "bytes": 5665,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e142",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/ot-ezek-34.txt",
+      "sha256": "1d333ed538f0d92e85491a7392eb468261e3aa34f0cc586ab87dfd8a45100709",
+      "category": "source-copies",
+      "bytes": 5116,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e143",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/ot-ezek-35.txt",
+      "sha256": "af8a03d92420dfaeb1007d4fc9d089dd488907eb2d18f4473588e553336ab283",
+      "category": "source-copies",
+      "bytes": 2219,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e144",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/ot-ps-45.txt",
+      "sha256": "6a968e0859a09b5441d208e4930612e79e2833243ee10dc3e7c5db73cec5333e",
+      "category": "source-copies",
+      "bytes": 1957,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e145",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/ot-ps-46.txt",
+      "sha256": "28764fb274550443fe24e82d21fb4b874ffd86f3921f60f62bcb1f2bb1573709",
+      "category": "source-copies",
+      "bytes": 1156,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e146",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/ot-ps-47.txt",
+      "sha256": "a0a712dfbc5f1eb8572c9414aebc243683e7bec9ada4f253ad6dab9a75193d41",
+      "category": "source-copies",
+      "bytes": 849,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e147",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/robe-inventory.txt",
+      "sha256": "9a66302153b5ab7c68e45838f0755c2a94558aa5bd61cb29c9cfe9087c78cacc",
+      "category": "source-copies",
+      "bytes": 20504,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e148",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/source-fetch.json",
+      "sha256": "f9159dbb092da3a93fb80769dcdb270fdeeb61777d0112b87241d2bb458453aa",
+      "category": "source-copies",
+      "bytes": 15585,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e149",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copies/source/gary/RESEARCH-RECEIPT.md",
+      "sha256": "a870d3f28ae6eec9983d68da378177873495fc8a4e148b67b0d863b7418aeaa2",
+      "category": "source-copies",
+      "bytes": 9071,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e150",
+      "destination": "docs/reviews/three-studies-supporting-20261004/prior/source-copy-and-continuity/1/fermi/three-study-copy.json",
+      "sha256": "4d251ac09439976633d5c13965544924dd776c733ff8b96ffc2529f51e80903a",
+      "category": "source-copy-and-continuity",
+      "bytes": 43294,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e151",
+      "destination": "docs/reviews/three-studies-supporting-20261004/final/final-copy.json",
+      "sha256": "0896f09a2803e0208f2acf20a7276173de1880151af33aa377ed121e4656bd47",
+      "category": "final-copy",
+      "bytes": 43597,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e152",
+      "destination": "docs/reviews/three-studies-supporting-20261004/final/approved-source-selection.json",
+      "sha256": "728dd53e9c653c69193b1bca96d05493cbf9a999fb60c3176da4903082d6bcfc",
+      "category": "source-selection",
+      "bytes": 41833,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e153",
+      "destination": "docs/reviews/three-studies-supporting-20261004/final/integration-applied.json",
+      "sha256": "ab9bd3e2cf3bdc86b70712fd42400ef45ecd6164733030342e61147f7ac06fed",
+      "category": "integration-seal",
+      "bytes": 2034,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e154",
+      "destination": "docs/reviews/three-studies-supporting-20261004/historical/root-image-review.json",
+      "sha256": "cdb0ded88d2db6a2faa97c022367337dd0558eb20ebf753be311eef5472849c7",
+      "category": "historical-mixed-results",
+      "bytes": 2104,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e155",
+      "destination": "docs/reviews/three-studies-supporting-20261004/lineage/lineage-review-current27.json",
+      "sha256": "9145712b4fc4c6af23833b17302058caa162c635fb2c29759278f4da019f893b",
+      "category": "lineage",
+      "bytes": 34564,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e156",
+      "destination": "docs/reviews/three-studies-supporting-20261004/lineage/lineage-candidate-scan.json",
+      "sha256": "b11057840df44a52c04a416892dff68212a000b09c37b58b7e44360e14bb13b7",
+      "category": "lineage",
+      "bytes": 60625,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e157",
+      "destination": "docs/reviews/three-studies-supporting-20261004/lineage/lineage-assets-current.json",
+      "sha256": "ba14bab84c6babe1a9f754dc87b713df33e391d9bfebd35ca9916781bd757a22",
+      "category": "lineage",
+      "bytes": 853203,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e158",
+      "destination": "docs/reviews/three-studies-supporting-20261004/lineage/occurrence-ledger.json",
+      "sha256": "330de51d889be6429b66dd8f22ffd6afdabd9157a27139a4f54e4107531a0684",
+      "category": "lineage",
+      "bytes": 1219896,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e159",
+      "destination": "docs/reviews/three-studies-supporting-20261004/lineage/lineage-registry-references.json",
+      "sha256": "4dbc761a4e98ffdc430aaf34cd43c51fef80ef39b3b20602165644cf1a260c75",
+      "category": "lineage",
+      "bytes": 16306,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e160",
+      "destination": "docs/reviews/three-studies-supporting-20261004/lineage/lineage-final3-review.json",
+      "sha256": "8231454ce4fb486fcc1431b81e228543223783c55e455ac98da9c8f4b508b166",
+      "category": "lineage",
+      "bytes": 2309,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e161",
+      "destination": "docs/reviews/three-studies-supporting-20261004/lineage/lineage-final3-scan.json",
+      "sha256": "e3718925f9806a3c06a2c5fee44bd829c83ce2b93ecf0ad3566aff6bcb626007",
+      "category": "lineage",
+      "bytes": 22783,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e162",
+      "destination": "docs/reviews/three-studies-supporting-20261004/lineage/lineage-assets-final3-snapshot.json",
+      "sha256": "ba14bab84c6babe1a9f754dc87b713df33e391d9bfebd35ca9916781bd757a22",
+      "category": "lineage",
+      "bytes": 853203,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e163",
+      "destination": "docs/reviews/three-studies-supporting-20261004/lineage/scan_lineage.py",
+      "sha256": "be5d0075c27cade2da235bdbf055ea9fc0c627eee41e656e22693ed073f06b50",
+      "category": "lineage-method",
+      "bytes": 7693,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e164",
+      "destination": "docs/reviews/three-studies-supporting-20261004/lineage/newton-alias-inventory-independent.json",
+      "sha256": "5c074506ec468abe348947f8b2552f24c3f8d25ce705dafbdba2c52b84208bd2",
+      "category": "lineage",
+      "bytes": 39185,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e165",
+      "destination": "docs/reviews/three-studies-supporting-20261004/retained/retained15-review.json",
+      "sha256": "ab85f769eb4f39df7f3191f37e8ea270f85dfa6cf7e4333eb184b8873d56b4ae",
+      "category": "retained-art",
+      "bytes": 49856,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e166",
+      "destination": "docs/reviews/three-studies-supporting-20261004/retained/retained15-inspection.json",
+      "sha256": "9df79dfd2216942d88dfb6224a19f01f74df40654c5970094a56c6bce58dcd7d",
+      "category": "retained-art",
+      "bytes": 42297,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e167",
+      "destination": "docs/reviews/three-studies-supporting-20261004/current/gary-source-curatorial-review.json",
+      "sha256": "467fa4bb72933434f542dcebd25e0da0fc12e167027e03849653a5225d257d9a",
+      "category": "curatorial-review",
+      "bytes": 13000,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "e168",
+      "destination": "docs/reviews/three-studies-supporting-20261004/current/gary-source-provenance-integrity.json",
+      "sha256": "bfb9a4bf3f53cf17c2e6573a1468ec54fb6cf60341d41c9b2915aa0fcc7080f4",
+      "category": "integrity-review",
+      "bytes": 16681,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "e169",
+      "destination": "docs/reviews/three-studies-supporting-20261004/historical/pre-materialization-supporting-review.json",
+      "sha256": "3f09716ba3554c2ef973fc6a8a22aa6bb49c86d33711ce7a598fab5be451f6f8",
+      "category": "historical-index",
+      "bytes": 42376,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "coverage-fermi-001",
+      "destination": "docs/reviews/three-studies-supporting-20261004/current/fermi-final-inventory-declaration.json",
+      "sha256": "679aa5746212ce797a6b800edc3ecc7e64c258aa7b7e799eebca38f38a88e8bb",
+      "category": "final-inventory-evidence",
+      "bytes": 1612,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "coverage-newton-001",
+      "destination": "docs/reviews/three-studies-supporting-20261004/current/newton-final-inventory-declaration.json",
+      "sha256": "96b4c42e8fd50f50c0386e8b4664a9b1d47ec1c0582e11be552a69b95dc913a1",
+      "category": "final-inventory-evidence",
+      "bytes": 1592,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "coverage-fermi-detail",
+      "destination": "docs/reviews/three-studies-supporting-20261004/current/fermi-detailed-inventory-review.json",
+      "sha256": "94f7e7e55dd59543c7b7df2164f60c00d83cb6aca85259809b3716f4f73b6f99",
+      "category": "final-inventory-evidence",
+      "bytes": 14407,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "coverage-newton-detail",
+      "destination": "docs/reviews/three-studies-supporting-20261004/current/newton-detailed-inventory-review.json",
+      "sha256": "aeb1e608e05ce06252055032036c586f6d9d039a796c220099f8fed869900170",
+      "category": "final-inventory-evidence",
+      "bytes": 7101,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "coverage-mutual",
+      "destination": "docs/reviews/three-studies-supporting-20261004/current/fermi-mutual-inventory-concurrence.json",
+      "sha256": "c854ad12c9fda577e482e7b216886d07358e8733d36b0186b99adc10efd2e6b7",
+      "category": "final-inventory-evidence",
+      "bytes": 1574,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "coverage-fermi-inventory",
+      "destination": "docs/reviews/three-studies-supporting-20261004/current/fermi-inventory.json",
+      "sha256": "a04e7c4b73a6a75f43512510a69822673d476aecee24ac9c748238eb03edf4b6",
+      "category": "final-inventory-evidence",
+      "bytes": 32185,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "coverage-fermi-lineage",
+      "destination": "docs/reviews/three-studies-supporting-20261004/current/fermi-final-lineage-scan.json",
+      "sha256": "da69e81b0194345cf3009b52576598ae9c98594d63eae94ee0b6e6f4cf89df59",
+      "category": "final-inventory-evidence",
+      "bytes": 55704,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "coverage-fermi-variants",
+      "destination": "docs/reviews/three-studies-supporting-20261004/current/fermi-variant-reproduction.json",
+      "sha256": "9d33f511f6c9fdc6299626183fc3aa8b3e848a5c32e0d0fa12f58780c03a0b0d",
+      "category": "final-inventory-evidence",
+      "bytes": 6922,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "coverage-newton-inventory",
+      "destination": "docs/reviews/three-studies-supporting-20261004/current/newton-inventory-recheck.json",
+      "sha256": "7639795c0220db2938903d8211d73e9fe59b88ebe4f9b7ef2ad665450eacbaf5",
+      "category": "final-inventory-evidence",
+      "bytes": 82045,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "coverage-fermi-method",
+      "destination": "docs/reviews/three-studies-supporting-20261004/current/fermi-final-lineage-method.py",
+      "sha256": "77d10e71772b9251958a8a8805f2ff6606385e6e4d00c58e23f8bcaa901cd1ee",
+      "category": "final-inventory-evidence",
+      "bytes": 3689,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "coverage-newton-method",
+      "destination": "docs/reviews/three-studies-supporting-20261004/current/newton-inventory-method.py",
+      "sha256": "acea4020d6f1fb0f1b028f98478d621afa10924661b58ed61189d4ca5f19e6ff",
+      "category": "final-inventory-evidence",
+      "bytes": 8348,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "coverage-inherited-checkpoint",
+      "destination": "docs/reviews/three-studies-supporting-20261004/historical/newton-scoped-review-checkpoint.json",
+      "sha256": "6639c55bf93d9fb955ae8fcb39a049b38aedb6d48cbb6f276c6f612b7ba03a50",
+      "category": "historical-scoped-review-checkpoint",
+      "bytes": 6518,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "coverage-fermi-after-markup",
+      "destination": "docs/reviews/three-studies-supporting-20261004/current/fermi-final-inventory-after-markup.json",
+      "sha256": "bc866d7d7fd5fba5ef9c65f1fbd8505c01185c6a387b06fae33a45674570c420",
+      "category": "renewed-final-inventory",
+      "bytes": 4091,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "coverage-newton-after-markup",
+      "destination": "docs/reviews/three-studies-supporting-20261004/current/newton-final-inventory-after-markup.json",
+      "sha256": "b30be031440e4e8e2a80dff8965ea693c37c2ec2dc0a10d4959e2ceefd255cc4",
+      "category": "renewed-final-inventory",
+      "bytes": 1825,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "gary-markup-source-equivalence",
+      "destination": "docs/reviews/three-studies-supporting-20261004/current/gary-markup-source-equivalence.json",
+      "sha256": "b8e25365c16f494b90e3fa6a40a2de286d4b3117a1c9d4d3514d35c7c5565dfd",
+      "category": "markup-equivalence",
+      "bytes": 15093,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "root-markup-finalization",
+      "destination": "docs/reviews/three-studies-supporting-20261004/current/root-markup-finalization.json",
+      "sha256": "9af4c14edb583f30bf9efd55cdec4f4ded5a790a15d663ec109cda6d15499a15",
+      "category": "markup-equivalence",
+      "bytes": 980,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "coverage-boundary-final",
+      "destination": "docs/reviews/three-studies-supporting-20261004/current/coverage-boundary-final.json",
+      "sha256": "6924167a722e432907a7277db1422c805e1855181f53399ff901268679892f83",
+      "category": "scope-boundary",
+      "bytes": 1050,
+      "raw_historical_local_paths": false
+    },
+    {
+      "id": "coverage-mutual-after-markup",
+      "destination": "docs/reviews/three-studies-supporting-20261004/current/newton-mutual-markup-renewal.json",
+      "sha256": "b3039ab0302eda9baa3a27100eeb7f0d77e8f366fab33abe18eea6c62d31e747",
+      "category": "mutual-markup-renewal",
+      "bytes": 1521,
+      "raw_historical_local_paths": true
+    },
+    {
+      "id": "coverage-fermi-mutual-after-markup",
+      "destination": "docs/reviews/three-studies-supporting-20261004/current/fermi-mutual-markup-renewal.json",
+      "sha256": "cd4b8a72f9f702de8900bae4ca1a7bf0314df408f4db9e1b9dd6725ef77c8f0e",
+      "category": "mutual-markup-renewal",
+      "bytes": 1644,
+      "raw_historical_local_paths": true
+    }
+  ],
+  "coverage_receipts": [
+    {
+      "reviewer": "Fermi",
+      "evidence_id": "coverage-fermi-after-markup",
+      "recorded_status": "CONCUR_SCOPED_FINAL_INVENTORY"
+    },
+    {
+      "reviewer": "Newton",
+      "evidence_id": "coverage-newton-after-markup",
+      "recorded_status": "CONCUR_SCOPED_FINAL_INVENTORY"
+    }
+  ],
+  "coverage_state": "DUAL_SCOPED_RECEIPTS_INCLUDED_NOT_RELEASE_ACCEPTANCE",
+  "exclusions": [
+    {
+      "reason": "Private operational handoff and shared control context; not necessary art/source evidence.",
+      "sha256": "bb45db4e92f62164dee3a4b3f528d3f8b2ab3e3e5147ac6e02d5ad794ebf4eb5"
+    },
+    {
+      "reason": "Private operational handoff and shared control context; not necessary art/source evidence.",
+      "sha256": "d87d154210b5f5f170291201e840396849a504dabe1cdff994a6f3633d6c2b16"
+    }
+  ],
+  "limits": [
+    "Raw historical receipts preserve their original bytes and may contain old local paths. The current index itself uses site-relative destinations only.",
+    "Historical holds, failed/retracted passes and superseded copies are retained as history, not current acceptance.",
+    "Twelve retained original generation logs remain unavailable.",
+    "The strict builder, root browser review, exact-candidate concurrence, publication/public verification and owner acceptance are separate."
+  ]
+}

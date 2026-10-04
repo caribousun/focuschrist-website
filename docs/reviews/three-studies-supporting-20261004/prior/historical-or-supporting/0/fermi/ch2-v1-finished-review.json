@@ -1,0 +1,12 @@
+{
+  "reviewer": "Fermi",
+  "key": "CH2",
+  "result": "HOLD",
+  "candidate": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\ch2-candidate-v1.png",
+  "candidate_sha256": "1cfe585d868902f317580df497b86d42e87e56c7259e9d650d1f06bb75c5ada0",
+  "prompt_sha256": "4f32a9dcef143d1d83f863de01453c86d51ecd6c1e85e7bb5fc0ec553fef087c",
+  "finding": "Full original inspected. Wheelchair user actively rolls one large soft ball across accessible table to opposite child; third child waits, adult clears unused chair. Independent hands and wheelchair/footplate/legroom broadly coherent; no cure, transfer, pity pose or restraint. But adult face/head begins at top border, upper forehead/crown clipped and no essential-face margin. Exact prompt requires essential faces inside generous margins. Reframe/outpaint modestly above with original identities/action preserved; independent exact repair preflight and returned-pixel review required.",
+  "stage": "FINISHED_PIXEL_REVIEW",
+  "SITE_use_approved": false,
+  "limits": "Image-only independent decision; exact Newton concurrence/root assembled-page/native review required. No owner aesthetic/public acceptance."
+}

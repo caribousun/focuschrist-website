@@ -1,0 +1,18 @@
+{
+  "limitations": "Independent actual full-image review; Newton concurrence and exact repair preflight required. No SITE/native/owner acceptance.",
+  "actual_pixels_inspected": true,
+  "mandates_read": [
+    "AGENTS.md",
+    "docs/historical-character-identity.md",
+    "docs/focuschrist-enrichment-and-stewardship-prompt.md"
+  ],
+  "prompt_sha256": "5c5e8edbcb073c3c620ee5ed23ffe828f6eafa4fd6f9b7c7e583ba3cdd98f87f",
+  "candidate_sha256": "5cc23a24311c8bbb95c33e8032c8cbfcd09964344f9b93f8baa7ab3ba5e7d6aa",
+  "finding": "The two foreground children clearly exchange one sealed snack packet with mutual eye contact, natural separate hands, and ordinary full lunches. Background supervisor is expressly required by prompt, but her crown is cut by top image border with no essential-head margin. Same framing defect class as CH2v1. Preserve identities, friendly exchange, sealed packet, lunches and posture; modest wider/upward framing to include complete adult crown and clear upper background needed before use.",
+  "SITE_use_approved": false,
+  "reviewer": "Fermi",
+  "key": "CH4v1",
+  "stage": "FINISHED_PIXEL_REVIEW",
+  "candidate": "work/gary/generated/ch4-candidate-v1.png",
+  "result": "HOLD"
+}

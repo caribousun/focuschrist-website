@@ -1,0 +1,13 @@
+{
+  "reviewer": "Fermi",
+  "stage": "FINISHED_PIXEL_REPAIR_REVIEW",
+  "key": "GS1",
+  "candidate": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\gs1-candidate-v2.png",
+  "candidate_sha256": "5b1518cc5f3ae639a7ad787f8c9374116fb7abbfeb31a741e3edfe08ca3378dc",
+  "result": "HOLD",
+  "prompt_sha256": "27bd16790f084d96b68bc6cf74d7bdf68da5423e5a441202186a5124480372ff",
+  "finding": "Full and enlarged wrist pixels show pale closed healed texture replacing red slits and left wrist now marked. However screenright wrist has a long branching transverse/circumferential white line across the full visible wrist, and screenleft has two parallel pale lines. These read as wristband/rope scars rather than one small localized subtle healed nail scar at each wrist. Exact repair requirement not met. No fresh blood or open wound remains. Preserve natural hands/pose/face/lamb/palette; scar-localization correction is needed, not an anatomy rebuild. Priorv1 remains rejected.",
+  "exact_prior_reviews": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\fermi\\gs1-v1-finished-review.json",
+  "limits": "Independent image-only decision; requires Newton concurrence/root integration. No SITE/native/public/owner acceptance.",
+  "SITE_use_approved": false
+}

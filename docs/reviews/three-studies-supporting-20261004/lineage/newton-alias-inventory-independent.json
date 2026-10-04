@@ -1,0 +1,784 @@
+{
+  "reviewer": "Newton",
+  "status": "PASS_SCOPED_27_TARGET_ALIAS_ADJUDICATION",
+  "retrieval_report_sha256": "b11057840df44a52c04a416892dff68212a000b09c37b58b7e44360e14bb13b7",
+  "all_current_asset_hashes_revalidated": 2328,
+  "canonical_routes_scanned": 130,
+  "route_sha256": {
+    "about.html": "22a1080fb05125a271944bca8392a52456a412822bc2f335e4824512150657f2",
+    "answers.html": "6067e6630c553faf9428c6e88e97b510962a4064b94061fbc2480498baa71a98",
+    "answers/aaronic-priesthood-restoration.html": "3ed9698dd62c3c8c710604cc37300b460ffd1ca604a85663890923e5f4fba359",
+    "answers/abrahamic-covenant.html": "3b5e73704ebc29af1cc8b2f5869ced21b2b7a204585f586536fa35f3626de0ab",
+    "answers/are-latter-day-saints-christian.html": "9451ed157fbc10bd04d9670a11ebc8b1378562381e1a9167821e00a558a37c58",
+    "answers/bible-and-book-of-mormon-together.html": "7a51c65848d5db165fdd657a183f388bbeb20b15c153d6038abc7826cb5633bf",
+    "answers/death-of-a-child.html": "8fa580862cf06e5ce5aff8dc74918f5ef02ec550759b9d8acd3a44296e239bd7",
+    "answers/divorce-and-faith.html": "9d31cec9d60c94b9e380e3c15a46d69f1cdda1a9b2f40566443ff5ee3dbd0fe3",
+    "answers/faith-in-jesus-christ-during-trials.html": "c832ab8710f3c4700026c835c467568fde9c0879b3e57420592bf96b99afef59",
+    "answers/god-our-heavenly-father.html": "767279209381a36d437ce435a264768cefdb75ffd3f8bf993b9208e1faeb13a4",
+    "answers/grief-and-faith.html": "76a3052604e687fc25963c4919823770e775adee87c9555d4bdca6bd4936b55a",
+    "answers/holy-ghost.html": "52b1281bcb1d241a12757ef28f3b3d619f29802edc4b88581a990f5930509c5f",
+    "answers/jesus-christ-latter-day-saint-beliefs.html": "87163a39810df2b5f368ff753ee68bc41ab6e24e0ef32727b5a88e54cf061a1d",
+    "answers/look-unto-me-doctrine-and-covenants-6-36.html": "854f28fecbf5a9dfad5e5a6e4c0fc7a2513d14683e44623b52b914425e7c6689",
+    "answers/melchizedek-priesthood-restoration.html": "69d69ba2c99c97786d4b5ac4e930b3cdbcb273548f15f7e44d5e1297e34d080e",
+    "answers/plan-of-salvation.html": "f3d0879ac9740db594e89d30da8fab11e1407ee0ca53c8ef325c42a5c0f607b0",
+    "answers/prayer-and-personal-revelation.html": "9036f64c29f1873826df6bc63ca069c1ef7bbc5f4fb301a4582e4eb62dd5216c",
+    "answers/race-priesthood-and-temple-blessings.html": "02f4af3de3ad246ba423fa39c4cc72a5031f5d09e0862397321bd526ea5f7c68",
+    "answers/restored-church-of-jesus-christ.html": "d7fa880070ad23c3bb3591409eda0c0da9e929a3af8a36bbfcc004389e80d644",
+    "answers/settle-this-in-your-hearts.html": "2e78f692cdeb21ab468cc825228a633e3fbe1840cf85cfda3a17cbbb2bc056a7",
+    "answers/stand-forever.html": "42e657250bed1f356142ef645cf9c26a618ff9f5657652fd6baf3f5e9af46a24",
+    "answers/what-happens-after-death.html": "0d12c6f396e899989e4afd86766b24f335cf3c63b7d37d4958297e1cc0c28486",
+    "answers/what-is-eternal-marriage.html": "f78630090fa04b6a84c8709ce6ec377827eb2ec07f4637f2c3e70d65dbdbbcdb",
+    "answers/what-is-the-book-of-mormon.html": "6c1b7be704aa002390c16ae6ece718c762873a6f5d902d8536b6db35994454fd",
+    "answers/who-was-joseph-smith.html": "fc9e19a88223dc254383a19de92c23ba36280b940e9557fb5a50149515732f9d",
+    "answers/why-families-are-important.html": "5120ce25e003adbd24a8f3d0d45894d5404ebcdbf931cf970dd1b07d2e4fabb9",
+    "answers/why-latter-day-saints-build-temples.html": "9346128622121c7c17c256283a1a138bbd2c6dbd1a55ae0a90dad1766220d80e",
+    "art-gallery.html": "1586c803a602f7eda140718d04634369e1d001c264a6108aef1b47dac0af602c",
+    "art-study/be-still.html": "8dd243c82316e00a7e748148e3d4b240282405a514a49359823243c720d9f70a",
+    "art-study/suffer-the-little-children.html": "a39ff9ff9c0585c1addfefcce4099f37bdfeef8089bc970340122d0bf9ddd887",
+    "art-study/the-good-shepherd.html": "be7fd9fe8ea251605fdc75efa6ec4207666ec15bed4cf09af5d8adf973f8330f",
+    "art-study/the-living-christ.html": "8597354ee3eb7f967f92e5460109b29a2e4dc426e7ba4c91dbbb364f8ff00886",
+    "art.html": "5874cff5142ea55c152336040fb234ff3116966789e80c1dbdebf8968a5603c4",
+    "ask.html": "533317fbac0f8024f06a58208bcfbe989f1f767e8406ac01d6643fc09cfe52d7",
+    "atonement.html": "7650630fbac456b0f681fa737f0dfdcfa25943be9a36d4138f0669244897e1b9",
+    "birth-of-christ.html": "08d12bae54d7ff9daf5f5611dc66ee77c3739dda8e8e42c676e7f05ce3301aef",
+    "book-of-mormon-evidences.html": "6fbfa25e62c70efffbec7ac17fb6599539e20e13daa4fa1ec71fce3d8fd3ae11",
+    "church-history.html": "c83d40eda866365fae8202b5e842eb4238622baded8cbe25ecd85af54d904305",
+    "come-follow-me.html": "430352292ab4c29cd342c8d2cf06594ee6bbe66dbe68e4bdd7c5c6d684e44ed0",
+    "general-conference.html": "cd5093a9b77f6b7c4217dc1efd4e5d66798e322491035347a2a07e9a7f7d9a20",
+    "history/eleazer-miller.html": "500a22fbc1a5be25bfeb8874276e8bbfcf59e5be637623f71abdc9cbc4a689fb",
+    "history/john-rowe-moyle.html": "5116e3564e6182390bcc9b31e847a46d79dea36af02346a2492573aba4705cc2",
+    "history/john-tanner.html": "7a4302e34106c3ba1d7a69d11dee5ecdb2dc5376175430878207716c3dce783f",
+    "index.html": "6ca837ff9663059bc5e79bc868145240c92fec69c4a22abe666d60ae0de4949f",
+    "jesus-christ/before-bethlehem.html": "0e162f3a2fa8c4c757a8629a9a91ae73e593a5b0314eecec35b7f9c2fb09d8de",
+    "jesus-christ/miracles-and-compassion.html": "ae09863d17b6a798f661b93c1b3141e98f3f1ae0152b17d4bbaf93daaf7f9c44",
+    "jesus-christ/mortal-ministry.html": "56e5b3daad9e434fa3b4bfb46bba468dbcd6b66baf06bf250b192bcd8ed9515f",
+    "jesus-christ/parables/barren-fig.html": "a26e1cf4ce32d3c79e819fb9d4ef1c6d7fb8cad6b8454a4c3f77be610cccdf76",
+    "jesus-christ/parables/birds-lilies.html": "73d2922eb9c6c274a1bce0ededbffb23adbcfc7677d2dc44120e5a4c18273644",
+    "jesus-christ/parables/blind-guides.html": "1801f2f4166e1803596d635e918841cdb73d2192b9ae9b7bdc7564d2775b981d",
+    "jesus-christ/parables/bridegroom.html": "f19ec5d302ef4fe69152d712829476fd153f32540e0811ac2eefdb947b442ad7",
+    "jesus-christ/parables/budding-fig.html": "425aa3796e13dbc5378636a2b6e743ddb0f469a1034d90f5ffd5c64d38d7ad06",
+    "jesus-christ/parables/children-marketplace.html": "5ccdc41984b80e5c08988642d9404c97e8df5762ba48a03119d6dd76c2a51b7c",
+    "jesus-christ/parables/closed-door.html": "fd728f50d5faf30398db4829a33f56c155091c20f4423ddae7eaa1fd85e659e8",
+    "jesus-christ/parables/divided-house.html": "89e24372e743e5c126d2a57acd29ff54ca0e87fb6c4ce68e624bb6b59af5543a",
+    "jesus-christ/parables/doorkeeper.html": "a9cc8783fa5a69c0a3428d80b466781896f6cc615235bb9e8746a9949a15ec1f",
+    "jesus-christ/parables/faithful-servant.html": "352501652801099a5a63aa9f50e376b1a1892679d52c2a4472f5f2b26ba8f451",
+    "jesus-christ/parables/friend-midnight.html": "29b395f82db090a4c2d55eb0040049ce033d2162933fad4487a5799eebc42464",
+    "jesus-christ/parables/good-samaritan.html": "c9980b4ba5ef5a9c53a3813e58f9132c0c86b5c8fbc858aaf5cb08123cd6d828",
+    "jesus-christ/parables/good-shepherd.html": "dbfb7c04976a504bff40444fd7c8da5376f6dfe7ead543c8b78b0ae11d87ca15",
+    "jesus-christ/parables/grain-wheat.html": "843248361388b71cef4bdfe33ac266c61f2dea9b399bb1bef6002c0ad136629b",
+    "jesus-christ/parables/great-supper.html": "4cab135659111395225efcc4439f498df4487195a43984c1dbf7b0e74d3d8812",
+    "jesus-christ/parables/growing-seed.html": "ef1d1eb45f5c67b0dbb8f9a32af529f2251d80df4a413cdb8a40cbbf21a41ef9",
+    "jesus-christ/parables/hearing.html": "e6c716d48fe2650344b45ce08f90dc45db81e927aac017a9fdb21c049a5cf3f1",
+    "jesus-christ/parables/hen-chicks.html": "847cda39fdbc87ed077abf873e7f6c9504e812f345e7f7b19e9443d821e1460b",
+    "jesus-christ/parables/hidden-treasure.html": "090b2ee0aa90cc0bd2fc7b5cc4b989ec3acae38323ed1a85f5784cbc920f464e",
+    "jesus-christ/parables/householder.html": "95dd684ad3c1c10f1456573071326723c618024f1d0888d332e5a60295ec9074",
+    "jesus-christ/parables/king-war.html": "bba5f1507634c91f5ff0a68bc5895b0e6613fc3d163f7f1e392e97d9fbd657e0",
+    "jesus-christ/parables/kingdom.html": "701378168d38e2147252d7f595d84bd92caeeb171680deff3e735cac12961455",
+    "jesus-christ/parables/laborers-vineyard.html": "d9bf169fc894d629e51822a56e8b37202607844096b7d4a769d0577fc8c17a5e",
+    "jesus-christ/parables/lamp.html": "7d7da681542ae6f1113a0eca42d3c9d8ba6161fe609651e8eb1cc106c449facf",
+    "jesus-christ/parables/leaven.html": "23271a8dfd67ef05f2097a45368fa65239543c80e7982bb1fb39c6c240928dbc",
+    "jesus-christ/parables/lost-coin.html": "dd2885940d8a73fb084a6941a0091617d822ca095d171212c03573f2ba782f8c",
+    "jesus-christ/parables/lost-sheep.html": "c10a98668641d93ecbb4ff42a4f26317e02fc5c42db4bd08564ad7ccd6c9767e",
+    "jesus-christ/parables/mercy.html": "6ef11fb16bed6ddd6fac55e7f6f82eda4e11e90e17a8867251f8222dc3d03dec",
+    "jesus-christ/parables/minas.html": "ea7175f51f0a2c8983e2adfec52a3dea76cb1a270d94562755cb57d0ca89406d",
+    "jesus-christ/parables/mote-beam.html": "d69527413b0f05fcc65fd8a9da4b8306aa9c2a6175ff9c137760dc072d69d3cc",
+    "jesus-christ/parables/mustard-seed.html": "aa9b6c6767b1efd0890295180809ae22a8b1792b07338678b8e945f4f04a8790",
+    "jesus-christ/parables/neighbor.html": "1ca7c5e582afa7e4c78519a5034e7d353e6b1616e4124b4a2cf97b255940ad8e",
+    "jesus-christ/parables/net.html": "2460adf423f6e33dc9143f04da7f19a01c84b75fdc379e53a14fad25c4f585d3",
+    "jesus-christ/parables/new-patch.html": "41c38effc2c4b42d04650982897a08ba7ada7be5ea96d6067b6ea82f57be49af",
+    "jesus-christ/parables/new-wineskins.html": "11a902abef075f9f3f9c884d160aa1c087d4509e6e1d259bb8b217354e6340b9",
+    "jesus-christ/parables/parent-gifts.html": "73c89bdc18cdf98835845f58ec81d2ba18f357c5bb2be626d45f530eee2b553a",
+    "jesus-christ/parables/pearl.html": "fd81edf25c97b9d8cabb24da4a9a8f170e0cfbf6c9f8e1e487f95a6d922dac4e",
+    "jesus-christ/parables/persistent-widow.html": "0f19d5c88628d4e9bc14b633bf71889bb70828a937852088130f03a708ffc9e7",
+    "jesus-christ/parables/pharisee-publican.html": "64b9ef53edbee214119ed7b991856b540b01254cf0c1b34e946f5362e57608c9",
+    "jesus-christ/parables/prodigal-son.html": "59b2ee99a52173e1dc922309a4187280e3b8b5e1414bb16562e0a316684580bb",
+    "jesus-christ/parables/returning-spirit.html": "eb2e1e2ea628fc5219fe2b28fe357688d57f52d714481f92ae5b4e562eee7fbb",
+    "jesus-christ/parables/rich-fool.html": "c4e31c7313f0db31b8f855070a945e22e86b50978a668360376f8cacbfcd4a19",
+    "jesus-christ/parables/rich-man-lazarus.html": "4c8d49a467b8b92f12617f9a8fc7ddadf3e98bf9f0f3b584c5101971f0ec2e6f",
+    "jesus-christ/parables/royal-wedding.html": "97574c25fdebbcab37d77052d9d5cc5bc57cc6db6eb8461296ff77c38fb24bae",
+    "jesus-christ/parables/salt.html": "080363186af0c5bb7083ee8ad0014c09b8f30b7f864ce2dd9791aaaeb8dddd1a",
+    "jesus-christ/parables/servant-duty.html": "9733dd834eb532bcfc70e5160c6167d004fd7eb28db588b92660fc26f69bc864",
+    "jesus-christ/parables/settle-adversary.html": "977d6892662b7a6b417c626ed36b80a9f3d22714d03759015163342e670a7a1e",
+    "jesus-christ/parables/sheep-goats.html": "fe95dd5959a71599d327aa7ba70de471d4e8c25ad907f15caf953e192afaaf9b",
+    "jesus-christ/parables/sheep-sabbath.html": "cfa603fe10b0898cbfb865c173d5e5f1ba10444a35ea46c9f8afb3b36a2ecc3b",
+    "jesus-christ/parables/sower.html": "01bdf51b8bf2d6b106a64468493a39faaaf3d25cc659eac700a4fe8bf468cb1c",
+    "jesus-christ/parables/stewardship.html": "13392d44fc30fb6dd87f7a5a5eec29d9c23bb3bb9eff50b2eb4457e0e402c79a",
+    "jesus-christ/parables/strong-man.html": "2414fe4020c5c1ce09205f0573294bbda5a64a1d8877b7f1592bb30fc3f9e520",
+    "jesus-christ/parables/talents.html": "e450bd0a51b95ef1e94f5a03724c6ec937de67fab8c9ca94f7c91997d4a97058",
+    "jesus-christ/parables/ten-virgins.html": "bb698feb802b2508282e08fd610efdd096c8c72b282a2ce5b8559a918b35f9a4",
+    "jesus-christ/parables/thief-night.html": "cfb8c94e28324ce216506c9f8cf33575d3aa95e8e32b8101f55eac1b9ace911d",
+    "jesus-christ/parables/tower-builder.html": "36dbf462de2300cf3beffbb7f897a1fbf43530f5d2c0bf8c683f6551e8cfea56",
+    "jesus-christ/parables/tree-fruit.html": "c6c7c863bbb88daa272e1755c313eee7c1328362ccdfd210b6a3fbf36b406ce0",
+    "jesus-christ/parables/two-debtors.html": "1a99966cc827de122d2a517d1202fcad42e19a2ca77043ab7f23460e47304c07",
+    "jesus-christ/parables/two-sons.html": "641b95a326d9fd9046672bb154a55e278850869e79361b4296b6bc94ea9b11cf",
+    "jesus-christ/parables/unjust-steward.html": "3e273230c31b35a3c2922dd678d8b613ec3051fbc940a8bb7d7f2a3b45d23796",
+    "jesus-christ/parables/unmerciful-servant.html": "855516c2f5aeeda1cde8b8d473880daf1c85c7c48f70dd027e05b454107fb803",
+    "jesus-christ/parables/vine-branches.html": "079f4e0a53009c1c9a077b4f5c0fde4f403c58224be27ddcc3023fdd7c8a9e0c",
+    "jesus-christ/parables/watchful-servants.html": "49f43b85f07dc519776497cc93e481fcc13c8bb776759e731857ed21f6c0a11f",
+    "jesus-christ/parables/watchfulness.html": "2a696ec9351947382843981b797c984ea4f419b1ba99fe8bc2abaebc3b581a08",
+    "jesus-christ/parables/wedding-places.html": "f05131ee80cad132beb668d92c30a3ead6e996c1c5657b63498ea51880a2fe48",
+    "jesus-christ/parables/wheat-tares.html": "af464232167ae09d01ab8f90c50696861e78f5227788c2fcaf2d0716a690a59b",
+    "jesus-christ/parables/wicked-tenants.html": "981c340d4260e7d36d8a6ca82bb1d9acd80a4e3e52fc0d17525d0aec3196fada",
+    "jesus-christ/parables/wise-foolish-builders.html": "c250970541d9bb6399011aa297b6ecf77c006bef8435977634bd7018037757aa",
+    "jesus-christ/parables/woman-childbirth.html": "0440311c047bf0c75cc63c89206e5cc4a11266276f985bf1f83da9f67a4b7db3",
+    "jesus-christ/redeemer-and-risen-lord.html": "664c9afda962ea0f622d08d15b1cd4d127ea5c3e6e3d833cc2d26d391e8e0c13",
+    "jesus-christ/restoration-and-today.html": "b959a440b106eea06dd2664032a4102120b7a8d28919e2b386a17ded7d3f21ac",
+    "jesus-christ/risen-savior-in-the-book-of-mormon.html": "24be24f35027d4e03566a3aceb8a40aa47392af8b832efea0f601462ba57ae33",
+    "jesus-christ/teachings-and-parables.html": "d75a1640700f39e72dd60b55b12011d34dd7e7235d6ccfbc2874cee57a7be76c",
+    "joseph-smith-likeness.html": "c244ee2026e72a6e61dfa8ff4b5abf79a5125d3a5095b80034f5e2be70b6c1a1",
+    "joseph-smith-portrait-research.html": "94485808da246618eeeb2882a97c6160972704ce27180cb4e140b7e5f4d09efb",
+    "missionary.html": "7b9a1a8ea9813969897bbed9ce379fdffd85f4ecf5eda4caff0e21bf0ed72c97",
+    "pioneers.html": "3a85756c0439fbd957b2c62abf7eb4218e775ad53b03b9be39d402909c1706c7",
+    "search.html": "b8663d4019910be1786bf685cac700a150a974a963ab914c73c1c7f4bd0419c8",
+    "timeline.html": "92020b03650ec94348988b00b573f98569ca4478f6068b44128268969f187511",
+    "timelines/latter-day-saint-church-history-timeline.html": "007bb264dee877b85960518039c37c7123aab8bf812fe1b9919d06e24aada242",
+    "timelines/life-of-christ-journey-map.html": "50a4ec503f00ed64a07cc5668119b64049f79af55ced92ed13b141197cef643b",
+    "timelines/willie-and-martin-handcart-map.html": "2a6dd32ac220a9a957c1b900743719ea20f18e786b3dd3b5b99b4058c33080c2",
+    "watch.html": "5ed37dc2d1e970c11fb18ac313a8241a5e0141813d18a76b5ca553fa70859d06"
+  },
+  "targets": [
+    {
+      "key": "assets/page-art/art-study/full/shepherd-sees-one.webp",
+      "original_sha256": "fc1523a72660dd51c6ba2d9018b04ebcd932adf43835897b3c93af98d89af4a6",
+      "owner": "art-study/the-good-shepherd.html",
+      "retained": true,
+      "retrieved_aliases": [
+        "assets/page-art/art-study/full/shepherd-sees-one.webp",
+        "assets/page-art/art-study/thumbs/shepherd-sees-one.webp"
+      ],
+      "occurrences": [
+        {
+          "route": "art-study/the-good-shepherd.html",
+          "asset": "assets/page-art/art-study/full/shepherd-sees-one.webp",
+          "tag": "a",
+          "attribute": "href"
+        },
+        {
+          "route": "art-study/the-good-shepherd.html",
+          "asset": "assets/page-art/art-study/thumbs/shepherd-sees-one.webp",
+          "tag": "img",
+          "attribute": "src"
+        },
+        {
+          "route": "art-study/the-good-shepherd.html",
+          "asset": "assets/page-art/art-study/thumbs/shepherd-sees-one.webp",
+          "tag": "img",
+          "attribute": "srcset"
+        },
+        {
+          "route": "art-study/the-good-shepherd.html",
+          "asset": "assets/page-art/art-study/full/shepherd-sees-one.webp",
+          "tag": "img",
+          "attribute": "srcset"
+        }
+      ]
+    },
+    {
+      "key": "assets/page-art/art-study/full/shepherd-carries-lamb.webp",
+      "original_sha256": "7747830e7335539a881b235dedf001f704c73d237f290c98fd61a9448a7f78ba",
+      "owner": "art-study/the-good-shepherd.html",
+      "retained": true,
+      "retrieved_aliases": [
+        "assets/page-art/art-study/full/shepherd-carries-lamb.webp",
+        "assets/page-art/art-study/thumbs/shepherd-carries-lamb.webp"
+      ],
+      "occurrences": [
+        {
+          "route": "art-study/the-good-shepherd.html",
+          "asset": "assets/page-art/art-study/full/shepherd-carries-lamb.webp",
+          "tag": "a",
+          "attribute": "href"
+        },
+        {
+          "route": "art-study/the-good-shepherd.html",
+          "asset": "assets/page-art/art-study/thumbs/shepherd-carries-lamb.webp",
+          "tag": "img",
+          "attribute": "src"
+        },
+        {
+          "route": "art-study/the-good-shepherd.html",
+          "asset": "assets/page-art/art-study/thumbs/shepherd-carries-lamb.webp",
+          "tag": "img",
+          "attribute": "srcset"
+        },
+        {
+          "route": "art-study/the-good-shepherd.html",
+          "asset": "assets/page-art/art-study/full/shepherd-carries-lamb.webp",
+          "tag": "img",
+          "attribute": "srcset"
+        }
+      ]
+    },
+    {
+      "key": "assets/page-art/art-study/full/shepherd-shares-burden.webp",
+      "original_sha256": "d7aeb93b9a83147993c7933180d2ea73e7cfd4461c40c778793172927a0d6b5a",
+      "owner": "art-study/the-good-shepherd.html",
+      "retained": true,
+      "retrieved_aliases": [
+        "assets/page-art/art-study/full/shepherd-shares-burden.webp",
+        "assets/page-art/art-study/thumbs/shepherd-shares-burden.webp"
+      ],
+      "occurrences": [
+        {
+          "route": "art-study/the-good-shepherd.html",
+          "asset": "assets/page-art/art-study/full/shepherd-shares-burden.webp",
+          "tag": "a",
+          "attribute": "href"
+        },
+        {
+          "route": "art-study/the-good-shepherd.html",
+          "asset": "assets/page-art/art-study/thumbs/shepherd-shares-burden.webp",
+          "tag": "img",
+          "attribute": "src"
+        },
+        {
+          "route": "art-study/the-good-shepherd.html",
+          "asset": "assets/page-art/art-study/thumbs/shepherd-shares-burden.webp",
+          "tag": "img",
+          "attribute": "srcset"
+        },
+        {
+          "route": "art-study/the-good-shepherd.html",
+          "asset": "assets/page-art/art-study/full/shepherd-shares-burden.webp",
+          "tag": "img",
+          "attribute": "srcset"
+        }
+      ]
+    },
+    {
+      "key": "assets/page-art/art-study/full/shepherd-calls-zacchaeus.webp",
+      "original_sha256": "db1509ed08bfe12b04e4de33a3b6a728e8427895c6a3b567c01a517e91891041",
+      "owner": "art-study/the-good-shepherd.html",
+      "retained": true,
+      "retrieved_aliases": [
+        "assets/page-art/art-study/full/shepherd-calls-zacchaeus.webp",
+        "assets/page-art/art-study/thumbs/shepherd-calls-zacchaeus.webp"
+      ],
+      "occurrences": [
+        {
+          "route": "art-study/the-good-shepherd.html",
+          "asset": "assets/page-art/art-study/full/shepherd-calls-zacchaeus.webp",
+          "tag": "a",
+          "attribute": "href"
+        },
+        {
+          "route": "art-study/the-good-shepherd.html",
+          "asset": "assets/page-art/art-study/thumbs/shepherd-calls-zacchaeus.webp",
+          "tag": "img",
+          "attribute": "src"
+        },
+        {
+          "route": "art-study/the-good-shepherd.html",
+          "asset": "assets/page-art/art-study/thumbs/shepherd-calls-zacchaeus.webp",
+          "tag": "img",
+          "attribute": "srcset"
+        },
+        {
+          "route": "art-study/the-good-shepherd.html",
+          "asset": "assets/page-art/art-study/full/shepherd-calls-zacchaeus.webp",
+          "tag": "img",
+          "attribute": "srcset"
+        }
+      ]
+    },
+    {
+      "key": "assets/page-art/art-study/full/shepherd-seeks-one-20260919.webp",
+      "original_sha256": "029684658fd2fd404729db71ee451862ffb67ea6aae62ae50ed1e2254a8f946f",
+      "owner": "art-study/the-good-shepherd.html",
+      "retained": true,
+      "retrieved_aliases": [
+        "assets/page-art/art-study/full/shepherd-seeks-one-20260919.webp",
+        "assets/page-art/art-study/thumbs/shepherd-seeks-one-20260919.webp"
+      ],
+      "occurrences": [
+        {
+          "route": "art-study/the-good-shepherd.html",
+          "asset": "assets/page-art/art-study/full/shepherd-seeks-one-20260919.webp",
+          "tag": "a",
+          "attribute": "href"
+        },
+        {
+          "route": "art-study/the-good-shepherd.html",
+          "asset": "assets/page-art/art-study/thumbs/shepherd-seeks-one-20260919.webp",
+          "tag": "img",
+          "attribute": "src"
+        },
+        {
+          "route": "art-study/the-good-shepherd.html",
+          "asset": "assets/page-art/art-study/thumbs/shepherd-seeks-one-20260919.webp",
+          "tag": "img",
+          "attribute": "srcset"
+        },
+        {
+          "route": "art-study/the-good-shepherd.html",
+          "asset": "assets/page-art/art-study/full/shepherd-seeks-one-20260919.webp",
+          "tag": "img",
+          "attribute": "srcset"
+        }
+      ]
+    },
+    {
+      "key": "assets/page-art/art-study/full/children-gather-close.webp",
+      "original_sha256": "85d4a603bd46ef7b1f73c281f0eff4f634206c0bd9d288dce7fa0129b5410cd1",
+      "owner": "art-study/suffer-the-little-children.html",
+      "retained": true,
+      "retrieved_aliases": [
+        "assets/page-art/art-study/full/children-gather-close.webp",
+        "assets/page-art/art-study/thumbs/children-gather-close.webp"
+      ],
+      "occurrences": [
+        {
+          "route": "art-study/suffer-the-little-children.html",
+          "asset": "assets/page-art/art-study/full/children-gather-close.webp",
+          "tag": "a",
+          "attribute": "href"
+        },
+        {
+          "route": "art-study/suffer-the-little-children.html",
+          "asset": "assets/page-art/art-study/thumbs/children-gather-close.webp",
+          "tag": "img",
+          "attribute": "src"
+        },
+        {
+          "route": "art-study/suffer-the-little-children.html",
+          "asset": "assets/page-art/art-study/thumbs/children-gather-close.webp",
+          "tag": "img",
+          "attribute": "srcset"
+        },
+        {
+          "route": "art-study/suffer-the-little-children.html",
+          "asset": "assets/page-art/art-study/full/children-gather-close.webp",
+          "tag": "img",
+          "attribute": "srcset"
+        }
+      ]
+    },
+    {
+      "key": "assets/page-art/art-study/full/children-welcome-shy-child.webp",
+      "original_sha256": "c95205d67cbcb8ab0337511ec2a5801ccaa3fe417197b79fb379b05b875f7256",
+      "owner": "art-study/suffer-the-little-children.html",
+      "retained": true,
+      "retrieved_aliases": [
+        "assets/page-art/art-study/full/children-welcome-shy-child.webp",
+        "assets/page-art/art-study/thumbs/children-welcome-shy-child.webp"
+      ],
+      "occurrences": [
+        {
+          "route": "art-study/suffer-the-little-children.html",
+          "asset": "assets/page-art/art-study/full/children-welcome-shy-child.webp",
+          "tag": "a",
+          "attribute": "href"
+        },
+        {
+          "route": "art-study/suffer-the-little-children.html",
+          "asset": "assets/page-art/art-study/thumbs/children-welcome-shy-child.webp",
+          "tag": "img",
+          "attribute": "src"
+        },
+        {
+          "route": "art-study/suffer-the-little-children.html",
+          "asset": "assets/page-art/art-study/thumbs/children-welcome-shy-child.webp",
+          "tag": "img",
+          "attribute": "srcset"
+        },
+        {
+          "route": "art-study/suffer-the-little-children.html",
+          "asset": "assets/page-art/art-study/full/children-welcome-shy-child.webp",
+          "tag": "img",
+          "attribute": "srcset"
+        }
+      ]
+    },
+    {
+      "key": "assets/page-art/art-study/full/children-listen-under-tree.webp",
+      "original_sha256": "193a5ecda7f4bbda37ae92b26c064edc08aa58442ef98d3b58c6b822f5987805",
+      "owner": "art-study/suffer-the-little-children.html",
+      "retained": true,
+      "retrieved_aliases": [
+        "assets/page-art/art-study/full/children-listen-under-tree.webp",
+        "assets/page-art/art-study/thumbs/children-listen-under-tree.webp"
+      ],
+      "occurrences": [
+        {
+          "route": "art-study/suffer-the-little-children.html",
+          "asset": "assets/page-art/art-study/full/children-listen-under-tree.webp",
+          "tag": "a",
+          "attribute": "href"
+        },
+        {
+          "route": "art-study/suffer-the-little-children.html",
+          "asset": "assets/page-art/art-study/thumbs/children-listen-under-tree.webp",
+          "tag": "img",
+          "attribute": "src"
+        },
+        {
+          "route": "art-study/suffer-the-little-children.html",
+          "asset": "assets/page-art/art-study/thumbs/children-listen-under-tree.webp",
+          "tag": "img",
+          "attribute": "srcset"
+        },
+        {
+          "route": "art-study/suffer-the-little-children.html",
+          "asset": "assets/page-art/art-study/full/children-listen-under-tree.webp",
+          "tag": "img",
+          "attribute": "srcset"
+        }
+      ]
+    },
+    {
+      "key": "assets/page-art/art-study/full/children-quiet-water.webp",
+      "original_sha256": "e50fc2b7e243ffa4e442d29fa970a9169c6211a00d625db45ba548fca83b1336",
+      "owner": "art-study/suffer-the-little-children.html",
+      "retained": true,
+      "retrieved_aliases": [
+        "assets/page-art/art-study/full/children-quiet-water.webp",
+        "assets/page-art/art-study/thumbs/children-quiet-water.webp"
+      ],
+      "occurrences": [
+        {
+          "route": "art-study/suffer-the-little-children.html",
+          "asset": "assets/page-art/art-study/full/children-quiet-water.webp",
+          "tag": "a",
+          "attribute": "href"
+        },
+        {
+          "route": "art-study/suffer-the-little-children.html",
+          "asset": "assets/page-art/art-study/thumbs/children-quiet-water.webp",
+          "tag": "img",
+          "attribute": "src"
+        },
+        {
+          "route": "art-study/suffer-the-little-children.html",
+          "asset": "assets/page-art/art-study/thumbs/children-quiet-water.webp",
+          "tag": "img",
+          "attribute": "srcset"
+        },
+        {
+          "route": "art-study/suffer-the-little-children.html",
+          "asset": "assets/page-art/art-study/full/children-quiet-water.webp",
+          "tag": "img",
+          "attribute": "srcset"
+        }
+      ]
+    },
+    {
+      "key": "assets/page-art/art-study/full/children-listen-at-home-20260919.webp",
+      "original_sha256": "afde94ae47f90109be64adba21ed2c6f9f5a3d5e8e00d125d5f0352812c34d1e",
+      "owner": "art-study/suffer-the-little-children.html",
+      "retained": true,
+      "retrieved_aliases": [
+        "assets/page-art/art-study/full/children-listen-at-home-20260919.webp",
+        "assets/page-art/art-study/thumbs/children-listen-at-home-20260919.webp"
+      ],
+      "occurrences": [
+        {
+          "route": "art-study/suffer-the-little-children.html",
+          "asset": "assets/page-art/art-study/full/children-listen-at-home-20260919.webp",
+          "tag": "a",
+          "attribute": "href"
+        },
+        {
+          "route": "art-study/suffer-the-little-children.html",
+          "asset": "assets/page-art/art-study/thumbs/children-listen-at-home-20260919.webp",
+          "tag": "img",
+          "attribute": "src"
+        },
+        {
+          "route": "art-study/suffer-the-little-children.html",
+          "asset": "assets/page-art/art-study/thumbs/children-listen-at-home-20260919.webp",
+          "tag": "img",
+          "attribute": "srcset"
+        },
+        {
+          "route": "art-study/suffer-the-little-children.html",
+          "asset": "assets/page-art/art-study/full/children-listen-at-home-20260919.webp",
+          "tag": "img",
+          "attribute": "srcset"
+        }
+      ]
+    },
+    {
+      "key": "assets/page-art/art-study/full/still-city-companion.webp",
+      "original_sha256": "cff36c78346ed712f39a5b81207cd5784d233dac1e800dedbc8a63a425d814e0",
+      "owner": "art-study/be-still.html",
+      "retained": true,
+      "retrieved_aliases": [
+        "assets/page-art/art-study/full/still-city-companion.webp",
+        "assets/page-art/art-study/thumbs/still-city-companion.webp"
+      ],
+      "occurrences": [
+        {
+          "route": "art-study/be-still.html",
+          "asset": "assets/page-art/art-study/full/still-city-companion.webp",
+          "tag": "a",
+          "attribute": "href"
+        },
+        {
+          "route": "art-study/be-still.html",
+          "asset": "assets/page-art/art-study/thumbs/still-city-companion.webp",
+          "tag": "img",
+          "attribute": "src"
+        },
+        {
+          "route": "art-study/be-still.html",
+          "asset": "assets/page-art/art-study/thumbs/still-city-companion.webp",
+          "tag": "img",
+          "attribute": "srcset"
+        },
+        {
+          "route": "art-study/be-still.html",
+          "asset": "assets/page-art/art-study/full/still-city-companion.webp",
+          "tag": "img",
+          "attribute": "srcset"
+        }
+      ]
+    },
+    {
+      "key": "assets/page-art/art-study/full/still-storm-boat.webp",
+      "original_sha256": "fdb60ec2ecdee51a24264fc53f0c1aed7cbde5d10dcaec32a6e3d8840b42911c",
+      "owner": "art-study/be-still.html",
+      "retained": true,
+      "retrieved_aliases": [
+        "assets/page-art/art-study/full/still-storm-boat.webp",
+        "assets/page-art/art-study/thumbs/still-storm-boat.webp"
+      ],
+      "occurrences": [
+        {
+          "route": "art-study/be-still.html",
+          "asset": "assets/page-art/art-study/full/still-storm-boat.webp",
+          "tag": "a",
+          "attribute": "href"
+        },
+        {
+          "route": "art-study/be-still.html",
+          "asset": "assets/page-art/art-study/thumbs/still-storm-boat.webp",
+          "tag": "img",
+          "attribute": "src"
+        },
+        {
+          "route": "art-study/be-still.html",
+          "asset": "assets/page-art/art-study/thumbs/still-storm-boat.webp",
+          "tag": "img",
+          "attribute": "srcset"
+        },
+        {
+          "route": "art-study/be-still.html",
+          "asset": "assets/page-art/art-study/full/still-storm-boat.webp",
+          "tag": "img",
+          "attribute": "srcset"
+        }
+      ]
+    },
+    {
+      "key": "assets/page-art/art-study/full/still-lakeside-pause.webp",
+      "original_sha256": "67fcb39e322e93f2389d465a20b73b6f059b41a1557cc627405c5781a796b724",
+      "owner": "art-study/be-still.html",
+      "retained": true,
+      "retrieved_aliases": [
+        "assets/page-art/art-study/full/still-lakeside-pause.webp",
+        "assets/page-art/art-study/thumbs/still-lakeside-pause.webp"
+      ],
+      "occurrences": [
+        {
+          "route": "art-study/be-still.html",
+          "asset": "assets/page-art/art-study/full/still-lakeside-pause.webp",
+          "tag": "a",
+          "attribute": "href"
+        },
+        {
+          "route": "art-study/be-still.html",
+          "asset": "assets/page-art/art-study/thumbs/still-lakeside-pause.webp",
+          "tag": "img",
+          "attribute": "src"
+        },
+        {
+          "route": "art-study/be-still.html",
+          "asset": "assets/page-art/art-study/thumbs/still-lakeside-pause.webp",
+          "tag": "img",
+          "attribute": "srcset"
+        },
+        {
+          "route": "art-study/be-still.html",
+          "asset": "assets/page-art/art-study/full/still-lakeside-pause.webp",
+          "tag": "img",
+          "attribute": "srcset"
+        }
+      ]
+    },
+    {
+      "key": "assets/page-art/art-study/full/still-shared-lift.webp",
+      "original_sha256": "a9c935fab827fcc3e2b6b3c53d748373f9cc7660020a2089c992ab0b741da869",
+      "owner": "art-study/be-still.html",
+      "retained": true,
+      "retrieved_aliases": [
+        "assets/page-art/art-study/full/still-shared-lift.webp",
+        "assets/page-art/art-study/thumbs/still-shared-lift.webp"
+      ],
+      "occurrences": [
+        {
+          "route": "art-study/be-still.html",
+          "asset": "assets/page-art/art-study/full/still-shared-lift.webp",
+          "tag": "a",
+          "attribute": "href"
+        },
+        {
+          "route": "art-study/be-still.html",
+          "asset": "assets/page-art/art-study/thumbs/still-shared-lift.webp",
+          "tag": "img",
+          "attribute": "src"
+        },
+        {
+          "route": "art-study/be-still.html",
+          "asset": "assets/page-art/art-study/thumbs/still-shared-lift.webp",
+          "tag": "img",
+          "attribute": "srcset"
+        },
+        {
+          "route": "art-study/be-still.html",
+          "asset": "assets/page-art/art-study/full/still-shared-lift.webp",
+          "tag": "img",
+          "attribute": "srcset"
+        }
+      ]
+    },
+    {
+      "key": "assets/page-art/art-study/full/still-phone-down-scripture-20260919.webp",
+      "original_sha256": "09123ea02209812f8158a257fbc0ac5562231f3cb6a14bc0303951bd992fae18",
+      "owner": "art-study/be-still.html",
+      "retained": true,
+      "retrieved_aliases": [
+        "assets/page-art/art-study/full/still-phone-down-scripture-20260919.webp",
+        "assets/page-art/art-study/thumbs/still-phone-down-scripture-20260919.webp"
+      ],
+      "occurrences": [
+        {
+          "route": "art-study/be-still.html",
+          "asset": "assets/page-art/art-study/full/still-phone-down-scripture-20260919.webp",
+          "tag": "a",
+          "attribute": "href"
+        },
+        {
+          "route": "art-study/be-still.html",
+          "asset": "assets/page-art/art-study/thumbs/still-phone-down-scripture-20260919.webp",
+          "tag": "img",
+          "attribute": "src"
+        },
+        {
+          "route": "art-study/be-still.html",
+          "asset": "assets/page-art/art-study/thumbs/still-phone-down-scripture-20260919.webp",
+          "tag": "img",
+          "attribute": "srcset"
+        },
+        {
+          "route": "art-study/be-still.html",
+          "asset": "assets/page-art/art-study/full/still-phone-down-scripture-20260919.webp",
+          "tag": "img",
+          "attribute": "srcset"
+        }
+      ]
+    },
+    {
+      "key": "GS3",
+      "original_sha256": "6a01f16b128969e7a5877ec7827a24049e025d00c79fb49ee1d627ff3f9ffeb6",
+      "owner": "art-study/the-good-shepherd.html",
+      "retained": false,
+      "retrieved_aliases": [],
+      "occurrences": []
+    },
+    {
+      "key": "GS5",
+      "original_sha256": "d0babc7bf03ef3133c731479d9c3170191ddecdf10843bd2fc2ea0184293c9c5",
+      "owner": "art-study/the-good-shepherd.html",
+      "retained": false,
+      "retrieved_aliases": [],
+      "occurrences": []
+    },
+    {
+      "key": "GS2",
+      "original_sha256": "651e693f7c84c0948bff58bebf11291d1d86ea58948aa6834a29366059cca7c5",
+      "owner": "art-study/the-good-shepherd.html",
+      "retained": false,
+      "retrieved_aliases": [],
+      "occurrences": []
+    },
+    {
+      "key": "GS4",
+      "original_sha256": "f09aa044fa31f94e65a1a0d6e7cbd1b97bdddea269c707496ca99b571f73d808",
+      "owner": "art-study/the-good-shepherd.html",
+      "retained": false,
+      "retrieved_aliases": [],
+      "occurrences": []
+    },
+    {
+      "key": "CH1",
+      "original_sha256": "fc4079d49649d1ac88a3bd2e2f69a8e205b1731436effd4b8c902deac47a92c1",
+      "owner": "art-study/suffer-the-little-children.html",
+      "retained": false,
+      "retrieved_aliases": [],
+      "occurrences": []
+    },
+    {
+      "key": "CH3",
+      "original_sha256": "8d22d7b07969c14d94968108fd36a210a7f7d333a7cfeb372a8daccac27a23a0",
+      "owner": "art-study/suffer-the-little-children.html",
+      "retained": false,
+      "retrieved_aliases": [],
+      "occurrences": []
+    },
+    {
+      "key": "CH2",
+      "original_sha256": "12ac73978b43eed0dc24db02529424d7d2ac2338494291716b7a6dc9abb6006b",
+      "owner": "art-study/suffer-the-little-children.html",
+      "retained": false,
+      "retrieved_aliases": [],
+      "occurrences": []
+    },
+    {
+      "key": "CH4",
+      "original_sha256": "5cc23a24311c8bbb95c33e8032c8cbfcd09964344f9b93f8baa7ab3ba5e7d6aa",
+      "owner": "art-study/suffer-the-little-children.html",
+      "retained": false,
+      "retrieved_aliases": [],
+      "occurrences": []
+    },
+    {
+      "key": "BS2",
+      "original_sha256": "ffb4b79a8e3e4c6c3d539ec46f6c10ab7fdd55431d40594fe1da5dfc082babd7",
+      "owner": "art-study/be-still.html",
+      "retained": false,
+      "retrieved_aliases": [],
+      "occurrences": []
+    },
+    {
+      "key": "BS3",
+      "original_sha256": "a1007bf3a7f40e3dfb3efa1d8cb2a6a8fe3072bad565898aa3811c7dfd4668b7",
+      "owner": "art-study/be-still.html",
+      "retained": false,
+      "retrieved_aliases": [],
+      "occurrences": []
+    },
+    {
+      "key": "BS4",
+      "original_sha256": "5e0da18e670f73a983b92e39cbf0824e1e5782e753961dc60e5aeb0f3b75d1a3",
+      "owner": "art-study/be-still.html",
+      "retained": false,
+      "retrieved_aliases": [],
+      "occurrences": []
+    },
+    {
+      "key": "BS5",
+      "original_sha256": "1904a0cb7c0bb79c3fbe27cecec7401524e9514d7cbd0404c9168410a2bdf4e3",
+      "owner": "art-study/be-still.html",
+      "retained": false,
+      "retrieved_aliases": [],
+      "occurrences": []
+    }
+  ],
+  "cross_target_near_matches": [],
+  "limits": [
+    "Uses Fermi heuristic SIFT/pHash candidate retrieval, independently revalidates every input image hash and all canonical route usage.",
+    "Heuristic scan cannot mathematically exclude arbitrary unseen transformations.",
+    "Twelve new targets absent from SITE; repaired3/final inserted HTML remain pending."
+  ],
+  "visual_adjudication": "Three independent contact sheets viewed: all15retrieved full/thumb pairs depict identical compositions and same original family; twelve new scene compositions distinct, no detected aliases in reviewed retrieval results. Across27 targets decoded hashes differ and no pHash distance<=10 pairs. Ownership remains current source inventory, pending final3/final HTML."
+}

@@ -1,0 +1,733 @@
+{
+  "reviewer": "Fermi",
+  "stage": "RETAINED15_PRESERVATION_OWNERSHIP_CLASSIFICATION",
+  "status": "IN_PROGRESS",
+  "canonical_route_count": 130,
+  "canonical_routes_sha256": "e96504a266862b30461fd263c7d2bed2f6c55b353dd9f31b319c274b753e0e52",
+  "rows": [
+    {
+      "asset": "assets/page-art/art-study/full/shepherd-sees-one.webp",
+      "sha256": "fc1523a72660dd51c6ba2d9018b04ebcd932adf43835897b3c93af98d89af4a6",
+      "baseline_matches": true,
+      "decoded_rgb_sha256": "0ff8e7c02c64d13000386e4ce0357477097551b0a680bbab203539ac4126bb3a",
+      "size": [
+        1536,
+        1024
+      ],
+      "owner_route": "art-study/the-good-shepherd.html",
+      "owner_section": "begin",
+      "figure_count": 1,
+      "caption": "The One Is Not Overlooked Jesus pauses beside one man. Remember the Shepherd seeking His lost sheep in Luke 15:3-7 .",
+      "source_links": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/15?lang=eng&id=p3-p7#p3"
+      ],
+      "family": [
+        {
+          "path": "assets/page-art/art-study/full/shepherd-sees-one.webp",
+          "sha256": "fc1523a72660dd51c6ba2d9018b04ebcd932adf43835897b3c93af98d89af4a6",
+          "baseline_sha256": "fc1523a72660dd51c6ba2d9018b04ebcd932adf43835897b3c93af98d89af4a6",
+          "unchanged": true
+        },
+        {
+          "path": "assets/page-art/art-study/thumbs/shepherd-sees-one.webp",
+          "sha256": "934c063e16cc739feb171aedabe2cc19e21f3d01567ff26190fb34bc2d9d5cc8",
+          "baseline_sha256": "934c063e16cc739feb171aedabe2cc19e21f3d01567ff26190fb34bc2d9d5cc8",
+          "unchanged": true
+        }
+      ],
+      "current_canonical_occurrences": {
+        "assets/page-art/art-study/full/shepherd-sees-one.webp": [
+          "art-study/the-good-shepherd.html"
+        ],
+        "assets/page-art/art-study/thumbs/shepherd-sees-one.webp": [
+          "art-study/the-good-shepherd.html"
+        ]
+      },
+      "depicts_christ": true,
+      "source_context": "A path through this study Listen for the Shepherd's Voice Notice the Savior\u2019s face among the people. John 10 tells of the Shepherd who knows His sheep and gives His life for them. The One Is Not Overlooked Jesus pauses beside one man. Remember the Shepherd seeking His lost sheep in Luke 15:3-7 . Look Notice the Savior's expression and the people nearest Him in the crowded street. Read Listen for every action Jesus uses to describe the Good Shepherd in John 10 . Respond Consider one person you can notice, call, or walk beside with greater care."
+    },
+    {
+      "asset": "assets/page-art/art-study/full/shepherd-carries-lamb.webp",
+      "sha256": "7747830e7335539a881b235dedf001f704c73d237f290c98fd61a9448a7f78ba",
+      "baseline_matches": true,
+      "decoded_rgb_sha256": "de723f044ffa8be37f5ceb4f504a9c2974398a80c077b2176abfbff7fe21f9af",
+      "size": [
+        1536,
+        1024
+      ],
+      "owner_route": "art-study/the-good-shepherd.html",
+      "owner_section": "shepherd-words",
+      "figure_count": 1,
+      "caption": "Gathered into His Arms The lamb rests in His arms, recalling the Shepherd\u2019s tender care in Isaiah 40:11 .",
+      "source_links": [
+        "https://www.churchofjesuschrist.org/study/scriptures/ot/isa/40?lang=eng&id=p11#p11"
+      ],
+      "family": [
+        {
+          "path": "assets/page-art/art-study/full/shepherd-carries-lamb.webp",
+          "sha256": "7747830e7335539a881b235dedf001f704c73d237f290c98fd61a9448a7f78ba",
+          "baseline_sha256": "7747830e7335539a881b235dedf001f704c73d237f290c98fd61a9448a7f78ba",
+          "unchanged": true
+        },
+        {
+          "path": "assets/page-art/art-study/thumbs/shepherd-carries-lamb.webp",
+          "sha256": "c4134b71191e3893460da8a490dbc5fc280e890d79993b2be8a11dc6481cae07",
+          "baseline_sha256": "c4134b71191e3893460da8a490dbc5fc280e890d79993b2be8a11dc6481cae07",
+          "unchanged": true
+        }
+      ],
+      "current_canonical_occurrences": {
+        "assets/page-art/art-study/full/shepherd-carries-lamb.webp": [
+          "art-study/the-good-shepherd.html"
+        ],
+        "assets/page-art/art-study/thumbs/shepherd-carries-lamb.webp": [
+          "art-study/the-good-shepherd.html"
+        ]
+      },
+      "depicts_christ": true,
+      "source_context": "Scripture study Known, Led, and Loved In John 10:1-18 , Jesus describes the Shepherd who knows His sheep, calls them, and gives His life for them. They recognize His voice and follow. Psalm 23 speaks of rest, guidance, and the Shepherd\u2019s presence, even through the valley of the shadow of death. Gathered into His Arms The lamb rests in His arms, recalling the Shepherd\u2019s tender care in Isaiah 40:11 . The sheep beyond the present fold Jesus speaks of \u201cother sheep\u201d in John 10:16 . In 3 Nephi 15:11-24 , He tells the people at Bountiful that they are those sheep."
+    },
+    {
+      "asset": "assets/page-art/art-study/full/shepherd-shares-burden.webp",
+      "sha256": "d7aeb93b9a83147993c7933180d2ea73e7cfd4461c40c778793172927a0d6b5a",
+      "baseline_matches": true,
+      "decoded_rgb_sha256": "690b7243e3addf52d4eda0c26c901b2ef67fd0cb2013c9cfeec562c45a26d82e",
+      "size": [
+        1536,
+        1024
+      ],
+      "owner_route": "art-study/the-good-shepherd.html",
+      "owner_section": "artwork-study",
+      "figure_count": 1,
+      "caption": "Strength Shared Under Strain As two people share the work, consider Christ\u2019s invitation to the weary in Matthew 11:28-30 .",
+      "source_links": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/11?lang=eng&id=p28-p30#p28"
+      ],
+      "family": [
+        {
+          "path": "assets/page-art/art-study/full/shepherd-shares-burden.webp",
+          "sha256": "d7aeb93b9a83147993c7933180d2ea73e7cfd4461c40c778793172927a0d6b5a",
+          "baseline_sha256": "d7aeb93b9a83147993c7933180d2ea73e7cfd4461c40c778793172927a0d6b5a",
+          "unchanged": true
+        },
+        {
+          "path": "assets/page-art/art-study/thumbs/shepherd-shares-burden.webp",
+          "sha256": "71b87ed66b6ec51c14c54a753b5b295412f3d713e840abedc91be7795f6aac32",
+          "baseline_sha256": "71b87ed66b6ec51c14c54a753b5b295412f3d713e840abedc91be7795f6aac32",
+          "unchanged": true
+        }
+      ],
+      "current_canonical_occurrences": {
+        "assets/page-art/art-study/full/shepherd-shares-burden.webp": [
+          "art-study/the-good-shepherd.html"
+        ],
+        "assets/page-art/art-study/thumbs/shepherd-shares-burden.webp": [
+          "art-study/the-good-shepherd.html"
+        ]
+      },
+      "depicts_christ": true,
+      "source_context": "Look again The Shepherd Draws Near Pause with each scene, then follow its scripture into the Savior\u2019s care. Strength Shared Under Strain As two people share the work, consider Christ\u2019s invitation to the weary in Matthew 11:28-30 . Known in a Crowd Amid the crowd, Jesus calls Zacchaeus by name. Read their encounter in Luke 19:1-10 ."
+    },
+    {
+      "asset": "assets/page-art/art-study/full/shepherd-calls-zacchaeus.webp",
+      "sha256": "db1509ed08bfe12b04e4de33a3b6a728e8427895c6a3b567c01a517e91891041",
+      "baseline_matches": true,
+      "decoded_rgb_sha256": "91c0dc4c6e476543a6a7e072df147b5b82874b02649ce910bbe9d6b5acffc5e2",
+      "size": [
+        1536,
+        1024
+      ],
+      "owner_route": "art-study/the-good-shepherd.html",
+      "owner_section": "artwork-study",
+      "figure_count": 1,
+      "caption": "Known in a Crowd Amid the crowd, Jesus calls Zacchaeus by name. Read their encounter in Luke 19:1-10 .",
+      "source_links": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/19?lang=eng&id=p1-p10#p1"
+      ],
+      "family": [
+        {
+          "path": "assets/page-art/art-study/full/shepherd-calls-zacchaeus.webp",
+          "sha256": "db1509ed08bfe12b04e4de33a3b6a728e8427895c6a3b567c01a517e91891041",
+          "baseline_sha256": "db1509ed08bfe12b04e4de33a3b6a728e8427895c6a3b567c01a517e91891041",
+          "unchanged": true
+        },
+        {
+          "path": "assets/page-art/art-study/thumbs/shepherd-calls-zacchaeus.webp",
+          "sha256": "259b35f7ec7490857585a2016c56517791e7fe445885eb8f604f8ee8ab4cd740",
+          "baseline_sha256": "259b35f7ec7490857585a2016c56517791e7fe445885eb8f604f8ee8ab4cd740",
+          "unchanged": true
+        }
+      ],
+      "current_canonical_occurrences": {
+        "assets/page-art/art-study/full/shepherd-calls-zacchaeus.webp": [
+          "art-study/the-good-shepherd.html"
+        ],
+        "assets/page-art/art-study/thumbs/shepherd-calls-zacchaeus.webp": [
+          "art-study/the-good-shepherd.html"
+        ]
+      },
+      "depicts_christ": true,
+      "source_context": "Look again The Shepherd Draws Near Pause with each scene, then follow its scripture into the Savior\u2019s care. Strength Shared Under Strain As two people share the work, consider Christ\u2019s invitation to the weary in Matthew 11:28-30 . Known in a Crowd Amid the crowd, Jesus calls Zacchaeus by name. Read their encounter in Luke 19:1-10 ."
+    },
+    {
+      "asset": "assets/page-art/art-study/full/shepherd-seeks-one-20260919.webp",
+      "sha256": "029684658fd2fd404729db71ee451862ffb67ea6aae62ae50ed1e2254a8f946f",
+      "baseline_matches": true,
+      "decoded_rgb_sha256": "64e322c5035fb1d0a2385a6770918741d549d0db53603f33beb6ccb72e4b8431",
+      "size": [
+        1536,
+        1024
+      ],
+      "owner_route": "art-study/the-good-shepherd.html",
+      "owner_section": "personal-study",
+      "figure_count": 1,
+      "caption": "Until He Finds It The Shepherd seeks one sheep among the rocks. Read His parable in Luke 15:4\u20137 .",
+      "source_links": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/15?lang=eng&id=p4-p7#p4"
+      ],
+      "family": [
+        {
+          "path": "assets/page-art/art-study/full/shepherd-seeks-one-20260919.webp",
+          "sha256": "029684658fd2fd404729db71ee451862ffb67ea6aae62ae50ed1e2254a8f946f",
+          "baseline_sha256": "029684658fd2fd404729db71ee451862ffb67ea6aae62ae50ed1e2254a8f946f",
+          "unchanged": true
+        },
+        {
+          "path": "assets/page-art/art-study/thumbs/shepherd-seeks-one-20260919.webp",
+          "sha256": "e24e45b3a528e3263ad3da286448e07c24f31653ca3657baa3281c21aac5a454",
+          "baseline_sha256": "e24e45b3a528e3263ad3da286448e07c24f31653ca3657baa3281c21aac5a454",
+          "unchanged": true
+        }
+      ],
+      "current_canonical_occurrences": {
+        "assets/page-art/art-study/full/shepherd-seeks-one-20260919.webp": [
+          "art-study/the-good-shepherd.html"
+        ],
+        "assets/page-art/art-study/thumbs/shepherd-seeks-one-20260919.webp": [
+          "art-study/the-good-shepherd.html"
+        ]
+      },
+      "depicts_christ": true,
+      "source_context": "Quiet reflection Hear and Follow Choose the prompt that feels most honest today. Where have I noticed the Shepherd's care? Read Psalm 23 slowly. Where have you felt His care? Give thanks for one person or moment that brought comfort. Which voice am I learning to trust? John 10 describes sheep recognizing His voice. Which thoughts help you follow Him with love? Until He Finds It The Shepherd seeks one sheep among the rocks. Read His parable in Luke 15:4\u20137 . Who might need someone to walk beside them? Think of someone who feels unseen. Offer a listening ear, a meal, or help with a daily task."
+    },
+    {
+      "asset": "assets/page-art/art-study/full/children-gather-close.webp",
+      "sha256": "85d4a603bd46ef7b1f73c281f0eff4f634206c0bd9d288dce7fa0129b5410cd1",
+      "baseline_matches": true,
+      "decoded_rgb_sha256": "c1f803dc25285205f1d29a6c3222ea0542c297b13babde9606094822f5bcd9b9",
+      "size": [
+        1536,
+        1024
+      ],
+      "owner_route": "art-study/suffer-the-little-children.html",
+      "owner_section": "begin",
+      "figure_count": 1,
+      "caption": "Unhurried Welcome One child rests against Him while another shares a small treasure. Jesus gives them His full attention, just as He takes the children into His arms in Mark 10:13-16 .",
+      "source_links": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng&id=p13-p16#p13"
+      ],
+      "family": [
+        {
+          "path": "assets/page-art/art-study/full/children-gather-close.webp",
+          "sha256": "85d4a603bd46ef7b1f73c281f0eff4f634206c0bd9d288dce7fa0129b5410cd1",
+          "baseline_sha256": "85d4a603bd46ef7b1f73c281f0eff4f634206c0bd9d288dce7fa0129b5410cd1",
+          "unchanged": true
+        },
+        {
+          "path": "assets/page-art/art-study/thumbs/children-gather-close.webp",
+          "sha256": "a110a84328e26ff7d3475a6dfd25753b0a22c41cc6f566e49bde5020b2e467a8",
+          "baseline_sha256": "a110a84328e26ff7d3475a6dfd25753b0a22c41cc6f566e49bde5020b2e467a8",
+          "unchanged": true
+        }
+      ],
+      "current_canonical_occurrences": {
+        "assets/page-art/art-study/full/children-gather-close.webp": [
+          "art-study/suffer-the-little-children.html"
+        ],
+        "assets/page-art/art-study/thumbs/children-gather-close.webp": [
+          "art-study/suffer-the-little-children.html"
+        ]
+      },
+      "depicts_christ": true,
+      "source_context": "A path through this study Come Close Without Fear The painting is full of touch, movement, and trust. Jesus is not speaking to a distant crowd; He is giving the children His time. The Gospel accounts make that welcome even more striking because the disciples had tried to turn them away. Unhurried Welcome One child rests against Him while another shares a small treasure. Jesus gives them His full attention, just as He takes the children into His arms in Mark 10:13-16 . Look Notice each child's posture and the calm attention Jesus gives them. Read Follow the movement from being rebuked at the edge to being held and blessed. Respond Ask what helps a child or vulnerable person feel safe, heard, and cherished."
+    },
+    {
+      "asset": "assets/page-art/art-study/full/children-welcome-shy-child.webp",
+      "sha256": "c95205d67cbcb8ab0337511ec2a5801ccaa3fe417197b79fb379b05b875f7256",
+      "baseline_matches": true,
+      "decoded_rgb_sha256": "7bc9a2e3902b191dd5c8c1b874b9c8d8e76d0c1c1f21c53c6e14bea523966284",
+      "size": [
+        1536,
+        1024
+      ],
+      "owner_route": "art-study/suffer-the-little-children.html",
+      "owner_section": "welcome",
+      "figure_count": 1,
+      "caption": "Gentleness at Her Pace Christ lowers Himself to the child's eye level and waits with an open hand. The small distance between them makes His invitation, \u201cforbid them not\u201d in Mark 10:14 , feel especially tender.",
+      "source_links": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng&id=p14#p14"
+      ],
+      "family": [
+        {
+          "path": "assets/page-art/art-study/full/children-welcome-shy-child.webp",
+          "sha256": "c95205d67cbcb8ab0337511ec2a5801ccaa3fe417197b79fb379b05b875f7256",
+          "baseline_sha256": "c95205d67cbcb8ab0337511ec2a5801ccaa3fe417197b79fb379b05b875f7256",
+          "unchanged": true
+        },
+        {
+          "path": "assets/page-art/art-study/thumbs/children-welcome-shy-child.webp",
+          "sha256": "14bcaecd67119c0e2ba5f0ea23ba49f072917e6710c5abc2c236c33cb3bcd033",
+          "baseline_sha256": "14bcaecd67119c0e2ba5f0ea23ba49f072917e6710c5abc2c236c33cb3bcd033",
+          "unchanged": true
+        }
+      ],
+      "current_canonical_occurrences": {
+        "assets/page-art/art-study/full/children-welcome-shy-child.webp": [
+          "art-study/suffer-the-little-children.html"
+        ],
+        "assets/page-art/art-study/thumbs/children-welcome-shy-child.webp": [
+          "art-study/suffer-the-little-children.html"
+        ]
+      },
+      "depicts_christ": true,
+      "source_context": "Scripture study He Took Them in His Arms Read Mark 10:13-16 slowly. People bring children to Jesus so He can touch them. The disciples object, but Jesus is displeased with the barrier they create. He calls the children to Him, takes them in His arms, places His hands upon them, and blesses them. His welcome is spoken and embodied. Jesus also teaches the adults: the kingdom of God must be received as a little child. The passage honors qualities such as trust and openness without pretending children never feel fear or pain. The adults around them carry a sacred responsibility to protect, listen, and lead with love. Gentleness at Her Pace Christ lowers Himself to the child's eye level and waits with an open hand. The small distance between them makes His invitation, \u201cforbid them not\u201d in Mark 10:14 , feel especially tender. A day of prayer, tears, and joy at Bountiful In 3 Nephi 17 , Jesus perceives that the people desire Him to remain. He heals their sick, asks that their little children be brought to Him, and prays for the people. The chapter lingers over compassion. Read verses 21-24 and notice what the children receive and what the gathered adults are allowed to witness."
+    },
+    {
+      "asset": "assets/page-art/art-study/full/children-listen-under-tree.webp",
+      "sha256": "193a5ecda7f4bbda37ae92b26c064edc08aa58442ef98d3b58c6b822f5987805",
+      "baseline_matches": true,
+      "decoded_rgb_sha256": "7bf967862ee46f91c3c36101d889df08417c7fdae5648a2699f45d160d23161b",
+      "size": [
+        1536,
+        1024
+      ],
+      "owner_route": "art-study/suffer-the-little-children.html",
+      "owner_section": "artwork-study",
+      "figure_count": 1,
+      "caption": "Joy in Every Place The children are not a background around Jesus; their voices and faces fill the circle. His invitation is extended \u201cunto all\u201d in 2 Nephi 26:33 .",
+      "source_links": [
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/26?lang=eng&id=p33#p33"
+      ],
+      "family": [
+        {
+          "path": "assets/page-art/art-study/full/children-listen-under-tree.webp",
+          "sha256": "193a5ecda7f4bbda37ae92b26c064edc08aa58442ef98d3b58c6b822f5987805",
+          "baseline_sha256": "193a5ecda7f4bbda37ae92b26c064edc08aa58442ef98d3b58c6b822f5987805",
+          "unchanged": true
+        },
+        {
+          "path": "assets/page-art/art-study/thumbs/children-listen-under-tree.webp",
+          "sha256": "d0e90afa63b400f9d32a2e065f57d87500347269a5d5ff38ef0877be8287b28f",
+          "baseline_sha256": "d0e90afa63b400f9d32a2e065f57d87500347269a5d5ff38ef0877be8287b28f",
+          "unchanged": true
+        }
+      ],
+      "current_canonical_occurrences": {
+        "assets/page-art/art-study/full/children-listen-under-tree.webp": [
+          "art-study/suffer-the-little-children.html"
+        ],
+        "assets/page-art/art-study/thumbs/children-listen-under-tree.webp": [
+          "art-study/suffer-the-little-children.html"
+        ]
+      },
+      "depicts_christ": true,
+      "source_context": "Look again Every Child Drawn Near These artworks carry the same welcome into different places and relationships. Open each one at full size before reading the scripture beside it. Joy in Every Place The children are not a background around Jesus; their voices and faces fill the circle. His invitation is extended \u201cunto all\u201d in 2 Nephi 26:33 . Time Enough to Listen The child holds a stone and a story; the Savior turns toward both. Matthew 18:1-5 asks adults to learn from a child rather than look past one."
+    },
+    {
+      "asset": "assets/page-art/art-study/full/children-quiet-water.webp",
+      "sha256": "e50fc2b7e243ffa4e442d29fa970a9169c6211a00d625db45ba548fca83b1336",
+      "baseline_matches": true,
+      "decoded_rgb_sha256": "87ee25eaad3c5a059316a62636653f7a49a9c2c56a888f9a10e6caa1553da2da",
+      "size": [
+        1536,
+        1024
+      ],
+      "owner_route": "art-study/suffer-the-little-children.html",
+      "owner_section": "artwork-study",
+      "figure_count": 1,
+      "caption": "Time Enough to Listen The child holds a stone and a story; the Savior turns toward both. Matthew 18:1-5 asks adults to learn from a child rather than look past one.",
+      "source_links": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/18?lang=eng&id=p1-p5#p1"
+      ],
+      "family": [
+        {
+          "path": "assets/page-art/art-study/full/children-quiet-water.webp",
+          "sha256": "e50fc2b7e243ffa4e442d29fa970a9169c6211a00d625db45ba548fca83b1336",
+          "baseline_sha256": "e50fc2b7e243ffa4e442d29fa970a9169c6211a00d625db45ba548fca83b1336",
+          "unchanged": true
+        },
+        {
+          "path": "assets/page-art/art-study/thumbs/children-quiet-water.webp",
+          "sha256": "28a7054d98fb6d8de4bf68383c6d9c47f75ae841d6299d7834008b56379b1de6",
+          "baseline_sha256": "28a7054d98fb6d8de4bf68383c6d9c47f75ae841d6299d7834008b56379b1de6",
+          "unchanged": true
+        }
+      ],
+      "current_canonical_occurrences": {
+        "assets/page-art/art-study/full/children-quiet-water.webp": [
+          "art-study/suffer-the-little-children.html"
+        ],
+        "assets/page-art/art-study/thumbs/children-quiet-water.webp": [
+          "art-study/suffer-the-little-children.html"
+        ]
+      },
+      "depicts_christ": true,
+      "source_context": "Look again Every Child Drawn Near These artworks carry the same welcome into different places and relationships. Open each one at full size before reading the scripture beside it. Joy in Every Place The children are not a background around Jesus; their voices and faces fill the circle. His invitation is extended \u201cunto all\u201d in 2 Nephi 26:33 . Time Enough to Listen The child holds a stone and a story; the Savior turns toward both. Matthew 18:1-5 asks adults to learn from a child rather than look past one."
+    },
+    {
+      "asset": "assets/page-art/art-study/full/children-listen-at-home-20260919.webp",
+      "sha256": "afde94ae47f90109be64adba21ed2c6f9f5a3d5e8e00d125d5f0352812c34d1e",
+      "baseline_matches": true,
+      "decoded_rgb_sha256": "fa3bbeb9ee6028449637ac6b12d7268966634f9b12db634355f3687ebf01da30",
+      "size": [
+        1536,
+        1024
+      ],
+      "owner_route": "art-study/suffer-the-little-children.html",
+      "owner_section": "personal-study",
+      "figure_count": 1,
+      "caption": "Time to Listen A backpack rests beside the bench while a mother gives her son her attention. Receiving a child can begin with time to listen. Consider the Savior\u2019s invitation in Mark 9:36\u201337 .",
+      "source_links": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/9?lang=eng&id=p36-p37#p36"
+      ],
+      "family": [
+        {
+          "path": "assets/page-art/art-study/full/children-listen-at-home-20260919.webp",
+          "sha256": "afde94ae47f90109be64adba21ed2c6f9f5a3d5e8e00d125d5f0352812c34d1e",
+          "baseline_sha256": "afde94ae47f90109be64adba21ed2c6f9f5a3d5e8e00d125d5f0352812c34d1e",
+          "unchanged": true
+        },
+        {
+          "path": "assets/page-art/art-study/thumbs/children-listen-at-home-20260919.webp",
+          "sha256": "f1cb01139f5f25ad89c558fdf0d2aa42b277511d0bce7aab12004fbbe6732fcf",
+          "baseline_sha256": "f1cb01139f5f25ad89c558fdf0d2aa42b277511d0bce7aab12004fbbe6732fcf",
+          "unchanged": true
+        }
+      ],
+      "current_canonical_occurrences": {
+        "assets/page-art/art-study/full/children-listen-at-home-20260919.webp": [
+          "art-study/suffer-the-little-children.html"
+        ],
+        "assets/page-art/art-study/thumbs/children-listen-at-home-20260919.webp": [
+          "art-study/suffer-the-little-children.html"
+        ]
+      },
+      "depicts_christ": false,
+      "source_context": "Quiet reflection Receive and Protect Use these questions for prayer, a journal, or a family conversation. What do I see in the children's faces and hands? Look again before answering. Notice who is reaching, resting, watching, or smiling. What does Jesus do that allows closeness and trust? How can I listen to a child more fully? Choose one ordinary moment this week to put distractions down, listen without interrupting, and take a child's words seriously. Time to Listen A backpack rests beside the bench while a mother gives her son her attention. Receiving a child can begin with time to listen. Consider the Savior\u2019s invitation in Mark 9:36\u201337 . What does Christlike protection require? The Savior removed a barrier and welcomed the children. Consider whether a family, congregation, school, or community practice needs more patience, safety, or attentive care from you."
+    },
+    {
+      "asset": "assets/page-art/art-study/full/still-city-companion.webp",
+      "sha256": "cff36c78346ed712f39a5b81207cd5784d233dac1e800dedbc8a63a425d814e0",
+      "baseline_matches": true,
+      "decoded_rgb_sha256": "1c599a8314ac4114639043f9ce981c0451d66888634e0d50c6528bbc50496f83",
+      "size": [
+        1536,
+        1024
+      ],
+      "owner_route": "art-study/be-still.html",
+      "owner_section": "begin",
+      "figure_count": 1,
+      "caption": "Closer Than the Noise Traffic and crowds continue around them, yet Christ matches the man's pace and listens. His promise of peace meets life as it is in John 14:27 .",
+      "source_links": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/14?lang=eng&id=p27#p27"
+      ],
+      "family": [
+        {
+          "path": "assets/page-art/art-study/full/still-city-companion.webp",
+          "sha256": "cff36c78346ed712f39a5b81207cd5784d233dac1e800dedbc8a63a425d814e0",
+          "baseline_sha256": "cff36c78346ed712f39a5b81207cd5784d233dac1e800dedbc8a63a425d814e0",
+          "unchanged": true
+        },
+        {
+          "path": "assets/page-art/art-study/thumbs/still-city-companion.webp",
+          "sha256": "b3b794d96cf23498ae4d338666c961cad781be4e373c380b5a61bf808d34d611",
+          "baseline_sha256": "b3b794d96cf23498ae4d338666c961cad781be4e373c380b5a61bf808d34d611",
+          "unchanged": true
+        }
+      ],
+      "current_canonical_occurrences": {
+        "assets/page-art/art-study/full/still-city-companion.webp": [
+          "art-study/be-still.html"
+        ],
+        "assets/page-art/art-study/thumbs/still-city-companion.webp": [
+          "art-study/be-still.html"
+        ]
+      },
+      "depicts_christ": true,
+      "source_context": "A path through this study Find Christ in the Press of the Day The man in the artwork has not stepped outside modern life. Cars, buildings, and other people remain close. Yet Christ is closer. Begin there, then read Psalm 46 in its full setting of shaking earth, roaring water, and unsettled nations. Closer Than the Noise Traffic and crowds continue around them, yet Christ matches the man's pace and listens. His promise of peace meets life as it is in John 14:27 . Look Notice the burdened posture of the man and the Savior's steady place beside him. Read Hear \u201cbe still\u201d inside a psalm about refuge, upheaval, and God's presence. Respond Choose one faithful action for today and one outcome you can entrust to God."
+    },
+    {
+      "asset": "assets/page-art/art-study/full/still-storm-boat.webp",
+      "sha256": "fdb60ec2ecdee51a24264fc53f0c1aed7cbde5d10dcaec32a6e3d8840b42911c",
+      "baseline_matches": true,
+      "decoded_rgb_sha256": "eed644f99246b19ddf0b2c179ca2f545417037be46b337fbc504fe467e1008f4",
+      "size": [
+        1536,
+        1024
+      ],
+      "owner_route": "art-study/be-still.html",
+      "owner_section": "psalm-context",
+      "figure_count": 1,
+      "caption": "The Savior in the Storm Wind and water fill the boat, but the disciples are not alone. Read the fear, their cry for help, and the great calm in Mark 4:35-41 .",
+      "source_links": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/4?lang=eng&id=p35-p41#p35"
+      ],
+      "family": [
+        {
+          "path": "assets/page-art/art-study/full/still-storm-boat.webp",
+          "sha256": "fdb60ec2ecdee51a24264fc53f0c1aed7cbde5d10dcaec32a6e3d8840b42911c",
+          "baseline_sha256": "fdb60ec2ecdee51a24264fc53f0c1aed7cbde5d10dcaec32a6e3d8840b42911c",
+          "unchanged": true
+        },
+        {
+          "path": "assets/page-art/art-study/thumbs/still-storm-boat.webp",
+          "sha256": "570ebc8f4f356fbc4914e244f769e6ea5c1ef6b9d62e5cf26023e9d24f46fd3c",
+          "baseline_sha256": "570ebc8f4f356fbc4914e244f769e6ea5c1ef6b9d62e5cf26023e9d24f46fd3c",
+          "unchanged": true
+        }
+      ],
+      "current_canonical_occurrences": {
+        "assets/page-art/art-study/full/still-storm-boat.webp": [
+          "art-study/be-still.html"
+        ],
+        "assets/page-art/art-study/thumbs/still-storm-boat.webp": [
+          "art-study/be-still.html"
+        ]
+      },
+      "depicts_christ": true,
+      "source_context": "Scripture study Stillness in the Middle of Upheaval Psalm 46 opens with God as refuge and strength. The earth moves, waters roar, and kingdoms shake. The invitation to be still comes near the end, after the psalmist has described God bringing conflict to an end. Biblical stillness is not denial. It is a way of turning to God when the world feels unstable. The Lord repeats the invitation in Doctrine and Covenants 101:13-17 . Here too, comfort comes to people living through distress. The command and promise belong together: be still, and know that He is God. Peace with the storm still close In Mark 4:35-41 , frightened disciples wake Jesus in a storm. He calms the sea and then asks about their fear and faith. John 14:27 adds a promise of peace that differs from what the world gives. Together, the passages invite us to seek Christ's presence without pretending every storm ends on our preferred schedule. The Savior in the Storm Wind and water fill the boat, but the disciples are not alone. Read the fear, their cry for help, and the great calm in Mark 4:35-41 ."
+    },
+    {
+      "asset": "assets/page-art/art-study/full/still-lakeside-pause.webp",
+      "sha256": "67fcb39e322e93f2389d465a20b73b6f059b41a1557cc627405c5781a796b724",
+      "baseline_matches": true,
+      "decoded_rgb_sha256": "6f35a17a1ce6ca0ba27db40bcd0f32d05891807f461dded6ed0c2bfe19305fe3",
+      "size": [
+        1536,
+        1024
+      ],
+      "owner_route": "art-study/be-still.html",
+      "owner_section": "artwork-study",
+      "figure_count": 1,
+      "caption": "A Breath Before the Next Step Beside the still water, the journal rests closed. Pause here and remember the refuge described in Psalm 46 .",
+      "source_links": [
+        "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng"
+      ],
+      "family": [
+        {
+          "path": "assets/page-art/art-study/full/still-lakeside-pause.webp",
+          "sha256": "67fcb39e322e93f2389d465a20b73b6f059b41a1557cc627405c5781a796b724",
+          "baseline_sha256": "67fcb39e322e93f2389d465a20b73b6f059b41a1557cc627405c5781a796b724",
+          "unchanged": true
+        },
+        {
+          "path": "assets/page-art/art-study/thumbs/still-lakeside-pause.webp",
+          "sha256": "6245615e9a1a8ab66a27a73397b4bdf5692e58728fd793e4d4c22d8cca23d932",
+          "baseline_sha256": "6245615e9a1a8ab66a27a73397b4bdf5692e58728fd793e4d4c22d8cca23d932",
+          "unchanged": true
+        }
+      ],
+      "current_canonical_occurrences": {
+        "assets/page-art/art-study/full/still-lakeside-pause.webp": [
+          "art-study/be-still.html"
+        ],
+        "assets/page-art/art-study/thumbs/still-lakeside-pause.webp": [
+          "art-study/be-still.html"
+        ]
+      },
+      "depicts_christ": true,
+      "source_context": "Look again Peace That Walks with Us These artworks do not all show quiet surroundings. They show companionship, trust, and release within real movement and strain. A Breath Before the Next Step Beside the still water, the journal rests closed. Pause here and remember the refuge described in Psalm 46 . Peace with Work Still to Do The burden is not imagined away; it is lifted together. Faithful stillness can lead into willing action, as taught in Doctrine and Covenants 58:26-28 ."
+    },
+    {
+      "asset": "assets/page-art/art-study/full/still-shared-lift.webp",
+      "sha256": "a9c935fab827fcc3e2b6b3c53d748373f9cc7660020a2089c992ab0b741da869",
+      "baseline_matches": true,
+      "decoded_rgb_sha256": "c73813a1c0cf66e2d67ed2de3233f2b513ce3c236bdf47ba9803eefed7b5bc4e",
+      "size": [
+        1536,
+        1024
+      ],
+      "owner_route": "art-study/be-still.html",
+      "owner_section": "artwork-study",
+      "figure_count": 1,
+      "caption": "Peace with Work Still to Do The burden is not imagined away; it is lifted together. Faithful stillness can lead into willing action, as taught in Doctrine and Covenants 58:26-28 .",
+      "source_links": [
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/58?lang=eng&id=p26-p28#p26"
+      ],
+      "family": [
+        {
+          "path": "assets/page-art/art-study/full/still-shared-lift.webp",
+          "sha256": "a9c935fab827fcc3e2b6b3c53d748373f9cc7660020a2089c992ab0b741da869",
+          "baseline_sha256": "a9c935fab827fcc3e2b6b3c53d748373f9cc7660020a2089c992ab0b741da869",
+          "unchanged": true
+        },
+        {
+          "path": "assets/page-art/art-study/thumbs/still-shared-lift.webp",
+          "sha256": "06c1de39fc9e9c817529359d80ada6de2f584e90433da9bc11084fd9f36fe7da",
+          "baseline_sha256": "06c1de39fc9e9c817529359d80ada6de2f584e90433da9bc11084fd9f36fe7da",
+          "unchanged": true
+        }
+      ],
+      "current_canonical_occurrences": {
+        "assets/page-art/art-study/full/still-shared-lift.webp": [
+          "art-study/be-still.html"
+        ],
+        "assets/page-art/art-study/thumbs/still-shared-lift.webp": [
+          "art-study/be-still.html"
+        ]
+      },
+      "depicts_christ": true,
+      "source_context": "Look again Peace That Walks with Us These artworks do not all show quiet surroundings. They show companionship, trust, and release within real movement and strain. A Breath Before the Next Step Beside the still water, the journal rests closed. Pause here and remember the refuge described in Psalm 46 . Peace with Work Still to Do The burden is not imagined away; it is lifted together. Faithful stillness can lead into willing action, as taught in Doctrine and Covenants 58:26-28 ."
+    },
+    {
+      "asset": "assets/page-art/art-study/full/still-phone-down-scripture-20260919.webp",
+      "sha256": "09123ea02209812f8158a257fbc0ac5562231f3cb6a14bc0303951bd992fae18",
+      "baseline_matches": true,
+      "decoded_rgb_sha256": "863b1afaed50414a44218397d2c4afea0b82f48e56b0b9d48dd684d7b5616879",
+      "size": [
+        1536,
+        1024
+      ],
+      "owner_route": "art-study/be-still.html",
+      "owner_section": "personal-study",
+      "figure_count": 1,
+      "caption": "Give the Moment Your Attention The phone lies face down, and the open Bible has his attention. A quiet moment can help us return to God amid a busy day. Read the invitation in Psalm 46:10 .",
+      "source_links": [
+        "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng&id=p10#p10"
+      ],
+      "family": [
+        {
+          "path": "assets/page-art/art-study/full/still-phone-down-scripture-20260919.webp",
+          "sha256": "09123ea02209812f8158a257fbc0ac5562231f3cb6a14bc0303951bd992fae18",
+          "baseline_sha256": "09123ea02209812f8158a257fbc0ac5562231f3cb6a14bc0303951bd992fae18",
+          "unchanged": true
+        },
+        {
+          "path": "assets/page-art/art-study/thumbs/still-phone-down-scripture-20260919.webp",
+          "sha256": "74815dd608bfe7fda6e6b41d4997f32daa7d377dbec35b6b7cb8aea9819db127",
+          "baseline_sha256": "74815dd608bfe7fda6e6b41d4997f32daa7d377dbec35b6b7cb8aea9819db127",
+          "unchanged": true
+        }
+      ],
+      "current_canonical_occurrences": {
+        "assets/page-art/art-study/full/still-phone-down-scripture-20260919.webp": [
+          "art-study/be-still.html"
+        ],
+        "assets/page-art/art-study/thumbs/still-phone-down-scripture-20260919.webp": [
+          "art-study/be-still.html"
+        ]
+      },
+      "depicts_christ": false,
+      "source_context": "Quiet reflection Be Still, Then Walk Forward Stillness can prepare the heart for faithful action. Open one prompt and stay with it for a few minutes. What remains steady when life feels unsettled? Read Psalm 46 and list what changes in the chapter. Then list what the psalm says about God. Let the contrast shape a short, honest prayer. What can I do, and what can I entrust to God? Name one responsibility you can act on today. Then name one outcome you cannot control. Doctrine and Covenants 58:26-28 can help you hold agency and trust together. Give the Moment Your Attention The phone lies face down, and the open Bible has his attention. A quiet moment can help us return to God amid a busy day. Read the invitation in Psalm 46:10 . Who could use a quiet companion? The Savior in the artwork does not speak from across the street. Think of someone whose burden may need your presence more than your advice."
+    }
+  ],
+  "page_inventories": {
+    "art-study/be-still.html": [
+      {
+        "src": "../art/Be-Still.png",
+        "alt": ""
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/still-city-companion.webp",
+        "alt": "Jesus Christ walking beside a weary man in a busy city"
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/still-storm-boat.webp",
+        "alt": "Jesus Christ standing with His disciples in a storm-tossed boat"
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/still-lakeside-pause.webp",
+        "alt": "Jesus Christ sitting beside a woman at a quiet mountain lake"
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/still-shared-lift.webp",
+        "alt": "Jesus Christ helping a tired father lift a moving box"
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/still-phone-down-scripture-20260919.webp",
+        "alt": "A man sets his phone face down and turns his attention to an open Bible at the kitchen table."
+      },
+      {
+        "src": "../assets/resources/still-bednar-be-still.jpg",
+        "alt": "Elder David A. Bednar speaking at April 2024 general conference"
+      },
+      {
+        "src": "../assets/resources/still-principles-prayer.jpg",
+        "alt": "Principles of Peace: Prayer #PrinceofPeace official video preview"
+      },
+      {
+        "src": "../assets/resources/still-personal-peace.jpg",
+        "alt": "Finding Personal Peace official video preview"
+      }
+    ],
+    "art-study/suffer-the-little-children.html": [
+      {
+        "src": "../art/Suffer-the-Little-Children-approved-20260929.webp",
+        "alt": ""
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/children-gather-close.webp",
+        "alt": "Children gathered closely around Jesus Christ in a courtyard"
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/children-welcome-shy-child.webp",
+        "alt": "Jesus Christ kneeling to welcome a shy child"
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/children-listen-under-tree.webp",
+        "alt": "Jesus Christ listening among children beneath a tree"
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/children-quiet-water.webp",
+        "alt": "Jesus Christ listening to a child beside calm water"
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/children-listen-at-home-20260919.webp",
+        "alt": "A mother sits at her young son\u2019s eye level and listens as he speaks at home."
+      },
+      {
+        "src": "../assets/resources/children-lords-love.jpg",
+        "alt": "President Nelson Blesses Children with the Lord\u2019s Love official video preview"
+      },
+      {
+        "src": "../assets/resources/children-heartfelt-prayer.jpg",
+        "alt": "Are You Really There? official video preview"
+      }
+    ],
+    "art-study/the-good-shepherd.html": [
+      {
+        "src": "../art/The-Good-Shephard.jpg",
+        "alt": ""
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/shepherd-sees-one.webp",
+        "alt": "Jesus Christ kneeling beside an older man in a village street"
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/shepherd-carries-lamb.webp",
+        "alt": "Jesus Christ carrying a lamb across a hillside"
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/shepherd-shares-burden.webp",
+        "alt": "Jesus Christ helping a family push a handcart from the mud"
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/shepherd-calls-zacchaeus.webp",
+        "alt": "Jesus Christ looking up toward Zacchaeus above a crowd"
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/shepherd-seeks-one-20260919.webp",
+        "alt": "Christ as the Good Shepherd approaches one sheep among rocks and scrub at dusk."
+      },
+      {
+        "src": "../assets/resources/shepherd-abiding-compassion.jpg",
+        "alt": "The Savior\u2019s Abiding Compassion official video preview"
+      },
+      {
+        "src": "../assets/resources/good-shepherd.jpg",
+        "alt": "The Good Shepherd and Other Sheep I Have resource preview"
+      }
+    ]
+  },
+  "family_ledger_sha256": "481b6e91b203da3f6a7794901edf5d3a414f40cbabd752c93b4939e88789ed79"
+}

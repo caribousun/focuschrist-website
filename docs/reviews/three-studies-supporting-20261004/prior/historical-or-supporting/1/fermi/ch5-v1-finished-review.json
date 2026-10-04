@@ -1,0 +1,19 @@
+{
+  "candidate_sha256": "784aaf979e541b79db24734b6263c5be189e001f8466075d56b9f44f98174a6e",
+  "limitations": "Independent pixel review only, requires Newton concurrence/root resolution. No new generation authorization or native/owner acceptance.",
+  "reviewer": "Fermi",
+  "evidence": "Full original and work/fermi/ch5-object-inspection.png",
+  "key": "CH5v1",
+  "result": "HOLD",
+  "prompt_sha256": "1d96a96e8da3f99f521e8db69fb6fd6cf77ebe4a5931808488188c88f3b2a3e6",
+  "actual_pixels_inspected": true,
+  "stage": "FINISHED_PIXEL_REVIEW",
+  "candidate": "work/gary/generated/ch5-candidate-v1.png",
+  "mandates_read": [
+    "AGENTS.md",
+    "docs/historical-character-identity.md",
+    "docs/focuschrist-enrichment-and-stewardship-prompt.md"
+  ],
+  "SITE_use_approved": false,
+  "finding": "Full scene preserves child choice, open-palm offer, mutual gaze, natural hands, quiet cushion, open return path and visible gathering; no distress or cure. Object detail crop shows two small pale logo-like text lines on outer right cup. Exact prompt forbids commercial branding/writing and requests plain ear defenders. Unreadable logo-like mark still defeats plain/no-writing requirement. Ear-cover silhouette alone cannot prove audio versus protective function; do not diagnose that from image. Narrow edit remove outer-cup marks, clearly retain plain unbranded passive ear defenders, preserve all people/pose and scene."
+}

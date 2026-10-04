@@ -41,7 +41,7 @@ for (const card of cards) {
     }
     document.dispatchEvent(new window.Event('DOMContentLoaded'));
     const triggers = [...document.querySelectorAll('a[data-art-study-supporting]')];
-    const expectedSupporting = relative === 'art-study/the-living-christ.html' ? 9 : 5;
+    const expectedSupporting = relative === 'art-study/the-living-christ.html' ? 9 : 10;
     assert.equal(triggers.length, expectedSupporting, `${relative}: all ${expectedSupporting} supporting pictures discovered`);
     const titles = new Set();
     const click = node => node.dispatchEvent(new window.MouseEvent('click', { bubbles: true, cancelable: true, button: 0 }));
@@ -175,6 +175,6 @@ key(legacyDocument, 'Escape');
 assert.equal(legacyDocument.activeElement, originals[0]);
 legacyWindow.close();
 gallery.window.close();
-assert.equal(checked, 24);
-console.log('Art study picture DOM QA passed: 4 featured paths, 24 study panels, exact titles and scripture, nested full-size viewer, repeated opening, focus and lesson return.');
+assert.equal(checked, 39);
+console.log('Art study picture DOM QA passed: 4 featured paths, 39 study panels, exact titles and scripture, nested full-size viewer, repeated opening, focus and lesson return.');
 console.log('Legacy gallery DOM QA passed: 39 descriptions, stable title labels/assets, next/previous/wraparound, keyboard opening and exact original-trigger return across three close paths.');
