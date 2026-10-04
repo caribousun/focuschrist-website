@@ -1,0 +1,17 @@
+{
+  "kind": "original",
+  "original_id": "assets/heroes/topics/living-christ-full",
+  "asset": "assets/heroes/topics/living-christ-full.webp",
+  "sha256": "bb8539992ea3a171be50588f861c17cb237a76565c09ecef91e79836db906e3b",
+  "owner_route": "art-study/the-living-christ.html",
+  "owner_section": "living-christ-hero",
+  "depicts_christ": true,
+  "reviewers": [
+    "Fermi",
+    "Newton"
+  ],
+  "lineage_and_cross_page_ownership_reviewed": true,
+  "ownership_scope": "all canonical site routes",
+  "pixels_reviewed_for_christ_classification": true,
+  "review_boundary": "Exact hashes bind previously completed direct pixel reviews and refreshed lineage/inventory; no new owner/native/public acceptance."
+}

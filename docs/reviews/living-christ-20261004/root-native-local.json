@@ -1,0 +1,34 @@
+{
+  "reviewer": "Albert root",
+  "route": "art-study/the-living-christ.html",
+  "html_sha256": "8597354ee3eb7f967f92e5460109b29a2e4dc426e7ba4c91dbbb364f8ff00886",
+  "surface": "CUA Codex native in-app Chromium browser, local port 4194",
+  "viewports": ["1280x800", "390x844", "320x568"],
+  "new_four_at_desktop_and_phone": {
+    "actual_panel_and_full_image_screenshots_inspected": true,
+    "exact_source_readers_opened": ["John 20:16-18", "Acts 23:6-11", "Romans 6:3-5", "1 Corinthians 15:54-58"],
+    "nested_reader_close_preserves_parent": true,
+    "nested_full_image_close_restores_full_image_action_focus": true,
+    "continue_lesson_restores_corresponding_heading_focus": true,
+    "image_distortion_or_subject_loss_observed": false
+  },
+  "retained_five": {
+    "keyboard_enter_opens_correct_panel_desktop_and_phone": true,
+    "nested_full_size_and_return_action_focus": true,
+    "desktop_close_restores_exact_picture_trigger": true,
+    "phone_continue_lesson_restores_heading": true
+  },
+  "layout": {
+    "desktop_complete_page_screenshot_inspected": true,
+    "phone_opening_inspected": true,
+    "390px_all_nine_body_images_native_ratio": true,
+    "horizontal_overflow_1280_390_320": false,
+    "320x568_continue_reaches_retained_introduction": true,
+    "320x568_long_panel_scrolls_to_close_and_returns_trigger_focus": true
+  },
+  "onward": {
+    "study_the_living_savior_actual_destination": "answers/jesus-christ-latter-day-saint-beliefs.html",
+    "everyday_service_actual_destination": "missionary.html"
+  },
+  "limits": ["Local candidate only, not production proof", "Browser viewport testing, not a physical phone", "No owner aesthetic acceptance", "Screenshots displayed in root CUA transcript, not saved as standalone files", "Full-page screenshot is a layout overview, not proof of every external resource"]
+}

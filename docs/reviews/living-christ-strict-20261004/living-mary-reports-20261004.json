@@ -1,0 +1,17 @@
+{
+  "kind": "original",
+  "original_id": "assets/page-art/art-study/full/living-mary-reports-20261004",
+  "asset": "assets/page-art/art-study/full/living-mary-reports-20261004.webp",
+  "sha256": "0768a55320fc357b27770523f6113241195a3ad229e09af679cee12350ba8c36",
+  "owner_route": "art-study/the-living-christ.html",
+  "owner_section": "living-mary-reports-20261004",
+  "depicts_christ": false,
+  "reviewers": [
+    "Fermi",
+    "Newton"
+  ],
+  "lineage_and_cross_page_ownership_reviewed": true,
+  "ownership_scope": "all canonical site routes",
+  "pixels_reviewed_for_christ_classification": true,
+  "review_boundary": "Exact hashes bind previously completed direct pixel reviews and refreshed lineage/inventory; no new owner/native/public acceptance."
+}

@@ -1,0 +1,17 @@
+{
+  "route": "art-study/the-living-christ.html",
+  "html_sha256": "8597354ee3eb7f967f92e5460109b29a2e4dc426e7ba4c91dbbb364f8ff00886",
+  "complete_page_image_inventory_reviewed": true,
+  "no_unregistered_qualifying_originals": true,
+  "reviewers": [
+    "Fermi",
+    "Newton"
+  ],
+  "unique_originals": 10,
+  "christ_originals": 7,
+  "resource_preview_exclusions": [
+    "assets/resources/living-powerful-testimony.jpg",
+    "assets/resources/living-he-is-risen-2025.jpg"
+  ],
+  "review_boundary": "Complete source image inventory with script and stylesheet inspection. Modal repeats, hero variants and search/gallery references are not additional originals. Native and production evidence separate."
+}

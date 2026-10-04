@@ -18,6 +18,7 @@ EXPECTED = {
 # These additions are a separate reviewed release, not a relaxation of the four
 # original study-gap placements above. Each manifest has a closed key inventory.
 SITEWIDE = {
+    'living-christ-supporting-review-20261004.json': {'living-mary-reports-20261004', 'living-paul-courage-20261004', 'living-newness-baptism-20261004', 'living-steadfast-service-20261004'},
     'sitewide-supporting-review.json': {'living-breakfast-shore-20260919', 'shepherd-seeks-one-20260919', 'children-listen-at-home-20260919', 'still-phone-down-scripture-20260919'},
     'sitewide-gap-supporting-review.json': {'bom-archaeology-context', 'bom-alma-helaman', 'bom-mormon-moroni', 'bom-language-comparison'},
     'sitewide-community-supporting-review.json': {'history-relief-practical-care-20260919', 'cfm-gate-repair-service-20260919', 'marriage-community-welcome-20260919'},

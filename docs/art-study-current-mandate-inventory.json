@@ -221,74 +221,141 @@
       ]
     },
     "art-study/the-living-christ.html": {
-      "html_sha256": "066d2d4c1a9f25bfb53ae7598657982d0f7d29446b80ce38e4c4b8fa1eb4db00",
-      "coverage_evidence": null,
+      "html_sha256": "8597354ee3eb7f967f92e5460109b29a2e4dc426e7ba4c91dbbb364f8ff00886",
+      "coverage_evidence": {
+        "path": "docs/reviews/living-christ-strict-20261004/coverage.json",
+        "sha256": "245c45bee6f14cdf069c9fcdf40b5b0aafff708329c67aaf1c41db7f5f751531"
+      },
       "placements": [
         {
-          "asset": "assets/heroes/topics/living-christ-full.webp",
-          "sha256": "bb8539992ea3a171be50588f861c17cb237a76565c09ecef91e79836db906e3b",
-          "kind": "unverified",
-          "original_id": null,
-          "owner_route": null,
-          "owner_section": null,
-          "depicts_christ": null,
-          "evidence": null,
-          "note": "Observed hero/support candidate; no lineage, ownership or pixel classification inferred from path/label."
-        },
-        {
-          "asset": "assets/page-art/art-study/full/living-mary-at-tomb.webp",
-          "sha256": "e27a0710f7506eb56ef34f0fc10bda24f0bf0336546995800dfaba38196e6669",
-          "kind": "unverified",
-          "original_id": null,
-          "owner_route": null,
-          "owner_section": null,
-          "depicts_christ": null,
-          "evidence": null,
-          "note": "Observed hero/support candidate; no lineage, ownership or pixel classification inferred from path/label."
-        },
-        {
-          "asset": "assets/page-art/art-study/full/living-peace-to-disciples.webp",
-          "sha256": "6c33ad0e03313afee009ec8e71091e8d2686b292137a30c0c0712d341f594d72",
-          "kind": "unverified",
-          "original_id": null,
-          "owner_route": null,
-          "owner_section": null,
-          "depicts_christ": null,
-          "evidence": null,
-          "note": "Observed hero/support candidate; no lineage, ownership or pixel classification inferred from path/label."
-        },
-        {
-          "asset": "assets/page-art/art-study/full/living-thomas-witness.webp",
-          "sha256": "f77739780ae55f08ccdbf98d7c5b043f11198c34872ae214bcd6ba5ed2086761",
-          "kind": "unverified",
-          "original_id": null,
-          "owner_route": null,
-          "owner_section": null,
-          "depicts_christ": null,
-          "evidence": null,
-          "note": "Observed hero/support candidate; no lineage, ownership or pixel classification inferred from path/label."
-        },
-        {
-          "asset": "assets/page-art/art-study/full/living-beside-grief.webp",
-          "sha256": "f72203fe48b5598fe23762e13d4a1a9886cfa41b41a6fb7e2af534bc99afbbb0",
-          "kind": "unverified",
-          "original_id": null,
-          "owner_route": null,
-          "owner_section": null,
-          "depicts_christ": null,
-          "evidence": null,
-          "note": "Observed hero/support candidate; no lineage, ownership or pixel classification inferred from path/label."
-        },
-        {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/living-breakfast-shore-20260919",
           "asset": "assets/page-art/art-study/full/living-breakfast-shore-20260919.webp",
           "sha256": "8d49d722fe4b91f452a545a08a875e623b19e2c803396cac54704a58ff0b09f5",
-          "kind": "unverified",
-          "original_id": null,
-          "owner_route": null,
-          "owner_section": null,
-          "depicts_christ": null,
-          "evidence": null,
-          "note": "Observed hero/support candidate; no lineage, ownership or pixel classification inferred from path/label."
+          "owner_route": "art-study/the-living-christ.html",
+          "owner_section": "personal-study",
+          "depicts_christ": true,
+          "evidence": {
+            "path": "docs/reviews/living-christ-strict-20261004/living-breakfast-shore-20260919.json",
+            "sha256": "a8851c5d3eddd1bc922726b1336b6c378c64f2627f2ebf100b0e614c27acd642"
+          }
+        },
+        {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/living-mary-at-tomb",
+          "asset": "assets/page-art/art-study/full/living-mary-at-tomb.webp",
+          "sha256": "e27a0710f7506eb56ef34f0fc10bda24f0bf0336546995800dfaba38196e6669",
+          "owner_route": "art-study/the-living-christ.html",
+          "owner_section": "begin",
+          "depicts_christ": true,
+          "evidence": {
+            "path": "docs/reviews/living-christ-strict-20261004/living-mary-at-tomb.json",
+            "sha256": "06055a0dadaad9bf08b263d18cbea955edf7ac4f02b1c9155eafae30ad53b728"
+          }
+        },
+        {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/living-thomas-witness",
+          "asset": "assets/page-art/art-study/full/living-thomas-witness.webp",
+          "sha256": "f77739780ae55f08ccdbf98d7c5b043f11198c34872ae214bcd6ba5ed2086761",
+          "owner_route": "art-study/the-living-christ.html",
+          "owner_section": "artwork-study",
+          "depicts_christ": true,
+          "evidence": {
+            "path": "docs/reviews/living-christ-strict-20261004/living-thomas-witness.json",
+            "sha256": "4681c8923f450a497919c1748bd80727e13eb15528ae6cedd4d4252c367b04ae"
+          }
+        },
+        {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/living-beside-grief",
+          "asset": "assets/page-art/art-study/full/living-beside-grief.webp",
+          "sha256": "f72203fe48b5598fe23762e13d4a1a9886cfa41b41a6fb7e2af534bc99afbbb0",
+          "owner_route": "art-study/the-living-christ.html",
+          "owner_section": "artwork-study",
+          "depicts_christ": true,
+          "evidence": {
+            "path": "docs/reviews/living-christ-strict-20261004/living-beside-grief.json",
+            "sha256": "edda0b7396a9ef769be273fe58df7a5b5b23dc4d575f2eec6a4c1701c5a10f5a"
+          }
+        },
+        {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/living-peace-to-disciples",
+          "asset": "assets/page-art/art-study/full/living-peace-to-disciples.webp",
+          "sha256": "6c33ad0e03313afee009ec8e71091e8d2686b292137a30c0c0712d341f594d72",
+          "owner_route": "art-study/the-living-christ.html",
+          "owner_section": "witnesses",
+          "depicts_christ": true,
+          "evidence": {
+            "path": "docs/reviews/living-christ-strict-20261004/living-peace-to-disciples.json",
+            "sha256": "3138e9f3deabb67539e08e36fd47600b41110346bd75d45272d57ef3fb6b1afe"
+          }
+        },
+        {
+          "kind": "original",
+          "original_id": "assets/heroes/topics/living-christ-full",
+          "asset": "assets/heroes/topics/living-christ-full.webp",
+          "sha256": "bb8539992ea3a171be50588f861c17cb237a76565c09ecef91e79836db906e3b",
+          "owner_route": "art-study/the-living-christ.html",
+          "owner_section": "living-christ-hero",
+          "depicts_christ": true,
+          "evidence": {
+            "path": "docs/reviews/living-christ-strict-20261004/living-christ-full.json",
+            "sha256": "770f3b62b1aa697b899c403a1e9a7f1828406baffdbe623894fd345d846fbd24"
+          }
+        },
+        {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/living-mary-reports-20261004",
+          "asset": "assets/page-art/art-study/full/living-mary-reports-20261004.webp",
+          "sha256": "0768a55320fc357b27770523f6113241195a3ad229e09af679cee12350ba8c36",
+          "owner_route": "art-study/the-living-christ.html",
+          "owner_section": "living-mary-reports-20261004",
+          "depicts_christ": false,
+          "evidence": {
+            "path": "docs/reviews/living-christ-strict-20261004/living-mary-reports-20261004.json",
+            "sha256": "c53093bc6d9328480730cde749efdabd49bd0e850a88bc643b05bfcb88dc1316"
+          }
+        },
+        {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/living-paul-courage-20261004",
+          "asset": "assets/page-art/art-study/full/living-paul-courage-20261004.webp",
+          "sha256": "4b23e29cdb0f6d728783c847de4d88dded877031fde40606a456853f7f4f79a9",
+          "owner_route": "art-study/the-living-christ.html",
+          "owner_section": "living-paul-courage-20261004",
+          "depicts_christ": true,
+          "evidence": {
+            "path": "docs/reviews/living-christ-strict-20261004/living-paul-courage-20261004.json",
+            "sha256": "db235b632c079fa38161f185ac97c60e0c3e83bc4b4508303829313b56e2dc6d"
+          }
+        },
+        {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/living-newness-baptism-20261004",
+          "asset": "assets/page-art/art-study/full/living-newness-baptism-20261004.webp",
+          "sha256": "c08da311c1b8a1f676329018ee29d37e8bbb31899afc7976e585564f06b1ef23",
+          "owner_route": "art-study/the-living-christ.html",
+          "owner_section": "living-newness-baptism-20261004",
+          "depicts_christ": false,
+          "evidence": {
+            "path": "docs/reviews/living-christ-strict-20261004/living-newness-baptism-20261004.json",
+            "sha256": "1e43fe2caf7c471009c79add45328ab35b69438c0279a8740daa3c7ed0649307"
+          }
+        },
+        {
+          "kind": "original",
+          "original_id": "assets/page-art/art-study/full/living-steadfast-service-20261004",
+          "asset": "assets/page-art/art-study/full/living-steadfast-service-20261004.webp",
+          "sha256": "cc77485a8e089fa24b6febf9234b31e9aedae4626bc8388e43f98c5b7636a3c8",
+          "owner_route": "art-study/the-living-christ.html",
+          "owner_section": "living-steadfast-service-20261004",
+          "depicts_christ": false,
+          "evidence": {
+            "path": "docs/reviews/living-christ-strict-20261004/living-steadfast-service-20261004.json",
+            "sha256": "f989b230d5aeba7c15722e1467c24a239769bad29b0985515e97af1506a2fa0c"
+          }
         }
       ]
     }

@@ -1,0 +1,17 @@
+{
+  "kind": "original",
+  "original_id": "assets/page-art/art-study/full/living-thomas-witness",
+  "asset": "assets/page-art/art-study/full/living-thomas-witness.webp",
+  "sha256": "f77739780ae55f08ccdbf98d7c5b043f11198c34872ae214bcd6ba5ed2086761",
+  "owner_route": "art-study/the-living-christ.html",
+  "owner_section": "artwork-study",
+  "depicts_christ": true,
+  "reviewers": [
+    "Fermi",
+    "Newton"
+  ],
+  "lineage_and_cross_page_ownership_reviewed": true,
+  "ownership_scope": "all canonical site routes",
+  "pixels_reviewed_for_christ_classification": true,
+  "review_boundary": "Exact hashes bind previously completed direct pixel reviews and refreshed lineage/inventory; no new owner/native/public acceptance."
+}

@@ -1,0 +1,46 @@
+{
+  "reviewer": "Fermi",
+  "stage": "EXACT_EDIT_PROMPT_PREFLIGHT",
+  "date": "2026-10-04",
+  "status": "FERMI_CONCUR_PENDING_NEWTON",
+  "scope": "Narrow repairs to two held unpublished Living Christ candidates. Root alone generates and integrates. Neither prompt concurrence nor finished-pixel concurrence establishes owner aesthetic acceptance or production acceptance.",
+  "prompts": [
+    {
+      "key": "LC1_EDIT_V1",
+      "edit_target": "C:/Users/wyatt/Documents/Codex/2026-10-04/joseph-enriched-production-continuation/work/art/living-mary-reports.png",
+      "target_sha256": "46142fc6d10a4e778d450abf8a92311a2b2b5857033dd4d02187c90c361999d7",
+      "referenced_image_paths": [
+        "C:/Users/wyatt/Documents/Codex/2026-10-04/joseph-enriched-production-continuation/work/art/living-mary-reports.png",
+        "C:/Users/wyatt/Documents/Codex/2026-10-03/joseph-research-site/assets/page-art/art-study/full/living-mary-at-tomb.webp"
+      ],
+      "prompt": "Edit Image 1 only. Image 1 is the complete room scene to preserve; Image 2 is solely the continuity reference for Mary Magdalene, the foreground woman seen from behind, and is not a composition or male-face reference. Correct only the anonymous male listener at the right of Image 1 so that he is clearly a different person from Jesus Christ. Replace his head and facial identity with a natural older adult man: short straight graying hair, a clean-shaven rounder face, a broader nose and individually distinct brow, eyes, cheeks and jaw. Keep believable first-century Judean grooming and natural photographic skin detail. He remains an anonymous listener, not Peter, John, Thomas or another named historical person; his precise age is not a historical claim. Preserve his existing attentive surprise, gaze toward Mary, head direction, leaning posture, body scale, clothing, hands and position. Preserve Mary exactly as visible in Image 1, including her partial back/profile angle, dark hair, beige head covering, dusty-rose and beige clothes, build, gesture and hand anatomy; Image 2 confirms this continuity but must not introduce Christ or the tomb. Preserve the seated woman's identity, face, expression, gaze, garments and hands. Preserve the entire room, table, objects, daylight, camera angle, framing, photographic realism and 1536x1024 landscape composition. This remains Mary reporting that she has seen the risen Lord, corresponding to John 20:18; Jesus is not physically present. Do not add people, halos, lettering or any new action. Change only the right-hand male listener's head and facial identity, leaving the rest of the picture unchanged.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/20?lang=eng&id=p18#p18",
+      "source_limits": "Verse 18 establishes Mary's report. The room, listeners' identities, ages and appearance are illustrative staging. Verse 19 is a later appearance and must not be conflated with this report. Mary reference is partial-view continuity, not a researched frontal portrait.",
+      "pixel_acceptance": [
+        "Right listener visibly distinct from Home Christ in hair, beard absence and facial structure",
+        "Mary and seated woman preserve identities and scene-specific expressions",
+        "Gaze, hands, room, garments, lighting and framing preserved",
+        "No Christ physically present; no named-listener assignment"
+      ],
+      "prompt_sha256": "5f52a9b69cbed634eb10b8b12e7a12c90e9619a389877a341b044cc019a6f7c4"
+    },
+    {
+      "key": "LC3_EDIT_V1",
+      "edit_target": "C:/Users/wyatt/Documents/Codex/2026-10-04/joseph-enriched-production-continuation/work/art/living-newness-of-life.png",
+      "target_sha256": "5515cec2d418f28894b09e8757c466babd6f80c63b786035eadb6451324c19e6",
+      "referenced_image_paths": [
+        "C:/Users/wyatt/Documents/Codex/2026-10-04/joseph-enriched-production-continuation/work/art/living-newness-of-life.png"
+      ],
+      "prompt": "Edit the attached photograph only to correct the opacity of the adult woman's white baptismal clothing. Replace the thin translucent fabric of her existing garment with dense, fully opaque, plain white lined baptismal fabric throughout the shoulders, upper chest, bodice, sleeves and lower garment, including the wet areas. Preserve the existing modest neckline, long sleeves, garment shape and coverage. Show natural cloth weave, seams, folds, weight and water droplets, but no skin color, underwear outlines or intimate body details visible through the fabric, and no transparent or cling-film appearance. Keep this the quiet moment immediately after full immersion: she stands independently beside the man with a clear gap between them. Preserve both people's exact faces, natural expressions, reciprocal eye contact, wet hair, body scale, poses, separate arms and hands; do not retouch their identities or skin. Preserve the man's opaque white clothing unchanged. Preserve the water level, falling droplets, font, steps, rail, background, lighting, camera angle, photographic realism and 1536x1024 landscape framing. This is a contemporary application accompanying Romans 6:3-5, with anonymous adults; do not add Jesus, other people, symbols, text or new actions. Change only the woman's garment material and its local folds as necessary to make all of her clothing convincingly opaque while wet; leave everything else unchanged.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/rom/6?lang=eng&id=p3-p5#p3",
+      "source_limits": "Romans connects baptism with Christ's death and resurrection and walking in newness of life. This is a contemporary application, not a depiction of Paul or a documented historical baptism. No named identity or exact age is claimed.",
+      "pixel_acceptance": [
+        "Woman's shoulders, yoke, bodice, sleeves and lower garment visibly opaque",
+        "No underwear outline or skin transmission through wet cloth",
+        "Faces, gaze, hair, hands, poses and independent stance unchanged",
+        "Man's clothing, water, font, steps and composition preserved"
+      ],
+      "prompt_sha256": "b883861861b34cbf5d0b56f89908c351a397e10f79793ede101524b62e97cf11"
+    }
+  ]
+}

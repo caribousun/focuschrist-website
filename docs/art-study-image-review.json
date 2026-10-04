@@ -27,10 +27,32 @@
         "reviewed": true
       },
       {
+        "asset": "assets/page-art/art-study/full/living-mary-reports-20261004.webp",
+        "sha256": "0768a55320fc357b27770523f6113241195a3ad229e09af679cee12350ba8c36",
+        "tone": "earnest witness and attentive surprise",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/living-christ-supporting-review-20261004.json",
+        "width": 1536,
+        "height": 1024
+      },
+      {
         "asset": "assets/page-art/art-study/full/living-peace-to-disciples.webp",
         "sha256": "6c33ad0e03313afee009ec8e71091e8d2686b292137a30c0c0712d341f594d72",
         "tone": "reassuring peace after fear",
         "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/art-study/full/living-paul-courage-20261004.webp",
+        "sha256": "4b23e29cdb0f6d728783c847de4d88dded877031fde40606a456853f7f4f79a9",
+        "tone": "steady encouragement amid continuing difficulty",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/living-christ-supporting-review-20261004.json",
+        "width": 1536,
+        "height": 1024
       },
       {
         "asset": "assets/page-art/art-study/full/living-thomas-witness.webp",
@@ -45,6 +67,17 @@
         "reviewed": true
       },
       {
+        "asset": "assets/page-art/art-study/full/living-newness-baptism-20261004.webp",
+        "sha256": "c08da311c1b8a1f676329018ee29d37e8bbb31899afc7976e585564f06b1ef23",
+        "tone": "quiet joy and reassurance after baptism",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/living-christ-supporting-review-20261004.json",
+        "width": 1536,
+        "height": 1024
+      },
+      {
         "asset": "assets/page-art/art-study/full/living-breakfast-shore-20260919.webp",
         "sha256": "8d49d722fe4b91f452a545a08a875e623b19e2c803396cac54704a58ff0b09f5",
         "tone": "quiet fellowship and attentive welcome",
@@ -52,6 +85,17 @@
         "technical_review_passed": true,
         "owner_approved": false,
         "review_record": "docs/sitewide-supporting-review.json",
+        "width": 1536,
+        "height": 1024
+      },
+      {
+        "asset": "assets/page-art/art-study/full/living-steadfast-service-20261004.webp",
+        "sha256": "cc77485a8e089fa24b6febf9234b31e9aedae4626bc8388e43f98c5b7636a3c8",
+        "tone": "practical care, listening and shared purpose",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/living-christ-supporting-review-20261004.json",
         "width": 1536,
         "height": 1024
       }
