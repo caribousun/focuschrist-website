@@ -1,19 +1,19 @@
 {
   "reviewer": "Albert",
-  "observed_at": "2026-10-04T02:48:26.207441+00:00",
-  "pdf_sha256": "d45a151ca3730dd9ee17296c867b2c21670e53957c33d47212b3906445d799ee",
-  "source_html_sha256": "7724e9cbe8af9307384601be8f8ba0f44a31ec14937aa196933ee2e4d689fcba",
+  "observed_at": "2026-10-04T03:54:35.677918+00:00",
+  "pdf_sha256": "516cf1658d0e9294d24197dbab378339a70b58054263edb34820288eecae2773",
+  "source_html_sha256": "5ef0d46ff62e825d51faf4ceab1d2a0d3cfff992336fbd7af673fac25209839a",
   "concur": true,
-  "pages": 60,
+  "pages": 59,
   "checks": {
-    "pdf_sha256": "d45a151ca3730dd9ee17296c867b2c21670e53957c33d47212b3906445d799ee",
-    "html_sha256": "7724e9cbe8af9307384601be8f8ba0f44a31ec14937aa196933ee2e4d689fcba",
-    "pages": 60,
-    "substantive_text_blocks_checked": 551,
+    "pdf_sha256": "516cf1658d0e9294d24197dbab378339a70b58054263edb34820288eecae2773",
+    "html_sha256": "5ef0d46ff62e825d51faf4ceab1d2a0d3cfff992336fbd7af673fac25209839a",
+    "pages": 59,
+    "substantive_text_blocks_checked": 541,
     "missing_text": [],
     "expected_external_links": 39,
     "missing_external_links": [],
-    "link_annotations": 842,
+    "link_annotations": 835,
     "bad_internal_links": [],
     "empty_pages": [],
     "out_of_page_text": [],
@@ -25,7 +25,7 @@
     "missing_original_image_links": [],
     "limits": "Text/link/geometry checks do not replace independent rendered-page visual review.",
     "pass": true,
-    "header_buttons_checked": 360,
+    "header_buttons_checked": 354,
     "header_navigation_errors": [],
     "external_text_links_checked": 110,
     "link_cue_errors": [],
@@ -33,10 +33,10 @@
     "orphan_headings": []
   },
   "rendered_review": [
-    "All five website-style contact sheets covering 60 pages inspected.",
-    "Final render hashes compared: only pages 2, 34 and 35 changed; all inspected at full size.",
-    "Final full pages 2, 7, 8, 31, 32, 34, 35 and 60 inspected, confirming repaired heading transitions.",
-    "Deep teal and green, cream text, gold navigation, non-underlined link cues and consistent typography inspected."
+    "All five final natural-prose contact sheets covering59pages inspected.",
+    "Full final changed pages4 and52 inspected; prior unchanged layouts11,31,43,59 reviewed in preceding candidate.",
+    "All generic perimage labels and scene disclaimers removed; positivehistory/sourcecitations retained.",
+    "Websitepalette and layout remain clean; mainweb bedside/Emma letter desktop-phone inspected; existing footers unchanged."
   ],
   "limitations": [
     "Illustrations remain interpretations, not authenticated historical photographs.",

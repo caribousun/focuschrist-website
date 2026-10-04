@@ -3,6 +3,89 @@ import math
 import re
 import hashlib
 ROUTE = 'joseph-smith-portrait-research.html'
+REJECTED_ARTWORK_BADGES = ('New artistic interpretation', 'New artwork · historical interpretation',
+                         'New artwork · explanatory interpretation', 'New artwork · feature study')
+ARTWORK_FOOTER_DISCLOSURE = ('Artwork on focusChrist includes AI-generated artistic interpretations. '
+    'Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.')
+REJECTED_SCENE_BOILERPLATE = (
+    'their clothing, setting and gesture are not a record of the wedding',
+    'its appearance, the handoff and the couple’s clothing are interpreted',
+    'The clothing and session are interpreted',
+    'this reflective scene imagines the room, book and pose',
+    'her clothing, gestures and the room are interpreted',
+    'The source does not record their exact pose, furnishings or garments',
+    'Emma’s reading moment, expression, clothing and surroundings are imagined',
+    'this particular task moment, wagon, clothing and path are interpreted',
+    'the wagon, clothing, route and weather are interpreted',
+    'their posture, clothing and room are interpreted',
+    'the room, pose and furnishings here are an artistic interpretation',
+    'The newly imagined side view is not a measured reconstruction',
+    'New explanatory artwork', 'newly made interpretive Joseph artwork',
+    'This new scene interprets that temporary appearance',
+    'A new expression study is contemporary explanatory art, not an eyewitness record',
+    'The hymn’s publication is distinct from an undocumented scene of its composition',
+    'in a reconstruction of the later family account',
+    'the pictured transaction is reconstructed', 'the exact home and arrangement are imagined',
+    'the pictured conversation is imagined', 'the room and moment are imagined',
+    'their exact arrangement is not recorded', 'the scene is reconstructed',
+    'The campsite and task are reconstructed', 'An imagined aftermath of the cow’s kick',
+    'the fittings are reconstructed', 'in a reconstruction of his family’s later account',
+    'the pictured panel is not an exact facsimile',
+    'the exact appearance of the ancient camp remains uncertain',
+    'An artistic interpretation guided by Nephi’s account',
+    'the gentle rise pictured here is an interpretation, not a known location',
+    'A historical artistic reconstruction informed by portraits from her lifetime',
+    'This historical artistic reconstruction draws on portraits of Emma',
+    'The opening illustration is an artistic interpretation of a pioneer family',
+    'This is an illustrative landscape, not a verified biblical location',
+    'The artwork offers reverent interpretations of scripture, historical accounts, and study',
+    'in this interpretation of a camp discussion',
+    'This illustrative landscape is not a named scriptural location',
+    'This youthful interpretation recalls that difficult journey',
+    'Historical portrait interpretation of Elijah Able',
+    'Historical interpretation of young adult Elijah Able',
+    'Historical artistic interpretation of Elijah Able',
+    'Historical interpretation of young Jane Manning James',
+    'Historical portrait interpretation of Jane Manning James',
+    'Historical artistic interpretation: Green Flake on the westward trail',
+    'Historical artistic interpretation: A life of work in Union',
+    'Historical artistic interpretation: Remembering Green Flake',
+    'Historical artistic interpretation of President Spencer W. Kimball',
+    'Artistic portrait based on Elijah Able’s surviving likeness',
+    'Artistic portrait based on Jane Manning James’s surviving likeness',
+    'This interpretive study scene accompanies the Church’s account of prayer and revelation',
+    'The artist imagines the scene; the passage tells us what was recorded',
+)
+
+def check_no_repeated_artwork_disclosure(text):
+    # Normalize extraction whitespace/punctuation without rejecting meaningful
+    # source-specific historical limits or artwork descriptions.
+    normalize = lambda value: ''.join(c for c in value.casefold() if c.isalnum())
+    actual = normalize(text)
+    assert not any(normalize(label) in actual for label in REJECTED_ARTWORK_BADGES), 'Owner-rejected generic artwork badge returned'
+    assert not any(normalize(phrase) in actual for phrase in REJECTED_SCENE_BOILERPLATE), 'Owner-rejected per-scene disclaimer boilerplate returned'
+
+def check_artwork_disclosure_text(text):
+    check_no_repeated_artwork_disclosure(text)
+    normalize = lambda value: ''.join(c for c in value.casefold() if c.isalnum())
+    actual = normalize(text)
+    assert normalize(ARTWORK_FOOTER_DISCLOSURE) in actual, 'Artwork disclosure must remain visible in footer/edition closing'
+
+def check_caption_evidence_metacommentary(text):
+    rejected = ('His care is documented', 'His hired labor is documented', 'The comb purchase is recorded',
+                'Their move to Harmony is documented', 'The reading is recorded in Doctrine and Covenants 135',
+                'The minutes record her urging', 'His later history records the women praying',
+                'Joseph’s November 1838 letter survives')
+    normalize = lambda value: ''.join(c for c in value.casefold() if c.isalnum())
+    assert not any(normalize(x) in normalize(text) for x in rejected), 'Owner-rejected caption evidence-status commentary returned'
+
+def check_artwork_badges_and_footer(doc):
+    accessible_text = ' '.join(str(node.get(attr,'')) for node in doc.find_all(True) for attr in ('alt','title','aria-label'))
+    check_artwork_disclosure_text(doc.get_text(' ',strip=True)+' '+accessible_text)
+    for caption in doc.select('figcaption'): check_caption_evidence_metacommentary(caption.get_text(' ',strip=True))
+    footer = doc.select_one('footer [data-focuschrist-artwork-disclosure="footer"]')
+    assert footer and footer.get_text(' ',strip=True) == ARTWORK_FOOTER_DISCLOSURE, 'Exact shared footer artwork disclosure required'
+    assert not footer.has_attr('hidden') and footer.get('aria-hidden') != 'true', 'Footer disclosure must remain visible'
 REJECTED_GENERIC_SCENES={
     'research-record-date-comparison','research-custody-gap','research-viewpoint-demonstration',
     'research-photogrammetry-method','research-source-independence'

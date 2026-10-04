@@ -1,59 +1,47 @@
 {
   "reviewer": "Fermi",
   "concur": true,
-  "pdf_sha256": "d45a151ca3730dd9ee17296c867b2c21670e53957c33d47212b3906445d799ee",
-  "source_html_sha256": "7724e9cbe8af9307384601be8f8ba0f44a31ec14937aa196933ee2e4d689fcba",
-  "pages": 60,
+  "pdf_sha256": "516cf1658d0e9294d24197dbab378339a70b58054263edb34820288eecae2773",
+  "source_html_sha256": "5ef0d46ff62e825d51faf4ceab1d2a0d3cfff992336fbd7af673fac25209839a",
+  "pages": 59,
   "sections": 15,
   "feature_studies": 16,
   "figure_placements": 75,
   "distinct_new_originals": 10,
   "text_coverage_pass": true,
   "links_pass": true,
-  "substantive_text_blocks_checked": 551,
+  "substantive_text_blocks_checked": 541,
   "external_urls_checked": 39,
   "pdf_image_placements_including_cover": 76,
   "bookmarks": 33,
-  "header_buttons_checked": 360,
+  "header_buttons_checked": 354,
   "source_link_cues_checked": 110,
   "visual_review": {
-    "all60_contact_regions": "Five website-final contact sheets inspected for e944; bounded final page34/35 repair renewed at finald45a",
-    "full_pages_before_repair": [
-      1,
-      3,
-      21,
+    "all59_contact_regions": "All five final label-correction contact sheets actually inspected",
+    "full_final_pages": [
+      11,
       31,
       34,
-      48,
-      53,
-      60
-    ],
-    "full_final_affected_pages": [
-      2,
-      34,
-      35
+      43,
+      59
     ],
     "findings": [
-      "Website deepteal green panels cream text and gold pills match explicit owner direction",
-      "Georgia headings SegoeUI body legible with clear spacing",
-      "Six navigation pills repeated across allpages, fullQA validates360 destinations and hitboxes",
-      "Nonunderlined gold external links have visible arrow cues",
-      "Figure proportions and source labels preserved; no detached figure captions",
-      "Page34 now ends prior limits; sectionheading and firstfeature intro kept together35; contents correctly updates35",
-      "Closing actions and edition disclaimer together on60",
-      "No clipping overlap or remaining orphan heading observed"
+      "Generic newart badges and perimage imaginedscene disclaimers absent",
+      "Positive visual teaching source history and source-specific limitations retained",
+      "All figure captions remain together; no orphan heading or clipping observed",
+      "Website palette fonts borders and six headerpills remain clear",
+      "Exact artwork disclosure remains in Aboutthisedition59"
     ],
-    "open_defects": []
+    "open_defects": [],
+    "final_renewal": "Final516cf affected pages4 and52 actually inspected; natural opening wording and source20 provenance sentence cleanup retain layout. Prior full59 contact inspection and full11/31/34/43/59 remain applicable."
   },
   "qa_review": [
-    "Independently reran final PDF QA:551blocks39URLs76images10originalURLs33bookmarks360buttons110sourcecues PASS",
-    "Reviewed receiptbinding gate exactSHA and matching concurrence protection",
-    "Reviewed orphan check skipping research eyebrows to catch section-only break"
+    "Independently reran final QA541blocks39URLs76images10originalURLs33bookmarks354buttons110cues PASS",
+    "Reviewed exact30 Joseph prose changes; current ownerfooteronly direction overrides former perimage display mandates"
   ],
   "mandate_scope": "Same current Master protected foundation and applicable Focus/repo mandates read for ownercorrection; latest direct owner websiteappearance and navigation direction governs; no foundation change",
   "supersedes": [
-    "Prior parchment d7c8 design approval",
-    "e944 held sectionheading defect"
+    "5badd before final natural research wording"
   ],
   "limits": [
     "Allpage overview plus listed fullpage inspection; not claim every scannedsource legible at thumbnail scale",
