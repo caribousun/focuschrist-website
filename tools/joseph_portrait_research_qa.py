@@ -156,4 +156,9 @@ assert pdf_review['sections']==15 and pdf_review['feature_studies']==16, 'Comple
 assert pdf_review['figure_placements']==len(root.select('figure')) and pdf_review['distinct_new_originals']==10, 'Complete PDF picture coverage missing'
 assert pdf_review['text_coverage_pass'] and pdf_review['links_pass'], 'PDF text or hyperlink verification missing'
 assert all(pdf_review['reviewers'].get(name,{}).get('concur') is True for name in ('Fermi','Newton','Albert')), 'Finished PDF needs independent rendered concurrence'
+for reviewer in pdf_review['reviewers'].values():
+    receipt_bytes=(ROOT/reviewer['receipt']).read_bytes()
+    assert hashlib.sha256(receipt_bytes).hexdigest()==reviewer['receipt_sha256'], 'PDF reviewer receipt changed after manifest binding'
+    receipt=json.loads(receipt_bytes)
+    assert receipt.get('concur') is True and receipt.get('pdf_sha256')==pdf_review['pdf_sha256'], 'PDF concurrence belongs to different bytes'
 print(json.dumps({'result':'STRUCTURAL_CHECKS_PASS_NOT_READY_CERTIFICATION','research_route':ROUTE,'research_text_items':checked,'trait_audits':16,'sections':len(data['sections']),'image_placements':image_records,'evidence_inventory':evidence_inventory,'original_artworks':len(originals),'christ_originals':sum(r['depicts_christ'] for r in originals),'reading_blocks':reading_block_count,'document_navigation_adaptation':omitted,'pdf_sha256':hashlib.sha256(pdf.read_bytes()).hexdigest(),'limits':'Metadata count and placement checks are not pixel proof. Image relevance, visual cadence, actual identities/Christ depiction, full mandate compliance, browser interaction and owner visual acceptance require separate recorded checks. Reference images do not count as new originals.'},indent=2))

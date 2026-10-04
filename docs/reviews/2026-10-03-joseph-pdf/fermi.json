@@ -1,64 +1,64 @@
 {
   "reviewer": "Fermi",
   "concur": true,
-  "pdf_sha256": "d7c8c2513f41f3018af65a03acc3cbba2d58cefdd5612836b6cf16f59db38ad1",
+  "pdf_sha256": "d45a151ca3730dd9ee17296c867b2c21670e53957c33d47212b3906445d799ee",
   "source_html_sha256": "7724e9cbe8af9307384601be8f8ba0f44a31ec14937aa196933ee2e4d689fcba",
-  "pages": 58,
+  "pages": 60,
   "sections": 15,
   "feature_studies": 16,
   "figure_placements": 75,
   "distinct_new_originals": 10,
-  "substantive_text_blocks_checked": 551,
-  "expected_external_links": 39,
-  "link_annotations": 480,
-  "bookmarks": 33,
-  "pdf_image_placements_including_cover": 76,
   "text_coverage_pass": true,
   "links_pass": true,
+  "substantive_text_blocks_checked": 551,
+  "external_urls_checked": 39,
+  "pdf_image_placements_including_cover": 76,
+  "bookmarks": 33,
+  "header_buttons_checked": 360,
+  "source_link_cues_checked": 110,
   "visual_review": {
-    "all_page_contact_sheets": [
-      "contact-001-012.png",
-      "contact-013-024.png",
-      "contact-025-036.png",
-      "contact-037-048.png",
-      "contact-049-058.png"
-    ],
-    "render_directory": "work/gary/pdf-render-v4",
-    "full_page_inspection": [
+    "all60_contact_regions": "Five website-final contact sheets inspected for e944; bounded final page34/35 repair renewed at finald45a",
+    "full_pages_before_repair": [
+      1,
       3,
-      6,
-      8,
-      9,
-      18,
-      25,
-      30,
-      45,
-      49,
+      21,
+      31,
+      34,
+      48,
       53,
-      57,
-      58
+      60
+    ],
+    "full_final_affected_pages": [
+      2,
+      34,
+      35
     ],
     "findings": [
-      "Earlier separated figure titles captions and source links repaired; full blocks intact",
-      "All58 page overview has consistent headers footers margins and restrained parchment texture",
-      "Full-page samples confirm readable body text source notes and correct picture proportions",
-      "Comparison pairs retain distinct evidence labels; generated illustrations not represented as original historical evidence",
-      "Closing reflections links and edition disclaimer kept together on page58",
-      "Contents closing page58 correct; no clipping overlap or broken image seen"
+      "Website deepteal green panels cream text and gold pills match explicit owner direction",
+      "Georgia headings SegoeUI body legible with clear spacing",
+      "Six navigation pills repeated across allpages, fullQA validates360 destinations and hitboxes",
+      "Nonunderlined gold external links have visible arrow cues",
+      "Figure proportions and source labels preserved; no detached figure captions",
+      "Page34 now ends prior limits; sectionheading and firstfeature intro kept together35; contents correctly updates35",
+      "Closing actions and edition disclaimer together on60",
+      "No clipping overlap or remaining orphan heading observed"
     ],
     "open_defects": []
   },
-  "verification": [
-    "Independently executed tools/joseph_research_pdf_qa.py on frozen bytes: PASS",
-    "Independently parsed HTML:15 sections16 traits75 figures10 distinct data-research-art identifiers",
-    "Reviewed PDF QA source: normalized substantive HTML text coverage and external URL inclusion, valid internal destinations, empty-page and page-bound checks",
-    "Reviewed portrait research QA freshness gate: source HTML and PDF hashes, coverage counts and explicit Fermi Newton Albert concurrence required"
+  "qa_review": [
+    "Independently reran final PDF QA:551blocks39URLs76images10originalURLs33bookmarks360buttons110sourcecues PASS",
+    "Reviewed receiptbinding gate exactSHA and matching concurrence protection",
+    "Reviewed orphan check skipping research eyebrows to catch section-only break"
+  ],
+  "mandate_scope": "Same current Master protected foundation and applicable Focus/repo mandates read for ownercorrection; latest direct owner websiteappearance and navigation direction governs; no foundation change",
+  "supersedes": [
+    "Prior parchment d7c8 design approval",
+    "e944 held sectionheading defect"
   ],
   "limits": [
-    "Rendered review uses all58 contact regions plus listed full-size pages, not a claim every source scan can be read at unzoomed thumbnail size",
-    "Structural checks establish included text links and geometry; external destinations were not all opened during PDF review",
-    "Historical uncertainties and unperformed tests remain explicitly qualified",
-    "No merge or publication performed by Fermi"
-  ],
-  "supersedes": "work/fermi/pdf-review-05cd-held.json"
+    "Allpage overview plus listed fullpage inspection; not claim every scannedsource legible at thumbnail scale",
+    "Automated destinations checked, not everyexternalwebsite reopened",
+    "Owner aesthetic acceptance and historical authentication remain separate",
+    "No publication or merge by Fermi"
+  ]
 }

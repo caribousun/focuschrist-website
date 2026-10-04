@@ -1,12 +1,12 @@
 {
-  "pdf_sha256": "d7c8c2513f41f3018af65a03acc3cbba2d58cefdd5612836b6cf16f59db38ad1",
+  "pdf_sha256": "d45a151ca3730dd9ee17296c867b2c21670e53957c33d47212b3906445d799ee",
   "html_sha256": "7724e9cbe8af9307384601be8f8ba0f44a31ec14937aa196933ee2e4d689fcba",
-  "pages": 58,
+  "pages": 60,
   "substantive_text_blocks_checked": 551,
   "missing_text": [],
   "expected_external_links": 39,
   "missing_external_links": [],
-  "link_annotations": 480,
+  "link_annotations": 842,
   "bad_internal_links": [],
   "empty_pages": [],
   "out_of_page_text": [],
@@ -17,5 +17,11 @@
   "original_image_links": 10,
   "missing_original_image_links": [],
   "limits": "Text/link/geometry checks do not replace independent rendered-page visual review.",
-  "pass": true
+  "pass": true,
+  "header_buttons_checked": 360,
+  "header_navigation_errors": [],
+  "external_text_links_checked": 110,
+  "link_cue_errors": [],
+  "panel_clearance_errors": [],
+  "orphan_headings": []
 }

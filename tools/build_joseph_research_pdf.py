@@ -23,13 +23,15 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / 'joseph-smith-portrait-research.html'
 OUTPUT = ROOT / 'assets/research/focuschrist-joseph-evidence.pdf'
 ORIGIN = 'https://focuschrist.com/joseph-smith-portrait-research.html'
-PAPER = HexColor('#f5eedc'); INK = HexColor('#302b25')
-GOLD = HexColor('#8b6634'); MUTED = HexColor('#655e51'); RULE = HexColor('#cbb98e')
+PAPER = HexColor('#142a35'); INK = HexColor('#f0e8d9')
+TEAL = HexColor('#f3cf83')
+GOLD = HexColor('#f3cf83'); MUTED = HexColor('#d2d2bb'); RULE = HexColor('#8a8565')
 WIDTH, HEIGHT = 612, 792
-LEFT, RIGHT, TOP, BOTTOM = 49, 49, 60, 53
+LEFT, RIGHT, TOP, BOTTOM = 49, 49, 92, 63
 CONTENT_WIDTH = WIDTH-LEFT-RIGHT
 RECEIPT = {'sections': [], 'features': [], 'figures': [], 'text_blocks': [], 'links': []}
 IDS = set()
+HEADER_NAV = [('Cover','pdf-cover'),('Contents','pdf-contents'),('Evidence','portrait-section-4'),('Facial Features','portrait-section-6'),('Creation','portrait-section-11'),('Sources','portrait-section-13')]
 
 def fonts():
     candidates = [Path(os.environ['JOSEPH_PDF_FONT_DIR'])] if os.environ.get('JOSEPH_PDF_FONT_DIR') else [Path('C:/Windows/Fonts'), Path('/usr/share/fonts/truetype/msttcorefonts'), Path('/usr/share/fonts/truetype/liberation2'), Path('/usr/share/fonts/truetype/dejavu')]
@@ -41,9 +43,20 @@ def fonts():
     for name, filename in zip(('Text','TextBold','TextItalic','TextBI'),files):
         pdfmetrics.registerFont(TTFont(name, str(base/filename)))
     pdfmetrics.registerFontFamily('Text', normal='Text', bold='TextBold', italic='TextItalic', boldItalic='TextBI')
+    body_bases=[base,Path('C:/Windows/Fonts'),Path('/usr/share/fonts/truetype/liberation2'),Path('/usr/share/fonts/truetype/dejavu')]
+    body_families=[('segoeui.ttf','segoeuib.ttf','segoeuii.ttf','segoeuiz.ttf'),('LiberationSans-Regular.ttf','LiberationSans-Bold.ttf','LiberationSans-Italic.ttf','LiberationSans-BoldItalic.ttf'),('DejaVuSans.ttf','DejaVuSans-Bold.ttf','DejaVuSans-Oblique.ttf','DejaVuSans-BoldOblique.ttf')]
+    body_base,body_files=next((b,fs) for b in body_bases for fs in body_families if all((b/f).exists() for f in fs))
+    for name,filename in zip(('Body','BodyBold','BodyItalic','BodyBI'),body_files):pdfmetrics.registerFont(TTFont(name,str(body_base/filename)))
+    pdfmetrics.registerFontFamily('Body',normal='Body',bold='BodyBold',italic='BodyItalic',boldItalic='BodyBI')
+    RECEIPT['body_fonts']=[{'file':f,'sha256':hashlib.sha256((body_base/f).read_bytes()).hexdigest()} for f in body_files]
+    symbol_candidates=[base/'seguisym.ttf',base/'DejaVuSans.ttf',Path('C:/Windows/Fonts/seguisym.ttf'),Path('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf')]
+    symbol=next((x for x in symbol_candidates if x.exists()),None)
+    if symbol is None:raise FileNotFoundError('Source arrow cues need Segoe UI Symbol or DejaVu Sans TTF alongside the chosen font directory')
+    pdfmetrics.registerFont(TTFont('LinkMark',str(symbol)))
+    RECEIPT['link_marker_font']={'file':symbol.name,'sha256':hashlib.sha256(symbol.read_bytes()).hexdigest()}
 
 def style(name, **kw):
-    defaults=dict(fontName='Text', fontSize=10.2, leading=15.3, textColor=INK,
+    defaults=dict(fontName='Body', fontSize=10.2, leading=15.3, textColor=INK,
                   spaceAfter=9, allowWidows=0, allowOrphans=0)
     defaults.update(kw)
     return ParagraphStyle(name, **defaults)
@@ -51,11 +64,11 @@ def style(name, **kw):
 STYLES = {
     'body':style('body'), 'small':style('small',fontSize=8.1,leading=11.4,spaceAfter=6,textColor=MUTED),
     'source':style('source',fontSize=8.8,leading=12.8,spaceAfter=9),
-    'h1':style('h1',fontName='TextBold',fontSize=33,leading=38,spaceAfter=21),
-    'h2':style('h2',fontName='TextBold',fontSize=23,leading=28,spaceAfter=17,keepWithNext=True),
-    'h3':style('h3',fontName='TextBold',fontSize=15,leading=20,spaceBefore=13,spaceAfter=10,keepWithNext=True),
-    'h4':style('h4',fontName='TextBold',fontSize=10.6,leading=14.1,spaceAfter=6,keepWithNext=True),
-    'label':style('label',fontName='TextBold',fontSize=7.5,leading=10.5,textColor=GOLD,spaceAfter=7,tracking=1),
+    'h1':style('h1',fontName='TextBold',textColor=GOLD,fontSize=33,leading=38,spaceAfter=21),
+    'h2':style('h2',fontName='TextBold',textColor=GOLD,fontSize=23,leading=28,spaceAfter=17,keepWithNext=True),
+    'h3':style('h3',fontName='TextBold',textColor=GOLD,fontSize=15,leading=20,spaceBefore=13,spaceAfter=10,keepWithNext=True),
+    'h4':style('h4',fontName='BodyBold',fontSize=10.6,leading=14.1,spaceAfter=6,keepWithNext=True),
+    'label':style('label',fontName='BodyBold',fontSize=7.5,leading=10.5,textColor=GOLD,spaceAfter=7,tracking=1),
     'caption':style('caption',fontSize=8.2,leading=11.6,textColor=MUTED,spaceAfter=7),
     'cell':style('cell',fontSize=8.3,leading=11.6,spaceAfter=4),
 }
@@ -79,7 +92,8 @@ def rich(node):
     if node.name in ('em','i'):return '<i>'+inner+'</i>'
     if node.name=='a' and node.get('href'):
         target=link_target(node['href']);RECEIPT['links'].append(target)
-        return '<link href="'+html.escape(target,quote=True)+'" color="#74501f">'+inner+'</link>'
+        marker=' <font name="LinkMark" size="7">↗</font>' if not target.startswith('#') else ''
+        return '<link href="'+html.escape(target,quote=True)+'" color="#f3cf83">'+inner+marker+'</link>'
     return inner
 
 def para(node, kind='body', prefix=''):
@@ -166,14 +180,14 @@ def walk(node):
         return out
     if node.name in ('p','h3','h4','h5','blockquote','dt','dd','a'):
         p=para(node,'label' if 'fc-eyebrow' in classes else 'h4' if node.name=='dt' else node.name if node.name in ('h3','h4') else 'body')
-        return [p] if p else []
+        return [KeepTogether([p])] if p and node.name in ('p','dd','blockquote') else [p] if p else []
     if node.name=='table':
         rows=[]
         for tr in node.find_all('tr'):
             rows.append([para(c,'cell') for c in tr.find_all(['td','th'],recursive=False)])
         if not rows:return []
         cols=max(map(len,rows));table=Table(rows,colWidths=[CONTENT_WIDTH/cols]*cols,repeatRows=1,hAlign='LEFT')
-        table.setStyle(TableStyle([('VALIGN',(0,0),(-1,-1),'TOP'),('BACKGROUND',(0,0),(-1,0),HexColor('#e5d6b9')),('LINEBELOW',(0,0),(-1,0),.7,GOLD),('LINEBELOW',(0,1),(-1,-1),.25,RULE),('LEFTPADDING',(0,0),(-1,-1),8),('RIGHTPADDING',(0,0),(-1,-1),8),('TOPPADDING',(0,0),(-1,-1),8),('BOTTOMPADDING',(0,0),(-1,-1),8)]))
+        table.setStyle(TableStyle([('VALIGN',(0,0),(-1,-1),'TOP'),('BACKGROUND',(0,0),(-1,0),HexColor('#365c4d')),('LINEBELOW',(0,0),(-1,0),.7,GOLD),('LINEBELOW',(0,1),(-1,-1),.25,RULE),('LEFTPADDING',(0,0),(-1,-1),8),('RIGHTPADDING',(0,0),(-1,-1),8),('TOPPADDING',(0,0),(-1,-1),8),('BOTTOMPADDING',(0,0),(-1,-1),8)]))
         return [table,Spacer(1,15)]
     if node.name in ('ul','ol'):
         out=[]
@@ -188,6 +202,27 @@ def walk(node):
     for child in direct:out+=walk(child)
     return out
 
+def bind_subhead_paragraphs(story):
+    """Keep a short subheading with its first complete paragraph.
+
+    Ordinary paragraphs are deliberately unsplit so repeating navigation does
+    not interrupt their text or meaning. Explicitly bind heading + paragraph
+    instead of relying on keepWithNext across a KeepTogether boundary.
+    """
+    result=[];i=0
+    while i<len(story):
+        current=story[i]
+        if isinstance(current,Paragraph) and not isinstance(current,Heading) and current.style.name in ('h3','h4') and i+1<len(story):
+            following=story[i+1]
+            if isinstance(following,KeepTogether) and len(following._content)==1 and isinstance(following._content[0],Paragraph):
+                current.keepWithNext=0
+                result.append(KeepTogether([current,*following._content]));i+=2;continue
+            if isinstance(following,Paragraph):
+                current.keepWithNext=0
+                result.append(KeepTogether([current,following]));i+=2;continue
+        result.append(current);i+=1
+    return result
+
 class Edition(BaseDocTemplate):
     def __init__(self,path):
         super().__init__(str(path),pagesize=(WIDTH,HEIGHT),leftMargin=LEFT,rightMargin=RIGHT,topMargin=TOP,bottomMargin=BOTTOM,
@@ -196,20 +231,25 @@ class Edition(BaseDocTemplate):
         self.current_heading='An illustrated research edition';self.section_pages={}
     def page_art(self,c,doc):
         c.saveState();c.setFillColor(PAPER);c.rect(0,0,WIDTH,HEIGHT,fill=1,stroke=0)
-        rng=random.Random(2101844)
-        c.setStrokeColor(HexColor('#e9dfc7'));c.setLineWidth(.18)
-        for _ in range(125):
-            x=rng.uniform(0,WIDTH);y=rng.uniform(0,HEIGHT);c.line(x,y,x+rng.uniform(2,14),y+rng.uniform(-1.2,1.2))
-        c.setStrokeColor(RULE);c.setLineWidth(.5);c.line(LEFT,HEIGHT-36,WIDTH-RIGHT,HEIGHT-36);c.line(LEFT,36,WIDTH-RIGHT,36)
+        c.setFillColor(HexColor('#24483f'));c.roundRect(32,43,WIDTH-64,HEIGHT-115,12,fill=1,stroke=0)
+        if doc.page==1:c.bookmarkPage('pdf-cover',fit='XYZ',left=0,top=HEIGHT,zoom=0)
+        c.setStrokeColor(RULE);c.setLineWidth(.5);c.line(LEFT,HEIGHT-59,WIDTH-RIGHT,HEIGHT-59);c.line(LEFT,36,WIDTH-RIGHT,36)
         c.setFont('Text',7.5);c.setFillColor(MUTED);c.drawString(LEFT,HEIGHT-27,'FOCUSCHRIST  /  JOSEPH SMITH PORTRAIT RESEARCH')
+        gap=5;button_width=(CONTENT_WIDTH-gap*5)/6;y=HEIGHT-53
+        for index,(label,target) in enumerate(HEADER_NAV):
+            x=LEFT+index*(button_width+gap)
+            c.setStrokeColor(HexColor('#b6a16b'));c.setLineWidth(.45);c.roundRect(x,y,button_width,17,8.5,stroke=1,fill=0)
+            c.setFillColor(TEAL);c.setFont('TextBold',7.0);c.drawCentredString(x+button_width/2,y+5.2,label)
+            c.linkRect('',target,(x,y,x+button_width,y+17),relative=0,thickness=0)
+        c.setFont('Text',7.5);c.setFillColor(MUTED)
         c.drawString(LEFT,22,'Illustrated research edition  •  3 October 2026')
         c.drawRightString(WIDTH-RIGHT,22,str(doc.page))
         if doc.page>1:
-            c.setFont('TextBold',7.5);c.drawCentredString(WIDTH/2,22,'CONTENTS');c.linkRect('', 'pdf-contents',(WIDTH/2-28,17,WIDTH/2+28,31),relative=0,thickness=0)
+            c.setFont('TextBold',7.5);c.setFillColor(TEAL);c.drawCentredString(WIDTH/2,22,'CONTENTS');c.linkRect('', 'pdf-contents',(WIDTH/2-28,17,WIDTH/2+28,31),relative=0,thickness=0)
         c.restoreState()
     def afterFlowable(self,flow):
         if isinstance(flow,Heading):
-            self.canv.bookmarkPage(flow.key);self.canv.addOutlineEntry(flow.title,flow.key,level=flow.level,closed=False)
+            self.canv.bookmarkPage(flow.key,fit='XYZ',left=0,top=HEIGHT,zoom=0);self.canv.addOutlineEntry(flow.title,flow.key,level=flow.level,closed=False)
             if flow.key != 'pdf-contents':self.notify('TOCEntry',(flow.level,flow.title,self.page,flow.key))
             self.section_pages[flow.key]=self.page
 
@@ -228,11 +268,11 @@ def build(output):
     story+=[SourceImage(hero,340,315,target=urljoin(ORIGIN,'assets/identities/joseph-smith-owner-approved-20260914.png')),Spacer(1,14),
             para('The adopted focusChrist portrait is a modern artistic interpretation. This edition distinguishes the historical record, the choices visible in our artwork, and what remains uncertain.','body'),
             para('Independent faith-based study. Not an official publication of The Church of Jesus Christ of Latter-day Saints.','small'),PageBreak(),Heading('Contents','pdf-contents')]
-    toc=TableOfContents();toc.levelStyles=[style('toc0',fontSize=10.1,leading=15,spaceBefore=7,leftIndent=0),style('toc1',fontSize=8.8,leading=12.6,leftIndent=16,spaceBefore=3,textColor=MUTED)]
-    story += [para('Select a title or page number to move through the study. Source numbers link to the source shelf; underlined source titles open their original records. Select an image to open its complete source file.','small'),toc]
+    toc=TableOfContents();toc.levelStyles=[style('toc0',fontSize=10.1,leading=15,spaceBefore=7,leftIndent=0,textColor=TEAL),style('toc1',fontSize=8.8,leading=12.6,leftIndent=16,spaceBefore=3,textColor=TEAL)]
+    story += [para('Use the six outlined buttons repeated at the top of every page to return to the cover, contents, evidence, facial features, creation, or sources. Source links appear in gold; a small outward arrow marks links that open online records. Contents titles and page numbers move within this PDF; source numbers lead to the source shelf. Select an image to open its complete source file.','small'),toc]
     for section in sections:
         key=section['id'];title=section.find('h2').get_text(' ',strip=True)
-        RECEIPT['sections'].append({'id':key,'title':title});story += [CondPageBreak(220 if key=='portrait-section-2' else 270),Spacer(1,18),para('HISTORICAL EVIDENCE  /  '+key.rsplit('-',1)[-1].zfill(2),'label'),Heading(title,key)]
+        RECEIPT['sections'].append({'id':key,'title':title});story += [CondPageBreak(400 if key in {'portrait-section-6','portrait-section-7','portrait-section-8','portrait-section-9'} else 220 if key=='portrait-section-2' else 270),Spacer(1,18),para('HISTORICAL EVIDENCE  /  '+key.rsplit('-',1)[-1].zfill(2),'label'),Heading(title,key)]
         for child in section.find_all(recursive=False):
             if child.name=='h2':continue
             if key=='portrait-section-2':
@@ -255,9 +295,11 @@ def build(output):
     assert len(RECEIPT['features'])==16
     assert len(RECEIPT['figures'])==75
     assert len({x['original_id'] for x in RECEIPT['figures'] if x['original_id']})==10
-    doc=Edition(output);doc.multiBuild(story)
+    doc=Edition(output);doc.multiBuild(bind_subhead_paragraphs(story))
     RECEIPT['source_html_sha256']=hashlib.sha256(SOURCE.read_bytes()).hexdigest()
     RECEIPT['pdf_sha256']=hashlib.sha256(output.read_bytes()).hexdigest();RECEIPT['section_pages']=doc.section_pages
+    RECEIPT['repeating_header_navigation']=[{'label':label,'destination':key,'page':1 if key=='pdf-cover' else doc.section_pages[key]} for label,key in HEADER_NAV]
+    RECEIPT['link_cues']={'color':'#f3cf83','external_marker':'↗','underlines':False,'header_buttons_each_page':6,'body_top_points':TOP,'header_button_bottom_from_top':53}
     return RECEIPT
 
 if __name__=='__main__':

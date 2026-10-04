@@ -1,7 +1,7 @@
 {
   "source_html_sha256": "7724e9cbe8af9307384601be8f8ba0f44a31ec14937aa196933ee2e4d689fcba",
-  "pdf_sha256": "d7c8c2513f41f3018af65a03acc3cbba2d58cefdd5612836b6cf16f59db38ad1",
-  "pages": 58,
+  "pdf_sha256": "d45a151ca3730dd9ee17296c867b2c21670e53957c33d47212b3906445d799ee",
+  "pages": 60,
   "sections": 15,
   "feature_studies": 16,
   "figure_placements": 75,
@@ -16,21 +16,26 @@
     "Fermi": {
       "concur": true,
       "receipt": "docs/reviews/2026-10-03-joseph-pdf/fermi.json",
-      "receipt_sha256": "0e9ef634e6ccb5cb3b10038581ba877c2de5c112f476580f91f833bcad2afeab"
+      "receipt_sha256": "ad4fcd220cd55e024b1b9388fe4e1b433bfec3f5a8ddcdbc3b45ce11d8b0afdb"
     },
     "Newton": {
       "concur": true,
       "receipt": "docs/reviews/2026-10-03-joseph-pdf/newton.json",
-      "receipt_sha256": "830918a5a07d7862a4b78f4a057d53855b2f5822045807ffbfdccc92a9caf03b"
+      "receipt_sha256": "f7c8e668fd717edda8818c74726d9f1715dff6741e8e7fc99432100500a1c9f2"
     },
     "Albert": {
       "concur": true,
       "receipt": "docs/reviews/2026-10-03-joseph-pdf/albert.json",
-      "receipt_sha256": "1e779f464902feea231eb5804e51bad935b23cff1a19d456ac14bea9301fcc4f"
+      "receipt_sha256": "f05748939a87477cdd17e7530e66d5e66f91a139fb5e05d3f35038d7638c125d"
     }
   },
   "source_of_truth": "joseph-smith-portrait-research.html",
   "build": "python tools/build_joseph_research_pdf.py",
   "independent_qa": "python tools/joseph_research_pdf_qa.py",
-  "limitations": "Team and technical review are not owner aesthetic acceptance or proof of historical authenticity. Source photographs, document scans, repeated comparisons and new illustrations retain distinct labels."
+  "limitations": "Team and technical review are not owner aesthetic acceptance or proof of historical authenticity. Source photographs, document scans, repeated comparisons and new illustrations retain distinct labels.",
+  "header_buttons_checked": 360,
+  "navigation_pass": true,
+  "link_cues_pass": true,
+  "orphan_headings_pass": true,
+  "appearance": "Website palette: deep teal and green, cream text, restrained gold navigation and non-underlined source links"
 }

@@ -159,7 +159,7 @@ TOOLBAR_STYLE_SHA256 = {'site-header.css': 'a915de3ba44c8e14f127e25ec51498960fb1
 SCOPED_INTERFACE_STYLES = {
     # Owner-requested Joseph research reading panels, independently reviewed on
     # desktop/phone. Exact bytes and two Joseph page owners; no hero-rule exemption.
-    'joseph-smith-research.css': ('4f4dc3eec0a3fec597b09e9d544216eaab520be1164808444ac9cd62d6fd1757', 'joseph-smith-likeness.html'),
+    'joseph-smith-research.css': ('02f8c949d6db9670636a9ff2fc4dc8ad5d92455d5ed0971ba1e71061d5f35eb3', 'joseph-smith-likeness.html'),
     # Newton source-reviewed hub-only CSS; hosted geometry and owner acceptance remain separate.
     'timeline.css': ('5aefac78e15d324cb4f5a9b44c5f0a1bdb26d951f4e7b5078569be67103048d1', 'timeline.html'),
     # Owner-directed Church-source history, independently reviewed 2026-09-30.
