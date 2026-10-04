@@ -1,5 +1,6 @@
 {
   "standard": {
+    "scope": "Historical reviewed-batch preservation baseline, not current enriched acceptance. Current ten-original/rounded-half-Christ evidence is enforced by tools/art_study_current_mandate_qa.py.",
     "identity_reference": "assets/heroes/home-christ-signature-approved-20260907.png",
     "required_visuals_per_page": 6,
     "supporting_visuals_per_page": 5,

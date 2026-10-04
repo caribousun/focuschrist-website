@@ -1,3 +1,9 @@
+"""Retained artwork/source/navigation regression, not full enriched acceptance.
+
+The current ten-original and rounded-half-Christ evidence gate is
+art_study_current_mandate_qa.py. Its independent failure must remain visible;
+this historical inventory regression cannot certify the current mandate.
+"""
 from __future__ import annotations
 
 from collections import Counter
@@ -373,7 +379,7 @@ def main() -> int:
         for error in errors:
             print(f"- {error}")
         return 1
-    print("Art study enrichment QA passed: 4 featured pages with four preserved plus manifest-bound supporting additions each; exact sources, reviewed hashes, reflection/resource/onward paths, and Evidences/Church History contracts verified.")
+    print("Retained Art content regression passed: existing inventory, exact sources, reviewed hashes and study structure verified. This does NOT establish current ten-original or rounded-half-Christ acceptance; run art_study_current_mandate_qa.py separately.")
     return 0
 
 

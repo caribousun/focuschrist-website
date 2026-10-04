@@ -107,6 +107,10 @@ jobs:
           python tools/sitewide_artwork_review_qa.py
           python tools/mobile_scene_qa.py
           python tools/art_study_enrichment_qa.py
+          # Retained-content regression above is not full enrichment acceptance.
+          # These mutation tests test detection; they do not accept site content.
+          # Full enriched acceptance requires art_study_current_mandate_qa.py exit 0.
+          python -m unittest discover -s tools -p test_art_study_current_mandate_qa.py
           python tools/temples_history_qa.py
           python tools/history_service_stories_qa.py
           python tools/history_story_pages_qa.py
