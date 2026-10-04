@@ -1,0 +1,36 @@
+{
+  "routes": [
+    {
+      "route": "art-study/the-good-shepherd.html",
+      "source_sha256": "be7fd9fe8ea251605fdc75efa6ec4207666ec15bed4cf09af5d8adf973f8330f",
+      "staged_sha256": "0e3cf97723df9127cfbcd7d0484a2b6fa79a6ef697eac4b43531f7763ef2bf46",
+      "additive_reading_content_only": true,
+      "opening_change": "Common section around unchanged hero and intro; intro tag section to div, classes/content unchanged, gallery reference shares section",
+      "supporting_images": 10,
+      "status": "STAGED_ONLY_REPAIRED_PIXELS_PENDING",
+      "applied_sha256": "0e3cf97723df9127cfbcd7d0484a2b6fa79a6ef697eac4b43531f7763ef2bf46"
+    },
+    {
+      "route": "art-study/suffer-the-little-children.html",
+      "source_sha256": "a39ff9ff9c0585c1addfefcce4099f37bdfeef8089bc970340122d0bf9ddd887",
+      "staged_sha256": "1d4cfe03d86758d7cea99b4897d3fa4ac465e0ed75d4c21aaf6cf92363027ad9",
+      "additive_reading_content_only": true,
+      "opening_change": "Common section around unchanged hero and intro; intro tag section to div, classes/content unchanged, gallery reference shares section",
+      "supporting_images": 10,
+      "status": "STAGED_ONLY_REPAIRED_PIXELS_PENDING",
+      "applied_sha256": "1d4cfe03d86758d7cea99b4897d3fa4ac465e0ed75d4c21aaf6cf92363027ad9"
+    },
+    {
+      "route": "art-study/be-still.html",
+      "source_sha256": "8dd243c82316e00a7e748148e3d4b240282405a514a49359823243c720d9f70a",
+      "staged_sha256": "832f2c73e4632c35bffe8b72d5ca07289a493f200360bdf1932cc01293f35bc8",
+      "additive_reading_content_only": true,
+      "opening_change": "Common section around unchanged hero and intro; intro tag section to div, classes/content unchanged, gallery reference shares section",
+      "supporting_images": 10,
+      "status": "STAGED_ONLY_REPAIRED_PIXELS_PENDING",
+      "applied_sha256": "832f2c73e4632c35bffe8b72d5ca07289a493f200360bdf1932cc01293f35bc8"
+    }
+  ],
+  "manifest_sha256": "3f09716ba3554c2ef973fc6a8a22aa6bb49c86d33711ce7a598fab5be451f6f8",
+  "strict_and_native_pending": true
+}

@@ -1,0 +1,42 @@
+{
+  "reviewer": "Newton",
+  "time": "2026-10-04T16:37:26.390789+00:00",
+  "result": "CH1_EXACT_PALETTE_PREFLIGHT_PASS",
+  "proposal_file_sha256": "02e51656d6e041aa6c46766c442aa3227317b361e5ce2dd3b29c57c25a17f079",
+  "prompt_sha256": "b4d4f4544b714bec9bcab3d19ce91b9aa7e40dd4ad9d18a69d9baeb69cbeb83e",
+  "robe_color": "very pale cool lavender-blue-gray with faint blue-violet cast; no pink, red, plum-brown or warm rose",
+  "comparators": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\bible-together\\christ-isaiah-nazareth-full.webp",
+      "sha256": "ccb8c152ded8f3b5f8de5d434db9584a94b762e030a0aa728002c81f7694984d",
+      "actual_pixels_viewed_by_Newton": true,
+      "observation": "Actual mantle is medium/dark cool slateblue; proposed very pale blueviolet-gray differs strongly in value and violet emphasis."
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\heroes\\topics\\look-unto-full.webp",
+      "sha256": "2fcd4923869bb80a6c0727e13fd1450f0b7287a026c69be4dfe6390f60d44753",
+      "actual_pixels_viewed_by_Newton": true,
+      "observation": "Actual mantle is muted warm mauve-pink despite smoke-lilac label; proposal excludes warm rose/pink and demands cool blueviolet. This is the named smoke-lilac image, not a separate fifth comparator."
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\jesus-journey\\martha-and-mary-full.webp",
+      "sha256": "9b8410f8753444d6ddb5252fe1126fcc49d92d20c0828f42f4118fe7474df02a",
+      "actual_pixels_viewed_by_Newton": true,
+      "observation": "Actual mantle is medium/dark brownplum; prior mulberry overlapped. Proposed pale cool mantle excludes this warmth and value."
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\art-study\\full\\living-paul-courage-20261004.webp",
+      "sha256": "4b23e29cdb0f6d728783c847de4d88dded877031fde40606a456853f7f4f79a9",
+      "actual_pixels_viewed_by_Newton": true,
+      "observation": "Actual mantle is warm ashrose/pink in lamplight. Proposed cool pale blueviolet excludes this hue; final image must retain distinction under actual lighting."
+    }
+  ],
+  "errors": [],
+  "decision": "Resolve prior CH1 palette hold prospectively for this exact prompt. Preserve scene/source/approved Home identity requirements from prior v3 review.",
+  "limitations": [
+    "This is prompt-level palette concurrence, not generation authorization or finished-image approval.",
+    "No claim of exhaustive sitewide pixel uniqueness; four named actual comparator files viewed independently.",
+    "Both exact frozen-v4 concurrences and root generation gate remain required.",
+    "Finished pixels must match pale cool blueviolet target, stay distinct from these comparator garments, preserve approved Home identity, scene action, anatomy and source constraints."
+  ]
+}

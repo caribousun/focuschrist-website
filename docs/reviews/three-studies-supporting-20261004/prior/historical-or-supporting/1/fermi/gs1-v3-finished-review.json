@@ -1,0 +1,18 @@
+{
+  "evidence": "Full actual original plus enlarged hands inspection work/fermi/gs1-v3-hands-inspection.png; directly compared v2 and Home earlier in this turn.",
+  "mandates_read": [
+    "AGENTS.md",
+    "docs/historical-character-identity.md",
+    "docs/focuschrist-enrichment-and-stewardship-prompt.md"
+  ],
+  "candidate": "work/gary/generated/gs1-candidate-v3.png",
+  "key": "GS1v3",
+  "finding": "The near/screenright wrist now has a compact oval closed mark, but pale transverse/circumferential line texture still runs downward and around it. Far/screenleft wrist still visibly has parallel pale horizontal bands rather than exactly one compact oval spot on otherwise natural skin. Exact remove-all-long-wrapping-parallel-lines repair is not met. Identity, task gaze, sheep, bandage and hand pose visually preserved; no fresh blood or open wound. Preserve this progress and remove residual band-like texture on both wrists, with one compact closed healed scar at each.",
+  "stage": "FINISHED_PIXEL_REVIEW",
+  "result": "HOLD",
+  "candidate_sha256": "71f7514766914a946fb1983af4f0dc072ddf89fd8fc0e5a37026fa431599116b",
+  "limitations": "Image-only independent finding; Newton must independently inspect; no generation authorization, native or owner acceptance.",
+  "reviewer": "Fermi",
+  "prompt_sha256": "f63fb06082e78aac459ba3822cc26c0d8298b0dd7f32eaed0731c76f72454a65",
+  "SITE_use_approved": false
+}

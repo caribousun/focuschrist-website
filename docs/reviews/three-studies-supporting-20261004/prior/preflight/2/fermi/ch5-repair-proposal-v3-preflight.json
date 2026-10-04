@@ -1,0 +1,29 @@
+{
+  "reviewer": "Fermi",
+  "stage": "EXACT_PROMPT_PREFLIGHT",
+  "result": "PASS_SCOPED_PREFLIGHT",
+  "proposal_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-integration-continuation\\work\\gary\\ch5-repair-proposal-v3.json",
+  "proposal_sha256": "f10e912bd779b2c1c560ce4b51cb7501560db7b6b76f317b8072d092d120c845",
+  "prompt_sha256": "cce01f31f137168b1e570cff4f91e5f097509a7c9480baa776b8a433e477264e",
+  "reference_roles": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-integration-continuation\\work\\gary\\generated\\ch5-candidate-v2.png",
+      "sha256": "7f3b4eb61eef0bc20dde0bed65205c3c75d0270508824bf60300b452bf502a4a",
+      "role": "Image 1 sole edit target; remove remaining small button-like mark only."
+    }
+  ],
+  "finding": "Actual exactCH5v2 full image/object crop inspected. v3 identifies remaining screen-left cup button-bearing patch correctly and removes control/rim/inset/shadow entirely while retaining cup curvature, child/adult fingers, faces, mutual gaze, voluntary posture and open return path. Modern fictional identities retained; no named historical or medical claim introduced.",
+  "mandates_read": [
+    "Live Master protected foundation and operating map",
+    "Latest00B and FocusCurrent",
+    "SITE AGENTS.md",
+    "docs/historical-character-identity.md",
+    "docs/focuschrist-enrichment-and-stewardship-prompt.md",
+    "docs/enriched-picture-owner-mandate.md"
+  ],
+  "limits": [
+    "Fermi independent preflight only; Newton and root execution authorization separate",
+    "CH5v2 remains HOLD; actual new pixels must independently pass before use",
+    "No SITE/canonical/generation/publication actions"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "reviewer": "Fermi",
+  "key": "GS1",
+  "version": 5,
+  "stage": "FINISHED_PIXEL_REVIEW",
+  "status": "PASS_SCOPED_ACTUAL_PIXELS",
+  "candidate_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-integration-continuation\\work\\gary\\generated\\gs1-candidate-v5.png",
+  "candidate_sha256": "875fe190b3b589712f5e4da9cafa699e66ac980b6b8cd5eaed39a1d8537ddee1",
+  "finding": "Full1536x1024 image and enlarged both-wrists crop inspected independently against heldv3 and actual Home identity. Far wrist now has one small isolated oval; parallel pale bands removed. Near wrist compact oval retained, surrounding texture now reads natural fine skin folds/hair rather than a connected pale wrapping scar. Hidden palms remain hidden, no dorsal hand marks. Face/eyes/task gaze, hands, sheep/bandage and woven cloth visually preserved. Closed pale marks, no open wound/blood.",
+  "source_and_reference_evidence": "Full Home reference and exact heldv3 pixels inspected this turn; complete supplied John10/Ezek34 read.",
+  "mandates_read": [
+    "Live exact Master/foundation/map and latest00B/FocusCurrent",
+    "SITE AGENTS.md",
+    "docs/historical-character-identity.md",
+    "docs/focuschrist-enrichment-and-stewardship-prompt.md",
+    "docs/enriched-picture-owner-mandate.md",
+    "docs/section-panel-design-mandate.md",
+    "docs/art-study-current-mandate-control.md"
+  ],
+  "limits": [
+    "Scoped independent Fermi review; Newton concurrence and root assembled native review remain separate",
+    "No SITE write, generation or publication authorization",
+    "No owner aesthetic acceptance"
+  ]
+}

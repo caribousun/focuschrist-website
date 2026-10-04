@@ -1,0 +1,20 @@
+{
+  "reviewer": "Newton",
+  "result": "PASS_SCOPED_FINISHED_PIXELS",
+  "candidate_path": "work\\gary\\generated\\bs1-candidate-v2.png",
+  "candidate_sha256": "b38bc8ff679a3a11bf819a7c362f13336c4a58e076895ee9db153bced8cb9d25",
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "depicts_christ": true,
+  "actual_full_pixels_inspected": true,
+  "actual_detail_pixels_inspected": true,
+  "finding": "Full output, prior output, actual storm full image and C/D detail inspected. Far-right companion now has upper-rear C-like heavier brow, nose and beard structure with calm closed-mouth expression, rather than prior foreground-D frightened facial form. Exactly Christ plus three companions; A/B and Home likeness retained, mutual attentive gaze and calm boat context coherent; period clothing and hands natural. C source remains partially obscured/soft, limiting fine feature precision.",
+  "next_action": "Keep full uncropped3:2 and inspect delivered variants/native page; no named-apostle identification or miracle claim.",
+  "limits": [
+    "Exact candidate-only finished-pixel review; not derived-variant lineage, assembled desktop/phone or release acceptance.",
+    "No generation/retry authorized by this receipt.",
+    "Identity comparison is artistic continuity, not historical authentication."
+  ]
+}

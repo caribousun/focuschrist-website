@@ -1,0 +1,344 @@
+{
+  "reviewer": "Gary",
+  "status": "PASS_SCOPED_MARKUP_SOURCE_EQUIVALENCE",
+  "scope": "Independent parsed entire page comparison to exact pre-mutation snapshots; only57source-anchor target/rel attrs and3shared JS token changes. Does not approve JS runtime or native behavior.",
+  "rows": [
+    {
+      "route": "art-study/the-good-shepherd.html",
+      "before": "0e3cf97723df9127cfbcd7d0484a2b6fa79a6ef697eac4b43531f7763ef2bf46",
+      "after": "e94c59f33033f7c2b970bb878282250d0c7378b99dde7f418856965337c71d05",
+      "source_copy_images_dom_equal_after_only_declared_attribute_normalization": true,
+      "deltas": [
+        {
+          "tag": "script",
+          "before": "../topic-artwork-details.js?v=20260930-history-records-1",
+          "after": "../topic-artwork-details.js?v=20261004-study-return-1"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/ot/ezek/34?lang=eng&id=p1-p6#p1",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/ot/ezek/34?lang=eng&id=p11-p16#p11",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/ot/ezek/34?lang=eng&id=p30-p31#p30",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng&id=p11-p18#p11",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/ot/ezek/34?lang=eng&id=p11-p16#p11",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/ot/ezek/34?lang=eng&id=p17-p19#p17",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/ot/ezek/34?lang=eng&id=p17-p22#p17",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/ot/ezek/34?lang=eng&id=p20-p22#p20",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/ot/ezek/34?lang=eng&id=p23-p24#p23",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/2?lang=eng&id=p14-p18#p14",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/2?lang=eng&id=p14-p18#p14",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng&id=p19-p21#p19",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng&id=p26-p27#p26",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng&id=p16-p21#p16",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng&id=p26-p27#p26",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng&id=p26-p27#p26",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/rom/10?lang=eng&id=p14-p17#p14",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/rom/10?lang=eng&id=p14-p17#p14",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng&id=p3-p5#p3",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng&id=p27#p27",
+          "added": "target=_blank rel=noopener noreferrer"
+        }
+      ]
+    },
+    {
+      "route": "art-study/suffer-the-little-children.html",
+      "before": "1d4cfe03d86758d7cea99b4897d3fa4ac465e0ed75d4c21aaf6cf92363027ad9",
+      "after": "454a2f833f86bc4ddacf6e99e39afa2907dee83fb17df4dde984f3b9c9ee8258",
+      "source_copy_images_dom_equal_after_only_declared_attribute_normalization": true,
+      "deltas": [
+        {
+          "tag": "script",
+          "before": "../topic-artwork-details.js?v=20260930-history-records-1",
+          "after": "../topic-artwork-details.js?v=20261004-study-return-1"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/21?lang=eng&id=p12-p16#p12",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/21?lang=eng&id=p14-p16#p14",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/21?lang=eng&id=p16#p16",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng&id=p13-p16#p13",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/9?lang=eng&id=p33-p37#p33",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/9?lang=eng&id=p33-p37#p33",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng&id=p13-p16#p13",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/1?lang=eng&id=p19-p22#p19",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/1?lang=eng&id=p19-p22#p19",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/9?lang=eng&id=p36-p37#p36",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng&id=p1-p3#p1",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng&id=p13-p15#p13",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng&id=p13-p16#p13",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng&id=p16#p16",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng&id=p13-p16#p13",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng&id=p13-p16#p13",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/1?lang=eng&id=p19#p19",
+          "added": "target=_blank rel=noopener noreferrer"
+        }
+      ]
+    },
+    {
+      "route": "art-study/be-still.html",
+      "before": "832f2c73e4632c35bffe8b72d5ca07289a493f200360bdf1932cc01293f35bc8",
+      "after": "569c8b49c6e2a6e8fdf1036698e63d2024b5e1c36b2f0946a3e39e93fc82e81c",
+      "source_copy_images_dom_equal_after_only_declared_attribute_normalization": true,
+      "deltas": [
+        {
+          "tag": "script",
+          "before": "../topic-artwork-details.js?v=20260930-history-records-1",
+          "after": "../topic-artwork-details.js?v=20261004-study-return-1"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng&id=p1-p3#p1",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng&id=p6-p9#p6",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng&id=p6-p11#p6",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng&id=p10-p11#p10",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng&id=p6-p11#p6",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/6?lang=eng&id=p30-p32#p30",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/6?lang=eng&id=p30-p34#p30",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/6?lang=eng&id=p33-p34#p33",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/philip/4?lang=eng&id=p4-p7#p4",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/philip/4?lang=eng&id=p4-p9#p4",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/philip/4?lang=eng&id=p8-p9#p8",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/philip/4?lang=eng&id=p11-p14#p11",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/1?lang=eng&id=p19-p20#p19",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/1?lang=eng&id=p19-p22#p19",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/1?lang=eng&id=p21-p22#p21",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/3?lang=eng&id=p13-p18#p13",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/3?lang=eng&id=p13-p16#p13",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/3?lang=eng&id=p13-p18#p13",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/3?lang=eng&id=p17-p18#p17",
+          "added": "target=_blank rel=noopener noreferrer"
+        },
+        {
+          "tag": "a",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng&id=p13#p13",
+          "added": "target=_blank rel=noopener noreferrer"
+        }
+      ]
+    }
+  ],
+  "new_page_hashes": {
+    "art-study/the-good-shepherd.html": "e94c59f33033f7c2b970bb878282250d0c7378b99dde7f418856965337c71d05",
+    "art-study/suffer-the-little-children.html": "454a2f833f86bc4ddacf6e99e39afa2907dee83fb17df4dde984f3b9c9ee8258",
+    "art-study/be-still.html": "569c8b49c6e2a6e8fdf1036698e63d2024b5e1c36b2f0946a3e39e93fc82e81c"
+  },
+  "prior_curatorial_review": {
+    "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-candidate-verification\\work\\gary\\source-curatorial-review.json",
+    "sha256": "467fa4bb72933434f542dcebd25e0da0fc12e167027e03849653a5225d257d9a"
+  },
+  "limits": [
+    "No SITE write.",
+    "Existing source/copy review remains applicable through proven text/source/image equivalence. New runtime behavior remains root/Fermi/Newton verification."
+  ]
+}

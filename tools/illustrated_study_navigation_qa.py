@@ -26,7 +26,9 @@ def check():
         if set(page.relative_to(ROOT).parts) & {'work', '.git', 'node_modules'}: continue
         for script in soup(page.relative_to(ROOT).as_posix()).select('script[src]'):
             if 'topic-artwork-details.js' in script['src']:
-                expected_version={route:'20261004-joseph-journeys-1' for route in ('joseph-smith-portrait-research.html','joseph-smith-likeness.html','answers/who-was-joseph-smith.html')}.get(page.relative_to(ROOT).as_posix(),controller_version)
+                expected_versions = {route:'20261004-joseph-journeys-1' for route in ('joseph-smith-portrait-research.html','joseph-smith-likeness.html','answers/who-was-joseph-smith.html')}
+                expected_versions.update({route:'20261004-study-return-1' for route in ('art-study/be-still.html','art-study/suffer-the-little-children.html','art-study/the-good-shepherd.html','art-study/the-living-christ.html')})
+                expected_version = expected_versions.get(page.relative_to(ROOT).as_posix(),controller_version)
                 assert script['src'].endswith('topic-artwork-details.js?v='+expected_version), ('Stale picture controller', page)
                 consumers += 1
         for a in soup(page.relative_to(ROOT).as_posix()).select('a'):

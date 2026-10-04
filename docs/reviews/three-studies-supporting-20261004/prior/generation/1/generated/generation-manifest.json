@@ -1,0 +1,197 @@
+{
+  "author": "Gary",
+  "tool": "builtin imagegen",
+  "preserved_prior_manifest": "C:/Users/wyatt/Documents/Codex/2026-10-04/full-site-enriched-review-continuation/work/gary/generated/generation-manifest.json",
+  "outputs": [
+    {
+      "key": "GS1",
+      "version": 3,
+      "prompt": "Image 1 is the sole edit target. Image 2 is the exact owner-approved Home portrait supplied only to verify and preserve Jesus Christ’s recognizable identity. Retain image 1’s face and expression; do not import image 2’s smile, pose, clothing, lighting, background or composition. Edit only the marks on the two exposed wrists. Remove all long white lines, wrapping lines, parallel lines and bracelet-like scar bands from both wrists and restore their surrounding natural skin texture. At each exposed wrist joint place exactly one small localized oval healed puncture scar. Each mark occupies a compact spot only, with pale slightly textured fully closed healed skin. Neither scar stretches across the wrist or wraps around it. No long linear scar, paired lines, parallel marks, ring or bracelet shape. No red wound, dark hole, incision, scab or blood. Retain natural skin on the backs of both hands; do not add any mark to a dorsal hand, finger, forearm or sleeve. Both palms remain naturally hidden by the exact current pose; do not rotate hands or expose palms. Preserve every other part of image 1 unchanged, including Jesus Christ’s exact approved recognizable face, hair, expression, gaze, body, kneeling pose, hand and finger anatomy and positions, sleeves, lichen-stone gray mantle, sheep, bandage, mat, stone shelter, lighting, framing and photographic detail. No extra marks, glow or halo. Retain the exact 1536x1024 landscape composition and convincing photographic appearance.",
+      "prompt_sha256": "f63fb06082e78aac459ba3822cc26c0d8298b0dd7f32eaed0731c76f72454a65",
+      "proposal_path": "C:/Users/wyatt/Documents/Codex/2026-10-04/full-site-enriched-review-continuation/work/gary/gs1-repair-proposal-v3.json",
+      "proposal_sha256": "b79b320ab589c9da7c06d60ee027a14ee4311803a2c506f6cfe192d6200d86e1",
+      "references": [
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\gs1-candidate-v2.png",
+          "sha256": "5b1518cc5f3ae639a7ad787f8c9374116fb7abbfeb31a741e3edfe08ca3378dc",
+          "role": "Image 1 exact edit target; only wrist marks change."
+        },
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\heroes\\home-christ-signature-approved-20260907.png",
+          "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+          "role": "Image 2 actual approved Home identity only; no portrait pose/background transfer."
+        }
+      ],
+      "original_generated_path": "C:/Users/wyatt/.codex/generated_images/01a107e2-b21c-75d3-816b-fca55beb069a/exec-f1143065-44ec-4ecf-9854-e2de21f9d191.png",
+      "candidate_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-enriched-continuation\\work\\gary\\generated\\gs1-candidate-v3.png",
+      "output_sha256": "71f7514766914a946fb1983af4f0dc072ddf89fd8fc0e5a37026fa431599116b",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "finished_pixel_review": "PENDING_FERMI_AND_NEWTON",
+      "SITE_use_authorized": false
+    },
+    {
+      "key": "CH2",
+      "version": 2,
+      "prompt": "Image 1 is the sole edit target and actual reference for all four fictional people and the scene. Repair only the framing so the adult woman's entire head, including all crown hair, is visible with clear breathing room above it. Retain a 1536x1024 landscape composition: pull the camera back modestly and extend the existing room naturally around the preserved scene rather than cropping any child or action. Leave at least five percent of the image height as visible background above the adult's complete crown. Preserve the three children's recognizable faces, expressions, age, clothing, poses and natural gaze toward the game; preserve the adult's recognizable visible face, expression, clothing, hands and empty-chair movement. Complete only the previously clipped portion of her head naturally. Keep the wheelchair-using girl actively rolling the same single soft blue ball across the same level accessible tabletop to the boy opposite, and the third child waiting with hands on the table. Preserve their agency, supported seated position, wheelchair, foot supports, clear knee space, separated natural hands, table construction and clear route behind the wheelchair. The adult remains moving the same unused chair away from that route, without touching a child. Keep every complete face and all essential hands safely inside the frame. Preserve the original room, objects, lighting, colors, depth and convincing photographic texture as closely as the small wider framing allows. Do not change the activity, exchange the people, add participants, duplicate limbs or the ball, add text or branding, stand the girl up, create a medical cure or change the emotional tone. Natural contemporary modest clothing, lifelike skin and hair, no painting, CGI, glamour or supernatural effects.",
+      "prompt_sha256": "279726fd41664263524702ae282abd83e42940dc7f30632f2046e824b2d38f48",
+      "proposal_path": "work/gary/ch2-repair-proposal-v2.json",
+      "proposal_sha256": "77ddf12396398786745c9390c2995d53e90b332450b6784ff5cd0a55ad4056b0",
+      "references": [
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\ch2-candidate-v1.png",
+          "sha256": "1cfe585d868902f317580df497b86d42e87e56c7259e9d650d1f06bb75c5ada0",
+          "role": "Image 1 sole edit target and actual scene/fictional identity reference."
+        }
+      ],
+      "original_generated_path": "C:/Users/wyatt/.codex/generated_images/01a107e2-b21c-75d3-816b-fca55beb069a/exec-63483561-b3ca-405a-b5f7-626dab72f447.png",
+      "candidate_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-enriched-continuation\\work\\gary\\generated\\ch2-candidate-v2.png",
+      "output_sha256": "12ac73978b43eed0dc24db02529424d7d2ac2338494291716b7a6dc9abb6006b",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "finished_pixel_review": "PENDING_FERMI_AND_NEWTON",
+      "SITE_use_authorized": false
+    },
+    {
+      "key": "CH4",
+      "version": 1,
+      "prompt": "At a present-day school lunch table, one school-age child has opened a plain lunchbox and taken out one spare snack packet. The child offers that still-sealed packet across the table to a classmate who reaches to receive it. The packet remains visibly unopened throughout this single moment; nobody tears it open. Both have ordinary lunches already in front of them; do not portray starvation, humiliation or a charitable performance. A supervising adult in the background has a relaxed attentive posture. Show the actual moment of offering and receiving, friendly mutual eye contact, modest school clothes and natural hands. No brand labels, readable allergy or private records, religious apparition, coins, adult pantry queue or sacramental bread. No biting or feeding another child by hand. Create one new 1536x1024 landscape image with convincing live-action photographic clarity, lifelike skin, natural woven or contemporary fabrics, believable anatomy and individual scene-appropriate expressions. Keep essential faces and hands within generous 3:2 margins. No painting, CGI, waxy skin, glamour, halos, writing, watermark or collage. All people are fictional unnamed contemporary people, not Jesus, a known religious figure, or a likeness transferred from existing artwork. Modest ordinary clothing, natural available light, no commercial branding, private readable information or supernatural apparition. Show dignity and active participation rather than a staged charity portrait.",
+      "prompt_sha256": "5c5e8edbcb073c3c620ee5ed23ffe828f6eafa4fd6f9b7c7e583ba3cdd98f87f",
+      "proposal_path": "C:/Users/wyatt/Documents/Codex/2026-10-04/full-site-enriched-review-continuation/work/gary/three-study-plans-v4.json",
+      "proposal_sha256": "d6b81ca9f96d0f539c155debf65e91ce2953124ecd449cb9f978b6f28bfa5914",
+      "references": [],
+      "original_generated_path": "C:/Users/wyatt/.codex/generated_images/01a107e2-b21c-75d3-816b-fca55beb069a/exec-6818188f-18f5-4017-a31a-59fff4a02738.png",
+      "candidate_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-enriched-continuation\\work\\gary\\generated\\ch4-candidate-v1.png",
+      "output_sha256": "5cc23a24311c8bbb95c33e8032c8cbfcd09964344f9b93f8baa7ab3ba5e7d6aa",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "finished_pixel_review": "PENDING_FERMI_AND_NEWTON",
+      "SITE_use_authorized": false
+    },
+    {
+      "key": "CH5",
+      "version": 1,
+      "prompt": "Beside a busy community gathering, a young child has chosen a small quiet seating area visible through an open doorway. A parent sits at the child’s level and offers plain ear defenders on an open palm; the child reaches to choose them. A soft floor cushion and dimmable table lamp are nearby; no toys scattered around, no isolation room or locked door. Other families remain softly visible beyond the open doorway, with a clear return path. Child and parent meet one another’s eyes; calm attentiveness without a diagnostic label, distress spectacle or pressure to return. Ordinary modest clothing, no medical instruments, restraint, forced embrace or miracle cure. Create one new 1536x1024 landscape image with convincing live-action photographic clarity, lifelike skin, natural woven or contemporary fabrics, believable anatomy and individual scene-appropriate expressions. Keep essential faces and hands within generous 3:2 margins. No painting, CGI, waxy skin, glamour, halos, writing, watermark or collage. All people are fictional unnamed contemporary people, not Jesus, a known religious figure, or a likeness transferred from existing artwork. Modest ordinary clothing, natural available light, no commercial branding, private readable information or supernatural apparition. Show dignity and active participation rather than a staged charity portrait.",
+      "prompt_sha256": "1d96a96e8da3f99f521e8db69fb6fd6cf77ebe4a5931808488188c88f3b2a3e6",
+      "proposal_path": "C:/Users/wyatt/Documents/Codex/2026-10-04/full-site-enriched-review-continuation/work/gary/three-study-plans-v4.json",
+      "proposal_sha256": "d6b81ca9f96d0f539c155debf65e91ce2953124ecd449cb9f978b6f28bfa5914",
+      "references": [],
+      "original_generated_path": "C:/Users/wyatt/.codex/generated_images/01a107e2-b21c-75d3-816b-fca55beb069a/exec-1777cd8c-877a-4940-aae0-399a619eeb4a.png",
+      "candidate_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-enriched-continuation\\work\\gary\\generated\\ch5-candidate-v1.png",
+      "output_sha256": "784aaf979e541b79db24734b6263c5be189e001f8466075d56b9f44f98174a6e",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "finished_pixel_review": "PENDING_FERMI_AND_NEWTON",
+      "SITE_use_authorized": false
+    },
+    {
+      "key": "BS1",
+      "version": 1,
+      "prompt": "Use both actual attached images. The Home portrait alone controls Jesus Christ’s exact recognizable face. The storm-boat picture supplies continuity for three unnamed adult companions only: the foreground-left headband man, behind-left man and far-right rear man. Preserve those three distinct faces without claiming named apostle identities. Map A to the headband man at foreground left; B to the open-mouthed man behind A; C to the partly obscured far-right rear man behind the mast. Omit the lower-right foreground companion D entirely from the new image. Do not redesign, replace or blend his face. Home Christ is a separate fourth face; never transfer Home facial features to A, B or C, and never use the standing central figure from the storm image as a substitute Christ reference. Retain each companion's source facial structure while allowing a calm, individual expression. Do not alter a companion's face merely to make the group seem more varied. Show a different event and action: the quiet departure for rest in Mark 6:30–32. In ordinary calm daylight a wooden Galilean boat has just left a shore visible in the distance; Jesus sits securely near the bow while the three adult companions settle seated positions. Companion B rows slowly; A and C rest their hands on their own knees or a stationary bench. Show exactly Jesus plus these three companions within the picture, without additional faces, silhouettes or reflected people; this is a framed subset of the company. Christ turns toward the headband companion with gentle attentive concern; that companion returns His gaze with a tired but relieved expression. Use a wide horizontal side view, no towering mast or heroic standing pose. Jesus wears undyed linen and a muted pale apricot-gray mantle; other garments are dry plain earth-tone tunics. Mortal ministry: no healed nail marks. No storm, rain, waves crashing, fear, sleep, rebuking gesture, fish haul, charcoal fire, meal, walking on water or miraculous calm. The framing shows a few companions, not a claim that only three apostles were present. Create one new 1536x1024 landscape image with convincing live-action photographic clarity, lifelike skin, natural woven or contemporary fabrics, believable anatomy and individual scene-appropriate expressions. Keep essential faces and hands within generous 3:2 margins. No painting, CGI, waxy skin, glamour, halos, writing, watermark or collage.",
+      "prompt_sha256": "3322c5c19e4fe0e6f9bf3d57d26bc6606f6e1953992494bfd97bcebfa9a9a64c",
+      "proposal_path": "C:/Users/wyatt/Documents/Codex/2026-10-04/full-site-enriched-review-continuation/work/gary/three-study-plans-v4.json",
+      "proposal_sha256": "d6b81ca9f96d0f539c155debf65e91ce2953124ecd449cb9f978b6f28bfa5914",
+      "references": [
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\heroes\\home-christ-signature-approved-20260907.png",
+          "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+          "role": "Exact owner-approved Jesus identity. Actual pixels required; expression adapts to scene. Not an authenticated historical portrait."
+        },
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\art-study\\full\\still-storm-boat.webp",
+          "sha256": "fdb60ec2ecdee51a24264fc53f0c1aed7cbde5d10dcaec32a6e3d8840b42911c",
+          "role": "Continuity only for three unnamed adult companions: A foreground-left headband man; B behind-left bearded man; C far-right rear man. Omit D, the lower-right foreground man. Do not alter or transfer D identity. Do not copy reference Jesus, storm, poses, frightened expressions or clothing colors. No named apostle mapping or complete apostolic headcount is claimed."
+        }
+      ],
+      "original_generated_path": "C:/Users/wyatt/.codex/generated_images/01a107e2-b21c-75d3-816b-fca55beb069a/exec-ee688581-4a6a-4f2c-9781-cd97858fa4fb.png",
+      "candidate_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-enriched-continuation\\work\\gary\\generated\\bs1-candidate-v1.png",
+      "output_sha256": "6a96f12c6847b49a25088df64e4d2fb1054cbb3a5777d3aaa2dace99fa4ff504",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "finished_pixel_review": "PENDING_FERMI_AND_NEWTON",
+      "SITE_use_authorized": false
+    },
+    {
+      "key": "BS2",
+      "version": 1,
+      "prompt": "In a small contemporary sewing workspace, an adult woman has switched off her sewing machine and moved both hands into her lap, away from the needle. A half-finished plain curtain remains on the worktable. She sits upright with eyes gently closed for a brief prayerful pause, shoulders relaxed and expression honest rather than blissful. The task remains visibly unfinished, and the machine is completely still. No open Bible, journal, mobile phone, kitchen breakfast, bedside grief, urgent deadline text or other person. Show ordinary work being paused, not a claim that prayer completed the work or removed anxiety. Create one new 1536x1024 landscape image with convincing live-action photographic clarity, lifelike skin, natural woven or contemporary fabrics, believable anatomy and individual scene-appropriate expressions. Keep essential faces and hands within generous 3:2 margins. No painting, CGI, waxy skin, glamour, halos, writing, watermark or collage. All people are fictional unnamed contemporary people, not Jesus, a known religious figure, or a likeness transferred from existing artwork. Modest ordinary clothing, natural available light, no commercial branding, private readable information or supernatural apparition. Show dignity and active participation rather than a staged charity portrait.",
+      "prompt_sha256": "583ccdc7d390ff8037b7552c7a9aa75ee628373f8b3dfe83e466c9c4e5491e53",
+      "proposal_path": "C:/Users/wyatt/Documents/Codex/2026-10-04/full-site-enriched-review-continuation/work/gary/three-study-plans-v4.json",
+      "proposal_sha256": "d6b81ca9f96d0f539c155debf65e91ce2953124ecd449cb9f978b6f28bfa5914",
+      "references": [],
+      "original_generated_path": "C:/Users/wyatt/.codex/generated_images/01a107e2-b21c-75d3-816b-fca55beb069a/exec-82d201b6-fbd1-4d8b-a34d-927eff9ae19b.png",
+      "candidate_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-enriched-continuation\\work\\gary\\generated\\bs2-candidate-v1.png",
+      "output_sha256": "ffb4b79a8e3e4c6c3d539ec46f6c10ab7fdd55431d40594fe1da5dfc082babd7",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "finished_pixel_review": "PENDING_FERMI_AND_NEWTON",
+      "SITE_use_authorized": false
+    },
+    {
+      "key": "BS3",
+      "version": 1,
+      "prompt": "At a dry home woodworking bench, an adult father has placed a hand sanding block flat on the bench and taken both hands away from the wooden board. His teenage daughter stands beside the workbench and begins speaking; he has turned his entire head and body toward her and listens with clear mutual eye contact. No powered tools operating, sharp blades, sawdust clouds or private text. The unfinished board and laid-down sanding block show the interruption. Both have natural individualized faces and ordinary protective clothing appropriate to a quiet hand-sanding task. No phone, drawing, model bridge, crying or automatic reassuring embrace. Create one new 1536x1024 landscape image with convincing live-action photographic clarity, lifelike skin, natural woven or contemporary fabrics, believable anatomy and individual scene-appropriate expressions. Keep essential faces and hands within generous 3:2 margins. No painting, CGI, waxy skin, glamour, halos, writing, watermark or collage. All people are fictional unnamed contemporary people, not Jesus, a known religious figure, or a likeness transferred from existing artwork. Modest ordinary clothing, natural available light, no commercial branding, private readable information or supernatural apparition. Show dignity and active participation rather than a staged charity portrait.",
+      "prompt_sha256": "ddf42651d9425fabf7704251e3962ad7046badf68fbb051b5c5048f90b7d4279",
+      "proposal_path": "C:/Users/wyatt/Documents/Codex/2026-10-04/full-site-enriched-review-continuation/work/gary/three-study-plans-v4.json",
+      "proposal_sha256": "d6b81ca9f96d0f539c155debf65e91ce2953124ecd449cb9f978b6f28bfa5914",
+      "references": [],
+      "original_generated_path": "C:/Users/wyatt/.codex/generated_images/01a107e2-b21c-75d3-816b-fca55beb069a/exec-dd1c9053-d6be-4fea-ad66-9760508a13b6.png",
+      "candidate_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-enriched-continuation\\work\\gary\\generated\\bs3-candidate-v1.png",
+      "output_sha256": "a1007bf3a7f40e3dfb3efa1d8cb2a6a8fe3072bad565898aa3811c7dfd4668b7",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "finished_pixel_review": "PENDING_FERMI_AND_NEWTON",
+      "SITE_use_authorized": false
+    },
+    {
+      "key": "BS4",
+      "version": 1,
+      "prompt": "At an open apartment doorway, an adult resident turns the physical volume dial on a small unbranded speaker down while meeting the eyes of an adult neighbor standing in the corridor. The neighbor gestures gently toward their own ear with an open relaxed hand, not pointing angrily. Both stand comfortably apart; faces convey consideration and a respectful request. The speaker and hand on its dial are clearly visible, the door remains open, and the corridor is uncluttered. No readable display, threatening behavior, confrontation, security officer, handshake, apology sign, child or religious apparition. This is one ordinary considerate adjustment, not a dramatic dispute being solved. Create one new 1536x1024 landscape image with convincing live-action photographic clarity, lifelike skin, natural woven or contemporary fabrics, believable anatomy and individual scene-appropriate expressions. Keep essential faces and hands within generous 3:2 margins. No painting, CGI, waxy skin, glamour, halos, writing, watermark or collage. All people are fictional unnamed contemporary people, not Jesus, a known religious figure, or a likeness transferred from existing artwork. Modest ordinary clothing, natural available light, no commercial branding, private readable information or supernatural apparition. Show dignity and active participation rather than a staged charity portrait.",
+      "prompt_sha256": "3263cc84e8e9645edb660bdbde9a1e360b8d61eff9fffe82b9453886dcfc03be",
+      "proposal_path": "C:/Users/wyatt/Documents/Codex/2026-10-04/full-site-enriched-review-continuation/work/gary/three-study-plans-v4.json",
+      "proposal_sha256": "d6b81ca9f96d0f539c155debf65e91ce2953124ecd449cb9f978b6f28bfa5914",
+      "references": [],
+      "original_generated_path": "C:/Users/wyatt/.codex/generated_images/01a107e2-b21c-75d3-816b-fca55beb069a/exec-37efa987-34e8-4439-884b-206843edd87a.png",
+      "candidate_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-enriched-continuation\\work\\gary\\generated\\bs4-candidate-v1.png",
+      "output_sha256": "5e0da18e670f73a983b92e39cbf0824e1e5782e753961dc60e5aeb0f3b75d1a3",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "finished_pixel_review": "PENDING_FERMI_AND_NEWTON",
+      "SITE_use_authorized": false
+    },
+    {
+      "key": "BS5",
+      "version": 1,
+      "prompt": "Create one restrained photographic still life inspired by Psalm 46:6–11, especially verses 8–10. On bare ancient-looking earth lie a single broken wooden bow with slack string, one splintered spear shaft with an intact dull metal point directed away from the viewer, and part of a charred wooden chariot wheel. All objects are inert and plainly unusable; no people, bodies, blood, active fire, combat, burning buildings or triumphal flags. Soft morning daylight reveals weathered wood and quiet empty space beyond. Use plausible simple ancient materials without naming an archaeological site, nation, date or recovered artifact. This is visual reflection on the psalm’s poetry, not a purported photograph of a recorded battlefield, not a modern war scene and not a fantasy weapons poster. Create one new 1536x1024 landscape image with convincing live-action photographic clarity, natural wood, metal and earth textures, coherent object construction and physically plausible light. Keep all three inert objects within generous 3:2 margins. No people, painting, CGI, glamour, halos, writing, watermark or collage.",
+      "prompt_sha256": "c0f526f8a2a66b2df42d306322488f04b1bbc73530e35bfd8920fdb902cee1d8",
+      "proposal_path": "C:/Users/wyatt/Documents/Codex/2026-10-04/full-site-enriched-review-continuation/work/gary/three-study-plans-v4.json",
+      "proposal_sha256": "d6b81ca9f96d0f539c155debf65e91ce2953124ecd449cb9f978b6f28bfa5914",
+      "references": [],
+      "original_generated_path": "C:/Users/wyatt/.codex/generated_images/01a107e2-b21c-75d3-816b-fca55beb069a/exec-ef2dae23-c078-4f92-b46b-5f5d41b7976a.png",
+      "candidate_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-enriched-continuation\\work\\gary\\generated\\bs5-candidate-v1.png",
+      "output_sha256": "1904a0cb7c0bb79c3fbe27cecec7401524e9514d7cbd0404c9168410a2bdf4e3",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "finished_pixel_review": "PENDING_FERMI_AND_NEWTON",
+      "SITE_use_authorized": false
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "reviewer": "Newton",
+  "status": "HOLD_ONE_INLINE_REFERENCE_CORRECTION",
+  "copy_path": "work\\fermi\\three-study-copy.json",
+  "copy_sha256": "4d251ac09439976633d5c13965544924dd776c733ff8b96ffc2529f51e80903a",
+  "expected_reviewed_sha256": "4d251ac09439976633d5c13965544924dd776c733ff8b96ffc2529f51e80903a",
+  "scope": "Bounded independent source, prose, candidate-pixel alignment and local onward existence review of all 15 entries.",
+  "findings": [
+    "All 13 complete saved official chapter extracts read and their recorded hashes independently verified.",
+    "Inline exact verse labels and fragments match, parsed anchors have fc-inline-scripture, declared sources cover actual links, and all 15 onward paths exist locally.",
+    "Source and prose alignment broadly passes; modern applications are distinct from recorded scriptural events.",
+    "BS5 first paragraph names Psalm 46 without a link while describing verses 1-3. Link this occurrence as Psalm 46:1–3 with exact reader URL and add corresponding source record before final exact-hash concurrence."
+  ],
+  "required_correction_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng&id=p1-p3#p1",
+  "limits": [
+    "GS1, CH5 and BS1 copy remains conditional on resolution of their held images; copy concurrence never approves those pixels.",
+    "No live external click, native page rendering, publication or owner aesthetic acceptance is claimed.",
+    "No new generation or repairs authorized. Root stop instruction applies; later refinements belong fresh receiver."
+  ],
+  "source_reads": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\bofm-mosiah-4.txt",
+      "sha256": "d0a8d8b8b65dfcd5941125f55baed3b0f3933ea9a5a46e53172acdf8980b5208",
+      "read_scope": "Complete saved official chapter extract independently read this turn"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-james-1.txt",
+      "sha256": "9c4fc8ea3be29922843a09365c24451f9c4ca1a614ab12212b4db61735796cb5",
+      "read_scope": "Complete saved official chapter extract independently read this turn"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-james-2.txt",
+      "sha256": "60fc4a3decd89d000c446d2576c8a863f15e507fd21c69e99dafedad6f9d2b8d",
+      "read_scope": "Complete saved official chapter extract independently read this turn"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-james-3.txt",
+      "sha256": "2561ceb88b9a023d91d3c33ad8f71f84661c80cf771b5961ed83d17007993b19",
+      "read_scope": "Complete saved official chapter extract independently read this turn"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-john-10.txt",
+      "sha256": "9a149aff67464f6ab0f2d974361123e0388bc6fe1e6aa9d0b314a0582d9d0776",
+      "read_scope": "Complete saved official chapter extract independently read this turn"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-mark-10.txt",
+      "sha256": "5463378834d7a4ab6e8354f08771526271776a55362835aa15cfae041d392eae",
+      "read_scope": "Complete saved official chapter extract independently read this turn"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-mark-6.txt",
+      "sha256": "c36643073ed6a3dffbcb610334b3b805765e3049ec9d491bf5936b3f0202ae10",
+      "read_scope": "Complete saved official chapter extract independently read this turn"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-mark-9.txt",
+      "sha256": "77d303ee9c976e3d55192dd35ae2409640744f601a775e39031ab878047507d8",
+      "read_scope": "Complete saved official chapter extract independently read this turn"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-matt-21.txt",
+      "sha256": "b8b9866b6540d55ef925e181cb999dd67b56a5e717f8be563ec8817fc45b2d26",
+      "read_scope": "Complete saved official chapter extract independently read this turn"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-philip-4.txt",
+      "sha256": "6813a91ea6a2ab6cc0699aa42ae9999c7eae47aa98809874336d23dc441ed21d",
+      "read_scope": "Complete saved official chapter extract independently read this turn"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-rom-10.txt",
+      "sha256": "eb9bedc16a76599261145292206eba7507b65748145a981b1e41323e15e8c74d",
+      "read_scope": "Complete saved official chapter extract independently read this turn"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\ot-ezek-34.txt",
+      "sha256": "1d333ed538f0d92e85491a7392eb468261e3aa34f0cc586ab87dfd8a45100709",
+      "read_scope": "Complete saved official chapter extract independently read this turn"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\ot-ps-46.txt",
+      "sha256": "28764fb274550443fe24e82d21fb4b874ffd86f3921f60f62bcb1f2bb1573709",
+      "read_scope": "Complete saved official chapter extract independently read this turn"
+    }
+  ]
+}

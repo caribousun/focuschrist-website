@@ -1,0 +1,32 @@
+{
+  "reviewer": "Fermi",
+  "utc": "2026-10-04T19:45:05.8029675Z",
+  "concur": true,
+  "scope": "Independent exact cache-only source/PDF binding renewal; not a new artwork or PDF pixel review, publication, owner aesthetic or full-site acceptance.",
+  "source": "joseph-smith-portrait-research.html",
+  "source_html_sha256": "edfb13494432b4dcf84b899a6a9165c074323c665f6ea3c3cd111b1c47ca2bae",
+  "previous_source_html_sha256": "94485808da246618eeeb2882a97c6160972704ce27180cb4e140b7e5f4d09efb",
+  "pdf_sha256": "109bacb657025cd2f4dcc98b29ca98e97afb97bc8b1b15d5d5a1d460006b2946",
+  "exact_cache_only": true,
+  "replacement_occurrences": 1,
+  "pdf_bytes_unchanged": true,
+  "mandates_read_and_preserved": [
+    "AGENTS.md",
+    "docs/enriched-picture-owner-mandate.md",
+    "docs/art-study-current-mandate-control.md",
+    "docs/focuschrist-enrichment-and-stewardship-prompt.md",
+    "docs/historical-character-identity.md",
+    "docs/section-panel-design-mandate.md"
+  ],
+  "evidence": "Exact PR445-to-c432117 HTML diff has one head stylesheet cache-token replacement. Independently reversed token to prior source SHA256; PDF matches prior reviewed SHA256. Builder lines269-303 consumes body and footer, not head stylesheet. Reviewed root proposed top-level source binding and added cache_only_source_compatibility; historical fields, PDF reviewer bindings and prior alt-only history retained.",
+  "cause": "Affected-check selection omitted the PDF manifest source guard for a cache-only HTML change; guard correctly rejected stale binding.",
+  "prevention": "Every future cache edit affecting this HTML must check the exact PDF source binding and independent unchanged-body/PDF evidence. Preserve strict source guard; never ignore or weaken hash mismatch.",
+  "conditions": [
+    "Fresh Joseph source and PDF QA must pass",
+    "Newton independent mutual concurrence",
+    "Renew exact candidate manifest and commit binding",
+    "Renew hosted exact-head checks before merge",
+    "Pages/mainQA/public bytes/nativeproduction/canonical remain required"
+  ],
+  "foundation": "Fresh live Master foundation/map and current00B/Focus read; no foundation, cost, schedule or scope change."
+}

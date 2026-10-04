@@ -1,0 +1,145 @@
+{
+  "reviewer": "Gary",
+  "status": "PASS_SCOPED_SOURCE_COPY_AND_PROVENANCE_INTEGRITY; SITE_LOCAL_EVIDENCE_PACKAGE_INCOMPLETE",
+  "authority_read": {
+    "Master": "1yN5fRSVUTpgIhdjmwXQ55MA6JbjPmCXb1qg3ppYzluo",
+    "00B": "1_MM3rZXC_PbHMQ3leUSweESrAxmC2Evc3dslVLLVlFI",
+    "Focus": "1QCEQ43UFyBivMbE8MwqTZ0e7WFdRuE_6ZQMlnGit5-g",
+    "scope": "Current first blocks, protected foundation and operating map via connected Drive this turn; no shared writes."
+  },
+  "candidate": {
+    "page_hashes": {
+      "art-study/the-good-shepherd.html": "0e3cf97723df9127cfbcd7d0484a2b6fa79a6ef697eac4b43531f7763ef2bf46",
+      "art-study/suffer-the-little-children.html": "1d4cfe03d86758d7cea99b4897d3fa4ac465e0ed75d4c21aaf6cf92363027ad9",
+      "art-study/be-still.html": "832f2c73e4632c35bffe8b72d5ca07289a493f200360bdf1932cc01293f35bc8"
+    },
+    "copy_sha256": "0896f09a2803e0208f2acf20a7276173de1880151af33aa377ed121e4656bd47",
+    "review_document_sha256": "3f09716ba3554c2ef973fc6a8a22aa6bb49c86d33711ce7a598fab5be451f6f8",
+    "package_manifest_sha256": "c24a2a7c31799891d223d2a221eb0cd60931a3b786772554a89073d6b85e3569",
+    "builder_sha256": "9f42c3e21382bc2f35e68c0d778eb074e0a1637d50c843d988814f1bc87be255"
+  },
+  "integrity_receipt": {
+    "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-candidate-verification\\work\\gary\\source-provenance-integrity.json",
+    "sha256": "bfb9a4bf3f53cf17c2e6573a1468ec54fb6cf60341d41c9b2915aa0fcc7080f4"
+  },
+  "source_reads": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\bofm-mosiah-4.txt",
+      "sha256": "d0a8d8b8b65dfcd5941125f55baed3b0f3933ea9a5a46e53172acdf8980b5208",
+      "matches_copy_source_record": true,
+      "review_scope": "Cited verse ranges read against all15 finished copy entries; no new live source fetch or complete surrounding-chapter reread claimed."
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-james-1.txt",
+      "sha256": "9c4fc8ea3be29922843a09365c24451f9c4ca1a614ab12212b4db61735796cb5",
+      "matches_copy_source_record": true,
+      "review_scope": "Cited verse ranges read against all15 finished copy entries; no new live source fetch or complete surrounding-chapter reread claimed."
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-james-2.txt",
+      "sha256": "60fc4a3decd89d000c446d2576c8a863f15e507fd21c69e99dafedad6f9d2b8d",
+      "matches_copy_source_record": true,
+      "review_scope": "Cited verse ranges read against all15 finished copy entries; no new live source fetch or complete surrounding-chapter reread claimed."
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-james-3.txt",
+      "sha256": "2561ceb88b9a023d91d3c33ad8f71f84661c80cf771b5961ed83d17007993b19",
+      "matches_copy_source_record": true,
+      "review_scope": "Cited verse ranges read against all15 finished copy entries; no new live source fetch or complete surrounding-chapter reread claimed."
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-john-10.txt",
+      "sha256": "9a149aff67464f6ab0f2d974361123e0388bc6fe1e6aa9d0b314a0582d9d0776",
+      "matches_copy_source_record": true,
+      "review_scope": "Cited verse ranges read against all15 finished copy entries; no new live source fetch or complete surrounding-chapter reread claimed."
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-mark-10.txt",
+      "sha256": "5463378834d7a4ab6e8354f08771526271776a55362835aa15cfae041d392eae",
+      "matches_copy_source_record": true,
+      "review_scope": "Cited verse ranges read against all15 finished copy entries; no new live source fetch or complete surrounding-chapter reread claimed."
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-mark-6.txt",
+      "sha256": "c36643073ed6a3dffbcb610334b3b805765e3049ec9d491bf5936b3f0202ae10",
+      "matches_copy_source_record": true,
+      "review_scope": "Cited verse ranges read against all15 finished copy entries; no new live source fetch or complete surrounding-chapter reread claimed."
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-mark-9.txt",
+      "sha256": "77d303ee9c976e3d55192dd35ae2409640744f601a775e39031ab878047507d8",
+      "matches_copy_source_record": true,
+      "review_scope": "Cited verse ranges read against all15 finished copy entries; no new live source fetch or complete surrounding-chapter reread claimed."
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-matt-21.txt",
+      "sha256": "b8b9866b6540d55ef925e181cb999dd67b56a5e717f8be563ec8817fc45b2d26",
+      "matches_copy_source_record": true,
+      "review_scope": "Cited verse ranges read against all15 finished copy entries; no new live source fetch or complete surrounding-chapter reread claimed."
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-philip-4.txt",
+      "sha256": "6813a91ea6a2ab6cc0699aa42ae9999c7eae47aa98809874336d23dc441ed21d",
+      "matches_copy_source_record": true,
+      "review_scope": "Cited verse ranges read against all15 finished copy entries; no new live source fetch or complete surrounding-chapter reread claimed."
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-rom-10.txt",
+      "sha256": "eb9bedc16a76599261145292206eba7507b65748145a981b1e41323e15e8c74d",
+      "matches_copy_source_record": true,
+      "review_scope": "Cited verse ranges read against all15 finished copy entries; no new live source fetch or complete surrounding-chapter reread claimed."
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\ot-ezek-34.txt",
+      "sha256": "1d333ed538f0d92e85491a7392eb468261e3aa34f0cc586ab87dfd8a45100709",
+      "matches_copy_source_record": true,
+      "review_scope": "Cited verse ranges read against all15 finished copy entries; no new live source fetch or complete surrounding-chapter reread claimed."
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\ot-ps-46.txt",
+      "sha256": "28764fb274550443fe24e82d21fb4b874ffd86f3921f60f62bcb1f2bb1573709",
+      "matches_copy_source_record": true,
+      "review_scope": "Cited verse ranges read against all15 finished copy entries; no new live source fetch or complete surrounding-chapter reread claimed."
+    }
+  ],
+  "scene_findings": {
+    "GS1": "Ezekiel34 and John10 are connected as shepherd imagery; text does not claim a documented historical sheep-bandaging episode. Visible healed marks remain owner-required artistic depiction, not archaeological claim.",
+    "GS2": "Ezekiel34 treatment within the flock correctly grounds the access application; prose explicitly treats conduct rather than appearance/size as its point.",
+    "GS3": "James2 warmth/food and Mosiah4 temporal/spiritual relief support the modern repair application; no invented family relationship.",
+    "GS4": "Mosiah4 humility, needs/means, wisdom/order support the modern assistance application; key recovery is identified as a modest example, not a scriptural episode.",
+    "GS5": "Romans10 preaching/hearing and John10 recognition/following support accessible study; text preserves learner participation and does not make an impairment diagnosis.",
+    "CH1": "Matthew21 temple cleansing/healing/children praise/chief priests and scribes/Jesus response sequence corresponds to cited text. Exact participant numbers and staging are image description, not source claims.",
+    "CH2": "Mark9 child welcome/service and Mark10 access ground the modern activity. Child remains an active participant; no diagnosis, cure or historical-event claim.",
+    "CH3": "James1 hearing/doing and Mark9 welcome ground patient attention; no invented kinship or promise that every problem is repaired.",
+    "CH4": "Mosiah4 forgiveness precedes teaching children and aid; text avoids inferring poverty from sharing a snack.",
+    "CH5": "Mark10 adults obstructing approach and James1 listening ground voluntary modern welcome. No diagnosis, sensory cure, coercion or invented source episode.",
+    "BS1": "Mark6 apostles reporting, no time to eat, departure by boat, crowd arriving ahead, compassion/teaching correspond. No named-apostle identification or guarantee of uninterrupted retreat.",
+    "BS2": "Philippians4 prayer/thanks/peace, practiced goodness and both abundance/need support the application; no guarantee of absence of difficulty.",
+    "BS3": "James1 hearing/speech/anger/doing and James3 gentle wisdom support attentive listening. No invented familial relationship.",
+    "BS4": "James3 meekness/strife/peace and Mosiah4 peaceful conduct support the neighbor application. No claim a small adjustment resolves every conflict.",
+    "BS5": "Psalm46 earth/water upheaval, nations/kingdoms, broken weapons and ending war contextualize stillness. No historical battlefield identification or claim the psalm teaches private calm alone."
+  },
+  "conclusions": [
+    "No source/copy contradiction identified within reviewed15panel scope.",
+    "All15 integrated copy sets match finalcopy; all45 PNG/full/thumbnail files match recorded hashes.",
+    "All30 active reviewer references match preserved receipt hashes and selected source SHA; this verifies reference integrity, not fresh independent pixel acceptance.",
+    "All152 preserved package files match existing package manifest."
+  ],
+  "package_required_actions": [
+    "Copy exact selected preflight/finished/generation/proposal receipts and relevant historical holds/retractions into site-local evidence, hash verify before and after. Preserve original bytes; use a relocation index rather than editing signed historical receipts.",
+    "Add finalcopy0896f09a: existing package only contains priorcopy4d251. Include finalcopy reviews and BS5 correction receipt.",
+    "Add retained15 review, current27 and final3 lineage scans/reviews plus their actual corpus inventory and method limits, and fresh final30 variant/completepage coverage review receipts. They are absent from old review-package.",
+    "Add approved-source-selection.json, integration-applied.json, root seal/actual review and current Fermi/Newton final coverage receipts. Do not replace prior artifact statuses in historical documents.",
+    "Point current supporting review finished_review_refs.package_path and strict provenance gate receipt pointers at verified SITE-relative artifacts. Preserve raw source_path only as historical origin metadata; do not depend on external workspace files for release check.",
+    "Before running strict builder validate exact required3page route set, matching final HTML/asset hashes, dual receipts actually covering all30 originals and exclusions, root actual review, and reference/resource targets. Its booleans are declarations generated from gate; file hash alone does not authenticate scope or reviewer acceptance.",
+    "Preserve12retained original tool logs as unavailable. Do not reconstruct prompts, timestamps or generation provenance; retained pixels/ownership can have distinct current review evidence.",
+    "Preserve exact approved Home identity hash4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b and source-body-vs-file hash domains. Owner identity approval is not historical authentication.",
+    "Do not bulk publish private continuity/control documents as art evidence. Retain them in the local archive; materialize only project-relevant, publication-appropriate evidence and a minimal relocation/provenance index."
+  ],
+  "limits": [
+    "No SITE modifications, no canonical writes, no generation, no costs or schedules.",
+    "No new finished pixel, delivery composition, native desktop/phone, runtime, owner aesthetic or publication acceptance. Fermi/Newton final inventory and root native review remain separate dependencies.",
+    "No renewed full130route audit; final alias judgment belongs to independent reviewers and remains heuristic, not mathematical proof.",
+    "Cited chapter snapshots supplied within project provenance were used; no new web source fetch claimed."
+  ]
+}

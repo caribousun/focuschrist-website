@@ -1,0 +1,18 @@
+{
+  "key": "CH2",
+  "version": 2,
+  "status": "EXACT_DUAL_PREFLIGHT_REQUIRED_NO_GENERATION_AUTHORIZATION",
+  "input_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\ch2-candidate-v1.png",
+  "input_sha256": "1cfe585d868902f317580df497b86d42e87e56c7259e9d650d1f06bb75c5ada0",
+  "reference_roles": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\ch2-candidate-v1.png",
+      "sha256": "1cfe585d868902f317580df497b86d42e87e56c7259e9d650d1f06bb75c5ada0",
+      "role": "Image 1 sole edit target and actual scene/fictional identity reference."
+    }
+  ],
+  "prompt": "Image 1 is the sole edit target and actual reference for all four fictional people and the scene. Repair only the framing so the adult woman's entire head, including all crown hair, is visible with clear breathing room above it. Retain a 1536x1024 landscape composition: pull the camera back modestly and extend the existing room naturally around the preserved scene rather than cropping any child or action. Leave at least five percent of the image height as visible background above the adult's complete crown. Preserve the three children's recognizable faces, expressions, age, clothing, poses and natural gaze toward the game; preserve the adult's recognizable visible face, expression, clothing, hands and empty-chair movement. Complete only the previously clipped portion of her head naturally. Keep the wheelchair-using girl actively rolling the same single soft blue ball across the same level accessible tabletop to the boy opposite, and the third child waiting with hands on the table. Preserve their agency, supported seated position, wheelchair, foot supports, clear knee space, separated natural hands, table construction and clear route behind the wheelchair. The adult remains moving the same unused chair away from that route, without touching a child. Keep every complete face and all essential hands safely inside the frame. Preserve the original room, objects, lighting, colors, depth and convincing photographic texture as closely as the small wider framing allows. Do not change the activity, exchange the people, add participants, duplicate limbs or the ball, add text or branding, stand the girl up, create a medical cure or change the emotional tone. Natural contemporary modest clothing, lifelike skin and hair, no painting, CGI, glamour or supernatural effects.",
+  "prompt_sha256": "279726fd41664263524702ae282abd83e42940dc7f30632f2046e824b2d38f48",
+  "generation_clearance": false,
+  "repair_basis": "Dual CH2v1 HOLD on clipped adult head; original gameplay/agency accepted. Preserve source applicability from exact v4; framing edit changes no claim or scene."
+}

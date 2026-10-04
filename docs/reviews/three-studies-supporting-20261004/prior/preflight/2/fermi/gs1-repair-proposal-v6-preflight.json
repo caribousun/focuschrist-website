@@ -1,0 +1,36 @@
+{
+  "reviewer": "Fermi",
+  "result": "PASS_SCOPED_PREFLIGHT",
+  "proposal_sha256": "bac29ab5aab919559e6fa7f1e14bb44af407460ae08684ebdcc5c8941260c1ed",
+  "prompt_sha256": "9b7901bd5b67d762accde2951bc12a40da5881a518aee478596196035d0e8dfa",
+  "references": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-integration-continuation\\work\\gary\\generated\\gs1-candidate-v5.png",
+      "sha256": "875fe190b3b589712f5e4da9cafa699e66ac980b6b8cd5eaed39a1d8537ddee1",
+      "role": "Image 1 sole full edit target."
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\heroes\\home-christ-signature-approved-20260907.png",
+      "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+      "role": "Image 2 approved Home identity only."
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-integration-continuation\\work\\gary\\gs1-v5-right-wrist-inspection.png",
+      "sha256": "752e9ad467fc733ad0d4957be7f1b38da91d84899a87143379eb0169b31d4396",
+      "role": "Image 3 enlarged inspection crop from v5 right-wrist region (900,705,1000,815), location only."
+    }
+  ],
+  "finding": "Actual fullv5/Home and exact enlarged source crop independently viewed/hash-verified. The v6 whole localized near-wrist skin-patch reconstruction correctly targets broad descending/branching track and isolates one healed oval. It preserves accepted opposite wrist, natural texture, hidden palms, all other anatomy and original scene. No new age/clothing/identity claim. This is scoped proposal concurrence only.",
+  "mandates_read": [
+    "Live Master/foundation",
+    "SITE AGENTS",
+    "historical-character-identity",
+    "focuschrist-enrichment-and-stewardship",
+    "enriched-picture-owner-mandate"
+  ],
+  "limits": [
+    "No actualv6 pixels approved",
+    "Newton concurrence and root execution authorization separate",
+    "No SITE/canonical/generation writes"
+  ]
+}

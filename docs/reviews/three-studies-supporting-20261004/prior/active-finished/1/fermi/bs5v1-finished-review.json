@@ -1,0 +1,17 @@
+{
+  "prompt_sha256": "c0f526f8a2a66b2df42d306322488f04b1bbc73530e35bfd8920fdb902cee1d8",
+  "limitations": "Independent image-only concurrence; Newton exact concurrence and root assembled/native/source/release checks remain. No owner acceptance.",
+  "stage": "FINISHED_PIXEL_REVIEW",
+  "candidate_sha256": "1904a0cb7c0bb79c3fbe27cecec7401524e9514d7cbd0404c9168410a2bdf4e3",
+  "result": "PASS",
+  "actual_pixels_inspected": true,
+  "reviewer": "Fermi",
+  "candidate": "work/gary/generated/bs5-candidate-v1.png",
+  "key": "BS5v1",
+  "finding": "Actual full pixels show bow broken at handle with slack line lying against ground, splintered inert spear with point directed away, and part of charred wheel as prompt requests. Coherent wood/stone/earth texture and daylight, no humans/blood/active fire. Composition supports Psalm46 poetic weapons imagery without identifying a battle/date/site or treating it as archaeological evidence.",
+  "mandates_read": [
+    "AGENTS.md",
+    "docs/historical-character-identity.md",
+    "docs/focuschrist-enrichment-and-stewardship-prompt.md"
+  ]
+}

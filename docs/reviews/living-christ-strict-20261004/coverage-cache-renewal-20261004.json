@@ -1,0 +1,31 @@
+{
+  "route": "art-study/the-living-christ.html",
+  "html_sha256": "1343c0278d535940717b175f33ee2fd88444984c5c408e245e34abc1fc3df8c4",
+  "complete_page_image_inventory_reviewed": true,
+  "no_unregistered_qualifying_originals": true,
+  "reviewers": [
+    "Fermi",
+    "Newton"
+  ],
+  "unique_originals": 10,
+  "christ_originals": 7,
+  "resource_preview_exclusions": [
+    "assets/resources/living-powerful-testimony.jpg",
+    "assets/resources/living-he-is-risen-2025.jpg"
+  ],
+  "review_boundary": "Complete source image inventory with script and stylesheet inspection. Modal repeats, hero variants and search/gallery references are not additional originals. Native and production evidence separate. Current renewal is an independently verified cache-token-only HTML change; original image and source reviews inherited unchanged, not new pixel approval.",
+  "renewal_evidence": [
+    {
+      "path": "docs/reviews/living-christ-strict-20261004/newton-cache-renewal-20261004.json",
+      "sha256": "9209d64e48c9cf302f867afbe5253c58d8220ae1a0625f9562cfddc44bda4498"
+    },
+    {
+      "path": "docs/reviews/three-studies-supporting-20261004/current/fermi-final-inventory-after-markup.json",
+      "sha256": "bc866d7d7fd5fba5ef9c65f1fbd8505c01185c6a387b06fae33a45674570c420"
+    }
+  ],
+  "prior_coverage": {
+    "path": "docs/reviews/living-christ-strict-20261004/coverage.json",
+    "sha256": "245c45bee6f14cdf069c9fcdf40b5b0aafff708329c67aaf1c41db7f5f751531"
+  }
+}

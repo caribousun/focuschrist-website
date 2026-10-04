@@ -98,6 +98,46 @@ function measure(selector) {
       }));
       assert(!stops.overflow && stops.links.length===9 && stops.links.every(n=>!n.clipped && n.height>=68 && n.target), `Pioneer chapter navigation overflow at ${width}px / ${scale}x text`);
     }
+    // Topic artwork actions follow the existing explicit grid at enlarged text.
+    // Discover the four owning routes and every supporting picture from Art.
+    await page.goto(origin + '/art.html', {waitUntil:'load'});
+    const artRoutes = await page.locator('a[data-artwork-detail][href^="art-study/"]').evaluateAll(nodes => nodes.map(n => n.getAttribute('href')));
+    assert.equal(new Set(artRoutes).size, 4, 'Discover all featured Art study routes');
+    const actionMetrics = () => {
+      const group = document.querySelector('#topicArtworkDetailDialog .fc-artwork-detail-actions');
+      const box = group.getBoundingClientRect();
+      const rootFont = parseFloat(getComputedStyle(document.documentElement).fontSize);
+      return [...group.children].filter(n => !n.hidden).map(n => {
+        const r = n.getBoundingClientRect();
+        return {label:n.textContent.trim(), width:r.width, minWidth:Math.min(11*rootFont,box.width),
+          outside:r.left < box.left-2 || r.right > box.right+2,
+          clipped:n.scrollWidth > n.clientWidth+2 || n.scrollHeight > n.clientHeight+2,
+          height:r.height, close:n.hasAttribute('data-artwork-detail-close'), rightGap:box.right-r.right};
+      });
+    };
+    const validActions = rows => rows.length >= 4 && rows.every(r => !r.outside && !r.clipped && r.height>=44 && r.width>=r.minWidth-2 && (!r.close || Math.abs(r.rightGap)<=2));
+    for (const width of [1280,390]) for (const scale of [1,2]) for (const route of artRoutes) {
+      await page.setViewportSize({width,height:720});
+      await page.goto(origin+'/'+route, {waitUntil:'load'});
+      await page.evaluate(scale => { document.documentElement.style.fontSize=`${100*scale}%`; },scale);
+      const pictures = page.locator('a[data-art-study-supporting]');
+      const count = await pictures.count();
+      assert(count>=9, route+': supporting inventory missing');
+      for (let i=0;i<count;i++) {
+        await pictures.nth(i).click();
+        const rows = await page.evaluate(actionMetrics);
+        assert(validActions(rows), `${route} picture ${i} @${width}/${scale}x text: ${JSON.stringify(rows)}`);
+        await page.locator('#topicArtworkDetailDialog [data-artwork-detail-close]').click();
+      }
+    }
+    // The former fixed column must fail the same behavioral check at 200% text.
+    await page.setViewportSize({width:1280,height:720});
+    await page.goto(origin+'/art-study/be-still.html', {waitUntil:'load'});
+    await page.evaluate(() => { document.documentElement.style.fontSize='200%'; });
+    await page.locator('a[data-art-study-supporting]').first().click();
+    await page.addStyleTag({content:'.fc-site .fc-topic-artwork-detail .fc-artwork-detail-actions > [data-artwork-detail-close]{grid-column:2!important}'});
+    assert(!validActions(await page.evaluate(actionMetrics)), 'Negative fixture failed to detect implicit narrow artwork action track');
+
     // Prove that deleting the repair produces the owner's exact regression.
     await page.setViewportSize({width:1366,height:1000});
     await page.goto(origin + '/answers/settle-this-in-your-hearts.html', {waitUntil:'load'});

@@ -1,0 +1,279 @@
+{
+  "reviewer": "Newton",
+  "time": "2026-10-04T16:39:51.137479+00:00",
+  "result": "CONCUR_EXACT_V4_PREFLIGHT_15_PASS",
+  "plan_sha256": "d6b81ca9f96d0f539c155debf65e91ce2953124ecd449cb9f978b6f28bfa5914",
+  "prior_v3_sha256": "9f0d28898d744afac996080a63f04da30469475baef61cc8d3892ed219b1e45e",
+  "prior_newton_v3_receipt_sha256": "5cfd0072cc5d1083cbd1cfe769c4aef9ec54e9bbcfd8d693ac9662bb0510809c",
+  "entry_deltas": [
+    {
+      "key": "CH1",
+      "changed": [
+        "prompt",
+        "robe_color",
+        "prompt_sha256"
+      ]
+    }
+  ],
+  "all_other14_deeply_identical": true,
+  "source_domain_checks": [
+    {
+      "path": "ot/ezek/33",
+      "body_sha256": "aa578054dbfa09d9c9a845791253539b2ca0bc665c1822d3850c76166574757f",
+      "file_sha256": "ec562ee24fa55f272b46cf6940fa1de1ebc67015269eb45814f18a22acd84ed6",
+      "match": true
+    },
+    {
+      "path": "ot/ezek/34",
+      "body_sha256": "0bf939dfd7c09e62eeac4c3c41a5f1f0d48d27579a7fc2088a79f8e53da49cf8",
+      "file_sha256": "1d333ed538f0d92e85491a7392eb468261e3aa34f0cc586ab87dfd8a45100709",
+      "match": true
+    },
+    {
+      "path": "ot/ezek/35",
+      "body_sha256": "e222fac383115611efddb842d59a8e3afa7adc78250a9c6a9574265a66a6e97f",
+      "file_sha256": "af8a03d92420dfaeb1007d4fc9d089dd488907eb2d18f4473588e553336ab283",
+      "match": true
+    },
+    {
+      "path": "nt/john/9",
+      "body_sha256": "440ce40f8e968ef0361af1cbf5c88aba9e0fb1a5901e417793d90ca7d058ef32",
+      "file_sha256": "0c9d6d315d360c82d2eb3b62b46d38d801e3ae237d6afa215cb383113594dcda",
+      "match": true
+    },
+    {
+      "path": "nt/john/10",
+      "body_sha256": "7c2f6fe2a0876b6dc9c4f76b41a81fd8b9dc67308b6c1010168ad3675adebc88",
+      "file_sha256": "9a149aff67464f6ab0f2d974361123e0388bc6fe1e6aa9d0b314a0582d9d0776",
+      "match": true
+    },
+    {
+      "path": "nt/john/11",
+      "body_sha256": "d8011c3edabb1b227853cfd1483f19eca2f0238ea75e5104f5a4fbabfbe9fe30",
+      "file_sha256": "372ff33d10cfd9ca430572a983429d537d5570112f823cf55e1f2afc276c3c73",
+      "match": true
+    },
+    {
+      "path": "nt/matt/20",
+      "body_sha256": "6dfcc3c53d69276f89a99eba639b3f0bb23406b02f76230f9ffdf8262d148f35",
+      "file_sha256": "b54453e0dd54aff83038f2cea68c7a96ac27b69ebd6db3d40f6798668da8ed8b",
+      "match": true
+    },
+    {
+      "path": "nt/matt/21",
+      "body_sha256": "fc9058c49390c478cbab332de0e540310a34f2de13605c99da3cde155cb28ece",
+      "file_sha256": "b8b9866b6540d55ef925e181cb999dd67b56a5e717f8be563ec8817fc45b2d26",
+      "match": true
+    },
+    {
+      "path": "nt/matt/22",
+      "body_sha256": "79cea7d0f3b8a5490ff10f10df3fc9dcbf83e49d90a21fa2706c020516a3e6cf",
+      "file_sha256": "0bcc23f739cae492897ce51958d6c89e05856d6036333aa38657a0522efbb02e",
+      "match": true
+    },
+    {
+      "path": "nt/mark/5",
+      "body_sha256": "a87f3c3051482be8c347036856236dc8fd47cf32799e2fd376eb096e4e43d3d5",
+      "file_sha256": "d515498d93a0460553338beb1e9e7f2aff3362d5eef17d592276bf4f1024d7ba",
+      "match": true
+    },
+    {
+      "path": "nt/mark/6",
+      "body_sha256": "3a976dad4679fe8273a51c0fe455cd3289e06d33d2d165bdebae2c7c6763d410",
+      "file_sha256": "c36643073ed6a3dffbcb610334b3b805765e3049ec9d491bf5936b3f0202ae10",
+      "match": true
+    },
+    {
+      "path": "nt/mark/7",
+      "body_sha256": "97ac11c4bf7d2f7e4ecf4eeb4f5ab9fc531d76b719e90e62a18520d28207abba",
+      "file_sha256": "d7b42ad419168144cc5a0cec6aab17215021614f829faec647d8f8de3a55e73d",
+      "match": true
+    },
+    {
+      "path": "nt/james/1",
+      "body_sha256": "94c47fcdb95501856615463debcb7ea07180e535b988a246b6e8c2d5cc43d123",
+      "file_sha256": "9c4fc8ea3be29922843a09365c24451f9c4ca1a614ab12212b4db61735796cb5",
+      "match": true
+    },
+    {
+      "path": "nt/james/2",
+      "body_sha256": "f571582e133e3e8e8445961709fe183effbfb466773d26961bea4da88409c749",
+      "file_sha256": "60fc4a3decd89d000c446d2576c8a863f15e507fd21c69e99dafedad6f9d2b8d",
+      "match": true
+    },
+    {
+      "path": "nt/james/3",
+      "body_sha256": "be63e41c5235a216eae64befd691eb318c5b8091ccbebe657a609dbd8eda72c6",
+      "file_sha256": "2561ceb88b9a023d91d3c33ad8f71f84661c80cf771b5961ed83d17007993b19",
+      "match": true
+    },
+    {
+      "path": "nt/mark/9",
+      "body_sha256": "5888597b64ae4e4e2220c659e5227d9579b55337f4d8236738a3683ca3c57461",
+      "file_sha256": "77d303ee9c976e3d55192dd35ae2409640744f601a775e39031ab878047507d8",
+      "match": true
+    },
+    {
+      "path": "nt/mark/10",
+      "body_sha256": "b55b8b3d7acf4c5a57da5a2e8c60e0c704ae54f8b752c51da0cd5e7047499346",
+      "file_sha256": "5463378834d7a4ab6e8354f08771526271776a55362835aa15cfae041d392eae",
+      "match": true
+    },
+    {
+      "path": "nt/mark/11",
+      "body_sha256": "2203c1e65d7d79a18062d08e0ad3fbdb74d164b754c156fa86184af676fd1f41",
+      "file_sha256": "c298e16f36ba9e1d5a9b86f2fdc7cf7df5a73fe81cf969a81a60e0932247bc70",
+      "match": true
+    },
+    {
+      "path": "bofm/mosiah/4",
+      "body_sha256": "5849b91d5a189d85c0c39b157636d1854b802075234dc9c14e33b3c57c39a59c",
+      "file_sha256": "d0a8d8b8b65dfcd5941125f55baed3b0f3933ea9a5a46e53172acdf8980b5208",
+      "match": true
+    },
+    {
+      "path": "ot/ps/46",
+      "body_sha256": "097ba00007bb524b19bc386b8a575e27c5ceed8ed7f1dc9edb53afb538cba176",
+      "file_sha256": "28764fb274550443fe24e82d21fb4b874ffd86f3921f60f62bcb1f2bb1573709",
+      "match": true
+    },
+    {
+      "path": "nt/philip/3",
+      "body_sha256": "5579734412871720c72b088dcddb45b55a01b3c1128d177548706387878c025f",
+      "file_sha256": "00f59d6ae54aec5e2cbab9fc9e94cf2e77060ed751a878ea3e2ef00c65774259",
+      "match": true
+    },
+    {
+      "path": "nt/philip/4",
+      "body_sha256": "3c69abb12b1fe26e740d40e7b8a36e6f31b7f25db92c7ac8ad90ef2abd07e016",
+      "file_sha256": "6813a91ea6a2ab6cc0699aa42ae9999c7eae47aa98809874336d23dc441ed21d",
+      "match": true
+    },
+    {
+      "path": "ot/ps/45",
+      "body_sha256": "430f2ddad53bef2a26dc76f608014c634da481a52d1dc62e5b7d4d81c0de9a54",
+      "file_sha256": "6a968e0859a09b5441d208e4930612e79e2833243ee10dc3e7c5db73cec5333e",
+      "match": true
+    },
+    {
+      "path": "ot/ps/47",
+      "body_sha256": "ffbbca74273d875f6965dc6b542589276db9d37d57e283e9c3e884aa8f61e44f",
+      "file_sha256": "a0a712dfbc5f1eb8572c9414aebc243683e7bec9ada4f253ad6dab9a75193d41",
+      "match": true
+    },
+    {
+      "path": "bofm/mosiah/3",
+      "body_sha256": "0e94e967b803afd8ef30f35bff27ea3ba9157487e0ea9da76ed1684fa0b06fce",
+      "file_sha256": "2b794c7ab081c22feacea3371b40aba6114fc5511fbebd52d563d72d264893dd",
+      "match": true
+    },
+    {
+      "path": "bofm/mosiah/5",
+      "body_sha256": "a3cfd5c886001629dae357a33b242ae5456b9e1e877c9d8776ebaccd2bd58b24",
+      "file_sha256": "963b0deae3226198b064f5e3723ad75ff80b675856399a5553a2c75a3491e021",
+      "match": true
+    },
+    {
+      "path": "nt/rom/9",
+      "body_sha256": "c2a0e68223311d3607f011d4bdbd90a510bbe4667bb0ccf8d655f812ad4323da",
+      "file_sha256": "102a6ba48b4bb77479133c36bb140feec568bc5fc4f1af9c5b6567183f73379d",
+      "match": true
+    },
+    {
+      "path": "nt/rom/10",
+      "body_sha256": "a999d4fef6dbfd708f4e4a5af1132795a78a2144812af125ef0b96d0d2335edd",
+      "file_sha256": "eb9bedc16a76599261145292206eba7507b65748145a981b1e41323e15e8c74d",
+      "match": true
+    },
+    {
+      "path": "nt/rom/11",
+      "body_sha256": "acd81f8a26cc0d9a1ca0c236d61b6e64b73bfb4d0404b85a945e1e9af62e475c",
+      "file_sha256": "1f3cf37067d1c57ac7637b9b04602992c2c7a03ce8893503b4377c8653e0054d",
+      "match": true
+    },
+    {
+      "path": "nt/luke/3",
+      "body_sha256": "f47759ad791ace4edd6b315585035952a5704af502708ccd18fd6c18263420eb",
+      "file_sha256": "3a5f0f9c68a92a4148a71e779fe57541c67d251ef78425596d40545e6d952362",
+      "match": true
+    }
+  ],
+  "reference_checks": [
+    {
+      "scene": "GS1",
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\heroes\\home-christ-signature-approved-20260907.png",
+      "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+      "match": true
+    },
+    {
+      "scene": "CH1",
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\heroes\\home-christ-signature-approved-20260907.png",
+      "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+      "match": true
+    },
+    {
+      "scene": "BS1",
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\heroes\\home-christ-signature-approved-20260907.png",
+      "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+      "match": true
+    },
+    {
+      "scene": "BS1",
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\art-study\\full\\still-storm-boat.webp",
+      "sha256": "fdb60ec2ecdee51a24264fc53f0c1aed7cbde5d10dcaec32a6e3d8840b42911c",
+      "match": true
+    }
+  ],
+  "mandates_read_and_bound": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\AGENTS.md",
+      "sha256": "d00c5315d1588e57b4529379d41552e67db84202052a2c0a4eef69ec807a3710",
+      "role": "Read current applicable mandate"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\docs\\historical-character-identity.md",
+      "sha256": "69f0f51400ba102dfb5df9a9ec9fb6e738255dc496b84dc5dd684f3f5886c8c4",
+      "role": "Read current applicable mandate"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\docs\\approved-character-identities.json",
+      "sha256": "8585b6adebe55ce27ad3a938f3d8d82bc4797543a03003f66cbdc53bb9f4af77",
+      "role": "Read current applicable mandate"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\docs\\focuschrist-enrichment-and-stewardship-prompt.md",
+      "sha256": "8f413b19ab94093c1f4a489bddb7829468d77b335b79be017f71e6db31e4f311",
+      "role": "Read current applicable mandate"
+    }
+  ],
+  "errors": [],
+  "scene_statuses": {
+    "GS1": "PREFLIGHT_PASS",
+    "GS2": "PREFLIGHT_PASS",
+    "GS3": "PREFLIGHT_PASS",
+    "GS4": "PREFLIGHT_PASS",
+    "GS5": "PREFLIGHT_PASS",
+    "CH1": "PREFLIGHT_PASS",
+    "CH2": "PREFLIGHT_PASS",
+    "CH3": "PREFLIGHT_PASS",
+    "CH4": "PREFLIGHT_PASS",
+    "CH5": "PREFLIGHT_PASS",
+    "BS1": "PREFLIGHT_PASS",
+    "BS2": "PREFLIGHT_PASS",
+    "BS3": "PREFLIGHT_PASS",
+    "BS4": "PREFLIGHT_PASS",
+    "BS5": "PREFLIGHT_PASS"
+  },
+  "evidence_scope": [
+    "Retains prior exact v3 fourteen-scene research/reference/pixel preflight for identical entries and unchanged actual references.",
+    "Fresh CH1 four-comparator actual-pixel challenge and exact proposed prompt review in ch1-palette-preflight.json.",
+    "Independently checked all30 source BODY versus raw-file domains, all15 prompt hashes and actual identity input hashes.",
+    "Current applicable AGENTS, historical identity, enrichment and approved registry directives read; no finished result claimed."
+  ],
+  "limits": [
+    "Preflight concurrence only; no images generated or finished-pixel approval.",
+    "Root must apply both-peer exact concurrence before generation.",
+    "Finished pixels require both reviewers, source/identity/age/color/action/anatomy review and root assembled native desktop/phone gates before use/publication.",
+    "Fullsite acceptance remains INCOMPLETE; no exhaustive sitewide review claim."
+  ]
+}

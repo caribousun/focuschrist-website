@@ -1,0 +1,23 @@
+{
+  "route": "art-study/be-still.html",
+  "html_sha256": "ed90acad612bc12e0008d498a37f3f8d2a9b27e068212bec475555ee5a723423",
+  "complete_page_image_inventory_reviewed": true,
+  "no_unregistered_qualifying_originals": true,
+  "reviewers": [
+    "Fermi",
+    "Newton"
+  ],
+  "unique_originals": 10,
+  "christ_originals": 5,
+  "resource_preview_exclusions": [
+    "assets/resources/still-bednar-be-still.jpg",
+    "assets/resources/still-principles-prayer.jpg",
+    "assets/resources/still-personal-peace.jpg"
+  ],
+  "review_boundary": "Root verified exact independent Fermi/Newton inventory and reciprocal concurrence with renewed HTML bindings. All30 originals and delivery variants,3 gallery-owned references and7 resource exclusions reviewed across canonical routes. Source detailed identity/anatomy evidence remains inherited and hash-bound; fresh composition/encoding/ownership checks separate. Heuristic alias detection cannot exclude arbitrary transformations;12 historical generation logs remain unavailable. Native assembled review and final release/public/owner acceptance are separate, not established by this package.",
+  "prior_coverage_evidence": {
+    "path": "docs/reviews/three-studies-strict-20261004/be-still-coverage.json",
+    "sha256": "a1e758c5bafe63ca8e43e22d3427618c1b82b6797b6b650c1db6b67be1123255"
+  },
+  "renewal_boundary": "Exact stylesheet cache-token-only HTML change independently read back by Fermi and Newton; all image placements, classifications and source copy preserved. Shared CSS repair native and hosted acceptance remain separate."
+}

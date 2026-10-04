@@ -1,0 +1,15 @@
+{
+  "reviewer": "Newton",
+  "result": "PASS_SCOPED_FINISHED_PIXELS",
+  "candidate_sha256": "9d18647148c27b803fd263dab2ef05c43ae958ba7e55794db3b74807474eaa82",
+  "candidate_path": "work\\gary\\generated\\gs1-candidate-v6.png",
+  "actual_full_pixels_inspected": true,
+  "actual_detail_pixels_inspected": true,
+  "depicts_christ": true,
+  "finding": "Fullv6 and enlarged right-wrist patch compared with v5. Broad pale descending/branching scar track is resolved into ordinary fine skin creases and texture, with compact healed oval distinct. Screen-left repaired oval remains; palms hidden naturally. Face remains recognizable against viewed Home reference, with task-directed gaze, gentle expression, coherent sheep/bandage action and natural hands. Original framing and photographic scene preserved.",
+  "limits": [
+    "Exact finished pixels only; delivered variants and root assembled desktop/phone still required.",
+    "Normal anatomical skin folds remain, appropriately not erased to plastic skin.",
+    "No owner aesthetic/publication acceptance."
+  ]
+}

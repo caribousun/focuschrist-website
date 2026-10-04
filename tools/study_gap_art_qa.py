@@ -18,6 +18,7 @@ EXPECTED = {
 # These additions are a separate reviewed release, not a relaxation of the four
 # original study-gap placements above. Each manifest has a closed key inventory.
 SITEWIDE = {
+    'three-studies-supporting-review-20261004.json': {'shepherd-binds-hurt-20261004', 'children-quiet-welcome-20261004', 'children-share-snack-20261004', 'children-accessible-game-20261004', 'still-depart-for-rest-20261004', 'children-toy-repair-20261004', 'still-listen-workshop-20261004', 'still-wars-cease-20261004', 'shepherd-coat-repair-20261004', 'still-pause-work-20261004', 'children-temple-praise-20261004', 'still-neighbor-peace-20261004', 'shepherd-room-at-water-20261004', 'shepherd-audio-access-20261004', 'shepherd-key-recovery-20261004'},
     'living-christ-supporting-review-20261004.json': {'living-mary-reports-20261004', 'living-paul-courage-20261004', 'living-newness-baptism-20261004', 'living-steadfast-service-20261004'},
     'sitewide-supporting-review.json': {'living-breakfast-shore-20260919', 'shepherd-seeks-one-20260919', 'children-listen-at-home-20260919', 'still-phone-down-scripture-20260919'},
     'sitewide-gap-supporting-review.json': {'bom-archaeology-context', 'bom-alma-helaman', 'bom-mormon-moroni', 'bom-language-comparison'},

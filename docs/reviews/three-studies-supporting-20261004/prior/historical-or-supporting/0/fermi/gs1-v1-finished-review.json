@@ -1,0 +1,30 @@
+{
+  "reviewer": "Fermi",
+  "key": "GS1",
+  "stage": "FINISHED_PIXEL_REVIEW",
+  "candidate": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\gs1-candidate-v1.png",
+  "candidate_sha256": "83fbea06128764a9bb3f21b01070f8934df4fb2d722ad14ad9daa93986f86237",
+  "prompt_sha256": "e52bed9c946ccac75bf0abf9c072ae75cb78103937ba3603bfdbc4952f0c019d",
+  "plan_sha256": "d6b81ca9f96d0f539c155debf65e91ce2953124ecd449cb9f978b6f28bfa5914",
+  "result": "HOLD",
+  "defects": [
+    "Anatomical left wrist on screenright is exposed and unmarked; reddish slit is on the dorsal hand distal to the wrist. Required visible-wrist healed-mark gate fails.",
+    "Screenleft wrist mark and screenright dorsal-hand mark appear dark reddish/incised rather than clearly healed. No fresh blood pool is shown, but do not certify these as subtle closed healed scars."
+  ],
+  "passed": [
+    "Actual Home identity remains recognizable with downward task-directed eyes and calm focused expression.",
+    "Two complete arms/hands trace to distinct shoulders; separate fingers manipulate final bandage end coherently.",
+    "Sheep rests on chest with two clear forelegs; hind limbs are occluded by torso. Occlusion alone is not evidence of missing or extra limbs.",
+    "No open lamb wound, distress spectacle, carrying/rescue duplication or historical-event claim.",
+    "Mantle is restrained pale gray with slight warm/yellow-green cast, distinct from actual darker olive/sage comparator; no rose/gold collapse.",
+    "Photographic face, cloth, wool, stone, light and grounded composition; generous face/hand margins."
+  ],
+  "inspection": [
+    "Full original1536x1024 viewed",
+    "Original hand/face areas cropped and enlarged for inspection; crops are evidence only, not edited candidate assets"
+  ],
+  "required_correction": "Root/Gary submit exact narrow edit prompt preserving face, pose, lamb, bandage, light and palette; replace reddish/open-looking marks with subtle fully healed appropriate marks on both visible wrist areas. Palms hidden: do not expose them or force extra marks onto naturally unseen surfaces.",
+  "SITE_use_approved": false,
+  "limits": "Image-only review. No page/native/public/owner aesthetic acceptance. Revisions invalidate affected pixel conclusions and require exact new-hash review.",
+  "preserved": "No SITE/Docs/canonical/generation edits, spending, schedules or foundation changes."
+}

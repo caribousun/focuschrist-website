@@ -1,0 +1,1562 @@
+{
+  "reviewer": "Newton",
+  "status": "TECHNICAL_RECHECK_COMPLETE_VISUAL_ADJUDICATION_PENDING",
+  "pages": {
+    "art-study/be-still.html": {
+      "html_sha256": "832f2c73e4632c35bffe8b72d5ca07289a493f200360bdf1932cc01293f35bc8",
+      "originals": [
+        {
+          "kind": "original",
+          "asset": "assets/page-art/art-study/full/still-city-companion.webp",
+          "sha256": "cff36c78346ed712f39a5b81207cd5784d233dac1e800dedbc8a63a425d814e0",
+          "owner_route": "art-study/be-still.html",
+          "owner_section": "begin",
+          "original_id": "assets/page-art/art-study/full/still-city-companion",
+          "depicts_christ": true
+        },
+        {
+          "kind": "original",
+          "asset": "assets/page-art/art-study/full/still-storm-boat.webp",
+          "sha256": "fdb60ec2ecdee51a24264fc53f0c1aed7cbde5d10dcaec32a6e3d8840b42911c",
+          "owner_route": "art-study/be-still.html",
+          "owner_section": "psalm-context",
+          "original_id": "assets/page-art/art-study/full/still-storm-boat",
+          "depicts_christ": true
+        },
+        {
+          "kind": "original",
+          "asset": "assets/page-art/art-study/full/still-wars-cease-20261004.webp",
+          "sha256": "a7d7fa59adb4ddf1bd7e4eb2788ecaf1d89c19334402763961e2c60205bf7979",
+          "owner_route": "art-study/be-still.html",
+          "owner_section": "still-wars-cease-20261004",
+          "original_id": "assets/page-art/art-study/full/still-wars-cease-20261004",
+          "depicts_christ": false
+        },
+        {
+          "kind": "original",
+          "asset": "assets/page-art/art-study/full/still-depart-for-rest-20261004.webp",
+          "sha256": "8ca49a7424f7467906230d0d9f5b0db08b8b57969f996f0726420fec2499f942",
+          "owner_route": "art-study/be-still.html",
+          "owner_section": "still-depart-for-rest-20261004",
+          "original_id": "assets/page-art/art-study/full/still-depart-for-rest-20261004",
+          "depicts_christ": true
+        },
+        {
+          "kind": "original",
+          "asset": "assets/page-art/art-study/full/still-lakeside-pause.webp",
+          "sha256": "67fcb39e322e93f2389d465a20b73b6f059b41a1557cc627405c5781a796b724",
+          "owner_route": "art-study/be-still.html",
+          "owner_section": "artwork-study",
+          "original_id": "assets/page-art/art-study/full/still-lakeside-pause",
+          "depicts_christ": true
+        },
+        {
+          "kind": "original",
+          "asset": "assets/page-art/art-study/full/still-shared-lift.webp",
+          "sha256": "a9c935fab827fcc3e2b6b3c53d748373f9cc7660020a2089c992ab0b741da869",
+          "owner_route": "art-study/be-still.html",
+          "owner_section": "artwork-study",
+          "original_id": "assets/page-art/art-study/full/still-shared-lift",
+          "depicts_christ": true
+        },
+        {
+          "kind": "original",
+          "asset": "assets/page-art/art-study/full/still-pause-work-20261004.webp",
+          "sha256": "dcb354027d6b26f8e6e0051774095ef46cde88768a8b1acd3f31ea824e9f19b5",
+          "owner_route": "art-study/be-still.html",
+          "owner_section": "still-pause-work-20261004",
+          "original_id": "assets/page-art/art-study/full/still-pause-work-20261004",
+          "depicts_christ": false
+        },
+        {
+          "kind": "original",
+          "asset": "assets/page-art/art-study/full/still-phone-down-scripture-20260919.webp",
+          "sha256": "09123ea02209812f8158a257fbc0ac5562231f3cb6a14bc0303951bd992fae18",
+          "owner_route": "art-study/be-still.html",
+          "owner_section": "personal-study",
+          "original_id": "assets/page-art/art-study/full/still-phone-down-scripture-20260919",
+          "depicts_christ": false
+        },
+        {
+          "kind": "original",
+          "asset": "assets/page-art/art-study/full/still-listen-workshop-20261004.webp",
+          "sha256": "68e2ef2239f5f14971f7b169bce3d1bdedee45c88785d4a64d5e9e5bd906945c",
+          "owner_route": "art-study/be-still.html",
+          "owner_section": "still-listen-workshop-20261004",
+          "original_id": "assets/page-art/art-study/full/still-listen-workshop-20261004",
+          "depicts_christ": false
+        },
+        {
+          "kind": "original",
+          "asset": "assets/page-art/art-study/full/still-neighbor-peace-20261004.webp",
+          "sha256": "5aee429ac2d34f32475e0045dd23bf0d8d255b681e4717eb9154198a80256731",
+          "owner_route": "art-study/be-still.html",
+          "owner_section": "still-neighbor-peace-20261004",
+          "original_id": "assets/page-art/art-study/full/still-neighbor-peace-20261004",
+          "depicts_christ": false
+        }
+      ],
+      "original_count": 10,
+      "christ_count": 5,
+      "image_elements": [
+        {
+          "src": "../art/Be-Still.png",
+          "srcset": null,
+          "alt": "",
+          "anchor": "../art/Be-Still.png",
+          "context_id": null,
+          "context_class": null,
+          "classification": "excluded-gallery-reference"
+        },
+        {
+          "src": "../assets/page-art/art-study/thumbs/still-city-companion.webp",
+          "srcset": "../assets/page-art/art-study/thumbs/still-city-companion.webp 800w, ../assets/page-art/art-study/full/still-city-companion.webp 1536w",
+          "alt": "Jesus Christ walking beside a weary man in a busy city",
+          "anchor": "../assets/page-art/art-study/full/still-city-companion.webp",
+          "context_id": null,
+          "context_class": [
+            "fc-art-story"
+          ],
+          "classification": "owned-original-variant"
+        },
+        {
+          "src": "../assets/page-art/art-study/thumbs/still-storm-boat.webp",
+          "srcset": "../assets/page-art/art-study/thumbs/still-storm-boat.webp 800w, ../assets/page-art/art-study/full/still-storm-boat.webp 1536w",
+          "alt": "Jesus Christ standing with His disciples in a storm-tossed boat",
+          "anchor": "../assets/page-art/art-study/full/still-storm-boat.webp",
+          "context_id": null,
+          "context_class": [
+            "fc-art-story"
+          ],
+          "classification": "owned-original-variant"
+        },
+        {
+          "src": "../assets/page-art/art-study/thumbs/still-wars-cease-20261004.webp",
+          "srcset": "../assets/page-art/art-study/thumbs/still-wars-cease-20261004.webp 800w, ../assets/page-art/art-study/full/still-wars-cease-20261004.webp 1536w",
+          "alt": "A broken bow, a broken spear and a charred wheel lie still on open ground.",
+          "anchor": "../assets/page-art/art-study/full/still-wars-cease-20261004.webp",
+          "context_id": "still-wars-cease-20261004",
+          "context_class": [
+            "fc-art-story"
+          ],
+          "classification": "owned-original-variant"
+        },
+        {
+          "src": "../assets/page-art/art-study/thumbs/still-depart-for-rest-20261004.webp",
+          "srcset": "../assets/page-art/art-study/thumbs/still-depart-for-rest-20261004.webp 800w, ../assets/page-art/art-study/full/still-depart-for-rest-20261004.webp 1536w",
+          "alt": "Jesus sits in a boat facing a headband-wearing companion while one man rows and another rests behind Him.",
+          "anchor": "../assets/page-art/art-study/full/still-depart-for-rest-20261004.webp",
+          "context_id": "still-depart-for-rest-20261004",
+          "context_class": [
+            "fc-art-story"
+          ],
+          "classification": "owned-original-variant"
+        },
+        {
+          "src": "../assets/page-art/art-study/thumbs/still-lakeside-pause.webp",
+          "srcset": "../assets/page-art/art-study/thumbs/still-lakeside-pause.webp 800w, ../assets/page-art/art-study/full/still-lakeside-pause.webp 1536w",
+          "alt": "Jesus Christ sitting beside a woman at a quiet mountain lake",
+          "anchor": "../assets/page-art/art-study/full/still-lakeside-pause.webp",
+          "context_id": null,
+          "context_class": [
+            "fc-art-story"
+          ],
+          "classification": "owned-original-variant"
+        },
+        {
+          "src": "../assets/page-art/art-study/thumbs/still-shared-lift.webp",
+          "srcset": "../assets/page-art/art-study/thumbs/still-shared-lift.webp 800w, ../assets/page-art/art-study/full/still-shared-lift.webp 1536w",
+          "alt": "Jesus Christ helping a tired father lift a moving box",
+          "anchor": "../assets/page-art/art-study/full/still-shared-lift.webp",
+          "context_id": null,
+          "context_class": [
+            "fc-art-story"
+          ],
+          "classification": "owned-original-variant"
+        },
+        {
+          "src": "../assets/page-art/art-study/thumbs/still-pause-work-20261004.webp",
+          "srcset": "../assets/page-art/art-study/thumbs/still-pause-work-20261004.webp 800w, ../assets/page-art/art-study/full/still-pause-work-20261004.webp 1536w",
+          "alt": "A woman sits with her eyes closed and both hands in her lap beside a still sewing machine and unfinished curtain.",
+          "anchor": "../assets/page-art/art-study/full/still-pause-work-20261004.webp",
+          "context_id": "still-pause-work-20261004",
+          "context_class": [
+            "fc-art-story"
+          ],
+          "classification": "owned-original-variant"
+        },
+        {
+          "src": "../assets/page-art/art-study/thumbs/still-phone-down-scripture-20260919.webp",
+          "srcset": "../assets/page-art/art-study/thumbs/still-phone-down-scripture-20260919.webp 800w, ../assets/page-art/art-study/full/still-phone-down-scripture-20260919.webp 1536w",
+          "alt": "A man sets his phone face down and turns his attention to an open Bible at the kitchen table.",
+          "anchor": "../assets/page-art/art-study/full/still-phone-down-scripture-20260919.webp",
+          "context_id": null,
+          "context_class": [
+            "fc-art-story"
+          ],
+          "classification": "owned-original-variant"
+        },
+        {
+          "src": "../assets/page-art/art-study/thumbs/still-listen-workshop-20261004.webp",
+          "srcset": "../assets/page-art/art-study/thumbs/still-listen-workshop-20261004.webp 800w, ../assets/page-art/art-study/full/still-listen-workshop-20261004.webp 1536w",
+          "alt": "A man pauses beside a wooden board and a resting sanding block to listen to a teenager.",
+          "anchor": "../assets/page-art/art-study/full/still-listen-workshop-20261004.webp",
+          "context_id": "still-listen-workshop-20261004",
+          "context_class": [
+            "fc-art-story"
+          ],
+          "classification": "owned-original-variant"
+        },
+        {
+          "src": "../assets/resources/still-bednar-be-still.jpg",
+          "srcset": null,
+          "alt": "Elder David A. Bednar speaking at April 2024 general conference",
+          "anchor": "https://www.churchofjesuschrist.org/media/video/2024-04-2010-david-a-bednar?lang=eng",
+          "context_id": null,
+          "context_class": [
+            "fc-resource-card"
+          ],
+          "classification": "official-resource-preview"
+        },
+        {
+          "src": "../assets/resources/still-principles-prayer.jpg",
+          "srcset": null,
+          "alt": "Principles of Peace: Prayer #PrinceofPeace official video preview",
+          "anchor": "https://www.churchofjesuschrist.org/media/video/2017-02-6700-principles-of-peace-prayer-princeofpeace?lang=eng",
+          "context_id": null,
+          "context_class": [
+            "fc-resource-card"
+          ],
+          "classification": "official-resource-preview"
+        },
+        {
+          "src": "../assets/resources/still-personal-peace.jpg",
+          "srcset": null,
+          "alt": "Finding Personal Peace official video preview",
+          "anchor": "https://www.churchofjesuschrist.org/media/video/2023-04-1070-henry-b-eyring?lang=eng",
+          "context_id": null,
+          "context_class": [
+            "fc-resource-card"
+          ],
+          "classification": "official-resource-preview"
+        },
+        {
+          "src": "../assets/page-art/art-study/thumbs/still-neighbor-peace-20261004.webp",
+          "srcset": "../assets/page-art/art-study/thumbs/still-neighbor-peace-20261004.webp 800w, ../assets/page-art/art-study/full/still-neighbor-peace-20261004.webp 1536w",
+          "alt": "A person turns a speaker dial while a neighbor gestures toward an ear and they look at one another.",
+          "anchor": "../assets/page-art/art-study/full/still-neighbor-peace-20261004.webp",
+          "context_id": "still-neighbor-peace-20261004",
+          "context_class": [
+            "fc-art-story"
+          ],
+          "classification": "owned-original-variant"
+        }
+      ],
+      "source_elements": [
+        {
+          "media": "(min-width:701px)",
+          "srcset": "/assets/heroes/be-still-responsive-desktop-20260929.webp"
+        }
+      ],
+      "inline_style_images": [
+        {
+          "class": [
+            "fc-visual-hero",
+            "fc-art-study-hero"
+          ],
+          "data-hero-viewer": "",
+          "data-hero-record": "be-still-art",
+          "aria-haspopup": "dialog",
+          "href": "../art/Be-Still.png",
+          "aria-label": "Explore Be Still artwork and study options",
+          "data-full-image-alt": "Jesus Christ walking beside a burdened man on a crowded modern street",
+          "data-hero-ask": "/ask.html?art=Be+Still&topic=finding+Christ\u2019s+peace+amid+uncertainty&return=%2Fart-study%2Fbe-still.html%3Fhero%3D1#ask-question",
+          "style": "--fc-art-study-image:url('../art/Be-Still.png')"
+        }
+      ],
+      "scripts": [
+        "../site-common.js?v=20261002-timeline-1",
+        null,
+        "../full-image-viewer.js?v=20260914-reopen-1",
+        "../hero-details.js?v=20260927-plan-study-1",
+        "../topic-artwork-details.js?v=20260930-history-records-1",
+        "../site-search.js?v=20260919-focused-answers-1",
+        null
+      ],
+      "resource_exclusions": [
+        {
+          "src": "../assets/resources/still-bednar-be-still.jpg",
+          "srcset": null,
+          "alt": "Elder David A. Bednar speaking at April 2024 general conference",
+          "anchor": "https://www.churchofjesuschrist.org/media/video/2024-04-2010-david-a-bednar?lang=eng",
+          "context_id": null,
+          "context_class": [
+            "fc-resource-card"
+          ],
+          "classification": "official-resource-preview"
+        },
+        {
+          "src": "../assets/resources/still-principles-prayer.jpg",
+          "srcset": null,
+          "alt": "Principles of Peace: Prayer #PrinceofPeace official video preview",
+          "anchor": "https://www.churchofjesuschrist.org/media/video/2017-02-6700-principles-of-peace-prayer-princeofpeace?lang=eng",
+          "context_id": null,
+          "context_class": [
+            "fc-resource-card"
+          ],
+          "classification": "official-resource-preview"
+        },
+        {
+          "src": "../assets/resources/still-personal-peace.jpg",
+          "srcset": null,
+          "alt": "Finding Personal Peace official video preview",
+          "anchor": "https://www.churchofjesuschrist.org/media/video/2023-04-1070-henry-b-eyring?lang=eng",
+          "context_id": null,
+          "context_class": [
+            "fc-resource-card"
+          ],
+          "classification": "official-resource-preview"
+        }
+      ],
+      "reference_target": "../art.html#gallery-original-be-still",
+      "reference_asset": "art/Be-Still.png",
+      "gallery_owner": {
+        "route": "art.html",
+        "html_sha256": "5874cff5142ea55c152336040fb234ff3116966789e80c1dbdebf8968a5603c4",
+        "section": "gallery-original-be-still",
+        "full_asset": "art/Be-Still.png",
+        "full_sha256": "4297877d988bdd154a92644550227d5cf6f2f1c57105507004f526ae9144bec4",
+        "thumbnail": "art/thumbs/Be-Still.webp",
+        "thumbnail_sha256": "6845948ae693d1bfec5a83b8930ace048fcdf1f5196e9c0c9120d5af2237ba6a",
+        "caption": "Be Still",
+        "alt": "Jesus walks beside a man in a dark T-shirt on a crowded city street, resting a hand on his shoulder."
+      }
+    },
+    "art-study/suffer-the-little-children.html": {
+      "html_sha256": "1d4cfe03d86758d7cea99b4897d3fa4ac465e0ed75d4c21aaf6cf92363027ad9",
+      "originals": [
+        {
+          "kind": "original",
+          "asset": "assets/page-art/art-study/full/children-gather-close.webp",
+          "sha256": "85d4a603bd46ef7b1f73c281f0eff4f634206c0bd9d288dce7fa0129b5410cd1",
+          "owner_route": "art-study/suffer-the-little-children.html",
+          "owner_section": "begin",
+          "original_id": "assets/page-art/art-study/full/children-gather-close",
+          "depicts_christ": true
+        },
+        {
+          "kind": "original",
+          "asset": "assets/page-art/art-study/full/children-welcome-shy-child.webp",
+          "sha256": "c95205d67cbcb8ab0337511ec2a5801ccaa3fe417197b79fb379b05b875f7256",
+          "owner_route": "art-study/suffer-the-little-children.html",
+          "owner_section": "welcome",
+          "original_id": "assets/page-art/art-study/full/children-welcome-shy-child",
+          "depicts_christ": true
+        },
+        {
+          "kind": "original",
+          "asset": "assets/page-art/art-study/full/children-temple-praise-20261004.webp",
+          "sha256": "dfc4c29d26b0c5f5f08317226204a49e575798db5d75e2d0a11e950dd58ab742",
+          "owner_route": "art-study/suffer-the-little-children.html",
+          "owner_section": "children-temple-praise-20261004",
+          "original_id": "assets/page-art/art-study/full/children-temple-praise-20261004",
+          "depicts_christ": true
+        },
+        {
+          "kind": "original",
+          "asset": "assets/page-art/art-study/full/children-listen-under-tree.webp",
+          "sha256": "193a5ecda7f4bbda37ae92b26c064edc08aa58442ef98d3b58c6b822f5987805",
+          "owner_route": "art-study/suffer-the-little-children.html",
+          "owner_section": "artwork-study",
+          "original_id": "assets/page-art/art-study/full/children-listen-under-tree",
+          "depicts_christ": true
+        },
+        {
+          "kind": "original",
+          "asset": "assets/page-art/art-study/full/children-quiet-water.webp",
+          "sha256": "e50fc2b7e243ffa4e442d29fa970a9169c6211a00d625db45ba548fca83b1336",
+          "owner_route": "art-study/suffer-the-little-children.html",
+          "owner_section": "artwork-study",
+          "original_id": "assets/page-art/art-study/full/children-quiet-water",
+          "depicts_christ": true
+        },
+        {
+          "kind": "original",
+          "asset": "assets/page-art/art-study/full/children-accessible-game-20261004.webp",
+          "sha256": "e9da26360a45ad26f0b05219c52d913bcb53654e88d7be352df40bb630355a39",
+          "owner_route": "art-study/suffer-the-little-children.html",
+          "owner_section": "children-accessible-game-20261004",
+          "original_id": "assets/page-art/art-study/full/children-accessible-game-20261004",
+          "depicts_christ": false
+        },
+        {
+          "kind": "original",
+          "asset": "assets/page-art/art-study/full/children-toy-repair-20261004.webp",
+          "sha256": "64d6683277eb2a95d8a4b1a049fde2e8fe246f66664557a863a4360e7e9c6dcd",
+          "owner_route": "art-study/suffer-the-little-children.html",
+          "owner_section": "children-toy-repair-20261004",
+          "original_id": "assets/page-art/art-study/full/children-toy-repair-20261004",
+          "depicts_christ": false
+        },
+        {
+          "kind": "original",
+          "asset": "assets/page-art/art-study/full/children-listen-at-home-20260919.webp",
+          "sha256": "afde94ae47f90109be64adba21ed2c6f9f5a3d5e8e00d125d5f0352812c34d1e",
+          "owner_route": "art-study/suffer-the-little-children.html",
+          "owner_section": "personal-study",
+          "original_id": "assets/page-art/art-study/full/children-listen-at-home-20260919",
+          "depicts_christ": false
+        },
+        {
+          "kind": "original",
+          "asset": "assets/page-art/art-study/full/children-share-snack-20261004.webp",
+          "sha256": "fc59308427c122a84faef422ff48465b33ed08071df30b0cfa68974283eb609e",
+          "owner_route": "art-study/suffer-the-little-children.html",
+          "owner_section": "children-share-snack-20261004",
+          "original_id": "assets/page-art/art-study/full/children-share-snack-20261004",
+          "depicts_christ": false
+        },
+        {
+          "kind": "original",
+          "asset": "assets/page-art/art-study/full/children-quiet-welcome-20261004.webp",
+          "sha256": "b70434f824bafdb970246e314c8177f7509f8522d9d2cfa5039c66512ab92b1d",
+          "owner_route": "art-study/suffer-the-little-children.html",
+          "owner_section": "children-quiet-welcome-20261004",
+          "original_id": "assets/page-art/art-study/full/children-quiet-welcome-20261004",
+          "depicts_christ": false
+        }
+      ],
+      "original_count": 10,
+      "christ_count": 5,
+      "image_elements": [
+        {
+          "src": "../art/Suffer-the-Little-Children-approved-20260929.webp",
+          "srcset": null,
+          "alt": "",
+          "anchor": "../art/Suffer-the-Little-Children-approved-20260929.webp",
+          "context_id": null,
+          "context_class": null,
+          "classification": "excluded-gallery-reference"
+        },
+        {
+          "src": "../assets/page-art/art-study/thumbs/children-gather-close.webp",
+          "srcset": "../assets/page-art/art-study/thumbs/children-gather-close.webp 800w, ../assets/page-art/art-study/full/children-gather-close.webp 1536w",
+          "alt": "Children gathered closely around Jesus Christ in a courtyard",
+          "anchor": "../assets/page-art/art-study/full/children-gather-close.webp",
+          "context_id": null,
+          "context_class": [
+            "fc-art-story"
+          ],
+          "classification": "owned-original-variant"
+        },
+        {
+          "src": "../assets/page-art/art-study/thumbs/children-welcome-shy-child.webp",
+          "srcset": "../assets/page-art/art-study/thumbs/children-welcome-shy-child.webp 800w, ../assets/page-art/art-study/full/children-welcome-shy-child.webp 1536w",
+          "alt": "Jesus Christ kneeling to welcome a shy child",
+          "anchor": "../assets/page-art/art-study/full/children-welcome-shy-child.webp",
+          "context_id": null,
+          "context_class": [
+            "fc-art-story"
+          ],
+          "classification": "owned-original-variant"
+        },
+        {
+          "src": "../assets/page-art/art-study/thumbs/children-temple-praise-20261004.webp",
+          "srcset": "../assets/page-art/art-study/thumbs/children-temple-praise-20261004.webp 800w, ../assets/page-art/art-study/full/children-temple-praise-20261004.webp 1536w",
+          "alt": "Three children praise Jesus in the temple as He turns toward two religious leaders.",
+          "anchor": "../assets/page-art/art-study/full/children-temple-praise-20261004.webp",
+          "context_id": "children-temple-praise-20261004",
+          "context_class": [
+            "fc-art-story"
+          ],
+          "classification": "owned-original-variant"
+        },
+        {
+          "src": "../assets/page-art/art-study/thumbs/children-listen-under-tree.webp",
+          "srcset": "../assets/page-art/art-study/thumbs/children-listen-under-tree.webp 800w, ../assets/page-art/art-study/full/children-listen-under-tree.webp 1536w",
+          "alt": "Jesus Christ listening among children beneath a tree",
+          "anchor": "../assets/page-art/art-study/full/children-listen-under-tree.webp",
+          "context_id": null,
+          "context_class": [
+            "fc-art-story"
+          ],
+          "classification": "owned-original-variant"
+        },
+        {
+          "src": "../assets/page-art/art-study/thumbs/children-quiet-water.webp",
+          "srcset": "../assets/page-art/art-study/thumbs/children-quiet-water.webp 800w, ../assets/page-art/art-study/full/children-quiet-water.webp 1536w",
+          "alt": "Jesus Christ listening to a child beside calm water",
+          "anchor": "../assets/page-art/art-study/full/children-quiet-water.webp",
+          "context_id": null,
+          "context_class": [
+            "fc-art-story"
+          ],
+          "classification": "owned-original-variant"
+        },
+        {
+          "src": "../assets/page-art/art-study/thumbs/children-accessible-game-20261004.webp",
+          "srcset": "../assets/page-art/art-study/thumbs/children-accessible-game-20261004.webp 800w, ../assets/page-art/art-study/full/children-accessible-game-20261004.webp 1536w",
+          "alt": "A girl using a wheelchair rolls a blue ball across a table toward a boy while another child waits and an adult moves an unused chair.",
+          "anchor": "../assets/page-art/art-study/full/children-accessible-game-20261004.webp",
+          "context_id": "children-accessible-game-20261004",
+          "context_class": [
+            "fc-art-story"
+          ],
+          "classification": "owned-original-variant"
+        },
+        {
+          "src": "../assets/page-art/art-study/thumbs/children-toy-repair-20261004.webp",
+          "srcset": "../assets/page-art/art-study/thumbs/children-toy-repair-20261004.webp 800w, ../assets/page-art/art-study/full/children-toy-repair-20261004.webp 1536w",
+          "alt": "A child holds a spool and watches an older woman sew a torn seam in a stuffed bear.",
+          "anchor": "../assets/page-art/art-study/full/children-toy-repair-20261004.webp",
+          "context_id": "children-toy-repair-20261004",
+          "context_class": [
+            "fc-art-story"
+          ],
+          "classification": "owned-original-variant"
+        },
+        {
+          "src": "../assets/page-art/art-study/thumbs/children-listen-at-home-20260919.webp",
+          "srcset": "../assets/page-art/art-study/thumbs/children-listen-at-home-20260919.webp 800w, ../assets/page-art/art-study/full/children-listen-at-home-20260919.webp 1536w",
+          "alt": "A mother sits at her young son\u2019s eye level and listens as he speaks at home.",
+          "anchor": "../assets/page-art/art-study/full/children-listen-at-home-20260919.webp",
+          "context_id": null,
+          "context_class": [
+            "fc-art-story"
+          ],
+          "classification": "owned-original-variant"
+        },
+        {
+          "src": "../assets/page-art/art-study/thumbs/children-share-snack-20261004.webp",
+          "srcset": "../assets/page-art/art-study/thumbs/children-share-snack-20261004.webp 800w, ../assets/page-art/art-study/full/children-share-snack-20261004.webp 1536w",
+          "alt": "A boy offers a sealed snack packet to a girl across a lunch table while an adult watches nearby.",
+          "anchor": "../assets/page-art/art-study/full/children-share-snack-20261004.webp",
+          "context_id": "children-share-snack-20261004",
+          "context_class": [
+            "fc-art-story"
+          ],
+          "classification": "owned-original-variant"
+        },
+        {
+          "src": "../assets/resources/children-lords-love.jpg",
+          "srcset": null,
+          "alt": "President Nelson Blesses Children with the Lord\u2019s Love official video preview",
+          "anchor": "https://www.churchofjesuschrist.org/media/video/2020-05-0140-president-nelson-blesses-children-with-the-lords-love?lang=eng",
+          "context_id": null,
+          "context_class": [
+            "fc-resource-card"
+          ],
+          "classification": "official-resource-preview"
+        },
+        {
+          "src": "../assets/resources/children-heartfelt-prayer.jpg",
+          "srcset": null,
+          "alt": "Are You Really There? official video preview",
+          "anchor": "https://www.churchofjesuschrist.org/media/video/2023-01-0020-are-you-really-there?lang=eng",
+          "context_id": null,
+          "context_class": [
+            "fc-resource-card"
+          ],
+          "classification": "official-resource-preview"
+        },
+        {
+          "src": "../assets/page-art/art-study/thumbs/children-quiet-welcome-20261004.webp",
+          "srcset": "../assets/page-art/art-study/thumbs/children-quiet-welcome-20261004.webp 800w, ../assets/page-art/art-study/full/children-quiet-welcome-20261004.webp 1536w",
+          "alt": "A child seated on a floor cushion reaches toward ear defenders offered by an adult, with a gathering visible through an open doorway.",
+          "anchor": "../assets/page-art/art-study/full/children-quiet-welcome-20261004.webp",
+          "context_id": "children-quiet-welcome-20261004",
+          "context_class": [
+            "fc-art-story"
+          ],
+          "classification": "owned-original-variant"
+        }
+      ],
+      "source_elements": [
+        {
+          "media": "(min-width:701px)",
+          "srcset": "/assets/heroes/children-responsive-desktop-20260929.webp"
+        },
+        {
+          "media": "(max-width:700px)",
+          "srcset": "/assets/heroes/children-phone-responsive-20260929.webp"
+        }
+      ],
+      "inline_style_images": [
+        {
+          "class": [
+            "fc-visual-hero",
+            "fc-art-study-hero"
+          ],
+          "data-hero-viewer": "",
+          "data-hero-record": "little-children-art",
+          "aria-haspopup": "dialog",
+          "href": "../art/Suffer-the-Little-Children-approved-20260929.webp",
+          "aria-label": "Explore Suffer the Little Children artwork and study options",
+          "data-full-image-alt": "Jesus Christ seated in an olive grove and welcoming a circle of children",
+          "data-hero-ask": "/ask.html?art=Suffer+the+Little+Children&topic=Jesus+Christ+welcoming+and+blessing+children&return=%2Fart-study%2Fsuffer-the-little-children.html%3Fhero%3D1#ask-question",
+          "style": "--fc-art-study-image:url('../art/Suffer-the-Little-Children-approved-20260929.webp')"
+        }
+      ],
+      "scripts": [
+        "../site-common.js?v=20261002-timeline-1",
+        null,
+        "../full-image-viewer.js?v=20260914-reopen-1",
+        "../hero-details.js?v=20260927-plan-study-1",
+        "../topic-artwork-details.js?v=20260930-history-records-1",
+        "../site-search.js?v=20260919-focused-answers-1",
+        null
+      ],
+      "resource_exclusions": [
+        {
+          "src": "../assets/resources/children-lords-love.jpg",
+          "srcset": null,
+          "alt": "President Nelson Blesses Children with the Lord\u2019s Love official video preview",
+          "anchor": "https://www.churchofjesuschrist.org/media/video/2020-05-0140-president-nelson-blesses-children-with-the-lords-love?lang=eng",
+          "context_id": null,
+          "context_class": [
+            "fc-resource-card"
+          ],
+          "classification": "official-resource-preview"
+        },
+        {
+          "src": "../assets/resources/children-heartfelt-prayer.jpg",
+          "srcset": null,
+          "alt": "Are You Really There? official video preview",
+          "anchor": "https://www.churchofjesuschrist.org/media/video/2023-01-0020-are-you-really-there?lang=eng",
+          "context_id": null,
+          "context_class": [
+            "fc-resource-card"
+          ],
+          "classification": "official-resource-preview"
+        }
+      ],
+      "reference_target": "../art.html#gallery-original-suffer-the-little-children",
+      "reference_asset": "art/Suffer-the-Little-Children-approved-20260929.webp",
+      "gallery_owner": {
+        "route": "art.html",
+        "html_sha256": "5874cff5142ea55c152336040fb234ff3116966789e80c1dbdebf8968a5603c4",
+        "section": "gallery-original-suffer-the-little-children",
+        "full_asset": "art/Suffer-the-Little-Children-approved-20260929.webp",
+        "full_sha256": "a104e8efc2e25a2eb70a8fa53fa8b250f1d13ab856165e3c906aa919c6ac0fdd",
+        "thumbnail": "art/thumbs/Suffer-the-Little-Children-approved-20260929.webp",
+        "thumbnail_sha256": "49db1feb4cca9a29e2da85bb331a9b287fc0fb3cfd59a397965dc365bf8689b4",
+        "caption": "Suffer the Little Children",
+        "alt": "Jesus sits among six smiling children beside olive trees, with two children holding small white flowers."
+      }
+    },
+    "art-study/the-good-shepherd.html": {
+      "html_sha256": "0e3cf97723df9127cfbcd7d0484a2b6fa79a6ef697eac4b43531f7763ef2bf46",
+      "originals": [
+        {
+          "kind": "original",
+          "asset": "assets/page-art/art-study/full/shepherd-sees-one.webp",
+          "sha256": "fc1523a72660dd51c6ba2d9018b04ebcd932adf43835897b3c93af98d89af4a6",
+          "owner_route": "art-study/the-good-shepherd.html",
+          "owner_section": "begin",
+          "original_id": "assets/page-art/art-study/full/shepherd-sees-one",
+          "depicts_christ": true
+        },
+        {
+          "kind": "original",
+          "asset": "assets/page-art/art-study/full/shepherd-carries-lamb.webp",
+          "sha256": "7747830e7335539a881b235dedf001f704c73d237f290c98fd61a9448a7f78ba",
+          "owner_route": "art-study/the-good-shepherd.html",
+          "owner_section": "shepherd-words",
+          "original_id": "assets/page-art/art-study/full/shepherd-carries-lamb",
+          "depicts_christ": true
+        },
+        {
+          "kind": "original",
+          "asset": "assets/page-art/art-study/full/shepherd-binds-hurt-20261004.webp",
+          "sha256": "2d619476a87cb983da80c0c0e05e7d6d1ab19ddd89df89caca76dd41594fd76f",
+          "owner_route": "art-study/the-good-shepherd.html",
+          "owner_section": "shepherd-binds-hurt-20261004",
+          "original_id": "assets/page-art/art-study/full/shepherd-binds-hurt-20261004",
+          "depicts_christ": true
+        },
+        {
+          "kind": "original",
+          "asset": "assets/page-art/art-study/full/shepherd-room-at-water-20261004.webp",
+          "sha256": "5f222f65d114f0cb9874b1d2ee33e3aef035a81555ea27ddcab4d23130a79572",
+          "owner_route": "art-study/the-good-shepherd.html",
+          "owner_section": "shepherd-room-at-water-20261004",
+          "original_id": "assets/page-art/art-study/full/shepherd-room-at-water-20261004",
+          "depicts_christ": false
+        },
+        {
+          "kind": "original",
+          "asset": "assets/page-art/art-study/full/shepherd-shares-burden.webp",
+          "sha256": "d7aeb93b9a83147993c7933180d2ea73e7cfd4461c40c778793172927a0d6b5a",
+          "owner_route": "art-study/the-good-shepherd.html",
+          "owner_section": "artwork-study",
+          "original_id": "assets/page-art/art-study/full/shepherd-shares-burden",
+          "depicts_christ": true
+        },
+        {
+          "kind": "original",
+          "asset": "assets/page-art/art-study/full/shepherd-calls-zacchaeus.webp",
+          "sha256": "db1509ed08bfe12b04e4de33a3b6a728e8427895c6a3b567c01a517e91891041",
+          "owner_route": "art-study/the-good-shepherd.html",
+          "owner_section": "artwork-study",
+          "original_id": "assets/page-art/art-study/full/shepherd-calls-zacchaeus",
+          "depicts_christ": true
+        },
+        {
+          "kind": "original",
+          "asset": "assets/page-art/art-study/full/shepherd-coat-repair-20261004.webp",
+          "sha256": "2262d19504bafcd26b64ee3ae164fcc7c2148f95d38d8699fd76c2ac75853668",
+          "owner_route": "art-study/the-good-shepherd.html",
+          "owner_section": "shepherd-coat-repair-20261004",
+          "original_id": "assets/page-art/art-study/full/shepherd-coat-repair-20261004",
+          "depicts_christ": false
+        },
+        {
+          "kind": "original",
+          "asset": "assets/page-art/art-study/full/shepherd-seeks-one-20260919.webp",
+          "sha256": "029684658fd2fd404729db71ee451862ffb67ea6aae62ae50ed1e2254a8f946f",
+          "owner_route": "art-study/the-good-shepherd.html",
+          "owner_section": "personal-study",
+          "original_id": "assets/page-art/art-study/full/shepherd-seeks-one-20260919",
+          "depicts_christ": true
+        },
+        {
+          "kind": "original",
+          "asset": "assets/page-art/art-study/full/shepherd-key-recovery-20261004.webp",
+          "sha256": "88b3046e9cca01aa5b31f4acb569ec111641dabf991441076559d700964769c4",
+          "owner_route": "art-study/the-good-shepherd.html",
+          "owner_section": "shepherd-key-recovery-20261004",
+          "original_id": "assets/page-art/art-study/full/shepherd-key-recovery-20261004",
+          "depicts_christ": false
+        },
+        {
+          "kind": "original",
+          "asset": "assets/page-art/art-study/full/shepherd-audio-access-20261004.webp",
+          "sha256": "21a2588ae548dec1bb0b6f928aa9246d61fbc01167f846b346808b8bcca189e2",
+          "owner_route": "art-study/the-good-shepherd.html",
+          "owner_section": "shepherd-audio-access-20261004",
+          "original_id": "assets/page-art/art-study/full/shepherd-audio-access-20261004",
+          "depicts_christ": false
+        }
+      ],
+      "original_count": 10,
+      "christ_count": 6,
+      "image_elements": [
+        {
+          "src": "../art/The-Good-Shephard.jpg",
+          "srcset": null,
+          "alt": "",
+          "anchor": "../art/The-Good-Shephard.jpg",
+          "context_id": null,
+          "context_class": null,
+          "classification": "excluded-gallery-reference"
+        },
+        {
+          "src": "../assets/page-art/art-study/thumbs/shepherd-sees-one.webp",
+          "srcset": "../assets/page-art/art-study/thumbs/shepherd-sees-one.webp 800w, ../assets/page-art/art-study/full/shepherd-sees-one.webp 1536w",
+          "alt": "Jesus Christ kneeling beside an older man in a village street",
+          "anchor": "../assets/page-art/art-study/full/shepherd-sees-one.webp",
+          "context_id": null,
+          "context_class": [
+            "fc-art-story"
+          ],
+          "classification": "owned-original-variant"
+        },
+        {
+          "src": "../assets/page-art/art-study/thumbs/shepherd-carries-lamb.webp",
+          "srcset": "../assets/page-art/art-study/thumbs/shepherd-carries-lamb.webp 800w, ../assets/page-art/art-study/full/shepherd-carries-lamb.webp 1536w",
+          "alt": "Jesus Christ carrying a lamb across a hillside",
+          "anchor": "../assets/page-art/art-study/full/shepherd-carries-lamb.webp",
+          "context_id": null,
+          "context_class": [
+            "fc-art-story"
+          ],
+          "classification": "owned-original-variant"
+        },
+        {
+          "src": "../assets/page-art/art-study/thumbs/shepherd-binds-hurt-20261004.webp",
+          "srcset": "../assets/page-art/art-study/thumbs/shepherd-binds-hurt-20261004.webp 800w, ../assets/page-art/art-study/full/shepherd-binds-hurt-20261004.webp 1536w",
+          "alt": "Jesus kneels beside a resting sheep and finishes wrapping a bandage around its lower foreleg.",
+          "anchor": "../assets/page-art/art-study/full/shepherd-binds-hurt-20261004.webp",
+          "context_id": "shepherd-binds-hurt-20261004",
+          "context_class": [
+            "fc-art-story"
+          ],
+          "classification": "owned-original-variant"
+        },
+        {
+          "src": "../assets/page-art/art-study/thumbs/shepherd-room-at-water-20261004.webp",
+          "srcset": "../assets/page-art/art-study/thumbs/shepherd-room-at-water-20261004.webp 800w, ../assets/page-art/art-study/full/shepherd-room-at-water-20261004.webp 1536w",
+          "alt": "A smaller sheep waits behind two larger sheep at a narrow approach to water, with three more sheep on the bank.",
+          "anchor": "../assets/page-art/art-study/full/shepherd-room-at-water-20261004.webp",
+          "context_id": "shepherd-room-at-water-20261004",
+          "context_class": [
+            "fc-art-story"
+          ],
+          "classification": "owned-original-variant"
+        },
+        {
+          "src": "../assets/page-art/art-study/thumbs/shepherd-shares-burden.webp",
+          "srcset": "../assets/page-art/art-study/thumbs/shepherd-shares-burden.webp 800w, ../assets/page-art/art-study/full/shepherd-shares-burden.webp 1536w",
+          "alt": "Jesus Christ helping a family push a handcart from the mud",
+          "anchor": "../assets/page-art/art-study/full/shepherd-shares-burden.webp",
+          "context_id": null,
+          "context_class": [
+            "fc-art-story"
+          ],
+          "classification": "owned-original-variant"
+        },
+        {
+          "src": "../assets/page-art/art-study/thumbs/shepherd-calls-zacchaeus.webp",
+          "srcset": "../assets/page-art/art-study/thumbs/shepherd-calls-zacchaeus.webp 800w, ../assets/page-art/art-study/full/shepherd-calls-zacchaeus.webp 1536w",
+          "alt": "Jesus Christ looking up toward Zacchaeus above a crowd",
+          "anchor": "../assets/page-art/art-study/full/shepherd-calls-zacchaeus.webp",
+          "context_id": null,
+          "context_class": [
+            "fc-art-story"
+          ],
+          "classification": "owned-original-variant"
+        },
+        {
+          "src": "../assets/page-art/art-study/thumbs/shepherd-coat-repair-20261004.webp",
+          "srcset": "../assets/page-art/art-study/thumbs/shepherd-coat-repair-20261004.webp 800w, ../assets/page-art/art-study/full/shepherd-coat-repair-20261004.webp 1536w",
+          "alt": "A man stitches a coat lining while an older woman holds the fabric steady at a table.",
+          "anchor": "../assets/page-art/art-study/full/shepherd-coat-repair-20261004.webp",
+          "context_id": "shepherd-coat-repair-20261004",
+          "context_class": [
+            "fc-art-story"
+          ],
+          "classification": "owned-original-variant"
+        },
+        {
+          "src": "../assets/page-art/art-study/thumbs/shepherd-seeks-one-20260919.webp",
+          "srcset": "../assets/page-art/art-study/thumbs/shepherd-seeks-one-20260919.webp 800w, ../assets/page-art/art-study/full/shepherd-seeks-one-20260919.webp 1536w",
+          "alt": "Christ as the Good Shepherd approaches one sheep among rocks and scrub at dusk.",
+          "anchor": "../assets/page-art/art-study/full/shepherd-seeks-one-20260919.webp",
+          "context_id": null,
+          "context_class": [
+            "fc-art-story"
+          ],
+          "classification": "owned-original-variant"
+        },
+        {
+          "src": "../assets/page-art/art-study/thumbs/shepherd-key-recovery-20261004.webp",
+          "srcset": "../assets/page-art/art-study/thumbs/shepherd-key-recovery-20261004.webp 800w, ../assets/page-art/art-study/full/shepherd-key-recovery-20261004.webp 1536w",
+          "alt": "A man lifts a key ring from a drain with a magnetic tool while a woman points toward the opening.",
+          "anchor": "../assets/page-art/art-study/full/shepherd-key-recovery-20261004.webp",
+          "context_id": "shepherd-key-recovery-20261004",
+          "context_class": [
+            "fc-art-story"
+          ],
+          "classification": "owned-original-variant"
+        },
+        {
+          "src": "../assets/resources/shepherd-abiding-compassion.jpg",
+          "srcset": null,
+          "alt": "The Savior\u2019s Abiding Compassion official video preview",
+          "anchor": "https://www.churchofjesuschrist.org/media/video/2021-10-1040-ulisses-soares?lang=eng",
+          "context_id": null,
+          "context_class": [
+            "fc-resource-card"
+          ],
+          "classification": "official-resource-preview"
+        },
+        {
+          "src": "../assets/resources/good-shepherd.jpg",
+          "srcset": null,
+          "alt": "The Good Shepherd and Other Sheep I Have resource preview",
+          "anchor": "https://www.churchofjesuschrist.org/study/video/teachings/2011-10-059-the-good-shepherd-and-other-sheep-i-have?lang=eng",
+          "context_id": null,
+          "context_class": [
+            "fc-resource-card"
+          ],
+          "classification": "official-resource-preview"
+        },
+        {
+          "src": "../assets/page-art/art-study/thumbs/shepherd-audio-access-20261004.webp",
+          "srcset": "../assets/page-art/art-study/thumbs/shepherd-audio-access-20261004.webp 800w, ../assets/page-art/art-study/full/shepherd-audio-access-20261004.webp 1536w",
+          "alt": "An older woman presses an audio player\u2019s large play button while a woman beside her points toward the controls.",
+          "anchor": "../assets/page-art/art-study/full/shepherd-audio-access-20261004.webp",
+          "context_id": "shepherd-audio-access-20261004",
+          "context_class": [
+            "fc-art-story"
+          ],
+          "classification": "owned-original-variant"
+        }
+      ],
+      "source_elements": [
+        {
+          "media": "(min-width:701px)",
+          "srcset": "/assets/heroes/shepherd-desktop-exact-20260929.webp"
+        }
+      ],
+      "inline_style_images": [
+        {
+          "class": [
+            "fc-visual-hero",
+            "fc-art-study-hero"
+          ],
+          "data-hero-viewer": "",
+          "data-hero-record": "good-shepherd-art",
+          "aria-haspopup": "dialog",
+          "href": "../art/The-Good-Shephard.jpg",
+          "aria-label": "Explore The Good Shepherd artwork and study options",
+          "data-full-image-alt": "Jesus Christ smiling in the warmth of a busy village street",
+          "data-hero-ask": "/ask.html?art=The+Good+Shepherd&topic=Jesus+Christ+as+the+Good+Shepherd&return=%2Fart-study%2Fthe-good-shepherd.html%3Fhero%3D1#ask-question",
+          "style": "--fc-art-study-image:url('../art/The-Good-Shephard.jpg')"
+        }
+      ],
+      "scripts": [
+        "../site-common.js?v=20261002-timeline-1",
+        null,
+        "../full-image-viewer.js?v=20260914-reopen-1",
+        "../hero-details.js?v=20260927-plan-study-1",
+        "../topic-artwork-details.js?v=20260930-history-records-1",
+        "../site-search.js?v=20260919-focused-answers-1",
+        null
+      ],
+      "resource_exclusions": [
+        {
+          "src": "../assets/resources/shepherd-abiding-compassion.jpg",
+          "srcset": null,
+          "alt": "The Savior\u2019s Abiding Compassion official video preview",
+          "anchor": "https://www.churchofjesuschrist.org/media/video/2021-10-1040-ulisses-soares?lang=eng",
+          "context_id": null,
+          "context_class": [
+            "fc-resource-card"
+          ],
+          "classification": "official-resource-preview"
+        },
+        {
+          "src": "../assets/resources/good-shepherd.jpg",
+          "srcset": null,
+          "alt": "The Good Shepherd and Other Sheep I Have resource preview",
+          "anchor": "https://www.churchofjesuschrist.org/study/video/teachings/2011-10-059-the-good-shepherd-and-other-sheep-i-have?lang=eng",
+          "context_id": null,
+          "context_class": [
+            "fc-resource-card"
+          ],
+          "classification": "official-resource-preview"
+        }
+      ],
+      "reference_target": "../art.html#gallery-original-the-good-shepherd",
+      "reference_asset": "art/The-Good-Shephard.jpg",
+      "gallery_owner": {
+        "route": "art.html",
+        "html_sha256": "5874cff5142ea55c152336040fb234ff3116966789e80c1dbdebf8968a5603c4",
+        "section": "gallery-original-the-good-shepherd",
+        "full_asset": "art/The-Good-Shephard.jpg",
+        "full_sha256": "d1146be308c5f28ccb34ca992012f62bfbf56083ab11425c934763ead05d5ca7",
+        "thumbnail": "art/thumbs/The-Good-Shephard.webp",
+        "thumbnail_sha256": "c4395218202d5e06f4233891dbdf7ffbb73ac7f2cd175ab2bfe155d49d9a26e0",
+        "caption": "The Good Shepherd",
+        "alt": "Jesus smiles toward the viewer on a stone market street with people, stalls and a donkey behind him."
+      }
+    }
+  },
+  "lineage": [
+    {
+      "asset": "assets/page-art/art-study/full/shepherd-binds-hurt-20261004.webp",
+      "source_sha256": "9d18647148c27b803fd263dab2ef05c43ae958ba7e55794db3b74807474eaa82",
+      "full_sha256": "2d619476a87cb983da80c0c0e05e7d6d1ab19ddd89df89caca76dd41594fd76f",
+      "thumbnail_sha256": "0b8f26253c42f31d3f8ca5d50dbb3560051869c06fdcb0681de6c0d8e15a7902",
+      "reproduced_full_and_thumb_encoding_exact": true,
+      "full_dimensions": [
+        1536,
+        1024
+      ],
+      "thumb_dimensions": [
+        800,
+        533
+      ],
+      "uncropped": true
+    },
+    {
+      "asset": "assets/page-art/art-study/full/shepherd-room-at-water-20261004.webp",
+      "source_sha256": "651e693f7c84c0948bff58bebf11291d1d86ea58948aa6834a29366059cca7c5",
+      "full_sha256": "5f222f65d114f0cb9874b1d2ee33e3aef035a81555ea27ddcab4d23130a79572",
+      "thumbnail_sha256": "3ba0b8559401ca88f36bcd0f60753a050f76dbbcbb9bd0c86a9c2518130ff173",
+      "reproduced_full_and_thumb_encoding_exact": true,
+      "full_dimensions": [
+        1536,
+        1024
+      ],
+      "thumb_dimensions": [
+        800,
+        533
+      ],
+      "uncropped": true
+    },
+    {
+      "asset": "assets/page-art/art-study/full/shepherd-coat-repair-20261004.webp",
+      "source_sha256": "6a01f16b128969e7a5877ec7827a24049e025d00c79fb49ee1d627ff3f9ffeb6",
+      "full_sha256": "2262d19504bafcd26b64ee3ae164fcc7c2148f95d38d8699fd76c2ac75853668",
+      "thumbnail_sha256": "c3f52e5a9e7a78d8b199b56f4976f20804dd04931ec603a89323dbdfc3b2c7f6",
+      "reproduced_full_and_thumb_encoding_exact": true,
+      "full_dimensions": [
+        1536,
+        1024
+      ],
+      "thumb_dimensions": [
+        800,
+        533
+      ],
+      "uncropped": true
+    },
+    {
+      "asset": "assets/page-art/art-study/full/shepherd-key-recovery-20261004.webp",
+      "source_sha256": "f09aa044fa31f94e65a1a0d6e7cbd1b97bdddea269c707496ca99b571f73d808",
+      "full_sha256": "88b3046e9cca01aa5b31f4acb569ec111641dabf991441076559d700964769c4",
+      "thumbnail_sha256": "294fd36ee2caa52ae6714c75a58fae86958114f2e44cc1715f2d954514b4cc0c",
+      "reproduced_full_and_thumb_encoding_exact": true,
+      "full_dimensions": [
+        1536,
+        1024
+      ],
+      "thumb_dimensions": [
+        800,
+        533
+      ],
+      "uncropped": true
+    },
+    {
+      "asset": "assets/page-art/art-study/full/shepherd-audio-access-20261004.webp",
+      "source_sha256": "d0babc7bf03ef3133c731479d9c3170191ddecdf10843bd2fc2ea0184293c9c5",
+      "full_sha256": "21a2588ae548dec1bb0b6f928aa9246d61fbc01167f846b346808b8bcca189e2",
+      "thumbnail_sha256": "8ea1a042f4a6708866adc1e4471f7c8df4203487365f6f68d0260230b2f6a694",
+      "reproduced_full_and_thumb_encoding_exact": true,
+      "full_dimensions": [
+        1536,
+        1024
+      ],
+      "thumb_dimensions": [
+        800,
+        533
+      ],
+      "uncropped": true
+    },
+    {
+      "asset": "assets/page-art/art-study/full/children-temple-praise-20261004.webp",
+      "source_sha256": "fc4079d49649d1ac88a3bd2e2f69a8e205b1731436effd4b8c902deac47a92c1",
+      "full_sha256": "dfc4c29d26b0c5f5f08317226204a49e575798db5d75e2d0a11e950dd58ab742",
+      "thumbnail_sha256": "b1457c272e3837c75df802b3b4a6a8d11f4a839528ae7d2827ae0ab01fea771f",
+      "reproduced_full_and_thumb_encoding_exact": true,
+      "full_dimensions": [
+        1536,
+        1024
+      ],
+      "thumb_dimensions": [
+        800,
+        533
+      ],
+      "uncropped": true
+    },
+    {
+      "asset": "assets/page-art/art-study/full/children-accessible-game-20261004.webp",
+      "source_sha256": "12ac73978b43eed0dc24db02529424d7d2ac2338494291716b7a6dc9abb6006b",
+      "full_sha256": "e9da26360a45ad26f0b05219c52d913bcb53654e88d7be352df40bb630355a39",
+      "thumbnail_sha256": "b698eb0ca9031ebb1a87cc200fd644aba4329468e5c271c24167b0c292b33141",
+      "reproduced_full_and_thumb_encoding_exact": true,
+      "full_dimensions": [
+        1536,
+        1024
+      ],
+      "thumb_dimensions": [
+        800,
+        533
+      ],
+      "uncropped": true
+    },
+    {
+      "asset": "assets/page-art/art-study/full/children-toy-repair-20261004.webp",
+      "source_sha256": "8d22d7b07969c14d94968108fd36a210a7f7d333a7cfeb372a8daccac27a23a0",
+      "full_sha256": "64d6683277eb2a95d8a4b1a049fde2e8fe246f66664557a863a4360e7e9c6dcd",
+      "thumbnail_sha256": "51983553ba10661ffc31baff6f334701ba7d7d6671c36fdc5db392741e0526dc",
+      "reproduced_full_and_thumb_encoding_exact": true,
+      "full_dimensions": [
+        1536,
+        1024
+      ],
+      "thumb_dimensions": [
+        800,
+        533
+      ],
+      "uncropped": true
+    },
+    {
+      "asset": "assets/page-art/art-study/full/children-share-snack-20261004.webp",
+      "source_sha256": "5cc23a24311c8bbb95c33e8032c8cbfcd09964344f9b93f8baa7ab3ba5e7d6aa",
+      "full_sha256": "fc59308427c122a84faef422ff48465b33ed08071df30b0cfa68974283eb609e",
+      "thumbnail_sha256": "5a50740b0b44ed8d33f24b8d63ea1c81c2834efc013ee65465a662ce94697ae7",
+      "reproduced_full_and_thumb_encoding_exact": true,
+      "full_dimensions": [
+        1536,
+        1024
+      ],
+      "thumb_dimensions": [
+        800,
+        533
+      ],
+      "uncropped": true
+    },
+    {
+      "asset": "assets/page-art/art-study/full/children-quiet-welcome-20261004.webp",
+      "source_sha256": "1a0a1e7ac15667f583aedbd3c5e3b6c1b4f07e944cf3088b132a0ef01efa60b4",
+      "full_sha256": "b70434f824bafdb970246e314c8177f7509f8522d9d2cfa5039c66512ab92b1d",
+      "thumbnail_sha256": "946ca7f635467b5b70b42275e8f0b73d1ad4380f5bfc9bdf12064506c8b9b2d6",
+      "reproduced_full_and_thumb_encoding_exact": true,
+      "full_dimensions": [
+        1536,
+        1024
+      ],
+      "thumb_dimensions": [
+        800,
+        533
+      ],
+      "uncropped": true
+    },
+    {
+      "asset": "assets/page-art/art-study/full/still-depart-for-rest-20261004.webp",
+      "source_sha256": "b38bc8ff679a3a11bf819a7c362f13336c4a58e076895ee9db153bced8cb9d25",
+      "full_sha256": "8ca49a7424f7467906230d0d9f5b0db08b8b57969f996f0726420fec2499f942",
+      "thumbnail_sha256": "a19fc611494a469b07f47cd97bb8012ca800aa5407d8564aeed325d5364d9ed4",
+      "reproduced_full_and_thumb_encoding_exact": true,
+      "full_dimensions": [
+        1536,
+        1024
+      ],
+      "thumb_dimensions": [
+        800,
+        533
+      ],
+      "uncropped": true
+    },
+    {
+      "asset": "assets/page-art/art-study/full/still-pause-work-20261004.webp",
+      "source_sha256": "ffb4b79a8e3e4c6c3d539ec46f6c10ab7fdd55431d40594fe1da5dfc082babd7",
+      "full_sha256": "dcb354027d6b26f8e6e0051774095ef46cde88768a8b1acd3f31ea824e9f19b5",
+      "thumbnail_sha256": "5b9851b18f35e181bb5b57dfac9f4ff0f59d4e77c233c2e3479b66d3478b071f",
+      "reproduced_full_and_thumb_encoding_exact": true,
+      "full_dimensions": [
+        1536,
+        1024
+      ],
+      "thumb_dimensions": [
+        800,
+        533
+      ],
+      "uncropped": true
+    },
+    {
+      "asset": "assets/page-art/art-study/full/still-listen-workshop-20261004.webp",
+      "source_sha256": "a1007bf3a7f40e3dfb3efa1d8cb2a6a8fe3072bad565898aa3811c7dfd4668b7",
+      "full_sha256": "68e2ef2239f5f14971f7b169bce3d1bdedee45c88785d4a64d5e9e5bd906945c",
+      "thumbnail_sha256": "08b4f38150807949d4ff6da2bc468729a0fdb5e0975c29202cb760e0b88f97c8",
+      "reproduced_full_and_thumb_encoding_exact": true,
+      "full_dimensions": [
+        1536,
+        1024
+      ],
+      "thumb_dimensions": [
+        800,
+        533
+      ],
+      "uncropped": true
+    },
+    {
+      "asset": "assets/page-art/art-study/full/still-neighbor-peace-20261004.webp",
+      "source_sha256": "5e0da18e670f73a983b92e39cbf0824e1e5782e753961dc60e5aeb0f3b75d1a3",
+      "full_sha256": "5aee429ac2d34f32475e0045dd23bf0d8d255b681e4717eb9154198a80256731",
+      "thumbnail_sha256": "36f4922cfedb4f493525868303cd17f8aacf9bc6d48204d20cdd1ba9a8102b07",
+      "reproduced_full_and_thumb_encoding_exact": true,
+      "full_dimensions": [
+        1536,
+        1024
+      ],
+      "thumb_dimensions": [
+        800,
+        533
+      ],
+      "uncropped": true
+    },
+    {
+      "asset": "assets/page-art/art-study/full/still-wars-cease-20261004.webp",
+      "source_sha256": "1904a0cb7c0bb79c3fbe27cecec7401524e9514d7cbd0404c9168410a2bdf4e3",
+      "full_sha256": "a7d7fa59adb4ddf1bd7e4eb2788ecaf1d89c19334402763961e2c60205bf7979",
+      "thumbnail_sha256": "6eb12dd4de19ebb7faf5be3422f23471b97ef357fbc29b28d10069626323d135",
+      "reproduced_full_and_thumb_encoding_exact": true,
+      "full_dimensions": [
+        1536,
+        1024
+      ],
+      "thumb_dimensions": [
+        800,
+        533
+      ],
+      "uncropped": true
+    }
+  ],
+  "canonical_routes": [
+    "about.html",
+    "answers.html",
+    "answers/aaronic-priesthood-restoration.html",
+    "answers/abrahamic-covenant.html",
+    "answers/are-latter-day-saints-christian.html",
+    "answers/bible-and-book-of-mormon-together.html",
+    "answers/death-of-a-child.html",
+    "answers/divorce-and-faith.html",
+    "answers/faith-in-jesus-christ-during-trials.html",
+    "answers/god-our-heavenly-father.html",
+    "answers/grief-and-faith.html",
+    "answers/holy-ghost.html",
+    "answers/jesus-christ-latter-day-saint-beliefs.html",
+    "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+    "answers/melchizedek-priesthood-restoration.html",
+    "answers/plan-of-salvation.html",
+    "answers/prayer-and-personal-revelation.html",
+    "answers/race-priesthood-and-temple-blessings.html",
+    "answers/restored-church-of-jesus-christ.html",
+    "answers/settle-this-in-your-hearts.html",
+    "answers/stand-forever.html",
+    "answers/what-happens-after-death.html",
+    "answers/what-is-eternal-marriage.html",
+    "answers/what-is-the-book-of-mormon.html",
+    "answers/who-was-joseph-smith.html",
+    "answers/why-families-are-important.html",
+    "answers/why-latter-day-saints-build-temples.html",
+    "art-gallery.html",
+    "art-study/be-still.html",
+    "art-study/suffer-the-little-children.html",
+    "art-study/the-good-shepherd.html",
+    "art-study/the-living-christ.html",
+    "art.html",
+    "ask.html",
+    "atonement.html",
+    "birth-of-christ.html",
+    "book-of-mormon-evidences.html",
+    "church-history.html",
+    "come-follow-me.html",
+    "general-conference.html",
+    "history/eleazer-miller.html",
+    "history/john-rowe-moyle.html",
+    "history/john-tanner.html",
+    "index.html",
+    "jesus-christ/before-bethlehem.html",
+    "jesus-christ/miracles-and-compassion.html",
+    "jesus-christ/mortal-ministry.html",
+    "jesus-christ/parables/barren-fig.html",
+    "jesus-christ/parables/birds-lilies.html",
+    "jesus-christ/parables/blind-guides.html",
+    "jesus-christ/parables/bridegroom.html",
+    "jesus-christ/parables/budding-fig.html",
+    "jesus-christ/parables/children-marketplace.html",
+    "jesus-christ/parables/closed-door.html",
+    "jesus-christ/parables/divided-house.html",
+    "jesus-christ/parables/doorkeeper.html",
+    "jesus-christ/parables/faithful-servant.html",
+    "jesus-christ/parables/friend-midnight.html",
+    "jesus-christ/parables/good-samaritan.html",
+    "jesus-christ/parables/good-shepherd.html",
+    "jesus-christ/parables/grain-wheat.html",
+    "jesus-christ/parables/great-supper.html",
+    "jesus-christ/parables/growing-seed.html",
+    "jesus-christ/parables/hearing.html",
+    "jesus-christ/parables/hen-chicks.html",
+    "jesus-christ/parables/hidden-treasure.html",
+    "jesus-christ/parables/householder.html",
+    "jesus-christ/parables/king-war.html",
+    "jesus-christ/parables/kingdom.html",
+    "jesus-christ/parables/laborers-vineyard.html",
+    "jesus-christ/parables/lamp.html",
+    "jesus-christ/parables/leaven.html",
+    "jesus-christ/parables/lost-coin.html",
+    "jesus-christ/parables/lost-sheep.html",
+    "jesus-christ/parables/mercy.html",
+    "jesus-christ/parables/minas.html",
+    "jesus-christ/parables/mote-beam.html",
+    "jesus-christ/parables/mustard-seed.html",
+    "jesus-christ/parables/neighbor.html",
+    "jesus-christ/parables/net.html",
+    "jesus-christ/parables/new-patch.html",
+    "jesus-christ/parables/new-wineskins.html",
+    "jesus-christ/parables/parent-gifts.html",
+    "jesus-christ/parables/pearl.html",
+    "jesus-christ/parables/persistent-widow.html",
+    "jesus-christ/parables/pharisee-publican.html",
+    "jesus-christ/parables/prodigal-son.html",
+    "jesus-christ/parables/returning-spirit.html",
+    "jesus-christ/parables/rich-fool.html",
+    "jesus-christ/parables/rich-man-lazarus.html",
+    "jesus-christ/parables/royal-wedding.html",
+    "jesus-christ/parables/salt.html",
+    "jesus-christ/parables/servant-duty.html",
+    "jesus-christ/parables/settle-adversary.html",
+    "jesus-christ/parables/sheep-goats.html",
+    "jesus-christ/parables/sheep-sabbath.html",
+    "jesus-christ/parables/sower.html",
+    "jesus-christ/parables/stewardship.html",
+    "jesus-christ/parables/strong-man.html",
+    "jesus-christ/parables/talents.html",
+    "jesus-christ/parables/ten-virgins.html",
+    "jesus-christ/parables/thief-night.html",
+    "jesus-christ/parables/tower-builder.html",
+    "jesus-christ/parables/tree-fruit.html",
+    "jesus-christ/parables/two-debtors.html",
+    "jesus-christ/parables/two-sons.html",
+    "jesus-christ/parables/unjust-steward.html",
+    "jesus-christ/parables/unmerciful-servant.html",
+    "jesus-christ/parables/vine-branches.html",
+    "jesus-christ/parables/watchful-servants.html",
+    "jesus-christ/parables/watchfulness.html",
+    "jesus-christ/parables/wedding-places.html",
+    "jesus-christ/parables/wheat-tares.html",
+    "jesus-christ/parables/wicked-tenants.html",
+    "jesus-christ/parables/wise-foolish-builders.html",
+    "jesus-christ/parables/woman-childbirth.html",
+    "jesus-christ/redeemer-and-risen-lord.html",
+    "jesus-christ/restoration-and-today.html",
+    "jesus-christ/risen-savior-in-the-book-of-mormon.html",
+    "jesus-christ/teachings-and-parables.html",
+    "joseph-smith-likeness.html",
+    "joseph-smith-portrait-research.html",
+    "missionary.html",
+    "pioneers.html",
+    "search.html",
+    "timeline.html",
+    "timelines/latter-day-saint-church-history-timeline.html",
+    "timelines/life-of-christ-journey-map.html",
+    "timelines/willie-and-martin-handcart-map.html",
+    "watch.html"
+  ],
+  "canonical_route_hashes": {
+    "about.html": "22a1080fb05125a271944bca8392a52456a412822bc2f335e4824512150657f2",
+    "answers.html": "6067e6630c553faf9428c6e88e97b510962a4064b94061fbc2480498baa71a98",
+    "answers/aaronic-priesthood-restoration.html": "3ed9698dd62c3c8c710604cc37300b460ffd1ca604a85663890923e5f4fba359",
+    "answers/abrahamic-covenant.html": "3b5e73704ebc29af1cc8b2f5869ced21b2b7a204585f586536fa35f3626de0ab",
+    "answers/are-latter-day-saints-christian.html": "9451ed157fbc10bd04d9670a11ebc8b1378562381e1a9167821e00a558a37c58",
+    "answers/bible-and-book-of-mormon-together.html": "7a51c65848d5db165fdd657a183f388bbeb20b15c153d6038abc7826cb5633bf",
+    "answers/death-of-a-child.html": "8fa580862cf06e5ce5aff8dc74918f5ef02ec550759b9d8acd3a44296e239bd7",
+    "answers/divorce-and-faith.html": "9d31cec9d60c94b9e380e3c15a46d69f1cdda1a9b2f40566443ff5ee3dbd0fe3",
+    "answers/faith-in-jesus-christ-during-trials.html": "c832ab8710f3c4700026c835c467568fde9c0879b3e57420592bf96b99afef59",
+    "answers/god-our-heavenly-father.html": "767279209381a36d437ce435a264768cefdb75ffd3f8bf993b9208e1faeb13a4",
+    "answers/grief-and-faith.html": "76a3052604e687fc25963c4919823770e775adee87c9555d4bdca6bd4936b55a",
+    "answers/holy-ghost.html": "52b1281bcb1d241a12757ef28f3b3d619f29802edc4b88581a990f5930509c5f",
+    "answers/jesus-christ-latter-day-saint-beliefs.html": "87163a39810df2b5f368ff753ee68bc41ab6e24e0ef32727b5a88e54cf061a1d",
+    "answers/look-unto-me-doctrine-and-covenants-6-36.html": "854f28fecbf5a9dfad5e5a6e4c0fc7a2513d14683e44623b52b914425e7c6689",
+    "answers/melchizedek-priesthood-restoration.html": "69d69ba2c99c97786d4b5ac4e930b3cdbcb273548f15f7e44d5e1297e34d080e",
+    "answers/plan-of-salvation.html": "f3d0879ac9740db594e89d30da8fab11e1407ee0ca53c8ef325c42a5c0f607b0",
+    "answers/prayer-and-personal-revelation.html": "9036f64c29f1873826df6bc63ca069c1ef7bbc5f4fb301a4582e4eb62dd5216c",
+    "answers/race-priesthood-and-temple-blessings.html": "02f4af3de3ad246ba423fa39c4cc72a5031f5d09e0862397321bd526ea5f7c68",
+    "answers/restored-church-of-jesus-christ.html": "d7fa880070ad23c3bb3591409eda0c0da9e929a3af8a36bbfcc004389e80d644",
+    "answers/settle-this-in-your-hearts.html": "2e78f692cdeb21ab468cc825228a633e3fbe1840cf85cfda3a17cbbb2bc056a7",
+    "answers/stand-forever.html": "42e657250bed1f356142ef645cf9c26a618ff9f5657652fd6baf3f5e9af46a24",
+    "answers/what-happens-after-death.html": "0d12c6f396e899989e4afd86766b24f335cf3c63b7d37d4958297e1cc0c28486",
+    "answers/what-is-eternal-marriage.html": "f78630090fa04b6a84c8709ce6ec377827eb2ec07f4637f2c3e70d65dbdbbcdb",
+    "answers/what-is-the-book-of-mormon.html": "6c1b7be704aa002390c16ae6ece718c762873a6f5d902d8536b6db35994454fd",
+    "answers/who-was-joseph-smith.html": "fc9e19a88223dc254383a19de92c23ba36280b940e9557fb5a50149515732f9d",
+    "answers/why-families-are-important.html": "5120ce25e003adbd24a8f3d0d45894d5404ebcdbf931cf970dd1b07d2e4fabb9",
+    "answers/why-latter-day-saints-build-temples.html": "9346128622121c7c17c256283a1a138bbd2c6dbd1a55ae0a90dad1766220d80e",
+    "art-gallery.html": "1586c803a602f7eda140718d04634369e1d001c264a6108aef1b47dac0af602c",
+    "art-study/be-still.html": "832f2c73e4632c35bffe8b72d5ca07289a493f200360bdf1932cc01293f35bc8",
+    "art-study/suffer-the-little-children.html": "1d4cfe03d86758d7cea99b4897d3fa4ac465e0ed75d4c21aaf6cf92363027ad9",
+    "art-study/the-good-shepherd.html": "0e3cf97723df9127cfbcd7d0484a2b6fa79a6ef697eac4b43531f7763ef2bf46",
+    "art-study/the-living-christ.html": "8597354ee3eb7f967f92e5460109b29a2e4dc426e7ba4c91dbbb364f8ff00886",
+    "art.html": "5874cff5142ea55c152336040fb234ff3116966789e80c1dbdebf8968a5603c4",
+    "ask.html": "533317fbac0f8024f06a58208bcfbe989f1f767e8406ac01d6643fc09cfe52d7",
+    "atonement.html": "7650630fbac456b0f681fa737f0dfdcfa25943be9a36d4138f0669244897e1b9",
+    "birth-of-christ.html": "08d12bae54d7ff9daf5f5611dc66ee77c3739dda8e8e42c676e7f05ce3301aef",
+    "book-of-mormon-evidences.html": "6fbfa25e62c70efffbec7ac17fb6599539e20e13daa4fa1ec71fce3d8fd3ae11",
+    "church-history.html": "c83d40eda866365fae8202b5e842eb4238622baded8cbe25ecd85af54d904305",
+    "come-follow-me.html": "430352292ab4c29cd342c8d2cf06594ee6bbe66dbe68e4bdd7c5c6d684e44ed0",
+    "general-conference.html": "cd5093a9b77f6b7c4217dc1efd4e5d66798e322491035347a2a07e9a7f7d9a20",
+    "history/eleazer-miller.html": "500a22fbc1a5be25bfeb8874276e8bbfcf59e5be637623f71abdc9cbc4a689fb",
+    "history/john-rowe-moyle.html": "5116e3564e6182390bcc9b31e847a46d79dea36af02346a2492573aba4705cc2",
+    "history/john-tanner.html": "7a4302e34106c3ba1d7a69d11dee5ecdb2dc5376175430878207716c3dce783f",
+    "index.html": "6ca837ff9663059bc5e79bc868145240c92fec69c4a22abe666d60ae0de4949f",
+    "jesus-christ/before-bethlehem.html": "0e162f3a2fa8c4c757a8629a9a91ae73e593a5b0314eecec35b7f9c2fb09d8de",
+    "jesus-christ/miracles-and-compassion.html": "ae09863d17b6a798f661b93c1b3141e98f3f1ae0152b17d4bbaf93daaf7f9c44",
+    "jesus-christ/mortal-ministry.html": "56e5b3daad9e434fa3b4bfb46bba468dbcd6b66baf06bf250b192bcd8ed9515f",
+    "jesus-christ/parables/barren-fig.html": "a26e1cf4ce32d3c79e819fb9d4ef1c6d7fb8cad6b8454a4c3f77be610cccdf76",
+    "jesus-christ/parables/birds-lilies.html": "73d2922eb9c6c274a1bce0ededbffb23adbcfc7677d2dc44120e5a4c18273644",
+    "jesus-christ/parables/blind-guides.html": "1801f2f4166e1803596d635e918841cdb73d2192b9ae9b7bdc7564d2775b981d",
+    "jesus-christ/parables/bridegroom.html": "f19ec5d302ef4fe69152d712829476fd153f32540e0811ac2eefdb947b442ad7",
+    "jesus-christ/parables/budding-fig.html": "425aa3796e13dbc5378636a2b6e743ddb0f469a1034d90f5ffd5c64d38d7ad06",
+    "jesus-christ/parables/children-marketplace.html": "5ccdc41984b80e5c08988642d9404c97e8df5762ba48a03119d6dd76c2a51b7c",
+    "jesus-christ/parables/closed-door.html": "fd728f50d5faf30398db4829a33f56c155091c20f4423ddae7eaa1fd85e659e8",
+    "jesus-christ/parables/divided-house.html": "89e24372e743e5c126d2a57acd29ff54ca0e87fb6c4ce68e624bb6b59af5543a",
+    "jesus-christ/parables/doorkeeper.html": "a9cc8783fa5a69c0a3428d80b466781896f6cc615235bb9e8746a9949a15ec1f",
+    "jesus-christ/parables/faithful-servant.html": "352501652801099a5a63aa9f50e376b1a1892679d52c2a4472f5f2b26ba8f451",
+    "jesus-christ/parables/friend-midnight.html": "29b395f82db090a4c2d55eb0040049ce033d2162933fad4487a5799eebc42464",
+    "jesus-christ/parables/good-samaritan.html": "c9980b4ba5ef5a9c53a3813e58f9132c0c86b5c8fbc858aaf5cb08123cd6d828",
+    "jesus-christ/parables/good-shepherd.html": "dbfb7c04976a504bff40444fd7c8da5376f6dfe7ead543c8b78b0ae11d87ca15",
+    "jesus-christ/parables/grain-wheat.html": "843248361388b71cef4bdfe33ac266c61f2dea9b399bb1bef6002c0ad136629b",
+    "jesus-christ/parables/great-supper.html": "4cab135659111395225efcc4439f498df4487195a43984c1dbf7b0e74d3d8812",
+    "jesus-christ/parables/growing-seed.html": "ef1d1eb45f5c67b0dbb8f9a32af529f2251d80df4a413cdb8a40cbbf21a41ef9",
+    "jesus-christ/parables/hearing.html": "e6c716d48fe2650344b45ce08f90dc45db81e927aac017a9fdb21c049a5cf3f1",
+    "jesus-christ/parables/hen-chicks.html": "847cda39fdbc87ed077abf873e7f6c9504e812f345e7f7b19e9443d821e1460b",
+    "jesus-christ/parables/hidden-treasure.html": "090b2ee0aa90cc0bd2fc7b5cc4b989ec3acae38323ed1a85f5784cbc920f464e",
+    "jesus-christ/parables/householder.html": "95dd684ad3c1c10f1456573071326723c618024f1d0888d332e5a60295ec9074",
+    "jesus-christ/parables/king-war.html": "bba5f1507634c91f5ff0a68bc5895b0e6613fc3d163f7f1e392e97d9fbd657e0",
+    "jesus-christ/parables/kingdom.html": "701378168d38e2147252d7f595d84bd92caeeb171680deff3e735cac12961455",
+    "jesus-christ/parables/laborers-vineyard.html": "d9bf169fc894d629e51822a56e8b37202607844096b7d4a769d0577fc8c17a5e",
+    "jesus-christ/parables/lamp.html": "7d7da681542ae6f1113a0eca42d3c9d8ba6161fe609651e8eb1cc106c449facf",
+    "jesus-christ/parables/leaven.html": "23271a8dfd67ef05f2097a45368fa65239543c80e7982bb1fb39c6c240928dbc",
+    "jesus-christ/parables/lost-coin.html": "dd2885940d8a73fb084a6941a0091617d822ca095d171212c03573f2ba782f8c",
+    "jesus-christ/parables/lost-sheep.html": "c10a98668641d93ecbb4ff42a4f26317e02fc5c42db4bd08564ad7ccd6c9767e",
+    "jesus-christ/parables/mercy.html": "6ef11fb16bed6ddd6fac55e7f6f82eda4e11e90e17a8867251f8222dc3d03dec",
+    "jesus-christ/parables/minas.html": "ea7175f51f0a2c8983e2adfec52a3dea76cb1a270d94562755cb57d0ca89406d",
+    "jesus-christ/parables/mote-beam.html": "d69527413b0f05fcc65fd8a9da4b8306aa9c2a6175ff9c137760dc072d69d3cc",
+    "jesus-christ/parables/mustard-seed.html": "aa9b6c6767b1efd0890295180809ae22a8b1792b07338678b8e945f4f04a8790",
+    "jesus-christ/parables/neighbor.html": "1ca7c5e582afa7e4c78519a5034e7d353e6b1616e4124b4a2cf97b255940ad8e",
+    "jesus-christ/parables/net.html": "2460adf423f6e33dc9143f04da7f19a01c84b75fdc379e53a14fad25c4f585d3",
+    "jesus-christ/parables/new-patch.html": "41c38effc2c4b42d04650982897a08ba7ada7be5ea96d6067b6ea82f57be49af",
+    "jesus-christ/parables/new-wineskins.html": "11a902abef075f9f3f9c884d160aa1c087d4509e6e1d259bb8b217354e6340b9",
+    "jesus-christ/parables/parent-gifts.html": "73c89bdc18cdf98835845f58ec81d2ba18f357c5bb2be626d45f530eee2b553a",
+    "jesus-christ/parables/pearl.html": "fd81edf25c97b9d8cabb24da4a9a8f170e0cfbf6c9f8e1e487f95a6d922dac4e",
+    "jesus-christ/parables/persistent-widow.html": "0f19d5c88628d4e9bc14b633bf71889bb70828a937852088130f03a708ffc9e7",
+    "jesus-christ/parables/pharisee-publican.html": "64b9ef53edbee214119ed7b991856b540b01254cf0c1b34e946f5362e57608c9",
+    "jesus-christ/parables/prodigal-son.html": "59b2ee99a52173e1dc922309a4187280e3b8b5e1414bb16562e0a316684580bb",
+    "jesus-christ/parables/returning-spirit.html": "eb2e1e2ea628fc5219fe2b28fe357688d57f52d714481f92ae5b4e562eee7fbb",
+    "jesus-christ/parables/rich-fool.html": "c4e31c7313f0db31b8f855070a945e22e86b50978a668360376f8cacbfcd4a19",
+    "jesus-christ/parables/rich-man-lazarus.html": "4c8d49a467b8b92f12617f9a8fc7ddadf3e98bf9f0f3b584c5101971f0ec2e6f",
+    "jesus-christ/parables/royal-wedding.html": "97574c25fdebbcab37d77052d9d5cc5bc57cc6db6eb8461296ff77c38fb24bae",
+    "jesus-christ/parables/salt.html": "080363186af0c5bb7083ee8ad0014c09b8f30b7f864ce2dd9791aaaeb8dddd1a",
+    "jesus-christ/parables/servant-duty.html": "9733dd834eb532bcfc70e5160c6167d004fd7eb28db588b92660fc26f69bc864",
+    "jesus-christ/parables/settle-adversary.html": "977d6892662b7a6b417c626ed36b80a9f3d22714d03759015163342e670a7a1e",
+    "jesus-christ/parables/sheep-goats.html": "fe95dd5959a71599d327aa7ba70de471d4e8c25ad907f15caf953e192afaaf9b",
+    "jesus-christ/parables/sheep-sabbath.html": "cfa603fe10b0898cbfb865c173d5e5f1ba10444a35ea46c9f8afb3b36a2ecc3b",
+    "jesus-christ/parables/sower.html": "01bdf51b8bf2d6b106a64468493a39faaaf3d25cc659eac700a4fe8bf468cb1c",
+    "jesus-christ/parables/stewardship.html": "13392d44fc30fb6dd87f7a5a5eec29d9c23bb3bb9eff50b2eb4457e0e402c79a",
+    "jesus-christ/parables/strong-man.html": "2414fe4020c5c1ce09205f0573294bbda5a64a1d8877b7f1592bb30fc3f9e520",
+    "jesus-christ/parables/talents.html": "e450bd0a51b95ef1e94f5a03724c6ec937de67fab8c9ca94f7c91997d4a97058",
+    "jesus-christ/parables/ten-virgins.html": "bb698feb802b2508282e08fd610efdd096c8c72b282a2ce5b8559a918b35f9a4",
+    "jesus-christ/parables/thief-night.html": "cfb8c94e28324ce216506c9f8cf33575d3aa95e8e32b8101f55eac1b9ace911d",
+    "jesus-christ/parables/tower-builder.html": "36dbf462de2300cf3beffbb7f897a1fbf43530f5d2c0bf8c683f6551e8cfea56",
+    "jesus-christ/parables/tree-fruit.html": "c6c7c863bbb88daa272e1755c313eee7c1328362ccdfd210b6a3fbf36b406ce0",
+    "jesus-christ/parables/two-debtors.html": "1a99966cc827de122d2a517d1202fcad42e19a2ca77043ab7f23460e47304c07",
+    "jesus-christ/parables/two-sons.html": "641b95a326d9fd9046672bb154a55e278850869e79361b4296b6bc94ea9b11cf",
+    "jesus-christ/parables/unjust-steward.html": "3e273230c31b35a3c2922dd678d8b613ec3051fbc940a8bb7d7f2a3b45d23796",
+    "jesus-christ/parables/unmerciful-servant.html": "855516c2f5aeeda1cde8b8d473880daf1c85c7c48f70dd027e05b454107fb803",
+    "jesus-christ/parables/vine-branches.html": "079f4e0a53009c1c9a077b4f5c0fde4f403c58224be27ddcc3023fdd7c8a9e0c",
+    "jesus-christ/parables/watchful-servants.html": "49f43b85f07dc519776497cc93e481fcc13c8bb776759e731857ed21f6c0a11f",
+    "jesus-christ/parables/watchfulness.html": "2a696ec9351947382843981b797c984ea4f419b1ba99fe8bc2abaebc3b581a08",
+    "jesus-christ/parables/wedding-places.html": "f05131ee80cad132beb668d92c30a3ead6e996c1c5657b63498ea51880a2fe48",
+    "jesus-christ/parables/wheat-tares.html": "af464232167ae09d01ab8f90c50696861e78f5227788c2fcaf2d0716a690a59b",
+    "jesus-christ/parables/wicked-tenants.html": "981c340d4260e7d36d8a6ca82bb1d9acd80a4e3e52fc0d17525d0aec3196fada",
+    "jesus-christ/parables/wise-foolish-builders.html": "c250970541d9bb6399011aa297b6ecf77c006bef8435977634bd7018037757aa",
+    "jesus-christ/parables/woman-childbirth.html": "0440311c047bf0c75cc63c89206e5cc4a11266276f985bf1f83da9f67a4b7db3",
+    "jesus-christ/redeemer-and-risen-lord.html": "664c9afda962ea0f622d08d15b1cd4d127ea5c3e6e3d833cc2d26d391e8e0c13",
+    "jesus-christ/restoration-and-today.html": "b959a440b106eea06dd2664032a4102120b7a8d28919e2b386a17ded7d3f21ac",
+    "jesus-christ/risen-savior-in-the-book-of-mormon.html": "24be24f35027d4e03566a3aceb8a40aa47392af8b832efea0f601462ba57ae33",
+    "jesus-christ/teachings-and-parables.html": "d75a1640700f39e72dd60b55b12011d34dd7e7235d6ccfbc2874cee57a7be76c",
+    "joseph-smith-likeness.html": "c244ee2026e72a6e61dfa8ff4b5abf79a5125d3a5095b80034f5e2be70b6c1a1",
+    "joseph-smith-portrait-research.html": "94485808da246618eeeb2882a97c6160972704ce27180cb4e140b7e5f4d09efb",
+    "missionary.html": "7b9a1a8ea9813969897bbed9ce379fdffd85f4ecf5eda4caff0e21bf0ed72c97",
+    "pioneers.html": "3a85756c0439fbd957b2c62abf7eb4218e775ad53b03b9be39d402909c1706c7",
+    "search.html": "b8663d4019910be1786bf685cac700a150a974a963ab914c73c1c7f4bd0419c8",
+    "timeline.html": "92020b03650ec94348988b00b573f98569ca4478f6068b44128268969f187511",
+    "timelines/latter-day-saint-church-history-timeline.html": "007bb264dee877b85960518039c37c7123aab8bf812fe1b9919d06e24aada242",
+    "timelines/life-of-christ-journey-map.html": "50a4ec503f00ed64a07cc5668119b64049f79af55ced92ed13b141197cef643b",
+    "timelines/willie-and-martin-handcart-map.html": "2a6dd32ac220a9a957c1b900743719ea20f18e786b3dd3b5b99b4058c33080c2",
+    "watch.html": "5ed37dc2d1e970c11fb18ac313a8241a5e0141813d18a76b5ca553fa70859d06"
+  },
+  "ownership_occurrences": {
+    "assets/page-art/art-study/full/still-city-companion.webp": [
+      "art-study/be-still.html"
+    ],
+    "assets/page-art/art-study/full/still-storm-boat.webp": [
+      "art-study/be-still.html"
+    ],
+    "assets/page-art/art-study/full/still-wars-cease-20261004.webp": [
+      "art-study/be-still.html"
+    ],
+    "assets/page-art/art-study/full/still-depart-for-rest-20261004.webp": [
+      "art-study/be-still.html"
+    ],
+    "assets/page-art/art-study/full/still-lakeside-pause.webp": [
+      "art-study/be-still.html"
+    ],
+    "assets/page-art/art-study/full/still-shared-lift.webp": [
+      "art-study/be-still.html"
+    ],
+    "assets/page-art/art-study/full/still-pause-work-20261004.webp": [
+      "art-study/be-still.html"
+    ],
+    "assets/page-art/art-study/full/still-phone-down-scripture-20260919.webp": [
+      "art-study/be-still.html"
+    ],
+    "assets/page-art/art-study/full/still-listen-workshop-20261004.webp": [
+      "art-study/be-still.html"
+    ],
+    "assets/page-art/art-study/full/still-neighbor-peace-20261004.webp": [
+      "art-study/be-still.html"
+    ],
+    "assets/page-art/art-study/full/children-gather-close.webp": [
+      "art-study/suffer-the-little-children.html"
+    ],
+    "assets/page-art/art-study/full/children-welcome-shy-child.webp": [
+      "art-study/suffer-the-little-children.html"
+    ],
+    "assets/page-art/art-study/full/children-temple-praise-20261004.webp": [
+      "art-study/suffer-the-little-children.html"
+    ],
+    "assets/page-art/art-study/full/children-listen-under-tree.webp": [
+      "art-study/suffer-the-little-children.html"
+    ],
+    "assets/page-art/art-study/full/children-quiet-water.webp": [
+      "art-study/suffer-the-little-children.html"
+    ],
+    "assets/page-art/art-study/full/children-accessible-game-20261004.webp": [
+      "art-study/suffer-the-little-children.html"
+    ],
+    "assets/page-art/art-study/full/children-toy-repair-20261004.webp": [
+      "art-study/suffer-the-little-children.html"
+    ],
+    "assets/page-art/art-study/full/children-listen-at-home-20260919.webp": [
+      "art-study/suffer-the-little-children.html"
+    ],
+    "assets/page-art/art-study/full/children-share-snack-20261004.webp": [
+      "art-study/suffer-the-little-children.html"
+    ],
+    "assets/page-art/art-study/full/children-quiet-welcome-20261004.webp": [
+      "art-study/suffer-the-little-children.html"
+    ],
+    "assets/page-art/art-study/full/shepherd-sees-one.webp": [
+      "art-study/the-good-shepherd.html"
+    ],
+    "assets/page-art/art-study/full/shepherd-carries-lamb.webp": [
+      "art-study/the-good-shepherd.html"
+    ],
+    "assets/page-art/art-study/full/shepherd-binds-hurt-20261004.webp": [
+      "art-study/the-good-shepherd.html"
+    ],
+    "assets/page-art/art-study/full/shepherd-room-at-water-20261004.webp": [
+      "art-study/the-good-shepherd.html"
+    ],
+    "assets/page-art/art-study/full/shepherd-shares-burden.webp": [
+      "art-study/the-good-shepherd.html"
+    ],
+    "assets/page-art/art-study/full/shepherd-calls-zacchaeus.webp": [
+      "art-study/the-good-shepherd.html"
+    ],
+    "assets/page-art/art-study/full/shepherd-coat-repair-20261004.webp": [
+      "art-study/the-good-shepherd.html"
+    ],
+    "assets/page-art/art-study/full/shepherd-seeks-one-20260919.webp": [
+      "art-study/the-good-shepherd.html"
+    ],
+    "assets/page-art/art-study/full/shepherd-key-recovery-20261004.webp": [
+      "art-study/the-good-shepherd.html"
+    ],
+    "assets/page-art/art-study/full/shepherd-audio-access-20261004.webp": [
+      "art-study/the-good-shepherd.html"
+    ]
+  },
+  "corpus": {
+    "rehashed_assets": 2328,
+    "final3_snapshot_matches_prior27_exact": true,
+    "final3_sha256": "e3718925f9806a3c06a2c5fee44bd829c83ce2b93ecf0ad3566aff6bcb626007",
+    "snapshot_sha256": "ba14bab84c6babe1a9f754dc87b713df33e391d9bfebd35ca9916781bd757a22"
+  },
+  "cross_target_pair_count": 435,
+  "cross_target_candidates": []
+}

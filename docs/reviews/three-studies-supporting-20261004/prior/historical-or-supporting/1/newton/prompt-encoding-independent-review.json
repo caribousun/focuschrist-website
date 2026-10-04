@@ -1,0 +1,76 @@
+{
+  "reviewer": "Newton",
+  "result": "PASS_STORAGE_REPAIR_WITH_EXECUTION_EVIDENCE_LIMIT",
+  "checks": [
+    {
+      "key": "GS1",
+      "generation_event": "exec-f1143065-44ec-4ecf-9854-e2de21f9d191",
+      "generation_status": "completed",
+      "revised_prompt_sha256": "f63fb06082e78aac459ba3822cc26c0d8298b0dd7f32eaed0731c76f72454a65",
+      "approved_prompt_exact_match": true,
+      "recovered_prompt_exact_match": true
+    },
+    {
+      "key": "CH2",
+      "generation_event": "exec-63483561-b3ca-405a-b5f7-626dab72f447",
+      "generation_status": "completed",
+      "revised_prompt_sha256": "279726fd41664263524702ae282abd83e42940dc7f30632f2046e824b2d38f48",
+      "approved_prompt_exact_match": true,
+      "recovered_prompt_exact_match": true
+    },
+    {
+      "key": "CH4",
+      "generation_event": "exec-6818188f-18f5-4017-a31a-59fff4a02738",
+      "generation_status": "completed",
+      "revised_prompt_sha256": "5c5e8edbcb073c3c620ee5ed23ffe828f6eafa4fd6f9b7c7e583ba3cdd98f87f",
+      "approved_prompt_exact_match": true,
+      "recovered_prompt_exact_match": true
+    },
+    {
+      "key": "CH5",
+      "generation_event": "exec-1777cd8c-877a-4940-aae0-399a619eeb4a",
+      "generation_status": "completed",
+      "revised_prompt_sha256": "1d96a96e8da3f99f521e8db69fb6fd6cf77ebe4a5931808488188c88f3b2a3e6",
+      "approved_prompt_exact_match": true,
+      "recovered_prompt_exact_match": true
+    },
+    {
+      "key": "BS1",
+      "generation_event": "exec-ee688581-4a6a-4f2c-9781-cd97858fa4fb",
+      "generation_status": "completed",
+      "revised_prompt_sha256": "3322c5c19e4fe0e6f9bf3d57d26bc6606f6e1953992494bfd97bcebfa9a9a64c",
+      "approved_prompt_exact_match": true,
+      "recovered_prompt_exact_match": true
+    }
+  ],
+  "preserved_bad_manifest_sha256": "0704dcfdc9aff0b81d10af72ea3cd77d96991d2cc0393e219d790fb21fece10c",
+  "repaired_manifest_sha256_at_review": "db9315de7d86af0db44214fc90b765135246d3ef5947bb5a0940a6a5107613fb",
+  "old_rows_field_changes": [
+    {
+      "key": "GS1",
+      "changed_fields": [
+        "prompt"
+      ]
+    },
+    {
+      "key": "CH2",
+      "changed_fields": []
+    },
+    {
+      "key": "CH4",
+      "changed_fields": []
+    },
+    {
+      "key": "CH5",
+      "changed_fields": [
+        "prompt"
+      ]
+    },
+    {
+      "key": "BS1",
+      "changed_fields": []
+    }
+  ],
+  "script_reader_explicit_utf8": true,
+  "limits": "Independently fetched completed imageGeneration events expose revisedPrompt and savedPath, not raw request arguments/reference payload. Their exact prompt hashes match approved strings and restored manifest. Local rollout inspection also exposes those completed revisedPrompt events; raw imagegen request arguments not found. Thus no false claim of raw payload audit or reference request verification. Pixel HOLD/PASS states remain independent; storage repair cannot repair images."
+}

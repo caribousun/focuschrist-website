@@ -1,0 +1,35 @@
+{
+  "root_cause": "Manifest append read omitted UTF8 and decoded prior UTF8 as Windows default cp1252; actual execution used correct loaded JavaScript prompt strings. Fixed reader to explicit UTF8, restored prompts from still-live execution store, preserved damaged manifest.",
+  "executed_prompt_checks": [
+    {
+      "key": "GS1",
+      "executed_hash": "f63fb06082e78aac459ba3822cc26c0d8298b0dd7f32eaed0731c76f72454a65",
+      "approved_hash": "f63fb06082e78aac459ba3822cc26c0d8298b0dd7f32eaed0731c76f72454a65",
+      "match": true
+    },
+    {
+      "key": "CH2",
+      "executed_hash": "279726fd41664263524702ae282abd83e42940dc7f30632f2046e824b2d38f48",
+      "approved_hash": "279726fd41664263524702ae282abd83e42940dc7f30632f2046e824b2d38f48",
+      "match": true
+    },
+    {
+      "key": "CH4",
+      "executed_hash": "5c5e8edbcb073c3c620ee5ed23ffe828f6eafa4fd6f9b7c7e583ba3cdd98f87f",
+      "approved_hash": "5c5e8edbcb073c3c620ee5ed23ffe828f6eafa4fd6f9b7c7e583ba3cdd98f87f",
+      "match": true
+    },
+    {
+      "key": "CH5",
+      "executed_hash": "1d96a96e8da3f99f521e8db69fb6fd6cf77ebe4a5931808488188c88f3b2a3e6",
+      "approved_hash": "1d96a96e8da3f99f521e8db69fb6fd6cf77ebe4a5931808488188c88f3b2a3e6",
+      "match": true
+    },
+    {
+      "key": "BS1",
+      "executed_hash": "3322c5c19e4fe0e6f9bf3d57d26bc6606f6e1953992494bfd97bcebfa9a9a64c",
+      "approved_hash": "3322c5c19e4fe0e6f9bf3d57d26bc6606f6e1953992494bfd97bcebfa9a9a64c",
+      "match": true
+    }
+  ]
+}

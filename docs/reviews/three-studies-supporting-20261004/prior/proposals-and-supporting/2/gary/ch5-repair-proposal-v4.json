@@ -1,0 +1,16 @@
+{
+  "key": "CH5",
+  "version": 4,
+  "status": "EXACT_DUAL_PREFLIGHT_REQUIRED",
+  "generation_clearance": false,
+  "prompt": "Image 1 is the sole edit target and reference for all people, hands and the room. Replace the ENTIRE dark audio-headphone-like object between the adult's supporting palm and the child's reaching fingertips with an unmistakably different plain child-sized pair of passive hearing-protection earmuffs. Rebuild both ear cups and the headband as one coherent physical object, not a recoloring or patch on the existing headphones. Use two thick, smooth, solid warm-yellow oval cup shells with simple black soft sealing cushions. Join them with a plain padded black headband and simple external black mechanical support arms attached at the sides of each cup; these attachments are passive structural pivots, with no control panels or buttons. Each yellow exterior shell is wholly uninterrupted molded plastic: no oval button, recessed disk, power symbol, jack, switch, microphone, cable, light, lettering, logo, label, emblem or decorative marks. Place the new earmuffs in exactly the old object's occupied space, at the same overall scale and orientation. The adult's unchanged open palm naturally supports the lower cups, and the child's unchanged fingertips naturally reach to the upper cup/headband junction. Preserve EVERY visible finger, fingertip, hand contour and gesture of both people. Do not redraw, move, add or reshape their hands. Build the replacement object to fit their existing contact points. Preserve their exact identities, age, facial proportions, eyes, mutual gaze, expressions, hair, clothing, bodies, cushion, lamp, doorway, gathering, clear return path, colors and room lighting. Only the whole earmuff object changes. Natural photographic materials, realistic assembled construction and exact 1536x1024 framing. This is a voluntary offer of quiet hearing protection, no medical claim, restraint or cure.",
+  "prompt_sha256": "7ef9b15b5eb9ef6e0dc2efe03a98ad4fcbf6bb5bd096a4f17fe6d26c599e944e",
+  "reference_roles": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-integration-continuation\\work\\gary\\generated\\ch5-candidate-v3.png",
+      "sha256": "f7b0d9e0ee9dde7bb1ece702a638dce21865e47d822fe52d467482495c732f27",
+      "role": "Image 1 full target; replace complete earmuff object while preserving all actual people/hand contact."
+    }
+  ],
+  "repair_basis": "CH5v2/v3 dual/root HOLD. Tiny mark removal ineffective. Root authorized preparing materially different whole-object passive construction proposal; no call authority."
+}

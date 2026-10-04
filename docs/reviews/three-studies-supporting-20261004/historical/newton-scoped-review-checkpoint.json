@@ -1,0 +1,86 @@
+{
+  "reviewer": "Newton",
+  "state": "STOPPED_AT_ROOT_FIRST_COMPACTION_HANDOFF",
+  "completed": [
+    "Exact current live Master/foundation,00B,Focus,00I,00C read via connected Drive. No SITE/Docs/generation/publication writes.",
+    "Final copy0896f09a narrow BS5 revision PASS; all other content identical to prior4d251.",
+    "Final repairs exact BS1v2 b38bc8ff,GS1v6 9d186471,CH5v4 1a0a1e7a scoped pixelPASS. Full/detail and actual identity references inspected. PriorGS1v5/CH5v2/v3 holds preserved.",
+    "Scratch15section markup PASS, then wrapperPASS exact0e3cf977/1d4cfe03/832f2c73. Actual checker hero reference context verified; hero/footer and other existing parsed markup preserved. Native geometry pending.",
+    "Alias27 review: independently rehashed2328corpus inputs, scanned130sitemap routes, inspected15full/thumb pairs+12new scene contact sheets. Only retained own-family aliases, no cross-page ownership conflict; limits explicit.",
+    "Final3 Fermi retrieval e3718925 fetched and target hashes checked, no candidates. Final SITE30body variants and130route use independently inventoried. New15 WebP full and thumbnails encoding reproduced exactly from accepted PNGs with stated lossy qualities; no new originals inferred from variants.",
+    "Delivered all15thumbnail contact sheets and repaired3 fullWebPs actually viewed; coherent compositions/repair details preserved. Full page image/source/inline-style/script inventory read; resources exclude7 official previews, gallery heroes excluded. Counts GS10/6Christ,CH10/5,BS10/5."
+  ],
+  "pending": [
+    "three-study-final-inventory-review.json remains AWAITING_DELIVERED_VISUAL_FINALIZATION although visual step completed immediately before stop. Do not materialize strict dual booleans from this unfinished receipt.",
+    "Finish exact gallery-owner fragment-to-asset ownership verification; current script proves target fragment exists and current hero section links to it, but final owner content correspondence has not yet been explicitly checked this turn.",
+    "Finish final3 alias extension receipt/corpus-snapshot consistency and all30 cross-target uniqueness finalization; existing27 and final3 retrieval scans have separate scope.",
+    "Then freeze exact final page hashes and finalize Newton strict complete inventory/ownership/classification concurrence. Root may still alter generated dependencies; renew changed bytes.",
+    "Review strict package, actual final candidate, required tests/CI, root native desktop/phone and publication/live/public checks remain future work."
+  ],
+  "receipts": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-integration-continuation\\work\\newton\\integration-schema-and-preflight-reconciliation.md",
+      "sha256": "6b051a806e1e5f41a5e4a53a80de7b57975f9c9f1268e9384374ae145dc79bfd"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-integration-continuation\\work\\newton\\three-study-copy-final-review.json",
+      "sha256": "6a6923c540dae3244043d43f0839bfa4e27ba012790f8823b7a4df909f7f80d4"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-integration-continuation\\work\\newton\\gs1-preflight-v5.json",
+      "sha256": "eef4364cc84c85eb955f5d5ec445e748637ff772275871e56287428edd54a0db"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-integration-continuation\\work\\newton\\gs1-preflight-v6.json",
+      "sha256": "4894e6545040b3af8c6c7d5995b0e0f30196e462801c0f5aa81fac173f6909e8"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-integration-continuation\\work\\newton\\ch5-preflight-v3.json",
+      "sha256": "1258d62330eab2d2df0b2ff553b5b022cdff0c4396cdf24b12e72d10ead1cd9b"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-integration-continuation\\work\\newton\\ch5-preflight-v4.json",
+      "sha256": "dbfe73c66295b078bffafc261393bbe8cb7e16d831f2824f4f54bcc79077d467"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-integration-continuation\\work\\newton\\bs1-v2-pixel-review.json",
+      "sha256": "cba951315692ff22f8e49bba60ecea5a6f6b7a012219c73a9ecc96b0b96a67d4"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-integration-continuation\\work\\newton\\gs1-v6-pixel-review.json",
+      "sha256": "a1a7cc5609cd9ad769df2e68209701232c485a3e45bbe374626a81ef24dfc04a"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-integration-continuation\\work\\newton\\ch5-v4-pixel-review.json",
+      "sha256": "9776314f8bd973a71864ea1a9a805bfd3936b1d07ad5d819cfdfaa05c4863f35"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-integration-continuation\\work\\newton\\staged-integration-review.json",
+      "sha256": "d0b0890ed3c9114d3cc6dba7c160b27883a8473a6d17d3ed807c11c0fa8a4ac4"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-integration-continuation\\work\\newton\\staged-wrapper-review.json",
+      "sha256": "3f13151de92f827e87c28a7d7e825164241a7e7c59648de9fcf8a25cb6bb460e"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-integration-continuation\\work\\newton\\alias-inventory-independent.json",
+      "sha256": "5c074506ec468abe348947f8b2552f24c3f8d25ce705dafbdba2c52b84208bd2"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-integration-continuation\\work\\newton\\three-study-final-inventory-review.json",
+      "sha256": "5ecce2693c60b0aae78ea5d61412656e3991a63f8cff2b7ef9f0087f3587f5d4"
+    }
+  ],
+  "files_to_resume": [
+    "work/newton/review_final_inventory.py",
+    "work/newton/three-study-final-inventory-review.json",
+    "work/newton/alias-inventory-independent.json",
+    "work/fermi/lineage-final3-scan.json",
+    "work/fermi/lineage-assets-final3-snapshot.json"
+  ],
+  "limits": [
+    "No full-site acceptance, native viewport acceptance, deployment/public proof or owner aesthetic acceptance.",
+    "Heuristic alias retrieval cannot mathematically exclude arbitrary transformations; twelve older original tool logs remain unavailable.",
+    "Shared parent raw paths maintained; no memory changes."
+  ]
+}

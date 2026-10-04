@@ -107,6 +107,7 @@ jobs:
           python tools/sitewide_artwork_review_qa.py
           python tools/mobile_scene_qa.py
           python tools/art_study_enrichment_qa.py
+          python -m unittest discover -s tools -p test_art_study_local_target.py
           # Retained-content regression above is not full enrichment acceptance.
           # These mutation tests test detection; they do not accept site content.
           # Full enriched acceptance requires art_study_current_mandate_qa.py exit 0.
@@ -140,6 +141,7 @@ jobs:
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/timeline_life_marker_qa.js
           node tools/timeline_life_restoration_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/art_study_picture_runtime_qa.js
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/art_study_lesson_return_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/joseph_research_modes_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/joseph_life_runtime_qa.js
           node tools/joseph_research_source_hosts_qa.js

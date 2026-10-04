@@ -1,0 +1,39 @@
+{
+  "reviewer": "Fermi",
+  "stage": "EXACT_PROMPT_PREFLIGHT",
+  "result": "PASS_SCOPED_PREFLIGHT",
+  "proposal": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-integration-continuation\\work\\gary\\gs1-repair-proposal-v5.json",
+  "proposal_sha256": "5ef7908b70d4140b05f5443f2c4d92d02ddf127d640884126e956a8a53895d89",
+  "prompt_sha256": "1e46f513375930e1b36b2d698a1eb14049d83760a45b3a949bd81ed0ac258bcb",
+  "references": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-enriched-continuation\\work\\gary\\generated\\gs1-candidate-v3.png",
+      "sha256": "71f7514766914a946fb1983af4f0dc072ddf89fd8fc0e5a37026fa431599116b",
+      "role": "Image 1 sole edit target; remove residual linear scar marks on BOTH visible wrists, preserve localized healed ovals and all other scene content."
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\heroes\\home-christ-signature-approved-20260907.png",
+      "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+      "role": "Image 2 actual Home identity verification only."
+    }
+  ],
+  "actual_pixel_review": "Full exact GS1v3 and actual approved Home reference opened and independently inspected this turn. Residual linear marks on both wrists observed, task-directed gaze, face, adult figure, woven garments, sheep and bandage scene coherent.",
+  "finding": "v5 removes incorrect opposite-wrist acceptance assertion and now explicitly removes descending, branching and wrapping linear scar marks on BOTH wrists while retaining exactly one compact healed oval at each, natural folds and all other content. Both hidden palms stay hidden. Prompt preserves actual Home identity and scene-appropriate expression; no fresh wounds or band-like marks permitted.",
+  "source_context": "Complete supplied John10 and Ezekiel34 extracts read. Care/binding sheep is thematic interpretation of shepherd language and Ezekiel34:16, not documentary depiction of a recorded physical scene. Adult Christ identity and ancient woven garments remain interpretive; no new age/date claim introduced.",
+  "mandates_read": [
+    "Live exact Master protected foundation/current map",
+    "Latest live00B and FocusCurrent",
+    "SITE AGENTS.md",
+    "docs/historical-character-identity.md",
+    "docs/focuschrist-enrichment-and-stewardship-prompt.md",
+    "docs/enriched-picture-owner-mandate.md",
+    "docs/section-panel-design-mandate.md",
+    "docs/art-study-current-mandate-control.md"
+  ],
+  "limits": [
+    "Independent Fermi preflight only; Newton concurrence and root execution authorization separate",
+    "No finished pixels approved by this receipt",
+    "GS1v3 and v4 holds preserved",
+    "No SITE or canonical changes"
+  ]
+}

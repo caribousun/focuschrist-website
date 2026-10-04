@@ -1,5 +1,5 @@
 {
-  "source_html_sha256": "94485808da246618eeeb2882a97c6160972704ce27180cb4e140b7e5f4d09efb",
+  "source_html_sha256": "edfb13494432b4dcf84b899a6a9165c074323c665f6ea3c3cd111b1c47ca2bae",
   "pdf_sha256": "109bacb657025cd2f4dcc98b29ca98e97afb97bc8b1b15d5d5a1d460006b2946",
   "pages": 47,
   "sections": 15,
@@ -51,5 +51,15 @@
     "proof": "Exact three img-alt replacements only. All other HTML bytes, visible text, image paths and layout unchanged. PDF builder consumes figures and figcaptions, not img alt. Original PDF pixel-review receipts remain bound to the identical PDF.",
     "fermi_receipt": "docs/joseph-research-reviews/narrative-fermi-alt-cleanup.json",
     "newton_renewal": "docs/joseph-research-reviews/narrative-newton-alt-cleanup.json"
+  },
+  "cache_only_source_compatibility": {
+    "previous_source_html_sha256": "94485808da246618eeeb2882a97c6160972704ce27180cb4e140b7e5f4d09efb",
+    "current_source_html_sha256": "edfb13494432b4dcf84b899a6a9165c074323c665f6ea3c3cd111b1c47ca2bae",
+    "change": "Only artwork-actions.css cache reference changes from 20260929-picture-source-pills-1 to 20261004-explicit-grid-1. Exact byte reversal restores the prior reviewed source.",
+    "pdf_rebuilt": false,
+    "pdf_bytes_unchanged": true,
+    "proof": "All other source bytes, body text, image paths and PDF bytes are unchanged. The PDF builder does not consume this browser stylesheet. Existing PDF pixel-review receipts remain valid for identical PDF bytes. Renewed source/PDF QA required before publication.",
+    "fermi_receipt": "docs/joseph-research-reviews/fermi-cache-binding-pr446.json",
+    "newton_receipt": "docs/joseph-research-reviews/newton-cache-binding-pr446.json"
   }
 }

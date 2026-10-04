@@ -415,8 +415,16 @@ def main() -> int:
             errors.append("artwork-actions.css: desktop close action must not span a separate full row")
     if ".fc-site .fc-topic-artwork-detail .fc-artwork-detail-actions > [data-artwork-detail-close]" not in action_css:
         errors.append("artwork-actions.css: topic art-study Close action needs a specificity-safe gold border rule")
-    if "@media (min-width: 821px)" not in action_css or "grid-column: 2;" not in action_css:
-        errors.append("artwork-actions.css: desktop topic art-study Close action must remain in the bottom-right grid column")
+    # Select the last explicit track: forcing column 2 creates a tiny implicit
+    # track when enlarged text makes the auto-fit action grid one column.
+    desktop_close = re.search(
+        r"@media\s*\(min-width:\s*821px\)\s*\{\s*\.fc-site\s+\.fc-topic-artwork-detail\s+\.fc-artwork-detail-actions\s*>\s*\[data-artwork-detail-close\]\s*\{([^}]+)\}",
+        action_css, re.S,
+    )
+    if not desktop_close or not re.search(r"grid-column:\s*-2\s*/\s*-1\s*;", desktop_close.group(1)):
+        errors.append("artwork-actions.css: desktop Close must use the last explicit action-grid column without creating an implicit track")
+    if re.search(r"grid-column:\s*2\s*;", action_css):
+        errors.append("artwork-actions.css: fixed second-column placement recreates the enlarged-text implicit-track defect")
 
     hero_css = (ROOT / "hero-details.css").read_text(encoding="utf-8")
     hero_close_rule = re.search(r"\.fc-site \.fc-hero-detail-dialog \.fc-artwork-detail-actions > \[data-hero-close\]\s*\{([^}]+)\}", hero_css, re.S)

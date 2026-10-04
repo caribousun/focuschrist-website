@@ -1,0 +1,28 @@
+{
+  "reviewer": "Fermi",
+  "key": "GS5",
+  "stage": "FINISHED_PIXEL_REVIEW",
+  "candidate": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\gs5-candidate-v1.png",
+  "candidate_sha256": "d0babc7bf03ef3133c731479d9c3170191ddecdf10843bd2fc2ea0184293c9c5",
+  "prompt_sha256": "c2847368890f4a6bdb5eb30c08bb10f177d3e992340ba13be3fe5e8498df0150",
+  "plan_sha256": "d6b81ca9f96d0f539c155debf65e91ce2953124ecd449cb9f978b6f28bfa5914",
+  "result": "PASS_FERMI_PIXEL_CONCURRENCE",
+  "defects": [],
+  "passed": [
+    "Two distinct contemporary adult women, older listener and friend; no Christ or locked historical identity transfer.",
+    "Older woman herself points/touches large tactile play button; helper separately points toward control without moving or covering her hand. Clear agency and no fused hands.",
+    "Attentive lowered eyes and heads orient to the shared action; natural interested expressions, no staged camera pose.",
+    "Closed unlettered volume, ready headphones, unbranded simple audio player and ordinary home distinguish this from museum tactile-model and generic reading scenes.",
+    "Natural aged skin, eyes/glasses, hair/fabric and hands; no medical cure, readable private data or diagnosis claim.",
+    "Romans10/John10 hearing/recognition application retained, not asserted as literal scripture event or hearing ability required for faith.",
+    "Faces, hands/control and relevant objects fit original3:2 view; final delivered crop/browser still requires review."
+  ],
+  "inspection": [
+    "Full original1536x1024 viewed",
+    "Combined both-faces/control/hands crop inspected"
+  ],
+  "required_correction": null,
+  "SITE_use_approved": false,
+  "limits": "Image-only review. No page/native/public/owner aesthetic acceptance. Revisions invalidate affected pixel conclusions and require exact new-hash review.",
+  "preserved": "No SITE/Docs/canonical/generation edits, spending, schedules or foundation changes."
+}

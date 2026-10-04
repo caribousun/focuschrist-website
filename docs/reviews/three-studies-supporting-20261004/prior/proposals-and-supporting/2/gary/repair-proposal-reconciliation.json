@@ -1,0 +1,74 @@
+{
+  "author": "Gary",
+  "authority": "Exact live Master foundation/map, current 00B and Focus plus applicable 00I/00C loaded through connected Drive. Foundation unchanged.",
+  "gs1": {
+    "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-integration-continuation\\work\\gary\\gs1-repair-proposal-v5.json",
+    "sha256": "5ef7908b70d4140b05f5443f2c4d92d02ddf127d640884126e956a8a53895d89",
+    "prompt_sha256": "1e46f513375930e1b36b2d698a1eb14049d83760a45b3a949bd81ed0ac258bcb",
+    "status": "AWAIT_DUAL_EXACT_PREFLIGHT"
+  },
+  "queued_repairs": [
+    {
+      "key": "CH5",
+      "proposal_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-enriched-continuation\\work\\gary\\ch5-repair-proposal-v2.json",
+      "proposal_sha256": "234f073f0bff8c1a80488948eeb2d055b6fbc23aaf49a1fd4edc2ae78e076bbb",
+      "prompt_sha256": "cf3c921dd23a77977d890727e796b7d75c13cb2f1ac1b47916a2369848ccd9ab",
+      "references": [
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-enriched-continuation\\work\\gary\\generated\\ch5-candidate-v1.png",
+          "sha256": "784aaf979e541b79db24734b6263c5be189e001f8466075d56b9f44f98174a6e",
+          "role": "Image 1 exact object-only edit target; preserve all people and setting."
+        }
+      ],
+      "reviews": [
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-enriched-continuation\\work\\fermi\\ch5-repair-proposal-v2-preflight.json",
+          "sha256": "1200caef7094ebac6a9ec0b3431ce90b1ac6b3df0f073e5124b72febb1d03ca3"
+        },
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-enriched-continuation\\work\\newton\\ch5-preflight-v2.json",
+          "sha256": "a2f71add9c717cd59bbb9418a15af4fa8cde57f32557b0eea052025dfef8f82e"
+        }
+      ],
+      "status": "EXACT_BYTES_AND_DUAL_PREFLIGHT_RECONCILED_AWAIT_ROOT_BOUNDED_EXECUTION"
+    },
+    {
+      "key": "BS1",
+      "proposal_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-enriched-continuation\\work\\gary\\bs1-repair-proposal-v2.json",
+      "proposal_sha256": "2bc6e8b518f942b165496aa8b8735d53bb55c7f0fb7e66b97ec692fcbd781cf7",
+      "prompt_sha256": "0ffee6c1ab528c26046550386a43fc8c79493dce736a52115c07a6220555f29a",
+      "references": [
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-enriched-continuation\\work\\gary\\generated\\bs1-candidate-v1.png",
+          "sha256": "6a96f12c6847b49a25088df64e4d2fb1054cbb3a5777d3aaa2dace99fa4ff504",
+          "role": "Image 1 sole edit target. Correct only far-right companion head/neck."
+        },
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\heroes\\home-christ-signature-approved-20260907.png",
+          "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+          "role": "Image 2 actual approved Home identity verification; preserve target Jesus unchanged."
+        },
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\art-study\\full\\still-storm-boat.webp",
+          "sha256": "fdb60ec2ecdee51a24264fc53f0c1aed7cbde5d10dcaec32a6e3d8840b42911c",
+          "role": "Image 3 actual continuity reference: use upper far-right rear companion C near x1412,y560, never lower-right foreground D."
+        }
+      ],
+      "reviews": [
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-enriched-continuation\\work\\fermi\\bs1-repair-proposal-v2-preflight.json",
+          "sha256": "8c8090fa518e0cc373e356d9a5505a3a6ba684f783273a8ec895d447f1c34a67"
+        },
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-enriched-continuation\\work\\newton\\bs1-preflight-v2.json",
+          "sha256": "f7d5609cd9a6a84463b91156e64d7387704fda2b3d614f9446fa8d8da0fc7fec"
+        }
+      ],
+      "status": "EXACT_BYTES_AND_DUAL_PREFLIGHT_RECONCILED_AWAIT_ROOT_BOUNDED_EXECUTION"
+    }
+  ],
+  "all_references_full_pixels_inspected": true,
+  "image_calls_this_chat": 0,
+  "site_or_canonical_writes": false,
+  "accepted_twelve_preserved": true
+}

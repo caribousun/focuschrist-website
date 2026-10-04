@@ -1,0 +1,17 @@
+{
+  "reviewer": "Newton",
+  "result": "PASS_EXACT_PREFLIGHT",
+  "proposal_sha256": "f10e912bd779b2c1c560ce4b51cb7501560db7b6b76f317b8072d092d120c845",
+  "prompt_sha256": "cce01f31f137168b1e570cff4f91e5f097509a7c9480baa776b8a433e477264e",
+  "references": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-integration-continuation\\work\\gary\\generated\\ch5-candidate-v2.png",
+      "sha256": "7f3b4eb61eef0bc20dde0bed65205c3c75d0270508824bf60300b452bf502a4a",
+      "role": "Image 1 sole edit target; remove remaining small button-like mark only.",
+      "actual_pixels_inspected": true
+    }
+  ],
+  "finding": "Exact proposal removes remaining screen-left cup button/power-like mark including rim, inset and shadow; smooth matte shell replacement addresses actual held detail without changing fingers, identities, voluntary gaze or open setting. Full candidate and detailed crop independently inspected immediately before proposal review.",
+  "generation_authorization": false,
+  "limits": "Preflight only, not execution permission or finished pixel acceptance."
+}

@@ -1,0 +1,17 @@
+{
+  "finding": "Actual full image shows one contemporary adult with closed eyes and upright quiet posture, both hands resting together in lap well away from needle. Unfinished light curtain remains across table, sewing machine still, no added scriptures/phone or supernatural scene. Coherent hands, face and ordinary room; small machine setting markings are not readable brand/private text. Crown is close to top but complete, all essential hands and face visible. Photographic texture and scene fit paused work, without a claim work finished or anxiety cured.",
+  "prompt_sha256": "583ccdc7d390ff8037b7552c7a9aa75ee628373f8b3dfe83e466c9c4e5491e53",
+  "candidate_sha256": "ffb4b79a8e3e4c6c3d539ec46f6c10ab7fdd55431d40594fe1da5dfc082babd7",
+  "candidate": "work/gary/generated/bs2-candidate-v1.png",
+  "mandates_read": [
+    "AGENTS.md",
+    "docs/historical-character-identity.md",
+    "docs/focuschrist-enrichment-and-stewardship-prompt.md"
+  ],
+  "key": "BS2v1",
+  "result": "PASS",
+  "actual_pixels_inspected": true,
+  "reviewer": "Fermi",
+  "stage": "FINISHED_PIXEL_REVIEW",
+  "limitations": "Independent image-only result; Newton exact concurrence/root assembly/native/source/release checks remain; no owner aesthetic acceptance."
+}

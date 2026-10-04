@@ -1,0 +1,569 @@
+[
+  {
+    "route": "art-study/be-still.html",
+    "sha256": "832f2c73e4632c35bffe8b72d5ca07289a493f200360bdf1932cc01293f35bc8",
+    "images": [
+      {
+        "src": "../art/Be-Still.png",
+        "asset": "art/Be-Still.png",
+        "alt": "",
+        "supporting": false,
+        "section": null,
+        "links": [
+          "../art/Be-Still.png",
+          "../art.html#gallery-original-be-still",
+          "#psalm-context",
+          "#study-resources"
+        ]
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/still-city-companion.webp",
+        "asset": "assets/page-art/art-study/full/still-city-companion.webp",
+        "alt": "Jesus Christ walking beside a weary man in a busy city",
+        "supporting": true,
+        "section": "begin",
+        "links": [
+          "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng",
+          "../assets/page-art/art-study/full/still-city-companion.webp",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/john/14?lang=eng&id=p27#p27"
+        ]
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/still-storm-boat.webp",
+        "asset": "assets/page-art/art-study/full/still-storm-boat.webp",
+        "alt": "Jesus Christ standing with His disciples in a storm-tossed boat",
+        "supporting": true,
+        "section": "psalm-context",
+        "links": [
+          "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng",
+          "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/101?lang=eng&id=p13-p17#p13",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/4?lang=eng&id=p35-p41#p35",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/john/14?lang=eng&id=p27#p27",
+          "../assets/page-art/art-study/full/still-storm-boat.webp",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/4?lang=eng&id=p35-p41#p35"
+        ]
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/still-wars-cease-20261004.webp",
+        "asset": "assets/page-art/art-study/full/still-wars-cease-20261004.webp",
+        "alt": "A broken bow, a broken spear and a charred wheel lie still on open ground.",
+        "supporting": true,
+        "section": "still-wars-cease-20261004-study",
+        "links": [
+          "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng&id=p1-p3#p1",
+          "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng&id=p6-p9#p6",
+          "../assets/page-art/art-study/full/still-wars-cease-20261004.webp",
+          "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng&id=p6-p11#p6",
+          "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng&id=p10-p11#p10",
+          "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng&id=p6-p11#p6",
+          "/art-study/the-living-christ.html"
+        ]
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/still-depart-for-rest-20261004.webp",
+        "asset": "assets/page-art/art-study/full/still-depart-for-rest-20261004.webp",
+        "alt": "Jesus sits in a boat facing a headband-wearing companion while one man rows and another rests behind Him.",
+        "supporting": true,
+        "section": "still-depart-for-rest-20261004-study",
+        "links": [
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/6?lang=eng&id=p30-p32#p30",
+          "../assets/page-art/art-study/full/still-depart-for-rest-20261004.webp",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/6?lang=eng&id=p30-p34#p30",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/6?lang=eng&id=p33-p34#p33",
+          "/art-study/the-good-shepherd.html"
+        ]
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/still-lakeside-pause.webp",
+        "asset": "assets/page-art/art-study/full/still-lakeside-pause.webp",
+        "alt": "Jesus Christ sitting beside a woman at a quiet mountain lake",
+        "supporting": true,
+        "section": "artwork-study",
+        "links": [
+          "../assets/page-art/art-study/full/still-lakeside-pause.webp",
+          "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng",
+          "../assets/page-art/art-study/full/still-shared-lift.webp",
+          "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/58?lang=eng&id=p26-p28#p26"
+        ]
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/still-shared-lift.webp",
+        "asset": "assets/page-art/art-study/full/still-shared-lift.webp",
+        "alt": "Jesus Christ helping a tired father lift a moving box",
+        "supporting": true,
+        "section": "artwork-study",
+        "links": [
+          "../assets/page-art/art-study/full/still-lakeside-pause.webp",
+          "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng",
+          "../assets/page-art/art-study/full/still-shared-lift.webp",
+          "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/58?lang=eng&id=p26-p28#p26"
+        ]
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/still-pause-work-20261004.webp",
+        "asset": "assets/page-art/art-study/full/still-pause-work-20261004.webp",
+        "alt": "A woman sits with her eyes closed and both hands in her lap beside a still sewing machine and unfinished curtain.",
+        "supporting": true,
+        "section": "still-pause-work-20261004-study",
+        "links": [
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/philip/4?lang=eng&id=p4-p7#p4",
+          "../assets/page-art/art-study/full/still-pause-work-20261004.webp",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/philip/4?lang=eng&id=p4-p9#p4",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/philip/4?lang=eng&id=p8-p9#p8",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/philip/4?lang=eng&id=p11-p14#p11",
+          "/answers/prayer-and-personal-revelation.html"
+        ]
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/still-phone-down-scripture-20260919.webp",
+        "asset": "assets/page-art/art-study/full/still-phone-down-scripture-20260919.webp",
+        "alt": "A man sets his phone face down and turns his attention to an open Bible at the kitchen table.",
+        "supporting": true,
+        "section": "personal-study",
+        "links": [
+          "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng",
+          "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/58?lang=eng&id=p26-p28#p26",
+          "../assets/page-art/art-study/full/still-phone-down-scripture-20260919.webp",
+          "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng&id=p10#p10"
+        ]
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/still-listen-workshop-20261004.webp",
+        "asset": "assets/page-art/art-study/full/still-listen-workshop-20261004.webp",
+        "alt": "A man pauses beside a wooden board and a resting sanding block to listen to a teenager.",
+        "supporting": true,
+        "section": "still-listen-workshop-20261004-study",
+        "links": [
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/james/1?lang=eng&id=p19-p20#p19",
+          "../assets/page-art/art-study/full/still-listen-workshop-20261004.webp",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/james/1?lang=eng&id=p19-p22#p19",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/james/1?lang=eng&id=p21-p22#p21",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/james/3?lang=eng&id=p13-p18#p13",
+          "/art-study/suffer-the-little-children.html"
+        ]
+      },
+      {
+        "src": "../assets/resources/still-bednar-be-still.jpg",
+        "asset": "assets/resources/still-bednar-be-still.jpg",
+        "alt": "Elder David A. Bednar speaking at April 2024 general conference",
+        "supporting": false,
+        "section": null,
+        "links": []
+      },
+      {
+        "src": "../assets/resources/still-principles-prayer.jpg",
+        "asset": "assets/resources/still-principles-prayer.jpg",
+        "alt": "Principles of Peace: Prayer #PrinceofPeace official video preview",
+        "supporting": false,
+        "section": "study-resources",
+        "links": [
+          "https://www.churchofjesuschrist.org/media/video/2017-02-6700-principles-of-peace-prayer-princeofpeace?lang=eng",
+          "https://www.churchofjesuschrist.org/media/video/2017-02-6700-principles-of-peace-prayer-princeofpeace?lang=eng",
+          "https://www.churchofjesuschrist.org/media/video/2023-04-1070-henry-b-eyring?lang=eng",
+          "https://www.churchofjesuschrist.org/media/video/2023-04-1070-henry-b-eyring?lang=eng",
+          "../watch.html"
+        ]
+      },
+      {
+        "src": "../assets/resources/still-personal-peace.jpg",
+        "asset": "assets/resources/still-personal-peace.jpg",
+        "alt": "Finding Personal Peace official video preview",
+        "supporting": false,
+        "section": "study-resources",
+        "links": [
+          "https://www.churchofjesuschrist.org/media/video/2017-02-6700-principles-of-peace-prayer-princeofpeace?lang=eng",
+          "https://www.churchofjesuschrist.org/media/video/2017-02-6700-principles-of-peace-prayer-princeofpeace?lang=eng",
+          "https://www.churchofjesuschrist.org/media/video/2023-04-1070-henry-b-eyring?lang=eng",
+          "https://www.churchofjesuschrist.org/media/video/2023-04-1070-henry-b-eyring?lang=eng",
+          "../watch.html"
+        ]
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/still-neighbor-peace-20261004.webp",
+        "asset": "assets/page-art/art-study/full/still-neighbor-peace-20261004.webp",
+        "alt": "A person turns a speaker dial while a neighbor gestures toward an ear and they look at one another.",
+        "supporting": true,
+        "section": "still-neighbor-peace-20261004-study",
+        "links": [
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/james/3?lang=eng&id=p13-p16#p13",
+          "../assets/page-art/art-study/full/still-neighbor-peace-20261004.webp",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/james/3?lang=eng&id=p13-p18#p13",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/james/3?lang=eng&id=p17-p18#p17",
+          "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng&id=p13#p13",
+          "/answers/faith-in-jesus-christ-during-trials.html"
+        ]
+      }
+    ]
+  },
+  {
+    "route": "art-study/suffer-the-little-children.html",
+    "sha256": "1d4cfe03d86758d7cea99b4897d3fa4ac465e0ed75d4c21aaf6cf92363027ad9",
+    "images": [
+      {
+        "src": "../art/Suffer-the-Little-Children-approved-20260929.webp",
+        "asset": "art/Suffer-the-Little-Children-approved-20260929.webp",
+        "alt": "",
+        "supporting": false,
+        "section": null,
+        "links": [
+          "../art/Suffer-the-Little-Children-approved-20260929.webp",
+          "../art.html#gallery-original-suffer-the-little-children",
+          "#scripture-study",
+          "#study-resources"
+        ]
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/children-gather-close.webp",
+        "asset": "assets/page-art/art-study/full/children-gather-close.webp",
+        "alt": "Children gathered closely around Jesus Christ in a courtyard",
+        "supporting": true,
+        "section": "begin",
+        "links": [
+          "../assets/page-art/art-study/full/children-gather-close.webp",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng&id=p13-p16#p13"
+        ]
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/children-welcome-shy-child.webp",
+        "asset": "assets/page-art/art-study/full/children-welcome-shy-child.webp",
+        "alt": "Jesus Christ kneeling to welcome a shy child",
+        "supporting": true,
+        "section": "welcome",
+        "links": [
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng&id=p13-p16#p13",
+          "../assets/page-art/art-study/full/children-welcome-shy-child.webp",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng&id=p14#p14",
+          "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng"
+        ]
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/children-temple-praise-20261004.webp",
+        "asset": "assets/page-art/art-study/full/children-temple-praise-20261004.webp",
+        "alt": "Three children praise Jesus in the temple as He turns toward two religious leaders.",
+        "supporting": true,
+        "section": "children-temple-praise-20261004-study",
+        "links": [
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/21?lang=eng&id=p12-p16#p12",
+          "../assets/page-art/art-study/full/children-temple-praise-20261004.webp",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/21?lang=eng&id=p14-p16#p14",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/21?lang=eng&id=p16#p16",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng&id=p13-p16#p13",
+          "/art-study/the-good-shepherd.html"
+        ]
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/children-listen-under-tree.webp",
+        "asset": "assets/page-art/art-study/full/children-listen-under-tree.webp",
+        "alt": "Jesus Christ listening among children beneath a tree",
+        "supporting": true,
+        "section": "artwork-study",
+        "links": [
+          "../assets/page-art/art-study/full/children-listen-under-tree.webp",
+          "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/26?lang=eng&id=p33#p33",
+          "../assets/page-art/art-study/full/children-quiet-water.webp",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/18?lang=eng&id=p1-p5#p1"
+        ]
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/children-quiet-water.webp",
+        "asset": "assets/page-art/art-study/full/children-quiet-water.webp",
+        "alt": "Jesus Christ listening to a child beside calm water",
+        "supporting": true,
+        "section": "artwork-study",
+        "links": [
+          "../assets/page-art/art-study/full/children-listen-under-tree.webp",
+          "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/26?lang=eng&id=p33#p33",
+          "../assets/page-art/art-study/full/children-quiet-water.webp",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/18?lang=eng&id=p1-p5#p1"
+        ]
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/children-accessible-game-20261004.webp",
+        "asset": "assets/page-art/art-study/full/children-accessible-game-20261004.webp",
+        "alt": "A girl using a wheelchair rolls a blue ball across a table toward a boy while another child waits and an adult moves an unused chair.",
+        "supporting": true,
+        "section": "children-accessible-game-20261004-study",
+        "links": [
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/9?lang=eng&id=p33-p37#p33",
+          "../assets/page-art/art-study/full/children-accessible-game-20261004.webp",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/9?lang=eng&id=p33-p37#p33",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng&id=p13-p16#p13",
+          "/jesus-christ/miracles-and-compassion.html"
+        ]
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/children-toy-repair-20261004.webp",
+        "asset": "assets/page-art/art-study/full/children-toy-repair-20261004.webp",
+        "alt": "A child holds a spool and watches an older woman sew a torn seam in a stuffed bear.",
+        "supporting": true,
+        "section": "children-toy-repair-20261004-study",
+        "links": [
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/james/1?lang=eng&id=p19-p22#p19",
+          "../assets/page-art/art-study/full/children-toy-repair-20261004.webp",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/james/1?lang=eng&id=p19-p22#p19",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/9?lang=eng&id=p36-p37#p36",
+          "/answers/prayer-and-personal-revelation.html"
+        ]
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/children-listen-at-home-20260919.webp",
+        "asset": "assets/page-art/art-study/full/children-listen-at-home-20260919.webp",
+        "alt": "A mother sits at her young son\u2019s eye level and listens as he speaks at home.",
+        "supporting": true,
+        "section": "personal-study",
+        "links": [
+          "../assets/page-art/art-study/full/children-listen-at-home-20260919.webp",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/9?lang=eng&id=p36-p37#p36"
+        ]
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/children-share-snack-20261004.webp",
+        "asset": "assets/page-art/art-study/full/children-share-snack-20261004.webp",
+        "alt": "A boy offers a sealed snack packet to a girl across a lunch table while an adult watches nearby.",
+        "supporting": true,
+        "section": "children-share-snack-20261004-study",
+        "links": [
+          "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng&id=p1-p3#p1",
+          "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng&id=p13-p15#p13",
+          "../assets/page-art/art-study/full/children-share-snack-20261004.webp",
+          "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng&id=p13-p16#p13",
+          "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng&id=p16#p16",
+          "/art-study/the-good-shepherd.html"
+        ]
+      },
+      {
+        "src": "../assets/resources/children-lords-love.jpg",
+        "asset": "assets/resources/children-lords-love.jpg",
+        "alt": "President Nelson Blesses Children with the Lord\u2019s Love official video preview",
+        "supporting": false,
+        "section": "study-resources",
+        "links": [
+          "https://www.churchofjesuschrist.org/media/video/2020-05-0140-president-nelson-blesses-children-with-the-lords-love?lang=eng",
+          "https://www.churchofjesuschrist.org/media/video/2020-05-0140-president-nelson-blesses-children-with-the-lords-love?lang=eng",
+          "https://www.churchofjesuschrist.org/media/video/2023-01-0020-are-you-really-there?lang=eng",
+          "https://www.churchofjesuschrist.org/media/video/2023-01-0020-are-you-really-there?lang=eng",
+          "../watch.html"
+        ]
+      },
+      {
+        "src": "../assets/resources/children-heartfelt-prayer.jpg",
+        "asset": "assets/resources/children-heartfelt-prayer.jpg",
+        "alt": "Are You Really There? official video preview",
+        "supporting": false,
+        "section": "study-resources",
+        "links": [
+          "https://www.churchofjesuschrist.org/media/video/2020-05-0140-president-nelson-blesses-children-with-the-lords-love?lang=eng",
+          "https://www.churchofjesuschrist.org/media/video/2020-05-0140-president-nelson-blesses-children-with-the-lords-love?lang=eng",
+          "https://www.churchofjesuschrist.org/media/video/2023-01-0020-are-you-really-there?lang=eng",
+          "https://www.churchofjesuschrist.org/media/video/2023-01-0020-are-you-really-there?lang=eng",
+          "../watch.html"
+        ]
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/children-quiet-welcome-20261004.webp",
+        "asset": "assets/page-art/art-study/full/children-quiet-welcome-20261004.webp",
+        "alt": "A child seated on a floor cushion reaches toward ear defenders offered by an adult, with a gathering visible through an open doorway.",
+        "supporting": true,
+        "section": "children-quiet-welcome-20261004-study",
+        "links": [
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng&id=p13-p16#p13",
+          "../assets/page-art/art-study/full/children-quiet-welcome-20261004.webp",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng&id=p13-p16#p13",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/james/1?lang=eng&id=p19#p19",
+          "/art-study/be-still.html"
+        ]
+      }
+    ]
+  },
+  {
+    "route": "art-study/the-good-shepherd.html",
+    "sha256": "0e3cf97723df9127cfbcd7d0484a2b6fa79a6ef697eac4b43531f7763ef2bf46",
+    "images": [
+      {
+        "src": "../art/The-Good-Shephard.jpg",
+        "asset": "art/The-Good-Shephard.jpg",
+        "alt": "",
+        "supporting": false,
+        "section": null,
+        "links": [
+          "../art/The-Good-Shephard.jpg",
+          "../art.html#gallery-original-the-good-shepherd",
+          "#scripture-study",
+          "#study-resources"
+        ]
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/shepherd-sees-one.webp",
+        "asset": "assets/page-art/art-study/full/shepherd-sees-one.webp",
+        "alt": "Jesus Christ kneeling beside an older man in a village street",
+        "supporting": true,
+        "section": "begin",
+        "links": [
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng",
+          "../assets/page-art/art-study/full/shepherd-sees-one.webp",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/15?lang=eng&id=p3-p7#p3",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng"
+        ]
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/shepherd-carries-lamb.webp",
+        "asset": "assets/page-art/art-study/full/shepherd-carries-lamb.webp",
+        "alt": "Jesus Christ carrying a lamb across a hillside",
+        "supporting": true,
+        "section": "shepherd-words",
+        "links": [
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng&id=p1-p18#p1",
+          "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/23?lang=eng",
+          "../assets/page-art/art-study/full/shepherd-carries-lamb.webp",
+          "https://www.churchofjesuschrist.org/study/scriptures/ot/isa/40?lang=eng&id=p11#p11",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng&id=p16#p16",
+          "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/15?lang=eng&id=p11-p24#p11"
+        ]
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/shepherd-binds-hurt-20261004.webp",
+        "asset": "assets/page-art/art-study/full/shepherd-binds-hurt-20261004.webp",
+        "alt": "Jesus kneels beside a resting sheep and finishes wrapping a bandage around its lower foreleg.",
+        "supporting": true,
+        "section": "shepherd-binds-hurt-20261004-study",
+        "links": [
+          "https://www.churchofjesuschrist.org/study/scriptures/ot/ezek/34?lang=eng&id=p1-p6#p1",
+          "../assets/page-art/art-study/full/shepherd-binds-hurt-20261004.webp",
+          "https://www.churchofjesuschrist.org/study/scriptures/ot/ezek/34?lang=eng&id=p11-p16#p11",
+          "https://www.churchofjesuschrist.org/study/scriptures/ot/ezek/34?lang=eng&id=p30-p31#p30",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng&id=p11-p18#p11",
+          "https://www.churchofjesuschrist.org/study/scriptures/ot/ezek/34?lang=eng&id=p11-p16#p11",
+          "/jesus-christ/miracles-and-compassion.html"
+        ]
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/shepherd-room-at-water-20261004.webp",
+        "asset": "assets/page-art/art-study/full/shepherd-room-at-water-20261004.webp",
+        "alt": "A smaller sheep waits behind two larger sheep at a narrow approach to water, with three more sheep on the bank.",
+        "supporting": true,
+        "section": "shepherd-room-at-water-20261004-study",
+        "links": [
+          "https://www.churchofjesuschrist.org/study/scriptures/ot/ezek/34?lang=eng&id=p17-p19#p17",
+          "../assets/page-art/art-study/full/shepherd-room-at-water-20261004.webp",
+          "https://www.churchofjesuschrist.org/study/scriptures/ot/ezek/34?lang=eng&id=p17-p22#p17",
+          "https://www.churchofjesuschrist.org/study/scriptures/ot/ezek/34?lang=eng&id=p20-p22#p20",
+          "https://www.churchofjesuschrist.org/study/scriptures/ot/ezek/34?lang=eng&id=p23-p24#p23",
+          "/art-study/suffer-the-little-children.html"
+        ]
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/shepherd-shares-burden.webp",
+        "asset": "assets/page-art/art-study/full/shepherd-shares-burden.webp",
+        "alt": "Jesus Christ helping a family push a handcart from the mud",
+        "supporting": true,
+        "section": "artwork-study",
+        "links": [
+          "../assets/page-art/art-study/full/shepherd-shares-burden.webp",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/11?lang=eng&id=p28-p30#p28",
+          "../assets/page-art/art-study/full/shepherd-calls-zacchaeus.webp",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/19?lang=eng&id=p1-p10#p1"
+        ]
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/shepherd-calls-zacchaeus.webp",
+        "asset": "assets/page-art/art-study/full/shepherd-calls-zacchaeus.webp",
+        "alt": "Jesus Christ looking up toward Zacchaeus above a crowd",
+        "supporting": true,
+        "section": "artwork-study",
+        "links": [
+          "../assets/page-art/art-study/full/shepherd-shares-burden.webp",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/11?lang=eng&id=p28-p30#p28",
+          "../assets/page-art/art-study/full/shepherd-calls-zacchaeus.webp",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/19?lang=eng&id=p1-p10#p1"
+        ]
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/shepherd-coat-repair-20261004.webp",
+        "asset": "assets/page-art/art-study/full/shepherd-coat-repair-20261004.webp",
+        "alt": "A man stitches a coat lining while an older woman holds the fabric steady at a table.",
+        "supporting": true,
+        "section": "shepherd-coat-repair-20261004-study",
+        "links": [
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/james/2?lang=eng&id=p14-p18#p14",
+          "../assets/page-art/art-study/full/shepherd-coat-repair-20261004.webp",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/james/2?lang=eng&id=p14-p18#p14",
+          "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng&id=p19-p21#p19",
+          "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng&id=p26-p27#p26",
+          "/jesus-christ/miracles-and-compassion.html"
+        ]
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/shepherd-seeks-one-20260919.webp",
+        "asset": "assets/page-art/art-study/full/shepherd-seeks-one-20260919.webp",
+        "alt": "Christ as the Good Shepherd approaches one sheep among rocks and scrub at dusk.",
+        "supporting": true,
+        "section": "personal-study",
+        "links": [
+          "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/23?lang=eng",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng",
+          "../assets/page-art/art-study/full/shepherd-seeks-one-20260919.webp",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/15?lang=eng&id=p4-p7#p4"
+        ]
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/shepherd-key-recovery-20261004.webp",
+        "asset": "assets/page-art/art-study/full/shepherd-key-recovery-20261004.webp",
+        "alt": "A man lifts a key ring from a drain with a magnetic tool while a woman points toward the opening.",
+        "supporting": true,
+        "section": "shepherd-key-recovery-20261004-study",
+        "links": [
+          "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng&id=p16-p21#p16",
+          "../assets/page-art/art-study/full/shepherd-key-recovery-20261004.webp",
+          "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng&id=p26-p27#p26",
+          "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng&id=p26-p27#p26",
+          "/art-study/the-living-christ.html"
+        ]
+      },
+      {
+        "src": "../assets/resources/shepherd-abiding-compassion.jpg",
+        "asset": "assets/resources/shepherd-abiding-compassion.jpg",
+        "alt": "The Savior\u2019s Abiding Compassion official video preview",
+        "supporting": false,
+        "section": "study-resources",
+        "links": [
+          "https://www.churchofjesuschrist.org/media/video/2021-10-1040-ulisses-soares?lang=eng",
+          "https://www.churchofjesuschrist.org/media/video/2021-10-1040-ulisses-soares?lang=eng",
+          "https://www.churchofjesuschrist.org/study/video/teachings/2011-10-059-the-good-shepherd-and-other-sheep-i-have?lang=eng",
+          "https://www.churchofjesuschrist.org/study/video/teachings/2011-10-059-the-good-shepherd-and-other-sheep-i-have?lang=eng",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng&id=p1-p18#p1",
+          "../watch.html"
+        ]
+      },
+      {
+        "src": "../assets/resources/good-shepherd.jpg",
+        "asset": "assets/resources/good-shepherd.jpg",
+        "alt": "The Good Shepherd and Other Sheep I Have resource preview",
+        "supporting": false,
+        "section": "study-resources",
+        "links": [
+          "https://www.churchofjesuschrist.org/media/video/2021-10-1040-ulisses-soares?lang=eng",
+          "https://www.churchofjesuschrist.org/media/video/2021-10-1040-ulisses-soares?lang=eng",
+          "https://www.churchofjesuschrist.org/study/video/teachings/2011-10-059-the-good-shepherd-and-other-sheep-i-have?lang=eng",
+          "https://www.churchofjesuschrist.org/study/video/teachings/2011-10-059-the-good-shepherd-and-other-sheep-i-have?lang=eng",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng&id=p1-p18#p1",
+          "../watch.html"
+        ]
+      },
+      {
+        "src": "../assets/page-art/art-study/thumbs/shepherd-audio-access-20261004.webp",
+        "asset": "assets/page-art/art-study/full/shepherd-audio-access-20261004.webp",
+        "alt": "An older woman presses an audio player\u2019s large play button while a woman beside her points toward the controls.",
+        "supporting": true,
+        "section": "shepherd-audio-access-20261004-study",
+        "links": [
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/rom/10?lang=eng&id=p14-p17#p14",
+          "../assets/page-art/art-study/full/shepherd-audio-access-20261004.webp",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/rom/10?lang=eng&id=p14-p17#p14",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng&id=p3-p5#p3",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng&id=p27#p27",
+          "/answers/prayer-and-personal-revelation.html"
+        ]
+      }
+    ]
+  }
+]

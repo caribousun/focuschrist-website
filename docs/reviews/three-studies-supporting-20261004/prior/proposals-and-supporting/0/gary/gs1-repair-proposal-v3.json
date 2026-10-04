@@ -1,0 +1,22 @@
+{
+  "key": "GS1",
+  "version": 3,
+  "status": "DRAFT_FOR_EXACT_DUAL_PREFLIGHT_NOT_GENERATION_AUTHORIZED",
+  "input_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\gs1-candidate-v2.png",
+  "input_sha256": "5b1518cc5f3ae639a7ad787f8c9374116fb7abbfeb31a741e3edfe08ca3378dc",
+  "reference_roles": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\gs1-candidate-v2.png",
+      "sha256": "5b1518cc5f3ae639a7ad787f8c9374116fb7abbfeb31a741e3edfe08ca3378dc",
+      "role": "Image 1 exact edit target; only wrist marks change."
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\heroes\\home-christ-signature-approved-20260907.png",
+      "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+      "role": "Image 2 actual approved Home identity only; no portrait pose/background transfer."
+    }
+  ],
+  "prompt": "Image 1 is the sole edit target. Image 2 is the exact owner-approved Home portrait supplied only to verify and preserve Jesus Christ’s recognizable identity. Retain image 1’s face and expression; do not import image 2’s smile, pose, clothing, lighting, background or composition. Edit only the marks on the two exposed wrists. Remove all long white lines, wrapping lines, parallel lines and bracelet-like scar bands from both wrists and restore their surrounding natural skin texture. At each exposed wrist joint place exactly one small localized oval healed puncture scar. Each mark occupies a compact spot only, with pale slightly textured fully closed healed skin. Neither scar stretches across the wrist or wraps around it. No long linear scar, paired lines, parallel marks, ring or bracelet shape. No red wound, dark hole, incision, scab or blood. Retain natural skin on the backs of both hands; do not add any mark to a dorsal hand, finger, forearm or sleeve. Both palms remain naturally hidden by the exact current pose; do not rotate hands or expose palms. Preserve every other part of image 1 unchanged, including Jesus Christ’s exact approved recognizable face, hair, expression, gaze, body, kneeling pose, hand and finger anatomy and positions, sleeves, lichen-stone gray mantle, sheep, bandage, mat, stone shelter, lighting, framing and photographic detail. No extra marks, glow or halo. Retain the exact 1536x1024 landscape composition and convincing photographic appearance.",
+  "prompt_sha256": "f63fb06082e78aac459ba3822cc26c0d8298b0dd7f32eaed0731c76f72454a65",
+  "generation_clearance": false
+}

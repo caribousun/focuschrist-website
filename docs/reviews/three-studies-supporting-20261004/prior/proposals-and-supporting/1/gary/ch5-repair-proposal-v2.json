@@ -1,0 +1,16 @@
+{
+  "key": "CH5",
+  "version": 2,
+  "status": "EXACT_DUAL_PREFLIGHT_REQUIRED",
+  "generation_clearance": false,
+  "prompt": "Image 1 is the sole edit target and actual reference for the fictional people and room. Replace only the black audio-headphone object between the parent's open palm and the child's reaching hand with plain passive hearing-protection ear defenders. The replacement is a small child-sized pair of simple matte dark-gray earmuffs: two smooth solid oval exterior shells, thick soft sealing cushions around their openings, and one plain padded adjustable headband joining the two cups. No electronics, buttons, power switch, jack, microphone, cable, light, lettering, logo, label, emblem or decorative marks anywhere. Keep the same overall object scale, position and orientation so the existing child hand still reaches naturally toward the headband and the existing parent's palm supports the cups. Preserve both people's exact faces, eyes, mutual gaze, expressions, age, clothing, body posture and all hand/finger anatomy; do not move, add or reshape their hands. Preserve all room/background pixels as closely as possible, including cushion, lamp, doorway, visible gathering, clear return path, lighting, colors and 1536x1024 framing. This is a voluntary offer of quiet hearing protection, no medical claim, restraint or cure. Keep convincing photographic material and construction.",
+  "prompt_sha256": "cf3c921dd23a77977d890727e796b7d75c13cb2f1ac1b47916a2369848ccd9ab",
+  "reference_roles": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-enriched-continuation\\work\\gary\\generated\\ch5-candidate-v1.png",
+      "sha256": "784aaf979e541b79db24734b6263c5be189e001f8466075d56b9f44f98174a6e",
+      "role": "Image 1 exact object-only edit target; preserve all people and setting."
+    }
+  ],
+  "repair_basis": "Dual HOLD: logo-like markings and audio-headphone controls on object; agency, mutual gaze and open return path accepted."
+}

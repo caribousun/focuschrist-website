@@ -1,0 +1,22 @@
+{
+  "reviewer": "Fermi",
+  "status": "CONCUR_SCOPED_FINAL_INVENTORY",
+  "page_hashes": {
+    "art-study/be-still.html": "832f2c73e4632c35bffe8b72d5ca07289a493f200360bdf1932cc01293f35bc8",
+    "art-study/suffer-the-little-children.html": "1d4cfe03d86758d7cea99b4897d3fa4ac465e0ed75d4c21aaf6cf92363027ad9",
+    "art-study/the-good-shepherd.html": "0e3cf97723df9127cfbcd7d0484a2b6fa79a6ef697eac4b43531f7763ef2bf46"
+  },
+  "evidence": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-candidate-verification\\work\\fermi\\strict-inventory-review.json",
+      "sha256": "94f7e7e55dd59543c7b7df2164f60c00d83cb6aca85259809b3716f4f73b6f99"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-candidate-verification\\work\\fermi\\mutual-inventory-concurrence.json",
+      "sha256": "c854ad12c9fda577e482e7b216886d07358e8733d36b0186b99adc10efd2e6b7"
+    }
+  ],
+  "scope": "Exact bound three-page complete inventory, Christ classification, cross-page ownership/lineage, full/thumbnail variants, gallery-reference and resource-preview exclusions. Prior detailed source-pixel review remains inherited and hash-bound as recorded, fresh composition/delivery review separate.",
+  "native_and_release_acceptance": false,
+  "limits": "Excludes assembled native interaction/layout, generated gallery/search, release readiness, publication, public verification and owner aesthetic or physical-phone acceptance. Sticky-nav defect needs root/native repair verification. Material page/image changes invalidate affected coverage."
+}

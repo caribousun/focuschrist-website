@@ -1,0 +1,17 @@
+{
+  "kind": "original",
+  "original_id": "assets/page-art/art-study/full/still-shared-lift",
+  "asset": "assets/page-art/art-study/full/still-shared-lift.webp",
+  "sha256": "a9c935fab827fcc3e2b6b3c53d748373f9cc7660020a2089c992ab0b741da869",
+  "owner_route": "art-study/be-still.html",
+  "owner_section": "artwork-study",
+  "depicts_christ": true,
+  "reviewers": [
+    "Fermi",
+    "Newton"
+  ],
+  "lineage_and_cross_page_ownership_reviewed": true,
+  "ownership_scope": "all canonical site routes",
+  "pixels_reviewed_for_christ_classification": true,
+  "review_boundary": "Root verified exact independent Fermi/Newton inventory and reciprocal concurrence with renewed HTML bindings. All30 originals and delivery variants,3 gallery-owned references and7 resource exclusions reviewed across canonical routes. Source detailed identity/anatomy evidence remains inherited and hash-bound; fresh composition/encoding/ownership checks separate. Heuristic alias detection cannot exclude arbitrary transformations;12 historical generation logs remain unavailable. Native assembled review and final release/public/owner acceptance are separate, not established by this package."
+}

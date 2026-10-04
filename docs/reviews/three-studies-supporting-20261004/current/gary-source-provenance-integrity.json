@@ -1,0 +1,647 @@
+{
+  "reviewer": "Gary",
+  "scope": "Source/copy and provenance integrity only; no new pixel or native browser acceptance",
+  "page_hashes": {
+    "art-study/the-good-shepherd.html": "0e3cf97723df9127cfbcd7d0484a2b6fa79a6ef697eac4b43531f7763ef2bf46",
+    "art-study/suffer-the-little-children.html": "1d4cfe03d86758d7cea99b4897d3fa4ac465e0ed75d4c21aaf6cf92363027ad9",
+    "art-study/be-still.html": "832f2c73e4632c35bffe8b72d5ca07289a493f200360bdf1932cc01293f35bc8"
+  },
+  "copy_sha256": "0896f09a2803e0208f2acf20a7276173de1880151af33aa377ed121e4656bd47",
+  "review_document_sha256": "3f09716ba3554c2ef973fc6a8a22aa6bb49c86d33711ce7a598fab5be451f6f8",
+  "rows": [
+    {
+      "key": "GS1",
+      "asset": "assets/page-art/art-study/full/shepherd-binds-hurt-20261004.webp",
+      "copy_checks": {
+        "caption": true,
+        "reflection": true,
+        "paragraph0": true,
+        "paragraph1": true,
+        "title": true,
+        "alt": true,
+        "onward": true,
+        "source_links": true
+      },
+      "hashes": {
+        "asset": {
+          "exists": true,
+          "match": true
+        },
+        "thumbnail": {
+          "exists": true,
+          "match": true
+        },
+        "original_file": {
+          "exists": true,
+          "match": true
+        }
+      },
+      "refs": [
+        {
+          "reviewer": "Fermi",
+          "hash_match": true,
+          "selected_source_hash_present": true,
+          "result": "PASS_SCOPED_ACTUAL_PIXELS"
+        },
+        {
+          "reviewer": "Newton",
+          "hash_match": true,
+          "selected_source_hash_present": true,
+          "result": "PASS_SCOPED_FINISHED_PIXELS"
+        }
+      ]
+    },
+    {
+      "key": "GS2",
+      "asset": "assets/page-art/art-study/full/shepherd-room-at-water-20261004.webp",
+      "copy_checks": {
+        "caption": true,
+        "reflection": true,
+        "paragraph0": true,
+        "paragraph1": true,
+        "title": true,
+        "alt": true,
+        "onward": true,
+        "source_links": true
+      },
+      "hashes": {
+        "asset": {
+          "exists": true,
+          "match": true
+        },
+        "thumbnail": {
+          "exists": true,
+          "match": true
+        },
+        "original_file": {
+          "exists": true,
+          "match": true
+        }
+      },
+      "refs": [
+        {
+          "reviewer": "Fermi",
+          "hash_match": true,
+          "selected_source_hash_present": true,
+          "result": "PASS_FERMI_PIXEL_CONCURRENCE"
+        },
+        {
+          "reviewer": "Newton",
+          "hash_match": true,
+          "selected_source_hash_present": true,
+          "result": "CONCUR_SCOPED_FINISHED_PIXELS"
+        }
+      ]
+    },
+    {
+      "key": "GS3",
+      "asset": "assets/page-art/art-study/full/shepherd-coat-repair-20261004.webp",
+      "copy_checks": {
+        "caption": true,
+        "reflection": true,
+        "paragraph0": true,
+        "paragraph1": true,
+        "title": true,
+        "alt": true,
+        "onward": true,
+        "source_links": true
+      },
+      "hashes": {
+        "asset": {
+          "exists": true,
+          "match": true
+        },
+        "thumbnail": {
+          "exists": true,
+          "match": true
+        },
+        "original_file": {
+          "exists": true,
+          "match": true
+        }
+      },
+      "refs": [
+        {
+          "reviewer": "Fermi",
+          "hash_match": true,
+          "selected_source_hash_present": true,
+          "result": "PASS_FERMI_PIXEL_CONCURRENCE"
+        },
+        {
+          "reviewer": "Newton",
+          "hash_match": true,
+          "selected_source_hash_present": true,
+          "result": "CONCUR_SCOPED_FINISHED_PIXELS"
+        }
+      ]
+    },
+    {
+      "key": "GS4",
+      "asset": "assets/page-art/art-study/full/shepherd-key-recovery-20261004.webp",
+      "copy_checks": {
+        "caption": true,
+        "reflection": true,
+        "paragraph0": true,
+        "paragraph1": true,
+        "title": true,
+        "alt": true,
+        "onward": true,
+        "source_links": true
+      },
+      "hashes": {
+        "asset": {
+          "exists": true,
+          "match": true
+        },
+        "thumbnail": {
+          "exists": true,
+          "match": true
+        },
+        "original_file": {
+          "exists": true,
+          "match": true
+        }
+      },
+      "refs": [
+        {
+          "reviewer": "Fermi",
+          "hash_match": true,
+          "selected_source_hash_present": true,
+          "result": "PASS_FERMI_PIXEL_CONCURRENCE"
+        },
+        {
+          "reviewer": "Newton",
+          "hash_match": true,
+          "selected_source_hash_present": true,
+          "result": "CONCUR_SCOPED_FINISHED_PIXELS"
+        }
+      ]
+    },
+    {
+      "key": "GS5",
+      "asset": "assets/page-art/art-study/full/shepherd-audio-access-20261004.webp",
+      "copy_checks": {
+        "caption": true,
+        "reflection": true,
+        "paragraph0": true,
+        "paragraph1": true,
+        "title": true,
+        "alt": true,
+        "onward": true,
+        "source_links": true
+      },
+      "hashes": {
+        "asset": {
+          "exists": true,
+          "match": true
+        },
+        "thumbnail": {
+          "exists": true,
+          "match": true
+        },
+        "original_file": {
+          "exists": true,
+          "match": true
+        }
+      },
+      "refs": [
+        {
+          "reviewer": "Fermi",
+          "hash_match": true,
+          "selected_source_hash_present": true,
+          "result": "PASS_FERMI_PIXEL_CONCURRENCE"
+        },
+        {
+          "reviewer": "Newton",
+          "hash_match": true,
+          "selected_source_hash_present": true,
+          "result": "CONCUR_SCOPED_FINISHED_PIXELS"
+        }
+      ]
+    },
+    {
+      "key": "CH1",
+      "asset": "assets/page-art/art-study/full/children-temple-praise-20261004.webp",
+      "copy_checks": {
+        "caption": true,
+        "reflection": true,
+        "paragraph0": true,
+        "paragraph1": true,
+        "title": true,
+        "alt": true,
+        "onward": true,
+        "source_links": true
+      },
+      "hashes": {
+        "asset": {
+          "exists": true,
+          "match": true
+        },
+        "thumbnail": {
+          "exists": true,
+          "match": true
+        },
+        "original_file": {
+          "exists": true,
+          "match": true
+        }
+      },
+      "refs": [
+        {
+          "reviewer": "Fermi",
+          "hash_match": true,
+          "selected_source_hash_present": true,
+          "result": "PASS_FERMI_PIXEL_CONCURRENCE"
+        },
+        {
+          "reviewer": "Newton",
+          "hash_match": true,
+          "selected_source_hash_present": true,
+          "result": "CONCUR_SCOPED_FINISHED_PIXELS"
+        }
+      ]
+    },
+    {
+      "key": "CH2",
+      "asset": "assets/page-art/art-study/full/children-accessible-game-20261004.webp",
+      "copy_checks": {
+        "caption": true,
+        "reflection": true,
+        "paragraph0": true,
+        "paragraph1": true,
+        "title": true,
+        "alt": true,
+        "onward": true,
+        "source_links": true
+      },
+      "hashes": {
+        "asset": {
+          "exists": true,
+          "match": true
+        },
+        "thumbnail": {
+          "exists": true,
+          "match": true
+        },
+        "original_file": {
+          "exists": true,
+          "match": true
+        }
+      },
+      "refs": [
+        {
+          "reviewer": "Fermi",
+          "hash_match": true,
+          "selected_source_hash_present": true,
+          "result": "PASS"
+        },
+        {
+          "reviewer": "Newton",
+          "hash_match": true,
+          "selected_source_hash_present": true,
+          "result": "PASS_SCOPED_ACTUAL_PIXELS"
+        }
+      ]
+    },
+    {
+      "key": "CH3",
+      "asset": "assets/page-art/art-study/full/children-toy-repair-20261004.webp",
+      "copy_checks": {
+        "caption": true,
+        "reflection": true,
+        "paragraph0": true,
+        "paragraph1": true,
+        "title": true,
+        "alt": true,
+        "onward": true,
+        "source_links": true
+      },
+      "hashes": {
+        "asset": {
+          "exists": true,
+          "match": true
+        },
+        "thumbnail": {
+          "exists": true,
+          "match": true
+        },
+        "original_file": {
+          "exists": true,
+          "match": true
+        }
+      },
+      "refs": [
+        {
+          "reviewer": "Fermi",
+          "hash_match": true,
+          "selected_source_hash_present": true,
+          "result": "PASS_FERMI_PIXEL_CONCURRENCE"
+        },
+        {
+          "reviewer": "Newton",
+          "hash_match": true,
+          "selected_source_hash_present": true,
+          "result": "PASS_SCOPED_ACTUAL_PIXELS"
+        }
+      ]
+    },
+    {
+      "key": "CH4",
+      "asset": "assets/page-art/art-study/full/children-share-snack-20261004.webp",
+      "copy_checks": {
+        "caption": true,
+        "reflection": true,
+        "paragraph0": true,
+        "paragraph1": true,
+        "title": true,
+        "alt": true,
+        "onward": true,
+        "source_links": true
+      },
+      "hashes": {
+        "asset": {
+          "exists": true,
+          "match": true
+        },
+        "thumbnail": {
+          "exists": true,
+          "match": true
+        },
+        "original_file": {
+          "exists": true,
+          "match": true
+        }
+      },
+      "refs": [
+        {
+          "reviewer": "Fermi",
+          "hash_match": true,
+          "selected_source_hash_present": true,
+          "result": "PASS"
+        },
+        {
+          "reviewer": "Newton",
+          "hash_match": true,
+          "selected_source_hash_present": true,
+          "result": "PASS_SCOPED_ACTUAL_PIXELS"
+        }
+      ]
+    },
+    {
+      "key": "CH5",
+      "asset": "assets/page-art/art-study/full/children-quiet-welcome-20261004.webp",
+      "copy_checks": {
+        "caption": true,
+        "reflection": true,
+        "paragraph0": true,
+        "paragraph1": true,
+        "title": true,
+        "alt": true,
+        "onward": true,
+        "source_links": true
+      },
+      "hashes": {
+        "asset": {
+          "exists": true,
+          "match": true
+        },
+        "thumbnail": {
+          "exists": true,
+          "match": true
+        },
+        "original_file": {
+          "exists": true,
+          "match": true
+        }
+      },
+      "refs": [
+        {
+          "reviewer": "Fermi",
+          "hash_match": true,
+          "selected_source_hash_present": true,
+          "result": "PASS_SCOPED_ACTUAL_PIXELS"
+        },
+        {
+          "reviewer": "Newton",
+          "hash_match": true,
+          "selected_source_hash_present": true,
+          "result": "PASS_SCOPED_FINISHED_PIXELS"
+        }
+      ]
+    },
+    {
+      "key": "BS1",
+      "asset": "assets/page-art/art-study/full/still-depart-for-rest-20261004.webp",
+      "copy_checks": {
+        "caption": true,
+        "reflection": true,
+        "paragraph0": true,
+        "paragraph1": true,
+        "title": true,
+        "alt": true,
+        "onward": true,
+        "source_links": true
+      },
+      "hashes": {
+        "asset": {
+          "exists": true,
+          "match": true
+        },
+        "thumbnail": {
+          "exists": true,
+          "match": true
+        },
+        "original_file": {
+          "exists": true,
+          "match": true
+        }
+      },
+      "refs": [
+        {
+          "reviewer": "Fermi",
+          "hash_match": true,
+          "selected_source_hash_present": true,
+          "result": "PASS_SCOPED_ACTUAL_PIXELS"
+        },
+        {
+          "reviewer": "Newton",
+          "hash_match": true,
+          "selected_source_hash_present": true,
+          "result": "PASS_SCOPED_FINISHED_PIXELS"
+        }
+      ]
+    },
+    {
+      "key": "BS2",
+      "asset": "assets/page-art/art-study/full/still-pause-work-20261004.webp",
+      "copy_checks": {
+        "caption": true,
+        "reflection": true,
+        "paragraph0": true,
+        "paragraph1": true,
+        "title": true,
+        "alt": true,
+        "onward": true,
+        "source_links": true
+      },
+      "hashes": {
+        "asset": {
+          "exists": true,
+          "match": true
+        },
+        "thumbnail": {
+          "exists": true,
+          "match": true
+        },
+        "original_file": {
+          "exists": true,
+          "match": true
+        }
+      },
+      "refs": [
+        {
+          "reviewer": "Fermi",
+          "hash_match": true,
+          "selected_source_hash_present": true,
+          "result": "PASS"
+        },
+        {
+          "reviewer": "Newton",
+          "hash_match": true,
+          "selected_source_hash_present": true,
+          "result": "PASS_SCOPED_ACTUAL_PIXELS"
+        }
+      ]
+    },
+    {
+      "key": "BS3",
+      "asset": "assets/page-art/art-study/full/still-listen-workshop-20261004.webp",
+      "copy_checks": {
+        "caption": true,
+        "reflection": true,
+        "paragraph0": true,
+        "paragraph1": true,
+        "title": true,
+        "alt": true,
+        "onward": true,
+        "source_links": true
+      },
+      "hashes": {
+        "asset": {
+          "exists": true,
+          "match": true
+        },
+        "thumbnail": {
+          "exists": true,
+          "match": true
+        },
+        "original_file": {
+          "exists": true,
+          "match": true
+        }
+      },
+      "refs": [
+        {
+          "reviewer": "Fermi",
+          "hash_match": true,
+          "selected_source_hash_present": true,
+          "result": "PASS"
+        },
+        {
+          "reviewer": "Newton",
+          "hash_match": true,
+          "selected_source_hash_present": true,
+          "result": "PASS_SCOPED_ACTUAL_PIXELS"
+        }
+      ]
+    },
+    {
+      "key": "BS4",
+      "asset": "assets/page-art/art-study/full/still-neighbor-peace-20261004.webp",
+      "copy_checks": {
+        "caption": true,
+        "reflection": true,
+        "paragraph0": true,
+        "paragraph1": true,
+        "title": true,
+        "alt": true,
+        "onward": true,
+        "source_links": true
+      },
+      "hashes": {
+        "asset": {
+          "exists": true,
+          "match": true
+        },
+        "thumbnail": {
+          "exists": true,
+          "match": true
+        },
+        "original_file": {
+          "exists": true,
+          "match": true
+        }
+      },
+      "refs": [
+        {
+          "reviewer": "Fermi",
+          "hash_match": true,
+          "selected_source_hash_present": true,
+          "result": "PASS"
+        },
+        {
+          "reviewer": "Newton",
+          "hash_match": true,
+          "selected_source_hash_present": true,
+          "result": "PASS_SCOPED_ACTUAL_PIXELS"
+        }
+      ]
+    },
+    {
+      "key": "BS5",
+      "asset": "assets/page-art/art-study/full/still-wars-cease-20261004.webp",
+      "copy_checks": {
+        "caption": true,
+        "reflection": true,
+        "paragraph0": true,
+        "paragraph1": true,
+        "title": true,
+        "alt": true,
+        "onward": true,
+        "source_links": true
+      },
+      "hashes": {
+        "asset": {
+          "exists": true,
+          "match": true
+        },
+        "thumbnail": {
+          "exists": true,
+          "match": true
+        },
+        "original_file": {
+          "exists": true,
+          "match": true
+        }
+      },
+      "refs": [
+        {
+          "reviewer": "Fermi",
+          "hash_match": true,
+          "selected_source_hash_present": true,
+          "result": "PASS"
+        },
+        {
+          "reviewer": "Newton",
+          "hash_match": true,
+          "selected_source_hash_present": true,
+          "result": "PASS_SCOPED_ACTUAL_PIXELS"
+        }
+      ]
+    }
+  ],
+  "packaged_file_count": 152,
+  "package_integrity_errors": [],
+  "package_manifest_sha256": "c24a2a7c31799891d223d2a221eb0cd60931a3b786772554a89073d6b85e3569",
+  "builder_sha256": "9f42c3e21382bc2f35e68c0d778eb074e0a1637d50c843d988814f1bc87be255"
+}

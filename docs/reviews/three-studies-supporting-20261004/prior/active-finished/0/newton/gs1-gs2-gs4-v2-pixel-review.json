@@ -1,0 +1,35 @@
+{
+  "reviewer": "Newton",
+  "time": "2026-10-04T16:55:40.508975+00:00",
+  "rows": [
+    {
+      "key": "GS1",
+      "candidate": "work\\gary\\generated\\gs1-candidate-v2.png",
+      "sha256": "5b1518cc5f3ae639a7ad787f8c9374116fb7abbfeb31a741e3edfe08ca3378dc",
+      "result": "HOLD_LOCALIZED_SCAR_REPAIR",
+      "actual_review": "full1536x1024; GS1 native wrist crop; GS4 enlarged tool-junction crop",
+      "finding": "Both visible wrists now show long pale branching/wrapping scar lines; screenleft has two parallel marks. Closed and nonbloody but not one small subtle localized healed nail mark each. Wrong dorsal slit removed; face/pose/robe/sheep/action remain recognizable. Fermi independently same HOLD. Preserve all scene/anatomy; replace only long lines with one compact localized healed scar per exposed wrist."
+    },
+    {
+      "key": "GS2",
+      "candidate": "work\\gary\\generated\\gs2-candidate-v2.png",
+      "sha256": "651e693f7c84c0948bff58bebf11291d1d86ea58948aa6834a29366059cca7c5",
+      "result": "CONCUR_SCOPED_FINISHED_PIXELS",
+      "actual_review": "full1536x1024; GS1 native wrist crop; GS4 enlarged tool-junction crop",
+      "finding": "Six individually countable sheep. Waiting smaller sheep faces pair across narrow approach between rock banks; three distinct uphill sheep; one pair member drinks and muddy/wet hoof edge visible. Blocked access now legible, no attack/human expression. Natural visible limbs/heads and source-metaphor limits preserved."
+    },
+    {
+      "key": "GS4",
+      "candidate": "work\\gary\\generated\\gs4-candidate-v2.png",
+      "sha256": "f09aa044fa31f94e65a1a0d6e7cbd1b97bdddea269c707496ca99b571f73d808",
+      "result": "CONCUR_SCOPED_FINISHED_PIXELS",
+      "actual_review": "full1536x1024; GS1 native wrist crop; GS4 enlarged tool-junction crop",
+      "finding": "Actual enlarged junction now shows direct cylindrical magnet face contact to upper steel ring; extra clasp absent, two brass keys hang freely. Full scene retains two people, gaze, poses, dry shallow safe grate and tool geometry. No claim of bit-identical surrounding pixels; generated edit retains semantic content."
+    }
+  ],
+  "limits": [
+    "Finished pixels only; exact delivery variants, source lineage and assembled native page gates remain.",
+    "GS1 remains held; no use authorization.",
+    "No SITE/Docs mutation or generation by Newton."
+  ]
+}

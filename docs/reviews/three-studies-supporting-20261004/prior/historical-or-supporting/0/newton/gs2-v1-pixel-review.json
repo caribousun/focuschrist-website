@@ -1,0 +1,16 @@
+{
+  "reviewer": "Newton",
+  "result": "HOLD_REPAIR_REQUIRED",
+  "candidate": "work/gary/generated/gs2-candidate-v1.png",
+  "sha256": "a4b6518781e9c192bd7e2b1625509a96eb71dc185ff78133a7d9e4ed20c9cd45",
+  "prompt_sha256": "fe35dc39081c97c32e93a5c5a1483aa6d9ecb91db4b7ca4a32dd49a607158e1a",
+  "actual_pixels_reviewed": "Full1536x1024 actual candidate",
+  "passes": ["Photographic clarity, natural wool/water/light, no people/Christ, plausible visible sheep anatomy, no attack or injury"],
+  "holds": [
+    "Only three sheep visible; exact prompt requests six. This is a prompt compliance count, not scriptural census.",
+    "The smaller sheep has apparently accessible shoreline immediately in front of it. The wide clear foreground water does not make blocked access from within flock legible. Two drinking sheep are not by themselves evidence of the intended obstruction.",
+    "Water shows no clearly legible hoof-muddied edge, weakening the fouling-and-exclusion action of Ezekiel34:17-22."
+  ],
+  "repair_scope": "Exact dual-reviewed revised composition should make six sheep and the narrow blocked approach visible, with smaller sheep actively waiting behind obstruction and a modest disturbed muddy edge; preserve natural anatomy, dignity, calm nonviolent metaphor and no human expressions.",
+  "limits": ["No acceptance or use approval.", "Root decides exact revised prompt after dual concurrence; no generation performed."]
+}

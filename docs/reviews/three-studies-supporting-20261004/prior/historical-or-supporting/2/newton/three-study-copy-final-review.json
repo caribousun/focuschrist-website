@@ -1,0 +1,16 @@
+{
+  "reviewer": "Newton",
+  "status": "PASS_EXACT_PROSE_REVISION",
+  "copy_sha256": "0896f09a2803e0208f2acf20a7276173de1880151af33aa377ed121e4656bd47",
+  "prior_copy_sha256": "4d251ac09439976633d5c13965544924dd776c733ff8b96ffc2529f51e80903a",
+  "changes": [
+    "/entries/14/paragraphs_html/0",
+    "/entries/14/sources"
+  ],
+  "finding": "Exactly BS5 paragraphs_html[0] and sources differ; linked Psalm46:1-3 is exact point-of-use reference, correct fc-inline-scripture markup and source record. Complete supplied Psalm46 extract reread independently. All other fields identical; prior review retained for unchanged source/prose.",
+  "limits": [
+    "GS1 CH5 BS1 pixel holds are not cleared by prose concurrence.",
+    "No rendering, external navigation, publication or owner aesthetic acceptance.",
+    "Prior source_reads metadata is inherited historical evidence; only Psalm46 reread this turn."
+  ]
+}

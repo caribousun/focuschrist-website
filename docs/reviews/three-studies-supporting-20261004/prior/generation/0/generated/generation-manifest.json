@@ -1,0 +1,219 @@
+{
+  "plan_sha256": "d6b81ca9f96d0f539c155debf65e91ce2953124ecd449cb9f978b6f28bfa5914",
+  "tool": "built-in image_gen.imagegen",
+  "generation_scope": "Root-authorized GS1-GS5 only",
+  "status": "CANDIDATES_NOT_APPROVED_FOR_SITE",
+  "entries": [
+    {
+      "key": "GS1",
+      "title": "He Binds What Is Hurt",
+      "prompt": "Use the attached Home portrait as the exact recognizable Jesus Christ identity. Illustrate the Shepherd promise of Ezekiel 34:16 through one specific act: Christ kneels on a clean woven ground mat beside a small sheep resting naturally on its chest. He carefully lays the final end of a clean linen bandage over an already wrapped lower foreleg. Both of His separate hands remain fully traceable; the sheep has four anatomically correct legs and shows no open wound, blood or distress. His eyes attend to the bandage, His face calm and concentrated. This is devotional imagery of the risen Good Shepherd, not a claimed recorded veterinary episode or an appearance to Ezekiel. Subtle healed marks must appear on any visible palms and wrists, without forcing hidden surfaces into view. Plain undyed linen tunic, muted lichen-stone mantle, a restrained pale gray with a slight yellow-green cast. A low stone shelter provides shade; no crowd, staff-waving, carrying a lamb, rescue climb or walking flock. Create one new 1536x1024 landscape image with convincing live-action photographic clarity, lifelike skin, natural woven or contemporary fabrics, believable anatomy and individual scene-appropriate expressions. Keep essential faces and hands within generous 3:2 margins. No painting, CGI, waxy skin, glamour, halos, writing, watermark or collage.",
+      "prompt_sha256": "e52bed9c946ccac75bf0abf9c072ae75cb78103937ba3603bfdbc4952f0c019d",
+      "references": [
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\heroes\\home-christ-signature-approved-20260907.png",
+          "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+          "expected_sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b"
+        }
+      ],
+      "original_generated_path": "C:/Users/wyatt/.codex/generated_images/01a107c3-e0e0-79b2-becc-5a87e34aef65/exec-cda684f7-0ac6-4b67-8d0c-4a80bd2f33ac.png",
+      "candidate_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\gs1-candidate-v1.png",
+      "output_sha256": "83fbea06128764a9bb3f21b01070f8934df4fb2d722ad14ad9daa93986f86237",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "finished_pixel_review": "PENDING_FERMI_AND_NEWTON",
+      "SITE_use_authorized": false
+    },
+    {
+      "key": "GS2",
+      "title": "Leave Room at the Water",
+      "prompt": "Create a close, natural landscape view of a shallow rural spring pool with six sheep. At the left, two large sturdy sheep stand across the water access; one hoof has muddied a small edge of the pool. At the right a smaller thin but healthy-looking sheep pauses on dry ground, unable to reach the clear water beyond them. Show the shoulder-to-shoulder obstruction without violence, wounds, grotesque starvation or human expressions on animals. No people, Jesus, shepherd, staff, wolf, sheepfold, rescue or carried lamb. Calm daylight and clear animal anatomy. This illustrates the ethical image in Ezekiel 34:17–22, not a photographed biblical incident. The picture should make the blocked access visible without turning it into an animal attack. Create one new 1536x1024 landscape image with convincing live-action photographic clarity, natural wool and water, believable sheep anatomy and physically plausible light. Keep the obstructing sheep, smaller sheep and water access inside generous 3:2 margins. No painting, CGI, human faces, clothing, halos, writing, watermark or collage.",
+      "prompt_sha256": "fe35dc39081c97c32e93a5c5a1483aa6d9ecb91db4b7ca4a32dd49a607158e1a",
+      "references": [],
+      "original_generated_path": "C:/Users/wyatt/.codex/generated_images/01a107c3-e0e0-79b2-becc-5a87e34aef65/exec-172235dc-4e01-4081-be9a-dc3beed23534.png",
+      "candidate_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\gs2-candidate-v1.png",
+      "output_sha256": "a4b6518781e9c192bd7e2b1625509a96eb71dc185ff78133a7d9e4ed20c9cd45",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "finished_pixel_review": "PENDING_FERMI_AND_NEWTON",
+      "SITE_use_authorized": false
+    },
+    {
+      "key": "GS3",
+      "title": "Care That Keeps Someone Warm",
+      "prompt": "At a present-day community repair table, an adult man carefully stitches the lining of a worn winter coat laid flat. Its older adult owner sits beside him and holds the loose lining clear, guiding where the seam has opened. Both look at the actual repair; a short length of thread and small sewing kit make the task clear. The coat is empty on the table, never being sewn on a body. No money exchange, donation queue or posed coat handover. Warm ordinary indoor daylight and practical shared concentration. Create one new 1536x1024 landscape image with convincing live-action photographic clarity, lifelike skin, natural woven or contemporary fabrics, believable anatomy and individual scene-appropriate expressions. Keep essential faces and hands within generous 3:2 margins. No painting, CGI, waxy skin, glamour, halos, writing, watermark or collage. All people are fictional unnamed contemporary people, not Jesus, a known religious figure, or a likeness transferred from existing artwork. Modest ordinary clothing, natural available light, no commercial branding, private readable information or supernatural apparition. Show dignity and active participation rather than a staged charity portrait.",
+      "prompt_sha256": "6bdee4f165c2b1a3295ff26e19a406e593e73b38dfd23b321ee0ac98d6c366cd",
+      "references": [],
+      "original_generated_path": "C:/Users/wyatt/.codex/generated_images/01a107c3-e0e0-79b2-becc-5a87e34aef65/exec-9828a6ac-ebdb-4cdb-a2f6-60f60e6407e9.png",
+      "candidate_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\gs3-candidate-v1.png",
+      "output_sha256": "6a01f16b128969e7a5877ec7827a24049e025d00c79fb49ee1d627ff3f9ffeb6",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "finished_pixel_review": "PENDING_FERMI_AND_NEWTON",
+      "SITE_use_authorized": false
+    },
+    {
+      "key": "GS4",
+      "title": "Help With What Is Needed",
+      "prompt": "In a quiet present-day residential courtyard, two adult neighbors recover one dropped key ring from a shallow dry drainage channel beneath a fixed grate. The channel is only a few inches deep and is clearly visible; no road, traffic, open manhole, deep shaft, flowing water or dangerous reach. One adult kneels securely on dry paving and holds the handle of a slender magnetic pickup tool above a wide gap in the grate. Its small magnet is lifting the visible steel ring, with two ordinary house keys hanging from that ring just above the grate. The magnet contacts the steel ring, not the brass keys. The owner crouches beside the helper at a comfortable distance and points toward the clear gap, actively helping guide the retrieval. Both look attentively at the keys with focused, modest relief. Show the complete tool, ring and gap clearly; hands remain above the grate. No bicycles, repair stand, workshop lesson, money, locks being opened, identifiable property labels or readable text. This is practical neighborly help, not a miracle or guaranteed resolution. Create one new 1536x1024 landscape image with convincing live-action photographic clarity, lifelike skin, natural woven or contemporary fabrics, believable anatomy and individual scene-appropriate expressions. Keep essential faces and hands within generous 3:2 margins. No painting, CGI, waxy skin, glamour, halos, writing, watermark or collage. All people are fictional unnamed contemporary people, not Jesus, a known religious figure, or a likeness transferred from existing artwork. Modest ordinary clothing, natural available light, no commercial branding, private readable information or supernatural apparition. Show dignity and active participation rather than a staged charity portrait.",
+      "prompt_sha256": "33393c3d6f612d11e624e78dc5f507eb4280edc18e28569edecafc74e4d6b36b",
+      "references": [],
+      "original_generated_path": "C:/Users/wyatt/.codex/generated_images/01a107c3-e0e0-79b2-becc-5a87e34aef65/exec-138e93c5-de0b-4aff-b2fe-0a84b4fd712c.png",
+      "candidate_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\gs4-candidate-v1.png",
+      "output_sha256": "4775e1ab5198ac4051fc312ab87ce58057be8ba0c7b39860ab632623055a387e",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "finished_pixel_review": "PENDING_FERMI_AND_NEWTON",
+      "SITE_use_authorized": false
+    },
+    {
+      "key": "GS5",
+      "title": "Make the Word Easier to Hear",
+      "prompt": "In a modest home living room, an older adult woman has one hand poised over a large tactile play button on a simple audio player. Beside her an adult friend points to that single control without covering or moving her hand. A closed unlettered scripture volume rests next to the player and comfortable headphones lie ready on the table. The woman is choosing to operate the device herself and looks toward the control with interest; the friend watches her action patiently. No museum display, raised architectural model, smartphones held to the camera, loss search, advertised device or miracle healing. Show a clear practical lesson in using an audio reading, not a generic shared reading portrait. Create one new 1536x1024 landscape image with convincing live-action photographic clarity, lifelike skin, natural woven or contemporary fabrics, believable anatomy and individual scene-appropriate expressions. Keep essential faces and hands within generous 3:2 margins. No painting, CGI, waxy skin, glamour, halos, writing, watermark or collage. All people are fictional unnamed contemporary people, not Jesus, a known religious figure, or a likeness transferred from existing artwork. Modest ordinary clothing, natural available light, no commercial branding, private readable information or supernatural apparition. Show dignity and active participation rather than a staged charity portrait.",
+      "prompt_sha256": "c2847368890f4a6bdb5eb30c08bb10f177d3e992340ba13be3fe5e8498df0150",
+      "references": [],
+      "original_generated_path": "C:/Users/wyatt/.codex/generated_images/01a107c3-e0e0-79b2-becc-5a87e34aef65/exec-4ca44a13-808a-4daa-9d8a-31be70bf5c11.png",
+      "candidate_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\gs5-candidate-v1.png",
+      "output_sha256": "d0babc7bf03ef3133c731479d9c3170191ddecdf10843bd2fc2ea0184293c9c5",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "finished_pixel_review": "PENDING_FERMI_AND_NEWTON",
+      "SITE_use_authorized": false
+    },
+    {
+      "key": "GS1",
+      "version": 2,
+      "proposal_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\gs1-repair-proposal.json",
+      "proposal_sha256": "546738bd5bfefab662d99042e6ed1e1cc649f61f72ae0a184b8b4205b8980ecc",
+      "prompt": "Image 1 is the sole edit target. Image 2 is the exact owner-approved Home portrait supplied only to verify and preserve Jesus Christ’s recognizable identity. Retain image 1’s face and expression; do not import image 2’s smile, pose, clothing, lighting, background or composition. Edit only the existing marks on the two exposed wrists and the back of the nearer hand in this exact image. Preserve every other part of the image unchanged, including Jesus Christ’s exact approved recognizable face, hair, expression, gaze, body, kneeling pose, hand and finger anatomy and positions, sleeves, lichen-stone gray mantle, sheep, bandage, mat, stone shelter, lighting, framing and photographic detail. On the anatomical left hand at screen right, remove the dark red incised-looking slit from the back of the hand and restore natural uninjured skin texture there. At that hand’s clearly exposed wrist joint, place one small, subtle, fully closed healed scar: pale, slightly textured healed skin, no red wound, dark hole, cut, scab or blood. On the anatomical right wrist at screen left, replace the existing red/incised-looking mark with one equally subtle, fully closed pale healed scar at the wrist joint. The palms are naturally turned away or hidden by the current pose; keep them hidden, do not rotate hands or expose palms. Do not add any new mark to a dorsal hand, finger, forearm or sleeve. No fresh wounds, extra marks, blood, glow or halo. Do not change the pose, reconstruct limbs, add sheep legs, recolor garments, move objects or alter any other content. Retain the exact 1536x1024 landscape composition and convincing photographic appearance.",
+      "prompt_sha256": "27bd16790f084d96b68bc6cf74d7bdf68da5423e5a441202186a5124480372ff",
+      "references": [
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\gs1-candidate-v1.png",
+          "role": "Image 1: Exact edit target. Preserve original composition and all content outside the specified marks.",
+          "sha256": "83fbea06128764a9bb3f21b01070f8934df4fb2d722ad14ad9daa93986f86237"
+        },
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\heroes\\home-christ-signature-approved-20260907.png",
+          "role": "Image 2: Actual owner-approved Home identity reference only. Preserve recognizable identity already present in image 1; do not transfer the portrait pose, smile, robe, background, lighting or composition.",
+          "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b"
+        }
+      ],
+      "original_generated_path": "C:/Users/wyatt/.codex/generated_images/01a107c3-e0e0-79b2-becc-5a87e34aef65/exec-9b769146-7a71-4304-96a0-69df8e19f7db.png",
+      "candidate_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\gs1-candidate-v2.png",
+      "output_sha256": "5b1518cc5f3ae639a7ad787f8c9374116fb7abbfeb31a741e3edfe08ca3378dc",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "finished_pixel_review": "PENDING_FERMI_AND_NEWTON",
+      "SITE_use_authorized": false
+    },
+    {
+      "key": "GS2",
+      "version": 2,
+      "proposal_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\gs2-repair-proposal.json",
+      "proposal_sha256": "c08687301628d88d4b5b32d3119007777cd7fa9846ee534ba69c3e1fa4d10837",
+      "prompt": "Create one natural landscape photograph of exactly six sheep at a small shallow rural spring. Make the ethical action of Ezekiel 34:17–22 immediately visible: two large sturdy sheep stand tightly shoulder to shoulder across the single narrow level approach to the spring, blocking a smaller thin but healthy sheep directly behind them on the dry approach path. Their bodies occupy the whole width between two rock banks. The smaller sheep faces the water and the obstructing pair, waiting with no clear path around either side. One large sheep drinks; the other has one hoof in a muddy patch at the water’s edge. The spring water is visible beyond the obstructing pair, surrounded on its other sides by steep natural rock banks; there is no open easy access in the foreground or at the right. Place the other three sheep separately farther uphill behind the smaller sheep, each with its own clearly visible head and body, so all six individual sheep can be counted. Camera looks obliquely along the narrow approach toward the water: keep both blocking animals, the waiting smaller sheep, all three background sheep and the spring visible. Show believable size variation and calm animal behavior, no human expressions, violence, wounds or grotesque starvation. No people, Jesus, shepherd, staff, wolf, sheepfold, rescue or carried lamb. This is a visual illustration of the prophetic metaphor, not a photographed biblical incident. Create one new 1536x1024 landscape image with convincing live-action photographic clarity, natural wool and water, anatomically believable sheep and physically plausible daylight. Keep all six heads and the blocked approach inside generous 3:2 margins. No painting, CGI, human faces, clothing, halos, writing, watermark or collage.",
+      "prompt_sha256": "45ab8047a0de505113f11e74efca25d278d75a23b842cb065a8cbc8b07caaeaf",
+      "references": [],
+      "original_generated_path": "C:/Users/wyatt/.codex/generated_images/01a107c3-e0e0-79b2-becc-5a87e34aef65/exec-7d8887bc-2251-4081-bf95-acbde625846c.png",
+      "candidate_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\gs2-candidate-v2.png",
+      "output_sha256": "651e693f7c84c0948bff58bebf11291d1d86ea58948aa6834a29366059cca7c5",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "finished_pixel_review": "PENDING_FERMI_AND_NEWTON",
+      "SITE_use_authorized": false
+    },
+    {
+      "key": "GS4",
+      "version": 2,
+      "proposal_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\gs4-repair-proposal.json",
+      "proposal_sha256": "5d5323da242e526d7ef83dd6615c724c6e570e642f4c8a36da2f1c12f5121a87",
+      "prompt": "Edit only the tiny junction where the retrieval tool tip meets the steel key ring in this exact photograph. Remove the small connecting loop or clasp between the cylindrical tool tip and the main steel ring. Show the flat end face of the small cylindrical magnet directly touching the upper outside edge of the steel key ring, with no hook, clip, extra ring, loop, chain or threaded mechanical connector. Keep the main steel key ring and its two ordinary brass house keys; the two keys hang freely from the ring under gravity. Keep the existing slender tool shaft straight, naturally aligned and continuous with the magnet tip. Preserve both people, their exact faces, expressions, gaze, hands and poses, their clothing, dry courtyard, fixed grate and visible shallow drainage channel, lighting and camera framing unchanged. Preserve the existing size and placement of the tool and keys as closely as possible, changing only the tiny contact junction required to remove the connecting loop and establish direct magnet-to-ring contact. No new objects, text, branding, lock, open manhole, danger, miracle effect or other alteration. Retain exact 1536x1024 landscape composition and convincing live-action photographic appearance.",
+      "prompt_sha256": "8b08d34d0333789df765dfa0ac732af466fa8f48160d8fa2a9cdedf92900c800",
+      "references": [
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\gs4-candidate-v1.png",
+          "role": "Exact edit target; fictional unnamed people retained unchanged.",
+          "sha256": "4775e1ab5198ac4051fc312ab87ce58057be8ba0c7b39860ab632623055a387e"
+        }
+      ],
+      "original_generated_path": "C:/Users/wyatt/.codex/generated_images/01a107c3-e0e0-79b2-becc-5a87e34aef65/exec-9879c263-daed-4f4e-b8fe-127d9fe6b7a4.png",
+      "candidate_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\gs4-candidate-v2.png",
+      "output_sha256": "f09aa044fa31f94e65a1a0d6e7cbd1b97bdddea269c707496ca99b571f73d808",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "finished_pixel_review": "PENDING_FERMI_AND_NEWTON",
+      "SITE_use_authorized": false
+    },
+    {
+      "key": "CH1",
+      "title": "The Children’s Praise",
+      "prompt": "Use the actual attached Home portrait only for Jesus Christ’s exact recognizable face. Show Matthew 21:15–16 in the Jerusalem temple precinct: three school-age children in the near foreground lift their faces toward Jesus and speak their praise with open, joyful but natural mouths. Jesus stands at one side and turns toward two distinct adult religious questioners, acknowledging the children with calm firm warmth. The questioners listen seriously, with no ethnic caricature, villain costumes or sneers. The children are actively praising, not waiting for a blessing, sitting in a teaching circle, showing a treasure or being healed. Restrained plausible Second Temple stone columns and court, no overturned table, coins, whip, animals or healing patient. Jesus wears an undyed tunic and a very pale cool lavender-blue-gray mantle, with a faint blue-violet cast and no dusty pink, red, plum-brown or warm rose cast. All people fully and modestly dressed in plausible woven first-century garments. Mortal ministry before the Crucifixion: no nail scars, wounds or supernatural glow. Do not print the words of their praise on the image. Create one new 1536x1024 landscape image with convincing live-action photographic clarity, lifelike skin, natural woven or contemporary fabrics, believable anatomy and individual scene-appropriate expressions. Keep essential faces and hands within generous 3:2 margins. No painting, CGI, waxy skin, glamour, halos, writing, watermark or collage.",
+      "prompt_sha256": "b4d4f4544b714bec9bcab3d19ce91b9aa7e40dd4ad9d18a69d9baeb69cbeb83e",
+      "references": [
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\heroes\\home-christ-signature-approved-20260907.png",
+          "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+          "expected_sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b"
+        }
+      ],
+      "original_generated_path": "C:/Users/wyatt/.codex/generated_images/01a107c3-e0e0-79b2-becc-5a87e34aef65/exec-2d6e7328-46b5-40ec-84c9-8b5de4fc1aa5.png",
+      "candidate_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\ch1-candidate-v1.png",
+      "output_sha256": "fc4079d49649d1ac88a3bd2e2f69a8e205b1731436effd4b8c902deac47a92c1",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "finished_pixel_review": "PENDING_FERMI_AND_NEWTON",
+      "SITE_use_authorized": false
+    },
+    {
+      "key": "CH2",
+      "title": "A Game Everyone Can Join",
+      "prompt": "At an indoor community recreation room, three children play a cooperative tabletop game with one large soft ball. A child using a wheelchair at the accessible table edge rolls the ball gently across the level surface to a child seated opposite; a third child waits at the side with hands resting on the table. An adult nearby moves an unused chair away so the route behind the wheelchair stays clear. The wheelchair user directs the play with an engaged expression, not a passive person being congratulated. No standing out of the chair, unsafe transfers, gripping a child, acrobatics, rope entanglement, pity or medical cure. The table has clear knee space and all faces look naturally toward the rolling ball or the next player. Create one new 1536x1024 landscape image with convincing live-action photographic clarity, lifelike skin, natural woven or contemporary fabrics, believable anatomy and individual scene-appropriate expressions. Keep essential faces and hands within generous 3:2 margins. No painting, CGI, waxy skin, glamour, halos, writing, watermark or collage. All people are fictional unnamed contemporary people, not Jesus, a known religious figure, or a likeness transferred from existing artwork. Modest ordinary clothing, natural available light, no commercial branding, private readable information or supernatural apparition. Show dignity and active participation rather than a staged charity portrait.",
+      "prompt_sha256": "4f32a9dcef143d1d83f863de01453c86d51ecd6c1e85e7bb5fc0ec553fef087c",
+      "references": [],
+      "original_generated_path": "C:/Users/wyatt/.codex/generated_images/01a107c3-e0e0-79b2-becc-5a87e34aef65/exec-d95560f4-7153-4ed5-af3d-1523086451f7.png",
+      "candidate_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\ch2-candidate-v1.png",
+      "output_sha256": "1cfe585d868902f317580df497b86d42e87e56c7259e9d650d1f06bb75c5ada0",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "finished_pixel_review": "PENDING_FERMI_AND_NEWTON",
+      "SITE_use_authorized": false
+    },
+    {
+      "key": "CH3",
+      "title": "A Small Thing Worth Caring For",
+      "prompt": "At a home worktable an adult grandmother is carefully closing a small opened seam on a child’s plain cloth toy bear. The young child sits beside her holding a spool of thread away from the needle and watching with absorbed concern. The toy stays on the table, the needle is controlled only by the adult, and hands are clearly separated. Show patient attention to something important to this child, not a lesson in tying shoes, a wooden bridge model, a child drawing, sharing a stone or a family portrait. Ordinary modern clothing and a quiet lamp with daylight at the window. No recognizable branded toy character, dramatic crying or miracle. Create one new 1536x1024 landscape image with convincing live-action photographic clarity, lifelike skin, natural woven or contemporary fabrics, believable anatomy and individual scene-appropriate expressions. Keep essential faces and hands within generous 3:2 margins. No painting, CGI, waxy skin, glamour, halos, writing, watermark or collage. All people are fictional unnamed contemporary people, not Jesus, a known religious figure, or a likeness transferred from existing artwork. Modest ordinary clothing, natural available light, no commercial branding, private readable information or supernatural apparition. Show dignity and active participation rather than a staged charity portrait.",
+      "prompt_sha256": "6270dc81372733391b982864137c760a023a16bc9cf0d1badcb3cbcb119a4f19",
+      "references": [],
+      "original_generated_path": "C:/Users/wyatt/.codex/generated_images/01a107c3-e0e0-79b2-becc-5a87e34aef65/exec-d2614549-99c2-44a7-a705-17b1644e4dea.png",
+      "candidate_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\ch3-candidate-v1.png",
+      "output_sha256": "8d22d7b07969c14d94968108fd36a210a7f7d333a7cfeb372a8daccac27a23a0",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "finished_pixel_review": "PENDING_FERMI_AND_NEWTON",
+      "SITE_use_authorized": false
+    }
+  ]
+}

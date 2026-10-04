@@ -1,0 +1,20 @@
+{
+  "limitations": "Supersedes erroneous clipping HOLD; retains it as history. Independent image-only concurrence subject to root assembled desktop/phone and Newton/source/release gates. No owner acceptance.",
+  "actual_pixels_inspected": true,
+  "mandates_read": [
+    "AGENTS.md",
+    "docs/historical-character-identity.md",
+    "docs/focuschrist-enrichment-and-stewardship-prompt.md"
+  ],
+  "prompt_sha256": "5c5e8edbcb073c3c620ee5ed23ffe828f6eafa4fd6f9b7c7e583ba3cdd98f87f",
+  "candidate_sha256": "5cc23a24311c8bbb95c33e8032c8cbfcd09964344f9b93f8baa7ab3ba5e7d6aa",
+  "finding": "RETRACTION: Fresh exact-original top crop establishes complete supervisor crown with approximately10 pixels of visible background above it; prior claimed clipping was not reproduced. Margin is tight but head and face are not cut. Foreground children and essential exchange have ample usable framing, sealed packet, coherent hands, mutual eye contact and ordinary lunches. Scene meets image-only gate; no repair required for alleged clipping.",
+  "SITE_use_approved": false,
+  "reviewer": "Fermi",
+  "key": "CH4v1",
+  "stage": "FINISHED_PIXEL_REVIEW",
+  "candidate": "work/gary/generated/ch4-candidate-v1.png",
+  "result": "PASS",
+  "supersedes": "work/fermi/ch4-v1-finished-review.json",
+  "evidence": "Fresh work/fermi/ch4-head-inspection.png from exact original plus full actual original"
+}

@@ -1,0 +1,21 @@
+{
+  "key": "GS1",
+  "version": 4,
+  "status": "EXACT_DUAL_PREFLIGHT_REQUIRED",
+  "generation_clearance": false,
+  "prompt": "Image 1 is the sole edit target. Image 2 is the actual owner-approved Home portrait for identity verification only; do not transfer its smile, pose, clothing, lighting or background. Make one strictly localized skin repair on Jesus Christ's anatomical RIGHT wrist, the small wrist at screen LEFT above the hand that pinches the bandage. In this 1536x1024 image that wrist is centered near x675,y669. Work only on the skin between that hand and its rolled sleeve. First restore this whole small wrist area to ordinary continuous natural skin, removing the residual pale horizontal and branching scar bands completely. Then add exactly one tiny compact oval spot of fully healed pale textured skin on that wrist joint, approximately 8 pixels wide and 5 pixels high at this image size. The spot must be isolated and surrounded on every side by normal skin, with no line emerging from it and no mark continuing around the wrist. No bracelet, ring, parallel lines, branching lines, incision, blood, red wound or dark hole. The anatomical LEFT wrist at screen RIGHT already has an accepted small oval healed scar; leave that wrist and scar unchanged. Both palms remain hidden; do not rotate either hand or add marks to dorsal hands, fingers, forearms or clothing. Preserve absolutely all other visible content: approved recognizable face, head angle, task-directed eyes, natural expression, hair, beard, limbs, hands, fingers, pose, woven robes, lichen-stone gray mantle, sheep, bandage, shelter, lighting and 1536x1024 framing. Preserve photographic detail and natural anatomy.",
+  "prompt_sha256": "5dcaa5193eec03fb8dbc1e12b51dd577194953f7c0c4b82c5f9fd05d418cccf5",
+  "reference_roles": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-enriched-continuation\\work\\gary\\generated\\gs1-candidate-v3.png",
+      "sha256": "71f7514766914a946fb1983af4f0dc072ddf89fd8fc0e5a37026fa431599116b",
+      "role": "Image 1 exact edit target; only anatomical right wrist at screen left changes."
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\heroes\\home-christ-signature-approved-20260907.png",
+      "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+      "role": "Image 2 actual Home identity verification only."
+    }
+  ],
+  "repair_basis": "GS1v3 dual HOLD: residual wrapping bands on anatomical right wrist at screen left. Opposite wrist oval accepted; do not change it."
+}

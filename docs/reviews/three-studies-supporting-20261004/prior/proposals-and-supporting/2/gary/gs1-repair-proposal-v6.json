@@ -1,0 +1,26 @@
+{
+  "key": "GS1",
+  "version": 6,
+  "status": "EXACT_DUAL_PREFLIGHT_REQUIRED",
+  "generation_clearance": false,
+  "prompt": "Image 1 is the sole full-image edit target. Image 2 is the actual approved Home portrait, identity verification only. Image 3 is an enlarged inspection crop from image 1 showing the exact defective skin patch; it is a location guide, not another composition. On the screen-RIGHT wrist, Jesus Christ's anatomical LEFT wrist, completely reconstruct the narrow surrounding skin patch beneath and around the healed oval. In image 1 the oval is near x945,y738; the defective pale descending and branching track extends below it toward x965,y790. Replace the WHOLE small irregular skin patch surrounding that track, roughly x924 to984 and y730 to800, with fresh continuous natural wrist skin matching adjacent skin color, lighting, fine pores and hairs. Do not preserve or trace any of the existing pale descending branches, long light ridges or connected scar texture in that patch. Rebuild the local surface so those tracks are absent, then retain exactly ONE compact pale fully healed oval at x945,y738, approximately 8 by 5 pixels. That oval must be isolated on every side by normal skin, with no trailing line, branching line or band attached. Keep ordinary fine skin texture; no waxy blur or smooth plastic patch. Preserve the accepted screen-LEFT wrist and its single healed oval unchanged. Both palms remain naturally hidden. No marks on dorsal hands, fingers, forearms or clothing; no blood, open wound, red incision, dark hole, bracelet or ring. Preserve all anatomy and everything beyond this small screen-right wrist skin patch: both hands and fingers, pose, approved recognizable face, eyes and task-directed gaze, expression, hair, beard, robes, mantle, sheep, bandage, shelter, lighting and exact 1536x1024 framing. Do not copy Home portrait expression, clothes, pose or background. Do not put the crop or any inset in the output. Return the single full scene with only that localized skin patch repaired.",
+  "prompt_sha256": "9b7901bd5b67d762accde2951bc12a40da5881a518aee478596196035d0e8dfa",
+  "reference_roles": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-integration-continuation\\work\\gary\\generated\\gs1-candidate-v5.png",
+      "sha256": "875fe190b3b589712f5e4da9cafa699e66ac980b6b8cd5eaed39a1d8537ddee1",
+      "role": "Image 1 sole full edit target."
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\heroes\\home-christ-signature-approved-20260907.png",
+      "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+      "role": "Image 2 approved Home identity only."
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-integration-continuation\\work\\gary\\gs1-v5-right-wrist-inspection.png",
+      "sha256": "752e9ad467fc733ad0d4957be7f1b38da91d84899a87143379eb0169b31d4396",
+      "role": "Image 3 enlarged inspection crop from v5 right-wrist region (900,705,1000,815), location only."
+    }
+  ],
+  "repair_basis": "GS1v5 HOLD root/Newton and Fermi recheck. Previous narrow line removal left same broad descending track. Reconstruct entire small surrounding skin patch, isolate oval, preserve repaired other wrist."
+}

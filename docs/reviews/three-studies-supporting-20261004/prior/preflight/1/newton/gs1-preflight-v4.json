@@ -1,0 +1,21 @@
+{
+  "reviewer": "Newton",
+  "result": "HOLD_EXACT_PREFLIGHT",
+  "proposal_sha256": "14e6389f52b3c243ae7132003dde33beda58fee56539c2dd0539ec1e88da7579",
+  "prompt_sha256": "5dcaa5193eec03fb8dbc1e12b51dd577194953f7c0c4b82c5f9fd05d418cccf5",
+  "references": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-enriched-continuation\\work\\gary\\generated\\gs1-candidate-v3.png",
+      "sha256": "71f7514766914a946fb1983af4f0dc072ddf89fd8fc0e5a37026fa431599116b",
+      "actual_pixels_inspected": true
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\heroes\\home-christ-signature-approved-20260907.png",
+      "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+      "actual_pixels_inspected": true
+    }
+  ],
+  "finding": "Prompt freezes screen-right wrist as accepted although residual pale descending/wrapping line around compact oval remains visible. Earlier primary HOLD on left bands did not certify all surrounding right wrist skin. Revise to remove residual lines from both wrists while preserving right compact oval and repairing left scar. Do not generate exact current proposal.",
+  "generation_authorization": false,
+  "limits": "Exact preflight, not generation authority or finished pixel acceptance. All output requires dual review and root assembled desktop/phone."
+}

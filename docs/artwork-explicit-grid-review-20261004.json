@@ -1,0 +1,11 @@
+{
+  "scope": "Shared artwork-panel Close placement and stylesheet cache references; no artwork, source copy, hero geometry, footer or color change.",
+  "defect": "At1280x720 and200percent rootfont, forced grid-column2 creates an implicit33.6px action track when only one11rem explicit track fits. Long labels stack oneletter at a time.",
+  "cause": "Viewport breakpoint821px did not account for available component width or enlarged rem sizing. The static guard required literal column2 and prior browser QA did not open every featured study picture at enlarged desktop text.",
+  "repair": "grid-column:-2 / -1 chooses the last existing explicit column. All123HTML consumers and2builders use artwork-actions.css?v=20261004-explicit-grid-1.",
+  "independent_review": "Fermi and Newton independently traced cause, concurred exact CSS and3QA-file changes, and verified cache-only reversal restores each four-study priorHTML hash. Scratch source receipts in three-art-studies-final-native-release/work/fermi/explicit-track-review.json and work/newton/cache-renewal-proposal.json.",
+  "root_native": "Actual CUA browser: failingBS1280x720200percent rechecked with385pxfullwidth controls; normaldesktop191pxpaired tracks and bottomrightClose preserved;320phone controls singlecolumn; all4study desktop200percent controls visibly readable. BSclose/reopen/fullsizeEscape/Continue and CHreopen/Continue passed. Four320200percent rootfont lessonreturns passed. Rootfont test uses isolated response-only injection, not browserzoom.",
+  "regression": "artwork_details_qa.py rejects fixedcolumn2; sitewide_artwork_review_qa.py reverses only exactrepair to historicalSHA and retains radius/unrelated negativecases. complete_card_rows_browser_qa.js adds all4featured routes/every supportingpicture desktopphone100/200percent checks and oldfixedcolumn behavioral negativefixture.",
+  "pending": "Hosted browser suite execution and final release/public-byte/live checks remain required. This record is not publication or owner aesthetic acceptance.",
+  "boundaries": "Preserve prior320200percent shared-header overlap observation separately. Full130-route enriched audit remains incomplete;12unavailable historical generationlogs remain disclosed."
+}

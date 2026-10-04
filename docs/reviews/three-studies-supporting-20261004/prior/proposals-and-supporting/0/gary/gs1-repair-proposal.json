@@ -1,0 +1,21 @@
+{
+  "key": "GS1",
+  "status": "PROPOSED_NARROW_EDIT_REQUIRES_DUAL_EXACT_PREFLIGHT_AND_ROOT_AUTHORIZATION",
+  "input_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\gs1-candidate-v1.png",
+  "input_sha256": "83fbea06128764a9bb3f21b01070f8934df4fb2d722ad14ad9daa93986f86237",
+  "reference_roles": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\gs1-candidate-v1.png",
+      "role": "Image 1: Exact edit target. Preserve original composition and all content outside the specified marks."
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\heroes\\home-christ-signature-approved-20260907.png",
+      "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+      "role": "Image 2: Actual owner-approved Home identity reference only. Preserve recognizable identity already present in image 1; do not transfer the portrait pose, smile, robe, background, lighting or composition."
+    }
+  ],
+  "prompt": "Image 1 is the sole edit target. Image 2 is the exact owner-approved Home portrait supplied only to verify and preserve Jesus Christ’s recognizable identity. Retain image 1’s face and expression; do not import image 2’s smile, pose, clothing, lighting, background or composition. Edit only the existing marks on the two exposed wrists and the back of the nearer hand in this exact image. Preserve every other part of the image unchanged, including Jesus Christ’s exact approved recognizable face, hair, expression, gaze, body, kneeling pose, hand and finger anatomy and positions, sleeves, lichen-stone gray mantle, sheep, bandage, mat, stone shelter, lighting, framing and photographic detail. On the anatomical left hand at screen right, remove the dark red incised-looking slit from the back of the hand and restore natural uninjured skin texture there. At that hand’s clearly exposed wrist joint, place one small, subtle, fully closed healed scar: pale, slightly textured healed skin, no red wound, dark hole, cut, scab or blood. On the anatomical right wrist at screen left, replace the existing red/incised-looking mark with one equally subtle, fully closed pale healed scar at the wrist joint. The palms are naturally turned away or hidden by the current pose; keep them hidden, do not rotate hands or expose palms. Do not add any new mark to a dorsal hand, finger, forearm or sleeve. No fresh wounds, extra marks, blood, glow or halo. Do not change the pose, reconstruct limbs, add sheep legs, recolor garments, move objects or alter any other content. Retain the exact 1536x1024 landscape composition and convincing photographic appearance.",
+  "prompt_sha256": "27bd16790f084d96b68bc6cf74d7bdf68da5423e5a441202186a5124480372ff",
+  "scope": "Only erroneous marks, preserve all other pixels/content. Healed wrist scars at visible joints; hidden palms remain hidden.",
+  "generation_clearance": false
+}

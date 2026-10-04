@@ -1,0 +1,15 @@
+{
+  "reviewer": "Fermi",
+  "key": "GS1v5",
+  "status": "HOLD_RECHECK_SUPERSEDES_PRIOR_PASS",
+  "candidate_sha256": "875fe190b3b589712f5e4da9cafa699e66ac980b6b8cd5eaed39a1d8537ddee1",
+  "prior_receipt": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-integration-continuation\\work\\fermi\\gs1-v5-finished-review.json",
+  "prior_receipt_sha256": "ba0c53a8922a69991bf234cc096113ec017e52a86ed725b0dff9e9f136b4b1d0",
+  "finding": "Root requested exact v3/v5 near-wrist comparison. Independently inspected work/newton/gs1-v3-v5-right-comparison.png. The broad pale descending/branching track below the compact oval is essentially unchanged, distinct from finer surrounding hair and ordinary narrow skin folds. Earlier full/combined wrists interpretation as natural fine texture was insufficient; retract prior near-wrist PASS. Screen-left wrist oval repair remains scoped visually acceptable. Near wrist must remove/rebuild broad connected pale track while preserving oval and natural anatomy.",
+  "cause_of_review_error": "Initial combined crop obscured distinction between broad pale track and surrounding finer texture; direct same-scale prior/new near-wrist comparison resolves persistence.",
+  "limits": [
+    "No dual acceptance exists",
+    "Preserve original receipt as history",
+    "No generation or SITE authorization"
+  ]
+}

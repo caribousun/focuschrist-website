@@ -1,0 +1,26 @@
+{
+  "key": "BS1",
+  "version": 2,
+  "status": "EXACT_DUAL_PREFLIGHT_REQUIRED",
+  "generation_clearance": false,
+  "prompt": "Image 1 is the sole edit target, the calm boat scene. Image 2 is the actual approved Home portrait for preserving Jesus Christ's identity only. Image 3 is the original storm boat reference for identifying companion C only. Change only the head and exposed neck of the single companion at the far RIGHT of image 1. His present face incorrectly resembles the lower-right foreground companion D of image 3. Replace that mistaken face with the exact recognizable facial structure, hairline, hair, beard, nose, brow and proportions of companion C: in image 3 he is the partly obscured BACK man at far right, behind the mast and ABOVE the lower-right foreground man. C's face is near x1412,y560 in the 1536x1024 reference; D's face is lower at roughly x1470,y688 and must NOT be used. C is the upper rear man whose torso is largely hidden. Preserve C's identity while giving him a natural calm attentive expression and gaze toward the conversation in image 1; do not transfer his frightened open mouth, rain, wet appearance or background. Keep the target companion's existing seated body, clothing, hands and placement unchanged, with a natural neck/head connection. Do not change Jesus Christ, headband companion A at left, or rowing companion B behind him. Do not blend any of those three faces into C. Preserve Jesus Christ's exact recognizable approved identity, expression, mantle, pose and hands, the other people's expressions and gaze, all anatomy, oar, boat, calm water, shoreline, dry daylight, framing and photographic detail. Exactly four people remain: Jesus, A, B and corrected C. No added person, D, named-apostle claim, nail marks, storm or miracle. Retain exact 1536x1024 landscape dimensions.",
+  "prompt_sha256": "0ffee6c1ab528c26046550386a43fc8c79493dce736a52115c07a6220555f29a",
+  "reference_roles": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-enriched-continuation\\work\\gary\\generated\\bs1-candidate-v1.png",
+      "sha256": "6a96f12c6847b49a25088df64e4d2fb1054cbb3a5777d3aaa2dace99fa4ff504",
+      "role": "Image 1 sole edit target. Correct only far-right companion head/neck."
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\heroes\\home-christ-signature-approved-20260907.png",
+      "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+      "role": "Image 2 actual approved Home identity verification; preserve target Jesus unchanged."
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\art-study\\full\\still-storm-boat.webp",
+      "sha256": "fdb60ec2ecdee51a24264fc53f0c1aed7cbde5d10dcaec32a6e3d8840b42911c",
+      "role": "Image 3 actual continuity reference: use upper far-right rear companion C near x1412,y560, never lower-right foreground D."
+    }
+  ],
+  "repair_basis": "Dual HOLD: far-right target used D instead of upper rear C; preserve accepted Home/A/B, boat and action."
+}

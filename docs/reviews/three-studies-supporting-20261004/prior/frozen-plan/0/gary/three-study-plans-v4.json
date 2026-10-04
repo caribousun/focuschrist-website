@@ -1,0 +1,963 @@
+{
+  "version": 4,
+  "date": "2026-10-04",
+  "author": "Gary",
+  "status": "FROZEN_PROPOSALS_PENDING_EXACT_DUAL_V4_CONCURRENCE_NOT_GENERATION_APPROVED",
+  "authority": {
+    "master": "1yN5fRSVUTpgIhdjmwXQ55MA6JbjPmCXb1qg3ppYzluo",
+    "00B": "1_MM3rZXC_PbHMQ3leUSweESrAxmC2Evc3dslVLLVlFI",
+    "Focus": "1QCEQ43UFyBivMbE8MwqTZ0e7WFdRuE_6ZQMlnGit5-g",
+    "fresh_connected_drive_read": true,
+    "foundation_preserved": true
+  },
+  "mandates": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\AGENTS.md",
+      "sha256": "d00c5315d1588e57b4529379d41552e67db84202052a2c0a4eef69ec807a3710",
+      "role": "Read current applicable mandate"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\docs\\historical-character-identity.md",
+      "sha256": "69f0f51400ba102dfb5df9a9ec9fb6e738255dc496b84dc5dd684f3f5886c8c4",
+      "role": "Read current applicable mandate"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\docs\\approved-character-identities.json",
+      "sha256": "8585b6adebe55ce27ad3a938f3d8d82bc4797543a03003f66cbdc53bb9f4af77",
+      "role": "Read current applicable mandate"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\docs\\focuschrist-enrichment-and-stewardship-prompt.md",
+      "sha256": "8f413b19ab94093c1f4a489bddb7829468d77b335b79be017f71e6db31e4f311",
+      "role": "Read current applicable mandate"
+    }
+  ],
+  "count_plan": {
+    "each_route": {
+      "retained_owned_body_original_candidates": 5,
+      "new_originals_planned": 5,
+      "target_owned_originals": 10,
+      "minimum_Christ_required": 5
+    },
+    "conditional_Christ_totals": {
+      "the-good-shepherd": 6,
+      "suffer-the-little-children": 5,
+      "be-still": 5
+    },
+    "limits": "Existing asset originality, one-owner assignment and actual-pixel Christ classification need root/reviewer certification. Gallery reference heroes receive no receiving-study count credit. If an existing count fails, stop acceptance; do not reassign ownership or count derivatives."
+  },
+  "sources": [
+    {
+      "path": "ot/ezek/33",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ezek/33?lang=eng",
+      "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\ot-ezek-33.txt",
+      "sha256": "aa578054dbfa09d9c9a845791253539b2ca0bc665c1822d3850c76166574757f",
+      "chars": 5582,
+      "sha256_domain": "chapter_body_utf8_after_read_text_universal_newline_normalization_excluding_first_url_line",
+      "file_sha256": "ec562ee24fa55f272b46cf6940fa1de1ebc67015269eb45814f18a22acd84ed6",
+      "file_sha256_domain": "raw_saved_file_bytes_including_url_wrapper_and_original_line_endings"
+    },
+    {
+      "path": "ot/ezek/34",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ezek/34?lang=eng",
+      "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\ot-ezek-34.txt",
+      "sha256": "0bf939dfd7c09e62eeac4c3c41a5f1f0d48d27579a7fc2088a79f8e53da49cf8",
+      "chars": 5039,
+      "sha256_domain": "chapter_body_utf8_after_read_text_universal_newline_normalization_excluding_first_url_line",
+      "file_sha256": "1d333ed538f0d92e85491a7392eb468261e3aa34f0cc586ab87dfd8a45100709",
+      "file_sha256_domain": "raw_saved_file_bytes_including_url_wrapper_and_original_line_endings"
+    },
+    {
+      "path": "ot/ezek/35",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ezek/35?lang=eng",
+      "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\ot-ezek-35.txt",
+      "sha256": "e222fac383115611efddb842d59a8e3afa7adc78250a9c6a9574265a66a6e97f",
+      "chars": 2145,
+      "sha256_domain": "chapter_body_utf8_after_read_text_universal_newline_normalization_excluding_first_url_line",
+      "file_sha256": "af8a03d92420dfaeb1007d4fc9d089dd488907eb2d18f4473588e553336ab283",
+      "file_sha256_domain": "raw_saved_file_bytes_including_url_wrapper_and_original_line_endings"
+    },
+    {
+      "path": "nt/john/9",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/9?lang=eng",
+      "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-john-9.txt",
+      "sha256": "440ce40f8e968ef0361af1cbf5c88aba9e0fb1a5901e417793d90ca7d058ef32",
+      "chars": 4504,
+      "sha256_domain": "chapter_body_utf8_after_read_text_universal_newline_normalization_excluding_first_url_line",
+      "file_sha256": "0c9d6d315d360c82d2eb3b62b46d38d801e3ae237d6afa215cb383113594dcda",
+      "file_sha256_domain": "raw_saved_file_bytes_including_url_wrapper_and_original_line_endings"
+    },
+    {
+      "path": "nt/john/10",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng",
+      "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-john-10.txt",
+      "sha256": "7c2f6fe2a0876b6dc9c4f76b41a81fd8b9dc67308b6c1010168ad3675adebc88",
+      "chars": 4235,
+      "sha256_domain": "chapter_body_utf8_after_read_text_universal_newline_normalization_excluding_first_url_line",
+      "file_sha256": "9a149aff67464f6ab0f2d974361123e0388bc6fe1e6aa9d0b314a0582d9d0776",
+      "file_sha256_domain": "raw_saved_file_bytes_including_url_wrapper_and_original_line_endings"
+    },
+    {
+      "path": "nt/john/11",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/11?lang=eng",
+      "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-john-11.txt",
+      "sha256": "d8011c3edabb1b227853cfd1483f19eca2f0238ea75e5104f5a4fbabfbe9fe30",
+      "chars": 6233,
+      "sha256_domain": "chapter_body_utf8_after_read_text_universal_newline_normalization_excluding_first_url_line",
+      "file_sha256": "372ff33d10cfd9ca430572a983429d537d5570112f823cf55e1f2afc276c3c73",
+      "file_sha256_domain": "raw_saved_file_bytes_including_url_wrapper_and_original_line_endings"
+    },
+    {
+      "path": "nt/matt/20",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/20?lang=eng",
+      "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-matt-20.txt",
+      "sha256": "6dfcc3c53d69276f89a99eba639b3f0bb23406b02f76230f9ffdf8262d148f35",
+      "chars": 4114,
+      "sha256_domain": "chapter_body_utf8_after_read_text_universal_newline_normalization_excluding_first_url_line",
+      "file_sha256": "b54453e0dd54aff83038f2cea68c7a96ac27b69ebd6db3d40f6798668da8ed8b",
+      "file_sha256_domain": "raw_saved_file_bytes_including_url_wrapper_and_original_line_endings"
+    },
+    {
+      "path": "nt/matt/21",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/21?lang=eng",
+      "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-matt-21.txt",
+      "sha256": "fc9058c49390c478cbab332de0e540310a34f2de13605c99da3cde155cb28ece",
+      "chars": 6053,
+      "sha256_domain": "chapter_body_utf8_after_read_text_universal_newline_normalization_excluding_first_url_line",
+      "file_sha256": "b8b9866b6540d55ef925e181cb999dd67b56a5e717f8be563ec8817fc45b2d26",
+      "file_sha256_domain": "raw_saved_file_bytes_including_url_wrapper_and_original_line_endings"
+    },
+    {
+      "path": "nt/matt/22",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/22?lang=eng",
+      "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-matt-22.txt",
+      "sha256": "79cea7d0f3b8a5490ff10f10df3fc9dcbf83e49d90a21fa2706c020516a3e6cf",
+      "chars": 4571,
+      "sha256_domain": "chapter_body_utf8_after_read_text_universal_newline_normalization_excluding_first_url_line",
+      "file_sha256": "0bcc23f739cae492897ce51958d6c89e05856d6036333aa38657a0522efbb02e",
+      "file_sha256_domain": "raw_saved_file_bytes_including_url_wrapper_and_original_line_endings"
+    },
+    {
+      "path": "nt/mark/5",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/5?lang=eng",
+      "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-mark-5.txt",
+      "sha256": "a87f3c3051482be8c347036856236dc8fd47cf32799e2fd376eb096e4e43d3d5",
+      "chars": 5063,
+      "sha256_domain": "chapter_body_utf8_after_read_text_universal_newline_normalization_excluding_first_url_line",
+      "file_sha256": "d515498d93a0460553338beb1e9e7f2aff3362d5eef17d592276bf4f1024d7ba",
+      "file_sha256_domain": "raw_saved_file_bytes_including_url_wrapper_and_original_line_endings"
+    },
+    {
+      "path": "nt/mark/6",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/6?lang=eng",
+      "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-mark-6.txt",
+      "sha256": "3a976dad4679fe8273a51c0fe455cd3289e06d33d2d165bdebae2c7c6763d410",
+      "chars": 7031,
+      "sha256_domain": "chapter_body_utf8_after_read_text_universal_newline_normalization_excluding_first_url_line",
+      "file_sha256": "c36643073ed6a3dffbcb610334b3b805765e3049ec9d491bf5936b3f0202ae10",
+      "file_sha256_domain": "raw_saved_file_bytes_including_url_wrapper_and_original_line_endings"
+    },
+    {
+      "path": "nt/mark/7",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/7?lang=eng",
+      "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-mark-7.txt",
+      "sha256": "97ac11c4bf7d2f7e4ecf4eeb4f5ab9fc531d76b719e90e62a18520d28207abba",
+      "chars": 4422,
+      "sha256_domain": "chapter_body_utf8_after_read_text_universal_newline_normalization_excluding_first_url_line",
+      "file_sha256": "d7b42ad419168144cc5a0cec6aab17215021614f829faec647d8f8de3a55e73d",
+      "file_sha256_domain": "raw_saved_file_bytes_including_url_wrapper_and_original_line_endings"
+    },
+    {
+      "path": "nt/james/1",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/1?lang=eng",
+      "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-james-1.txt",
+      "sha256": "94c47fcdb95501856615463debcb7ea07180e535b988a246b6e8c2d5cc43d123",
+      "chars": 2976,
+      "sha256_domain": "chapter_body_utf8_after_read_text_universal_newline_normalization_excluding_first_url_line",
+      "file_sha256": "9c4fc8ea3be29922843a09365c24451f9c4ca1a614ab12212b4db61735796cb5",
+      "file_sha256_domain": "raw_saved_file_bytes_including_url_wrapper_and_original_line_endings"
+    },
+    {
+      "path": "nt/james/2",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/2?lang=eng",
+      "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-james-2.txt",
+      "sha256": "f571582e133e3e8e8445961709fe183effbfb466773d26961bea4da88409c749",
+      "chars": 2843,
+      "sha256_domain": "chapter_body_utf8_after_read_text_universal_newline_normalization_excluding_first_url_line",
+      "file_sha256": "60fc4a3decd89d000c446d2576c8a863f15e507fd21c69e99dafedad6f9d2b8d",
+      "file_sha256_domain": "raw_saved_file_bytes_including_url_wrapper_and_original_line_endings"
+    },
+    {
+      "path": "nt/james/3",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/3?lang=eng",
+      "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-james-3.txt",
+      "sha256": "be63e41c5235a216eae64befd691eb318c5b8091ccbebe657a609dbd8eda72c6",
+      "chars": 2084,
+      "sha256_domain": "chapter_body_utf8_after_read_text_universal_newline_normalization_excluding_first_url_line",
+      "file_sha256": "2561ceb88b9a023d91d3c33ad8f71f84661c80cf771b5961ed83d17007993b19",
+      "file_sha256_domain": "raw_saved_file_bytes_including_url_wrapper_and_original_line_endings"
+    },
+    {
+      "path": "nt/mark/9",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/9?lang=eng",
+      "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-mark-9.txt",
+      "sha256": "5888597b64ae4e4e2220c659e5227d9579b55337f4d8236738a3683ca3c57461",
+      "chars": 6176,
+      "sha256_domain": "chapter_body_utf8_after_read_text_universal_newline_normalization_excluding_first_url_line",
+      "file_sha256": "77d303ee9c976e3d55192dd35ae2409640744f601a775e39031ab878047507d8",
+      "file_sha256_domain": "raw_saved_file_bytes_including_url_wrapper_and_original_line_endings"
+    },
+    {
+      "path": "nt/mark/10",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng",
+      "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-mark-10.txt",
+      "sha256": "b55b8b3d7acf4c5a57da5a2e8c60e0c704ae54f8b752c51da0cd5e7047499346",
+      "chars": 6500,
+      "sha256_domain": "chapter_body_utf8_after_read_text_universal_newline_normalization_excluding_first_url_line",
+      "file_sha256": "5463378834d7a4ab6e8354f08771526271776a55362835aa15cfae041d392eae",
+      "file_sha256_domain": "raw_saved_file_bytes_including_url_wrapper_and_original_line_endings"
+    },
+    {
+      "path": "nt/mark/11",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/11?lang=eng",
+      "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-mark-11.txt",
+      "sha256": "2203c1e65d7d79a18062d08e0ad3fbdb74d164b754c156fa86184af676fd1f41",
+      "chars": 4160,
+      "sha256_domain": "chapter_body_utf8_after_read_text_universal_newline_normalization_excluding_first_url_line",
+      "file_sha256": "c298e16f36ba9e1d5a9b86f2fdc7cf7df5a73fe81cf969a81a60e0932247bc70",
+      "file_sha256_domain": "raw_saved_file_bytes_including_url_wrapper_and_original_line_endings"
+    },
+    {
+      "path": "bofm/mosiah/4",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng",
+      "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\bofm-mosiah-4.txt",
+      "sha256": "5849b91d5a189d85c0c39b157636d1854b802075234dc9c14e33b3c57c39a59c",
+      "chars": 8501,
+      "sha256_domain": "chapter_body_utf8_after_read_text_universal_newline_normalization_excluding_first_url_line",
+      "file_sha256": "d0a8d8b8b65dfcd5941125f55baed3b0f3933ea9a5a46e53172acdf8980b5208",
+      "file_sha256_domain": "raw_saved_file_bytes_including_url_wrapper_and_original_line_endings"
+    },
+    {
+      "path": "ot/ps/46",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng",
+      "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\ot-ps-46.txt",
+      "sha256": "097ba00007bb524b19bc386b8a575e27c5ceed8ed7f1dc9edb53afb538cba176",
+      "chars": 1084,
+      "sha256_domain": "chapter_body_utf8_after_read_text_universal_newline_normalization_excluding_first_url_line",
+      "file_sha256": "28764fb274550443fe24e82d21fb4b874ffd86f3921f60f62bcb1f2bb1573709",
+      "file_sha256_domain": "raw_saved_file_bytes_including_url_wrapper_and_original_line_endings"
+    },
+    {
+      "path": "nt/philip/3",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/philip/3?lang=eng",
+      "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-philip-3.txt",
+      "sha256": "5579734412871720c72b088dcddb45b55a01b3c1128d177548706387878c025f",
+      "chars": 2672,
+      "sha256_domain": "chapter_body_utf8_after_read_text_universal_newline_normalization_excluding_first_url_line",
+      "file_sha256": "00f59d6ae54aec5e2cbab9fc9e94cf2e77060ed751a878ea3e2ef00c65774259",
+      "file_sha256_domain": "raw_saved_file_bytes_including_url_wrapper_and_original_line_endings"
+    },
+    {
+      "path": "nt/philip/4",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/philip/4?lang=eng",
+      "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-philip-4.txt",
+      "sha256": "3c69abb12b1fe26e740d40e7b8a36e6f31b7f25db92c7ac8ad90ef2abd07e016",
+      "chars": 2719,
+      "sha256_domain": "chapter_body_utf8_after_read_text_universal_newline_normalization_excluding_first_url_line",
+      "file_sha256": "6813a91ea6a2ab6cc0699aa42ae9999c7eae47aa98809874336d23dc441ed21d",
+      "file_sha256_domain": "raw_saved_file_bytes_including_url_wrapper_and_original_line_endings"
+    },
+    {
+      "path": "ot/ps/45",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/45?lang=eng",
+      "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\ot-ps-45.txt",
+      "sha256": "430f2ddad53bef2a26dc76f608014c634da481a52d1dc62e5b7d4d81c0de9a54",
+      "chars": 1875,
+      "sha256_domain": "chapter_body_utf8_after_read_text_universal_newline_normalization_excluding_first_url_line",
+      "file_sha256": "6a968e0859a09b5441d208e4930612e79e2833243ee10dc3e7c5db73cec5333e",
+      "file_sha256_domain": "raw_saved_file_bytes_including_url_wrapper_and_original_line_endings"
+    },
+    {
+      "path": "ot/ps/47",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/47?lang=eng",
+      "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\ot-ps-47.txt",
+      "sha256": "ffbbca74273d875f6965dc6b542589276db9d37d57e283e9c3e884aa8f61e44f",
+      "chars": 777,
+      "sha256_domain": "chapter_body_utf8_after_read_text_universal_newline_normalization_excluding_first_url_line",
+      "file_sha256": "a0a712dfbc5f1eb8572c9414aebc243683e7bec9ada4f253ad6dab9a75193d41",
+      "file_sha256_domain": "raw_saved_file_bytes_including_url_wrapper_and_original_line_endings"
+    },
+    {
+      "path": "bofm/mosiah/3",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/3?lang=eng",
+      "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\bofm-mosiah-3.txt",
+      "sha256": "0e94e967b803afd8ef30f35bff27ea3ba9157487e0ea9da76ed1684fa0b06fce",
+      "chars": 6143,
+      "sha256_domain": "chapter_body_utf8_after_read_text_universal_newline_normalization_excluding_first_url_line",
+      "file_sha256": "2b794c7ab081c22feacea3371b40aba6114fc5511fbebd52d563d72d264893dd",
+      "file_sha256_domain": "raw_saved_file_bytes_including_url_wrapper_and_original_line_endings"
+    },
+    {
+      "path": "bofm/mosiah/5",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/5?lang=eng",
+      "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\bofm-mosiah-5.txt",
+      "sha256": "a3cfd5c886001629dae357a33b242ae5456b9e1e877c9d8776ebaccd2bd58b24",
+      "chars": 3843,
+      "sha256_domain": "chapter_body_utf8_after_read_text_universal_newline_normalization_excluding_first_url_line",
+      "file_sha256": "963b0deae3226198b064f5e3723ad75ff80b675856399a5553a2c75a3491e021",
+      "file_sha256_domain": "raw_saved_file_bytes_including_url_wrapper_and_original_line_endings"
+    },
+    {
+      "path": "nt/rom/9",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/rom/9?lang=eng",
+      "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-rom-9.txt",
+      "sha256": "c2a0e68223311d3607f011d4bdbd90a510bbe4667bb0ccf8d655f812ad4323da",
+      "chars": 3897,
+      "sha256_domain": "chapter_body_utf8_after_read_text_universal_newline_normalization_excluding_first_url_line",
+      "file_sha256": "102a6ba48b4bb77479133c36bb140feec568bc5fc4f1af9c5b6567183f73379d",
+      "file_sha256_domain": "raw_saved_file_bytes_including_url_wrapper_and_original_line_endings"
+    },
+    {
+      "path": "nt/rom/10",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/rom/10?lang=eng",
+      "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-rom-10.txt",
+      "sha256": "a999d4fef6dbfd708f4e4a5af1132795a78a2144812af125ef0b96d0d2335edd",
+      "chars": 2515,
+      "sha256_domain": "chapter_body_utf8_after_read_text_universal_newline_normalization_excluding_first_url_line",
+      "file_sha256": "eb9bedc16a76599261145292206eba7507b65748145a981b1e41323e15e8c74d",
+      "file_sha256_domain": "raw_saved_file_bytes_including_url_wrapper_and_original_line_endings"
+    },
+    {
+      "path": "nt/rom/11",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/rom/11?lang=eng",
+      "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-rom-11.txt",
+      "sha256": "acd81f8a26cc0d9a1ca0c236d61b6e64b73bfb4d0404b85a945e1e9af62e475c",
+      "chars": 4415,
+      "sha256_domain": "chapter_body_utf8_after_read_text_universal_newline_normalization_excluding_first_url_line",
+      "file_sha256": "1f3cf37067d1c57ac7637b9b04602992c2c7a03ce8893503b4377c8653e0054d",
+      "file_sha256_domain": "raw_saved_file_bytes_including_url_wrapper_and_original_line_endings"
+    },
+    {
+      "path": "nt/luke/3",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/3?lang=eng",
+      "local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-luke-3.txt",
+      "sha256": "f47759ad791ace4edd6b315585035952a5704af502708ccd18fd6c18263420eb",
+      "chars": 5282,
+      "sha256_domain": "chapter_body_utf8_after_read_text_universal_newline_normalization_excluding_first_url_line",
+      "file_sha256": "3a5f0f9c68a92a4148a71e779fe57541c67d251ef78425596d40545e6d952362",
+      "file_sha256_domain": "raw_saved_file_bytes_including_url_wrapper_and_original_line_endings"
+    }
+  ],
+  "inventory_scope": {
+    "files": 442,
+    "leaves": 20700,
+    "gallery_records": 948,
+    "files_manifest": "inventory-files.json",
+    "searchable_inventory": "inventory-leaves.json",
+    "limits": "Indexed all available docs JSON scene/prompt/description/title/alt leaves plus gallery; searched distinct events/actions and near matches. This is a bounded semantic screen, not an exhaustive visual inspection of all 948 images or a guarantee against unrecorded image content."
+  },
+  "gates": [
+    "Fermi and Newton independently read applicable current mandates, full source/context evidence and actual references; concur on exact prompt SHA and reference SHA before generation.",
+    "Review color candidates against actual current site pixels; descriptive color novelty alone is insufficient.",
+    "After generation, both inspect full image and facial/hand detail, exact identity, ages, action, source fidelity, diversity and phone crop.",
+    "Albert integrates only reviewed pixels with complete study panel, inline sources, full size, onward/continue/close, then personally tests actual desktop and phone behavior.",
+    "Preserve approved heroes, footer disclosure and exact owner exceptions. No SITE/canonical/channel write or generation by Gary."
+  ],
+  "entries": [
+    {
+      "key": "GS1",
+      "owner_route": "art-study/the-good-shepherd.html",
+      "owner_section": "proposed-gs1",
+      "title": "He Binds What Is Hurt",
+      "kind": "prophetic devotional imagery",
+      "depicts_christ": true,
+      "source_passages": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ezek/34?lang=eng",
+          "verses": "11–16,23–31",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\ot-ezek-34.txt"
+        },
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng",
+          "verses": "11–18",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-john-10.txt"
+        }
+      ],
+      "source_establishes": "Ezekiel contrasts exploitative shepherds with the Lord who seeks, binds and strengthens His flock; the chapter ends by identifying the flock as people. John identifies Jesus as the Good Shepherd.",
+      "interpretation_and_unknowns": "The bandage, sheep anatomy, shelter and action are a visual expression of the metaphor, not an event recorded about mortal Jesus. No event date or literal animal-care claim. Christ identity is owner-approved artistic identity.",
+      "age_and_appearance": "Risen adult Christ, no exact numerical age asserted; owner likeness preserved.",
+      "scene_uniqueness": "Tending an already found hurt sheep differs in purpose and action from existing carrying, seeking, calling, following, wolf defense and pit rescue images.",
+      "closest_comparators": [
+        "shepherd-carries-lamb",
+        "shepherd-seeks-one-20260919",
+        "jesus-journey/sheep-in-pit",
+        "jesus-journey/good-shepherd"
+      ],
+      "proposed_caption": "The Shepherd tends a hurt sheep with patient hands. Ezekiel 34:11–16 joins the promise to seek the lost with the promise to strengthen and bind what is hurt.",
+      "reference_inputs": [
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\heroes\\home-christ-signature-approved-20260907.png",
+          "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+          "role": "Exact owner-approved Jesus identity. Actual pixels required; expression adapts to scene. Not an authenticated historical portrait."
+        }
+      ],
+      "robe_color": "muted lichen-stone gray with slight yellow-green cast",
+      "prompt": "Use the attached Home portrait as the exact recognizable Jesus Christ identity. Illustrate the Shepherd promise of Ezekiel 34:16 through one specific act: Christ kneels on a clean woven ground mat beside a small sheep resting naturally on its chest. He carefully lays the final end of a clean linen bandage over an already wrapped lower foreleg. Both of His separate hands remain fully traceable; the sheep has four anatomically correct legs and shows no open wound, blood or distress. His eyes attend to the bandage, His face calm and concentrated. This is devotional imagery of the risen Good Shepherd, not a claimed recorded veterinary episode or an appearance to Ezekiel. Subtle healed marks must appear on any visible palms and wrists, without forcing hidden surfaces into view. Plain undyed linen tunic, muted lichen-stone mantle, a restrained pale gray with a slight yellow-green cast. A low stone shelter provides shade; no crowd, staff-waving, carrying a lamb, rescue climb or walking flock. Create one new 1536x1024 landscape image with convincing live-action photographic clarity, lifelike skin, natural woven or contemporary fabrics, believable anatomy and individual scene-appropriate expressions. Keep essential faces and hands within generous 3:2 margins. No painting, CGI, waxy skin, glamour, halos, writing, watermark or collage.",
+      "prompt_sha256": "e52bed9c946ccac75bf0abf9c072ae75cb78103937ba3603bfdbc4952f0c019d",
+      "status": "REQUIRES_EXACT_FERMI_AND_NEWTON_PREFLIGHT",
+      "finished_pixels": "NOT_GENERATED"
+    },
+    {
+      "key": "GS2",
+      "owner_route": "art-study/the-good-shepherd.html",
+      "owner_section": "proposed-gs2",
+      "title": "Leave Room at the Water",
+      "kind": "prophetic metaphor",
+      "depicts_christ": false,
+      "source_passages": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ezek/34?lang=eng",
+          "verses": "17–22",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\ot-ezek-34.txt"
+        }
+      ],
+      "source_establishes": "The text condemns animals that foul water and push weaker ones aside, then promises judgment and rescue. The metaphor criticizes harm within the flock, not merely outside danger.",
+      "interpretation_and_unknowns": "Species proportions, pool and arrangement are illustrative; the passage addresses human conduct. Do not diagnose disability or assign moral character by physical size in general.",
+      "age_and_appearance": "Six natural sheep of varied size; no people or Christ depicted. No precise animal ages claimed.",
+      "scene_uniqueness": "Water access obstructed from within the flock is distinct from every existing shepherd rescue/following or wolf scene.",
+      "closest_comparators": [
+        "good-shepherd-01",
+        "good-shepherd-02",
+        "good-shepherd-03",
+        "good-shepherd-04"
+      ],
+      "proposed_caption": "The smaller sheep waits at the crowded water. Ezekiel 34:17–22 asks the flock to account for the way its members treat one another.",
+      "reference_inputs": [],
+      "robe_color": null,
+      "prompt": "Create a close, natural landscape view of a shallow rural spring pool with six sheep. At the left, two large sturdy sheep stand across the water access; one hoof has muddied a small edge of the pool. At the right a smaller thin but healthy-looking sheep pauses on dry ground, unable to reach the clear water beyond them. Show the shoulder-to-shoulder obstruction without violence, wounds, grotesque starvation or human expressions on animals. No people, Jesus, shepherd, staff, wolf, sheepfold, rescue or carried lamb. Calm daylight and clear animal anatomy. This illustrates the ethical image in Ezekiel 34:17–22, not a photographed biblical incident. The picture should make the blocked access visible without turning it into an animal attack. Create one new 1536x1024 landscape image with convincing live-action photographic clarity, natural wool and water, believable sheep anatomy and physically plausible light. Keep the obstructing sheep, smaller sheep and water access inside generous 3:2 margins. No painting, CGI, human faces, clothing, halos, writing, watermark or collage.",
+      "prompt_sha256": "fe35dc39081c97c32e93a5c5a1483aa6d9ecb91db4b7ca4a32dd49a607158e1a",
+      "status": "REQUIRES_EXACT_FERMI_AND_NEWTON_PREFLIGHT",
+      "finished_pixels": "NOT_GENERATED"
+    },
+    {
+      "key": "GS3",
+      "owner_route": "art-study/the-good-shepherd.html",
+      "owner_section": "proposed-gs3",
+      "title": "Care That Keeps Someone Warm",
+      "kind": "modern application",
+      "depicts_christ": false,
+      "source_passages": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/2?lang=eng",
+          "verses": "14–18",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-james-2.txt"
+        },
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng",
+          "verses": "16–27",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\bofm-mosiah-4.txt"
+        }
+      ],
+      "source_establishes": "James contrasts empty wishes for warmth with providing bodily necessities. Benjamin teaches practical care according to another person’s needs and the giver’s capacity.",
+      "interpretation_and_unknowns": "The coat repair and people are a present-day application, not a scriptural incident; poverty and family relationships cannot be inferred from appearances.",
+      "age_and_appearance": "Fictional contemporary people; approximate life stages in prompt are casting choices, not historical age claims.",
+      "scene_uniqueness": "Repairing the lining of an owned coat with its owner participating differs from existing blanket/garment distribution, pioneer sewing and generic service scenes.",
+      "closest_comparators": [
+        "sitewide-community-supporting-prompts",
+        "priesthood-history/jane-story",
+        "sheep-goats-02"
+      ],
+      "proposed_caption": "The coat rests between them while they repair its lining. James 2:14–18 asks what faith does when another person needs warmth.",
+      "reference_inputs": [],
+      "robe_color": null,
+      "prompt": "At a present-day community repair table, an adult man carefully stitches the lining of a worn winter coat laid flat. Its older adult owner sits beside him and holds the loose lining clear, guiding where the seam has opened. Both look at the actual repair; a short length of thread and small sewing kit make the task clear. The coat is empty on the table, never being sewn on a body. No money exchange, donation queue or posed coat handover. Warm ordinary indoor daylight and practical shared concentration. Create one new 1536x1024 landscape image with convincing live-action photographic clarity, lifelike skin, natural woven or contemporary fabrics, believable anatomy and individual scene-appropriate expressions. Keep essential faces and hands within generous 3:2 margins. No painting, CGI, waxy skin, glamour, halos, writing, watermark or collage. All people are fictional unnamed contemporary people, not Jesus, a known religious figure, or a likeness transferred from existing artwork. Modest ordinary clothing, natural available light, no commercial branding, private readable information or supernatural apparition. Show dignity and active participation rather than a staged charity portrait.",
+      "prompt_sha256": "6bdee4f165c2b1a3295ff26e19a406e593e73b38dfd23b321ee0ac98d6c366cd",
+      "status": "REQUIRES_EXACT_FERMI_AND_NEWTON_PREFLIGHT",
+      "finished_pixels": "NOT_GENERATED"
+    },
+    {
+      "key": "GS4",
+      "owner_route": "art-study/the-good-shepherd.html",
+      "owner_section": "proposed-gs4",
+      "title": "Help With What Is Needed",
+      "kind": "modern application",
+      "depicts_christ": false,
+      "source_passages": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng",
+          "verses": "16,26–27",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\bofm-mosiah-4.txt"
+        }
+      ],
+      "source_establishes": "Benjamin’s teaching includes both temporal and spiritual relief according to actual needs, with wisdom and capacity.",
+      "interpretation_and_unknowns": "Fictional modern act of practical help, not a recorded scriptural event, poverty diagnosis or guaranteed result. Mosiah 4 supplies the care principle; it does not record this task.",
+      "age_and_appearance": "Fictional contemporary people; approximate life stages in prompt are casting choices, not historical age claims.",
+      "scene_uniqueness": "Replaces the withdrawn bicycle-chain concept because existing collection-stewardship-03 already depicts two adults collaborating over a stand-mounted bicycle mechanism. The replacement is two adults recovering a dropped key ring from a shallow dry courtyard drain using a magnetic pickup tool, with the owner directing attention. Different object, need, action, posture and setting; still requires independent current inventory and pixel challenge.",
+      "closest_comparators": [
+        "collection-stewardship-03 (actual full pixels inspected; reason bicycle concept withdrawn)",
+        "collection-return-04",
+        "exclusive/counsel-bicycles"
+      ],
+      "proposed_caption": "One neighbor lifts a dropped key ring while its owner points out the opening. Mosiah 4:26–27 invites willing care shaped by real needs and wise action.",
+      "reference_inputs": [],
+      "robe_color": null,
+      "prompt": "In a quiet present-day residential courtyard, two adult neighbors recover one dropped key ring from a shallow dry drainage channel beneath a fixed grate. The channel is only a few inches deep and is clearly visible; no road, traffic, open manhole, deep shaft, flowing water or dangerous reach. One adult kneels securely on dry paving and holds the handle of a slender magnetic pickup tool above a wide gap in the grate. Its small magnet is lifting the visible steel ring, with two ordinary house keys hanging from that ring just above the grate. The magnet contacts the steel ring, not the brass keys. The owner crouches beside the helper at a comfortable distance and points toward the clear gap, actively helping guide the retrieval. Both look attentively at the keys with focused, modest relief. Show the complete tool, ring and gap clearly; hands remain above the grate. No bicycles, repair stand, workshop lesson, money, locks being opened, identifiable property labels or readable text. This is practical neighborly help, not a miracle or guaranteed resolution. Create one new 1536x1024 landscape image with convincing live-action photographic clarity, lifelike skin, natural woven or contemporary fabrics, believable anatomy and individual scene-appropriate expressions. Keep essential faces and hands within generous 3:2 margins. No painting, CGI, waxy skin, glamour, halos, writing, watermark or collage. All people are fictional unnamed contemporary people, not Jesus, a known religious figure, or a likeness transferred from existing artwork. Modest ordinary clothing, natural available light, no commercial branding, private readable information or supernatural apparition. Show dignity and active participation rather than a staged charity portrait.",
+      "prompt_sha256": "33393c3d6f612d11e624e78dc5f507eb4280edc18e28569edecafc74e4d6b36b",
+      "status": "REQUIRES_EXACT_FERMI_AND_NEWTON_PREFLIGHT",
+      "finished_pixels": "NOT_GENERATED"
+    },
+    {
+      "key": "GS5",
+      "owner_route": "art-study/the-good-shepherd.html",
+      "owner_section": "proposed-gs5",
+      "title": "Make the Word Easier to Hear",
+      "kind": "modern application",
+      "depicts_christ": false,
+      "source_passages": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/rom/10?lang=eng",
+          "verses": "14–17",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-rom-10.txt"
+        },
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng",
+          "verses": "3–5,27",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-john-10.txt"
+        }
+      ],
+      "source_establishes": "Romans connects hearing the preached word with faith; John describes recognizing the Shepherd’s voice. Helping someone access an audio reading is a present-day connection.",
+      "interpretation_and_unknowns": "The technology and people are contemporary staging. Do not imply that hearing ability is required for faith or that audio use establishes a medical condition.",
+      "age_and_appearance": "Fictional contemporary people; approximate life stages in prompt are casting choices, not historical age claims.",
+      "scene_uniqueness": "Learning a home audio control differs from museum tactile accessibility, headphone listening with notes, and searching for a lost hearing aid.",
+      "closest_comparators": [
+        "collection-neighbor-04",
+        "conference-listening",
+        "collection-return-01"
+      ],
+      "proposed_caption": "She tries the audio player while her friend waits beside her. Helping someone reach the scriptures can begin with a small, patient task.",
+      "reference_inputs": [],
+      "robe_color": null,
+      "prompt": "In a modest home living room, an older adult woman has one hand poised over a large tactile play button on a simple audio player. Beside her an adult friend points to that single control without covering or moving her hand. A closed unlettered scripture volume rests next to the player and comfortable headphones lie ready on the table. The woman is choosing to operate the device herself and looks toward the control with interest; the friend watches her action patiently. No museum display, raised architectural model, smartphones held to the camera, loss search, advertised device or miracle healing. Show a clear practical lesson in using an audio reading, not a generic shared reading portrait. Create one new 1536x1024 landscape image with convincing live-action photographic clarity, lifelike skin, natural woven or contemporary fabrics, believable anatomy and individual scene-appropriate expressions. Keep essential faces and hands within generous 3:2 margins. No painting, CGI, waxy skin, glamour, halos, writing, watermark or collage. All people are fictional unnamed contemporary people, not Jesus, a known religious figure, or a likeness transferred from existing artwork. Modest ordinary clothing, natural available light, no commercial branding, private readable information or supernatural apparition. Show dignity and active participation rather than a staged charity portrait.",
+      "prompt_sha256": "c2847368890f4a6bdb5eb30c08bb10f177d3e992340ba13be3fe5e8498df0150",
+      "status": "REQUIRES_EXACT_FERMI_AND_NEWTON_PREFLIGHT",
+      "finished_pixels": "NOT_GENERATED"
+    },
+    {
+      "key": "CH1",
+      "owner_route": "art-study/suffer-the-little-children.html",
+      "owner_section": "proposed-ch1",
+      "title": "The Children’s Praise",
+      "kind": "scripture event",
+      "depicts_christ": true,
+      "source_passages": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/21?lang=eng",
+          "verses": "12–17",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-matt-21.txt"
+        }
+      ],
+      "source_establishes": "Matthew records healing in the temple, children crying praise, the objection of chief priests/scribes, Jesus’ reply, and departure to Bethany.",
+      "interpretation_and_unknowns": "Children’s exact ages, number, faces, gestures, garments and detailed architecture are unknown. Three school-age children are illustrative, not a census. The adults are unnamed representatives, not a new identified Caiaphas.",
+      "age_and_appearance": "Christ is in His adult mortal ministry, conventionally early thirties; precise age/date unestablished by this passage. Children and adult questioners have no recorded exact ages.",
+      "scene_uniqueness": "Children voicing praise and the response to their critics is a distinct action from temple cleansing, merchant conversation or temple healing, and from existing generic Christ/child welcome scenes.",
+      "closest_comparators": [
+        "mm-temple-compassion",
+        "mm-temple-tables",
+        "healing-in-temple-courts",
+        "children-gather-close",
+        "settle-heart/09-children-speak"
+      ],
+      "proposed_caption": "The children’s voices rise in the temple as Jesus answers those who question their praise. Read the exchange in Matthew 21:14–16.",
+      "reference_inputs": [
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\heroes\\home-christ-signature-approved-20260907.png",
+          "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+          "role": "Exact owner-approved Jesus identity. Actual pixels required; expression adapts to scene. Not an authenticated historical portrait."
+        }
+      ],
+      "robe_color": "very pale cool lavender-blue-gray with faint blue-violet cast; no pink, red, plum-brown or warm rose",
+      "prompt": "Use the actual attached Home portrait only for Jesus Christ’s exact recognizable face. Show Matthew 21:15–16 in the Jerusalem temple precinct: three school-age children in the near foreground lift their faces toward Jesus and speak their praise with open, joyful but natural mouths. Jesus stands at one side and turns toward two distinct adult religious questioners, acknowledging the children with calm firm warmth. The questioners listen seriously, with no ethnic caricature, villain costumes or sneers. The children are actively praising, not waiting for a blessing, sitting in a teaching circle, showing a treasure or being healed. Restrained plausible Second Temple stone columns and court, no overturned table, coins, whip, animals or healing patient. Jesus wears an undyed tunic and a very pale cool lavender-blue-gray mantle, with a faint blue-violet cast and no dusty pink, red, plum-brown or warm rose cast. All people fully and modestly dressed in plausible woven first-century garments. Mortal ministry before the Crucifixion: no nail scars, wounds or supernatural glow. Do not print the words of their praise on the image. Create one new 1536x1024 landscape image with convincing live-action photographic clarity, lifelike skin, natural woven or contemporary fabrics, believable anatomy and individual scene-appropriate expressions. Keep essential faces and hands within generous 3:2 margins. No painting, CGI, waxy skin, glamour, halos, writing, watermark or collage.",
+      "prompt_sha256": "b4d4f4544b714bec9bcab3d19ce91b9aa7e40dd4ad9d18a69d9baeb69cbeb83e",
+      "status": "REQUIRES_EXACT_FERMI_AND_NEWTON_PREFLIGHT",
+      "finished_pixels": "NOT_GENERATED"
+    },
+    {
+      "key": "CH2",
+      "owner_route": "art-study/suffer-the-little-children.html",
+      "owner_section": "proposed-ch2",
+      "title": "A Game Everyone Can Join",
+      "kind": "modern application",
+      "depicts_christ": false,
+      "source_passages": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/9?lang=eng",
+          "verses": "33–37",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-mark-9.txt"
+        },
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng",
+          "verses": "13–16",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-mark-10.txt"
+        }
+      ],
+      "source_establishes": "Christ teaches receiving a child and removes barriers to children approaching Him. An accessible shared game is a present-day way to consider welcome.",
+      "interpretation_and_unknowns": "No diagnosis, guaranteed inclusion outcome or historical event is claimed; chair use and ages are fictional casting details.",
+      "age_and_appearance": "Fictional contemporary people; approximate life stages in prompt are casting choices, not historical age claims.",
+      "scene_uniqueness": "A wheelchair user actively rolling a tabletop ball differs from adult accessibility route planning, a drawing-table welcome and sitting in a listening circle.",
+      "closest_comparators": [
+        "art-study children preview drawing table",
+        "rt-accessible-home",
+        "collection-neighbor-01"
+      ],
+      "proposed_caption": "The ball crosses a table where each child has a place to play. Mark 9:33–37 invites us to consider what it means to receive a child.",
+      "reference_inputs": [],
+      "robe_color": null,
+      "prompt": "At an indoor community recreation room, three children play a cooperative tabletop game with one large soft ball. A child using a wheelchair at the accessible table edge rolls the ball gently across the level surface to a child seated opposite; a third child waits at the side with hands resting on the table. An adult nearby moves an unused chair away so the route behind the wheelchair stays clear. The wheelchair user directs the play with an engaged expression, not a passive person being congratulated. No standing out of the chair, unsafe transfers, gripping a child, acrobatics, rope entanglement, pity or medical cure. The table has clear knee space and all faces look naturally toward the rolling ball or the next player. Create one new 1536x1024 landscape image with convincing live-action photographic clarity, lifelike skin, natural woven or contemporary fabrics, believable anatomy and individual scene-appropriate expressions. Keep essential faces and hands within generous 3:2 margins. No painting, CGI, waxy skin, glamour, halos, writing, watermark or collage. All people are fictional unnamed contemporary people, not Jesus, a known religious figure, or a likeness transferred from existing artwork. Modest ordinary clothing, natural available light, no commercial branding, private readable information or supernatural apparition. Show dignity and active participation rather than a staged charity portrait.",
+      "prompt_sha256": "4f32a9dcef143d1d83f863de01453c86d51ecd6c1e85e7bb5fc0ec553fef087c",
+      "status": "REQUIRES_EXACT_FERMI_AND_NEWTON_PREFLIGHT",
+      "finished_pixels": "NOT_GENERATED"
+    },
+    {
+      "key": "CH3",
+      "owner_route": "art-study/suffer-the-little-children.html",
+      "owner_section": "proposed-ch3",
+      "title": "A Small Thing Worth Caring For",
+      "kind": "modern application",
+      "depicts_christ": false,
+      "source_passages": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/9?lang=eng",
+          "verses": "36–37",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-mark-9.txt"
+        },
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/1?lang=eng",
+          "verses": "19–22",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-james-1.txt"
+        }
+      ],
+      "source_establishes": "Receiving a child and attending before speaking provide the interpretive connection; scripture does not narrate this household repair.",
+      "interpretation_and_unknowns": "Grandmother/child relationship is part of fictional staging, not a fact inferred from a real photograph. The scripture is not a promise that objects can always be restored.",
+      "age_and_appearance": "Fictional contemporary people; approximate life stages in prompt are casting choices, not historical age claims.",
+      "scene_uniqueness": "Repairing a child’s toy with the child participating differs from adult garment work, a parent listening to a story and instruction in shoe tying.",
+      "closest_comparators": [
+        "families-patient-small-task",
+        "children-listen-at-home-20260919",
+        "collection giving-attention bridge model"
+      ],
+      "proposed_caption": "The child watches while the torn seam is closed. Taking a small concern seriously can be one way to give a child our attention.",
+      "reference_inputs": [],
+      "robe_color": null,
+      "prompt": "At a home worktable an adult grandmother is carefully closing a small opened seam on a child’s plain cloth toy bear. The young child sits beside her holding a spool of thread away from the needle and watching with absorbed concern. The toy stays on the table, the needle is controlled only by the adult, and hands are clearly separated. Show patient attention to something important to this child, not a lesson in tying shoes, a wooden bridge model, a child drawing, sharing a stone or a family portrait. Ordinary modern clothing and a quiet lamp with daylight at the window. No recognizable branded toy character, dramatic crying or miracle. Create one new 1536x1024 landscape image with convincing live-action photographic clarity, lifelike skin, natural woven or contemporary fabrics, believable anatomy and individual scene-appropriate expressions. Keep essential faces and hands within generous 3:2 margins. No painting, CGI, waxy skin, glamour, halos, writing, watermark or collage. All people are fictional unnamed contemporary people, not Jesus, a known religious figure, or a likeness transferred from existing artwork. Modest ordinary clothing, natural available light, no commercial branding, private readable information or supernatural apparition. Show dignity and active participation rather than a staged charity portrait.",
+      "prompt_sha256": "6270dc81372733391b982864137c760a023a16bc9cf0d1badcb3cbcb119a4f19",
+      "status": "REQUIRES_EXACT_FERMI_AND_NEWTON_PREFLIGHT",
+      "finished_pixels": "NOT_GENERATED"
+    },
+    {
+      "key": "CH4",
+      "owner_route": "art-study/suffer-the-little-children.html",
+      "owner_section": "proposed-ch4",
+      "title": "Learning to Share",
+      "kind": "modern application",
+      "depicts_christ": false,
+      "source_passages": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng",
+          "verses": "13–16",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\bofm-mosiah-4.txt"
+        }
+      ],
+      "source_establishes": "Benjamin connects peaceful family life, meeting children’s needs and teaching them to love and serve one another.",
+      "interpretation_and_unknowns": "The school setting and snack are modern application. Do not assert hunger or a medical need; no specific food recommendation is intended.",
+      "age_and_appearance": "Fictional contemporary people; approximate life stages in prompt are casting choices, not historical age claims.",
+      "scene_uniqueness": "Peer-to-peer sharing at a school lunch differs from adult pantry, crowd feeding and family baskets or charitable distribution.",
+      "closest_comparators": [
+        "service-missionaries-food-pantry",
+        "plan-of-salvation/burdens",
+        "children-listen-at-home-20260919"
+      ],
+      "proposed_caption": "One child offers a spare snack to a classmate. Mosiah 4:13–16 connects caring for children with teaching them to love and serve one another.",
+      "reference_inputs": [],
+      "robe_color": null,
+      "prompt": "At a present-day school lunch table, one school-age child has opened a plain lunchbox and taken out one spare snack packet. The child offers that still-sealed packet across the table to a classmate who reaches to receive it. The packet remains visibly unopened throughout this single moment; nobody tears it open. Both have ordinary lunches already in front of them; do not portray starvation, humiliation or a charitable performance. A supervising adult in the background has a relaxed attentive posture. Show the actual moment of offering and receiving, friendly mutual eye contact, modest school clothes and natural hands. No brand labels, readable allergy or private records, religious apparition, coins, adult pantry queue or sacramental bread. No biting or feeding another child by hand. Create one new 1536x1024 landscape image with convincing live-action photographic clarity, lifelike skin, natural woven or contemporary fabrics, believable anatomy and individual scene-appropriate expressions. Keep essential faces and hands within generous 3:2 margins. No painting, CGI, waxy skin, glamour, halos, writing, watermark or collage. All people are fictional unnamed contemporary people, not Jesus, a known religious figure, or a likeness transferred from existing artwork. Modest ordinary clothing, natural available light, no commercial branding, private readable information or supernatural apparition. Show dignity and active participation rather than a staged charity portrait.",
+      "prompt_sha256": "5c5e8edbcb073c3c620ee5ed23ffe828f6eafa4fd6f9b7c7e583ba3cdd98f87f",
+      "status": "REQUIRES_EXACT_FERMI_AND_NEWTON_PREFLIGHT",
+      "finished_pixels": "NOT_GENERATED"
+    },
+    {
+      "key": "CH5",
+      "owner_route": "art-study/suffer-the-little-children.html",
+      "owner_section": "proposed-ch5",
+      "title": "Room for a Quieter Moment",
+      "kind": "modern application",
+      "depicts_christ": false,
+      "source_passages": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng",
+          "verses": "13–16",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-mark-10.txt"
+        },
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/1?lang=eng",
+          "verses": "19",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-james-1.txt"
+        }
+      ],
+      "source_establishes": "The connection is removing obstacles to welcome and attending patiently to a child. The passage does not prescribe sensory supports.",
+      "interpretation_and_unknowns": "Do not diagnose the child or present ear defenders as treatment. The child’s preference is fictional staging; accommodation and agency matter.",
+      "age_and_appearance": "Fictional contemporary people; approximate life stages in prompt are casting choices, not historical age claims.",
+      "scene_uniqueness": "Choosing hearing protection with a visible route back into a gathering differs from a generic shy-child invitation or parent listening beside a backpack.",
+      "closest_comparators": [
+        "children-welcome-shy-child",
+        "children-listen-at-home-20260919",
+        "art study drawing table"
+      ],
+      "proposed_caption": "The child chooses a quieter moment while the gathering continues nearby. A welcome can include patience with the way someone joins.",
+      "reference_inputs": [],
+      "robe_color": null,
+      "prompt": "Beside a busy community gathering, a young child has chosen a small quiet seating area visible through an open doorway. A parent sits at the child’s level and offers plain ear defenders on an open palm; the child reaches to choose them. A soft floor cushion and dimmable table lamp are nearby; no toys scattered around, no isolation room or locked door. Other families remain softly visible beyond the open doorway, with a clear return path. Child and parent meet one another’s eyes; calm attentiveness without a diagnostic label, distress spectacle or pressure to return. Ordinary modest clothing, no medical instruments, restraint, forced embrace or miracle cure. Create one new 1536x1024 landscape image with convincing live-action photographic clarity, lifelike skin, natural woven or contemporary fabrics, believable anatomy and individual scene-appropriate expressions. Keep essential faces and hands within generous 3:2 margins. No painting, CGI, waxy skin, glamour, halos, writing, watermark or collage. All people are fictional unnamed contemporary people, not Jesus, a known religious figure, or a likeness transferred from existing artwork. Modest ordinary clothing, natural available light, no commercial branding, private readable information or supernatural apparition. Show dignity and active participation rather than a staged charity portrait.",
+      "prompt_sha256": "1d96a96e8da3f99f521e8db69fb6fd6cf77ebe4a5931808488188c88f3b2a3e6",
+      "status": "REQUIRES_EXACT_FERMI_AND_NEWTON_PREFLIGHT",
+      "finished_pixels": "NOT_GENERATED"
+    },
+    {
+      "key": "BS1",
+      "owner_route": "art-study/be-still.html",
+      "owner_section": "proposed-bs1",
+      "title": "Come Apart and Rest",
+      "kind": "scripture event",
+      "depicts_christ": true,
+      "source_passages": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/6?lang=eng",
+          "verses": "30–34",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-mark-6.txt"
+        }
+      ],
+      "source_establishes": "After apostles report their work, Jesus invites rest because the comings and goings leave no time to eat. They depart by boat; the crowd later reaches the destination and He responds compassionately.",
+      "interpretation_and_unknowns": "Exact date, individual seating, boat design and number visible are unstated. Rest is an invitation, not a claim of uninterrupted leisure; preserve verses33–34 in adjacent reading.",
+      "age_and_appearance": "Adult mortal Christ, precise event age not stated. Three visible companions are mature adults from actual reference positions A/B/C; no numerical ages or named assignments. The scene does not imply that the entire apostolic company numbered three.",
+      "scene_uniqueness": "A purposeful calm departure for respite differs from storm fear, miraculous calming, fishing, walking on water and shore breakfast. Changing only weather in existing storm composition would fail.",
+      "closest_comparators": [
+        "still-storm-boat",
+        "jesus-storm-question",
+        "living-breakfast-shore-20260919",
+        "jesus-journey boat scenes"
+      ],
+      "proposed_caption": "The boat draws away from the shore after Jesus invites His companions to rest. Read Mark 6:30–34, including the people who meet them at the other side.",
+      "reference_inputs": [
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\heroes\\home-christ-signature-approved-20260907.png",
+          "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+          "role": "Exact owner-approved Jesus identity. Actual pixels required; expression adapts to scene. Not an authenticated historical portrait."
+        },
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\art-study\\full\\still-storm-boat.webp",
+          "sha256": "fdb60ec2ecdee51a24264fc53f0c1aed7cbde5d10dcaec32a6e3d8840b42911c",
+          "role": "Continuity only for three unnamed adult companions: A foreground-left headband man; B behind-left bearded man; C far-right rear man. Omit D, the lower-right foreground man. Do not alter or transfer D identity. Do not copy reference Jesus, storm, poses, frightened expressions or clothing colors. No named apostle mapping or complete apostolic headcount is claimed."
+        }
+      ],
+      "robe_color": "muted pale apricot-gray",
+      "prompt": "Use both actual attached images. The Home portrait alone controls Jesus Christ’s exact recognizable face. The storm-boat picture supplies continuity for three unnamed adult companions only: the foreground-left headband man, behind-left man and far-right rear man. Preserve those three distinct faces without claiming named apostle identities. Map A to the headband man at foreground left; B to the open-mouthed man behind A; C to the partly obscured far-right rear man behind the mast. Omit the lower-right foreground companion D entirely from the new image. Do not redesign, replace or blend his face. Home Christ is a separate fourth face; never transfer Home facial features to A, B or C, and never use the standing central figure from the storm image as a substitute Christ reference. Retain each companion's source facial structure while allowing a calm, individual expression. Do not alter a companion's face merely to make the group seem more varied. Show a different event and action: the quiet departure for rest in Mark 6:30–32. In ordinary calm daylight a wooden Galilean boat has just left a shore visible in the distance; Jesus sits securely near the bow while the three adult companions settle seated positions. Companion B rows slowly; A and C rest their hands on their own knees or a stationary bench. Show exactly Jesus plus these three companions within the picture, without additional faces, silhouettes or reflected people; this is a framed subset of the company. Christ turns toward the headband companion with gentle attentive concern; that companion returns His gaze with a tired but relieved expression. Use a wide horizontal side view, no towering mast or heroic standing pose. Jesus wears undyed linen and a muted pale apricot-gray mantle; other garments are dry plain earth-tone tunics. Mortal ministry: no healed nail marks. No storm, rain, waves crashing, fear, sleep, rebuking gesture, fish haul, charcoal fire, meal, walking on water or miraculous calm. The framing shows a few companions, not a claim that only three apostles were present. Create one new 1536x1024 landscape image with convincing live-action photographic clarity, lifelike skin, natural woven or contemporary fabrics, believable anatomy and individual scene-appropriate expressions. Keep essential faces and hands within generous 3:2 margins. No painting, CGI, waxy skin, glamour, halos, writing, watermark or collage.",
+      "prompt_sha256": "3322c5c19e4fe0e6f9bf3d57d26bc6606f6e1953992494bfd97bcebfa9a9a64c",
+      "status": "REQUIRES_EXACT_FERMI_AND_NEWTON_PREFLIGHT",
+      "finished_pixels": "NOT_GENERATED",
+      "companion_mapping": [
+        {
+          "label": "A",
+          "source_position": "foreground left",
+          "face_box_xyxy": [
+            234,
+            535,
+            396,
+            722
+          ],
+          "observable": "Dark wrapped headband, prominent side-profile nose, dense dark beard; looks upward toward center."
+        },
+        {
+          "label": "B",
+          "source_position": "behind A at left",
+          "face_box_xyxy": [
+            324,
+            424,
+            484,
+            612
+          ],
+          "observable": "Receding wet dark curls, longer face and beard, open mouth; distinct from A."
+        },
+        {
+          "label": "C",
+          "source_position": "far-right rear behind mast",
+          "face_box_xyxy": [
+            1353,
+            492,
+            1489,
+            650
+          ],
+          "observable": "Partly occluded dark-haired bearded face; upper face and hairline must remain distinct from D."
+        }
+      ],
+      "identity_review_status": "REVISED_THREE_COMPANION_PROPOSAL_REQUIRES_EXACT_FERMI_AND_NEWTON_PREFLIGHT",
+      "omitted_reference_figure": {
+        "label": "D",
+        "source_position": "lower-right foreground",
+        "reason": "Both independent reviewers held D/Home similarity. Omission only; no alteration of the existing asset or identity."
+      }
+    },
+    {
+      "key": "BS2",
+      "owner_route": "art-study/be-still.html",
+      "owner_section": "proposed-bs2",
+      "title": "A Pause in the Work",
+      "kind": "modern application",
+      "depicts_christ": false,
+      "source_passages": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/philip/4?lang=eng",
+          "verses": "4–9,11–14",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-philip-4.txt"
+        }
+      ],
+      "source_establishes": "Paul teaches prayer, thanksgiving and peace while also speaking of need and hardship; peace is not presented as material ease.",
+      "interpretation_and_unknowns": "The workroom and action are a modern application; avoid mental-health or guaranteed-outcome claims.",
+      "age_and_appearance": "Fictional contemporary people; approximate life stages in prompt are casting choices, not historical age claims.",
+      "scene_uniqueness": "Stopping a sewing machine for prayer differs from morning kitchen prayer, phone-down Bible reading, notebook contemplation and garden silence.",
+      "closest_comparators": [
+        "modern-prayer",
+        "still-phone-down-scripture-20260919",
+        "quiet-prayer"
+      ],
+      "proposed_caption": "The machine is still and the curtain can wait for a moment. Philippians 4:4–9 invites us to bring our requests to God with thanksgiving.",
+      "reference_inputs": [],
+      "robe_color": null,
+      "prompt": "In a small contemporary sewing workspace, an adult woman has switched off her sewing machine and moved both hands into her lap, away from the needle. A half-finished plain curtain remains on the worktable. She sits upright with eyes gently closed for a brief prayerful pause, shoulders relaxed and expression honest rather than blissful. The task remains visibly unfinished, and the machine is completely still. No open Bible, journal, mobile phone, kitchen breakfast, bedside grief, urgent deadline text or other person. Show ordinary work being paused, not a claim that prayer completed the work or removed anxiety. Create one new 1536x1024 landscape image with convincing live-action photographic clarity, lifelike skin, natural woven or contemporary fabrics, believable anatomy and individual scene-appropriate expressions. Keep essential faces and hands within generous 3:2 margins. No painting, CGI, waxy skin, glamour, halos, writing, watermark or collage. All people are fictional unnamed contemporary people, not Jesus, a known religious figure, or a likeness transferred from existing artwork. Modest ordinary clothing, natural available light, no commercial branding, private readable information or supernatural apparition. Show dignity and active participation rather than a staged charity portrait.",
+      "prompt_sha256": "583ccdc7d390ff8037b7552c7a9aa75ee628373f8b3dfe83e466c9c4e5491e53",
+      "status": "REQUIRES_EXACT_FERMI_AND_NEWTON_PREFLIGHT",
+      "finished_pixels": "NOT_GENERATED"
+    },
+    {
+      "key": "BS3",
+      "owner_route": "art-study/be-still.html",
+      "owner_section": "proposed-bs3",
+      "title": "Slow Enough to Hear",
+      "kind": "modern application",
+      "depicts_christ": false,
+      "source_passages": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/1?lang=eng",
+          "verses": "19–22",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-james-1.txt"
+        },
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/3?lang=eng",
+          "verses": "13–18",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-james-3.txt"
+        }
+      ],
+      "source_establishes": "James links patient hearing and restrained speech with doing the word; wisdom is peaceable and responsive.",
+      "interpretation_and_unknowns": "The relationship and task are fictional modern staging. Do not assign a hidden crisis or imply one conversation resolves all distress.",
+      "age_and_appearance": "Fictional contemporary people; approximate life stages in prompt are casting choices, not historical age claims.",
+      "scene_uniqueness": "A parent deliberately stops a manual task to hear a teenager differs from existing porch listening, mother/backpack, model bridge and generic table conversations.",
+      "closest_comparators": [
+        "families-child-heard",
+        "collection giving-attention",
+        "rt-persuasion"
+      ],
+      "proposed_caption": "The sanding block rests while he turns to listen. James 1:19–22 joins patient hearing with the work of living what we learn.",
+      "reference_inputs": [],
+      "robe_color": null,
+      "prompt": "At a dry home woodworking bench, an adult father has placed a hand sanding block flat on the bench and taken both hands away from the wooden board. His teenage daughter stands beside the workbench and begins speaking; he has turned his entire head and body toward her and listens with clear mutual eye contact. No powered tools operating, sharp blades, sawdust clouds or private text. The unfinished board and laid-down sanding block show the interruption. Both have natural individualized faces and ordinary protective clothing appropriate to a quiet hand-sanding task. No phone, drawing, model bridge, crying or automatic reassuring embrace. Create one new 1536x1024 landscape image with convincing live-action photographic clarity, lifelike skin, natural woven or contemporary fabrics, believable anatomy and individual scene-appropriate expressions. Keep essential faces and hands within generous 3:2 margins. No painting, CGI, waxy skin, glamour, halos, writing, watermark or collage. All people are fictional unnamed contemporary people, not Jesus, a known religious figure, or a likeness transferred from existing artwork. Modest ordinary clothing, natural available light, no commercial branding, private readable information or supernatural apparition. Show dignity and active participation rather than a staged charity portrait.",
+      "prompt_sha256": "ddf42651d9425fabf7704251e3962ad7046badf68fbb051b5c5048f90b7d4279",
+      "status": "REQUIRES_EXACT_FERMI_AND_NEWTON_PREFLIGHT",
+      "finished_pixels": "NOT_GENERATED"
+    },
+    {
+      "key": "BS4",
+      "owner_route": "art-study/be-still.html",
+      "owner_section": "proposed-bs4",
+      "title": "Let Peace Become a Choice",
+      "kind": "modern application",
+      "depicts_christ": false,
+      "source_passages": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/3?lang=eng",
+          "verses": "13–18",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\nt-james-3.txt"
+        },
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng",
+          "verses": "13",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\bofm-mosiah-4.txt"
+        }
+      ],
+      "source_establishes": "James associates wisdom with gentleness, mercy and peace-making; Benjamin calls for living peaceably.",
+      "interpretation_and_unknowns": "Specific noise dispute and resolution are fictional application, not a biblical event or a claim all disagreements yield easily.",
+      "age_and_appearance": "Fictional contemporary people; approximate life stages in prompt are casting choices, not historical age claims.",
+      "scene_uniqueness": "Turning a sound control in response to a neighbor is distinct from returning borrowed tools, generic reconciliation talks and correcting written records.",
+      "closest_comparators": [
+        "modern-reconciliation",
+        "exclusive tool-return",
+        "collection attendance-correction"
+      ],
+      "proposed_caption": "A small turn of the dial answers a neighbor’s request. James 3:13–18 describes wisdom through the peace and gentleness it produces.",
+      "reference_inputs": [],
+      "robe_color": null,
+      "prompt": "At an open apartment doorway, an adult resident turns the physical volume dial on a small unbranded speaker down while meeting the eyes of an adult neighbor standing in the corridor. The neighbor gestures gently toward their own ear with an open relaxed hand, not pointing angrily. Both stand comfortably apart; faces convey consideration and a respectful request. The speaker and hand on its dial are clearly visible, the door remains open, and the corridor is uncluttered. No readable display, threatening behavior, confrontation, security officer, handshake, apology sign, child or religious apparition. This is one ordinary considerate adjustment, not a dramatic dispute being solved. Create one new 1536x1024 landscape image with convincing live-action photographic clarity, lifelike skin, natural woven or contemporary fabrics, believable anatomy and individual scene-appropriate expressions. Keep essential faces and hands within generous 3:2 margins. No painting, CGI, waxy skin, glamour, halos, writing, watermark or collage. All people are fictional unnamed contemporary people, not Jesus, a known religious figure, or a likeness transferred from existing artwork. Modest ordinary clothing, natural available light, no commercial branding, private readable information or supernatural apparition. Show dignity and active participation rather than a staged charity portrait.",
+      "prompt_sha256": "3263cc84e8e9645edb660bdbde9a1e360b8d61eff9fffe82b9453886dcfc03be",
+      "status": "REQUIRES_EXACT_FERMI_AND_NEWTON_PREFLIGHT",
+      "finished_pixels": "NOT_GENERATED"
+    },
+    {
+      "key": "BS5",
+      "owner_route": "art-study/be-still.html",
+      "owner_section": "proposed-bs5",
+      "title": "He Makes Wars Cease",
+      "kind": "poetic imagery",
+      "depicts_christ": false,
+      "source_passages": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng",
+          "verses": "6–11",
+          "full_chapter_local": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\enriched-art-corrections-production-audit\\work\\gary\\ot-ps-46.txt"
+        }
+      ],
+      "source_establishes": "The psalm moves through upheaval among nations to the Lord ending war and destroying weapons before the command to be still.",
+      "interpretation_and_unknowns": "No specific battle, date, site or artifact is named by the psalm; simple materials remain interpretation. Stillness must not be reduced to personal relaxation alone.",
+      "age_and_appearance": "No people or Christ depicted.",
+      "scene_uniqueness": "Quiet disabled weapons express the psalm’s public peace context, distinct from existing lakes, closed notebooks, storm boats and nature pauses.",
+      "closest_comparators": [
+        "be-still lakeshore",
+        "still-lakeside-pause",
+        "still-storm-boat"
+      ],
+      "proposed_caption": "The bow is broken and the spear lies still beside a charred wheel. Psalm 46:6–11 turns from nations in turmoil toward the Lord who makes wars cease.",
+      "reference_inputs": [],
+      "robe_color": null,
+      "prompt": "Create one restrained photographic still life inspired by Psalm 46:6–11, especially verses 8–10. On bare ancient-looking earth lie a single broken wooden bow with slack string, one splintered spear shaft with an intact dull metal point directed away from the viewer, and part of a charred wooden chariot wheel. All objects are inert and plainly unusable; no people, bodies, blood, active fire, combat, burning buildings or triumphal flags. Soft morning daylight reveals weathered wood and quiet empty space beyond. Use plausible simple ancient materials without naming an archaeological site, nation, date or recovered artifact. This is visual reflection on the psalm’s poetry, not a purported photograph of a recorded battlefield, not a modern war scene and not a fantasy weapons poster. Create one new 1536x1024 landscape image with convincing live-action photographic clarity, natural wood, metal and earth textures, coherent object construction and physically plausible light. Keep all three inert objects within generous 3:2 margins. No people, painting, CGI, glamour, halos, writing, watermark or collage.",
+      "prompt_sha256": "c0f526f8a2a66b2df42d306322488f04b1bbc73530e35bfd8920fdb902cee1d8",
+      "status": "REQUIRES_EXACT_FERMI_AND_NEWTON_PREFLIGHT",
+      "finished_pixels": "NOT_GENERATED"
+    }
+  ],
+  "prior_plan": {
+    "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\living-christ-enriched-verification\\work\\gary\\three-study-plans-v3.json",
+    "sha256": "9f0d28898d744afac996080a63f04da30469475baef61cc8d3892ed219b1e45e"
+  },
+  "revision_notes": {
+    "scope": "Only CH1 prompt, robe_color and derived prompt_sha256 changed among scene entries. Source rows retain legacy body hashes and add explicit body/raw domains and raw file SHA256. Version/status/prior-plan/revision metadata updated.",
+    "CH1_exact_proposal_prompt_sha256": "b4d4f4544b714bec9bcab3d19ce91b9aa7e40dd4ad9d18a69d9baeb69cbeb83e",
+    "generation_clearance": false,
+    "other14_entries_preserved": true,
+    "title_preserved": "The Children’s Praise",
+    "preflight_receipts": [
+      {
+        "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\fermi\\ch1-revised-palette-preflight.json",
+        "sha256": "6c7a46a5b521862f2f667e6938a563f9d5647b1f2890bbe393d9a94939d59d75"
+      },
+      {
+        "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\newton\\ch1-palette-preflight.json",
+        "sha256": "83a697438459e08ca8ce8870c00abb2bd5df8a12bc5a81b49c5fc7be53635ada"
+      }
+    ]
+  }
+}

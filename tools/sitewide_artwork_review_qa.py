@@ -216,9 +216,15 @@ def reviewed_temple_related_hitbox(data):
 # declaration/comment must recover the prior stylesheet bytes. No global waiver.
 PICTURE_PILL_ADDITION = b"    /* Picture-panel sources share the standard pill radius, including wrapped labels. */\n    --fc-study-control-radius: 999px;\n"
 def reviewed_picture_pill_style(data):
-    return (hashlib.sha256(data).hexdigest() == '7b0c502eef4f5e5c2db7b984ce76334a1ce02cda34a861bb6a3a99075b497678'
-            and data.count(PICTURE_PILL_ADDITION) == 1
-            and hashlib.sha256(data.replace(PICTURE_PILL_ADDITION, b'', 1)).hexdigest() == '094e3c7c814476bc17653435b36de4fff53ed970fd25e3635f887717961b5714')
+    # Reverse only the reviewed explicit-track correction before checking the
+    # prior exact stylesheet and its independently preserved pill-radius delta.
+    corrected = b'grid-column: -2 / -1;'
+    if data.count(corrected) != 1 or b'grid-column: 2;' in data:
+        return False
+    prior = data.replace(corrected, b'grid-column: 2;', 1)
+    return (hashlib.sha256(prior).hexdigest() == '7b0c502eef4f5e5c2db7b984ce76334a1ce02cda34a861bb6a3a99075b497678'
+            and prior.count(PICTURE_PILL_ADDITION) == 1
+            and hashlib.sha256(prior.replace(PICTURE_PILL_ADDITION, b'', 1)).hexdigest() == '094e3c7c814476bc17653435b36de4fff53ed970fd25e3635f887717961b5714')
 
 def reviewed_scoped_interface_style(name, data):
     data = historical_style_bytes(data)
@@ -594,6 +600,7 @@ def main():
     check(reviewed_picture_pill_style(picture_pill_bytes), 'Picture source pills differ from exact scoped reviewed change')
     check(not reviewed_picture_pill_style(picture_pill_bytes.replace(b'999px;', b'10px;', 1)), 'Picture pill radius mutation escaped')
     check(not reviewed_picture_pill_style(picture_pill_bytes+b'\n.x{height:1px}'), 'Unrelated picture stylesheet mutation escaped')
+    check(not reviewed_picture_pill_style(picture_pill_bytes.replace(b'grid-column: -2 / -1;', b'grid-column: 2;', 1)), 'Implicit action-track regression escaped')
     excluded_styles.add('artwork-actions.css')
     excluded_styles.add('eternal-marriage-study.css')
     excluded_styles.update(SCOPED_INTERFACE_STYLES)

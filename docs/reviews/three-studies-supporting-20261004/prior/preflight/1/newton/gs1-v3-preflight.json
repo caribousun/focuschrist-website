@@ -1,0 +1,22 @@
+{
+  "reviewer": "Newton",
+  "result": "PASS_EXACT_PREFLIGHT",
+  "proposal_sha256": "b79b320ab589c9da7c06d60ee027a14ee4311803a2c506f6cfe192d6200d86e1",
+  "prompt_sha256": "f63fb06082e78aac459ba3822cc26c0d8298b0dd7f32eaed0731c76f72454a65",
+  "references": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\full-site-enriched-review-continuation\\work\\gary\\generated\\gs1-candidate-v2.png",
+      "sha256": "5b1518cc5f3ae639a7ad787f8c9374116fb7abbfeb31a741e3edfe08ca3378dc",
+      "role": "Image 1 exact edit target; only wrist marks change."
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\heroes\\home-christ-signature-approved-20260907.png",
+      "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+      "role": "Image 2 actual approved Home identity only; no portrait pose/background transfer."
+    }
+  ],
+  "actual_reference_pixels_inspected": true,
+  "finding": "Actual GS1v2 wrists have long pale parallel or wrapping bands. Exact prompt constrains replacement to one compact fully healed oval scar at each exposed wrist, preserves hidden palms, approved recognizable face and all scene anatomy. Actual Home reference independently inspected. No conflict found with post-Resurrection mandate; no source claim of archaeological nail placement.",
+  "generation_authorization": false,
+  "limits": "Preflight only; root must authorize generation after dual concurrence. Finished actual pixels require fresh review; no SITE, publication or owner aesthetic acceptance."
+}

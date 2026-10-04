@@ -1,0 +1,11 @@
+{
+  "reviewer": "Newton",
+  "result": "PASS_EXACT_PREFLIGHT",
+  "proposal_sha256": "77ddf12396398786745c9390c2995d53e90b332450b6784ff5cd0a55ad4056b0",
+  "prompt_sha256": "279726fd41664263524702ae282abd83e42940dc7f30632f2046e824b2d38f48",
+  "input_sha256": "1cfe585d868902f317580df497b86d42e87e56c7259e9d650d1f06bb75c5ada0",
+  "actual_pixels_inspected": true,
+  "finding": "Actual adult upper forehead and crown are clipped by frame, unlike CH3 whose full face is visible. Narrow wider-framing repair explicitly preserves all four people, child agency, one blue ball, task gaze, wheelchair supports and table access, chair-clearing action and no cure implication. Five-percent background above complete adult crown is measurable. No new scene/source assertion or named likeness introduced.",
+  "generation_authorization": false,
+  "limits": "Root authorization and dual exact preflight required; actual generated pixels and assembled native display remain separate mandatory reviews."
+}

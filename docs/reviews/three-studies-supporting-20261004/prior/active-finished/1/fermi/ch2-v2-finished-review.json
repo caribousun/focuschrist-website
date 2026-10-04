@@ -1,0 +1,18 @@
+{
+  "stage": "FINISHED_PIXEL_REVIEW",
+  "prompt_sha256": "279726fd41664263524702ae282abd83e42940dc7f30632f2046e824b2d38f48",
+  "candidate_sha256": "12ac73978b43eed0dc24db02529424d7d2ac2338494291716b7a6dc9abb6006b",
+  "mandates_read": [
+    "AGENTS.md",
+    "docs/historical-character-identity.md",
+    "docs/focuschrist-enrichment-and-stewardship-prompt.md"
+  ],
+  "candidate": "work/gary/generated/ch2-candidate-v2.png",
+  "reviewer": "Fermi",
+  "concurrence": "Exact finished image follows applicable framing, identity-preservation, expression, anatomy and contemporary-application requirements within this image-only scope.",
+  "result": "PASS",
+  "key": "CH2v2",
+  "finding": "Independent full v2 pixels compared with actual v1. Adult complete crown now begins around y58 in1024 high image, meeting roughly5% upper background; all four faces and essential hands fit. Three fictional child identities, adult face and clothes, one blue ball, active wheelchair-user play, supported seated posture/feet and clear table knee space preserved. Adult still clears empty chair without gripping child. Hands remain separate and coherent, gaze/expressions fit cooperative play. Contemporary room remains photographic. Exact framing defect resolved.",
+  "actual_pixels_inspected": true,
+  "limitations": "Requires Newton exact concurrence and root assembled desktop/phone/source/candidate/release checks. No owner aesthetic or production acceptance."
+}

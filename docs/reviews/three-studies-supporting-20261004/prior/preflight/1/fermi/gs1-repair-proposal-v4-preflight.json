@@ -1,0 +1,33 @@
+{
+  "generation_clearance": false,
+  "proposal_sha256": "14e6389f52b3c243ae7132003dde33beda58fee56539c2dd0539ec1e88da7579",
+  "version": 4,
+  "reviewer": "Fermi",
+  "stage": "EXACT_PREFLIGHT",
+  "prompt_matches": true,
+  "references": [
+    {
+      "sha256": "71f7514766914a946fb1983af4f0dc072ddf89fd8fc0e5a37026fa431599116b",
+      "matches": true,
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\three-art-studies-enriched-continuation\\work\\gary\\generated\\gs1-candidate-v3.png",
+      "role": "Image 1 exact edit target; only anatomical right wrist at screen left changes."
+    },
+    {
+      "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+      "matches": true,
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\heroes\\home-christ-signature-approved-20260907.png",
+      "role": "Image 2 actual Home identity verification only."
+    }
+  ],
+  "finding": "Proposal incorrectly asserts opposite wrist accepted. Fermi v3 receipt held residual thin wrapping texture on near/screenright wrist as well as far bands. This prompt freezes the disputed near wrist. Root must independently resolve near-wrist mark as natural crease or residual scar, or revise prompt to retain oval but clear residual band lines on both wrists. Other preservation and far-wrist repair clauses follow mandate.",
+  "actual_targets_and_references_viewed": true,
+  "key": "GS1",
+  "mandates_read": [
+    "AGENTS.md",
+    "docs/historical-character-identity.md",
+    "docs/focuschrist-enrichment-and-stewardship-prompt.md"
+  ],
+  "limitations": "Preflight only, exact Newton concurrence and root authorization needed; no finished-pixel/publication/owner acceptance.",
+  "result": "HOLD",
+  "prompt_sha256": "5dcaa5193eec03fb8dbc1e12b51dd577194953f7c0c4b82c5f9fd05d418cccf5"
+}

@@ -52,7 +52,7 @@
 
 @media (min-width: 821px) {
     .fc-site .fc-topic-artwork-detail .fc-artwork-detail-actions > [data-artwork-detail-close] {
-        grid-column: 2;
+        grid-column: -2 / -1;
     }
 }
 
