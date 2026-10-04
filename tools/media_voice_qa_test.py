@@ -1,6 +1,7 @@
 """Prevent visitor caption production notes without banning historical uncertainty."""
 import tempfile
 import unittest
+import json
 from pathlib import Path
 from media_voice_qa import MediaVoiceParser, voice_matches, public_pages
 
@@ -30,6 +31,17 @@ class MediaVoiceRegression(unittest.TestCase):
                      'The record does not establish which room the visitors entered.',
                      'The family imagined what their new home might be like.']:
             self.assertFalse(self.flagged('<figcaption data-picture-panel-copy hidden><p>'+copy+'</p></figcaption>'))
+    def test_history_source_regeneration_preserves_footer_only_disclosure(self):
+        from build_history_stories import DATA, render
+        stories=json.loads((DATA/'stories.json').read_text(encoding='utf-8'))['stories']
+        ready=json.loads((DATA/'art-ready.json').read_text(encoding='utf-8'))
+        for story in stories:
+            generated=render(story,ready)
+            self.assertEqual(self.flagged(generated),[],story['id'])
+        miller=next(story for story in stories if story['id']=='eleazer-miller')
+        hero=miller['hero_unit_id']
+        ready[hero]['caption']+=' This room imagines a quiet moment within that longer search.'
+        self.assertTrue(self.flagged(render(miller,ready)))
     def test_pioneer_music_visible_and_detail_notes_are_covered(self):
         note='This scene imagines the hymn’s hope in the daily work of continuing together.'
         self.assertTrue(self.flagged('<article class="pioneer-music-card"><p>'+note+'</p></article>'))
