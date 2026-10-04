@@ -125,7 +125,7 @@ def build():
                     parts.append('<div class="research-feature-images">'+''.join(visual(record) for record in feature['visuals'])+'</div>')
                     for paragraph in feature.get('explanation',[]):
                         parts.append(f'<p class="research-feature-explanation">{inline(paragraph)}</p>')
-                    parts.append('<div class="research-feature-limits"><h4>What this can—and cannot—tell us</h4><p>'+inline(feature['limits'])+'</p></div></article>')
+                    parts.append('<div class="research-feature-limits"><h4>What this can and cannot tell us</h4><p>'+inline(feature['limits'])+'</p></div></article>')
                     continue
                 if pending and not trait_count:flush()
                 pending.append(f'<article class="research-trait"><h3>{html.escape(b["title"])}</h3><p><strong>What is visible.</strong> {inline(b["observed"])}</p><p><strong>Evidence.</strong> {inline(b["evidence"])}</p><p><strong>Decision.</strong> {inline(b["verdict"])}</p></article>');trait_count+=1
