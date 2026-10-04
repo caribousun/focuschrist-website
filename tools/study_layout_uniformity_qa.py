@@ -285,11 +285,11 @@ for page, (stylesheet, rail) in PAGES.items():
     if page == "joseph-smith-likeness.html":
         navs = [n for n in nodes if n.tag == "nav" and n.has("likeness-path")]
         links = [n for nav in navs for n in nav.walk() if n.tag == "a"]
-        require(len(navs) == 1 and len(links) == 6, "Joseph: six directory pills required")
+        require(len(navs) == 1 and len(links) == 7, "Joseph: seven directory pills required")
         ids = {n.attrs.get("id") for n in nodes}
         require(all(n.has("fc-button") and n.attrs.get("href", "").startswith("#") and n.attrs["href"][1:] in ids for n in links),
                 "Joseph: directory pills must use shared buttons and existing section targets")
-        require(len({n.attrs.get("href") for n in links}) == 6, "Joseph: directory destinations must be unique")
+        require({n.attrs.get("href") for n in links} == {"#living-portrait", "#death-masks", "#portraits-from-life", "#our-portrait", "#face-in-motion", "#continue-study", "#joseph-family-life"}, "Joseph: directory destinations must be unique")
 
 contract('jesus-journey.css', 'body.fc-jesus-journey .jj-wrap', {
     'width': 'min(var(--fc-standard,1040px),calc(100% - 2 * var(--fc-body-gutter,18px)))',
@@ -339,4 +339,4 @@ if '--self-test' in sys.argv:
 
 if ERRORS:
     raise SystemExit("\n".join(ERRORS))
-print("STUDY LAYOUT QA PASS: five shared rails, Joseph spacing and six centered study pills; all 82 journey consumers use full-width reading and current CSS; rendered geometry requires browser review")
+print("STUDY LAYOUT QA PASS: five shared rails, Joseph spacing and seven centered study pills; all 82 journey consumers use full-width reading and current CSS; rendered geometry requires browser review")
