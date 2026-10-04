@@ -81,6 +81,11 @@ def card(item, preview=None):
     image=''
     if preview:
         image=f'<img class="jj-card-preview" src="/{E(preview["thumbnail"])}" width="{preview["width"]}" height="{preview["height"]}" loading="lazy" decoding="async" alt="{E(preview["alt"])}">'
+    # Explicit source-bearing cards use sibling links, never nested anchors.
+    if len(item) == 4:
+        refs = item[3]['refs']
+        if not refs: raise ValueError('Source-bearing card needs explicit references')
+        return f'<div class="jj-card"><a href="{E(item[0])}">{image}<h3>{E(item[1])}</h3></a><p>{prose(item[2],refs)}</p><a class="jj-card-action" href="{E(item[0])}">Open study →</a></div>'
     return f'<a class="jj-card" href="{E(item[0])}">{image}<h3>{E(item[1])}</h3><p>{E(item[2])}</p><span class="jj-card-action">Open study →</span></a>'
 
 def reference_art(block,registry,page):

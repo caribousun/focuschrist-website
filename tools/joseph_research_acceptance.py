@@ -8,6 +8,8 @@ REJECTED_ARTWORK_BADGES = ('New artistic interpretation', 'New artwork · histor
 ARTWORK_FOOTER_DISCLOSURE = ('Artwork on focusChrist includes AI-generated artistic interpretations. '
     'Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.')
 REJECTED_SCENE_BOILERPLATE = (
+    'Jesus does not specify the merchandise or the particular transactions',
+    "this scene illustrates the story's action without claiming to show the devil's physical appearance",
     'without claiming a particular family dispute or its outcome',
     'without claiming to display everything he owned',
     'This is an illustration of His parable.',

@@ -31,7 +31,9 @@ class Page(HTMLParser):
         if a.get('data-journey-art'):self.art.append(a['data-journey-art'])
 
 def verify(pages,registry):
-    errors=[];owners={};missing=[];hashes={}
+    from journey_card_sources_qa import check as source_card_check, self_test as source_card_self_test
+    source_card_self_test()
+    errors=source_card_check((ROOT/'jesus-christ/parables/stewardship.html').read_text(encoding='utf-8'));owners={};missing=[];hashes={}
     # The current caption includes both imagined ease (19) and death (20).
     # Historical generation/review records about ease alone retain verse 19.
     if registry.get('rich-fool-03',{}).get('refs') != [['nt/luke/12','Luke 12:19–20','19-20']]:

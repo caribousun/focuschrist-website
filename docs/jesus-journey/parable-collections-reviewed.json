@@ -1191,7 +1191,8 @@
               [
                 "/jesus-christ/parables/laborers-vineyard.html",
                 "The Laborers in the Vineyard",
-                "Different starting times expose resentment at generosity. Read with Matthew 19:27–30 and notice the question about following Jesus that leads into the story."
+                "Different starting times expose resentment at generosity. Read with {0} and notice the question about following Jesus that leads into the story.",
+                {"refs": [["nt/matt/19", "Matthew 19:27–30", "27-30"]]}
               ],
               [
                 "/jesus-christ/parables/wicked-tenants.html",
