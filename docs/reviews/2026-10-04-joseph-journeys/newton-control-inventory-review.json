@@ -1,0 +1,44 @@
+{
+  "concur": true,
+  "scope": "Deliberate control inventory migration only; no selector or assertion changes",
+  "candidate_base": "81922bf594c5536294cce26e010e3f89fd6010b6",
+  "sha256": "4779578a995e348ffc54463f6f430516261887ac1b4bec626b9d4421bfe353d6",
+  "changed_selectors": [
+    ".fc-study-visual-sources a:not(.fc-button--primary)",
+    ".fc-study-nav:not(.jj-local-nav) a:not(.fc-button--primary)"
+  ],
+  "route_counts": {
+    "WHO_sources": [
+      1,
+      45
+    ],
+    "bridge_sources": [
+      26,
+      0
+    ],
+    "research_sources": [
+      158,
+      91
+    ],
+    "WHO_navigation": [
+      6,
+      8
+    ]
+  },
+  "source_count": [
+    1013,
+    964
+  ],
+  "navigation_count": [
+    187,
+    189
+  ],
+  "validation": {
+    "command": "node tools/study_link_controls_qa.js",
+    "exit_code": 0,
+    "canonical_pages": 130,
+    "named_control_families": 12,
+    "note": "jsdom CSS parse diagnostics retained; assertions and command passed"
+  },
+  "full_group_status": "Gary rerunning after this final inventory mutation; previous35/36 result preserved separately"
+}
