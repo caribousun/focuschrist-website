@@ -24,7 +24,7 @@ TOPIC_DESKTOP_VERSION = "20260929-home-height-1"
 
 STUDY_CENTER_APPENDIX = b'\n/* Owner-requested centered study choices; chapter picker keeps its own layout. */\nbody.fc-site .fc-study-nav:not(.jj-local-nav) { justify-content: center; }\n'
 STUDY_CENTER_SHA256 = '17d2b86bc2afc65b8133b6cc2831028b02590fe6874a13098345f5f5a1ec35fc'
-STUDY_CENTER_VERSION = "20260930-study-alignment-1"
+STUDY_CENTER_VERSION = "20261004-source-control-rows-2"
 
 # Owner-authorized Joseph family study appendix. Full bytes and original prefix
 # are pinned; no existing artwork or anchor geometry is exempted.
@@ -58,6 +58,16 @@ def before_joseph_life(data):
     return data
 
 
+SOURCE_ROWS_APPENDIX = b'\n/* Related source controls share each row instead of forming ragged steps.\n   Keep single citations compact and preserve the CFM reading-link treatment. */\nbody.fc-site :is(.fc-study-visual-sources, .pioneer-source-links) > a[hidden] {\n    display: none !important;\n}\nbody.fc-site:not(.cfm-page) :is(.fc-study-visual-sources, .pioneer-source-links) {\n    align-items: stretch;\n}\nbody.fc-site:not(.cfm-page) :is(.fc-study-visual-sources, .pioneer-source-links) > a:not(.fc-button--primary):not([hidden]) {\n    flex: 1 1 16rem;\n    margin: 0;\n}\nbody.fc-site:not(.cfm-page) :is(.fc-study-visual-sources, .pioneer-source-links) > a:not(.fc-button--primary):not([hidden]):only-child {\n    flex: 0 1 auto;\n}\n@media (max-width: 600px) {\n    body.fc-site:not(.cfm-page) :is(.fc-study-visual-sources, .pioneer-source-links) > a:not(.fc-button--primary):not([hidden]) {\n        flex-basis: 100%;\n        width: 100%;\n    }\n}\n'
+SOURCE_ROWS_SHA256 = '52fa1665567cb5e7b7583a6ba8130e303737464da4a325f0b96be50ea026cc71'
+
+def before_source_rows(data):
+    if hashlib.sha256(data).hexdigest() == SOURCE_ROWS_SHA256 and data.endswith(SOURCE_ROWS_APPENDIX):
+        prior = data[:-len(SOURCE_ROWS_APPENDIX)]
+        if hashlib.sha256(prior).hexdigest() == STUDY_CENTER_SHA256:
+            return prior
+    return data
+
 def before_study_center(data):
     if hashlib.sha256(data).hexdigest() == STUDY_CENTER_SHA256 and data.endswith(STUDY_CENTER_APPENDIX):
         return data[:-len(STUDY_CENTER_APPENDIX)]
@@ -87,6 +97,7 @@ def historical_style_bytes(data):
     reviewed bytes. The mandatory current-file checks separately reject stale
     files and any mutation to the approved anchor-only transformation.
     """
+    data = before_source_rows(data)
     data = before_journey_picker(before_joseph_life(before_study_center(before_topic_desktop(before_search_hitbox(data)))))
     digest = hashlib.sha256(data).hexdigest()
     record = next((r for r in FILES.values() if r['after_sha256'] == digest), None)
@@ -122,6 +133,8 @@ def reviewed_anchor_style(name, data):
         if hashlib.sha256(data).hexdigest() != JOSEPH_LIFE_SHA256: return False
         data = before_joseph_life(data)
     if name == 'site-system.css':
+        if hashlib.sha256(data).hexdigest() != SOURCE_ROWS_SHA256: return False
+        data = before_source_rows(data)
         if hashlib.sha256(data).hexdigest() != STUDY_CENTER_SHA256: return False
         data = before_study_center(data)
     if name == "topic-study-pages.css":

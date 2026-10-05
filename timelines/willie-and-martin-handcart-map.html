@@ -11,7 +11,7 @@
 <meta name="robots" content="index, follow"><link rel="canonical" href="https://focuschrist.com/timelines/willie-and-martin-handcart-map.html">
 <meta property="og:title" content="Willie and Martin Handcart Company Journey Map"><meta property="og:description" content="Follow the Willie and Martin handcart companies through 33 stops, with a journey map, stories, and Church history sources.">
 <meta property="og:url" content="https://focuschrist.com/timelines/willie-and-martin-handcart-map.html"><meta property="og:image" content="https://focuschrist.com/assets/timelines/handcart-journey.webp"><meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="../site-system.css?v=20260930-study-alignment-1">
+<link rel="stylesheet" href="../site-system.css?v=20261004-source-control-rows-2">
 <script src="../site-common.js?v=20261002-timeline-1" defer></script>
 <style>
   :root{
@@ -183,7 +183,7 @@
 <link rel="stylesheet" href="../timeline-workspace.css?v=20261002-correction-1">
 <script src="../timeline-workspace.js?v=20261003-uniform-1" defer></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<link rel="stylesheet" href="../timeline-mobile-study.css?v=20261002-correction-1">
+<link rel="stylesheet" href="../timeline-mobile-study.css?v=20261004-terrain-recovery-1">
 <link rel="stylesheet" href="../timeline-reader.css?v=20261003-uniform-1">
 <link rel="stylesheet" href="../timeline-images.css?v=20261002-correction-1">
 <script src="../timeline-images.js?v=20261002-correction-1" defer></script>
@@ -370,6 +370,10 @@
 
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.css">
+<script src="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.js"></script>
+<script src="https://unpkg.com/@maplibre/maplibre-gl-leaflet@0.1.4/leaflet-maplibre-gl.js"></script>
+<script src="../timeline-terrain.js?v=20261004-english-terrain-1"></script>
 <script>
 (function(){
   "use strict";
@@ -618,11 +622,13 @@
   function showFallback(){
     if(closed) return;
     mapUnavailable = true;
-    if(renderer) renderer.hidden = true;
+    if(renderer) renderer.style.visibility = 'hidden';
     if(mapEl.querySelector('.map-fallback')) return;
     var fallback = document.createElement('div');
     fallback.className = 'map-fallback';
+    if(leafletMap){fallback.style.position='absolute';fallback.style.inset='0';fallback.style.zIndex='450';fallback.style.overflow='auto';}
     fallback.setAttribute('role','status');
+    fallback.setAttribute('tabindex','0');
     fallback.textContent = 'The interactive map could not load here. Every stop on this map is listed in order beside this panel, with its place, date, and story, so the full journey can still be followed from Liverpool to Salt Lake City.';
     mapEl.appendChild(fallback);
   }
@@ -632,7 +638,7 @@
     if(!mapUnavailable) return;
     mapUnavailable = false;
     var fallback = mapEl.querySelector('.map-fallback');if(fallback) fallback.remove();
-    renderer.hidden = false;
+    renderer.style.visibility = '';
     leafletMap.invalidateSize({pan:false});
   }
   function stopIcon(index){
@@ -696,13 +702,13 @@
       renderer=document.createElement('div');renderer.style.width='100%';renderer.style.height='100%';mapEl.appendChild(renderer);
       try{
         if(typeof L==='undefined')throw new Error('Leaflet unavailable');
-        leafletMap=L.map(renderer,{scrollWheelZoom:false}).setView([41,-55],3);
+        leafletMap=L.map(renderer,{scrollWheelZoom:false,maxZoom:19}).setView([41,-55],3);
   // Keep live provider credits visible outside the interactive map canvas.
   if(leafletMap.attributionControl&&leafletMap.attributionControl.getContainer){var attribution=leafletMap.attributionControl.getContainer();attribution.classList.add('timeline-map-attribution');mapEl.after(attribution);}
         var errors=0,loaded=0;
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> contributors'})
+        FCTerrainLayer()
           .on('tileload',function(){loaded++;restoreMap();})
-          .on('tileerror',function(){if(++errors>=3 && !loaded)showFallback();}).addTo(leafletMap);
+          .on('tileerror',function(){loaded=0;if(++errors>=3)showFallback();}).addTo(leafletMap);
         tileTimer=setTimeout(function(){if(!loaded)showFallback();},10000);
         overlays.forEach(function(overlay){var paint=overlay.layers[0].paint;L.geoJSON(overlay.data,{style:{color:paint['line-color'],weight:paint['line-width'],opacity:paint['line-opacity'],dashArray:paint['line-dasharray']?paint['line-dasharray'].map(function(n){return n*paint['line-width'];}).join(' '):null}}).addTo(leafletMap);});
         STOPS.forEach(function(stop,index){

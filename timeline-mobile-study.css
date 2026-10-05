@@ -35,6 +35,7 @@ body.fc-timeline-experience .timeline-mobile .timeline-map-dock [data-timeline-p
 .timeline-mobile.timeline-map-collapsed .timeline-map-dock [data-timeline-pane="map"],.timeline-mobile.timeline-map-collapsed .timeline-map-interact{display:none!important}
 .timeline-mobile .timeline-map-unavailable{position:static}
 .timeline-mobile .timeline-map-unavailable #map{height:auto!important;min-height:0!important}
+.timeline-mobile .timeline-map-unavailable #map:has(>.leaflet-container):has(>.map-fallback){height:240px!important;min-height:240px!important}
 .timeline-mobile .timeline-map-unavailable #map:has(>.map-fallback)>[hidden]{display:none!important}
 .timeline-mobile .timeline-map-unavailable #mapFallback{position:static!important;padding:16px}
 .timeline-mobile .timeline-map-unavailable .timeline-map-interact{display:none}

@@ -204,7 +204,18 @@ OWNER_20260929_STYLES = {
     'desktop-hero-repairs.css': ('36270651fecfb57cb371580f1fd4df3c2910942665e356245ddf451e5c4d9ecb', ['answers/abrahamic-covenant.html', 'answers/look-unto-me-doctrine-and-covenants-6-36.html', 'answers/plan-of-salvation.html', 'art-study/be-still.html', 'art-study/suffer-the-little-children.html', 'art-study/the-good-shepherd.html', 'birth-of-christ.html', 'book-of-mormon-evidences.html', 'general-conference.html', 'joseph-smith-likeness.html', 'joseph-smith-portrait-research.html']),
     'temples-history.css': ('c3aa901b47871dc2cc9aa2848bf31b871a93588e0b4ad141c4d1da7912b2125a', ['answers/why-latter-day-saints-build-temples.html']),
 }
+HANDCART_RECOVERY_SPACE = b'.timeline-mobile .timeline-map-unavailable #map:has(>.leaflet-container):has(>.map-fallback){height:240px!important;min-height:240px!important}\n'
+
+def before_handcart_recovery(data):
+    if data.count(HANDCART_RECOVERY_SPACE) == 1:
+        prior = data.replace(HANDCART_RECOVERY_SPACE, b'', 1)
+        if hashlib.sha256(prior).hexdigest() == OWNER_20260929_STYLES['timeline-mobile-study.css'][0]:
+            return prior
+    return data
+
 def reviewed_owner_20260929_style(name, data):
+    if name == 'timeline-mobile-study.css':
+        data = before_handcart_recovery(data)
     return name in OWNER_20260929_STYLES and hashlib.sha256(data).hexdigest() == OWNER_20260929_STYLES[name][0]
 
 TEMPLE_RELATED_HITBOX = b'.fc-temple-history__chapter a.fc-temple-history__related-link { display: inline-block; max-width: 100%; vertical-align: top; overflow-wrap: anywhere; }\n'
@@ -341,7 +352,9 @@ def main():
         assert not reviewed_scoped_interface_style('cfm-study-controls.css', cfm_controls.replace(b'--fc-study-control-radius:6px', b'--fc-study-control-radius:999px'))
         ask_css=(ROOT/'ask-experience.css').read_bytes()
         assert not reviewed_scoped_interface_style('ask-experience.css', ask_css.replace(b'position:static;padding:16px 17px', b'position:absolute;padding:16px 17px'))
-        timeline_css = (ROOT/'timeline-mobile-study.css').read_bytes()
+        timeline_current = (ROOT/'timeline-mobile-study.css').read_bytes()
+        assert not reviewed_owner_20260929_style('timeline-mobile-study.css', timeline_current.replace(b'height:240px', b'height:24px'))
+        timeline_css = before_handcart_recovery(timeline_current)
         handcart_count_fix = b'body.fc-timeline-experience .handcart-cluster{line-height:1.2}\n'
         assert timeline_css.count(handcart_count_fix) == 1
         assert hashlib.sha256(timeline_css.replace(handcart_count_fix, b'', 1)).hexdigest() == 'c21e5012a1e86a58b08eaa9383c45d3be7b357bd0d5cd747668699ac54c76cbf'

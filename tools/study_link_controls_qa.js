@@ -69,3 +69,28 @@ const file=path.join(root,'docs/study-link-control-inventory.json');
 if(process.argv.includes('--write-inventory'))fs.writeFileSync(file,JSON.stringify(inventory,null,2)+'\n');
 else assert.deepEqual(inventory,JSON.parse(fs.readFileSync(file,'utf8')),'Control coverage changed; review inventory');
 console.log(`PASS: ${pages.length} canonical pages, ${selectors.length} named control families; protected prose/primary/Home/chapter fixtures; numbered link destinations recorded.`);
+
+// Source row contract and deliberately broken style fixtures.
+{
+const base='body.fc-site:not(.cfm-page) :is(.fc-study-visual-sources, .pioneer-source-links)';
+const child=base+' > a:not(.fc-button--primary):not([hidden])';
+function check(css){
+ assert(css.includes('> a[hidden] {\n    display: none !important;'),'hidden source must remain hidden');
+ const part=css.slice(css.indexOf('/* Related source controls share each row'));
+ assert(part.includes(base+' {\n    align-items: stretch;'),'missing group stretch');
+ assert(part.includes(child+' {\n    flex: 1 1 16rem;\n    margin: 0;'),'missing equal grow basis');
+ assert(part.includes(child+':only-child {\n    flex: 0 1 auto;'),'single rule loses specificity or protected scope');
+ assert(part.includes('@media (max-width: 600px)'),'missing phone boundary');
+ assert(part.includes(child+' {\n        flex-basis: 100%;\n        width: 100%;'),'missing phone full width');
+}
+const css=read('site-system.css');check(css);
+const mutations=[css.replace('> a[hidden] {\n    display: none !important;', '> a[hidden] {\n    display: inline-flex;'),css.replace('flex: 1 1 16rem','flex: 0 1 auto'),css.replace('flex-basis: 100%','flex-basis: auto'),css.replace('width: 100%;\n    }\n}', 'width: auto;\n    }\n}'),css.replace(child+':only-child',base+' > a:only-child'),css.replaceAll(':not(.cfm-page)',''),css.replaceAll(':not([hidden])',''),css.replaceAll(':not(.fc-button--primary)','')];
+mutations.forEach(x=>assert.throws(()=>check(x)));
+const fixture=new JSDOM('<body class="fc-site"><p><a id="prose">Text</a></p><nav class="fc-study-nav"><a id="nav">Nav</a></nav><p class="fc-study-visual-sources"><a id="normal">Source</a><a id="hidden" hidden>Hidden</a><a id="primary" class="fc-button--primary">Primary</a><span><a id="nested">Nested</a></span></p><p class="pioneer-source-links"><a id="single">Single</a></p></body>').window.document;
+for(const id of ['normal','single'])assert(fixture.getElementById(id).matches(child));
+for(const id of ['prose','nav','hidden','primary','nested'])assert(!fixture.getElementById(id).matches(child));
+assert(fixture.getElementById('single').matches(child+':only-child'));
+fixture.body.classList.add('cfm-page');assert.equal(fixture.querySelectorAll(child).length,0);
+console.log('PASS source group structural contract;8negative CSS mutations;positive/negative direct-child,CFM,primary,hidden,prose,navigation fixtures. Rendered geometry still requires native review.');
+
+}

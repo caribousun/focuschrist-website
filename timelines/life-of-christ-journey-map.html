@@ -11,7 +11,7 @@
 <meta name="robots" content="index, follow"><link rel="canonical" href="https://focuschrist.com/timelines/life-of-christ-journey-map.html">
 <meta property="og:title" content="Life of Christ Journey Map"><meta property="og:description" content="Explore 38 stops in the life and ministry of Jesus Christ, with scripture references and stories.">
 <meta property="og:url" content="https://focuschrist.com/timelines/life-of-christ-journey-map.html"><meta property="og:image" content="https://focuschrist.com/assets/heroes/timeline.png"><meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="../site-system.css?v=20260930-study-alignment-1">
+<link rel="stylesheet" href="../site-system.css?v=20261004-source-control-rows-2">
 <script src="../site-common.js?v=20261002-timeline-1" defer></script>
 <link rel="stylesheet" href="../site-search.css?v=20260929-result-hitbox-1"><script src="../site-search.js?v=20260919-focused-answers-1" defer></script>
 <style>
@@ -116,7 +116,7 @@ body.fc-site .detail a:hover,body.fc-site .sheet a:hover,body.fc-site .detail a:
 <link rel="stylesheet" href="../timeline-experiences.css?v=20261003-uniform-1">
 <link rel="stylesheet" href="../timeline-workspace.css?v=20261002-correction-1">
 <script src="../timeline-workspace.js?v=20261003-uniform-1" defer></script>
-<link rel="stylesheet" href="../timeline-mobile-study.css?v=20261002-correction-1">
+<link rel="stylesheet" href="../timeline-mobile-study.css?v=20261004-terrain-recovery-1">
 <link rel="stylesheet" href="../timeline-reader.css?v=20261003-uniform-1">
 <link rel="stylesheet" href="../timeline-images.css?v=20261002-correction-1">
 <script src="../timeline-images.js?v=20261002-correction-1" defer></script>
@@ -248,6 +248,10 @@ body.fc-site .detail a:hover,body.fc-site .sheet a:hover,body.fc-site .detail a:
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.css">
+<script src="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.js"></script>
+<script src="https://unpkg.com/@maplibre/maplibre-gl-leaflet@0.1.4/leaflet-maplibre-gl.js"></script>
+<script src="../timeline-terrain.js?v=20261004-english-terrain-1"></script>
 <script>
 var STOPS = [
   {phase:"beginnings", place:"Nazareth, Galilee", title:"The Annunciation to Mary", scripture:"Luke 1:26 to 38", lat:32.7021, lng:35.2978, desc:"In Nazareth, the angel Gabriel appears to Mary, who is espoused to Joseph. He announces that she will conceive and bear the Son of the Highest. Mary answers in faith, and Joseph later receives his own witness in a dream and takes Mary as his wife."},
@@ -467,7 +471,7 @@ function fullBounds(){
 updateDetail(0);
 try{
   if(typeof L === 'undefined') throw new Error('Leaflet unavailable');
-  leafletMap = L.map('map', {scrollWheelZoom:false}).setView([32.0, 35.25], 8);
+  leafletMap = L.map('map', {scrollWheelZoom:false,maxZoom:19}).setView([32.0, 35.25], 8);
   // Keep live provider credits visible outside the interactive map canvas.
   if(leafletMap.attributionControl&&leafletMap.attributionControl.getContainer){var attribution=leafletMap.attributionControl.getContainer();attribution.classList.add('timeline-map-attribution');document.getElementById('map').after(attribution);}
   document.getElementById('map').addEventListener('timeline:map-interaction',function(event){
@@ -476,10 +480,7 @@ try{
   var tileLoaded=false,tileErrors=0,tileTimer;
   var tileStatus=document.createElement('p');tileStatus.className='map-pin-note';tileStatus.setAttribute('role','status');tileStatus.hidden=true;document.getElementById('map').after(tileStatus);
   function tileUnavailable(){if(!tileLoaded){tileStatus.textContent='Map imagery is unavailable here. Numbered places and all journey stories remain usable.';tileStatus.hidden=false;var information=tileStatus.closest('details');if(information)information.open=true;}}
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> contributors'
-  }).on('tileload',function(){tileLoaded=true;tileStatus.hidden=true;clearTimeout(tileTimer);}).on('tileerror',function(){if(++tileErrors>=3)tileUnavailable();}).addTo(leafletMap);
+  FCTerrainLayer().on('tileload',function(){tileLoaded=true;tileStatus.hidden=true;clearTimeout(tileTimer);}).on('tileerror',function(){tileLoaded=false;if(++tileErrors>=3)tileUnavailable();}).addTo(leafletMap);
   tileTimer=setTimeout(tileUnavailable,10000);window.addEventListener('pagehide',function(){clearTimeout(tileTimer);});
   STOPS.forEach(function(s,i){
     if(s.unlocated){markers.push(null);return;}
