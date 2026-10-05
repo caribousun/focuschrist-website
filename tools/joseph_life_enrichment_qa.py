@@ -20,9 +20,16 @@ def check():
    if node.get(key,'').startswith('../'):node[key]=node[key][3:]
  check_artwork_badges_and_footer(doc)
  closing=json.loads((ROOT/'docs/joseph-life-enrichment.json').read_text(encoding='utf-8-sig'))['closing']
- assert closing['visitor_source_note']=='The original letter to Phelps is not extant; a contemporary letterbook copy survives.'
- assert closing['visitor_source_note'] in doc.get_text(' ',strip=True), 'Substantive Phelps source limitation must remain visible'
- assert closing.get('interpretation_limit'), 'Closing internal provenance must remain preserved'
+ assert 'The original letter to Phelps is not extant; a contemporary letterbook copy survives.' in closing.get('interpretation_limit',''), 'Closing internal provenance must remain preserved'
+ assert doc.select_one('#life-remembrance a[href="https://www.josephsmithpapers.org/paper-summary/letter-to-william-w-phelps-22-july-1840/1/"]'), 'Preserve the actual letterbook source'
+ retired_commentary = (
+  'The birth dates above follow the family list in the linked Susquehanna history.',
+  'The meeting record’s historical notes preserve this recent loss alongside her public work.',
+  'The surviving letterbook copy preserves that act of forgiveness.',
+  'Love and gratitude can inspire careful study: honoring a person also means being truthful about what the record preserves.',
+  'The original letter to Phelps is not extant; a contemporary letterbook copy survives.',
+ )
+ assert not any(text in doc.get_text(' ',strip=True) for text in retired_commentary), 'Owner-rejected routine source-checking commentary returned to biography prose'
  assert len(doc.select('img'))>=20,'Main study needs at least20 meaningful picture placements; count is necessary only'
  assert len([n for n in doc.select('.joseph-life-scene') if not n.find_parent(id='lucy-family-stories')])==11,'Original ten family scenes plus reviewed brothers scene remain; Lucy ten have their separate strict gate'
  for row in data:

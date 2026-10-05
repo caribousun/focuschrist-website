@@ -1,5 +1,9 @@
 # focusChrist enrichment and stewardship — production execution prompt
 
+## Warm, human study prose — Wyatt mandate, 2026-10-04
+
+focusChrist is a learning journey centered on Jesus Christ. Give visitors warm, informative, honest explanations in a natural human voice. Keep routine fact-checking and source-audit commentary behind the scenes. Wyatt rejected the whole Moyle sentence explaining that the accident was remembered in an account and absent from linked journal excerpts; remove it rather than rewrite its qualification. Preserve useful source links and natural attribution without repeatedly telling readers which checked source contains or omits each detail. Explain uncertainty only when it materially aids understanding or prevents a misleading claim, and keep substantive evidence comparison where research itself is the subject. Do not invent facts or feelings for warmth. Preserve the standard footer. Albert, Fermi and Newton must review finished prose for this requirement before publication. Current FIRST scope and all existing owner gates remain unchanged.
+
 ## Historical character, expression and gaze requirements
 
 Wyatt reaffirmed on September30: every created image must show each person's look, face, figure and clothing at the age and time period of the depicted event. Apply the scene-specific age and appearance gate in historical-character-identity.md and the mutual Fermi/Newton concurrence gate in AGENTS.md. Verify actual pixels and source evidence before calling a result fixed or passed.
