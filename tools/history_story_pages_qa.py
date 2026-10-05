@@ -106,6 +106,12 @@ for relative in ('history/john-rowe-moyle.html', 'docs/history-stories/art-ready
     assert not any(sentence in content for sentence in moyle_caption_retirements), relative + ': retired Moyle caption caveat returned'
 moyle_accident = next(u for u in moyle['units'] if u['id'] == 'moyle-cow-injury')
 assert any('later' in p and 'journal' in p for p in moyle_accident['paragraphs']), 'Preserve the substantive family-account and journal distinction'
+bounded_journal_claim = 'the linked travel-journal excerpts do not describe it.'
+retired_journal_claim = 'Moyle’s surviving travel journal does not describe it.'
+for relative in ('docs/history-stories/stories.json', 'history/john-rowe-moyle.html'):
+    content = (ROOT / relative).read_text(encoding='utf-8')
+    assert bounded_journal_claim in content, relative + ': bound journal silence to the inspected excerpts'
+    assert retired_journal_claim not in content, relative + ': unverified whole-journal absence returned'
 assert any('wooden' in p.lower() for u in moyle['units'] for p in u['paragraphs'])
 assert 'wooden' in ready['moyle-wooden-leg']['alt'].lower(), 'Required wooden-leg scene must be visibly described'
 css = (ROOT/'history-stories.css').read_text(encoding='utf-8')
