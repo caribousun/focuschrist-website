@@ -2519,4 +2519,13 @@ body.fc-site:not(.cfm-page) :is(.fc-study-visual-sources, .pioneer-source-links)
     body.fc-site .controls-row > .lbl {
         grid-column: 1 / -1;
     }
+    /* The unified opening owns placement; its retained descriptions stay visible. */
+    body.fc-site :is([data-unified-opening], .fc-unified-opening-continuation) .fc-opening-explanation {
+        display: block !important;
+        flex: 0 0 auto;
+        width: 100%; max-width: 38ch; box-sizing: border-box;
+        margin: 0; padding: 0;
+        color: var(--fc-muted); font-size: .9rem; line-height: 1.45;
+        font-weight: 400; text-align: center;
+    }
 }

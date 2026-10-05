@@ -26,6 +26,8 @@ function inspectMobileStudyRows(selector){
   groups.push({index,links:links.length,rows:rows.map(x=>x.length),display:cs.display});
  }
  if(document.documentElement.scrollWidth>innerWidth+1)issues.push('page overflow');
+ const explanation=document.querySelector('.fc-opening-explanation');
+ if(explanation&&innerWidth<=700&&explanation.getBoundingClientRect().height===0)issues.push('mobile introduction disappeared');
  return {issues,groups};
 }
 module.exports=async function(page,origin){
@@ -35,17 +37,21 @@ module.exports=async function(page,origin){
  for(const [width,enlarged] of [[320,false],[390,false],[412,false],[700,false],[1280,false],[320,true],[390,true],[412,true],[700,true]]){
   await page.setViewportSize({width,height:900});
   for(const route of consumers){
-   await page.goto(origin+'/'+route,{waitUntil:'domcontentloaded'});await page.evaluate(()=>document.fonts.ready);
+   await page.goto(origin+'/'+route,{waitUntil:'load'});await page.evaluate(()=>document.fonts.ready);
    await page.waitForFunction(selector=>[...document.querySelectorAll(selector)].every(nav=>nav.querySelector(':scope > a, :scope > button')),selector);
    await page.evaluate(({selector,enlarged})=>{for(const nav of document.querySelectorAll(selector)){let e=nav.parentElement;while(e){if(e.tagName==='DETAILS')e.open=true;e=e.parentElement;}}if(enlarged)document.documentElement.style.fontSize='200%';},{selector,enlarged});
+   await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
    const result=await page.evaluate(inspectMobileStudyRows,selector);const expected=await page.locator(selector).count();if(result.groups.length!==expected)result.issues.push('Hidden or unmeasured consumer: expected '+expected+' actual '+result.groups.length);results.push({route,width,enlarged,...result});
   }
  }
- await page.setViewportSize({width:390,height:900});await page.goto(origin+'/answers/look-unto-me-doctrine-and-covenants-6-36.html',{waitUntil:'domcontentloaded'});await page.evaluate(()=>document.fonts.ready);
+ await page.setViewportSize({width:390,height:900});await page.goto(origin+'/answers/look-unto-me-doctrine-and-covenants-6-36.html',{waitUntil:'load'});await page.evaluate(()=>document.fonts.ready);
  const broken=await page.addStyleTag({content:selector+'{display:flex!important;flex-wrap:wrap!important;justify-content:center!important}'+selector+'>:is(a,button){width:auto!important;flex:0 1 auto!important;grid-column:auto!important}'});
  const negative=await page.evaluate(inspectMobileStudyRows,selector);await broken.evaluate(n=>n.remove());
  if(!negative.issues.some(x=>/incomplete row|unequal row widths|unequal column widths/.test(x)))throw Error('Old ragged mobile layout did not fail geometry check');
- await page.goto(origin+'/atonement.html',{waitUntil:'domcontentloaded'});await page.evaluate(()=>document.fonts.ready);
+ const hiddenCopy=await page.addStyleTag({content:'body.fc-site p.fc-opening-explanation.fc-opening-explanation{display:none!important}'});
+ const hiddenNegative=await page.evaluate(inspectMobileStudyRows,selector);await hiddenCopy.evaluate(n=>n.remove());
+ if(!hiddenNegative.issues.includes('mobile introduction disappeared'))throw Error('Disappearing introduction fixture did not fail');
+ await page.goto(origin+'/atonement.html',{waitUntil:'load'});await page.evaluate(()=>document.fonts.ready);
  const oddBroken=await page.addStyleTag({content:'body.fc-site .atonement-path>a:last-child{grid-column:auto!important}'});const oddNegative=await page.evaluate(inspectMobileStudyRows,selector);await oddBroken.evaluate(n=>n.remove());if(!oddNegative.issues.some(x=>x.includes('incomplete row')))throw Error('Atonement partial final-row fixture did not fail');
  return {consumers,cases:results.length,results,negative:negative.issues,oddNegative:oddNegative.issues,failures:results.filter(x=>x.issues.length)};
 };
