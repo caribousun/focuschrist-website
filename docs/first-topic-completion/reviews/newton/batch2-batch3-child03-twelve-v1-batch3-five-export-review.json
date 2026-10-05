@@ -1,0 +1,118 @@
+{
+  "reviewer": "Newton",
+  "decision": "PASS",
+  "export_record_sha256": "dba45469b31e4b68aad95895b81d0acc39c30ff59f3bb30be192eed303c4cf4e",
+  "records": [
+    {
+      "key": "divorce-and-faith-01",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-candidates\\divorce-and-faith-01-original.png",
+      "source_sha256": "d8588e3f266f52be3a9e01c778be66c055891d7c5778776584911c4a73271cf1",
+      "reviewed": true,
+      "full_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\divorce-and-faith-01-full.webp",
+      "sha256": "357ff280e909245b438e77dcea9a2dde7f99e118ec8fcbd04f6ec58884335d2d",
+      "960_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\divorce-and-faith-01-960.webp",
+      "responsive_sha256": "191e7b7ee7a9e070f047d166a28946c7fa6f333b94925f0386b8a96ab214f539",
+      "decision": "PASS",
+      "dimensions": {
+        "full_export_path": [
+          1536,
+          1024
+        ],
+        "960_export_path": [
+          960,
+          640
+        ]
+      },
+      "finding": "Personally viewed full and 960 pixels; accepted raw source action, identity, anatomy and composition retained without crop/stretch/visible export defect."
+    },
+    {
+      "key": "divorce-and-faith-03",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-candidates\\divorce-and-faith-03-original.png",
+      "source_sha256": "622d1fb42435fb9c6f6b26ad24cd57efbdb574f1660bf4a74eb044986b82e07d",
+      "reviewed": true,
+      "full_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\divorce-and-faith-03-full.webp",
+      "sha256": "a7c447aa003e4db1814f4443a885298a366ebe21af0958efec1d0730b54aa491",
+      "960_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\divorce-and-faith-03-960.webp",
+      "responsive_sha256": "b5c4985b1bc5fbecf3e93939214706db57541d92b776d915659ee4ca2a747d77",
+      "decision": "PASS",
+      "dimensions": {
+        "full_export_path": [
+          1536,
+          1024
+        ],
+        "960_export_path": [
+          960,
+          640
+        ]
+      },
+      "finding": "Personally viewed full and 960 pixels; accepted raw source action, identity, anatomy and composition retained without crop/stretch/visible export defect."
+    },
+    {
+      "key": "divorce-and-faith-04",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-candidates\\divorce-and-faith-04-original.png",
+      "source_sha256": "5f788d97d923afae7b7f6cf8ec6aa3e41744d099afcf73ea303e0ae95d4f863d",
+      "reviewed": true,
+      "full_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\divorce-and-faith-04-full.webp",
+      "sha256": "1148e3c3ac95caaf4ba4de0a457b9d23362f1ae0891057576627cd824d0d3636",
+      "960_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\divorce-and-faith-04-960.webp",
+      "responsive_sha256": "34cce617e5f77b18e7585cc6ff688a71364a8489d85e1fcf5bfb5204254a77e3",
+      "decision": "PASS",
+      "dimensions": {
+        "full_export_path": [
+          1536,
+          1024
+        ],
+        "960_export_path": [
+          960,
+          640
+        ]
+      },
+      "finding": "Personally viewed full and 960 pixels; accepted raw source action, identity, anatomy and composition retained without crop/stretch/visible export defect."
+    },
+    {
+      "key": "divorce-and-faith-05",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-candidates\\divorce-and-faith-05-original.png",
+      "source_sha256": "250710a28f3f65cffc78205101acaa63a53896ce9976c0dcbb05f7c5d329354a",
+      "reviewed": true,
+      "full_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\divorce-and-faith-05-full.webp",
+      "sha256": "91071a10bf5eb7d95cc06c5ca12210e16ea985e445d5eab06ed3fea4bc0da45b",
+      "960_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\divorce-and-faith-05-960.webp",
+      "responsive_sha256": "dcd517b180289b728fb3a3748120c10c8f8e55aea9ba6cfc8aaa9ac15cf7c663",
+      "decision": "PASS",
+      "dimensions": {
+        "full_export_path": [
+          1536,
+          1024
+        ],
+        "960_export_path": [
+          960,
+          640
+        ]
+      },
+      "finding": "Personally viewed full and 960 pixels; accepted raw source action, identity, anatomy and composition retained without crop/stretch/visible export defect."
+    },
+    {
+      "key": "divorce-and-faith-07",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-candidates\\divorce-and-faith-07-original.png",
+      "source_sha256": "f45a7d7a142ddf1d0d0b674cb050a424e83c089894396dab0085187c4fe17786",
+      "reviewed": true,
+      "full_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\divorce-and-faith-07-full.webp",
+      "sha256": "8c8a0e9573cfb0d967b4b115e0169305caa592ae5bb9b3b061cef4574f110338",
+      "960_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\divorce-and-faith-07-960.webp",
+      "responsive_sha256": "6c0d542c89e598b580b3aa529d9d070226a65a923cb2dfea2ce07320d64b993a",
+      "decision": "PASS",
+      "dimensions": {
+        "full_export_path": [
+          1536,
+          1024
+        ],
+        "960_export_path": [
+          960,
+          640
+        ]
+      },
+      "finding": "Personally viewed full and 960 pixels; accepted raw source action, identity, anatomy and composition retained without crop/stretch/visible export defect."
+    }
+  ],
+  "limits": "No assembled native/public/owner acceptance claim."
+}

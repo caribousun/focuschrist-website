@@ -1,0 +1,67 @@
+{
+  "reviewer": "Fermi",
+  "decision": "CONCUR_ALL_TEN_EXPORTED_PIXELS",
+  "artworks": [
+    {
+      "key": "christian-identity-01",
+      "source_sha256": "ad206a147adef8ed94ca2694d30aae070779ffd9b8e865501de2fcb8c635ec13",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-candidates\\christian-identity-01-original.png",
+      "reviewed": true,
+      "sha256": "7ae05f447173f958b5cb4d07d01409f49df6bf3cdf3b60f80bba665e8ea65803",
+      "full_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\christian-identity-01-full.webp",
+      "responsive_sha256": "7e85b71053f1079ddb9fa16c13fb0f943d99be0b0092be28bcfe11894607fd34",
+      "960_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\christian-identity-01-960.webp",
+      "decision": "CONCUR_EXPORTED_PIXELS",
+      "judgment": "Full1536 and960 actual images personally viewed. Scene, identity, visible anatomy, gaze and composition preserved; no material export artifact observed."
+    },
+    {
+      "key": "christian-identity-04",
+      "source_sha256": "81069cc8d8df5677927049b1d227ee1087b396dbc52f5482d6e5ed7f4670af2d",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-candidates\\christian-identity-04-original.png",
+      "reviewed": true,
+      "sha256": "0a5d3954d96ca258c2d9f599a19d7a857a9e25bc72d2f8cdaa7ba4ada4cb3707",
+      "full_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\christian-identity-04-full.webp",
+      "responsive_sha256": "99ef81f3d06fdd10b53a0bc95ed1487567a42b3627fc108b85a48badf2a0e618",
+      "960_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\christian-identity-04-960.webp",
+      "decision": "CONCUR_EXPORTED_PIXELS",
+      "judgment": "Full1536 and960 actual images personally viewed. Scene, identity, visible anatomy, gaze and composition preserved; no material export artifact observed."
+    },
+    {
+      "key": "trials-02",
+      "source_sha256": "17d4729ab01d45f5b69f6fc1bb5cba7e6fd6959f0d34c295bf0716f2db9c795f",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-candidates\\trials-02-original.png",
+      "reviewed": true,
+      "sha256": "8100c2083fdce5e580ec6d5a67c611f70b8ba652b262bcd024e72f4207a6763d",
+      "full_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\trials-02-full.webp",
+      "responsive_sha256": "826810cbdcf098aa2d4042599f1a9d57c5f6f147270c346ca5810f1a65275b75",
+      "960_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\trials-02-960.webp",
+      "decision": "CONCUR_EXPORTED_PIXELS",
+      "judgment": "Full1536 and960 actual images personally viewed. Scene, identity, visible anatomy, gaze and composition preserved; no material export artifact observed."
+    },
+    {
+      "key": "grief-03",
+      "source_sha256": "e8267ac1850b52a72ad17a31287ae18c69ea9ce4ef80170c17691408e251db9a",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-candidates\\grief-03-original.png",
+      "reviewed": true,
+      "sha256": "e1be215b58b01b391669f638268fc2de0f1252208a057c7140748e8b6bf6b74f",
+      "full_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\grief-03-full.webp",
+      "responsive_sha256": "856c16b04f400c40ad60921a9bd3632559b8661440210f0c2800fc3cca495c0e",
+      "960_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\grief-03-960.webp",
+      "decision": "CONCUR_EXPORTED_PIXELS",
+      "judgment": "Full1536 and960 actual images personally viewed. Scene, identity, visible anatomy, gaze and composition preserved; no material export artifact observed."
+    },
+    {
+      "key": "melchizedek-priesthood-01",
+      "source_sha256": "3cb91b5f0553e03a91049700ae75dd573d2872684b2954d2f8d4a85be9257af3",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-candidates\\melchizedek-priesthood-01-original.png",
+      "reviewed": true,
+      "sha256": "6046834771d0dbf482109f90bab2c67d33681b2e809ba7b9384587f6c7b62b55",
+      "full_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\melchizedek-priesthood-01-full.webp",
+      "responsive_sha256": "dabfd19d2be50deca68491a6a1f3f562627207479dad869696aa4cea752b95bb",
+      "960_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\melchizedek-priesthood-01-960.webp",
+      "decision": "CONCUR_EXPORTED_PIXELS",
+      "judgment": "Full1536 and960 actual images personally viewed. Scene, identity, visible anatomy, gaze and composition preserved; no material export artifact observed."
+    }
+  ],
+  "limits": "Exact5 raws/export files only; trials01 separate. No native or public acceptance."
+}

@@ -1,0 +1,19 @@
+{
+  "reviewer": "Fermi",
+  "decision": "CONCUR",
+  "records": [
+    {
+      "key": "melchizedek-priesthood-02",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-candidates\\melchizedek-priesthood-02-v3-original.png",
+      "source_sha256": "298f2c872fc17579255ddcf2f775dfd70e86974953761e2d4eeaa4adcfb93896",
+      "full_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\melchizedek-priesthood-02-full.webp",
+      "sha256": "518ecad0dcd675a1977e4761daaade96e2a1b69d3ae3d6ddd69b9d81650a3c32",
+      "960_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\melchizedek-priesthood-02-960.webp",
+      "responsive_sha256": "ffad089d3cd9934e4d050b1c097d084e39f21ceaee1c2f1b8ebe436fbed5b4ff",
+      "reviewed": true,
+      "decision": "PASS",
+      "finding": "Actual full and960 personally viewed: ten distinct men remain readable, Christ gaze at group, locked identity and natural anatomy preserved."
+    }
+  ],
+  "scope": "Actual two export pixels; no assembled/native/public/owner claim."
+}

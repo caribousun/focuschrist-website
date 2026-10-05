@@ -1,0 +1,23 @@
+{
+  "key": "trials-01",
+  "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-candidates\\trials-01-v2-original.png",
+  "source_sha256": "03f7d3c683f0054c4ad24732b39473b4e31e47c817d779529b0df98bf6152eb9",
+  "reviewed": true,
+  "sha256": "ef894281b52240cdabba8190d40180d81793006f19f4d4d1e068ec64070cb3ac",
+  "full_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\trials-01-full.webp",
+  "responsive_sha256": "16efe7fdf446428144b39bb8d7a16a45427989e4b637a917d9936b4d8576b709",
+  "960_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\trials-01-960.webp",
+  "reviewer": "Newton",
+  "decision": "CONCUR_FULL_AND_960_PIXELS",
+  "judgment": "Both actual exports personally viewed 2026-10-05 against Home reference and frozen accepted raw review: distinct older silver-haired clean-shaven angel; Christ likeness, solemn expression, visible hands and kneeling anatomy preserved; no visible export defect. Hidden feet not inferred.",
+  "mandates_read": [
+    "Current live Master protected foundation/current 00B/Focus",
+    "AGENTS.md",
+    "docs/historical-character-identity.md",
+    "docs/enriched-picture-owner-mandate.md",
+    "docs/focuschrist-enrichment-and-stewardship-prompt.md",
+    "tools/anatomy-review/README.md"
+  ],
+  "fermi_receipt_sha256": "2498a0091fefb18aec1db682721676a1ba41018d8c75467fd13c8e6d27ae1d28",
+  "limits": "Exact artwork exports only; root assembled native and public acceptance separate."
+}

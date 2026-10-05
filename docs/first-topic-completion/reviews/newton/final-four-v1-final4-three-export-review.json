@@ -1,0 +1,74 @@
+{
+  "reviewer": "Newton",
+  "decision": "PASS",
+  "scope": "Three accepted final-four v2 full and 960 exports personally viewed before compaction; hashes verified after continuation. Corrected listener and exposed palm marks preserved. No assembled/native/public claim.",
+  "record_sha256": "b7ad8ddd9d8063a7f3eadd732278649bf6befce8aa38ed20991fd5f5ad7eb2b5",
+  "records": [
+    {
+      "key": "restored-church-03",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-candidates\\restored-church-03-v2-original.png",
+      "source_sha256": "ea878b8d97541cf4e17d0ab680faa193593b81b3ba58167ca5a135ea0973103f",
+      "full_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\restored-church-03-full.webp",
+      "sha256": "0a81b716f52e005843f15f04d5577765351fff07ad2f2b80b86d86adf3c25366",
+      "960_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\restored-church-03-960.webp",
+      "responsive_sha256": "aef8f4002dc84e3b606d3a960c147230a3554aa2679d7e1f6ed2d4bff0f45934",
+      "reviewed": true,
+      "decision": "PASS",
+      "actual_full_and_960_pixels_viewed": true,
+      "dimensions": {
+        "full_export_path": [
+          1536,
+          1024
+        ],
+        "960_export_path": [
+          960,
+          640
+        ]
+      }
+    },
+    {
+      "key": "melchizedek-priesthood-03",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-candidates\\melchizedek-priesthood-03-v2-original.png",
+      "source_sha256": "5eb9b48491daf1f518c7a2b41e5a24b8f95d2810d678f2556aa04f58e2ebdf48",
+      "full_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\melchizedek-priesthood-03-full.webp",
+      "sha256": "dc80bec07532c2f9c17546e1af52988bd8621c7a1c8deead0009ba91897b596c",
+      "960_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\melchizedek-priesthood-03-960.webp",
+      "responsive_sha256": "43c05c60d7d54b6161c53f4b305935003f0a0d8a114e7ebba2ea136545a84858",
+      "reviewed": true,
+      "decision": "PASS",
+      "actual_full_and_960_pixels_viewed": true,
+      "dimensions": {
+        "full_export_path": [
+          1536,
+          1024
+        ],
+        "960_export_path": [
+          960,
+          640
+        ]
+      }
+    },
+    {
+      "key": "aaronic-priesthood-05",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-candidates\\aaronic-priesthood-05-v2-original.png",
+      "source_sha256": "c7cb2aff00546042c2da71c63b4c9db41a7623ca4623cd8558b87480de9e97c5",
+      "full_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\aaronic-priesthood-05-full.webp",
+      "sha256": "35e487848f10736f68ab837a41cdcbad78a7413d2f8294fd993c2b0b5791b392",
+      "960_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\aaronic-priesthood-05-960.webp",
+      "responsive_sha256": "fdc8650fc5a6983840dc0c674754d366d87f41f4a44c2a0b92358062735d8399",
+      "reviewed": true,
+      "decision": "PASS",
+      "actual_full_and_960_pixels_viewed": true,
+      "dimensions": {
+        "full_export_path": [
+          1536,
+          1024
+        ],
+        "960_export_path": [
+          960,
+          640
+        ]
+      }
+    }
+  ]
+}

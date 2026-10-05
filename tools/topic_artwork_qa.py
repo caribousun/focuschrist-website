@@ -66,4 +66,4 @@ assert len(family_ids)==len(family_figures)==11 and {key for _,key in family_fig
 assert all(page=='answers/who-was-joseph-smith.html' for page,_ in family_figures), 'Family figures belong to Joseph biography'
 assert allfigures == len(placements) + len(moved_ids) + len(family_ids) + len(first_topic_review)
 css=(ROOT/'topic-art.css').read_text();assert 'object-fit:contain' in css and 'height:auto' in css
-print('TOPIC ARTWORK QA PASS: 21 preserved contextual placements plus 10 strictly validated FIRST additions, individually reviewed assets, exact sources, responsive full-image viewing')
+print(f'TOPIC ARTWORK QA PASS: 21 preserved contextual placements plus {len(first_topic_review)} strictly validated FIRST additions, individually reviewed assets, exact sources, responsive full-image viewing')

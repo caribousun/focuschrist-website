@@ -38,7 +38,7 @@
         returnFocus = trigger;
         const url = originalURL(source);
         fallback.href = url.href;
-        frame.title = art.title + ' — artwork and study';
+        frame.title = 'Artwork study: ' + art.title;
         frame.hidden = true;
         loading.hidden = false;
         document.getElementById('artGalleryLoadingText').textContent = 'Opening ' + art.title + '…';
@@ -162,7 +162,7 @@
         if (requested) {
             const art = artworks.find(item => item.id === requested);
             if (art) open(art, grid.querySelector('[data-gallery-card="' + art.id + '"] a'));
-            else count.textContent += ' — That shared picture is no longer in the gallery.';
+            else count.textContent += '. That shared picture is no longer in the gallery.';
         }
     }).catch(() => { count.textContent = 'The gallery could not load. Please refresh or return to Art & Study.'; });
 }());

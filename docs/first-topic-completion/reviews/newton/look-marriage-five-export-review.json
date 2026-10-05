@@ -1,0 +1,96 @@
+{
+  "reviewer": "Newton",
+  "at": "2026-10-05T14:57:34.236810+00:00",
+  "decision": "CONCUR_FIVE_RAW_FULL_RESPONSIVE_EXPORTS",
+  "mandates_read": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\AGENTS.md",
+      "sha256": "2dbfe6e06bee147672169193c28a2e83d029f97e768a85439e6af47b715fd05e",
+      "read": true
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\docs\\focuschrist-enrichment-and-stewardship-prompt.md",
+      "sha256": "c8c814daff10f7f2fc1a5e8fe562d85205655d9abc863d06014aa457de9ee3b0",
+      "read": true
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\docs\\historical-character-identity.md",
+      "sha256": "69f0f51400ba102dfb5df9a9ec9fb6e738255dc496b84dc5dd684f3f5886c8c4",
+      "read": true
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\docs\\enriched-picture-owner-mandate.md",
+      "sha256": "c237fb14c7dd57f04d7d9ad063f3f0e93daf0a5c9844f9c3682407b4c80b363d",
+      "read": true
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\docs\\section-panel-design-mandate.md",
+      "sha256": "26a8028ec7c7393d070e6f8006662861e1651643dbf925092b19d364ace797fc",
+      "read": true
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\tools\\anatomy-review\\README.md",
+      "sha256": "22a670895fd95074576f32b5f3540a121c9eabe9c49bf266c20f35af24da2763",
+      "read": true
+    }
+  ],
+  "authority": "Current exact Master and 00B fetched through connected Drive this run; protected foundation and applicable Focus mandates read, unchanged.",
+  "raw_receipt": {
+    "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\newton\\five-raw-pixel-review.json",
+    "sha256": "c562710111196ec8fd74b06a815ec2520f7f09f117ddecad0f5395ab8a9be3f0"
+  },
+  "artworks": [
+    {
+      "key": "look-unto-me-01",
+      "source_sha256": "65f451d569f71d6342f31b41a2837e8b86010ab8c62a11c253959b9ce7cdd774",
+      "sha256": "5729b7c2cddefaf8ef2f0c7200ad72621e7e76d3772918b8f8ce8849cd0456cc",
+      "responsive_sha256": "82951e66a8ec58d6ec9aab129979ee481272a3df76114900f99d2f6047fa5e5f",
+      "full_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\look-unto-me-01-full.webp",
+      "responsive_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\look-unto-me-01-960.webp",
+      "decision": "PASS actual full and responsive pixels",
+      "finding": "Both exports personally viewed; scene, face identity, gaze, anatomy and color match reviewed raw without stretching, new crop or visible compression defect."
+    },
+    {
+      "key": "look-unto-me-02",
+      "source_sha256": "98cbb7a33ba67fa5e70937edd59c92d55fac2e208b408c8fdb16ab1486c40e65",
+      "sha256": "30d8987fc796eb000a89896f9d6dec6216cf24aa12a848f380a5bceac16c8e3d",
+      "responsive_sha256": "6d34372f9cfe8a0e1ffa9d5b58b761d16205846f009af894d93285a0188258ef",
+      "full_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\look-unto-me-02-full.webp",
+      "responsive_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\look-unto-me-02-960.webp",
+      "decision": "PASS actual full and responsive pixels",
+      "finding": "Both exports personally viewed; scene, face identity, gaze, anatomy and color match reviewed raw without stretching, new crop or visible compression defect."
+    },
+    {
+      "key": "look-unto-me-03",
+      "source_sha256": "80c2ddecaa514206307df584b449dc2eb0c02b4c616e50344e790fd16c3fd9ff",
+      "sha256": "905b30f601c30f68014a4cb160cbf57a84df2474042202bf9840389273103e03",
+      "responsive_sha256": "ce9e744a4cc2d68ef720948cf4c29c6dbc08cd3c4e8c3d9bc55ded24b85f2d03",
+      "full_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\look-unto-me-03-full.webp",
+      "responsive_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\look-unto-me-03-960.webp",
+      "decision": "PASS actual full and responsive pixels",
+      "finding": "Both exports personally viewed; scene, face identity, gaze, anatomy and color match reviewed raw without stretching, new crop or visible compression defect."
+    },
+    {
+      "key": "eternal-marriage-01",
+      "source_sha256": "87c001600c92b61dd6087ac830d250c3f60328b6dcb8313796ab6ec6780db82a",
+      "sha256": "408f868335b4c87b437dbd8ec795588b259bf406eb9e8a09fce234ca0d7da83a",
+      "responsive_sha256": "941c8868535c1bb6dc188fea2b3a2e896e155184b4659a3827a168aac3cad6e4",
+      "full_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\eternal-marriage-01-full.webp",
+      "responsive_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\eternal-marriage-01-960.webp",
+      "decision": "PASS actual full and responsive pixels",
+      "finding": "Both exports personally viewed; scene, face identity, gaze, anatomy and color match reviewed raw without stretching, new crop or visible compression defect."
+    },
+    {
+      "key": "eternal-marriage-02",
+      "source_sha256": "50ad4ed5e9b5201632bac30390bfd0bac4183485e3784fe4cd10e6117c99997b",
+      "sha256": "8f415a585f8c7a6ff15b05d4a7a70b787e91a9fb79bd59b9fdc1b6fd1c462d94",
+      "responsive_sha256": "c85c8010612dba7539c64204f8c8c674a96beaaa2b5f27aca85843d480317b0b",
+      "full_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\eternal-marriage-02-full.webp",
+      "responsive_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\eternal-marriage-02-960.webp",
+      "decision": "PASS actual full and responsive pixels",
+      "finding": "Both exports personally viewed; scene, face identity, gaze, anatomy and color match reviewed raw without stretching, new crop or visible compression defect."
+    }
+  ],
+  "method": "Personally viewed all ten exact WebP exports; actual hashes/dimensions independently checked against source records. No image edited.",
+  "limits": "No source integration/native/publication or owner aesthetic acceptance. Raw stage occlusion limitations remain."
+}
