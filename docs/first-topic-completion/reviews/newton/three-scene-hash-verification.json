@@ -1,0 +1,116 @@
+[
+  {
+    "id": "prayer-01",
+    "files": [
+      {
+        "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\focus-biography-publication-first-continuation\\work\\art-candidates\\prayer-01.png",
+        "sha256": "b65130882e8802a3b67641eab62738bca10c5556917dd39a15586e7874a4557e",
+        "bytes": 2482718,
+        "actual_sha256": "b65130882e8802a3b67641eab62738bca10c5556917dd39a15586e7874a4557e",
+        "hash_match": true,
+        "dimensions": [
+          1536,
+          1024
+        ]
+      },
+      {
+        "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\focus-biography-publication-first-continuation\\work\\art-candidates\\prayer-01-full.webp",
+        "sha256": "a8725dcf98cfcc00215437eef8ba879bb10590ad0dd67dede7c0978a6cb3a7bd",
+        "bytes": 260798,
+        "actual_sha256": "a8725dcf98cfcc00215437eef8ba879bb10590ad0dd67dede7c0978a6cb3a7bd",
+        "hash_match": true,
+        "dimensions": [
+          1536,
+          1024
+        ]
+      },
+      {
+        "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\focus-biography-publication-first-continuation\\work\\art-candidates\\prayer-01-960.webp",
+        "sha256": "b797275d0054d8efd6a13f7ede029268ce1a89940d95a6b58e226b0c584f3e12",
+        "bytes": 130524,
+        "actual_sha256": "b797275d0054d8efd6a13f7ede029268ce1a89940d95a6b58e226b0c584f3e12",
+        "hash_match": true,
+        "dimensions": [
+          960,
+          640
+        ]
+      }
+    ]
+  },
+  {
+    "id": "prayer-03",
+    "files": [
+      {
+        "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\focus-biography-publication-first-continuation\\work\\art-candidates\\prayer-03.png",
+        "sha256": "2e5a29629bf2c3bacd19baa1cdc369b6bb457aef042798eeb93c5211ed1958ef",
+        "bytes": 2455641,
+        "actual_sha256": "2e5a29629bf2c3bacd19baa1cdc369b6bb457aef042798eeb93c5211ed1958ef",
+        "hash_match": true,
+        "dimensions": [
+          1536,
+          1024
+        ]
+      },
+      {
+        "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\focus-biography-publication-first-continuation\\work\\art-candidates\\prayer-03-full.webp",
+        "sha256": "0e5b59e14562536bee30608f4bec26c4d77ce8710db17b69cb304042ab9f306e",
+        "bytes": 257948,
+        "actual_sha256": "0e5b59e14562536bee30608f4bec26c4d77ce8710db17b69cb304042ab9f306e",
+        "hash_match": true,
+        "dimensions": [
+          1536,
+          1024
+        ]
+      },
+      {
+        "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\focus-biography-publication-first-continuation\\work\\art-candidates\\prayer-03-960.webp",
+        "sha256": "4d2f9ced3220091b5c9c1d265051194fa0eeb75a69ecf53b0d8d9e7b476b3cc3",
+        "bytes": 129402,
+        "actual_sha256": "4d2f9ced3220091b5c9c1d265051194fa0eeb75a69ecf53b0d8d9e7b476b3cc3",
+        "hash_match": true,
+        "dimensions": [
+          960,
+          640
+        ]
+      }
+    ]
+  },
+  {
+    "id": "families-06",
+    "files": [
+      {
+        "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\focus-biography-publication-first-continuation\\work\\art-candidates\\families-06.png",
+        "sha256": "774863d2fb6d1066e6b829ae7d52996c32fdf125ea3a083b89c34a4fbc87c548",
+        "bytes": 2154417,
+        "actual_sha256": "774863d2fb6d1066e6b829ae7d52996c32fdf125ea3a083b89c34a4fbc87c548",
+        "hash_match": true,
+        "dimensions": [
+          1536,
+          1024
+        ]
+      },
+      {
+        "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\focus-biography-publication-first-continuation\\work\\art-candidates\\families-06-full.webp",
+        "sha256": "89d3e773f8f2e96c10b98b2db43de90e9e7640c58a7bb477cf798f17bb2bbd9e",
+        "bytes": 196238,
+        "actual_sha256": "89d3e773f8f2e96c10b98b2db43de90e9e7640c58a7bb477cf798f17bb2bbd9e",
+        "hash_match": true,
+        "dimensions": [
+          1536,
+          1024
+        ]
+      },
+      {
+        "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\focus-biography-publication-first-continuation\\work\\art-candidates\\families-06-960.webp",
+        "sha256": "14f9d4023be4f5d7529b22bc0cd5fa39aec9368adc48591c1d6a396bb99bf440",
+        "bytes": 96896,
+        "actual_sha256": "14f9d4023be4f5d7529b22bc0cd5fa39aec9368adc48591c1d6a396bb99bf440",
+        "hash_match": true,
+        "dimensions": [
+          960,
+          640
+        ]
+      }
+    ]
+  }
+]

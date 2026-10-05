@@ -3483,6 +3483,221 @@
         "review_record": "docs/history-stories/expansion-fermi-review-20260929.json",
         "review_notes": "Independent full-image source/identity review. Each scene is an artistic reconstruction with recorded limits; responsive hero remains same original. Owner-requested expansion does not imply aesthetic approval."
       }
+    ],
+    "answers/prayer-and-personal-revelation.html": [
+      {
+        "key": "prayer-01",
+        "route": "answers/prayer-and-personal-revelation.html",
+        "asset": "assets/page-art/first-topic-completion/prayer-01-full.webp",
+        "responsive": "assets/page-art/first-topic-completion/prayer-01-960.webp",
+        "sha256": "a8725dcf98cfcc00215437eef8ba879bb10590ad0dd67dede7c0978a6cb3a7bd",
+        "responsive_sha256": "b797275d0054d8efd6a13f7ede029268ce1a89940d95a6b58e226b0c584f3e12",
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/11?lang=eng&id=p1-p4#p1"
+        ],
+        "caption": "After Jesus prays, a disciple asks to be taught. The Savior answers with words that turn His followers toward the Father.",
+        "alt": "Jesus speaks with seated disciples after prayer, wearing an ochre mantle.",
+        "christ": true,
+        "width": 1536,
+        "height": 1024,
+        "reviewed": true,
+        "owner_approved": false,
+        "review_notes": "Fermi/Newton exact finished pixels and reciprocal concurrence; root viewed approved reference and all raw/full/960. Assembled candidate and publication gates remain pending."
+      },
+      {
+        "key": "prayer-03",
+        "route": "answers/prayer-and-personal-revelation.html",
+        "asset": "assets/page-art/first-topic-completion/prayer-03-full.webp",
+        "responsive": "assets/page-art/first-topic-completion/prayer-03-960.webp",
+        "sha256": "0e5b59e14562536bee30608f4bec26c4d77ce8710db17b69cb304042ab9f306e",
+        "responsive_sha256": "4d2f9ced3220091b5c9c1d265051194fa0eeb75a69ecf53b0d8d9e7b476b3cc3",
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/john/11?lang=eng&id=p38-p44#p38"
+        ],
+        "caption": "Before calling Lazarus from the tomb, Jesus thanks the Father. Those standing nearby hear His prayer and His witness of the One who sent Him.",
+        "alt": "Jesus lifts His eyes in thanksgiving beside the opened tomb of Lazarus.",
+        "christ": true,
+        "width": 1536,
+        "height": 1024,
+        "reviewed": true,
+        "owner_approved": false,
+        "review_notes": "Fermi/Newton exact finished pixels and reciprocal concurrence; root viewed approved reference and all raw/full/960. Assembled candidate and publication gates remain pending."
+      },
+      {
+        "key": "prayer-02",
+        "route": "answers/prayer-and-personal-revelation.html",
+        "asset": "assets/page-art/first-topic-completion/prayer-02-full.webp",
+        "responsive": "assets/page-art/first-topic-completion/prayer-02-960.webp",
+        "sha256": "3c457d6f3fa51cd069e7821c43e50db808b922c6bf388ff8a3451e1cc55a80b2",
+        "responsive_sha256": "319771423dadd52a13dc5b6ec2f0351436082ae2b8d486d58e7bd2cc585f5b9b",
+        "source_sha256": "d98c974a04d27c6297af4798e2cad1bd4dfb1490c87c5d6dc25257fa833d90c6",
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/john/6?lang=eng&id=p9-p11#p9"
+        ],
+        "source_label": "John 6:9–11",
+        "title": "Give thanks before sharing",
+        "caption": "Before the bread was shared, Jesus gave thanks. A small meal became part of His care for a hungry multitude. Gratitude belongs in prayer alongside the needs we bring to the Father.",
+        "alt": "Jesus holds barley bread as He gives thanks, with seated listeners on a grassy hillside behind Him.",
+        "christ": true,
+        "width": 1536,
+        "height": 1024,
+        "reviewed": true,
+        "owner_approved": false,
+        "review_notes": "Independent exact finished pixels followed by root raw-image adjudication; final assembled candidate and release gates remain pending."
+      },
+      {
+        "key": "prayer-04",
+        "route": "answers/prayer-and-personal-revelation.html",
+        "asset": "assets/page-art/first-topic-completion/prayer-04-full.webp",
+        "responsive": "assets/page-art/first-topic-completion/prayer-04-960.webp",
+        "sha256": "975497d6fb0d759d2d0fbec36dcb6b12a650abacfb920541e5beda9b7b20adef",
+        "responsive_sha256": "21d376185a6b66fd4694a4f14cd3e96e5cd6e59d05d541cc5998be30d330bf23",
+        "source_sha256": "f5bddfff0e60123d90ce262f7bca5e5274ecedeee033b30ae6369b92e8f7d68e",
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/9?lang=eng&id=p7-p9#p7"
+        ],
+        "source_label": "Doctrine and Covenants 9:7–9",
+        "title": "Take a thoughtful next step",
+        "caption": "The Lord asked Oliver Cowdery to study a matter out and then ask. We can bring that same willingness to think and learn into an ordinary decision, seek counsel, and take a careful next step.",
+        "alt": "A woman makes a phone call at home while a closed notebook rests on a nearby table.",
+        "christ": false,
+        "width": 1536,
+        "height": 1024,
+        "reviewed": true,
+        "owner_approved": false,
+        "review_notes": "Independent exact finished pixels followed by root raw-image adjudication; final assembled candidate and release gates remain pending."
+      }
+    ],
+    "answers/why-families-are-important.html": [
+      {
+        "key": "families-06",
+        "route": "answers/why-families-are-important.html",
+        "asset": "assets/page-art/first-topic-completion/families-06-full.webp",
+        "responsive": "assets/page-art/first-topic-completion/families-06-960.webp",
+        "sha256": "89d3e773f8f2e96c10b98b2db43de90e9e7640c58a7bb477cf798f17bb2bbd9e",
+        "responsive_sha256": "14f9d4023be4f5d7529b22bc0cd5fa39aec9368adc48591c1d6a396bb99bf440",
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/3?lang=eng&id=p31-p35#p31"
+        ],
+        "caption": "Jesus looks around at those seated with Him and speaks of a family joined by doing the will of God. His words invite us to consider how faith can deepen our care for one another.",
+        "alt": "Jesus looks around a seated circle of listeners inside a house.",
+        "christ": true,
+        "width": 1536,
+        "height": 1024,
+        "reviewed": true,
+        "owner_approved": false,
+        "review_notes": "Fermi/Newton exact finished pixels and reciprocal concurrence; root viewed approved reference and all raw/full/960. Assembled candidate and publication gates remain pending."
+      },
+      {
+        "key": "families-01-v2",
+        "route": "answers/why-families-are-important.html",
+        "asset": "assets/page-art/first-topic-completion/families-01-v2-full.webp",
+        "responsive": "assets/page-art/first-topic-completion/families-01-v2-960.webp",
+        "sha256": "8a01fc153cf5b5f6b12f71aa48bb52129195d8b4afd2e82fe843ef00f80278ea",
+        "responsive_sha256": "39b28e0f5c44f804d56c7b06fccef4c9c1d41ca58637545aafbceb8538abcbfe",
+        "source_sha256": "23ecb4a3e3b80db77effae9a692786f0a9de099b5e0a0fc6a9ea5a58cc405c81",
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/9?lang=eng&id=p33-p37#p33"
+        ],
+        "source_label": "Mark 9:33–37",
+        "title": "A child in their midst",
+        "caption": "When the disciples had been disputing who was greatest, Jesus sat down and placed a child among them. He taught that receiving a child in His name was a way of receiving Him. Small acts of welcome carry deep meaning.",
+        "alt": "Jesus sits beside a child standing among His listening disciples inside a house.",
+        "christ": true,
+        "width": 1536,
+        "height": 1024,
+        "reviewed": true,
+        "owner_approved": false,
+        "review_notes": "Independent exact finished pixels followed by root raw-image adjudication; final assembled candidate and release gates remain pending."
+      },
+      {
+        "key": "families-04",
+        "route": "answers/why-families-are-important.html",
+        "asset": "assets/page-art/first-topic-completion/families-04-full.webp",
+        "responsive": "assets/page-art/first-topic-completion/families-04-960.webp",
+        "sha256": "7d3839054e2c8897f89e72aecc0a16d408443945d680bc8841b16e5990f1cf0a",
+        "responsive_sha256": "887ecc20f52977d712b4f71b5400478e12d2c43c41d21c9b7b8533ba4df23f89",
+        "source_sha256": "5a5f5b0f66a0de346bd5ec7a2c381713b54d37c6e67c3ef3223769547a11901e",
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/9?lang=eng&id=p17-p24#p17"
+        ],
+        "source_label": "Mark 9:17–24",
+        "title": "Bring the faith you have",
+        "caption": "A father brought his suffering son to Jesus and spoke honestly about both belief and uncertainty. His plea, “help thou mine unbelief,” gives words to parents who love deeply while struggling to know what comes next.",
+        "alt": "A tearful father speaks to Jesus while people stand quietly behind them.",
+        "christ": true,
+        "width": 1536,
+        "height": 1024,
+        "reviewed": true,
+        "owner_approved": false,
+        "review_notes": "Independent exact finished pixels followed by root raw-image adjudication; final assembled candidate and release gates remain pending."
+      },
+      {
+        "key": "families-02-alt",
+        "route": "answers/why-families-are-important.html",
+        "asset": "assets/page-art/first-topic-completion/families-02-alt-full.webp",
+        "responsive": "assets/page-art/first-topic-completion/families-02-alt-960.webp",
+        "sha256": "78b53c6940fd3b138a639021508e93c49bce9fe5c92687dea57311afb42d361c",
+        "responsive_sha256": "ccaa5c2f158a78737099d055a77d3aa563f79e69a36aefa60983622b4bcada21",
+        "source_sha256": "85e2c57aaebbdf4ca9f70e6aed0730c6d0f0efe6d48b829acf1fbf18e6f6cf80",
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/john/4?lang=eng&id=p46-p53#p46"
+        ],
+        "source_label": "John 4:46–53",
+        "title": "A father trusts His word",
+        "caption": "A father came to Jesus in Cana while his son lay ill in Capernaum. He trusted the Savior’s word and began the journey home. Before he arrived, his servants met him with news that his son was living.",
+        "alt": "Jesus speaks with a concerned father on a village lane as the man prepares to return home.",
+        "christ": true,
+        "width": 1536,
+        "height": 1024,
+        "reviewed": true,
+        "owner_approved": false,
+        "review_notes": "Independent exact finished pixels followed by root raw-image adjudication; final assembled candidate and release gates remain pending."
+      },
+      {
+        "key": "families-03-alt",
+        "route": "answers/why-families-are-important.html",
+        "asset": "assets/page-art/first-topic-completion/families-03-alt-full.webp",
+        "responsive": "assets/page-art/first-topic-completion/families-03-alt-960.webp",
+        "sha256": "9ca17de99009be0fb97148e8606214f9e43fbf60d1e595acb0725c27228b19f7",
+        "responsive_sha256": "a9087b1f6410466b2b9da7825c8e5187fe3ce2c1f4686d99be85a81fdccce0bd",
+        "source_sha256": "9e53a6b6a4d623bcbbdcb1e7c2c89df23d419b6a235ab485c74b17518b5c3d2a",
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/14?lang=eng&id=p12-p14#p12"
+        ],
+        "source_label": "Luke 14:12–14",
+        "title": "Welcome without asking for return",
+        "caption": "At a meal, Jesus asked His host to invite people who could not repay him. His teaching reaches beyond the circle of friends and relatives who can return a favor. A welcoming home can offer care freely.",
+        "alt": "Jesus speaks to His host across a low dining table while other guests listen.",
+        "christ": true,
+        "width": 1536,
+        "height": 1024,
+        "reviewed": true,
+        "owner_approved": false,
+        "review_notes": "Independent exact finished pixels followed by root raw-image adjudication; final assembled candidate and release gates remain pending."
+      },
+      {
+        "key": "families-05-alt",
+        "route": "answers/why-families-are-important.html",
+        "asset": "assets/page-art/first-topic-completion/families-05-alt-full.webp",
+        "responsive": "assets/page-art/first-topic-completion/families-05-alt-960.webp",
+        "sha256": "61595e26dfc72669611761ab181bbf8a16781ecce6ed72258895191cbcb457d1",
+        "responsive_sha256": "dc7e75a0d5e1f85c9d48c8825a5d19b69dfdc94acb17b533afb83557424c213a",
+        "source_sha256": "7c5382bdd30888b195bf8c4fa673fb1dba9f8aaf025f1c31d6d92f71403d6805",
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/7?lang=eng&id=p11-p16#p11"
+        ],
+        "source_label": "Luke 7:11–16",
+        "title": "He returned him to his mother",
+        "caption": "Near the gate of Nain, Jesus saw a widow whose only son had died. He called the young man to arise and returned him to his mother. Luke tells the story through the Savior’s compassion for her and His power to give life.",
+        "alt": "Jesus stands beside a young man sitting upright on a bier as his mother comes close to receive him.",
+        "christ": true,
+        "width": 1536,
+        "height": 1024,
+        "reviewed": true,
+        "owner_approved": false,
+        "review_notes": "Independent exact finished pixels followed by root raw-image adjudication; final assembled candidate and release gates remain pending."
+      }
     ]
   },
   "responsive_hero_variants_20260929": [

@@ -1,0 +1,82 @@
+[
+  {
+    "id": "prayer-01",
+    "route": "answers/prayer-and-personal-revelation.html",
+    "asset_sha256": "a8725dcf98cfcc00215437eef8ba879bb10590ad0dd67dede7c0978a6cb3a7bd",
+    "responsive_sha256": "b797275d0054d8efd6a13f7ede029268ce1a89940d95a6b58e226b0c584f3e12",
+    "caption_alt_source_association_match": true,
+    "christ": true
+  },
+  {
+    "id": "prayer-03",
+    "route": "answers/prayer-and-personal-revelation.html",
+    "asset_sha256": "0e5b59e14562536bee30608f4bec26c4d77ce8710db17b69cb304042ab9f306e",
+    "responsive_sha256": "4d2f9ced3220091b5c9c1d265051194fa0eeb75a69ecf53b0d8d9e7b476b3cc3",
+    "caption_alt_source_association_match": true,
+    "christ": true
+  },
+  {
+    "id": "prayer-02",
+    "route": "answers/prayer-and-personal-revelation.html",
+    "asset_sha256": "3c457d6f3fa51cd069e7821c43e50db808b922c6bf388ff8a3451e1cc55a80b2",
+    "responsive_sha256": "319771423dadd52a13dc5b6ec2f0351436082ae2b8d486d58e7bd2cc585f5b9b",
+    "caption_alt_source_association_match": true,
+    "christ": true
+  },
+  {
+    "id": "prayer-04",
+    "route": "answers/prayer-and-personal-revelation.html",
+    "asset_sha256": "975497d6fb0d759d2d0fbec36dcb6b12a650abacfb920541e5beda9b7b20adef",
+    "responsive_sha256": "21d376185a6b66fd4694a4f14cd3e96e5cd6e59d05d541cc5998be30d330bf23",
+    "caption_alt_source_association_match": true,
+    "christ": false
+  },
+  {
+    "id": "families-06",
+    "route": "answers/why-families-are-important.html",
+    "asset_sha256": "89d3e773f8f2e96c10b98b2db43de90e9e7640c58a7bb477cf798f17bb2bbd9e",
+    "responsive_sha256": "14f9d4023be4f5d7529b22bc0cd5fa39aec9368adc48591c1d6a396bb99bf440",
+    "caption_alt_source_association_match": true,
+    "christ": true
+  },
+  {
+    "id": "families-01-v2",
+    "route": "answers/why-families-are-important.html",
+    "asset_sha256": "8a01fc153cf5b5f6b12f71aa48bb52129195d8b4afd2e82fe843ef00f80278ea",
+    "responsive_sha256": "39b28e0f5c44f804d56c7b06fccef4c9c1d41ca58637545aafbceb8538abcbfe",
+    "caption_alt_source_association_match": true,
+    "christ": true
+  },
+  {
+    "id": "families-04",
+    "route": "answers/why-families-are-important.html",
+    "asset_sha256": "7d3839054e2c8897f89e72aecc0a16d408443945d680bc8841b16e5990f1cf0a",
+    "responsive_sha256": "887ecc20f52977d712b4f71b5400478e12d2c43c41d21c9b7b8533ba4df23f89",
+    "caption_alt_source_association_match": true,
+    "christ": true
+  },
+  {
+    "id": "families-02-alt",
+    "route": "answers/why-families-are-important.html",
+    "asset_sha256": "78b53c6940fd3b138a639021508e93c49bce9fe5c92687dea57311afb42d361c",
+    "responsive_sha256": "ccaa5c2f158a78737099d055a77d3aa563f79e69a36aefa60983622b4bcada21",
+    "caption_alt_source_association_match": true,
+    "christ": true
+  },
+  {
+    "id": "families-03-alt",
+    "route": "answers/why-families-are-important.html",
+    "asset_sha256": "9ca17de99009be0fb97148e8606214f9e43fbf60d1e595acb0725c27228b19f7",
+    "responsive_sha256": "a9087b1f6410466b2b9da7825c8e5187fe3ce2c1f4686d99be85a81fdccce0bd",
+    "caption_alt_source_association_match": true,
+    "christ": true
+  },
+  {
+    "id": "families-05-alt",
+    "route": "answers/why-families-are-important.html",
+    "asset_sha256": "61595e26dfc72669611761ab181bbf8a16781ecce6ed72258895191cbcb457d1",
+    "responsive_sha256": "dc7e75a0d5e1f85c9d48c8825a5d19b69dfdc94acb17b533afb83557424c213a",
+    "caption_alt_source_association_match": true,
+    "christ": true
+  }
+]

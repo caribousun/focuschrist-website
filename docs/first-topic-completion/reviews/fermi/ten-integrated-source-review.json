@@ -1,0 +1,106 @@
+{
+  "reviewer": "Fermi",
+  "decision": "CONCUR_INTEGRATED_SOURCE_AND_OWNERSHIP_SCOPE",
+  "routes": [
+    {
+      "route": "answers/prayer-and-personal-revelation.html",
+      "sha256": "42da619819325166a47fd66903af3f51827b9deb4dc287b5b65a613064e684b7",
+      "new_originals": 4,
+      "new_christ": 3,
+      "owned_original_count": 10,
+      "christ_owned_count": 5,
+      "count_basis": "Hero counts once; unique topic images and exclusive original figures count once. Resource thumbnails, borrowed journey cards, full/960 variants and CSS hero crops excluded. Prior finite-gap pixels supply retained artwork classification."
+    },
+    {
+      "route": "answers/why-families-are-important.html",
+      "sha256": "de5640dfbe8d792b8176592e938a529b303f3c1fc2d144ce73b983d05b284845",
+      "new_originals": 6,
+      "new_christ": 6,
+      "owned_original_count": 12,
+      "christ_owned_count": 6,
+      "count_basis": "Hero counts once; unique topic images and exclusive original figures count once. Resource thumbnails, borrowed journey cards, full/960 variants and CSS hero crops excluded. Prior finite-gap pixels supply retained artwork classification."
+    }
+  ],
+  "new_art_ownership": [
+    {
+      "id": "prayer-01",
+      "owning_routes": [
+        "answers/prayer-and-personal-revelation.html"
+      ]
+    },
+    {
+      "id": "prayer-03",
+      "owning_routes": [
+        "answers/prayer-and-personal-revelation.html"
+      ]
+    },
+    {
+      "id": "families-06",
+      "owning_routes": [
+        "answers/why-families-are-important.html"
+      ]
+    },
+    {
+      "id": "prayer-02",
+      "owning_routes": [
+        "answers/prayer-and-personal-revelation.html"
+      ]
+    },
+    {
+      "id": "prayer-04",
+      "owning_routes": [
+        "answers/prayer-and-personal-revelation.html"
+      ]
+    },
+    {
+      "id": "families-01-v2",
+      "owning_routes": [
+        "answers/why-families-are-important.html"
+      ]
+    },
+    {
+      "id": "families-04",
+      "owning_routes": [
+        "answers/why-families-are-important.html"
+      ]
+    },
+    {
+      "id": "families-02-alt",
+      "owning_routes": [
+        "answers/why-families-are-important.html"
+      ]
+    },
+    {
+      "id": "families-03-alt",
+      "owning_routes": [
+        "answers/why-families-are-important.html"
+      ]
+    },
+    {
+      "id": "families-05-alt",
+      "owning_routes": [
+        "answers/why-families-are-important.html"
+      ]
+    }
+  ],
+  "exact_asset_verification": "ten-integrated-verification.json verifies all20 integrated full/960 hashes, captions, alt/image-viewer alt and exact source URL associations against reviewed records.",
+  "source_findings": "All10 own specific official passages matching events, with distinct source/action captions. Prayer01 After Jesus prays follows Luke11:1 and avoids unsupported eyewitness premise. Prayer04 explicitly uses ordinary application, and surrounding D&C9 text preserves Oliver translation context. Families01 caption/source Mark9 distinct from nearby Mark10 discussion. Source ranges normalize without changing passages.",
+  "placement_findings": "Read actual page text and all10 figure markup. Prayer teaching/gratitude/thanksgiving/ordinary next-step images support nearby prayer and discernment prose. Families belonging, trusting parent, widow care, honest faith, free hospitality and child welcome support local topics. Families01 placed in scripture-study rather than preflight hope-reflection; coherent alongside welcome/responsibility discussion, no source conflation. No blocking source or prose-cohesion issue found.",
+  "panel_source_review": "Read complete topic-artwork-details.js. Each figure own caption paragraphs and official source are chosen before any fallback; title and alt are per-image; full image and Continue Lesson controls derive from that figure/local section. Families01 Continue Lesson should resolve scripture-study heading under actual code, not old preflight proposed heading. Runtime behavior is not inferred from code; root native check separate.",
+  "mandates_read_and_followed": [
+    "Live Master protected foundation and operating map: preserved; no control change",
+    "SITE AGENTS.md and docs/historical-character-identity.md: approved identity, source/event/age/expression reviews retained",
+    "docs/enriched-picture-owner-mandate.md: distinct owning originals counted, at least half Christ for each route, variants/borrowed cards excluded",
+    "docs/focuschrist-enrichment-and-stewardship-prompt.md: warm source-grounded prose, coherent topic placement and source controls reviewed",
+    "tools/anatomy-review/README.md: original complex hug remained held; independently supported no-contact V2 reviewed"
+  ],
+  "disclosure": "Read unchanged existing footer disclosure in both route source. New10 captions contain no duplicate AI/reconstruction boilerplate.",
+  "violations": [],
+  "limits": [
+    "No SITE edits",
+    "Candidate manifest and final QA pending root notice",
+    "No owner aesthetic acceptance",
+    "No native interaction proof from this source review",
+    "No publication or global FIRST/second-pass readiness claim"
+  ]
+}

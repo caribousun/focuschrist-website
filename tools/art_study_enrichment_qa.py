@@ -216,6 +216,9 @@ def settle_review_errors(reviewed_pages, root=ROOT):
 
 def main() -> int:
     errors: list[str] = []
+    from first_topic_completion_qa import check as check_first_topic_completion
+    first_topic_review = check_first_topic_completion(ROOT)
+    first_topic_pages = {r['route'] for r in first_topic_review.values()}
     gallery = AuditParser()
     gallery.feed((ROOT / "art.html").read_text(encoding="utf-8"))
     if set(gallery.featured_destinations) != set(PAGES) or len(gallery.featured_destinations) != len(PAGES):
@@ -339,8 +342,8 @@ def main() -> int:
         # srcset. Exclusivity concerns owning pages, not references on that page.
         if sum(asset in text for text in html_pages) != 1:
             errors.append(f"exclusive supporting artwork must appear on exactly one page: {asset}")
-    if set(reviewed_pages) != set(PAGES) | {'answers/aaronic-priesthood-restoration.html', 'answers/melchizedek-priesthood-restoration.html'} | {"book-of-mormon-evidences.html", "church-history.html", "joseph-smith-likeness.html", "atonement.html", "missionary.html", "answers/what-happens-after-death.html", "birth-of-christ.html", "answers/death-of-a-child.html", "answers/divorce-and-faith.html", "answers/god-our-heavenly-father.html", "answers/grief-and-faith.html"} | {e['page'] for e in additions} | {BOM_PAGE, SETTLE_PAGE, TEMPLE_PAGE} | {'history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html'}:
-        errors.append("image review manifest must contain the four featured studies, Evidences, Church History, Joseph Smith likeness, Atonement, Mission, Life After Death, Birth of Christ, Book of Mormon stories and the four reviewed study-gap pages")
+    if set(reviewed_pages) != set(PAGES) | {'answers/aaronic-priesthood-restoration.html', 'answers/melchizedek-priesthood-restoration.html'} | {"book-of-mormon-evidences.html", "church-history.html", "joseph-smith-likeness.html", "atonement.html", "missionary.html", "answers/what-happens-after-death.html", "birth-of-christ.html", "answers/death-of-a-child.html", "answers/divorce-and-faith.html", "answers/god-our-heavenly-father.html", "answers/grief-and-faith.html"} | {e['page'] for e in additions} | {BOM_PAGE, SETTLE_PAGE, TEMPLE_PAGE} | {'history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html'} | first_topic_pages:
+        errors.append("image review manifest must contain the four featured studies, Evidences, Church History, Joseph Smith likeness, Atonement, Mission, Life After Death, Birth of Christ, Book of Mormon stories and the four reviewed study-gap pages plus the strictly validated FIRST topic additions")
 
     errors.extend(book_of_mormon_review_errors(reviewed_pages))
     errors.extend(settle_review_errors(reviewed_pages))

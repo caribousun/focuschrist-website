@@ -1,0 +1,105 @@
+{
+  "reviewer": "Newton",
+  "mandates_read_and_reference": "See exact current mandate hashes/reference in three-scene-pixel-review.json and preflight packet76203586",
+  "independent_before_fermi_result": true,
+  "scenes": [
+    {
+      "id": "prayer-02",
+      "generation_source": "C:/Users/wyatt/.codex/generated_images/01a10a98-e85e-7563-a038-1f305e9aa15e/exec-9f49b91d-adef-49ee-a662-ac254668a4bf.png",
+      "files": [
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\focus-first-artwork-coverage-continuation\\work\\art-candidates\\prayer-02.png",
+          "sha256": "d98c974a04d27c6297af4798e2cad1bd4dfb1490c87c5d6dc25257fa833d90c6",
+          "bytes": 2833041,
+          "actual_sha256": "d98c974a04d27c6297af4798e2cad1bd4dfb1490c87c5d6dc25257fa833d90c6",
+          "hash_match": true,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "actual_pixels_viewed": true
+        },
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\focus-first-artwork-coverage-continuation\\work\\art-candidates\\prayer-02-full.webp",
+          "sha256": "3c457d6f3fa51cd069e7821c43e50db808b922c6bf388ff8a3451e1cc55a80b2",
+          "bytes": 374884,
+          "actual_sha256": "3c457d6f3fa51cd069e7821c43e50db808b922c6bf388ff8a3451e1cc55a80b2",
+          "hash_match": true,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "actual_pixels_viewed": true
+        },
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\focus-first-artwork-coverage-continuation\\work\\art-candidates\\prayer-02-960.webp",
+          "sha256": "319771423dadd52a13dc5b6ec2f0351436082ae2b8d486d58e7bd2cc585f5b9b",
+          "bytes": 173822,
+          "actual_sha256": "319771423dadd52a13dc5b6ec2f0351436082ae2b8d486d58e7bd2cc585f5b9b",
+          "hash_match": true,
+          "dimensions": [
+            960,
+            640
+          ],
+          "actual_pixels_viewed": true
+        }
+      ],
+      "face_crop_viewed": true,
+      "status": "INDEPENDENT_FINISHED_PIXEL_CONCUR",
+      "observations": "Recognizable approved Christ face/brow/nose/beard/hair persists with lowered eyes and quiet gratitude. Natural adult mortal age, no broad smile or wounds. Both hands cradle bread naturally with coherent fingers/wrists and forearms. Four visible loaves in basket plus one held, exactly two visible fish. Seated grassy crowd behind in ordinary daylight; no distribution or overflowing food. Copper-rust mantle reads naturally woven. Original/full/960 preserve detail and composition; no definite export defect."
+    },
+    {
+      "id": "prayer-04",
+      "generation_source": "C:/Users/wyatt/.codex/generated_images/01a10a98-e85e-7563-a038-1f305e9aa15e/exec-b3f9797b-e3c5-4469-a3b5-e2a1231d81b7.png",
+      "files": [
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\focus-first-artwork-coverage-continuation\\work\\art-candidates\\prayer-04.png",
+          "sha256": "f5bddfff0e60123d90ce262f7bca5e5274ecedeee033b30ae6369b92e8f7d68e",
+          "bytes": 2120879,
+          "actual_sha256": "f5bddfff0e60123d90ce262f7bca5e5274ecedeee033b30ae6369b92e8f7d68e",
+          "hash_match": true,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "actual_pixels_viewed": true
+        },
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\focus-first-artwork-coverage-continuation\\work\\art-candidates\\prayer-04-full.webp",
+          "sha256": "975497d6fb0d759d2d0fbec36dcb6b12a650abacfb920541e5beda9b7b20adef",
+          "bytes": 171580,
+          "actual_sha256": "975497d6fb0d759d2d0fbec36dcb6b12a650abacfb920541e5beda9b7b20adef",
+          "hash_match": true,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "actual_pixels_viewed": true
+        },
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\focus-first-artwork-coverage-continuation\\work\\art-candidates\\prayer-04-960.webp",
+          "sha256": "21d376185a6b66fd4694a4f14cd3e96e5cd6e59d05d541cc5998be30d330bf23",
+          "bytes": 86220,
+          "actual_sha256": "21d376185a6b66fd4694a4f14cd3e96e5cd6e59d05d541cc5998be30d330bf23",
+          "hash_match": true,
+          "dimensions": [
+            960,
+            640
+          ],
+          "actual_pixels_viewed": true
+        }
+      ],
+      "face_crop_viewed": true,
+      "status": "INDEPENDENT_FINISHED_PIXEL_CONCUR",
+      "observations": "Fictional middle-aged modern woman with natural skin/hair/eyes and small attentive smile, plausible right forearm/hand holding phone at right ear, left hand on chair with coherent digits. Plum blouse, closed notebook aside, no private screen data or supernatural cue. No exact historical identity implied. Original/full/960 preserve natural proportions and detail, no definite export defect."
+    }
+  ],
+  "caption_and_source": "Exact preflight source and copy previously reviewed; no finished pixel contradiction observed. Integrated page/native still pending.",
+  "decision": "CONCUR exact6 files within finishedpixel scope; reciprocal concurrence/root assembly required",
+  "violations": [],
+  "limits": [
+    "Not owner aesthetic acceptance",
+    "Not rendered phone or fullroute acceptance",
+    "No regeneration or SITE changes"
+  ]
+}

@@ -12,6 +12,8 @@ def nodes(path):
 def child(node,tag):
  return next((n for n in node.children if n.tag==tag),None)
 ROOT=Path(__file__).resolve().parents[1]
+from first_topic_completion_qa import check as check_first_topic_completion
+first_topic_review=check_first_topic_completion(ROOT)
 placements=json.loads((ROOT/'docs/topic-artwork-placement.json').read_text(encoding='utf-8'))
 assert len(placements)==21
 review=json.loads((ROOT/'docs/topic-artwork-review.json').read_text(encoding='utf-8'))
@@ -62,6 +64,6 @@ family_ids = {'likeness-brothers' if s['id']=='joseph-hyrum-bond' else 'life-'+s
 family_figures = [(p.relative_to(ROOT).as_posix(), n.attrs['data-enriched-study-art']) for p in (ROOT/'answers').glob('*.html') for n in nodes(p) if n.tag=='figure' and n.attrs.get('data-enriched-study-art') in family_ids]
 assert len(family_ids)==len(family_figures)==11 and {key for _,key in family_figures}==family_ids, 'Exact eleven reviewed family figures required'
 assert all(page=='answers/who-was-joseph-smith.html' for page,_ in family_figures), 'Family figures belong to Joseph biography'
-assert allfigures == len(placements) + len(moved_ids) + len(family_ids)
+assert allfigures == len(placements) + len(moved_ids) + len(family_ids) + len(first_topic_review)
 css=(ROOT/'topic-art.css').read_text();assert 'object-fit:contain' in css and 'height:auto' in css
-print('TOPIC ARTWORK QA PASS: 21 contextual placements, individually approved assets, exact sources, responsive full-image viewing')
+print('TOPIC ARTWORK QA PASS: 21 preserved contextual placements plus 10 strictly validated FIRST additions, individually reviewed assets, exact sources, responsive full-image viewing')

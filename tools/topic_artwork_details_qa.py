@@ -8,6 +8,9 @@ from answer_study_qa import Document
 from study_gap_art_qa import sitewide_entries
 from build_jesus_journey import validate_artwork_review
 ROOT=Path(__file__).resolve().parents[1]
+from first_topic_completion_qa import check as check_first_topic_completion
+first_topic_review=check_first_topic_completion(ROOT)
+first_topic_assets=[]
 
 def local_asset(page,href):
  u=urlsplit(href)
@@ -105,7 +108,11 @@ for page in [*sorted((ROOT/'answers').glob('*.html')),ROOT/'general-conference.h
   sources=[n for n in cap.walk() if n.tag=='a' and urlsplit(n.attrs.get('href','')).hostname in ('www.churchofjesuschrist.org','newsroom.churchofjesuschrist.org')] if cap else []
   if not sources and 'data-topic-study' not in a.attrs and page.name not in ('grief-and-faith.html','general-conference.html'):errors.append(page.name+': body source unavailable without unrelated page fallback')
   relative_asset=local_asset(page,a.attrs['href']).relative_to(ROOT).as_posix()
-  if relative_asset.startswith('assets/page-art/temples/'):
+  if relative_asset in first_topic_review:
+   record=first_topic_review[relative_asset]
+   assert page.relative_to(ROOT).as_posix()==record['route'], 'FIRST topic owner mismatch'
+   first_topic_assets.append(relative_asset)
+  elif relative_asset.startswith('assets/page-art/temples/'):
    assert relative_asset in temple_review and page.name=='why-latter-day-saints-build-temples.html', 'Temple artwork owner/review mismatch'
    key,record=temple_review[relative_asset]
    assert record['reviewed'] and hashlib.sha256((ROOT/relative_asset).read_bytes()).hexdigest()==record['sha256'], 'Temple artwork changed after visual review'
@@ -228,7 +235,8 @@ assert len(journey_assets)==len(set(journey_assets)) and set(journey_assets)==ex
 assert len(hg_assets)==len(set(hg_assets))==16 and set(hg_assets)==set(hg_review), 'Holy Ghost exact body inventory mismatch'
 assert len(temple_assets)==len(set(temple_assets))==len(temple_review)==21 and set(temple_assets)==set(temple_review), 'Twenty chapter pictures and the owner-requested Nephi companion must reach the shared study adapter'
 assert len(joseph_assets)==len(set(joseph_assets))==26 and set(joseph_assets)==joseph_review, 'All reviewed Joseph family pictures must reach study details exactly once'
-assert (count-len(joseph_assets)-len(temple_assets)-len(father_assets)-len(plan_assets)-len(hg_assets)-len(covenant_assets)-len(journey_assets)-len(bible_assets)-len(settle_assets)-len(life_assets)-len(gap_assets)-len(sitewide_assets)-len(focused_assets)-len(relocated_assets)-len(bom_assets),preserved)==(99,3),(count,preserved)
+assert len(first_topic_assets)==len(set(first_topic_assets))==10 and set(first_topic_assets)==set(first_topic_review), 'Exact additive FIRST topic family required'
+assert (count-len(first_topic_assets)-len(joseph_assets)-len(temple_assets)-len(father_assets)-len(plan_assets)-len(hg_assets)-len(covenant_assets)-len(journey_assets)-len(bible_assets)-len(settle_assets)-len(life_assets)-len(gap_assets)-len(sitewide_assets)-len(focused_assets)-len(relocated_assets)-len(bom_assets),preserved)==(99,3),(count,preserved)
 # Life After Death lifted its old illustrated feature panel into full reading
 # sections. All twelve remaining panels still undergo the structural checks.
 assert set(plan_assets)==set(plan_review) and len(plan_assets)==16, 'All sixteen Plan originals must reach the shared study adapter'

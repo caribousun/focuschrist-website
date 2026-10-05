@@ -287,6 +287,28 @@
       ]
     },
     {
+      "title": "A child in their midst",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/families-01-v2-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/families-01-v2-full.webp",
+      "alt": "Jesus sits beside a child standing among His listening disciples inside a house.",
+      "id": "art-78ec13d1b608",
+      "occurrences": [
+        {
+          "id": "source-340825f8ba66",
+          "page": "/answers/why-families-are-important.html",
+          "pageTitle": "Families",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/families-01-v2-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/families-01-v2-960.webp\"])",
+          "title": "A child in their midst"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "A child rises at His word",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/mc-jairus-daughter-960.webp",
@@ -610,6 +632,28 @@
           "kind": "topic",
           "selector": "a[href=\"assets/page-art/sitewide/bom-alma-helaman-full.webp\"]:has(img[src=\"assets/page-art/sitewide/bom-alma-helaman-960.webp\"])",
           "title": "A father shares the mercy he remembers"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "A father trusts His word",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/families-02-alt-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/families-02-alt-full.webp",
+      "alt": "Jesus speaks with a concerned father on a village lane as the man prepares to return home.",
+      "id": "art-faf2870cb095",
+      "occurrences": [
+        {
+          "id": "source-ff4aa4e73633",
+          "page": "/answers/why-families-are-important.html",
+          "pageTitle": "Families",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/families-02-alt-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/families-02-alt-960.webp\"])",
+          "title": "A father trusts His word"
         }
       ],
       "categories": [
@@ -4756,6 +4800,28 @@
       ]
     },
     {
+      "title": "Bring the faith you have",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/families-04-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/families-04-full.webp",
+      "alt": "A tearful father speaks to Jesus while people stand quietly behind them.",
+      "id": "art-fb57f16bbfc2",
+      "occurrences": [
+        {
+          "id": "source-bfa9bf7ab1e0",
+          "page": "/answers/why-families-are-important.html",
+          "pageTitle": "Families",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/families-04-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/families-04-960.webp\"])",
+          "title": "Bring the faith you have"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Bring the question to God",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/bom-evidences/josephprayer-960.webp",
@@ -7510,6 +7576,28 @@
       ]
     },
     {
+      "title": "Father, I thank thee",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/prayer-03-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/prayer-03-full.webp",
+      "alt": "Jesus lifts His eyes in thanksgiving beside the opened tomb of Lazarus.",
+      "id": "art-253854280e6a",
+      "occurrences": [
+        {
+          "id": "source-ec2ef4325863",
+          "page": "/answers/prayer-and-personal-revelation.html",
+          "pageTitle": "Prayer & Revelation",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/prayer-03-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/prayer-03-960.webp\"])",
+          "title": "Father, I thank thee"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Fear not; I am the first and the last",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/rt-patmos-vision-960.webp",
@@ -8163,6 +8251,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/exclusive/jesus-compassion-attention-v4-1536.webp\"]:has(img[src=\"../assets/page-art/exclusive/jesus-compassion-attention-v4-800.webp\"])",
           "title": "Give someone your full attention"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Give thanks before sharing",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/prayer-02-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/prayer-02-full.webp",
+      "alt": "Jesus holds barley bread as He gives thanks, with seated listeners on a grassy hillside behind Him.",
+      "id": "art-47bbfa0ee291",
+      "occurrences": [
+        {
+          "id": "source-b3216fc97e8c",
+          "page": "/answers/prayer-and-personal-revelation.html",
+          "pageTitle": "Prayer & Revelation",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/prayer-02-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/prayer-02-960.webp\"])",
+          "title": "Give thanks before sharing"
         }
       ],
       "categories": [
@@ -8845,6 +8955,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/19-children-prayer-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/19-children-prayer-960.webp\"])",
           "title": "He prays with the children around Him"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "He returned him to his mother",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/families-05-alt-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/families-05-alt-full.webp",
+      "alt": "Jesus stands beside a young man sitting upright on a bier as his mother comes close to receive him.",
+      "id": "art-ddb637ae384f",
+      "occurrences": [
+        {
+          "id": "source-fa2a2d8f0181",
+          "page": "/answers/why-families-are-important.html",
+          "pageTitle": "Families",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/families-05-alt-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/families-05-alt-960.webp\"])",
+          "title": "He returned him to his mother"
         }
       ],
       "categories": [
@@ -12618,6 +12750,28 @@
       ]
     },
     {
+      "title": "Lord, teach us to pray",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/prayer-01-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/prayer-01-full.webp",
+      "alt": "Jesus speaks with seated disciples after prayer, wearing an ochre mantle.",
+      "id": "art-b7c112357f31",
+      "occurrences": [
+        {
+          "id": "source-f60f68193c26",
+          "page": "/answers/prayer-and-personal-revelation.html",
+          "pageTitle": "Prayer & Revelation",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/prayer-01-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/prayer-01-960.webp\"])",
+          "title": "Lord, teach us to pray"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Loss, return, and rebuilding",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/temples/temple-return-rebuild-960.webp",
@@ -13513,6 +13667,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/rr-before-pilate-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/rr-before-pilate-960.webp\"])",
           "title": "My kingdom is not of this world"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "My mother and my brethren",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/families-06-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/families-06-full.webp",
+      "alt": "Jesus looks around a seated circle of listeners inside a house.",
+      "id": "art-147bd0363383",
+      "occurrences": [
+        {
+          "id": "source-367876fdf73d",
+          "page": "/answers/why-families-are-important.html",
+          "pageTitle": "Families",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/families-06-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/families-06-960.webp\"])",
+          "title": "My mother and my brethren"
         }
       ],
       "categories": [
@@ -17410,6 +17586,28 @@
       ]
     },
     {
+      "title": "Take a thoughtful next step",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/prayer-04-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/prayer-04-full.webp",
+      "alt": "A woman makes a phone call at home while a closed notebook rests on a nearby table.",
+      "id": "art-0fcca9e8d81a",
+      "occurrences": [
+        {
+          "id": "source-edd0fe1da190",
+          "page": "/answers/prayer-and-personal-revelation.html",
+          "pageTitle": "Prayer & Revelation",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/prayer-04-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/prayer-04-960.webp\"])",
+          "title": "Take a thoughtful next step"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Take Time to Study",
       "category": "Gospel Studies",
       "thumbnail": "/assets/heroes/answers.webp",
@@ -20966,6 +21164,28 @@
       ]
     },
     {
+      "title": "Welcome without asking for return",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/families-03-alt-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/families-03-alt-full.webp",
+      "alt": "Jesus speaks to His host across a low dining table while other guests listen.",
+      "id": "art-f25ef390c101",
+      "occurrences": [
+        {
+          "id": "source-a7857d05ac78",
+          "page": "/answers/why-families-are-important.html",
+          "pageTitle": "Families",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/families-03-alt-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/families-03-alt-960.webp\"])",
+          "title": "Welcome without asking for return"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Welcomed as a son",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/prodigal-son-07-960.webp",
@@ -21611,14 +21831,14 @@
     }
   ],
   "stats": {
-    "artworks": 973,
-    "occurrences": 978,
+    "artworks": 983,
+    "occurrences": 988,
     "byKind": {
       "artwork": 63,
       "hero": 42,
       "legacy": 39,
       "missionary": 13,
-      "topic": 874
+      "topic": 884
     }
   }
 }
