@@ -8,7 +8,7 @@ module.exports=async function(page,origin,out){
  const records=[],dist=path.dirname(require.resolve('leaflet'));
  const intercept=async r=>{const u=r.request().url();if(u.includes('/leaflet@')&&u.endsWith('.js'))return r.fulfill({contentType:'text/javascript',body:instrumentLeaflet(fs.readFileSync(path.join(dist,'leaflet.js'),'utf8'))});if(u.includes('leaflet')&&u.endsWith('.css'))return r.fulfill({contentType:'text/css',body:fs.readFileSync(path.join(dist,'leaflet.css'),'utf8')});if(u.includes('tile.openstreetmap.org'))return r.fulfill({contentType:'image/svg+xml',body:'<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256"><rect width="256" height="256" fill="#54717a"/></svg>'});return r.abort();};
  await page.route('https://**',intercept);
- const terrainFixture=route=>route.fulfill({contentType:'text/javascript',body:"window.FCTerrainLayer=function(){return L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19});};"});
+ const terrainFixture=route=>route.fulfill({contentType:'text/javascript',body:require('./timeline_terrain_fixture')});
  await page.route('**/timeline-terrain.js?*',terrainFixture);
  try{for(const [width,height,scale] of [[1366,720,1],[390,844,1],[320,900,2]])for(const kind of ['history','handcart','life','americas']){
   const route={history:'latter-day-saint-church-history-timeline',handcart:'willie-and-martin-handcart-map',life:'life-of-christ-journey-map',americas:'life-of-christ-journey-map'}[kind],record={kind,width,height,scale};

@@ -622,7 +622,7 @@
   function showFallback(){
     if(closed) return;
     mapUnavailable = true;
-    if(renderer) renderer.style.visibility = 'hidden';
+    if(renderer){renderer.style.visibility = 'hidden';renderer.hidden = !leafletMap;}
     if(mapEl.querySelector('.map-fallback')) return;
     var fallback = document.createElement('div');
     fallback.className = 'map-fallback';
@@ -638,7 +638,7 @@
     if(!mapUnavailable) return;
     mapUnavailable = false;
     var fallback = mapEl.querySelector('.map-fallback');if(fallback) fallback.remove();
-    renderer.style.visibility = '';
+    renderer.style.visibility = '';renderer.hidden = false;
     leafletMap.invalidateSize({pan:false});
   }
   function stopIcon(index){
@@ -699,6 +699,7 @@
   }
   function mount(rows){
     if(!leafletMap && !renderer){
+      mapEl.style.position='relative';
       renderer=document.createElement('div');renderer.style.width='100%';renderer.style.height='100%';mapEl.appendChild(renderer);
       try{
         if(typeof L==='undefined')throw new Error('Leaflet unavailable');
