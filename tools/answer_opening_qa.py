@@ -10,6 +10,8 @@ SOURCE='answers/race-priesthood-and-temple-blessings.html'
 LOOK='answers/look-unto-me-doctrine-and-covenants-6-36.html'
 def digest(text):return hashlib.sha256(text.encode()).hexdigest()
 def check():
+    from first_topic_completion_qa import check as check_first_topic_completion
+    first_topic_review = check_first_topic_completion(ROOT)
     records=BASELINE['pages']
     assert BASELINE['commit']=='9e95856dc14ce2e41830c2445ffff96a5f8fe39e'
     actual={p.relative_to(ROOT).as_posix() for p in (ROOT/'answers').glob('*.html')}
@@ -59,6 +61,11 @@ def check():
             assert len(doc.select('img'))==6, 'Preserve six original official media previews'
         assert digest(str(header))==r['opening_sha256'],name+': opening copy/hero markup changed'
         images=copy.deepcopy(doc)
+        expected_first = {r['responsive']: r for r in first_topic_review.values() if r['route'] == name}
+        first_images = [i for i in images.select('img') if 'first-topic-completion/' in i.get('src', '')]
+        assert len(first_images) == len(expected_first) and {i.get('src', '').removeprefix('../') for i in first_images} == set(expected_first), name+': exact validated FIRST additions required'
+        for img in first_images:
+            img.decompose() # Only strict hash/source/ownership-validated additions are excluded from the unchanged historical digest.
         if images.select('[data-linked-study-reference="modern-scripture"]'):
             normalize_reviewed_reference(images) # Exact retired preview only; retain original whole-image digest.
         assert digest(''.join(str(i) for i in images.select('img')))==r['images_sha256'],name+': approved image references/attributes changed'

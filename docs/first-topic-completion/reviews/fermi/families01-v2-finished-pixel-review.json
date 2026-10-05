@@ -1,0 +1,43 @@
+{
+  "reviewer": "Fermi",
+  "id": "families-01-v2",
+  "decision": "CONCUR_FINISHED_PIXELS",
+  "files": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\focus-first-artwork-coverage-continuation\\work\\art-candidates\\families-01-v2.png",
+      "sha256": "23ecb4a3e3b80db77effae9a692786f0a9de099b5e0a0fc6a9ea5a58cc405c81",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "actual_pixels_viewed": true
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\focus-first-artwork-coverage-continuation\\work\\art-candidates\\families-01-v2-full.webp",
+      "sha256": "8a01fc153cf5b5f6b12f71aa48bb52129195d8b4afd2e82fe843ef00f80278ea",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "actual_pixels_viewed": true
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\focus-first-artwork-coverage-continuation\\work\\art-candidates\\families-01-v2-960.webp",
+      "sha256": "39b28e0f5c44f804d56c7b06fccef4c9c1d41ca58637545aafbceb8538abcbfe",
+      "dimensions": [
+        960,
+        640
+      ],
+      "actual_pixels_viewed": true
+    }
+  ],
+  "findings": "Actual raw PNG, full WebP and 960 WebP personally viewed. Recognizable adult Home Christ identity with warm attentive expression, seated amid listening adults; dusty blue mantle, plain woven clothing and plausible interior daylight. One child about five stands independently to Christs anatomical left, two supported feet, clear body gap, arms naturally at own sides. Christ left/right hands rest on own knees, coherent wrists, fingers and sleeve connections. No interpersonal contact or lifted child. Child is looking toward Christ instead of nearest disciple as prompted; harmless staging variation consistent with attentive child, no source contradiction. Mark9:36 first action child set in midst is represented; caption retains subsequent teaching without denying later embrace. No definite anatomy, identity, realism or export defect.",
+  "preflight": "families01-v2-preflight.json; exact prompt dea5716978485363cf648100ab8c5b784e7d263df07ae99722e157525f3726f2",
+  "mandates": "Reuses current authority and mandate reads in seven-scene-preflight.json. Follows source, identity, age/expression, realistic cloth/skin, anatomical support and source-specific distinct composition. Original hug hold remains separate.",
+  "limits": [
+    "Only exact3 files",
+    "No owner visual acceptance or whole-route/FIRST readiness",
+    "Newton review and assembled native review remain separate",
+    "No generation or SITE modification"
+  ]
+}

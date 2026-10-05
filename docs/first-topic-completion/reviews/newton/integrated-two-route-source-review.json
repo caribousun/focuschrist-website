@@ -1,0 +1,35 @@
+{
+  "reviewer": "Newton",
+  "decision": "CONCUR_SCOPED_INTEGRATED_SOURCE",
+  "routes": [
+    {
+      "route": "answers/prayer-and-personal-revelation.html",
+      "sha256": "42da619819325166a47fd66903af3f51827b9deb4dc287b5b65a613064e684b7"
+    },
+    {
+      "route": "answers/why-families-are-important.html",
+      "sha256": "de5640dfbe8d792b8176592e938a529b303f3c1fc2d144ce73b983d05b284845"
+    }
+  ],
+  "exact_records_sha256": "42bf0c13fd0c9d4a606b554ad5bb4f90354fd090688ded1e7e4965087695364b",
+  "verification": "Read both complete main text flows and every new figure markup. Exact10 captions/alts/source URLs match registry records,20 export hashes match independently reviewed pixels; each first figure occurs exactly once on owning route. Footer elements identical to HEAD.",
+  "counts": {
+    "prayer": {
+      "owning_figures": 9,
+      "hero": 1,
+      "total": 10,
+      "christ": 5
+    },
+    "families": {
+      "owning_figures": 11,
+      "hero": 1,
+      "total": 12,
+      "christ": 6
+    }
+  },
+  "count_basis": "Owning artwork only; CSS hero counts once, responsive variants not new scenes. Related-route thumbnails and official video cards excluded. Families kitchen hero is non-Christ despite shared legacy CSS class name. Separate from old99 QA baseline.",
+  "source_judgment": "All10 scene actions/captions agree with official scripture passages read during exact preflight. New range links encompass caption events. Luke11 caption correctly after prayer. John11 thanksgiving before Lazarus call. John6 thanksgiving before distribution. D&C9 modern application preserves Oliver translation setting later in page, no guaranteed sensation. Mark9 child first placement before embrace; father uncertainty source-specific. John4 departure and later servant news distinct. Luke14 host instruction not enacted parable. Luke7 restored mortal son not Christ resurrection. Mark3 family-by-Gods-will source clearly named.",
+  "placement_judgment": "New scenes dispersed among relevant sections: prayer instruction, thanks, waiting, thoughtful action; family belonging, parenting, painful circumstances, trust, outward care and receiving children. Historical miracle captions do not promise same immediate outcome to every reader. No source conflation or duplicate disclosure added.",
+  "blocking_defects": [],
+  "limits": "Scoped current source and exact20 image bytes; root browser review separate. Final candidate byte rebind required if pages change. No wholeFIRST/owner/publication acceptance."
+}

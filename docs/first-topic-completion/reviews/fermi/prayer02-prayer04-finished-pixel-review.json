@@ -1,0 +1,83 @@
+{
+  "reviewer": "Fermi",
+  "review": "Independent finished actual pixel review",
+  "scenes": [
+    {
+      "id": "prayer-02",
+      "decision": "CONCUR_FINISHED_PIXELS",
+      "files": [
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\focus-first-artwork-coverage-continuation\\work\\art-candidates\\prayer-02.png",
+          "sha256": "d98c974a04d27c6297af4798e2cad1bd4dfb1490c87c5d6dc25257fa833d90c6",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "actual_pixels_viewed": true
+        },
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\focus-first-artwork-coverage-continuation\\work\\art-candidates\\prayer-02-full.webp",
+          "sha256": "3c457d6f3fa51cd069e7821c43e50db808b922c6bf388ff8a3451e1cc55a80b2",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "actual_pixels_viewed": true
+        },
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\focus-first-artwork-coverage-continuation\\work\\art-candidates\\prayer-02-960.webp",
+          "sha256": "319771423dadd52a13dc5b6ec2f0351436082ae2b8d486d58e7bd2cc585f5b9b",
+          "dimensions": [
+            960,
+            640
+          ],
+          "actual_pixels_viewed": true
+        }
+      ],
+      "findings": "Christ face, mature adult age and restrained prayerful expression fit approved Home identity. Coherent two hands hold one loaf; basket contains four further loaves and two fish, totaling five loaves and two fish. Natural skin, cloth, grassy seated crowd and light; no visible anatomy defect or wounds. Thanksgiving before distribution remains distinct from comparator.",
+      "exports": "Personally viewed raw PNG, full WebP and 960 WebP and face crop. Composition/details preserved with no material visible export defect."
+    },
+    {
+      "id": "prayer-04",
+      "decision": "CONCUR_FINISHED_PIXELS",
+      "files": [
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\focus-first-artwork-coverage-continuation\\work\\art-candidates\\prayer-04.png",
+          "sha256": "f5bddfff0e60123d90ce262f7bca5e5274ecedeee033b30ae6369b92e8f7d68e",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "actual_pixels_viewed": true
+        },
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\focus-first-artwork-coverage-continuation\\work\\art-candidates\\prayer-04-full.webp",
+          "sha256": "975497d6fb0d759d2d0fbec36dcb6b12a650abacfb920541e5beda9b7b20adef",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "actual_pixels_viewed": true
+        },
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-04\\focus-first-artwork-coverage-continuation\\work\\art-candidates\\prayer-04-960.webp",
+          "sha256": "21d376185a6b66fd4694a4f14cd3e96e5cd6e59d05d541cc5998be30d330bf23",
+          "dimensions": [
+            960,
+            640
+          ],
+          "actual_pixels_viewed": true
+        }
+      ],
+      "findings": "Fictional contemporary adult woman with attentive expression, plum blouse, phone at anatomical right ear, coherent right arm/hand and left hand resting on chair. Closed notebook and ordinary domestic setting support thoughtful application without portraying Oliver or a miraculous phone call. No legible private screen or visible anatomy defect.",
+      "exports": "Personally viewed raw PNG, full WebP and 960 WebP and face crop. Composition/details preserved with no material visible export defect."
+    }
+  ],
+  "mandates": "Read current authority and exact mandates recorded in seven-scene-preflight.json. Follows identity, event age, expression, source event, realism, anatomy and unique composition requirements. No material in-scope violation found.",
+  "limits": [
+    "Only these exact six files",
+    "Newton independent review and assembled desktop/phone review remain distinct",
+    "No owner visual acceptance or route/FIRST readiness claim",
+    "No generation or source artifact modification"
+  ]
+}
