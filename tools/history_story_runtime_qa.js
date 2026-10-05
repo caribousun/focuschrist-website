@@ -73,7 +73,7 @@ if (!process.argv.includes('--source-host-only')) {
       if (url.origin === 'https://focuschrist.com' && /\.html$/.test(url.pathname)) assert(fs.existsSync(path.join(root, url.pathname)), 'Broken runtime navigation: ' + url.pathname);
     }
     const pictures = [...d.querySelectorAll('main figure>a')];
-    assert.equal(pictures.length, { 'john-tanner': 7, 'eleazer-miller': 9, 'john-rowe-moyle': 8 }[slug]);
+    assert.equal(pictures.length, { 'john-tanner': 10, 'eleazer-miller': 10, 'john-rowe-moyle': 10 }[slug]);
     assert.equal(pictures.filter(a => a.classList.contains('fc-visual-hero')).length, 1);
     for (const trigger of pictures) {
       trigger.focus(); trigger.click();

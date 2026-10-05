@@ -125,10 +125,54 @@
           "caption_boundary": "Reconstruction of the journey described by Tanner’s companion; exact road, clothing and depicted moment unknown. No invented dialogue or news delivery."
         },
         {
+          "id": "tanner-camp-herd-1846",
+          "title": "Care for the camp",
+          "paragraphs": [
+            "Leaving the Nauvoo area in 1846, Tanner helped pay the way for two other families as well as his own, according to the 1883 account. Near Winter Quarters, he tended the community’s livestock for three months. Before another westward journey, the animals needed daily care. His service included ordinary work that helped a camp carry on."
+          ],
+          "sources": [
+            {
+              "label": "Scraps of Biography (1883): later account of John Tanner",
+              "url": "https://www.gutenberg.org/cache/epub/46734/pg46734-images.html"
+            }
+          ],
+          "caption_boundary": "Use the concise scene caption; preserve the existing page footer as the only artwork-disclosure location.",
+          "alt_boundary": "Final alt must describe accepted actual pixels; provisional caption is not pixel acceptance."
+        },
+        {
+          "id": "tanner-after-fire-1847",
+          "title": "What remained after the fire",
+          "paragraphs": [
+            "In January 1847, fire took Tanner’s home, wagon boxes used as sleeping rooms, and much of the household’s provisions and clothing. The later account records that beds and some bedding survived."
+          ],
+          "sources": [
+            {
+              "label": "Scraps of Biography (1883): later account of John Tanner",
+              "url": "https://www.gutenberg.org/cache/epub/46734/pg46734-images.html"
+            }
+          ],
+          "caption_boundary": "Use the concise scene caption; preserve the existing page footer as the only artwork-disclosure location.",
+          "alt_boundary": "Final alt must describe accepted actual pixels; provisional caption is not pixel acceptance."
+        },
+        {
+          "id": "tanner-new-crop-1847",
+          "title": "Planting again",
+          "paragraphs": [
+            "The account next finds Tanner helping outfit the pioneers and starting another farm. He raised a crop that year. After the fire, there was ground to work and another season to prepare for before his household crossed the plains in 1848."
+          ],
+          "sources": [
+            {
+              "label": "Scraps of Biography (1883): later account of John Tanner",
+              "url": "https://www.gutenberg.org/cache/epub/46734/pg46734-images.html"
+            }
+          ],
+          "caption_boundary": "Use the concise scene caption; preserve the existing page footer as the only artwork-disclosure location.",
+          "alt_boundary": "Final alt must describe accepted actual pixels; provisional caption is not pixel acceptance."
+        },
+        {
           "id": "tanner-family-crossing-1848",
           "title": "Making room for another beginning",
           "paragraphs": [
-            "Leaving the Nauvoo area in 1846, Tanner helped pay the way for two other families as well as his own, according to the 1883 account. Near Winter Quarters he tended community livestock. Then fire destroyed his house, wagon boxes used as sleeping rooms, clothing and provisions. The narrative says that beds and some bedding survived. It next finds him helping outfit the pioneers and planting another crop.",
             "In 1848 he brought his household west in the Willard Richards company. They settled in South Cottonwood, where Tanner spent the last part of his life. He died on April 13, 1850. The surviving accounts leave us with more than a list of donations: a man accepting help, protecting his child, returning to work after loss, and making room on the journey for others. His story invites a quiet question about the people we can help with the strength and means we have today."
           ],
           "sources": [
@@ -170,6 +214,9 @@
         "tanner-displacement",
         "tanner-debt-forgiven",
         "tanner-mission-road-1844",
+        "tanner-camp-herd-1846",
+        "tanner-after-fire-1847",
+        "tanner-new-crop-1847",
         "tanner-family-crossing-1848"
       ]
     },
@@ -182,7 +229,6 @@
           "id": "miller-search-before-witness",
           "title": "A listener who wanted to know",
           "paragraphs": [
-            "Brigham Young cared for a sick wife and two little girls. Miriam had tuberculosis. He prepared breakfast, dressed the children, and helped her into a rocking chair near the fireplace before going to work. In the evening he cooked supper.",
             "The Book of Mormon reached Brigham’s family in 1830. Some relatives accepted it readily; he spent about two years studying its teachings. He wanted to know for himself."
           ],
           "sources": [
@@ -193,6 +239,22 @@
           ],
           "caption_boundary": "An interpretation of Brigham Young’s period of study before baptism; his historical biography describes two years of inquiry.",
           "alt_boundary": "Write concrete alt after viewing final asset. Do not infer unpictured emotion/action, claim exact likeness, or reproduce caption caveats as alt."
+        },
+        {
+          "id": "miller-brigham-family-breakfast",
+          "title": "Before the working day",
+          "paragraphs": [
+            "Brigham Young cared for a sick wife and two little girls. Miriam had tuberculosis. He prepared breakfast, dressed the children, and helped her into a rocking chair near the fireplace before going to work. In the evening he cooked supper.",
+            "These daily responsibilities were part of the life in which he studied the Book of Mormon and came to hear Miller’s testimony."
+          ],
+          "sources": [
+            {
+              "label": "Brigham Young’s early family life",
+              "url": "https://www.churchofjesuschrist.org/study/manual/teachings-brigham-young/chapter-1?lang=eng"
+            }
+          ],
+          "caption_boundary": "Use the concise scene caption; preserve the existing page footer as the only artwork-disclosure location.",
+          "alt_boundary": "Final alt must describe accepted actual pixels; provisional caption is not pixel acceptance."
         },
         {
           "id": "miller-conversion-1831",
@@ -364,6 +426,7 @@
       ],
       "reviewed_scene_ids": [
         "miller-search-before-witness",
+        "miller-brigham-family-breakfast",
         "miller-conversion-1831",
         "miller-mission-road",
         "miller-simple-witness",
@@ -408,11 +471,27 @@
           "alt_boundary": "Write concrete alt after viewing final asset. Do not infer unpictured emotion/action, claim exact likeness, or reproduce caption caveats as alt."
         },
         {
+          "id": "moyle-deck-gathering-1856",
+          "title": "A community aboard ship",
+          "paragraphs": [
+            "Moyle sailed from Liverpool aboard the Samuel Curling on April 19, 1856. His journal remembers the Saints gathering on deck the following day to hear Dan Jones and records his appreciation for the instruction. The passengers were organized into wards.",
+            "People were sustaining a worshipping community while they traveled toward an unfamiliar home. The ship carried their luggage, but it also carried the habits of faith and fellowship they were taking with them."
+          ],
+          "sources": [
+            {
+              "label": "John Rowe Moyle’s journal: Saints by Sea",
+              "url": "https://saintsbysea.byu.edu/mii/account/1141"
+            }
+          ],
+          "caption_boundary": "Use the concise scene caption; preserve the existing page footer as the only artwork-disclosure location.",
+          "alt_boundary": "Final alt must describe accepted actual pixels; provisional caption is not pixel acceptance."
+        },
+        {
           "id": "moyle-atlantic-crossing",
           "title": "Before the plains: across the Atlantic",
           "paragraphs": [
-            "Moyle sailed from Liverpool aboard the Samuel Curling on April 19, 1856. His journal remembers the Saints gathering on deck the following day to hear Dan Jones and records his appreciation for the instruction. The passengers were organized into wards. These details give the voyage a human shape: people were trying to sustain a worshipping community while they traveled toward an unfamiliar home. The ship carried their luggage, but it also carried the habits of faith and fellowship they were taking with them.",
-            "The crossing was far from a steady passage over quiet water. In an early-May storm, water reached the sleeping places and left beds wet for several days. During another rough stretch, the vessel rolled and luggage was thrown about. Moyle’s account records the discomfort alongside gratitude for his family’s preservation. Boston came into view in May, and they landed on May 23. On May 26 they continued by rail, reaching Iowa on June 2. After about a week in camp, the family began the next stage of its journey with the handcarts."
+            "The crossing was far from a steady passage over quiet water. In an early-May storm, water reached the sleeping places and left beds wet for several days. During another rough stretch, the vessel rolled and luggage was thrown about.",
+            "Moyle’s account records the discomfort alongside gratitude for his family’s preservation. Boston came into view in May, and they landed on May 23."
           ],
           "sources": [
             {
@@ -421,6 +500,21 @@
             }
           ],
           "caption_boundary": "Interpretive1856 emigrant voyage based on Moyle’s journal; exact deck and pictured moment unknown."
+        },
+        {
+          "id": "moyle-rail-to-iowa-1856",
+          "title": "From Boston toward Iowa",
+          "paragraphs": [
+            "On May 26, the travelers continued from Boston by rail, reaching Iowa on June 2. After about a week in camp, the Moyle family began the next stage of its journey with the handcarts."
+          ],
+          "sources": [
+            {
+              "label": "John Rowe Moyle’s journal: Saints by Sea",
+              "url": "https://saintsbysea.byu.edu/mii/account/1141"
+            }
+          ],
+          "caption_boundary": "Use the concise scene caption; preserve the existing page footer as the only artwork-disclosure location.",
+          "alt_boundary": "Final alt must describe accepted actual pixels; provisional caption is not pixel acceptance."
         },
         {
           "id": "moyle-stonecutter-craft",
@@ -574,7 +668,9 @@
       ],
       "reviewed_scene_ids": [
         "moyle-handcart-journey",
+        "moyle-deck-gathering-1856",
         "moyle-atlantic-crossing",
+        "moyle-rail-to-iowa-1856",
         "moyle-stonecutter-craft",
         "moyle-weekly-walk",
         "moyle-cow-injury",

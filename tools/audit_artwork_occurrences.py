@@ -33,6 +33,25 @@ for group in pixels['source_family_groups']:
 for pair in pixels['pairs']:
  if pair['method']=='SIFT_homography' and pair.get('inlier_ratio',0)>=0.8 and pair.get('inliers',0)>=30:union(pair['a'],pair['b'])
 joins=[];source_seen={}
+
+def source_lineage_token(record, field):
+    """Only an image source can nominate shared image lineage.
+
+    CSS/JS inventory source_file names describe code containers, not originals.
+    This nominates audit candidates only; it does not establish pixel approval.
+    """
+    if record.get('kind') in {'stylesheet-literal', 'script-literal'}:
+        return None
+    value = record.get(field)
+    if not isinstance(value, str) or not value:
+        return None
+    if field in {'source_sha256', 'source_decoded_rgb_sha256'}:
+        return (field, value) if re.fullmatch(r'[0-9a-f]{64}', value) else None
+    value = value.replace('\\', '/')
+    if Path(urlsplit(value).path).suffix.lower() not in {'.png', '.jpg', '.jpeg', '.webp', '.gif', '.avif', '.bmp', '.tif', '.tiff', '.svg'}:
+        return None
+    return field, value
+
 def walk(x,path):
  if isinstance(x,list):
   for v in x:walk(v,path)
@@ -46,9 +65,8 @@ def walk(x,path):
   if assets:
    for a in assets[1:]:union(assets[0],a)
    for k in ['source_sha256','source_decoded_rgb_sha256','source_original','source_path','source_file']:
-    v=x.get(k)
-    if not isinstance(v,str) or not v:continue
-    token=(k,v.replace('\\','/'))
+    token=source_lineage_token(x,k)
+    if token is None:continue
     if token in source_seen:union(assets[0],source_seen[token]);joins.append({'record':str(path.relative_to(root)),'field':k,'assets':[assets[0],source_seen[token]]})
     source_seen[token]=assets[0]
   for v in x.values():walk(v,path)

@@ -90,14 +90,14 @@ def build():
     stories = json.loads((DATA/'stories.json').read_text(encoding='utf-8'))['stories']
     ready = json.loads((DATA/'art-ready.json').read_text(encoding='utf-8'))
     ids = [u['id'] for s in stories for u in s['units']]
-    assert len(ids) == len(set(ids)) == 24
+    assert len(ids) == len(set(ids)) == 30
     preview_only = '--story' in sys.argv
     if preview_only:
         slug = sys.argv[sys.argv.index('--story') + 1]
         stories = [s for s in stories if s['id'] == slug]
         assert len(stories) == 1, 'Unknown story preview'
     for story in stories:
-        assert len(story['units']) == {'john-tanner': 7, 'eleazer-miller': 9, 'john-rowe-moyle': 8}[story['id']] and story['hero_unit_id'] == story['units'][0]['id']
+        assert len(story['units']) == {'john-tanner': 10, 'eleazer-miller': 10, 'john-rowe-moyle': 10}[story['id']] and story['hero_unit_id'] == story['units'][0]['id']
         assert [u['id'] for u in story['units']] == story['reviewed_scene_ids']
         for unit in story['units']:
             assert 1 <= len(unit['paragraphs']) <= 2

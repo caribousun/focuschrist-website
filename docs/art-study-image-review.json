@@ -3022,6 +3022,45 @@
         "review_notes": "Independent full-image source/identity review. Each scene is an artistic reconstruction with recorded limits; responsive hero remains same original. Owner-requested expansion does not imply aesthetic approval."
       },
       {
+        "asset": "assets/page-art/history-stories/tanner-camp-herd-1846-full.webp",
+        "sha256": "cc514f8910e6e19d39989f24f20f0ba009fef67ec5a91322b55d9c201e9ca0a5",
+        "reviewed": true,
+        "owner_approved": false,
+        "review_record": "docs/history-stories/first-six-scene-review-20261004.json",
+        "width": 1536,
+        "height": 1024,
+        "alt": "John Tanner holds a wooden staff as he watches cattle grazing near a pioneer camp.",
+        "caption": "John Tanner watches over cattle near the emigrants' camp.",
+        "christ_depicted": false,
+        "technical_review_passed": true
+      },
+      {
+        "asset": "assets/page-art/history-stories/tanner-after-fire-1847-full.webp",
+        "sha256": "12648834bf1a250cbd70bd745d2688097698558babe5c09c059caee993d3cfb6",
+        "reviewed": true,
+        "owner_approved": false,
+        "review_record": "docs/history-stories/first-six-scene-review-20261004.json",
+        "width": 1536,
+        "height": 1024,
+        "alt": "John Tanner sits beside saved bedding with charred buildings and a wagon behind him.",
+        "caption": "Tanner sits beside bedding saved from the fire.",
+        "christ_depicted": false,
+        "technical_review_passed": true
+      },
+      {
+        "asset": "assets/page-art/history-stories/tanner-new-crop-1847-full.webp",
+        "sha256": "1e6bcdc9df5cd0e4d704d81332315cc4d379d26bbc82547d7362b7ee17496628",
+        "reviewed": true,
+        "owner_approved": false,
+        "review_record": "docs/history-stories/first-six-scene-review-20261004.json",
+        "width": 1536,
+        "height": 1024,
+        "alt": "John Tanner scatters seed into a shallow furrow beside a cloth seed bag.",
+        "caption": "Tanner works a new field in the spring after the fire.",
+        "christ_depicted": false,
+        "technical_review_passed": true
+      },
+      {
         "order": 7,
         "key": "tanner-family-crossing-1848",
         "asset": "assets/page-art/history-stories/tanner-family-crossing-1848-full.webp",
@@ -3063,6 +3102,19 @@
         "owner_approved": false,
         "review_record": "docs/history-story-art-fermi-review-20260929.json",
         "review_notes": "Independent full-image source/identity review. Each scene is an artistic reconstruction with recorded limits; responsive hero remains same original. Owner-requested expansion does not imply aesthetic approval."
+      },
+      {
+        "asset": "assets/page-art/history-stories/miller-brigham-family-breakfast-full.webp",
+        "sha256": "4274e1353ce8644f0ccecbd6c7667cd964450f151ef76db1a2d0584883c2bd78",
+        "reviewed": true,
+        "owner_approved": false,
+        "review_record": "docs/history-stories/first-six-scene-review-20261004.json",
+        "width": 1536,
+        "height": 1024,
+        "alt": "A young Brigham Young lifts an iron cooking pot with a cloth beside a wooden table.",
+        "caption": "Brigham Young prepares a meal for his household.",
+        "christ_depicted": false,
+        "technical_review_passed": true
       },
       {
         "order": 2,
@@ -3256,6 +3308,19 @@
         "review_notes": "Independent full-image source/identity review. Each scene is an artistic reconstruction with recorded limits; responsive hero remains same original. Owner-requested expansion does not imply aesthetic approval."
       },
       {
+        "asset": "assets/page-art/history-stories/moyle-deck-gathering-1856-full.webp",
+        "sha256": "ee15fad5f17791b0fc0bbad968aec1dce2a09c413f8f24ab0356dd0650884ac6",
+        "reviewed": true,
+        "owner_approved": false,
+        "review_record": "docs/history-stories/first-six-scene-review-20261004.json",
+        "width": 1536,
+        "height": 1024,
+        "alt": "John Rowe Moyle listens on a sailing ship’s deck, with other passengers nearby.",
+        "caption": "Moyle listens during a gathering on the ship's deck.",
+        "christ_depicted": false,
+        "technical_review_passed": true
+      },
+      {
         "order": 2,
         "key": "moyle-atlantic-crossing",
         "asset": "assets/page-art/history-stories/moyle-atlantic-crossing-full.webp",
@@ -3274,6 +3339,19 @@
         "owner_approved": false,
         "review_record": "docs/history-stories/expansion-fermi-review-20260929.json",
         "review_notes": "Independent full-image source/identity review. Each scene is an artistic reconstruction with recorded limits; responsive hero remains same original. Owner-requested expansion does not imply aesthetic approval."
+      },
+      {
+        "asset": "assets/page-art/history-stories/moyle-rail-to-iowa-1856-full.webp",
+        "sha256": "da811e02007c37d6b864a5b4e90419b608c83558f6fcc5230a32066c6cf39ecf",
+        "reviewed": true,
+        "owner_approved": false,
+        "review_record": "docs/history-stories/first-six-scene-review-20261004.json",
+        "width": 1536,
+        "height": 1024,
+        "alt": "John Rowe Moyle sits by a wooden railway carriage window and looks across the passing countryside.",
+        "caption": "Moyle travels by rail after landing in Boston.",
+        "christ_depicted": false,
+        "technical_review_passed": true
       },
       {
         "order": 3,
