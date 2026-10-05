@@ -27,6 +27,7 @@ class AcceptanceTests(unittest.TestCase):
         for phrase in REJECTED_SCENE_BOILERPLATE:
             with self.assertRaises(AssertionError):check_artwork_badges_and_footer(soup('<p>'+phrase+'</p>'+markup))
             with self.assertRaises(AssertionError):check_artwork_badges_and_footer(soup('<img alt="'+phrase+'">'+markup))
+            with self.assertRaises(AssertionError):check_artwork_badges_and_footer(soup('<a data-full-image-alt="'+phrase+'">View image</a>'+markup))
         for changed in (markup.replace(ARTWORK_FOOTER_DISCLOSURE,''),markup.replace('<p data-','<p hidden data-'),markup.replace('<footer>','<div>').replace('</footer>','</div>')):
             with self.assertRaises(AssertionError):check_artwork_badges_and_footer(soup(changed))
 
