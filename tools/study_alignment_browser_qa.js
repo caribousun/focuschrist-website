@@ -14,6 +14,7 @@ const root = path.resolve(__dirname, '..');
   await page.route('https://**',r=>r.abort());
   page.on('pageerror',e=>console.error('PAGE',e.message));
   const results=[];
+  let mobileRows;
   try {
     for(const [width,height,enlarged] of [[1536,792,false],[390,844,false],[320,740,false],[320,740,true]]) {
       await page.setViewportSize({width,height});
@@ -55,6 +56,7 @@ const root = path.resolve(__dirname, '..');
         results.push({route,width,height,enlarged,issues:checks});
       }
     }
+    mobileRows=await require('./mobile_study_rows_browser_qa')(page,`http://127.0.0.1:${server.address().port}`);
     const reading=await require('./study_reading_balance_browser_qa')(page,`http://127.0.0.1:${server.address().port}`);
     fs.mkdirSync(path.join(root,'.qa-artifacts'),{recursive:true});
     fs.writeFileSync(path.join(root,'.qa-artifacts/study-reading-balance.json'),JSON.stringify(reading,null,2));
@@ -62,5 +64,6 @@ const root = path.resolve(__dirname, '..');
   fs.mkdirSync(path.join(root,'.qa-artifacts'),{recursive:true});
   fs.writeFileSync(path.join(root,'.qa-artifacts/study-alignment.json'),JSON.stringify(results,null,2));
   const failures=results.filter(x=>x.issues.length);console.log(JSON.stringify({cases:results.length,failures},null,2));
-  if(results.length!==20||failures.length)process.exitCode=1;
+  fs.writeFileSync(path.join(root,'.qa-artifacts/mobile-study-rows.json'),JSON.stringify(mobileRows,null,2));
+  if(results.length!==20||failures.length||!mobileRows||mobileRows.failures.length)process.exitCode=1;
 })().catch(error=>{console.error(error);process.exitCode=1;});

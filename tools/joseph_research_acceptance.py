@@ -7,7 +7,7 @@ def check_pdf_source_binding(source, reviewed_hash):
     """Preserve frozen PDF review across this one browser-only cache update."""
     if hashlib.sha256(source).hexdigest() == reviewed_hash:
         return
-    current = b'<link rel="stylesheet" href="site-system.css?v=20261004-source-control-rows-2">'
+    current = b'<link rel="stylesheet" href="site-system.css?v=20261005-mobile-study-rows-1">'
     reviewed = b'<link rel="stylesheet" href="site-system.css?v=20260930-study-alignment-1">'
     assert source.count(current) == 1, 'PDF source compatibility requires the exact single reviewed cache change'
     assert hashlib.sha256(source.replace(current, reviewed, 1)).hexdigest() == reviewed_hash, 'Research content changed beyond the reviewed browser cache token'

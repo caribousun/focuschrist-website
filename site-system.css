@@ -2493,3 +2493,23 @@ body.fc-site:not(.cfm-page) :is(.fc-study-visual-sources, .pioneer-source-links)
         width: 100%;
     }
 }
+
+/* Mobile study menus use aligned rows; chapter pickers and Joseph's compact
+   menu retain their own layouts. Rem-based tracks reflow with enlarged text. */
+@media (max-width: 700px) {
+    body.fc-site :is(.fc-study-nav:not(.jj-local-nav):not(.joseph-page-menu .fc-study-nav), .cfm-jump, .gc-jumps) {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, max(10rem, 45%)), 1fr));
+        align-items: stretch;
+        gap: var(--fc-study-control-gap) !important;
+    }
+    body.fc-site :is(.fc-study-nav:not(.jj-local-nav):not(.joseph-page-menu .fc-study-nav), .cfm-jump, .gc-jumps) > a {
+        width: 100%;
+        margin: 0;
+        min-height: max(44px, 3.5rem) !important;
+        align-self: stretch;
+    }
+    body.fc-site :is(.fc-study-nav:not(.jj-local-nav):not(.joseph-page-menu .fc-study-nav), .cfm-jump, .gc-jumps) > a:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+    }
+}

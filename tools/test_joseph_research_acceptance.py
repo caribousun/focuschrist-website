@@ -14,7 +14,7 @@ class AcceptanceTests(unittest.TestCase):
         source = (site/ROUTE).read_bytes()
         reviewed_hash = json.loads((site/'docs/joseph-research-pdf-review.json').read_text())['source_html_sha256']
         check_pdf_source_binding(source, reviewed_hash)
-        for changed in (source+b' ', source+b'<link rel="stylesheet" href="site-system.css?v=20261004-source-control-rows-2">', source.replace(b'20261004-source-control-rows-2', b'unknown-version'), source.replace(b'<body', b'<body data-unreviewed="true"', 1), source.replace(b'site-system.css?', b'other.css?', 1)):
+        for changed in (source+b' ', source+b'<link rel="stylesheet" href="site-system.css?v=20261005-mobile-study-rows-1">', source.replace(b'20261005-mobile-study-rows-1', b'unknown-version'), source.replace(b'<body', b'<body data-unreviewed="true"', 1), source.replace(b'site-system.css?', b'other.css?', 1)):
             with self.assertRaises(AssertionError):
                 check_pdf_source_binding(changed, reviewed_hash)
 

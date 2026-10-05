@@ -28,7 +28,7 @@ class ExactFeaturedBinding(unittest.TestCase):
                     'whitespace': raw + b' ',
                     'duplicate_current_link': raw + mandate.CURRENT_SHARED_STYLE,
                     'old_and_current': raw + mandate.OLD_SHARED_STYLE,
-                    'unknown_version': raw.replace(b'20261004-source-control-rows-2', b'20261004-unknown'),
+                    'unknown_version': raw.replace(b'20261005-mobile-study-rows-1', b'20261004-unknown'),
                     'source_href': raw.replace(b'https://www.churchofjesuschrist.org/', b'https://example.com/'),
                     'different_css': raw.replace(b'answer-styles.css', b'other-styles.css'),
                 }
