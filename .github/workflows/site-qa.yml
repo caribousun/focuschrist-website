@@ -234,6 +234,8 @@ jobs:
           path: |
             .qa-artifacts/unified-opening*.json
             .qa-artifacts/content-boundaries.json
+            .qa-artifacts/mobile-study-rows.json
+            .qa-artifacts/study-alignment.json
           include-hidden-files: true
           if-no-files-found: ignore
 

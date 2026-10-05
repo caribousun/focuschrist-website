@@ -65,5 +65,6 @@ const root = path.resolve(__dirname, '..');
   fs.writeFileSync(path.join(root,'.qa-artifacts/study-alignment.json'),JSON.stringify(results,null,2));
   const failures=results.filter(x=>x.issues.length);console.log(JSON.stringify({cases:results.length,failures},null,2));
   fs.writeFileSync(path.join(root,'.qa-artifacts/mobile-study-rows.json'),JSON.stringify(mobileRows,null,2));
+  console.log(JSON.stringify({mobileStudyRows:{cases:mobileRows.cases,failures:mobileRows.failures}},null,2));
   if(results.length!==20||failures.length||!mobileRows||mobileRows.failures.length)process.exitCode=1;
 })().catch(error=>{console.error(error);process.exitCode=1;});
