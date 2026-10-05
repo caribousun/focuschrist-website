@@ -24,12 +24,12 @@
     "answers/death-of-a-child.html": {
       "kind": "fc-topic-opening",
       "opening_sha256": "5c3937fb8ba56fbafe92dbf5451346ca526b9b74e4372e0810eeb10870d1f5d2",
-      "images_sha256": "45213a5cf121e9f61bc00f17ef4cc228d89b77421db0c405a16aad42aa871b26"
+      "images_sha256": "c3149f3437aab1bb2691a759cfc2a0ab207fae1e79ea6cf14a5cedbff9942064"
     },
     "answers/divorce-and-faith.html": {
       "kind": "fc-topic-opening",
       "opening_sha256": "551a8cc05bec88895f5ff3ffae51583e84869f9937d7be785fe76bc42b6479d8",
-      "images_sha256": "48eaf571a5367a01e6b399849a8a1514c6f90684875bdc6e18021c0669324342"
+      "images_sha256": "f0f2a21c87bc552f77b583fd93e8b9807fcf0fb454f557225820eeea34da2fae"
     },
     "answers/faith-in-jesus-christ-during-trials.html": {
       "kind": "fc-topic-opening",
@@ -44,7 +44,7 @@
     "answers/grief-and-faith.html": {
       "kind": "fc-topic-opening",
       "opening_sha256": "459a9c9343e7927a2442d9d297f9b8b1992daaedb3e0d1f367d439473d69d4d3",
-      "images_sha256": "17ecea5e8e15cc8b8a47aa3e13616bec68bd290f1376cd480b8bcc8ad87cdc2a"
+      "images_sha256": "ddc7e41a35c4e03e23908fbc35442162f42d8cf51f561f0856cc7c7ce716431c"
     },
     "answers/holy-ghost.html": {
       "kind": "fc-topic-opening",
@@ -128,5 +128,46 @@
       "opening_sha256": "994113a266a52e76b4b32c03d53c0e558e7ade30df649e0860315dd47fb8dc10",
       "images_sha256": "ea074c2ecccc2755bc26af99b1bd1cd70242720fd88a0fc938cc0fbc78f0e572"
     }
-  }
+  },
+  "reviewed_image_successors": [
+    {
+      "scope": "PR456 exact previously approved alt descriptions only. FIRST additions remain excluded only after strict independent FIRST manifest validation by unchanged QA. All original image sources, other attributes, opening hashes and original commit binding preserved.",
+      "image_hash_changes": {
+        "answers/death-of-a-child.html": {
+          "before": "45213a5cf121e9f61bc00f17ef4cc228d89b77421db0c405a16aad42aa871b26",
+          "after": "c3149f3437aab1bb2691a759cfc2a0ab207fae1e79ea6cf14a5cedbff9942064",
+          "exact_alt_edits": [
+            {
+              "old": "Symbolic artwork of Jesus Christ listening beside a grieving father holding a toy airplane",
+              "new": "Jesus Christ listening beside a grieving father holding a toy airplane"
+            },
+            {
+              "old": "Symbolic artwork of Jesus Christ sitting quietly with grieving parents",
+              "new": "Jesus Christ sitting quietly with grieving parents"
+            }
+          ]
+        },
+        "answers/grief-and-faith.html": {
+          "before": "17ecea5e8e15cc8b8a47aa3e13616bec68bd290f1376cd480b8bcc8ad87cdc2a",
+          "after": "ddc7e41a35c4e03e23908fbc35442162f42d8cf51f561f0856cc7c7ce716431c",
+          "exact_alt_edits": [
+            {
+              "old": "Symbolic artwork of Jesus Christ accompanying a grieving woman on a garden path",
+              "new": "Jesus Christ accompanying a grieving woman on a garden path"
+            }
+          ]
+        },
+        "answers/divorce-and-faith.html": {
+          "before": "48eaf571a5367a01e6b399849a8a1514c6f90684875bdc6e18021c0669324342",
+          "after": "f0f2a21c87bc552f77b583fd93e8b9807fcf0fb454f557225820eeea34da2fae",
+          "exact_alt_edits": [
+            {
+              "old": "A father speaking with a trusted friend on a quiet balcony",
+              "new": "Two friends speaking together on a quiet balcony"
+            }
+          ]
+        }
+      }
+    }
+  ]
 }
