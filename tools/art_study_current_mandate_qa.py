@@ -18,6 +18,25 @@ PAGES = frozenset('art-study/' + name + '.html' for name in (
 MINIMUM = 10
 
 
+# Exact compatibility for the four independently reviewed shared-CSS URL changes.
+# Asset, coverage, ownership and source-review hashes remain strict below.
+REVIEWED_PAGE_HASHES = {'art-study/be-still.html': 'ed90acad612bc12e0008d498a37f3f8d2a9b27e068212bec475555ee5a723423', 'art-study/suffer-the-little-children.html': '4d2dfed3b3443118c8908736b3048a410b2e80217509e42465ee8894a7ca10d2', 'art-study/the-good-shepherd.html': '5fe506ab086c140fef457e9f53f3b3cc5a54ee0711885e4a72144a4cd689cf55', 'art-study/the-living-christ.html': '1c1c6310ec7469244b87d4cdc7c79086a93c945b237346d2341132532a05c83b'}
+OLD_SHARED_STYLE = b'<link rel="stylesheet" href="../site-system.css?v=20260930-study-alignment-1">'
+CURRENT_SHARED_STYLE = b'<link rel="stylesheet" href="../site-system.css?v=20261004-source-control-rows-2">'
+
+
+def reviewed_page_binding(page, route, expected):
+    raw = page.read_bytes()
+    if hashlib.sha256(raw).hexdigest() == expected:
+        return True
+    if expected != REVIEWED_PAGE_HASHES.get(route):
+        return False
+    if raw.count(CURRENT_SHARED_STYLE) != 1 or OLD_SHARED_STYLE in raw:
+        return False
+    inverse = raw.replace(CURRENT_SHARED_STYLE, OLD_SHARED_STYLE, 1)
+    return hashlib.sha256(inverse).hexdigest() == expected
+
+
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -109,7 +128,7 @@ def evaluate(root, registry):
         observed = [local(root, route, p).relative_to(root).as_posix() for p in html.placements]
         data = registry.get('pages', {}).get(route, {})
         entries = data.get('placements', [])
-        if data.get('html_sha256') != digest(page):
+        if not reviewed_page_binding(page, route, data.get('html_sha256')):
             missing.append('page bytes changed since inventory')
         if Counter(observed) != Counter(e.get('asset') for e in entries):
             missing.append('observed hero/support placement coverage mismatch')
@@ -117,7 +136,7 @@ def evaluate(root, registry):
         # separately inspected complete-inventory receipt before any strict pass.
         try:
             coverage = bound_json(root, data.get('coverage_evidence'))
-            if (coverage.get('route') != route or coverage.get('html_sha256') != digest(page)
+            if (coverage.get('route') != route or not reviewed_page_binding(page, route, coverage.get('html_sha256'))
                     or coverage.get('complete_page_image_inventory_reviewed') is not True
                     or coverage.get('no_unregistered_qualifying_originals') is not True
                     or set(coverage.get('reviewers', [])) != {'Fermi', 'Newton'}):

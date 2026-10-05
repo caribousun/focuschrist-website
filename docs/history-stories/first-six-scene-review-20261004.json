@@ -1,0 +1,298 @@
+{
+  "reviewers": [
+    "Fermi",
+    "Newton"
+  ],
+  "date": "2026-10-04",
+  "scope": "Six new source-grounded biography originals; raw pixel and prompt concurrence, final assembled acceptance separate",
+  "preflight_sha256": "a579e0524d4e87a5fee10da76472dae297ce4dcbad55cf4c55ce6bf91430a273",
+  "images": [
+    {
+      "id": "tanner-camp-herd-1846",
+      "source_original": "exec-aada8aa9-83ec-4ed4-b1ef-81b0cab8085e.png",
+      "sha256": "e2123929b8ff6216b97b491d06da8aad16dfd975daf31adf041af3429c791809",
+      "result": "pass",
+      "independent_reviewers": [
+        "Fermi",
+        "Newton"
+      ],
+      "preflight_prompt": "Create one new original landscape1536x1024 photograph-like historical scene. Natural human skin, eyes, hair, wool and wood textures; coherent anatomy, hands, perspective and period materials. A convincing live-action photograph, never painting, CGI, plastic skin or illustration. Keep face, complete hands and essential action legible in a390px full-width phone rendering with contain, no hero crop. Use supplied actual pixels for identity and change only scene-appropriate age, expression, clothing and pose. No text overlay, readable invented documents, religious apparition or miraculous light. No modern objects. Do not reuse the reference composition as a crop, variant or new pose; depict the specified distinct event. Reference1 is existing Tanner working identity, reference2 historical drawing. Keep his recognizable curly hair, full beard, strong nose and facial proportions while depicting age67–68, not a young hero or frail caricature. Northwest of Winter Quarters in1846: Tanner stands beside a small group of grazing cattle, looking attentively toward the animals, one relaxed hand on a plain wooden walking staff and the other resting naturally at his side. Modest wool coat, waistcoat, linen shirt, wool trousers and leather boots appropriate to an older1840s farmer; weathered practical clothing, no fancy western costume. Open rolling pasture, restrained earth colors, pale daylight and a few distant simple camp shelters; no mountains, completed temple or modern fenced ranch. Quiet responsible concentration. Do not show named relatives or imply a documented precise number of cattle. Distinct pasture care scene, not wagon migration.",
+      "prompt_sha256": "4f6fc9e32e0579acba6c86c88e4634586a14c19ffd051bd23431fa822abb43fd",
+      "references": [
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\history-stories\\tanner-family-crossing-1848-full.webp",
+          "sha256": "a922543fe66d9902e02a5686034dcdca169267eae62c15f4375ec51032065fd0",
+          "role": "Existing reviewed Tanner continuity reference; age69–70scene, adapt to67–68/68",
+          "status": "Published reviewed working identity; not an owner-approved master",
+          "pixels_viewed_by_gary_this_turn": true
+        },
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-29\\work\\focus-temples\\work\\history-stories\\references\\tanner-official-profile.jpg",
+          "sha256": "a1621137ae9f03f815c186ef6073b15e9ccc5d3724202908e1c2d0cd0684bb20",
+          "role": "Historical facial-shape corroboration: curls, full beard, nose and profile",
+          "status": "Official CHD illustration; portrait maker/date unresolved; not color or exact age evidence",
+          "pixels_viewed_by_gary_this_turn": true
+        }
+      ],
+      "source_url": "https://www.gutenberg.org/cache/epub/46734/pg46734-images.html",
+      "event_date": "1846, after reaching Council Bluffs/Winter Quarters; exact three-month span unspecified",
+      "age": "67–68; bornAugust15,1778",
+      "christ_depicted": false,
+      "exports": {
+        "full": "assets/page-art/history-stories/tanner-camp-herd-1846-full.webp",
+        "thumbnail": "assets/page-art/history-stories/tanner-camp-herd-1846-960.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "cc514f8910e6e19d39989f24f20f0ba009fef67ec5a91322b55d9c201e9ca0a5",
+        "thumbnail_sha256": "6b2f2c868665077d674601007354cde998353747b07eeafc938095ffe513f72d",
+        "source_original": "exec-aada8aa9-83ec-4ed4-b1ef-81b0cab8085e.png",
+        "source_sha256": "e2123929b8ff6216b97b491d06da8aad16dfd975daf31adf041af3429c791809",
+        "reviewed": true,
+        "independent_reviewer": "Fermi and Newton",
+        "owner_aesthetic_approval": false,
+        "alt": "John Tanner holds a wooden staff as he watches cattle grazing near a pioneer camp.",
+        "caption": "John Tanner watches over cattle near the emigrants' camp.",
+        "review_reference": "docs/history-stories/first-six-scene-review-20261004.json"
+      },
+      "limits": "Independent raw-pixel acceptance; encoded exports and assembled native paths require exact final review. No owner aesthetic acceptance or biography ratio waiver."
+    },
+    {
+      "id": "tanner-after-fire-1847",
+      "source_original": "exec-73f409ed-d8c7-4542-b5c1-e0bb38373ef5.png",
+      "sha256": "7a0f76bf5c80703c428982493934c5ca36d3675f2846453f1920ae3499789009",
+      "result": "pass",
+      "independent_reviewers": [
+        "Fermi",
+        "Newton"
+      ],
+      "preflight_prompt": "Create one new original landscape1536x1024 photograph-like historical scene. Natural human skin, eyes, hair, wool and wood textures; coherent anatomy, hands, perspective and period materials. A convincing live-action photograph, never painting, CGI, plastic skin or illustration. Keep face, complete hands and essential action legible in a390px full-width phone rendering with contain, no hero crop. Use supplied actual pixels for identity and change only scene-appropriate age, expression, clothing and pose. No text overlay, readable invented documents, religious apparition or miraculous light. No modern objects. Do not reuse the reference composition as a crop, variant or new pose; depict the specified distinct event. Reference1 Tanner continuity and reference2 historical drawing. Depict the same recognizable man age68 inJanuary1847. Quiet aftermath of a household fire near Winter Quarters: Tanner seated on a low plain wooden bench beside a saved mattress and folded bedding, looking down thoughtfully with weary, attentive dignity. His hands rest naturally on a wool blanket; no new injury, theatrical tears or triumphant grin. A modest burned timber structure and charred remains of a covered sleeping wagon box lie in the distant background, not a roaring fire. Warm brown heavy wool coat, waistcoat, wool trousers, plain boots, aged curly graying hair and full beard. Cold subdued daylight, bare ground with only light patches of winter frost; no invented blizzard. Frame the surviving bedding clearly without showing a rescue, children in danger or named relatives. Keep it visually different from the prior trunk-lifting displacement scene.",
+      "prompt_sha256": "a0967ad8897ca0210909272cc2d768b05c028d1508cbd1e2161be9424755f7ac",
+      "references": [
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\history-stories\\tanner-family-crossing-1848-full.webp",
+          "sha256": "a922543fe66d9902e02a5686034dcdca169267eae62c15f4375ec51032065fd0",
+          "role": "Existing reviewed Tanner continuity reference; age69–70scene, adapt to67–68/68",
+          "status": "Published reviewed working identity; not an owner-approved master",
+          "pixels_viewed_by_gary_this_turn": true
+        },
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-29\\work\\focus-temples\\work\\history-stories\\references\\tanner-official-profile.jpg",
+          "sha256": "a1621137ae9f03f815c186ef6073b15e9ccc5d3724202908e1c2d0cd0684bb20",
+          "role": "Historical facial-shape corroboration: curls, full beard, nose and profile",
+          "status": "Official CHD illustration; portrait maker/date unresolved; not color or exact age evidence",
+          "pixels_viewed_by_gary_this_turn": true
+        }
+      ],
+      "source_url": "https://www.gutenberg.org/cache/epub/46734/pg46734-images.html",
+      "event_date": "Middle ofJanuary1847",
+      "age": "68",
+      "christ_depicted": false,
+      "exports": {
+        "full": "assets/page-art/history-stories/tanner-after-fire-1847-full.webp",
+        "thumbnail": "assets/page-art/history-stories/tanner-after-fire-1847-960.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "12648834bf1a250cbd70bd745d2688097698558babe5c09c059caee993d3cfb6",
+        "thumbnail_sha256": "3a362d4cf2f9ba423eabbc5ae78bf9dd678c95071f9428d8b24ff2bf81e51691",
+        "source_original": "exec-73f409ed-d8c7-4542-b5c1-e0bb38373ef5.png",
+        "source_sha256": "7a0f76bf5c80703c428982493934c5ca36d3675f2846453f1920ae3499789009",
+        "reviewed": true,
+        "independent_reviewer": "Fermi and Newton",
+        "owner_aesthetic_approval": false,
+        "alt": "John Tanner sits beside saved bedding with charred buildings and a wagon behind him.",
+        "caption": "Tanner sits beside bedding saved from the fire.",
+        "review_reference": "docs/history-stories/first-six-scene-review-20261004.json"
+      },
+      "limits": "Independent raw-pixel acceptance; encoded exports and assembled native paths require exact final review. No owner aesthetic acceptance or biography ratio waiver."
+    },
+    {
+      "id": "tanner-new-crop-1847",
+      "source_original": "exec-f0a441b9-899a-4798-92f3-5ffdb854c2db.png",
+      "sha256": "e98c4d04456e6761d5db3dd2093b02f3f38500e4ebd28f2c8dc64cdbda367f95",
+      "result": "pass",
+      "independent_reviewers": [
+        "Fermi",
+        "Newton"
+      ],
+      "preflight_prompt": "Create one new original landscape1536x1024 photograph-like historical scene. Natural human skin, eyes, hair, wool and wood textures; coherent anatomy, hands, perspective and period materials. A convincing live-action photograph, never painting, CGI, plastic skin or illustration. Keep face, complete hands and essential action legible in a390px full-width phone rendering with contain, no hero crop. Use supplied actual pixels for identity and change only scene-appropriate age, expression, clothing and pose. No text overlay, readable invented documents, religious apparition or miraculous light. No modern objects. Do not reuse the reference composition as a crop, variant or new pose; depict the specified distinct event. Use references1and2 for the same Tanner face age68 in spring1847. An older farmer carefully plants a small amount of seed into a shallow furrow on newly worked ground near the Missouri River settlements. Show coherent balanced crouching, a cloth seed bag beside him, one hand open over earth and the other resting on his knee. No kneeling prayer pose; his eyes follow the planting task. Rolled plain linen sleeves beneath a worn wool waistcoat, loose period trousers and practical boots; full graying curly beard, realistic age and focused quiet hope. Soft spring daylight, modest field and low rolling horizon, no mature crop identifying a species, no modern equipment, no temple and no grand mountains. Agriculture at human scale; no idealized wealth or miraculous harvest. A new action and setting distinct from the herd, fire and wagon pictures.",
+      "prompt_sha256": "d3637309571b08cb0f05f3f2b7f074d3ff92c915fb4867d4a799a9d6dfc1c01f",
+      "references": [
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\history-stories\\tanner-family-crossing-1848-full.webp",
+          "sha256": "a922543fe66d9902e02a5686034dcdca169267eae62c15f4375ec51032065fd0",
+          "role": "Existing reviewed Tanner continuity reference; age69–70scene, adapt to67–68/68",
+          "status": "Published reviewed working identity; not an owner-approved master",
+          "pixels_viewed_by_gary_this_turn": true
+        },
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-29\\work\\focus-temples\\work\\history-stories\\references\\tanner-official-profile.jpg",
+          "sha256": "a1621137ae9f03f815c186ef6073b15e9ccc5d3724202908e1c2d0cd0684bb20",
+          "role": "Historical facial-shape corroboration: curls, full beard, nose and profile",
+          "status": "Official CHD illustration; portrait maker/date unresolved; not color or exact age evidence",
+          "pixels_viewed_by_gary_this_turn": true
+        }
+      ],
+      "source_url": "https://www.gutenberg.org/cache/epub/46734/pg46734-images.html",
+      "event_date": "Spring1847",
+      "age": "68",
+      "christ_depicted": false,
+      "exports": {
+        "full": "assets/page-art/history-stories/tanner-new-crop-1847-full.webp",
+        "thumbnail": "assets/page-art/history-stories/tanner-new-crop-1847-960.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "1e6bcdc9df5cd0e4d704d81332315cc4d379d26bbc82547d7362b7ee17496628",
+        "thumbnail_sha256": "8ebfff3e087884fd2ed7c5890927e0c1569247b8eee7cdacc7c53d2d35258999",
+        "source_original": "exec-f0a441b9-899a-4798-92f3-5ffdb854c2db.png",
+        "source_sha256": "e98c4d04456e6761d5db3dd2093b02f3f38500e4ebd28f2c8dc64cdbda367f95",
+        "reviewed": true,
+        "independent_reviewer": "Fermi and Newton",
+        "owner_aesthetic_approval": false,
+        "alt": "John Tanner scatters seed into a shallow furrow beside a cloth seed bag.",
+        "caption": "Tanner works a new field in the spring after the fire.",
+        "review_reference": "docs/history-stories/first-six-scene-review-20261004.json"
+      },
+      "limits": "Independent raw-pixel acceptance; encoded exports and assembled native paths require exact final review. No owner aesthetic acceptance or biography ratio waiver."
+    },
+    {
+      "id": "miller-brigham-family-breakfast",
+      "source_original": "exec-18a75782-cccb-4628-86d4-6aa811206495.png",
+      "sha256": "db3d3c5a2e79225d4e77ae40cfd970c6d1e871d37a8baccb6e53d68a90277164",
+      "result": "pass",
+      "independent_reviewers": [
+        "Fermi",
+        "Newton"
+      ],
+      "preflight_prompt": "Create one new original landscape1536x1024 photograph-like historical scene. Natural human skin, eyes, hair, wool and wood textures; coherent anatomy, hands, perspective and period materials. A convincing live-action photograph, never painting, CGI, plastic skin or illustration. Keep face, complete hands and essential action legible in a390px full-width phone rendering with contain, no hero crop. Use supplied actual pixels for identity and change only scene-appropriate age, expression, clothing and pose. No text overlay, readable invented documents, religious apparition or miraculous light. No modern objects. Do not reuse the reference composition as a crop, variant or new pose; depict the specified distinct event. Use the exact supplied owner-approved Brigham Young face, preserving recognizable proportions and lifelike coloring, naturally aged to about30 around1831. In a modest MendonNewYork household, Brigham prepares breakfast before work, carefully lifting a small iron cooking pot with a cloth beside a plain table with simple bowls. Gentle concentrated care, task-directed gaze, no large grin. Plain linen shirt, simple waistcoat and period trousers; sleeves and hands natural and complete. Subtle morning window light and hearth warmth, rough wood and ordinary domestic objects, not an ornate diningroom. No other person visible: do not invent Miriam's face or depict daughters without references. No Miller, Joseph, Christ, named visitor or apparition. No reading book, sermon or baptism composition. Keep the action readable at phone size and avoid imposing a specific documented menu.",
+      "prompt_sha256": "0c06efe45a3e36a9f89f62153c3455a783076347f08a9a159a4d76fbef07cfc3",
+      "references": [
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\identities\\brigham-young-owner-approved-20260920.png",
+          "sha256": "5093d7604971bf2477438d04c6786aeb99f93f6b4f554e9e76e0945d7207789e",
+          "role": "Exact owner-locked Brigham identity; adapt naturally to about30",
+          "status": "Owner-approved, registry SHA5093d7604971bf2477438d04c6786aeb99f93f6b4f554e9e76e0945d7207789e",
+          "pixels_viewed_by_gary_this_turn": true
+        }
+      ],
+      "source_url": "https://www.churchofjesuschrist.org/study/manual/teachings-brigham-young/chapter-1?lang=eng",
+      "event_date": "About1831, during Miriam's illness before her1832death; exact morning not claimed",
+      "age": "Brigham about29–30; bornJune1,1801",
+      "christ_depicted": false,
+      "exports": {
+        "full": "assets/page-art/history-stories/miller-brigham-family-breakfast-full.webp",
+        "thumbnail": "assets/page-art/history-stories/miller-brigham-family-breakfast-960.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "4274e1353ce8644f0ccecbd6c7667cd964450f151ef76db1a2d0584883c2bd78",
+        "thumbnail_sha256": "40aa432de76932e3e3b870c0cc67544e4601bb05d2a31b614ffc6d1f27913e7c",
+        "source_original": "exec-18a75782-cccb-4628-86d4-6aa811206495.png",
+        "source_sha256": "db3d3c5a2e79225d4e77ae40cfd970c6d1e871d37a8baccb6e53d68a90277164",
+        "reviewed": true,
+        "independent_reviewer": "Fermi and Newton",
+        "owner_aesthetic_approval": false,
+        "alt": "A young Brigham Young lifts an iron cooking pot with a cloth beside a wooden table.",
+        "caption": "Brigham Young prepares a meal for his household.",
+        "review_reference": "docs/history-stories/first-six-scene-review-20261004.json"
+      },
+      "limits": "Independent raw-pixel acceptance; encoded exports and assembled native paths require exact final review. No owner aesthetic acceptance or biography ratio waiver."
+    },
+    {
+      "id": "moyle-deck-gathering-1856",
+      "source_original": "exec-30b9f471-d75f-446b-b340-d593be73bde2.png",
+      "sha256": "6d6be0e7e39f99c3084835b8c314c9d84900e52c5f42817c30a70154a1b0048a",
+      "result": "pass",
+      "independent_reviewers": [
+        "Fermi",
+        "Newton"
+      ],
+      "preflight_prompt": "Create one new original landscape1536x1024 photograph-like historical scene. Natural human skin, eyes, hair, wool and wood textures; coherent anatomy, hands, perspective and period materials. A convincing live-action photograph, never painting, CGI, plastic skin or illustration. Keep face, complete hands and essential action legible in a390px full-width phone rendering with contain, no hero crop. Use supplied actual pixels for identity and change only scene-appropriate age, expression, clothing and pose. No text overlay, readable invented documents, religious apparition or miraculous light. No modern objects. Do not reuse the reference composition as a crop, variant or new pose; depict the specified distinct event. Reference1 is existing Moyle1856working identity at48; reference2 is the captioned historical couple portrait, use onlyJohnleftfigure as shape corroboration. Preserve same recognizable receding wavy hair, moustache, chinbeard, angular facial proportions and robust middle-aged build. April20,1856 aboard a wooden ocean-going sailing ship: Moyle listens attentively at a gathering on deck, head slightly turned toward a speaker who remains outside the frame. Two or three anonymous adult passengers only as rear silhouettes, no named companions, no detailed newportrait. Simple1850s wool coat/waistcoat, linen collar and trousers, natural garment weight. Restrained wooden rail, ropes and mast details, plain daylight, no storm, no sea-rescue spectacle or piled luggage action. DanJones not visible; no Christ or angels. No steamliner, modern lifejackets, shipname text or exact deck-plan claim. Warm interested expression, readable face and complete relaxed hands.",
+      "prompt_sha256": "98be34d651d73c53c49ecc505236451a59aa4fc07c1cf6e7932eb842f7fce5a9",
+      "references": [
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\history-stories\\moyle-handcart-journey-full.webp",
+          "sha256": "f0fdf1cb9d34a53563a70c46b6a5f9d795c7f9f7de3a28e145b0603f520addce",
+          "role": "Existing reviewed Moyle working identity at same1856age48",
+          "status": "Published reviewed continuity reference; not owner-approved master",
+          "pixels_viewed_by_gary_this_turn": true
+        },
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-29\\work\\focus-temples\\work\\history-stories\\references\\moyle-family-book-portrait-plate.png",
+          "sha256": "624b02464d63b8f7c2b7522ede93026486e1338ed803b0219c4c6af0203531b2",
+          "role": "Historical portrait: John is lower-right plate left figure beside Phillippa; use John only",
+          "status": "Captioned historical book portrait; date/photographer unknown, reference only; no reproduction rights asserted",
+          "pixels_viewed_by_gary_this_turn": true
+        }
+      ],
+      "source_url": "https://saintsbysea.byu.edu/mii/account/1141",
+      "event_date": "April20,1856, Samuel Curling at sea after LiverpooldepartureApril19",
+      "age": "48; bornFebruary22,1808",
+      "christ_depicted": false,
+      "exports": {
+        "full": "assets/page-art/history-stories/moyle-deck-gathering-1856-full.webp",
+        "thumbnail": "assets/page-art/history-stories/moyle-deck-gathering-1856-960.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "ee15fad5f17791b0fc0bbad968aec1dce2a09c413f8f24ab0356dd0650884ac6",
+        "thumbnail_sha256": "080bb055498e353cc9e9dbf802c46c594a0f9d123f9bdd721672733c416ee591",
+        "source_original": "exec-30b9f471-d75f-446b-b340-d593be73bde2.png",
+        "source_sha256": "6d6be0e7e39f99c3084835b8c314c9d84900e52c5f42817c30a70154a1b0048a",
+        "reviewed": true,
+        "independent_reviewer": "Fermi and Newton",
+        "owner_aesthetic_approval": false,
+        "alt": "John Rowe Moyle listens on a sailing ship’s deck, with other passengers nearby.",
+        "caption": "Moyle listens during a gathering on the ship's deck.",
+        "review_reference": "docs/history-stories/first-six-scene-review-20261004.json"
+      },
+      "limits": "Independent raw-pixel acceptance; encoded exports and assembled native paths require exact final review. No owner aesthetic acceptance or biography ratio waiver."
+    },
+    {
+      "id": "moyle-rail-to-iowa-1856",
+      "source_original": "exec-185688b3-11a0-4bd0-9ddb-6c204eefc6a0.png",
+      "sha256": "1106862ef144346fac67b1d517a67a5ea657a77dc8bf6bc178790d8e5ec535ef",
+      "result": "pass",
+      "independent_reviewers": [
+        "Fermi",
+        "Newton"
+      ],
+      "preflight_prompt": "Create one new original landscape1536x1024 photograph-like historical scene. Natural human skin, eyes, hair, wool and wood textures; coherent anatomy, hands, perspective and period materials. A convincing live-action photograph, never painting, CGI, plastic skin or illustration. Keep face, complete hands and essential action legible in a390px full-width phone rendering with contain, no hero crop. Use supplied actual pixels for identity and change only scene-appropriate age, expression, clothing and pose. No text overlay, readable invented documents, religious apparition or miraculous light. No modern objects. Do not reuse the reference composition as a crop, variant or new pose; depict the specified distinct event. Use reference1Moyleage48 and reference2Johnleftportrait, keep same recognizable identity and healthy middle-aged figure. A quiet1856rail journey after Boston landing: Moyle sits beside a modest wooden-framed carriage window, travelbag at his feet, hands relaxed on his knees, looking out with attentive anticipation. Plain wool travelingcoat, waistcoat, linen collar and trousers matching period but not duplicating the handcart pose. Suggest simple wooden benches, a restrained worncoach interior and soft passing green countryside; no ornatePullman sleepingcar, modern upholstery, electriclamps, readable railroadbranding or invented station. Only Moyle visible, no unverified namedfamily faces. No dramatic disaster, prayerhalo, temples or RockyMountainsoutside a NewEngland/Midwestjourney. Natural windowlight on his face, clear hands, periodmaterial realism and distinct composition from the shipgathering.",
+      "prompt_sha256": "f05b2d3a4152bdb6ff38d1c080c993c91ce1c3fd1de7ffe5512cfead0c0644c7",
+      "references": [
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\joseph-research-site\\assets\\page-art\\history-stories\\moyle-handcart-journey-full.webp",
+          "sha256": "f0fdf1cb9d34a53563a70c46b6a5f9d795c7f9f7de3a28e145b0603f520addce",
+          "role": "Existing reviewed Moyle working identity at same1856age48",
+          "status": "Published reviewed continuity reference; not owner-approved master",
+          "pixels_viewed_by_gary_this_turn": true
+        },
+        {
+          "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-29\\work\\focus-temples\\work\\history-stories\\references\\moyle-family-book-portrait-plate.png",
+          "sha256": "624b02464d63b8f7c2b7522ede93026486e1338ed803b0219c4c6af0203531b2",
+          "role": "Historical portrait: John is lower-right plate left figure beside Phillippa; use John only",
+          "status": "Captioned historical book portrait; date/photographer unknown, reference only; no reproduction rights asserted",
+          "pixels_viewed_by_gary_this_turn": true
+        }
+      ],
+      "source_url": "https://saintsbysea.byu.edu/mii/account/1141",
+      "event_date": "May26–June2,1856",
+      "age": "48",
+      "christ_depicted": false,
+      "exports": {
+        "full": "assets/page-art/history-stories/moyle-rail-to-iowa-1856-full.webp",
+        "thumbnail": "assets/page-art/history-stories/moyle-rail-to-iowa-1856-960.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "da811e02007c37d6b864a5b4e90419b608c83558f6fcc5230a32066c6cf39ecf",
+        "thumbnail_sha256": "f0a3a1ee5dc3911a228e4ed097e44fdcc93a2beb23c2b757ddd3a44dbf3ee784",
+        "source_original": "exec-185688b3-11a0-4bd0-9ddb-6c204eefc6a0.png",
+        "source_sha256": "1106862ef144346fac67b1d517a67a5ea657a77dc8bf6bc178790d8e5ec535ef",
+        "reviewed": true,
+        "independent_reviewer": "Fermi and Newton",
+        "owner_aesthetic_approval": false,
+        "alt": "John Rowe Moyle sits by a wooden railway carriage window and looks across the passing countryside.",
+        "caption": "Moyle travels by rail after landing in Boston.",
+        "review_reference": "docs/history-stories/first-six-scene-review-20261004.json"
+      },
+      "limits": "Independent raw-pixel acceptance; encoded exports and assembled native paths require exact final review. No owner aesthetic acceptance or biography ratio waiver."
+    }
+  ]
+}

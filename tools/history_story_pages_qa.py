@@ -14,7 +14,9 @@ stories = json.loads((DATA/'stories.json').read_text(encoding='utf-8'))['stories
 reviewed_content = load_ledger()['documents']
 ready = json.loads((DATA/'art-ready.json').read_text(encoding='utf-8'))
 reviews = json.loads((ROOT/'docs/history-story-art-fermi-review-20260929.json').read_text(encoding='utf-8'))['images']
-accepted = {(entry['source_original'], entry['sha256']) for entry in reviews if entry['result'] == 'pass'}
+new_reviews = json.loads((DATA/'first-six-scene-review-20261004.json').read_text(encoding='utf-8'))['images']
+assert len(new_reviews) == 6 and all(entry['result'] == 'pass' and set(entry['independent_reviewers']) == {'Fermi', 'Newton'} for entry in new_reviews)
+accepted = {(entry['source_original'], entry['sha256']) for entry in reviews + new_reviews if entry['result'] == 'pass'}
 rejected = {entry['source_original'] for entry in reviews if entry['result'] == 'rejected'}
 expression_edits = json.loads((DATA/'miller-expression-edits-20260929.json').read_text(encoding='utf-8'))['edits']
 for edit in expression_edits:
@@ -50,7 +52,7 @@ for story in stories:
     assert opening.select_one('.fc-actions a')['href'] == '#' + first_heading['id'], 'Begin retains existing first narrative target'
     ids = [node['id'] for node in soup.select('[id]')]
     assert len(ids) == len(set(ids)), 'Duplicate IDs'
-    expected_count = {'john-tanner': 7, 'eleazer-miller': 9, 'john-rowe-moyle': 8}[slug]
+    expected_count = {'john-tanner': 10, 'eleazer-miller': 10, 'john-rowe-moyle': 10}[slug]
     assert len(soup.select('main figure')) == expected_count, 'Exact accepted original count; no repeated hero'
     assert len(soup.select('main .fc-visual-hero')) == 1
     assert len(story['units']) == expected_count
@@ -92,7 +94,7 @@ for story in stories:
     assert preview.img['src'] == ready[scene]['thumbnail'] and preview.img['alt'] == ready[scene]['alt']
     assert not entry.select('[data-topic-art], [data-exclusive-artwork], [data-hero-viewer]'), 'Hub previews link to their owner; no duplicate study controller or art ownership'
     assert len(entry.get_text(' ', strip=True).split()) < 100, 'History hub remains a compact entrance'
-assert len(set(all_hashes)) == 24, 'Twenty-four distinct originals, not renamed copies'
+assert len(set(all_hashes)) == 30, 'Thirty distinct originals, not renamed copies'
 moyle = next(s for s in stories if s['id'] == 'john-rowe-moyle')
 # Keep scene-production caveats in the standard footer, while preserving the
 # substantive travel-journal/family-account distinction in the narrative.
@@ -136,7 +138,7 @@ assert 'aspect-ratio: 2048 / 684;' in shared_css and '--fc-mobile-hero-height: c
 frame = json.loads((DATA/'frame-review-20260929.json').read_text(encoding='utf-8'))
 assert abs(frame['desktop']['width']/frame['desktop']['height']-2048/684) < .001
 subprocess.run([sys.executable, str(ROOT/'tools/build_history_stories.py'), '--check'], check=True)
-print('PASS: three dedicated History pages, twenty-four original scene studies, narrative rhythm, source attribution and preserved hub bookmarks')
+print('PASS: three dedicated History pages, thirty original scene studies, narrative rhythm, source attribution and preserved hub bookmarks')
 
 hub_css = (ROOT/'church-history.css').read_text(encoding='utf-8')
 assert '.fc-history-life-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }' in hub_css
@@ -151,7 +153,7 @@ tanner_units = {u['id']: u for story in stories if story['id'] == 'john-tanner' 
 # The new prose draws on the public-domain1883 retrospective biography. Its
 # allocation must not be mislabeled as modern Arrington prose. Existing picture
 # captions from the prior modern synthesis retain their separate budget.
-retrospective_ids = ['tanner-journey-kirtland','tanner-temple-support','tanner-displacement','tanner-debt-forgiven','tanner-family-crossing-1848']
+retrospective_ids = ['tanner-journey-kirtland','tanner-temple-support','tanner-displacement','tanner-debt-forgiven','tanner-family-crossing-1848','tanner-camp-herd-1846','tanner-after-fire-1847','tanner-new-crop-1847']
 for key in retrospective_ids:
     unit = tanner_units[key]
     sources = [source for source in unit['sources'] if '46734' in source['url']]
