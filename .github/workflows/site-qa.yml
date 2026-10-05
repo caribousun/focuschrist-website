@@ -212,7 +212,7 @@ jobs:
           python tools/unified_opening_qa.py
           NODE_PATH=/tmp/focus-row-qa/node_modules node tools/answer_opening_browser_qa.js
           NODE_PATH=/tmp/focus-row-qa/node_modules node tools/unified_opening_browser_qa.js
-          NODE_PATH=/tmp/focus-row-qa/node_modules node tools/study_alignment_browser_qa.js
+          NODE_PATH="/tmp/focus-row-qa/node_modules:$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/study_alignment_browser_qa.js
           NODE_PATH=/tmp/focus-row-qa/node_modules node tools/content_boundaries_browser_qa.js
           NODE_PATH=/tmp/focus-row-qa/node_modules node tools/home_hero_height_browser_qa.js
           NODE_PATH=/tmp/focus-row-qa/node_modules node tools/footer_navigation_browser_qa.js
@@ -234,6 +234,8 @@ jobs:
           path: |
             .qa-artifacts/unified-opening*.json
             .qa-artifacts/content-boundaries.json
+            .qa-artifacts/mobile-study-rows.json
+            .qa-artifacts/study-alignment.json
           include-hidden-files: true
           if-no-files-found: ignore
 

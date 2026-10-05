@@ -61,6 +61,19 @@ def before_joseph_life(data):
 SOURCE_ROWS_APPENDIX = b'\n/* Related source controls share each row instead of forming ragged steps.\n   Keep single citations compact and preserve the CFM reading-link treatment. */\nbody.fc-site :is(.fc-study-visual-sources, .pioneer-source-links) > a[hidden] {\n    display: none !important;\n}\nbody.fc-site:not(.cfm-page) :is(.fc-study-visual-sources, .pioneer-source-links) {\n    align-items: stretch;\n}\nbody.fc-site:not(.cfm-page) :is(.fc-study-visual-sources, .pioneer-source-links) > a:not(.fc-button--primary):not([hidden]) {\n    flex: 1 1 16rem;\n    margin: 0;\n}\nbody.fc-site:not(.cfm-page) :is(.fc-study-visual-sources, .pioneer-source-links) > a:not(.fc-button--primary):not([hidden]):only-child {\n    flex: 0 1 auto;\n}\n@media (max-width: 600px) {\n    body.fc-site:not(.cfm-page) :is(.fc-study-visual-sources, .pioneer-source-links) > a:not(.fc-button--primary):not([hidden]) {\n        flex-basis: 100%;\n        width: 100%;\n    }\n}\n'
 SOURCE_ROWS_SHA256 = '52fa1665567cb5e7b7583a6ba8130e303737464da4a325f0b96be50ea026cc71'
 
+
+# Exact owner-directed mobile navigation appendix; historical checks unchanged.
+MOBILE_NAV_SHA256 = '180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55'
+MOBILE_NAV_VERSION = '20261005-mobile-study-rows-1'
+MOBILE_NAV_APPENDIX = b'\n/* Mobile study menus use aligned rows; numbered chapter pickers retain their\n   own layouts. Rem-based tracks reflow with enlarged text. */\n@media (max-width: 700px) {\n    body.fc-site :is(.fc-study-nav:not(.jj-local-nav), .cfm-jump, .gc-jumps, .watch-theme-tabs, .cta-row, .journal-collections, .filters, .era-pills, .controls-row) {\n        display: grid;\n        width: 100%;\n        grid-template-columns: repeat(auto-fit, minmax(min(100%, max(10rem, 45%)), 1fr));\n        align-items: stretch;\n        gap: var(--fc-study-control-gap) !important;\n    }\n    body.fc-site :is(.fc-study-nav:not(.jj-local-nav), .cfm-jump, .gc-jumps, .watch-theme-tabs, .cta-row, .journal-collections, .filters, .era-pills, .controls-row) > :is(a, button) {\n        width: 100%;\n        margin: 0;\n        min-height: max(44px, 3.5rem) !important;\n        align-self: stretch;\n    }\n    body.fc-site :is(.fc-study-nav:not(.jj-local-nav), .cfm-jump, .gc-jumps, .watch-theme-tabs, .cta-row, .journal-collections, .filters, .era-pills, .controls-row, .atonement-path) > :is(a, button):last-child:nth-of-type(odd) {\n        grid-column: 1 / -1;\n    }\n    body.fc-site .era-pills {\n        grid-template-columns: minmax(0, 1fr) !important;\n    }\n    body.fc-site .controls-row > .lbl {\n        grid-column: 1 / -1;\n    }\n    /* The unified opening owns placement; its retained descriptions stay visible. */\n    body.fc-site :is([data-unified-opening], .fc-unified-opening-continuation) .fc-opening-explanation {\n        display: block !important;\n        flex: 0 0 auto;\n        width: 100%; max-width: 38ch; box-sizing: border-box;\n        margin: 0; padding: 0;\n        color: var(--fc-muted); font-size: .9rem; line-height: 1.45;\n        font-weight: 400; text-align: center;\n    }\n}\n'
+
+def before_mobile_nav(data):
+    if hashlib.sha256(data).hexdigest() == MOBILE_NAV_SHA256 and data.endswith(MOBILE_NAV_APPENDIX):
+        prior = data[:-len(MOBILE_NAV_APPENDIX)]
+        if hashlib.sha256(prior).hexdigest() == SOURCE_ROWS_SHA256:
+            return prior
+    return data
+
 def before_source_rows(data):
     if hashlib.sha256(data).hexdigest() == SOURCE_ROWS_SHA256 and data.endswith(SOURCE_ROWS_APPENDIX):
         prior = data[:-len(SOURCE_ROWS_APPENDIX)]
@@ -97,6 +110,7 @@ def historical_style_bytes(data):
     reviewed bytes. The mandatory current-file checks separately reject stale
     files and any mutation to the approved anchor-only transformation.
     """
+    data = before_mobile_nav(data)
     data = before_source_rows(data)
     data = before_journey_picker(before_joseph_life(before_study_center(before_topic_desktop(before_search_hitbox(data)))))
     digest = hashlib.sha256(data).hexdigest()
@@ -133,6 +147,8 @@ def reviewed_anchor_style(name, data):
         if hashlib.sha256(data).hexdigest() != JOSEPH_LIFE_SHA256: return False
         data = before_joseph_life(data)
     if name == 'site-system.css':
+        if hashlib.sha256(data).hexdigest() != MOBILE_NAV_SHA256: return False
+        data = before_mobile_nav(data)
         if hashlib.sha256(data).hexdigest() != SOURCE_ROWS_SHA256: return False
         data = before_source_rows(data)
         if hashlib.sha256(data).hexdigest() != STUDY_CENTER_SHA256: return False
@@ -166,7 +182,7 @@ def check():
         if rel.startswith(('tools/', 'work/', 'node_modules/', '.git/')):
             continue
         for filename, version in re.findall(r'([\w-]+\.css)\?v=([\w.-]+)', path.read_text(encoding='utf-8')):
-            expected = '20261004-joseph-heroes-1' if filename == 'joseph-smith-likeness.css' and rel in {'joseph-smith-likeness.html','joseph-smith-portrait-research.html'} else JOURNEY_PICKER_VERSION if filename == 'jesus-journey.css' else STUDY_CENTER_VERSION if filename == 'site-system.css' else SEARCH_VERSION if filename == 'site-search.css' else TOPIC_DESKTOP_VERSION if filename == 'topic-study-pages.css' else CONTRACT['version']
+            expected = '20261004-joseph-heroes-1' if filename == 'joseph-smith-likeness.css' and rel in {'joseph-smith-likeness.html','joseph-smith-portrait-research.html'} else JOURNEY_PICKER_VERSION if filename == 'jesus-journey.css' else MOBILE_NAV_VERSION if filename == 'site-system.css' else SEARCH_VERSION if filename == 'site-search.css' else TOPIC_DESKTOP_VERSION if filename == 'topic-study-pages.css' else CONTRACT['version']
             if filename in FILES and version != expected:
                 errors.append('Stale anchor stylesheet: ' + rel + ': ' + filename)
     return errors
@@ -189,6 +205,9 @@ def self_test():
         assert changed != JOURNEY_PICKER_CURRENT
         assert not reviewed_anchor_style('jesus-journey.css', journey.replace(JOURNEY_PICKER_CURRENT, changed, 1))
     shared = (ROOT / 'site-system.css').read_bytes()
+    assert not reviewed_anchor_style('site-system.css', before_mobile_nav(shared))
+    assert before_mobile_nav(shared) == shared[:-len(MOBILE_NAV_APPENDIX)]
+    assert not reviewed_anchor_style('site-system.css', shared[:-1] + bytes([shared[-1] ^ 1]))
     search = (ROOT / 'site-search.css').read_bytes()
     assert not reviewed_anchor_style('site-search.css', search.replace(SEARCH_HITBOX, SEARCH_PRIOR, 1))
     assert not reviewed_anchor_style('site-search.css', search.replace(b'display:inline-block;', b'display:inline;', 1))
