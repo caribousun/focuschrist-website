@@ -74,7 +74,8 @@
       // These are approximate place locations: retain a nearby area view, never street-level precision.
       var targetZoom=distance<75000&&zoom>=8?Math.min(zoom,10):10;
       if(distance<25&&Math.abs(zoom-targetZoom)<.01)return;
-      if(immediate)map.setView(points[0],targetZoom,{animate:false});else map.flyTo(points[0],targetZoom,{duration:.6});
+      // A reset avoids Leaflet's truncated same-zoom pan offset in reduced motion.
+      if(immediate)map.setView(points[0],targetZoom,{animate:false,reset:true});else map.flyTo(points[0],targetZoom,{duration:.6});
     }else if(points.length){
       var options={padding:[30,30],maxZoom:10,animate:!immediate,duration:.8};
       if(immediate)map.fitBounds(L.latLngBounds(points),options);else map.flyToBounds(L.latLngBounds(points),options);
@@ -91,11 +92,11 @@
   document.getElementById('historyMapReset').addEventListener('click',showMatching);
   try{
     if(!window.L)throw new Error('Leaflet unavailable');
-    map=L.map(canvas,{scrollWheelZoom:false}).setView([38,-70],3);
+    map=L.map(canvas,{scrollWheelZoom:false,maxZoom:19}).setView([38,-70],3);
   // Keep live provider credits visible outside the interactive map canvas.
   if(map.attributionControl&&map.attributionControl.getContainer){var attribution=map.attributionControl.getContainer();attribution.classList.add('timeline-map-attribution');canvas.after(attribution);}
     var tileErrors=0;
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> contributors'}).on('tileload',function(){var recovering=tileFailed;tileLoaded=true;tileFailed=false;clearTimeout(tileTimer);if(recovering)draw();}).on('tileerror',function(){if(++tileErrors>=3&&!tileLoaded){tileFailed=true;draw();}}).addTo(map);
+    FCTerrainLayer().on('tileload',function(){var recovering=tileFailed;tileLoaded=true;tileFailed=false;clearTimeout(tileTimer);if(recovering)draw();}).on('tileerror',function(){tileLoaded=false;if(++tileErrors>=3){tileFailed=true;draw();}}).addTo(map);
     tileTimer=setTimeout(function(){if(!tileLoaded){tileFailed=true;draw();}},10000);
     window.addEventListener('pagehide',function(){clearTimeout(tileTimer);});
     map.on('zoomend',draw);

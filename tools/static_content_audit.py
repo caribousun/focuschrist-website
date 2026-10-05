@@ -26,6 +26,15 @@ SKIP_TAGS = {"script", "style", "svg", "noscript", "template"}
 PUBLISHED_ATTRIBUTES = ("alt", "aria-label", "placeholder", "title")
 VALID_STATUSES = {"verified", "non-source-dependent"}
 
+# These reviewed map narratives live inside inline JavaScript. Keep their binding
+# separate from static text and require it even when a ledger field is removed.
+INLINE_SCRIPT_ROUTES = frozenset({
+    "timelines/life-of-christ-journey-map.html",
+    "timelines/latter-day-saint-church-history-timeline.html",
+    "timelines/willie-and-martin-handcart-map.html",
+})
+
+
 
 class PublishedTextParser(HTMLParser):
     def __init__(self) -> None:
@@ -80,6 +89,51 @@ def published_text(path: Path) -> str:
 
 def content_hash(path: Path) -> str:
     return hashlib.sha256(published_text(path).encode("utf-8")).hexdigest()
+
+
+
+class InlineScriptParser(HTMLParser):
+    """Locate whole inline script elements without normalizing their raw bytes."""
+
+    def __init__(self, raw: bytes) -> None:
+        super().__init__(convert_charrefs=False)
+        # Latin-1 is a one-to-one byte mapping; offsets also preserve CRLF.
+        self.raw = raw
+        self.line_offsets = [0]
+        self.line_offsets.extend(match.end() for match in re.finditer(b"\n", raw))
+        self.start: int | None = None
+        self.blocks: list[bytes] = []
+
+    def byte_offset(self) -> int:
+        line, column = self.getpos()
+        return self.line_offsets[line - 1] + column
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag == "script" and not any(key.lower() == "src" for key, _ in attrs):
+            self.start = self.byte_offset()
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag == "script" and self.start is not None:
+            end = self.raw.find(b">", self.byte_offset())
+            if end < 0:
+                raise ValueError("unterminated inline script closing tag")
+            self.blocks.append(self.raw[self.start:end + 1])
+            self.start = None
+
+
+def inline_script_hash(path: Path) -> str:
+    raw = path.read_bytes()
+    parser = InlineScriptParser(raw)
+    parser.feed(raw.decode("latin-1"))
+    parser.close()
+    if parser.start is not None:
+        raise ValueError("unterminated inline script")
+    digest = hashlib.sha256(b"focus-inline-scripts-v1\0")
+    digest.update(len(parser.blocks).to_bytes(8, "big"))
+    for block in parser.blocks:
+        digest.update(len(block).to_bytes(8, "big"))
+        digest.update(block)
+    return digest.hexdigest()
 
 
 def html_files() -> list[Path]:
@@ -155,6 +209,14 @@ def validate() -> int:
                 errors.append(f"{name}: authoritative_sources must contain non-empty strings")
         if not record.get("reviewed_on") or not record.get("review_standard"):
             errors.append(f"{name}: missing review date or standard")
+        if name in INLINE_SCRIPT_ROUTES:
+            try:
+                script_hash = inline_script_hash(path)
+                if record.get("reviewed_inline_script_sha256") != script_hash:
+                    errors.append(f"{name}: inline script review missing or changed after review "
+                                  f"(expected {record.get('reviewed_inline_script_sha256')}, actual {script_hash})")
+            except ValueError as exc:
+                errors.append(f"{name}: {exc}")
         actual_hash = content_hash(path)
         if record.get("published_text_sha256") != actual_hash:
             errors.append(f"{name}: published wording changed after review (expected {record.get('published_text_sha256')}, actual {actual_hash})")

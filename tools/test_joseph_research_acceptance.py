@@ -6,6 +6,18 @@ from joseph_research_acceptance import ROUTE, check_entry_and_brevity, check_rea
 def soup(markup): return BeautifulSoup(markup,'html.parser')
 
 class AcceptanceTests(unittest.TestCase):
+    def test_frozen_pdf_source_allows_only_exact_browser_cache_change(self):
+        from pathlib import Path
+        import json
+        from joseph_research_acceptance import check_pdf_source_binding
+        site = Path(__file__).resolve().parents[1]
+        source = (site/ROUTE).read_bytes()
+        reviewed_hash = json.loads((site/'docs/joseph-research-pdf-review.json').read_text())['source_html_sha256']
+        check_pdf_source_binding(source, reviewed_hash)
+        for changed in (source+b' ', source+b'<link rel="stylesheet" href="site-system.css?v=20261004-source-control-rows-2">', source.replace(b'20261004-source-control-rows-2', b'unknown-version'), source.replace(b'<body', b'<body data-unreviewed="true"', 1), source.replace(b'site-system.css?', b'other.css?', 1)):
+            with self.assertRaises(AssertionError):
+                check_pdf_source_binding(changed, reviewed_hash)
+
     def test_sitewide_disclosure_guard_preserves_source_geography_and_footer(self):
         from joseph_research_acceptance import check_no_repeated_artwork_disclosure, ARTWORK_FOOTER_DISCLOSURE
         check_no_repeated_artwork_disclosure('Pin positions mark named places; some crossings use the nearest modern town. The date of Moyle’s injury and details of his prosthetic remain uncertain. A contemporary letterbook copy survives. '+ARTWORK_FOOTER_DISCLOSURE)

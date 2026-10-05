@@ -134,6 +134,7 @@ jobs:
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/unified_opening_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/father_opening_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/study_link_controls_qa.js
+          node tools/timeline_terrain_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/timeline_map_lifecycle_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/timeline_history_map_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/timeline_images_qa.js
@@ -346,7 +347,9 @@ jobs:
         run: python tools/source_integrity_inventory.py
 
       - name: Enforce reviewed static-content ledger
-        run: python tools/static_content_audit.py
+        run: |
+          python tools/test_static_content_audit.py
+          python tools/static_content_audit.py
 
       - name: Exercise source-integrity runtime guard
         run: node tools/source_integrity_runtime_qa.js

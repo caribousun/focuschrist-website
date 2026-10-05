@@ -2471,3 +2471,25 @@ body.fc-site #worldwide-heading { scroll-margin-top: var(--fc-anchor-offset, 16p
 
 /* Owner-requested centered study choices; chapter picker keeps its own layout. */
 body.fc-site .fc-study-nav:not(.jj-local-nav) { justify-content: center; }
+
+/* Related source controls share each row instead of forming ragged steps.
+   Keep single citations compact and preserve the CFM reading-link treatment. */
+body.fc-site :is(.fc-study-visual-sources, .pioneer-source-links) > a[hidden] {
+    display: none !important;
+}
+body.fc-site:not(.cfm-page) :is(.fc-study-visual-sources, .pioneer-source-links) {
+    align-items: stretch;
+}
+body.fc-site:not(.cfm-page) :is(.fc-study-visual-sources, .pioneer-source-links) > a:not(.fc-button--primary):not([hidden]) {
+    flex: 1 1 16rem;
+    margin: 0;
+}
+body.fc-site:not(.cfm-page) :is(.fc-study-visual-sources, .pioneer-source-links) > a:not(.fc-button--primary):not([hidden]):only-child {
+    flex: 0 1 auto;
+}
+@media (max-width: 600px) {
+    body.fc-site:not(.cfm-page) :is(.fc-study-visual-sources, .pioneer-source-links) > a:not(.fc-button--primary):not([hidden]) {
+        flex-basis: 100%;
+        width: 100%;
+    }
+}

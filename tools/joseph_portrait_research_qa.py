@@ -142,7 +142,8 @@ assert hashlib.sha256((ROOT/'assets/identities/joseph-smith-owner-approved-20260
 pdf=ROOT/'assets/research/focuschrist-joseph-evidence.pdf'
 assert pdf.read_bytes().startswith(b'%PDF-'),'Download is not a PDF'
 pdf_review=json.loads((ROOT/'docs/joseph-research-pdf-review.json').read_text(encoding='utf-8'))
-assert pdf_review['source_html_sha256']==hashlib.sha256((ROOT/ROUTE).read_bytes()).hexdigest(), 'Research page changed: rebuild and review the complete downloadable PDF'
+from joseph_research_acceptance import check_pdf_source_binding
+check_pdf_source_binding((ROOT/ROUTE).read_bytes(), pdf_review['source_html_sha256'])
 assert pdf_review['pdf_sha256']==hashlib.sha256(pdf.read_bytes()).hexdigest(), 'PDF bytes changed after completeness and rendered review'
 assert pdf_review['sections']==15 and pdf_review['feature_studies']==16, 'Complete PDF research coverage missing'
 assert pdf_review['figure_placements']==len(root.select('figure')) and pdf_review['distinct_new_originals']==len(originals)+len(migration['moves']), 'Complete PDF picture coverage missing'
