@@ -347,7 +347,9 @@ jobs:
         run: python tools/source_integrity_inventory.py
 
       - name: Enforce reviewed static-content ledger
-        run: python tools/static_content_audit.py
+        run: |
+          python tools/test_static_content_audit.py
+          python tools/static_content_audit.py
 
       - name: Exercise source-integrity runtime guard
         run: node tools/source_integrity_runtime_qa.js

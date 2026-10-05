@@ -530,7 +530,7 @@ window.HISTORY_LOCATIONS = {
     },
     {
       "index": 28,
-      "expectedTitle": "The Manifesto Ends Plural Marriage",
+      "expectedTitle": "The Manifesto and the End of Plural Marriage",
       "kind": "places",
       "places": [
         "salt_lake"
