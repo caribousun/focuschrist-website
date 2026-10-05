@@ -1,0 +1,76 @@
+{
+  "reviewer": "Fermi",
+  "decision": "CONCUR_SIX_EXPORTS",
+  "scope": "Personally viewed all twelve exported images individually. Bound all eighteen raw/export hashes and dimensions. Source and export pixel review only; native integration and owner acceptance separate. Rejected child02/03 excluded. No regeneration.",
+  "export_record_sha256": "d4bd3109c3c8900d81ecab3f31cd742191b7b5a3e82ffceef876ff5c061bc3ce",
+  "newton_raw_receipt_sha256": "d8401b88b413aac63b6251842ac79321e2b6f95bb81971cf9b37b3787d6cf5b3",
+  "newton_raw_receipt_read": true,
+  "images": [
+    {
+      "key": "christian-identity-02",
+      "source_sha256": "2313a0a0da224213bbea4493e8602be423ab03a5c09c10ed56f6218c683cb0f8",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-candidates\\christian-identity-02-original.png",
+      "reviewed": true,
+      "sha256": "0f09eb61083281cf44468da22955f895cfd70bb833c51407be17af93535307df",
+      "full_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\christian-identity-02-full.webp",
+      "responsive_sha256": "0c581e050adc833c0e4776604538edead5326cea2a2017f36ec032590fc4ba85",
+      "960_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\christian-identity-02-960.webp",
+      "decision": "PASS actual full and 960 pixels personally viewed; composition, identity, natural gaze, anatomy, exposed marks where applicable, color and detail preserved from accepted raw."
+    },
+    {
+      "key": "christian-identity-03",
+      "source_sha256": "be26d36c972f082b9b3a169b1ce05d9f1929ddf6a75f7a6851ec91cc7f1fdbab",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-candidates\\christian-identity-03-original.png",
+      "reviewed": true,
+      "sha256": "c455770505669eed9b34052d93cb3473a709af8e04b8876f6800e8e4872044dd",
+      "full_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\christian-identity-03-full.webp",
+      "responsive_sha256": "8eab7cf7b749126384fd2c428dd1fa9a41d391327d90588918383678e2e54207",
+      "960_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\christian-identity-03-960.webp",
+      "decision": "PASS actual full and 960 pixels personally viewed; composition, identity, natural gaze, anatomy, exposed marks where applicable, color and detail preserved from accepted raw."
+    },
+    {
+      "key": "trials-03",
+      "source_sha256": "9765803cdb438a2eea7f004bb90e5efe9aa9c389b9cc84796a7b6dcd7b17927b",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-candidates\\trials-03-original.png",
+      "reviewed": true,
+      "sha256": "fdb9f6b9fd41ce321ea2ece17a176018b1047708955abbf90ae1998265019bdd",
+      "full_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\trials-03-full.webp",
+      "responsive_sha256": "5d61ed9119bee15ef0775aadeb6f472b36448029f0c347923a2737cdfc8be87b",
+      "960_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\trials-03-960.webp",
+      "decision": "PASS actual full and 960 pixels personally viewed; composition, identity, natural gaze, anatomy, exposed marks where applicable, color and detail preserved from accepted raw."
+    },
+    {
+      "key": "death-of-a-child-01",
+      "source_sha256": "037fcdf0f3af91a2144e127bea820f8e5492f115d6d4fef698e0ddd74e49fa7e",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-candidates\\death-of-a-child-01-original.png",
+      "reviewed": true,
+      "sha256": "1b654d129a3f7bda61c906f86dc0201cdaf8cae37272712819f47b231d2c9417",
+      "full_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\death-of-a-child-01-full.webp",
+      "responsive_sha256": "05e336d959c8e8e62c0af5f8c6848b9c01970c716272041360ffd3eaa8cf340d",
+      "960_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\death-of-a-child-01-960.webp",
+      "decision": "PASS actual full and 960 pixels personally viewed; composition, identity, natural gaze, anatomy, exposed marks where applicable, color and detail preserved from accepted raw."
+    },
+    {
+      "key": "grief-01",
+      "source_sha256": "d7e2614302f099a35912ceb0a61f790d16af3d28f75d416c8e66c06a974240f1",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-candidates\\grief-01-original.png",
+      "reviewed": true,
+      "sha256": "50e93b477bfb56d41466c8ce047785e7fb7e444be7ebb0c0288aef970736fe18",
+      "full_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\grief-01-full.webp",
+      "responsive_sha256": "c72ba06ba50c20f56b89fe1c6b3ad10b5fc35832b96377454b5346a42a150534",
+      "960_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\grief-01-960.webp",
+      "decision": "PASS actual full and 960 pixels personally viewed; composition, identity, natural gaze, anatomy, exposed marks where applicable, color and detail preserved from accepted raw."
+    },
+    {
+      "key": "grief-02",
+      "source_sha256": "3bab0e4f8ac2e865378414eb1c70f3070227cd85cc11e4f6256e6660ec1d523c",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-candidates\\grief-02-original.png",
+      "reviewed": true,
+      "sha256": "7a0668d96be751a529f35fca0fb626b8091d1d73c079c450276f31cbd9da69c1",
+      "full_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\grief-02-full.webp",
+      "responsive_sha256": "25e59b479bcbb03938a5570586fe6166a2975880b1d48f7e7be528bebe14c50d",
+      "960_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\grief-02-960.webp",
+      "decision": "PASS actual full and 960 pixels personally viewed; composition, identity, natural gaze, anatomy, exposed marks where applicable, color and detail preserved from accepted raw."
+    }
+  ]
+}

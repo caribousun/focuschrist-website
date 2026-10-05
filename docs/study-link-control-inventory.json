@@ -2,7 +2,7 @@
   "canonical_pages": 130,
   "selectors": {
     ".fc-study-visual-sources a:not(.fc-button--primary)": {
-      "count": 980,
+      "count": 1021,
       "pages": [
         "answers/aaronic-priesthood-restoration.html",
         "answers/abrahamic-covenant.html",
@@ -224,11 +224,11 @@
       },
       {
         "href": "#lehis-family",
-        "label": "02 Lehi and Sariah\u2019s family"
+        "label": "02 Lehi and Sariah’s family"
       },
       {
         "href": "#nephis-witness",
-        "label": "03 Nephi\u2019s witness of Christ"
+        "label": "03 Nephi’s witness of Christ"
       },
       {
         "href": "#keepers-of-the-record",
@@ -244,7 +244,7 @@
       },
       {
         "href": "#a-changed-heart",
-        "label": "07 Alma and Mosiah\u2019s sons"
+        "label": "07 Alma and Mosiah’s sons"
       },
       {
         "href": "#lamanite-conversions",
@@ -256,7 +256,7 @@
       },
       {
         "href": "#captain-moroni",
-        "label": "10 Captain Moroni\u2019s title of liberty"
+        "label": "10 Captain Moroni’s title of liberty"
       },
       {
         "href": "#covenants-and-courage",
@@ -280,11 +280,11 @@
       },
       {
         "href": "#the-saviors-sermon",
-        "label": "16 The Savior\u2019s sermon"
+        "label": "16 The Savior’s sermon"
       },
       {
         "href": "#the-saviors-compassion",
-        "label": "17 The Shepherd\u2019s compassion"
+        "label": "17 The Shepherd’s compassion"
       },
       {
         "href": "#the-saviors-lasting-witness",
@@ -296,11 +296,11 @@
       },
       {
         "href": "#mormons-final-hope",
-        "label": "20 Mormon\u2019s final hope"
+        "label": "20 Mormon’s final hope"
       },
       {
         "href": "#the-final-witnesses",
-        "label": "21 Moroni\u2019s invitation"
+        "label": "21 Moroni’s invitation"
       },
       {
         "href": "#moroni-and-joseph",
@@ -310,43 +310,43 @@
     "pioneers.html nav[aria-label=\"Pioneer study sections\"] a": [
       {
         "href": "#pioneer-departure-heading",
-        "label": "01Departure\u2193"
+        "label": "01Departure↓"
       },
       {
         "href": "#pioneer-trail-life-heading",
-        "label": "02Life on the trail\u2193"
+        "label": "02Life on the trail↓"
       },
       {
         "href": "#pioneer-ocean-to-plains",
-        "label": "03Ocean to plains\u2193"
+        "label": "03Ocean to plains↓"
       },
       {
         "href": "#elizabeth-crook-panting",
-        "label": "04Elizabeth\u2019s story\u2193"
+        "label": "04Elizabeth’s story↓"
       },
       {
         "href": "#pioneer-rescue-story",
-        "label": "05The rescue\u2193"
+        "label": "05The rescue↓"
       },
       {
         "href": "#pioneer-story-12-jane-witness",
-        "label": "06Jane\u2019s witness\u2193"
+        "label": "06Jane’s witness↓"
       },
       {
         "href": "#journey-timeline",
-        "label": "07Timelines\u2193"
+        "label": "07Timelines↓"
       },
       {
         "href": "#connected-study",
-        "label": "08Read the records\u2193"
+        "label": "08Read the records↓"
       },
       {
         "href": "#guided-reflections",
-        "label": "09Reflect and respond\u2193"
+        "label": "09Reflect and respond↓"
       },
       {
         "href": "#pioneer-music",
-        "label": "Music for the journey: listen and study \u2192"
+        "label": "Music for the journey: listen and study →"
       }
     ],
     "watch.html .watch-topic-index a": [

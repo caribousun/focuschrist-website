@@ -1,5 +1,5 @@
 {
-  "scope": "Ten additive Prayer/Families originals. Independent pixel/source receipts retained verbatim; final assembled and publication evidence remains separate.",
+  "scope": "51 additive FIRST topic originals. Authentic independent pixel receipts retained; assembled and public verification remain separate.",
   "artworks": [
     {
       "key": "prayer-01",
@@ -240,6 +240,1005 @@
       "review_notes": "Independent exact finished pixels followed by root raw-image adjudication; final assembled candidate and release gates remain pending.",
       "study": "grief-and-faith.html",
       "study_label": "Study grief and faith"
+    },
+    {
+      "key": "look-unto-me-01",
+      "route": "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+      "asset": "assets/page-art/first-topic-completion/look-unto-me-01-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/look-unto-me-01-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/11?lang=eng&id=p28-p30#p28"
+      ],
+      "source_label": "Matthew 11:28–30",
+      "title": "Come unto me",
+      "caption": "Jesus invites those who are weary to come to Him and learn of Him. His promise of rest draws us toward a relationship of trust and discipleship.",
+      "alt": "Jesus speaks gently with three adult listeners who have paused beside a stone courtyard wall.",
+      "christ": true,
+      "width": 1536,
+      "height": 1024,
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "../art-study/be-still.html",
+      "study_label": "Study Be Still",
+      "placement_section": "every-thought",
+      "figure_id": "picture-look-unto-me-01",
+      "continue_target": "picture-look-unto-me-01-heading",
+      "source_sha256": "65f451d569f71d6342f31b41a2837e8b86010ab8c62a11c253959b9ce7cdd774",
+      "sha256": "5729b7c2cddefaf8ef2f0c7200ad72621e7e76d3772918b8f8ce8849cd0456cc",
+      "responsive_sha256": "82951e66a8ec58d6ec9aab129979ee481272a3df76114900f99d2f6047fa5e5f",
+      "review_notes": "Root and independent Fermi/Newton inspected original and exports. Source preflight and finished pixels concur; assembled and live publication checks remain separate."
+    },
+    {
+      "key": "look-unto-me-02",
+      "route": "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+      "asset": "assets/page-art/first-topic-completion/look-unto-me-02-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/look-unto-me-02-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/16?lang=eng&id=p32-p33#p32"
+      ],
+      "source_label": "John 16:32–33",
+      "title": "Be of good cheer",
+      "caption": "Before His arrest, Jesus spoke to His disciples about the trouble ahead and the peace they could find in Him. His words invite courage even while life remains difficult.",
+      "alt": "Jesus addresses attentive disciples in a softly lit stone passage after dusk.",
+      "christ": true,
+      "width": 1536,
+      "height": 1024,
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "faith-in-jesus-christ-during-trials.html",
+      "study_label": "Study faith during trials",
+      "placement_section": "rejoice",
+      "figure_id": "picture-look-unto-me-02",
+      "continue_target": "picture-look-unto-me-02-heading",
+      "source_sha256": "98cbb7a33ba67fa5e70937edd59c92d55fac2e208b408c8fdb16ab1486c40e65",
+      "sha256": "30d8987fc796eb000a89896f9d6dec6216cf24aa12a848f380a5bceac16c8e3d",
+      "responsive_sha256": "6d34372f9cfe8a0e1ffa9d5b58b761d16205846f009af894d93285a0188258ef",
+      "review_notes": "Root and independent Fermi/Newton inspected original and exports. Source preflight and finished pixels concur; assembled and live publication checks remain separate."
+    },
+    {
+      "key": "look-unto-me-03",
+      "route": "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+      "asset": "assets/page-art/first-topic-completion/look-unto-me-03-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/look-unto-me-03-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?lang=eng&id=p33-p37#p33"
+      ],
+      "source_label": "Doctrine and Covenants 6:33–37",
+      "title": "Choose one good thing",
+      "caption": "Making room for someone can be a small beginning. Looking to Christ can shape the attention and kindness we bring to the person beside us.",
+      "alt": "A seated woman lifts her bag to make room while a woman with a rollator pauses beside the bench.",
+      "christ": false,
+      "width": 1536,
+      "height": 1024,
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "why-families-are-important.html",
+      "study_label": "Study caring for families",
+      "placement_section": "seven-days",
+      "figure_id": "picture-look-unto-me-03",
+      "continue_target": "picture-look-unto-me-03-heading",
+      "source_sha256": "80c2ddecaa514206307df584b449dc2eb0c02b4c616e50344e790fd16c3fd9ff",
+      "sha256": "905b30f601c30f68014a4cb160cbf57a84df2474042202bf9840389273103e03",
+      "responsive_sha256": "ce9e744a4cc2d68ef720948cf4c29c6dbc08cd3c4e8c3d9bc55ded24b85f2d03",
+      "review_notes": "Root and independent Fermi/Newton inspected original and exports. Source preflight and finished pixels concur; assembled and live publication checks remain separate."
+    },
+    {
+      "key": "eternal-marriage-01",
+      "route": "answers/what-is-eternal-marriage.html",
+      "asset": "assets/page-art/first-topic-completion/eternal-marriage-01-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/eternal-marriage-01-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121?lang=eng&id=p41-p42#p41"
+      ],
+      "source_label": "Doctrine and Covenants 121:41–42",
+      "title": "Counsel without control",
+      "caption": "Shared decisions give each person room to speak and be heard. Gentleness, patience and sincere love can guide an ordinary conversation at home.",
+      "alt": "A married couple listen to each other while considering a shelf sketch and wood samples at their table.",
+      "christ": false,
+      "width": 1536,
+      "height": 1024,
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "why-families-are-important.html",
+      "study_label": "Study caring for families",
+      "placement_section": "talks",
+      "figure_id": "picture-eternal-marriage-01",
+      "continue_target": "picture-eternal-marriage-01-heading",
+      "source_sha256": "87c001600c92b61dd6087ac830d250c3f60328b6dcb8313796ab6ec6780db82a",
+      "sha256": "408f868335b4c87b437dbd8ec795588b259bf406eb9e8a09fce234ca0d7da83a",
+      "responsive_sha256": "941c8868535c1bb6dc188fea2b3a2e896e155184b4659a3827a168aac3cad6e4",
+      "review_notes": "Root and independent Fermi/Newton inspected original and exports. Source preflight and finished pixels concur; assembled and live publication checks remain separate."
+    },
+    {
+      "key": "eternal-marriage-02",
+      "route": "answers/what-is-eternal-marriage.html",
+      "asset": "assets/page-art/first-topic-completion/eternal-marriage-02-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/eternal-marriage-02-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/gal/6?lang=eng&id=p2#p2"
+      ],
+      "source_label": "Galatians 6:2",
+      "title": "Bear a burden together",
+      "caption": "Love takes shape in ordinary work shared willingly. Bearing one another’s burdens can begin with noticing a task and taking part.",
+      "alt": "An older couple work together at a drying rack, one steadying a rail while the other spreads a towel.",
+      "christ": false,
+      "width": 1536,
+      "height": 1024,
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "prayer-and-personal-revelation.html",
+      "study_label": "Study prayer and revelation",
+      "placement_section": "practice",
+      "figure_id": "picture-eternal-marriage-02",
+      "continue_target": "picture-eternal-marriage-02-heading",
+      "source_sha256": "50ad4ed5e9b5201632bac30390bfd0bac4183485e3784fe4cd10e6117c99997b",
+      "sha256": "8f415a585f8c7a6ff15b05d4a7a70b787e91a9fb79bd59b9fdc1b6fd1c462d94",
+      "responsive_sha256": "c85c8010612dba7539c64204f8c8c674a96beaaa2b5f27aca85843d480317b0b",
+      "review_notes": "Root and independent Fermi/Newton inspected original and exports. Source preflight and finished pixels concur; assembled and live publication checks remain separate."
+    },
+    {
+      "key": "christian-identity-01",
+      "route": "answers/are-latter-day-saints-christian.html",
+      "asset": "assets/page-art/first-topic-completion/christian-identity-01-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/christian-identity-01-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/13?lang=eng&id=p12-p15#p12"
+      ],
+      "source_label": "John 13:12-15",
+      "title": "After the basin, an invitation to serve",
+      "caption": "After washing His disciples' feet, Jesus sits with them again and asks them to follow His example of service.",
+      "alt": "Jesus seated beside a set-aside basin and towel, speaking to listening disciples.",
+      "christ": true,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "7ae05f447173f958b5cb4d07d01409f49df6bf3cdf3b60f80bba665e8ea65803",
+      "responsive_sha256": "7e85b71053f1079ddb9fa16c13fb0f943d99be0b0092be28bcfe11894607fd34",
+      "source_sha256": "ad206a147adef8ed94ca2694d30aae070779ffd9b8e865501de2fcb8c635ec13",
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "jesus-christ-latter-day-saint-beliefs.html",
+      "study_label": "Study belief in Jesus Christ",
+      "review_notes": "Exact original/full/responsive hashes bound to authentic independent Fermi/Newton positive pixel receipts. Root assembled, public and owner acceptance remain separate."
+    },
+    {
+      "key": "christian-identity-04",
+      "route": "answers/are-latter-day-saints-christian.html",
+      "asset": "assets/page-art/first-topic-completion/christian-identity-04-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/christian-identity-04-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng&id=p22-p30#p22"
+      ],
+      "source_label": "John 10:22-30",
+      "title": "In Solomon’s porch",
+      "caption": "In Solomon's porch, Jesus answers questions about His identity and speaks of His care for those who hear His voice.",
+      "alt": "Jesus answering a small group of listeners beneath a stone portico.",
+      "christ": true,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "0a5d3954d96ca258c2d9f599a19d7a857a9e25bc72d2f8cdaa7ba4ada4cb3707",
+      "responsive_sha256": "99ef81f3d06fdd10b53a0bc95ed1487567a42b3627fc108b85a48badf2a0e618",
+      "source_sha256": "81069cc8d8df5677927049b1d227ee1087b396dbc52f5482d6e5ed7f4670af2d",
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "jesus-christ-latter-day-saint-beliefs.html",
+      "study_label": "Study belief in Jesus Christ",
+      "review_notes": "Exact original/full/responsive hashes bound to authentic independent Fermi/Newton positive pixel receipts. Root assembled, public and owner acceptance remain separate."
+    },
+    {
+      "key": "trials-02",
+      "route": "answers/faith-in-jesus-christ-during-trials.html",
+      "asset": "assets/page-art/first-topic-completion/trials-02-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/trials-02-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/5?lang=eng&id=p5-p9#p5"
+      ],
+      "source_label": "John 5:5-9",
+      "title": "Wilt thou be made whole?",
+      "caption": "Jesus notices a man who has waited many years for help and asks whether he wants to be made whole. The man tells Him what has kept him waiting.",
+      "alt": "Jesus listening beside a man reclining on a mat near a pool.",
+      "christ": true,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "8100c2083fdce5e580ec6d5a67c611f70b8ba652b262bcd024e72f4207a6763d",
+      "responsive_sha256": "826810cbdcf098aa2d4042599f1a9d57c5f6f147270c346ca5810f1a65275b75",
+      "source_sha256": "17d4729ab01d45f5b69f6fc1bb5cba7e6fd6959f0d34c295bf0716f2db9c795f",
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "prayer-and-personal-revelation.html",
+      "study_label": "Continue with prayer",
+      "review_notes": "Exact original/full/responsive hashes bound to authentic independent Fermi/Newton positive pixel receipts. Root assembled, public and owner acceptance remain separate."
+    },
+    {
+      "key": "grief-03",
+      "route": "answers/grief-and-faith.html",
+      "asset": "assets/page-art/first-topic-completion/grief-03-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/grief-03-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/rom/12?lang=eng&id=p15#p15"
+      ],
+      "source_label": "Romans 12:15",
+      "title": "A moment of remembrance",
+      "caption": "One person steadies a picture frame while another repairs its backing. Patient company can give grief room to be spoken and remembered.",
+      "alt": "Two adults repairing the back of a picture frame together at a table.",
+      "christ": false,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "e1be215b58b01b391669f638268fc2de0f1252208a057c7140748e8b6bf6b74f",
+      "responsive_sha256": "856c16b04f400c40ad60921a9bd3632559b8661440210f0c2800fc3cca495c0e",
+      "source_sha256": "e8267ac1850b52a72ad17a31287ae18c69ea9ce4ef80170c17691408e251db9a",
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "what-happens-after-death.html",
+      "study_label": "Study hope beyond death",
+      "review_notes": "Exact original/full/responsive hashes bound to authentic independent Fermi/Newton positive pixel receipts. Root assembled, public and owner acceptance remain separate."
+    },
+    {
+      "key": "melchizedek-priesthood-01",
+      "route": "answers/melchizedek-priesthood-restoration.html",
+      "asset": "assets/page-art/first-topic-completion/melchizedek-priesthood-01-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/melchizedek-priesthood-01-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/10?lang=eng&id=p1-p3#p1"
+      ],
+      "source_label": "Luke 10:1-3",
+      "title": "Sent two and two",
+      "caption": "Jesus sends disciples ahead of Him in pairs. Their service begins with His direction and a shared journey.",
+      "alt": "Jesus speaking to two pairs of disciples before they depart along a path.",
+      "christ": true,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "6046834771d0dbf482109f90bab2c67d33681b2e809ba7b9384587f6c7b62b55",
+      "responsive_sha256": "dabfd19d2be50deca68491a6a1f3f562627207479dad869696aa4cea752b95bb",
+      "source_sha256": "3cb91b5f0553e03a91049700ae75dd573d2872684b2954d2f8d4a85be9257af3",
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "aaronic-priesthood-restoration.html",
+      "study_label": "Study the Aaronic Priesthood",
+      "review_notes": "Exact original/full/responsive hashes bound to authentic independent Fermi/Newton positive pixel receipts. Root assembled, public and owner acceptance remain separate."
+    },
+    {
+      "key": "trials-01",
+      "route": "answers/faith-in-jesus-christ-during-trials.html",
+      "asset": "assets/page-art/first-topic-completion/trials-01-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/trials-01-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/22?lang=eng&id=p41-p44#p41"
+      ],
+      "source_label": "Luke 22:41-44",
+      "title": "Strengthened in Gethsemane",
+      "caption": "In Gethsemane, an angel comes to strengthen Jesus as He prays. His suffering is met with heavenly help.",
+      "alt": "Jesus kneeling in prayer as an angel stands nearby in an olive grove.",
+      "christ": true,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "ef894281b52240cdabba8190d40180d81793006f19f4d4d1e068ec64070cb3ac",
+      "responsive_sha256": "16efe7fdf446428144b39bb8d7a16a45427989e4b637a917d9936b4d8576b709",
+      "source_sha256": "03f7d3c683f0054c4ad24732b39473b4e31e47c817d779529b0df98bf6152eb9",
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "prayer-and-personal-revelation.html",
+      "study_label": "Continue with prayer",
+      "review_notes": "Exact original/full/responsive hashes bound to authentic independent Fermi/Newton positive pixel receipts. Root assembled, public and owner acceptance remain separate."
+    },
+    {
+      "key": "christian-identity-02",
+      "route": "answers/are-latter-day-saints-christian.html",
+      "asset": "assets/page-art/first-topic-completion/christian-identity-02-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/christian-identity-02-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/4?lang=eng&id=p16-p21#p16"
+      ],
+      "source_label": "Luke 4:16-21",
+      "title": "This scripture is fulfilled",
+      "caption": "After reading Isaiah, Jesus sits and tells the synagogue that the scripture is fulfilled in their hearing. Every eye turns toward Him.",
+      "alt": "Jesus seated after reading as a minister holds the closed scroll nearby.",
+      "christ": true,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "0f09eb61083281cf44468da22955f895cfd70bb833c51407be17af93535307df",
+      "responsive_sha256": "0c581e050adc833c0e4776604538edead5326cea2a2017f36ec032590fc4ba85",
+      "source_sha256": "2313a0a0da224213bbea4493e8602be423ab03a5c09c10ed56f6218c683cb0f8",
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "jesus-christ-latter-day-saint-beliefs.html",
+      "study_label": "Study belief in Jesus Christ",
+      "review_notes": "Exact original/full/responsive hashes bound to authentic independent Fermi/Newton positive pixel receipts. Root assembled, public and owner acceptance remain separate."
+    },
+    {
+      "key": "christian-identity-03",
+      "route": "answers/are-latter-day-saints-christian.html",
+      "asset": "assets/page-art/first-topic-completion/christian-identity-03-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/christian-identity-03-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/24?lang=eng&id=p44-p48#p44"
+      ],
+      "source_label": "Luke 24:44-48",
+      "title": "He opens their understanding",
+      "caption": "After eating with His disciples, the risen Jesus helps them understand the scriptures. He connects what they have read with His suffering, Resurrection, and the witness they will carry.",
+      "alt": "The risen Jesus explaining scripture to disciples after a meal.",
+      "christ": true,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "c455770505669eed9b34052d93cb3473a709af8e04b8876f6800e8e4872044dd",
+      "responsive_sha256": "8eab7cf7b749126384fd2c428dd1fa9a41d391327d90588918383678e2e54207",
+      "source_sha256": "be26d36c972f082b9b3a169b1ce05d9f1929ddf6a75f7a6851ec91cc7f1fdbab",
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "jesus-christ-latter-day-saint-beliefs.html",
+      "study_label": "Study belief in Jesus Christ",
+      "review_notes": "Exact original/full/responsive hashes bound to authentic independent Fermi/Newton positive pixel receipts. Root assembled, public and owner acceptance remain separate."
+    },
+    {
+      "key": "trials-03",
+      "route": "answers/faith-in-jesus-christ-during-trials.html",
+      "asset": "assets/page-art/first-topic-completion/trials-03-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/trials-03-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/4?lang=eng&id=p35-p41#p35"
+      ],
+      "source_label": "Mark 4:35-41",
+      "title": "Asleep in the storm",
+      "caption": "Jesus sleeps in the stern while wind and waves trouble the boat. The disciples wake Him, and He speaks peace to the storm.",
+      "alt": "Jesus asleep on a cushion in the stern of a boat as waves rise nearby.",
+      "christ": true,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "fdb9f6b9fd41ce321ea2ece17a176018b1047708955abbf90ae1998265019bdd",
+      "responsive_sha256": "5d61ed9119bee15ef0775aadeb6f472b36448029f0c347923a2737cdfc8be87b",
+      "source_sha256": "9765803cdb438a2eea7f004bb90e5efe9aa9c389b9cc84796a7b6dcd7b17927b",
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "prayer-and-personal-revelation.html",
+      "study_label": "Continue with prayer",
+      "review_notes": "Exact original/full/responsive hashes bound to authentic independent Fermi/Newton positive pixel receipts. Root assembled, public and owner acceptance remain separate."
+    },
+    {
+      "key": "death-of-a-child-01",
+      "route": "answers/death-of-a-child.html",
+      "asset": "assets/page-art/first-topic-completion/death-of-a-child-01-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/death-of-a-child-01-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng&id=p13-p16#p13"
+      ],
+      "source_label": "Mark 10:13-16",
+      "title": "Let the children come",
+      "caption": "Jesus calls His disciples to let the children come to Him. He receives them as people whose place in His kingdom matters.",
+      "alt": "Jesus welcoming approaching children as adults step aside.",
+      "christ": true,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "1b654d129a3f7bda61c906f86dc0201cdaf8cae37272712819f47b231d2c9417",
+      "responsive_sha256": "05e336d959c8e8e62c0af5f8c6848b9c01970c716272041360ffd3eaa8cf340d",
+      "source_sha256": "037fcdf0f3af91a2144e127bea820f8e5492f115d6d4fef698e0ddd74e49fa7e",
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "what-happens-after-death.html",
+      "study_label": "Study hope beyond death",
+      "review_notes": "Exact original/full/responsive hashes bound to authentic independent Fermi/Newton positive pixel receipts. Root assembled, public and owner acceptance remain separate."
+    },
+    {
+      "key": "grief-01",
+      "route": "answers/grief-and-faith.html",
+      "asset": "assets/page-art/first-topic-completion/grief-01-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/grief-01-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/22?lang=eng&id=p39-p46#p39"
+      ],
+      "source_label": "Luke 22:39-46",
+      "title": "Asleep with sorrow",
+      "caption": "When Jesus rises from prayer, He finds His disciples asleep with sorrow. He calls them to rise and pray.",
+      "alt": "Jesus returning from prayer and pausing near sleeping disciples beneath olive trees.",
+      "christ": true,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "50e93b477bfb56d41466c8ce047785e7fb7e444be7ebb0c0288aef970736fe18",
+      "responsive_sha256": "c72ba06ba50c20f56b89fe1c6b3ad10b5fc35832b96377454b5346a42a150534",
+      "source_sha256": "d7e2614302f099a35912ceb0a61f790d16af3d28f75d416c8e66c06a974240f1",
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "what-happens-after-death.html",
+      "study_label": "Study hope beyond death",
+      "review_notes": "Exact original/full/responsive hashes bound to authentic independent Fermi/Newton positive pixel receipts. Root assembled, public and owner acceptance remain separate."
+    },
+    {
+      "key": "grief-02",
+      "route": "answers/grief-and-faith.html",
+      "asset": "assets/page-art/first-topic-completion/grief-02-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/grief-02-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/6?lang=eng&id=p30-p32#p30"
+      ],
+      "source_label": "Mark 6:30-32",
+      "title": "Come and rest a while",
+      "caption": "When the disciples return from their work, Jesus invites them to come away and rest. Care can include a quiet place and time to recover.",
+      "alt": "Jesus inviting weary disciples toward a boat on a quiet shore.",
+      "christ": true,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "7a0668d96be751a529f35fca0fb626b8091d1d73c079c450276f31cbd9da69c1",
+      "responsive_sha256": "25e59b479bcbb03938a5570586fe6166a2975880b1d48f7e7be528bebe14c50d",
+      "source_sha256": "3bab0e4f8ac2e865378414eb1c70f3070227cd85cc11e4f6256e6660ec1d523c",
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "what-happens-after-death.html",
+      "study_label": "Study hope beyond death",
+      "review_notes": "Exact original/full/responsive hashes bound to authentic independent Fermi/Newton positive pixel receipts. Root assembled, public and owner acceptance remain separate."
+    },
+    {
+      "key": "divorce-and-faith-01",
+      "route": "answers/divorce-and-faith.html",
+      "asset": "assets/page-art/first-topic-completion/divorce-and-faith-01-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/divorce-and-faith-01-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/4?lang=eng&id=p7-p15#p7"
+      ],
+      "source_label": "John 4:7-15",
+      "title": "A conversation at the well",
+      "caption": "Jesus asks a Samaritan woman for a drink and listens to her questions. Their conversation opens toward the living water He offers.",
+      "alt": "Jesus seated by a well listening as a woman holds her water jar.",
+      "christ": true,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "357ff280e909245b438e77dcea9a2dde7f99e118ec8fcbd04f6ec58884335d2d",
+      "responsive_sha256": "191e7b7ee7a9e070f047d166a28946c7fa6f333b94925f0386b8a96ab214f539",
+      "source_sha256": "d8588e3f266f52be3a9e01c778be66c055891d7c5778776584911c4a73271cf1",
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "prayer-and-personal-revelation.html",
+      "study_label": "Continue with prayer",
+      "review_notes": "Exact original/full/responsive hashes bound to authentic independent Fermi/Newton positive pixel receipts. Root assembled, public and owner acceptance remain separate."
+    },
+    {
+      "key": "divorce-and-faith-03",
+      "route": "answers/divorce-and-faith.html",
+      "asset": "assets/page-art/first-topic-completion/divorce-and-faith-03-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/divorce-and-faith-03-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/2?lang=eng&id=p15-p17#p15"
+      ],
+      "source_label": "Mark 2:15-17",
+      "title": "A seat at the table",
+      "caption": "Jesus shares a meal with people whom others have kept at a distance. He answers the criticism with a call to healing and repentance.",
+      "alt": "Jesus sharing a simple meal with several attentive dinner companions.",
+      "christ": true,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "a7c447aa003e4db1814f4443a885298a366ebe21af0958efec1d0730b54aa491",
+      "responsive_sha256": "b5c4985b1bc5fbecf3e93939214706db57541d92b776d915659ee4ca2a747d77",
+      "source_sha256": "622d1fb42435fb9c6f6b26ad24cd57efbdb574f1660bf4a74eb044986b82e07d",
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "prayer-and-personal-revelation.html",
+      "study_label": "Continue with prayer",
+      "review_notes": "Exact original/full/responsive hashes bound to authentic independent Fermi/Newton positive pixel receipts. Root assembled, public and owner acceptance remain separate."
+    },
+    {
+      "key": "divorce-and-faith-04",
+      "route": "answers/divorce-and-faith.html",
+      "asset": "assets/page-art/first-topic-completion/divorce-and-faith-04-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/divorce-and-faith-04-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/13?lang=eng&id=p10-p17#p10"
+      ],
+      "source_label": "Luke 13:10-17",
+      "title": "He calls her forward",
+      "caption": "Jesus sees a woman who has lived for years with infirmity and calls her to Him. He speaks to her with care before healing her.",
+      "alt": "Jesus calling a bowed woman forward in a synagogue.",
+      "christ": true,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "1148e3c3ac95caaf4ba4de0a457b9d23362f1ae0891057576627cd824d0d3636",
+      "responsive_sha256": "34cce617e5f77b18e7585cc6ff688a71364a8489d85e1fcf5bfb5204254a77e3",
+      "source_sha256": "5f788d97d923afae7b7f6cf8ec6aa3e41744d099afcf73ea303e0ae95d4f863d",
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "prayer-and-personal-revelation.html",
+      "study_label": "Continue with prayer",
+      "review_notes": "Exact original/full/responsive hashes bound to authentic independent Fermi/Newton positive pixel receipts. Root assembled, public and owner acceptance remain separate."
+    },
+    {
+      "key": "divorce-and-faith-05",
+      "route": "answers/divorce-and-faith.html",
+      "asset": "assets/page-art/first-topic-completion/divorce-and-faith-05-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/divorce-and-faith-05-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/12?lang=eng&id=p41-p44#p41"
+      ],
+      "source_label": "Mark 12:41-44",
+      "title": "He asks them to notice",
+      "caption": "Jesus calls His disciples close and speaks about a widow's small offering. He sees a gift that could easily pass unnoticed.",
+      "alt": "Jesus calling disciples closer near the temple treasury.",
+      "christ": true,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "91071a10bf5eb7d95cc06c5ca12210e16ea985e445d5eab06ed3fea4bc0da45b",
+      "responsive_sha256": "dcd517b180289b728fb3a3748120c10c8f8e55aea9ba6cfc8aaa9ac15cf7c663",
+      "source_sha256": "250710a28f3f65cffc78205101acaa63a53896ce9976c0dcbb05f7c5d329354a",
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "prayer-and-personal-revelation.html",
+      "study_label": "Continue with prayer",
+      "review_notes": "Exact original/full/responsive hashes bound to authentic independent Fermi/Newton positive pixel receipts. Root assembled, public and owner acceptance remain separate."
+    },
+    {
+      "key": "divorce-and-faith-07",
+      "route": "answers/divorce-and-faith.html",
+      "asset": "assets/page-art/first-topic-completion/divorce-and-faith-07-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/divorce-and-faith-07-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/1?lang=eng&id=p35-p39#p35"
+      ],
+      "source_label": "Mark 1:35-39",
+      "title": "Continue the journey",
+      "caption": "Jesus tells His companions that they will go on to the neighboring towns. His ministry carries hope beyond the place where they have just been.",
+      "alt": "Jesus leading companions along a path toward another town in morning light.",
+      "christ": true,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "8c8a0e9573cfb0d967b4b115e0169305caa592ae5bb9b3b061cef4574f110338",
+      "responsive_sha256": "6c0d542c89e598b580b3aa529d9d070226a65a923cb2dfea2ce07320d64b993a",
+      "source_sha256": "f45a7d7a142ddf1d0d0b674cb050a424e83c089894396dab0085187c4fe17786",
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "prayer-and-personal-revelation.html",
+      "study_label": "Continue with prayer",
+      "review_notes": "Exact original/full/responsive hashes bound to authentic independent Fermi/Newton positive pixel receipts. Root assembled, public and owner acceptance remain separate."
+    },
+    {
+      "key": "death-of-a-child-03",
+      "route": "answers/death-of-a-child.html",
+      "asset": "assets/page-art/first-topic-completion/death-of-a-child-03-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/death-of-a-child-03-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/7?lang=eng&id=p13-p15#p13"
+      ],
+      "source_label": "Luke 7:13-15",
+      "title": "He stops beside the bier",
+      "caption": "At Nain, Jesus touches the bier and the bearers stand still. He speaks to the young man, and the funeral procession becomes the setting for a miracle.",
+      "alt": "Jesus touching the wooden bier as its bearers stop, before the young man rises.",
+      "christ": true,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "f9c58d17939e98d8a0c27231104c45c88b6228fe14248809c8dfbf2bbd8fa17d",
+      "responsive_sha256": "0bbf87e63b904c39bf48b8c3ba85146c7809c6dc483c91806363929e23fd7a2b",
+      "source_sha256": "274c2261121323cf0454b676bbda378937208f89375f5d9d32ae1426b8d14f48",
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "what-happens-after-death.html",
+      "study_label": "Study hope beyond death",
+      "review_notes": "Exact original/full/responsive hashes bound to authentic independent Fermi/Newton positive pixel receipts. Root assembled, public and owner acceptance remain separate."
+    },
+    {
+      "key": "restored-church-01",
+      "route": "answers/restored-church-of-jesus-christ.html",
+      "asset": "assets/page-art/first-topic-completion/restored-church-01-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/restored-church-01-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/6?lang=eng&id=p12-p16#p12"
+      ],
+      "source_label": "Luke 6:12-16",
+      "title": "Called after a night of prayer",
+      "caption": "After spending the night in prayer, Jesus calls His disciples and chooses the Twelve. Their service begins with His invitation.",
+      "alt": "Jesus calling disciples toward Him on a hillside in morning light.",
+      "christ": true,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "95791de18fbd93fe2700cdd51cd0ac981ad857ac926de90d6414cf63f7507056",
+      "responsive_sha256": "8dda327736fe4748b42df83d1b04f2a45a7260d717fdedced7cd533b5b5d8689",
+      "source_sha256": "e6f100ac5afd3c46be2e0b58c5958987959dd9d38a190701b6b962e1523a9717",
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "bible-and-book-of-mormon-together.html",
+      "study_label": "Study the scriptures together",
+      "review_notes": "Exact original/full/responsive hashes bound to authentic independent Fermi/Newton positive pixel receipts. Root assembled, public and owner acceptance remain separate."
+    },
+    {
+      "key": "restored-church-02",
+      "route": "answers/restored-church-of-jesus-christ.html",
+      "asset": "assets/page-art/first-topic-completion/restored-church-02-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/restored-church-02-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/4?lang=eng&id=p28-p30#p28"
+      ],
+      "source_label": "Luke 4:28-30",
+      "title": "He goes His way",
+      "caption": "When people in Nazareth turn against Him, Jesus passes through their midst and goes on His way. Opposition does not bring His ministry to an end.",
+      "alt": "Jesus walking through a divided gathering on a rocky path outside Nazareth.",
+      "christ": true,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "090a3a5f7b11d4d5008e2cff47ae392dd56c23ba2c5a6a06326adfb966aa8343",
+      "responsive_sha256": "a3198559f1b81cf783ea9836081d91aa0537058cdb3e79f2784e5c40521b48d0",
+      "source_sha256": "5669c131dbec2eb63d7cb8cb1bc53c9aab2f9396e0f0a0c8390e8d318463f6ca",
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "bible-and-book-of-mormon-together.html",
+      "study_label": "Study the scriptures together",
+      "review_notes": "Exact original/full/responsive hashes bound to authentic independent Fermi/Newton positive pixel receipts. Root assembled, public and owner acceptance remain separate."
+    },
+    {
+      "key": "restored-church-04",
+      "route": "answers/restored-church-of-jesus-christ.html",
+      "asset": "assets/page-art/first-topic-completion/restored-church-04-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/restored-church-04-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/18?lang=eng&id=p1-p11#p1"
+      ],
+      "source_label": "3 Nephi 18:1-11",
+      "title": "Remember Him together",
+      "caption": "A congregation receives the sacrament together. The quiet passing of the bread gives each person a moment to remember Jesus Christ.",
+      "alt": "Adults quietly receiving sacrament bread in a chapel pew.",
+      "christ": false,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "324bc6b3c6c2a44fc3b6e19bfc29c86b05fb9d2ec43b0082b790dd1808681bf4",
+      "responsive_sha256": "e89350e6fa5d93115a8e30a23fb1a52cdd4555b3b2bdf9ace39f1ef2d6d4e083",
+      "source_sha256": "ebf81c6ae11212d9af6940854d785c34c8c01fc20cfe4e7805f7384cdf9a725c",
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "bible-and-book-of-mormon-together.html",
+      "study_label": "Study the scriptures together",
+      "review_notes": "Exact original/full/responsive hashes bound to authentic independent Fermi/Newton positive pixel receipts. Root assembled, public and owner acceptance remain separate."
+    },
+    {
+      "key": "melchizedek-priesthood-04",
+      "route": "answers/melchizedek-priesthood-restoration.html",
+      "asset": "assets/page-art/first-topic-completion/melchizedek-priesthood-04-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/melchizedek-priesthood-04-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/7?lang=eng&id=p37-p39#p37"
+      ],
+      "source_label": "John 7:37-39",
+      "title": "Come to Him and drink",
+      "caption": "On the feast's last day, Jesus stands and calls the thirsty to come to Him. John connects His promise with the gift of the Spirit.",
+      "alt": "Jesus calling to listeners in a temple courtyard during a feast.",
+      "christ": true,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "b02e53880b42bd732f6af15c7e5d050f1339d522b90bbbeab8568491b1b1ccd1",
+      "responsive_sha256": "958b55529010765d12ce3a9c8149ef42d7c3ca644c8bb21fb5c18126b0fd294b",
+      "source_sha256": "aa269be2acc873add60ac7922072e12ff738af1e15a2932ca36bd79650d32bac",
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "aaronic-priesthood-restoration.html",
+      "study_label": "Study the Aaronic Priesthood",
+      "review_notes": "Exact original/full/responsive hashes bound to authentic independent Fermi/Newton positive pixel receipts. Root assembled, public and owner acceptance remain separate."
+    },
+    {
+      "key": "melchizedek-priesthood-05",
+      "route": "answers/melchizedek-priesthood-restoration.html",
+      "asset": "assets/page-art/first-topic-completion/melchizedek-priesthood-05-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/melchizedek-priesthood-05-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/17?lang=eng&id=p20-p23#p20"
+      ],
+      "source_label": "John 17:20-23",
+      "title": "That they may be one",
+      "caption": "Jesus prays for those who will believe through His disciples' words. His prayer reaches toward a unity grounded in the Father and the Son.",
+      "alt": "Jesus praying as disciples listen quietly nearby.",
+      "christ": true,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "96a4ad46cd1b6bb3059fdc1a8d8a9c795f1e8de30de3d94046163b0f2976d6cb",
+      "responsive_sha256": "72a339b1a0a4522b886727182c5a114f7dc79f2481955a9998e24893f9b58a88",
+      "source_sha256": "31313623b392cb64bd51412589b5ea1b9c8992d3c716c42f2f6c76fd6407ae58",
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "aaronic-priesthood-restoration.html",
+      "study_label": "Study the Aaronic Priesthood",
+      "review_notes": "Exact original/full/responsive hashes bound to authentic independent Fermi/Newton positive pixel receipts. Root assembled, public and owner acceptance remain separate."
+    },
+    {
+      "key": "melchizedek-priesthood-06",
+      "route": "answers/melchizedek-priesthood-restoration.html",
+      "asset": "assets/page-art/first-topic-completion/melchizedek-priesthood-06-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/melchizedek-priesthood-06-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/18?lang=eng&id=p22-p25#p22"
+      ],
+      "source_label": "3 Nephi 18:22-25",
+      "title": "Welcome those who come",
+      "caption": "Jesus teaches the people to welcome those who come among them and to pray for them. His ministry teaches people to welcome one another.",
+      "alt": "The risen Jesus speaking as a gathered group leaves space for arriving listeners.",
+      "christ": true,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "915a4237f34c020de67720ec5fadc5117d6b021d3fc4ad058861c77dd198b636",
+      "responsive_sha256": "c0d4ce4bc208058a11eea1ab172caa6a72eb1116f160b7b443452adff5962c7d",
+      "source_sha256": "6cb5c4af5764f01b2f12992595c96ebd6b6fb19259859747eb999af5eee3e0f6",
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "aaronic-priesthood-restoration.html",
+      "study_label": "Study the Aaronic Priesthood",
+      "review_notes": "Exact original/full/responsive hashes bound to authentic independent Fermi/Newton positive pixel receipts. Root assembled, public and owner acceptance remain separate."
+    },
+    {
+      "key": "aaronic-priesthood-01",
+      "route": "answers/aaronic-priesthood-restoration.html",
+      "asset": "assets/page-art/first-topic-completion/aaronic-priesthood-01-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/aaronic-priesthood-01-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/2?lang=eng&id=p6-p9#p6"
+      ],
+      "source_label": "John 2:6-9",
+      "title": "Draw out now",
+      "caption": "After the waterpots are filled, Jesus asks the servants to draw out and carry it to the ruler of the feast. They act on His instruction.",
+      "alt": "Jesus speaking as a servant carries a small vessel away from filled stone waterpots.",
+      "christ": true,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "2daed34f7e0795ead889365b1dfe565a11cb4ff30e55c87ce100c70e760e4ae5",
+      "responsive_sha256": "8a13acea97f9e9cd188ddac92cdf3ee88c901b36d8a92da02902ca54c381daba",
+      "source_sha256": "985ec969d237c75cccf60ba835cbfe157ca92ddb58518716980891642605c561",
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "melchizedek-priesthood-restoration.html",
+      "study_label": "Study the Melchizedek Priesthood",
+      "review_notes": "Exact original/full/responsive hashes bound to authentic independent Fermi/Newton positive pixel receipts. Root assembled, public and owner acceptance remain separate."
+    },
+    {
+      "key": "aaronic-priesthood-02",
+      "route": "answers/aaronic-priesthood-restoration.html",
+      "asset": "assets/page-art/first-topic-completion/aaronic-priesthood-02-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/aaronic-priesthood-02-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/14?lang=eng&id=p20-p23#p20"
+      ],
+      "source_label": "Matthew 14:20-23",
+      "title": "He sends the people on their way",
+      "caption": "After feeding the multitude, Jesus sends the disciples ahead and dismisses the people. His care continues as the gathering ends.",
+      "alt": "Jesus bidding farewell to a crowd departing from a grassy shore.",
+      "christ": true,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "9f29737968e08f328daff2345c9e8e9cdee370628ab0567b2bcd2af6b6cd7ec6",
+      "responsive_sha256": "3bc6632164aef68668761186824c91646a53c30df2ef83275f420c239dbe065e",
+      "source_sha256": "9bca859fda85235e6893488d4fdeaaa99a21b4ceddf679d46bfb5f056ac8c35c",
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "melchizedek-priesthood-restoration.html",
+      "study_label": "Study the Melchizedek Priesthood",
+      "review_notes": "Exact original/full/responsive hashes bound to authentic independent Fermi/Newton positive pixel receipts. Root assembled, public and owner acceptance remain separate."
+    },
+    {
+      "key": "aaronic-priesthood-03",
+      "route": "answers/aaronic-priesthood-restoration.html",
+      "asset": "assets/page-art/first-topic-completion/aaronic-priesthood-03-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/aaronic-priesthood-03-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/22?lang=eng&id=p14-p18#p14"
+      ],
+      "source_label": "Luke 22:14-18",
+      "title": "He takes the cup and gives thanks",
+      "caption": "At the supper, Jesus takes a cup and gives thanks. He asks His disciples to divide it among themselves and speaks of the kingdom of God.",
+      "alt": "Jesus holding a cup at the supper as His disciples listen.",
+      "christ": true,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "7e0884cd39e3d572d8f6c75aade9b5d92b410348aa03eba34d0f4b6644d18824",
+      "responsive_sha256": "ea67a54e599edb03370e634cfba157243aaf0570f1a96d7fc3f0ca3a6667942d",
+      "source_sha256": "c7dd4ab8d40b1b746ee87be51e2357638da947ece27511eee74a65054eb2f24e",
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "melchizedek-priesthood-restoration.html",
+      "study_label": "Study the Melchizedek Priesthood",
+      "review_notes": "Exact original/full/responsive hashes bound to authentic independent Fermi/Newton positive pixel receipts. Root assembled, public and owner acceptance remain separate."
+    },
+    {
+      "key": "aaronic-priesthood-04",
+      "route": "answers/aaronic-priesthood-restoration.html",
+      "asset": "assets/page-art/first-topic-completion/aaronic-priesthood-04-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/aaronic-priesthood-04-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/14?lang=eng&id=p15-p19#p15"
+      ],
+      "source_label": "Matthew 14:15-19",
+      "title": "He gives to the disciples",
+      "caption": "Jesus blesses and breaks the loaves, then gives them to His disciples to carry to the people. Their hands become part of His generous work.",
+      "alt": "Jesus placing bread into a basket held by a disciple while people sit on the grass.",
+      "christ": true,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "512cce2a6d954adadb52f55c3614020d3f6acb35eafb11adb2574e6eb9aa79c1",
+      "responsive_sha256": "61db579fe4252d33089252d05cada8e2aa72833d8a741724374c6bf93c6d899a",
+      "source_sha256": "8f080265be3c4a4b7d154e9241e378abf627506f853e977145299247012f0f35",
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "melchizedek-priesthood-restoration.html",
+      "study_label": "Study the Melchizedek Priesthood",
+      "review_notes": "Exact original/full/responsive hashes bound to authentic independent Fermi/Newton positive pixel receipts. Root assembled, public and owner acceptance remain separate."
+    },
+    {
+      "key": "aaronic-priesthood-06",
+      "route": "answers/aaronic-priesthood-restoration.html",
+      "asset": "assets/page-art/first-topic-completion/aaronic-priesthood-06-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/aaronic-priesthood-06-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/1?lang=eng&id=p35-p39#p35"
+      ],
+      "source_label": "Mark 1:35-39",
+      "title": "Before the day begins",
+      "caption": "Jesus rises before daylight and goes to a solitary place to pray. His work among the people is rooted in communion with the Father.",
+      "alt": "Jesus praying alone in a quiet place before sunrise.",
+      "christ": true,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "ed62d448192aa9344e17954224cbd997e931c91020aca09dcb4b12243c6ddf94",
+      "responsive_sha256": "3ba6de64a8b6968368db5518894a69ab126c1666d38baec22893ed816655f426",
+      "source_sha256": "99a651862c4b4484e3195858960c995be577afb6c95dea1fed37a3bee3b43661",
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "melchizedek-priesthood-restoration.html",
+      "study_label": "Study the Melchizedek Priesthood",
+      "review_notes": "Exact original/full/responsive hashes bound to authentic independent Fermi/Newton positive pixel receipts. Root assembled, public and owner acceptance remain separate."
+    },
+    {
+      "key": "divorce-and-faith-02",
+      "route": "answers/divorce-and-faith.html",
+      "asset": "assets/page-art/first-topic-completion/divorce-and-faith-02-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/divorce-and-faith-02-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/9?lang=eng&id=p27-p30#p27"
+      ],
+      "source_label": "Matthew 9:27-30",
+      "title": "Bring the need to Him",
+      "caption": "Two blind men follow Jesus into a house. He listens and asks whether they believe He can help them.",
+      "alt": "Jesus listening to two men who have followed Him into a house.",
+      "christ": true,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "21f28b6900ecba6d18526a1e29b25d4a9de4f86340d4f46fe268ac91e818f216",
+      "responsive_sha256": "97545bf0013ef807977201fd3aeff54d3afe0efc60157864787dabae174d6411",
+      "source_sha256": "b8190c5c40089af0c6e74d5d8d62b596eb2864e3e5b111c3d055c525a31bde86",
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "prayer-and-personal-revelation.html",
+      "study_label": "Continue with prayer",
+      "review_notes": "Exact original/full/responsive hashes bound to authentic independent Fermi/Newton positive pixel receipts. Root assembled, public and owner acceptance remain separate."
+    },
+    {
+      "key": "divorce-and-faith-06",
+      "route": "answers/divorce-and-faith.html",
+      "asset": "assets/page-art/first-topic-completion/divorce-and-faith-06-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/divorce-and-faith-06-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/5?lang=eng&id=p18-p20#p18"
+      ],
+      "source_label": "Mark 5:18-20",
+      "title": "Go home to your friends",
+      "caption": "The man asks to stay with Jesus, and Jesus sends him home to tell how the Lord has shown him compassion. A restored life can become a gift to others.",
+      "alt": "Jesus standing in a boat and speaking with a calmly seated man on the shore.",
+      "christ": true,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "2d7d090df4e4260d8dd30006ac538fe19f1d62b3735f458c9c9886eb78c10c71",
+      "responsive_sha256": "4acad3b49ac7a0fdd7940d73b11b0078bc5a0df327780054fe1aaef17243eb54",
+      "source_sha256": "c14cad479ad45ec2bdb2e8dcd595f934c8903188497208d0ddd6592c4d542ef4",
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "prayer-and-personal-revelation.html",
+      "study_label": "Continue with prayer",
+      "review_notes": "Exact original/full/responsive hashes bound to authentic independent Fermi/Newton positive pixel receipts. Root assembled, public and owner acceptance remain separate."
+    },
+    {
+      "key": "death-of-a-child-02",
+      "route": "answers/death-of-a-child.html",
+      "asset": "assets/page-art/first-topic-completion/death-of-a-child-02-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/death-of-a-child-02-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng&id=p21-p24#p21"
+      ],
+      "source_label": "3 Nephi 17:21-24",
+      "title": "He weeps with love",
+      "caption": "After blessing the children, Jesus weeps again and turns the people's attention toward their little ones. His tenderness is part of the story.",
+      "alt": "The risen Jesus with tears in His eyes and children gathered nearby.",
+      "christ": true,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "2d05351b2f17c1bd0b38bada78e1d5f1cef5d6a0e85736ee17b40737486c0bce",
+      "responsive_sha256": "2e165d6c745c921d9e5fbd777e474de2290c1b7238f7190ec164a732f5e7d032",
+      "source_sha256": "b3911247fefa6db43b62b77f3ac5ee86c0327780685127cc4cc6d1f070f2fffd",
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "what-happens-after-death.html",
+      "study_label": "Study hope beyond death",
+      "review_notes": "Exact original/full/responsive hashes bound to authentic independent Fermi/Newton positive pixel receipts. Root assembled, public and owner acceptance remain separate."
+    },
+    {
+      "key": "restored-church-03",
+      "route": "answers/restored-church-of-jesus-christ.html",
+      "asset": "assets/page-art/first-topic-completion/restored-church-03-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/restored-church-03-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/28?lang=eng&id=p16-p20#p16"
+      ],
+      "source_label": "Matthew 28:16-20",
+      "title": "Go and teach all nations",
+      "caption": "On a mountain in Galilee, the risen Jesus sends His disciples to teach and baptize. He promises to be with them.",
+      "alt": "The risen Jesus commissioning disciples on a Galilean mountain.",
+      "christ": true,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "0a81b716f52e005843f15f04d5577765351fff07ad2f2b80b86d86adf3c25366",
+      "responsive_sha256": "aef8f4002dc84e3b606d3a960c147230a3554aa2679d7e1f6ed2d4bff0f45934",
+      "source_sha256": "ea878b8d97541cf4e17d0ab680faa193593b81b3ba58167ca5a135ea0973103f",
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "bible-and-book-of-mormon-together.html",
+      "study_label": "Study the scriptures together",
+      "review_notes": "Exact original/full/responsive hashes bound to authentic independent Fermi/Newton positive pixel receipts. Root assembled, public and owner acceptance remain separate."
+    },
+    {
+      "key": "melchizedek-priesthood-03",
+      "route": "answers/melchizedek-priesthood-restoration.html",
+      "asset": "assets/page-art/first-topic-completion/melchizedek-priesthood-03-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/melchizedek-priesthood-03-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/24?lang=eng&id=p50-p53#p50"
+      ],
+      "source_label": "Luke 24:50-53",
+      "title": "He lifts His hands to bless",
+      "caption": "Near Bethany, Jesus lifts His hands and blesses His disciples. His departure leaves them worshipping and rejoicing.",
+      "alt": "The risen Jesus lifting His hands to bless disciples near Bethany.",
+      "christ": true,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "dc80bec07532c2f9c17546e1af52988bd8621c7a1c8deead0009ba91897b596c",
+      "responsive_sha256": "43c05c60d7d54b6161c53f4b305935003f0a0d8a114e7ebba2ea136545a84858",
+      "source_sha256": "5eb9b48491daf1f518c7a2b41e5a24b8f95d2810d678f2556aa04f58e2ebdf48",
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "aaronic-priesthood-restoration.html",
+      "study_label": "Study the Aaronic Priesthood",
+      "review_notes": "Exact original/full/responsive hashes bound to authentic independent Fermi/Newton positive pixel receipts. Root assembled, public and owner acceptance remain separate."
+    },
+    {
+      "key": "aaronic-priesthood-05",
+      "route": "answers/aaronic-priesthood-restoration.html",
+      "asset": "assets/page-art/first-topic-completion/aaronic-priesthood-05-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/aaronic-priesthood-05-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/27?lang=eng&id=p21-p27#p21"
+      ],
+      "source_label": "3 Nephi 27:21-27",
+      "title": "Even as He is",
+      "caption": "Jesus asks His disciples to follow the works they have seen Him do. The measure of their service is His own example.",
+      "alt": "The risen Jesus speaking earnestly with disciples seated nearby.",
+      "christ": true,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "35e487848f10736f68ab837a41cdcbad78a7413d2f8294fd993c2b0b5791b392",
+      "responsive_sha256": "fdc8650fc5a6983840dc0c674754d366d87f41f4a44c2a0b92358062735d8399",
+      "source_sha256": "c7cb2aff00546042c2da71c63b4c9db41a7623ca4623cd8558b87480de9e97c5",
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "melchizedek-priesthood-restoration.html",
+      "study_label": "Study the Melchizedek Priesthood",
+      "review_notes": "Exact original/full/responsive hashes bound to authentic independent Fermi/Newton positive pixel receipts. Root assembled, public and owner acceptance remain separate."
+    },
+    {
+      "key": "melchizedek-priesthood-02",
+      "route": "answers/melchizedek-priesthood-restoration.html",
+      "asset": "assets/page-art/first-topic-completion/melchizedek-priesthood-02-full.webp",
+      "responsive": "assets/page-art/first-topic-completion/melchizedek-priesthood-02-960.webp",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/17?lang=eng&id=p11-p14#p11"
+      ],
+      "source_label": "Luke 17:11-14",
+      "title": "Go and show yourselves",
+      "caption": "Ten men call to Jesus from a distance. He sees them and sends them to show themselves to the priests, and they are cleansed as they go.",
+      "alt": "Jesus answering men who stand at a distance outside a village.",
+      "christ": true,
+      "width": 1536,
+      "height": 1024,
+      "sha256": "518ecad0dcd675a1977e4761daaade96e2a1b69d3ae3d6ddd69b9d81650a3c32",
+      "responsive_sha256": "ffad089d3cd9934e4d050b1c097d084e39f21ceaee1c2f1b8ebe436fbed5b4ff",
+      "source_sha256": "298f2c872fc17579255ddcf2f775dfd70e86974953761e2d4eeaa4adcfb93896",
+      "reviewed": true,
+      "owner_approved": false,
+      "study": "aaronic-priesthood-restoration.html",
+      "study_label": "Study the Aaronic Priesthood",
+      "review_notes": "Exact original/full/responsive hashes bound to authentic independent Fermi/Newton positive pixel receipts. Root assembled, public and owner acceptance remain separate."
     }
   ],
   "review_receipts": {
@@ -279,6 +1278,46 @@
       {
         "path": "docs/first-topic-completion/reviews/fermi/ten-integrated-verification.json",
         "sha256": "eaa2b3c553f7a4ca1ec06177596446dcdbec066e306d0c58fe98a3db52c57f25"
+      },
+      {
+        "path": "docs/first-topic-completion/reviews/fermi/look-marriage-five-export-review.json",
+        "sha256": "7d9e234ff2263b20c37692d60bb138326e4e402217197aa44c5151b5ec7d3eb0"
+      },
+      {
+        "path": "docs/first-topic-completion/reviews/fermi/remaining-first-six-v3-first-batch-five-export-review.json",
+        "sha256": "a5d28ac20c7e0e07597ff7da2a572e27924cbc44bdfadc5ab44f620e931399ec"
+      },
+      {
+        "path": "docs/first-topic-completion/reviews/fermi/remaining-first-six-v3-trials01-v2-export-review.json",
+        "sha256": "2498a0091fefb18aec1db682721676a1ba41018d8c75467fd13c8e6d27ae1d28"
+      },
+      {
+        "path": "docs/first-topic-completion/reviews/fermi/batch2-batch3-child03-twelve-v1-batch2-six-export-review.json",
+        "sha256": "b2018f91559e398ee03aeccfe5a9995c65311a3daa50822947c44f2e7e604dff"
+      },
+      {
+        "path": "docs/first-topic-completion/reviews/fermi/batch2-batch3-child03-twelve-v1-batch3-five-export-review.json",
+        "sha256": "9a77834a1ff400ce8b0ada8aff65e46db56c07afc2aa2a31c8ffbaf543d4d6d6"
+      },
+      {
+        "path": "docs/first-topic-completion/reviews/fermi/batch2-batch3-child03-twelve-v1-child03-v2-export-review.json",
+        "sha256": "cec73f557f4cecf07bb380428b4ced382b45d8957421a1899c6822b6a44fa32c"
+      },
+      {
+        "path": "docs/first-topic-completion/reviews/fermi/final-eleven-corrected-three-fourteen-v2-final15-eleven-export-review.json",
+        "sha256": "117f8ab6ddf6a4e8e15bdc99ffefd9e13f0a60859f90b5d77ea7a716816dd537"
+      },
+      {
+        "path": "docs/first-topic-completion/reviews/fermi/final-eleven-corrected-three-fourteen-v2-three-corrected-export-review.json",
+        "sha256": "ed4e09ef16b9d793799246e4e10edb2c67febb0a099e65049d77c3008809018c"
+      },
+      {
+        "path": "docs/first-topic-completion/reviews/fermi/final-four-v1-final4-three-export-review.json",
+        "sha256": "feae928c92cabc3b18fdd9864aca7f37c0e6c8f4bcdcbfbda4283937b7a5d5d2"
+      },
+      {
+        "path": "docs/first-topic-completion/reviews/fermi/final-four-v1-melch02-v3-export-review.json",
+        "sha256": "83d9d92f9f483c39fbd100da846fb1be7a39c6636174fac14111b9887ba86f3f"
       }
     ],
     "Newton": [
@@ -317,6 +1356,46 @@
       {
         "path": "docs/first-topic-completion/reviews/newton/integrated-ten-checks.json",
         "sha256": "8177103282c1a35dc7291283ee35762da761da161613280c73a5c67224148d11"
+      },
+      {
+        "path": "docs/first-topic-completion/reviews/newton/look-marriage-five-export-review.json",
+        "sha256": "545f6f81956f475f9deee54323a58143046ee39fbe3e157d12ad2459b968da1f"
+      },
+      {
+        "path": "docs/first-topic-completion/reviews/newton/remaining-first-six-v3-first-batch-five-export-review-v2.json",
+        "sha256": "6c503d70c32edd72fbcaea3d54bae04c74fcc10a27615a9dca8bc592218bdb8b"
+      },
+      {
+        "path": "docs/first-topic-completion/reviews/newton/remaining-first-six-v3-trials01-v2-export-review.json",
+        "sha256": "6cedc5775623850fcd72a958b7adae52f1f99722b67a19ee675af74fc77fc1df"
+      },
+      {
+        "path": "docs/first-topic-completion/reviews/newton/batch2-batch3-child03-twelve-v1-batch2-six-export-review.json",
+        "sha256": "de22ec03f3277e1fa7cfb2477e3b5032244ce02f2c890d2855c9a942de725fc7"
+      },
+      {
+        "path": "docs/first-topic-completion/reviews/newton/batch2-batch3-child03-twelve-v1-batch3-five-export-review.json",
+        "sha256": "8f29437e86723bbe5b0cde0760729aad72a7bede9234436a2474acafca8dd429"
+      },
+      {
+        "path": "docs/first-topic-completion/reviews/newton/batch2-batch3-child03-twelve-v1-child03-v2-export-review.json",
+        "sha256": "de57ff31e9ba522184e6ba314953d92bfc078787fa09df9e1371417060c72553"
+      },
+      {
+        "path": "docs/first-topic-completion/reviews/newton/final-eleven-corrected-three-fourteen-v2-final15-eleven-export-review.json",
+        "sha256": "aa4eba59cfb3d8ee86a6db7d2190f46c756d92d52e09f3075afc471d7b2a3419"
+      },
+      {
+        "path": "docs/first-topic-completion/reviews/newton/final-eleven-corrected-three-fourteen-v2-three-corrected-export-review.json",
+        "sha256": "536411fefb3293bfdfec05c38e2a36c25e85447a7960ddf3e7408bcdc6b7978d"
+      },
+      {
+        "path": "docs/first-topic-completion/reviews/newton/final-four-v1-final4-three-export-review.json",
+        "sha256": "2e4698cd902ce915f2de2b5149f0c2eb32cc20d8e11ba060cd644b7a79df7009"
+      },
+      {
+        "path": "docs/first-topic-completion/reviews/newton/final-four-v1-melch02-v3-export-review.json",
+        "sha256": "2019b720b4ba22189039ce8558044cd9924b3d6ba2c1116b9ea1926ff2b2a134"
       }
     ]
   }

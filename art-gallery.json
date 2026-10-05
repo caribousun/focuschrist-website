@@ -463,6 +463,28 @@
       ]
     },
     {
+      "title": "A conversation at the well",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/divorce-and-faith-01-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/divorce-and-faith-01-full.webp",
+      "alt": "Jesus seated by a well listening as a woman holds her water jar.",
+      "id": "art-131ee2dd0a55",
+      "occurrences": [
+        {
+          "id": "source-9bec6ec4bfa7",
+          "page": "/answers/divorce-and-faith.html",
+          "pageTitle": "Divorce",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/divorce-and-faith-01-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/divorce-and-faith-01-960.webp\"])",
+          "title": "A conversation at the well"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "A conversation on the bench",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/life-after-death/modern-loneliness-800.webp",
@@ -1409,6 +1431,28 @@
       ]
     },
     {
+      "title": "A moment of remembrance",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/grief-03-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/grief-03-full.webp",
+      "alt": "Two adults repairing the back of a picture frame together at a table.",
+      "id": "art-d78a9aa5e2cb",
+      "occurrences": [
+        {
+          "id": "source-6cc95380d789",
+          "page": "/answers/grief-and-faith.html",
+          "pageTitle": "Grief",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/grief-03-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/grief-03-960.webp\"])",
+          "title": "A moment of remembrance"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "A moment of warmth",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/joseph-smith-likeness/warmth-960.webp",
@@ -2159,6 +2203,28 @@
       ]
     },
     {
+      "title": "A seat at the table",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/divorce-and-faith-03-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/divorce-and-faith-03-full.webp",
+      "alt": "Jesus sharing a simple meal with several attentive dinner companions.",
+      "id": "art-98458e32c4b5",
+      "occurrences": [
+        {
+          "id": "source-7841e4631fe4",
+          "page": "/answers/divorce-and-faith.html",
+          "pageTitle": "Divorce",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/divorce-and-faith-03-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/divorce-and-faith-03-960.webp\"])",
+          "title": "A seat at the table"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "A second invitation refused",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/children-marketplace-02-960.webp",
@@ -2691,7 +2757,7 @@
       "category": "Missionary Work",
       "thumbnail": "/assets/missionary/early-missionaries-liverpool-1400.webp",
       "fullImage": "/assets/missionary/early-missionaries-liverpool-1400.webp",
-      "alt": "Historical portrayal of early missionaries arriving at Liverpool by sailing ship",
+      "alt": "Early missionaries arriving at Liverpool by sailing ship",
       "id": "art-ade36c4f04b4",
       "occurrences": [
         {
@@ -3041,6 +3107,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/plan-of-salvation/labor-full.webp\"]:has(img[src=\"/assets/page-art/plan-of-salvation/labor-800.webp\"])",
           "title": "Adam and Eve begin life outside Eden"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "After the basin, an invitation to serve",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/christian-identity-01-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/christian-identity-01-full.webp",
+      "alt": "Jesus seated beside a set-aside basin and towel, speaking to listening disciples.",
+      "id": "art-0c7a56d614ca",
+      "occurrences": [
+        {
+          "id": "source-932a88370660",
+          "page": "/answers/are-latter-day-saints-christian.html",
+          "pageTitle": "Christian Identity",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/christian-identity-01-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/christian-identity-01-960.webp\"])",
+          "title": "After the basin, an invitation to serve"
         }
       ],
       "categories": [
@@ -3756,6 +3844,50 @@
       ]
     },
     {
+      "title": "Asleep in the storm",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/trials-03-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/trials-03-full.webp",
+      "alt": "Jesus asleep on a cushion in the stern of a boat as waves rise nearby.",
+      "id": "art-25469dfa2501",
+      "occurrences": [
+        {
+          "id": "source-eefb022bdb46",
+          "page": "/answers/faith-in-jesus-christ-during-trials.html",
+          "pageTitle": "Faith in Trials",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/trials-03-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/trials-03-960.webp\"])",
+          "title": "Asleep in the storm"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Asleep with sorrow",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/grief-01-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/grief-01-full.webp",
+      "alt": "Jesus returning from prayer and pausing near sleeping disciples beneath olive trees.",
+      "id": "art-fc13ff8cc967",
+      "occurrences": [
+        {
+          "id": "source-5a724a7afebd",
+          "page": "/answers/grief-and-faith.html",
+          "pageTitle": "Grief",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/grief-01-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/grief-01-960.webp\"])",
+          "title": "Asleep with sorrow"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "At a child’s level",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/bom-evidences/christchildren-960.webp",
@@ -3845,6 +3977,28 @@
       ]
     },
     {
+      "title": "Be of good cheer",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/look-unto-me-02-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/look-unto-me-02-full.webp",
+      "alt": "Jesus addresses attentive disciples in a softly lit stone passage after dusk.",
+      "id": "art-2ab98a16cd15",
+      "occurrences": [
+        {
+          "id": "source-a9dfd4ace2ef",
+          "page": "/answers/look-unto-me-doctrine-and-covenants-6-36.html",
+          "pageTitle": "Look Unto Me",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/look-unto-me-02-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/look-unto-me-02-960.webp\"])",
+          "title": "Be of good cheer"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Be present with the person before you",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/bom-evidences/christ-compassion-960.webp",
@@ -3917,6 +4071,28 @@
       ],
       "categories": [
         "Art & Study"
+      ]
+    },
+    {
+      "title": "Bear a burden together",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/eternal-marriage-02-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/eternal-marriage-02-full.webp",
+      "alt": "An older couple work together at a drying rack, one steadying a rail while the other spreads a towel.",
+      "id": "art-097ed3083b1f",
+      "occurrences": [
+        {
+          "id": "source-fcd2a09cc63c",
+          "page": "/answers/what-is-eternal-marriage.html",
+          "pageTitle": "Eternal Marriage",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/eternal-marriage-02-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/eternal-marriage-02-960.webp\"])",
+          "title": "Bear a burden together"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -4023,6 +4199,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/settle-adversary-02-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/settle-adversary-02-960.webp\"])",
           "title": "Before reaching the magistrate"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Before the day begins",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/aaronic-priesthood-06-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/aaronic-priesthood-06-full.webp",
+      "alt": "Jesus praying alone in a quiet place before sunrise.",
+      "id": "art-418fa6e8f7ae",
+      "occurrences": [
+        {
+          "id": "source-d4e0d1f54b5b",
+          "page": "/answers/aaronic-priesthood-restoration.html",
+          "pageTitle": "Aaronic Priesthood",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/aaronic-priesthood-06-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/aaronic-priesthood-06-960.webp\"])",
+          "title": "Before the day begins"
         }
       ],
       "categories": [
@@ -4144,7 +4342,7 @@
       "category": "Missionary Work",
       "thumbnail": "/assets/missionary/sister-missionaries-teaching-1400.webp",
       "fullImage": "/assets/missionary/sister-missionaries-teaching-1400.webp",
-      "alt": "Portrayal of sister missionaries listening to and teaching a family",
+      "alt": "Sister missionaries listening to and teaching a family",
       "id": "art-59ac2f38de36",
       "occurrences": [
         {
@@ -4822,6 +5020,28 @@
       ]
     },
     {
+      "title": "Bring the need to Him",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/divorce-and-faith-02-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/divorce-and-faith-02-full.webp",
+      "alt": "Jesus listening to two men who have followed Him into a house.",
+      "id": "art-1b5858a63e6c",
+      "occurrences": [
+        {
+          "id": "source-3710b1611bda",
+          "page": "/answers/divorce-and-faith.html",
+          "pageTitle": "Divorce",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/divorce-and-faith-02-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/divorce-and-faith-02-960.webp\"])",
+          "title": "Bring the need to Him"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Bring the question to God",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/bom-evidences/josephprayer-960.webp",
@@ -5017,6 +5237,28 @@
       ],
       "categories": [
         "Pioneers"
+      ]
+    },
+    {
+      "title": "Called after a night of prayer",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/restored-church-01-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/restored-church-01-full.webp",
+      "alt": "Jesus calling disciples toward Him on a hillside in morning light.",
+      "id": "art-703889fb5d69",
+      "occurrences": [
+        {
+          "id": "source-4f45198dcb02",
+          "page": "/answers/restored-church-of-jesus-christ.html",
+          "pageTitle": "The restored Church",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/restored-church-01-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/restored-church-01-960.webp\"])",
+          "title": "Called after a night of prayer"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -5638,6 +5880,28 @@
       ]
     },
     {
+      "title": "Choose one good thing",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/look-unto-me-03-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/look-unto-me-03-full.webp",
+      "alt": "A seated woman lifts her bag to make room while a woman with a rollator pauses beside the bench.",
+      "id": "art-0bd540cb44bb",
+      "occurrences": [
+        {
+          "id": "source-c1f70c8803d5",
+          "page": "/answers/look-unto-me-doctrine-and-covenants-6-36.html",
+          "pageTitle": "Look Unto Me",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/look-unto-me-03-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/look-unto-me-03-960.webp\"])",
+          "title": "Choose one good thing"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Choose one response together",
       "category": "General Conference",
       "thumbnail": "/assets/page-art/exclusive/conference-response-together-800.webp",
@@ -5946,6 +6210,28 @@
       ]
     },
     {
+      "title": "Come and rest a while",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/grief-02-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/grief-02-full.webp",
+      "alt": "Jesus inviting weary disciples toward a boat on a quiet shore.",
+      "id": "art-908c3355ec47",
+      "occurrences": [
+        {
+          "id": "source-60a45bece3ac",
+          "page": "/answers/grief-and-faith.html",
+          "pageTitle": "Grief",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/grief-02-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/grief-02-960.webp\"])",
+          "title": "Come and rest a while"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Come and see",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/come-and-see-960.webp",
@@ -6034,6 +6320,28 @@
       ]
     },
     {
+      "title": "Come to Him and drink",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/melchizedek-priesthood-04-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/melchizedek-priesthood-04-full.webp",
+      "alt": "Jesus calling to listeners in a temple courtyard during a feast.",
+      "id": "art-7123245cabe7",
+      "occurrences": [
+        {
+          "id": "source-d95501516e97",
+          "page": "/answers/melchizedek-priesthood-restoration.html",
+          "pageTitle": "Melchizedek Priesthood",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/melchizedek-priesthood-04-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/melchizedek-priesthood-04-960.webp\"])",
+          "title": "Come to Him and drink"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Come unto Christ",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/priesthood-history/original-christ-invitation.png",
@@ -6049,6 +6357,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/priesthood-history/original-christ-invitation.png\"]:has(img[src=\"/assets/page-art/priesthood-history/original-christ-invitation.png\"])",
           "title": "Come unto Christ"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Come unto me",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/look-unto-me-01-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/look-unto-me-01-full.webp",
+      "alt": "Jesus speaks gently with three adult listeners who have paused beside a stone courtyard wall.",
+      "id": "art-fe82edf1c6db",
+      "occurrences": [
+        {
+          "id": "source-82109aef7ff8",
+          "page": "/answers/look-unto-me-doctrine-and-covenants-6-36.html",
+          "pageTitle": "Look Unto Me",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/look-unto-me-01-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/look-unto-me-01-960.webp\"])",
+          "title": "Come unto me"
         }
       ],
       "categories": [
@@ -6192,7 +6522,7 @@
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/exclusive/child-loss-parents-company-800.webp",
       "fullImage": "/assets/page-art/exclusive/child-loss-parents-company-1536.webp",
-      "alt": "Symbolic artwork of Jesus Christ sitting quietly with grieving parents",
+      "alt": "Jesus Christ sitting quietly with grieving parents",
       "id": "art-a389bf9539c2",
       "occurrences": [
         {
@@ -6304,7 +6634,7 @@
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/exclusive/child-loss-father-comfort-800.webp",
       "fullImage": "/assets/page-art/exclusive/child-loss-father-comfort-1536.webp",
-      "alt": "Symbolic artwork of Jesus Christ listening beside a grieving father holding a toy airplane",
+      "alt": "Jesus Christ listening beside a grieving father holding a toy airplane",
       "id": "art-7d1dd43f54f5",
       "occurrences": [
         {
@@ -6520,6 +6850,28 @@
       ]
     },
     {
+      "title": "Continue the journey",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/divorce-and-faith-07-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/divorce-and-faith-07-full.webp",
+      "alt": "Jesus leading companions along a path toward another town in morning light.",
+      "id": "art-c5353ddf5592",
+      "occurrences": [
+        {
+          "id": "source-302184dd091a",
+          "page": "/answers/divorce-and-faith.html",
+          "pageTitle": "Divorce",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/divorce-and-faith-07-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/divorce-and-faith-07-960.webp\"])",
+          "title": "Continue the journey"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Continuing in missionary service",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/priesthood-history/original-elijah-mission.png",
@@ -6601,6 +6953,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/rr-sleeping-disciples-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/rr-sleeping-disciples-960.webp\"])",
           "title": "Could ye not watch with me?"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Counsel without control",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/eternal-marriage-01-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/eternal-marriage-01-full.webp",
+      "alt": "A married couple listen to each other while considering a shelf sketch and wood samples at their table.",
+      "id": "art-a34d844cc6f6",
+      "occurrences": [
+        {
+          "id": "source-86887dc02f38",
+          "page": "/answers/what-is-eternal-marriage.html",
+          "pageTitle": "Eternal Marriage",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/eternal-marriage-01-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/eternal-marriage-01-960.webp\"])",
+          "title": "Counsel without control"
         }
       ],
       "categories": [
@@ -6854,7 +7228,7 @@
       "category": "Missionary Work",
       "thumbnail": "/assets/missionary/service-missionaries-food-pantry-1400.webp",
       "fullImage": "/assets/missionary/service-missionaries-food-pantry-1400.webp",
-      "alt": "Portrayal of young and senior service missionaries helping at a food pantry",
+      "alt": "Young and senior service missionaries helping at a food pantry",
       "id": "art-45e710bbdf57",
       "occurrences": [
         {
@@ -6997,6 +7371,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/leaven-02-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/leaven-02-960.webp\"])",
           "title": "Dough transformed"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Draw out now",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/aaronic-priesthood-01-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/aaronic-priesthood-01-full.webp",
+      "alt": "Jesus speaking as a servant carries a small vessel away from filled stone waterpots.",
+      "id": "art-cd675487421e",
+      "occurrences": [
+        {
+          "id": "source-5fa5fafd0e8b",
+          "page": "/answers/aaronic-priesthood-restoration.html",
+          "pageTitle": "Aaronic Priesthood",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/aaronic-priesthood-01-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/aaronic-priesthood-01-960.webp\"])",
+          "title": "Draw out now"
         }
       ],
       "categories": [
@@ -7327,6 +7723,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/plan-of-salvation/life-with-god-full.webp\"]:has(img[src=\"/assets/page-art/plan-of-salvation/life-with-god-800.webp\"])",
           "title": "Eternal life is life with God"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Even as He is",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/aaronic-priesthood-05-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/aaronic-priesthood-05-full.webp",
+      "alt": "The risen Jesus speaking earnestly with disciples seated nearby.",
+      "id": "art-e5b47c66ca4b",
+      "occurrences": [
+        {
+          "id": "source-5fa248e84676",
+          "page": "/answers/aaronic-priesthood-restoration.html",
+          "pageTitle": "Aaronic Priesthood",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/aaronic-priesthood-05-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/aaronic-priesthood-05-960.webp\"])",
+          "title": "Even as He is"
         }
       ],
       "categories": [
@@ -8346,6 +8764,72 @@
       ]
     },
     {
+      "title": "Go and show yourselves",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/melchizedek-priesthood-02-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/melchizedek-priesthood-02-full.webp",
+      "alt": "Jesus answering men who stand at a distance outside a village.",
+      "id": "art-af0e2e39696a",
+      "occurrences": [
+        {
+          "id": "source-44fbaa944fdc",
+          "page": "/answers/melchizedek-priesthood-restoration.html",
+          "pageTitle": "Melchizedek Priesthood",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/melchizedek-priesthood-02-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/melchizedek-priesthood-02-960.webp\"])",
+          "title": "Go and show yourselves"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Go and teach all nations",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/restored-church-03-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/restored-church-03-full.webp",
+      "alt": "The risen Jesus commissioning disciples on a Galilean mountain.",
+      "id": "art-ac7a7a9a8b92",
+      "occurrences": [
+        {
+          "id": "source-66ffd28a0691",
+          "page": "/answers/restored-church-of-jesus-christ.html",
+          "pageTitle": "The restored Church",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/restored-church-03-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/restored-church-03-960.webp\"])",
+          "title": "Go and teach all nations"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Go home to your friends",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/divorce-and-faith-06-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/divorce-and-faith-06-full.webp",
+      "alt": "Jesus standing in a boat and speaking with a calmly seated man on the shore.",
+      "id": "art-323d1e276816",
+      "occurrences": [
+        {
+          "id": "source-072a80d70c8d",
+          "page": "/answers/divorce-and-faith.html",
+          "pageTitle": "Divorce",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/divorce-and-faith-06-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/divorce-and-faith-06-960.webp\"])",
+          "title": "Go home to your friends"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Go near and listen",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/holy-ghost/philip-800.webp",
@@ -8610,6 +9094,28 @@
       ]
     },
     {
+      "title": "He asks them to notice",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/divorce-and-faith-05-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/divorce-and-faith-05-full.webp",
+      "alt": "Jesus calling disciples closer near the temple treasury.",
+      "id": "art-0f1a99952e4b",
+      "occurrences": [
+        {
+          "id": "source-2f557ea66336",
+          "page": "/answers/divorce-and-faith.html",
+          "pageTitle": "Divorce",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/divorce-and-faith-05-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/divorce-and-faith-05-960.webp\"])",
+          "title": "He asks them to notice"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "He Binds What Is Hurt",
       "category": "Art & Study",
       "thumbnail": "/assets/page-art/art-study/thumbs/shepherd-binds-hurt-20261004.webp",
@@ -8629,6 +9135,28 @@
       ],
       "categories": [
         "Art & Study"
+      ]
+    },
+    {
+      "title": "He calls her forward",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/divorce-and-faith-04-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/divorce-and-faith-04-full.webp",
+      "alt": "Jesus calling a bowed woman forward in a synagogue.",
+      "id": "art-2844ed067405",
+      "occurrences": [
+        {
+          "id": "source-34b489e60208",
+          "page": "/answers/divorce-and-faith.html",
+          "pageTitle": "Divorce",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/divorce-and-faith-04-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/divorce-and-faith-04-960.webp\"])",
+          "title": "He calls her forward"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -8691,6 +9219,50 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/life-after-death/nephi-bread-1536.webp\"]:has(img[src=\"../assets/page-art/life-after-death/nephi-bread-800.webp\"])",
           "title": "He gives bread and fills their souls"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "He gives to the disciples",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/aaronic-priesthood-04-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/aaronic-priesthood-04-full.webp",
+      "alt": "Jesus placing bread into a basket held by a disciple while people sit on the grass.",
+      "id": "art-b80560f4f013",
+      "occurrences": [
+        {
+          "id": "source-d8ebc28d9598",
+          "page": "/answers/aaronic-priesthood-restoration.html",
+          "pageTitle": "Aaronic Priesthood",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/aaronic-priesthood-04-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/aaronic-priesthood-04-960.webp\"])",
+          "title": "He gives to the disciples"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "He goes His way",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/restored-church-02-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/restored-church-02-full.webp",
+      "alt": "Jesus walking through a divided gathering on a rocky path outside Nazareth.",
+      "id": "art-53e8e62c9192",
+      "occurrences": [
+        {
+          "id": "source-e354dfbf4904",
+          "page": "/answers/restored-church-of-jesus-christ.html",
+          "pageTitle": "The restored Church",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/restored-church-02-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/restored-church-02-960.webp\"])",
+          "title": "He goes His way"
         }
       ],
       "categories": [
@@ -8830,6 +9402,28 @@
       ]
     },
     {
+      "title": "He lifts His hands to bless",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/melchizedek-priesthood-03-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/melchizedek-priesthood-03-full.webp",
+      "alt": "The risen Jesus lifting His hands to bless disciples near Bethany.",
+      "id": "art-d42397e28689",
+      "occurrences": [
+        {
+          "id": "source-ed2389424f36",
+          "page": "/answers/melchizedek-priesthood-restoration.html",
+          "pageTitle": "Melchizedek Priesthood",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/melchizedek-priesthood-03-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/melchizedek-priesthood-03-960.webp\"])",
+          "title": "He lifts His hands to bless"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "He Makes Wars Cease",
       "category": "Art & Study",
       "thumbnail": "/assets/page-art/art-study/thumbs/still-wars-cease-20261004.webp",
@@ -8911,6 +9505,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/sitewide-narratives/two-witnesses-emmaus-20260919-full.webp\"]:has(img[src=\"../assets/page-art/sitewide-narratives/two-witnesses-emmaus-20260919-960.webp\"])",
           "title": "He opens the scriptures along the way"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "He opens their understanding",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/christian-identity-03-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/christian-identity-03-full.webp",
+      "alt": "The risen Jesus explaining scripture to disciples after a meal.",
+      "id": "art-3c890dfed3dc",
+      "occurrences": [
+        {
+          "id": "source-939e7641d5fa",
+          "page": "/answers/are-latter-day-saints-christian.html",
+          "pageTitle": "Christian Identity",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/christian-identity-03-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/christian-identity-03-960.webp\"])",
+          "title": "He opens their understanding"
         }
       ],
       "categories": [
@@ -9006,6 +9622,28 @@
       ]
     },
     {
+      "title": "He sends the people on their way",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/aaronic-priesthood-02-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/aaronic-priesthood-02-full.webp",
+      "alt": "Jesus bidding farewell to a crowd departing from a grassy shore.",
+      "id": "art-5d4af7a388d7",
+      "occurrences": [
+        {
+          "id": "source-941b3e4b738a",
+          "page": "/answers/aaronic-priesthood-restoration.html",
+          "pageTitle": "Aaronic Priesthood",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/aaronic-priesthood-02-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/aaronic-priesthood-02-960.webp\"])",
+          "title": "He sends the people on their way"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "He stands among them",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/book-of-mormon-stories/31-arrival-bountiful-960.webp",
@@ -9050,6 +9688,50 @@
       ]
     },
     {
+      "title": "He stops beside the bier",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/death-of-a-child-03-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/death-of-a-child-03-full.webp",
+      "alt": "Jesus touching the wooden bier as its bearers stop, before the young man rises.",
+      "id": "art-4c2b8e528c13",
+      "occurrences": [
+        {
+          "id": "source-5d7db9a4cbdd",
+          "page": "/answers/death-of-a-child.html",
+          "pageTitle": "Death of a Child",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/death-of-a-child-03-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/death-of-a-child-03-960.webp\"])",
+          "title": "He stops beside the bier"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "He takes the cup and gives thanks",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/aaronic-priesthood-03-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/aaronic-priesthood-03-full.webp",
+      "alt": "Jesus holding a cup at the supper as His disciples listen.",
+      "id": "art-5f9eafce4790",
+      "occurrences": [
+        {
+          "id": "source-2e316acf0b9a",
+          "page": "/answers/aaronic-priesthood-restoration.html",
+          "pageTitle": "Aaronic Priesthood",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/aaronic-priesthood-03-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/aaronic-priesthood-03-960.webp\"])",
+          "title": "He takes the cup and gives thanks"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "He took him aside",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/deaf-man-960.webp",
@@ -9087,6 +9769,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/mm-jerusalem-tears-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/mm-jerusalem-tears-960.webp\"])",
           "title": "He weeps over the city"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "He weeps with love",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/death-of-a-child-02-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/death-of-a-child-02-full.webp",
+      "alt": "The risen Jesus with tears in His eyes and children gathered nearby.",
+      "id": "art-220b9e591985",
+      "occurrences": [
+        {
+          "id": "source-0dd11c95b814",
+          "page": "/answers/death-of-a-child.html",
+          "pageTitle": "Death of a Child",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/death-of-a-child-02-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/death-of-a-child-02-960.webp\"])",
+          "title": "He weeps with love"
         }
       ],
       "categories": [
@@ -9901,6 +10605,28 @@
           "kind": "topic",
           "selector": "a[href=\"assets/page-art/atonement/bread-cup.webp\"]:has(img[src=\"assets/page-art/atonement/bread-cup-960.webp\"])",
           "title": "In remembrance of Him"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "In Solomon’s porch",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/christian-identity-04-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/christian-identity-04-full.webp",
+      "alt": "Jesus answering a small group of listeners beneath a stone portico.",
+      "id": "art-1d7727415370",
+      "occurrences": [
+        {
+          "id": "source-e5a3d8fc565f",
+          "page": "/answers/are-latter-day-saints-christian.html",
+          "pageTitle": "Christian Identity",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/christian-identity-04-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/christian-identity-04-960.webp\"])",
+          "title": "In Solomon’s porch"
         }
       ],
       "categories": [
@@ -12107,6 +12833,28 @@
       ],
       "categories": [
         "General Conference"
+      ]
+    },
+    {
+      "title": "Let the children come",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/death-of-a-child-01-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/death-of-a-child-01-full.webp",
+      "alt": "Jesus welcoming approaching children as adults step aside.",
+      "id": "art-f21b7dd8f891",
+      "occurrences": [
+        {
+          "id": "source-25e4cd934be2",
+          "page": "/answers/death-of-a-child.html",
+          "pageTitle": "Death of a Child",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/death-of-a-child-01-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/death-of-a-child-01-960.webp\"])",
+          "title": "Let the children come"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -15676,6 +16424,28 @@
       ]
     },
     {
+      "title": "Remember Him together",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/restored-church-04-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/restored-church-04-full.webp",
+      "alt": "Adults quietly receiving sacrament bread in a chapel pew.",
+      "id": "art-e06a3a033f61",
+      "occurrences": [
+        {
+          "id": "source-4af401192040",
+          "page": "/answers/restored-church-of-jesus-christ.html",
+          "pageTitle": "The restored Church",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/restored-church-04-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/restored-church-04-960.webp\"])",
+          "title": "Remember Him together"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Remember Jane Manning James",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/priesthood-history/original-jane-portrait.png",
@@ -16384,7 +17154,7 @@
       "category": "Missionary Work",
       "thumbnail": "/assets/missionary/samuel-smith-first-mission-1400.webp",
       "fullImage": "/assets/missionary/samuel-smith-first-mission-1400.webp",
-      "alt": "Historical portrayal of Samuel Smith carrying copies of the Book of Mormon",
+      "alt": "Samuel Smith carrying copies of the Book of Mormon",
       "id": "art-81445ce10d7f",
       "occurrences": [
         {
@@ -16800,6 +17570,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/mm-twelve-depart-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/mm-twelve-depart-960.webp\"])",
           "title": "Sent to preach and heal"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Sent two and two",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/melchizedek-priesthood-01-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/melchizedek-priesthood-01-full.webp",
+      "alt": "Jesus speaking to two pairs of disciples before they depart along a path.",
+      "id": "art-1860030116c9",
+      "occurrences": [
+        {
+          "id": "source-5e40b101095c",
+          "page": "/answers/melchizedek-priesthood-restoration.html",
+          "pageTitle": "Melchizedek Priesthood",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/melchizedek-priesthood-01-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/melchizedek-priesthood-01-960.webp\"])",
+          "title": "Sent two and two"
         }
       ],
       "categories": [
@@ -17379,6 +18171,28 @@
       ]
     },
     {
+      "title": "Strengthened in Gethsemane",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/trials-01-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/trials-01-full.webp",
+      "alt": "Jesus kneeling in prayer as an angel stands nearby in an olive grove.",
+      "id": "art-a75aff544456",
+      "occurrences": [
+        {
+          "id": "source-30a5811679af",
+          "page": "/answers/faith-in-jesus-christ-during-trials.html",
+          "pageTitle": "Faith in Trials",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/trials-01-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/trials-01-960.webp\"])",
+          "title": "Strengthened in Gethsemane"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Stretch out your hand",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/mc-withered-hand--ab04a8ad757b-thumb.webp",
@@ -17524,7 +18338,7 @@
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/exclusive/divorce-porch-support-800.webp",
       "fullImage": "/assets/page-art/exclusive/divorce-porch-support-1536.webp",
-      "alt": "A father speaking with a trusted friend on a quiet balcony",
+      "alt": "Two friends speaking together on a quiet balcony",
       "id": "art-dbe0e8ed9315",
       "occurrences": [
         {
@@ -17799,6 +18613,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/vine-branches-02-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/vine-branches-02-960.webp\"])",
           "title": "Tending the vine"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "That they may be one",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/melchizedek-priesthood-05-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/melchizedek-priesthood-05-full.webp",
+      "alt": "Jesus praying as disciples listen quietly nearby.",
+      "id": "art-cb9979c48243",
+      "occurrences": [
+        {
+          "id": "source-aaef9e37aa69",
+          "page": "/answers/melchizedek-priesthood-restoration.html",
+          "pageTitle": "Melchizedek Priesthood",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/melchizedek-priesthood-05-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/melchizedek-priesthood-05-960.webp\"])",
+          "title": "That they may be one"
         }
       ],
       "categories": [
@@ -19755,7 +20591,7 @@
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/exclusive/grief-savior-compassion-800.webp",
       "fullImage": "/assets/page-art/exclusive/grief-savior-compassion-1536.webp",
-      "alt": "Symbolic artwork of Jesus Christ accompanying a grieving woman on a garden path",
+      "alt": "Jesus Christ accompanying a grieving woman on a garden path",
       "id": "art-710873f15c4e",
       "occurrences": [
         {
@@ -20382,6 +21218,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/bn-hear-the-voice-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/bn-hear-the-voice-960.webp\"])",
           "title": "They turn to listen"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "This scripture is fulfilled",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/christian-identity-02-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/christian-identity-02-full.webp",
+      "alt": "Jesus seated after reading as a minister holds the closed scroll nearby.",
+      "id": "art-8c6526564634",
+      "occurrences": [
+        {
+          "id": "source-0929e3b94c7d",
+          "page": "/answers/are-latter-day-saints-christian.html",
+          "pageTitle": "Christian Identity",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/christian-identity-02-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/christian-identity-02-960.webp\"])",
+          "title": "This scripture is fulfilled"
         }
       ],
       "categories": [
@@ -21164,6 +22022,28 @@
       ]
     },
     {
+      "title": "Welcome those who come",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/melchizedek-priesthood-06-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/melchizedek-priesthood-06-full.webp",
+      "alt": "The risen Jesus speaking as a gathered group leaves space for arriving listeners.",
+      "id": "art-e89f82c430b9",
+      "occurrences": [
+        {
+          "id": "source-b686e337fc9d",
+          "page": "/answers/melchizedek-priesthood-restoration.html",
+          "pageTitle": "Melchizedek Priesthood",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/melchizedek-priesthood-06-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/melchizedek-priesthood-06-960.webp\"])",
+          "title": "Welcome those who come"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Welcome without asking for return",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/first-topic-completion/families-03-alt-960.webp",
@@ -21544,6 +22424,28 @@
       ]
     },
     {
+      "title": "Wilt thou be made whole?",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/first-topic-completion/trials-02-960.webp",
+      "fullImage": "/assets/page-art/first-topic-completion/trials-02-full.webp",
+      "alt": "Jesus listening beside a man reclining on a mat near a pool.",
+      "id": "art-03dc49f7b8f8",
+      "occurrences": [
+        {
+          "id": "source-7bd31c004ddc",
+          "page": "/answers/faith-in-jesus-christ-during-trials.html",
+          "pageTitle": "Faith in Trials",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/first-topic-completion/trials-02-full.webp\"]:has(img[src=\"../assets/page-art/first-topic-completion/trials-02-960.webp\"])",
+          "title": "Wilt thou be made whole?"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Winter Quarters, 1846 to 1847",
       "category": "Pioneers",
       "thumbnail": "/assets/pioneers/winter-quarters-800.webp",
@@ -21831,14 +22733,14 @@
     }
   ],
   "stats": {
-    "artworks": 983,
-    "occurrences": 988,
+    "artworks": 1024,
+    "occurrences": 1029,
     "byKind": {
       "artwork": 63,
       "hero": 42,
       "legacy": 39,
       "missionary": 13,
-      "topic": 884
+      "topic": 925
     }
   }
 }

@@ -235,7 +235,7 @@ assert len(journey_assets)==len(set(journey_assets)) and set(journey_assets)==ex
 assert len(hg_assets)==len(set(hg_assets))==16 and set(hg_assets)==set(hg_review), 'Holy Ghost exact body inventory mismatch'
 assert len(temple_assets)==len(set(temple_assets))==len(temple_review)==21 and set(temple_assets)==set(temple_review), 'Twenty chapter pictures and the owner-requested Nephi companion must reach the shared study adapter'
 assert len(joseph_assets)==len(set(joseph_assets))==26 and set(joseph_assets)==joseph_review, 'All reviewed Joseph family pictures must reach study details exactly once'
-assert len(first_topic_assets)==len(set(first_topic_assets))==10 and set(first_topic_assets)==set(first_topic_review), 'Exact additive FIRST topic family required'
+assert len(first_topic_assets)==len(set(first_topic_assets))==len(first_topic_review) and set(first_topic_assets)==set(first_topic_review), 'Exact additive FIRST topic family required'
 assert (count-len(first_topic_assets)-len(joseph_assets)-len(temple_assets)-len(father_assets)-len(plan_assets)-len(hg_assets)-len(covenant_assets)-len(journey_assets)-len(bible_assets)-len(settle_assets)-len(life_assets)-len(gap_assets)-len(sitewide_assets)-len(focused_assets)-len(relocated_assets)-len(bom_assets),preserved)==(99,3),(count,preserved)
 # Life After Death lifted its old illustrated feature panel into full reading
 # sections. All twelve remaining panels still undergo the structural checks.
@@ -255,4 +255,4 @@ adapter=(ROOT/'topic-artwork-details.js').read_text(encoding='utf-8')
 assert "if (!record.study) {" in adapter,'Foundation cards must not inherit unrelated section sources'
 assert "if (record.study) pill(record.studyLabel, record.study, true);" in adapter,'Foundation topic action missing from detail panel'
 if errors:raise SystemExit('\n'.join(errors))
-print(f'TOPIC ARTWORK DETAILS QA PASS: {count} adapter pictures, {preserved} existing detail pictures, {panels} expanded illustration panels, {len(list((ROOT/'answers').glob('*.html')))+1} page dependencies')
+print(f'TOPIC ARTWORK DETAILS QA PASS: {count} adapter pictures including {len(first_topic_assets)} strictly validated FIRST additions, {preserved} existing detail pictures, {panels} expanded illustration panels, {len(list((ROOT/'answers').glob('*.html')))+1} page dependencies')

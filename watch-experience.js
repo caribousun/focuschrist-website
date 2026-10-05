@@ -94,7 +94,7 @@
         kicker: 'Ask',
         title: 'Ask Your Temple Question',
         copy: 'Bring your question about temples and explore the linked scriptures and teachings.',
-        href: 'ask.html',
+        href: 'ask.html?watch=Temple%20and%20Family%20Study&topic=Temples%20and%20family&return=watch.html%23temples-and-family#ask-question',
         thumb: 'assets/watch/song.jpg'
       }
     }

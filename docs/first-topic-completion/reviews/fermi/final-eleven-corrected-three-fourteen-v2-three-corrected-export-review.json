@@ -1,0 +1,43 @@
+{
+  "reviewer": "Fermi",
+  "decision": "THREE_EXPORTS_CONCUR",
+  "records": [
+    {
+      "key": "divorce-and-faith-02",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-candidates\\divorce-and-faith-02-v2-original.png",
+      "source_sha256": "b8190c5c40089af0c6e74d5d8d62b596eb2864e3e5b111c3d055c525a31bde86",
+      "full_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\divorce-and-faith-02-full.webp",
+      "sha256": "21f28b6900ecba6d18526a1e29b25d4a9de4f86340d4f46fe268ac91e818f216",
+      "960_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\divorce-and-faith-02-960.webp",
+      "responsive_sha256": "97545bf0013ef807977201fd3aeff54d3afe0efc60157864787dabae174d6411",
+      "reviewed": true,
+      "decision": "PASS",
+      "finding": "Actual full and960 individually personally viewed; accepted corrections, identity, natural anatomy, gaze and photographic detail preserved."
+    },
+    {
+      "key": "divorce-and-faith-06",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-candidates\\divorce-and-faith-06-v2-original.png",
+      "source_sha256": "c14cad479ad45ec2bdb2e8dcd595f934c8903188497208d0ddd6592c4d542ef4",
+      "full_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\divorce-and-faith-06-full.webp",
+      "sha256": "2d7d090df4e4260d8dd30006ac538fe19f1d62b3735f458c9c9886eb78c10c71",
+      "960_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\divorce-and-faith-06-960.webp",
+      "responsive_sha256": "4acad3b49ac7a0fdd7940d73b11b0078bc5a0df327780054fe1aaef17243eb54",
+      "reviewed": true,
+      "decision": "PASS",
+      "finding": "Actual full and960 individually personally viewed; accepted corrections, identity, natural anatomy, gaze and photographic detail preserved."
+    },
+    {
+      "key": "death-of-a-child-02",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-candidates\\death-of-a-child-02-v3-original.png",
+      "source_sha256": "b3911247fefa6db43b62b77f3ac5ee86c0327780685127cc4cc6d1f070f2fffd",
+      "full_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\death-of-a-child-02-full.webp",
+      "sha256": "2d05351b2f17c1bd0b38bada78e1d5f1cef5d6a0e85736ee17b40737486c0bce",
+      "960_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\death-of-a-child-02-960.webp",
+      "responsive_sha256": "2e165d6c745c921d9e5fbd777e474de2290c1b7238f7190ec164a732f5e7d032",
+      "reviewed": true,
+      "decision": "PASS",
+      "finding": "Actual full and960 individually personally viewed; accepted corrections, identity, natural anatomy, gaze and photographic detail preserved."
+    }
+  ],
+  "scope": "Actual export pixels only; no native/public/owner claim."
+}

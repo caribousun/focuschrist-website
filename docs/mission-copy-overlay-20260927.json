@@ -1,10 +1,42 @@
 {
   "owner_directive": "Wyatt, 2026-09-27: remove system-wide production-note tone while preserving scripture and actual historical uncertainty.",
-  "scope": "Only baseline commission detail paragraph; exact tree equality remains required.",
+  "scope": "Original approved commission paragraph plus eight exact approved generic artwork-prefix removals from alt descriptions; exact tree equality remains required.",
   "replacements": [
     {
       "before": "Jesus walks among His Apostles as they listen. This imagined scene invites us to read how He prepared the Twelve to preach and minister in Matthew 10. After His Resurrection, He gave the charge to teach all nations recorded in Matthew 28. The picture brings us into the study; the scriptures give us the accounts.",
       "after": "Jesus walks among His Apostles as they listen. Read how He prepared the Twelve to preach and minister in Matthew 10. Then turn to Matthew 28 and His charge, after the Resurrection, to teach all nations."
+    },
+    {
+      "before": "Historical portrayal of Samuel Smith carrying copies of the Book of Mormon along a rural New York road",
+      "after": "Samuel Smith carrying copies of the Book of Mormon along a rural New York road"
+    },
+    {
+      "before": "Historical portrayal of early missionaries arriving by sailing ship at the Liverpool docks",
+      "after": "Early missionaries arriving by sailing ship at the Liverpool docks"
+    },
+    {
+      "before": "Historical portrayal of Samuel Smith carrying copies of the Book of Mormon",
+      "after": "Samuel Smith carrying copies of the Book of Mormon"
+    },
+    {
+      "before": "Historical portrayal of early missionaries arriving at Liverpool by sailing ship",
+      "after": "Early missionaries arriving at Liverpool by sailing ship"
+    },
+    {
+      "before": "Historical portrayal of Samuel Smith beginning missionary service",
+      "after": "Samuel Smith beginning missionary service"
+    },
+    {
+      "before": "Historical portrayal of missionaries carrying their witness across the Atlantic",
+      "after": "Missionaries carrying their witness across the Atlantic"
+    },
+    {
+      "before": "Portrayal of sister missionaries listening to and teaching a family",
+      "after": "Sister missionaries listening to and teaching a family"
+    },
+    {
+      "before": "Portrayal of young and senior service missionaries helping at a food pantry",
+      "after": "Young and senior service missionaries helping at a food pantry"
     }
   ]
 }

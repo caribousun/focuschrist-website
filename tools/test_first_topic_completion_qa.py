@@ -16,7 +16,7 @@ def write(path, value):
     p.write_text(value, encoding='utf-8')
 def save(path, obj): write(path, json.dumps(obj))
 def sha(value): return hashlib.sha256(value.encode()).hexdigest()
-records=[]; figures={qa.PRAYER:[],qa.FAMILIES:[]}; registry={qa.PRAYER:[],qa.FAMILIES:[]}
+records=[]; figures={route:[] for route in set(qa.EXPECTED.values())}; registry={route:[] for route in figures}
 for key,route in qa.EXPECTED.items():
     asset=qa.PREFIX+key+'-full.webp'; responsive=qa.PREFIX+key+'-960.webp'
     write(asset,'fixture full '+key);write(responsive,'fixture responsive '+key)
@@ -24,15 +24,16 @@ for key,route in qa.EXPECTED.items():
            responsive_sha256=sha('fixture responsive '+key),source_sha256=sha('fixture raw '+key),
            source_urls=['https://www.churchofjesuschrist.org/study/scriptures/nt/john/6?lang=eng&id=p9-p11#p9'],
            source_label='John 6:9-11',title='Title '+key,caption='Caption '+key,alt='Alt '+key,
-           christ=key!='prayer-04',width=1536,height=1024,reviewed=True)
+           christ=key not in qa.NON_CHRIST,width=1536,height=1024,reviewed=True)
     r.update(study=qa.STUDIES[key][0],study_label=qa.STUDIES[key][1])
     records.append(r);registry[route].append(dict(asset=asset,sha256=r['sha256'],reviewed=True))
     e=lambda x:html.escape(x,quote=True)
     figures[route].append(f'''<figure class="fc-study-visual" data-exclusive-artwork="first-{key}" data-enriched-study-art="first-{key}"><a href="../{asset}" data-topic-study="{e(r['study'])}" data-topic-study-label="{e(r['study_label'])}" data-full-image-viewer aria-haspopup="dialog" aria-label="Explore artwork: {e(r['title'])}" data-full-image-alt="{e(r['alt'])}"><img src="../{responsive}" srcset="../{responsive} 960w, ../{asset} 1536w" width="1536" height="1024" alt="{e(r['alt'])}"></a><figcaption><p class="fc-study-visual-label">Explore and study</p><h3>{e(r['title'])}</h3><p>{e(r['caption'])}</p><p class="fc-study-visual-sources"><a class="fc-inline-scripture" href="{e(r['source_urls'][0])}">{e(r['source_label'])}</a></p></figcaption></figure>''')
 for route,fs in figures.items():
     write(route,'<html><head><script defer src="../topic-artwork-details.js"></script><link href="../topic-artwork-details.css"></head><body><main>'+''.join(fs)+'</main></body></html>')
-for study,label in qa.STUDIES.values():
-    if not (root/'answers'/study).exists(): write('answers/'+study,'<html><main><h1>'+label+'</h1></main></html>')
+for key,(study,label) in qa.STUDIES.items():
+    target=qa.study_path(key)
+    if not (root/target).exists(): write(target,'<html><main><h1>'+label+'</h1></main></html>')
 write('general-conference.html','<html><main></main></html>')
 write('sitemap.xml','<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>https://example.invalid/'+r+'</loc></url>' for r in figures)+'</urlset>')
 save('docs/art-study-image-review.json',{'pages':registry})
@@ -44,12 +45,25 @@ for reviewer in ['Fermi','Newton']:
 save(qa.MANIFEST,manifest)
 baseline={p.relative_to(root).as_posix():p.read_bytes() for p in root.rglob('*') if p.is_file()}
 require=qa.require
-require(len(qa.check(root))==10,'valid synthetic control must pass')
+require(len(qa.check(root))==len(qa.EXPECTED),'valid synthetic control must pass')
 def alter(path,old,new):
     p=root/path;t=p.read_text();assert old in t;p.write_text(t.replace(old,new,1),encoding='utf8')
 def manifest_mutate(fn):
     d=json.loads((root/qa.MANIFEST).read_text());fn(d);save(qa.MANIFEST,d)
 tests=[
+ ('new figure nested in narrow study lead',lambda:alter(qa.PRAYER,figures[qa.PRAYER][0],'<div class="fc-study-lead">'+figures[qa.PRAYER][0]+'</div>')),
+ ('new figure nested in unillustrated split feature',lambda:alter(qa.PRAYER,figures[qa.PRAYER][0],'<div class="fc-study-feature">'+figures[qa.PRAYER][0]+'</div>')),
+ ('new figure nested inside a plain onward article',lambda:alter(qa.PRAYER,figures[qa.PRAYER][0],'<div class="fc-study-grid"><article>'+figures[qa.PRAYER][0]+'</article></div>')),
+ ('new figure nested directly inside onward grid',lambda:alter(qa.PRAYER,figures[qa.PRAYER][0],'<div class="fc-study-grid">'+figures[qa.PRAYER][0]+'</div>')),
+ ('new figure nested inside an existing figure',lambda:alter(qa.PRAYER,figures[qa.PRAYER][0],'<figure>'+figures[qa.PRAYER][0]+'</figure>')),
+ ('new figure nested inside an existing caption',lambda:alter(qa.PRAYER,figures[qa.PRAYER][0],'<figcaption>'+figures[qa.PRAYER][0]+'</figcaption>')),
+ ('new figure nested inside a resource card',lambda:alter(qa.PRAYER,figures[qa.PRAYER][0],'<article class="fc-resource-card">'+figures[qa.PRAYER][0]+'</article>')),
+ ('grief modern original misclassified as Christ',lambda:manifest_mutate(lambda d:next(r for r in d['artworks'] if r['key']=='grief-03').update(christ=True))),
+ ('restored congregation original misclassified as Christ',lambda:manifest_mutate(lambda d:next(r for r in d['artworks'] if r['key']=='restored-church-04').update(christ=True))),
+ ('cross-topic key moved to another new owning route',lambda:manifest_mutate(lambda d:next(r for r in d['artworks'] if r['key']=='aaronic-priesthood-01').update(route='answers/melchizedek-priesthood-restoration.html'))),
+ ('new modern scene misclassified as Christ',lambda:manifest_mutate(lambda d:next(r for r in d['artworks'] if r['key']=='look-unto-me-03').update(christ=True))),
+ ('new Be Still onward changed',lambda:alter(qa.LOOK,'data-topic-study="../art-study/be-still.html"','data-topic-study="holy-ghost.html"')),
+ ('new Marriage figure omitted',lambda:alter(qa.MARRIAGE,figures[qa.MARRIAGE][0],'')),
  ('missing onward study',lambda:alter(qa.PRAYER,'data-topic-study="'+records[0]['study']+'"','')),
  ('changed onward destination',lambda:alter(qa.PRAYER,'data-topic-study="'+records[0]['study']+'"','data-topic-study="holy-ghost.html"')),
  ('changed onward label',lambda:alter(qa.PRAYER,'data-topic-study-label="'+records[0]['study_label']+'"','data-topic-study-label="Wrong label"')),
@@ -80,7 +94,7 @@ for name,mutation in tests:
     except AssertionError as error:results.append({'mutation':name,'rejected':True,'reason':str(error)})
     else:raise AssertionError('Mutation escaped: '+name)
     for path,content in baseline.items():(root/path).write_bytes(content)
-require(len(qa.check(root))==10,'restored positive control must pass')
+require(len(qa.check(root))==len(qa.EXPECTED),'restored positive control must pass')
 receipt={'scope':'Synthetic inventory/markup/provenance contract mutation tests; fixture bytes are not images and do not test pixel quality or production candidate.','fixture':str(root),'positive_control':True,'restored_control':True,'mutations':results,'count':len(results)}
 report = Path(os.environ.get('FOCUS_QA_REPORT', str(SITE/'.qa-artifacts'/'first-topic-qa-mutations.json')))
 report.parent.mkdir(parents=True,exist_ok=True)

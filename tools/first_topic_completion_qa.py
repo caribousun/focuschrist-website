@@ -36,6 +36,21 @@ STUDIES = {
     'families-06': ('jesus-christ-latter-day-saint-beliefs.html', 'Study Jesus Christ'),
 }
 
+LOOK = 'answers/look-unto-me-doctrine-and-covenants-6-36.html'
+MARRIAGE = 'answers/what-is-eternal-marriage.html'
+EXPECTED.update({'look-unto-me-01': 'answers/look-unto-me-doctrine-and-covenants-6-36.html', 'look-unto-me-02': 'answers/look-unto-me-doctrine-and-covenants-6-36.html', 'look-unto-me-03': 'answers/look-unto-me-doctrine-and-covenants-6-36.html', 'eternal-marriage-01': 'answers/what-is-eternal-marriage.html', 'eternal-marriage-02': 'answers/what-is-eternal-marriage.html'})
+STUDIES.update({'look-unto-me-01': ('../art-study/be-still.html', 'Study Be Still'), 'look-unto-me-02': ('faith-in-jesus-christ-during-trials.html', 'Study faith during trials'), 'look-unto-me-03': ('why-families-are-important.html', 'Study caring for families'), 'eternal-marriage-01': ('why-families-are-important.html', 'Study caring for families'), 'eternal-marriage-02': ('prayer-and-personal-revelation.html', 'Study prayer and revelation')})
+NON_CHRIST = {'prayer-04', 'look-unto-me-03', 'eternal-marriage-01', 'eternal-marriage-02'}
+# Fixed exact FIRST36 registration addition. Apply only after all36 are integrated.
+# Does not read expected values from the manifest under test.
+EXPECTED.update({'christian-identity-01': 'answers/are-latter-day-saints-christian.html', 'christian-identity-04': 'answers/are-latter-day-saints-christian.html', 'trials-01': 'answers/faith-in-jesus-christ-during-trials.html', 'trials-02': 'answers/faith-in-jesus-christ-during-trials.html', 'grief-03': 'answers/grief-and-faith.html', 'melchizedek-priesthood-01': 'answers/melchizedek-priesthood-restoration.html', 'christian-identity-02': 'answers/are-latter-day-saints-christian.html', 'christian-identity-03': 'answers/are-latter-day-saints-christian.html', 'trials-03': 'answers/faith-in-jesus-christ-during-trials.html', 'death-of-a-child-01': 'answers/death-of-a-child.html', 'death-of-a-child-02': 'answers/death-of-a-child.html', 'death-of-a-child-03': 'answers/death-of-a-child.html', 'grief-01': 'answers/grief-and-faith.html', 'grief-02': 'answers/grief-and-faith.html', 'divorce-and-faith-01': 'answers/divorce-and-faith.html', 'divorce-and-faith-02': 'answers/divorce-and-faith.html', 'divorce-and-faith-03': 'answers/divorce-and-faith.html', 'divorce-and-faith-04': 'answers/divorce-and-faith.html', 'divorce-and-faith-05': 'answers/divorce-and-faith.html', 'divorce-and-faith-06': 'answers/divorce-and-faith.html', 'divorce-and-faith-07': 'answers/divorce-and-faith.html', 'restored-church-01': 'answers/restored-church-of-jesus-christ.html', 'restored-church-02': 'answers/restored-church-of-jesus-christ.html', 'restored-church-03': 'answers/restored-church-of-jesus-christ.html', 'restored-church-04': 'answers/restored-church-of-jesus-christ.html', 'melchizedek-priesthood-03': 'answers/melchizedek-priesthood-restoration.html', 'melchizedek-priesthood-04': 'answers/melchizedek-priesthood-restoration.html', 'melchizedek-priesthood-05': 'answers/melchizedek-priesthood-restoration.html', 'melchizedek-priesthood-06': 'answers/melchizedek-priesthood-restoration.html', 'aaronic-priesthood-01': 'answers/aaronic-priesthood-restoration.html', 'aaronic-priesthood-02': 'answers/aaronic-priesthood-restoration.html', 'aaronic-priesthood-03': 'answers/aaronic-priesthood-restoration.html', 'aaronic-priesthood-04': 'answers/aaronic-priesthood-restoration.html', 'aaronic-priesthood-05': 'answers/aaronic-priesthood-restoration.html', 'aaronic-priesthood-06': 'answers/aaronic-priesthood-restoration.html', 'melchizedek-priesthood-02': 'answers/melchizedek-priesthood-restoration.html'})
+STUDIES.update({'christian-identity-01': ('jesus-christ-latter-day-saint-beliefs.html', 'Study belief in Jesus Christ'), 'christian-identity-04': ('jesus-christ-latter-day-saint-beliefs.html', 'Study belief in Jesus Christ'), 'trials-01': ('prayer-and-personal-revelation.html', 'Continue with prayer'), 'trials-02': ('prayer-and-personal-revelation.html', 'Continue with prayer'), 'grief-03': ('what-happens-after-death.html', 'Study hope beyond death'), 'melchizedek-priesthood-01': ('aaronic-priesthood-restoration.html', 'Study the Aaronic Priesthood'), 'christian-identity-02': ('jesus-christ-latter-day-saint-beliefs.html', 'Study belief in Jesus Christ'), 'christian-identity-03': ('jesus-christ-latter-day-saint-beliefs.html', 'Study belief in Jesus Christ'), 'trials-03': ('prayer-and-personal-revelation.html', 'Continue with prayer'), 'death-of-a-child-01': ('what-happens-after-death.html', 'Study hope beyond death'), 'death-of-a-child-02': ('what-happens-after-death.html', 'Study hope beyond death'), 'death-of-a-child-03': ('what-happens-after-death.html', 'Study hope beyond death'), 'grief-01': ('what-happens-after-death.html', 'Study hope beyond death'), 'grief-02': ('what-happens-after-death.html', 'Study hope beyond death'), 'divorce-and-faith-01': ('prayer-and-personal-revelation.html', 'Continue with prayer'), 'divorce-and-faith-02': ('prayer-and-personal-revelation.html', 'Continue with prayer'), 'divorce-and-faith-03': ('prayer-and-personal-revelation.html', 'Continue with prayer'), 'divorce-and-faith-04': ('prayer-and-personal-revelation.html', 'Continue with prayer'), 'divorce-and-faith-05': ('prayer-and-personal-revelation.html', 'Continue with prayer'), 'divorce-and-faith-06': ('prayer-and-personal-revelation.html', 'Continue with prayer'), 'divorce-and-faith-07': ('prayer-and-personal-revelation.html', 'Continue with prayer'), 'restored-church-01': ('bible-and-book-of-mormon-together.html', 'Study the scriptures together'), 'restored-church-02': ('bible-and-book-of-mormon-together.html', 'Study the scriptures together'), 'restored-church-03': ('bible-and-book-of-mormon-together.html', 'Study the scriptures together'), 'restored-church-04': ('bible-and-book-of-mormon-together.html', 'Study the scriptures together'), 'melchizedek-priesthood-03': ('aaronic-priesthood-restoration.html', 'Study the Aaronic Priesthood'), 'melchizedek-priesthood-04': ('aaronic-priesthood-restoration.html', 'Study the Aaronic Priesthood'), 'melchizedek-priesthood-05': ('aaronic-priesthood-restoration.html', 'Study the Aaronic Priesthood'), 'melchizedek-priesthood-06': ('aaronic-priesthood-restoration.html', 'Study the Aaronic Priesthood'), 'aaronic-priesthood-01': ('melchizedek-priesthood-restoration.html', 'Study the Melchizedek Priesthood'), 'aaronic-priesthood-02': ('melchizedek-priesthood-restoration.html', 'Study the Melchizedek Priesthood'), 'aaronic-priesthood-03': ('melchizedek-priesthood-restoration.html', 'Study the Melchizedek Priesthood'), 'aaronic-priesthood-04': ('melchizedek-priesthood-restoration.html', 'Study the Melchizedek Priesthood'), 'aaronic-priesthood-05': ('melchizedek-priesthood-restoration.html', 'Study the Melchizedek Priesthood'), 'aaronic-priesthood-06': ('melchizedek-priesthood-restoration.html', 'Study the Melchizedek Priesthood'), 'melchizedek-priesthood-02': ('aaronic-priesthood-restoration.html', 'Study the Aaronic Priesthood')})
+NON_CHRIST.update({'grief-03', 'restored-church-04'})
+
+def study_path(key):
+    from urllib.parse import urljoin
+    return urljoin(EXPECTED[key], STUDIES[key][0])
+
 def require(condition, message):
     if not condition:
         raise AssertionError('FIRST topic completion: ' + message)
@@ -108,11 +123,11 @@ def validate_record(root, record, evidence):
     require(record.get('route') == EXPECTED[key], key + ': wrong owning route')
     require((record.get('study'), record.get('study_label')) == STUDIES[key],
             key + ': onward study or label differs')
-    local(root, 'answers/' + record['study'])
+    local(root, study_path(key))
     require(record.get('asset') == PREFIX + key + '-full.webp', key + ': full asset differs')
     require(record.get('responsive') == PREFIX + key + '-960.webp', key + ': responsive asset differs')
     require(record.get('reviewed') is True, key + ': unreviewed')
-    require(type(record.get('christ')) is bool and record['christ'] == (key != 'prayer-04'),
+    require(type(record.get('christ')) is bool and record['christ'] == (key not in NON_CHRIST),
             key + ': Christ classification differs')
     require((record.get('width'), record.get('height')) == (1536, 1024), key + ': dimensions differ')
     for field in ('title', 'caption', 'alt', 'source_label'):
@@ -133,6 +148,12 @@ def validate_figure(root, page, figure, record):
     key = record['key']
     require(page.relative_to(root).as_posix() == record['route'], key + ': picture on wrong page')
     require(figure.tag == 'figure' and figure.has('fc-study-visual'), key + ': must be study figure')
+    require(not any(n.tag in ('figure', 'figcaption', 'article', 'a', 'p', 'button')
+                    or any(n.has(c) for c in ('fc-resource-card', 'fc-foundation-card',
+                                              'fc-marriage-era__copy', 'fc-study-visual', 'fc-study-grid',
+                                              'fc-study-lead', 'fc-study-media'))
+                    or (n.has('fc-study-feature') and not n.has('fc-study-feature--illustrated'))
+                    for n in ancestors(figure)), key + ': figure nested inside existing picture, caption or card')
     require(any(n.tag == 'main' for n in ancestors(figure)), key + ': figure outside main')
     require(not any(n.tag in ('dialog', 'template') or 'hidden' in n.attrs
                     or n.attrs.get('aria-hidden') == 'true' for n in [figure, *ancestors(figure)]),
@@ -153,7 +174,7 @@ def validate_figure(root, page, figure, record):
     require(anchor.attrs.get('data-topic-study') == record['study']
             and anchor.attrs.get('data-topic-study-label') == record['study_label'],
             key + ': onward study binding differs')
-    require(html_asset(root, page, anchor.attrs['data-topic-study']) == 'answers/' + STUDIES[key][0],
+    require(html_asset(root, page, anchor.attrs['data-topic-study']) == study_path(key),
             key + ': onward destination differs')
     images = [n for n in anchor.walk() if n.tag == 'img']
     require(len(images) == 1, key + ': requires exactly one responsive image')
@@ -183,8 +204,8 @@ def check(root=ROOT):
     root = Path(root).resolve()
     data = json.loads(local(root, MANIFEST).read_text(encoding='utf-8'))
     records = data.get('artworks', [])
-    require(isinstance(records, list) and len(records) == len(EXPECTED), 'exact ten records required')
-    require({r.get('key') for r in records} == set(EXPECTED), 'exact ten unique keys required')
+    require(isinstance(records, list) and len(records) == len(EXPECTED), 'exact registered records required')
+    require({r.get('key') for r in records} == set(EXPECTED), 'exact registered unique keys required')
     evidence = review_hashes(root, data)
     for record in records:
         validate_record(root, record, evidence)

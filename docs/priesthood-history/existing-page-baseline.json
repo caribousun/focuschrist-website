@@ -3,12 +3,12 @@
   "header_sha256": "106ccb36b34ab9d30814af38f4eafefc13a13731db5699fabeb1ca040e27f49f",
   "preserved_sections": {
     "begin-study": "8a1743d2b6ab90b3ee5e462f83618e319c7f1c4bdb3538fc7daeb5d2dc932285",
-    "melchizedek-priesthood-restoration": "59b6396a26a645a5c4024eab6ee209fc5154295753a22dd975b1b9d348098549",
+    "melchizedek-priesthood-restoration": "dd4d3fad7071f36b0a7546f0b99a4bdd58fe605497d1f93dfaafd2d634183043",
     "scripture-study": "f359c0329647de72b3cc0cc0f5fab43cd0bbe76fe9673e2c1581fdbd2363fcd3",
-    "service-study": "a5ef38099f4e8970500f029692d11f7504eda202f624eb29d6af8bf0842d77d8",
-    "guided-practice": "b7f1bd6245a3ea42f05dced401aed8fb5232c5cb6364ed3ce7dcc5453b75c065",
+    "service-study": "041bd29ecbcaeaf97137f705dc2ab13f4130c174f4adeb288ba767d5605c5dcb",
+    "guided-practice": "185167742d6fb7d86e80af683c9b91adc70be847f6e326c3cbab771d1559c031",
     "study-resources": "640c5f11ffc3be8614635fcaced18af5269541abec4316b182ccb5da3d8c0a3a",
-    "continue-study": "90d5d80ffc4d02bce6794080abf454583062df3354edb7ebe33b37c9a8298f37"
+    "continue-study": "378d73e04cb2c777655a0551c87d947ba00cdf9b2ce7c6e0b3b0d0e1300bea46"
   },
   "image_sources": [
     "../assets/page-art/focused-answers/melchizedek-records-960.webp",
@@ -21,5 +21,30 @@
     "../assets/page-art/focused-answers/melchizedek-listen-960.webp",
     "../assets/resources/focused-melchizedek-organization.jpg",
     "/assets/page-art/jesus-journey/modern-scripture-960.webp"
+  ],
+  "reviewed_successors": [
+    {
+      "candidate_head": "05e4cf4b0ae7e7c140e239bfa356aff39a53632a",
+      "page_sha256": "ca2eed90dd29a7916542de3cd480072eae72df822ccd6d5a93a36d4e1340a8b0",
+      "scope": "PR456: exact independently reviewed FIRST artwork additions and approved prose changes, including recipient-order uncertainty retained once in the historical discussion. Existing normalization rules, header, other sections and original image requirements remain unchanged.",
+      "section_hash_changes": {
+        "melchizedek-priesthood-restoration": {
+          "before": "59b6396a26a645a5c4024eab6ee209fc5154295753a22dd975b1b9d348098549",
+          "after": "dd4d3fad7071f36b0a7546f0b99a4bdd58fe605497d1f93dfaafd2d634183043"
+        },
+        "service-study": {
+          "before": "a5ef38099f4e8970500f029692d11f7504eda202f624eb29d6af8bf0842d77d8",
+          "after": "041bd29ecbcaeaf97137f705dc2ab13f4130c174f4adeb288ba767d5605c5dcb"
+        },
+        "guided-practice": {
+          "before": "b7f1bd6245a3ea42f05dced401aed8fb5232c5cb6364ed3ce7dcc5453b75c065",
+          "after": "185167742d6fb7d86e80af683c9b91adc70be847f6e326c3cbab771d1559c031"
+        },
+        "continue-study": {
+          "before": "90d5d80ffc4d02bce6794080abf454583062df3354edb7ebe33b37c9a8298f37",
+          "after": "378d73e04cb2c777655a0551c87d947ba00cdf9b2ce7c6e0b3b0d0e1300bea46"
+        }
+      }
+    }
   ]
 }

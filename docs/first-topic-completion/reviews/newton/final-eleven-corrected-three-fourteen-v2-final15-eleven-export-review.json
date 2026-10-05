@@ -1,0 +1,250 @@
+{
+  "reviewer": "Newton",
+  "decision": "PASS",
+  "export_record_sha256": "8b072706a9793630ca8445ca20ff42cf17fcca7d250ab975e436c4a33a7c2088",
+  "records": [
+    {
+      "key": "restored-church-01",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-candidates\\restored-church-01-original.png",
+      "source_sha256": "e6f100ac5afd3c46be2e0b58c5958987959dd9d38a190701b6b962e1523a9717",
+      "full_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\restored-church-01-full.webp",
+      "sha256": "95791de18fbd93fe2700cdd51cd0ac981ad857ac926de90d6414cf63f7507056",
+      "960_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\restored-church-01-960.webp",
+      "responsive_sha256": "8dda327736fe4748b42df83d1b04f2a45a7260d717fdedced7cd533b5b5d8689",
+      "reviewed": true,
+      "decision": "PASS",
+      "dimensions": {
+        "full_export_path": [
+          1536,
+          1024
+        ],
+        "960_export_path": [
+          960,
+          640
+        ]
+      },
+      "finding": "Personally viewed actual full and960 export pixels. Accepted source action, identity, gaze, visible anatomy, composition, healed marks where applicable and photographic detail preserved. No crop/stretch or visible export defect."
+    },
+    {
+      "key": "restored-church-02",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-candidates\\restored-church-02-original.png",
+      "source_sha256": "5669c131dbec2eb63d7cb8cb1bc53c9aab2f9396e0f0a0c8390e8d318463f6ca",
+      "full_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\restored-church-02-full.webp",
+      "sha256": "090a3a5f7b11d4d5008e2cff47ae392dd56c23ba2c5a6a06326adfb966aa8343",
+      "960_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\restored-church-02-960.webp",
+      "responsive_sha256": "a3198559f1b81cf783ea9836081d91aa0537058cdb3e79f2784e5c40521b48d0",
+      "reviewed": true,
+      "decision": "PASS",
+      "dimensions": {
+        "full_export_path": [
+          1536,
+          1024
+        ],
+        "960_export_path": [
+          960,
+          640
+        ]
+      },
+      "finding": "Personally viewed actual full and960 export pixels. Accepted source action, identity, gaze, visible anatomy, composition, healed marks where applicable and photographic detail preserved. No crop/stretch or visible export defect."
+    },
+    {
+      "key": "restored-church-04",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-candidates\\restored-church-04-original.png",
+      "source_sha256": "ebf81c6ae11212d9af6940854d785c34c8c01fc20cfe4e7805f7384cdf9a725c",
+      "full_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\restored-church-04-full.webp",
+      "sha256": "324bc6b3c6c2a44fc3b6e19bfc29c86b05fb9d2ec43b0082b790dd1808681bf4",
+      "960_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\restored-church-04-960.webp",
+      "responsive_sha256": "e89350e6fa5d93115a8e30a23fb1a52cdd4555b3b2bdf9ace39f1ef2d6d4e083",
+      "reviewed": true,
+      "decision": "PASS",
+      "dimensions": {
+        "full_export_path": [
+          1536,
+          1024
+        ],
+        "960_export_path": [
+          960,
+          640
+        ]
+      },
+      "finding": "Personally viewed actual full and960 export pixels. Accepted source action, identity, gaze, visible anatomy, composition, healed marks where applicable and photographic detail preserved. No crop/stretch or visible export defect."
+    },
+    {
+      "key": "melchizedek-priesthood-04",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-candidates\\melchizedek-priesthood-04-original.png",
+      "source_sha256": "aa269be2acc873add60ac7922072e12ff738af1e15a2932ca36bd79650d32bac",
+      "full_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\melchizedek-priesthood-04-full.webp",
+      "sha256": "b02e53880b42bd732f6af15c7e5d050f1339d522b90bbbeab8568491b1b1ccd1",
+      "960_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\melchizedek-priesthood-04-960.webp",
+      "responsive_sha256": "958b55529010765d12ce3a9c8149ef42d7c3ca644c8bb21fb5c18126b0fd294b",
+      "reviewed": true,
+      "decision": "PASS",
+      "dimensions": {
+        "full_export_path": [
+          1536,
+          1024
+        ],
+        "960_export_path": [
+          960,
+          640
+        ]
+      },
+      "finding": "Personally viewed actual full and960 export pixels. Accepted source action, identity, gaze, visible anatomy, composition, healed marks where applicable and photographic detail preserved. No crop/stretch or visible export defect."
+    },
+    {
+      "key": "melchizedek-priesthood-05",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-candidates\\melchizedek-priesthood-05-original.png",
+      "source_sha256": "31313623b392cb64bd51412589b5ea1b9c8992d3c716c42f2f6c76fd6407ae58",
+      "full_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\melchizedek-priesthood-05-full.webp",
+      "sha256": "96a4ad46cd1b6bb3059fdc1a8d8a9c795f1e8de30de3d94046163b0f2976d6cb",
+      "960_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\melchizedek-priesthood-05-960.webp",
+      "responsive_sha256": "72a339b1a0a4522b886727182c5a114f7dc79f2481955a9998e24893f9b58a88",
+      "reviewed": true,
+      "decision": "PASS",
+      "dimensions": {
+        "full_export_path": [
+          1536,
+          1024
+        ],
+        "960_export_path": [
+          960,
+          640
+        ]
+      },
+      "finding": "Personally viewed actual full and960 export pixels. Accepted source action, identity, gaze, visible anatomy, composition, healed marks where applicable and photographic detail preserved. No crop/stretch or visible export defect."
+    },
+    {
+      "key": "melchizedek-priesthood-06",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-candidates\\melchizedek-priesthood-06-original.png",
+      "source_sha256": "6cb5c4af5764f01b2f12992595c96ebd6b6fb19259859747eb999af5eee3e0f6",
+      "full_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\melchizedek-priesthood-06-full.webp",
+      "sha256": "915a4237f34c020de67720ec5fadc5117d6b021d3fc4ad058861c77dd198b636",
+      "960_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\melchizedek-priesthood-06-960.webp",
+      "responsive_sha256": "c0d4ce4bc208058a11eea1ab172caa6a72eb1116f160b7b443452adff5962c7d",
+      "reviewed": true,
+      "decision": "PASS",
+      "dimensions": {
+        "full_export_path": [
+          1536,
+          1024
+        ],
+        "960_export_path": [
+          960,
+          640
+        ]
+      },
+      "finding": "Personally viewed actual full and960 export pixels. Accepted source action, identity, gaze, visible anatomy, composition, healed marks where applicable and photographic detail preserved. No crop/stretch or visible export defect."
+    },
+    {
+      "key": "aaronic-priesthood-01",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-candidates\\aaronic-priesthood-01-original.png",
+      "source_sha256": "985ec969d237c75cccf60ba835cbfe157ca92ddb58518716980891642605c561",
+      "full_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\aaronic-priesthood-01-full.webp",
+      "sha256": "2daed34f7e0795ead889365b1dfe565a11cb4ff30e55c87ce100c70e760e4ae5",
+      "960_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\aaronic-priesthood-01-960.webp",
+      "responsive_sha256": "8a13acea97f9e9cd188ddac92cdf3ee88c901b36d8a92da02902ca54c381daba",
+      "reviewed": true,
+      "decision": "PASS",
+      "dimensions": {
+        "full_export_path": [
+          1536,
+          1024
+        ],
+        "960_export_path": [
+          960,
+          640
+        ]
+      },
+      "finding": "Personally viewed actual full and960 export pixels. Accepted source action, identity, gaze, visible anatomy, composition, healed marks where applicable and photographic detail preserved. No crop/stretch or visible export defect."
+    },
+    {
+      "key": "aaronic-priesthood-02",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-candidates\\aaronic-priesthood-02-original.png",
+      "source_sha256": "9bca859fda85235e6893488d4fdeaaa99a21b4ceddf679d46bfb5f056ac8c35c",
+      "full_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\aaronic-priesthood-02-full.webp",
+      "sha256": "9f29737968e08f328daff2345c9e8e9cdee370628ab0567b2bcd2af6b6cd7ec6",
+      "960_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\aaronic-priesthood-02-960.webp",
+      "responsive_sha256": "3bc6632164aef68668761186824c91646a53c30df2ef83275f420c239dbe065e",
+      "reviewed": true,
+      "decision": "PASS",
+      "dimensions": {
+        "full_export_path": [
+          1536,
+          1024
+        ],
+        "960_export_path": [
+          960,
+          640
+        ]
+      },
+      "finding": "Personally viewed actual full and960 export pixels. Accepted source action, identity, gaze, visible anatomy, composition, healed marks where applicable and photographic detail preserved. No crop/stretch or visible export defect."
+    },
+    {
+      "key": "aaronic-priesthood-03",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-candidates\\aaronic-priesthood-03-original.png",
+      "source_sha256": "c7dd4ab8d40b1b746ee87be51e2357638da947ece27511eee74a65054eb2f24e",
+      "full_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\aaronic-priesthood-03-full.webp",
+      "sha256": "7e0884cd39e3d572d8f6c75aade9b5d92b410348aa03eba34d0f4b6644d18824",
+      "960_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\aaronic-priesthood-03-960.webp",
+      "responsive_sha256": "ea67a54e599edb03370e634cfba157243aaf0570f1a96d7fc3f0ca3a6667942d",
+      "reviewed": true,
+      "decision": "PASS",
+      "dimensions": {
+        "full_export_path": [
+          1536,
+          1024
+        ],
+        "960_export_path": [
+          960,
+          640
+        ]
+      },
+      "finding": "Personally viewed actual full and960 export pixels. Accepted source action, identity, gaze, visible anatomy, composition, healed marks where applicable and photographic detail preserved. No crop/stretch or visible export defect."
+    },
+    {
+      "key": "aaronic-priesthood-04",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-candidates\\aaronic-priesthood-04-original.png",
+      "source_sha256": "8f080265be3c4a4b7d154e9241e378abf627506f853e977145299247012f0f35",
+      "full_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\aaronic-priesthood-04-full.webp",
+      "sha256": "512cce2a6d954adadb52f55c3614020d3f6acb35eafb11adb2574e6eb9aa79c1",
+      "960_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\aaronic-priesthood-04-960.webp",
+      "responsive_sha256": "61db579fe4252d33089252d05cada8e2aa72833d8a741724374c6bf93c6d899a",
+      "reviewed": true,
+      "decision": "PASS",
+      "dimensions": {
+        "full_export_path": [
+          1536,
+          1024
+        ],
+        "960_export_path": [
+          960,
+          640
+        ]
+      },
+      "finding": "Personally viewed actual full and960 export pixels. Accepted source action, identity, gaze, visible anatomy, composition, healed marks where applicable and photographic detail preserved. No crop/stretch or visible export defect."
+    },
+    {
+      "key": "aaronic-priesthood-06",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-candidates\\aaronic-priesthood-06-original.png",
+      "source_sha256": "99a651862c4b4484e3195858960c995be577afb6c95dea1fed37a3bee3b43661",
+      "full_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\aaronic-priesthood-06-full.webp",
+      "sha256": "ed62d448192aa9344e17954224cbd997e931c91020aca09dcb4b12243c6ddf94",
+      "960_export_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-05\\con\\work\\art-exports\\aaronic-priesthood-06-960.webp",
+      "responsive_sha256": "3ba6de64a8b6968368db5518894a69ab126c1666d38baec22893ed816655f426",
+      "reviewed": true,
+      "decision": "PASS",
+      "dimensions": {
+        "full_export_path": [
+          1536,
+          1024
+        ],
+        "960_export_path": [
+          960,
+          640
+        ]
+      },
+      "finding": "Personally viewed actual full and960 export pixels. Accepted source action, identity, gaze, visible anatomy, composition, healed marks where applicable and photographic detail preserved. No crop/stretch or visible export defect."
+    }
+  ],
+  "limits": "Four held originals excluded. Native/public/owner acceptance separate."
+}
