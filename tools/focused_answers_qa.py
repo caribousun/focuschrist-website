@@ -108,6 +108,8 @@ def check():
             if route == 'general-conference.html':
                 assert 'come-follow-me' not in hero.as_posix(), 'Conference opening still borrows Come, Follow Me artwork'
         except (AssertionError, StopIteration) as error: errors.append(str(error) or route+': opening absent')
+    from first_topic_completion_qa import check as check_first_topic_completion
+    first_review = check_first_topic_completion(ROOT)
     for route in NEW:
         page = ROOT/route; ns = pages[route]; ids = {n.attrs['id']: n for n in ns if 'id' in n.attrs}
         nav = next(n for n in ns if n.has('fc-study-nav'))
@@ -115,6 +117,10 @@ def check():
         assert len(stops) >= 7 and len(stops) == len(set(stops)), route+': seven distinct study stops required'
         assert all(s.startswith('#') and s[1:] in ids for s in stops), route+': invalid study stop'
         figures = [n for n in ns if n.tag == 'figure' and n.has('fc-study-visual')]
+        first_keys = {'first-'+r['key'] for r in first_review.values() if r['route'] == route}
+        first_figures = [n for n in figures if n.attrs.get('data-exclusive-artwork') in first_keys]
+        assert len(first_figures) == len(first_keys) and {n.attrs['data-exclusive-artwork'] for n in first_figures} == first_keys, route+': exact independently validated FIRST additions required'
+        figures = [n for n in figures if n.attrs.get('data-exclusive-artwork') not in first_keys]
         assert len(figures) == 5, route+': five focused supporting pictures required'
         assets = set()
         for figure in figures:
