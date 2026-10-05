@@ -74,7 +74,8 @@
       // These are approximate place locations: retain a nearby area view, never street-level precision.
       var targetZoom=distance<75000&&zoom>=8?Math.min(zoom,10):10;
       if(distance<25&&Math.abs(zoom-targetZoom)<.01)return;
-      if(immediate)map.setView(points[0],targetZoom,{animate:false});else map.flyTo(points[0],targetZoom,{duration:.6});
+      // A reset avoids Leaflet's truncated same-zoom pan offset in reduced motion.
+      if(immediate)map.setView(points[0],targetZoom,{animate:false,reset:true});else map.flyTo(points[0],targetZoom,{duration:.6});
     }else if(points.length){
       var options={padding:[30,30],maxZoom:10,animate:!immediate,duration:.8};
       if(immediate)map.fitBounds(L.latLngBounds(points),options);else map.flyToBounds(L.latLngBounds(points),options);
