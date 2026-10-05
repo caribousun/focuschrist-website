@@ -131,7 +131,7 @@ def build():
         out.append('<p class="joseph-life-reflection"><strong>Consider:</strong> '+esc(s['reflection'])+'</p></article>')
     c=data['closing'];out.append('<section id="life-remembrance" class="joseph-life-closing"><h3>'+esc(c['heading'])+'</h3>')
     out.extend('<p>'+esc(p)+'</p>' for p in c['paragraphs'])
-    out.extend(['<p class="joseph-life-source-note">'+esc(c['visitor_source_note'])+'</p>',sources(c),'<p class="joseph-life-reflection"><strong>Consider:</strong> '+esc(c['reflection'])+'</p></section></section>',END])
+    out.extend([sources(c),'<p class="joseph-life-reflection"><strong>Consider:</strong> '+esc(c['reflection'])+'</p></section></section>',END])
     block='\n'.join(out);path=ROOT/data['owning_page'];page=remove_unrelated_biography_cards(path.read_text(encoding='utf-8'))
     if START in page:
         a=page.index(START);b=page.index(END,a)+len(END);page=page[:a]+block+page[b:]
