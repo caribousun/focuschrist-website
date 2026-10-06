@@ -38,7 +38,7 @@ def check_structure(ns):
     assert 'holy-ghost-hero-1600.webp' in style and 'holy-ghost-hero-mobile.webp' in style
     assert any(n.has('fc-page-intro') for n in opening.walk())
     assert any(n.has('fc-scroll-cue') and n.attrs.get('href')=='#main-content' for n in opening.walk())
-    assert any(n.tag=='script' and n.attrs.get('src','').endswith('hero-details.js?v=20260927-plan-study-1') for n in ns)
+    assert any(n.tag=='script' and n.attrs.get('src','').endswith('hero-details.js?v=20261006-visible-art-1') for n in ns)
     main=next(n for n in ns if n.tag=='main')
     figures=[n for n in main.walk() if n.tag=='figure']
     assert len(figures)==16 and all(n.has('jj-art') and n.has('fc-study-visual') for n in figures)
