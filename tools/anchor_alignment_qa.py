@@ -18,6 +18,7 @@ PATTERN = re.compile(r'(scroll-margin-top\s*:\s*)([^;}]+)')
 SEARCH_HITBOX = b'.fc-search-result h2 a {display:inline-block;'
 SEARCH_PRIOR = b'.fc-search-result h2 a {'
 SEARCH_VERSION = '20260929-result-hitbox-1'
+ART_STUDY_NAV_VERSION = '20261006-static-study-nav-1'
 
 TOPIC_DESKTOP_APPENDIX = b'\n/* Owner-requested desktop parity with Home; approved phone opening rules stay intact. */\n@media(min-width:701px){\n body.fc-site.fc-topic-page .fc-topic-opening{min-height:0;grid-template-rows:auto auto;align-content:start}\n body.fc-site.fc-topic-page .fc-topic-opening .fc-visual-hero{height:auto!important;min-height:0!important;max-height:none!important;aspect-ratio:2048/684}\n}\n'
 TOPIC_DESKTOP_VERSION = "20260929-home-height-1"
@@ -118,6 +119,12 @@ def historical_style_bytes(data):
     if not record:
         return data
     text = data.decode('utf-8')
+    if record['path'] == 'art-study-enrichment.css':
+        current = r'(\.fc-art-study-page \.fc-study-nav \{\r?\n    position: )static;(\r?\n    top: )auto;(\r?\n    z-index: )auto;'
+        previous = r'\g<1>sticky;\g<2>74px;\g<3>8;'
+        text, count = re.subn(current, previous, text)
+        if count != 1:
+            return data
     if record['path'] == 'site-system.css':
         appendix = CONTRACT['shared_appendix']
         if not text.endswith(appendix):
@@ -182,7 +189,7 @@ def check():
         if rel.startswith(('tools/', 'work/', 'node_modules/', '.git/')):
             continue
         for filename, version in re.findall(r'([\w-]+\.css)\?v=([\w.-]+)', path.read_text(encoding='utf-8')):
-            expected = '20261004-joseph-heroes-1' if filename == 'joseph-smith-likeness.css' and rel in {'joseph-smith-likeness.html','joseph-smith-portrait-research.html'} else JOURNEY_PICKER_VERSION if filename == 'jesus-journey.css' else MOBILE_NAV_VERSION if filename == 'site-system.css' else SEARCH_VERSION if filename == 'site-search.css' else TOPIC_DESKTOP_VERSION if filename == 'topic-study-pages.css' else CONTRACT['version']
+            expected = ART_STUDY_NAV_VERSION if filename == 'art-study-enrichment.css' else '20261004-joseph-heroes-1' if filename == 'joseph-smith-likeness.css' and rel in {'joseph-smith-likeness.html','joseph-smith-portrait-research.html'} else JOURNEY_PICKER_VERSION if filename == 'jesus-journey.css' else MOBILE_NAV_VERSION if filename == 'site-system.css' else SEARCH_VERSION if filename == 'site-search.css' else TOPIC_DESKTOP_VERSION if filename == 'topic-study-pages.css' else CONTRACT['version']
             if filename in FILES and version != expected:
                 errors.append('Stale anchor stylesheet: ' + rel + ': ' + filename)
     return errors
