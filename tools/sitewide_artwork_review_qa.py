@@ -706,6 +706,14 @@ def main():
             check(all(prop in allowed_nav for prop in properties), 'Navigation fallback changes unexpected properties')
             check('fc-visual-hero' not in selector, 'Navigation fallback must not target a hero')
             continue
+        art_study_buffer = {
+            '.content-wrap.article.fc-art-study-page > :is(.breadcrumbs, .lede, .fc-study-nav)',
+            '.content-wrap.article.fc-art-study-page > section[id] > :is(header, h2, h3, p)',
+        }
+        if set(part.strip() for part in selector.split(',')) == art_study_buffer:
+            check(set(re.findall(r'([a-z-]+)\s*:', body)) <= {'margin-inline'},
+                  'Art-study buffer rule changes unexpected properties')
+            continue
         check(all('.fc-topic-unique-hero' in s for s in selector.split(',')),'Added CSS escapes scoped hero class: '+selector.strip())
         image_layer = all(part.strip().endswith('::before') for part in selector.split(','))
         dimensions = re.findall(r'(?<![\w-])(height|min-height|max-height|width|min-width|max-width|aspect-ratio|padding|margin)\s*:\s*([^;]+)', body)
