@@ -107,7 +107,8 @@ a:hover { color: #fff2dc; }
 
 /* Art-study prose needs a little breathing room inside the wider reading column.
    The figure and resource sections retain their existing full-width alignment. */
-.content-wrap.article:has(> figure) > :is(.breadcrumbs, .lede, .fc-study-nav, h2, p:not(.lede)) {
+.content-wrap.article.fc-art-study-page > :is(.breadcrumbs, .lede, .fc-study-nav),
+.content-wrap.article.fc-art-study-page > section[id] > :is(header, h2, h3, p) {
     margin-inline: clamp(10px, 2.2vw, 24px);
 }
 
