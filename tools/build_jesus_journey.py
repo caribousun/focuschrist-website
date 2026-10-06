@@ -105,7 +105,7 @@ def render(page,registry,strict):
     footer=re.search(r'<footer.*?</footer>',source,re.S).group(0).replace('href="../','href="/')
     crumbs=[('/answers.html','Answers'),(PARENT,'Jesus Christ')]+page.get('ancestors',[])
     breadcrumb=""  # Owner removed visible pathway trails; themed parent returns remain.
-    css=['answer-styles.css?v=20260909-warm','site-system.css?v=20261005-mobile-study-rows-1','site-header.css?v=20260926-toolbar-readability-1','connected-study.css?v=20260927-anchor-alignment-1','full-image-viewer.css?v=20260905-viewport','artwork-details.css?v=20260909-warm','artwork-actions.css?v=20261004-explicit-grid-1','topic-artwork-details.css?v=20260927-anchor-alignment-1','resource-cards.css?v=20260927-anchor-alignment-1','site-search.css?v=20260929-result-hitbox-1','jesus-journey.css?v=20261004-chapter-picker-center-1']
+    css=['answer-styles.css?v=20261005-centered-pill-labels-1','site-system.css?v=20261005-mobile-study-rows-1','site-header.css?v=20260926-toolbar-readability-1','connected-study.css?v=20260927-anchor-alignment-1','full-image-viewer.css?v=20260905-viewport','artwork-details.css?v=20260909-warm','artwork-actions.css?v=20261004-explicit-grid-1','topic-artwork-details.css?v=20260927-anchor-alignment-1','resource-cards.css?v=20260927-anchor-alignment-1','site-search.css?v=20260929-result-hitbox-1','jesus-journey.css?v=20261004-chapter-picker-center-1']
     head=''.join(f'<link rel="stylesheet" href="/{x}">' for x in css)
     url=ORIGIN+page['url']
     page_art=[registry[b['art']] for s in page['sections'] for b in s.get('blocks',[]) if isinstance(b,dict) and 'art' in b and b['art'] in registry and registry[b['art']].get('asset') and registry[b['art']].get('reviewed')]

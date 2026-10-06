@@ -115,7 +115,10 @@ a:hover { color: #fff2dc; }
 
 .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
 .cta {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     padding: 12px 20px;
     border-radius: 999px;
     border: 1px solid var(--fc-action);

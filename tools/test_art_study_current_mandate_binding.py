@@ -25,6 +25,9 @@ class ExactFeaturedBinding(unittest.TestCase):
                 self.assertTrue(mandate.reviewed_page_binding(BytesPage(old), route, expected))
                 mutations = {
                     'body': raw + b'changed',
+                    'duplicate_answer': raw + mandate.CURRENT_ANSWER_STYLE,
+                    'mixed_answer': raw + mandate.OLD_ANSWER_STYLE,
+                    'unknown_answer_version': raw.replace(mandate.CURRENT_ANSWER_STYLE, b'answer-styles.css?v=unknown'),
                     'whitespace': raw + b' ',
                     'duplicate_current_link': raw + mandate.CURRENT_SHARED_STYLE,
                     'old_and_current': raw + mandate.OLD_SHARED_STYLE,

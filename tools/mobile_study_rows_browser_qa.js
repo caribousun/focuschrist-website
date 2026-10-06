@@ -13,6 +13,11 @@ function inspectMobileStudyRows(selector){
    if((innerWidth<=700||nav.matches('.fc-study-nav,.cfm-jump,.gc-jumps,.atonement-path'))&&r.height<43.5)issues.push(`group${index}: target below44`);
    if(r.left<left-1||r.right>right+1)issues.push(`group${index}: control containment`);
    if(a.scrollWidth>a.clientWidth+1||a.scrollHeight>a.clientHeight+1)issues.push(`group${index}: label clipped`);
+   if(a.matches('.cta-row > .cta')){
+    const style=getComputedStyle(a);
+    if(!['flex','inline-flex'].includes(style.display)||style.alignItems!=='center'||style.justifyContent!=='center')issues.push(`group${index}: CTA content not centered on both axes`);
+    if(style.textAlign!=='center')issues.push(`group${index}: CTA wrapped text not centered`);
+   }
   }
   if(innerWidth<=700){
    if(cs.display!=='grid')issues.push(`group${index}: mobile grid missing`);
@@ -53,5 +58,9 @@ module.exports=async function(page,origin){
  if(!hiddenNegative.issues.includes('mobile introduction disappeared'))throw Error('Disappearing introduction fixture did not fail');
  await page.goto(origin+'/atonement.html',{waitUntil:'load'});await page.evaluate(()=>document.fonts.ready);
  const oddBroken=await page.addStyleTag({content:'body.fc-site .atonement-path>a:last-child{grid-column:auto!important}'});const oddNegative=await page.evaluate(inspectMobileStudyRows,selector);await oddBroken.evaluate(n=>n.remove());if(!oddNegative.issues.some(x=>x.includes('incomplete row')))throw Error('Atonement partial final-row fixture did not fail');
- return {consumers,cases:results.length,results,negative:negative.issues,oddNegative:oddNegative.issues,failures:results.filter(x=>x.issues.length)};
+ await page.goto(origin+'/answers/faith-in-jesus-christ-during-trials.html',{waitUntil:'load'});await page.evaluate(()=>document.fonts.ready);
+ const ctaBroken=await page.addStyleTag({content:'body.fc-site .cta-row > .cta{text-align:left!important;align-items:flex-start!important;justify-content:flex-start!important}'});
+ const ctaNegative=await page.evaluate(inspectMobileStudyRows,selector);await ctaBroken.evaluate(n=>n.remove());
+ if(!ctaNegative.issues.some(x=>x.includes('CTA content not centered on both axes'))||!ctaNegative.issues.some(x=>x.includes('CTA wrapped text not centered')))throw Error('Top/left CTA content fixture did not fail');
+ return {consumers,cases:results.length,results,negative:negative.issues,oddNegative:oddNegative.issues,ctaNegative:ctaNegative.issues,failures:results.filter(x=>x.issues.length)};
 };
