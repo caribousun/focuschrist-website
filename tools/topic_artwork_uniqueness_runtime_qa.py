@@ -94,6 +94,39 @@ class ExclusivityTests(unittest.TestCase):
         (self.root/'index.html').write_text('<script src="main.js"></script>')
         self.assertEqual(self.result()['exclusiveCount'],4)
 
+    def hero_registry(self, route='/answers/a.html', suffix=''):
+        rule = {'route':route, 'selector':'a[data-hero-viewer]', 'original':'/assets/a-0-800.webp',
+                'alternates':['/assets/a-0-800.webp'],
+                'versions':{'phone':'/assets/a-0-800.webp','wide':'/assets/a-0-800.webp'}}
+        (self.root/'hero-image-source.js').write_text('const SOURCE_RULES = '+json.dumps([rule])+';'+suffix)
+        (self.root/'index.html').write_text('<script src="hero-image-source.js"></script>')
+        self.study.write_text(self.page('a','../')+'<script src="../hero-image-source.js"></script>')
+
+    def test_hero_registry_attributes_only_owning_route(self):
+        self.hero_registry()
+        self.assertEqual(self.result()['exclusiveCount'],5)
+
+    def test_hero_registry_other_route_is_still_duplicate(self):
+        self.hero_registry('/index.html')
+        self.assertEqual(self.result()['exclusiveCount'],4)
+
+    def test_hero_registry_does_not_hide_other_script_literals(self):
+        self.hero_registry(suffix='image.src="/assets/a-0-800.webp";')
+        self.assertEqual(self.result()['exclusiveCount'],4)
+
+    def test_hero_registry_does_not_hide_other_markup(self):
+        self.hero_registry()
+        with (self.root/'index.html').open('a') as handle:handle.write('<img src="assets/a-0-800.webp">')
+        self.assertEqual(self.result()['exclusiveCount'],4)
+
+    def test_hero_registry_malformed_or_duplicate_fails_closed(self):
+        self.hero_registry()
+        for source in ['const SOURCE_RULES = nope;', 'const SOURCE_RULES = [];',
+                       'const SOURCE_RULES = [{}];', 'const SOURCE_RULES = []; const SOURCE_RULES = [];']:
+            with self.subTest(source=source):
+                (self.root/'hero-image-source.js').write_text(source)
+                with self.assertRaises(ValueError):self.result()
+
     def test_linked_caption_prose_is_preserved(self):
         self.study.write_text(self.page('a','../').replace('Distinct contextual image 0','<p>Study <a href="https://example.org">John 1</a> with care.</p>'))
         self.assertIn('with care.',self.result()['figures'][0]['description'])
