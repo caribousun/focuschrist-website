@@ -140,6 +140,69 @@ class Tags(HTMLParser):
         super().__init__(); self.tags=[]; self.feed(text)
     def handle_starttag(self, tag, attrs): self.tags.append((tag,dict(attrs)))
 
+# The owner-reviewed viewer toolbar is separate from page hero geometry. Bind
+# the entire stylesheet and every existing HTML load (including old tokens on
+# unchanged routes), rather than exempting a selector family or future CSS.
+VIEWER_STYLE = 'full-image-viewer.css'
+VIEWER_STYLE_SHA256 = '4b9ef916d16d145ed2f3eba09b9384544ddab48e94eaf42639ffcb4c4eaf6ae1'
+VIEWER_BINDINGS_SHA256 = '80c69e840009017e883bd7efbd19669c3386ecd1e3923ed3db0e3d0645f46632'
+
+def reviewed_viewer_style(data):
+    return hashlib.sha256(data).hexdigest() == VIEWER_STYLE_SHA256
+
+def viewer_bindings(sources):
+    bindings = {}
+    for relative, text in sources.items():
+        if 'full-image-viewer.' not in text:
+            continue
+        if not relative.endswith('.html'):
+            return None
+        refs = []
+        for tag, attrs in Tags(text).tags:
+            ref = attrs.get('href' if tag == 'link' else 'src', '')
+            if 'full-image-viewer.' not in ref:
+                continue
+            if not ((tag == 'link' and attrs.get('rel') == 'stylesheet') or tag == 'script'):
+                return None
+            refs.append([tag, attrs])
+        # Also reject extra inline loaders/imports, comments and duplicate refs.
+        if len(refs) != text.count('full-image-viewer.'):
+            return None
+        bindings[relative] = refs
+    return bindings
+
+def reviewed_viewer_bindings(bindings):
+    return bindings is not None and hashlib.sha256(
+        json.dumps(bindings, sort_keys=True, separators=(',', ':')).encode()
+    ).hexdigest() == VIEWER_BINDINGS_SHA256
+
+def visitor_viewer_sources():
+    return {p.relative_to(ROOT).as_posix(): p.read_text(encoding='utf8')
+            for pattern in ('*.html', '*.css', '*.js') for p in ROOT.rglob(pattern)
+            if not set(p.relative_to(ROOT).parts) & {'tools', '.git', 'node_modules', 'focuschrist-repo'}}
+
+def viewer_self_test():
+    data = (ROOT/VIEWER_STYLE).read_bytes()
+    assert reviewed_viewer_style(data)
+    assert not reviewed_viewer_style(data + b'\n.fc-topic-unique-hero{height:9px}')
+    assert not reviewed_viewer_style(data.replace(b'object-fit: contain', b'object-fit: cover'))
+    assert not reviewed_viewer_style(data.replace(b'.fc-full-image-tools {', b'body {'))
+    sources = visitor_viewer_sources()
+    bindings = viewer_bindings(sources)
+    assert reviewed_viewer_bindings(bindings)
+    owner = 'art-study/be-still.html'
+    for modified in (
+        sources[owner].replace('20261006-versions-1', 'unknown'),
+        sources[owner].replace('full-image-viewer.css', 'missing.css'),
+        sources[owner] + '<link rel="stylesheet" href="../full-image-viewer.css?v=20261006-versions-1">',
+        sources[owner].replace('rel="stylesheet" href="../full-image-viewer.css', 'rel="preload" href="../full-image-viewer.css'),
+    ):
+        assert not reviewed_viewer_bindings(viewer_bindings(dict(sources, **{owner: modified})))
+    assert not reviewed_viewer_bindings(viewer_bindings(dict(sources, **{'unexpected.html': sources[owner]})))
+    for name, content in [('shared.css', '@import "full-image-viewer.css";'),
+                          ('shared.js', 'load("full-image-viewer.css")')]:
+        assert not reviewed_viewer_bindings(viewer_bindings(dict(sources, **{name: content})))
+
 # Exact narrow title/mini-card appendices. Search base additionally includes the
 # independently reviewed intrinsic trigger width, nowrap label and fixed-size icon;
 # M063 removes only the mobile title/second-row rules, retaining the first-row grid.
@@ -265,6 +328,7 @@ def main():
     ap=argparse.ArgumentParser();ap.add_argument('--self-test',action='store_true');ap.add_argument('--baseline-report');args=ap.parse_args()
     composition_check()
     if args.self_test:
+        viewer_self_test()
         marriage=(ROOT/'eternal-marriage-study.css').read_bytes()
         assert reviewed_marriage_body_style(marriage)
         assert not reviewed_marriage_body_style(marriage+b'\n.fc-topic-unique-hero{height:9px}')
@@ -609,6 +673,9 @@ def main():
     marriage_owners={p.relative_to(ROOT).as_posix() for p in ROOT.rglob('*.html') if 'eternal-marriage-study.css' in p.read_text(encoding='utf-8') and not set(p.parts)&{'tools','.git','node_modules'}}
     check(marriage_owners=={'answers/what-is-eternal-marriage.html'}, 'Marriage stylesheet escaped its single owner')
     excluded_styles={MISSION_ENRICHMENT_STYLE,WATCH_SHORTS_STYLE,'missionary.css',HOME_STYLE,'focused-answers.css',tool_style,bom_style,pioneer_style,pioneer_ask_style,settle_style,row_style,BIBLE_STYLE,JOURNEY_STYLE,'site-system.css','site-header.css','study-navigation.css'}
+    check(reviewed_viewer_style((ROOT/VIEWER_STYLE).read_bytes()), 'Full-image viewer stylesheet differs from exact reviewed bytes')
+    check(reviewed_viewer_bindings(viewer_bindings(visitor_viewer_sources())), 'Full-image viewer consumer references differ from exact reviewed bindings')
+    excluded_styles.add(VIEWER_STYLE)
     picture_pill_bytes = (ROOT/'artwork-actions.css').read_bytes()
     check(reviewed_picture_pill_style(picture_pill_bytes), 'Picture source pills differ from exact scoped reviewed change')
     check(not reviewed_picture_pill_style(picture_pill_bytes.replace(b'999px;', b'10px;', 1)), 'Picture pill radius mutation escaped')
