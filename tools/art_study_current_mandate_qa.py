@@ -23,6 +23,8 @@ MINIMUM = 10
 REVIEWED_PAGE_HASHES = {'art-study/be-still.html': 'ed90acad612bc12e0008d498a37f3f8d2a9b27e068212bec475555ee5a723423', 'art-study/suffer-the-little-children.html': '4d2dfed3b3443118c8908736b3048a410b2e80217509e42465ee8894a7ca10d2', 'art-study/the-good-shepherd.html': '5fe506ab086c140fef457e9f53f3b3cc5a54ee0711885e4a72144a4cd689cf55', 'art-study/the-living-christ.html': '1c1c6310ec7469244b87d4cdc7c79086a93c945b237346d2341132532a05c83b'}
 OLD_SHARED_STYLE = b'<link rel="stylesheet" href="../site-system.css?v=20260930-study-alignment-1">'
 CURRENT_SHARED_STYLE = b'<link rel="stylesheet" href="../site-system.css?v=20261005-mobile-study-rows-1">'
+OLD_ANSWER_STYLE = b'answer-styles.css?v=20260909-warm'
+CURRENT_ANSWER_STYLE = b'answer-styles.css?v=20261005-centered-pill-labels-1'
 
 
 def reviewed_page_binding(page, route, expected):
@@ -31,9 +33,15 @@ def reviewed_page_binding(page, route, expected):
         return True
     if expected != REVIEWED_PAGE_HASHES.get(route):
         return False
-    if raw.count(CURRENT_SHARED_STYLE) != 1 or OLD_SHARED_STYLE in raw:
-        return False
-    inverse = raw.replace(CURRENT_SHARED_STYLE, OLD_SHARED_STYLE, 1)
+    inverse = raw
+    if CURRENT_ANSWER_STYLE in inverse:
+        if inverse.count(CURRENT_ANSWER_STYLE) != 1 or OLD_ANSWER_STYLE in inverse:
+            return False
+        inverse = inverse.replace(CURRENT_ANSWER_STYLE, OLD_ANSWER_STYLE, 1)
+    if CURRENT_SHARED_STYLE in inverse:
+        if inverse.count(CURRENT_SHARED_STYLE) != 1 or OLD_SHARED_STYLE in inverse:
+            return False
+        inverse = inverse.replace(CURRENT_SHARED_STYLE, OLD_SHARED_STYLE, 1)
     return hashlib.sha256(inverse).hexdigest() == expected
 
 
