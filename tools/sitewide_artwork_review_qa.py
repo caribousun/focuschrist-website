@@ -224,7 +224,7 @@ SCOPED_INTERFACE_STYLES = {
     'joseph-family-life.css': ('af4eac66d90a94a370010dae71cd4e0d2430fd07a049ce0ce7d253454c249a2f', 'answers/who-was-joseph-smith.html'),
     # Owner-requested Joseph research reading panels, independently reviewed on
     # desktop/phone. Exact bytes and two Joseph page owners; no hero-rule exemption.
-    'joseph-smith-research.css': ('6a353c403a6b917ce7fccd5f9bc097a61460b913b76f95905ce12ce2e2da4277', 'joseph-smith-likeness.html'),
+    'joseph-smith-research.css': ('06f8ab7a6cd28c16a2bc3de1304a2ff9a1a93c7434975766526f2675ce04f218', 'joseph-smith-likeness.html'),
     # Newton source-reviewed hub-only CSS; hosted geometry and owner acceptance remain separate.
     'timeline.css': ('5aefac78e15d324cb4f5a9b44c5f0a1bdb26d951f4e7b5078569be67103048d1', 'timeline.html'),
     # Owner-directed Church-source history, independently reviewed 2026-09-30.
@@ -260,7 +260,7 @@ OWNER_20260929_STYLES = {
 
     # Dynamically loaded only by the shared footer controller; all125 public contexts tested.
     'footer-navigation.css': ('3713562b2415f8b31394b46767204330777f021887621b4b7eaeae5ff1c22fee', []),
-    'history-stories.css': ('baca93e6f290b179727fbdfa12fbafad586a20647bb4ef7d9e7ec59d20ceca1d', ['history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html']),
+    'history-stories.css': ('7afc257960c5d327cddd944c7a29c60223b13aaf8d670abd6a6a8a9af2943675', ['history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html']),
     # Owner-requested39-picture final-row balance, Fermi rendered ten widths; Newton source review.
     'art-opening.css': ('f1457bb255b14b98e122d485760d548d4802374b0e00005c05e5292bc87d6e34', ['art.html']),
     'art-experience.css': ('ef21dea3b87e8b3e59454aba32726210a783d87d556928201ef375a3627b1c74', ['art.html']),
@@ -307,6 +307,27 @@ def scoped_interface_reference_allowed(name, relative, text):
     joseph_research_owner = name == 'joseph-smith-research.css' and relative == 'joseph-smith-portrait-research.html'
     return relative==SCOPED_INTERFACE_STYLES[name][1] or joseph_research_owner or name not in text
 
+RELEASE_STYLE_BINDINGS = {
+    'joseph-smith-research.css': ({'joseph-smith-likeness.html', 'joseph-smith-portrait-research.html'}, 'joseph-smith-research.css?v=20261006-research-compositions-2'),
+    'history-stories.css': ({'history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html'}, '../history-stories.css?v=20261006-history-intro-fit-1'),
+}
+
+def release_style_binding_allowed(name, page, tags):
+    owners, expected = RELEASE_STYLE_BINDINGS[name]
+    refs = [a.get('href', '') for t, a in tags if t == 'link' and a.get('rel') == 'stylesheet' and name in a.get('href', '')]
+    return refs == ([expected] if page in owners else [])
+
+def release_style_binding_self_test():
+    for name, (owners, expected) in RELEASE_STYLE_BINDINGS.items():
+        tags = lambda refs: [('link', {'rel': 'stylesheet', 'href': ref}) for ref in refs]
+        for page in owners:
+            assert release_style_binding_allowed(name, page, tags([expected]))
+            stale = expected.split('?')[0] + '?v=stale'
+            for refs in ([], [stale], [expected + '-unknown'], [expected.split('?')[0]], [expected, expected], [expected, stale], ['wrong/' + expected]):
+                assert not release_style_binding_allowed(name, page, tags(refs)), (page, refs)
+        assert release_style_binding_allowed(name, 'index.html', [])
+        assert not release_style_binding_allowed(name, 'index.html', tags([expected]))
+
 def reviewed_toolbar_style(name, data):
     data = historical_style_bytes(data)
     return name in TOOLBAR_STYLE_SHA256 and hashlib.sha256(data).hexdigest() == TOOLBAR_STYLE_SHA256[name]
@@ -333,6 +354,7 @@ def main():
     ap=argparse.ArgumentParser();ap.add_argument('--self-test',action='store_true');ap.add_argument('--baseline-report');args=ap.parse_args()
     composition_check()
     if args.self_test:
+        release_style_binding_self_test()
         nav_css = (ROOT/'answer-styles.css').read_bytes()
         nav_selector = '.content-wrap.article.fc-art-study-page > .fc-study-nav'
         assert reviewed_art_nav_width(nav_selector, 'width: auto;', nav_css)
@@ -504,6 +526,8 @@ def main():
         check((ROOT/page).is_file(),'Missing canonical page '+page)
         if not (ROOT/page).is_file():continue
         parsed[page]=Tags((ROOT/page).read_text(encoding='utf8'))
+        for name in RELEASE_STYLE_BINDINGS:
+            check(release_style_binding_allowed(name, page, parsed[page].tags), page + ': exact reviewed stylesheet owner/version required for ' + name)
         check(any(t=='link' and a.get('rel')=='canonical' for t,a in parsed[page].tags),'Missing canonical link '+page)
     manifest_path=ROOT/'docs/sitewide-artwork-review.json'
     if not manifest_path.exists(): errors.append('Reviewed image manifest missing; incomplete review cannot pass'); heroes=[]

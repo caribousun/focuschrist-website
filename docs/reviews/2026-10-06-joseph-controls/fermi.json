@@ -1,0 +1,47 @@
+{
+  "reviewer": "Fermi",
+  "date": "2026-10-06",
+  "status": "CONCUR_SCOPED_SOURCE_PDF_AND_RENDERED_CORRECTIONS",
+  "previous_source_html_sha256": "9037814142751308e6126dffb100fb13630bb6a6cc0551e72bbe53119f6b5580",
+  "current_source_html_sha256": "5e5c56a3e30e6c660117d10377481a4dc8378acac5145cef2926bc65432c9d09",
+  "stylesheet_sha256": "06f8ab7a6cd28c16a2bc3de1304a2ff9a1a93c7434975766526f2675ce04f218",
+  "pdf_sha256": "109bacb657025cd2f4dcc98b29ca98e97afb97bc8b1b15d5d5a1d460006b2946",
+  "pdf_rebuilt": false,
+  "pdf_bytes_unchanged": true,
+  "exact_single_html_cache_inverse": true,
+  "exact_single_css_background_removal": true,
+  "mandates_read": [
+    "live Master protected foundation and Focus warm prose/efficiency/concurrence",
+    "live current00B/Focus",
+    "AGENTS.md",
+    "SOUL.md",
+    "USER.md",
+    "BRAIN-LOCATION.md",
+    "docs/section-panel-design-mandate.md",
+    "docs/focuschrist-enrichment-and-stewardship-prompt.md",
+    "docs/layout-geometry-execution.md"
+  ],
+  "screenshots": {
+    "eleazer-miller-200-scroll.png": "b6ecb86fa5efccb62c866e282e084ad653e83ab32295de04b43b013e38a8b4cd",
+    "eleazer-miller-phone.png": "4d9fded9e84bfbfc5251724549541a779ab4911ef601556c5b22a3132c00b36e",
+    "john-rowe-moyle-200-scroll.png": "b22527d70f391bfa5a96aac44d3784da1e361085858abdf0560dfbd2817b4384",
+    "john-rowe-moyle-phone.png": "b98e7c05f3a5b8b038ffd37c19b473ae3835b90e8808fac645a484d7c16b14af",
+    "john-tanner-200-scroll.png": "259250f453927dd5d638ac89c6a25d836aecdd8faf675f89b9cdd9a0fc7f47f1",
+    "john-tanner-phone.png": "2403b68c8ed459d5c916bcf3fb1d0899fd69f985d991468d7e081cd9b154f7ff",
+    "joseph-controls-1280.png": "2aae62ba85c32b4fded394bae5e91598bd6d1330b234c6794e60f5b922639489",
+    "joseph-controls-412.png": "3d09cfafa4433d0dd93643fa6318c0811542dcc35769bf17ac6d84ba51d12e05"
+  },
+  "root_behavioral_receipts": {
+    "history-phone.json": "6ff6c81f9fc0e92d700764526deb9f661e91626b76ab147a4aff8c957f710f65",
+    "history-scroll.json": "aa853b40e7454a0850c66255f9bd17bf7fddfe7725c0c8e216fef91b81f13b2b"
+  },
+  "pixel_review": "Personally inspected Joseph desktop1280/phone412 and all three history phone412 and enlarged1280 destination captures. No dark wrapper; controls readable/separated. History phone Continue visible with approximately20px inset and all opening copy. Enlarged destination prose and Begin/Explore controls readable below fixed header. Actual clicking and measurements performed by root; not independent reviewer interaction.",
+  "source_review": "Desktop-only gap4 retains phone/layout/type/art/text; exact five stylesheet owners and singleton hrefs enforced in production by RELEASE_STYLE_BINDINGS. Same helper selftest rejects35 owner negative fixtures and2 unrelated-owner fixtures, valid owner/nonowner controls accepted. Independently executed sitewide artwork self-test successfully.",
+  "pdf_compatibility": "Exact single cache-token reversal recovers previously reviewed research HTML. Therefore PDF input markup unchanged. Independently verified frozen PDF SHA; Newton fresh executable PDF QA cross-reviewed. Prior PDF pixel receipts reused by exact frozen bytes.",
+  "reciprocal": "Read Newton supplemental-joseph-compatibility.json; concur with independent source/PDF/mode-control findings.",
+  "limits": [
+    "No full-tree or final manifest concurrence in this receipt",
+    "No CI/deployment/public-byte/owner-aesthetic or whole-site acceptance",
+    "Preserve later queued art spacing/desktop uniformity scope"
+  ]
+}

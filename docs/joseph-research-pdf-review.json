@@ -1,5 +1,5 @@
 {
-  "source_html_sha256": "9037814142751308e6126dffb100fb13630bb6a6cc0551e72bbe53119f6b5580",
+  "source_html_sha256": "5e5c56a3e30e6c660117d10377481a4dc8378acac5145cef2926bc65432c9d09",
   "pdf_sha256": "109bacb657025cd2f4dcc98b29ca98e97afb97bc8b1b15d5d5a1d460006b2946",
   "pages": 47,
   "sections": 15,
@@ -108,5 +108,25 @@
         "sha256": "0cf96ee52ab31769bb3f8c2b779490682b30308cb13ae6fee8975d9cd41f7d2e"
       }
     }
+  },
+  "mode_control_stylesheet_source_compatibility": {
+    "previous_source_html_sha256": "9037814142751308e6126dffb100fb13630bb6a6cc0551e72bbe53119f6b5580",
+    "current_source_html_sha256": "5e5c56a3e30e6c660117d10377481a4dc8378acac5145cef2926bc65432c9d09",
+    "stylesheet_sha256": "06f8ab7a6cd28c16a2bc3de1304a2ff9a1a93c7434975766526f2675ce04f218",
+    "change": "One exact browser stylesheet cache token change; stylesheet removes only the reading-mode wrapper background. Exact token inverse restores prior reviewed HTML; body, manuscript, artwork and PDF inputs are unchanged.",
+    "pdf_rebuilt": false,
+    "pdf_bytes_unchanged": true,
+    "pdf_sha256": "109bacb657025cd2f4dcc98b29ca98e97afb97bc8b1b15d5d5a1d460006b2946",
+    "reviewers": {
+      "Fermi": {
+        "receipt": "docs/reviews/2026-10-06-joseph-controls/fermi.json",
+        "sha256": "48b56fe4e10e2fc0b696037baa52799f20010489a1f72596c3f6f2c3cf188b38"
+      },
+      "Newton": {
+        "receipt": "docs/reviews/2026-10-06-joseph-controls/newton.json",
+        "sha256": "de14f2fcb3970024544fdad3688eddc1f1f65b16300a1472c267de4205bde8a7"
+      }
+    },
+    "limits": "Prior PDF pixel reviews remain bound to identical bytes; browser mode-control pixels and interactions reviewed separately. No owner aesthetic or whole-site acceptance implied."
   }
 }

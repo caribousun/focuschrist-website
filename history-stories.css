@@ -49,3 +49,8 @@
 
 /* Direct gallery/story picture links clear the sticky navigation at enlarged text sizes. */
 .fc-life-story main figure[id^="picture-"] { scroll-margin-top: calc(max(52px, 3.25rem) + 24px); }
+
+/* Preserve the introductory sentence and Continue inset on short desktops. */
+@media (min-width: 701px) {
+  body.fc-site.fc-life-story .fc-life-opening[data-unified-opening][data-unified-opening][data-unified-opening] { gap: 4px !important; }
+}

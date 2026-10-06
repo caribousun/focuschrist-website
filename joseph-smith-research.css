@@ -111,7 +111,7 @@
  .joseph-research .research-opening-links a { font-size:.82rem; }
 }
 
-.joseph-research > .research-mode-switch { position:relative; width:fit-content; max-width:100%; margin:0 auto; padding:8px 12px; border-radius:var(--fc-radius); background:var(--fc-bg,#14303b); box-sizing:border-box; }
+.joseph-research > .research-mode-switch { position:relative; width:fit-content; max-width:100%; margin:0 auto; padding:8px 12px; border-radius:var(--fc-radius); box-sizing:border-box; }
 @media(max-width:430px) { .joseph-research > .research-mode-switch { width:100%; padding-inline:0; } }
 
 .joseph-research [id] { scroll-margin-top:var(--fc-anchor-offset,24px); }

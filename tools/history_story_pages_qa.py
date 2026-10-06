@@ -41,6 +41,8 @@ for story in stories:
     assert len(ledger_entries) == 1, 'Historical story requires exactly one reviewed ledger entry'
     assert ledger_entries[0]['published_text_sha256'] == content_hash(page), 'Historical wording changed after ledger review; renew the scoped review before release'
     soup = BeautifulSoup(page.read_text(encoding='utf-8'), 'html.parser')
+    history_styles = [link.get('href', '') for link in soup.select('link[rel="stylesheet"]') if 'history-stories.css' in link.get('href', '')]
+    assert history_styles == ['../history-stories.css?v=20261006-history-intro-fit-1'], 'Exact reviewed history opening stylesheet binding required'
     assert soup.select_one(f'link[rel="canonical"][href="https://focuschrist.com/history/{slug}.html"]')
     opening = soup.select_one('.fc-life-reading.fc-life-opening')
     body_start = soup.select_one('.fc-life-reading.fc-life-body-start')
