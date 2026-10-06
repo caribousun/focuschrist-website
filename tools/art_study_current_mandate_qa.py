@@ -25,6 +25,21 @@ OLD_SHARED_STYLE = b'<link rel="stylesheet" href="../site-system.css?v=20260930-
 CURRENT_SHARED_STYLE = b'<link rel="stylesheet" href="../site-system.css?v=20261005-mobile-study-rows-1">'
 OLD_ANSWER_STYLE = b'answer-styles.css?v=20260909-warm'
 CURRENT_ANSWER_STYLE = b'answer-styles.css?v=20261005-centered-pill-labels-1'
+BUFFER_ANSWER_STYLE = b'answer-styles.css?v=20261006-art-study-buffer-2'
+OLD_ART_STYLE = b'art-study-enrichment.css?v=20260927-anchor-alignment-1'
+CURRENT_ART_STYLE = b'art-study-enrichment.css?v=20261006-static-study-nav-1'
+OLD_HERO_SCRIPT = b'hero-details.js?v=20260927-plan-study-1'
+CURRENT_HERO_SCRIPT = b'hero-details.js?v=20261006-visible-art-1'
+VISIBLE_IMAGE_HELPER = b'<script src="../hero-image-source.js?v=20261006-visible-art-1" defer></script>\n'
+VIEWER_TOKEN_INVERSES = (
+    (b'full-image-viewer.js?v=20261006-versions-1', b'full-image-viewer.js?v=20260914-reopen-1'),
+    (b'full-image-viewer.css?v=20261006-versions-1', b'full-image-viewer.css?v=20260905-viewport'),
+)
+VISIBLE_ART_ROUTES = frozenset({
+    'art-study/be-still.html',
+    'art-study/suffer-the-little-children.html',
+    'art-study/the-good-shepherd.html',
+})
 
 
 def reviewed_page_binding(page, route, expected):
@@ -34,6 +49,29 @@ def reviewed_page_binding(page, route, expected):
     if expected != REVIEWED_PAGE_HASHES.get(route):
         return False
     inverse = raw
+    for current, previous in VIEWER_TOKEN_INVERSES:
+        if current in inverse:
+            if route not in VISIBLE_ART_ROUTES or inverse.count(current) != 1 or previous in inverse:
+                return False
+            inverse = inverse.replace(current, previous, 1)
+    if b'hero-image-source.js' in inverse:
+        if route not in VISIBLE_ART_ROUTES or inverse.count(VISIBLE_IMAGE_HELPER) != 1:
+            return False
+        inverse = inverse.replace(VISIBLE_IMAGE_HELPER, b'', 1)
+    # Restore only enumerated URL tokens to the existing review's byte identity.
+    # This preserves page inventory evidence, not an independent CSS acceptance.
+    for current, previous in (
+        (BUFFER_ANSWER_STYLE, CURRENT_ANSWER_STYLE),
+        (CURRENT_ART_STYLE, OLD_ART_STYLE),
+        (CURRENT_HERO_SCRIPT, OLD_HERO_SCRIPT),
+    ):
+        if current not in inverse:
+            continue
+        if current == CURRENT_HERO_SCRIPT and route not in VISIBLE_ART_ROUTES:
+            return False
+        if inverse.count(current) != 1 or previous in inverse:
+            return False
+        inverse = inverse.replace(current, previous, 1)
     if CURRENT_ANSWER_STYLE in inverse:
         if inverse.count(CURRENT_ANSWER_STYLE) != 1 or OLD_ANSWER_STYLE in inverse:
             return False

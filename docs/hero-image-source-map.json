@@ -1,0 +1,660 @@
+{
+  "version": 1,
+  "scope": "Confirmed responsive artwork composition pairs; preserve original href for every unlisted route, trigger or selected asset.",
+  "records": [
+    {
+      "route": "ask.html",
+      "selector": "a[data-hero-viewer]",
+      "controller": "hero-details",
+      "href": "assets/heroes/ask.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/mobile-scene/ask-20260920.webp",
+          "condition": "max-width:700px",
+          "mechanism": "getComputedStyle(trigger,\"::before\").backgroundImage",
+          "evidence": "docs/mobile-scene-review-20260920.json recomposition"
+        }
+      ]
+    },
+    {
+      "route": "answers.html",
+      "selector": "a[data-hero-viewer]",
+      "controller": "hero-details",
+      "href": "assets/heroes/answers.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/mobile-scene/answers-20260920.webp",
+          "condition": "max-width:700px",
+          "mechanism": "getComputedStyle(trigger,\"::before\").backgroundImage",
+          "evidence": "docs/mobile-scene-review-20260920.json recomposition"
+        }
+      ]
+    },
+    {
+      "route": "watch.html",
+      "selector": "a[data-hero-viewer]",
+      "controller": "hero-details",
+      "href": "assets/heroes/watch.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/mobile-scene/watch-20260920.webp",
+          "condition": "max-width:700px",
+          "mechanism": "getComputedStyle(trigger,\"::before\").backgroundImage",
+          "evidence": "docs/mobile-scene-review-20260920.json recomposition"
+        }
+      ]
+    },
+    {
+      "route": "art.html",
+      "selector": "a[data-hero-viewer]",
+      "controller": "hero-details",
+      "href": "assets/heroes/art.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/mobile-scene/art-20260920.webp",
+          "condition": "max-width:700px",
+          "mechanism": "getComputedStyle(trigger,\"::before\").backgroundImage",
+          "evidence": "docs/mobile-scene-review-20260920.json recomposition"
+        }
+      ]
+    },
+    {
+      "route": "missionary.html",
+      "selector": "a[data-hero-viewer]",
+      "controller": "hero-details",
+      "href": "assets/heroes/missionary.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/mobile-scene/missionary-20260920.webp",
+          "condition": "(max-width:700px)",
+          "mechanism": "trigger.querySelector(\"picture img\").currentSrc",
+          "evidence": "responsive variant/desktop exact-center review records"
+        }
+      ]
+    },
+    {
+      "route": "about.html",
+      "selector": "a[data-hero-viewer]",
+      "controller": "hero-details",
+      "href": "assets/heroes/about.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/mobile-scene/about-20260920.webp",
+          "condition": "max-width:700px",
+          "mechanism": "getComputedStyle(trigger,\"::before\").backgroundImage",
+          "evidence": "docs/mobile-scene-review-20260920.json recomposition"
+        }
+      ]
+    },
+    {
+      "route": "answers/jesus-christ-latter-day-saint-beliefs.html",
+      "selector": "a[data-hero-viewer]",
+      "controller": "hero-details",
+      "href": "assets/heroes/topics/jesus-full.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/topics/jesus-mobile.webp",
+          "condition": "max-width:700px",
+          "mechanism": "getComputedStyle(trigger,\"::before\").backgroundImage",
+          "evidence": "docs/sitewide-artwork-review.json explicit generated portrait recomposition"
+        }
+      ]
+    },
+    {
+      "route": "answers/are-latter-day-saints-christian.html",
+      "selector": "a[data-hero-viewer]",
+      "controller": "hero-details",
+      "href": "assets/heroes/topics/christian-full.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/topics/christian-mobile.webp",
+          "condition": "max-width:700px",
+          "mechanism": "getComputedStyle(trigger,\"::before\").backgroundImage",
+          "evidence": "docs/sitewide-artwork-review.json explicit generated portrait recomposition"
+        }
+      ]
+    },
+    {
+      "route": "answers/what-is-the-book-of-mormon.html",
+      "selector": "a[data-hero-viewer]",
+      "controller": "hero-details",
+      "href": "assets/heroes/topics/book-of-mormon-full.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/topics/book-of-mormon-mobile.webp",
+          "condition": "max-width:700px",
+          "mechanism": "getComputedStyle(trigger,\"::before\").backgroundImage",
+          "evidence": "docs/sitewide-artwork-review.json explicit generated portrait recomposition"
+        }
+      ]
+    },
+    {
+      "route": "answers/why-latter-day-saints-build-temples.html",
+      "selector": "a[data-hero-viewer]",
+      "controller": "hero-details",
+      "href": "assets/heroes/topics/temples-full.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/topics/temples-mobile.webp",
+          "condition": "max-width:700px",
+          "mechanism": "getComputedStyle(trigger,\"::before\").backgroundImage",
+          "evidence": "docs/sitewide-artwork-review.json explicit generated portrait recomposition"
+        }
+      ]
+    },
+    {
+      "route": "answers/what-happens-after-death.html",
+      "selector": "a[data-hero-viewer]",
+      "controller": "hero-details",
+      "href": "assets/heroes/topics/life-after-death-full.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/topics/life-after-death-mobile.webp",
+          "condition": "max-width:700px",
+          "mechanism": "getComputedStyle(trigger,\"::before\").backgroundImage",
+          "evidence": "docs/sitewide-artwork-review.json explicit generated portrait recomposition"
+        }
+      ]
+    },
+    {
+      "route": "answers/who-was-joseph-smith.html",
+      "selector": "a[data-hero-viewer]",
+      "controller": "hero-details",
+      "href": "assets/heroes/topics/joseph-full.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/topics/joseph-mobile.webp",
+          "condition": "max-width:700px",
+          "mechanism": "getComputedStyle(trigger,\"::before\").backgroundImage",
+          "evidence": "docs/sitewide-artwork-review.json explicit generated portrait recomposition"
+        }
+      ]
+    },
+    {
+      "route": "answers/prayer-and-personal-revelation.html",
+      "selector": "a[data-hero-viewer]",
+      "controller": "hero-details",
+      "href": "assets/heroes/topics/prayer-full.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/topics/prayer-mobile.webp",
+          "condition": "max-width:700px",
+          "mechanism": "getComputedStyle(trigger,\"::before\").backgroundImage",
+          "evidence": "docs/sitewide-artwork-review.json explicit generated portrait recomposition"
+        }
+      ]
+    },
+    {
+      "route": "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+      "selector": "a[data-hero-viewer]",
+      "controller": "hero-details",
+      "href": "assets/heroes/topics/look-unto-full.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/topics/look-unto-mobile.webp",
+          "condition": "max-width:700px",
+          "mechanism": "getComputedStyle(trigger,\"::before\").backgroundImage",
+          "evidence": "docs/sitewide-artwork-review.json explicit generated portrait recomposition"
+        }
+      ]
+    },
+    {
+      "route": "answers/why-families-are-important.html",
+      "selector": "a[data-hero-viewer]",
+      "controller": "hero-details",
+      "href": "assets/heroes/topics/families-full.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/topics/families-mobile.webp",
+          "condition": "max-width:700px",
+          "mechanism": "getComputedStyle(trigger,\"::before\").backgroundImage",
+          "evidence": "docs/sitewide-artwork-review.json explicit generated portrait recomposition"
+        }
+      ]
+    },
+    {
+      "route": "answers/what-is-eternal-marriage.html",
+      "selector": "a[data-hero-viewer]",
+      "controller": "hero-details",
+      "href": "assets/heroes/topics/marriage-full.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/topics/marriage-mobile.webp",
+          "condition": "max-width:700px",
+          "mechanism": "getComputedStyle(trigger,\"::before\").backgroundImage",
+          "evidence": "docs/sitewide-artwork-review.json explicit generated portrait recomposition"
+        }
+      ]
+    },
+    {
+      "route": "answers/bible-and-book-of-mormon-together.html",
+      "selector": "a[data-hero-viewer]",
+      "controller": "hero-details",
+      "href": "assets/heroes/topics/bible-bom-full.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/topics/bible-bom-mobile.webp",
+          "condition": "max-width:700px",
+          "mechanism": "getComputedStyle(trigger,\"::before\").backgroundImage",
+          "evidence": "docs/sitewide-artwork-review.json explicit generated portrait recomposition"
+        }
+      ]
+    },
+    {
+      "route": "answers/faith-in-jesus-christ-during-trials.html",
+      "selector": "a[data-hero-viewer]",
+      "controller": "hero-details",
+      "href": "assets/heroes/topics/trials-full.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/topics/trials-mobile.webp",
+          "condition": "max-width:700px",
+          "mechanism": "getComputedStyle(trigger,\"::before\").backgroundImage",
+          "evidence": "docs/sitewide-artwork-review.json explicit generated portrait recomposition"
+        }
+      ]
+    },
+    {
+      "route": "art-study/the-good-shepherd.html",
+      "selector": "a[data-hero-viewer]",
+      "controller": "hero-details",
+      "href": "art/The-Good-Shephard.jpg",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/shepherd-desktop-exact-20260929.webp",
+          "condition": "(min-width:701px)",
+          "mechanism": "trigger.querySelector(\"picture img\").currentSrc",
+          "evidence": "responsive variant/desktop exact-center review records"
+        }
+      ]
+    },
+    {
+      "route": "art-study/suffer-the-little-children.html",
+      "selector": "a[data-hero-viewer]",
+      "controller": "hero-details",
+      "href": "art/Suffer-the-Little-Children-approved-20260929.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/children-responsive-desktop-20260929.webp",
+          "condition": "(min-width:701px)",
+          "mechanism": "trigger.querySelector(\"picture img\").currentSrc",
+          "evidence": "responsive variant/desktop exact-center review records"
+        },
+        {
+          "asset": "assets/heroes/children-phone-responsive-20260929.webp",
+          "condition": "(max-width:700px)",
+          "mechanism": "trigger.querySelector(\"picture img\").currentSrc",
+          "evidence": "responsive variant/desktop exact-center review records"
+        }
+      ]
+    },
+    {
+      "route": "art-study/be-still.html",
+      "selector": "a[data-hero-viewer]",
+      "controller": "hero-details",
+      "href": "art/Be-Still.png",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/be-still-responsive-desktop-20260929.webp",
+          "condition": "(min-width:701px)",
+          "mechanism": "trigger.querySelector(\"picture img\").currentSrc",
+          "evidence": "responsive variant/desktop exact-center review records"
+        }
+      ]
+    },
+    {
+      "route": "answers/death-of-a-child.html",
+      "selector": "a[data-hero-viewer]",
+      "controller": "hero-details",
+      "href": "assets/heroes/topics/child-loss-full.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/topics/child-loss-mobile.webp",
+          "condition": "max-width:700px",
+          "mechanism": "getComputedStyle(trigger,\"::before\").backgroundImage",
+          "evidence": "docs/sitewide-artwork-review.json explicit generated portrait recomposition"
+        }
+      ]
+    },
+    {
+      "route": "answers/divorce-and-faith.html",
+      "selector": "a[data-hero-viewer]",
+      "controller": "hero-details",
+      "href": "assets/heroes/topics/divorce-full.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/topics/divorce-mobile.webp",
+          "condition": "max-width:700px",
+          "mechanism": "getComputedStyle(trigger,\"::before\").backgroundImage",
+          "evidence": "docs/sitewide-artwork-review.json explicit generated portrait recomposition"
+        }
+      ]
+    },
+    {
+      "route": "general-conference.html",
+      "selector": "a[href=\"assets/heroes/topics/conference-listening-full.webp\"]",
+      "controller": "topic-artwork-details",
+      "href": "assets/heroes/topics/conference-listening-full.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/conference-desktop-exact-20260929.webp",
+          "condition": "(min-width:701px)",
+          "mechanism": "trigger.querySelector(\"picture img\").currentSrc",
+          "evidence": "responsive variant/desktop exact-center review records"
+        }
+      ]
+    },
+    {
+      "route": "answers/grief-and-faith.html",
+      "selector": "a[data-hero-viewer]",
+      "controller": "hero-details",
+      "href": "assets/heroes/topics/grief-full.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/topics/grief-mobile.webp",
+          "condition": "max-width:700px",
+          "mechanism": "getComputedStyle(trigger,\"::before\").backgroundImage",
+          "evidence": "docs/sitewide-artwork-review.json explicit generated portrait recomposition"
+        }
+      ]
+    },
+    {
+      "route": "answers/stand-forever.html",
+      "selector": "a[data-hero-viewer]",
+      "controller": "hero-details",
+      "href": "assets/heroes/topics/stand-forever-full.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/topics/stand-forever-mobile.webp",
+          "condition": "max-width:700px",
+          "mechanism": "getComputedStyle(trigger,\"::before\").backgroundImage",
+          "evidence": "docs/sitewide-artwork-review.json explicit generated portrait recomposition"
+        }
+      ]
+    },
+    {
+      "route": "answers/god-our-heavenly-father.html",
+      "selector": "a[data-hero-viewer]",
+      "controller": "hero-details",
+      "href": "assets/heroes/topics/father-full.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/topics/father-mobile.webp",
+          "condition": "max-width:700px",
+          "mechanism": "getComputedStyle(trigger,\"::before\").backgroundImage",
+          "evidence": "docs/sitewide-artwork-review.json explicit generated portrait recomposition"
+        }
+      ]
+    },
+    {
+      "route": "answers/restored-church-of-jesus-christ.html",
+      "selector": "a[data-hero-viewer]",
+      "controller": "hero-details",
+      "href": "assets/heroes/topics/restoration-full.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/topics/restoration-mobile.webp",
+          "condition": "max-width:700px",
+          "mechanism": "getComputedStyle(trigger,\"::before\").backgroundImage",
+          "evidence": "docs/sitewide-artwork-review.json explicit generated portrait recomposition"
+        }
+      ]
+    },
+    {
+      "route": "book-of-mormon-evidences.html",
+      "selector": "a[data-hero-viewer]",
+      "controller": "hero-details",
+      "href": "assets/page-art/bom-evidences/hero.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/bom-desktop-exact-20260929.webp",
+          "condition": "(min-width:701px)",
+          "mechanism": "trigger.querySelector(\"picture img\").currentSrc",
+          "evidence": "responsive variant/desktop exact-center review records"
+        },
+        {
+          "asset": "assets/heroes/mobile-scene/bom-20260920.webp",
+          "condition": "(max-width:700px)",
+          "mechanism": "trigger.querySelector(\"picture img\").currentSrc",
+          "evidence": "responsive variant/desktop exact-center review records"
+        }
+      ]
+    },
+    {
+      "route": "atonement.html",
+      "selector": "a[data-hero-viewer]",
+      "controller": "hero-details",
+      "href": "assets/heroes/atonement-gethsemane-approved-20260914.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/atonement-gethsemane-mobile-20260914.webp",
+          "condition": "(max-width:700px)",
+          "mechanism": "trigger.querySelector(\"picture img\").currentSrc",
+          "evidence": "independent pixel comparison"
+        }
+      ]
+    },
+    {
+      "route": "birth-of-christ.html",
+      "selector": "a[data-hero-viewer]",
+      "controller": "hero-details",
+      "href": "assets/page-art/birth-of-christ/12-nativity-hero-full.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/birth-responsive-20260929.webp",
+          "condition": "(min-width:701px)",
+          "mechanism": "trigger.querySelector(\"picture img\").currentSrc",
+          "evidence": "responsive variant/desktop exact-center review records"
+        }
+      ]
+    },
+    {
+      "route": "answers/aaronic-priesthood-restoration.html",
+      "selector": "a[data-hero-viewer]",
+      "controller": "hero-details",
+      "href": "assets/heroes/topics/aaronic-full.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/topics/aaronic-mobile.webp",
+          "condition": "max-width:700px",
+          "mechanism": "getComputedStyle(trigger,\"::before\").backgroundImage",
+          "evidence": "docs/focused-answers-art-review.json responsive extension"
+        }
+      ]
+    },
+    {
+      "route": "answers/abrahamic-covenant.html",
+      "selector": "a[href=\"/assets/page-art/abrahamic-covenant/ac-jacob-ladder-full.webp\"]",
+      "controller": "topic-artwork-details",
+      "href": "assets/page-art/abrahamic-covenant/ac-jacob-ladder-full.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/covenant-phone-responsive-20260929.webp",
+          "condition": "(max-width:700px)",
+          "mechanism": "trigger.querySelector(\"picture img\").currentSrc",
+          "evidence": "responsive variant and desktop exact-center records; runtime relocated hero"
+        },
+        {
+          "asset": "assets/heroes/abrahamic-desktop-exact-20260929.webp",
+          "condition": "(min-width:701px)",
+          "mechanism": "trigger.querySelector(\"picture img\").currentSrc",
+          "evidence": "responsive variant and desktop exact-center records; runtime relocated hero"
+        }
+      ]
+    },
+    {
+      "route": "answers/holy-ghost.html",
+      "selector": "a[data-hero-viewer]",
+      "controller": "hero-details",
+      "href": "assets/heroes/holy-ghost-hero-full.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/holy-ghost-hero-mobile.webp",
+          "condition": "max-width:700px",
+          "mechanism": "getComputedStyle(trigger,\"::before\").backgroundImage",
+          "evidence": "pixel comparison or desktop pixel-proof registry"
+        }
+      ]
+    },
+    {
+      "route": "answers/plan-of-salvation.html",
+      "selector": "a[data-hero-viewer]",
+      "controller": "hero-details",
+      "href": "assets/heroes/plan-of-salvation-hero-full.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/plan-desktop-exact-20260929.webp",
+          "condition": "min-width:701px",
+          "mechanism": "getComputedStyle(trigger,\"::before\").backgroundImage",
+          "evidence": "pixel comparison or desktop pixel-proof registry"
+        },
+        {
+          "asset": "assets/heroes/plan-of-salvation-hero-mobile.webp",
+          "condition": "max-width:700px",
+          "mechanism": "getComputedStyle(trigger,\"::before\").backgroundImage",
+          "evidence": "pixel comparison or desktop pixel-proof registry"
+        }
+      ]
+    },
+    {
+      "route": "history/john-tanner.html",
+      "selector": "a[href=\"../assets/page-art/history-stories/tanner-healing-witness-full.webp\"]",
+      "controller": "topic-artwork-details",
+      "href": "assets/page-art/history-stories/tanner-healing-witness-full.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/tanner-responsive-desktop-20260929.webp",
+          "condition": "(min-width: 701px)",
+          "mechanism": "trigger.querySelector(\"picture img\").currentSrc",
+          "evidence": "responsive variant/desktop exact-center review records"
+        }
+      ]
+    },
+    {
+      "route": "history/eleazer-miller.html",
+      "selector": "a[href=\"../assets/page-art/history-stories/miller-search-before-witness-full.webp\"]",
+      "controller": "topic-artwork-details",
+      "href": "assets/page-art/history-stories/miller-search-before-witness-full.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/page-art/history-stories/miller-search-before-witness-desktop.webp",
+          "condition": "(min-width: 701px)",
+          "mechanism": "trigger.querySelector(\"picture img\").currentSrc",
+          "evidence": "independent pixel comparison"
+        }
+      ]
+    },
+    {
+      "route": "history/john-rowe-moyle.html",
+      "selector": "a[href=\"../assets/page-art/history-stories/moyle-handcart-journey-full.webp\"]",
+      "controller": "topic-artwork-details",
+      "href": "assets/page-art/history-stories/moyle-handcart-journey-full.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/page-art/history-stories/moyle-handcart-journey-desktop.webp",
+          "condition": "(min-width: 701px)",
+          "mechanism": "trigger.querySelector(\"picture img\").currentSrc",
+          "evidence": "independent pixel comparison"
+        }
+      ]
+    },
+    {
+      "route": "timeline.html",
+      "selector": "a[data-hero-viewer]",
+      "controller": "hero-details",
+      "href": "assets/heroes/timeline.png",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/timeline-phone.png",
+          "condition": "(max-width:700px)",
+          "mechanism": "trigger.querySelector(\"picture img\").currentSrc",
+          "evidence": "independent pixel comparison"
+        }
+      ]
+    },
+    {
+      "route": "answers/what-is-eternal-marriage.html",
+      "selector": "a[href=\"../assets/page-art/eternal-marriage/timeline/01-eden-desktop-v2.webp\"]",
+      "controller": "topic-artwork-details",
+      "href": "assets/page-art/eternal-marriage/timeline/01-eden-desktop-v2.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/page-art/eternal-marriage/timeline/01-eden-mobile-v2.webp",
+          "condition": "max-width:700px",
+          "mechanism": "trigger.querySelector(\"picture img\").currentSrc",
+          "evidence": "Fermi independent six-pair pixel comparison; substantially different portrait composition"
+        }
+      ]
+    },
+    {
+      "route": "answers/what-is-eternal-marriage.html",
+      "selector": "a[href=\"../assets/page-art/eternal-marriage/timeline/02-ancient-home-desktop-v2.webp\"]",
+      "controller": "topic-artwork-details",
+      "href": "assets/page-art/eternal-marriage/timeline/02-ancient-home-desktop-v2.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/page-art/eternal-marriage/timeline/02-ancient-home-mobile-v2.webp",
+          "condition": "max-width:700px",
+          "mechanism": "trigger.querySelector(\"picture img\").currentSrc",
+          "evidence": "Fermi independent six-pair pixel comparison; substantially different portrait composition"
+        }
+      ]
+    },
+    {
+      "route": "answers/what-is-eternal-marriage.html",
+      "selector": "a[href=\"../assets/page-art/eternal-marriage/timeline/03-biblical-world-desktop-v2.webp\"]",
+      "controller": "topic-artwork-details",
+      "href": "assets/page-art/eternal-marriage/timeline/03-biblical-world-desktop-v2.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/page-art/eternal-marriage/timeline/03-biblical-world-mobile-v2.webp",
+          "condition": "max-width:700px",
+          "mechanism": "trigger.querySelector(\"picture img\").currentSrc",
+          "evidence": "Fermi independent six-pair pixel comparison; substantially different portrait composition"
+        }
+      ]
+    },
+    {
+      "route": "answers/what-is-eternal-marriage.html",
+      "selector": "a[href=\"../assets/page-art/eternal-marriage/timeline/04-restoration-desktop-v2.webp\"]",
+      "controller": "topic-artwork-details",
+      "href": "assets/page-art/eternal-marriage/timeline/04-restoration-desktop-v2.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/page-art/eternal-marriage/timeline/04-restoration-mobile-v2.webp",
+          "condition": "max-width:700px",
+          "mechanism": "trigger.querySelector(\"picture img\").currentSrc",
+          "evidence": "Fermi independent six-pair pixel comparison; substantially different portrait composition"
+        }
+      ]
+    },
+    {
+      "route": "answers/what-is-eternal-marriage.html",
+      "selector": "a[href=\"../assets/page-art/eternal-marriage/timeline/05-marriage-belonging-desktop-v2.webp\"]",
+      "controller": "topic-artwork-details",
+      "href": "assets/page-art/eternal-marriage/timeline/05-marriage-belonging-desktop-v2.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/page-art/eternal-marriage/timeline/05-marriage-belonging-mobile-v2.webp",
+          "condition": "max-width:700px",
+          "mechanism": "trigger.querySelector(\"picture img\").currentSrc",
+          "evidence": "Fermi independent six-pair pixel comparison; substantially different portrait composition"
+        }
+      ]
+    },
+    {
+      "route": "answers/what-is-eternal-marriage.html",
+      "selector": "a[href=\"../assets/page-art/eternal-marriage/timeline/06-temple-marriage-desktop-v3.webp\"]",
+      "controller": "topic-artwork-details",
+      "href": "assets/page-art/eternal-marriage/timeline/06-temple-marriage-desktop-v3.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/page-art/eternal-marriage/timeline/06-temple-marriage-mobile-v3.webp",
+          "condition": "max-width:700px",
+          "mechanism": "trigger.querySelector(\"picture img\").currentSrc",
+          "evidence": "Fermi independent six-pair pixel comparison; substantially different portrait composition"
+        }
+      ]
+    }
+  ]
+}

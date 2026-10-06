@@ -4,6 +4,14 @@ from urllib.parse import urlsplit
 import json, re, posixpath
 from bs4 import BeautifulSoup
 ROOT = Path(__file__).resolve().parents[1]
+VISIBLE_TOPIC_ROUTES = frozenset({
+    'answers/abrahamic-covenant.html',
+    'answers/what-is-eternal-marriage.html',
+    'general-conference.html',
+    'history/eleazer-miller.html',
+    'history/john-rowe-moyle.html',
+    'history/john-tanner.html',
+})
 def check():
     records = json.loads((ROOT/'docs/illustrated-study-navigation-review-20260929.json').read_text(encoding='utf8'))['static_links']
     cache = {}
@@ -28,6 +36,7 @@ def check():
             if 'topic-artwork-details.js' in script['src']:
                 expected_versions = {route:'20261004-joseph-journeys-1' for route in ('joseph-smith-portrait-research.html','joseph-smith-likeness.html','answers/who-was-joseph-smith.html')}
                 expected_versions.update({route:'20261004-study-return-1' for route in ('art-study/be-still.html','art-study/suffer-the-little-children.html','art-study/the-good-shepherd.html','art-study/the-living-christ.html')})
+                expected_versions.update({route:'20261006-visible-art-1' for route in VISIBLE_TOPIC_ROUTES})
                 expected_version = expected_versions.get(page.relative_to(ROOT).as_posix(),controller_version)
                 assert script['src'].endswith('topic-artwork-details.js?v='+expected_version), ('Stale picture controller', page)
                 consumers += 1

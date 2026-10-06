@@ -128,6 +128,7 @@ jobs:
           python tools/book_of_mormon_stories_qa.py
           python tools/study_gap_art_qa.py
           node tools/hero_details_runtime_qa.js
+          node tools/hero_image_source_qa.js
 
       - name: Verify every featured art supporting picture study panel
         run: |

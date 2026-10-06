@@ -383,7 +383,10 @@
         const key = getRecordKey(trigger);
         const record = records[key];
         if (!record) return false;
-        image.src = trigger.href;
+        // Keep reviewed responsive compositions consistent through the study.
+        const imageSource = window.fcHeroImageSource
+            ? window.fcHeroImageSource(trigger) : trigger.href;
+        image.src = imageSource;
         image.alt = trigger.dataset.fullImageAlt || record.title;
         title.textContent = record.title;
         copy.replaceChildren();
@@ -416,8 +419,10 @@
         }
         askUrl.hash = 'ask-question';
         ask.href = askUrl.href;
-        fullImage.href = trigger.href;
+        fullImage.href = imageSource;
         fullImage.dataset.fullImageAlt = image.alt;
+        fullImage.dataset.fullImageVersions = JSON.stringify(window.fcHeroImageOptions
+            ? window.fcHeroImageOptions(trigger) : []);
         returnFocus = trigger;
         document.body.classList.add('fc-dialog-open');
         if (!dialog.open) dialog.showModal();
