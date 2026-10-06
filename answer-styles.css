@@ -109,7 +109,7 @@ a:hover { color: #fff2dc; }
    The figure and resource sections retain their existing full-width alignment. */
 .content-wrap.article.fc-art-study-page > :is(.breadcrumbs, .lede, .fc-study-nav),
 .content-wrap.article.fc-art-study-page > section[id] > :is(header, h2, h3, p) {
-    margin-inline: clamp(10px, 2.2vw, 24px);
+    margin-inline: clamp(18px, 3vw, 36px);
 }
 
 .breadcrumbs { font-size: 0.86rem; color: #92a6a8; margin-bottom: 26px; }
