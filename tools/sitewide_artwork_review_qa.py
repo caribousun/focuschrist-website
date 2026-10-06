@@ -564,7 +564,7 @@ def main():
     check(set(panel_contract['site_system_consumers']) == set(wrap_review['siteSystemConsumers']), 'Panel update changed protected shared stylesheet coverage')
     check(reviewed_wrap_consumers(wrap_consumers, panel_contract['site_system_consumers'], panel_contract['version']), 'Shared panel stylesheet consumer list or cache versions changed')
     art_owners = {'art-study/the-good-shepherd.html', 'art-study/the-living-christ.html', 'art-study/suffer-the-little-children.html', 'art-study/be-still.html'}
-    art_consumers = {str(p.relative_to(ROOT)).replace('\\','/'): re.findall(r'art-study-enrichment\.css\?v=([^\"\\s>]+)', p.read_text(encoding='utf8')) for p in ROOT.rglob('*.html') if 'art-study-enrichment.css' in p.read_text(encoding='utf8')}
+    art_consumers = {str(p.relative_to(ROOT)).replace('\\','/'): re.findall(r'art-study-enrichment\.css\?v=([^\"\s>]+)', p.read_text(encoding='utf8')) for p in ROOT.rglob('*.html') if 'art-study-enrichment.css' in p.read_text(encoding='utf8')}
     check(set(art_consumers) == art_owners and all(v == ['20261006-static-study-nav-1'] for v in art_consumers.values()), 'Art reflection stylesheet consumers/version differ')
     # Owner-directed mobile framing and menu-wrap repair; exact reviewed bytes only.
     check(reviewed_system_panel_style((ROOT/'site-system.css').read_bytes()), 'Reviewed base or exact owner-directed panel appendix changed: site-system.css')
