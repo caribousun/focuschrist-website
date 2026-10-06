@@ -3,6 +3,7 @@ import hashlib,json,sys,copy
 from pathlib import Path
 from urllib.parse import urlsplit,parse_qs
 from bs4 import BeautifulSoup,NavigableString
+from hero_introductions_qa import assert_current_opening, restore_reviewed_opening
 ROOT=Path(__file__).resolve().parents[1]
 PAGE='answers/god-our-heavenly-father.html'
 DATA=ROOT/'docs/heavenly-father'
@@ -39,8 +40,12 @@ def check_structure(text):
    assert owner.select_one('#picture-modern-scripture img[src="'+im['src']+'"]'),'Original picture retained on owner'
    continue
   assert any(n.get('src')==im.get('src') for n in s.select('img')),'Existing image source changed'
- guide=s.select('.fc-topic-opening p.fc-father-opening-guide');assert len(guide)==1 and guide[0].get_text()=='Explore scripture about our Heavenly Father, His love, and our relationship with Him. Follow the passages and questions throughout the study.' and guide[0].get('class')==['fc-topic-subtitle','fc-father-opening-guide'] and not guide[0].has_attr('hidden'),'Exact permanent owner-requested opening guide'
- opening=copy.deepcopy(s.select_one('.fc-topic-opening'));opening.select_one('.fc-father-opening-guide').decompose()
+ # The reviewed introductory prose may change; reconstruct only its exact
+ # registered delta before enforcing the original protected opening contract.
+ assert_current_opening(PAGE,text)
+ preserved=BeautifulSoup(restore_reviewed_opening(PAGE,text),'html.parser')
+ guide=preserved.select('.fc-topic-opening p.fc-father-opening-guide');assert len(guide)==1 and guide[0].get_text()=='Explore scripture about our Heavenly Father, His love, and our relationship with Him. Follow the passages and questions throughout the study.' and guide[0].get('class')==['fc-topic-subtitle','fc-father-opening-guide'] and not guide[0].has_attr('hidden'),'Exact permanent owner-requested opening guide'
+ opening=copy.deepcopy(preserved.select_one('.fc-topic-opening'));opening.select_one('.fc-father-opening-guide').decompose()
  assert str(opening)==str(old.select_one('.fc-topic-opening')),'Only the exact authored guide may change the protected opening'
  d=json.loads((DATA/'content-plan.json').read_text(encoding='utf-8'))
  for unit in d['chapters']:
@@ -80,7 +85,21 @@ def selftest(text):
  try:check_art(check_structure(text),review)
  except AssertionError:pass
  else:raise AssertionError('Hash mutation escaped')
- print('PASS 10 Father mutation fixtures')
+ opening=BeautifulSoup(text,'html.parser').select_one('.fc-page-intro')
+ guide=opening.select_one('p.fc-page-intro-copy')
+ assert guide is not None
+ check_structure(str(BeautifulSoup(text,'html.parser'))) # Parser normalization alone must pass.
+ for label,mutate in (
+  ('copy',lambda node: setattr(node,'string','Unreviewed opening')),
+  ('hidden',lambda node: node.attrs.update(hidden='')),
+  ('duplicate',lambda node: node.insert_after(copy.deepcopy(node))),
+  ('missing',lambda node: node.decompose()),
+ ):
+  changed=BeautifulSoup(text,'html.parser');mutate(changed.select_one('.fc-page-intro p.fc-page-intro-copy'))
+  try:check_structure(str(changed))
+  except AssertionError:pass
+  else:raise AssertionError('Opening mutation escaped: '+label)
+ print('PASS 10 Father preservation mutations and four opening mutations')
 if __name__=='__main__':
  text=(ROOT/PAGE).read_text(encoding='utf-8');check_art(check_structure(text))
  if '--selftest' in sys.argv:selftest(text)

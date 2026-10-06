@@ -1,5 +1,5 @@
 {
-  "source_html_sha256": "edfb13494432b4dcf84b899a6a9165c074323c665f6ea3c3cd111b1c47ca2bae",
+  "source_html_sha256": "9037814142751308e6126dffb100fb13630bb6a6cc0551e72bbe53119f6b5580",
   "pdf_sha256": "109bacb657025cd2f4dcc98b29ca98e97afb97bc8b1b15d5d5a1d460006b2946",
   "pages": 47,
   "sections": 15,
@@ -61,5 +61,52 @@
     "proof": "All other source bytes, body text, image paths and PDF bytes are unchanged. The PDF builder does not consume this browser stylesheet. Existing PDF pixel-review receipts remain valid for identical PDF bytes. Renewed source/PDF QA required before publication.",
     "fermi_receipt": "docs/joseph-research-reviews/fermi-cache-binding-pr446.json",
     "newton_receipt": "docs/joseph-research-reviews/newton-cache-binding-pr446.json"
+  },
+  "intro_only_source_compatibility": {
+    "previous_source_html_sha256": "edfb13494432b4dcf84b899a6a9165c074323c665f6ea3c3cd111b1c47ca2bae",
+    "current_source_html_sha256": "41ffc541b38d1bf9badaf1c6b466db75945de78b98f65af8601b87f5091cc103",
+    "comparison_commit": "ed81f01e2e40b81573bc1dec72a76da349ac7164",
+    "comparison_source_html_sha256": "852b9141d0bf0d0faf3a6d95788a738ce40dd753863d5f4be3fe1396c6bd3655",
+    "change": "One exact web opening paragraph and one enumerated site-common browser cache token. Earlier site-system cache inverse remains in the historical source-binding contract.",
+    "pdf_rebuilt": false,
+    "pdf_bytes_unchanged": true,
+    "pdf_input_dom_unchanged": true,
+    "proof": "The PDF builder consumes15 chapter bodies, onward content and footer, all unchanged; its cover text is separately authored. Independent current PDF QA passes424 text blocks,40 expected external URLs,82 images and282 header controls. Existing rendered PDF receipts remain bound to identical47-page PDF bytes.",
+    "reviewers": {
+      "Fermi": {
+        "concur": true,
+        "receipt": "docs/joseph-research-reviews/narrative-fermi-introduction-20261006.json",
+        "receipt_sha256": "8753c7e987782c893111808aa2ec18edd770a4690bb323e53356ffe764f63ba3"
+      },
+      "Newton": {
+        "concur": true,
+        "receipt": "docs/joseph-research-reviews/narrative-newton-introduction-20261006.json",
+        "receipt_sha256": "1f268eb1e6626a46e1a6195a1185816b793beacf34011432668e88e5f96e12cb"
+      }
+    },
+    "qa_receipt": "docs/joseph-research-reviews/pdf-introduction-source-qa-20261006.json",
+    "limits": "New website opening rendering and release gates remain separate; no new PDF render or owner aesthetic acceptance claimed."
+  },
+  "layout_stylesheet_source_compatibility": {
+    "previous_source_html_sha256": "41ffc541b38d1bf9badaf1c6b466db75945de78b98f65af8601b87f5091cc103",
+    "current_source_html_sha256": "9037814142751308e6126dffb100fb13630bb6a6cc0551e72bbe53119f6b5580",
+    "stylesheet_sha256": "6a353c403a6b917ce7fccd5f9bc097a61460b913b76f95905ce12ce2e2da4277",
+    "change": "Only external research stylesheet cache token changes after introduction review. Exact token reversal recovers the previous source. Canonical main, all crop transforms, image/source associations and PDF-consumed markup are unchanged.",
+    "pdf_rebuilt": false,
+    "pdf_bytes_unchanged": true,
+    "reviewers": {
+      "Fermi": {
+        "receipt": "docs/reviews/2026-10-06-joseph-layout/fermi.json",
+        "sha256": "8fd4c65ecef7c4ac4428d5492b9d3907e785df5684350334296897a04bce5efe"
+      },
+      "Newton": {
+        "receipt": "docs/reviews/2026-10-06-joseph-layout/newton.json",
+        "sha256": "34b22aee5cf8244ba4b1924a318b6660cb7ff269f52249e8f71b4dee7fd2fab9"
+      },
+      "UI": {
+        "receipt": "docs/reviews/2026-10-06-joseph-layout/ui.json",
+        "sha256": "0cf96ee52ab31769bb3f8c2b779490682b30308cb13ae6fee8975d9cd41f7d2e"
+      }
+    }
   }
 }

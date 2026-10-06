@@ -46,7 +46,7 @@ def build_bridge(data):
         routes['life-'+scene['id']]='answers/who-was-joseph-smith.html#life-'+scene['id']
     # The former full study remains a stable entrance for saved and shared links.
     page=re.sub(r'<a\b[^>]*class="fc-visual-hero[^"<>]*"[^>]*>[\s\S]*?</a>', '',page,count=1)
-    intro='<section class="joseph-bridge-intro"><p class="fc-eyebrow">Joseph Smith</p><h1>Explore his life and the portrait</h1><p>Follow Joseph and Emma through their family story, or look closely at the evidence behind our Joseph.</p></section>'
+    intro='<section class="joseph-bridge-intro"><p class="fc-eyebrow">Joseph Smith</p><h1>Explore his life and the portrait</h1><p class="fc-page-intro-copy">Get to know Joseph Smith through the people and experiences that shaped his life. Follow Joseph and Emma through their family story, or explore portraits and remembered encounters. Choose a path below and spend time with its pictures, stories and sources.</p></section>'
     page=re.sub(r'<!-- BEGIN JOSEPH GATEWAY HERO -->[\s\S]*?<!-- END JOSEPH GATEWAY HERO -->\s*','',page)
     leading='<!-- BEGIN JOSEPH GATEWAY HERO -->'+hero_markup('gateway')+'<!-- END JOSEPH GATEWAY HERO -->\n'
     page=re.sub(r'<section\b[^>]*class="(?:fc-page-intro|joseph-bridge-intro)"[^>]*>[\s\S]*?</section>',lambda _:leading+intro,page,count=1)

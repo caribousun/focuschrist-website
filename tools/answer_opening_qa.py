@@ -3,6 +3,7 @@ from pathlib import Path
 import hashlib,json,re,copy
 from scripture_reference_preservation_qa import normalize_reviewed_reference
 from bs4 import BeautifulSoup
+from hero_introductions_qa import ROUTES as INTRODUCTION_ROUTES, assert_current_opening, restore_reviewed_opening
 ROOT=Path(__file__).resolve().parents[1]
 BASELINE=json.loads((ROOT/'docs/answer-opening-baseline.json').read_text(encoding='utf8'))
 COVENANT='answers/abrahamic-covenant.html'
@@ -19,7 +20,11 @@ def check():
     topics={p for p,r in records.items() if r['kind']=='fc-topic-opening'}
     assert len(topics)==23 and actual-topics=={COVENANT,SOURCE}
     for name,r in records.items():
-        doc=BeautifulSoup((ROOT/name).read_text(encoding='utf8'),'html.parser')
+        source=(ROOT/name).read_text(encoding='utf8')
+        if name in INTRODUCTION_ROUTES:
+            assert_current_opening(name,source)
+            source=restore_reviewed_opening(name,source)
+        doc=BeautifulSoup(source,'html.parser')
         openings=doc.select('.fc-topic-opening,.jj-opening,.fc-source-opening')
         assert len(openings)==1 and r['kind'] in openings[0].get('class',[]),name
         header=openings[0]

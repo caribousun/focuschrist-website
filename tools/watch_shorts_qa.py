@@ -9,6 +9,7 @@ import unittest
 from pathlib import Path
 from urllib.parse import urlsplit
 from answer_study_qa import Document
+from hero_introductions_qa import assert_current_opening, restore_reviewed_opening
 
 ROOT = Path(__file__).resolve().parents[1]
 BASELINE = '0c1a128074455293c59d2ee10591e53e842be87f'
@@ -62,7 +63,8 @@ class WatchShorts(unittest.TestCase):
 
     def test_original_hero_opening_and_twenty_church_cards_preserved(self):
         old = nodes(subprocess.check_output(['git', 'show', BASELINE + ':watch.html'], cwd=ROOT).decode('utf-8'))
-        current = nodes(self.page)
+        assert_current_opening('watch.html', self.page)
+        current = nodes(restore_reviewed_opening('watch.html', self.page))
         for label, predicate, count in (
             ('hero', lambda n: n.has('fc-visual-hero'), 1),
             ('opening', lambda n: n.has('fc-page-intro'), 1),

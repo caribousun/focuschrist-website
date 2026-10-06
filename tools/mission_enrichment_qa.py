@@ -12,6 +12,7 @@ if not (ROOT / 'missionary.html').exists():
     ROOT = ROOT / 'focus-jesus'
 sys.path.insert(0, str(ROOT / 'tools'))
 from answer_study_qa import Document
+from hero_introductions_qa import assert_current_opening, restore_reviewed_opening
 BASELINE = '4b4b15069feb83c6ae9ea659bde2e3b94278f26a'
 NEW = {'seventy-return': ('nt/luke/10','p17-p20'), 'samaritans-stay': ('nt/john/4','p39-p42'),
        'peace-to-this-house': ('nt/luke/10','p5-p7'), 'beside-his-missionaries': ('dc-testament/dc/84','p88')}
@@ -24,6 +25,11 @@ def tree(n):
     return n.tag,tuple(sorted(n.attrs.items())),tuple(x if isinstance(x,str) else tree(x) for x in n.content)
 
 def errors(text,baseline,root=ROOT):
+    try:
+        assert_current_opening('missionary.html', text)
+        text=restore_reviewed_opening('missionary.html', text)
+    except AssertionError as error:
+        return ['Current reviewed Mission introduction: '+str(error)]
     approved=json.loads((ROOT/'docs/mission-copy-overlay-20260927.json').read_text(encoding='utf-8'))
     for change in approved['replacements']:
         assert baseline.count(change['before']) == 1, 'Reviewed Mission baseline wording missing or duplicated'

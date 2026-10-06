@@ -26,6 +26,7 @@ CURRENT_SHARED_STYLE = b'<link rel="stylesheet" href="../site-system.css?v=20261
 OLD_ANSWER_STYLE = b'answer-styles.css?v=20260909-warm'
 CURRENT_ANSWER_STYLE = b'answer-styles.css?v=20261005-centered-pill-labels-1'
 BUFFER_ANSWER_STYLE = b'answer-styles.css?v=20261006-art-study-buffer-2'
+CONTAINED_ANSWER_STYLE = b'answer-styles.css?v=20261006-art-study-nav-width-1'
 OLD_ART_STYLE = b'art-study-enrichment.css?v=20260927-anchor-alignment-1'
 CURRENT_ART_STYLE = b'art-study-enrichment.css?v=20261006-static-study-nav-1'
 OLD_HERO_SCRIPT = b'hero-details.js?v=20260927-plan-study-1'
@@ -61,6 +62,7 @@ def reviewed_page_binding(page, route, expected):
     # Restore only enumerated URL tokens to the existing review's byte identity.
     # This preserves page inventory evidence, not an independent CSS acceptance.
     for current, previous in (
+        (CONTAINED_ANSWER_STYLE, BUFFER_ANSWER_STYLE),
         (BUFFER_ANSWER_STYLE, CURRENT_ANSWER_STYLE),
         (CURRENT_ART_STYLE, OLD_ART_STYLE),
         (CURRENT_HERO_SCRIPT, OLD_HERO_SCRIPT),

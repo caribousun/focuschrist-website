@@ -51,9 +51,9 @@ def unit(c):
  out+=f'<details class="jj-reflection"><summary>Pause and consider</summary><p>{esc(c["reflection"])}</p></details></div>'
  return BeautifulSoup(out,'html.parser')
 
-# Owner M062: this authored introduction remains present across viewport changes.
-intro_copy=base.new_tag('p', attrs={'class':'fc-topic-subtitle fc-father-opening-guide'})
-intro_copy.string='Explore scripture about our Heavenly Father, His love, and our relationship with Him. Follow the passages and questions throughout the study.'
+# Owner-expanded introduction uses the existing retained-copy reading flow.
+intro_copy=base.new_tag('p', attrs={'class':'fc-page-intro-copy'})
+intro_copy.string='What does it mean to know God as our Father? Read about His love through scripture and the experiences of people who sought Him, then bring your own questions to the study.'
 base.select_one('.fc-topic-opening .fc-topic-subtitle').insert_after(intro_copy)
 
 main=base.main

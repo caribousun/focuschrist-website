@@ -27,7 +27,7 @@ class ExactFeaturedBinding(unittest.TestCase):
                     'body': raw + b'changed',
                     'duplicate_answer': raw + mandate.CURRENT_ANSWER_STYLE,
                     'mixed_answer': raw + mandate.OLD_ANSWER_STYLE,
-                    'unknown_answer_version': raw.replace(mandate.BUFFER_ANSWER_STYLE, b'answer-styles.css?v=unknown'),
+                    'unknown_answer_version': raw.replace(mandate.CONTAINED_ANSWER_STYLE, b'answer-styles.css?v=unknown'),
                     'whitespace': raw + b' ',
                     'duplicate_current_link': raw + mandate.CURRENT_SHARED_STYLE,
                     'old_and_current': raw + mandate.OLD_SHARED_STYLE,
@@ -50,7 +50,7 @@ class ExactFeaturedBinding(unittest.TestCase):
         for route, expected in mandate.REVIEWED_PAGE_HASHES.items():
             raw = (ROOT / route).read_bytes()
             versions = [
-                (mandate.BUFFER_ANSWER_STYLE, mandate.CURRENT_ANSWER_STYLE),
+                (mandate.CONTAINED_ANSWER_STYLE, mandate.BUFFER_ANSWER_STYLE),
                 (mandate.CURRENT_ART_STYLE, mandate.OLD_ART_STYLE),
             ]
             if route in mandate.VISIBLE_ART_ROUTES:

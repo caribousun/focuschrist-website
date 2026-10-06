@@ -20,12 +20,15 @@
         title.after(description);
       }
     }
-    const cue = document.createElement('a');
-    cue.className = 'fc-unified-continue';
-    cue.innerHTML = 'Continue <span aria-hidden="true">\u2193</span>';
+    const authoredCue = opening.querySelector('.timeline-opening-continue');
+    const cue = authoredCue || document.createElement('a');
+    if (!authoredCue) {
+      cue.className = 'fc-unified-continue';
+      cue.innerHTML = 'Continue <span aria-hidden="true">\u2193</span>';
+    }
     const scope = opening.closest('.cfm-hero,.gc-page-opening') || opening;
     if (scope !== opening) scope.setAttribute('data-unified-shell', '');
-    const previous = [...scope.querySelectorAll('.fc-scroll-cue,.fc-mobile-scroll-cue,.fc-art-continue,.fc-covenant-continue')];
+    const previous = [...scope.querySelectorAll('.fc-scroll-cue,.fc-mobile-scroll-cue,.fc-art-continue,.fc-covenant-continue')].filter(el => el !== authoredCue);
     previous.forEach(el => el.setAttribute('data-unified-old-cue', ''));
     const extras = [...opening.querySelectorAll('.fc-actions,.cfm-actions,.fc-conference-actions,.fc-life-directory,.fc-page-intro-scripture,.fc-conference-lead,.gc-stats,.fc-father-opening-guide')];
     const copyContainer = opening.querySelector('.fc-container--standard');

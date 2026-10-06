@@ -224,7 +224,7 @@ SCOPED_INTERFACE_STYLES = {
     'joseph-family-life.css': ('af4eac66d90a94a370010dae71cd4e0d2430fd07a049ce0ce7d253454c249a2f', 'answers/who-was-joseph-smith.html'),
     # Owner-requested Joseph research reading panels, independently reviewed on
     # desktop/phone. Exact bytes and two Joseph page owners; no hero-rule exemption.
-    'joseph-smith-research.css': ('8b891efdc90ad0155fc1df8e157cc92ab56c6cbf67d19d001e128250904a9923', 'joseph-smith-likeness.html'),
+    'joseph-smith-research.css': ('6a353c403a6b917ce7fccd5f9bc097a61460b913b76f95905ce12ce2e2da4277', 'joseph-smith-likeness.html'),
     # Newton source-reviewed hub-only CSS; hosted geometry and owner acceptance remain separate.
     'timeline.css': ('5aefac78e15d324cb4f5a9b44c5f0a1bdb26d951f4e7b5078569be67103048d1', 'timeline.html'),
     # Owner-directed Church-source history, independently reviewed 2026-09-30.
@@ -311,6 +311,11 @@ def reviewed_toolbar_style(name, data):
     data = historical_style_bytes(data)
     return name in TOOLBAR_STYLE_SHA256 and hashlib.sha256(data).hexdigest() == TOOLBAR_STYLE_SHA256[name]
 
+def reviewed_art_nav_width(selector, body, data):
+    return (selector.strip() == '.content-wrap.article.fc-art-study-page > .fc-study-nav'
+            and re.sub(r'\s+', '', body) == 'width:auto;'
+            and hashlib.sha256(data).hexdigest() == '82dc51b82d56a129be803420cae47630f053f7af1259c659113fbd7fcd76d6ad')
+
 def sha(path): return hashlib.sha256(historical_style_bytes(path.read_bytes())).hexdigest()
 def unique_reviewed(heroes, rejected):
     errors=[]; seen={}
@@ -328,6 +333,13 @@ def main():
     ap=argparse.ArgumentParser();ap.add_argument('--self-test',action='store_true');ap.add_argument('--baseline-report');args=ap.parse_args()
     composition_check()
     if args.self_test:
+        nav_css = (ROOT/'answer-styles.css').read_bytes()
+        nav_selector = '.content-wrap.article.fc-art-study-page > .fc-study-nav'
+        assert reviewed_art_nav_width(nav_selector, 'width: auto;', nav_css)
+        assert not reviewed_art_nav_width('.fc-visual-hero', 'width: auto;', nav_css)
+        assert not reviewed_art_nav_width(nav_selector, 'width: auto; height: 9px;', nav_css)
+        assert not reviewed_art_nav_width(nav_selector, 'width: auto;', nav_css.replace(b'700px', b'900px'))
+        assert not reviewed_art_nav_width(nav_selector, 'width: auto;', nav_css + b'\n.fc-visual-hero{height:9px}')
         viewer_self_test()
         marriage=(ROOT/'eternal-marriage-study.css').read_bytes()
         assert reviewed_marriage_body_style(marriage)
@@ -650,7 +662,7 @@ def main():
         if name == 'unified-opening.css':
             common = (ROOT/'site-common.js').read_text(encoding='utf-8')
             check(common.count("relativeAssetHref('unified-opening.css?v=20260930-alignment-2')") == 1, 'Unified opening CSS requires its exact shared loader/version')
-            check(common.count("relativeAssetHref('unified-opening.js?v=20261004-joseph-openings-1')") == 1, 'Unified opening JS requires its exact shared loader/version')
+            check(common.count("relativeAssetHref('unified-opening.js?v=20261006-introductions-1')") == 1, 'Unified opening JS requires its exact shared loader/version')
         if name == 'footer-navigation.css':
             common = (ROOT/'site-common.js').read_text(encoding='utf-8')
             check(common.count("style.href = relativeAssetHref('footer-navigation.css?v=20260929-top-1');") == 1, 'Footer CSS requires its exact shared dynamic loader and version')
@@ -780,6 +792,10 @@ def main():
         if art_study_buffer:
             check(set(re.findall(r'([a-z-]+)\s*:', body)) <= {'margin-inline'},
                   'Art-study buffer rule changes unexpected properties')
+            continue
+        if selector.strip() == '.content-wrap.article.fc-art-study-page > .fc-study-nav':
+            check(reviewed_art_nav_width(selector, body, (ROOT/'answer-styles.css').read_bytes()),
+                  'Art-study navigation width differs from exact reviewed selector/properties/stylesheet bytes')
             continue
         check(all('.fc-topic-unique-hero' in s for s in selector.split(',')),'Added CSS escapes scoped hero class: '+selector.strip())
         image_layer = all(part.strip().endswith('::before') for part in selector.split(','))

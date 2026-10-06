@@ -1,0 +1,30 @@
+{
+  "reviewer": "Fermi",
+  "created_utc": "2026-10-06T23:12:16.368584+00:00",
+  "status": "SCOPED_CONCURRENCE",
+  "scope": {
+    "intro_editorial": "All 24 registry introductions independently read; exact-source guard passed. Warm, informative visitor prose.",
+    "joseph_composition": "All15 chapter and16 feature desktop/phone contacts inspected in round1; exact eight changed feature crops reinspected after final fixes. Feature15 void resolved through associated rows; supplemental figure gaps now deliberate.",
+    "source_integrity": "HTML diff vs ed81 has only previously reviewed introduction and two script/style cache tokens. Historical body, crop coordinates and source associations unchanged.",
+    "pdf_compatibility": "Layout CSS/token changes do not enter PDF builder, which selects section.research-part and onward/footer. PDF bytes match frozen SHA; no regeneration needed for CSS.",
+    "limits": "Candidate composition/editorial concurrence only. No independent new historical audit, owner acceptance, live interaction, public deployment or publication acceptance claimed."
+  },
+  "hashes": {
+    "joseph-smith-research.css": "6a353c403a6b917ce7fccd5f9bc097a61460b913b76f95905ce12ce2e2da4277",
+    "joseph-smith-portrait-research.html": "9037814142751308e6126dffb100fb13630bb6a6cc0551e72bbe53119f6b5580",
+    "docs/hero-introductions-review.json": "22484b75eddbef4a2463a9cf49333b60301dd0d3c6e1d0904e45ca2bcf2b56fb",
+    "assets/research/focuschrist-joseph-evidence.pdf": "109bacb657025cd2f4dcc98b29ca98e97afb97bc8b1b15d5d5a1d460006b2946"
+  },
+  "reinspected_pixels": {
+    "desktop-research-feature-07.png": "df3c5a8c1c21d6498d7694978dca1f8d91156930ca1ba1530744cf5dc0a8ca8b",
+    "desktop-research-feature-14.png": "96909d53109340df8fd56ff7639cda40d7a2715e90569c563172f33ce801a524",
+    "desktop-research-feature-15.png": "301467781c2cc874df72cb8588dccd48dab736a35e955bd61028b399f58501c1",
+    "desktop-research-feature-16.png": "3643422b2b6a352c72461d29916e83b773f74e719559d12d371055448e09cae9",
+    "phone-research-feature-07.png": "cd2b5743930d1ddc6b52e80b49cfa9fbbd0c0a5e311c2f6e4202ba4aeb46d7d6",
+    "phone-research-feature-14.png": "ead4c46ccb2d1eb7dfbb28cddf607956fb23778d7db963703b2956154df5831c",
+    "phone-research-feature-15.png": "85e20d5c4b2f525a4f5caa1e38261a0e4eab089887fb55a1c028260d1b885389",
+    "phone-research-feature-16.png": "8bc478384e8417162a7990f4f0bc4f85a1ec708c4376232e51a1bf72430cd91c"
+  },
+  "prior_review": "work/fermi/candidate-review-round1.md",
+  "outstanding_findings": []
+}
