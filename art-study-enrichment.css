@@ -5,9 +5,9 @@
 }
 
 .fc-art-study-page .fc-study-nav {
-    position: sticky;
-    top: 74px;
-    z-index: 8;
+    position: static;
+    top: auto;
+    z-index: auto;
     justify-content: center;
     margin: 1.4rem 0 2.4rem;
     padding: .8rem 1rem;
