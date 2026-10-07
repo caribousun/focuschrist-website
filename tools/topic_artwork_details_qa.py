@@ -12,6 +12,43 @@ from first_topic_completion_qa import check as check_first_topic_completion
 first_topic_review=check_first_topic_completion(ROOT)
 first_topic_assets=[]
 
+# Only these three reviewed additions are outside the unchanged 99/3 baseline.
+REVIEWED_READING_ART = {'assets/page-art/stand-forever-journey/stand-john6-remain-full.webp': {'owner': 'answers/stand-forever.html', 'key': 'stand-john6-remain', 'figure_sha256': 'dfe7b41ca2795f1ab6e53348a32d7087c0578524a00268aef4543517d11523d8', 'assets': {'assets/page-art/stand-forever-journey/stand-john6-remain-full.webp': 'f9bc997a86d7f85695eeb32cabf1ae9e76e88122ff6a6efba8a247a408bd78a6', 'assets/page-art/stand-forever-journey/stand-john6-remain-960.webp': 'bcbfa7bb0face64659185fe097bf8ae213e100b14b3de8765a549b15dc113aab', 'assets/page-art/stand-forever-journey/stand-john6-remain-original.png': '3384d4a1a3599ab7c789ab1f1a712c66519f01851f9e46d23bd1e1d51eda709b'}}, 'assets/page-art/stand-forever-journey/stand-john7-do-his-will-full.webp': {'owner': 'answers/stand-forever.html', 'key': 'stand-john7-do-his-will', 'figure_sha256': 'b56130f6cef10260bc1a9e8cd4105ab91e4c51bcdb33f270fb318ca5cb587a17', 'assets': {'assets/page-art/stand-forever-journey/stand-john7-do-his-will-full.webp': 'fb9cd7f0a0c4f1612f428375729bcd3685046427da82b3cdbda13a91be0f9029', 'assets/page-art/stand-forever-journey/stand-john7-do-his-will-960.webp': '43be5dbb873b53460c987d8cfc06a6342a1c5f2c208da6e3fa3cb8d2828f31b8', 'assets/page-art/stand-forever-journey/stand-john7-do-his-will-original.png': 'd04caa98a349c66f1112930b89869196bf1dce9e3590f8445c48fc0f71c86072'}}, 'assets/page-art/visual-rhythm-journey/temple-tribute-full.webp': {'owner': 'answers/why-latter-day-saints-build-temples.html', 'key': 'temple-tribute', 'figure_sha256': '56ff33e46e3326db3c459f13f09917f96e687c7e18460bcf83892a31150b1c49', 'assets': {'assets/page-art/visual-rhythm-journey/temple-tribute-full.webp': 'de729b17b7a72a14b6f667c9a23a4f064c4d7883dab1d5d1d430f80e7f1820bf', 'assets/page-art/visual-rhythm-journey/temple-tribute-960.webp': 'fc1dff1127af137bdf0cf20d3da8833b6b6180940aa7dd019106bb022f5e050a', 'assets/page-art/visual-rhythm-journey/temple-tribute-original.png': 'e1cbd9cf09065630f8af52791c9832cf93e1c0be0f75893b138e1f4cede47195'}}}
+
+def check_reading_art(route, source, verify_assets=True):
+ from bs4 import BeautifulSoup
+ soup=BeautifulSoup(source, 'html.parser')
+ for full, row in REVIEWED_READING_ART.items():
+  # Match asset references as well as keys so a renamed marker cannot evade ownership.
+  candidates=[f for f in soup.find_all('figure') if f.get('data-topic-art')==row['key'] or any(Path(a).name in str(f) for a in row['assets'])]
+  expected=1 if row['owner']==route else 0
+  assert len(candidates)==expected, route+': missing, duplicate or wrong-owner reviewed artwork'
+  if not expected:continue
+  figure=candidates[0]
+  assert hashlib.sha256(str(figure).encode()).hexdigest()==row['figure_sha256'], route+': reviewed figure markup changed'
+  if verify_assets:
+   for asset,digest in row['assets'].items():
+    assert hashlib.sha256((ROOT/asset).read_bytes()).hexdigest()==digest, asset+': reviewed image bytes changed'
+
+def reading_art_self_test():
+ from bs4 import BeautifulSoup
+ for full,row in REVIEWED_READING_ART.items():
+  route=row['owner']; source=(ROOT/route).read_text(encoding='utf-8')
+  figure=str(BeautifulSoup(source, 'html.parser').select_one('figure[data-topic-art="'+row['key']+'"]'))
+  for kind in ('missing','duplicate','markup','asset','wrong-owner'):
+   soup=BeautifulSoup(source,'html.parser'); current=soup.select_one('figure[data-topic-art="'+row['key']+'"]')
+   if kind=='missing':current.decompose()
+   elif kind=='duplicate':soup.append(BeautifulSoup(figure,'html.parser'))
+   elif kind=='markup':current['data-topic-art']='unreviewed'
+   elif kind=='asset':current.find('img')['src']='unreviewed.webp'
+   try:check_reading_art('answers/unreviewed.html' if kind=='wrong-owner' else route,str(soup),False)
+   except AssertionError:pass
+   else:raise AssertionError('Reviewed artwork mutation escaped: '+kind)
+
+reading_art_self_test()
+reading_art_assets=[]
+
+
 def local_asset(page,href):
  u=urlsplit(href)
  assert not u.scheme and not u.netloc, 'Body artwork must be local'
@@ -78,7 +115,9 @@ opening_assets=[]
 focused_assets=[]; relocated_assets=[]
 relocated_names={'aaronic-priesthood','joseph-baptizes-oliver','oliver-baptizes-joseph','melchizedek-priesthood','apostles-ordain-joseph','apostles-ordain-oliver'}
 for page in [*sorted((ROOT/'answers').glob('*.html')),ROOT/'general-conference.html']:
- d=Document();d.feed(page.read_text(encoding='utf-8'));ns=list(d.root.walk())
+ source=page.read_text(encoding='utf-8')
+ check_reading_art(page.relative_to(ROOT).as_posix(),source)
+ d=Document();d.feed(source);ns=list(d.root.walk())
  if page.relative_to(ROOT).as_posix()=='answers/race-priesthood-and-temple-blessings.html':
   # Official source media open their Church destinations; they are not original
   # artwork requiring the site's picture-detail adapter. No other page is exempt.
@@ -108,7 +147,10 @@ for page in [*sorted((ROOT/'answers').glob('*.html')),ROOT/'general-conference.h
   sources=[n for n in cap.walk() if n.tag=='a' and urlsplit(n.attrs.get('href','')).hostname in ('www.churchofjesuschrist.org','newsroom.churchofjesuschrist.org')] if cap else []
   if not sources and 'data-topic-study' not in a.attrs and page.name not in ('grief-and-faith.html','general-conference.html'):errors.append(page.name+': body source unavailable without unrelated page fallback')
   relative_asset=local_asset(page,a.attrs['href']).relative_to(ROOT).as_posix()
-  if relative_asset in first_topic_review:
+  if relative_asset in REVIEWED_READING_ART:
+   assert page.relative_to(ROOT).as_posix()==REVIEWED_READING_ART[relative_asset]['owner'], 'Reading artwork owner mismatch'
+   reading_art_assets.append(relative_asset)
+  elif relative_asset in first_topic_review:
    record=first_topic_review[relative_asset]
    assert page.relative_to(ROOT).as_posix()==record['route'], 'FIRST topic owner mismatch'
    first_topic_assets.append(relative_asset)
@@ -236,7 +278,8 @@ assert len(hg_assets)==len(set(hg_assets))==16 and set(hg_assets)==set(hg_review
 assert len(temple_assets)==len(set(temple_assets))==len(temple_review)==21 and set(temple_assets)==set(temple_review), 'Twenty chapter pictures and the owner-requested Nephi companion must reach the shared study adapter'
 assert len(joseph_assets)==len(set(joseph_assets))==26 and set(joseph_assets)==joseph_review, 'All reviewed Joseph family pictures must reach study details exactly once'
 assert len(first_topic_assets)==len(set(first_topic_assets))==len(first_topic_review) and set(first_topic_assets)==set(first_topic_review), 'Exact additive FIRST topic family required'
-assert (count-len(first_topic_assets)-len(joseph_assets)-len(temple_assets)-len(father_assets)-len(plan_assets)-len(hg_assets)-len(covenant_assets)-len(journey_assets)-len(bible_assets)-len(settle_assets)-len(life_assets)-len(gap_assets)-len(sitewide_assets)-len(focused_assets)-len(relocated_assets)-len(bom_assets),preserved)==(99,3),(count,preserved)
+assert len(reading_art_assets)==len(set(reading_art_assets))==3 and set(reading_art_assets)==set(REVIEWED_READING_ART), 'Exact Stand two and Temple one inventory required'
+assert (count-len(reading_art_assets)-len(first_topic_assets)-len(joseph_assets)-len(temple_assets)-len(father_assets)-len(plan_assets)-len(hg_assets)-len(covenant_assets)-len(journey_assets)-len(bible_assets)-len(settle_assets)-len(life_assets)-len(gap_assets)-len(sitewide_assets)-len(focused_assets)-len(relocated_assets)-len(bom_assets),preserved)==(99,3),(count,preserved)
 # Life After Death lifted its old illustrated feature panel into full reading
 # sections. All twelve remaining panels still undergo the structural checks.
 assert set(plan_assets)==set(plan_review) and len(plan_assets)==16, 'All sixteen Plan originals must reach the shared study adapter'

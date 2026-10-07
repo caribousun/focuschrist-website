@@ -36,12 +36,18 @@ module.exports=async function(page,origin,out){
      const reference=await page.context().newPage();try{
       await reference.setViewportSize({width,height});await reference.goto(origin+'/answers/jesus-christ-latter-day-saint-beliefs.html',{waitUntil:'load'});await reference.evaluate(()=>document.fonts.ready);await reference.locator('a.fc-visual-hero[data-hero-viewer]').click();await reference.locator('#heroDetailDialog').waitFor({state:'visible'});
       const tokens=n=>{const c=getComputedStyle(n);return Object.fromEntries(['fontFamily','fontSize','fontWeight','lineHeight','minHeight','paddingTop','paddingRight','paddingBottom','paddingLeft','borderRadius','borderTopWidth','borderTopStyle','borderTopColor','color','backgroundColor','backgroundImage','display','alignItems','justifyContent','textAlign'].map(k=>[k,c[k]]));};
+      // Opening each dialog leaves the pointer at a different underlying control.
+      // Compare idle with idle without removing any computed style or geometry checks.
+      const idlePointers=async()=>{for(const current of [page,reference]){await current.mouse.move(0,0);await current.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));}};
+      const assertIdle=async(target,standard)=>{assert.equal(await target.evaluate(n=>n.matches(':hover')),false,'Timeline compared control is idle');assert.equal(await standard.evaluate(n=>n.matches(':hover')),false,'Reference compared control is idle');};
+      await idlePointers();
       r.pillParity=[];
       for(const selector of ['[data-hero-source-link]','[data-hero-study-link]','[data-hero-ask-link]','[data-full-image-viewer]','button[data-hero-close]']){
-       const target=panel.locator('.fc-artwork-detail-actions '+selector),standard=reference.locator('#heroDetailDialog .fc-artwork-detail-actions '+selector),actual=await target.evaluate(tokens),expected=await standard.evaluate(tokens);assert.deepEqual(actual,expected,'Timeline picture pill matches standard computed size/style: '+selector);assert((await target.boundingBox()).height>=48,'Standard 48px picture pill target');r.pillParity.push({selector,actual,expected});
+       const target=panel.locator('.fc-artwork-detail-actions '+selector),standard=reference.locator('#heroDetailDialog .fc-artwork-detail-actions '+selector);await assertIdle(target,standard);const actual=await target.evaluate(tokens),expected=await standard.evaluate(tokens);assert.deepEqual(actual,expected,'Timeline picture pill matches standard computed size/style: '+selector);assert((await target.boundingBox()).height>=48,'Standard 48px picture pill target');r.pillParity.push({selector,actual,expected});
       }
       await panel.locator('[data-full-image-viewer]').click();await reference.locator('#heroDetailDialog [data-full-image-viewer]').click();await page.locator('.fc-full-image-viewer').waitFor({state:'visible'});await reference.locator('.fc-full-image-viewer').waitFor({state:'visible'});
-      for(const selector of ['.fc-full-image-close','.fc-full-image-download',...(kind==='life'?['.fc-full-image-version select']:[])]){const actual=await page.locator('.fc-full-image-viewer '+selector).evaluate(tokens),expected=await reference.locator('.fc-full-image-viewer '+selector).evaluate(tokens);assert.deepEqual(actual,expected,'Timeline full-size control matches standard: '+selector);r.pillParity.push({selector,actual,expected});}
+      await idlePointers();
+      for(const selector of ['.fc-full-image-close','.fc-full-image-download',...(kind==='life'?['.fc-full-image-version select']:[])]){const target=page.locator('.fc-full-image-viewer '+selector),standard=reference.locator('.fc-full-image-viewer '+selector);await assertIdle(target,standard);const actual=await target.evaluate(tokens),expected=await standard.evaluate(tokens);assert.deepEqual(actual,expected,'Timeline full-size control matches standard: '+selector);r.pillParity.push({selector,actual,expected});}
       await page.keyboard.press('Escape');assert(await panel.isVisible(),'Full-size Escape returns to picture panel');
      }finally{await reference.close();}
     }

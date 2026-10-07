@@ -16,6 +16,25 @@ assert.equal(new Set(rules.map(x => x.route)).size, 40);
 assert.equal(rules.reduce((n, x) => n + x.alternates.length, 0), 50);
 assert.equal(new Set(rules.map(x => x.route + '|' + x.original)).size, rules.length, 'No ambiguous original mapping');
 const expectedRoutes = new Set(manifest.records.map(row => row.route));
+const scopedTopicRoutes = new Set([
+    'general-conference.html',
+    'answers/abrahamic-covenant.html',
+    'history/john-tanner.html',
+    'history/eleazer-miller.html',
+    'history/john-rowe-moyle.html',
+    'answers/what-is-eternal-marriage.html'
+]);
+assert.deepEqual(new Set(manifest.records.filter(row => row.controller === 'topic-artwork-details').map(row => row.route)), scopedTopicRoutes,
+    'Exact six reviewed topic-controller consumers in the hero map');
+function checkController(scripts, helper, route, name) {
+    const controllers = scripts.filter(match => match[1].split(/[?#]/)[0].split('/').pop() === name + '.js');
+    assert.equal(controllers.length, 1, route + ': exactly one controller reference');
+    const controller = controllers[0];
+    assert(helper.index < controller.index, route + ': helper loads before controller');
+    const version = route === 'timelines/life-of-christ-journey-map.html' ? '20261007-timeline-panels-1'
+        : scopedTopicRoutes.has(route) && name === 'topic-artwork-details' ? '20261007-scoped-root-1' : '20261006-visible-art-1';
+    assert(controller[1].endsWith(name + '.js?v=' + version), route + ': exact controller version');
+}
 const canonicalRoutes = [...fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => new URL(match[1]).pathname.slice(1) || 'index.html');
 for (const route of canonicalRoutes) {
     const html = fs.readFileSync(path.join(root, route), 'utf8');
@@ -26,11 +45,25 @@ for (const route of canonicalRoutes) {
     assert(helpers[0][1].endsWith('hero-image-source.js?v=' + (route === 'timelines/life-of-christ-journey-map.html' ? '20261007-timeline-panels-1' : route === 'history/eleazer-miller.html' ? '20261006-eleazer-hero-1' : '20261006-visible-art-1')));
     assert(/\bdefer\b/.test(helpers[0][0]) && !/\basync\b/.test(helpers[0][0]));
     for (const row of manifest.records.filter(row => row.route === route)) {
-        const controller = scripts.find(match => match[1].includes(row.controller + '.js?'));
-        assert(controller && helpers[0].index < controller.index, route + ': helper loads before controller');
-        assert(controller[1].endsWith(row.controller + '.js?v=' + (route === 'timelines/life-of-christ-journey-map.html' ? '20261007-timeline-panels-1' : '20261006-visible-art-1')));
+        checkController(scripts, helpers[0], route, row.controller);
     }
 }
+// Exercise the same validator against absent, stale, unknown, duplicate and mixed bindings.
+const scriptFixture = (src, index = 10) => Object.assign(['<script src="' + src + '"></script>', src], {index});
+for (const route of scopedTopicRoutes) {
+    const current = 'topic-artwork-details.js?v=20261007-scoped-root-1';
+    const stale = 'topic-artwork-details.js?v=20261006-visible-art-1';
+    const helper = {index: 0};
+    checkController([scriptFixture(current)], helper, route, 'topic-artwork-details');
+    for (const sources of [[], [stale], ['topic-artwork-details.js?v=unknown'], ['topic-artwork-details.js'],
+        [current, current], [current, stale], [stale, current], [current, 'topic-artwork-details.js']]) {
+        assert.throws(() => checkController(sources.map(src => scriptFixture(src)), helper, route, 'topic-artwork-details'),
+            assert.AssertionError, route + ': rejects ' + JSON.stringify(sources));
+    }
+    assert.throws(() => checkController([scriptFixture(current, -1)], helper, route, 'topic-artwork-details'), assert.AssertionError);
+}
+assert.throws(() => checkController([scriptFixture('artwork-details.js?v=20261007-scoped-root-1')], {index: 0}, 'ask.html', 'artwork-details'), assert.AssertionError,
+    'Scoped token cannot escape to unrelated controllers');
 for (const row of manifest.records) {
     assert(fs.existsSync(path.join(root, row.route)));
     assert(fs.existsSync(path.join(root, row.href)));
