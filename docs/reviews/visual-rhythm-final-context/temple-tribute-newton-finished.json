@@ -1,0 +1,51 @@
+{
+  "reviewer": "Newton",
+  "receipt_id": "newton-final-context-temple-tribute-20261007",
+  "stage": "finished",
+  "verdict": "PASS",
+  "withdrawn": false,
+  "binding_sha256": "d2391570e3f10eccb97ee6955fac3c792e170c1ea7b6a7df1607725b2abb98f0",
+  "reviewed_at": "2026-10-07T04:33:04.911416+00:00",
+  "full_resolution_inspected": true,
+  "face_details_inspected": true,
+  "observations": "Current independent review personally inspected both delivered WebPs, desktop/phone placements and applicable narrow panel/viewer screenshots, read current caption/source/adjacent prose, and verified complete current HTML/CSS context plus asset/pixel hashes. Exact unchanged original-resolution and face-detail inspection is reused from the named prior Newton receipt, not claimed as newly repeated. No browser operation, owner aesthetic acceptance or public verification by this reviewer.",
+  "checks": {
+    "identity": "Prior exact Home-Christ and approved Peter rescue reference comparison reused unchanged; full and960 derivatives preserve Christ facial identity and Peter rear-profile continuity.",
+    "age": "Adult mortal-ministry Christ and adult Peter; no asserted exact ancient birth date.",
+    "expression_gaze": "Christ speaking naturally to attentive Peter, coherent mutual orientation and visible eyes.",
+    "atmosphere": "Natural domestic light and detailed skin, cloth and earthen walls; no halo or painterly surfaces.",
+    "environment": "Modest house with line/hook prepares for Matthew17 fishing instruction, distinct from Caesar coin question.",
+    "anatomy": "Christ gesture and resting hands and Peter coil-holding hands remain coherent; no scars in this mortal scene.",
+    "uniqueness": "Seated indoor two-person instruction differs from John6 courtyard and John7 public temple and Matthew22 tribute coin.",
+    "period_sources": "Reused prior independent Matthew17:24-27 source readback and unchanged source record. Caption says Capernaum, temple tribute and hook, then invites reflection on Sonship; no invented room/date claim.",
+    "characters_realism": "Prior full-resolution original and face/hand crop concurrence remains valid on identical original SHA. Both delivered full/960 WebPs personally viewed now, retaining natural faces and textures. Two adults seated in modest domestic interior, natural mutual gaze and expression. Christ matches inspected Home identity with changed speaking expression; Peter retains approved rear-profile hair/beard/head continuity. Both Christ hands and Peter coil-holding hands trace coherently; no scars. Coil/hook visually supplies pre-fishing cue, no fish/coin or Caesar episode. Dusty-blue mantle and beige tunic plausible. Full native scene and face/hands/coil crops inspected.",
+    "desktop_phone": "Personally viewed current saved desktop and phone placements: native3:2 picture, readable caption/source controls and useful narrative pause. Applicable narrow panel/fullsize imagery also inspected; UI/root own executed actions. Screenshot filenames are not interaction proof."
+  },
+  "prior_review": {
+    "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-06\\focus-artwork-pill-controls-completion\\work\\newton\\temple-tribute-original-pixel-review.json",
+    "sha256": "7328c22b69b140600bbf0d1c5c8829fb835a6ad3a6ecfc8b3988586a62bcf3c2",
+    "reuse": "Exact original and preflight hashes unchanged; retain prior source/reference/full-resolution crop inspection."
+  },
+  "evidence": [
+    {
+      "path": "assets/page-art/visual-rhythm-journey/temple-tribute-original.png",
+      "sha256": "e1cbd9cf09065630f8af52791c9832cf93e1c0be0f75893b138e1f4cede47195"
+    },
+    {
+      "path": "assets/page-art/visual-rhythm-journey/temple-tribute-full.webp",
+      "sha256": "de729b17b7a72a14b6f667c9a23a4f064c4d7883dab1d5d1d430f80e7f1820bf"
+    },
+    {
+      "path": "assets/page-art/visual-rhythm-journey/temple-tribute-960.webp",
+      "sha256": "fc1dff1127af137bdf0cf20d3da8833b6b6180940aa7dd019106bb022f5e050a"
+    },
+    {
+      "path": ".qa-artifacts/visual-rhythm-review/temple-tribute-desktop.png",
+      "sha256": "7e0b4ff364d50d593360ab7379e31a603d216193d889dbd06a757acb76a61f60"
+    },
+    {
+      "path": ".qa-artifacts/visual-rhythm-review/temple-tribute-phone.png",
+      "sha256": "d984f5dfdaf9a64ab69397b8fac7c73db7e680782b1eb45700dda1e43c06044c"
+    }
+  ]
+}

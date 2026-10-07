@@ -1,0 +1,292 @@
+[
+  {
+    "case": "Eleazer desktop wide",
+    "download": "http://127.0.0.1:4193/assets/page-art/history-stories/miller-teaching-brigham-desktop.png",
+    "height": 900,
+    "select": "<select aria-label=\"Image version\"><option value=\"http://127.0.0.1:4193/assets/page-art/history-stories/miller-teaching-brigham-master.png\">Phone version</option><option value=\"http://127.0.0.1:4193/assets/page-art/history-stories/miller-teaching-brigham-desktop.png\">Wide version</option></select>",
+    "width": 1280
+  },
+  {
+    "case": "Eleazer desktop phone choice",
+    "download": "http://127.0.0.1:4193/assets/page-art/history-stories/miller-teaching-brigham-master.png"
+  },
+  {
+    "case": "Eleazer phone",
+    "controls": [
+      {
+        "href": "",
+        "rect": {
+          "bottom": 839.2000122070312,
+          "height": 48,
+          "left": 16,
+          "right": 396,
+          "top": 791.2000122070312,
+          "width": 380,
+          "x": 16,
+          "y": 791.2000122070312
+        },
+        "text": "Phone versionWide version"
+      },
+      {
+        "href": "http://127.0.0.1:4193/assets/page-art/history-stories/miller-teaching-brigham-master.png",
+        "rect": {
+          "bottom": 899.2000122070312,
+          "height": 48,
+          "left": 16,
+          "right": 396,
+          "top": 851.2000122070312,
+          "width": 380,
+          "x": 16,
+          "y": 851.2000122070312
+        },
+        "text": "Download image"
+      }
+    ],
+    "height": 915,
+    "overflow": false,
+    "width": 412
+  },
+  {
+    "case": "Eleazer phone viewer return",
+    "focus": "View Full-Size Image"
+  },
+  {
+    "case": "History phone nested reader and fullsize",
+    "download": "",
+    "focus": "View Full-Size Image"
+  },
+  {
+    "case": "Pioneer phone panel/viewer",
+    "focus": "View Full-Size Image"
+  },
+  {
+    "case": "Temple phone viewer",
+    "focus": "View Full-Size Image"
+  },
+  {
+    "case": "Handcart phone viewer",
+    "focus": "View Full-Size Image"
+  },
+  {
+    "case": "Stand phone Stay with the words of life",
+    "download": "http://127.0.0.1:4193/assets/page-art/stand-forever-journey/stand-john6-remain-full.webp",
+    "viewer": true
+  },
+  {
+    "buttons": [
+      {
+        "rect": {
+          "bottom": 492.7499923706054,
+          "height": 69.5999984741211,
+          "left": 203.40000915527344,
+          "right": 380.8000183105469,
+          "top": 423.1499938964844,
+          "width": 177.40000915527344,
+          "x": 203.40000915527344,
+          "y": 423.1499938964844
+        },
+        "text": "Read one chapter at a time"
+      },
+      {
+        "rect": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "text": "First chapter in this study"
+      },
+      {
+        "rect": {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "text": "Next chapter in this study: Abraham preserves what he received →"
+      }
+    ],
+    "case": "Father phone whole study",
+    "overflow": false
+  },
+  {
+    "case": "Stand phone Learn through faithful action independently reopened",
+    "download": "http://127.0.0.1:4193/assets/page-art/stand-forever-journey/stand-john7-do-his-will-full.webp"
+  },
+  {
+    "case": "history desktop panel",
+    "dialogs": [
+      {
+        "rect": {
+          "bottom": 717.125,
+          "height": 534.25,
+          "left": 80,
+          "right": 1200,
+          "top": 182.875,
+          "width": 1120,
+          "x": 80,
+          "y": 182.875
+        },
+        "text": "EXPLORE AND STUDY\n\nFriends who stay near\n\nA friend gently brushes an older woman’s hair as they talk. The Lord reminded Joseph that his friends still stood by him; ordinary acts of care can give that friendship a present-day expression.\n\nExplore faith during trials\nRead Doctrine and Covenants 121:9\nRead Doctrine and Covenants 121:41–42\nView Full-Size Image\nContinue Lesson\nClose"
+      }
+    ],
+    "overflow": false,
+    "width": 1280
+  },
+  {
+    "case": "history desktop viewer",
+    "download": "http://127.0.0.1:4193/assets/page-art/visual-rhythm-journey/history-friendship-full.webp"
+  },
+  {
+    "case": "history desktop viewer focus",
+    "focus": "View Full-Size Image"
+  },
+  {
+    "case": "pioneers desktop panel",
+    "dialogs": [
+      {
+        "rect": {
+          "bottom": 745.4249877929688,
+          "height": 590.8624877929688,
+          "left": 80,
+          "right": 1200,
+          "top": 154.5625,
+          "width": 1120,
+          "x": 80,
+          "y": 154.5625
+        },
+        "text": "EXPLORE AND STUDY\n\nMake room in the journey\n\nBefore leaving, a traveler and her companion make sure her bag and walker will be ready for the journey. The preparations in Doctrine and Covenants 136:6–9 ask us to notice whose needs might otherwise be overlooked.\n\nExplore faith and practical care\nDoctrine and Covenants 136:6–9\nView Full-Size Image\nContinue Lesson\nClose"
+      }
+    ],
+    "overflow": false,
+    "width": 1280
+  },
+  {
+    "case": "pioneers desktop viewer",
+    "download": "http://127.0.0.1:4193/assets/page-art/visual-rhythm-journey/pioneers-traveler-full.webp"
+  },
+  {
+    "case": "pioneers desktop viewer focus",
+    "focus": "View Full-Size Image"
+  },
+  {
+    "case": "temple desktop panel",
+    "dialogs": [
+      {
+        "rect": {
+          "bottom": 729.6750335693359,
+          "height": 559.3500366210938,
+          "left": 80,
+          "right": 1200,
+          "top": 170.3249969482422,
+          "width": 1120,
+          "x": 80,
+          "y": 170.3249969482422
+        },
+        "text": "EXPLORE AND STUDY\n\nThe Son and the temple tribute\n\nIn Capernaum, Jesus speaks with Peter about the temple tribute and sends him to the sea with a hook. The account invites us to consider who Jesus is as the Son, even as He provides for the payment.\n\nStudy Jesus Christ\nRead Matthew 17:24–27\nView Full-Size Image\nContinue Lesson\nClose"
+      }
+    ],
+    "overflow": false,
+    "width": 1280
+  },
+  {
+    "case": "temple desktop viewer",
+    "download": "http://127.0.0.1:4193/assets/page-art/visual-rhythm-journey/temple-tribute-full.webp"
+  },
+  {
+    "case": "temple desktop viewer focus",
+    "focus": "View Full-Size Image"
+  },
+  {
+    "case": "handcart desktop panel",
+    "dialogs": [
+      {
+        "rect": {
+          "bottom": 731.6750335693359,
+          "height": 563.3500366210938,
+          "left": 80,
+          "right": 1200,
+          "top": 168.3249969482422,
+          "width": 1120,
+          "x": 80,
+          "y": 168.3249969482422
+        },
+        "text": "EXPLORE AND STUDY\n\nHelp begins with willing hands\n\nVolunteers gather quilts, flour and clothing for the relief wagons. The first rescuers leave Salt Lake City on October 7, 1856, carrying help toward people still far out on the trail.\n\nContinue the pioneer rescue study\nRead the handcart rescue history\nView Full-Size Image\nContinue Lesson\nClose"
+      }
+    ],
+    "overflow": false,
+    "width": 1280
+  },
+  {
+    "case": "handcart desktop viewer",
+    "download": "http://127.0.0.1:4193/assets/page-art/visual-rhythm-journey/handcart-supplies-full.webp"
+  },
+  {
+    "case": "handcart desktop viewer focus",
+    "focus": "View Full-Size Image"
+  },
+  {
+    "case": "john6 desktop panel",
+    "dialogs": [
+      {
+        "rect": {
+          "bottom": 710.8000335693359,
+          "height": 521.6000366210938,
+          "left": 80,
+          "right": 1200,
+          "top": 189.1999969482422,
+          "width": 1120,
+          "x": 80,
+          "y": 189.1999969482422
+        },
+        "text": "EXPLORE AND STUDY\n\nStay with the words of life\n\nAs others turn away, Peter stays close to Jesus. His answer points to the Savior Himself: the One whose words give eternal life.\n\nStudy Jesus Christ\nRead John 6:66–69\nView Full-Size Image\nContinue Lesson\nClose"
+      }
+    ],
+    "overflow": false,
+    "width": 1280
+  },
+  {
+    "case": "john6 desktop viewer",
+    "download": "http://127.0.0.1:4193/assets/page-art/stand-forever-journey/stand-john6-remain-full.webp"
+  },
+  {
+    "case": "john6 desktop viewer focus",
+    "focus": "View Full-Size Image"
+  },
+  {
+    "case": "john7 desktop panel",
+    "dialogs": [
+      {
+        "rect": {
+          "bottom": 722.7250213623047,
+          "height": 545.4500122070312,
+          "left": 80,
+          "right": 1200,
+          "top": 177.27500915527344,
+          "width": 1120,
+          "x": 80,
+          "y": 177.27500915527344
+        },
+        "text": "EXPLORE AND STUDY\n\nLearn through faithful action\n\nJesus listens and teaches as questions arise in the temple. He invites His hearers to do the Father's will and come to know where His teaching comes from. Faithful action belongs beside patient study.\n\nStudy Jesus Christ\nRead John 7:14–18\nView Full-Size Image\nContinue Lesson\nClose"
+      }
+    ],
+    "overflow": false,
+    "width": 1280
+  },
+  {
+    "case": "john7 desktop viewer",
+    "download": "http://127.0.0.1:4193/assets/page-art/stand-forever-journey/stand-john7-do-his-will-full.webp"
+  },
+  {
+    "case": "john7 desktop viewer focus",
+    "focus": "View Full-Size Image"
+  }
+]

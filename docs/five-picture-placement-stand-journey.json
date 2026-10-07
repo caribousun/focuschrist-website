@@ -1,0 +1,33 @@
+{
+  "scope": "Two distinct original scripture scenes at the reviewed Stand Forever reading transitions. Pixel and assembled approvals remain separately bound.",
+  "placements": [
+    {
+      "page": "answers/stand-forever.html",
+      "section": "video-series",
+      "asset": "assets/page-art/stand-forever-journey/stand-john6-remain-960.webp",
+      "fullAsset": "assets/page-art/stand-forever-journey/stand-john6-remain-full.webp",
+      "title": "Stay with the words of life",
+      "description": "As others turn away, Peter stays close to Jesus. His answer points to the Savior Himself: the One whose words give eternal life.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/6?lang=eng&id=p66-p69#p66"
+      ],
+      "width": 1536,
+      "height": 1024,
+      "alt": "Peter stands facing Jesus in a shaded courtyard as other disciples walk away in the distance."
+    },
+    {
+      "page": "answers/stand-forever.html",
+      "section": "stand-forever",
+      "asset": "assets/page-art/stand-forever-journey/stand-john7-do-his-will-960.webp",
+      "fullAsset": "assets/page-art/stand-forever-journey/stand-john7-do-his-will-full.webp",
+      "title": "Learn through faithful action",
+      "description": "Jesus listens and teaches as questions arise in the temple. He invites His hearers to do the Father's will and come to know where His teaching comes from. Faithful action belongs beside patient study.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/7?lang=eng&id=p14-p18#p14"
+      ],
+      "width": 1536,
+      "height": 1024,
+      "alt": "Jesus sits on a shaded temple step, speaking with an attentive man while two listeners look on."
+    }
+  ]
+}

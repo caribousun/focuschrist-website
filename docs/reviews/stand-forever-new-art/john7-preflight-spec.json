@@ -1,0 +1,71 @@
+{
+  "id": "stand-forever-john7",
+  "role": "body",
+  "route": "answers/stand-forever.html",
+  "prompt": {
+    "path": "docs/reviews/stand-forever-new-art/john7-prompt.txt",
+    "sha256": "72785382986e76d97eb8e6d1a8bc7aa781f4ee9b858fa963679ada2ab1b56338"
+  },
+  "mandates": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "fe68d0e575ac67262f5693432f09e8de8c2236d1ad8e58890e24f6d358cd4bf4"
+    },
+    {
+      "path": "docs/historical-character-identity.md",
+      "sha256": "69f0f51400ba102dfb5df9a9ec9fb6e738255dc496b84dc5dd684f3f5886c8c4"
+    },
+    {
+      "path": "docs/focuschrist-enrichment-and-stewardship-prompt.md",
+      "sha256": "91cfd09d188880c849493d1752cabb6c6bf8b239d9722259b196161fb6189d14"
+    }
+  ],
+  "references": [
+    {
+      "path": "assets/heroes/home-christ-signature-approved-20260907.png",
+      "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b"
+    },
+    {
+      "path": "docs/reviews/stand-forever-new-art/source-record.json",
+      "sha256": "ff37365ef49832338774b77c6717d841983891612b8e17d67ef317941939c82f"
+    }
+  ],
+  "source_record": {
+    "path": "docs/reviews/stand-forever-new-art/source-record.json",
+    "sha256": "ff37365ef49832338774b77c6717d841983891612b8e17d67ef317941939c82f"
+  },
+  "chronology": {
+    "kind": "approximate-historical",
+    "period": "Early first century AD, during the mortal ministry of Jesus Christ",
+    "basis": "John chapter 7 establishes ministry sequence; no exact calendar date asserted.",
+    "source_urls": [
+      "https://www.churchofjesuschrist.org/study/scriptures/nt/john/7?lang=eng"
+    ]
+  },
+  "characters": [
+    {
+      "name": "Jesus Christ",
+      "age_context": {
+        "status": "approximate",
+        "depiction": "Adult mortal ministry, approximately early thirties",
+        "basis": "Adult ministry in John6-7; precise event and birth dates not established here. Apparent early thirties is a qualified artistic choice, not exact age claim."
+      },
+      "reference_path": "assets/heroes/home-christ-signature-approved-20260907.png",
+      "identity_authority": "owner-approved",
+      "owner_evidence": "Canonical owner-approved Home identity, approved-character-identities.json; exact pixels inspected."
+    },
+    {
+      "name": "Anonymous adult listeners",
+      "age_context": {
+        "status": "illustrative",
+        "depiction": "Distinct adults, natural mature features and ordinary first-century dress",
+        "basis": "Unnamed surrounding people in chapter context; no precise ages or authenticated likenesses given."
+      },
+      "reference_path": "docs/reviews/stand-forever-new-art/source-record.json",
+      "identity_authority": "researched-no-owner-master",
+      "owner_evidence": "Scripture source and written appearance constraints in source record. Anonymous roles have no claimed owner-approved identity; source record is textual research evidence, not a facial photograph."
+    }
+  ],
+  "period_clothing_setting": "Modest first-century wool and linen; interpretive shaded Jerusalem temple-court steps during mid-feast questioning; not final-day public proclamation",
+  "interaction": "Exact prompt requires coherent mutual gaze, calm attentive natural expressions, separate anatomically clear limbs; meaningful action and blocking distinct from all identified similar inventory."
+}

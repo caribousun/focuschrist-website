@@ -1,0 +1,136 @@
+{
+  "reviewer": "Fermi",
+  "receipt_id": "fermi-pioneers-traveler-final-context-20261007-receiver",
+  "stage": "finished",
+  "verdict": "PASS",
+  "withdrawn": false,
+  "binding_sha256": "6a3b3941e1725b965e66218cfd580e3d22c39c67c2150eefa7b72bb393b51800",
+  "reviewed_at": "2026-10-07T04:33:17.592164+00:00",
+  "observations": "Current Fermi receiver read exact live Master/protected foundation, current 00B/Focus and applicable repository mandates. Original-resolution and face-detail checks below explicitly reuse prior Fermi hash-bound pixel inspection; this turn independently verified unchanged source/decoded-pixel/derivative hashes and inspected current rendered screenshot pixels and visitor copy. No regeneration or new owner approval. Actual browser interaction claims belong to root/UI receipts, not my screenshot inspection. No unresolved scoped finding; publication, Newton concurrence and owner aesthetic acceptance remain separate.",
+  "checks": {
+    "identity": "Two anonymous contemporary adults, older traveler and companion. No historical identity is claimed.",
+    "age": "Older traveler retains natural silver hair, lined face and participating posture; companion visibly mature adult.",
+    "expression_gaze": "Reciprocal attentive gaze; traveler actively gestures while companion holds bag, preserving personal agency.",
+    "atmosphere": "Calm ordinary departure in soft overcast daylight, no emergency/lifting spectacle.",
+    "environment": "Parked van and driveway with folded walker. Steering-wheel/seat ambiguity preserved as limitation; caption does not claim passenger seat.",
+    "characters_realism": "Prior original/full/960 reviews found natural skin, cloth and vehicle light; matching hashes preserve those pixels.",
+    "period_sources": "Reused D&C136:6-9 source record supports preparations and care for vulnerable travelers; modern scene clearly an application, not Winter Quarters reenactment.",
+    "anatomy": "Prior full and hand details show separate conversational hand and bag-holding hand; second hand partially occluded naturally. Feet remain inside sill.",
+    "uniqueness": "Specific bag/walker preparation differs from previous roadside aid and historical trail pictures; one owning reflection section.",
+    "desktop_phone": "Independently inspected actual current desktop1280 and phone412 placement screenshots, plus targeted panel/full-size screenshot where listed. Complete3:2 picture, readable caption/source controls, natural stacking and appropriate pause in story flow. UI native actions separately verified; screenshot review does not claim interaction or200percent scaling."
+  },
+  "full_resolution_inspected": true,
+  "face_details_inspected": true,
+  "pixel_review_provenance": "Retained prior independently inspected immutable pixels; original and all derivatives verified byte and decoded-pixel identical in this review. No claim of new generation or new owner approval.",
+  "evidence": [
+    {
+      "path": "assets/page-art/visual-rhythm-journey/pioneers-traveler-original.png",
+      "sha256": "813d004b326d19c36b33565747ad0297d93520a7ac04451400f1697227e27021"
+    },
+    {
+      "path": "assets/page-art/visual-rhythm-journey/pioneers-traveler-full.webp",
+      "sha256": "87df0e8ab581be777a2648dee88a942b624c0063007376b7030c7ed79a3f8d94"
+    },
+    {
+      "path": "assets/page-art/visual-rhythm-journey/pioneers-traveler-960.webp",
+      "sha256": "95ae2433f921444725b1d751779b4f7be6c27869235eec1b8760b335fef00ea8"
+    },
+    {
+      "path": "artwork-actions.css",
+      "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+    },
+    {
+      "path": "artwork-details.css",
+      "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+    },
+    {
+      "path": "complete-card-rows.css",
+      "sha256": "7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"
+    },
+    {
+      "path": "connected-study.css",
+      "sha256": "513b11859f17d36a5934d323f865242b8c90beea70e94fd3056e6e2dc0af40c6"
+    },
+    {
+      "path": "full-image-viewer.css",
+      "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+    },
+    {
+      "path": "hero-details.css",
+      "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+    },
+    {
+      "path": "pioneer-experience.css",
+      "sha256": "7f67cd77c23157019cd4cb609f2ff0b7151b9a503e143dd692337f41aed919d8"
+    },
+    {
+      "path": "pioneer-story.css",
+      "sha256": "4763ed30f2f27070d5d126bf4426533cfecbf78b5f189ab8f49300708578c924"
+    },
+    {
+      "path": "pioneers.html",
+      "sha256": "22f1bc6119503179c58e55328b91e1f2e077c55c44ac5918569b566d216666ff"
+    },
+    {
+      "path": "resource-cards.css",
+      "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+    },
+    {
+      "path": "site-header.css",
+      "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+    },
+    {
+      "path": "site-search.css",
+      "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+    },
+    {
+      "path": "site-system.css",
+      "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+    },
+    {
+      "path": "topic-art.css",
+      "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"
+    },
+    {
+      "path": "topic-artwork-details.css",
+      "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+    }
+  ],
+  "screenshot_evidence": [
+    {
+      "path": ".qa-artifacts/visual-rhythm-review/pioneers-traveler-desktop.png",
+      "sha256": "2309423611ff0340415f71fa8eb8e2d1efd0209ffac814f81a370570a22b7525"
+    },
+    {
+      "path": ".qa-artifacts/visual-rhythm-review/pioneers-traveler-phone.png",
+      "sha256": "eb9f8aeb6084a3b7cf7a2b6a1c758ea5a349910b738790f8f2a019b4e59f57af"
+    },
+    {
+      "path": ".qa-artifacts/visual-rhythm-review/pioneers-traveler-fullsize-phone.png",
+      "sha256": "5bc0c9492b995fcf7ce21143a4a3332cae72a3b89828cdbb47043fad1c24b13a"
+    }
+  ],
+  "mandates_read": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "fe68d0e575ac67262f5693432f09e8de8c2236d1ad8e58890e24f6d358cd4bf4"
+    },
+    {
+      "path": "docs/historical-character-identity.md",
+      "sha256": "69f0f51400ba102dfb5df9a9ec9fb6e738255dc496b84dc5dd684f3f5886c8c4"
+    },
+    {
+      "path": "docs/focuschrist-enrichment-and-stewardship-prompt.md",
+      "sha256": "91cfd09d188880c849493d1752cabb6c6bf8b239d9722259b196161fb6189d14"
+    },
+    {
+      "path": "docs/supporting-artwork-standard.md",
+      "sha256": "bdf1a7b97693f15cc9d6411fd0378ea8b549f2a6d3df934d574398ecbe0966ec"
+    },
+    {
+      "path": "docs/enriched-picture-owner-mandate.md",
+      "sha256": "c237fb14c7dd57f04d7d9ad063f3f0e93daf0a5c9844f9c3682407b4c80b363d"
+    }
+  ],
+  "source_spec": "docs/reviews/visual-rhythm-new-art/pioneers-traveler-creation-spec.json"
+}

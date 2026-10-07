@@ -1,0 +1,117 @@
+{
+  "reviewer": "Newton",
+  "reviewed_at": "2026-10-07T04:34:50.763509+00:00",
+  "head_at_review": "0656849dc14a2b6459bb9bf7a6d5f74e0b30e588",
+  "verdict": "CONCUR_SCOPED",
+  "scope": "Three final strict-binding repairs, frozen asset invariance, eight route semantic changes and seven current artwork contexts. Not final-head/public/owner acceptance.",
+  "authority": "Exact connected Drive current Master, protected foundation, 00B and Focus loaded. Current repo mandates and source handoffs read. No canonical changes by reviewer.",
+  "findings": [
+    {
+      "status": "RESOLVED",
+      "finding": "Joseph acceptance unrelated non-ASCII literals had been mojibake-corrupted, weakening rejection checks.",
+      "resolution": "Fermi restored suffix byte-for-byte from HEAD and test Moyle apostrophe. Independently reviewed exact diff and reran21 tests including independent clean-Unicode inputs."
+    }
+  ],
+  "binding_review": {
+    "controller": "Exact118 route-to-single-literal-src equality. Each current owner independently compared to HEAD:116 prior single owners preserve script pathname; only pioneers.html and timelines/willie-and-martin-handcart-map.html add the explicit scoped controller for their new art. Missing owner/ref, duplicate,mixed,unknown,new-owner fixtures pass. No count-only acceptance.",
+    "answer_opening": "Only exact3 new body images are removed after serialized markup and delivered asset SHA verification. Original25 opening/image baselines preserved. Missing/duplicate/alt mutation fixtures pass.",
+    "joseph_pdf": "Exact current full-tag inverse for viewer CSS and topic controller. Historical site-system inverse remains conditional on frozen reviewed hash. All unrelated content bytes must reach original digest; stale/duplicate/mixed/unknown and unrelated content edits reject.21tests pass.",
+    "frozen_assets": "baseline_check independently verified2473 original raster/PDF git blobs unchanged; no frozen PDF regenerated."
+  },
+  "tests": [
+    {
+      "command": "python tools/illustrated_study_navigation_qa.py",
+      "result": "PASS118 consumers,92 labels and mutation fixtures"
+    },
+    {
+      "command": "python tools/answer_opening_qa.py",
+      "result": "PASS25 exact Answer opening/image contracts and mutation fixtures"
+    },
+    {
+      "command": "python -m unittest discover -s tools -p test_joseph_research_acceptance.py",
+      "result": "PASS21tests after repair"
+    },
+    {
+      "command": "artwork_creation_gate.baseline_check",
+      "result": "PASS2473 immutable baseline raster/PDF files"
+    },
+    {
+      "command": "All7 spec page_dependencies + files + pixel_hash",
+      "result": "Complete required page/CSS closure, zero stale hashes; assets and decoded pixel hashes match."
+    }
+  ],
+  "semantic_reviews": {
+    "answers/stand-forever.html": {
+      "sha256": "abaf3ca3e0d766e9f5d2dae74892cfb0a6e4eff0b1a305686fbc1bb98279e24c",
+      "concur": true,
+      "observations": "Two scripture captions added; rest of visible text unchanged versus HEAD. John6 remaining disciples/Peter and John7 learning by doing fit retained independently reviewed sources; no new historical staging asserted as fact."
+    },
+    "answers/what-is-the-book-of-mormon.html": {
+      "sha256": "15a26f78e5c29cbe299555e912167770f197300dbefabd5f9bdcdc355c804e41",
+      "concur": true,
+      "observations": "Three reflection prompts shortened without removing references or substantive care/community/ongoing-inquiry meaning. Personal healing caveat remains useful and no healing promise introduced. Warm concrete language."
+    },
+    "answers/why-latter-day-saints-build-temples.html": {
+      "sha256": "65248868ab6e77314e267a4f1057ecbc1f9411cd289bb7dffa3aedb1c32ecf7c",
+      "concur": true,
+      "observations": "Matthew17 caption added beneath Christ-centered paragraph, retaining distinction between Sonship/tribute and modern ordinance explanations. No changed existing doctrinal paragraph."
+    },
+    "church-history.html": {
+      "sha256": "44bfcef04534e1c32e8bc4daebca83e6045758ed4c7b99d81bc8018e40de2624",
+      "concur": true,
+      "observations": "Source-method section shortened while preserving firsthand/transcript/later recollection, chronology/audience, historical and spiritual inquiry distinction, primary-source links and open questions. New modern friendship caption explicitly frames present-day application of D&C121."
+    },
+    "pioneers.html": {
+      "sha256": "22f1bc6119503179c58e55328b91e1f2e077c55c44ac5918569b566d216666ff",
+      "concur": true,
+      "observations": "Historical evidence/personal response distinction, individual variation, FortBridger modern geography and dignity/grief safeguards retained in two warm paragraphs. Contemporary traveler caption does not purport to reconstruct1847 scene."
+    },
+    "timelines/willie-and-martin-handcart-map.html": {
+      "sha256": "8f8741552d430ee4e8814d51fb0c34c3f7d3f7f65f92a84f4006799339a74bf1",
+      "concur": true,
+      "observations": "One relief preparation caption added, source-reviewed October7 departure and volunteers/supplies preserved. Original timeline dates/company distinctions remain. No invented named person."
+    },
+    "timelines/life-of-christ-journey-map.html": {
+      "sha256": "0c92ef63d50fd0dd63c6edaaffc0604b0d3565bf275ac96a19e623380a0857a3",
+      "concur": true,
+      "observations": "Visible text unchanged versus HEAD; dependency/control context updated. Prior scoped timeline review remains applicable."
+    },
+    "timelines/latter-day-saint-church-history-timeline.html": {
+      "sha256": "c9c13e478f1d0b2ef8d0a35819438f23db08fda208a0ea5f0c0a4449a3480a20",
+      "concur": true,
+      "observations": "Visible text unchanged versus HEAD; dependency/control context updated. Prior scoped timeline review remains applicable."
+    }
+  },
+  "evidence": [
+    {
+      "path": "tools/illustrated_study_navigation_qa.py",
+      "sha256": "b0980e3ba690a491824105eee8b3bb6bd0aac3b1bad2b3829b842c6de1f6e280"
+    },
+    {
+      "path": "docs/topic-artwork-controller-bindings.json",
+      "sha256": "0b2bee3fd6255f0ebff8d5eda5adfaa8b03196f4b40d4afc26599a5fb87eaa2f"
+    },
+    {
+      "path": "tools/answer_opening_qa.py",
+      "sha256": "44a6b91d6464d92ffe848144fa8004bbe650066848974589e9cf49acc4789f3d"
+    },
+    {
+      "path": "tools/joseph_research_acceptance.py",
+      "sha256": "68305a50f0b8f649cc1cd913f550ccb530af5f8e90248384e493758f425a52ab"
+    },
+    {
+      "path": "tools/test_joseph_research_acceptance.py",
+      "sha256": "7a753a753088d093a61bf6d302de09fdcb49f0c433e5ff722bfa1b7af1c81c76"
+    },
+    {
+      "path": "docs/joseph-research-pdf-review.json",
+      "sha256": "8e05e914a68eca335cb4d15ae57e051f59ac3e850dd8c64b82a97ec4fde16b15"
+    }
+  ],
+  "limits": [
+    "Source evidence reused from valid unchanged preflight/original receipts; no new broad audit or redundant historical research.",
+    "Personally viewed delivered8 WebPs and current saved8 placement screenshots plus scoped narrow panels/viewers; browser actions belong to UI/root.",
+    "Seven finished receipts explicitly distinguish prior full-resolution/face/reference reuse from fresh derivative/context inspection.",
+    "Final candidate head/tree, hosted CI, public bytes, live-page and canonical closure remain root release gates."
+  ]
+}

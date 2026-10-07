@@ -158,8 +158,42 @@ def validated_record(route, registry=None):
     return record
 
 
+def restore_timeline_navigation(route, text, record):
+    """Invert only the three owner-authorized navigation moves, not prose edits.
+
+    Keep the original 24-route paragraph review and its hashes immutable. The
+    current layout must match the exact reviewed removal and insertion before
+    its opening can be compared with that original review.
+    """
+    routes = {name for name in ROUTES if name.startswith('timelines/')}
+    if route not in routes:
+        return text
+    data = json.loads((ROOT / 'docs/timeline-introduction-context.json').read_text(encoding='utf-8'))
+    assert data['version'] == 1 and set(data['pages']) == routes
+    binding = data['pages'][route]
+    line = binding['original_nav_line']
+    nav = line.lstrip()
+    assert nav.startswith('<nav class="timeline-navigation" ') and nav.endswith('</nav>')
+    assert record['new_opening'].count(line) == 1
+    expected = record['new_opening'].replace(line, '', 1)
+    assert digest(expected) == binding['current_opening_sha256']
+    start, end = opening_range(route, text)
+    assert text[start:end] == expected, route + ': unreviewed timeline opening change'
+    assert text.count(nav) == 1, route + ': timeline navigation missing or duplicated'
+    soup = BeautifulSoup(text, 'html.parser')
+    assert len(soup.select('nav.timeline-navigation')) == 1
+    anchor = binding['overview_anchor']
+    insertion = anchor + '\n    ' + nav
+    assert text.count(insertion) == 1, route + ': navigation not after reviewed overview paragraph'
+    assert text.index(insertion) >= end, route + ': navigation is not below opening'
+    # Exact replacements preserve every unrelated byte for downstream guards.
+    text = text.replace(insertion, anchor, 1)
+    return text[:start] + record['new_opening'] + text[end:]
+
+
 def assert_current_opening(route, text, registry=None):
     record = validated_record(route, registry)
+    text = restore_timeline_navigation(route, text, record)
     start, end = opening_range(route, text)
     current = text[start:end]
     assert text[max(0, start - 120):start] == record['current_context_before'], route + ': opening relocated'
@@ -173,6 +207,7 @@ def assert_current_opening(route, text, registry=None):
 
 def restore_reviewed_opening(route, text, registry=None):
     record = assert_current_opening(route, text, registry)
+    text = restore_timeline_navigation(route, text, record)
     start, end = opening_range(route, text)
     restored = text[start:end].replace(record['new_fragment'], record['old_fragment'], 1)
     assert restored == record['old_opening']
@@ -194,11 +229,23 @@ def self_test():
             'missing': actual[:start] + actual[end:],
             'duplicate-opening': actual + record['new_opening'],
             'duplicate-fragment': actual + record['new_fragment'],
-            'modified-fragment': actual.replace(record['new_fragment'], record['new_fragment'].replace('>', '>UNREVIEWED', 1), 1),
+            'modified-fragment': actual[:start] + actual[start:end].replace('<p', '<p data-unreviewed="true"', 1) + actual[end:],
             'title': actual[:start] + actual[start:end].replace('<h1', '<h1 data-unreviewed="true"', 1) + actual[end:],
             'unrelated-script-in-opening': actual[:end - 1] + '<script src="unknown.js"></script>' + actual[end - 1:],
             'relocated': actual[:start] + actual[end:] + record['new_fragment'],
         }
+        if route.startswith('timelines/'):
+            binding = json.loads((ROOT / 'docs/timeline-introduction-context.json').read_text(encoding='utf-8'))['pages'][route]
+            nav = binding['original_nav_line'].lstrip()
+            anchor = binding['overview_anchor']
+            mutations.update({
+                'missing-navigation': actual.replace(nav, '', 1),
+                'duplicate-navigation': actual + nav,
+                'altered-navigation': actual.replace(nav, nav.replace('All timelines', 'Other timelines'), 1),
+                'navigation-in-old-position': actual.replace(actual[start:end], record['new_opening'], 1).replace(anchor + '\n    ' + nav, anchor, 1),
+                'navigation-before-paragraph': actual.replace(anchor + '\n    ' + nav, nav + anchor, 1),
+                'unrelated-overview-change': actual.replace(anchor, anchor.replace('</p>', 'UNREVIEWED</p>'), 1),
+            })
         for label, broken in mutations.items():
             assert broken != actual, (route, label, 'inactive fixture')
             try:

@@ -109,14 +109,28 @@ def validate_preflight(root, preflight, rejected):
         files(root, [spec['edit_target']], rejected)
         require(Path(spec['edit_target']['path']).suffix.lower() in RASTERS, 'Edit target must be raster')
     files(root, [spec['source_record']], rejected)
-    date = dt.date.fromisoformat(spec['scene_date'])
+    chronology = spec.get('chronology')
+    if chronology is None:
+        date = dt.date.fromisoformat(spec['scene_date'])
+    else:
+        require('scene_date' not in spec, 'Do not mix exact and qualified chronology')
+        require(chronology.get('kind') in {'approximate-historical', 'scripture-devotional', 'contemporary-application'}, 'Unknown qualified chronology')
+        require(all(isinstance(chronology.get(k), str) and chronology[k].strip() for k in ('period', 'basis')), 'Missing qualified chronology evidence')
+        require(isinstance(chronology.get('source_urls'), list) and chronology['source_urls'] and all(isinstance(u, str) and u.startswith('https://') for u in chronology['source_urls']), 'Missing chronology sources')
+        date = None
     require(spec.get('characters'), 'Missing scene characters')
     require(len({c['name'] for c in spec['characters']}) == len(spec['characters']), 'Duplicate character')
     reference_names = {r['path'] for r in spec['references']}
     for character in spec['characters']:
-        born = dt.date.fromisoformat(character['birth_date'])
-        age = date.year - born.year - ((date.month, date.day) < (born.month, born.day))
-        require(character['age'] == age and age >= 0, 'Scene date/age mismatch: ' + character['name'])
+        if date is not None:
+            born = dt.date.fromisoformat(character['birth_date'])
+            age = date.year - born.year - ((date.month, date.day) < (born.month, born.day))
+            require(character['age'] == age and age >= 0, 'Scene date/age mismatch: ' + character['name'])
+        else:
+            require('birth_date' not in character and 'age' not in character, 'Qualified chronology cannot assert exact age or birth date')
+            age_context = character.get('age_context', {})
+            require(age_context.get('status') in {'approximate', 'unknown', 'illustrative'}, 'Missing qualified age status')
+            require(all(isinstance(age_context.get(k), str) and age_context[k].strip() for k in ('depiction', 'basis')), 'Missing qualified age evidence')
         require(character['reference_path'] in reference_names, 'Character reference missing')
         require(character.get('identity_authority') in {'owner-approved', 'owner-linked-expression-correction', 'researched-no-owner-master'}, 'Unresolved identity authority')
         require(character.get('owner_evidence', '').strip(), 'Missing identity provenance')
@@ -214,7 +228,7 @@ def validate_creation(root, creation, preflight, rejected, preflights=None, page
         edit_binding = validate_preflight(root, edit, rejected)
         require(edit_binding == generation['preflight_sha256'], 'Stale derivative preflight binding')
         require(edit_spec['role'] == spec['role'] and edit_spec['route'] == spec['route'], 'Derivative placement mismatch')
-        require(edit_spec['characters'] == preflight['spec']['characters'] and edit_spec['scene_date'] == preflight['spec']['scene_date'], 'Derivative character or event drift')
+        require(edit_spec['characters'] == preflight['spec']['characters'] and edit_spec.get('scene_date') == preflight['spec'].get('scene_date') and edit_spec.get('chronology') == preflight['spec'].get('chronology'), 'Derivative character or event drift')
         target = edit_spec.get('edit_target', {})
         require(target.get('path') in available, 'Edit target is not original or prior generated output')
         target_hash, target_time = available[target['path']]

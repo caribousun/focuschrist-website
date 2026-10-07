@@ -16,3 +16,9 @@
 .fc-stand-series-preview span{display:block;padding:12px 16px;color:#f0c36a;font-weight:700}
 .fc-stand-series-source{font-size:.85rem;line-height:1.65;margin-top:18px!important;color:#c5d5db}
 @media(max-width:760px){.fc-stand-series-grid{grid-template-columns:1fr}.fc-stand-series-preview{width:100%;max-width:480px}}
+.fc-stand-series-media{display:grid;gap:26px;align-content:start}
+.fc-stand-series-media .fc-stand-series-art{display:block;margin:0;padding:0;border:0;background:transparent}
+.fc-stand-series-art>a{display:block;max-width:none;width:100%}
+.fc-stand-series-art img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain}
+.fc-stand-series-art figcaption{padding:18px 0 0;min-width:0}
+.fc-stand-series-art figcaption h3{margin-top:0}

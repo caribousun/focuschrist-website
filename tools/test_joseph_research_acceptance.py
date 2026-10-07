@@ -9,14 +9,38 @@ class AcceptanceTests(unittest.TestCase):
     def test_frozen_pdf_source_allows_only_exact_browser_cache_change(self):
         from pathlib import Path
         import json
-        from joseph_research_acceptance import check_pdf_source_binding
+        from joseph_research_acceptance import check_pdf_source_binding, PDF_BROWSER_TOKEN_INVERSES
         site = Path(__file__).resolve().parents[1]
         source = (site/ROUTE).read_bytes()
         reviewed_hash = json.loads((site/'docs/joseph-research-pdf-review.json').read_text())['source_html_sha256']
         check_pdf_source_binding(source, reviewed_hash)
+        for current, previous in PDF_BROWSER_TOKEN_INVERSES:
+            self.assertEqual(source.count(current), 1)
+            for mutation in (source + current, source + previous, source.replace(current, previous),
+                             source.replace(current, current.replace(b'?v=', b'?v=unknown-'))):
+                with self.assertRaises(AssertionError):
+                    check_pdf_source_binding(mutation, reviewed_hash)
         for changed in (source+b' ', source+b'<link rel="stylesheet" href="site-system.css?v=20261005-mobile-study-rows-1">', source.replace(b'20261005-mobile-study-rows-1', b'unknown-version'), source.replace(b'<body', b'<body data-unreviewed="true"', 1), source.replace(b'site-system.css?', b'other.css?', 1)):
             with self.assertRaises(AssertionError):
                 check_pdf_source_binding(changed, reviewed_hash)
+
+    def test_clean_unicode_owner_rejections_are_not_derived_from_guard_lists(self):
+        from joseph_research_acceptance import (check_artwork_disclosure_text,
+            check_no_repeated_artwork_disclosure, check_caption_evidence_metacommentary,
+            ARTWORK_FOOTER_DISCLOSURE)
+        # Independent literals catch encoding corruption that list-driven tests miss.
+        for badge in ('New artwork \u00b7 historical interpretation',
+                      'New artwork \u00b7 explanatory interpretation',
+                      'New artwork \u00b7 feature study'):
+            with self.assertRaises(AssertionError):
+                check_artwork_disclosure_text(badge+' '+ARTWORK_FOOTER_DISCLOSURE)
+        for phrase in ('its appearance, the handoff and the couple\u2019s clothing are interpreted',
+                       'Emma\u2019s reading moment, expression, clothing and surroundings are imagined',
+                       'An artistic interpretation guided by Nephi\u2019s account'):
+            with self.assertRaises(AssertionError):
+                check_no_repeated_artwork_disclosure(phrase)
+        with self.assertRaises(AssertionError):
+            check_caption_evidence_metacommentary('Joseph\u2019s November 1838 letter survives')
 
     def test_sitewide_disclosure_guard_preserves_source_geography_and_footer(self):
         from joseph_research_acceptance import check_no_repeated_artwork_disclosure, ARTWORK_FOOTER_DISCLOSURE

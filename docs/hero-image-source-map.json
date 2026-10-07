@@ -655,6 +655,20 @@
           "evidence": "Fermi independent six-pair pixel comparison; substantially different portrait composition"
         }
       ]
+    },
+    {
+      "route": "timelines/life-of-christ-journey-map.html",
+      "selector": "a[data-hero-viewer]",
+      "controller": "hero-details",
+      "href": "assets/heroes/topics/jesus-full.webp",
+      "confirmed_variants": [
+        {
+          "asset": "assets/heroes/topics/jesus-mobile.webp",
+          "condition": "max-width:700px",
+          "mechanism": "trigger.querySelector(\"picture img\").currentSrc",
+          "evidence": "docs/sitewide-artwork-review.json explicit generated portrait recomposition"
+        }
+      ]
     }
   ]
 }

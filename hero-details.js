@@ -355,6 +355,41 @@
         study: "answers/plan-of-salvation.html#redeemer",
         studyLabel: "Study Christ's place in the plan"
     }});
+    Object.assign(records, {
+    "timeline-life": {
+        "title": "Living water at the well",
+        "paragraphs": [
+            "Jesus and a woman speak beside a stone well, with her water jar close at hand.",
+            "John 4:7–26 records the Savior’s conversation with a Samaritan woman about living water and worship. Follow their conversation and the questions she asks."
+        ],
+        "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/4?lang=eng",
+        "sourceLabel": "Read John 4:7–26",
+        "study": "answers/jesus-christ-latter-day-saint-beliefs.html#nested-page-title",
+        "studyLabel": "Study the Savior’s life and teachings"
+    },
+    "timeline-history": {
+        "title": "Light in the Grove",
+        "paragraphs": [
+            "Sunlight enters a quiet wooded grove and reveals a path through the trees, creating a reflective opening for the study of the Sacred Grove and the First Vision.",
+            "Let the light, stillness and open path lead into the accounts themselves. Compare what Joseph Smith recorded and attend carefully to the context of each account."
+        ],
+        "source": "https://www.churchofjesuschrist.org/study/manual/gospel-topics-essays/first-vision-accounts?lang=eng",
+        "sourceLabel": "Read First Vision Accounts",
+        "study": "church-history.html#history-first-vision-title",
+        "studyLabel": "Explore the First Vision study"
+    },
+    "timeline-handcart": {
+        "title": "Faith Across the Journey",
+        "paragraphs": [
+            "A family moves a handcart across open country while covered wagons continue toward distant mountains. Consider the shared effort, family ties, and uncertainty of a long journey.",
+            "Each pioneer family had its own experience. Continue into historical sources and individual accounts, where names, dates, hardships, and choices give the people of the migration their own voices."
+        ],
+        "source": "https://www.churchofjesuschrist.org/study/church-history?lang=eng",
+        "sourceLabel": "Explore Church History Sources",
+        "study": "pioneers.html#pioneer-page-title",
+        "studyLabel": "Explore the pioneer study"
+    }
+});
     const script = document.currentScript;
     const siteBase = new URL('.', script ? script.src : window.location.href);
     const dialog = document.createElement('dialog');

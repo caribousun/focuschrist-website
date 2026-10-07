@@ -1,0 +1,108 @@
+{
+  "id": "visual-rhythm-temple-tribute",
+  "role": "body",
+  "route": "answers/why-latter-day-saints-build-temples.html",
+  "preflight_sha256": "d991e2bb458f37b4b15cfb8d50f1dd54ff5e9249dbb1ddda12d1216633b3b765",
+  "generated_at": "2026-10-07T04:10:19.959908+00:00",
+  "owner_status": "not-reviewed",
+  "ancestor_sha256": [
+    "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+    "f6b5502c16f4a272b0e80209876366f86285c38ce5547b28d6fbe98d9849427a",
+    "830afc2a2fd928df95293e53184d7a77a8487ab4380198ec76cd4c8ba71e4d25"
+  ],
+  "original": {
+    "path": "assets/page-art/visual-rhythm-journey/temple-tribute-original.png",
+    "sha256": "e1cbd9cf09065630f8af52791c9832cf93e1c0be0f75893b138e1f4cede47195",
+    "pixel_sha256": "1c0ecb17a65256b263edc1fb4476c76c201170d3455fe0334bf3199b0204338b"
+  },
+  "derivatives": [
+    {
+      "path": "assets/page-art/visual-rhythm-journey/temple-tribute-full.webp",
+      "sha256": "de729b17b7a72a14b6f667c9a23a4f064c4d7883dab1d5d1d430f80e7f1820bf",
+      "pixel_sha256": "4ca2ce90dfcc0d6bb9517974ba6092bac31defc52c6f0871ae009c05f72c3ac5"
+    },
+    {
+      "path": "assets/page-art/visual-rhythm-journey/temple-tribute-960.webp",
+      "sha256": "fc1dff1127af137bdf0cf20d3da8833b6b6180940aa7dd019106bb022f5e050a",
+      "pixel_sha256": "c9d40120db5ff7555bdcc42058042b92d29a134da428b40d59a12a72b0b8de97"
+    }
+  ],
+  "page_context": [
+    {
+      "path": "answer-navigation.css",
+      "sha256": "8112ad6d52ada3bd0b373633fc2e60f5ada7d47fb2204c28e1a09ae01be66a57"
+    },
+    {
+      "path": "answer-opening.css",
+      "sha256": "0356c038ad2adcec7206bfcb3d57915b9e2be2cd42024770560f3d9875cc94fb"
+    },
+    {
+      "path": "answer-styles.css",
+      "sha256": "82dc51b82d56a129be803420cae47630f053f7af1259c659113fbd7fcd76d6ad"
+    },
+    {
+      "path": "answers/why-latter-day-saints-build-temples.html",
+      "sha256": "65248868ab6e77314e267a4f1057ecbc1f9411cd289bb7dffa3aedb1c32ecf7c"
+    },
+    {
+      "path": "artwork-actions.css",
+      "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+    },
+    {
+      "path": "artwork-details.css",
+      "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+    },
+    {
+      "path": "complete-card-rows.css",
+      "sha256": "7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"
+    },
+    {
+      "path": "connected-study.css",
+      "sha256": "513b11859f17d36a5934d323f865242b8c90beea70e94fd3056e6e2dc0af40c6"
+    },
+    {
+      "path": "full-image-viewer.css",
+      "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+    },
+    {
+      "path": "hero-details.css",
+      "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+    },
+    {
+      "path": "resource-cards.css",
+      "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+    },
+    {
+      "path": "site-header.css",
+      "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+    },
+    {
+      "path": "site-search.css",
+      "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+    },
+    {
+      "path": "site-system.css",
+      "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+    },
+    {
+      "path": "temples-history.css",
+      "sha256": "c3aa901b47871dc2cc9aa2848bf31b871a93588e0b4ad141c4d1da7912b2125a"
+    },
+    {
+      "path": "topic-art.css",
+      "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"
+    },
+    {
+      "path": "topic-artwork-details.css",
+      "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+    },
+    {
+      "path": "topic-heroes.css",
+      "sha256": "c0cd96bafe94455fd41d8b6c8357baaa12a0556ce204ba058a1264160acae632"
+    },
+    {
+      "path": "topic-study-pages.css",
+      "sha256": "99e1df87cfdcd11751bb16e0ea293a5048cd6f5f73245a791d20492226299236"
+    }
+  ]
+}

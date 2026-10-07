@@ -1,0 +1,121 @@
+{
+  "reviewer": "Fermi",
+  "read_mandates": [
+    "AGENTS.md",
+    "docs/historical-character-identity.md",
+    "docs/focuschrist-enrichment-and-stewardship-prompt.md"
+  ],
+  "scope": "Four minimum new original scenes at UI verified reading transitions; no page writes",
+  "records": {
+    "history-friendship": {
+      "route": "church-history.html",
+      "title": "Friends who stay near",
+      "caption": "A friend gently brushes an older woman’s hair as they talk. The Lord reminded Joseph that his friends still stood by him; ordinary acts of care can give that friendship a present-day expression.",
+      "urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121?lang=eng"
+      ],
+      "passage": "Doctrine and Covenants 121:9,41-42",
+      "kind": "contemporary-application",
+      "period": "Contemporary home setting, no exact date",
+      "basis": "D&C121 from Joseph Smith’s1839 confinement assures friendship and teaches gentle influence. New anonymous modern hair-care scene is an application, not Joseph’s recorded history.",
+      "unknown": "No real people, illness, dependency, family relation or historical occurrence asserted.",
+      "unique": "Prison visit rejected because existing collection-art-review-4 includes that action. Bedside, phonecall, modern scripture reading and garden work excluded. Specific hair brushing between adult friends is distinct in searched filename/review/HTML inventory.",
+      "characters": [
+        [
+          "Older woman",
+          "Older adult with natural silver hair and lined face"
+        ],
+        [
+          "Middle-aged friend",
+          "Mature adult, natural unposed appearance"
+        ]
+      ]
+    },
+    "pioneers-traveler": {
+      "route": "pioneers.html",
+      "title": "Make room in the journey",
+      "caption": "Before leaving, a traveler and her companion make sure her bag and walker will be ready for the journey. The preparations in Doctrine and Covenants136 ask us to notice whose needs might otherwise be overlooked.",
+      "urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/136?lang=eng"
+      ],
+      "passage": "Doctrine and Covenants 136:6-9",
+      "kind": "contemporary-application",
+      "period": "Contemporary residential departure, no exact date",
+      "basis": "January14,1847 Winter Quarters revelation instructs preparations for travelers and those remaining, including poor, widows, fatherless and army families. Contemporary departure is an application, not exact reenactment.",
+      "unknown": "No real person, medical condition or specific trip asserted. Older traveler participates and directs her preferences.",
+      "unique": "Distinct from existing roadside phone assistance, umbrella kindness, walker waiting behind branch clearing and nineteenth-century journey scenes; specific action is preparing her bag/walker before departure.",
+      "characters": [
+        [
+          "Older traveler",
+          "Older adult alert and participating, silver hair"
+        ],
+        [
+          "Travel companion",
+          "Middle-aged adult listening respectfully"
+        ]
+      ]
+    },
+    "temple-tribute": {
+      "route": "answers/why-latter-day-saints-build-temples.html",
+      "title": "The Son and the temple tribute",
+      "caption": "In Capernaum, Jesus speaks with Peter about the temple tribute and sends him to the sea with a hook. The account invites us to consider who Jesus is as the Son, even as He provides for the payment.",
+      "urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/17?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/ot/ex/30?lang=eng"
+      ],
+      "passage": "Matthew17:24-27",
+      "kind": "approximate-historical",
+      "period": "Early first century AD, mortal ministry in Capernaum",
+      "basis": "Matthew17:24-27 identifies Capernaum and instruction in house, children being free, then hook/fish/payment. Cross-reference Exodus30:13 identifies tribute background. Depict instruction before fishing, not Christ at shore or modern ordinances.",
+      "unknown": "Exact date, Peter birth/age, room details, garment colors and line preparation staging not stated. No precise chronology or ancient authenticated likeness claim.",
+      "unique": "Existing tribute-coin is Matthew22 Caesar question, not Matthew17 temple tribute. New indoor seated two-person preparation differs from standing courtyard John6 and public temple John7. Existing Temple scenes all preserved.",
+      "characters": [
+        [
+          "Jesus Christ",
+          "Adult mortal ministry, approximately early thirties"
+        ],
+        [
+          "Simon Peter",
+          "Adult; exact age unknown; approved rear-profile continuity only"
+        ]
+      ]
+    },
+    "handcart-supplies": {
+      "route": "timelines/willie-and-martin-handcart-map.html",
+      "title": "Help begins with willing hands",
+      "caption": "Volunteers gather quilts, flour and clothing for the relief wagons. The first rescuers leave Salt Lake City on October7,1856, carrying help toward people still far out on the trail.",
+      "urls": [
+        "https://www.churchofjesuschrist.org/learn/history/sites/wyoming/discover/five-things-you-might-not-know-about-the-handcart-rescue?lang=eng",
+        "https://history.churchofjesuschrist.org/timeline/historic-sites/wyoming/sixth-crossing?lang=eng"
+      ],
+      "passage": "Official Church Handcart Rescue history",
+      "kind": "approximate-historical",
+      "period": "Salt Lake City, October5-7,1856",
+      "basis": "Official article documents call October5, first departure two days later, warm clear local weather, donated quilts/flour/clothing and volunteer participation. Collective scene not exact documented individuals or exchange.",
+      "unknown": "Specific volunteers, exact yard/wagon and every garment/hand action are interpretations. No named leader or precise birthdate asserted.",
+      "unique": "Inspected actual Eleazer coin-counting donation and history practical-care sewing; new outdoor wagon-loading action differs. No duplicate blizzard rescue, river crossing or handcart hauling.",
+      "characters": [
+        [
+          "Woman giving quilt",
+          "Adult woman, natural mature features"
+        ],
+        [
+          "Man receiving quilt",
+          "Adult man with believable working build"
+        ],
+        [
+          "Woman preparing supplies",
+          "Older adult woman, natural facial lines"
+        ]
+      ]
+    }
+  },
+  "references_inspected": [
+    "Actual approved Home Christ full PNG",
+    "Actual full1536 approved Peter rescue",
+    "miller-relief-donation960",
+    "history-relief-practical-care800",
+    "temple-covenant-help800"
+  ],
+  "editorial": "Visible captions describe action and point to linked source. Generic artwork disclosure remains only standard footer. No new owner aesthetic acceptance asserted."
+}

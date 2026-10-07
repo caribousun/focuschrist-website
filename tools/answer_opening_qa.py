@@ -10,9 +10,36 @@ COVENANT='answers/abrahamic-covenant.html'
 SOURCE='answers/race-priesthood-and-temple-blessings.html'
 LOOK='answers/look-unto-me-doctrine-and-covenants-6-36.html'
 def digest(text):return hashlib.sha256(text.encode()).hexdigest()
+
+REVIEWED_READING_ADDITIONS = {'answers/stand-forever.html': [{'src': '../assets/page-art/stand-forever-journey/stand-john6-remain-960.webp', 'markup_sha256': '0541ea5722ab1bd9459d0f8c8a12e6488c0852c444da5f6cb3ec21ebedfc9051', 'asset_sha256': 'bcbfa7bb0face64659185fe097bf8ae213e100b14b3de8765a549b15dc113aab'}, {'src': '../assets/page-art/stand-forever-journey/stand-john7-do-his-will-960.webp', 'markup_sha256': '16ffff2374bbac3a89e9278c77bd842925400264d3b4cc061142045dc7433285', 'asset_sha256': '43be5dbb873b53460c987d8cfc06a6342a1c5f2c208da6e3fa3cb8d2828f31b8'}], 'answers/why-latter-day-saints-build-temples.html': [{'src': '../assets/page-art/visual-rhythm-journey/temple-tribute-960.webp', 'markup_sha256': 'a3eccad0b5981b33237447d3ab74e06278e941e6fa593b5feb9cc3da16e6a5d1', 'asset_sha256': 'fc1dff1127af137bdf0cf20d3da8833b6b6180940aa7dd019106bb022f5e050a'}]}
+
+def remove_reviewed_reading_additions(name, images):
+    rows = REVIEWED_READING_ADDITIONS.get(name, [])
+    for row in rows:
+        found = images.select('img[src="' + row['src'] + '"]')
+        assert len(found) == 1 and digest(str(found[0])) == row['markup_sha256'], name + ': exact new body image markup required'
+        assert hashlib.sha256(((ROOT/name).parent/row['src']).read_bytes()).hexdigest() == row['asset_sha256'], name + ': body image bytes changed'
+        found[0].decompose()
+
+def reading_additions_self_test():
+    for route, rows in REVIEWED_READING_ADDITIONS.items():
+        original = (ROOT/route).read_text(encoding='utf8')
+        for row in rows:
+            doc = BeautifulSoup(original, 'html.parser')
+            img = doc.select_one('img[src="' + row['src'] + '"]')
+            mutations = []
+            duplicate = copy.deepcopy(doc); duplicate.append(copy.deepcopy(img)); mutations.append(duplicate)
+            missing = copy.deepcopy(doc); missing.select_one('img[src="' + row['src'] + '"]').decompose(); mutations.append(missing)
+            changed = copy.deepcopy(doc); changed.select_one('img[src="' + row['src'] + '"]')['alt'] = 'unreviewed'; mutations.append(changed)
+            for mutation in mutations:
+                try: remove_reviewed_reading_additions(route, mutation)
+                except AssertionError: pass
+                else: raise AssertionError('Changed/duplicate/missing body image escaped exact inverse')
+
 def check():
     from first_topic_completion_qa import check as check_first_topic_completion
     first_topic_review = check_first_topic_completion(ROOT)
+    reading_additions_self_test()
     records=BASELINE['pages']
     assert BASELINE['commit']=='9e95856dc14ce2e41830c2445ffff96a5f8fe39e'
     actual={p.relative_to(ROOT).as_posix() for p in (ROOT/'answers').glob('*.html')}
@@ -66,6 +93,7 @@ def check():
             assert len(doc.select('img'))==6, 'Preserve six original official media previews'
         assert digest(str(header))==r['opening_sha256'],name+': opening copy/hero markup changed'
         images=copy.deepcopy(doc)
+        remove_reviewed_reading_additions(name, images)
         expected_first = {r['responsive']: r for r in first_topic_review.values() if r['route'] == name}
         first_images = [i for i in images.select('img') if 'first-topic-completion/' in i.get('src', '')]
         assert len(first_images) == len(expected_first) and {i.get('src', '').removeprefix('../') for i in first_images} == set(expected_first), name+': exact validated FIRST additions required'

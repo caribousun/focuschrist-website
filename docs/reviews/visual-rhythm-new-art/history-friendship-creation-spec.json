@@ -1,0 +1,90 @@
+{
+  "id": "visual-rhythm-history-friendship",
+  "role": "body",
+  "route": "church-history.html",
+  "preflight_sha256": "02a8fac4d5f2704df114b8757a90c92bba794297383a7bd63dc55be4887aebd1",
+  "generated_at": "2026-10-07T04:06:54.151361+00:00",
+  "owner_status": "not-reviewed",
+  "ancestor_sha256": [
+    "830afc2a2fd928df95293e53184d7a77a8487ab4380198ec76cd4c8ba71e4d25"
+  ],
+  "original": {
+    "path": "assets/page-art/visual-rhythm-journey/history-friendship-original.png",
+    "sha256": "77b6376fb677cb7d0720536cdaf5089a77da91bcaaafbb9b7c62d8c061b4c2f8",
+    "pixel_sha256": "35e50151b3d81d74d26f61347415290e821abb796e595c93057e207082b73b16"
+  },
+  "derivatives": [
+    {
+      "path": "assets/page-art/visual-rhythm-journey/history-friendship-full.webp",
+      "sha256": "b87b2faf6a7bd687754642e107ff138eef39abbc8255c93b44894623565347dd",
+      "pixel_sha256": "99baf153b9efe024658a6323d612d83d740d5096bf733d3f82f5ab867700f7b0"
+    },
+    {
+      "path": "assets/page-art/visual-rhythm-journey/history-friendship-960.webp",
+      "sha256": "e51191c0829493c0736a472f7a001b776dc60991c08ef182107128e2e2b888d8",
+      "pixel_sha256": "0bf5d544554cb434a18f0f8a728a8d7e76ed8c3d138f0ab282a8a725f25017b9"
+    }
+  ],
+  "page_context": [
+    {
+      "path": "artwork-actions.css",
+      "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+    },
+    {
+      "path": "artwork-details.css",
+      "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+    },
+    {
+      "path": "church-history.css",
+      "sha256": "fe961e0f9c0c7abaff84da078bbec85e56458fab734c9553ac2a7bcdef136ce6"
+    },
+    {
+      "path": "church-history.html",
+      "sha256": "44bfcef04534e1c32e8bc4daebca83e6045758ed4c7b99d81bc8018e40de2624"
+    },
+    {
+      "path": "complete-card-rows.css",
+      "sha256": "7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"
+    },
+    {
+      "path": "connected-study.css",
+      "sha256": "513b11859f17d36a5934d323f865242b8c90beea70e94fd3056e6e2dc0af40c6"
+    },
+    {
+      "path": "full-image-viewer.css",
+      "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+    },
+    {
+      "path": "hero-details.css",
+      "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+    },
+    {
+      "path": "priesthood-scenes.css",
+      "sha256": "5583b0f2d023bccbf2a318dc8c063331c4e96c9ffc7b5d754badc2c01d18ffd4"
+    },
+    {
+      "path": "resource-cards.css",
+      "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+    },
+    {
+      "path": "site-header.css",
+      "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+    },
+    {
+      "path": "site-search.css",
+      "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+    },
+    {
+      "path": "site-system.css",
+      "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+    },
+    {
+      "path": "topic-art.css",
+      "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"
+    },
+    {
+      "path": "topic-artwork-details.css",
+      "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+    }
+  ]
+}

@@ -93,3 +93,13 @@ body.fc-jesus-journey.jj-enhanced .jj-opening .fc-button{display:none}
 .jj-chapter-reader .jj-art{margin-top:16px}
 @media(max-width:700px){.jj-chapter-controls{gap:10px}.jj-chapter-controls>*{max-width:100%}.jj-chapter-controls .jj-mode{flex:1 1 160px}.jj-chapter-controls .jj-chapter-picker{flex-basis:150px}.jj-chapter-controls .jj-chapter-picker[open]{flex-basis:100%}body.fc-jesus-journey .jj-opening{padding-top:14px}.jj-chapter-reader>.jj-chapter>h2{font-size:1.7rem}}
 @media print{.jj-chapter-reader>.jj-chapter[hidden]{display:block!important}.jj-chapter-controls,.jj-chapter-steps{display:none!important}}
+
+/* Paired chapter controls share content-driven rows, including enlarged text. */
+.jj-chapter-controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch}
+.jj-chapter-position,.jj-reading-guide{grid-column:1/-1}
+.jj-chapter-controls .jj-chapter-picker{min-width:0;border-radius:10px}
+.jj-chapter-controls .jj-chapter-picker>summary{display:flex;align-items:center;justify-content:center;height:100%;min-height:44px;line-height:1.5}
+.jj-chapter-controls .jj-mode{box-sizing:border-box;min-width:0;font-size:1rem;text-align:center}
+.jj-chapter-controls .jj-chapter-picker[open]{grid-column:1/-1}
+.jj-chapter-controls .jj-chapter-picker[open]>summary{height:auto}
+@media(max-width:360px){.jj-chapter-controls{grid-template-columns:minmax(0,1fr)}}

@@ -39,7 +39,7 @@
 
     function initialize() {
         if (typeof HTMLDialogElement === 'undefined' || document.getElementById('topicArtworkDetailDialog')) return;
-        const main = document.querySelector('main');
+        const main = document.querySelector('main') || document.querySelector('[data-topic-artwork-root]');
         if (!main) return;
         const pictures = Array.from(main.querySelectorAll('figure > a[href], .fc-marriage-era__art[href], .fc-foundation-card__image[href]')).filter(function (link) {
             return link.querySelector('img') && !link.closest('.fc-resource-card, dialog')

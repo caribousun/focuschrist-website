@@ -1,0 +1,152 @@
+{
+  "reviewer": "Fermi",
+  "receipt_id": "fermi-eleazer-final-context-20261007-receiver",
+  "stage": "finished",
+  "verdict": "PASS",
+  "withdrawn": false,
+  "binding_sha256": "6e189b5451a7b2f9fc9947a1d80da08d994712e4d1bbd4011cdd5f0b54190954",
+  "reviewed_at": "2026-10-07T04:33:17.800155+00:00",
+  "observations": "Current Fermi receiver read exact live Master/protected foundation, current 00B/Focus and applicable repository mandates. Original-resolution and face-detail checks below explicitly reuse prior Fermi hash-bound pixel inspection; this turn independently verified unchanged source/decoded-pixel/derivative hashes and inspected current rendered screenshot pixels and visitor copy. No regeneration or new owner approval. Actual browser interaction claims belong to root/UI receipts, not my screenshot inspection. No unresolved scoped finding; publication, Newton concurrence and owner aesthetic acceptance remain separate.",
+  "checks": {
+    "identity": "Directly opened exact Eleazer mission-road and Brigham approved references, then both delivered rasters. Eleazer retains narrow long nose, tapered lower face, swept hair and recognizable figure; Brigham remains distinct with broader lower face and wavy hair. Wide rendering preserves recognizable identity, not pixel identity.",
+    "age": "Visual adult appearances fit early1832 ages36 and30; no elderly portrait texture transplanted. Birth dates and representative scene date reproduce those ages. Exact day remains unknown.",
+    "expression_gaze": "Both full-resolution faces have attentive natural expressions and mutually directed eyes. Eleazer speaks without a fixed scowl or broad grin; Brigham listens without looking at the viewer.",
+    "atmosphere": "Soft natural daylight, restrained interpersonal engagement and rural early-spring setting are coherent and reverent.",
+    "environment": "Weathered carpenter workshop, timber, fence and landscape exhibit coherent perspective, material texture and depth; no blank side bands, seams or modern objects detected.",
+    "characters_realism": "Full-resolution1536x1024 master and2172x724 desktop viewed with original-detail delivery. Skin detail, hair strands, wool and linen are photographic, with natural asymmetry and distinct characters.",
+    "period_sources": "Read immutable source record and both exact prompts. Early1832 testimony/Brigham trade are grounded; workshop staging is interpretation, not documented venue. Finished title/caption are warm factual testimony wording; alt describes visible scene. Footer-only general disclosure retained.",
+    "anatomy": "Inspected face and hand details at original resolution. Speaking hand has coherent fingers, joints and arm; listening clasped hands and sleeve/arm joins are plausible. Complete heads and visible hands remain in desktop and phone frames.",
+    "uniqueness": "Prospective HTML exactly equals builder output with11 ordered figures: one separate new hero plus all10 original units. Original narrative/art record preservation independently established in history-builder-crossreview. Outdoor two-person work-area scene is distinct from existing indoor group witness and other original scenes.",
+    "desktop_phone": "Independently inspected root-final Eleazer desktop wide viewer and separately settled412x915 phone viewer, plus phone detail panel. Both preserve natural image ratios and visible complete faces/hands. Image version label has clear separation; select/download are aligned equal-sized desktop controls and equal-width48px stacked phone controls. Root-native JSON independently records URLs/switch/focus behavior; these are root actions, not my own interaction."
+  },
+  "full_resolution_inspected": true,
+  "face_details_inspected": true,
+  "pixel_review_provenance": "Retained prior independently inspected immutable pixels; original and all derivatives verified byte and decoded-pixel identical in this review. No claim of new generation or new owner approval.",
+  "evidence": [
+    {
+      "path": "assets/page-art/history-stories/miller-teaching-brigham-master.png",
+      "sha256": "d6635b162ba41afa3f5f145e39d0c0ca92b988610c0c5e8a0eb382f075af5527"
+    },
+    {
+      "path": "assets/page-art/history-stories/miller-teaching-brigham-desktop.png",
+      "sha256": "2c720d97854b21b3865acdf7cb8e7b4d463c9a02858b67627cfd9967cd5696c7"
+    },
+    {
+      "path": "artwork-actions.css",
+      "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+    },
+    {
+      "path": "artwork-details.css",
+      "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+    },
+    {
+      "path": "complete-card-rows.css",
+      "sha256": "7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"
+    },
+    {
+      "path": "connected-study.css",
+      "sha256": "513b11859f17d36a5934d323f865242b8c90beea70e94fd3056e6e2dc0af40c6"
+    },
+    {
+      "path": "full-image-viewer.css",
+      "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+    },
+    {
+      "path": "hero-details.css",
+      "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+    },
+    {
+      "path": "history-stories.css",
+      "sha256": "7afc257960c5d327cddd944c7a29c60223b13aaf8d670abd6a6a8a9af2943675"
+    },
+    {
+      "path": "history/eleazer-miller.html",
+      "sha256": "d50857a1285345bfb56ee4b6412453e411534a26f7ce13ea1a4dae57c41941b2"
+    },
+    {
+      "path": "priesthood-scenes.css",
+      "sha256": "5583b0f2d023bccbf2a318dc8c063331c4e96c9ffc7b5d754badc2c01d18ffd4"
+    },
+    {
+      "path": "resource-cards.css",
+      "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+    },
+    {
+      "path": "site-header.css",
+      "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+    },
+    {
+      "path": "site-search.css",
+      "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+    },
+    {
+      "path": "site-system.css",
+      "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+    },
+    {
+      "path": "topic-art.css",
+      "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"
+    },
+    {
+      "path": "topic-artwork-details.css",
+      "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+    },
+    {
+      "path": "docs/reviews/eleazer-teaching-hero/fermi-final-evidence.json",
+      "sha256": "10ea1cf5efe0f3f7db7b8fcfbb7ec41b643b2f713d2488a13a1368bb698b1c54"
+    },
+    {
+      "path": "docs/reviews/image-version-chevron/fermi-context-review.json",
+      "sha256": "1f2ca8eeec0fb8d0d22a5ddbe1531d2a4080dd6814241518dd721b64a7f64b9d"
+    },
+    {
+      "path": "docs/reviews/image-version-chevron/prior-artwork-binding.json",
+      "sha256": "edfc96a2b022c20ce1394adeaa069d486e4c8701d99d5beeec408ec4359946c6"
+    },
+    {
+      "path": "docs/reviews/timeline-panels-context/fermi-context-review.json",
+      "sha256": "3f77fd6f4939d0ddb9e3420a0d296c17a04ba42b5f6df9db4021e7b644061beb"
+    },
+    {
+      "path": "docs/reviews/timeline-panels-context/prior-artwork-binding.json",
+      "sha256": "8773255db95d480c449dbeaa5e144048419ebfd131f5f3f07c3f64290219cdda"
+    }
+  ],
+  "screenshot_evidence": [
+    {
+      "path": ".qa-artifacts/root-final/eleazer-desktop-viewer.png",
+      "sha256": "14ad9514fe67ded02210717484883b19d55f9ebe6877a06183f13377f6d3517f"
+    },
+    {
+      "path": ".qa-artifacts/root-final/eleazer-phone-viewer.png",
+      "sha256": "049627ca167e9a0eada35276abe4a5ae97af9b8db823cdc338f132e5e9148519"
+    },
+    {
+      "path": ".qa-artifacts/root-final/eleazer-phone-viewer-settled.png",
+      "sha256": "ce8763be4007d9075172dbcc9da2a8903faea580a4dc442f736d36b4cc46abd7"
+    }
+  ],
+  "mandates_read": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "fe68d0e575ac67262f5693432f09e8de8c2236d1ad8e58890e24f6d358cd4bf4"
+    },
+    {
+      "path": "docs/historical-character-identity.md",
+      "sha256": "69f0f51400ba102dfb5df9a9ec9fb6e738255dc496b84dc5dd684f3f5886c8c4"
+    },
+    {
+      "path": "docs/focuschrist-enrichment-and-stewardship-prompt.md",
+      "sha256": "91cfd09d188880c849493d1752cabb6c6bf8b239d9722259b196161fb6189d14"
+    },
+    {
+      "path": "docs/supporting-artwork-standard.md",
+      "sha256": "bdf1a7b97693f15cc9d6411fd0378ea8b549f2a6d3df934d574398ecbe0966ec"
+    },
+    {
+      "path": "docs/enriched-picture-owner-mandate.md",
+      "sha256": "c237fb14c7dd57f04d7d9ad063f3f0e93daf0a5c9844f9c3682407b4c80b363d"
+    }
+  ],
+  "source_spec": "docs/reviews/visual-rhythm-shared-context/eleazer-creation-spec.json"
+}

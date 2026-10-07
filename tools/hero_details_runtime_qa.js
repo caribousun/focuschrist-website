@@ -39,6 +39,9 @@ const cases = [
     ['good-shepherd-art', '/art/The-Good-Shephard.jpg', 'The Good Shepherd', '/art-study/the-good-shepherd.html#scripture-study'],
     ['little-children-art', '/art/Suffer-the-Little-Children-approved-20260929.webp', 'Suffer the Little Children', '/art-study/suffer-the-little-children.html#scripture-study'],
     ['be-still-art', '/art/Be-Still.png', 'Be Still', '/art-study/be-still.html#psalm-context'],
+    ['timeline-life', '/assets/heroes/topics/jesus-full.webp', 'Living water at the well', '/answers/jesus-christ-latter-day-saint-beliefs.html#nested-page-title'],
+    ['timeline-history', '/assets/timelines/church-history-grove.webp', 'Light in the Grove', '/church-history.html#history-first-vision-title'],
+    ['timeline-handcart', '/assets/heroes/pioneers.webp', 'Faith Across the Journey', '/pioneers.html#pioneer-page-title'],
 ];
 const triggers = cases.map(([record, href, title]) => {
     const trigger = new Element();
@@ -74,7 +77,7 @@ vm.runInNewContext(fs.readFileSync('hero-details.js', 'utf8'), {
 });
 
 cases.forEach(([record, href, expectedTitle, expectedStudy], index) => {
-    window.location.pathname = record.startsWith('joseph-') ? expectedStudy.split('#')[0] : record === 'birth-of-christ' ? '/birth-of-christ.html' : '/art-study/the-good-shepherd.html';
+    window.location.pathname = record.startsWith('timeline-') ? '/timelines/' + ({'timeline-life':'life-of-christ-journey-map','timeline-history':'latter-day-saint-church-history-timeline','timeline-handcart':'willie-and-martin-handcart-map'}[record]) + '.html' : record.startsWith('joseph-') ? expectedStudy.split('#')[0] : record === 'birth-of-christ' ? '/birth-of-christ.html' : '/art-study/the-good-shepherd.html';
     let prevented = false;
     triggers[index].listeners.click({ button: 0, preventDefault() { prevented = true; } });
     assert(prevented && dialog.open, `${record} must open the hero detail dialog`);
@@ -150,4 +153,4 @@ delete window.fcHeroImageSource;
 delete window.fcHeroImageOptions;
 birth.imageOptions = [];
 expectImage(birth, birth.href, 'Missing helper preserves explicit fallback');
-console.log('Hero details runtime QA passed: seven existing routes; three responsive desktop compositions; children phone after resize/reopen; empty/missing image fallbacks; four unrelated heroes unchanged.');
+console.log('Hero details runtime QA passed: seven existing routes and three timeline panels; three responsive desktop compositions; children phone after resize/reopen; empty/missing image fallbacks; four unrelated heroes unchanged.');

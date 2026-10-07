@@ -1,0 +1,62 @@
+{
+  "reviewer": "Newton",
+  "receipt_id": "newton-final-context-john7-20261007",
+  "stage": "finished",
+  "verdict": "PASS",
+  "withdrawn": false,
+  "binding_sha256": "ec5a1a29aea467ae63c6ba3c0b2ac2c908b7f8ba3ab216993a0029e2ee1eb7b6",
+  "reviewed_at": "2026-10-07T04:33:05.207529+00:00",
+  "full_resolution_inspected": true,
+  "face_details_inspected": true,
+  "observations": "Targeted renewed current-context review. Exact prior Newton original/reference/source/face/full-and960 pixel inspection reused after asset/evidence hash readback. Current HTML/CSS closure is complete and exact; shared chapter/viewer and topic-root changes inspected, strict preservation tests pass. Personally viewed settled320 chapter controls and relevant Stand narrow screenshot. Prior artwork untouched. No new original inspection, browser execution, owner acceptance or publication claimed.",
+  "checks": {
+    "identity": "Unchanged prior Newton evidence reused: Actual Home Christ reference compared against full original and face crops: recognizable brow/eyes/nose/jaw/hair/beard remain. John6 Peter limited rear-profile hair/head/beard continuity matches inspected approved full rescue reference.",
+    "age": "Unchanged prior Newton evidence reused: Adult mortal-ministry Christ and adult companions fit qualified first-century context; no invented exact ancient ages or dates.",
+    "expression_gaze": "Unchanged prior Newton evidence reused: Christ and counterpart maintain coherent mutual attention, calm searching expression John6 and natural speaking expression John7; background listeners attentive, no stock broad smiles.",
+    "atmosphere": "Unchanged prior Newton evidence reused: Natural daylight and optical depth with believable skin, cloth and stone; no painterly/CGI surface or theatrical halo.",
+    "environment": "Unchanged prior Newton evidence reused: John6 modest dry courtyard/departing path and John7 temple-court seating fit source context while staging remains acknowledged internally as interpretation.",
+    "characters_realism": "Unchanged prior Newton evidence reused: Inspected full scenes, original-resolution Christ faces, hands and background-listener details; lifelike texture, individual faces and ordinary build. All4full/960derivatives personally viewed and retain quality.",
+    "period_sources": "Unchanged prior Newton evidence reused: Official John6:59-71 and John7:14-18 with chapter/surrounding context checked; captions and source links match. No repeated interpretation badges or unsupported exact staging claims in visitor prose.",
+    "anatomy": "Unchanged prior Newton evidence reused: Main visible hands have coherent separate digits, wrists and arms; body posture and garment continuity natural; no interlocked contacts, wounds or scars in mortal scenes.",
+    "uniqueness": "Unchanged prior Newton evidence reused: New John6 remaining/departing encounter differs from feeding/rescue; new John7 seated lateral conversation differs from inspected standing frontal red-mantle living-water crowd. Both exclusive assets with distinct blocking/color/action.",
+    "desktop_phone": "Retain prior exact desktop/phone composition review; source diff adds only reviewed figure geometry and shared dependency tokens since prior receipt. Personally inspected current Stand narrow image for this scene (John6 inline composition; John7 full-size image), plus shared settled320 chapter controls. Prior/source UI executed both viewer chains; root owns fresh native actions."
+  },
+  "evidence": [
+    {
+      "path": "assets/page-art/stand-forever-journey/stand-john7-do-his-will-original.png",
+      "sha256": "d04caa98a349c66f1112930b89869196bf1dce9e3590f8445c48fc0f71c86072"
+    },
+    {
+      "path": "assets/page-art/stand-forever-journey/stand-john7-do-his-will-full.webp",
+      "sha256": "fb9cd7f0a0c4f1612f428375729bcd3685046427da82b3cdbda13a91be0f9029"
+    },
+    {
+      "path": "assets/page-art/stand-forever-journey/stand-john7-do-his-will-960.webp",
+      "sha256": "43be5dbb873b53460c987d8cfc06a6342a1c5f2c208da6e3fa3cb8d2828f31b8"
+    },
+    {
+      "path": ".qa-artifacts/stand-forever-review/stand-finished-desktop-john7.png",
+      "sha256": "8f94941fd1e4844b69771f599aaa06bef0a66a68e0a7f330f1dfd5b1d114e990"
+    },
+    {
+      "path": ".qa-artifacts/stand-forever-review/stand-phone-companion.png",
+      "sha256": "66354c575891c4477025a3b0716f1ce101bff43f9907dd8de4cefafe0b1b14d0"
+    },
+    {
+      "path": ".qa-artifacts/stand-forever-review/stand-phone-panel.png",
+      "sha256": "7caa86642f43da428d8c7cf2d871dd08f57681c4ad3f9aa576b191ed9b6e2b66"
+    },
+    {
+      "path": "docs/reviews/stand-forever-new-art/john7-newton-finished.json",
+      "sha256": "a49c623ae943f86fd4e5cba1c9fffff512de88dd5eae6c1cc10b1bc54fa1e2fd"
+    },
+    {
+      "path": ".qa-artifacts/visual-rhythm-review/stand-john7-viewer-narrow.png",
+      "sha256": "9ab336e496c75040e1edc779cacfb1d9b04d48cfb57df2b51d6172f5a2319510"
+    },
+    {
+      "path": ".qa-artifacts/visual-rhythm-review/chapter-candidate-320.png",
+      "sha256": "b2f56e040438d18304b4f0599824b9c1ab252f9341dda86103658ca2c5a46bf9"
+    }
+  ]
+}

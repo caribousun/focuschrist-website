@@ -145,8 +145,8 @@ class Tags(HTMLParser):
 # the entire stylesheet and every existing HTML load (including old tokens on
 # unchanged routes), rather than exempting a selector family or future CSS.
 VIEWER_STYLE = 'full-image-viewer.css'
-VIEWER_STYLE_SHA256 = '10490ceea817af1025e1df20e38ed747c4cec3c234e630fb720b66f914ce87bf'
-VIEWER_BINDINGS_SHA256 = '80c69e840009017e883bd7efbd19669c3386ecd1e3923ed3db0e3d0645f46632'
+VIEWER_STYLE_SHA256 = 'b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706'
+VIEWER_BINDINGS_SHA256 = '8389a1042b80d98435cc9dc1cc4f686c2fa446f789188a8083d6c3403ffa6ada'
 
 def reviewed_viewer_style(data):
     return hashlib.sha256(data).hexdigest() == VIEWER_STYLE_SHA256
@@ -194,6 +194,9 @@ def viewer_self_test():
     owner = 'art-study/be-still.html'
     for modified in (
         sources[owner].replace('20261006-versions-1', 'unknown'),
+        sources[owner].replace('20261007-viewer-controls-1', 'unknown'),
+        sources[owner].replace('20261007-viewer-controls-1', '20261006-versions-1'),
+        sources[owner] + '<link rel="stylesheet" href="../full-image-viewer.css?v=20261007-viewer-controls-1">',
         sources[owner].replace('full-image-viewer.css', 'missing.css'),
         sources[owner] + '<link rel="stylesheet" href="../full-image-viewer.css?v=20261006-versions-1">',
         sources[owner].replace('rel="stylesheet" href="../full-image-viewer.css', 'rel="preload" href="../full-image-viewer.css'),
@@ -249,7 +252,7 @@ OWNER_20260929_STYLES = {
     'timeline-history-workspace.css': ('acecf66d917b13cc4548e23ff8ab348974423342ba00840f37d1c73d6eb5c173', ['timelines/latter-day-saint-church-history-timeline.html']),
 
     # Owner requested shared headers on these three preserved experiences; exact scoped desktop offset.
-    "timeline-experiences.css": ("ab93a70311f429f45a11fe88550a5150b2b5708408c52fbae0562e11fa438e8e", ["timelines/latter-day-saint-church-history-timeline.html", "timelines/willie-and-martin-handcart-map.html", "timelines/life-of-christ-journey-map.html"]),
+    "timeline-experiences.css": ("4ae767e376478f2cdb16c3085ffa519a7a458314ed81aad2c662ec281ab82e5c", ["timelines/latter-day-saint-church-history-timeline.html", "timelines/willie-and-martin-handcart-map.html", "timelines/life-of-christ-journey-map.html"]),
     # Owner-requested uniform selected-story and accessible mobile controls; exact three routes.
     "timeline-reader.css": ("4bbcf89e17c653fc9fd24268412b292b2bd4b92a09032777e0563d2967ebb115", ["timelines/latter-day-saint-church-history-timeline.html", "timelines/willie-and-martin-handcart-map.html", "timelines/life-of-christ-journey-map.html"]),
     "study-reading-balance.css": ("fb547af5c883050d743204c0d05372863143a1fa0dffd2df370b728f1a9ff005", ["atonement.html", "answers/bible-and-book-of-mormon-together.html", "answers.html", "index.html", "ask.html"]),
@@ -308,7 +311,35 @@ def scoped_interface_reference_allowed(name, relative, text):
     joseph_research_owner = name == 'joseph-smith-research.css' and relative == 'joseph-smith-portrait-research.html'
     return relative==SCOPED_INTERFACE_STYLES[name][1] or joseph_research_owner or name not in text
 
+# Exact six-rule Stand artwork appendix and previously published CTA centering.
+# Reconstruct prior bytes; never treat a selector family as generally permitted.
+STAND_ART_APPENDIX = b'.fc-stand-series-media{display:grid;gap:26px;align-content:start}\n.fc-stand-series-media .fc-stand-series-art{display:block;margin:0;padding:0;border:0;background:transparent}\n.fc-stand-series-art>a{display:block;max-width:none;width:100%}\n.fc-stand-series-art img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain}\n.fc-stand-series-art figcaption{padding:18px 0 0;min-width:0}\n.fc-stand-series-art figcaption h3{margin-top:0}\n'
+CTA_CENTER_CURRENT = b'    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    text-align: center;'
+CTA_CENTER_PRIOR = b'    display: inline-block;'
+
+def reviewed_stand_art_style(data):
+    return (data.count(STAND_ART_APPENDIX) == 1 and data.endswith(STAND_ART_APPENDIX)
+            and hashlib.sha256(data).hexdigest() == '27d14a4abc1b10c50068043d70ec8f0fda3860ce0953d5d2922d33e1a7317d7b'
+            and hashlib.sha256(data[:-len(STAND_ART_APPENDIX)]).hexdigest() == 'e8f1b08bc53838d0ff0d049c5cd11e7c0f0a9da79588a1854b95063f899bc041')
+
+def reviewed_cta_centering(data):
+    return (data.count(CTA_CENTER_CURRENT) == 1
+            and hashlib.sha256(data).hexdigest() == '82dc51b82d56a129be803420cae47630f053f7af1259c659113fbd7fcd76d6ad'
+            and hashlib.sha256(data.replace(CTA_CENTER_CURRENT, CTA_CENTER_PRIOR, 1)).hexdigest() == 'e9b76ffb17d5c9cd24080aacc4d3ee69362da1806d16b0d815e473e7cbf24a8f')
+
+def stand_art_style_self_test():
+    current = (ROOT/'stand-forever-study.css').read_bytes()
+    assert reviewed_stand_art_style(current)
+    for mutation in (current + STAND_ART_APPENDIX, current[:-len(STAND_ART_APPENDIX)], current.replace(b'gap:26px', b'gap:27px'), current + b'.fc-visual-hero{height:1px}', current.replace(b'max-width:480px', b'max-width:481px')):
+        assert mutation != current and not reviewed_stand_art_style(mutation)
+    cta = (ROOT/'answer-styles.css').read_bytes()
+    assert reviewed_cta_centering(cta)
+    for mutation in (cta + CTA_CENTER_CURRENT, cta.replace(CTA_CENTER_CURRENT, CTA_CENTER_PRIOR), cta.replace(b'justify-content: center;', b'justify-content: start;', 1), cta + b'.x{height:1px}'):
+        assert mutation != cta and not reviewed_cta_centering(mutation)
+
 RELEASE_STYLE_BINDINGS = {
+    'stand-forever-study.css': ({'answers/stand-forever.html', 'answers/look-unto-me-doctrine-and-covenants-6-36.html', 'answers/settle-this-in-your-hearts.html'}, '../stand-forever-study.css?v=20261007-distinct-journey-1'),
+    'timeline-experiences.css': ({'timelines/latter-day-saint-church-history-timeline.html', 'timelines/willie-and-martin-handcart-map.html', 'timelines/life-of-christ-journey-map.html'}, '../timeline-experiences.css?v=20261007-timeline-panels-1'),
     'joseph-smith-research.css': ({'joseph-smith-likeness.html', 'joseph-smith-portrait-research.html'}, 'joseph-smith-research.css?v=20261006-research-compositions-2'),
     'history-stories.css': ({'history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html'}, '../history-stories.css?v=20261006-history-intro-fit-1'),
 }
@@ -356,6 +387,7 @@ def main():
     composition_check()
     if args.self_test:
         release_style_binding_self_test()
+        stand_art_style_self_test()
         nav_css = (ROOT/'answer-styles.css').read_bytes()
         nav_selector = '.content-wrap.article.fc-art-study-page > .fc-study-nav'
         assert reviewed_art_nav_width(nav_selector, 'width: auto;', nav_css)
@@ -735,12 +767,18 @@ def main():
     # checks; no later geometry or non-margin changes can enter this exclusion.
     excluded_styles.update(ANCHOR_STYLES)
     diff=subprocess.check_output(['git','diff',baseline,'--','*.css',*[':(exclude)'+name for name in sorted(excluded_styles)]],cwd=ROOT,text=True)
+    check(reviewed_stand_art_style((ROOT/'stand-forever-study.css').read_bytes()), 'Stand artwork styles differ from exact six-rule appendix or preserved prefix')
+    check(reviewed_cta_centering((ROOT/'answer-styles.css').read_bytes()), 'Published CTA centering differs from exact reviewed inverse')
     added_lines=[]; added_file=None
     for line in diff.splitlines():
         if line.startswith('+++ b/'):
             added_file=line[len('+++ b/'):]; continue
         if not line.startswith('+') or line.startswith('+++'): continue
         rule=line[1:]
+        if added_file == 'stand-forever-study.css' and rule in STAND_ART_APPENDIX.decode().splitlines():
+            continue
+        if added_file == 'answer-styles.css' and rule in CTA_CENTER_CURRENT.decode().splitlines():
+            continue
         matches=re.findall(r'([^{}]+)\{([^{}]*)\}',rule)
         if added_file=='answers-hero.css' and len(matches)==1 and matches[0][0].strip() in ANSWERS_FEATURED_RULES:
             check(reviewed_answers_featured(*matches[0], (ROOT/'answers-hero.css').read_bytes()),

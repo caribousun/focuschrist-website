@@ -103,3 +103,14 @@ body.fc-site.fc-timeline-experience .timeline-life-intro[data-unified-opening] h
  body.fc-site.fc-timeline-experience .timeline-life-intro[data-unified-opening][data-unified-opening]{padding-top:8px!important;gap:4px!important}
  body.fc-site.fc-timeline-experience .timeline-life-intro[data-unified-opening][data-unified-opening] h1{font-size:clamp(1.5rem,7.2vw,1.8rem)!important;line-height:1.1!important}
 }
+
+/* Navigation belongs with the overview; its former row now gives the title and
+   introduction breathing room without moving the authored Continue baseline. */
+body.fc-site.fc-timeline-experience .timeline-life-intro[data-unified-opening][data-unified-opening]{gap:16px!important}
+body.fc-site.fc-timeline-experience .timeline-life-intro[data-unified-opening][data-unified-opening]:not(:has(> .fc-page-intro-copy)){gap:20px!important}
+body.fc-site.fc-timeline-experience .timeline-life-overview > .timeline-navigation{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px;max-width:none;width:100%;margin:24px 0;padding:0}
+body.fc-site.fc-timeline-experience .timeline-life-overview > .timeline-navigation .timeline-return{box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;flex:0 1 auto;width:auto;max-width:100%;min-height:44px;margin:0;padding:8px 16px;line-height:1.5;text-align:center}
+@media(max-width:700px){
+ body.fc-site.fc-timeline-experience .timeline-life-intro[data-unified-opening][data-unified-opening]{gap:17.5px!important}
+ body.fc-site.fc-timeline-experience .timeline-life-intro[data-unified-opening][data-unified-opening]:not(:has(> .fc-page-intro-copy)){gap:22px!important}
+}

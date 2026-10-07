@@ -1,0 +1,68 @@
+{
+  "reviewer": "Fermi",
+  "receipt_id": "fermi-stand-john6-finished-20261007",
+  "stage": "finished",
+  "verdict": "PASS",
+  "withdrawn": false,
+  "binding_sha256": "3a67a8aa3034ca0de0440160c96bceb92d1259a9e4c53a6295735173c80ddb47",
+  "reviewed_at": "2026-10-07T03:56:21.763235+00:00",
+  "observations": "Read current exact applicable mandates and actual finished HTML captions/source links. Fermi original pixel review reused only unchanged hash-bound originals; independently inspected all4 deliveredWebPs and5 actual assembled screenshot files. Finished captions warm, visible-first, no routine validation narration or repeated disclosure. John7 explicitly links its own passage at D&C6 thematic transition, not presented as an1839/1829 appearance. All creation-spec asset/context hashes independently verified against actual files. No unresolved findings in scope; Newton concurrence and root/UI actual interaction checks plus publication remain separate. Owner aesthetic acceptance not claimed.",
+  "checks": {
+    "identity": "Recognizable Home Christ facial proportions, brow/eye arrangement, nose, mouth, wavy hair and beard retained with natural scene expression. Peter rear profile remains consistent with actual approved rescue reference hair/build/head silhouette; no frontal identity claim.",
+    "age": "Mature adult Christ of mortal ministry; no elderly aging or child features. Other visible adults consistent with qualified source record, no exact age inferred.",
+    "expression_gaze": "Natural attentive gaze between central pair. Christ closed relaxed lips and slight attentive head tilt; Peter body/face turns toward Christ.",
+    "atmosphere": "Warm physical daylight and natural depth; no theatrical halos, spectacle, fabricated text or ritual.",
+    "environment": "Distinct modest stone courtyard and receding departing figures; setting details remain interpretive as source record states.",
+    "characters_realism": "Skin has fine texture and tonal variation; hair strands and woven cloth are clear; no apparent plastic/doll faces. Background depth of field is photographic.",
+    "period_sources": "Simple tunics, mantles and sandals/feet not emphasized; no modern artifacts. Departure-versus-remaining action matches John6:66-69; no water rescue/feed elements transferred.",
+    "anatomy": "Inspected full scene and separate hand crops. Visible hands have coherent wrist/forearm continuity, plausible thumb/finger count and joint directions. Central bodies/limbs remain separate; no fused grasp or extra limbs identified.",
+    "uniqueness": "New composition and source event/action distinguish it from reference images and nearby inventory. Standing Peter encounter with distant departure differs from rescue and feeding.",
+    "desktop_phone": "Independently inspected full and960WebP derivatives plus actual root screenshots at desktop and phone: John6 below trailer, John7 at D&C6 transition, full correct3:2 scene, natural stacking, readable caption/source and unclipped standard panel controls. Desktop gap resolved by relevant story art; no dense row or distorted faces observed. Actual interactions remain root/UI checks, not claimed from screenshots."
+  },
+  "full_resolution_inspected": true,
+  "face_details_inspected": true,
+  "evidence": [
+    {
+      "path": "assets/page-art/stand-forever-journey/stand-john6-remain-original.png",
+      "sha256": "3384d4a1a3599ab7c789ab1f1a712c66519f01851f9e46d23bd1e1d51eda709b"
+    },
+    {
+      "path": "assets/page-art/stand-forever-journey/stand-john6-remain-full.webp",
+      "sha256": "f9bc997a86d7f85695eeb32cabf1ae9e76e88122ff6a6efba8a247a408bd78a6"
+    },
+    {
+      "path": "assets/page-art/stand-forever-journey/stand-john6-remain-960.webp",
+      "sha256": "bcbfa7bb0face64659185fe097bf8ae213e100b14b3de8765a549b15dc113aab"
+    },
+    {
+      "path": "answers/stand-forever.html",
+      "sha256": "3c8c9ebbf4642eab78c2c54c4d8eaad12e55d118847f39830e2c3d3cb3bcfe60"
+    },
+    {
+      "path": "stand-forever-study.css",
+      "sha256": "27d14a4abc1b10c50068043d70ec8f0fda3860ce0953d5d2922d33e1a7317d7b"
+    }
+  ],
+  "screenshot_evidence": [
+    {
+      "path": ".qa-artifacts/stand-forever-review/stand-desktop-series.png",
+      "sha256": "f29f96cc863470156cf55f915ace305203a00874cec27dd77188ecbca70c8f39"
+    },
+    {
+      "path": ".qa-artifacts/stand-forever-review/stand-finished-desktop-john7.png",
+      "sha256": "8f94941fd1e4844b69771f599aaa06bef0a66a68e0a7f330f1dfd5b1d114e990"
+    },
+    {
+      "path": ".qa-artifacts/stand-forever-review/stand-finished-phone-john6.png",
+      "sha256": "40e061f6fa3938d1e4e19c70a218c89a5d07a49dd7f8a175a567d5472082d2d0"
+    },
+    {
+      "path": ".qa-artifacts/stand-forever-review/stand-phone-companion.png",
+      "sha256": "66354c575891c4477025a3b0716f1ce101bff43f9907dd8de4cefafe0b1b14d0"
+    },
+    {
+      "path": ".qa-artifacts/stand-forever-review/stand-phone-panel.png",
+      "sha256": "7caa86642f43da428d8c7cf2d871dd08f57681c4ad3f9aa576b191ed9b6e2b66"
+    }
+  ]
+}

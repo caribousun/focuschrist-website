@@ -1,0 +1,76 @@
+{
+  "id": "visual-rhythm-temple-tribute",
+  "role": "body",
+  "route": "answers/why-latter-day-saints-build-temples.html",
+  "prompt": {
+    "path": "docs/reviews/visual-rhythm-new-art/temple-tribute-prompt.txt",
+    "sha256": "446eeddb578d0155c3dae00148bebd18c879b35b4c708d879bd899794a5773b8"
+  },
+  "mandates": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "fe68d0e575ac67262f5693432f09e8de8c2236d1ad8e58890e24f6d358cd4bf4"
+    },
+    {
+      "path": "docs/historical-character-identity.md",
+      "sha256": "69f0f51400ba102dfb5df9a9ec9fb6e738255dc496b84dc5dd684f3f5886c8c4"
+    },
+    {
+      "path": "docs/focuschrist-enrichment-and-stewardship-prompt.md",
+      "sha256": "91cfd09d188880c849493d1752cabb6c6bf8b239d9722259b196161fb6189d14"
+    }
+  ],
+  "references": [
+    {
+      "path": "assets/heroes/home-christ-signature-approved-20260907.png",
+      "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b"
+    },
+    {
+      "path": "assets/page-art/sitewide-narratives/look-peter-rescue-approved-20260919-full.webp",
+      "sha256": "f6b5502c16f4a272b0e80209876366f86285c38ce5547b28d6fbe98d9849427a"
+    },
+    {
+      "path": "docs/reviews/visual-rhythm-new-art/source-record.json",
+      "sha256": "830afc2a2fd928df95293e53184d7a77a8487ab4380198ec76cd4c8ba71e4d25"
+    }
+  ],
+  "source_record": {
+    "path": "docs/reviews/visual-rhythm-new-art/source-record.json",
+    "sha256": "830afc2a2fd928df95293e53184d7a77a8487ab4380198ec76cd4c8ba71e4d25"
+  },
+  "chronology": {
+    "kind": "approximate-historical",
+    "period": "Early first century AD, mortal ministry in Capernaum",
+    "basis": "Matthew17:24-27 identifies Capernaum and instruction in house, children being free, then hook/fish/payment. Cross-reference Exodus30:13 identifies tribute background. Depict instruction before fishing, not Christ at shore or modern ordinances.",
+    "source_urls": [
+      "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/17?lang=eng",
+      "https://www.churchofjesuschrist.org/study/scriptures/ot/ex/30?lang=eng"
+    ]
+  },
+  "characters": [
+    {
+      "name": "Jesus Christ",
+      "age_context": {
+        "status": "approximate",
+        "depiction": "Adult mortal ministry, approximately early thirties",
+        "basis": "Matthew17:24-27 identifies Capernaum and instruction in house, children being free, then hook/fish/payment. Cross-reference Exodus30:13 identifies tribute background. Depict instruction before fishing, not Christ at shore or modern ordinances. Exact birth dates are not established for this depiction."
+      },
+      "reference_path": "assets/heroes/home-christ-signature-approved-20260907.png",
+      "identity_authority": "owner-approved",
+      "owner_evidence": "Exact canonical Home Christ; approved-character-identities.json."
+    },
+    {
+      "name": "Simon Peter",
+      "age_context": {
+        "status": "unknown",
+        "depiction": "Adult; exact age unknown; approved rear-profile continuity only",
+        "basis": "Matthew17:24-27 identifies Capernaum and instruction in house, children being free, then hook/fish/payment. Cross-reference Exodus30:13 identifies tribute background. Depict instruction before fishing, not Christ at shore or modern ordinances. Exact birth dates are not established for this depiction."
+      },
+      "reference_path": "assets/page-art/sitewide-narratives/look-peter-rescue-approved-20260919-full.webp",
+      "identity_authority": "owner-approved",
+      "owner_evidence": "Whole rescue scene approved per art-study-image-review.json; retain Peter foreground rear-profile only, no frontal master claimed."
+    }
+  ],
+  "period_clothing_setting": "Source-era plain clothing and setting, exact colors and architecture qualified; detailed in exact prompt.",
+  "interaction": "Exact prompt requires specific meaningful action, natural expression, task-directed or mutual gaze, separately traceable hands and respectful agency; no generic repetition."
+}

@@ -1,0 +1,67 @@
+{
+  "id": "visual-rhythm-history-friendship",
+  "role": "body",
+  "route": "church-history.html",
+  "prompt": {
+    "path": "docs/reviews/visual-rhythm-new-art/history-friendship-prompt.txt",
+    "sha256": "016d145bec80a778fe1ac3ee935bba999f114c2d2bf37ce679b6fc2777cd1a2c"
+  },
+  "mandates": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "fe68d0e575ac67262f5693432f09e8de8c2236d1ad8e58890e24f6d358cd4bf4"
+    },
+    {
+      "path": "docs/historical-character-identity.md",
+      "sha256": "69f0f51400ba102dfb5df9a9ec9fb6e738255dc496b84dc5dd684f3f5886c8c4"
+    },
+    {
+      "path": "docs/focuschrist-enrichment-and-stewardship-prompt.md",
+      "sha256": "91cfd09d188880c849493d1752cabb6c6bf8b239d9722259b196161fb6189d14"
+    }
+  ],
+  "references": [
+    {
+      "path": "docs/reviews/visual-rhythm-new-art/source-record.json",
+      "sha256": "830afc2a2fd928df95293e53184d7a77a8487ab4380198ec76cd4c8ba71e4d25"
+    }
+  ],
+  "source_record": {
+    "path": "docs/reviews/visual-rhythm-new-art/source-record.json",
+    "sha256": "830afc2a2fd928df95293e53184d7a77a8487ab4380198ec76cd4c8ba71e4d25"
+  },
+  "chronology": {
+    "kind": "contemporary-application",
+    "period": "Contemporary home setting, no exact date",
+    "basis": "D&C121 from Joseph Smith’s1839 confinement assures friendship and teaches gentle influence. New anonymous modern hair-care scene is an application, not Joseph’s recorded history.",
+    "source_urls": [
+      "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121?lang=eng"
+    ]
+  },
+  "characters": [
+    {
+      "name": "Older woman",
+      "age_context": {
+        "status": "illustrative",
+        "depiction": "Older adult with natural silver hair and lined face",
+        "basis": "D&C121 from Joseph Smith’s1839 confinement assures friendship and teaches gentle influence. New anonymous modern hair-care scene is an application, not Joseph’s recorded history. Exact birth dates are not established for this depiction."
+      },
+      "reference_path": "docs/reviews/visual-rhythm-new-art/source-record.json",
+      "identity_authority": "researched-no-owner-master",
+      "owner_evidence": "Anonymous role, no owner identity claimed. Source record supplies written research/context; no raster face master applies."
+    },
+    {
+      "name": "Middle-aged friend",
+      "age_context": {
+        "status": "illustrative",
+        "depiction": "Mature adult, natural unposed appearance",
+        "basis": "D&C121 from Joseph Smith’s1839 confinement assures friendship and teaches gentle influence. New anonymous modern hair-care scene is an application, not Joseph’s recorded history. Exact birth dates are not established for this depiction."
+      },
+      "reference_path": "docs/reviews/visual-rhythm-new-art/source-record.json",
+      "identity_authority": "researched-no-owner-master",
+      "owner_evidence": "Anonymous role, no owner identity claimed. Source record supplies written research/context; no raster face master applies."
+    }
+  ],
+  "period_clothing_setting": "Natural contemporary clothes and everyday setting; detailed in exact prompt.",
+  "interaction": "Exact prompt requires specific meaningful action, natural expression, task-directed or mutual gaze, separately traceable hands and respectful agency; no generic repetition."
+}

@@ -79,6 +79,35 @@ class EvidenceTests(unittest.TestCase):
         self.finished_spec['page_context'] = [self.file(p) for p in ['page.html', 'style.css', 'nested.css']]
         self.rebind(); self.assertEqual(len(self.validate()), 3)
     def test_age_mismatch(self): self.spec['characters'][0]['age'] = 30; self.reject('age mismatch')
+    def qualified_chronology(self):
+        del self.spec['scene_date']
+        self.spec['chronology'] = {'kind': 'approximate-historical', 'period': 'First-century ministry', 'basis': 'The cited account has no exact calendar date.', 'source_urls': ['https://www.churchofjesuschrist.org/study/scriptures/nt/john/6']}
+        person = self.spec['characters'][0]
+        del person['birth_date']; del person['age']
+        person['age_context'] = {'status': 'unknown', 'depiction': 'Adult', 'basis': 'No birth date is established by the cited account.'}
+        binding = gate.canonical(self.spec)
+        for receipt in self.preflight['reviews']: receipt['binding_sha256'] = binding
+        self.finished_spec['preflight_sha256'] = binding
+        self.rebind()
+
+    def test_source_grounded_qualified_chronology(self):
+        self.qualified_chronology(); self.assertEqual(len(self.validate()), 3)
+
+    def test_qualified_chronology_rejects_invented_exact_age(self):
+        self.qualified_chronology(); self.spec['characters'][0]['age'] = 33
+        self.reject('cannot assert exact age')
+
+    def test_qualified_chronology_requires_source(self):
+        self.qualified_chronology(); self.spec['chronology']['source_urls'] = []
+        self.reject('chronology sources')
+
+    def test_qualified_chronology_requires_age_basis(self):
+        self.qualified_chronology(); self.spec['characters'][0]['age_context']['basis'] = ''
+        self.reject('qualified age evidence')
+
+    def test_qualified_chronology_rejects_mixed_exact_date(self):
+        self.qualified_chronology(); self.spec['scene_date'] = '0030-01-01'
+        self.reject('mix exact and qualified')
     def test_scene_mismatch(self): self.finished_spec['id'] = 'other'; self.reject('preflight mismatch')
     def test_generation_before_preflight(self): self.finished_spec['generated_at'] = '2026-10-07T00:00:00Z'; self.reject('preceded')
     def test_finished_before_generation(self): self.creation['reviews'][0]['reviewed_at'] = '2026-10-07T00:00:00Z'; self.reject('predates')

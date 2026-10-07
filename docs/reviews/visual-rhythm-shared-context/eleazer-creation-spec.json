@@ -1,0 +1,97 @@
+{
+  "id": "eleazer-teaching-brigham-hero",
+  "preflight_sha256": "972b60869712f0d41836251ef96d654acac141b729c36b48854b864c3ae8d0f7",
+  "route": "history/eleazer-miller.html",
+  "role": "hero",
+  "generated_at": "2026-10-07T00:30:26Z",
+  "owner_status": "not-reviewed",
+  "ancestor_sha256": [
+    "5093d7604971bf2477438d04c6786aeb99f93f6b4f554e9e76e0945d7207789e",
+    "72ea4e5b266f42c24879d7915852b4712559c6bd7504d0a42a78c040cc428b6e",
+    "d6635b162ba41afa3f5f145e39d0c0ca92b988610c0c5e8a0eb382f075af5527"
+  ],
+  "original": {
+    "path": "assets/page-art/history-stories/miller-teaching-brigham-master.png",
+    "sha256": "d6635b162ba41afa3f5f145e39d0c0ca92b988610c0c5e8a0eb382f075af5527",
+    "pixel_sha256": "87cd61ccfc4e67c8c33a38bca552c7700567aa51fbfacdf42d44ab56000ea089"
+  },
+  "derivatives": [
+    {
+      "path": "assets/page-art/history-stories/miller-teaching-brigham-desktop.png",
+      "sha256": "2c720d97854b21b3865acdf7cb8e7b4d463c9a02858b67627cfd9967cd5696c7",
+      "pixel_sha256": "c70ef0cbd04c4660b7096f1645a5f5dbf475d45350042ae7835e195d26e0522c"
+    }
+  ],
+  "derivative_generations": [
+    {
+      "preflight_id": "eleazer-teaching-brigham-desktop-extension",
+      "preflight_sha256": "b265124d79ee7aa1d94567773d502dba945ae5f727b3dabc9dfa2c700cf63914",
+      "generated_at": "2026-10-07T00:45:29Z",
+      "outputs": [
+        "assets/page-art/history-stories/miller-teaching-brigham-desktop.png"
+      ]
+    }
+  ],
+  "page_context": [
+    {
+      "path": "artwork-actions.css",
+      "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+    },
+    {
+      "path": "artwork-details.css",
+      "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+    },
+    {
+      "path": "complete-card-rows.css",
+      "sha256": "7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"
+    },
+    {
+      "path": "connected-study.css",
+      "sha256": "513b11859f17d36a5934d323f865242b8c90beea70e94fd3056e6e2dc0af40c6"
+    },
+    {
+      "path": "full-image-viewer.css",
+      "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+    },
+    {
+      "path": "hero-details.css",
+      "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+    },
+    {
+      "path": "history-stories.css",
+      "sha256": "7afc257960c5d327cddd944c7a29c60223b13aaf8d670abd6a6a8a9af2943675"
+    },
+    {
+      "path": "history/eleazer-miller.html",
+      "sha256": "d50857a1285345bfb56ee4b6412453e411534a26f7ce13ea1a4dae57c41941b2"
+    },
+    {
+      "path": "priesthood-scenes.css",
+      "sha256": "5583b0f2d023bccbf2a318dc8c063331c4e96c9ffc7b5d754badc2c01d18ffd4"
+    },
+    {
+      "path": "resource-cards.css",
+      "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+    },
+    {
+      "path": "site-header.css",
+      "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+    },
+    {
+      "path": "site-search.css",
+      "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+    },
+    {
+      "path": "site-system.css",
+      "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+    },
+    {
+      "path": "topic-art.css",
+      "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"
+    },
+    {
+      "path": "topic-artwork-details.css",
+      "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+    }
+  ]
+}

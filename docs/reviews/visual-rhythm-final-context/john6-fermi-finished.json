@@ -1,0 +1,152 @@
+{
+  "reviewer": "Fermi",
+  "receipt_id": "fermi-john6-final-context-20261007-receiver",
+  "stage": "finished",
+  "verdict": "PASS",
+  "withdrawn": false,
+  "binding_sha256": "eabcba4ddfaeeb36f7804ebf4e17d2b1810cf82224534baf3e6a67fec022e893",
+  "reviewed_at": "2026-10-07T04:33:17.133474+00:00",
+  "observations": "Current Fermi receiver read exact live Master/protected foundation, current 00B/Focus and applicable repository mandates. Original-resolution and face-detail checks below explicitly reuse prior Fermi hash-bound pixel inspection; this turn independently verified unchanged source/decoded-pixel/derivative hashes and inspected current rendered screenshot pixels and visitor copy. No regeneration or new owner approval. Actual browser interaction claims belong to root/UI receipts, not my screenshot inspection. No unresolved scoped finding; publication, Newton concurrence and owner aesthetic acceptance remain separate.",
+  "checks": {
+    "identity": "Recognizable Home Christ facial proportions, brow/eye arrangement, nose, mouth, wavy hair and beard retained with natural scene expression. Peter rear profile remains consistent with actual approved rescue reference hair/build/head silhouette; no frontal identity claim.",
+    "age": "Mature adult Christ of mortal ministry; no elderly aging or child features. Other visible adults consistent with qualified source record, no exact age inferred.",
+    "expression_gaze": "Natural attentive gaze between central pair. Christ closed relaxed lips and slight attentive head tilt; Peter body/face turns toward Christ.",
+    "atmosphere": "Warm physical daylight and natural depth; no theatrical halos, spectacle, fabricated text or ritual.",
+    "environment": "Distinct modest stone courtyard and receding departing figures; setting details remain interpretive as source record states.",
+    "characters_realism": "Skin has fine texture and tonal variation; hair strands and woven cloth are clear; no apparent plastic/doll faces. Background depth of field is photographic.",
+    "period_sources": "Simple tunics, mantles and sandals/feet not emphasized; no modern artifacts. Departure-versus-remaining action matches John6:66-69; no water rescue/feed elements transferred.",
+    "anatomy": "Inspected full scene and separate hand crops. Visible hands have coherent wrist/forearm continuity, plausible thumb/finger count and joint directions. Central bodies/limbs remain separate; no fused grasp or extra limbs identified.",
+    "uniqueness": "New composition and source event/action distinguish it from reference images and nearby inventory. Standing Peter encounter with distant departure differs from rescue and feeding.",
+    "desktop_phone": "Prior hash-bound desktop/phone placement and derivative inspection reused; current narrow screenshot independently inspected. John6-named viewer screenshot actually displays base placement/caption, not viewer; John7 displays full viewer with natural ratio and visible48px download. UI receipt separately records both native viewer paths. No false screenshot-label inference."
+  },
+  "full_resolution_inspected": true,
+  "face_details_inspected": true,
+  "pixel_review_provenance": "Retained prior independently inspected immutable pixels; original and all derivatives verified byte and decoded-pixel identical in this review. No claim of new generation or new owner approval.",
+  "evidence": [
+    {
+      "path": "assets/page-art/stand-forever-journey/stand-john6-remain-original.png",
+      "sha256": "3384d4a1a3599ab7c789ab1f1a712c66519f01851f9e46d23bd1e1d51eda709b"
+    },
+    {
+      "path": "assets/page-art/stand-forever-journey/stand-john6-remain-full.webp",
+      "sha256": "f9bc997a86d7f85695eeb32cabf1ae9e76e88122ff6a6efba8a247a408bd78a6"
+    },
+    {
+      "path": "assets/page-art/stand-forever-journey/stand-john6-remain-960.webp",
+      "sha256": "bcbfa7bb0face64659185fe097bf8ae213e100b14b3de8765a549b15dc113aab"
+    },
+    {
+      "path": "answer-navigation.css",
+      "sha256": "8112ad6d52ada3bd0b373633fc2e60f5ada7d47fb2204c28e1a09ae01be66a57"
+    },
+    {
+      "path": "answer-opening.css",
+      "sha256": "0356c038ad2adcec7206bfcb3d57915b9e2be2cd42024770560f3d9875cc94fb"
+    },
+    {
+      "path": "answer-styles.css",
+      "sha256": "82dc51b82d56a129be803420cae47630f053f7af1259c659113fbd7fcd76d6ad"
+    },
+    {
+      "path": "answers/stand-forever.html",
+      "sha256": "abaf3ca3e0d766e9f5d2dae74892cfb0a6e4eff0b1a305686fbc1bb98279e24c"
+    },
+    {
+      "path": "artwork-actions.css",
+      "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+    },
+    {
+      "path": "artwork-details.css",
+      "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+    },
+    {
+      "path": "complete-card-rows.css",
+      "sha256": "7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"
+    },
+    {
+      "path": "connected-study.css",
+      "sha256": "513b11859f17d36a5934d323f865242b8c90beea70e94fd3056e6e2dc0af40c6"
+    },
+    {
+      "path": "foundation-study.css",
+      "sha256": "8d212cf661236bcaf3da52954257551613dd8356e9483eacdee5f55a03372c6d"
+    },
+    {
+      "path": "full-image-viewer.css",
+      "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+    },
+    {
+      "path": "hero-details.css",
+      "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+    },
+    {
+      "path": "resource-cards.css",
+      "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+    },
+    {
+      "path": "site-header.css",
+      "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+    },
+    {
+      "path": "site-search.css",
+      "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+    },
+    {
+      "path": "site-system.css",
+      "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+    },
+    {
+      "path": "stand-forever-study.css",
+      "sha256": "27d14a4abc1b10c50068043d70ec8f0fda3860ce0953d5d2922d33e1a7317d7b"
+    },
+    {
+      "path": "topic-art.css",
+      "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"
+    },
+    {
+      "path": "topic-artwork-details.css",
+      "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+    },
+    {
+      "path": "topic-heroes.css",
+      "sha256": "c0cd96bafe94455fd41d8b6c8357baaa12a0556ce204ba058a1264160acae632"
+    },
+    {
+      "path": "topic-study-pages.css",
+      "sha256": "99e1df87cfdcd11751bb16e0ea293a5048cd6f5f73245a791d20492226299236"
+    },
+    {
+      "path": "docs/reviews/stand-forever-new-art/john6-fermi-finished.json",
+      "sha256": "ed72f7909a71f6d3279ad7b9b3bcb307250d979cbed23d36a88d9bbce78250b6"
+    }
+  ],
+  "screenshot_evidence": [
+    {
+      "path": ".qa-artifacts/visual-rhythm-review/stand-john6-viewer-narrow.png",
+      "sha256": "3df64f14ca9a8c7f55cbb1266f0b034683a2164e5e833211d30f939e4b046878"
+    }
+  ],
+  "mandates_read": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "fe68d0e575ac67262f5693432f09e8de8c2236d1ad8e58890e24f6d358cd4bf4"
+    },
+    {
+      "path": "docs/historical-character-identity.md",
+      "sha256": "69f0f51400ba102dfb5df9a9ec9fb6e738255dc496b84dc5dd684f3f5886c8c4"
+    },
+    {
+      "path": "docs/focuschrist-enrichment-and-stewardship-prompt.md",
+      "sha256": "91cfd09d188880c849493d1752cabb6c6bf8b239d9722259b196161fb6189d14"
+    },
+    {
+      "path": "docs/supporting-artwork-standard.md",
+      "sha256": "bdf1a7b97693f15cc9d6411fd0378ea8b549f2a6d3df934d574398ecbe0966ec"
+    },
+    {
+      "path": "docs/enriched-picture-owner-mandate.md",
+      "sha256": "c237fb14c7dd57f04d7d9ad063f3f0e93daf0a5c9844f9c3682407b4c80b363d"
+    }
+  ],
+  "source_spec": "docs/reviews/stand-forever-new-art/john6-creation-spec.json"
+}

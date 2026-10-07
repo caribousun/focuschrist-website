@@ -1,0 +1,136 @@
+{
+  "reviewer": "Fermi",
+  "receipt_id": "fermi-history-friendship-final-context-20261007-receiver",
+  "stage": "finished",
+  "verdict": "PASS",
+  "withdrawn": false,
+  "binding_sha256": "dfdad832c7566cc8028dbad743f01b3bdd8dfcbee8d57ab1c208b387577a3aee",
+  "reviewed_at": "2026-10-07T04:33:17.476100+00:00",
+  "observations": "Current Fermi receiver read exact live Master/protected foundation, current 00B/Focus and applicable repository mandates. Original-resolution and face-detail checks below explicitly reuse prior Fermi hash-bound pixel inspection; this turn independently verified unchanged source/decoded-pixel/derivative hashes and inspected current rendered screenshot pixels and visitor copy. No regeneration or new owner approval. Actual browser interaction claims belong to root/UI receipts, not my screenshot inspection. No unresolved scoped finding; publication, Newton concurrence and owner aesthetic acceptance remain separate.",
+  "checks": {
+    "identity": "Two anonymous contemporary adult women; no historical person or protected identity substitution.",
+    "age": "Silver hair, facial lines and natural older figure; companion is mature adult. No exact age or medical condition claimed.",
+    "expression_gaze": "Older woman looks toward friend; friend attends to hair-brushing task with natural conversational expression.",
+    "atmosphere": "Warm shaded porch with natural daylight, restrained ordinary care and no staged illness spectacle.",
+    "environment": "Coherent porch, chair and outdoor depth; contemporary setting is clear beside present-day application caption.",
+    "characters_realism": "Prior original/full/960 review found detailed skin, silver hair, fabric and photographic depth; unchanged hashes verified.",
+    "period_sources": "Reused source record: D&C121:9,41-42 supports friendship/gentle influence. Contemporary act is explicitly applied to today, not asserted as Joseph history.",
+    "anatomy": "Prior original face/hand detail review found separate brush grip, gathered hair and resting lap hands with plausible joints; current derivative hashes unchanged.",
+    "uniqueness": "Distinct hair-brushing action and porch composition; original is assigned to Church History reflection section only.",
+    "desktop_phone": "Independently inspected actual current desktop1280 and phone412 placement screenshots, plus targeted panel/full-size screenshot where listed. Complete3:2 picture, readable caption/source controls, natural stacking and appropriate pause in story flow. UI native actions separately verified; screenshot review does not claim interaction or200percent scaling."
+  },
+  "full_resolution_inspected": true,
+  "face_details_inspected": true,
+  "pixel_review_provenance": "Retained prior independently inspected immutable pixels; original and all derivatives verified byte and decoded-pixel identical in this review. No claim of new generation or new owner approval.",
+  "evidence": [
+    {
+      "path": "assets/page-art/visual-rhythm-journey/history-friendship-original.png",
+      "sha256": "77b6376fb677cb7d0720536cdaf5089a77da91bcaaafbb9b7c62d8c061b4c2f8"
+    },
+    {
+      "path": "assets/page-art/visual-rhythm-journey/history-friendship-full.webp",
+      "sha256": "b87b2faf6a7bd687754642e107ff138eef39abbc8255c93b44894623565347dd"
+    },
+    {
+      "path": "assets/page-art/visual-rhythm-journey/history-friendship-960.webp",
+      "sha256": "e51191c0829493c0736a472f7a001b776dc60991c08ef182107128e2e2b888d8"
+    },
+    {
+      "path": "artwork-actions.css",
+      "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+    },
+    {
+      "path": "artwork-details.css",
+      "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+    },
+    {
+      "path": "church-history.css",
+      "sha256": "fe961e0f9c0c7abaff84da078bbec85e56458fab734c9553ac2a7bcdef136ce6"
+    },
+    {
+      "path": "church-history.html",
+      "sha256": "44bfcef04534e1c32e8bc4daebca83e6045758ed4c7b99d81bc8018e40de2624"
+    },
+    {
+      "path": "complete-card-rows.css",
+      "sha256": "7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"
+    },
+    {
+      "path": "connected-study.css",
+      "sha256": "513b11859f17d36a5934d323f865242b8c90beea70e94fd3056e6e2dc0af40c6"
+    },
+    {
+      "path": "full-image-viewer.css",
+      "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+    },
+    {
+      "path": "hero-details.css",
+      "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+    },
+    {
+      "path": "priesthood-scenes.css",
+      "sha256": "5583b0f2d023bccbf2a318dc8c063331c4e96c9ffc7b5d754badc2c01d18ffd4"
+    },
+    {
+      "path": "resource-cards.css",
+      "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+    },
+    {
+      "path": "site-header.css",
+      "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+    },
+    {
+      "path": "site-search.css",
+      "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+    },
+    {
+      "path": "site-system.css",
+      "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+    },
+    {
+      "path": "topic-art.css",
+      "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"
+    },
+    {
+      "path": "topic-artwork-details.css",
+      "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+    }
+  ],
+  "screenshot_evidence": [
+    {
+      "path": ".qa-artifacts/visual-rhythm-review/history-friendship-desktop.png",
+      "sha256": "bfae60a92dff471cc19e07c1dc9b8dd3a506ca679720e6ffe177d5718932175b"
+    },
+    {
+      "path": ".qa-artifacts/visual-rhythm-review/history-friendship-phone.png",
+      "sha256": "b22708bdfd16540e9769f2f508d7a7bbf75be77172c85ad0dec0bbbbea4435cd"
+    },
+    {
+      "path": ".qa-artifacts/visual-rhythm-review/history-friendship-panel-narrow.png",
+      "sha256": "e02f54400416b9c569acfd31ef97f896d930d40eef94c2e377adfbc74d3e21b3"
+    }
+  ],
+  "mandates_read": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "fe68d0e575ac67262f5693432f09e8de8c2236d1ad8e58890e24f6d358cd4bf4"
+    },
+    {
+      "path": "docs/historical-character-identity.md",
+      "sha256": "69f0f51400ba102dfb5df9a9ec9fb6e738255dc496b84dc5dd684f3f5886c8c4"
+    },
+    {
+      "path": "docs/focuschrist-enrichment-and-stewardship-prompt.md",
+      "sha256": "91cfd09d188880c849493d1752cabb6c6bf8b239d9722259b196161fb6189d14"
+    },
+    {
+      "path": "docs/supporting-artwork-standard.md",
+      "sha256": "bdf1a7b97693f15cc9d6411fd0378ea8b549f2a6d3df934d574398ecbe0966ec"
+    },
+    {
+      "path": "docs/enriched-picture-owner-mandate.md",
+      "sha256": "c237fb14c7dd57f04d7d9ad063f3f0e93daf0a5c9844f9c3682407b4c80b363d"
+    }
+  ],
+  "source_spec": "docs/reviews/visual-rhythm-new-art/history-friendship-creation-spec.json"
+}

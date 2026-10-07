@@ -7855,9 +7855,19 @@
           "kind": "hero",
           "selector": "a[data-hero-viewer][href=\"assets/heroes/pioneers.webp\"]",
           "title": "Faith Across the Journey"
+        },
+        {
+          "id": "source-ee75821f2fb4",
+          "page": "/timelines/willie-and-martin-handcart-map.html",
+          "pageTitle": "The Willie & Martin Handcart Journey",
+          "category": "Gospel Studies",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"../assets/heroes/pioneers.webp\"]",
+          "title": "Illustration of a pioneer family with a handcart following covered wagons across the plains toward distant mountains"
         }
       ],
       "categories": [
+        "Gospel Studies",
         "Pioneers"
       ]
     },
@@ -8343,6 +8353,28 @@
       ],
       "categories": [
         "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Friends who stay near",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/visual-rhythm-journey/history-friendship-960.webp",
+      "fullImage": "/assets/page-art/visual-rhythm-journey/history-friendship-full.webp",
+      "alt": "An older woman talks with her friend, who gently brushes her silver hair on a shaded porch.",
+      "id": "art-dbcb66fae684",
+      "occurrences": [
+        {
+          "id": "source-c21f804e9b39",
+          "page": "/church-history.html",
+          "pageTitle": "Church History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/visual-rhythm-journey/history-friendship-full.webp\"]:has(img[src=\"assets/page-art/visual-rhythm-journey/history-friendship-960.webp\"])",
+          "title": "Friends who stay near"
+        }
+      ],
+      "categories": [
+        "Church History"
       ]
     },
     {
@@ -9908,6 +9940,28 @@
       ]
     },
     {
+      "title": "Help begins with willing hands",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/visual-rhythm-journey/handcart-supplies-960.webp",
+      "fullImage": "/assets/page-art/visual-rhythm-journey/handcart-supplies-full.webp",
+      "alt": "Three volunteers load quilts and provisions into a wooden relief wagon on a clear autumn day.",
+      "id": "art-af5a27a56bee",
+      "occurrences": [
+        {
+          "id": "source-80010d73c136",
+          "page": "/timelines/willie-and-martin-handcart-map.html",
+          "pageTitle": "The Willie & Martin Handcart Journey",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/visual-rhythm-journey/handcart-supplies-full.webp\"]:has(img[src=\"../assets/page-art/visual-rhythm-journey/handcart-supplies-960.webp\"])",
+          "title": "Help begins with willing hands"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Help for the journey",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/bom-evidences/whitmer-fields-960.webp",
@@ -11177,6 +11231,15 @@
           "kind": "hero",
           "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/jesus-full.webp\"]",
           "title": "Jesus Christ speaks with the Samaritan woman beside a stone well and clay water jar."
+        },
+        {
+          "id": "source-15977d3c7140",
+          "page": "/timelines/life-of-christ-journey-map.html",
+          "pageTitle": "The Life of Christ, place by place.",
+          "category": "Gospel Studies",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/jesus-full.webp\"]",
+          "title": "Jesus Christ speaks with the Samaritan woman beside a stone well and clay water jar"
         }
       ],
       "categories": [
@@ -12257,6 +12320,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/topics/christ-disciples-gaze-v2-1536.webp\"]:has(img[src=\"../assets/page-art/topics/christ-disciples-gaze-v2-800.webp\"])",
           "title": "Learn from Christ, then practice His teaching"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Learn through faithful action",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/stand-forever-journey/stand-john7-do-his-will-960.webp",
+      "fullImage": "/assets/page-art/stand-forever-journey/stand-john7-do-his-will-full.webp",
+      "alt": "Jesus sits on a shaded temple step, speaking with an attentive man while two listeners look on.",
+      "id": "art-6a4d2cb65340",
+      "occurrences": [
+        {
+          "id": "source-80a1a32cec29",
+          "page": "/answers/stand-forever.html",
+          "pageTitle": "Stand Forever",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/stand-forever-journey/stand-john7-do-his-will-full.webp\"]:has(img[src=\"../assets/page-art/stand-forever-journey/stand-john7-do-his-will-960.webp\"])",
+          "title": "Learn through faithful action"
         }
       ],
       "categories": [
@@ -15053,6 +15138,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/laborers-vineyard-04-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/laborers-vineyard-04-960.webp\"])",
           "title": "Owner answering complaint"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Painterly illustration of a sunlit grove of tall trees in spring, golden light falling through fresh green leaves",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/timelines/church-history-grove.webp",
+      "fullImage": "/assets/timelines/church-history-grove.webp",
+      "alt": "Painterly illustration of a sunlit grove of tall trees in spring, golden light falling through fresh green leaves",
+      "id": "art-a61d1db2ee69",
+      "occurrences": [
+        {
+          "id": "source-32c557dabf09",
+          "page": "/timelines/latter-day-saint-church-history-timeline.html",
+          "pageTitle": "From a grove in New York to a worldwide faith",
+          "category": "Gospel Studies",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"../assets/timelines/church-history-grove.webp\"]",
+          "title": "Painterly illustration of a sunlit grove of tall trees in spring, golden light falling through fresh green leaves"
         }
       ],
       "categories": [
@@ -18061,6 +18168,28 @@
       ]
     },
     {
+      "title": "Stay with the words of life",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/stand-forever-journey/stand-john6-remain-960.webp",
+      "fullImage": "/assets/page-art/stand-forever-journey/stand-john6-remain-full.webp",
+      "alt": "Peter stands facing Jesus in a shaded courtyard as other disciples walk away in the distance.",
+      "id": "art-9b6385edde91",
+      "occurrences": [
+        {
+          "id": "source-5fd121188df5",
+          "page": "/answers/stand-forever.html",
+          "pageTitle": "Stand Forever",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/stand-forever-journey/stand-john6-remain-full.webp\"]:has(img[src=\"../assets/page-art/stand-forever-journey/stand-john6-remain-960.webp\"])",
+          "title": "Stay with the words of life"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Staying close in sorrow",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-wardrobe-v2-1536.webp",
@@ -20719,6 +20848,28 @@
       ]
     },
     {
+      "title": "The Son and the temple tribute",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/visual-rhythm-journey/temple-tribute-960.webp",
+      "fullImage": "/assets/page-art/visual-rhythm-journey/temple-tribute-full.webp",
+      "alt": "Jesus speaks with Peter inside a modest Capernaum house as Peter holds a coiled fishing line.",
+      "id": "art-883e09b5c37b",
+      "occurrences": [
+        {
+          "id": "source-410f6bf0b93a",
+          "page": "/answers/why-latter-day-saints-build-temples.html",
+          "pageTitle": "Temples",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/visual-rhythm-journey/temple-tribute-full.webp\"]:has(img[src=\"../assets/page-art/visual-rhythm-journey/temple-tribute-960.webp\"])",
+          "title": "The Son and the temple tribute"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "The son approaching the vineyard",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/wicked-tenants-03-960.webp",
@@ -22755,14 +22906,14 @@
     }
   ],
   "stats": {
-    "artworks": 1025,
-    "occurrences": 1030,
+    "artworks": 1031,
+    "occurrences": 1038,
     "byKind": {
       "artwork": 63,
-      "hero": 42,
+      "hero": 45,
       "legacy": 39,
       "missionary": 13,
-      "topic": 926
+      "topic": 931
     }
   }
 }

@@ -1,0 +1,85 @@
+{
+  "scope": "Exact four new body figures, including their complete trigger, caption, sources and local asset bytes. Assembled approval remains in artwork-creation-reviews.",
+  "figures": [
+    {
+      "page": "church-history.html",
+      "key": "history-friendship",
+      "figure_sha256": "a3a764dba3419c41d197006bf742819dd690066767e44651f64518665bdbb89c",
+      "assets": [
+        {
+          "path": "assets/page-art/visual-rhythm-journey/history-friendship-960.webp",
+          "sha256": "e51191c0829493c0736a472f7a001b776dc60991c08ef182107128e2e2b888d8"
+        },
+        {
+          "path": "assets/page-art/visual-rhythm-journey/history-friendship-full.webp",
+          "sha256": "b87b2faf6a7bd687754642e107ff138eef39abbc8255c93b44894623565347dd"
+        },
+        {
+          "path": "assets/page-art/visual-rhythm-journey/history-friendship-original.png",
+          "sha256": "77b6376fb677cb7d0720536cdaf5089a77da91bcaaafbb9b7c62d8c061b4c2f8"
+        }
+      ],
+      "source_sha256": "77b6376fb677cb7d0720536cdaf5089a77da91bcaaafbb9b7c62d8c061b4c2f8"
+    },
+    {
+      "page": "pioneers.html",
+      "key": "pioneers-traveler",
+      "figure_sha256": "6e93060de6598629036debd2ee94f1b4ece0fddd44bcd83c587839babed0d45c",
+      "assets": [
+        {
+          "path": "assets/page-art/visual-rhythm-journey/pioneers-traveler-960.webp",
+          "sha256": "95ae2433f921444725b1d751779b4f7be6c27869235eec1b8760b335fef00ea8"
+        },
+        {
+          "path": "assets/page-art/visual-rhythm-journey/pioneers-traveler-full.webp",
+          "sha256": "87df0e8ab581be777a2648dee88a942b624c0063007376b7030c7ed79a3f8d94"
+        },
+        {
+          "path": "assets/page-art/visual-rhythm-journey/pioneers-traveler-original.png",
+          "sha256": "813d004b326d19c36b33565747ad0297d93520a7ac04451400f1697227e27021"
+        }
+      ],
+      "source_sha256": "813d004b326d19c36b33565747ad0297d93520a7ac04451400f1697227e27021"
+    },
+    {
+      "page": "answers/why-latter-day-saints-build-temples.html",
+      "key": "temple-tribute",
+      "figure_sha256": "56ff33e46e3326db3c459f13f09917f96e687c7e18460bcf83892a31150b1c49",
+      "assets": [
+        {
+          "path": "assets/page-art/visual-rhythm-journey/temple-tribute-960.webp",
+          "sha256": "fc1dff1127af137bdf0cf20d3da8833b6b6180940aa7dd019106bb022f5e050a"
+        },
+        {
+          "path": "assets/page-art/visual-rhythm-journey/temple-tribute-full.webp",
+          "sha256": "de729b17b7a72a14b6f667c9a23a4f064c4d7883dab1d5d1d430f80e7f1820bf"
+        },
+        {
+          "path": "assets/page-art/visual-rhythm-journey/temple-tribute-original.png",
+          "sha256": "e1cbd9cf09065630f8af52791c9832cf93e1c0be0f75893b138e1f4cede47195"
+        }
+      ],
+      "source_sha256": "e1cbd9cf09065630f8af52791c9832cf93e1c0be0f75893b138e1f4cede47195"
+    },
+    {
+      "page": "timelines/willie-and-martin-handcart-map.html",
+      "key": "handcart-supplies",
+      "figure_sha256": "dbc0187165b5a65da6d975188b50db58df754871ab4282c82b524107107fce78",
+      "assets": [
+        {
+          "path": "assets/page-art/visual-rhythm-journey/handcart-supplies-960.webp",
+          "sha256": "a50bcc69b9b067c521ab75c35a13e5b1dd768c452800320851b8df5ed17574bf"
+        },
+        {
+          "path": "assets/page-art/visual-rhythm-journey/handcart-supplies-full.webp",
+          "sha256": "4190a8e6aed82ce7ca92041dba137ce787d18d90e003fc21445a2992f5bd7555"
+        },
+        {
+          "path": "assets/page-art/visual-rhythm-journey/handcart-supplies-original.png",
+          "sha256": "36cba78b3e8cf231da17a7539bb152d6d9accdb53a07570a39f81c554a2bf898"
+        }
+      ],
+      "source_sha256": "36cba78b3e8cf231da17a7539bb152d6d9accdb53a07570a39f81c554a2bf898"
+    }
+  ]
+}
