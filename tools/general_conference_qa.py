@@ -58,9 +58,10 @@ all_nodes = list(doc.root.walk())
 style_bytes = (ROOT / 'general-conference-section.css').read_bytes()
 style = style_bytes.decode('utf-8')
 require(style.count('.fc-conference-sessions details[open]>summary') == 2 and '.fc-conference-sessions details[open] summary' not in style, 'nested archive state must style only the opened details own summary')
-restored_style = style_bytes.replace(b'.fc-conference-sessions details[open]>summary', b'.fc-conference-sessions details[open] summary')
-require(hashlib.sha256(restored_style).hexdigest() == '8e6367ffaac9c5bd80084d5c478fb9a279d080187d86b0d2e3d53786e805e198', 'only the two reviewed archive direct-child selectors may change')
-require(sum(n.tag == 'link' and n.attrs.get('href') == 'general-conference-section.css?v=20261007-october-archive-1' for n in all_nodes) == 1, 'conference stylesheet requires its exact archive cache version')
+from anchor_alignment_qa import reviewed_anchor_style, CONFERENCE_ROWS_APPENDIX, CONFERENCE_VERSION
+require(reviewed_anchor_style('general-conference-section.css', style_bytes), 'only exact archive selectors and visible-result row correction may change')
+conference_styles = [n.attrs.get('href') for n in all_nodes if n.tag == 'link' and 'general-conference-section.css' in n.attrs.get('href', '')]
+require(conference_styles == ['general-conference-section.css?v=' + CONFERENCE_VERSION], 'conference stylesheet requires exactly one current reference')
 corbridge_visuals = [n for n in all_nodes if n.tag == 'a'
                     and 'gc-voice-visual' in n.attrs.get('class', '').split()
                     and n.attrs.get('href') == 'answers/stand-forever.html']
@@ -204,7 +205,7 @@ if '--self-test' in sys.argv:
         'wrong archived month': source.replace('/2026/04/11oaks?', '/2026/10/11oaks?', 1),
         'archive opened initially': source.replace('id="conference-april-2026"', 'id="conference-april-2026" open', 1),
         'cropped sustaining image': source.replace('object-fit:contain', 'object-fit:cover', 1),
-        'stale conference CSS': source.replace('general-conference-section.css?v=20261007-october-archive-1', 'general-conference-section.css?v=20260927-anchor-alignment-1', 1),
+        'stale conference CSS': source.replace('general-conference-section.css?v=20261007-october-visible-rows-2', 'general-conference-section.css?v=20260927-anchor-alignment-1', 1),
     }
     for label, candidate in mutants.items():
         require(candidate != source, 'inactive negative fixture: ' + label)
@@ -213,4 +214,11 @@ if '--self-test' in sys.argv:
         except SystemExit:
             continue
         raise SystemExit('GENERAL CONFERENCE QA FAIL: negative fixture accepted: ' + label)
+    for mutation in (style_bytes[:-len(CONFERENCE_ROWS_APPENDIX)], style_bytes + CONFERENCE_ROWS_APPENDIX,
+                     style_bytes.replace(b' of :not([hidden])', b'', 1),
+                     style_bytes.replace(b'grid-column: span 3;', b'grid-column: span 2;', 1),
+                     style_bytes.replace(b'#conference-results', b'.fc-conference-section', 1)):
+        require(mutation != style_bytes, 'inactive filtered-row negative fixture')
+        require(not reviewed_anchor_style('general-conference-section.css', mutation), 'filtered-row regression accepted')
+    print('GENERAL CONFERENCE ROW SELF-TEST PASS: missing/duplicate correction, hidden-child counting, stranded pair and archive scope regressions rejected.')
     print(f'GENERAL CONFERENCE SELF-TEST PASS: {len(mutants)} stale/current/archive negative cases.')

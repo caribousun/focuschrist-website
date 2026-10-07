@@ -57,3 +57,17 @@
     }
     .gc-page .gc-page-opening > div { padding-inline: 0; }
 }
+
+/* Balance the visible search results, excluding cards hidden by the filters. */
+@media (min-width:701px) and (max-width:1000px) {
+    #conference-results .fc-talk-list > :not([hidden]) { grid-column: auto; }
+    #conference-results .fc-talk-list > :nth-last-child(1 of :not([hidden])):nth-child(odd of :not([hidden])) { grid-column: 1 / -1; }
+}
+@media (min-width:1001px) {
+    #conference-results .fc-talk-list > :not([hidden]) { grid-column: span 2; }
+    #conference-results .fc-talk-list > :not([hidden]) > a { display: flex; }
+    #conference-results .fc-talk-list > :nth-last-child(1 of :not([hidden])):nth-child(3n+1 of :not([hidden])) { grid-column: 1 / -1; }
+    #conference-results .fc-talk-list > :nth-last-child(2 of :not([hidden])):nth-child(3n+1 of :not([hidden])),
+    #conference-results .fc-talk-list > :nth-last-child(1 of :not([hidden])):nth-child(3n+2 of :not([hidden])) { grid-column: span 3; }
+    #conference-results .fc-talk-list > :nth-last-child(1 of :not([hidden])):nth-child(3n+1 of :not([hidden])) > a { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); align-items: center; }
+}
