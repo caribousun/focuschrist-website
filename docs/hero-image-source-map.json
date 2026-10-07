@@ -665,7 +665,7 @@
         {
           "asset": "assets/heroes/topics/jesus-mobile.webp",
           "condition": "max-width:700px",
-          "mechanism": "getComputedStyle(trigger,\"::before\").backgroundImage",
+          "mechanism": "trigger.querySelector(\"picture img\").currentSrc",
           "evidence": "docs/sitewide-artwork-review.json explicit generated portrait recomposition"
         }
       ]
