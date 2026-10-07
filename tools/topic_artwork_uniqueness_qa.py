@@ -75,6 +75,31 @@ def timeline_registry_references(text, key):
     registry = json.loads(match[1])
     return registry[kind].values()
 
+def hero_registry_source(text, key):
+    """Scope the audited helper registry to its route; still scan all other code."""
+    declarations = list(re.finditer(r'\bconst\s+SOURCE_RULES\s*=\s*', text))
+    if len(declarations) != 1:
+        raise ValueError('Hero image source registry must have one auditable declaration')
+    start = declarations[0].end()
+    try:
+        rules, length = json.JSONDecoder().raw_decode(text[start:])
+    except (ValueError, TypeError) as error:
+        raise ValueError('Hero image source registry must remain valid JSON') from error
+    if not isinstance(rules, list) or not rules:
+        raise ValueError('Hero image source registry must be a nonempty list')
+    for rule in rules:
+        if not isinstance(rule, dict) or not isinstance(rule.get('route'), str) or not rule['route'].startswith('/'):
+            raise ValueError('Hero image source registry has an invalid route')
+        if not isinstance(rule.get('selector'), str) or not isinstance(rule.get('original'), str):
+            raise ValueError('Hero image source registry has an invalid trigger')
+        if not isinstance(rule.get('alternates'), list) or not all(isinstance(value, str) for value in rule['alternates']):
+            raise ValueError('Hero image source registry has invalid alternates')
+        versions = rule.get('versions')
+        if not isinstance(versions, dict) or set(versions) != {'phone', 'wide'} or not all(isinstance(value, str) for value in versions.values()):
+            raise ValueError('Hero image source registry has invalid versions')
+    selected = [rule for rule in rules if rule['route'] == '/' + key]
+    return text[:start] + json.dumps(selected) + text[start + length:]
+
 def scan(root=ROOT):
     pages=public_pages(root);parsed={};references=[];asset_paths=set();asset_issues={}
     def add_reference(page, value, key, tag, attr):
@@ -112,6 +137,7 @@ def scan(root=ROOT):
             if n.tag=='script':
                 js=local_file(page,n.attrs.get('src',''),{'.js'})
                 script_text=js.read_text(encoding='utf-8') if js and js.is_file() else n.text()
+                if js == root/'hero-image-source.js':script_text=hero_registry_source(script_text,key)
                 entries=timeline_registry_references(script_text,key) if js==root/'timeline-images.js' else None
                 if entries is None:script_refs(script_text,page,key)
                 else:

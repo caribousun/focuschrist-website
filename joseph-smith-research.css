@@ -111,7 +111,7 @@
  .joseph-research .research-opening-links a { font-size:.82rem; }
 }
 
-.joseph-research > .research-mode-switch { position:relative; width:fit-content; max-width:100%; margin:0 auto; padding:8px 12px; border-radius:var(--fc-radius); background:var(--fc-bg,#14303b); box-sizing:border-box; }
+.joseph-research > .research-mode-switch { position:relative; width:fit-content; max-width:100%; margin:0 auto; padding:8px 12px; border-radius:var(--fc-radius); box-sizing:border-box; }
 @media(max-width:430px) { .joseph-research > .research-mode-switch { width:100%; padding-inline:0; } }
 
 .joseph-research [id] { scroll-margin-top:var(--fc-anchor-offset,24px); }
@@ -164,4 +164,92 @@
 /* Allow the research title to fit beside a browser scrollbar on short phones. */
 @media(max-width:360px) and (max-height:650px) {
  body.fc-site.fc-portrait-research-page .research-opening[data-unified-opening][data-unified-opening][data-unified-opening] { padding-inline:8px!important; gap:6px!important; }
+}
+
+/* Research compositions: keep the narrative whole and comparisons balanced. */
+.joseph-research .research-reading-block--illustrated { grid-template-columns:minmax(0,1fr); gap:24px; }
+.joseph-research .research-reading-block--illustrated > .research-visual { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:28px; max-width:none; width:100%; align-items:center; padding-block:24px; border-block:1px solid var(--fc-line); }
+.joseph-research .research-reading-block--illustrated > .research-visual > figcaption { padding:0; }
+.joseph-research .research-reading-block--cohesive > .research-reading-copy { grid-row:2; }
+.joseph-research .research-visual-grid { grid-column:1/-1; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px; }
+.joseph-research :is(.research-comparison-group,.research-feature-images,.research-visual-grid) { align-items:start; column-gap:32px; row-gap:28px; }
+.joseph-research :is(.research-comparison-group,.research-feature-images,.research-visual-grid) > figure { padding-top:20px; border-top:1px solid var(--fc-line); }
+.joseph-research .research-visual > a:not(.research-detail-window) img { width:100%; height:auto; max-height:320px; object-fit:contain; }
+.joseph-research .research-visual > .research-detail-window { max-width:min(100%,calc(320px * var(--research-window-ratio)))!important; }
+.joseph-research .research-visual figcaption { padding-top:14px; }
+.joseph-research .research-visual figcaption > :last-child { margin-bottom:0; }
+.joseph-research .research-visual .fc-study-visual-sources { display:flex; flex-wrap:wrap; gap:6px 16px; margin-top:12px; }
+body.fc-site.fc-portrait-research-page .joseph-research .research-visual .fc-study-visual-sources > a:not(.fc-button--primary):not([hidden]) { flex:1 1 11rem; min-height:44px; height:auto; white-space:normal; }
+.joseph-research .research-feature-study { padding:24px 0; border:0; border-top:1px solid var(--fc-line); border-radius:0; background:none; margin:28px 0 36px; }
+.joseph-research .research-feature-reasoning { max-width:none; }
+.joseph-research .research-feature-images > figure:last-child:nth-child(odd) { max-width:none; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:28px; align-items:center; }
+.joseph-research .research-feature-images > figure:last-child:nth-child(odd) > figcaption { padding:0; }
+.joseph-research .research-source-gallery .research-visual { padding-top:20px; border-top:1px solid var(--fc-line); }
+@media(min-width:761px) {
+ .joseph-research :is(.research-comparison-group,.research-feature-images,.research-visual-grid) > figure:nth-child(even) { padding-left:24px; border-left:1px solid var(--fc-line); }
+}
+@media(max-width:760px) {
+ .joseph-research .research-reading-block--illustrated > .research-visual,
+ .joseph-research .research-feature-images > figure:last-child:nth-child(odd) { grid-template-columns:minmax(0,1fr); gap:16px; }
+ .joseph-research :is(.research-comparison-group,.research-feature-images,.research-visual-grid,.research-source-gallery) { grid-template-columns:minmax(0,1fr); }
+ .joseph-research .research-visual > a:not(.research-detail-window) img { max-height:400px; }
+ .joseph-research .research-visual > .research-detail-window { max-width:min(100%,calc(400px * var(--research-window-ratio)))!important; }
+}
+
+/* Exact existing detail ratios retain every reviewed crop and transform. */
+.joseph-research .research-detail-window[style*="aspect-ratio:103/145;"] { --research-window-ratio:103/145; }
+.joseph-research .research-detail-window[style*="aspect-ratio:143/96;"] { --research-window-ratio:143/96; }
+.joseph-research .research-detail-window[style*="aspect-ratio:161/239;"] { --research-window-ratio:161/239; }
+.joseph-research .research-detail-window[style*="aspect-ratio:165/95;"] { --research-window-ratio:165/95; }
+.joseph-research .research-detail-window[style*="aspect-ratio:169/107;"] { --research-window-ratio:169/107; }
+.joseph-research .research-detail-window[style*="aspect-ratio:218/131;"] { --research-window-ratio:218/131; }
+.joseph-research .research-detail-window[style*="aspect-ratio:223/149;"] { --research-window-ratio:223/149; }
+.joseph-research .research-detail-window[style*="aspect-ratio:236/130;"] { --research-window-ratio:236/130; }
+.joseph-research .research-detail-window[style*="aspect-ratio:255/75;"] { --research-window-ratio:255/75; }
+.joseph-research .research-detail-window[style*="aspect-ratio:270/167;"] { --research-window-ratio:270/167; }
+.joseph-research .research-detail-window[style*="aspect-ratio:279/261;"] { --research-window-ratio:279/261; }
+.joseph-research .research-detail-window[style*="aspect-ratio:314/44;"] { --research-window-ratio:314/44; }
+.joseph-research .research-detail-window[style*="aspect-ratio:318/281;"] { --research-window-ratio:318/281; }
+.joseph-research .research-detail-window[style*="aspect-ratio:319/85;"] { --research-window-ratio:319/85; }
+.joseph-research .research-detail-window[style*="aspect-ratio:320/490;"] { --research-window-ratio:320/490; }
+.joseph-research .research-detail-window[style*="aspect-ratio:321/79;"] { --research-window-ratio:321/79; }
+.joseph-research .research-detail-window[style*="aspect-ratio:322/104;"] { --research-window-ratio:322/104; }
+.joseph-research .research-detail-window[style*="aspect-ratio:322/116;"] { --research-window-ratio:322/116; }
+.joseph-research .research-detail-window[style*="aspect-ratio:340/535;"] { --research-window-ratio:340/535; }
+.joseph-research .research-detail-window[style*="aspect-ratio:362/113;"] { --research-window-ratio:362/113; }
+.joseph-research .research-detail-window[style*="aspect-ratio:362/92;"] { --research-window-ratio:362/92; }
+.joseph-research .research-detail-window[style*="aspect-ratio:364/72;"] { --research-window-ratio:364/72; }
+.joseph-research .research-detail-window[style*="aspect-ratio:366/376;"] { --research-window-ratio:366/376; }
+.joseph-research .research-detail-window[style*="aspect-ratio:380/535;"] { --research-window-ratio:380/535; }
+.joseph-research .research-detail-window[style*="aspect-ratio:413/128;"] { --research-window-ratio:413/128; }
+.joseph-research .research-detail-window[style*="aspect-ratio:415/177;"] { --research-window-ratio:415/177; }
+.joseph-research .research-detail-window[style*="aspect-ratio:419/187;"] { --research-window-ratio:419/187; }
+.joseph-research .research-detail-window[style*="aspect-ratio:446/242;"] { --research-window-ratio:446/242; }
+.joseph-research .research-detail-window[style*="aspect-ratio:451/459;"] { --research-window-ratio:451/459; }
+.joseph-research .research-detail-window[style*="aspect-ratio:480/81;"] { --research-window-ratio:480/81; }
+.joseph-research .research-detail-window[style*="aspect-ratio:483/102;"] { --research-window-ratio:483/102; }
+.joseph-research .research-detail-window[style*="aspect-ratio:610/725;"] { --research-window-ratio:610/725; }
+.joseph-research .research-detail-window[style*="aspect-ratio:690/365;"] { --research-window-ratio:690/365; }
+.joseph-research .research-detail-window[style*="aspect-ratio:690/470;"] { --research-window-ratio:690/470; }
+.joseph-research .research-detail-window[style*="aspect-ratio:705/875;"] { --research-window-ratio:705/875; }
+.joseph-research .research-detail-window[style*="aspect-ratio:728/98;"] { --research-window-ratio:728/98; }
+.joseph-research .research-detail-window[style*="aspect-ratio:731/111;"] { --research-window-ratio:731/111; }
+.joseph-research .research-detail-window[style*="aspect-ratio:731/146;"] { --research-window-ratio:731/146; }
+.joseph-research .research-detail-window[style*="aspect-ratio:731/76;"] { --research-window-ratio:731/76; }
+.joseph-research .research-detail-window[style*="aspect-ratio:850/260;"] { --research-window-ratio:850/260; }
+.joseph-research .research-detail-window[style*="aspect-ratio:966/394;"] { --research-window-ratio:966/394; }
+.joseph-research .research-detail-window[style*="aspect-ratio:98/151;"] { --research-window-ratio:98/151; }
+.joseph-research .research-detail-window[style*="aspect-ratio:98/61;"] { --research-window-ratio:98/61; }
+
+.joseph-research .research-visual > a:not(.research-detail-window) { border:0; background:transparent; box-shadow:none; }
+/* A scene following a feature comparison is a separate reading beat. */
+.joseph-research .research-feature-study > .research-visual { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:28px; align-items:center; margin-top:28px; padding-top:24px; border-top:1px solid var(--fc-line); }
+.joseph-research .research-feature-study > .research-visual > figcaption { padding:0; }
+/* This wide eye detail and taller cast read cleanly as two associated rows. */
+.joseph-research #research-feature-15 .research-feature-images { grid-template-columns:minmax(0,1fr); }
+.joseph-research #research-feature-15 .research-feature-images > figure { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:28px; align-items:center; padding-left:0; border-left:0; }
+.joseph-research #research-feature-15 .research-feature-images > figure > figcaption { padding:0; }
+@media(max-width:760px) {
+ .joseph-research .research-feature-study > .research-visual,
+ .joseph-research #research-feature-15 .research-feature-images > figure { grid-template-columns:minmax(0,1fr); gap:16px; }
 }

@@ -970,7 +970,7 @@
         const file = window.location.pathname.split('/').pop() || 'index.html';
         const text = descriptions[file];
         const cue = intro.querySelector('.fc-mobile-scroll-cue');
-        if (!text || !cue || intro.querySelector('.fc-opening-explanation')) return;
+        if (!text || !cue || intro.querySelector('.fc-opening-explanation,.fc-page-intro-copy')) return;
         const paragraph = document.createElement('p');
         paragraph.className = 'fc-opening-explanation';
         paragraph.textContent = text;
@@ -1222,7 +1222,7 @@
         // Measure only after the opening stylesheet is ready. A failed stylesheet
         // leaves the established page opening intact instead of applying half a layout.
         openingStyle.addEventListener('load', function () {
-            appendScript(relativeAssetHref('unified-opening.js?v=20261004-joseph-openings-1'), 'data-focuschrist-unified-opening');
+            appendScript(relativeAssetHref('unified-opening.js?v=20261006-introductions-1'), 'data-focuschrist-unified-opening');
         }, { once: true });
         document.head.appendChild(openingStyle);
         if (/[?&]gallery-(?:art|position)=/.test(window.location.search)) {

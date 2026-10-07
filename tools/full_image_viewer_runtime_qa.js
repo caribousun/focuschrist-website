@@ -10,6 +10,7 @@ class MockElement {
         this.listeners = {};
         this.dataset = {};
         this.attributes = {};
+        this.children = [];
     }
 
     addEventListener(type, handler) {
@@ -29,6 +30,8 @@ class MockElement {
         this.focusOptions = options;
         this.focused = true;
     }
+    replaceChildren() { this.children = []; }
+    appendChild(node) { this.children.push(node); }
 }
 
 global.Element = MockElement;
@@ -40,6 +43,10 @@ image.alt = '';
 image.src = '';
 const stage = new MockElement();
 const closeButton = new MockElement();
+const versionLabel = new MockElement();
+const versionSelect = new MockElement();
+const download = new MockElement();
+global.window = {location: {href:'https://focuschrist.com/art.html', origin:'https://focuschrist.com'}};
 const dialog = new MockElement();
 dialog.open = false;
 dialog.showCount = 0;
@@ -47,6 +54,9 @@ dialog.querySelector = function (selector) {
     if (selector === '.fc-full-image-stage') return stage;
     if (selector === 'img') return image;
     if (selector === '.fc-full-image-close') return closeButton;
+    if (selector === '.fc-full-image-version') return versionLabel;
+    if (selector === 'select') return versionSelect;
+    if (selector === '.fc-full-image-download') return download;
     return null;
 };
 dialog.showModal = function () {
@@ -70,6 +80,7 @@ global.document = {
         },
     },
     createElement(name) {
+        if (name === 'option') return new MockElement();
         assert(name === 'dialog', 'viewer must create a native dialog');
         return dialog;
     },
@@ -111,6 +122,8 @@ assert(image.alt === trigger.dataset.fullImageAlt, 'viewer did not preserve mean
 assert(bodyClasses.has('fc-full-image-open'), 'viewer did not lock page scrolling');
 assert(closeButton.focused, 'focus did not move to the close control');
 assert(closeButton.focusOptions.preventScroll === true, 'opening focus must not shift the page');
+assert(versionLabel.hidden, 'No supplied versions must hide selection');
+assert(download.href === trigger.href && !download.hidden, 'Download must use the current local image');
 
 closeButton.listeners.click();
 assert(!dialog.open, 'close control did not close the viewer');
@@ -161,5 +174,43 @@ dialog.listeners.cancel();
 dialog.close();
 assert(!bodyClasses.has('fc-full-image-open'), 'Escape cancellation did not clear scroll locking');
 
+function open() {
+    documentListeners.click({target:trigger, button:0, preventDefault(){}});
+}
+const phone = 'https://focuschrist.com/assets/example.webp';
+const wide = 'https://focuschrist.com/assets/example-wide.webp';
+trigger.dataset.fullImageVersions = JSON.stringify([{label:'Phone version',src:phone},{label:'Wide version',src:wide}]);
+open();
+assert(!versionLabel.hidden && versionSelect.children.length === 2, 'Two valid versions must be selectable');
+assert(versionSelect.value === phone && image.src === phone, 'Opening must select clicked image');
+versionSelect.value = wide;
+versionSelect.listeners.change();
+assert(image.src === wide && download.href === wide, 'Switching version must update image and download together');
+assert(download.attributes.download === 'example-wide.webp', 'Download filename must match selected version');
+assert(image.alt === trigger.dataset.fullImageAlt && dialog.open, 'Switching must preserve alt and open viewer');
+versionSelect.value = 'javascript:alert(1)';
+versionSelect.listeners.change();
+assert(image.src === wide, 'Unlisted selection must be ignored');
+closeButton.listeners.click();
+open();
+dialog.listeners.close();
+assert(dialog.open && image.src === phone && !versionLabel.hidden, 'Queued prior close must not erase reopened viewer');
+assert(versionSelect.value === phone && download.href === phone, 'Reopening starts at clicked source, not last selected version');
+dialog.close();
+for (const invalid of ['{broken', '{}', JSON.stringify([{label:'External',src:'https://example.com/a.webp'},{label:'Unsafe',src:'javascript:alert(1)'}]), JSON.stringify([{label:'HTML',src:'/index.html'}])]) {
+    trigger.dataset.fullImageVersions = invalid;
+    open();
+    assert(versionLabel.hidden && image.src === phone, 'Invalid optional options must retain original viewing');
+    dialog.close();
+}
+trigger.dataset.fullImageVersions = JSON.stringify([{label:'Phone version',src:phone},{label:'Wide version',src:wide},{label:'Duplicate',src:wide},{label:'External',src:'https://example.com/a.webp'}]);
+open();
+assert(versionSelect.children.length === 2, 'Duplicate and external options must be discarded');
+dialog.close();
+trigger.href = 'https://example.com/art.webp';
+open();
+assert(download.hidden && versionLabel.hidden, 'External fallback must not offer a local download or options');
+dialog.close();
+
 console.log('Full-image viewer runtime QA: PASS');
-console.log('Same-page open, exact source, close, Escape cleanup, focus return, and modified-click fallback verified');
+console.log('Same-page open, close/reopen focus, Escape, modifier fallback, version selection/download binding, malformed/external options and queued close verified');

@@ -171,7 +171,9 @@
                 return;
             }
             title.textContent = record.title;
-            image.src = trigger.href;
+            const imageSource = window.fcHeroImageSource
+                ? window.fcHeroImageSource(trigger) : trigger.href;
+            image.src = imageSource;
             image.alt = trigger.dataset.fullImageAlt || trigger.querySelector('img').alt;
             copy.replaceChildren();
             record.paragraphs.forEach(function (paragraph) {
@@ -186,10 +188,12 @@
                 if (new URL(source.href).pathname.includes('/study/scriptures/')) link.classList.add('fc-inline-scripture');
                 link.dataset.topicArtSource = '';
             });
-            const full = pill('View Full-Size Image', trigger.href);
+            const full = pill('View Full-Size Image', imageSource);
             full.setAttribute('data-full-image-viewer', '');
             full.setAttribute('aria-haspopup', 'dialog');
             full.dataset.fullImageAlt = image.alt;
+            full.dataset.fullImageVersions = JSON.stringify(window.fcHeroImageOptions
+                ? window.fcHeroImageOptions(trigger) : []);
 
             // Page-wide onward links remain in their authored page context. Only
             // an explicit per-picture study may take readers to another subject.

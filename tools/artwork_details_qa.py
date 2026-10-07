@@ -7,6 +7,47 @@ import sys
 from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
+VISIBLE_TOPIC_ROUTES = frozenset({
+    'answers/abrahamic-covenant.html', 'answers/what-is-eternal-marriage.html',
+    'general-conference.html', 'history/eleazer-miller.html',
+    'history/john-rowe-moyle.html', 'history/john-tanner.html',
+})
+VISIBLE_HERO_ROUTES = frozenset({
+    'about.html',
+    'answers.html',
+    'answers/aaronic-priesthood-restoration.html',
+    'answers/are-latter-day-saints-christian.html',
+    'answers/bible-and-book-of-mormon-together.html',
+    'answers/death-of-a-child.html',
+    'answers/divorce-and-faith.html',
+    'answers/faith-in-jesus-christ-during-trials.html',
+    'answers/god-our-heavenly-father.html',
+    'answers/grief-and-faith.html',
+    'answers/holy-ghost.html',
+    'answers/jesus-christ-latter-day-saint-beliefs.html',
+    'answers/look-unto-me-doctrine-and-covenants-6-36.html',
+    'answers/plan-of-salvation.html',
+    'answers/prayer-and-personal-revelation.html',
+    'answers/restored-church-of-jesus-christ.html',
+    'answers/stand-forever.html',
+    'answers/what-happens-after-death.html',
+    'answers/what-is-eternal-marriage.html',
+    'answers/what-is-the-book-of-mormon.html',
+    'answers/who-was-joseph-smith.html',
+    'answers/why-families-are-important.html',
+    'answers/why-latter-day-saints-build-temples.html',
+    'art-study/be-still.html',
+    'art-study/suffer-the-little-children.html',
+    'art-study/the-good-shepherd.html',
+    'art.html',
+    'ask.html',
+    'atonement.html',
+    'birth-of-christ.html',
+    'book-of-mormon-evidences.html',
+    'missionary.html',
+    'timeline.html',
+    'watch.html',
+})
 TOPIC_HERO_PAGES = {p["page"] for p in json.loads((ROOT / "docs/sitewide-hero-production-plan.json").read_text(encoding="utf-8"))["plans"]}
 PAGES = {
     "index.html": 3,
@@ -213,7 +254,7 @@ def main() -> int:
                 errors.append(f"{relative}: generic Home hero fallback returned")
         for marker in (
             'href="../art-study-page.css?v=20260908-image-heroes"',
-            ('src="../hero-details.js?v=20260927-plan-study-1"' if intrinsic else 'src="../hero-details.js?v=20260927-plan-study-1"'),
+            ('src="../hero-details.js?v=20261006-visible-art-1"' if intrinsic else 'src="../hero-details.js?v=20260927-plan-study-1"'),
             'class="fc-page-intro-copy"',
             '>Begin Scripture Study</a>',
             'href="#study-resources">Explore Resources</a>',
@@ -235,6 +276,8 @@ def main() -> int:
             'href="full-image-viewer.css?v=20260905-viewport"',
             'src="full-image-viewer.js?v=20260914-reopen-1"',
         ):
+            if relative in VISIBLE_HERO_ROUTES | VISIBLE_TOPIC_ROUTES:
+                marker = marker.replace('20260905-viewport', '20261006-versions-1').replace('20260914-reopen-1', '20261006-versions-1')
             if "/" in relative and '="../' not in marker:
                 marker = marker.replace('="', '="../', 1)
             if text.count(marker) != 1:
@@ -246,6 +289,8 @@ def main() -> int:
             'href="../full-image-viewer.css?v=20260905-viewport"',
             'src="../full-image-viewer.js?v=20260914-reopen-1"',
         ):
+            if relative in VISIBLE_HERO_ROUTES | VISIBLE_TOPIC_ROUTES:
+                marker = marker.replace('20260905-viewport', '20261006-versions-1').replace('20260914-reopen-1', '20261006-versions-1')
             if "/" in relative and '="../' not in marker:
                 marker = marker.replace('="', '="../', 1)
             if text.count(marker) != 1:
@@ -320,7 +365,8 @@ def main() -> int:
                 errors.append(f"{relative}: missing exact first-scene topic hero")
             elif figure.select_one("a").get("href") != "../" + ready[unit]["full"] or not figure.select_one("figcaption[data-picture-panel-copy][hidden]"):
                 errors.append(f"{relative}: hero source or study metadata differs")
-            if page.count("../topic-artwork-details.js?v=20260930-history-records-1") != 1 or "hero-details.js" in page or "data-hero-viewer" in page:
+            topic_version = '20261006-visible-art-1' if relative in VISIBLE_TOPIC_ROUTES else '20260930-history-records-1'
+            if page.count("../topic-artwork-details.js?v=" + topic_version) != 1 or "hero-details.js" in page or "data-hero-viewer" in page:
                 errors.append(f"{relative}: hero must have exactly one topic controller")
             hero_pages -= 1  # Preserve the separate 41-page legacy controller baseline.
             continue
@@ -331,9 +377,13 @@ def main() -> int:
             hero_script = "hero-details.js?v=20260927-plan-study-1"
         if relative in {"joseph-smith-likeness.html","joseph-smith-portrait-research.html"}:
             hero_script = "hero-details.js?v=20261004-joseph-heroes-1"
-        if relative == "timeline.html":
+        if relative in VISIBLE_HERO_ROUTES:
+            hero_script = "hero-details.js?v=20261006-visible-art-1"
+        if relative == "timeline.html" and relative not in VISIBLE_HERO_ROUTES:
             hero_script = "hero-details.js?v=20261002-timeline-1"
-        for asset in ("full-image-viewer.css?v=20260905-viewport", "full-image-viewer.js?v=20260914-reopen-1", hero_script, "hero-details.css?v=20260909-warm", "artwork-details.css?v=20260909-warm"):
+        viewer_css = "full-image-viewer.css?v=" + ('20261006-versions-1' if relative in VISIBLE_HERO_ROUTES | VISIBLE_TOPIC_ROUTES else '20260905-viewport')
+        viewer_js = "full-image-viewer.js?v=" + ('20261006-versions-1' if relative in VISIBLE_HERO_ROUTES | VISIBLE_TOPIC_ROUTES else '20260914-reopen-1')
+        for asset in (viewer_css, viewer_js, hero_script, "hero-details.css?v=20260909-warm", "artwork-details.css?v=20260909-warm"):
             if page.count(prefix + asset) != 1:
                 errors.append(f"{relative}: hero study dependency missing or duplicated: {asset}")
         hero_links = re.findall(r'<a[^>]*data-hero-viewer[^>]*>', page)

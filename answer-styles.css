@@ -112,6 +112,13 @@ a:hover { color: #fff2dc; }
     margin-inline: clamp(18px, 3vw, 36px);
 }
 
+@media (max-width: 700px) {
+    /* Account for the study navigation's existing inline margins. */
+    .content-wrap.article.fc-art-study-page > .fc-study-nav {
+        width: auto;
+    }
+}
+
 .breadcrumbs { font-size: 0.86rem; color: #92a6a8; margin-bottom: 26px; }
 .breadcrumbs a { color: var(--fc-gold-light); text-decoration: none; }
 

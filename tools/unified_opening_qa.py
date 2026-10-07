@@ -4,8 +4,19 @@ from pathlib import Path
 from urllib.parse import urlsplit
 import xml.etree.ElementTree as ET
 from bs4 import BeautifulSoup
+from hero_introductions_qa import ROUTES as INTRODUCTION_ROUTES
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def assert_common_version(route, doc):
+    common = [s['src'] for s in doc.select('script[src]') if 'site-common.js' in s['src']]
+    version = '20261006-hero-introductions-1' if route in INTRODUCTION_ROUTES else '20261002-timeline-1'
+    prefix = '/' if route.startswith('jesus-christ/') else '../' * route.count('/')
+    expected = prefix + 'site-common.js?v=' + version
+    assert common == [expected], route + ': exact shared-script binding required'
+
+
 inventory = json.loads((ROOT / 'docs/unified-opening-inventory.json').read_text(encoding='utf8'))
 pages = [urlsplit(n.text).path.lstrip('/') or 'index.html' for n in ET.parse(ROOT / 'sitemap.xml').findall('{*}url/{*}loc')]
 assert len(pages) == len(set(pages)) == 130
@@ -20,12 +31,10 @@ for record in inventory['pages']:
     doc = BeautifulSoup((ROOT / record['path']).read_text(encoding='utf8'), 'html.parser')
     actual = bool(doc.select_one('.fc-visual-hero,[data-covenant-hero-slot],.cfm-desktop-picture,.gc-intro-visual'))
     assert actual == record['hero'], record['path'] + ': opening hero inventory drift'
-    common = [s['src'] for s in doc.select('script[src]') if 'site-common.js' in s['src']]
-    version='20261004-joseph-openings-1' if record['path'] in {'joseph-smith-likeness.html','joseph-smith-portrait-research.html'} else '20261002-timeline-1'
-    assert len(common) == 1 and common[0].endswith('site-common.js?v='+version), record['path']
+    assert_common_version(record['path'], doc)
 common = (ROOT / 'site-common.js').read_text(encoding='utf8')
 assert common.count("relativeAssetHref('unified-opening.css?v=20260930-alignment-2')") == 1
-assert common.count("relativeAssetHref('unified-opening.js?v=20261004-joseph-openings-1')") == 1
+assert common.count("relativeAssetHref('unified-opening.js?v=20261006-introductions-1')") == 1
 script = (ROOT / 'unified-opening.js').read_text(encoding='utf8')
 assert '\\u2193' in script and 'Ãƒ' not in script, 'Continue arrow encoding'
 assert "opening.matches('.jj-opening') ? []" in script, 'Covenant invitation must remain in opening'

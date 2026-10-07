@@ -1,0 +1,16 @@
+{
+  "reviewer": "Newton",
+  "concur": true,
+  "scope": "Exact browser stylesheet cache-token source compatibility for unchanged frozen PDF",
+  "previous_source_html_sha256": "41ffc541b38d1bf9badaf1c6b466db75945de78b98f65af8601b87f5091cc103",
+  "current_source_html_sha256": "9037814142751308e6126dffb100fb13630bb6a6cc0551e72bbe53119f6b5580",
+  "old_token": "joseph-smith-research.css?v=20261004-cohesive-sittings-1",
+  "new_token": "joseph-smith-research.css?v=20261006-research-compositions-1",
+  "occurrences": 1,
+  "manuscript_sha256": "bd08e18681a50c0dae1bf2ca53309f67e67f44deb072ac84492671c4c4179e6c",
+  "pdf_sha256": "109bacb657025cd2f4dcc98b29ca98e97afb97bc8b1b15d5d5a1d460006b2946",
+  "pdf_rebuilt": false,
+  "pdf_input_dom_unchanged": true,
+  "proof": "Exact single cache-token reversal restores prior reviewed HTML bytes. Therefore all chapter bodies, onward content, source IDs, image paths, coordinates, captions and footer bytes remain identical. PDF builder consumes no external CSS. Frozen PDF hash remains identical. Current Joseph QA reaches only source binding failure after narrative, image and source gates pass.",
+  "limits": "This is source compatibility concurrence, not approval of the new browser stylesheet pixels or final release. Existing source/PDF review history remains preserved."
+}

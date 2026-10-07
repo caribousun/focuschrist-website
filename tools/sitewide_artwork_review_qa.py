@@ -140,6 +140,69 @@ class Tags(HTMLParser):
         super().__init__(); self.tags=[]; self.feed(text)
     def handle_starttag(self, tag, attrs): self.tags.append((tag,dict(attrs)))
 
+# The owner-reviewed viewer toolbar is separate from page hero geometry. Bind
+# the entire stylesheet and every existing HTML load (including old tokens on
+# unchanged routes), rather than exempting a selector family or future CSS.
+VIEWER_STYLE = 'full-image-viewer.css'
+VIEWER_STYLE_SHA256 = '4b9ef916d16d145ed2f3eba09b9384544ddab48e94eaf42639ffcb4c4eaf6ae1'
+VIEWER_BINDINGS_SHA256 = '80c69e840009017e883bd7efbd19669c3386ecd1e3923ed3db0e3d0645f46632'
+
+def reviewed_viewer_style(data):
+    return hashlib.sha256(data).hexdigest() == VIEWER_STYLE_SHA256
+
+def viewer_bindings(sources):
+    bindings = {}
+    for relative, text in sources.items():
+        if 'full-image-viewer.' not in text:
+            continue
+        if not relative.endswith('.html'):
+            return None
+        refs = []
+        for tag, attrs in Tags(text).tags:
+            ref = attrs.get('href' if tag == 'link' else 'src', '')
+            if 'full-image-viewer.' not in ref:
+                continue
+            if not ((tag == 'link' and attrs.get('rel') == 'stylesheet') or tag == 'script'):
+                return None
+            refs.append([tag, attrs])
+        # Also reject extra inline loaders/imports, comments and duplicate refs.
+        if len(refs) != text.count('full-image-viewer.'):
+            return None
+        bindings[relative] = refs
+    return bindings
+
+def reviewed_viewer_bindings(bindings):
+    return bindings is not None and hashlib.sha256(
+        json.dumps(bindings, sort_keys=True, separators=(',', ':')).encode()
+    ).hexdigest() == VIEWER_BINDINGS_SHA256
+
+def visitor_viewer_sources():
+    return {p.relative_to(ROOT).as_posix(): p.read_text(encoding='utf8')
+            for pattern in ('*.html', '*.css', '*.js') for p in ROOT.rglob(pattern)
+            if not set(p.relative_to(ROOT).parts) & {'tools', '.git', 'node_modules', 'focuschrist-repo'}}
+
+def viewer_self_test():
+    data = (ROOT/VIEWER_STYLE).read_bytes()
+    assert reviewed_viewer_style(data)
+    assert not reviewed_viewer_style(data + b'\n.fc-topic-unique-hero{height:9px}')
+    assert not reviewed_viewer_style(data.replace(b'object-fit: contain', b'object-fit: cover'))
+    assert not reviewed_viewer_style(data.replace(b'.fc-full-image-tools {', b'body {'))
+    sources = visitor_viewer_sources()
+    bindings = viewer_bindings(sources)
+    assert reviewed_viewer_bindings(bindings)
+    owner = 'art-study/be-still.html'
+    for modified in (
+        sources[owner].replace('20261006-versions-1', 'unknown'),
+        sources[owner].replace('full-image-viewer.css', 'missing.css'),
+        sources[owner] + '<link rel="stylesheet" href="../full-image-viewer.css?v=20261006-versions-1">',
+        sources[owner].replace('rel="stylesheet" href="../full-image-viewer.css', 'rel="preload" href="../full-image-viewer.css'),
+    ):
+        assert not reviewed_viewer_bindings(viewer_bindings(dict(sources, **{owner: modified})))
+    assert not reviewed_viewer_bindings(viewer_bindings(dict(sources, **{'unexpected.html': sources[owner]})))
+    for name, content in [('shared.css', '@import "full-image-viewer.css";'),
+                          ('shared.js', 'load("full-image-viewer.css")')]:
+        assert not reviewed_viewer_bindings(viewer_bindings(dict(sources, **{name: content})))
+
 # Exact narrow title/mini-card appendices. Search base additionally includes the
 # independently reviewed intrinsic trigger width, nowrap label and fixed-size icon;
 # M063 removes only the mobile title/second-row rules, retaining the first-row grid.
@@ -161,7 +224,7 @@ SCOPED_INTERFACE_STYLES = {
     'joseph-family-life.css': ('af4eac66d90a94a370010dae71cd4e0d2430fd07a049ce0ce7d253454c249a2f', 'answers/who-was-joseph-smith.html'),
     # Owner-requested Joseph research reading panels, independently reviewed on
     # desktop/phone. Exact bytes and two Joseph page owners; no hero-rule exemption.
-    'joseph-smith-research.css': ('8b891efdc90ad0155fc1df8e157cc92ab56c6cbf67d19d001e128250904a9923', 'joseph-smith-likeness.html'),
+    'joseph-smith-research.css': ('06f8ab7a6cd28c16a2bc3de1304a2ff9a1a93c7434975766526f2675ce04f218', 'joseph-smith-likeness.html'),
     # Newton source-reviewed hub-only CSS; hosted geometry and owner acceptance remain separate.
     'timeline.css': ('5aefac78e15d324cb4f5a9b44c5f0a1bdb26d951f4e7b5078569be67103048d1', 'timeline.html'),
     # Owner-directed Church-source history, independently reviewed 2026-09-30.
@@ -197,7 +260,7 @@ OWNER_20260929_STYLES = {
 
     # Dynamically loaded only by the shared footer controller; all125 public contexts tested.
     'footer-navigation.css': ('3713562b2415f8b31394b46767204330777f021887621b4b7eaeae5ff1c22fee', []),
-    'history-stories.css': ('baca93e6f290b179727fbdfa12fbafad586a20647bb4ef7d9e7ec59d20ceca1d', ['history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html']),
+    'history-stories.css': ('7afc257960c5d327cddd944c7a29c60223b13aaf8d670abd6a6a8a9af2943675', ['history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html']),
     # Owner-requested39-picture final-row balance, Fermi rendered ten widths; Newton source review.
     'art-opening.css': ('f1457bb255b14b98e122d485760d548d4802374b0e00005c05e5292bc87d6e34', ['art.html']),
     'art-experience.css': ('ef21dea3b87e8b3e59454aba32726210a783d87d556928201ef375a3627b1c74', ['art.html']),
@@ -244,9 +307,35 @@ def scoped_interface_reference_allowed(name, relative, text):
     joseph_research_owner = name == 'joseph-smith-research.css' and relative == 'joseph-smith-portrait-research.html'
     return relative==SCOPED_INTERFACE_STYLES[name][1] or joseph_research_owner or name not in text
 
+RELEASE_STYLE_BINDINGS = {
+    'joseph-smith-research.css': ({'joseph-smith-likeness.html', 'joseph-smith-portrait-research.html'}, 'joseph-smith-research.css?v=20261006-research-compositions-2'),
+    'history-stories.css': ({'history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html'}, '../history-stories.css?v=20261006-history-intro-fit-1'),
+}
+
+def release_style_binding_allowed(name, page, tags):
+    owners, expected = RELEASE_STYLE_BINDINGS[name]
+    refs = [a.get('href', '') for t, a in tags if t == 'link' and a.get('rel') == 'stylesheet' and name in a.get('href', '')]
+    return refs == ([expected] if page in owners else [])
+
+def release_style_binding_self_test():
+    for name, (owners, expected) in RELEASE_STYLE_BINDINGS.items():
+        tags = lambda refs: [('link', {'rel': 'stylesheet', 'href': ref}) for ref in refs]
+        for page in owners:
+            assert release_style_binding_allowed(name, page, tags([expected]))
+            stale = expected.split('?')[0] + '?v=stale'
+            for refs in ([], [stale], [expected + '-unknown'], [expected.split('?')[0]], [expected, expected], [expected, stale], ['wrong/' + expected]):
+                assert not release_style_binding_allowed(name, page, tags(refs)), (page, refs)
+        assert release_style_binding_allowed(name, 'index.html', [])
+        assert not release_style_binding_allowed(name, 'index.html', tags([expected]))
+
 def reviewed_toolbar_style(name, data):
     data = historical_style_bytes(data)
     return name in TOOLBAR_STYLE_SHA256 and hashlib.sha256(data).hexdigest() == TOOLBAR_STYLE_SHA256[name]
+
+def reviewed_art_nav_width(selector, body, data):
+    return (selector.strip() == '.content-wrap.article.fc-art-study-page > .fc-study-nav'
+            and re.sub(r'\s+', '', body) == 'width:auto;'
+            and hashlib.sha256(data).hexdigest() == '82dc51b82d56a129be803420cae47630f053f7af1259c659113fbd7fcd76d6ad')
 
 def sha(path): return hashlib.sha256(historical_style_bytes(path.read_bytes())).hexdigest()
 def unique_reviewed(heroes, rejected):
@@ -265,6 +354,15 @@ def main():
     ap=argparse.ArgumentParser();ap.add_argument('--self-test',action='store_true');ap.add_argument('--baseline-report');args=ap.parse_args()
     composition_check()
     if args.self_test:
+        release_style_binding_self_test()
+        nav_css = (ROOT/'answer-styles.css').read_bytes()
+        nav_selector = '.content-wrap.article.fc-art-study-page > .fc-study-nav'
+        assert reviewed_art_nav_width(nav_selector, 'width: auto;', nav_css)
+        assert not reviewed_art_nav_width('.fc-visual-hero', 'width: auto;', nav_css)
+        assert not reviewed_art_nav_width(nav_selector, 'width: auto; height: 9px;', nav_css)
+        assert not reviewed_art_nav_width(nav_selector, 'width: auto;', nav_css.replace(b'700px', b'900px'))
+        assert not reviewed_art_nav_width(nav_selector, 'width: auto;', nav_css + b'\n.fc-visual-hero{height:9px}')
+        viewer_self_test()
         marriage=(ROOT/'eternal-marriage-study.css').read_bytes()
         assert reviewed_marriage_body_style(marriage)
         assert not reviewed_marriage_body_style(marriage+b'\n.fc-topic-unique-hero{height:9px}')
@@ -428,6 +526,8 @@ def main():
         check((ROOT/page).is_file(),'Missing canonical page '+page)
         if not (ROOT/page).is_file():continue
         parsed[page]=Tags((ROOT/page).read_text(encoding='utf8'))
+        for name in RELEASE_STYLE_BINDINGS:
+            check(release_style_binding_allowed(name, page, parsed[page].tags), page + ': exact reviewed stylesheet owner/version required for ' + name)
         check(any(t=='link' and a.get('rel')=='canonical' for t,a in parsed[page].tags),'Missing canonical link '+page)
     manifest_path=ROOT/'docs/sitewide-artwork-review.json'
     if not manifest_path.exists(): errors.append('Reviewed image manifest missing; incomplete review cannot pass'); heroes=[]
@@ -586,7 +686,7 @@ def main():
         if name == 'unified-opening.css':
             common = (ROOT/'site-common.js').read_text(encoding='utf-8')
             check(common.count("relativeAssetHref('unified-opening.css?v=20260930-alignment-2')") == 1, 'Unified opening CSS requires its exact shared loader/version')
-            check(common.count("relativeAssetHref('unified-opening.js?v=20261004-joseph-openings-1')") == 1, 'Unified opening JS requires its exact shared loader/version')
+            check(common.count("relativeAssetHref('unified-opening.js?v=20261006-introductions-1')") == 1, 'Unified opening JS requires its exact shared loader/version')
         if name == 'footer-navigation.css':
             common = (ROOT/'site-common.js').read_text(encoding='utf-8')
             check(common.count("style.href = relativeAssetHref('footer-navigation.css?v=20260929-top-1');") == 1, 'Footer CSS requires its exact shared dynamic loader and version')
@@ -609,6 +709,9 @@ def main():
     marriage_owners={p.relative_to(ROOT).as_posix() for p in ROOT.rglob('*.html') if 'eternal-marriage-study.css' in p.read_text(encoding='utf-8') and not set(p.parts)&{'tools','.git','node_modules'}}
     check(marriage_owners=={'answers/what-is-eternal-marriage.html'}, 'Marriage stylesheet escaped its single owner')
     excluded_styles={MISSION_ENRICHMENT_STYLE,WATCH_SHORTS_STYLE,'missionary.css',HOME_STYLE,'focused-answers.css',tool_style,bom_style,pioneer_style,pioneer_ask_style,settle_style,row_style,BIBLE_STYLE,JOURNEY_STYLE,'site-system.css','site-header.css','study-navigation.css'}
+    check(reviewed_viewer_style((ROOT/VIEWER_STYLE).read_bytes()), 'Full-image viewer stylesheet differs from exact reviewed bytes')
+    check(reviewed_viewer_bindings(viewer_bindings(visitor_viewer_sources())), 'Full-image viewer consumer references differ from exact reviewed bindings')
+    excluded_styles.add(VIEWER_STYLE)
     picture_pill_bytes = (ROOT/'artwork-actions.css').read_bytes()
     check(reviewed_picture_pill_style(picture_pill_bytes), 'Picture source pills differ from exact scoped reviewed change')
     check(not reviewed_picture_pill_style(picture_pill_bytes.replace(b'999px;', b'10px;', 1)), 'Picture pill radius mutation escaped')
@@ -713,6 +816,10 @@ def main():
         if art_study_buffer:
             check(set(re.findall(r'([a-z-]+)\s*:', body)) <= {'margin-inline'},
                   'Art-study buffer rule changes unexpected properties')
+            continue
+        if selector.strip() == '.content-wrap.article.fc-art-study-page > .fc-study-nav':
+            check(reviewed_art_nav_width(selector, body, (ROOT/'answer-styles.css').read_bytes()),
+                  'Art-study navigation width differs from exact reviewed selector/properties/stylesheet bytes')
             continue
         check(all('.fc-topic-unique-hero' in s for s in selector.split(',')),'Added CSS escapes scoped hero class: '+selector.strip())
         image_layer = all(part.strip().endswith('::before') for part in selector.split(','))
