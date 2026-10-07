@@ -8,11 +8,11 @@
     "page_context": [
       {
         "path": "general-conference.html",
-        "sha256": "0d7ed530996987466e7b316cb725d3300ef8b0c9a32ea56bcad9d71d36983100"
+        "sha256": "1a34da0b909b6c892b6db777ca16db6a8d9d5857d1148eb158214ad0af181ee8"
       },
       {
         "path": "general-conference-section.css",
-        "sha256": "7c0f15564c90ea0fa066041e54938e52c661a0c7f3c188f20a1ad4739eab2bcc"
+        "sha256": "6f7def5e702d149f4adccd3f33a49c8ab961849494f5c1818c3a28900c695219"
       }
     ]
   },
@@ -23,7 +23,7 @@
       "stage": "official-source",
       "verdict": "PASS",
       "withdrawn": false,
-      "binding_sha256": "b4a071929748cef4e44491ccb6564d00ca15e78e0db337fb8d1d5e7a5d27e392",
+      "binding_sha256": "426313de6af5a3534069c77be652692ce6f5c53ebca5d5a151605f780c0b1cf1",
       "reviewed_at": "2026-10-07T16:41:56.405234+00:00",
       "observations": "Read exact official 38-record manifest and per-page source hashes, reviewed every downloaded native preview in the contact sheet and compared all thumbnail bytes/dimensions/title/speaker/session bindings. Native Church photographs, not new generated artwork. Four actual desktop/phone screenshot compositions separately inspected; sustaining 3:2 image remains uncropped.",
       "pixels_inspected": true,
@@ -37,6 +37,12 @@
         "reviewed_at": "2026-10-07T17:13:08.546693+00:00",
         "scope": "Visible-result row layout and exact cache-context update; original source evidence remains unchanged.",
         "observations": "Independently inspected actual desktop before/after Oaks rows and phone/archive captures; reviewed exact scoped CSS and finite inverse/negative tests. No source, thumbnail or authored prose changes. Written concurrence supplied by named reviewer; final commit concurrence separate."
+      },
+      "alignment_context_review": {
+        "reviewed_at": "2026-10-07T18:27:21.839837+00:00",
+        "scope": "Exact centered navigation row, constrained artwork composition and Session chevron context; no source, thumbnail or visitor prose changes.",
+        "observations": "Newton receiver independently read complete repository mandates, CSS/cache/inverse/browser regression/workflow/guide changes; anchor and conference negative self-tests pass. Reused unchanged UI2 actual-browser evidence bound to identical HTML/CSS/JS and inspected root wide/phone screenshot pixels. No duplicate 38-source audit or new source approval claimed.",
+        "source_evidence": "Original official-source review and contact-sheet bytes preserved unchanged; exact-head concurrence remains separate."
       }
     },
     {
@@ -45,7 +51,7 @@
       "stage": "official-source",
       "verdict": "PASS",
       "withdrawn": false,
-      "binding_sha256": "b4a071929748cef4e44491ccb6564d00ca15e78e0db337fb8d1d5e7a5d27e392",
+      "binding_sha256": "426313de6af5a3534069c77be652692ce6f5c53ebca5d5a151605f780c0b1cf1",
       "reviewed_at": "2026-10-07T16:42:32.603423+00:00",
       "observations": "Retrieved every official talk page and extracted its labeled byline and native poster URL. Compared exact 38 ordered titles, official destinations and thumbnail byte hashes to the page. Actually inspected all 38 native preview tiles in the diagnostic contact sheet: conference speaker context, no blank/corrupt/substituted-art or obvious wrong repeat. Sustaining side view 3:2 and seated Eyring source framing retained. Speaker mapping rests on official page provenance, not biometric identification of unfamiliar speakers. No generation, editing, reconstruction or historical preflight claimed. Inspected supplied desktop opening and phone archive/sustaining screenshot pixels separately.",
       "pixels_inspected": true,
@@ -59,6 +65,12 @@
         "reviewed_at": "2026-10-07T17:13:08.546693+00:00",
         "scope": "Visible-result row layout and exact cache-context update; original source evidence remains unchanged.",
         "observations": "Independently inspected actual desktop before/after Oaks rows and phone/archive captures; reviewed exact scoped CSS and finite inverse/negative tests. No source, thumbnail or authored prose changes. Written concurrence supplied by named reviewer; final commit concurrence separate."
+      },
+      "alignment_context_review": {
+        "reviewed_at": "2026-10-07T18:27:21.839837+00:00",
+        "scope": "Exact centered navigation row, constrained artwork composition and Session chevron context; no source, thumbnail or visitor prose changes.",
+        "observations": "Fermi frozen scoped consent read from work/fermi/alignment-context-consent.json: independently reviewed exact CSS/cache inverse, regression, UI1/UI2 screenshots and source preservation; consent explicitly permits additive context rebinding after root concurrence.",
+        "source_evidence": "Original official-source review and contact-sheet bytes preserved unchanged; exact-head concurrence remains separate."
       }
     }
   ],
@@ -66,7 +78,7 @@
     "reviewer": "Albert",
     "verdict": "PASS",
     "withdrawn": false,
-    "binding_sha256": "b4a071929748cef4e44491ccb6564d00ca15e78e0db337fb8d1d5e7a5d27e392",
+    "binding_sha256": "426313de6af5a3534069c77be652692ce6f5c53ebca5d5a151605f780c0b1cf1",
     "reviewed_at": "2026-10-07T17:13:08.546693+00:00",
     "pixels_inspected": true,
     "desktop": [
@@ -85,6 +97,26 @@
       {
         "path": ".qa-artifacts/conference-october-2026/visible-rows-1280-two-results.png",
         "sha256": "5ddfb8ae1d1ce37187622650706f83b715f24160a1f11b2aca0ce0494325ffd2"
+      },
+      {
+        "path": ".qa-artifacts/conference-october-2026/centered-controls/1906-topic.png",
+        "sha256": "dc0dc8f07b608724cfbc3865a893ce84bd099eba71abd063202e71c6d6c800fb"
+      },
+      {
+        "path": ".qa-artifacts/conference-october-2026/centered-controls/1722-practice.png",
+        "sha256": "2b4a45f735f8cce7f2d7f6f872ce7e7096b53a824f596252161c782accf52256"
+      },
+      {
+        "path": ".qa-artifacts/conference-october-2026/centered-controls/1722-care.png",
+        "sha256": "2e93a82eecc0f712423fd425169d1d26f79831b3a8d74bfcbcca261347769408"
+      },
+      {
+        "path": ".qa-artifacts/conference-october-2026/centered-controls/1280-prayer.png",
+        "sha256": "8671952c4711825657dccaebff137461fa574c0d4dcdcd639c3eb7e1761aaa58"
+      },
+      {
+        "path": ".qa-artifacts/conference-october-2026/centered-controls/1280-session.png",
+        "sha256": "f80a9cf6e26ee52499cd51a0854a88a3e4c690b7044089582c21dd279a662ecd"
       }
     ],
     "phone": [
@@ -103,8 +135,46 @@
       {
         "path": ".qa-artifacts/conference-october-2026/visible-rows-412-opening.png",
         "sha256": "2ab11f750f86eb9c03a385e3a4815dea5809a16646660f2bc2b77b56770f4148"
+      },
+      {
+        "path": ".qa-artifacts/conference-october-2026/centered-controls/412-session.png",
+        "sha256": "c05b7a365c50809da921ab2f856213d26fc5950282b6422c83bf19e37896d2c7"
+      },
+      {
+        "path": ".qa-artifacts/conference-october-2026/centered-controls/320-keyboard.png",
+        "sha256": "9e16b8086234b4504d39db79a26e507a6c3f5b8fdc7ef590b1e41559361acf9d"
       }
     ],
-    "observations": "Personally operated native IAB desktop1280 and phone412: settled original hero, October38 search/filter/reset, April37 separate disclosure and nested plus/minus controls. Independently inspected all38 official thumbnails as a diagnostic contact sheet; original source-byline and hash bindings establish attribution, not biometric identification. Sustaining source3:2 shown contained. Inspected specialist exact desktop/phone screenshot evidence; no new generated artwork, physical-phone certification, complete playback or owner visual acceptance claimed. Continuation root personally operated exact final CSS context at1280x900 and412x915: Oaks results fill available desktop rows, two nonconsecutive Christofferson cards form balanced halves, zero-result and reset38 work, phone stack and April first session preserved. Actual screenshots inspected; prior source/contact-sheet proof reused unchanged."
-  }
+    "observations": "Personally operated native IAB desktop1280 and phone412: settled original hero, October38 search/filter/reset, April37 separate disclosure and nested plus/minus controls. Independently inspected all38 official thumbnails as a diagnostic contact sheet; original source-byline and hash bindings establish attribution, not biometric identification. Sustaining source3:2 shown contained. Inspected specialist exact desktop/phone screenshot evidence; no new generated artwork, physical-phone certification, complete playback or owner visual acceptance claimed. Continuation root personally operated exact final CSS context at1280x900 and412x915: Oaks results fill available desktop rows, two nonconsecutive Christofferson cards form balanced halves, zero-result and reset38 work, phone stack and April first session preserved. Actual screenshots inspected; prior source/contact-sheet proof reused unchanged.",
+    "alignment_context_review": {
+      "reviewed_at": "2026-10-07T18:27:21.839837+00:00",
+      "observations": "Albert receiver personally concurred after operating CUA at actual 1906,1722,1280,412,320 and inspecting settled screenshots. Four constrained 780px groups centered, full-width prayer preserved; zero overflow at five widths. Session 48px high, 12px inset, 36px right padding; native keyboard Saturday Morning 9 and selected Sunday Afternoon 10. Continue 149.0875x44. No new source approval, OS-popup pixel, physical-phone or owner acceptance claim.",
+      "geometry_evidence": {
+        "path": ".qa-artifacts/conference-october-2026/centered-controls/matrix.json",
+        "sha256": "9e3bfb9286d1b037559fea34d39903f476177eccca069db1a2b84331f6ebcdc8"
+      }
+    }
+  },
+  "prior_page_context_bindings": [
+    {
+      "spec": {
+        "kind": "official-native-conference-thumbnails",
+        "collection": "https://www.churchofjesuschrist.org/study/general-conference/2026/10?lang=eng",
+        "ledger_sha256": "2c3c7d4f75f508f5cafb1aede25069a2c561f9ba9fa1a1ddfbfb1e97aea60c80",
+        "items_sha256": "fe829c991e76048e6b7d138b3d003023fe430aa3aab9751f68ab69d25088a1ba",
+        "page_context": [
+          {
+            "path": "general-conference.html",
+            "sha256": "1a34da0b909b6c892b6db777ca16db6a8d9d5857d1148eb158214ad0af181ee8"
+          },
+          {
+            "path": "general-conference-section.css",
+            "sha256": "6f7def5e702d149f4adccd3f33a49c8ab961849494f5c1818c3a28900c695219"
+          }
+        ]
+      },
+      "binding_sha256": "b4a071929748cef4e44491ccb6564d00ca15e78e0db337fb8d1d5e7a5d27e392",
+      "note": "Preserved pre-centering context; original official-source observations and timestamps remain below."
+    }
+  ]
 }

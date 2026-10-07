@@ -119,15 +119,26 @@ def before_search_hitbox(data):
     return data
 
 
-CONFERENCE_VERSION = '20261007-october-visible-rows-2'
+CONFERENCE_VERSION = '20261007-conference-centered-controls-3'
+CONFERENCE_CENTER_APPENDIX = b'\n/* Center the complete conference control row and existing artwork compositions. */\n#general-conference .gc-jumps { justify-content: center; }\n#general-conference .gc-heading:has(> .fc-study-visual) { margin-inline: auto; }\n\n/* Keep the Session chevron comfortably inside its existing native control. */\n#conference-session {\n    appearance: none;\n    padding-right: 36px;\n    background-image: url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'10\' height=\'6\' viewBox=\'0 0 10 6\'%3E%3Cpath d=\'m1 1 4 4 4-4\' fill=\'none\' stroke=\'%23fff2dc\' stroke-width=\'1.5\'/%3E%3C/svg%3E");\n    background-repeat: no-repeat;\n    background-position: right 12px center;\n    background-size: 10px 6px;\n}\n'
+CONFERENCE_ROWS_SHA256 = '7c0f15564c90ea0fa066041e54938e52c661a0c7f3c188f20a1ad4739eab2bcc'
 CONFERENCE_ROWS_APPENDIX = b'\n/* Balance the visible search results, excluding cards hidden by the filters. */\n@media (min-width:701px) and (max-width:1000px) {\n    #conference-results .fc-talk-list > :not([hidden]) { grid-column: auto; }\n    #conference-results .fc-talk-list > :nth-last-child(1 of :not([hidden])):nth-child(odd of :not([hidden])) { grid-column: 1 / -1; }\n}\n@media (min-width:1001px) {\n    #conference-results .fc-talk-list > :not([hidden]) { grid-column: span 2; }\n    #conference-results .fc-talk-list > :not([hidden]) > a { display: flex; }\n    #conference-results .fc-talk-list > :nth-last-child(1 of :not([hidden])):nth-child(3n+1 of :not([hidden])) { grid-column: 1 / -1; }\n    #conference-results .fc-talk-list > :nth-last-child(2 of :not([hidden])):nth-child(3n+1 of :not([hidden])),\n    #conference-results .fc-talk-list > :nth-last-child(1 of :not([hidden])):nth-child(3n+2 of :not([hidden])) { grid-column: span 3; }\n    #conference-results .fc-talk-list > :nth-last-child(1 of :not([hidden])):nth-child(3n+1 of :not([hidden])) > a { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); align-items: center; }\n}\n'
 CONFERENCE_ARCHIVE_SHA256 = '2f5903f9d75b2da757aea4a448f0593ab9eb1a8eafe7c9a454bbca0603e4503f'
 CONFERENCE_CURRENT = b'.fc-conference-sessions details[open]>summary'
 CONFERENCE_PRIOR = b'.fc-conference-sessions details[open] summary'
 
 
+def before_conference_centering(data):
+    if data.count(CONFERENCE_CENTER_APPENDIX) == 1 and data.endswith(CONFERENCE_CENTER_APPENDIX):
+        prior = data[:-len(CONFERENCE_CENTER_APPENDIX)]
+        if hashlib.sha256(prior).hexdigest() == CONFERENCE_ROWS_SHA256:
+            return prior
+    return data
+
+
 def before_conference_archive(data):
     """Invert only the exact visible-row appendix and two archive selectors."""
+    data = before_conference_centering(data)
     if data.count(CONFERENCE_ROWS_APPENDIX) != 1 or not data.endswith(CONFERENCE_ROWS_APPENDIX):
         return data
     archive = data[:-len(CONFERENCE_ROWS_APPENDIX)]
@@ -186,6 +197,7 @@ def historical_style_bytes(data):
 def reviewed_anchor_style(name, data):
     record = FILES.get(name)
     if name == 'general-conference-section.css':
+        if before_conference_centering(data) == data: return False
         prior = before_conference_archive(data)
         if prior == data: return False
         data = prior
@@ -269,6 +281,13 @@ def self_test():
                      conference.replace(b'grid-column: span 3;', b'grid-column: span 2;', 1)):
         assert mutation != conference
         assert not reviewed_anchor_style('general-conference-section.css', mutation)
+    for mutation in (before_conference_centering(conference), conference + CONFERENCE_CENTER_APPENDIX,
+                     conference.replace(CONFERENCE_CENTER_APPENDIX, CONFERENCE_CENTER_APPENDIX.replace(b'justify-content: center; }', b'justify-content: start; }', 1), 1),
+                     conference.replace(CONFERENCE_CENTER_APPENDIX, CONFERENCE_CENTER_APPENDIX.replace(b'margin-inline: auto; }', b'margin-inline: 0; }', 1), 1),
+                     conference.replace(CONFERENCE_CENTER_APPENDIX, CONFERENCE_CENTER_APPENDIX.replace(b'right 12px center', b'right 0px center', 1), 1),
+                     conference.replace(CONFERENCE_CENTER_APPENDIX, CONFERENCE_CENTER_APPENDIX.replace(b'padding-right: 36px', b'padding-right: 12px', 1), 1)):
+        assert mutation != conference
+        assert not reviewed_anchor_style('general-conference-section.css', mutation)
     link = '<link href="general-conference-section.css?v=' + CONFERENCE_VERSION + '">'
     pages = {'answers.html': link, 'general-conference.html': link}
     assert not conference_cache_errors(pages)
@@ -276,6 +295,7 @@ def self_test():
                     {**pages, 'answers.html': link + link},
                     {**pages, 'answers.html': link + link.replace(CONFERENCE_VERSION, 'unknown')},
                     {**pages, 'answers.html': link.replace(CONFERENCE_VERSION, '20261007-october-archive-1')},
+                    {**pages, 'answers.html': link.replace(CONFERENCE_VERSION, '20261007-october-visible-rows-2')},
                     {**pages, 'answers.html': link.replace(CONFERENCE_VERSION, 'unknown')}):
         assert conference_cache_errors(altered)
     for name in FILES:
