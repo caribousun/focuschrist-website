@@ -229,7 +229,7 @@
           },
           {
             "path": "full-image-viewer.css",
-            "sha256": "4b9ef916d16d145ed2f3eba09b9384544ddab48e94eaf42639ffcb4c4eaf6ae1"
+            "sha256": "10490ceea817af1025e1df20e38ed747c4cec3c234e630fb720b66f914ce87bf"
           },
           {
             "path": "full-image-viewer.js",
@@ -300,13 +300,13 @@
       "reviews": [
         {
           "reviewer": "Fermi",
-          "receipt_id": "fermi-finished-eleazer-3cacda56-20261007T0104",
+          "receipt_id": "fermi-chevron-context-20261007",
           "stage": "finished",
           "verdict": "PASS",
           "withdrawn": false,
-          "binding_sha256": "3cacda566390abd54971d918ee97e6fb9640b117ea71d0f7fc002065baefe962",
-          "reviewed_at": "2026-10-07T01:03:42.152159+00:00",
-          "observations": "Independent direct pixel/reference/prospective context review. Exact21context hashes, source/prompt/mandate hashes, original and wide encoded/decoded pixels and preflight chronology verified. All10mandated checks concur with limitations in evidence; no owner acceptance.",
+          "binding_sha256": "89c327d17301681f9c32cdfa5d5500652489a1268add62dcb45ae4c3ad4cc3eb",
+          "reviewed_at": "2026-10-07T02:16:34.826859+00:00",
+          "observations": "Current scoped CSS-only context concurrence; original checks/full_resolution_inspected/face_details_inspected attest the preserved earlier finished-pixel review, not a fresh identity or anatomy inspection. All art/preflight/HTML/JS/PDF bytes unchanged. New arrow screenshot/geometry evidence independently inspected; see additive current-context receipt.",
           "checks": {
             "identity": "Directly opened exact Eleazer mission-road and Brigham approved references, then both delivered rasters. Eleazer retains narrow long nose, tapered lower face, swept hair and recognizable figure; Brigham remains distinct with broader lower face and wavy hair. Wide rendering preserves recognizable identity, not pixel identity.",
             "age": "Visual adult appearances fit early1832 ages36 and30; no elderly portrait texture transplanted. Birth dates and representative scene date reproduce those ages. Exact day remains unknown.",
@@ -325,6 +325,14 @@
             {
               "path": "docs/reviews/eleazer-teaching-hero/fermi-final-evidence.json",
               "sha256": "10ea1cf5efe0f3f7db7b8fcfbb7ec41b643b2f713d2488a13a1368bb698b1c54"
+            },
+            {
+              "path": "docs/reviews/image-version-chevron/fermi-context-review.json",
+              "sha256": "1f2ca8eeec0fb8d0d22a5ddbe1531d2a4080dd6814241518dd721b64a7f64b9d"
+            },
+            {
+              "path": "docs/reviews/image-version-chevron/prior-artwork-binding.json",
+              "sha256": "edfc96a2b022c20ce1394adeaa069d486e4c8701d99d5beeec408ec4359946c6"
             }
           ]
         },
@@ -333,9 +341,9 @@
           "stage": "finished",
           "verdict": "PASS",
           "withdrawn": false,
-          "binding_sha256": "3cacda566390abd54971d918ee97e6fb9640b117ea71d0f7fc002065baefe962",
-          "receipt_id": "newton-eleazer-final-binding-20261007-0110",
-          "reviewed_at": "2026-10-07T01:04:05.318552+00:00",
+          "binding_sha256": "89c327d17301681f9c32cdfa5d5500652489a1268add62dcb45ae4c3ad4cc3eb",
+          "receipt_id": "newton-chevron-context-20261007",
+          "reviewed_at": "2026-10-07T02:16:34.826859+00:00",
           "checks": {
             "identity": "Personally compared both actual reference images with master and wide output. Eleazer retains swept shorter hair, broad forehead and narrower tapered face; Brigham retains longer wavy hair, broader lower face, nose and recognizable eye region. No new owner approval inferred.",
             "age": "Source record establishes early1832 ages36 and30 with March1 representative only. Finished men plausibly fit adult thirties; neither copies old-age portrait features. Exact age cannot be proven from pixels.",
@@ -350,11 +358,19 @@
           },
           "full_resolution_inspected": true,
           "face_details_inspected": true,
-          "observations": "Fresh independent full original/wide native-resolution, face, hand, identity-reference and desktop/320/412 screenshot inspection; exact21context hashes, genuine original/edit preflight chain and eleven figures verified. See narrative evidence for scoped findings and limits. No owner aesthetic approval.",
+          "observations": "Current scoped CSS-only context concurrence; original checks/full_resolution_inspected/face_details_inspected attest the preserved earlier finished-pixel review, not a fresh identity or anatomy inspection. All art/preflight/HTML/JS/PDF bytes unchanged. New arrow screenshot/geometry evidence independently inspected; see additive current-context receipt.",
           "evidence": [
             {
               "path": "docs/reviews/eleazer-teaching-hero/newton-final-evidence.json",
               "sha256": "2d60dc80053bd91cf382a3280854a29af185d5ff14470d16d95c36dce51b4f50"
+            },
+            {
+              "path": "docs/reviews/image-version-chevron/newton-context-review.json",
+              "sha256": "670037fb44097482941b55ee94f93d8e92bc564fd4a742643634a5c7ad079313"
+            },
+            {
+              "path": "docs/reviews/image-version-chevron/prior-artwork-binding.json",
+              "sha256": "edfc96a2b022c20ce1394adeaa069d486e4c8701d99d5beeec408ec4359946c6"
             }
           ]
         }
@@ -362,23 +378,45 @@
       "root_review": {
         "reviewer": "Albert",
         "verdict": "PASS",
-        "binding_sha256": "3cacda566390abd54971d918ee97e6fb9640b117ea71d0f7fc002065baefe962",
-        "observations": "Personally inspected actual candidate desktop1280x900 and narrow phone320x915; complete heads, speaking and clasped hands, engaged expressions visible without overflow. Confirmed all11unique figures. Narrow phone starts full-size Phone, Wide changes image/download target; Escape restores View Full-Size focus and Continue Lesson focuses first original narrative heading. Desktop starts Wide; Phone changes download target, Escape and Continue Lesson same correct focus. Inspected700phone and requested701(runtime702)desktop breakpoint, both complete figures/nooverflow and Continue retained. Candidate only, no owner aesthetic approval. Prior root412phone evidence separately preserved; no generation or asset transformation by this reviewer.",
+        "binding_sha256": "89c327d17301681f9c32cdfa5d5500652489a1268add62dcb45ae4c3ad4cc3eb",
+        "observations": "Current desktop and phone Image version chevron inspected: exact148x44 rectangles and positions unchanged, inward arrow centered. Native Home/End selection updates download/image; Escape restores View Full-Size focus. Original assembled artwork/framing review inherited exactly from prior-artwork-binding.json; no new artwork or owner aesthetic acceptance.",
         "evidence": {
           "desktop": [
             {
               "path": "docs/reviews/eleazer-teaching-hero/albert-assembled-evidence.json",
               "sha256": "54c03e7cdacc81879fe35301451fa12d1aa689c479bd83b4732e69e7791e31dc"
+            },
+            {
+              "path": "docs/reviews/image-version-chevron/albert-context-review.json",
+              "sha256": "041c8fbfad6b414a73b4c153fa3b6ab7721327752ff4f7c93eb174fa7aee607b"
+            },
+            {
+              "path": "docs/reviews/image-version-chevron/prior-artwork-binding.json",
+              "sha256": "edfc96a2b022c20ce1394adeaa069d486e4c8701d99d5beeec408ec4359946c6"
             }
           ],
           "phone": [
             {
               "path": "docs/reviews/eleazer-teaching-hero/albert-assembled-evidence.json",
               "sha256": "54c03e7cdacc81879fe35301451fa12d1aa689c479bd83b4732e69e7791e31dc"
+            },
+            {
+              "path": "docs/reviews/image-version-chevron/albert-context-review.json",
+              "sha256": "041c8fbfad6b414a73b4c153fa3b6ab7721327752ff4f7c93eb174fa7aee607b"
+            },
+            {
+              "path": "docs/reviews/image-version-chevron/prior-artwork-binding.json",
+              "sha256": "edfc96a2b022c20ce1394adeaa069d486e4c8701d99d5beeec408ec4359946c6"
             }
           ]
         }
-      }
+      },
+      "prior_binding_evidence": [
+        {
+          "path": "docs/reviews/image-version-chevron/prior-artwork-binding.json",
+          "sha256": "edfc96a2b022c20ce1394adeaa069d486e4c8701d99d5beeec408ec4359946c6"
+        }
+      ]
     }
   ],
   "limitations": "Evidence integrity only. Actual independent finished-pixel inspection and Albert desktop/phone inspection remain mandatory. No technical receipt establishes owner aesthetic acceptance."

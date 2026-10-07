@@ -1,0 +1,27 @@
+{
+  "reviewer": "Fermi",
+  "verdict": "PASS",
+  "scope": "Additive current-context review of owner-requested Image version chevron inset only",
+  "candidateCSSSHA": "10490ceea817af1025e1df20e38ed747c4cec3c234e630fb720b66f914ce87bf",
+  "evidence": [
+    "work/chevron-geometry.json",
+    "work/chevron-before-desktop-settled.png",
+    "work/chevron-after-desktop-settled.png",
+    "work/chevron-before-phone.png",
+    "work/chevron-after-phone.png"
+  ],
+  "observations": [
+    "Personally inspected exact CSS diff and supplied native-browser screenshot pixels. Selector scoped to .fc-full-image-version select; inset arrow is visibly farther left and vertically centered.",
+    "Desktop settled Wide pair has unchanged pill position and apparent dimensions; measured root geometry independently read: x533.375 y840 width148 height44 before and after.",
+    "Phone pair shows inset arrow and preserved pill placement; measured x182.425003 y801.200012 width148 height44 identical. Different selected versions mean this pair is not an image-variant comparison.",
+    "Initial desktop before file lacked select and initial after captured transient variant; excluded from final comparison and corrected pair requested and received.",
+    "No artwork, hero, Continue, PDF or prose changes in reviewed product diff. Native select remains present. Root runtime keyboard/download/focus assertions are inherited evidence, not personally executed."
+  ],
+  "artReviewInheritance": "Original preflight and finished-pixel reviews remain inherited exact unchanged. This receipt adds current CSS context concurrence only and does not claim fresh identity, anatomy, historical-source or artwork-creation inspection.",
+  "limits": "Candidate-only concurrence. Public stylesheet bytes and normal live browser reload still required after deployment. Does not establish whole-site acceptance or owner aesthetic approval.",
+  "binding_sha256": "89c327d17301681f9c32cdfa5d5500652489a1268add62dcb45ae4c3ad4cc3eb",
+  "prior_binding_sha256": "3cacda566390abd54971d918ee97e6fb9640b117ea71d0f7fc002065baefe962",
+  "verified_spec_delta": [
+    "/page_context/4/sha256"
+  ]
+}

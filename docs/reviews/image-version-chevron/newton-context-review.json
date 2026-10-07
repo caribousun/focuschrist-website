@@ -1,0 +1,31 @@
+{
+  "reviewer": "Newton",
+  "receipt_id": "newton-chevron-context-review-20261007",
+  "reviewed_at": "2026-10-06T20:15:57.1564317-06:00",
+  "verdict": "PASS",
+  "scope": "Nine-line select-only CSS addition; independent source and root screenshot review; unchanged artwork evidence inherited separately",
+  "css_sha256": "10490ceea817af1025e1df20e38ed747c4cec3c234e630fb720b66f914ce87bf",
+  "observations": [
+    "Personally inspected settled desktop before/after and phone before/after images. Arrow is visibly inset about6-8px left and vertically centered; controls remain same size/location.",
+    "Root geometry receipt has exact unchanged148x44 rectangles: desktop x533.375 y840; phone x182.4250030517578 y801.2000122070312. Measurements and native Home/End/selectOption/Escape execution are root-authored, not my independent browser execution.",
+    "Personally read exact CSS diff: appearance none, padding-right36px,10x6 background SVG right10px center; no JS or hero geometry edits. Native select semantics remain.",
+    "Independently executed full_image_viewer_runtime_qa.js and hero_details_runtime_qa.js: both PASS.",
+    "Exclude original transient desktop screenshot pair; settled pair supersedes those captures.",
+    "Creation registry rebind must preserve original preflight, encoded/decoded raster hashes, identity/face observations and exact historical receipts. New receipt covers only changed CSS context and inherited unchanged-byte evidence. No fresh identity/source/full-resolution artwork review claimed."
+  ],
+  "evidence": [
+    "chevron-before-desktop-settled.png",
+    "chevron-after-desktop-settled.png",
+    "chevron-before-phone.png",
+    "chevron-after-phone.png",
+    "chevron-geometry.json"
+  ],
+  "limitations": [
+    "Candidate review only; merge/deploy/public-byte/live release checks outstanding.",
+    "No physical-device, whole-site or owner aesthetic acceptance.",
+    "No changes to reviewed raster/PDF inputs or historical evidence authorized."
+  ],
+  "prior_binding_sha256": "3cacda566390abd54971d918ee97e6fb9640b117ea71d0f7fc002065baefe962",
+  "binding_sha256": "89c327d17301681f9c32cdfa5d5500652489a1268add62dcb45ae4c3ad4cc3eb",
+  "binding_verification": "Independently recomputed canonical binding from original registry spec with exactly one CSS context hash replacement and asserted full equality with proposed spec."
+}
