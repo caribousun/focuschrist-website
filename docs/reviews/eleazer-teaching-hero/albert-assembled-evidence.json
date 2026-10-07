@@ -1,0 +1,77 @@
+{
+  "reviewer": "Albert",
+  "reviewed_at": "2026-10-07T01:03:28.625444+00:00",
+  "binding_sha256": "3cacda566390abd54971d918ee97e6fb9640b117ea71d0f7fc002065baefe962",
+  "verdict": "PASS",
+  "observations": "Personally inspected actual candidate desktop1280x900 and narrow phone320x915; complete heads, speaking and clasped hands, engaged expressions visible without overflow. Confirmed all11unique figures. Narrow phone starts full-size Phone, Wide changes image/download target; Escape restores View Full-Size focus and Continue Lesson focuses first original narrative heading. Desktop starts Wide; Phone changes download target, Escape and Continue Lesson same correct focus. Inspected700phone and requested701(runtime702)desktop breakpoint, both complete figures/nooverflow and Continue retained. Candidate only, no owner aesthetic approval. Prior root412phone evidence separately preserved; no generation or asset transformation by this reviewer.",
+  "screenshots": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-06\\focus-artwork-binding-release\\work\\pixels\\eleazer-320.png",
+      "sha256": "96495503df37d91991041c8b5e4028656da3f2c65ccee8d003bc72f2e8eec1da"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-06\\focus-artwork-binding-release\\work\\pixels\\eleazer-700.png",
+      "sha256": "fe9ed30709ece9a292ba92a3800605185c7b7f522092c5866edeb1a0d576f1f7"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-06\\focus-artwork-binding-release\\work\\pixels\\eleazer-701.png",
+      "sha256": "8b07f588f44142704a10e87b71c9e4eea520c3dff163260192245e585d95d3b5"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-06\\focus-artwork-binding-release\\work\\pixels\\eleazer-desktop.png",
+      "sha256": "899da25a5680e39506b60b874c774fc94498b9c02a28f765d57ff6ad96e52553"
+    }
+  ],
+  "prior_phone_evidence": {
+    "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-06\\focus-artwork-layout-publication\\work\\pixels\\eleazer-phone.png",
+    "sha256": "69d88ff5305aa7728fecb9a2a4b293388142d4c627f1448668fedfa00d613211"
+  },
+  "geometry_320": {
+    "cue": {
+      "bottom": 895.2000122070312,
+      "height": 44,
+      "width": 149.08750915527344,
+      "x": 77.8499984741211,
+      "y": 851.2000122070312
+    },
+    "figures": [
+      "picture-miller-teaching-brigham",
+      "picture-miller-search-before-witness",
+      "picture-miller-brigham-family-breakfast",
+      "picture-miller-conversion-1831",
+      "picture-miller-mission-road",
+      "picture-miller-simple-witness",
+      "picture-miller-millstream-baptism",
+      "picture-miller-canada-grove",
+      "picture-miller-zions-camp-horses",
+      "picture-miller-westward-service",
+      "picture-miller-relief-donation"
+    ],
+    "height": 915,
+    "hero": {
+      "bottom": 430,
+      "height": 368,
+      "source": "http://localhost:4185/assets/page-art/history-stories/miller-teaching-brigham-master.png",
+      "width": 304.8000183105469,
+      "x": 0,
+      "y": 62
+    },
+    "overflow": false,
+    "width": 320
+  },
+  "breakpoint_runtime702": {
+    "hero": [
+      0,
+      62,
+      686.4000244140625,
+      229.2375030517578
+    ],
+    "cue_bottom": 880,
+    "overflow": false
+  },
+  "limits": [
+    "Screenshots and interactions are candidate preview evidence, not deployed proof.",
+    "Enlarged text naturally flows; arbitrary tall viewport slack remains under fixed hero/cue constraints.",
+    "Initial mobile flash/reflow deferred, not fixed or accepted."
+  ]
+}

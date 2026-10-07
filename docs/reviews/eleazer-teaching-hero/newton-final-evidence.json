@@ -1,0 +1,77 @@
+{
+  "reviewer": "Newton",
+  "reviewed_at": "2026-10-07T01:04:05.318552+00:00",
+  "binding_sha256": "3cacda566390abd54971d918ee97e6fb9640b117ea71d0f7fc002065baefe962",
+  "verdict": "PASS",
+  "scope": "Exact finished artwork, original/derivative generation chain and prospective rendered context",
+  "checks": {
+    "identity": "Personally compared both actual reference images with master and wide output. Eleazer retains swept shorter hair, broad forehead and narrower tapered face; Brigham retains longer wavy hair, broader lower face, nose and recognizable eye region. No new owner approval inferred.",
+    "age": "Source record establishes early1832 ages36 and30 with March1 representative only. Finished men plausibly fit adult thirties; neither copies old-age portrait features. Exact age cannot be proven from pixels.",
+    "expression_gaze": "Both variants show calm speaking attention from Eleazer and engaged listening from Brigham, with mutually oriented pupils/head angles and restrained natural mouths.",
+    "atmosphere": "Consistent outdoor daylight, bare trees, restrained rural colors and photographic depth support a quiet conversation.",
+    "environment": "Timber workshop, bench, hand tools, shavings, split rails and rural background are coherent. Workshop venue is illustrative trade-grounded setting, not documented meeting location.",
+    "characters_realism": "Inspected full1536x1024 original and full2172x724 wide via lossless native-resolution halves plus faces/hands. Natural skin texture, hair strands, fabric grain, lighting and physical depth; no conspicuous waxy or painted faces.",
+    "period_sources": "Read immutable source-record.json and both preflight source/prompt bindings. Early1832 clothing and carpenter setting fit the documented trade and testimony scope. Caption states the testimony only, no invented date/venue certainty. No new historical source research claimed.",
+    "anatomy": "Traced speaking wrist to open hand and visible fingers; listener forearms converge into credible clasped hands. No extra limb, broken wrist, detached hand or obvious fused-finger defect. Hidden left hand of speaker not invented.",
+    "uniqueness": "Personally inspected contact sheet of all ten original Eleazer pictures and prospective11unique figure IDs. New outdoor standing two-person workshop conversation differs from indoor seated group testimony and other originals. Original IDs preserved; wide and phone count as one artwork.",
+    "desktop_phone": "Personally inspected root supplied current desktop,320phone and prior412phone screenshots. Complete heads, mutual gaze and essential speaking/clasped hands remain visible in fixed hero frames; warm opening readable and Continue visible. Root metrics report320nooverflow/cue895.2. Actual interaction execution belongs to root/prior reviewer receipts, not this new screenshot-only inspection."
+  },
+  "mandates_read": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "fe68d0e575ac67262f5693432f09e8de8c2236d1ad8e58890e24f6d358cd4bf4"
+    },
+    {
+      "path": "docs/focuschrist-enrichment-and-stewardship-prompt.md",
+      "sha256": "91cfd09d188880c849493d1752cabb6c6bf8b239d9722259b196161fb6189d14"
+    },
+    {
+      "path": "docs/historical-character-identity.md",
+      "sha256": "69f0f51400ba102dfb5df9a9ec9fb6e738255dc496b84dc5dd684f3f5886c8c4"
+    }
+  ],
+  "verification": {
+    "context_hashes_verified": 21,
+    "static_css_dependency_coverage": true,
+    "both_preflight_bindings_current": true,
+    "generation_chronology_verified": true,
+    "edit_target_is_original": true,
+    "asset_and_decoded_pixel_hashes_verified": true,
+    "original_figure_ids_preserved": 10,
+    "unique_figures": 11,
+    "prospective_html_sha256": "1494025491f4fe1b8fda3bc43b906e32204864f1f5f739e1e8d838febb7c7d3a"
+  },
+  "personally_inspected_evidence": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-06\\focus-artwork-binding-release\\work\\pixels\\eleazer-desktop.png",
+      "sha256": "899da25a5680e39506b60b874c774fc94498b9c02a28f765d57ff6ad96e52553"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-06\\focus-artwork-binding-release\\work\\pixels\\eleazer-320.png",
+      "sha256": "96495503df37d91991041c8b5e4028656da3f2c65ccee8d003bc72f2e8eec1da"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-06\\focus-artwork-layout-publication\\work\\pixels\\eleazer-phone.png",
+      "sha256": "69d88ff5305aa7728fecb9a2a4b293388142d4c627f1448668fedfa00d613211"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-06\\focus-artwork-binding-release\\work\\newton\\wide-left-inspection.png",
+      "sha256": "735827d86409be831c525ecabdb5b3946481e2742205d4d4212a871824bc2051"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-06\\focus-artwork-binding-release\\work\\newton\\wide-right-inspection.png",
+      "sha256": "e152f5b989178254ba7525da72a4c3c2eca0cbc948e3a7edf74e22b29ed291ad"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-06\\focus-artwork-binding-release\\work\\newton\\original-ten-inspection.jpg",
+      "sha256": "ccabc757a0b2319c0fca422716f63591ba4e779130739bdbaea65d453e895fa6"
+    }
+  ],
+  "prior_evidence_boundary": "Earlier Newton and Fermi preflight/pixel/rendered receipts remain historical genuine records; this is a fresh exact-binding inspection and does not reattribute their work. Root supplies screenshots and interaction metrics; I inspected those screenshots directly.",
+  "limits": [
+    "Wide output re-rendered people; no pixel-identical center preservation claim.",
+    "Full-resolution wide was additionally inspected as two native-resolution halves to avoid display resize.",
+    "No live/publication proof, owner aesthetic approval or whole-site acceptance.",
+    "Rejected entire doorway source excluded; not opened or used."
+  ]
+}

@@ -85,3 +85,10 @@ body.fc-site .fc-unified-opening-continuation > :is(.fc-page-intro-scripture,.fc
 body.fc-site .fc-unified-opening-continuation > :is(.fc-actions,.cfm-actions,.fc-conference-actions) {
   justify-content: center;
 }
+
+/* Balance the introduction within the fixed hero-to-Continue interval. */
+@media (min-width: 701px) {
+  body.fc-site [data-unified-opening][data-unified-opening][data-unified-opening]:has(> .fc-unified-continue) > :is(.fc-container--standard,.jj-wrap,.fc-eyebrow):first-child:not([hidden]):not([data-unified-old-cue]) {
+    margin-block-start: auto !important;
+  }
+}

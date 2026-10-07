@@ -61,6 +61,7 @@ def reviewed_answers_featured(selector, body, data):
             and hashlib.sha256(data).hexdigest() == ANSWERS_FEATURED_STYLE_SHA256)
 
 def reviewed_art_reflection(selector, body, data):
+    # Compare the reconstructed historical bytes, not the current caption-gap file.
     data = historical_style_bytes(data)
     return selector.strip() == '.fc-art-study-page .fc-reflection-prompts > .fc-art-story' and re.sub(r'\s+', '', body) == 'max-width:none!important;' and hashlib.sha256(data).hexdigest() == '557ff4b1825bdf655751cbc6491d0133db294f022b90fcda270039ff849053a3'
 
@@ -253,7 +254,7 @@ OWNER_20260929_STYLES = {
     "timeline-reader.css": ("4bbcf89e17c653fc9fd24268412b292b2bd4b92a09032777e0563d2967ebb115", ["timelines/latter-day-saint-church-history-timeline.html", "timelines/willie-and-martin-handcart-map.html", "timelines/life-of-christ-journey-map.html"]),
     "study-reading-balance.css": ("fb547af5c883050d743204c0d05372863143a1fa0dffd2df370b728f1a9ff005", ["atonement.html", "answers/bible-and-book-of-mormon-together.html", "answers.html", "index.html", "ask.html"]),
     # Dynamically loaded shared opening surface; source reviewed, rendered approval recorded separately.
-    'unified-opening.css': ('7fcb1456b4ff2c3372238e0baaccfa6083e4232e328956eff1e1d43f178c96e6', []),
+    'unified-opening.css': ('722f64b471e3219bc3ec3c11bb0ceaec09fc55fa4d031dd1e52f1422d0d129ee', []),
     # Owner-directed Answer Continue correction: exact CSS bytes and consumer lists.
     'answer-opening.css': ('0356c038ad2adcec7206bfcb3d57915b9e2be2cd42024770560f3d9875cc94fb', ['answers/aaronic-priesthood-restoration.html', 'answers/are-latter-day-saints-christian.html', 'answers/bible-and-book-of-mormon-together.html', 'answers/death-of-a-child.html', 'answers/divorce-and-faith.html', 'answers/faith-in-jesus-christ-during-trials.html', 'answers/god-our-heavenly-father.html', 'answers/grief-and-faith.html', 'answers/holy-ghost.html', 'answers/jesus-christ-latter-day-saint-beliefs.html', 'answers/look-unto-me-doctrine-and-covenants-6-36.html', 'answers/melchizedek-priesthood-restoration.html', 'answers/plan-of-salvation.html', 'answers/prayer-and-personal-revelation.html', 'answers/restored-church-of-jesus-christ.html', 'answers/settle-this-in-your-hearts.html', 'answers/stand-forever.html', 'answers/what-happens-after-death.html', 'answers/what-is-eternal-marriage.html', 'answers/what-is-the-book-of-mormon.html', 'answers/who-was-joseph-smith.html', 'answers/why-families-are-important.html', 'answers/why-latter-day-saints-build-temples.html']),
     'covenant-opening.css': ('a0e47a332a6144d17b9d1f6f799e5db085776dc3e55f5c89f9d376d1071db72e', ['answers/abrahamic-covenant.html']),
@@ -407,6 +408,15 @@ def main():
         assert not reviewed_art_reflection(art_selector, 'max-width:none !important; height:9px;', art_css)
         assert not reviewed_art_reflection('.fc-visual-hero', 'max-width:none !important;', art_css)
         assert not reviewed_art_reflection(art_selector, 'max-width:none !important;', art_css + b' ')
+        from anchor_alignment_qa import ART_CAPTION_GAP_BLOCK
+        assert art_css.count(ART_CAPTION_GAP_BLOCK) == 1
+        for mutated in (
+            art_css.replace(ART_CAPTION_GAP_BLOCK, ART_CAPTION_GAP_BLOCK.replace(b'20px', b'21px'), 1),
+            art_css + ART_CAPTION_GAP_BLOCK,
+            art_css.replace(b'max-width: none !important;', b'max-width: 1px !important;', 1),
+        ):
+            assert mutated != art_css
+            assert not reviewed_art_reflection(art_selector, 'max-width:none !important;', mutated)
         mission_css = (ROOT/MISSION_ENRICHMENT_STYLE).read_bytes()
         assert reviewed_mission_enrichment_style(mission_css)
         assert not reviewed_mission_enrichment_style(mission_css + b'\n.fc-visual-hero{height:9px}')
@@ -665,7 +675,7 @@ def main():
     check(reviewed_wrap_consumers(wrap_consumers, panel_contract['site_system_consumers'], panel_contract['version']), 'Shared panel stylesheet consumer list or cache versions changed')
     art_owners = {'art-study/the-good-shepherd.html', 'art-study/the-living-christ.html', 'art-study/suffer-the-little-children.html', 'art-study/be-still.html'}
     art_consumers = {str(p.relative_to(ROOT)).replace('\\','/'): re.findall(r'art-study-enrichment\.css\?v=([^\"\s>]+)', p.read_text(encoding='utf8')) for p in ROOT.rglob('*.html') if 'art-study-enrichment.css' in p.read_text(encoding='utf8')}
-    check(set(art_consumers) == art_owners and all(v == ['20261006-static-study-nav-1'] for v in art_consumers.values()), 'Art reflection stylesheet consumers/version differ')
+    check(set(art_consumers) == art_owners and all(v == ['20261006-caption-prose-gap-1'] for v in art_consumers.values()), 'Art reflection stylesheet consumers/version differ')
     # Owner-directed mobile framing and menu-wrap repair; exact reviewed bytes only.
     check(reviewed_system_panel_style((ROOT/'site-system.css').read_bytes()), 'Reviewed base or exact owner-directed panel appendix changed: site-system.css')
     check(reviewed_toolbar_style('site-header.css', (ROOT/'site-header.css').read_bytes()), 'Reviewed mobile polish stylesheet changed: site-header.css')
@@ -685,7 +695,7 @@ def main():
         check(reviewed_owner_20260929_style(name, (ROOT/name).read_bytes()), 'Owner-reviewed stylesheet bytes changed: '+name)
         if name == 'unified-opening.css':
             common = (ROOT/'site-common.js').read_text(encoding='utf-8')
-            check(common.count("relativeAssetHref('unified-opening.css?v=20260930-alignment-2')") == 1, 'Unified opening CSS requires its exact shared loader/version')
+            check(common.count("relativeAssetHref('unified-opening.css?v=20261006-balanced-opening-1')") == 1, 'Unified opening CSS requires its exact shared loader/version')
             check(common.count("relativeAssetHref('unified-opening.js?v=20261006-introductions-1')") == 1, 'Unified opening JS requires its exact shared loader/version')
         if name == 'footer-navigation.css':
             common = (ROOT/'site-common.js').read_text(encoding='utf-8')

@@ -532,15 +532,15 @@
     },
     {
       "route": "history/eleazer-miller.html",
-      "selector": "a[href=\"../assets/page-art/history-stories/miller-search-before-witness-full.webp\"]",
+      "selector": ".fc-life-hero > a.fc-visual-hero",
       "controller": "topic-artwork-details",
-      "href": "assets/page-art/history-stories/miller-search-before-witness-full.webp",
+      "href": "assets/page-art/history-stories/miller-teaching-brigham-master.png",
       "confirmed_variants": [
         {
-          "asset": "assets/page-art/history-stories/miller-search-before-witness-desktop.webp",
-          "condition": "(min-width: 701px)",
-          "mechanism": "trigger.querySelector(\"picture img\").currentSrc",
-          "evidence": "independent pixel comparison"
+          "asset": "assets/page-art/history-stories/miller-teaching-brigham-desktop.png",
+          "condition": "min-width:701px",
+          "mechanism": "picture img.currentSrc",
+          "evidence": "docs/artwork-creation-reviews.json"
         }
       ]
     },

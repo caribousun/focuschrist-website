@@ -1,0 +1,160 @@
+{
+  "reviewer": "Fermi",
+  "reviewed_at": "2026-10-07T01:03:42.152159+00:00",
+  "binding_sha256": "3cacda566390abd54971d918ee97e6fb9640b117ea71d0f7fc002065baefe962",
+  "verdict": "PASS",
+  "live_authority_read": "Connected current Master foundation/Focus mandates/current map, latest00B/Focus and applicable00C/00I; no mutation.",
+  "mandates_read": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "fe68d0e575ac67262f5693432f09e8de8c2236d1ad8e58890e24f6d358cd4bf4"
+    },
+    {
+      "path": "docs/historical-character-identity.md",
+      "sha256": "69f0f51400ba102dfb5df9a9ec9fb6e738255dc496b84dc5dd684f3f5886c8c4"
+    },
+    {
+      "path": "docs/focuschrist-enrichment-and-stewardship-prompt.md",
+      "sha256": "91cfd09d188880c849493d1752cabb6c6bf8b239d9722259b196161fb6189d14"
+    }
+  ],
+  "assets_inspected": [
+    {
+      "path": "assets/page-art/history-stories/miller-teaching-brigham-master.png",
+      "sha256": "d6635b162ba41afa3f5f145e39d0c0ca92b988610c0c5e8a0eb382f075af5527",
+      "pixel_sha256": "87cd61ccfc4e67c8c33a38bca552c7700567aa51fbfacdf42d44ab56000ea089"
+    },
+    {
+      "path": "assets/page-art/history-stories/miller-teaching-brigham-desktop.png",
+      "sha256": "2c720d97854b21b3865acdf7cb8e7b4d463c9a02858b67627cfd9967cd5696c7",
+      "pixel_sha256": "c70ef0cbd04c4660b7096f1645a5f5dbf475d45350042ae7835e195d26e0522c"
+    }
+  ],
+  "exact_context_validated": [
+    {
+      "path": "artwork-actions.css",
+      "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+    },
+    {
+      "path": "artwork-details.css",
+      "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+    },
+    {
+      "path": "complete-card-rows.css",
+      "sha256": "7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"
+    },
+    {
+      "path": "connected-study.css",
+      "sha256": "513b11859f17d36a5934d323f865242b8c90beea70e94fd3056e6e2dc0af40c6"
+    },
+    {
+      "path": "full-image-viewer.css",
+      "sha256": "4b9ef916d16d145ed2f3eba09b9384544ddab48e94eaf42639ffcb4c4eaf6ae1"
+    },
+    {
+      "path": "full-image-viewer.js",
+      "sha256": "0710aa21dd262e07b0513bf637810abb85236f99b098d6b0f0f80a17744083d2"
+    },
+    {
+      "path": "hero-details.css",
+      "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+    },
+    {
+      "path": "hero-image-source.js",
+      "sha256": "f5f9c303d021415ddbd7c5ed4beb78c5263844328a9eb3b7eefb23d6de4c13e0"
+    },
+    {
+      "path": "history-stories.css",
+      "sha256": "7afc257960c5d327cddd944c7a29c60223b13aaf8d670abd6a6a8a9af2943675"
+    },
+    {
+      "path": "history/eleazer-miller.html",
+      "sha256": "1494025491f4fe1b8fda3bc43b906e32204864f1f5f739e1e8d838febb7c7d3a"
+    },
+    {
+      "path": "priesthood-scenes.css",
+      "sha256": "5583b0f2d023bccbf2a318dc8c063331c4e96c9ffc7b5d754badc2c01d18ffd4"
+    },
+    {
+      "path": "resource-cards.css",
+      "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+    },
+    {
+      "path": "site-common.js",
+      "sha256": "5c26c4c8e1cee8f1cc6521de3ca1bdfc86a0a830b8dc64b9beeb6332f78c8110"
+    },
+    {
+      "path": "site-header.css",
+      "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+    },
+    {
+      "path": "site-search.css",
+      "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+    },
+    {
+      "path": "site-system.css",
+      "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+    },
+    {
+      "path": "topic-art.css",
+      "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"
+    },
+    {
+      "path": "topic-artwork-details.css",
+      "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+    },
+    {
+      "path": "topic-artwork-details.js",
+      "sha256": "692fe0e59dfe9ae08fc43ca913935759e80a95f4fc04231726fa32241cb909bb"
+    },
+    {
+      "path": "unified-opening.css",
+      "sha256": "722f64b471e3219bc3ec3c11bb0ceaec09fc55fa4d031dd1e52f1422d0d129ee"
+    },
+    {
+      "path": "unified-opening.js",
+      "sha256": "3745ded2cb4e92e7b876bb8c8cd217d808da0a933575cf30c3712dc9f35d6dbe"
+    }
+  ],
+  "generation_chain": "Both genuine preflights verified, timestamps precede their generations, edit target is exact original, references/ancestry retained; rejected doorway hash excluded.",
+  "checks": {
+    "identity": "Directly opened exact Eleazer mission-road and Brigham approved references, then both delivered rasters. Eleazer retains narrow long nose, tapered lower face, swept hair and recognizable figure; Brigham remains distinct with broader lower face and wavy hair. Wide rendering preserves recognizable identity, not pixel identity.",
+    "age": "Visual adult appearances fit early1832 ages36 and30; no elderly portrait texture transplanted. Birth dates and representative scene date reproduce those ages. Exact day remains unknown.",
+    "expression_gaze": "Both full-resolution faces have attentive natural expressions and mutually directed eyes. Eleazer speaks without a fixed scowl or broad grin; Brigham listens without looking at the viewer.",
+    "atmosphere": "Soft natural daylight, restrained interpersonal engagement and rural early-spring setting are coherent and reverent.",
+    "environment": "Weathered carpenter workshop, timber, fence and landscape exhibit coherent perspective, material texture and depth; no blank side bands, seams or modern objects detected.",
+    "characters_realism": "Full-resolution1536x1024 master and2172x724 desktop viewed with original-detail delivery. Skin detail, hair strands, wool and linen are photographic, with natural asymmetry and distinct characters.",
+    "period_sources": "Read immutable source record and both exact prompts. Early1832 testimony/Brigham trade are grounded; workshop staging is interpretation, not documented venue. Finished title/caption are warm factual testimony wording; alt describes visible scene. Footer-only general disclosure retained.",
+    "anatomy": "Inspected face and hand details at original resolution. Speaking hand has coherent fingers, joints and arm; listening clasped hands and sleeve/arm joins are plausible. Complete heads and visible hands remain in desktop and phone frames.",
+    "uniqueness": "Prospective HTML exactly equals builder output with11 ordered figures: one separate new hero plus all10 original units. Original narrative/art record preservation independently established in history-builder-crossreview. Outdoor two-person work-area scene is distinct from existing indoor group witness and other original scenes.",
+    "desktop_phone": "Personally inspected prior root1280 desktop/412 phone screenshots and current root320 screenshot. Both faces/visible hands and Continue remain visible, without stretched people.320 root measurement reports304.8x368 hero at y62, no overflow and cue bottom895.2. Browser actions/coordinates are root-authored evidence, not my independent interaction test."
+  },
+  "finished_visitor_prose": {
+    "title": "A testimony that reached Brigham Young",
+    "caption": "Eleazer Miller shared his witness of the Book of Mormon with Brigham Young.",
+    "alt": "Eleazer Miller speaks with Brigham Young outside a rural carpenter’s workshop."
+  },
+  "screenshots_personally_inspected": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-06\\focus-artwork-layout-publication\\work\\pixels\\eleazer-desktop.png",
+      "sha256": "484dae63adb2419068bd0994faa186e28f64ea0142e78c83bd3b70c9b993abdf"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-06\\focus-artwork-layout-publication\\work\\pixels\\eleazer-phone.png",
+      "sha256": "69d88ff5305aa7728fecb9a2a4b293388142d4c627f1448668fedfa00d613211"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-06\\focus-artwork-binding-release\\work\\pixels\\eleazer-320.png",
+      "sha256": "96495503df37d91991041c8b5e4028656da3f2c65ccee8d003bc72f2e8eec1da"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-06\\focus-artwork-binding-release\\work\\pixels\\eleazer-320.json",
+      "sha256": "b257aaee1b44fb043e6f3cdd59da39db90a0d19544ebfd935fd50debc14300a5"
+    }
+  ],
+  "limits": [
+    "No owner aesthetic acceptance, production claim, full-site review or physical-device test.",
+    "Wide output re-rendered/rescaled the people despite environment-only prompt. Actual completed pixels independently assessed for likeness, age, expression and anatomy; no central pixel-preservation claim.",
+    "Final assembled release gates and root live checks remain required."
+  ]
+}

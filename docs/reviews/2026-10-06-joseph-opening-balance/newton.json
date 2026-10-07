@@ -1,0 +1,51 @@
+{
+  "reviewer": "Newton",
+  "stage": "independent crossreview of Fermi supplemental source/PDF compatibility",
+  "concur": true,
+  "reviewed_at": "2026-10-07T01:01:29.312378+00:00",
+  "comparison_commit": "6f9a0c9d68f60bbb8e277662220a87f7d295ade5",
+  "previous_source_html_sha256": "5e5c56a3e30e6c660117d10377481a4dc8378acac5145cef2926bc65432c9d09",
+  "current_source_html_sha256": "f05ab9a49f5e0e0f0dd51607f5a17fd14d410fc639b5274ddf0f63170dc9d048",
+  "pdf_sha256": "109bacb657025cd2f4dcc98b29ca98e97afb97bc8b1b15d5d5a1d460006b2946",
+  "manuscript_sha256": "bd08e18681a50c0dae1bf2ca53309f67e67f44deb072ac84492671c4c4179e6c",
+  "fermi_receipt": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-06\\focus-artwork-layout-publication\\work\\fermi\\joseph-pdf-compatibility.json",
+  "fermi_receipt_sha256": "3c9c2990889a388dac06f4aa45b126cf24a00efab47338286680b6a8797f8c0b",
+  "exact_inverse_pass": true,
+  "pdf_input_dom_unchanged": true,
+  "dom_checks": {
+    "section.research-part": {
+      "count": 15,
+      "unchanged": true
+    },
+    ".research-study-onward": {
+      "count": 1,
+      "unchanged": true
+    },
+    "footer": {
+      "count": 1,
+      "unchanged": true
+    },
+    ".research-feature-study": {
+      "count": 16,
+      "unchanged": true
+    }
+  },
+  "pdf_rebuilt": false,
+  "new_pdf_visual_review": false,
+  "mandates_read": {
+    "AGENTS.md": "fe68d0e575ac67262f5693432f09e8de8c2236d1ad8e58890e24f6d358cd4bf4",
+    "docs/historical-character-identity.md": "69f0f51400ba102dfb5df9a9ec9fb6e738255dc496b84dc5dd684f3f5886c8c4",
+    "docs/focuschrist-enrichment-and-stewardship-prompt.md": "91cfd09d188880c849493d1752cabb6c6bf8b239d9722259b196161fb6189d14"
+  },
+  "findings": [
+    "Exact two-substitution inverse independently restores all original HTML bytes, including every chapter and feature.",
+    "Builder selectors consume chapter sections, onward and footer; all unchanged. Manuscript identical to reviewed main.",
+    "Finished introduction is warm, specific and accurate to the actual study; no authored em dash, routine audit disclaimer or invented result.",
+    "Frozen PDF remains byte-identical; prior visual receipts may remain scoped to that same PDF."
+  ],
+  "limits": [
+    "No new PDF render or visual inspection performed; no regeneration.",
+    "Current PDF QA, browser opening composition, assembled release checks and owner aesthetic acceptance remain separate.",
+    "No whole-site or publication approval."
+  ]
+}

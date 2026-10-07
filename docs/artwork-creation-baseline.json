@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "commit": "6f9a0c9d68f60bbb8e277662220a87f7d295ade5",
+  "policy": "Preserve every tracked baseline raster and PDF exactly. Every added raster requires current two-stage evidence. Git object inventory is anchored in the validator; no baseline advancement is automatic.",
+  "rejected_sha256": [
+    "5059b4aa414bf57dc9c46608c5c05255810c81faafb472808dfbd9370efdea73"
+  ],
+  "rejections": [
+    {
+      "sha256": "5059b4aa414bf57dc9c46608c5c05255810c81faafb472808dfbd9370efdea73",
+      "source": "exec-14e925f1-0a07-474a-a871-2c10795e31f7.png",
+      "status": "OWNER_REJECTED",
+      "scope": "No use, reference, repair or descendant. Hash obtained without viewing pixels."
+    }
+  ]
+}

@@ -257,7 +257,7 @@ def main() -> int:
 
         for marker in (
             'data-art-study-enriched="true"',
-            'href="../art-study-enrichment.css?v=20261006-static-study-nav-1"',
+            'href="../art-study-enrichment.css?v=20261006-caption-prose-gap-1"',
             'class="fc-study-opening"',
             'class="fc-art-meditation"',
             'class="fc-reflection-prompts"',

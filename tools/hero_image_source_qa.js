@@ -23,7 +23,7 @@ for (const route of canonicalRoutes) {
     const helpers = scripts.filter(match => /(?:^|\/)hero-image-source\.js(?:\?|$)/.test(match[1]));
     assert.equal(helpers.length, expectedRoutes.has(route) ? 1 : 0, route + ': exact helper consumer set');
     if (!expectedRoutes.has(route)) continue;
-    assert(helpers[0][1].endsWith('hero-image-source.js?v=20261006-visible-art-1'));
+    assert(helpers[0][1].endsWith('hero-image-source.js?v=' + (route === 'history/eleazer-miller.html' ? '20261006-eleazer-hero-1' : '20261006-visible-art-1')));
     assert(/\bdefer\b/.test(helpers[0][0]) && !/\basync\b/.test(helpers[0][0]));
     for (const row of manifest.records.filter(row => row.route === route)) {
         const controller = scripts.find(match => match[1].includes(row.controller + '.js?'));

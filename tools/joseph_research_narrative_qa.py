@@ -5,6 +5,20 @@ BASELINE_SHA256='23724949768c40951657d0a6233cf9e281930047fa9c03d5449d7fbe4bd0343
 SECTION_ORDER=[1,2,4,5,6,7,8,9,11,12,3,10,13,14,15]
 CHAPTER_GROUPS=[[1,2],[4,5],[6,7,8,9],[11,12],[3,10,13,14,15]]
 REJECTED_EDITORIAL=('portrait remains unchanged','Keep him as he stands','no compulsory recoloring','our assessment','approved pixels','research verdict')
+
+def check_canonical_narrative(root, canonical):
+    """Reverse only the reviewed browser opening; retain exact manuscript equality."""
+    current = '<p class="fc-page-intro-copy">What did Joseph Smith look like to the people who knew him? Explore portraits, casts and written accounts. Meet the artists, read remembered encounters, compare the features, and follow the choices behind our portrait.</p>'
+    previous = '<p class="fc-page-intro-copy">Explore the portraits, casts and personal recollections that help us picture Joseph Smith. Meet the artists, compare the features, and follow the story of how our portrait took shape.</p>'
+    actual = str(root)
+    assert canonical is not None, 'Canonical research missing'
+    openings = root.select(':scope > header.research-opening')
+    assert len(openings) == 1, 'Exactly one research opening required'
+    paragraphs = openings[0].select(':scope > p.fc-page-intro-copy')
+    assert len(paragraphs) == 1 and str(paragraphs[0]) == current, 'Exact reviewed browser introduction required'
+    assert actual.count(current) == 1 and previous not in actual, 'Mixed or duplicate research introduction'
+    assert str(canonical).count(previous) == 1, 'Canonical introduction changed'
+    assert actual.replace(current, previous, 1) == str(canonical), 'Generated research differs from canonical narrative input beyond the reviewed introduction'
 def text(value):
     return re.sub(r'\s+',' ',BeautifulSoup(value,'html.parser').get_text(' ',strip=True)).strip()
 def evidence_items(data):
@@ -60,7 +74,7 @@ def check_narrative(root,site):
     digest=hashlib.sha256(manuscript).hexdigest()
     assert coverage['manuscript_sha256']==digest,'Narrative changed after semantic coverage review'
     canonical=BeautifulSoup(manuscript,'html.parser').select_one('#portrait-research')
-    assert canonical and str(canonical)==str(root),'Generated research differs from canonical narrative input'
+    check_canonical_narrative(root, canonical)
     assert [int(s['id'].rsplit('-',1)[1]) for s in root.select('.research-part')]==SECTION_ORDER,'Unreviewed narrative order'
     assert [json.loads(a['data-research-sections']) for a in root.select('.research-chapters > a')]==CHAPTER_GROUPS,'Unreviewed chapter group coverage'
     for card,group in zip(root.select('.research-chapters > a'),CHAPTER_GROUPS):

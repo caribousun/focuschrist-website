@@ -41,23 +41,29 @@ def figure(unit, art, hero=False):
 
 def render(story, ready):
     slug = story['id']
+    hero = story.get('hero', story['units'][0])
     base = (ROOT / 'church-history.html').read_text(encoding='utf-8')
     css = re.findall(r'<link[^>]+rel="stylesheet"[^>]+href="([^"]+)"', base)
     css = [x for x in css if not x.startswith('church-history.css')]
     css = ['full-image-viewer.css?v=20261006-versions-1' if x.startswith('full-image-viewer.css?') else x for x in css]
     css.append('history-stories.css?v=20261006-history-intro-fit-1')
-    scripts = ['site-common.js?v=20261006-hero-introductions-1', 'full-image-viewer.js?v=20261006-versions-1', 'hero-image-source.js?v=20261006-visible-art-1', 'topic-artwork-details.js?v=20261006-visible-art-1', 'site-search.js?v=20260919-focused-answers-1']
+    scripts = ['site-common.js?v=20261006-balanced-opening-1', 'full-image-viewer.js?v=20261006-versions-1', 'hero-image-source.js?v=20261006-visible-art-1', 'topic-artwork-details.js?v=20261006-visible-art-1', 'site-search.js?v=20260919-focused-answers-1']
+    if 'hero' in story:
+        scripts = [v.replace('hero-image-source.js?v=20261006-visible-art-1', 'hero-image-source.js?v=20261006-eleazer-hero-1') for v in scripts]
     out = ['<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">', f'<title>{esc(story["name"])} | Church History | focusChrist</title>', f'<meta name="description" content="{esc(story["introduction"])}"><link rel="canonical" href="https://focuschrist.com/history/{slug}.html">']
-    out += [f'<meta property="og:url" content="https://focuschrist.com/history/{slug}.html">', f'<meta property="og:title" content="{esc(story["name"])} | Church History | focusChrist">', f'<meta property="og:description" content="{esc(story["introduction"])}">', f'<meta property="og:image" content="https://focuschrist.com/{ready[story["units"][0]["id"]]["full"]}">', '<meta name="twitter:card" content="summary_large_image">']
+    out += [f'<meta property="og:url" content="https://focuschrist.com/history/{slug}.html">', f'<meta property="og:title" content="{esc(story["name"])} | Church History | focusChrist">', f'<meta property="og:description" content="{esc(story["introduction"])}">', f'<meta property="og:image" content="https://focuschrist.com/{ready[hero["id"]]["full"]}">', '<meta name="twitter:card" content="summary_large_image">']
     out += [f'<link rel="stylesheet" href="../{x}">' for x in css]
     out += [f'<script src="../{x}" defer></script>' for x in scripts]
     out += ['</head><body class="fc-site fc-life-story">', (DATA/'navigation.html.template').read_text(encoding='utf-8'), '<main>']
     for index, unit in enumerate(story['units']):
         out += [f'<section id="{unit["id"]}" aria-labelledby="heading-{unit["id"]}">']
         if index == 0:
-            out += [figure(unit, ready[unit['id']], True), '<div class="fc-life-reading fc-life-opening">', '<p class="fc-eyebrow"><a href="../church-history.html#faithful-lives">Church History</a></p>', f'<h1>{esc(story["title"])}</h1>', f'<p class="lede">{esc(story["opening_summary"].split(". ", 1)[0])}.</p><p class="fc-page-intro-copy">{esc(story["opening_summary"].split(". ", 1)[1])}</p>', f'<div class="fc-actions"><a class="fc-button fc-button--primary" href="#heading-{unit["id"]}">Begin the story</a></div>', '<details class="fc-life-directory"><summary>Explore this story</summary><ol>']
+            out += [figure(hero, ready[hero['id']], True), '<div class="fc-life-reading fc-life-opening">', '<p class="fc-eyebrow"><a href="../church-history.html#faithful-lives">Church History</a></p>', f'<h1>{esc(story["title"])}</h1>', f'<p class="lede">{esc(story["opening_summary"].split(". ", 1)[0])}.</p><p class="fc-page-intro-copy">{esc(story["opening_summary"].split(". ", 1)[1])}</p>', f'<div class="fc-actions"><a class="fc-button fc-button--primary" href="#heading-{unit["id"]}">Begin the story</a></div>', '<details class="fc-life-directory"><summary>Explore this story</summary><ol>']
             out += [f'<li><a href="#{"heading-" if i == 0 else ""}{u["id"]}">{esc(u["title"])}</a></li>' for i, u in enumerate(story['units'])]
-            out += ['<li><a href="#official-film">Watch the official film</a></li><li><a href="#reflect">Pause and reflect</a></li></ol></details></div><div class="fc-life-reading fc-life-body-start">', f'<h2 id="heading-{unit["id"]}">{esc(unit["title"])}</h2>']
+            out += ['<li><a href="#official-film">Watch the official film</a></li><li><a href="#reflect">Pause and reflect</a></li></ol></details></div><div class="fc-life-reading fc-life-body-start">']
+            if 'hero' in story:
+                out += [figure(unit, ready[unit['id']])]
+            out += [f'<h2 id="heading-{unit["id"]}">{esc(unit["title"])}</h2>']
         else:
             out += ['<div class="fc-life-reading">', figure(unit, ready[unit['id']]), f'<h2 id="heading-{unit["id"]}">{esc(unit["title"])}</h2>']
         out += [f'<p>{prose(p, unit["sources"])}</p>' for p in unit['paragraphs']]
@@ -93,27 +99,51 @@ def build():
     ids = [u['id'] for s in stories for u in s['units']]
     assert len(ids) == len(set(ids)) == 30
     preview_only = '--story' in sys.argv
+    draft_preview = '--preview-output' in sys.argv
     if preview_only:
         slug = sys.argv[sys.argv.index('--story') + 1]
         stories = [s for s in stories if s['id'] == slug]
         assert len(stories) == 1, 'Unknown story preview'
     for story in stories:
-        assert len(story['units']) == {'john-tanner': 10, 'eleazer-miller': 10, 'john-rowe-moyle': 10}[story['id']] and story['hero_unit_id'] == story['units'][0]['id']
+        assert len(story['units']) == {'john-tanner': 10, 'eleazer-miller': 10, 'john-rowe-moyle': 10}[story['id']]
+        hero = story.get('hero', story['units'][0])
+        assert story['hero_unit_id'] == hero['id']
+        if 'hero' in story:
+            assert story['id'] == 'eleazer-miller' and hero['id'] not in ids, 'Separate unique hero only for reviewed Eleazer scope'
+            assert hero['title'] and hero['sources']
         assert [u['id'] for u in story['units']] == story['reviewed_scene_ids']
-        for unit in story['units']:
-            assert 1 <= len(unit['paragraphs']) <= 2
+        for unit in story['units'] + ([story['hero']] if 'hero' in story else []):
+            if unit in story['units']:
+                assert 1 <= len(unit['paragraphs']) <= 2
             art = ready[unit['id']]
-            assert art['reviewed'] and art['alt'] and art['caption']
+            assert (art['reviewed'] or (draft_preview and unit is story.get('hero'))) and art['alt'] and art['caption']
             for key in ['full', 'thumbnail']:
                 path = ROOT/art[key]
                 assert path.is_file(), path
             assert hashlib.sha256((ROOT/art['full']).read_bytes()).hexdigest() == art['sha256'], unit['id']
             if unit['id'] == story['hero_unit_id']:
-                assert art['desktop_reviewed']
+                assert art['desktop_reviewed'] or (draft_preview and unit is story.get('hero'))
                 assert hashlib.sha256((ROOT/art['desktop']).read_bytes()).hexdigest() == art['desktop_sha256'], unit['id'] + ' desktop'
     rendered = {ROOT/f'history/{s["id"]}.html': render(s, ready) for s in stories}
     if not preview_only:
         rendered[ROOT/'church-history.html'] = render_hub(stories)
+    from artwork_creation_gate import run as artwork_gate
+    if '--preview-output' in sys.argv:
+        destination = Path(sys.argv[sys.argv.index('--preview-output') + 1]).resolve()
+        assert not destination.is_relative_to(ROOT) and not ROOT.is_relative_to(destination), 'Preview must stay outside the public repository and its ancestors'
+        for story in stories:
+            if 'hero' in story:
+                artwork_gate(ROOT, 'preflight', ready[story['hero']['id']]['creation_id'])
+                for generation in ready[story['hero']['id']].get('derivative_preflight_ids', []):
+                    artwork_gate(ROOT, 'preflight', generation)
+        outputs = [(destination / path.relative_to(ROOT)).resolve() for path in rendered]
+        assert all(p.is_relative_to(destination) and not p.is_relative_to(ROOT) for p in outputs), 'Preview output escapes its isolated directory'
+        for output, content in zip(outputs, rendered.values()):
+            output.parent.mkdir(parents=True, exist_ok=True)
+            output.write_text(content, encoding='utf-8', newline='\n')
+        print('PREVIEW ONLY: isolated output; finished artwork and release review still required')
+        return
+    artwork_gate(ROOT, 'use', page_overrides={p.relative_to(ROOT).as_posix(): c.encode('utf-8') for p, c in rendered.items()})
     for path, content in rendered.items():
         if '--check' in sys.argv:
             assert path.read_text(encoding='utf-8') == content, f'Stale story: {path}'

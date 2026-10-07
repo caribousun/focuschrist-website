@@ -116,6 +116,35 @@ def timeline_study_hero_errors(relative: str, page: str) -> list[str]:
     return errors
 
 
+HISTORY_HERO_UNITS = {
+    'history/john-tanner.html': 'tanner-healing-witness',
+    'history/eleazer-miller.html': 'miller-teaching-brigham',
+    'history/john-rowe-moyle.html': 'moyle-handcart-journey',
+}
+
+
+def history_topic_hero_errors(relative, page, story, ready):
+    from bs4 import BeautifulSoup
+    errors = []
+    unit = HISTORY_HERO_UNITS[relative]
+    selected = story.get('hero', story['units'][0])
+    if selected['id'] != unit or story.get('hero_unit_id') != unit:
+        errors.append(f'{relative}: configured hero differs from exact reviewed scene')
+    dom = BeautifulSoup(page, 'html.parser')
+    figures = dom.select('figure.fc-life-hero')
+    if len(figures) != 1 or figures[0].get('data-topic-art') != unit:
+        errors.append(f'{relative}: missing exact reviewed topic hero')
+    else:
+        figure = figures[0]
+        anchors = figure.select('a.fc-visual-hero')
+        if len(anchors) != 1 or anchors[0].get('href') != '../' + ready[unit]['full'] or not figure.select_one('figcaption[data-picture-panel-copy][hidden]'):
+            errors.append(f'{relative}: hero source or study metadata differs')
+    topic_version = '20261006-visible-art-1' if relative in VISIBLE_TOPIC_ROUTES else '20260930-history-records-1'
+    if page.count('../topic-artwork-details.js?v=' + topic_version) != 1 or 'hero-details.js' in page or 'data-hero-viewer' in page:
+        errors.append(f'{relative}: hero must have exactly one topic controller')
+    return errors
+
+
 def main() -> int:
     assert local_target(ROOT / "404.html", "/assets/heroes/home.webp") == (ROOT / "assets/heroes/home.webp").resolve()
     assert local_target(ROOT / "answers/example.html", "../assets/heroes/home.webp?x=1") == (ROOT / "assets/heroes/home.webp").resolve()
@@ -350,24 +379,28 @@ def main() -> int:
         prefix = "../" * (len(path.relative_to(ROOT).parts) - 1)
         if 'fc-hero-fullscreen' in page:
             errors.append(f"{relative}: hero must not display an overlay pill")
-        history_pages = {f"history/{slug}.html" for slug in ("john-tanner", "eleazer-miller", "john-rowe-moyle")}
+        history_pages = HISTORY_HERO_UNITS
         if relative in history_pages:
-            # These three first-scene heroes use the same topic controller as their four body pictures.
-            from bs4 import BeautifulSoup
-            dom = BeautifulSoup(page, "html.parser")
+            # Eleazer has its own reviewed hero; the other two retain their first scene.
             stories = json.loads((ROOT / "docs/history-stories/stories.json").read_text(encoding="utf-8"))["stories"]
             story = next(x for x in stories if relative == f"history/{x['id']}.html")
             ready = json.loads((ROOT / "docs/history-stories/art-ready.json").read_text(encoding="utf-8"))
             if "artworks" in ready: ready = ready["artworks"]
-            unit = story["units"][0]["id"]
-            figure = dom.select_one("figure.fc-life-hero")
-            if not figure or figure.get("data-topic-art") != unit or len(dom.select("figure.fc-life-hero")) != 1:
-                errors.append(f"{relative}: missing exact first-scene topic hero")
-            elif figure.select_one("a").get("href") != "../" + ready[unit]["full"] or not figure.select_one("figcaption[data-picture-panel-copy][hidden]"):
-                errors.append(f"{relative}: hero source or study metadata differs")
-            topic_version = '20261006-visible-art-1' if relative in VISIBLE_TOPIC_ROUTES else '20260930-history-records-1'
-            if page.count("../topic-artwork-details.js?v=" + topic_version) != 1 or "hero-details.js" in page or "data-hero-viewer" in page:
-                errors.append(f"{relative}: hero must have exactly one topic controller")
+            errors.extend(history_topic_hero_errors(relative, page, story, ready))
+            unit = HISTORY_HERO_UNITS[relative]
+            for original, replacement in (
+                (f'data-topic-art="{unit}"', 'data-topic-art="wrong-scene"'),
+                ('class="fc-life-hero"', 'class="wrong-hero"'),
+                (f'href="../{ready[unit]["full"]}"', 'href="../assets/heroes/home.webp"'),
+                ('data-picture-panel-copy hidden', 'data-picture-panel-copy'),
+                ('../topic-artwork-details.js?v=20261006-visible-art-1', '../topic-artwork-details.js?v=unknown'),
+            ):
+                mutated = page.replace(original, replacement, 1)
+                assert mutated != page
+                assert history_topic_hero_errors(relative, mutated, story, ready), 'History hero mutation escaped'
+            assert history_topic_hero_errors(relative, page + '<figure class="fc-life-hero"></figure>', story, ready)
+            assert history_topic_hero_errors(relative, page + '<script src="../topic-artwork-details.js?v=20261006-visible-art-1"></script>', story, ready)
+            assert history_topic_hero_errors(relative, page, dict(story, hero=dict(story['units'][0], id='wrong-scene')), ready)
             hero_pages -= 1  # Preserve the separate 41-page legacy controller baseline.
             continue
         hero_script = ("hero-details.js?v=20260927-plan-study-1" if relative in TOPIC_HERO_PAGES else "hero-details.js?v=20260927-plan-study-1" if relative == "birth-of-christ.html" else "hero-details.js?v=20260927-plan-study-1" if relative == "atonement.html" else "hero-details.js?v=20260927-plan-study-1" if relative == "joseph-smith-likeness.html" else "hero-details.js?v=20260927-plan-study-1" if relative == "book-of-mormon-evidences.html" else "hero-details.js?v=20260927-plan-study-1" if relative in ART_STUDY_PAGES else "hero-details.js?v=20260927-plan-study-1")

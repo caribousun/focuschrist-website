@@ -511,5 +511,29 @@
     "alt": "John Rowe Moyle sits by a wooden railway carriage window and looks across the passing countryside.",
     "caption": "Moyle travels by rail after landing in Boston.",
     "review_reference": "docs/history-stories/first-six-scene-review-20261004.json"
+  },
+  "miller-teaching-brigham": {
+    "full": "assets/page-art/history-stories/miller-teaching-brigham-master.png",
+    "thumbnail": "assets/page-art/history-stories/miller-teaching-brigham-master.png",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "d6635b162ba41afa3f5f145e39d0c0ca92b988610c0c5e8a0eb382f075af5527",
+    "thumbnail_sha256": "d6635b162ba41afa3f5f145e39d0c0ca92b988610c0c5e8a0eb382f075af5527",
+    "source_original": "exec-7202fd8c-8541-43ca-a776-89d0f3f8e8d4.png",
+    "source_sha256": "d6635b162ba41afa3f5f145e39d0c0ca92b988610c0c5e8a0eb382f075af5527",
+    "reviewed": true,
+    "owner_aesthetic_approval": false,
+    "alt": "Eleazer Miller speaks with Brigham Young outside a rural carpenter’s workshop.",
+    "caption": "Eleazer Miller shared his witness of the Book of Mormon with Brigham Young.",
+    "desktop": "assets/page-art/history-stories/miller-teaching-brigham-desktop.png",
+    "desktop_sha256": "2c720d97854b21b3865acdf7cb8e7b4d463c9a02858b67627cfd9967cd5696c7",
+    "desktop_width": 2172,
+    "desktop_height": 724,
+    "desktop_reviewed": true,
+    "creation_id": "eleazer-teaching-brigham-hero",
+    "derivative_preflight_ids": [
+      "eleazer-teaching-brigham-desktop-extension"
+    ],
+    "review_reference": "docs/artwork-creation-reviews.json"
   }
 }

@@ -23,12 +23,15 @@ MINIMUM = 10
 REVIEWED_PAGE_HASHES = {'art-study/be-still.html': 'ed90acad612bc12e0008d498a37f3f8d2a9b27e068212bec475555ee5a723423', 'art-study/suffer-the-little-children.html': '4d2dfed3b3443118c8908736b3048a410b2e80217509e42465ee8894a7ca10d2', 'art-study/the-good-shepherd.html': '5fe506ab086c140fef457e9f53f3b3cc5a54ee0711885e4a72144a4cd689cf55', 'art-study/the-living-christ.html': '1c1c6310ec7469244b87d4cdc7c79086a93c945b237346d2341132532a05c83b'}
 OLD_SHARED_STYLE = b'<link rel="stylesheet" href="../site-system.css?v=20260930-study-alignment-1">'
 CURRENT_SHARED_STYLE = b'<link rel="stylesheet" href="../site-system.css?v=20261005-mobile-study-rows-1">'
+OLD_COMMON_SCRIPT = b'site-common.js?v=20261002-timeline-1'
+CURRENT_COMMON_SCRIPT = b'site-common.js?v=20261006-balanced-opening-1'
 OLD_ANSWER_STYLE = b'answer-styles.css?v=20260909-warm'
 CURRENT_ANSWER_STYLE = b'answer-styles.css?v=20261005-centered-pill-labels-1'
 BUFFER_ANSWER_STYLE = b'answer-styles.css?v=20261006-art-study-buffer-2'
 CONTAINED_ANSWER_STYLE = b'answer-styles.css?v=20261006-art-study-nav-width-1'
 OLD_ART_STYLE = b'art-study-enrichment.css?v=20260927-anchor-alignment-1'
-CURRENT_ART_STYLE = b'art-study-enrichment.css?v=20261006-static-study-nav-1'
+PREVIOUS_ART_STYLE = b'art-study-enrichment.css?v=20261006-static-study-nav-1'
+CURRENT_ART_STYLE = b'art-study-enrichment.css?v=20261006-caption-prose-gap-1'
 OLD_HERO_SCRIPT = b'hero-details.js?v=20260927-plan-study-1'
 CURRENT_HERO_SCRIPT = b'hero-details.js?v=20261006-visible-art-1'
 VISIBLE_IMAGE_HELPER = b'<script src="../hero-image-source.js?v=20261006-visible-art-1" defer></script>\n'
@@ -62,9 +65,11 @@ def reviewed_page_binding(page, route, expected):
     # Restore only enumerated URL tokens to the existing review's byte identity.
     # This preserves page inventory evidence, not an independent CSS acceptance.
     for current, previous in (
+        (CURRENT_COMMON_SCRIPT, OLD_COMMON_SCRIPT),
         (CONTAINED_ANSWER_STYLE, BUFFER_ANSWER_STYLE),
         (BUFFER_ANSWER_STYLE, CURRENT_ANSWER_STYLE),
-        (CURRENT_ART_STYLE, OLD_ART_STYLE),
+        (CURRENT_ART_STYLE, PREVIOUS_ART_STYLE),
+        (PREVIOUS_ART_STYLE, OLD_ART_STYLE),
         (CURRENT_HERO_SCRIPT, OLD_HERO_SCRIPT),
     ):
         if current not in inverse:

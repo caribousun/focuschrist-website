@@ -219,7 +219,7 @@
         "tanner-new-crop-1847",
         "tanner-family-crossing-1848"
       ],
-      "opening_summary": "John Tanner’s story includes receiving help as well as giving it. Follow his life through healing, generosity, loss and new beginnings, guided by companions’ accounts and family memories."
+      "opening_summary": "John Tanner’s story includes receiving help as well as giving it. Follow his family from New York to Kirtland and beyond, through healing, gifts, loans and hardship, guided by companions' accounts and family memories."
     },
     {
       "id": "eleazer-miller",
@@ -406,7 +406,7 @@
           "caption_boundary": "Minutes establish95cent donation, not attendance, recipient or hand-to-hand moment."
         }
       ],
-      "hero_unit_id": "miller-search-before-witness",
+      "hero_unit_id": "miller-teaching-brigham",
       "visual_rule": "First reviewed scene is the opening hero, shown once. Every subsequent reviewed scene introduces its own one-or-two-paragraph unit.",
       "reflection_prompts": [
         "How can patient study and another person’s testimony work together?",
@@ -437,7 +437,17 @@
         "miller-westward-service",
         "miller-relief-donation"
       ],
-      "opening_summary": "A simple testimony helped Brigham Young find his way toward faith. Meet Eleazer Miller, the man who shared it, and follow his missionary service and family’s journey west."
+      "opening_summary": "A simple testimony helped Brigham Young find his way toward faith. Meet the missionary behind that testimony, then follow Eleazer's service through years of travel, practical help and his family's journey west.",
+      "hero": {
+        "id": "miller-teaching-brigham",
+        "title": "A testimony that reached Brigham Young",
+        "sources": [
+          {
+            "label": "Brigham Young recalls Eleazer Miller’s testimony",
+            "url": "https://www.churchofjesuschrist.org/study/manual/teaching-seminary-preservice-readings-religion-370-471-and-475/teaching-by-the-spirit-the-language-of-inspiration?lang=eng"
+          }
+        ]
+      }
     },
     {
       "id": "john-rowe-moyle",
@@ -680,7 +690,7 @@
         "moyle-return-to-craft",
         "moyle-holiness-inscription"
       ],
-      "opening_summary": "John Rowe Moyle brought his family and stonecutting skills to Utah. Follow his story through injury, recovery and temple service, with the records and family memories that preserve it."
+      "opening_summary": "John Rowe Moyle brought his family and stonecutting skills to Utah. Follow his family across the ocean and plains, then through injury, recovery and temple service, with journal passages and family memories along the way."
     }
   ],
   "editorial_boundaries": [

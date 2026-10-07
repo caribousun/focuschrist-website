@@ -1279,18 +1279,18 @@
     {
       "title": "A listener who wanted to know",
       "category": "Gospel Studies",
-      "thumbnail": "/assets/page-art/history-stories/miller-search-before-witness-full.webp",
+      "thumbnail": "/assets/page-art/history-stories/miller-search-before-witness-960.webp",
       "fullImage": "/assets/page-art/history-stories/miller-search-before-witness-full.webp",
       "alt": "A young Brigham Young reads an open book at a wooden table.",
       "id": "art-babb29b0491c",
       "occurrences": [
         {
-          "id": "source-6e47c264edd1",
+          "id": "source-2cb842860531",
           "page": "/history/eleazer-miller.html",
           "pageTitle": "Eleazer Miller: a simple witness and a continuing life",
           "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"../assets/page-art/history-stories/miller-search-before-witness-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/miller-search-before-witness-full.webp\"])",
+          "selector": "a[href=\"../assets/page-art/history-stories/miller-search-before-witness-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/miller-search-before-witness-960.webp\"])",
           "title": "A listener who wanted to know"
         }
       ],
@@ -2570,6 +2570,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/rt-sung-testimony-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/rt-sung-testimony-960.webp\"])",
           "title": "A testimony sung together"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "A testimony that reached Brigham Young",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/history-stories/miller-teaching-brigham-master.png",
+      "fullImage": "/assets/page-art/history-stories/miller-teaching-brigham-master.png",
+      "alt": "Eleazer Miller speaks with Brigham Young outside a rural carpenter’s workshop.",
+      "id": "art-7f1d8a070b53",
+      "occurrences": [
+        {
+          "id": "source-89ea73a6ea0c",
+          "page": "/history/eleazer-miller.html",
+          "pageTitle": "Eleazer Miller: a simple witness and a continuing life",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/history-stories/miller-teaching-brigham-master.png\"]:has(img[src=\"../assets/page-art/history-stories/miller-teaching-brigham-master.png\"])",
+          "title": "A testimony that reached Brigham Young"
         }
       ],
       "categories": [
@@ -22733,14 +22755,14 @@
     }
   ],
   "stats": {
-    "artworks": 1024,
-    "occurrences": 1029,
+    "artworks": 1025,
+    "occurrences": 1030,
     "byKind": {
       "artwork": 63,
       "hero": 42,
       "legacy": 39,
       "missionary": 13,
-      "topic": 925
+      "topic": 926
     }
   }
 }
