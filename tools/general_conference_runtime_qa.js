@@ -22,12 +22,15 @@ const groups = sets.map(([id, open, texts]) => element({ open, dataset: { confer
   cards: texts.map(text => element({ dataset: { conferenceSearch: text } })),
   querySelectorAll() { return this.cards; } }));
 const cards = groups.flatMap(g => g.cards);
+const archive = element({ open: false, dataset: { archiveSession: 'april-saturday-morning' } });
+const archiveCard = element({ dataset: { archiveTalk: '11oaks', archiveSearch: 'Introduction Dallin H. Oaks' } });
 const nodes = { '#conference-search': search, '#conference-session': session,
   '[data-conference-reset]': reset, '[data-conference-status]': status,
   '[data-conference-empty]': empty, '[data-conference-controls]': controls };
 const root = { querySelector: selector => nodes[selector] || null,
   querySelectorAll: selector => ({ '[data-conference-session]': groups,
-    '[data-conference-talk]': cards, '[data-conference-clear]': [secondaryReset] })[selector] || [] };
+    '[data-conference-talk]': cards, '[data-conference-clear]': [secondaryReset],
+    '[data-archive-session]': [archive], '[data-archive-talk]': [archiveCard] })[selector] || [] };
 vm.runInNewContext(source, { document: { getElementById: () => root } });
 const visible = () => cards.filter(card => !card.hidden);
 function query(value, selected = 'all') { search.value = value; session.value = selected; search.events.input(); }
@@ -52,6 +55,9 @@ assert.deepEqual(groups.map(g => g.open), [true, false, false, false], 'reset re
 query('   '); assert.equal(reset.disabled, true, 'whitespace does not activate filters');
 query('', 'saturday-afternoon'); assert.equal(visible().length, 2, 'session-only browsing works');
 assert.equal(groups[1].open, true);
+assert.equal(archive.open, false, 'October search must leave April archive disclosure untouched');
+assert.equal(archive.hidden, false, 'October session filter must not hide archived April sessions');
+assert.equal(archiveCard.hidden, false, 'October search must not hide April archive cards');
 vm.runInNewContext(source, { document: { getElementById: () => null } });
 const common = fs.readFileSync(path.join(__dirname, '..', 'site-common.js'), 'utf8');
 const migrationStart = common.indexOf('const conferenceLegacyAnchors');

@@ -119,6 +119,20 @@ def before_search_hitbox(data):
     return data
 
 
+CONFERENCE_VERSION = '20261007-october-archive-1'
+CONFERENCE_CURRENT = b'.fc-conference-sessions details[open]>summary'
+CONFERENCE_PRIOR = b'.fc-conference-sessions details[open] summary'
+
+
+def before_conference_archive(data):
+    """Two exact direct-child selectors isolate nested April session states."""
+    if data.count(CONFERENCE_CURRENT) == 2 and CONFERENCE_PRIOR not in data:
+        prior = data.replace(CONFERENCE_CURRENT, CONFERENCE_PRIOR)
+        if hashlib.sha256(prior).hexdigest() == FILES['general-conference-section.css']['after_sha256']:
+            return prior
+    return data
+
+
 def historical_style_bytes(data):
     """Recover exact prior bytes only from an exact registered current file.
 
@@ -126,6 +140,7 @@ def historical_style_bytes(data):
     reviewed bytes. The mandatory current-file checks separately reject stale
     files and any mutation to the approved anchor-only transformation.
     """
+    data = before_conference_archive(data)
     data = before_art_caption_gap(data)
     data = before_mobile_nav(data)
     data = before_source_rows(data)
@@ -163,6 +178,10 @@ def historical_style_bytes(data):
 
 def reviewed_anchor_style(name, data):
     record = FILES.get(name)
+    if name == 'general-conference-section.css':
+        prior = before_conference_archive(data)
+        if prior == data: return False
+        data = prior
     if name == 'art-study-enrichment.css':
         if hashlib.sha256(data).hexdigest() != ART_CAPTION_GAP_SHA256: return False
         data = before_art_caption_gap(data)
@@ -209,12 +228,21 @@ def check():
             continue
         for filename, version in re.findall(r'([\w-]+\.css)\?v=([\w.-]+)', path.read_text(encoding='utf-8')):
             expected = ART_STUDY_NAV_VERSION if filename == 'art-study-enrichment.css' else '20261004-joseph-heroes-1' if filename == 'joseph-smith-likeness.css' and rel in {'joseph-smith-likeness.html','joseph-smith-portrait-research.html'} else JOURNEY_PICKER_VERSION if filename == 'jesus-journey.css' else MOBILE_NAV_VERSION if filename == 'site-system.css' else SEARCH_VERSION if filename == 'site-search.css' else TOPIC_DESKTOP_VERSION if filename == 'topic-study-pages.css' else CONTRACT['version']
+            if filename == 'general-conference-section.css':
+                expected = CONFERENCE_VERSION
             if filename in FILES and version != expected:
                 errors.append('Stale anchor stylesheet: ' + rel + ': ' + filename)
     return errors
 
 
 def self_test():
+    conference = (ROOT / 'general-conference-section.css').read_bytes()
+    for mutation in (conference.replace(CONFERENCE_CURRENT, CONFERENCE_PRIOR),
+                     conference.replace(CONFERENCE_CURRENT, CONFERENCE_PRIOR, 1),
+                     conference.replace(CONFERENCE_CURRENT, b'.fc-conference-sessions details[open]~summary', 1),
+                     conference + b'\nbody{color:red}'):
+        assert mutation != conference
+        assert not reviewed_anchor_style('general-conference-section.css', mutation)
     for name in FILES:
         data = (ROOT / name).read_bytes()
         assert reviewed_anchor_style(name, data), name

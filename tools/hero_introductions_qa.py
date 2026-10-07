@@ -191,9 +191,28 @@ def restore_timeline_navigation(route, text, record):
     return text[:start] + record['new_opening'] + text[end:]
 
 
+def restore_conference_period(route, text, record):
+    """Invert only Wyatt's October collection words; retain the original review."""
+    if route != 'general-conference.html':
+        return text
+    replacements = (
+        ('Explore the complete April 2026 collection', 'Explore the complete October 2026 collection'),
+        ('<span>April 2026</span>', '<span>October 2026</span>'),
+        ('<span>37 messages</span>', '<span>38 messages</span>'),
+    )
+    expected = record['new_opening']
+    for old, new in replacements:
+        assert expected.count(old) == 1 and new not in expected
+        expected = expected.replace(old, new, 1)
+    start, end = opening_range(route, text)
+    assert text[start:end] == expected, route + ': unreviewed October opening change'
+    return text[:start] + record['new_opening'] + text[end:]
+
+
 def assert_current_opening(route, text, registry=None):
     record = validated_record(route, registry)
     text = restore_timeline_navigation(route, text, record)
+    text = restore_conference_period(route, text, record)
     start, end = opening_range(route, text)
     current = text[start:end]
     assert text[max(0, start - 120):start] == record['current_context_before'], route + ': opening relocated'
@@ -208,6 +227,7 @@ def assert_current_opening(route, text, registry=None):
 def restore_reviewed_opening(route, text, registry=None):
     record = assert_current_opening(route, text, registry)
     text = restore_timeline_navigation(route, text, record)
+    text = restore_conference_period(route, text, record)
     start, end = opening_range(route, text)
     restored = text[start:end].replace(record['new_fragment'], record['old_fragment'], 1)
     assert restored == record['old_opening']
@@ -245,6 +265,13 @@ def self_test():
                 'navigation-in-old-position': actual.replace(actual[start:end], record['new_opening'], 1).replace(anchor + '\n    ' + nav, anchor, 1),
                 'navigation-before-paragraph': actual.replace(anchor + '\n    ' + nav, nav + anchor, 1),
                 'unrelated-overview-change': actual.replace(anchor, anchor.replace('</p>', 'UNREVIEWED</p>'), 1),
+            })
+        if route == 'general-conference.html':
+            mutations.update({
+                'stale-conference-month': actual.replace('Explore the complete October 2026', 'Explore the complete April 2026', 1),
+                'stale-conference-stat': actual.replace('<span>October 2026</span>', '<span>April 2026</span>', 1),
+                'stale-conference-count': actual.replace('<span>38 messages</span>', '<span>37 messages</span>', 1),
+                'unknown-conference-month': actual.replace('<span>October 2026</span>', '<span>April 2027</span>', 1),
             })
         for label, broken in mutations.items():
             assert broken != actual, (route, label, 'inactive fixture')
