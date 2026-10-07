@@ -1,0 +1,817 @@
+{
+  "baselineRef": "83a22ee68187bbce39d5abbbcaf3e5a52090dd1e",
+  "gapBaselineRef": "267d529b76d2beb7807c385ffb02d766580e7253",
+  "measurements": [
+    {
+      "viewport": 320,
+      "rootFont": "16px",
+      "summary": {
+        "x": 17,
+        "y": 12833.6875,
+        "width": 286,
+        "height": 61.59375,
+        "right": 303
+      },
+      "titleLines": 1,
+      "titleRects": [
+        {
+          "x": 35,
+          "y": 12853,
+          "right": 193.078125,
+          "height": 22
+        }
+      ],
+      "adjoiningGap": {
+        "pixels": 16,
+        "peerPixels": 16,
+        "finalOctoberOpen": false,
+        "archiveOpen": false
+      },
+      "count": {
+        "text": "37 messages · 4 sessions",
+        "rect": {
+          "x": 34,
+          "y": 12863.984375,
+          "width": 1,
+          "height": 1,
+          "right": 35
+        },
+        "display": "block",
+        "visibility": "visible",
+        "position": "absolute",
+        "clipPath": "inset(50%)",
+        "hidden": false,
+        "ariaHidden": null
+      },
+      "summaryFont": "19.2px",
+      "summaryWrap": "wrap",
+      "plus": "\"+\"",
+      "pageOverflow": 0,
+      "archiveTalks": 37,
+      "currentTalks": 38,
+      "upperLinks": [
+        {
+          "text": "Official October collection ↗",
+          "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10?lang=eng",
+          "rect": {
+            "x": 39,
+            "y": 1909.109375,
+            "width": 242,
+            "height": 65.09375,
+            "right": 281
+          }
+        },
+        {
+          "text": "April 2026 archive ↓",
+          "href": "#conference-april-2026",
+          "rect": {
+            "x": 39,
+            "y": 1986.203125,
+            "width": 242,
+            "height": 45.546875,
+            "right": 281
+          }
+        }
+      ],
+      "phase": "candidate",
+      "accessibility": {
+        "role": "DisclosureTriangle",
+        "name": "April 2026 archive 37 messages · 4 sessions +"
+      }
+    },
+    {
+      "viewport": 390,
+      "rootFont": "16px",
+      "summary": {
+        "x": 17,
+        "y": 12186.8125,
+        "width": 356,
+        "height": 61.59375,
+        "right": 373
+      },
+      "titleLines": 1,
+      "titleRects": [
+        {
+          "x": 35,
+          "y": 12206.125,
+          "right": 193.078125,
+          "height": 22
+        }
+      ],
+      "adjoiningGap": {
+        "pixels": 16,
+        "peerPixels": 16,
+        "finalOctoberOpen": false,
+        "archiveOpen": false
+      },
+      "count": {
+        "text": "37 messages · 4 sessions",
+        "rect": {
+          "x": 34,
+          "y": 12217.109375,
+          "width": 1,
+          "height": 1,
+          "right": 35
+        },
+        "display": "block",
+        "visibility": "visible",
+        "position": "absolute",
+        "clipPath": "inset(50%)",
+        "hidden": false,
+        "ariaHidden": null
+      },
+      "summaryFont": "19.2px",
+      "summaryWrap": "wrap",
+      "plus": "\"+\"",
+      "pageOverflow": 0,
+      "archiveTalks": 37,
+      "currentTalks": 38,
+      "upperLinks": [
+        {
+          "text": "Official October collection ↗",
+          "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10?lang=eng",
+          "rect": {
+            "x": 39,
+            "y": 1705.796875,
+            "width": 312,
+            "height": 45.546875,
+            "right": 351
+          }
+        },
+        {
+          "text": "April 2026 archive ↓",
+          "href": "#conference-april-2026",
+          "rect": {
+            "x": 39,
+            "y": 1763.34375,
+            "width": 312,
+            "height": 45.546875,
+            "right": 351
+          }
+        }
+      ],
+      "phase": "candidate",
+      "accessibility": {
+        "role": "DisclosureTriangle",
+        "name": "April 2026 archive 37 messages · 4 sessions +"
+      }
+    },
+    {
+      "viewport": 412,
+      "rootFont": "16px",
+      "summary": {
+        "x": 17,
+        "y": 12272.609375,
+        "width": 378,
+        "height": 61.59375,
+        "right": 395
+      },
+      "titleLines": 1,
+      "titleRects": [
+        {
+          "x": 35,
+          "y": 12291.921875,
+          "right": 193.078125,
+          "height": 22
+        }
+      ],
+      "adjoiningGap": {
+        "pixels": 16,
+        "peerPixels": 16,
+        "finalOctoberOpen": false,
+        "archiveOpen": false
+      },
+      "count": {
+        "text": "37 messages · 4 sessions",
+        "rect": {
+          "x": 34,
+          "y": 12302.90625,
+          "width": 1,
+          "height": 1,
+          "right": 35
+        },
+        "display": "block",
+        "visibility": "visible",
+        "position": "absolute",
+        "clipPath": "inset(50%)",
+        "hidden": false,
+        "ariaHidden": null
+      },
+      "summaryFont": "19.2px",
+      "summaryWrap": "wrap",
+      "plus": "\"+\"",
+      "pageOverflow": 0,
+      "archiveTalks": 37,
+      "currentTalks": 38,
+      "upperLinks": [
+        {
+          "text": "Official October collection ↗",
+          "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10?lang=eng",
+          "rect": {
+            "x": 39,
+            "y": 1705.796875,
+            "width": 334,
+            "height": 45.546875,
+            "right": 373
+          }
+        },
+        {
+          "text": "April 2026 archive ↓",
+          "href": "#conference-april-2026",
+          "rect": {
+            "x": 39,
+            "y": 1763.34375,
+            "width": 334,
+            "height": 45.546875,
+            "right": 373
+          }
+        }
+      ],
+      "phase": "candidate",
+      "accessibility": {
+        "role": "DisclosureTriangle",
+        "name": "April 2026 archive 37 messages · 4 sessions +"
+      }
+    },
+    {
+      "viewport": 700,
+      "rootFont": "16px",
+      "summary": {
+        "x": 17,
+        "y": 14104.296875,
+        "width": 666,
+        "height": 61.59375,
+        "right": 683
+      },
+      "titleLines": 1,
+      "titleRects": [
+        {
+          "x": 35,
+          "y": 14123.609375,
+          "right": 193.078125,
+          "height": 22
+        }
+      ],
+      "adjoiningGap": {
+        "pixels": 16,
+        "peerPixels": 16,
+        "finalOctoberOpen": false,
+        "archiveOpen": false
+      },
+      "count": {
+        "text": "37 messages · 4 sessions",
+        "rect": {
+          "x": 34,
+          "y": 14134.59375,
+          "width": 1,
+          "height": 1,
+          "right": 35
+        },
+        "display": "block",
+        "visibility": "visible",
+        "position": "absolute",
+        "clipPath": "inset(50%)",
+        "hidden": false,
+        "ariaHidden": null
+      },
+      "summaryFont": "19.2px",
+      "summaryWrap": "wrap",
+      "plus": "\"+\"",
+      "pageOverflow": 0,
+      "archiveTalks": 37,
+      "currentTalks": 38,
+      "upperLinks": [
+        {
+          "text": "Official October collection ↗",
+          "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10?lang=eng",
+          "rect": {
+            "x": 39,
+            "y": 1671.28125,
+            "width": 622,
+            "height": 45.546875,
+            "right": 661
+          }
+        },
+        {
+          "text": "April 2026 archive ↓",
+          "href": "#conference-april-2026",
+          "rect": {
+            "x": 39,
+            "y": 1728.828125,
+            "width": 622,
+            "height": 45.546875,
+            "right": 661
+          }
+        }
+      ],
+      "phase": "candidate",
+      "accessibility": {
+        "role": "DisclosureTriangle",
+        "name": "April 2026 archive 37 messages · 4 sessions +"
+      }
+    },
+    {
+      "viewport": 701,
+      "rootFont": "16px",
+      "summary": {
+        "x": 25,
+        "y": 7883.6875,
+        "width": 651,
+        "height": 69.125,
+        "right": 676
+      },
+      "titleLines": 1,
+      "titleRects": [
+        {
+          "x": 49,
+          "y": 7904.6875,
+          "right": 233.421875,
+          "height": 26
+        }
+      ],
+      "adjoiningGap": {
+        "pixels": 65,
+        "peerPixels": 16,
+        "finalOctoberOpen": false,
+        "archiveOpen": false
+      },
+      "count": {
+        "text": "37 messages · 4 sessions",
+        "rect": {
+          "x": 249.421875,
+          "y": 7908.734375,
+          "width": 147.1875,
+          "height": 19.03125,
+          "right": 396.609375
+        },
+        "display": "block",
+        "visibility": "visible",
+        "position": "static",
+        "clipPath": "none",
+        "hidden": false,
+        "ariaHidden": null
+      },
+      "summaryFont": "22.4px",
+      "summaryWrap": "nowrap",
+      "plus": "\"+\"",
+      "pageOverflow": 0,
+      "archiveTalks": 37,
+      "currentTalks": 38,
+      "upperLinks": [
+        {
+          "text": "Official October collection ↗",
+          "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10?lang=eng",
+          "rect": {
+            "x": 53,
+            "y": 1484.71875,
+            "width": 242.34375,
+            "height": 45.546875,
+            "right": 295.34375
+          }
+        },
+        {
+          "text": "April 2026 archive ↓",
+          "href": "#conference-april-2026",
+          "rect": {
+            "x": 307.34375,
+            "y": 1484.71875,
+            "width": 181.359375,
+            "height": 45.546875,
+            "right": 488.703125
+          }
+        }
+      ],
+      "phase": "candidate",
+      "accessibility": {
+        "role": "DisclosureTriangle",
+        "name": "April 2026 archive 37 messages · 4 sessions +"
+      }
+    },
+    {
+      "viewport": 1280,
+      "rootFont": "16px",
+      "summary": {
+        "x": 25,
+        "y": 6204.140625,
+        "width": 1230,
+        "height": 69.125,
+        "right": 1255
+      },
+      "titleLines": 1,
+      "titleRects": [
+        {
+          "x": 49,
+          "y": 6225.140625,
+          "right": 233.421875,
+          "height": 26
+        }
+      ],
+      "adjoiningGap": {
+        "pixels": 65,
+        "peerPixels": 16,
+        "finalOctoberOpen": false,
+        "archiveOpen": false
+      },
+      "count": {
+        "text": "37 messages · 4 sessions",
+        "rect": {
+          "x": 249.421875,
+          "y": 6229.1875,
+          "width": 147.1875,
+          "height": 19.03125,
+          "right": 396.609375
+        },
+        "display": "block",
+        "visibility": "visible",
+        "position": "static",
+        "clipPath": "none",
+        "hidden": false,
+        "ariaHidden": null
+      },
+      "summaryFont": "22.4px",
+      "summaryWrap": "nowrap",
+      "plus": "\"+\"",
+      "pageOverflow": 0,
+      "archiveTalks": 37,
+      "currentTalks": 38,
+      "upperLinks": [
+        {
+          "text": "Official October collection ↗",
+          "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10?lang=eng",
+          "rect": {
+            "x": 679.375,
+            "y": 1327.328125,
+            "width": 242.34375,
+            "height": 45.546875,
+            "right": 921.71875
+          }
+        },
+        {
+          "text": "April 2026 archive ↓",
+          "href": "#conference-april-2026",
+          "rect": {
+            "x": 933.71875,
+            "y": 1327.328125,
+            "width": 181.359375,
+            "height": 45.546875,
+            "right": 1115.078125
+          }
+        }
+      ],
+      "phase": "candidate",
+      "accessibility": {
+        "role": "DisclosureTriangle",
+        "name": "April 2026 archive 37 messages · 4 sessions +"
+      }
+    },
+    {
+      "viewport": 320,
+      "rootFont": "32px",
+      "summary": {
+        "x": 17,
+        "y": 29156.59375,
+        "width": 286,
+        "height": 195.046875,
+        "right": 303
+      },
+      "titleLines": 2,
+      "titleRects": [
+        {
+          "x": 35,
+          "y": 29177.59375,
+          "right": 218.140625,
+          "height": 43
+        },
+        {
+          "x": 35,
+          "y": 29227.515625,
+          "right": 158.75,
+          "height": 43
+        }
+      ],
+      "adjoiningGap": {
+        "pixels": 16,
+        "peerPixels": 16,
+        "finalOctoberOpen": false,
+        "archiveOpen": false
+      },
+      "count": {
+        "text": "37 messages · 4 sessions",
+        "rect": {
+          "x": 34,
+          "y": 29253.609375,
+          "width": 1,
+          "height": 1,
+          "right": 35
+        },
+        "display": "block",
+        "visibility": "visible",
+        "position": "absolute",
+        "clipPath": "inset(50%)",
+        "hidden": false,
+        "ariaHidden": null
+      },
+      "summaryFont": "38.4px",
+      "summaryWrap": "wrap",
+      "plus": "\"+\"",
+      "pageOverflow": 0,
+      "archiveTalks": 37,
+      "currentTalks": 38,
+      "upperLinks": [
+        {
+          "text": "Official October collection ↗",
+          "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10?lang=eng",
+          "rect": {
+            "x": 39,
+            "y": 3084.859375,
+            "width": 242,
+            "height": 143.28125,
+            "right": 281
+          }
+        },
+        {
+          "text": "April 2026 archive ↓",
+          "href": "#conference-april-2026",
+          "rect": {
+            "x": 39,
+            "y": 3240.140625,
+            "width": 242,
+            "height": 104.1875,
+            "right": 281
+          }
+        }
+      ],
+      "phase": "200-percent-root-text",
+      "accessibility": {
+        "role": "DisclosureTriangle",
+        "name": "April 2026 archive 37 messages · 4 sessions +"
+      }
+    },
+    {
+      "viewport": 390,
+      "rootFont": "32px",
+      "summary": {
+        "x": 17,
+        "y": 24824.859375,
+        "width": 356,
+        "height": 145.125,
+        "right": 373
+      },
+      "titleLines": 1,
+      "titleRects": [
+        {
+          "x": 35,
+          "y": 24845.859375,
+          "right": 351.15625,
+          "height": 43
+        }
+      ],
+      "adjoiningGap": {
+        "pixels": 16,
+        "peerPixels": 16,
+        "finalOctoberOpen": false,
+        "archiveOpen": false
+      },
+      "count": {
+        "text": "37 messages · 4 sessions",
+        "rect": {
+          "x": 34,
+          "y": 24896.921875,
+          "width": 1,
+          "height": 1,
+          "right": 35
+        },
+        "display": "block",
+        "visibility": "visible",
+        "position": "absolute",
+        "clipPath": "inset(50%)",
+        "hidden": false,
+        "ariaHidden": null
+      },
+      "summaryFont": "38.4px",
+      "summaryWrap": "wrap",
+      "plus": "\"+\"",
+      "pageOverflow": 0,
+      "archiveTalks": 37,
+      "currentTalks": 38,
+      "upperLinks": [
+        {
+          "text": "Official October collection ↗",
+          "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10?lang=eng",
+          "rect": {
+            "x": 39,
+            "y": 3039.0625,
+            "width": 312,
+            "height": 104.1875,
+            "right": 351
+          }
+        },
+        {
+          "text": "April 2026 archive ↓",
+          "href": "#conference-april-2026",
+          "rect": {
+            "x": 39,
+            "y": 3155.25,
+            "width": 312,
+            "height": 104.1875,
+            "right": 351
+          }
+        }
+      ],
+      "phase": "200-percent-root-text",
+      "accessibility": {
+        "role": "DisclosureTriangle",
+        "name": "April 2026 archive 37 messages · 4 sessions +"
+      }
+    },
+    {
+      "viewport": 412,
+      "rootFont": "32px",
+      "summary": {
+        "x": 17,
+        "y": 23748.5625,
+        "width": 378,
+        "height": 145.125,
+        "right": 395
+      },
+      "titleLines": 1,
+      "titleRects": [
+        {
+          "x": 35,
+          "y": 23769.5625,
+          "right": 351.15625,
+          "height": 43
+        }
+      ],
+      "adjoiningGap": {
+        "pixels": 16,
+        "peerPixels": 16,
+        "finalOctoberOpen": false,
+        "archiveOpen": false
+      },
+      "count": {
+        "text": "37 messages · 4 sessions",
+        "rect": {
+          "x": 34,
+          "y": 23820.625,
+          "width": 1,
+          "height": 1,
+          "right": 35
+        },
+        "display": "block",
+        "visibility": "visible",
+        "position": "absolute",
+        "clipPath": "inset(50%)",
+        "hidden": false,
+        "ariaHidden": null
+      },
+      "summaryFont": "38.4px",
+      "summaryWrap": "wrap",
+      "plus": "\"+\"",
+      "pageOverflow": 0,
+      "archiveTalks": 37,
+      "currentTalks": 38,
+      "upperLinks": [
+        {
+          "text": "Official October collection ↗",
+          "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10?lang=eng",
+          "rect": {
+            "x": 39,
+            "y": 2732.9375,
+            "width": 334,
+            "height": 104.1875,
+            "right": 373
+          }
+        },
+        {
+          "text": "April 2026 archive ↓",
+          "href": "#conference-april-2026",
+          "rect": {
+            "x": 39,
+            "y": 2849.125,
+            "width": 334,
+            "height": 65.09375,
+            "right": 373
+          }
+        }
+      ],
+      "phase": "200-percent-root-text",
+      "accessibility": {
+        "role": "DisclosureTriangle",
+        "name": "April 2026 archive 37 messages · 4 sessions +"
+      }
+    }
+  ],
+  "negatives": [
+    {
+      "width": 320,
+      "baselineHeight": 94.546875,
+      "candidateHeight": 61.59375,
+      "baselineDefects": [
+        "archive count still occupies a visible line",
+        "archive header is not compact",
+        "archive gap differs from 16px neighboring pill rhythm"
+      ],
+      "desktopUnchanged": false
+    },
+    {
+      "width": 390,
+      "baselineHeight": 94.546875,
+      "candidateHeight": 61.59375,
+      "baselineDefects": [
+        "archive count still occupies a visible line",
+        "archive header is not compact",
+        "archive gap differs from 16px neighboring pill rhythm"
+      ],
+      "desktopUnchanged": false
+    },
+    {
+      "width": 412,
+      "baselineHeight": 94.546875,
+      "candidateHeight": 61.59375,
+      "baselineDefects": [
+        "archive count still occupies a visible line",
+        "archive header is not compact",
+        "archive gap differs from 16px neighboring pill rhythm"
+      ],
+      "desktopUnchanged": false
+    },
+    {
+      "width": 700,
+      "baselineHeight": 61.59375,
+      "candidateHeight": 61.59375,
+      "baselineDefects": [
+        "archive count still occupies a visible line",
+        "archive gap differs from 16px neighboring pill rhythm"
+      ],
+      "desktopUnchanged": false
+    },
+    {
+      "width": 701,
+      "baselineHeight": 69.125,
+      "candidateHeight": 69.125,
+      "baselineDefects": [],
+      "desktopUnchanged": true
+    },
+    {
+      "width": 1280,
+      "baselineHeight": 69.125,
+      "candidateHeight": 69.125,
+      "baselineDefects": [],
+      "desktopUnchanged": true
+    },
+    {
+      "case": "released excessive archive gap",
+      "width": 320,
+      "baselineGap": 57,
+      "candidateGap": 16,
+      "peerGap": 16,
+      "desktopUnchanged": false
+    },
+    {
+      "case": "released excessive archive gap",
+      "width": 390,
+      "baselineGap": 57,
+      "candidateGap": 16,
+      "peerGap": 16,
+      "desktopUnchanged": false
+    },
+    {
+      "case": "released excessive archive gap",
+      "width": 412,
+      "baselineGap": 57,
+      "candidateGap": 16,
+      "peerGap": 16,
+      "desktopUnchanged": false
+    },
+    {
+      "case": "released excessive archive gap",
+      "width": 700,
+      "baselineGap": 57,
+      "candidateGap": 16,
+      "peerGap": 16,
+      "desktopUnchanged": false
+    },
+    {
+      "case": "released excessive archive gap",
+      "width": 701,
+      "baselineGap": 65,
+      "candidateGap": 65,
+      "peerGap": 16,
+      "desktopUnchanged": true
+    },
+    {
+      "case": "released excessive archive gap",
+      "width": 1280,
+      "baselineGap": 65,
+      "candidateGap": 65,
+      "peerGap": 16,
+      "desktopUnchanged": true
+    },
+    {
+      "case": "display-none count",
+      "rejected": true
+    }
+  ],
+  "status": "PASS"
+}

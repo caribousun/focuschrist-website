@@ -7,10 +7,11 @@ const http = require('node:http');
 const {execFileSync} = require('node:child_process');
 const {chromium} = require('playwright');
 const root = path.resolve(__dirname, '..');
-const out = path.join(root, '.qa-artifacts', 'conference-archive-mobile');
+const out = path.join(root, '.qa-artifacts', 'conference-archive-mobile-gap');
 const baselineRef = '83a22ee68187bbce39d5abbbcaf3e5a52090dd1e';
+const gapBaselineRef = '267d529b76d2beb7807c385ffb02d766580e7253';
 const selector = '#conference-april-2026 > summary';
-const result = {baselineRef, measurements: [], negatives: [], status: 'INCOMPLETE'};
+const result = {baselineRef, gapBaselineRef, measurements: [], negatives: [], status: 'INCOMPLETE'};
 
 function measure() {
   const summary = document.querySelector('#conference-april-2026 > summary');
@@ -23,8 +24,14 @@ function measure() {
   }
   const distinctLines = [...new Set(lineRects.map(r => Math.round(r.y)))].length;
   const cs = getComputedStyle(count), ss = getComputedStyle(summary);
+  const finalOctober=document.querySelector('[data-conference-session="sunday-afternoon"]');
+  const previousOctober=document.querySelector('[data-conference-session="sunday-morning"]');
+  const finalBox=finalOctober.getBoundingClientRect(), previousBox=previousOctober.getBoundingClientRect();
+  const archiveBox=summary.parentElement.getBoundingClientRect();
+  const adjoiningGap={pixels:archiveBox.top-finalBox.bottom,peerPixels:finalBox.top-previousBox.bottom,
+    finalOctoberOpen:finalOctober.open,archiveOpen:summary.parentElement.open};
   return {viewport:innerWidth, rootFont:getComputedStyle(document.documentElement).fontSize,
-    summary:rect(summary), titleLines:distinctLines, titleRects:lineRects,
+    summary:rect(summary), titleLines:distinctLines, titleRects:lineRects, adjoiningGap,
     count:{text:count.textContent.trim(), rect:rect(count), display:cs.display, visibility:cs.visibility,
       position:cs.position, clipPath:cs.clipPath, hidden:count.hidden, ariaHidden:count.getAttribute('aria-hidden')},
     summaryFont:ss.fontSize, summaryWrap:ss.flexWrap, plus:getComputedStyle(summary,'::after').content,
@@ -40,6 +47,7 @@ function normalMobileDefects(m) {
   if (m.count.position !== 'absolute' || m.count.rect.width > 1.1 || m.count.rect.height > 1.1 || m.count.clipPath !== 'inset(50%)') errors.push('archive count still occupies a visible line');
   if (m.summary.height > 70) errors.push('archive header is not compact');
   if (m.pageOverflow > 2) errors.push('page horizontal overflow');
+  if (Math.abs(m.adjoiningGap.pixels-16)>1 || Math.abs(m.adjoiningGap.pixels-m.adjoiningGap.peerPixels)>1) errors.push('archive gap differs from 16px neighboring pill rhythm');
   return errors;
 }
 
@@ -110,6 +118,7 @@ async function preserved(page, cdp, m) {
       await load(width); await page.addStyleTag({content:'html{font-size:200%!important}'});
       const m=await page.evaluate(measure);m.phase='200-percent-root-text';await preserved(page,cdp,m);
       assert.equal(m.rootFont,'32px');assert.equal(m.summaryWrap,'wrap');
+      assert(Math.abs(m.adjoiningGap.pixels-16)<1,'enlarged text keeps positive 16px archive separation');
       for(const r of m.titleRects){assert(r.x>=m.summary.x-1 && r.right<=m.summary.right+1,'enlarged title stays inside summary');assert(r.y+r.height<=m.summary.y+m.summary.height+1,'enlarged text not clipped');}
       await page.locator(selector).click();assert.notEqual(await page.locator('#conference-april-2026').getAttribute('open'),null);
       await page.locator(selector).screenshot({path:path.join(out,`${width}-200percent-summary.png`)});
@@ -128,12 +137,34 @@ async function preserved(page, cdp, m) {
       await page.unroute(pattern);await page.reload({waitUntil:'load'});
       const restored=await page.evaluate(measure);if(width<=700)assert.deepEqual(normalMobileDefects(restored),[],'candidate route restored');
     }
+    // PR466 already fixed title wrapping. Its unchanged excessive gap is a distinct real negative.
+    const gapBaseline=execFileSync('git',['show',`${gapBaselineRef}:general-conference-section.css`],{cwd:root});
+    for(const width of [320,390,412,700,701,1280]) {
+      await load(width);const current=await page.evaluate(measure);
+      assert.equal(current.adjoiningGap.finalOctoberOpen,false,'measure collapsed final October pill');
+      assert.equal(current.adjoiningGap.archiveOpen,false,'measure collapsed April pill');
+      await page.route(pattern,route=>route.fulfill({contentType:'text/css',body:gapBaseline}));
+      await page.reload({waitUntil:'load'});await page.evaluate(()=>document.fonts.ready);const before=await page.evaluate(measure);
+      if(width<=700) {
+        assert(Math.abs(before.adjoiningGap.pixels-56.8)<1,'released excess gap must reproduce around56.8px');
+        assert(normalMobileDefects(before).includes('archive gap differs from 16px neighboring pill rhythm'),'released gap must fail the gap-specific check');
+        assert.equal(before.titleLines,1,'prior title fix remains valid in gap-negative baseline');
+        assert.deepEqual(normalMobileDefects(current),[],`candidate gap ${width}`);
+        assert(Math.abs(before.summary.height-current.summary.height)<1,'spacing fix does not resize the archive pill');
+      } else {
+        assert(Math.abs(before.adjoiningGap.pixels-current.adjoiningGap.pixels)<1,'desktop adjoining gap unchanged');
+        for(const field of ['x','y','width','height'])assert(Math.abs(before.summary[field]-current.summary[field])<1,`gap correction desktop ${width}.${field} unchanged`);
+      }
+      result.negatives.push({case:'released excessive archive gap',width,baselineGap:before.adjoiningGap.pixels,candidateGap:current.adjoiningGap.pixels,peerGap:current.adjoiningGap.peerPixels,desktopUnchanged:width>700});
+      await page.unroute(pattern);await page.reload({waitUntil:'load'});
+      if(width<=700)assert.deepEqual(normalMobileDefects(await page.evaluate(measure)),[],'candidate gap route restored');
+    }
     // A display:none shortcut must not pass accessible preservation.
     await load(390);const hidden=await page.addStyleTag({content:'#conference-april-2026 > summary > .gc-session-count{display:none!important}'});
     let rejected=false;try{await preserved(page,cdp,await page.evaluate(measure));}catch{rejected=true;}
     assert(rejected,'inaccessible hidden-count mutation must fail');await hidden.evaluate(e=>e.remove());
     result.negatives.push({case:'display-none count',rejected});result.status='PASS';
-    console.log('PASS: 6 widths, original390px wrap negative, accessible count, native keyboard/nested archive37, unchanged upper links/desktop geometry and200% text containment.');
+    console.log('PASS: 6 widths, original wrap and released56.8px gap negatives,16px mobile rhythm, accessible count, native keyboard/nested archive37, unchanged upper links/desktop geometry and200% text containment.');
   } catch(e) {result.status='FAIL';result.error=e.stack;throw e;}
   finally {fs.writeFileSync(path.join(out,'results.json'),JSON.stringify(result,null,2)+'\n');if(browser)await browser.close();await new Promise(r=>server.close(r));}
 })().catch(e=>{console.error(e);process.exitCode=1;});
