@@ -320,6 +320,12 @@ class NativeConferenceTests(unittest.TestCase):
         self.record['spec']['items_sha256'] = gate.canonical(self.ledger['items'])
 
     def test_exact_official_native_set(self): self.assertEqual(len(self.validate()), 38)
+    def test_historical_context_cannot_mutate_with_current_spec(self):
+        self.record['prior_page_context_bindings'][0]['spec']['page_context'] = copy.deepcopy(self.record['spec']['page_context'])
+        self.reject('historical native context binding')
+    def test_historical_binding_cannot_change(self):
+        self.record['prior_page_context_bindings'][0]['binding_sha256'] = '0' * 64
+        self.reject('historical native context binding')
     def test_wrong_month(self):
         self.change_ledger(lambda x: x['items'][0].update(url=x['items'][0]['url'].replace('/2026/10/', '/2026/04/')))
         self.reject('independently reviewed')

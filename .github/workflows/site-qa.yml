@@ -229,6 +229,7 @@ jobs:
           NODE_PATH="/tmp/focus-row-qa/node_modules:$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/study_alignment_browser_qa.js
           NODE_PATH=/tmp/focus-row-qa/node_modules node tools/content_boundaries_browser_qa.js
           NODE_PATH=/tmp/focus-row-qa/node_modules node tools/home_hero_height_browser_qa.js
+          NODE_PATH=/tmp/focus-row-qa/node_modules node tools/conference_alignment_browser_qa.js
           NODE_PATH=/tmp/focus-row-qa/node_modules node tools/footer_navigation_browser_qa.js
 
       - name: Save Answer opening viewport evidence

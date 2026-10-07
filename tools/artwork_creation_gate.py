@@ -292,6 +292,8 @@ def validate_native_conference(root, rejected):
         return set()
     record = json.loads(review_path.read_text(encoding='utf-8'))
     require(record.get('schema') == 1, 'Unknown native source review schema')
+    for historical in record.get('prior_page_context_bindings', []):
+        require(canonical(historical['spec']) == historical.get('binding_sha256'), 'Stale historical native context binding')
     spec = record['spec']
     require(spec.get('kind') == 'official-native-conference-thumbnails', 'Wrong native source kind')
     collection = 'https://www.churchofjesuschrist.org/study/general-conference/2026/10?lang=eng'

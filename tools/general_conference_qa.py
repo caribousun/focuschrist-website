@@ -59,7 +59,7 @@ style_bytes = (ROOT / 'general-conference-section.css').read_bytes()
 style = style_bytes.decode('utf-8')
 require(style.count('.fc-conference-sessions details[open]>summary') == 2 and '.fc-conference-sessions details[open] summary' not in style, 'nested archive state must style only the opened details own summary')
 from anchor_alignment_qa import reviewed_anchor_style, CONFERENCE_ROWS_APPENDIX, CONFERENCE_VERSION
-require(reviewed_anchor_style('general-conference-section.css', style_bytes), 'only exact archive selectors and visible-result row correction may change')
+require(reviewed_anchor_style('general-conference-section.css', style_bytes), 'only exact archive, visible-result rows and centered-controls corrections may change')
 conference_styles = [n.attrs.get('href') for n in all_nodes if n.tag == 'link' and 'general-conference-section.css' in n.attrs.get('href', '')]
 require(conference_styles == ['general-conference-section.css?v=' + CONFERENCE_VERSION], 'conference stylesheet requires exactly one current reference')
 corbridge_visuals = [n for n in all_nodes if n.tag == 'a'
@@ -205,7 +205,7 @@ if '--self-test' in sys.argv:
         'wrong archived month': source.replace('/2026/04/11oaks?', '/2026/10/11oaks?', 1),
         'archive opened initially': source.replace('id="conference-april-2026"', 'id="conference-april-2026" open', 1),
         'cropped sustaining image': source.replace('object-fit:contain', 'object-fit:cover', 1),
-        'stale conference CSS': source.replace('general-conference-section.css?v=20261007-october-visible-rows-2', 'general-conference-section.css?v=20260927-anchor-alignment-1', 1),
+        'stale conference CSS': source.replace('general-conference-section.css?v=20261007-conference-centered-controls-3', 'general-conference-section.css?v=20260927-anchor-alignment-1', 1),
     }
     for label, candidate in mutants.items():
         require(candidate != source, 'inactive negative fixture: ' + label)
