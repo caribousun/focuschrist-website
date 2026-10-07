@@ -192,7 +192,7 @@ def restore_timeline_navigation(route, text, record):
 
 
 def restore_conference_period(route, text, record):
-    """Invert only Wyatt's October collection words; retain the original review."""
+    """Invert exact October words and approved duplicate badges removal; retain original review."""
     if route != 'general-conference.html':
         return text
     replacements = (
@@ -204,6 +204,11 @@ def restore_conference_period(route, text, record):
     for old, new in replacements:
         assert expected.count(old) == 1 and new not in expected
         expected = expected.replace(old, new, 1)
+    # Wyatt approved deleting this redundant row after independent UI concurrence.
+    # Derive the candidate from the immutable reviewed opening; never relax its hash.
+    badges = '<div class="gc-stats"><span>October 2026</span><span>38 messages</span><span>4 sessions</span></div>'
+    assert expected.count(badges) == 1
+    expected = expected.replace(badges, '', 1)
     start, end = opening_range(route, text)
     assert text[start:end] == expected, route + ': unreviewed October opening change'
     return text[:start] + record['new_opening'] + text[end:]
@@ -269,9 +274,8 @@ def self_test():
         if route == 'general-conference.html':
             mutations.update({
                 'stale-conference-month': actual.replace('Explore the complete October 2026', 'Explore the complete April 2026', 1),
-                'stale-conference-stat': actual.replace('<span>October 2026</span>', '<span>April 2026</span>', 1),
-                'stale-conference-count': actual.replace('<span>38 messages</span>', '<span>37 messages</span>', 1),
-                'unknown-conference-month': actual.replace('<span>October 2026</span>', '<span>April 2027</span>', 1),
+                'duplicate-badges-returned': actual[:end - len('</header>')] + '<div class="gc-stats"><span>October 2026</span><span>38 messages</span><span>4 sessions</span></div>' + actual[end - len('</header>'):],
+                'unknown-conference-month': actual.replace('Explore the complete October 2026', 'Explore the complete April 2027', 1),
             })
         for label, broken in mutations.items():
             assert broken != actual, (route, label, 'inactive fixture')
