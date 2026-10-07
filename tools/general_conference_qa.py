@@ -59,7 +59,7 @@ style_bytes = (ROOT / 'general-conference-section.css').read_bytes()
 style = style_bytes.decode('utf-8')
 require(style.count('.fc-conference-sessions details[open]>summary') == 2 and '.fc-conference-sessions details[open] summary' not in style, 'nested archive state must style only the opened details own summary')
 from anchor_alignment_qa import reviewed_anchor_style, CONFERENCE_ROWS_APPENDIX, CONFERENCE_VERSION
-require(reviewed_anchor_style('general-conference-section.css', style_bytes), 'only exact archive, visible-result rows and centered-controls corrections may change')
+require(reviewed_anchor_style('general-conference-section.css', style_bytes), 'only exact archive, visible-result rows, centered-controls and accessible mobile archive-count corrections may change')
 conference_styles = [n.attrs.get('href') for n in all_nodes if n.tag == 'link' and 'general-conference-section.css' in n.attrs.get('href', '')]
 require(conference_styles == ['general-conference-section.css?v=' + CONFERENCE_VERSION], 'conference stylesheet requires exactly one current reference')
 corbridge_visuals = [n for n in all_nodes if n.tag == 'a'
@@ -108,6 +108,15 @@ require(len(groups) == 4, 'October 2026 has four sessions')
 require([sum('data-conference-talk' in n.attrs for n in g.walk()) for g in groups] == [9, 10, 9, 10], 'October official session order/counts must be preserved')
 archive = next((n for n in nodes if n.attrs.get('id') == 'conference-april-2026'), None)
 require(archive is not None and archive.tag == 'details' and 'open' not in archive.attrs, 'April must remain in a clearly collapsed native archive')
+archive_summaries = [n for n in archive.children if n.tag == 'summary']
+require(len(archive_summaries) == 1, 'archive needs one direct native summary')
+archive_summary = archive_summaries[0]
+archive_counts = [n for n in archive_summary.children if 'gc-session-count' in n.attrs.get('class', '').split()]
+require(len(archive_counts) == 1 and archive_counts[0].text().strip() == '37 messages · 4 sessions', 'archive count must remain as accessible summary text')
+require(all('hidden' not in n.attrs and n.attrs.get('aria-hidden', '').lower() != 'true'
+            and 'style' not in n.attrs for n in archive_summary.walk()),
+        'archive summary/count must not be hidden from assistive technology or restyled inline')
+require('April 2026 archive' in ' '.join(archive_summary.parts), 'archive title remains directly visible in its summary')
 archive_nodes = list(archive.walk())
 archive_cards = [n for n in archive_nodes if 'data-archive-talk' in n.attrs]
 archive_groups = [n for n in archive_nodes if 'data-archive-session' in n.attrs]
@@ -204,8 +213,12 @@ if '--self-test' in sys.argv:
         'archive leaks into search': source.replace('data-archive-talk="11oaks"', 'data-conference-talk="11oaks"', 1),
         'wrong archived month': source.replace('/2026/04/11oaks?', '/2026/10/11oaks?', 1),
         'archive opened initially': source.replace('id="conference-april-2026"', 'id="conference-april-2026" open', 1),
+        'archive count aria-hidden': source.replace('<span class="gc-session-count">37 messages', '<span class="gc-session-count" aria-hidden="true">37 messages', 1),
+        'archive count hidden': source.replace('<span class="gc-session-count">37 messages', '<span class="gc-session-count" hidden>37 messages', 1),
+        'archive count removed': source.replace('<span class="gc-session-count">37 messages · 4 sessions</span>', '', 1),
+        'archive count changed': source.replace('37 messages · 4 sessions', '36 messages · 4 sessions', 1),
         'cropped sustaining image': source.replace('object-fit:contain', 'object-fit:cover', 1),
-        'stale conference CSS': source.replace('general-conference-section.css?v=20261007-conference-centered-controls-3', 'general-conference-section.css?v=20260927-anchor-alignment-1', 1),
+        'stale conference CSS': source.replace('general-conference-section.css?v=' + CONFERENCE_VERSION, 'general-conference-section.css?v=20260927-anchor-alignment-1', 1),
     }
     for label, candidate in mutants.items():
         require(candidate != source, 'inactive negative fixture: ' + label)
