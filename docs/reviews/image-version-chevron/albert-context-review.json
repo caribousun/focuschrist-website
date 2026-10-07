@@ -1,0 +1,78 @@
+{
+  "reviewer": "Albert",
+  "verdict": "PASS",
+  "binding_sha256": "89c327d17301681f9c32cdfa5d5500652489a1268add62dcb45ae4c3ad4cc3eb",
+  "observed_at": "2026-10-07T02:16:34.826859+00:00",
+  "scope": "CSS-only selector chevron inset; prior artwork finished-pixel and original framing evidence inherited unchanged",
+  "geometry": {
+    "desktopBefore": {
+      "rect": {
+        "bottom": 884,
+        "height": 44,
+        "left": 533.375,
+        "right": 681.375,
+        "top": 840,
+        "width": 148,
+        "x": 533.375,
+        "y": 840
+      },
+      "style": {
+        "appearance": "auto",
+        "font": "15px system-ui, sans-serif",
+        "padding": "10px 16px"
+      },
+      "value": "https://focuschrist.com/assets/page-art/history-stories/miller-teaching-brigham-desktop.png"
+    },
+    "desktopAfter": {
+      "backgroundPosition": "calc(100% - 10px) 50%",
+      "padding": "10px 36px 10px 16px",
+      "rect": {
+        "bottom": 884,
+        "height": 44,
+        "left": 533.375,
+        "right": 681.375,
+        "top": 840,
+        "width": 148,
+        "x": 533.375,
+        "y": 840
+      }
+    },
+    "phoneBefore": {
+      "bottom": 845.2000122070312,
+      "height": 44,
+      "left": 182.4250030517578,
+      "right": 330.4250030517578,
+      "top": 801.2000122070312,
+      "width": 148,
+      "x": 182.4250030517578,
+      "y": 801.2000122070312
+    },
+    "phoneAfter": {
+      "bottom": 845.2000122070312,
+      "height": 44,
+      "left": 182.4250030517578,
+      "right": 330.4250030517578,
+      "top": 801.2000122070312,
+      "width": 148,
+      "x": 182.4250030517578,
+      "y": 801.2000122070312
+    },
+    "keyboard": "Home selected Phone and master download; End selected Wide and desktop download; selectOption Phone works; Escape restored View Full-Size Image with parent dialog open",
+    "screenshots": [
+      "chevron-before-desktop.png",
+      "chevron-after-desktop.png",
+      "chevron-before-phone.png",
+      "chevron-after-phone.png"
+    ]
+  },
+  "settled_desktop": [
+    "work/chevron-before-desktop-settled.png",
+    "work/chevron-after-desktop-settled.png"
+  ],
+  "source_workspace": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-06\\focus-live-review-release-closure\\work",
+  "prior_binding_evidence": {
+    "path": "docs/reviews/image-version-chevron/prior-artwork-binding.json",
+    "sha256": "edfc96a2b022c20ce1394adeaa069d486e4c8701d99d5beeec408ec4359946c6"
+  },
+  "limitations": "No new owner aesthetic or whole-site acceptance. Earlier transient desktop images excluded."
+}

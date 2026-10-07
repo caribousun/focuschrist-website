@@ -145,7 +145,7 @@ class Tags(HTMLParser):
 # the entire stylesheet and every existing HTML load (including old tokens on
 # unchanged routes), rather than exempting a selector family or future CSS.
 VIEWER_STYLE = 'full-image-viewer.css'
-VIEWER_STYLE_SHA256 = '4b9ef916d16d145ed2f3eba09b9384544ddab48e94eaf42639ffcb4c4eaf6ae1'
+VIEWER_STYLE_SHA256 = '10490ceea817af1025e1df20e38ed747c4cec3c234e630fb720b66f914ce87bf'
 VIEWER_BINDINGS_SHA256 = '80c69e840009017e883bd7efbd19669c3386ecd1e3923ed3db0e3d0645f46632'
 
 def reviewed_viewer_style(data):
