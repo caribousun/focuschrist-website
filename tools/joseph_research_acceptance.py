@@ -3,14 +3,26 @@ import math
 import re
 import hashlib
 ROUTE = 'joseph-smith-portrait-research.html'
+PDF_BROWSER_TOKEN_INVERSES = (
+    (b'<link rel="stylesheet" href="site-system.css?v=20261005-mobile-study-rows-1">', b'<link rel="stylesheet" href="site-system.css?v=20260930-study-alignment-1">'),
+    (b'<link rel="stylesheet" href="full-image-viewer.css?v=20261007-viewer-controls-1">', b'<link rel="stylesheet" href="full-image-viewer.css?v=20260905-viewport">'),
+    (b'<script src="topic-artwork-details.js?v=20261007-scoped-root-1" defer></script>', b'<script src="topic-artwork-details.js?v=20261004-joseph-journeys-1" defer></script>'),
+)
+
 def check_pdf_source_binding(source, reviewed_hash):
-    """Preserve frozen PDF review across this one browser-only cache update."""
+    """Reconstruct exact frozen PDF source through three browser-only tokens."""
     if hashlib.sha256(source).hexdigest() == reviewed_hash:
         return
-    current = b'<link rel="stylesheet" href="site-system.css?v=20261005-mobile-study-rows-1">'
-    reviewed = b'<link rel="stylesheet" href="site-system.css?v=20260930-study-alignment-1">'
-    assert source.count(current) == 1, 'PDF source compatibility requires the exact single reviewed cache change'
-    assert hashlib.sha256(source.replace(current, reviewed, 1)).hexdigest() == reviewed_hash, 'Research content changed beyond the reviewed browser cache token'
+    inverse = source
+    for current, reviewed in PDF_BROWSER_TOKEN_INVERSES[1:]:
+        assert inverse.count(current) == 1 and reviewed not in inverse, 'PDF source requires each exact single current browser dependency'
+        inverse = inverse.replace(current, reviewed, 1)
+    if hashlib.sha256(inverse).hexdigest() == reviewed_hash:
+        return
+    current, reviewed = PDF_BROWSER_TOKEN_INVERSES[0]
+    assert inverse.count(current) == 1 and reviewed not in inverse, 'Exact prior shared-style token required'
+    inverse = inverse.replace(current, reviewed, 1)
+    assert hashlib.sha256(inverse).hexdigest() == reviewed_hash, 'Research content changed beyond exact reviewed browser tokens'
 
 REJECTED_ARTWORK_BADGES = ('New artistic interpretation', 'New artwork · historical interpretation',
                          'New artwork · explanatory interpretation', 'New artwork · feature study')

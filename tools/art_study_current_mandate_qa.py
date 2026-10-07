@@ -53,6 +53,15 @@ def reviewed_page_binding(page, route, expected):
     if expected != REVIEWED_PAGE_HASHES.get(route):
         return False
     inverse = raw
+    topic_current = b'topic-artwork-details.js?v=20261007-scoped-root-1'
+    if inverse.count(topic_current) != 1:
+        return False
+    inverse = inverse.replace(topic_current, b'topic-artwork-details.js?v=20261004-study-return-1', 1)
+    current_viewer = b'full-image-viewer.css?v=20261007-viewer-controls-1'
+    if inverse.count(current_viewer) != 1:
+        return False
+    previous_viewer = b'full-image-viewer.css?v=' + (b'20261006-versions-1' if route in VISIBLE_ART_ROUTES else b'20260905-viewport')
+    inverse = inverse.replace(current_viewer, previous_viewer, 1)
     for current, previous in VIEWER_TOKEN_INVERSES:
         if current in inverse:
             if route not in VISIBLE_ART_ROUTES or inverse.count(current) != 1 or previous in inverse:

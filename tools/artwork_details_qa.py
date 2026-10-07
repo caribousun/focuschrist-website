@@ -131,7 +131,7 @@ def timeline_study_hero_errors(relative: str, page: str, script: str | None = No
         errors.append(f"{relative}: timeline hero responsive source differs")
     if any(hero.has_attr(a) for a in ('data-full-image-viewer', 'data-artwork-detail', 'onclick')):
         errors.append(f"{relative}: normal artwork details must precede full-size viewing")
-    for name, version in [('hero-details.js', '20261007-timeline-panels-1'), ('full-image-viewer.js', '20261006-versions-1'), ('full-image-viewer.css', '20261006-versions-1'), ('hero-details.css', '20260909-warm'), ('artwork-details.css', '20260909-warm'), ('artwork-actions.css', '20261004-explicit-grid-1')]:
+    for name, version in [('hero-details.js', '20261007-timeline-panels-1'), ('full-image-viewer.js', '20261006-versions-1'), ('full-image-viewer.css', '20261007-viewer-controls-1'), ('hero-details.css', '20260909-warm'), ('artwork-details.css', '20260909-warm'), ('artwork-actions.css', '20261004-explicit-grid-1')]:
         nodes = [n for n in dom.select('script[src],link[href]') if urlsplit(n.get('src', n.get('href', ''))).path == '../' + name]
         if len(nodes) != 1 or nodes[0].get('src', nodes[0].get('href')) != '../' + name + '?v=' + version:
             errors.append(f'{relative}: exact panel dependency missing, duplicated or stale: {name}')
@@ -168,7 +168,7 @@ def history_topic_hero_errors(relative, page, story, ready):
         anchors = figure.select('a.fc-visual-hero')
         if len(anchors) != 1 or anchors[0].get('href') != '../' + ready[unit]['full'] or not figure.select_one('figcaption[data-picture-panel-copy][hidden]'):
             errors.append(f'{relative}: hero source or study metadata differs')
-    topic_version = '20261006-visible-art-1' if relative in VISIBLE_TOPIC_ROUTES else '20260930-history-records-1'
+    topic_version = '20261007-scoped-root-1'
     if page.count('../topic-artwork-details.js?v=' + topic_version) != 1 or 'hero-details.js' in page or 'data-hero-viewer' in page:
         errors.append(f'{relative}: hero must have exactly one topic controller')
     return errors
@@ -179,6 +179,9 @@ def main() -> int:
     assert local_target(ROOT / "answers/example.html", "../assets/heroes/home.webp?x=1") == (ROOT / "assets/heroes/home.webp").resolve()
     assert not local_target(ROOT / "404.html", "/assets/heroes/qa-missing-image.webp").is_file()
     errors: list[str] = []
+    from visual_rhythm_art_qa import check as check_rhythm_art, self_test as rhythm_art_self_test, without_reviewed_figure
+    rhythm_art_self_test()
+    rhythm_records = check_rhythm_art()
     all_trigger_keys: list[str] = []
     all_record_keys: list[str] = []
 
@@ -331,7 +334,7 @@ def main() -> int:
     for relative in ROOT_VIEWER_PAGES:
         text = (ROOT / relative).read_text(encoding="utf-8", errors="replace")
         for marker in (
-            'href="full-image-viewer.css?v=20260905-viewport"',
+            'href="full-image-viewer.css?v=20261007-viewer-controls-1"',
             'src="full-image-viewer.js?v=20260914-reopen-1"',
         ):
             if relative in VISIBLE_HERO_ROUTES | VISIBLE_TOPIC_ROUTES:
@@ -344,7 +347,7 @@ def main() -> int:
     for relative in ART_STUDY_PAGES:
         text = (ROOT / relative).read_text(encoding="utf-8")
         for marker in (
-            'href="../full-image-viewer.css?v=20260905-viewport"',
+            'href="../full-image-viewer.css?v=20261007-viewer-controls-1"',
             'src="../full-image-viewer.js?v=20260914-reopen-1"',
         ):
             if relative in VISIBLE_HERO_ROUTES | VISIBLE_TOPIC_ROUTES:
@@ -355,7 +358,7 @@ def main() -> int:
                 errors.append(f"{relative}: full-image viewer asset must load exactly once: {marker}")
 
     viewer_documents = [
-        (ROOT / relative).read_text(encoding="utf-8", errors="replace")
+        (without_reviewed_figure(relative, (ROOT / relative).read_text(encoding="utf-8"), rhythm_records[relative]) if relative in rhythm_records else (ROOT / relative).read_text(encoding="utf-8", errors="replace"))
         for relative in (*ROOT_VIEWER_PAGES, *ART_STUDY_PAGES)
     ]
     # Preserve the existing enriched-figure scope; supporting Art & Study
@@ -389,7 +392,7 @@ def main() -> int:
         errors.append("Mission full-size action is not enrolled in the same-page viewer")
     if 'fc-visual-hero--history' not in pioneer or 'data-full-image-viewer' not in pioneer:
         errors.append("Pioneer hero must retain its approved full-image action through the same-page viewer")
-    if pioneer.count("data-full-image-viewer") != 11:
+    if without_reviewed_figure("pioneers.html", pioneer, rhythm_records["pioneers.html"]).count("data-full-image-viewer") != 11:
         errors.append("Pioneer page must retain ten artwork fallbacks, and the detail-dialog full-size action")
 
     hero_pages = 0
@@ -422,13 +425,13 @@ def main() -> int:
                 ('class="fc-life-hero"', 'class="wrong-hero"'),
                 (f'href="../{ready[unit]["full"]}"', 'href="../assets/heroes/home.webp"'),
                 ('data-picture-panel-copy hidden', 'data-picture-panel-copy'),
-                ('../topic-artwork-details.js?v=20261006-visible-art-1', '../topic-artwork-details.js?v=unknown'),
+                ('../topic-artwork-details.js?v=20261007-scoped-root-1', '../topic-artwork-details.js?v=unknown'),
             ):
                 mutated = page.replace(original, replacement, 1)
                 assert mutated != page
                 assert history_topic_hero_errors(relative, mutated, story, ready), 'History hero mutation escaped'
             assert history_topic_hero_errors(relative, page + '<figure class="fc-life-hero"></figure>', story, ready)
-            assert history_topic_hero_errors(relative, page + '<script src="../topic-artwork-details.js?v=20261006-visible-art-1"></script>', story, ready)
+            assert history_topic_hero_errors(relative, page + '<script src="../topic-artwork-details.js?v=20261007-scoped-root-1"></script>', story, ready)
             assert history_topic_hero_errors(relative, page, dict(story, hero=dict(story['units'][0], id='wrong-scene')), ready)
             hero_pages -= 1  # Preserve the separate 41-page legacy controller baseline.
             continue
@@ -443,7 +446,7 @@ def main() -> int:
             hero_script = "hero-details.js?v=20261006-visible-art-1"
         if relative == "timeline.html" and relative not in VISIBLE_HERO_ROUTES:
             hero_script = "hero-details.js?v=20261002-timeline-1"
-        viewer_css = "full-image-viewer.css?v=" + ('20261006-versions-1' if relative in VISIBLE_HERO_ROUTES | VISIBLE_TOPIC_ROUTES else '20260905-viewport')
+        viewer_css = "full-image-viewer.css?v=" + '20261007-viewer-controls-1'
         viewer_js = "full-image-viewer.js?v=" + ('20261006-versions-1' if relative in VISIBLE_HERO_ROUTES | VISIBLE_TOPIC_ROUTES else '20260914-reopen-1')
         for asset in (viewer_css, viewer_js, hero_script, "hero-details.css?v=20260909-warm", "artwork-details.css?v=20260909-warm"):
             if page.count(prefix + asset) != 1:

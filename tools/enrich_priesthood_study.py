@@ -70,12 +70,12 @@ def enrich():
         elif placement['kind']=='deeper-second-heading':
             deeper=unit.select_one('[data-enrichment-study]')
             deeper.select('h3')[1].insert_before(figure)
-    for asset in ['artwork-details.css?v=20260909-warm','artwork-actions.css?v=20261004-explicit-grid-1','topic-artwork-details.css?v=20260927-anchor-alignment-1','full-image-viewer.css?v=20260905-viewport']:
+    for asset in ['artwork-details.css?v=20260909-warm','artwork-actions.css?v=20261004-explicit-grid-1','topic-artwork-details.css?v=20260927-anchor-alignment-1','full-image-viewer.css?v=20261007-viewer-controls-1']:
         filename=asset.split('?')[0]
         for old in list(soup.select('link[href]')):
             if old['href'].split('?')[0].split('/')[-1]==filename: old.decompose()
         tag=soup.new_tag('link',rel='stylesheet',href='../'+asset);soup.head.append(tag)
-    for asset in ['topic-artwork-details.js?v=20260930-history-records-1','full-image-viewer.js?v=20260914-reopen-1']:
+    for asset in ['topic-artwork-details.js?v=20261007-scoped-root-1','full-image-viewer.js?v=20260914-reopen-1']:
         if not soup.select_one('script[src*="'+asset.split('?')[0]+'"]'):
             tag=soup.new_tag('script',src='../'+asset,defer='');soup.body.append(tag)
     soup.select_one('link[href*="priesthood-history-study.css"]')['href']='../priesthood-history-study.css?v=20260930-enriched-4'

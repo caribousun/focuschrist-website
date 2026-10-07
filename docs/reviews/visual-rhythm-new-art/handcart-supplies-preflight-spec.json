@@ -1,0 +1,79 @@
+{
+  "id": "visual-rhythm-handcart-supplies",
+  "role": "body",
+  "route": "timelines/willie-and-martin-handcart-map.html",
+  "prompt": {
+    "path": "docs/reviews/visual-rhythm-new-art/handcart-supplies-prompt.txt",
+    "sha256": "83fc04eff1a3b7e8da34dac3b7de2fbe2e8db5bf28e25b71c73f72a2147eccb4"
+  },
+  "mandates": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "fe68d0e575ac67262f5693432f09e8de8c2236d1ad8e58890e24f6d358cd4bf4"
+    },
+    {
+      "path": "docs/historical-character-identity.md",
+      "sha256": "69f0f51400ba102dfb5df9a9ec9fb6e738255dc496b84dc5dd684f3f5886c8c4"
+    },
+    {
+      "path": "docs/focuschrist-enrichment-and-stewardship-prompt.md",
+      "sha256": "91cfd09d188880c849493d1752cabb6c6bf8b239d9722259b196161fb6189d14"
+    }
+  ],
+  "references": [
+    {
+      "path": "docs/reviews/visual-rhythm-new-art/source-record.json",
+      "sha256": "830afc2a2fd928df95293e53184d7a77a8487ab4380198ec76cd4c8ba71e4d25"
+    }
+  ],
+  "source_record": {
+    "path": "docs/reviews/visual-rhythm-new-art/source-record.json",
+    "sha256": "830afc2a2fd928df95293e53184d7a77a8487ab4380198ec76cd4c8ba71e4d25"
+  },
+  "chronology": {
+    "kind": "approximate-historical",
+    "period": "Salt Lake City, October5-7,1856",
+    "basis": "Official article documents call October5, first departure two days later, warm clear local weather, donated quilts/flour/clothing and volunteer participation. Collective scene not exact documented individuals or exchange.",
+    "source_urls": [
+      "https://www.churchofjesuschrist.org/learn/history/sites/wyoming/discover/five-things-you-might-not-know-about-the-handcart-rescue?lang=eng",
+      "https://history.churchofjesuschrist.org/timeline/historic-sites/wyoming/sixth-crossing?lang=eng"
+    ]
+  },
+  "characters": [
+    {
+      "name": "Woman giving quilt",
+      "age_context": {
+        "status": "unknown",
+        "depiction": "Adult woman, natural mature features",
+        "basis": "Official article documents call October5, first departure two days later, warm clear local weather, donated quilts/flour/clothing and volunteer participation. Collective scene not exact documented individuals or exchange. Exact birth dates are not established for this depiction."
+      },
+      "reference_path": "docs/reviews/visual-rhythm-new-art/source-record.json",
+      "identity_authority": "researched-no-owner-master",
+      "owner_evidence": "Anonymous role, no owner identity claimed. Source record supplies written research/context; no raster face master applies."
+    },
+    {
+      "name": "Man receiving quilt",
+      "age_context": {
+        "status": "unknown",
+        "depiction": "Adult man with believable working build",
+        "basis": "Official article documents call October5, first departure two days later, warm clear local weather, donated quilts/flour/clothing and volunteer participation. Collective scene not exact documented individuals or exchange. Exact birth dates are not established for this depiction."
+      },
+      "reference_path": "docs/reviews/visual-rhythm-new-art/source-record.json",
+      "identity_authority": "researched-no-owner-master",
+      "owner_evidence": "Anonymous role, no owner identity claimed. Source record supplies written research/context; no raster face master applies."
+    },
+    {
+      "name": "Woman preparing supplies",
+      "age_context": {
+        "status": "unknown",
+        "depiction": "Older adult woman, natural facial lines",
+        "basis": "Official article documents call October5, first departure two days later, warm clear local weather, donated quilts/flour/clothing and volunteer participation. Collective scene not exact documented individuals or exchange. Exact birth dates are not established for this depiction."
+      },
+      "reference_path": "docs/reviews/visual-rhythm-new-art/source-record.json",
+      "identity_authority": "researched-no-owner-master",
+      "owner_evidence": "Anonymous role, no owner identity claimed. Source record supplies written research/context; no raster face master applies."
+    }
+  ],
+  "period_clothing_setting": "Source-era plain clothing and setting, exact colors and architecture qualified; detailed in exact prompt.",
+  "interaction": "Exact prompt requires specific meaningful action, natural expression, task-directed or mutual gaze, separately traceable hands and respectful agency; no generic repetition."
+}

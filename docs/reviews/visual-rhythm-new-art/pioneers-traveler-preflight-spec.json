@@ -1,0 +1,67 @@
+{
+  "id": "visual-rhythm-pioneers-traveler",
+  "role": "body",
+  "route": "pioneers.html",
+  "prompt": {
+    "path": "docs/reviews/visual-rhythm-new-art/pioneers-traveler-prompt.txt",
+    "sha256": "2b4634f7da414865f2e25f5c9e55cec6a557a3b56b4fa498d5d4c73f6b553270"
+  },
+  "mandates": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "fe68d0e575ac67262f5693432f09e8de8c2236d1ad8e58890e24f6d358cd4bf4"
+    },
+    {
+      "path": "docs/historical-character-identity.md",
+      "sha256": "69f0f51400ba102dfb5df9a9ec9fb6e738255dc496b84dc5dd684f3f5886c8c4"
+    },
+    {
+      "path": "docs/focuschrist-enrichment-and-stewardship-prompt.md",
+      "sha256": "91cfd09d188880c849493d1752cabb6c6bf8b239d9722259b196161fb6189d14"
+    }
+  ],
+  "references": [
+    {
+      "path": "docs/reviews/visual-rhythm-new-art/source-record.json",
+      "sha256": "830afc2a2fd928df95293e53184d7a77a8487ab4380198ec76cd4c8ba71e4d25"
+    }
+  ],
+  "source_record": {
+    "path": "docs/reviews/visual-rhythm-new-art/source-record.json",
+    "sha256": "830afc2a2fd928df95293e53184d7a77a8487ab4380198ec76cd4c8ba71e4d25"
+  },
+  "chronology": {
+    "kind": "contemporary-application",
+    "period": "Contemporary residential departure, no exact date",
+    "basis": "January14,1847 Winter Quarters revelation instructs preparations for travelers and those remaining, including poor, widows, fatherless and army families. Contemporary departure is an application, not exact reenactment.",
+    "source_urls": [
+      "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/136?lang=eng"
+    ]
+  },
+  "characters": [
+    {
+      "name": "Older traveler",
+      "age_context": {
+        "status": "illustrative",
+        "depiction": "Older adult alert and participating, silver hair",
+        "basis": "January14,1847 Winter Quarters revelation instructs preparations for travelers and those remaining, including poor, widows, fatherless and army families. Contemporary departure is an application, not exact reenactment. Exact birth dates are not established for this depiction."
+      },
+      "reference_path": "docs/reviews/visual-rhythm-new-art/source-record.json",
+      "identity_authority": "researched-no-owner-master",
+      "owner_evidence": "Anonymous role, no owner identity claimed. Source record supplies written research/context; no raster face master applies."
+    },
+    {
+      "name": "Travel companion",
+      "age_context": {
+        "status": "illustrative",
+        "depiction": "Middle-aged adult listening respectfully",
+        "basis": "January14,1847 Winter Quarters revelation instructs preparations for travelers and those remaining, including poor, widows, fatherless and army families. Contemporary departure is an application, not exact reenactment. Exact birth dates are not established for this depiction."
+      },
+      "reference_path": "docs/reviews/visual-rhythm-new-art/source-record.json",
+      "identity_authority": "researched-no-owner-master",
+      "owner_evidence": "Anonymous role, no owner identity claimed. Source record supplies written research/context; no raster face master applies."
+    }
+  ],
+  "period_clothing_setting": "Natural contemporary clothes and everyday setting; detailed in exact prompt.",
+  "interaction": "Exact prompt requires specific meaningful action, natural expression, task-directed or mutual gaze, separately traceable hands and respectful agency; no generic repetition."
+}

@@ -1,0 +1,51 @@
+{
+  "reviewer": "Newton",
+  "receipt_id": "newton-final-context-history-friendship-20261007",
+  "stage": "finished",
+  "verdict": "PASS",
+  "withdrawn": false,
+  "binding_sha256": "dfdad832c7566cc8028dbad743f01b3bdd8dfcbee8d57ab1c208b387577a3aee",
+  "reviewed_at": "2026-10-07T04:33:04.448137+00:00",
+  "full_resolution_inspected": true,
+  "face_details_inspected": true,
+  "observations": "Current independent review personally inspected both delivered WebPs, desktop/phone placements and applicable narrow panel/viewer screenshots, read current caption/source/adjacent prose, and verified complete current HTML/CSS context plus asset/pixel hashes. Exact unchanged original-resolution and face-detail inspection is reused from the named prior Newton receipt, not claimed as newly repeated. No browser operation, owner aesthetic acceptance or public verification by this reviewer.",
+  "checks": {
+    "identity": "Two anonymous contemporary adult women, no named historical identity asserted.",
+    "age": "Natural mature and older adult faces and gray hair match qualified contemporary scope.",
+    "expression_gaze": "Friend attends to brush and hair; older woman looks toward her with conversational warmth.",
+    "atmosphere": "Soft porch daylight, detailed hair, skin and woven clothes retain photographic texture.",
+    "environment": "Ordinary shaded porch and wicker chair fit quiet present-day practical care.",
+    "anatomy": "Brush grasp, hair-gathering hand and lap hands remain distinct and coherently attached in both derivatives.",
+    "uniqueness": "Specific hair-brushing action differs from reviewed sewing, branch clearing and historical prison scenes; exact original remains exclusive.",
+    "period_sources": "Reused prior independent live D&C121:9,41-42 source review and exact preflight. Caption expressly connects present-day care with friendship, without depicting Joseph in this modern scene.",
+    "characters_realism": "Prior full-resolution original and face/hand crop concurrence remains valid on identical original SHA. Both delivered full/960 WebPs personally viewed now, retaining natural faces and textures. Exactly two anonymous adult women; lifelike lined faces, gray hair and natural builds. Older woman looks toward friend; friend attends to brush/hair. Brush grasp, separate hair-gathering hand and resting lap hands are coherent on native crops. Blue cardigan, green shirt, shaded porch and unhurried practical care match prompt. No visible extra fingers, fused limbs or artificial face surfaces.",
+    "desktop_phone": "Personally viewed current saved desktop and phone placements: native3:2 picture, readable caption/source controls and useful narrative pause. Applicable narrow panel/fullsize imagery also inspected; UI/root own executed actions. Screenshot filenames are not interaction proof."
+  },
+  "prior_review": {
+    "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-06\\focus-artwork-pill-controls-completion\\work\\newton\\history-friendship-original-pixel-review.json",
+    "sha256": "d8d646616a76b0aaee7d86811843c09500c95e2f327840d938bd64d75f607230",
+    "reuse": "Exact original and preflight hashes unchanged; retain prior source/reference/full-resolution crop inspection."
+  },
+  "evidence": [
+    {
+      "path": "assets/page-art/visual-rhythm-journey/history-friendship-original.png",
+      "sha256": "77b6376fb677cb7d0720536cdaf5089a77da91bcaaafbb9b7c62d8c061b4c2f8"
+    },
+    {
+      "path": "assets/page-art/visual-rhythm-journey/history-friendship-full.webp",
+      "sha256": "b87b2faf6a7bd687754642e107ff138eef39abbc8255c93b44894623565347dd"
+    },
+    {
+      "path": "assets/page-art/visual-rhythm-journey/history-friendship-960.webp",
+      "sha256": "e51191c0829493c0736a472f7a001b776dc60991c08ef182107128e2e2b888d8"
+    },
+    {
+      "path": ".qa-artifacts/visual-rhythm-review/history-friendship-desktop.png",
+      "sha256": "bfae60a92dff471cc19e07c1dc9b8dd3a506ca679720e6ffe177d5718932175b"
+    },
+    {
+      "path": ".qa-artifacts/visual-rhythm-review/history-friendship-phone.png",
+      "sha256": "b22708bdfd16540e9769f2f508d7a7bbf75be77172c85ad0dec0bbbbea4435cd"
+    }
+  ]
+}

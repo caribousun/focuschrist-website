@@ -1,0 +1,75 @@
+{
+  "reviewer": "Fermi",
+  "verdict": "CONCUR",
+  "base": "98a0e187b0978f3b9155b926042e4b216aca16aa",
+  "mandates_read": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "fe68d0e575ac67262f5693432f09e8de8c2236d1ad8e58890e24f6d358cd4bf4"
+    },
+    {
+      "path": "docs/historical-character-identity.md",
+      "sha256": "69f0f51400ba102dfb5df9a9ec9fb6e738255dc496b84dc5dd684f3f5886c8c4"
+    },
+    {
+      "path": "docs/focuschrist-enrichment-and-stewardship-prompt.md",
+      "sha256": "91cfd09d188880c849493d1752cabb6c6bf8b239d9722259b196161fb6189d14"
+    },
+    {
+      "path": "docs/supporting-artwork-standard.md",
+      "sha256": "bdf1a7b97693f15cc9d6411fd0378ea8b549f2a6d3df934d574398ecbe0966ec"
+    },
+    {
+      "path": "docs/enriched-picture-owner-mandate.md",
+      "sha256": "c237fb14c7dd57f04d7d9ad063f3f0e93daf0a5c9844f9c3682407b4c80b363d"
+    }
+  ],
+  "scope": "Exact visitor text changes in8 routes, current HTML/captions/alt/detail metadata and prior source records; no new whole-site audit.",
+  "files": [
+    {
+      "path": "answers/stand-forever.html",
+      "sha256": "abaf3ca3e0d766e9f5d2dae74892cfb0a6e4eff0b1a305686fbc1bb98279e24c"
+    },
+    {
+      "path": "answers/what-is-the-book-of-mormon.html",
+      "sha256": "15a26f78e5c29cbe299555e912167770f197300dbefabd5f9bdcdc355c804e41"
+    },
+    {
+      "path": "answers/why-latter-day-saints-build-temples.html",
+      "sha256": "65248868ab6e77314e267a4f1057ecbc1f9411cd289bb7dffa3aedb1c32ecf7c"
+    },
+    {
+      "path": "church-history.html",
+      "sha256": "44bfcef04534e1c32e8bc4daebca83e6045758ed4c7b99d81bc8018e40de2624"
+    },
+    {
+      "path": "pioneers.html",
+      "sha256": "22f1bc6119503179c58e55328b91e1f2e077c55c44ac5918569b566d216666ff"
+    },
+    {
+      "path": "timelines/latter-day-saint-church-history-timeline.html",
+      "sha256": "c9c13e478f1d0b2ef8d0a35819438f23db08fda208a0ea5f0c0a4449a3480a20"
+    },
+    {
+      "path": "timelines/life-of-christ-journey-map.html",
+      "sha256": "0c92ef63d50fd0dd63c6edaaffc0604b0d3565bf275ac96a19e623380a0857a3"
+    },
+    {
+      "path": "timelines/willie-and-martin-handcart-map.html",
+      "sha256": "8f8741552d430ee4e8814d51fb0c34c3f7d3f7f65f92a84f4006799339a74bf1"
+    }
+  ],
+  "observations": [
+    "Stand two captions connect exact John6/John7 events naturally to inquiry without misplacing John7 in D&C chronology.",
+    "Book of Mormon three reflective prompts condensed while retaining compassion, covenant community, scripture references and freely offered application; no invented historical claim.",
+    "Church historical inquiry stays substantive while reducing repetitive evidence narration; new present-day friendship caption distinguishes application naturally.",
+    "Pioneer summary retains record chronology, geographic source and care for grief; no inference that survival measures faith. Traveler caption avoids ambiguous passenger-seat claim.",
+    "Temple caption follows Matthew17 instruction and Son/tribute theme; no modern ordinance depiction or Caesar-event conflation.",
+    "Church/Life timeline prose unchanged: exact navigation labels relocated below introductions. Handcart adds source-grounded relief preparation caption and retains dated sequence.",
+    "All changed authored copy is warm, concrete and avoids repeated production disclosure; existing footer retained. No invented quote, feeling, named identity or factual certainty identified."
+  ],
+  "limits": [
+    "Source research reused from exact prior verified source records, not repeated in this turn.",
+    "Specialist/root native interactions and owner aesthetic acceptance remain separate."
+  ]
+}

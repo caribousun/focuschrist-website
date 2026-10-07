@@ -1,0 +1,51 @@
+{
+  "reviewer": "Newton",
+  "receipt_id": "newton-final-context-pioneers-traveler-20261007",
+  "stage": "finished",
+  "verdict": "PASS",
+  "withdrawn": false,
+  "binding_sha256": "6a3b3941e1725b965e66218cfd580e3d22c39c67c2150eefa7b72bb393b51800",
+  "reviewed_at": "2026-10-07T04:33:04.566264+00:00",
+  "full_resolution_inspected": true,
+  "face_details_inspected": true,
+  "observations": "Current independent review personally inspected both delivered WebPs, desktop/phone placements and applicable narrow panel/viewer screenshots, read current caption/source/adjacent prose, and verified complete current HTML/CSS context plus asset/pixel hashes. Exact unchanged original-resolution and face-detail inspection is reused from the named prior Newton receipt, not claimed as newly repeated. No browser operation, owner aesthetic acceptance or public verification by this reviewer.",
+  "checks": {
+    "identity": "Two anonymous contemporary adults; neither claims a historical identity or medical diagnosis.",
+    "age": "Distinct older traveler and mature companion remain naturally portrayed.",
+    "expression_gaze": "Mutual conversational attention; older traveler participates through an open-hand gesture.",
+    "atmosphere": "Soft outdoor daylight, lifelike cloth, skin and vehicle reflections.",
+    "environment": "Parked van, bag and folded walker make practical departure preparation intelligible. Seat side is ambiguous and caption appropriately avoids driver/passenger assertion.",
+    "anatomy": "Gesture and lap hands, bag grasp and seated legs remain coherent. Feet rest on sill and one bag hand is visible; no lifting or moving-vehicle claim.",
+    "uniqueness": "Preparation with bag and walker differs from existing roadside phone help and branch-clearing comparison scenes.",
+    "period_sources": "Reused prior independent D&C136:6-9 and heading readback. Current caption applies care for travelers in a plainly contemporary setting without claiming reenactment.",
+    "characters_realism": "Prior full-resolution original and face/hand crop concurrence remains valid on identical original SHA. Both delivered full/960 WebPs personally viewed now, retaining natural faces and textures. Exactly two anonymous adult women with distinct mature/older features, reciprocal gaze and conversational warmth. Older traveler securely seated; lap and gesture hands coherent. Friend carries bag, folded wheeled walker stands clear of both feet on level driveway. Visible limbs and vehicle sill/seat/interior are coherent. Feet rest on doorway sill rather than deep interior and only one bag hand is visible; these are nonmaterial staging deviations with no lifting, driving or injury implication. No apparent anatomical or vehicle defect.",
+    "desktop_phone": "Personally viewed current saved desktop and phone placements: native3:2 picture, readable caption/source controls and useful narrative pause. Applicable narrow panel/fullsize imagery also inspected; UI/root own executed actions. Screenshot filenames are not interaction proof."
+  },
+  "prior_review": {
+    "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-06\\focus-artwork-pill-controls-completion\\work\\newton\\pioneers-traveler-original-pixel-review.json",
+    "sha256": "ef89bc203e5a8aa23829aa58bd7385a0c297460304d27ac34a891a2b4c125ea2",
+    "reuse": "Exact original and preflight hashes unchanged; retain prior source/reference/full-resolution crop inspection."
+  },
+  "evidence": [
+    {
+      "path": "assets/page-art/visual-rhythm-journey/pioneers-traveler-original.png",
+      "sha256": "813d004b326d19c36b33565747ad0297d93520a7ac04451400f1697227e27021"
+    },
+    {
+      "path": "assets/page-art/visual-rhythm-journey/pioneers-traveler-full.webp",
+      "sha256": "87df0e8ab581be777a2648dee88a942b624c0063007376b7030c7ed79a3f8d94"
+    },
+    {
+      "path": "assets/page-art/visual-rhythm-journey/pioneers-traveler-960.webp",
+      "sha256": "95ae2433f921444725b1d751779b4f7be6c27869235eec1b8760b335fef00ea8"
+    },
+    {
+      "path": ".qa-artifacts/visual-rhythm-review/pioneers-traveler-desktop.png",
+      "sha256": "2309423611ff0340415f71fa8eb8e2d1efd0209ffac814f81a370570a22b7525"
+    },
+    {
+      "path": ".qa-artifacts/visual-rhythm-review/pioneers-traveler-phone.png",
+      "sha256": "eb9f8aeb6084a3b7cf7a2b6a1c758ea5a349910b738790f8f2a019b4e59f57af"
+    }
+  ]
+}

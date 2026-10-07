@@ -1,0 +1,90 @@
+{
+  "id": "visual-rhythm-handcart-supplies",
+  "role": "body",
+  "route": "timelines/willie-and-martin-handcart-map.html",
+  "preflight_sha256": "b9b24c863bc77821685bacb3ebe3f2b5fd86f697b5a812772231b01ee9e5fe96",
+  "generated_at": "2026-10-07T04:09:12.553603+00:00",
+  "owner_status": "not-reviewed",
+  "ancestor_sha256": [
+    "830afc2a2fd928df95293e53184d7a77a8487ab4380198ec76cd4c8ba71e4d25"
+  ],
+  "original": {
+    "path": "assets/page-art/visual-rhythm-journey/handcart-supplies-original.png",
+    "sha256": "36cba78b3e8cf231da17a7539bb152d6d9accdb53a07570a39f81c554a2bf898",
+    "pixel_sha256": "19e2264355cb6f03b8eb4d63d8588f19b54dbf89d82610de023d2591aecfe4da"
+  },
+  "derivatives": [
+    {
+      "path": "assets/page-art/visual-rhythm-journey/handcart-supplies-full.webp",
+      "sha256": "4190a8e6aed82ce7ca92041dba137ce787d18d90e003fc21445a2992f5bd7555",
+      "pixel_sha256": "9583dfa961b64bb1f86021b598762b94395a5415fd0e330cbdd89daa353c7c7e"
+    },
+    {
+      "path": "assets/page-art/visual-rhythm-journey/handcart-supplies-960.webp",
+      "sha256": "a50bcc69b9b067c521ab75c35a13e5b1dd768c452800320851b8df5ed17574bf",
+      "pixel_sha256": "e40a1bc9ed9aef98b1354876dc36212c1ec987d9abd4f2b9048324f81e072ad6"
+    }
+  ],
+  "page_context": [
+    {
+      "path": "artwork-actions.css",
+      "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+    },
+    {
+      "path": "artwork-details.css",
+      "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+    },
+    {
+      "path": "full-image-viewer.css",
+      "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+    },
+    {
+      "path": "hero-details.css",
+      "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+    },
+    {
+      "path": "site-header.css",
+      "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+    },
+    {
+      "path": "site-search.css",
+      "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+    },
+    {
+      "path": "site-system.css",
+      "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+    },
+    {
+      "path": "timeline-experiences.css",
+      "sha256": "4ae767e376478f2cdb16c3085ffa519a7a458314ed81aad2c662ec281ab82e5c"
+    },
+    {
+      "path": "timeline-images.css",
+      "sha256": "6d1aadc6c63012f5055db262354cdac21109bbd1fcc93799aefbba478a6454ec"
+    },
+    {
+      "path": "timeline-mobile-study.css",
+      "sha256": "3e80168cb315409779283e13c0f07f6f9055a2310221c2c90a459e59e009533d"
+    },
+    {
+      "path": "timeline-reader.css",
+      "sha256": "4bbcf89e17c653fc9fd24268412b292b2bd4b92a09032777e0563d2967ebb115"
+    },
+    {
+      "path": "timeline-workspace.css",
+      "sha256": "fb945135a563c94ff6f3cdd5b724e1250824e6ad4e37bfa54a8a55d746917aac"
+    },
+    {
+      "path": "timelines/willie-and-martin-handcart-map.html",
+      "sha256": "8f8741552d430ee4e8814d51fb0c34c3f7d3f7f65f92a84f4006799339a74bf1"
+    },
+    {
+      "path": "topic-art.css",
+      "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"
+    },
+    {
+      "path": "topic-artwork-details.css",
+      "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+    }
+  ]
+}

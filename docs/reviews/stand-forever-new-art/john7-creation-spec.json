@@ -1,0 +1,111 @@
+{
+  "id": "stand-forever-john7",
+  "role": "body",
+  "route": "answers/stand-forever.html",
+  "preflight_sha256": "943646f6084c8b5fe050762a7d76265bc904d8bb87ab35c4841b67b67057c700",
+  "generated_at": "2026-10-07T03:45:45.306829+00:00",
+  "owner_status": "not-reviewed",
+  "ancestor_sha256": [
+    "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+    "ff37365ef49832338774b77c6717d841983891612b8e17d67ef317941939c82f"
+  ],
+  "original": {
+    "path": "assets/page-art/stand-forever-journey/stand-john7-do-his-will-original.png",
+    "sha256": "d04caa98a349c66f1112930b89869196bf1dce9e3590f8445c48fc0f71c86072",
+    "pixel_sha256": "2559dce8ef9f91563a786cfab5a22d4613ebc3446890325bda6f3003a1d216c8"
+  },
+  "derivatives": [
+    {
+      "path": "assets/page-art/stand-forever-journey/stand-john7-do-his-will-full.webp",
+      "sha256": "fb9cd7f0a0c4f1612f428375729bcd3685046427da82b3cdbda13a91be0f9029",
+      "pixel_sha256": "0a54485f9306a63188d7fb9960bd9b642485d0673ea0e95d708d9c9e4a98f374"
+    },
+    {
+      "path": "assets/page-art/stand-forever-journey/stand-john7-do-his-will-960.webp",
+      "sha256": "43be5dbb873b53460c987d8cfc06a6342a1c5f2c208da6e3fa3cb8d2828f31b8",
+      "pixel_sha256": "d97e9589e66bf5403b50b97446561eefbe7aef795a5cf71d7d384e92752ed4c0"
+    }
+  ],
+  "page_context": [
+    {
+      "path": "answer-navigation.css",
+      "sha256": "8112ad6d52ada3bd0b373633fc2e60f5ada7d47fb2204c28e1a09ae01be66a57"
+    },
+    {
+      "path": "answer-opening.css",
+      "sha256": "0356c038ad2adcec7206bfcb3d57915b9e2be2cd42024770560f3d9875cc94fb"
+    },
+    {
+      "path": "answer-styles.css",
+      "sha256": "82dc51b82d56a129be803420cae47630f053f7af1259c659113fbd7fcd76d6ad"
+    },
+    {
+      "path": "answers/stand-forever.html",
+      "sha256": "abaf3ca3e0d766e9f5d2dae74892cfb0a6e4eff0b1a305686fbc1bb98279e24c"
+    },
+    {
+      "path": "artwork-actions.css",
+      "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+    },
+    {
+      "path": "artwork-details.css",
+      "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+    },
+    {
+      "path": "complete-card-rows.css",
+      "sha256": "7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"
+    },
+    {
+      "path": "connected-study.css",
+      "sha256": "513b11859f17d36a5934d323f865242b8c90beea70e94fd3056e6e2dc0af40c6"
+    },
+    {
+      "path": "foundation-study.css",
+      "sha256": "8d212cf661236bcaf3da52954257551613dd8356e9483eacdee5f55a03372c6d"
+    },
+    {
+      "path": "full-image-viewer.css",
+      "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+    },
+    {
+      "path": "hero-details.css",
+      "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+    },
+    {
+      "path": "resource-cards.css",
+      "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+    },
+    {
+      "path": "site-header.css",
+      "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+    },
+    {
+      "path": "site-search.css",
+      "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+    },
+    {
+      "path": "site-system.css",
+      "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+    },
+    {
+      "path": "stand-forever-study.css",
+      "sha256": "27d14a4abc1b10c50068043d70ec8f0fda3860ce0953d5d2922d33e1a7317d7b"
+    },
+    {
+      "path": "topic-art.css",
+      "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"
+    },
+    {
+      "path": "topic-artwork-details.css",
+      "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+    },
+    {
+      "path": "topic-heroes.css",
+      "sha256": "c0cd96bafe94455fd41d8b6c8357baaa12a0556ce204ba058a1264160acae632"
+    },
+    {
+      "path": "topic-study-pages.css",
+      "sha256": "99e1df87cfdcd11751bb16e0ea293a5048cd6f5f73245a791d20492226299236"
+    }
+  ]
+}

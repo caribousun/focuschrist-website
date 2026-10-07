@@ -1,0 +1,65 @@
+{
+  "reviewer": "Fermi",
+  "status": "researched prompt proposal; exact preflight and finished pixel gates separate",
+  "authority": "Exact live Master, 00B and Focus independently retrieved through connected Drive; protected foundation read and unchanged. Owner authorized new nonduplicate Stand Forever artwork. No spending or schedules.",
+  "sources": [
+    {
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/6?lang=eng",
+      "read": "Whole chapter, especially 59-71",
+      "establishes": "Capernaum teaching context, departure of many disciples, Jesus addresses the Twelve, Peter answers with his commitment and witness.",
+      "unknown": "Precise location, date, Peter's age, reliable ancient likeness, clothing colors, poses and weather."
+    },
+    {
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/7?lang=eng",
+      "read": "Whole chapter, especially 1-18 and 37-39",
+      "establishes": "Feast of Tabernacles; Jesus teaches in the temple about the middle of the feast; listeners question His learning; doing God's will and knowledge of doctrine. Distinct from final-day living-water proclamation.",
+      "unknown": "Exact date, architecture at the chosen camera position, seating, listeners' identities and ages, clothing colors and light."
+    },
+    {
+      "url": "https://speeches.byu.edu/talks/lawrence-e-corbridge/stand-for-ever/",
+      "read": "Official address and notes",
+      "establishes": "January 22, 2019 address includes standing versus going away, and explicitly quotes John 7:16-17 under the scientific method of learning. These images support the actual inquiry study."
+    }
+  ],
+  "references": {
+    "christ": {
+      "path": "assets/heroes/home-christ-signature-approved-20260907.png",
+      "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+      "authority": "confirmed owner-approved identity in approved-character-identities.json and AGENTS.md",
+      "inspected": true
+    },
+    "peter": {
+      "path": "assets/page-art/sitewide-narratives/look-peter-rescue-approved-20260919-full.webp",
+      "sha256": "f6b5502c16f4a272b0e80209876366f86285c38ce5547b28d6fbe98d9849427a",
+      "authority": "owner-approved scene per docs/art-study-image-review.json; foreground rear-view man identified as Peter by source event and scene. No separately approved full frontal portrait asserted.",
+      "inspection": "Both 960 derivative and exact full1536 source independently viewed by Fermi; foreground rear profile identified.",
+      "constraint": "Use visible rear-profile continuity only; no invented owner approval of a new frontal Peter likeness."
+    }
+  },
+  "uniqueness": {
+    "method": "Searched raster inventory and actual HTML figure/article source ranges across site for John6, John7, John14, John17 and Matthew16. Inspected close neighboring original pixels.",
+    "john6": "Existing John6 art located portrays feeding/thanks, not Peter remaining after departure. New action and dry courtyard differ from approved storm rescue reference.",
+    "john7": "Existing melchizedek-priesthood-04 depicts standing public living-water proclamation in temple court, red mantle and crowd. New mid-feast seated small questioning encounter is a different passage/event moment, staging, audience relation and action. Finished pixels must preserve this difference; another standing temple sermon fails.",
+    "excluded": [
+      "John14 Comforter already on Holy Ghost",
+      "John17 prayer already on Melchizedek priesthood",
+      "Generic risen invitation already in Look Unto Me and Atonement",
+      "Generic seedling care already on God study",
+      "Second Peter conversation under Matthew16 would repeat the new John6 visual action"
+    ],
+    "third_scene": "Ungenerated option only if finished page needs it: mature orchard fruit after patient care under Alma32:37-43, distinct from greenhouse seedling. Do not automatically add."
+  },
+  "caption_proposals": {
+    "john6": {
+      "title": "Stay with the words of life",
+      "text": "When many disciples turned away, Peter chose to remain with Jesus. His answer brings the study back to the Savior and the life found in His words.",
+      "passage": "John 6:66-69"
+    },
+    "john7": {
+      "title": "Learn through faithful action",
+      "text": "In the temple, Jesus answered questions about His teaching. He invited His listeners to do the Father's will and come to know the source of His doctrine.",
+      "passage": "John 7:14-18"
+    }
+  },
+  "chronology": "Both scenes during mortal ministry, early first century AD. Jesus approximately early thirties; no exact birthday/date claimed. Peter and unnamed listeners adult, exact ages unknown. Anonymous listeners have no claimed owner identity. All uncertain visual detail remains internal research context, not repeated visitor disclosure."
+}

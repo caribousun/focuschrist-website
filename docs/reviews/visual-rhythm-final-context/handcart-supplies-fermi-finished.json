@@ -1,0 +1,136 @@
+{
+  "reviewer": "Fermi",
+  "receipt_id": "fermi-handcart-supplies-final-context-20261007-receiver",
+  "stage": "finished",
+  "verdict": "PASS",
+  "withdrawn": false,
+  "binding_sha256": "a61c29865896e35470db55d1c4d31a1c72af85b82116729b182cd85f471e3fd4",
+  "reviewed_at": "2026-10-07T04:33:17.364483+00:00",
+  "observations": "Current Fermi receiver read exact live Master/protected foundation, current 00B/Focus and applicable repository mandates. Original-resolution and face-detail checks below explicitly reuse prior Fermi hash-bound pixel inspection; this turn independently verified unchanged source/decoded-pixel/derivative hashes and inspected current rendered screenshot pixels and visitor copy. No regeneration or new owner approval. Actual browser interaction claims belong to root/UI receipts, not my screenshot inspection. No unresolved scoped finding; publication, Newton concurrence and owner aesthetic acceptance remain separate.",
+  "checks": {
+    "identity": "Three anonymous volunteers; no named leader or invented approved likeness.",
+    "age": "Two mature working adults plus older woman, with natural distinct faces and builds; no exact birthdates claimed.",
+    "expression_gaze": "Task-directed attention and exchange of quilt; supportive action without broad theatrical smiles.",
+    "atmosphere": "Clear dry autumn settlement before relief departure; no blizzard falsely imported into Salt Lake preparation.",
+    "environment": "Wooden relief wagon, tied supplies, sacks and settlement match researched period interpretation; no modern objects.",
+    "characters_realism": "Prior original/full/960 inspection retains natural skin, cloth, wooden texture and coherent daylight depth; hashes unchanged.",
+    "period_sources": "Reused official rescue source record grounds October5 appeal and October7,1856 departure with quilts/flour/clothing. Specific volunteers/yard remain interpretation.",
+    "anatomy": "Prior detailed review found separate plausible hands around quilt and coherent limbs. Man uppermost hair touches image edge, with entire face and active hands visible; no whole-hair claim.",
+    "uniqueness": "Outdoor wagon-loading composition differs from donation, sewing, snow rescue and hauling scenes; one owning rescue transition.",
+    "desktop_phone": "Independently inspected actual current desktop1280 and phone412 placement screenshots, plus targeted panel/full-size screenshot where listed. Complete3:2 picture, readable caption/source controls, natural stacking and appropriate pause in story flow. UI native actions separately verified; screenshot review does not claim interaction or200percent scaling."
+  },
+  "full_resolution_inspected": true,
+  "face_details_inspected": true,
+  "pixel_review_provenance": "Retained prior independently inspected immutable pixels; original and all derivatives verified byte and decoded-pixel identical in this review. No claim of new generation or new owner approval.",
+  "evidence": [
+    {
+      "path": "assets/page-art/visual-rhythm-journey/handcart-supplies-original.png",
+      "sha256": "36cba78b3e8cf231da17a7539bb152d6d9accdb53a07570a39f81c554a2bf898"
+    },
+    {
+      "path": "assets/page-art/visual-rhythm-journey/handcart-supplies-full.webp",
+      "sha256": "4190a8e6aed82ce7ca92041dba137ce787d18d90e003fc21445a2992f5bd7555"
+    },
+    {
+      "path": "assets/page-art/visual-rhythm-journey/handcart-supplies-960.webp",
+      "sha256": "a50bcc69b9b067c521ab75c35a13e5b1dd768c452800320851b8df5ed17574bf"
+    },
+    {
+      "path": "artwork-actions.css",
+      "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+    },
+    {
+      "path": "artwork-details.css",
+      "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+    },
+    {
+      "path": "full-image-viewer.css",
+      "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+    },
+    {
+      "path": "hero-details.css",
+      "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+    },
+    {
+      "path": "site-header.css",
+      "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+    },
+    {
+      "path": "site-search.css",
+      "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+    },
+    {
+      "path": "site-system.css",
+      "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+    },
+    {
+      "path": "timeline-experiences.css",
+      "sha256": "4ae767e376478f2cdb16c3085ffa519a7a458314ed81aad2c662ec281ab82e5c"
+    },
+    {
+      "path": "timeline-images.css",
+      "sha256": "6d1aadc6c63012f5055db262354cdac21109bbd1fcc93799aefbba478a6454ec"
+    },
+    {
+      "path": "timeline-mobile-study.css",
+      "sha256": "3e80168cb315409779283e13c0f07f6f9055a2310221c2c90a459e59e009533d"
+    },
+    {
+      "path": "timeline-reader.css",
+      "sha256": "4bbcf89e17c653fc9fd24268412b292b2bd4b92a09032777e0563d2967ebb115"
+    },
+    {
+      "path": "timeline-workspace.css",
+      "sha256": "fb945135a563c94ff6f3cdd5b724e1250824e6ad4e37bfa54a8a55d746917aac"
+    },
+    {
+      "path": "timelines/willie-and-martin-handcart-map.html",
+      "sha256": "8f8741552d430ee4e8814d51fb0c34c3f7d3f7f65f92a84f4006799339a74bf1"
+    },
+    {
+      "path": "topic-art.css",
+      "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"
+    },
+    {
+      "path": "topic-artwork-details.css",
+      "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+    }
+  ],
+  "screenshot_evidence": [
+    {
+      "path": ".qa-artifacts/visual-rhythm-review/handcart-supplies-desktop.png",
+      "sha256": "424ee469a05028a093c8e0d6a2be5e8449204ef04af278cdfd2d397f20f2859e"
+    },
+    {
+      "path": ".qa-artifacts/visual-rhythm-review/handcart-supplies-phone.png",
+      "sha256": "09f95ff53c41674e7fbaf9cb060112f3d38b59d8f748dcec265888f4f4964f7a"
+    },
+    {
+      "path": ".qa-artifacts/visual-rhythm-review/handcart-supplies-panel-narrow.png",
+      "sha256": "0195d3165adebc3e71b9e573a48baf66dddd1bc28569fd58aaf5aab367b88456"
+    }
+  ],
+  "mandates_read": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "fe68d0e575ac67262f5693432f09e8de8c2236d1ad8e58890e24f6d358cd4bf4"
+    },
+    {
+      "path": "docs/historical-character-identity.md",
+      "sha256": "69f0f51400ba102dfb5df9a9ec9fb6e738255dc496b84dc5dd684f3f5886c8c4"
+    },
+    {
+      "path": "docs/focuschrist-enrichment-and-stewardship-prompt.md",
+      "sha256": "91cfd09d188880c849493d1752cabb6c6bf8b239d9722259b196161fb6189d14"
+    },
+    {
+      "path": "docs/supporting-artwork-standard.md",
+      "sha256": "bdf1a7b97693f15cc9d6411fd0378ea8b549f2a6d3df934d574398ecbe0966ec"
+    },
+    {
+      "path": "docs/enriched-picture-owner-mandate.md",
+      "sha256": "c237fb14c7dd57f04d7d9ad063f3f0e93daf0a5c9844f9c3682407b4c80b363d"
+    }
+  ],
+  "source_spec": "docs/reviews/visual-rhythm-new-art/handcart-supplies-creation-spec.json"
+}

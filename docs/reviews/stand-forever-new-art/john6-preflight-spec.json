@@ -1,0 +1,86 @@
+{
+  "id": "stand-forever-john6",
+  "role": "body",
+  "route": "answers/stand-forever.html",
+  "prompt": {
+    "path": "docs/reviews/stand-forever-new-art/john6-prompt.txt",
+    "sha256": "7ec541c91bd0977cd876dd4e0b45bcbb28b764162e383946a7fee2860f7bfd03"
+  },
+  "mandates": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "fe68d0e575ac67262f5693432f09e8de8c2236d1ad8e58890e24f6d358cd4bf4"
+    },
+    {
+      "path": "docs/historical-character-identity.md",
+      "sha256": "69f0f51400ba102dfb5df9a9ec9fb6e738255dc496b84dc5dd684f3f5886c8c4"
+    },
+    {
+      "path": "docs/focuschrist-enrichment-and-stewardship-prompt.md",
+      "sha256": "91cfd09d188880c849493d1752cabb6c6bf8b239d9722259b196161fb6189d14"
+    }
+  ],
+  "references": [
+    {
+      "path": "assets/heroes/home-christ-signature-approved-20260907.png",
+      "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b"
+    },
+    {
+      "path": "assets/page-art/sitewide-narratives/look-peter-rescue-approved-20260919-full.webp",
+      "sha256": "f6b5502c16f4a272b0e80209876366f86285c38ce5547b28d6fbe98d9849427a"
+    },
+    {
+      "path": "docs/reviews/stand-forever-new-art/source-record.json",
+      "sha256": "ff37365ef49832338774b77c6717d841983891612b8e17d67ef317941939c82f"
+    }
+  ],
+  "source_record": {
+    "path": "docs/reviews/stand-forever-new-art/source-record.json",
+    "sha256": "ff37365ef49832338774b77c6717d841983891612b8e17d67ef317941939c82f"
+  },
+  "chronology": {
+    "kind": "approximate-historical",
+    "period": "Early first century AD, during the mortal ministry of Jesus Christ",
+    "basis": "John chapter 6 establishes ministry sequence; no exact calendar date asserted.",
+    "source_urls": [
+      "https://www.churchofjesuschrist.org/study/scriptures/nt/john/6?lang=eng"
+    ]
+  },
+  "characters": [
+    {
+      "name": "Jesus Christ",
+      "age_context": {
+        "status": "approximate",
+        "depiction": "Adult mortal ministry, approximately early thirties",
+        "basis": "Adult ministry in John6-7; precise event and birth dates not established here. Apparent early thirties is a qualified artistic choice, not exact age claim."
+      },
+      "reference_path": "assets/heroes/home-christ-signature-approved-20260907.png",
+      "identity_authority": "owner-approved",
+      "owner_evidence": "Canonical owner-approved Home identity, approved-character-identities.json; exact pixels inspected."
+    },
+    {
+      "name": "Simon Peter",
+      "age_context": {
+        "status": "unknown",
+        "depiction": "Adult man seen mainly from behind, matching the approved rescue scene rear-profile appearance",
+        "basis": "John6 identifies Peter as speaker; exact age and reliable ancient likeness are unknown."
+      },
+      "reference_path": "assets/page-art/sitewide-narratives/look-peter-rescue-approved-20260919-full.webp",
+      "identity_authority": "owner-approved",
+      "owner_evidence": "Owner approved entire rescue scene per docs/art-study-image-review.json. Use identifiable foreground Peter rear-profile continuity only; no separate approved frontal master claimed."
+    },
+    {
+      "name": "Anonymous adult listeners and departing disciples",
+      "age_context": {
+        "status": "illustrative",
+        "depiction": "Distinct adults, natural mature features and ordinary first-century dress",
+        "basis": "Unnamed surrounding people in chapter context; no precise ages or authenticated likenesses given."
+      },
+      "reference_path": "docs/reviews/stand-forever-new-art/source-record.json",
+      "identity_authority": "researched-no-owner-master",
+      "owner_evidence": "Scripture source and written appearance constraints in source record. Anonymous roles have no claimed owner-approved identity; source record is textual research evidence, not a facial photograph."
+    }
+  ],
+  "period_clothing_setting": "Modest first-century wool and linen; interpretive shaded Capernaum courtyard, dry ground, departing path",
+  "interaction": "Exact prompt requires coherent mutual gaze, calm attentive natural expressions, separate anatomically clear limbs; meaningful action and blocking distinct from all identified similar inventory."
+}

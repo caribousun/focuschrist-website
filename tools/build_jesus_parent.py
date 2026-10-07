@@ -18,10 +18,10 @@ text=re.sub(r'<!-- JESUS JOURNEY BEGIN -->.*?<!-- JESUS JOURNEY END -->','',text
 marker='<section class="fc-deep-study fc-foundation-route"'
 pos=text.index(marker)
 text=text[:pos]+'<!-- JESUS JOURNEY BEGIN --><div class="jj-main">'+body+'</div><!-- JESUS JOURNEY END -->'+text[pos:]
-if 'jesus-journey.css' not in text:text=text.replace('</head>','<link rel="stylesheet" href="../jesus-journey.css?v=20261004-chapter-picker-center-1">\n</head>')
+if 'jesus-journey.css' not in text:text=text.replace('</head>','<link rel="stylesheet" href="../jesus-journey.css?v=20261007-chapter-pair-1">\n</head>')
 text=re.sub(r'jesus-journey.js\?v=[^"\s]+','jesus-journey.js?v=20260923-chapter-cards-1',text)
-text=re.sub(r'jesus-journey.css\?v=[^"\s]+','jesus-journey.css?v=20261004-chapter-picker-center-1',text)
-text=re.sub(r'topic-artwork-details.js\?v=[^"\s]+','topic-artwork-details.js?v=20260930-history-records-1',text)
+text=re.sub(r'jesus-journey.css\?v=[^"\s]+','jesus-journey.css?v=20261007-chapter-pair-1',text)
+text=re.sub(r'topic-artwork-details.js\?v=[^"\s]+','topic-artwork-details.js?v=20261007-scoped-root-1',text)
 if 'src="../jesus-journey.js' not in text:text=text.replace('</body>','<script src="../jesus-journey.js?v=20260923-chapter-cards-1" defer></script></body>')
 text=re.sub(r'<title>.*?</title>','<title>Jesus Christ: Come to Know the Living Savior | focusChrist</title>',text,count=1)
 for attribute,name,value in [('name','robots','index,follow,max-image-preview:large' if args.strict else 'noindex,nofollow'),('name','description',page['description']),('property','og:title',page['title']),('property','og:description',page['description']),('name','twitter:title',page['title']),('name','twitter:description',page['description'])]:

@@ -168,3 +168,12 @@
         scroll-behavior: auto;
     }
 }
+
+/* Keep the version label above aligned, equally sized viewer actions. */
+.fc-full-image-tools{display:grid;grid-template-columns:repeat(2,minmax(0,18rem));align-items:end;gap:12px 16px}
+.fc-full-image-version{display:grid;grid-template-columns:minmax(0,1fr);gap:10px;min-width:0;text-align:center}
+.fc-full-image-version select,.fc-full-image-download{width:100%;min-width:0;min-height:48px;text-align:center}
+.fc-full-image-version select{padding-left:36px;text-align-last:center}
+.fc-full-image-download{display:flex;align-items:center;justify-content:center;overflow-wrap:anywhere}
+.fc-full-image-tools:has(.fc-full-image-version[hidden]){grid-template-columns:minmax(0,18rem)}
+@media(max-width:640px){.fc-full-image-tools{grid-template-columns:minmax(0,24rem);gap:12px}}

@@ -1,0 +1,51 @@
+{
+  "reviewer": "Newton",
+  "receipt_id": "newton-final-context-handcart-supplies-20261007",
+  "stage": "finished",
+  "verdict": "PASS",
+  "withdrawn": false,
+  "binding_sha256": "a61c29865896e35470db55d1c4d31a1c72af85b82116729b182cd85f471e3fd4",
+  "reviewed_at": "2026-10-07T04:33:04.687947+00:00",
+  "full_resolution_inspected": true,
+  "face_details_inspected": true,
+  "observations": "Current independent review personally inspected both delivered WebPs, desktop/phone placements and applicable narrow panel/viewer screenshots, read current caption/source/adjacent prose, and verified complete current HTML/CSS context plus asset/pixel hashes. Exact unchanged original-resolution and face-detail inspection is reused from the named prior Newton receipt, not claimed as newly repeated. No browser operation, owner aesthetic acceptance or public verification by this reviewer.",
+  "checks": {
+    "identity": "Three anonymous volunteers; no invented named-leader likeness.",
+    "age": "Two mature workers and older supplier fit the qualified historical scene.",
+    "expression_gaze": "Focused quilt exchange and separate supply task, without generic smiling or despair.",
+    "atmosphere": "Dry autumn daylight and detailed quilt, wood, canvas and skin fit the source-reviewed preparation.",
+    "environment": "Canvas relief wagon, flour sacks, folded supplies and settlement yard support preparation before departure.",
+    "anatomy": "Separate exchange hands and wrists trace to workers, with far grips naturally obscured by quilt; supplier hands hold bundle. Topmost male hair touches upper frame but full face and active hands remain visible.",
+    "uniqueness": "Wagon loading differs from existing donation coin counting, sewing, river crossing and snow rescue.",
+    "period_sources": "Reused independently verified official handcart-rescue record: October5 call and October7 departure with quilts/flour/clothing. Current caption preserves those events without claiming exact volunteers or yard.",
+    "characters_realism": "Prior full-resolution original and face/hand crop concurrence remains valid on identical original SHA. Both delivered full/960 WebPs personally viewed now, retaining natural faces and textures. Three anonymous adults with distinct natural faces, focused task expressions and plausible1856 attire. Quilt exchange hands/arms traceable, far grips naturally occluded by quilt. Older volunteer hands coherently hold next bundle. Dry autumn settlement, provisions and wood/iron canvas wagon fit sourced preparation; no snow or named leader. Full native scene and face/hand crops inspected.",
+    "desktop_phone": "Personally viewed current saved desktop and phone placements: native3:2 picture, readable caption/source controls and useful narrative pause. Applicable narrow panel/fullsize imagery also inspected; UI/root own executed actions. Screenshot filenames are not interaction proof."
+  },
+  "prior_review": {
+    "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-06\\focus-artwork-pill-controls-completion\\work\\newton\\handcart-supplies-original-pixel-review.json",
+    "sha256": "e6795f281266f1d67b5ca8f8d9dcff87f0f7929c220303260f12b051214cbf06",
+    "reuse": "Exact original and preflight hashes unchanged; retain prior source/reference/full-resolution crop inspection."
+  },
+  "evidence": [
+    {
+      "path": "assets/page-art/visual-rhythm-journey/handcart-supplies-original.png",
+      "sha256": "36cba78b3e8cf231da17a7539bb152d6d9accdb53a07570a39f81c554a2bf898"
+    },
+    {
+      "path": "assets/page-art/visual-rhythm-journey/handcart-supplies-full.webp",
+      "sha256": "4190a8e6aed82ce7ca92041dba137ce787d18d90e003fc21445a2992f5bd7555"
+    },
+    {
+      "path": "assets/page-art/visual-rhythm-journey/handcart-supplies-960.webp",
+      "sha256": "a50bcc69b9b067c521ab75c35a13e5b1dd768c452800320851b8df5ed17574bf"
+    },
+    {
+      "path": ".qa-artifacts/visual-rhythm-review/handcart-supplies-desktop.png",
+      "sha256": "424ee469a05028a093c8e0d6a2be5e8449204ef04af278cdfd2d397f20f2859e"
+    },
+    {
+      "path": ".qa-artifacts/visual-rhythm-review/handcart-supplies-phone.png",
+      "sha256": "09f95ff53c41674e7fbaf9cb060112f3d38b59d8f748dcec265888f4f4964f7a"
+    }
+  ]
+}

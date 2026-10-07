@@ -1,0 +1,90 @@
+{
+  "id": "visual-rhythm-pioneers-traveler",
+  "role": "body",
+  "route": "pioneers.html",
+  "preflight_sha256": "602dc7b8dd94008295cdbe7cb2e5570cfeaddad3def20908827d380b1c3a2b7d",
+  "generated_at": "2026-10-07T04:07:57.353790+00:00",
+  "owner_status": "not-reviewed",
+  "ancestor_sha256": [
+    "830afc2a2fd928df95293e53184d7a77a8487ab4380198ec76cd4c8ba71e4d25"
+  ],
+  "original": {
+    "path": "assets/page-art/visual-rhythm-journey/pioneers-traveler-original.png",
+    "sha256": "813d004b326d19c36b33565747ad0297d93520a7ac04451400f1697227e27021",
+    "pixel_sha256": "3da07f4d32d558b9bbeba0bec74415c35e1c1df36bc57a0c1800bd9463e9b7c9"
+  },
+  "derivatives": [
+    {
+      "path": "assets/page-art/visual-rhythm-journey/pioneers-traveler-full.webp",
+      "sha256": "87df0e8ab581be777a2648dee88a942b624c0063007376b7030c7ed79a3f8d94",
+      "pixel_sha256": "e992ed8c0be1d4965ea445a31d806e1f60d52348ecb72780e73f10a95271da2d"
+    },
+    {
+      "path": "assets/page-art/visual-rhythm-journey/pioneers-traveler-960.webp",
+      "sha256": "95ae2433f921444725b1d751779b4f7be6c27869235eec1b8760b335fef00ea8",
+      "pixel_sha256": "3cc6ed9b9b231d8f746f2ae79ff3dd47d081d237d9114418f45dcf83455d6769"
+    }
+  ],
+  "page_context": [
+    {
+      "path": "artwork-actions.css",
+      "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+    },
+    {
+      "path": "artwork-details.css",
+      "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+    },
+    {
+      "path": "complete-card-rows.css",
+      "sha256": "7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"
+    },
+    {
+      "path": "connected-study.css",
+      "sha256": "513b11859f17d36a5934d323f865242b8c90beea70e94fd3056e6e2dc0af40c6"
+    },
+    {
+      "path": "full-image-viewer.css",
+      "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+    },
+    {
+      "path": "hero-details.css",
+      "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+    },
+    {
+      "path": "pioneer-experience.css",
+      "sha256": "7f67cd77c23157019cd4cb609f2ff0b7151b9a503e143dd692337f41aed919d8"
+    },
+    {
+      "path": "pioneer-story.css",
+      "sha256": "4763ed30f2f27070d5d126bf4426533cfecbf78b5f189ab8f49300708578c924"
+    },
+    {
+      "path": "pioneers.html",
+      "sha256": "22f1bc6119503179c58e55328b91e1f2e077c55c44ac5918569b566d216666ff"
+    },
+    {
+      "path": "resource-cards.css",
+      "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+    },
+    {
+      "path": "site-header.css",
+      "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+    },
+    {
+      "path": "site-search.css",
+      "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+    },
+    {
+      "path": "site-system.css",
+      "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+    },
+    {
+      "path": "topic-art.css",
+      "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"
+    },
+    {
+      "path": "topic-artwork-details.css",
+      "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+    }
+  ]
+}

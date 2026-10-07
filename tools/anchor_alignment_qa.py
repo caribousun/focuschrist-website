@@ -49,13 +49,17 @@ JOSEPH_LIFE_APPENDIX += b'\n/* The former illustrated opening is now a compact t
 JOSEPH_LIFE_APPENDIX += b'\n/* Distinct Joseph leading pictures retain the panorama on desktop and a reviewed central phone composition. */\nbody.fc-site .joseph-leading-hero{display:block;width:100%;height:auto!important;min-height:0!important;max-height:none!important;aspect-ratio:2170/725}\nbody.fc-site .joseph-leading-hero>img{object-fit:contain!important;object-position:center!important}\nbody.fc-site .joseph-leading-hero::before,body.fc-site .joseph-leading-hero::after{display:none}\nbody.fc-site .joseph-bridge-intro[data-unified-opening]{margin-block:0}\n@media(max-width:700px){body.fc-site .joseph-leading-hero{height:300px!important;min-height:300px!important;aspect-ratio:auto}body.fc-site .joseph-leading-hero>img{object-fit:cover!important;object-position:45% 50%!important}}\n'
 
 # Exact owner-requested chapter-label correction; preserve prior anchor/artwork bytes.
-JOURNEY_PICKER_VERSION = '20261004-chapter-picker-center-1'
-JOURNEY_PICKER_SHA256 = '79979a47c68eb512854d98fbc4399411a5b88fb02262fff4e903c4adc9af6a2e'
+JOURNEY_PICKER_VERSION = '20261007-chapter-pair-1'
+JOURNEY_PICKER_SHA256 = 'f2b19be6fff3b5940bde22ab758e9547938c8154f6f63b6a280c95e1344c54a9'
+JOURNEY_PICKER_PREVIOUS_SHA256 = '79979a47c68eb512854d98fbc4399411a5b88fb02262fff4e903c4adc9af6a2e'
+JOURNEY_PAIR_APPENDIX = b'\n/* Paired chapter controls share content-driven rows, including enlarged text. */\n.jj-chapter-controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch}\n.jj-chapter-position,.jj-reading-guide{grid-column:1/-1}\n.jj-chapter-controls .jj-chapter-picker{min-width:0;border-radius:10px}\n.jj-chapter-controls .jj-chapter-picker>summary{display:flex;align-items:center;justify-content:center;height:100%;min-height:44px;line-height:1.5}\n.jj-chapter-controls .jj-mode{box-sizing:border-box;min-width:0;font-size:1rem;text-align:center}\n.jj-chapter-controls .jj-chapter-picker[open]{grid-column:1/-1}\n.jj-chapter-controls .jj-chapter-picker[open]>summary{height:auto}\n@media(max-width:360px){.jj-chapter-controls{grid-template-columns:minmax(0,1fr)}}\n'
 JOURNEY_PICKER_PRIOR = b'.jj-chapter-picker{flex:1 1 200px;border:1px solid #829a91!important;border-radius:12px;padding:0!important;min-width:0;background:#102c36}\n.jj-chapter-picker>summary{padding:10px 16px;font-size:1rem!important;margin:0!important}\n'
 JOURNEY_PICKER_CURRENT = b".jj-chapter-picker{flex:1 1 200px;border:1px solid #829a91!important;border-radius:12px;padding:0!important;min-width:min(100%,14ch);box-sizing:border-box;background:#102c36}\n.jj-chapter-picker>summary{display:block;position:relative;box-sizing:border-box;padding:10px 38px;font-size:1rem!important;margin:0!important;list-style:none;text-align:center;overflow-wrap:anywhere}\n.jj-chapter-picker>summary::-webkit-details-marker{display:none}\n.jj-chapter-picker>summary::before{content:'';position:absolute;left:16px;top:50%;width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent;border-left:7px solid currentColor;transform:translateY(-50%)}\n.jj-chapter-picker[open]>summary::before{transform:translateY(-50%) rotate(90deg)}\n"
 
 def before_journey_picker(data):
-    if hashlib.sha256(data).hexdigest() == JOURNEY_PICKER_SHA256 and data.count(JOURNEY_PICKER_CURRENT) == 1:
+    if hashlib.sha256(data).hexdigest() == JOURNEY_PICKER_SHA256 and data.endswith(JOURNEY_PAIR_APPENDIX):
+        data = data[:-len(JOURNEY_PAIR_APPENDIX)]
+    if hashlib.sha256(data).hexdigest() == JOURNEY_PICKER_PREVIOUS_SHA256 and data.count(JOURNEY_PICKER_CURRENT) == 1:
         prior = data.replace(JOURNEY_PICKER_CURRENT, JOURNEY_PICKER_PRIOR, 1)
         if hashlib.sha256(prior).hexdigest() == FILES['jesus-journey.css']['after_sha256']:
             return prior
@@ -241,6 +245,9 @@ def self_test():
         changed = JOURNEY_PICKER_CURRENT.replace(old, new, 1)
         assert changed != JOURNEY_PICKER_CURRENT
         assert not reviewed_anchor_style('jesus-journey.css', journey.replace(JOURNEY_PICKER_CURRENT, changed, 1))
+    for mutation in (journey + JOURNEY_PAIR_APPENDIX, journey[:-len(JOURNEY_PAIR_APPENDIX)], journey.replace(b'align-items:stretch}\n.jj-chapter-position', b'align-items:center}\n.jj-chapter-position'), journey.replace(b'@media(max-width:360px)', b'@media(max-width:300px)')):
+        assert mutation != journey
+        assert not reviewed_anchor_style('jesus-journey.css', mutation)
     shared = (ROOT / 'site-system.css').read_bytes()
     assert not reviewed_anchor_style('site-system.css', before_mobile_nav(shared))
     assert before_mobile_nav(shared) == shared[:-len(MOBILE_NAV_APPENDIX)]

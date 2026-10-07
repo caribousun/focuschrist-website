@@ -220,7 +220,8 @@ def scan(root=ROOT):
     # These explicit schemas describe one reviewed original per record. Never
     # union a document's unrelated top-level assets collection.
     schemas={'exclusive-artwork-review.json':'assets','exclusive-artwork-ownership.json':'replacements',
-             'five-picture-image-review.json':'approved','topic-artwork-review.json':'assets'}
+             'five-picture-image-review.json':'approved','topic-artwork-review.json':'assets',
+             'visual-rhythm-artwork-inventory.json':'figures'}
     for filename,collection in schemas.items():
         doc=root/'docs'/filename
         if not doc.is_file():continue

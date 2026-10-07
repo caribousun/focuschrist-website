@@ -1,0 +1,46 @@
+{
+  "reviewer": "Newton",
+  "receipt_id": "newton-final-context-eleazer-20261007",
+  "stage": "finished",
+  "verdict": "PASS",
+  "withdrawn": false,
+  "binding_sha256": "6e189b5451a7b2f9fc9947a1d80da08d994712e4d1bbd4011cdd5f0b54190954",
+  "reviewed_at": "2026-10-07T04:33:05.298540+00:00",
+  "full_resolution_inspected": true,
+  "face_details_inspected": true,
+  "observations": "Targeted current-context renewal of frozen Eleazer original and wide derivative. Prior independent original-resolution, face-detail, identity and source checks reused from exact repository Newton receipt; 2473 baseline raster/PDF invariance checked. Current HTML/CSS closure complete and exact. Personally viewed root current desktop wide viewer and phone artwork panel screenshots. Root owns version switching/Escape/Continue action execution. Owner-rejected doorway remains excluded. No generation, owner acceptance or publication claim.",
+  "checks": {
+    "identity": "Prior unchanged Newton inspection reused: Personally compared both actual reference images with master and wide output. Eleazer retains swept shorter hair, broad forehead and narrower tapered face; Brigham retains longer wavy hair, broader lower face, nose and recognizable eye region. No new owner approval inferred.",
+    "age": "Prior unchanged Newton inspection reused: Source record establishes early1832 ages36 and30 with March1 representative only. Finished men plausibly fit adult thirties; neither copies old-age portrait features. Exact age cannot be proven from pixels.",
+    "expression_gaze": "Prior unchanged Newton inspection reused: Both variants show calm speaking attention from Eleazer and engaged listening from Brigham, with mutually oriented pupils/head angles and restrained natural mouths.",
+    "atmosphere": "Prior unchanged Newton inspection reused: Consistent outdoor daylight, bare trees, restrained rural colors and photographic depth support a quiet conversation.",
+    "environment": "Prior unchanged Newton inspection reused: Timber workshop, bench, hand tools, shavings, split rails and rural background are coherent. Workshop venue is illustrative trade-grounded setting, not documented meeting location.",
+    "characters_realism": "Prior unchanged Newton inspection reused: Inspected full1536x1024 original and full2172x724 wide via lossless native-resolution halves plus faces/hands. Natural skin texture, hair strands, fabric grain, lighting and physical depth; no conspicuous waxy or painted faces.",
+    "period_sources": "Prior unchanged Newton inspection reused: Read immutable source-record.json and both preflight source/prompt bindings. Early1832 clothing and carpenter setting fit the documented trade and testimony scope. Caption states the testimony only, no invented date/venue certainty. No new historical source research claimed.",
+    "anatomy": "Prior unchanged Newton inspection reused: Traced speaking wrist to open hand and visible fingers; listener forearms converge into credible clasped hands. No extra limb, broken wrist, detached hand or obvious fused-finger defect. Hidden left hand of speaker not invented.",
+    "uniqueness": "Prior unchanged Newton inspection reused: Personally inspected contact sheet of all ten original Eleazer pictures and prospective11unique figure IDs. New outdoor standing two-person workshop conversation differs from indoor seated group testimony and other originals. Original IDs preserved; wide and phone count as one artwork.",
+    "desktop_phone": "Personally inspected .qa-artifacts/root-final/eleazer-desktop-viewer.png showing full wide scene with balanced version/download pills and eleazer-phone-viewer.png actually showing the standard artwork panel with readable caption and stacked controls. Image file names do not expand proof. Root native receipt records both versions, Escape/focus and Continue return. Existing hero/composition proof remains unchanged."
+  },
+  "evidence": [
+    {
+      "path": "assets/page-art/history-stories/miller-teaching-brigham-master.png",
+      "sha256": "d6635b162ba41afa3f5f145e39d0c0ca92b988610c0c5e8a0eb382f075af5527"
+    },
+    {
+      "path": "assets/page-art/history-stories/miller-teaching-brigham-desktop.png",
+      "sha256": "2c720d97854b21b3865acdf7cb8e7b4d463c9a02858b67627cfd9967cd5696c7"
+    },
+    {
+      "path": "docs/reviews/eleazer-teaching-hero/newton-final-evidence.json",
+      "sha256": "2d60dc80053bd91cf382a3280854a29af185d5ff14470d16d95c36dce51b4f50"
+    },
+    {
+      "path": ".qa-artifacts/root-final/eleazer-desktop-viewer.png",
+      "sha256": "14ad9514fe67ded02210717484883b19d55f9ebe6877a06183f13377f6d3517f"
+    },
+    {
+      "path": ".qa-artifacts/root-final/eleazer-phone-viewer.png",
+      "sha256": "049627ca167e9a0eada35276abe4a5ae97af9b8db823cdc338f132e5e9148519"
+    }
+  ]
+}
