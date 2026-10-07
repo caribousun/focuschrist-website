@@ -50,6 +50,7 @@ class ExactFeaturedBinding(unittest.TestCase):
         for route, expected in mandate.REVIEWED_PAGE_HASHES.items():
             raw = (ROOT / route).read_bytes()
             versions = [
+                (mandate.CURRENT_COMMON_SCRIPT, mandate.OLD_COMMON_SCRIPT),
                 (mandate.CONTAINED_ANSWER_STYLE, mandate.BUFFER_ANSWER_STYLE),
                 (mandate.CURRENT_ART_STYLE, mandate.OLD_ART_STYLE),
             ]

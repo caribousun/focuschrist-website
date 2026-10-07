@@ -18,7 +18,18 @@ PATTERN = re.compile(r'(scroll-margin-top\s*:\s*)([^;}]+)')
 SEARCH_HITBOX = b'.fc-search-result h2 a {display:inline-block;'
 SEARCH_PRIOR = b'.fc-search-result h2 a {'
 SEARCH_VERSION = '20260929-result-hitbox-1'
-ART_STUDY_NAV_VERSION = '20261006-static-study-nav-1'
+ART_STUDY_NAV_VERSION = '20261006-caption-prose-gap-1'
+ART_CAPTION_GAP_SHA256 = 'b6d58dbb0c04984177a330db8686f0f5be03dff468b6ec2496ef5931b1da91d3'
+ART_CAPTION_GAP_BLOCK = b'/* Keep following prose clear of the artwork caption without changing its frame. */\n.fc-art-study-page .fc-deep-study .fc-art-story + p {\n    margin-top: 20px;\n}\n\n'
+
+
+def before_art_caption_gap(data):
+    """Invert only the exact independently reviewed caption/prose buffer."""
+    if hashlib.sha256(data).hexdigest() == ART_CAPTION_GAP_SHA256 and data.count(ART_CAPTION_GAP_BLOCK) == 1:
+        prior = data.replace(ART_CAPTION_GAP_BLOCK, b'', 1)
+        if hashlib.sha256(prior).hexdigest() == FILES['art-study-enrichment.css']['after_sha256']:
+            return prior
+    return data
 
 TOPIC_DESKTOP_APPENDIX = b'\n/* Owner-requested desktop parity with Home; approved phone opening rules stay intact. */\n@media(min-width:701px){\n body.fc-site.fc-topic-page .fc-topic-opening{min-height:0;grid-template-rows:auto auto;align-content:start}\n body.fc-site.fc-topic-page .fc-topic-opening .fc-visual-hero{height:auto!important;min-height:0!important;max-height:none!important;aspect-ratio:2048/684}\n}\n'
 TOPIC_DESKTOP_VERSION = "20260929-home-height-1"
@@ -111,6 +122,7 @@ def historical_style_bytes(data):
     reviewed bytes. The mandatory current-file checks separately reject stale
     files and any mutation to the approved anchor-only transformation.
     """
+    data = before_art_caption_gap(data)
     data = before_mobile_nav(data)
     data = before_source_rows(data)
     data = before_journey_picker(before_joseph_life(before_study_center(before_topic_desktop(before_search_hitbox(data)))))
@@ -147,6 +159,9 @@ def historical_style_bytes(data):
 
 def reviewed_anchor_style(name, data):
     record = FILES.get(name)
+    if name == 'art-study-enrichment.css':
+        if hashlib.sha256(data).hexdigest() != ART_CAPTION_GAP_SHA256: return False
+        data = before_art_caption_gap(data)
     if name == 'jesus-journey.css':
         if hashlib.sha256(data).hexdigest() != JOURNEY_PICKER_SHA256: return False
         data = before_journey_picker(data)
@@ -204,6 +219,21 @@ def self_test():
         assert not reviewed_anchor_style(name, b'/* extra */' + data), name
         assert not reviewed_anchor_style('unregistered.css', data), name
         assert not reviewed_anchor_style(name, historical_style_bytes(data)), name
+    art = (ROOT / 'art-study-enrichment.css').read_bytes()
+    prior_art = before_art_caption_gap(art)
+    assert hashlib.sha256(prior_art).hexdigest() == FILES['art-study-enrichment.css']['after_sha256']
+    assert hashlib.sha256(historical_style_bytes(art)).hexdigest() == FILES['art-study-enrichment.css']['before_sha256']
+    assert not reviewed_anchor_style('art-study-enrichment.css', prior_art)
+    for mutation in (
+        art + ART_CAPTION_GAP_BLOCK,
+        art.replace(b'margin-top: 20px;', b'margin-top: 21px;', 1),
+        art.replace(b'.fc-art-story + p {', b'.fc-art-story ~ p {', 1),
+        art.replace(b'.fc-art-story img {', b'.fc-art-story video {', 1),
+        art + b'\nbody{color:red}',
+    ):
+        assert mutation != art
+        assert before_art_caption_gap(mutation) == mutation
+        assert not reviewed_anchor_style('art-study-enrichment.css', mutation)
     journey = (ROOT / 'jesus-journey.css').read_bytes()
     assert not reviewed_anchor_style('jesus-journey.css', before_journey_picker(journey))
     assert not reviewed_anchor_style('jesus-journey.css', journey.replace(b'min-width:min(100%,14ch);', b'min-width:0;', 1))

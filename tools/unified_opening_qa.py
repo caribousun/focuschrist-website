@@ -7,11 +7,12 @@ from bs4 import BeautifulSoup
 from hero_introductions_qa import ROUTES as INTRODUCTION_ROUTES
 
 ROOT = Path(__file__).resolve().parents[1]
+HERO_ROUTES = frozenset(p['path'] for p in json.loads((ROOT / 'docs/unified-opening-inventory.json').read_text())['pages'] if p['hero'])
 
 
 def assert_common_version(route, doc):
     common = [s['src'] for s in doc.select('script[src]') if 'site-common.js' in s['src']]
-    version = '20261006-hero-introductions-1' if route in INTRODUCTION_ROUTES else '20261002-timeline-1'
+    version = '20261006-balanced-opening-1' if route in HERO_ROUTES else '20261002-timeline-1'
     prefix = '/' if route.startswith('jesus-christ/') else '../' * route.count('/')
     expected = prefix + 'site-common.js?v=' + version
     assert common == [expected], route + ': exact shared-script binding required'
@@ -33,7 +34,7 @@ for record in inventory['pages']:
     assert actual == record['hero'], record['path'] + ': opening hero inventory drift'
     assert_common_version(record['path'], doc)
 common = (ROOT / 'site-common.js').read_text(encoding='utf8')
-assert common.count("relativeAssetHref('unified-opening.css?v=20260930-alignment-2')") == 1
+assert common.count("relativeAssetHref('unified-opening.css?v=20261006-balanced-opening-1')") == 1
 assert common.count("relativeAssetHref('unified-opening.js?v=20261006-introductions-1')") == 1
 script = (ROOT / 'unified-opening.js').read_text(encoding='utf8')
 assert '\\u2193' in script and 'Ãƒ' not in script, 'Continue arrow encoding'

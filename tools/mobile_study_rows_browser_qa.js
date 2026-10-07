@@ -35,6 +35,23 @@ function inspectMobileStudyRows(selector){
  if(explanation&&innerWidth<=700&&explanation.getBoundingClientRect().height===0)issues.push('mobile introduction disappeared');
  return {issues,groups};
 }
+async function verifyDisappearingIntroduction(page){
+ // Production rules have different specificity before/after opening reparenting.
+ // Hide the actual measured element directly so this negative is independent of that timing.
+ const explanation=page.locator('.fc-opening-explanation');
+ if(await explanation.count()!==1)throw Error('Disappearing introduction fixture requires exactly one introduction');
+ await explanation.waitFor({state:'visible'});
+ const originalStyle=await explanation.getAttribute('style');
+ try {
+  await explanation.evaluate(n=>n.style.setProperty('display','none','important'));
+  if(await explanation.evaluate(n=>n.getBoundingClientRect().height)!==0)throw Error('Disappearing introduction fixture failed to hide its target');
+  const negative=await page.evaluate(inspectMobileStudyRows,selector);
+  if(!negative.issues.includes('mobile introduction disappeared'))throw Error('Disappearing introduction fixture did not fail');
+  return negative.issues;
+ } finally {
+  await explanation.evaluate((n,style)=>style===null?n.removeAttribute('style'):n.setAttribute('style',style),originalStyle);
+ }
+}
 module.exports=async function(page,origin){
  const root=path.resolve(__dirname,'..'), routes=[...new Set([...fs.readFileSync(path.join(root,'sitemap.xml'),'utf8').matchAll(/<loc>(.*?)<\/loc>/g)].map(x=>new URL(x[1]).pathname.slice(1)||'index.html'))];
  const consumers=routes.filter(route=>{const dom=new JSDOM(fs.readFileSync(path.join(root,route),'utf8'));const found=dom.window.document.querySelectorAll(selector).length;dom.window.close();return found;});
@@ -53,14 +70,13 @@ module.exports=async function(page,origin){
  const broken=await page.addStyleTag({content:selector+'{display:flex!important;flex-wrap:wrap!important;justify-content:center!important}'+selector+'>:is(a,button){width:auto!important;flex:0 1 auto!important;grid-column:auto!important}'});
  const negative=await page.evaluate(inspectMobileStudyRows,selector);await broken.evaluate(n=>n.remove());
  if(!negative.issues.some(x=>/incomplete row|unequal row widths|unequal column widths/.test(x)))throw Error('Old ragged mobile layout did not fail geometry check');
- const hiddenCopy=await page.addStyleTag({content:'body.fc-site p.fc-opening-explanation.fc-opening-explanation{display:none!important}'});
- const hiddenNegative=await page.evaluate(inspectMobileStudyRows,selector);await hiddenCopy.evaluate(n=>n.remove());
- if(!hiddenNegative.issues.includes('mobile introduction disappeared'))throw Error('Disappearing introduction fixture did not fail');
+ const hiddenNegative=await verifyDisappearingIntroduction(page);
  await page.goto(origin+'/atonement.html',{waitUntil:'load'});await page.evaluate(()=>document.fonts.ready);
  const oddBroken=await page.addStyleTag({content:'body.fc-site .atonement-path>a:last-child{grid-column:auto!important}'});const oddNegative=await page.evaluate(inspectMobileStudyRows,selector);await oddBroken.evaluate(n=>n.remove());if(!oddNegative.issues.some(x=>x.includes('incomplete row')))throw Error('Atonement partial final-row fixture did not fail');
  await page.goto(origin+'/answers/faith-in-jesus-christ-during-trials.html',{waitUntil:'load'});await page.evaluate(()=>document.fonts.ready);
  const ctaBroken=await page.addStyleTag({content:'body.fc-site .cta-row > .cta{text-align:left!important;align-items:flex-start!important;justify-content:flex-start!important}'});
  const ctaNegative=await page.evaluate(inspectMobileStudyRows,selector);await ctaBroken.evaluate(n=>n.remove());
  if(!ctaNegative.issues.some(x=>x.includes('CTA content not centered on both axes'))||!ctaNegative.issues.some(x=>x.includes('CTA wrapped text not centered')))throw Error('Top/left CTA content fixture did not fail');
- return {consumers,cases:results.length,results,negative:negative.issues,oddNegative:oddNegative.issues,ctaNegative:ctaNegative.issues,failures:results.filter(x=>x.issues.length)};
+ return {consumers,cases:results.length,results,negative:negative.issues,hiddenNegative,oddNegative:oddNegative.issues,ctaNegative:ctaNegative.issues,failures:results.filter(x=>x.issues.length)};
 };
+module.exports.verifyDisappearingIntroduction=verifyDisappearingIntroduction;

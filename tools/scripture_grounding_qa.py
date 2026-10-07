@@ -2,6 +2,7 @@
 """Release-blocking checks for final-runtime scripture/source grounding."""
 
 from pathlib import Path
+from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).resolve().parents[1]
 texts = {
@@ -16,7 +17,7 @@ required_by_file = {
         "the Holy Bible, Book of Mormon, Doctrine and Covenants, and Pearl of Great Price",
         "SCRIPTURE ACCURACY IS A HARD REQUIREMENT",
         "Doctrine and Covenants 18:15 is about the joy of bringing a soul to Christ",
-        "if(dbResult.verified)", "site-common.js?v=20261002-timeline-1", "Legacy fallback path",
+        "if(dbResult.verified)", "Legacy fallback path",
     ),
     "site-common.js": (
         "window.focusChristSourceIntegrity", "isScriptureDependent",
@@ -42,6 +43,10 @@ required_by_file = {
     ),
 }
 errors = []
+scripts = [s['src'] for s in BeautifulSoup(texts['ask.html'], 'html.parser').select('script[src]')
+           if 'site-common.js' in s['src']]
+if scripts != ['site-common.js?v=20261006-balanced-opening-1']:
+    errors.append('ask.html requires exactly one reviewed shared script; stale, mixed, duplicate and unknown versions are forbidden')
 for filename, markers in required_by_file.items():
     for marker in markers:
         if marker not in texts[filename]:

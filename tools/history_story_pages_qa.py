@@ -32,6 +32,41 @@ for key, fields in baseline.items():
     for asset_key, hash_key in [('full','sha256'),('thumbnail','thumbnail_sha256')]:
         assert hashlib.sha256((ROOT/fields[asset_key]).read_bytes()).hexdigest() == fields[hash_key]
 
+def assert_story_figures(story, soup):
+    units = story['units']
+    separate = story['id'] == 'eleazer-miller'
+    assert ('hero' in story) == separate, 'Only Eleazer requires the separate unique hero'
+    assert len(units) == 10, 'Ten original narrative units required'
+    expected = [u['id'] for u in units]
+    hero = story.get('hero', units[0])
+    assert story['hero_unit_id'] == hero['id']
+    if separate:
+        assert hero['id'] == 'miller-teaching-brigham' and hero['id'] not in expected
+        expected = [hero['id'], *expected]
+    figures = soup.select('main figure')
+    assert [f.get('data-exclusive-artwork') for f in figures] == expected, 'Exact ordered distinct hero/body figure inventory required'
+    assert len(soup.select('main .fc-visual-hero')) == 1
+    hero_figure = soup.select_one('figure[data-exclusive-artwork="' + hero['id'] + '"]')
+    assert hero_figure and hero_figure.select_one('a.fc-visual-hero')
+    first = soup.select_one('#' + units[0]['id'])
+    assert first and hero_figure.parent is first, 'Hero belongs to original opening section'
+    if separate:
+        first_body = first.select_one('.fc-life-body-start > figure[data-exclusive-artwork="' + units[0]['id'] + '"]')
+        assert first_body and not first_body.select('.fc-visual-hero'), 'Former first artwork must remain a body study'
+    return hero
+
+
+from artwork_creation_gate import run as artwork_gate, BASELINE
+# This QA is a release assertion; current genuine dual finished/root receipts are required.
+artwork_gate(ROOT, 'release')
+prior_stories = json.loads(subprocess.check_output(['git', 'show', BASELINE + ':docs/history-stories/stories.json'], cwd=ROOT))['stories']
+prior_ready = json.loads(subprocess.check_output(['git', 'show', BASELINE + ':docs/history-stories/art-ready.json'], cwd=ROOT))
+for prior in prior_stories:
+    current = next(s for s in stories if s['id'] == prior['id'])
+    assert current['units'] == prior['units'], 'Existing narrative units, IDs, sources and prose must be preserved'
+    for unit in prior['units']:
+        assert ready[unit['id']] == prior_ready[unit['id']], 'Original artwork record must remain unchanged'
+creation_registry = json.loads((ROOT/'docs/artwork-creation-reviews.json').read_text(encoding='utf-8'))
 all_hashes = []
 hub = BeautifulSoup((ROOT/'church-history.html').read_text(encoding='utf-8'), 'html.parser')
 for story in stories:
@@ -56,20 +91,34 @@ for story in stories:
     assert opening.select_one('.fc-actions a')['href'] == '#' + first_heading['id'], 'Begin retains existing first narrative target'
     ids = [node['id'] for node in soup.select('[id]')]
     assert len(ids) == len(set(ids)), 'Duplicate IDs'
-    expected_count = {'john-tanner': 10, 'eleazer-miller': 10, 'john-rowe-moyle': 10}[slug]
-    assert len(soup.select('main figure')) == expected_count, 'Exact accepted original count; no repeated hero'
-    assert len(soup.select('main .fc-visual-hero')) == 1
-    assert len(story['units']) == expected_count
+    expected_count = 10
+    hero = assert_story_figures(story, soup)
     assert [u['id'] for u in story['units']] == story['reviewed_scene_ids']
     assert not (ROOT/f'answers/{slug}.html').exists(), 'These are History stories, not Answers topics'
-    first = soup.select_one(f'#{story["hero_unit_id"]}')
-    assert first.select_one('figure > a.fc-visual-hero')
+    if 'hero' in story:
+        art = ready[hero['id']]
+        entries = [c['spec'] for c in creation_registry['creations'] if c['spec']['id'] == art['creation_id']]
+        assert len(entries) == 1 and entries[0]['role'] == 'hero' and entries[0]['route'] == 'history/eleazer-miller.html', 'Exact unique hero creation proof required'
+        assets = [entries[0]['original'], *entries[0]['derivatives']]
+        assert {art['full'], art['desktop']} <= {a['path'] for a in assets}
+        assert art['review_reference'] == 'docs/artwork-creation-reviews.json'
+        assert art['reviewed'] and art['desktop_reviewed']
+        hero_figure = soup.select_one('figure[data-exclusive-artwork="' + hero['id'] + '"]')
+        assert hero_figure.select_one('a')['href'] == '../' + art['full']
+        assert hero_figure.select_one('img')['alt'] == art['alt']
+        assert hero_figure.select_one('figcaption h3').get_text() == hero['title']
+        assert hero_figure.select_one('figcaption > p').get_text() == art['caption']
+        assert hero_figure.select_one('source[media="(min-width: 701px)"]')['srcset'] == '../' + art['desktop']
+        assert soup.select_one('meta[property="og:image"]')['content'] == 'https://focuschrist.com/' + art['full']
+        all_hashes.append(hashlib.sha256((ROOT/art['full']).read_bytes()).hexdigest())
     stops = [a['href'] for a in soup.select('.fc-life-directory ol a')]
     assert stops[:expected_count] == ['#heading-'+story['units'][0]['id']] + ['#'+u['id'] for u in story['units'][1:]], 'Directory must land before each body picture, not skip it'
     for unit in story['units']:
         section = soup.select_one('#'+unit['id'])
         art = ready[unit['id']]
-        figure = section.select_one('figure')
+        matches = section.select('figure[data-exclusive-artwork="' + unit['id'] + '"]')
+        assert len(matches) == 1, 'Exactly one original body study required'
+        figure = matches[0]
         assert figure['data-exclusive-artwork'] == unit['id']
         assert figure.select_one('a')['href'] == '../'+art['full']
         assert figure.select_one('img')['alt'] == art['alt']
@@ -98,7 +147,7 @@ for story in stories:
     assert preview.img['src'] == ready[scene]['thumbnail'] and preview.img['alt'] == ready[scene]['alt']
     assert not entry.select('[data-topic-art], [data-exclusive-artwork], [data-hero-viewer]'), 'Hub previews link to their owner; no duplicate study controller or art ownership'
     assert len(entry.get_text(' ', strip=True).split()) < 100, 'History hub remains a compact entrance'
-assert len(set(all_hashes)) == 30, 'Thirty distinct originals, not renamed copies'
+assert len(all_hashes) == len(set(all_hashes)) == 31, 'Thirty preserved originals plus one distinct Eleazer hero required'
 moyle = next(s for s in stories if s['id'] == 'john-rowe-moyle')
 # Keep scene-production caveats in the standard footer, while preserving the
 # substantive travel-journal/family-account distinction in the narrative.
@@ -142,7 +191,7 @@ assert 'aspect-ratio: 2048 / 684;' in shared_css and '--fc-mobile-hero-height: c
 frame = json.loads((DATA/'frame-review-20260929.json').read_text(encoding='utf-8'))
 assert abs(frame['desktop']['width']/frame['desktop']['height']-2048/684) < .001
 subprocess.run([sys.executable, str(ROOT/'tools/build_history_stories.py'), '--check'], check=True)
-print('PASS: three dedicated History pages, thirty original scene studies, narrative rhythm, source attribution and preserved hub bookmarks')
+print('PASS: three dedicated History pages, thirty preserved scene studies plus one unique hero, narrative rhythm, source attribution and preserved hub bookmarks')
 
 hub_css = (ROOT/'church-history.css').read_text(encoding='utf-8')
 assert '.fc-history-life-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }' in hub_css

@@ -1,5 +1,5 @@
 {
-  "source_html_sha256": "5e5c56a3e30e6c660117d10377481a4dc8378acac5145cef2926bc65432c9d09",
+  "source_html_sha256": "f05ab9a49f5e0e0f0dd51607f5a17fd14d410fc639b5274ddf0f63170dc9d048",
   "pdf_sha256": "109bacb657025cd2f4dcc98b29ca98e97afb97bc8b1b15d5d5a1d460006b2946",
   "pages": 47,
   "sections": 15,
@@ -128,5 +128,26 @@
       }
     },
     "limits": "Prior PDF pixel reviews remain bound to identical bytes; browser mode-control pixels and interactions reviewed separately. No owner aesthetic or whole-site acceptance implied."
+  },
+  "balanced_opening_source_compatibility": {
+    "previous_source_html_sha256": "5e5c56a3e30e6c660117d10377481a4dc8378acac5145cef2926bc65432c9d09",
+    "current_source_html_sha256": "f05ab9a49f5e0e0f0dd51607f5a17fd14d410fc639b5274ddf0f63170dc9d048",
+    "comparison_commit": "6f9a0c9d68f60bbb8e277662220a87f7d295ade5",
+    "change": "One exact concise opening paragraph and the shared opening stylesheet loader cache token. Independent exact inverse restores main HTML. All fifteen chapter bodies, sixteen feature studies, onward content, footer and canonical manuscript remain unchanged.",
+    "pdf_rebuilt": false,
+    "pdf_bytes_unchanged": true,
+    "pdf_input_dom_unchanged": true,
+    "pdf_sha256": "109bacb657025cd2f4dcc98b29ca98e97afb97bc8b1b15d5d5a1d460006b2946",
+    "reviewers": {
+      "Fermi": {
+        "receipt": "docs/reviews/2026-10-06-joseph-opening-balance/fermi.json",
+        "sha256": "3c9c2990889a388dac06f4aa45b126cf24a00efab47338286680b6a8797f8c0b"
+      },
+      "Newton": {
+        "receipt": "docs/reviews/2026-10-06-joseph-opening-balance/newton.json",
+        "sha256": "7915bde0f460989519889ca8c4bf32187ceb230cd79db0f3aafb616e89f3c219"
+      }
+    },
+    "limits": "Supplemental source compatibility review only. Prior PDF pixel reviews remain bound to identical bytes. Browser composition and final release checks are separate; no owner aesthetic acceptance."
   }
 }

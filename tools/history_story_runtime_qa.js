@@ -1,4 +1,4 @@
-// Study actions must work for the one hero and all four body pictures.
+// Study actions must work for every original picture and the separate Eleazer hero.
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
@@ -73,7 +73,11 @@ if (!process.argv.includes('--source-host-only')) {
       if (url.origin === 'https://focuschrist.com' && /\.html$/.test(url.pathname)) assert(fs.existsSync(path.join(root, url.pathname)), 'Broken runtime navigation: ' + url.pathname);
     }
     const pictures = [...d.querySelectorAll('main figure>a')];
-    assert.equal(pictures.length, { 'john-tanner': 10, 'eleazer-miller': 10, 'john-rowe-moyle': 10 }[slug]);
+    assert.equal(pictures.length, { 'john-tanner': 10, 'eleazer-miller': 11, 'john-rowe-moyle': 10 }[slug]);
+    const story = JSON.parse(read('docs/history-stories/stories.json')).stories.find(item => item.id === slug);
+    const expectedIds = [...(slug === 'eleazer-miller' ? ['miller-teaching-brigham'] : []), ...story.units.map(unit => unit.id)];
+    assert.deepEqual(pictures.map(a => a.closest('figure').dataset.exclusiveArtwork), expectedIds, 'Preserve every original picture in order with only the distinct Eleazer hero added');
+    assert.equal(new Set(pictures.map(a => a.href)).size, pictures.length, 'Every picture must open its own unique original');
     assert.equal(pictures.filter(a => a.classList.contains('fc-visual-hero')).length, 1);
     for (const trigger of pictures) {
       trigger.focus(); trigger.click();
