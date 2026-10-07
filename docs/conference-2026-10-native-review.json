@@ -1,0 +1,80 @@
+{
+  "schema": 1,
+  "spec": {
+    "kind": "official-native-conference-thumbnails",
+    "collection": "https://www.churchofjesuschrist.org/study/general-conference/2026/10?lang=eng",
+    "ledger_sha256": "2c3c7d4f75f508f5cafb1aede25069a2c561f9ba9fa1a1ddfbfb1e97aea60c80",
+    "items_sha256": "fe829c991e76048e6b7d138b3d003023fe430aa3aab9751f68ab69d25088a1ba",
+    "page_context": [
+      {
+        "path": "general-conference.html",
+        "sha256": "833a311de97de24bb592db7b807e3731546e2e91091082c20784733436986d9a"
+      },
+      {
+        "path": "general-conference-section.css",
+        "sha256": "2f5903f9d75b2da757aea4a448f0593ab9eb1a8eafe7c9a454bbca0603e4503f"
+      }
+    ]
+  },
+  "reviews": [
+    {
+      "reviewer": "Newton",
+      "receipt_id": "newton-official-native-october2026-source-20261007",
+      "stage": "official-source",
+      "verdict": "PASS",
+      "withdrawn": false,
+      "binding_sha256": "d966fb10466c8b92c5ecc42e1b14f398bd457d3d1f303752d0140e3994326c61",
+      "reviewed_at": "2026-10-07T16:41:56.405234+00:00",
+      "observations": "Read exact official 38-record manifest and per-page source hashes, reviewed every downloaded native preview in the contact sheet and compared all thumbnail bytes/dimensions/title/speaker/session bindings. Native Church photographs, not new generated artwork. Four actual desktop/phone screenshot compositions separately inspected; sustaining 3:2 image remains uncropped.",
+      "pixels_inspected": true,
+      "evidence": [
+        {
+          "path": ".qa-artifacts/conference-october-2026/native-previews.jpg",
+          "sha256": "50cf43907b40b0556dedac3ff3e67aab437909213aba612bc3f0f00df05eb144"
+        }
+      ]
+    },
+    {
+      "reviewer": "Fermi",
+      "receipt_id": "fermi-official-native-october2026-source-20261007",
+      "stage": "official-source",
+      "verdict": "PASS",
+      "withdrawn": false,
+      "binding_sha256": "d966fb10466c8b92c5ecc42e1b14f398bd457d3d1f303752d0140e3994326c61",
+      "reviewed_at": "2026-10-07T16:42:32.603423+00:00",
+      "observations": "Retrieved every official talk page and extracted its labeled byline and native poster URL. Compared exact 38 ordered titles, official destinations and thumbnail byte hashes to the page. Actually inspected all 38 native preview tiles in the diagnostic contact sheet: conference speaker context, no blank/corrupt/substituted-art or obvious wrong repeat. Sustaining side view 3:2 and seated Eyring source framing retained. Speaker mapping rests on official page provenance, not biometric identification of unfamiliar speakers. No generation, editing, reconstruction or historical preflight claimed. Inspected supplied desktop opening and phone archive/sustaining screenshot pixels separately.",
+      "pixels_inspected": true,
+      "evidence": [
+        {
+          "path": ".qa-artifacts/conference-october-2026/native-previews.jpg",
+          "sha256": "50cf43907b40b0556dedac3ff3e67aab437909213aba612bc3f0f00df05eb144"
+        }
+      ]
+    }
+  ],
+  "root_review": {
+    "reviewer": "Albert",
+    "verdict": "PASS",
+    "withdrawn": false,
+    "binding_sha256": "d966fb10466c8b92c5ecc42e1b14f398bd457d3d1f303752d0140e3994326c61",
+    "reviewed_at": "2026-10-07T16:43:03.633104+00:00",
+    "pixels_inspected": true,
+    "desktop": [
+      {
+        "path": ".qa-artifacts/conference-october-2026/desktop.png",
+        "sha256": "bfb2ca74f60b2af6bf15eeac8ae667e4b847731fd735bce30f1a9b3da35d551c"
+      },
+      {
+        "path": ".qa-artifacts/conference-october-2026/native-previews.jpg",
+        "sha256": "50cf43907b40b0556dedac3ff3e67aab437909213aba612bc3f0f00df05eb144"
+      }
+    ],
+    "phone": [
+      {
+        "path": ".qa-artifacts/conference-october-2026/phone.png",
+        "sha256": "10d36a109b74fa57d5db433423705fed2790265d2645a24230523a21a0686c4f"
+      }
+    ],
+    "observations": "Personally operated native IAB desktop1280 and phone412: settled original hero, October38 search/filter/reset, April37 separate disclosure and nested plus/minus controls. Independently inspected all38 official thumbnails as a diagnostic contact sheet; original source-byline and hash bindings establish attribution, not biometric identification. Sustaining source3:2 shown contained. Inspected specialist exact desktop/phone screenshot evidence; no new generated artwork, physical-phone certification, complete playback or owner visual acceptance claimed."
+  }
+}
