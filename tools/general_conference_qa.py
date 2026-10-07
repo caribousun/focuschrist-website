@@ -134,7 +134,11 @@ require(len(archive_cards) == 37 and len(archive_groups) == 4, 'all April messag
 require(not any(k.startswith('data-conference-') for n in archive_nodes for k in n.attrs), 'October filtering must never alter archived April cards')
 require(not any('hidden' in n.attrs for n in archive_cards + archive_groups), 'April remains available without JavaScript')
 require(not any('data-exclusive-artwork' in n.attrs or 'data-full-image-viewer' in n.attrs for n in archive_nodes), 'archive must not duplicate owned artwork')
-require('October 2026' in opening_header.text() and '38 messages' in opening_header.text() and 'April 2026' not in opening_header.text(), 'opening must identify the current October collection')
+require('October 2026' in opening_header.text() and 'April 2026' not in opening_header.text(), 'opening must identify the current October collection')
+conference_cards = [n for n in nodes if 'fc-next-conference' in n.attrs.get('class', '').split()]
+require(len(conference_cards) == 1 and all(fact in conference_cards[0].text() for fact in
+        ('October 2026 conference', 'October 3–4, 2026', 'all 38 messages from the four Saturday and Sunday sessions')),
+        'existing conference card must retain the current date, message and session facts after duplicate badge removal')
 group_values = {n.attrs['data-conference-session'] for n in groups}
 require(len(group_values) == 4, 'sessions must have distinct filter values')
 session_select = next((n for n in nodes if n.attrs.get('id') == 'conference-session'), None)
@@ -216,6 +220,7 @@ if '--self-test' in sys.argv:
     code = code.replace("source = (ROOT / 'general-conference.html').read_text(encoding='utf-8')", 'source = CANDIDATE')
     mutants = {
         'stale opening': source.replace('Explore the complete October 2026', 'Explore the complete April 2026', 1),
+        'wrong conference card count': source.replace('all 38 messages from the four', 'all 37 messages from the four', 1),
         'wrong current month': source.replace('/2026/10/11christofferson?', '/2026/04/11christofferson?', 1),
         'wrong current thumbnail': source.replace(records[0]['local_thumbnail'], archive_records[0]['local_thumbnail'], 1),
         'missing current record': source.replace('data-conference-talk="11christofferson"', 'data-missing-talk="11christofferson"', 1),

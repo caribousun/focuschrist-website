@@ -8,7 +8,7 @@
     "page_context": [
       {
         "path": "general-conference.html",
-        "sha256": "00bc7b4593692d19379cb65a31a1fb204977a43dfa8721b6a4d8477cb9e31c54"
+        "sha256": "4859e534d656d6e07098a3c9287041b1c61ef63395f12b974b14ce75151c1682"
       },
       {
         "path": "general-conference-section.css",
@@ -23,7 +23,7 @@
       "stage": "official-source",
       "verdict": "PASS",
       "withdrawn": false,
-      "binding_sha256": "6f36c237cc1da524ba08eab2b18114ffe10dedb42e5bdbc023757dc964049db3",
+      "binding_sha256": "4b369e66e9df2266d3d0f400e485cd1200b4ece8599f1c14fa1a7376986159e2",
       "reviewed_at": "2026-10-07T16:41:56.405234+00:00",
       "observations": "Read exact official 38-record manifest and per-page source hashes, reviewed every downloaded native preview in the contact sheet and compared all thumbnail bytes/dimensions/title/speaker/session bindings. Native Church photographs, not new generated artwork. Four actual desktop/phone screenshot compositions separately inspected; sustaining 3:2 image remains uncropped.",
       "pixels_inspected": true,
@@ -118,6 +118,16 @@
           "limits": "No new38-source review, physical-device or screen-reader-app test, broad site audit, owner acceptance or hosted/public release claim. Newton authored the extended browser test and does not supply its independent code concurrence."
         },
         "original_evidence": "Prior source and pixel reviews preserved, not represented as freshly repeated."
+      },
+      "duplicate_badges_context_review": {
+        "reviewed_at": "2026-10-07T22:27:54.288870+00:00",
+        "scope": "Only the exact redundant October 2026 / 38 messages / 4 sessions row removed. CSS, JavaScript, other prose, artwork, sources, both primary actions, all five study links and card facts unchanged.",
+        "page_context": {
+          "general-conference.html": "4859e534d656d6e07098a3c9287041b1c61ef63395f12b974b14ce75151c1682",
+          "general-conference-section.css": "c479d3f126ad31347635f6c66c727b6fb0db89b584609a983b1af65cc48f2adb"
+        },
+        "consent_sha256": "54709715c6c92b44b6f4872c30761699ff953d2efd651528c7885be506177b56",
+        "observations": "Independent exact source and QA contract review plus actual saved native phone/desktop pixel concurrence. Saved five-width comparison binds identical HTML and unchanged hero/Continue. Historical source and thumbnail evidence reused unchanged; no new source audit claimed."
       }
     },
     {
@@ -126,7 +136,7 @@
       "stage": "official-source",
       "verdict": "PASS",
       "withdrawn": false,
-      "binding_sha256": "6f36c237cc1da524ba08eab2b18114ffe10dedb42e5bdbc023757dc964049db3",
+      "binding_sha256": "4b369e66e9df2266d3d0f400e485cd1200b4ece8599f1c14fa1a7376986159e2",
       "reviewed_at": "2026-10-07T16:42:32.603423+00:00",
       "observations": "Retrieved every official talk page and extracted its labeled byline and native poster URL. Compared exact 38 ordered titles, official destinations and thumbnail byte hashes to the page. Actually inspected all 38 native preview tiles in the diagnostic contact sheet: conference speaker context, no blank/corrupt/substituted-art or obvious wrong repeat. Sustaining side view 3:2 and seated Eyring source framing retained. Speaker mapping rests on official page provenance, not biometric identification of unfamiliar speakers. No generation, editing, reconstruction or historical preflight claimed. Inspected supplied desktop opening and phone archive/sustaining screenshot pixels separately.",
       "pixels_inspected": true,
@@ -190,6 +200,16 @@
           "foundation": "Exact protected foundation, team reaffirmation, owner authority and all deferred-scope boundaries preserved."
         },
         "original_evidence": "Prior source and pixel reviews preserved, not represented as freshly repeated."
+      },
+      "duplicate_badges_context_review": {
+        "reviewed_at": "2026-10-07T22:27:54.288870+00:00",
+        "scope": "Only the exact redundant October 2026 / 38 messages / 4 sessions row removed. CSS, JavaScript, other prose, artwork, sources, both primary actions, all five study links and card facts unchanged.",
+        "page_context": {
+          "general-conference.html": "4859e534d656d6e07098a3c9287041b1c61ef63395f12b974b14ce75151c1682",
+          "general-conference-section.css": "c479d3f126ad31347635f6c66c727b6fb0db89b584609a983b1af65cc48f2adb"
+        },
+        "consent_sha256": "ca8cf80ad4c8814177aee5940ff2846a377a9813915c6cab3e553e66c8eacbe2",
+        "observations": "Independent exact source and QA contract review plus actual saved native phone/desktop pixel concurrence. Saved five-width comparison binds identical HTML and unchanged hero/Continue. Historical source and thumbnail evidence reused unchanged; no new source audit claimed."
       }
     }
   ],
@@ -197,7 +217,7 @@
     "reviewer": "Albert",
     "verdict": "PASS",
     "withdrawn": false,
-    "binding_sha256": "6f36c237cc1da524ba08eab2b18114ffe10dedb42e5bdbc023757dc964049db3",
+    "binding_sha256": "4b369e66e9df2266d3d0f400e485cd1200b4ece8599f1c14fa1a7376986159e2",
     "reviewed_at": "2026-10-07T17:13:08.546693+00:00",
     "pixels_inspected": true,
     "desktop": [
@@ -244,6 +264,10 @@
       {
         "path": ".qa-artifacts/conference-archive-mobile-gap/root-1280-open.jpg",
         "sha256": "adc9ebab4d17a8409bef0e867841b4d32ca1e8a85731fd0495f3f86e7b59fa53"
+      },
+      {
+        "path": ".qa-artifacts/conference-badges-removed/candidate-desktop.jpg",
+        "sha256": "a9490a395e0c3d6a5e0bdff97a826a4ab72ecc5688ee3398db041665dcc621a9"
       }
     ],
     "phone": [
@@ -290,6 +314,10 @@
       {
         "path": ".qa-artifacts/conference-archive-mobile-gap/root-390-closed.jpg",
         "sha256": "3d20bf5cdcb64be240e84f12f26183f13df6331cea214de41d0c85bd5e6ad311"
+      },
+      {
+        "path": ".qa-artifacts/conference-badges-removed/candidate-phone.jpg",
+        "sha256": "fc6631526ec7ee37f33d51de6cb4b81528656528f076d0bb25eac078746b6674"
       }
     ],
     "observations": "Personally operated native IAB desktop1280 and phone412: settled original hero, October38 search/filter/reset, April37 separate disclosure and nested plus/minus controls. Independently inspected all38 official thumbnails as a diagnostic contact sheet; original source-byline and hash bindings establish attribution, not biometric identification. Sustaining source3:2 shown contained. Inspected specialist exact desktop/phone screenshot evidence; no new generated artwork, physical-phone certification, complete playback or owner visual acceptance claimed. Continuation root personally operated exact final CSS context at1280x900 and412x915: Oaks results fill available desktop rows, two nonconsecutive Christofferson cards form balanced halves, zero-result and reset38 work, phone stack and April first session preserved. Actual screenshots inspected; prior source/contact-sheet proof reused unchanged.",
@@ -310,6 +338,11 @@
       "reviewed_at": "2026-10-07T21:30:35.759958+00:00",
       "scope": "Root personally inspected native390px open/closed adjacent pills and1280px open desktop; Enter/Space verified.",
       "observations": "Nativephone actual gap16.00019px equals peer16.00019px; desktop64.79998px unchanged and count visible. Desktop screenshot horizontally cropped; full-width unchanged geometry is separately tested by Newton. Root independently read Newton regression and Fermi inverse/source changes, and consents. Prior PR466 title-only visual review missed the larger gap; this new context explicitly includes adjacent-pill spacing."
+    },
+    "duplicate_badges_context_review": {
+      "reviewed_at": "2026-10-07T22:27:54.288870+00:00",
+      "scope": "Root actual native browser 390x844 phone and 1280x900 desktop review of retained actions, navigation, card and adjacent spacing.",
+      "observations": "No redundant badges or stranded gap. Continue and Find a message navigated correctly; Eyring search returned 2 of 38 and clear restored all. Archive Enter opened and Space closed. Exact QA inverse and retained card facts independently reviewed with Fermi/Newton; UI specialist final concurrence. Native JPEG screenshots are compressed; saved five-width PNG/geometry comparison is separate supporting evidence. No new art/source or full-site review, physical-phone test or owner final appearance acceptance."
     }
   },
   "prior_page_context_bindings": [
@@ -733,6 +766,322 @@
           "reviewed_at": "2026-10-07T20:43:14.623352+00:00",
           "scope": "Root personally inspected native390/320phone and1280desktop; Enter/Space opens/closes archive;37records and AX count retained.",
           "observations": "Phone title/control on one row; desktop count visible. Enlarged text and breakpoint geometry independently tested by Newton; exact source/regression reviewed by root and Fermi."
+        }
+      }
+    },
+    {
+      "spec": {
+        "kind": "official-native-conference-thumbnails",
+        "collection": "https://www.churchofjesuschrist.org/study/general-conference/2026/10?lang=eng",
+        "ledger_sha256": "2c3c7d4f75f508f5cafb1aede25069a2c561f9ba9fa1a1ddfbfb1e97aea60c80",
+        "items_sha256": "fe829c991e76048e6b7d138b3d003023fe430aa3aab9751f68ab69d25088a1ba",
+        "page_context": [
+          {
+            "path": "general-conference.html",
+            "sha256": "00bc7b4593692d19379cb65a31a1fb204977a43dfa8721b6a4d8477cb9e31c54"
+          },
+          {
+            "path": "general-conference-section.css",
+            "sha256": "c479d3f126ad31347635f6c66c727b6fb0db89b584609a983b1af65cc48f2adb"
+          }
+        ]
+      },
+      "binding_sha256": "6f36c237cc1da524ba08eab2b18114ffe10dedb42e5bdbc023757dc964049db3",
+      "note": "Exact PR467 context preserved before owner-authorized removal of redundant informational badges after UI specialist concurrence.",
+      "reviews": [
+        {
+          "reviewer": "Newton",
+          "receipt_id": "newton-official-native-october2026-source-20261007",
+          "stage": "official-source",
+          "verdict": "PASS",
+          "withdrawn": false,
+          "binding_sha256": "6f36c237cc1da524ba08eab2b18114ffe10dedb42e5bdbc023757dc964049db3",
+          "reviewed_at": "2026-10-07T16:41:56.405234+00:00",
+          "observations": "Read exact official 38-record manifest and per-page source hashes, reviewed every downloaded native preview in the contact sheet and compared all thumbnail bytes/dimensions/title/speaker/session bindings. Native Church photographs, not new generated artwork. Four actual desktop/phone screenshot compositions separately inspected; sustaining 3:2 image remains uncropped.",
+          "pixels_inspected": true,
+          "evidence": [
+            {
+              "path": ".qa-artifacts/conference-october-2026/native-previews.jpg",
+              "sha256": "50cf43907b40b0556dedac3ff3e67aab437909213aba612bc3f0f00df05eb144"
+            }
+          ],
+          "continuation_review": {
+            "reviewed_at": "2026-10-07T17:13:08.546693+00:00",
+            "scope": "Visible-result row layout and exact cache-context update; original source evidence remains unchanged.",
+            "observations": "Independently inspected actual desktop before/after Oaks rows and phone/archive captures; reviewed exact scoped CSS and finite inverse/negative tests. No source, thumbnail or authored prose changes. Written concurrence supplied by named reviewer; final commit concurrence separate."
+          },
+          "alignment_context_review": {
+            "reviewed_at": "2026-10-07T18:27:21.839837+00:00",
+            "scope": "Exact centered navigation row, constrained artwork composition and Session chevron context; no source, thumbnail or visitor prose changes.",
+            "observations": "Newton receiver independently read complete repository mandates, CSS/cache/inverse/browser regression/workflow/guide changes; anchor and conference negative self-tests pass. Reused unchanged UI2 actual-browser evidence bound to identical HTML/CSS/JS and inspected root wide/phone screenshot pixels. No duplicate 38-source audit or new source approval claimed.",
+            "source_evidence": "Original official-source review and contact-sheet bytes preserved unchanged; exact-head concurrence remains separate."
+          },
+          "mobile_archive_context_review": {
+            "reviewed_at": "2026-10-07T20:43:14.623352+00:00",
+            "scope": "Only <=700px archive summary count presentation and exact stylesheet cache; no thumbnail/source/prose changes.",
+            "consent": {
+              "reviewer": "Newton",
+              "verdict": "CONCUR scoped native page-context rebind",
+              "scope": "Accessible mobile April archive summary only; original 38-message source/native thumbnail evidence unchanged",
+              "page_context": {
+                "general-conference.html": "5523c84ea7c71c20358b8df2bce4b83365eb3f17fac3e38566a2257c74bbe55b",
+                "general-conference-section.css": "40c7f2cd9738b5a163a34271cdf4016be8546475678f1073b50aa34839649c81"
+              },
+              "independently_reviewed_fermi_files": {
+                "tools/anchor_alignment_qa.py": "fd3910a3132915a7487c7aa91eaed636476e2768303afaa473d6ba6d02de1d6e",
+                "tools/general_conference_qa.py": "a908539883bfc065078ebf103ba77ebcd8c3895e17b6d0bf92b7cdb576d08134"
+              },
+              "newton_authored_regression": {
+                "path": "tools/conference_archive_mobile_browser_qa.js",
+                "sha256": "97925f7a5cf719d6e7f96ee97ca8df4c744d38c3f465658c7e2582bbb787e7f2",
+                "status": "PASS freshly executed; authored by Newton, independent code concurrence belongs to Fermi/root"
+              },
+              "executed": [
+                "archive mobile browser regression:320/390/412/700/701/1280",
+                "200 percent root text at320/390/412",
+                "original83a22ee CSS negative and restored candidate routes",
+                "display:none count negative",
+                "anchor_alignment_qa.py --self-test",
+                "general_conference_qa.py --self-test"
+              ],
+              "actual_pixels_inspected": [
+                "root-390-open.jpg",
+                "root-390-closed.jpg",
+                "root-320-open.jpg",
+                "root-1280-closed.jpg",
+                "390-summary.png"
+              ],
+              "pixel_scope": "Root screenshots and independently generated headless closed390 summary inspected. All under .qa-artifacts/conference-archive-mobile. Initial mislabeled root-390-closed.jpg was corrected and freshly reinspected: final SHA256631cfd518dd5d9c4aee9c723e7d8b11f5e5703f12e1a97a150ba0fe87efbd0ef shows actual closed plus state and compact one-line title. The earlier labeling finding is resolved.",
+              "observations": "Exact CSS appendix hides only direct archive count visually below701px; semantic text remains. Actual mobile title and plus/minus occupy one row; desktop count remains visible. Fresh real browser accessibility tree retains count in native DisclosureTriangle name. Root-supplied pixels and own closed capture are clean. Fermi finite suffix inverse validates exact old stylesheet hash and negative controls; source test retains accessible DOM count and catches hidden/removed/changed count. HTML differences are only cache references. No source, thumbnail or prose modification.",
+              "rebind_authorization": "Root may append truthful scope-specific review to the native record and update exact page-context canonical binding/reviewer/root bindings for these unchanged bytes, preserving all historical specs and original source reviews. New final record and final commit require independent exact-byte concurrence; this is not release or owner approval.",
+              "limits": "No physical phone or new38-source audit. Headless regression not a substitute for root actual browser review. Exact final record/commit and hosted CI/public release remain pending."
+            },
+            "original_evidence": "Prior source review unchanged, not represented as freshly repeated."
+          },
+          "mobile_archive_gap_context_review": {
+            "reviewed_at": "2026-10-07T21:30:35.759958+00:00",
+            "scope": "Only <=700px adjoining current-session and archive wrapper spacing; exact cache references. No content, source, artwork or desktop layout change.",
+            "consent": {
+              "reviewer": "Newton",
+              "verdict": "CONCUR scoped archive-gap native context rebind",
+              "scope": "Only <=700px adjacent October-to-April wrapper spacing; exact cache references, no content/media/source changes",
+              "page_context": {
+                "general-conference.html": "00bc7b4593692d19379cb65a31a1fb204977a43dfa8721b6a4d8477cb9e31c54",
+                "general-conference-section.css": "c479d3f126ad31347635f6c66c727b6fb0db89b584609a983b1af65cc48f2adb",
+                "answers.html": "a61f80beb27bbd1d7817acf7c622d437a1d99e7bc68927aafdbbb051b25638ae"
+              },
+              "independently_reviewed_fermi_files": {
+                "tools/anchor_alignment_qa.py": "bd5b4728dfd6fd18e8f3d9380f42164f9f5bb47d00a8b3b852cb5a714f7c6510",
+                "tools/general_conference_qa.py": "f26d3a04b439cfafcf355ae830e7665ee9dc469358929b2564c1d24017ee2446"
+              },
+              "newton_authored_regression": {
+                "path": "tools/conference_archive_mobile_browser_qa.js",
+                "sha256": "a00635ab634fbfb0704758f4e8eb450c133f4d268560dfd1dc7233079eab8a37",
+                "status": "Fresh PASS; independent code approval belongs to Fermi/root"
+              },
+              "actual_pixels_inspected": [
+                ".qa-artifacts/conference-archive-mobile-gap/root-390-open.jpg",
+                ".qa-artifacts/conference-archive-mobile-gap/root-390-closed.jpg",
+                ".qa-artifacts/conference-archive-mobile-gap/root-1280-open.jpg"
+              ],
+              "observations": "Actual root390phone open/closed captures show compact one-row archive title with same visible gap as adjoining session pills, without extra separator void. Expanded archive keeps native nested disclosures and source link. Desktop supplied screenshot shows visible count, retained spacing and archive content; screenshot is cropped horizontally and is not proof of complete desktop canvas. Independent full-width headless rectangle checks establish unchanged701/1280 geometry. No source/native thumbnail/prose changes. Reviewed preciseCSS suffix and Fermi exact inverse/negative/adjacent-wrapper checks. Caught three accidental U+00C2 additions in QA expectations and verified their removal before concurrence.",
+              "fresh_tests": "Browser320/390/412/700: old267d529 gap57px -> exact16px, matching peers. Desktop701/1280 remains65px. Root reports native390 gap16.00019 and desktop64.79998; keep rounding/evidence separate. Previous original-wrap and display:none negatives, accessible count, keyboard/nested37, upper links and200%text checks preserved and pass. Both Python self-tests freshly pass, conference15negativecases.",
+              "rebind_authorization": "Root may append this truthful scoped review and rebind current native context for these exact bytes while preserving all prior specs/reviews/root/source evidence and dates. Final record plus staged/committed manifest requires renewed exact-byte concurrence.",
+              "limits": "No new38-source review, physical-device or screen-reader-app test, broad site audit, owner acceptance or hosted/public release claim. Newton authored the extended browser test and does not supply its independent code concurrence."
+            },
+            "original_evidence": "Prior source and pixel reviews preserved, not represented as freshly repeated."
+          }
+        },
+        {
+          "reviewer": "Fermi",
+          "receipt_id": "fermi-official-native-october2026-source-20261007",
+          "stage": "official-source",
+          "verdict": "PASS",
+          "withdrawn": false,
+          "binding_sha256": "6f36c237cc1da524ba08eab2b18114ffe10dedb42e5bdbc023757dc964049db3",
+          "reviewed_at": "2026-10-07T16:42:32.603423+00:00",
+          "observations": "Retrieved every official talk page and extracted its labeled byline and native poster URL. Compared exact 38 ordered titles, official destinations and thumbnail byte hashes to the page. Actually inspected all 38 native preview tiles in the diagnostic contact sheet: conference speaker context, no blank/corrupt/substituted-art or obvious wrong repeat. Sustaining side view 3:2 and seated Eyring source framing retained. Speaker mapping rests on official page provenance, not biometric identification of unfamiliar speakers. No generation, editing, reconstruction or historical preflight claimed. Inspected supplied desktop opening and phone archive/sustaining screenshot pixels separately.",
+          "pixels_inspected": true,
+          "evidence": [
+            {
+              "path": ".qa-artifacts/conference-october-2026/native-previews.jpg",
+              "sha256": "50cf43907b40b0556dedac3ff3e67aab437909213aba612bc3f0f00df05eb144"
+            }
+          ],
+          "continuation_review": {
+            "reviewed_at": "2026-10-07T17:13:08.546693+00:00",
+            "scope": "Visible-result row layout and exact cache-context update; original source evidence remains unchanged.",
+            "observations": "Independently inspected actual desktop before/after Oaks rows and phone/archive captures; reviewed exact scoped CSS and finite inverse/negative tests. No source, thumbnail or authored prose changes. Written concurrence supplied by named reviewer; final commit concurrence separate."
+          },
+          "alignment_context_review": {
+            "reviewed_at": "2026-10-07T18:27:21.839837+00:00",
+            "scope": "Exact centered navigation row, constrained artwork composition and Session chevron context; no source, thumbnail or visitor prose changes.",
+            "observations": "Fermi frozen scoped consent read from work/fermi/alignment-context-consent.json: independently reviewed exact CSS/cache inverse, regression, UI1/UI2 screenshots and source preservation; consent explicitly permits additive context rebinding after root concurrence.",
+            "source_evidence": "Original official-source review and contact-sheet bytes preserved unchanged; exact-head concurrence remains separate."
+          },
+          "mobile_archive_context_review": {
+            "reviewed_at": "2026-10-07T20:43:14.623352+00:00",
+            "scope": "Only <=700px archive summary count presentation and exact stylesheet cache; no thumbnail/source/prose changes.",
+            "consent": {
+              "reviewer": "Fermi",
+              "verdict": "CONCUR_SCOPED_CONTEXT_REBIND",
+              "scope": "Only mobile April archive summary count presentation and stylesheet cache references; original official-source thumbnail evidence/history remains unchanged.",
+              "page_context": {
+                "general-conference.html": "5523c84ea7c71c20358b8df2bce4b83365eb3f17fac3e38566a2257c74bbe55b",
+                "general-conference-section.css": "40c7f2cd9738b5a163a34271cdf4016be8546475678f1073b50aa34839649c81",
+                "answers.html": "3dd1334be29dff95ee6671ef371f9178adc7ada67d3439462939697a2a6074b5"
+              },
+              "source_review": "Exact CSS adds only <=700px direct archive-summary count visually-hidden appendix; both HTML changes are stylesheet version only. No new source facts, media, hero or content changes. Original source-ledger/thumbnail evidence may be reused without changing its date or represented coverage.",
+              "pixels_inspected": true,
+              "pixel_scope": "Root supplied actual320 and390 phone expanded archive views show title and minus on one line with no clipping; actual1280 collapsed desktop shows visible37messages/4sessions count and plus. Other session counts remain visible. No independent browser interaction by Fermi.",
+              "evidence_issue": "root-390-closed.jpg currently depicts expanded archive/minus/body; it is not accepted as closed-phone pixel proof. Root informed to relabel or recapture.",
+              "permission": "Root may rebind docs/conference-2026-10-native-review.json current page context and add narrowly dated context evidence/consent, preserving original official-source records and historical context unchanged. Do not rewrite original provenance into a fresh audit or claim physical-device/screen-reader/whole-page coverage from these screenshots.",
+              "limits": "Root AX and Enter/Space37-record results are root-reported distinct evidence. Newton responsive/enlarged-text regression and exact final manifest remain pending. Fermi authored the two QA binding files and does not independently approve that implementation. No release or owner acceptance claim.",
+              "foundation": "Exact protected foundation, team reaffirmation and existing authority/deferral boundaries preserved."
+            },
+            "original_evidence": "Prior source review unchanged, not represented as freshly repeated."
+          },
+          "mobile_archive_gap_context_review": {
+            "reviewed_at": "2026-10-07T21:30:35.759958+00:00",
+            "scope": "Only <=700px adjoining current-session and archive wrapper spacing; exact cache references. No content, source, artwork or desktop layout change.",
+            "consent": {
+              "reviewer": "Fermi",
+              "verdict": "CONCUR_SCOPED_GAP_CONTEXT_REBIND",
+              "page_context": {
+                "general-conference-section.css": "c479d3f126ad31347635f6c66c727b6fb0db89b584609a983b1af65cc48f2adb",
+                "general-conference.html": "00bc7b4593692d19379cb65a31a1fb204977a43dfa8721b6a4d8477cb9e31c54",
+                "answers.html": "a61f80beb27bbd1d7817acf7c622d437a1d99e7bc68927aafdbbb051b25638ae"
+              },
+              "regression_sha256": "a00635ab634fbfb0704758f4e8eb450c133f4d268560dfd1dc7233079eab8a37",
+              "scope": "Only <=700px adjoining current-session/archive wrapper gap; HTML cache references. No source facts, artwork, thumbnail, prose, hero or desktop layout change.",
+              "pixels_inspected": true,
+              "pixel_evidence": "Actually viewed root-390-open.jpg, root-390-closed.jpg and root-1280-open.jpg under .qa-artifacts/conference-archive-mobile-gap. Both phone states now have a gap visually consistent with adjacent session pills, compact archive title and matching plus/minus. Desktop count remains visible and larger section separation remains. Desktop screenshot does not show far-right edge; no far-right-edge pixel claim from it.",
+              "regression_review": "Independently inspected Newton browser regression and saved PASS results. Actual phone border gap16 equals adjacent peer16 at320/390/412/700 and200-percent-root-text phone profiles. Prior267d529 gap57 is a distinct rejected baseline while its title fix still passes.701/1280 gap65 and summary geometry unchanged. Prior wrap, AX count, Enter/Space, nested37 records and display:none negatives retained. Saved results inspected, not independently executed by Fermi.",
+              "consent": "Root may rebind current native-review page context and append narrowly dated gap evidence, preserving original and previous source/context/history records unchanged. Do not represent this as a new source/thumbnail audit, whole-site pass, physical-phone check or owner approval.",
+              "limits": "Fermi implemented two QA binding files; Newton/root provide independent review for them. Exact final staged candidate, release and public/live gates remain separate.",
+              "foundation": "Exact protected foundation, team reaffirmation, owner authority and all deferred-scope boundaries preserved."
+            },
+            "original_evidence": "Prior source and pixel reviews preserved, not represented as freshly repeated."
+          }
+        }
+      ],
+      "root_review": {
+        "reviewer": "Albert",
+        "verdict": "PASS",
+        "withdrawn": false,
+        "binding_sha256": "6f36c237cc1da524ba08eab2b18114ffe10dedb42e5bdbc023757dc964049db3",
+        "reviewed_at": "2026-10-07T17:13:08.546693+00:00",
+        "pixels_inspected": true,
+        "desktop": [
+          {
+            "path": ".qa-artifacts/conference-october-2026/desktop.png",
+            "sha256": "bfb2ca74f60b2af6bf15eeac8ae667e4b847731fd735bce30f1a9b3da35d551c"
+          },
+          {
+            "path": ".qa-artifacts/conference-october-2026/native-previews.jpg",
+            "sha256": "50cf43907b40b0556dedac3ff3e67aab437909213aba612bc3f0f00df05eb144"
+          },
+          {
+            "path": ".qa-artifacts/conference-october-2026/visible-rows-1280-oaks.png",
+            "sha256": "3a36a668f4479adb7840f6c5b29ce8ee79446e640a298ca241ce8122f77113de"
+          },
+          {
+            "path": ".qa-artifacts/conference-october-2026/visible-rows-1280-two-results.png",
+            "sha256": "5ddfb8ae1d1ce37187622650706f83b715f24160a1f11b2aca0ce0494325ffd2"
+          },
+          {
+            "path": ".qa-artifacts/conference-october-2026/centered-controls/1906-topic.png",
+            "sha256": "dc0dc8f07b608724cfbc3865a893ce84bd099eba71abd063202e71c6d6c800fb"
+          },
+          {
+            "path": ".qa-artifacts/conference-october-2026/centered-controls/1722-practice.png",
+            "sha256": "2b4a45f735f8cce7f2d7f6f872ce7e7096b53a824f596252161c782accf52256"
+          },
+          {
+            "path": ".qa-artifacts/conference-october-2026/centered-controls/1722-care.png",
+            "sha256": "2e93a82eecc0f712423fd425169d1d26f79831b3a8d74bfcbcca261347769408"
+          },
+          {
+            "path": ".qa-artifacts/conference-october-2026/centered-controls/1280-prayer.png",
+            "sha256": "8671952c4711825657dccaebff137461fa574c0d4dcdcd639c3eb7e1761aaa58"
+          },
+          {
+            "path": ".qa-artifacts/conference-october-2026/centered-controls/1280-session.png",
+            "sha256": "f80a9cf6e26ee52499cd51a0854a88a3e4c690b7044089582c21dd279a662ecd"
+          },
+          {
+            "path": ".qa-artifacts/conference-archive-mobile/root-1280-closed.jpg",
+            "sha256": "aa482b808ee1577e16766064c4c843693f8b7418cde0ddcc8249ea09f8614819"
+          },
+          {
+            "path": ".qa-artifacts/conference-archive-mobile-gap/root-1280-open.jpg",
+            "sha256": "adc9ebab4d17a8409bef0e867841b4d32ca1e8a85731fd0495f3f86e7b59fa53"
+          }
+        ],
+        "phone": [
+          {
+            "path": ".qa-artifacts/conference-october-2026/phone.png",
+            "sha256": "10d36a109b74fa57d5db433423705fed2790265d2645a24230523a21a0686c4f"
+          },
+          {
+            "path": ".qa-artifacts/conference-october-2026/visible-rows-412-oaks.png",
+            "sha256": "02ee23333f4785b1e9bceaa4477c79960a1a2b6daea78076da6bd44c81890129"
+          },
+          {
+            "path": ".qa-artifacts/conference-october-2026/visible-rows-412-archive.png",
+            "sha256": "f36e3ca0524ed17be134315a8c55456fffb31c0bc8d247e21e4f8a594e9d8d13"
+          },
+          {
+            "path": ".qa-artifacts/conference-october-2026/visible-rows-412-opening.png",
+            "sha256": "2ab11f750f86eb9c03a385e3a4815dea5809a16646660f2bc2b77b56770f4148"
+          },
+          {
+            "path": ".qa-artifacts/conference-october-2026/centered-controls/412-session.png",
+            "sha256": "c05b7a365c50809da921ab2f856213d26fc5950282b6422c83bf19e37896d2c7"
+          },
+          {
+            "path": ".qa-artifacts/conference-october-2026/centered-controls/320-keyboard.png",
+            "sha256": "9e16b8086234b4504d39db79a26e507a6c3f5b8fdc7ef590b1e41559361acf9d"
+          },
+          {
+            "path": ".qa-artifacts/conference-archive-mobile/root-390-open.jpg",
+            "sha256": "4cf58fa58801d1e44cb60928f236f2fe1cb1679bb78b4ed4fd693c355b319cb7"
+          },
+          {
+            "path": ".qa-artifacts/conference-archive-mobile/root-390-closed.jpg",
+            "sha256": "631cfd518dd5d9c4aee9c723e7d8b11f5e5703f12e1a97a150ba0fe87efbd0ef"
+          },
+          {
+            "path": ".qa-artifacts/conference-archive-mobile/root-320-open.jpg",
+            "sha256": "6c69dcea759933d6fc8b540afdeb9213a8b5124df10bb7d4f24696b5cdb4abc5"
+          },
+          {
+            "path": ".qa-artifacts/conference-archive-mobile-gap/root-390-open.jpg",
+            "sha256": "12dd1e6dca36ac72be9e37917115bbaec72e22c3553fb5bb0cdb78d64b706e28"
+          },
+          {
+            "path": ".qa-artifacts/conference-archive-mobile-gap/root-390-closed.jpg",
+            "sha256": "3d20bf5cdcb64be240e84f12f26183f13df6331cea214de41d0c85bd5e6ad311"
+          }
+        ],
+        "observations": "Personally operated native IAB desktop1280 and phone412: settled original hero, October38 search/filter/reset, April37 separate disclosure and nested plus/minus controls. Independently inspected all38 official thumbnails as a diagnostic contact sheet; original source-byline and hash bindings establish attribution, not biometric identification. Sustaining source3:2 shown contained. Inspected specialist exact desktop/phone screenshot evidence; no new generated artwork, physical-phone certification, complete playback or owner visual acceptance claimed. Continuation root personally operated exact final CSS context at1280x900 and412x915: Oaks results fill available desktop rows, two nonconsecutive Christofferson cards form balanced halves, zero-result and reset38 work, phone stack and April first session preserved. Actual screenshots inspected; prior source/contact-sheet proof reused unchanged.",
+        "alignment_context_review": {
+          "reviewed_at": "2026-10-07T18:27:21.839837+00:00",
+          "observations": "Albert receiver personally concurred after operating CUA at actual 1906,1722,1280,412,320 and inspecting settled screenshots. Four constrained 780px groups centered, full-width prayer preserved; zero overflow at five widths. Session 48px high, 12px inset, 36px right padding; native keyboard Saturday Morning 9 and selected Sunday Afternoon 10. Continue 149.0875x44. No new source approval, OS-popup pixel, physical-phone or owner acceptance claim.",
+          "geometry_evidence": {
+            "path": ".qa-artifacts/conference-october-2026/centered-controls/matrix.json",
+            "sha256": "9e3bfb9286d1b037559fea34d39903f476177eccca069db1a2b84331f6ebcdc8"
+          }
+        },
+        "mobile_archive_context_review": {
+          "reviewed_at": "2026-10-07T20:43:14.623352+00:00",
+          "scope": "Root personally inspected native390/320phone and1280desktop; Enter/Space opens/closes archive;37records and AX count retained.",
+          "observations": "Phone title/control on one row; desktop count visible. Enlarged text and breakpoint geometry independently tested by Newton; exact source/regression reviewed by root and Fermi."
+        },
+        "mobile_archive_gap_context_review": {
+          "reviewed_at": "2026-10-07T21:30:35.759958+00:00",
+          "scope": "Root personally inspected native390px open/closed adjacent pills and1280px open desktop; Enter/Space verified.",
+          "observations": "Nativephone actual gap16.00019px equals peer16.00019px; desktop64.79998px unchanged and count visible. Desktop screenshot horizontally cropped; full-width unchanged geometry is separately tested by Newton. Root independently read Newton regression and Fermi inverse/source changes, and consents. Prior PR466 title-only visual review missed the larger gap; this new context explicitly includes adjacent-pill spacing."
         }
       }
     }
