@@ -52,11 +52,54 @@ assert.throws(()=>assertCfmPrayerSource(cfmFixture.window.document),/Changed CFM
 cfmFixture.window.close();
 const urls=[...read('sitemap.xml').matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>new URL(m[1]).pathname.slice(1)||'index.html');
 const pages=[...new Set(urls)].sort();
+// Six frozen artwork figures add exactly five named source controls. The Stand
+// scripture links remain inline prose. Validate these additions before taking
+// their exact inverse for the unchanged control-coverage baseline.
+const readingFigures=[
+ ['answers/stand-forever.html','stand-john6-remain','3a3794ddbf07c82b27a2b09ddbad64d51aa13d458cf8c2b0f39a1e204625ee98',0],
+ ['answers/stand-forever.html','stand-john7-do-his-will','3d7597e5e76688fb4b98f1289d13d99fb969a52f2ef38cc3e50f9a8d9c556f1a',0],
+ ['answers/why-latter-day-saints-build-temples.html','temple-tribute','25f1d649fea86b0125d7d9eeb9592e26c6ac6e63fba2b68d5cf304111f4b6cf7',1],
+ ['church-history.html','history-friendship','73b3051254c835af71afa0744fc79df405ecd84c0ae5d9f1e0ee5a9475bfbc51',2],
+ ['pioneers.html','pioneers-traveler','5dc82e47c2feb44a4f0b6d2b2bbe13d0ef0ece1faadcf8cd9bd2b1cf9e114102',1],
+ ['timelines/willie-and-martin-handcart-map.html','handcart-supplies','075ff37c51fa2162a5ab37baf6bde5a3eb9a97220358a49ad4fe18e9e0976881',1]
+];
+const digest=s=>require('crypto').createHash('sha256').update(s).digest('hex');
+function invertReadingFigures(doc,route){
+ let added=0;
+ for(const [owner,key,sha,count] of readingFigures){
+  const figures=[...doc.querySelectorAll('figure')].filter(f=>f.getAttribute('data-topic-art')===key||f.outerHTML.includes(key+'-960.webp')||f.outerHTML.includes(key+'-full.webp'));
+  assert.equal(figures.length,owner===route?1:0,route+': missing, duplicate or wrong-owner reading figure '+key);
+  if(owner!==route)continue;
+  const figure=figures[0];assert.equal(digest(figure.outerHTML),sha,route+': reviewed reading figure changed '+key);
+  assert.equal(figure.querySelectorAll(selectors[0]).length,count,key+': exact added source-control count');
+  for(const selector of selectors.slice(1))assert.equal(figure.querySelectorAll(selector).length,0,key+': unrelated control family entered inverse');
+  added+=count;figure.remove();
+ }
+ return added;
+}
+for(const route of new Set(readingFigures.map(row=>row[0]))){
+ const original=JSDOM.fragment(read(route));
+ const fixtureHtml=readingFigures.filter(row=>row[0]===route).map(row=>original.querySelector('figure[data-topic-art="'+row[1]+'"]').outerHTML).join('');
+ for(const row of readingFigures.filter(row=>row[0]===route))for(const kind of ['missing','duplicate','key','href','caption','wrong-owner']){
+  const doc=JSDOM.fragment(fixtureHtml),figure=doc.querySelector('figure[data-topic-art="'+row[1]+'"]');
+  if(kind==='missing')figure.remove();
+  if(kind==='duplicate')doc.append(figure.cloneNode(true));
+  if(kind==='key')figure.setAttribute('data-topic-art','unknown');
+  if(kind==='href')figure.querySelector('a').setAttribute('href','unknown.webp');
+  if(kind==='caption')figure.querySelector('figcaption').append('Changed');
+  assert.throws(()=>invertReadingFigures(doc,kind==='wrong-owner'?'unreviewed.html':route),assert.AssertionError,kind+': '+row[1]);
+ }
+ const extra=JSDOM.fragment(fixtureHtml+'<p class="fc-study-visual-sources"><a href="unexpected">Extra control</a></p>');
+ invertReadingFigures(extra,route);
+ assert.equal(extra.querySelectorAll(selectors[0]).length,1,'Unrelated source control must remain visible to baseline coverage');
+}
+let readingSourceControls=0;
 const inventory={canonical_pages:pages.length,selectors:{},numbered_navigation:{}};
 for(const s of selectors)inventory.selectors[s]={count:0,pages:[]};
 for(const page of pages){
  const dom=new JSDOM(read(page)),doc=dom.window.document;
  assertNoLooseSourceSeparators(doc);
+ readingSourceControls+=invertReadingFigures(doc,page);
  for(const s of selectors){const nodes=[...doc.querySelectorAll(s)];if(nodes.length){inventory.selectors[s].count+=nodes.length;inventory.selectors[s].pages.push(page);for(const n of nodes)assert.equal(n.tagName,'A');}}
  for(const s of ['.watch-topic-index a','nav[aria-label="Pioneer study sections"] a','.bom-story-directory a']){
   const nodes=[...doc.querySelectorAll(s)];if(nodes.length)inventory.numbered_navigation[page+' '+s]=nodes.map(n=>({href:n.getAttribute('href'),label:n.textContent.trim().replace(/\s+/g,' ')}));
@@ -64,11 +107,13 @@ for(const page of pages){
  if(page==='watch.html')assert.deepEqual([...doc.querySelectorAll('.watch-topic-index a > span')].map(n=>n.textContent.trim()),['01','02','03','04','05','06','07']);
  dom.window.close();
 }
+assert.equal(readingSourceControls,5,'Exactly five named source controls in six reviewed reading figures');
 for(const [s,a] of Object.entries(inventory.selectors))if(!a.count){const runtime=config.runtime_selectors[s];assert(runtime,`Unused selector ${s}`);assert(read(runtime.source).includes(runtime.marker));}
 const file=path.join(root,'docs/study-link-control-inventory.json');
 if(process.argv.includes('--write-inventory'))fs.writeFileSync(file,JSON.stringify(inventory,null,2)+'\n');
 else assert.deepEqual(inventory,JSON.parse(fs.readFileSync(file,'utf8')),'Control coverage changed; review inventory');
 console.log(`PASS: ${pages.length} canonical pages, ${selectors.length} named control families; protected prose/primary/Home/chapter fixtures; numbered link destinations recorded.`);
+console.log('PASS: six exact reading figures, five added source controls, unchanged legacy inventory;36 negative figure mutations and5 unrelated-control retention fixtures.');
 
 // Source row contract and deliberately broken style fixtures.
 {
