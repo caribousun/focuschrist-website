@@ -59,7 +59,7 @@ style_bytes = (ROOT / 'general-conference-section.css').read_bytes()
 style = style_bytes.decode('utf-8')
 require(style.count('.fc-conference-sessions details[open]>summary') == 2 and '.fc-conference-sessions details[open] summary' not in style, 'nested archive state must style only the opened details own summary')
 from anchor_alignment_qa import reviewed_anchor_style, CONFERENCE_ROWS_APPENDIX, CONFERENCE_VERSION
-require(reviewed_anchor_style('general-conference-section.css', style_bytes), 'only exact archive, visible-result rows, centered-controls and accessible mobile archive-count corrections may change')
+require(reviewed_anchor_style('general-conference-section.css', style_bytes), 'only exact archive, visible-result rows, centered-controls and accessible mobile archive-count/gap corrections may change')
 conference_styles = [n.attrs.get('href') for n in all_nodes if n.tag == 'link' and 'general-conference-section.css' in n.attrs.get('href', '')]
 require(conference_styles == ['general-conference-section.css?v=' + CONFERENCE_VERSION], 'conference stylesheet requires exactly one current reference')
 corbridge_visuals = [n for n in all_nodes if n.tag == 'a'
@@ -117,6 +117,16 @@ require(all('hidden' not in n.attrs and n.attrs.get('aria-hidden', '').lower() !
             and 'style' not in n.attrs for n in archive_summary.walk()),
         'archive summary/count must not be hidden from assistive technology or restyled inline')
 require('April 2026 archive' in ' '.join(archive_summary.parts), 'archive title remains directly visible in its summary')
+result_blocks = [n for n in nodes if 'gc-block' in n.attrs.get('class', '').split()
+                 and any(c.attrs.get('id') == 'conference-results' for c in n.children)]
+archive_blocks = [n for n in nodes if 'gc-block' in n.attrs.get('class', '').split()
+                  and any('fc-conference-sessions' in c.attrs.get('class', '').split()
+                          and archive in c.children for c in n.children)]
+require(len(result_blocks) == 1 and len(archive_blocks) == 1 and result_blocks[0] is not archive_blocks[0],
+        'mobile gap selectors must identify exactly the current-result and archive block')
+require(any(result_blocks[0] in n.children and archive_blocks[0] in n.children
+            and n.children.index(archive_blocks[0]) == n.children.index(result_blocks[0]) + 1 for n in nodes),
+        'archive block must immediately follow the current-result block')
 archive_nodes = list(archive.walk())
 archive_cards = [n for n in archive_nodes if 'data-archive-talk' in n.attrs]
 archive_groups = [n for n in archive_nodes if 'data-archive-session' in n.attrs]
@@ -213,6 +223,7 @@ if '--self-test' in sys.argv:
         'archive leaks into search': source.replace('data-archive-talk="11oaks"', 'data-conference-talk="11oaks"', 1),
         'wrong archived month': source.replace('/2026/04/11oaks?', '/2026/10/11oaks?', 1),
         'archive opened initially': source.replace('id="conference-april-2026"', 'id="conference-april-2026" open', 1),
+        'archive wrapper loses gap scope': source.replace('<div class="gc-block"><div class="fc-conference-sessions"><details id="conference-april-2026">', '<div class="gc-block"><div class="changed-wrapper"><details id="conference-april-2026">', 1),
         'archive count aria-hidden': source.replace('<span class="gc-session-count">37 messages', '<span class="gc-session-count" aria-hidden="true">37 messages', 1),
         'archive count hidden': source.replace('<span class="gc-session-count">37 messages', '<span class="gc-session-count" hidden>37 messages', 1),
         'archive count removed': source.replace('<span class="gc-session-count">37 messages · 4 sessions</span>', '', 1),

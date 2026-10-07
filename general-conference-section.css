@@ -101,3 +101,12 @@
         border: 0;
     }
 }
+
+/* Match the phone archive separation to the adjacent session-pill gaps. */
+@media (max-width:700px) {
+    #general-conference .gc-block:has(> #conference-results) { padding-bottom: 0; }
+    #general-conference .gc-block:has(> .fc-conference-sessions > #conference-april-2026) {
+        padding-top: 16px;
+        border-top: 0;
+    }
+}

@@ -119,7 +119,9 @@ def before_search_hitbox(data):
     return data
 
 
-CONFERENCE_VERSION = '20261007-archive-mobile-1'
+CONFERENCE_VERSION = '20261007-archive-gap-1'
+CONFERENCE_GAP_PRIOR_SHA256 = '40c7f2cd9738b5a163a34271cdf4016be8546475678f1073b50aa34839649c81'
+CONFERENCE_GAP_APPENDIX = b'\n/* Match the phone archive separation to the adjacent session-pill gaps. */\n@media (max-width:700px) {\n    #general-conference .gc-block:has(> #conference-results) { padding-bottom: 0; }\n    #general-conference .gc-block:has(> .fc-conference-sessions > #conference-april-2026) {\n        padding-top: 16px;\n        border-top: 0;\n    }\n}\n'
 CONFERENCE_MOBILE_PRIOR_SHA256 = '6f7def5e702d149f4adccd3f33a49c8ab961849494f5c1818c3a28900c695219'
 CONFERENCE_MOBILE_APPENDIX = b'\n/* Keep the phone archive header compact while retaining its accessible count. */\n@media (max-width:700px) {\n    #conference-april-2026 > summary > .gc-session-count {\n        position: absolute;\n        width: 1px;\n        height: 1px;\n        padding: 0;\n        margin: -1px;\n        overflow: hidden;\n        clip: rect(0, 0, 0, 0);\n        clip-path: inset(50%);\n        white-space: nowrap;\n        border: 0;\n    }\n}\n'
 CONFERENCE_CENTER_APPENDIX = b'\n/* Center the complete conference control row and existing artwork compositions. */\n#general-conference .gc-jumps { justify-content: center; }\n#general-conference .gc-heading:has(> .fc-study-visual) { margin-inline: auto; }\n\n/* Keep the Session chevron comfortably inside its existing native control. */\n#conference-session {\n    appearance: none;\n    padding-right: 36px;\n    background-image: url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'10\' height=\'6\' viewBox=\'0 0 10 6\'%3E%3Cpath d=\'m1 1 4 4 4-4\' fill=\'none\' stroke=\'%23fff2dc\' stroke-width=\'1.5\'/%3E%3C/svg%3E");\n    background-repeat: no-repeat;\n    background-position: right 12px center;\n    background-size: 10px 6px;\n}\n'
@@ -130,8 +132,18 @@ CONFERENCE_CURRENT = b'.fc-conference-sessions details[open]>summary'
 CONFERENCE_PRIOR = b'.fc-conference-sessions details[open] summary'
 
 
+def before_conference_gap(data):
+    """Remove only the exact phone archive-gap appendix from its reviewed prefix."""
+    if data.count(CONFERENCE_GAP_APPENDIX) == 1 and data.endswith(CONFERENCE_GAP_APPENDIX):
+        prior = data[:-len(CONFERENCE_GAP_APPENDIX)]
+        if hashlib.sha256(prior).hexdigest() == CONFERENCE_GAP_PRIOR_SHA256:
+            return prior
+    return data
+
+
 def before_conference_mobile(data):
     """Remove only the exact phone archive-count appendix from its reviewed prefix."""
+    data = before_conference_gap(data)
     if data.count(CONFERENCE_MOBILE_APPENDIX) == 1 and data.endswith(CONFERENCE_MOBILE_APPENDIX):
         prior = data[:-len(CONFERENCE_MOBILE_APPENDIX)]
         if hashlib.sha256(prior).hexdigest() == CONFERENCE_MOBILE_PRIOR_SHA256:
@@ -209,6 +221,7 @@ def historical_style_bytes(data):
 def reviewed_anchor_style(name, data):
     record = FILES.get(name)
     if name == 'general-conference-section.css':
+        if before_conference_gap(data) == data: return False
         if before_conference_mobile(data) == data: return False
         if before_conference_centering(data) == data: return False
         prior = before_conference_archive(data)
@@ -283,6 +296,17 @@ def check():
 def self_test():
     conference = (ROOT / 'general-conference-section.css').read_bytes()
     for mutation in (
+            before_conference_gap(conference),
+            conference + CONFERENCE_GAP_APPENDIX,
+            conference.replace(CONFERENCE_GAP_APPENDIX, CONFERENCE_GAP_APPENDIX.replace(b'max-width:700px', b'max-width:1000px'), 1),
+            conference.replace(CONFERENCE_GAP_APPENDIX, CONFERENCE_GAP_APPENDIX.replace(b'padding-bottom: 0;', b'padding-bottom: 28px;'), 1),
+            conference.replace(CONFERENCE_GAP_APPENDIX, CONFERENCE_GAP_APPENDIX.replace(b'padding-top: 16px;', b'padding-top: 0;'), 1),
+            conference.replace(CONFERENCE_GAP_APPENDIX, CONFERENCE_GAP_APPENDIX.replace(b'border-top: 0;', b'border-top: 1px solid red;'), 1),
+            conference.replace(CONFERENCE_GAP_APPENDIX, CONFERENCE_GAP_APPENDIX.replace(b'#general-conference .gc-block:has(> #conference-results)', b'#general-conference .gc-block'), 1),
+            conference.replace(CONFERENCE_GAP_APPENDIX, CONFERENCE_GAP_APPENDIX.replace(b'> .fc-conference-sessions > #conference-april-2026', b'#conference-april-2026'), 1)):
+        assert mutation != conference
+        assert not reviewed_anchor_style('general-conference-section.css', mutation)
+    for mutation in (
             before_conference_mobile(conference),
             conference + CONFERENCE_MOBILE_APPENDIX,
             conference.replace(CONFERENCE_MOBILE_APPENDIX, CONFERENCE_MOBILE_APPENDIX.replace(b'max-width:700px', b'max-width:1000px'), 1),
@@ -320,6 +344,7 @@ def self_test():
                     {**pages, 'answers.html': link.replace(CONFERENCE_VERSION, '20261007-october-archive-1')},
                     {**pages, 'answers.html': link.replace(CONFERENCE_VERSION, '20261007-october-visible-rows-2')},
                     {**pages, 'answers.html': link.replace(CONFERENCE_VERSION, '20261007-conference-centered-controls-3')},
+                    {**pages, 'answers.html': link.replace(CONFERENCE_VERSION, '20261007-archive-mobile-1')},
                     {**pages, 'answers.html': link.replace(CONFERENCE_VERSION, 'unknown')}):
         assert conference_cache_errors(altered)
     for name in FILES:
