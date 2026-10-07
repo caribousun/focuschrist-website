@@ -146,7 +146,7 @@ class Tags(HTMLParser):
 # unchanged routes), rather than exempting a selector family or future CSS.
 VIEWER_STYLE = 'full-image-viewer.css'
 VIEWER_STYLE_SHA256 = '10490ceea817af1025e1df20e38ed747c4cec3c234e630fb720b66f914ce87bf'
-VIEWER_BINDINGS_SHA256 = '80c69e840009017e883bd7efbd19669c3386ecd1e3923ed3db0e3d0645f46632'
+VIEWER_BINDINGS_SHA256 = '25ab6e0137290e7ce515135545084946ef820b423d62dc945d68b2a4c0e4a9a0'
 
 def reviewed_viewer_style(data):
     return hashlib.sha256(data).hexdigest() == VIEWER_STYLE_SHA256
@@ -249,7 +249,7 @@ OWNER_20260929_STYLES = {
     'timeline-history-workspace.css': ('acecf66d917b13cc4548e23ff8ab348974423342ba00840f37d1c73d6eb5c173', ['timelines/latter-day-saint-church-history-timeline.html']),
 
     # Owner requested shared headers on these three preserved experiences; exact scoped desktop offset.
-    "timeline-experiences.css": ("ab93a70311f429f45a11fe88550a5150b2b5708408c52fbae0562e11fa438e8e", ["timelines/latter-day-saint-church-history-timeline.html", "timelines/willie-and-martin-handcart-map.html", "timelines/life-of-christ-journey-map.html"]),
+    "timeline-experiences.css": ("4ae767e376478f2cdb16c3085ffa519a7a458314ed81aad2c662ec281ab82e5c", ["timelines/latter-day-saint-church-history-timeline.html", "timelines/willie-and-martin-handcart-map.html", "timelines/life-of-christ-journey-map.html"]),
     # Owner-requested uniform selected-story and accessible mobile controls; exact three routes.
     "timeline-reader.css": ("4bbcf89e17c653fc9fd24268412b292b2bd4b92a09032777e0563d2967ebb115", ["timelines/latter-day-saint-church-history-timeline.html", "timelines/willie-and-martin-handcart-map.html", "timelines/life-of-christ-journey-map.html"]),
     "study-reading-balance.css": ("fb547af5c883050d743204c0d05372863143a1fa0dffd2df370b728f1a9ff005", ["atonement.html", "answers/bible-and-book-of-mormon-together.html", "answers.html", "index.html", "ask.html"]),
@@ -309,6 +309,7 @@ def scoped_interface_reference_allowed(name, relative, text):
     return relative==SCOPED_INTERFACE_STYLES[name][1] or joseph_research_owner or name not in text
 
 RELEASE_STYLE_BINDINGS = {
+    'timeline-experiences.css': ({'timelines/latter-day-saint-church-history-timeline.html', 'timelines/willie-and-martin-handcart-map.html', 'timelines/life-of-christ-journey-map.html'}, '../timeline-experiences.css?v=20261007-timeline-panels-1'),
     'joseph-smith-research.css': ({'joseph-smith-likeness.html', 'joseph-smith-portrait-research.html'}, 'joseph-smith-research.css?v=20261006-research-compositions-2'),
     'history-stories.css': ({'history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html'}, '../history-stories.css?v=20261006-history-intro-fit-1'),
 }

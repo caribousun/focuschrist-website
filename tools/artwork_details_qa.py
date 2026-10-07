@@ -87,27 +87,56 @@ TIMELINE_STUDY_HEROES = {
 }
 
 
-def timeline_study_hero_errors(relative: str, page: str) -> list[str]:
+TIMELINE_PANEL_RECORDS = {
+    'timelines/life-of-christ-journey-map.html': ('timeline-life', '../assets/heroes/topics/jesus-full.webp'),
+    'timelines/latter-day-saint-church-history-timeline.html': ('timeline-history', '../assets/timelines/church-history-grove.webp'),
+    'timelines/willie-and-martin-handcart-map.html': ('timeline-handcart', '../assets/heroes/pioneers.webp'),
+}
+
+
+def timeline_panel_record(script: str, key: str) -> dict:
+    # The three additive records are JSON. Reject absent/duplicate/opaque records.
+    matches = list(re.finditer(r'"' + re.escape(key) + r'"\s*:\s*', script))
+    if len(matches) != 1:
+        return {}
+    try:
+        record, _ = json.JSONDecoder().raw_decode(script[matches[0].end():])
+        return record if isinstance(record, dict) else {}
+    except ValueError:
+        return {}
+
+
+def timeline_study_hero_errors(relative: str, page: str, script: str | None = None) -> list[str]:
     from bs4 import BeautifulSoup
     href, src, mobile = TIMELINE_STUDY_HEROES[relative]
+    key, full = TIMELINE_PANEL_RECORDS[relative]
     dom = BeautifulSoup(page, "html.parser")
     heroes = dom.select(".fc-visual-hero")
     if len(heroes) != 1:
         return [f"{relative}: expected one exact timeline study-reference hero"]
     hero = heroes[0]
     errors = []
-    if hero.name != "a" or hero.get("href") != href or not hero.get("aria-label"):
-        errors.append(f"{relative}: timeline hero must link accessibly to its exact study")
+    if hero.name != "a" or hero.get("href") != full or not hero.get("aria-label"):
+        errors.append(f"{relative}: timeline hero must retain its accessible image fallback")
+    if not hero.has_attr('data-hero-viewer') or hero.get('data-hero-record') != key or hero.get('data-hero-study') != href or hero.get('aria-haspopup') != 'dialog' or not hero.get('data-full-image-alt'):
+        errors.append(f"{relative}: timeline panel must retain its exact record and owning study")
+    record = timeline_panel_record(script if script is not None else (ROOT / 'hero-details.js').read_text(encoding='utf-8'), key)
+    if record.get('study') != href.removeprefix('../') or not record.get('studyLabel') or not record.get('source') or not record.get('paragraphs'):
+        errors.append(f"{relative}: actual panel record must retain the owning-study pill and reflection")
     images = hero.select("img")
     if len(images) != 1 or images[0].get("src") != src or not images[0].get("alt"):
         errors.append(f"{relative}: timeline hero image or alternative text differs")
     sources = [n.get("srcset") for n in hero.select("source")]
     if sources != ([mobile] if mobile else []):
         errors.append(f"{relative}: timeline hero responsive source differs")
-    if any(hero.has_attr(a) for a in ("data-hero-viewer", "data-full-image-viewer", "data-artwork-detail", "onclick")):
-        errors.append(f"{relative}: study reference must not be intercepted as a local artwork modal")
+    if any(hero.has_attr(a) for a in ('data-full-image-viewer', 'data-artwork-detail', 'onclick')):
+        errors.append(f"{relative}: normal artwork details must precede full-size viewing")
+    for name, version in [('hero-details.js', '20261007-timeline-panels-1'), ('full-image-viewer.js', '20261006-versions-1'), ('full-image-viewer.css', '20261006-versions-1'), ('hero-details.css', '20260909-warm'), ('artwork-details.css', '20260909-warm'), ('artwork-actions.css', '20261004-explicit-grid-1')]:
+        nodes = [n for n in dom.select('script[src],link[href]') if urlsplit(n.get('src', n.get('href', ''))).path == '../' + name]
+        if len(nodes) != 1 or nodes[0].get('src', nodes[0].get('href')) != '../' + name + '?v=' + version:
+            errors.append(f'{relative}: exact panel dependency missing, duplicated or stale: {name}')
     path = ROOT / relative
-    for asset in [src] + ([mobile] if mobile else []):
+    for asset in [src, full] + ([mobile] if mobile else []):
         if not local_target(path, asset).is_file():
             errors.append(f"{relative}: timeline hero asset missing: {asset}")
     target = local_target(path, href)
@@ -374,7 +403,7 @@ def main() -> int:
         if relative in TIMELINE_STUDY_HEROES:
             timeline_references.add(relative)
             errors.extend(timeline_study_hero_errors(relative, page))
-            hero_pages -= 1  # These exact study links retain the 41 local-modal hero contracts.
+            hero_pages -= 1  # Three explicitly scoped panels, separate from the legacy baseline.
             continue
         prefix = "../" * (len(path.relative_to(ROOT).parts) - 1)
         if 'fc-hero-fullscreen' in page:
@@ -439,7 +468,12 @@ def main() -> int:
         assert timeline_study_hero_errors(relative, page.replace(href, "../index.html", 1)), "Wrong study link must fail"
         assert timeline_study_hero_errors(relative, page.replace(href, href.split("#")[0], 1)), "Missing study fragment must fail"
         assert timeline_study_hero_errors(relative, page.replace(src, "../assets/heroes/home.webp", 1)), "Wrong artwork must fail"
-        assert timeline_study_hero_errors(relative, page.replace('class="fc-visual-hero', 'data-hero-viewer class="fc-visual-hero', 1)), "Modal interception must fail"
+        for original, replacement in [('data-hero-viewer', 'data-full-image-viewer'), ('data-hero-record="' + TIMELINE_PANEL_RECORDS[relative][0] + '"', 'data-hero-record="home"'), ('hero-details.js?v=20261007-timeline-panels-1', 'hero-details.js?v=unknown')]:
+            mutated = page.replace(original, replacement, 1)
+            assert mutated != page and timeline_study_hero_errors(relative, mutated), 'Timeline panel mutation escaped'
+        script = (ROOT / 'hero-details.js').read_text(encoding='utf-8')
+        assert timeline_study_hero_errors(relative, page, script.replace('"study": "' + href.removeprefix('../') + '"', '"study": "index.html"')), 'Spoofed metadata with wrong actual panel destination must fail'
+        assert timeline_study_hero_errors(relative, page + '<script src="../hero-details.js?v=20261007-timeline-panels-1"></script>'), 'Duplicate controller must fail'
     # Preserve the exact gateway destinations alongside the two reviewed new heroes.
     # Retain positive gateway/legacy-destination checks rather than skipping the route.
     from joseph_smith_likeness_qa import check as check_joseph_gateway

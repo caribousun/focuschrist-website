@@ -3,9 +3,37 @@ import json, tempfile, unittest
 from pathlib import Path
 from PIL import Image
 from answer_study_qa import Document
-from topic_artwork_uniqueness_qa import scan, is_owning_page_reference
+from topic_artwork_uniqueness_qa import scan, is_owning_page_reference, linked_reference
+from artwork_details_qa import TIMELINE_STUDY_HEROES, TIMELINE_PANEL_RECORDS
 
 class TimelineOwnershipTests(unittest.TestCase):
+ def test_exact_panel_metadata_and_actual_record_required(self):
+  site=Path(__file__).resolve().parents[1]
+  with tempfile.TemporaryDirectory() as directory:
+   root=Path(directory);(root/'timelines').mkdir()
+   original_script=(site/'hero-details.js').read_text(encoding='utf-8')
+   (root/'hero-details.js').write_text(original_script,encoding='utf-8')
+   def reference(html,path):
+    doc=Document();doc.feed(html)
+    node=next(n for n in doc.root.walk() if n.tag=='img')
+    return linked_reference(node,path,root)
+   for route,(study,src,mobile) in TIMELINE_STUDY_HEROES.items():
+    record,full=TIMELINE_PANEL_RECORDS[route];page=root/route
+    picture=f'<picture><source srcset="{mobile}"><img src="{src}"></picture>' if mobile else f'<img src="{src}">'
+    html=f'<a class="fc-visual-hero" data-hero-viewer data-hero-record="{record}" data-hero-study="{study}" aria-haspopup="dialog" href="{full}">{picture}</a>'
+    expected={'owner':study.removeprefix('../').split('#')[0],'fragment':study.split('#')[1]}
+    self.assertEqual(reference(html,page),expected)
+    for old,new in [(study,'../index.html'),(record,'home'),(src,'../assets/heroes/home.webp'),('data-hero-viewer','data-full-image-viewer'),('aria-haspopup="dialog"','aria-haspopup="false"')]:
+     self.assertIsNone(reference(html.replace(old,new),page),(route,old))
+    self.assertIsNone(reference(html,root/'unrelated.html'))
+    (root/'hero-details.js').write_text(original_script.replace('"study": "'+study.removeprefix('../')+'"','"study": "index.html"'),encoding='utf-8')
+    self.assertIsNone(reference(html,page),'Spoofed metadata cannot override actual record')
+    (root/'hero-details.js').write_text(original_script,encoding='utf-8')
+    owner=Document();owner.feed(f'<section id="{expected["fragment"]}"><figure><img src="/art/owner.png"></figure></section>')
+    ref={'family':'expected','linked_reference':expected};parsed={expected['owner']:list(owner.root.walk())}
+    self.assertTrue(is_owning_page_reference(ref,expected['owner'],parsed,{'art/owner.png':'expected'},root))
+    self.assertFalse(is_owning_page_reference(ref,expected['owner'],parsed,{'art/owner.png':'unrelated'},root),'Panel metadata never excuses unrelated owner artwork')
+
  def test_registry_scope_and_negative_ownership(self):
   with tempfile.TemporaryDirectory() as directory:
    root=Path(directory);(root/'timelines').mkdir();(root/'art').mkdir()

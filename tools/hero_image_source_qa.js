@@ -11,9 +11,9 @@ assert.deepEqual(rules, manifest.records.map(row => ({route: '/' + row.route, se
     phone: '/' + (row.confirmed_variants.find(v => v.condition.includes('max-width'))?.asset || row.href),
     wide: '/' + (row.confirmed_variants.find(v => v.condition.includes('min-width'))?.asset || row.href)
 }})), 'Embedded rules and version choices must exactly match the reviewed map');
-assert.equal(rules.length, 45);
-assert.equal(new Set(rules.map(x => x.route)).size, 39);
-assert.equal(rules.reduce((n, x) => n + x.alternates.length, 0), 49);
+assert.equal(rules.length, 46);
+assert.equal(new Set(rules.map(x => x.route)).size, 40);
+assert.equal(rules.reduce((n, x) => n + x.alternates.length, 0), 50);
 assert.equal(new Set(rules.map(x => x.route + '|' + x.original)).size, rules.length, 'No ambiguous original mapping');
 const expectedRoutes = new Set(manifest.records.map(row => row.route));
 const canonicalRoutes = [...fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => new URL(match[1]).pathname.slice(1) || 'index.html');
@@ -23,12 +23,12 @@ for (const route of canonicalRoutes) {
     const helpers = scripts.filter(match => /(?:^|\/)hero-image-source\.js(?:\?|$)/.test(match[1]));
     assert.equal(helpers.length, expectedRoutes.has(route) ? 1 : 0, route + ': exact helper consumer set');
     if (!expectedRoutes.has(route)) continue;
-    assert(helpers[0][1].endsWith('hero-image-source.js?v=' + (route === 'history/eleazer-miller.html' ? '20261006-eleazer-hero-1' : '20261006-visible-art-1')));
+    assert(helpers[0][1].endsWith('hero-image-source.js?v=' + (route === 'timelines/life-of-christ-journey-map.html' ? '20261007-timeline-panels-1' : route === 'history/eleazer-miller.html' ? '20261006-eleazer-hero-1' : '20261006-visible-art-1')));
     assert(/\bdefer\b/.test(helpers[0][0]) && !/\basync\b/.test(helpers[0][0]));
     for (const row of manifest.records.filter(row => row.route === route)) {
         const controller = scripts.find(match => match[1].includes(row.controller + '.js?'));
         assert(controller && helpers[0].index < controller.index, route + ': helper loads before controller');
-        assert(controller[1].endsWith(row.controller + '.js?v=20261006-visible-art-1'));
+        assert(controller[1].endsWith(row.controller + '.js?v=' + (route === 'timelines/life-of-christ-journey-map.html' ? '20261007-timeline-panels-1' : '20261006-visible-art-1')));
     }
 }
 for (const row of manifest.records) {

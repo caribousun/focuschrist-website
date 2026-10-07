@@ -36,6 +36,8 @@ def local_asset(page,value,root=ROOT):
 
 def linked_reference(node,page,root=ROOT):
     """Only non-owning thumbnails directly linked to a different local HTML page."""
+    panel = timeline_panel_reference(node,page,root)
+    if panel:return panel
     if node.tag!='img':return None
     chain=list(ancestors(node))
     if any(a.attrs.get('data-journey-art') or (a.tag=='figure' and not a.attrs.get('data-linked-picture-reference')) for a in chain):return None
@@ -44,6 +46,26 @@ def linked_reference(node,page,root=ROOT):
     u=urlsplit(link.attrs.get('href',''))
     if u.scheme or u.netloc or not u.path.endswith('.html'):return None
     target=(root/u.path.lstrip('/') if u.path.startswith('/') else page.parent/u.path).resolve()
+    if target==page.resolve() or not target.is_relative_to(root.resolve()):return None
+    return {'owner':target.relative_to(root.resolve()).as_posix(),'fragment':unquote(u.fragment)}
+
+def timeline_panel_reference(node,page,root=ROOT):
+    """Exact owner-authorized timeline panels, never arbitrary study metadata."""
+    from artwork_details_qa import TIMELINE_STUDY_HEROES,TIMELINE_PANEL_RECORDS,timeline_panel_record
+    key=page.relative_to(root).as_posix()
+    if key not in TIMELINE_PANEL_RECORDS:return None
+    chain=[node,*ancestors(node)]
+    link=next((n for n in chain if n.tag=='a' and n.has('fc-visual-hero')),None)
+    if link is None or node.tag not in {'a','img','source'}:return None
+    study,src,mobile=TIMELINE_STUDY_HEROES[key];record,full=TIMELINE_PANEL_RECORDS[key]
+    if ('data-hero-viewer' not in link.attrs or link.attrs.get('data-hero-record')!=record or
+        link.attrs.get('data-hero-study')!=study or link.attrs.get('href')!=full or
+        link.attrs.get('aria-haspopup')!='dialog' or any(a in link.attrs for a in ['onclick','data-full-image-viewer','data-artwork-detail'])):return None
+    images=[n for n in link.walk() if n.tag=='img'];sources=[n.attrs.get('srcset') for n in link.walk() if n.tag=='source']
+    if len(images)!=1 or images[0].attrs.get('src')!=src or sources!=([mobile] if mobile else []):return None
+    script=root/'hero-details.js'
+    if not script.is_file() or timeline_panel_record(script.read_text(encoding='utf-8'),record).get('study')!=study.removeprefix('../'):return None
+    u=urlsplit(study);target=(page.parent/u.path).resolve()
     if target==page.resolve() or not target.is_relative_to(root.resolve()):return None
     return {'owner':target.relative_to(root.resolve()).as_posix(),'fragment':unquote(u.fragment)}
 
