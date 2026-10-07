@@ -119,6 +119,27 @@ def before_search_hitbox(data):
     return data
 
 
+CONFERENCE_VERSION = '20261007-october-visible-rows-2'
+CONFERENCE_ROWS_APPENDIX = b'\n/* Balance the visible search results, excluding cards hidden by the filters. */\n@media (min-width:701px) and (max-width:1000px) {\n    #conference-results .fc-talk-list > :not([hidden]) { grid-column: auto; }\n    #conference-results .fc-talk-list > :nth-last-child(1 of :not([hidden])):nth-child(odd of :not([hidden])) { grid-column: 1 / -1; }\n}\n@media (min-width:1001px) {\n    #conference-results .fc-talk-list > :not([hidden]) { grid-column: span 2; }\n    #conference-results .fc-talk-list > :not([hidden]) > a { display: flex; }\n    #conference-results .fc-talk-list > :nth-last-child(1 of :not([hidden])):nth-child(3n+1 of :not([hidden])) { grid-column: 1 / -1; }\n    #conference-results .fc-talk-list > :nth-last-child(2 of :not([hidden])):nth-child(3n+1 of :not([hidden])),\n    #conference-results .fc-talk-list > :nth-last-child(1 of :not([hidden])):nth-child(3n+2 of :not([hidden])) { grid-column: span 3; }\n    #conference-results .fc-talk-list > :nth-last-child(1 of :not([hidden])):nth-child(3n+1 of :not([hidden])) > a { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); align-items: center; }\n}\n'
+CONFERENCE_ARCHIVE_SHA256 = '2f5903f9d75b2da757aea4a448f0593ab9eb1a8eafe7c9a454bbca0603e4503f'
+CONFERENCE_CURRENT = b'.fc-conference-sessions details[open]>summary'
+CONFERENCE_PRIOR = b'.fc-conference-sessions details[open] summary'
+
+
+def before_conference_archive(data):
+    """Invert only the exact visible-row appendix and two archive selectors."""
+    if data.count(CONFERENCE_ROWS_APPENDIX) != 1 or not data.endswith(CONFERENCE_ROWS_APPENDIX):
+        return data
+    archive = data[:-len(CONFERENCE_ROWS_APPENDIX)]
+    if hashlib.sha256(archive).hexdigest() != CONFERENCE_ARCHIVE_SHA256:
+        return data
+    if archive.count(CONFERENCE_CURRENT) == 2 and CONFERENCE_PRIOR not in archive:
+        prior = archive.replace(CONFERENCE_CURRENT, CONFERENCE_PRIOR)
+        if hashlib.sha256(prior).hexdigest() == FILES['general-conference-section.css']['after_sha256']:
+            return prior
+    return data
+
+
 def historical_style_bytes(data):
     """Recover exact prior bytes only from an exact registered current file.
 
@@ -126,6 +147,7 @@ def historical_style_bytes(data):
     reviewed bytes. The mandatory current-file checks separately reject stale
     files and any mutation to the approved anchor-only transformation.
     """
+    data = before_conference_archive(data)
     data = before_art_caption_gap(data)
     data = before_mobile_nav(data)
     data = before_source_rows(data)
@@ -163,6 +185,10 @@ def historical_style_bytes(data):
 
 def reviewed_anchor_style(name, data):
     record = FILES.get(name)
+    if name == 'general-conference-section.css':
+        prior = before_conference_archive(data)
+        if prior == data: return False
+        data = prior
     if name == 'art-study-enrichment.css':
         if hashlib.sha256(data).hexdigest() != ART_CAPTION_GAP_SHA256: return False
         data = before_art_caption_gap(data)
@@ -191,6 +217,16 @@ def reviewed_anchor_style(name, data):
                 and hashlib.sha256(historical_style_bytes(data)).hexdigest() == record['before_sha256'])
 
 
+def conference_cache_errors(pages):
+    expected = 'general-conference-section.css?v=' + CONFERENCE_VERSION
+    consumers = {}
+    for name, source in pages.items():
+        refs = re.findall(r'(?:href|src)=["\']([^"\']*general-conference-section\.css[^"\']*)["\']', source)
+        if refs:
+            consumers[name] = refs
+    return [] if consumers == {'answers.html': [expected], 'general-conference.html': [expected]} else ['Conference stylesheet consumers must be exactly Answers and General Conference, one current reference each']
+
+
 def check():
     errors = []
     if len(FILES) != 22 or sum(len(r['old_values']) for r in FILES.values()) != 37:
@@ -203,18 +239,45 @@ def check():
     compact = re.sub(r'\s+', '', header)
     if 'height:max(52px,3.25rem)!important' not in compact or '@media(max-width:1020px)' not in compact:
         errors.append('Header geometry changed; re-review anchor spacing')
+    conference_pages = {}
     for path in ROOT.rglob('*.html'):
         rel = path.relative_to(ROOT).as_posix()
         if rel.startswith(('tools/', 'work/', 'node_modules/', '.git/')):
             continue
-        for filename, version in re.findall(r'([\w-]+\.css)\?v=([\w.-]+)', path.read_text(encoding='utf-8')):
+        conference_pages[rel] = path.read_text(encoding='utf-8')
+        for filename, version in re.findall(r'([\w-]+\.css)\?v=([\w.-]+)', conference_pages[rel]):
             expected = ART_STUDY_NAV_VERSION if filename == 'art-study-enrichment.css' else '20261004-joseph-heroes-1' if filename == 'joseph-smith-likeness.css' and rel in {'joseph-smith-likeness.html','joseph-smith-portrait-research.html'} else JOURNEY_PICKER_VERSION if filename == 'jesus-journey.css' else MOBILE_NAV_VERSION if filename == 'site-system.css' else SEARCH_VERSION if filename == 'site-search.css' else TOPIC_DESKTOP_VERSION if filename == 'topic-study-pages.css' else CONTRACT['version']
+            if filename == 'general-conference-section.css':
+                expected = CONFERENCE_VERSION
             if filename in FILES and version != expected:
                 errors.append('Stale anchor stylesheet: ' + rel + ': ' + filename)
+    errors.extend(conference_cache_errors(conference_pages))
     return errors
 
 
 def self_test():
+    conference = (ROOT / 'general-conference-section.css').read_bytes()
+    for mutation in (conference.replace(CONFERENCE_CURRENT, CONFERENCE_PRIOR),
+                     conference.replace(CONFERENCE_CURRENT, CONFERENCE_PRIOR, 1),
+                     conference.replace(CONFERENCE_CURRENT, b'.fc-conference-sessions details[open]~summary', 1),
+                     conference + b'\nbody{color:red}'):
+        assert mutation != conference
+        assert not reviewed_anchor_style('general-conference-section.css', mutation)
+    for mutation in (conference[:-len(CONFERENCE_ROWS_APPENDIX)], conference + CONFERENCE_ROWS_APPENDIX,
+                     conference.replace(b' of :not([hidden])', b'', 1),
+                     conference.replace(b'#conference-results', b'.fc-conference-section', 1),
+                     conference.replace(b'grid-column: span 3;', b'grid-column: span 2;', 1)):
+        assert mutation != conference
+        assert not reviewed_anchor_style('general-conference-section.css', mutation)
+    link = '<link href="general-conference-section.css?v=' + CONFERENCE_VERSION + '">'
+    pages = {'answers.html': link, 'general-conference.html': link}
+    assert not conference_cache_errors(pages)
+    for altered in ({'answers.html': link}, {**pages, 'other.html': link},
+                    {**pages, 'answers.html': link + link},
+                    {**pages, 'answers.html': link + link.replace(CONFERENCE_VERSION, 'unknown')},
+                    {**pages, 'answers.html': link.replace(CONFERENCE_VERSION, '20261007-october-archive-1')},
+                    {**pages, 'answers.html': link.replace(CONFERENCE_VERSION, 'unknown')}):
+        assert conference_cache_errors(altered)
     for name in FILES:
         data = (ROOT / name).read_bytes()
         assert reviewed_anchor_style(name, data), name

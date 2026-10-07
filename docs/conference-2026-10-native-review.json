@@ -1,0 +1,110 @@
+{
+  "schema": 1,
+  "spec": {
+    "kind": "official-native-conference-thumbnails",
+    "collection": "https://www.churchofjesuschrist.org/study/general-conference/2026/10?lang=eng",
+    "ledger_sha256": "2c3c7d4f75f508f5cafb1aede25069a2c561f9ba9fa1a1ddfbfb1e97aea60c80",
+    "items_sha256": "fe829c991e76048e6b7d138b3d003023fe430aa3aab9751f68ab69d25088a1ba",
+    "page_context": [
+      {
+        "path": "general-conference.html",
+        "sha256": "0d7ed530996987466e7b316cb725d3300ef8b0c9a32ea56bcad9d71d36983100"
+      },
+      {
+        "path": "general-conference-section.css",
+        "sha256": "7c0f15564c90ea0fa066041e54938e52c661a0c7f3c188f20a1ad4739eab2bcc"
+      }
+    ]
+  },
+  "reviews": [
+    {
+      "reviewer": "Newton",
+      "receipt_id": "newton-official-native-october2026-source-20261007",
+      "stage": "official-source",
+      "verdict": "PASS",
+      "withdrawn": false,
+      "binding_sha256": "b4a071929748cef4e44491ccb6564d00ca15e78e0db337fb8d1d5e7a5d27e392",
+      "reviewed_at": "2026-10-07T16:41:56.405234+00:00",
+      "observations": "Read exact official 38-record manifest and per-page source hashes, reviewed every downloaded native preview in the contact sheet and compared all thumbnail bytes/dimensions/title/speaker/session bindings. Native Church photographs, not new generated artwork. Four actual desktop/phone screenshot compositions separately inspected; sustaining 3:2 image remains uncropped.",
+      "pixels_inspected": true,
+      "evidence": [
+        {
+          "path": ".qa-artifacts/conference-october-2026/native-previews.jpg",
+          "sha256": "50cf43907b40b0556dedac3ff3e67aab437909213aba612bc3f0f00df05eb144"
+        }
+      ],
+      "continuation_review": {
+        "reviewed_at": "2026-10-07T17:13:08.546693+00:00",
+        "scope": "Visible-result row layout and exact cache-context update; original source evidence remains unchanged.",
+        "observations": "Independently inspected actual desktop before/after Oaks rows and phone/archive captures; reviewed exact scoped CSS and finite inverse/negative tests. No source, thumbnail or authored prose changes. Written concurrence supplied by named reviewer; final commit concurrence separate."
+      }
+    },
+    {
+      "reviewer": "Fermi",
+      "receipt_id": "fermi-official-native-october2026-source-20261007",
+      "stage": "official-source",
+      "verdict": "PASS",
+      "withdrawn": false,
+      "binding_sha256": "b4a071929748cef4e44491ccb6564d00ca15e78e0db337fb8d1d5e7a5d27e392",
+      "reviewed_at": "2026-10-07T16:42:32.603423+00:00",
+      "observations": "Retrieved every official talk page and extracted its labeled byline and native poster URL. Compared exact 38 ordered titles, official destinations and thumbnail byte hashes to the page. Actually inspected all 38 native preview tiles in the diagnostic contact sheet: conference speaker context, no blank/corrupt/substituted-art or obvious wrong repeat. Sustaining side view 3:2 and seated Eyring source framing retained. Speaker mapping rests on official page provenance, not biometric identification of unfamiliar speakers. No generation, editing, reconstruction or historical preflight claimed. Inspected supplied desktop opening and phone archive/sustaining screenshot pixels separately.",
+      "pixels_inspected": true,
+      "evidence": [
+        {
+          "path": ".qa-artifacts/conference-october-2026/native-previews.jpg",
+          "sha256": "50cf43907b40b0556dedac3ff3e67aab437909213aba612bc3f0f00df05eb144"
+        }
+      ],
+      "continuation_review": {
+        "reviewed_at": "2026-10-07T17:13:08.546693+00:00",
+        "scope": "Visible-result row layout and exact cache-context update; original source evidence remains unchanged.",
+        "observations": "Independently inspected actual desktop before/after Oaks rows and phone/archive captures; reviewed exact scoped CSS and finite inverse/negative tests. No source, thumbnail or authored prose changes. Written concurrence supplied by named reviewer; final commit concurrence separate."
+      }
+    }
+  ],
+  "root_review": {
+    "reviewer": "Albert",
+    "verdict": "PASS",
+    "withdrawn": false,
+    "binding_sha256": "b4a071929748cef4e44491ccb6564d00ca15e78e0db337fb8d1d5e7a5d27e392",
+    "reviewed_at": "2026-10-07T17:13:08.546693+00:00",
+    "pixels_inspected": true,
+    "desktop": [
+      {
+        "path": ".qa-artifacts/conference-october-2026/desktop.png",
+        "sha256": "bfb2ca74f60b2af6bf15eeac8ae667e4b847731fd735bce30f1a9b3da35d551c"
+      },
+      {
+        "path": ".qa-artifacts/conference-october-2026/native-previews.jpg",
+        "sha256": "50cf43907b40b0556dedac3ff3e67aab437909213aba612bc3f0f00df05eb144"
+      },
+      {
+        "path": ".qa-artifacts/conference-october-2026/visible-rows-1280-oaks.png",
+        "sha256": "3a36a668f4479adb7840f6c5b29ce8ee79446e640a298ca241ce8122f77113de"
+      },
+      {
+        "path": ".qa-artifacts/conference-october-2026/visible-rows-1280-two-results.png",
+        "sha256": "5ddfb8ae1d1ce37187622650706f83b715f24160a1f11b2aca0ce0494325ffd2"
+      }
+    ],
+    "phone": [
+      {
+        "path": ".qa-artifacts/conference-october-2026/phone.png",
+        "sha256": "10d36a109b74fa57d5db433423705fed2790265d2645a24230523a21a0686c4f"
+      },
+      {
+        "path": ".qa-artifacts/conference-october-2026/visible-rows-412-oaks.png",
+        "sha256": "02ee23333f4785b1e9bceaa4477c79960a1a2b6daea78076da6bd44c81890129"
+      },
+      {
+        "path": ".qa-artifacts/conference-october-2026/visible-rows-412-archive.png",
+        "sha256": "f36e3ca0524ed17be134315a8c55456fffb31c0bc8d247e21e4f8a594e9d8d13"
+      },
+      {
+        "path": ".qa-artifacts/conference-october-2026/visible-rows-412-opening.png",
+        "sha256": "2ab11f750f86eb9c03a385e3a4815dea5809a16646660f2bc2b77b56770f4148"
+      }
+    ],
+    "observations": "Personally operated native IAB desktop1280 and phone412: settled original hero, October38 search/filter/reset, April37 separate disclosure and nested plus/minus controls. Independently inspected all38 official thumbnails as a diagnostic contact sheet; original source-byline and hash bindings establish attribution, not biometric identification. Sustaining source3:2 shown contained. Inspected specialist exact desktop/phone screenshot evidence; no new generated artwork, physical-phone certification, complete playback or owner visual acceptance claimed. Continuation root personally operated exact final CSS context at1280x900 and412x915: Oaks results fill available desktop rows, two nonconsecutive Christofferson cards form balanced halves, zero-result and reset38 work, phone stack and April first session preserved. Actual screenshots inspected; prior source/contact-sheet proof reused unchanged."
+  }
+}

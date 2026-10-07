@@ -279,6 +279,56 @@ def baseline_check(root, baseline):
     return inventory
 
 
+NATIVE_CONFERENCE_LEDGER = 'docs/general-conference-source-ledger.json'
+NATIVE_CONFERENCE_REVIEW = 'docs/conference-2026-10-native-review.json'
+NATIVE_CONFERENCE_ITEMS_SHA256 = 'fe829c991e76048e6b7d138b3d003023fe430aa3aab9751f68ab69d25088a1ba'
+NATIVE_CONFERENCE_LEDGER_SHA256 = '2c3c7d4f75f508f5cafb1aede25069a2c561f9ba9fa1a1ddfbfb1e97aea60c80'
+
+
+def validate_native_conference(root, rejected):
+    """Source evidence for this exact native Church set, never generation evidence."""
+    review_path = root / NATIVE_CONFERENCE_REVIEW
+    if not review_path.exists():
+        return set()
+    record = json.loads(review_path.read_text(encoding='utf-8'))
+    require(record.get('schema') == 1, 'Unknown native source review schema')
+    spec = record['spec']
+    require(spec.get('kind') == 'official-native-conference-thumbnails', 'Wrong native source kind')
+    collection = 'https://www.churchofjesuschrist.org/study/general-conference/2026/10?lang=eng'
+    require(spec.get('collection') == collection, 'Wrong native conference collection')
+    require(spec.get('ledger_sha256') == digest(local(root, NATIVE_CONFERENCE_LEDGER)) == NATIVE_CONFERENCE_LEDGER_SHA256, 'Native source ledger differs from independently reviewed bytes')
+    ledger = json.loads(local(root, NATIVE_CONFERENCE_LEDGER).read_text(encoding='utf-8'))
+    items = ledger['items']
+    require(spec.get('items_sha256') == canonical(items) == NATIVE_CONFERENCE_ITEMS_SHA256, 'Unreviewed native source item manifest')
+    require(ledger['official_collection'] == collection and ledger['item_count'] == len(items) == 38, 'Native source collection must contain exact 38 records')
+    paths = set()
+    from PIL import Image
+    for item in items:
+        name = item['local_thumbnail']
+        require(name == 'assets/resources/conference-2026-10/' + item['id'] + '.jpg' and name not in paths, 'Unexpected or duplicate native resource path')
+        require(item['url'] == collection.replace('?lang=eng', '/' + item['id'] + '?lang=eng'), 'Wrong native message month or identity')
+        require(re.fullmatch(r'https://www\.churchofjesuschrist\.org/imgs/[a-z0-9]+/full/%21768%2C/0/default', item['thumbnail_url']) is not None, 'Untrusted native thumbnail source')
+        require(re.fullmatch(r'[0-9a-f]{64}', item['source_sha256']) is not None, 'Missing exact official page evidence')
+        asset = local(root, name)
+        require(digest(asset) == item['sha256'] and item['sha256'] not in rejected and asset.stat().st_size == item['bytes'], 'Native thumbnail bytes differ from source review')
+        with Image.open(asset) as image:
+            require(image.format == 'JPEG' and image.size == (item['width'], item['height']), 'Native thumbnail format or dimensions changed')
+        paths.add(name)
+    require(files(root, spec['page_context'], rejected) == {'general-conference.html', 'general-conference-section.css'}, 'Native source review requires exact page and stylesheet context')
+    binding = canonical(spec)
+    reviews(record['reviews'], binding, 'official-source', rejected, root)
+    for review in record['reviews']:
+        require(review.get('pixels_inspected') is True, 'Native source contact pixels not inspected')
+        files(root, review['evidence'], rejected)
+    assembled = record['root_review']
+    require(assembled.get('reviewer') == 'Albert' and assembled.get('verdict') == 'PASS' and assembled.get('binding_sha256') == binding and assembled.get('pixels_inspected') is True and assembled.get('withdrawn') is False, 'Missing or stale native assembled review')
+    require(isinstance(assembled.get('observations'), str) and assembled['observations'].strip(), 'Missing native assembled observations')
+    stamp(assembled['reviewed_at'])
+    files(root, assembled['desktop'], rejected)
+    files(root, assembled['phone'], rejected)
+    return paths
+
+
 def run(root, mode='release', scene=None, page_overrides=None):
     page_overrides = checked_overrides(root, page_overrides, mode)
     baseline = json.loads((root / 'docs/artwork-creation-baseline.json').read_text(encoding='utf-8'))
@@ -318,6 +368,9 @@ def run(root, mode='release', scene=None, page_overrides=None):
         pixels = {a['pixel_sha256'] for a in scene_assets}
         require(not (hashes & originals) and not (pixels & original_pixels), 'Duplicate artwork across new scenes')
         originals |= hashes; original_pixels |= pixels
+    native = validate_native_conference(root, rejected)
+    require(not (native & covered) and native <= added, 'Native source coverage must be new and separate from generated artwork')
+    covered |= native
     require(added == covered, 'New artwork missing exact review coverage: ' + ', '.join(sorted(added - covered)))
     if creations:
         for name in inventory:
@@ -330,7 +383,7 @@ def run(root, mode='release', scene=None, page_overrides=None):
                     if getattr(image, 'n_frames', 1) > 1:
                         continue
                 require(pixel_hash(path) not in original_pixels, 'New artwork duplicates existing decoded pixels')
-    return {'stage': mode, 'frozen_files': len(inventory), 'new_creations': len(creations), 'new_rasters': len(added), 'evidence_integrity': 'PASS', 'aesthetic_acceptance': False}
+    return {'stage': mode, 'frozen_files': len(inventory), 'new_creations': len(creations), 'native_source_thumbnails': len(native), 'new_rasters': len(added), 'evidence_integrity': 'PASS', 'aesthetic_acceptance': False}
 
 
 def main():

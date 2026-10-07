@@ -100,6 +100,7 @@ jobs:
       - name: Verify General Conference study hub and filters
         run: |
           python tools/general_conference_qa.py
+          python tools/general_conference_qa.py --self-test
           node tools/general_conference_runtime_qa.js
           node --check general-conference.js
           node tools/study_navigation_runtime_qa.js

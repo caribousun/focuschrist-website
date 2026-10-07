@@ -3,6 +3,7 @@ import copy
 import json
 from pathlib import Path
 import tempfile
+import shutil
 import unittest
 from unittest.mock import patch
 from PIL import Image
@@ -283,6 +284,74 @@ class EvidenceTests(unittest.TestCase):
     def test_frozen_image_modified(self):
         with patch.object(gate, 'git_inventory', return_value={'ref.png': 'wrong'}):
             with self.assertRaisesRegex(ValueError, 'Frozen baseline'): gate.baseline_check(self.root, {'schema': 1, 'commit': gate.BASELINE, 'rejected_sha256': list(gate.REJECTED)})
+
+
+class NativeConferenceTests(unittest.TestCase):
+    """Exercise the actual independently reviewed set in an isolated directory."""
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory(); self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name)
+        self.record = json.loads((gate.ROOT / gate.NATIVE_CONFERENCE_REVIEW).read_text(encoding='utf-8'))
+        self.ledger = json.loads((gate.ROOT / gate.NATIVE_CONFERENCE_LEDGER).read_text(encoding='utf-8'))
+        names = {gate.NATIVE_CONFERENCE_REVIEW, gate.NATIVE_CONFERENCE_LEDGER}
+        names |= {r['local_thumbnail'] for r in self.ledger['items']}
+        names |= {r['path'] for r in self.record['spec']['page_context']}
+        for review in self.record['reviews']:
+            names |= {r['path'] for r in review['evidence']}
+        for mode in ('desktop', 'phone'):
+            names |= {r['path'] for r in self.record['root_review'][mode]}
+        for name in names:
+            target = self.root / name; target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(gate.ROOT / name, target)
+
+    def validate(self):
+        (self.root / gate.NATIVE_CONFERENCE_REVIEW).write_text(json.dumps(self.record), encoding='utf-8')
+        return gate.validate_native_conference(self.root, gate.REJECTED)
+
+    def reject(self, pattern):
+        with self.assertRaisesRegex(ValueError, pattern): self.validate()
+
+    def change_ledger(self, change):
+        change(self.ledger)
+        path = self.root / gate.NATIVE_CONFERENCE_LEDGER
+        path.write_text(json.dumps(self.ledger), encoding='utf-8')
+        # Even a self-consistently forged binding cannot override the independently pinned source set.
+        self.record['spec']['ledger_sha256'] = gate.digest(path)
+        self.record['spec']['items_sha256'] = gate.canonical(self.ledger['items'])
+
+    def test_exact_official_native_set(self): self.assertEqual(len(self.validate()), 38)
+    def test_wrong_month(self):
+        self.change_ledger(lambda x: x['items'][0].update(url=x['items'][0]['url'].replace('/2026/10/', '/2026/04/')))
+        self.reject('independently reviewed')
+    def test_unlisted_resource(self):
+        self.change_ledger(lambda x: x['items'][0].update(local_thumbnail='assets/resources/unreviewed.jpg'))
+        self.reject('independently reviewed')
+    def test_faked_source_host(self):
+        self.change_ledger(lambda x: x['items'][0].update(thumbnail_url='https://example.com/fake.jpg'))
+        self.reject('independently reviewed')
+    def test_faked_ledger_addition(self):
+        self.change_ledger(lambda x: x['items'].append(copy.deepcopy(x['items'][0])))
+        self.reject('independently reviewed')
+    def test_changed_native_pixels(self):
+        path = self.root / self.ledger['items'][0]['local_thumbnail']; path.write_bytes(path.read_bytes() + b'changed')
+        self.reject('thumbnail bytes')
+    def test_missing_source_review(self): self.record['reviews'].pop(); self.reject('two reviewers')
+    def test_duplicate_source_review(self): self.record['reviews'][1] = copy.deepcopy(self.record['reviews'][0]); self.reject('distinct')
+    def test_withdrawn_source_review(self): self.record['reviews'][0]['withdrawn'] = True; self.reject('withdrawn')
+    def test_fake_generation_review(self): self.record['reviews'][0]['stage'] = 'preflight'; self.reject('wrong-stage')
+    def test_stale_source_binding(self): self.record['reviews'][0]['binding_sha256'] = '0' * 64; self.reject('stale review binding')
+    def test_uninspected_native_pixels(self): self.record['reviews'][0]['pixels_inspected'] = False; self.reject('not inspected')
+    def test_missing_root_review(self): self.record['root_review'] = {}; self.reject('assembled review')
+    def test_stale_root_review(self): self.record['root_review']['binding_sha256'] = '0' * 64; self.reject('assembled review')
+    def test_stale_render_evidence(self):
+        (self.root / self.record['root_review']['phone'][0]['path']).write_bytes(b'changed')
+        self.reject('Stale evidence hash')
+    def test_stale_page_context(self):
+        (self.root / 'general-conference.html').write_text('changed', encoding='utf-8')
+        self.reject('Stale evidence hash')
+    def test_native_record_absence_grants_no_coverage(self):
+        (self.root / gate.NATIVE_CONFERENCE_REVIEW).unlink()
+        self.assertEqual(gate.validate_native_conference(self.root, gate.REJECTED), set())
 
 
 if __name__ == '__main__': unittest.main()
