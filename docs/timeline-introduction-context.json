@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "reviewed_candidate": "b6e4e0b37df8db7527a10ca1d071624967b57d71",
+  "pages": {
+    "timelines/latter-day-saint-church-history-timeline.html": {
+      "original_nav_line": "  <nav class=\"timeline-navigation\" aria-label=\"Timeline navigation\"><a class=\"timeline-return\" href=\"../timeline.html\">All timelines</a><a class=\"timeline-return\" href=\"#historyWorkspace\">Explore timeline</a></nav>",
+      "overview_anchor": "<section id=\"history-journey-overview\" class=\"timeline-life-overview\" aria-label=\"About this history\">\n<p class=\"lede\">The history of The Church of Jesus Christ of Latter-day Saints, from Joseph Smith's First Vision in 1820 through the pioneer exodus, the Utah years, and the growth of a global church of more than 17 million members. Tap any event to read its story right where you are.</p>",
+      "current_opening_sha256": "23efdfbe41d8a5c99cc809760787c7432116a9a1b041cd9372440bbe154afc5a"
+    },
+    "timelines/life-of-christ-journey-map.html": {
+      "original_nav_line": "    <nav class=\"timeline-navigation\" aria-label=\"Timeline navigation\"><a class=\"timeline-return\" href=\"../timeline.html\">All timelines</a><a class=\"timeline-return\" href=\"#journeyWorkspace\">Explore journey</a></nav>",
+      "overview_anchor": "<section id=\"life-journey-overview\" class=\"timeline-life-overview\" aria-label=\"About this journey\">\n    <p class=\"lede\">Follow the Savior from the home of Mary and Joseph, through His birth, ministry, final week in Jerusalem, Resurrection and appearances, His ministry among the people of the Book of Mormon, and later appearances and visions recorded in scripture and Church history.</p>",
+      "current_opening_sha256": "a5d2dd6062f97ebe1914ed0e36a17793e8a17ec421b8c9c42dcf717d1f0d65d4"
+    },
+    "timelines/willie-and-martin-handcart-map.html": {
+      "original_nav_line": "    <nav class=\"timeline-navigation\" aria-label=\"Timeline navigation\"><a class=\"timeline-return\" href=\"../timeline.html\">All timelines</a><a class=\"timeline-return\" href=\"#journeyWorkspace\">Explore journey</a></nav>",
+      "overview_anchor": "<section id=\"handcart-journey-overview\" class=\"timeline-life-overview\" aria-label=\"About this journey\">\n    <p>Two companies, nearly a thousand people, and a 1,300-mile walk from Iowa City that ran into one of the harshest early winters on the plains. Thirty-three major stops are plotted below, in the order they reached them.</p>",
+      "current_opening_sha256": "b7b5f926f9e333fa4951050a174955a8a3683133a567dad2492da1db017b3370"
+    }
+  }
+}

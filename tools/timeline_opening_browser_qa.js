@@ -53,9 +53,27 @@ module.exports=async function(page,origin,out){
    assert.equal(await page.locator('.fc-page-intro .timeline-navigation').count(),0,'Timeline navigation is truly moved out of the opening DOM');
    const overviewId={history:'history-journey-overview',life:'life-journey-overview',handcart:'handcart-journey-overview'}[kind];
    const target=await cue.getAttribute('href');
-   assert.equal(target,'#'+overviewId,'Continue retains its exact overview destination');
    const overview=page.locator('#'+overviewId+'.timeline-life-overview');
    assert.equal(await overview.count(),1,'Continue reaches the existing overview section');
+   const sourceFile={history:'latter-day-saint-church-history-timeline',life:'life-of-christ-journey-map',handcart:'willie-and-martin-handcart-map'}[kind];
+   const authored=fs.readFileSync(path.join(__dirname,'../timelines/'+sourceFile+'.html'),'utf8');
+   assert(authored.includes('class="fc-scroll-cue timeline-opening-continue" href="#'+overviewId+'"'),'Authored Continue keeps its exact overview destination');
+   const expectedCopy=authored.match(/<p class="fc-page-intro-copy">([\s\S]*?)<\/p>/);
+   assert(expectedCopy,'Reviewed introduction copy remains in the source');
+   r.retained=await page.evaluate(overviewId=>{
+    const opening=document.querySelector('.fc-page-intro'),overview=document.getElementById(overviewId),retained=document.getElementById('fc-opening-retained'),copies=[...document.querySelectorAll('.fc-page-intro-copy')];
+    return {copyCount:copies.length,copyHTML:copies[0]?.innerHTML,copyInOpening:!!copies[0]&&opening.contains(copies[0]),present:!!retained,hidden:retained?.hidden,children:retained?.children.length||0,copyInRetained:!!retained&&retained.contains(copies[0]),ordered:!!retained&&!!(opening.compareDocumentPosition(retained)&Node.DOCUMENT_POSITION_FOLLOWING)&&!!(retained.compareDocumentPosition(overview)&Node.DOCUMENT_POSITION_FOLLOWING),visible:!!retained&&retained.getBoundingClientRect().height>0};
+   },overviewId);
+   assert.equal(r.retained.copyCount,1,'The complete introduction survives exactly once');
+   assert.equal(r.retained.copyHTML,expectedCopy[1],'Responsive retention preserves the exact reviewed paragraph');
+   if(r.retained.children){
+    assert.equal(r.retained.children,1,'Only the reviewed explanation moves into retention');
+    assert(r.retained.copyInRetained&&!r.retained.copyInOpening&&!r.retained.hidden&&r.retained.visible&&r.retained.ordered,'Visible retained explanation stays between opening and overview');
+    assert.equal(target,'#fc-opening-retained','Continue reaches retained meaningful copy before the overview');
+   }else{
+    assert(r.retained.copyInOpening&&(!r.retained.present||r.retained.hidden),'Empty retention is hidden and explanation stays in the opening');
+    assert.equal(target,'#'+overviewId,'Continue reaches overview when no explanation is retained');
+   }
    const nav=overview.locator(':scope > nav.timeline-navigation[aria-label="Timeline navigation"]');
    assert.equal(await page.locator('.timeline-navigation').count(),1,'No duplicate timeline navigation remains');
    assert.equal(await nav.count(),1,'The real navigation is a direct child of its overview');
