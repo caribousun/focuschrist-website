@@ -24,7 +24,7 @@ REVIEWED_PAGE_HASHES = {'art-study/be-still.html': 'ed90acad612bc12e0008d498a37f
 OLD_SHARED_STYLE = b'<link rel="stylesheet" href="../site-system.css?v=20260930-study-alignment-1">'
 CURRENT_SHARED_STYLE = b'<link rel="stylesheet" href="../site-system.css?v=20261005-mobile-study-rows-1">'
 OLD_COMMON_SCRIPT = b'site-common.js?v=20261002-timeline-1'
-CURRENT_COMMON_SCRIPT = b'site-common.js?v=20261008-section-top-1'
+CURRENT_COMMON_SCRIPT = b'site-common.js?v=20261008-section-top-2'
 OLD_ANSWER_STYLE = b'answer-styles.css?v=20260909-warm'
 CURRENT_ANSWER_STYLE = b'answer-styles.css?v=20261005-centered-pill-labels-1'
 BUFFER_ANSWER_STYLE = b'answer-styles.css?v=20261006-art-study-buffer-2'

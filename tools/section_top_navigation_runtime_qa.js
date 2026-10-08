@@ -21,6 +21,19 @@ const cases = [
   ['pioneers.html', '.fc-unified-continue', null],
   ['come-follow-me.html', '.fc-unified-continue', null],
   ['joseph-smith-likeness.html', '.fc-unified-continue', null],
+  ['art-study/the-good-shepherd.html', 'a[href="../art.html#gallery-original-the-good-shepherd"]', '#gallery-original-the-good-shepherd'],
+  ['art-study/suffer-the-little-children.html', 'a[href="../art.html#gallery-original-suffer-the-little-children"]', '#gallery-original-suffer-the-little-children'],
+  ['art-study/be-still.html', 'a[href="../art.html#gallery-original-be-still"]', '#gallery-original-be-still'],
+  ...[
+    ['What would you like to understand?', '/ask.html#ask-study-heading', '#ask-question'],
+    ['Your Study Conversation', '/ask.html#conversation-heading', '.ask-conversation-section'],
+    ['Explore by Topic', '/ask.html#topic-heading', '.ask-topic-section'],
+    ['Continue Your Study', '/ask.html#continue-heading', '.ask-continue-section'],
+    ['Make room to listen', '/ask.html#visual-resources-title', '[data-visual-resources]'],
+    ['Try a question with a passage open', '/ask.html#connected-study', '#connected-study'],
+    ['The Annunciation to Mary', '/timelines/life-of-christ-journey-map.html#dTitle', '#detail'],
+    ['Choose a stop', '/timelines/willie-and-martin-handcart-map.html#detail-title', '#detail-panel'],
+  ].map(([query, href, target]) => [`search.html?q=${encodeURIComponent(query)}`, `.fc-search-result a[href="${href}"]`, target]),
 ];
 function measure(selector) {
   const target = document.querySelector(selector);
@@ -28,10 +41,21 @@ function measure(selector) {
   const rect = target.getBoundingClientRect();
   const header = document.querySelector('.nav[data-focuschrist-header="standard"]');
   const fixed = header && ['fixed', 'sticky'].includes(getComputedStyle(header).position);
-  const offset = (fixed ? Math.ceil(header.getBoundingClientRect().height) : 0) + 16;
+  let cover = fixed ? Math.ceil(header.getBoundingClientRect().height) : 0;
+  const dock = document.querySelector('.timeline-map-dock');
+  if (dock && !dock.contains(target) && !target.contains(dock)) {
+    const box = dock.getBoundingClientRect(), style = getComputedStyle(dock);
+    if (['fixed', 'sticky'].includes(style.position) && box.height > 0 &&
+        box.top <= cover + 2 && box.bottom > cover && box.left < rect.right && box.right > rect.left) {
+      cover = Math.ceil(box.bottom);
+    }
+  }
+  const offset = cover + 16;
+  const heading = Array.from(target.querySelectorAll('h1,h2,h3,h4')).find(item => !item.closest('[hidden]') && item.getClientRects().length);
+  const headingRect = heading && heading.getBoundingClientRect();
   const maximum = Math.max(0, document.documentElement.scrollHeight - innerHeight);
   const expectedScroll = Math.max(0, Math.min(scrollY + rect.top - offset, maximum));
-  return { top: rect.top, offset, scroll: scrollY, maximum, expectedScroll,
+  return { top: rect.top, offset, cover, headingTop:headingRect?.top, headingBottom:headingRect?.bottom, scroll: scrollY, maximum, expectedScroll,
     error: Math.abs(scrollY - expectedScroll), visible: rect.height > 0,
     overflow: document.documentElement.scrollWidth > innerWidth + 1 };
 }
@@ -52,7 +76,7 @@ const server = http.createServer((req, res) => {
   try {
     for (const [width, height] of [[1366,900], [390,844], [320,740]]) {
       const page = await browser.newPage({ viewport:{width,height}, reducedMotion:'reduce' });
-      await page.route('https://**', route => route.abort());
+      await page.route(url => url.protocol === 'https:', route => route.abort());
       for (const [route, linkSelector, destination] of cases) {
         await page.goto(`${base}/${route}`, { waitUntil:'load' });
         await page.evaluate(() => document.fonts.ready);
@@ -60,6 +84,8 @@ const server = http.createServer((req, res) => {
         await link.waitFor();
         const selector = destination || await link.getAttribute('href');
         await link.click();
+        await page.waitForLoadState('load');
+        await page.evaluate(() => document.fonts.ready);
         await page.waitForTimeout(950);
         const record = { route, width, height, selector, ...await page.evaluate(measure, selector) };
         records.push(record);
@@ -108,11 +134,41 @@ const server = http.createServer((req, res) => {
       assert.equal(restored.hash, '#history-first-vision-title');
       assert(Math.abs(restored.top - restored.nativeMargin) <= 1.5, JSON.stringify(restored));
       special.push({kind:'native-back-and-controller-ownership', width, ...restored});
+      // The legacy gallery retains aria-modal while closed. Its hidden panel
+      // must allow section landings, while its actual viewer keeps ownership.
+      await page.goto(`${base}/art.html#gallery-original-the-good-shepherd`, {waitUntil:'load'});
+      await page.waitForTimeout(950);
+      await page.locator('#gallery-original-the-good-shepherd').click();
+      await page.locator('#imageModal.active').waitFor({state:'visible'});
+      const viewerScroll = await page.evaluate(() => scrollY);
+      await page.waitForTimeout(950);
+      assert.equal(await page.locator('#imageModal.active').count(), 1);
+      assert(Math.abs(await page.evaluate(() => scrollY) - viewerScroll) <= 1.5, 'Visible gallery viewer must retain reading position');
+      await page.keyboard.press('Escape');
+      await page.locator('#imageModal').waitFor({state:'hidden'});
+      special.push({kind:'actual-gallery-viewer-ownership', width, viewerScroll});
+      // The generated keyboard skip link keeps focus and replacement history,
+      // but its destination must also clear the timeline's sticky phone header.
+      for (const skipRoute of ['timelines/willie-and-martin-handcart-map.html', 'timelines/latter-day-saint-church-history-timeline.html', 'timelines/life-of-christ-journey-map.html']) {
+      await page.goto(`${base}/${skipRoute}`, {waitUntil:'load'});
+      const skip = page.locator('[data-focuschrist-skip-link="true"]');
+      const skipTarget = await skip.getAttribute('href');
+      const skipHistory = await page.evaluate(() => history.length);
+      await skip.focus();
+      await page.keyboard.press('Enter');
+      await page.waitForTimeout(950);
+      const skipLanding = await page.evaluate(measure, skipTarget);
+      assert(skipLanding.error <= 1.5, JSON.stringify(skipLanding));
+      assert(Number.isFinite(skipLanding.headingTop) && skipLanding.headingTop >= skipLanding.cover - 1, 'The first subject heading must clear the header and any pinned map dock: ' + JSON.stringify(skipLanding));
+      assert.equal(await page.evaluate(() => '#' + document.activeElement.id), skipTarget);
+      assert.equal(await page.evaluate(() => history.length), skipHistory);
+      special.push({kind:'keyboard-skip-focus-and-history', route:skipRoute, width, ...skipLanding});
+      }
       await page.close();
     }
     // A negative fixture removes the repair and reproduces the sticky-header bug.
     const page = await browser.newPage({viewport:{width:390,height:844},reducedMotion:'reduce'});
-    await page.route('https://**', route => route.abort());
+    await page.route(url => url.protocol === 'https:', route => route.abort());
     await page.route('**/header-scroll.js*', route => route.fulfill({contentType:'text/javascript',body:'/* prior native landing, no correction */'}));
     await page.goto(`${base}/timelines/latter-day-saint-church-history-timeline.html`, {waitUntil:'load'});
     const negativeSelector = await page.locator('.timeline-opening-continue').getAttribute('href');
@@ -122,6 +178,149 @@ const server = http.createServer((req, res) => {
     assert(negative.error > 20, 'Negative baseline must fail the landing geometry oracle');
     special.push({kind:'prior-landing-negative', ...negative});
     await page.close();
+    // Restore only the old modal guard to prove the real gallery link catches
+    // the hidden aria-modal regression independently of the broader repair.
+    const gallery = await browser.newPage({viewport:{width:1366,height:900},reducedMotion:'reduce'});
+    await gallery.route(url => url.protocol === 'https:', route => route.abort());
+    const currentHeader = fs.readFileSync(path.join(root, 'header-scroll.js'), 'utf8');
+    const oldGuard = currentHeader.replace(/function canAlign\(([^)]*)\) \{/, 'function canAlign($1) { if (document.querySelector(\'dialog[open], [role="dialog"][aria-modal="true"]\')) return false;');
+    assert.notEqual(oldGuard, currentHeader);
+    await gallery.route('**/header-scroll.js*', route => route.fulfill({contentType:'text/javascript',body:oldGuard}));
+    await gallery.goto(`${base}/art-study/the-good-shepherd.html`, {waitUntil:'load'});
+    await gallery.locator('a[href="../art.html#gallery-original-the-good-shepherd"]').click();
+    await gallery.waitForLoadState('load');
+    await gallery.waitForTimeout(950);
+    const hiddenModalNegative = await gallery.evaluate(measure, '#gallery-original-the-good-shepherd');
+    assert(hiddenModalNegative.error > 20 && hiddenModalNegative.top < 52, 'Old modal guard must reproduce the gallery artwork hidden under the header');
+    special.push({kind:'hidden-modal-guard-negative', ...hiddenModalNegative});
+    await gallery.close();
+    const oldSkipPage = await browser.newPage({viewport:{width:390,height:844},reducedMotion:'reduce'});
+    await oldSkipPage.route(url => url.protocol === 'https:', route => route.abort());
+    const oldSkip = currentHeader.replace("window.addEventListener('click', function (event) {", "window.addEventListener('click', function (event) { if (event.defaultPrevented) return;");
+    assert.notEqual(oldSkip, currentHeader);
+    await oldSkipPage.route('**/header-scroll.js*', route => route.fulfill({contentType:'text/javascript',body:oldSkip}));
+    await oldSkipPage.goto(`${base}/timelines/willie-and-martin-handcart-map.html`, {waitUntil:'load'});
+    await oldSkipPage.locator('[data-focuschrist-skip-link="true"]').focus();
+    await oldSkipPage.keyboard.press('Enter');
+    await oldSkipPage.waitForTimeout(950);
+    const skipNegative = await oldSkipPage.evaluate(() => {
+      const target = document.querySelector('#handcart-main h1, #handcart-main h2');
+      return {headingTop:target.getBoundingClientRect().top, headerBottom:document.querySelector('.nav').getBoundingClientRect().bottom, focused:document.activeElement.id};
+    });
+    assert(skipNegative.headingTop < skipNegative.headerBottom, 'Old skip handler must reproduce the clipped phone heading');
+    assert.equal(skipNegative.focused, 'handcart-main');
+    special.push({kind:'prior-keyboard-skip-negative', ...skipNegative});
+    await oldSkipPage.close();
+    const leafletVersion = require('leaflet/package.json').version;
+    assert.equal(leafletVersion, '1.9.4', 'Pinned-map fixture uses the reviewed real Leaflet version');
+    const leafletDist = path.dirname(require.resolve('leaflet'));
+    for (const [mapAvailable, dockDisabled] of [[false, false], [true, false], [true, true]]) {
+    const dockPage = await browser.newPage({viewport:{width:390,height:844},reducedMotion:'reduce'});
+    const providerRequests = {leaflet:0, tiles:0, blocked:0};
+    // Serve the existing real Leaflet fixture, not a CSS imitation of a dock.
+    // An explicit URL predicate behaves consistently across Playwright versions.
+    await dockPage.route(url => url.protocol === 'https:', route => {
+      const url = route.request().url();
+      if (mapAvailable && /^https:\/\/unpkg\.com\/leaflet@1\.9\.4\/dist\/leaflet\.(js|css)$/.test(url)) {
+        const name = url.endsWith('.js') ? 'leaflet.js' : 'leaflet.css';
+        providerRequests.leaflet++;
+        return route.fulfill({contentType:name.endsWith('.js') ? 'text/javascript' : 'text/css', body:fs.readFileSync(path.join(leafletDist,name))});
+      }
+      if (mapAvailable && url.includes('tile.openstreetmap.org')) {
+        providerRequests.tiles++;
+        return route.fulfill({contentType:'image/svg+xml',body:'<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256"><rect width="256" height="256" fill="#607985"/></svg>'});
+      }
+      providerRequests.blocked++;
+      return route.abort();
+    });
+    if (mapAvailable) await dockPage.route('**/timeline-terrain.js?*', route =>
+      route.fulfill({contentType:'text/javascript',body:require('./timeline_terrain_fixture')}));
+    const withoutDock = currentHeader.replace("if (ownedTimelineLanding && target.closest('[data-timeline-pane]')) {", "if (false && ownedTimelineLanding && target.closest('[data-timeline-pane]')) {");
+    assert.notEqual(withoutDock, currentHeader);
+    await dockPage.route('**/header-scroll.js*', route => route.fulfill({contentType:'text/javascript',body:dockDisabled ? withoutDock : currentHeader}));
+    await dockPage.goto(`${base}/timelines/life-of-christ-journey-map.html`, {waitUntil:'load'});
+    await dockPage.evaluate(() => document.fonts.ready);
+    await dockPage.waitForFunction(available => {
+      const dock = document.querySelector('.timeline-map-dock');
+      return window.TimelineWorkspace && dock && document.querySelector('[data-focuschrist-skip-link="true"]') &&
+        (available ? typeof L === 'object' && !dock.classList.contains('timeline-map-unavailable') && getComputedStyle(dock).position === 'sticky' :
+          typeof L === 'undefined' && dock.classList.contains('timeline-map-unavailable') && getComputedStyle(dock).position === 'static');
+    }, mapAvailable);
+    await dockPage.locator('[data-focuschrist-skip-link="true"]').focus();
+    await dockPage.keyboard.press('Enter');
+    await dockPage.waitForTimeout(950);
+    // Hosted diagnostics showed the real provider fallback uses a static dock.
+    // Verify that legitimate state separately, and require an actual pinned
+    // provider state before testing the dock-offset mutation.
+    let dockExpectedStateObserved = false;
+    try {
+      await dockPage.waitForFunction(({available, disabled}) => {
+        const main = document.querySelector('#main-content');
+        const heading = Array.from(main.querySelectorAll('h1,h2,h3,h4')).find(item =>
+          !item.closest('[hidden]') && item.getClientRects().length);
+        const dock = document.querySelector('.timeline-map-dock');
+        const header = document.querySelector('.nav[data-focuschrist-header="standard"]');
+        const h = heading?.getBoundingClientRect(), d = dock?.getBoundingClientRect();
+        if (!available) return h && d && getComputedStyle(dock).position === 'static' && h.top >= header.getBoundingClientRect().bottom;
+        return h && d && getComputedStyle(dock).position === 'sticky' &&
+          d.top <= header.getBoundingClientRect().bottom + 2 &&
+          h.left < d.right && h.right > d.left &&
+          (disabled ? h.top < d.bottom && h.bottom > d.top : h.top >= d.bottom);
+      }, {available:mapAvailable, disabled:dockDisabled}, {timeout:5000});
+      dockExpectedStateObserved = true;
+    } catch (error) {
+      if (error.name !== 'TimeoutError') throw error;
+    }
+    const dockFirstMeasurement = await dockPage.evaluate(measure, '#main-content');
+    await dockPage.waitForTimeout(350);
+    const dockNegative = await dockPage.evaluate(measure, '#main-content');
+    const dockDiagnostics = await dockPage.evaluate(() => ({
+      dockRect:document.querySelector('.timeline-map-dock').getBoundingClientRect().toJSON(),
+      headerRect:document.querySelector('.nav[data-focuschrist-header="standard"]').getBoundingClientRect().toJSON(),
+      focused:document.activeElement.id, fonts:document.fonts.status,
+      workspaceReady:typeof window.TimelineWorkspace?.showStory === 'function',
+      mainDisplay:getComputedStyle(document.querySelector('#main-content')).display,
+      viewport:{width:innerWidth,height:innerHeight},
+      dockPosition:getComputedStyle(document.querySelector('.timeline-map-dock')).position,
+      dockClasses:document.querySelector('.timeline-map-dock').className,
+      workspaceClasses:document.querySelector('[data-timeline-workspace]').className,
+      workspaceView:document.querySelector('[data-timeline-workspace]').dataset.mobileView,
+      fallbackDisplay:getComputedStyle(document.querySelector('#mapFallback')).display,
+      leafletAvailable:typeof L === 'object',
+    }));
+    special.push({kind:!mapAvailable ? 'unavailable-map-static-dock-control' : dockDisabled ? 'pinned-map-dock-negative' : 'pinned-map-dock-current-control', leafletVersion, providerRequests, ...dockNegative, dockFirstMeasurement, dockExpectedStateObserved, ...dockDiagnostics});
+    assert(mapAvailable ? providerRequests.leaflet === 2 && providerRequests.tiles > 0 : providerRequests.blocked > 0, 'The selected real provider/fallback fixture must execute');
+    assert(dockExpectedStateObserved && [dockFirstMeasurement, dockNegative].every(value => dockDisabled ?
+      value.headingTop < value.cover && value.error > 100 : value.headingTop >= value.cover - 1 && value.error <= 1.5),
+      `The current dock-aware landing must stay clear and the dock-disabled mutation must stay occluded: ${JSON.stringify({mapAvailable, dockDisabled, providerRequests, dockFirstMeasurement, dockNegative, dockExpectedStateObserved, ...dockDiagnostics})}`);
+    await dockPage.close();
+    }
+    for (const [kind, functionName, query, href, target] of [
+      ['story-pane-negative', 'isTimelineStoryBookmark', 'The Annunciation to Mary', '/timelines/life-of-christ-journey-map.html#dTitle', '#detail'],
+      ['ask-heading-negative', 'isAskContentBookmark', 'Your Study Conversation', '/ask.html#conversation-heading', '#conversation-heading'],
+    ]) {
+      const negativePage = await browser.newPage({viewport:{width:kind === 'story-pane-negative' ? 390 : 1366,height:900},reducedMotion:'reduce'});
+      await negativePage.route(url => url.protocol === 'https:', route => route.abort());
+      const disabled = currentHeader.replace(`function ${functionName}(hash) {`, `function ${functionName}(hash) { return false;`);
+      assert.notEqual(disabled, currentHeader);
+      await negativePage.route('**/header-scroll.js*', route => route.fulfill({contentType:'text/javascript',body:disabled}));
+      await negativePage.goto(`${base}/search.html?q=${encodeURIComponent(query)}`, {waitUntil:'load'});
+      await negativePage.locator(`.fc-search-result a[href="${href}"]`).click();
+      await negativePage.waitForLoadState('load');
+      await negativePage.waitForTimeout(950);
+      const failed = await negativePage.evaluate(measure, target);
+      assert(kind === 'story-pane-negative' ? !failed.visible : failed.top < failed.cover, JSON.stringify(failed));
+      special.push({kind, ...failed});
+      await negativePage.close();
+    }
+    const composer = await browser.newPage({viewport:{width:390,height:844},reducedMotion:'reduce'});
+    await composer.route(url => url.protocol === 'https:', route => route.abort());
+    await composer.goto(`${base}/ask.html?search-question=John%2020#ask-question`, {waitUntil:'load'});
+    await composer.waitForTimeout(950);
+    assert.equal(await composer.locator('#userInput').inputValue(), 'John 20');
+    assert.equal(new URL(composer.url()).hash, '#ask-question');
+    special.push({kind:'ask-composer-prefill-ownership-no-submission'});
+    await composer.close();
   } finally {
     await browser.close();
     await new Promise(resolve => server.close(resolve));
