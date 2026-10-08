@@ -211,19 +211,56 @@ const server = http.createServer((req, res) => {
     assert.equal(skipNegative.focused, 'handcart-main');
     special.push({kind:'prior-keyboard-skip-negative', ...skipNegative});
     await oldSkipPage.close();
+    for (const dockDisabled of [false, true]) {
     const dockPage = await browser.newPage({viewport:{width:390,height:844},reducedMotion:'reduce'});
     await dockPage.route('https://**', route => route.abort());
     const withoutDock = currentHeader.replace("if (ownedTimelineLanding && target.closest('[data-timeline-pane]')) {", "if (false && ownedTimelineLanding && target.closest('[data-timeline-pane]')) {");
     assert.notEqual(withoutDock, currentHeader);
-    await dockPage.route('**/header-scroll.js*', route => route.fulfill({contentType:'text/javascript',body:withoutDock}));
+    await dockPage.route('**/header-scroll.js*', route => route.fulfill({contentType:'text/javascript',body:dockDisabled ? withoutDock : currentHeader}));
     await dockPage.goto(`${base}/timelines/life-of-christ-journey-map.html`, {waitUntil:'load'});
+    await dockPage.evaluate(() => document.fonts.ready);
+    await dockPage.waitForFunction(() => window.TimelineWorkspace && document.querySelector('.timeline-map-dock') &&
+      document.querySelector('[data-focuschrist-skip-link="true"]'));
     await dockPage.locator('[data-focuschrist-skip-link="true"]').focus();
     await dockPage.keyboard.press('Enter');
     await dockPage.waitForTimeout(950);
+    // Remove the single-snapshot readiness assumption; the original hosted
+    // failure omitted geometry, so its exact cause remains unconfirmed. Both
+    // current and mutated controls must retain their strict final geometry.
+    let dockExpectedStateObserved = false;
+    try {
+      await dockPage.waitForFunction(disabled => {
+        const main = document.querySelector('#main-content');
+        const heading = Array.from(main.querySelectorAll('h1,h2,h3,h4')).find(item =>
+          !item.closest('[hidden]') && item.getClientRects().length);
+        const dock = document.querySelector('.timeline-map-dock');
+        const header = document.querySelector('.nav[data-focuschrist-header="standard"]');
+        const h = heading?.getBoundingClientRect(), d = dock?.getBoundingClientRect();
+        return h && d && getComputedStyle(dock).position === 'sticky' &&
+          d.top <= header.getBoundingClientRect().bottom + 2 &&
+          h.left < d.right && h.right > d.left &&
+          (disabled ? h.top < d.bottom && h.bottom > d.top : h.top >= d.bottom);
+      }, dockDisabled, {timeout:5000});
+      dockExpectedStateObserved = true;
+    } catch (error) {
+      if (error.name !== 'TimeoutError') throw error;
+    }
+    const dockFirstMeasurement = await dockPage.evaluate(measure, '#main-content');
+    await dockPage.waitForTimeout(350);
     const dockNegative = await dockPage.evaluate(measure, '#main-content');
-    assert(dockNegative.headingTop < dockNegative.cover && dockNegative.error > 100, 'Ignoring the pinned map dock must hide the first event, even when the global header offset passes');
-    special.push({kind:'pinned-map-dock-negative', ...dockNegative});
+    const dockDiagnostics = await dockPage.evaluate(() => ({
+      dockRect:document.querySelector('.timeline-map-dock').getBoundingClientRect().toJSON(),
+      headerRect:document.querySelector('.nav[data-focuschrist-header="standard"]').getBoundingClientRect().toJSON(),
+      focused:document.activeElement.id, fonts:document.fonts.status,
+      workspaceReady:typeof window.TimelineWorkspace?.showStory === 'function',
+      mainDisplay:getComputedStyle(document.querySelector('#main-content')).display,
+    }));
+    special.push({kind:dockDisabled ? 'pinned-map-dock-negative' : 'pinned-map-dock-current-control', ...dockNegative, dockFirstMeasurement, dockExpectedStateObserved, ...dockDiagnostics});
+    assert(dockExpectedStateObserved && [dockFirstMeasurement, dockNegative].every(value => dockDisabled ?
+      value.headingTop < value.cover && value.error > 100 : value.headingTop >= value.cover - 1 && value.error <= 1.5),
+      `The current dock-aware landing must stay clear and the dock-disabled mutation must stay occluded: ${JSON.stringify({dockDisabled, dockFirstMeasurement, dockNegative, dockExpectedStateObserved, ...dockDiagnostics})}`);
     await dockPage.close();
+    }
     for (const [kind, functionName, query, href, target] of [
       ['story-pane-negative', 'isTimelineStoryBookmark', 'The Annunciation to Mary', '/timelines/life-of-christ-journey-map.html#dTitle', '#detail'],
       ['ask-heading-negative', 'isAskContentBookmark', 'Your Study Conversation', '/ask.html#conversation-heading', '#conversation-heading'],
