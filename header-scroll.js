@@ -12,6 +12,16 @@
     // bookmarks; a paragraph/source bookmark must never jump to a whole chapter.
     var landingToken = 0;
     var initialLandingAllowed = true;
+    function isTimelineStoryBookmark(hash) {
+        return (location.pathname === '/timelines/life-of-christ-journey-map.html' && hash === '#dTitle') ||
+            (location.pathname === '/timelines/willie-and-martin-handcart-map.html' && hash === '#detail-title');
+    }
+    function isAskContentBookmark(hash) {
+        return location.pathname === '/ask.html' && [
+            '#ask-study-heading', '#conversation-heading', '#topic-heading',
+            '#continue-heading', '#visual-resources-title', '#connected-study'
+        ].indexOf(hash) !== -1;
+    }
     function targetForHash(hash) {
         var id;
         try { id = decodeURIComponent(hash.slice(1)); } catch (_) { return null; }
@@ -22,25 +32,45 @@
         for (var i = 0; i < starts.length; i++) {
             if (starts[i].getAttribute('data-fc-section-start').split(/\s+/).indexOf(id) !== -1) return starts[i];
         }
+        if (isTimelineStoryBookmark(hash)) return target.closest('[data-timeline-pane="detail"]') || target;
+        if (isAskContentBookmark(hash)) return target.closest('section') || target;
         return target;
     }
-    function landingOffset() {
+    function landingOffset(target, ownedTimelineLanding) {
         var header = document.querySelector('.nav[data-focuschrist-header="standard"]');
-        if (!header) return 16;
-        var position = window.getComputedStyle(header).position;
+        var position = header && window.getComputedStyle(header).position;
         // Timelines retain their sticky phone header; other phone pages use a
         // header in normal flow. Measure the actual rule, not a viewport guess.
-        return (position === 'fixed' || position === 'sticky' ? Math.ceil(header.getBoundingClientRect().height) : 0) + 16;
+        var offset = (position === 'fixed' || position === 'sticky' ? Math.ceil(header.getBoundingClientRect().height) : 0) + 16;
+        if (ownedTimelineLanding && target.closest('[data-timeline-pane]')) {
+            var dock = document.querySelector('.timeline-map-dock');
+            var dockPosition = dock && window.getComputedStyle(dock).position;
+            if (dock && (dockPosition === 'fixed' || dockPosition === 'sticky')) {
+                var dockRect = dock.getBoundingClientRect();
+                var targetRect = target.getBoundingClientRect();
+                // On phones the map stays above the reading pane. A desktop
+                // map beside the pane does not cover the subject's beginning.
+                if (dockRect.height > 0 && dockRect.left < targetRect.right && dockRect.right > targetRect.left) {
+                    // A freshly revealed story may still be below the viewport;
+                    // use the dock's pinned top, not its current document position.
+                    var dockTop = dockPosition === 'sticky' ? parseFloat(window.getComputedStyle(dock).top) : dockRect.top;
+                    if (!Number.isFinite(dockTop)) dockTop = offset - 16;
+                    offset = Math.max(offset, Math.ceil(Math.max(0, dockTop) + dockRect.height) + 16);
+                }
+            }
+        }
+        return offset;
     }
-    function canAlign(target, generatedSkip) {
+    function canAlign(target, generatedSkip, storyBookmark, askContentBookmark) {
         var dialogs = document.querySelectorAll('dialog[open], [role="dialog"][aria-modal="true"]');
         for (var i = 0; i < dialogs.length; i++) {
             // Legacy viewers keep their modal semantics while display:none.
             // Only a rendered, visible overlay owns the reader's current view.
             if (dialogs[i].getClientRects().length && window.getComputedStyle(dialogs[i]).visibility !== 'hidden') return false;
         }
-        return target && (generatedSkip || !/\/ask\.html$/.test(location.pathname)) &&
-            !target.closest('dialog, [role="dialog"], [hidden], .nav, [data-timeline-pane]') &&
+        return target && (generatedSkip || askContentBookmark || !/\/ask\.html$/.test(location.pathname)) &&
+            !target.closest('dialog, [role="dialog"], [hidden], .nav') &&
+            (generatedSkip || storyBookmark || !target.closest('[data-timeline-pane]')) &&
             target.getClientRects().length;
     }
     function alignLanding(hash, event, generatedSkip) {
@@ -48,8 +78,16 @@
         function align() {
             if (token !== landingToken || (event && event.defaultPrevented && !generatedSkip) || location.hash !== hash) return;
             var target = targetForHash(hash);
-            if (!canAlign(target, generatedSkip)) return;
-            var top = window.scrollY + target.getBoundingClientRect().top - landingOffset();
+            var storyBookmark = isTimelineStoryBookmark(hash) && target && target.matches('[data-timeline-pane="detail"]');
+            if (storyBookmark) {
+                // These two published heading bookmarks belong to a story pane.
+                // Let its controller reveal the pane before positioning.
+                if (!window.TimelineWorkspace || typeof window.TimelineWorkspace.showStory !== 'function') return;
+                window.TimelineWorkspace.showStory();
+                target.scrollTop = 0;
+            }
+            if (!canAlign(target, generatedSkip, storyBookmark, isAskContentBookmark(hash))) return;
+            var top = window.scrollY + target.getBoundingClientRect().top - landingOffset(target, generatedSkip || storyBookmark);
             var maximum = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
             var destination = Math.max(0, Math.min(top, maximum));
             if (Math.abs(window.scrollY - destination) > 1) window.scrollTo({ top: destination, behavior: 'instant' });
@@ -107,7 +145,7 @@
         // The generated skip control already focuses main and replaces history.
         // Correct only its landing; other prevented controllers retain ownership.
         var generatedSkip = link.getAttribute('data-focuschrist-skip-link') === 'true' && target.matches('main, [role="main"]');
-        if ((event.defaultPrevented && !generatedSkip) || (/\/ask\.html$/.test(location.pathname) && !generatedSkip)) return;
+        if ((event.defaultPrevented && !generatedSkip) || (/\/ask\.html$/.test(location.pathname) && !generatedSkip && !isAskContentBookmark(url.hash))) return;
         alignLanding(url.hash, event, generatedSkip);
         if (generatedSkip) return;
         var distance = Math.abs(target.getBoundingClientRect().top);

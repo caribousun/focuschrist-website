@@ -24,6 +24,16 @@ const cases = [
   ['art-study/the-good-shepherd.html', 'a[href="../art.html#gallery-original-the-good-shepherd"]', '#gallery-original-the-good-shepherd'],
   ['art-study/suffer-the-little-children.html', 'a[href="../art.html#gallery-original-suffer-the-little-children"]', '#gallery-original-suffer-the-little-children'],
   ['art-study/be-still.html', 'a[href="../art.html#gallery-original-be-still"]', '#gallery-original-be-still'],
+  ...[
+    ['What would you like to understand?', '/ask.html#ask-study-heading', '#ask-question'],
+    ['Your Study Conversation', '/ask.html#conversation-heading', '.ask-conversation-section'],
+    ['Explore by Topic', '/ask.html#topic-heading', '.ask-topic-section'],
+    ['Continue Your Study', '/ask.html#continue-heading', '.ask-continue-section'],
+    ['Make room to listen', '/ask.html#visual-resources-title', '[data-visual-resources]'],
+    ['Try a question with a passage open', '/ask.html#connected-study', '#connected-study'],
+    ['The Annunciation to Mary', '/timelines/life-of-christ-journey-map.html#dTitle', '#detail'],
+    ['Choose a stop', '/timelines/willie-and-martin-handcart-map.html#detail-title', '#detail-panel'],
+  ].map(([query, href, target]) => [`search.html?q=${encodeURIComponent(query)}`, `.fc-search-result a[href="${href}"]`, target]),
 ];
 function measure(selector) {
   const target = document.querySelector(selector);
@@ -31,10 +41,21 @@ function measure(selector) {
   const rect = target.getBoundingClientRect();
   const header = document.querySelector('.nav[data-focuschrist-header="standard"]');
   const fixed = header && ['fixed', 'sticky'].includes(getComputedStyle(header).position);
-  const offset = (fixed ? Math.ceil(header.getBoundingClientRect().height) : 0) + 16;
+  let cover = fixed ? Math.ceil(header.getBoundingClientRect().height) : 0;
+  const dock = document.querySelector('.timeline-map-dock');
+  if (dock && !dock.contains(target) && !target.contains(dock)) {
+    const box = dock.getBoundingClientRect(), style = getComputedStyle(dock);
+    if (['fixed', 'sticky'].includes(style.position) && box.height > 0 &&
+        box.top <= cover + 2 && box.bottom > cover && box.left < rect.right && box.right > rect.left) {
+      cover = Math.ceil(box.bottom);
+    }
+  }
+  const offset = cover + 16;
+  const heading = Array.from(target.querySelectorAll('h1,h2,h3,h4')).find(item => !item.closest('[hidden]') && item.getClientRects().length);
+  const headingRect = heading && heading.getBoundingClientRect();
   const maximum = Math.max(0, document.documentElement.scrollHeight - innerHeight);
   const expectedScroll = Math.max(0, Math.min(scrollY + rect.top - offset, maximum));
-  return { top: rect.top, offset, scroll: scrollY, maximum, expectedScroll,
+  return { top: rect.top, offset, cover, headingTop:headingRect?.top, headingBottom:headingRect?.bottom, scroll: scrollY, maximum, expectedScroll,
     error: Math.abs(scrollY - expectedScroll), visible: rect.height > 0,
     overflow: document.documentElement.scrollWidth > innerWidth + 1 };
 }
@@ -128,7 +149,8 @@ const server = http.createServer((req, res) => {
       special.push({kind:'actual-gallery-viewer-ownership', width, viewerScroll});
       // The generated keyboard skip link keeps focus and replacement history,
       // but its destination must also clear the timeline's sticky phone header.
-      await page.goto(`${base}/timelines/willie-and-martin-handcart-map.html`, {waitUntil:'load'});
+      for (const skipRoute of ['timelines/willie-and-martin-handcart-map.html', 'timelines/latter-day-saint-church-history-timeline.html', 'timelines/life-of-christ-journey-map.html']) {
+      await page.goto(`${base}/${skipRoute}`, {waitUntil:'load'});
       const skip = page.locator('[data-focuschrist-skip-link="true"]');
       const skipTarget = await skip.getAttribute('href');
       const skipHistory = await page.evaluate(() => history.length);
@@ -137,9 +159,11 @@ const server = http.createServer((req, res) => {
       await page.waitForTimeout(950);
       const skipLanding = await page.evaluate(measure, skipTarget);
       assert(skipLanding.error <= 1.5, JSON.stringify(skipLanding));
+      assert(Number.isFinite(skipLanding.headingTop) && skipLanding.headingTop >= skipLanding.cover - 1, 'The first subject heading must clear the header and any pinned map dock: ' + JSON.stringify(skipLanding));
       assert.equal(await page.evaluate(() => '#' + document.activeElement.id), skipTarget);
       assert.equal(await page.evaluate(() => history.length), skipHistory);
-      special.push({kind:'keyboard-skip-focus-and-history', width, ...skipLanding});
+      special.push({kind:'keyboard-skip-focus-and-history', route:skipRoute, width, ...skipLanding});
+      }
       await page.close();
     }
     // A negative fixture removes the repair and reproduces the sticky-header bug.
@@ -159,7 +183,7 @@ const server = http.createServer((req, res) => {
     const gallery = await browser.newPage({viewport:{width:1366,height:900},reducedMotion:'reduce'});
     await gallery.route('https://**', route => route.abort());
     const currentHeader = fs.readFileSync(path.join(root, 'header-scroll.js'), 'utf8');
-    const oldGuard = currentHeader.replace('function canAlign(target, generatedSkip) {', 'function canAlign(target, generatedSkip) { if (document.querySelector(\'dialog[open], [role="dialog"][aria-modal="true"]\')) return false;');
+    const oldGuard = currentHeader.replace(/function canAlign\(([^)]*)\) \{/, 'function canAlign($1) { if (document.querySelector(\'dialog[open], [role="dialog"][aria-modal="true"]\')) return false;');
     assert.notEqual(oldGuard, currentHeader);
     await gallery.route('**/header-scroll.js*', route => route.fulfill({contentType:'text/javascript',body:oldGuard}));
     await gallery.goto(`${base}/art-study/the-good-shepherd.html`, {waitUntil:'load'});
@@ -187,6 +211,45 @@ const server = http.createServer((req, res) => {
     assert.equal(skipNegative.focused, 'handcart-main');
     special.push({kind:'prior-keyboard-skip-negative', ...skipNegative});
     await oldSkipPage.close();
+    const dockPage = await browser.newPage({viewport:{width:390,height:844},reducedMotion:'reduce'});
+    await dockPage.route('https://**', route => route.abort());
+    const withoutDock = currentHeader.replace("if (ownedTimelineLanding && target.closest('[data-timeline-pane]')) {", "if (false && ownedTimelineLanding && target.closest('[data-timeline-pane]')) {");
+    assert.notEqual(withoutDock, currentHeader);
+    await dockPage.route('**/header-scroll.js*', route => route.fulfill({contentType:'text/javascript',body:withoutDock}));
+    await dockPage.goto(`${base}/timelines/life-of-christ-journey-map.html`, {waitUntil:'load'});
+    await dockPage.locator('[data-focuschrist-skip-link="true"]').focus();
+    await dockPage.keyboard.press('Enter');
+    await dockPage.waitForTimeout(950);
+    const dockNegative = await dockPage.evaluate(measure, '#main-content');
+    assert(dockNegative.headingTop < dockNegative.cover && dockNegative.error > 100, 'Ignoring the pinned map dock must hide the first event, even when the global header offset passes');
+    special.push({kind:'pinned-map-dock-negative', ...dockNegative});
+    await dockPage.close();
+    for (const [kind, functionName, query, href, target] of [
+      ['story-pane-negative', 'isTimelineStoryBookmark', 'The Annunciation to Mary', '/timelines/life-of-christ-journey-map.html#dTitle', '#detail'],
+      ['ask-heading-negative', 'isAskContentBookmark', 'Your Study Conversation', '/ask.html#conversation-heading', '#conversation-heading'],
+    ]) {
+      const negativePage = await browser.newPage({viewport:{width:kind === 'story-pane-negative' ? 390 : 1366,height:900},reducedMotion:'reduce'});
+      await negativePage.route('https://**', route => route.abort());
+      const disabled = currentHeader.replace(`function ${functionName}(hash) {`, `function ${functionName}(hash) { return false;`);
+      assert.notEqual(disabled, currentHeader);
+      await negativePage.route('**/header-scroll.js*', route => route.fulfill({contentType:'text/javascript',body:disabled}));
+      await negativePage.goto(`${base}/search.html?q=${encodeURIComponent(query)}`, {waitUntil:'load'});
+      await negativePage.locator(`.fc-search-result a[href="${href}"]`).click();
+      await negativePage.waitForLoadState('load');
+      await negativePage.waitForTimeout(950);
+      const failed = await negativePage.evaluate(measure, target);
+      assert(kind === 'story-pane-negative' ? !failed.visible : failed.top < failed.cover, JSON.stringify(failed));
+      special.push({kind, ...failed});
+      await negativePage.close();
+    }
+    const composer = await browser.newPage({viewport:{width:390,height:844},reducedMotion:'reduce'});
+    await composer.route('https://**', route => route.abort());
+    await composer.goto(`${base}/ask.html?search-question=John%2020#ask-question`, {waitUntil:'load'});
+    await composer.waitForTimeout(950);
+    assert.equal(await composer.locator('#userInput').inputValue(), 'John 20');
+    assert.equal(new URL(composer.url()).hash, '#ask-question');
+    special.push({kind:'ask-composer-prefill-ownership-no-submission'});
+    await composer.close();
   } finally {
     await browser.close();
     await new Promise(resolve => server.close(resolve));
