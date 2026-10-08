@@ -6,6 +6,33 @@ from joseph_research_acceptance import ROUTE, check_entry_and_brevity, check_rea
 def soup(markup): return BeautifulSoup(markup,'html.parser')
 
 class AcceptanceTests(unittest.TestCase):
+    def test_section_navigation_cache_cannot_relax_frozen_pdf_content(self):
+        from pathlib import Path
+        import json
+        from joseph_research_acceptance import check_pdf_source_binding
+        site = Path(__file__).resolve().parents[1]
+        source = (site/ROUTE).read_bytes()
+        reviewed_hash = json.loads((site/'docs/joseph-research-pdf-review.json').read_text())['source_html_sha256']
+        # Independent literal fixtures catch a mistyped, broadened or omitted
+        # navigation exception; the frozen PDF manifest itself never changes.
+        current = b'<script src="site-common.js?v=20261008-section-top-1" defer></script>'
+        prior = b'<script src="site-common.js?v=20261006-balanced-opening-1" defer></script>'
+        self.assertEqual(source.count(current), 1)
+        check_pdf_source_binding(source, reviewed_hash)
+        mutations = {
+            'missing loader': source.replace(current, b''),
+            'stale loader': source.replace(current, prior),
+            'mixed loaders': source + prior,
+            'duplicate loader': source + current,
+            'unknown version': source.replace(b'20261008-section-top-1', b'20261008-section-top-2'),
+            'extra query': source.replace(b'20261008-section-top-1', b'20261008-section-top-1&extra=1'),
+            'changed attributes': source.replace(current, current.replace(b' defer', b' async')),
+            'unreviewed text': source.replace(b'</body>', b'<p>Unreviewed research claim.</p></body>'),
+        }
+        for name, mutation in mutations.items():
+            with self.subTest(name=name), self.assertRaises(AssertionError):
+                check_pdf_source_binding(mutation, reviewed_hash)
+
     def test_frozen_pdf_source_allows_only_exact_browser_cache_change(self):
         from pathlib import Path
         import json
