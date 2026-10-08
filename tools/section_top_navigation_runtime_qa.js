@@ -21,6 +21,9 @@ const cases = [
   ['pioneers.html', '.fc-unified-continue', null],
   ['come-follow-me.html', '.fc-unified-continue', null],
   ['joseph-smith-likeness.html', '.fc-unified-continue', null],
+  ['art-study/the-good-shepherd.html', 'a[href="../art.html#gallery-original-the-good-shepherd"]', '#gallery-original-the-good-shepherd'],
+  ['art-study/suffer-the-little-children.html', 'a[href="../art.html#gallery-original-suffer-the-little-children"]', '#gallery-original-suffer-the-little-children'],
+  ['art-study/be-still.html', 'a[href="../art.html#gallery-original-be-still"]', '#gallery-original-be-still'],
 ];
 function measure(selector) {
   const target = document.querySelector(selector);
@@ -60,6 +63,8 @@ const server = http.createServer((req, res) => {
         await link.waitFor();
         const selector = destination || await link.getAttribute('href');
         await link.click();
+        await page.waitForLoadState('load');
+        await page.evaluate(() => document.fonts.ready);
         await page.waitForTimeout(950);
         const record = { route, width, height, selector, ...await page.evaluate(measure, selector) };
         records.push(record);
@@ -108,6 +113,19 @@ const server = http.createServer((req, res) => {
       assert.equal(restored.hash, '#history-first-vision-title');
       assert(Math.abs(restored.top - restored.nativeMargin) <= 1.5, JSON.stringify(restored));
       special.push({kind:'native-back-and-controller-ownership', width, ...restored});
+      // The legacy gallery retains aria-modal while closed. Its hidden panel
+      // must allow section landings, while its actual viewer keeps ownership.
+      await page.goto(`${base}/art.html#gallery-original-the-good-shepherd`, {waitUntil:'load'});
+      await page.waitForTimeout(950);
+      await page.locator('#gallery-original-the-good-shepherd').click();
+      await page.locator('#imageModal.active').waitFor({state:'visible'});
+      const viewerScroll = await page.evaluate(() => scrollY);
+      await page.waitForTimeout(950);
+      assert.equal(await page.locator('#imageModal.active').count(), 1);
+      assert(Math.abs(await page.evaluate(() => scrollY) - viewerScroll) <= 1.5, 'Visible gallery viewer must retain reading position');
+      await page.keyboard.press('Escape');
+      await page.locator('#imageModal').waitFor({state:'hidden'});
+      special.push({kind:'actual-gallery-viewer-ownership', width, viewerScroll});
       await page.close();
     }
     // A negative fixture removes the repair and reproduces the sticky-header bug.
@@ -122,6 +140,22 @@ const server = http.createServer((req, res) => {
     assert(negative.error > 20, 'Negative baseline must fail the landing geometry oracle');
     special.push({kind:'prior-landing-negative', ...negative});
     await page.close();
+    // Restore only the old modal guard to prove the real gallery link catches
+    // the hidden aria-modal regression independently of the broader repair.
+    const gallery = await browser.newPage({viewport:{width:1366,height:900},reducedMotion:'reduce'});
+    await gallery.route('https://**', route => route.abort());
+    const currentHeader = fs.readFileSync(path.join(root, 'header-scroll.js'), 'utf8');
+    const oldGuard = currentHeader.replace('function canAlign(target) {', 'function canAlign(target) { if (document.querySelector(\'dialog[open], [role="dialog"][aria-modal="true"]\')) return false;');
+    assert.notEqual(oldGuard, currentHeader);
+    await gallery.route('**/header-scroll.js*', route => route.fulfill({contentType:'text/javascript',body:oldGuard}));
+    await gallery.goto(`${base}/art-study/the-good-shepherd.html`, {waitUntil:'load'});
+    await gallery.locator('a[href="../art.html#gallery-original-the-good-shepherd"]').click();
+    await gallery.waitForLoadState('load');
+    await gallery.waitForTimeout(950);
+    const hiddenModalNegative = await gallery.evaluate(measure, '#gallery-original-the-good-shepherd');
+    assert(hiddenModalNegative.error > 20 && hiddenModalNegative.top < 52, 'Old modal guard must reproduce the gallery artwork hidden under the header');
+    special.push({kind:'hidden-modal-guard-negative', ...hiddenModalNegative});
+    await gallery.close();
   } finally {
     await browser.close();
     await new Promise(resolve => server.close(resolve));

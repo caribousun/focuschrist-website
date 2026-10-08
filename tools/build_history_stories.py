@@ -47,7 +47,7 @@ def render(story, ready):
     css = [x for x in css if not x.startswith('church-history.css')]
     css = ['full-image-viewer.css?v=20261007-viewer-controls-1' if x.startswith('full-image-viewer.css?') else x for x in css]
     css.append('history-stories.css?v=20261006-history-intro-fit-1')
-    scripts = ['site-common.js?v=20261008-section-top-1', 'full-image-viewer.js?v=20261006-versions-1', 'hero-image-source.js?v=20261006-visible-art-1', 'topic-artwork-details.js?v=20261007-scoped-root-1', 'site-search.js?v=20260919-focused-answers-1']
+    scripts = ['site-common.js?v=20261008-section-top-2', 'full-image-viewer.js?v=20261006-versions-1', 'hero-image-source.js?v=20261006-visible-art-1', 'topic-artwork-details.js?v=20261007-scoped-root-1', 'site-search.js?v=20260919-focused-answers-1']
     if 'hero' in story:
         scripts = [v.replace('hero-image-source.js?v=20261006-visible-art-1', 'hero-image-source.js?v=20261006-eleazer-hero-1') for v in scripts]
     out = ['<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">', f'<title>{esc(story["name"])} | Church History | focusChrist</title>', f'<meta name="description" content="{esc(story["introduction"])}"><link rel="canonical" href="https://focuschrist.com/history/{slug}.html">']

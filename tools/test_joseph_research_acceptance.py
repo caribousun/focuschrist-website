@@ -15,7 +15,7 @@ class AcceptanceTests(unittest.TestCase):
         reviewed_hash = json.loads((site/'docs/joseph-research-pdf-review.json').read_text())['source_html_sha256']
         # Independent literal fixtures catch a mistyped, broadened or omitted
         # navigation exception; the frozen PDF manifest itself never changes.
-        current = b'<script src="site-common.js?v=20261008-section-top-1" defer></script>'
+        current = b'<script src="site-common.js?v=20261008-section-top-2" defer></script>'
         prior = b'<script src="site-common.js?v=20261006-balanced-opening-1" defer></script>'
         self.assertEqual(source.count(current), 1)
         check_pdf_source_binding(source, reviewed_hash)
@@ -24,8 +24,9 @@ class AcceptanceTests(unittest.TestCase):
             'stale loader': source.replace(current, prior),
             'mixed loaders': source + prior,
             'duplicate loader': source + current,
-            'unknown version': source.replace(b'20261008-section-top-1', b'20261008-section-top-2'),
-            'extra query': source.replace(b'20261008-section-top-1', b'20261008-section-top-1&extra=1'),
+            'unknown version': source.replace(b'20261008-section-top-2', b'20261008-section-top-3'),
+            'stale navigation version': source.replace(b'20261008-section-top-2', b'20261008-section-top-1'),
+            'extra query': source.replace(b'20261008-section-top-2', b'20261008-section-top-2&extra=1'),
             'changed attributes': source.replace(current, current.replace(b' defer', b' async')),
             'unreviewed text': source.replace(b'</body>', b'<p>Unreviewed research claim.</p></body>'),
         }

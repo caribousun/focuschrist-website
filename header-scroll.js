@@ -33,8 +33,13 @@
         return (position === 'fixed' || position === 'sticky' ? Math.ceil(header.getBoundingClientRect().height) : 0) + 16;
     }
     function canAlign(target) {
+        var dialogs = document.querySelectorAll('dialog[open], [role="dialog"][aria-modal="true"]');
+        for (var i = 0; i < dialogs.length; i++) {
+            // Legacy viewers keep their modal semantics while display:none.
+            // Only a rendered, visible overlay owns the reader's current view.
+            if (dialogs[i].getClientRects().length && window.getComputedStyle(dialogs[i]).visibility !== 'hidden') return false;
+        }
         return target && !/\/ask\.html$/.test(location.pathname) &&
-            !document.querySelector('dialog[open], [role="dialog"][aria-modal="true"]') &&
             !target.closest('dialog, [role="dialog"], [hidden], .nav, [data-timeline-pane]') &&
             target.getClientRects().length;
     }
