@@ -32,23 +32,23 @@
         // header in normal flow. Measure the actual rule, not a viewport guess.
         return (position === 'fixed' || position === 'sticky' ? Math.ceil(header.getBoundingClientRect().height) : 0) + 16;
     }
-    function canAlign(target) {
+    function canAlign(target, generatedSkip) {
         var dialogs = document.querySelectorAll('dialog[open], [role="dialog"][aria-modal="true"]');
         for (var i = 0; i < dialogs.length; i++) {
             // Legacy viewers keep their modal semantics while display:none.
             // Only a rendered, visible overlay owns the reader's current view.
             if (dialogs[i].getClientRects().length && window.getComputedStyle(dialogs[i]).visibility !== 'hidden') return false;
         }
-        return target && !/\/ask\.html$/.test(location.pathname) &&
+        return target && (generatedSkip || !/\/ask\.html$/.test(location.pathname)) &&
             !target.closest('dialog, [role="dialog"], [hidden], .nav, [data-timeline-pane]') &&
             target.getClientRects().length;
     }
-    function alignLanding(hash, event) {
+    function alignLanding(hash, event, generatedSkip) {
         var token = ++landingToken;
         function align() {
-            if (token !== landingToken || (event && event.defaultPrevented) || location.hash !== hash) return;
+            if (token !== landingToken || (event && event.defaultPrevented && !generatedSkip) || location.hash !== hash) return;
             var target = targetForHash(hash);
-            if (!canAlign(target)) return;
+            if (!canAlign(target, generatedSkip)) return;
             var top = window.scrollY + target.getBoundingClientRect().top - landingOffset();
             var maximum = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
             var destination = Math.max(0, Math.min(top, maximum));
@@ -95,16 +95,21 @@
     var jumpToken = 0;
     var fade = null;
     window.addEventListener('click', function (event) {
-        if (event.defaultPrevented || event.button || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        if (event.button || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
         var link = event.target.closest && event.target.closest('a[href]');
         if (!link || link.hasAttribute('download') || (link.target && link.target !== '_self') || link.closest('dialog, [role="dialog"]')) return;
         var url;
         try { url = new URL(link.href, window.location.href); } catch (_) { return; }
-        if (url.origin !== location.origin || url.pathname !== location.pathname || url.search !== location.search || !url.hash || /\/ask\.html$/.test(location.pathname)) return;
+        if (url.origin !== location.origin || url.pathname !== location.pathname || url.search !== location.search || !url.hash) return;
         var target;
         try { target = document.getElementById(decodeURIComponent(url.hash.slice(1))); } catch (_) { return; }
         if (!target || target.closest('dialog, [role="dialog"]')) return;
-        alignLanding(url.hash, event);
+        // The generated skip control already focuses main and replaces history.
+        // Correct only its landing; other prevented controllers retain ownership.
+        var generatedSkip = link.getAttribute('data-focuschrist-skip-link') === 'true' && target.matches('main, [role="main"]');
+        if ((event.defaultPrevented && !generatedSkip) || (/\/ask\.html$/.test(location.pathname) && !generatedSkip)) return;
+        alignLanding(url.hash, event, generatedSkip);
+        if (generatedSkip) return;
         var distance = Math.abs(target.getBoundingClientRect().top);
         if (distance <= Math.max(320, window.innerHeight / 2)) return;
         var token = ++jumpToken;

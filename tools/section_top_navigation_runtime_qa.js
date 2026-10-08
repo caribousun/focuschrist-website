@@ -126,6 +126,20 @@ const server = http.createServer((req, res) => {
       await page.keyboard.press('Escape');
       await page.locator('#imageModal').waitFor({state:'hidden'});
       special.push({kind:'actual-gallery-viewer-ownership', width, viewerScroll});
+      // The generated keyboard skip link keeps focus and replacement history,
+      // but its destination must also clear the timeline's sticky phone header.
+      await page.goto(`${base}/timelines/willie-and-martin-handcart-map.html`, {waitUntil:'load'});
+      const skip = page.locator('[data-focuschrist-skip-link="true"]');
+      const skipTarget = await skip.getAttribute('href');
+      const skipHistory = await page.evaluate(() => history.length);
+      await skip.focus();
+      await page.keyboard.press('Enter');
+      await page.waitForTimeout(950);
+      const skipLanding = await page.evaluate(measure, skipTarget);
+      assert(skipLanding.error <= 1.5, JSON.stringify(skipLanding));
+      assert.equal(await page.evaluate(() => '#' + document.activeElement.id), skipTarget);
+      assert.equal(await page.evaluate(() => history.length), skipHistory);
+      special.push({kind:'keyboard-skip-focus-and-history', width, ...skipLanding});
       await page.close();
     }
     // A negative fixture removes the repair and reproduces the sticky-header bug.
@@ -145,7 +159,7 @@ const server = http.createServer((req, res) => {
     const gallery = await browser.newPage({viewport:{width:1366,height:900},reducedMotion:'reduce'});
     await gallery.route('https://**', route => route.abort());
     const currentHeader = fs.readFileSync(path.join(root, 'header-scroll.js'), 'utf8');
-    const oldGuard = currentHeader.replace('function canAlign(target) {', 'function canAlign(target) { if (document.querySelector(\'dialog[open], [role="dialog"][aria-modal="true"]\')) return false;');
+    const oldGuard = currentHeader.replace('function canAlign(target, generatedSkip) {', 'function canAlign(target, generatedSkip) { if (document.querySelector(\'dialog[open], [role="dialog"][aria-modal="true"]\')) return false;');
     assert.notEqual(oldGuard, currentHeader);
     await gallery.route('**/header-scroll.js*', route => route.fulfill({contentType:'text/javascript',body:oldGuard}));
     await gallery.goto(`${base}/art-study/the-good-shepherd.html`, {waitUntil:'load'});
@@ -156,6 +170,23 @@ const server = http.createServer((req, res) => {
     assert(hiddenModalNegative.error > 20 && hiddenModalNegative.top < 52, 'Old modal guard must reproduce the gallery artwork hidden under the header');
     special.push({kind:'hidden-modal-guard-negative', ...hiddenModalNegative});
     await gallery.close();
+    const oldSkipPage = await browser.newPage({viewport:{width:390,height:844},reducedMotion:'reduce'});
+    await oldSkipPage.route('https://**', route => route.abort());
+    const oldSkip = currentHeader.replace("window.addEventListener('click', function (event) {", "window.addEventListener('click', function (event) { if (event.defaultPrevented) return;");
+    assert.notEqual(oldSkip, currentHeader);
+    await oldSkipPage.route('**/header-scroll.js*', route => route.fulfill({contentType:'text/javascript',body:oldSkip}));
+    await oldSkipPage.goto(`${base}/timelines/willie-and-martin-handcart-map.html`, {waitUntil:'load'});
+    await oldSkipPage.locator('[data-focuschrist-skip-link="true"]').focus();
+    await oldSkipPage.keyboard.press('Enter');
+    await oldSkipPage.waitForTimeout(950);
+    const skipNegative = await oldSkipPage.evaluate(() => {
+      const target = document.querySelector('#handcart-main h1, #handcart-main h2');
+      return {headingTop:target.getBoundingClientRect().top, headerBottom:document.querySelector('.nav').getBoundingClientRect().bottom, focused:document.activeElement.id};
+    });
+    assert(skipNegative.headingTop < skipNegative.headerBottom, 'Old skip handler must reproduce the clipped phone heading');
+    assert.equal(skipNegative.focused, 'handcart-main');
+    special.push({kind:'prior-keyboard-skip-negative', ...skipNegative});
+    await oldSkipPage.close();
   } finally {
     await browser.close();
     await new Promise(resolve => server.close(resolve));
