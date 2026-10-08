@@ -13,6 +13,7 @@ BASE_COMMON = '4ef7e6851ebf885557d241aa389825f38585fe435fedc4454134d435482a30ad'
 INVENTORY = '1e2a014c1a3b7fb3995855abaa4587441c95efdef640801d7bf49ee3d3239b78'
 NEW = '20261006-balanced-opening-1'
 OLD = '20261002-timeline-1'
+COMMON_VERSION = '20261008-section-top-1'
 DELTA = '''
 /* Balance the introduction within the fixed hero-to-Continue interval. */
 @media (min-width: 701px) {
@@ -42,6 +43,8 @@ def assert_loader(common):
     calls = re.findall(r"relativeAssetHref\(['\"](unified-opening\.(?:css|js)[^'\"]*)['\"]\)", common)
     assert calls == ['unified-opening.css?v=' + NEW, 'unified-opening.js?v=20261006-introductions-1'], 'Exact opening loader versions required'
     inverse = common.replace('unified-opening.css?v=' + NEW, 'unified-opening.css?v=20260930-alignment-2')
+    assert inverse.count('header-scroll.js?v=20261008-section-top-1') == 1, 'Exact navigation loader required'
+    inverse = inverse.replace('header-scroll.js?v=20261008-section-top-1', 'header-scroll.js?v=20260927-anchor-fade-1', 1)
     assert digest(inverse) == BASE_COMMON, 'Unrelated shared loader change'
 
 
@@ -60,7 +63,7 @@ def assert_route(route, html, hero):
     doc = BeautifulSoup(html, 'html.parser')
     scripts = [s['src'] for s in doc.select('script[src]') if 'site-common.js' in s['src']]
     prefix = '/' if route.startswith('jesus-christ/') else '../' * route.count('/')
-    expected = prefix + 'site-common.js?v=' + (NEW if hero else OLD)
+    expected = prefix + 'site-common.js?v=' + COMMON_VERSION
     assert scripts == [expected], route + ': stale/mixed/duplicate/unknown/out-of-scope shared script'
     if route in TIMELINES:
         assert len(doc.select('.timeline-opening-continue')) == 1, route + ': authored timeline cue missing'
@@ -116,13 +119,13 @@ class CompositionBindingTests(unittest.TestCase):
         for route, html in self.documents.items():
             doc = BeautifulSoup(html, 'html.parser')
             src = next(s['src'] for s in doc.select('script[src]') if 'site-common.js' in s['src'])
-            expected = NEW if NEW in src else OLD
-            for invalid in [OLD if expected == NEW else NEW, 'unknown', expected + '&extra=1']:
+            expected = COMMON_VERSION
+            for invalid in [OLD, NEW, 'unknown', expected + '&extra=1']:
                 candidate = dict(self.documents)
                 candidate[route] = html.replace(src, src.replace(expected, invalid))
                 with self.subTest(route=route, invalid=invalid), self.assertRaises(AssertionError):
                     assert_route(route, candidate[route], expected == NEW)
-            for duplicate in [src, src.replace(expected, OLD if expected == NEW else NEW)]:
+            for duplicate in [src, src.replace(expected, OLD)]:
                 candidate = dict(self.documents)
                 candidate[route] += '<script src="' + duplicate + '"></script>'
                 with self.subTest(route=route, duplicate=duplicate), self.assertRaises(AssertionError):

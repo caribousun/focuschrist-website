@@ -12,7 +12,7 @@ HERO_ROUTES = frozenset(p['path'] for p in json.loads((ROOT / 'docs/unified-open
 
 def assert_common_version(route, doc):
     common = [s['src'] for s in doc.select('script[src]') if 'site-common.js' in s['src']]
-    version = '20261006-balanced-opening-1' if route in HERO_ROUTES else '20261002-timeline-1'
+    version = '20261008-section-top-1'
     prefix = '/' if route.startswith('jesus-christ/') else '../' * route.count('/')
     expected = prefix + 'site-common.js?v=' + version
     assert common == [expected], route + ': exact shared-script binding required'
