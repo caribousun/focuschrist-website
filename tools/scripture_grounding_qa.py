@@ -45,7 +45,7 @@ required_by_file = {
 errors = []
 scripts = [s['src'] for s in BeautifulSoup(texts['ask.html'], 'html.parser').select('script[src]')
            if 'site-common.js' in s['src']]
-if scripts != ['site-common.js?v=20261006-balanced-opening-1']:
+if scripts != ['site-common.js?v=20261008-section-top-1']:
     errors.append('ask.html requires exactly one reviewed shared script; stale, mixed, duplicate and unknown versions are forbidden')
 for filename, markers in required_by_file.items():
     for marker in markers:
