@@ -175,6 +175,25 @@ def before_conference_archive(data):
     return data
 
 
+# Exact accepted promotion spacing and shared-height corrections; old contracts remain intact.
+PROMOTION_SHA256 = '6b61c50c1d8e005074beb2db8fa800377377e6a3c9b955678dd836538fcb48cd'
+PROMOTION_BLOCK = b'.fc-study-promotion + .fc-study-grid { margin-block-start: var(--fc-body-section-space, 24px); }\n'
+JOSEPH_SHARED_HEIGHT_SHA256 = 'df7b3c716c0f83276231f2fe72c06fcf7eb466ef502edfe8afc378ea99450778'
+JOSEPH_HEIGHT_PRIOR = b'height:300px!important;min-height:300px!important;'
+JOSEPH_HEIGHT_CURRENT = b'height:var(--fc-mobile-hero-height)!important;min-height:var(--fc-mobile-hero-height)!important;'
+
+def before_current_layout(data):
+    digest = hashlib.sha256(data).hexdigest()
+    if digest == PROMOTION_SHA256 and data.count(PROMOTION_BLOCK) == 1:
+        prior = data.replace(PROMOTION_BLOCK, b'', 1).replace(b'\r\n', b'\n')
+        if hashlib.sha256(prior).hexdigest() == FILES['connected-study.css']['after_sha256']:
+            return prior
+    if digest == JOSEPH_SHARED_HEIGHT_SHA256 and data.count(JOSEPH_HEIGHT_CURRENT) == 1:
+        prior = data.replace(JOSEPH_HEIGHT_CURRENT, JOSEPH_HEIGHT_PRIOR, 1)
+        if hashlib.sha256(prior).hexdigest() == JOSEPH_LIFE_SHA256:
+            return prior
+    return data
+
 def historical_style_bytes(data):
     """Recover exact prior bytes only from an exact registered current file.
 
@@ -182,6 +201,7 @@ def historical_style_bytes(data):
     reviewed bytes. The mandatory current-file checks separately reject stale
     files and any mutation to the approved anchor-only transformation.
     """
+    data = before_current_layout(data)
     data = before_conference_archive(data)
     data = before_art_caption_gap(data)
     data = before_mobile_nav(data)
@@ -220,6 +240,10 @@ def historical_style_bytes(data):
 
 def reviewed_anchor_style(name, data):
     record = FILES.get(name)
+    if name in {'connected-study.css', 'joseph-smith-likeness.css'}:
+        expected = PROMOTION_SHA256 if name == 'connected-study.css' else JOSEPH_SHARED_HEIGHT_SHA256
+        if hashlib.sha256(data).hexdigest() != expected: return False
+        data = before_current_layout(data)
     if name == 'general-conference-section.css':
         if before_conference_gap(data) == data: return False
         if before_conference_mobile(data) == data: return False
@@ -284,7 +308,7 @@ def check():
             continue
         conference_pages[rel] = path.read_text(encoding='utf-8')
         for filename, version in re.findall(r'([\w-]+\.css)\?v=([\w.-]+)', conference_pages[rel]):
-            expected = ART_STUDY_NAV_VERSION if filename == 'art-study-enrichment.css' else '20261004-joseph-heroes-1' if filename == 'joseph-smith-likeness.css' and rel in {'joseph-smith-likeness.html','joseph-smith-portrait-research.html'} else JOURNEY_PICKER_VERSION if filename == 'jesus-journey.css' else MOBILE_NAV_VERSION if filename == 'site-system.css' else SEARCH_VERSION if filename == 'site-search.css' else TOPIC_DESKTOP_VERSION if filename == 'topic-study-pages.css' else CONTRACT['version']
+            expected = ART_STUDY_NAV_VERSION if filename == 'art-study-enrichment.css' else '20261008-promotion-spacing-1' if filename == 'connected-study.css' else '20261009-mobile-shared-height-1' if filename == 'joseph-smith-likeness.css' and rel in {'joseph-smith-likeness.html','joseph-smith-portrait-research.html'} else JOURNEY_PICKER_VERSION if filename == 'jesus-journey.css' else MOBILE_NAV_VERSION if filename == 'site-system.css' else SEARCH_VERSION if filename == 'site-search.css' else TOPIC_DESKTOP_VERSION if filename == 'topic-study-pages.css' else CONTRACT['version']
             if filename == 'general-conference-section.css':
                 expected = CONFERENCE_VERSION
             if filename in FILES and version != expected:
@@ -294,6 +318,11 @@ def check():
 
 
 def self_test():
+    for name in ('connected-study.css', 'joseph-smith-likeness.css'):
+        current = (ROOT / name).read_bytes()
+        assert before_current_layout(current) != current
+        assert not reviewed_anchor_style(name, before_current_layout(current))
+        assert not reviewed_anchor_style(name, current + b'/* unreviewed */')
     conference = (ROOT / 'general-conference-section.css').read_bytes()
     for mutation in (
             before_conference_gap(conference),

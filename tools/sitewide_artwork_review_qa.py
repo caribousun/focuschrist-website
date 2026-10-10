@@ -70,7 +70,7 @@ def reviewed_art_reflection(selector, body, data):
 TIMELINE_ROUTES = {'timeline.html', 'timelines/latter-day-saint-church-history-timeline.html', 'timelines/willie-and-martin-handcart-map.html', 'timelines/life-of-christ-journey-map.html'}
 
 def reviewed_wrap_consumers(consumers, expected, version):
-    return (set(consumers) == set(expected) | {'answers/holy-ghost.html', 'answers/plan-of-salvation.html', 'history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html', 'answers/race-priesthood-and-temple-blessings.html'} | TIMELINE_ROUTES | {'joseph-smith-portrait-research.html'} and len(consumers) == 131
+    return (set(consumers) == set(expected) | {'answers/holy-ghost.html', 'answers/plan-of-salvation.html', 'history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html', 'answers/race-priesthood-and-temple-blessings.html'} | TIMELINE_ROUTES | {'joseph-smith-portrait-research.html', 'history/emma-hale-smith.html'} and len(consumers) == 132
             and all(parse_qs(urlsplit(ref).query).get('v') == [version] for refs in consumers.values() for ref in refs))
 
 
@@ -212,7 +212,20 @@ def viewer_self_test():
 # M063 removes only the mobile title/second-row rules, retaining the first-row grid.
 # Full-file and updated base-prefix pins both apply.
 NARROW_READING_STYLES = {'church-history.css': {'base_bytes': 18810, 'base_sha256': '5b7e4c13945dcae80da5c278192b2d846e1d03f31aa4eeb4de133fa697613937', 'sha256': 'fe961e0f9c0c7abaff84da078bbec85e56458fab734c9553ac2a7bcdef136ce6'}, 'site-search.css': {'base_bytes': 4716, 'base_sha256': '13550e00846fb8c2a81204d71fb3e131c71e3e9f74f0fa94791bbc1e8a5e0492', 'sha256': 'ca09d2ce90471be8c404efc4c8a27aeb756fdc1d30276aa3d112705595ffa32e'}, 'watch-experience.css': {'base_bytes': 12132, 'base_sha256': '3dfc3ac65f176f0c3c3f8c21dbb5c504f4d9dee1302074f6c396790982446a53', 'sha256': 'ec9e99bdb5c0e39daa0b59c65866b1cbd09ed6b451ffafc15f76b60778846f3e'}}
+CURRENT_REVIEWED_STYLE_INVERSES = {'church-history.css': ('16ad6c23d46a813b6bd19ce675d527e2f7ce0c9e28b4cb4d43add5fe9219116a', 'fe961e0f9c0c7abaff84da078bbec85e56458fab734c9553ac2a7bcdef136ce6', [(b'.fc-emma-introduction { display: grid; grid-template-columns: minmax(220px, 320px) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); align-items: center; }\n.fc-emma-introduction .fc-history-life-preview { overflow: hidden; border-radius: var(--fc-radius); }\n.fc-emma-introduction-copy { min-width: 0; }\n.fc-emma-introduction-copy h2 { margin-top: 0; }\n.fc-emma-introduction-copy p { line-height: 1.75; }\n.fc-emma-introduction-copy .fc-actions { justify-content: flex-start; margin: 24px 0; }\n@media (max-width: 700px) { .fc-emma-introduction { grid-template-columns: 1fr; gap: 24px; } .fc-emma-introduction .fc-history-life-preview { max-width: 300px; margin-inline: auto; } }\n', b'')]), 'joseph-family-life.css': ('e6c90be6762babdec9c34e25c94f86f7b1dd623483322ce3b92e0e3c508ade5c', 'af4eac66d90a94a370010dae71cd4e0d2430fd07a049ce0ce7d253454c249a2f', [(b'/* Artwork Continue returns to the dated family scene using shared header clearance. */\n.joseph-life-enrichment article[id][data-topic-reading-target]{scroll-margin-top:var(--fc-anchor-offset, 16px)}\n', b'')]), 'history-stories.css': ('46915bd0e27fc394b68aad848cdfad37ac05959d2b7cdbac0e476a262ce1c802', '7afc257960c5d327cddd944c7a29c60223b13aaf8d670abd6a6a8a9af2943675', [(b"/* Match Home's body rails and section rhythm without changing the locked opening. */\n.fc-life-story .fc-life-reading:not(.fc-life-opening) {\n    width: min(var(--fc-standard), calc(100% - 2 * var(--fc-body-gutter)));\n    max-width: var(--fc-standard);\n    padding: var(--fc-body-section-space) 0;\n}\n.fc-life-story .fc-life-reading:not(.fc-life-opening) > :last-child { margin-bottom: 0; }\n\n", b''), (b'\n/* Expanded story directory: aligned numbering and quiet, readable links. */\n.fc-life-story:not(.fc-emma-study) .fc-life-directory[open] > ol {\n    box-sizing: border-box;\n    width: 100%;\n    max-width: 42rem;\n    margin-inline: auto;\n    padding: 0 0 12px 1.75em;\n    text-align: left;\n    list-style-position: outside;\n}\n.fc-life-story:not(.fc-emma-study) .fc-life-directory[open] > ol > li {\n    padding: 4px 0 4px .35em;\n    text-align: left;\n}\n.fc-life-story:not(.fc-emma-study) .fc-life-directory[open] > ol > li::marker { color: var(--fc-gold, #f0c36a); }\n.fc-life-story:not(.fc-emma-study) .fc-life-directory[open] > ol > li > a {\n    display: block;\n    padding-block: 6px;\n    line-height: 1.5;\n    text-align: left;\n    text-decoration: underline;\n    text-decoration-thickness: 1px;\n    text-underline-offset: .2em;\n}\n', b'')])}
+
+def before_current_reviewed_style(name, data):
+    entry = CURRENT_REVIEWED_STYLE_INVERSES.get(name)
+    if not entry or hashlib.sha256(data).hexdigest() != entry[0]: return data
+    prior = data.replace(b'\r\n', b'\n')
+    for current, previous in entry[2]:
+        if prior.count(current) != 1: return data
+        prior = prior.replace(current, previous, 1)
+    return prior if hashlib.sha256(prior).hexdigest() == entry[1] else data
+
 def reviewed_narrow_reading_style(name, data):
+    if name in CURRENT_REVIEWED_STYLE_INVERSES and hashlib.sha256(data).hexdigest() != CURRENT_REVIEWED_STYLE_INVERSES[name][0]: return False
+    data = before_current_reviewed_style(name, data)
     data = historical_style_bytes(data)
     entry=NARROW_READING_STYLES.get(name)
     return bool(entry and hashlib.sha256(data).hexdigest()==entry["sha256"]
@@ -224,6 +237,7 @@ TOOLBAR_STYLE_SHA256 = {'site-header.css': 'a915de3ba44c8e14f127e25ec51498960fb1
 # Owner-requested growing Ask composer and opt-in Holy Ghost player, independently
 # reviewed in source and rendered by Albert. Exact full bytes and single owners.
 SCOPED_INTERFACE_STYLES = {
+    'guided-studies.css': ('a231d01e6a725a806d3e43d42df909e13187b0f1891d75eb6b69dafadc4f13c5', 'answers.html'),
     # WHO-only family styling and native menus, source and desktop/phone reviewed.
     'joseph-family-life.css': ('af4eac66d90a94a370010dae71cd4e0d2430fd07a049ce0ce7d253454c249a2f', 'answers/who-was-joseph-smith.html'),
     # Owner-requested Joseph research reading panels, independently reviewed on
@@ -264,7 +278,7 @@ OWNER_20260929_STYLES = {
 
     # Dynamically loaded only by the shared footer controller; all125 public contexts tested.
     'footer-navigation.css': ('3713562b2415f8b31394b46767204330777f021887621b4b7eaeae5ff1c22fee', []),
-    'history-stories.css': ('7afc257960c5d327cddd944c7a29c60223b13aaf8d670abd6a6a8a9af2943675', ['history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html']),
+    'history-stories.css': ('7afc257960c5d327cddd944c7a29c60223b13aaf8d670abd6a6a8a9af2943675', ['history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html', 'history/emma-hale-smith.html']),
     # Owner-requested39-picture final-row balance, Fermi rendered ten widths; Newton source review.
     'art-opening.css': ('f1457bb255b14b98e122d485760d548d4802374b0e00005c05e5292bc87d6e34', ['art.html']),
     'art-experience.css': ('ef21dea3b87e8b3e59454aba32726210a783d87d556928201ef375a3627b1c74', ['art.html']),
@@ -281,6 +295,8 @@ def before_handcart_recovery(data):
     return data
 
 def reviewed_owner_20260929_style(name, data):
+    if name in CURRENT_REVIEWED_STYLE_INVERSES and hashlib.sha256(data).hexdigest() != CURRENT_REVIEWED_STYLE_INVERSES[name][0]: return False
+    data = before_current_reviewed_style(name, data)
     if name == 'timeline-mobile-study.css':
         data = before_handcart_recovery(data)
     return name in OWNER_20260929_STYLES and hashlib.sha256(data).hexdigest() == OWNER_20260929_STYLES[name][0]
@@ -305,11 +321,14 @@ def reviewed_picture_pill_style(data):
             and hashlib.sha256(prior.replace(PICTURE_PILL_ADDITION, b'', 1)).hexdigest() == '094e3c7c814476bc17653435b36de4fff53ed970fd25e3635f887717961b5714')
 
 def reviewed_scoped_interface_style(name, data):
+    if name in CURRENT_REVIEWED_STYLE_INVERSES and hashlib.sha256(data).hexdigest() != CURRENT_REVIEWED_STYLE_INVERSES[name][0]: return False
+    data = before_current_reviewed_style(name, data)
     data = historical_style_bytes(data)
     return name in SCOPED_INTERFACE_STYLES and hashlib.sha256(data).hexdigest()==SCOPED_INTERFACE_STYLES[name][0]
 def scoped_interface_reference_allowed(name, relative, text):
     joseph_research_owner = name == 'joseph-smith-research.css' and relative == 'joseph-smith-portrait-research.html'
-    return relative==SCOPED_INTERFACE_STYLES[name][1] or joseph_research_owner or name not in text
+    guided_companion_owner = name == 'guided-studies.css' and relative == 'history/emma-hale-smith.html'
+    return relative==SCOPED_INTERFACE_STYLES[name][1] or joseph_research_owner or guided_companion_owner or name not in text
 
 # Exact six-rule Stand artwork appendix and previously published CTA centering.
 # Reconstruct prior bytes; never treat a selector family as generally permitted.
@@ -341,11 +360,12 @@ RELEASE_STYLE_BINDINGS = {
     'stand-forever-study.css': ({'answers/stand-forever.html', 'answers/look-unto-me-doctrine-and-covenants-6-36.html', 'answers/settle-this-in-your-hearts.html'}, '../stand-forever-study.css?v=20261007-distinct-journey-1'),
     'timeline-experiences.css': ({'timelines/latter-day-saint-church-history-timeline.html', 'timelines/willie-and-martin-handcart-map.html', 'timelines/life-of-christ-journey-map.html'}, '../timeline-experiences.css?v=20261007-timeline-panels-1'),
     'joseph-smith-research.css': ({'joseph-smith-likeness.html', 'joseph-smith-portrait-research.html'}, 'joseph-smith-research.css?v=20261006-research-compositions-2'),
-    'history-stories.css': ({'history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html'}, '../history-stories.css?v=20261006-history-intro-fit-1'),
+    'history-stories.css': ({'history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html', 'history/emma-hale-smith.html'}, '../history-stories.css?v=20261009-directory-alignment-1'),
 }
 
 def release_style_binding_allowed(name, page, tags):
     owners, expected = RELEASE_STYLE_BINDINGS[name]
+    if name == 'history-stories.css' and page == 'history/emma-hale-smith.html': expected = '../history-stories.css?v=20261008-standard-body-1'
     refs = [a.get('href', '') for t, a in tags if t == 'link' and a.get('rel') == 'stylesheet' and name in a.get('href', '')]
     return refs == ([expected] if page in owners else [])
 
@@ -353,6 +373,7 @@ def release_style_binding_self_test():
     for name, (owners, expected) in RELEASE_STYLE_BINDINGS.items():
         tags = lambda refs: [('link', {'rel': 'stylesheet', 'href': ref}) for ref in refs]
         for page in owners:
+            expected = '../history-stories.css?v=20261008-standard-body-1' if name == 'history-stories.css' and page == 'history/emma-hale-smith.html' else RELEASE_STYLE_BINDINGS[name][1]
             assert release_style_binding_allowed(name, page, tags([expected]))
             stale = expected.split('?')[0] + '?v=stale'
             for refs in ([], [stale], [expected + '-unknown'], [expected.split('?')[0]], [expected, expected], [expected, stale], ['wrong/' + expected]):
@@ -386,6 +407,13 @@ def main():
     ap=argparse.ArgumentParser();ap.add_argument('--self-test',action='store_true');ap.add_argument('--baseline-report');args=ap.parse_args()
     composition_check()
     if args.self_test:
+        guided = (ROOT/'guided-studies.css').read_bytes()
+        assert reviewed_scoped_interface_style('guided-studies.css', guided)
+        assert not reviewed_scoped_interface_style('guided-studies.css', guided + b'body{height:1px}')
+        assert not reviewed_scoped_interface_style('guided-studies.css', b'X' + guided[1:])
+        for owner in ('answers.html', 'history/emma-hale-smith.html'):
+            assert scoped_interface_reference_allowed('guided-studies.css', owner, 'guided-studies.css')
+        assert not scoped_interface_reference_allowed('guided-studies.css', 'index.html', 'guided-studies.css')
         release_style_binding_self_test()
         stand_art_style_self_test()
         nav_css = (ROOT/'answer-styles.css').read_bytes()
@@ -426,9 +454,9 @@ def main():
         assert not reviewed_system_panel_style(panel_style + b'\n.fc-visual-hero{height:9px}')
         assert not reviewed_system_panel_style(panel_style.replace(b'--fc-panel-fill:', b'--fc-panel-broken:', 1))
         assert not reviewed_system_panel_style(panel_style.replace(b'--fc-opening-hero-height:', b'--fc-opening-broken-height:', 1))
-        wrap_good = {name: ['site-system.css?v=current'] for name in [*wrap_expected, *TIMELINE_ROUTES, 'joseph-smith-portrait-research.html', 'answers/holy-ghost.html', 'answers/plan-of-salvation.html', 'history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html', 'answers/race-priesthood-and-temple-blessings.html']}
+        wrap_good = {name: ['site-system.css?v=current'] for name in [*wrap_expected, *TIMELINE_ROUTES, 'joseph-smith-portrait-research.html', 'history/emma-hale-smith.html', 'answers/holy-ghost.html', 'answers/plan-of-salvation.html', 'history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html', 'answers/race-priesthood-and-temple-blessings.html']}
         assert reviewed_wrap_consumers(wrap_good, wrap_expected, 'current')
-        for required_route in TIMELINE_ROUTES | {'joseph-smith-portrait-research.html'}:
+        for required_route in TIMELINE_ROUTES | {'joseph-smith-portrait-research.html', 'history/emma-hale-smith.html'}:
             assert not reviewed_wrap_consumers({k:v for k,v in wrap_good.items() if k != required_route}, wrap_expected, 'current')
         assert not reviewed_wrap_consumers(dict(list(wrap_good.items())[1:]), wrap_expected, 'current')
         assert not reviewed_wrap_consumers(dict(wrap_good, **{'other.html': ['site-system.css?v=current']}), wrap_expected, 'current')
