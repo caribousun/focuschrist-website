@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "site11-encoding_preflight-1",
+  "family": "SITE11",
+  "stage": "encoding_preflight",
+  "actual_actor": "/root/newton_current",
+  "verdict": "CONCUR",
+  "withdrawn": false,
+  "source_report_sha256": "49e4d8b7a15a848346303b67a417b2fc5c9f8890207d5564116b7839c74a0637",
+  "source_recorded_at": null,
+  "normalized_at": "2026-10-10T02:22:55.916363+00:00",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "bfc5a11c2917ac664082174a8808b8a4cb4797260f39e7f92e376d7b491d0b6c",
+  "findings": "Exact four-asset encoder specification and unchanged encoder reviewed for accepted1bb9 source before encoding; derivative acceptance remains separate.",
+  "pixels_inspected": false,
+  "limits": "Stage-specific attributed source evidence. No canonical full-spec precreation claim, owner aesthetic acceptance, assembled-page or public-release claim."
+}

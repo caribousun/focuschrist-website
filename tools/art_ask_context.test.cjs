@@ -54,6 +54,20 @@ test('Plan of Salvation study, supporting artwork and hero return to the exact a
  }
  const d=open('topic=Plan+of+Salvation&q=My+own+question&return=%2Fanswers%2Fplan-of-salvation.html%23today');assert.equal(values(d).value,'My own question');d.window.close();
 });
+test('Emma topic returns to her reflection without submitting and rejects unsafe destinations',()=>{
+ for(const [raw,want] of [
+  ['/history/emma-hale-smith.html#reflect','/history/emma-hale-smith.html#reflect'],
+  ['/history/emma-hale-smith.html?discard=yes#reflect','/history/emma-hale-smith.html#reflect'],
+  ['/history/emma-hale-smith.html#bad%20fragment','/history/emma-hale-smith.html'],
+  ['https://evil.example/history/emma-hale-smith.html#reflect','/answers.html'],
+  ['/history/emma-hale-smith-other.html#reflect','/answers.html']
+ ]) {
+  const d=open('topic=Emma+Hale+Smith&return='+encodeURIComponent(raw));
+  const v=values(d);assert.equal(v.link,want);assert.match(v.context,/Emma Hale Smith/);
+  assert.equal(v.label,want==='/answers.html'?'Browse study topics':'Return to your study');
+  assert.deepEqual(d.actions,{submit:0,fetch:0,send:0});d.window.close();
+ }
+});
 test('existing artwork, Watch, evidences and covenant contracts remain intact',()=>{
  for(const [q,label,pattern,float] of [['art=The+Sower&topic=Faith','Return to this artwork',/artwork "The Sower"/,true],['watch=Prayer&topic=Prayer','Return to Watch study',/What do the scriptures/,false],['study=Book+of+Mormon+Evidences&topic=Witnesses','Return to Evidences study',/scholarly interpretations/,false],['study=Abrahamic+Covenant&topic=Abraham','Return to Covenant study',/Help me understand/,false]]){const d=open(q);const v=values(d);assert.equal(v.label,label);assert.match(v.value,pattern);assert.equal(v.float,float);d.window.close();}
 });

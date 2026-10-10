@@ -34,3 +34,5 @@
 .joseph-page-menu .fc-study-nav a,.joseph-life-enrichment .joseph-story-menu .joseph-life-nav a{border:0;border-radius:0;padding:8px;text-align:left}
 body.fc-answer-depth main section[id],.joseph-life-enrichment article[id]{scroll-margin-top:140px}
 @media(max-width:580px){.joseph-page-menu .fc-study-nav,.joseph-life-enrichment .joseph-story-menu .joseph-life-nav{grid-template-columns:1fr}}
+/* Artwork Continue returns to the dated family scene using shared header clearance. */
+.joseph-life-enrichment article[id][data-topic-reading-target]{scroll-margin-top:var(--fc-anchor-offset, 16px)}

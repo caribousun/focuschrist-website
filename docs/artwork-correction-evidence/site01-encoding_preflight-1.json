@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "site01-encoding_preflight-1",
+  "family": "SITE01",
+  "stage": "encoding_preflight",
+  "actual_actor": "/root/newton_current",
+  "verdict": "CONCUR",
+  "withdrawn": false,
+  "source_report_sha256": "d93ed4099b4b1afc336b8c135174d603fccc0877fa9777604e46af9fd4261d89",
+  "source_recorded_at": null,
+  "normalized_at": "2026-10-10T01:59:32.892647+00:00",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "6a6912b67c41c91cf219384e4f38918e517dcf97e9ae079769fc6ad61f22f70f",
+  "findings": "Named source record reviews the exact lossless-source/responsive-delivery encoder specification and guards; later derivative quality is not inferred.",
+  "pixels_inspected": false,
+  "limits": "Exact scoped private-source evidence normalization. No assembled-page/public release or invented canonical precreation event."
+}

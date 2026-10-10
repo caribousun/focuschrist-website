@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "site12-owner_scope-1",
+  "family": "SITE12",
+  "stage": "owner_scope",
+  "actual_actor": "Gary",
+  "verdict": "RECORDED",
+  "withdrawn": false,
+  "source_report_sha256": "c9adef75eb5133ad7d9ac20cb8b0315226994e7bb616cf5bc7d96dd611c182f2",
+  "source_recorded_at": null,
+  "normalized_at": "2026-10-10T00:56:28.886690+00:00",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "0440c07de9541b20fa23680d60932b742fc85665f651d7330ac511aaee299905",
+  "findings": "Exact owner scene-specific garment correction and protected identity/action scope; no authorization beyond applicable family.",
+  "pixels_inspected": false,
+  "limits": "Exact local artifact evidence; no assembled UI, publication or owner aesthetic acceptance."
+}

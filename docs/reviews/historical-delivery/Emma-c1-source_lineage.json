@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "family": "Emma-c1",
+  "role": "source_lineage",
+  "source_sha256": "830d21b1dcf8398cdddb62585eca4ec60f0f3f62b5244c9ad6a4f299669e9de3",
+  "authority_kind": "historical_reconciliation",
+  "reports": [
+    {
+      "report_title": "emma-life-c1.json",
+      "sha256": "015550fba3b3d413eca03d9a1454c43852709c5c693130ec1a3788ff318e4e9d"
+    },
+    {
+      "report_title": "H1-C1-ACTUAL-EVIDENCE-CHECKS.json",
+      "sha256": "9e02db65e020e548d42ff4551b159bb664f2faf097d4bb4d345b80f254a18de5"
+    },
+    {
+      "report_title": "H1-C1-GENERATION-AND-PRIOR-REVIEWS.json",
+      "sha256": "a8cf409755f0e2560a8b266f208b0303dc779f94d2b67ff96c5f7b6e551a8e79"
+    }
+  ],
+  "scope": "Digest-bound transcription of actual preserved evidence within its original scope; no newly performed historical review.",
+  "limits": "No historical exception becomes precreation PASS. No current UI, remaining artwork, deployment or public acceptance is established."
+}

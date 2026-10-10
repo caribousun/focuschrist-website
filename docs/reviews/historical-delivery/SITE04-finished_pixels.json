@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "family": "SITE04",
+  "role": "finished_pixels",
+  "source_sha256": "24d91675616ed16399ecb10238cb5d784de4605139fc14c5b737dedcd7823349",
+  "authority_kind": "owner_exception",
+  "reports": [
+    {
+      "report_title": "SITE04-CURRENT-VISUAL-REVIEW.json",
+      "sha256": "65fcdbd4bb0787db6af3e67b63dd4120ee8d629d52228363efadc21c7fd443d0"
+    },
+    {
+      "report_title": "SITE04-CURRENT-PIXEL-REVIEW.json",
+      "sha256": "10d8a5af9a9e7e3bd541ee53878d278c166cb2ffa73ee94edf9d9e33851816a6"
+    },
+    {
+      "report_title": "ROOT-ART-AND-UI-REVIEW.md",
+      "sha256": "45fe857cf2e3013843a47030ea2d33c4ea67207fce44e57efc5c546f02a222e5"
+    }
+  ],
+  "scope": "Actual current independent full/native portrait reviews plus preserved prior root actual portrait/full-size review. Historical exception remains solely precreation evidence; current reviews are not backdated.",
+  "limits": "No historical exception becomes precreation PASS. No current UI, remaining artwork, deployment or public acceptance is established.",
+  "exception_scope": "historical_precreation_evidence_only"
+}

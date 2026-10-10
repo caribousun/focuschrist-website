@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "id": "site08-encoding_result-1",
+  "family": "SITE08",
+  "stage": "encoding_result",
+  "actual_actor": "/root/fermi_current",
+  "verdict": "RECORDED",
+  "withdrawn": false,
+  "source_report_sha256": "51e413011b49584ad2b6085c7f4212a1d8946e00140ec9456200f3943beab55d",
+  "source_recorded_at": null,
+  "normalized_at": "2026-10-10T01:59:32.892647+00:00",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "51e413011b49584ad2b6085c7f4212a1d8946e00140ec9456200f3943beab55d",
+  "findings": "Actual saved encoding manifest binds exact source/specification and four delivery files; this result alone is not a native derivative judgment.",
+  "pixels_inspected": false,
+  "limits": "Exact scoped private-source evidence normalization. No assembled-page/public release or invented canonical precreation event.",
+  "spec_sha256": "7a2bbe11f376380b3e79fcb66eda41f006fe6c83eadeeb8611c083654db06678"
+}

@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "id": "emma-relief-service-1842",
+  "reviewer": "Newton",
+  "phase": "finished",
+  "operation_kind": "original-only-internal-garment-seam-correction",
+  "prompt_sha256": "03e2ad0267f5ed624942d5359c375e3b431eb10288aaa0fb901eb7f80fe14702",
+  "prompt_field_semantics": "Legacy field binds exact reviewed local correction code; not historical generation prompt.",
+  "concur": true,
+  "source_report": {
+    "title": "SITE13-RESULT-REVIEW.md",
+    "sha256": "cfb887b8c4d9e74978abe2ab7e171ea7214370fb8a37c46f269c1cd722d3d539"
+  },
+  "historical_lineage": {
+    "asset": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-wardrobe-v2.png",
+    "sha256": "72d6f3eb51f8d27570079ad43266f6058f1ca34c008295c201336f5ea810b7da",
+    "preflight_prompt_sha256": "8851346d1af369e5f19f24cc460385672da6dca06738dc0ea6c2fac29e2f3477",
+    "reference_sha256": [
+      "fb7c293cc8d0977cb850a44f73b186ec424b11d592df576823c0ef6993bcb755"
+    ],
+    "receipts": {
+      "fermi_preflight": {
+        "path": "docs/joseph-life-art-review-receipts/emma-relief-service-1842-fermi_preflight.json",
+        "sha256": "3d63d97593eda43bf14c57f0c3eb1e0befa6e786026c015880bd12bdddd0be35"
+      },
+      "newton_preflight": {
+        "path": "docs/joseph-life-art-review-receipts/emma-relief-service-1842-newton_preflight.json",
+        "sha256": "8b7ef746e4a32ce6f02faf3148737f29333747ec7fc4514e3d66222e3776f529"
+      },
+      "fermi_finished_pixels": {
+        "path": "docs/joseph-life-art-review-receipts/emma-relief-service-1842-fermi_finished_pixels.json",
+        "sha256": "763eefc89caad375ec32048c0ba20233aeb97cb6674020612d320b7d1b05b3e5"
+      },
+      "newton_finished_pixels": {
+        "path": "docs/joseph-life-art-review-receipts/emma-relief-service-1842-newton_finished_pixels.json",
+        "sha256": "dbf6ead600c90b20c1c88ac9467231e87cc9ae76df9efb03fa83abdf2d931de9"
+      }
+    },
+    "delivery": {
+      "source_asset": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-wardrobe-v2.png",
+      "manifest_entry": {
+        "source_sha256": "72d6f3eb51f8d27570079ad43266f6058f1ca34c008295c201336f5ea810b7da",
+        "width": 1536,
+        "height": 1024,
+        "variants": [
+          {
+            "asset": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-wardrobe-v2-640.webp",
+            "width": 640,
+            "height": 427,
+            "sha256": "2345660aa74784329157cd87ea686edeeb99b5cd40d8de6d96e9f33ee6e94fc9",
+            "bytes": 26118,
+            "quality": 84
+          },
+          {
+            "asset": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-wardrobe-v2-960.webp",
+            "width": 960,
+            "height": 640,
+            "sha256": "24e387beaf1c3cb794aaa28032e4d394f1c99052c0582b690aded54704c719ee",
+            "bytes": 46926,
+            "quality": 84
+          },
+          {
+            "asset": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-wardrobe-v2-1536.webp",
+            "width": 1536,
+            "height": 1024,
+            "sha256": "a40fa6ad5a82fc58f11b8070953d8efbf1159c5ca6ff4d4c9b44256bcd2deef0",
+            "bytes": 87284,
+            "quality": 84
+          }
+        ],
+        "default": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-wardrobe-v2-1536.webp",
+        "processing": "Format/resolution delivery only; no crop, retouch, recoloring or generated content. Exact reviewed PNG remains full-size source."
+      }
+    }
+  },
+  "correction_provenance": {
+    "operation_kind": "original-only-internal-garment-seam-correction",
+    "operation_sha256": "03e2ad0267f5ed624942d5359c375e3b431eb10288aaa0fb901eb7f80fe14702",
+    "prompt_field_semantics": "Exact reviewed local correction code, not historical generation prompt.",
+    "original_source_asset": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-wardrobe-v2.png",
+    "original_source_sha256": "72d6f3eb51f8d27570079ad43266f6058f1ca34c008295c201336f5ea810b7da",
+    "mask_sha256": "15df409c35e6189eb8c92f68f653a42cc9cee3c86e65f1312d8b4820cad39135",
+    "sampling_source": "Exact original image only; no reference or foreign pixels imported.",
+    "reference_field_semantics": "Retained historical wardrobe lineage, not current pixel donor.",
+    "pixel_preservation_scope": "Accepted PNG: zero changed pixels outside reviewed support and central placket. Lossy derivatives separately reviewed.",
+    "review_reference_sha256": {
+      "emma_identity": "7d0a07cc673d244ccd54d478c53d1e68d248e39d9b1101f87dfe3681cbb839d1",
+      "h2_man_free": "809aa5b8a067d5858b328aff37b86ea545c268ed9d0b45f734ab340540802ae4"
+    }
+  },
+  "normalization": "Transcription of actual existing phase-specific independent report, preserving history. No retrospective generation approval, new review, final UI, publication or owner aesthetic acceptance.",
+  "sha256": "7821956b89847e1a4499d40a875fda1a3b6b035d8d1322cc00107f8a6a46b8af",
+  "whole_image_review": true,
+  "review_scope": "Actual full and native source correction review. 8296 changed pixels; zero outside exact13101 support and full central placket. Derivative reviews separately linked."
+}

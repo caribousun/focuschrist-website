@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "family": "Emma-h4",
+  "role": "prospective_approval",
+  "source_sha256": "24e0b13c84cabae92c972034f1fc775162b2800a93e4b14d876ca16c31a269ea",
+  "authority_kind": "prospective_v2",
+  "reports": [
+    {
+      "report_title": "H4-H5-EXACT-GENERATION-LINEAGE.json",
+      "sha256": "10bea15569b8f2f8fd0a1179b1d853448559db6bfb6106c0018fe66c31c45515"
+    }
+  ],
+  "scope": "Digest-bound transcription of actual preserved evidence within its original scope; no newly performed historical review.",
+  "limits": "No historical exception becomes precreation PASS. No current UI, remaining artwork, deployment or public acceptance is established."
+}

@@ -164,7 +164,7 @@ def main() -> int:
         "loadVerifiedSourceRouter",
         "study-source-router.js?v=20260923-sensitive-welcome-1",
         "loadArtStudyRouter",
-        "art-study-router.js?v=20260830-3",
+        "art-study-router.js?v=20261009-picture-reflections-1",
         "loadWatchStudyEnrichment",
         "watch-study-enrichment.js?v=20260830-3",
         "document.readyState === 'loading'",
@@ -211,9 +211,9 @@ def main() -> int:
     ), errors)
 
     require(art_router, "art-study-router.js", (
-        "Study this artwork",
-        "Ask about this artwork",
-        "Study this topic on ChurchofJesusChrist.org",
+        "About this picture",
+        "Ask about this picture",
+        "Church study resources",
         "returnUrlForCaption",
         "data-focuschrist-art-return-restored",
         "data-focuschrist-art-study-button",

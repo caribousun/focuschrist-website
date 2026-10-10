@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "family": "SITE05",
+  "role": "finished_pixels",
+  "source_sha256": "e4082e41520f37f672bc4beb3598879921f0fe03d29c28c343824dba524ac2e3",
+  "authority_kind": "reviewed_correction",
+  "reports": [
+    {
+      "report_title": "ARTWORK-READBACK.md",
+      "sha256": "60cb3772ba681b85ef8647e65968d5df107af683986016cf14660ee525fb3b98"
+    },
+    {
+      "report_title": "SITE05-13-RESULT-REVIEW.md",
+      "sha256": "0b4e834557eb5511aa27477e905e0887b6e97b9680a2e3423aeabf93113abcf0"
+    },
+    {
+      "report_title": "ROOT-SITE05-13-JUDGMENT.md",
+      "sha256": "be9b4734db7f3c275ef59a35ee007753625b16a767e6cbf2d58e81f76e503ed4"
+    }
+  ],
+  "scope": "Actual distinct finished-source judgments; root final source judgment closes the formerly pending state for exact e4082e41. No derivative or assembled-UI approval inferred.",
+  "limits": "No historical exception becomes precreation PASS. No current UI, remaining artwork, deployment or public acceptance is established."
+}

@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "id": "site07-composite_result-6",
+  "family": "SITE07",
+  "stage": "composite_result",
+  "actual_actor": "/root/fermi_current",
+  "verdict": "RECORDED",
+  "withdrawn": false,
+  "source_report_sha256": "a3769ddddebe46a25c6698d1377092e91b512f2df831f5d3024bd898eb7435ea",
+  "source_recorded_at": null,
+  "normalized_at": "2026-10-10T00:56:28.886690+00:00",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "217383853ebbc541013e57cb73057c901770b3f8425ced50cd4f175b3151ec24",
+  "findings": "Actual accepted native-coordinate composite result with zero outside/protected changes.",
+  "pixels_inspected": false,
+  "limits": "Exact local artifact evidence; no assembled UI, publication or owner aesthetic acceptance.",
+  "protected_pixel_checks": {
+    "changed_pixels": 60071,
+    "outside_changed_pixels": 0,
+    "protected_changed_pixels": 0
+  }
+}

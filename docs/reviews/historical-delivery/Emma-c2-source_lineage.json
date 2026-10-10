@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "family": "Emma-c2",
+  "role": "source_lineage",
+  "source_sha256": "b9f28325dff120adbdcc8a1ca9f0d1cfa5e89c2db43ac5a228fd1f17d1809f2e",
+  "authority_kind": "owner_exception",
+  "reports": [
+    {
+      "report_title": "EXACT-OWNER-EXCEPTIONS.json",
+      "sha256": "27763c6be19629d11dc346f03d7c0f0ddbb55e72de369fafd89982f6ea9ce64b"
+    }
+  ],
+  "scope": "Digest-bound transcription of actual preserved evidence within its original scope; no newly performed historical review.",
+  "limits": "No historical exception becomes precreation PASS. No current UI, remaining artwork, deployment or public acceptance is established.",
+  "exception_scope": "historical_precreation_evidence_only"
+}

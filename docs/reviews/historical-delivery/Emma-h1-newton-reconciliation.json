@@ -1,0 +1,18 @@
+{
+  "reviewer": "Newton",
+  "receipt_id": "newton-current-semantic-h1-ad5a584e75b9",
+  "stage": "reconciliation",
+  "verdict": "PASS",
+  "withdrawn": false,
+  "reviewed_at": "2026-10-09T22:07:26.086312+00:00",
+  "material_historical_additions": [],
+  "semantic_coverage_verified": true,
+  "observations": "H1 exact original prompt and dual original reviewer notes substantiate Emma-only scribing pause, spring1828/age23 pregnancy, sole approvedreference, qualified historical reconstruction and excluded translation mechanics. Original ElectLady source excerpt and mandate read events verified against exact raw session lines. Later body rules remain current-only. All8semantic fields, exact spec, prompt, source record, references, historicalmapping and bound evidence read.14artifact hashes pass. Both original successful reviewer writes precede actualgeneration; rawcall/result hashes and decoded generated image equal installed original. Original full canonicalspec did not exist; this is a present evidence audit, not retrospective preapproval.",
+  "limits": "Only exact frozenH1 payload. No codepatch, adapter, sourcegeneration, pixelreview, assembledUI or release acceptance. Other independent current audit and root review remain required. No new website source research claimed; actual historic source events audited.",
+  "actual_actor": "/root/newton",
+  "frozen_payload_binding": "ad5a584e75b93159b9669f0ab87b1f03b99a12e0319b84c49d93bc963f811f6f",
+  "original_report": {
+    "report_title": "h1-newton-reconciliation.json",
+    "sha256": "63feda4703d545bac867b7a1938ef884150781105f5de96b68af0f6c77ff3188"
+  }
+}

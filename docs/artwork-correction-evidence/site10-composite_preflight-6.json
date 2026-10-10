@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "site10-composite_preflight-6",
+  "family": "SITE10",
+  "stage": "composite_preflight",
+  "actual_actor": "/root/newton_current",
+  "verdict": "CONCUR",
+  "withdrawn": false,
+  "source_report_sha256": "dab871541808b003a056ec1248eb013d29786d0bd99db55317c6b0daf06b684a",
+  "source_recorded_at": null,
+  "normalized_at": "2026-10-09T23:47:55.057363+00:00",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "1879f86f75a07e393922b9d1ed8309cfe7624abf5bfec0fa7c5b473370d9d356",
+  "findings": "Exact native-coordinate garment mask/spec/script reviewed; outside/skin/collar/firstbutton/hands/outer sleeve protected. No resampling.",
+  "pixels_inspected": false,
+  "limits": "Exact local correction evidence only; no assembled UI, publication or owner aesthetic acceptance."
+}

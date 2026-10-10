@@ -71,4 +71,4 @@ body.fc-site .joseph-leading-hero{display:block;width:100%;height:auto!important
 body.fc-site .joseph-leading-hero>img{object-fit:contain!important;object-position:center!important}
 body.fc-site .joseph-leading-hero::before,body.fc-site .joseph-leading-hero::after{display:none}
 body.fc-site .joseph-bridge-intro[data-unified-opening]{margin-block:0}
-@media(max-width:700px){body.fc-site .joseph-leading-hero{height:300px!important;min-height:300px!important;aspect-ratio:auto}body.fc-site .joseph-leading-hero>img{object-fit:cover!important;object-position:45% 50%!important}}
+@media(max-width:700px){body.fc-site .joseph-leading-hero{height:var(--fc-mobile-hero-height)!important;min-height:var(--fc-mobile-hero-height)!important;aspect-ratio:auto}body.fc-site .joseph-leading-hero>img{object-fit:cover!important;object-position:45% 50%!important}}

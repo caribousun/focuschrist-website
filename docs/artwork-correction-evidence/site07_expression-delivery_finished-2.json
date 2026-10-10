@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "site07_expression-delivery_finished-2",
+  "family": "SITE07_EXPRESSION",
+  "stage": "delivery_finished",
+  "actual_actor": "/root/newton_current",
+  "verdict": "CONCUR",
+  "withdrawn": false,
+  "source_report_sha256": "d300c083f39353c232c9511e367b281927d1a857c0b5e5a819f250f160f1a130",
+  "source_recorded_at": null,
+  "normalized_at": "2026-10-10T01:59:32.892647+00:00",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "0b8df252406767d1a852bb30afa70e225b66a9cf4734f007748748c33200abaa",
+  "findings": "Named reviewer actually inspected the three native responsive derivatives from the exact source and concurred; source report separately binds their delivery set. No installation or publication inferred.",
+  "pixels_inspected": true,
+  "limits": "Exact scoped private-source evidence normalization. No assembled-page/public release or invented canonical precreation event."
+}

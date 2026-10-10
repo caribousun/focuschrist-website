@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "id": "site10-donor_preflight-3",
+  "family": "SITE10",
+  "stage": "donor_preflight",
+  "actual_actor": "/root",
+  "verdict": "CONCUR",
+  "withdrawn": false,
+  "source_report_sha256": "e134335ad38542d5bc23d2af47feecb838ef65b4d07e6e3ccf8dcd43a545e10b",
+  "source_recorded_at": null,
+  "normalized_at": "2026-10-09T23:47:55.057363+00:00",
+  "evidence_class": "current_reconciliation_of_prospective_events",
+  "subject_sha256": "8579e0665a2af5301c89e0db2803f1d652b8e279c51f3f210ead1eaf2d1d8292",
+  "findings": "Current reconciliation reports original root and then /root/newton prospective approval of exact donor spec8579e066/promptd3e473cc before one generation. Current Newton did not perform that original donor preflight. Original message timestamps and raw-message digests were unavailable to this actor.",
+  "pixels_inspected": false,
+  "limits": "Exact local correction evidence only; no assembled UI, publication or owner aesthetic acceptance.",
+  "reported_original_reviewers": [
+    "/root",
+    "/root/newton"
+  ],
+  "original_event_timestamp": null,
+  "original_message_digest": null,
+  "canonical_full_spec_precreation_claim": false
+}

@@ -1,6 +1,21 @@
 (function () {
     'use strict';
 
+    // Shared by the full-size viewer and the original Art gallery Save action.
+    window.fcArtworkDownloadFilename = function (title, src) {
+        const extension = new URL(src, document.baseURI).pathname.match(/\.(avif|gif|jpe?g|png|webp)$/i);
+        if (!extension) return 'Artwork';
+        let name = String(title || 'Artwork').normalize('NFC')
+            .replace(/[<>:"/\\|?*\u0000-\u001f\u007f-\u009f]/g, ' ')
+            .replace(/\s+/g, ' ').trim().replace(/[. ]+$/g, '');
+        if (!name || /^\.+$/.test(name)) name = 'Artwork';
+        if (/^(con|prn|aux|nul|com[1-9]|lpt[1-9])(?:\.|$)/i.test(name)) name = 'Artwork ' + name;
+        const points = Array.from(name);
+        while (new TextEncoder().encode(points.join('')).length > 180) points.pop();
+        name = points.join('').replace(/[. ]+$/g, '') || 'Artwork';
+        return name + '.' + extension[1].toLowerCase();
+    };
+
     if (typeof HTMLDialogElement === 'undefined') return;
 
     const dialog = document.createElement('dialog');
@@ -17,6 +32,7 @@
     const download = dialog.querySelector('.fc-full-image-download');
     let returnFocus = null;
     let versions = [];
+    let currentTitle = 'Artwork';
 
     function localImage(value) {
         try {
@@ -32,7 +48,7 @@
         download.hidden = !downloadable;
         if (downloadable) {
             download.href = downloadable;
-            download.setAttribute('download', new URL(downloadable).pathname.split('/').pop());
+            download.setAttribute('download', window.fcArtworkDownloadFilename(currentTitle, downloadable));
         } else download.removeAttribute('href');
     }
 
@@ -81,10 +97,26 @@
             || 'Full-size artwork';
     }
 
+    function imageTitle(trigger) {
+        const explicit = trigger.dataset.fullImageTitle;
+        if (explicit && explicit.trim()) return explicit.trim();
+        const parentDialog = trigger.closest('dialog');
+        const dialogTitle = parentDialog && parentDialog.querySelector('h2, h3');
+        if (dialogTitle && dialogTitle.textContent.trim()) return dialogTitle.textContent.trim();
+        const figure = trigger.closest('figure');
+        const captionTitle = figure && figure.querySelector('figcaption h2, figcaption h3, figcaption h4, figcaption strong, .fc-study-visual-title');
+        if (captionTitle && captionTitle.textContent.trim()) return captionTitle.textContent.trim();
+        const article = trigger.closest('article');
+        const articleTitle = article && article.querySelector('h2, h3, h4');
+        if (articleTitle && articleTitle.textContent.trim()) return articleTitle.textContent.trim();
+        return imageAlt(trigger);
+    }
+
     function openImage(trigger) {
         if (!image || !closeButton || !trigger.href) return;
         returnFocus = trigger;
         imageVersions(trigger);
+        currentTitle = imageTitle(trigger);
         selectImage(trigger.href);
         image.alt = imageAlt(trigger);
         document.body.classList.add('fc-full-image-open');

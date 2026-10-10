@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "reviewer": "Newton",
+  "phase": "finished-private-delivery",
+  "concur": true,
+  "source_report": {
+    "title": "SITE05-13-DELIVERY-RESULT-REVIEW.md",
+    "sha256": "80b47d1b12a273bea03485a56e712778125761b209a32491f4d4a43627076a4c"
+  },
+  "audit_sha256": "f897ca9ac659b99a90e6cd3a7dd4729738ce32d50f69342b8c2ff645e8eb75a9",
+  "outputs": [
+    {
+      "path": "assets/page-art/church-history/relief-society-torso-v3.webp",
+      "sha256": "f9f1ebceace304bddcd8f91515e66e95a342a3ec745c24630c23583dd73a339c",
+      "bytes": 1392892,
+      "dimensions": [
+        1672,
+        941
+      ],
+      "format": "WEBP"
+    },
+    {
+      "path": "assets/page-art/church-history/relief-society-torso-v3-960.webp",
+      "sha256": "bccc1a78b7592abf8fcdcef4f79f1d89c5446a59f68476c9a230915fbe6b05ea",
+      "bytes": 65436,
+      "dimensions": [
+        960,
+        540
+      ],
+      "format": "WEBP"
+    },
+    {
+      "path": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3.png",
+      "sha256": "7821956b89847e1a4499d40a875fda1a3b6b035d8d1322cc00107f8a6a46b8af",
+      "bytes": 1701300,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG"
+    },
+    {
+      "path": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3-640.webp",
+      "sha256": "62837b0db720cb35fd0bafe88b374c09ae20e3801218b0194f889d239436dce9",
+      "bytes": 26144,
+      "dimensions": [
+        640,
+        427
+      ],
+      "format": "WEBP"
+    },
+    {
+      "path": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3-960.webp",
+      "sha256": "a809d0cc42d2ae9f78c584147997e4c60102e62405afcb9a4086179322792ec9",
+      "bytes": 46864,
+      "dimensions": [
+        960,
+        640
+      ],
+      "format": "WEBP"
+    },
+    {
+      "path": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3-1536.webp",
+      "sha256": "cc14d7a0e989f923bb68c6cd7519154b5a217966174354e51de02360bdc4d004",
+      "bytes": 87190,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "WEBP"
+    }
+  ],
+  "review_scope": "Actual full scene and native face/garment/hands inspection of six exact delivery files against accepted masters. Expected lossy detail softening; no material new distortion observed.",
+  "limits": "Normalization of actual existing review. Not new review, final UI/currentSrc, publication or owner aesthetic acceptance. Lossy/resized pixels do not inherit original correction support invariants."
+}

@@ -1,0 +1,18 @@
+{
+  "reviewer": "Fermi",
+  "receipt_id": "fermi-current-semantic-h1-ad5a584e75b9",
+  "stage": "reconciliation",
+  "verdict": "PASS",
+  "withdrawn": false,
+  "reviewed_at": "2026-10-09T22:32:20.868Z",
+  "material_historical_additions": [],
+  "semantic_coverage_verified": true,
+  "observations": "I independently read the frozen spec, exact prompt, source record, eight-field semantic map, original Fermi/Newton observations and applicable bound mandate passages. The prompt's single Emma identity reference, spring 1828 age 23 pregnancy, Emma-only scribing pause and exclusion of Joseph/translation mechanics are supported by original substantive reviews and original source read records. Clothing, light and room are explicitly reconstruction; later body requirements are not represented as original text. I verified all 14 artifact hashes, original source/mandate event raw-line hashes and exact excerpts, original reviewer call/result hashes and their order before generation, generation call/completion hashes, and the decoded generated raster digest. No material historical addition found.",
+  "limits": "Exact frozen payload only. Full canonical spec did not exist at original review time; this current serialization audit is not retrospective preapproval. No current reference or finished-image pixel review, source generation, adapter/site integration, UI, release or owner acceptance claimed.",
+  "actual_actor": "/root/fermi_current",
+  "frozen_payload_binding": "ad5a584e75b93159b9669f0ab87b1f03b99a12e0319b84c49d93bc963f811f6f",
+  "original_report": {
+    "report_title": "h1-fermi-reconciliation.json",
+    "sha256": "e59c992e15a7f7a3d1cd72b9eba7849260c1cc2254dba58e65b8141330334c3a"
+  }
+}

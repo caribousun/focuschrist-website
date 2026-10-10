@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "family": "Emma-c1",
+  "role": "delivery_pixels",
+  "source_sha256": "830d21b1dcf8398cdddb62585eca4ec60f0f3f62b5244c9ad6a4f299669e9de3",
+  "authority_kind": "historical_reconciliation",
+  "reports": [
+    {
+      "report_title": "ROOT-ENCODING-REVIEW.md",
+      "sha256": "ab9215db33e3e382493a4c513a8e0705183054bcaa9030bd740f24bcfb01f5c3"
+    },
+    {
+      "report_title": "REMAINING-ENCODING-RESULT-REVIEW.md",
+      "sha256": "7ae62ba48fb6ef458ecbc5622a8d80cf347b1272116687782b9400f59b42f039"
+    },
+    {
+      "report_title": "ENCODING-RESULT-REVIEW.md",
+      "sha256": "b76cc0fca854f4c45b7046220010eee9612aaba806057b325c2c7900eb987bc9"
+    }
+  ],
+  "scope": "Digest-bound transcription of actual preserved evidence within its original scope; no newly performed historical review.",
+  "limits": "No historical exception becomes precreation PASS. No current UI, remaining artwork, deployment or public acceptance is established."
+}

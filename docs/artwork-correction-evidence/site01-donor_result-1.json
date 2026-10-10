@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "id": "site01-donor_result-1",
+  "family": "SITE01",
+  "stage": "donor_result",
+  "actual_actor": "/root/fermi_current",
+  "verdict": "RECORDED",
+  "withdrawn": false,
+  "source_report_sha256": "a664093484a3cdc2feb32b439ea4bb9403dcf02f8d4fb3e109e3e5441dfb0140",
+  "source_recorded_at": "2026-10-09T23:42:12.6347781Z",
+  "normalized_at": "2026-10-10T01:59:32.892647+00:00",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "78a32f83a4a6e26919aa9163ecd6817b3dd14ac8ddb378be408578bdcb6e3d58",
+  "findings": "Actual recorded generation produced the exact donor hash under the bound donor specification; raw donor was not accepted as a finished image.",
+  "pixels_inspected": false,
+  "limits": "Exact scoped private-source evidence normalization. No assembled-page/public release or invented canonical precreation event.",
+  "spec_sha256": "db1dcbe2c24b724e2f09d195caa623b0699e4147c096f0caac2d1cc192705946"
+}

@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "site07-source_finished-10",
+  "family": "SITE07",
+  "stage": "source_finished",
+  "actual_actor": "/root/fermi_current",
+  "verdict": "CONCUR",
+  "withdrawn": false,
+  "source_report_sha256": "4540d08189d0851da40750c52eba0cb6e94da256a4bed230c03193e2cf6bdc80",
+  "source_recorded_at": null,
+  "normalized_at": "2026-10-10T00:56:28.886690+00:00",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "217383853ebbc541013e57cb73057c901770b3f8425ced50cd4f175b3151ec24",
+  "findings": "Actual final accepted source pixels personally reviewed by named actor. Body and source are same exact composite; no separate color operation.",
+  "pixels_inspected": true,
+  "limits": "Exact local artifact evidence; no assembled UI, publication or owner aesthetic acceptance."
+}

@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "site10-source_finished-19",
+  "family": "SITE10",
+  "stage": "source_finished",
+  "actual_actor": "/root",
+  "verdict": "CONCUR",
+  "withdrawn": false,
+  "source_report_sha256": "810459d6a8e5616d931bc6d6d794cc8b91c117b75365c487659f46a91112350a",
+  "source_recorded_at": null,
+  "normalized_at": "2026-10-09T23:47:55.057363+00:00",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "aba5349ff196ed82a4c3b04d3b56798729b4d189e20191d64d5771385d5eeae5",
+  "findings": "Actual full/native final source inspected. Muted retained dry foliage, coherent original bokeh and accepted body; no rejected transplant artifacts. Plausible illustration, not exact documented weather.",
+  "pixels_inspected": true,
+  "limits": "Exact local correction evidence only; no assembled UI, publication or owner aesthetic acceptance."
+}

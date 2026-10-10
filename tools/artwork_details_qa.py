@@ -131,7 +131,7 @@ def timeline_study_hero_errors(relative: str, page: str, script: str | None = No
         errors.append(f"{relative}: timeline hero responsive source differs")
     if any(hero.has_attr(a) for a in ('data-full-image-viewer', 'data-artwork-detail', 'onclick')):
         errors.append(f"{relative}: normal artwork details must precede full-size viewing")
-    for name, version in [('hero-details.js', '20261007-timeline-panels-1'), ('full-image-viewer.js', '20261006-versions-1'), ('full-image-viewer.css', '20261007-viewer-controls-1'), ('hero-details.css', '20260909-warm'), ('artwork-details.css', '20260909-warm'), ('artwork-actions.css', '20261004-explicit-grid-1')]:
+    for name, version in [('hero-details.js', '20261007-timeline-panels-1'), ('full-image-viewer.js', '20261009-titled-downloads-1'), ('full-image-viewer.css', '20261007-viewer-controls-1'), ('hero-details.css', '20260909-warm'), ('artwork-details.css', '20260909-warm'), ('artwork-actions.css', '20261004-explicit-grid-1')]:
         nodes = [n for n in dom.select('script[src],link[href]') if urlsplit(n.get('src', n.get('href', ''))).path == '../' + name]
         if len(nodes) != 1 or nodes[0].get('src', nodes[0].get('href')) != '../' + name + '?v=' + version:
             errors.append(f'{relative}: exact panel dependency missing, duplicated or stale: {name}')
@@ -168,9 +168,49 @@ def history_topic_hero_errors(relative, page, story, ready):
         anchors = figure.select('a.fc-visual-hero')
         if len(anchors) != 1 or anchors[0].get('href') != '../' + ready[unit]['full'] or not figure.select_one('figcaption[data-picture-panel-copy][hidden]'):
             errors.append(f'{relative}: hero source or study metadata differs')
-    topic_version = '20261007-scoped-root-1'
+    topic_version = '20261009-settled-continue-2'
     if page.count('../topic-artwork-details.js?v=' + topic_version) != 1 or 'hero-details.js' in page or 'data-hero-viewer' in page:
         errors.append(f'{relative}: hero must have exactly one topic controller')
+    return errors
+
+
+def emma_portrait_errors(text):
+    records = re.findall(r'<article\b[^>]*data-artwork-detail-content="history-emma-portrait"[^>]*>', text)
+    markers = (
+        'data-detail-image="assets/portraits/emma-smith-natural-20261008.png"',
+        'data-detail-full="assets/portraits/emma-smith-natural-20261008.png"',
+        'data-detail-source="https://www.churchofjesuschrist.org/study/history/topics/emma-hale-smith?lang=eng"',
+        'data-detail-study="history/emma-hale-smith.html"',
+    )
+    return [] if len(records) == 1 and all(x in records[0] for x in markers) else [
+        "Church History Emma portrait must retain the reviewed natural portrait, official biography and whole-life journey"]
+
+
+def emma_reference_errors(page, history):
+    errors = []
+    figures = re.findall(r'<figure\b[^>]*class="fc-life-hero"[^>]*>[\s\S]*?</figure>', page)
+    heroes = re.findall(r'<a\b[^>]*class="[^"\n]*\bfc-visual-hero\b[^"\n]*"[^>]*>', page)
+    markers = (
+        'data-artwork-reference="history-harmony"',
+        'data-linked-picture-reference="history-harmony"',
+        'href="../church-history.html#history-harmony-title"',
+        'src="../assets/history/joseph-emma-harmony-1400.webp"',
+        'width="1400" height="467"',
+    )
+    if len(figures) != 1 or len(heroes) != 1 or any(x not in figures[0] for x in markers):
+        errors.append("Emma opening must retain one exact linked Harmony reference hero")
+    elif any(x in figures[0] for x in ('data-hero-viewer', 'data-topic-art=', 'data-full-image-viewer')):
+        errors.append("Emma Harmony opening is a study link, not a local image modal")
+    if history.count('id="history-harmony-title"') != 1:
+        errors.append("Emma Harmony destination heading must exist exactly once")
+    for marker in (
+        'src="../full-image-viewer.js?v=20261009-titled-downloads-1"',
+        'src="../topic-artwork-details.js?v=20261009-settled-continue-2"',
+    ):
+        if page.count(marker) != 1:
+            errors.append("Emma study dependency missing or duplicated: " + marker)
+    if re.search(r'<script\b[^>]*src="[^"\n]*(?:hero-image-source|hero-details)\.js', page):
+        errors.append("Emma must not load an unmapped hero helper or legacy modal controller")
     return errors
 
 
@@ -239,14 +279,9 @@ def main() -> int:
         errors.append("site-wide artwork detail keys must be unique")
 
     history_text = (ROOT / "church-history.html").read_text(encoding="utf-8")
-    emma_record = re.search(r'<article[^>]*data-artwork-detail-content="history-emma-portrait"[^>]*>', history_text)
-    if not emma_record or any(marker not in emma_record.group(0) for marker in (
-        'data-detail-image="assets/identities/emma-smith-owner-approved-20260930.png"',
-        'data-detail-full="assets/identities/emma-smith-owner-approved-20260930.png"',
-        'data-detail-source="https://www.churchofjesuschrist.org/study/history/topics/emma-hale-smith?lang=eng"',
-        'data-detail-study="church-history.html#history-harmony-title"',
-    )):
-        errors.append("Church History Emma portrait must preserve approved asset, official biography and Harmony study")
+    errors.extend(emma_portrait_errors(history_text))
+    emma_page = (ROOT / "history/emma-hale-smith.html").read_text(encoding="utf-8")
+    errors.extend(emma_reference_errors(emma_page, history_text))
 
     missionary = (ROOT / "missionary.html").read_text(encoding="utf-8")
     mission_image_triggers = re.findall(
@@ -335,7 +370,7 @@ def main() -> int:
         text = (ROOT / relative).read_text(encoding="utf-8", errors="replace")
         for marker in (
             'href="full-image-viewer.css?v=20261007-viewer-controls-1"',
-            'src="full-image-viewer.js?v=20260914-reopen-1"',
+            'src="full-image-viewer.js?v=20261009-titled-downloads-1"',
         ):
             if relative in VISIBLE_HERO_ROUTES | VISIBLE_TOPIC_ROUTES:
                 marker = marker.replace('20260905-viewport', '20261006-versions-1').replace('20260914-reopen-1', '20261006-versions-1')
@@ -348,7 +383,7 @@ def main() -> int:
         text = (ROOT / relative).read_text(encoding="utf-8")
         for marker in (
             'href="../full-image-viewer.css?v=20261007-viewer-controls-1"',
-            'src="../full-image-viewer.js?v=20260914-reopen-1"',
+            'src="../full-image-viewer.js?v=20261009-titled-downloads-1"',
         ):
             if relative in VISIBLE_HERO_ROUTES | VISIBLE_TOPIC_ROUTES:
                 marker = marker.replace('20260905-viewport', '20261006-versions-1').replace('20260914-reopen-1', '20261006-versions-1')
@@ -403,6 +438,10 @@ def main() -> int:
             continue
         hero_pages += 1
         relative = path.relative_to(ROOT).as_posix()
+        if relative == "history/emma-hale-smith.html":
+            # Validated unconditionally above, including missing/duplicate hero.
+            hero_pages -= 1  # Linked Harmony reference is outside the 43 local modals.
+            continue
         if relative in TIMELINE_STUDY_HEROES:
             timeline_references.add(relative)
             errors.extend(timeline_study_hero_errors(relative, page))
@@ -425,13 +464,13 @@ def main() -> int:
                 ('class="fc-life-hero"', 'class="wrong-hero"'),
                 (f'href="../{ready[unit]["full"]}"', 'href="../assets/heroes/home.webp"'),
                 ('data-picture-panel-copy hidden', 'data-picture-panel-copy'),
-                ('../topic-artwork-details.js?v=20261007-scoped-root-1', '../topic-artwork-details.js?v=unknown'),
+                ('../topic-artwork-details.js?v=20261009-settled-continue-2', '../topic-artwork-details.js?v=unknown'),
             ):
                 mutated = page.replace(original, replacement, 1)
                 assert mutated != page
                 assert history_topic_hero_errors(relative, mutated, story, ready), 'History hero mutation escaped'
             assert history_topic_hero_errors(relative, page + '<figure class="fc-life-hero"></figure>', story, ready)
-            assert history_topic_hero_errors(relative, page + '<script src="../topic-artwork-details.js?v=20261007-scoped-root-1"></script>', story, ready)
+            assert history_topic_hero_errors(relative, page + '<script src="../topic-artwork-details.js?v=20261009-settled-continue-2"></script>', story, ready)
             assert history_topic_hero_errors(relative, page, dict(story, hero=dict(story['units'][0], id='wrong-scene')), ready)
             hero_pages -= 1  # Preserve the separate 41-page legacy controller baseline.
             continue
@@ -447,7 +486,7 @@ def main() -> int:
         if relative == "timeline.html" and relative not in VISIBLE_HERO_ROUTES:
             hero_script = "hero-details.js?v=20261002-timeline-1"
         viewer_css = "full-image-viewer.css?v=" + '20261007-viewer-controls-1'
-        viewer_js = "full-image-viewer.js?v=" + ('20261006-versions-1' if relative in VISIBLE_HERO_ROUTES | VISIBLE_TOPIC_ROUTES else '20260914-reopen-1')
+        viewer_js = "full-image-viewer.js?v=" + '20261009-titled-downloads-1'
         for asset in (viewer_css, viewer_js, hero_script, "hero-details.css?v=20260909-warm", "artwork-details.css?v=20260909-warm"):
             if page.count(prefix + asset) != 1:
                 errors.append(f"{relative}: hero study dependency missing or duplicated: {asset}")

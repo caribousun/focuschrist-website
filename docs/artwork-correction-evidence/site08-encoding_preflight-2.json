@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "id": "site08-encoding_preflight-2",
+  "family": "SITE08",
+  "stage": "encoding_preflight",
+  "actual_actor": "/root",
+  "verdict": "CONCUR",
+  "withdrawn": false,
+  "source_report_sha256": "3f0fa6e776f4e3443a6ace70b1798bbcf9f4e9acbd1bfb8a19436d3799bfe816",
+  "source_recorded_at": null,
+  "normalized_at": "2026-10-10T01:59:32.892647+00:00",
+  "evidence_class": "current_reconciliation_of_prospective_events",
+  "subject_sha256": "7a2bbe11f376380b3e79fcb66eda41f006fe6c83eadeeb8611c083654db06678",
+  "findings": "Named source record reviews the exact lossless-source/responsive-delivery encoder specification and guards; later derivative quality is not inferred.",
+  "pixels_inspected": false,
+  "limits": "Exact scoped private-source evidence normalization. No assembled-page/public release or invented canonical precreation event.",
+  "original_event_timestamp": null,
+  "original_message_digest": null,
+  "canonical_full_spec_precreation_claim": false,
+  "reported_original_reviewers": [
+    "/root"
+  ]
+}

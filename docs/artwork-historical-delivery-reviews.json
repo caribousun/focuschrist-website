@@ -1,0 +1,1314 @@
+{
+  "schema": 1,
+  "status": "REVIEWED_EXACT_EVIDENCE",
+  "spec": {
+    "families": [
+      {
+        "id": "Emma-h1",
+        "authority_kind": "historical_reconciliation",
+        "precreation_claim": false,
+        "source": {
+          "sha256": "c1c30bf8f7eeb631f89a78e62c123f774181cc0be807708fe35d1abd951887b7",
+          "public_asset": "assets/page-art/emma-life/emma-h1-review.png",
+          "lineage_receipt": {
+            "path": "docs/reviews/historical-delivery/Emma-h1-source_lineage.json",
+            "sha256": "a1edf8944175eca90eac3bf271cd2da4de69b8f96a740a079809c064df74f4ad"
+          }
+        },
+        "assets": [
+          {
+            "path": "assets/page-art/emma-life/emma-h1-review-1536.webp",
+            "sha256": "d4eebd53b65366d53e5131fd5c9f4341bbd44a67a542c52a61f7c2fd4735137a",
+            "bytes": 1452524,
+            "width": 1536,
+            "height": 1024,
+            "mode": "RGB",
+            "pixel_sha256": "49614df3fe59e5594a8f435f60f3c6ca99a9df64df63da0e405e54efb2670977",
+            "source_sha256": "c1c30bf8f7eeb631f89a78e62c123f774181cc0be807708fe35d1abd951887b7"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-h1-review-640.webp",
+            "sha256": "212674195b1426187dc6dbc4f9d0dfe423a1d8a13cd6c8ef123ebebf56ce3d4a",
+            "bytes": 60376,
+            "width": 640,
+            "height": 427,
+            "mode": "RGB",
+            "pixel_sha256": "0d7f443f36ec4593814e0bd0448e724f7d224d6d45d8e4a4883c45f0ac6ec43f",
+            "source_sha256": "c1c30bf8f7eeb631f89a78e62c123f774181cc0be807708fe35d1abd951887b7"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-h1-review-960.webp",
+            "sha256": "b3c88a65600499b2112f92fc7a56e53355b8dfbd8f750bf150a6577f2be4c9f4",
+            "bytes": 116166,
+            "width": 960,
+            "height": 640,
+            "mode": "RGB",
+            "pixel_sha256": "7e80ba606f094b361be9174c4223e7f9bef7f68a8686203a7dff228e8ee7b048",
+            "source_sha256": "c1c30bf8f7eeb631f89a78e62c123f774181cc0be807708fe35d1abd951887b7"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-h1-review.png",
+            "sha256": "c1c30bf8f7eeb631f89a78e62c123f774181cc0be807708fe35d1abd951887b7",
+            "bytes": 2306981,
+            "width": 1536,
+            "height": 1024,
+            "mode": "RGB",
+            "pixel_sha256": "49614df3fe59e5594a8f435f60f3c6ca99a9df64df63da0e405e54efb2670977",
+            "source_sha256": "c1c30bf8f7eeb631f89a78e62c123f774181cc0be807708fe35d1abd951887b7"
+          }
+        ],
+        "evidence": [
+          {
+            "path": "docs/reviews/historical-delivery/Emma-h1-source_lineage.json",
+            "sha256": "a1edf8944175eca90eac3bf271cd2da4de69b8f96a740a079809c064df74f4ad"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/Emma-h1-finished_pixels.json",
+            "sha256": "820c83914311595c3df7f2f259f309d8ac9f2edf92499d336eef6571c2fb6186"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/Emma-h1-delivery_pixels.json",
+            "sha256": "38e80ebe0182c504755af0f98a45e846a63593899a1231811c6c629618c16e7c"
+          }
+        ],
+        "evidence_roles": {
+          "source_lineage": [
+            0
+          ],
+          "finished_pixels": [
+            1
+          ],
+          "delivery_pixels": [
+            2
+          ]
+        },
+        "original_full_spec_existed": false,
+        "material_historical_additions": [],
+        "current_reconciliation_audits": [
+          {
+            "path": "docs/reviews/historical-delivery/Emma-h1-newton-reconciliation.json",
+            "sha256": "9bc7aeea1b509db3e1163b80866b00e2c11b9971dffb67b2ad8c9e3b0cae007f",
+            "actual_actor": "/root/newton"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/Emma-h1-fermi_current-reconciliation.json",
+            "sha256": "fff64702b0629a8d1cd4a5b3c13d4586fef495702a04beb32590e7c8a7a65cd8",
+            "actual_actor": "/root/fermi_current"
+          }
+        ],
+        "frozen_payload_binding": "ad5a584e75b93159b9669f0ab87b1f03b99a12e0319b84c49d93bc963f811f6f",
+        "frozen_payload_serialized_at": "2026-10-08T23:16:43.298102+00:00"
+      },
+      {
+        "id": "Emma-h2",
+        "authority_kind": "owner_exception",
+        "precreation_claim": false,
+        "source": {
+          "sha256": "809aa5b8a067d5858b328aff37b86ea545c268ed9d0b45f734ab340540802ae4",
+          "public_asset": "assets/page-art/emma-life/emma-h2-review.png",
+          "lineage_receipt": {
+            "path": "docs/reviews/historical-delivery/Emma-h2-source_lineage.json",
+            "sha256": "1e41b56aa3a30c85c1619d22b0a9d6a0895bc294df18d515b4593e2242e6ede3"
+          }
+        },
+        "assets": [
+          {
+            "path": "assets/page-art/emma-life/emma-h2-review-1536.webp",
+            "sha256": "a6d9a261c6f4feef069c62ef9e62135388e5479dc2ca416ce2ca1a1a4866c67e",
+            "bytes": 1241194,
+            "width": 1536,
+            "height": 1024,
+            "mode": "RGB",
+            "pixel_sha256": "d9bdb5e32c57f1bc88bbf4621adc5ee87628ce5035da2b7349a2a9de39d33565",
+            "source_sha256": "809aa5b8a067d5858b328aff37b86ea545c268ed9d0b45f734ab340540802ae4"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-h2-review-640.webp",
+            "sha256": "07706297165c8f0810995da2a0a973e1af542513324ca708da5260d9c6351019",
+            "bytes": 44510,
+            "width": 640,
+            "height": 427,
+            "mode": "RGB",
+            "pixel_sha256": "ff4e4068c3bd76e53ca0bf5e56b7a6c26824e38d93007c503eac9a690a688990",
+            "source_sha256": "809aa5b8a067d5858b328aff37b86ea545c268ed9d0b45f734ab340540802ae4"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-h2-review-960.webp",
+            "sha256": "0fc4e970d604b76ed623151ebc98c9da4061e13080ca79c6fa14d9f8b0c04150",
+            "bytes": 82090,
+            "width": 960,
+            "height": 640,
+            "mode": "RGB",
+            "pixel_sha256": "6828be0cb2f1df2e94ed05f47d3cb22d0039933de9698500d2d2d448833c1ba3",
+            "source_sha256": "809aa5b8a067d5858b328aff37b86ea545c268ed9d0b45f734ab340540802ae4"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-h2-review.png",
+            "sha256": "809aa5b8a067d5858b328aff37b86ea545c268ed9d0b45f734ab340540802ae4",
+            "bytes": 1926013,
+            "width": 1536,
+            "height": 1024,
+            "mode": "RGB",
+            "pixel_sha256": "d9bdb5e32c57f1bc88bbf4621adc5ee87628ce5035da2b7349a2a9de39d33565",
+            "source_sha256": "809aa5b8a067d5858b328aff37b86ea545c268ed9d0b45f734ab340540802ae4"
+          }
+        ],
+        "evidence": [
+          {
+            "path": "docs/reviews/historical-delivery/Emma-h2-source_lineage.json",
+            "sha256": "1e41b56aa3a30c85c1619d22b0a9d6a0895bc294df18d515b4593e2242e6ede3"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/Emma-h2-finished_pixels.json",
+            "sha256": "4fe7d625438030324d0dd0b0fd66a2cf4164f7ca4d00fdf923b9b955cf9d922a"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/Emma-h2-delivery_pixels.json",
+            "sha256": "d69689f350f9014ed64cc53f8385f1dfca256df6a1137c43dfd097adfef674e7"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/Emma-h2-direct_owner_exception.json",
+            "sha256": "65c494964675c781c04c7ffa282f633fcae4d29b09e1cfe26983c88456ef7234"
+          }
+        ],
+        "evidence_roles": {
+          "source_lineage": [
+            0
+          ],
+          "finished_pixels": [
+            1
+          ],
+          "delivery_pixels": [
+            2
+          ],
+          "direct_owner_exception": [
+            3
+          ]
+        },
+        "exception_source_sha256": "809aa5b8a067d5858b328aff37b86ea545c268ed9d0b45f734ab340540802ae4",
+        "exception_scope": "historical_precreation_evidence_only"
+      },
+      {
+        "id": "Emma-h3",
+        "authority_kind": "owner_exception",
+        "precreation_claim": false,
+        "source": {
+          "sha256": "69108a86dfb3fedb18480e6924d178d2b542577a8790f407d8c40b1823d39560",
+          "public_asset": "assets/page-art/emma-life/emma-h3-review.png",
+          "lineage_receipt": {
+            "path": "docs/reviews/historical-delivery/Emma-h3-source_lineage.json",
+            "sha256": "d9480bc26124b335751ae301b048ff1994d826fc65b427a160260fda4ec891ee"
+          }
+        },
+        "assets": [
+          {
+            "path": "assets/page-art/emma-life/emma-h3-review-1536.webp",
+            "sha256": "d71fc2d2940b452239cb50803c1f0348b173c7764e7fef205cb144058408653e",
+            "bytes": 1419194,
+            "width": 1536,
+            "height": 1024,
+            "mode": "RGB",
+            "pixel_sha256": "be7704183250b8564102ef9b71c4c18c9d249dd1945f3bc80ce9277d30f7ae2a",
+            "source_sha256": "69108a86dfb3fedb18480e6924d178d2b542577a8790f407d8c40b1823d39560"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-h3-review-640.webp",
+            "sha256": "10b5d4b9a2b78dac4e9aa7b9ba8542a2a9e9b1245b966ba86492a54a93696976",
+            "bytes": 57320,
+            "width": 640,
+            "height": 427,
+            "mode": "RGB",
+            "pixel_sha256": "1023a091734d1c454fd419a6357749d730b57269258457e7e1b54afea9e1cc43",
+            "source_sha256": "69108a86dfb3fedb18480e6924d178d2b542577a8790f407d8c40b1823d39560"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-h3-review-960.webp",
+            "sha256": "f8daa1c997d4db97953954583ed112503d0b9cbb1afcceb34351e89d36be4a5a",
+            "bytes": 107332,
+            "width": 960,
+            "height": 640,
+            "mode": "RGB",
+            "pixel_sha256": "de8b227972e51acd445f85a4896e4e247c9994d3941e3c3c8390eb787fe7fddf",
+            "source_sha256": "69108a86dfb3fedb18480e6924d178d2b542577a8790f407d8c40b1823d39560"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-h3-review.png",
+            "sha256": "69108a86dfb3fedb18480e6924d178d2b542577a8790f407d8c40b1823d39560",
+            "bytes": 2199426,
+            "width": 1536,
+            "height": 1024,
+            "mode": "RGB",
+            "pixel_sha256": "be7704183250b8564102ef9b71c4c18c9d249dd1945f3bc80ce9277d30f7ae2a",
+            "source_sha256": "69108a86dfb3fedb18480e6924d178d2b542577a8790f407d8c40b1823d39560"
+          }
+        ],
+        "evidence": [
+          {
+            "path": "docs/reviews/historical-delivery/Emma-h3-source_lineage.json",
+            "sha256": "d9480bc26124b335751ae301b048ff1994d826fc65b427a160260fda4ec891ee"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/Emma-h3-finished_pixels.json",
+            "sha256": "2994d17c561cc81b51ba9ddb94fce4abd9108f9a92129ee318181d7b95c31183"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/Emma-h3-delivery_pixels.json",
+            "sha256": "e51fb1564daf3c37d6ca1004e5698e60f1676ed1db2f1958e9ae088883ac529b"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/Emma-h3-direct_owner_exception.json",
+            "sha256": "a206b67b47c319a58d1c63c442052a1d930280e7cc93ee9a4aad42b9a03d2b12"
+          }
+        ],
+        "evidence_roles": {
+          "source_lineage": [
+            0
+          ],
+          "finished_pixels": [
+            1
+          ],
+          "delivery_pixels": [
+            2
+          ],
+          "direct_owner_exception": [
+            3
+          ]
+        },
+        "exception_source_sha256": "69108a86dfb3fedb18480e6924d178d2b542577a8790f407d8c40b1823d39560",
+        "exception_scope": "historical_precreation_evidence_only"
+      },
+      {
+        "id": "Emma-h4",
+        "authority_kind": "prospective_v2",
+        "precreation_claim": true,
+        "source": {
+          "sha256": "24e0b13c84cabae92c972034f1fc775162b2800a93e4b14d876ca16c31a269ea",
+          "public_asset": "assets/page-art/emma-life/emma-h4-review.png",
+          "lineage_receipt": {
+            "path": "docs/reviews/historical-delivery/Emma-h4-source_lineage.json",
+            "sha256": "0552765a5554acbfe7e7767a888f2911b49634cf3cabda9db2ace31b99adc04e"
+          }
+        },
+        "assets": [
+          {
+            "path": "assets/page-art/emma-life/emma-h4-review-1536.webp",
+            "sha256": "8763f2acd892418a6a1a02b3aa9b9df9fc776cf85b8f90a8e5de842b873c045d",
+            "bytes": 1536728,
+            "width": 1536,
+            "height": 1024,
+            "mode": "RGB",
+            "pixel_sha256": "be932a58e68665ce0b39985cc65eb9cf04444cb60294b0a4ccf414bd3ba5a1a1",
+            "source_sha256": "24e0b13c84cabae92c972034f1fc775162b2800a93e4b14d876ca16c31a269ea"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-h4-review-640.webp",
+            "sha256": "18f26942633eed7fe8fa5d24917e3868229e17ae524d324b8de5dc0a038534e1",
+            "bytes": 69922,
+            "width": 640,
+            "height": 427,
+            "mode": "RGB",
+            "pixel_sha256": "38f86a0c607ddcc6b8f2a0be89b2552a6b8eb303e00303347ff2c8b1c35a6bae",
+            "source_sha256": "24e0b13c84cabae92c972034f1fc775162b2800a93e4b14d876ca16c31a269ea"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-h4-review-960.webp",
+            "sha256": "620309036f886f59b1a67aa69aa8405e420c65326b3ef206ce90a71fb8a6a59a",
+            "bytes": 128644,
+            "width": 960,
+            "height": 640,
+            "mode": "RGB",
+            "pixel_sha256": "4af199ccb90ffd94343ec7ef39279a75cee7679e8d8da2e59afa01fb32696fc2",
+            "source_sha256": "24e0b13c84cabae92c972034f1fc775162b2800a93e4b14d876ca16c31a269ea"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-h4-review.png",
+            "sha256": "24e0b13c84cabae92c972034f1fc775162b2800a93e4b14d876ca16c31a269ea",
+            "bytes": 2384451,
+            "width": 1536,
+            "height": 1024,
+            "mode": "RGB",
+            "pixel_sha256": "be932a58e68665ce0b39985cc65eb9cf04444cb60294b0a4ccf414bd3ba5a1a1",
+            "source_sha256": "24e0b13c84cabae92c972034f1fc775162b2800a93e4b14d876ca16c31a269ea"
+          }
+        ],
+        "evidence": [
+          {
+            "path": "docs/reviews/historical-delivery/Emma-h4-source_lineage.json",
+            "sha256": "0552765a5554acbfe7e7767a888f2911b49634cf3cabda9db2ace31b99adc04e"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/Emma-h4-finished_pixels.json",
+            "sha256": "7c585b57f93a05f8b9b06d6cd700c9296c51d04c2b208116ebd095096059d7bb"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/Emma-h4-delivery_pixels.json",
+            "sha256": "191e2e79fc083196eb2b7419e8e8f640c70159a5f5f09fa8befde8444e72ac43"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/Emma-h4-prospective_approval.json",
+            "sha256": "059cac7d6541398c9455d0bd589668e551953835a6990f05e4d6f2bd811dadf9"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/Emma-h4-generation_result.json",
+            "sha256": "200a14dba03404caba859d18fecbf379d41b929e7d0035f0142f32173703a93e"
+          }
+        ],
+        "evidence_roles": {
+          "source_lineage": [
+            0
+          ],
+          "finished_pixels": [
+            1
+          ],
+          "delivery_pixels": [
+            2
+          ],
+          "prospective_approval": [
+            3
+          ],
+          "generation_result": [
+            4
+          ]
+        }
+      },
+      {
+        "id": "Emma-h5",
+        "authority_kind": "prospective_v2",
+        "precreation_claim": true,
+        "source": {
+          "sha256": "35231bc6e2032cc1f07cc2ffc9ad65c43851aa3c0f05feee9444d07e696a9f50",
+          "public_asset": "assets/page-art/emma-life/emma-h5-review.png",
+          "lineage_receipt": {
+            "path": "docs/reviews/historical-delivery/Emma-h5-source_lineage.json",
+            "sha256": "ec9f21a88fb34ade9537ed942f093e842d7e0118d7767283b2413fcb7524736c"
+          }
+        },
+        "assets": [
+          {
+            "path": "assets/page-art/emma-life/emma-h5-review-1536.webp",
+            "sha256": "f9ba529d989819e97a096223972ac03bf4e216dda8b7281ea94550caae88ec06",
+            "bytes": 1388884,
+            "width": 1536,
+            "height": 1024,
+            "mode": "RGB",
+            "pixel_sha256": "78162ee5974b5267ff7a13deae665c3acb258b4173f4056e02c3610436cdb70d",
+            "source_sha256": "35231bc6e2032cc1f07cc2ffc9ad65c43851aa3c0f05feee9444d07e696a9f50"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-h5-review-640.webp",
+            "sha256": "f02d49d7b4144e3421c53054d6e9351a3b16dca73990c3f01dc01cd38fa72bf7",
+            "bytes": 58510,
+            "width": 640,
+            "height": 427,
+            "mode": "RGB",
+            "pixel_sha256": "b15474f7a05444865ba9350697d66a116bbb34fcde8e071c3e5f2d337f67abbe",
+            "source_sha256": "35231bc6e2032cc1f07cc2ffc9ad65c43851aa3c0f05feee9444d07e696a9f50"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-h5-review-960.webp",
+            "sha256": "6e75ec1a00f1dd881e948edd2363634bd0fe2c3042b4e37e3884fab0866eacb6",
+            "bytes": 107122,
+            "width": 960,
+            "height": 640,
+            "mode": "RGB",
+            "pixel_sha256": "1576aa0e8adb21d47fd6fe7853254256b5b04fcd9e7cc9681590daa72c07d4ad",
+            "source_sha256": "35231bc6e2032cc1f07cc2ffc9ad65c43851aa3c0f05feee9444d07e696a9f50"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-h5-review.png",
+            "sha256": "35231bc6e2032cc1f07cc2ffc9ad65c43851aa3c0f05feee9444d07e696a9f50",
+            "bytes": 2175905,
+            "width": 1536,
+            "height": 1024,
+            "mode": "RGB",
+            "pixel_sha256": "78162ee5974b5267ff7a13deae665c3acb258b4173f4056e02c3610436cdb70d",
+            "source_sha256": "35231bc6e2032cc1f07cc2ffc9ad65c43851aa3c0f05feee9444d07e696a9f50"
+          }
+        ],
+        "evidence": [
+          {
+            "path": "docs/reviews/historical-delivery/Emma-h5-source_lineage.json",
+            "sha256": "ec9f21a88fb34ade9537ed942f093e842d7e0118d7767283b2413fcb7524736c"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/Emma-h5-finished_pixels.json",
+            "sha256": "6a2f11251632bbd0ec9f25930fb21f7dbcc1b72cb6d577939a2129a79bd0be72"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/Emma-h5-delivery_pixels.json",
+            "sha256": "56a804e77c6a14b3e717e2b34459d56cc9eee03c6de8b6097ffbfd6de09d4603"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/Emma-h5-prospective_approval.json",
+            "sha256": "7bee05e74fead50a47f6e009d035f0c75f6457414e9191f501f546e5b2a51646"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/Emma-h5-generation_result.json",
+            "sha256": "e6281d1e91821786d787408033dc6807326402703881ed269a1177eceefea81f"
+          }
+        ],
+        "evidence_roles": {
+          "source_lineage": [
+            0
+          ],
+          "finished_pixels": [
+            1
+          ],
+          "delivery_pixels": [
+            2
+          ],
+          "prospective_approval": [
+            3
+          ],
+          "generation_result": [
+            4
+          ]
+        }
+      },
+      {
+        "id": "Emma-c1",
+        "authority_kind": "historical_reconciliation",
+        "precreation_claim": false,
+        "source": {
+          "sha256": "830d21b1dcf8398cdddb62585eca4ec60f0f3f62b5244c9ad6a4f299669e9de3",
+          "public_asset": "assets/page-art/emma-life/emma-c1-review.png",
+          "lineage_receipt": {
+            "path": "docs/reviews/historical-delivery/Emma-c1-source_lineage.json",
+            "sha256": "9629e04896bb8723c6cfbd996cc5a28999d15d021b2b074f438abb2550dc6f0b"
+          }
+        },
+        "assets": [
+          {
+            "path": "assets/page-art/emma-life/emma-c1-review-1536.webp",
+            "sha256": "0568a1fcccfeb79f76c9c79f9c008af905c964728c31ac67de890245d8e600d3",
+            "bytes": 1540526,
+            "width": 1536,
+            "height": 1024,
+            "mode": "RGB",
+            "pixel_sha256": "7a7ece199b1bdb66b1ac83f3cb57eb7778e6ba4128ca911df763f35fa5618fa7",
+            "source_sha256": "830d21b1dcf8398cdddb62585eca4ec60f0f3f62b5244c9ad6a4f299669e9de3"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-c1-review-640.webp",
+            "sha256": "d66385fccfc850c051beb8b925bc06675353f8a83f762f4c5f589378943796ca",
+            "bytes": 67156,
+            "width": 640,
+            "height": 427,
+            "mode": "RGB",
+            "pixel_sha256": "f64977297dd4a0b900fb7bcddee822e7ef714a05d979a7783e55d6f63ebf43fe",
+            "source_sha256": "830d21b1dcf8398cdddb62585eca4ec60f0f3f62b5244c9ad6a4f299669e9de3"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-c1-review-960.webp",
+            "sha256": "f91829d8e6bb7f275564a6e29fc52a6bddd5ecb189278df23cbd1de88b13ad69",
+            "bytes": 125672,
+            "width": 960,
+            "height": 640,
+            "mode": "RGB",
+            "pixel_sha256": "0579b910044420ad56105794cf5d80d158c5a69822fb6447e865a0a1b17adb5e",
+            "source_sha256": "830d21b1dcf8398cdddb62585eca4ec60f0f3f62b5244c9ad6a4f299669e9de3"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-c1-review.png",
+            "sha256": "830d21b1dcf8398cdddb62585eca4ec60f0f3f62b5244c9ad6a4f299669e9de3",
+            "bytes": 2420347,
+            "width": 1536,
+            "height": 1024,
+            "mode": "RGB",
+            "pixel_sha256": "7a7ece199b1bdb66b1ac83f3cb57eb7778e6ba4128ca911df763f35fa5618fa7",
+            "source_sha256": "830d21b1dcf8398cdddb62585eca4ec60f0f3f62b5244c9ad6a4f299669e9de3"
+          }
+        ],
+        "evidence": [
+          {
+            "path": "docs/reviews/historical-delivery/Emma-c1-source_lineage.json",
+            "sha256": "9629e04896bb8723c6cfbd996cc5a28999d15d021b2b074f438abb2550dc6f0b"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/Emma-c1-finished_pixels.json",
+            "sha256": "393787883dd40cf0e81cf95cbfa4267bb5c3c0d58da074bef737ead0cf596221"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/Emma-c1-delivery_pixels.json",
+            "sha256": "a922a9eb65931518626a45e57c3db578177d8e285ef890f6bcf6f4040d79247e"
+          }
+        ],
+        "evidence_roles": {
+          "source_lineage": [
+            0
+          ],
+          "finished_pixels": [
+            1
+          ],
+          "delivery_pixels": [
+            2
+          ]
+        },
+        "original_full_spec_existed": false,
+        "material_historical_additions": [],
+        "current_reconciliation_audits": [
+          {
+            "path": "docs/reviews/historical-delivery/Emma-c1-newton-reconciliation.json",
+            "sha256": "0a1e0624c934b52301508f82b4cf32f6392a9e16e5b4e2ad35f43c473a5a9e39",
+            "actual_actor": "/root/newton"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/Emma-c1-fermi_current-reconciliation.json",
+            "sha256": "8c168e2b3288cfd456819a5c8c32fc6737362aebbacea891b2afcf65546aee6b",
+            "actual_actor": "/root/fermi_current"
+          }
+        ],
+        "frozen_payload_binding": "8fff9c678e7740a5116d9fae454bfafebaba40f56abcd7c5f2e64cd6b3b78ef2",
+        "frozen_payload_serialized_at": "2026-10-08T23:16:43.843576+00:00"
+      },
+      {
+        "id": "Emma-c2",
+        "authority_kind": "owner_exception",
+        "precreation_claim": false,
+        "source": {
+          "sha256": "b9f28325dff120adbdcc8a1ca9f0d1cfa5e89c2db43ac5a228fd1f17d1809f2e",
+          "public_asset": "assets/page-art/emma-life/emma-c2-review.png",
+          "lineage_receipt": {
+            "path": "docs/reviews/historical-delivery/Emma-c2-source_lineage.json",
+            "sha256": "7bdce36a89128a5bf104dead8c296d5eeb197c96d76751aaa77a5a834d4092a1"
+          }
+        },
+        "assets": [
+          {
+            "path": "assets/page-art/emma-life/emma-c2-review-1536.webp",
+            "sha256": "f748b109f571920526c6828a42ba7356c1bcb44aaaab9b5e189c660d3937783d",
+            "bytes": 1617430,
+            "width": 1536,
+            "height": 1024,
+            "mode": "RGB",
+            "pixel_sha256": "5d0581125c43425018287a4f438539a8c755c580f45431759683bb2610029975",
+            "source_sha256": "b9f28325dff120adbdcc8a1ca9f0d1cfa5e89c2db43ac5a228fd1f17d1809f2e"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-c2-review-640.webp",
+            "sha256": "f25a14501108511062332dbc95c88d1ea364cc5b9ee311e82e50a6fdd7732266",
+            "bytes": 78146,
+            "width": 640,
+            "height": 427,
+            "mode": "RGB",
+            "pixel_sha256": "9b71ba0b46a7c604a2c9e27bd95f8badcb943714c3110a6577094cec4149273e",
+            "source_sha256": "b9f28325dff120adbdcc8a1ca9f0d1cfa5e89c2db43ac5a228fd1f17d1809f2e"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-c2-review-960.webp",
+            "sha256": "49d0b218268f0e2f73600333acc16d75b5ffb87aef8709640dbefe017bfa6ae7",
+            "bytes": 144136,
+            "width": 960,
+            "height": 640,
+            "mode": "RGB",
+            "pixel_sha256": "0944ce50c2682b23bf4de1d885db536c8aa84b70d860524ec01fad8099aa6cd0",
+            "source_sha256": "b9f28325dff120adbdcc8a1ca9f0d1cfa5e89c2db43ac5a228fd1f17d1809f2e"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-c2-review.png",
+            "sha256": "b9f28325dff120adbdcc8a1ca9f0d1cfa5e89c2db43ac5a228fd1f17d1809f2e",
+            "bytes": 2581921,
+            "width": 1536,
+            "height": 1024,
+            "mode": "RGB",
+            "pixel_sha256": "5d0581125c43425018287a4f438539a8c755c580f45431759683bb2610029975",
+            "source_sha256": "b9f28325dff120adbdcc8a1ca9f0d1cfa5e89c2db43ac5a228fd1f17d1809f2e"
+          }
+        ],
+        "evidence": [
+          {
+            "path": "docs/reviews/historical-delivery/Emma-c2-source_lineage.json",
+            "sha256": "7bdce36a89128a5bf104dead8c296d5eeb197c96d76751aaa77a5a834d4092a1"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/Emma-c2-finished_pixels.json",
+            "sha256": "d995f2a392509c5add2bad15c94a7716d5f72e9c5411a8e245496035d79c47d9"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/Emma-c2-delivery_pixels.json",
+            "sha256": "71ef819c67e6d6dd553444a8b989d09a36381f78198a76bd83a07d7e2630d1ca"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/Emma-c2-direct_owner_exception.json",
+            "sha256": "c1a88f4d2bd9b480fc0203d6bb5878ac2ae6aefd8fe5db7fe7af30aaa318f39a"
+          }
+        ],
+        "evidence_roles": {
+          "source_lineage": [
+            0
+          ],
+          "finished_pixels": [
+            1
+          ],
+          "delivery_pixels": [
+            2
+          ],
+          "direct_owner_exception": [
+            3
+          ]
+        },
+        "exception_source_sha256": "b9f28325dff120adbdcc8a1ca9f0d1cfa5e89c2db43ac5a228fd1f17d1809f2e",
+        "exception_scope": "historical_precreation_evidence_only"
+      },
+      {
+        "id": "Emma-c3",
+        "authority_kind": "owner_exception",
+        "precreation_claim": false,
+        "source": {
+          "sha256": "8c8514366f3c1a85c2acdbad2e3f3ce894eef3959c40cc8061e01f51944b9950",
+          "public_asset": "assets/page-art/emma-life/emma-c3-review.png",
+          "lineage_receipt": {
+            "path": "docs/reviews/historical-delivery/Emma-c3-source_lineage.json",
+            "sha256": "f5be4e6cfc7000ca0d6bf7a5f6db96b838537d3263cf3a6d780a86ed56d0b62d"
+          }
+        },
+        "assets": [
+          {
+            "path": "assets/page-art/emma-life/emma-c3-review-1536.webp",
+            "sha256": "3bede968c372a649c46e397c520ce82b6a38ba9ab01cf99290b904d1654d94df",
+            "bytes": 1220660,
+            "width": 1536,
+            "height": 1024,
+            "mode": "RGB",
+            "pixel_sha256": "a2e56eebf0b05dc715d9dec559c799a574b6c260ed523b2661206b2905860a58",
+            "source_sha256": "8c8514366f3c1a85c2acdbad2e3f3ce894eef3959c40cc8061e01f51944b9950"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-c3-review-640.webp",
+            "sha256": "dc07fe08609196422782bcf64e3b2fa72b21819344a9aa22d592a5d46eda4699",
+            "bytes": 43606,
+            "width": 640,
+            "height": 427,
+            "mode": "RGB",
+            "pixel_sha256": "5c4ea5cb0be9d0f8ac65895ac2ad6f0aeb21ef08d0b1fd2caef1acc2c63aa3c4",
+            "source_sha256": "8c8514366f3c1a85c2acdbad2e3f3ce894eef3959c40cc8061e01f51944b9950"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-c3-review-960.webp",
+            "sha256": "7ae9360f21bc7bdbccaf7986222512b8aa80cd95611cea51bbf39120a2939836",
+            "bytes": 75724,
+            "width": 960,
+            "height": 640,
+            "mode": "RGB",
+            "pixel_sha256": "396f024db03857d275733c37ca26e17fd08077ff9e412d68e69f18dda8f8d565",
+            "source_sha256": "8c8514366f3c1a85c2acdbad2e3f3ce894eef3959c40cc8061e01f51944b9950"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-c3-review.png",
+            "sha256": "8c8514366f3c1a85c2acdbad2e3f3ce894eef3959c40cc8061e01f51944b9950",
+            "bytes": 1914014,
+            "width": 1536,
+            "height": 1024,
+            "mode": "RGB",
+            "pixel_sha256": "a2e56eebf0b05dc715d9dec559c799a574b6c260ed523b2661206b2905860a58",
+            "source_sha256": "8c8514366f3c1a85c2acdbad2e3f3ce894eef3959c40cc8061e01f51944b9950"
+          }
+        ],
+        "evidence": [
+          {
+            "path": "docs/reviews/historical-delivery/Emma-c3-source_lineage.json",
+            "sha256": "f5be4e6cfc7000ca0d6bf7a5f6db96b838537d3263cf3a6d780a86ed56d0b62d"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/Emma-c3-finished_pixels.json",
+            "sha256": "230fe8d7ee1327c2c7dff596ff6d1a1ef57a1f857380cedf7138d0e5642c01f4"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/Emma-c3-delivery_pixels.json",
+            "sha256": "7b0dc32a4d175c4f5c97af41fe7fdbcecc08b13ab4e308ca3510e9a9d4d1ecee"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/Emma-c3-direct_owner_exception.json",
+            "sha256": "a6df6083daf63c83716aba1b8616675afa261272313df98c044e6f095c37306d"
+          }
+        ],
+        "evidence_roles": {
+          "source_lineage": [
+            0
+          ],
+          "finished_pixels": [
+            1
+          ],
+          "delivery_pixels": [
+            2
+          ],
+          "direct_owner_exception": [
+            3
+          ]
+        },
+        "exception_source_sha256": "8c8514366f3c1a85c2acdbad2e3f3ce894eef3959c40cc8061e01f51944b9950",
+        "exception_scope": "historical_precreation_evidence_only"
+      },
+      {
+        "id": "Emma-c4",
+        "authority_kind": "owner_exception",
+        "precreation_claim": false,
+        "source": {
+          "sha256": "8c9e0230646e8f4fa0b635cd0b14848dc1f22a991649d8243148a1773a68b9a9",
+          "public_asset": "assets/page-art/emma-life/emma-c4-review.png",
+          "lineage_receipt": {
+            "path": "docs/reviews/historical-delivery/Emma-c4-source_lineage.json",
+            "sha256": "818b12f4df55b0728326de4fd5d721236e565f709a1663b1650dc26800a5005d"
+          }
+        },
+        "assets": [
+          {
+            "path": "assets/page-art/emma-life/emma-c4-review-1536.webp",
+            "sha256": "6acdf8b17dc9cbed8a780cc0894770f0f60e7022982cf7db67fb04bb6191bf93",
+            "bytes": 1997538,
+            "width": 1536,
+            "height": 1024,
+            "mode": "RGB",
+            "pixel_sha256": "f697ddda6264e0555f3c15d239514754d90a79675c6b2fa4c32349f3e8c6cbe3",
+            "source_sha256": "8c9e0230646e8f4fa0b635cd0b14848dc1f22a991649d8243148a1773a68b9a9"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-c4-review-640.webp",
+            "sha256": "c74ba207ec643ffacc8a01eb51ffbf12637f09039cbc7fda684d6e5db52f6741",
+            "bytes": 109704,
+            "width": 640,
+            "height": 427,
+            "mode": "RGB",
+            "pixel_sha256": "f5befb845214558a1bd507f54df203981cf405f330e090655c7dac84eb91fb7d",
+            "source_sha256": "8c9e0230646e8f4fa0b635cd0b14848dc1f22a991649d8243148a1773a68b9a9"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-c4-review-960.webp",
+            "sha256": "1e5c08c5b4fdb1071b1460a4dac8621cca021aa089b1a5c1022bce54cadecbe0",
+            "bytes": 211106,
+            "width": 960,
+            "height": 640,
+            "mode": "RGB",
+            "pixel_sha256": "079f309f27009e1d674767c4d43b787ca05312314a5a5b413e04a837e42cf8fc",
+            "source_sha256": "8c9e0230646e8f4fa0b635cd0b14848dc1f22a991649d8243148a1773a68b9a9"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-c4-review.png",
+            "sha256": "8c9e0230646e8f4fa0b635cd0b14848dc1f22a991649d8243148a1773a68b9a9",
+            "bytes": 3068534,
+            "width": 1536,
+            "height": 1024,
+            "mode": "RGB",
+            "pixel_sha256": "f697ddda6264e0555f3c15d239514754d90a79675c6b2fa4c32349f3e8c6cbe3",
+            "source_sha256": "8c9e0230646e8f4fa0b635cd0b14848dc1f22a991649d8243148a1773a68b9a9"
+          }
+        ],
+        "evidence": [
+          {
+            "path": "docs/reviews/historical-delivery/Emma-c4-source_lineage.json",
+            "sha256": "818b12f4df55b0728326de4fd5d721236e565f709a1663b1650dc26800a5005d"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/Emma-c4-finished_pixels.json",
+            "sha256": "dd45d18d9980aa9892f5cfbac0d35bc475a7c9774a838f7839b182b8e935e2c5"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/Emma-c4-delivery_pixels.json",
+            "sha256": "78f13b665787cc2080beea3fd3e33c27021e3e8dc4e81537aba469dbd7dc93bf"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/Emma-c4-direct_owner_exception.json",
+            "sha256": "390f7decf6a5dfc73008aa6ff1835abad567364b2a6cba5fe222343a9f8213ec"
+          }
+        ],
+        "evidence_roles": {
+          "source_lineage": [
+            0
+          ],
+          "finished_pixels": [
+            1
+          ],
+          "delivery_pixels": [
+            2
+          ],
+          "direct_owner_exception": [
+            3
+          ]
+        },
+        "exception_source_sha256": "8c9e0230646e8f4fa0b635cd0b14848dc1f22a991649d8243148a1773a68b9a9",
+        "exception_scope": "historical_precreation_evidence_only"
+      },
+      {
+        "id": "Emma-c5",
+        "authority_kind": "owner_exception",
+        "precreation_claim": false,
+        "source": {
+          "sha256": "af88645f3a18a51e398319b00a198ee0f437f57652716e00e5e222864f3bdf5e",
+          "public_asset": "assets/page-art/emma-life/emma-c5-review.png",
+          "lineage_receipt": {
+            "path": "docs/reviews/historical-delivery/Emma-c5-source_lineage.json",
+            "sha256": "a954cc9be7e170fbe8a32ec8c1bab71e9ce3802c7ea3136d142f730392574f80"
+          }
+        },
+        "assets": [
+          {
+            "path": "assets/page-art/emma-life/emma-c5-review-1536.webp",
+            "sha256": "8e2484ae24f643c90e5d6eb65d207ff34ff4393c4bb11938f889d9b1a1cbc5fb",
+            "bytes": 1582280,
+            "width": 1536,
+            "height": 1024,
+            "mode": "RGB",
+            "pixel_sha256": "a2d10f748eb3e8ae932d33eaeefb22e5f486b28251df65a1018305c604dfbb50",
+            "source_sha256": "af88645f3a18a51e398319b00a198ee0f437f57652716e00e5e222864f3bdf5e"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-c5-review-640.webp",
+            "sha256": "0e43abea649096126f97dca2923a9bd927e53816eddf3d918b1198ed2f245df8",
+            "bytes": 68870,
+            "width": 640,
+            "height": 427,
+            "mode": "RGB",
+            "pixel_sha256": "c64c16c31684a33ebd2c3535ee902b1d6cc4944536736a285367728a2add5d95",
+            "source_sha256": "af88645f3a18a51e398319b00a198ee0f437f57652716e00e5e222864f3bdf5e"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-c5-review-960.webp",
+            "sha256": "a30ccdda3b076d0cef767384dfbbd4f679ade71b1f739ed81f8b029e6ea11c1a",
+            "bytes": 126060,
+            "width": 960,
+            "height": 640,
+            "mode": "RGB",
+            "pixel_sha256": "92c639987601184cef1fb2fdc72cafbb71e065f48915a59f770be2b3474a2423",
+            "source_sha256": "af88645f3a18a51e398319b00a198ee0f437f57652716e00e5e222864f3bdf5e"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-c5-review.png",
+            "sha256": "af88645f3a18a51e398319b00a198ee0f437f57652716e00e5e222864f3bdf5e",
+            "bytes": 2493610,
+            "width": 1536,
+            "height": 1024,
+            "mode": "RGB",
+            "pixel_sha256": "a2d10f748eb3e8ae932d33eaeefb22e5f486b28251df65a1018305c604dfbb50",
+            "source_sha256": "af88645f3a18a51e398319b00a198ee0f437f57652716e00e5e222864f3bdf5e"
+          }
+        ],
+        "evidence": [
+          {
+            "path": "docs/reviews/historical-delivery/Emma-c5-source_lineage.json",
+            "sha256": "a954cc9be7e170fbe8a32ec8c1bab71e9ce3802c7ea3136d142f730392574f80"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/Emma-c5-finished_pixels.json",
+            "sha256": "27252366b3ade3ec829ac8688a4bb6fd16f251397a6cba402da6c0a4eba26058"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/Emma-c5-delivery_pixels.json",
+            "sha256": "0ce40bf92cf1c50a8c23584506a0ca9e91176263f293f8a5141848b42899597a"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/Emma-c5-direct_owner_exception.json",
+            "sha256": "9d8e51ee96966a752be4feb3b4c83bdca210673a8de0315f926707c0c33378b2"
+          }
+        ],
+        "evidence_roles": {
+          "source_lineage": [
+            0
+          ],
+          "finished_pixels": [
+            1
+          ],
+          "delivery_pixels": [
+            2
+          ],
+          "direct_owner_exception": [
+            3
+          ]
+        },
+        "exception_source_sha256": "af88645f3a18a51e398319b00a198ee0f437f57652716e00e5e222864f3bdf5e",
+        "exception_scope": "historical_precreation_evidence_only"
+      },
+      {
+        "id": "SITE02",
+        "authority_kind": "owner_exception",
+        "precreation_claim": false,
+        "source": {
+          "sha256": "9bb03bbdc49f680f8c17e2552a57c7e583627dcce08f8ae0b857d2a7e5ce83ba",
+          "public_asset": null,
+          "lineage_receipt": {
+            "path": "docs/reviews/historical-delivery/SITE02-source_lineage.json",
+            "sha256": "3ce83d4b0542b1f43e2f081ec74b4912d3bf4f4e8afbdd528f8d4d639f31f858"
+          }
+        },
+        "assets": [
+          {
+            "path": "assets/page-art/bom-evidences/joseph-emma-walk-body-v2-960.webp",
+            "sha256": "b5767224123e0e26ea91681cd192f11eabf2d1c30430d8ca1a842e54c4351341",
+            "bytes": 149464,
+            "width": 960,
+            "height": 640,
+            "mode": "RGB",
+            "pixel_sha256": "7460ac80a1ecf4a0288f703f3c84151ee5511f4daf730aaf223e372f7df48e63",
+            "source_sha256": "9bb03bbdc49f680f8c17e2552a57c7e583627dcce08f8ae0b857d2a7e5ce83ba"
+          },
+          {
+            "path": "assets/page-art/bom-evidences/joseph-emma-walk-body-v2.webp",
+            "sha256": "f91d7adb0488df4d235e0b400c6e451e90486965b951bcf9c262b58715827a3f",
+            "bytes": 1474494,
+            "width": 1536,
+            "height": 1024,
+            "mode": "RGB",
+            "pixel_sha256": "79f959f15c6848c18abe20830eeb80be290439f5143eb51ef809f80d406e0cae",
+            "source_sha256": "9bb03bbdc49f680f8c17e2552a57c7e583627dcce08f8ae0b857d2a7e5ce83ba"
+          }
+        ],
+        "evidence": [
+          {
+            "path": "docs/reviews/historical-delivery/SITE02-source_lineage.json",
+            "sha256": "3ce83d4b0542b1f43e2f081ec74b4912d3bf4f4e8afbdd528f8d4d639f31f858"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/SITE02-finished_pixels.json",
+            "sha256": "6915f5a5945b101854ea48fd7fd11a27d3ce6dac09de00eb67edcbcf1935b188"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/SITE02-delivery_pixels.json",
+            "sha256": "e608170a654daf0fba63e26704aad03540478610827796f413bbcfb55daf0d4c"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/SITE02-direct_owner_exception.json",
+            "sha256": "db8e34c0e1d22c63b77e63ab31039c152e4c5d727b42003e033c0565a1cceb77"
+          }
+        ],
+        "evidence_roles": {
+          "source_lineage": [
+            0
+          ],
+          "finished_pixels": [
+            1
+          ],
+          "delivery_pixels": [
+            2
+          ],
+          "direct_owner_exception": [
+            3
+          ]
+        },
+        "exception_source_sha256": "9bb03bbdc49f680f8c17e2552a57c7e583627dcce08f8ae0b857d2a7e5ce83ba",
+        "exception_scope": "historical_precreation_evidence_only"
+      },
+      {
+        "id": "SITE04",
+        "authority_kind": "owner_exception",
+        "precreation_claim": false,
+        "source": {
+          "sha256": "24d91675616ed16399ecb10238cb5d784de4605139fc14c5b737dedcd7823349",
+          "public_asset": "assets/portraits/emma-smith-natural-20261008.png",
+          "lineage_receipt": {
+            "path": "docs/reviews/historical-delivery/SITE04-source_lineage.json",
+            "sha256": "b25d5c8d725751001c3e96895459b41014826689f1bb9c6d82b4b24e40e71b4f"
+          }
+        },
+        "assets": [
+          {
+            "path": "assets/portraits/emma-smith-natural-20261008.png",
+            "sha256": "24d91675616ed16399ecb10238cb5d784de4605139fc14c5b737dedcd7823349",
+            "bytes": 2048457,
+            "width": 1112,
+            "height": 1414,
+            "mode": "RGB",
+            "pixel_sha256": "6c0690c5e7ce14386aaf85033adb9ec59daf1e2cd85f9915d2612db9acd6f76b",
+            "source_sha256": "24d91675616ed16399ecb10238cb5d784de4605139fc14c5b737dedcd7823349"
+          }
+        ],
+        "evidence": [
+          {
+            "path": "docs/reviews/historical-delivery/SITE04-source_lineage.json",
+            "sha256": "b25d5c8d725751001c3e96895459b41014826689f1bb9c6d82b4b24e40e71b4f"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/SITE04-finished_pixels.json",
+            "sha256": "08af94cbc9ddf5d7d88bba962717ba16e68750787d87e03fba27f677dc3b506a"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/SITE04-delivery_pixels.json",
+            "sha256": "69dee87794936e64c22138ec252e333ee7feb3155cfea843580222892ab03537"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/SITE04-direct_owner_exception.json",
+            "sha256": "386c00e00105130ebbd9f519061675f999e382685644290a0dc82ae3c011d610"
+          }
+        ],
+        "evidence_roles": {
+          "source_lineage": [
+            0
+          ],
+          "finished_pixels": [
+            1
+          ],
+          "delivery_pixels": [
+            2
+          ],
+          "direct_owner_exception": [
+            3
+          ]
+        },
+        "exception_source_sha256": "24d91675616ed16399ecb10238cb5d784de4605139fc14c5b737dedcd7823349",
+        "exception_scope": "historical_precreation_evidence_only"
+      },
+      {
+        "id": "SITE05",
+        "authority_kind": "reviewed_correction",
+        "precreation_claim": false,
+        "source": {
+          "sha256": "e4082e41520f37f672bc4beb3598879921f0fe03d29c28c343824dba524ac2e3",
+          "public_asset": null,
+          "lineage_receipt": {
+            "path": "docs/reviews/historical-delivery/SITE05-source_lineage.json",
+            "sha256": "007096b8bf980c0368bf3b61ff461ae3afdcccc134ccbef0c5b9ad9d7c7a673c"
+          }
+        },
+        "assets": [
+          {
+            "path": "assets/page-art/church-history/relief-society-torso-v3-960.webp",
+            "sha256": "bccc1a78b7592abf8fcdcef4f79f1d89c5446a59f68476c9a230915fbe6b05ea",
+            "bytes": 65436,
+            "width": 960,
+            "height": 540,
+            "mode": "RGB",
+            "pixel_sha256": "6fb8772ce7b665b475baf8ff3a8a21ff05bb6a049654a98d8d40a443e6b95a8e",
+            "source_sha256": "e4082e41520f37f672bc4beb3598879921f0fe03d29c28c343824dba524ac2e3"
+          },
+          {
+            "path": "assets/page-art/church-history/relief-society-torso-v3.webp",
+            "sha256": "f9f1ebceace304bddcd8f91515e66e95a342a3ec745c24630c23583dd73a339c",
+            "bytes": 1392892,
+            "width": 1672,
+            "height": 941,
+            "mode": "RGB",
+            "pixel_sha256": "4dd597d1811a938644aed041801ac429f4bdf26d035ca8ec2342a33fe3dbe868",
+            "source_sha256": "e4082e41520f37f672bc4beb3598879921f0fe03d29c28c343824dba524ac2e3"
+          }
+        ],
+        "evidence": [
+          {
+            "path": "docs/reviews/historical-delivery/SITE05-source_lineage.json",
+            "sha256": "007096b8bf980c0368bf3b61ff461ae3afdcccc134ccbef0c5b9ad9d7c7a673c"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/SITE05-finished_pixels.json",
+            "sha256": "f7318b17bf8991e81ea52c0fd3df6337bc3493a8286c35e1eba720b4f8774d0b"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/SITE05-delivery_pixels.json",
+            "sha256": "e1a8437f2bce61a1b238e935a9fb49cfffc82b2d9b1095d6908127ebaed8b6a6"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/SITE05-correction_authorization.json",
+            "sha256": "a5614a4c394a62360a0f53fb832708e9151d0f788689df660e38226000aa0615"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/SITE05-protected_pixel_result.json",
+            "sha256": "a48842dc759399de423bbba84715ddef0de320a91dbcf6eb6d8208fa9a926aee"
+          }
+        ],
+        "evidence_roles": {
+          "source_lineage": [
+            0
+          ],
+          "finished_pixels": [
+            1
+          ],
+          "delivery_pixels": [
+            2
+          ],
+          "correction_authorization": [
+            3
+          ],
+          "protected_pixel_result": [
+            4
+          ]
+        }
+      },
+      {
+        "id": "SITE06",
+        "authority_kind": "reviewed_correction",
+        "precreation_claim": false,
+        "source": {
+          "sha256": "32f3c958dfcfb1155d864dd73b65acbaf8e780087a544a516b24cad8551d79b8",
+          "public_asset": "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-torso-v3.png",
+          "lineage_receipt": {
+            "path": "docs/reviews/historical-delivery/SITE06-source_lineage.json",
+            "sha256": "6f281fa2008bb221857d4601257b4ef9f6e3b055ceb7e664e25df9aabed6faf4"
+          }
+        },
+        "assets": [
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-torso-v3-1536.webp",
+            "sha256": "d5342ec4b48be6c3fac7c1121b978c00317a7f42de1bb817852ab8d251588bd1",
+            "bytes": 111892,
+            "width": 1536,
+            "height": 1024,
+            "mode": "RGB",
+            "pixel_sha256": "08b1197136a2a2b1aa76f1879057dfbcd767fb99dc2f866dc3b191ae76444223",
+            "source_sha256": "32f3c958dfcfb1155d864dd73b65acbaf8e780087a544a516b24cad8551d79b8"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-torso-v3-640.webp",
+            "sha256": "e6e7d07382f50488acdcf71430758920bb5b6d306df092009881049e117bd0a5",
+            "bytes": 45388,
+            "width": 640,
+            "height": 427,
+            "mode": "RGB",
+            "pixel_sha256": "d140ba8b143b9c979ff00037e2544b64159955763cf8f1246eb79e2a2a7f7129",
+            "source_sha256": "32f3c958dfcfb1155d864dd73b65acbaf8e780087a544a516b24cad8551d79b8"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-torso-v3-960.webp",
+            "sha256": "606ec03aed197855c896ceb01ce531c57bb7cff5311c139d132aad12d98423d3",
+            "bytes": 89790,
+            "width": 960,
+            "height": 640,
+            "mode": "RGB",
+            "pixel_sha256": "3950f4441bef862a009406ed91acb7495288fc5c251940af6a2e3cde84033d7d",
+            "source_sha256": "32f3c958dfcfb1155d864dd73b65acbaf8e780087a544a516b24cad8551d79b8"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-torso-v3.png",
+            "sha256": "32f3c958dfcfb1155d864dd73b65acbaf8e780087a544a516b24cad8551d79b8",
+            "bytes": 2251817,
+            "width": 1536,
+            "height": 1024,
+            "mode": "RGB",
+            "pixel_sha256": "46e6409d16ee4998eaa6ae98d36ea7ed34821644cdaaedbd90c7bda8c44bfc6c",
+            "source_sha256": "32f3c958dfcfb1155d864dd73b65acbaf8e780087a544a516b24cad8551d79b8"
+          }
+        ],
+        "evidence": [
+          {
+            "path": "docs/reviews/historical-delivery/SITE06-source_lineage.json",
+            "sha256": "6f281fa2008bb221857d4601257b4ef9f6e3b055ceb7e664e25df9aabed6faf4"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/SITE06-finished_pixels.json",
+            "sha256": "e3446e2f76711bb99ec4a85cb36062561e812c4c493072f16b6bae5ddaf42297"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/SITE06-delivery_pixels.json",
+            "sha256": "58e26db13235bb76a4e990462b4bbe9519d7ba1d6e0ec49b6d7084b6ddfb981c"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/SITE06-correction_authorization.json",
+            "sha256": "0f69a90cf02106c8460880ff2c64438f76da8599cbb3409ca764975e19bea89a"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/SITE06-protected_pixel_result.json",
+            "sha256": "a68b01118332fb4c06d7767ae4ac9b9110ff08b7331cf71a5d15d8832f06e3b7"
+          }
+        ],
+        "evidence_roles": {
+          "source_lineage": [
+            0
+          ],
+          "finished_pixels": [
+            1
+          ],
+          "delivery_pixels": [
+            2
+          ],
+          "correction_authorization": [
+            3
+          ],
+          "protected_pixel_result": [
+            4
+          ]
+        }
+      },
+      {
+        "id": "SITE13",
+        "authority_kind": "reviewed_correction",
+        "precreation_claim": false,
+        "source": {
+          "sha256": "7821956b89847e1a4499d40a875fda1a3b6b035d8d1322cc00107f8a6a46b8af",
+          "public_asset": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3.png",
+          "lineage_receipt": {
+            "path": "docs/reviews/historical-delivery/SITE13-source_lineage.json",
+            "sha256": "e1945fbd2d25bf9bdac2d1bb57e013473ec62e0df57cc377c2803b338ba7d5d6"
+          }
+        },
+        "assets": [
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3-1536.webp",
+            "sha256": "cc14d7a0e989f923bb68c6cd7519154b5a217966174354e51de02360bdc4d004",
+            "bytes": 87190,
+            "width": 1536,
+            "height": 1024,
+            "mode": "RGB",
+            "pixel_sha256": "0399ea5bfbfd11445d74b182c74679ebd8319b1ea9230b493411360a809e83e1",
+            "source_sha256": "7821956b89847e1a4499d40a875fda1a3b6b035d8d1322cc00107f8a6a46b8af"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3-640.webp",
+            "sha256": "62837b0db720cb35fd0bafe88b374c09ae20e3801218b0194f889d239436dce9",
+            "bytes": 26144,
+            "width": 640,
+            "height": 427,
+            "mode": "RGB",
+            "pixel_sha256": "4f1c8523b18c5e3437057233dbfa14b087ded136cd48e6d62215dd5685e0b209",
+            "source_sha256": "7821956b89847e1a4499d40a875fda1a3b6b035d8d1322cc00107f8a6a46b8af"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3-960.webp",
+            "sha256": "a809d0cc42d2ae9f78c584147997e4c60102e62405afcb9a4086179322792ec9",
+            "bytes": 46864,
+            "width": 960,
+            "height": 640,
+            "mode": "RGB",
+            "pixel_sha256": "f5051942f12502fd314e08ceedc51acfbad8e1a3b7e3dcb77e62485d9057c350",
+            "source_sha256": "7821956b89847e1a4499d40a875fda1a3b6b035d8d1322cc00107f8a6a46b8af"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3.png",
+            "sha256": "7821956b89847e1a4499d40a875fda1a3b6b035d8d1322cc00107f8a6a46b8af",
+            "bytes": 1701300,
+            "width": 1536,
+            "height": 1024,
+            "mode": "RGB",
+            "pixel_sha256": "c8bf4c05672b88af10ee2c1c164a088ae10b70e50640042bd7c3178524ebd8e3",
+            "source_sha256": "7821956b89847e1a4499d40a875fda1a3b6b035d8d1322cc00107f8a6a46b8af"
+          }
+        ],
+        "evidence": [
+          {
+            "path": "docs/reviews/historical-delivery/SITE13-source_lineage.json",
+            "sha256": "e1945fbd2d25bf9bdac2d1bb57e013473ec62e0df57cc377c2803b338ba7d5d6"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/SITE13-finished_pixels.json",
+            "sha256": "c49167345ffdfe63b2b5dd41d577e829e1d6e1954c028262f3a13a9af97462e7"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/SITE13-delivery_pixels.json",
+            "sha256": "2fa46e7dbb45c4a45398d9efaab2dbf98e7fb74ef022d173b96f5acb3706bf60"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/SITE13-correction_authorization.json",
+            "sha256": "cc38a07f5e8e7492a32a9aebd9a36dd24bc8ed181ab5009e0c39cf04246021e1"
+          },
+          {
+            "path": "docs/reviews/historical-delivery/SITE13-protected_pixel_result.json",
+            "sha256": "66894e5eabff2da9733710ebb69bcf98884ceea52cf9ac4acb66eedc92f2536e"
+          }
+        ],
+        "evidence_roles": {
+          "source_lineage": [
+            0
+          ],
+          "finished_pixels": [
+            1
+          ],
+          "delivery_pixels": [
+            2
+          ],
+          "correction_authorization": [
+            3
+          ],
+          "protected_pixel_result": [
+            4
+          ]
+        }
+      }
+    ]
+  },
+  "approved_binding": "65b50f0ea7fde8444f7ac6191b9d9267fc1c867060cc8c83502e0a357ab6b895",
+  "limits": "No private authority documents, raw sessions, user paths or source audit transcripts are publication inputs. Empty receipts are intentional holds, not reviews."
+}

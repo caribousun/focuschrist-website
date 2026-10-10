@@ -1,270 +1,309 @@
-(function () {
-    'use strict';
-
-    function captionParagraphs(caption) {
-        if (!caption) return [];
-        const excluded = '.fc-study-visual-label, .fc-marriage-era__number, .fc-study-visual-sources, .fc-study-visual-actions';
-        function proseOnly(paragraph) {
-            if (paragraph.matches(excluded)) return false;
-            const words = paragraph.cloneNode(true);
-            words.querySelectorAll('a').forEach(function (link) { link.remove(); });
-            return /[\p{L}\p{N}]/u.test(words.textContent);
-        }
-        function safeClone(node) {
-            const clone = node.cloneNode(true);
-            clone.querySelectorAll('script,style,iframe,object,embed').forEach(function (child) { child.remove(); });
-            [clone].concat(Array.from(clone.querySelectorAll('*'))).forEach(function (child) {
-                Array.from(child.attributes).forEach(function (attribute) {
-                    if (attribute.name === 'id' || /^on/i.test(attribute.name)) child.removeAttribute(attribute.name);
-                });
-                if (child.tagName === 'A') {
-                    try {
-                        const url = new URL(child.getAttribute('href'), document.baseURI);
-                        if (!['http:', 'https:'].includes(url.protocol)) child.removeAttribute('href');
-                    } catch (error) { child.removeAttribute('href'); }
-                }
-            });
-            return clone;
-        }
-        const paragraphs = Array.from(caption.querySelectorAll('p')).filter(proseOnly).map(safeClone);
-        if (paragraphs.length) return paragraphs;
-        const fallback = safeClone(caption);
-        fallback.querySelectorAll('h2,h3,h4,:scope > strong,' + excluded).forEach(function (node) { node.remove(); });
-        fallback.querySelectorAll('p').forEach(function (p) { if (!proseOnly(p)) p.remove(); });
-        if (!fallback.textContent.trim()) return [];
-        const paragraph = document.createElement('p');
-        paragraph.append.apply(paragraph, Array.from(fallback.childNodes));
-        return [paragraph];
-    }
-
-    function initialize() {
-        if (typeof HTMLDialogElement === 'undefined' || document.getElementById('topicArtworkDetailDialog')) return;
-        const main = document.querySelector('main') || document.querySelector('[data-topic-artwork-root]');
-        if (!main) return;
-        const pictures = Array.from(main.querySelectorAll('figure > a[href], .fc-marriage-era__art[href], .fc-foundation-card__image[href]')).filter(function (link) {
-            return link.querySelector('img') && !link.closest('.fc-resource-card, dialog')
-                && !link.hasAttribute('data-artwork-detail') && !link.hasAttribute('data-hero-viewer');
-        });
-        if (!pictures.length) return;
-
-        const dialog = document.createElement('dialog');
-        dialog.id = 'topicArtworkDetailDialog';
-        dialog.className = 'fc-artwork-detail-dialog fc-topic-artwork-detail';
-        dialog.setAttribute('aria-labelledby', 'topicArtworkDetailTitle');
-        dialog.innerHTML = '<div class="fc-artwork-detail-shell"><button class="fc-artwork-detail-close" type="button" data-topic-art-close aria-label="Close artwork study"></button><div class="fc-artwork-detail-media"><img alt=""></div><div class="fc-artwork-detail-body"><p class="fc-eyebrow">Explore and study</p><h2 id="topicArtworkDetailTitle"></h2><div class="fc-artwork-detail-copy" tabindex="0" role="region" aria-label="About this artwork"></div><div class="fc-actions fc-artwork-detail-actions" aria-label="Artwork study options"></div></div></div>';
-        document.body.appendChild(dialog);
-        const image = dialog.querySelector('img');
-        const title = dialog.querySelector('h2');
-        const copy = dialog.querySelector('.fc-artwork-detail-copy');
-        const actions = dialog.querySelector('.fc-artwork-detail-actions');
-        const close = dialog.querySelector('[data-topic-art-close]');
-        let returnFocus = null;
-        let continueTarget = null;
-
-        function officialLinks(container) {
-            if (!container) return [];
-            return Array.from(container.querySelectorAll('a[href]')).filter(function (link) {
-                try {
-                    const url = new URL(link.href);
-                    const standardHost = ['www.churchofjesuschrist.org', 'newsroom.churchofjesuschrist.org', 'history.churchofjesuschrist.org',
-                        'www.josephsmithpapers.org', 'churchhistorylibrary.churchofjesuschrist.org', 'ensignpeakfoundation.org'].includes(url.hostname);
-                    const historyOwner = ['/history/john-tanner.html', '/history/eleazer-miller.html', '/history/john-rowe-moyle.html'].includes(location.pathname)
-                        && document.body.classList.contains('fc-life-story');
-                    const researchedHistoryHost = historyOwner && ['saintsbysea.byu.edu', 'rsc.byu.edu', 'www.churchhistorianspress.org', 'www.fairlatterdaysaints.org'].includes(url.hostname);
-                    const tannerJournal = historyOwner && location.pathname === '/history/john-tanner.html' && url.href === 'https://catalog.churchofjesuschrist.org/assets/994fb2fe-d8b1-4156-a452-3a8fecacf538/1/42';
-                    const tannerBiography = historyOwner && location.pathname === '/history/john-tanner.html' && url.href === 'https://www.gutenberg.org/cache/epub/46734/pg46734-images.html';
-                    const hyrumBiography = location.pathname === '/joseph-smith-portrait-research.html'
-                        && url.href === 'https://www.gutenberg.org/cache/epub/46602/pg46602-images.html';
-                    const familyArchive = location.pathname === '/answers/who-was-joseph-smith.html'
-                        && ["https://contentdm.lib.byu.edu/digital/collection/GEA/id/11724", "https://contentdm.lib.byu.edu/digital/collection/GEA/id/11719", "https://contentdm.lib.byu.edu/digital/collection/Savage2/id/1825", "https://archive.org/details/historyofdecatur02howe/page/n96/mode/1up", "https://archive.org/details/historyofdecatur02howe/page/n150/mode/1up"].includes(url.href);
-                    const portraitResearchScan = location.pathname === '/joseph-smith-portrait-research.html'
-                        && ['archive.org', 'contentdm.lib.byu.edu', 'commons.wikimedia.org'].includes(url.hostname);
-                    const josephMaskCatalogue = location.pathname === '/joseph-smith-likeness.html'
-                        && url.hostname === 'contentdm.lib.byu.edu'
-                        && url.pathname === '/digital/collection/RelEd/id/4109/rec/5';
-                    const josephReliefMinutes = location.pathname === '/answers/who-was-joseph-smith.html' && url.hostname === 'www.churchhistorianspress.org' && url.pathname === '/the-first-fifty-years-of-relief-society/part-1/1-2/1-2-1';
-                    const josephByuStudy = url.hostname === 'byustudies.byu.edu' && (
-                        (location.pathname === '/joseph-smith-portrait-research.html' && url.pathname === '/article/josiah-quincys-1844-visit-with-joseph-smith') ||
-                        (location.pathname === '/answers/who-was-joseph-smith.html' && url.pathname === '/article/david-hales-store-ledger-new-details-about-joseph-and-emma-smith-the-hale-family-and-the-book-of-mormon')
-                    );
-                    return url.protocol === 'https:' && (standardHost || researchedHistoryHost || tannerJournal || tannerBiography || hyrumBiography || familyArchive || portraitResearchScan || josephMaskCatalogue || josephByuStudy || josephReliefMinutes) && !link.querySelector('img');
-                } catch (error) { return false; }
-            });
-        }
-
-        function readingTarget(figure, index) {
-            if (figure.matches('.fc-foundation-card')) {
-                const cardHeading = figure.querySelector('h4');
-                if (cardHeading) {
-                    if (!cardHeading.id) cardHeading.id = 'foundation-card-' + index;
-                    cardHeading.setAttribute('data-topic-reading-target', '');
-                    return cardHeading;
-                }
+(function () {
+    'use strict';
+
+    function captionParagraphs(caption) {
+        if (!caption) return [];
+        const excluded = '.fc-study-visual-label, .fc-marriage-era__number, .fc-study-visual-sources, .fc-study-visual-actions';
+        function proseOnly(paragraph) {
+            if (paragraph.matches(excluded)) return false;
+            const words = paragraph.cloneNode(true);
+            words.querySelectorAll('a').forEach(function (link) { link.remove(); });
+            return /[\p{L}\p{N}]/u.test(words.textContent);
+        }
+        function safeClone(node) {
+            const clone = node.cloneNode(true);
+            clone.querySelectorAll('script,style,iframe,object,embed').forEach(function (child) { child.remove(); });
+            [clone].concat(Array.from(clone.querySelectorAll('*'))).forEach(function (child) {
+                Array.from(child.attributes).forEach(function (attribute) {
+                    if (attribute.name === 'id' || /^on/i.test(attribute.name)) child.removeAttribute(attribute.name);
+                });
+                if (child.tagName === 'A') {
+                    try {
+                        const url = new URL(child.getAttribute('href'), document.baseURI);
+                        if (!['http:', 'https:'].includes(url.protocol)) child.removeAttribute('href');
+                    } catch (error) { child.removeAttribute('href'); }
+                }
+            });
+            return clone;
+        }
+        const paragraphs = Array.from(caption.querySelectorAll('p')).filter(proseOnly).map(safeClone);
+        if (paragraphs.length) return paragraphs;
+        const fallback = safeClone(caption);
+        fallback.querySelectorAll('h2,h3,h4,:scope > strong,' + excluded).forEach(function (node) { node.remove(); });
+        fallback.querySelectorAll('p').forEach(function (p) { if (!proseOnly(p)) p.remove(); });
+        if (!fallback.textContent.trim()) return [];
+        const paragraph = document.createElement('p');
+        paragraph.append.apply(paragraph, Array.from(fallback.childNodes));
+        return [paragraph];
+    }
+
+    function initialize() {
+        if (typeof HTMLDialogElement === 'undefined' || document.getElementById('topicArtworkDetailDialog')) return;
+        const main = document.querySelector('main') || document.querySelector('[data-topic-artwork-root]');
+        if (!main) return;
+        const pictures = Array.from(main.querySelectorAll('figure > a[href], .fc-marriage-era__art[href], .fc-foundation-card__image[href]')).filter(function (link) {
+            return link.querySelector('img') && !link.closest('.fc-resource-card, dialog')
+                && !link.hasAttribute('data-artwork-detail') && !link.hasAttribute('data-hero-viewer');
+        });
+        if (!pictures.length) return;
+
+        const dialog = document.createElement('dialog');
+        dialog.id = 'topicArtworkDetailDialog';
+        dialog.className = 'fc-artwork-detail-dialog fc-topic-artwork-detail';
+        dialog.setAttribute('aria-labelledby', 'topicArtworkDetailTitle');
+        dialog.innerHTML = '<div class="fc-artwork-detail-shell"><button class="fc-artwork-detail-close" type="button" data-topic-art-close aria-label="Close artwork study"></button><div class="fc-artwork-detail-media"><img alt=""></div><div class="fc-artwork-detail-body"><p class="fc-eyebrow">Explore and study</p><h2 id="topicArtworkDetailTitle"></h2><div class="fc-artwork-detail-copy" tabindex="0" role="region" aria-label="About this artwork"></div><div class="fc-actions fc-artwork-detail-actions" aria-label="Artwork study options"></div></div></div>';
+        document.body.appendChild(dialog);
+        const image = dialog.querySelector('img');
+        const title = dialog.querySelector('h2');
+        const copy = dialog.querySelector('.fc-artwork-detail-copy');
+        const actions = dialog.querySelector('.fc-artwork-detail-actions');
+        const close = dialog.querySelector('[data-topic-art-close]');
+        let returnFocus = null;
+        let continueTarget = null;
+        let cancelContinueAlignment = function () {};
+        function afterClosedLayout(target, align) {
+            cancelContinueAlignment();
+            let frame = 0;
+            let first = true;
+            const timers = [];
+            const inputs = ['wheel', 'touchstart', 'touchmove', 'pointerdown', 'keydown'];
+            function cancel() {
+                window.cancelAnimationFrame(frame);
+                timers.forEach(function (timer) { window.clearTimeout(timer); });
+                inputs.forEach(function (type) { window.removeEventListener(type, cancel, true); });
+                if (cancelContinueAlignment === cancel) cancelContinueAlignment = function () {};
             }
-            const familyScene = location.pathname === '/answers/who-was-joseph-smith.html' && figure.closest('article.joseph-life-scene[id]');
-            if (familyScene) {
-                familyScene.setAttribute('data-topic-reading-target', '');
-                return familyScene;
+            function measureAndAlign() {
+                if (dialog.open || !target.isConnected || document.querySelector('dialog[open]')) { cancel(); return; }
+                align(first);
+                first = false;
             }
-            const section = figure.closest('.fc-marriage-era, section');
-            let target = section && Array.from(section.querySelectorAll('h2,h3')).find(function (heading) {
-                return !heading.closest('figure, .fc-resource-card');
+            cancelContinueAlignment = cancel;
+            inputs.forEach(function (type) { window.addEventListener(type, cancel, { capture: true, passive: true }); });
+            // Scrollbar restoration and late image/font layout can move the lesson
+            // after close. Re-measure briefly, unless the reader takes control.
+            frame = window.requestAnimationFrame(function () {
+                frame = window.requestAnimationFrame(measureAndAlign);
             });
-            if (!target) {
-                const headings = Array.from(main.querySelectorAll('h2,h3')).filter(function (heading) {
-                    return !heading.closest('figure, .fc-resource-card') && (heading.compareDocumentPosition(figure) & Node.DOCUMENT_POSITION_FOLLOWING);
-                });
-                target = headings[headings.length - 1] || main;
-            }
-            if (!target.id) target.id = 'topic-art-reading-' + index;
-            target.setAttribute('data-topic-reading-target', '');
-            return target;
+            [120, 350, 800].forEach(function (delay) {
+                timers.push(window.setTimeout(function () {
+                    measureAndAlign();
+                    if (delay === 800) cancel();
+                }, delay));
+            });
         }
 
-        function recordFor(trigger, index) {
-            const figure = trigger.closest('figure, .fc-marriage-era, .fc-foundation-card');
-            const caption = figure.querySelector('[data-picture-panel-copy]') || figure.querySelector('figcaption, .fc-marriage-era__copy, .fc-foundation-card-copy');
-            const target = readingTarget(figure, index);
-            const heading = caption && caption.querySelector('h2,h3,h4,:scope > strong');
-            const record = {
-                title: heading ? heading.textContent.trim() : target.textContent.trim(),
-                paragraphs: [],
-                sources: [],
-                target: target,
-                study: trigger.dataset.topicStudy || '',
-                studyLabel: trigger.dataset.topicStudyLabel || 'Open complete study'
-            };
-            record.paragraphs = captionParagraphs(caption);
-            let sources = officialLinks(caption);
-            if (!record.study) {
-                if (!sources.length) sources = officialLinks(figure.closest('.fc-marriage-era'));
-                if (!sources.length) sources = officialLinks(figure.closest('section, .gc-intro'));
-                // The opening grief illustration precedes the John 11 study it introduces.
-                if (!sources.length && location.pathname.endsWith('/grief-and-faith.html')) sources = officialLinks(document.getElementById('jesus-wept'));
-                if (!sources.length && figure.closest('.gc-intro')) sources = officialLinks(main).filter(function (link) { return new URL(link.href).pathname === '/study/general-conference'; }).slice(0, 1);
-            }
-            const seen = new Set();
-            const storyPages = ['/history/john-tanner.html', '/history/eleazer-miller.html', '/history/john-rowe-moyle.html'];
-            const sourceLimit = storyPages.includes(location.pathname) && document.body.classList.contains('fc-life-story') ? 4 : 3;
-            sources.forEach(function (link) {
-                if (seen.has(link.href) || record.sources.length >= sourceLimit) return;
-                seen.add(link.href);
-                record.sources.push({ href: link.href, label: link.textContent.trim() || 'Read the official source' });
-            });
-            return record;
-        }
-
-        function pill(label, href, primary) {
-            const link = document.createElement('a');
-            link.className = 'fc-button' + (primary ? ' fc-button--primary' : '');
-            link.textContent = label;
-            link.href = href;
-            actions.appendChild(link);
-            return link;
-        }
-
-        function showStudy(trigger, record) {
-            const sensitiveGate = trigger.closest('details.atonement-sensitive');
-            if (sensitiveGate && !sensitiveGate.open) {
-                sensitiveGate.scrollIntoView({ block: 'center', behavior: 'auto' });
-                sensitiveGate.querySelector('summary').focus({ preventScroll: true });
-                return;
-            }
-            title.textContent = record.title;
-            const imageSource = window.fcHeroImageSource
-                ? window.fcHeroImageSource(trigger) : trigger.href;
-            image.src = imageSource;
-            image.alt = trigger.dataset.fullImageAlt || trigger.querySelector('img').alt;
-            copy.replaceChildren();
-            record.paragraphs.forEach(function (paragraph) {
-                copy.appendChild(paragraph.cloneNode(true));
-            });
-            actions.replaceChildren();
-            if (record.study) pill(record.studyLabel, record.study, true);
-            record.sources.forEach(function (source, index) {
-                const link = pill(source.label, source.href, !record.study && index === 0);
-                link.target = '_blank';
-                link.rel = 'noopener noreferrer';
-                if (new URL(source.href).pathname.includes('/study/scriptures/')) link.classList.add('fc-inline-scripture');
-                link.dataset.topicArtSource = '';
-            });
-            const full = pill('View Full-Size Image', imageSource);
-            full.setAttribute('data-full-image-viewer', '');
-            full.setAttribute('aria-haspopup', 'dialog');
-            full.dataset.fullImageAlt = image.alt;
-            full.dataset.fullImageVersions = JSON.stringify(window.fcHeroImageOptions
-                ? window.fcHeroImageOptions(trigger) : []);
-
-            // Page-wide onward links remain in their authored page context. Only
-            // an explicit per-picture study may take readers to another subject.
-
-            const resume = pill('Continue Lesson', '#' + record.target.id);
-            resume.dataset.topicArtContinue = '';
-            resume.addEventListener('click', function (event) {
-                if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-                event.preventDefault();
-                continueTarget = record.target;
-                dialog.close();
-            });
-            const done = document.createElement('button');
-            done.className = 'fc-button';
-            done.type = 'button';
-            done.textContent = 'Close';
-            done.dataset.artworkDetailClose = '';
-            done.addEventListener('click', function () { dialog.close(); });
-            actions.appendChild(done);
-            returnFocus = trigger;
-            continueTarget = null;
-            document.body.classList.add('fc-dialog-open');
-            dialog.showModal();
-            dialog.scrollTop = 0;
-            close.focus({ preventScroll: true });
-        }
-
-        pictures.forEach(function (trigger, index) {
-            const record = recordFor(trigger, index);
-            if ((!record.sources.length && !record.study) || !record.paragraphs.length) return;
-            trigger.removeAttribute('data-full-image-viewer');
-            trigger.setAttribute('data-topic-artwork-detail', '');
-            trigger.setAttribute('aria-haspopup', 'dialog');
-            trigger.setAttribute('aria-label', 'Explore artwork: ' + record.title);
-            trigger.addEventListener('click', function (event) {
-                if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-                event.preventDefault();
-                showStudy(trigger, record);
-            });
-        });
-        close.addEventListener('click', function () { dialog.close(); });
-        dialog.addEventListener('click', function (event) { if (event.target === dialog) dialog.close(); });
-        dialog.addEventListener('cancel', function (event) { event.stopPropagation(); });
-        dialog.addEventListener('close', function () {
-            // A queued close event can arrive after another artwork has reopened this dialog.
-            if (dialog.open) return;
-            if (!document.querySelector('dialog.fc-artwork-detail-dialog[open], dialog.fc-missionary-detail-dialog[open]')) document.body.classList.remove('fc-dialog-open');
-            image.removeAttribute('src');
-            if (continueTarget) {
-                const target = continueTarget;
-                if (!target.hasAttribute('tabindex')) {
-                    target.setAttribute('tabindex', '-1');
-                    target.addEventListener('blur', function () { target.removeAttribute('tabindex'); }, { once: true });
-                }
-                target.focus({ preventScroll: true });
-                const studyNav = main.classList.contains('fc-art-study-page') && main.querySelector('.fc-study-nav');
-                const navStyle = studyNav && window.getComputedStyle(studyNav);
-                if (navStyle && (navStyle.position === 'sticky' || navStyle.position === 'fixed')) {
-                    // The local study navigation can wrap, so measure its actual clearance.
-                    const navTop = parseFloat(navStyle.top) || 0;
+        function officialLinks(container) {
+            if (!container) return [];
+            return Array.from(container.querySelectorAll('a[href]')).filter(function (link) {
+                try {
+                    const url = new URL(link.href);
+                    const standardHost = ['www.churchofjesuschrist.org', 'newsroom.churchofjesuschrist.org', 'history.churchofjesuschrist.org',
+                        'www.josephsmithpapers.org', 'churchhistorylibrary.churchofjesuschrist.org', 'ensignpeakfoundation.org'].includes(url.hostname);
+                    const historyOwner = ['/history/john-tanner.html', '/history/eleazer-miller.html', '/history/john-rowe-moyle.html'].includes(location.pathname)
+                        && document.body.classList.contains('fc-life-story');
+                    const researchedHistoryHost = historyOwner && ['saintsbysea.byu.edu', 'rsc.byu.edu', 'www.churchhistorianspress.org', 'www.fairlatterdaysaints.org'].includes(url.hostname);
+                    const tannerJournal = historyOwner && location.pathname === '/history/john-tanner.html' && url.href === 'https://catalog.churchofjesuschrist.org/assets/994fb2fe-d8b1-4156-a452-3a8fecacf538/1/42';
+                    const tannerBiography = historyOwner && location.pathname === '/history/john-tanner.html' && url.href === 'https://www.gutenberg.org/cache/epub/46734/pg46734-images.html';
+                    const hyrumBiography = location.pathname === '/joseph-smith-portrait-research.html'
+                        && url.href === 'https://www.gutenberg.org/cache/epub/46602/pg46602-images.html';
+                    const familyArchive = location.pathname === '/answers/who-was-joseph-smith.html'
+                        && ["https://contentdm.lib.byu.edu/digital/collection/GEA/id/11724", "https://contentdm.lib.byu.edu/digital/collection/GEA/id/11719", "https://contentdm.lib.byu.edu/digital/collection/Savage2/id/1825", "https://archive.org/details/historyofdecatur02howe/page/n96/mode/1up", "https://archive.org/details/historyofdecatur02howe/page/n150/mode/1up"].includes(url.href);
+                    const portraitResearchScan = location.pathname === '/joseph-smith-portrait-research.html'
+                        && ['archive.org', 'contentdm.lib.byu.edu', 'commons.wikimedia.org'].includes(url.hostname);
+                    const josephMaskCatalogue = location.pathname === '/joseph-smith-likeness.html'
+                        && url.hostname === 'contentdm.lib.byu.edu'
+                        && url.pathname === '/digital/collection/RelEd/id/4109/rec/5';
+                    const josephReliefMinutes = location.pathname === '/answers/who-was-joseph-smith.html' && url.hostname === 'www.churchhistorianspress.org' && url.pathname === '/the-first-fifty-years-of-relief-society/part-1/1-2/1-2-1';
+                    const josephByuStudy = url.hostname === 'byustudies.byu.edu' && (
+                        (location.pathname === '/joseph-smith-portrait-research.html' && url.pathname === '/article/josiah-quincys-1844-visit-with-joseph-smith') ||
+                        (location.pathname === '/answers/who-was-joseph-smith.html' && url.pathname === '/article/david-hales-store-ledger-new-details-about-joseph-and-emma-smith-the-hale-family-and-the-book-of-mormon')
+                    );
+                    return url.protocol === 'https:' && (standardHost || (location.pathname === '/history/emma-hale-smith.html' && ['https://www.churchhistorianspress.org/the-first-fifty-years-of-relief-society/part-1/1-2/1-2-1','https://cofchrist.org/nauvoo-illinois-usa/'].includes(url.origin + url.pathname)) || researchedHistoryHost || tannerJournal || tannerBiography || hyrumBiography || familyArchive || portraitResearchScan || josephMaskCatalogue || josephByuStudy || josephReliefMinutes) && !link.querySelector('img');
+                } catch (error) { return false; }
+            });
+        }
+
+        function readingTarget(figure, index) {
+            if (figure.matches('.fc-foundation-card')) {
+                const cardHeading = figure.querySelector('h4');
+                if (cardHeading) {
+                    if (!cardHeading.id) cardHeading.id = 'foundation-card-' + index;
+                    cardHeading.setAttribute('data-topic-reading-target', '');
+                    return cardHeading;
+                }
+            }
+            const familyScene = location.pathname === '/answers/who-was-joseph-smith.html' && figure.closest('article.joseph-life-scene[id]');
+            if (familyScene) {
+                familyScene.setAttribute('data-topic-reading-target', '');
+                return familyScene;
+            }
+            const section = figure.closest('.fc-marriage-era, section');
+            let target = section && Array.from(section.querySelectorAll('h2,h3')).find(function (heading) {
+                return !heading.closest('figure, .fc-resource-card');
+            });
+            if (!target) {
+                const headings = Array.from(main.querySelectorAll('h2,h3')).filter(function (heading) {
+                    return !heading.closest('figure, .fc-resource-card') && (heading.compareDocumentPosition(figure) & Node.DOCUMENT_POSITION_FOLLOWING);
+                });
+                target = headings[headings.length - 1] || main;
+            }
+            if (!target.id) target.id = 'topic-art-reading-' + index;
+            target.setAttribute('data-topic-reading-target', '');
+            return target;
+        }
+
+        function recordFor(trigger, index) {
+            const figure = trigger.closest('figure, .fc-marriage-era, .fc-foundation-card');
+            const caption = figure.querySelector('[data-picture-panel-copy]') || figure.querySelector('figcaption, .fc-marriage-era__copy, .fc-foundation-card-copy');
+            const target = readingTarget(figure, index);
+            const heading = caption && caption.querySelector('h2,h3,h4,:scope > strong');
+            const record = {
+                title: heading ? heading.textContent.trim() : target.textContent.trim(),
+                paragraphs: [],
+                sources: [],
+                target: target,
+                study: trigger.dataset.topicStudy || '',
+                studyLabel: trigger.dataset.topicStudyLabel || 'Open complete study'
+            };
+            record.paragraphs = captionParagraphs(caption);
+            let sources = officialLinks(caption);
+            if (!record.study) {
+                if (!sources.length) sources = officialLinks(figure.closest('.fc-marriage-era'));
+                if (!sources.length) sources = officialLinks(figure.closest('section, .gc-intro'));
+                // The opening grief illustration precedes the John 11 study it introduces.
+                if (!sources.length && location.pathname.endsWith('/grief-and-faith.html')) sources = officialLinks(document.getElementById('jesus-wept'));
+                if (!sources.length && figure.closest('.gc-intro')) sources = officialLinks(main).filter(function (link) { return new URL(link.href).pathname === '/study/general-conference'; }).slice(0, 1);
+            }
+            const seen = new Set();
+            const storyPages = ['/history/john-tanner.html', '/history/eleazer-miller.html', '/history/john-rowe-moyle.html'];
+            const sourceLimit = storyPages.includes(location.pathname) && document.body.classList.contains('fc-life-story') ? 4 : 3;
+            sources.forEach(function (link) {
+                if (seen.has(link.href) || record.sources.length >= sourceLimit) return;
+                seen.add(link.href);
+                record.sources.push({ href: link.href, label: link.textContent.trim() || 'Read the official source' });
+            });
+            return record;
+        }
+
+        function pill(label, href, primary) {
+            const link = document.createElement('a');
+            link.className = 'fc-button' + (primary ? ' fc-button--primary' : '');
+            link.textContent = label;
+            link.href = href;
+            actions.appendChild(link);
+            return link;
+        }
+
+        function showStudy(trigger, record) {
+            cancelContinueAlignment();
+            const sensitiveGate = trigger.closest('details.atonement-sensitive');
+            if (sensitiveGate && !sensitiveGate.open) {
+                sensitiveGate.scrollIntoView({ block: 'center', behavior: 'auto' });
+                sensitiveGate.querySelector('summary').focus({ preventScroll: true });
+                return;
+            }
+            title.textContent = record.title;
+            const imageSource = window.fcHeroImageSource
+                ? window.fcHeroImageSource(trigger) : trigger.href;
+            image.src = imageSource;
+            image.alt = trigger.dataset.fullImageAlt || trigger.querySelector('img').alt;
+            copy.replaceChildren();
+            record.paragraphs.forEach(function (paragraph) {
+                copy.appendChild(paragraph.cloneNode(true));
+            });
+            actions.replaceChildren();
+            if (record.study) pill(record.studyLabel, record.study, true);
+            record.sources.forEach(function (source, index) {
+                const link = pill(source.label, source.href, !record.study && index === 0);
+                link.target = '_blank';
+                link.rel = 'noopener noreferrer';
+                if (new URL(source.href).pathname.includes('/study/scriptures/')) link.classList.add('fc-inline-scripture');
+                link.dataset.topicArtSource = '';
+            });
+            const full = pill('View Full-Size Image', imageSource);
+            full.setAttribute('data-full-image-viewer', '');
+            full.setAttribute('aria-haspopup', 'dialog');
+            full.dataset.fullImageAlt = image.alt;
+            full.dataset.fullImageVersions = JSON.stringify(window.fcHeroImageOptions
+                ? window.fcHeroImageOptions(trigger) : []);
+
+            // Page-wide onward links remain in their authored page context. Only
+            // an explicit per-picture study may take readers to another subject.
+
+            const resume = pill('Continue Lesson', '#' + record.target.id);
+            resume.dataset.topicArtContinue = '';
+            resume.addEventListener('click', function (event) {
+                if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+                event.preventDefault();
+                continueTarget = record.target;
+                dialog.close();
+            });
+            const done = document.createElement('button');
+            done.className = 'fc-button';
+            done.type = 'button';
+            done.textContent = 'Close';
+            done.dataset.artworkDetailClose = '';
+            done.addEventListener('click', function () { dialog.close(); });
+            actions.appendChild(done);
+            returnFocus = trigger;
+            continueTarget = null;
+            document.body.classList.add('fc-dialog-open');
+            dialog.showModal();
+            dialog.scrollTop = 0;
+            close.focus({ preventScroll: true });
+        }
+
+        pictures.forEach(function (trigger, index) {
+            const record = recordFor(trigger, index);
+            if ((!record.sources.length && !record.study) || !record.paragraphs.length) return;
+            trigger.removeAttribute('data-full-image-viewer');
+            trigger.setAttribute('data-topic-artwork-detail', '');
+            trigger.setAttribute('aria-haspopup', 'dialog');
+            trigger.setAttribute('aria-label', 'Explore artwork: ' + record.title);
+            trigger.addEventListener('click', function (event) {
+                if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+                event.preventDefault();
+                showStudy(trigger, record);
+            });
+        });
+        close.addEventListener('click', function () { dialog.close(); });
+        dialog.addEventListener('click', function (event) { if (event.target === dialog) dialog.close(); });
+        dialog.addEventListener('cancel', function (event) { event.stopPropagation(); });
+        dialog.addEventListener('close', function () {
+            // A queued close event can arrive after another artwork has reopened this dialog.
+            if (dialog.open) return;
+            if (!document.querySelector('dialog.fc-artwork-detail-dialog[open], dialog.fc-missionary-detail-dialog[open]')) document.body.classList.remove('fc-dialog-open');
+            image.removeAttribute('src');
+            if (continueTarget) {
+                const target = continueTarget;
+                afterClosedLayout(target, function (first) {
+                    if (first && !target.hasAttribute('tabindex')) {
+                        target.setAttribute('tabindex', '-1');
+                        target.addEventListener('blur', function () { target.removeAttribute('tabindex'); }, { once: true });
+                    }
+                    if (first) target.focus({ preventScroll: true });
+                    const header = document.querySelector('.nav[data-focuschrist-header="standard"]');
+                    const headerPosition = header && window.getComputedStyle(header).position;
+                    const headerClearance = (headerPosition === 'fixed' || headerPosition === 'sticky'
+                        ? Math.ceil(header.getBoundingClientRect().height) : 0) + 16;
                     const targetMargin = parseFloat(window.getComputedStyle(target).scrollMarginTop) || 0;
-                    const clearance = Math.max(targetMargin, navTop + studyNav.getBoundingClientRect().height + 16);
-                    window.scrollTo({ top: Math.max(0, window.scrollY + target.getBoundingClientRect().top - clearance), behavior: 'instant' });
-                } else {
-                    target.scrollIntoView({ block: 'start', behavior: 'auto' });
-                }
-            } else if (returnFocus) returnFocus.focus({ preventScroll: true });
-            returnFocus = null;
-            continueTarget = null;
-        });
-    }
-    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initialize, { once: true });
-    else initialize();
-}());
+                    let clearance = Math.max(targetMargin, headerClearance);
+                    const studyNav = main.classList.contains('fc-art-study-page') && main.querySelector('.fc-study-nav');
+                    const navStyle = studyNav && window.getComputedStyle(studyNav);
+                    if (navStyle && (navStyle.position === 'sticky' || navStyle.position === 'fixed')) {
+                        const navTop = parseFloat(navStyle.top) || 0;
+                        clearance = Math.max(clearance, navTop + studyNav.getBoundingClientRect().height + 16);
+                    }
+                    const maximum = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+                    const destination = Math.max(0, Math.min(window.scrollY + target.getBoundingClientRect().top - clearance, maximum));
+                    if (Math.abs(window.scrollY - destination) > 1) window.scrollTo({ top: destination, behavior: 'instant' });
+                });
+            } else if (returnFocus) returnFocus.focus({ preventScroll: true });
+            returnFocus = null;
+            continueTarget = null;
+        });
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initialize, { once: true });
+    else initialize();
+}());

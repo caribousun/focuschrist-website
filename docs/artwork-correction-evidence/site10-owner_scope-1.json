@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "site10-owner_scope-1",
+  "family": "SITE10",
+  "stage": "owner_scope",
+  "actual_actor": "Wyatt",
+  "verdict": "RECORDED",
+  "withdrawn": false,
+  "source_report_sha256": "27763c6be19629d11dc346f03d7c0f0ddbb55e72de369fafd89982f6ea9ce64b",
+  "source_recorded_at": null,
+  "normalized_at": "2026-10-09T23:47:55.057363+00:00",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "cf1b964c75b6a49536968eaf9a8d19186ce846262e0b9adcc86d053644ca9db6",
+  "findings": "Direct owner-approved precise garment compositing exception; original unrelated pixels protected. Scene-specific current torso/December scope separately bound below.",
+  "pixels_inspected": false,
+  "limits": "Exact local correction evidence only; no assembled UI, publication or owner aesthetic acceptance."
+}

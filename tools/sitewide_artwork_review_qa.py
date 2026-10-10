@@ -146,7 +146,7 @@ class Tags(HTMLParser):
 # unchanged routes), rather than exempting a selector family or future CSS.
 VIEWER_STYLE = 'full-image-viewer.css'
 VIEWER_STYLE_SHA256 = 'b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706'
-VIEWER_BINDINGS_SHA256 = '8389a1042b80d98435cc9dc1cc4f686c2fa446f789188a8083d6c3403ffa6ada'
+VIEWER_BINDINGS_SHA256 = '90de3afd9212c3548ad780ae8c067d32b90f33ca82ddacfd39f3035f8c72fa2f'
 
 def reviewed_viewer_style(data):
     return hashlib.sha256(data).hexdigest() == VIEWER_STYLE_SHA256
@@ -193,7 +193,7 @@ def viewer_self_test():
     assert reviewed_viewer_bindings(bindings)
     owner = 'art-study/be-still.html'
     for modified in (
-        sources[owner].replace('20261006-versions-1', 'unknown'),
+        sources[owner].replace('20261009-titled-downloads-1', 'unknown'),
         sources[owner].replace('20261007-viewer-controls-1', 'unknown'),
         sources[owner].replace('20261007-viewer-controls-1', '20261006-versions-1'),
         sources[owner] + '<link rel="stylesheet" href="../full-image-viewer.css?v=20261007-viewer-controls-1">',

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "id": "site10-encoding_result-23",
+  "family": "SITE10",
+  "stage": "encoding_result",
+  "actual_actor": "/root/fermi_current",
+  "verdict": "RECORDED",
+  "withdrawn": false,
+  "source_report_sha256": "d8abc6c7a1e41ccba99f0887c92521a16cb9237e6027caf8d0ed9e8b18b45c52",
+  "source_recorded_at": null,
+  "normalized_at": "2026-10-09T23:47:55.057363+00:00",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "d8abc6c7a1e41ccba99f0887c92521a16cb9237e6027caf8d0ed9e8b18b45c52",
+  "findings": "Four private versioned assets encoded once; exact PNG copy plus three RGB WebPs. Source/old installed guards unchanged.",
+  "pixels_inspected": false,
+  "limits": "Exact local correction evidence only; no assembled UI, publication or owner aesthetic acceptance.",
+  "script_sha256": "a23a5d89b79bb6d307f2be4ef37dc358afbc4b6ff02bc242512cfed30fe3f849",
+  "spec_sha256": "213ef8c862d5b120b9da48024227a1ab0deb48a5d0050f6216a62a28436791b6"
+}

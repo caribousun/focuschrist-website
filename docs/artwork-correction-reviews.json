@@ -1,0 +1,2036 @@
+{
+  "schema": 1,
+  "status": "REVIEWED_EXACT_EVIDENCE",
+  "approved_binding": "6f9510c88845fbef288289a33beab1a841f414ea65ab1212577c02e284d27a75",
+  "spec": {
+    "kind": "reviewed_local_corrections",
+    "precreation_claim": false,
+    "families": [
+      {
+        "id": "SITE10",
+        "authority_kind": "reviewed_local_correction",
+        "precreation_claim": false,
+        "current_reviewers": {
+          "executor": "/root/fermi_current",
+          "independent": "/root/newton_current",
+          "root": "/root"
+        },
+        "immutable_originals": [
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-wardrobe-v2.png",
+            "sha256": "cf1b964c75b6a49536968eaf9a8d19186ce846262e0b9adcc86d053644ca9db6"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-wardrobe-v2-640.webp",
+            "sha256": "c38292920d00c45179988fbf4794014e7a1ec4369e688fb184a03d6cfa8bed28"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-wardrobe-v2-960.webp",
+            "sha256": "87af96cb3ba6aa567e9e2d9a65470a99c536c0be99d3e10e80565436c9691695"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-wardrobe-v2-1536.webp",
+            "sha256": "a1228b34eaa163fc8a42b85e027486983574d6169fae7cebd748d3b52b18183f"
+          }
+        ],
+        "lineage": [
+          {
+            "id": "original",
+            "kind": "original",
+            "sha256": "cf1b964c75b6a49536968eaf9a8d19186ce846262e0b9adcc86d053644ca9db6",
+            "parents": []
+          },
+          {
+            "id": "body_donor",
+            "kind": "generated_donor",
+            "sha256": "a4e52c62f1f808193c7d344da0aaf6733a2cf34447ffc64bf30ab5eb4098299c",
+            "parents": [
+              "original"
+            ]
+          },
+          {
+            "id": "body",
+            "kind": "masked_composite",
+            "sha256": "aa6a5bf58f66944cb77d05251e64a13685e361e66aa184ff12304d6a787c29fe",
+            "parents": [
+              "original",
+              "body_donor"
+            ]
+          },
+          {
+            "id": "final",
+            "kind": "color_adjustment",
+            "sha256": "aba5349ff196ed82a4c3b04d3b56798729b4d189e20191d64d5771385d5eeae5",
+            "parents": [
+              "body"
+            ]
+          }
+        ],
+        "body_source_id": "body",
+        "final_source_id": "final",
+        "excluded_pixel_ancestors": [
+          "6154342d113722787f0a47c2a5a9467d78125bed6a07969fc35b8464bf8d7e83",
+          "4652689719e1c56777be6231ca97940e5e29195a706bfa91fc83a7ca91cac8bb"
+        ],
+        "exclusion_reason": "Season donor6154 unused in final; spatial transplant4652 rejected. Neither contributed pixels to final color-only source.",
+        "stage_subjects": {
+          "owner_scope": "cf1b964c75b6a49536968eaf9a8d19186ce846262e0b9adcc86d053644ca9db6",
+          "donor_preflight": "8579e0665a2af5301c89e0db2803f1d652b8e279c51f3f210ead1eaf2d1d8292",
+          "donor_result": "a4e52c62f1f808193c7d344da0aaf6733a2cf34447ffc64bf30ab5eb4098299c",
+          "composite_preflight": "1879f86f75a07e393922b9d1ed8309cfe7624abf5bfec0fa7c5b473370d9d356",
+          "composite_result": "aa6a5bf58f66944cb77d05251e64a13685e361e66aa184ff12304d6a787c29fe",
+          "body_finished": "aa6a5bf58f66944cb77d05251e64a13685e361e66aa184ff12304d6a787c29fe",
+          "color_preflight": "2f423e5ed56c7556a6ef412cde6e10ec660dacc57514658d092e450571b4aff4",
+          "color_result": "aba5349ff196ed82a4c3b04d3b56798729b4d189e20191d64d5771385d5eeae5",
+          "source_finished": "aba5349ff196ed82a4c3b04d3b56798729b4d189e20191d64d5771385d5eeae5",
+          "encoding_preflight": "213ef8c862d5b120b9da48024227a1ab0deb48a5d0050f6216a62a28436791b6",
+          "encoding_result": "d8abc6c7a1e41ccba99f0887c92521a16cb9237e6027caf8d0ed9e8b18b45c52",
+          "delivery_finished": "12bc15e4efed26dc8a83643edcaf7139d0180d0a839e567500a8212e9f68c29b"
+        },
+        "evidence": [
+          {
+            "path": "docs/artwork-correction-evidence/site10-owner_scope-1.json",
+            "sha256": "3419beb73dc8c6c5ed20dae6b19325927923e9e564532c668ccc2f0a3ba11ef9",
+            "actual_actor": "Wyatt",
+            "stage": "owner_scope"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site10-owner_scope-2.json",
+            "sha256": "67d6a5b5d1ce495c332b1efa334f5df9707b4688ecd72a2dadfab8b2fb4bc8fa",
+            "actual_actor": "Gary",
+            "stage": "owner_scope"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site10-donor_preflight-3.json",
+            "sha256": "fbf1bc4a780758519396b51f72e60b9c00870583c0d47f7b5ce7b44a2a695302",
+            "actual_actor": "/root",
+            "stage": "donor_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site10-donor_preflight-4.json",
+            "sha256": "936f558ef51ff3bf9281d449213924b404d581ff72aecf585e508f276a2c5dca",
+            "actual_actor": "/root/fermi_current",
+            "stage": "donor_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site10-donor_result-5.json",
+            "sha256": "c242da8c647dd223dcda05d5bb25871fea95304095f4bd82989d067470023616",
+            "actual_actor": "/root/fermi_current",
+            "stage": "donor_result"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site10-composite_preflight-6.json",
+            "sha256": "e120a465f27c2e63ed8ba1469bf6dbd99a4f887e1185ae12848d8303ef1c667f",
+            "actual_actor": "/root/newton_current",
+            "stage": "composite_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site10-composite_preflight-7.json",
+            "sha256": "b2f8d90a771297fb20557ca0f50bfb9f2424f35bbc36065dc92fc540a40bda93",
+            "actual_actor": "/root",
+            "stage": "composite_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site10-color_preflight-8.json",
+            "sha256": "4df1695bff6becc27ee2e1eedc93f314bbafc68e27c4d4c628b16bd8aa8d913e",
+            "actual_actor": "/root/newton_current",
+            "stage": "color_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site10-color_preflight-9.json",
+            "sha256": "3e2917753046de7a2a1e25513e3c49034a5758c066b0de109eeb2a23524901b1",
+            "actual_actor": "/root",
+            "stage": "color_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site10-encoding_preflight-10.json",
+            "sha256": "acf2c5ff694244c2f91999574f21654dda47378e95d9589589a481a9f03cc8fe",
+            "actual_actor": "/root/newton_current",
+            "stage": "encoding_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site10-encoding_preflight-11.json",
+            "sha256": "57a2da5ed6bf2cd644599fb782ec94be3f826c2d2e9e30e2dab9b492f6bc1c69",
+            "actual_actor": "/root",
+            "stage": "encoding_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site10-composite_result-12.json",
+            "sha256": "4221e66e1b070fc7b7cd546014f10ec5be67380e8031e4fab3af8afbe5b13542",
+            "actual_actor": "/root/fermi_current",
+            "stage": "composite_result"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site10-color_result-13.json",
+            "sha256": "f8ea2535066db9eada7a4ddb01b06684af5da0f79c53c805cbc8d8d81916ca8b",
+            "actual_actor": "/root/fermi_current",
+            "stage": "color_result"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site10-body_finished-14.json",
+            "sha256": "570be920ac30f003fcad507889aab43547ea51612c43e50493f598cb8ce03802",
+            "actual_actor": "/root/fermi_current",
+            "stage": "body_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site10-body_finished-15.json",
+            "sha256": "8f1a6ce54ce5bff7d779c2c41f303da0a6f40de4d31af96da850bd670f90294b",
+            "actual_actor": "/root/newton_current",
+            "stage": "body_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site10-body_finished-16.json",
+            "sha256": "a1258d9037f6e94df2583e841edd092acb6d0991df498ddfd31ed62c68700203",
+            "actual_actor": "/root",
+            "stage": "body_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site10-source_finished-17.json",
+            "sha256": "eb33b1524b5190333153d6785a342d685290691e89a1870fd379b3b7875e5221",
+            "actual_actor": "/root/fermi_current",
+            "stage": "source_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site10-source_finished-18.json",
+            "sha256": "18b58b65e10dc19a9cf72f2e395e82d3b262bc57c5579bdee930d7d2de59a3ec",
+            "actual_actor": "/root/newton_current",
+            "stage": "source_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site10-source_finished-19.json",
+            "sha256": "381a7d1eb8f841e59576c27e53ac61f727ba78125caba100758a238c3e45c05d",
+            "actual_actor": "/root",
+            "stage": "source_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site10-delivery_finished-20.json",
+            "sha256": "d812b5b58cfb164d0c6350370a99b75ef1a1108683f32631d28d164d64ce8b44",
+            "actual_actor": "/root/fermi_current",
+            "stage": "delivery_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site10-delivery_finished-21.json",
+            "sha256": "c5b0dfa7eddb6d1f5c05f1e675666982e3acf0863d4b598a3eba17736d5301cb",
+            "actual_actor": "/root/newton_current",
+            "stage": "delivery_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site10-delivery_finished-22.json",
+            "sha256": "45d9ccef657eefc5fca11a66a3d2059a088d0d198c656932578f77f43a3c62a0",
+            "actual_actor": "/root",
+            "stage": "delivery_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site10-encoding_result-23.json",
+            "sha256": "0a17206f52143bd691b0872d4a7557cae8d5a65a30e6f9d93cb4cf8778fd6d87",
+            "actual_actor": "/root/fermi_current",
+            "stage": "encoding_result"
+          }
+        ],
+        "asset_allowlist": [
+          "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-body-season-v3.png",
+          "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-body-season-v3-640.webp",
+          "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-body-season-v3-960.webp",
+          "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-body-season-v3-1536.webp"
+        ],
+        "assets": [
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-body-season-v3.png",
+            "sha256": "aba5349ff196ed82a4c3b04d3b56798729b4d189e20191d64d5771385d5eeae5",
+            "pixel_sha256": "2e13a92d3dea7163fcf8994b3ad81b38a145de14901f6697ee2d3217a3c1d594",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "bytes": 2390493,
+            "source_sha256": "aba5349ff196ed82a4c3b04d3b56798729b4d189e20191d64d5771385d5eeae5",
+            "mode": "RGB",
+            "format": "PNG",
+            "role": "source"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-body-season-v3-640.webp",
+            "sha256": "dcadacba09be84ffaaade59faf84b01a5af36665b5582f6837fc89cc42b726d8",
+            "pixel_sha256": "f526066120f069e749494aeace9e3c919a0da83046a2a445229804ffa4e22a45",
+            "dimensions": [
+              640,
+              427
+            ],
+            "bytes": 68906,
+            "source_sha256": "aba5349ff196ed82a4c3b04d3b56798729b4d189e20191d64d5771385d5eeae5",
+            "mode": "RGB",
+            "format": "WEBP",
+            "role": "derivative"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-body-season-v3-960.webp",
+            "sha256": "1b3dfe16c6c74ee84d2633e4977ddb52005f7cc1205ddbb2b0216765bd372ef3",
+            "pixel_sha256": "e5fbf3c3236f1a305400c1af206570c1ee7ad7f153b801c101d1eeb0b77d6bd9",
+            "dimensions": [
+              960,
+              640
+            ],
+            "bytes": 139566,
+            "source_sha256": "aba5349ff196ed82a4c3b04d3b56798729b4d189e20191d64d5771385d5eeae5",
+            "mode": "RGB",
+            "format": "WEBP",
+            "role": "derivative"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-body-season-v3-1536.webp",
+            "sha256": "ea61a575533cade373651a69730bb0a9a8f2fa9f311c921320b4bac8cf934b18",
+            "pixel_sha256": "35aed068d4698a681f5e811690f2215ec308d0ce59f20200d9a5fa2450c878f2",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "bytes": 284036,
+            "source_sha256": "aba5349ff196ed82a4c3b04d3b56798729b4d189e20191d64d5771385d5eeae5",
+            "mode": "RGB",
+            "format": "WEBP",
+            "role": "derivative"
+          }
+        ]
+      },
+      {
+        "id": "SITE07",
+        "authority_kind": "reviewed_local_correction",
+        "precreation_claim": false,
+        "current_reviewers": {
+          "executor": "/root/fermi_current",
+          "independent": "/root/newton_current",
+          "root": "/root"
+        },
+        "immutable_originals": [
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-corrected-v2.png",
+            "sha256": "1f5870584dcc4c83e83ee40957a3863ae00a076c8ae52997ea5bbe42b5cd4433"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-corrected-v2-640.webp",
+            "sha256": "032fbf6a241ea1020d305760c9523bd05930a5cb04b5961096a77c3c38696cbe"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-corrected-v2-960.webp",
+            "sha256": "4e39828e27aa05e1c6e56c5404f3b79ec7135c995e5fcb3be71a4a98c307e914"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-corrected-v2-1536.webp",
+            "sha256": "08e26d9c628d9fa68839c299ade5cc425904394d2fe2afe2e6213f22c667d11e"
+          }
+        ],
+        "lineage": [
+          {
+            "id": "original",
+            "kind": "original",
+            "sha256": "1f5870584dcc4c83e83ee40957a3863ae00a076c8ae52997ea5bbe42b5cd4433",
+            "parents": []
+          },
+          {
+            "id": "donor",
+            "kind": "generated_donor",
+            "sha256": "327798313b71ad24bd8adb805db3ebcab0aa4ad6ec6bcd0d7fcb59d3a8b18d58",
+            "parents": [
+              "original"
+            ]
+          },
+          {
+            "id": "final",
+            "kind": "masked_composite",
+            "sha256": "217383853ebbc541013e57cb73057c901770b3f8425ced50cd4f175b3151ec24",
+            "parents": [
+              "original",
+              "donor"
+            ]
+          }
+        ],
+        "body_source_id": "final",
+        "final_source_id": "final",
+        "excluded_pixel_ancestors": [
+          "a021bbf8f0b732020c90422e27d33f35aeb695a3ec1f9cc59fb239ebe187739f"
+        ],
+        "exclusion_reason": "Rejected earlier composites are preserved nonancestors; accepted result starts from original plus same reviewed donor.",
+        "stage_subjects": {
+          "owner_scope": "1f5870584dcc4c83e83ee40957a3863ae00a076c8ae52997ea5bbe42b5cd4433",
+          "donor_preflight": "2ba013fdfc9474ce08e9581208acfd3dba0a25b1ed142672cd8ac2dc94255b3a",
+          "donor_result": "327798313b71ad24bd8adb805db3ebcab0aa4ad6ec6bcd0d7fcb59d3a8b18d58",
+          "composite_preflight": "79228314a2d864827cdec9f768daf2156df554a86e1af2c207ec005ce2d27e33",
+          "composite_result": "217383853ebbc541013e57cb73057c901770b3f8425ced50cd4f175b3151ec24",
+          "body_finished": "217383853ebbc541013e57cb73057c901770b3f8425ced50cd4f175b3151ec24",
+          "source_finished": "217383853ebbc541013e57cb73057c901770b3f8425ced50cd4f175b3151ec24",
+          "encoding_preflight": "244609cd8b6fbb6fc68cfea2e1aba81be30427c4b7a00fe8febba06b8bc8244f",
+          "encoding_result": "4a11b5ed2e8fc53f4860072b73d3cccdec0eb3079f3f254b51a0f5095a73c215",
+          "delivery_finished": "ef242738adef66f7f2afb2466d343ee539f9e2bfd6a0b94a7604d2e964f764c1"
+        },
+        "evidence": [
+          {
+            "path": "docs/artwork-correction-evidence/site07-owner_scope-1.json",
+            "sha256": "eae1d63d86449ab11da54bb5c2a46a41bcfe2830b4f5afc24378824abfd3f9bd",
+            "actual_actor": "Gary",
+            "stage": "owner_scope"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site07-donor_preflight-2.json",
+            "sha256": "9366579c250e9818202f0fcd9dc8cb3284835820095d2dde965dbf0378e43b26",
+            "actual_actor": "/root/newton_current",
+            "stage": "donor_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site07-donor_result-3.json",
+            "sha256": "7f1204d51e705a4718a4d5df4beecdb58ef100d682f70e7f35ce3c2a78a7c08f",
+            "actual_actor": "/root/fermi_current",
+            "stage": "donor_result"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site07-composite_preflight-4.json",
+            "sha256": "29e7aaf8e09fd261d7dfc9f76f2e9e41493a3e85367f76a5b820ae6c7178af23",
+            "actual_actor": "/root",
+            "stage": "composite_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site07-composite_preflight-5.json",
+            "sha256": "d83d96dd4d360c27a8847783016ab8ec08dc6b29c4d4fe667c9225c98cc8de8d",
+            "actual_actor": "/root/newton_current",
+            "stage": "composite_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site07-composite_result-6.json",
+            "sha256": "8a790afb1054c572729c737a0d4ccc57fe9f825177999ee38152dcedf70eec19",
+            "actual_actor": "/root/fermi_current",
+            "stage": "composite_result"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site07-body_finished-7.json",
+            "sha256": "9f221128bafe4e8b954c84c9ecaf4bcaf0222d6e056ceb833278e03134bd833e",
+            "actual_actor": "/root/fermi_current",
+            "stage": "body_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site07-body_finished-8.json",
+            "sha256": "3398218be93c6537ead424f025e124cfa96112f01ce91945812baa85a1066e9e",
+            "actual_actor": "/root/newton_current",
+            "stage": "body_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site07-body_finished-9.json",
+            "sha256": "5a8f76f26513b002ec8701a0de4b0d154f78e1d3dc492060240661ec5520c9e7",
+            "actual_actor": "/root",
+            "stage": "body_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site07-source_finished-10.json",
+            "sha256": "9e9d7129be67d6c270a7d836f4de5f25e9187f42854ed93e772b4f29561491f7",
+            "actual_actor": "/root/fermi_current",
+            "stage": "source_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site07-source_finished-11.json",
+            "sha256": "1873845d0617302cf2d7c1f4b9d0bd1adbe66eeb1a8de6eb4bb1fec7d1a10d94",
+            "actual_actor": "/root/newton_current",
+            "stage": "source_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site07-source_finished-12.json",
+            "sha256": "c85f3c55d25d95c52aa597cb78b33aad9ce60b96a94eff7e659460787f0916ed",
+            "actual_actor": "/root",
+            "stage": "source_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site07-encoding_preflight-13.json",
+            "sha256": "6a76c2651d990c85e3ee84d750ed02efc71751e99dcfd7566d57b4511b7c2eb2",
+            "actual_actor": "/root",
+            "stage": "encoding_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site07-encoding_preflight-14.json",
+            "sha256": "047ab3dce55f7af399c6762646797aa1fc483e5f2fa23475505e8e974926fee7",
+            "actual_actor": "/root/newton_current",
+            "stage": "encoding_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site07-encoding_result-15.json",
+            "sha256": "48570a6160d4c3f851c8239185446034efbfd7273549972d86ea9c95ed35239e",
+            "actual_actor": "/root/fermi_current",
+            "stage": "encoding_result"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site07-delivery_finished-16.json",
+            "sha256": "41e6e595de5fbad14bfa4533c8559d46d0a90b95686a80fbf3357ddb95915d1e",
+            "actual_actor": "/root/fermi_current",
+            "stage": "delivery_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site07-delivery_finished-17.json",
+            "sha256": "c0e13b473435cb8809ae926d1ddb356a9f9266843e2449468a3b6192f16f71b3",
+            "actual_actor": "/root/newton_current",
+            "stage": "delivery_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site07-delivery_finished-18.json",
+            "sha256": "0942e2cadd6e5f34171ef40fc4c9caca786801391a5379bdd8843b74c691b5b3",
+            "actual_actor": "/root",
+            "stage": "delivery_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site07-donor_preflight-19.json",
+            "sha256": "f3799e84bb1b50e012f2fb9455b70d72739903394ad74d7e845c871f92359272",
+            "actual_actor": "/root",
+            "stage": "donor_preflight"
+          }
+        ],
+        "asset_allowlist": [
+          "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-bodice-v3.png",
+          "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-bodice-v3-640.webp",
+          "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-bodice-v3-960.webp",
+          "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-bodice-v3-1536.webp"
+        ],
+        "assets": [
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-bodice-v3.png",
+            "sha256": "217383853ebbc541013e57cb73057c901770b3f8425ced50cd4f175b3151ec24",
+            "pixel_sha256": "4a2b6490f2614776efc5a6b66175bfe52300334709666d39d3de319bfa82e858",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "bytes": 2346223,
+            "source_sha256": "217383853ebbc541013e57cb73057c901770b3f8425ced50cd4f175b3151ec24",
+            "mode": "RGB",
+            "format": "PNG",
+            "role": "source"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-bodice-v3-640.webp",
+            "sha256": "cfe91ef2e1b1f920457c2cf7002e70e165e141c0067a7a2268470a832737c417",
+            "pixel_sha256": "35e899ba3b70c02d8d91db7d27e42dd8cfcb8dd4d664529448ccef063da501d7",
+            "dimensions": [
+              640,
+              427
+            ],
+            "bytes": 71770,
+            "source_sha256": "217383853ebbc541013e57cb73057c901770b3f8425ced50cd4f175b3151ec24",
+            "mode": "RGB",
+            "format": "WEBP",
+            "role": "derivative"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-bodice-v3-960.webp",
+            "sha256": "6a17a75c7aae7513463b18dc06bbd13dd9470f1563af03488739d86d56a74bfc",
+            "pixel_sha256": "2686741d02eb05cc9e1fce3ca36b3897661d537f76de43d403795a9cc7387b33",
+            "dimensions": [
+              960,
+              640
+            ],
+            "bytes": 137620,
+            "source_sha256": "217383853ebbc541013e57cb73057c901770b3f8425ced50cd4f175b3151ec24",
+            "mode": "RGB",
+            "format": "WEBP",
+            "role": "derivative"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-bodice-v3-1536.webp",
+            "sha256": "6d290218ab7b3819f011023458720cfe2aa203975343c116456e463e31df4be0",
+            "pixel_sha256": "d891fec7d3d0a23aa0bff82d17ed0c10f3263af519b964e149c721b657dd5644",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "bytes": 272238,
+            "source_sha256": "217383853ebbc541013e57cb73057c901770b3f8425ced50cd4f175b3151ec24",
+            "mode": "RGB",
+            "format": "WEBP",
+            "role": "derivative"
+          }
+        ]
+      },
+      {
+        "id": "SITE09",
+        "authority_kind": "reviewed_local_correction",
+        "precreation_claim": false,
+        "current_reviewers": {
+          "executor": "/root/fermi_current",
+          "independent": "/root/newton_current",
+          "root": "/root"
+        },
+        "immutable_originals": [
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-wardrobe-v2.png",
+            "sha256": "12a9638ec8dda79b872c17350af964e7994e57f82ac25afc77df282f5fc12068"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-wardrobe-v2-640.webp",
+            "sha256": "f2a1be9ed66f698d17abe121647f39e72050762cda81e4df6ec4ff5cb15a444e"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-wardrobe-v2-960.webp",
+            "sha256": "819276772094c45e4de93bbb4aa491120a9eea0e0c567fb8672628fcdca5a25b"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-wardrobe-v2-1536.webp",
+            "sha256": "ecdfe34ead7319e050f1ca2467e1d040c73a2733b053ee70bd485b8015370eac"
+          }
+        ],
+        "lineage": [
+          {
+            "id": "original",
+            "kind": "original",
+            "sha256": "12a9638ec8dda79b872c17350af964e7994e57f82ac25afc77df282f5fc12068",
+            "parents": []
+          },
+          {
+            "id": "donor",
+            "kind": "generated_donor",
+            "sha256": "ba30d81020364f06ade4ac96cd6558b2069ba4476085487d63e9850ecd711b67",
+            "parents": [
+              "original"
+            ]
+          },
+          {
+            "id": "final",
+            "kind": "masked_composite",
+            "sha256": "2b2e8e7ce28cb2d9c4d98d12e35c2ba7da1d1c510dd25df00adb49439320fa0f",
+            "parents": [
+              "original",
+              "donor"
+            ]
+          }
+        ],
+        "body_source_id": "final",
+        "final_source_id": "final",
+        "excluded_pixel_ancestors": [],
+        "exclusion_reason": "Accepted first masked composite; no rejected intermediate used.",
+        "stage_subjects": {
+          "owner_scope": "12a9638ec8dda79b872c17350af964e7994e57f82ac25afc77df282f5fc12068",
+          "donor_preflight": "8898f47ec0c8f34105486e358245a5f0b03d8dc69b2fec98a21ff03e5fb56ca6",
+          "donor_result": "ba30d81020364f06ade4ac96cd6558b2069ba4476085487d63e9850ecd711b67",
+          "composite_preflight": "7f463b23621e0f4bc8134550c26e154d5051c0c9775112c6f058e47196372fc2",
+          "composite_result": "2b2e8e7ce28cb2d9c4d98d12e35c2ba7da1d1c510dd25df00adb49439320fa0f",
+          "body_finished": "2b2e8e7ce28cb2d9c4d98d12e35c2ba7da1d1c510dd25df00adb49439320fa0f",
+          "source_finished": "2b2e8e7ce28cb2d9c4d98d12e35c2ba7da1d1c510dd25df00adb49439320fa0f",
+          "encoding_preflight": "5f1e327f13660754cef5651b0297c94fbffcc5991cfda5116da9eebc5e03a2ab",
+          "encoding_result": "580d957c61ef827d12402f21f481b22f6be21acc28fd8ab05b25d064beaa272e",
+          "delivery_finished": "e03d0b70235a7b0f284a36e569c39e6bb9b8c3738f887fb48f5f5b26406f341f"
+        },
+        "evidence": [
+          {
+            "path": "docs/artwork-correction-evidence/site09-owner_scope-1.json",
+            "sha256": "23fc393d3d4c4d4b49d412a7cec8ae67177cc8a0a839b372bed5fcadb4e7ca95",
+            "actual_actor": "Gary",
+            "stage": "owner_scope"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site09-donor_preflight-2.json",
+            "sha256": "d35ff16e2d3c21529981721e6377e5e9abda1851a16f1cf924cd325ba501ea80",
+            "actual_actor": "/root/newton_current",
+            "stage": "donor_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site09-donor_result-3.json",
+            "sha256": "7f21920a46bab52edb4d5f964e2484bc1e1dca49877032a3c8f576f4cbe9e228",
+            "actual_actor": "/root/fermi_current",
+            "stage": "donor_result"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site09-composite_preflight-4.json",
+            "sha256": "dbb0315a72ad2b63c0ad9716abe0b136e0c6eea599aefef6c6b6d4523dcb279b",
+            "actual_actor": "/root",
+            "stage": "composite_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site09-composite_preflight-5.json",
+            "sha256": "50e30f863409d83faec6e9995ab56d2da5870e539ae65ba8fdfbff8b5a70fe25",
+            "actual_actor": "/root/newton_current",
+            "stage": "composite_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site09-composite_result-6.json",
+            "sha256": "e4aba5930a19198aa670d8fbba735dbd441216b9921e26dc15070aef176cfcc2",
+            "actual_actor": "/root/fermi_current",
+            "stage": "composite_result"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site09-body_finished-7.json",
+            "sha256": "f9e46ef382528206611a82fe8f7810f76d7d4997266edbc757eaceb8d244b24d",
+            "actual_actor": "/root/fermi_current",
+            "stage": "body_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site09-body_finished-8.json",
+            "sha256": "ff274673bc225080ec4236e9a113b0c238b8da27c394705db15c363982f42aaa",
+            "actual_actor": "/root/newton_current",
+            "stage": "body_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site09-body_finished-9.json",
+            "sha256": "e979094cde1997307408354adcd0b619da40c00aaf047a23ebf942af8142470e",
+            "actual_actor": "/root",
+            "stage": "body_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site09-source_finished-10.json",
+            "sha256": "0400da404c48adc5967131a1a4ddfe197758617b8fbcd31e9578b179e44336fa",
+            "actual_actor": "/root/fermi_current",
+            "stage": "source_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site09-source_finished-11.json",
+            "sha256": "17fb7d00bcd672bf68e11f51a8340e8d1ad9b7eb99de99e76e9bb8b484efd79c",
+            "actual_actor": "/root/newton_current",
+            "stage": "source_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site09-source_finished-12.json",
+            "sha256": "c81d372baab0067ffd8ce20cff5e06f0afa0ee2dd3565a18223eb02a6b2c1b78",
+            "actual_actor": "/root",
+            "stage": "source_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site09-encoding_preflight-13.json",
+            "sha256": "3c97208f484405269a6b6fbbcb6285955232617aa0feaf97f13f250f7691fd85",
+            "actual_actor": "/root",
+            "stage": "encoding_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site09-encoding_preflight-14.json",
+            "sha256": "eb26c01a11b1962ed29a7b4dc0686e50b4b0bae0ffb83e6600b5f17bb5cdfe2a",
+            "actual_actor": "/root/newton_current",
+            "stage": "encoding_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site09-encoding_result-15.json",
+            "sha256": "ab0427635d9f3991b86b08fa1884076b44c1112969e7b8385574d0af57f7c55a",
+            "actual_actor": "/root/fermi_current",
+            "stage": "encoding_result"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site09-delivery_finished-16.json",
+            "sha256": "62be6040dd31fae86de121a4a55ce5181252de3a3d1fdd11423172189fbc1e8d",
+            "actual_actor": "/root/fermi_current",
+            "stage": "delivery_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site09-delivery_finished-17.json",
+            "sha256": "0cd1cccdcd773ed4e014d5628d4ee5324841bb19271ff7d60927b5fcf6bd1a77",
+            "actual_actor": "/root/newton_current",
+            "stage": "delivery_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site09-delivery_finished-18.json",
+            "sha256": "34efa876abe876ddaa78f6e6c1911572af4932a4d5fb6e708583afe7e0098adc",
+            "actual_actor": "/root",
+            "stage": "delivery_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site09-donor_preflight-19.json",
+            "sha256": "5a8760bedf9f8dcc91152d478aaaca47d4aac14285784a876f37a4153066ccd8",
+            "actual_actor": "/root",
+            "stage": "donor_preflight"
+          }
+        ],
+        "asset_allowlist": [
+          "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3.png",
+          "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3-640.webp",
+          "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3-960.webp",
+          "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3-1536.webp"
+        ],
+        "assets": [
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3.png",
+            "sha256": "2b2e8e7ce28cb2d9c4d98d12e35c2ba7da1d1c510dd25df00adb49439320fa0f",
+            "pixel_sha256": "ec244daf6958fd94c050abc795b86552e6afd34539698b4bf1bede92b7989777",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "bytes": 1985217,
+            "source_sha256": "2b2e8e7ce28cb2d9c4d98d12e35c2ba7da1d1c510dd25df00adb49439320fa0f",
+            "mode": "RGB",
+            "format": "PNG",
+            "role": "source"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3-640.webp",
+            "sha256": "482b50f0cadc0e6a7c1fee3a458f19bb088e51d071f2b9b1f0ff51908edc13be",
+            "pixel_sha256": "14184389b4de4839bc7911bb7c37fbd7de41403613707580d5f3fc41e9dcb5ab",
+            "dimensions": [
+              640,
+              427
+            ],
+            "bytes": 52130,
+            "source_sha256": "2b2e8e7ce28cb2d9c4d98d12e35c2ba7da1d1c510dd25df00adb49439320fa0f",
+            "mode": "RGB",
+            "format": "WEBP",
+            "role": "derivative"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3-960.webp",
+            "sha256": "b9f8ef1bcb6bd09ce8fb889889ca13b748524140de544fc0db3362c7e349a9a2",
+            "pixel_sha256": "71c219606d2ebf451f6c44b618f9aa4950ee1dc53bc3bcbd62a259af4d50e416",
+            "dimensions": [
+              960,
+              640
+            ],
+            "bytes": 95784,
+            "source_sha256": "2b2e8e7ce28cb2d9c4d98d12e35c2ba7da1d1c510dd25df00adb49439320fa0f",
+            "mode": "RGB",
+            "format": "WEBP",
+            "role": "derivative"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3-1536.webp",
+            "sha256": "a6c4012577748a4b52253d76ef1f7978ab7aaaae2707c7134832d25005a20f09",
+            "pixel_sha256": "b8fba71181ac1cf24e0127f19cdf160e8417bf966bb0564acb86130190a1e860",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "bytes": 165644,
+            "source_sha256": "2b2e8e7ce28cb2d9c4d98d12e35c2ba7da1d1c510dd25df00adb49439320fa0f",
+            "mode": "RGB",
+            "format": "WEBP",
+            "role": "derivative"
+          }
+        ]
+      },
+      {
+        "id": "SITE12",
+        "authority_kind": "reviewed_local_correction",
+        "precreation_claim": false,
+        "current_reviewers": {
+          "executor": "/root/fermi_current",
+          "independent": "/root/newton_current",
+          "root": "/root"
+        },
+        "immutable_originals": [
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-wardrobe-v2.png",
+            "sha256": "0440c07de9541b20fa23680d60932b742fc85665f651d7330ac511aaee299905"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-wardrobe-v2-640.webp",
+            "sha256": "b0f314f4d0194f9b5cd0770ace1e7598131b5b4da92d1a91698224e61fb0431b"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-wardrobe-v2-960.webp",
+            "sha256": "498cfe2d43fdf8efd542a7324b4dbc36d707bd9b677af32481aec289b7bfcd1c"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-wardrobe-v2-1536.webp",
+            "sha256": "2a7bc98869ea600a66b7c0f5c516038e99965da65fc17434f49264e46ec0eaa1"
+          }
+        ],
+        "lineage": [
+          {
+            "id": "original",
+            "kind": "original",
+            "sha256": "0440c07de9541b20fa23680d60932b742fc85665f651d7330ac511aaee299905",
+            "parents": []
+          },
+          {
+            "id": "donor",
+            "kind": "generated_donor",
+            "sha256": "97e12ed8345f4886517192a47298072f40f5ba7d52066b825532808d0d2844f0",
+            "parents": [
+              "original"
+            ]
+          },
+          {
+            "id": "final",
+            "kind": "masked_composite",
+            "sha256": "b2dfd1800e7ddb48d0f644fbd49c8e69ee6e50ab087e60b4c96822862500d9ce",
+            "parents": [
+              "original",
+              "donor"
+            ]
+          }
+        ],
+        "body_source_id": "final",
+        "final_source_id": "final",
+        "excluded_pixel_ancestors": [
+          "7565fd0286c37a3ca7caddaa4c912dd84f77ee61961a4ea25588686328eb3c8f"
+        ],
+        "exclusion_reason": "Rejected earlier composites are preserved nonancestors; accepted result starts from original plus same reviewed donor.",
+        "stage_subjects": {
+          "owner_scope": "0440c07de9541b20fa23680d60932b742fc85665f651d7330ac511aaee299905",
+          "donor_preflight": "69ba551026ed2a29b99945f4cdc04ac152ef7422082c45ce6eba85a094d54429",
+          "donor_result": "97e12ed8345f4886517192a47298072f40f5ba7d52066b825532808d0d2844f0",
+          "composite_preflight": "79228314a2d864827cdec9f768daf2156df554a86e1af2c207ec005ce2d27e33",
+          "composite_result": "b2dfd1800e7ddb48d0f644fbd49c8e69ee6e50ab087e60b4c96822862500d9ce",
+          "body_finished": "b2dfd1800e7ddb48d0f644fbd49c8e69ee6e50ab087e60b4c96822862500d9ce",
+          "source_finished": "b2dfd1800e7ddb48d0f644fbd49c8e69ee6e50ab087e60b4c96822862500d9ce",
+          "encoding_preflight": "c6833a913a54e422698594a047bad19f70fcbd1b6e1afe675d2e56ac5ae36160",
+          "encoding_result": "52b959ab5825a69532baf73078710255b015bb047469bf9fea2d5536a7ebd39d",
+          "delivery_finished": "9396cb75e285009136ef075b4998929cf2061e25f7969a3faf1904070743219a"
+        },
+        "evidence": [
+          {
+            "path": "docs/artwork-correction-evidence/site12-owner_scope-1.json",
+            "sha256": "5bbc668e522a9393cb46b46385207ae29675f2166b1a8a1371529078fe97005a",
+            "actual_actor": "Gary",
+            "stage": "owner_scope"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site12-donor_preflight-2.json",
+            "sha256": "2dc35eec31b1cfe23311f57ba37f42586d078db7ca30efe941b35167eda975fb",
+            "actual_actor": "/root/newton_current",
+            "stage": "donor_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site12-donor_result-3.json",
+            "sha256": "2594f6ccc41b94c727ec1a6e9b0e0cc748028205ebca88bed0431110afd1bb7e",
+            "actual_actor": "/root/fermi_current",
+            "stage": "donor_result"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site12-composite_preflight-4.json",
+            "sha256": "38aa2716cee0f986d5935d2885af06315706b61cea9622381cdb2a262d458c3c",
+            "actual_actor": "/root",
+            "stage": "composite_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site12-composite_preflight-5.json",
+            "sha256": "6704b8eb41b3c44041c9fe13bf6b0daafe6e305de51dbb415544a077fa42ea71",
+            "actual_actor": "/root/newton_current",
+            "stage": "composite_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site12-composite_result-6.json",
+            "sha256": "f7e93169134ad3b3fc6f686a382098a3e3e4603f8ce7f0d33cf403705c1ea59b",
+            "actual_actor": "/root/fermi_current",
+            "stage": "composite_result"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site12-body_finished-7.json",
+            "sha256": "d4f8a76ac81c49deae8b91c32cea3ea5133200d70d4659df16bbe9e4bd582ba9",
+            "actual_actor": "/root/fermi_current",
+            "stage": "body_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site12-body_finished-8.json",
+            "sha256": "1971ed2f61ecdbe4c418c9f8c4f73f33469b19d544019a135f1627755106e880",
+            "actual_actor": "/root/newton_current",
+            "stage": "body_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site12-body_finished-9.json",
+            "sha256": "e3f3a9889001f12cffa548e72f174c38324f12fb2c49b0088cad8ac4bdd91e44",
+            "actual_actor": "/root",
+            "stage": "body_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site12-source_finished-10.json",
+            "sha256": "1f3838c330c57e40223be7d6880da66b739d9607f39bcb3e2dbbc1ca173434d2",
+            "actual_actor": "/root/fermi_current",
+            "stage": "source_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site12-source_finished-11.json",
+            "sha256": "db28c5be894ae5e3bd5c108c56b76db0fe76974e649abbfe27d79299df964e2d",
+            "actual_actor": "/root/newton_current",
+            "stage": "source_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site12-source_finished-12.json",
+            "sha256": "3b333c8d5e3a3b907506550b01417442a0a250b333887592ebfc6ac348e04821",
+            "actual_actor": "/root",
+            "stage": "source_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site12-encoding_preflight-13.json",
+            "sha256": "b0df139c95dee0232058c9bdbe74de72f8c98a696269a05021c336f1b1408de7",
+            "actual_actor": "/root",
+            "stage": "encoding_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site12-encoding_preflight-14.json",
+            "sha256": "47143899f2c81e2618c32ab461fada2cd7b0ea3f729523d517aa7b8dc827be54",
+            "actual_actor": "/root/newton_current",
+            "stage": "encoding_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site12-encoding_result-15.json",
+            "sha256": "ec28d04ef28a52f8ba4b88132f1de3910155e3a92c6109d829160d5ff743da65",
+            "actual_actor": "/root/fermi_current",
+            "stage": "encoding_result"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site12-delivery_finished-16.json",
+            "sha256": "5f151677c04713e83a918dd3fb19954d1065b258cea415118016d3c6ade98dd3",
+            "actual_actor": "/root/fermi_current",
+            "stage": "delivery_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site12-delivery_finished-17.json",
+            "sha256": "f1a68fcd44994b5ea4375f966b6c8961957332fa0d1e226adff46e9fd4094f55",
+            "actual_actor": "/root/newton_current",
+            "stage": "delivery_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site12-delivery_finished-18.json",
+            "sha256": "33a58f7e11509c315d4360b2cf36792b5103d9a5d365bdef64be356892ce02bc",
+            "actual_actor": "/root",
+            "stage": "delivery_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site12-donor_preflight-19.json",
+            "sha256": "73276bfc948c0c23460fe2decb19cc6615cfda637cb844d4841ce6306a0fa080",
+            "actual_actor": "/root",
+            "stage": "donor_preflight"
+          }
+        ],
+        "asset_allowlist": [
+          "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-bodice-v3.png",
+          "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-bodice-v3-640.webp",
+          "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-bodice-v3-960.webp",
+          "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-bodice-v3-1536.webp"
+        ],
+        "assets": [
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-bodice-v3.png",
+            "sha256": "b2dfd1800e7ddb48d0f644fbd49c8e69ee6e50ab087e60b4c96822862500d9ce",
+            "pixel_sha256": "aa54393b40c6b1f975a4f52fb201314032b67531c0f6fa953eb80ec654662f32",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "bytes": 1954978,
+            "source_sha256": "b2dfd1800e7ddb48d0f644fbd49c8e69ee6e50ab087e60b4c96822862500d9ce",
+            "mode": "RGB",
+            "format": "PNG",
+            "role": "source"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-bodice-v3-640.webp",
+            "sha256": "e9f0c92b4e63f2f42d6d262a200edd08f75a9f0d9d00bdc2a29c3b7a99328801",
+            "pixel_sha256": "59f323bf23b993d22e960e71b3086a2fb0bafb8dd97830416eb8558ed5841790",
+            "dimensions": [
+              640,
+              427
+            ],
+            "bytes": 51042,
+            "source_sha256": "b2dfd1800e7ddb48d0f644fbd49c8e69ee6e50ab087e60b4c96822862500d9ce",
+            "mode": "RGB",
+            "format": "WEBP",
+            "role": "derivative"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-bodice-v3-960.webp",
+            "sha256": "5d36b9c7da8e518c06ca09a013867c3510ab195cf6b4e51dcbc87b2a1e0be4ec",
+            "pixel_sha256": "e74985bd51c9158ba92030e9ffbc61500e1bd5b209093d7ce259968442148a4b",
+            "dimensions": [
+              960,
+              640
+            ],
+            "bytes": 96200,
+            "source_sha256": "b2dfd1800e7ddb48d0f644fbd49c8e69ee6e50ab087e60b4c96822862500d9ce",
+            "mode": "RGB",
+            "format": "WEBP",
+            "role": "derivative"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-bodice-v3-1536.webp",
+            "sha256": "d4cfe44b9774ba0f2ecfe3af370b4de1eec598426a68de5ef7a9676c13e4b04f",
+            "pixel_sha256": "7823433bf5822d2d0728a0bdb4e6d7290d113eb9bc518ab563476e3bf4426d18",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "bytes": 183248,
+            "source_sha256": "b2dfd1800e7ddb48d0f644fbd49c8e69ee6e50ab087e60b4c96822862500d9ce",
+            "mode": "RGB",
+            "format": "WEBP",
+            "role": "derivative"
+          }
+        ]
+      },
+      {
+        "id": "SITE01",
+        "authority_kind": "reviewed_local_correction",
+        "precreation_claim": false,
+        "current_reviewers": {
+          "executor": "/root/fermi_current",
+          "independent": "/root/newton_current",
+          "root": "/root"
+        },
+        "immutable_originals": [
+          {
+            "path": "assets/page-art/bom-evidences/josephemma.webp",
+            "sha256": "4293b5cb088c493407e31812855b14aad6646a758e3c6bb7e511f5485d88b30c"
+          },
+          {
+            "path": "assets/page-art/bom-evidences/josephemma-960.webp",
+            "sha256": "bc3fae4216cd8d670404686bb25548e68dedb1642f7ebd6f2616c97511f4c34e"
+          }
+        ],
+        "lineage": [
+          {
+            "id": "original",
+            "kind": "original",
+            "sha256": "4293b5cb088c493407e31812855b14aad6646a758e3c6bb7e511f5485d88b30c",
+            "parents": []
+          },
+          {
+            "id": "donor",
+            "kind": "generated_donor",
+            "sha256": "78a32f83a4a6e26919aa9163ecd6817b3dd14ac8ddb378be408578bdcb6e3d58",
+            "parents": [
+              "original"
+            ]
+          },
+          {
+            "id": "final",
+            "kind": "masked_composite",
+            "sha256": "cbf83e11d899acb1b2a002a17f8b6b440216fbdb363b6168c168f86a04ec674f",
+            "parents": [
+              "original",
+              "donor"
+            ]
+          }
+        ],
+        "body_source_id": "final",
+        "final_source_id": "final",
+        "excluded_pixel_ancestors": [
+          "69481466c3dfa5d244066a1fc78b3e7139667b6b5e8204775d72512d9f212700",
+          "4d626c2343947162be2cff56404d1038803a3c0c52dba6b677f1d9eab421ec58"
+        ],
+        "exclusion_reason": "Held earlier trial outputs remain excluded nonancestors; this accepted operation uses exactly the recorded source and donor.",
+        "method": "Registered donor cloth sampled through the exact reviewed rowwise inverse linear map only inside active garment alpha; original outside pixels retained. No same-coordinate claim.",
+        "stage_subjects": {
+          "owner_scope": "4293b5cb088c493407e31812855b14aad6646a758e3c6bb7e511f5485d88b30c",
+          "encoding_preflight": "6a6912b67c41c91cf219384e4f38918e517dcf97e9ae079769fc6ad61f22f70f",
+          "encoding_result": "a315b949c9eca68116385a5841c328c660ead9dd2238cd3d0af26e7748e99d70",
+          "source_finished": "cbf83e11d899acb1b2a002a17f8b6b440216fbdb363b6168c168f86a04ec674f",
+          "delivery_finished": "c7a2a4167b1c7c9e1a3d41d3861311d4ad8f9837fab79518e3ddeb958ca2c66d",
+          "donor_preflight": "db1dcbe2c24b724e2f09d195caa623b0699e4147c096f0caac2d1cc192705946",
+          "donor_result": "78a32f83a4a6e26919aa9163ecd6817b3dd14ac8ddb378be408578bdcb6e3d58",
+          "composite_preflight": "4aed519339a451972402a327f8412784172ac6dafdceffc74870ba39cf64d773",
+          "composite_result": "cbf83e11d899acb1b2a002a17f8b6b440216fbdb363b6168c168f86a04ec674f",
+          "body_finished": "cbf83e11d899acb1b2a002a17f8b6b440216fbdb363b6168c168f86a04ec674f"
+        },
+        "evidence": [
+          {
+            "path": "docs/artwork-correction-evidence/site01-donor_preflight-1.json",
+            "sha256": "0af5ed7b4f5a5cbbe632568243f5f2b130e317f3161a7a2d3567c226cc83704b",
+            "actual_actor": "/root/newton_current",
+            "stage": "donor_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site01-donor_preflight-2.json",
+            "sha256": "18da679a5bf15663bcb4aedf74a9b841b5a49d76c38ffc529a2fd1a23787b0ab",
+            "actual_actor": "/root",
+            "stage": "donor_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site01-donor_result-1.json",
+            "sha256": "634366650fb889e7283c366684e149323b1ae4ffa73a0412188b565da6aaebc2",
+            "actual_actor": "/root/fermi_current",
+            "stage": "donor_result"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site01-composite_preflight-1.json",
+            "sha256": "f449f659fca8d9c890e9f8eb2c8f676d8878f2033d72565581d5b324c1c5351f",
+            "actual_actor": "/root/newton_current",
+            "stage": "composite_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site01-composite_preflight-2.json",
+            "sha256": "98b6f74b18a17127e8bf3305f5fee20f46fb7a1d93a263d59e3ef2d6aaa1e8a6",
+            "actual_actor": "/root",
+            "stage": "composite_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site01-composite_result-1.json",
+            "sha256": "3c2d7e4c10dc3cbcaef2125b89902a90a60f94d37bf7f7a5480e8feb49d4071d",
+            "actual_actor": "/root/fermi_current",
+            "stage": "composite_result"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site01-source_finished-1.json",
+            "sha256": "de768a2f88b202026f54d958e9e83ff23026f7014dc5835d1427bba6b2b1cd5a",
+            "actual_actor": "/root/fermi_current",
+            "stage": "source_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site01-source_finished-2.json",
+            "sha256": "dca0d98fcf0b651740df9ecdeb2ef9db9e9e10018625d59358289190c15a0572",
+            "actual_actor": "/root/newton_current",
+            "stage": "source_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site01-source_finished-3.json",
+            "sha256": "f20c4f3c58ba3308b71afc145b52384414776b58d2c1d6ec85a3ad15ff19736a",
+            "actual_actor": "/root",
+            "stage": "source_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site01-encoding_preflight-1.json",
+            "sha256": "2b4236fa4573ac59a043b514c785e19eaceabc8ab83a65e1847cf4c934513c59",
+            "actual_actor": "/root/newton_current",
+            "stage": "encoding_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site01-encoding_preflight-2.json",
+            "sha256": "98d7e716de9c1fc00e3dd9ff6ba740e0787fa2d43e395c66502554b9e03b9621",
+            "actual_actor": "/root",
+            "stage": "encoding_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site01-encoding_result-1.json",
+            "sha256": "f1668f89bfbaf347e5b28526852295c2ec4eb2ab70713be9b77dc59fadcd79d7",
+            "actual_actor": "/root/fermi_current",
+            "stage": "encoding_result"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site01-delivery_finished-1.json",
+            "sha256": "d1b50d9460a68cfecdaef6caa716982eb36968cb9e0454ce2e0ab348e7dd5e31",
+            "actual_actor": "/root/fermi_current",
+            "stage": "delivery_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site01-delivery_finished-2.json",
+            "sha256": "a702d1501a653318c68fa16704218fd19dd19d6d322a057b7f4799cd7ebafa61",
+            "actual_actor": "/root/newton_current",
+            "stage": "delivery_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site01-delivery_finished-3.json",
+            "sha256": "b56e166c0f4b4cb1ba028ad39367801839ea3bbed556df336c82fb810bd4ffbd",
+            "actual_actor": "/root",
+            "stage": "delivery_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site01-owner_scope-1.json",
+            "sha256": "8a856950cf9c4649014f5a74b2f54acc6420f0a5f086ee58b0ed50f61270514a",
+            "actual_actor": "Gary",
+            "stage": "owner_scope"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site01-body_finished-1.json",
+            "sha256": "2970c4fd7ba7a1645734e4b3867b886466fe40d785e1d30fad46c6981b725665",
+            "actual_actor": "/root/fermi_current",
+            "stage": "body_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site01-body_finished-2.json",
+            "sha256": "c5037bfda76f3ad43ab44124ee817fe3567445c1f32c4327cad4c774f901eb91",
+            "actual_actor": "/root/newton_current",
+            "stage": "body_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site01-body_finished-3.json",
+            "sha256": "42b2f8af6dd402fb56790af248935fffaa768cecb562a737b8fb50f33396be02",
+            "actual_actor": "/root",
+            "stage": "body_finished"
+          }
+        ],
+        "asset_allowlist": [
+          "assets/page-art/bom-evidences/josephemma-bodice-v3.png",
+          "assets/page-art/bom-evidences/josephemma-bodice-v3-640.webp",
+          "assets/page-art/bom-evidences/josephemma-bodice-v3-960.webp",
+          "assets/page-art/bom-evidences/josephemma-bodice-v3-1536.webp"
+        ],
+        "assets": [
+          {
+            "path": "assets/page-art/bom-evidences/josephemma-bodice-v3.png",
+            "sha256": "cbf83e11d899acb1b2a002a17f8b6b440216fbdb363b6168c168f86a04ec674f",
+            "pixel_sha256": "5453c87e44362d42cc0c308f3c42fccb02b4fe86b2c213c55bd13b5d4f6ea5c7",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "bytes": 2055344,
+            "source_sha256": "cbf83e11d899acb1b2a002a17f8b6b440216fbdb363b6168c168f86a04ec674f",
+            "mode": "RGB",
+            "format": "PNG",
+            "role": "source"
+          },
+          {
+            "path": "assets/page-art/bom-evidences/josephemma-bodice-v3-640.webp",
+            "sha256": "50b46cf8cea6be49b23522cc6d7081f79238472ad2f1cc282078d2d8eba77a67",
+            "pixel_sha256": "e63a3d49a8fb44159d8e486e98320ec41a388f20a3b8411d719db6772f956779",
+            "dimensions": [
+              640,
+              427
+            ],
+            "bytes": 49728,
+            "source_sha256": "cbf83e11d899acb1b2a002a17f8b6b440216fbdb363b6168c168f86a04ec674f",
+            "mode": "RGB",
+            "format": "WEBP",
+            "role": "derivative"
+          },
+          {
+            "path": "assets/page-art/bom-evidences/josephemma-bodice-v3-960.webp",
+            "sha256": "ce43b57dfe90272794027c2d3439855d6cda1556644058dbe5e80b904e541973",
+            "pixel_sha256": "a19fc28a49aa52c704df9b1e03b6702a4bdadb9e8a0126be414d89bd96df5e81",
+            "dimensions": [
+              960,
+              640
+            ],
+            "bytes": 95808,
+            "source_sha256": "cbf83e11d899acb1b2a002a17f8b6b440216fbdb363b6168c168f86a04ec674f",
+            "mode": "RGB",
+            "format": "WEBP",
+            "role": "derivative"
+          },
+          {
+            "path": "assets/page-art/bom-evidences/josephemma-bodice-v3-1536.webp",
+            "sha256": "091f4aa5620e786d3e72c5720e327c53720455800dce4357bb17eca5f6e7e223",
+            "pixel_sha256": "d180c3b673e594382cec0e5673c8ee97e6904bdcc7be5a83b9e537eb65eca6f7",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "bytes": 188026,
+            "source_sha256": "cbf83e11d899acb1b2a002a17f8b6b440216fbdb363b6168c168f86a04ec674f",
+            "mode": "RGB",
+            "format": "WEBP",
+            "role": "derivative"
+          }
+        ]
+      },
+      {
+        "id": "SITE08",
+        "authority_kind": "reviewed_local_correction",
+        "precreation_claim": false,
+        "current_reviewers": {
+          "executor": "/root/fermi_current",
+          "independent": "/root/newton_current",
+          "root": "/root"
+        },
+        "immutable_originals": [
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-wardrobe-v2.png",
+            "sha256": "bb026ec8537b0a5f0b20e5f98db41c91336345356a0a3c11cd08b9d96e234972"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-wardrobe-v2-640.webp",
+            "sha256": "8f39c0faaa025a76fc1b45893434b9500084158cb6efdad21a1a1c1aa23d5240"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-wardrobe-v2-960.webp",
+            "sha256": "d2b2c7eb22e5d872a2404d9e42049c25c4cd1a973ba2317de45f9743ecc06aca"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-wardrobe-v2-1536.webp",
+            "sha256": "e8e4ed84cad4f66dc2200b6894969532d2b91a24055742988c9e1d88ca9d4282"
+          }
+        ],
+        "lineage": [
+          {
+            "id": "original",
+            "kind": "original",
+            "sha256": "bb026ec8537b0a5f0b20e5f98db41c91336345356a0a3c11cd08b9d96e234972",
+            "parents": []
+          },
+          {
+            "id": "donor",
+            "kind": "generated_donor",
+            "sha256": "a0e7b2cb075fc6c575aeacc380c2e317917aa645475fcefd35b794622b6076d0",
+            "parents": [
+              "original"
+            ]
+          },
+          {
+            "id": "final",
+            "kind": "masked_composite",
+            "sha256": "7c55a45fe2cd5c409f96961074f4ed0c2f714678b976fd086fed5bfa134dc770",
+            "parents": [
+              "original",
+              "donor"
+            ]
+          }
+        ],
+        "body_source_id": "final",
+        "final_source_id": "final",
+        "excluded_pixel_ancestors": [
+          "7aa9313e8b1e13f6034f55ad390a3605991ee7a5daedb00631f9bb98feb41ec9"
+        ],
+        "exclusion_reason": "Held earlier trial outputs remain excluded nonancestors; this accepted operation uses exactly the recorded source and donor.",
+        "method": "Identity-coordinate masked donor blend into original, preserving whole closure/empire seam and pregnant lower drape.",
+        "stage_subjects": {
+          "owner_scope": "bb026ec8537b0a5f0b20e5f98db41c91336345356a0a3c11cd08b9d96e234972",
+          "encoding_preflight": "7a2bbe11f376380b3e79fcb66eda41f006fe6c83eadeeb8611c083654db06678",
+          "encoding_result": "51e413011b49584ad2b6085c7f4212a1d8946e00140ec9456200f3943beab55d",
+          "source_finished": "7c55a45fe2cd5c409f96961074f4ed0c2f714678b976fd086fed5bfa134dc770",
+          "delivery_finished": "66e58e3c6cf020f8eb146b317cea141d0a84a7b9db9ee257133b6198293a2a61",
+          "donor_preflight": "c70a4c5fd4c0d71283237d89a0d3cc4d9eedd3741868e6346891a45c0ce9ab6d",
+          "donor_result": "a0e7b2cb075fc6c575aeacc380c2e317917aa645475fcefd35b794622b6076d0",
+          "composite_preflight": "a0104cf131ebfbcf1b6d515eada2af0674641d2d607c19f1a95b4144fc7bbe58",
+          "composite_result": "7c55a45fe2cd5c409f96961074f4ed0c2f714678b976fd086fed5bfa134dc770",
+          "body_finished": "7c55a45fe2cd5c409f96961074f4ed0c2f714678b976fd086fed5bfa134dc770"
+        },
+        "evidence": [
+          {
+            "path": "docs/artwork-correction-evidence/site08-donor_preflight-1.json",
+            "sha256": "e0586d95df25217bdcada733d80fba87f44ef6e7b9e280f8e81540e334c98a7b",
+            "actual_actor": "/root/newton_current",
+            "stage": "donor_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site08-donor_preflight-2.json",
+            "sha256": "d10feddcf762be01eaedc69355409f295c6a2d798e61e648f80e3697fcf81558",
+            "actual_actor": "/root",
+            "stage": "donor_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site08-donor_result-1.json",
+            "sha256": "1296b310a1433793d128315fe5a06c73b0e9facd99252cd013aaf01e3f5c9da9",
+            "actual_actor": "/root/fermi_current",
+            "stage": "donor_result"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site08-composite_preflight-1.json",
+            "sha256": "c110e670ff5ee5378da940a38ce1f18bd68a5bd70576bbcd07ff60433127f8f5",
+            "actual_actor": "/root/newton_current",
+            "stage": "composite_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site08-composite_preflight-2.json",
+            "sha256": "6dd052140a5b5a8f62b5047107fd2866496284333ffa1e0acca555d87cc776f7",
+            "actual_actor": "/root",
+            "stage": "composite_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site08-composite_result-1.json",
+            "sha256": "75c9d4c6fc2c7a6444743f5311b86c2b04146a9e3b9a72b43c5ae48cee2a3fe0",
+            "actual_actor": "/root/fermi_current",
+            "stage": "composite_result"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site08-source_finished-1.json",
+            "sha256": "b50d661e2512296813f8a06a3fd0917549349e65baed5400d1e600dfd7f02d82",
+            "actual_actor": "/root/fermi_current",
+            "stage": "source_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site08-source_finished-2.json",
+            "sha256": "b2749f1ffa1446aab55ddf96ec0a1f5c20eab8f2e87d2254e5e8cebdbee669cb",
+            "actual_actor": "/root/newton_current",
+            "stage": "source_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site08-source_finished-3.json",
+            "sha256": "0f2a7994766e4c409e75fbc77385f18013b68956d0bc4ba96766b12d7da63489",
+            "actual_actor": "/root",
+            "stage": "source_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site08-encoding_preflight-1.json",
+            "sha256": "78fc8d7eb9c166fbe70d4f4d4d1504088cd98e64d23d6476a149b9b62a2d15e0",
+            "actual_actor": "/root/newton_current",
+            "stage": "encoding_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site08-encoding_preflight-2.json",
+            "sha256": "bbe16d55f722f47452d5c33af19fb93c462557b1687da6e9eb800969a0acc0ec",
+            "actual_actor": "/root",
+            "stage": "encoding_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site08-encoding_result-1.json",
+            "sha256": "728bc2a3ed052d6c7f1c0fed64c371d30ae37c3ffd702bbccbf98c87f1f2e95d",
+            "actual_actor": "/root/fermi_current",
+            "stage": "encoding_result"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site08-delivery_finished-1.json",
+            "sha256": "e4ab9531155762988003ec3ef5bc2ceb1bf575eb0df80fe01b092a32557a7732",
+            "actual_actor": "/root/fermi_current",
+            "stage": "delivery_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site08-delivery_finished-2.json",
+            "sha256": "62602f78f728c2d5e38eb6846634e2f4db10ac86952427da349132c25d3c56bc",
+            "actual_actor": "/root/newton_current",
+            "stage": "delivery_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site08-delivery_finished-3.json",
+            "sha256": "a826fb2bec48cbb72e0056f08e619e6b8bca1e441acb4f6b70dabf99a33854d8",
+            "actual_actor": "/root",
+            "stage": "delivery_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site08-owner_scope-1.json",
+            "sha256": "b785efddd0d63161740e1cc5090f5afb3dfb834444cf1fa31fd3e004e22fe207",
+            "actual_actor": "Gary",
+            "stage": "owner_scope"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site08-body_finished-1.json",
+            "sha256": "dc0feda84a9f7db3e576e95f0dfd76abe18fd4651b8322deac476adc3ab69a57",
+            "actual_actor": "/root/fermi_current",
+            "stage": "body_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site08-body_finished-2.json",
+            "sha256": "2acfdc5e2d574423f472b7aea0f9cde4711a5ea8d2303ee01f45f36a4e1e182d",
+            "actual_actor": "/root/newton_current",
+            "stage": "body_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site08-body_finished-3.json",
+            "sha256": "f4270eb6446b77efafb8df9a949275e17bd4e24596c76bc1029c7301bd6528d7",
+            "actual_actor": "/root",
+            "stage": "body_finished"
+          }
+        ],
+        "asset_allowlist": [
+          "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-upper-bodice-v3.png",
+          "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-upper-bodice-v3-640.webp",
+          "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-upper-bodice-v3-960.webp",
+          "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-upper-bodice-v3-1536.webp"
+        ],
+        "assets": [
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-upper-bodice-v3.png",
+            "sha256": "7c55a45fe2cd5c409f96961074f4ed0c2f714678b976fd086fed5bfa134dc770",
+            "pixel_sha256": "67f7c9d4ccaced7b14f3bb82513e3741307c9dba4fdd5c19c43a46cac27d25e3",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "bytes": 2081906,
+            "source_sha256": "7c55a45fe2cd5c409f96961074f4ed0c2f714678b976fd086fed5bfa134dc770",
+            "mode": "RGB",
+            "format": "PNG",
+            "role": "source"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-upper-bodice-v3-640.webp",
+            "sha256": "8f5c964025786d538a3319229a8ec23d4873633390b0cfc585076bfd59ef311f",
+            "pixel_sha256": "463bca11da1cbffb6b36f82abacc0157dd9fb8ffb73c4c77ad29b262e7d34ab5",
+            "dimensions": [
+              640,
+              427
+            ],
+            "bytes": 52898,
+            "source_sha256": "7c55a45fe2cd5c409f96961074f4ed0c2f714678b976fd086fed5bfa134dc770",
+            "mode": "RGB",
+            "format": "WEBP",
+            "role": "derivative"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-upper-bodice-v3-960.webp",
+            "sha256": "6198ad5bece6a4337f7b9aee6fbff11065a00ae6998dc249571a9e02154df860",
+            "pixel_sha256": "6de2c6321c895f02fd741f0f4e05e7f13050666b9f1bae18f4aad991b1377ede",
+            "dimensions": [
+              960,
+              640
+            ],
+            "bytes": 99238,
+            "source_sha256": "7c55a45fe2cd5c409f96961074f4ed0c2f714678b976fd086fed5bfa134dc770",
+            "mode": "RGB",
+            "format": "WEBP",
+            "role": "derivative"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-upper-bodice-v3-1536.webp",
+            "sha256": "8ecec44c2a927b8323e4a92599d07c1c2a63dce3e3fca4859ae32c7fd2582f53",
+            "pixel_sha256": "05b972f5c57761d1585f3a1895bd64c3ffdac9f2bc0639e5c8b8ec5ee64ff852",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "bytes": 193962,
+            "source_sha256": "7c55a45fe2cd5c409f96961074f4ed0c2f714678b976fd086fed5bfa134dc770",
+            "mode": "RGB",
+            "format": "WEBP",
+            "role": "derivative"
+          }
+        ]
+      },
+      {
+        "id": "SITE07_EXPRESSION",
+        "authority_kind": "reviewed_local_correction",
+        "precreation_claim": false,
+        "current_reviewers": {
+          "executor": "/root/fermi_current",
+          "independent": "/root/newton_current",
+          "root": "/root"
+        },
+        "immutable_originals": [
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-corrected-v2.png",
+            "sha256": "1f5870584dcc4c83e83ee40957a3863ae00a076c8ae52997ea5bbe42b5cd4433"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-corrected-v2-640.webp",
+            "sha256": "032fbf6a241ea1020d305760c9523bd05930a5cb04b5961096a77c3c38696cbe"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-corrected-v2-960.webp",
+            "sha256": "4e39828e27aa05e1c6e56c5404f3b79ec7135c995e5fcb3be71a4a98c307e914"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-corrected-v2-1536.webp",
+            "sha256": "08e26d9c628d9fa68839c299ade5cc425904394d2fe2afe2e6213f22c667d11e"
+          }
+        ],
+        "lineage": [
+          {
+            "id": "prior-body",
+            "kind": "reviewed_prior_source",
+            "sha256": "217383853ebbc541013e57cb73057c901770b3f8425ced50cd4f175b3151ec24",
+            "parents": []
+          },
+          {
+            "id": "expression-donor",
+            "kind": "expression_donor",
+            "sha256": "98869755f9c13fbdc4a4601b1e3c2c2989aeeeb2fbb6902e9d2b0d35c91a27fb",
+            "parents": [
+              "prior-body"
+            ]
+          },
+          {
+            "id": "expression-final",
+            "kind": "expression_composite",
+            "sha256": "c949f8188c930e827375bbd6d741f28f0b8b229786a7215adf1290ed841f00d8",
+            "parents": [
+              "prior-body",
+              "expression-donor"
+            ]
+          }
+        ],
+        "body_source_id": "prior-body",
+        "final_source_id": "expression-final",
+        "excluded_pixel_ancestors": [
+          "34a02cbbcb730f9da930811056f60e8ca9380e977f1ab5addbef0aa5e2955296"
+        ],
+        "exclusion_reason": "Held earlier trial outputs remain excluded nonancestors; this accepted operation uses exactly the recorded source and donor.",
+        "method": "Identity-coordinate expression blend onto accepted prior body217383 using crown-repair support; all rows390+ and protected outer scene retained. Prior body lineage resolves through exact retained SITE07 record.",
+        "stage_subjects": {
+          "owner_scope": "217383853ebbc541013e57cb73057c901770b3f8425ced50cd4f175b3151ec24",
+          "encoding_preflight": "47c414a9cf140c556ab00370fe4b072af700b0b930551870ae05b4b636eb883b",
+          "encoding_result": "9d859858d93842b4fb869d079238d6c43f4d39b5cd9cd3f8033626be7c164f30",
+          "source_finished": "c949f8188c930e827375bbd6d741f28f0b8b229786a7215adf1290ed841f00d8",
+          "delivery_finished": "0b8df252406767d1a852bb30afa70e225b66a9cf4734f007748748c33200abaa",
+          "expression_donor_preflight": "70e7bc2407a4a8c01de30cf66adabfc857a71624419e827a7fc0a3779ded2d68",
+          "expression_donor_result": "98869755f9c13fbdc4a4601b1e3c2c2989aeeeb2fbb6902e9d2b0d35c91a27fb",
+          "expression_composite_preflight": "f782cce2a29a1122f0c36e45ae8e5da9b047825442920aea9288dabb07fa74ff",
+          "expression_composite_result": "c949f8188c930e827375bbd6d741f28f0b8b229786a7215adf1290ed841f00d8"
+        },
+        "evidence": [
+          {
+            "path": "docs/artwork-correction-evidence/site07_expression-expression_donor_preflight-1.json",
+            "sha256": "44dabf3c864006383201fcb3a7b5b3aa79cdc939bc81a340daedaecfc2b7916f",
+            "actual_actor": "/root/newton_current",
+            "stage": "expression_donor_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site07_expression-expression_donor_preflight-2.json",
+            "sha256": "8f58f315fc752ab7ac8939d7807aeeee70c04c45ec9b750bb375b9f637945a3f",
+            "actual_actor": "/root",
+            "stage": "expression_donor_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site07_expression-expression_donor_result-1.json",
+            "sha256": "0db7a0dec9c3188b277446bd303ef733b005c0cce5e616ec38a086d1d458da25",
+            "actual_actor": "/root/fermi_current",
+            "stage": "expression_donor_result"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site07_expression-expression_composite_preflight-1.json",
+            "sha256": "5a7ff644e9316d58a0e797121b2cf3e336192302bfb4e67426fc76156e785cbe",
+            "actual_actor": "/root/newton_current",
+            "stage": "expression_composite_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site07_expression-expression_composite_preflight-2.json",
+            "sha256": "01f71083bb952fd9f160c07f8c9a3faadcedb05af478293bf0b5619713c85234",
+            "actual_actor": "/root",
+            "stage": "expression_composite_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site07_expression-expression_composite_result-1.json",
+            "sha256": "d45cbbbd9c0d67019cf92698b6959cd038f45fbf1bbb7ac1083dc1fabce85f41",
+            "actual_actor": "/root/fermi_current",
+            "stage": "expression_composite_result"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site07_expression-source_finished-1.json",
+            "sha256": "f9dfbca16f13541fd616978a36469b228eef49e0517f7c87d43e8e87d77a4f6b",
+            "actual_actor": "/root/fermi_current",
+            "stage": "source_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site07_expression-source_finished-2.json",
+            "sha256": "553a7aa3b5858660e242654efcd91aee9a0ccfc35223201b18f34a85b1ef7dda",
+            "actual_actor": "/root/newton_current",
+            "stage": "source_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site07_expression-source_finished-3.json",
+            "sha256": "f3d9a89b612b8b52339e810e57687cb50895f22463567dc42a14843e848150aa",
+            "actual_actor": "/root",
+            "stage": "source_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site07_expression-encoding_preflight-1.json",
+            "sha256": "057a011ceb9d9698511d8903fc0a6769e3a247c9cfe1aabf8bcb58308306fad1",
+            "actual_actor": "/root/newton_current",
+            "stage": "encoding_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site07_expression-encoding_preflight-2.json",
+            "sha256": "4b449e71b568d59e032b86c0a8ec7587a64634cb4e1581d0b3c9ec543de0fe5d",
+            "actual_actor": "/root",
+            "stage": "encoding_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site07_expression-encoding_result-1.json",
+            "sha256": "064af8e7396d04d713f17f97a5102dd8983743a299716ae5b1a5dfe29bd918e3",
+            "actual_actor": "/root/fermi_current",
+            "stage": "encoding_result"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site07_expression-delivery_finished-1.json",
+            "sha256": "fa76d18c24f6a8dcecd555fd69bb6c37583a17973f4aa8f35ea937fd8c90a59f",
+            "actual_actor": "/root/fermi_current",
+            "stage": "delivery_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site07_expression-delivery_finished-2.json",
+            "sha256": "5cf74cf472c0101d8e1aa4ddc1ae33af89032d43ad1e2d95133d9c4d04d703a7",
+            "actual_actor": "/root/newton_current",
+            "stage": "delivery_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site07_expression-delivery_finished-3.json",
+            "sha256": "09ccae77f6069025af9fde6ef7ec7a9fec08eee42f9387be89f1619a73be5fb3",
+            "actual_actor": "/root",
+            "stage": "delivery_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site07_expression-owner_scope-1.json",
+            "sha256": "ab01f11a5c26b673d355eb8813b7eba3c1c06f1c88d925f3589e1c1db4c07775",
+            "actual_actor": "/root",
+            "stage": "owner_scope"
+          }
+        ],
+        "asset_allowlist": [
+          "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-warm-companionship-v4.png",
+          "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-warm-companionship-v4-640.webp",
+          "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-warm-companionship-v4-960.webp",
+          "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-warm-companionship-v4-1536.webp"
+        ],
+        "assets": [
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-warm-companionship-v4.png",
+            "sha256": "c949f8188c930e827375bbd6d741f28f0b8b229786a7215adf1290ed841f00d8",
+            "pixel_sha256": "85aeaec186858a120ba9c5d2c48472c482fa6ba4a7589a0ed1b22c82051c6258",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "bytes": 2338541,
+            "source_sha256": "c949f8188c930e827375bbd6d741f28f0b8b229786a7215adf1290ed841f00d8",
+            "mode": "RGB",
+            "format": "PNG",
+            "role": "source"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-warm-companionship-v4-640.webp",
+            "sha256": "7e41eec847fee526aaf634db520617c7ffe42fb583450c9b1a29c905cda4602b",
+            "pixel_sha256": "17de8c92dea9d665bd271174166794861c8455c67ee0ae6b4b19ddb40b9c0c90",
+            "dimensions": [
+              640,
+              427
+            ],
+            "bytes": 71870,
+            "source_sha256": "c949f8188c930e827375bbd6d741f28f0b8b229786a7215adf1290ed841f00d8",
+            "mode": "RGB",
+            "format": "WEBP",
+            "role": "derivative"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-warm-companionship-v4-960.webp",
+            "sha256": "82a1f539ea4faa50bf14e1a2c5bcb9f09246e08b17fb5155b8d6920b9c94cf4d",
+            "pixel_sha256": "01be281b0560cfa7b156cecc05ae68db7e2ed9813b93f8663363599fafd8d62c",
+            "dimensions": [
+              960,
+              640
+            ],
+            "bytes": 136972,
+            "source_sha256": "c949f8188c930e827375bbd6d741f28f0b8b229786a7215adf1290ed841f00d8",
+            "mode": "RGB",
+            "format": "WEBP",
+            "role": "derivative"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-warm-companionship-v4-1536.webp",
+            "sha256": "d300865f970267913a56f45d8c39f65aa93af9fc787287889523fee51323ada3",
+            "pixel_sha256": "1bd97d2cc06fa64b1893d3e753624ba12230557446d251a9352f204280e7c503",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "bytes": 269118,
+            "source_sha256": "c949f8188c930e827375bbd6d741f28f0b8b229786a7215adf1290ed841f00d8",
+            "mode": "RGB",
+            "format": "WEBP",
+            "role": "derivative"
+          }
+        ],
+        "scene_family_id": "SITE07",
+        "prior_record_id": "SITE07",
+        "prior_record_sha256": "770af8cdf2388aa009a26de845de12f43d75497ebf09c08ecb80aba2a9f59792"
+      },
+      {
+        "id": "SITE11",
+        "authority_kind": "reviewed_local_correction",
+        "precreation_claim": false,
+        "current_reviewers": {
+          "executor": "/root/fermi_current",
+          "independent": "/root/newton_current",
+          "root": "/root"
+        },
+        "immutable_originals": [
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830.png",
+            "sha256": "1140b40f93c00ce61ab60841b46b03b823485c84bd086818f9407200d7d6e68f"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-640.webp",
+            "sha256": "977bf8e43bb7363ad5d599e97231c6b05c237d087a58676b5a10de28450c0024"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-960.webp",
+            "sha256": "edbef61be4a60e875c1686cd4c178d038e655ea47511be5ede0f95e4306f3598"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-1536.webp",
+            "sha256": "159930b7c1e580ae4d1bff1eb36012e21ef560ba4d74955c358878678efabd8e"
+          }
+        ],
+        "lineage": [
+          {
+            "id": "original",
+            "kind": "original",
+            "sha256": "1140b40f93c00ce61ab60841b46b03b823485c84bd086818f9407200d7d6e68f",
+            "parents": []
+          },
+          {
+            "id": "donor",
+            "kind": "generated_donor",
+            "sha256": "f140e9d3f4d17bb7a6802f6933d47265e98581c87646f5ca7885d8da32eef9be",
+            "parents": [
+              "original"
+            ]
+          },
+          {
+            "id": "final",
+            "kind": "masked_composite",
+            "sha256": "1bb9ab79c5d315f1eeb8bd3a4ee4dee4eda532832afa435c2c55b7bd9c2b19cd",
+            "parents": [
+              "original",
+              "donor"
+            ]
+          }
+        ],
+        "body_source_id": "final",
+        "final_source_id": "final",
+        "excluded_pixel_ancestors": [
+          "9a787b58f15c244708e720fc378b4dc97b19d0ebab02e0b51bd9a0cfaa31f0b5",
+          "10231e3e05c34cec56cd45241ba81ef804651e656891144b850b7a23ca68ea7a",
+          "0e6f29c753b6272b8c8c0e731c71669a6cea30a452f8a599b5d0ce317c565e52"
+        ],
+        "exclusion_reason": "All old9a78 donor/original-only10231/registered0e6f/wholeplacket numerical field andtrim holds are excluded from accepted pixel ancestry. Superseded prompt with mistaken foreground identity excluded from dispatch.",
+        "method": "Original RGB copy plus identity-coordinate new donor blend only within exact reviewed alpha; no registration/resampling or old donor reuse. Complete first/last button boxes retained; source outside/protected unchanged.",
+        "stage_subjects": {
+          "owner_scope": "1140b40f93c00ce61ab60841b46b03b823485c84bd086818f9407200d7d6e68f",
+          "donor_preflight": "019e27da9f3c122acb38c41490edb32c430f92ee633d02898ae5d30574556ce2",
+          "donor_result": "f140e9d3f4d17bb7a6802f6933d47265e98581c87646f5ca7885d8da32eef9be",
+          "composite_preflight": "162a06bb20006a16c49f64011eb8c807060b12bcffeea8f6f36bc324995bd10f",
+          "composite_result": "1bb9ab79c5d315f1eeb8bd3a4ee4dee4eda532832afa435c2c55b7bd9c2b19cd",
+          "body_finished": "1bb9ab79c5d315f1eeb8bd3a4ee4dee4eda532832afa435c2c55b7bd9c2b19cd",
+          "source_finished": "1bb9ab79c5d315f1eeb8bd3a4ee4dee4eda532832afa435c2c55b7bd9c2b19cd",
+          "encoding_preflight": "bfc5a11c2917ac664082174a8808b8a4cb4797260f39e7f92e376d7b491d0b6c",
+          "encoding_result": "1d2c2ec1dbb45e6c4b01725b20889c92b92b841cf251cb3357a34444f539f0b5",
+          "delivery_finished": "c505f942b1c6ae1ffb3f7f4725d873e334e89dcd8d0042b6bf92179078fe8e56"
+        },
+        "evidence": [
+          {
+            "path": "docs/artwork-correction-evidence/site11-owner_scope-1.json",
+            "sha256": "6fa7d60be5ecfb29e8d9491625a87992b741dfe12e4b87ff888da9f7fae0a93b",
+            "actual_actor": "Gary",
+            "stage": "owner_scope"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site11-donor_preflight-1.json",
+            "sha256": "c846ce99557dbc3c62ab4e2583a166a9594da41c1dd90e95fb4b5b20ac46c54c",
+            "actual_actor": "/root/newton_current",
+            "stage": "donor_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site11-donor_preflight-2.json",
+            "sha256": "ed28f743cda0934462ec782433a223631865d6c9ccf04352dd28b5b1201838f0",
+            "actual_actor": "/root",
+            "stage": "donor_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site11-donor_result-1.json",
+            "sha256": "5f79e513f508b16ad440ad8b3a2f88582c9a6eb3f81e02eceed931d32457fc6c",
+            "actual_actor": "/root/fermi_current",
+            "stage": "donor_result"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site11-composite_preflight-1.json",
+            "sha256": "3b84beac2fc1ee380735a96aba04f54e016e47a1abf64844c42d1b7412630a0e",
+            "actual_actor": "/root/newton_current",
+            "stage": "composite_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site11-composite_preflight-2.json",
+            "sha256": "b5f7c50dff5520d8aaba4d72d750874271483011a95bd9fd0e474d00fbd55339",
+            "actual_actor": "/root",
+            "stage": "composite_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site11-composite_result-1.json",
+            "sha256": "cd1455d69fa223ac2a4249be61314d178c27476666b556dd4cde858bca646ebe",
+            "actual_actor": "/root/fermi_current",
+            "stage": "composite_result"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site11-body_finished-1.json",
+            "sha256": "cdddeae32bf8d5b2654c483552f0da85a280cda397c0c995cb84014b54499fcb",
+            "actual_actor": "/root/fermi_current",
+            "stage": "body_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site11-body_finished-2.json",
+            "sha256": "b9804501117a53955be1c0e49caa414589141fdd524d925b855c4b4ea1c5a75b",
+            "actual_actor": "/root/newton_current",
+            "stage": "body_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site11-body_finished-3.json",
+            "sha256": "8839971080e204b8a6f8acf4086ede511cc299496f7a910ec2223977686a5596",
+            "actual_actor": "/root",
+            "stage": "body_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site11-source_finished-1.json",
+            "sha256": "ba6f9dbfed1cb39118c5d8cd7721e7192d23b33942daa392977f55c802c53603",
+            "actual_actor": "/root/fermi_current",
+            "stage": "source_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site11-source_finished-2.json",
+            "sha256": "551c3a87c7f516f7d19763da28629f18a13101c3ab4fc376de525d34f6c2c645",
+            "actual_actor": "/root/newton_current",
+            "stage": "source_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site11-source_finished-3.json",
+            "sha256": "56f75ac9cc07f431d88777fc365d5f5e77508e75c3b117fd83b9912b92ebfee4",
+            "actual_actor": "/root",
+            "stage": "source_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site11-encoding_preflight-1.json",
+            "sha256": "676dcde16468270a980450bae414bd1326e3c222f408e026c42e2491e2652a35",
+            "actual_actor": "/root/newton_current",
+            "stage": "encoding_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site11-encoding_preflight-2.json",
+            "sha256": "f988a86d00930fecc9810e654fa08d147a6a7698584536d3fe5f9ba644d1cf7d",
+            "actual_actor": "/root",
+            "stage": "encoding_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site11-encoding_result-1.json",
+            "sha256": "a23f16d138cc17153e0e1a6ea742d8f61227550c01f10f83dfc324d112f26358",
+            "actual_actor": "/root/fermi_current",
+            "stage": "encoding_result"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site11-delivery_finished-1.json",
+            "sha256": "d7c4c8adeb4638c1566b57d2fd5a0150bb2b5d9681a49a314e9f5320d9d9ea48",
+            "actual_actor": "/root/fermi_current",
+            "stage": "delivery_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site11-delivery_finished-2.json",
+            "sha256": "c7be428464e7497097df3d0b0d175e001b8aa4b42fc08a73265e267811e3a148",
+            "actual_actor": "/root/newton_current",
+            "stage": "delivery_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site11-delivery_finished-3.json",
+            "sha256": "01b51b3238180bc259d35e21e31df19ed9d704defba619396e33c7470a061604",
+            "actual_actor": "/root",
+            "stage": "delivery_finished"
+          }
+        ],
+        "asset_allowlist": [
+          "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2.png",
+          "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2-640.webp",
+          "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2-960.webp",
+          "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2-1536.webp"
+        ],
+        "assets": [
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2.png",
+            "sha256": "1bb9ab79c5d315f1eeb8bd3a4ee4dee4eda532832afa435c2c55b7bd9c2b19cd",
+            "pixel_sha256": "cc23acd78ca344058b3d7c123b992ba419a47cc389403f4db300f85d2edefbae",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "bytes": 2063360,
+            "source_sha256": "1bb9ab79c5d315f1eeb8bd3a4ee4dee4eda532832afa435c2c55b7bd9c2b19cd",
+            "mode": "RGB",
+            "format": "PNG",
+            "role": "source"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2-640.webp",
+            "sha256": "56baadfa2ba0ebeddaa777ebce78078a1a6518565a733628434420fbb7862bd1",
+            "pixel_sha256": "75410460e825dbe8e7fc4658a7bca297b855457ee9c43cc690e05c46424fc235",
+            "dimensions": [
+              640,
+              427
+            ],
+            "bytes": 50916,
+            "source_sha256": "1bb9ab79c5d315f1eeb8bd3a4ee4dee4eda532832afa435c2c55b7bd9c2b19cd",
+            "mode": "RGB",
+            "format": "WEBP",
+            "role": "derivative"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2-960.webp",
+            "sha256": "59d602c656b76baa417b02f875804d73964e852ddb723d328eeb805597bbf5e2",
+            "pixel_sha256": "e169090a6a192c3e28e2881eeb89ff32e9d4d04b6d1245314eaf7fd4c2dd6e2d",
+            "dimensions": [
+              960,
+              640
+            ],
+            "bytes": 98098,
+            "source_sha256": "1bb9ab79c5d315f1eeb8bd3a4ee4dee4eda532832afa435c2c55b7bd9c2b19cd",
+            "mode": "RGB",
+            "format": "WEBP",
+            "role": "derivative"
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2-1536.webp",
+            "sha256": "8c081044b5d4e729a7fc9002f42be71ecc9fc574e607596d4d4acf603cf80f48",
+            "pixel_sha256": "60d7b5e5c4297e9851f35d6b4173c07017729a2d162078f799cb53e52a220f0b",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "bytes": 190428,
+            "source_sha256": "1bb9ab79c5d315f1eeb8bd3a4ee4dee4eda532832afa435c2c55b7bd9c2b19cd",
+            "mode": "RGB",
+            "format": "WEBP",
+            "role": "derivative"
+          }
+        ]
+      }
+    ],
+    "current_scene_records": {"SITE01": "SITE01", "SITE07": "SITE07_EXPRESSION", "SITE08": "SITE08", "SITE09": "SITE09", "SITE10": "SITE10", "SITE12": "SITE12", "SITE11": "SITE11"}
+  }
+}

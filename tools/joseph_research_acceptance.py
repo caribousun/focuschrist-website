@@ -6,7 +6,7 @@ ROUTE = 'joseph-smith-portrait-research.html'
 PDF_BROWSER_TOKEN_INVERSES = (
     (b'<link rel="stylesheet" href="site-system.css?v=20261005-mobile-study-rows-1">', b'<link rel="stylesheet" href="site-system.css?v=20260930-study-alignment-1">'),
     (b'<link rel="stylesheet" href="full-image-viewer.css?v=20261007-viewer-controls-1">', b'<link rel="stylesheet" href="full-image-viewer.css?v=20260905-viewport">'),
-    (b'<script src="topic-artwork-details.js?v=20261007-scoped-root-1" defer></script>', b'<script src="topic-artwork-details.js?v=20261004-joseph-journeys-1" defer></script>'),
+    (b'<script src="topic-artwork-details.js?v=20261009-settled-continue-2" defer></script>', b'<script src="topic-artwork-details.js?v=20261004-joseph-journeys-1" defer></script>'),
     (b'<script src="site-common.js?v=20261008-section-top-2" defer></script>', b'<script src="site-common.js?v=20261006-balanced-opening-1" defer></script>'),
 )
 

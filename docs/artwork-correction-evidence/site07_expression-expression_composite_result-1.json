@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "id": "site07_expression-expression_composite_result-1",
+  "family": "SITE07_EXPRESSION",
+  "stage": "expression_composite_result",
+  "actual_actor": "/root/fermi_current",
+  "verdict": "RECORDED",
+  "withdrawn": false,
+  "source_report_sha256": "2dac7b0e1c2979f95ac2729bea1c812f41b80950d261655fae028b53deb077d9",
+  "source_recorded_at": null,
+  "normalized_at": "2026-10-10T01:59:32.892647+00:00",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "c949f8188c930e827375bbd6d741f28f0b8b229786a7215adf1290ed841f00d8",
+  "findings": "Actual saved crown-repair compositor result binds accepted prior body source, expression donor, specification and output; measured outside/protected/inactive changes are zero.",
+  "pixels_inspected": false,
+  "limits": "Exact scoped private-source evidence normalization. No assembled-page/public release or invented canonical precreation event.",
+  "spec_sha256": "f782cce2a29a1122f0c36e45ae8e5da9b047825442920aea9288dabb07fa74ff",
+  "protected_pixel_checks": {
+    "changed_pixels": 67789,
+    "outside_changed_pixels": 0,
+    "protected_changed_pixels": 0
+  }
+}

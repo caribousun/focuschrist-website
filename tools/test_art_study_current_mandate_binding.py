@@ -55,8 +55,9 @@ class ExactFeaturedBinding(unittest.TestCase):
                 (mandate.CURRENT_ART_STYLE, mandate.OLD_ART_STYLE),
             ]
             for current, previous in [
+                (b'full-image-viewer.js?v=20261009-titled-downloads-1', b'full-image-viewer.js?v=20261006-versions-1' if route in mandate.VISIBLE_ART_ROUTES else b'full-image-viewer.js?v=20260914-reopen-1'),
                 (b'full-image-viewer.css?v=20261007-viewer-controls-1', b'full-image-viewer.css?v=20261006-versions-1'),
-                (b'topic-artwork-details.js?v=20261007-scoped-root-1', b'topic-artwork-details.js?v=20261004-study-return-1'),
+                (b'topic-artwork-details.js?v=20261009-settled-continue-2', b'topic-artwork-details.js?v=20261004-study-return-1'),
             ]:
                 self.assertEqual(raw.count(current), 1)
                 for mutation in (raw + current, raw + previous, raw.replace(current, previous),
@@ -65,7 +66,6 @@ class ExactFeaturedBinding(unittest.TestCase):
                     self.assertFalse(mandate.reviewed_page_binding(BytesPage(mutation), route, expected))
             if route in mandate.VISIBLE_ART_ROUTES:
                 versions.append((mandate.CURRENT_HERO_SCRIPT, mandate.OLD_HERO_SCRIPT))
-                versions.extend(pair for pair in mandate.VIEWER_TOKEN_INVERSES if b'.js?' in pair[0])
             for current, previous in versions:
                 with self.subTest(route=route, token=current):
                     self.assertEqual(raw.count(current), 1)
@@ -80,7 +80,9 @@ class ExactFeaturedBinding(unittest.TestCase):
                 self.assertFalse(mandate.reviewed_page_binding(BytesPage(changed), route, expected))
                 self.assertFalse(mandate.reviewed_page_binding(BytesPage(raw + mandate.VISIBLE_IMAGE_HELPER), route, expected))
                 for current, previous in (pair for pair in mandate.VIEWER_TOKEN_INVERSES if b'.js?' in pair[0]):
-                    self.assertFalse(mandate.reviewed_page_binding(BytesPage(raw.replace(previous, current)), route, expected))
+                    changed = raw.replace(b'full-image-viewer.js?v=20261009-titled-downloads-1', current)
+                    self.assertNotEqual(changed, raw)
+                    self.assertFalse(mandate.reviewed_page_binding(BytesPage(changed), route, expected))
             else:
                 self.assertEqual(raw.count(mandate.VISIBLE_IMAGE_HELPER), 1)
                 for mutation in (

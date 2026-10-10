@@ -57,7 +57,7 @@
 
     function safeTopicReturn(raw) {
         const fallback = '/answers.html';
-        const pages = ['/answers/plan-of-salvation.html', '/answers/holy-ghost.html', '/come-follow-me.html', '/atonement.html', '/church-history.html', '/joseph-smith-likeness.html', '/missionary.html', '/pioneers.html', '/answers/bible-and-book-of-mormon-together.html', '/answers/god-our-heavenly-father.html', '/answers/grief-and-faith.html', '/answers/look-unto-me-doctrine-and-covenants-6-36.html', '/answers/restored-church-of-jesus-christ.html', '/answers/settle-this-in-your-hearts.html', '/answers/stand-forever.html', '/answers/what-is-eternal-marriage.html'];
+        const pages = ['/history/emma-hale-smith.html', '/answers/plan-of-salvation.html', '/answers/holy-ghost.html', '/come-follow-me.html', '/atonement.html', '/church-history.html', '/joseph-smith-likeness.html', '/missionary.html', '/pioneers.html', '/answers/bible-and-book-of-mormon-together.html', '/answers/god-our-heavenly-father.html', '/answers/grief-and-faith.html', '/answers/look-unto-me-doctrine-and-covenants-6-36.html', '/answers/restored-church-of-jesus-christ.html', '/answers/settle-this-in-your-hearts.html', '/answers/stand-forever.html', '/answers/what-is-eternal-marriage.html'];
         try {
             const url = new URL(raw || fallback, window.location.href);
             if (url.origin !== window.location.origin || !pages.includes(url.pathname)) return fallback;

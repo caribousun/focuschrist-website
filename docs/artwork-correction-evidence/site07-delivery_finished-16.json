@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "site07-delivery_finished-16",
+  "family": "SITE07",
+  "stage": "delivery_finished",
+  "actual_actor": "/root/fermi_current",
+  "verdict": "CONCUR",
+  "withdrawn": false,
+  "source_report_sha256": "506fecbf46afac200f6ef002283292d8db307731424d8445caa385c929d7a873",
+  "source_recorded_at": null,
+  "normalized_at": "2026-10-10T00:56:28.886690+00:00",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "ef242738adef66f7f2afb2466d343ee539f9e2bfd6a0b94a7604d2e964f764c1",
+  "findings": "Actual native WebP review and exact accepted PNG review by named actor; no claim of lossy pixel equality.",
+  "pixels_inspected": true,
+  "limits": "Exact local artifact evidence; no assembled UI, publication or owner aesthetic acceptance."
+}

@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "site07_expression-expression_donor_preflight-1",
+  "family": "SITE07_EXPRESSION",
+  "stage": "expression_donor_preflight",
+  "actual_actor": "/root/newton_current",
+  "verdict": "CONCUR",
+  "withdrawn": false,
+  "source_report_sha256": "74c8e82764fec1356056cba83910fcad857a12bca256f9724188862a69a439e8",
+  "source_recorded_at": null,
+  "normalized_at": "2026-10-10T01:59:32.892647+00:00",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "70e7bc2407a4a8c01de30cf66adabfc857a71624419e827a7fc0a3779ded2d68",
+  "findings": "Named source record reviews exact warm-expression donor specification referenced to the accepted prior body scene. Crown-repair support was a later separate operation and is not claimed here.",
+  "pixels_inspected": false,
+  "limits": "Exact scoped private-source evidence normalization. No assembled-page/public release or invented canonical precreation event."
+}

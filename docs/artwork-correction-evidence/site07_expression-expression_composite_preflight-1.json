@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "site07_expression-expression_composite_preflight-1",
+  "family": "SITE07_EXPRESSION",
+  "stage": "expression_composite_preflight",
+  "actual_actor": "/root/newton_current",
+  "verdict": "CONCUR",
+  "withdrawn": false,
+  "source_report_sha256": "6f34ea974da91445ba0df5896bff2e1b34acc80c78dc043bf136f9a3c4ffab2d",
+  "source_recorded_at": null,
+  "normalized_at": "2026-10-10T01:59:32.892647+00:00",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "f782cce2a29a1122f0c36e45ae8e5da9b047825442920aea9288dabb07fa74ff",
+  "findings": "Named source record reviews exact crown-repair mask/specification and unchanged compositor before the new expression trial; first held composite is not accepted.",
+  "pixels_inspected": false,
+  "limits": "Exact scoped private-source evidence normalization. No assembled-page/public release or invented canonical precreation event."
+}

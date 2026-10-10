@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "family": "Emma-h2",
+  "role": "delivery_pixels",
+  "source_sha256": "809aa5b8a067d5858b328aff37b86ea545c268ed9d0b45f734ab340540802ae4",
+  "authority_kind": "owner_exception",
+  "reports": [
+    {
+      "report_title": "ROOT-ENCODING-REVIEW.md",
+      "sha256": "ab9215db33e3e382493a4c513a8e0705183054bcaa9030bd740f24bcfb01f5c3"
+    },
+    {
+      "report_title": "REMAINING-ENCODING-RESULT-REVIEW.md",
+      "sha256": "7ae62ba48fb6ef458ecbc5622a8d80cf347b1272116687782b9400f59b42f039"
+    },
+    {
+      "report_title": "ENCODING-RESULT-REVIEW.md",
+      "sha256": "b76cc0fca854f4c45b7046220010eee9612aaba806057b325c2c7900eb987bc9"
+    }
+  ],
+  "scope": "Digest-bound transcription of actual preserved evidence within its original scope; no newly performed historical review.",
+  "limits": "No historical exception becomes precreation PASS. No current UI, remaining artwork, deployment or public acceptance is established.",
+  "exception_scope": "historical_precreation_evidence_only"
+}

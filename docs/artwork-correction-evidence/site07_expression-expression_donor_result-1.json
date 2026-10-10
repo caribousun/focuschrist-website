@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "id": "site07_expression-expression_donor_result-1",
+  "family": "SITE07_EXPRESSION",
+  "stage": "expression_donor_result",
+  "actual_actor": "/root/fermi_current",
+  "verdict": "RECORDED",
+  "withdrawn": false,
+  "source_report_sha256": "05937172188c4c4e8475f3d3b44bd59f5742d599e9f2be541ede6b7b74de50fb",
+  "source_recorded_at": null,
+  "normalized_at": "2026-10-10T01:59:32.892647+00:00",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "98869755f9c13fbdc4a4601b1e3c2c2989aeeeb2fbb6902e9d2b0d35c91a27fb",
+  "findings": "Actual recorded expression generation produced the exact donor hash under the bound specification; no composite or final acceptance follows from generation.",
+  "pixels_inspected": false,
+  "limits": "Exact scoped private-source evidence normalization. No assembled-page/public release or invented canonical precreation event.",
+  "spec_sha256": "70e7bc2407a4a8c01de30cf66adabfc857a71624419e827a7fc0a3779ded2d68"
+}

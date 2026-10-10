@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "family": "Emma-c3",
+  "role": "finished_pixels",
+  "source_sha256": "8c8514366f3c1a85c2acdbad2e3f3ce894eef3959c40cc8061e01f51944b9950",
+  "authority_kind": "owner_exception",
+  "reports": [
+    {
+      "report_title": "ROOT-TEN-ORIGINALS-VISUAL-REVIEW.json",
+      "sha256": "d90e99c904f8dba7797ae2785597b45e3407d707fa8d387fa9d45f66ee39741c"
+    },
+    {
+      "report_title": "TEN-ORIGINALS-CURRENT-VISUAL-REVIEW.json",
+      "sha256": "789bd852599c5eb2e02116281a97529e4c9b943bb0503280fe2591d668ffa43b"
+    },
+    {
+      "report_title": "TEN-ORIGINALS-CURRENT-VISUAL-REVIEW.json",
+      "sha256": "9e06ed0e7583ee3ac7a9006c56642cb2e485ab729c52aaab6a1f42e0507a02d7"
+    }
+  ],
+  "scope": "Digest-bound transcription of actual preserved evidence within its original scope; no newly performed historical review.",
+  "limits": "No historical exception becomes precreation PASS. No current UI, remaining artwork, deployment or public acceptance is established.",
+  "exception_scope": "historical_precreation_evidence_only"
+}

@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "site08-body_finished-2",
+  "family": "SITE08",
+  "stage": "body_finished",
+  "actual_actor": "/root/newton_current",
+  "verdict": "CONCUR",
+  "withdrawn": false,
+  "source_report_sha256": "7760dd58b2f3c15355334bf72190985243786c547222386dc074b67bdb9b3b39",
+  "source_recorded_at": null,
+  "normalized_at": "2026-10-10T01:59:32.892647+00:00",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "7c55a45fe2cd5c409f96961074f4ed0c2f714678b976fd086fed5bfa134dc770",
+  "findings": "Named reviewer actually inspected and concurred with the exact accepted garment source. This uses the same source inspection as source_finished, not a second invented review.",
+  "pixels_inspected": true,
+  "limits": "Exact scoped private-source evidence normalization. No assembled-page/public release or invented canonical precreation event."
+}

@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "family": "SITE04",
+  "role": "direct_owner_exception",
+  "source_sha256": "24d91675616ed16399ecb10238cb5d784de4605139fc14c5b737dedcd7823349",
+  "authority_kind": "owner_exception",
+  "reports": [
+    {
+      "report_title": "EXACT-OWNER-EXCEPTIONS.json",
+      "sha256": "27763c6be19629d11dc346f03d7c0f0ddbb55e72de369fafd89982f6ea9ce64b"
+    }
+  ],
+  "scope": "Exact owner-selected portrait PNG, byte-identical to the expressly approved package member; no resized or encoded derivative exists in this family. Owner selection is retained as owner selection, not an invented independent pixel review.",
+  "limits": "No historical exception becomes precreation PASS. No current UI, remaining artwork, deployment or public acceptance is established.",
+  "exception_scope": "historical_precreation_evidence_only"
+}

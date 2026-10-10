@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "id": "site11-delivery_finished-3",
+  "family": "SITE11",
+  "stage": "delivery_finished",
+  "actual_actor": "/root",
+  "verdict": "CONCUR",
+  "withdrawn": false,
+  "source_report_sha256": "4ebb3a410b7352c0f6e7df6d94de3ddc29574a38ce8dc8b0aeb4a88d121b917e",
+  "source_recorded_at": null,
+  "normalized_at": "2026-10-10T02:22:55.916363+00:00",
+  "evidence_class": "current_reconciliation_of_finished_events",
+  "subject_sha256": "c505f942b1c6ae1ffb3f7f4725d873e334e89dcd8d0042b6bf92179078fe8e56",
+  "findings": "Named reviewer actually viewed three native WebPs and retained exact PNG source review; complete buttons and coherent joins survive delivery, no blocking compression defect.",
+  "pixels_inspected": true,
+  "limits": "Stage-specific attributed source evidence. No canonical full-spec precreation claim, owner aesthetic acceptance, assembled-page or public-release claim.",
+  "original_event_timestamp": null,
+  "original_message_digest": null,
+  "canonical_full_spec_precreation_claim": false
+}
