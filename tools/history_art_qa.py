@@ -5,6 +5,7 @@ import re
 from pathlib import Path
 from urllib.parse import parse_qs, urlsplit
 from PIL import Image
+from joseph_life_enrichment_qa import current_corrections
 from answer_study_qa import Document
 from study_gap_art_qa import sitewide_entries, check_sitewide
 
@@ -23,7 +24,7 @@ MASTER = 'assets/identities/joseph-smith-owner-approved-20260914.png'
 MASTER_SHA = '518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827'
 
 
-CURRENT_RELIEF_ASSETS = ('assets/page-art/church-history/relief-society-torso-v3.webp', 'assets/page-art/church-history/relief-society-torso-v3-960.webp')
+CURRENT_RELIEF_ASSETS = ('assets/page-art/church-history/relief-society-identity-v4-1672.webp', 'assets/page-art/church-history/relief-society-identity-v4-960.webp')
 RELIEF_REVISION_BINDINGS = {'assets/page-art/church-history/relief-society-torso-v3.webp': 'f9f1ebceace304bddcd8f91515e66e95a342a3ec745c24630c23583dd73a339c', 'assets/page-art/church-history/relief-society-torso-v3-960.webp': 'bccc1a78b7592abf8fcdcef4f79f1d89c5446a59f68476c9a230915fbe6b05ea', 'docs/reviews/emma-torso-delivery-v3/fermi-delivery.json': 'e180359c9109a5de7af287ecd4dccb39f55017a0d26ab4bc08ae4b274d4d5389', 'docs/reviews/emma-torso-delivery-v3/newton-delivery.json': '66e491fcd4a681f3c1c6403c6ab4b9bcc01a55fc2dd23f62641f9f1e9dc1f8d2', 'docs/reviews/emma-torso-delivery-v3/root-delivery.json': '6ee1c95ccd5a5ef9b6dc18cd74a2ca4487d0c464c341603c18a70745de21028e'}
 
 def history_asset_paths(slot):
@@ -34,6 +35,9 @@ def history_asset_paths(slot):
 
 def check_relief_revision(root):
     errors = []
+    source, delivery = current_corrections()['SITE05']
+    assert source['path'] == 'assets/page-art/church-history/relief-society-identity-v4.png'
+    assert (delivery['default'], delivery['variants'][0]['asset']) == CURRENT_RELIEF_ASSETS, 'Wrong exact SITE05 current delivery'
     for relative, expected_hash in RELIEF_REVISION_BINDINGS.items():
         path = root / relative
         if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != expected_hash:

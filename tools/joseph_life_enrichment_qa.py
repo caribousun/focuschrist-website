@@ -3,33 +3,40 @@ import hashlib,json
 from pathlib import Path
 from bs4 import BeautifulSoup
 from PIL import Image
+from artwork_reviewed_corrections import canonical as correction_canonical, evidence as correction_evidence
 from joseph_research_acceptance import check_exact_review,check_original_page_exclusivity
 from joseph_research_acceptance import check_artwork_badges_and_footer
 ROOT=Path(__file__).resolve().parents[1]
 EXPECTED={'marriage-partnership-1827','household-gift-harmony-1828','emma-early-scribe-1828','hyrum-reading-before-carthage-1844','emma-relief-service-1842','care-after-loss-1828','emma-family-letter-1838','joseph-household-labor-1828','journey-to-harmony-1827','emma-prayer-during-arrest-1830'}
 def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 CORRECTION_SCENES={'household-gift-harmony-1828': 'SITE10', 'journey-to-harmony-1827': 'SITE07_EXPRESSION', 'care-after-loss-1828': 'SITE09', 'emma-family-letter-1838': 'SITE12', 'emma-early-scribe-1828': 'SITE08','emma-prayer-during-arrest-1830': 'SITE11'}
-CORRECTION_RECORDS={'SITE01','SITE07','SITE07_EXPRESSION','SITE08','SITE09','SITE10','SITE12','SITE11'}
-CURRENT_SCENES={'SITE01':'SITE01','SITE07':'SITE07_EXPRESSION','SITE08':'SITE08','SITE09':'SITE09','SITE10':'SITE10','SITE12':'SITE12','SITE11':'SITE11'}
+CORRECTION_RECORDS={'SITE07', 'SITE08', 'SITE11', 'SITE01_IDENTITY', 'SITE10', 'SITE05_IDENTITY', 'SITE01', 'SITE12', 'SITE09', 'SITE07_EXPRESSION', 'SITE02_IDENTITY'}
+CURRENT_SCENES={'SITE01': 'SITE01_IDENTITY', 'SITE07': 'SITE07_EXPRESSION', 'SITE08': 'SITE08', 'SITE09': 'SITE09', 'SITE10': 'SITE10', 'SITE12': 'SITE12', 'SITE11': 'SITE11', 'SITE02': 'SITE02_IDENTITY', 'SITE05': 'SITE05_IDENTITY'}
+CURRENT_BINDING='42ba0b7b149470f37c30c7677946b43695cf8f991f6158f7e97fe6b09b4f2691'
 SITE10_BINDING='6f9510c88845fbef288289a33beab1a841f414ea65ab1212577c02e284d27a75'
 def current_corrections():
  record=json.loads((ROOT/'docs/artwork-correction-reviews.json').read_text(encoding='utf-8'))
  assert record['schema']==1 and record['status']=='REVIEWED_EXACT_EVIDENCE'
- assert record['approved_binding']==SITE10_BINDING
- canonical=json.dumps(record['spec'],sort_keys=True,separators=(',',':'),ensure_ascii=False).encode()
- assert hashlib.sha256(canonical).hexdigest()==SITE10_BINDING,'Unreviewed correction specification'
- families=record['spec']['families'];assert len(families)==8 and {f['id'] for f in families}==CORRECTION_RECORDS
+ assert record['approved_binding']==CURRENT_BINDING
+ assert correction_canonical(record['spec'])==CURRENT_BINDING,'Unreviewed correction specification'
+ families=record['spec']['families'];assert len(families)==11 and {f['id'] for f in families}==CORRECTION_RECORDS
  assert record['spec']['current_scene_records']==CURRENT_SCENES
  resolved={}
  for family in families:
-  for item in family['immutable_originals']+family['evidence']+family['assets']:
-   assert digest(ROOT/item['path'])==item['sha256'],'Missing or changed exact correction source/evidence'
-  assets=family['assets'];assert len(assets)==4
+  if family['id'] in {'SITE01_IDENTITY','SITE02_IDENTITY','SITE05_IDENTITY'}:
+   assert not family.get('immutable_originals'), 'Identity must preserve prior lineage, not invent originals'
+   sources=family['preserved_assets']+[family['prior_source']]+family['identity_references']
+  else:sources=family['immutable_originals']
+  for item in sources+family['evidence']+family['assets']:
+   correction_evidence(ROOT,item,set())
+  assets=family['assets'];assert len(assets)==(3 if family['id'] in {'SITE02_IDENTITY','SITE05_IDENTITY'} else 4)
   for item in assets:
    path=ROOT/item['path'];assert path.stat().st_size==item['bytes']
    with Image.open(path) as image:assert image.size==tuple(item['dimensions']) and image.format==item['format']
   source=assets[0];variants=[{'asset':a['path'],'width':a['dimensions'][0],'height':a['dimensions'][1],'sha256':a['sha256'],'bytes':a['bytes']} for a in assets[1:]]
   resolved[family['id']]=source,{'source_sha256':source['sha256'],'width':source['dimensions'][0],'height':source['dimensions'][1],'variants':variants,'default':variants[-1]['asset']}
+ # Preserve historical family IDs while selecting each explicitly pinned current scene.
+ for scene,record_id in CURRENT_SCENES.items():resolved[scene]=resolved[record_id]
  return resolved
 
 def check():

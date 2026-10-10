@@ -22,7 +22,7 @@ def check():
     errors = []
     corrected, delivery = current_corrections()["SITE01"]
     original_asset = "assets/page-art/bom-evidences/josephemma.webp"
-    current_asset = "assets/page-art/bom-evidences/josephemma-bodice-v3.png"
+    current_asset = "assets/page-art/bom-evidences/josephemma-identity-v4.png"
     assert corrected["path"] == current_asset, "Wrong exact SITE01 current source"
     def require(condition, message):
         if not condition:
