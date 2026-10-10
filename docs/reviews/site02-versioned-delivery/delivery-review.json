@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "phase": "historical-finished-delivery-normalization",
+  "scene": "SITE02 Joseph and Emma walk",
+  "concur": true,
+  "source_png_sha256": "9bb03bbdc49f680f8c17e2552a57c7e583627dcce08f8ae0b857d2a7e5ce83ba",
+  "reviews": {
+    "Fermi": {
+      "report_title": "SITE02-FINISHED-REVIEW.md",
+      "sha256": "c0d7db1b1b379efca90139bcf18612cf7ef26f34b7a22e5a71e8730d9b8e1959"
+    },
+    "Newton": {
+      "report_title": "SITE02-STAGED-REVIEW.md",
+      "sha256": "bcacc7b2fe80e1864ccdb5090ab1d10a1ec7097b47ebe4b8a24d11f297b6c8fa"
+    },
+    "Root": {
+      "report_title": "ROOT-ART-AND-UI-REVIEW.md",
+      "sha256": "45fe857cf2e3013843a47030ea2d33c4ea67207fce44e57efc5c546f02a222e5"
+    }
+  },
+  "outputs": [
+    {
+      "asset": "assets/page-art/bom-evidences/joseph-emma-walk-body-v2.webp",
+      "sha256": "f91d7adb0488df4d235e0b400c6e451e90486965b951bcf9c262b58715827a3f",
+      "bytes": 1474494
+    },
+    {
+      "asset": "assets/page-art/bom-evidences/joseph-emma-walk-body-v2-960.webp",
+      "sha256": "b5767224123e0e26ea91681cd192f11eabf2d1c30430d8ca1a842e54c4351341",
+      "bytes": 149464
+    }
+  ],
+  "scope": "Transcribes actual prior Fermi, Newton and root full/thumbnail fidelity concurrence. Same accepted bytes copied to versioned paths; no new encoding or new visual review. Original source approval and historical failures remain recorded separately.",
+  "limits": "Not current final assembled UI, publication, or a new owner aesthetic approval."
+}

@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "site10-encoding_preflight-11",
+  "family": "SITE10",
+  "stage": "encoding_preflight",
+  "actual_actor": "/root",
+  "verdict": "CONCUR",
+  "withdrawn": false,
+  "source_report_sha256": "e134335ad38542d5bc23d2af47feecb838ef65b4d07e6e3ccf8dcd43a545e10b",
+  "source_recorded_at": null,
+  "normalized_at": "2026-10-09T23:47:55.057363+00:00",
+  "evidence_class": "current_reconciliation_of_prospective_events",
+  "subject_sha256": "213ef8c862d5b120b9da48024227a1ab0deb48a5d0050f6216a62a28436791b6",
+  "findings": "Root current reconciliation records its actual exact prospective review before execution; current independent preflight is separately bound. Original message timestamps remain unavailable.",
+  "pixels_inspected": false,
+  "limits": "Exact local correction evidence only; no assembled UI, publication or owner aesthetic acceptance."
+}

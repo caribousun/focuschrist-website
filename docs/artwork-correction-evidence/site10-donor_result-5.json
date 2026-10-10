@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "id": "site10-donor_result-5",
+  "family": "SITE10",
+  "stage": "donor_result",
+  "actual_actor": "/root/fermi_current",
+  "verdict": "RECORDED",
+  "withdrawn": false,
+  "source_report_sha256": "d0fbeeb016cd654aa6fbf92ea952e452e012b3d993d54d0ea9fec959e720f0c1",
+  "source_recorded_at": null,
+  "normalized_at": "2026-10-09T23:47:55.057363+00:00",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "a4e52c62f1f808193c7d344da0aaf6733a2cf34447ffc64bf30ab5eb4098299c",
+  "findings": "One actual built-in body donor a4e52 from originalcf1 and H2 reference. Raw donor globally unaccepted; only exact reviewed garment mask transfers pixels.",
+  "pixels_inspected": false,
+  "limits": "Exact local correction evidence only; no assembled UI, publication or owner aesthetic acceptance.",
+  "spec_sha256": "8579e0665a2af5301c89e0db2803f1d652b8e279c51f3f210ead1eaf2d1d8292",
+  "prompt_sha256": "d3e473ccd7eb3e29dff350f91134b3809601d7a5f097bdb868dae7d78f2b54e4",
+  "dispatch_intent_sha256": "ebeafcda88b110626e7e2e692a06c05af625d7cea68727d0353e88779f972374"
+}

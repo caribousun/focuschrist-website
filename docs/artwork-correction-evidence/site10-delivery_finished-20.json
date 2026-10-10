@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "site10-delivery_finished-20",
+  "family": "SITE10",
+  "stage": "delivery_finished",
+  "actual_actor": "/root/fermi_current",
+  "verdict": "CONCUR",
+  "withdrawn": false,
+  "source_report_sha256": "ca7d9addbc0260b80bb318f980649e80601c5cbd3292bdcf6805f02b12847b28",
+  "source_recorded_at": "2026-10-09T23:37:06.1350575Z",
+  "normalized_at": "2026-10-09T23:47:55.057363+00:00",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "12bc15e4efed26dc8a83643edcaf7139d0180d0a839e567500a8212e9f68c29b",
+  "findings": "Actual three native WebPs inspected, exact PNG previously inspected. No blocking compression defect; faces/hands/bodice/cloth/bokeh remain coherent. Lossy pixels do not inherit PNG equality.",
+  "pixels_inspected": true,
+  "limits": "Exact local correction evidence only; no assembled UI, publication or owner aesthetic acceptance."
+}

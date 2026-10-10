@@ -77,7 +77,7 @@
     "cfm-reflection-picture": "CFM illustrated study panel; exact page-owned composition contract preserves natural imagery, source controls and responsive caption containment.",
     "cfm-signature": "Existing Signature study card moved once into the CFM weekly panel; exact CFM composition contract preserves its source, artwork and destination.",
     "fc-temple-history__era-menu": "Owner-requested native era disclosure uses shared panel fill/border/shadow tokens in sole-consumer temples-history.css; exact stylesheet and four-group chapter QA protect scope.",
-    "fc-life-reflection": "Dedicated History story reflection panels use the shared Home panel tokens in exact reviewed history-stories.css; three owning story pages only.",
+    "fc-life-reflection": "Dedicated History story reflection panels use the shared Home panel tokens in exact reviewed history-stories.css; four owning story pages including Emma.",
     "fc-history-life-card": "Three Church History owning-story preview cards use shared Home panel tokens in exact reviewed church-history.css.",
     "controls-card": "Merlin standalone timeline experience, preserved by Wyatt on 2026-10-02; scoped inline design and timeline runtime checks own this surface.",
     "card": "Merlin standalone timeline experience, preserved by Wyatt on 2026-10-02; scoped inline design and timeline runtime checks own this surface.",
@@ -94,7 +94,9 @@
     "notes": "Merlin standalone map surface, preserved by owner direction 2026-10-02; scoped inline styles and timeline interaction review.",
     "panel": "Merlin Life of Christ standalone experience, preserved by Wyatt on 2026-10-02; scoped inline design and dedicated Timeline runtime checks own this surface.",
     "note": "Merlin Life of Christ standalone experience, preserved by Wyatt on 2026-10-02; scoped inline design and dedicated Timeline runtime checks own this surface.",
-    "research-feature-study": "Joseph research feature comparison surface owned by joseph-smith-research.css; groups original artwork, physical evidence and reasoning. Uses shared border/radius tokens; scoped desktop and phone review verifies its own layout and contrast."
+    "research-feature-study": "Joseph research feature comparison surface owned by joseph-smith-research.css; groups original artwork, physical evidence and reasoning. Uses shared border/radius tokens; scoped desktop and phone review verifies its own layout and contrast.",
+    "fc-guided-path": "Three guided study paths on Answers use the accepted guided-studies.css layout, shared line/radius tokens and subtle transparent fill; scoped desktop and phone review owns presentation.",
+    "fc-companion": "Four printable companion disclosures on Answers and Emma are owned by guided-studies.css; transparent border-bottom disclosure styling and print rules are preserved, not shared section-panel overrides."
   },
   "excluded_classes": {
     "research-comparison-note": "Inline limitations attached to separately labelled source views; plain reading note, not a section panel.",
@@ -144,7 +146,8 @@
     "detail-panel-head": "Timeline text or structural wrapper; preserved independent experience, no shared panel repaint.",
     "map-pin-note": "Life of Christ map explanatory text for visual pin separation; plain reading copy, not a card or panel.",
     "joseph-life-reflection": "Inline reflection paragraph in Joseph family narrative; a left reading accent only, not an enclosing panel. Page-owned typography and responsive review apply.",
-    "joseph-life-source-note": "Inline provenance paragraph in the remembrance closing; no independent panel surface. Preserve reading flow and source context."
+    "joseph-life-source-note": "Inline provenance paragraph in the remembrance closing; no independent panel surface. Preserve reading flow and source context.",
+    "fc-companion-notes": "Blank handwritten-note area inside four printable companions, owned by guided-studies.css; border-block and writing height are print affordances, not a filled section panel."
   },
   "runtime_selectors": {
     ".cfm-month": {

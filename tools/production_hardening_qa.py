@@ -385,7 +385,7 @@ def main() -> int:
     art_router = read("art-study-router.js", errors)
     art_ask = read("art-ask-context.js", errors)
     require(art_router, "art-study-router.js", (
-        "Study this artwork", "Study this topic on ChurchofJesusChrist.org", "Ask about this artwork",
+        "About this picture", "Church study resources", "Ask about this picture",
         "returnUrlForCaption", "art.html?art=", "data-focuschrist-art-return-restored"
     ), errors)
     require(art_ask, "art-ask-context.js", (
@@ -394,7 +394,7 @@ def main() -> int:
     ), errors)
     if re.search(r"youtube\.com|@theRisen636|CHANNEL\s*=", art_router, re.I):
         errors.append("art-study-router.js must not use YouTube/@theRisen636 as an artwork study destination")
-    if "art-ask-context.js?v=20260927-plan-context-1" not in read("ask.html", errors):
+    if "art-ask-context.js?v=20261009-emma-context-1" not in read("ask.html", errors):
         errors.append("ask.html must load contextual artwork Ask bridge")
     if art.count("art/thumbs/new/") < 11 or art.count("data-full-src=\"art/new/") < 11:
         errors.append("art.html must use localized thumbnails + full-resolution targets for all newly added artworks")

@@ -569,4 +569,11 @@ html[data-focuschrist-history-conversation-active] .fc-history-chat-shell {
 .fc-history-life-body h3 { margin: 0 0 12px; }
 .fc-history-life-body p { margin: 0 0 24px; }
 .fc-history-life-body > .fc-button { margin-top: auto; }
+.fc-emma-introduction { display: grid; grid-template-columns: minmax(220px, 320px) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); align-items: center; }
+.fc-emma-introduction .fc-history-life-preview { overflow: hidden; border-radius: var(--fc-radius); }
+.fc-emma-introduction-copy { min-width: 0; }
+.fc-emma-introduction-copy h2 { margin-top: 0; }
+.fc-emma-introduction-copy p { line-height: 1.75; }
+.fc-emma-introduction-copy .fc-actions { justify-content: flex-start; margin: 24px 0; }
+@media (max-width: 700px) { .fc-emma-introduction { grid-template-columns: 1fr; gap: 24px; } .fc-emma-introduction .fc-history-life-preview { max-width: 300px; margin-inline: auto; } }
 @media (max-width: 959px) { .fc-history-life-grid { grid-template-columns: 1fr; } }

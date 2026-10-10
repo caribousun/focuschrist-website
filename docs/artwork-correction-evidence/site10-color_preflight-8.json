@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "site10-color_preflight-8",
+  "family": "SITE10",
+  "stage": "color_preflight",
+  "actual_actor": "/root/newton_current",
+  "verdict": "CONCUR",
+  "withdrawn": false,
+  "source_report_sha256": "58d3de888715c621c4f6a5cd09021ea18f83250ed6514b4c42569862926863a4",
+  "source_recorded_at": null,
+  "normalized_at": "2026-10-09T23:47:55.057363+00:00",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "2f423e5ed56c7556a6ef412cde6e10ec660dacc57514658d092e450571b4aff4",
+  "findings": "Exact original-pixel color-only trial reviewed after rejected transplant; no donor transfer or spatial editing.",
+  "pixels_inspected": false,
+  "limits": "Exact local correction evidence only; no assembled UI, publication or owner aesthetic acceptance."
+}

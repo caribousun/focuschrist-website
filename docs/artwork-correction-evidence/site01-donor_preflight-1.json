@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "site01-donor_preflight-1",
+  "family": "SITE01",
+  "stage": "donor_preflight",
+  "actual_actor": "/root/newton_current",
+  "verdict": "CONCUR",
+  "withdrawn": false,
+  "source_report_sha256": "0148561fd29f2530c459b8ac0de229782729c58fc0f70b69e11b13ebde0e8cc8",
+  "source_recorded_at": "2026-10-09T23:39:56.091829+00:00",
+  "normalized_at": "2026-10-10T01:59:32.892647+00:00",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "db1dcbe2c24b724e2f09d195caa623b0699e4147c096f0caac2d1cc192705946",
+  "findings": "Named source record reviews exact donor-generation specification and scene/reference scope. It does not approve a later mask, registration, composite or finished donor.",
+  "pixels_inspected": false,
+  "limits": "Exact scoped private-source evidence normalization. No assembled-page/public release or invented canonical precreation event."
+}

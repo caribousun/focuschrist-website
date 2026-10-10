@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "id": "site08-delivery_finished-3",
+  "family": "SITE08",
+  "stage": "delivery_finished",
+  "actual_actor": "/root",
+  "verdict": "CONCUR",
+  "withdrawn": false,
+  "source_report_sha256": "19cad17e3d08886526114f8e43c2dcc0a652d43e180602d11ab2bb4aa93bdc62",
+  "source_recorded_at": null,
+  "normalized_at": "2026-10-10T01:59:32.892647+00:00",
+  "evidence_class": "current_reconciliation_of_finished_events",
+  "subject_sha256": "66e58e3c6cf020f8eb146b317cea141d0a84a7b9db9ee257133b6198293a2a61",
+  "findings": "Named reviewer actually inspected the three native responsive derivatives from the exact source and concurred; source report separately binds their delivery set. No installation or publication inferred.",
+  "pixels_inspected": true,
+  "limits": "Exact scoped private-source evidence normalization. No assembled-page/public release or invented canonical precreation event.",
+  "original_event_timestamp": null,
+  "original_message_digest": null,
+  "canonical_full_spec_precreation_claim": false,
+  "reported_original_reviewers": [
+    "/root"
+  ]
+}

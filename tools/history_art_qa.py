@@ -23,8 +23,26 @@ MASTER = 'assets/identities/joseph-smith-owner-approved-20260914.png'
 MASTER_SHA = '518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827'
 
 
-def check():
+CURRENT_RELIEF_ASSETS = ('assets/page-art/church-history/relief-society-torso-v3.webp', 'assets/page-art/church-history/relief-society-torso-v3-960.webp')
+RELIEF_REVISION_BINDINGS = {'assets/page-art/church-history/relief-society-torso-v3.webp': 'f9f1ebceace304bddcd8f91515e66e95a342a3ec745c24630c23583dd73a339c', 'assets/page-art/church-history/relief-society-torso-v3-960.webp': 'bccc1a78b7592abf8fcdcef4f79f1d89c5446a59f68476c9a230915fbe6b05ea', 'docs/reviews/emma-torso-delivery-v3/fermi-delivery.json': 'e180359c9109a5de7af287ecd4dccb39f55017a0d26ab4bc08ae4b274d4d5389', 'docs/reviews/emma-torso-delivery-v3/newton-delivery.json': '66e491fcd4a681f3c1c6403c6ab4b9bcc01a55fc2dd23f62641f9f1e9dc1f8d2', 'docs/reviews/emma-torso-delivery-v3/root-delivery.json': '6ee1c95ccd5a5ef9b6dc18cd74a2ca4487d0c464c341603c18a70745de21028e'}
+
+def history_asset_paths(slot):
+    if slot == 'relief-society':
+        return CURRENT_RELIEF_ASSETS
+    return (f'assets/page-art/church-history/{slot}.webp',
+            f'assets/page-art/church-history/{slot}-960.webp')
+
+def check_relief_revision(root):
     errors = []
+    for relative, expected_hash in RELIEF_REVISION_BINDINGS.items():
+        path = root / relative
+        if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != expected_hash:
+            errors.append('Relief Society exact revised asset/review missing or changed: ' + relative)
+    return errors
+
+
+def check():
+    errors = check_relief_revision(ROOT)
     def require(condition, message):
         if not condition:
             errors.append(PAGE + ': ' + message)
@@ -44,7 +62,7 @@ def check():
     assets = set()
     for figure in figures:
         slot = figure.attrs.get('data-enriched-study-art', '').removeprefix('history-')
-        expected = f'assets/page-art/church-history/{slot}.webp'
+        expected, thumbnail = history_asset_paths(slot)
         require(figure.attrs.get('data-exclusive-artwork') == 'history-' + slot, slot + ': exclusive artwork marker missing')
         triggers = [n for n in figure.children if n.tag == 'a' and any(c.tag == 'img' for c in n.walk())]
         require(len(triggers) == 1, slot + ': requires one direct native image trigger')
@@ -60,7 +78,11 @@ def check():
         require(caption is not None and any(n.tag == 'a' and urlsplit(n.attrs.get('href', '')).hostname in ('www.churchofjesuschrist.org', 'www.josephsmithpapers.org', 'churchhistorylibrary.churchofjesuschrist.org') for n in caption.walk()), slot + ': historical or scripture source missing')
         images = [n for n in figure.walk() if n.tag == 'img']
         require(len(images) == 1 and bool(images[0].attrs.get('alt')), slot + ': image alternative missing')
-        thumb = ROOT / f'assets/page-art/church-history/{slot}-960.webp'
+        thumb = ROOT / thumbnail
+        if slot == 'relief-society' and len(images) == 1:
+            image = images[0]
+            require(image.attrs.get('src') == thumbnail, slot + ': current responsive source differs')
+            require(image.attrs.get('srcset') == f'{thumbnail} 960w, {expected} 1672w', slot + ': current responsive set differs')
         require(thumb.is_file(), slot + ': responsive thumbnail missing')
         if thumb.is_file():
             with Image.open(thumb) as im:

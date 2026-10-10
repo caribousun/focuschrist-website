@@ -75,7 +75,7 @@ def enrich():
         for old in list(soup.select('link[href]')):
             if old['href'].split('?')[0].split('/')[-1]==filename: old.decompose()
         tag=soup.new_tag('link',rel='stylesheet',href='../'+asset);soup.head.append(tag)
-    for asset in ['topic-artwork-details.js?v=20261007-scoped-root-1','full-image-viewer.js?v=20260914-reopen-1']:
+    for asset in ['topic-artwork-details.js?v=20261009-settled-continue-2','full-image-viewer.js?v=20261009-titled-downloads-1']:
         if not soup.select_one('script[src*="'+asset.split('?')[0]+'"]'):
             tag=soup.new_tag('script',src='../'+asset,defer='');soup.body.append(tag)
     soup.select_one('link[href*="priesthood-history-study.css"]')['href']='../priesthood-history-study.css?v=20260930-enriched-4'

@@ -1,0 +1,18 @@
+{
+  "reviewer": "Fermi",
+  "receipt_id": "fermi-current-semantic-c1-8fff9c678e77",
+  "stage": "reconciliation",
+  "verdict": "PASS",
+  "withdrawn": false,
+  "reviewed_at": "2026-10-09T22:32:20.893Z",
+  "material_historical_additions": [],
+  "semantic_coverage_verified": true,
+  "observations": "I independently read the frozen spec, exact prompt, source record, eight-field semantic map, original Fermi/Newton observations and applicable bound mandate passages. The exact approved Christ reference, solitary Luke 6 night prayer before choosing the Twelve, conventional adult age expressly unknown, and pre-Resurrection exclusion of scars are supported by the original prompt and substantive reviews. Clothing/posture/light are qualified reconstruction; source reading supports night prayer without asserting exact posture or weather. I verified all 14 artifact hashes, original source/mandate event raw-line hashes and exact excerpts, original reviewer call/result hashes and their order before generation, generation call/result hashes, and the decoded generated raster digest. No material historical addition found.",
+  "limits": "Exact frozen payload only. Full canonical spec did not exist at original review time; this current serialization audit is not retrospective preapproval. No current reference or finished-image pixel review, source generation, adapter/site integration, UI, release or owner acceptance claimed.",
+  "actual_actor": "/root/fermi_current",
+  "frozen_payload_binding": "8fff9c678e7740a5116d9fae454bfafebaba40f56abcd7c5f2e64cd6b3b78ef2",
+  "original_report": {
+    "report_title": "c1-fermi-reconciliation.json",
+    "sha256": "0c72fe88c859d47c50f010515e17ce9e0b6818eae5f10e22f7dcd768585a118c"
+  }
+}

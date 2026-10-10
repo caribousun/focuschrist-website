@@ -14,17 +14,17 @@ VISIBLE_TOPIC_ROUTES = frozenset({
 })
 def assert_controller_bindings(actual):
     expected = json.loads((ROOT/'docs/topic-artwork-controller-bindings.json').read_text(encoding='utf8'))
-    assert len(expected) == 118
-    assert all(len(refs) == 1 and refs[0].endswith('topic-artwork-details.js?v=20261007-scoped-root-1') for refs in expected.values())
-    assert actual == expected, 'Exact118 topic controller owners/single references required'
+    assert len(expected) == 119
+    assert all(len(refs) == 1 and refs[0].endswith('topic-artwork-details.js?v=20261009-settled-continue-2') for refs in expected.values())
+    assert actual == expected, 'Exact119 topic controller owners/single references required'
 
 def controller_binding_self_test():
     expected = json.loads((ROOT/'docs/topic-artwork-controller-bindings.json').read_text(encoding='utf8'))
     assert_controller_bindings(expected)
     owner = 'pioneers.html'; ref = expected[owner][0]
     mutations = [dict(expected, **{owner: []}), dict(expected, **{owner: [ref, ref]}),
-                 dict(expected, **{owner: [ref, ref.replace('20261007-scoped-root-1','20260930-history-records-1')]}),
-                 dict(expected, **{owner: [ref.replace('20261007-scoped-root-1','unknown')]}),
+                 dict(expected, **{owner: [ref, ref.replace('20261009-settled-continue-2','20260930-history-records-1')]}),
+                 dict(expected, **{owner: [ref.replace('20261009-settled-continue-2','unknown')]}),
                  dict(expected, **{'unreviewed.html': [ref]})]
     missing = dict(expected); del missing[owner]; mutations.append(missing)
     for mutation in mutations:
@@ -48,7 +48,7 @@ def check():
         assert dest.h1 and dest.h1.get_text(' ',strip=True) == r['target_title'], r
         if u.fragment: assert dest.find(id=u.fragment), r
     generic = re.compile(r'(?:open|follow) (?:this|the) illustrated study', re.I)
-    controller_version = '20261007-scoped-root-1'
+    controller_version = '20261009-settled-continue-2'
     consumers = 0
     actual_bindings = {}
     for page in ROOT.rglob('*.html'):

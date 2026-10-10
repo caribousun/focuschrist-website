@@ -3,13 +3,28 @@
 (async function () {
     'use strict';
     const params = new URLSearchParams(location.search);
-    const requested = params.get('gallery-art') || params.get('gallery-position');
+    // Resolve only known retired sources; the catalog and page checks still apply.
+    const sourceAliases = new Map([
+        ['source-44bc8f90e9cf', 'source-0f854bc93cec'],
+        ['source-b8f1acb4ee67', 'source-0b724121e66b'],
+        ['source-d203f8844981', 'source-41ace1913814'],
+        ['source-b8fb45227bb3', 'source-5a24b826f3f4'],
+        ['source-9ef33a38a3ec', 'source-d8e9ad0fdf7c'],
+        ['source-6d9341ce7a52', 'source-be42ad339302'],
+        ['source-8dace3b6bf78', 'source-4a4ae352d87f'],
+        ['source-94d28fae2282', 'source-6cd5e5535101'],
+        ['source-a6b610e8d1ce', 'source-85cb8f284453'],
+        ['source-e30c8ddd579a', 'source-d1ce88bbb045'],
+        ['source-a3b8e155238a', 'source-05cf7c0e2b6a']
+    ]);
+    const supplied = params.get('gallery-art') || params.get('gallery-position');
+    const requested = sourceAliases.get(supplied) || supplied;
     if (!requested) return;
     let embedded = false;
     try { embedded = params.get('gallery-embed') === '1' && parent !== window && parent.location.origin === location.origin && parent.location.pathname.endsWith('/art-gallery.html'); } catch (_) {}
     function tell(action, extra) { if (embedded) parent.postMessage(Object.assign({ channel: 'focuschrist-art-gallery', action }, extra || {}), location.origin); }
     try {
-        const response = await fetch('/art-gallery.json');
+        const response = await fetch('/art-gallery.json?v=20261010-final-art-links-1');
         if (!response.ok) throw new Error('Gallery index unavailable');
         const catalog = await response.json();
         const source = catalog.artworks.flatMap(art => art.occurrences).find(item => item.id === requested);
@@ -50,6 +65,7 @@
         let actions = panel.querySelector('.fc-artwork-detail-actions, .fc-missionary-detail-actions, .fc-art-study-links');
         if (source.kind === 'full') { actions = document.createElement('div'); actions.className = 'fc-gallery-full-actions'; panel.appendChild(actions); }
         const original = new URL(location.href); original.searchParams.delete('gallery-embed');
+        original.searchParams.set('gallery-art', source.id);
         // Legacy Art also writes its own caption query; one source ID must be the
         // only restoration authority after moving to the next/previous picture.
         if (source.kind === 'legacy') original.searchParams.delete('art');

@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "site10-encoding_preflight-10",
+  "family": "SITE10",
+  "stage": "encoding_preflight",
+  "actual_actor": "/root/newton_current",
+  "verdict": "CONCUR",
+  "withdrawn": false,
+  "source_report_sha256": "2c8500a2fd49a0fd0333d3272b17efc4ce5ea302f082b622da71e610b232093b",
+  "source_recorded_at": null,
+  "normalized_at": "2026-10-09T23:47:55.057363+00:00",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "213ef8c862d5b120b9da48024227a1ab0deb48a5d0050f6216a62a28436791b6",
+  "findings": "Exact versioned four-file private encoding reviewed; immutable originals and historical53 preserved.",
+  "pixels_inspected": false,
+  "limits": "Exact local correction evidence only; no assembled UI, publication or owner aesthetic acceptance."
+}

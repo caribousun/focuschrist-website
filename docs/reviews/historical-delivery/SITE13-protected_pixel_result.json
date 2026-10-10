@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "family": "SITE13",
+  "role": "protected_pixel_result",
+  "source_sha256": "7821956b89847e1a4499d40a875fda1a3b6b035d8d1322cc00107f8a6a46b8af",
+  "authority_kind": "reviewed_correction",
+  "reports": [
+    {
+      "report_title": "ROOT-SITE13-RESULT.md",
+      "sha256": "3256c908fc8d2de168cc7cbe18b1bd0375e1dba5358d9e3f7cf546c1e7d7bc0c"
+    },
+    {
+      "report_title": "SITE13-RESULT-REVIEW.md",
+      "sha256": "67d631d7e5a81a5b9b05f567ba94474e9bc7e2a3b85ccbd7bd8749fb85d357c3"
+    },
+    {
+      "report_title": "SITE13-RESULT-REVIEW.md",
+      "sha256": "cfb887b8c4d9e74978abe2ab7e171ea7214370fb8a37c46f269c1cd722d3d539"
+    }
+  ],
+  "scope": "Digest-bound transcription of actual preserved evidence within its original scope; no newly performed historical review.",
+  "limits": "No historical exception becomes precreation PASS. No current UI, remaining artwork, deployment or public acceptance is established."
+}

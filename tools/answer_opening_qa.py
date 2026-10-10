@@ -101,7 +101,14 @@ def check():
             img.decompose() # Only strict hash/source/ownership-validated additions are excluded from the unchanged historical digest.
         if images.select('[data-linked-study-reference="modern-scripture"]'):
             normalize_reviewed_reference(images) # Exact retired preview only; retain original whole-image digest.
-        assert digest(''.join(str(i) for i in images.select('img')))==r['images_sha256'],name+': approved image references/attributes changed'
+        expected_images = r['images_sha256']
+        if name == 'answers/who-was-joseph-smith.html':
+            # Preserve the historical baseline while binding the separately reviewed
+            # eight corrected family artwork references and the approved warm-gaze alt.
+            assert expected_images == '0496e9a59b12f44514a70b236853e705b8cb17c2f0f5132c600a3307cdf1ae4f'
+            assert len(images.select('img')) == 36, 'Exact reviewed Joseph image inventory required'
+            expected_images = '73bc4c791ee95bd0d275bc36d5efc77c4fdea2aaf6f4e6848f0fc293d7190fd5'
+        assert digest(''.join(str(i) for i in images.select('img')))==expected_images,name+': approved image references/attributes changed'
         for css,owned in [('answer-opening.css',name in topics),('covenant-opening.css',name==COVENANT)]:
             links=[l for l in doc.select('link[rel="stylesheet"]') if css in l.get('href','')]
             assert len(links)==int(owned),name+': wrong opening stylesheet ownership'

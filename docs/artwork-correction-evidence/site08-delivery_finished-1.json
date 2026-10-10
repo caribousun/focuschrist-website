@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "site08-delivery_finished-1",
+  "family": "SITE08",
+  "stage": "delivery_finished",
+  "actual_actor": "/root/fermi_current",
+  "verdict": "CONCUR",
+  "withdrawn": false,
+  "source_report_sha256": "0999943991818dfa61351071b59e000ec60b413422b404a0d643ec13e9420dcc",
+  "source_recorded_at": null,
+  "normalized_at": "2026-10-10T01:59:32.892647+00:00",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "66e58e3c6cf020f8eb146b317cea141d0a84a7b9db9ee257133b6198293a2a61",
+  "findings": "Named reviewer actually inspected the three native responsive derivatives from the exact source and concurred; source report separately binds their delivery set. No installation or publication inferred.",
+  "pixels_inspected": true,
+  "limits": "Exact scoped private-source evidence normalization. No assembled-page/public release or invented canonical precreation event."
+}

@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "family": "Emma-h4",
+  "role": "delivery_pixels",
+  "source_sha256": "24e0b13c84cabae92c972034f1fc775162b2800a93e4b14d876ca16c31a269ea",
+  "authority_kind": "prospective_v2",
+  "reports": [
+    {
+      "report_title": "ROOT-SAMPLE-AND-CONTROLS.md",
+      "sha256": "9c624be836a52c4a6b75e1117e5ea52bc37c0d3b9ec3e5db3f3bd4cca7dfd4b6"
+    },
+    {
+      "report_title": "H4-SAMPLE-PIXEL-REVIEW.md",
+      "sha256": "2f84911cb593824fee027a27af86cf8fe8cb72651bbfdac8321e501ebb7203fa"
+    },
+    {
+      "report_title": "H4-SAMPLE-RESULT-REVIEW.md",
+      "sha256": "5f1b9b12370d77db67fb21a0c066b836799e8285c7170b0a679cf8e10f00803b"
+    }
+  ],
+  "scope": "Digest-bound transcription of actual preserved evidence within its original scope; no newly performed historical review.",
+  "limits": "No historical exception becomes precreation PASS. No current UI, remaining artwork, deployment or public acceptance is established."
+}

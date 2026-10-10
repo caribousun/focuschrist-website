@@ -32,7 +32,7 @@ function checkController(scripts, helper, route, name) {
     const controller = controllers[0];
     assert(helper.index < controller.index, route + ': helper loads before controller');
     const version = route === 'timelines/life-of-christ-journey-map.html' ? '20261007-timeline-panels-1'
-        : scopedTopicRoutes.has(route) && name === 'topic-artwork-details' ? '20261007-scoped-root-1' : '20261006-visible-art-1';
+        : scopedTopicRoutes.has(route) && name === 'topic-artwork-details' ? '20261009-settled-continue-2' : '20261006-visible-art-1';
     assert(controller[1].endsWith(name + '.js?v=' + version), route + ': exact controller version');
 }
 const canonicalRoutes = [...fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => new URL(match[1]).pathname.slice(1) || 'index.html');
@@ -51,7 +51,7 @@ for (const route of canonicalRoutes) {
 // Exercise the same validator against absent, stale, unknown, duplicate and mixed bindings.
 const scriptFixture = (src, index = 10) => Object.assign(['<script src="' + src + '"></script>', src], {index});
 for (const route of scopedTopicRoutes) {
-    const current = 'topic-artwork-details.js?v=20261007-scoped-root-1';
+    const current = 'topic-artwork-details.js?v=20261009-settled-continue-2';
     const stale = 'topic-artwork-details.js?v=20261006-visible-art-1';
     const helper = {index: 0};
     checkController([scriptFixture(current)], helper, route, 'topic-artwork-details');

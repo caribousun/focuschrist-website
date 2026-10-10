@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "family": "SITE06",
+  "role": "correction_authorization",
+  "source_sha256": "32f3c958dfcfb1155d864dd73b65acbaf8e780087a544a516b24cad8551d79b8",
+  "authority_kind": "reviewed_correction",
+  "reports": [
+    {
+      "report_title": "marriage-partnership-1827-torso-v3-fermi_preflight.json",
+      "sha256": "3f82db911b59567aad864bcb573b86cfbfb1136020af8e0313b72d37a2289074"
+    },
+    {
+      "report_title": "marriage-partnership-1827-torso-v3-newton_preflight.json",
+      "sha256": "7af9ce329e14b1c22bb98832d6aed990f73001a98974daf2b1fac303389fbdfb"
+    }
+  ],
+  "scope": "Digest-bound transcription of actual preserved evidence within its original scope; no newly performed historical review.",
+  "limits": "No historical exception becomes precreation PASS. No current UI, remaining artwork, deployment or public acceptance is established."
+}

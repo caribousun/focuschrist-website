@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "family": "SITE06",
+  "role": "delivery_pixels",
+  "source_sha256": "32f3c958dfcfb1155d864dd73b65acbaf8e780087a544a516b24cad8551d79b8",
+  "authority_kind": "reviewed_correction",
+  "reports": [
+    {
+      "report_title": "ROOT-SITE06-STAGED-PACKAGE-REVIEW.md",
+      "sha256": "a3e2e62dcda7256e7883f376b9a090e9ed863c49b18874859b633899d3e71ba2"
+    },
+    {
+      "report_title": "SITE06-STAGED-PACKAGE-REVIEW.md",
+      "sha256": "ca6e2d3881de3e7afb1669a4780fc1a7e52690105ff567addea920dc1d135999"
+    }
+  ],
+  "scope": "Digest-bound transcription of actual preserved evidence within its original scope; no newly performed historical review.",
+  "limits": "No historical exception becomes precreation PASS. No current UI, remaining artwork, deployment or public acceptance is established."
+}

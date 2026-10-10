@@ -41,6 +41,7 @@
     "/come-follow-me.html",
     "/general-conference.html",
     "/history/eleazer-miller.html",
+    "/history/emma-hale-smith.html",
     "/history/john-rowe-moyle.html",
     "/history/john-tanner.html",
     "/index.html",
@@ -420,7 +421,7 @@
     },
     {
       "title": "A community aboard ship",
-      "category": "Gospel Studies",
+      "category": "Church History",
       "thumbnail": "/assets/page-art/history-stories/moyle-deck-gathering-1856-960.webp",
       "fullImage": "/assets/page-art/history-stories/moyle-deck-gathering-1856-full.webp",
       "alt": "John Rowe Moyle listens on a sailing ship’s deck, with other passengers nearby.",
@@ -430,14 +431,14 @@
           "id": "source-3734c9fe2ebd",
           "page": "/history/john-rowe-moyle.html",
           "pageTitle": "John Rowe Moyle: the stonecutter and the wooden leg",
-          "category": "Gospel Studies",
+          "category": "Church History",
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/history-stories/moyle-deck-gathering-1856-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/moyle-deck-gathering-1856-960.webp\"])",
           "title": "A community aboard ship"
         }
       ],
       "categories": [
-        "Gospel Studies"
+        "Church History"
       ]
     },
     {
@@ -596,7 +597,7 @@
     },
     {
       "title": "A family on the road in 1856",
-      "category": "Gospel Studies",
+      "category": "Church History",
       "thumbnail": "/assets/page-art/history-stories/moyle-handcart-journey-full.webp",
       "fullImage": "/assets/page-art/history-stories/moyle-handcart-journey-full.webp",
       "alt": "John Rowe Moyle pulls a loaded handcart along a dry trail with travelers behind him.",
@@ -606,14 +607,14 @@
           "id": "source-2ef132cafe58",
           "page": "/history/john-rowe-moyle.html",
           "pageTitle": "John Rowe Moyle: the stonecutter and the wooden leg",
-          "category": "Gospel Studies",
+          "category": "Church History",
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/history-stories/moyle-handcart-journey-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/moyle-handcart-journey-full.webp\"])",
           "title": "A family on the road in 1856"
         }
       ],
       "categories": [
-        "Gospel Studies"
+        "Church History"
       ]
     },
     {
@@ -684,7 +685,7 @@
     },
     {
       "title": "A father, a son, and the road ahead",
-      "category": "Gospel Studies",
+      "category": "Church History",
       "thumbnail": "/assets/page-art/history-stories/tanner-displacement-960.webp",
       "fullImage": "/assets/page-art/history-stories/tanner-displacement-full.webp",
       "alt": "John Tanner grips a trunk among packed household belongings.",
@@ -694,14 +695,14 @@
           "id": "source-a1b039e3784c",
           "page": "/history/john-tanner.html",
           "pageTitle": "John Tanner: receiving, giving, and remembering",
-          "category": "Gospel Studies",
+          "category": "Church History",
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/history-stories/tanner-displacement-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/tanner-displacement-960.webp\"])",
           "title": "A father, a son, and the road ahead"
         }
       ],
       "categories": [
-        "Gospel Studies"
+        "Church History"
       ]
     },
     {
@@ -772,7 +773,7 @@
     },
     {
       "title": "A gift remembered in a few words",
-      "category": "Gospel Studies",
+      "category": "Church History",
       "thumbnail": "/assets/page-art/history-stories/tanner-debt-forgiven-960.webp",
       "fullImage": "/assets/page-art/history-stories/tanner-debt-forgiven-full.webp",
       "alt": "John Tanner hands a folded note to Joseph Smith as they look warmly at one another across a desk.",
@@ -782,14 +783,14 @@
           "id": "source-a1f739573831",
           "page": "/history/john-tanner.html",
           "pageTitle": "John Tanner: receiving, giving, and remembering",
-          "category": "Gospel Studies",
+          "category": "Church History",
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/history-stories/tanner-debt-forgiven-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/tanner-debt-forgiven-960.webp\"])",
           "title": "A gift remembered in a few words"
         }
       ],
       "categories": [
-        "Gospel Studies"
+        "Church History"
       ]
     },
     {
@@ -1101,6 +1102,28 @@
       ]
     },
     {
+      "title": "A hymn before the road ahead",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/emma-life/emma-c3-review-960.webp",
+      "fullImage": "/assets/page-art/emma-life/emma-c3-review-1536.webp",
+      "alt": "Jesus and His disciples sing together.",
+      "id": "art-cb5d6fe53b7d",
+      "occurrences": [
+        {
+          "id": "source-a23ec1e87519",
+          "page": "/history/emma-hale-smith.html",
+          "pageTitle": "Emma Hale Smith: a life of faith, work, and care",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/emma-life/emma-c3-review-1536.webp\"]:has(img[src=\"/assets/page-art/emma-life/emma-c3-review-960.webp\"])",
+          "title": "A hymn before the road ahead"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
       "title": "A journey toward a covenant community",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/priesthood-history/original-jane-journey.png",
@@ -1211,6 +1234,28 @@
       ]
     },
     {
+      "title": "A letter across the separation",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/emma-life/emma-h3-review-960.webp",
+      "fullImage": "/assets/page-art/emma-life/emma-h3-review-1536.webp",
+      "alt": "Emma pauses beside a letter and writing materials.",
+      "id": "art-6bbd19ad246c",
+      "occurrences": [
+        {
+          "id": "source-a3f846784887",
+          "page": "/history/emma-hale-smith.html",
+          "pageTitle": "Emma Hale Smith: a life of faith, work, and care",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/emma-life/emma-h3-review-1536.webp\"]:has(img[src=\"/assets/page-art/emma-life/emma-h3-review-960.webp\"])",
+          "title": "A letter across the separation"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
       "title": "A life of work in Union",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/priesthood-history/original-green-flake-farm.png",
@@ -1256,7 +1301,7 @@
     },
     {
       "title": "A life that continued westward",
-      "category": "Gospel Studies",
+      "category": "Church History",
       "thumbnail": "/assets/page-art/history-stories/miller-westward-service-960.webp",
       "fullImage": "/assets/page-art/history-stories/miller-westward-service-full.webp",
       "alt": "Eleazer Miller tightens a rope around supplies on a wagon while other travelers prepare nearby.",
@@ -1266,19 +1311,19 @@
           "id": "source-0d34b3a957e6",
           "page": "/history/eleazer-miller.html",
           "pageTitle": "Eleazer Miller: a simple witness and a continuing life",
-          "category": "Gospel Studies",
+          "category": "Church History",
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/history-stories/miller-westward-service-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/miller-westward-service-960.webp\"])",
           "title": "A life that continued westward"
         }
       ],
       "categories": [
-        "Gospel Studies"
+        "Church History"
       ]
     },
     {
       "title": "A listener who wanted to know",
-      "category": "Gospel Studies",
+      "category": "Church History",
       "thumbnail": "/assets/page-art/history-stories/miller-search-before-witness-960.webp",
       "fullImage": "/assets/page-art/history-stories/miller-search-before-witness-full.webp",
       "alt": "A young Brigham Young reads an open book at a wooden table.",
@@ -1288,14 +1333,14 @@
           "id": "source-2cb842860531",
           "page": "/history/eleazer-miller.html",
           "pageTitle": "Eleazer Miller: a simple witness and a continuing life",
-          "category": "Gospel Studies",
+          "category": "Church History",
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/history-stories/miller-search-before-witness-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/miller-search-before-witness-960.webp\"])",
           "title": "A listener who wanted to know"
         }
       ],
       "categories": [
-        "Gospel Studies"
+        "Church History"
       ]
     },
     {
@@ -1410,7 +1455,7 @@
     },
     {
       "title": "A missionary before the famous encounter",
-      "category": "Gospel Studies",
+      "category": "Church History",
       "thumbnail": "/assets/page-art/history-stories/miller-mission-road-960.webp",
       "fullImage": "/assets/page-art/history-stories/miller-mission-road-full.webp",
       "alt": "Eleazer Miller walks along a country road carrying a traveling bag.",
@@ -1420,14 +1465,14 @@
           "id": "source-1768d72369c2",
           "page": "/history/eleazer-miller.html",
           "pageTitle": "Eleazer Miller: a simple witness and a continuing life",
-          "category": "Gospel Studies",
+          "category": "Church History",
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/history-stories/miller-mission-road-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/miller-mission-road-960.webp\"])",
           "title": "A missionary before the famous encounter"
         }
       ],
       "categories": [
-        "Gospel Studies"
+        "Church History"
       ]
     },
     {
@@ -1607,6 +1652,28 @@
       ]
     },
     {
+      "title": "A night given to prayer",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/emma-life/emma-c1-review-960.webp",
+      "fullImage": "/assets/page-art/emma-life/emma-c1-review-1536.webp",
+      "alt": "Jesus prays outdoors beneath the night sky.",
+      "id": "art-52552816f4ef",
+      "occurrences": [
+        {
+          "id": "source-9762fed31afb",
+          "page": "/history/emma-hale-smith.html",
+          "pageTitle": "Emma Hale Smith: a life of faith, work, and care",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/emma-life/emma-c1-review-1536.webp\"]:has(img[src=\"/assets/page-art/emma-life/emma-c1-review-960.webp\"])",
+          "title": "A night given to prayer"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
       "title": "A path through the sea",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/bb-sea-crossing-960.webp",
@@ -1694,6 +1761,50 @@
       ],
       "categories": [
         "Gospel Studies"
+      ]
+    },
+    {
+      "title": "A pen beside the manuscript",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/emma-life/emma-h1-review-960.webp",
+      "fullImage": "/assets/page-art/emma-life/emma-h1-review-1536.webp",
+      "alt": "Emma writes beside a manuscript in a sunlit room.",
+      "id": "art-44c8c49ce646",
+      "occurrences": [
+        {
+          "id": "source-fc130aa67f34",
+          "page": "/history/emma-hale-smith.html",
+          "pageTitle": "Emma Hale Smith: a life of faith, work, and care",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/emma-life/emma-h1-review-1536.webp\"]:has(img[src=\"/assets/page-art/emma-life/emma-h1-review-960.webp\"])",
+          "title": "A pen beside the manuscript"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
+      "title": "A place apart",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/emma-life/emma-c5-review-960.webp",
+      "fullImage": "/assets/page-art/emma-life/emma-c5-review-1536.webp",
+      "alt": "Jesus departs by boat on the water.",
+      "id": "art-fb81e60aaedc",
+      "occurrences": [
+        {
+          "id": "source-5d06d8d21155",
+          "page": "/history/emma-hale-smith.html",
+          "pageTitle": "Emma Hale Smith: a life of faith, work, and care",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/emma-life/emma-c5-review-1536.webp\"]:has(img[src=\"/assets/page-art/emma-life/emma-c5-review-960.webp\"])",
+          "title": "A place apart"
+        }
+      ],
+      "categories": [
+        "Church History"
       ]
     },
     {
@@ -2270,7 +2381,7 @@
     },
     {
       "title": "A skill offered to a shared undertaking",
-      "category": "Gospel Studies",
+      "category": "Church History",
       "thumbnail": "/assets/page-art/history-stories/moyle-stonecutter-craft-960.webp",
       "fullImage": "/assets/page-art/history-stories/moyle-stonecutter-craft-full.webp",
       "alt": "John Rowe Moyle works a granite block with hammer and chisel before the unfinished Salt Lake Temple.",
@@ -2280,14 +2391,14 @@
           "id": "source-1a197f7c35a9",
           "page": "/history/john-rowe-moyle.html",
           "pageTitle": "John Rowe Moyle: the stonecutter and the wooden leg",
-          "category": "Gospel Studies",
+          "category": "Church History",
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/history-stories/moyle-stonecutter-craft-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/moyle-stonecutter-craft-960.webp\"])",
           "title": "A skill offered to a shared undertaking"
         }
       ],
       "categories": [
-        "Gospel Studies"
+        "Church History"
       ]
     },
     {
@@ -2337,18 +2448,18 @@
     {
       "title": "A small gift amid demanding work",
       "category": "Gospel Studies",
-      "thumbnail": "/assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-wardrobe-v2-1536.webp",
-      "fullImage": "/assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-wardrobe-v2.png",
+      "thumbnail": "/assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-body-season-v3-1536.webp",
+      "fullImage": "/assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-body-season-v3.png",
       "alt": "Joseph offers a small comb to Emma, who looks toward the gift, both wearing earthy period clothing",
-      "id": "art-30da387593ee",
+      "id": "art-629e01aebd7c",
       "occurrences": [
         {
-          "id": "source-9ef33a38a3ec",
+          "id": "source-d8e9ad0fdf7c",
           "page": "/answers/who-was-joseph-smith.html",
           "pageTitle": "Joseph Smith",
           "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"../assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-wardrobe-v2.png\"]:has(img[src=\"../assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-wardrobe-v2-1536.webp\"])",
+          "selector": "a[href=\"../assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-body-season-v3.png\"]:has(img[src=\"../assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-body-season-v3-1536.webp\"])",
           "title": "A small gift amid demanding work"
         }
       ],
@@ -2403,18 +2514,18 @@
     {
       "title": "A society ready to serve",
       "category": "Church History",
-      "thumbnail": "/assets/page-art/church-history/relief-society-960.webp",
-      "fullImage": "/assets/page-art/church-history/relief-society.webp",
+      "thumbnail": "/assets/page-art/church-history/relief-society-torso-v3-960.webp",
+      "fullImage": "/assets/page-art/church-history/relief-society-torso-v3.webp",
       "alt": "Emma speaks with women gathered in a simple meeting room, meeting the gaze of a seated listener.",
-      "id": "art-82ed9c00b587",
+      "id": "art-01f5918c3164",
       "occurrences": [
         {
-          "id": "source-b8f1acb4ee67",
+          "id": "source-0b724121e66b",
           "page": "/church-history.html",
           "pageTitle": "Church History",
           "category": "Church History",
           "kind": "topic",
-          "selector": "a[href=\"assets/page-art/church-history/relief-society.webp\"]:has(img[src=\"assets/page-art/church-history/relief-society-960.webp\"])",
+          "selector": "a[href=\"assets/page-art/church-history/relief-society-torso-v3.webp\"]:has(img[src=\"assets/page-art/church-history/relief-society-torso-v3-960.webp\"])",
           "title": "A society ready to serve"
         }
       ],
@@ -2578,7 +2689,7 @@
     },
     {
       "title": "A testimony that reached Brigham Young",
-      "category": "Gospel Studies",
+      "category": "Church History",
       "thumbnail": "/assets/page-art/history-stories/miller-teaching-brigham-master.png",
       "fullImage": "/assets/page-art/history-stories/miller-teaching-brigham-master.png",
       "alt": "Eleazer Miller speaks with Brigham Young outside a rural carpenter’s workshop.",
@@ -2588,14 +2699,14 @@
           "id": "source-89ea73a6ea0c",
           "page": "/history/eleazer-miller.html",
           "pageTitle": "Eleazer Miller: a simple witness and a continuing life",
-          "category": "Gospel Studies",
+          "category": "Church History",
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/history-stories/miller-teaching-brigham-master.png\"]:has(img[src=\"../assets/page-art/history-stories/miller-teaching-brigham-master.png\"])",
           "title": "A testimony that reached Brigham Young"
         }
       ],
       "categories": [
-        "Gospel Studies"
+        "Church History"
       ]
     },
     {
@@ -3623,7 +3734,7 @@
     },
     {
       "title": "An outward covenant in April 1832",
-      "category": "Gospel Studies",
+      "category": "Church History",
       "thumbnail": "/assets/page-art/history-stories/miller-millstream-baptism-960.webp",
       "fullImage": "/assets/page-art/history-stories/miller-millstream-baptism-full.webp",
       "alt": "Eleazer Miller raises his right hand beside Brigham Young in a snowy millstream before baptism.",
@@ -3633,14 +3744,14 @@
           "id": "source-b79895a2dcdb",
           "page": "/history/eleazer-miller.html",
           "pageTitle": "Eleazer Miller: a simple witness and a continuing life",
-          "category": "Gospel Studies",
+          "category": "Church History",
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/history-stories/miller-millstream-baptism-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/miller-millstream-baptism-960.webp\"])",
           "title": "An outward covenant in April 1832"
         }
       ],
       "categories": [
-        "Gospel Studies"
+        "Church History"
       ]
     },
     {
@@ -4185,7 +4296,7 @@
     },
     {
       "title": "Before he became a missionary",
-      "category": "Gospel Studies",
+      "category": "Church History",
       "thumbnail": "/assets/page-art/history-stories/miller-conversion-1831-960.webp",
       "fullImage": "/assets/page-art/history-stories/miller-conversion-1831-full.webp",
       "alt": "Eleazer Miller looks down at an open book with one finger resting on the page.",
@@ -4195,14 +4306,14 @@
           "id": "source-c63b036fc8f8",
           "page": "/history/eleazer-miller.html",
           "pageTitle": "Eleazer Miller: a simple witness and a continuing life",
-          "category": "Gospel Studies",
+          "category": "Church History",
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/history-stories/miller-conversion-1831-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/miller-conversion-1831-960.webp\"])",
           "title": "Before he became a missionary"
         }
       ],
       "categories": [
-        "Gospel Studies"
+        "Church History"
       ]
     },
     {
@@ -4251,7 +4362,7 @@
     },
     {
       "title": "Before the plains: across the Atlantic",
-      "category": "Gospel Studies",
+      "category": "Church History",
       "thumbnail": "/assets/page-art/history-stories/moyle-atlantic-crossing-960.webp",
       "fullImage": "/assets/page-art/history-stories/moyle-atlantic-crossing-full.webp",
       "alt": "John Rowe Moyle braces a rope-bound bundle on a trunk aboard a wet wooden ship.",
@@ -4261,19 +4372,19 @@
           "id": "source-021cf13d9f90",
           "page": "/history/john-rowe-moyle.html",
           "pageTitle": "John Rowe Moyle: the stonecutter and the wooden leg",
-          "category": "Gospel Studies",
+          "category": "Church History",
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/history-stories/moyle-atlantic-crossing-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/moyle-atlantic-crossing-960.webp\"])",
           "title": "Before the plains: across the Atlantic"
         }
       ],
       "categories": [
-        "Gospel Studies"
+        "Church History"
       ]
     },
     {
       "title": "Before the working day",
-      "category": "Gospel Studies",
+      "category": "Church History",
       "thumbnail": "/assets/page-art/history-stories/miller-brigham-family-breakfast-960.webp",
       "fullImage": "/assets/page-art/history-stories/miller-brigham-family-breakfast-full.webp",
       "alt": "A young Brigham Young lifts an iron cooking pot with a cloth beside a wooden table.",
@@ -4283,14 +4394,14 @@
           "id": "source-726dc8ba45cc",
           "page": "/history/eleazer-miller.html",
           "pageTitle": "Eleazer Miller: a simple witness and a continuing life",
-          "category": "Gospel Studies",
+          "category": "Church History",
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/history-stories/miller-brigham-family-breakfast-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/miller-brigham-family-breakfast-960.webp\"])",
           "title": "Before the working day"
         }
       ],
       "categories": [
-        "Gospel Studies"
+        "Church History"
       ]
     },
     {
@@ -5507,7 +5618,7 @@
     },
     {
       "title": "Care for the camp",
-      "category": "Gospel Studies",
+      "category": "Church History",
       "thumbnail": "/assets/page-art/history-stories/tanner-camp-herd-1846-960.webp",
       "fullImage": "/assets/page-art/history-stories/tanner-camp-herd-1846-full.webp",
       "alt": "John Tanner holds a wooden staff as he watches cattle grazing near a pioneer camp.",
@@ -5517,14 +5628,14 @@
           "id": "source-8d61011db37f",
           "page": "/history/john-tanner.html",
           "pageTitle": "John Tanner: receiving, giving, and remembering",
-          "category": "Gospel Studies",
+          "category": "Church History",
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/history-stories/tanner-camp-herd-1846-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/tanner-camp-herd-1846-960.webp\"])",
           "title": "Care for the camp"
         }
       ],
       "categories": [
-        "Gospel Studies"
+        "Church History"
       ]
     },
     {
@@ -5948,18 +6059,18 @@
     {
       "title": "Choosing a life together",
       "category": "Gospel Studies",
-      "thumbnail": "/assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-wardrobe-v2-1536.webp",
-      "fullImage": "/assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-wardrobe-v2.png",
+      "thumbnail": "/assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-torso-v3-1536.webp",
+      "fullImage": "/assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-torso-v3.png",
       "alt": "Young Joseph and Emma pose together with joined hands in brown winter clothing",
-      "id": "art-c2a7f9036414",
+      "id": "art-fb9041593ebb",
       "occurrences": [
         {
-          "id": "source-44bc8f90e9cf",
+          "id": "source-0f854bc93cec",
           "page": "/answers/who-was-joseph-smith.html",
           "pageTitle": "Joseph Smith",
           "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"../assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-wardrobe-v2.png\"]:has(img[src=\"../assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-wardrobe-v2-1536.webp\"])",
+          "selector": "a[href=\"../assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-torso-v3.png\"]:has(img[src=\"../assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-torso-v3-1536.webp\"])",
           "title": "Choosing a life together"
         }
       ],
@@ -7512,10 +7623,10 @@
     {
       "title": "Emma Hale Smith",
       "category": "Church History",
-      "thumbnail": "/assets/identities/emma-smith-owner-approved-20260930.png",
-      "fullImage": "/assets/identities/emma-smith-owner-approved-20260930.png",
+      "thumbnail": "/assets/portraits/emma-smith-natural-20261008.png",
+      "fullImage": "/assets/portraits/emma-smith-natural-20261008.png",
       "alt": "Artistic portrait of Emma Hale Smith with dark ringlets and a blue dress",
-      "id": "art-e8aa2c14211e",
+      "id": "art-bf3eafcc71cc",
       "occurrences": [
         {
           "id": "source-b61354e94a0c",
@@ -7534,18 +7645,18 @@
     {
       "title": "Emma’s work as a scribe",
       "category": "Gospel Studies",
-      "thumbnail": "/assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-wardrobe-v2-1536.webp",
-      "fullImage": "/assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-wardrobe-v2.png",
+      "thumbnail": "/assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-upper-bodice-v3-1536.webp",
+      "fullImage": "/assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-upper-bodice-v3.png",
       "alt": "Emma in a printed cotton dress writes with a quill while Joseph sits nearby",
-      "id": "art-d117f116ef39",
+      "id": "art-fe5e1ed41d9b",
       "occurrences": [
         {
-          "id": "source-6d9341ce7a52",
+          "id": "source-be42ad339302",
           "page": "/answers/who-was-joseph-smith.html",
           "pageTitle": "Joseph Smith",
           "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"../assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-wardrobe-v2.png\"]:has(img[src=\"../assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-wardrobe-v2-1536.webp\"])",
+          "selector": "a[href=\"../assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-upper-bodice-v3.png\"]:has(img[src=\"../assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-upper-bodice-v3-1536.webp\"])",
           "title": "Emma’s work as a scribe"
         }
       ],
@@ -8268,6 +8379,28 @@
       ]
     },
     {
+      "title": "Food beside the well",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/emma-life/emma-c2-review-960.webp",
+      "fullImage": "/assets/page-art/emma-life/emma-c2-review-1536.webp",
+      "alt": "Disciples offer food to Jesus beside a well.",
+      "id": "art-c502d172fcc3",
+      "occurrences": [
+        {
+          "id": "source-4733dce58059",
+          "page": "/history/emma-hale-smith.html",
+          "pageTitle": "Emma Hale Smith: a life of faith, work, and care",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/emma-life/emma-c2-review-1536.webp\"]:has(img[src=\"/assets/page-art/emma-life/emma-c2-review-960.webp\"])",
+          "title": "Food beside the well"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
       "title": "Food for the household",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/faithful-servant-01-960.webp",
@@ -8379,7 +8512,7 @@
     },
     {
       "title": "From Boston toward Iowa",
-      "category": "Gospel Studies",
+      "category": "Church History",
       "thumbnail": "/assets/page-art/history-stories/moyle-rail-to-iowa-1856-960.webp",
       "fullImage": "/assets/page-art/history-stories/moyle-rail-to-iowa-1856-full.webp",
       "alt": "John Rowe Moyle sits by a wooden railway carriage window and looks across the passing countryside.",
@@ -8389,14 +8522,14 @@
           "id": "source-700611b711ba",
           "page": "/history/john-rowe-moyle.html",
           "pageTitle": "John Rowe Moyle: the stonecutter and the wooden leg",
-          "category": "Gospel Studies",
+          "category": "Church History",
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/history-stories/moyle-rail-to-iowa-1856-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/moyle-rail-to-iowa-1856-960.webp\"])",
           "title": "From Boston toward Iowa"
         }
       ],
       "categories": [
-        "Gospel Studies"
+        "Church History"
       ]
     },
     {
@@ -8507,6 +8640,28 @@
       ],
       "categories": [
         "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Gather what remains",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/emma-life/emma-c4-review-960.webp",
+      "fullImage": "/assets/page-art/emma-life/emma-c4-review-1536.webp",
+      "alt": "Jesus speaks to a disciple as others gather remaining bread.",
+      "id": "art-8a39aecf9eca",
+      "occurrences": [
+        {
+          "id": "source-9594653cea84",
+          "page": "/history/emma-hale-smith.html",
+          "pageTitle": "Emma Hale Smith: a life of faith, work, and care",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/emma-life/emma-c4-review-1536.webp\"]:has(img[src=\"/assets/page-art/emma-life/emma-c4-review-960.webp\"])",
+          "title": "Gather what remains"
+        }
+      ],
+      "categories": [
+        "Church History"
       ]
     },
     {
@@ -8951,7 +9106,7 @@
     },
     {
       "title": "Good news carried through grief",
-      "category": "Gospel Studies",
+      "category": "Church History",
       "thumbnail": "/assets/page-art/history-stories/tanner-mission-road-1844-960.webp",
       "fullImage": "/assets/page-art/history-stories/tanner-mission-road-1844-full.webp",
       "alt": "John Tanner, carrying a shoulder bag, gestures as he speaks with a companion on a country road.",
@@ -8961,14 +9116,14 @@
           "id": "source-304b42bace78",
           "page": "/history/john-tanner.html",
           "pageTitle": "John Tanner: receiving, giving, and remembering",
-          "category": "Gospel Studies",
+          "category": "Church History",
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/history-stories/tanner-mission-road-1844-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/tanner-mission-road-1844-960.webp\"])",
           "title": "Good news carried through grief"
         }
       ],
       "categories": [
-        "Gospel Studies"
+        "Church History"
       ]
     },
     {
@@ -10073,7 +10228,7 @@
     },
     {
       "title": "Helping others build a house of worship",
-      "category": "Gospel Studies",
+      "category": "Church History",
       "thumbnail": "/assets/page-art/history-stories/tanner-temple-support-960.webp",
       "fullImage": "/assets/page-art/history-stories/tanner-temple-support-full.webp",
       "alt": "John Tanner and Joseph Smith meet across a desk, with coins and papers before them and construction beyond the window.",
@@ -10083,14 +10238,14 @@
           "id": "source-9fdc6acc48f7",
           "page": "/history/john-tanner.html",
           "pageTitle": "John Tanner: receiving, giving, and remembering",
-          "category": "Gospel Studies",
+          "category": "Church History",
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/history-stories/tanner-temple-support-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/tanner-temple-support-960.webp\"])",
           "title": "Helping others build a house of worship"
         }
       ],
       "categories": [
-        "Gospel Studies"
+        "Church History"
       ]
     },
     {
@@ -10249,7 +10404,7 @@
     },
     {
       "title": "Holiness to the Lord",
-      "category": "Gospel Studies",
+      "category": "Church History",
       "thumbnail": "/assets/page-art/history-stories/moyle-holiness-inscription-960.webp",
       "fullImage": "/assets/page-art/history-stories/moyle-holiness-inscription-full.webp",
       "alt": "John Rowe Moyle stands on a wooden platform with a wooden lower-leg prosthesis, holding a hammer and chisel beside the words Holiness to the Lord.",
@@ -10259,14 +10414,14 @@
           "id": "source-04f8f00077b7",
           "page": "/history/john-rowe-moyle.html",
           "pageTitle": "John Rowe Moyle: the stonecutter and the wooden leg",
-          "category": "Gospel Studies",
+          "category": "Church History",
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/history-stories/moyle-holiness-inscription-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/moyle-holiness-inscription-960.webp\"])",
           "title": "Holiness to the Lord"
         }
       ],
       "categories": [
-        "Gospel Studies"
+        "Church History"
       ]
     },
     {
@@ -10930,7 +11085,7 @@
       ]
     },
     {
-      "title": "Jesus and Mary His Mom",
+      "title": "Jesus and His Mother Mary",
       "category": "Art & Study",
       "thumbnail": "/art/thumbs/Jesus-and-Mary-his-mom.webp",
       "fullImage": "/art/Jesus-and-Mary-his-mom.jpg",
@@ -10944,7 +11099,7 @@
           "category": "Art & Study",
           "kind": "legacy",
           "selector": ".gallery-item:has(img[src=\"art/thumbs/Jesus-and-Mary-his-mom.webp\"])",
-          "title": "Jesus and Mary His Mom"
+          "title": "Jesus and His Mother Mary"
         }
       ],
       "categories": [
@@ -10989,28 +11144,6 @@
           "kind": "legacy",
           "selector": ".gallery-item:has(img[src=\"art/thumbs/Jesus-baptized.webp\"])",
           "title": "Jesus Baptized"
-        }
-      ],
-      "categories": [
-        "Art & Study"
-      ]
-    },
-    {
-      "title": "Jesus Boat",
-      "category": "Art & Study",
-      "thumbnail": "/art/thumbs/Jesus-boat.webp",
-      "fullImage": "/art/Jesus-boat.png",
-      "alt": "Jesus stands smiling in a wooden boat surrounded by disciples as waves rise around them.",
-      "id": "art-2ab2d3a4cc42",
-      "occurrences": [
-        {
-          "id": "source-c8aa80674460",
-          "page": "/art.html",
-          "pageTitle": "Inspirational Art",
-          "category": "Art & Study",
-          "kind": "legacy",
-          "selector": ".gallery-item:has(img[src=\"art/thumbs/Jesus-boat.webp\"])",
-          "title": "Jesus Boat"
         }
       ],
       "categories": [
@@ -11313,28 +11446,6 @@
       ]
     },
     {
-      "title": "Jesus Fun",
-      "category": "Art & Study",
-      "thumbnail": "/art/thumbs/Jesus-fun.webp",
-      "fullImage": "/art/Jesus-fun.png",
-      "alt": "Jesus smiles beside a lakeside fishing village, with fishermen, children and market stalls behind him.",
-      "id": "art-4123c89a09cc",
-      "occurrences": [
-        {
-          "id": "source-a5bef7a4af0a",
-          "page": "/art.html",
-          "pageTitle": "Inspirational Art",
-          "category": "Art & Study",
-          "kind": "legacy",
-          "selector": ".gallery-item:has(img[src=\"art/thumbs/Jesus-fun.webp\"])",
-          "title": "Jesus Fun"
-        }
-      ],
-      "categories": [
-        "Art & Study"
-      ]
-    },
-    {
       "title": "Jesus in Africa",
       "category": "Art & Study",
       "thumbnail": "/art/thumbs/Jesus-in-Africa.webp",
@@ -11350,28 +11461,6 @@
           "kind": "legacy",
           "selector": ".gallery-item:has(img[src=\"art/thumbs/Jesus-in-Africa.webp\"])",
           "title": "Jesus in Africa"
-        }
-      ],
-      "categories": [
-        "Art & Study"
-      ]
-    },
-    {
-      "title": "Jesus Leper",
-      "category": "Art & Study",
-      "thumbnail": "/art/thumbs/Jesus-leper.webp",
-      "fullImage": "/art/Jesus-leper.jpg",
-      "alt": "Jesus kneels beside a man in worn clothing and rests a hand on his head as others watch.",
-      "id": "art-27c6f056d272",
-      "occurrences": [
-        {
-          "id": "source-c5de4e4bb3b0",
-          "page": "/art.html",
-          "pageTitle": "Inspirational Art",
-          "category": "Art & Study",
-          "kind": "legacy",
-          "selector": ".gallery-item:has(img[src=\"art/thumbs/Jesus-leper.webp\"])",
-          "title": "Jesus Leper"
         }
       ],
       "categories": [
@@ -11423,28 +11512,6 @@
       ]
     },
     {
-      "title": "Jesus Seven Times Seven",
-      "category": "Art & Study",
-      "thumbnail": "/art/thumbs/Jesus-seven-times-seven.webp",
-      "fullImage": "/art/Jesus-seven-times-seven.png",
-      "alt": "Jesus walks with his arm around a man and gestures as they talk, with other men gathered behind them.",
-      "id": "art-c395c94adcb1",
-      "occurrences": [
-        {
-          "id": "source-6a4cf10aec79",
-          "page": "/art.html",
-          "pageTitle": "Inspirational Art",
-          "category": "Art & Study",
-          "kind": "legacy",
-          "selector": ".gallery-item:has(img[src=\"art/thumbs/Jesus-seven-times-seven.webp\"])",
-          "title": "Jesus Seven Times Seven"
-        }
-      ],
-      "categories": [
-        "Art & Study"
-      ]
-    },
-    {
       "title": "Jesus Walking Jerusalem",
       "category": "Art & Study",
       "thumbnail": "/art/thumbs/Jesus-walking-Jerusalem.webp",
@@ -11489,21 +11556,21 @@
       ]
     },
     {
-      "title": "Jesus with Apostles Sunflowers",
+      "title": "Jesus with His Disciples at Sea",
       "category": "Art & Study",
-      "thumbnail": "/art/thumbs/Jesus-with-apostles-sunflowers.webp",
-      "fullImage": "/art/Jesus-with-apostles-sunflowers.png",
-      "alt": "Jesus walks with a group of smiling men along a path through sunflowers at sunset.",
-      "id": "art-fe7365e8c0b8",
+      "thumbnail": "/art/thumbs/Jesus-boat.webp",
+      "fullImage": "/art/Jesus-boat.png",
+      "alt": "Jesus stands smiling in a wooden boat surrounded by disciples as waves rise around them.",
+      "id": "art-2ab2d3a4cc42",
       "occurrences": [
         {
-          "id": "source-f483c727a0fe",
+          "id": "source-c8aa80674460",
           "page": "/art.html",
           "pageTitle": "Inspirational Art",
           "category": "Art & Study",
           "kind": "legacy",
-          "selector": ".gallery-item:has(img[src=\"art/thumbs/Jesus-with-apostles-sunflowers.webp\"])",
-          "title": "Jesus with Apostles Sunflowers"
+          "selector": ".gallery-item:has(img[src=\"art/thumbs/Jesus-boat.webp\"])",
+          "title": "Jesus with His Disciples at Sea"
         }
       ],
       "categories": [
@@ -11860,6 +11927,28 @@
       ],
       "categories": [
         "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Joy Beside the Lake",
+      "category": "Art & Study",
+      "thumbnail": "/art/thumbs/Jesus-fun.webp",
+      "fullImage": "/art/Jesus-fun.png",
+      "alt": "Jesus smiles beside a lakeside fishing village, with fishermen, children and market stalls behind him.",
+      "id": "art-4123c89a09cc",
+      "occurrences": [
+        {
+          "id": "source-a5bef7a4af0a",
+          "page": "/art.html",
+          "pageTitle": "Inspirational Art",
+          "category": "Art & Study",
+          "kind": "legacy",
+          "selector": ".gallery-item:has(img[src=\"art/thumbs/Jesus-fun.webp\"])",
+          "title": "Joy Beside the Lake"
+        }
+      ],
+      "categories": [
+        "Art & Study"
       ]
     },
     {
@@ -12437,6 +12526,28 @@
       ]
     },
     {
+      "title": "Learning to Forgive",
+      "category": "Art & Study",
+      "thumbnail": "/art/thumbs/Jesus-seven-times-seven.webp",
+      "fullImage": "/art/Jesus-seven-times-seven.png",
+      "alt": "Jesus walks with his arm around a man and gestures as they talk, with other men gathered behind them.",
+      "id": "art-c395c94adcb1",
+      "occurrences": [
+        {
+          "id": "source-6a4cf10aec79",
+          "page": "/art.html",
+          "pageTitle": "Inspirational Art",
+          "category": "Art & Study",
+          "kind": "legacy",
+          "selector": ".gallery-item:has(img[src=\"art/thumbs/Jesus-seven-times-seven.webp\"])",
+          "title": "Learning to Forgive"
+        }
+      ],
+      "categories": [
+        "Art & Study"
+      ]
+    },
+    {
       "title": "Learning to Share",
       "category": "Art & Study",
       "thumbnail": "/assets/page-art/art-study/thumbs/children-share-snack-20261004.webp",
@@ -12548,7 +12659,7 @@
     },
     {
       "title": "Leaving home on Christmas Day",
-      "category": "Gospel Studies",
+      "category": "Church History",
       "thumbnail": "/assets/page-art/history-stories/tanner-journey-kirtland-960.webp",
       "fullImage": "/assets/page-art/history-stories/tanner-journey-kirtland-full.webp",
       "alt": "John Tanner walks beside a wagon through a snowy landscape.",
@@ -12558,14 +12669,14 @@
           "id": "source-67ba9fd148fe",
           "page": "/history/john-tanner.html",
           "pageTitle": "John Tanner: receiving, giving, and remembering",
-          "category": "Gospel Studies",
+          "category": "Church History",
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/history-stories/tanner-journey-kirtland-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/tanner-journey-kirtland-960.webp\"])",
           "title": "Leaving home on Christmas Day"
         }
       ],
       "categories": [
-        "Gospel Studies"
+        "Church History"
       ]
     },
     {
@@ -13651,18 +13762,18 @@
     {
       "title": "Love carried across separation",
       "category": "Gospel Studies",
-      "thumbnail": "/assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-wardrobe-v2-1536.webp",
-      "fullImage": "/assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-wardrobe-v2.png",
+      "thumbnail": "/assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-bodice-v3-1536.webp",
+      "fullImage": "/assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-bodice-v3.png",
       "alt": "Emma in a burgundy dress and shawl reads a folded family letter",
-      "id": "art-71d0e77d29ca",
+      "id": "art-b02a6bb5283f",
       "occurrences": [
         {
-          "id": "source-8dace3b6bf78",
+          "id": "source-4a4ae352d87f",
           "page": "/answers/who-was-joseph-smith.html",
           "pageTitle": "Joseph Smith",
           "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"../assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-wardrobe-v2.png\"]:has(img[src=\"../assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-wardrobe-v2-1536.webp\"])",
+          "selector": "a[href=\"../assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-bodice-v3.png\"]:has(img[src=\"../assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-bodice-v3-1536.webp\"])",
           "title": "Love carried across separation"
         }
       ],
@@ -13849,18 +13960,18 @@
     {
       "title": "Making a new home",
       "category": "Gospel Studies",
-      "thumbnail": "/assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-corrected-v2-1536.webp",
-      "fullImage": "/assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-corrected-v2.png",
-      "alt": "Joseph attends to driving the wagon while Emma looks along their direction of travel, wearing winter layers and a bonnet",
-      "id": "art-b0d390116e40",
+      "thumbnail": "/assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-warm-companionship-v4-1536.webp",
+      "fullImage": "/assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-warm-companionship-v4.png",
+      "alt": "Joseph attends to driving the wagon while Emma looks warmly toward him, wearing winter layers and a bonnet",
+      "id": "art-668c171076f3",
       "occurrences": [
         {
-          "id": "source-94d28fae2282",
+          "id": "source-6cd5e5535101",
           "page": "/answers/who-was-joseph-smith.html",
           "pageTitle": "Joseph Smith",
           "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"../assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-corrected-v2.png\"]:has(img[src=\"../assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-corrected-v2-1536.webp\"])",
+          "selector": "a[href=\"../assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-warm-companionship-v4.png\"]:has(img[src=\"../assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-warm-companionship-v4-1536.webp\"])",
           "title": "Making a new home"
         }
       ],
@@ -13892,7 +14003,7 @@
     },
     {
       "title": "Making a way to walk again",
-      "category": "Gospel Studies",
+      "category": "Church History",
       "thumbnail": "/assets/page-art/history-stories/moyle-wooden-leg-960.webp",
       "fullImage": "/assets/page-art/history-stories/moyle-wooden-leg-full.webp",
       "alt": "An older John Rowe Moyle shapes a wooden prosthetic leg at a workbench.",
@@ -13902,14 +14013,14 @@
           "id": "source-ff2ab21a547c",
           "page": "/history/john-rowe-moyle.html",
           "pageTitle": "John Rowe Moyle: the stonecutter and the wooden leg",
-          "category": "Gospel Studies",
+          "category": "Church History",
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/history-stories/moyle-wooden-leg-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/moyle-wooden-leg-960.webp\"])",
           "title": "Making a way to walk again"
         }
       ],
       "categories": [
-        "Gospel Studies"
+        "Church History"
       ]
     },
     {
@@ -13958,7 +14069,7 @@
     },
     {
       "title": "Making room for another beginning",
-      "category": "Gospel Studies",
+      "category": "Church History",
       "thumbnail": "/assets/page-art/history-stories/tanner-family-crossing-1848-960.webp",
       "fullImage": "/assets/page-art/history-stories/tanner-family-crossing-1848-full.webp",
       "alt": "John Tanner tightens a rope around supplies on a covered wagon while other travelers stand nearby.",
@@ -13968,14 +14079,14 @@
           "id": "source-8d092f6f8441",
           "page": "/history/john-tanner.html",
           "pageTitle": "John Tanner: receiving, giving, and remembering",
-          "category": "Gospel Studies",
+          "category": "Church History",
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/history-stories/tanner-family-crossing-1848-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/tanner-family-crossing-1848-960.webp\"])",
           "title": "Making room for another beginning"
         }
       ],
       "categories": [
-        "Gospel Studies"
+        "Church History"
       ]
     },
     {
@@ -14684,7 +14795,7 @@
     },
     {
       "title": "Ninety-five cents in the record",
-      "category": "Gospel Studies",
+      "category": "Church History",
       "thumbnail": "/assets/page-art/history-stories/miller-relief-donation-960.webp",
       "fullImage": "/assets/page-art/history-stories/miller-relief-donation-full.webp",
       "alt": "An older Eleazer Miller holds several coins in one hand beside a closed account book.",
@@ -14694,14 +14805,14 @@
           "id": "source-040c77e9d2a9",
           "page": "/history/eleazer-miller.html",
           "pageTitle": "Eleazer Miller: a simple witness and a continuing life",
-          "category": "Gospel Studies",
+          "category": "Church History",
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/history-stories/miller-relief-donation-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/miller-relief-donation-960.webp\"])",
           "title": "Ninety-five cents in the record"
         }
       ],
       "categories": [
-        "Gospel Studies"
+        "Church History"
       ]
     },
     {
@@ -15076,6 +15187,28 @@
       ],
       "categories": [
         "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Organizing care in Nauvoo",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/emma-life/emma-h4-review-960.webp",
+      "fullImage": "/assets/page-art/emma-life/emma-h4-review-1536.webp",
+      "alt": "Emma speaks with four women in an upstairs room.",
+      "id": "art-bd5cc7f327a3",
+      "occurrences": [
+        {
+          "id": "source-4eba86e72682",
+          "page": "/history/emma-hale-smith.html",
+          "pageTitle": "Emma Hale Smith: a life of faith, work, and care",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/emma-life/emma-h4-review-1536.webp\"]:has(img[src=\"/assets/page-art/emma-life/emma-h4-review-960.webp\"])",
+          "title": "Organizing care in Nauvoo"
+        }
+      ],
+      "categories": [
+        "Church History"
       ]
     },
     {
@@ -15454,7 +15587,7 @@
     },
     {
       "title": "Planting again",
-      "category": "Gospel Studies",
+      "category": "Church History",
       "thumbnail": "/assets/page-art/history-stories/tanner-new-crop-1847-960.webp",
       "fullImage": "/assets/page-art/history-stories/tanner-new-crop-1847-full.webp",
       "alt": "John Tanner scatters seed into a shallow furrow beside a cloth seed bag.",
@@ -15464,14 +15597,14 @@
           "id": "source-779567ed0164",
           "page": "/history/john-tanner.html",
           "pageTitle": "John Tanner: receiving, giving, and remembering",
-          "category": "Gospel Studies",
+          "category": "Church History",
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/history-stories/tanner-new-crop-1847-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/tanner-new-crop-1847-960.webp\"])",
           "title": "Planting again"
         }
       ],
       "categories": [
-        "Gospel Studies"
+        "Church History"
       ]
     },
     {
@@ -15653,18 +15786,18 @@
     {
       "title": "Praying together through uncertainty",
       "category": "Gospel Studies",
-      "thumbnail": "/assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-1536.webp",
-      "fullImage": "/assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830.png",
+      "thumbnail": "/assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2-1536.webp",
+      "fullImage": "/assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2.png",
       "alt": "Emma kneels in prayer beside a chair, with another woman partly visible behind her",
-      "id": "art-e3bea40c689d",
+      "id": "art-7fce6f8c3aab",
       "occurrences": [
         {
-          "id": "source-a6b610e8d1ce",
+          "id": "source-85cb8f284453",
           "page": "/answers/who-was-joseph-smith.html",
           "pageTitle": "Joseph Smith",
           "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"../assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830.png\"]:has(img[src=\"../assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-1536.webp\"])",
+          "selector": "a[href=\"../assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2.png\"]:has(img[src=\"../assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2-1536.webp\"])",
           "title": "Praying together through uncertainty"
         }
       ],
@@ -16708,7 +16841,7 @@
     },
     {
       "title": "Remembering the worker beyond the obstacle",
-      "category": "Gospel Studies",
+      "category": "Church History",
       "thumbnail": "/assets/page-art/history-stories/moyle-return-to-craft-960.webp",
       "fullImage": "/assets/page-art/history-stories/moyle-return-to-craft-full.webp",
       "alt": "John Rowe Moyle stands at a granite block with a wooden prosthesis visible below one trouser leg.",
@@ -16718,14 +16851,14 @@
           "id": "source-78164e785445",
           "page": "/history/john-rowe-moyle.html",
           "pageTitle": "John Rowe Moyle: the stonecutter and the wooden leg",
-          "category": "Gospel Studies",
+          "category": "Church History",
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/history-stories/moyle-return-to-craft-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/moyle-return-to-craft-960.webp\"])",
           "title": "Remembering the worker beyond the obstacle"
         }
       ],
       "categories": [
-        "Gospel Studies"
+        "Church History"
       ]
     },
     {
@@ -17598,18 +17731,18 @@
     {
       "title": "Seeking out those in need",
       "category": "Gospel Studies",
-      "thumbnail": "/assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-wardrobe-v2-1536.webp",
-      "fullImage": "/assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-wardrobe-v2.png",
+      "thumbnail": "/assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3-1536.webp",
+      "fullImage": "/assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3.png",
       "alt": "Emma in a deep green day dress speaks earnestly to seated women",
-      "id": "art-89e864cd34e4",
+      "id": "art-c4242967b8a6",
       "occurrences": [
         {
-          "id": "source-d203f8844981",
+          "id": "source-41ace1913814",
           "page": "/answers/who-was-joseph-smith.html",
           "pageTitle": "Joseph Smith",
           "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"../assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-wardrobe-v2.png\"]:has(img[src=\"../assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-wardrobe-v2-1536.webp\"])",
+          "selector": "a[href=\"../assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3.png\"]:has(img[src=\"../assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3-1536.webp\"])",
           "title": "Seeking out those in need"
         }
       ],
@@ -18192,18 +18325,18 @@
     {
       "title": "Staying close in sorrow",
       "category": "Gospel Studies",
-      "thumbnail": "/assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-wardrobe-v2-1536.webp",
-      "fullImage": "/assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-wardrobe-v2.png",
+      "thumbnail": "/assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3-1536.webp",
+      "fullImage": "/assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3.png",
       "alt": "Joseph in a brown waistcoat supports Emma’s hand as she rests in light recovery clothing; they look tenderly toward one another",
-      "id": "art-8626a0013555",
+      "id": "art-8b3bee192219",
       "occurrences": [
         {
-          "id": "source-e30c8ddd579a",
+          "id": "source-d1ce88bbb045",
           "page": "/answers/who-was-joseph-smith.html",
           "pageTitle": "Joseph Smith",
           "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"../assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-wardrobe-v2.png\"]:has(img[src=\"../assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-wardrobe-v2-1536.webp\"])",
+          "selector": "a[href=\"../assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3.png\"]:has(img[src=\"../assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3-1536.webp\"])",
           "title": "Staying close in sorrow"
         }
       ],
@@ -18926,7 +19059,7 @@
     },
     {
       "title": "The distance between home and the work",
-      "category": "Gospel Studies",
+      "category": "Church History",
       "thumbnail": "/assets/page-art/history-stories/moyle-weekly-walk-960.webp",
       "fullImage": "/assets/page-art/history-stories/moyle-weekly-walk-full.webp",
       "alt": "John Rowe Moyle walks a dirt road with a shoulder bag above a valley settlement beneath a brightening mountain sky.",
@@ -18936,14 +19069,14 @@
           "id": "source-afacb30b7b40",
           "page": "/history/john-rowe-moyle.html",
           "pageTitle": "John Rowe Moyle: the stonecutter and the wooden leg",
-          "category": "Gospel Studies",
+          "category": "Church History",
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/history-stories/moyle-weekly-walk-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/moyle-weekly-walk-960.webp\"])",
           "title": "The distance between home and the work"
         }
       ],
       "categories": [
-        "Gospel Studies"
+        "Church History"
       ]
     },
     {
@@ -19353,7 +19486,7 @@
     },
     {
       "title": "The hand he accepted",
-      "category": "Gospel Studies",
+      "category": "Church History",
       "thumbnail": "/assets/page-art/history-stories/tanner-healing-witness-full.webp",
       "fullImage": "/assets/page-art/history-stories/tanner-healing-witness-full.webp",
       "alt": "John Tanner rises beside a chair while another man steadies him by the hand.",
@@ -19363,14 +19496,14 @@
           "id": "source-28b35b42fb72",
           "page": "/history/john-tanner.html",
           "pageTitle": "John Tanner: receiving, giving, and remembering",
-          "category": "Gospel Studies",
+          "category": "Church History",
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/history-stories/tanner-healing-witness-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/tanner-healing-witness-full.webp\"])",
           "title": "The hand he accepted"
         }
       ],
       "categories": [
-        "Gospel Studies"
+        "Church History"
       ]
     },
     {
@@ -19459,6 +19592,28 @@
       ],
       "categories": [
         "Gospel Studies"
+      ]
+    },
+    {
+      "title": "The Healing Touch of Jesus",
+      "category": "Art & Study",
+      "thumbnail": "/art/thumbs/Jesus-leper.webp",
+      "fullImage": "/art/Jesus-leper.jpg",
+      "alt": "Jesus kneels beside a man in worn clothing and rests a hand on his head as others watch.",
+      "id": "art-27c6f056d272",
+      "occurrences": [
+        {
+          "id": "source-c5de4e4bb3b0",
+          "page": "/art.html",
+          "pageTitle": "Inspirational Art",
+          "category": "Art & Study",
+          "kind": "legacy",
+          "selector": ".gallery-item:has(img[src=\"art/thumbs/Jesus-leper.webp\"])",
+          "title": "The Healing Touch of Jesus"
+        }
+      ],
+      "categories": [
+        "Art & Study"
       ]
     },
     {
@@ -19573,7 +19728,7 @@
     },
     {
       "title": "The injury his family remembered",
-      "category": "Gospel Studies",
+      "category": "Church History",
       "thumbnail": "/assets/page-art/history-stories/moyle-cow-injury-960.webp",
       "fullImage": "/assets/page-art/history-stories/moyle-cow-injury-full.webp",
       "alt": "John Rowe Moyle sits beside a milking shed holding his trouser-covered leg; a cow, tipped stool and pail are nearby.",
@@ -19583,14 +19738,14 @@
           "id": "source-b083f02352b2",
           "page": "/history/john-rowe-moyle.html",
           "pageTitle": "John Rowe Moyle: the stonecutter and the wooden leg",
-          "category": "Gospel Studies",
+          "category": "Church History",
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/history-stories/moyle-cow-injury-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/moyle-cow-injury-960.webp\"])",
           "title": "The injury his family remembered"
         }
       ],
       "categories": [
-        "Gospel Studies"
+        "Church History"
       ]
     },
     {
@@ -20256,18 +20411,18 @@
     {
       "title": "The people beside the work",
       "category": "Gospel Studies",
-      "thumbnail": "/assets/page-art/bom-evidences/josephemma-960.webp",
-      "fullImage": "/assets/page-art/bom-evidences/josephemma.webp",
+      "thumbnail": "/assets/page-art/bom-evidences/josephemma-bodice-v3-960.webp",
+      "fullImage": "/assets/page-art/bom-evidences/josephemma-bodice-v3.png",
       "alt": "Emma pauses with her quill as she and Joseph share a warm glance.",
-      "id": "art-88364b952e48",
+      "id": "art-a034c9d00751",
       "occurrences": [
         {
-          "id": "source-a3b8e155238a",
+          "id": "source-05cf7c0e2b6a",
           "page": "/book-of-mormon-evidences.html",
           "pageTitle": "Book of Mormon Evidences",
           "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"assets/page-art/bom-evidences/josephemma.webp\"]:has(img[src=\"assets/page-art/bom-evidences/josephemma-960.webp\"])",
+          "selector": "a[href=\"assets/page-art/bom-evidences/josephemma-bodice-v3.png\"]:has(img[src=\"assets/page-art/bom-evidences/josephemma-bodice-v3-960.webp\"])",
           "title": "The people beside the work"
         }
       ],
@@ -21156,6 +21311,28 @@
       ]
     },
     {
+      "title": "The Widow's Mite",
+      "category": "Art & Study",
+      "thumbnail": "/art/thumbs/Widows-Mite.webp",
+      "fullImage": "/art/Widows-Mite.jpg",
+      "alt": "Jesus stands beside an older woman placing a coin into a stone offering box as people gather around.",
+      "id": "art-70fdd26272cb",
+      "occurrences": [
+        {
+          "id": "source-080e7ece2811",
+          "page": "/art.html",
+          "pageTitle": "Inspirational Art",
+          "category": "Art & Study",
+          "kind": "legacy",
+          "selector": ".gallery-item:has(img[src=\"art/thumbs/Widows-Mite.webp\"])",
+          "title": "The Widow's Mite"
+        }
+      ],
+      "categories": [
+        "Art & Study"
+      ]
+    },
+    {
       "title": "The widow’s two coins",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/widows-offering-960.webp",
@@ -21197,6 +21374,28 @@
       ],
       "categories": [
         "Gospel Studies"
+      ]
+    },
+    {
+      "title": "The work of a welcoming home",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/emma-life/emma-h5-review-960.webp",
+      "fullImage": "/assets/page-art/emma-life/emma-h5-review-1536.webp",
+      "alt": "Older Emma arranges household linen beside a table.",
+      "id": "art-65deee2c9fac",
+      "occurrences": [
+        {
+          "id": "source-0e38e7957d67",
+          "page": "/history/emma-hale-smith.html",
+          "pageTitle": "Emma Hale Smith: a life of faith, work, and care",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/emma-life/emma-h5-review-1536.webp\"]:has(img[src=\"/assets/page-art/emma-life/emma-h5-review-960.webp\"])",
+          "title": "The work of a welcoming home"
+        }
+      ],
+      "categories": [
+        "Church History"
       ]
     },
     {
@@ -21444,7 +21643,7 @@
     },
     {
       "title": "Three horses for the camp",
-      "category": "Gospel Studies",
+      "category": "Church History",
       "thumbnail": "/assets/page-art/history-stories/miller-zions-camp-horses-960.webp",
       "fullImage": "/assets/page-art/history-stories/miller-zions-camp-horses-full.webp",
       "alt": "Eleazer Miller leads a brown horse toward a camp, with two more horses behind him.",
@@ -21454,14 +21653,14 @@
           "id": "source-f5785434b52b",
           "page": "/history/eleazer-miller.html",
           "pageTitle": "Eleazer Miller: a simple witness and a continuing life",
-          "category": "Gospel Studies",
+          "category": "Church History",
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/history-stories/miller-zions-camp-horses-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/miller-zions-camp-horses-960.webp\"])",
           "title": "Three horses for the camp"
         }
       ],
       "categories": [
-        "Gospel Studies"
+        "Church History"
       ]
     },
     {
@@ -22087,23 +22286,45 @@
     {
       "title": "Walk together and listen",
       "category": "Gospel Studies",
-      "thumbnail": "/assets/page-art/bom-evidences/joseph-emma-walk-960.webp",
-      "fullImage": "/assets/page-art/bom-evidences/joseph-emma-walk.webp",
+      "thumbnail": "/assets/page-art/bom-evidences/joseph-emma-walk-body-v2-960.webp",
+      "fullImage": "/assets/page-art/bom-evidences/joseph-emma-walk-body-v2.webp",
       "alt": "Joseph and Emma share a warm glance as they walk along a quiet path.",
-      "id": "art-6c98467750b1",
+      "id": "art-d2d41e92a628",
       "occurrences": [
         {
-          "id": "source-b8fb45227bb3",
+          "id": "source-5a24b826f3f4",
           "page": "/book-of-mormon-evidences.html",
           "pageTitle": "Book of Mormon Evidences",
           "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"assets/page-art/bom-evidences/joseph-emma-walk.webp\"]:has(img[src=\"assets/page-art/bom-evidences/joseph-emma-walk-960.webp\"])",
+          "selector": "a[href=\"assets/page-art/bom-evidences/joseph-emma-walk-body-v2.webp\"]:has(img[src=\"assets/page-art/bom-evidences/joseph-emma-walk-body-v2-960.webp\"])",
           "title": "Walk together and listen"
         }
       ],
       "categories": [
         "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Walking with the Apostles",
+      "category": "Art & Study",
+      "thumbnail": "/art/thumbs/Jesus-with-apostles-sunflowers.webp",
+      "fullImage": "/art/Jesus-with-apostles-sunflowers.png",
+      "alt": "Jesus walks with a group of smiling men along a path through sunflowers at sunset.",
+      "id": "art-fe7365e8c0b8",
+      "occurrences": [
+        {
+          "id": "source-f483c727a0fe",
+          "page": "/art.html",
+          "pageTitle": "Inspirational Art",
+          "category": "Art & Study",
+          "kind": "legacy",
+          "selector": ".gallery-item:has(img[src=\"art/thumbs/Jesus-with-apostles-sunflowers.webp\"])",
+          "title": "Walking with the Apostles"
+        }
+      ],
+      "categories": [
+        "Art & Study"
       ]
     },
     {
@@ -22306,7 +22527,7 @@
     },
     {
       "title": "What Brigham remembered hearing",
-      "category": "Gospel Studies",
+      "category": "Church History",
       "thumbnail": "/assets/page-art/history-stories/miller-simple-witness-960.webp",
       "fullImage": "/assets/page-art/history-stories/miller-simple-witness-full.webp",
       "alt": "Eleazer Miller speaks to Brigham Young across a table as other listeners sit nearby.",
@@ -22316,14 +22537,14 @@
           "id": "source-b40e3861ca6b",
           "page": "/history/eleazer-miller.html",
           "pageTitle": "Eleazer Miller: a simple witness and a continuing life",
-          "category": "Gospel Studies",
+          "category": "Church History",
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/history-stories/miller-simple-witness-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/miller-simple-witness-960.webp\"])",
           "title": "What Brigham remembered hearing"
         }
       ],
       "categories": [
-        "Gospel Studies"
+        "Church History"
       ]
     },
     {
@@ -22352,7 +22573,7 @@
     },
     {
       "title": "What remained after the fire",
-      "category": "Gospel Studies",
+      "category": "Church History",
       "thumbnail": "/assets/page-art/history-stories/tanner-after-fire-1847-960.webp",
       "fullImage": "/assets/page-art/history-stories/tanner-after-fire-1847-full.webp",
       "alt": "John Tanner sits beside saved bedding with charred buildings and a wagon behind him.",
@@ -22362,14 +22583,14 @@
           "id": "source-4539af44adee",
           "page": "/history/john-tanner.html",
           "pageTitle": "John Tanner: receiving, giving, and remembering",
-          "category": "Gospel Studies",
+          "category": "Church History",
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/history-stories/tanner-after-fire-1847-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/tanner-after-fire-1847-960.webp\"])",
           "title": "What remained after the fire"
         }
       ],
       "categories": [
-        "Gospel Studies"
+        "Church History"
       ]
     },
     {
@@ -22464,7 +22685,7 @@
     },
     {
       "title": "When the gathering outgrew the house",
-      "category": "Gospel Studies",
+      "category": "Church History",
       "thumbnail": "/assets/page-art/history-stories/miller-canada-grove-960.webp",
       "fullImage": "/assets/page-art/history-stories/miller-canada-grove-full.webp",
       "alt": "Eleazer Miller holds an open book and gestures while adults and children listen in a leafy grove.",
@@ -22474,14 +22695,14 @@
           "id": "source-6a71e61ecaf5",
           "page": "/history/eleazer-miller.html",
           "pageTitle": "Eleazer Miller: a simple witness and a continuing life",
-          "category": "Gospel Studies",
+          "category": "Church History",
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/history-stories/miller-canada-grove-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/miller-canada-grove-960.webp\"])",
           "title": "When the gathering outgrew the house"
         }
       ],
       "categories": [
-        "Gospel Studies"
+        "Church History"
       ]
     },
     {
@@ -22572,28 +22793,6 @@
       ],
       "categories": [
         "Gospel Studies"
-      ]
-    },
-    {
-      "title": "Widows Mite",
-      "category": "Art & Study",
-      "thumbnail": "/art/thumbs/Widows-Mite.webp",
-      "fullImage": "/art/Widows-Mite.jpg",
-      "alt": "Jesus stands beside an older woman placing a coin into a stone offering box as people gather around.",
-      "id": "art-70fdd26272cb",
-      "occurrences": [
-        {
-          "id": "source-080e7ece2811",
-          "page": "/art.html",
-          "pageTitle": "Inspirational Art",
-          "category": "Art & Study",
-          "kind": "legacy",
-          "selector": ".gallery-item:has(img[src=\"art/thumbs/Widows-Mite.webp\"])",
-          "title": "Widows Mite"
-        }
-      ],
-      "categories": [
-        "Art & Study"
       ]
     },
     {
@@ -22704,6 +22903,28 @@
       ],
       "categories": [
         "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Words for a community to sing",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/emma-life/emma-h2-review-960.webp",
+      "fullImage": "/assets/page-art/emma-life/emma-h2-review-1536.webp",
+      "alt": "Emma considers hymn pages at a table.",
+      "id": "art-15898d972558",
+      "occurrences": [
+        {
+          "id": "source-4c4bbf202539",
+          "page": "/history/emma-hale-smith.html",
+          "pageTitle": "Emma Hale Smith: a life of faith, work, and care",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/emma-life/emma-h2-review-1536.webp\"]:has(img[src=\"/assets/page-art/emma-life/emma-h2-review-960.webp\"])",
+          "title": "Words for a community to sing"
+        }
+      ],
+      "categories": [
+        "Church History"
       ]
     },
     {
@@ -22906,14 +23127,14 @@
     }
   ],
   "stats": {
-    "artworks": 1031,
-    "occurrences": 1038,
+    "artworks": 1041,
+    "occurrences": 1048,
     "byKind": {
       "artwork": 63,
       "hero": 45,
       "legacy": 39,
       "missionary": 13,
-      "topic": 931
+      "topic": 941
     }
   }
 }

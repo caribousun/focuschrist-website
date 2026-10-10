@@ -58,8 +58,10 @@ const root = path.resolve(__dirname, '..');
     }
     mobileRows=await require('./mobile_study_rows_browser_qa')(page,`http://127.0.0.1:${server.address().port}`);
     const reading=await require('./study_reading_balance_browser_qa')(page,`http://127.0.0.1:${server.address().port}`);
+    const history=await require('./history_body_spacing_browser_qa')(page,`http://127.0.0.1:${server.address().port}`);
     fs.mkdirSync(path.join(root,'.qa-artifacts'),{recursive:true});
     fs.writeFileSync(path.join(root,'.qa-artifacts/study-reading-balance.json'),JSON.stringify(reading,null,2));
+    fs.writeFileSync(path.join(root,'.qa-artifacts/history-body-spacing.json'),JSON.stringify(history,null,2));
   } finally {await browser.close();await new Promise(r=>server.close(r));}
   fs.mkdirSync(path.join(root,'.qa-artifacts'),{recursive:true});
   fs.writeFileSync(path.join(root,'.qa-artifacts/study-alignment.json'),JSON.stringify(results,null,2));

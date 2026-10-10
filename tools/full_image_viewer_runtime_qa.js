@@ -186,7 +186,7 @@ assert(versionSelect.value === phone && image.src === phone, 'Opening must selec
 versionSelect.value = wide;
 versionSelect.listeners.change();
 assert(image.src === wide && download.href === wide, 'Switching version must update image and download together');
-assert(download.attributes.download === 'example-wide.webp', 'Download filename must match selected version');
+assert(download.attributes.download === 'Sacred artwork of Jesus Christ.webp', 'Download uses displayed title and selected version extension');
 assert(image.alt === trigger.dataset.fullImageAlt && dialog.open, 'Switching must preserve alt and open viewer');
 versionSelect.value = 'javascript:alert(1)';
 versionSelect.listeners.change();
@@ -207,6 +207,17 @@ trigger.dataset.fullImageVersions = JSON.stringify([{label:'Phone version',src:p
 open();
 assert(versionSelect.children.length === 2, 'Duplicate and external options must be discarded');
 dialog.close();
+trigger.dataset.fullImageTitle = 'A Moment of Peace';
+const png = 'https://focuschrist.com/assets/example.png';
+trigger.dataset.fullImageVersions = JSON.stringify([{label:'WebP version',src:phone},{label:'PNG version',src:png}]);
+open();
+assert(download.attributes.download === 'A Moment of Peace.webp', 'Explicit displayed title takes priority over alternative text');
+versionSelect.value = png;
+versionSelect.listeners.change();
+assert(image.src === png && download.href === png, 'Extension switch preserves exact selected source and download URL');
+assert(download.attributes.download === 'A Moment of Peace.png', 'Version switch preserves displayed title with actual PNG extension');
+dialog.close();
+delete trigger.dataset.fullImageTitle;
 trigger.href = 'https://example.com/art.webp';
 open();
 assert(download.hidden && versionLabel.hidden, 'External fallback must not offer a local download or options');

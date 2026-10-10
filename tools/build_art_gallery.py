@@ -62,6 +62,8 @@ def stable(prefix, value):
 
 
 def category(page):
+    if page.startswith('/history/'):
+        return 'Church History'
     if page.startswith('/answers/'):
         return 'Gospel Studies'
     if page.startswith('/art-study/') or page == '/art.html':

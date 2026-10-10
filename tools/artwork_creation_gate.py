@@ -373,8 +373,30 @@ def run(root, mode='release', scene=None, page_overrides=None):
     native = validate_native_conference(root, rejected)
     require(not (native & covered) and native <= added, 'Native source coverage must be new and separate from generated artwork')
     covered |= native
+    # Exact historical/correction lineage is distinct from current precreation.
+    # Filled only after actual independent/root review of the complete ledger.
+    from artwork_historical_delivery import validate as validate_historical_delivery
+    approved_historical_binding = '65b50f0ea7fde8444f7ac6191b9d9267fc1c867060cc8c83502e0a357ab6b895'
+    historical_record = json.loads((root / 'docs/artwork-historical-delivery-reviews.json').read_text(encoding='utf-8'))
+    historical, historical_hashes, historical_pixels = validate_historical_delivery(
+        root, historical_record, approved_historical_binding, added, covered, rejected, pixel_hash)
+    require(not (historical_hashes & originals) and not (historical_pixels & original_pixels), 'Historical family duplicates a new creation')
+    covered |= historical
+    originals |= historical_hashes
+    original_pixels |= historical_pixels
+    # Local corrections preserve frozen originals and historical coverage.
+    # Pending until the complete separate packet receives exact review.
+    from artwork_reviewed_corrections import validate as validate_reviewed_corrections
+    approved_corrections_binding = '6f9510c88845fbef288289a33beab1a841f414ea65ab1212577c02e284d27a75'
+    correction_record = json.loads((root / 'docs/artwork-correction-reviews.json').read_text(encoding='utf-8'))
+    corrections, correction_hashes, correction_pixels = validate_reviewed_corrections(
+        root, correction_record, approved_corrections_binding, added, covered, rejected, pixel_hash, inventory)
+    require(not (correction_hashes & originals) and not (correction_pixels & original_pixels), 'Correction family duplicates another creation')
+    covered |= corrections
+    originals |= correction_hashes
+    original_pixels |= correction_pixels
     require(added == covered, 'New artwork missing exact review coverage: ' + ', '.join(sorted(added - covered)))
-    if creations:
+    if creations or historical or corrections:
         for name in inventory:
             path = root / name
             if path.suffix.lower() in RASTERS:

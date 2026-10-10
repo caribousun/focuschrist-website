@@ -24,11 +24,11 @@
       ],
       "editorial_source_note": "Primary retrospective history, now canonized; do not imply contemporaneous wedding photograph or recovered room.",
       "image": {
-        "src": "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-wardrobe-v2.png",
+        "src": "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-torso-v3.png",
         "width": 1536,
         "height": 1024,
         "alt": "Young Joseph and Emma pose together with joined hands in brown winter clothing",
-        "sha256": "61b714143419b5f0f4db7ca7cb3ace09fa36c3cca1299c21112c7eab92afddfa",
+        "sha256": "32f3c958dfcfb1155d864dd73b65acbaf8e780087a544a516b24cad8551d79b8",
         "original_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-680a5611-29a4-4c93-97c0-4e92a10d58c5.png"
       },
       "image_status": "accepted",
@@ -37,7 +37,7 @@
     {
       "id": "household-gift-harmony-1828",
       "heading": "A small gift amid demanding work",
-      "date_label": "Harmony · autumn 1828",
+      "date_label": "Harmony · December 4, 1828",
       "paragraphs": [
         "Joseph earned three dollars for four days of work and spent twenty-five cents on a comb for Emma. A modest purchase brings their household concerns into view."
       ],
@@ -55,12 +55,13 @@
       ],
       "editorial_source_note": "Official synthesis draws on David Hale’s ledger study. Do not claim the pictured handoff or threshold appears in the ledger.",
       "image": {
-        "src": "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-wardrobe-v2.png",
+        "src": "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-body-season-v3.png",
         "width": 1536,
         "height": 1024,
         "alt": "Joseph offers a small comb to Emma, who looks toward the gift, both wearing earthy period clothing",
-        "sha256": "cf1b964c75b6a49536968eaf9a8d19186ce846262e0b9adcc86d053644ca9db6",
-        "original_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-fc587147-0ce5-4961-9397-2ae1406344aa.png"
+        "sha256": "aba5349ff196ed82a4c3b04d3b56798729b4d189e20191d64d5771385d5eeae5",
+        "correction_record": "docs/artwork-correction-reviews.json",
+        "correction_binding": "6f9510c88845fbef288289a33beab1a841f414ea65ab1212577c02e284d27a75"
       },
       "image_status": "accepted",
       "retained_previous_images": [
@@ -72,6 +73,14 @@
           "original_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-f04e4bda-18a6-4fc2-8ee5-f365ae21ba52.png",
           "archived_from_public_asset": "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828.png",
           "retained_archive_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\focus-joseph-curated-continuation\\work\\newton\\retired-public-candidates\\household-gift-harmony-1828.png"
+        },
+        {
+          "src": "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-wardrobe-v2.png",
+          "width": 1536,
+          "height": 1024,
+          "alt": "Joseph offers a small comb to Emma, who looks toward the gift, both wearing earthy period clothing",
+          "sha256": "cf1b964c75b6a49536968eaf9a8d19186ce846262e0b9adcc86d053644ca9db6",
+          "original_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-fc587147-0ce5-4961-9397-2ae1406344aa.png"
         }
       ],
       "visitor_caption": "A small gift makes Joseph’s care for Emma tangible amid the demands of earning a living."
@@ -98,15 +107,26 @@
       ],
       "editorial_source_note": "Both institutional histories discuss early scribal service; this is not proof of an exact illustrated session.",
       "image": {
-        "src": "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-wardrobe-v2.png",
+        "src": "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-upper-bodice-v3.png",
         "width": 1536,
         "height": 1024,
         "alt": "Emma in a printed cotton dress writes with a quill while Joseph sits nearby",
-        "sha256": "bb026ec8537b0a5f0b20e5f98db41c91336345356a0a3c11cd08b9d96e234972",
-        "original_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-6796b0b9-aa49-4dfc-94e4-dc718ed6f150.png"
+        "sha256": "7c55a45fe2cd5c409f96961074f4ed0c2f714678b976fd086fed5bfa134dc770",
+        "correction_record": "docs/artwork-correction-reviews.json",
+        "correction_binding": "6f9510c88845fbef288289a33beab1a841f414ea65ab1212577c02e284d27a75"
       },
       "image_status": "accepted",
-      "visitor_caption": "Emma’s attentive writing brings her early contribution to the Book of Mormon translation into view. She was expecting their first child."
+      "visitor_caption": "Emma’s attentive writing brings her early contribution to the Book of Mormon translation into view. She was expecting their first child.",
+      "retained_previous_images": [
+        {
+          "src": "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-wardrobe-v2.png",
+          "width": 1536,
+          "height": 1024,
+          "alt": "Emma in a printed cotton dress writes with a quill while Joseph sits nearby",
+          "sha256": "bb026ec8537b0a5f0b20e5f98db41c91336345356a0a3c11cd08b9d96e234972",
+          "original_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-6796b0b9-aa49-4dfc-94e4-dc718ed6f150.png"
+        }
+      ]
     },
     {
       "id": "hyrum-reading-before-carthage-1844",
@@ -157,12 +177,12 @@
       ],
       "editorial_source_note": "Use the later portion of that meeting, after gentlemen withdrew. Do not caption as the earlier extraordinary remark or imply Joseph listening in frame. Surviving minute book likely fair copy.",
       "image": {
-        "src": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-wardrobe-v2.png",
+        "src": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3.png",
         "width": 1536,
         "height": 1024,
         "alt": "Emma in a deep green day dress speaks earnestly to seated women",
-        "sha256": "72d6f3eb51f8d27570079ad43266f6058f1ca34c008295c201336f5ea810b7da",
-        "original_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-a7269c71-781f-49e8-a47f-1838aeed53c0.png"
+        "sha256": "7821956b89847e1a4499d40a875fda1a3b6b035d8d1322cc00107f8a6a46b8af",
+        "original_source": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-wardrobe-v2.png"
       },
       "image_status": "accepted",
       "retained_previous_images": [
@@ -174,6 +194,13 @@
           "original_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-c9357e49-fbbb-4f39-a626-e63209cd31e1.png",
           "archived_from_public_asset": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842.png",
           "retained_archive_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\focus-joseph-curated-continuation\\work\\newton\\retired-public-candidates\\emma-relief-service-1842.png"
+        },
+        {
+          "src": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-wardrobe-v2.png",
+          "width": 1536,
+          "height": 1024,
+          "alt": "Emma in a deep green day dress speaks earnestly to seated women",
+          "sha256": "72d6f3eb51f8d27570079ad43266f6058f1ca34c008295c201336f5ea810b7da"
         }
       ],
       "visitor_caption": "Emma turns concern for others into a call to act. She urged the women to seek out people in distress after the men withdrew."
@@ -195,15 +222,26 @@
       ],
       "editorial_source_note": "Official historical synthesis; no infant likeness, medical treatment or exact witnessed bedside gesture is asserted.",
       "image": {
-        "src": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-wardrobe-v2.png",
+        "src": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3.png",
         "width": 1536,
         "height": 1024,
         "alt": "Joseph in a brown waistcoat supports Emma’s hand as she rests in light recovery clothing; they look tenderly toward one another",
-        "sha256": "12a9638ec8dda79b872c17350af964e7994e57f82ac25afc77df282f5fc12068",
-        "original_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-cd002ab4-a863-47e5-8d8a-40e21414b434.png"
+        "sha256": "2b2e8e7ce28cb2d9c4d98d12e35c2ba7da1d1c510dd25df00adb49439320fa0f",
+        "correction_record": "docs/artwork-correction-reviews.json",
+        "correction_binding": "6f9510c88845fbef288289a33beab1a841f414ea65ab1212577c02e284d27a75"
       },
       "image_status": "accepted",
-      "visitor_caption": "Joseph’s presence beside Emma expresses the tenderness of care after their child’s death and her serious illness."
+      "visitor_caption": "Joseph’s presence beside Emma expresses the tenderness of care after their child’s death and her serious illness.",
+      "retained_previous_images": [
+        {
+          "src": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-wardrobe-v2.png",
+          "width": 1536,
+          "height": 1024,
+          "alt": "Joseph in a brown waistcoat supports Emma’s hand as she rests in light recovery clothing; they look tenderly toward one another",
+          "sha256": "12a9638ec8dda79b872c17350af964e7994e57f82ac25afc77df282f5fc12068",
+          "original_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-cd002ab4-a863-47e5-8d8a-40e21414b434.png"
+        }
+      ]
     },
     {
       "id": "emma-family-letter-1838",
@@ -231,12 +269,13 @@
       ],
       "editorial_source_note": "Original in Joseph handwriting survives. Correspondence screened by captors; do not transplant this letter to Liberty Jail or assert an exact recipient pose.",
       "image": {
-        "src": "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-wardrobe-v2.png",
+        "src": "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-bodice-v3.png",
         "width": 1536,
         "height": 1024,
         "alt": "Emma in a burgundy dress and shawl reads a folded family letter",
-        "sha256": "0440c07de9541b20fa23680d60932b742fc85665f651d7330ac511aaee299905",
-        "original_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-a3aeac1b-68a5-4950-ab27-f12eb5ec8267.png"
+        "sha256": "b2dfd1800e7ddb48d0f644fbd49c8e69ee6e50ab087e60b4c96822862500d9ce",
+        "correction_record": "docs/artwork-correction-reviews.json",
+        "correction_binding": "6f9510c88845fbef288289a33beab1a841f414ea65ab1212577c02e284d27a75"
       },
       "image_status": "accepted",
       "retained_previous_images": [
@@ -248,6 +287,14 @@
           "original_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-889af154-a84d-45cc-a86e-387c2f740e79.png",
           "archived_from_public_asset": "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838.png",
           "retained_archive_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-03\\focus-joseph-curated-continuation\\work\\newton\\retired-public-candidates\\emma-family-letter-1838.png"
+        },
+        {
+          "src": "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-wardrobe-v2.png",
+          "width": 1536,
+          "height": 1024,
+          "alt": "Emma in a burgundy dress and shawl reads a folded family letter",
+          "sha256": "0440c07de9541b20fa23680d60932b742fc85665f651d7330ac511aaee299905",
+          "original_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-a3aeac1b-68a5-4950-ab27-f12eb5ec8267.png"
         }
       ],
       "visitor_caption": "Joseph’s November 1838 letter carries affection and concern across the family’s separation."
@@ -305,16 +352,36 @@
       ],
       "editorial_source_note": "EarlyDecember precedes Joseph’s23December birthday. Alva assistance must not be erased by two-person image framing; synthesis cites multiple historical accounts.",
       "image": {
-        "src": "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-corrected-v2.png",
+        "src": "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-warm-companionship-v4.png",
         "width": 1536,
         "height": 1024,
-        "alt": "Joseph attends to driving the wagon while Emma looks along their direction of travel, wearing winter layers and a bonnet",
-        "sha256": "1f5870584dcc4c83e83ee40957a3863ae00a076c8ae52997ea5bbe42b5cd4433",
-        "original_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-30b9bd1e-2ead-40f5-8987-55bdd0cb7db0.png"
+        "alt": "Joseph attends to driving the wagon while Emma looks warmly toward him, wearing winter layers and a bonnet",
+        "sha256": "c949f8188c930e827375bbd6d741f28f0b8b229786a7215adf1290ed841f00d8",
+        "correction_record": "docs/artwork-correction-reviews.json",
+        "correction_binding": "6f9510c88845fbef288289a33beab1a841f414ea65ab1212577c02e284d27a75"
       },
       "image_status": "accepted",
       "rejected_predecessor_sha256": "5cb2de70e69784f681112dcbf01de4df9a29365ce90596d50e30cd8b18f313e2",
-      "visitor_caption": "Joseph and Emma travel toward their new home in Harmony and the work ahead of them."
+      "visitor_caption": "Joseph and Emma travel toward their new home in Harmony and the work ahead of them.",
+      "retained_previous_images": [
+        {
+          "src": "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-corrected-v2.png",
+          "width": 1536,
+          "height": 1024,
+          "alt": "Joseph attends to driving the wagon while Emma looks along their direction of travel, wearing winter layers and a bonnet",
+          "sha256": "1f5870584dcc4c83e83ee40957a3863ae00a076c8ae52997ea5bbe42b5cd4433",
+          "original_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-30b9bd1e-2ead-40f5-8987-55bdd0cb7db0.png"
+        },
+        {
+          "src": "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-bodice-v3.png",
+          "width": 1536,
+          "height": 1024,
+          "alt": "Joseph attends to driving the wagon while Emma looks along their direction of travel, wearing winter layers and a bonnet",
+          "sha256": "217383853ebbc541013e57cb73057c901770b3f8425ced50cd4f175b3151ec24",
+          "correction_record": "docs/artwork-correction-reviews.json",
+          "correction_binding": "d016ebb7e0d9e45440231ab6b428c26f239a828d643387ab99d6690d29b058f2"
+        }
+      ]
     },
     {
       "id": "emma-prayer-during-arrest-1830",
@@ -332,13 +399,15 @@
         }
       ],
       "editorial_source_note": "CHP introduction cites retrospective JS History1838–1856 volA-1. Trials/acquittals precede reunion; do not claim exact prison or a documented vision.",
+      "retained_previous_images": [{"src": "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830.png", "width": 1536, "height": 1024, "alt": "Emma kneels in prayer beside a chair, with another woman partly visible behind her", "sha256": "1140b40f93c00ce61ab60841b46b03b823485c84bd086818f9407200d7d6e68f", "original_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-ae3ec3c9-3025-4f60-8531-bff95f3b03fd.png"}],
       "image": {
-        "src": "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830.png",
+        "src": "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2.png",
         "width": 1536,
         "height": 1024,
         "alt": "Emma kneels in prayer beside a chair, with another woman partly visible behind her",
-        "sha256": "1140b40f93c00ce61ab60841b46b03b823485c84bd086818f9407200d7d6e68f",
-        "original_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a10377-c90c-7d21-a5d9-42d431bffa73\\exec-ae3ec3c9-3025-4f60-8531-bff95f3b03fd.png"
+        "sha256": "1bb9ab79c5d315f1eeb8bd3a4ee4dee4eda532832afa435c2c55b7bd9c2b19cd",
+        "correction_record": "docs/artwork-correction-reviews.json",
+        "correction_binding": "6f9510c88845fbef288289a33beab1a841f414ea65ab1212577c02e284d27a75"
       },
       "image_status": "accepted",
       "visitor_caption": "Emma joins another woman in prayer while Joseph is in custody."

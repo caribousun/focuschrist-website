@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "family": "SITE05",
+  "role": "delivery_pixels",
+  "source_sha256": "e4082e41520f37f672bc4beb3598879921f0fe03d29c28c343824dba524ac2e3",
+  "authority_kind": "reviewed_correction",
+  "reports": [
+    {
+      "report_title": "root-delivery.json",
+      "sha256": "6ee1c95ccd5a5ef9b6dc18cd74a2ca4487d0c464c341603c18a70745de21028e"
+    },
+    {
+      "report_title": "fermi-delivery.json",
+      "sha256": "e180359c9109a5de7af287ecd4dccb39f55017a0d26ab4bc08ae4b274d4d5389"
+    },
+    {
+      "report_title": "newton-delivery.json",
+      "sha256": "66e491fcd4a681f3c1c6403c6ab4b9bcc01a55fc2dd23f62641f9f1e9dc1f8d2"
+    }
+  ],
+  "scope": "Digest-bound transcription of actual preserved evidence within its original scope; no newly performed historical review.",
+  "limits": "No historical exception becomes precreation PASS. No current UI, remaining artwork, deployment or public acceptance is established."
+}

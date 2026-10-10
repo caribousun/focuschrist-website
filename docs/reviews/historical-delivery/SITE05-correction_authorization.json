@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "family": "SITE05",
+  "role": "correction_authorization",
+  "source_sha256": "e4082e41520f37f672bc4beb3598879921f0fe03d29c28c343824dba524ac2e3",
+  "authority_kind": "reviewed_correction",
+  "reports": [
+    {
+      "report_title": "ARTWORK-READBACK.md",
+      "sha256": "60cb3772ba681b85ef8647e65968d5df107af683986016cf14660ee525fb3b98"
+    },
+    {
+      "report_title": "STOP.md",
+      "sha256": "0d6a10e4edf2dbb5c092d51bec3e2daed60446f18b7d97cfe13b79e26dfec3fb"
+    },
+    {
+      "report_title": "EXACT-OWNER-EXCEPTIONS.json",
+      "sha256": "27763c6be19629d11dc346f03d7c0f0ddbb55e72de369fafd89982f6ea9ce64b"
+    }
+  ],
+  "scope": "Actual original prospective exact-script/support concurrence declarations plus direct owner local-compositing exception; execution audit alone is not authorization.",
+  "limits": "No historical exception becomes precreation PASS. No current UI, remaining artwork, deployment or public acceptance is established."
+}

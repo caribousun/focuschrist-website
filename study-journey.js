@@ -149,7 +149,7 @@
     }
 
     function loadArtStudyRouter() {
-        if (window.location.pathname.toLowerCase().endsWith('/art.html')) appendDynamicScript('art-study-router.js?v=20260830-3', 'data-focuschrist-art-study-router');
+        if (window.location.pathname.toLowerCase().endsWith('/art.html')) appendDynamicScript('art-study-router.js?v=20261009-picture-reflections-1', 'data-focuschrist-art-study-router');
     }
 
     function loadWatchStudyEnrichment() {

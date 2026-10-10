@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "site08-composite_preflight-1",
+  "family": "SITE08",
+  "stage": "composite_preflight",
+  "actual_actor": "/root/newton_current",
+  "verdict": "CONCUR",
+  "withdrawn": false,
+  "source_report_sha256": "1f0b988d2e80d375c2390671ded2381597c2b36e3e3ff862b0a0eb20a810ad2b",
+  "source_recorded_at": null,
+  "normalized_at": "2026-10-10T01:59:32.892647+00:00",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "a0104cf131ebfbcf1b6d515eada2af0674641d2d607c19f1a95b4144fc7bbe58",
+  "findings": "Named source record reviews the exact separately specified garment compositor/support and protected-pixel scope for this trial. Finished quality remains a separate observation.",
+  "pixels_inspected": false,
+  "limits": "Exact scoped private-source evidence normalization. No assembled-page/public release or invented canonical precreation event."
+}

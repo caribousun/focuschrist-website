@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "site07_expression-source_finished-1",
+  "family": "SITE07_EXPRESSION",
+  "stage": "source_finished",
+  "actual_actor": "/root/fermi_current",
+  "verdict": "CONCUR",
+  "withdrawn": false,
+  "source_report_sha256": "c1698a0281a2055825ba312e43f19be4974cd35c30640be8ddebd8d73bc47f7c",
+  "source_recorded_at": null,
+  "normalized_at": "2026-10-10T01:59:32.892647+00:00",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "c949f8188c930e827375bbd6d741f28f0b8b229786a7215adf1290ed841f00d8",
+  "findings": "Named reviewer actually inspected and concurred with the exact finished source as documented in the source report; derivative and assembled-page review remain separate.",
+  "pixels_inspected": true,
+  "limits": "Exact scoped private-source evidence normalization. No assembled-page/public release or invented canonical precreation event."
+}

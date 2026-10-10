@@ -6,8 +6,15 @@ ROUTE = 'joseph-smith-portrait-research.html'
 PDF_BROWSER_TOKEN_INVERSES = (
     (b'<link rel="stylesheet" href="site-system.css?v=20261005-mobile-study-rows-1">', b'<link rel="stylesheet" href="site-system.css?v=20260930-study-alignment-1">'),
     (b'<link rel="stylesheet" href="full-image-viewer.css?v=20261007-viewer-controls-1">', b'<link rel="stylesheet" href="full-image-viewer.css?v=20260905-viewport">'),
-    (b'<script src="topic-artwork-details.js?v=20261007-scoped-root-1" defer></script>', b'<script src="topic-artwork-details.js?v=20261004-joseph-journeys-1" defer></script>'),
+    (b'<script src="topic-artwork-details.js?v=20261009-settled-continue-2" defer></script>', b'<script src="topic-artwork-details.js?v=20261004-joseph-journeys-1" defer></script>'),
     (b'<script src="site-common.js?v=20261008-section-top-2" defer></script>', b'<script src="site-common.js?v=20261006-balanced-opening-1" defer></script>'),
+)
+
+PDF_CURRENT_BROWSER_SOURCE_SHA256 = '0126b33a1ca77902fc38aa478148261e975557a790c5cca535a8f7ca9c34b36f'
+PDF_CURRENT_BROWSER_TOKEN_INVERSES = (
+    (b'<link rel="stylesheet" href="connected-study.css?v=20261008-promotion-spacing-1">', b'<link rel="stylesheet" href="connected-study.css?v=20260927-anchor-alignment-1">'),
+    (b'<link rel="stylesheet" href="joseph-smith-likeness.css?v=20261009-mobile-shared-height-1">', b'<link rel="stylesheet" href="joseph-smith-likeness.css?v=20261004-joseph-heroes-1">'),
+    (b'<script src="full-image-viewer.js?v=20261009-titled-downloads-1" defer></script>', b'<script src="full-image-viewer.js?v=20260914-reopen-1" defer></script>'),
 )
 
 def check_pdf_source_binding(source, reviewed_hash):
@@ -15,6 +22,10 @@ def check_pdf_source_binding(source, reviewed_hash):
     if hashlib.sha256(source).hexdigest() == reviewed_hash:
         return
     inverse = source
+    if hashlib.sha256(source).hexdigest() == PDF_CURRENT_BROWSER_SOURCE_SHA256:
+        for current, reviewed in PDF_CURRENT_BROWSER_TOKEN_INVERSES:
+            assert inverse.count(current) == 1 and reviewed not in inverse
+            inverse = inverse.replace(current, reviewed, 1)
     for current, reviewed in PDF_BROWSER_TOKEN_INVERSES[1:]:
         assert inverse.count(current) == 1 and reviewed not in inverse, 'PDF source requires each exact single current browser dependency'
         inverse = inverse.replace(current, reviewed, 1)

@@ -329,37 +329,37 @@
     "default": "assets/research/joseph-originals/quincy-stubble-study-1536.webp",
     "processing": "Format/resolution delivery only; no crop, retouch, recoloring or generated content. Exact reviewed PNG remains full-size source."
   },
-  "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-wardrobe-v2.png": {
-    "source_sha256": "61b714143419b5f0f4db7ca7cb3ace09fa36c3cca1299c21112c7eab92afddfa",
+  "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-torso-v3.png": {
+    "source_sha256": "32f3c958dfcfb1155d864dd73b65acbaf8e780087a544a516b24cad8551d79b8",
     "width": 1536,
     "height": 1024,
     "variants": [
       {
-        "asset": "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-wardrobe-v2-640.webp",
+        "asset": "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-torso-v3-640.webp",
         "width": 640,
         "height": 427,
-        "sha256": "a6317641fd258c34a7e363f88183b334b05b523c93222b463401313cbec8ef3f",
-        "bytes": 45394,
+        "sha256": "e6e7d07382f50488acdcf71430758920bb5b6d306df092009881049e117bd0a5",
+        "bytes": 45388,
         "quality": 84
       },
       {
-        "asset": "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-wardrobe-v2-960.webp",
+        "asset": "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-torso-v3-960.webp",
         "width": 960,
         "height": 640,
-        "sha256": "2105db146b61d910f3b083074e0af0f5032b2c1a0b4d217df41aeb59a862664b",
-        "bytes": 89772,
+        "sha256": "606ec03aed197855c896ceb01ce531c57bb7cff5311c139d132aad12d98423d3",
+        "bytes": 89790,
         "quality": 84
       },
       {
-        "asset": "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-wardrobe-v2-1536.webp",
+        "asset": "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-torso-v3-1536.webp",
         "width": 1536,
         "height": 1024,
-        "sha256": "d89af507c6323f0e1133bda50a55a79850a8e51f7dc1cfe9b500849220aed41e",
-        "bytes": 112052,
+        "sha256": "d5342ec4b48be6c3fac7c1121b978c00317a7f42de1bb817852ab8d251588bd1",
+        "bytes": 111892,
         "quality": 76
       }
     ],
-    "default": "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-wardrobe-v2-1536.webp",
+    "default": "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-torso-v3-1536.webp",
     "processing": "Format/resolution delivery only; no crop, retouch, recoloring or generated content. Exact reviewed PNG remains full-size source."
   },
   "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-wardrobe-v2.png": {
@@ -461,38 +461,43 @@
     "default": "assets/page-art/joseph-smith-likeness/family/hyrum-reading-before-carthage-1844-1536.webp",
     "processing": "Format/resolution delivery only; no crop, retouch, recoloring or generated content. Exact reviewed PNG remains full-size source."
   },
-  "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-wardrobe-v2.png": {
-    "source_sha256": "72d6f3eb51f8d27570079ad43266f6058f1ca34c008295c201336f5ea810b7da",
+  "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3.png": {
+    "source_sha256": "7821956b89847e1a4499d40a875fda1a3b6b035d8d1322cc00107f8a6a46b8af",
     "width": 1536,
     "height": 1024,
     "variants": [
       {
-        "asset": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-wardrobe-v2-640.webp",
+        "asset": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3-640.webp",
         "width": 640,
         "height": 427,
-        "sha256": "2345660aa74784329157cd87ea686edeeb99b5cd40d8de6d96e9f33ee6e94fc9",
-        "bytes": 26118,
+        "sha256": "62837b0db720cb35fd0bafe88b374c09ae20e3801218b0194f889d239436dce9",
+        "bytes": 26144,
         "quality": 84
       },
       {
-        "asset": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-wardrobe-v2-960.webp",
+        "asset": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3-960.webp",
         "width": 960,
         "height": 640,
-        "sha256": "24e387beaf1c3cb794aaa28032e4d394f1c99052c0582b690aded54704c719ee",
-        "bytes": 46926,
+        "sha256": "a809d0cc42d2ae9f78c584147997e4c60102e62405afcb9a4086179322792ec9",
+        "bytes": 46864,
         "quality": 84
       },
       {
-        "asset": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-wardrobe-v2-1536.webp",
+        "asset": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3-1536.webp",
         "width": 1536,
         "height": 1024,
-        "sha256": "a40fa6ad5a82fc58f11b8070953d8efbf1159c5ca6ff4d4c9b44256bcd2deef0",
-        "bytes": 87284,
+        "sha256": "cc14d7a0e989f923bb68c6cd7519154b5a217966174354e51de02360bdc4d004",
+        "bytes": 87190,
         "quality": 84
       }
     ],
-    "default": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-wardrobe-v2-1536.webp",
-    "processing": "Format/resolution delivery only; no crop, retouch, recoloring or generated content. Exact reviewed PNG remains full-size source."
+    "default": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3-1536.webp",
+    "processing": "Format/resolution delivery only; no crop, retouch, recoloring or generated content. Exact reviewed PNG remains full-size source.",
+    "delivery_reviews": {
+      "Fermi": "docs/reviews/emma-torso-delivery-v3/fermi-delivery.json",
+      "Newton": "docs/reviews/emma-torso-delivery-v3/newton-delivery.json",
+      "Root": "docs/reviews/emma-torso-delivery-v3/root-delivery.json"
+    }
   },
   "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-wardrobe-v2.png": {
     "source_sha256": "12a9638ec8dda79b872c17350af964e7994e57f82ac25afc77df282f5fc12068",

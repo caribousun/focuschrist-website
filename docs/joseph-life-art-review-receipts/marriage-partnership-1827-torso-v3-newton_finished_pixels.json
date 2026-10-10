@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "id": "marriage-partnership-1827",
+  "reviewer": "Newton",
+  "phase": "finished",
+  "operation_kind": "original-only-local-torso-correction",
+  "prompt_sha256": "fa3f976c0936607782eafefd4fc48cfda084d8e10552046be17ebbd4ffbe0dbb",
+  "prompt_field_semantics": "Legacy field binds exact reviewed original-only right-side correction proposal, not historical generation prompt.",
+  "concur": true,
+  "source_receipt_sha256": "7d627f5928d3e7deae71352d474ced56a7a6adc95ca59e789198f61756cab6d5",
+  "source_report_title": "SITE06-RIGHT-FINISHED-REVIEW.md",
+  "review_scope": "Exact finished diagnostic full scene/face/torso inspection and protected-pixel comparison; no derivative/integration/release approval.",
+  "correction_provenance": {
+    "operation_kind": "original-only-local-torso-correction",
+    "operation_sha256": "fa3f976c0936607782eafefd4fc48cfda084d8e10552046be17ebbd4ffbe0dbb",
+    "original_source_asset": "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-wardrobe-v2.png",
+    "original_source_sha256": "61b714143419b5f0f4db7ca7cb3ace09fa36c3cca1299c21112c7eab92afddfa",
+    "code_sha256": "c08a0b7d727be1b801284a0c1c545e3fdd798c20a49f3bf0035240a68673840d",
+    "preparation_sha256": "038596843062fd614665255e6ef7eba6fc2105ce11a751201edcb0e7d5efacd6",
+    "mask_sha256": "c858d03c039ca2742d4529e136075ff7f48142153187bace6a019a7cd1ae8a6b",
+    "sampling_source": "Exact original image only; no identity or guidance pixels imported.",
+    "historical_reference_field_semantics": "Current row reference_sha256 retains prior wardrobe lineage; current correction uses original source and reviewed preparation, with separate identity/guidance review references.",
+    "review_reference_sha256": {
+      "emma_identity": "7d0a07cc673d244ccd54d478c53d1e68d248e39d9b1101f87dfe3681cbb839d1",
+      "joseph_identity": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+    },
+    "pixel_preservation_scope": "Original pixels outside reviewed torso/clothing support and x<=835 remain exact in the accepted PNG. WebP delivery is separately reviewed lossy encoding, not new correction or artwork.",
+    "appearance_guidance_sha256": "db6039f295862222ea2f24d70bf3d771a992c2d72ef5e6c42e36def606e45b85",
+    "appearance_guidance_scope": "H2 natural torso appearance guidance only; unapproved man never imported; not historical body measurements."
+  },
+  "historical_lineage": {
+    "original_generation_or_wardrobe_prompt_sha256": "589c2ebc3571733ea3d93dedf1cd1caa93847695e4db4bbd4b80f2a427b8eef4",
+    "historical_reference_sha256": [
+      "7f93288097809a0794cd490575ca9134f56cd719846cb8eb87f9ebb609394ed9"
+    ],
+    "historical_receipts": {
+      "fermi_preflight": {
+        "path": "docs/joseph-life-art-review-receipts/marriage-partnership-1827-fermi_preflight.json",
+        "sha256": "fad8eb96d698da2b17b61aa38a4ffd5be3e386205749cc650d54e7557d65b1ea"
+      },
+      "newton_preflight": {
+        "path": "docs/joseph-life-art-review-receipts/marriage-partnership-1827-newton_preflight.json",
+        "sha256": "25a11b2e874abeb31523439ca51b09c33e33710ee962cf1c620e1bf9b4275fa1"
+      },
+      "fermi_finished_pixels": {
+        "path": "docs/joseph-life-art-review-receipts/marriage-partnership-1827-fermi_finished_pixels.json",
+        "sha256": "dc4dfadab3ea6a392b2127ae0abd90dfc185dd0e852f4fb6c7234c9454f83787"
+      },
+      "newton_finished_pixels": {
+        "path": "docs/joseph-life-art-review-receipts/marriage-partnership-1827-newton_finished_pixels.json",
+        "sha256": "cb78fd8c9583e0b0d7521221434f2609b957c308636e8bde8a3a8a891384f2af"
+      }
+    },
+    "historical_source_urls": [
+      "https://www.churchofjesuschrist.org/study/scriptures/pgp/js-h/1?lang=eng&id=p57-p58#p57"
+    ],
+    "scope": "Preserved prior wardrobe/source lineage. Not the current correction prompt or sole current reference. No new historical source research asserted."
+  },
+  "normalization": "Transcription of actual existing independent report within its original scope; not a newly performed review, retroactive generation approval, release or owner aesthetic acceptance.",
+  "sha256": "32f3c958dfcfb1155d864dd73b65acbaf8e780087a544a516b24cad8551d79b8",
+  "whole_image_review": true,
+  "related_preflight_report_sha256": "2e830feaead707ddd8b98cac57a219895d3b455d19ff27f6c477788929ee2342"
+}

@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "id": "site07_expression-encoding_preflight-2",
+  "family": "SITE07_EXPRESSION",
+  "stage": "encoding_preflight",
+  "actual_actor": "/root",
+  "verdict": "CONCUR",
+  "withdrawn": false,
+  "source_report_sha256": "d189821e4e5d580093a7026d3868ab7d12a1b0bf22f5ce0ab93817786e283275",
+  "source_recorded_at": null,
+  "normalized_at": "2026-10-10T01:59:32.892647+00:00",
+  "evidence_class": "current_reconciliation_of_prospective_events",
+  "subject_sha256": "47c414a9cf140c556ab00370fe4b072af700b0b930551870ae05b4b636eb883b",
+  "findings": "Named source record reviews the exact lossless-source/responsive-delivery encoder specification and guards; later derivative quality is not inferred.",
+  "pixels_inspected": false,
+  "limits": "Exact scoped private-source evidence normalization. No assembled-page/public release or invented canonical precreation event.",
+  "original_event_timestamp": null,
+  "original_message_digest": null,
+  "canonical_full_spec_precreation_claim": false,
+  "reported_original_reviewers": [
+    "/root"
+  ]
+}

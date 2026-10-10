@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "id": "site11-composite_preflight-1",
+  "family": "SITE11",
+  "stage": "composite_preflight",
+  "actual_actor": "/root/newton_current",
+  "verdict": "CONCUR",
+  "withdrawn": false,
+  "source_report_sha256": "fa5797524fb2eabc6d890ce9d26a4c21bbec07e3ea4b7f88eb6bc54962cf42d0",
+  "source_recorded_at": null,
+  "normalized_at": "2026-10-10T02:22:55.916363+00:00",
+  "evidence_class": "current_reconciliation_of_prospective_events",
+  "subject_sha256": "162a06bb20006a16c49f64011eb8c807060b12bcffeea8f6f36bc324995bd10f",
+  "findings": "Exact identity-coordinate support and compositor concurred before execution; complete first/last button boxes and narrow garment corridor. Finished benefit and joins remain separate.",
+  "pixels_inspected": false,
+  "limits": "Stage-specific attributed source evidence. No canonical full-spec precreation claim, owner aesthetic acceptance, assembled-page or public-release claim.",
+  "original_event_timestamp": null,
+  "original_message_digest": null,
+  "canonical_full_spec_precreation_claim": false
+}

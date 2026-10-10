@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "id": "site09-encoding_result-15",
+  "family": "SITE09",
+  "stage": "encoding_result",
+  "actual_actor": "/root/fermi_current",
+  "verdict": "RECORDED",
+  "withdrawn": false,
+  "source_report_sha256": "580d957c61ef827d12402f21f481b22f6be21acc28fd8ab05b25d064beaa272e",
+  "source_recorded_at": null,
+  "normalized_at": "2026-10-10T00:56:28.886690+00:00",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "580d957c61ef827d12402f21f481b22f6be21acc28fd8ab05b25d064beaa272e",
+  "findings": "Actual once-only PNG exact copy and three WebP deliveries; no encoding repeated.",
+  "pixels_inspected": false,
+  "limits": "Exact local artifact evidence; no assembled UI, publication or owner aesthetic acceptance.",
+  "spec_sha256": "5f1e327f13660754cef5651b0297c94fbffcc5991cfda5116da9eebc5e03a2ab"
+}

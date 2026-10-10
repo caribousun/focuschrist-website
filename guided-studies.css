@@ -1,0 +1,53 @@
+.fc-guided-path + .fc-guided-path { margin-top: 0; }
+.fc-guided-path ol { padding-left: 1.5rem; }
+.fc-guided-path li + li { margin-top: 1.5rem; }
+.fc-guided-path li p { margin: .5rem 0 .75rem; }
+.fc-saved-list { padding-left: 1.5rem; }
+.fc-saved-list li { margin-block: 1rem; }
+.fc-saved-list li .fc-button { margin: .5rem 0 .5rem 1rem; }
+.fc-companion { margin-block: 1.5rem; }
+.fc-companion summary { cursor: pointer; padding-block: .75rem; }
+.fc-companion article { margin-block: 1rem; }
+.fc-companion small { overflow-wrap: anywhere; }
+.fc-companion-notes { min-height: 6rem; border-block: 1px solid currentColor; }
+.fc-companion footer { font-size: .8rem; margin-top: 2rem; }
+.fc-print-copy { display: none; }
+@media print {
+  @page { size: auto; margin: 16mm; }
+  body.fc-printing-companion > :not(.fc-print-copy),
+  body.fc-site.fc-printing-companion > [data-unified-opening][data-unified-opening][data-unified-opening] { display: none !important; }
+  body.fc-printing-companion { background: white !important; color: black !important; }
+  body.fc-printing-companion > .fc-print-copy { display: block !important; font: 11pt/1.4 Georgia, serif; color: black; background: white; }
+  .fc-print-copy h3 { font-size: 20pt; margin: 0 0 8mm; }
+  .fc-print-copy h4 { font-size: 12pt; }
+  .fc-print-copy li { break-inside: avoid; margin-block: 5mm; }
+  .fc-print-copy small { font-size: 8pt; overflow-wrap: anywhere; }
+  body.fc-site .fc-print-copy a { color: black !important; text-decoration: underline; }
+  .fc-print-copy footer { font-size: 8pt; margin-top: 8mm; }
+  .fc-print-copy .fc-companion-notes { height: 24mm; }
+}
+.fc-study-tools { box-sizing: border-box; max-width: var(--fc-standard, 1040px); width: calc(100% - 2 * var(--fc-body-gutter, 20px)); margin: var(--fc-section-space, 64px) auto; padding: 0; background: none; border: 0; box-shadow: none; }
+.fc-study-tools .fc-button { max-width: 100%; white-space: normal; }
+.fc-study-tools > h2 { font-family: var(--fc-font-display); font-weight: 400; }
+.fc-study-tools > p { max-width: 72ch; }
+.fc-guided-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 28px; }
+.fc-guided-path { min-width: 0; display: flex; flex-direction: column; padding: 24px; border: 1px solid var(--fc-line); border-radius: var(--fc-radius); background: rgba(255,255,255,.018); }
+.fc-guided-path h3 { margin: 0 0 12px; color: var(--fc-cream, #f3ead8); font-family: var(--fc-font-display); font-size: 1.4rem; font-weight: 400; }
+.fc-guided-path > p { margin: 0 0 16px; line-height: 1.6; }
+.fc-guided-path > p:last-child { margin-top: auto; margin-bottom: 0; padding-top: 12px; border-top: 1px solid var(--fc-line); }
+.fc-guided-path ol { padding-left: 1.2rem; margin: 8px 0 22px; }
+.fc-guided-path li { padding-left: .2rem; line-height: 1.5; }
+.fc-guided-path li + li { margin-top: 20px; }
+.fc-guided-path li > a { font-weight: 600; text-underline-offset: 3px; }
+.fc-guided-path li p { font-size: .94rem; line-height: 1.6; margin: 8px 0 4px; }
+body.fc-site .fc-study-tools [data-save-study], body.fc-site .fc-study-tools [data-clear-saved], body.fc-site .fc-study-tools .fc-saved-list button { min-height: 44px; padding: 6px 12px; border: 1px solid var(--fc-line); background: transparent; color: var(--fc-text, #f3ead8); box-shadow: none; font-size: .875rem; }
+body.fc-site .fc-study-tools [data-save-study]:hover, body.fc-site .fc-study-tools [data-clear-saved]:hover { background: rgba(255,255,255,.06); }
+body.fc-site .fc-study-tools button[data-save-study], body.fc-site .fc-study-tools button[data-clear-saved], body.fc-site .fc-study-tools .fc-saved-list button { color: var(--fc-gold-light, #efd399) !important; width: auto !important; min-height: 44px; }
+.fc-study-tools + .fc-study-tools { padding-top: 32px; border-top: 1px solid var(--fc-line); }
+.fc-study-tools .fc-companion { padding: 0; background: transparent; border: 0; border-bottom: 1px solid var(--fc-line); border-radius: 0; box-shadow: none; }
+.fc-study-tools .fc-companion summary { min-height: 44px; padding: 16px 0; }
+@media (max-width: 900px) { .fc-guided-grid { grid-template-columns: 1fr; } .fc-guided-path { padding: 22px; } }
+
+/* Each downloadable companion carries one disclosure; the screen uses the page footer. */
+.fc-companion article > footer { display: none; }
+@media print { .fc-print-copy > footer { display: block; } }

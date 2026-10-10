@@ -53,7 +53,12 @@ def reviewed_page_binding(page, route, expected):
     if expected != REVIEWED_PAGE_HASHES.get(route):
         return False
     inverse = raw
-    topic_current = b'topic-artwork-details.js?v=20261007-scoped-root-1'
+    viewer_current_js = b'full-image-viewer.js?v=20261009-titled-downloads-1'
+    viewer_previous_js = b'full-image-viewer.js?v=' + (b'20261006-versions-1' if route in VISIBLE_ART_ROUTES else b'20260914-reopen-1')
+    if inverse.count(viewer_current_js) != 1 or viewer_previous_js in inverse:
+        return False
+    inverse = inverse.replace(viewer_current_js, viewer_previous_js, 1)
+    topic_current = b'topic-artwork-details.js?v=20261009-settled-continue-2'
     if inverse.count(topic_current) != 1:
         return False
     inverse = inverse.replace(topic_current, b'topic-artwork-details.js?v=20261004-study-return-1', 1)
@@ -74,6 +79,7 @@ def reviewed_page_binding(page, route, expected):
     # Restore only enumerated URL tokens to the existing review's byte identity.
     # This preserves page inventory evidence, not an independent CSS acceptance.
     for current, previous in (
+        (b'connected-study.css?v=20261008-promotion-spacing-1', b'connected-study.css?v=20260927-anchor-alignment-1'),
         (CURRENT_COMMON_SCRIPT, OLD_COMMON_SCRIPT),
         (CONTAINED_ANSWER_STYLE, BUFFER_ANSWER_STYLE),
         (BUFFER_ANSWER_STYLE, CURRENT_ANSWER_STYLE),

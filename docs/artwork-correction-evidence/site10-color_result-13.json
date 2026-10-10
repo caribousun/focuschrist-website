@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "id": "site10-color_result-13",
+  "family": "SITE10",
+  "stage": "color_result",
+  "actual_actor": "/root/fermi_current",
+  "verdict": "RECORDED",
+  "withdrawn": false,
+  "source_report_sha256": "23bdb8917deeb567710d22ceb280b6c2ee9679631431d27d06a904013e614377",
+  "source_recorded_at": null,
+  "normalized_at": "2026-10-09T23:47:55.057363+00:00",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "aba5349ff196ed82a4c3b04d3b56798729b4d189e20191d64d5771385d5eeae5",
+  "findings": "One original-pixel color treatment:71634changed/zerooutside/zeroacceptedbody. No donor pixels, spatial transform or resampling.",
+  "pixels_inspected": false,
+  "limits": "Exact local correction evidence only; no assembled UI, publication or owner aesthetic acceptance.",
+  "script_sha256": "5a359724d9cf9ff776023728b869e90ba465f16d4c26b7d26812f4f0472ccd46",
+  "support_sha256": "8a25679de07f722a405c04e395702c57437b7aa9a6561ddb6fbb52f259cc6d10",
+  "protected_pixel_checks": {
+    "changed_pixels": 71634,
+    "outside_changed_pixels": 0,
+    "accepted_body_changed_pixels": 0
+  }
+}

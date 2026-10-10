@@ -77,7 +77,7 @@ for story in stories:
     assert ledger_entries[0]['published_text_sha256'] == content_hash(page), 'Historical wording changed after ledger review; renew the scoped review before release'
     soup = BeautifulSoup(page.read_text(encoding='utf-8'), 'html.parser')
     history_styles = [link.get('href', '') for link in soup.select('link[rel="stylesheet"]') if 'history-stories.css' in link.get('href', '')]
-    assert history_styles == ['../history-stories.css?v=20261006-history-intro-fit-1'], 'Exact reviewed history opening stylesheet binding required'
+    assert history_styles == ['../history-stories.css?v=20261009-directory-alignment-1'], 'Exact reviewed history opening stylesheet binding required'
     assert soup.select_one(f'link[rel="canonical"][href="https://focuschrist.com/history/{slug}.html"]')
     opening = soup.select_one('.fc-life-reading.fc-life-opening')
     body_start = soup.select_one('.fc-life-reading.fc-life-body-start')
@@ -198,7 +198,7 @@ assert '.fc-history-life-grid { display: grid; grid-template-columns: repeat(3, 
 assert '.fc-history-life-body p { margin: 0 0 24px; }' in hub_css
 assert '.fc-history-life-preview img { display: block; width: 100%; height: auto; }' in hub_css
 assert '@media (max-width: 959px) { .fc-history-life-grid { grid-template-columns: 1fr; } }' in hub_css
-assert hub.select_one('link[href="church-history.css?v=20260929-pictured-entries-1"]')
+assert hub.select_one('link[href="church-history.css?v=20261008-emma-entry-20260929-pictured-entries-1"]')
 
 assert '.fc-life-story main figure[id^="picture-"] { scroll-margin-top: calc(max(52px, 3.25rem) + 24px); }' in css
 

@@ -23,3 +23,11 @@ The desktop header previously distributed the navigation between an unequal-widt
 Run `node tools/header_centering_browser_qa.js` against the preview or production base documented in that script. It checks every sitemap page at desktop and phone widths, top and scrolled states, plus narrow desktop boundaries, while comparing hero geometry and font/color signatures against the prior header layout.
 
 The original deployment can be restored by reverting this scoped gallery/header release. No artwork files, original panel scripts/styles, AI provider settings, credentials, schedules, or unrelated work are changed.
+
+## Previously shared picture links
+
+Reviewed image replacements can change generated picture and source IDs. The gallery keeps a finite compatibility map for the retired Joseph-and-Emma marriage picture and Emma portrait IDs; the original-page bridge also resolves the retired marriage source ID. Each alias must resolve to an existing catalog entry on the correct owning page. Unknown IDs, missing targets and source IDs used on another page remain rejected.
+
+Gallery links normalize to the current picture ID. Embedded View in Original Study and Continue Lesson links use the current source ID while retaining unrelated query parameters and the destination fragment. The unchanged Emma portrait source continues to support both opening its study panel and returning to its position without reopening.
+
+Run `node tools/gallery_compatibility_runtime_qa.js` with the existing JSDOM dependency. Both CI workflows run this offline production-script regression after their JSDOM setup. It covers legacy/current links, unchanged portrait routing, missing targets, wrong pages, unknown/prototype-like IDs, canonical links and focus return. Native desktop/phone study, nested full-size, sharing and return checks remain separate release requirements.

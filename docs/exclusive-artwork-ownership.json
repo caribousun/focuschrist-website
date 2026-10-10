@@ -2722,6 +2722,456 @@
       "updatedPlacementManifests": [
         "topic-artwork-placement.json"
       ]
+    },
+    {
+      "title": "A night given to prayer",
+      "description": "Before choosing the Twelve, Jesus spent the night in prayer to God. The quiet of this scene invites a pause before the responsibilities ahead.",
+      "alt": "Jesus prays outdoors beneath the night sky.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/6?lang=eng&id=p12-p16#p12"
+      ],
+      "name": "emma-c1",
+      "page": "history/emma-hale-smith.html",
+      "slotId": "picture-emma-c1",
+      "source_path": "assets/page-art/emma-life/emma-c1-review.png",
+      "source_sha256": "830d21b1dcf8398cdddb62585eca4ec60f0f3f62b5244c9ad6a4f299669e9de3",
+      "source_decoded_rgb_sha256": "624d0f125cf62bf71de7645b55030e66ed5901af88422fd91296a5c636732f2b",
+      "assets": [
+        {
+          "path": "assets/page-art/emma-life/emma-c1-review.png",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "830d21b1dcf8398cdddb62585eca4ec60f0f3f62b5244c9ad6a4f299669e9de3",
+          "decoded_rgb_sha256": "624d0f125cf62bf71de7645b55030e66ed5901af88422fd91296a5c636732f2b"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-c1-review-640.webp",
+          "width": 640,
+          "height": 427,
+          "sha256": "d66385fccfc850c051beb8b925bc06675353f8a83f762f4c5f589378943796ca",
+          "decoded_rgb_sha256": "a5f1da1cce502ee1ee227748a1974b3ce7326e5e0f9b265e234a674685284b0b"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-c1-review-960.webp",
+          "width": 960,
+          "height": 640,
+          "sha256": "f91829d8e6bb7f275564a6e29fc52a6bddd5ecb189278df23cbd1de88b13ad69",
+          "decoded_rgb_sha256": "3ea937778da9130c60619361c553f0be71c8cb2086b5ca98e9869f87b960f573"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-c1-review-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "0568a1fcccfeb79f76c9c79f9c008af905c964728c31ac67de890245d8e600d3",
+          "decoded_rgb_sha256": "624d0f125cf62bf71de7645b55030e66ed5901af88422fd91296a5c636732f2b"
+        }
+      ],
+      "status": "approved"
+    },
+    {
+      "title": "Food beside the well",
+      "description": "The disciples urge Jesus to eat. He speaks with them about the work of His Father, while the ordinary care of bringing food remains close at hand.",
+      "alt": "Disciples offer food to Jesus beside a well.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/4?lang=eng&id=p31-p34#p31"
+      ],
+      "name": "emma-c2",
+      "page": "history/emma-hale-smith.html",
+      "slotId": "picture-emma-c2",
+      "source_path": "assets/page-art/emma-life/emma-c2-review.png",
+      "source_sha256": "b9f28325dff120adbdcc8a1ca9f0d1cfa5e89c2db43ac5a228fd1f17d1809f2e",
+      "source_decoded_rgb_sha256": "f0e5a58efa11baefa32102ce9c5a88a8c8c8c9cf1e5903196c997cbaaba383b3",
+      "assets": [
+        {
+          "path": "assets/page-art/emma-life/emma-c2-review.png",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "b9f28325dff120adbdcc8a1ca9f0d1cfa5e89c2db43ac5a228fd1f17d1809f2e",
+          "decoded_rgb_sha256": "f0e5a58efa11baefa32102ce9c5a88a8c8c8c9cf1e5903196c997cbaaba383b3"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-c2-review-640.webp",
+          "width": 640,
+          "height": 427,
+          "sha256": "f25a14501108511062332dbc95c88d1ea364cc5b9ee311e82e50a6fdd7732266",
+          "decoded_rgb_sha256": "cb24ee22b4718c0aba62d9e76664ae456e35304652f0bf4aec32bf8410d34594"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-c2-review-960.webp",
+          "width": 960,
+          "height": 640,
+          "sha256": "49d0b218268f0e2f73600333acc16d75b5ffb87aef8709640dbefe017bfa6ae7",
+          "decoded_rgb_sha256": "9eca11003c3d459057c8a42f5303fa055110594f52013c50ce0c5e9083c097cf"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-c2-review-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "f748b109f571920526c6828a42ba7356c1bcb44aaaab9b5e189c660d3937783d",
+          "decoded_rgb_sha256": "f0e5a58efa11baefa32102ce9c5a88a8c8c8c9cf1e5903196c997cbaaba383b3"
+        }
+      ],
+      "status": "approved"
+    },
+    {
+      "title": "A hymn before the road ahead",
+      "description": "Jesus and His disciples sing before leaving for the Mount of Olives. Their shared hymn belongs to an evening of teaching, remembrance and approaching sorrow.",
+      "alt": "Jesus and His disciples sing together.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng&id=p26-p30#p26"
+      ],
+      "name": "emma-c3",
+      "page": "history/emma-hale-smith.html",
+      "slotId": "picture-emma-c3",
+      "source_path": "assets/page-art/emma-life/emma-c3-review.png",
+      "source_sha256": "8c8514366f3c1a85c2acdbad2e3f3ce894eef3959c40cc8061e01f51944b9950",
+      "source_decoded_rgb_sha256": "f4423560cac58cd0e2870c38016796a3a46b2eea44361b74a784079564b35868",
+      "assets": [
+        {
+          "path": "assets/page-art/emma-life/emma-c3-review.png",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "8c8514366f3c1a85c2acdbad2e3f3ce894eef3959c40cc8061e01f51944b9950",
+          "decoded_rgb_sha256": "f4423560cac58cd0e2870c38016796a3a46b2eea44361b74a784079564b35868"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-c3-review-640.webp",
+          "width": 640,
+          "height": 427,
+          "sha256": "dc07fe08609196422782bcf64e3b2fa72b21819344a9aa22d592a5d46eda4699",
+          "decoded_rgb_sha256": "6f911429679d5487166a26a7ce21a5badc2f7e53cb72354e99d1f01682494490"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-c3-review-960.webp",
+          "width": 960,
+          "height": 640,
+          "sha256": "7ae9360f21bc7bdbccaf7986222512b8aa80cd95611cea51bbf39120a2939836",
+          "decoded_rgb_sha256": "efe32dba9e633ba09f994abd1be326b02be9e61c621c980da214c750bc494ef6"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-c3-review-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "3bede968c372a649c46e397c520ce82b6a38ba9ab01cf99290b904d1654d94df",
+          "decoded_rgb_sha256": "f4423560cac58cd0e2870c38016796a3a46b2eea44361b74a784079564b35868"
+        }
+      ],
+      "status": "approved"
+    },
+    {
+      "title": "Gather what remains",
+      "description": "Jesus meets the listener’s attention as the disciples gather the remaining bread. His instruction carries care beyond the meal: let nothing be lost.",
+      "alt": "Jesus speaks to a disciple as others gather remaining bread.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/6?lang=eng&id=p10-p13#p10"
+      ],
+      "name": "emma-c4",
+      "page": "history/emma-hale-smith.html",
+      "slotId": "picture-emma-c4",
+      "source_path": "assets/page-art/emma-life/emma-c4-review.png",
+      "source_sha256": "8c9e0230646e8f4fa0b635cd0b14848dc1f22a991649d8243148a1773a68b9a9",
+      "source_decoded_rgb_sha256": "bb6d2c195b6637d7d6241a7d6f83349276b8e05221be0ef673ac67c97646d263",
+      "assets": [
+        {
+          "path": "assets/page-art/emma-life/emma-c4-review.png",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "8c9e0230646e8f4fa0b635cd0b14848dc1f22a991649d8243148a1773a68b9a9",
+          "decoded_rgb_sha256": "bb6d2c195b6637d7d6241a7d6f83349276b8e05221be0ef673ac67c97646d263"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-c4-review-640.webp",
+          "width": 640,
+          "height": 427,
+          "sha256": "c74ba207ec643ffacc8a01eb51ffbf12637f09039cbc7fda684d6e5db52f6741",
+          "decoded_rgb_sha256": "9a7f741aa14181d0a28d92cc1115260c87f2051b11c045c84a7955457ab7820e"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-c4-review-960.webp",
+          "width": 960,
+          "height": 640,
+          "sha256": "1e5c08c5b4fdb1071b1460a4dac8621cca021aa089b1a5c1022bce54cadecbe0",
+          "decoded_rgb_sha256": "6828bbbbbe1c5d35eceab749e924f3928693b90d3cc264eda9427799304f2fab"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-c4-review-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "6acdf8b17dc9cbed8a780cc0894770f0f60e7022982cf7db67fb04bb6191bf93",
+          "decoded_rgb_sha256": "bb6d2c195b6637d7d6241a7d6f83349276b8e05221be0ef673ac67c97646d263"
+        }
+      ],
+      "status": "approved"
+    },
+    {
+      "title": "A place apart",
+      "description": "After hearing of John the Baptist’s death, Jesus withdraws by boat. The passage continues with His compassion for the people who follow Him.",
+      "alt": "Jesus departs by boat on the water.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/14?lang=eng&id=p12-p14#p12"
+      ],
+      "name": "emma-c5",
+      "page": "history/emma-hale-smith.html",
+      "slotId": "picture-emma-c5",
+      "source_path": "assets/page-art/emma-life/emma-c5-review.png",
+      "source_sha256": "af88645f3a18a51e398319b00a198ee0f437f57652716e00e5e222864f3bdf5e",
+      "source_decoded_rgb_sha256": "fea76dc4a3bc0093767b62988e7f2324f6b68981b5ce646be7c4ac341454f769",
+      "assets": [
+        {
+          "path": "assets/page-art/emma-life/emma-c5-review.png",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "af88645f3a18a51e398319b00a198ee0f437f57652716e00e5e222864f3bdf5e",
+          "decoded_rgb_sha256": "fea76dc4a3bc0093767b62988e7f2324f6b68981b5ce646be7c4ac341454f769"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-c5-review-640.webp",
+          "width": 640,
+          "height": 427,
+          "sha256": "0e43abea649096126f97dca2923a9bd927e53816eddf3d918b1198ed2f245df8",
+          "decoded_rgb_sha256": "412a6d066a0025534aa10720edde294c7ac8e3fc84a438371a98ceb32bbf255f"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-c5-review-960.webp",
+          "width": 960,
+          "height": 640,
+          "sha256": "a30ccdda3b076d0cef767384dfbbd4f679ade71b1f739ed81f8b029e6ea11c1a",
+          "decoded_rgb_sha256": "14638f39b3a343ff031348884b9feeacc50d456733033aa9fb3dce197fb6f1c8"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-c5-review-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "8e2484ae24f643c90e5d6eb65d207ff34ff4393c4bb11938f889d9b1a1cbc5fb",
+          "decoded_rgb_sha256": "fea76dc4a3bc0093767b62988e7f2324f6b68981b5ce646be7c4ac341454f769"
+        }
+      ],
+      "status": "approved"
+    },
+    {
+      "title": "A pen beside the manuscript",
+      "description": "Emma’s work as a scribe was part of the translation in Harmony. In the spring of 1828 she was twenty-three and expecting her first child.",
+      "alt": "Emma writes beside a manuscript in a sunlit room.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/manual/revelations-in-context/thou-art-an-elect-lady?lang=eng"
+      ],
+      "name": "emma-h1",
+      "page": "history/emma-hale-smith.html",
+      "slotId": "picture-emma-h1",
+      "source_path": "assets/page-art/emma-life/emma-h1-review.png",
+      "source_sha256": "c1c30bf8f7eeb631f89a78e62c123f774181cc0be807708fe35d1abd951887b7",
+      "source_decoded_rgb_sha256": "83ca854ad547ccd3a13c3a3212c0d83e31c8fef59932cadb54c2c71dfdc6ee0c",
+      "assets": [
+        {
+          "path": "assets/page-art/emma-life/emma-h1-review.png",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "c1c30bf8f7eeb631f89a78e62c123f774181cc0be807708fe35d1abd951887b7",
+          "decoded_rgb_sha256": "83ca854ad547ccd3a13c3a3212c0d83e31c8fef59932cadb54c2c71dfdc6ee0c"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-h1-review-640.webp",
+          "width": 640,
+          "height": 427,
+          "sha256": "212674195b1426187dc6dbc4f9d0dfe423a1d8a13cd6c8ef123ebebf56ce3d4a",
+          "decoded_rgb_sha256": "def5acf070a20b5eadb600928edc505e92485fb9478404402a2bf846cc060b38"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-h1-review-960.webp",
+          "width": 960,
+          "height": 640,
+          "sha256": "b3c88a65600499b2112f92fc7a56e53355b8dfbd8f750bf150a6577f2be4c9f4",
+          "decoded_rgb_sha256": "1a8623e64b9fad2d48c15ff4651607a97920783fa707113cecd9fcb85240e8f8"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-h1-review-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "d4eebd53b65366d53e5131fd5c9f4341bbd44a67a542c52a61f7c2fd4735137a",
+          "decoded_rgb_sha256": "83ca854ad547ccd3a13c3a3212c0d83e31c8fef59932cadb54c2c71dfdc6ee0c"
+        }
+      ],
+      "status": "approved"
+    },
+    {
+      "title": "Words for a community to sing",
+      "description": "Emma works with the words of hymns. The collection she selected gave the Saints songs for worship, gathering and daily faith.",
+      "alt": "Emma considers hymn pages at a table.",
+      "sources": [
+        "https://www.josephsmithpapers.org/paper-summary/collection-of-sacred-hymns-1835/1"
+      ],
+      "name": "emma-h2",
+      "page": "history/emma-hale-smith.html",
+      "slotId": "picture-emma-h2",
+      "source_path": "assets/page-art/emma-life/emma-h2-review.png",
+      "source_sha256": "809aa5b8a067d5858b328aff37b86ea545c268ed9d0b45f734ab340540802ae4",
+      "source_decoded_rgb_sha256": "eed5dee9c5d372a72149ee9f052073a641169b0e3308c8e36645fef814208ffa",
+      "assets": [
+        {
+          "path": "assets/page-art/emma-life/emma-h2-review.png",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "809aa5b8a067d5858b328aff37b86ea545c268ed9d0b45f734ab340540802ae4",
+          "decoded_rgb_sha256": "eed5dee9c5d372a72149ee9f052073a641169b0e3308c8e36645fef814208ffa"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-h2-review-640.webp",
+          "width": 640,
+          "height": 427,
+          "sha256": "07706297165c8f0810995da2a0a973e1af542513324ca708da5260d9c6351019",
+          "decoded_rgb_sha256": "edfdb15681aef67866f105eaf87bf1f698aeb7a8e46e0760265c23407f7b9ceb"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-h2-review-960.webp",
+          "width": 960,
+          "height": 640,
+          "sha256": "0fc4e970d604b76ed623151ebc98c9da4061e13080ca79c6fa14d9f8b0c04150",
+          "decoded_rgb_sha256": "1ee958a94cec1190075dbfac4d4dc9b35c3035a55aa375a137e44cae06850c20"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-h2-review-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "a6d9a261c6f4feef069c62ef9e62135388e5479dc2ca416ce2ca1a1a4866c67e",
+          "decoded_rgb_sha256": "eed5dee9c5d372a72149ee9f052073a641169b0e3308c8e36645fef814208ffa"
+        }
+      ],
+      "status": "approved"
+    },
+    {
+      "title": "A letter across the separation",
+      "description": "A letter carries news of children, kindness and separation. Emma’s March 7, 1839 letter reached toward Joseph while he was imprisoned.",
+      "alt": "Emma pauses beside a letter and writing materials.",
+      "sources": [
+        "https://www.josephsmithpapers.org/paper-summary/letter-from-emma-smith-7-march-1839/1"
+      ],
+      "name": "emma-h3",
+      "page": "history/emma-hale-smith.html",
+      "slotId": "picture-emma-h3",
+      "source_path": "assets/page-art/emma-life/emma-h3-review.png",
+      "source_sha256": "69108a86dfb3fedb18480e6924d178d2b542577a8790f407d8c40b1823d39560",
+      "source_decoded_rgb_sha256": "21b936711104e0ce97dda921188af2f3bbd397eb5a27e9216445d83131b0089b",
+      "assets": [
+        {
+          "path": "assets/page-art/emma-life/emma-h3-review.png",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "69108a86dfb3fedb18480e6924d178d2b542577a8790f407d8c40b1823d39560",
+          "decoded_rgb_sha256": "21b936711104e0ce97dda921188af2f3bbd397eb5a27e9216445d83131b0089b"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-h3-review-640.webp",
+          "width": 640,
+          "height": 427,
+          "sha256": "10b5d4b9a2b78dac4e9aa7b9ba8542a2a9e9b1245b966ba86492a54a93696976",
+          "decoded_rgb_sha256": "3ea6c427f3f68452e884fec8f0abad328ed593753990a02fedc5df6b76057ef5"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-h3-review-960.webp",
+          "width": 960,
+          "height": 640,
+          "sha256": "f8daa1c997d4db97953954583ed112503d0b9cbb1afcceb34351e89d36be4a5a",
+          "decoded_rgb_sha256": "28812b50c0eefa9f3f1a5764de6e2882f4e1ad2487e10e916583aa90db58f637"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-h3-review-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "d71fc2d2940b452239cb50803c1f0348b173c7764e7fef205cb144058408653e",
+          "decoded_rgb_sha256": "21b936711104e0ce97dda921188af2f3bbd397eb5a27e9216445d83131b0089b"
+        }
+      ],
+      "status": "approved"
+    },
+    {
+      "title": "Organizing care in Nauvoo",
+      "description": "Emma speaks with women gathered for relief. Their attention turns toward the practical work of finding those in distress and supporting women whose work sustained them.",
+      "alt": "Emma speaks with four women in an upstairs room.",
+      "sources": [
+        "https://www.churchhistorianspress.org/the-first-fifty-years-of-relief-society/part-1/1-2/1-2-1?lang=eng"
+      ],
+      "name": "emma-h4",
+      "page": "history/emma-hale-smith.html",
+      "slotId": "picture-emma-h4",
+      "source_path": "assets/page-art/emma-life/emma-h4-review.png",
+      "source_sha256": "24e0b13c84cabae92c972034f1fc775162b2800a93e4b14d876ca16c31a269ea",
+      "source_decoded_rgb_sha256": "b8d98ef2d0bbd0390f31824bd61760a6f2c1721952a04fb385c2be3d2ec9ab9b",
+      "assets": [
+        {
+          "path": "assets/page-art/emma-life/emma-h4-review.png",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "24e0b13c84cabae92c972034f1fc775162b2800a93e4b14d876ca16c31a269ea",
+          "decoded_rgb_sha256": "b8d98ef2d0bbd0390f31824bd61760a6f2c1721952a04fb385c2be3d2ec9ab9b"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-h4-review-640.webp",
+          "width": 640,
+          "height": 427,
+          "sha256": "18f26942633eed7fe8fa5d24917e3868229e17ae524d324b8de5dc0a038534e1",
+          "decoded_rgb_sha256": "219870df5ab9ce9687b9e60370c0fa2297f9ea9123ae05325a39b685466c6573"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-h4-review-960.webp",
+          "width": 960,
+          "height": 640,
+          "sha256": "620309036f886f59b1a67aa69aa8405e420c65326b3ef206ce90a71fb8a6a59a",
+          "decoded_rgb_sha256": "5ecd14ab78be3fcb12696151efa2559e5fb6a3b731c3ce0558c1d4c7b6485cef"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-h4-review-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "8763f2acd892418a6a1a02b3aa9b9df9fc776cf85b8f90a8e5de842b873c045d",
+          "decoded_rgb_sha256": "b8d98ef2d0bbd0390f31824bd61760a6f2c1721952a04fb385c2be3d2ec9ab9b"
+        }
+      ],
+      "status": "approved"
+    },
+    {
+      "title": "The work of a welcoming home",
+      "description": "Emma’s hands attend to the linen in her later home. At sixty-seven, the work of the Riverside Mansion boardinghouse belonged to a life that continued long after Joseph’s death.",
+      "alt": "Older Emma arranges household linen beside a table.",
+      "sources": [
+        "https://cofchrist.org/nauvoo-illinois-usa/"
+      ],
+      "name": "emma-h5",
+      "page": "history/emma-hale-smith.html",
+      "slotId": "picture-emma-h5",
+      "source_path": "assets/page-art/emma-life/emma-h5-review.png",
+      "source_sha256": "35231bc6e2032cc1f07cc2ffc9ad65c43851aa3c0f05feee9444d07e696a9f50",
+      "source_decoded_rgb_sha256": "66257466bf8763501e35901364e5e0019592e685d51ce7e4ec855756f7aa5bd4",
+      "assets": [
+        {
+          "path": "assets/page-art/emma-life/emma-h5-review.png",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "35231bc6e2032cc1f07cc2ffc9ad65c43851aa3c0f05feee9444d07e696a9f50",
+          "decoded_rgb_sha256": "66257466bf8763501e35901364e5e0019592e685d51ce7e4ec855756f7aa5bd4"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-h5-review-640.webp",
+          "width": 640,
+          "height": 427,
+          "sha256": "f02d49d7b4144e3421c53054d6e9351a3b16dca73990c3f01dc01cd38fa72bf7",
+          "decoded_rgb_sha256": "876587bdadd9e1822f00c0c167f1e11d90d2bbac90284e2d120b0f2642f5c729"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-h5-review-960.webp",
+          "width": 960,
+          "height": 640,
+          "sha256": "6e75ec1a00f1dd881e948edd2363634bd0fe2c3042b4e37e3884fab0866eacb6",
+          "decoded_rgb_sha256": "926b185798c3609c5bdc2e55d193b50a9ba49f882fee4db9cb0f4224c3dcff98"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-h5-review-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "f9ba529d989819e97a096223972ac03bf4e216dda8b7281ea94550caae88ec06",
+          "decoded_rgb_sha256": "66257466bf8763501e35901364e5e0019592e685d51ce7e4ec855756f7aa5bd4"
+        }
+      ],
+      "status": "approved"
     }
   ]
 }

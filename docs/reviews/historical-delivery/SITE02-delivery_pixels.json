@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "family": "SITE02",
+  "role": "delivery_pixels",
+  "source_sha256": "9bb03bbdc49f680f8c17e2552a57c7e583627dcce08f8ae0b857d2a7e5ce83ba",
+  "authority_kind": "owner_exception",
+  "reports": [
+    {
+      "report_title": "delivery-review.json",
+      "sha256": "5dccec0544d20f59f8e20b6320c8a3a5311f3df1d79766220aba4d892d0cd259"
+    }
+  ],
+  "scope": "Digest-bound transcription of actual preserved evidence within its original scope; no newly performed historical review.",
+  "limits": "No historical exception becomes precreation PASS. No current UI, remaining artwork, deployment or public acceptance is established.",
+  "exception_scope": "historical_precreation_evidence_only"
+}

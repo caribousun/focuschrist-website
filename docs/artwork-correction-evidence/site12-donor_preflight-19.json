@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "id": "site12-donor_preflight-19",
+  "family": "SITE12",
+  "stage": "donor_preflight",
+  "actual_actor": "/root",
+  "verdict": "CONCUR",
+  "withdrawn": false,
+  "source_report_sha256": "12315c13eec40bb27ec8ad46306adf0db0d60802fa2f0b3e512724db2e53e40d",
+  "source_recorded_at": null,
+  "normalized_at": "2026-10-10T00:56:28.886690+00:00",
+  "evidence_class": "current_reconciliation_of_prospective_events",
+  "subject_sha256": "69ba551026ed2a29b99945f4cdc04ac152ef7422082c45ce6eba85a094d54429",
+  "findings": "Current root reconciliation of continuing-chat reported prospective review for this exact saved donor specification; original approval message content, timestamp and digest unrecovered. Root now reread saved spec/prompt and finds scoped consistency. Not recovered original approval or retrospective authorization. Genuine timestamped Newton preflight remains separate.",
+  "pixels_inspected": false,
+  "limits": "Exact local artifact evidence; no assembled UI, publication or owner aesthetic acceptance.",
+  "reported_original_reviewers": [
+    "/root"
+  ],
+  "original_event_timestamp": null,
+  "original_message_digest": null,
+  "canonical_full_spec_precreation_claim": false
+}

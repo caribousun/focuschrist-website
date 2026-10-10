@@ -8,7 +8,32 @@ from joseph_research_acceptance import check_artwork_badges_and_footer
 ROOT=Path(__file__).resolve().parents[1]
 EXPECTED={'marriage-partnership-1827','household-gift-harmony-1828','emma-early-scribe-1828','hyrum-reading-before-carthage-1844','emma-relief-service-1842','care-after-loss-1828','emma-family-letter-1838','joseph-household-labor-1828','journey-to-harmony-1827','emma-prayer-during-arrest-1830'}
 def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+CORRECTION_SCENES={'household-gift-harmony-1828': 'SITE10', 'journey-to-harmony-1827': 'SITE07_EXPRESSION', 'care-after-loss-1828': 'SITE09', 'emma-family-letter-1838': 'SITE12', 'emma-early-scribe-1828': 'SITE08','emma-prayer-during-arrest-1830': 'SITE11'}
+CORRECTION_RECORDS={'SITE01','SITE07','SITE07_EXPRESSION','SITE08','SITE09','SITE10','SITE12','SITE11'}
+CURRENT_SCENES={'SITE01':'SITE01','SITE07':'SITE07_EXPRESSION','SITE08':'SITE08','SITE09':'SITE09','SITE10':'SITE10','SITE12':'SITE12','SITE11':'SITE11'}
+SITE10_BINDING='6f9510c88845fbef288289a33beab1a841f414ea65ab1212577c02e284d27a75'
+def current_corrections():
+ record=json.loads((ROOT/'docs/artwork-correction-reviews.json').read_text(encoding='utf-8'))
+ assert record['schema']==1 and record['status']=='REVIEWED_EXACT_EVIDENCE'
+ assert record['approved_binding']==SITE10_BINDING
+ canonical=json.dumps(record['spec'],sort_keys=True,separators=(',',':'),ensure_ascii=False).encode()
+ assert hashlib.sha256(canonical).hexdigest()==SITE10_BINDING,'Unreviewed correction specification'
+ families=record['spec']['families'];assert len(families)==8 and {f['id'] for f in families}==CORRECTION_RECORDS
+ assert record['spec']['current_scene_records']==CURRENT_SCENES
+ resolved={}
+ for family in families:
+  for item in family['immutable_originals']+family['evidence']+family['assets']:
+   assert digest(ROOT/item['path'])==item['sha256'],'Missing or changed exact correction source/evidence'
+  assets=family['assets'];assert len(assets)==4
+  for item in assets:
+   path=ROOT/item['path'];assert path.stat().st_size==item['bytes']
+   with Image.open(path) as image:assert image.size==tuple(item['dimensions']) and image.format==item['format']
+  source=assets[0];variants=[{'asset':a['path'],'width':a['dimensions'][0],'height':a['dimensions'][1],'sha256':a['sha256'],'bytes':a['bytes']} for a in assets[1:]]
+  resolved[family['id']]=source,{'source_sha256':source['sha256'],'width':source['dimensions'][0],'height':source['dimensions'][1],'variants':variants,'default':variants[-1]['asset']}
+ return resolved
+
 def check():
+ corrections=current_corrections()
  data=json.loads((ROOT/'docs/joseph-life-enrichment.json').read_text(encoding='utf-8-sig'))['scenes']
  records=json.loads((ROOT/'docs/joseph-life-art-review.json').read_text())['originals']
  assert {r['id'] for r in data}==EXPECTED|{'joseph-hyrum-bond'} and {r['id'] for r in records}==EXPECTED and len(data)==11 and len(records)==10,'Ten deliberate family scenes required'
@@ -39,8 +64,15 @@ def check():
    assert doc.select_one('#life-joseph-hyrum-bond a[href="'+prior['asset']+'"]'),'Moved brothers full-size action missing'
    continue
   r=next(x for x in records if x['id']==row['id']);im=row['image'];section=doc.select_one('#life-'+row['id']);assert section
-  assert row['image_status']=='accepted' and r['sha256']==im['sha256']==digest(ROOT/im['src'])
-  assert r['asset']==im['src'] and r['owning_page']=='answers/who-was-joseph-smith.html' and r['owning_section']==section['id']
+  assert row['image_status']=='accepted' and r['sha256']==digest(ROOT/r['asset'])
+  if row['id'] in CORRECTION_SCENES:
+   corrected,corrected_delivery=corrections[CORRECTION_SCENES[row['id']]]
+   assert im['src']==corrected['path'] and im['sha256']==corrected['sha256']==digest(ROOT/im['src'])
+   assert im['correction_binding']==SITE10_BINDING and im['correction_record']=='docs/artwork-correction-reviews.json'
+   if row['id']=='household-gift-harmony-1828':assert row['date_label']=='Harmony · December 4, 1828'
+   assert any(old.get('src')==r['asset'] and old['sha256']==r['sha256'] for old in row['retained_previous_images'])
+  else:assert r['asset']==im['src'] and r['sha256']==im['sha256']==digest(ROOT/im['src'])
+  assert r['owning_page']=='answers/who-was-joseph-smith.html' and r['owning_section']==section['id']
   figure=section.select_one('figure');assert figure and figure.get('data-exclusive-artwork')==section['id']
   title=section.select_one('h3');duplicate=figure.select_one('h4.joseph-life-caption-title')
   assert title and not title.has_attr('hidden') and title.get_text(strip=True)==row['heading'],'Visible scene title required'
@@ -79,10 +111,16 @@ def check():
    with Image.open(p) as image:assert image.format=='WEBP' and image.size==(v['width'],v['height'])
    assert abs(v['width']/v['height']-d['width']/d['height'])<0.005,'Delivery must preserve source proportions'
    hashes.append({'sha256':v['sha256'],'owning_page':owners[source]})
-  page=BeautifulSoup((ROOT/owners[source]).read_text(encoding='utf-8'),'html.parser');images=page.select('img[data-source-original="'+source+'"], img[data-source-original="../'+source+'"]');assert len(images)==1
-  img=images[0];assert img['src'].removeprefix('../')==d['default'] and img.get('loading')=='lazy' and img.get('decoding')=='async'
-  assert img.get('srcset','').replace('../','')==', '.join(v['asset']+' '+str(v['width'])+'w' for v in d['variants']) and img.get('sizes')
- sizes={ (ROOT/s).stat().st_size for s in delivery }|{v['bytes'] for d in delivery.values() for v in d['variants']};pages={};cache={}
+  display_source=source;display_delivery=d
+  source_corrections={'assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-wardrobe-v2.png': 'SITE10', 'assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-corrected-v2.png': 'SITE07_EXPRESSION', 'assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-wardrobe-v2.png': 'SITE09', 'assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-wardrobe-v2.png': 'SITE12', 'assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-wardrobe-v2.png': 'SITE08', 'assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830.png': 'SITE11'}
+  if source in source_corrections:
+   corrected,corrected_delivery=corrections[source_corrections[source]]
+   display_source=corrected['path'];display_delivery=corrected_delivery
+   hashes.extend([{'sha256':a['sha256'],'owning_page':owners[source]} for a in [corrected,*display_delivery['variants']]])
+  page=BeautifulSoup((ROOT/owners[source]).read_text(encoding='utf-8'),'html.parser');images=page.select('img[data-source-original="'+display_source+'"], img[data-source-original="../'+display_source+'"]');assert len(images)==1
+  img=images[0];assert img['src'].removeprefix('../')==display_delivery['default'] and img.get('loading')=='lazy' and img.get('decoding')=='async'
+  assert img.get('srcset','').replace('../','')==', '.join(v['asset']+' '+str(v['width'])+'w' for v in display_delivery['variants']) and img.get('sizes')
+ sizes={ (ROOT/s).stat().st_size for s in delivery }|{v['bytes'] for d in delivery.values() for v in d['variants']}|{a['bytes'] for corrected,delivered in corrections.values() for a in [corrected,*delivered['variants']]};pages={};cache={}
  for p in ROOT.rglob('*.html'):
   if any(t in {'work','outputs','node_modules','.git'} for t in p.relative_to(ROOT).parts):continue
   ds=[]

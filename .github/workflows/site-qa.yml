@@ -146,6 +146,7 @@ jobs:
       - name: Verify every featured art supporting picture study panel
         run: |
           npm install --prefix "$RUNNER_TEMP/focuschrist-dom-qa" --no-save --package-lock=false --ignore-scripts jsdom@26.1.0
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/gallery_compatibility_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/opening_flow_and_cards_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/unified_opening_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/father_opening_runtime_qa.js

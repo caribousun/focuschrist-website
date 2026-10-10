@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "family": "SITE05",
+  "role": "source_lineage",
+  "source_sha256": "e4082e41520f37f672bc4beb3598879921f0fe03d29c28c343824dba524ac2e3",
+  "authority_kind": "reviewed_correction",
+  "reports": [
+    {
+      "report_title": "audit.json",
+      "sha256": "95e352df3edab4f18af3140c118e86a23c6504c55ac4aa28a87ddae07d3596a2"
+    }
+  ],
+  "scope": "Digest-bound transcription of actual preserved evidence within its original scope; no newly performed historical review.",
+  "limits": "No historical exception becomes precreation PASS. No current UI, remaining artwork, deployment or public acceptance is established."
+}

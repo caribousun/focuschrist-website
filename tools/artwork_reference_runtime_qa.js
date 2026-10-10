@@ -4,6 +4,8 @@ const {JSDOM,VirtualConsole}=require('jsdom');
 const root=path.resolve(__dirname,'..');
 const dom=new JSDOM(fs.readFileSync(path.join(root,'art.html'),'utf8'),{url:'https://focuschrist.com/art.html',runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:new VirtualConsole()});
 const {window:w}=dom;
+w.TextEncoder=TextEncoder;
+w.eval(fs.readFileSync(path.join(root,'full-image-viewer.js'),'utf8'));
 w.eval(fs.readFileSync(path.join(root,'art-study-router.js'),'utf8'));
 w.document.dispatchEvent(new w.Event('DOMContentLoaded'));
 const link=w.document.querySelector('.gallery-original-reference a[href="answers.html#answers-christ-portrait"]');

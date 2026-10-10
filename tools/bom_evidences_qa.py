@@ -5,6 +5,7 @@ from pathlib import Path
 from urllib.parse import urlsplit
 from PIL import Image
 from answer_study_qa import Document
+from joseph_life_enrichment_qa import current_corrections
 from study_gap_art_qa import sitewide_entries
 from evidences_visual_guides_qa import records as diagram_records, check as diagram_check
 
@@ -19,6 +20,10 @@ IDENTITIES = {
 
 def check():
     errors = []
+    corrected, delivery = current_corrections()["SITE01"]
+    original_asset = "assets/page-art/bom-evidences/josephemma.webp"
+    current_asset = "assets/page-art/bom-evidences/josephemma-bodice-v3.png"
+    assert corrected["path"] == current_asset, "Wrong exact SITE01 current source"
     def require(condition, message):
         if not condition:
             errors.append(PAGE + ': ' + message)
@@ -37,7 +42,7 @@ def check():
     require(len(links) == 12 and {x.removeprefix('#') for x in links} == TOPICS, 'requires all 12 topic navigation targets exactly once')
     require(TOPICS.issubset(ids), 'topic destination missing')
     require(any(n.tag == 'a' and 'ask.html?study=Book%20of%20Mormon%20Evidences' in n.attrs.get('href', '') for n in content), 'contextual Ask pathway missing')
-    require(text.count('topic-artwork-details.js?v=20261007-scoped-root-1') == 1, 'native topic-panel controller missing or duplicated')
+    require(text.count('topic-artwork-details.js?v=20261009-settled-continue-2') == 1, 'native topic-panel controller missing or duplicated')
     require(text.count('topic-artwork-details.css?v=20260927-anchor-alignment-1') == 1, 'approved native topic-panel styles missing or duplicated')
     figures = [n for n in content if n.tag == 'figure' and n.has('fc-study-visual')]
     additions = {e['asset']: e for e in sitewide_entries() if e['page'] == PAGE and not e['talk']}
@@ -78,7 +83,17 @@ def check():
     require(len(assets) == len(set(assets)), 'artwork assets repeated within the study')
     entries = json.loads((ROOT / 'docs/art-study-image-review.json').read_text(encoding='utf-8'))['pages'].get(PAGE, [])
     require(len(entries) == 24 + len(additions), f'review ledger requires 24 preserved images plus {len(additions)} reviewed additions, found {len(entries)}')
-    require({x.get('asset') for x in entries} | set(diagrams) == set(assets), 'page assets and reviewed ledger disagree')
+    require({current_asset if x.get('asset') == original_asset else x.get('asset') for x in entries} | set(diagrams) == set(assets), 'page assets and reviewed ledger disagree')
+    require(assets.count(current_asset) == 1 and original_asset not in assets, 'exactly one current SITE01 display required')
+    current_figures = [f for f in figures if any(n.tag == 'a' and n.attrs.get('href') == current_asset for n in f.walk())]
+    require(len(current_figures) == 1, 'current SITE01 owning figure missing or duplicated')
+    if len(current_figures) == 1:
+        images = [n for n in current_figures[0].walk() if n.tag == 'img']
+        require(len(images) == 1, 'current SITE01 responsive image missing or duplicated')
+        if len(images) == 1:
+            expected_set = ', '.join(v['asset'] + ' ' + str(v['width']) + 'w' for v in delivery['variants'])
+            require(images[0].attrs.get('src') == delivery['variants'][1]['asset'] and images[0].attrs.get('srcset') == expected_set, 'current SITE01 exact responsive mapping differs')
+            require(images[0].attrs.get('width') == '1536' and images[0].attrs.get('height') == '1024', 'preserve SITE01 rendered geometry')
     for entry in entries:
         asset = entry.get('asset', ''); path = (ROOT / asset).resolve()
         require(path.is_relative_to(ROOT) and path.is_file(), 'missing reviewed asset ' + asset)

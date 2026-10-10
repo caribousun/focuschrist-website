@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "id": "site11-composite_result-1",
+  "family": "SITE11",
+  "stage": "composite_result",
+  "actual_actor": "/root/fermi_current",
+  "verdict": "RECORDED",
+  "withdrawn": false,
+  "source_report_sha256": "1d7c4ed88f06311cb63383f7660283e9cb27d0f40da68bacb269cbec1506c627",
+  "source_recorded_at": null,
+  "normalized_at": "2026-10-10T02:22:55.916363+00:00",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "1bb9ab79c5d315f1eeb8bd3a4ee4dee4eda532832afa435c2c55b7bd9c2b19cd",
+  "findings": "One identity-coordinate masked blend recorded33381 changed pixels and zero outside/protected/inactive changes.",
+  "pixels_inspected": false,
+  "limits": "Stage-specific attributed source evidence. No canonical full-spec precreation claim, owner aesthetic acceptance, assembled-page or public-release claim.",
+  "spec_sha256": "162a06bb20006a16c49f64011eb8c807060b12bcffeea8f6f36bc324995bd10f",
+  "protected_pixel_checks": {
+    "changed_pixels": 33381,
+    "outside_changed_pixels": 0,
+    "protected_changed_pixels": 0
+  }
+}
