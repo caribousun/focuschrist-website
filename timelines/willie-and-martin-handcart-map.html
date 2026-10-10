@@ -180,13 +180,13 @@
 <link rel="stylesheet" href="../site-search.css?v=20260929-result-hitbox-1"><script src="../site-search.js?v=20260919-focused-answers-1" defer></script>
 <link rel="stylesheet" href="../site-header.css?v=20260926-toolbar-readability-1">
 <link rel="stylesheet" href="../timeline-experiences.css?v=20261007-timeline-panels-1">
-<link rel="stylesheet" href="../timeline-workspace.css?v=20261002-correction-1">
-<script src="../timeline-workspace.js?v=20261003-uniform-1" defer></script>
+<link rel="stylesheet" href="../timeline-workspace.css?v=20261010-all-bottom-1">
+<script src="../timeline-workspace.js?v=20261010-all-bottom-1" defer></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="../timeline-mobile-study.css?v=20261004-terrain-recovery-1">
 <link rel="stylesheet" href="../timeline-reader.css?v=20261003-uniform-1">
 <link rel="stylesheet" href="../timeline-images.css?v=20261002-correction-1">
-<script src="../timeline-images.js?v=20261010-emma-identity-1" defer></script>
+<script src="../timeline-images.js?v=20261010-all-bottom-1" defer></script>
 <link rel="stylesheet" href="../artwork-details.css?v=20260909-warm">
 <link rel="stylesheet" href="../hero-details.css?v=20260909-warm">
 <link rel="stylesheet" href="../artwork-actions.css?v=20261004-explicit-grid-1">
@@ -267,6 +267,7 @@
       <div class="detail-tags" id="detail-tags"></div>
       <div class="timeline-event-navigation-slot"></div>
       <div class="detail-body" id="detail-body"><p class="detail-hint">The story of the stop you choose will appear here and stay in view while you keep exploring the map and the list. You will not need to scroll back up to read it.</p></div>
+      <div class="timeline-event-navigation-bottom-slot"></div>
     </aside>
   </div>
 
@@ -582,13 +583,13 @@
     if(openStory === false){detailPanel.classList.remove("is-open");detailCloseBtn.hidden=true;}
     if(window.TimelineWorkspace && typeof window.TimelineWorkspace.showStory === "function" && openStory !== false) window.TimelineWorkspace.showStory();
     if(window.matchMedia("(min-width:901px)").matches) detailPanel.scrollTop = 0;
+    window.dispatchEvent(new CustomEvent('timeline:select',{detail:{index:globalIndex,showStory:openStory!==false}}));
     if(fromMap && card){
       if(window.TimelineWorkspace) window.TimelineWorkspace.scrollRow(card); else card.scrollIntoView({block:"nearest"});
-    }else if(leafletMap && !mapUnavailable){
+    }else if(leafletMap && !mapUnavailable && mapHasSize()){
       leafletMap.flyTo([STOPS[globalIndex].lat,STOPS[globalIndex].lng],Math.max(leafletMap.getZoom(),6),{duration:.45});
     }
     renderMarkers();
-    window.dispatchEvent(new CustomEvent('timeline:select',{detail:{index:globalIndex,showStory:openStory!==false}}));
   }
   detailCloseBtn.addEventListener("click", function(){
     detailPanel.classList.remove("is-open");
@@ -683,7 +684,9 @@
     zoom.addEventListener('click',function(){if(closed || generation!==renderGeneration)return;leafletMap.closePopup();leafletMap.fitBounds(L.latLngBounds(group.map(function(i){return [STOPS[i].lat,STOPS[i].lng];})),{padding:[32,32],maxZoom:Math.min(leafletMap.getZoom()+3,18)});});content.appendChild(zoom);
     L.popup({maxWidth:260,autoPan:false}).setLatLng(point).setContent(content).openOn(leafletMap);
   }
+  function mapHasSize(){return !!renderer && renderer.clientWidth>0 && renderer.clientHeight>0;}
   function renderMarkers(){
+    if(!mapHasSize())return;
     if(!leafletMap || closed) return;
     leafletMap.closePopup();
     var generation=++renderGeneration;
@@ -731,10 +734,10 @@
         leafletMap.on('zoomend moveend',renderMarkers);
       }catch(error){if(leafletMap){leafletMap.remove();leafletMap=null;}showFallback();}
     }
-    if(leafletMap){leafletMap.closePopup();leafletMap.fitBounds(L.latLngBounds(rows.map(function(r){return [STOPS[r.index].lat,STOPS[r.index].lng];})),{padding:[28,28],maxZoom:10});renderMarkers();}
+    if(leafletMap && mapHasSize()){leafletMap.closePopup();leafletMap.fitBounds(L.latLngBounds(rows.map(function(r){return [STOPS[r.index].lat,STOPS[r.index].lng];})),{padding:[28,28],maxZoom:10});renderMarkers();}
   }
   mapEl.addEventListener('timeline:map-interaction',function(event){if(!leafletMap)return;['dragging','touchZoom','doubleClickZoom'].forEach(function(name){var handler=leafletMap[name];if(handler)handler[event.detail.enabled?'enable':'disable']();});});
-  mapEl.addEventListener('timeline:map-resize',function(){if(leafletMap && !closed){leafletMap.invalidateSize({pan:false});renderMarkers();}});
+  mapEl.addEventListener('timeline:map-resize',function(){if(leafletMap && !closed && mapHasSize()){leafletMap.invalidateSize({pan:false});renderMarkers();}});
   window.addEventListener('pagehide',function(){closed=true;clearTimeout(tileTimer);if(leafletMap)leafletMap.remove();});
   var rows = buildRows();
   mount(rows);

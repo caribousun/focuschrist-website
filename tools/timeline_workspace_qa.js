@@ -63,3 +63,12 @@ console.log('PASS: choices at every width occupy the real Events pane, preserve 
  media.matches=true;const pane=d.querySelector('[data-timeline-pane="events"]'),row=d.getElementById('row');pane.getBoundingClientRect=()=>({top:100,bottom:300});row.getBoundingClientRect=()=>({top:310,bottom:360});pane.scrollTop=0;w.TimelineWorkspace.scrollRow(row);assert.equal(pane.scrollTop,63,'Reveal lower row within its event pane');row.getBoundingClientRect=()=>({top:70,bottom:120});w.TimelineWorkspace.scrollRow(row);assert.equal(pane.scrollTop,30,'Reveal upper row within its event pane');
  dom.window.close();
 }
+
+// Generic journey detail panes use the same filtered navigation contract as History.
+for(const tag of ['section','aside']){
+ const dom=new JSDOM('<section data-timeline-workspace><nav data-timeline-pane="events"></nav><div data-timeline-pane="map"><div id="map"></div></div><'+tag+' data-timeline-pane="detail"><div class="timeline-event-navigation-slot"></div><p>Story</p><figure>Picture and caption</figure><div class="timeline-event-navigation-bottom-slot"></div></'+tag+'></section>',{runScripts:'outside-only'}),w=dom.window,d=w.document;
+ w.matchMedia=()=>({matches:false,addEventListener(){}});w.requestAnimationFrame=()=>1;let current=2,visible=[2,7];w.TimelineNavigationAdapter={current:()=>current,visibleIndices:()=>visible,select:index=>{current=index;w.dispatchEvent(new w.CustomEvent('timeline:select',{detail:{index}}));}};w.eval(source);
+ const bottom=()=>d.querySelector('.timeline-event-navigation-bottom-slot'),top=()=>d.querySelector('.timeline-event-navigation-slot');
+ assert.equal(d.querySelectorAll('.timeline-event-navigation').length,2);let next=bottom().querySelector('[data-event-direction="1"]');next.focus();next.click();assert.equal(current,7);assert(bottom().querySelector('[data-event-direction="1"]').disabled);assert.equal(d.activeElement,top().querySelector('[data-event-direction="-1"]'));bottom().querySelector('[data-event-direction="-1"]').click();assert.equal(current,2);assert(bottom().querySelector('[data-event-direction="-1"]').disabled);assert.equal(d.querySelectorAll('.timeline-event-navigation').length,2);
+ visible=[];w.dispatchEvent(new w.CustomEvent('timeline:filter'));assert.equal(d.querySelectorAll('.timeline-event-navigation').length,0);dom.window.close();
+}

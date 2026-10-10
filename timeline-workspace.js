@@ -40,7 +40,7 @@
       return nav;
     }
     eventNav=createNav('Timeline event navigation');host.appendChild(eventNav);
-    var article=host.closest('article'),bottomHost=article&&article.querySelector('.timeline-event-navigation-bottom-slot');
+    var article=host.closest('article'),bottomHost=(article||story).querySelector('.timeline-event-navigation-bottom-slot');
     if(bottomHost){bottomEventNav=createNav('Continue through timeline events');bottomHost.appendChild(bottomEventNav);}
     // Continue at the new story's top controls, without a second scroll jump.
 
