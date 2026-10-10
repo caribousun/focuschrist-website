@@ -28,6 +28,7 @@ for (const card of cards) {
     const dom = new JSDOM(read(relative), { url: card.href, runScripts: 'outside-only' });
     const { window } = dom;
     const { document } = window;
+    window.TextEncoder = TextEncoder; let qaReturnTarget, qaScroll; const qaStyle=window.getComputedStyle.bind(window); window.getComputedStyle = el => el===qaReturnTarget ? {scrollMarginTop:'200px'} : qaStyle(el); Object.defineProperty(window.document.documentElement,'scrollHeight',{value:10000}); window.scrollTo = options => { qaScroll=options; }; const prepareReturn = target => { qaReturnTarget=target; qaScroll=null; target.getBoundingClientRect=()=>({top:2000}); }; const frames = new Map(); let frameId = 0; window.requestAnimationFrame = fn => { frames.set(++frameId, fn); return frameId; }; window.cancelAnimationFrame = id => frames.delete(id); const tickFrames = () => { const batch = [...frames.values()]; frames.clear(); batch.forEach(fn => fn()); };
     window.HTMLDialogElement.prototype.showModal = function () { this.setAttribute('open', ''); };
     window.HTMLDialogElement.prototype.close = function () { this.removeAttribute('open'); this.dispatchEvent(new window.Event('close')); };
     window.HTMLElement.prototype.scrollIntoView = function () { this.dataset.qaScrolled = 'true'; };
@@ -109,8 +110,8 @@ for (const card of cards) {
         assert.equal(resume.textContent, 'Continue Lesson');
         const target = document.getElementById(new URL(resume.href).hash.slice(1));
         assert(target && !target.closest('figure'), 'Lesson action targets surrounding study');
-        click(resume);
-        assert(!panel.open && document.activeElement === target && target.dataset.qaScrolled === 'true', 'Continue Lesson returns focus and scroll to reading');
+        prepareReturn(target); click(resume); tickFrames(); tickFrames();
+        assert(!panel.open && document.activeElement === target && qaScroll?.top === 1800 && qaScroll.behavior === 'instant', 'Continue Lesson returns focus and scroll to reading');
         assert(!document.body.classList.contains('fc-dialog-open'), 'Study close clears scroll lock');
         click(trigger);
         assert.equal(panel.querySelectorAll('[data-topic-art-source]').length, expectedSources.length, 'Repeated opening does not duplicate pills');

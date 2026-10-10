@@ -84,6 +84,7 @@ let picturePaths=0;
 for(const mode of ['chapters','all']){
  const app=setup(mode==='all'?'?view=all':'');
  const win=app.window,doc=win.document;
+ win.TextEncoder=TextEncoder; let qaReturnTarget, qaScroll; const qaStyle=win.getComputedStyle.bind(win); win.getComputedStyle = el => el===qaReturnTarget ? {scrollMarginTop:'200px'} : qaStyle(el); Object.defineProperty(win.document.documentElement,'scrollHeight',{value:10000}); win.scrollTo = options => { qaScroll=options; }; const prepareReturn = target => { qaReturnTarget=target; qaScroll=null; target.getBoundingClientRect=()=>({top:2000}); }; const frames=new Map(); let frameId=0; win.requestAnimationFrame=fn=>{frames.set(++frameId,fn);return frameId;}; win.cancelAnimationFrame=id=>frames.delete(id); const tickFrames=()=>{const batch=[...frames.values()];frames.clear();batch.forEach(fn=>fn());};
  win.HTMLDialogElement.prototype.showModal=function(){this.setAttribute('open','');};
  win.HTMLDialogElement.prototype.close=function(){this.removeAttribute('open');this.dispatchEvent(new win.Event('close'));};
  win.HTMLElement.prototype.scrollIntoView=function(){this.dataset.qaScrolled='true';};
@@ -120,8 +121,8 @@ for(const mode of ['chapters','all']){
   const resume=panel.querySelector('[data-topic-art-continue]');
   const target=doc.getElementById(new URL(resume.href).hash.slice(1));
   assert(target&&!target.closest('figure'),'Continue goes to surrounding research');
-  click(resume);
-  assert(!panel.open&&doc.activeElement===target&&target.dataset.qaScrolled==='true');
+  prepareReturn(target); click(resume); tickFrames(); tickFrames();
+  assert(!panel.open&&doc.activeElement===target&&qaScroll?.top===1800&&qaScroll.behavior==='instant');
   assert(!doc.body.classList.contains('fc-dialog-open'),'No leaked scroll lock');
   picturePaths++;
  }

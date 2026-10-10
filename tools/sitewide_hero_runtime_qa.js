@@ -39,6 +39,7 @@ for (const record of runtimeHeroes) {
     for (const width of [1440, 390]) {
         const dom = new JSDOM(read(record.page), { url: 'https://focuschrist.com/' + record.page, runScripts: 'outside-only', pretendToBeVisual: true });
         const { window } = dom, { document } = window;
+        window.TextEncoder = TextEncoder;
         Object.defineProperty(window, 'innerWidth', { value: width });
         window.HTMLDialogElement.prototype.showModal = function () { this.setAttribute('open', ''); };
         window.HTMLDialogElement.prototype.close = function () { this.removeAttribute('open'); this.dispatchEvent(new window.Event('close')); };

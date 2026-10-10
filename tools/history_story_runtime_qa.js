@@ -8,11 +8,12 @@ const read = file => fs.readFileSync(path.join(root, file), 'utf8');
 function setup(markup, url) {
   const dom = new JSDOM(markup, { url, runScripts: 'outside-only' });
   const w = dom.window;
+  w.TextEncoder = TextEncoder; const frames = new Map(); let frameId = 0; w.requestAnimationFrame = fn => { frames.set(++frameId, fn); return frameId; }; w.cancelAnimationFrame = id => frames.delete(id); const tickFrames = () => { const batch = [...frames.values()]; frames.clear(); batch.forEach(fn => fn()); };
   w.HTMLDialogElement.prototype.showModal = function () { this.setAttribute('open', ''); };
   w.HTMLDialogElement.prototype.close = function () { this.removeAttribute('open'); this.dispatchEvent(new w.Event('close')); };
   w.HTMLElement.prototype.scrollIntoView = function () {};
   w.matchMedia = () => ({ matches: false, addEventListener() {}, removeEventListener() {} });
-  w.requestAnimationFrame = () => 0;
+  w.tickFrames = tickFrames;
   for (const file of ['site-common.js', 'full-image-viewer.js', 'topic-artwork-details.js']) w.eval(read(file));
   w.document.dispatchEvent(new w.Event('DOMContentLoaded'));
   return dom;
@@ -100,7 +101,7 @@ if (!process.argv.includes('--source-host-only')) {
       const next = panel.querySelector('[data-topic-art-continue]');
       const target = d.getElementById(new URL(next.href).hash.slice(1));
       assert.equal(target.closest('section'), trigger.closest('section'));
-      next.click(); assert.equal(d.activeElement, target);
+      next.click(); dom.window.tickFrames(); dom.window.tickFrames(); assert.equal(d.activeElement, target);
     }
     dom.window.close();
   }

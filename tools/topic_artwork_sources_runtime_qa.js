@@ -10,6 +10,7 @@ const dom = new JSDOM(read('joseph-smith-portrait-research.html'), {
 });
 const { window } = dom;
 const { document } = window;
+window.TextEncoder = TextEncoder;
 window.HTMLDialogElement.prototype.showModal = function () { this.setAttribute('open', ''); };
 window.HTMLDialogElement.prototype.close = function () { this.removeAttribute('open'); this.dispatchEvent(new window.Event('close')); };
 window.HTMLElement.prototype.scrollIntoView = function () {};

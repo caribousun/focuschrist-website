@@ -1,8 +1,8 @@
 {
-  "canonical_pages": 130,
+  "canonical_pages": 131,
   "selectors": {
     ".fc-study-visual-sources a:not(.fc-button--primary)": {
-      "count": 1022,
+      "count": 1032,
       "pages": [
         "answers/aaronic-priesthood-restoration.html",
         "answers/abrahamic-covenant.html",
@@ -34,6 +34,7 @@
         "come-follow-me.html",
         "general-conference.html",
         "history/eleazer-miller.html",
+        "history/emma-hale-smith.html",
         "history/john-rowe-moyle.html",
         "history/john-tanner.html",
         "jesus-christ/before-bethlehem.html",
