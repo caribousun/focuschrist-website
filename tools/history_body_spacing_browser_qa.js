@@ -15,7 +15,7 @@ module.exports=async function historyBodySpacing(page,origin){
       if(links.length){assert(version,route+' unknown '+file+' consumer');assert.equal(links.length,1,route+' duplicate '+file);assert.equal(new URL(links[0],'https://focuschrist.com/'+route).searchParams.get('v'),version,route+' stale '+file);consumers.push({route,file});}
     }
   }
-  assert.deepEqual(histories.sort(),['history/eleazer-miller.html','history/john-rowe-moyle.html','history/john-tanner.html']);
+  assert.deepEqual(histories.sort(),['history/eleazer-miller.html','history/emma-hale-smith.html','history/john-rowe-moyle.html','history/john-tanner.html']);
   assert(adjacency.length,'Discover actual promotion/divider consumers');
   const records=[];
   const profiles=[[320,800,1],[390,844,1],[430,932,1],[1366,900,1],[1722,1000,1],[1905,1000,1],[390,844,2],[1366,900,2]];
