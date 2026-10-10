@@ -2514,18 +2514,18 @@
     {
       "title": "A society ready to serve",
       "category": "Church History",
-      "thumbnail": "/assets/page-art/church-history/relief-society-torso-v3-960.webp",
-      "fullImage": "/assets/page-art/church-history/relief-society-torso-v3.webp",
+      "thumbnail": "/assets/page-art/church-history/relief-society-identity-v4-960.webp",
+      "fullImage": "/assets/page-art/church-history/relief-society-identity-v4-1672.webp",
       "alt": "Emma speaks with women gathered in a simple meeting room, meeting the gaze of a seated listener.",
-      "id": "art-01f5918c3164",
+      "id": "art-cfc810b044b3",
       "occurrences": [
         {
-          "id": "source-0b724121e66b",
+          "id": "source-5ea3c750ad6d",
           "page": "/church-history.html",
           "pageTitle": "Church History",
           "category": "Church History",
           "kind": "topic",
-          "selector": "a[href=\"assets/page-art/church-history/relief-society-torso-v3.webp\"]:has(img[src=\"assets/page-art/church-history/relief-society-torso-v3-960.webp\"])",
+          "selector": "a[href=\"assets/page-art/church-history/relief-society-identity-v4-1672.webp\"]:has(img[src=\"assets/page-art/church-history/relief-society-identity-v4-960.webp\"])",
           "title": "A society ready to serve"
         }
       ],
@@ -20411,18 +20411,18 @@
     {
       "title": "The people beside the work",
       "category": "Gospel Studies",
-      "thumbnail": "/assets/page-art/bom-evidences/josephemma-bodice-v3-960.webp",
-      "fullImage": "/assets/page-art/bom-evidences/josephemma-bodice-v3.png",
+      "thumbnail": "/assets/page-art/bom-evidences/josephemma-identity-v4-960.webp",
+      "fullImage": "/assets/page-art/bom-evidences/josephemma-identity-v4.png",
       "alt": "Emma pauses with her quill as she and Joseph share a warm glance.",
-      "id": "art-a034c9d00751",
+      "id": "art-f9e2fdf16d37",
       "occurrences": [
         {
-          "id": "source-05cf7c0e2b6a",
+          "id": "source-12af89590691",
           "page": "/book-of-mormon-evidences.html",
           "pageTitle": "Book of Mormon Evidences",
           "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"assets/page-art/bom-evidences/josephemma-bodice-v3.png\"]:has(img[src=\"assets/page-art/bom-evidences/josephemma-bodice-v3-960.webp\"])",
+          "selector": "a[href=\"assets/page-art/bom-evidences/josephemma-identity-v4.png\"]:has(img[src=\"assets/page-art/bom-evidences/josephemma-identity-v4-960.webp\"])",
           "title": "The people beside the work"
         }
       ],
@@ -22286,18 +22286,18 @@
     {
       "title": "Walk together and listen",
       "category": "Gospel Studies",
-      "thumbnail": "/assets/page-art/bom-evidences/joseph-emma-walk-body-v2-960.webp",
-      "fullImage": "/assets/page-art/bom-evidences/joseph-emma-walk-body-v2.webp",
+      "thumbnail": "/assets/page-art/bom-evidences/joseph-emma-walk-identity-v3-960.webp",
+      "fullImage": "/assets/page-art/bom-evidences/joseph-emma-walk-identity-v3-1536.webp",
       "alt": "Joseph and Emma share a warm glance as they walk along a quiet path.",
-      "id": "art-d2d41e92a628",
+      "id": "art-37ba51e6c512",
       "occurrences": [
         {
-          "id": "source-5a24b826f3f4",
+          "id": "source-0dadddbb503d",
           "page": "/book-of-mormon-evidences.html",
           "pageTitle": "Book of Mormon Evidences",
           "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"assets/page-art/bom-evidences/joseph-emma-walk-body-v2.webp\"]:has(img[src=\"assets/page-art/bom-evidences/joseph-emma-walk-body-v2-960.webp\"])",
+          "selector": "a[href=\"assets/page-art/bom-evidences/joseph-emma-walk-identity-v3-1536.webp\"]:has(img[src=\"assets/page-art/bom-evidences/joseph-emma-walk-identity-v3-960.webp\"])",
           "title": "Walk together and listen"
         }
       ],

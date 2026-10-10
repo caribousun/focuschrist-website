@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "id": "site02_identity-identity_result-root",
+  "family": "SITE02_IDENTITY",
+  "stage": "identity_result",
+  "actual_actor": "/root",
+  "normalized_at": "2026-10-10T15:15:08.321480+00:00",
+  "source_recorded_at": null,
+  "original_message_timestamp": null,
+  "original_message_digest": null,
+  "source_report_sha256": "22a068ebd2871a83a32c9beb80067617992bde356e4bedeb77c452aa36e7dcce",
+  "subject_sha256": "25021b2639f47c3994e5e16b018701d3a4ff51eee4e96b2d183abe0b001c4741",
+  "withdrawn": false,
+  "verdict": "RECORDED",
+  "evidence_class": "current_execution_reconciliation",
+  "findings": "Actual saved output and supplied execution inventory are bound; unavailable original tool-event timestamp/digest remain null. Graphics-brief execution is not imagegen execution.",
+  "spec_sha256": "17c810686d40dcede69b76a2c691fb55a0e545561b65693046143bd9de97441a",
+  "tool": "image_gen.imagegen",
+  "input_sha256": [
+    "7d0a07cc673d244ccd54d478c53d1e68d248e39d9b1101f87dfe3681cbb839d1",
+    "24e0b13c84cabae92c972034f1fc775162b2800a93e4b14d876ca16c31a269ea",
+    "f6d2493babf5d2ab7a6e118a57827f7db05e6aea934feb5739256987ec186688",
+    "d2dbc4ccf1ef192e5eef5c62f0b09e3a429d109da4c0d15596be433338ab2f28"
+  ],
+  "preservation_basis": "actual_finished_visual_review_not_pixel_equality"
+}

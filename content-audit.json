@@ -3649,7 +3649,7 @@
     {
       "path": "index.html",
       "status": "verified",
-      "published_text_sha256": "4c0137846b83040390b0acdc80e561781fd8d560d293d1c5bde4ac5045abe2e7",
+      "published_text_sha256": "72bf819fdbafb340d7984e0cc701d02afdcc42e75d05f067e71d528c00965fe2",
       "reviewed_on": "2026-10-07",
       "review_standard": "Prior complete source review preserved in prior_review. Independent editorial and preservation review passed for four dated channel Shorts and Home page-top navigation, as applicable; see docs/watch-shorts-independent-review-20260923.json. Channel URLs establish video identity; prior Church source approvals remain unchanged. PR385 scoped review: Ask/Answers navigation disambiguation, matching Atonement accessible name, established YouTube footer link, Ask/Answers introductions and punctuation; prior substantive source review retained. Owner-directed toolbar review: title-case navigation labels only; prior substantive source review and approved artwork retained. Owner-requested human-voice review: targeted original prose and reflection questions independently reviewed; quotations, source destinations, history/interpretation boundaries and approved artwork preserved. Prior substantive source review retained; this is not a new historical audit. Evidence: docs/reviews/2026-09-27-human-voice/README.md. Owner-directed artwork disclosure relocation: Fermi and Newton independently verified the sole footer paragraph addition across 126 runtime pages and removal of 17 repeated generated-art credit paragraphs from the priesthood study; all other prose, historical source distinctions, image attributes and six official Church credits preserved. See originating outputs/format-native-review.json and independent disclosure reviews. Timeline navigation-only review (2026-10-02): exact normalized text comparison confirms only Timeline link labels added; prior substantive body review preserved. Shared script version changes add no published wording. PR460 scoped introduction review: Fermi and Newton independently read the exact 24 authored openings in docs/hero-introductions-review.json, preserving established source claims and warm explanatory voice. Only the enumerated introductory paragraphs changed; prior substantive source review remains in force. Rendered and release acceptance are separate. October 2026 scoped navigation update: Fermi independently reviewed the homepage conference invitation naming the complete October 2026 study against the official 38-message collection and the updated destination. No new doctrinal claim or artwork change. Evidence: docs/general-conference-source-ledger.json; unrelated substantive review preserved.",
       "authoritative_sources": [
@@ -3728,7 +3728,105 @@
         },
         "independent_review": "docs/home-presentation-independent-review-20260923.json"
       },
-      "independent_review": "docs/watch-shorts-independent-review-20260923.json"
+      "independent_review": "docs/watch-shorts-independent-review-20260923.json",
+      "prior_semantic_review_records": [
+        {
+          "path": "index.html",
+          "status": "verified",
+          "published_text_sha256": "4c0137846b83040390b0acdc80e561781fd8d560d293d1c5bde4ac5045abe2e7",
+          "reviewed_on": "2026-10-07",
+          "review_standard": "Prior complete source review preserved in prior_review. Independent editorial and preservation review passed for four dated channel Shorts and Home page-top navigation, as applicable; see docs/watch-shorts-independent-review-20260923.json. Channel URLs establish video identity; prior Church source approvals remain unchanged. PR385 scoped review: Ask/Answers navigation disambiguation, matching Atonement accessible name, established YouTube footer link, Ask/Answers introductions and punctuation; prior substantive source review retained. Owner-directed toolbar review: title-case navigation labels only; prior substantive source review and approved artwork retained. Owner-requested human-voice review: targeted original prose and reflection questions independently reviewed; quotations, source destinations, history/interpretation boundaries and approved artwork preserved. Prior substantive source review retained; this is not a new historical audit. Evidence: docs/reviews/2026-09-27-human-voice/README.md. Owner-directed artwork disclosure relocation: Fermi and Newton independently verified the sole footer paragraph addition across 126 runtime pages and removal of 17 repeated generated-art credit paragraphs from the priesthood study; all other prose, historical source distinctions, image attributes and six official Church credits preserved. See originating outputs/format-native-review.json and independent disclosure reviews. Timeline navigation-only review (2026-10-02): exact normalized text comparison confirms only Timeline link labels added; prior substantive body review preserved. Shared script version changes add no published wording. PR460 scoped introduction review: Fermi and Newton independently read the exact 24 authored openings in docs/hero-introductions-review.json, preserving established source claims and warm explanatory voice. Only the enumerated introductory paragraphs changed; prior substantive source review remains in force. Rendered and release acceptance are separate. October 2026 scoped navigation update: Fermi independently reviewed the homepage conference invitation naming the complete October 2026 study against the official 38-message collection and the updated destination. No new doctrinal claim or artwork change. Evidence: docs/general-conference-source-ledger.json; unrelated substantive review preserved.",
+          "authoritative_sources": [
+            "https://newsroom.churchofjesuschrist.org/article/rejoice-in-christ-salt-lake-temple-celebration",
+            "https://scriptures.byu.edu/",
+            "https://www.churchofjesuschrist.org/",
+            "https://www.churchofjesuschrist.org/?lang=eng",
+            "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng",
+            "https://www.churchofjesuschrist.org/media/video/2018-01-0010-peace-in-christ?lang=eng",
+            "https://www.churchofjesuschrist.org/study/church-history?lang=eng",
+            "https://www.churchofjesuschrist.org/study/manual/gospel-topics/jesus-christ-study-guide?lang=eng",
+            "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?id=p32-p37&amp;lang=eng#p32",
+            "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?id=p32-p37&lang=eng#p32",
+            "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?id=p36&lang=eng#p36",
+            "https://www.churchofjesuschrist.org/study/scriptures/nt/john/1?lang=eng",
+            "https://www.churchofjesuschrist.org/study/scriptures/nt/john/5?lang=eng",
+            "https://www.churchofjesuschrist.org/study?lang=eng&amp;platform=web",
+            "https://www.churchofjesuschrist.org/study?lang=eng&platform=web",
+            "https://www.churchofjesuschrist.org/temples?lang=eng",
+            "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
+            "https://www.churchofjesuschrist.org/tools?lang=eng&amp;activeTab=all",
+            "https://www.churchofjesuschrist.org/study/general-conference/2026/10?lang=eng"
+          ],
+          "prior_review": {
+            "path": "index.html",
+            "status": "verified",
+            "published_text_sha256": "8b09c0125f99b63f6bb5fdc30199430ee881852bbc68963f84db9d8c0a1245e0",
+            "reviewed_on": "2026-09-23",
+            "review_standard": "Prior source approval preserved in prior_review. Independent Home presentation semantic review of changed invitations, nine existing study references, official film labeling and exact original artwork/hero/opening preservation passed; see docs/home-presentation-independent-review-20260923.json.",
+            "authoritative_sources": [
+              "https://newsroom.churchofjesuschrist.org/article/rejoice-in-christ-salt-lake-temple-celebration",
+              "https://scriptures.byu.edu/",
+              "https://www.churchofjesuschrist.org/",
+              "https://www.churchofjesuschrist.org/?lang=eng",
+              "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng",
+              "https://www.churchofjesuschrist.org/media/video/2018-01-0010-peace-in-christ?lang=eng",
+              "https://www.churchofjesuschrist.org/study/church-history?lang=eng",
+              "https://www.churchofjesuschrist.org/study/manual/gospel-topics/jesus-christ-study-guide?lang=eng",
+              "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?id=p32-p37&amp;lang=eng#p32",
+              "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?id=p32-p37&lang=eng#p32",
+              "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?id=p36&lang=eng#p36",
+              "https://www.churchofjesuschrist.org/study/scriptures/nt/john/1?lang=eng",
+              "https://www.churchofjesuschrist.org/study/scriptures/nt/john/5?lang=eng",
+              "https://www.churchofjesuschrist.org/study?lang=eng&amp;platform=web",
+              "https://www.churchofjesuschrist.org/study?lang=eng&platform=web",
+              "https://www.churchofjesuschrist.org/temples?lang=eng",
+              "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
+              "https://www.churchofjesuschrist.org/tools?lang=eng&amp;activeTab=all"
+            ],
+            "prior_review": {
+              "path": "index.html",
+              "status": "verified",
+              "published_text_sha256": "5911fbe076484f49516817a96131a5f906772661b109b8963bdbaee55fe8a382",
+              "reviewed_on": "2026-09-14",
+              "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content. Owner-approved Home wording was shortened without adding a factual or doctrinal claim. Full-site media harmony review: exact video identities checked across all public pages; replacement source titles, official destinations, native thumbnails and page-specific descriptions independently reviewed. No concrete video may appear in more than one themed placement. New Evidences/history/art navigation independently reviewed for accurate destination and scope; unchanged underlying source approvals retained. Approved hero and introduction content preserved. Search navigation label added; prior substantive source review preserved. Atonement study promotion and topic link reviewed; previous content preserved. Atonement study promotion and topic link reviewed; previous content preserved. Navigation-only review: centered Christ’s Atonement destination; existing body and source review retained.",
+              "authoritative_sources": [
+                "https://newsroom.churchofjesuschrist.org/article/rejoice-in-christ-salt-lake-temple-celebration",
+                "https://scriptures.byu.edu/",
+                "https://www.churchofjesuschrist.org/",
+                "https://www.churchofjesuschrist.org/?lang=eng",
+                "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng",
+                "https://www.churchofjesuschrist.org/media/video/2018-01-0010-peace-in-christ?lang=eng",
+                "https://www.churchofjesuschrist.org/study/church-history?lang=eng",
+                "https://www.churchofjesuschrist.org/study/manual/gospel-topics/jesus-christ-study-guide?lang=eng",
+                "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?id=p32-p37&amp;lang=eng#p32",
+                "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?id=p32-p37&lang=eng#p32",
+                "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?id=p36&lang=eng#p36",
+                "https://www.churchofjesuschrist.org/study/scriptures/nt/john/1?lang=eng",
+                "https://www.churchofjesuschrist.org/study/scriptures/nt/john/5?lang=eng",
+                "https://www.churchofjesuschrist.org/study?lang=eng&amp;platform=web",
+                "https://www.churchofjesuschrist.org/study?lang=eng&platform=web",
+                "https://www.churchofjesuschrist.org/temples?lang=eng",
+                "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
+                "https://www.churchofjesuschrist.org/tools?lang=eng&amp;activeTab=all"
+              ]
+            },
+            "independent_review": "docs/home-presentation-independent-review-20260923.json"
+          },
+          "independent_review": "docs/watch-shorts-independent-review-20260923.json"
+        }
+      ],
+      "current_scope_review": {
+        "recorded_at": "2026-10-10T16:29:45.549851+00:00",
+        "reviewers": [
+          "Newton",
+          "Fermi"
+        ],
+        "scope": "Only the approved H4 homepage reference card alternative text, title, invitation and action wording. Original reviewed_on, authoritative sources and substantive history preserved.",
+        "before_published_text_sha256": "4c0137846b83040390b0acdc80e561781fd8d560d293d1c5bde4ac5045abe2e7",
+        "current_published_text_sha256": "72bf819fdbafb340d7984e0cc701d02afdcc42e75d05f067e71d528c00965fe2",
+        "basis": "Independent exact installed PublishedTextParser comparison against prior reviewed main index; both reviewers concur current grounded card text and destination.",
+        "limits": "Current editorial reconciliation only; no new human approval, owner artwork acceptance or publication claim."
+      }
     },
     {
       "path": "jesus-christ/before-bethlehem.html",

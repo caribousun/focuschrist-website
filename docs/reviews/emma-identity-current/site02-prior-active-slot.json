@@ -1,0 +1,24 @@
+{
+  "slot": "joseph-emma-walk",
+  "asset": "assets/page-art/bom-evidences/joseph-emma-walk-body-v2.webp",
+  "responsive": "assets/page-art/bom-evidences/joseph-emma-walk-body-v2-960.webp",
+  "width": 1536,
+  "height": 1024,
+  "sha256": "f91d7adb0488df4d235e0b400c6e451e90486965b951bcf9c262b58715827a3f",
+  "tone": "warm shared attention along a path",
+  "reviewed": true,
+  "historical_review": {
+    "slot": "joseph-emma-walk",
+    "asset": "assets/page-art/bom-evidences/joseph-emma-walk.webp",
+    "responsive": "assets/page-art/bom-evidences/joseph-emma-walk-960.webp",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "10d5bcd3c5395425de8786f635669f0b4a4d9456c976f9dd38f80b014bd1d11e",
+    "tone": "warm shared attention along a path",
+    "reviewed": true
+  },
+  "source_png_sha256": "9bb03bbdc49f680f8c17e2552a57c7e583627dcce08f8ae0b857d2a7e5ce83ba",
+  "current_delivery_review": "docs/reviews/site02-versioned-delivery/delivery-review.json",
+  "assembled_review_status": "PENDING",
+  "review_scope": "Same exact previously accepted SITE02 full and thumbnail delivery. Versioned migration preserves historical baseline; current final page/device/public review remains pending."
+}

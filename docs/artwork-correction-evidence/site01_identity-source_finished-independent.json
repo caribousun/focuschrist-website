@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "id": "site01_identity-source_finished-independent",
+  "family": "SITE01_IDENTITY",
+  "stage": "source_finished",
+  "actual_actor": "/root/newton_current",
+  "normalized_at": "2026-10-10T15:15:08.321480+00:00",
+  "source_recorded_at": null,
+  "original_message_timestamp": null,
+  "original_message_digest": null,
+  "source_report_sha256": "3a4d9dcc85ffff93fe18535bdb6a16137bf7bde2fd90052edd5ed04fcffd0db6",
+  "subject_sha256": "d65c9a9783b3a513f64f8689b8ebb95b4c9ebab44feeab7e120dc53f1b950400",
+  "withdrawn": false,
+  "verdict": "CONCUR",
+  "evidence_class": "actual_finished_review_normalization",
+  "findings": "Actual full/native finished source compared against approved identity references; body and scene visually reviewed. Display and encoded-delivery evidence are separate, and no owner acceptance is inferred.",
+  "pixels_inspected": true
+}

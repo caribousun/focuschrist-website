@@ -107,11 +107,15 @@ cache_markers = {
     "ask.html reviewed knowledge": (ask, "reviewed-ask-knowledge.js?v=20260910-holy-ghost-subject-2"),
     "pioneers.html reviewed knowledge": (pioneers_html, "reviewed-ask-knowledge.js?v=20260927-history-choices-1"),
     "pioneers.html": (pioneers_html, "pioneer-experience.js?v=20260920-family-answers-2"),
-    "church-history.html common": (history_html, "site-common.js?v=20261008-section-top-2"),
+    "church-history.html common": (history_html, "site-common.js?v=20261010-emma-identity-links-1"),
     "church-history.html reviewed knowledge": (history_html, "reviewed-ask-knowledge.js?v=20260927-history-choices-1"),
     "church-history.html router": (history_html, "study-source-router.js?v=20260923-sensitive-welcome-1"),
     "church-history.html experience": (history_html, "church-history-experience.js?v=20260903-16"),
 }
+history_common_loaders = re.findall(r'<script\b[^>]*\bsrc=[\"\']([^\"\']*site-common\.js[^\"\']*)[\"\']', history_html, flags=re.I)
+if history_common_loaders != ["site-common.js?v=20261010-emma-identity-links-1"]:
+    errors.append("Church History requires exactly one current shared loader")
+
 for label, (text, marker) in cache_markers.items():
     if marker not in text:
         errors.append(f"stale source-integrity cache path: {label} missing {marker}")

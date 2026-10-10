@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "site05_identity-encoding_preflight-independent",
+  "family": "SITE05_IDENTITY",
+  "stage": "encoding_preflight",
+  "actual_actor": "/root/newton_current",
+  "normalized_at": "2026-10-10T15:15:08.321480+00:00",
+  "source_recorded_at": "2026-10-10T15:05:39.910135+00:00",
+  "original_message_timestamp": null,
+  "original_message_digest": null,
+  "source_report_sha256": "dc9f65972e66b9d76bbaada9475a9834c091d493c9038a288daa3371c2080950",
+  "subject_sha256": "c02d365c816bc7c3aa28b7a496a99a063fba196ef5df10643b84fc743fc5b697",
+  "withdrawn": false,
+  "verdict": "CONCUR",
+  "evidence_class": "current_exact_spec_reconciliation",
+  "findings": "Exact accepted PNG copy and declared responsive WebP widths only; immutable historical paths and SITE09/Harmony retained, actual delivery review separately recorded."
+}

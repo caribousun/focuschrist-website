@@ -58,12 +58,12 @@
     },
     {
       "key": "history",
-      "src": "assets/page-art/church-history/relief-society-torso-v3-960.webp",
+      "src": "assets/page-art/emma-life/emma-h4-review-960.webp",
       "width": 960,
-      "height": 540,
-      "href": "church-history.html",
-      "alt": "Emma speaks with women gathered in a simple meeting room, meeting the gaze of a seated listener.",
-      "owner_anchor": "relief-society-organization"
+      "height": 640,
+      "href": "history/emma-hale-smith.html#picture-emma-h4",
+      "alt": "Emma speaks with women gathered to organize care in Nauvoo.",
+      "owner_anchor": "picture-emma-h4"
     },
     {
       "key": "pioneer",

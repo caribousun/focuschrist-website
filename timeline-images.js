@@ -783,7 +783,7 @@ var registry={
       "height": 640
     },
     "15": {
-      "src": "/assets/page-art/church-history/relief-society-torso-v3-960.webp",
+      "src": "/assets/page-art/church-history/relief-society-identity-v4-960.webp",
       "href": "/church-history.html#relief-society-organization",
       "alt": "Emma speaks with women gathered in a simple meeting room, meeting the gaze of a seated listener.",
       "caption": "Emma speaks with the women gathered around her as the Relief Society begins its work of faith and care.",

@@ -227,14 +227,30 @@ class EvidenceTests(unittest.TestCase):
         # These fixtures exercise core creation/coverage orchestration. The two
         # separately validated adapters contribute no assets to this synthetic set.
         self.adapter_mocks = {}
+        closure_adapter = patch('artwork_owner_closure.validate', return_value={'owner_requirement_integrity': 'PASS'})
+        self.owner_closure_mock = closure_adapter.start()
+        self.addCleanup(closure_adapter.stop)
         for module, filename in [
             ('artwork_historical_delivery', 'artwork-historical-delivery-reviews.json'),
             ('artwork_reviewed_corrections', 'artwork-correction-reviews.json'),
         ]:
-            (docs / filename).write_text(json.dumps({'fixture': 'empty adapter coverage'}))
+            (docs / filename).write_text(json.dumps({'fixture': 'empty adapter coverage', 'owner_requirement_closure': {'fixture': 'synthetic owner closure'}}))
             adapter = patch(module + '.validate', return_value=(set(), set(), set()))
             self.adapter_mocks[module] = adapter.start()
             self.addCleanup(adapter.stop)
+
+    def test_owner_closure_cannot_be_missing(self):
+        self.registry()
+        p = self.root / 'docs/artwork-correction-reviews.json'
+        p.write_text(json.dumps({'fixture': 'missing closure'}))
+        with patch.object(gate, 'baseline_check', return_value={}), patch.object(gate.subprocess, 'check_output', return_value=b''):
+            with self.assertRaises(KeyError): gate.run(self.root)
+
+    def test_owner_closure_rejection_propagates(self):
+        self.registry()
+        self.owner_closure_mock.side_effect = ValueError('owner appearance closure remains OPEN')
+        with patch.object(gate, 'baseline_check', return_value={}), patch.object(gate.subprocess, 'check_output', return_value=b''):
+            with self.assertRaisesRegex(ValueError, 'owner appearance closure remains OPEN'): gate.run(self.root)
 
     def test_required_adapter_ledgers_cannot_be_missing(self):
         for filename in ['artwork-historical-delivery-reviews.json', 'artwork-correction-reviews.json']:
@@ -386,6 +402,19 @@ class NativeConferenceTests(unittest.TestCase):
     def test_native_record_absence_grants_no_coverage(self):
         (self.root / gate.NATIVE_CONFERENCE_REVIEW).unlink()
         self.assertEqual(gate.validate_native_conference(self.root, gate.REJECTED), set())
+
+
+class PublicReceiptPrivacyTests(unittest.TestCase):
+    def test_public_https_origin_is_not_a_windows_drive(self):
+        from artwork_reviewed_corrections import safe_public
+        safe_public({'value': 'https://focuschrist.com'})
+
+    def test_private_paths_and_authority_urls_rejected(self):
+        from artwork_reviewed_corrections import safe_public
+        for value in ['C:/private/data', 'C:\\private\\data', 'file:///private/data', '/Users/private/data', 'https://docs.google.com/document/d/private']:
+            with self.subTest(value=value):
+                with self.assertRaisesRegex(ValueError, '^Private path or authority document in public receipt$'):
+                    safe_public({'value': value})
 
 
 if __name__ == '__main__': unittest.main()

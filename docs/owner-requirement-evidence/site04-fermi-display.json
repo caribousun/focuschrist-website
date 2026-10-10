@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "source_report_sha256": "d5e8cadafd54f2006e9076ae07c95b72721b1c3ac7f1e31b8c1504d1443ae56d",
+  "scope": "Exact current private display or explicitly preserved prior SITE11 actual display; no public-page interaction inference.",
+  "actor": "/root/fermi_current",
+  "normalized_at": "2026-10-10T15:11:46.571054+00:00",
+  "original_event_time": null,
+  "details": {},
+  "limits": "Current evidence normalization, not a new historical pixel review or owner acceptance. Full original report remains preserved privately."
+}

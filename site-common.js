@@ -1226,7 +1226,7 @@
         }, { once: true });
         document.head.appendChild(openingStyle);
         if (/[?&]gallery-(?:art|position)=/.test(window.location.search)) {
-            appendScript(relativeAssetHref('art-gallery-bridge.js?v=20261010-final-art-links-1'), 'data-focuschrist-art-gallery-bridge');
+            appendScript(relativeAssetHref('art-gallery-bridge.js?v=20261010-emma-identity-links-1'), 'data-focuschrist-art-gallery-bridge');
         }
         installScriptureDisplayGate();
         appendScript(relativeAssetHref('scripture-library.js?v=20260909-4'), 'data-focuschrist-scripture-library', function () {

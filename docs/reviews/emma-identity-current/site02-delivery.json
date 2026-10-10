@@ -1,0 +1,66 @@
+{
+  "schema": 1,
+  "family": "SITE02",
+  "status": "ACTUAL_SOURCE_DISPLAY_DELIVERY_CONCUR_PRIVATE_CONTEXT",
+  "normalized_at": "2026-10-10T15:02:44.667815+00:00",
+  "source_sha256": "25021b2639f47c3994e5e16b018701d3a4ff51eee4e96b2d183abe0b001c4741",
+  "assets": [
+    {
+      "path": "assets/page-art/bom-evidences/joseph-emma-walk-identity-v3.png",
+      "sha256": "25021b2639f47c3994e5e16b018701d3a4ff51eee4e96b2d183abe0b001c4741",
+      "pixel_sha256": "3e013d9722b17d4fb31b514660b5227cb5e72b3c5257e4ac38ec38548763f8a4",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "bytes": 2345388
+    },
+    {
+      "path": "assets/page-art/bom-evidences/joseph-emma-walk-identity-v3-960.webp",
+      "sha256": "ace54666fd02386a9b677336db75aa0134a2bceda6dccb69c70f1bcd3d7f4a27",
+      "pixel_sha256": "04d26be912da47fed0857a96b933995fefe269f2f5905e4d8e79aff47f2865d9",
+      "dimensions": [
+        960,
+        640
+      ],
+      "format": "WEBP",
+      "mode": "RGB",
+      "bytes": 139052
+    },
+    {
+      "path": "assets/page-art/bom-evidences/joseph-emma-walk-identity-v3-1536.webp",
+      "sha256": "9790171e97dd3230156f58f77dfe0925cf3e55dd7be15b9cbc630688647dc694",
+      "pixel_sha256": "2b897ceb7d1c27332a36fad0c908935ef80ec944fcdb852407cdd9d7f35eb4d0",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "format": "WEBP",
+      "mode": "RGB",
+      "bytes": 253780
+    }
+  ],
+  "actual_reviews": [
+    {
+      "actor": "Fermi",
+      "source_report_sha256": "a15306156055da1ab37860070d201e21da65dee81b47ec027b01c1e2b95900c1",
+      "original_event_timestamp": null,
+      "finding": "Actual full source, encoded delivery and private display reviewed; exact source report retained privately. This normalization is current attribution, not a reconstructed original event."
+    },
+    {
+      "actor": "Newton",
+      "source_report_sha256": "ba186af032301c4792d63d0620d2025947cd23f5289c603f4f7a23e1f6be7194",
+      "original_event_timestamp": null,
+      "finding": "Actual full source, encoded delivery and private display reviewed; exact source report retained privately. This normalization is current attribution, not a reconstructed original event."
+    },
+    {
+      "actor": "Root",
+      "source_report_sha256": "ad258966a92e8ff88119d9a3e97fc9b86c72eadb725f769b808b5c424e604cc6",
+      "original_event_timestamp": null,
+      "finding": "Actual full source, encoded delivery and private display reviewed; exact source report retained privately. This normalization is current attribution, not a reconstructed original event."
+    }
+  ],
+  "limits": "No new owner acceptance, whole-page integration or public deployment claim. Prior full active slot remains separately archived; preserved historical review is not re-dated."
+}

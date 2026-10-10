@@ -15,10 +15,10 @@ NEW = '20261006-balanced-opening-1'
 OLD = '20261002-timeline-1'
 COMMON_VERSION = '20261008-section-top-2'
 ROUTE_COMMON_VERSIONS = {
-    'church-history.html': '20261008-section-top-2-gallery-links-2',
+    'church-history.html': '20261010-emma-identity-links-1',
     'answers/who-was-joseph-smith.html': '20261010-final-art-links-1',
-    'art-gallery.html': '20261010-final-art-links-1',
-    'book-of-mormon-evidences.html': '20261010-final-art-links-1',
+    'art-gallery.html': '20261010-emma-identity-links-1',
+    'book-of-mormon-evidences.html': '20261010-emma-identity-links-1',
 }
 DELTA = '''
 /* Balance the introduction within the fixed hero-to-Continue interval. */
@@ -51,8 +51,8 @@ def assert_loader(common):
     inverse = common.replace('unified-opening.css?v=' + NEW, 'unified-opening.css?v=20260930-alignment-2')
     assert inverse.count('header-scroll.js?v=20261008-section-top-2') == 1, 'Exact navigation loader required'
     inverse = inverse.replace('header-scroll.js?v=20261008-section-top-2', 'header-scroll.js?v=20260927-anchor-fade-1', 1)
-    assert inverse.count('art-gallery-bridge.js?v=20261010-final-art-links-1') == 1, 'Exact reviewed gallery bridge loader required'
-    inverse = inverse.replace('art-gallery-bridge.js?v=20261010-final-art-links-1', 'art-gallery-bridge.js?v=20260915-sensitive-1', 1)
+    assert inverse.count('art-gallery-bridge.js?v=20261010-emma-identity-links-1') == 1, 'Exact reviewed gallery bridge loader required'
+    inverse = inverse.replace('art-gallery-bridge.js?v=20261010-emma-identity-links-1', 'art-gallery-bridge.js?v=20260915-sensitive-1', 1)
     assert digest(inverse) == BASE_COMMON, 'Unrelated shared loader change'
 
 

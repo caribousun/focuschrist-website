@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "site05_identity-neutral_preflight-independent",
+  "family": "SITE05_IDENTITY",
+  "stage": "neutral_preflight",
+  "actual_actor": "/root/newton_current",
+  "normalized_at": "2026-10-10T15:15:08.321480+00:00",
+  "source_recorded_at": "2026-10-10T15:05:39.910135+00:00",
+  "original_message_timestamp": null,
+  "original_message_digest": null,
+  "source_report_sha256": "dc9f65972e66b9d76bbaada9475a9834c091d493c9038a288daa3371c2080950",
+  "subject_sha256": "ab866e57b4a9ce6f2c64fa0376e40de4b87d263d3e1903967e2bf31df691e03f",
+  "withdrawn": false,
+  "verdict": "CONCUR",
+  "evidence_class": "current_exact_spec_reconciliation",
+  "findings": "One private original-scene neutral head intermediate only; body/other people/setting preserved visually, never final artwork."
+}

@@ -13,10 +13,10 @@ HERO_ROUTES = frozenset(p['path'] for p in json.loads((ROOT / 'docs/unified-open
 def assert_common_version(route, doc):
     common = [s['src'] for s in doc.select('script[src]') if 'site-common.js' in s['src']]
     version = {
-        'church-history.html': '20261008-section-top-2-gallery-links-2',
+        'church-history.html': '20261010-emma-identity-links-1',
         'answers/who-was-joseph-smith.html': '20261010-final-art-links-1',
-        'art-gallery.html': '20261010-final-art-links-1',
-        'book-of-mormon-evidences.html': '20261010-final-art-links-1',
+        'art-gallery.html': '20261010-emma-identity-links-1',
+        'book-of-mormon-evidences.html': '20261010-emma-identity-links-1',
     }.get(route, '20261008-section-top-2')
     prefix = '/' if route.startswith('jesus-christ/') else '../' * route.count('/')
     expected = prefix + 'site-common.js?v=' + version

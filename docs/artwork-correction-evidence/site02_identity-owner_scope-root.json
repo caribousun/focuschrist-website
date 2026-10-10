@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "site02_identity-owner_scope-root",
+  "family": "SITE02_IDENTITY",
+  "stage": "owner_scope",
+  "actual_actor": "/root",
+  "normalized_at": "2026-10-10T15:15:08.321480+00:00",
+  "source_recorded_at": null,
+  "original_message_timestamp": null,
+  "original_message_digest": null,
+  "source_report_sha256": "7c98d10fc4cdf76e5d12b235daf2d10b033802cab3e1d8b4295f57e9bcad613f",
+  "subject_sha256": "f91d7adb0488df4d235e0b400c6e451e90486965b951bcf9c262b58715827a3f",
+  "withdrawn": false,
+  "verdict": "RECORDED",
+  "evidence_class": "owner_scope_current_reconciliation",
+  "findings": "Current root-relayed owner requirement to correct active Emma likeness while preserving exact Harmony and later owner-preserved bedside SITE09; no new body redesign, unsupported pregnancy, universal face replacement or owner acceptance inferred. Original source-message time/digest remain unknown."
+}

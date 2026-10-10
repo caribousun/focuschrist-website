@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "id": "site02_identity-neutral_result-root",
+  "family": "SITE02_IDENTITY",
+  "stage": "neutral_result",
+  "actual_actor": "/root",
+  "normalized_at": "2026-10-10T15:15:08.321480+00:00",
+  "source_recorded_at": null,
+  "original_message_timestamp": null,
+  "original_message_digest": null,
+  "source_report_sha256": "22a068ebd2871a83a32c9beb80067617992bde356e4bedeb77c452aa36e7dcce",
+  "subject_sha256": "d2dbc4ccf1ef192e5eef5c62f0b09e3a429d109da4c0d15596be433338ab2f28",
+  "withdrawn": false,
+  "verdict": "RECORDED",
+  "evidence_class": "current_execution_reconciliation",
+  "findings": "Actual saved output and supplied execution inventory are bound; unavailable original tool-event timestamp/digest remain null. Graphics-brief execution is not imagegen execution.",
+  "spec_sha256": "1a28e84de133e417de8cad9a2aefa268a0dfc732e3edcfdc9c0d0fc437d6b9e3",
+  "tool": "image_gen.imagegen",
+  "input_sha256": [
+    "f91d7adb0488df4d235e0b400c6e451e90486965b951bcf9c262b58715827a3f"
+  ]
+}

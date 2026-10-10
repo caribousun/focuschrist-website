@@ -13,16 +13,19 @@
     const pictureAliases = new Map([
         ['art-c2a7f9036414', 'art-fb9041593ebb'],
         ['art-e8aa2c14211e', 'art-bf3eafcc71cc'],
-        ['art-82ed9c00b587', 'art-01f5918c3164'],
+        ['art-82ed9c00b587', 'art-cfc810b044b3'],
         ['art-89e864cd34e4', 'art-c4242967b8a6'],
-        ['art-6c98467750b1', 'art-d2d41e92a628'],
+        ['art-6c98467750b1', 'art-37ba51e6c512'],
         ['art-30da387593ee', 'art-629e01aebd7c'],
         ['art-d117f116ef39', 'art-fe5e1ed41d9b'],
         ['art-71d0e77d29ca', 'art-b02a6bb5283f'],
         ['art-b0d390116e40', 'art-668c171076f3'],
         ['art-e3bea40c689d', 'art-7fce6f8c3aab'],
         ['art-8626a0013555', 'art-8b3bee192219'],
-        ['art-88364b952e48', 'art-a034c9d00751']
+        ['art-88364b952e48', 'art-f9e2fdf16d37'],
+        ['art-01f5918c3164', 'art-cfc810b044b3'],
+        ['art-a034c9d00751', 'art-f9e2fdf16d37'],
+        ['art-d2d41e92a628', 'art-37ba51e6c512']
     ]);
     const clean = value => value.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
     function originalURL(source) {
@@ -126,7 +129,7 @@
             show();
         }
     });
-    fetch('art-gallery.json?v=20261010-final-art-links-1').then(response => {
+    fetch('art-gallery.json?v=20261010-emma-identity-links-1').then(response => {
         if (!response.ok) throw new Error('Gallery unavailable');
         return response.json();
     }).then(catalog => {

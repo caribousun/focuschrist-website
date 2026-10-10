@@ -570,11 +570,11 @@
       },
       {
         "slot": "joseph-emma-walk",
-        "asset": "assets/page-art/bom-evidences/joseph-emma-walk-body-v2.webp",
-        "responsive": "assets/page-art/bom-evidences/joseph-emma-walk-body-v2-960.webp",
+        "asset": "assets/page-art/bom-evidences/joseph-emma-walk-identity-v3-1536.webp",
+        "responsive": "assets/page-art/bom-evidences/joseph-emma-walk-identity-v3-960.webp",
         "width": 1536,
         "height": 1024,
-        "sha256": "f91d7adb0488df4d235e0b400c6e451e90486965b951bcf9c262b58715827a3f",
+        "sha256": "9790171e97dd3230156f58f77dfe0925cf3e55dd7be15b9cbc630688647dc694",
         "tone": "warm shared attention along a path",
         "reviewed": true,
         "historical_review": {
@@ -587,10 +587,11 @@
           "tone": "warm shared attention along a path",
           "reviewed": true
         },
-        "source_png_sha256": "9bb03bbdc49f680f8c17e2552a57c7e583627dcce08f8ae0b857d2a7e5ce83ba",
-        "current_delivery_review": "docs/reviews/site02-versioned-delivery/delivery-review.json",
+        "source_png_sha256": "25021b2639f47c3994e5e16b018701d3a4ff51eee4e96b2d183abe0b001c4741",
+        "current_delivery_review": "docs/reviews/emma-identity-current/site02-delivery.json",
         "assembled_review_status": "PENDING",
-        "review_scope": "Same exact previously accepted SITE02 full and thumbnail delivery. Versioned migration preserves historical baseline; current final page/device/public review remains pending."
+        "review_scope": "Actual corrected source, encoded derivatives and private display reviewed by root, Fermi and Newton. Owning-page integration/public verification remains pending; no owner acceptance inferred.",
+        "prior_active_review": "docs/reviews/emma-identity-current/site02-prior-active-slot.json"
       },
       {
         "slot": "christ-compassion",
@@ -735,15 +736,14 @@
       },
       {
         "slot": "relief-society",
-        "asset": "assets/page-art/church-history/relief-society-torso-v3.webp",
-        "responsive": "assets/page-art/church-history/relief-society-torso-v3-960.webp",
+        "asset": "assets/page-art/church-history/relief-society-identity-v4-1672.webp",
+        "responsive": "assets/page-art/church-history/relief-society-identity-v4-960.webp",
         "width": 1672,
         "height": 941,
-        "sha256": "f9f1ebceace304bddcd8f91515e66e95a342a3ec745c24630c23583dd73a339c",
+        "sha256": "f29471cc060884d63acca83376ae7303a270419a51615bcea946af3a39ad9bdd",
         "original_sha256": "1a05f057c01f830e8b07c4ca224b9c16ff277e387e453f92b53c62904cb3e02e",
         "tone": "warm purpose and attentive friendship",
         "reviewed": true,
-        "gaze_review": "Standalone full/native revised delivery reviewed by Fermi, Newton and root; final desktop/phone context remains pending.",
         "historical_review": {
           "slot": "relief-society",
           "asset": "assets/page-art/church-history/relief-society.webp",
@@ -756,13 +756,11 @@
           "reviewed": true,
           "gaze_review": "Emma and seated listener meet eyes; root and independent full/phone review passed."
         },
-        "current_delivery_reviews": {
-          "Fermi": "docs/reviews/emma-torso-delivery-v3/fermi-delivery.json",
-          "Newton": "docs/reviews/emma-torso-delivery-v3/newton-delivery.json",
-          "Root": "docs/reviews/emma-torso-delivery-v3/root-delivery.json"
-        },
-        "correction_source_sha256": "e4082e41520f37f672bc4beb3598879921f0fe03d29c28c343824dba524ac2e3",
-        "assembled_review_status": "PENDING"
+        "assembled_review_status": "PENDING",
+        "source_png_sha256": "4c9c79f6d0eb407f668d0048d63b2de0ef851d3ecba0474de6d88521f2b4fb1c",
+        "current_delivery_review": "docs/reviews/emma-identity-current/site05-delivery.json",
+        "prior_active_review": "docs/reviews/emma-identity-current/site05-prior-active-slot.json",
+        "review_scope": "Actual corrected source, encoded derivatives and private display reviewed by root, Fermi and Newton. Owning-page integration/public verification remains pending; no owner acceptance inferred."
       },
       {
         "slot": "kirtland-bank",

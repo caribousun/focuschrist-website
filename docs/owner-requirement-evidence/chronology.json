@@ -1,0 +1,147 @@
+{
+  "schema": 1,
+  "source_report_sha256": "ec177990ac0b5778d62615ae73fdb7b5a381bd7422d2adcc4e5a2b14fb8c5e09",
+  "scope": "Actual reviewed scene chronology; source labels retain honest date precision.",
+  "actor": "/root/newton_current",
+  "normalized_at": "2026-10-10T15:11:46.571054+00:00",
+  "original_event_time": null,
+  "details": {
+    "sources": [
+      "https://www.churchofjesuschrist.org/study/history/topics/joseph-and-emma-hale-smith-family?lang=eng",
+      "https://www.josephsmithpapers.org/event/birth-and-death-of-jss-son",
+      "https://newsroom.churchofjesuschrist.org/article/remembering-emma-hale-smith-the-first-president-of-the-relief-society",
+      "https://www.churchofjesuschrist.org/learn/emma-hale-smith?lang=eng",
+      "https://www.churchhistorianspress.org/the-first-fifty-years-of-relief-society/part-1/1-2/1-2-1?lang=eng"
+    ],
+    "source_limitations": "1842 birth is reported in official history citing contemporary relatives, sexton record and family Bible. Preserve reported wording. Pregnancy in early 1828 is date inference from documented birth; precise gestation and body size are not documented. Absence of established pregnancy is not a medical claim.",
+    "rows": [
+      {
+        "family": "SITE01",
+        "scene_date": "Early scribe scene; exact date unspecified",
+        "age": "Young adult",
+        "historical_status": "unknown",
+        "reason": "No dated pregnancy evidence for this broad scene"
+      },
+      {
+        "family": "SITE02",
+        "scene_date": "Undated imagined walk",
+        "age": "Young adult",
+        "historical_status": "unknown",
+        "reason": "No dated pregnancy evidence; do not invent maternity"
+      },
+      {
+        "family": "SITE03",
+        "scene_date": "Exact protected Harmony family",
+        "age": "Unspecified",
+        "historical_status": "exception_unchanged",
+        "reason": "Preserve exact 1400/800 exception; no historical pregnancy finding inferred"
+      },
+      {
+        "family": "SITE04",
+        "scene_date": "Undated identity portrait",
+        "age": "Unspecified",
+        "historical_status": "unknown",
+        "reason": "No dated pregnancy evidence"
+      },
+      {
+        "family": "SITE05",
+        "scene_date": "1842-03-17",
+        "age": "37",
+        "historical_status": "postpartum",
+        "reason": "Reported child born and buried 1842-02-06; 39 days earlier; not active pregnancy"
+      },
+      {
+        "family": "SITE06",
+        "scene_date": "1827-01-18",
+        "age": "22",
+        "historical_status": "unknown",
+        "reason": "Marriage date establishes setting, not pregnancy"
+      },
+      {
+        "family": "SITE07",
+        "scene_date": "Early December 1827",
+        "age": "23",
+        "historical_status": "pregnant_supported",
+        "reason": "First child born 1828-06-15; supports pregnancy, not late-term silhouette or exact gestational week"
+      },
+      {
+        "family": "SITE08",
+        "scene_date": "Early 1828",
+        "age": "23",
+        "historical_status": "pregnant_supported",
+        "reason": "First child born 1828-06-15; precise gestational week unknown"
+      },
+      {
+        "family": "SITE09",
+        "scene_date": "June 1828 after childbirth and loss",
+        "age": "23",
+        "historical_status": "postpartum",
+        "reason": "First child born and died 1828-06-15; recovery and bedding are not a new pregnancy"
+      },
+      {
+        "family": "SITE10",
+        "scene_date": "1828-12-04",
+        "age": "24",
+        "historical_status": "unknown",
+        "reason": "No active pregnancy established for this date"
+      },
+      {
+        "family": "SITE11",
+        "scene_date": "Late June 1830",
+        "age": "25",
+        "historical_status": "unknown",
+        "reason": "1831 twins do not establish pregnancy in late June 1830; no positive scene-specific evidence found"
+      },
+      {
+        "family": "SITE12",
+        "scene_date": "November 1838",
+        "age": "34",
+        "historical_status": "postpartum",
+        "reason": "Alexander born 1838-06-02; prior birth does not establish current pregnancy or required abdominal projection"
+      },
+      {
+        "family": "SITE13",
+        "scene_date": "1842-03-17",
+        "age": "37",
+        "historical_status": "postpartum",
+        "reason": "Reported 1842-02-06 birth; same 39-day interval as SITE05"
+      },
+      {
+        "family": "H1",
+        "scene_date": "Spring 1828",
+        "age": "23",
+        "historical_status": "pregnant_supported",
+        "reason": "First child born 1828-06-15"
+      },
+      {
+        "family": "H2",
+        "scene_date": "Autumn 1835",
+        "age": "31",
+        "historical_status": "unknown",
+        "reason": "Frederick born 1836-06-20; possible early pregnancy is inference with imprecise scene date, not positive authority for a visible maternity silhouette"
+      },
+      {
+        "family": "H3",
+        "scene_date": "March 1839",
+        "age": "34",
+        "historical_status": "unknown",
+        "reason": "No active pregnancy established for this date"
+      },
+      {
+        "family": "H4",
+        "scene_date": "March 1842",
+        "age": "37",
+        "historical_status": "postpartum",
+        "reason": "Reported 1842-02-06 birth; postpartum, not pregnant"
+      },
+      {
+        "family": "H5",
+        "scene_date": "Autumn 1871",
+        "age": "67",
+        "historical_status": "not_pregnant",
+        "reason": "Late-life scene; no pregnancy evidence or maternity interpretation"
+      }
+    ]
+  },
+  "limits": "Current evidence normalization, not a new historical pixel review or owner acceptance. Full original report remains preserved privately."
+}

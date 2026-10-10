@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "site02_identity-neutral_preflight-root",
+  "family": "SITE02_IDENTITY",
+  "stage": "neutral_preflight",
+  "actual_actor": "/root",
+  "normalized_at": "2026-10-10T15:15:08.321480+00:00",
+  "source_recorded_at": null,
+  "original_message_timestamp": null,
+  "original_message_digest": null,
+  "source_report_sha256": "77717698e14a6cb67a594653aa1023fb2e53346385e41e4b4a4a605153e97d7d",
+  "subject_sha256": "1a28e84de133e417de8cad9a2aefa268a0dfc732e3edcfdc9c0d0fc437d6b9e3",
+  "withdrawn": false,
+  "verdict": "CONCUR",
+  "evidence_class": "current_exact_spec_reconciliation",
+  "findings": "Current reread concurs with exact original-scene neutral head intermediate; never publish the unfinished intermediate."
+}

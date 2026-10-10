@@ -1,0 +1,31 @@
+{
+  "slot": "relief-society",
+  "asset": "assets/page-art/church-history/relief-society-torso-v3.webp",
+  "responsive": "assets/page-art/church-history/relief-society-torso-v3-960.webp",
+  "width": 1672,
+  "height": 941,
+  "sha256": "f9f1ebceace304bddcd8f91515e66e95a342a3ec745c24630c23583dd73a339c",
+  "original_sha256": "1a05f057c01f830e8b07c4ca224b9c16ff277e387e453f92b53c62904cb3e02e",
+  "tone": "warm purpose and attentive friendship",
+  "reviewed": true,
+  "gaze_review": "Standalone full/native revised delivery reviewed by Fermi, Newton and root; final desktop/phone context remains pending.",
+  "historical_review": {
+    "slot": "relief-society",
+    "asset": "assets/page-art/church-history/relief-society.webp",
+    "responsive": "assets/page-art/church-history/relief-society-960.webp",
+    "width": 1672,
+    "height": 941,
+    "sha256": "5f73a1f44d11f9e8093dd304bb4ec1b73bc636110d5fb4f0f77b44be3007c0f8",
+    "original_sha256": "1a05f057c01f830e8b07c4ca224b9c16ff277e387e453f92b53c62904cb3e02e",
+    "tone": "warm purpose and attentive friendship",
+    "reviewed": true,
+    "gaze_review": "Emma and seated listener meet eyes; root and independent full/phone review passed."
+  },
+  "current_delivery_reviews": {
+    "Fermi": "docs/reviews/emma-torso-delivery-v3/fermi-delivery.json",
+    "Newton": "docs/reviews/emma-torso-delivery-v3/newton-delivery.json",
+    "Root": "docs/reviews/emma-torso-delivery-v3/root-delivery.json"
+  },
+  "correction_source_sha256": "e4082e41520f37f672bc4beb3598879921f0fe03d29c28c343824dba524ac2e3",
+  "assembled_review_status": "PENDING"
+}
