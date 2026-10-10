@@ -51,3 +51,39 @@ body.fc-site .fc-study-tools button[data-save-study], body.fc-site .fc-study-too
 /* Each downloadable companion carries one disclosure; the screen uses the page footer. */
 .fc-companion article > footer { display: none; }
 @media print { .fc-print-copy > footer { display: block; } }
+
+/* Answers guided paths share a continuous reading surface. */
+@media screen {
+  #guided-studies .fc-guided-grid {
+    background: linear-gradient(135deg, var(--fc-bg-warm), var(--fc-bg-deep));
+  }
+  #guided-studies .fc-guided-path {
+    border: 0;
+    border-left: 1px solid transparent;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+  #guided-studies .fc-guided-path + .fc-guided-path {
+    border-left-color: var(--fc-line);
+  }
+  #guided-studies .fc-guided-path h3::before {
+    content: "";
+    display: block;
+    width: 32px;
+    height: 2px;
+    margin-bottom: 12px;
+    background: var(--fc-gold);
+  }
+  #guided-studies .fc-guided-path li + li {
+    margin-top: 1.75rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  #guided-studies .fc-guided-path {
+    border-left: 0;
+  }
+  #guided-studies .fc-guided-path + .fc-guided-path {
+    border-top: 1px solid var(--fc-line);
+  }
+}

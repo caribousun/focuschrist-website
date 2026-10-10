@@ -335,7 +335,16 @@ def reviewed_picture_pill_style(data):
             and prior.count(PICTURE_PILL_ADDITION) == 1
             and hashlib.sha256(prior.replace(PICTURE_PILL_ADDITION, b'', 1)).hexdigest() == '094e3c7c814476bc17653435b36de4fff53ed970fd25e3635f887717961b5714')
 
+# Exact Answers-only visual appendix; preserve raw historical bytes and owner restrictions.
+GUIDED_READING_APPENDIX = b'\r\n/* Answers guided paths share a continuous reading surface. */\n@media screen {\n  #guided-studies .fc-guided-grid {\n    background: linear-gradient(135deg, var(--fc-bg-warm), var(--fc-bg-deep));\n  }\n  #guided-studies .fc-guided-path {\n    border: 0;\n    border-left: 1px solid transparent;\n    border-radius: 0;\n    background: transparent;\n    box-shadow: none;\n  }\n  #guided-studies .fc-guided-path + .fc-guided-path {\n    border-left-color: var(--fc-line);\n  }\n  #guided-studies .fc-guided-path h3::before {\n    content: "";\n    display: block;\n    width: 32px;\n    height: 2px;\n    margin-bottom: 12px;\n    background: var(--fc-gold);\n  }\n  #guided-studies .fc-guided-path li + li {\n    margin-top: 1.75rem;\n  }\n}\n@media screen and (max-width: 900px) {\n  #guided-studies .fc-guided-path {\n    border-left: 0;\n  }\n  #guided-studies .fc-guided-path + .fc-guided-path {\n    border-top: 1px solid var(--fc-line);\n  }\n}\n'
+GUIDED_READING_SHA256 = '6ec6dfa3150ae158f4689972042cac9780a25cac4066fe78fe2f3312b618eea9'
+def reviewed_guided_reading_style(data):
+    if hashlib.sha256(data).hexdigest() != GUIDED_READING_SHA256 or data.count(GUIDED_READING_APPENDIX) != 1: return False
+    prior = data.replace(GUIDED_READING_APPENDIX, b'', 1)
+    return hashlib.sha256(prior).hexdigest() == SCOPED_INTERFACE_STYLES['guided-studies.css'][0]
+
 def reviewed_scoped_interface_style(name, data):
+    if name == 'guided-studies.css': return reviewed_guided_reading_style(data)
     if name in CURRENT_REVIEWED_STYLE_INVERSES and hashlib.sha256(data).hexdigest() != CURRENT_REVIEWED_STYLE_INVERSES[name][0]: return False
     data = before_current_reviewed_style(name, data)
     data = historical_style_bytes(data)
@@ -426,6 +435,8 @@ def main():
         assert reviewed_scoped_interface_style('guided-studies.css', guided)
         assert not reviewed_scoped_interface_style('guided-studies.css', guided + b'body{height:1px}')
         assert not reviewed_scoped_interface_style('guided-studies.css', b'X' + guided[1:])
+        assert not reviewed_scoped_interface_style('guided-studies.css', guided + GUIDED_READING_APPENDIX)
+        assert not reviewed_scoped_interface_style('guided-studies.css', guided.replace(b'margin-top: 1.75rem;', b'margin-top: 9rem;', 1))
         for owner in ('answers.html', 'history/emma-hale-smith.html'):
             assert scoped_interface_reference_allowed('guided-studies.css', owner, 'guided-studies.css')
         assert not scoped_interface_reference_allowed('guided-studies.css', 'index.html', 'guided-studies.css')
