@@ -53,6 +53,10 @@ body.fc-home-presentation .fc-home-illustrated-card > img {
     width: 100%;
     height: auto;
 }
+body.fc-home-presentation .fc-home-illustrated-card[data-home-reference="history"] > img {
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+}
 body.fc-home-presentation .fc-home-preview:focus-visible,
 body.fc-home-presentation .fc-home-illustrated-card:focus-visible {
     outline: 3px solid var(--fc-gold-light);

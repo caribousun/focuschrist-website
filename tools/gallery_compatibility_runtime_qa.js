@@ -8,9 +8,9 @@ const dataRoot = path.resolve(process.env.GALLERY_QA_DATA_ROOT || root);
 const read = name => fs.readFileSync(path.join(root, name), 'utf8');
 const catalog = JSON.parse(fs.readFileSync(path.join(dataRoot, 'art-gallery.json'), 'utf8'));
 const cases = [];
-const picturePairs = [["art-c2a7f9036414", "art-fb9041593ebb"], ["art-e8aa2c14211e", "art-bf3eafcc71cc"], ["art-82ed9c00b587", "art-01f5918c3164"], ["art-89e864cd34e4", "art-c4242967b8a6"], ["art-6c98467750b1", "art-d2d41e92a628"], ["art-30da387593ee", "art-629e01aebd7c"], ["art-d117f116ef39", "art-fe5e1ed41d9b"], ["art-71d0e77d29ca", "art-b02a6bb5283f"], ["art-b0d390116e40", "art-668c171076f3"], ["art-e3bea40c689d", "art-7fce6f8c3aab"], ["art-8626a0013555", "art-8b3bee192219"], ["art-88364b952e48", "art-a034c9d00751"]];
+const picturePairs = [["art-c2a7f9036414", "art-fb9041593ebb"], ["art-e8aa2c14211e", "art-bf3eafcc71cc"], ["art-82ed9c00b587", "art-cfc810b044b3"], ["art-89e864cd34e4", "art-c4242967b8a6"], ["art-6c98467750b1", "art-37ba51e6c512"], ["art-30da387593ee", "art-629e01aebd7c"], ["art-d117f116ef39", "art-fe5e1ed41d9b"], ["art-71d0e77d29ca", "art-b02a6bb5283f"], ["art-b0d390116e40", "art-668c171076f3"], ["art-e3bea40c689d", "art-7fce6f8c3aab"], ["art-8626a0013555", "art-8b3bee192219"], ["art-88364b952e48", "art-f9e2fdf16d37"], ["art-01f5918c3164", "art-cfc810b044b3"], ["art-a034c9d00751", "art-f9e2fdf16d37"], ["art-d2d41e92a628", "art-37ba51e6c512"]];
 const sourceOld = 'source-44bc8f90e9cf', sourceNew = 'source-0f854bc93cec';
-const sourcePairs = [["source-44bc8f90e9cf", "source-0f854bc93cec"], ["source-b8f1acb4ee67", "source-0b724121e66b"], ["source-d203f8844981", "source-41ace1913814"], ["source-b8fb45227bb3", "source-5a24b826f3f4"], ["source-9ef33a38a3ec", "source-d8e9ad0fdf7c"], ["source-6d9341ce7a52", "source-be42ad339302"], ["source-8dace3b6bf78", "source-4a4ae352d87f"], ["source-94d28fae2282", "source-6cd5e5535101"], ["source-a6b610e8d1ce", "source-85cb8f284453"], ["source-e30c8ddd579a", "source-d1ce88bbb045"], ["source-a3b8e155238a", "source-05cf7c0e2b6a"]];
+const sourcePairs = [["source-44bc8f90e9cf", "source-0f854bc93cec"], ["source-b8f1acb4ee67", "source-5ea3c750ad6d"], ["source-d203f8844981", "source-41ace1913814"], ["source-b8fb45227bb3", "source-0dadddbb503d"], ["source-9ef33a38a3ec", "source-d8e9ad0fdf7c"], ["source-6d9341ce7a52", "source-be42ad339302"], ["source-8dace3b6bf78", "source-4a4ae352d87f"], ["source-94d28fae2282", "source-6cd5e5535101"], ["source-a6b610e8d1ce", "source-85cb8f284453"], ["source-e30c8ddd579a", "source-d1ce88bbb045"], ["source-a3b8e155238a", "source-12af89590691"], ["source-0b724121e66b", "source-5ea3c750ad6d"], ["source-05cf7c0e2b6a", "source-12af89590691"], ["source-5a24b826f3f4", "source-0dadddbb503d"]];
 // Validate the actual production tables, not merely duplicate test data.
 function guardAliases(file, name, expected, canonicalIds) {
     const match = read(file).match(new RegExp('const ' + name + ' = new Map\\((\\[[\\s\\S]*?\\])\\);'));
@@ -19,7 +19,9 @@ function guardAliases(file, name, expected, canonicalIds) {
     assert.deepEqual(pairs, expected, name + ' preserves exact reviewed mappings');
     const keys = pairs.map(p => p[0]), targets = pairs.map(p => p[1]);
     assert.equal(new Set(keys).size, keys.length, name + ' duplicate-key collision');
-    assert.equal(new Set(targets).size, targets.length, name + ' target collision');
+    // Exact reviewed successors intentionally preserve both earlier and immediate prior links.
+    const allowedFanIn = name === 'pictureAliases' ? ["art-cfc810b044b3", "art-f9e2fdf16d37", "art-37ba51e6c512"] : ["source-5ea3c750ad6d", "source-12af89590691", "source-0dadddbb503d"];
+    for (const target of new Set(targets)) assert.equal(targets.filter(v => v === target).length, allowedFanIn.includes(target) ? 2 : 1, name + ' exact reviewed fan-in');
     for (const [oldId, newId] of pairs) {
         assert(!keys.includes(newId), name + ' no chains or cycles');
         assert.equal(canonicalIds.filter(id => id === oldId).length, 0, name + ' retired key cannot shadow a current record');

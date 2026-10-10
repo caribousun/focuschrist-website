@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "id": "site01_identity-delivery_finished-executor",
+  "family": "SITE01_IDENTITY",
+  "stage": "delivery_finished",
+  "actual_actor": "/root/fermi_current",
+  "normalized_at": "2026-10-10T15:15:08.321480+00:00",
+  "source_recorded_at": null,
+  "original_message_timestamp": null,
+  "original_message_digest": null,
+  "source_report_sha256": "a15306156055da1ab37860070d201e21da65dee81b47ec027b01c1e2b95900c1",
+  "subject_sha256": "940d7af8b5a2176e779dc9ab3d17a47f0e405617d109d804f6e0b4dff1b517e0",
+  "withdrawn": false,
+  "verdict": "CONCUR",
+  "evidence_class": "actual_finished_review_normalization",
+  "findings": "Actual encoded delivery files personally inspected; no installation/publication claim.",
+  "pixels_inspected": true
+}

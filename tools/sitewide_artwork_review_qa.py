@@ -96,8 +96,23 @@ def watch_shorts_style_reference_allowed(relative, text):
     return relative == "watch.html" or WATCH_SHORTS_STYLE not in text
 
 def reviewed_home_style(data):
+    # Exact approved full-picture containment; retain the prior byte contract.
+    if hashlib.sha256(data).hexdigest() == "40f23bc00b39bff593fe58c9f967e6f3750de43935547e88ef75249cd44866bc":
+        rule = b'body.fc-home-presentation .fc-home-illustrated-card[data-home-reference="history"] > img {\n    aspect-ratio: 16 / 9;\n    object-fit: contain;\n}\n'
+        if data.count(rule) != 1:
+            return False
+        data = data.replace(rule, b"", 1)
     data = historical_style_bytes(data)
     return hashlib.sha256(data).hexdigest() == HOME_STYLE_SHA256
+
+def reviewed_gallery_dialog_style(data):
+    # Exact owner-reviewed viewport repair; recover the complete prior CSS.
+    current = b'.fc-gallery-dialog { position: fixed; inset: 0; width: 100%;'
+    prior = b'.fc-gallery-dialog { position: fixed; inset: 0; width: 100vw;'
+    return (hashlib.sha256(data).hexdigest() == 'f9bebefb1b4a70a73efdbef6344b40973394521caa5682660a472256530d151a'
+            and data.count(current) == 1
+            and hashlib.sha256(data.replace(current, prior, 1)).hexdigest() == '05cd54295a89badc8349e02df55f7b44e23ac5a2995cdc587d5ce47f853ae40d')
+
 
 def home_style_reference_allowed(relative, text):
     return relative == HOME_STYLE_OWNER or HOME_STYLE not in text
@@ -497,6 +512,14 @@ def main():
         assert not watch_shorts_style_reference_allowed('shared.js', WATCH_SHORTS_STYLE)
         home_css = (ROOT/HOME_STYLE).read_bytes()
         assert reviewed_home_style(home_css)
+        gallery_css = (ROOT/'art-gallery.css').read_bytes()
+        assert reviewed_gallery_dialog_style(gallery_css)
+        assert not reviewed_gallery_dialog_style(gallery_css.replace(b'width: 100%; height: 100dvh', b'width: 100vw; height: 100dvh'))
+        assert not reviewed_gallery_dialog_style(gallery_css.replace(b'width: 100%; height: 100dvh', b'width: 99%; height: 100dvh'))
+        assert not reviewed_gallery_dialog_style(gallery_css + b'\n.x{height:999px}')
+        home_rule = b'body.fc-home-presentation .fc-home-illustrated-card[data-home-reference="history"] > img {\n    aspect-ratio: 16 / 9;\n    object-fit: contain;\n}\n'
+        assert reviewed_home_style(home_css.replace(home_rule, b"", 1))
+        assert not reviewed_home_style(home_css.replace(b"object-fit: contain", b"object-fit: cover"))
         assert not reviewed_home_style(home_css.replace(b'position:static;padding:16px 17px', b'position:absolute;padding:16px 17px'))
         assert not reviewed_home_style(home_css + b'\nbody.fc-home-presentation{height:999px}')
         assert home_style_reference_allowed('index.html', HOME_STYLE)
@@ -782,6 +805,8 @@ def main():
     check(reviewed_viewer_style((ROOT/VIEWER_STYLE).read_bytes()), 'Full-image viewer stylesheet differs from exact reviewed bytes')
     check(reviewed_viewer_bindings(viewer_bindings(visitor_viewer_sources())), 'Full-image viewer consumer references differ from exact reviewed bindings')
     excluded_styles.add(VIEWER_STYLE)
+    check(reviewed_gallery_dialog_style((ROOT/'art-gallery.css').read_bytes()), 'Gallery viewport stylesheet differs from exact reviewed width inverse')
+    excluded_styles.add('art-gallery.css')
     picture_pill_bytes = (ROOT/'artwork-actions.css').read_bytes()
     check(reviewed_picture_pill_style(picture_pill_bytes), 'Picture source pills differ from exact scoped reviewed change')
     check(not reviewed_picture_pill_style(picture_pill_bytes.replace(b'999px;', b'10px;', 1)), 'Picture pill radius mutation escaped')

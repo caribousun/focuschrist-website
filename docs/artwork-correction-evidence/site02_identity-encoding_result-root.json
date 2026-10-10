@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "id": "site02_identity-encoding_result-root",
+  "family": "SITE02_IDENTITY",
+  "stage": "encoding_result",
+  "actual_actor": "/root",
+  "normalized_at": "2026-10-10T15:15:08.321480+00:00",
+  "source_recorded_at": null,
+  "original_message_timestamp": null,
+  "original_message_digest": null,
+  "source_report_sha256": "ac8c96644b1795ae62583d17ae0827e69a5fe2ad12b932a94e5c4319a6be314c",
+  "subject_sha256": "ac8c96644b1795ae62583d17ae0827e69a5fe2ad12b932a94e5c4319a6be314c",
+  "withdrawn": false,
+  "verdict": "RECORDED",
+  "evidence_class": "current_execution_reconciliation",
+  "findings": "Actual saved output and supplied execution inventory are bound; unavailable original tool-event timestamp/digest remain null. Graphics-brief execution is not imagegen execution.",
+  "spec_sha256": "d9839135c9c4c5bc3ea554972ddb3b384b61344717165275a5584581ecf14b78"
+}

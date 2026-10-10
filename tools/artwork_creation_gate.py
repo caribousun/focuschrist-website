@@ -387,8 +387,11 @@ def run(root, mode='release', scene=None, page_overrides=None):
     # Local corrections preserve frozen originals and historical coverage.
     # Pending until the complete separate packet receives exact review.
     from artwork_reviewed_corrections import validate as validate_reviewed_corrections
-    approved_corrections_binding = '6f9510c88845fbef288289a33beab1a841f414ea65ab1212577c02e284d27a75'
+    approved_corrections_binding = '42ba0b7b149470f37c30c7677946b43695cf8f991f6158f7e97fe6b09b4f2691'
     correction_record = json.loads((root / 'docs/artwork-correction-reviews.json').read_text(encoding='utf-8'))
+    from artwork_owner_closure import validate as validate_owner_closure
+    validate_owner_closure(root, correction_record['owner_requirement_closure'],
+        '52c188ff93643f39b7f5f6a40498c4c96399c3eee7321e3b725892a85196a3a5', pixel_hash)
     corrections, correction_hashes, correction_pixels = validate_reviewed_corrections(
         root, correction_record, approved_corrections_binding, added, covered, rejected, pixel_hash, inventory)
     require(not (correction_hashes & originals) and not (correction_pixels & original_pixels), 'Correction family duplicates another creation')

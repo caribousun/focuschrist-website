@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "id": "site01_identity-delivery_finished-root",
+  "family": "SITE01_IDENTITY",
+  "stage": "delivery_finished",
+  "actual_actor": "/root",
+  "normalized_at": "2026-10-10T15:15:08.321480+00:00",
+  "source_recorded_at": null,
+  "original_message_timestamp": null,
+  "original_message_digest": null,
+  "source_report_sha256": "ad258966a92e8ff88119d9a3e97fc9b86c72eadb725f769b808b5c424e604cc6",
+  "subject_sha256": "940d7af8b5a2176e779dc9ab3d17a47f0e405617d109d804f6e0b4dff1b517e0",
+  "withdrawn": false,
+  "verdict": "CONCUR",
+  "evidence_class": "actual_finished_review_normalization",
+  "findings": "Actual encoded delivery files personally inspected; no installation/publication claim.",
+  "pixels_inspected": true
+}

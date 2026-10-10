@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "source_report_sha256": "f5291235012df54d3c8221b9a5c249518a72ee0961c79c0cd9a46b66d9e98187",
+  "scope": "Exact current private display or explicitly preserved prior SITE11 actual display; no public-page interaction inference.",
+  "actor": "/root/newton_current",
+  "normalized_at": "2026-10-10T15:11:46.571054+00:00",
+  "original_event_time": null,
+  "details": {},
+  "limits": "Current evidence normalization, not a new historical pixel review or owner acceptance. Full original report remains preserved privately."
+}

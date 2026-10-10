@@ -53,7 +53,7 @@ def stamp(value):
 
 def safe_public(value):
     text = json.dumps(value, ensure_ascii=False)
-    check(not re.search(r'(?i)([a-z]:[\\/]|file://|/Users/|\\\\Users\\\\|docs.google.com/document/d/)', text), 'Private path or authority document in public receipt')
+    check(not re.search(r'(?i)(\b[a-z]:[\\/]|file://|/Users/|\\\\Users\\\\|docs.google.com/document/d/)', text), 'Private path or authority document in public receipt')
 
 def validate(root, record, approved_binding, added, existing_coverage, rejected, pixel_hash, baseline_inventory):
     check(record.get('schema') == 1 and record.get('status') == 'REVIEWED_EXACT_EVIDENCE', 'Correction ledger pending')
@@ -72,11 +72,44 @@ def validate(root, record, approved_binding, added, existing_coverage, rejected,
     expression_stages = {'owner_scope', 'expression_donor_preflight', 'expression_donor_result',
                          'expression_composite_preflight', 'expression_composite_result',
                          'source_finished', 'encoding_preflight', 'encoding_result', 'delivery_finished'}
+    identity_ids = {'SITE01_IDENTITY': 'SITE01', 'SITE02_IDENTITY': 'SITE02', 'SITE05_IDENTITY': 'SITE05'}
+    identity_kinds = {'reviewed_existing_source', 'generated_neutral_intermediate', 'generated_identity_fill'}
+    identity_stages = {'owner_scope', 'neutral_preflight', 'neutral_result', 'identity_preflight',
+                       'identity_result', 'source_finished', 'encoding_preflight', 'encoding_result', 'delivery_finished'}
     from PIL import Image
     for family in families:
         check(family.get('authority_kind') == 'reviewed_local_correction' and family.get('precreation_claim') is False, 'Invented canonical precreation')
         identity = family['id']
         expression = identity == 'SITE07_EXPRESSION'
+        identity_fill = identity in identity_ids
+        if identity_fill:
+            check(family.get('immutable_originals', []) == [], 'Identity prior is not a new immutable-original declaration')
+            scene = identity_ids[identity]
+            check(family.get('scene_family_id') == scene, 'Wrong identity scene')
+            if scene == 'SITE01':
+                prior = validated_families.get(scene)
+                check(family.get('prior_kind') == 'reviewed_correction', 'Wrong identity prior class')
+            else:
+                check(family.get('prior_kind') == 'historical_delivery', 'Wrong identity prior class')
+                # This registry has already passed the existing historical adapter.
+                historical = json.loads((root / 'docs/artwork-historical-delivery-reviews.json').read_text(encoding='utf-8'))
+                matches = [f for f in historical['spec']['families'] if f['id'] == scene]
+                check(len(matches) == 1, 'Missing historical identity source')
+                prior = matches[0]
+            check(prior is not None and family.get('prior_record_id') == scene and canonical(prior) == family.get('prior_record_sha256'), 'Missing or changed identity prior record')
+            expected_preserved = [{'path': a['path'], 'sha256': a['sha256']} for a in prior['assets']]
+            check(family['preserved_assets'] == expected_preserved, 'Identity preservation set changed')
+            for a in family['preserved_assets']:
+                check(a['path'] in existing_coverage or a['path'] in covered, 'Identity source lacks prior reviewed coverage')
+                evidence(root, a, rejected)
+            check(family['prior_source'] in expected_preserved, 'Identity input is not preserved prior asset')
+            refs = family['identity_references']
+            check(refs == [
+                {'path': 'assets/identities/emma-smith-owner-approved-20260930.png', 'sha256': '7d0a07cc673d244ccd54d478c53d1e68d248e39d9b1101f87dfe3681cbb839d1'},
+                {'path': 'assets/page-art/emma-life/emma-h4-review.png', 'sha256': '24e0b13c84cabae92c972034f1fc775162b2800a93e4b14d876ca16c31a269ea'},
+                {'path': 'assets/identities/emma-smith-approved-gentle-smile-20260930.png', 'sha256': 'f6d2493babf5d2ab7a6e118a57827f7db05e6aea934feb5739256987ec186688'},
+            ], 'Wrong approved identity references or order')
+            for a in refs: evidence(root, a, rejected)
         if expression:
             check(family.get('scene_family_id') == 'SITE07' and family.get('prior_record_id') == 'SITE07', 'Wrong expression scene or prior record')
             prior = validated_families.get('SITE07')
@@ -87,8 +120,8 @@ def validate(root, record, approved_binding, added, existing_coverage, rejected,
         actors = family['current_reviewers']
         check(set(actors) == {'executor', 'independent', 'root'} and len(set(actors.values())) == 3, 'Three distinct current actors required')
         check(all(isinstance(a, str) and a.strip() for a in actors.values()), 'Missing actor identity')
-        originals = family['immutable_originals']
-        check(originals and len({x['path'] for x in originals}) == len(originals), 'Missing or duplicate originals')
+        originals = [] if identity_fill else family['immutable_originals']
+        check(identity_fill or (originals and len({x['path'] for x in originals}) == len(originals)), 'Missing or duplicate originals')
         for item in originals:
             check(item['path'] in baseline_inventory, 'Correction source is not immutable baseline')
             evidence(root, item, rejected)
@@ -100,12 +133,19 @@ def validate(root, record, approved_binding, added, existing_coverage, rejected,
         excluded = set(family['excluded_pixel_ancestors'])
         check(all(sha(x) for x in excluded), 'Invalid excluded ancestry')
         for node in nodes:
-            check(node['kind'] in (expression_kinds if expression else KINDS) and node['id'] not in indexed, 'Invalid lineage kind')
+            check(node['kind'] in (identity_kinds if identity_fill else expression_kinds if expression else KINDS) and node['id'] not in indexed, 'Invalid lineage kind')
             h = sha(node['sha256'])
             check(h not in rejected and h not in excluded and h not in node_hashes, 'Rejected or duplicate pixel ancestor')
             parents = node['parents']
             check(isinstance(parents, list) and len(set(parents)) == len(parents) and all(p in indexed for p in parents), 'Unordered, missing or duplicate lineage parent')
-            if expression:
+            if identity_fill:
+                if node['kind'] == 'reviewed_existing_source':
+                    check(not parents and h == family['prior_source']['sha256'], 'Wrong identity prior pixels')
+                elif node['kind'] == 'generated_neutral_intermediate':
+                    check(len(parents) == 1 and indexed[parents[0]]['kind'] == 'reviewed_existing_source', 'Wrong neutral input ancestry')
+                else:
+                    check(len(parents) == 1 and indexed[parents[0]]['kind'] == 'generated_neutral_intermediate', 'Identity fill must use exact neutral input')
+            elif expression:
                 if node['kind'] == 'reviewed_prior_source':
                     check(not parents and h == prior_final['sha256'], 'Wrong reviewed prior source')
                 elif node['kind'] == 'expression_donor':
@@ -123,19 +163,21 @@ def validate(root, record, approved_binding, added, existing_coverage, rejected,
             indexed[node['id']] = node; node_hashes.add(h)
         final = indexed[family['final_source_id']]
         body = indexed[family['body_source_id']]
-        if expression:
+        if identity_fill:
+            check(body['kind'] == 'reviewed_existing_source' and final['kind'] == 'generated_identity_fill', 'Invalid identity final source')
+        elif expression:
             check(body['kind'] == 'reviewed_prior_source' and final['kind'] == 'expression_composite', 'Invalid expression final source')
         else:
             check(body['kind'] == 'masked_composite' and final['kind'] in {'masked_composite', 'color_adjustment'}, 'Invalid final correction source')
-        expected_kinds = sorted(expression_kinds) if expression else ['original', 'generated_donor', 'masked_composite'] + (['color_adjustment'] if final['kind'] == 'color_adjustment' else [])
+        expected_kinds = sorted(identity_kinds) if identity_fill else sorted(expression_kinds) if expression else ['original', 'generated_donor', 'masked_composite'] + (['color_adjustment'] if final['kind'] == 'color_adjustment' else [])
         check(sorted(n['kind'] for n in nodes) == sorted(expected_kinds), 'Disconnected or extra correction lineage')
-        donor_result = 'expression_donor_result' if expression else 'donor_result'
-        donor_preflight = 'expression_donor_preflight' if expression else 'donor_preflight'
-        composite_result = 'expression_composite_result' if expression else 'composite_result'
-        composite_preflight = 'expression_composite_preflight' if expression else 'composite_preflight'
-        donor_node = next(n for n in nodes if n['kind'] == ('expression_donor' if expression else 'generated_donor'))
+        donor_result = 'neutral_result' if identity_fill else 'expression_donor_result' if expression else 'donor_result'
+        donor_preflight = 'neutral_preflight' if identity_fill else 'expression_donor_preflight' if expression else 'donor_preflight'
+        composite_result = 'identity_result' if identity_fill else 'expression_composite_result' if expression else 'composite_result'
+        composite_preflight = 'identity_preflight' if identity_fill else 'expression_composite_preflight' if expression else 'composite_preflight'
+        donor_node = next(n for n in nodes if n['kind'] == ('generated_neutral_intermediate' if identity_fill else 'expression_donor' if expression else 'generated_donor'))
         check(family['stage_subjects'][donor_result] == donor_node['sha256'], 'Donor result differs from pixel ancestor')
-        required = expression_stages if expression else STAGES if final['kind'] == 'color_adjustment' else STAGES - {'color_preflight', 'color_result'}
+        required = identity_stages if identity_fill else expression_stages if expression else STAGES if final['kind'] == 'color_adjustment' else STAGES - {'color_preflight', 'color_result'}
         review_stages = {s for s in required if s.endswith(('preflight', 'finished'))}
         receipts = family['evidence']
         by_stage = {s: [] for s in required}
@@ -164,14 +206,21 @@ def validate(root, record, approved_binding, added, existing_coverage, rejected,
             by_stage[stage].append(receipt)
         check(set(family['stage_subjects']) == required and all(by_stage.values()), 'Missing correction evidence stage')
         check(family['stage_subjects']['source_finished'] == final['sha256'], 'Wrong finished source binding')
-        if not expression:
+        if not expression and not identity_fill:
             check(family['stage_subjects']['body_finished'] == body['sha256'], 'Wrong finished body binding')
-        check(family['stage_subjects'][composite_result] == (final if expression else body)['sha256'], 'Wrong composite execution result')
+        check(family['stage_subjects'][composite_result] == (final if expression or identity_fill else body)['sha256'], 'Wrong composite execution result')
         for result in by_stage[donor_result]:
             check(result['spec_sha256'] == family['stage_subjects'][donor_preflight], 'Donor execution differs from reviewed specification')
         for result in by_stage['encoding_result']:
             check(result['spec_sha256'] == family['stage_subjects']['encoding_preflight'], 'Encoding execution differs from reviewed specification')
-        for result in by_stage[composite_result]:
+        if identity_fill:
+            for result in by_stage[donor_result]:
+                check(result['tool'] == 'image_gen.imagegen' and result['input_sha256'] == [family['prior_source']['sha256']], 'Wrong actual neutral generation inputs')
+            for result in by_stage[composite_result]:
+                check(result['spec_sha256'] == family['stage_subjects'][composite_preflight], 'Identity execution differs from reviewed specification')
+                check(result['tool'] == 'image_gen.imagegen' and result['input_sha256'] == [a['sha256'] for a in family['identity_references']] + [donor_node['sha256']], 'Wrong actual identity generation inputs')
+                check(result.get('preservation_basis') == 'actual_finished_visual_review_not_pixel_equality' and 'protected_pixel_checks' not in result, 'Invented identity pixel equality')
+        for result in ([] if identity_fill else by_stage[composite_result]):
             if expression:
                 check(result['spec_sha256'] == family['stage_subjects'][composite_preflight], 'Expression execution differs from reviewed specification')
             proof = result['protected_pixel_checks']
@@ -214,7 +263,12 @@ def validate(root, record, approved_binding, added, existing_coverage, rejected,
     if 'SITE07_EXPRESSION' in validated_families:
         expected = {'SITE01': 'SITE01', 'SITE07': 'SITE07_EXPRESSION', 'SITE08': 'SITE08',
                     'SITE09': 'SITE09', 'SITE10': 'SITE10', 'SITE11': 'SITE11', 'SITE12': 'SITE12'}
-        check(set(validated_families) == {'SITE01', 'SITE07', 'SITE07_EXPRESSION', 'SITE08', 'SITE09', 'SITE10', 'SITE11', 'SITE12'}, 'Wrong exact successor record set')
+        original_records = {'SITE01', 'SITE07', 'SITE07_EXPRESSION', 'SITE08', 'SITE09', 'SITE10', 'SITE11', 'SITE12'}
+        present_identity = set(validated_families) & set(identity_ids)
+        check(not present_identity or present_identity == set(identity_ids), 'Incomplete exact identity batch')
+        if present_identity:
+            expected.update({scene: version for version, scene in identity_ids.items()})
+        check(set(validated_families) == original_records | present_identity, 'Wrong exact successor record set')
         check(spec.get('current_scene_records') == expected, 'Wrong exact current scene mapping')
     else:
         check('current_scene_records' not in spec, 'Current scene mapping requires reviewed successor')

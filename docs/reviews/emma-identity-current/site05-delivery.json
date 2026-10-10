@@ -1,0 +1,66 @@
+{
+  "schema": 1,
+  "family": "SITE05",
+  "status": "ACTUAL_SOURCE_DISPLAY_DELIVERY_CONCUR_PRIVATE_CONTEXT",
+  "normalized_at": "2026-10-10T15:02:44.667815+00:00",
+  "source_sha256": "4c9c79f6d0eb407f668d0048d63b2de0ef851d3ecba0474de6d88521f2b4fb1c",
+  "assets": [
+    {
+      "path": "assets/page-art/church-history/relief-society-identity-v4.png",
+      "sha256": "4c9c79f6d0eb407f668d0048d63b2de0ef851d3ecba0474de6d88521f2b4fb1c",
+      "pixel_sha256": "dfdde144fbf85b8136930a964c6ab5edb1d9c467bed436d39753c4c202f6a8c0",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "format": "PNG",
+      "mode": "RGB",
+      "bytes": 2120937
+    },
+    {
+      "path": "assets/page-art/church-history/relief-society-identity-v4-960.webp",
+      "sha256": "f79bb8866aca313928a9ba4f8b5c7715e86fd3f14bfdb950a5d9682f6353eeba",
+      "pixel_sha256": "589fb21e43194a06045420c20eb760706583337be05f8ca7826ad0d8c0b6e2c2",
+      "dimensions": [
+        960,
+        540
+      ],
+      "format": "WEBP",
+      "mode": "RGB",
+      "bytes": 96018
+    },
+    {
+      "path": "assets/page-art/church-history/relief-society-identity-v4-1672.webp",
+      "sha256": "f29471cc060884d63acca83376ae7303a270419a51615bcea946af3a39ad9bdd",
+      "pixel_sha256": "eab518e96cb065f3d4e20ef465449a8e64897c9ad1d08b6e5a91bacdbb55ec88",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "format": "WEBP",
+      "mode": "RGB",
+      "bytes": 195146
+    }
+  ],
+  "actual_reviews": [
+    {
+      "actor": "Fermi",
+      "source_report_sha256": "a15306156055da1ab37860070d201e21da65dee81b47ec027b01c1e2b95900c1",
+      "original_event_timestamp": null,
+      "finding": "Actual full source, encoded delivery and private display reviewed; exact source report retained privately. This normalization is current attribution, not a reconstructed original event."
+    },
+    {
+      "actor": "Newton",
+      "source_report_sha256": "ba186af032301c4792d63d0620d2025947cd23f5289c603f4f7a23e1f6be7194",
+      "original_event_timestamp": null,
+      "finding": "Actual full source, encoded delivery and private display reviewed; exact source report retained privately. This normalization is current attribution, not a reconstructed original event."
+    },
+    {
+      "actor": "Root",
+      "source_report_sha256": "ad258966a92e8ff88119d9a3e97fc9b86c72eadb725f769b808b5c424e604cc6",
+      "original_event_timestamp": null,
+      "finding": "Actual full source, encoded delivery and private display reviewed; exact source report retained privately. This normalization is current attribution, not a reconstructed original event."
+    }
+  ],
+  "limits": "No new owner acceptance, whole-page integration or public deployment claim. Prior full active slot remains separately archived; preserved historical review is not re-dated."
+}

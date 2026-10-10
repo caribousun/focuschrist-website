@@ -25,6 +25,15 @@ REVIEWED_DETAIL_COPY = {
 }
 
 
+# Exact owner-approved H4 reference card; all other entries remain page-opening links.
+HISTORY_REFERENCE = {
+    'key': 'history', 'src': 'assets/page-art/emma-life/emma-h4-review-960.webp',
+    'width': 960, 'height': 640,
+    'href': 'history/emma-hale-smith.html#picture-emma-h4',
+    'alt': 'Emma speaks with women gathered to organize care in Nauvoo.',
+    'owner_anchor': 'picture-emma-h4',
+}
+
 def parse(text):
     doc = Document()
     doc.feed(text)
@@ -103,7 +112,7 @@ def check(home, baseline, manifest, root=ROOT):
     if any(n.tag == 'link' and local(n.attrs.get('href', '')) == 'jesus-journey.css' for n in nodes):
         errors.append('Home must not import journey-only stylesheet')
     for card in [n for n in nodes if n.tag == 'a' and n.has('fc-card--interactive')]:
-        if urlsplit(card.attrs.get('href', '')).fragment:
+        if urlsplit(card.attrs.get('href', '')).fragment and not (card.attrs.get('data-home-reference') == 'history' and card.attrs.get('href') == HISTORY_REFERENCE['href']):
             errors.append('Home interactive cards must open at the page beginning')
     preview_sections = [n for n in nodes if (n.has('fc-card') and n.has('fc-study-promotion')) or n.has('fc-home-weekly')]
     if len(preview_sections) != 3:
@@ -118,6 +127,8 @@ def check(home, baseline, manifest, root=ROOT):
         errors.append('Home Jesus journey primary direction must start at the page beginning')
     refs = manifest['references']
     expected = {r['key']: r for r in refs}
+    if expected.get('history') != HISTORY_REFERENCE:
+        errors.append('history: exact approved H4 reference contract required')
     previews = [n for n in nodes if 'data-home-reference' in n.attrs]
     if len(refs) != 9 or len(expected) != 9 or Counter(n.attrs['data-home-reference'] for n in previews) != Counter(expected.keys()):
         errors.append('Exactly nine unique manifest reference previews required')
@@ -131,7 +142,7 @@ def check(home, baseline, manifest, root=ROOT):
         if preview.tag != 'a' or preview.attrs.get('href') != ref['href'] or len(images) != 1:
             errors.append(key + ': exact owner link and one preview image required')
             continue
-        if urlsplit(ref['href']).fragment or urlsplit(ref['href']).query:
+        if urlsplit(ref['href']).query or (urlsplit(ref['href']).fragment and not (key == 'history' and ref == HISTORY_REFERENCE)):
             errors.append(key + ': Home navigation must open the owning page from the beginning')
         if any(a.tag == 'figure' or 'data-journey-art' in a.attrs for a in ancestors(preview)) or any('data-artwork-detail' in n.attrs for n in preview.walk()):
             errors.append(key + ': preview must remain a navigational reference')
@@ -169,6 +180,18 @@ class HomePresentation(unittest.TestCase):
         cls.home = (ROOT / 'index.html').read_text(encoding='utf-8')
         cls.baseline = subprocess.check_output(['git', 'show', BASELINE + ':index.html'], cwd=ROOT).decode('utf-8')
         cls.manifest = json.loads(MANIFEST.read_text(encoding='utf-8'))
+
+    def test_history_wrong_fragment_rejected_even_if_manifest_agrees(self):
+        manifest = copy.deepcopy(self.manifest)
+        ref = next(r for r in manifest['references'] if r['key'] == 'history')
+        old = ref['href']; ref['href'] = old.replace('picture-emma-h4', 'emma-beginnings')
+        self.assertTrue(any('exact approved H4' in e for e in check(self.home.replace(old, ref['href']), self.baseline, manifest)))
+
+    def test_history_old_preview_rejected_even_if_manifest_agrees(self):
+        manifest = copy.deepcopy(self.manifest)
+        ref = next(r for r in manifest['references'] if r['key'] == 'history')
+        old = ref['src']; ref['src'] = 'assets/page-art/church-history/relief-society-torso-v3-960.webp'
+        self.assertTrue(any('exact approved H4' in e for e in check(self.home.replace(old, ref['src']), self.baseline, manifest)))
 
     def test_actual_home(self):
         self.assertEqual(self.manifest['baseline'], BASELINE)

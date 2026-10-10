@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "source_report_sha256": "3a12d0ca8b0fb951b2af51717d4c0adbd737735cf52bad96097c5895ac0b9e4b",
+  "scope": "Exact H4 approval only, not universal identity replacement.",
+  "actor": "Wyatt",
+  "normalized_at": "2026-10-10T15:11:46.571054+00:00",
+  "original_event_time": null,
+  "details": {
+    "source_sha256": "24e0b13c84cabae92c972034f1fc775162b2800a93e4b14d876ca16c31a269ea"
+  },
+  "limits": "Current evidence normalization, not a new historical pixel review or owner acceptance. Full original report remains preserved privately."
+}

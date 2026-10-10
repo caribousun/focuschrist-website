@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "site05_identity-identity_preflight-independent",
+  "family": "SITE05_IDENTITY",
+  "stage": "identity_preflight",
+  "actual_actor": "/root/newton_current",
+  "normalized_at": "2026-10-10T15:15:08.321480+00:00",
+  "source_recorded_at": "2026-10-10T15:05:39.910135+00:00",
+  "original_message_timestamp": null,
+  "original_message_digest": null,
+  "source_report_sha256": "dc9f65972e66b9d76bbaada9475a9834c091d493c9038a288daa3371c2080950",
+  "subject_sha256": "132c83155c4ea5d6eae038fb222e06c3f4e071d4f50dd7ce39346cbd6c21a8fd",
+  "withdrawn": false,
+  "verdict": "CONCUR",
+  "evidence_class": "current_exact_spec_reconciliation",
+  "findings": "Exact approved7d0/H4/f6 and actual neutral intermediate order; scene-appropriate identity fill, body/other people retained, independent finished review required; no wrong-face input."
+}

@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "status": "REVIEWED_EXACT_EVIDENCE",
-  "approved_binding": "6f9510c88845fbef288289a33beab1a841f414ea65ab1212577c02e284d27a75",
+  "approved_binding": "42ba0b7b149470f37c30c7677946b43695cf8f991f6158f7e97fe6b09b4f2691",
   "spec": {
     "kind": "reviewed_local_corrections",
     "precreation_claim": false,
@@ -2029,8 +2029,4012 @@
             "role": "derivative"
           }
         ]
+      },
+      {
+        "id": "SITE01_IDENTITY",
+        "scene_family_id": "SITE01",
+        "authority_kind": "reviewed_local_correction",
+        "precreation_claim": false,
+        "current_reviewers": {
+          "executor": "/root/fermi_current",
+          "independent": "/root/newton_current",
+          "root": "/root"
+        },
+        "actor_role_note": "Executor names the Fermi preparation/encoding-review function. Actual neutral/fill imagegen actor is root; stage execution records identify their actual actor separately.",
+        "prior_kind": "reviewed_correction",
+        "prior_record_id": "SITE01",
+        "prior_record_sha256": "482231288d06452e91718d6dd13a716a88adb7e4a267eea52c5ac571f9f3f1e7",
+        "preserved_assets": [
+          {
+            "path": "assets/page-art/bom-evidences/josephemma-bodice-v3.png",
+            "sha256": "cbf83e11d899acb1b2a002a17f8b6b440216fbdb363b6168c168f86a04ec674f"
+          },
+          {
+            "path": "assets/page-art/bom-evidences/josephemma-bodice-v3-640.webp",
+            "sha256": "50b46cf8cea6be49b23522cc6d7081f79238472ad2f1cc282078d2d8eba77a67"
+          },
+          {
+            "path": "assets/page-art/bom-evidences/josephemma-bodice-v3-960.webp",
+            "sha256": "ce43b57dfe90272794027c2d3439855d6cda1556644058dbe5e80b904e541973"
+          },
+          {
+            "path": "assets/page-art/bom-evidences/josephemma-bodice-v3-1536.webp",
+            "sha256": "091f4aa5620e786d3e72c5720e327c53720455800dce4357bb17eca5f6e7e223"
+          }
+        ],
+        "prior_source": {
+          "path": "assets/page-art/bom-evidences/josephemma-bodice-v3.png",
+          "sha256": "cbf83e11d899acb1b2a002a17f8b6b440216fbdb363b6168c168f86a04ec674f"
+        },
+        "identity_references": [
+          {
+            "path": "assets/identities/emma-smith-owner-approved-20260930.png",
+            "sha256": "7d0a07cc673d244ccd54d478c53d1e68d248e39d9b1101f87dfe3681cbb839d1"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-h4-review.png",
+            "sha256": "24e0b13c84cabae92c972034f1fc775162b2800a93e4b14d876ca16c31a269ea"
+          },
+          {
+            "path": "assets/identities/emma-smith-approved-gentle-smile-20260930.png",
+            "sha256": "f6d2493babf5d2ab7a6e118a57827f7db05e6aea934feb5739256987ec186688"
+          }
+        ],
+        "lineage": [
+          {
+            "id": "prior",
+            "kind": "reviewed_existing_source",
+            "sha256": "cbf83e11d899acb1b2a002a17f8b6b440216fbdb363b6168c168f86a04ec674f",
+            "parents": []
+          },
+          {
+            "id": "neutral",
+            "kind": "generated_neutral_intermediate",
+            "sha256": "dcf8f706583fa4c91c65a631ddf8c18c2293c0e44fa1423e639672a911be91bf",
+            "parents": [
+              "prior"
+            ]
+          },
+          {
+            "id": "final",
+            "kind": "generated_identity_fill",
+            "sha256": "d65c9a9783b3a513f64f8689b8ebb95b4c9ebab44feeab7e120dc53f1b950400",
+            "parents": [
+              "neutral"
+            ]
+          }
+        ],
+        "body_source_id": "prior",
+        "final_source_id": "final",
+        "excluded_pixel_ancestors": [],
+        "method": "Two builtin imagegen stages: conceal prior head, then fill the neutral scene using exact approved identity references. Preservation is actual finished visual judgment, not unchanged-outside-mask pixel arithmetic.",
+        "stage_subjects": {
+          "owner_scope": "cbf83e11d899acb1b2a002a17f8b6b440216fbdb363b6168c168f86a04ec674f",
+          "neutral_preflight": "e473dec6533bbcbdc094b20999625995f285de9af49f0a2d4f61909af22f1a6f",
+          "neutral_result": "dcf8f706583fa4c91c65a631ddf8c18c2293c0e44fa1423e639672a911be91bf",
+          "identity_preflight": "6af5093c2cb6c93bf0e148624a1bb8c0ec2900f50e29dc5f319ef80a9b51f72e",
+          "identity_result": "d65c9a9783b3a513f64f8689b8ebb95b4c9ebab44feeab7e120dc53f1b950400",
+          "source_finished": "d65c9a9783b3a513f64f8689b8ebb95b4c9ebab44feeab7e120dc53f1b950400",
+          "encoding_preflight": "c4c36f1070e58b78d14530392d0dcaac84ff1f26e2c7ed52d13b64acd0c92b9f",
+          "encoding_result": "925688835294bed4b2b579c261e3b582562ba79724e31b7ff247b54da4281be3",
+          "delivery_finished": "940d7af8b5a2176e779dc9ab3d17a47f0e405617d109d804f6e0b4dff1b517e0"
+        },
+        "evidence": [
+          {
+            "path": "docs/artwork-correction-evidence/site01_identity-owner_scope-root.json",
+            "sha256": "ee299ea6295cd07f291d107ba29f416e0d38407a9e7965016eb41e6dcc3d17b1",
+            "actual_actor": "/root",
+            "stage": "owner_scope"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site01_identity-neutral_preflight-independent.json",
+            "sha256": "9a2c81788d8ae79a9ccbcb6bc2da50faeccd86301b48326c00f5438619bc5aa0",
+            "actual_actor": "/root/newton_current",
+            "stage": "neutral_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site01_identity-neutral_preflight-root.json",
+            "sha256": "4796e6058b15068bf610fe6165cfa80a852659e44741bf3c3ff08c3af6835cf8",
+            "actual_actor": "/root",
+            "stage": "neutral_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site01_identity-neutral_result-root.json",
+            "sha256": "c10bdde9fc1386db7aceaf24837bc74502e5b80a4a6f0365687d2a26586b8bcd",
+            "actual_actor": "/root",
+            "stage": "neutral_result"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site01_identity-identity_preflight-independent.json",
+            "sha256": "77f8957baddb58e3a326e8b59237bd5536284d444bd247b80aed965e0c7a7e3a",
+            "actual_actor": "/root/newton_current",
+            "stage": "identity_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site01_identity-identity_preflight-root.json",
+            "sha256": "848ce460beeaae2d107205362b9af46fcf01d358b45a2808d84c9629c8efe8a0",
+            "actual_actor": "/root",
+            "stage": "identity_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site01_identity-identity_result-root.json",
+            "sha256": "6bdfa58bf179a8b198f4ec07fdcf239604ed5ce593a6750e4c449d72936a5302",
+            "actual_actor": "/root",
+            "stage": "identity_result"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site01_identity-source_finished-executor.json",
+            "sha256": "3bd93ba4c180a56dad50a8e0e510fe1be9f9aa237f88dc37d75fdf6172259ecf",
+            "actual_actor": "/root/fermi_current",
+            "stage": "source_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site01_identity-source_finished-independent.json",
+            "sha256": "c4ebfe6f206b87c2c3b8d1a4653069ee55d2cacb9ee522b2c1fc54212dc14d8a",
+            "actual_actor": "/root/newton_current",
+            "stage": "source_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site01_identity-source_finished-root.json",
+            "sha256": "e55d2a3d208aee665fc5dc935f50088bc3dd02f68339dd96b59828cc09b6d440",
+            "actual_actor": "/root",
+            "stage": "source_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site01_identity-encoding_preflight-independent.json",
+            "sha256": "4d410ed6a30041ad1e124d74c2be6a1229379aafde387b26dec1eba77c298955",
+            "actual_actor": "/root/newton_current",
+            "stage": "encoding_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site01_identity-encoding_preflight-root.json",
+            "sha256": "56ec56f34e5ef27fd65d9c8a93faf39cdc7fdea093207892e7206dc59f239a85",
+            "actual_actor": "/root",
+            "stage": "encoding_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site01_identity-encoding_result-root.json",
+            "sha256": "68f0fe9aea71e9fcb0357c9f4c24793e77ce8d79f5cb5e90a8dd714acddd4583",
+            "actual_actor": "/root",
+            "stage": "encoding_result"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site01_identity-delivery_finished-executor.json",
+            "sha256": "4f1a4029c856655c334554b5222dd90d2679b960a02e72bcb0d3544adb8e5f4b",
+            "actual_actor": "/root/fermi_current",
+            "stage": "delivery_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site01_identity-delivery_finished-independent.json",
+            "sha256": "0a18ff6d51ee44e94521623f827df166fef129d05e0df8bb1ef6182b4b3bbfb2",
+            "actual_actor": "/root/newton_current",
+            "stage": "delivery_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site01_identity-delivery_finished-root.json",
+            "sha256": "cb10a9618c06b5f2f3c7f0e476bc12ec0053e067aabb9f536507c0e6700367e9",
+            "actual_actor": "/root",
+            "stage": "delivery_finished"
+          }
+        ],
+        "asset_allowlist": [
+          "assets/page-art/bom-evidences/josephemma-identity-v4.png",
+          "assets/page-art/bom-evidences/josephemma-identity-v4-640.webp",
+          "assets/page-art/bom-evidences/josephemma-identity-v4-960.webp",
+          "assets/page-art/bom-evidences/josephemma-identity-v4-1536.webp"
+        ],
+        "assets": [
+          {
+            "path": "assets/page-art/bom-evidences/josephemma-identity-v4.png",
+            "sha256": "d65c9a9783b3a513f64f8689b8ebb95b4c9ebab44feeab7e120dc53f1b950400",
+            "pixel_sha256": "8c5c0bf22be429c9bb8b9ecae0d7af7eb1284c62e397c584f830d6e8b51872ac",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "format": "PNG",
+            "mode": "RGB",
+            "bytes": 2118133,
+            "source_sha256": "d65c9a9783b3a513f64f8689b8ebb95b4c9ebab44feeab7e120dc53f1b950400",
+            "role": "source"
+          },
+          {
+            "path": "assets/page-art/bom-evidences/josephemma-identity-v4-640.webp",
+            "sha256": "c303300df54d42fbb40cb9444aaa2f711d2262ff66a2258a832babd8a2313a57",
+            "pixel_sha256": "16f22e1ebfb179ddcba3352898bb1ccb9a5576b22a7a9031fc20d0f12ad7f964",
+            "dimensions": [
+              640,
+              427
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 49140,
+            "source_sha256": "d65c9a9783b3a513f64f8689b8ebb95b4c9ebab44feeab7e120dc53f1b950400",
+            "role": "derivative"
+          },
+          {
+            "path": "assets/page-art/bom-evidences/josephemma-identity-v4-960.webp",
+            "sha256": "9a8966492ef68defa81990c2dcc8fc235f060a8d1523e0833bb625a98ced79d3",
+            "pixel_sha256": "f10bd8237a7f5ee471219ea28959719d6c394c2b08b7d9844892360e2f70c1bf",
+            "dimensions": [
+              960,
+              640
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 88846,
+            "source_sha256": "d65c9a9783b3a513f64f8689b8ebb95b4c9ebab44feeab7e120dc53f1b950400",
+            "role": "derivative"
+          },
+          {
+            "path": "assets/page-art/bom-evidences/josephemma-identity-v4-1536.webp",
+            "sha256": "9ca588e2dea43ff7981a5701823919d40a846820ac8bb9ebb97fe236848468a9",
+            "pixel_sha256": "ddbc85adadd1c709c7088cc9e6aa365a606eeb2d9768fb069ed0f4c1c9c995b9",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 170596,
+            "source_sha256": "d65c9a9783b3a513f64f8689b8ebb95b4c9ebab44feeab7e120dc53f1b950400",
+            "role": "derivative"
+          }
+        ]
+      },
+      {
+        "id": "SITE02_IDENTITY",
+        "scene_family_id": "SITE02",
+        "authority_kind": "reviewed_local_correction",
+        "precreation_claim": false,
+        "current_reviewers": {
+          "executor": "/root/fermi_current",
+          "independent": "/root/newton_current",
+          "root": "/root"
+        },
+        "actor_role_note": "Executor names the Fermi preparation/encoding-review function. Actual neutral/fill imagegen actor is root; stage execution records identify their actual actor separately.",
+        "prior_kind": "historical_delivery",
+        "prior_record_id": "SITE02",
+        "prior_record_sha256": "514d201ece14cde04f7dbf772d2e6025693f4f109d6c0a1aaa4b5c3c532b5a23",
+        "preserved_assets": [
+          {
+            "path": "assets/page-art/bom-evidences/joseph-emma-walk-body-v2-960.webp",
+            "sha256": "b5767224123e0e26ea91681cd192f11eabf2d1c30430d8ca1a842e54c4351341"
+          },
+          {
+            "path": "assets/page-art/bom-evidences/joseph-emma-walk-body-v2.webp",
+            "sha256": "f91d7adb0488df4d235e0b400c6e451e90486965b951bcf9c262b58715827a3f"
+          }
+        ],
+        "prior_source": {
+          "path": "assets/page-art/bom-evidences/joseph-emma-walk-body-v2.webp",
+          "sha256": "f91d7adb0488df4d235e0b400c6e451e90486965b951bcf9c262b58715827a3f"
+        },
+        "identity_references": [
+          {
+            "path": "assets/identities/emma-smith-owner-approved-20260930.png",
+            "sha256": "7d0a07cc673d244ccd54d478c53d1e68d248e39d9b1101f87dfe3681cbb839d1"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-h4-review.png",
+            "sha256": "24e0b13c84cabae92c972034f1fc775162b2800a93e4b14d876ca16c31a269ea"
+          },
+          {
+            "path": "assets/identities/emma-smith-approved-gentle-smile-20260930.png",
+            "sha256": "f6d2493babf5d2ab7a6e118a57827f7db05e6aea934feb5739256987ec186688"
+          }
+        ],
+        "lineage": [
+          {
+            "id": "prior",
+            "kind": "reviewed_existing_source",
+            "sha256": "f91d7adb0488df4d235e0b400c6e451e90486965b951bcf9c262b58715827a3f",
+            "parents": []
+          },
+          {
+            "id": "neutral",
+            "kind": "generated_neutral_intermediate",
+            "sha256": "d2dbc4ccf1ef192e5eef5c62f0b09e3a429d109da4c0d15596be433338ab2f28",
+            "parents": [
+              "prior"
+            ]
+          },
+          {
+            "id": "final",
+            "kind": "generated_identity_fill",
+            "sha256": "25021b2639f47c3994e5e16b018701d3a4ff51eee4e96b2d183abe0b001c4741",
+            "parents": [
+              "neutral"
+            ]
+          }
+        ],
+        "body_source_id": "prior",
+        "final_source_id": "final",
+        "excluded_pixel_ancestors": [],
+        "method": "Two builtin imagegen stages: conceal prior head, then fill the neutral scene using exact approved identity references. Preservation is actual finished visual judgment, not unchanged-outside-mask pixel arithmetic.",
+        "stage_subjects": {
+          "owner_scope": "f91d7adb0488df4d235e0b400c6e451e90486965b951bcf9c262b58715827a3f",
+          "neutral_preflight": "1a28e84de133e417de8cad9a2aefa268a0dfc732e3edcfdc9c0d0fc437d6b9e3",
+          "neutral_result": "d2dbc4ccf1ef192e5eef5c62f0b09e3a429d109da4c0d15596be433338ab2f28",
+          "identity_preflight": "17c810686d40dcede69b76a2c691fb55a0e545561b65693046143bd9de97441a",
+          "identity_result": "25021b2639f47c3994e5e16b018701d3a4ff51eee4e96b2d183abe0b001c4741",
+          "source_finished": "25021b2639f47c3994e5e16b018701d3a4ff51eee4e96b2d183abe0b001c4741",
+          "encoding_preflight": "d9839135c9c4c5bc3ea554972ddb3b384b61344717165275a5584581ecf14b78",
+          "encoding_result": "ac8c96644b1795ae62583d17ae0827e69a5fe2ad12b932a94e5c4319a6be314c",
+          "delivery_finished": "cd67f504cc7a91d641d1236b0d4c4a4bcf3c29f373a952caa95c61581f88da9b"
+        },
+        "evidence": [
+          {
+            "path": "docs/artwork-correction-evidence/site02_identity-owner_scope-root.json",
+            "sha256": "69cf545d401e186fa74d8efe5a18a10f16f0d8b9977f6ccdae8fbd2a3c4c4ae7",
+            "actual_actor": "/root",
+            "stage": "owner_scope"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site02_identity-neutral_preflight-independent.json",
+            "sha256": "feb1819d01cafac0aca5a8dad8b224fd215d1006a01e24fa2971778dc5826e43",
+            "actual_actor": "/root/newton_current",
+            "stage": "neutral_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site02_identity-neutral_preflight-root.json",
+            "sha256": "79926f4b8c49c5a30711186cdc4e880a8176a2b66369217b2f414f997d45862b",
+            "actual_actor": "/root",
+            "stage": "neutral_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site02_identity-neutral_result-root.json",
+            "sha256": "606d936a6d3eeaf59088b78696dacf250d3d0063134f52494c84260c344ecc55",
+            "actual_actor": "/root",
+            "stage": "neutral_result"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site02_identity-identity_preflight-independent.json",
+            "sha256": "50af07af409aabdfb0c1d627ca4267137745c185cf98be757da1a5337c41ff5d",
+            "actual_actor": "/root/newton_current",
+            "stage": "identity_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site02_identity-identity_preflight-root.json",
+            "sha256": "7e86541f9de15e1920d40766c1cce47d43835650c5cfbaf92ba20b2d8dbd468c",
+            "actual_actor": "/root",
+            "stage": "identity_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site02_identity-identity_result-root.json",
+            "sha256": "970eef9d3b9f7460e82366e2fc2bef86a7c81f43312a1f7dd10c0159bb646438",
+            "actual_actor": "/root",
+            "stage": "identity_result"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site02_identity-source_finished-executor.json",
+            "sha256": "dcb0c61474479a3522a06505f7199794dbbe8c6554a2f0b324d17c57b4e630e1",
+            "actual_actor": "/root/fermi_current",
+            "stage": "source_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site02_identity-source_finished-independent.json",
+            "sha256": "96a34abb9aecf230c4d789615bb4e1eb9e96e56dfdc2cd3b6bcf6c5014033ba8",
+            "actual_actor": "/root/newton_current",
+            "stage": "source_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site02_identity-source_finished-root.json",
+            "sha256": "47248d233ca22a9e5186c467a68fcaf3926150e91a6cccc549447e084fa4307f",
+            "actual_actor": "/root",
+            "stage": "source_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site02_identity-encoding_preflight-independent.json",
+            "sha256": "77b498ae985c7aaf09af3af1e191f8f44437ef9dec9e3d28b8d0b1f1ac8796c0",
+            "actual_actor": "/root/newton_current",
+            "stage": "encoding_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site02_identity-encoding_preflight-root.json",
+            "sha256": "dc9f51e58b58bced53a5896b318982cf98507f1809339b7ff58d4aebf6d6a725",
+            "actual_actor": "/root",
+            "stage": "encoding_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site02_identity-encoding_result-root.json",
+            "sha256": "b04c7879495261c9a5e9e2deb896f276ec1fd74d8d7f2565095577a3f4888894",
+            "actual_actor": "/root",
+            "stage": "encoding_result"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site02_identity-delivery_finished-executor.json",
+            "sha256": "ded7b4835b8b8d72725d1168e1596ff44916b4eb40b683c1f1fad87e9fd3b570",
+            "actual_actor": "/root/fermi_current",
+            "stage": "delivery_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site02_identity-delivery_finished-independent.json",
+            "sha256": "16be1b0dc4d4b4df2b2eafe8b30bd6b8c0595f46ba4e4720825eb50715da8b3a",
+            "actual_actor": "/root/newton_current",
+            "stage": "delivery_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site02_identity-delivery_finished-root.json",
+            "sha256": "2cb568bf8cb0f28e2e07ab736539d3e7caf077eebf60d5a863f8c245d6569a0f",
+            "actual_actor": "/root",
+            "stage": "delivery_finished"
+          }
+        ],
+        "asset_allowlist": [
+          "assets/page-art/bom-evidences/joseph-emma-walk-identity-v3.png",
+          "assets/page-art/bom-evidences/joseph-emma-walk-identity-v3-960.webp",
+          "assets/page-art/bom-evidences/joseph-emma-walk-identity-v3-1536.webp"
+        ],
+        "assets": [
+          {
+            "path": "assets/page-art/bom-evidences/joseph-emma-walk-identity-v3.png",
+            "sha256": "25021b2639f47c3994e5e16b018701d3a4ff51eee4e96b2d183abe0b001c4741",
+            "pixel_sha256": "3e013d9722b17d4fb31b514660b5227cb5e72b3c5257e4ac38ec38548763f8a4",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "format": "PNG",
+            "mode": "RGB",
+            "bytes": 2345388,
+            "source_sha256": "25021b2639f47c3994e5e16b018701d3a4ff51eee4e96b2d183abe0b001c4741",
+            "role": "source"
+          },
+          {
+            "path": "assets/page-art/bom-evidences/joseph-emma-walk-identity-v3-960.webp",
+            "sha256": "ace54666fd02386a9b677336db75aa0134a2bceda6dccb69c70f1bcd3d7f4a27",
+            "pixel_sha256": "04d26be912da47fed0857a96b933995fefe269f2f5905e4d8e79aff47f2865d9",
+            "dimensions": [
+              960,
+              640
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 139052,
+            "source_sha256": "25021b2639f47c3994e5e16b018701d3a4ff51eee4e96b2d183abe0b001c4741",
+            "role": "derivative"
+          },
+          {
+            "path": "assets/page-art/bom-evidences/joseph-emma-walk-identity-v3-1536.webp",
+            "sha256": "9790171e97dd3230156f58f77dfe0925cf3e55dd7be15b9cbc630688647dc694",
+            "pixel_sha256": "2b897ceb7d1c27332a36fad0c908935ef80ec944fcdb852407cdd9d7f35eb4d0",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 253780,
+            "source_sha256": "25021b2639f47c3994e5e16b018701d3a4ff51eee4e96b2d183abe0b001c4741",
+            "role": "derivative"
+          }
+        ]
+      },
+      {
+        "id": "SITE05_IDENTITY",
+        "scene_family_id": "SITE05",
+        "authority_kind": "reviewed_local_correction",
+        "precreation_claim": false,
+        "current_reviewers": {
+          "executor": "/root/fermi_current",
+          "independent": "/root/newton_current",
+          "root": "/root"
+        },
+        "actor_role_note": "Executor names the Fermi preparation/encoding-review function. Actual neutral/fill imagegen actor is root; stage execution records identify their actual actor separately.",
+        "prior_kind": "historical_delivery",
+        "prior_record_id": "SITE05",
+        "prior_record_sha256": "bd782e237cc6b923f270618d19e336bd7ce216191ac82d2a0665989fe582bcd6",
+        "preserved_assets": [
+          {
+            "path": "assets/page-art/church-history/relief-society-torso-v3-960.webp",
+            "sha256": "bccc1a78b7592abf8fcdcef4f79f1d89c5446a59f68476c9a230915fbe6b05ea"
+          },
+          {
+            "path": "assets/page-art/church-history/relief-society-torso-v3.webp",
+            "sha256": "f9f1ebceace304bddcd8f91515e66e95a342a3ec745c24630c23583dd73a339c"
+          }
+        ],
+        "prior_source": {
+          "path": "assets/page-art/church-history/relief-society-torso-v3.webp",
+          "sha256": "f9f1ebceace304bddcd8f91515e66e95a342a3ec745c24630c23583dd73a339c"
+        },
+        "identity_references": [
+          {
+            "path": "assets/identities/emma-smith-owner-approved-20260930.png",
+            "sha256": "7d0a07cc673d244ccd54d478c53d1e68d248e39d9b1101f87dfe3681cbb839d1"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-h4-review.png",
+            "sha256": "24e0b13c84cabae92c972034f1fc775162b2800a93e4b14d876ca16c31a269ea"
+          },
+          {
+            "path": "assets/identities/emma-smith-approved-gentle-smile-20260930.png",
+            "sha256": "f6d2493babf5d2ab7a6e118a57827f7db05e6aea934feb5739256987ec186688"
+          }
+        ],
+        "lineage": [
+          {
+            "id": "prior",
+            "kind": "reviewed_existing_source",
+            "sha256": "f9f1ebceace304bddcd8f91515e66e95a342a3ec745c24630c23583dd73a339c",
+            "parents": []
+          },
+          {
+            "id": "neutral",
+            "kind": "generated_neutral_intermediate",
+            "sha256": "115f108a191f07710f89dd4c9b4fbd8a2a52b3829a9adaff78accc7dedd045c6",
+            "parents": [
+              "prior"
+            ]
+          },
+          {
+            "id": "final",
+            "kind": "generated_identity_fill",
+            "sha256": "4c9c79f6d0eb407f668d0048d63b2de0ef851d3ecba0474de6d88521f2b4fb1c",
+            "parents": [
+              "neutral"
+            ]
+          }
+        ],
+        "body_source_id": "prior",
+        "final_source_id": "final",
+        "excluded_pixel_ancestors": [
+          "cdc83a5153a8b30843e9cb17036fac8138a7b9f1cae63a3d9cb2dd539c9b3a14",
+          "d0da44b4e3d64417c6ba05c24b83fa73fd82e39aa5a6e2f6dd35ca0b5f8aac0f",
+          "99cf17e3d33d4eb903a7089db3cce94beb0f283c44e8d5ae289419e9952a655b"
+        ],
+        "method": "Two builtin imagegen stages: conceal prior head, then fill the neutral scene using exact approved identity references. Preservation is actual finished visual judgment, not unchanged-outside-mask pixel arithmetic.",
+        "stage_subjects": {
+          "owner_scope": "f9f1ebceace304bddcd8f91515e66e95a342a3ec745c24630c23583dd73a339c",
+          "neutral_preflight": "ab866e57b4a9ce6f2c64fa0376e40de4b87d263d3e1903967e2bf31df691e03f",
+          "neutral_result": "115f108a191f07710f89dd4c9b4fbd8a2a52b3829a9adaff78accc7dedd045c6",
+          "identity_preflight": "132c83155c4ea5d6eae038fb222e06c3f4e071d4f50dd7ce39346cbd6c21a8fd",
+          "identity_result": "4c9c79f6d0eb407f668d0048d63b2de0ef851d3ecba0474de6d88521f2b4fb1c",
+          "source_finished": "4c9c79f6d0eb407f668d0048d63b2de0ef851d3ecba0474de6d88521f2b4fb1c",
+          "encoding_preflight": "c02d365c816bc7c3aa28b7a496a99a063fba196ef5df10643b84fc743fc5b697",
+          "encoding_result": "faf2183705096713b073cde0806e6133d6258b79972334bbdb83d8d3198912e3",
+          "delivery_finished": "e9a568a213cc25dd7f473131567af373d76b6facd50fcb9a233246822998bbf2"
+        },
+        "evidence": [
+          {
+            "path": "docs/artwork-correction-evidence/site05_identity-owner_scope-root.json",
+            "sha256": "2b72108c65ec1ed207e70bde2e0870069065a7223557cbbd79383af710d393f5",
+            "actual_actor": "/root",
+            "stage": "owner_scope"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site05_identity-neutral_preflight-independent.json",
+            "sha256": "37b1eb825a6e1661130792ff44cc8f9914d5c43389b2c1bed3369dd8f6551c3e",
+            "actual_actor": "/root/newton_current",
+            "stage": "neutral_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site05_identity-neutral_preflight-root.json",
+            "sha256": "a01e32df5770d3e13c3cdc9f9c27cbbe00e2730e52417cefa2386d72a06286f1",
+            "actual_actor": "/root",
+            "stage": "neutral_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site05_identity-neutral_result-root.json",
+            "sha256": "6c6161cca9c2e17bcd43283aec28bc185bdb7db11224f59c20c22fe8d7ed2ac7",
+            "actual_actor": "/root",
+            "stage": "neutral_result"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site05_identity-identity_preflight-independent.json",
+            "sha256": "a4b278f1f3d1a2e0594c38a898ddc84f29294b784df3bb4871a054cdf99b5038",
+            "actual_actor": "/root/newton_current",
+            "stage": "identity_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site05_identity-identity_preflight-root.json",
+            "sha256": "8eb31cf3cf6a82443313b888c53a65039ccef2160412fde1350eb1f86849f6b7",
+            "actual_actor": "/root",
+            "stage": "identity_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site05_identity-identity_result-root.json",
+            "sha256": "7b1c1276f7b983b4e8131f8a939562529fd55009bcede766d0cbe691cebb4816",
+            "actual_actor": "/root",
+            "stage": "identity_result"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site05_identity-source_finished-executor.json",
+            "sha256": "783aec96c408de3f39a9aaa482775d7151f402d73d2fc679fd8e39a87497e4be",
+            "actual_actor": "/root/fermi_current",
+            "stage": "source_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site05_identity-source_finished-independent.json",
+            "sha256": "19fadbd5761251330ea6afc0ad475735a42c50460c4ab5b4060c99a1d51f7b1b",
+            "actual_actor": "/root/newton_current",
+            "stage": "source_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site05_identity-source_finished-root.json",
+            "sha256": "dd975649f8d9e180dd29506a0c6e1ba401029f3ca515a3b78b3f93edc775226f",
+            "actual_actor": "/root",
+            "stage": "source_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site05_identity-encoding_preflight-independent.json",
+            "sha256": "0062d256cbdd89e5a5a75ac158a9a916e0d2777ec8bf3998437585e1a341733b",
+            "actual_actor": "/root/newton_current",
+            "stage": "encoding_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site05_identity-encoding_preflight-root.json",
+            "sha256": "79c50bcf51cd3d054ad294446e4a8e1e6edb08882e4c5f5b456e0cd35c3e0493",
+            "actual_actor": "/root",
+            "stage": "encoding_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site05_identity-encoding_result-root.json",
+            "sha256": "b3d0b9d439c0a3aa080d0551f3dbfb6a51561a3ff17ab7ce0b7436d62d3a333c",
+            "actual_actor": "/root",
+            "stage": "encoding_result"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site05_identity-delivery_finished-executor.json",
+            "sha256": "ad4a6aaedd250a230d0ccf84b7d157a0345ff55e6de6f7250635e4e84f21ae8a",
+            "actual_actor": "/root/fermi_current",
+            "stage": "delivery_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site05_identity-delivery_finished-independent.json",
+            "sha256": "044bc91026e91e6a93ed30bfeaf2c897b10a15d5bab40afe99a2aaa29faf33ee",
+            "actual_actor": "/root/newton_current",
+            "stage": "delivery_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/site05_identity-delivery_finished-root.json",
+            "sha256": "c743309a1788729f70161477b3b9fc831f7b5182e99f95418412b0100b86b2d8",
+            "actual_actor": "/root",
+            "stage": "delivery_finished"
+          }
+        ],
+        "asset_allowlist": [
+          "assets/page-art/church-history/relief-society-identity-v4.png",
+          "assets/page-art/church-history/relief-society-identity-v4-960.webp",
+          "assets/page-art/church-history/relief-society-identity-v4-1672.webp"
+        ],
+        "assets": [
+          {
+            "path": "assets/page-art/church-history/relief-society-identity-v4.png",
+            "sha256": "4c9c79f6d0eb407f668d0048d63b2de0ef851d3ecba0474de6d88521f2b4fb1c",
+            "pixel_sha256": "dfdde144fbf85b8136930a964c6ab5edb1d9c467bed436d39753c4c202f6a8c0",
+            "dimensions": [
+              1672,
+              941
+            ],
+            "format": "PNG",
+            "mode": "RGB",
+            "bytes": 2120937,
+            "source_sha256": "4c9c79f6d0eb407f668d0048d63b2de0ef851d3ecba0474de6d88521f2b4fb1c",
+            "role": "source"
+          },
+          {
+            "path": "assets/page-art/church-history/relief-society-identity-v4-960.webp",
+            "sha256": "f79bb8866aca313928a9ba4f8b5c7715e86fd3f14bfdb950a5d9682f6353eeba",
+            "pixel_sha256": "589fb21e43194a06045420c20eb760706583337be05f8ca7826ad0d8c0b6e2c2",
+            "dimensions": [
+              960,
+              540
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 96018,
+            "source_sha256": "4c9c79f6d0eb407f668d0048d63b2de0ef851d3ecba0474de6d88521f2b4fb1c",
+            "role": "derivative"
+          },
+          {
+            "path": "assets/page-art/church-history/relief-society-identity-v4-1672.webp",
+            "sha256": "f29471cc060884d63acca83376ae7303a270419a51615bcea946af3a39ad9bdd",
+            "pixel_sha256": "eab518e96cb065f3d4e20ef465449a8e64897c9ad1d08b6e5a91bacdbb55ec88",
+            "dimensions": [
+              1672,
+              941
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 195146,
+            "source_sha256": "4c9c79f6d0eb407f668d0048d63b2de0ef851d3ecba0474de6d88521f2b4fb1c",
+            "role": "derivative"
+          }
+        ]
       }
     ],
-    "current_scene_records": {"SITE01": "SITE01", "SITE07": "SITE07_EXPRESSION", "SITE08": "SITE08", "SITE09": "SITE09", "SITE10": "SITE10", "SITE12": "SITE12", "SITE11": "SITE11"}
+    "current_scene_records": {
+      "SITE01": "SITE01_IDENTITY",
+      "SITE07": "SITE07_EXPRESSION",
+      "SITE08": "SITE08",
+      "SITE09": "SITE09",
+      "SITE10": "SITE10",
+      "SITE12": "SITE12",
+      "SITE11": "SITE11",
+      "SITE02": "SITE02_IDENTITY",
+      "SITE05": "SITE05_IDENTITY"
+    }
+  },
+  "owner_requirement_closure": {
+    "schema": 1,
+    "status": "agent_reviewed_correction_pending_owner_acceptance",
+    "contract": {
+      "inventory_complete": true,
+      "family_ids": [
+        "SITE01",
+        "SITE02",
+        "SITE03",
+        "SITE04",
+        "SITE05",
+        "SITE06",
+        "SITE07",
+        "SITE08",
+        "SITE09",
+        "SITE10",
+        "SITE11",
+        "SITE12",
+        "SITE13",
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "H5"
+      ],
+      "references": [
+        {
+          "path": "assets/identities/emma-smith-owner-approved-20260930.png",
+          "sha256": "7d0a07cc673d244ccd54d478c53d1e68d248e39d9b1101f87dfe3681cbb839d1"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-h4-review.png",
+          "sha256": "24e0b13c84cabae92c972034f1fc775162b2800a93e4b14d876ca16c31a269ea"
+        },
+        {
+          "path": "assets/identities/emma-smith-approved-gentle-smile-20260930.png",
+          "sha256": "f6d2493babf5d2ab7a6e118a57827f7db05e6aea934feb5739256987ec186688"
+        },
+        {
+          "path": "docs/owner-requirement-evidence/body-and-exception-authority.json",
+          "sha256": "185cb94773047b12cff427cb442fdfb2d82f48e892f36a78ab1508fb416b0379"
+        }
+      ],
+      "exceptions": [
+        {
+          "path": "assets/history/joseph-emma-harmony-1400.webp",
+          "sha256": "f22c1dc3d839480ed45e84b6f6705469cf75f7307db73eecce3722e6bbaa2df7"
+        },
+        {
+          "path": "assets/history/joseph-emma-harmony-800.webp",
+          "sha256": "c12a3ad63df040395d3fd5aa68b944b6fd8d2df06729b468c105cf367635e69c"
+        },
+        {
+          "path": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3-1536.webp",
+          "sha256": "a6c4012577748a4b52253d76ef1f7978ab7aaaae2707c7134832d25005a20f09"
+        },
+        {
+          "path": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3-640.webp",
+          "sha256": "482b50f0cadc0e6a7c1fee3a458f19bb088e51d071f2b9b1f0ff51908edc13be"
+        },
+        {
+          "path": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3-960.webp",
+          "sha256": "b9f8ef1bcb6bd09ce8fb889889ca13b748524140de544fc0db3362c7e349a9a2"
+        },
+        {
+          "path": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3.png",
+          "sha256": "2b2e8e7ce28cb2d9c4d98d12e35c2ba7da1d1c510dd25df00adb49439320fa0f"
+        }
+      ],
+      "required_objections": [
+        {
+          "id": "owner-appearance-reopen",
+          "scope": "Every active Emma likeness except precise owner-preserved Harmony and bedside families",
+          "source_class": "direct_owner_instruction_reported_by_root",
+          "original_event_time": null
+        },
+        {
+          "id": "owner-site05-d0da-rejection",
+          "scope": "Explicitly rejected SITE05d0da cannot return as active source or reencoded pixels",
+          "source_class": "direct_owner_instruction_reported_by_root",
+          "original_event_time": null
+        },
+        {
+          "id": "owner-objection03",
+          "scope": "Separate body review for every applicable scene; unsupported visible pregnancy prohibited, postpartum is not pregnancy",
+          "source_class": "direct_owner_instruction_reported_by_root",
+          "original_event_time": null
+        }
+      ],
+      "consumer_scope": [
+        {
+          "path": "answers/who-was-joseph-smith.html",
+          "sha256": "3ccb9ab354ba8828169d6803f23e5abd8d4ae06b0f802f3cd3c6da8595687d0b"
+        },
+        {
+          "path": "art-gallery.json",
+          "sha256": "3738ddddecd09fea9526f7fea070e450f889dd954901cf6c86683bbb2c4d990b"
+        },
+        {
+          "path": "book-of-mormon-evidences.html",
+          "sha256": "1de53584c7d940b45c7d5584ca12630ca5116e16b617f98d05623cc1d4e35511"
+        },
+        {
+          "path": "church-history.html",
+          "sha256": "b85b61aa5d6f9e0273214f0dcfffc5cfce53754e0a7da221721240c64116f6be"
+        },
+        {
+          "path": "history/emma-hale-smith.html",
+          "sha256": "140ba3313e5de6e33600428827927e6f312ad828acd3b5ead859a04b0ae7fd54"
+        },
+        {
+          "path": "index.html",
+          "sha256": "a74eea4101861b6f94346b9199e4777f0ce061f9e19cf5d3889a8665907b28d7"
+        },
+        {
+          "path": "site-search-index.json",
+          "sha256": "904330823a12cc55bacddf6b690410b60275b49469c17b141a72e12581ddabfe"
+        },
+        {
+          "path": "timeline-images.js",
+          "sha256": "68dbec358f875d89560675f5a7d61ee528ad7b9e68b4e182244f9a5f10237612"
+        }
+      ],
+      "known_asset_paths": [
+        "assets/history/joseph-emma-harmony-1400.webp",
+        "assets/history/joseph-emma-harmony-800.webp",
+        "assets/page-art/bom-evidences/joseph-emma-walk-body-v2-960.webp",
+        "assets/page-art/bom-evidences/joseph-emma-walk-body-v2.webp",
+        "assets/page-art/bom-evidences/joseph-emma-walk-identity-v3-1536.webp",
+        "assets/page-art/bom-evidences/joseph-emma-walk-identity-v3-960.webp",
+        "assets/page-art/bom-evidences/joseph-emma-walk-identity-v3.png",
+        "assets/page-art/bom-evidences/josephemma-bodice-v3-1536.webp",
+        "assets/page-art/bom-evidences/josephemma-bodice-v3-640.webp",
+        "assets/page-art/bom-evidences/josephemma-bodice-v3-960.webp",
+        "assets/page-art/bom-evidences/josephemma-bodice-v3.png",
+        "assets/page-art/bom-evidences/josephemma-identity-v4-1536.webp",
+        "assets/page-art/bom-evidences/josephemma-identity-v4-640.webp",
+        "assets/page-art/bom-evidences/josephemma-identity-v4-960.webp",
+        "assets/page-art/bom-evidences/josephemma-identity-v4.png",
+        "assets/page-art/church-history/relief-society-identity-v4-1672.webp",
+        "assets/page-art/church-history/relief-society-identity-v4-960.webp",
+        "assets/page-art/church-history/relief-society-identity-v4.png",
+        "assets/page-art/church-history/relief-society-torso-v3-960.webp",
+        "assets/page-art/church-history/relief-society-torso-v3.webp",
+        "assets/page-art/emma-life/emma-h1-review-1536.webp",
+        "assets/page-art/emma-life/emma-h1-review-640.webp",
+        "assets/page-art/emma-life/emma-h1-review-960.webp",
+        "assets/page-art/emma-life/emma-h1-review.png",
+        "assets/page-art/emma-life/emma-h2-review-1536.webp",
+        "assets/page-art/emma-life/emma-h2-review-640.webp",
+        "assets/page-art/emma-life/emma-h2-review-960.webp",
+        "assets/page-art/emma-life/emma-h2-review.png",
+        "assets/page-art/emma-life/emma-h3-review-1536.webp",
+        "assets/page-art/emma-life/emma-h3-review-640.webp",
+        "assets/page-art/emma-life/emma-h3-review-960.webp",
+        "assets/page-art/emma-life/emma-h3-review.png",
+        "assets/page-art/emma-life/emma-h4-review-1536.webp",
+        "assets/page-art/emma-life/emma-h4-review-640.webp",
+        "assets/page-art/emma-life/emma-h4-review-960.webp",
+        "assets/page-art/emma-life/emma-h4-review.png",
+        "assets/page-art/emma-life/emma-h5-review-1536.webp",
+        "assets/page-art/emma-life/emma-h5-review-640.webp",
+        "assets/page-art/emma-life/emma-h5-review-960.webp",
+        "assets/page-art/emma-life/emma-h5-review.png",
+        "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3-1536.webp",
+        "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3-640.webp",
+        "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3-960.webp",
+        "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3.png",
+        "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-upper-bodice-v3-1536.webp",
+        "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-upper-bodice-v3-640.webp",
+        "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-upper-bodice-v3-960.webp",
+        "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-upper-bodice-v3.png",
+        "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-bodice-v3-1536.webp",
+        "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-bodice-v3-640.webp",
+        "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-bodice-v3-960.webp",
+        "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-bodice-v3.png",
+        "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2-1536.webp",
+        "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2-640.webp",
+        "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2-960.webp",
+        "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2.png",
+        "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3-1536.webp",
+        "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3-640.webp",
+        "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3-960.webp",
+        "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3.png",
+        "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-body-season-v3-1536.webp",
+        "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-body-season-v3-640.webp",
+        "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-body-season-v3-960.webp",
+        "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-body-season-v3.png",
+        "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-warm-companionship-v4-1536.webp",
+        "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-warm-companionship-v4-640.webp",
+        "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-warm-companionship-v4-960.webp",
+        "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-warm-companionship-v4.png",
+        "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-torso-v3-1536.webp",
+        "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-torso-v3-640.webp",
+        "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-torso-v3-960.webp",
+        "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-torso-v3.png",
+        "assets/portraits/emma-smith-natural-20261008.png"
+      ],
+      "rejected_by_family": {
+        "SITE01": [
+          {
+            "sha256": "091f4aa5620e786d3e72c5720e327c53720455800dce4357bb17eca5f6e7e223",
+            "pixel_sha256": "d180c3b673e594382cec0e5673c8ee97e6904bdcc7be5a83b9e537eb65eca6f7",
+            "basis": "Superseded active likeness; retained historical input, prohibited active display"
+          },
+          {
+            "sha256": "50b46cf8cea6be49b23522cc6d7081f79238472ad2f1cc282078d2d8eba77a67",
+            "pixel_sha256": "e63a3d49a8fb44159d8e486e98320ec41a388f20a3b8411d719db6772f956779",
+            "basis": "Superseded active likeness; retained historical input, prohibited active display"
+          },
+          {
+            "sha256": "ce43b57dfe90272794027c2d3439855d6cda1556644058dbe5e80b904e541973",
+            "pixel_sha256": "a19fc28a49aa52c704df9b1e03b6702a4bdadb9e8a0126be414d89bd96df5e81",
+            "basis": "Superseded active likeness; retained historical input, prohibited active display"
+          },
+          {
+            "sha256": "cbf83e11d899acb1b2a002a17f8b6b440216fbdb363b6168c168f86a04ec674f",
+            "pixel_sha256": "5453c87e44362d42cc0c308f3c42fccb02b4fe86b2c213c55bd13b5d4f6ea5c7",
+            "basis": "Superseded active likeness; retained historical input, prohibited active display"
+          }
+        ],
+        "SITE02": [
+          {
+            "sha256": "b5767224123e0e26ea91681cd192f11eabf2d1c30430d8ca1a842e54c4351341",
+            "pixel_sha256": "7460ac80a1ecf4a0288f703f3c84151ee5511f4daf730aaf223e372f7df48e63",
+            "basis": "Superseded active likeness; retained historical input, prohibited active display"
+          },
+          {
+            "sha256": "f91d7adb0488df4d235e0b400c6e451e90486965b951bcf9c262b58715827a3f",
+            "pixel_sha256": "79f959f15c6848c18abe20830eeb80be290439f5143eb51ef809f80d406e0cae",
+            "basis": "Superseded active likeness; retained historical input, prohibited active display"
+          }
+        ],
+        "SITE05": [
+          {
+            "sha256": "bccc1a78b7592abf8fcdcef4f79f1d89c5446a59f68476c9a230915fbe6b05ea",
+            "pixel_sha256": "6fb8772ce7b665b475baf8ff3a8a21ff05bb6a049654a98d8d40a443e6b95a8e",
+            "basis": "Superseded active likeness; retained historical input, prohibited active display"
+          },
+          {
+            "sha256": "f9f1ebceace304bddcd8f91515e66e95a342a3ec745c24630c23583dd73a339c",
+            "pixel_sha256": "4dd597d1811a938644aed041801ac429f4bdf26d035ca8ec2342a33fe3dbe868",
+            "basis": "Superseded active likeness; retained historical input, prohibited active display"
+          },
+          {
+            "sha256": "cdc83a5153a8b30843e9cb17036fac8138a7b9f1cae63a3d9cb2dd539c9b3a14",
+            "pixel_sha256": "a17876469962b7610d20eca53b98d164dbad0f195f898356a1751b2df4035865",
+            "basis": "Owner rejected d0da or held alternative raw; not accepted final ancestry"
+          },
+          {
+            "sha256": "d0da44b4e3d64417c6ba05c24b83fa73fd82e39aa5a6e2f6dd35ca0b5f8aac0f",
+            "pixel_sha256": "60632e7f4fc16efff877775e36e196c48cd14360a7965ec587800107e2e58f66",
+            "basis": "Owner rejected d0da or held alternative raw; not accepted final ancestry"
+          },
+          {
+            "sha256": "99cf17e3d33d4eb903a7089db3cce94beb0f283c44e8d5ae289419e9952a655b",
+            "pixel_sha256": "e28fc19d7248eed63c65ac79c6ab60146e3136cb591f2028c6f32d16babbc0fc",
+            "basis": "Owner rejected d0da or held alternative raw; not accepted final ancestry"
+          }
+        ]
+      },
+      "unresolved_consumers": [],
+      "nonliteral_resolution_evidence": [
+        {
+          "path": "docs/owner-requirement-evidence/pdf-consumer-resolution.json",
+          "sha256": "f5d87f1f36bc824ddc41d8a3320fbffd52316a5c6140d26a07b33f41d7ed9dd7"
+        },
+        {
+          "path": "docs/owner-requirement-evidence/consumer-trace.json",
+          "sha256": "8556651b0812945564f96e96e43d3e68914fc1aa2c1aea7d790ac349162b5445"
+        }
+      ],
+      "site_origin": "https://focuschrist.com",
+      "exception_families": [
+        {
+          "id": "SITE03",
+          "assets": [
+            {
+              "path": "assets/history/joseph-emma-harmony-1400.webp",
+              "sha256": "f22c1dc3d839480ed45e84b6f6705469cf75f7307db73eecce3722e6bbaa2df7"
+            },
+            {
+              "path": "assets/history/joseph-emma-harmony-800.webp",
+              "sha256": "c12a3ad63df040395d3fd5aa68b944b6fd8d2df06729b468c105cf367635e69c"
+            }
+          ],
+          "authority": {
+            "path": "docs/owner-requirement-evidence/body-and-exception-authority.json",
+            "sha256": "185cb94773047b12cff427cb442fdfb2d82f48e892f36a78ab1508fb416b0379"
+          }
+        },
+        {
+          "id": "SITE09",
+          "assets": [
+            {
+              "path": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3-1536.webp",
+              "sha256": "a6c4012577748a4b52253d76ef1f7978ab7aaaae2707c7134832d25005a20f09"
+            },
+            {
+              "path": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3-640.webp",
+              "sha256": "482b50f0cadc0e6a7c1fee3a458f19bb088e51d071f2b9b1f0ff51908edc13be"
+            },
+            {
+              "path": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3-960.webp",
+              "sha256": "b9f8ef1bcb6bd09ce8fb889889ca13b748524140de544fc0db3362c7e349a9a2"
+            },
+            {
+              "path": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3.png",
+              "sha256": "2b2e8e7ce28cb2d9c4d98d12e35c2ba7da1d1c510dd25df00adb49439320fa0f"
+            }
+          ],
+          "authority": {
+            "path": "docs/owner-requirement-evidence/site09-owner-preservation.json",
+            "sha256": "79d58ab272d29d1eaef377f2a60cdd24ce01e3360893d80be424194cb95890cd"
+          }
+        }
+      ],
+      "unchanged_display_families": [
+        {
+          "id": "SITE11",
+          "assets": [
+            {
+              "path": "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2-1536.webp",
+              "sha256": "8c081044b5d4e729a7fc9002f42be71ecc9fc574e607596d4d4acf603cf80f48",
+              "pixel_sha256": "60d7b5e5c4297e9851f35d6b4173c07017729a2d162078f799cb53e52a220f0b",
+              "dimensions": [
+                1536,
+                1024
+              ],
+              "format": "WEBP",
+              "mode": "RGB",
+              "bytes": 190428
+            },
+            {
+              "path": "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2-640.webp",
+              "sha256": "56baadfa2ba0ebeddaa777ebce78078a1a6518565a733628434420fbb7862bd1",
+              "pixel_sha256": "75410460e825dbe8e7fc4658a7bca297b855457ee9c43cc690e05c46424fc235",
+              "dimensions": [
+                640,
+                427
+              ],
+              "format": "WEBP",
+              "mode": "RGB",
+              "bytes": 50916
+            },
+            {
+              "path": "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2-960.webp",
+              "sha256": "59d602c656b76baa417b02f875804d73964e852ddb723d328eeb805597bbf5e2",
+              "pixel_sha256": "e169090a6a192c3e28e2881eeb89ff32e9d4d04b6d1245314eaf7fd4c2dd6e2d",
+              "dimensions": [
+                960,
+                640
+              ],
+              "format": "WEBP",
+              "mode": "RGB",
+              "bytes": 98098
+            },
+            {
+              "path": "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2.png",
+              "sha256": "1bb9ab79c5d315f1eeb8bd3a4ee4dee4eda532832afa435c2c55b7bd9c2b19cd",
+              "pixel_sha256": "cc23acd78ca344058b3d7c123b992ba419a47cc389403f4db300f85d2edefbae",
+              "dimensions": [
+                1536,
+                1024
+              ],
+              "format": "PNG",
+              "mode": "RGB",
+              "bytes": 2063360
+            }
+          ],
+          "display_evidence_by_actor": {
+            "/root/fermi_current": [
+              {
+                "path": "docs/owner-requirement-evidence/site11-fermi-display.json",
+                "sha256": "7f1ffc9ded8d1e08bb7d12ace8250d2ae1759ab92806e9ee13d470f39e878ecf"
+              }
+            ],
+            "/root/newton_current": [
+              {
+                "path": "docs/owner-requirement-evidence/site11-newton-display.json",
+                "sha256": "2e36a5f75f5b3f2553929a52b4003654074b87af9837a4ee07241dcdfabce9a3"
+              }
+            ],
+            "/root": [
+              {
+                "path": "docs/owner-requirement-evidence/site11-root-display.json",
+                "sha256": "fc580210ef32d2e2b877234b6e36973db1e722c16be25ab59bb6e669d59aa04f"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "owner_objections": [
+      {
+        "id": "owner-appearance-reopen",
+        "scope": "Every active Emma likeness except precise owner-preserved Harmony and bedside families",
+        "source_class": "direct_owner_instruction_reported_by_root",
+        "original_event_time": null
+      },
+      {
+        "id": "owner-site05-d0da-rejection",
+        "scope": "Explicitly rejected SITE05d0da cannot return as active source or reencoded pixels",
+        "source_class": "direct_owner_instruction_reported_by_root",
+        "original_event_time": null
+      },
+      {
+        "id": "owner-objection03",
+        "scope": "Separate body review for every applicable scene; unsupported visible pregnancy prohibited, postpartum is not pregnancy",
+        "source_class": "direct_owner_instruction_reported_by_root",
+        "original_event_time": null
+      }
+    ],
+    "families": [
+      {
+        "id": "SITE01",
+        "assets": [
+          {
+            "path": "assets/page-art/bom-evidences/josephemma-identity-v4.png",
+            "sha256": "d65c9a9783b3a513f64f8689b8ebb95b4c9ebab44feeab7e120dc53f1b950400",
+            "pixel_sha256": "8c5c0bf22be429c9bb8b9ecae0d7af7eb1284c62e397c584f830d6e8b51872ac",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "format": "PNG",
+            "mode": "RGB",
+            "bytes": 2118133
+          },
+          {
+            "path": "assets/page-art/bom-evidences/josephemma-identity-v4-640.webp",
+            "sha256": "c303300df54d42fbb40cb9444aaa2f711d2262ff66a2258a832babd8a2313a57",
+            "pixel_sha256": "16f22e1ebfb179ddcba3352898bb1ccb9a5576b22a7a9031fc20d0f12ad7f964",
+            "dimensions": [
+              640,
+              427
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 49140
+          },
+          {
+            "path": "assets/page-art/bom-evidences/josephemma-identity-v4-960.webp",
+            "sha256": "9a8966492ef68defa81990c2dcc8fc235f060a8d1523e0833bb625a98ced79d3",
+            "pixel_sha256": "f10bd8237a7f5ee471219ea28959719d6c394c2b08b7d9844892360e2f70c1bf",
+            "dimensions": [
+              960,
+              640
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 88846
+          },
+          {
+            "path": "assets/page-art/bom-evidences/josephemma-identity-v4-1536.webp",
+            "sha256": "9ca588e2dea43ff7981a5701823919d40a846820ac8bb9ebb97fe236848468a9",
+            "pixel_sha256": "ddbc85adadd1c709c7088cc9e6aa365a606eeb2d9768fb069ed0f4c1c9c995b9",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 170596
+          }
+        ],
+        "consumers": [
+          {
+            "path": "art-gallery.json",
+            "asset": "assets/page-art/bom-evidences/josephemma-identity-v4-960.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "art-gallery.json",
+            "asset": "assets/page-art/bom-evidences/josephemma-identity-v4.png",
+            "occurrences": 2
+          },
+          {
+            "path": "book-of-mormon-evidences.html",
+            "asset": "assets/page-art/bom-evidences/josephemma-identity-v4-1536.webp",
+            "occurrences": 1
+          },
+          {
+            "path": "book-of-mormon-evidences.html",
+            "asset": "assets/page-art/bom-evidences/josephemma-identity-v4-640.webp",
+            "occurrences": 1
+          },
+          {
+            "path": "book-of-mormon-evidences.html",
+            "asset": "assets/page-art/bom-evidences/josephemma-identity-v4-960.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "book-of-mormon-evidences.html",
+            "asset": "assets/page-art/bom-evidences/josephemma-identity-v4.png",
+            "occurrences": 1
+          },
+          {
+            "path": "site-search-index.json",
+            "asset": "assets/page-art/bom-evidences/josephemma-identity-v4-960.webp",
+            "occurrences": 1
+          }
+        ],
+        "source_sha256": "d65c9a9783b3a513f64f8689b8ebb95b4c9ebab44feeab7e120dc53f1b950400",
+        "body": {
+          "status": "unknown",
+          "visible_pregnancy": false,
+          "scene_date": "Early scribe scene; exact date unspecified",
+          "findings": "Actual corrected source retains accepted body/waist and scene; no new pregnancy/body redesign or distinct unsupported pregnancy dome identified in the three actual source reviews."
+        },
+        "appearance_basis": "current_actual_source_and_private_display",
+        "reviews": [
+          {
+            "role": "Fermi",
+            "actual_actor": "/root/fermi_current",
+            "binding_sha256": "71d784e020dd72d69e9578c227b01330d54d4cf356cbbaf84d7176e90c41f253",
+            "verdict": "PASS",
+            "withdrawn": false,
+            "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+            "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+            "likeness_findings": "Actual corrected full/native source compared against approved7d0/H4/f6; recognizable eyes, long nose, cheeks/jaw and mouth relationships with natural scene expression.",
+            "body_findings": "Actual corrected body, waist, neck/collar, hands and scene remain coherent; no unsupported pregnancy dome or exact outside-pixel equality claimed.",
+            "full_native_inspected": true,
+            "display_scale_inspected": true,
+            "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+            "evidence": [
+              {
+                "path": "docs/owner-requirement-evidence/site01-fermi-source.json",
+                "sha256": "1cf6dcdd6ad97cfa44dfb1fb177d210936b4ec9ae82f71da3bb5a990e253977d"
+              },
+              {
+                "path": "docs/owner-requirement-evidence/site01-fermi-display.json",
+                "sha256": "19aecd352de3c6f745d00009fde715ee36882d4e2d1c17cf466ee9027c3e6bac"
+              }
+            ]
+          },
+          {
+            "role": "Newton",
+            "actual_actor": "/root/newton_current",
+            "binding_sha256": "71d784e020dd72d69e9578c227b01330d54d4cf356cbbaf84d7176e90c41f253",
+            "verdict": "PASS",
+            "withdrawn": false,
+            "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+            "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+            "likeness_findings": "Actual corrected full/native source compared against approved7d0/H4/f6; recognizable eyes, long nose, cheeks/jaw and mouth relationships with natural scene expression.",
+            "body_findings": "Actual corrected body, waist, neck/collar, hands and scene remain coherent; no unsupported pregnancy dome or exact outside-pixel equality claimed.",
+            "full_native_inspected": true,
+            "display_scale_inspected": true,
+            "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+            "evidence": [
+              {
+                "path": "docs/owner-requirement-evidence/site01-newton-source.json",
+                "sha256": "61fec21bef7aa6329fc68464d4cd846607353e6e24495195e3744a986820e2a1"
+              },
+              {
+                "path": "docs/owner-requirement-evidence/site01-newton-display.json",
+                "sha256": "42c8b7cc0fd4df4f3e886c27da0872ee84c3f6ca10b666136623fa3363bda83c"
+              }
+            ]
+          }
+        ],
+        "root_review": {
+          "role": "root",
+          "actual_actor": "/root",
+          "binding_sha256": "71d784e020dd72d69e9578c227b01330d54d4cf356cbbaf84d7176e90c41f253",
+          "verdict": "PASS",
+          "withdrawn": false,
+          "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+          "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+          "likeness_findings": "Actual corrected full/native source compared against approved7d0/H4/f6; recognizable eyes, long nose, cheeks/jaw and mouth relationships with natural scene expression.",
+          "body_findings": "Actual corrected body, waist, neck/collar, hands and scene remain coherent; no unsupported pregnancy dome or exact outside-pixel equality claimed.",
+          "full_native_inspected": true,
+          "display_scale_inspected": true,
+          "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+          "evidence": [
+            {
+              "path": "docs/owner-requirement-evidence/site01-root-source.json",
+              "sha256": "0e35df71742785a0db885e3cd9d314be57d93ec639cd80086fdb057cb0fd8ba0"
+            },
+            {
+              "path": "docs/owner-requirement-evidence/site01-root-display.json",
+              "sha256": "f385b506b381343c445328c40f329c9f4558cc8c3ad8ad1487937aa5610cf261"
+            }
+          ]
+        }
+      },
+      {
+        "id": "SITE02",
+        "assets": [
+          {
+            "path": "assets/page-art/bom-evidences/joseph-emma-walk-identity-v3.png",
+            "sha256": "25021b2639f47c3994e5e16b018701d3a4ff51eee4e96b2d183abe0b001c4741",
+            "pixel_sha256": "3e013d9722b17d4fb31b514660b5227cb5e72b3c5257e4ac38ec38548763f8a4",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "format": "PNG",
+            "mode": "RGB",
+            "bytes": 2345388
+          },
+          {
+            "path": "assets/page-art/bom-evidences/joseph-emma-walk-identity-v3-960.webp",
+            "sha256": "ace54666fd02386a9b677336db75aa0134a2bceda6dccb69c70f1bcd3d7f4a27",
+            "pixel_sha256": "04d26be912da47fed0857a96b933995fefe269f2f5905e4d8e79aff47f2865d9",
+            "dimensions": [
+              960,
+              640
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 139052
+          },
+          {
+            "path": "assets/page-art/bom-evidences/joseph-emma-walk-identity-v3-1536.webp",
+            "sha256": "9790171e97dd3230156f58f77dfe0925cf3e55dd7be15b9cbc630688647dc694",
+            "pixel_sha256": "2b897ceb7d1c27332a36fad0c908935ef80ec944fcdb852407cdd9d7f35eb4d0",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 253780
+          }
+        ],
+        "consumers": [
+          {
+            "path": "art-gallery.json",
+            "asset": "assets/page-art/bom-evidences/joseph-emma-walk-identity-v3-1536.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "art-gallery.json",
+            "asset": "assets/page-art/bom-evidences/joseph-emma-walk-identity-v3-960.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "book-of-mormon-evidences.html",
+            "asset": "assets/page-art/bom-evidences/joseph-emma-walk-identity-v3-1536.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "book-of-mormon-evidences.html",
+            "asset": "assets/page-art/bom-evidences/joseph-emma-walk-identity-v3-960.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "site-search-index.json",
+            "asset": "assets/page-art/bom-evidences/joseph-emma-walk-identity-v3-960.webp",
+            "occurrences": 1
+          }
+        ],
+        "source_sha256": "25021b2639f47c3994e5e16b018701d3a4ff51eee4e96b2d183abe0b001c4741",
+        "body": {
+          "status": "unknown",
+          "visible_pregnancy": false,
+          "scene_date": "Undated imagined walk",
+          "findings": "Actual corrected source retains accepted body/waist and scene; no new pregnancy/body redesign or distinct unsupported pregnancy dome identified in the three actual source reviews."
+        },
+        "appearance_basis": "current_actual_source_and_private_display",
+        "reviews": [
+          {
+            "role": "Fermi",
+            "actual_actor": "/root/fermi_current",
+            "binding_sha256": "3ddce5ee1028a184cf12d5850d6f67f0b39edc5696cf3805c7b8ae0913e5675b",
+            "verdict": "PASS",
+            "withdrawn": false,
+            "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+            "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+            "likeness_findings": "Actual corrected full/native source compared against approved7d0/H4/f6; recognizable eyes, long nose, cheeks/jaw and mouth relationships with natural scene expression.",
+            "body_findings": "Actual corrected body, waist, neck/collar, hands and scene remain coherent; no unsupported pregnancy dome or exact outside-pixel equality claimed.",
+            "full_native_inspected": true,
+            "display_scale_inspected": true,
+            "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+            "evidence": [
+              {
+                "path": "docs/owner-requirement-evidence/site01-fermi-source.json",
+                "sha256": "1cf6dcdd6ad97cfa44dfb1fb177d210936b4ec9ae82f71da3bb5a990e253977d"
+              },
+              {
+                "path": "docs/owner-requirement-evidence/site01-fermi-display.json",
+                "sha256": "19aecd352de3c6f745d00009fde715ee36882d4e2d1c17cf466ee9027c3e6bac"
+              }
+            ]
+          },
+          {
+            "role": "Newton",
+            "actual_actor": "/root/newton_current",
+            "binding_sha256": "3ddce5ee1028a184cf12d5850d6f67f0b39edc5696cf3805c7b8ae0913e5675b",
+            "verdict": "PASS",
+            "withdrawn": false,
+            "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+            "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+            "likeness_findings": "Actual corrected full/native source compared against approved7d0/H4/f6; recognizable eyes, long nose, cheeks/jaw and mouth relationships with natural scene expression.",
+            "body_findings": "Actual corrected body, waist, neck/collar, hands and scene remain coherent; no unsupported pregnancy dome or exact outside-pixel equality claimed.",
+            "full_native_inspected": true,
+            "display_scale_inspected": true,
+            "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+            "evidence": [
+              {
+                "path": "docs/owner-requirement-evidence/site01-newton-source.json",
+                "sha256": "61fec21bef7aa6329fc68464d4cd846607353e6e24495195e3744a986820e2a1"
+              },
+              {
+                "path": "docs/owner-requirement-evidence/site01-newton-display.json",
+                "sha256": "42c8b7cc0fd4df4f3e886c27da0872ee84c3f6ca10b666136623fa3363bda83c"
+              }
+            ]
+          }
+        ],
+        "root_review": {
+          "role": "root",
+          "actual_actor": "/root",
+          "binding_sha256": "3ddce5ee1028a184cf12d5850d6f67f0b39edc5696cf3805c7b8ae0913e5675b",
+          "verdict": "PASS",
+          "withdrawn": false,
+          "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+          "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+          "likeness_findings": "Actual corrected full/native source compared against approved7d0/H4/f6; recognizable eyes, long nose, cheeks/jaw and mouth relationships with natural scene expression.",
+          "body_findings": "Actual corrected body, waist, neck/collar, hands and scene remain coherent; no unsupported pregnancy dome or exact outside-pixel equality claimed.",
+          "full_native_inspected": true,
+          "display_scale_inspected": true,
+          "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+          "evidence": [
+            {
+              "path": "docs/owner-requirement-evidence/site01-root-source.json",
+              "sha256": "0e35df71742785a0db885e3cd9d314be57d93ec639cd80086fdb057cb0fd8ba0"
+            },
+            {
+              "path": "docs/owner-requirement-evidence/site01-root-display.json",
+              "sha256": "f385b506b381343c445328c40f329c9f4558cc8c3ad8ad1487937aa5610cf261"
+            }
+          ]
+        }
+      },
+      {
+        "id": "SITE03",
+        "assets": [
+          {
+            "path": "assets/history/joseph-emma-harmony-1400.webp",
+            "sha256": "f22c1dc3d839480ed45e84b6f6705469cf75f7307db73eecce3722e6bbaa2df7",
+            "pixel_sha256": "7981a61df228a28227287aaf5d5586aa00b3167ea36c3544b3dd25a25020a77d",
+            "dimensions": [
+              1400,
+              467
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 41124
+          },
+          {
+            "path": "assets/history/joseph-emma-harmony-800.webp",
+            "sha256": "c12a3ad63df040395d3fd5aa68b944b6fd8d2df06729b468c105cf367635e69c",
+            "pixel_sha256": "2eebabc3a46c78c7e6fd0a0b9bba46731afd4d6671e5f783cba7b454db5d694c",
+            "dimensions": [
+              800,
+              267
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 17792
+          }
+        ],
+        "consumers": [
+          {
+            "path": "art-gallery.json",
+            "asset": "assets/history/joseph-emma-harmony-1400.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "church-history.html",
+            "asset": "assets/history/joseph-emma-harmony-1400.webp",
+            "occurrences": 5
+          },
+          {
+            "path": "church-history.html",
+            "asset": "assets/history/joseph-emma-harmony-800.webp",
+            "occurrences": 1
+          },
+          {
+            "path": "history/emma-hale-smith.html",
+            "asset": "assets/history/joseph-emma-harmony-1400.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "site-search-index.json",
+            "asset": "assets/history/joseph-emma-harmony-1400.webp",
+            "occurrences": 1
+          }
+        ],
+        "source_sha256": "f22c1dc3d839480ed45e84b6f6705469cf75f7307db73eecce3722e6bbaa2df7",
+        "exempt": true
+      },
+      {
+        "id": "SITE04",
+        "assets": [
+          {
+            "path": "assets/portraits/emma-smith-natural-20261008.png",
+            "sha256": "24d91675616ed16399ecb10238cb5d784de4605139fc14c5b737dedcd7823349",
+            "pixel_sha256": "6c0690c5e7ce14386aaf85033adb9ec59daf1e2cd85f9915d2612db9acd6f76b",
+            "dimensions": [
+              1112,
+              1414
+            ],
+            "format": "PNG",
+            "mode": "RGB",
+            "bytes": 2048457
+          }
+        ],
+        "consumers": [
+          {
+            "path": "art-gallery.json",
+            "asset": "assets/portraits/emma-smith-natural-20261008.png",
+            "occurrences": 2
+          },
+          {
+            "path": "church-history.html",
+            "asset": "assets/portraits/emma-smith-natural-20261008.png",
+            "occurrences": 4
+          },
+          {
+            "path": "site-search-index.json",
+            "asset": "assets/portraits/emma-smith-natural-20261008.png",
+            "occurrences": 1
+          }
+        ],
+        "source_sha256": "24d91675616ed16399ecb10238cb5d784de4605139fc14c5b737dedcd7823349",
+        "body": {
+          "status": "unknown",
+          "visible_pregnancy": false,
+          "scene_date": "Undated identity portrait",
+          "findings": "Displayed blue portrait has fitted central buttoned bodice and a visible waist taper. Full bust and puffed sleeves are ordinary period clothing. Lower abdomen falls outside the portrait crop; no pregnancy inference or hidden-body judgment."
+        },
+        "appearance_basis": "current_actual_source_and_private_display",
+        "reviews": [
+          {
+            "role": "Fermi",
+            "actual_actor": "/root/fermi_current",
+            "binding_sha256": "c9b95a51bd49e6c8aa7e9049c752eb9fab2f57151ebc22390f1bd574ce1007c8",
+            "verdict": "PASS",
+            "withdrawn": false,
+            "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+            "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+            "likeness_findings": "NO_NEW_LIKENESS_CORRECTION_IDENTIFIED",
+            "body_findings": "Displayed blue portrait has fitted central buttoned bodice and a visible waist taper. Full bust and puffed sleeves are ordinary period clothing. Lower abdomen falls outside the portrait crop; no pregnancy inference or hidden-body judgment.",
+            "full_native_inspected": true,
+            "display_scale_inspected": true,
+            "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+            "evidence": [
+              {
+                "path": "docs/owner-requirement-evidence/site04-fermi-source.json",
+                "sha256": "43837100dd273d8e89f3f2958d336bb78505986b3e4c9157985a3dfdfd6b55e5"
+              },
+              {
+                "path": "docs/owner-requirement-evidence/site04-fermi-display.json",
+                "sha256": "516395f4619c678f79bc6353fc9e46c296919c1b3c092dc70ea4ca72df01170d"
+              }
+            ]
+          },
+          {
+            "role": "Newton",
+            "actual_actor": "/root/newton_current",
+            "binding_sha256": "c9b95a51bd49e6c8aa7e9049c752eb9fab2f57151ebc22390f1bd574ce1007c8",
+            "verdict": "PASS",
+            "withdrawn": false,
+            "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+            "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+            "likeness_findings": "RETAIN_NO_NEW_DEFECT_IDENTIFIED",
+            "body_findings": "Portrait shows full natural upper chest with waist definition; this is not evidence of pregnancy.",
+            "full_native_inspected": true,
+            "display_scale_inspected": true,
+            "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+            "evidence": [
+              {
+                "path": "docs/owner-requirement-evidence/site04-newton-source.json",
+                "sha256": "17994927429f675895d670a111d0680f7191373d2bd656682cb8726ec2dd75a9"
+              },
+              {
+                "path": "docs/owner-requirement-evidence/site04-newton-display.json",
+                "sha256": "ca942b92864371d69d4197c40d04aff816706123914d36d1ac3d53a6486a08c6"
+              }
+            ]
+          }
+        ],
+        "root_review": {
+          "role": "root",
+          "actual_actor": "/root",
+          "binding_sha256": "c9b95a51bd49e6c8aa7e9049c752eb9fab2f57151ebc22390f1bd574ce1007c8",
+          "verdict": "PASS",
+          "withdrawn": false,
+          "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+          "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+          "likeness_findings": "Actual full source compared with approved Emma references; no additional likeness defect identified in this retained scene.",
+          "body_findings": "Actual full scene reviewed for defined waist, period layers and dated pregnancy applicability; source-specific current findings retained in root source report.",
+          "full_native_inspected": true,
+          "display_scale_inspected": true,
+          "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+          "evidence": [
+            {
+              "path": "docs/owner-requirement-evidence/site04-root-source.json",
+              "sha256": "3fbd37ca36363af9917764f5d60ab255c728e79b1b0442942f53b89d3e8697ed"
+            },
+            {
+              "path": "docs/owner-requirement-evidence/site04-root-display.json",
+              "sha256": "7de266266d7fc6f0aacbfdd38b8c14c54abf30494883aad33cb2e14c58104e89"
+            }
+          ]
+        }
+      },
+      {
+        "id": "SITE05",
+        "assets": [
+          {
+            "path": "assets/page-art/church-history/relief-society-identity-v4.png",
+            "sha256": "4c9c79f6d0eb407f668d0048d63b2de0ef851d3ecba0474de6d88521f2b4fb1c",
+            "pixel_sha256": "dfdde144fbf85b8136930a964c6ab5edb1d9c467bed436d39753c4c202f6a8c0",
+            "dimensions": [
+              1672,
+              941
+            ],
+            "format": "PNG",
+            "mode": "RGB",
+            "bytes": 2120937
+          },
+          {
+            "path": "assets/page-art/church-history/relief-society-identity-v4-960.webp",
+            "sha256": "f79bb8866aca313928a9ba4f8b5c7715e86fd3f14bfdb950a5d9682f6353eeba",
+            "pixel_sha256": "589fb21e43194a06045420c20eb760706583337be05f8ca7826ad0d8c0b6e2c2",
+            "dimensions": [
+              960,
+              540
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 96018
+          },
+          {
+            "path": "assets/page-art/church-history/relief-society-identity-v4-1672.webp",
+            "sha256": "f29471cc060884d63acca83376ae7303a270419a51615bcea946af3a39ad9bdd",
+            "pixel_sha256": "eab518e96cb065f3d4e20ef465449a8e64897c9ad1d08b6e5a91bacdbb55ec88",
+            "dimensions": [
+              1672,
+              941
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 195146
+          }
+        ],
+        "consumers": [
+          {
+            "path": "art-gallery.json",
+            "asset": "assets/page-art/church-history/relief-society-identity-v4-1672.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "art-gallery.json",
+            "asset": "assets/page-art/church-history/relief-society-identity-v4-960.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "church-history.html",
+            "asset": "assets/page-art/church-history/relief-society-identity-v4-1672.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "church-history.html",
+            "asset": "assets/page-art/church-history/relief-society-identity-v4-960.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "site-search-index.json",
+            "asset": "assets/page-art/church-history/relief-society-identity-v4-960.webp",
+            "occurrences": 1
+          },
+          {
+            "path": "timeline-images.js",
+            "asset": "assets/page-art/church-history/relief-society-identity-v4-960.webp",
+            "occurrences": 1
+          }
+        ],
+        "source_sha256": "4c9c79f6d0eb407f668d0048d63b2de0ef851d3ecba0474de6d88521f2b4fb1c",
+        "body": {
+          "status": "postpartum",
+          "visible_pregnancy": false,
+          "scene_date": "1842-03-17",
+          "findings": "Actual corrected source retains accepted body/waist and scene; no new pregnancy/body redesign or distinct unsupported pregnancy dome identified in the three actual source reviews."
+        },
+        "appearance_basis": "current_actual_source_and_private_display",
+        "reviews": [
+          {
+            "role": "Fermi",
+            "actual_actor": "/root/fermi_current",
+            "binding_sha256": "7a82672dcd633c19e7f04b6eab83c1a9b175c4fdfdea5ac1ea73336cb3357dcd",
+            "verdict": "PASS",
+            "withdrawn": false,
+            "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+            "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+            "likeness_findings": "Actual corrected full/native source compared against approved7d0/H4/f6; recognizable eyes, long nose, cheeks/jaw and mouth relationships with natural scene expression.",
+            "body_findings": "Actual corrected body, waist, neck/collar, hands and scene remain coherent; no unsupported pregnancy dome or exact outside-pixel equality claimed.",
+            "full_native_inspected": true,
+            "display_scale_inspected": true,
+            "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+            "evidence": [
+              {
+                "path": "docs/owner-requirement-evidence/site05-fermi-source.json",
+                "sha256": "bff4e4d6de6f4607691577609822e3da3405d656b4f558321314377ef4e94fc5"
+              },
+              {
+                "path": "docs/owner-requirement-evidence/site05-fermi-display.json",
+                "sha256": "06cc3c7310f824d7ed00560a8094cbe030498187e0476e2b700a4dfd5b598e0c"
+              }
+            ]
+          },
+          {
+            "role": "Newton",
+            "actual_actor": "/root/newton_current",
+            "binding_sha256": "7a82672dcd633c19e7f04b6eab83c1a9b175c4fdfdea5ac1ea73336cb3357dcd",
+            "verdict": "PASS",
+            "withdrawn": false,
+            "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+            "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+            "likeness_findings": "Actual corrected full/native source compared against approved7d0/H4/f6; recognizable eyes, long nose, cheeks/jaw and mouth relationships with natural scene expression.",
+            "body_findings": "Actual corrected body, waist, neck/collar, hands and scene remain coherent; no unsupported pregnancy dome or exact outside-pixel equality claimed.",
+            "full_native_inspected": true,
+            "display_scale_inspected": true,
+            "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+            "evidence": [
+              {
+                "path": "docs/owner-requirement-evidence/site05-newton-source.json",
+                "sha256": "0618e69f3a693deb8da6de57bf79fd0d4b5f7fb322758e5971dd5ef991040a26"
+              },
+              {
+                "path": "docs/owner-requirement-evidence/site05-newton-display.json",
+                "sha256": "4e99c5f7ab6010a99b0b586cddccb4481b179f835fbdeb387b17ee4701097c30"
+              }
+            ]
+          }
+        ],
+        "root_review": {
+          "role": "root",
+          "actual_actor": "/root",
+          "binding_sha256": "7a82672dcd633c19e7f04b6eab83c1a9b175c4fdfdea5ac1ea73336cb3357dcd",
+          "verdict": "PASS",
+          "withdrawn": false,
+          "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+          "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+          "likeness_findings": "Actual corrected full/native source compared against approved7d0/H4/f6; recognizable eyes, long nose, cheeks/jaw and mouth relationships with natural scene expression.",
+          "body_findings": "Actual corrected body, waist, neck/collar, hands and scene remain coherent; no unsupported pregnancy dome or exact outside-pixel equality claimed.",
+          "full_native_inspected": true,
+          "display_scale_inspected": true,
+          "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+          "evidence": [
+            {
+              "path": "docs/owner-requirement-evidence/site01-root-source.json",
+              "sha256": "0e35df71742785a0db885e3cd9d314be57d93ec639cd80086fdb057cb0fd8ba0"
+            },
+            {
+              "path": "docs/owner-requirement-evidence/site01-root-display.json",
+              "sha256": "f385b506b381343c445328c40f329c9f4558cc8c3ad8ad1487937aa5610cf261"
+            }
+          ]
+        }
+      },
+      {
+        "id": "SITE06",
+        "assets": [
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-torso-v3-1536.webp",
+            "sha256": "d5342ec4b48be6c3fac7c1121b978c00317a7f42de1bb817852ab8d251588bd1",
+            "pixel_sha256": "08b1197136a2a2b1aa76f1879057dfbcd767fb99dc2f866dc3b191ae76444223",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 111892
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-torso-v3-640.webp",
+            "sha256": "e6e7d07382f50488acdcf71430758920bb5b6d306df092009881049e117bd0a5",
+            "pixel_sha256": "d140ba8b143b9c979ff00037e2544b64159955763cf8f1246eb79e2a2a7f7129",
+            "dimensions": [
+              640,
+              427
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 45388
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-torso-v3-960.webp",
+            "sha256": "606ec03aed197855c896ceb01ce531c57bb7cff5311c139d132aad12d98423d3",
+            "pixel_sha256": "3950f4441bef862a009406ed91acb7495288fc5c251940af6a2e3cde84033d7d",
+            "dimensions": [
+              960,
+              640
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 89790
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-torso-v3.png",
+            "sha256": "32f3c958dfcfb1155d864dd73b65acbaf8e780087a544a516b24cad8551d79b8",
+            "pixel_sha256": "46e6409d16ee4998eaa6ae98d36ea7ed34821644cdaaedbd90c7bda8c44bfc6c",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "format": "PNG",
+            "mode": "RGB",
+            "bytes": 2251817
+          }
+        ],
+        "consumers": [
+          {
+            "path": "answers/who-was-joseph-smith.html",
+            "asset": "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-torso-v3-1536.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "answers/who-was-joseph-smith.html",
+            "asset": "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-torso-v3-640.webp",
+            "occurrences": 1
+          },
+          {
+            "path": "answers/who-was-joseph-smith.html",
+            "asset": "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-torso-v3-960.webp",
+            "occurrences": 1
+          },
+          {
+            "path": "answers/who-was-joseph-smith.html",
+            "asset": "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-torso-v3.png",
+            "occurrences": 2
+          },
+          {
+            "path": "art-gallery.json",
+            "asset": "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-torso-v3-1536.webp",
+            "occurrences": 1
+          },
+          {
+            "path": "art-gallery.json",
+            "asset": "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-torso-v3.png",
+            "occurrences": 1
+          },
+          {
+            "path": "site-search-index.json",
+            "asset": "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-torso-v3-1536.webp",
+            "occurrences": 1
+          }
+        ],
+        "source_sha256": "32f3c958dfcfb1155d864dd73b65acbaf8e780087a544a516b24cad8551d79b8",
+        "body": {
+          "status": "unknown",
+          "visible_pregnancy": false,
+          "scene_date": "1827-01-18",
+          "findings": "Brown inner bodice and waistband remain visible beneath thick shawl; joined hands partly occlude lower torso. Side bulk follows shawl/sleeves, not an independently outlined pregnant abdomen. No additional body correction identified."
+        },
+        "appearance_basis": "current_actual_source_and_private_display",
+        "reviews": [
+          {
+            "role": "Fermi",
+            "actual_actor": "/root/fermi_current",
+            "binding_sha256": "5a39826c8dcf0ace1bb5e5e5fa104bafddd442bacc7db25a5254060b417f608c",
+            "verdict": "PASS",
+            "withdrawn": false,
+            "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+            "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+            "likeness_findings": "NO_NEW_LIKENESS_CORRECTION_IDENTIFIED",
+            "body_findings": "Brown inner bodice and waistband remain visible beneath thick shawl; joined hands partly occlude lower torso. Side bulk follows shawl/sleeves, not an independently outlined pregnant abdomen. No additional body correction identified.",
+            "full_native_inspected": true,
+            "display_scale_inspected": true,
+            "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+            "evidence": [
+              {
+                "path": "docs/owner-requirement-evidence/site04-fermi-source.json",
+                "sha256": "43837100dd273d8e89f3f2958d336bb78505986b3e4c9157985a3dfdfd6b55e5"
+              },
+              {
+                "path": "docs/owner-requirement-evidence/site04-fermi-display.json",
+                "sha256": "516395f4619c678f79bc6353fc9e46c296919c1b3c092dc70ea4ca72df01170d"
+              }
+            ]
+          },
+          {
+            "role": "Newton",
+            "actual_actor": "/root/newton_current",
+            "binding_sha256": "5a39826c8dcf0ace1bb5e5e5fa104bafddd442bacc7db25a5254060b417f608c",
+            "verdict": "PASS",
+            "withdrawn": false,
+            "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+            "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+            "likeness_findings": "RETAIN_NO_NEW_DEFECT_IDENTIFIED",
+            "body_findings": "Winter shawl adds shoulder volume; visible bodice narrows at waist. No maternity silhouette observed.",
+            "full_native_inspected": true,
+            "display_scale_inspected": true,
+            "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+            "evidence": [
+              {
+                "path": "docs/owner-requirement-evidence/site04-newton-source.json",
+                "sha256": "17994927429f675895d670a111d0680f7191373d2bd656682cb8726ec2dd75a9"
+              },
+              {
+                "path": "docs/owner-requirement-evidence/site04-newton-display.json",
+                "sha256": "ca942b92864371d69d4197c40d04aff816706123914d36d1ac3d53a6486a08c6"
+              }
+            ]
+          }
+        ],
+        "root_review": {
+          "role": "root",
+          "actual_actor": "/root",
+          "binding_sha256": "5a39826c8dcf0ace1bb5e5e5fa104bafddd442bacc7db25a5254060b417f608c",
+          "verdict": "PASS",
+          "withdrawn": false,
+          "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+          "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+          "likeness_findings": "Actual full source compared with approved Emma references; no additional likeness defect identified in this retained scene.",
+          "body_findings": "Actual full scene reviewed for defined waist, period layers and dated pregnancy applicability; source-specific current findings retained in root source report.",
+          "full_native_inspected": true,
+          "display_scale_inspected": true,
+          "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+          "evidence": [
+            {
+              "path": "docs/owner-requirement-evidence/site04-root-source.json",
+              "sha256": "3fbd37ca36363af9917764f5d60ab255c728e79b1b0442942f53b89d3e8697ed"
+            },
+            {
+              "path": "docs/owner-requirement-evidence/site04-root-display.json",
+              "sha256": "7de266266d7fc6f0aacbfdd38b8c14c54abf30494883aad33cb2e14c58104e89"
+            }
+          ]
+        }
+      },
+      {
+        "id": "SITE07",
+        "assets": [
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-warm-companionship-v4-1536.webp",
+            "sha256": "d300865f970267913a56f45d8c39f65aa93af9fc787287889523fee51323ada3",
+            "pixel_sha256": "1bd97d2cc06fa64b1893d3e753624ba12230557446d251a9352f204280e7c503",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 269118
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-warm-companionship-v4-640.webp",
+            "sha256": "7e41eec847fee526aaf634db520617c7ffe42fb583450c9b1a29c905cda4602b",
+            "pixel_sha256": "17de8c92dea9d665bd271174166794861c8455c67ee0ae6b4b19ddb40b9c0c90",
+            "dimensions": [
+              640,
+              427
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 71870
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-warm-companionship-v4-960.webp",
+            "sha256": "82a1f539ea4faa50bf14e1a2c5bcb9f09246e08b17fb5155b8d6920b9c94cf4d",
+            "pixel_sha256": "01be281b0560cfa7b156cecc05ae68db7e2ed9813b93f8663363599fafd8d62c",
+            "dimensions": [
+              960,
+              640
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 136972
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-warm-companionship-v4.png",
+            "sha256": "c949f8188c930e827375bbd6d741f28f0b8b229786a7215adf1290ed841f00d8",
+            "pixel_sha256": "85aeaec186858a120ba9c5d2c48472c482fa6ba4a7589a0ed1b22c82051c6258",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "format": "PNG",
+            "mode": "RGB",
+            "bytes": 2338541
+          }
+        ],
+        "consumers": [
+          {
+            "path": "answers/who-was-joseph-smith.html",
+            "asset": "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-warm-companionship-v4-1536.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "answers/who-was-joseph-smith.html",
+            "asset": "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-warm-companionship-v4-640.webp",
+            "occurrences": 1
+          },
+          {
+            "path": "answers/who-was-joseph-smith.html",
+            "asset": "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-warm-companionship-v4-960.webp",
+            "occurrences": 1
+          },
+          {
+            "path": "answers/who-was-joseph-smith.html",
+            "asset": "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-warm-companionship-v4.png",
+            "occurrences": 2
+          },
+          {
+            "path": "art-gallery.json",
+            "asset": "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-warm-companionship-v4-1536.webp",
+            "occurrences": 1
+          },
+          {
+            "path": "art-gallery.json",
+            "asset": "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-warm-companionship-v4.png",
+            "occurrences": 1
+          },
+          {
+            "path": "site-search-index.json",
+            "asset": "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-warm-companionship-v4-1536.webp",
+            "occurrences": 1
+          }
+        ],
+        "source_sha256": "c949f8188c930e827375bbd6d741f28f0b8b229786a7215adf1290ed841f00d8",
+        "body": {
+          "status": "pregnant_supported",
+          "visible_pregnancy": true,
+          "scene_date": "Early December 1827",
+          "findings": "Seated central bodice shows a waist transition beneath the ribbon. Heavy winter shawl and skirt spread across the lap. No conspicuous late-term protrusion; visible modest fullness is compatible with supported early pregnancy and seated layers.",
+          "pregnancy_evidence": [
+            {
+              "path": "docs/owner-requirement-evidence/chronology.json",
+              "sha256": "42b8074de61e89c8b9ad5287c06e9bfb5714a054faae6848546b7e30d7d2c19b"
+            }
+          ],
+          "dated_relationship": "First child born 1828-06-15; supports pregnancy, not late-term silhouette or exact gestational week",
+          "scene_timing": {
+            "precision": "source_label",
+            "label": "Early December 1827",
+            "applicability_label": "Early December 1827",
+            "applicability_finding": "First child born 1828-06-15; supports pregnancy, not late-term silhouette or exact gestational week",
+            "source": {
+              "path": "docs/owner-requirement-evidence/chronology.json",
+              "sha256": "42b8074de61e89c8b9ad5287c06e9bfb5714a054faae6848546b7e30d7d2c19b"
+            }
+          }
+        },
+        "appearance_basis": "current_actual_source_and_private_display",
+        "reviews": [
+          {
+            "role": "Fermi",
+            "actual_actor": "/root/fermi_current",
+            "binding_sha256": "055ec12e61017486849a612ccc1355433d6443f1df5e666ba764f9cfef80c9a1",
+            "verdict": "PASS",
+            "withdrawn": false,
+            "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+            "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+            "likeness_findings": "NO_NEW_LIKENESS_CORRECTION_IDENTIFIED",
+            "body_findings": "Seated central bodice shows a waist transition beneath the ribbon. Heavy winter shawl and skirt spread across the lap. No conspicuous late-term protrusion; visible modest fullness is compatible with supported early pregnancy and seated layers.",
+            "full_native_inspected": true,
+            "display_scale_inspected": true,
+            "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+            "evidence": [
+              {
+                "path": "docs/owner-requirement-evidence/site04-fermi-source.json",
+                "sha256": "43837100dd273d8e89f3f2958d336bb78505986b3e4c9157985a3dfdfd6b55e5"
+              },
+              {
+                "path": "docs/owner-requirement-evidence/site07-fermi-display.json",
+                "sha256": "a61b1d9ae3723b8e82fbbd375525aa73a1788c032b6897efe77e76981a16de1e"
+              }
+            ]
+          },
+          {
+            "role": "Newton",
+            "actual_actor": "/root/newton_current",
+            "binding_sha256": "055ec12e61017486849a612ccc1355433d6443f1df5e666ba764f9cfef80c9a1",
+            "verdict": "PASS",
+            "withdrawn": false,
+            "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+            "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+            "likeness_findings": "RETAIN_NO_NEW_DEFECT_IDENTIFIED",
+            "body_findings": "Seated winter layers create volume, but no exaggerated late-term belly observed. Early pregnancy context must not justify adding one.",
+            "full_native_inspected": true,
+            "display_scale_inspected": true,
+            "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+            "evidence": [
+              {
+                "path": "docs/owner-requirement-evidence/site04-newton-source.json",
+                "sha256": "17994927429f675895d670a111d0680f7191373d2bd656682cb8726ec2dd75a9"
+              },
+              {
+                "path": "docs/owner-requirement-evidence/site07-newton-display.json",
+                "sha256": "03e7b814d84ea1cf16bc1fb7a57a719d4cd6c58c3e8606741cde7b56f44e4eaf"
+              }
+            ]
+          }
+        ],
+        "root_review": {
+          "role": "root",
+          "actual_actor": "/root",
+          "binding_sha256": "055ec12e61017486849a612ccc1355433d6443f1df5e666ba764f9cfef80c9a1",
+          "verdict": "PASS",
+          "withdrawn": false,
+          "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+          "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+          "likeness_findings": "Actual full source compared with approved Emma references; no additional likeness defect identified in this retained scene.",
+          "body_findings": "Actual full scene reviewed for defined waist, period layers and dated pregnancy applicability; source-specific current findings retained in root source report.",
+          "full_native_inspected": true,
+          "display_scale_inspected": true,
+          "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+          "evidence": [
+            {
+              "path": "docs/owner-requirement-evidence/site04-root-source.json",
+              "sha256": "3fbd37ca36363af9917764f5d60ab255c728e79b1b0442942f53b89d3e8697ed"
+            },
+            {
+              "path": "docs/owner-requirement-evidence/site07-root-display.json",
+              "sha256": "61e371dd7f57a0ffb7ae64c6a1b5f44061b1ed45c64f84ddc42502760c5938cc"
+            }
+          ]
+        }
+      },
+      {
+        "id": "SITE08",
+        "assets": [
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-upper-bodice-v3-1536.webp",
+            "sha256": "8ecec44c2a927b8323e4a92599d07c1c2a63dce3e3fca4859ae32c7fd2582f53",
+            "pixel_sha256": "05b972f5c57761d1585f3a1895bd64c3ffdac9f2bc0639e5c8b8ec5ee64ff852",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 193962
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-upper-bodice-v3-640.webp",
+            "sha256": "8f5c964025786d538a3319229a8ec23d4873633390b0cfc585076bfd59ef311f",
+            "pixel_sha256": "463bca11da1cbffb6b36f82abacc0157dd9fb8ffb73c4c77ad29b262e7d34ab5",
+            "dimensions": [
+              640,
+              427
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 52898
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-upper-bodice-v3-960.webp",
+            "sha256": "6198ad5bece6a4337f7b9aee6fbff11065a00ae6998dc249571a9e02154df860",
+            "pixel_sha256": "6de2c6321c895f02fd741f0f4e05e7f13050666b9f1bae18f4aad991b1377ede",
+            "dimensions": [
+              960,
+              640
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 99238
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-upper-bodice-v3.png",
+            "sha256": "7c55a45fe2cd5c409f96961074f4ed0c2f714678b976fd086fed5bfa134dc770",
+            "pixel_sha256": "67f7c9d4ccaced7b14f3bb82513e3741307c9dba4fdd5c19c43a46cac27d25e3",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "format": "PNG",
+            "mode": "RGB",
+            "bytes": 2081906
+          }
+        ],
+        "consumers": [
+          {
+            "path": "answers/who-was-joseph-smith.html",
+            "asset": "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-upper-bodice-v3-1536.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "answers/who-was-joseph-smith.html",
+            "asset": "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-upper-bodice-v3-640.webp",
+            "occurrences": 1
+          },
+          {
+            "path": "answers/who-was-joseph-smith.html",
+            "asset": "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-upper-bodice-v3-960.webp",
+            "occurrences": 1
+          },
+          {
+            "path": "answers/who-was-joseph-smith.html",
+            "asset": "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-upper-bodice-v3.png",
+            "occurrences": 2
+          },
+          {
+            "path": "art-gallery.json",
+            "asset": "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-upper-bodice-v3-1536.webp",
+            "occurrences": 1
+          },
+          {
+            "path": "art-gallery.json",
+            "asset": "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-upper-bodice-v3.png",
+            "occurrences": 1
+          },
+          {
+            "path": "site-search-index.json",
+            "asset": "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-upper-bodice-v3-1536.webp",
+            "occurrences": 1
+          }
+        ],
+        "source_sha256": "7c55a45fe2cd5c409f96961074f4ed0c2f714678b976fd086fed5bfa134dc770",
+        "body": {
+          "status": "pregnant_supported",
+          "visible_pregnancy": true,
+          "scene_date": "Early 1828",
+          "findings": "Printed high-seam dress shows a rounded lower-bodice/upper-abdomen contour above the table, alongside a restrained upper chest. This does visibly read pregnant; dated early1828 evidence supports pregnancy. Exact gestation or historical body size is not claimed; do not flatten it to H2.",
+          "pregnancy_evidence": [
+            {
+              "path": "docs/owner-requirement-evidence/chronology.json",
+              "sha256": "42b8074de61e89c8b9ad5287c06e9bfb5714a054faae6848546b7e30d7d2c19b"
+            }
+          ],
+          "dated_relationship": "First child born 1828-06-15; precise gestational week unknown",
+          "scene_timing": {
+            "precision": "source_label",
+            "label": "Early 1828",
+            "applicability_label": "Early 1828",
+            "applicability_finding": "First child born 1828-06-15; precise gestational week unknown",
+            "source": {
+              "path": "docs/owner-requirement-evidence/chronology.json",
+              "sha256": "42b8074de61e89c8b9ad5287c06e9bfb5714a054faae6848546b7e30d7d2c19b"
+            }
+          }
+        },
+        "appearance_basis": "current_actual_source_and_private_display",
+        "reviews": [
+          {
+            "role": "Fermi",
+            "actual_actor": "/root/fermi_current",
+            "binding_sha256": "5a7154448ae1be82ae48cb2221a0a312ec9b6d2ca2132ac3325d9b51fb0c35a7",
+            "verdict": "PASS",
+            "withdrawn": false,
+            "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+            "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+            "likeness_findings": "NO_NEW_LIKENESS_CORRECTION_IDENTIFIED",
+            "body_findings": "Printed high-seam dress shows a rounded lower-bodice/upper-abdomen contour above the table, alongside a restrained upper chest. This does visibly read pregnant; dated early1828 evidence supports pregnancy. Exact gestation or historical body size is not claimed; do not flatten it to H2.",
+            "full_native_inspected": true,
+            "display_scale_inspected": true,
+            "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+            "evidence": [
+              {
+                "path": "docs/owner-requirement-evidence/site04-fermi-source.json",
+                "sha256": "43837100dd273d8e89f3f2958d336bb78505986b3e4c9157985a3dfdfd6b55e5"
+              },
+              {
+                "path": "docs/owner-requirement-evidence/site07-fermi-display.json",
+                "sha256": "a61b1d9ae3723b8e82fbbd375525aa73a1788c032b6897efe77e76981a16de1e"
+              }
+            ]
+          },
+          {
+            "role": "Newton",
+            "actual_actor": "/root/newton_current",
+            "binding_sha256": "5a7154448ae1be82ae48cb2221a0a312ec9b6d2ca2132ac3325d9b51fb0c35a7",
+            "verdict": "PASS",
+            "withdrawn": false,
+            "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+            "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+            "likeness_findings": "RETAIN_NO_NEW_DEFECT_IDENTIFIED",
+            "body_findings": "Visible pregnancy through lower bodice and skirt is consistent with early1828 setting; precise gestation/body measurements not documented.",
+            "full_native_inspected": true,
+            "display_scale_inspected": true,
+            "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+            "evidence": [
+              {
+                "path": "docs/owner-requirement-evidence/site04-newton-source.json",
+                "sha256": "17994927429f675895d670a111d0680f7191373d2bd656682cb8726ec2dd75a9"
+              },
+              {
+                "path": "docs/owner-requirement-evidence/site07-newton-display.json",
+                "sha256": "03e7b814d84ea1cf16bc1fb7a57a719d4cd6c58c3e8606741cde7b56f44e4eaf"
+              }
+            ]
+          }
+        ],
+        "root_review": {
+          "role": "root",
+          "actual_actor": "/root",
+          "binding_sha256": "5a7154448ae1be82ae48cb2221a0a312ec9b6d2ca2132ac3325d9b51fb0c35a7",
+          "verdict": "PASS",
+          "withdrawn": false,
+          "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+          "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+          "likeness_findings": "Actual full source compared with approved Emma references; no additional likeness defect identified in this retained scene.",
+          "body_findings": "Actual full scene reviewed for defined waist, period layers and dated pregnancy applicability; source-specific current findings retained in root source report.",
+          "full_native_inspected": true,
+          "display_scale_inspected": true,
+          "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+          "evidence": [
+            {
+              "path": "docs/owner-requirement-evidence/site04-root-source.json",
+              "sha256": "3fbd37ca36363af9917764f5d60ab255c728e79b1b0442942f53b89d3e8697ed"
+            },
+            {
+              "path": "docs/owner-requirement-evidence/site07-root-display.json",
+              "sha256": "61e371dd7f57a0ffb7ae64c6a1b5f44061b1ed45c64f84ddc42502760c5938cc"
+            }
+          ]
+        }
+      },
+      {
+        "id": "SITE09",
+        "assets": [
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3-1536.webp",
+            "sha256": "a6c4012577748a4b52253d76ef1f7978ab7aaaae2707c7134832d25005a20f09",
+            "pixel_sha256": "b8fba71181ac1cf24e0127f19cdf160e8417bf966bb0564acb86130190a1e860",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 165644
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3-640.webp",
+            "sha256": "482b50f0cadc0e6a7c1fee3a458f19bb088e51d071f2b9b1f0ff51908edc13be",
+            "pixel_sha256": "14184389b4de4839bc7911bb7c37fbd7de41403613707580d5f3fc41e9dcb5ab",
+            "dimensions": [
+              640,
+              427
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 52130
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3-960.webp",
+            "sha256": "b9f8ef1bcb6bd09ce8fb889889ca13b748524140de544fc0db3362c7e349a9a2",
+            "pixel_sha256": "71c219606d2ebf451f6c44b618f9aa4950ee1dc53bc3bcbd62a259af4d50e416",
+            "dimensions": [
+              960,
+              640
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 95784
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3.png",
+            "sha256": "2b2e8e7ce28cb2d9c4d98d12e35c2ba7da1d1c510dd25df00adb49439320fa0f",
+            "pixel_sha256": "ec244daf6958fd94c050abc795b86552e6afd34539698b4bf1bede92b7989777",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "format": "PNG",
+            "mode": "RGB",
+            "bytes": 1985217
+          }
+        ],
+        "consumers": [
+          {
+            "path": "answers/who-was-joseph-smith.html",
+            "asset": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3-1536.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "answers/who-was-joseph-smith.html",
+            "asset": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3-640.webp",
+            "occurrences": 1
+          },
+          {
+            "path": "answers/who-was-joseph-smith.html",
+            "asset": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3-960.webp",
+            "occurrences": 1
+          },
+          {
+            "path": "answers/who-was-joseph-smith.html",
+            "asset": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3.png",
+            "occurrences": 2
+          },
+          {
+            "path": "art-gallery.json",
+            "asset": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3-1536.webp",
+            "occurrences": 1
+          },
+          {
+            "path": "art-gallery.json",
+            "asset": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3.png",
+            "occurrences": 1
+          },
+          {
+            "path": "site-search-index.json",
+            "asset": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3-1536.webp",
+            "occurrences": 1
+          }
+        ],
+        "source_sha256": "2b2e8e7ce28cb2d9c4d98d12e35c2ba7da1d1c510dd25df00adb49439320fa0f",
+        "exempt": true
+      },
+      {
+        "id": "SITE10",
+        "assets": [
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-body-season-v3-1536.webp",
+            "sha256": "ea61a575533cade373651a69730bb0a9a8f2fa9f311c921320b4bac8cf934b18",
+            "pixel_sha256": "35aed068d4698a681f5e811690f2215ec308d0ce59f20200d9a5fa2450c878f2",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 284036
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-body-season-v3-640.webp",
+            "sha256": "dcadacba09be84ffaaade59faf84b01a5af36665b5582f6837fc89cc42b726d8",
+            "pixel_sha256": "f526066120f069e749494aeace9e3c919a0da83046a2a445229804ffa4e22a45",
+            "dimensions": [
+              640,
+              427
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 68906
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-body-season-v3-960.webp",
+            "sha256": "1b3dfe16c6c74ee84d2633e4977ddb52005f7cc1205ddbb2b0216765bd372ef3",
+            "pixel_sha256": "e5fbf3c3236f1a305400c1af206570c1ee7ad7f153b801c101d1eeb0b77d6bd9",
+            "dimensions": [
+              960,
+              640
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 139566
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-body-season-v3.png",
+            "sha256": "aba5349ff196ed82a4c3b04d3b56798729b4d189e20191d64d5771385d5eeae5",
+            "pixel_sha256": "2e13a92d3dea7163fcf8994b3ad81b38a145de14901f6697ee2d3217a3c1d594",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "format": "PNG",
+            "mode": "RGB",
+            "bytes": 2390493
+          }
+        ],
+        "consumers": [
+          {
+            "path": "answers/who-was-joseph-smith.html",
+            "asset": "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-body-season-v3-1536.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "answers/who-was-joseph-smith.html",
+            "asset": "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-body-season-v3-640.webp",
+            "occurrences": 1
+          },
+          {
+            "path": "answers/who-was-joseph-smith.html",
+            "asset": "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-body-season-v3-960.webp",
+            "occurrences": 1
+          },
+          {
+            "path": "answers/who-was-joseph-smith.html",
+            "asset": "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-body-season-v3.png",
+            "occurrences": 2
+          },
+          {
+            "path": "art-gallery.json",
+            "asset": "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-body-season-v3-1536.webp",
+            "occurrences": 1
+          },
+          {
+            "path": "art-gallery.json",
+            "asset": "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-body-season-v3.png",
+            "occurrences": 1
+          },
+          {
+            "path": "site-search-index.json",
+            "asset": "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-body-season-v3-1536.webp",
+            "occurrences": 1
+          }
+        ],
+        "source_sha256": "aba5349ff196ed82a4c3b04d3b56798729b4d189e20191d64d5771385d5eeae5",
+        "body": {
+          "status": "unknown",
+          "visible_pregnancy": false,
+          "scene_date": "1828-12-04",
+          "findings": "Brown bodice narrows into a clear waistband. Bust and bent sleeve contribute fullness above/beside the waist; lower skirt falls in vertical gathers without a separate forward pregnancy dome. Current shape follows H2 direction naturally."
+        },
+        "appearance_basis": "current_actual_source_and_private_display",
+        "reviews": [
+          {
+            "role": "Fermi",
+            "actual_actor": "/root/fermi_current",
+            "binding_sha256": "1c8d46e4c3486a17b2146277df11a2e594cee7167175e13f82e49f03b365be11",
+            "verdict": "PASS",
+            "withdrawn": false,
+            "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+            "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+            "likeness_findings": "NO_NEW_LIKENESS_CORRECTION_IDENTIFIED",
+            "body_findings": "Brown bodice narrows into a clear waistband. Bust and bent sleeve contribute fullness above/beside the waist; lower skirt falls in vertical gathers without a separate forward pregnancy dome. Current shape follows H2 direction naturally.",
+            "full_native_inspected": true,
+            "display_scale_inspected": true,
+            "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+            "evidence": [
+              {
+                "path": "docs/owner-requirement-evidence/site04-fermi-source.json",
+                "sha256": "43837100dd273d8e89f3f2958d336bb78505986b3e4c9157985a3dfdfd6b55e5"
+              },
+              {
+                "path": "docs/owner-requirement-evidence/site04-fermi-display.json",
+                "sha256": "516395f4619c678f79bc6353fc9e46c296919c1b3c092dc70ea4ca72df01170d"
+              }
+            ]
+          },
+          {
+            "role": "Newton",
+            "actual_actor": "/root/newton_current",
+            "binding_sha256": "1c8d46e4c3486a17b2146277df11a2e594cee7167175e13f82e49f03b365be11",
+            "verdict": "PASS",
+            "withdrawn": false,
+            "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+            "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+            "likeness_findings": "RETAIN_NO_NEW_DEFECT_IDENTIFIED",
+            "body_findings": "Standing brown dress narrows at waist; no pronounced maternity dome observed.",
+            "full_native_inspected": true,
+            "display_scale_inspected": true,
+            "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+            "evidence": [
+              {
+                "path": "docs/owner-requirement-evidence/site04-newton-source.json",
+                "sha256": "17994927429f675895d670a111d0680f7191373d2bd656682cb8726ec2dd75a9"
+              },
+              {
+                "path": "docs/owner-requirement-evidence/site04-newton-display.json",
+                "sha256": "ca942b92864371d69d4197c40d04aff816706123914d36d1ac3d53a6486a08c6"
+              }
+            ]
+          }
+        ],
+        "root_review": {
+          "role": "root",
+          "actual_actor": "/root",
+          "binding_sha256": "1c8d46e4c3486a17b2146277df11a2e594cee7167175e13f82e49f03b365be11",
+          "verdict": "PASS",
+          "withdrawn": false,
+          "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+          "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+          "likeness_findings": "Actual full source compared with approved Emma references; no additional likeness defect identified in this retained scene.",
+          "body_findings": "Actual full scene reviewed for defined waist, period layers and dated pregnancy applicability; source-specific current findings retained in root source report.",
+          "full_native_inspected": true,
+          "display_scale_inspected": true,
+          "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+          "evidence": [
+            {
+              "path": "docs/owner-requirement-evidence/site04-root-source.json",
+              "sha256": "3fbd37ca36363af9917764f5d60ab255c728e79b1b0442942f53b89d3e8697ed"
+            },
+            {
+              "path": "docs/owner-requirement-evidence/site04-root-display.json",
+              "sha256": "7de266266d7fc6f0aacbfdd38b8c14c54abf30494883aad33cb2e14c58104e89"
+            }
+          ]
+        }
+      },
+      {
+        "id": "SITE11",
+        "assets": [
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2-1536.webp",
+            "sha256": "8c081044b5d4e729a7fc9002f42be71ecc9fc574e607596d4d4acf603cf80f48",
+            "pixel_sha256": "60d7b5e5c4297e9851f35d6b4173c07017729a2d162078f799cb53e52a220f0b",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 190428
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2-640.webp",
+            "sha256": "56baadfa2ba0ebeddaa777ebce78078a1a6518565a733628434420fbb7862bd1",
+            "pixel_sha256": "75410460e825dbe8e7fc4658a7bca297b855457ee9c43cc690e05c46424fc235",
+            "dimensions": [
+              640,
+              427
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 50916
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2-960.webp",
+            "sha256": "59d602c656b76baa417b02f875804d73964e852ddb723d328eeb805597bbf5e2",
+            "pixel_sha256": "e169090a6a192c3e28e2881eeb89ff32e9d4d04b6d1245314eaf7fd4c2dd6e2d",
+            "dimensions": [
+              960,
+              640
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 98098
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2.png",
+            "sha256": "1bb9ab79c5d315f1eeb8bd3a4ee4dee4eda532832afa435c2c55b7bd9c2b19cd",
+            "pixel_sha256": "cc23acd78ca344058b3d7c123b992ba419a47cc389403f4db300f85d2edefbae",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "format": "PNG",
+            "mode": "RGB",
+            "bytes": 2063360
+          }
+        ],
+        "consumers": [
+          {
+            "path": "answers/who-was-joseph-smith.html",
+            "asset": "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2-1536.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "answers/who-was-joseph-smith.html",
+            "asset": "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2-640.webp",
+            "occurrences": 1
+          },
+          {
+            "path": "answers/who-was-joseph-smith.html",
+            "asset": "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2-960.webp",
+            "occurrences": 1
+          },
+          {
+            "path": "answers/who-was-joseph-smith.html",
+            "asset": "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2.png",
+            "occurrences": 2
+          },
+          {
+            "path": "art-gallery.json",
+            "asset": "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2-1536.webp",
+            "occurrences": 1
+          },
+          {
+            "path": "art-gallery.json",
+            "asset": "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2.png",
+            "occurrences": 1
+          },
+          {
+            "path": "site-search-index.json",
+            "asset": "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2-1536.webp",
+            "occurrences": 1
+          }
+        ],
+        "source_sha256": "1bb9ab79c5d315f1eeb8bd3a4ee4dee4eda532832afa435c2c55b7bd9c2b19cd",
+        "body": {
+          "status": "unknown",
+          "visible_pregnancy": false,
+          "scene_date": "Late June 1830",
+          "findings": "Leaning kneeling posture projects the upper bust forward above the narrowing button line. Forearms obscure the waist/lower abdomen; skirt fans behind/under her. No distinct visible pregnant abdomen. Full bust and sleeves must not be mistaken for pregnancy; no further body correction identified."
+        },
+        "appearance_basis": "unchanged_assets_reused_display",
+        "reviews": [
+          {
+            "role": "Fermi",
+            "actual_actor": "/root/fermi_current",
+            "binding_sha256": "04981e66637c344d190fcdf5d8f02fb2954a13d9e54b26a99616e3161b7d5e98",
+            "verdict": "PASS",
+            "withdrawn": false,
+            "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+            "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+            "likeness_findings": "NO_NEW_LIKENESS_CORRECTION_IDENTIFIED",
+            "body_findings": "Leaning kneeling posture projects the upper bust forward above the narrowing button line. Forearms obscure the waist/lower abdomen; skirt fans behind/under her. No distinct visible pregnant abdomen. Full bust and sleeves must not be mistaken for pregnancy; no further body correction identified.",
+            "full_native_inspected": true,
+            "display_scale_inspected": false,
+            "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+            "evidence": [
+              {
+                "path": "docs/owner-requirement-evidence/site04-fermi-source.json",
+                "sha256": "43837100dd273d8e89f3f2958d336bb78505986b3e4c9157985a3dfdfd6b55e5"
+              },
+              {
+                "path": "docs/owner-requirement-evidence/site11-fermi-display.json",
+                "sha256": "7f1ffc9ded8d1e08bb7d12ace8250d2ae1759ab92806e9ee13d470f39e878ecf"
+              }
+            ],
+            "display_evidence_class": "historical_actual_unchanged_pixels",
+            "historical_display_inspected": true,
+            "historical_display_evidence": [
+              {
+                "path": "docs/owner-requirement-evidence/site11-fermi-display.json",
+                "sha256": "7f1ffc9ded8d1e08bb7d12ace8250d2ae1759ab92806e9ee13d470f39e878ecf"
+              }
+            ]
+          },
+          {
+            "role": "Newton",
+            "actual_actor": "/root/newton_current",
+            "binding_sha256": "04981e66637c344d190fcdf5d8f02fb2954a13d9e54b26a99616e3161b7d5e98",
+            "verdict": "PASS",
+            "withdrawn": false,
+            "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+            "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+            "likeness_findings": "RETAIN_NO_NEW_DEFECT_IDENTIFIED",
+            "body_findings": "Fresh full-image reread shows forward upper-bodice/bust volume above narrowing button line. Forearms partly obscure waist/lower abdomen. No distinct pregnancy dome; do not mistake bust and period sleeve fullness for pregnancy. Initial concern was provisional and not sustained by this reread.",
+            "full_native_inspected": true,
+            "display_scale_inspected": false,
+            "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+            "evidence": [
+              {
+                "path": "docs/owner-requirement-evidence/site04-newton-source.json",
+                "sha256": "17994927429f675895d670a111d0680f7191373d2bd656682cb8726ec2dd75a9"
+              },
+              {
+                "path": "docs/owner-requirement-evidence/site11-newton-display.json",
+                "sha256": "2e36a5f75f5b3f2553929a52b4003654074b87af9837a4ee07241dcdfabce9a3"
+              }
+            ],
+            "display_evidence_class": "historical_actual_unchanged_pixels",
+            "historical_display_inspected": true,
+            "historical_display_evidence": [
+              {
+                "path": "docs/owner-requirement-evidence/site11-newton-display.json",
+                "sha256": "2e36a5f75f5b3f2553929a52b4003654074b87af9837a4ee07241dcdfabce9a3"
+              }
+            ]
+          }
+        ],
+        "root_review": {
+          "role": "root",
+          "actual_actor": "/root",
+          "binding_sha256": "04981e66637c344d190fcdf5d8f02fb2954a13d9e54b26a99616e3161b7d5e98",
+          "verdict": "PASS",
+          "withdrawn": false,
+          "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+          "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+          "likeness_findings": "Actual full source compared with approved Emma references; no additional likeness defect identified in this retained scene.",
+          "body_findings": "Actual full scene reviewed for defined waist, period layers and dated pregnancy applicability; source-specific current findings retained in root source report.",
+          "full_native_inspected": true,
+          "display_scale_inspected": false,
+          "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+          "evidence": [
+            {
+              "path": "docs/owner-requirement-evidence/site04-root-source.json",
+              "sha256": "3fbd37ca36363af9917764f5d60ab255c728e79b1b0442942f53b89d3e8697ed"
+            },
+            {
+              "path": "docs/owner-requirement-evidence/site11-root-display.json",
+              "sha256": "fc580210ef32d2e2b877234b6e36973db1e722c16be25ab59bb6e669d59aa04f"
+            }
+          ],
+          "display_evidence_class": "historical_actual_unchanged_pixels",
+          "historical_display_inspected": true,
+          "historical_display_evidence": [
+            {
+              "path": "docs/owner-requirement-evidence/site11-root-display.json",
+              "sha256": "fc580210ef32d2e2b877234b6e36973db1e722c16be25ab59bb6e669d59aa04f"
+            }
+          ]
+        }
+      },
+      {
+        "id": "SITE12",
+        "assets": [
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-bodice-v3-1536.webp",
+            "sha256": "d4cfe44b9774ba0f2ecfe3af370b4de1eec598426a68de5ef7a9676c13e4b04f",
+            "pixel_sha256": "7823433bf5822d2d0728a0bdb4e6d7290d113eb9bc518ab563476e3bf4426d18",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 183248
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-bodice-v3-640.webp",
+            "sha256": "e9f0c92b4e63f2f42d6d262a200edd08f75a9f0d9d00bdc2a29c3b7a99328801",
+            "pixel_sha256": "59f323bf23b993d22e960e71b3086a2fb0bafb8dd97830416eb8558ed5841790",
+            "dimensions": [
+              640,
+              427
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 51042
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-bodice-v3-960.webp",
+            "sha256": "5d36b9c7da8e518c06ca09a013867c3510ab195cf6b4e51dcbc87b2a1e0be4ec",
+            "pixel_sha256": "e74985bd51c9158ba92030e9ffbc61500e1bd5b209093d7ce259968442148a4b",
+            "dimensions": [
+              960,
+              640
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 96200
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-bodice-v3.png",
+            "sha256": "b2dfd1800e7ddb48d0f644fbd49c8e69ee6e50ab087e60b4c96822862500d9ce",
+            "pixel_sha256": "aa54393b40c6b1f975a4f52fb201314032b67531c0f6fa953eb80ec654662f32",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "format": "PNG",
+            "mode": "RGB",
+            "bytes": 1954978
+          }
+        ],
+        "consumers": [
+          {
+            "path": "answers/who-was-joseph-smith.html",
+            "asset": "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-bodice-v3-1536.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "answers/who-was-joseph-smith.html",
+            "asset": "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-bodice-v3-640.webp",
+            "occurrences": 1
+          },
+          {
+            "path": "answers/who-was-joseph-smith.html",
+            "asset": "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-bodice-v3-960.webp",
+            "occurrences": 1
+          },
+          {
+            "path": "answers/who-was-joseph-smith.html",
+            "asset": "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-bodice-v3.png",
+            "occurrences": 2
+          },
+          {
+            "path": "art-gallery.json",
+            "asset": "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-bodice-v3-1536.webp",
+            "occurrences": 1
+          },
+          {
+            "path": "art-gallery.json",
+            "asset": "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-bodice-v3.png",
+            "occurrences": 1
+          },
+          {
+            "path": "site-search-index.json",
+            "asset": "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-bodice-v3-1536.webp",
+            "occurrences": 1
+          }
+        ],
+        "source_sha256": "b2dfd1800e7ddb48d0f644fbd49c8e69ee6e50ab087e60b4c96822862500d9ce",
+        "body": {
+          "status": "postpartum",
+          "visible_pregnancy": false,
+          "scene_date": "November 1838",
+          "findings": "Burgundy buttoned bodice narrows to a clear waist below the held letter. Shawl and sleeves create side volume; skirt gathers below. No abdominal dome. Postpartum history does not require either extra bulge or unnatural flattening."
+        },
+        "appearance_basis": "current_actual_source_and_private_display",
+        "reviews": [
+          {
+            "role": "Fermi",
+            "actual_actor": "/root/fermi_current",
+            "binding_sha256": "92cd0f0175b83911094aa762db1cddf374c068d71256f60326a302c998e178c0",
+            "verdict": "PASS",
+            "withdrawn": false,
+            "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+            "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+            "likeness_findings": "NO_NEW_LIKENESS_CORRECTION_IDENTIFIED",
+            "body_findings": "Burgundy buttoned bodice narrows to a clear waist below the held letter. Shawl and sleeves create side volume; skirt gathers below. No abdominal dome. Postpartum history does not require either extra bulge or unnatural flattening.",
+            "full_native_inspected": true,
+            "display_scale_inspected": true,
+            "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+            "evidence": [
+              {
+                "path": "docs/owner-requirement-evidence/site04-fermi-source.json",
+                "sha256": "43837100dd273d8e89f3f2958d336bb78505986b3e4c9157985a3dfdfd6b55e5"
+              },
+              {
+                "path": "docs/owner-requirement-evidence/site04-fermi-display.json",
+                "sha256": "516395f4619c678f79bc6353fc9e46c296919c1b3c092dc70ea4ca72df01170d"
+              }
+            ]
+          },
+          {
+            "role": "Newton",
+            "actual_actor": "/root/newton_current",
+            "binding_sha256": "92cd0f0175b83911094aa762db1cddf374c068d71256f60326a302c998e178c0",
+            "verdict": "PASS",
+            "withdrawn": false,
+            "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+            "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+            "likeness_findings": "RETAIN_NO_NEW_DEFECT_IDENTIFIED",
+            "body_findings": "Standing figure and shawl retain waist definition; no maternity dome observed.",
+            "full_native_inspected": true,
+            "display_scale_inspected": true,
+            "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+            "evidence": [
+              {
+                "path": "docs/owner-requirement-evidence/site04-newton-source.json",
+                "sha256": "17994927429f675895d670a111d0680f7191373d2bd656682cb8726ec2dd75a9"
+              },
+              {
+                "path": "docs/owner-requirement-evidence/site04-newton-display.json",
+                "sha256": "ca942b92864371d69d4197c40d04aff816706123914d36d1ac3d53a6486a08c6"
+              }
+            ]
+          }
+        ],
+        "root_review": {
+          "role": "root",
+          "actual_actor": "/root",
+          "binding_sha256": "92cd0f0175b83911094aa762db1cddf374c068d71256f60326a302c998e178c0",
+          "verdict": "PASS",
+          "withdrawn": false,
+          "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+          "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+          "likeness_findings": "Actual full source compared with approved Emma references; no additional likeness defect identified in this retained scene.",
+          "body_findings": "Actual full scene reviewed for defined waist, period layers and dated pregnancy applicability; source-specific current findings retained in root source report.",
+          "full_native_inspected": true,
+          "display_scale_inspected": true,
+          "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+          "evidence": [
+            {
+              "path": "docs/owner-requirement-evidence/site04-root-source.json",
+              "sha256": "3fbd37ca36363af9917764f5d60ab255c728e79b1b0442942f53b89d3e8697ed"
+            },
+            {
+              "path": "docs/owner-requirement-evidence/site04-root-display.json",
+              "sha256": "7de266266d7fc6f0aacbfdd38b8c14c54abf30494883aad33cb2e14c58104e89"
+            }
+          ]
+        }
+      },
+      {
+        "id": "SITE13",
+        "assets": [
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3-1536.webp",
+            "sha256": "cc14d7a0e989f923bb68c6cd7519154b5a217966174354e51de02360bdc4d004",
+            "pixel_sha256": "0399ea5bfbfd11445d74b182c74679ebd8319b1ea9230b493411360a809e83e1",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 87190
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3-640.webp",
+            "sha256": "62837b0db720cb35fd0bafe88b374c09ae20e3801218b0194f889d239436dce9",
+            "pixel_sha256": "4f1c8523b18c5e3437057233dbfa14b087ded136cd48e6d62215dd5685e0b209",
+            "dimensions": [
+              640,
+              427
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 26144
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3-960.webp",
+            "sha256": "a809d0cc42d2ae9f78c584147997e4c60102e62405afcb9a4086179322792ec9",
+            "pixel_sha256": "f5051942f12502fd314e08ceedc51acfbad8e1a3b7e3dcb77e62485d9057c350",
+            "dimensions": [
+              960,
+              640
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 46864
+          },
+          {
+            "path": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3.png",
+            "sha256": "7821956b89847e1a4499d40a875fda1a3b6b035d8d1322cc00107f8a6a46b8af",
+            "pixel_sha256": "c8bf4c05672b88af10ee2c1c164a088ae10b70e50640042bd7c3178524ebd8e3",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "format": "PNG",
+            "mode": "RGB",
+            "bytes": 1701300
+          }
+        ],
+        "consumers": [
+          {
+            "path": "answers/who-was-joseph-smith.html",
+            "asset": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3-1536.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "answers/who-was-joseph-smith.html",
+            "asset": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3-640.webp",
+            "occurrences": 1
+          },
+          {
+            "path": "answers/who-was-joseph-smith.html",
+            "asset": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3-960.webp",
+            "occurrences": 1
+          },
+          {
+            "path": "answers/who-was-joseph-smith.html",
+            "asset": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3.png",
+            "occurrences": 2
+          },
+          {
+            "path": "art-gallery.json",
+            "asset": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3-1536.webp",
+            "occurrences": 1
+          },
+          {
+            "path": "art-gallery.json",
+            "asset": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3.png",
+            "occurrences": 1
+          },
+          {
+            "path": "site-search-index.json",
+            "asset": "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3-1536.webp",
+            "occurrences": 1
+          }
+        ],
+        "source_sha256": "7821956b89847e1a4499d40a875fda1a3b6b035d8d1322cc00107f8a6a46b8af",
+        "body": {
+          "status": "postpartum",
+          "visible_pregnancy": false,
+          "scene_date": "1842-03-17",
+          "findings": "Green buttoned bodice has a clear waist and vertical skirt gathers; upper bust and sleeves retain natural fullness. No visible pregnancy dome. H2-consistent relationship with ordinary postpartum variation."
+        },
+        "appearance_basis": "current_actual_source_and_private_display",
+        "reviews": [
+          {
+            "role": "Fermi",
+            "actual_actor": "/root/fermi_current",
+            "binding_sha256": "c1b2492e39f65b380575f88e53dadc8281ae26c07ebffe91227992a70797abe8",
+            "verdict": "PASS",
+            "withdrawn": false,
+            "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+            "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+            "likeness_findings": "NO_NEW_LIKENESS_CORRECTION_IDENTIFIED",
+            "body_findings": "Green buttoned bodice has a clear waist and vertical skirt gathers; upper bust and sleeves retain natural fullness. No visible pregnancy dome. H2-consistent relationship with ordinary postpartum variation.",
+            "full_native_inspected": true,
+            "display_scale_inspected": true,
+            "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+            "evidence": [
+              {
+                "path": "docs/owner-requirement-evidence/site04-fermi-source.json",
+                "sha256": "43837100dd273d8e89f3f2958d336bb78505986b3e4c9157985a3dfdfd6b55e5"
+              },
+              {
+                "path": "docs/owner-requirement-evidence/site04-fermi-display.json",
+                "sha256": "516395f4619c678f79bc6353fc9e46c296919c1b3c092dc70ea4ca72df01170d"
+              }
+            ]
+          },
+          {
+            "role": "Newton",
+            "actual_actor": "/root/newton_current",
+            "binding_sha256": "c1b2492e39f65b380575f88e53dadc8281ae26c07ebffe91227992a70797abe8",
+            "verdict": "PASS",
+            "withdrawn": false,
+            "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+            "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+            "likeness_findings": "RETAIN_NO_NEW_DEFECT_IDENTIFIED",
+            "body_findings": "Standing green dress has defined waist and falling skirt; no pregnancy dome observed.",
+            "full_native_inspected": true,
+            "display_scale_inspected": true,
+            "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+            "evidence": [
+              {
+                "path": "docs/owner-requirement-evidence/site04-newton-source.json",
+                "sha256": "17994927429f675895d670a111d0680f7191373d2bd656682cb8726ec2dd75a9"
+              },
+              {
+                "path": "docs/owner-requirement-evidence/site04-newton-display.json",
+                "sha256": "ca942b92864371d69d4197c40d04aff816706123914d36d1ac3d53a6486a08c6"
+              }
+            ]
+          }
+        ],
+        "root_review": {
+          "role": "root",
+          "actual_actor": "/root",
+          "binding_sha256": "c1b2492e39f65b380575f88e53dadc8281ae26c07ebffe91227992a70797abe8",
+          "verdict": "PASS",
+          "withdrawn": false,
+          "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+          "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+          "likeness_findings": "Actual full source compared with approved Emma references; no additional likeness defect identified in this retained scene.",
+          "body_findings": "Actual full scene reviewed for defined waist, period layers and dated pregnancy applicability; source-specific current findings retained in root source report.",
+          "full_native_inspected": true,
+          "display_scale_inspected": true,
+          "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+          "evidence": [
+            {
+              "path": "docs/owner-requirement-evidence/site04-root-source.json",
+              "sha256": "3fbd37ca36363af9917764f5d60ab255c728e79b1b0442942f53b89d3e8697ed"
+            },
+            {
+              "path": "docs/owner-requirement-evidence/site04-root-display.json",
+              "sha256": "7de266266d7fc6f0aacbfdd38b8c14c54abf30494883aad33cb2e14c58104e89"
+            }
+          ]
+        }
+      },
+      {
+        "id": "H1",
+        "assets": [
+          {
+            "path": "assets/page-art/emma-life/emma-h1-review-1536.webp",
+            "sha256": "d4eebd53b65366d53e5131fd5c9f4341bbd44a67a542c52a61f7c2fd4735137a",
+            "pixel_sha256": "49614df3fe59e5594a8f435f60f3c6ca99a9df64df63da0e405e54efb2670977",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 1452524
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-h1-review-640.webp",
+            "sha256": "212674195b1426187dc6dbc4f9d0dfe423a1d8a13cd6c8ef123ebebf56ce3d4a",
+            "pixel_sha256": "0d7f443f36ec4593814e0bd0448e724f7d224d6d45d8e4a4883c45f0ac6ec43f",
+            "dimensions": [
+              640,
+              427
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 60376
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-h1-review-960.webp",
+            "sha256": "b3c88a65600499b2112f92fc7a56e53355b8dfbd8f750bf150a6577f2be4c9f4",
+            "pixel_sha256": "7e80ba606f094b361be9174c4223e7f9bef7f68a8686203a7dff228e8ee7b048",
+            "dimensions": [
+              960,
+              640
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 116166
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-h1-review.png",
+            "sha256": "c1c30bf8f7eeb631f89a78e62c123f774181cc0be807708fe35d1abd951887b7",
+            "pixel_sha256": "49614df3fe59e5594a8f435f60f3c6ca99a9df64df63da0e405e54efb2670977",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "format": "PNG",
+            "mode": "RGB",
+            "bytes": 2306981
+          }
+        ],
+        "consumers": [
+          {
+            "path": "art-gallery.json",
+            "asset": "assets/page-art/emma-life/emma-h1-review-1536.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "art-gallery.json",
+            "asset": "assets/page-art/emma-life/emma-h1-review-960.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "history/emma-hale-smith.html",
+            "asset": "assets/page-art/emma-life/emma-h1-review-1536.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "history/emma-hale-smith.html",
+            "asset": "assets/page-art/emma-life/emma-h1-review-640.webp",
+            "occurrences": 1
+          },
+          {
+            "path": "history/emma-hale-smith.html",
+            "asset": "assets/page-art/emma-life/emma-h1-review-960.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "site-search-index.json",
+            "asset": "assets/page-art/emma-life/emma-h1-review-960.webp",
+            "occurrences": 1
+          }
+        ],
+        "source_sha256": "c1c30bf8f7eeb631f89a78e62c123f774181cc0be807708fe35d1abd951887b7",
+        "body": {
+          "status": "pregnant_supported",
+          "visible_pregnancy": true,
+          "scene_date": "Spring 1828",
+          "findings": "Green high-seam dress visibly rounds forward below the bust above/behind the table, reading maternity-like. This was initially a provisional concern until exact scene date was joined: spring1828 supports pregnancy. Retain this supported fullness; no claim of exact gestational dimensions.",
+          "pregnancy_evidence": [
+            {
+              "path": "docs/owner-requirement-evidence/chronology.json",
+              "sha256": "42b8074de61e89c8b9ad5287c06e9bfb5714a054faae6848546b7e30d7d2c19b"
+            }
+          ],
+          "dated_relationship": "First child born 1828-06-15",
+          "scene_timing": {
+            "precision": "source_label",
+            "label": "Spring 1828",
+            "applicability_label": "Spring 1828",
+            "applicability_finding": "First child born 1828-06-15",
+            "source": {
+              "path": "docs/owner-requirement-evidence/chronology.json",
+              "sha256": "42b8074de61e89c8b9ad5287c06e9bfb5714a054faae6848546b7e30d7d2c19b"
+            }
+          }
+        },
+        "appearance_basis": "current_actual_source_and_private_display",
+        "reviews": [
+          {
+            "role": "Fermi",
+            "actual_actor": "/root/fermi_current",
+            "binding_sha256": "a34fadf26a2230103458d98a5b1f405b2a8308dc677ff83770d29c7e416d5e75",
+            "verdict": "PASS",
+            "withdrawn": false,
+            "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+            "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+            "likeness_findings": "NO_NEW_LIKENESS_CORRECTION_IDENTIFIED",
+            "body_findings": "Green high-seam dress visibly rounds forward below the bust above/behind the table, reading maternity-like. This was initially a provisional concern until exact scene date was joined: spring1828 supports pregnancy. Retain this supported fullness; no claim of exact gestational dimensions.",
+            "full_native_inspected": true,
+            "display_scale_inspected": true,
+            "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+            "evidence": [
+              {
+                "path": "docs/owner-requirement-evidence/site04-fermi-source.json",
+                "sha256": "43837100dd273d8e89f3f2958d336bb78505986b3e4c9157985a3dfdfd6b55e5"
+              },
+              {
+                "path": "docs/owner-requirement-evidence/site07-fermi-display.json",
+                "sha256": "a61b1d9ae3723b8e82fbbd375525aa73a1788c032b6897efe77e76981a16de1e"
+              }
+            ]
+          },
+          {
+            "role": "Newton",
+            "actual_actor": "/root/newton_current",
+            "binding_sha256": "a34fadf26a2230103458d98a5b1f405b2a8308dc677ff83770d29c7e416d5e75",
+            "verdict": "PASS",
+            "withdrawn": false,
+            "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+            "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+            "likeness_findings": "RETAIN_NO_NEW_DEFECT_IDENTIFIED",
+            "body_findings": "Spring1828 visible pregnancy is consistent with documented June birth.",
+            "full_native_inspected": true,
+            "display_scale_inspected": true,
+            "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+            "evidence": [
+              {
+                "path": "docs/owner-requirement-evidence/site04-newton-source.json",
+                "sha256": "17994927429f675895d670a111d0680f7191373d2bd656682cb8726ec2dd75a9"
+              },
+              {
+                "path": "docs/owner-requirement-evidence/site07-newton-display.json",
+                "sha256": "03e7b814d84ea1cf16bc1fb7a57a719d4cd6c58c3e8606741cde7b56f44e4eaf"
+              }
+            ]
+          }
+        ],
+        "root_review": {
+          "role": "root",
+          "actual_actor": "/root",
+          "binding_sha256": "a34fadf26a2230103458d98a5b1f405b2a8308dc677ff83770d29c7e416d5e75",
+          "verdict": "PASS",
+          "withdrawn": false,
+          "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+          "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+          "likeness_findings": "Actual full source compared with approved Emma references; no additional likeness defect identified in this retained scene.",
+          "body_findings": "Actual full scene reviewed for defined waist, period layers and dated pregnancy applicability; source-specific current findings retained in root source report.",
+          "full_native_inspected": true,
+          "display_scale_inspected": true,
+          "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+          "evidence": [
+            {
+              "path": "docs/owner-requirement-evidence/site04-root-source.json",
+              "sha256": "3fbd37ca36363af9917764f5d60ab255c728e79b1b0442942f53b89d3e8697ed"
+            },
+            {
+              "path": "docs/owner-requirement-evidence/site07-root-display.json",
+              "sha256": "61e371dd7f57a0ffb7ae64c6a1b5f44061b1ed45c64f84ddc42502760c5938cc"
+            }
+          ]
+        }
+      },
+      {
+        "id": "H2",
+        "assets": [
+          {
+            "path": "assets/page-art/emma-life/emma-h2-review-1536.webp",
+            "sha256": "a6d9a261c6f4feef069c62ef9e62135388e5479dc2ca416ce2ca1a1a4866c67e",
+            "pixel_sha256": "d9bdb5e32c57f1bc88bbf4621adc5ee87628ce5035da2b7349a2a9de39d33565",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 1241194
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-h2-review-640.webp",
+            "sha256": "07706297165c8f0810995da2a0a973e1af542513324ca708da5260d9c6351019",
+            "pixel_sha256": "ff4e4068c3bd76e53ca0bf5e56b7a6c26824e38d93007c503eac9a690a688990",
+            "dimensions": [
+              640,
+              427
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 44510
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-h2-review-960.webp",
+            "sha256": "0fc4e970d604b76ed623151ebc98c9da4061e13080ca79c6fa14d9f8b0c04150",
+            "pixel_sha256": "6828be0cb2f1df2e94ed05f47d3cb22d0039933de9698500d2d2d448833c1ba3",
+            "dimensions": [
+              960,
+              640
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 82090
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-h2-review.png",
+            "sha256": "809aa5b8a067d5858b328aff37b86ea545c268ed9d0b45f734ab340540802ae4",
+            "pixel_sha256": "d9bdb5e32c57f1bc88bbf4621adc5ee87628ce5035da2b7349a2a9de39d33565",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "format": "PNG",
+            "mode": "RGB",
+            "bytes": 1926013
+          }
+        ],
+        "consumers": [
+          {
+            "path": "art-gallery.json",
+            "asset": "assets/page-art/emma-life/emma-h2-review-1536.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "art-gallery.json",
+            "asset": "assets/page-art/emma-life/emma-h2-review-960.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "history/emma-hale-smith.html",
+            "asset": "assets/page-art/emma-life/emma-h2-review-1536.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "history/emma-hale-smith.html",
+            "asset": "assets/page-art/emma-life/emma-h2-review-640.webp",
+            "occurrences": 1
+          },
+          {
+            "path": "history/emma-hale-smith.html",
+            "asset": "assets/page-art/emma-life/emma-h2-review-960.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "site-search-index.json",
+            "asset": "assets/page-art/emma-life/emma-h2-review-960.webp",
+            "occurrences": 1
+          }
+        ],
+        "source_sha256": "809aa5b8a067d5858b328aff37b86ea545c268ed9d0b45f734ab340540802ae4",
+        "body": {
+          "status": "unknown",
+          "visible_pregnancy": false,
+          "scene_date": "Autumn 1835",
+          "findings": "Man-free displayed hymn scene retains the owner-preferred reference relationship: defined waist, natural bust and full sleeves, gathered skirt. No conspicuous maternity dome; possible early pregnancy inference is not used to authorize enlargement."
+        },
+        "appearance_basis": "current_actual_source_and_private_display",
+        "reviews": [
+          {
+            "role": "Fermi",
+            "actual_actor": "/root/fermi_current",
+            "binding_sha256": "429667d8967de79e1e0532c6e35db4331061f94a064ad60cafd48889adf4f44c",
+            "verdict": "PASS",
+            "withdrawn": false,
+            "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+            "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+            "likeness_findings": "NO_NEW_LIKENESS_CORRECTION_IDENTIFIED",
+            "body_findings": "Man-free displayed hymn scene retains the owner-preferred reference relationship: defined waist, natural bust and full sleeves, gathered skirt. No conspicuous maternity dome; possible early pregnancy inference is not used to authorize enlargement.",
+            "full_native_inspected": true,
+            "display_scale_inspected": true,
+            "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+            "evidence": [
+              {
+                "path": "docs/owner-requirement-evidence/site04-fermi-source.json",
+                "sha256": "43837100dd273d8e89f3f2958d336bb78505986b3e4c9157985a3dfdfd6b55e5"
+              },
+              {
+                "path": "docs/owner-requirement-evidence/site07-fermi-display.json",
+                "sha256": "a61b1d9ae3723b8e82fbbd375525aa73a1788c032b6897efe77e76981a16de1e"
+              }
+            ]
+          },
+          {
+            "role": "Newton",
+            "actual_actor": "/root/newton_current",
+            "binding_sha256": "429667d8967de79e1e0532c6e35db4331061f94a064ad60cafd48889adf4f44c",
+            "verdict": "PASS",
+            "withdrawn": false,
+            "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+            "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+            "likeness_findings": "RETAIN_NO_NEW_DEFECT_IDENTIFIED",
+            "body_findings": "Accepted smaller torso reference has defined waist; no need or authority to add a pregnancy silhouette from imprecise autumn date.",
+            "full_native_inspected": true,
+            "display_scale_inspected": true,
+            "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+            "evidence": [
+              {
+                "path": "docs/owner-requirement-evidence/site04-newton-source.json",
+                "sha256": "17994927429f675895d670a111d0680f7191373d2bd656682cb8726ec2dd75a9"
+              },
+              {
+                "path": "docs/owner-requirement-evidence/site07-newton-display.json",
+                "sha256": "03e7b814d84ea1cf16bc1fb7a57a719d4cd6c58c3e8606741cde7b56f44e4eaf"
+              }
+            ]
+          }
+        ],
+        "root_review": {
+          "role": "root",
+          "actual_actor": "/root",
+          "binding_sha256": "429667d8967de79e1e0532c6e35db4331061f94a064ad60cafd48889adf4f44c",
+          "verdict": "PASS",
+          "withdrawn": false,
+          "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+          "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+          "likeness_findings": "Actual full source compared with approved Emma references; no additional likeness defect identified in this retained scene.",
+          "body_findings": "Actual full scene reviewed for defined waist, period layers and dated pregnancy applicability; source-specific current findings retained in root source report.",
+          "full_native_inspected": true,
+          "display_scale_inspected": true,
+          "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+          "evidence": [
+            {
+              "path": "docs/owner-requirement-evidence/site04-root-source.json",
+              "sha256": "3fbd37ca36363af9917764f5d60ab255c728e79b1b0442942f53b89d3e8697ed"
+            },
+            {
+              "path": "docs/owner-requirement-evidence/site07-root-display.json",
+              "sha256": "61e371dd7f57a0ffb7ae64c6a1b5f44061b1ed45c64f84ddc42502760c5938cc"
+            }
+          ]
+        }
+      },
+      {
+        "id": "H3",
+        "assets": [
+          {
+            "path": "assets/page-art/emma-life/emma-h3-review-1536.webp",
+            "sha256": "d71fc2d2940b452239cb50803c1f0348b173c7764e7fef205cb144058408653e",
+            "pixel_sha256": "be7704183250b8564102ef9b71c4c18c9d249dd1945f3bc80ce9277d30f7ae2a",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 1419194
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-h3-review-640.webp",
+            "sha256": "10b5d4b9a2b78dac4e9aa7b9ba8542a2a9e9b1245b966ba86492a54a93696976",
+            "pixel_sha256": "1023a091734d1c454fd419a6357749d730b57269258457e7e1b54afea9e1cc43",
+            "dimensions": [
+              640,
+              427
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 57320
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-h3-review-960.webp",
+            "sha256": "f8daa1c997d4db97953954583ed112503d0b9cbb1afcceb34351e89d36be4a5a",
+            "pixel_sha256": "de8b227972e51acd445f85a4896e4e247c9994d3941e3c3c8390eb787fe7fddf",
+            "dimensions": [
+              960,
+              640
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 107332
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-h3-review.png",
+            "sha256": "69108a86dfb3fedb18480e6924d178d2b542577a8790f407d8c40b1823d39560",
+            "pixel_sha256": "be7704183250b8564102ef9b71c4c18c9d249dd1945f3bc80ce9277d30f7ae2a",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "format": "PNG",
+            "mode": "RGB",
+            "bytes": 2199426
+          }
+        ],
+        "consumers": [
+          {
+            "path": "art-gallery.json",
+            "asset": "assets/page-art/emma-life/emma-h3-review-1536.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "art-gallery.json",
+            "asset": "assets/page-art/emma-life/emma-h3-review-960.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "history/emma-hale-smith.html",
+            "asset": "assets/page-art/emma-life/emma-h3-review-1536.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "history/emma-hale-smith.html",
+            "asset": "assets/page-art/emma-life/emma-h3-review-640.webp",
+            "occurrences": 1
+          },
+          {
+            "path": "history/emma-hale-smith.html",
+            "asset": "assets/page-art/emma-life/emma-h3-review-960.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "site-search-index.json",
+            "asset": "assets/page-art/emma-life/emma-h3-review-960.webp",
+            "occurrences": 1
+          }
+        ],
+        "source_sha256": "69108a86dfb3fedb18480e6924d178d2b542577a8790f407d8c40b1823d39560",
+        "body": {
+          "status": "unknown",
+          "visible_pregnancy": false,
+          "scene_date": "March 1839",
+          "findings": "Seated blue bodice beneath shawl has restrained chest volume and narrowing center toward the table. Lower abdomen hidden; no visible maternity dome. Do not infer body size behind table or shawl."
+        },
+        "appearance_basis": "current_actual_source_and_private_display",
+        "reviews": [
+          {
+            "role": "Fermi",
+            "actual_actor": "/root/fermi_current",
+            "binding_sha256": "1299a8db20890b1bf3466c410901ec110daafb17938d85d941edf65771d899d1",
+            "verdict": "PASS",
+            "withdrawn": false,
+            "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+            "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+            "likeness_findings": "NO_NEW_LIKENESS_CORRECTION_IDENTIFIED",
+            "body_findings": "Seated blue bodice beneath shawl has restrained chest volume and narrowing center toward the table. Lower abdomen hidden; no visible maternity dome. Do not infer body size behind table or shawl.",
+            "full_native_inspected": true,
+            "display_scale_inspected": true,
+            "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+            "evidence": [
+              {
+                "path": "docs/owner-requirement-evidence/site04-fermi-source.json",
+                "sha256": "43837100dd273d8e89f3f2958d336bb78505986b3e4c9157985a3dfdfd6b55e5"
+              },
+              {
+                "path": "docs/owner-requirement-evidence/site07-fermi-display.json",
+                "sha256": "a61b1d9ae3723b8e82fbbd375525aa73a1788c032b6897efe77e76981a16de1e"
+              }
+            ]
+          },
+          {
+            "role": "Newton",
+            "actual_actor": "/root/newton_current",
+            "binding_sha256": "1299a8db20890b1bf3466c410901ec110daafb17938d85d941edf65771d899d1",
+            "verdict": "PASS",
+            "withdrawn": false,
+            "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+            "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+            "likeness_findings": "RETAIN_NO_NEW_DEFECT_IDENTIFIED",
+            "body_findings": "Seated blue bodice is full above defined waist; no distinct pregnancy dome observed.",
+            "full_native_inspected": true,
+            "display_scale_inspected": true,
+            "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+            "evidence": [
+              {
+                "path": "docs/owner-requirement-evidence/site04-newton-source.json",
+                "sha256": "17994927429f675895d670a111d0680f7191373d2bd656682cb8726ec2dd75a9"
+              },
+              {
+                "path": "docs/owner-requirement-evidence/site07-newton-display.json",
+                "sha256": "03e7b814d84ea1cf16bc1fb7a57a719d4cd6c58c3e8606741cde7b56f44e4eaf"
+              }
+            ]
+          }
+        ],
+        "root_review": {
+          "role": "root",
+          "actual_actor": "/root",
+          "binding_sha256": "1299a8db20890b1bf3466c410901ec110daafb17938d85d941edf65771d899d1",
+          "verdict": "PASS",
+          "withdrawn": false,
+          "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+          "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+          "likeness_findings": "Actual full source compared with approved Emma references; no additional likeness defect identified in this retained scene.",
+          "body_findings": "Actual full scene reviewed for defined waist, period layers and dated pregnancy applicability; source-specific current findings retained in root source report.",
+          "full_native_inspected": true,
+          "display_scale_inspected": true,
+          "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+          "evidence": [
+            {
+              "path": "docs/owner-requirement-evidence/site04-root-source.json",
+              "sha256": "3fbd37ca36363af9917764f5d60ab255c728e79b1b0442942f53b89d3e8697ed"
+            },
+            {
+              "path": "docs/owner-requirement-evidence/site07-root-display.json",
+              "sha256": "61e371dd7f57a0ffb7ae64c6a1b5f44061b1ed45c64f84ddc42502760c5938cc"
+            }
+          ]
+        }
+      },
+      {
+        "id": "H4",
+        "assets": [
+          {
+            "path": "assets/page-art/emma-life/emma-h4-review-1536.webp",
+            "sha256": "8763f2acd892418a6a1a02b3aa9b9df9fc776cf85b8f90a8e5de842b873c045d",
+            "pixel_sha256": "be932a58e68665ce0b39985cc65eb9cf04444cb60294b0a4ccf414bd3ba5a1a1",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 1536728
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-h4-review-640.webp",
+            "sha256": "18f26942633eed7fe8fa5d24917e3868229e17ae524d324b8de5dc0a038534e1",
+            "pixel_sha256": "38f86a0c607ddcc6b8f2a0be89b2552a6b8eb303e00303347ff2c8b1c35a6bae",
+            "dimensions": [
+              640,
+              427
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 69922
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-h4-review-960.webp",
+            "sha256": "620309036f886f59b1a67aa69aa8405e420c65326b3ef206ce90a71fb8a6a59a",
+            "pixel_sha256": "4af199ccb90ffd94343ec7ef39279a75cee7679e8d8da2e59afa01fb32696fc2",
+            "dimensions": [
+              960,
+              640
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 128644
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-h4-review.png",
+            "sha256": "24e0b13c84cabae92c972034f1fc775162b2800a93e4b14d876ca16c31a269ea",
+            "pixel_sha256": "be932a58e68665ce0b39985cc65eb9cf04444cb60294b0a4ccf414bd3ba5a1a1",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "format": "PNG",
+            "mode": "RGB",
+            "bytes": 2384451
+          }
+        ],
+        "consumers": [
+          {
+            "path": "art-gallery.json",
+            "asset": "assets/page-art/emma-life/emma-h4-review-1536.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "art-gallery.json",
+            "asset": "assets/page-art/emma-life/emma-h4-review-960.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "history/emma-hale-smith.html",
+            "asset": "assets/page-art/emma-life/emma-h4-review-1536.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "history/emma-hale-smith.html",
+            "asset": "assets/page-art/emma-life/emma-h4-review-640.webp",
+            "occurrences": 1
+          },
+          {
+            "path": "history/emma-hale-smith.html",
+            "asset": "assets/page-art/emma-life/emma-h4-review-960.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "index.html",
+            "asset": "assets/page-art/emma-life/emma-h4-review-960.webp",
+            "occurrences": 1
+          },
+          {
+            "path": "site-search-index.json",
+            "asset": "assets/page-art/emma-life/emma-h4-review-960.webp",
+            "occurrences": 1
+          }
+        ],
+        "source_sha256": "24e0b13c84cabae92c972034f1fc775162b2800a93e4b14d876ca16c31a269ea",
+        "body": {
+          "status": "postpartum",
+          "visible_pregnancy": false,
+          "scene_date": "March 1842",
+          "findings": "Standing burgundy bodice has a clear waist and ordinary full skirt, without protruding pregnancy contour. The owner-preferred body direction remains evident. Postpartum status does not require instant flatness; no further body correction identified."
+        },
+        "appearance_basis": "current_actual_source_and_private_display",
+        "reviews": [
+          {
+            "role": "Fermi",
+            "actual_actor": "/root/fermi_current",
+            "binding_sha256": "2c1324e459c9295a132be7f58414f1eaea77710bb3f10fca4ec0620f360b2e2d",
+            "verdict": "PASS",
+            "withdrawn": false,
+            "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+            "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+            "likeness_findings": "NO_NEW_LIKENESS_CORRECTION_IDENTIFIED",
+            "body_findings": "Standing burgundy bodice has a clear waist and ordinary full skirt, without protruding pregnancy contour. The owner-preferred body direction remains evident. Postpartum status does not require instant flatness; no further body correction identified.",
+            "full_native_inspected": true,
+            "display_scale_inspected": true,
+            "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+            "evidence": [
+              {
+                "path": "docs/owner-requirement-evidence/site04-fermi-source.json",
+                "sha256": "43837100dd273d8e89f3f2958d336bb78505986b3e4c9157985a3dfdfd6b55e5"
+              },
+              {
+                "path": "docs/owner-requirement-evidence/site07-fermi-display.json",
+                "sha256": "a61b1d9ae3723b8e82fbbd375525aa73a1788c032b6897efe77e76981a16de1e"
+              }
+            ]
+          },
+          {
+            "role": "Newton",
+            "actual_actor": "/root/newton_current",
+            "binding_sha256": "2c1324e459c9295a132be7f58414f1eaea77710bb3f10fca4ec0620f360b2e2d",
+            "verdict": "PASS",
+            "withdrawn": false,
+            "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+            "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+            "likeness_findings": "RETAIN_NO_NEW_DEFECT_IDENTIFIED",
+            "body_findings": "Burgundy standing dress has defined waist; postpartum setting does not authorize pregnancy depiction.",
+            "full_native_inspected": true,
+            "display_scale_inspected": true,
+            "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+            "evidence": [
+              {
+                "path": "docs/owner-requirement-evidence/site04-newton-source.json",
+                "sha256": "17994927429f675895d670a111d0680f7191373d2bd656682cb8726ec2dd75a9"
+              },
+              {
+                "path": "docs/owner-requirement-evidence/site07-newton-display.json",
+                "sha256": "03e7b814d84ea1cf16bc1fb7a57a719d4cd6c58c3e8606741cde7b56f44e4eaf"
+              }
+            ]
+          }
+        ],
+        "root_review": {
+          "role": "root",
+          "actual_actor": "/root",
+          "binding_sha256": "2c1324e459c9295a132be7f58414f1eaea77710bb3f10fca4ec0620f360b2e2d",
+          "verdict": "PASS",
+          "withdrawn": false,
+          "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+          "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+          "likeness_findings": "Actual full source compared with approved Emma references; no additional likeness defect identified in this retained scene.",
+          "body_findings": "Actual full scene reviewed for defined waist, period layers and dated pregnancy applicability; source-specific current findings retained in root source report.",
+          "full_native_inspected": true,
+          "display_scale_inspected": true,
+          "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+          "evidence": [
+            {
+              "path": "docs/owner-requirement-evidence/site04-root-source.json",
+              "sha256": "3fbd37ca36363af9917764f5d60ab255c728e79b1b0442942f53b89d3e8697ed"
+            },
+            {
+              "path": "docs/owner-requirement-evidence/site07-root-display.json",
+              "sha256": "61e371dd7f57a0ffb7ae64c6a1b5f44061b1ed45c64f84ddc42502760c5938cc"
+            }
+          ]
+        }
+      },
+      {
+        "id": "H5",
+        "assets": [
+          {
+            "path": "assets/page-art/emma-life/emma-h5-review-1536.webp",
+            "sha256": "f9ba529d989819e97a096223972ac03bf4e216dda8b7281ea94550caae88ec06",
+            "pixel_sha256": "78162ee5974b5267ff7a13deae665c3acb258b4173f4056e02c3610436cdb70d",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 1388884
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-h5-review-640.webp",
+            "sha256": "f02d49d7b4144e3421c53054d6e9351a3b16dca73990c3f01dc01cd38fa72bf7",
+            "pixel_sha256": "b15474f7a05444865ba9350697d66a116bbb34fcde8e071c3e5f2d337f67abbe",
+            "dimensions": [
+              640,
+              427
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 58510
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-h5-review-960.webp",
+            "sha256": "6e75ec1a00f1dd881e948edd2363634bd0fe2c3042b4e37e3884fab0866eacb6",
+            "pixel_sha256": "1576aa0e8adb21d47fd6fe7853254256b5b04fcd9e7cc9681590daa72c07d4ad",
+            "dimensions": [
+              960,
+              640
+            ],
+            "format": "WEBP",
+            "mode": "RGB",
+            "bytes": 107122
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-h5-review.png",
+            "sha256": "35231bc6e2032cc1f07cc2ffc9ad65c43851aa3c0f05feee9444d07e696a9f50",
+            "pixel_sha256": "78162ee5974b5267ff7a13deae665c3acb258b4173f4056e02c3610436cdb70d",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "format": "PNG",
+            "mode": "RGB",
+            "bytes": 2175905
+          }
+        ],
+        "consumers": [
+          {
+            "path": "art-gallery.json",
+            "asset": "assets/page-art/emma-life/emma-h5-review-1536.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "art-gallery.json",
+            "asset": "assets/page-art/emma-life/emma-h5-review-960.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "history/emma-hale-smith.html",
+            "asset": "assets/page-art/emma-life/emma-h5-review-1536.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "history/emma-hale-smith.html",
+            "asset": "assets/page-art/emma-life/emma-h5-review-640.webp",
+            "occurrences": 1
+          },
+          {
+            "path": "history/emma-hale-smith.html",
+            "asset": "assets/page-art/emma-life/emma-h5-review-960.webp",
+            "occurrences": 2
+          },
+          {
+            "path": "site-search-index.json",
+            "asset": "assets/page-art/emma-life/emma-h5-review-960.webp",
+            "occurrences": 1
+          }
+        ],
+        "source_sha256": "35231bc6e2032cc1f07cc2ffc9ad65c43851aa3c0f05feee9444d07e696a9f50",
+        "body": {
+          "status": "not_pregnant",
+          "visible_pregnancy": false,
+          "scene_date": "Autumn 1871",
+          "findings": "Older standing woman has a defined natural waist and skirt gathers, modest chest fullness and age-appropriate posture. No maternity-like abdominal projection. Do not modernize or idealize the older body."
+        },
+        "appearance_basis": "current_actual_source_and_private_display",
+        "reviews": [
+          {
+            "role": "Fermi",
+            "actual_actor": "/root/fermi_current",
+            "binding_sha256": "37dd9d4361b314ea59ff6b4fbe7cec398db233dc4e975a2bba10ea4db8122d07",
+            "verdict": "PASS",
+            "withdrawn": false,
+            "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+            "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+            "likeness_findings": "NO_NEW_LIKENESS_CORRECTION_IDENTIFIED",
+            "body_findings": "Older standing woman has a defined natural waist and skirt gathers, modest chest fullness and age-appropriate posture. No maternity-like abdominal projection. Do not modernize or idealize the older body.",
+            "full_native_inspected": true,
+            "display_scale_inspected": true,
+            "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+            "evidence": [
+              {
+                "path": "docs/owner-requirement-evidence/site04-fermi-source.json",
+                "sha256": "43837100dd273d8e89f3f2958d336bb78505986b3e4c9157985a3dfdfd6b55e5"
+              },
+              {
+                "path": "docs/owner-requirement-evidence/site07-fermi-display.json",
+                "sha256": "a61b1d9ae3723b8e82fbbd375525aa73a1788c032b6897efe77e76981a16de1e"
+              }
+            ]
+          },
+          {
+            "role": "Newton",
+            "actual_actor": "/root/newton_current",
+            "binding_sha256": "37dd9d4361b314ea59ff6b4fbe7cec398db233dc4e975a2bba10ea4db8122d07",
+            "verdict": "PASS",
+            "withdrawn": false,
+            "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+            "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+            "likeness_findings": "RETAIN_NO_NEW_DEFECT_IDENTIFIED",
+            "body_findings": "Older seated woman has natural torso/clothing volume without a pregnancy silhouette.",
+            "full_native_inspected": true,
+            "display_scale_inspected": true,
+            "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+            "evidence": [
+              {
+                "path": "docs/owner-requirement-evidence/site04-newton-source.json",
+                "sha256": "17994927429f675895d670a111d0680f7191373d2bd656682cb8726ec2dd75a9"
+              },
+              {
+                "path": "docs/owner-requirement-evidence/site07-newton-display.json",
+                "sha256": "03e7b814d84ea1cf16bc1fb7a57a719d4cd6c58c3e8606741cde7b56f44e4eaf"
+              }
+            ]
+          }
+        ],
+        "root_review": {
+          "role": "root",
+          "actual_actor": "/root",
+          "binding_sha256": "37dd9d4361b314ea59ff6b4fbe7cec398db233dc4e975a2bba10ea4db8122d07",
+          "verdict": "PASS",
+          "withdrawn": false,
+          "reviewed_at": "2026-10-10T15:11:46.571054+00:00",
+          "review_time_basis": "Current evidence-binding normalization; original pixel event time is not fabricated.",
+          "likeness_findings": "Actual full source compared with approved Emma references; no additional likeness defect identified in this retained scene.",
+          "body_findings": "Actual full scene reviewed for defined waist, period layers and dated pregnancy applicability; source-specific current findings retained in root source report.",
+          "full_native_inspected": true,
+          "display_scale_inspected": true,
+          "reference_binding": "96d52899b5cb22733871f089ee7d253fda3038e5ed9707d7b5579e46eb27279d",
+          "evidence": [
+            {
+              "path": "docs/owner-requirement-evidence/site04-root-source.json",
+              "sha256": "3fbd37ca36363af9917764f5d60ab255c728e79b1b0442942f53b89d3e8697ed"
+            },
+            {
+              "path": "docs/owner-requirement-evidence/site07-root-display.json",
+              "sha256": "61e371dd7f57a0ffb7ae64c6a1b5f44061b1ed45c64f84ddc42502760c5938cc"
+            }
+          ]
+        }
+      }
+    ],
+    "owner_acceptance": null,
+    "limits": "Actual paired appearance and bounded active-consumer evidence assembled for pre-release integrity. Current owner acceptance and post-correction public closeout remain absent. Final packet review/installation is separate."
   }
 }

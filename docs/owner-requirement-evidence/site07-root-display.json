@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "source_report_sha256": "77717698e14a6cb67a594653aa1023fb2e53346385e41e4b4a4a605153e97d7d",
+  "scope": "Exact current private display or explicitly preserved prior SITE11 actual display; no public-page interaction inference.",
+  "actor": "/root",
+  "normalized_at": "2026-10-10T15:11:46.571054+00:00",
+  "original_event_time": null,
+  "details": {},
+  "limits": "Current evidence normalization, not a new historical pixel review or owner acceptance. Full original report remains preserved privately."
+}

@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "id": "site05_identity-delivery_finished-independent",
+  "family": "SITE05_IDENTITY",
+  "stage": "delivery_finished",
+  "actual_actor": "/root/newton_current",
+  "normalized_at": "2026-10-10T15:15:08.321480+00:00",
+  "source_recorded_at": null,
+  "original_message_timestamp": null,
+  "original_message_digest": null,
+  "source_report_sha256": "ba186af032301c4792d63d0620d2025947cd23f5289c603f4f7a23e1f6be7194",
+  "subject_sha256": "e9a568a213cc25dd7f473131567af373d76b6facd50fcb9a233246822998bbf2",
+  "withdrawn": false,
+  "verdict": "CONCUR",
+  "evidence_class": "actual_finished_review_normalization",
+  "findings": "Actual encoded delivery files personally inspected; no installation/publication claim.",
+  "pixels_inspected": true
+}

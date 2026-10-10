@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "site02_identity-encoding_preflight-root",
+  "family": "SITE02_IDENTITY",
+  "stage": "encoding_preflight",
+  "actual_actor": "/root",
+  "normalized_at": "2026-10-10T15:15:08.321480+00:00",
+  "source_recorded_at": null,
+  "original_message_timestamp": null,
+  "original_message_digest": null,
+  "source_report_sha256": "77717698e14a6cb67a594653aa1023fb2e53346385e41e4b4a4a605153e97d7d",
+  "subject_sha256": "d9839135c9c4c5bc3ea554972ddb3b384b61344717165275a5584581ecf14b78",
+  "withdrawn": false,
+  "verdict": "CONCUR",
+  "evidence_class": "current_exact_spec_reconciliation",
+  "findings": "Current reread concurs with exact PNG copy and q90 WebP new versioned paths; preserve prior assets."
+}

@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "id": "site05_identity-source_finished-executor",
+  "family": "SITE05_IDENTITY",
+  "stage": "source_finished",
+  "actual_actor": "/root/fermi_current",
+  "normalized_at": "2026-10-10T15:15:08.321480+00:00",
+  "source_recorded_at": null,
+  "original_message_timestamp": null,
+  "original_message_digest": null,
+  "source_report_sha256": "6cfcb2d366d075fe7cec485ce42334ec4b1587cb8db28be08960a6fdf8d2b5fd",
+  "subject_sha256": "4c9c79f6d0eb407f668d0048d63b2de0ef851d3ecba0474de6d88521f2b4fb1c",
+  "withdrawn": false,
+  "verdict": "CONCUR",
+  "evidence_class": "actual_finished_review_normalization",
+  "findings": "Actual full/native finished source compared against approved identity references; body and scene visually reviewed. Display and encoded-delivery evidence are separate, and no owner acceptance is inferred.",
+  "pixels_inspected": true
+}

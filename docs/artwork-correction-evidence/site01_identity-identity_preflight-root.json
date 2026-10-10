@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "site01_identity-identity_preflight-root",
+  "family": "SITE01_IDENTITY",
+  "stage": "identity_preflight",
+  "actual_actor": "/root",
+  "normalized_at": "2026-10-10T15:15:08.321480+00:00",
+  "source_recorded_at": null,
+  "original_message_timestamp": null,
+  "original_message_digest": null,
+  "source_report_sha256": "77717698e14a6cb67a594653aa1023fb2e53346385e41e4b4a4a605153e97d7d",
+  "subject_sha256": "6af5093c2cb6c93bf0e148624a1bb8c0ec2900f50e29dc5f319ef80a9b51f72e",
+  "withdrawn": false,
+  "verdict": "CONCUR",
+  "evidence_class": "current_exact_spec_reconciliation",
+  "findings": "Current reread concurs with exact7d0/H4/f6 and actual neutral order, no old face input, no new body or generic pregnancy, scene-appropriate age and preserved scene."
+}
