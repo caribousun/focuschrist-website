@@ -120,10 +120,22 @@ for (const card of cards) {
     }
     dom.window.close();
 }
+(async function testLegacyTransitions() {
 // Exercise the active legacy gallery functions, not a copied viewer implementation.
 const legacy = new JSDOM(read('art.html'), { url: 'https://focuschrist.com/art.html', runScripts: 'dangerously' });
 const legacyWindow = legacy.window;
 const legacyDocument = legacyWindow.document;
+const pendingImages = [];
+legacyWindow.Image = class ControlledImage {
+    constructor() { this.complete=false; this.naturalWidth=0; pendingImages.push(this); this.decoded=new Promise((resolve,reject)=>{this.resolveDecode=resolve;this.rejectDecode=reject;}); }
+    set src(value) { this.requestedSource=value; }
+    get src() { return this.requestedSource; }
+    decode() { return this.decoded; }
+    load() { this.complete=true; this.naturalWidth=1000; if(this.onload)this.onload(); }
+    fail() { if(this.onerror)this.onerror(new Error('Controlled image failure')); }
+};
+const settle = async request => { request.load(); await Promise.resolve(); request.resolveDecode(); await Promise.resolve(); await Promise.resolve(); await Promise.resolve(); };
+
 const originals = [...legacyDocument.querySelectorAll('.gallery-item')];
 assert.equal(originals.length, 39, 'Every original gallery picture is covered');
 const originalAssets = originals.map(item => item.querySelector('img').getAttribute('data-full-src'));
@@ -150,8 +162,10 @@ for (let index = 0; index < originals.length; index++) {
     assert.equal(modalImage.getAttribute('src'), originalAssets[index]);
     assert.equal(modalImage.alt, picture.alt, 'Selected image description follows opening');
     key(legacyDocument, 'ArrowRight');
+    await settle(pendingImages.at(-1));
     assert.equal(modalImage.alt, originals[(index + 1) % originals.length].querySelector('img').alt, 'Next updates description including wraparound');
     key(legacyDocument, 'ArrowLeft');
+    await settle(pendingImages.at(-1));
     assert.equal(modalImage.alt, picture.alt, 'Previous restores selected description');
     key(legacyDocument, 'ArrowRight');
     if (index % 3 === 0) key(legacyDocument, 'Escape');
@@ -174,8 +188,36 @@ key(drawer.querySelector('a'), 'Tab');
 assert.equal(legacyDocument.activeElement, closeLegacy);
 key(legacyDocument, 'Escape');
 assert.equal(legacyDocument.activeElement, originals[0]);
+// Controlled pending transitions keep one coherent visible image and metadata.
+legacyWindow.openModal(originals[0]);
+const counter = legacyDocument.getElementById('imageCounter');
+const snapshot = () => [modalImage.getAttribute('src'), modalImage.alt, counter.textContent];
+const first = snapshot();
+legacyWindow.navigate(1); const slower=pendingImages.at(-1);
+assert.deepEqual(snapshot(),first,'Request alone preserves current image and metadata');
+slower.load(); await Promise.resolve();
+assert.deepEqual(snapshot(),first,'Loaded but undecoded image cannot replace the visible frame');
+legacyWindow.navigate(1); const latest=pendingImages.at(-1);
+await settle(latest);
+assert.equal(modalImage.getAttribute('src'),originalAssets[2],'Rapid steps count requested indices');
+const second=snapshot();slower.resolveDecode();await Promise.resolve();await Promise.resolve();
+assert.deepEqual(snapshot(),second,'Late earlier decode cannot overwrite latest selection');
+legacyWindow.navigate(1);pendingImages.at(-1).fail();await Promise.resolve();await Promise.resolve();
+assert.deepEqual(snapshot(),second,'Load failure preserves visible image and metadata');
+legacyWindow.navigate(1);const afterFailure=pendingImages.at(-1);await settle(afterFailure);
+assert.equal(modalImage.getAttribute('src'),originalAssets[3],'Failure resets requested index to displayed selection');
+const beforeDecodeFailure=snapshot();legacyWindow.navigate(1);const badDecode=pendingImages.at(-1);badDecode.load();await Promise.resolve();badDecode.rejectDecode(new Error('Controlled decode failure'));await Promise.resolve();await Promise.resolve();assert.deepEqual(snapshot(),beforeDecodeFailure,'Decode failure preserves image and metadata');
+legacyWindow.navigate(1);const closing=pendingImages.at(-1);legacyWindow.closeModal();const closed=snapshot();await settle(closing);
+assert.deepEqual(snapshot(),closed,'Completion after close cannot mutate the closed viewer');
+assert(!legacyModal.classList.contains('active'));
+legacyWindow.openModal(originals[7]);legacyWindow.navigate(1);const oldSession=pendingImages.at(-1);legacyWindow.closeModal();legacyWindow.openModal(originals[12]);const reopened=snapshot();await settle(oldSession);
+assert.deepEqual(snapshot(),reopened,'Old request cannot replace a newly opened selection');
+legacyWindow.navigate(1);await settle(pendingImages.at(-1));assert.equal(modalImage.getAttribute('src'),originalAssets[13],'Reopen resets pending navigation origin');
+legacyWindow.closeModal();
 legacyWindow.close();
 gallery.window.close();
 assert.equal(checked, 39);
 console.log('Art study picture DOM QA passed: 4 featured paths, 39 study panels, exact titles and scripture, nested full-size viewer, repeated opening, focus and lesson return.');
 console.log('Legacy gallery DOM QA passed: 39 descriptions, stable title labels/assets, next/previous/wraparound, keyboard opening and exact original-trigger return across three close paths.');
+
+})().catch(error => { console.error(error); process.exitCode = 1; });

@@ -310,6 +310,7 @@ def before_handcart_recovery(data):
     return data
 
 def reviewed_owner_20260929_style(name, data):
+    if name == 'timeline-history-workspace.css': return reviewed_timeline_bottom_navigation(data)
     if name in CURRENT_REVIEWED_STYLE_INVERSES and hashlib.sha256(data).hexdigest() != CURRENT_REVIEWED_STYLE_INVERSES[name][0]: return False
     data = before_current_reviewed_style(name, data)
     if name == 'timeline-mobile-study.css':
@@ -342,6 +343,13 @@ def reviewed_guided_reading_style(data):
     if hashlib.sha256(data).hexdigest() != GUIDED_READING_SHA256 or data.count(GUIDED_READING_APPENDIX) != 1: return False
     prior = data.replace(GUIDED_READING_APPENDIX, b'', 1)
     return hashlib.sha256(prior).hexdigest() == SCOPED_INTERFACE_STYLES['guided-studies.css'][0]
+
+TIMELINE_BOTTOM_NAV_APPENDIX = b'\n/* Phone readers can continue after the complete story and its picture. */\n.history-workspace .timeline-event-navigation-bottom-slot{display:none}\n@media(max-width:1099px){\n  .history-workspace .timeline-event-navigation-bottom-slot{display:block;margin-top:24px;padding-top:16px;border-top:1px solid #c8c0a8}\n  body.fc-timeline-experience .history-workspace .timeline-event-navigation-bottom-slot .timeline-event-navigation{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0}\n  .history-workspace .timeline-event-navigation-bottom-slot button{width:100%;min-width:0}\n}\n'
+TIMELINE_BOTTOM_NAV_SHA256 = '0bdb5fd44de731349ea4bc975ae97134eceef78662761d24390468d539b6a661'
+
+def reviewed_timeline_bottom_navigation(data):
+    if hashlib.sha256(data).hexdigest() != TIMELINE_BOTTOM_NAV_SHA256 or data.count(TIMELINE_BOTTOM_NAV_APPENDIX) != 1 or not data.endswith(TIMELINE_BOTTOM_NAV_APPENDIX): return False
+    return hashlib.sha256(data[:-len(TIMELINE_BOTTOM_NAV_APPENDIX)]).hexdigest() == OWNER_20260929_STYLES['timeline-history-workspace.css'][0]
 
 def reviewed_scoped_interface_style(name, data):
     if name == 'guided-studies.css': return reviewed_guided_reading_style(data)
@@ -433,6 +441,11 @@ def main():
     if args.self_test:
         guided = (ROOT/'guided-studies.css').read_bytes()
         assert reviewed_scoped_interface_style('guided-studies.css', guided)
+        timeline = (ROOT/'timeline-history-workspace.css').read_bytes()
+        assert reviewed_timeline_bottom_navigation(timeline)
+        assert hashlib.sha256(timeline[:-len(TIMELINE_BOTTOM_NAV_APPENDIX)]).hexdigest() == OWNER_20260929_STYLES['timeline-history-workspace.css'][0]
+        for mutation in (timeline + TIMELINE_BOTTOM_NAV_APPENDIX, timeline[:-len(TIMELINE_BOTTOM_NAV_APPENDIX)], timeline.replace(b'gap:12px', b'gap:13px'), timeline + b'.fc-visual-hero{height:1px}'):
+            assert mutation != timeline and not reviewed_timeline_bottom_navigation(mutation)
         assert not reviewed_scoped_interface_style('guided-studies.css', guided + b'body{height:1px}')
         assert not reviewed_scoped_interface_style('guided-studies.css', b'X' + guided[1:])
         assert not reviewed_scoped_interface_style('guided-studies.css', guided + GUIDED_READING_APPENDIX)

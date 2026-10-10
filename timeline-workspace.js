@@ -23,18 +23,27 @@
   var story=workspace.querySelector('[data-timeline-pane="detail"],[data-timeline-pane="timeline"]');
   var choicePanel=null,previousEventScroll=0,group=null,groupNav=null;
   function clearChoices(){if(!choicePanel)return;choicePanel.remove();choicePanel=null;events.classList.remove('timeline-choice-mode');events.scrollTop=previousEventScroll;}
-  var eventNav=null;
+  var eventNav=null,bottomEventNav=null;
   function adapter(){return window.TimelineNavigationAdapter;}
   function clearGroup(){clearChoices();group=null;if(groupNav)groupNav.remove();groupNav=null;workspace.classList.remove('timeline-group-active');renderEventNav();}
   function selectGroup(index,context){if(group!==context||!context.choices.some(function(c){return c.index===index;}))return;clearChoices();context.onSelect(index);}
   function stepEvent(direction){var api=adapter();if(!api)return false;var indices=api.visibleIndices(),at=indices.indexOf(api.current()),next=at+direction;if(at>=0&&next>=0&&next<indices.length)api.select(indices[next]);return true;}
   function navigationHost(){var current=adapter()&&adapter().current(),article=window.HistoryTimeline&&document.getElementById('history-event-'+current);return (article||story)&&((article||story).querySelector('.timeline-event-navigation-slot')||(article||story));}
   function renderEventNav(){
-    var action=eventNav&&eventNav.contains(document.activeElement)?document.activeElement.getAttribute('data-event-direction'):null;
-    if(eventNav)eventNav.remove();eventNav=null;var api=adapter(),host=navigationHost();if(!api||!host)return;
+    var activeNav=(eventNav&&eventNav.contains(document.activeElement))||(bottomEventNav&&bottomEventNav.contains(document.activeElement));
+    var action=activeNav?document.activeElement.getAttribute('data-event-direction'):null;
+    if(eventNav)eventNav.remove();if(bottomEventNav)bottomEventNav.remove();eventNav=null;bottomEventNav=null;var api=adapter(),host=navigationHost();if(!api||!host)return;
     var indices=api.visibleIndices(),at=indices.indexOf(api.current());if(at<0)return;
-    eventNav=document.createElement('nav');eventNav.className='timeline-event-navigation journey-nav';eventNav.setAttribute('aria-label','Timeline event navigation');
-    [-1,1].forEach(function(direction){var button=document.createElement('button');button.type='button';button.textContent=direction<0?'Previous':'Next';button.setAttribute('data-event-direction',String(direction));button.disabled=at+direction<0||at+direction>=indices.length;button.addEventListener('click',function(){stepEvent(direction);});eventNav.appendChild(button);});host.appendChild(eventNav);
+    function createNav(label){
+      var nav=document.createElement('nav');nav.className='timeline-event-navigation journey-nav';nav.setAttribute('aria-label',label);
+      [-1,1].forEach(function(direction){var button=document.createElement('button');button.type='button';button.textContent=direction<0?'Previous':'Next';button.setAttribute('data-event-direction',String(direction));button.disabled=at+direction<0||at+direction>=indices.length;button.addEventListener('click',function(){stepEvent(direction);});nav.appendChild(button);});
+      return nav;
+    }
+    eventNav=createNav('Timeline event navigation');host.appendChild(eventNav);
+    var article=host.closest('article'),bottomHost=article&&article.querySelector('.timeline-event-navigation-bottom-slot');
+    if(bottomHost){bottomEventNav=createNav('Continue through timeline events');bottomHost.appendChild(bottomEventNav);}
+    // Continue at the new story's top controls, without a second scroll jump.
+
     if(action){var button=eventNav.querySelector('[data-event-direction="'+action+'"]');var focusTarget=button&&!button.disabled?button:eventNav.querySelector('button:not(:disabled)');if(focusTarget)focusTarget.focus({preventScroll:true});}
   }
   function renderGroupNav(){

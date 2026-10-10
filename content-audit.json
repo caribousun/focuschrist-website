@@ -9649,7 +9649,7 @@
     },
     {
       "path": "timelines/latter-day-saint-church-history-timeline.html",
-      "reviewed_inline_script_sha256": "430ec86314ac9d9f821bff1fe061ae6d5c5fd56418743a152c5acb91599ca626",
+      "reviewed_inline_script_sha256": "7b3ee6b5f67b95b3eec064965ab0cbe19c5d90e109cb2ed3832b1356e208332c",
       "status": "verified",
       "published_text_sha256": "2f7db60321824c60f0e5cbb30f1417387cafd02387bb0e7bcc180b0f14f4d5fc",
       "reviewed_on": "2026-10-06",
@@ -9668,7 +9668,39 @@
         "https://newsroom.churchofjesuschrist.org/article/2025-statistical-report",
         "https://newsroom.churchofjesuschrist.org/article/president-nelson-and-the-house-of-the-lord",
         "https://www.churchofjesuschrist.org/learn/history/hcvc-2-2?lang=eng"
-      ]
+      ],
+      "prior_semantic_review_records": [
+        {
+          "path": "timelines/latter-day-saint-church-history-timeline.html",
+          "reviewed_inline_script_sha256": "430ec86314ac9d9f821bff1fe061ae6d5c5fd56418743a152c5acb91599ca626",
+          "status": "verified",
+          "published_text_sha256": "2f7db60321824c60f0e5cbb30f1417387cafd02387bb0e7bcc180b0f14f4d5fc",
+          "reviewed_on": "2026-10-06",
+          "review_standard": "Targeted source review of Merlin-delivered experience, not comprehensive verification of every statement: exact documented factual repairs verified against official Church sources; delivered source references and design retained. Static hash excludes script-embedded event/stop text. Factual review scope and exact before/after recorded in docs/reviews/timeline-source-review-20261002.json; runtime behavior and owner visual acceptance are separate. The verified status denotes this documented targeted review scope only. Follow-up navigation-only review: Search focusChrist accessible label and link added beside Return to Timeline, with shared search assets and wrapping navigation row; normalized line diff confirms all event/stop content unchanged. 2026-10-02 owner-authorized follow-up: standard navigation added to standalone experiences; third Life of Christ hub link added. Existing narrative content unchanged by header integration; marker selection repair changes interaction only. Owner-requested independent-pane correction: compact collapsible era controls, an event directory and Explore the timeline navigation. All ERAS, EVENTS, PROPHETS and ARTICLES data blocks are byte-equivalent after newline normalization; the gold rule starts below each era introduction. This follow-up changes navigation and layout only; prior targeted source-review limits remain. Owner-directed workspace navigation reviewed: Find an event label, collapsible era filter and Events directory, descriptive Explore the timeline anchor. Existing stories remain inline; directory labels derive from existing event records. New layout and scroll behavior require separate runtime evidence. Owner-authorized PR430 geographic-context follow-up reviewed by Newton and Fermi: new map accessible labels, matching-place control and explicit approximate-place/regional-context explanation; removed obsolete Events details label after mobile tabs replaced it. Circles count matching events and no invented route joins separate Church history events. Geography source associations are recorded in docs/reviews/timeline-history-location-sources-20261002.json. This is a targeted UI/map-explanation review, not renewed comprehensive verification of historical narratives. Static hash excludes script-embedded wording; map/controller units and rendered evidence remain separate. PR433 owner-directed layout/navigation review by Newton: shared image-first opening and concise introduction added; original full introduction preserved below Continue. Existing approved Life and Pioneer artwork links to its owning study, while the original timeline grove links to the related First Vision study. Visible navigation now explains chronological Previous/Next within current filters and separate Back to the selected pin. History uses one complete selected story instead of an accordion. Published-text comparison against PR432 confirms changed text is opening, artwork alternative/accessibility description, and procedural navigation wording; no historical narrative re-verification is claimed. Existing source-review limits remain, and final rendered controls review is separate. Follow-up footer correction reviewed by Newton: replaced stale assertion that 2024 was the most complete year with the precise statement that temple and membership figures are dated to the Church reports cited in the timeline. No counts or source associations changed. PR453 Life19, History21 and Handcart39 narrative/source corrections independently reviewed; inline script bytes bound separately to prevent silent narrative drift. PR460 scoped introduction review: Fermi and Newton independently read the exact 24 authored openings in docs/hero-introductions-review.json, preserving established source claims and warm explanatory voice. Only the enumerated introductory paragraphs changed; prior substantive source review remains in force. Rendered and release acceptance are separate. PR463 scoped final semantic review: Albert, Fermi and Newton independently reviewed six new scripture/history/application artwork captions and alt text, three concise reflection/source-study passages, and three timeline navigation/artwork accessible labels. Existing source distinctions, quotations, historical chronology and all prior substantive reviews retained. See docs/reviews/visual-rhythm-final-context/{fermi-prose-review,newton-source-prose-review,albert-context-review}.json. Publication and owner aesthetic acceptance remain separate.",
+          "review_scope": "targeted-source-corrections-not-comprehensive",
+          "authoritative_sources": [
+            "https://www.churchofjesuschrist.org/study/manual/teachings-of-presidents-of-the-church-lorenzo-snow/chapter-12-tithing-a-law-for-our-protection-and-advancement?lang=eng",
+            "https://www.churchofjesuschrist.org/study/manual/the-pearl-of-great-price-student-manual-2018/the-pearl-of-great-price?lang=eng",
+            "https://www.churchofjesuschrist.org/bc/content/shared/content/english/pdf/doctrine-and-covenants-teacher-manual-2017_2.2.18.pdf",
+            "https://www.churchofjesuschrist.org/study/ensign/2007/06/news-of-the-church/membership-retention-on-the-rise?lang=eng",
+            "https://www.churchofjesuschrist.org/life/education/perpetual-education-fund?lang=eng",
+            "https://newsroom.churchofjesuschrist.org/article/sacred-sites-and-historic-documents-transfer-to-church-of-jesus-christ",
+            "https://history.churchofjesuschrist.org/timeline/historic-sites/wyoming/sixth-crossing?lang=eng",
+            "https://www.churchofjesuschrist.org/learn/history/sites/wyoming/discover/fort-seminoe?lang=eng",
+            "https://newsroom.churchofjesuschrist.org/article/president-oaks-new-first-presidency",
+            "https://newsroom.churchofjesuschrist.org/article/2025-statistical-report",
+            "https://newsroom.churchofjesuschrist.org/article/president-nelson-and-the-house-of-the-lord",
+            "https://www.churchofjesuschrist.org/learn/history/hcvc-2-2?lang=eng"
+          ]
+        }
+      ],
+      "current_inline_navigation_review": {
+        "scope": "Only add the empty mobile bottom-navigation slot and reveal the selected desktop directory row; two external cache tokens updated. Exact whole-page inverse reconstructs prior bytes. All event narratives, sources, artwork and published text unchanged.",
+        "reviewer": "Fermi /root/fermi_current",
+        "review_class": "Current navigation source review; not new historical-source verification, owner appearance acceptance or publication.",
+        "prior_inline_sha256": "430ec86314ac9d9f821bff1fe061ae6d5c5fd56418743a152c5acb91599ca626",
+        "current_inline_sha256": "7b3ee6b5f67b95b3eec064965ab0cbe19c5d90e109cb2ed3832b1356e208332c"
+      }
     },
     {
       "path": "timelines/willie-and-martin-handcart-map.html",
