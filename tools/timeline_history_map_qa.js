@@ -27,11 +27,11 @@ for(const provider of [true,false]) for(const reduced of [true,false]){
   const multi=data.events.find(e=>e.places.length>1&&e.kind!=='region');camera.length=0;api.select(multi.index);assert.equal(camera.at(-1).method,reduced?'fitBounds':'flyToBounds');assert.equal(camera.at(-1).b.length,multi.places.length,'All multi-place extents retained');
   camera.length=0;w.HistoryTimelineMap.showMatching();assert.equal(camera[0].method,'stop','Reset cancels pending camera');assert.equal(camera.at(-1).method,'fitBounds');
   for(let n=0;n<3;n++)tile.tileerror();assert.match(d.getElementById('historyMapStatus').textContent,/imagery is unavailable/);tile.tileload();assert.doesNotMatch(d.getElementById('historyMapStatus').textContent,/imagery is unavailable/);
-  let choices=null;w.TimelineWorkspace={showChoices(title,items,onSelect){choices={title,items,onSelect};return true;}};
+  let choices=null;const revealed=[];w.TimelineWorkspace={scrollRow(row){assert.equal(row.dataset.event,'history-event-'+api.selectedIndex,'Workspace reveals the selected directory row');revealed.push(api.selectedIndex);},showChoices(title,items,onSelect){choices={title,items,onSelect};return true;}};
   for(const width of [390,1366]){
    w.innerWidth=width;handlers.zoomend();let exercised=0;
    for(const l of [...layers]){choices=null;l.handlers.click({latlng:[40,-90]});assert.equal(popupOpens,0,'No map popups at any width');if(!choices)continue;exercised++;const active=choices;assert(active.items.length>1);assert(active.items.every(c=>c.label===api.events[c.index].date+' \u2014 '+api.events[c.index].title),'Exact index/title/encoded labels');
-    handlers.zoomend();const target=active.items.at(-1).index;active.onSelect(target);assert.equal(api.selectedIndex,target,'Visible choices remain usable after benign map redraw');staleChoice=active;break;
+    handlers.zoomend();const target=active.items.at(-1).index;active.onSelect(target);assert.equal(api.selectedIndex,target,'Visible choices remain usable after benign map redraw');assert.equal(revealed.at(-1),target,'Chooser selection requests directory row reveal');staleChoice=active;break;
    }
    assert(exercised>0,'Multi-event chooser exercised at '+width);
   }
