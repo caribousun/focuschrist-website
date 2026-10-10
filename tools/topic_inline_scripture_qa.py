@@ -26,8 +26,9 @@ featured=sorted({n.attrs['href'] for n in nodes(ROOT/'art.html') if n.tag=='a' a
 assert len(featured)==4, 'Check every Featured Art study destination'
 paths+=featured
 history_stories = ['history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html']
-assert {p.relative_to(ROOT).as_posix() for p in (ROOT/'history').glob('*.html')} == set(history_stories)
-paths += history_stories
+emma_story = 'history/emma-hale-smith.html'
+assert {p.relative_to(ROOT).as_posix() for p in (ROOT/'history').glob('*.html')} == set(history_stories) | {emma_story}
+paths += history_stories + [emma_story]
 count=0
 for path in paths:
  ns=nodes(ROOT/path);main=next(n for n in ns if n.tag=='main')
