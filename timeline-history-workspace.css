@@ -41,3 +41,11 @@
   #eventDirectory{max-height:45dvh;overflow-y:auto;overscroll-behavior:contain;margin-bottom:12px}
   .history-reading .timeline{margin-top:24px}
 }
+
+/* Phone readers can continue after the complete story and its picture. */
+.history-workspace .timeline-event-navigation-bottom-slot{display:none}
+@media(max-width:1099px){
+  .history-workspace .timeline-event-navigation-bottom-slot{display:block;margin-top:24px;padding-top:16px;border-top:1px solid #c8c0a8}
+  body.fc-timeline-experience .history-workspace .timeline-event-navigation-bottom-slot .timeline-event-navigation{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0}
+  .history-workspace .timeline-event-navigation-bottom-slot button{width:100%;min-width:0}
+}

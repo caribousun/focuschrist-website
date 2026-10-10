@@ -38,3 +38,28 @@ for(const [route,workspaceClass] of [['history','history-workspace'],['handcart'
  const dom=new JSDOM('<section data-timeline-workspace><nav data-timeline-pane="events"><button>Full events</button></nav><div data-timeline-pane="map"><div id="map"></div></div><main data-timeline-pane="timeline"><article id="history-event-3"><div class="timeline-event-navigation-slot"></div></article><article id="history-event-4"><div class="timeline-event-navigation-slot"></div></article></main></section>',{runScripts:'outside-only'}),w=dom.window,d=w.document;w.matchMedia=()=>({matches:false,addEventListener(){}});w.requestAnimationFrame=()=>1;w.HistoryTimeline={selectedIndex:null};w.TimelineNavigationAdapter={current:()=>w.HistoryTimeline.selectedIndex,visibleIndices:()=>[3,4],select:index=>{w.HistoryTimeline.selectedIndex=index;w.dispatchEvent(new w.CustomEvent('timeline:select',{detail:{index}}));}};w.eval(source);w.TimelineWorkspace.showChoices('England',[{index:3,label:'Fourth event'},{index:19,label:'Twentieth event'}],w.TimelineNavigationAdapter.select);d.querySelectorAll('.timeline-place-choices button')[1].click();assert.equal(d.querySelector('.timeline-event-navigation').closest('article').id,'history-event-3');d.querySelector('[data-event-direction="1"]').click();assert.equal(d.querySelector('.timeline-event-navigation').closest('article').id,'history-event-4','History Next follows chronological list');assert.equal(d.querySelectorAll('.timeline-event-navigation').length,1);d.querySelector('.timeline-group-nav button').click();assert.equal(d.querySelectorAll('.timeline-place-choices button').length,3,'Original nonadjacent pin retained');dom.window.close();
 }
 console.log('PASS: choices at every width occupy the real Events pane, preserve full list and scroll position, select exact story, cancel/filter/view/desktop transitions clear choices; map interaction is explicit on phones.');
+
+// Bottom controls share filtered order and return keyboard focus to the new story.
+{
+ const dom=new JSDOM('<section class="history-workspace" data-timeline-workspace data-mobile-breakpoint="1099"><nav data-timeline-pane="events"><button id="row">Event</button></nav><div data-timeline-pane="map"><div id="map"></div></div><main data-timeline-pane="timeline">'+[3,8].map(i=>'<article id="history-event-'+i+'"><div class="timeline-event-navigation-slot"></div><div class="detail"><figure>Picture and caption</figure></div><div class="timeline-event-navigation-bottom-slot"></div></article>').join('')+'</main></section>',{runScripts:'outside-only'}),w=dom.window,d=w.document;
+ const media={matches:false,addEventListener(){}};w.matchMedia=()=>media;w.requestAnimationFrame=()=>1;
+ let selected=3,visible=[3,8];w.HistoryTimeline={get selectedIndex(){return selected;}};
+ w.TimelineNavigationAdapter={current:()=>selected,visibleIndices:()=>visible,select:index=>{selected=index;w.dispatchEvent(new w.CustomEvent('timeline:select',{detail:{index}}));}};
+ w.eval(source);
+ const top=()=>d.querySelector('#history-event-'+selected+' .timeline-event-navigation-slot');
+ const bottom=()=>d.querySelector('#history-event-'+selected+' .timeline-event-navigation-bottom-slot');
+ assert.equal(d.querySelectorAll('.timeline-event-navigation').length,2,'Only the selected story has top and bottom navigation');
+ assert(bottom().previousElementSibling.classList.contains('detail'),'Bottom navigation follows the whole reading and figure container');
+ assert(bottom().querySelector('[data-event-direction="-1"]').disabled,'First filtered event has disabled Previous');
+ let next=bottom().querySelector('[data-event-direction="1"]');next.focus();next.click();
+ assert.equal(selected,8,'Bottom Next follows filtered indices rather than index+1');
+ assert(bottom().querySelector('[data-event-direction="1"]').disabled,'Last filtered event has disabled Next');
+ assert.equal(d.activeElement,top().querySelector('[data-event-direction="-1"]'),'At last event focus returns to enabled top Previous');
+ assert.equal(d.querySelectorAll('.timeline-event-navigation').length,2,'Old story navigation is removed');
+ let previous=bottom().querySelector('[data-event-direction="-1"]');previous.focus();previous.click();
+ assert.equal(selected,3);assert.equal(d.activeElement,top().querySelector('[data-event-direction="1"]'),'At first event focus returns to enabled top Next');
+ visible=[3];w.dispatchEvent(new w.CustomEvent('timeline:filter'));assert([...d.querySelectorAll('.timeline-event-navigation button')].every(b=>b.disabled),'Single matching event disables both controls in both locations');
+ visible=[];w.dispatchEvent(new w.CustomEvent('timeline:filter'));assert.equal(d.querySelectorAll('.timeline-event-navigation').length,0,'Empty filter removes all navigation');
+ media.matches=true;const pane=d.querySelector('[data-timeline-pane="events"]'),row=d.getElementById('row');pane.getBoundingClientRect=()=>({top:100,bottom:300});row.getBoundingClientRect=()=>({top:310,bottom:360});pane.scrollTop=0;w.TimelineWorkspace.scrollRow(row);assert.equal(pane.scrollTop,63,'Reveal lower row within its event pane');row.getBoundingClientRect=()=>({top:70,bottom:120});w.TimelineWorkspace.scrollRow(row);assert.equal(pane.scrollTop,30,'Reveal upper row within its event pane');
+ dom.window.close();
+}

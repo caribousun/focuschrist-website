@@ -138,7 +138,7 @@ footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--hairline);col
 <link rel="stylesheet" href="../site-search.css?v=20260929-result-hitbox-1"><script src="../site-search.js?v=20260919-focused-answers-1" defer></script>
 <link rel="stylesheet" href="../site-header.css?v=20260926-toolbar-readability-1">
 <link rel="stylesheet" href="../timeline-experiences.css?v=20261007-timeline-panels-1">
-<link rel="stylesheet" href="../timeline-history-workspace.css?v=20261002-map-2">
+<link rel="stylesheet" href="../timeline-history-workspace.css?v=20261010-story-navigation-1">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.6.0/dist/maplibre-gl.css">
@@ -147,7 +147,7 @@ footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--hairline);col
 <script src="../timeline-terrain.js?v=20261004-english-terrain-1" defer></script>
 <script src="../timeline-history-locations.js?v=20261004-narrative-1" defer></script>
 <script src="../timeline-history-map.js?v=20261004-reduced-center-1" defer></script>
-<script src="../timeline-workspace.js?v=20261003-uniform-1" defer></script>
+<script src="../timeline-workspace.js?v=20261010-story-navigation-1" defer></script>
 <link rel="stylesheet" href="../timeline-mobile-study.css?v=20261004-terrain-recovery-1">
 <link rel="stylesheet" href="../timeline-reader.css?v=20261003-uniform-1">
 <link rel="stylesheet" href="../timeline-images.css?v=20261002-correction-1">
@@ -404,7 +404,7 @@ function render(){
       html += '<h3>'+ev.title+'</h3>';
       html += '</div><div class="timeline-event-navigation-slot"></div>';
       html += '<div class="detail"><p class="summary">'+ev.summary+'</p><p>'+ev.detail+'</p><p class="ref"><b>Record:</b> '+ev.ref+'</p></div>';
-      html += '</div></article>';
+      html += '<div class="timeline-event-navigation-bottom-slot"></div></div></article>';
     });
     html += '</div><details class="era-context"><summary>About this era</summary><div class="era-head"><div class="era-years">'+era.years+'</div><h2>'+era.name+'</h2><p>'+ARTICLES[era.id]+'</p></div></details></section>';
   });
@@ -449,6 +449,8 @@ function selectHistoryEvent(index,options){
   document.querySelectorAll('#timeline .event').forEach(function(article){var selected=article===target;article.hidden=!selected;article.classList.toggle('is-current-story',selected);article.querySelector('.card').classList.toggle('open',selected);});
   document.querySelectorAll('#timeline .era-block').forEach(function(era){era.hidden=!era.contains(target);});
   document.querySelectorAll('#eventDirectory button').forEach(function(item){item.toggleAttribute('aria-current',Number(item.dataset.event.replace('history-event-',''))===index);if(item.hasAttribute('aria-current'))item.setAttribute('aria-current','true');});
+  var selectedRow=document.querySelector('#eventDirectory button[aria-current="true"]');
+  if(historyDesktop.matches&&selectedRow&&window.TimelineWorkspace)window.TimelineWorkspace.scrollRow(selectedRow);
   var reader=document.querySelector('.history-reading');reader.scrollTop=0;
   window.dispatchEvent(new CustomEvent('timeline:select',{detail:{index:index,showStory:!options||options.showStory!==false}}));
   return true;
