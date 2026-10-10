@@ -224,6 +224,34 @@ class EvidenceTests(unittest.TestCase):
         docs = self.root / 'docs'; docs.mkdir(exist_ok=True)
         (docs / 'artwork-creation-baseline.json').write_text(json.dumps({'schema': 1, 'commit': gate.BASELINE, 'rejected_sha256': list(gate.REJECTED)}))
         (docs / 'artwork-creation-reviews.json').write_text(json.dumps({'schema': 1, 'preflights': [self.preflight] if creations else [], 'creations': creations or []}))
+        # These fixtures exercise core creation/coverage orchestration. The two
+        # separately validated adapters contribute no assets to this synthetic set.
+        self.adapter_mocks = {}
+        for module, filename in [
+            ('artwork_historical_delivery', 'artwork-historical-delivery-reviews.json'),
+            ('artwork_reviewed_corrections', 'artwork-correction-reviews.json'),
+        ]:
+            (docs / filename).write_text(json.dumps({'fixture': 'empty adapter coverage'}))
+            adapter = patch(module + '.validate', return_value=(set(), set(), set()))
+            self.adapter_mocks[module] = adapter.start()
+            self.addCleanup(adapter.stop)
+
+    def test_required_adapter_ledgers_cannot_be_missing(self):
+        for filename in ['artwork-historical-delivery-reviews.json', 'artwork-correction-reviews.json']:
+            with self.subTest(filename=filename):
+                self.registry()
+                (self.root / 'docs' / filename).unlink()
+                with patch.object(gate, 'baseline_check', return_value={}), patch.object(gate.subprocess, 'check_output', return_value=b''):
+                    with self.assertRaises(FileNotFoundError): gate.run(self.root)
+
+    def test_adapter_rejections_propagate(self):
+        for module in ['artwork_historical_delivery', 'artwork_reviewed_corrections']:
+            with self.subTest(module=module):
+                self.registry()
+                self.adapter_mocks[module].side_effect = ValueError('adapter rejects exact evidence')
+                with patch.object(gate, 'baseline_check', return_value={}), patch.object(gate.subprocess, 'check_output', return_value=b''):
+                    with self.assertRaisesRegex(ValueError, 'adapter rejects exact evidence'): gate.run(self.root)
+
 
     def test_empty_registry_only_unchanged_baseline(self):
         self.registry()

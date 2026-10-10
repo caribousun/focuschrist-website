@@ -14,6 +14,12 @@ INVENTORY = '1e2a014c1a3b7fb3995855abaa4587441c95efdef640801d7bf49ee3d3239b78'
 NEW = '20261006-balanced-opening-1'
 OLD = '20261002-timeline-1'
 COMMON_VERSION = '20261008-section-top-2'
+ROUTE_COMMON_VERSIONS = {
+    'church-history.html': '20261008-section-top-2-gallery-links-2',
+    'answers/who-was-joseph-smith.html': '20261010-final-art-links-1',
+    'art-gallery.html': '20261010-final-art-links-1',
+    'book-of-mormon-evidences.html': '20261010-final-art-links-1',
+}
 DELTA = '''
 /* Balance the introduction within the fixed hero-to-Continue interval. */
 @media (min-width: 701px) {
@@ -45,6 +51,8 @@ def assert_loader(common):
     inverse = common.replace('unified-opening.css?v=' + NEW, 'unified-opening.css?v=20260930-alignment-2')
     assert inverse.count('header-scroll.js?v=20261008-section-top-2') == 1, 'Exact navigation loader required'
     inverse = inverse.replace('header-scroll.js?v=20261008-section-top-2', 'header-scroll.js?v=20260927-anchor-fade-1', 1)
+    assert inverse.count('art-gallery-bridge.js?v=20261010-final-art-links-1') == 1, 'Exact reviewed gallery bridge loader required'
+    inverse = inverse.replace('art-gallery-bridge.js?v=20261010-final-art-links-1', 'art-gallery-bridge.js?v=20260915-sensitive-1', 1)
     assert digest(inverse) == BASE_COMMON, 'Unrelated shared loader change'
 
 
@@ -63,7 +71,7 @@ def assert_route(route, html, hero):
     doc = BeautifulSoup(html, 'html.parser')
     scripts = [s['src'] for s in doc.select('script[src]') if 'site-common.js' in s['src']]
     prefix = '/' if route.startswith('jesus-christ/') else '../' * route.count('/')
-    expected = prefix + 'site-common.js?v=' + COMMON_VERSION
+    expected = prefix + 'site-common.js?v=' + ROUTE_COMMON_VERSIONS.get(route, COMMON_VERSION)
     assert scripts == [expected], route + ': stale/mixed/duplicate/unknown/out-of-scope shared script'
     if route in TIMELINES:
         assert len(doc.select('.timeline-opening-continue')) == 1, route + ': authored timeline cue missing'
@@ -119,7 +127,7 @@ class CompositionBindingTests(unittest.TestCase):
         for route, html in self.documents.items():
             doc = BeautifulSoup(html, 'html.parser')
             src = next(s['src'] for s in doc.select('script[src]') if 'site-common.js' in s['src'])
-            expected = COMMON_VERSION
+            expected = ROUTE_COMMON_VERSIONS.get(route, COMMON_VERSION)
             for invalid in [OLD, NEW, 'unknown', expected + '&extra=1']:
                 candidate = dict(self.documents)
                 candidate[route] = html.replace(src, src.replace(expected, invalid))
