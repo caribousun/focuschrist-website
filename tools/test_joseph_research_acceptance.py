@@ -6,6 +6,28 @@ from joseph_research_acceptance import ROUTE, check_entry_and_brevity, check_rea
 def soup(markup): return BeautifulSoup(markup,'html.parser')
 
 class AcceptanceTests(unittest.TestCase):
+    def test_current_browser_dependencies_preserve_frozen_pdf_source(self):
+        from pathlib import Path
+        import json
+        from joseph_research_acceptance import check_pdf_source_binding, PDF_CURRENT_BROWSER_TOKEN_INVERSES
+        site = Path(__file__).resolve().parents[1]
+        source = (site/ROUTE).read_bytes()
+        reviewed_hash = json.loads((site/'docs/joseph-research-pdf-review.json').read_text())['source_html_sha256']
+        check_pdf_source_binding(source, reviewed_hash)
+        prior = source
+        for current, previous in PDF_CURRENT_BROWSER_TOKEN_INVERSES:
+            self.assertEqual(source.count(current), 1)
+            prior = prior.replace(current, previous, 1)
+            for mutation in (source + current, source + previous, source.replace(current, previous),
+                             source.replace(current, b''), source.replace(current, current.replace(b'?v=', b'?v=unknown-'))):
+                with self.assertRaises(AssertionError):
+                    check_pdf_source_binding(mutation, reviewed_hash)
+        # The previously supported source path remains valid, not just the new snapshot.
+        check_pdf_source_binding(prior, reviewed_hash)
+        for mutation in (source + b' ', source.replace(b'</body>', b'<p>Unreviewed claim.</p></body>')):
+            with self.assertRaises(AssertionError):
+                check_pdf_source_binding(mutation, reviewed_hash)
+
     def test_section_navigation_cache_cannot_relax_frozen_pdf_content(self):
         from pathlib import Path
         import json
