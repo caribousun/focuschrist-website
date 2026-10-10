@@ -41,6 +41,7 @@
     "come-follow-me.html",
     "general-conference.html",
     "history/eleazer-miller.html",
+    "history/emma-hale-smith.html",
     "history/john-rowe-moyle.html",
     "history/john-tanner.html",
     "index.html",
@@ -372,6 +373,18 @@
       "disposition": "excluded_with_reason",
       "reason": "Heading, not a panel."
     },
+    "fc-companion-notes": {
+      "count": 4,
+      "pages": [
+        "answers.html",
+        "history/emma-hale-smith.html"
+      ],
+      "tags": [
+        "div"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Blank handwritten-note area inside four printable companions, owned by guided-studies.css; border-block and writing height are print affordances, not a filled section panel."
+    },
     "fc-conference-note": {
       "count": 1,
       "pages": [
@@ -472,12 +485,11 @@
       "reason": "Artwork modifier."
     },
     "fc-history-life-card": {
-      "count": 4,
+      "count": 3,
       "pages": [
         "church-history.html"
       ],
       "tags": [
-        "figure",
         "section"
       ],
       "disposition": "coordinated_stylesheet_owner",
@@ -517,9 +529,10 @@
       "reason": "Approved Home image card; preserve pixels and image treatment."
     },
     "fc-life-reflection": {
-      "count": 9,
+      "count": 12,
       "pages": [
         "history/eleazer-miller.html",
+        "history/emma-hale-smith.html",
         "history/john-rowe-moyle.html",
         "history/john-tanner.html"
       ],
@@ -527,12 +540,13 @@
         "div"
       ],
       "disposition": "coordinated_stylesheet_owner",
-      "reason": "Dedicated History story reflection panels use the shared Home panel tokens in exact reviewed history-stories.css; three owning story pages only."
+      "reason": "Dedicated History story reflection panels use the shared Home panel tokens in exact reviewed history-stories.css; four owning story pages including Emma."
     },
     "fc-life-reflections": {
-      "count": 3,
+      "count": 4,
       "pages": [
         "history/eleazer-miller.html",
+        "history/emma-hale-smith.html",
         "history/john-rowe-moyle.html",
         "history/john-tanner.html"
       ],
@@ -1857,6 +1871,7 @@
         "come-follow-me.html",
         "general-conference.html",
         "history/eleazer-miller.html",
+        "history/emma-hale-smith.html",
         "history/john-rowe-moyle.html",
         "history/john-tanner.html",
         "index.html",
@@ -1963,6 +1978,16 @@
       ],
       "disposition": "approved_reference_unchanged"
     },
+    "fc-companion": {
+      "stylesheets": [
+        "guided-studies.css"
+      ],
+      "pages": [
+        "answers.html",
+        "history/emma-hale-smith.html"
+      ],
+      "disposition": "coordinated_stylesheet_owner"
+    },
     "fc-foundation-connections": {
       "stylesheets": [
         "foundation-study.css"
@@ -1982,6 +2007,15 @@
         "answers/who-was-joseph-smith.html"
       ],
       "disposition": "shared_surface"
+    },
+    "fc-guided-path": {
+      "stylesheets": [
+        "guided-studies.css"
+      ],
+      "pages": [
+        "answers.html"
+      ],
+      "disposition": "coordinated_stylesheet_owner"
     },
     "fc-history-chat-shell": {
       "stylesheets": [
@@ -2045,6 +2079,7 @@
       ],
       "pages": [
         "history/eleazer-miller.html",
+        "history/emma-hale-smith.html",
         "history/john-rowe-moyle.html",
         "history/john-tanner.html"
       ],
@@ -2154,6 +2189,7 @@
         "come-follow-me.html",
         "general-conference.html",
         "history/eleazer-miller.html",
+        "history/emma-hale-smith.html",
         "history/john-rowe-moyle.html",
         "history/john-tanner.html",
         "index.html",
@@ -2478,6 +2514,7 @@
         "ask.html",
         "book-of-mormon-evidences.html",
         "church-history.html",
+        "history/emma-hale-smith.html",
         "index.html",
         "missionary.html",
         "pioneers.html",
@@ -2598,6 +2635,7 @@
         "come-follow-me.html",
         "general-conference.html",
         "history/eleazer-miller.html",
+        "history/emma-hale-smith.html",
         "history/john-rowe-moyle.html",
         "history/john-tanner.html",
         "index.html",
@@ -3159,7 +3197,7 @@
       ]
     },
     ".fc-deep-study details": {
-      "count": 155,
+      "count": 156,
       "pages": [
         "answers/aaronic-priesthood-restoration.html",
         "answers/are-latter-day-saints-christian.html",
@@ -3186,7 +3224,8 @@
         "art-study/suffer-the-little-children.html",
         "art-study/the-good-shepherd.html",
         "art-study/the-living-christ.html",
-        "birth-of-christ.html"
+        "birth-of-christ.html",
+        "history/emma-hale-smith.html"
       ],
       "tags": [
         "details"
@@ -3462,7 +3501,7 @@
       ]
     },
     ".fc-study-hub": {
-      "count": 22,
+      "count": 23,
       "pages": [
         "about.html",
         "answers.html",
@@ -3470,6 +3509,7 @@
         "ask.html",
         "book-of-mormon-evidences.html",
         "church-history.html",
+        "history/emma-hale-smith.html",
         "index.html",
         "missionary.html",
         "pioneers.html",

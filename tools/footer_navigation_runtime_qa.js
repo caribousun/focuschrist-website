@@ -7,7 +7,10 @@ const root = path.resolve(__dirname, '..');
 const read = name => fs.readFileSync(path.join(root,name),'utf8');
 const artworkDisclosure = 'Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.';
 const pages = [...read('sitemap.xml').matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>new URL(m[1]).pathname);
-assert.equal(pages.length,130);
+assert.equal(pages.length,131);
+const historicalRoutes=JSON.parse(fs.readFileSync(path.join(root,'docs/unified-opening-inventory.json'),'utf8')).pages.map(p=>p.path);
+assert.equal(historicalRoutes.length,130);assert.equal(new Set(historicalRoutes).size,130);
+assert.deepEqual(pages.map(p=>p==='/'?'index.html':p.replace(/^\//,'')).sort(),[...historicalRoutes,'history/emma-hale-smith.html'].sort(),'Exact historical routes plus reviewed Emma addition');
 assert.ok(pages.includes('/joseph-smith-portrait-research.html'),'Joseph research study receives the shared footer test');
 assert.ok(pages.includes('/answers/race-priesthood-and-temple-blessings.html'),'new dependent study must receive the shared footer test');
 let bareGalleryEntries=0;
@@ -29,8 +32,9 @@ for(const route of [...pages, '/404.html']){
  const w=dom.window,d=w.document;let scroll;
  const savedArt=d.querySelectorAll('footer [data-focuschrist-art-gallery]');
  for(const a of savedArt)assert.equal(new URL(a.href).pathname,'/art.html',file+' any saved Art entry must use approved page');
+ const companionFooters=[...d.querySelectorAll('footer')].filter(f=>!f.matches('.fc-footer[data-focuschrist-footer="standard"]')).map(f=>[f,f.outerHTML]);
  const artCase=([...pages,'/404.html'].indexOf(route))%3;
- if(artCase!==0){const p=d.createElement('p'),a=d.createElement('a');a.setAttribute('data-focuschrist-art-gallery','');a.href=artCase===1?'/art-gallery.html':'/art.html';a.textContent='Art Gallery';p.append(a);d.querySelector('footer').append(p);}
+ if(artCase!==0){const p=d.createElement('p'),a=d.createElement('a');a.setAttribute('data-focuschrist-art-gallery','');a.href=artCase===1?'/art-gallery.html':'/art.html';a.textContent='Art Gallery';p.append(a);d.querySelector('.fc-footer[data-focuschrist-footer="standard"]').append(p);}
  const savedDisclosure=d.querySelectorAll('footer [data-focuschrist-artwork-disclosure="footer"]');
  assert.equal(savedDisclosure.length,1,file+' saved footer disclosure must work without scripts');
  assert.equal(savedDisclosure[0].textContent,artworkDisclosure,file+' exact artwork disclosure');
@@ -69,6 +73,7 @@ for(const route of [...pages, '/404.html']){
  d.dispatchEvent(new w.Event('DOMContentLoaded'));
  assert.equal(d.querySelectorAll('[data-focuschrist-back-to-top]').length,1,'No duplicate action after reinitialization');
  assert.equal(d.querySelectorAll('[data-focuschrist-artwork-disclosure]').length,1,file+' disclosure must be idempotent');
+ for(const [footer,html] of companionFooters)assert.equal(footer.outerHTML,html,file+' companion footer must remain unchanged');
  const art=d.querySelectorAll('footer [data-focuschrist-art-gallery]');
  assert.equal(art.length,1,file+' Art footer entry must remain unique');
  assert.equal(new URL(art[0].href).pathname,'/art.html',file+' Art footer and menu share destination');
