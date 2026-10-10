@@ -46,7 +46,7 @@ def references(root, scope, asset_paths, site_origin):
     asset_names = {Path(p).name for p in asset_paths}
     for item in scope:
         text = bound(root, item).read_text(encoding='utf-8').replace('\\/', '/')
-        for token in re.findall(r'''[^\s\"'<>(),;{}\[\]=]+''', text):
+        for token in re.findall(r'''[^\\\s\"'<>(),;{}\[\]=]+''', text):
             url = urlsplit(token)
             if url.scheme or url.netloc:
                 origin = urlsplit(site_origin)

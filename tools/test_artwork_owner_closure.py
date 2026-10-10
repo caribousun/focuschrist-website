@@ -117,5 +117,42 @@ class ClosureTests(unittest.TestCase):
         self.data['families'][0]['body']['findings']='Different actual reviewed body';self.reviews();self.rejects('Owner acceptance bound to different')
 
 
+class PortableReferenceTests(unittest.TestCase):
+    def census(self, text):
+        import json
+        import posixpath
+        from pathlib import PurePosixPath
+        from unittest.mock import patch
+        import artwork_owner_closure as module
+        class PosixModel(PurePosixPath):
+            def resolve(self):
+                return PosixModel(posixpath.normpath(str(self)))
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            source = root / 'page.json'
+            source.write_text(text, encoding='utf-8')
+            item = {'path':'page.json', 'sha256':hashlib.sha256(source.read_bytes()).hexdigest()}
+            native = module.references(root, [item], {'assets/a.webp'}, 'https://focuschrist.com')
+            # Execute the same scanner with POSIX path semantics; only the
+            # hash-bound input read is supplied by this private fixture.
+            with patch.object(module, 'Path', PosixModel), patch.object(module, 'bound', return_value=source):
+                posix = module.references(PosixModel('/site'), [item], {'assets/a.webp'}, 'https://focuschrist.com')
+            self.assertEqual(native, posix)
+            return sum(native.values())
+
+    def test_json_escaped_quote_selector(self):
+        import json
+        self.assertEqual(self.census(json.dumps({'selector':'<img src="assets/a.webp">'})), 1)
+
+    def test_json_escaped_slash(self):
+        self.assertEqual(self.census('{"src":"assets\\/a.webp"}'.replace('\\\\/', '\\/')), 1)
+
+    def test_external_origin_does_not_count(self):
+        self.assertEqual(self.census('<img src="https://other.example/assets/a.webp">'), 0)
+
+    def test_parent_escape_does_not_count(self):
+        self.assertEqual(self.census('<img src="../assets/a.webp">'), 0)
+
+
 if __name__ == '__main__':
     unittest.main()
