@@ -316,7 +316,7 @@ def validate_native_conference(root, rejected):
         with Image.open(asset) as image:
             require(image.format == 'JPEG' and image.size == (item['width'], item['height']), 'Native thumbnail format or dimensions changed')
         paths.add(name)
-    require(files(root, spec['page_context'], rejected) == {'general-conference.html', 'general-conference-section.css'}, 'Native source review requires exact page and stylesheet context')
+    require(files(root, spec['page_context'], rejected) == {'general-conference.html', 'general-conference-section.css', 'targeted-six.css'}, 'Native source review requires exact page and two stylesheet contexts')
     binding = canonical(spec)
     reviews(record['reviews'], binding, 'official-source', rejected, root)
     for review in record['reviews']:
@@ -391,7 +391,7 @@ def run(root, mode='release', scene=None, page_overrides=None):
     correction_record = json.loads((root / 'docs/artwork-correction-reviews.json').read_text(encoding='utf-8'))
     from artwork_owner_closure import validate as validate_owner_closure
     validate_owner_closure(root, correction_record['owner_requirement_closure'],
-        '368c141cc8bb4d79250a42f077cedd5ec158eb9359467840d096b95c90be68e2', pixel_hash)
+        'a561f6d60a7745bbce23f12e850e0e8a822caebf4789fd2e99b3357bc55bbd5b', pixel_hash)
     corrections, correction_hashes, correction_pixels = validate_reviewed_corrections(
         root, correction_record, approved_corrections_binding, added, covered, rejected, pixel_hash, inventory)
     require(not (correction_hashes & originals) and not (correction_pixels & original_pixels), 'Correction family duplicates another creation')
