@@ -1,0 +1,177 @@
+{
+  "decision": "CONCUR",
+  "desktop_phone_direct_browser_review": true,
+  "evidence": [
+    {
+      "kind": "Actual own in-app browser desktop1536 and phone390 inspection of both placements: complete proportional images, warm paragraph text, readable palette, no overflow."
+    },
+    {
+      "kind": "Christmas phone detail and nested full-size viewer, Escape restores parent link, surrounding study closes dialog and selects/focuses Continue chapter."
+    },
+    {
+      "kind": "Winter desktop detail surrounding-study and phone ContinueLesson reviewed. Cold-phone wrong landing caught and independently reproduced by Thunder, repaired. Final v5 phone fresh entry/reload shows heading15.91px with mobile header absent."
+    },
+    {
+      "kind": "Final v5 actual user PageDown followed by viewport-height resize retains scrolled position (heading -539px), no forced return to scene."
+    },
+    {
+      "context_checks": [
+        {
+          "path": "answer-navigation.css",
+          "sha256": "8112ad6d52ada3bd0b373633fc2e60f5ada7d47fb2204c28e1a09ae01be66a57"
+        },
+        {
+          "path": "answer-opening.css",
+          "sha256": "0356c038ad2adcec7206bfcb3d57915b9e2be2cd42024770560f3d9875cc94fb"
+        },
+        {
+          "path": "answer-styles.css",
+          "sha256": "82dc51b82d56a129be803420cae47630f053f7af1259c659113fbd7fcd76d6ad"
+        },
+        {
+          "path": "answers/why-families-are-important.html",
+          "sha256": "049d5f9aabad463f7ba1b9026a164d61408651f9397fdd4c88993603609cb506"
+        },
+        {
+          "path": "artwork-actions.css",
+          "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+        },
+        {
+          "path": "artwork-details.css",
+          "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+        },
+        {
+          "path": "complete-card-rows.css",
+          "sha256": "7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"
+        },
+        {
+          "path": "connected-study.css",
+          "sha256": "6b61c50c1d8e005074beb2db8fa800377377e6a3c9b955678dd836538fcb48cd"
+        },
+        {
+          "path": "full-image-viewer.css",
+          "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+        },
+        {
+          "path": "full-image-viewer.js",
+          "sha256": "01d17afd6b3f4bd205292d2544683ba9884b73fa350401cd0e299512b5458152"
+        },
+        {
+          "path": "hero-details.css",
+          "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+        },
+        {
+          "path": "hero-details.js",
+          "sha256": "fff59dbfbd64325aeae947755e7a013a0ae51883c05b959bfaac1865c312f8cf"
+        },
+        {
+          "path": "hero-image-source.js",
+          "sha256": "2f8f62cbbffb4f5d5e663b3128aed45fdd35e1deec484589bbfba4e6bbc62704"
+        },
+        {
+          "path": "resource-cards.css",
+          "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+        },
+        {
+          "path": "seasonal-artwork.js",
+          "sha256": "5dd8045ba2b005eca9417e5e596ea9ebf2367afe94ee9ee475889fa81f417121"
+        },
+        {
+          "path": "site-common.js",
+          "sha256": "fc0ae667fd977c6cd66ef2e649ef9da2cbcf5eee4201094dd90ed48b551e6488"
+        },
+        {
+          "path": "site-header.css",
+          "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+        },
+        {
+          "path": "site-search.css",
+          "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+        },
+        {
+          "path": "site-search.js",
+          "sha256": "2722b477848556bb05ecf0487b890c1d0e25840f912f8ea6140382a340eae099"
+        },
+        {
+          "path": "site-system.css",
+          "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+        },
+        {
+          "path": "topic-art.css",
+          "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"
+        },
+        {
+          "path": "topic-artwork-details.css",
+          "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+        },
+        {
+          "path": "topic-artwork-details.js",
+          "sha256": "face1939c8ba140a6a65348c0199f3eadd23c122e49a92d6079fd3320a182261"
+        },
+        {
+          "path": "topic-heroes.css",
+          "sha256": "c0cd96bafe94455fd41d8b6c8357baaa12a0556ce204ba058a1264160acae632"
+        },
+        {
+          "path": "topic-study-pages.css",
+          "sha256": "99e1df87cfdcd11751bb16e0ea293a5048cd6f5f73245a791d20492226299236"
+        },
+        {
+          "path": "birth-of-christ.html",
+          "sha256": "a0b6fe098529beacf8827de7295e5f86e7598d2c50e7a9152a814eed905d2131"
+        },
+        {
+          "path": "desktop-hero-repairs.css",
+          "sha256": "36270651fecfb57cb371580f1fd4df3c2910942665e356245ddf451e5c4d9ecb"
+        },
+        {
+          "path": "jesus-journey.css",
+          "sha256": "f2b19be6fff3b5940bde22ab758e9547938c8154f6f63b6a280c95e1344c54a9"
+        },
+        {
+          "path": "jesus-journey.js",
+          "sha256": "6035a8c1679ec4086223756eabc5c6a5503b926b4c0996efe5b3ea54a7747061"
+        }
+      ],
+      "kind": "Actual served page/CSS/JS bytes all equal v5 context hashes"
+    },
+    {
+      "kind": "Original native Winter and Christmas source images personally inspected, source concurrence recorded separately; Fermi and Newton independent finished-source concurrence verified."
+    },
+    {
+      "kind": "v6 exact scripture href delta verified in actual own browser DOM: Luke2p10-p14 and both John15p9-p12. Two page contexts changed only; all8rasters/prose/helper unchanged and every served context hash reverified."
+    },
+    {
+      "kind": "Prior actual v5 browser evidence retained as unchanged dimensions, with exact predecessor receipt",
+      "sha256": "31f7c1efbb57698e0182c84a233e808f710f72f6046e78b7c2eb1a195e58d663"
+    },
+    {
+      "kind": "Actual Albert full spec inverse and desktop/phone padding review",
+      "review_sha256": "daf4c7e0536ae115c6cdd3f94d3a839dec8ea9e5e74a2fac582180400682ca67",
+      "browser_review_sha256": "b45dedcc2a01843b39364c85dfd298efc9ca5a69a0f481a96da16d6217a82ba3"
+    }
+  ],
+  "limits": [
+    "Local exact two-scene assembled review only; no installed/public release claim.",
+    "No native Print control exists in this inherited viewer; no Print verification claim.",
+    "This report does not attest independent rereading of all private nine-node event history; Newton and Fermi evidence covers those scopes separately.",
+    "Sources26/27 and remaining22 existing scenes not included in this two-scene integration.",
+    "Current context-only concurrence does not renew image, gaze or healed-mark acceptance; all owner holds persist. Historical true fields represent unchanged prior actual execution."
+  ],
+  "no_individual_owner_acceptance_claim": true,
+  "reviewed_at": "2026-10-11T17:38:47.695740+00:00",
+  "reviewer": "Albert",
+  "schema": 1,
+  "spec_sha256": "e1f69dac598a62db749c93045fc83f56d4254c41c7614bcc7dabba2b1f6b7e53",
+  "scope": "Current disclosure padding context only; prior unchanged source and assembled evidence retained historically.",
+  "current_artwork_acceptance_under_new_marks_standard": false,
+  "transformation": {
+    "by": "Thunder",
+    "basis_sha256": "daf4c7e0536ae115c6cdd3f94d3a839dec8ea9e5e74a2fac582180400682ca67",
+    "basis": "Faithful schema projection of actual Albert dual-family context review, explicitly authorized by Albert; not another review action."
+  },
+  "prior_current_review": {
+    "path": "docs/seasonal-artwork/albert-review.json",
+    "sha256": "5289c009e6fc7205cab1c2c6fc9108f3d080d8848b5a87f20d62d38bbe11bf58"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "reviewer": "Fermi",
+  "decision": "CONCUR",
+  "reviewed_at": "2026-10-11T17:40:20.500972+00:00",
+  "spec_sha256": "e1f69dac598a62db749c93045fc83f56d4254c41c7614bcc7dabba2b1f6b7e53",
+  "no_individual_owner_acceptance_claim": true,
+  "private_source_and_event_verification": true,
+  "derivative_pixel_review": true,
+  "assembled_context_review": true,
+  "evidence": [
+    {
+      "kind": "Actual exact inverse verification",
+      "changes": [
+        {
+          "pointer": "/scenes/1/context/13/sha256",
+          "before": "f2b19be6fff3b5940bde22ab758e9547938c8154f6f63b6a280c95e1344c54a9",
+          "after": "6e28d3399deedd09b74341d232ef5e57fc6800f513d644b073192a8724fbcbf7",
+          "route": "birth-of-christ.html",
+          "scene": "christ-christmas-light"
+        }
+      ],
+      "result": "Reversing only listed context hashes reproduces entire prior spec; all assets/native graph and other fields identical."
+    },
+    {
+      "kind": "Retained own original source/event/pixel/assembly execution, historical only",
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-10\\focus-reviewed-completion\\work\\reboot-pr475\\docs\\seasonal-artwork\\fermi-review.json",
+      "sha256": "abb3291c3792d437cf2e54ac6f34f753f01027dc1ad0bfbe5ebadb2fd32a7d3a",
+      "prior_evidence": [
+        {
+          "graph_sha256": "2c8315e417fea2f84df2fdf2ad4acd035a5072c6224ac5c8e3e0f883e7d3f3e2",
+          "kind": "Personally reviewed exact final source pixels previously; current nine private source hashes and all eighteen native dispatch/completion event hashes independently rechecked against raw lines; actual dispatch code read. All recorded prompt-load output event hashes rechecked."
+        },
+        {
+          "kind": "Final chronology read including genuine earlier Fermi plaintext prospective concurrence; current mapping is not backdated preflight.",
+          "sha256": "c1032d032f95789c5cca4b2ea3376e20195c51583db5fe1f3346b4618ad7205a"
+        },
+        {
+          "kind": "Independently decoded all eight raster assets: every file hash matches v6; full WebPs RGB identical to PNG; smaller WebPs RGB identical to proportional LANCZOS buffers."
+        },
+        {
+          "kind": "Own supported browser actual390x844 cold/reloaded Winter entry now heading15.91px, visible complete artwork and warm paragraphs; detail opens; Continue Lesson returns heading15.78px with actual focus topic-art-reading-9."
+        },
+        {
+          "kind": "Own current Christmas390x844 cold entry and1280x900 reload: complete image and prose, desktop heading68.18px below header; Luke2 link exact p10-p14#p10. Prior independently performed two-route fullsize/detail/study-return review retained for unchanged shared viewer/art/prose."
+        },
+        {
+          "kind": "Exact normalized specification read including all nine graph nodes; owner acceptance not claimed, prior superseded branches not delivered. Current helper cancellation tests belong to Thunder/Newton/root, not claimed as Fermi direct gesture testing."
+        }
+      ]
+    },
+    {
+      "kind": "New actual desktop/phone padding review",
+      "path": "work/fermi/BIRTH-PADDING-FINISHED-REVIEW.json",
+      "sha256": "6351b1d8969c703c14b1fb31971a311abf76932144accedf0201d04f92390695"
+    }
+  ],
+  "limits": [
+    "Context-only padding correction. No new image or marks acceptance; all newest owner holds including Christmas remain in force.",
+    "True source/event/pixel fields retain independently executed prior evidence, not a fresh audit or borrowed reviewer execution.",
+    "Only Birth target browser reviewed now; prior unchanged other-route interaction evidence remains historical.",
+    "No universal startup fix, publication, owner acceptance or historical preflight reconstruction.",
+    "Current equivalence review only; no historical normalized-spec approval or invented individual owner acceptance.",
+    "Fermi direct browser observations described above; prior v2 browser evidence only reused for unchanged image/prose/viewer scope. Root and Thunder cancellation/late-load verification remains separate evidence.",
+    "No installation, CI, publication, public byte acceptance or Print workflow claim. Owned browser tab closed and viewport reset."
+  ]
+}

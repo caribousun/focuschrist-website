@@ -56,7 +56,17 @@ JOURNEY_PAIR_APPENDIX = b'\n/* Paired chapter controls share content-driven rows
 JOURNEY_PICKER_PRIOR = b'.jj-chapter-picker{flex:1 1 200px;border:1px solid #829a91!important;border-radius:12px;padding:0!important;min-width:0;background:#102c36}\n.jj-chapter-picker>summary{padding:10px 16px;font-size:1rem!important;margin:0!important}\n'
 JOURNEY_PICKER_CURRENT = b".jj-chapter-picker{flex:1 1 200px;border:1px solid #829a91!important;border-radius:12px;padding:0!important;min-width:min(100%,14ch);box-sizing:border-box;background:#102c36}\n.jj-chapter-picker>summary{display:block;position:relative;box-sizing:border-box;padding:10px 38px;font-size:1rem!important;margin:0!important;list-style:none;text-align:center;overflow-wrap:anywhere}\n.jj-chapter-picker>summary::-webkit-details-marker{display:none}\n.jj-chapter-picker>summary::before{content:'';position:absolute;left:16px;top:50%;width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent;border-left:7px solid currentColor;transform:translateY(-50%)}\n.jj-chapter-picker[open]>summary::before{transform:translateY(-50%) rotate(90deg)}\n"
 
+def before_disclosure_padding(data):
+    # Remove only the exact reviewed rule from the exact reviewed complete CSS.
+    padding = b'.jj-main .fc-deep-study details:not(.jj-reflection){padding-inline:clamp(16px,2vw,24px);box-sizing:border-box}\n'
+    if hashlib.sha256(data).hexdigest() == '6e28d3399deedd09b74341d232ef5e57fc6800f513d644b073192a8724fbcbf7' and data.count(padding) == 1:
+        prior = data.replace(padding, b'', 1)
+        if hashlib.sha256(prior).hexdigest() == JOURNEY_PICKER_SHA256:
+            return prior
+    return data
+
 def before_journey_picker(data):
+    data = before_disclosure_padding(data)
     if hashlib.sha256(data).hexdigest() == JOURNEY_PICKER_SHA256 and data.endswith(JOURNEY_PAIR_APPENDIX):
         data = data[:-len(JOURNEY_PAIR_APPENDIX)]
     if hashlib.sha256(data).hexdigest() == JOURNEY_PICKER_PREVIOUS_SHA256 and data.count(JOURNEY_PICKER_CURRENT) == 1:
@@ -255,6 +265,7 @@ def reviewed_anchor_style(name, data):
         if hashlib.sha256(data).hexdigest() != ART_CAPTION_GAP_SHA256: return False
         data = before_art_caption_gap(data)
     if name == 'jesus-journey.css':
+        data = before_disclosure_padding(data)
         if hashlib.sha256(data).hexdigest() != JOURNEY_PICKER_SHA256: return False
         data = before_journey_picker(data)
     if name == 'joseph-smith-likeness.css':

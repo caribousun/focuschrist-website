@@ -400,7 +400,7 @@ def run(root, mode='release', scene=None, page_overrides=None):
     original_pixels |= correction_pixels
     # Exact seasonal lineage is additive; it grants no generic preflight waiver.
     from artwork_seasonal_delivery import validate as validate_seasonal_delivery
-    approved_seasonal_binding = '8ddfd548d8a402c2b487e8cc940b49204f02f600de6ee9a6b6fd59c41558c483'
+    approved_seasonal_binding = '3669227db900326af34da0d2a6b3a31a2a594ea843ad6f91be529b34e256b6e0'
     seasonal_record = json.loads((root / 'docs/artwork-seasonal-delivery-reviews.json').read_text(encoding='utf-8'))
     seasonal, seasonal_hashes, seasonal_pixels = validate_seasonal_delivery(
         root, seasonal_record, approved_seasonal_binding, added, covered, rejected, pixel_hash, page_dependencies)
@@ -430,7 +430,7 @@ def run(root, mode='release', scene=None, page_overrides=None):
     original_pixels |= answers_six_pixels
     # Exact six-scene current equivalence retains the bounded historical audit and current review limits.
     from artwork_six_scene_delivery import validate as validate_six_scene_delivery
-    approved_six_scene_binding = '0a63c77134e3a4de0446ab5fffad872ac9816bd96ab89116ed0d85d21545ccee'
+    approved_six_scene_binding = 'd0f106b8850c9335707af686e37150c0dbfaac115f053e9d69a10416744485f3'
     six_scene_record = json.loads((root / 'docs/artwork-six-scene-delivery-reviews.json').read_text(encoding='utf-8'))
     six_scene, six_scene_hashes, six_scene_pixels = validate_six_scene_delivery(
         root, six_scene_record, approved_six_scene_binding, added, covered, rejected, pixel_hash, page_dependencies)
