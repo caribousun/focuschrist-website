@@ -44,6 +44,7 @@ body.fc-jesus-journey .jj-opening{padding:calc(var(--fc-header-height,80px) + 36
 .jj-source-list{padding-left:24px;overflow-wrap:anywhere}
 .jj-source-list li{margin-bottom:12px}
 .jj-main details{padding:18px 0;border-top:1px solid rgba(240,195,106,.2)}
+.jj-main .fc-deep-study details:not(.jj-reflection){padding-inline:clamp(16px,2vw,24px);box-sizing:border-box}
 .jj-main summary{cursor:pointer;color:var(--fc-gold-light,#f0c36a);font-size:1.12rem;min-height:44px;line-height:1.5}
 .jj-main details[open] summary{margin-bottom:14px}
 /* Compact native disclosures; static reflection panels keep their original spacing. */

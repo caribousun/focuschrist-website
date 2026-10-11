@@ -9,7 +9,7 @@ LINKS={route:'/six-scene-artwork.css?v=20261011-six-source-1' for route in ['art
 def bound(root):
     record=json.loads((root/'docs/artwork-six-scene-delivery-reviews.json').read_bytes())
     canonical=(json.dumps(record,sort_keys=True,separators=(',',':'),ensure_ascii=False)+'\n').encode()
-    if sha(canonical)!='0a63c77134e3a4de0446ab5fffad872ac9816bd96ab89116ed0d85d21545ccee':raise ValueError('Six-scene current family record changed')
+    if sha(canonical)!='d0f106b8850c9335707af686e37150c0dbfaac115f053e9d69a10416744485f3':raise ValueError('Six-scene current family record changed')
     for review in record['reviews']:
         if sha((root/review['path']).read_bytes())!=review['sha256']:raise ValueError('Six-scene review changed')
 def legacy_text(route,text,root):

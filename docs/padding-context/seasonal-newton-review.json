@@ -1,0 +1,73 @@
+{
+  "assembled_context_review": true,
+  "decision": "CONCUR",
+  "derivative_pixel_review": true,
+  "desktop_phone_direct_browser_review": false,
+  "evidence": [
+    {
+      "kind": "independently verified private nine-node source and actual native prompt/event graph",
+      "sha256": "2c8315e417fea2f84df2fdf2ad4acd035a5072c6224ac5c8e3e0f883e7d3f3e2"
+    },
+    {
+      "kind": "genuine final-edit chronology separately verified",
+      "sha256": "c1032d032f95789c5cca4b2ea3376e20195c51583db5fe1f3346b4618ad7205a"
+    },
+    {
+      "kind": "Winter final native full-image review",
+      "sha256": "49cb7e36ca63b216293e342b0a5cf1550c17dae0b7daccc7c8d78f33705ba323"
+    },
+    {
+      "kind": "Christmas final native full-image review",
+      "sha256": "027955d1f1e4e483292548896a64b1cfaf872eec4c4bbfcf2e82f77e196f5391"
+    },
+    {
+      "kind": "final manifest independently matched eight raster byte hashes and RGB resize buffers, all page/CSS/JS context hashes",
+      "sha256": "8575e3efc74d8ec6edfbbd4004f53f11a2b72494c0cccf5f5b66a7e8dfec30f6"
+    },
+    {
+      "kind": "exact helper reviewed and both actual DOM fixture suites independently rerun PASS; cancellation persists through resize and late load",
+      "sha256": "5dd8045ba2b005eca9417e5e596ea9ebf2367afe94ee9ee475889fa81f417121"
+    },
+    {
+      "kind": "personally inspected desktop/phone screenshots of complete imagery, paragraph presentation, settled return headings, cold entry and preserved user scroll; direct actions belong to Thunder, Fermi and Albert"
+    },
+    {
+      "kind": "Independent exact v5-to-v6 byte inverse: only three source hrefs changed to labeled John15:9-12 and Luke2:10-14; spec changes only two corresponding page hashes; all image, prose, helper and other context bindings unchanged",
+      "manifest_sha256": "18dab5f84d664e70907d2b7136685e6a5ab238f5e6f05e9f39a2569e64b6ae59"
+    },
+    {
+      "kind": "Current independent exact spec recursive inverse",
+      "change": "Only one seasonal/two six-scene jesus-journey.css context hashes; all source/graph/prompt/assets unchanged"
+    },
+    {
+      "kind": "Current CSS exact byte inverse",
+      "sha256": "6e28d3399deedd09b74341d232ef5e57fc6800f513d644b073192a8724fbcbf7",
+      "prior_sha256": "f2b19be6fff3b5940bde22ab758e9547938c8154f6f63b6a280c95e1344c54a9"
+    },
+    {
+      "kind": "Read actual Albert and Fermi desktop/phone padding receipts; personally viewed root phone capture",
+      "newton_direct_browser": false
+    }
+  ],
+  "limits": [
+    "Current equivalence review, not backdated schema preflight or cryptographic authorship signature. Genuine earlier plaintext pre-generation evidence is separately bound.",
+    "Native dispatch timestamps identify outer orchestration calls; awaited prompt loads in combined cells can complete after that outer timestamp and before the nested image-generation call.",
+    "No encrypted message-body access or invented owner vote. Owner authorized correction and publication after actual team review; defective earlier versions remain superseded, not approved delivery.",
+    "Newton personally inspected source pixels, native event evidence, code, dependency hashes, decoded derivative buffers and captured rendered states; did not perform these browser actions. Fermi and Albert direct-browser evidence remains separate.",
+    "No installation, public release, exhaustive unrelated page traversal or Print workflow acceptance. Final validator/gate negative tests and root installation checks remain separate.",
+    "Prior v5 evidence is reused only for byte-identical scope; final v6 source URLs reviewed as the sole page delta. Earlier receipt retained unchanged.",
+    "No new source/pixel aesthetic acceptance. New owner-approved visible palm/back-of-hand/wrist standard and all reopened source holds remain applicable; Christmas/Star and Joy holds are not lifted.",
+    "Current CONCUR is limited to the CSS context delta. Earlier true verification fields are retained historical work on byte-identical sources, not fresh execution or new-standard compliance.",
+    "Prior records and all old votes must remain byte-identical snapshots; gate changes only exact current record pins."
+  ],
+  "no_individual_owner_acceptance_claim": true,
+  "private_source_and_event_verification": true,
+  "reviewed_at": "2026-10-11T17:38:26.091326+00:00",
+  "reviewer": "Newton",
+  "schema": 1,
+  "spec_sha256": "e1f69dac598a62db749c93045fc83f56d4254c41c7614bcc7dabba2b1f6b7e53",
+  "scope": "CURRENT CSS CONTEXT ONLY: one disclosure horizontal padding rule. Existing true source/event/derivative fields retain earlier own execution for unchanged bytes; no new artwork acceptance under amended visible-mark rule.",
+  "prior_current_review_sha256": "0836a622ff808a17350fe58fda0e8178d7a1cb6ec6a4554f5f4ba3eba9c1238b",
+  "prior_current_review_path": "docs/seasonal-artwork/newton-review.json",
+  "current_artwork_acceptance_under_new_marks_standard": false
+}
