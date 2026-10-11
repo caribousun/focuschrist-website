@@ -197,6 +197,39 @@ def visitor_viewer_sources():
             for pattern in ('*.html', '*.css', '*.js') for p in ROOT.rglob(pattern)
             if not set(p.relative_to(ROOT).parts) & {'tools', '.git', 'node_modules', 'focuschrist-repo'}}
 
+# Exact new chalk figure surface only; this does not widen the hero CSS allowance.
+def reviewed_four_scene_style(data, sources):
+    if hashlib.sha256(data).hexdigest() != 'dfa23731ddbf2f7bfc039204e880ebd7e612519d698c6be96c0185ea696a98b9':
+        return False
+    if not re.fullmatch(rb'#christ-children-colorful-day > figure\.fc-art-story \{\s*background: transparent;\s*\}\s*', data):
+        return False
+    name = 'four-scene-artwork.css'
+    consumers = {page: text for page, text in sources.items() if name in text}
+    owner = 'art-study/suffer-the-little-children.html'
+    if set(consumers) != {owner}:
+        return False
+    text = consumers[owner]
+    refs = [(tag, attrs) for tag, attrs in Tags(text).tags
+            if name in attrs.get('href', '') or name in attrs.get('src', '')]
+    return text.count(name) == 1 and refs == [('link', {'rel': 'stylesheet', 'href': '../four-scene-artwork.css'})]
+
+def four_scene_style_self_test():
+    data = (ROOT/'four-scene-artwork.css').read_bytes()
+    sources = visitor_viewer_sources()
+    assert reviewed_four_scene_style(data, sources)
+    for mutation in (data + b'body{height:1px}', data.replace(b'transparent', b'green'),
+                     data.replace(b'#christ-children-colorful-day', b'#other-scene'),
+                     data.replace(b'background:', b'color:'), data + data):
+        assert mutation != data and not reviewed_four_scene_style(mutation, sources)
+    owner = 'art-study/suffer-the-little-children.html'
+    for replacement in ('', '<link rel="stylesheet" href="../four-scene-artwork.css?v=unknown">',
+                        '<link rel="stylesheet" href="../four-scene-artwork.css">'*2):
+        changed = dict(sources)
+        changed[owner] = sources[owner].replace('<link rel="stylesheet" href="../four-scene-artwork.css">', replacement)
+        assert not reviewed_four_scene_style(data, changed)
+    wrong = dict(sources);wrong['index.html'] += '<link rel="stylesheet" href="four-scene-artwork.css">'
+    assert not reviewed_four_scene_style(data, wrong)
+
 def viewer_self_test():
     data = (ROOT/VIEWER_STYLE).read_bytes()
     assert reviewed_viewer_style(data)
@@ -507,6 +540,7 @@ def main():
         assert not reviewed_art_nav_width(nav_selector, 'width: auto;', nav_css.replace(b'700px', b'900px'))
         assert not reviewed_art_nav_width(nav_selector, 'width: auto;', nav_css + b'\n.fc-visual-hero{height:9px}')
         viewer_self_test()
+        four_scene_style_self_test()
         marriage=(ROOT/'eternal-marriage-study.css').read_bytes()
         assert reviewed_marriage_body_style(marriage)
         assert not reviewed_marriage_body_style(marriage+b'\n.fc-topic-unique-hero{height:9px}')
@@ -873,6 +907,8 @@ def main():
     check(reviewed_viewer_style((ROOT/VIEWER_STYLE).read_bytes()), 'Full-image viewer stylesheet differs from exact reviewed bytes')
     check(reviewed_viewer_bindings(viewer_bindings(visitor_viewer_sources())), 'Full-image viewer consumer references differ from exact reviewed bindings')
     excluded_styles.add(VIEWER_STYLE)
+    check(reviewed_four_scene_style((ROOT/'four-scene-artwork.css').read_bytes(), visitor_viewer_sources()), 'Four-scene chalk surface differs from exact reviewed rule/bytes/sole owner')
+    excluded_styles.add('four-scene-artwork.css')
     check(reviewed_gallery_dialog_style((ROOT/'art-gallery.css').read_bytes()), 'Gallery viewport stylesheet differs from exact reviewed width inverse')
     excluded_styles.add('art-gallery.css')
     picture_pill_bytes = (ROOT/'artwork-actions.css').read_bytes()

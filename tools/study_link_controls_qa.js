@@ -130,7 +130,7 @@ for(const [route,key] of seasonalFigures){
 }
 // Four reviewed modern scenes add one source pill each. Validate their
 // exact current DOM and owner before taking this narrow baseline inverse.
-const fourSceneFigures=[["answers/divorce-and-faith.html","christ-moving-day","48bdcef2570387696985ff5e1f5db78bb9040a172c92cf28f75a308349c74fff"],["answers/are-latter-day-saints-christian.html","christ-food-pantry","9d74f0c4cd3087dafa449c50a18936c7dc77853bba06eb7b98d02b52a55862c1"],["answers/faith-in-jesus-christ-during-trials.html","christ-homecoming-celebration","3541a002e2bf855475a2958d6c40c575d6655ab3ca4d8edeae728d2722a40aef"],["art-study/suffer-the-little-children.html","christ-children-colorful-day","9a969d6e1b71f584830214510d70d204151e729d052f4e5495dd2ffe58258ee3"]];
+const fourSceneFigures=[["answers/divorce-and-faith.html","christ-moving-day","e6639c1434c7e4e0eec978713e9f980361cc0eb69dd22ec1472f621cff449e57"],["answers/are-latter-day-saints-christian.html","christ-food-pantry","9d74f0c4cd3087dafa449c50a18936c7dc77853bba06eb7b98d02b52a55862c1"],["answers/faith-in-jesus-christ-during-trials.html","christ-homecoming-celebration","950d3d36d9b9f84a1d44d9d828fbe832f186391930dbd5c76619670534942853"],["art-study/suffer-the-little-children.html","christ-children-colorful-day","9a969d6e1b71f584830214510d70d204151e729d052f4e5495dd2ffe58258ee3"]];
 function invertFourSceneFigures(doc,route){
  let added=0;
  for(const [owner,key,sha] of fourSceneFigures){
