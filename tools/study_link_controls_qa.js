@@ -128,6 +128,39 @@ for(const [route,key] of seasonalFigures){
  invertSeasonalFigures(extra,route);
  assert.equal(extra.querySelectorAll(selectors[0]).length,1,'Unrelated source control must remain visible to baseline coverage');
 }
+// Four reviewed modern scenes add one source pill each. Validate their
+// exact current DOM and owner before taking this narrow baseline inverse.
+const fourSceneFigures=[["answers/divorce-and-faith.html","christ-moving-day","e6639c1434c7e4e0eec978713e9f980361cc0eb69dd22ec1472f621cff449e57"],["answers/are-latter-day-saints-christian.html","christ-food-pantry","9d74f0c4cd3087dafa449c50a18936c7dc77853bba06eb7b98d02b52a55862c1"],["answers/faith-in-jesus-christ-during-trials.html","christ-homecoming-celebration","950d3d36d9b9f84a1d44d9d828fbe832f186391930dbd5c76619670534942853"],["art-study/suffer-the-little-children.html","christ-children-colorful-day","9a969d6e1b71f584830214510d70d204151e729d052f4e5495dd2ffe58258ee3"]];
+function invertFourSceneFigures(doc,route){
+ let added=0;
+ for(const [owner,key,sha] of fourSceneFigures){
+  const figures=[...doc.querySelectorAll('figure')].filter(f=>f.getAttribute('data-exclusive-artwork')===key||f.outerHTML.includes(key+'-960.webp')||f.outerHTML.includes(key+'-full.webp'));
+  assert.equal(figures.length,owner===route?1:0,route+': missing, duplicate or wrong-owner four-scene figure '+key);
+  if(owner!==route)continue;
+  const figure=figures[0];assert.equal(digest(figure.outerHTML),sha,route+': reviewed four-scene figure changed '+key);
+  assert.equal(figure.querySelectorAll(selectors[0]).length,1,key+': exact added source-control count');
+  for(const selector of selectors.slice(1))assert.equal(figure.querySelectorAll(selector).length,0,key+': unrelated control family entered inverse');
+  added++;figure.remove();
+ }
+ return added;
+}
+for(const [route,key] of fourSceneFigures){
+ const original=JSDOM.fragment(read(route));
+ const fixtureHtml=original.querySelector('figure[data-exclusive-artwork="'+key+'"]').outerHTML;
+ for(const kind of ['missing','duplicate','key','href','caption','wrong-owner']){
+  const doc=JSDOM.fragment(fixtureHtml),figure=doc.querySelector('figure');
+  if(kind==='missing')figure.remove();
+  if(kind==='duplicate')doc.append(figure.cloneNode(true));
+  if(kind==='key')figure.setAttribute('data-exclusive-artwork','unknown');
+  if(kind==='href')figure.querySelector('a').setAttribute('href','unknown.webp');
+  if(kind==='caption')figure.querySelector('figcaption').append('Changed');
+  assert.throws(()=>invertFourSceneFigures(doc,kind==='wrong-owner'?'unreviewed.html':route),assert.AssertionError,kind+': '+key);
+ }
+ const extra=JSDOM.fragment(fixtureHtml+'<p class="fc-study-visual-sources"><a href="unexpected">Extra control</a></p>');
+ invertFourSceneFigures(extra,route);
+ assert.equal(extra.querySelectorAll(selectors[0]).length,1,'Unrelated source control must remain visible to baseline coverage');
+}
+let fourSceneSourceControls=0;
 let seasonalSourceControls=0;
 let readingSourceControls=0;
 const inventory={canonical_pages:pages.length,selectors:{},numbered_navigation:{}};
@@ -137,6 +170,7 @@ for(const page of pages){
  assertNoLooseSourceSeparators(doc);
  readingSourceControls+=invertReadingFigures(doc,page);
  seasonalSourceControls+=invertSeasonalFigures(doc,page);
+ fourSceneSourceControls+=invertFourSceneFigures(doc,page);
  for(const s of selectors){const nodes=[...doc.querySelectorAll(s)];if(nodes.length){inventory.selectors[s].count+=nodes.length;inventory.selectors[s].pages.push(page);for(const n of nodes)assert.equal(n.tagName,'A');}}
  for(const s of ['.watch-topic-index a','nav[aria-label="Pioneer study sections"] a','.bom-story-directory a']){
   const nodes=[...doc.querySelectorAll(s)];if(nodes.length)inventory.numbered_navigation[page+' '+s]=nodes.map(n=>({href:n.getAttribute('href'),label:n.textContent.trim().replace(/\s+/g,' ')}));
@@ -146,6 +180,7 @@ for(const page of pages){
 }
 assert.equal(readingSourceControls,5,'Exactly five named source controls in six reviewed reading figures');
 assert.equal(seasonalSourceControls,2,'Exactly two named source controls in two reviewed seasonal figures');
+assert.equal(fourSceneSourceControls,4,'Exactly four source controls in four reviewed modern figures');
 console.log('PASS: two exact seasonal figures, unchanged legacy inventory;12 negative mutations and2 unrelated-control retention fixtures.');
 for(const [s,a] of Object.entries(inventory.selectors))if(!a.count){const runtime=config.runtime_selectors[s];assert(runtime,`Unused selector ${s}`);assert(read(runtime.source).includes(runtime.marker));}
 const file=path.join(root,'docs/study-link-control-inventory.json');

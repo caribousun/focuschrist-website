@@ -94,6 +94,42 @@ def winter_art_self_test():
 winter_art_self_test()
 winter_art_assets=[]
 
+# Exact three additional modern Answer figures; historical99/3 remains unchanged.
+FOUR_SCENE_ANSWER_ART={'assets/page-art/christ-world/christ-moving-day-full.webp': {'owner': 'answers/divorce-and-faith.html', 'key': 'christ-moving-day', 'destination': '#scripture-study', 'figure_sha256': '9dd542a7e977e0ac0e7bfd93f18ed3556f02bbf10d547042d24185dc34c6f5ab', 'assets': {'assets/page-art/christ-world/masters/christ-moving-day.png': '4d8ed6462589a7b2c0574ad60a804e0e2027b654858fbb7b6aed92072e8db198', 'assets/page-art/christ-world/christ-moving-day-480.webp': '362b688d836d3f5a00c9e815654ce8a8262626680e7fba6218c53a21a7706508', 'assets/page-art/christ-world/christ-moving-day-960.webp': '59ab7e8ef417acb7e81d379294707d2edbadafd66ff7882c62630d75e712733d', 'assets/page-art/christ-world/christ-moving-day-full.webp': 'a44edacbd9727be973217e10a45f661d57e805103b77728e065f1b7a3e43406d'}}, 'assets/page-art/christ-world/christ-food-pantry-full.webp': {'owner': 'answers/are-latter-day-saints-christian.html', 'key': 'christ-food-pantry', 'destination': '#guided-practice', 'figure_sha256': '4445bfee207d0dc34baa6ff73d6219e322e66a621567ed3def8374aa8e00a8cc', 'assets': {'assets/page-art/christ-world/masters/christ-food-pantry.png': 'f405305ea6ddd8a78848fced8a1d04d0cfbf78ebbd6abe29c33060ca84a078ff', 'assets/page-art/christ-world/christ-food-pantry-480.webp': '8e14fad5a0435fb1f9e9d684a791957f149ecbd4f2d83335a91948a98ac5c48c', 'assets/page-art/christ-world/christ-food-pantry-960.webp': 'fdaa35344a331368562bcd3fe49476cd51a6124313693245c3fac6f1b1081013', 'assets/page-art/christ-world/christ-food-pantry-full.webp': 'a443d2bfa5f6a703463e5228d7387b83288f9b5166e43780546b319cd57da85c'}}, 'assets/page-art/christ-world/christ-homecoming-celebration-full.webp': {'owner': 'answers/faith-in-jesus-christ-during-trials.html', 'key': 'christ-homecoming-celebration', 'destination': '#continue-study', 'figure_sha256': '12a4bdebc759297678b1aabfb1cc229dc93e84f027f5c5a5369b5b79618d124d', 'assets': {'assets/page-art/christ-world/masters/christ-homecoming-celebration.png': 'd835e757765039247138af12a5fae27cf5655692757254be009dc61576093920', 'assets/page-art/christ-world/christ-homecoming-celebration-480.webp': '68641bc39651fb610b78a485205d556287729f816de6f9b1d309088f1f004753', 'assets/page-art/christ-world/christ-homecoming-celebration-960.webp': 'dc3013031c5490e2e1bb173e92a672c59be31b8caa24f60e73d9cae03d8fd659', 'assets/page-art/christ-world/christ-homecoming-celebration-full.webp': 'fd968aac0a69a982f8301aa775291bd86f2f6e4067fa040cca03b43de54f38f6'}}}
+
+def check_four_scene_answer(route,source,verify_assets=True):
+ from bs4 import BeautifulSoup
+ soup=BeautifulSoup(source,'html.parser')
+ for full,row in FOUR_SCENE_ANSWER_ART.items():
+  candidates=[f for f in soup.find_all('figure') if f.get('data-exclusive-artwork')==row['key'] or any(Path(a).name in str(f) for a in row['assets'])]
+  assert len(candidates)==(1 if route==row['owner'] else 0),route+': missing, duplicate or wrong-owner modern artwork'
+  if route!=row['owner']:continue
+  figure=candidates[0];anchor=figure.find('a')
+  assert anchor and anchor.get('aria-haspopup')=='dialog' and not anchor.has_attr('data-full-image-viewer'),'Modern artwork must open study details first'
+  assert anchor.get('data-topic-study')==row['destination'],'Modern surrounding-study destination changed'
+  assert hashlib.sha256(str(figure).encode()).hexdigest()==row['figure_sha256'],'Modern reviewed figure changed'
+  if verify_assets:
+   for asset,digest in row['assets'].items():assert hashlib.sha256((ROOT/asset).read_bytes()).hexdigest()==digest,asset+': modern reviewed bytes changed'
+
+def four_scene_answer_self_test():
+ from bs4 import BeautifulSoup
+ for row in FOUR_SCENE_ANSWER_ART.values():
+  source=(ROOT/row['owner']).read_text(encoding='utf8')
+  for kind in ('missing','duplicate','markup','asset','wrong-owner','dialog','direct-viewer','study-target'):
+   soup=BeautifulSoup(source,'html.parser');current=soup.select_one('figure[data-exclusive-artwork="'+row['key']+'"]')
+   if kind=='missing':current.decompose()
+   elif kind=='duplicate':soup.append(BeautifulSoup(str(current),'html.parser'))
+   elif kind=='markup':current['data-exclusive-artwork']='unreviewed'
+   elif kind=='asset':current.find('img')['src']='unreviewed.webp'
+   elif kind=='dialog':current.find('a')['aria-haspopup']='false'
+   elif kind=='direct-viewer':current.find('a')['data-full-image-viewer']=''
+   elif kind=='study-target':current.find('a')['data-topic-study']='#unreviewed'
+   try:check_four_scene_answer('answers/unreviewed.html' if kind=='wrong-owner' else row['owner'],str(soup),False)
+   except AssertionError:pass
+   else:raise AssertionError('Modern artwork mutation escaped: '+kind)
+four_scene_answer_self_test()
+four_scene_answer_assets=[]
+
 def local_asset(page,href):
  u=urlsplit(href)
  assert not u.scheme and not u.netloc, 'Body artwork must be local'
@@ -163,6 +199,7 @@ for page in [*sorted((ROOT/'answers').glob('*.html')),ROOT/'general-conference.h
  source=page.read_text(encoding='utf-8')
  check_reading_art(page.relative_to(ROOT).as_posix(),source)
  check_winter_art(page.relative_to(ROOT).as_posix(),source)
+ check_four_scene_answer(page.relative_to(ROOT).as_posix(),source)
  d=Document();d.feed(source);ns=list(d.root.walk())
  if page.relative_to(ROOT).as_posix()=='answers/race-priesthood-and-temple-blessings.html':
   # Official source media open their Church destinations; they are not original
@@ -200,6 +237,11 @@ for page in [*sorted((ROOT/'answers').glob('*.html')),ROOT/'general-conference.h
    assert page.relative_to(ROOT).as_posix()==WINTER_OWNER and container.attrs.get('data-exclusive-artwork')==WINTER_KEY, 'Winter exact owner/key mismatch'
    assert a.attrs.get('aria-haspopup')=='dialog' and 'data-full-image-viewer' not in a.attrs and a.attrs.get('data-topic-study')=='#hope-reflection', 'Winter study-first adapter mismatch'
    winter_art_assets.append(relative_asset)
+  elif relative_asset in FOUR_SCENE_ANSWER_ART:
+   record=FOUR_SCENE_ANSWER_ART[relative_asset]
+   assert page.relative_to(ROOT).as_posix()==record['owner'] and container.attrs.get('data-exclusive-artwork')==record['key'], 'Modern exact owner/key mismatch'
+   assert a.attrs.get('aria-haspopup')=='dialog' and 'data-full-image-viewer' not in a.attrs and a.attrs.get('data-topic-study')==record['destination'], 'Modern study-first adapter mismatch'
+   four_scene_answer_assets.append(relative_asset)
   elif relative_asset in first_topic_review:
    record=first_topic_review[relative_asset]
    assert page.relative_to(ROOT).as_posix()==record['route'], 'FIRST topic owner mismatch'
@@ -331,7 +373,9 @@ assert len(first_topic_assets)==len(set(first_topic_assets))==len(first_topic_re
 assert len(reading_art_assets)==len(set(reading_art_assets))==3 and set(reading_art_assets)==set(REVIEWED_READING_ART), 'Exact Stand two and Temple one inventory required'
 assert winter_art_assets==[WINTER_FULL], 'Exactly one reviewed Winter Answer picture required'
 print('PASS: exact Winter owner, figure, four rasters and study-first adapter;8 negative mutations; unchanged legacy99/3 baseline')
-assert (count-len(winter_art_assets)-len(reading_art_assets)-len(first_topic_assets)-len(joseph_assets)-len(temple_assets)-len(father_assets)-len(plan_assets)-len(hg_assets)-len(covenant_assets)-len(journey_assets)-len(bible_assets)-len(settle_assets)-len(life_assets)-len(gap_assets)-len(sitewide_assets)-len(focused_assets)-len(relocated_assets)-len(bom_assets),preserved)==(99,3),(count,preserved)
+assert len(four_scene_answer_assets)==3 and set(four_scene_answer_assets)==set(FOUR_SCENE_ANSWER_ART), 'Exactly three modern Answer pictures required'
+print('PASS: three exact modern Answer figures, twelve rasters and24 negative mutations; unchanged historical99/3 baseline')
+assert (count-len(four_scene_answer_assets)-len(winter_art_assets)-len(reading_art_assets)-len(first_topic_assets)-len(joseph_assets)-len(temple_assets)-len(father_assets)-len(plan_assets)-len(hg_assets)-len(covenant_assets)-len(journey_assets)-len(bible_assets)-len(settle_assets)-len(life_assets)-len(gap_assets)-len(sitewide_assets)-len(focused_assets)-len(relocated_assets)-len(bom_assets),preserved)==(99,3),(count,preserved)
 # Life After Death lifted its old illustrated feature panel into full reading
 # sections. All twelve remaining panels still undergo the structural checks.
 assert set(plan_assets)==set(plan_review) and len(plan_assets)==16, 'All sixteen Plan originals must reach the shared study adapter'

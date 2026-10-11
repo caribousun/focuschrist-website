@@ -13,6 +13,29 @@ process.on('uncaughtException', error => {
 });
 const ref = process.argv.find(arg => arg.startsWith('--ref='))?.slice(6);
 const read = file => ref ? execFileSync('git', ['show', `${ref}:${file}`], { cwd: root, encoding: 'utf8' }) : fs.readFileSync(path.join(root, file), 'utf8');
+
+function exactCurrentChalk(document, relative) {
+    const owner='art-study/suffer-the-little-children.html';
+    const figures=[...document.querySelectorAll('figure[data-exclusive-artwork="christ-children-colorful-day"]')];
+    assert.equal(figures.length,relative===owner?1:0,'Exact new chalk owner and singleton');
+    if(relative!==owner)return null;
+    const figure=figures[0];
+    assert.equal(require('node:crypto').createHash('sha256').update(figure.outerHTML).digest('hex'), '9a969d6e1b71f584830214510d70d204151e729d052f4e5495dd2ffe58258ee3', 'Exact reviewed chalk caption and source DOM');
+    assert.equal(figure.closest('section').id,'christ-children-colorful-day','Exact chalk section');
+    assert.equal(figure.closest('section').querySelector('h2').textContent.trim(),'Delight in what a child creates','Exact reviewed chalk title');
+    return figure;
+}
+const chalkFixture=read('art-study/suffer-the-little-children.html');
+for(const kind of ['missing','duplicate','key','title','caption','source','wrong-owner']) {
+    const fixture=JSDOM.fragment(chalkFixture), f=fixture.querySelector('figure[data-exclusive-artwork="christ-children-colorful-day"]');
+    if(kind==='missing')f.remove();
+    if(kind==='duplicate')f.after(f.cloneNode(true));
+    if(kind==='key')f.dataset.exclusiveArtwork='changed';
+    if(kind==='title')f.closest('section').querySelector('h2').textContent+=' changed';
+    if(kind==='caption')f.querySelector('figcaption p').textContent+=' changed';
+    if(kind==='source')f.querySelector('figcaption a').href='https://example.invalid';
+    assert.throws(()=>exactCurrentChalk(fixture,kind==='wrong-owner'?'art-study/be-still.html':'art-study/suffer-the-little-children.html'),assert.AssertionError,kind+' mutation must reject');
+}
 const gallery = new JSDOM(read('art.html'), { url: 'https://focuschrist.com/art.html' });
 const cards = [...gallery.window.document.querySelectorAll('a[data-artwork-detail][href^="art-study/"]')];
 assert.equal(cards.length, 4, 'Audit all four Featured Art & Study cards');
@@ -28,6 +51,7 @@ for (const card of cards) {
     const dom = new JSDOM(read(relative), { url: card.href, runScripts: 'outside-only' });
     const { window } = dom;
     const { document } = window;
+    const reviewedChalk = exactCurrentChalk(document, relative);
     window.TextEncoder = TextEncoder; let qaReturnTarget, qaScroll; const qaStyle=window.getComputedStyle.bind(window); window.getComputedStyle = el => el===qaReturnTarget ? {scrollMarginTop:'200px'} : qaStyle(el); Object.defineProperty(window.document.documentElement,'scrollHeight',{value:10000}); window.scrollTo = options => { qaScroll=options; }; const prepareReturn = target => { qaReturnTarget=target; qaScroll=null; target.getBoundingClientRect=()=>({top:2000}); }; const frames = new Map(); let frameId = 0; window.requestAnimationFrame = fn => { frames.set(++frameId, fn); return frameId; }; window.cancelAnimationFrame = id => frames.delete(id); const tickFrames = () => { const batch = [...frames.values()]; frames.clear(); batch.forEach(fn => fn()); };
     window.HTMLDialogElement.prototype.showModal = function () { this.setAttribute('open', ''); };
     window.HTMLDialogElement.prototype.close = function () { this.removeAttribute('open'); this.dispatchEvent(new window.Event('close')); };
@@ -42,14 +66,16 @@ for (const card of cards) {
     }
     document.dispatchEvent(new window.Event('DOMContentLoaded'));
     const triggers = [...document.querySelectorAll('a[data-art-study-supporting]')];
-    const expectedSupporting = relative === 'art-study/the-living-christ.html' ? 9 : 10;
+    const expectedSupporting = relative === 'art-study/the-living-christ.html' ? 9 : reviewedChalk ? 11 : 10;
     assert.equal(triggers.length, expectedSupporting, `${relative}: all ${expectedSupporting} supporting pictures discovered`);
     const titles = new Set();
     const click = node => node.dispatchEvent(new window.MouseEvent('click', { bubbles: true, cancelable: true, button: 0 }));
     for (const trigger of triggers) {
         const caption = trigger.closest('figure').querySelector('figcaption');
-        const expectedTitle = caption.querySelector('h2,h3,strong').textContent.trim();
-        const expectedSources = [...caption.querySelectorAll('a[href]')].map(a => a.href);
+        const isChalk = trigger.closest('figure') === reviewedChalk;
+        const expectedTitle = (isChalk ? reviewedChalk.closest('section').querySelector('h2') : caption.querySelector('h2,h3,strong')).textContent.trim();
+        const captionSources = [...caption.querySelectorAll('a[href]')].map(a => a.href);
+        const expectedSources = isChalk ? [...new Set(captionSources)] : captionSources;
         assert(trigger.hasAttribute('data-topic-artwork-detail'), `${relative}: picture enhanced`);
         assert(!trigger.hasAttribute('data-full-image-viewer'), 'First activation cannot skip study options');
         assert.equal(trigger.getAttribute('aria-haspopup'), 'dialog');
@@ -72,7 +98,8 @@ for (const card of cards) {
         assert(copy.textContent.trim().split(/\s+/).length >= 18, 'Substantive image-specific prose retained');
         }
         const expectedCopy = caption.cloneNode(true);
-        expectedCopy.querySelector('h2,h3,strong').remove();
+        if (!isChalk) expectedCopy.querySelector('h2,h3,strong').remove();
+        else expectedCopy.querySelectorAll('.fc-study-visual-label,.fc-study-visual-sources').forEach(node => node.remove());
         const normalized = value => value.replace(/\s+/g, ' ').trim();
         assert.equal(normalized(copy.textContent), normalized(expectedCopy.textContent), 'Full caption prose is preserved without repeating its title');
         const pills = [...panel.querySelectorAll('[data-topic-art-source]')];
@@ -216,8 +243,8 @@ legacyWindow.navigate(1);await settle(pendingImages.at(-1));assert.equal(modalIm
 legacyWindow.closeModal();
 legacyWindow.close();
 gallery.window.close();
-assert.equal(checked, 39);
-console.log('Art study picture DOM QA passed: 4 featured paths, 39 study panels, exact titles and scripture, nested full-size viewer, repeated opening, focus and lesson return.');
+assert.equal(checked, 40);
+console.log('Art study picture DOM QA passed: 4 featured paths, 40 study panels, exact titles and scripture, nested full-size viewer, repeated opening, focus and lesson return.');
 console.log('Legacy gallery DOM QA passed: 39 descriptions, stable title labels/assets, next/previous/wraparound, keyboard opening and exact original-trigger return across three close paths.');
 
 })().catch(error => { console.error(error); process.exitCode = 1; });
