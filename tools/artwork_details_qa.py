@@ -6,6 +6,21 @@ import json
 import sys
 from urllib.parse import urlsplit
 
+
+def reviewed_chalk_supporting(root, relative, text):
+    """Only the exact new reviewed Children figure can extend the old count."""
+    if relative != 'art-study/suffer-the-little-children.html':
+        return 0
+    import hashlib
+    figures = [figure for figure in re.findall(r'<figure\b[\s\S]*?</figure>', text)
+               if 'data-exclusive-artwork="christ-children-colorful-day"' in figure]
+    if len(figures) != 1 or hashlib.sha256(figures[0].encode('utf-8')).hexdigest() != '47e92bf3deffb77cf3657ca6dbda2b294e4acada2eb577106a7d796a6519e14a':
+        raise ValueError('Exact reviewed chalk supporting figure changed or missing')
+    for name, expected in {'assets/page-art/christ-world/masters/christ-children-colorful-day.png': 'c1c592570b8fbc6083d7e39e344eb2a64b609b026f3da44449976e12f3969322', 'assets/page-art/christ-world/christ-children-colorful-day-480.webp': 'ac6f5558727e8e9e7250f5609449bc394b8df7f2720c20a9cf7fe06c02c0261f', 'assets/page-art/christ-world/christ-children-colorful-day-960.webp': '1b4ff3216c40799dc36e8c017837958695f29c6dfbcab60982422417391cde9e', 'assets/page-art/christ-world/christ-children-colorful-day-full.webp': 'cc75d691622b3c334ccca0351b7d678c04d2b2e9c86edc2f126a75d6eb2a0841'}.items():
+        if hashlib.sha256((root / name).read_bytes()).hexdigest() != expected:
+            raise ValueError('Exact reviewed chalk asset changed: ' + name)
+    return 1
+
 ROOT = Path(__file__).resolve().parents[1]
 VISIBLE_TOPIC_ROUTES = frozenset({
     'answers/abrahamic-covenant.html', 'answers/what-is-eternal-marriage.html',
@@ -418,6 +433,10 @@ def main() -> int:
     for relative in ART_STUDY_PAGES:
         expected_supporting = 4 + sum(e['page'] == relative and not e['talk'] for e in reviewed_supporting)
         text = (ROOT / relative).read_text(encoding="utf-8")
+        try:
+            expected_supporting += reviewed_chalk_supporting(ROOT, relative, text)
+        except (OSError, ValueError) as exc:
+            errors.append(str(exc))
         supporting = [anchor for anchor in re.findall(r'<a\b[^>]*>', text) if 'data-art-study-supporting' in anchor]
         if len(supporting) != expected_supporting or any('data-full-image-viewer' in anchor for anchor in supporting):
             errors.append(f"{relative}: requires {expected_supporting} manifest-bound supporting picture study triggers without direct full-size activation")

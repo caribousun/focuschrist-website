@@ -6123,6 +6123,28 @@
       ]
     },
     {
+      "title": "Christ and a father arrange potted plants on a porch while the family and neighbors gather.",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/christ-world/christ-homecoming-celebration-960.webp",
+      "fullImage": "/assets/page-art/christ-world/christ-homecoming-celebration-full.webp",
+      "alt": "Christ and a father arrange potted plants on a porch while the family and neighbors gather.",
+      "id": "art-acb62992dc00",
+      "occurrences": [
+        {
+          "id": "source-a85e4f0d4672",
+          "page": "/answers/faith-in-jesus-christ-during-trials.html",
+          "pageTitle": "Faith in Trials",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/christ-world/christ-homecoming-celebration-full.webp\"]:has(img[src=\"../assets/page-art/christ-world/christ-homecoming-celebration-960.webp\"])",
+          "title": "Christ and a father arrange potted plants on a porch while the family and neighbors gather."
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Christ and a girl share their handmade paper stars in a warmly decorated family room.",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/christ-world/christ-christmas-light-960.webp",
@@ -6138,6 +6160,28 @@
           "kind": "topic",
           "selector": "a[href=\"assets/page-art/christ-world/christ-christmas-light-full.webp\"]:has(img[src=\"assets/page-art/christ-world/christ-christmas-light-960.webp\"])",
           "title": "Christ and a girl share their handmade paper stars in a warmly decorated family room."
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Christ and an older man pack food and fresh vegetables at a community food pantry.",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/christ-world/christ-food-pantry-960.webp",
+      "fullImage": "/assets/page-art/christ-world/christ-food-pantry-full.webp",
+      "alt": "Christ and an older man pack food and fresh vegetables at a community food pantry.",
+      "id": "art-9450f62a5cc2",
+      "occurrences": [
+        {
+          "id": "source-3e0cc577ac68",
+          "page": "/answers/are-latter-day-saints-christian.html",
+          "pageTitle": "Christian Identity",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/christ-world/christ-food-pantry-full.webp\"]:has(img[src=\"../assets/page-art/christ-world/christ-food-pantry-960.webp\"])",
+          "title": "Christ and an older man pack food and fresh vegetables at a community food pantry."
         }
       ],
       "categories": [
@@ -6252,6 +6296,50 @@
       ],
       "categories": [
         "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Christ helps assemble a shelf while a woman holds a framed photograph among moving boxes.",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/christ-world/christ-moving-day-960.webp",
+      "fullImage": "/assets/page-art/christ-world/christ-moving-day-full.webp",
+      "alt": "Christ helps assemble a shelf while a woman holds a framed photograph among moving boxes.",
+      "id": "art-4451a4adf21f",
+      "occurrences": [
+        {
+          "id": "source-747f4fb942b4",
+          "page": "/answers/divorce-and-faith.html",
+          "pageTitle": "Divorce",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/christ-world/christ-moving-day-full.webp\"]:has(img[src=\"../assets/page-art/christ-world/christ-moving-day-960.webp\"])",
+          "title": "Christ helps assemble a shelf while a woman holds a framed photograph among moving boxes."
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Christ holds yellow chalk beside a sun drawing while children make colorful pictures in a courtyard.",
+      "category": "Art & Study",
+      "thumbnail": "/assets/page-art/christ-world/christ-children-colorful-day-960.webp",
+      "fullImage": "/assets/page-art/christ-world/christ-children-colorful-day-full.webp",
+      "alt": "Christ holds yellow chalk beside a sun drawing while children make colorful pictures in a courtyard.",
+      "id": "art-9dee337683a3",
+      "occurrences": [
+        {
+          "id": "source-9bd0e3faf680",
+          "page": "/art-study/suffer-the-little-children.html",
+          "pageTitle": "Suffer the Little Children",
+          "category": "Art & Study",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/christ-world/christ-children-colorful-day-full.webp\"]:has(img[src=\"../assets/page-art/christ-world/christ-children-colorful-day-960.webp\"])",
+          "title": "Christ holds yellow chalk beside a sun drawing while children make colorful pictures in a courtyard."
+        }
+      ],
+      "categories": [
+        "Art & Study"
       ]
     },
     {
@@ -23171,14 +23259,14 @@
     }
   ],
   "stats": {
-    "artworks": 1043,
-    "occurrences": 1050,
+    "artworks": 1047,
+    "occurrences": 1054,
     "byKind": {
       "artwork": 63,
       "hero": 45,
       "legacy": 39,
       "missionary": 13,
-      "topic": 943
+      "topic": 947
     }
   }
 }

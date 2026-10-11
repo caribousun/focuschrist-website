@@ -154,10 +154,10 @@
       ]
     },
     "art-study/suffer-the-little-children.html": {
-      "html_sha256": "4d2dfed3b3443118c8908736b3048a410b2e80217509e42465ee8894a7ca10d2",
+      "html_sha256": "dfb6e15e77cfc2930ae3b3837819cdf989310cbf7d0ae836cf9fd613e8e83249",
       "coverage_evidence": {
-        "path": "docs/reviews/artwork-explicit-grid-20261004/suffer-the-little-children-coverage.json",
-        "sha256": "f4bded3a66f6d0d85a87d190e51731ffe31a1d511fe10f95bd28d02a633ca75d"
+        "path": "docs/four-scene-artwork/children-coverage.json",
+        "sha256": "2760d2873d170de372b8e9ba79f2c0405e92dc8c9baa10f6f0906419750a6dc3"
       },
       "placements": [
         {
@@ -298,6 +298,19 @@
           "evidence": {
             "path": "docs/reviews/three-studies-strict-20261004/children-quiet-welcome-20261004.json",
             "sha256": "b1427c40480031138b5095edc354535b893403f2f492bab261b0c1d94657847b"
+          }
+        },
+        {
+          "kind": "original",
+          "original_id": "christ-children-colorful-day",
+          "asset": "assets/page-art/christ-world/christ-children-colorful-day-full.webp",
+          "sha256": "cc75d691622b3c334ccca0351b7d678c04d2b2e9c86edc2f126a75d6eb2a0841",
+          "owner_route": "art-study/suffer-the-little-children.html",
+          "owner_section": "christ-children-colorful-day",
+          "depicts_christ": true,
+          "evidence": {
+            "path": "docs/four-scene-artwork/children-original.json",
+            "sha256": "6c2188f70bb164579316e8a35ab27e74dfcb2f5346cb1b104a907efb64f0b185"
           }
         }
       ]

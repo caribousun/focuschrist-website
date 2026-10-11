@@ -214,6 +214,24 @@ def settle_review_errors(reviewed_pages, root=ROOT):
     return errors
 
 
+
+def without_exact_current_chalk(relative, text, html_pages):
+    """Retain old ten-picture regression after separately validating one addition."""
+    key = 'data-exclusive-artwork="christ-children-colorful-day"'
+    owner = 'art-study/suffer-the-little-children.html'
+    if relative != owner:
+        if key in text:
+            raise ValueError('Current chalk figure appeared on the wrong study route')
+        return text
+    from artwork_details_qa import reviewed_chalk_supporting
+    if reviewed_chalk_supporting(ROOT, relative, text) != 1:
+        raise ValueError('Current chalk figure requires exact finished review')
+    asset = '../assets/page-art/christ-world/christ-children-colorful-day-full.webp'
+    if sum(asset in page for page in html_pages) != 1:
+        raise ValueError('Current chalk artwork requires exactly one canonical owning page')
+    figures = [figure for figure in re.findall(r'<figure\b[\s\S]*?</figure>', text) if key in figure]
+    return text.replace(figures[0], '', 1)
+
 def main() -> int:
     errors: list[str] = []
     from first_topic_completion_qa import check as check_first_topic_completion
@@ -246,6 +264,10 @@ def main() -> int:
         expected_supporting = 4 + len(page_additions)
         page = ROOT / relative
         text = page.read_text(encoding="utf-8")
+        try:
+            text = without_exact_current_chalk(relative, text, html_pages)
+        except (OSError, ValueError) as exc:
+            errors.append(str(exc))
         parser = AuditParser()
         parser.feed(text)
         parser.close()

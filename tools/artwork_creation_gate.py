@@ -391,7 +391,7 @@ def run(root, mode='release', scene=None, page_overrides=None):
     correction_record = json.loads((root / 'docs/artwork-correction-reviews.json').read_text(encoding='utf-8'))
     from artwork_owner_closure import validate as validate_owner_closure
     validate_owner_closure(root, correction_record['owner_requirement_closure'],
-        '35f81fd71faafbad21a97a0c5aad33be37f4abf025240703baa5446b004215c3', pixel_hash)
+        '981f588a3c26292c51b0e41683f057ee8e8581f9d9f4e471c89574b835200d0f', pixel_hash)
     corrections, correction_hashes, correction_pixels = validate_reviewed_corrections(
         root, correction_record, approved_corrections_binding, added, covered, rejected, pixel_hash, inventory)
     require(not (correction_hashes & originals) and not (correction_pixels & original_pixels), 'Correction family duplicates another creation')
@@ -408,8 +408,18 @@ def run(root, mode='release', scene=None, page_overrides=None):
     covered |= seasonal
     originals |= seasonal_hashes
     original_pixels |= seasonal_pixels
+    # Exact four-scene current equivalence is additive; historical preflight is not claimed.
+    from artwork_four_scene_delivery import validate as validate_four_scene_delivery
+    approved_four_scene_binding = 'b5d2578c017f999ce9a959719a6d22c28c24b0ff2f89489863b175a559a72b32'
+    four_scene_record = json.loads((root / 'docs/artwork-four-scene-delivery-reviews.json').read_text(encoding='utf-8'))
+    four_scene, four_scene_hashes, four_scene_pixels = validate_four_scene_delivery(
+        root, four_scene_record, approved_four_scene_binding, added, covered, rejected, pixel_hash, page_dependencies)
+    require(not (four_scene_hashes & originals) and not (four_scene_pixels & original_pixels), 'Four-scene family duplicates another creation')
+    covered |= four_scene
+    originals |= four_scene_hashes
+    original_pixels |= four_scene_pixels
     require(added == covered, 'New artwork missing exact review coverage: ' + ', '.join(sorted(added - covered)))
-    if creations or historical or corrections or seasonal:
+    if creations or historical or corrections or seasonal or four_scene:
         for name in inventory:
             path = root / name
             if path.suffix.lower() in RASTERS:

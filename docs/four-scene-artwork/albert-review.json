@@ -1,0 +1,43 @@
+{
+  "reviewer": "Albert",
+  "decision": "CONCUR",
+  "spec_sha256": "dee1297439f681207ca505f317afa56b94acecea48ae215f915a06d7c14952da",
+  "inspection": "Actual root in-app browser. Earlier phone four-route checks and chalk desktop v4 retained; this segment completed moving-day, pantry, homecoming desktop and final chalk phone plus full-size and surrounding-study returns for all four.",
+  "checks": [
+    "All four source images retain existing triple finished-source concurrence; no image redraw in assembly.",
+    "Desktop moving-day/pantry/homecoming: proportional image beside warm readable paragraph prose, gold headings and readable source controls, established teal palette.",
+    "Chalk final v4 phone: proportional full scene with letterbox containment, readable cream paragraphs on matching teal, no green gradient block or horizontal overflow. Final screenshot chalk-phone-v4 replaces historical pre-v4 phone screenshot.",
+    "Actual each study dialog opens with correct corresponding image and complete paragraphs, full-size viewer opens, Escape returns to study, surrounding study closes dialogs and focuses correct heading.",
+    "Settled return heading top: moving-day67.950px desktop, pantry68px desktop, homecoming67.787px desktop, chalk15.637px phone; corresponding intended headings visible.",
+    "Preview process failure caused unstyled failed image loads; Thunder recovered own process, root full reload observed restored assets. No page or candidate correction needed."
+  ],
+  "evidence_outputs": [
+    "outputs/four-scene-review/moving-day-desktop-return.png",
+    "outputs/four-scene-review/pantry-desktop.png",
+    "outputs/four-scene-review/homecoming-desktop.png",
+    "outputs/four-scene-review/chalk-phone-v4.png",
+    "outputs/four-scene-review/chalk-desktop-v4.png"
+  ],
+  "limits": [
+    "Current assembled equivalence only, not historical three-role preflight reconstruction, print/download execution, final installation or public release. Final registration/code package review remains required."
+  ],
+  "reviewed_at": "2026-10-11T10:07:54.867517+00:00",
+  "desktop_phone_direct_browser_review": true,
+  "no_individual_owner_acceptance_claim": true,
+  "evidence": [
+    "All four source images retain existing triple finished-source concurrence; no image redraw in assembly.",
+    "Desktop moving-day/pantry/homecoming: proportional image beside warm readable paragraph prose, gold headings and readable source controls, established teal palette.",
+    "Chalk final v4 phone: proportional full scene with letterbox containment, readable cream paragraphs on matching teal, no green gradient block or horizontal overflow. Final screenshot chalk-phone-v4 replaces historical pre-v4 phone screenshot.",
+    "Actual each study dialog opens with correct corresponding image and complete paragraphs, full-size viewer opens, Escape returns to study, surrounding study closes dialogs and focuses correct heading.",
+    "Settled return heading top: moving-day67.950px desktop, pantry68px desktop, homecoming67.787px desktop, chalk15.637px phone; corresponding intended headings visible.",
+    "Preview process failure caused unstyled failed image loads; Thunder recovered own process, root full reload observed restored assets. No page or candidate correction needed.",
+    "outputs/four-scene-review/moving-day-desktop-return.png",
+    "outputs/four-scene-review/pantry-desktop.png",
+    "outputs/four-scene-review/homecoming-desktop.png",
+    "outputs/four-scene-review/chalk-phone-v4.png",
+    "outputs/four-scene-review/chalk-desktop-v4.png",
+    "outputs/four-scene-review/homecoming-inline-v5.png"
+  ],
+  "prior_review": "work\\ROOT-FOUR-SCENE-V4-ASSEMBLED-REVIEW.json",
+  "delta_scope": "Actual root in-app browser inspected all3 new inline links Matthew25/Psalm100/Mark10 after freshreload/navigation: correct exact verse href, readable gold/cream contrast, unchanged paragraph words/layout. Existing four-route direct desktopphone/fullsize/returns and native reviews reused for unchanged images/helper; no repeated test claim."
+}
