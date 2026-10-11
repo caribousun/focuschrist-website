@@ -391,7 +391,7 @@ def run(root, mode='release', scene=None, page_overrides=None):
     correction_record = json.loads((root / 'docs/artwork-correction-reviews.json').read_text(encoding='utf-8'))
     from artwork_owner_closure import validate as validate_owner_closure
     validate_owner_closure(root, correction_record['owner_requirement_closure'],
-        '981f588a3c26292c51b0e41683f057ee8e8581f9d9f4e471c89574b835200d0f', pixel_hash)
+        '368c141cc8bb4d79250a42f077cedd5ec158eb9359467840d096b95c90be68e2', pixel_hash)
     corrections, correction_hashes, correction_pixels = validate_reviewed_corrections(
         root, correction_record, approved_corrections_binding, added, covered, rejected, pixel_hash, inventory)
     require(not (correction_hashes & originals) and not (correction_pixels & original_pixels), 'Correction family duplicates another creation')
@@ -410,7 +410,7 @@ def run(root, mode='release', scene=None, page_overrides=None):
     original_pixels |= seasonal_pixels
     # Exact four-scene current equivalence is additive; historical preflight is not claimed.
     from artwork_four_scene_delivery import validate as validate_four_scene_delivery
-    approved_four_scene_binding = 'b5d2578c017f999ce9a959719a6d22c28c24b0ff2f89489863b175a559a72b32'
+    approved_four_scene_binding = 'add31f5af49b78bb5dfd7d322ed956286db9fa5775dbb90ea11190ecc10bbc3d'
     four_scene_record = json.loads((root / 'docs/artwork-four-scene-delivery-reviews.json').read_text(encoding='utf-8'))
     four_scene, four_scene_hashes, four_scene_pixels = validate_four_scene_delivery(
         root, four_scene_record, approved_four_scene_binding, added, covered, rejected, pixel_hash, page_dependencies)
