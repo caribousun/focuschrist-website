@@ -2877,7 +2877,7 @@
         },
         {
           "path": "timeline-images.js",
-          "sha256": "68dbec358f875d89560675f5a7d61ee528ad7b9e68b4e182244f9a5f10237612"
+          "sha256": "1c7e95e27c3d1439b91eb839821ac8a4d3af110b764bb0d6c307a3782a8278f7"
         }
       ],
       "known_asset_paths": [
@@ -6035,6 +6035,408 @@
       }
     ],
     "owner_acceptance": null,
-    "limits": "Actual paired appearance and bounded active-consumer evidence assembled for pre-release integrity. Current owner acceptance and post-correction public closeout remain absent. Final packet review/installation is separate."
+    "limits": "Actual paired appearance and bounded active-consumer evidence assembled for pre-release integrity. Current owner acceptance and post-correction public closeout remain absent. Final packet review/installation is separate.",
+    "prior_timeline_context_contracts": [
+      {
+        "contract": {
+          "inventory_complete": true,
+          "family_ids": [
+            "SITE01",
+            "SITE02",
+            "SITE03",
+            "SITE04",
+            "SITE05",
+            "SITE06",
+            "SITE07",
+            "SITE08",
+            "SITE09",
+            "SITE10",
+            "SITE11",
+            "SITE12",
+            "SITE13",
+            "H1",
+            "H2",
+            "H3",
+            "H4",
+            "H5"
+          ],
+          "references": [
+            {
+              "path": "assets/identities/emma-smith-owner-approved-20260930.png",
+              "sha256": "7d0a07cc673d244ccd54d478c53d1e68d248e39d9b1101f87dfe3681cbb839d1"
+            },
+            {
+              "path": "assets/page-art/emma-life/emma-h4-review.png",
+              "sha256": "24e0b13c84cabae92c972034f1fc775162b2800a93e4b14d876ca16c31a269ea"
+            },
+            {
+              "path": "assets/identities/emma-smith-approved-gentle-smile-20260930.png",
+              "sha256": "f6d2493babf5d2ab7a6e118a57827f7db05e6aea934feb5739256987ec186688"
+            },
+            {
+              "path": "docs/owner-requirement-evidence/body-and-exception-authority.json",
+              "sha256": "185cb94773047b12cff427cb442fdfb2d82f48e892f36a78ab1508fb416b0379"
+            }
+          ],
+          "exceptions": [
+            {
+              "path": "assets/history/joseph-emma-harmony-1400.webp",
+              "sha256": "f22c1dc3d839480ed45e84b6f6705469cf75f7307db73eecce3722e6bbaa2df7"
+            },
+            {
+              "path": "assets/history/joseph-emma-harmony-800.webp",
+              "sha256": "c12a3ad63df040395d3fd5aa68b944b6fd8d2df06729b468c105cf367635e69c"
+            },
+            {
+              "path": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3-1536.webp",
+              "sha256": "a6c4012577748a4b52253d76ef1f7978ab7aaaae2707c7134832d25005a20f09"
+            },
+            {
+              "path": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3-640.webp",
+              "sha256": "482b50f0cadc0e6a7c1fee3a458f19bb088e51d071f2b9b1f0ff51908edc13be"
+            },
+            {
+              "path": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3-960.webp",
+              "sha256": "b9f8ef1bcb6bd09ce8fb889889ca13b748524140de544fc0db3362c7e349a9a2"
+            },
+            {
+              "path": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3.png",
+              "sha256": "2b2e8e7ce28cb2d9c4d98d12e35c2ba7da1d1c510dd25df00adb49439320fa0f"
+            }
+          ],
+          "required_objections": [
+            {
+              "id": "owner-appearance-reopen",
+              "scope": "Every active Emma likeness except precise owner-preserved Harmony and bedside families",
+              "source_class": "direct_owner_instruction_reported_by_root",
+              "original_event_time": null
+            },
+            {
+              "id": "owner-site05-d0da-rejection",
+              "scope": "Explicitly rejected SITE05d0da cannot return as active source or reencoded pixels",
+              "source_class": "direct_owner_instruction_reported_by_root",
+              "original_event_time": null
+            },
+            {
+              "id": "owner-objection03",
+              "scope": "Separate body review for every applicable scene; unsupported visible pregnancy prohibited, postpartum is not pregnancy",
+              "source_class": "direct_owner_instruction_reported_by_root",
+              "original_event_time": null
+            }
+          ],
+          "consumer_scope": [
+            {
+              "path": "answers/who-was-joseph-smith.html",
+              "sha256": "3ccb9ab354ba8828169d6803f23e5abd8d4ae06b0f802f3cd3c6da8595687d0b"
+            },
+            {
+              "path": "art-gallery.json",
+              "sha256": "3738ddddecd09fea9526f7fea070e450f889dd954901cf6c86683bbb2c4d990b"
+            },
+            {
+              "path": "book-of-mormon-evidences.html",
+              "sha256": "1de53584c7d940b45c7d5584ca12630ca5116e16b617f98d05623cc1d4e35511"
+            },
+            {
+              "path": "church-history.html",
+              "sha256": "b85b61aa5d6f9e0273214f0dcfffc5cfce53754e0a7da221721240c64116f6be"
+            },
+            {
+              "path": "history/emma-hale-smith.html",
+              "sha256": "140ba3313e5de6e33600428827927e6f312ad828acd3b5ead859a04b0ae7fd54"
+            },
+            {
+              "path": "index.html",
+              "sha256": "a74eea4101861b6f94346b9199e4777f0ce061f9e19cf5d3889a8665907b28d7"
+            },
+            {
+              "path": "site-search-index.json",
+              "sha256": "904330823a12cc55bacddf6b690410b60275b49469c17b141a72e12581ddabfe"
+            },
+            {
+              "path": "timeline-images.js",
+              "sha256": "68dbec358f875d89560675f5a7d61ee528ad7b9e68b4e182244f9a5f10237612"
+            }
+          ],
+          "known_asset_paths": [
+            "assets/history/joseph-emma-harmony-1400.webp",
+            "assets/history/joseph-emma-harmony-800.webp",
+            "assets/page-art/bom-evidences/joseph-emma-walk-body-v2-960.webp",
+            "assets/page-art/bom-evidences/joseph-emma-walk-body-v2.webp",
+            "assets/page-art/bom-evidences/joseph-emma-walk-identity-v3-1536.webp",
+            "assets/page-art/bom-evidences/joseph-emma-walk-identity-v3-960.webp",
+            "assets/page-art/bom-evidences/joseph-emma-walk-identity-v3.png",
+            "assets/page-art/bom-evidences/josephemma-bodice-v3-1536.webp",
+            "assets/page-art/bom-evidences/josephemma-bodice-v3-640.webp",
+            "assets/page-art/bom-evidences/josephemma-bodice-v3-960.webp",
+            "assets/page-art/bom-evidences/josephemma-bodice-v3.png",
+            "assets/page-art/bom-evidences/josephemma-identity-v4-1536.webp",
+            "assets/page-art/bom-evidences/josephemma-identity-v4-640.webp",
+            "assets/page-art/bom-evidences/josephemma-identity-v4-960.webp",
+            "assets/page-art/bom-evidences/josephemma-identity-v4.png",
+            "assets/page-art/church-history/relief-society-identity-v4-1672.webp",
+            "assets/page-art/church-history/relief-society-identity-v4-960.webp",
+            "assets/page-art/church-history/relief-society-identity-v4.png",
+            "assets/page-art/church-history/relief-society-torso-v3-960.webp",
+            "assets/page-art/church-history/relief-society-torso-v3.webp",
+            "assets/page-art/emma-life/emma-h1-review-1536.webp",
+            "assets/page-art/emma-life/emma-h1-review-640.webp",
+            "assets/page-art/emma-life/emma-h1-review-960.webp",
+            "assets/page-art/emma-life/emma-h1-review.png",
+            "assets/page-art/emma-life/emma-h2-review-1536.webp",
+            "assets/page-art/emma-life/emma-h2-review-640.webp",
+            "assets/page-art/emma-life/emma-h2-review-960.webp",
+            "assets/page-art/emma-life/emma-h2-review.png",
+            "assets/page-art/emma-life/emma-h3-review-1536.webp",
+            "assets/page-art/emma-life/emma-h3-review-640.webp",
+            "assets/page-art/emma-life/emma-h3-review-960.webp",
+            "assets/page-art/emma-life/emma-h3-review.png",
+            "assets/page-art/emma-life/emma-h4-review-1536.webp",
+            "assets/page-art/emma-life/emma-h4-review-640.webp",
+            "assets/page-art/emma-life/emma-h4-review-960.webp",
+            "assets/page-art/emma-life/emma-h4-review.png",
+            "assets/page-art/emma-life/emma-h5-review-1536.webp",
+            "assets/page-art/emma-life/emma-h5-review-640.webp",
+            "assets/page-art/emma-life/emma-h5-review-960.webp",
+            "assets/page-art/emma-life/emma-h5-review.png",
+            "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3-1536.webp",
+            "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3-640.webp",
+            "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3-960.webp",
+            "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3.png",
+            "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-upper-bodice-v3-1536.webp",
+            "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-upper-bodice-v3-640.webp",
+            "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-upper-bodice-v3-960.webp",
+            "assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-upper-bodice-v3.png",
+            "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-bodice-v3-1536.webp",
+            "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-bodice-v3-640.webp",
+            "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-bodice-v3-960.webp",
+            "assets/page-art/joseph-smith-likeness/family/emma-family-letter-1838-bodice-v3.png",
+            "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2-1536.webp",
+            "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2-640.webp",
+            "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2-960.webp",
+            "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2.png",
+            "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3-1536.webp",
+            "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3-640.webp",
+            "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3-960.webp",
+            "assets/page-art/joseph-smith-likeness/family/emma-relief-service-1842-torso-v3.png",
+            "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-body-season-v3-1536.webp",
+            "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-body-season-v3-640.webp",
+            "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-body-season-v3-960.webp",
+            "assets/page-art/joseph-smith-likeness/family/household-gift-harmony-1828-body-season-v3.png",
+            "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-warm-companionship-v4-1536.webp",
+            "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-warm-companionship-v4-640.webp",
+            "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-warm-companionship-v4-960.webp",
+            "assets/page-art/joseph-smith-likeness/family/journey-to-harmony-1827-warm-companionship-v4.png",
+            "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-torso-v3-1536.webp",
+            "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-torso-v3-640.webp",
+            "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-torso-v3-960.webp",
+            "assets/page-art/joseph-smith-likeness/family/marriage-partnership-1827-torso-v3.png",
+            "assets/portraits/emma-smith-natural-20261008.png"
+          ],
+          "rejected_by_family": {
+            "SITE01": [
+              {
+                "sha256": "091f4aa5620e786d3e72c5720e327c53720455800dce4357bb17eca5f6e7e223",
+                "pixel_sha256": "d180c3b673e594382cec0e5673c8ee97e6904bdcc7be5a83b9e537eb65eca6f7",
+                "basis": "Superseded active likeness; retained historical input, prohibited active display"
+              },
+              {
+                "sha256": "50b46cf8cea6be49b23522cc6d7081f79238472ad2f1cc282078d2d8eba77a67",
+                "pixel_sha256": "e63a3d49a8fb44159d8e486e98320ec41a388f20a3b8411d719db6772f956779",
+                "basis": "Superseded active likeness; retained historical input, prohibited active display"
+              },
+              {
+                "sha256": "ce43b57dfe90272794027c2d3439855d6cda1556644058dbe5e80b904e541973",
+                "pixel_sha256": "a19fc28a49aa52c704df9b1e03b6702a4bdadb9e8a0126be414d89bd96df5e81",
+                "basis": "Superseded active likeness; retained historical input, prohibited active display"
+              },
+              {
+                "sha256": "cbf83e11d899acb1b2a002a17f8b6b440216fbdb363b6168c168f86a04ec674f",
+                "pixel_sha256": "5453c87e44362d42cc0c308f3c42fccb02b4fe86b2c213c55bd13b5d4f6ea5c7",
+                "basis": "Superseded active likeness; retained historical input, prohibited active display"
+              }
+            ],
+            "SITE02": [
+              {
+                "sha256": "b5767224123e0e26ea91681cd192f11eabf2d1c30430d8ca1a842e54c4351341",
+                "pixel_sha256": "7460ac80a1ecf4a0288f703f3c84151ee5511f4daf730aaf223e372f7df48e63",
+                "basis": "Superseded active likeness; retained historical input, prohibited active display"
+              },
+              {
+                "sha256": "f91d7adb0488df4d235e0b400c6e451e90486965b951bcf9c262b58715827a3f",
+                "pixel_sha256": "79f959f15c6848c18abe20830eeb80be290439f5143eb51ef809f80d406e0cae",
+                "basis": "Superseded active likeness; retained historical input, prohibited active display"
+              }
+            ],
+            "SITE05": [
+              {
+                "sha256": "bccc1a78b7592abf8fcdcef4f79f1d89c5446a59f68476c9a230915fbe6b05ea",
+                "pixel_sha256": "6fb8772ce7b665b475baf8ff3a8a21ff05bb6a049654a98d8d40a443e6b95a8e",
+                "basis": "Superseded active likeness; retained historical input, prohibited active display"
+              },
+              {
+                "sha256": "f9f1ebceace304bddcd8f91515e66e95a342a3ec745c24630c23583dd73a339c",
+                "pixel_sha256": "4dd597d1811a938644aed041801ac429f4bdf26d035ca8ec2342a33fe3dbe868",
+                "basis": "Superseded active likeness; retained historical input, prohibited active display"
+              },
+              {
+                "sha256": "cdc83a5153a8b30843e9cb17036fac8138a7b9f1cae63a3d9cb2dd539c9b3a14",
+                "pixel_sha256": "a17876469962b7610d20eca53b98d164dbad0f195f898356a1751b2df4035865",
+                "basis": "Owner rejected d0da or held alternative raw; not accepted final ancestry"
+              },
+              {
+                "sha256": "d0da44b4e3d64417c6ba05c24b83fa73fd82e39aa5a6e2f6dd35ca0b5f8aac0f",
+                "pixel_sha256": "60632e7f4fc16efff877775e36e196c48cd14360a7965ec587800107e2e58f66",
+                "basis": "Owner rejected d0da or held alternative raw; not accepted final ancestry"
+              },
+              {
+                "sha256": "99cf17e3d33d4eb903a7089db3cce94beb0f283c44e8d5ae289419e9952a655b",
+                "pixel_sha256": "e28fc19d7248eed63c65ac79c6ab60146e3136cb591f2028c6f32d16babbc0fc",
+                "basis": "Owner rejected d0da or held alternative raw; not accepted final ancestry"
+              }
+            ]
+          },
+          "unresolved_consumers": [],
+          "nonliteral_resolution_evidence": [
+            {
+              "path": "docs/owner-requirement-evidence/pdf-consumer-resolution.json",
+              "sha256": "f5d87f1f36bc824ddc41d8a3320fbffd52316a5c6140d26a07b33f41d7ed9dd7"
+            },
+            {
+              "path": "docs/owner-requirement-evidence/consumer-trace.json",
+              "sha256": "8556651b0812945564f96e96e43d3e68914fc1aa2c1aea7d790ac349162b5445"
+            }
+          ],
+          "site_origin": "https://focuschrist.com",
+          "exception_families": [
+            {
+              "id": "SITE03",
+              "assets": [
+                {
+                  "path": "assets/history/joseph-emma-harmony-1400.webp",
+                  "sha256": "f22c1dc3d839480ed45e84b6f6705469cf75f7307db73eecce3722e6bbaa2df7"
+                },
+                {
+                  "path": "assets/history/joseph-emma-harmony-800.webp",
+                  "sha256": "c12a3ad63df040395d3fd5aa68b944b6fd8d2df06729b468c105cf367635e69c"
+                }
+              ],
+              "authority": {
+                "path": "docs/owner-requirement-evidence/body-and-exception-authority.json",
+                "sha256": "185cb94773047b12cff427cb442fdfb2d82f48e892f36a78ab1508fb416b0379"
+              }
+            },
+            {
+              "id": "SITE09",
+              "assets": [
+                {
+                  "path": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3-1536.webp",
+                  "sha256": "a6c4012577748a4b52253d76ef1f7978ab7aaaae2707c7134832d25005a20f09"
+                },
+                {
+                  "path": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3-640.webp",
+                  "sha256": "482b50f0cadc0e6a7c1fee3a458f19bb088e51d071f2b9b1f0ff51908edc13be"
+                },
+                {
+                  "path": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3-960.webp",
+                  "sha256": "b9f8ef1bcb6bd09ce8fb889889ca13b748524140de544fc0db3362c7e349a9a2"
+                },
+                {
+                  "path": "assets/page-art/joseph-smith-likeness/family/care-after-loss-1828-visible-cloth-v3.png",
+                  "sha256": "2b2e8e7ce28cb2d9c4d98d12e35c2ba7da1d1c510dd25df00adb49439320fa0f"
+                }
+              ],
+              "authority": {
+                "path": "docs/owner-requirement-evidence/site09-owner-preservation.json",
+                "sha256": "79d58ab272d29d1eaef377f2a60cdd24ce01e3360893d80be424194cb95890cd"
+              }
+            }
+          ],
+          "unchanged_display_families": [
+            {
+              "id": "SITE11",
+              "assets": [
+                {
+                  "path": "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2-1536.webp",
+                  "sha256": "8c081044b5d4e729a7fc9002f42be71ecc9fc574e607596d4d4acf603cf80f48",
+                  "pixel_sha256": "60d7b5e5c4297e9851f35d6b4173c07017729a2d162078f799cb53e52a220f0b",
+                  "dimensions": [
+                    1536,
+                    1024
+                  ],
+                  "format": "WEBP",
+                  "mode": "RGB",
+                  "bytes": 190428
+                },
+                {
+                  "path": "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2-640.webp",
+                  "sha256": "56baadfa2ba0ebeddaa777ebce78078a1a6518565a733628434420fbb7862bd1",
+                  "pixel_sha256": "75410460e825dbe8e7fc4658a7bca297b855457ee9c43cc690e05c46424fc235",
+                  "dimensions": [
+                    640,
+                    427
+                  ],
+                  "format": "WEBP",
+                  "mode": "RGB",
+                  "bytes": 50916
+                },
+                {
+                  "path": "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2-960.webp",
+                  "sha256": "59d602c656b76baa417b02f875804d73964e852ddb723d328eeb805597bbf5e2",
+                  "pixel_sha256": "e169090a6a192c3e28e2881eeb89ff32e9d4d04b6d1245314eaf7fd4c2dd6e2d",
+                  "dimensions": [
+                    960,
+                    640
+                  ],
+                  "format": "WEBP",
+                  "mode": "RGB",
+                  "bytes": 98098
+                },
+                {
+                  "path": "assets/page-art/joseph-smith-likeness/family/emma-prayer-during-arrest-1830-inner-bodice-v2.png",
+                  "sha256": "1bb9ab79c5d315f1eeb8bd3a4ee4dee4eda532832afa435c2c55b7bd9c2b19cd",
+                  "pixel_sha256": "cc23acd78ca344058b3d7c123b992ba419a47cc389403f4db300f85d2edefbae",
+                  "dimensions": [
+                    1536,
+                    1024
+                  ],
+                  "format": "PNG",
+                  "mode": "RGB",
+                  "bytes": 2063360
+                }
+              ],
+              "display_evidence_by_actor": {
+                "/root/fermi_current": [
+                  {
+                    "path": "docs/owner-requirement-evidence/site11-fermi-display.json",
+                    "sha256": "7f1ffc9ded8d1e08bb7d12ace8250d2ae1759ab92806e9ee13d470f39e878ecf"
+                  }
+                ],
+                "/root/newton_current": [
+                  {
+                    "path": "docs/owner-requirement-evidence/site11-newton-display.json",
+                    "sha256": "2e36a5f75f5b3f2553929a52b4003654074b87af9837a4ee07241dcdfabce9a3"
+                  }
+                ],
+                "/root": [
+                  {
+                    "path": "docs/owner-requirement-evidence/site11-root-display.json",
+                    "sha256": "fc580210ef32d2e2b877234b6e36973db1e722c16be25ab59bb6e669d59aa04f"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "binding_sha256": "52c188ff93643f39b7f5f6a40498c4c96399c3eee7321e3b725892a85196a3a5",
+        "reason": "Prior exact consumer bytes retained before reviewed figure insertion ahead of optional bottom navigation; same Emma asset paths and occurrences."
+      }
+    ],
+    "timeline_context_reconciliation": {
+      "reviewer": "Fermi",
+      "scope": "Only timeline-images.js consumer file hash changes. Artwork paths, occurrence counts, families, owner objections, exceptions, identity/body references, and appearance evidence remain unchanged. No new pixel or owner acceptance.",
+      "old_sha256": "68dbec358f875d89560675f5a7d61ee528ad7b9e68b4e182244f9a5f10237612",
+      "new_sha256": "1c7e95e27c3d1439b91eb839821ac8a4d3af110b764bb0d6c307a3782a8278f7"
+    }
   }
 }

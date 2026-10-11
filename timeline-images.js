@@ -1122,7 +1122,8 @@ function render(index){
  var caption=document.createElement('figcaption');caption.textContent=entry.caption;figure.appendChild(caption);
  var source=document.createElement('a');source.href=entry.href;source.textContent=entry.credit?'Image and collection record':'Explore the related story';
  if(entry.credit){source.target='_blank';source.rel='noopener noreferrer';source.title=entry.credit;var credit=document.createElement('span');credit.className='timeline-image-credit';credit.textContent=' '+entry.credit+'.';caption.appendChild(credit);}caption.appendChild(document.createTextNode(' '));caption.appendChild(source);
- container.appendChild(figure);
+ var bottom=container.querySelector(':scope > .timeline-event-navigation-bottom-slot');
+ container.insertBefore(figure,bottom);
 }
 window.addEventListener('timeline:select',function(e){if(e.detail&&Number.isInteger(e.detail.index))render(e.detail.index);});
 window.addEventListener('timeline:filter',clear);
