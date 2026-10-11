@@ -1,0 +1,102 @@
+{
+  "reviewer": "Newton",
+  "reviewed_at": "2026-10-11T22:17:40.879895+00:00",
+  "decision": "CONCUR",
+  "spec_sha256": "c27bd294b8d9d2ab56a431380c91dae8ea54181806e12d06a84c1e5bdf77b263",
+  "no_individual_owner_acceptance_claim": true,
+  "evidence": [
+    {
+      "kind": "Independent recursive exact current spec diff; only context hashes changed",
+      "changes": [
+        {
+          "at": [
+            "scenes",
+            0,
+            "context",
+            7,
+            "sha256"
+          ],
+          "before": "e075a7f977d95a62bcecc7e6676ce2bcd6baf17d08a7cbb7c3c7475eeba26097",
+          "after": "27b6e27ba2399f4e0f1c680b50630ea8cfe4887375ed942290bf7248005d4f76"
+        },
+        {
+          "at": [
+            "scenes",
+            0,
+            "context",
+            10,
+            "sha256"
+          ],
+          "before": "2331f9413780734bb8f03b09c71f16d933b9b16d69993b62f2316e1b39a7dfce",
+          "after": "c6099732d2f2ab858e3dead5b6a99c96fb74068925bce17263c98caf19c5101a"
+        },
+        {
+          "at": [
+            "scenes",
+            1,
+            "context",
+            8,
+            "sha256"
+          ],
+          "before": "2331f9413780734bb8f03b09c71f16d933b9b16d69993b62f2316e1b39a7dfce",
+          "after": "c6099732d2f2ab858e3dead5b6a99c96fb74068925bce17263c98caf19c5101a"
+        },
+        {
+          "at": [
+            "scenes",
+            2,
+            "context",
+            3,
+            "sha256"
+          ],
+          "before": "206c06bfe56f698d31b934be8d0d7b05b99cfed5f178ed60db81148b06654244",
+          "after": "f5e43e47b46b83c05e5663d579bdeedeed10e03d88d915706919909db2d4643d"
+        },
+        {
+          "at": [
+            "scenes",
+            2,
+            "context",
+            8,
+            "sha256"
+          ],
+          "before": "2331f9413780734bb8f03b09c71f16d933b9b16d69993b62f2316e1b39a7dfce",
+          "after": "c6099732d2f2ab858e3dead5b6a99c96fb74068925bce17263c98caf19c5101a"
+        },
+        {
+          "at": [
+            "scenes",
+            3,
+            "context",
+            10,
+            "sha256"
+          ],
+          "before": "2331f9413780734bb8f03b09c71f16d933b9b16d69993b62f2316e1b39a7dfce",
+          "after": "c6099732d2f2ab858e3dead5b6a99c96fb74068925bce17263c98caf19c5101a"
+        }
+      ]
+    },
+    {
+      "kind": "Every current spec path/digest independently exact; all prior review files byte-identical",
+      "prior_record_sha256": "add31f5af49b78bb5dfd7d322ed956286db9fa5775dbb90ea11190ecc10bbc3d"
+    },
+    {
+      "kind": "Current exact3 consumer inverse and stableIDs review",
+      "sha256": "0fa4e90cd54a00731a3e14fc323cb727030467f19bf45b09c6ac5b130c89ec0e"
+    },
+    {
+      "kind": "Home-only return branch independently exact inverse and own desktop/phone retest",
+      "sha256": "b0a78d77c7ed2c3224758aa4a1e641c19f576ae448c826ccc1dc459dfc673b5e"
+    }
+  ],
+  "limits": [
+    "Current context/equivalence review only. All unchanged original source, native event, and derivative judgments are reused from genuine historical reviews, not new execution by this runtime.",
+    "No new source acceptance under later mark standards; all remaining Christmas/Star and other source holds retained. Exact Joy replacement judged only in separate THREE receipt.",
+    "No owner final acceptance, installation or publication. Prior full records and receipts must remain unchanged. Own current browser actions cover exact-three package; no newly claimed historical family browser sweep.",
+    "Children complete inventory is retained historical review on unchanged source/context; no new full Children traversal."
+  ],
+  "private_source_and_event_verification": true,
+  "derivative_pixel_review": true,
+  "assembled_context_review": true,
+  "children_complete_inventory_review": true
+}

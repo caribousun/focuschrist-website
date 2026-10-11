@@ -1,1 +1,879 @@
-{"normalized_at":"2026-10-11T10:31:20.962137+00:00","reviews":[{"path":"docs/four-scene-artwork/albert-voice-review.json","sha256":"6fd4c47736dd41ddfacb6f3cf30ddf4b042fcbd51938ec6f28d831db76b6e558"},{"path":"docs/four-scene-artwork/fermi-voice-review.json","sha256":"c488d85c740b8e8c41ff13c3c7bc513927c93a3a8f10cbc317c2f62bd2f742d2"},{"path":"docs/four-scene-artwork/newton-voice-review.json","sha256":"27435a545c04e6dbcf19473b29b19c9ab526d4215998e5c0664012fa218df3dc"}],"schema":1,"spec":{"classification":"symbolic-christ-contemporary","generation_graph":[{"actual_load_outputs":[{"event_sha256":"e9a631329255948d0d17874c27c678cd47476e49d53597818ab4aae1df88dc0d","timestamp":"2026-10-11T01:05:22.239Z"}],"completion":{"event_sha256":"dec3a78c704e8bd98d3b5a7998d2129732f73a87c591902b5427c850a2546370","timestamp":"2026-10-11T01:08:15.857Z"},"delivery_status":"final-reviewed-source","dispatch":{"event_sha256":"9bfa559cdfd708f2f35ae28a23ce0595a7c611854f6eda94ed03e6290ced89bc","timestamp":"2026-10-11T01:05:59.948Z"},"dispatched_prompt_basis":"Newton independently inspected exact native load output and dispatch variable flow; current source prompt digest rechecked. This field is an explicitly derived binding, not a literal hash field in the original event.","dispatched_prompt_sha256":"6782b740aef0ee64b40610640fbaf32b5620ec43a1875073dfba33556020588d","id":"scene15","prompt_load":{"event_sha256":"44d0cf332f198ce0ea993e7bc2dc6c4df6eea181d26543052bc50b52e79d8c0b","timestamp":"2026-10-11T01:05:21.600Z"},"references":["approved-home"],"source_sha256":"4d8ed6462589a7b2c0574ad60a804e0e2027b654858fbb7b6aed92072e8db198","stored_prompt_sha256":"6782b740aef0ee64b40610640fbaf32b5620ec43a1875073dfba33556020588d"},{"actual_load_outputs":[{"event_sha256":"22ca080319a80b6154c6455d89284b1201ac064aaffa32223ebe9092d301351f","timestamp":"2026-10-11T06:07:08.300Z"}],"completion":{"event_sha256":"899a5e61f958ce82d9a9641d54c4ba2b60058939103249417d0a7b837f601655","timestamp":"2026-10-11T06:10:07.850Z"},"delivery_status":"superseded-not-delivered","dispatch":{"event_sha256":"28a7dd3dc7da146692991e985c7c123f19781088c59ab09744974bbde3244494","timestamp":"2026-10-11T06:08:05.728Z"},"dispatched_prompt_basis":"Newton independently inspected exact native load output and dispatch variable flow; current source prompt digest rechecked. This field is an explicitly derived binding, not a literal hash field in the original event.","dispatched_prompt_sha256":"9a0fd33f12ed16a7495f820d8245aea98dec0757f5c53f3fc85fca1f84330a65","id":"scene26-original","prompt_load":{"event_sha256":"7a976f78148e60e273ab3dfad4ba4e29f0b143e59b91c5ddca867cb0398e964f","timestamp":"2026-10-11T06:07:08.006Z"},"references":["approved-home"],"source_sha256":"bdc586300dcacf4967c3181bf433853792b94867d6cac17566cb29c95eca968b","stored_prompt_sha256":"9a0fd33f12ed16a7495f820d8245aea98dec0757f5c53f3fc85fca1f84330a65"},{"actual_load_outputs":[{"event_sha256":"00503feb9f872edca3deca69c537d0bd19a37961e291648548c5d2427b93cec1","timestamp":"2026-10-11T06:28:56.851Z"},{"event_sha256":"be247f0bf3f0b6a7a26390fbc3e7804e6dd290f28c99142b5e7655d8fb4414c1","timestamp":"2026-10-11T06:28:57.570Z"}],"completion":{"event_sha256":"d5d1f371c54dd26ddb4ac5e0285471190a2c3d03fe3c5aac342ccf5a9a0d3a95","timestamp":"2026-10-11T06:47:59.592Z"},"delivery_status":"final-reviewed-source","dispatch":{"event_sha256":"5725579f1de9e80ce145664d374d8138f9f04131c417cc973441292f5fe7f9a8","timestamp":"2026-10-11T06:45:45.756Z"},"dispatched_prompt_basis":"Newton independently inspected exact native load output and dispatch variable flow; current source prompt digest rechecked. This field is an explicitly derived binding, not a literal hash field in the original event.","dispatched_prompt_sha256":"f9d6ca4752715e3d9e78529751326253c66f339a5ec4c999396a1a8744ed902f","id":"scene26-final","prompt_load":{"event_sha256":"98f9f491e69375c3fbbf3e82c08fcb9c66106e90444d323a093542fd9a52fd83","timestamp":"2026-10-11T06:28:56.543Z"},"references":["scene26-original"],"source_sha256":"d835e757765039247138af12a5fae27cf5655692757254be009dc61576093920","stored_prompt_sha256":"f9d6ca4752715e3d9e78529751326253c66f339a5ec4c999396a1a8744ed902f"},{"actual_load_outputs":[{"event_sha256":"d2c2341154cb97390ad2ea95e570d50e61761b19965dfbfbde8138b20799c882","timestamp":"2026-10-11T07:07:10.493Z"}],"completion":{"event_sha256":"3d84d91f037eea8615812568d19bc7956de60378c0a7cb7fd44e72d7d746902c","timestamp":"2026-10-11T07:09:36.908Z"},"delivery_status":"final-reviewed-source","dispatch":{"event_sha256":"ce378cf441e146641186cdd4c4b4c76f3c375a8774025c845929b286ba44f7cc","timestamp":"2026-10-11T07:07:25.258Z"},"dispatched_prompt_basis":"Newton independently inspected exact native load output and dispatch variable flow; current source prompt digest rechecked. This field is an explicitly derived binding, not a literal hash field in the original event.","dispatched_prompt_sha256":"8a2774b7cf69f3ae93bff4fb6e7341666e1b908fe5c3702669a9af48b84205b9","id":"scene27-final","prompt_load":{"event_sha256":"d38908650d318d757393d976e1422778b679cb9192eafab9b17b1e5113210aa7","timestamp":"2026-10-11T07:07:10.172Z"},"references":["approved-home"],"source_sha256":"c1c592570b8fbc6083d7e39e344eb2a64b609b026f3da44449976e12f3969322","stored_prompt_sha256":"8a2774b7cf69f3ae93bff4fb6e7341666e1b908fe5c3702669a9af48b84205b9"},{"actual_load_outputs":[{"event_sha256":"3094ead4676a51211e5b7e0251fa40bada538b3ac935494c4d13d1245b554f92","timestamp":"2026-10-11T07:42:43.094Z"}],"completion":{"event_sha256":"41d1ac351ceb2a1ff2e9c9b6f6167f544dd2d8e39038bb457b9b6e4235a8e0a7","timestamp":"2026-10-11T07:43:31.439Z"},"delivery_status":"final-reviewed-source","dispatch":{"event_sha256":"66307e510af1709adfbdcc8fb0e796a902f53e6141946214d75469a5df43b954","timestamp":"2026-10-11T07:42:53.521Z"},"dispatched_prompt_basis":"Newton independently inspected exact native load output and dispatch variable flow; current source prompt digest rechecked. This field is an explicitly derived binding, not a literal hash field in the original event.","dispatched_prompt_sha256":"c071373277023b58bfd11da14ab16186097b479c812c90d07635f3db97c4f840","id":"scene18-final","prompt_load":{"event_sha256":"70578ef0ae937fb347ed180fda4e01d7417313103df8cbd497cf7a2ba17746ad","timestamp":"2026-10-11T07:42:42.792Z"},"references":["approved-home"],"source_sha256":"f405305ea6ddd8a78848fced8a1d04d0cfbf78ebbd6abe29c33060ca84a078ff","stored_prompt_sha256":"c071373277023b58bfd11da14ab16186097b479c812c90d07635f3db97c4f840"}],"historical_preparation_audit":{"limitations":["Native logs include replacement/encrypted historical messages; this bounded audit did not recover complete explicit three-role prospective decisions. Existing exact native specification reads support narrower chronology only."],"observed_at":"2026-10-11T09:25:44.609880+00:00","reviewer":"Newton","rows":[{"current_equivalence_required":true,"generation_lineage":"VERIFIED_NATIVE_LOAD_DISPATCH_COMPLETION","historical_gate_preparation":"NOT_CLAIMED","historical_three_role_preflight":"NOT_ESTABLISHED_BY_BOUNDED_AUDIT","id":"scene15","prompt_sha256":"6782b740aef0ee64b40610640fbaf32b5620ec43a1875073dfba33556020588d","source_sha256":"4d8ed6462589a7b2c0574ad60a804e0e2027b654858fbb7b6aed92072e8db198"},{"current_equivalence_required":true,"earlier_newton_read_event":{"evidence_class":"Exact specification read before dispatch; not substituted for explicit concurrence","raw_event_sha256":"d65cdb2f0ea2a410fb2906f5ee84e128dddb1b8c850905f0af3d8b403920c5ac","timestamp":"2026-10-11T06:05:54.248Z"},"generation_lineage":"VERIFIED_NATIVE_LOAD_DISPATCH_COMPLETION","historical_gate_preparation":"NOT_CLAIMED","historical_three_role_preflight":"NOT_ESTABLISHED_BY_BOUNDED_AUDIT","id":"scene26-original","prompt_sha256":"9a0fd33f12ed16a7495f820d8245aea98dec0757f5c53f3fc85fca1f84330a65","source_sha256":"bdc586300dcacf4967c3181bf433853792b94867d6cac17566cb29c95eca968b"},{"current_equivalence_required":true,"earlier_newton_read_event":{"evidence_class":"Exact specification read before dispatch; not substituted for explicit concurrence","raw_event_sha256":"d58f2e1da4e99587193a4cbaaf3913159c68c06af91895a9e0a2c916952d05e2","timestamp":"2026-10-11T06:26:34.992Z"},"generation_lineage":"VERIFIED_NATIVE_LOAD_DISPATCH_COMPLETION","historical_gate_preparation":"NOT_CLAIMED","historical_three_role_preflight":"NOT_ESTABLISHED_BY_BOUNDED_AUDIT","id":"scene26-final","prompt_sha256":"f9d6ca4752715e3d9e78529751326253c66f339a5ec4c999396a1a8744ed902f","source_sha256":"d835e757765039247138af12a5fae27cf5655692757254be009dc61576093920"},{"current_equivalence_required":true,"earlier_newton_read_event":{"evidence_class":"Exact specification read before dispatch; not substituted for explicit concurrence","raw_event_sha256":"563c3b6058a1d3ac9882a01eca7dff91f0f35c3f933166f29497d102f5e186a5","timestamp":"2026-10-11T07:02:22.282Z"},"generation_lineage":"VERIFIED_NATIVE_LOAD_DISPATCH_COMPLETION","historical_gate_preparation":"NOT_CLAIMED","historical_three_role_preflight":"NOT_ESTABLISHED_BY_BOUNDED_AUDIT","id":"scene27-final","prompt_sha256":"8a2774b7cf69f3ae93bff4fb6e7341666e1b908fe5c3702669a9af48b84205b9","source_sha256":"c1c592570b8fbc6083d7e39e344eb2a64b609b026f3da44449976e12f3969322"},{"current_equivalence_required":true,"earlier_newton_read_event":{"evidence_class":"Exact specification read before dispatch; not substituted for explicit concurrence","raw_event_sha256":"a82b0b61d32e1babe62140078b318b716dd8deec83d5c47712840620497e6652","timestamp":"2026-10-11T07:40:38.094Z"},"generation_lineage":"VERIFIED_NATIVE_LOAD_DISPATCH_COMPLETION","historical_gate_preparation":"NOT_CLAIMED","historical_three_role_preflight":"NOT_ESTABLISHED_BY_BOUNDED_AUDIT","id":"scene18-final","prompt_sha256":"c071373277023b58bfd11da14ab16186097b479c812c90d07635f3db97c4f840","source_sha256":"f405305ea6ddd8a78848fced8a1d04d0cfbf78ebbd6abe29c33060ca84a078ff"}],"source_receipt_sha256":"f87ee9c50c05d1291a63be274cb0adc9f102bcfaf3c51802413b0cd9eeab660e"},"historical_preparation_audit_status":"NOT_ESTABLISHED_BY_BOUNDED_AUDIT","identity_reference":{"path":"assets/heroes/home-christ-signature-approved-20260907.png","sha256":"4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b"},"owner_authority":"Direct owner instruction to complete and publish after actual team review, preserving rejected-version holds. No individual final-image vote inferred.","owner_final_image_acceptance":"not-claimed","provenance_class":"Public-safe source/prompt/event hash projection; private originals and actual native events remain separately auditable. No prompt body, private path or governing document content delivered.","registration_class":"CURRENT_EQUIVALENCE","scenes":[{"assets":[{"height":992,"kind":"original","path":"assets/page-art/christ-world/masters/christ-moving-day.png","pixel_sha256":"9bee4873651901b61683f32a1f3f4edbbe309caf43ef63fdaea9e34f8e6c4abf","sha256":"4d8ed6462589a7b2c0574ad60a804e0e2027b654858fbb7b6aed92072e8db198","width":1586},{"height":300,"kind":"lossless-derivative","path":"assets/page-art/christ-world/christ-moving-day-480.webp","pixel_sha256":"803d6bbf5238ab86d9e2fcb95052d4e42ed8abb913fec137728ec7f49dfd59f8","sha256":"362b688d836d3f5a00c9e815654ce8a8262626680e7fba6218c53a21a7706508","width":480},{"height":600,"kind":"lossless-derivative","path":"assets/page-art/christ-world/christ-moving-day-960.webp","pixel_sha256":"f32316779324e4cfb1d108e0e9425bc96423a635d3427d813fca8c9067067462","sha256":"59ab7e8ef417acb7e81d379294707d2edbadafd66ff7882c62630d75e712733d","width":960},{"height":992,"kind":"lossless-derivative","path":"assets/page-art/christ-world/christ-moving-day-full.webp","pixel_sha256":"9bee4873651901b61683f32a1f3f4edbbe309caf43ef63fdaea9e34f8e6c4abf","sha256":"a44edacbd9727be973217e10a45f661d57e805103b77728e065f1b7a3e43406d","width":1586}],"chronology":"Contemporary thematic interaction; risen-Christ healed marks governed by accepted source review","context":[{"path":"answer-navigation.css","sha256":"8112ad6d52ada3bd0b373633fc2e60f5ada7d47fb2204c28e1a09ae01be66a57"},{"path":"answer-opening.css","sha256":"0356c038ad2adcec7206bfcb3d57915b9e2be2cd42024770560f3d9875cc94fb"},{"path":"answer-styles.css","sha256":"82dc51b82d56a129be803420cae47630f053f7af1259c659113fbd7fcd76d6ad"},{"path":"answers-support.css","sha256":"efc158e036d7225ba16ab9a3e4e9d0eca50bb7c5a08eed9e71f95145d636042e"},{"path":"answers/divorce-and-faith.html","sha256":"ee9906ad2713c23e50cc3e51136cc60b95d4f13623efb1ca6732954b07ecfac8"},{"path":"artwork-actions.css","sha256":"fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"},{"path":"artwork-details.css","sha256":"06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"},{"path":"artwork-details.js","sha256":"e075a7f977d95a62bcecc7e6676ce2bcd6baf17d08a7cbb7c3c7475eeba26097"},{"path":"complete-card-rows.css","sha256":"7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"},{"path":"connected-study.css","sha256":"6b61c50c1d8e005074beb2db8fa800377377e6a3c9b955678dd836538fcb48cd"},{"path":"four-scene-artwork.js","sha256":"2331f9413780734bb8f03b09c71f16d933b9b16d69993b62f2316e1b39a7dfce"},{"path":"full-image-viewer.css","sha256":"b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"},{"path":"full-image-viewer.js","sha256":"01d17afd6b3f4bd205292d2544683ba9884b73fa350401cd0e299512b5458152"},{"path":"hero-details.css","sha256":"c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"},{"path":"hero-details.js","sha256":"fff59dbfbd64325aeae947755e7a013a0ae51883c05b959bfaac1865c312f8cf"},{"path":"hero-image-source.js","sha256":"2f8f62cbbffb4f5d5e663b3128aed45fdd35e1deec484589bbfba4e6bbc62704"},{"path":"resource-cards.css","sha256":"4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"},{"path":"site-common.js","sha256":"fc0ae667fd977c6cd66ef2e649ef9da2cbcf5eee4201094dd90ed48b551e6488"},{"path":"site-header.css","sha256":"a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"},{"path":"site-search.css","sha256":"90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"},{"path":"site-search.js","sha256":"2722b477848556bb05ecf0487b890c1d0e25840f912f8ea6140382a340eae099"},{"path":"site-system.css","sha256":"180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"},{"path":"topic-art.css","sha256":"97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"},{"path":"topic-artwork-details.css","sha256":"49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"},{"path":"topic-artwork-details.js","sha256":"face1939c8ba140a6a65348c0199f3eadd23c122e49a92d6079fd3320a182261"},{"path":"topic-heroes.css","sha256":"c0cd96bafe94455fd41d8b6c8357baaa12a0556ce204ba058a1264160acae632"},{"path":"topic-study-pages.css","sha256":"99e1df87cfdcd11751bb16e0ea293a5048cd6f5f73245a791d20492226299236"}],"final_generated_at":"2026-10-11T01:08:15.857Z","generation_ids":["scene15"],"historical_claim":false,"id":"christ-moving-day","owning_section":"christ-moving-day","route":"answers/divorce-and-faith.html"},{"assets":[{"height":992,"kind":"original","path":"assets/page-art/christ-world/masters/christ-food-pantry.png","pixel_sha256":"0e648c99125b344e1f9b32e9d3cd570f5a0042863666951eefbfcca8a3b9bc6b","sha256":"f405305ea6ddd8a78848fced8a1d04d0cfbf78ebbd6abe29c33060ca84a078ff","width":1586},{"height":300,"kind":"lossless-derivative","path":"assets/page-art/christ-world/christ-food-pantry-480.webp","pixel_sha256":"a1ecc9812409a0585ca44fe726a28108200cca3d679afc29a5bb6d303fd69726","sha256":"8e14fad5a0435fb1f9e9d684a791957f149ecbd4f2d83335a91948a98ac5c48c","width":480},{"height":600,"kind":"lossless-derivative","path":"assets/page-art/christ-world/christ-food-pantry-960.webp","pixel_sha256":"cd716026a2de95aeb3f57d0581bf0b7ece7261e7047edc780c30b1a9b0401a0c","sha256":"fdaa35344a331368562bcd3fe49476cd51a6124313693245c3fac6f1b1081013","width":960},{"height":992,"kind":"lossless-derivative","path":"assets/page-art/christ-world/christ-food-pantry-full.webp","pixel_sha256":"0e648c99125b344e1f9b32e9d3cd570f5a0042863666951eefbfcca8a3b9bc6b","sha256":"a443d2bfa5f6a703463e5228d7387b83288f9b5166e43780546b319cd57da85c","width":1586}],"chronology":"Contemporary thematic interaction; risen-Christ healed marks governed by accepted source review","context":[{"path":"answer-navigation.css","sha256":"8112ad6d52ada3bd0b373633fc2e60f5ada7d47fb2204c28e1a09ae01be66a57"},{"path":"answer-opening.css","sha256":"0356c038ad2adcec7206bfcb3d57915b9e2be2cd42024770560f3d9875cc94fb"},{"path":"answer-styles.css","sha256":"82dc51b82d56a129be803420cae47630f053f7af1259c659113fbd7fcd76d6ad"},{"path":"answers/are-latter-day-saints-christian.html","sha256":"9f3626608e158a0a8a74cd35762af5b2fa7773ee7f4ed168c0d8d5ed5e6e7819"},{"path":"artwork-actions.css","sha256":"fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"},{"path":"artwork-details.css","sha256":"06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"},{"path":"complete-card-rows.css","sha256":"7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"},{"path":"connected-study.css","sha256":"6b61c50c1d8e005074beb2db8fa800377377e6a3c9b955678dd836538fcb48cd"},{"path":"four-scene-artwork.js","sha256":"2331f9413780734bb8f03b09c71f16d933b9b16d69993b62f2316e1b39a7dfce"},{"path":"full-image-viewer.css","sha256":"b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"},{"path":"full-image-viewer.js","sha256":"01d17afd6b3f4bd205292d2544683ba9884b73fa350401cd0e299512b5458152"},{"path":"hero-details.css","sha256":"c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"},{"path":"hero-details.js","sha256":"fff59dbfbd64325aeae947755e7a013a0ae51883c05b959bfaac1865c312f8cf"},{"path":"hero-image-source.js","sha256":"2f8f62cbbffb4f5d5e663b3128aed45fdd35e1deec484589bbfba4e6bbc62704"},{"path":"resource-cards.css","sha256":"4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"},{"path":"site-common.js","sha256":"fc0ae667fd977c6cd66ef2e649ef9da2cbcf5eee4201094dd90ed48b551e6488"},{"path":"site-header.css","sha256":"a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"},{"path":"site-search.css","sha256":"90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"},{"path":"site-search.js","sha256":"2722b477848556bb05ecf0487b890c1d0e25840f912f8ea6140382a340eae099"},{"path":"site-system.css","sha256":"180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"},{"path":"topic-art.css","sha256":"97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"},{"path":"topic-artwork-details.css","sha256":"49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"},{"path":"topic-artwork-details.js","sha256":"face1939c8ba140a6a65348c0199f3eadd23c122e49a92d6079fd3320a182261"},{"path":"topic-heroes.css","sha256":"c0cd96bafe94455fd41d8b6c8357baaa12a0556ce204ba058a1264160acae632"},{"path":"topic-study-pages.css","sha256":"99e1df87cfdcd11751bb16e0ea293a5048cd6f5f73245a791d20492226299236"}],"final_generated_at":"2026-10-11T07:43:31.439Z","generation_ids":["scene18-final"],"historical_claim":false,"id":"christ-food-pantry","owning_section":"christ-food-pantry","route":"answers/are-latter-day-saints-christian.html"},{"assets":[{"height":992,"kind":"original","path":"assets/page-art/christ-world/masters/christ-homecoming-celebration.png","pixel_sha256":"1be6d1b02a73f4e32e674c090f29463922619e5b9d9f13b6cbbdb79680c94652","sha256":"d835e757765039247138af12a5fae27cf5655692757254be009dc61576093920","width":1585},{"height":300,"kind":"lossless-derivative","path":"assets/page-art/christ-world/christ-homecoming-celebration-480.webp","pixel_sha256":"dd9dd4913a9b61e5e3cf3b8b06267f7d126ae0eb9b1b098b86cffeaa53901edc","sha256":"68641bc39651fb610b78a485205d556287729f816de6f9b1d309088f1f004753","width":480},{"height":601,"kind":"lossless-derivative","path":"assets/page-art/christ-world/christ-homecoming-celebration-960.webp","pixel_sha256":"1288993c5cd6f0e5231f2c970670be64fc481879c4b680f0202b67d301713fa8","sha256":"dc3013031c5490e2e1bb173e92a672c59be31b8caa24f60e73d9cae03d8fd659","width":960},{"height":992,"kind":"lossless-derivative","path":"assets/page-art/christ-world/christ-homecoming-celebration-full.webp","pixel_sha256":"1be6d1b02a73f4e32e674c090f29463922619e5b9d9f13b6cbbdb79680c94652","sha256":"fd968aac0a69a982f8301aa775291bd86f2f6e4067fa040cca03b43de54f38f6","width":1585}],"chronology":"Contemporary thematic interaction; risen-Christ healed marks governed by accepted source review","context":[{"path":"answer-navigation.css","sha256":"8112ad6d52ada3bd0b373633fc2e60f5ada7d47fb2204c28e1a09ae01be66a57"},{"path":"answer-opening.css","sha256":"0356c038ad2adcec7206bfcb3d57915b9e2be2cd42024770560f3d9875cc94fb"},{"path":"answer-styles.css","sha256":"82dc51b82d56a129be803420cae47630f053f7af1259c659113fbd7fcd76d6ad"},{"path":"answers/faith-in-jesus-christ-during-trials.html","sha256":"206c06bfe56f698d31b934be8d0d7b05b99cfed5f178ed60db81148b06654244"},{"path":"artwork-actions.css","sha256":"fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"},{"path":"artwork-details.css","sha256":"06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"},{"path":"complete-card-rows.css","sha256":"7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"},{"path":"connected-study.css","sha256":"6b61c50c1d8e005074beb2db8fa800377377e6a3c9b955678dd836538fcb48cd"},{"path":"four-scene-artwork.js","sha256":"2331f9413780734bb8f03b09c71f16d933b9b16d69993b62f2316e1b39a7dfce"},{"path":"full-image-viewer.css","sha256":"b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"},{"path":"full-image-viewer.js","sha256":"01d17afd6b3f4bd205292d2544683ba9884b73fa350401cd0e299512b5458152"},{"path":"hero-details.css","sha256":"c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"},{"path":"hero-details.js","sha256":"fff59dbfbd64325aeae947755e7a013a0ae51883c05b959bfaac1865c312f8cf"},{"path":"hero-image-source.js","sha256":"2f8f62cbbffb4f5d5e663b3128aed45fdd35e1deec484589bbfba4e6bbc62704"},{"path":"resource-cards.css","sha256":"4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"},{"path":"site-common.js","sha256":"fc0ae667fd977c6cd66ef2e649ef9da2cbcf5eee4201094dd90ed48b551e6488"},{"path":"site-header.css","sha256":"a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"},{"path":"site-search.css","sha256":"90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"},{"path":"site-search.js","sha256":"2722b477848556bb05ecf0487b890c1d0e25840f912f8ea6140382a340eae099"},{"path":"site-system.css","sha256":"180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"},{"path":"topic-art.css","sha256":"97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"},{"path":"topic-artwork-details.css","sha256":"49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"},{"path":"topic-artwork-details.js","sha256":"face1939c8ba140a6a65348c0199f3eadd23c122e49a92d6079fd3320a182261"},{"path":"topic-heroes.css","sha256":"c0cd96bafe94455fd41d8b6c8357baaa12a0556ce204ba058a1264160acae632"},{"path":"topic-study-pages.css","sha256":"99e1df87cfdcd11751bb16e0ea293a5048cd6f5f73245a791d20492226299236"}],"final_generated_at":"2026-10-11T06:47:59.592Z","generation_ids":["scene26-original","scene26-final"],"historical_claim":false,"id":"christ-homecoming-celebration","owning_section":"christ-homecoming-celebration","route":"answers/faith-in-jesus-christ-during-trials.html"},{"assets":[{"height":992,"kind":"original","path":"assets/page-art/christ-world/masters/christ-children-colorful-day.png","pixel_sha256":"84a2e76b703c56f804c57f0d6384f1da3b9a87c46686789205c84eec02efdd9d","sha256":"c1c592570b8fbc6083d7e39e344eb2a64b609b026f3da44449976e12f3969322","width":1586},{"height":300,"kind":"lossless-derivative","path":"assets/page-art/christ-world/christ-children-colorful-day-480.webp","pixel_sha256":"6228565a2f002c45b8e8955648e08bc7cf1eb9e565cc9018b40fd2367fe97cd5","sha256":"ac6f5558727e8e9e7250f5609449bc394b8df7f2720c20a9cf7fe06c02c0261f","width":480},{"height":600,"kind":"lossless-derivative","path":"assets/page-art/christ-world/christ-children-colorful-day-960.webp","pixel_sha256":"fd436d4cdee05d85d3ae04066f7f413d272db96ce1c557ca91ddf9583fc91691","sha256":"1b4ff3216c40799dc36e8c017837958695f29c6dfbcab60982422417391cde9e","width":960},{"height":992,"kind":"lossless-derivative","path":"assets/page-art/christ-world/christ-children-colorful-day-full.webp","pixel_sha256":"84a2e76b703c56f804c57f0d6384f1da3b9a87c46686789205c84eec02efdd9d","sha256":"cc75d691622b3c334ccca0351b7d678c04d2b2e9c86edc2f126a75d6eb2a0841","width":1586}],"chronology":"Contemporary thematic interaction; risen-Christ healed marks governed by accepted source review","context":[{"path":"answer-styles.css","sha256":"82dc51b82d56a129be803420cae47630f053f7af1259c659113fbd7fcd76d6ad"},{"path":"art-study-enrichment.css","sha256":"b6d58dbb0c04984177a330db8686f0f5be03dff468b6ec2496ef5931b1da91d3"},{"path":"art-study-page.css","sha256":"49e67a7ac8aef05938a10a09d60bce11f227953a9676729ea5390f46259e3af3"},{"path":"art-study/suffer-the-little-children.html","sha256":"dfb6e15e77cfc2930ae3b3837819cdf989310cbf7d0ae836cf9fd613e8e83249"},{"path":"artwork-actions.css","sha256":"fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"},{"path":"artwork-details.css","sha256":"06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"},{"path":"complete-card-rows.css","sha256":"7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"},{"path":"connected-study.css","sha256":"6b61c50c1d8e005074beb2db8fa800377377e6a3c9b955678dd836538fcb48cd"},{"path":"desktop-hero-repairs.css","sha256":"36270651fecfb57cb371580f1fd4df3c2910942665e356245ddf451e5c4d9ecb"},{"path":"four-scene-artwork.css","sha256":"dfa23731ddbf2f7bfc039204e880ebd7e612519d698c6be96c0185ea696a98b9"},{"path":"four-scene-artwork.js","sha256":"2331f9413780734bb8f03b09c71f16d933b9b16d69993b62f2316e1b39a7dfce"},{"path":"full-image-viewer.css","sha256":"b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"},{"path":"full-image-viewer.js","sha256":"01d17afd6b3f4bd205292d2544683ba9884b73fa350401cd0e299512b5458152"},{"path":"hero-details.css","sha256":"c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"},{"path":"hero-details.js","sha256":"fff59dbfbd64325aeae947755e7a013a0ae51883c05b959bfaac1865c312f8cf"},{"path":"hero-image-source.js","sha256":"2f8f62cbbffb4f5d5e663b3128aed45fdd35e1deec484589bbfba4e6bbc62704"},{"path":"resource-cards.css","sha256":"4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"},{"path":"site-common.js","sha256":"fc0ae667fd977c6cd66ef2e649ef9da2cbcf5eee4201094dd90ed48b551e6488"},{"path":"site-header.css","sha256":"a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"},{"path":"site-search.css","sha256":"90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"},{"path":"site-search.js","sha256":"2722b477848556bb05ecf0487b890c1d0e25840f912f8ea6140382a340eae099"},{"path":"site-system.css","sha256":"180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"},{"path":"topic-artwork-details.css","sha256":"49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"},{"path":"topic-artwork-details.js","sha256":"face1939c8ba140a6a65348c0199f3eadd23c122e49a92d6079fd3320a182261"}],"final_generated_at":"2026-10-11T07:09:36.908Z","generation_ids":["scene27-final"],"historical_claim":false,"id":"christ-children-colorful-day","owning_section":"christ-children-colorful-day","route":"art-study/suffer-the-little-children.html"}],"schema":1,"scope":"Exactly four modern scenes15,18,26,27; no general creation waiver","supporting_cast":"Fictional contemporary adults and children; no owner identity vote asserted."}}
+{
+  "normalized_at": "2026-10-11T22:16:29.828681+00:00",
+  "reviews": [
+    {
+      "path": "docs/three-reviewed-20261011/four-albert-review.json",
+      "sha256": "355c0773a621877183eb20aab67819c7426c8e2548facb8f65b56b81676acf70"
+    },
+    {
+      "path": "docs/three-reviewed-20261011/four-fermi-review.json",
+      "sha256": "81d372973851f38ad0fc1c9a55b33561ea8755f64b8ac22e06f4be0345b50940"
+    },
+    {
+      "path": "docs/three-reviewed-20261011/four-newton-review.json",
+      "sha256": "a4469ec424446d8b4951474d272813d7308ef91106cb76c66655f0ce6066f0b6"
+    }
+  ],
+  "schema": 1,
+  "spec": {
+    "classification": "symbolic-christ-contemporary",
+    "generation_graph": [
+      {
+        "actual_load_outputs": [
+          {
+            "event_sha256": "e9a631329255948d0d17874c27c678cd47476e49d53597818ab4aae1df88dc0d",
+            "timestamp": "2026-10-11T01:05:22.239Z"
+          }
+        ],
+        "completion": {
+          "event_sha256": "dec3a78c704e8bd98d3b5a7998d2129732f73a87c591902b5427c850a2546370",
+          "timestamp": "2026-10-11T01:08:15.857Z"
+        },
+        "delivery_status": "final-reviewed-source",
+        "dispatch": {
+          "event_sha256": "9bfa559cdfd708f2f35ae28a23ce0595a7c611854f6eda94ed03e6290ced89bc",
+          "timestamp": "2026-10-11T01:05:59.948Z"
+        },
+        "dispatched_prompt_basis": "Newton independently inspected exact native load output and dispatch variable flow; current source prompt digest rechecked. This field is an explicitly derived binding, not a literal hash field in the original event.",
+        "dispatched_prompt_sha256": "6782b740aef0ee64b40610640fbaf32b5620ec43a1875073dfba33556020588d",
+        "id": "scene15",
+        "prompt_load": {
+          "event_sha256": "44d0cf332f198ce0ea993e7bc2dc6c4df6eea181d26543052bc50b52e79d8c0b",
+          "timestamp": "2026-10-11T01:05:21.600Z"
+        },
+        "references": [
+          "approved-home"
+        ],
+        "source_sha256": "4d8ed6462589a7b2c0574ad60a804e0e2027b654858fbb7b6aed92072e8db198",
+        "stored_prompt_sha256": "6782b740aef0ee64b40610640fbaf32b5620ec43a1875073dfba33556020588d"
+      },
+      {
+        "actual_load_outputs": [
+          {
+            "event_sha256": "22ca080319a80b6154c6455d89284b1201ac064aaffa32223ebe9092d301351f",
+            "timestamp": "2026-10-11T06:07:08.300Z"
+          }
+        ],
+        "completion": {
+          "event_sha256": "899a5e61f958ce82d9a9641d54c4ba2b60058939103249417d0a7b837f601655",
+          "timestamp": "2026-10-11T06:10:07.850Z"
+        },
+        "delivery_status": "superseded-not-delivered",
+        "dispatch": {
+          "event_sha256": "28a7dd3dc7da146692991e985c7c123f19781088c59ab09744974bbde3244494",
+          "timestamp": "2026-10-11T06:08:05.728Z"
+        },
+        "dispatched_prompt_basis": "Newton independently inspected exact native load output and dispatch variable flow; current source prompt digest rechecked. This field is an explicitly derived binding, not a literal hash field in the original event.",
+        "dispatched_prompt_sha256": "9a0fd33f12ed16a7495f820d8245aea98dec0757f5c53f3fc85fca1f84330a65",
+        "id": "scene26-original",
+        "prompt_load": {
+          "event_sha256": "7a976f78148e60e273ab3dfad4ba4e29f0b143e59b91c5ddca867cb0398e964f",
+          "timestamp": "2026-10-11T06:07:08.006Z"
+        },
+        "references": [
+          "approved-home"
+        ],
+        "source_sha256": "bdc586300dcacf4967c3181bf433853792b94867d6cac17566cb29c95eca968b",
+        "stored_prompt_sha256": "9a0fd33f12ed16a7495f820d8245aea98dec0757f5c53f3fc85fca1f84330a65"
+      },
+      {
+        "actual_load_outputs": [
+          {
+            "event_sha256": "00503feb9f872edca3deca69c537d0bd19a37961e291648548c5d2427b93cec1",
+            "timestamp": "2026-10-11T06:28:56.851Z"
+          },
+          {
+            "event_sha256": "be247f0bf3f0b6a7a26390fbc3e7804e6dd290f28c99142b5e7655d8fb4414c1",
+            "timestamp": "2026-10-11T06:28:57.570Z"
+          }
+        ],
+        "completion": {
+          "event_sha256": "d5d1f371c54dd26ddb4ac5e0285471190a2c3d03fe3c5aac342ccf5a9a0d3a95",
+          "timestamp": "2026-10-11T06:47:59.592Z"
+        },
+        "delivery_status": "final-reviewed-source",
+        "dispatch": {
+          "event_sha256": "5725579f1de9e80ce145664d374d8138f9f04131c417cc973441292f5fe7f9a8",
+          "timestamp": "2026-10-11T06:45:45.756Z"
+        },
+        "dispatched_prompt_basis": "Newton independently inspected exact native load output and dispatch variable flow; current source prompt digest rechecked. This field is an explicitly derived binding, not a literal hash field in the original event.",
+        "dispatched_prompt_sha256": "f9d6ca4752715e3d9e78529751326253c66f339a5ec4c999396a1a8744ed902f",
+        "id": "scene26-final",
+        "prompt_load": {
+          "event_sha256": "98f9f491e69375c3fbbf3e82c08fcb9c66106e90444d323a093542fd9a52fd83",
+          "timestamp": "2026-10-11T06:28:56.543Z"
+        },
+        "references": [
+          "scene26-original"
+        ],
+        "source_sha256": "d835e757765039247138af12a5fae27cf5655692757254be009dc61576093920",
+        "stored_prompt_sha256": "f9d6ca4752715e3d9e78529751326253c66f339a5ec4c999396a1a8744ed902f"
+      },
+      {
+        "actual_load_outputs": [
+          {
+            "event_sha256": "d2c2341154cb97390ad2ea95e570d50e61761b19965dfbfbde8138b20799c882",
+            "timestamp": "2026-10-11T07:07:10.493Z"
+          }
+        ],
+        "completion": {
+          "event_sha256": "3d84d91f037eea8615812568d19bc7956de60378c0a7cb7fd44e72d7d746902c",
+          "timestamp": "2026-10-11T07:09:36.908Z"
+        },
+        "delivery_status": "final-reviewed-source",
+        "dispatch": {
+          "event_sha256": "ce378cf441e146641186cdd4c4b4c76f3c375a8774025c845929b286ba44f7cc",
+          "timestamp": "2026-10-11T07:07:25.258Z"
+        },
+        "dispatched_prompt_basis": "Newton independently inspected exact native load output and dispatch variable flow; current source prompt digest rechecked. This field is an explicitly derived binding, not a literal hash field in the original event.",
+        "dispatched_prompt_sha256": "8a2774b7cf69f3ae93bff4fb6e7341666e1b908fe5c3702669a9af48b84205b9",
+        "id": "scene27-final",
+        "prompt_load": {
+          "event_sha256": "d38908650d318d757393d976e1422778b679cb9192eafab9b17b1e5113210aa7",
+          "timestamp": "2026-10-11T07:07:10.172Z"
+        },
+        "references": [
+          "approved-home"
+        ],
+        "source_sha256": "c1c592570b8fbc6083d7e39e344eb2a64b609b026f3da44449976e12f3969322",
+        "stored_prompt_sha256": "8a2774b7cf69f3ae93bff4fb6e7341666e1b908fe5c3702669a9af48b84205b9"
+      },
+      {
+        "actual_load_outputs": [
+          {
+            "event_sha256": "3094ead4676a51211e5b7e0251fa40bada538b3ac935494c4d13d1245b554f92",
+            "timestamp": "2026-10-11T07:42:43.094Z"
+          }
+        ],
+        "completion": {
+          "event_sha256": "41d1ac351ceb2a1ff2e9c9b6f6167f544dd2d8e39038bb457b9b6e4235a8e0a7",
+          "timestamp": "2026-10-11T07:43:31.439Z"
+        },
+        "delivery_status": "final-reviewed-source",
+        "dispatch": {
+          "event_sha256": "66307e510af1709adfbdcc8fb0e796a902f53e6141946214d75469a5df43b954",
+          "timestamp": "2026-10-11T07:42:53.521Z"
+        },
+        "dispatched_prompt_basis": "Newton independently inspected exact native load output and dispatch variable flow; current source prompt digest rechecked. This field is an explicitly derived binding, not a literal hash field in the original event.",
+        "dispatched_prompt_sha256": "c071373277023b58bfd11da14ab16186097b479c812c90d07635f3db97c4f840",
+        "id": "scene18-final",
+        "prompt_load": {
+          "event_sha256": "70578ef0ae937fb347ed180fda4e01d7417313103df8cbd497cf7a2ba17746ad",
+          "timestamp": "2026-10-11T07:42:42.792Z"
+        },
+        "references": [
+          "approved-home"
+        ],
+        "source_sha256": "f405305ea6ddd8a78848fced8a1d04d0cfbf78ebbd6abe29c33060ca84a078ff",
+        "stored_prompt_sha256": "c071373277023b58bfd11da14ab16186097b479c812c90d07635f3db97c4f840"
+      }
+    ],
+    "historical_preparation_audit": {
+      "limitations": [
+        "Native logs include replacement/encrypted historical messages; this bounded audit did not recover complete explicit three-role prospective decisions. Existing exact native specification reads support narrower chronology only."
+      ],
+      "observed_at": "2026-10-11T09:25:44.609880+00:00",
+      "reviewer": "Newton",
+      "rows": [
+        {
+          "current_equivalence_required": true,
+          "generation_lineage": "VERIFIED_NATIVE_LOAD_DISPATCH_COMPLETION",
+          "historical_gate_preparation": "NOT_CLAIMED",
+          "historical_three_role_preflight": "NOT_ESTABLISHED_BY_BOUNDED_AUDIT",
+          "id": "scene15",
+          "prompt_sha256": "6782b740aef0ee64b40610640fbaf32b5620ec43a1875073dfba33556020588d",
+          "source_sha256": "4d8ed6462589a7b2c0574ad60a804e0e2027b654858fbb7b6aed92072e8db198"
+        },
+        {
+          "current_equivalence_required": true,
+          "earlier_newton_read_event": {
+            "evidence_class": "Exact specification read before dispatch; not substituted for explicit concurrence",
+            "raw_event_sha256": "d65cdb2f0ea2a410fb2906f5ee84e128dddb1b8c850905f0af3d8b403920c5ac",
+            "timestamp": "2026-10-11T06:05:54.248Z"
+          },
+          "generation_lineage": "VERIFIED_NATIVE_LOAD_DISPATCH_COMPLETION",
+          "historical_gate_preparation": "NOT_CLAIMED",
+          "historical_three_role_preflight": "NOT_ESTABLISHED_BY_BOUNDED_AUDIT",
+          "id": "scene26-original",
+          "prompt_sha256": "9a0fd33f12ed16a7495f820d8245aea98dec0757f5c53f3fc85fca1f84330a65",
+          "source_sha256": "bdc586300dcacf4967c3181bf433853792b94867d6cac17566cb29c95eca968b"
+        },
+        {
+          "current_equivalence_required": true,
+          "earlier_newton_read_event": {
+            "evidence_class": "Exact specification read before dispatch; not substituted for explicit concurrence",
+            "raw_event_sha256": "d58f2e1da4e99587193a4cbaaf3913159c68c06af91895a9e0a2c916952d05e2",
+            "timestamp": "2026-10-11T06:26:34.992Z"
+          },
+          "generation_lineage": "VERIFIED_NATIVE_LOAD_DISPATCH_COMPLETION",
+          "historical_gate_preparation": "NOT_CLAIMED",
+          "historical_three_role_preflight": "NOT_ESTABLISHED_BY_BOUNDED_AUDIT",
+          "id": "scene26-final",
+          "prompt_sha256": "f9d6ca4752715e3d9e78529751326253c66f339a5ec4c999396a1a8744ed902f",
+          "source_sha256": "d835e757765039247138af12a5fae27cf5655692757254be009dc61576093920"
+        },
+        {
+          "current_equivalence_required": true,
+          "earlier_newton_read_event": {
+            "evidence_class": "Exact specification read before dispatch; not substituted for explicit concurrence",
+            "raw_event_sha256": "563c3b6058a1d3ac9882a01eca7dff91f0f35c3f933166f29497d102f5e186a5",
+            "timestamp": "2026-10-11T07:02:22.282Z"
+          },
+          "generation_lineage": "VERIFIED_NATIVE_LOAD_DISPATCH_COMPLETION",
+          "historical_gate_preparation": "NOT_CLAIMED",
+          "historical_three_role_preflight": "NOT_ESTABLISHED_BY_BOUNDED_AUDIT",
+          "id": "scene27-final",
+          "prompt_sha256": "8a2774b7cf69f3ae93bff4fb6e7341666e1b908fe5c3702669a9af48b84205b9",
+          "source_sha256": "c1c592570b8fbc6083d7e39e344eb2a64b609b026f3da44449976e12f3969322"
+        },
+        {
+          "current_equivalence_required": true,
+          "earlier_newton_read_event": {
+            "evidence_class": "Exact specification read before dispatch; not substituted for explicit concurrence",
+            "raw_event_sha256": "a82b0b61d32e1babe62140078b318b716dd8deec83d5c47712840620497e6652",
+            "timestamp": "2026-10-11T07:40:38.094Z"
+          },
+          "generation_lineage": "VERIFIED_NATIVE_LOAD_DISPATCH_COMPLETION",
+          "historical_gate_preparation": "NOT_CLAIMED",
+          "historical_three_role_preflight": "NOT_ESTABLISHED_BY_BOUNDED_AUDIT",
+          "id": "scene18-final",
+          "prompt_sha256": "c071373277023b58bfd11da14ab16186097b479c812c90d07635f3db97c4f840",
+          "source_sha256": "f405305ea6ddd8a78848fced8a1d04d0cfbf78ebbd6abe29c33060ca84a078ff"
+        }
+      ],
+      "source_receipt_sha256": "f87ee9c50c05d1291a63be274cb0adc9f102bcfaf3c51802413b0cd9eeab660e"
+    },
+    "historical_preparation_audit_status": "NOT_ESTABLISHED_BY_BOUNDED_AUDIT",
+    "identity_reference": {
+      "path": "assets/heroes/home-christ-signature-approved-20260907.png",
+      "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b"
+    },
+    "owner_authority": "Direct owner instruction to complete and publish after actual team review, preserving rejected-version holds. No individual final-image vote inferred.",
+    "owner_final_image_acceptance": "not-claimed",
+    "provenance_class": "Public-safe source/prompt/event hash projection; private originals and actual native events remain separately auditable. No prompt body, private path or governing document content delivered.",
+    "registration_class": "CURRENT_EQUIVALENCE",
+    "scenes": [
+      {
+        "assets": [
+          {
+            "height": 992,
+            "kind": "original",
+            "path": "assets/page-art/christ-world/masters/christ-moving-day.png",
+            "pixel_sha256": "9bee4873651901b61683f32a1f3f4edbbe309caf43ef63fdaea9e34f8e6c4abf",
+            "sha256": "4d8ed6462589a7b2c0574ad60a804e0e2027b654858fbb7b6aed92072e8db198",
+            "width": 1586
+          },
+          {
+            "height": 300,
+            "kind": "lossless-derivative",
+            "path": "assets/page-art/christ-world/christ-moving-day-480.webp",
+            "pixel_sha256": "803d6bbf5238ab86d9e2fcb95052d4e42ed8abb913fec137728ec7f49dfd59f8",
+            "sha256": "362b688d836d3f5a00c9e815654ce8a8262626680e7fba6218c53a21a7706508",
+            "width": 480
+          },
+          {
+            "height": 600,
+            "kind": "lossless-derivative",
+            "path": "assets/page-art/christ-world/christ-moving-day-960.webp",
+            "pixel_sha256": "f32316779324e4cfb1d108e0e9425bc96423a635d3427d813fca8c9067067462",
+            "sha256": "59ab7e8ef417acb7e81d379294707d2edbadafd66ff7882c62630d75e712733d",
+            "width": 960
+          },
+          {
+            "height": 992,
+            "kind": "lossless-derivative",
+            "path": "assets/page-art/christ-world/christ-moving-day-full.webp",
+            "pixel_sha256": "9bee4873651901b61683f32a1f3f4edbbe309caf43ef63fdaea9e34f8e6c4abf",
+            "sha256": "a44edacbd9727be973217e10a45f661d57e805103b77728e065f1b7a3e43406d",
+            "width": 1586
+          }
+        ],
+        "chronology": "Contemporary thematic interaction; risen-Christ healed marks governed by accepted source review",
+        "context": [
+          {
+            "path": "answer-navigation.css",
+            "sha256": "8112ad6d52ada3bd0b373633fc2e60f5ada7d47fb2204c28e1a09ae01be66a57"
+          },
+          {
+            "path": "answer-opening.css",
+            "sha256": "0356c038ad2adcec7206bfcb3d57915b9e2be2cd42024770560f3d9875cc94fb"
+          },
+          {
+            "path": "answer-styles.css",
+            "sha256": "82dc51b82d56a129be803420cae47630f053f7af1259c659113fbd7fcd76d6ad"
+          },
+          {
+            "path": "answers-support.css",
+            "sha256": "efc158e036d7225ba16ab9a3e4e9d0eca50bb7c5a08eed9e71f95145d636042e"
+          },
+          {
+            "path": "answers/divorce-and-faith.html",
+            "sha256": "ee9906ad2713c23e50cc3e51136cc60b95d4f13623efb1ca6732954b07ecfac8"
+          },
+          {
+            "path": "artwork-actions.css",
+            "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+          },
+          {
+            "path": "artwork-details.css",
+            "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+          },
+          {
+            "path": "artwork-details.js",
+            "sha256": "27b6e27ba2399f4e0f1c680b50630ea8cfe4887375ed942290bf7248005d4f76"
+          },
+          {
+            "path": "complete-card-rows.css",
+            "sha256": "7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"
+          },
+          {
+            "path": "connected-study.css",
+            "sha256": "6b61c50c1d8e005074beb2db8fa800377377e6a3c9b955678dd836538fcb48cd"
+          },
+          {
+            "path": "four-scene-artwork.js",
+            "sha256": "c6099732d2f2ab858e3dead5b6a99c96fb74068925bce17263c98caf19c5101a"
+          },
+          {
+            "path": "full-image-viewer.css",
+            "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+          },
+          {
+            "path": "full-image-viewer.js",
+            "sha256": "01d17afd6b3f4bd205292d2544683ba9884b73fa350401cd0e299512b5458152"
+          },
+          {
+            "path": "hero-details.css",
+            "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+          },
+          {
+            "path": "hero-details.js",
+            "sha256": "fff59dbfbd64325aeae947755e7a013a0ae51883c05b959bfaac1865c312f8cf"
+          },
+          {
+            "path": "hero-image-source.js",
+            "sha256": "2f8f62cbbffb4f5d5e663b3128aed45fdd35e1deec484589bbfba4e6bbc62704"
+          },
+          {
+            "path": "resource-cards.css",
+            "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+          },
+          {
+            "path": "site-common.js",
+            "sha256": "fc0ae667fd977c6cd66ef2e649ef9da2cbcf5eee4201094dd90ed48b551e6488"
+          },
+          {
+            "path": "site-header.css",
+            "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+          },
+          {
+            "path": "site-search.css",
+            "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+          },
+          {
+            "path": "site-search.js",
+            "sha256": "2722b477848556bb05ecf0487b890c1d0e25840f912f8ea6140382a340eae099"
+          },
+          {
+            "path": "site-system.css",
+            "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+          },
+          {
+            "path": "topic-art.css",
+            "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"
+          },
+          {
+            "path": "topic-artwork-details.css",
+            "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+          },
+          {
+            "path": "topic-artwork-details.js",
+            "sha256": "face1939c8ba140a6a65348c0199f3eadd23c122e49a92d6079fd3320a182261"
+          },
+          {
+            "path": "topic-heroes.css",
+            "sha256": "c0cd96bafe94455fd41d8b6c8357baaa12a0556ce204ba058a1264160acae632"
+          },
+          {
+            "path": "topic-study-pages.css",
+            "sha256": "99e1df87cfdcd11751bb16e0ea293a5048cd6f5f73245a791d20492226299236"
+          }
+        ],
+        "final_generated_at": "2026-10-11T01:08:15.857Z",
+        "generation_ids": [
+          "scene15"
+        ],
+        "historical_claim": false,
+        "id": "christ-moving-day",
+        "owning_section": "christ-moving-day",
+        "route": "answers/divorce-and-faith.html"
+      },
+      {
+        "assets": [
+          {
+            "height": 992,
+            "kind": "original",
+            "path": "assets/page-art/christ-world/masters/christ-food-pantry.png",
+            "pixel_sha256": "0e648c99125b344e1f9b32e9d3cd570f5a0042863666951eefbfcca8a3b9bc6b",
+            "sha256": "f405305ea6ddd8a78848fced8a1d04d0cfbf78ebbd6abe29c33060ca84a078ff",
+            "width": 1586
+          },
+          {
+            "height": 300,
+            "kind": "lossless-derivative",
+            "path": "assets/page-art/christ-world/christ-food-pantry-480.webp",
+            "pixel_sha256": "a1ecc9812409a0585ca44fe726a28108200cca3d679afc29a5bb6d303fd69726",
+            "sha256": "8e14fad5a0435fb1f9e9d684a791957f149ecbd4f2d83335a91948a98ac5c48c",
+            "width": 480
+          },
+          {
+            "height": 600,
+            "kind": "lossless-derivative",
+            "path": "assets/page-art/christ-world/christ-food-pantry-960.webp",
+            "pixel_sha256": "cd716026a2de95aeb3f57d0581bf0b7ece7261e7047edc780c30b1a9b0401a0c",
+            "sha256": "fdaa35344a331368562bcd3fe49476cd51a6124313693245c3fac6f1b1081013",
+            "width": 960
+          },
+          {
+            "height": 992,
+            "kind": "lossless-derivative",
+            "path": "assets/page-art/christ-world/christ-food-pantry-full.webp",
+            "pixel_sha256": "0e648c99125b344e1f9b32e9d3cd570f5a0042863666951eefbfcca8a3b9bc6b",
+            "sha256": "a443d2bfa5f6a703463e5228d7387b83288f9b5166e43780546b319cd57da85c",
+            "width": 1586
+          }
+        ],
+        "chronology": "Contemporary thematic interaction; risen-Christ healed marks governed by accepted source review",
+        "context": [
+          {
+            "path": "answer-navigation.css",
+            "sha256": "8112ad6d52ada3bd0b373633fc2e60f5ada7d47fb2204c28e1a09ae01be66a57"
+          },
+          {
+            "path": "answer-opening.css",
+            "sha256": "0356c038ad2adcec7206bfcb3d57915b9e2be2cd42024770560f3d9875cc94fb"
+          },
+          {
+            "path": "answer-styles.css",
+            "sha256": "82dc51b82d56a129be803420cae47630f053f7af1259c659113fbd7fcd76d6ad"
+          },
+          {
+            "path": "answers/are-latter-day-saints-christian.html",
+            "sha256": "9f3626608e158a0a8a74cd35762af5b2fa7773ee7f4ed168c0d8d5ed5e6e7819"
+          },
+          {
+            "path": "artwork-actions.css",
+            "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+          },
+          {
+            "path": "artwork-details.css",
+            "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+          },
+          {
+            "path": "complete-card-rows.css",
+            "sha256": "7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"
+          },
+          {
+            "path": "connected-study.css",
+            "sha256": "6b61c50c1d8e005074beb2db8fa800377377e6a3c9b955678dd836538fcb48cd"
+          },
+          {
+            "path": "four-scene-artwork.js",
+            "sha256": "c6099732d2f2ab858e3dead5b6a99c96fb74068925bce17263c98caf19c5101a"
+          },
+          {
+            "path": "full-image-viewer.css",
+            "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+          },
+          {
+            "path": "full-image-viewer.js",
+            "sha256": "01d17afd6b3f4bd205292d2544683ba9884b73fa350401cd0e299512b5458152"
+          },
+          {
+            "path": "hero-details.css",
+            "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+          },
+          {
+            "path": "hero-details.js",
+            "sha256": "fff59dbfbd64325aeae947755e7a013a0ae51883c05b959bfaac1865c312f8cf"
+          },
+          {
+            "path": "hero-image-source.js",
+            "sha256": "2f8f62cbbffb4f5d5e663b3128aed45fdd35e1deec484589bbfba4e6bbc62704"
+          },
+          {
+            "path": "resource-cards.css",
+            "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+          },
+          {
+            "path": "site-common.js",
+            "sha256": "fc0ae667fd977c6cd66ef2e649ef9da2cbcf5eee4201094dd90ed48b551e6488"
+          },
+          {
+            "path": "site-header.css",
+            "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+          },
+          {
+            "path": "site-search.css",
+            "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+          },
+          {
+            "path": "site-search.js",
+            "sha256": "2722b477848556bb05ecf0487b890c1d0e25840f912f8ea6140382a340eae099"
+          },
+          {
+            "path": "site-system.css",
+            "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+          },
+          {
+            "path": "topic-art.css",
+            "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"
+          },
+          {
+            "path": "topic-artwork-details.css",
+            "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+          },
+          {
+            "path": "topic-artwork-details.js",
+            "sha256": "face1939c8ba140a6a65348c0199f3eadd23c122e49a92d6079fd3320a182261"
+          },
+          {
+            "path": "topic-heroes.css",
+            "sha256": "c0cd96bafe94455fd41d8b6c8357baaa12a0556ce204ba058a1264160acae632"
+          },
+          {
+            "path": "topic-study-pages.css",
+            "sha256": "99e1df87cfdcd11751bb16e0ea293a5048cd6f5f73245a791d20492226299236"
+          }
+        ],
+        "final_generated_at": "2026-10-11T07:43:31.439Z",
+        "generation_ids": [
+          "scene18-final"
+        ],
+        "historical_claim": false,
+        "id": "christ-food-pantry",
+        "owning_section": "christ-food-pantry",
+        "route": "answers/are-latter-day-saints-christian.html"
+      },
+      {
+        "assets": [
+          {
+            "height": 992,
+            "kind": "original",
+            "path": "assets/page-art/christ-world/masters/christ-homecoming-celebration.png",
+            "pixel_sha256": "1be6d1b02a73f4e32e674c090f29463922619e5b9d9f13b6cbbdb79680c94652",
+            "sha256": "d835e757765039247138af12a5fae27cf5655692757254be009dc61576093920",
+            "width": 1585
+          },
+          {
+            "height": 300,
+            "kind": "lossless-derivative",
+            "path": "assets/page-art/christ-world/christ-homecoming-celebration-480.webp",
+            "pixel_sha256": "dd9dd4913a9b61e5e3cf3b8b06267f7d126ae0eb9b1b098b86cffeaa53901edc",
+            "sha256": "68641bc39651fb610b78a485205d556287729f816de6f9b1d309088f1f004753",
+            "width": 480
+          },
+          {
+            "height": 601,
+            "kind": "lossless-derivative",
+            "path": "assets/page-art/christ-world/christ-homecoming-celebration-960.webp",
+            "pixel_sha256": "1288993c5cd6f0e5231f2c970670be64fc481879c4b680f0202b67d301713fa8",
+            "sha256": "dc3013031c5490e2e1bb173e92a672c59be31b8caa24f60e73d9cae03d8fd659",
+            "width": 960
+          },
+          {
+            "height": 992,
+            "kind": "lossless-derivative",
+            "path": "assets/page-art/christ-world/christ-homecoming-celebration-full.webp",
+            "pixel_sha256": "1be6d1b02a73f4e32e674c090f29463922619e5b9d9f13b6cbbdb79680c94652",
+            "sha256": "fd968aac0a69a982f8301aa775291bd86f2f6e4067fa040cca03b43de54f38f6",
+            "width": 1585
+          }
+        ],
+        "chronology": "Contemporary thematic interaction; risen-Christ healed marks governed by accepted source review",
+        "context": [
+          {
+            "path": "answer-navigation.css",
+            "sha256": "8112ad6d52ada3bd0b373633fc2e60f5ada7d47fb2204c28e1a09ae01be66a57"
+          },
+          {
+            "path": "answer-opening.css",
+            "sha256": "0356c038ad2adcec7206bfcb3d57915b9e2be2cd42024770560f3d9875cc94fb"
+          },
+          {
+            "path": "answer-styles.css",
+            "sha256": "82dc51b82d56a129be803420cae47630f053f7af1259c659113fbd7fcd76d6ad"
+          },
+          {
+            "path": "answers/faith-in-jesus-christ-during-trials.html",
+            "sha256": "f5e43e47b46b83c05e5663d579bdeedeed10e03d88d915706919909db2d4643d"
+          },
+          {
+            "path": "artwork-actions.css",
+            "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+          },
+          {
+            "path": "artwork-details.css",
+            "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+          },
+          {
+            "path": "complete-card-rows.css",
+            "sha256": "7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"
+          },
+          {
+            "path": "connected-study.css",
+            "sha256": "6b61c50c1d8e005074beb2db8fa800377377e6a3c9b955678dd836538fcb48cd"
+          },
+          {
+            "path": "four-scene-artwork.js",
+            "sha256": "c6099732d2f2ab858e3dead5b6a99c96fb74068925bce17263c98caf19c5101a"
+          },
+          {
+            "path": "full-image-viewer.css",
+            "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+          },
+          {
+            "path": "full-image-viewer.js",
+            "sha256": "01d17afd6b3f4bd205292d2544683ba9884b73fa350401cd0e299512b5458152"
+          },
+          {
+            "path": "hero-details.css",
+            "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+          },
+          {
+            "path": "hero-details.js",
+            "sha256": "fff59dbfbd64325aeae947755e7a013a0ae51883c05b959bfaac1865c312f8cf"
+          },
+          {
+            "path": "hero-image-source.js",
+            "sha256": "2f8f62cbbffb4f5d5e663b3128aed45fdd35e1deec484589bbfba4e6bbc62704"
+          },
+          {
+            "path": "resource-cards.css",
+            "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+          },
+          {
+            "path": "site-common.js",
+            "sha256": "fc0ae667fd977c6cd66ef2e649ef9da2cbcf5eee4201094dd90ed48b551e6488"
+          },
+          {
+            "path": "site-header.css",
+            "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+          },
+          {
+            "path": "site-search.css",
+            "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+          },
+          {
+            "path": "site-search.js",
+            "sha256": "2722b477848556bb05ecf0487b890c1d0e25840f912f8ea6140382a340eae099"
+          },
+          {
+            "path": "site-system.css",
+            "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+          },
+          {
+            "path": "topic-art.css",
+            "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"
+          },
+          {
+            "path": "topic-artwork-details.css",
+            "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+          },
+          {
+            "path": "topic-artwork-details.js",
+            "sha256": "face1939c8ba140a6a65348c0199f3eadd23c122e49a92d6079fd3320a182261"
+          },
+          {
+            "path": "topic-heroes.css",
+            "sha256": "c0cd96bafe94455fd41d8b6c8357baaa12a0556ce204ba058a1264160acae632"
+          },
+          {
+            "path": "topic-study-pages.css",
+            "sha256": "99e1df87cfdcd11751bb16e0ea293a5048cd6f5f73245a791d20492226299236"
+          }
+        ],
+        "final_generated_at": "2026-10-11T06:47:59.592Z",
+        "generation_ids": [
+          "scene26-original",
+          "scene26-final"
+        ],
+        "historical_claim": false,
+        "id": "christ-homecoming-celebration",
+        "owning_section": "christ-homecoming-celebration",
+        "route": "answers/faith-in-jesus-christ-during-trials.html"
+      },
+      {
+        "assets": [
+          {
+            "height": 992,
+            "kind": "original",
+            "path": "assets/page-art/christ-world/masters/christ-children-colorful-day.png",
+            "pixel_sha256": "84a2e76b703c56f804c57f0d6384f1da3b9a87c46686789205c84eec02efdd9d",
+            "sha256": "c1c592570b8fbc6083d7e39e344eb2a64b609b026f3da44449976e12f3969322",
+            "width": 1586
+          },
+          {
+            "height": 300,
+            "kind": "lossless-derivative",
+            "path": "assets/page-art/christ-world/christ-children-colorful-day-480.webp",
+            "pixel_sha256": "6228565a2f002c45b8e8955648e08bc7cf1eb9e565cc9018b40fd2367fe97cd5",
+            "sha256": "ac6f5558727e8e9e7250f5609449bc394b8df7f2720c20a9cf7fe06c02c0261f",
+            "width": 480
+          },
+          {
+            "height": 600,
+            "kind": "lossless-derivative",
+            "path": "assets/page-art/christ-world/christ-children-colorful-day-960.webp",
+            "pixel_sha256": "fd436d4cdee05d85d3ae04066f7f413d272db96ce1c557ca91ddf9583fc91691",
+            "sha256": "1b4ff3216c40799dc36e8c017837958695f29c6dfbcab60982422417391cde9e",
+            "width": 960
+          },
+          {
+            "height": 992,
+            "kind": "lossless-derivative",
+            "path": "assets/page-art/christ-world/christ-children-colorful-day-full.webp",
+            "pixel_sha256": "84a2e76b703c56f804c57f0d6384f1da3b9a87c46686789205c84eec02efdd9d",
+            "sha256": "cc75d691622b3c334ccca0351b7d678c04d2b2e9c86edc2f126a75d6eb2a0841",
+            "width": 1586
+          }
+        ],
+        "chronology": "Contemporary thematic interaction; risen-Christ healed marks governed by accepted source review",
+        "context": [
+          {
+            "path": "answer-styles.css",
+            "sha256": "82dc51b82d56a129be803420cae47630f053f7af1259c659113fbd7fcd76d6ad"
+          },
+          {
+            "path": "art-study-enrichment.css",
+            "sha256": "b6d58dbb0c04984177a330db8686f0f5be03dff468b6ec2496ef5931b1da91d3"
+          },
+          {
+            "path": "art-study-page.css",
+            "sha256": "49e67a7ac8aef05938a10a09d60bce11f227953a9676729ea5390f46259e3af3"
+          },
+          {
+            "path": "art-study/suffer-the-little-children.html",
+            "sha256": "dfb6e15e77cfc2930ae3b3837819cdf989310cbf7d0ae836cf9fd613e8e83249"
+          },
+          {
+            "path": "artwork-actions.css",
+            "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+          },
+          {
+            "path": "artwork-details.css",
+            "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+          },
+          {
+            "path": "complete-card-rows.css",
+            "sha256": "7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"
+          },
+          {
+            "path": "connected-study.css",
+            "sha256": "6b61c50c1d8e005074beb2db8fa800377377e6a3c9b955678dd836538fcb48cd"
+          },
+          {
+            "path": "desktop-hero-repairs.css",
+            "sha256": "36270651fecfb57cb371580f1fd4df3c2910942665e356245ddf451e5c4d9ecb"
+          },
+          {
+            "path": "four-scene-artwork.css",
+            "sha256": "dfa23731ddbf2f7bfc039204e880ebd7e612519d698c6be96c0185ea696a98b9"
+          },
+          {
+            "path": "four-scene-artwork.js",
+            "sha256": "c6099732d2f2ab858e3dead5b6a99c96fb74068925bce17263c98caf19c5101a"
+          },
+          {
+            "path": "full-image-viewer.css",
+            "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+          },
+          {
+            "path": "full-image-viewer.js",
+            "sha256": "01d17afd6b3f4bd205292d2544683ba9884b73fa350401cd0e299512b5458152"
+          },
+          {
+            "path": "hero-details.css",
+            "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+          },
+          {
+            "path": "hero-details.js",
+            "sha256": "fff59dbfbd64325aeae947755e7a013a0ae51883c05b959bfaac1865c312f8cf"
+          },
+          {
+            "path": "hero-image-source.js",
+            "sha256": "2f8f62cbbffb4f5d5e663b3128aed45fdd35e1deec484589bbfba4e6bbc62704"
+          },
+          {
+            "path": "resource-cards.css",
+            "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+          },
+          {
+            "path": "site-common.js",
+            "sha256": "fc0ae667fd977c6cd66ef2e649ef9da2cbcf5eee4201094dd90ed48b551e6488"
+          },
+          {
+            "path": "site-header.css",
+            "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+          },
+          {
+            "path": "site-search.css",
+            "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+          },
+          {
+            "path": "site-search.js",
+            "sha256": "2722b477848556bb05ecf0487b890c1d0e25840f912f8ea6140382a340eae099"
+          },
+          {
+            "path": "site-system.css",
+            "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+          },
+          {
+            "path": "topic-artwork-details.css",
+            "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+          },
+          {
+            "path": "topic-artwork-details.js",
+            "sha256": "face1939c8ba140a6a65348c0199f3eadd23c122e49a92d6079fd3320a182261"
+          }
+        ],
+        "final_generated_at": "2026-10-11T07:09:36.908Z",
+        "generation_ids": [
+          "scene27-final"
+        ],
+        "historical_claim": false,
+        "id": "christ-children-colorful-day",
+        "owning_section": "christ-children-colorful-day",
+        "route": "art-study/suffer-the-little-children.html"
+      }
+    ],
+    "schema": 1,
+    "scope": "Exactly four modern scenes15,18,26,27; no general creation waiver",
+    "supporting_cast": "Fictional contemporary adults and children; no owner identity vote asserted."
+  },
+  "prior_context_record": {
+    "path": "docs/three-reviewed-20261011/prior-artwork-four-scene-delivery-reviews.json",
+    "sha256": "add31f5af49b78bb5dfd7d322ed956286db9fa5775dbb90ea11190ecc10bbc3d"
+  },
+  "context_change_scope": "Current exact three source substitutions and scoped Home heading return; historical source, pixel and owner judgments preserved in the complete prior record. No new individual owner acceptance.",
+  "current_review_projection": {
+    "executor": "Lightning",
+    "scope": "Public copies omit only private actor_session metadata. Original author, decision, evidence, limitations and all review fields otherwise unchanged; complete originals retained privately.",
+    "receipts": [
+      {
+        "public_path": "docs/three-reviewed-20261011/four-albert-review.json",
+        "original_receipt_sha256": "7c9bc487df6e91ac762d65d5c54b0fb8daa48bd3c4f28b8a2c2f1013427c09b3",
+        "omitted_fields": [
+          "actor_session"
+        ]
+      },
+      {
+        "public_path": "docs/three-reviewed-20261011/four-fermi-review.json",
+        "original_receipt_sha256": "469b05ec4560afd788b36f8896720299d836d64ef9cf25e52e4af6de525c1bf3",
+        "omitted_fields": [
+          "actor_session"
+        ]
+      }
+    ]
+  }
+}

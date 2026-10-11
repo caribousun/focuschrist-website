@@ -13,7 +13,7 @@
         },
         '/answers/faith-in-jesus-christ-during-trials.html': {
             scene: '#christ-homecoming-celebration',
-            image: '/assets/page-art/christ-world/christ-homecoming-celebration-full.webp',
+            image: '/assets/page-art/christ-world/christ-homecoming-celebration-dorsal-20261011-full.webp',
             destination: '#continue-study'
         },
         '/art-study/suffer-the-little-children.html': {

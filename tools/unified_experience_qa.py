@@ -349,7 +349,7 @@ def main() -> int:
             fail(errors, f"{relative}: Christ image hero variant missing")
 
     home = (ROOT / "index.html").read_text(encoding="utf-8")
-    home_art = "assets/page-art/home-seek-study-remember.webp"
+    home_art = "assets/page-art/home-seek-study-four-marks-20261011-full.webp"
     if not re.search(r'src="' + re.escape(home_art) + r'(?:\?[^"\s]*)?"', home) or 'class="fc-content-artwork fc-home-purpose-art"' not in home:
         fail(errors, "index.html: approved supporting artwork missing or not wired")
     for marker in ('href="home.css?v=', 'class="fc-home-purpose-split"', 'class="fc-home-purpose-copy"'):

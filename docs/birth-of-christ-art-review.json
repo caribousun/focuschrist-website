@@ -322,24 +322,25 @@
       "caption": "The shepherds hear news of great joy: the Savior is born. They are given a sign that will help them find the child.",
       "scripture": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/2?id=p8-p14&lang=eng#p8",
       "label": "Luke 2:8–14",
-      "asset": "assets/page-art/birth-of-christ/13-shepherds-message-full.webp",
-      "thumbnail": "assets/page-art/birth-of-christ/13-shepherds-message-800.webp",
-      "source_file": "exec-1cc22e38-1d03-4604-9cb8-f88c055f2821.png",
-      "source_sha256": "9e37345155d08f43aed7946a32bbb048e216a8c204cdfd441e49a4b8a12f89da",
-      "sha256": "da2d4741684bb2172f273bc98f079e2821879261c879d8c66c0f84f68fc7d301",
-      "thumbnail_sha256": "2c85a0a6bb317a1899fc9c0c156f895630878f47702e0304e769369e3a4d6bf3",
+      "asset": "assets/page-art/birth-of-christ/13-shepherds-message-mixed-host-20261011-full.webp",
+      "thumbnail": "assets/page-art/birth-of-christ/13-shepherds-message-mixed-host-20261011-800.webp",
+      "source_file": "13-shepherds-message-mixed-host-20261011.png",
+      "source_sha256": "4ae5bed79922f91dd6e136a24da712f046759f450ea03e658a5fd0fd5901c279",
+      "sha256": "65b40399cff54e2e4ead0bd31121d7a65018629228203b1612460153091bb186",
+      "thumbnail_sha256": "21af54d8347085d152e53343465336a69ff075dc9c02f79f1812a0a12e29be74",
       "width": 1536,
       "height": 1024,
       "reviewed": true,
       "technical_review_passed": true,
-      "owner_approval": true,
+      "owner_approval": false,
       "review": {
-        "independent": "Exact source filename and SHA-256 independently visually reviewed in docs/birth-of-christ-art-review.md. Source, expression, anatomy, gaze and narrative variety passed.",
-        "continuity": "Recurring Mary, Joseph and Gabriel compared with working character references; infant and toddler are age-appropriate artistic interpretations.",
-        "source": "Exact scripture ranges and caption claims separately reviewed; ancient appearances and environments are artistic interpretations.",
-        "delivery": "Full WebP decoded RGB pixels equal reviewed original PNG; thumbnail is a proportional delivery variant."
+        "independent": "Fermi, Newton and Albert reviewed the exact final4ae5 source; current assembled-context review pending.",
+        "continuity": "Original13 family, local composition/hem correction; historical source retained separately.",
+        "source": "Existing Luke passage and visitor prose unchanged.",
+        "delivery": "Full lossless decoded RGB equals final PNG; thumbnail equals proportional Lanczos."
       },
-      "owner_approval_evidence": "Wyatt, active task2026-09-19: all of these images are wonderful and enriched as the user likes. Good job. Feel free to create more if it further enhances the stories and I hope you are using all the ones you have created."
+      "owner_approval_evidence": "No new individual owner acceptance claimed. Exact source reviewed by Fermi, Newton and Albert under authorized correction scope; previous source approval retained in prior record.",
+      "current_source_review": "Exact three-source reviewed correction; original record retained in docs/three-reviewed-20261011/prior-birth-of-christ-art-review.json"
     },
     {
       "key": "14-shepherds-find",

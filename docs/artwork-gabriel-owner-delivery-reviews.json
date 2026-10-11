@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "prepared_at": "2026-10-11T20:33:20.451205+00:00",
+  "prepared_at": "2026-10-11T22:08:55.682213+00:00",
   "spec": {
     "classification": "owner-approved-scripture-illustrations",
     "registration_class": "EXACT_OWNER_APPROVED_REPLACEMENTS",
@@ -105,7 +105,7 @@
       },
       {
         "path": "art-gallery.json",
-        "sha256": "bbd05a265c300847fde5ea095995c4c37f23b16afdec5ff5376c22eace46a590"
+        "sha256": "5fb9f428a7e4bbf63cd9b5721ca7e576b14bbfa8334c073343f84e49efb8fcb1"
       },
       {
         "path": "artwork-actions.css",
@@ -117,7 +117,7 @@
       },
       {
         "path": "birth-of-christ.html",
-        "sha256": "b43065c8707d67c4c696c370739a53c4afd2856f9697c4afae6c86f178ce9b89"
+        "sha256": "370dace852ba8ff8a2830b790ba4f5693d4982701a8bbdfe08b321adc2b8aeaf"
       },
       {
         "path": "complete-card-rows.css",
@@ -161,7 +161,7 @@
       },
       {
         "path": "site-search-index.json",
-        "sha256": "ccc4ac875da65cfc1f56da16e9636f42221dc304fb27cf35cac508ec206a44b4"
+        "sha256": "0580850c55f433ef70faa25f085e70dc81cdf648795bd674dd5ca978812a86a6"
       },
       {
         "path": "site-search.css",
@@ -189,7 +189,7 @@
       },
       {
         "path": "tools/build_art_gallery.py",
-        "sha256": "2b3e46085d99a5bfab1b14ebd2b51310ca4a1fd063489d0df3c994d215597a44"
+        "sha256": "f21b8a39171e7f9a998c34f66896bdcba922146f80825bae3f7d60372b3d804c"
       },
       {
         "path": "topic-art.css",
@@ -215,16 +215,47 @@
   },
   "reviews": [
     {
-      "path": "docs/gabriel-owner-20261011/gabriel-albert-review.json",
-      "sha256": "a367a8c7749c749daf6af2290f451b273657751ae1e29731e6c2f784c8bfcdce"
+      "path": "docs/three-reviewed-20261011/gabriel-albert-review.json",
+      "sha256": "7ad8de984376a39fa3bc1302c6307ce0f5f2ff2d8feb51d527dd9b7375da85f1"
     },
     {
-      "path": "docs/gabriel-owner-20261011/gabriel-fermi-review.json",
-      "sha256": "217c92ffe900fd6364c8003e69cdaee4a2718ad6e9f257f6320fef5fa1a8c986"
+      "path": "docs/three-reviewed-20261011/gabriel-fermi-review.json",
+      "sha256": "0e01a838fd4984ae2d5167e4a39246bb588f6982a2fd8ec60a5ea6cae9582fb4"
     },
     {
-      "path": "docs/gabriel-owner-20261011/gabriel-newton-review.json",
-      "sha256": "0acafdc98e40039c8787076cb998726477f7f3217e2bb5fcf2a153e35fa11d43"
+      "path": "docs/three-reviewed-20261011/gabriel-newton-review.json",
+      "sha256": "f5f551473033179bd8ebb4281fd128d993e0c871af809985be568e28d1ce07da"
     }
-  ]
+  ],
+  "prior_context_record": {
+    "path": "docs/three-reviewed-20261011/prior-artwork-gabriel-owner-delivery-reviews.json",
+    "sha256": "a60b7c8ab47c4a7f289bf6579856e80efa1f11aedc73ebff4d3bf7e268fe0e06"
+  },
+  "context_change_scope": "Current exact three source substitutions and scoped Home heading return; historical source, pixel and owner judgments preserved in the complete prior record. No new individual owner acceptance.",
+  "current_review_projection": {
+    "executor": "Lightning",
+    "scope": "Public copies omit only private actor_session metadata. Original author, decision, evidence, limitations and all review fields otherwise unchanged; complete originals retained privately.",
+    "receipts": [
+      {
+        "public_path": "docs/three-reviewed-20261011/gabriel-fermi-review.json",
+        "original_receipt_sha256": "aa93f72b2be5cadb1e0f06f4dc50f6b549d71729601892d0349c08bdde00ca2a",
+        "omitted_fields": [
+          "actor_session"
+        ]
+      },
+      {
+        "public_path": "docs/three-reviewed-20261011/gabriel-albert-review.json",
+        "original_receipt_sha256": "5c23aa951fff5028cfd481113e8c789cfbcbb934c2cb8e3d81273bffebb83845",
+        "omitted_fields": [
+          "actor_session"
+        ]
+      }
+    ]
+  },
+  "current_author_receipt_correction": {
+    "reviewer": "Albert",
+    "prior_public_receipt_sha256": "d755d8249cf296974e40d3774072958323174deaf062bcfcd8386f41cae76840",
+    "current_original_receipt_sha256": "5c23aa951fff5028cfd481113e8c789cfbcbb934c2cb8e3d81273bffebb83845",
+    "scope": "Original author supplies mandatory source-and-derivative/current-context verification fields with bounded historical reuse; no image, vote or owner acceptance change."
+  }
 }

@@ -1,0 +1,21 @@
+{
+  "reviewer": "Fermi",
+  "decision": "CONCUR",
+  "spec_sha256": "cfd3c78216bf209f468ef467029a1cd9a86886db9653f6c031aaace814c90529",
+  "reviewed_at": "2026-10-11T22:17:06.572Z",
+  "source_pixel_review": true,
+  "derivative_pixel_review": true,
+  "assembled_context_review": true,
+  "no_individual_owner_acceptance_claim": true,
+  "evidence": [
+    "Own exact full derivative and3thumbnail views, all9 SHA+decodedRGB/Lanczos assertions passed via verify-three-pixels.py. Original sources unchanged from historical approvals; own finished native derivative view confirms original current scene quality, reciprocal gaze, appropriate subtle visible marks, hands and texture.",
+    "Own supported local4280 browser4/tab2 desktop1280x900/phone390x844 all3 dialogs, fullsize and Escape passed. Joy return desktop67.8625/nav52 phone15.6375/navoff; Shepherd67.800/nav52 phone16.375/navoff.",
+    "Home initial return defect preserved in THREE-FINISHED-REVIEW-HOLD.json. Lightning minimal Home-only heading return repair reviewed as code diff; new exact artwork-details27b6e27b/index07e35b3d. Own fresh actual retest fullsize/Escape/Continue desktop heading67.8625 nav52 and phone15.600 navoff, correct heading focused and fully visible in screenshots. This closes only that reproduction.",
+    "Current THREE spec rebind includes actual repaired Home context. Images unchanged, prior Joy/Shepherd flows remain applicable. Native screenshot evidence in own CUA session."
+  ],
+  "limits": [
+    "Private candidate only; no release/publication or Wyatt new final acceptance claim.",
+    "Historical source/pixel votes reused explicitly and original authors retain attribution.",
+    "Initial failure retained; broader rapid-start reliability unresolved, not waived."
+  ]
+}
