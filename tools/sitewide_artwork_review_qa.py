@@ -961,6 +961,9 @@ def main():
     excluded_styles.add(VIEWER_STYLE)
     check(reviewed_four_scene_style((ROOT/'four-scene-artwork.css').read_bytes(), visitor_viewer_sources()), 'Four-scene chalk surface differs from exact reviewed rule/bytes/sole owner')
     excluded_styles.add('four-scene-artwork.css')
+    from six_scene_legacy_contracts import reviewed_style as reviewed_six_scene_style
+    check(reviewed_six_scene_style((ROOT/'six-scene-artwork.css').read_bytes(), visitor_viewer_sources()), 'Six-scene CSS exact bytes/owners/link contract changed')
+    excluded_styles.add('six-scene-artwork.css')
     check(reviewed_six_presentation_style((ROOT/'targeted-six.css').read_bytes(), visitor_viewer_sources()), 'Six-page presentation differs from exact screen-only stylesheet/owner opt-ins')
     excluded_styles.add('targeted-six.css')
     check(reviewed_answers_six_style((ROOT/'answers-illustrated-study.css').read_bytes(), visitor_viewer_sources()), 'Answers six-study CSS differs from exact reviewed bytes/sole owner/six bindings')

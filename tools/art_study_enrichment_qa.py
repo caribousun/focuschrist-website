@@ -265,6 +265,8 @@ def main() -> int:
         page = ROOT / relative
         text = page.read_text(encoding="utf-8")
         try:
+            from six_scene_legacy_contracts import legacy_text
+            text = legacy_text(relative, text, ROOT)
             text = without_exact_current_chalk(relative, text, html_pages)
         except (OSError, ValueError) as exc:
             errors.append(str(exc))
@@ -317,7 +319,8 @@ def main() -> int:
         ):
             errors.append(f"{relative}: every supporting artwork caption needs an official scripture or Church link")
 
-        entries = reviewed_pages.get(relative, [])
+        from six_scene_legacy_contracts import legacy_reviews
+        entries = legacy_reviews(relative, reviewed_pages.get(relative, []), ROOT)
         reviewed_assets = ["../" + entry.get("asset", "") for entry in entries]
         if len(entries) != expected_supporting or any(
             not entry.get("reviewed") or not entry.get("tone") or not re.fullmatch(r"[0-9a-f]{64}", entry.get("sha256", ""))

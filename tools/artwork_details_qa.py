@@ -466,6 +466,10 @@ def main() -> int:
         text = (ROOT / relative).read_text(encoding="utf-8")
         try:
             expected_supporting += reviewed_chalk_supporting(ROOT, relative, text)
+            from six_scene_legacy_contracts import legacy_text, NEW_REVIEWS
+            if relative in NEW_REVIEWS:
+                legacy_text(relative, text, ROOT)  # Exact bound addition; retained trigger checks still run below.
+                expected_supporting += 1
         except (OSError, ValueError) as exc:
             errors.append(str(exc))
         supporting = [anchor for anchor in re.findall(r'<a\b[^>]*>', text) if 'data-art-study-supporting' in anchor]

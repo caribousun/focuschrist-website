@@ -12,6 +12,10 @@ SPEC.loader.exec_module(mandate)
 # Preserve historical token tests against the exact page preceding the reviewed chalk addition.
 def historical_test_bytes(route):
     raw = (ROOT / route).read_bytes()
+    from six_scene_legacy_contracts import legacy_text, NEW_REVIEWS
+    if route in NEW_REVIEWS:
+        # Exercise the existing token inverses on their exact historical inputs.
+        return legacy_text(route, raw.decode('utf8'), ROOT).encode('utf8')
     if route != 'art-study/suffer-the-little-children.html':
         return raw
     assert hashlib.sha256(raw).hexdigest() == 'dfb6e15e77cfc2930ae3b3837819cdf989310cbf7d0ae836cf9fd613e8e83249'
@@ -108,6 +112,25 @@ class ExactFeaturedBinding(unittest.TestCase):
                 ):
                     self.assertFalse(mandate.reviewed_page_binding(BytesPage(mutation), route, expected))
 
+
+    def test_current_six_scene_exact_binding(self):
+        import json
+        from six_scene_legacy_contracts import NEW_REVIEWS
+        inventory = json.loads((ROOT / 'docs/art-study-current-mandate-inventory.json').read_bytes())
+        for route, review in NEW_REVIEWS.items():
+            with self.subTest(route=route):
+                raw = (ROOT / route).read_bytes()
+                expected = inventory['pages'][route]['html_sha256']
+                self.assertEqual(hashlib.sha256(raw).hexdigest(), expected)
+                self.assertNotEqual(expected, mandate.REVIEWED_PAGE_HASHES[route])
+                self.assertTrue(mandate.reviewed_page_binding(BytesPage(raw), route, expected))
+                scene = review['asset'].split('/')[-1].removesuffix('-full.webp').encode()
+                for changed in (raw + b' ', raw.replace(scene, b'wrong-scene'),
+                                raw.replace(b'Christ', b'Changed', 1),
+                                raw.replace(b'https://www.churchofjesuschrist.org/', b'https://example.com/'),
+                                raw.replace(b'20261011-six-source-1', b'unknown-six-source')):
+                    self.assertNotEqual(changed, raw)
+                    self.assertFalse(mandate.reviewed_page_binding(BytesPage(changed), route, expected))
 
     def test_current_children_exact_binding(self):
         route = 'art-study/suffer-the-little-children.html'

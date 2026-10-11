@@ -1,0 +1,20 @@
+{
+  "reviewer": "Newton",
+  "at": "2026-10-11T12:12:09.772492+00:00",
+  "decision": "CONCUR_PRIVATE_DEPENDENCY_PREPARATION_FINAL_CONTEXT_PENDING",
+  "manifest_sha256": "ff57fbb2b5af85a583f145ca8ff6a6bb38621e51684db423c6aace646f48f760",
+  "spec_sha256": "fcce9e63e03582c5a206839dfc1706a8e22e6cdcb4d85486d7bb16d71c03454b",
+  "actual_checks": [
+    "Full finite validator source read; exact6routes8nodes24rasters/current-equivalence and no-owner-vote limits enforced.",
+    "Independently8 source/storedpromptfile hashes and all native load/output/dispatch/completion line hashes verified.",
+    "Exact8 stored prompts independently found in decoded actual native load outputs; actual load/store variable code and dispatch reference ordering inspected.",
+    "Read18test results and retained phone failures; no synthetic fixture converted into actual approval."
+  ],
+  "remaining": [
+    "Additional duplicate/reviewer/backdating/malformed-event/recomputed-pixel negatives requested.",
+    "Independent assembled browser and derivative review still pending; rapid-click failures need concrete investigation.",
+    "Historical preparation stays NOT_ESTABLISHED; draft Newton label does not constitute final current equivalence receipt.",
+    "Final dependency and gate package pending."
+  ],
+  "scope": "Private dependency preparation allowed; no product installation or final six-source normalization approval."
+}

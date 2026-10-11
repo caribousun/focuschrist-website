@@ -1,0 +1,58 @@
+{
+  "reviewer": "Fermi",
+  "decision": "CONCUR",
+  "spec_sha256": "ee491b849da0c8aab58e8ad2355b4728b2630d605ab9896e7aa7190e39babcc0",
+  "reviewed_at": "2026-10-11T13:24:57.565695+00:00",
+  "no_individual_owner_acceptance_claim": true,
+  "private_source_and_event_verification": true,
+  "derivative_pixel_review": true,
+  "assembled_context_review": true,
+  "complete_owner_classification": true,
+  "evidence": [
+    {
+      "path": "work\\fermi\\SIX-EIGHT-NATIVE-NODE-ACTUAL-AUDIT.txt",
+      "sha256": "ef88b538640e5184191a2ded59c5ddf49a40783b811d510a83027b78e4d78141",
+      "scope": "Personally ran read-only verifier, inspected actual load/store and image dispatch code for all8 nodes, reference order, completion statuses/paths and prompt-load output membership. Exact native event raw-byte hashes, prompt/reference/source bytes and chronological ordering verified."
+    },
+    {
+      "path": "work\\lightning\\six-integration\\verify_native_lineage_readonly.py",
+      "sha256": "011c5771f2e8d01266f53c95ab89953f2d182cabb0124e6be6a60a1888987312",
+      "scope": "Full verifier code read before execution; no writes or reconstruction."
+    },
+    {
+      "path": "work\\lightning\\six-integration\\SIX-SOURCE-NATIVE-LINEAGE.json",
+      "sha256": "dc1bbc36ddf01772b6be9ea8cc7e183fd6be93b36b14cd1c28161854c0830a97",
+      "scope": "Eight-node graph including originals and corrected08/11; final source lineage verified, not historical preflight approval."
+    },
+    {
+      "path": "work\\fermi\\LIGHTNING-SIX-V4-ACTUAL-REVIEW.json",
+      "sha256": "dec93aee60985cfef62544bda987739e9db96fec2f92d5f71cb230df64194bc6",
+      "scope": "Own prior full native derivative views, decoded18 variants and desktop/phone assembled checks; unchanged pixel/scene evidence retained."
+    },
+    {
+      "path": "work\\fermi\\SIX-V6-FINISHED-OBSERVED-FLOWS.json",
+      "sha256": "81129576df750945032178d4ce297d54b9eb4d8fbd564c72ee9912dcb06373ce",
+      "scope": "Current exact32bytes; actual six loaded-stable phone flows and representative desktop. No raw startup closure."
+    },
+    {
+      "path": "work\\fermi\\SIX-THREE-ARTSTUDY-OWNER-CENSUS.json",
+      "sha256": "1ebe1d93077a6c8555006a910a124b6a3e09d437c55066372c0df6838e0b6cdc",
+      "scope": "Actual full three-page image-placement inventory and canonical new-owner scan, all prior asset/evidence hashes and flags retained. Counts11/8,11/6,11/7."
+    }
+  ],
+  "metadata_delta": [
+    "historical_preparation_audit_status",
+    "historical_preparation_audit"
+  ],
+  "limits": [
+    "Current equivalence only. Historical three-role pre-generation preflight remains NOT_ESTABLISHED_BY_BOUNDED_AUDIT; no historical gate preparation reconstructed or backdated.",
+    "Raw rapid startup wrong-hit events remain unresolved. This assembled concurrence concerns actually loaded, visibly stable targets and completed intended study flows only. No universal first-click success, product startup fix, or exclusive provider cause.",
+    "No individual Wyatt final-image acceptance, installation, CI, merge, deployment or public acceptance claimed.",
+    "Prior artwork classifications retained from exact unchanged review evidence; no fresh aesthetic review of old images claimed."
+  ],
+  "supersedes_scope_only": {
+    "path": "work\\fermi\\SIX-FINAL-EE491B-CURRENT-EQUIVALENCE.json",
+    "sha256": "74834df62d6d64beeeef38f0281f8e67257ccbf7771fbb681a7281478bd4e846",
+    "reason": "Adds separately completed actual retained-owner census; prior receipt preserved unchanged."
+  }
+}
