@@ -1502,6 +1502,17 @@
       "disposition": "excluded_with_reason",
       "reason": "Bibliographic source qualification inside the research index; plain reading text."
     },
+    "timeline-coordinate-note": {
+      "count": 2,
+      "pages": [
+        "timelines/life-of-christ-journey-map.html"
+      ],
+      "tags": [
+        "span"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Inline coordinate/separator spans in the Life story paragraph; typography only, without an enclosing surface, border or fill. Timeline reader contrast and responsive QA own this text."
+    },
     "watch-index-note": {
       "count": 1,
       "pages": [

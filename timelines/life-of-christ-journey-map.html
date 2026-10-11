@@ -101,8 +101,6 @@ h1{font-family:Georgia,'Times New Roman',serif;font-weight:600;font-size:52px;li
 }
 @media (prefers-reduced-motion: reduce){.sheet{transition:none}}
 
-body.fc-site .detail a,body.fc-site .sheet a{color:#574018!important;text-decoration:underline;}
-body.fc-site .detail a:hover,body.fc-site .sheet a:hover,body.fc-site .detail a:focus-visible,body.fc-site .sheet a:focus-visible{color:#30230d!important;text-decoration-thickness:2px;}
 /* Focus hosting: preserve Merlin’s scene and allow enlarged text to reflow. */
 .timeline-navigation{display:flex;flex-wrap:wrap;gap:10px;padding:16px 20px;}
 .timeline-return{display:inline-block;padding:9px 16px;border:1px solid var(--gold);border-radius:999px;color:var(--gold-light);text-decoration:none;}
@@ -114,12 +112,12 @@ body.fc-site .detail a:hover,body.fc-site .sheet a:hover,body.fc-site .detail a:
 </style>
 <link rel="stylesheet" href="../site-header.css?v=20260926-toolbar-readability-1">
 <link rel="stylesheet" href="../timeline-experiences.css?v=20261007-timeline-panels-1">
-<link rel="stylesheet" href="../timeline-workspace.css?v=20261002-correction-1">
-<script src="../timeline-workspace.js?v=20261003-uniform-1" defer></script>
+<link rel="stylesheet" href="../timeline-workspace.css?v=20261010-all-bottom-1">
+<script src="../timeline-workspace.js?v=20261010-all-bottom-1" defer></script>
 <link rel="stylesheet" href="../timeline-mobile-study.css?v=20261004-terrain-recovery-1">
-<link rel="stylesheet" href="../timeline-reader.css?v=20261003-uniform-1">
+<link rel="stylesheet" href="../timeline-reader.css?v=20261011-story-paragraphs-1">
 <link rel="stylesheet" href="../timeline-images.css?v=20261002-correction-1">
-<script src="../timeline-images.js?v=20261010-emma-identity-1" defer></script>
+<script src="../timeline-images.js?v=20261011-story-paragraphs-1" defer></script>
 <link rel="stylesheet" href="../artwork-details.css?v=20260909-warm">
 <link rel="stylesheet" href="../hero-details.css?v=20260909-warm">
 <link rel="stylesheet" href="../artwork-actions.css?v=20261004-explicit-grid-1">
@@ -205,7 +203,8 @@ body.fc-site .detail a:hover,body.fc-site .sheet a:hover,body.fc-site .detail a:
       <div class="timeline-event-navigation-slot"></div>
     </div>
     <p class="desc" id="dDesc"></p>
-    <p style="margin:12px 0 0"><a id="dMaps" href="https://www.google.com/maps/search/?api=1&amp;query=Nazareth" target="_blank" rel="noopener noreferrer">Open in maps</a> <span style="color:var(--paper-muted)"> · </span> <span id="dCoords" style="color:var(--paper-muted);font-size:13px"></span></p>
+    <p style="margin:12px 0 0"><a id="dMaps" href="https://www.google.com/maps/search/?api=1&amp;query=Nazareth" target="_blank" rel="noopener noreferrer">Open in maps</a> <span class="timeline-coordinate-note"> · </span> <span id="dCoords" class="timeline-coordinate-note"></span></p>
+    <div class="timeline-event-navigation-bottom-slot"></div>
   </section>
 
     </aside>
@@ -292,7 +291,7 @@ var STOPS = [
   {phase:"risen", place:"Sea of Galilee", title:"Appears at the Sea of Galilee", scripture:"John 21:1 to 23", lat:32.79, lng:35.53, desc:"Seven disciples fish all night and catch nothing. At morning Jesus stands on the shore, directs them to a miraculous catch of 153 fishes, shares bread and fish with them, and restores Peter with the charge, Feed my sheep."},
   {phase:"risen", place:"Mount of Olives, near Bethany", title:"The Ascension", scripture:"Luke 24:50 to 53; Acts 1:3 to 12", lat:31.774, lng:35.257, desc:"Forty days after His Resurrection, Jesus leads His Apostles to the Mount of Olives near Bethany, blesses them, and ascends into heaven. Two angels declare He will return in like manner as He was seen to go."},
   {phase:"americas", place:"Land Bountiful, the Americas", title:"Descends to the Nephites at Bountiful", scripture:"3 Nephi 8:5 to 23; 3 Nephi 11", lat:null, lng:null, unlocated:true, source:"https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng", desc:"After great destruction and three days of darkness in the Americas at the time of the Crucifixion, a multitude gathered at the temple in the land Bountiful hears the voice of the Father. Jesus Christ descends from heaven, shows the wounds in His hands and side, and invites each person to feel them, one by one."},
-  {phase:"americas", place:"Land Bountiful, the Americas", title:"Teaches, heals, and blesses the children", scripture:"3 Nephi 12 to 26; 4 Nephi 1:1 to 5", lat:null, lng:null, unlocated:true, source:"https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng", desc:"Over successive days at Bountiful, Jesus teaches a sermon like the Sermon on the Mount, administers the sacrament, heals the sick and afflicted, prays with words that cannot be written, blesses the little children as angels descend around them, and institutes His church among the Nephites. He later appears again, expounds all scriptures, and His disciples continue the ministry recorded in 4 Nephi."},
+  {phase:"americas", place:"Land Bountiful, the Americas", title:"Teaches, heals, and blesses the children", scripture:"3 Nephi 12 to 26; 4 Nephi 1:1 to 5", lat:null, lng:null, unlocated:true, source:"https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng", desc:"Over successive days at Bountiful, Jesus teaches a sermon like the Sermon on the Mount and administers the sacrament. He heals the sick and afflicted and prays with words that cannot be written. He blesses the little children as angels descend around them and institutes His church among the Nephites. He later appears again, expounds all scriptures, and His disciples continue the ministry recorded in 4 Nephi."},
   {"phase": "restoration", "place": "Sacred Grove, Manchester/Palmyra area (approximate witness area)", "title": "The Father and Son appear to Joseph Smith", "scripture": "Joseph Smith—History 1:14–20", "date": "Spring 1820", "lat": 43.03, "lng": -77.24, "desc": "In the spring of 1820, fourteen-year-old Joseph Smith went into the woods near his family home to pray. God the Father and Jesus Christ appeared to him. The Father introduced His Beloved Son, and Joseph received an answer to his question about which church to join. The approximate area shown marks where Joseph received the vision; the account does not identify an exact clearing.", "source": "https://www.churchofjesuschrist.org/study/scriptures/pgp/js-h/1?lang=eng&id=p14-p20#p14", "witnessLocation": true},
   {"phase": "restoration", "place": "John Johnson home, Hiram area (approximate witness area)", "title": "Joseph Smith and Sidney Rigdon behold the Son", "scripture": "Doctrine and Covenants 76:11–24", "date": "16 February 1832", "lat": 41.31, "lng": -81.15, "desc": "While translating the Bible in the John Johnson home at Hiram, Joseph Smith and Sidney Rigdon pondered John 5:29. Their understanding was opened in a heavenly vision, and they saw the Son at the right hand of the Father. They testified that He lives and learned of the resurrection and the degrees of glory. This pin marks the witnesses’ approximate earthly location, not the heavenly scene.", "source": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/76?lang=eng&id=p11-p24#p11", "witnessLocation": true},
   {"phase": "restoration", "place": "Whitney store, Kirtland area (approximate witness area)", "title": "A shared vision in the School of the Prophets", "scripture": "Minutes, 18 March 1833; Church history account", "date": "18 March 1833", "lat": 41.63, "lng": -81.36, "desc": "The minutes of the School of the Prophets meeting on March 18, 1833, record that many present beheld a heavenly vision of the Savior and angels. The school met in Kirtland, including an upstairs room in the Whitney store. Zebedee Coltrin described an appearance of the Father and Son in a recollection recorded in 1883. Church historians consider that recollection likely connected with this meeting, but its later details and uncertain dating remain distinct from the contemporary minutes.", "source": "https://www.josephsmithpapers.org/paper-summary/minutes-18-march-1833/2", "witnessLocation": true},
@@ -335,7 +334,7 @@ function updateDetail(i){
   document.getElementById('dTitle').textContent = s.title;
   document.getElementById('dScripture').textContent = (s.date ? s.date + ' · ' : '') + s.scripture + ' · ' + PHASES[s.phase];
   document.getElementById('dDesc').textContent = s.desc;
-  ['dDesc','sDesc'].forEach(function(id){var old=document.getElementById(id+'Source');if(old)old.remove();if(s.source&&!s.unlocated){var a=document.createElement('a');a.id=id+'Source';a.href=s.source;a.target='_blank';a.rel='noopener noreferrer';a.textContent='Read the source account';document.getElementById(id).after(a);}});
+  ['dDesc','sDesc'].forEach(function(id){var old=document.getElementById(id+'Source');if(old){var oldParagraph=old.closest('.timeline-source-paragraph');if(oldParagraph)oldParagraph.remove();else old.remove();}if(s.source&&!s.unlocated){var paragraph=document.createElement('p');paragraph.className='timeline-source-paragraph';var a=document.createElement('a');a.id=id+'Source';a.href=s.source;a.target='_blank';a.rel='noopener noreferrer';a.textContent='Read the source account';paragraph.appendChild(a);document.getElementById(id).after(paragraph);}});
   document.getElementById('dCoords').textContent = s.unlocated ? 'Modern geographic location not identified' : s.lat.toFixed(s.witnessLocation?2:4) + ', ' + s.lng.toFixed(s.witnessLocation?2:4) + (s.witnessLocation ? ' · Approximate witness area' : '');
   var link = document.getElementById('dMaps');
   link.href = mapsUrl(s);

@@ -391,7 +391,7 @@ def run(root, mode='release', scene=None, page_overrides=None):
     correction_record = json.loads((root / 'docs/artwork-correction-reviews.json').read_text(encoding='utf-8'))
     from artwork_owner_closure import validate as validate_owner_closure
     validate_owner_closure(root, correction_record['owner_requirement_closure'],
-        '52c188ff93643f39b7f5f6a40498c4c96399c3eee7321e3b725892a85196a3a5', pixel_hash)
+        '097477bc58fe24462e9e7a6be591d81e4980cfe71473cea4b48606f37003e300', pixel_hash)
     corrections, correction_hashes, correction_pixels = validate_reviewed_corrections(
         root, correction_record, approved_corrections_binding, added, covered, rejected, pixel_hash, inventory)
     require(not (correction_hashes & originals) and not (correction_pixels & original_pixels), 'Correction family duplicates another creation')

@@ -21,3 +21,11 @@
   [data-timeline-pane="detail"] .journey-nav{flex-wrap:wrap;margin-top:12px;}
   [data-timeline-workspace]+.panel{margin-top:24px;}
 }
+
+/* Continue after the complete story, picture and caption on every journey. */
+[data-timeline-pane="detail"] > .timeline-event-navigation-bottom-slot{display:none}
+@media(max-width:900px){
+  [data-timeline-pane="detail"] > .timeline-event-navigation-bottom-slot{display:block;margin-top:24px;padding-top:16px;border-top:1px solid var(--paper-line,#c8c0a8)}
+  body.fc-timeline-experience [data-timeline-pane="detail"] > .timeline-event-navigation-bottom-slot .timeline-event-navigation{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0}
+  [data-timeline-pane="detail"] > .timeline-event-navigation-bottom-slot button{width:100%;min-width:0;min-height:44px}
+}
