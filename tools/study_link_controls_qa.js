@@ -160,6 +160,39 @@ for(const [route,key] of fourSceneFigures){
  invertFourSceneFigures(extra,route);
  assert.equal(extra.querySelectorAll(selectors[0]).length,1,'Unrelated source control must remain visible to baseline coverage');
 }
+// Six reviewed modern scenes add one source pill each. Validate their
+// exact current DOM and owner before taking this narrow baseline inverse.
+const sixSceneFigures=[["art-study/the-living-christ.html","christ-under-countless-stars","49a8777db8bddc718f6c6136e2fa5d82c110b1ba610c26249bb923ca63b38f66"],["missionary.html","christ-earthquake-community","3a248e5070c02de28562239f30d4670676c90b1514dddd58fcd31909bee1d404"],["jesus-christ/miracles-and-compassion.html","christ-hospital-corridor","1b9e10369492cc5f48ff33b9fcc95a459e0f232ce45ad36b9363890595872f0a"],["art-study/be-still.html","christ-caregiver-night","e4ab54a25a54b6118547e7f7e9102d83268297f22e382dd20af8f4195242f0b0"],["art-study/the-good-shepherd.html","christ-last-bus","00690fe0c2d0c6544ecc75dcd0af53b46e744465d869264f6f6e48652b11c05b"],["jesus-christ/parables/good-samaritan.html","christ-responder-rest","a2fa5906fa8d753d10b2de95f55146a565b0ac83bf2d95f8f2527a55b3e2724d"]];
+function invertSixSceneFigures(doc,route){
+ let added=0;
+ for(const [owner,key,sha] of sixSceneFigures){
+  const figures=[...doc.querySelectorAll('figure')].filter(f=>f.getAttribute('data-exclusive-artwork')===key||f.outerHTML.includes(key+'-960.webp')||f.outerHTML.includes(key+'-full.webp'));
+  assert.equal(figures.length,owner===route?1:0,route+': missing, duplicate or wrong-owner six-scene figure '+key);
+  if(owner!==route)continue;
+  const figure=figures[0];assert.equal(digest(figure.outerHTML),sha,route+': reviewed six-scene figure changed '+key);
+  assert.equal(figure.querySelectorAll(selectors[0]).length,1,key+': exact added source-control count');
+  for(const selector of selectors.slice(1))assert.equal(figure.querySelectorAll(selector).length,0,key+': unrelated control family entered inverse');
+  added++;figure.remove();
+ }
+ return added;
+}
+for(const [route,key] of sixSceneFigures){
+ const original=JSDOM.fragment(read(route));
+ const fixtureHtml=original.querySelector('figure[data-exclusive-artwork="'+key+'"]').outerHTML;
+ for(const kind of ['missing','duplicate','key','href','caption','wrong-owner']){
+  const doc=JSDOM.fragment(fixtureHtml),figure=doc.querySelector('figure');
+  if(kind==='missing')figure.remove();
+  if(kind==='duplicate')doc.append(figure.cloneNode(true));
+  if(kind==='key')figure.setAttribute('data-exclusive-artwork','unknown');
+  if(kind==='href')figure.querySelector('a').setAttribute('href','unknown.webp');
+  if(kind==='caption')figure.querySelector('figcaption').append('Changed');
+  assert.throws(()=>invertSixSceneFigures(doc,kind==='wrong-owner'?'unreviewed.html':route),assert.AssertionError,kind+': '+key);
+ }
+ const extra=JSDOM.fragment(fixtureHtml+'<p class="fc-study-visual-sources"><a href="unexpected">Extra control</a></p>');
+ invertSixSceneFigures(extra,route);
+ assert.equal(extra.querySelectorAll(selectors[0]).length,1,'Unrelated source control must remain visible to baseline coverage');
+}
+let sixSceneSourceControls=0;
 let fourSceneSourceControls=0;
 let seasonalSourceControls=0;
 let readingSourceControls=0;
@@ -171,6 +204,7 @@ for(const page of pages){
  readingSourceControls+=invertReadingFigures(doc,page);
  seasonalSourceControls+=invertSeasonalFigures(doc,page);
  fourSceneSourceControls+=invertFourSceneFigures(doc,page);
+ sixSceneSourceControls+=invertSixSceneFigures(doc,page);
  for(const s of selectors){const nodes=[...doc.querySelectorAll(s)];if(nodes.length){inventory.selectors[s].count+=nodes.length;inventory.selectors[s].pages.push(page);for(const n of nodes)assert.equal(n.tagName,'A');}}
  for(const s of ['.watch-topic-index a','nav[aria-label="Pioneer study sections"] a','.bom-story-directory a']){
   const nodes=[...doc.querySelectorAll(s)];if(nodes.length)inventory.numbered_navigation[page+' '+s]=nodes.map(n=>({href:n.getAttribute('href'),label:n.textContent.trim().replace(/\s+/g,' ')}));
@@ -181,6 +215,8 @@ for(const page of pages){
 assert.equal(readingSourceControls,5,'Exactly five named source controls in six reviewed reading figures');
 assert.equal(seasonalSourceControls,2,'Exactly two named source controls in two reviewed seasonal figures');
 assert.equal(fourSceneSourceControls,4,'Exactly four source controls in four reviewed modern figures');
+assert.equal(sixSceneSourceControls,6,'Exactly six source controls in six reviewed modern figures');
+console.log('PASS: six exact current figures, six added controls;36 negative mutations and6 unrelated-control retention fixtures.');
 console.log('PASS: two exact seasonal figures, unchanged legacy inventory;12 negative mutations and2 unrelated-control retention fixtures.');
 for(const [s,a] of Object.entries(inventory.selectors))if(!a.count){const runtime=config.runtime_selectors[s];assert(runtime,`Unused selector ${s}`);assert(read(runtime.source).includes(runtime.marker));}
 const file=path.join(root,'docs/study-link-control-inventory.json');
