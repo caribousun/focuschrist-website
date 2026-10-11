@@ -9769,7 +9769,7 @@
         "technical_candidate_author": "Thunder",
         "candidate_review_status": "SCOPED_TECHNICAL_AND_RENDERED_EVIDENCE_RECORDED",
         "source_report": "Watson TIMELINE-SOURCE-REVIEW.md",
-        "changed_file_sha256": "1dc481d4753b443a7b30ee24ac59d551a6287e89f83c8ae6e6805052b6f05ec5",
+        "changed_file_sha256": "d8d63df379cedde065a5902a2ebca0a2b2867b327a4636b84b305e46bc87dc33",
         "review_evidence": [
           {
             "reviewer": "Lightning",
@@ -9782,7 +9782,13 @@
             "scope": "Direct postinstallation desktop/phone sampled prose and controls."
           }
         ],
-        "release_requirement": "Newton must independently concur with the frozen final evidence package before installation; prior factual-review limits remain."
+        "release_requirement": "Newton must independently concur with the frozen final evidence package before installation; prior factual-review limits remain.",
+        "enlarged_event_cache_amendment": {
+          "scope": "Stylesheet cache key only; narrative and inline scripts unchanged. Corresponding History desktop grid repair independently rendered at200percent by Hobbes. No new source or pixel approval.",
+          "before_html_sha256": "1dc481d4753b443a7b30ee24ac59d551a6287e89f83c8ae6e6805052b6f05ec5",
+          "after_html_sha256": "d8d63df379cedde065a5902a2ebca0a2b2867b327a4636b84b305e46bc87dc33",
+          "review_evidence_sha256": "266d0eec27b769f1ae0098e25b297b7331fd6d4e48b2a56f73ad180f85619678"
+        }
       }
     },
     {

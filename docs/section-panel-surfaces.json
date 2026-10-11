@@ -147,7 +147,8 @@
     "map-pin-note": "Life of Christ map explanatory text for visual pin separation; plain reading copy, not a card or panel.",
     "joseph-life-reflection": "Inline reflection paragraph in Joseph family narrative; a left reading accent only, not an enclosing panel. Page-owned typography and responsive review apply.",
     "joseph-life-source-note": "Inline provenance paragraph in the remembrance closing; no independent panel surface. Preserve reading flow and source context.",
-    "fc-companion-notes": "Blank handwritten-note area inside four printable companions, owned by guided-studies.css; border-block and writing height are print affordances, not a filled section panel."
+    "fc-companion-notes": "Blank handwritten-note area inside four printable companions, owned by guided-studies.css; border-block and writing height are print affordances, not a filled section panel.",
+    "timeline-coordinate-note": "Inline coordinate/separator spans in the Life story paragraph; typography only, without an enclosing surface, border or fill. Timeline reader contrast and responsive QA own this text."
   },
   "runtime_selectors": {
     ".cfm-month": {
