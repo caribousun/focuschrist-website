@@ -14,9 +14,9 @@ VISIBLE_TOPIC_ROUTES = frozenset({
 })
 def assert_controller_bindings(actual):
     expected = json.loads((ROOT/'docs/topic-artwork-controller-bindings.json').read_text(encoding='utf8'))
-    assert len(expected) == 119
+    assert len(expected) == 120
     assert all(len(refs) == 1 and refs[0].endswith('topic-artwork-details.js?v=20261009-settled-continue-2') for refs in expected.values())
-    assert actual == expected, 'Exact119 topic controller owners/single references required'
+    assert actual == expected, 'Exact120 topic controller owners/single references required'
 
 def controller_binding_self_test():
     expected = json.loads((ROOT/'docs/topic-artwork-controller-bindings.json').read_text(encoding='utf8'))
@@ -27,6 +27,11 @@ def controller_binding_self_test():
                  dict(expected, **{owner: [ref.replace('20261009-settled-continue-2','unknown')]}),
                  dict(expected, **{'unreviewed.html': [ref]})]
     missing = dict(expected); del missing[owner]; mutations.append(missing)
+    mission_ref = expected['missionary.html'][0]
+    mutations.extend([dict(expected, **{'missionary.html': []}),
+                      dict(expected, **{'missionary.html': [mission_ref, mission_ref]}),
+                      dict(expected, **{'missionary.html': ['/topic-artwork-details.js']}),
+                      dict(expected, **{'missionary.html': [mission_ref.replace('settled-continue-2', 'unknown')]})])
     for mutation in mutations:
         try: assert_controller_bindings(mutation)
         except AssertionError: pass
