@@ -37,7 +37,32 @@ assert hashlib.sha256(original_css.encode()).hexdigest() == '84bb60d6413028bb551
 assert 'body.fc-site { --fc-mobile-hero-height: max(180px, min(115vw, 600px, calc(100svh - var(--fc-opening-flow-header-height) - 280px))); }' in mobile_opening_css
 assert 'body.fc-site.fc-main-opening' not in mobile_opening_css, 'The latest owner direction applies the shared height to all mobile openings'
 main_pages = {'index.html','ask.html','answers.html','art.html','missionary.html','church-history.html','pioneers.html','about.html','watch.html','atonement.html','general-conference.html','come-follow-me.html','book-of-mormon-evidences.html'}
-marked_pages = {str(p.relative_to(ROOT)).replace('\\', '/') for p in ROOT.rglob('*.html') if '<body class="fc-main-opening ' in p.read_text(encoding='utf-8')}
+# Read body class membership independently of valid attribute/class order.
+from html.parser import HTMLParser
+
+class BodyClasses(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.tokens = set()
+    def handle_starttag(self, tag, attrs):
+        if tag == 'body':
+            self.tokens.update(dict(attrs).get('class', '').split())
+
+def is_main_opening(html):
+    parser = BodyClasses()
+    parser.feed(html)
+    return 'fc-main-opening' in parser.tokens
+
+for fixture in ('<body class="fc-main-opening fc-site">',
+                '<body data-focus-six="conference" class="fc-main-opening fc-site">',
+                "<body class='fc-site fc-main-opening'>"):
+    assert is_main_opening(fixture), 'Valid body class membership missed'
+for fixture in ('<body class="fc-site">',
+                '<body class="not-fc-main-opening">',
+                '<body><div class="fc-main-opening">',
+                '<!-- <body class="fc-main-opening"> --><body class="fc-site">'):
+    assert not is_main_opening(fixture), 'Non-body or false class accepted'
+marked_pages = {str(p.relative_to(ROOT)).replace('\\', '/') for p in ROOT.rglob('*.html') if is_main_opening(p.read_text(encoding='utf-8'))}
 assert marked_pages == main_pages, 'Keep the thirteen navigation pages identified independently of universal hero sizing'
 cue_override = mobile_opening_css.split('body.fc-site .fc-mobile-scroll-cue {',1)[1].split('}',1)[0]
 assert cue_override.strip() == 'margin: auto auto 0 !important;', 'Continue must inherit the Book of Mormon Evidences pill style'
