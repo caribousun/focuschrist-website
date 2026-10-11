@@ -391,15 +391,25 @@ def run(root, mode='release', scene=None, page_overrides=None):
     correction_record = json.loads((root / 'docs/artwork-correction-reviews.json').read_text(encoding='utf-8'))
     from artwork_owner_closure import validate as validate_owner_closure
     validate_owner_closure(root, correction_record['owner_requirement_closure'],
-        '097477bc58fe24462e9e7a6be591d81e4980cfe71473cea4b48606f37003e300', pixel_hash)
+        '35f81fd71faafbad21a97a0c5aad33be37f4abf025240703baa5446b004215c3', pixel_hash)
     corrections, correction_hashes, correction_pixels = validate_reviewed_corrections(
         root, correction_record, approved_corrections_binding, added, covered, rejected, pixel_hash, inventory)
     require(not (correction_hashes & originals) and not (correction_pixels & original_pixels), 'Correction family duplicates another creation')
     covered |= corrections
     originals |= correction_hashes
     original_pixels |= correction_pixels
+    # Exact seasonal lineage is additive; it grants no generic preflight waiver.
+    from artwork_seasonal_delivery import validate as validate_seasonal_delivery
+    approved_seasonal_binding = '8ddfd548d8a402c2b487e8cc940b49204f02f600de6ee9a6b6fd59c41558c483'
+    seasonal_record = json.loads((root / 'docs/artwork-seasonal-delivery-reviews.json').read_text(encoding='utf-8'))
+    seasonal, seasonal_hashes, seasonal_pixels = validate_seasonal_delivery(
+        root, seasonal_record, approved_seasonal_binding, added, covered, rejected, pixel_hash, page_dependencies)
+    require(not (seasonal_hashes & originals) and not (seasonal_pixels & original_pixels), 'Seasonal family duplicates another creation')
+    covered |= seasonal
+    originals |= seasonal_hashes
+    original_pixels |= seasonal_pixels
     require(added == covered, 'New artwork missing exact review coverage: ' + ', '.join(sorted(added - covered)))
-    if creations or historical or corrections:
+    if creations or historical or corrections or seasonal:
         for name in inventory:
             path = root / name
             if path.suffix.lower() in RASTERS:

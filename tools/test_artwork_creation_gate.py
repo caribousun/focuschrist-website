@@ -224,7 +224,7 @@ class EvidenceTests(unittest.TestCase):
         docs = self.root / 'docs'; docs.mkdir(exist_ok=True)
         (docs / 'artwork-creation-baseline.json').write_text(json.dumps({'schema': 1, 'commit': gate.BASELINE, 'rejected_sha256': list(gate.REJECTED)}))
         (docs / 'artwork-creation-reviews.json').write_text(json.dumps({'schema': 1, 'preflights': [self.preflight] if creations else [], 'creations': creations or []}))
-        # These fixtures exercise core creation/coverage orchestration. The two
+        # These fixtures exercise core creation/coverage orchestration. The three
         # separately validated adapters contribute no assets to this synthetic set.
         self.adapter_mocks = {}
         closure_adapter = patch('artwork_owner_closure.validate', return_value={'owner_requirement_integrity': 'PASS'})
@@ -233,6 +233,7 @@ class EvidenceTests(unittest.TestCase):
         for module, filename in [
             ('artwork_historical_delivery', 'artwork-historical-delivery-reviews.json'),
             ('artwork_reviewed_corrections', 'artwork-correction-reviews.json'),
+            ('artwork_seasonal_delivery', 'artwork-seasonal-delivery-reviews.json'),
         ]:
             (docs / filename).write_text(json.dumps({'fixture': 'empty adapter coverage', 'owner_requirement_closure': {'fixture': 'synthetic owner closure'}}))
             adapter = patch(module + '.validate', return_value=(set(), set(), set()))
@@ -253,7 +254,7 @@ class EvidenceTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'owner appearance closure remains OPEN'): gate.run(self.root)
 
     def test_required_adapter_ledgers_cannot_be_missing(self):
-        for filename in ['artwork-historical-delivery-reviews.json', 'artwork-correction-reviews.json']:
+        for filename in ['artwork-historical-delivery-reviews.json', 'artwork-correction-reviews.json', 'artwork-seasonal-delivery-reviews.json']:
             with self.subTest(filename=filename):
                 self.registry()
                 (self.root / 'docs' / filename).unlink()
@@ -261,7 +262,7 @@ class EvidenceTests(unittest.TestCase):
                     with self.assertRaises(FileNotFoundError): gate.run(self.root)
 
     def test_adapter_rejections_propagate(self):
-        for module in ['artwork_historical_delivery', 'artwork_reviewed_corrections']:
+        for module in ['artwork_historical_delivery', 'artwork_reviewed_corrections', 'artwork_seasonal_delivery']:
             with self.subTest(module=module):
                 self.registry()
                 self.adapter_mocks[module].side_effect = ValueError('adapter rejects exact evidence')
