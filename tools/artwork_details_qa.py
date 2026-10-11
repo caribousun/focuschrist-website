@@ -21,6 +21,33 @@ def reviewed_chalk_supporting(root, relative, text):
             raise ValueError('Exact reviewed chalk asset changed: ' + name)
     return 1
 
+
+def reviewed_answers_six(root, relative, text):
+    """Bind only the exact six added Answers studies; keep all current checks."""
+    import hashlib
+    from bs4 import BeautifulSoup
+    rows = {'answers-connected-conversation': {'figure_sha256': 'b407b686ae1b7230f3c6716d8f083326a9fce348eeaff764755e2091d1761af2', 'record_sha256': 'd5ba1ae6d344f3eb773c2e22c9889badf532143197aa0672ded35e43cf497b9c', 'section': 'connected-study'}, 'answers-neighbor-service': {'figure_sha256': '9b1d588657f82635dbbeaf921a7d6789f2b39fb3023f3be1de1691f8cb3e2ca7', 'record_sha256': 'ff19c8e1139c786e231642f99db04cc5be3e36c40f3933322c322becb7199d8f', 'section': 'connected-study'}, 'answers-two-witnesses': {'figure_sha256': 'a50758dc582c1e337904b8f80ba41a458a18e50a172e00cf82018425c66c7da6', 'record_sha256': '0e819bf97f8db7ab2a017e6e92c7c3f4d1fb2974d05573a0318cae43e55bf6e4', 'section': 'connected-study'}, 'answers-family-hopes': {'figure_sha256': '1a04751ab2be849f4951448b0f8b8d43759f40dc1085c7395e2c0ca74d9edeb4', 'record_sha256': '4d358f094b49bfb10846dcbf293c1cfc03ffa93d51a2bf932eaf6d2bd333acb7', 'section': 'connected-study'}, 'answers-keep-your-place': {'figure_sha256': 'a7dbc0b40c3da2050931697a2630d063bdfe886f48750172dead49960711ca28', 'record_sha256': '8a08217e4acb69bc88b1550f7c357346e5f927665a665f97d6fa88ae40076d3b', 'section': 'saved-studies'}, 'answers-companion-bench': {'figure_sha256': '95bab7ff84833d1e50334d4c2c0949cdc70e37ceb5c9e7b47d8c0c702f883ea7', 'record_sha256': '3061112333d0a8342550abe9e53bd3ef6c3a9aff25f7dccef63323d874f4453c', 'section': 'study-companions'}}
+    assets = {'assets/page-art/answers-study/answers-connected-conversation-original.png': 'b343e25c4b050e09a50134996caff94cd91a2e708a1e1b6a9e275fd97c5b343d', 'assets/page-art/answers-study/answers-connected-conversation-640.webp': 'b2017b731957aae34a094a748dcc7e8ab5cf06e20f4d061aab86f7389d6ecf43', 'assets/page-art/answers-study/answers-connected-conversation-960.webp': '8991f4ec794507b87012ad80a0c358a815b22ac645fb72b18606ae382fcef617', 'assets/page-art/answers-study/answers-connected-conversation-full.webp': '1fc1e663af3b159cbd72b2a8eebe3b94ad2ee95151e370865ef87e96bbc9b7ef', 'assets/page-art/answers-study/answers-neighbor-service-original.png': '71a25d999e3a116be3883ac1173243b1b451ea07cf130060aacabdb853e3cd4a', 'assets/page-art/answers-study/answers-neighbor-service-640.webp': '9047279511747c2e973643144a52e0a5d1afc638f91b9e9e1219d1177eb04589', 'assets/page-art/answers-study/answers-neighbor-service-960.webp': '841dc5914d17e16cd7ae0c6354e74c737e6b8b5d63dc6127a1f74bf7032ea791', 'assets/page-art/answers-study/answers-neighbor-service-full.webp': '679757f90413c4e4f028f014b857ea7807a9e265df6700d6b8d8512f12ae7b3d', 'assets/page-art/answers-study/answers-two-witnesses-original.png': '56fdfe3655a9e82432fcf4565dcb6973e9d35f88231dd0c59be6448770b38792', 'assets/page-art/answers-study/answers-two-witnesses-640.webp': '5805c07033d60bf4bacb4834582bbc661e15b271f9ce7c984690cc7cf2608802', 'assets/page-art/answers-study/answers-two-witnesses-960.webp': 'bc12923616230b40a7b6a02ce46873df66ffc3d536801859924bca849fcb412f', 'assets/page-art/answers-study/answers-two-witnesses-full.webp': '8712850f640c74c5fa6d22579dbe1423a1f2b67cd494e7799ad0b91aa2d34a29', 'assets/page-art/answers-study/answers-family-hopes-original.png': 'a361ba3581d16ce3ff7391aee045a90767ee86d6a59f1b1e1cb37b7dba6e38dd', 'assets/page-art/answers-study/answers-family-hopes-640.webp': '31b6b8cec82b39d4913b81053ac797e6ba7f2c5a9eb9f1b86a6410901c5e746b', 'assets/page-art/answers-study/answers-family-hopes-960.webp': '3ef6551eb478e9977594794b166cd02a5afe5725f0ac50bea543e61a3b7099f1', 'assets/page-art/answers-study/answers-family-hopes-full.webp': '1840a670f1d4d03731cc7d18345a3baf50eee0ede181412a5572a2cbda5d9e8d', 'assets/page-art/answers-study/answers-keep-your-place-original.png': '94caa125cba001280b9f051ce3d27fbc98ba3efa75f5d1bdfec298194fd6dce9', 'assets/page-art/answers-study/answers-keep-your-place-640.webp': '3b5cc20033d45fb9ce04698538a889e0b56f112c5b2f9c99cc6ece613e93e808', 'assets/page-art/answers-study/answers-keep-your-place-960.webp': 'f8739ce5cd02b3419730189d0e4d100a25b4bfe5af1a5b3bb53aecf408699b76', 'assets/page-art/answers-study/answers-keep-your-place-full.webp': '793e19c27ff7d7daa3f482ca57d0829b217b2d4fe0a50953b2f88836ca4f82d0', 'assets/page-art/answers-study/answers-companion-bench-original.png': 'ae3b699fdfad8b2bce267547f7037a31e2cd7e40ce27d1e69284ef3aa240fcc3', 'assets/page-art/answers-study/answers-companion-bench-640.webp': '1402bc3ed258642a550a38d24c6752287be71b01ccbbe2d522b6dbc51a5afa41', 'assets/page-art/answers-study/answers-companion-bench-960.webp': 'ab1b751317771b8adc3f1d9afbc045b59f2e162e4702b37ab12e0f10398d0e89', 'assets/page-art/answers-study/answers-companion-bench-full.webp': 'edd718b174072e95e1ef042d16d13781b8b9cdc9565c724445a8985566f85ca6'}
+    dom = BeautifulSoup(text, 'html.parser')
+    if relative != 'answers.html':
+        if any(dom.select('[data-artwork-detail="' + key + '"], [data-artwork-detail-content="' + key + '"]') for key in rows):
+            raise ValueError('Six Answers studies appeared on wrong owner')
+        return 0
+    for key, expected in rows.items():
+        triggers = dom.select('[data-artwork-detail="' + key + '"]')
+        records = dom.select('[data-artwork-detail-content="' + key + '"]')
+        if len(triggers) != 1 or len(records) != 1:
+            raise ValueError('Six Answers trigger/record absent or duplicate: ' + key)
+        figure = triggers[0].find_parent('figure')
+        if figure is None or figure.find_parent(id=expected['section']) is None:
+            raise ValueError('Six Answers figure owner changed: ' + key)
+        if hashlib.sha256(str(figure).encode('utf-8')).hexdigest() != expected['figure_sha256'] or hashlib.sha256(str(records[0]).encode('utf-8')).hexdigest() != expected['record_sha256']:
+            raise ValueError('Six Answers exact figure/record changed: ' + key)
+    for path, expected in assets.items():
+        if hashlib.sha256((root / path).read_bytes()).hexdigest() != expected:
+            raise ValueError('Six Answers exact raster changed: ' + path)
+    return 6
+
 ROOT = Path(__file__).resolve().parents[1]
 VISIBLE_TOPIC_ROUTES = frozenset({
     'answers/abrahamic-covenant.html', 'answers/what-is-eternal-marriage.html',
@@ -239,10 +266,14 @@ def main() -> int:
     rhythm_records = check_rhythm_art()
     all_trigger_keys: list[str] = []
     all_record_keys: list[str] = []
+    answers_extra = 0
 
     for relative, expected_count in PAGES.items():
         path = ROOT / relative
         text = path.read_text(encoding="utf-8")
+        extra = reviewed_answers_six(ROOT, relative, text)
+        answers_extra += extra
+        expected_count += extra
         trigger_keys = re.findall(r'data-artwork-detail="([^"]+)"', text)
         record_keys = re.findall(r'data-artwork-detail-content="([^"]+)"', text)
         all_trigger_keys.extend(relative + ":" + key for key in trigger_keys)
@@ -288,9 +319,9 @@ def main() -> int:
         if len(sources) != expected_count or any(not source.startswith("https://") for source in sources):
             errors.append(f"{relative}: every record must have one HTTPS official source")
 
-    if len(all_trigger_keys) != 63 or len(all_record_keys) != 63:
-        errors.append("site-wide non-Mission artwork detail total must be exactly 63")
-    if len(set(all_trigger_keys)) != 63 or len(set(all_record_keys)) != 63:
+    if len(all_trigger_keys) != 63 + answers_extra or len(all_record_keys) != 63 + answers_extra:
+        errors.append(f"site-wide non-Mission artwork detail total must be exactly {63 + answers_extra}")
+    if len(set(all_trigger_keys)) != 63 + answers_extra or len(set(all_record_keys)) != 63 + answers_extra:
         errors.append("site-wide artwork detail keys must be unique")
 
     history_text = (ROOT / "church-history.html").read_text(encoding="utf-8")
@@ -318,7 +349,7 @@ def main() -> int:
         relative: len(re.findall(r'data-detail-study="[^"]+"', (ROOT / relative).read_text(encoding="utf-8")))
         for relative in PAGES
     }
-    expected_studies = {"church-history.html": 1, "art.html": 4, "index.html": 3, "ask.html": 5, "answers.html": 9, "answers/death-of-a-child.html": 2, "answers/divorce-and-faith.html": 1, "pioneers.html": 21}
+    expected_studies = {"church-history.html": 1, "art.html": 4, "index.html": 3, "ask.html": 5, "answers.html": 9 + answers_extra, "answers/death-of-a-child.html": 2, "answers/divorce-and-faith.html": 1, "pioneers.html": 21}
     for relative, count in study_links.items():
         if count != expected_studies.get(relative, 0):
             errors.append(f"{relative}: unexpected related study count {count}")
@@ -550,8 +581,8 @@ def main() -> int:
             target = local_target(ROOT / relative, asset)
             if not target.is_relative_to(ROOT.resolve()) or not target.exists() or target.stat().st_size == 0:
                 errors.append(f"{relative}: missing full-image source: {asset}")
-    if len(full_assets) != 76:
-        errors.append(f"expected 76 artwork detail full-image sources, found {len(full_assets)}")
+    if len(full_assets) != 76 + answers_extra:
+        errors.append(f"expected {76 + answers_extra} artwork detail full-image sources, found {len(full_assets)}")
 
     detail_paragraphs: list[str] = []
     for relative in (*PAGES, "missionary.html"):
@@ -649,7 +680,7 @@ def main() -> int:
         return 1
 
     print("Artwork detail QA: PASS")
-    print("63 non-Mission artwork triggers and 11 Mission artwork triggers verified")
+    print(f"{63 + answers_extra} non-Mission artwork triggers and 11 Mission artwork triggers verified")
     print("Same-page full-image viewing, sacred detail copy, and intentional interaction scope verified")
     return 0
 

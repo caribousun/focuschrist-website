@@ -309,6 +309,17 @@
       "disposition": "excluded_with_reason",
       "reason": "Reading/grid child wrapper; nested details are panels."
     },
+    "fc-answers-unique-art--card": {
+      "count": 3,
+      "pages": [
+        "answers.html"
+      ],
+      "tags": [
+        "figure"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Artwork figure; preserve framing and reviewed Answers picture-study behavior."
+    },
     "fc-bible-history-note": {
       "count": 2,
       "pages": [

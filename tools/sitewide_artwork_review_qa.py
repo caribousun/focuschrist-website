@@ -230,6 +230,26 @@ def reviewed_six_presentation_style(data, sources):
     return True
 
 
+
+def reviewed_answers_six_style(data, sources):
+    # Exact current six-study surface, never a general hero-style exemption.
+    if hashlib.sha256(data).hexdigest() != '346976607a04d0fcfa6eedf3bc3de3a9657a4cddca92a80a8b9c52697c204b4d':
+        return False
+    name = 'answers-illustrated-study.css'
+    consumers = {page: text for page, text in sources.items() if name in text}
+    if set(consumers) != {'answers.html'}:
+        return False
+    text = consumers['answers.html']
+    refs = [(tag, attrs) for tag, attrs in Tags(text).tags
+            if name in attrs.get('href', '') or name in attrs.get('src', '')]
+    if text.count(name) != 1 or refs != [('link', {'rel': 'stylesheet', 'href': 'answers-illustrated-study.css?v=20261010-unique-art-1'})]:
+        return False
+    from artwork_details_qa import reviewed_answers_six
+    try:
+        return reviewed_answers_six(ROOT, 'answers.html', text) == 6
+    except (ValueError, FileNotFoundError):
+        return False
+
 def reviewed_four_scene_style(data, sources):
     if hashlib.sha256(data).hexdigest() != 'dfa23731ddbf2f7bfc039204e880ebd7e612519d698c6be96c0185ea696a98b9':
         return False
@@ -943,6 +963,8 @@ def main():
     excluded_styles.add('four-scene-artwork.css')
     check(reviewed_six_presentation_style((ROOT/'targeted-six.css').read_bytes(), visitor_viewer_sources()), 'Six-page presentation differs from exact screen-only stylesheet/owner opt-ins')
     excluded_styles.add('targeted-six.css')
+    check(reviewed_answers_six_style((ROOT/'answers-illustrated-study.css').read_bytes(), visitor_viewer_sources()), 'Answers six-study CSS differs from exact reviewed bytes/sole owner/six bindings')
+    excluded_styles.add('answers-illustrated-study.css')
     check(reviewed_gallery_dialog_style((ROOT/'art-gallery.css').read_bytes()), 'Gallery viewport stylesheet differs from exact reviewed width inverse')
     excluded_styles.add('art-gallery.css')
     picture_pill_bytes = (ROOT/'artwork-actions.css').read_bytes()
