@@ -1,0 +1,20 @@
+{
+  "reviewer": "Fermi",
+  "reviewed_at": "2026-10-11T22:17:25.783Z",
+  "decision": "CONCUR",
+  "spec_sha256": "c27bd294b8d9d2ab56a431380c91dae8ea54181806e12d06a84c1e5bdf77b263",
+  "private_source_and_event_verification": true,
+  "derivative_pixel_review": true,
+  "assembled_context_review": true,
+  "no_individual_owner_acceptance_claim": true,
+  "evidence": [
+    "Original FOUR-CURRENT-CONTEXT-REVIEW.json90e88b6f retained; same historical source/event/derivative judgments explicitly reused with original authorship. Exact old assets and reviews byte-identical.",
+    "Own current inverse/hash check repeated after Home repair: only context hashes differ from original spec. Read exact artwork-details.js diff: isHome-only owning section h2 focus and double-frame post-unlock scrolling with fixed-header clearance; nonHome code stays original.",
+    "Own supported current Home desktop/phone fullsize/Escape/Continue retest returns heading67.8625/nav52 and15.600/navoff, proper focus visible. Joy and Shepherd previous own unchanged-context flows remain applicable."
+  ],
+  "limits": [
+    "Current FOUR context rebind only; no new source/owner vote or publication.",
+    "Historical boolean fields denote reviewed unchanged evidence reuse, not fresh historical generation/event execution.",
+    "Prior Home failure preserved separately; only bounded reproduction closed. Rapid interaction uncertainty remains."
+  ]
+}

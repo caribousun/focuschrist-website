@@ -1,1 +1,886 @@
-{"normalized_at":"2026-10-11T12:53:32.543722+00:00","reviews":[{"path":"docs/answers-six-artwork/albert-review.json","sha256":"69cc23b2d73c0f2ba5d0c3ae6aa8e3c7f7e5f15c3df744703db2c7cea938a5ae"},{"path":"docs/answers-six-artwork/fermi-review.json","sha256":"33f1b52656b7158f0f75bbaf8d7f86a8265825303db238b4283406282edebdb5"},{"path":"docs/answers-six-artwork/newton-review.json","sha256":"f8d24f641574339df18839e1009a4b9d613c22ea97476f1031b06b5c104bd3a7"}],"schema":1,"spec":{"context":[{"path":"answers-artwork-dialog.css","sha256":"bac8c8ab61067f7ce15282c8c6a4230d8fd2765fddb4dd60998a4220a92f8cbd"},{"path":"answers-artwork-dialog.js","sha256":"23dcd58a91c506be5d98d6453bfe0d78fc670ac970769192bbacbc02b42a9b41"},{"path":"answers-hero.css","sha256":"b0e8a4097a4f3f6f648e6695a68f119cebed61204ba4bc40686168fdf1c95642"},{"path":"answers-illustrated-study.css","sha256":"346976607a04d0fcfa6eedf3bc3de3a9657a4cddca92a80a8b9c52697c204b4d"},{"path":"answers.html","sha256":"f577f0927c8b542e7dd7fb3c99f86b7cfd04dc881fe21b2f365b29cc9f88fdc4"},{"path":"artwork-actions.css","sha256":"fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"},{"path":"artwork-details.css","sha256":"06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"},{"path":"artwork-details.js","sha256":"e075a7f977d95a62bcecc7e6676ce2bcd6baf17d08a7cbb7c3c7475eeba26097"},{"path":"complete-card-rows.css","sha256":"7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"},{"path":"connected-study.css","sha256":"6b61c50c1d8e005074beb2db8fa800377377e6a3c9b955678dd836538fcb48cd"},{"path":"full-image-viewer.css","sha256":"b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"},{"path":"full-image-viewer.js","sha256":"01d17afd6b3f4bd205292d2544683ba9884b73fa350401cd0e299512b5458152"},{"path":"general-conference-section.css","sha256":"c479d3f126ad31347635f6c66c727b6fb0db89b584609a983b1af65cc48f2adb"},{"path":"guided-studies.css","sha256":"6ec6dfa3150ae158f4689972042cac9780a25cac4066fe78fe2f3312b618eea9"},{"path":"hero-details.css","sha256":"c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"},{"path":"hero-details.js","sha256":"fff59dbfbd64325aeae947755e7a013a0ae51883c05b959bfaac1865c312f8cf"},{"path":"hero-image-source.js","sha256":"2f8f62cbbffb4f5d5e663b3128aed45fdd35e1deec484589bbfba4e6bbc62704"},{"path":"resource-cards.css","sha256":"4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"},{"path":"saved-studies.js","sha256":"682f6766f71ef429c61a1e650af31ee409cd70c14bb5653e317c7669c4160d03"},{"path":"settle-heart-study.css","sha256":"5e9ffecda2ab85ecd28ed065bde6f8ae68a21d11be045aa287168943dcfd5a87"},{"path":"site-common.js","sha256":"fc0ae667fd977c6cd66ef2e649ef9da2cbcf5eee4201094dd90ed48b551e6488"},{"path":"site-header.css","sha256":"a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"},{"path":"site-search.css","sha256":"90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"},{"path":"site-search.js","sha256":"2722b477848556bb05ecf0487b890c1d0e25840f912f8ea6140382a340eae099"},{"path":"site-system.css","sha256":"180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"},{"path":"study-companions.js","sha256":"6a807adecdc83d50f3aa798f882e8bd69721d4638dd8f2af20859acd94c23191"},{"path":"study-reading-balance.css","sha256":"fb547af5c883050d743204c0d05372863143a1fa0dffd2df370b728f1a9ff005"}],"excluded_image_sources":["assets/page-art/come-follow-me/personal-study-2026.webp","assets/resources/answers-embrace-faith.jpg","assets/resources/answers-hope-healing.jpg",""],"generation_graph":[{"actual_load_outputs":[{"event_sha256":"c4e1685c36647ead0208f6884b5e65fa6821ad5cf47164c1399a2d9967f14f92","timestamp":"2026-10-10T23:41:30.524Z"}],"completion":{"event_sha256":"394ae8f83db78c4355a0411f6214dee092e7ac527d8117dad1e7cec4f4857440","timestamp":"2026-10-10T23:44:51.217Z"},"delivery_status":"superseded-reviewer-held-source","dispatch":{"event_sha256":"a82199046194ea4f5aa2c589cfa3f1aeab057edb9e87bd986423ef66671f83ff","timestamp":"2026-10-10T23:43:35.438Z"},"dispatched_prompt_sha256":"1daaab6cce0964925141cfd8ff14f44622f82d8b058c6d23c13d40d254e92db0","event_hash_basis":"UTF8 JSONL line excluding line ending","generation_mode":"original","id":"answers-connected-conversation-initial","output_path_recovery":{"event_sha256":"91278c7b195adf071e8bfa929a9721b8f0729fbf7ade73fb24f7f4ee5463657d","timestamp":"2026-10-10T23:45:18.508Z"},"prompt_binding_basis":"hash-bound-reviewed-file-plus-native-load-store-dispatch","prompt_load":{"event_sha256":"753d346d18f4d52fbbf092dd5120f76804aebcf6108f59532407e98fd7757a4a","timestamp":"2026-10-10T23:41:29.476Z"},"references":[],"reviewed_prompt_file_sha256":"599dcc6c90313587afe5dc37b7d1f3b92c548468350f7041de4bc621dffbeb4b","scene_id":"answers-connected-conversation","source_sha256":"baabd5c24fb0254438b101f37d16d6c1a07ad5983486dddd70060a3c275b6e72","stored_prompt_sha256":"1daaab6cce0964925141cfd8ff14f44622f82d8b058c6d23c13d40d254e92db0"},{"actual_load_outputs":[{"event_sha256":"c4e1685c36647ead0208f6884b5e65fa6821ad5cf47164c1399a2d9967f14f92","timestamp":"2026-10-10T23:41:30.524Z"}],"completion":{"event_sha256":"394ae8f83db78c4355a0411f6214dee092e7ac527d8117dad1e7cec4f4857440","timestamp":"2026-10-10T23:44:51.217Z"},"delivery_status":"final-reviewed-source","dispatch":{"event_sha256":"a82199046194ea4f5aa2c589cfa3f1aeab057edb9e87bd986423ef66671f83ff","timestamp":"2026-10-10T23:43:35.438Z"},"dispatched_prompt_sha256":"ff0a5c7331a71b9b7efbe8e39d6d73ee051d86b5265e7648b7bcf11de89bb6bf","event_hash_basis":"UTF8 JSONL line excluding line ending","generation_mode":"original","id":"answers-neighbor-service-initial","output_path_recovery":{"event_sha256":"91278c7b195adf071e8bfa929a9721b8f0729fbf7ade73fb24f7f4ee5463657d","timestamp":"2026-10-10T23:45:18.508Z"},"prompt_binding_basis":"hash-bound-reviewed-file-plus-native-load-store-dispatch","prompt_load":{"event_sha256":"753d346d18f4d52fbbf092dd5120f76804aebcf6108f59532407e98fd7757a4a","timestamp":"2026-10-10T23:41:29.476Z"},"references":[],"reviewed_prompt_file_sha256":"599dcc6c90313587afe5dc37b7d1f3b92c548468350f7041de4bc621dffbeb4b","scene_id":"answers-neighbor-service","source_sha256":"71a25d999e3a116be3883ac1173243b1b451ea07cf130060aacabdb853e3cd4a","stored_prompt_sha256":"ff0a5c7331a71b9b7efbe8e39d6d73ee051d86b5265e7648b7bcf11de89bb6bf"},{"actual_load_outputs":[{"event_sha256":"c4e1685c36647ead0208f6884b5e65fa6821ad5cf47164c1399a2d9967f14f92","timestamp":"2026-10-10T23:41:30.524Z"}],"completion":{"event_sha256":"394ae8f83db78c4355a0411f6214dee092e7ac527d8117dad1e7cec4f4857440","timestamp":"2026-10-10T23:44:51.217Z"},"delivery_status":"superseded-reviewer-held-source","dispatch":{"event_sha256":"a82199046194ea4f5aa2c589cfa3f1aeab057edb9e87bd986423ef66671f83ff","timestamp":"2026-10-10T23:43:35.438Z"},"dispatched_prompt_sha256":"c2d1b3bcebda85b0697ae8ff21cddf1258540ddd15928c4ca5dbe8c02dc0ea6a","event_hash_basis":"UTF8 JSONL line excluding line ending","generation_mode":"original","id":"answers-two-witnesses-initial","output_path_recovery":{"event_sha256":"91278c7b195adf071e8bfa929a9721b8f0729fbf7ade73fb24f7f4ee5463657d","timestamp":"2026-10-10T23:45:18.508Z"},"prompt_binding_basis":"hash-bound-reviewed-file-plus-native-load-store-dispatch","prompt_load":{"event_sha256":"753d346d18f4d52fbbf092dd5120f76804aebcf6108f59532407e98fd7757a4a","timestamp":"2026-10-10T23:41:29.476Z"},"references":[],"reviewed_prompt_file_sha256":"599dcc6c90313587afe5dc37b7d1f3b92c548468350f7041de4bc621dffbeb4b","scene_id":"answers-two-witnesses","source_sha256":"1bf8515e4a602234ab7ca09c445a782ebcb98d712e264ec692bf78552147593e","stored_prompt_sha256":"c2d1b3bcebda85b0697ae8ff21cddf1258540ddd15928c4ca5dbe8c02dc0ea6a"},{"actual_load_outputs":[{"event_sha256":"c4e1685c36647ead0208f6884b5e65fa6821ad5cf47164c1399a2d9967f14f92","timestamp":"2026-10-10T23:41:30.524Z"}],"completion":{"event_sha256":"f1c5a22c5b0c2bdf2ef30b99e9dde3ca6f8db3d0c553d4699fa6b2a5a73d3c14","timestamp":"2026-10-10T23:46:57.404Z"},"delivery_status":"final-reviewed-source","dispatch":{"event_sha256":"7cebfd65b99835595930e45377974b104ee29f3539d72a1195135c37c24ff554","timestamp":"2026-10-10T23:45:38.684Z"},"dispatched_prompt_sha256":"56aae0e20ab55e59c3dbe905e7947a67b1bbe40747b71ff8e765dc20025e6be6","event_hash_basis":"UTF8 JSONL line excluding line ending","generation_mode":"original","id":"answers-family-hopes-initial","output_path_recovery":{"event_sha256":"b27f36ae8ca7023cd27053701df632e9c2d690c4036673a961b66002b4061fb3","timestamp":"2026-10-10T23:47:06.694Z"},"prompt_binding_basis":"hash-bound-reviewed-file-plus-native-load-store-dispatch","prompt_load":{"event_sha256":"753d346d18f4d52fbbf092dd5120f76804aebcf6108f59532407e98fd7757a4a","timestamp":"2026-10-10T23:41:29.476Z"},"references":[],"reviewed_prompt_file_sha256":"599dcc6c90313587afe5dc37b7d1f3b92c548468350f7041de4bc621dffbeb4b","scene_id":"answers-family-hopes","source_sha256":"a361ba3581d16ce3ff7391aee045a90767ee86d6a59f1b1e1cb37b7dba6e38dd","stored_prompt_sha256":"56aae0e20ab55e59c3dbe905e7947a67b1bbe40747b71ff8e765dc20025e6be6"},{"actual_load_outputs":[{"event_sha256":"c4e1685c36647ead0208f6884b5e65fa6821ad5cf47164c1399a2d9967f14f92","timestamp":"2026-10-10T23:41:30.524Z"}],"completion":{"event_sha256":"f1c5a22c5b0c2bdf2ef30b99e9dde3ca6f8db3d0c553d4699fa6b2a5a73d3c14","timestamp":"2026-10-10T23:46:57.404Z"},"delivery_status":"final-reviewed-source","dispatch":{"event_sha256":"7cebfd65b99835595930e45377974b104ee29f3539d72a1195135c37c24ff554","timestamp":"2026-10-10T23:45:38.684Z"},"dispatched_prompt_sha256":"ae714f0d191be2e9d8c019c4613e3d7d4017abf7b3727fbb2c5c60bbaea07a1a","event_hash_basis":"UTF8 JSONL line excluding line ending","generation_mode":"original","id":"answers-keep-your-place-initial","output_path_recovery":{"event_sha256":"b27f36ae8ca7023cd27053701df632e9c2d690c4036673a961b66002b4061fb3","timestamp":"2026-10-10T23:47:06.694Z"},"prompt_binding_basis":"hash-bound-reviewed-file-plus-native-load-store-dispatch","prompt_load":{"event_sha256":"753d346d18f4d52fbbf092dd5120f76804aebcf6108f59532407e98fd7757a4a","timestamp":"2026-10-10T23:41:29.476Z"},"references":[],"reviewed_prompt_file_sha256":"599dcc6c90313587afe5dc37b7d1f3b92c548468350f7041de4bc621dffbeb4b","scene_id":"answers-keep-your-place","source_sha256":"94caa125cba001280b9f051ce3d27fbc98ba3efa75f5d1bdfec298194fd6dce9","stored_prompt_sha256":"ae714f0d191be2e9d8c019c4613e3d7d4017abf7b3727fbb2c5c60bbaea07a1a"},{"actual_load_outputs":[{"event_sha256":"c4e1685c36647ead0208f6884b5e65fa6821ad5cf47164c1399a2d9967f14f92","timestamp":"2026-10-10T23:41:30.524Z"}],"completion":{"event_sha256":"f1c5a22c5b0c2bdf2ef30b99e9dde3ca6f8db3d0c553d4699fa6b2a5a73d3c14","timestamp":"2026-10-10T23:46:57.404Z"},"delivery_status":"superseded-reviewer-held-source","dispatch":{"event_sha256":"7cebfd65b99835595930e45377974b104ee29f3539d72a1195135c37c24ff554","timestamp":"2026-10-10T23:45:38.684Z"},"dispatched_prompt_sha256":"1f46d5b334615067e2ba25932a9a5e02c35275c6b5ac1072ae22d9ea73b8b2f0","event_hash_basis":"UTF8 JSONL line excluding line ending","generation_mode":"original","id":"answers-companion-bench-initial","output_path_recovery":{"event_sha256":"b27f36ae8ca7023cd27053701df632e9c2d690c4036673a961b66002b4061fb3","timestamp":"2026-10-10T23:47:06.694Z"},"prompt_binding_basis":"hash-bound-reviewed-file-plus-native-load-store-dispatch","prompt_load":{"event_sha256":"753d346d18f4d52fbbf092dd5120f76804aebcf6108f59532407e98fd7757a4a","timestamp":"2026-10-10T23:41:29.476Z"},"references":[],"reviewed_prompt_file_sha256":"599dcc6c90313587afe5dc37b7d1f3b92c548468350f7041de4bc621dffbeb4b","scene_id":"answers-companion-bench","source_sha256":"e6c2f2794b55a8cf95cc70e03fb324f3a99da061ddc72625b68b48445287802c","stored_prompt_sha256":"1f46d5b334615067e2ba25932a9a5e02c35275c6b5ac1072ae22d9ea73b8b2f0"},{"actual_load_outputs":[{"event_sha256":"b27f36ae8ca7023cd27053701df632e9c2d690c4036673a961b66002b4061fb3","timestamp":"2026-10-10T23:47:06.694Z"}],"completion":{"event_sha256":"2565eb94a7c5ef7c59dfa3adf5e82ee043392bb1e0c1a6725e1f0d419d10818e","timestamp":"2026-10-10T23:48:28.366Z"},"delivery_status":"final-reviewed-source","dispatch":{"event_sha256":"159df7e1a5c394429b808cbfda2c9128804777cf69b818cc4c82d79bb5bc1aaa","timestamp":"2026-10-10T23:47:29.246Z"},"dispatched_prompt_sha256":"d509ec01c608a76a8805fc1fefc3891409bfa2c82e6c511597d8d516392f9d16","event_hash_basis":"UTF8 JSONL line excluding line ending","generation_mode":"edit","id":"answers-connected-conversation-reframe","output_path_recovery":{"event_sha256":"2565eb94a7c5ef7c59dfa3adf5e82ee043392bb1e0c1a6725e1f0d419d10818e","timestamp":"2026-10-10T23:48:28.366Z"},"prompt_binding_basis":"literal-loaded-prompt-plus-native-dispatch-variable-flow","prompt_load":{"event_sha256":"43f81124e8d809d35b5b8ed955388f3d3da373814cb15c74bc842265d1797f62","timestamp":"2026-10-10T23:47:05.955Z"},"references":["answers-connected-conversation-initial"],"reviewed_prompt_file_sha256":"e0b7023ca0978366c663d6c5709fa95412bfed72c88a7b63fd14d59f9e451c4d","scene_id":"answers-connected-conversation","source_sha256":"b343e25c4b050e09a50134996caff94cd91a2e708a1e1b6a9e275fd97c5b343d","stored_prompt_sha256":"d509ec01c608a76a8805fc1fefc3891409bfa2c82e6c511597d8d516392f9d16"},{"actual_load_outputs":[{"event_sha256":"b27f36ae8ca7023cd27053701df632e9c2d690c4036673a961b66002b4061fb3","timestamp":"2026-10-10T23:47:06.694Z"}],"completion":{"event_sha256":"2565eb94a7c5ef7c59dfa3adf5e82ee043392bb1e0c1a6725e1f0d419d10818e","timestamp":"2026-10-10T23:48:28.366Z"},"delivery_status":"final-reviewed-source","dispatch":{"event_sha256":"159df7e1a5c394429b808cbfda2c9128804777cf69b818cc4c82d79bb5bc1aaa","timestamp":"2026-10-10T23:47:29.246Z"},"dispatched_prompt_sha256":"5fee6584580d04989f5b5e8c3d0139f8ac17bd533404d27d250bf4d6f91ee19b","event_hash_basis":"UTF8 JSONL line excluding line ending","generation_mode":"edit","id":"answers-two-witnesses-text-correction","output_path_recovery":{"event_sha256":"2565eb94a7c5ef7c59dfa3adf5e82ee043392bb1e0c1a6725e1f0d419d10818e","timestamp":"2026-10-10T23:48:28.366Z"},"prompt_binding_basis":"literal-loaded-prompt-plus-native-dispatch-variable-flow","prompt_load":{"event_sha256":"43f81124e8d809d35b5b8ed955388f3d3da373814cb15c74bc842265d1797f62","timestamp":"2026-10-10T23:47:05.955Z"},"references":["answers-two-witnesses-initial"],"reviewed_prompt_file_sha256":"e0b7023ca0978366c663d6c5709fa95412bfed72c88a7b63fd14d59f9e451c4d","scene_id":"answers-two-witnesses","source_sha256":"56fdfe3655a9e82432fcf4565dcb6973e9d35f88231dd0c59be6448770b38792","stored_prompt_sha256":"5fee6584580d04989f5b5e8c3d0139f8ac17bd533404d27d250bf4d6f91ee19b"},{"actual_load_outputs":[{"event_sha256":"6f1ec23434a9c16a0454d307a7d7635605ea862e2abe500dc184fa602ecd8f0a","timestamp":"2026-10-10T23:48:49.271Z"}],"completion":{"event_sha256":"a29ee941e153907f3abb272f19f3166b4e19eaed0419091e833ac4e26cb2f9d4","timestamp":"2026-10-10T23:52:36.309Z"},"delivery_status":"final-reviewed-source","dispatch":{"event_sha256":"d7c7fe1bcad71ed9b78151ccad3d183c3b844973d8ee0cd15e8a18bbfec22865","timestamp":"2026-10-10T23:52:05.248Z"},"dispatched_prompt_sha256":"4e130a2aea91d37ab4b292a0f906ea216881f03b88d34ef127d50c61a57b48f0","event_hash_basis":"UTF8 JSONL line excluding line ending","generation_mode":"edit","id":"answers-companion-bench-reframe","output_path_recovery":{"event_sha256":"a29ee941e153907f3abb272f19f3166b4e19eaed0419091e833ac4e26cb2f9d4","timestamp":"2026-10-10T23:52:36.309Z"},"prompt_binding_basis":"literal-loaded-prompt-plus-native-dispatch-variable-flow","prompt_load":{"event_sha256":"e10752be6b2e6b2e3784b97b6faf807c88fdb8011ecff2afb36f2e00634a9897","timestamp":"2026-10-10T23:48:47.973Z"},"references":["answers-companion-bench-initial"],"reviewed_prompt_file_sha256":"f69e16f8f68dc02b9d3b47e86719320faf472fda75db5ca9862147e9c4b590ff","scene_id":"answers-companion-bench","source_sha256":"ae3b699fdfad8b2bce267547f7037a31e2cd7e40ce27d1e69284ef3aa240fcc3","stored_prompt_sha256":"4e130a2aea91d37ab4b292a0f906ea216881f03b88d34ef127d50c61a57b48f0"}],"historical_preparation_audit":{"actual_checks":["All9 source hashes and stored prompt digests","All referenced native event exact bytes excluding line endings and timestamps","Load/dispatch/completion/recovered path chronology and edit parents","Native recovered filename matches each source path","Initial6 native composition/IDs exactly match frozen source JSON","Three edit prompts exactly equal decoded native loaded JSON, no Unicode replacement drift","Six final PNG masters byte-identical to selected native outputs","Genuine Fermi/Newton pre-generation prompt opinions personally read from earlier group events"],"audit_sha256":"b6a0d6bf9282f7d29144823906c63bd5478c4445bf57dfdea5d07bb983100e7e","limitations":["Initial full prompt identity derived from hash-bound reviewed source file plus native load/store/dispatch; native output prints composition only","Batch completion timestamp is orchestration completion, not per-image internal generation time","Conditional historical Engine brief completion not audited; full historical preparation NOT CLAIMED","Current normalization/equivalence, complete current owner inventory and assembled context require separate actual reviews","Held ancestors remain held versions; no owner-final acceptance or publication inferred"],"projection_sha256":"9bb62d1a16a8cd5fc6dab4af9e7ccb73d564bbb2b7aadf34942883b0f31b985f","reviewed_at":"2026-10-11T12:49:01.805117+00:00","reviewer":"Newton","status":"CURRENT_NODE_AUDIT_COMPLETE_HISTORICAL_PREPARATION_NOT_CLAIMED"},"original_owner_census":[{"depicts_christ":true,"markup_sha256":"0ddf6de91e865b9947c4fe3a2d25e4764484248b321533e9f9888d179bb35da6","sha256":"d6fd78e892da505de24e0c84f6a68c70e823f20c052eb8320d0ceac538282f91","src":"assets/heroes/answers-christ-companion.png"},{"depicts_christ":true,"markup_sha256":"5004ae83937e4d375b19aa7b23c731c8dc0d360c13196eb5ea0544bd4a84f2f3","sha256":"b64d4d125fe03f7b8f2bb3f1e919b0e8107d4b9cc24b8a38fdf854176cf62c45","src":"assets/answers-christ-portrait.png"},{"depicts_christ":false,"markup_sha256":"8888878e0513a68620948c9790a83b4c3815a1a85d11c7481534ccc8d61b704a","sha256":"dd50595487d0a5ed490a81674d15eaf3816e32229802739a47fde7a32b0b756c","src":"assets/page-art/answers-quiet-prayer-800.webp"},{"depicts_christ":true,"markup_sha256":"bd79df635431cf4ac7d2dcedab59e9fd13bd1b851ec19f45dfd36c5b3773a896","sha256":"a504aa0a1d0b28a531f0f05ecfbf475706e30692ce5df2672c270d427d49f898","src":"assets/page-art/answers-savior-welcomes-child-900.webp?v=20260905-approved-face"},{"depicts_christ":true,"markup_sha256":"ed21c4b2d1ceac54611daee79125c94a90724a3abd8bf0c30e914d3d16df8596","sha256":"3c9fd2f7002f06d2a73509918ace6361248469e84dede936c5570ee866fe1181","src":"assets/page-art/answers-comfort-in-grief-800.webp"},{"depicts_christ":true,"markup_sha256":"ae6bd7d3df8f964ba65e29164da0a5c6cafc686a5763a42a026555b2ec897155","sha256":"68bf3c5f4dfa8fcbda33443921cf82f0b99f3252375d08a5f622b3fd3dcdbecd","src":"assets/page-art/answers-child-loss-father-800.webp"},{"depicts_christ":true,"markup_sha256":"210a6800fd7f9fc9d584a716933c20a508dda5420b4e5c68eaccc83ab3878522","sha256":"035ceccdd493698ed1cc629651be565df354f2db04a162b386df738aab45bb44","src":"assets/page-art/answers-child-loss-parents-800.webp"},{"depicts_christ":true,"markup_sha256":"088fae5bcf9574cbeae6e4ab49a5e7feef379a19ff7711196da8975affbeecfb","sha256":"42cbca7ec8ff6e1112753f52e146b7cf089f872ab43ff1de3b19da56ef4ad166","src":"assets/page-art/answers-divorced-father-800.webp"},{"depicts_christ":true,"markup_sha256":"eaae37e97bd8ba3d04c670b2e09e21658c4ba4efd1a27ae71ecf970d05d9b246","sha256":"60dedc0b4fde604470975b0bfe08def25c6bf5448e1310b93175d86a3837fa97","src":"assets/answers-christ-walking.png"},{"depicts_christ":false,"markup_sha256":"03193710196ce96359e95a3860f20e8c74d8d75b866f4818012f3dc1c3e25e2d","sha256":"8991f4ec794507b87012ad80a0c358a815b22ac645fb72b18606ae382fcef617","src":"assets/page-art/answers-study/answers-connected-conversation-960.webp"},{"depicts_christ":false,"markup_sha256":"b40f238a0730edc3fbeb7f88116856548e2bf9892a13ea117f498962d01e42b9","sha256":"841dc5914d17e16cd7ae0c6354e74c737e6b8b5d63dc6127a1f74bf7032ea791","src":"assets/page-art/answers-study/answers-neighbor-service-960.webp"},{"depicts_christ":false,"markup_sha256":"e05b18fade56163219a57c7aadc87a28c73a8c84872aa50cf4ca5ad6d331d91b","sha256":"bc12923616230b40a7b6a02ce46873df66ffc3d536801859924bca849fcb412f","src":"assets/page-art/answers-study/answers-two-witnesses-960.webp"},{"depicts_christ":false,"markup_sha256":"f2bfba839645af69a21bfdf87f92a5003ee49b684e40cb252067ae3bba47a2cf","sha256":"3ef6551eb478e9977594794b166cd02a5afe5725f0ac50bea543e61a3b7099f1","src":"assets/page-art/answers-study/answers-family-hopes-960.webp"},{"depicts_christ":false,"markup_sha256":"3f691d9421441dd04bcd5d0482790d18df8fd7de86d744a201e49c19a83dfe9e","sha256":"f8739ce5cd02b3419730189d0e4d100a25b4bfe5af1a5b3bb53aecf408699b76","src":"assets/page-art/answers-study/answers-keep-your-place-960.webp"},{"depicts_christ":false,"markup_sha256":"c75eb00fb824562b40b83eae147a107b6428dad0a68c7598b6bff5910ced64c2","sha256":"ab1b751317771b8adc3f1d9afbc045b59f2e162e4702b37ab12e0f10398d0e89","src":"assets/page-art/answers-study/answers-companion-bench-960.webp"}],"owner_authority":"Owner explicitly directed team-reviewed completion and publication; no individual final-image acceptance inferred.","owner_final_image_acceptance":"not-claimed","registration_class":"CURRENT_EQUIVALENCE","route":"answers.html","scenes":[{"assets":[{"height":724,"kind":"original","path":"assets/page-art/answers-study/answers-connected-conversation-original.png","pixel_sha256":"fe7bf3a0623d8fdb9d1edebf38d4406e269eda3c680440cc011a2f5e2e9df628","sha256":"b343e25c4b050e09a50134996caff94cd91a2e708a1e1b6a9e275fd97c5b343d","width":2172},{"height":213,"kind":"lossless-derivative","path":"assets/page-art/answers-study/answers-connected-conversation-640.webp","pixel_sha256":"5cfdb1130cc5ba99700338aaa2b4884f99120d9d0f0b798bfda6f229a4914447","sha256":"b2017b731957aae34a094a748dcc7e8ab5cf06e20f4d061aab86f7389d6ecf43","width":640},{"height":320,"kind":"lossless-derivative","path":"assets/page-art/answers-study/answers-connected-conversation-960.webp","pixel_sha256":"c64ef89b3e55f153e385e163db7b893da2978eed1b25cdec40ac9682f47cf3b7","sha256":"8991f4ec794507b87012ad80a0c358a815b22ac645fb72b18606ae382fcef617","width":960},{"height":724,"kind":"lossless-derivative","path":"assets/page-art/answers-study/answers-connected-conversation-full.webp","pixel_sha256":"fe7bf3a0623d8fdb9d1edebf38d4406e269eda3c680440cc011a2f5e2e9df628","sha256":"1fc1e663af3b159cbd72b2a8eebe3b94ad2ee95151e370865ef87e96bbc9b7ef","width":2172}],"depicts_christ":false,"final_generated_at":"2026-10-10T23:48:28.366Z","generation_ids":["answers-connected-conversation-initial","answers-connected-conversation-reframe"],"historical_claim":false,"id":"answers-connected-conversation","identity_claim":"none","owning_section":"connected-study","route":"answers.html","scene_kind":"fictional-contemporary"},{"assets":[{"height":992,"kind":"original","path":"assets/page-art/answers-study/answers-neighbor-service-original.png","pixel_sha256":"32b4e959eb25ea48fca6491fc00b037582f2e2ad05192567c4ce0525b1b89bba","sha256":"71a25d999e3a116be3883ac1173243b1b451ea07cf130060aacabdb853e3cd4a","width":1586},{"height":400,"kind":"lossless-derivative","path":"assets/page-art/answers-study/answers-neighbor-service-640.webp","pixel_sha256":"9f74d346d066d2fe8e72322743dda710ec170fc2885d86c12992f4ff48a290e9","sha256":"9047279511747c2e973643144a52e0a5d1afc638f91b9e9e1219d1177eb04589","width":640},{"height":600,"kind":"lossless-derivative","path":"assets/page-art/answers-study/answers-neighbor-service-960.webp","pixel_sha256":"ba8a316dbd32ea0f8255c8a46af615dec76c39b980f2a256f63dfac964d92511","sha256":"841dc5914d17e16cd7ae0c6354e74c737e6b8b5d63dc6127a1f74bf7032ea791","width":960},{"height":992,"kind":"lossless-derivative","path":"assets/page-art/answers-study/answers-neighbor-service-full.webp","pixel_sha256":"32b4e959eb25ea48fca6491fc00b037582f2e2ad05192567c4ce0525b1b89bba","sha256":"679757f90413c4e4f028f014b857ea7807a9e265df6700d6b8d8512f12ae7b3d","width":1586}],"depicts_christ":false,"final_generated_at":"2026-10-10T23:44:51.217Z","generation_ids":["answers-neighbor-service-initial"],"historical_claim":false,"id":"answers-neighbor-service","identity_claim":"none","owning_section":"connected-study","route":"answers.html","scene_kind":"fictional-contemporary"},{"assets":[{"height":993,"kind":"original","path":"assets/page-art/answers-study/answers-two-witnesses-original.png","pixel_sha256":"fa85867cf17931dfb809aa43b8273fe47d2e3239d49355267719931234e6609b","sha256":"56fdfe3655a9e82432fcf4565dcb6973e9d35f88231dd0c59be6448770b38792","width":1584},{"height":401,"kind":"lossless-derivative","path":"assets/page-art/answers-study/answers-two-witnesses-640.webp","pixel_sha256":"541db53a077715f35c07c3b36b38b365044815bb22d3fc4fc35de8819b532443","sha256":"5805c07033d60bf4bacb4834582bbc661e15b271f9ce7c984690cc7cf2608802","width":640},{"height":602,"kind":"lossless-derivative","path":"assets/page-art/answers-study/answers-two-witnesses-960.webp","pixel_sha256":"dbaae207685e8f92af425c48715eb4cb9bcd4ed5c389c82984e16b1416fe0580","sha256":"bc12923616230b40a7b6a02ce46873df66ffc3d536801859924bca849fcb412f","width":960},{"height":993,"kind":"lossless-derivative","path":"assets/page-art/answers-study/answers-two-witnesses-full.webp","pixel_sha256":"fa85867cf17931dfb809aa43b8273fe47d2e3239d49355267719931234e6609b","sha256":"8712850f640c74c5fa6d22579dbe1423a1f2b67cd494e7799ad0b91aa2d34a29","width":1584}],"depicts_christ":false,"final_generated_at":"2026-10-10T23:48:28.366Z","generation_ids":["answers-two-witnesses-initial","answers-two-witnesses-text-correction"],"historical_claim":false,"id":"answers-two-witnesses","identity_claim":"none","owning_section":"connected-study","route":"answers.html","scene_kind":"still-life"},{"assets":[{"height":992,"kind":"original","path":"assets/page-art/answers-study/answers-family-hopes-original.png","pixel_sha256":"7eb2ddc271081af003526ee276629a28187fb0646f991365a0dbcc4cb777228b","sha256":"a361ba3581d16ce3ff7391aee045a90767ee86d6a59f1b1e1cb37b7dba6e38dd","width":1586},{"height":400,"kind":"lossless-derivative","path":"assets/page-art/answers-study/answers-family-hopes-640.webp","pixel_sha256":"c352ef0555f8270eee8c74f082a444f877fd8422c8b394a23cee39dfabcdebfd","sha256":"31b6b8cec82b39d4913b81053ac797e6ba7f2c5a9eb9f1b86a6410901c5e746b","width":640},{"height":600,"kind":"lossless-derivative","path":"assets/page-art/answers-study/answers-family-hopes-960.webp","pixel_sha256":"8a69c2157590d37ff33cbb3ae2df62ea14edfbde6610bd2e542457683c788023","sha256":"3ef6551eb478e9977594794b166cd02a5afe5725f0ac50bea543e61a3b7099f1","width":960},{"height":992,"kind":"lossless-derivative","path":"assets/page-art/answers-study/answers-family-hopes-full.webp","pixel_sha256":"7eb2ddc271081af003526ee276629a28187fb0646f991365a0dbcc4cb777228b","sha256":"1840a670f1d4d03731cc7d18345a3baf50eee0ede181412a5572a2cbda5d9e8d","width":1586}],"depicts_christ":false,"final_generated_at":"2026-10-10T23:46:57.404Z","generation_ids":["answers-family-hopes-initial"],"historical_claim":false,"id":"answers-family-hopes","identity_claim":"none","owning_section":"connected-study","route":"answers.html","scene_kind":"fictional-contemporary"},{"assets":[{"height":1024,"kind":"original","path":"assets/page-art/answers-study/answers-keep-your-place-original.png","pixel_sha256":"63d8cd2be5c01d25174e67e99ab0df0a2450851379c0c2ef550e78bc482e3072","sha256":"94caa125cba001280b9f051ce3d27fbc98ba3efa75f5d1bdfec298194fd6dce9","width":1536},{"height":427,"kind":"lossless-derivative","path":"assets/page-art/answers-study/answers-keep-your-place-640.webp","pixel_sha256":"3f945768fb247b1aeac20663506d7c2bea900712e1f20bd5c2671a8505de05ce","sha256":"3b5cc20033d45fb9ce04698538a889e0b56f112c5b2f9c99cc6ece613e93e808","width":640},{"height":640,"kind":"lossless-derivative","path":"assets/page-art/answers-study/answers-keep-your-place-960.webp","pixel_sha256":"00a7a66a77380210727e8943471238317e53b4f87e80d5cc6c6926640813bfb9","sha256":"f8739ce5cd02b3419730189d0e4d100a25b4bfe5af1a5b3bb53aecf408699b76","width":960},{"height":1024,"kind":"lossless-derivative","path":"assets/page-art/answers-study/answers-keep-your-place-full.webp","pixel_sha256":"63d8cd2be5c01d25174e67e99ab0df0a2450851379c0c2ef550e78bc482e3072","sha256":"793e19c27ff7d7daa3f482ca57d0829b217b2d4fe0a50953b2f88836ca4f82d0","width":1536}],"depicts_christ":false,"final_generated_at":"2026-10-10T23:46:57.404Z","generation_ids":["answers-keep-your-place-initial"],"historical_claim":false,"id":"answers-keep-your-place","identity_claim":"none","owning_section":"saved-studies","route":"answers.html","scene_kind":"still-life"},{"assets":[{"height":724,"kind":"original","path":"assets/page-art/answers-study/answers-companion-bench-original.png","pixel_sha256":"517db8d9c7ddfbb101778a33cc9ca8a4d45b4dbcc3d639305d5f8ec38596d35e","sha256":"ae3b699fdfad8b2bce267547f7037a31e2cd7e40ce27d1e69284ef3aa240fcc3","width":2172},{"height":213,"kind":"lossless-derivative","path":"assets/page-art/answers-study/answers-companion-bench-640.webp","pixel_sha256":"817355666a11a86dc73942a7ddb6edf1b34060c352cd4ceee97b8ff4c0465e10","sha256":"1402bc3ed258642a550a38d24c6752287be71b01ccbbe2d522b6dbc51a5afa41","width":640},{"height":320,"kind":"lossless-derivative","path":"assets/page-art/answers-study/answers-companion-bench-960.webp","pixel_sha256":"4b0905008bf9597ed92c586283d75b45e0b891f3a583abafd936e58a1f709fb0","sha256":"ab1b751317771b8adc3f1d9afbc045b59f2e162e4702b37ab12e0f10398d0e89","width":960},{"height":724,"kind":"lossless-derivative","path":"assets/page-art/answers-study/answers-companion-bench-full.webp","pixel_sha256":"517db8d9c7ddfbb101778a33cc9ca8a4d45b4dbcc3d639305d5f8ec38596d35e","sha256":"edd718b174072e95e1ef042d16d13781b8b9cdc9565c724445a8985566f85ca6","width":2172}],"depicts_christ":false,"final_generated_at":"2026-10-10T23:52:36.309Z","generation_ids":["answers-companion-bench-initial","answers-companion-bench-reframe"],"historical_claim":false,"id":"answers-companion-bench","identity_claim":"none","owning_section":"study-companions","route":"answers.html","scene_kind":"fictional-contemporary"}],"schema":1,"scope":"Exact six recovered Answers families;24 raster files; no general exemption."}}
+{
+  "normalized_at": "2026-10-11T22:20:17.926089+00:00",
+  "reviews": [
+    {
+      "path": "docs/three-reviewed-20261011/answers-six-albert-review.json",
+      "sha256": "51405b8eb00a62a8ab88e1042747011289c5dcb7457f65ef75427cfd0d66750a"
+    },
+    {
+      "path": "docs/three-reviewed-20261011/answers-six-fermi-review.json",
+      "sha256": "1be2b491adff13e469f7de6170745e84f0d47c35ebdc3ff051e4879ec932a578"
+    },
+    {
+      "path": "docs/three-reviewed-20261011/answers-six-newton-review.json",
+      "sha256": "95f99c7f43621af49caafb1b11fa62a410a4fa347c678e04eb14935d2a702ade"
+    }
+  ],
+  "schema": 1,
+  "spec": {
+    "context": [
+      {
+        "path": "answers-artwork-dialog.css",
+        "sha256": "bac8c8ab61067f7ce15282c8c6a4230d8fd2765fddb4dd60998a4220a92f8cbd"
+      },
+      {
+        "path": "answers-artwork-dialog.js",
+        "sha256": "23dcd58a91c506be5d98d6453bfe0d78fc670ac970769192bbacbc02b42a9b41"
+      },
+      {
+        "path": "answers-hero.css",
+        "sha256": "b0e8a4097a4f3f6f648e6695a68f119cebed61204ba4bc40686168fdf1c95642"
+      },
+      {
+        "path": "answers-illustrated-study.css",
+        "sha256": "346976607a04d0fcfa6eedf3bc3de3a9657a4cddca92a80a8b9c52697c204b4d"
+      },
+      {
+        "path": "answers.html",
+        "sha256": "f577f0927c8b542e7dd7fb3c99f86b7cfd04dc881fe21b2f365b29cc9f88fdc4"
+      },
+      {
+        "path": "artwork-actions.css",
+        "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+      },
+      {
+        "path": "artwork-details.css",
+        "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+      },
+      {
+        "path": "artwork-details.js",
+        "sha256": "27b6e27ba2399f4e0f1c680b50630ea8cfe4887375ed942290bf7248005d4f76"
+      },
+      {
+        "path": "complete-card-rows.css",
+        "sha256": "7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"
+      },
+      {
+        "path": "connected-study.css",
+        "sha256": "6b61c50c1d8e005074beb2db8fa800377377e6a3c9b955678dd836538fcb48cd"
+      },
+      {
+        "path": "full-image-viewer.css",
+        "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+      },
+      {
+        "path": "full-image-viewer.js",
+        "sha256": "01d17afd6b3f4bd205292d2544683ba9884b73fa350401cd0e299512b5458152"
+      },
+      {
+        "path": "general-conference-section.css",
+        "sha256": "c479d3f126ad31347635f6c66c727b6fb0db89b584609a983b1af65cc48f2adb"
+      },
+      {
+        "path": "guided-studies.css",
+        "sha256": "6ec6dfa3150ae158f4689972042cac9780a25cac4066fe78fe2f3312b618eea9"
+      },
+      {
+        "path": "hero-details.css",
+        "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+      },
+      {
+        "path": "hero-details.js",
+        "sha256": "fff59dbfbd64325aeae947755e7a013a0ae51883c05b959bfaac1865c312f8cf"
+      },
+      {
+        "path": "hero-image-source.js",
+        "sha256": "2f8f62cbbffb4f5d5e663b3128aed45fdd35e1deec484589bbfba4e6bbc62704"
+      },
+      {
+        "path": "resource-cards.css",
+        "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+      },
+      {
+        "path": "saved-studies.js",
+        "sha256": "682f6766f71ef429c61a1e650af31ee409cd70c14bb5653e317c7669c4160d03"
+      },
+      {
+        "path": "settle-heart-study.css",
+        "sha256": "5e9ffecda2ab85ecd28ed065bde6f8ae68a21d11be045aa287168943dcfd5a87"
+      },
+      {
+        "path": "site-common.js",
+        "sha256": "fc0ae667fd977c6cd66ef2e649ef9da2cbcf5eee4201094dd90ed48b551e6488"
+      },
+      {
+        "path": "site-header.css",
+        "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+      },
+      {
+        "path": "site-search.css",
+        "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+      },
+      {
+        "path": "site-search.js",
+        "sha256": "2722b477848556bb05ecf0487b890c1d0e25840f912f8ea6140382a340eae099"
+      },
+      {
+        "path": "site-system.css",
+        "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+      },
+      {
+        "path": "study-companions.js",
+        "sha256": "6a807adecdc83d50f3aa798f882e8bd69721d4638dd8f2af20859acd94c23191"
+      },
+      {
+        "path": "study-reading-balance.css",
+        "sha256": "fb547af5c883050d743204c0d05372863143a1fa0dffd2df370b728f1a9ff005"
+      }
+    ],
+    "excluded_image_sources": [
+      "assets/page-art/come-follow-me/personal-study-2026.webp",
+      "assets/resources/answers-embrace-faith.jpg",
+      "assets/resources/answers-hope-healing.jpg",
+      ""
+    ],
+    "generation_graph": [
+      {
+        "actual_load_outputs": [
+          {
+            "event_sha256": "c4e1685c36647ead0208f6884b5e65fa6821ad5cf47164c1399a2d9967f14f92",
+            "timestamp": "2026-10-10T23:41:30.524Z"
+          }
+        ],
+        "completion": {
+          "event_sha256": "394ae8f83db78c4355a0411f6214dee092e7ac527d8117dad1e7cec4f4857440",
+          "timestamp": "2026-10-10T23:44:51.217Z"
+        },
+        "delivery_status": "superseded-reviewer-held-source",
+        "dispatch": {
+          "event_sha256": "a82199046194ea4f5aa2c589cfa3f1aeab057edb9e87bd986423ef66671f83ff",
+          "timestamp": "2026-10-10T23:43:35.438Z"
+        },
+        "dispatched_prompt_sha256": "1daaab6cce0964925141cfd8ff14f44622f82d8b058c6d23c13d40d254e92db0",
+        "event_hash_basis": "UTF8 JSONL line excluding line ending",
+        "generation_mode": "original",
+        "id": "answers-connected-conversation-initial",
+        "output_path_recovery": {
+          "event_sha256": "91278c7b195adf071e8bfa929a9721b8f0729fbf7ade73fb24f7f4ee5463657d",
+          "timestamp": "2026-10-10T23:45:18.508Z"
+        },
+        "prompt_binding_basis": "hash-bound-reviewed-file-plus-native-load-store-dispatch",
+        "prompt_load": {
+          "event_sha256": "753d346d18f4d52fbbf092dd5120f76804aebcf6108f59532407e98fd7757a4a",
+          "timestamp": "2026-10-10T23:41:29.476Z"
+        },
+        "references": [],
+        "reviewed_prompt_file_sha256": "599dcc6c90313587afe5dc37b7d1f3b92c548468350f7041de4bc621dffbeb4b",
+        "scene_id": "answers-connected-conversation",
+        "source_sha256": "baabd5c24fb0254438b101f37d16d6c1a07ad5983486dddd70060a3c275b6e72",
+        "stored_prompt_sha256": "1daaab6cce0964925141cfd8ff14f44622f82d8b058c6d23c13d40d254e92db0"
+      },
+      {
+        "actual_load_outputs": [
+          {
+            "event_sha256": "c4e1685c36647ead0208f6884b5e65fa6821ad5cf47164c1399a2d9967f14f92",
+            "timestamp": "2026-10-10T23:41:30.524Z"
+          }
+        ],
+        "completion": {
+          "event_sha256": "394ae8f83db78c4355a0411f6214dee092e7ac527d8117dad1e7cec4f4857440",
+          "timestamp": "2026-10-10T23:44:51.217Z"
+        },
+        "delivery_status": "final-reviewed-source",
+        "dispatch": {
+          "event_sha256": "a82199046194ea4f5aa2c589cfa3f1aeab057edb9e87bd986423ef66671f83ff",
+          "timestamp": "2026-10-10T23:43:35.438Z"
+        },
+        "dispatched_prompt_sha256": "ff0a5c7331a71b9b7efbe8e39d6d73ee051d86b5265e7648b7bcf11de89bb6bf",
+        "event_hash_basis": "UTF8 JSONL line excluding line ending",
+        "generation_mode": "original",
+        "id": "answers-neighbor-service-initial",
+        "output_path_recovery": {
+          "event_sha256": "91278c7b195adf071e8bfa929a9721b8f0729fbf7ade73fb24f7f4ee5463657d",
+          "timestamp": "2026-10-10T23:45:18.508Z"
+        },
+        "prompt_binding_basis": "hash-bound-reviewed-file-plus-native-load-store-dispatch",
+        "prompt_load": {
+          "event_sha256": "753d346d18f4d52fbbf092dd5120f76804aebcf6108f59532407e98fd7757a4a",
+          "timestamp": "2026-10-10T23:41:29.476Z"
+        },
+        "references": [],
+        "reviewed_prompt_file_sha256": "599dcc6c90313587afe5dc37b7d1f3b92c548468350f7041de4bc621dffbeb4b",
+        "scene_id": "answers-neighbor-service",
+        "source_sha256": "71a25d999e3a116be3883ac1173243b1b451ea07cf130060aacabdb853e3cd4a",
+        "stored_prompt_sha256": "ff0a5c7331a71b9b7efbe8e39d6d73ee051d86b5265e7648b7bcf11de89bb6bf"
+      },
+      {
+        "actual_load_outputs": [
+          {
+            "event_sha256": "c4e1685c36647ead0208f6884b5e65fa6821ad5cf47164c1399a2d9967f14f92",
+            "timestamp": "2026-10-10T23:41:30.524Z"
+          }
+        ],
+        "completion": {
+          "event_sha256": "394ae8f83db78c4355a0411f6214dee092e7ac527d8117dad1e7cec4f4857440",
+          "timestamp": "2026-10-10T23:44:51.217Z"
+        },
+        "delivery_status": "superseded-reviewer-held-source",
+        "dispatch": {
+          "event_sha256": "a82199046194ea4f5aa2c589cfa3f1aeab057edb9e87bd986423ef66671f83ff",
+          "timestamp": "2026-10-10T23:43:35.438Z"
+        },
+        "dispatched_prompt_sha256": "c2d1b3bcebda85b0697ae8ff21cddf1258540ddd15928c4ca5dbe8c02dc0ea6a",
+        "event_hash_basis": "UTF8 JSONL line excluding line ending",
+        "generation_mode": "original",
+        "id": "answers-two-witnesses-initial",
+        "output_path_recovery": {
+          "event_sha256": "91278c7b195adf071e8bfa929a9721b8f0729fbf7ade73fb24f7f4ee5463657d",
+          "timestamp": "2026-10-10T23:45:18.508Z"
+        },
+        "prompt_binding_basis": "hash-bound-reviewed-file-plus-native-load-store-dispatch",
+        "prompt_load": {
+          "event_sha256": "753d346d18f4d52fbbf092dd5120f76804aebcf6108f59532407e98fd7757a4a",
+          "timestamp": "2026-10-10T23:41:29.476Z"
+        },
+        "references": [],
+        "reviewed_prompt_file_sha256": "599dcc6c90313587afe5dc37b7d1f3b92c548468350f7041de4bc621dffbeb4b",
+        "scene_id": "answers-two-witnesses",
+        "source_sha256": "1bf8515e4a602234ab7ca09c445a782ebcb98d712e264ec692bf78552147593e",
+        "stored_prompt_sha256": "c2d1b3bcebda85b0697ae8ff21cddf1258540ddd15928c4ca5dbe8c02dc0ea6a"
+      },
+      {
+        "actual_load_outputs": [
+          {
+            "event_sha256": "c4e1685c36647ead0208f6884b5e65fa6821ad5cf47164c1399a2d9967f14f92",
+            "timestamp": "2026-10-10T23:41:30.524Z"
+          }
+        ],
+        "completion": {
+          "event_sha256": "f1c5a22c5b0c2bdf2ef30b99e9dde3ca6f8db3d0c553d4699fa6b2a5a73d3c14",
+          "timestamp": "2026-10-10T23:46:57.404Z"
+        },
+        "delivery_status": "final-reviewed-source",
+        "dispatch": {
+          "event_sha256": "7cebfd65b99835595930e45377974b104ee29f3539d72a1195135c37c24ff554",
+          "timestamp": "2026-10-10T23:45:38.684Z"
+        },
+        "dispatched_prompt_sha256": "56aae0e20ab55e59c3dbe905e7947a67b1bbe40747b71ff8e765dc20025e6be6",
+        "event_hash_basis": "UTF8 JSONL line excluding line ending",
+        "generation_mode": "original",
+        "id": "answers-family-hopes-initial",
+        "output_path_recovery": {
+          "event_sha256": "b27f36ae8ca7023cd27053701df632e9c2d690c4036673a961b66002b4061fb3",
+          "timestamp": "2026-10-10T23:47:06.694Z"
+        },
+        "prompt_binding_basis": "hash-bound-reviewed-file-plus-native-load-store-dispatch",
+        "prompt_load": {
+          "event_sha256": "753d346d18f4d52fbbf092dd5120f76804aebcf6108f59532407e98fd7757a4a",
+          "timestamp": "2026-10-10T23:41:29.476Z"
+        },
+        "references": [],
+        "reviewed_prompt_file_sha256": "599dcc6c90313587afe5dc37b7d1f3b92c548468350f7041de4bc621dffbeb4b",
+        "scene_id": "answers-family-hopes",
+        "source_sha256": "a361ba3581d16ce3ff7391aee045a90767ee86d6a59f1b1e1cb37b7dba6e38dd",
+        "stored_prompt_sha256": "56aae0e20ab55e59c3dbe905e7947a67b1bbe40747b71ff8e765dc20025e6be6"
+      },
+      {
+        "actual_load_outputs": [
+          {
+            "event_sha256": "c4e1685c36647ead0208f6884b5e65fa6821ad5cf47164c1399a2d9967f14f92",
+            "timestamp": "2026-10-10T23:41:30.524Z"
+          }
+        ],
+        "completion": {
+          "event_sha256": "f1c5a22c5b0c2bdf2ef30b99e9dde3ca6f8db3d0c553d4699fa6b2a5a73d3c14",
+          "timestamp": "2026-10-10T23:46:57.404Z"
+        },
+        "delivery_status": "final-reviewed-source",
+        "dispatch": {
+          "event_sha256": "7cebfd65b99835595930e45377974b104ee29f3539d72a1195135c37c24ff554",
+          "timestamp": "2026-10-10T23:45:38.684Z"
+        },
+        "dispatched_prompt_sha256": "ae714f0d191be2e9d8c019c4613e3d7d4017abf7b3727fbb2c5c60bbaea07a1a",
+        "event_hash_basis": "UTF8 JSONL line excluding line ending",
+        "generation_mode": "original",
+        "id": "answers-keep-your-place-initial",
+        "output_path_recovery": {
+          "event_sha256": "b27f36ae8ca7023cd27053701df632e9c2d690c4036673a961b66002b4061fb3",
+          "timestamp": "2026-10-10T23:47:06.694Z"
+        },
+        "prompt_binding_basis": "hash-bound-reviewed-file-plus-native-load-store-dispatch",
+        "prompt_load": {
+          "event_sha256": "753d346d18f4d52fbbf092dd5120f76804aebcf6108f59532407e98fd7757a4a",
+          "timestamp": "2026-10-10T23:41:29.476Z"
+        },
+        "references": [],
+        "reviewed_prompt_file_sha256": "599dcc6c90313587afe5dc37b7d1f3b92c548468350f7041de4bc621dffbeb4b",
+        "scene_id": "answers-keep-your-place",
+        "source_sha256": "94caa125cba001280b9f051ce3d27fbc98ba3efa75f5d1bdfec298194fd6dce9",
+        "stored_prompt_sha256": "ae714f0d191be2e9d8c019c4613e3d7d4017abf7b3727fbb2c5c60bbaea07a1a"
+      },
+      {
+        "actual_load_outputs": [
+          {
+            "event_sha256": "c4e1685c36647ead0208f6884b5e65fa6821ad5cf47164c1399a2d9967f14f92",
+            "timestamp": "2026-10-10T23:41:30.524Z"
+          }
+        ],
+        "completion": {
+          "event_sha256": "f1c5a22c5b0c2bdf2ef30b99e9dde3ca6f8db3d0c553d4699fa6b2a5a73d3c14",
+          "timestamp": "2026-10-10T23:46:57.404Z"
+        },
+        "delivery_status": "superseded-reviewer-held-source",
+        "dispatch": {
+          "event_sha256": "7cebfd65b99835595930e45377974b104ee29f3539d72a1195135c37c24ff554",
+          "timestamp": "2026-10-10T23:45:38.684Z"
+        },
+        "dispatched_prompt_sha256": "1f46d5b334615067e2ba25932a9a5e02c35275c6b5ac1072ae22d9ea73b8b2f0",
+        "event_hash_basis": "UTF8 JSONL line excluding line ending",
+        "generation_mode": "original",
+        "id": "answers-companion-bench-initial",
+        "output_path_recovery": {
+          "event_sha256": "b27f36ae8ca7023cd27053701df632e9c2d690c4036673a961b66002b4061fb3",
+          "timestamp": "2026-10-10T23:47:06.694Z"
+        },
+        "prompt_binding_basis": "hash-bound-reviewed-file-plus-native-load-store-dispatch",
+        "prompt_load": {
+          "event_sha256": "753d346d18f4d52fbbf092dd5120f76804aebcf6108f59532407e98fd7757a4a",
+          "timestamp": "2026-10-10T23:41:29.476Z"
+        },
+        "references": [],
+        "reviewed_prompt_file_sha256": "599dcc6c90313587afe5dc37b7d1f3b92c548468350f7041de4bc621dffbeb4b",
+        "scene_id": "answers-companion-bench",
+        "source_sha256": "e6c2f2794b55a8cf95cc70e03fb324f3a99da061ddc72625b68b48445287802c",
+        "stored_prompt_sha256": "1f46d5b334615067e2ba25932a9a5e02c35275c6b5ac1072ae22d9ea73b8b2f0"
+      },
+      {
+        "actual_load_outputs": [
+          {
+            "event_sha256": "b27f36ae8ca7023cd27053701df632e9c2d690c4036673a961b66002b4061fb3",
+            "timestamp": "2026-10-10T23:47:06.694Z"
+          }
+        ],
+        "completion": {
+          "event_sha256": "2565eb94a7c5ef7c59dfa3adf5e82ee043392bb1e0c1a6725e1f0d419d10818e",
+          "timestamp": "2026-10-10T23:48:28.366Z"
+        },
+        "delivery_status": "final-reviewed-source",
+        "dispatch": {
+          "event_sha256": "159df7e1a5c394429b808cbfda2c9128804777cf69b818cc4c82d79bb5bc1aaa",
+          "timestamp": "2026-10-10T23:47:29.246Z"
+        },
+        "dispatched_prompt_sha256": "d509ec01c608a76a8805fc1fefc3891409bfa2c82e6c511597d8d516392f9d16",
+        "event_hash_basis": "UTF8 JSONL line excluding line ending",
+        "generation_mode": "edit",
+        "id": "answers-connected-conversation-reframe",
+        "output_path_recovery": {
+          "event_sha256": "2565eb94a7c5ef7c59dfa3adf5e82ee043392bb1e0c1a6725e1f0d419d10818e",
+          "timestamp": "2026-10-10T23:48:28.366Z"
+        },
+        "prompt_binding_basis": "literal-loaded-prompt-plus-native-dispatch-variable-flow",
+        "prompt_load": {
+          "event_sha256": "43f81124e8d809d35b5b8ed955388f3d3da373814cb15c74bc842265d1797f62",
+          "timestamp": "2026-10-10T23:47:05.955Z"
+        },
+        "references": [
+          "answers-connected-conversation-initial"
+        ],
+        "reviewed_prompt_file_sha256": "e0b7023ca0978366c663d6c5709fa95412bfed72c88a7b63fd14d59f9e451c4d",
+        "scene_id": "answers-connected-conversation",
+        "source_sha256": "b343e25c4b050e09a50134996caff94cd91a2e708a1e1b6a9e275fd97c5b343d",
+        "stored_prompt_sha256": "d509ec01c608a76a8805fc1fefc3891409bfa2c82e6c511597d8d516392f9d16"
+      },
+      {
+        "actual_load_outputs": [
+          {
+            "event_sha256": "b27f36ae8ca7023cd27053701df632e9c2d690c4036673a961b66002b4061fb3",
+            "timestamp": "2026-10-10T23:47:06.694Z"
+          }
+        ],
+        "completion": {
+          "event_sha256": "2565eb94a7c5ef7c59dfa3adf5e82ee043392bb1e0c1a6725e1f0d419d10818e",
+          "timestamp": "2026-10-10T23:48:28.366Z"
+        },
+        "delivery_status": "final-reviewed-source",
+        "dispatch": {
+          "event_sha256": "159df7e1a5c394429b808cbfda2c9128804777cf69b818cc4c82d79bb5bc1aaa",
+          "timestamp": "2026-10-10T23:47:29.246Z"
+        },
+        "dispatched_prompt_sha256": "5fee6584580d04989f5b5e8c3d0139f8ac17bd533404d27d250bf4d6f91ee19b",
+        "event_hash_basis": "UTF8 JSONL line excluding line ending",
+        "generation_mode": "edit",
+        "id": "answers-two-witnesses-text-correction",
+        "output_path_recovery": {
+          "event_sha256": "2565eb94a7c5ef7c59dfa3adf5e82ee043392bb1e0c1a6725e1f0d419d10818e",
+          "timestamp": "2026-10-10T23:48:28.366Z"
+        },
+        "prompt_binding_basis": "literal-loaded-prompt-plus-native-dispatch-variable-flow",
+        "prompt_load": {
+          "event_sha256": "43f81124e8d809d35b5b8ed955388f3d3da373814cb15c74bc842265d1797f62",
+          "timestamp": "2026-10-10T23:47:05.955Z"
+        },
+        "references": [
+          "answers-two-witnesses-initial"
+        ],
+        "reviewed_prompt_file_sha256": "e0b7023ca0978366c663d6c5709fa95412bfed72c88a7b63fd14d59f9e451c4d",
+        "scene_id": "answers-two-witnesses",
+        "source_sha256": "56fdfe3655a9e82432fcf4565dcb6973e9d35f88231dd0c59be6448770b38792",
+        "stored_prompt_sha256": "5fee6584580d04989f5b5e8c3d0139f8ac17bd533404d27d250bf4d6f91ee19b"
+      },
+      {
+        "actual_load_outputs": [
+          {
+            "event_sha256": "6f1ec23434a9c16a0454d307a7d7635605ea862e2abe500dc184fa602ecd8f0a",
+            "timestamp": "2026-10-10T23:48:49.271Z"
+          }
+        ],
+        "completion": {
+          "event_sha256": "a29ee941e153907f3abb272f19f3166b4e19eaed0419091e833ac4e26cb2f9d4",
+          "timestamp": "2026-10-10T23:52:36.309Z"
+        },
+        "delivery_status": "final-reviewed-source",
+        "dispatch": {
+          "event_sha256": "d7c7fe1bcad71ed9b78151ccad3d183c3b844973d8ee0cd15e8a18bbfec22865",
+          "timestamp": "2026-10-10T23:52:05.248Z"
+        },
+        "dispatched_prompt_sha256": "4e130a2aea91d37ab4b292a0f906ea216881f03b88d34ef127d50c61a57b48f0",
+        "event_hash_basis": "UTF8 JSONL line excluding line ending",
+        "generation_mode": "edit",
+        "id": "answers-companion-bench-reframe",
+        "output_path_recovery": {
+          "event_sha256": "a29ee941e153907f3abb272f19f3166b4e19eaed0419091e833ac4e26cb2f9d4",
+          "timestamp": "2026-10-10T23:52:36.309Z"
+        },
+        "prompt_binding_basis": "literal-loaded-prompt-plus-native-dispatch-variable-flow",
+        "prompt_load": {
+          "event_sha256": "e10752be6b2e6b2e3784b97b6faf807c88fdb8011ecff2afb36f2e00634a9897",
+          "timestamp": "2026-10-10T23:48:47.973Z"
+        },
+        "references": [
+          "answers-companion-bench-initial"
+        ],
+        "reviewed_prompt_file_sha256": "f69e16f8f68dc02b9d3b47e86719320faf472fda75db5ca9862147e9c4b590ff",
+        "scene_id": "answers-companion-bench",
+        "source_sha256": "ae3b699fdfad8b2bce267547f7037a31e2cd7e40ce27d1e69284ef3aa240fcc3",
+        "stored_prompt_sha256": "4e130a2aea91d37ab4b292a0f906ea216881f03b88d34ef127d50c61a57b48f0"
+      }
+    ],
+    "historical_preparation_audit": {
+      "actual_checks": [
+        "All9 source hashes and stored prompt digests",
+        "All referenced native event exact bytes excluding line endings and timestamps",
+        "Load/dispatch/completion/recovered path chronology and edit parents",
+        "Native recovered filename matches each source path",
+        "Initial6 native composition/IDs exactly match frozen source JSON",
+        "Three edit prompts exactly equal decoded native loaded JSON, no Unicode replacement drift",
+        "Six final PNG masters byte-identical to selected native outputs",
+        "Genuine Fermi/Newton pre-generation prompt opinions personally read from earlier group events"
+      ],
+      "audit_sha256": "b6a0d6bf9282f7d29144823906c63bd5478c4445bf57dfdea5d07bb983100e7e",
+      "limitations": [
+        "Initial full prompt identity derived from hash-bound reviewed source file plus native load/store/dispatch; native output prints composition only",
+        "Batch completion timestamp is orchestration completion, not per-image internal generation time",
+        "Conditional historical Engine brief completion not audited; full historical preparation NOT CLAIMED",
+        "Current normalization/equivalence, complete current owner inventory and assembled context require separate actual reviews",
+        "Held ancestors remain held versions; no owner-final acceptance or publication inferred"
+      ],
+      "projection_sha256": "9bb62d1a16a8cd5fc6dab4af9e7ccb73d564bbb2b7aadf34942883b0f31b985f",
+      "reviewed_at": "2026-10-11T12:49:01.805117+00:00",
+      "reviewer": "Newton",
+      "status": "CURRENT_NODE_AUDIT_COMPLETE_HISTORICAL_PREPARATION_NOT_CLAIMED"
+    },
+    "original_owner_census": [
+      {
+        "depicts_christ": true,
+        "markup_sha256": "0ddf6de91e865b9947c4fe3a2d25e4764484248b321533e9f9888d179bb35da6",
+        "sha256": "d6fd78e892da505de24e0c84f6a68c70e823f20c052eb8320d0ceac538282f91",
+        "src": "assets/heroes/answers-christ-companion.png"
+      },
+      {
+        "depicts_christ": true,
+        "markup_sha256": "5004ae83937e4d375b19aa7b23c731c8dc0d360c13196eb5ea0544bd4a84f2f3",
+        "sha256": "b64d4d125fe03f7b8f2bb3f1e919b0e8107d4b9cc24b8a38fdf854176cf62c45",
+        "src": "assets/answers-christ-portrait.png"
+      },
+      {
+        "depicts_christ": false,
+        "markup_sha256": "8888878e0513a68620948c9790a83b4c3815a1a85d11c7481534ccc8d61b704a",
+        "sha256": "dd50595487d0a5ed490a81674d15eaf3816e32229802739a47fde7a32b0b756c",
+        "src": "assets/page-art/answers-quiet-prayer-800.webp"
+      },
+      {
+        "depicts_christ": true,
+        "markup_sha256": "bd79df635431cf4ac7d2dcedab59e9fd13bd1b851ec19f45dfd36c5b3773a896",
+        "sha256": "a504aa0a1d0b28a531f0f05ecfbf475706e30692ce5df2672c270d427d49f898",
+        "src": "assets/page-art/answers-savior-welcomes-child-900.webp?v=20260905-approved-face"
+      },
+      {
+        "depicts_christ": true,
+        "markup_sha256": "ed21c4b2d1ceac54611daee79125c94a90724a3abd8bf0c30e914d3d16df8596",
+        "sha256": "3c9fd2f7002f06d2a73509918ace6361248469e84dede936c5570ee866fe1181",
+        "src": "assets/page-art/answers-comfort-in-grief-800.webp"
+      },
+      {
+        "depicts_christ": true,
+        "markup_sha256": "ae6bd7d3df8f964ba65e29164da0a5c6cafc686a5763a42a026555b2ec897155",
+        "sha256": "68bf3c5f4dfa8fcbda33443921cf82f0b99f3252375d08a5f622b3fd3dcdbecd",
+        "src": "assets/page-art/answers-child-loss-father-800.webp"
+      },
+      {
+        "depicts_christ": true,
+        "markup_sha256": "210a6800fd7f9fc9d584a716933c20a508dda5420b4e5c68eaccc83ab3878522",
+        "sha256": "035ceccdd493698ed1cc629651be565df354f2db04a162b386df738aab45bb44",
+        "src": "assets/page-art/answers-child-loss-parents-800.webp"
+      },
+      {
+        "depicts_christ": true,
+        "markup_sha256": "088fae5bcf9574cbeae6e4ab49a5e7feef379a19ff7711196da8975affbeecfb",
+        "sha256": "42cbca7ec8ff6e1112753f52e146b7cf089f872ab43ff1de3b19da56ef4ad166",
+        "src": "assets/page-art/answers-divorced-father-800.webp"
+      },
+      {
+        "depicts_christ": true,
+        "markup_sha256": "eaae37e97bd8ba3d04c670b2e09e21658c4ba4efd1a27ae71ecf970d05d9b246",
+        "sha256": "60dedc0b4fde604470975b0bfe08def25c6bf5448e1310b93175d86a3837fa97",
+        "src": "assets/answers-christ-walking.png"
+      },
+      {
+        "depicts_christ": false,
+        "markup_sha256": "03193710196ce96359e95a3860f20e8c74d8d75b866f4818012f3dc1c3e25e2d",
+        "sha256": "8991f4ec794507b87012ad80a0c358a815b22ac645fb72b18606ae382fcef617",
+        "src": "assets/page-art/answers-study/answers-connected-conversation-960.webp"
+      },
+      {
+        "depicts_christ": false,
+        "markup_sha256": "b40f238a0730edc3fbeb7f88116856548e2bf9892a13ea117f498962d01e42b9",
+        "sha256": "841dc5914d17e16cd7ae0c6354e74c737e6b8b5d63dc6127a1f74bf7032ea791",
+        "src": "assets/page-art/answers-study/answers-neighbor-service-960.webp"
+      },
+      {
+        "depicts_christ": false,
+        "markup_sha256": "e05b18fade56163219a57c7aadc87a28c73a8c84872aa50cf4ca5ad6d331d91b",
+        "sha256": "bc12923616230b40a7b6a02ce46873df66ffc3d536801859924bca849fcb412f",
+        "src": "assets/page-art/answers-study/answers-two-witnesses-960.webp"
+      },
+      {
+        "depicts_christ": false,
+        "markup_sha256": "f2bfba839645af69a21bfdf87f92a5003ee49b684e40cb252067ae3bba47a2cf",
+        "sha256": "3ef6551eb478e9977594794b166cd02a5afe5725f0ac50bea543e61a3b7099f1",
+        "src": "assets/page-art/answers-study/answers-family-hopes-960.webp"
+      },
+      {
+        "depicts_christ": false,
+        "markup_sha256": "3f691d9421441dd04bcd5d0482790d18df8fd7de86d744a201e49c19a83dfe9e",
+        "sha256": "f8739ce5cd02b3419730189d0e4d100a25b4bfe5af1a5b3bb53aecf408699b76",
+        "src": "assets/page-art/answers-study/answers-keep-your-place-960.webp"
+      },
+      {
+        "depicts_christ": false,
+        "markup_sha256": "c75eb00fb824562b40b83eae147a107b6428dad0a68c7598b6bff5910ced64c2",
+        "sha256": "ab1b751317771b8adc3f1d9afbc045b59f2e162e4702b37ab12e0f10398d0e89",
+        "src": "assets/page-art/answers-study/answers-companion-bench-960.webp"
+      }
+    ],
+    "owner_authority": "Owner explicitly directed team-reviewed completion and publication; no individual final-image acceptance inferred.",
+    "owner_final_image_acceptance": "not-claimed",
+    "registration_class": "CURRENT_EQUIVALENCE",
+    "route": "answers.html",
+    "scenes": [
+      {
+        "assets": [
+          {
+            "height": 724,
+            "kind": "original",
+            "path": "assets/page-art/answers-study/answers-connected-conversation-original.png",
+            "pixel_sha256": "fe7bf3a0623d8fdb9d1edebf38d4406e269eda3c680440cc011a2f5e2e9df628",
+            "sha256": "b343e25c4b050e09a50134996caff94cd91a2e708a1e1b6a9e275fd97c5b343d",
+            "width": 2172
+          },
+          {
+            "height": 213,
+            "kind": "lossless-derivative",
+            "path": "assets/page-art/answers-study/answers-connected-conversation-640.webp",
+            "pixel_sha256": "5cfdb1130cc5ba99700338aaa2b4884f99120d9d0f0b798bfda6f229a4914447",
+            "sha256": "b2017b731957aae34a094a748dcc7e8ab5cf06e20f4d061aab86f7389d6ecf43",
+            "width": 640
+          },
+          {
+            "height": 320,
+            "kind": "lossless-derivative",
+            "path": "assets/page-art/answers-study/answers-connected-conversation-960.webp",
+            "pixel_sha256": "c64ef89b3e55f153e385e163db7b893da2978eed1b25cdec40ac9682f47cf3b7",
+            "sha256": "8991f4ec794507b87012ad80a0c358a815b22ac645fb72b18606ae382fcef617",
+            "width": 960
+          },
+          {
+            "height": 724,
+            "kind": "lossless-derivative",
+            "path": "assets/page-art/answers-study/answers-connected-conversation-full.webp",
+            "pixel_sha256": "fe7bf3a0623d8fdb9d1edebf38d4406e269eda3c680440cc011a2f5e2e9df628",
+            "sha256": "1fc1e663af3b159cbd72b2a8eebe3b94ad2ee95151e370865ef87e96bbc9b7ef",
+            "width": 2172
+          }
+        ],
+        "depicts_christ": false,
+        "final_generated_at": "2026-10-10T23:48:28.366Z",
+        "generation_ids": [
+          "answers-connected-conversation-initial",
+          "answers-connected-conversation-reframe"
+        ],
+        "historical_claim": false,
+        "id": "answers-connected-conversation",
+        "identity_claim": "none",
+        "owning_section": "connected-study",
+        "route": "answers.html",
+        "scene_kind": "fictional-contemporary"
+      },
+      {
+        "assets": [
+          {
+            "height": 992,
+            "kind": "original",
+            "path": "assets/page-art/answers-study/answers-neighbor-service-original.png",
+            "pixel_sha256": "32b4e959eb25ea48fca6491fc00b037582f2e2ad05192567c4ce0525b1b89bba",
+            "sha256": "71a25d999e3a116be3883ac1173243b1b451ea07cf130060aacabdb853e3cd4a",
+            "width": 1586
+          },
+          {
+            "height": 400,
+            "kind": "lossless-derivative",
+            "path": "assets/page-art/answers-study/answers-neighbor-service-640.webp",
+            "pixel_sha256": "9f74d346d066d2fe8e72322743dda710ec170fc2885d86c12992f4ff48a290e9",
+            "sha256": "9047279511747c2e973643144a52e0a5d1afc638f91b9e9e1219d1177eb04589",
+            "width": 640
+          },
+          {
+            "height": 600,
+            "kind": "lossless-derivative",
+            "path": "assets/page-art/answers-study/answers-neighbor-service-960.webp",
+            "pixel_sha256": "ba8a316dbd32ea0f8255c8a46af615dec76c39b980f2a256f63dfac964d92511",
+            "sha256": "841dc5914d17e16cd7ae0c6354e74c737e6b8b5d63dc6127a1f74bf7032ea791",
+            "width": 960
+          },
+          {
+            "height": 992,
+            "kind": "lossless-derivative",
+            "path": "assets/page-art/answers-study/answers-neighbor-service-full.webp",
+            "pixel_sha256": "32b4e959eb25ea48fca6491fc00b037582f2e2ad05192567c4ce0525b1b89bba",
+            "sha256": "679757f90413c4e4f028f014b857ea7807a9e265df6700d6b8d8512f12ae7b3d",
+            "width": 1586
+          }
+        ],
+        "depicts_christ": false,
+        "final_generated_at": "2026-10-10T23:44:51.217Z",
+        "generation_ids": [
+          "answers-neighbor-service-initial"
+        ],
+        "historical_claim": false,
+        "id": "answers-neighbor-service",
+        "identity_claim": "none",
+        "owning_section": "connected-study",
+        "route": "answers.html",
+        "scene_kind": "fictional-contemporary"
+      },
+      {
+        "assets": [
+          {
+            "height": 993,
+            "kind": "original",
+            "path": "assets/page-art/answers-study/answers-two-witnesses-original.png",
+            "pixel_sha256": "fa85867cf17931dfb809aa43b8273fe47d2e3239d49355267719931234e6609b",
+            "sha256": "56fdfe3655a9e82432fcf4565dcb6973e9d35f88231dd0c59be6448770b38792",
+            "width": 1584
+          },
+          {
+            "height": 401,
+            "kind": "lossless-derivative",
+            "path": "assets/page-art/answers-study/answers-two-witnesses-640.webp",
+            "pixel_sha256": "541db53a077715f35c07c3b36b38b365044815bb22d3fc4fc35de8819b532443",
+            "sha256": "5805c07033d60bf4bacb4834582bbc661e15b271f9ce7c984690cc7cf2608802",
+            "width": 640
+          },
+          {
+            "height": 602,
+            "kind": "lossless-derivative",
+            "path": "assets/page-art/answers-study/answers-two-witnesses-960.webp",
+            "pixel_sha256": "dbaae207685e8f92af425c48715eb4cb9bcd4ed5c389c82984e16b1416fe0580",
+            "sha256": "bc12923616230b40a7b6a02ce46873df66ffc3d536801859924bca849fcb412f",
+            "width": 960
+          },
+          {
+            "height": 993,
+            "kind": "lossless-derivative",
+            "path": "assets/page-art/answers-study/answers-two-witnesses-full.webp",
+            "pixel_sha256": "fa85867cf17931dfb809aa43b8273fe47d2e3239d49355267719931234e6609b",
+            "sha256": "8712850f640c74c5fa6d22579dbe1423a1f2b67cd494e7799ad0b91aa2d34a29",
+            "width": 1584
+          }
+        ],
+        "depicts_christ": false,
+        "final_generated_at": "2026-10-10T23:48:28.366Z",
+        "generation_ids": [
+          "answers-two-witnesses-initial",
+          "answers-two-witnesses-text-correction"
+        ],
+        "historical_claim": false,
+        "id": "answers-two-witnesses",
+        "identity_claim": "none",
+        "owning_section": "connected-study",
+        "route": "answers.html",
+        "scene_kind": "still-life"
+      },
+      {
+        "assets": [
+          {
+            "height": 992,
+            "kind": "original",
+            "path": "assets/page-art/answers-study/answers-family-hopes-original.png",
+            "pixel_sha256": "7eb2ddc271081af003526ee276629a28187fb0646f991365a0dbcc4cb777228b",
+            "sha256": "a361ba3581d16ce3ff7391aee045a90767ee86d6a59f1b1e1cb37b7dba6e38dd",
+            "width": 1586
+          },
+          {
+            "height": 400,
+            "kind": "lossless-derivative",
+            "path": "assets/page-art/answers-study/answers-family-hopes-640.webp",
+            "pixel_sha256": "c352ef0555f8270eee8c74f082a444f877fd8422c8b394a23cee39dfabcdebfd",
+            "sha256": "31b6b8cec82b39d4913b81053ac797e6ba7f2c5a9eb9f1b86a6410901c5e746b",
+            "width": 640
+          },
+          {
+            "height": 600,
+            "kind": "lossless-derivative",
+            "path": "assets/page-art/answers-study/answers-family-hopes-960.webp",
+            "pixel_sha256": "8a69c2157590d37ff33cbb3ae2df62ea14edfbde6610bd2e542457683c788023",
+            "sha256": "3ef6551eb478e9977594794b166cd02a5afe5725f0ac50bea543e61a3b7099f1",
+            "width": 960
+          },
+          {
+            "height": 992,
+            "kind": "lossless-derivative",
+            "path": "assets/page-art/answers-study/answers-family-hopes-full.webp",
+            "pixel_sha256": "7eb2ddc271081af003526ee276629a28187fb0646f991365a0dbcc4cb777228b",
+            "sha256": "1840a670f1d4d03731cc7d18345a3baf50eee0ede181412a5572a2cbda5d9e8d",
+            "width": 1586
+          }
+        ],
+        "depicts_christ": false,
+        "final_generated_at": "2026-10-10T23:46:57.404Z",
+        "generation_ids": [
+          "answers-family-hopes-initial"
+        ],
+        "historical_claim": false,
+        "id": "answers-family-hopes",
+        "identity_claim": "none",
+        "owning_section": "connected-study",
+        "route": "answers.html",
+        "scene_kind": "fictional-contemporary"
+      },
+      {
+        "assets": [
+          {
+            "height": 1024,
+            "kind": "original",
+            "path": "assets/page-art/answers-study/answers-keep-your-place-original.png",
+            "pixel_sha256": "63d8cd2be5c01d25174e67e99ab0df0a2450851379c0c2ef550e78bc482e3072",
+            "sha256": "94caa125cba001280b9f051ce3d27fbc98ba3efa75f5d1bdfec298194fd6dce9",
+            "width": 1536
+          },
+          {
+            "height": 427,
+            "kind": "lossless-derivative",
+            "path": "assets/page-art/answers-study/answers-keep-your-place-640.webp",
+            "pixel_sha256": "3f945768fb247b1aeac20663506d7c2bea900712e1f20bd5c2671a8505de05ce",
+            "sha256": "3b5cc20033d45fb9ce04698538a889e0b56f112c5b2f9c99cc6ece613e93e808",
+            "width": 640
+          },
+          {
+            "height": 640,
+            "kind": "lossless-derivative",
+            "path": "assets/page-art/answers-study/answers-keep-your-place-960.webp",
+            "pixel_sha256": "00a7a66a77380210727e8943471238317e53b4f87e80d5cc6c6926640813bfb9",
+            "sha256": "f8739ce5cd02b3419730189d0e4d100a25b4bfe5af1a5b3bb53aecf408699b76",
+            "width": 960
+          },
+          {
+            "height": 1024,
+            "kind": "lossless-derivative",
+            "path": "assets/page-art/answers-study/answers-keep-your-place-full.webp",
+            "pixel_sha256": "63d8cd2be5c01d25174e67e99ab0df0a2450851379c0c2ef550e78bc482e3072",
+            "sha256": "793e19c27ff7d7daa3f482ca57d0829b217b2d4fe0a50953b2f88836ca4f82d0",
+            "width": 1536
+          }
+        ],
+        "depicts_christ": false,
+        "final_generated_at": "2026-10-10T23:46:57.404Z",
+        "generation_ids": [
+          "answers-keep-your-place-initial"
+        ],
+        "historical_claim": false,
+        "id": "answers-keep-your-place",
+        "identity_claim": "none",
+        "owning_section": "saved-studies",
+        "route": "answers.html",
+        "scene_kind": "still-life"
+      },
+      {
+        "assets": [
+          {
+            "height": 724,
+            "kind": "original",
+            "path": "assets/page-art/answers-study/answers-companion-bench-original.png",
+            "pixel_sha256": "517db8d9c7ddfbb101778a33cc9ca8a4d45b4dbcc3d639305d5f8ec38596d35e",
+            "sha256": "ae3b699fdfad8b2bce267547f7037a31e2cd7e40ce27d1e69284ef3aa240fcc3",
+            "width": 2172
+          },
+          {
+            "height": 213,
+            "kind": "lossless-derivative",
+            "path": "assets/page-art/answers-study/answers-companion-bench-640.webp",
+            "pixel_sha256": "817355666a11a86dc73942a7ddb6edf1b34060c352cd4ceee97b8ff4c0465e10",
+            "sha256": "1402bc3ed258642a550a38d24c6752287be71b01ccbbe2d522b6dbc51a5afa41",
+            "width": 640
+          },
+          {
+            "height": 320,
+            "kind": "lossless-derivative",
+            "path": "assets/page-art/answers-study/answers-companion-bench-960.webp",
+            "pixel_sha256": "4b0905008bf9597ed92c586283d75b45e0b891f3a583abafd936e58a1f709fb0",
+            "sha256": "ab1b751317771b8adc3f1d9afbc045b59f2e162e4702b37ab12e0f10398d0e89",
+            "width": 960
+          },
+          {
+            "height": 724,
+            "kind": "lossless-derivative",
+            "path": "assets/page-art/answers-study/answers-companion-bench-full.webp",
+            "pixel_sha256": "517db8d9c7ddfbb101778a33cc9ca8a4d45b4dbcc3d639305d5f8ec38596d35e",
+            "sha256": "edd718b174072e95e1ef042d16d13781b8b9cdc9565c724445a8985566f85ca6",
+            "width": 2172
+          }
+        ],
+        "depicts_christ": false,
+        "final_generated_at": "2026-10-10T23:52:36.309Z",
+        "generation_ids": [
+          "answers-companion-bench-initial",
+          "answers-companion-bench-reframe"
+        ],
+        "historical_claim": false,
+        "id": "answers-companion-bench",
+        "identity_claim": "none",
+        "owning_section": "study-companions",
+        "route": "answers.html",
+        "scene_kind": "fictional-contemporary"
+      }
+    ],
+    "schema": 1,
+    "scope": "Exact six recovered Answers families;24 raster files; no general exemption."
+  },
+  "prior_context_record": {
+    "path": "docs/three-reviewed-20261011/prior-artwork-answers-six-delivery-reviews.json",
+    "sha256": "b409c5ecc1d831df26e3cf6287ff8d051255174f6d3e323acf164346b29392ff"
+  },
+  "context_change_scope": "Only shared artwork-details.js current context pin. Home-only heading return changes no Answers behavior, sources, images, native graph or original-owner census; historical judgments retained.",
+  "current_review_projection": {
+    "executor": "Lightning",
+    "scope": "Public copies omit only private actor_session metadata. Original author, decision, evidence, limitations and all review fields otherwise unchanged; complete originals retained privately.",
+    "receipts": [
+      {
+        "public_path": "docs/three-reviewed-20261011/answers-six-fermi-review.json",
+        "original_receipt_sha256": "3ca5492b7bf96be876fa6d19cdbe9f0c14c6acee35003e1c697d30731f652ac0",
+        "omitted_fields": [
+          "actor_session"
+        ]
+      }
+    ]
+  }
+}

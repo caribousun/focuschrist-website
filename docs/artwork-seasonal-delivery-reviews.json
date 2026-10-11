@@ -1,22 +1,22 @@
 {
-  "context_change_scope": "Only two owner-approved Gabriel asset URL replacements in the same Birth page. Existing seasonal image/source/review evidence remains unchanged; no new seasonal image acceptance.",
-  "normalized_at": "2026-10-11T20:30:38.184490+00:00",
+  "context_change_scope": "Current exact three source substitutions and scoped Home heading return; historical source, pixel and owner judgments preserved in the complete prior record. No new individual owner acceptance.",
+  "normalized_at": "2026-10-11T22:08:55.682213+00:00",
   "prior_context_record": {
-    "path": "docs/gabriel-owner-20261011/prior-artwork-seasonal-delivery-reviews.json",
-    "sha256": "3669227db900326af34da0d2a6b3a31a2a594ea843ad6f91be529b34e256b6e0"
+    "path": "docs/three-reviewed-20261011/prior-artwork-seasonal-delivery-reviews.json",
+    "sha256": "0c79bea9e4d1f4119d08a8628c4e363a0c801821d008dc574c625ab90d0b8ab8"
   },
   "reviews": [
     {
-      "path": "docs/gabriel-owner-20261011/context-albert-review.json",
-      "sha256": "2a447f119e4b692fdf394e269dc718de7701e4f930eaa83491df1af8de9caaca"
+      "path": "docs/three-reviewed-20261011/seasonal-albert-review.json",
+      "sha256": "1a1dde107b71f90b1c504017dbec7fb7bb3692ca2ea3091a2428a9dce4a66a3f"
     },
     {
-      "path": "docs/gabriel-owner-20261011/context-fermi-review.json",
-      "sha256": "39a076cf40f99d1ec4075d34fddff73a23d65e76ed6510203353d2b8285e9289"
+      "path": "docs/three-reviewed-20261011/seasonal-fermi-review.json",
+      "sha256": "ec336b01db3bc2891aed752d3653cbdc98a6ee3309025bd70271afeb8a3eee1c"
     },
     {
-      "path": "docs/gabriel-owner-20261011/context-newton-review.json",
-      "sha256": "18613493fc6005e5353c5c94b9696971f1667cbdc85bb76205c7778a97ad5291"
+      "path": "docs/three-reviewed-20261011/seasonal-newton-review.json",
+      "sha256": "a105e91884d063e03c22c329268356bfd9a728cd17cd32727761b00c50b2016d"
     }
   ],
   "schema": 1,
@@ -589,7 +589,7 @@
           },
           {
             "path": "birth-of-christ.html",
-            "sha256": "b43065c8707d67c4c696c370739a53c4afd2856f9697c4afae6c86f178ce9b89"
+            "sha256": "370dace852ba8ff8a2830b790ba4f5693d4982701a8bbdfe08b321adc2b8aeaf"
           },
           {
             "path": "complete-card-rows.css",
@@ -693,5 +693,25 @@
     "schema": 1,
     "scope": "Exactly Winter22 and Christmas23; no general creation waiver",
     "supporting_cast": "Fictional contemporary family members; no owner identity approval asserted for them."
+  },
+  "current_review_projection": {
+    "executor": "Lightning",
+    "scope": "Public copies omit only private actor_session metadata. Original author, decision, evidence, limitations and all review fields otherwise unchanged; complete originals retained privately.",
+    "receipts": [
+      {
+        "public_path": "docs/three-reviewed-20261011/seasonal-albert-review.json",
+        "original_receipt_sha256": "a83ebe12b8f2bf93b9d24ecb4c5037c71fe2aa884ad27a5e4a08f908ccfebdec",
+        "omitted_fields": [
+          "actor_session"
+        ]
+      },
+      {
+        "public_path": "docs/three-reviewed-20261011/seasonal-fermi-review.json",
+        "original_receipt_sha256": "7ae7a9a983e6b8fdad7b49aec94c043aee38a397e9c210486051ad0469c9e34e",
+        "omitted_fields": [
+          "actor_session"
+        ]
+      }
+    ]
   }
 }

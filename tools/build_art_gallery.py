@@ -18,6 +18,18 @@ from build_jesus_journey import validate_artwork_review
 ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = 'https://focuschrist.com'
 
+# Three exact reviewed replacements retain their existing story identities.
+THREE_SOURCE_IDENTITIES = {
+    ('/answers/faith-in-jesus-christ-during-trials.html', 'topic', 'a[href="../assets/page-art/christ-world/christ-homecoming-celebration-dorsal-20261011-full.webp"]:has(img[src="../assets/page-art/christ-world/christ-homecoming-celebration-dorsal-20261011-960.webp"])'): 'a[href="../assets/page-art/christ-world/christ-homecoming-celebration-full.webp"]:has(img[src="../assets/page-art/christ-world/christ-homecoming-celebration-960.webp"])',
+    ('/birth-of-christ.html', 'topic', 'a[href="assets/page-art/birth-of-christ/13-shepherds-message-mixed-host-20261011-full.webp"]:has(img[src="assets/page-art/birth-of-christ/13-shepherds-message-mixed-host-20261011-800.webp"])'): 'a[href="assets/page-art/birth-of-christ/13-shepherds-message-full.webp"]:has(img[src="assets/page-art/birth-of-christ/13-shepherds-message-800.webp"])',
+}
+THREE_ART_IDENTITIES = {
+    '/assets/page-art/home-seek-study-four-marks-20261011-full': '/assets/page-art/home-seek-study-remember',
+    '/assets/page-art/christ-world/christ-homecoming-celebration-dorsal-20261011-full': '/assets/page-art/christ-world/christ-homecoming-celebration-full',
+    '/assets/page-art/birth-of-christ/13-shepherds-message-mixed-host-20261011-full': '/assets/page-art/birth-of-christ/13-shepherds-message-full',
+}
+
+
 # Exact owner-approved Birth replacements retain existing shared story IDs.
 BIRTH_REPLACEMENTS = {
     "07-zacharias-owner-20261011": "07-zacharias",
@@ -188,7 +200,7 @@ def build():
             title = title or alt or page_title
             entries.append({'fullImage': full, 'thumbnail': thumb, 'title': title, 'alt': alt or title,
                             'category': category(page), 'occurrence': {
-                                'id': stable('source-', page + '|' + kind + '|' + birth_source_identity(page, kind, selector)),
+                                'id': stable('source-', page + '|' + kind + '|' + birth_source_identity(page, kind, THREE_SOURCE_IDENTITIES.get((page, kind, selector), selector))),
                                 'page': page, 'pageTitle': page_title, 'category': category(page), 'kind': kind, 'selector': selector, 'title': title,
                                 **({'sensitiveGate': sensitive_gate} if sensitive_gate else {})}})
     # The full-size URL is authoritative; exact duplicate files share an identity too.
@@ -213,7 +225,7 @@ def build():
         if Path(chosen['fullImage']).suffix.lower() == '.svg':
             item['mediaType'] = 'analytical-svg'
             item['countsAsPhotographicArtwork'] = False
-        item['id'] = stable('art-', birth_art_identity(identity))
+        item['id'] = stable('art-', birth_art_identity(THREE_ART_IDENTITIES.get(identity, identity)))
         item['occurrences'] = list({e['occurrence']['id']: e['occurrence'] for e in group}.values())
         item['categories'] = sorted({e['category'] for e in group})
         artworks.append(item)

@@ -112,7 +112,29 @@
         document.body.classList.remove('fc-dialog-open');
         image.removeAttribute('src');
         if (returnFocus && typeof returnFocus.focus === 'function') returnFocus.focus({ preventScroll: true });
-        if (continueLesson && lessonFigure) lessonFigure.scrollIntoView({ block: 'start', behavior: 'auto' });
+        if (continueLesson && lessonFigure) {
+            if (isHome) {
+                const section = lessonFigure.closest('section');
+                const target = (section && section.querySelector('h2')) || lessonFigure;
+                // Return to the owning lesson heading after the modal layout unlocks.
+                requestAnimationFrame(function () { requestAnimationFrame(function () {
+                    if (dialog.open || !target.isConnected) return;
+                    if (!target.hasAttribute('tabindex')) {
+                        target.setAttribute('tabindex', '-1');
+                        target.addEventListener('blur', function () { target.removeAttribute('tabindex'); }, { once: true });
+                    }
+                    target.focus({ preventScroll: true });
+                    const header = document.querySelector('.nav[data-focuschrist-header="standard"]');
+                    const position = header && window.getComputedStyle(header).position;
+                    const clearance = (position === 'fixed' || position === 'sticky' ? Math.ceil(header.getBoundingClientRect().height) : 0) + 16;
+                    const top = window.scrollY + target.getBoundingClientRect().top - clearance;
+                    const maximum = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+                    window.scrollTo({ top: Math.max(0, Math.min(top, maximum)), behavior: 'instant' });
+                }); });
+            } else {
+                lessonFigure.scrollIntoView({ block: 'start', behavior: 'auto' });
+            }
+        }
         returnFocus = null;
         lessonFigure = null;
         continueLesson = false;

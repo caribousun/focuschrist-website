@@ -2879,10 +2879,11 @@
         "tone": "Mary wraps her firstborn Son and lays Him in a manger. The promised Savior has entered mortal life."
       },
       {
-        "asset": "assets/page-art/birth-of-christ/13-shepherds-message-full.webp",
+        "asset": "assets/page-art/birth-of-christ/13-shepherds-message-mixed-host-20261011-full.webp",
         "reviewed": true,
-        "sha256": "da2d4741684bb2172f273bc98f079e2821879261c879d8c66c0f84f68fc7d301",
-        "tone": "The shepherds hear news of great joy: the Savior is born. They are given a sign that will help them find the child."
+        "sha256": "65b40399cff54e2e4ead0bd31121d7a65018629228203b1612460153091bb186",
+        "tone": "The shepherds hear news of great joy: the Savior is born. They are given a sign that will help them find the child.",
+        "current_source_review": "Exact three-source reviewed correction; original record retained in docs/three-reviewed-20261011/prior-art-study-image-review.json"
       },
       {
         "asset": "assets/page-art/birth-of-christ/14-shepherds-find-full.webp",

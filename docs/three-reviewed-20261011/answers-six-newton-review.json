@@ -1,0 +1,31 @@
+{
+  "reviewer": "Newton",
+  "reviewed_at": "2026-10-11T22:21:17.460972+00:00",
+  "decision": "CONCUR",
+  "spec_sha256": "ca6f90282c5b1d7a83e3c0fc3076421a09d9ff9634f24a8fdd10e0b858656dce",
+  "private_source_and_event_verification": true,
+  "derivative_pixel_review": true,
+  "complete_owner_classification": true,
+  "assembled_context_review": true,
+  "no_individual_owner_acceptance_claim": true,
+  "evidence": [
+    {
+      "kind": "Independent recursive spec diff only artwork-details.js context hash; all other values exact prior spec",
+      "before": "e075a7f977d95a62bcecc7e6676ce2bcd6baf17d08a7cbb7c3c7475eeba26097",
+      "after": "27b6e27ba2399f4e0f1c680b50630ea8cfe4887375ed942290bf7248005d4f76"
+    },
+    {
+      "kind": "Exact Home-only branch inverse and own current desktop/phone return review",
+      "sha256": "b0a78d77c7ed2c3224758aa4a1e641c19f576ae448c826ccc1dc459dfc673b5e"
+    },
+    {
+      "kind": "Entire prior full record retained and all historic receipt hashes independently exact",
+      "sha256": "b409c5ecc1d831df26e3cf6287ff8d051255174f6d3e323acf164346b29392ff"
+    }
+  ],
+  "limits": [
+    "Current context equivalence only; genuine historic private source/event/derivative/owner classification judgments reused unchanged, not new execution by this runtime.",
+    "New branch isHome false on Answers, exact original nonHome behavior retained. No new direct Answers browser action claimed here; root/Fermi fresh all6 public work separate.",
+    "No source aesthetic approval under newer standards, individual owner acceptance, product install or public release. Prior record and all receipts must remain unchanged."
+  ]
+}

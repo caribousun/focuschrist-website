@@ -1,0 +1,34 @@
+{
+  "reviewer": "Newton",
+  "decision": "CONCUR",
+  "spec_sha256": "cfd3c78216bf209f468ef467029a1cd9a86886db9653f6c031aaace814c90529",
+  "reviewed_at": "2026-10-11T22:17:11.445638+00:00",
+  "source_pixel_review": true,
+  "derivative_pixel_review": true,
+  "assembled_context_review": true,
+  "no_individual_owner_acceptance_claim": true,
+  "evidence": [
+    {
+      "record": "ASSETS-FINISHED-REVIEW.json",
+      "sha256": "cd253e9829625cd0c6c5802c3967feb0b46bfd631406192a5824ead6b375fa57"
+    },
+    {
+      "record": "PREVIEW-RESULT-REVIEW.json",
+      "sha256": "0fa4e90cd54a00731a3e14fc323cb727030467f19bf45b09c6ac5b130c89ec0e"
+    },
+    {
+      "record": "THREE-LOCAL-LINEAGE-PROJECTION.json",
+      "sha256": "0be071a9e513376a722935fbca3e1a19445acfa353814aa7d5d6188f0b34fe69"
+    },
+    {
+      "record": "THREE-BROWSER-INITIAL-HOLD.json",
+      "sha256": "5cbcfad4e9eec09f3ba8a32f99c46ebcf77fd3c1290973774587ee9b374331bf"
+    },
+    {
+      "record": "HOME-RETURN-FINISHED-REVIEW.json",
+      "sha256": "b0a78d77c7ed2c3224758aa4a1e641c19f576ae448c826ccc1dc459dfc673b5e"
+    }
+  ],
+  "review_scope": "Independent all9 derivative/master byte and RGB comparisons, exact local composite ancestry and9 historic source review pins, own supported desktop/phone fullsize/detail/Escape/Continue for3scenes. Source gaze and complete visible anatomy judgments reused from exact unchanged finished source reviews; current visual review preserves them. All34 current spec context pins independently exact. Home initial defect retained, minimal corrected branch reviewed and own return retests passed.",
+  "limits": "Private exact3 assembled review only. Historical source execution remains credited to original reviewers. Local composite lineage projection does not claim historic native dispatch/preflight. No individual Wyatt final-image acceptance, full-project completion, installation, release or public proof. Other held imagery and startup timing investigation remain separate."
+}

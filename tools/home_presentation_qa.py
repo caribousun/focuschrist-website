@@ -81,6 +81,10 @@ def check(home, baseline, manifest, root=ROOT):
     errors = []
     for before, after in REVIEWED_DETAIL_COPY.items():
         baseline = baseline.replace(before, after)
+    # Exact three-source release: only the reviewed purpose image URL changes.
+    # Preserve every other protected figure/detail field and the frozen baseline.
+    baseline = baseline.replace('assets/page-art/home-seek-study-remember.webp?v=20260905-study-review',
+        'assets/page-art/home-seek-study-four-marks-20261011-full.webp')
     nodes, old = list(parse(home).walk()), list(parse(baseline).walk())
     protected = {
         'approved hero': lambda n: n.has('fc-home-hero'),
@@ -240,6 +244,11 @@ class HomePresentation(unittest.TestCase):
 
     def test_duplicate_preview_rejected(self):
         self.assertTrue(check(self.home.replace('data-home-reference="weekly"', 'data-home-reference="atonement"'), self.baseline, self.manifest))
+
+    def test_unreviewed_purpose_image_rejected(self):
+        home = self.home.replace('assets/page-art/home-seek-study-four-marks-20261011-full.webp',
+            'assets/page-art/unreviewed-purpose.webp')
+        self.assertTrue(any('owned figures' in error for error in check(home, self.baseline, self.manifest)))
 
     def test_owned_figure_alteration_rejected(self):
         self.assertTrue(check(self.home.replace('Seek, study, and remember Jesus Christ.</figcaption>', 'Changed caption.</figcaption>'), self.baseline, self.manifest))

@@ -391,7 +391,7 @@ def run(root, mode='release', scene=None, page_overrides=None):
     correction_record = json.loads((root / 'docs/artwork-correction-reviews.json').read_text(encoding='utf-8'))
     from artwork_owner_closure import validate as validate_owner_closure
     validate_owner_closure(root, correction_record['owner_requirement_closure'],
-        '284dec4c1ba904cad2679368e4d716f607f5ba348708f75219db6e0a8fd297f1', pixel_hash)
+        'd682ce8c4893a0eb6b9630828a15ba34990a00bd72e5d70b2d3a6b337e8c0a2f', pixel_hash)
     corrections, correction_hashes, correction_pixels = validate_reviewed_corrections(
         root, correction_record, approved_corrections_binding, added, covered, rejected, pixel_hash, inventory)
     require(not (correction_hashes & originals) and not (correction_pixels & original_pixels), 'Correction family duplicates another creation')
@@ -400,7 +400,7 @@ def run(root, mode='release', scene=None, page_overrides=None):
     original_pixels |= correction_pixels
     # Exact seasonal lineage is additive; it grants no generic preflight waiver.
     from artwork_seasonal_delivery import validate as validate_seasonal_delivery
-    approved_seasonal_binding = '19b8385d8bb003ac630139a283bfa7a6d82c4ed1479245df882555ceaa4e5e16'
+    approved_seasonal_binding = 'f0008f7309d0c40bfec8bd679d708dd66b3804b8df0a01fb7f455c5e4c9ba56f'
     seasonal_record = json.loads((root / 'docs/artwork-seasonal-delivery-reviews.json').read_text(encoding='utf-8'))
     seasonal, seasonal_hashes, seasonal_pixels = validate_seasonal_delivery(
         root, seasonal_record, approved_seasonal_binding, added, covered, rejected, pixel_hash, page_dependencies)
@@ -410,7 +410,7 @@ def run(root, mode='release', scene=None, page_overrides=None):
     original_pixels |= seasonal_pixels
     # Exact four-scene current equivalence is additive; historical preflight is not claimed.
     from artwork_four_scene_delivery import validate as validate_four_scene_delivery
-    approved_four_scene_binding = 'add31f5af49b78bb5dfd7d322ed956286db9fa5775dbb90ea11190ecc10bbc3d'
+    approved_four_scene_binding = '0ea4962bbb1b68e5f97f23cdbfd4f4a86a9695e52278e8f1315c27b786ab6c11'
     four_scene_record = json.loads((root / 'docs/artwork-four-scene-delivery-reviews.json').read_text(encoding='utf-8'))
     four_scene, four_scene_hashes, four_scene_pixels = validate_four_scene_delivery(
         root, four_scene_record, approved_four_scene_binding, added, covered, rejected, pixel_hash, page_dependencies)
@@ -420,7 +420,7 @@ def run(root, mode='release', scene=None, page_overrides=None):
     original_pixels |= four_scene_pixels
     # Exact six Answers studies; pending reviews cannot satisfy this gate.
     from artwork_answers_six_delivery import validate as validate_answers_six_delivery
-    approved_answers_six_binding = 'b409c5ecc1d831df26e3cf6287ff8d051255174f6d3e323acf164346b29392ff'
+    approved_answers_six_binding = 'f843009032b926234122476c4accfbc1dc9d8d289ed542d22be185f5ff6c64d5'
     answers_six_record = json.loads((root / 'docs/artwork-answers-six-delivery-reviews.json').read_text(encoding='utf-8'))
     answers_six, answers_six_hashes, answers_six_pixels = validate_answers_six_delivery(
         root, answers_six_record, approved_answers_six_binding, added, covered, rejected, pixel_hash, page_dependencies)
@@ -440,7 +440,7 @@ def run(root, mode='release', scene=None, page_overrides=None):
     original_pixels |= six_scene_pixels
     # Exact owner-approved Gabriel replacements; immutable originals remain covered.
     from artwork_gabriel_owner_delivery import validate as validate_gabriel_owner_delivery
-    approved_gabriel_binding = '2ac5a5c997d5e87aec2fd98c0dc6df2a7e7aa344e69d34058351d3511b882a57'
+    approved_gabriel_binding = 'c33b6d9ca4ec56687d6b44baf39ebd029ad4036dca3217ac661a63f4bdb39357'
     gabriel_record = json.loads((root / 'docs/artwork-gabriel-owner-delivery-reviews.json').read_text(encoding='utf-8'))
     gabriel, gabriel_hashes, gabriel_pixels = validate_gabriel_owner_delivery(
         root, gabriel_record, approved_gabriel_binding, added, covered, rejected, pixel_hash, page_dependencies)
@@ -448,8 +448,17 @@ def run(root, mode='release', scene=None, page_overrides=None):
     covered |= gabriel
     originals |= gabriel_hashes
     original_pixels |= gabriel_pixels
+    # Exactly three independently reviewed local composites; bounded lineage only.
+    from artwork_three_reviewed_delivery import validate as validate_three_reviewed_delivery
+    three_record = json.loads((root / 'docs/artwork-three-reviewed-delivery-reviews.json').read_text(encoding='utf-8'))
+    three, three_hashes, three_pixels = validate_three_reviewed_delivery(
+        root, three_record, 'b30fa588c4f1f18f1744af8c945937a38f71cdcaaf6472f2efde8cda8f81a5d0', added, covered, rejected, pixel_hash, page_dependencies)
+    require(not (three_hashes & originals) and not (three_pixels & original_pixels), 'Three-scene family duplicates another creation')
+    covered |= three
+    originals |= three_hashes
+    original_pixels |= three_pixels
     require(added == covered, 'New artwork missing exact review coverage: ' + ', '.join(sorted(added - covered)))
-    if creations or historical or corrections or seasonal or four_scene or answers_six or six_scene or gabriel:
+    if creations or historical or corrections or seasonal or four_scene or answers_six or six_scene or gabriel or three:
         for name in inventory:
             path = root / name
             if path.suffix.lower() in RASTERS:

@@ -1,0 +1,292 @@
+{
+  "projection_author": "Newton",
+  "status": "VERIFIED_BOUNDED_LOCAL_COMPOSITE_LINEAGE_PENDING_INDEPENDENT_PROJECTION_REVIEW",
+  "scenes": {
+    "seek": {
+      "preceding_source_sha256": "f88730bbaae07ab003e2d8bd189efe5eb3b65190269c1954c97a3b497e393e86",
+      "final_source_sha256": "9b482deb6a3f8a80bf97f4481a4bcbc239b35a353ff0c9de78c34b398d0e70b1",
+      "local_executor": "Fermi",
+      "stages": [
+        {
+          "application_plan_sha256": "da5a14d98d8e2b46b97dcfb67d5a651cda3f8ed0d21aa398675f5a894fb1e4d4",
+          "source_sha256": "f88730bbaae07ab003e2d8bd189efe5eb3b65190269c1954c97a3b497e393e86",
+          "donor_sha256": "53ae73afaff1b371efec436ab5c5ba5152a9c444d53e492871930ccca5f63acb",
+          "mask_sha256": "2a19b19c612d8eb307b69f7baab01b4d63f165512a4bc696d74551426f8f9941",
+          "output_sha256": "c875dad2bcf551896bce89d6b37c99379bd801f140ed187e0ea20392ff71b286",
+          "box": [
+            760,
+            410,
+            1030,
+            625
+          ],
+          "changed_pixels": 117,
+          "editable_pixels": 117,
+          "outside_mask_exact": true,
+          "provenance_policy": "NEW_UNSIGNED_DERIVATIVE_OMIT_CABX"
+        },
+        {
+          "application_plan_sha256": "4f8fe43bcfc84285b4c61870e612b2346f95854b61c389a4553d0145b0f6ff76",
+          "source_sha256": "c875dad2bcf551896bce89d6b37c99379bd801f140ed187e0ea20392ff71b286",
+          "donor_sha256": "caaf9c7877993d4faa763a6895aa0eb794319e699d6a08947608bad009b9cf46",
+          "mask_sha256": "a604fd0ad06c74f2ab7fde1b757b45244313778c3415703d0b668bbe47bb6499",
+          "output_sha256": "a374b7c0b07bfcef5f97f6e251d71ca087b652394374750bc45b5a1aa035e354",
+          "box": [
+            925,
+            505,
+            1025,
+            620
+          ],
+          "changed_pixels": 99,
+          "editable_pixels": 99,
+          "outside_mask_exact": true,
+          "provenance_policy": "NEW_UNSIGNED_DERIVATIVE_OMIT_CABX"
+        },
+        {
+          "application_plan_sha256": "118f0e6fefb2bd825b0ce0ccfdfd2fa44911f6ac675ac1cad1cf5eaa2effc7c3",
+          "source_sha256": "a374b7c0b07bfcef5f97f6e251d71ca087b652394374750bc45b5a1aa035e354",
+          "donor_sha256": "b66e68bdfb14e82e425baaba167265bcdfcb1fbedaa3f37b86e8e01582095f52",
+          "mask_sha256": "a9bf018cdd780ff7b9f7eb0bbd82b9f5b75e61242f81abf2d8c25b48aa219f52",
+          "output_sha256": "9b482deb6a3f8a80bf97f4481a4bcbc239b35a353ff0c9de78c34b398d0e70b1",
+          "box": [
+            765,
+            425,
+            905,
+            525
+          ],
+          "changed_pixels": 79,
+          "editable_pixels": 79,
+          "outside_mask_exact": true,
+          "provenance_policy": "NEW_UNSIGNED_DERIVATIVE_OMIT_CABX"
+        }
+      ],
+      "total_changed_stage_pixels": 295,
+      "historical_finished_reviews": [
+        {
+          "reviewer": "Fermi",
+          "review_sha256": "100bd0158e448cea35fad77e439e777282a93341281b860e5cbae6e5b6742f69",
+          "decision": "CONCUR"
+        },
+        {
+          "reviewer": "Newton",
+          "review_sha256": "90bb805f5b7ee0eb7a1dfd52f7a8871fbed0c75cec1cbd4f7a7801a5522c9c82",
+          "decision": "CONCUR_FINISHED_PRIVATE_CANDIDATE"
+        },
+        {
+          "reviewer": "Albert",
+          "review_sha256": "ce650b54598292d2d3b0fbd7e1f69aa57136e9a0272e99a48087eaa3f32dcf05",
+          "decision": "CONCUR"
+        }
+      ],
+      "offered_tissue_treatment": {
+        "evidence_sha256": "a0a752ffeb495bc5573f5f766f3a0db26fd8464f132535e23ac2f6cc1c0d37ea",
+        "method": "Native-only tissue tiles translated; constant RGB median border offset to original target skin; no source recolor/blur/resize. Mask90edge255core.",
+        "records": [
+          {
+            "tile": [
+              68,
+              37,
+              75,
+              42
+            ],
+            "destination": [
+              76,
+              50
+            ],
+            "rgb_offset": [
+              -55.5,
+              -48.0,
+              -52.5
+            ]
+          },
+          {
+            "tile": [
+              39,
+              55,
+              47,
+              63
+            ],
+            "destination": [
+              35,
+              60
+            ],
+            "rgb_offset": [
+              -8.5,
+              -3.5,
+              -1.5
+            ]
+          }
+        ]
+      },
+      "donor_preparation": [
+        {
+          "executor": "Newton",
+          "donor_sha256": "2cfc3fcfc28cb2015ce309a8ceb095ddc433d9bd2971037b39fce132082731c4",
+          "input_size": [
+            1169,
+            1345
+          ],
+          "output_size": [
+            100,
+            115
+          ],
+          "center_crop_box": [
+            0,
+            0.3250000000000455,
+            1169,
+            1344.675
+          ],
+          "method": "Isotropic donor-only LANCZOS after explicit fractional center trim",
+          "scale": 0.0855431993156544,
+          "scope": "Inspection only; original scene never resized or modified; no mask/composite/acceptance",
+          "output_sha256": "caaf9c7877993d4faa763a6895aa0eb794319e699d6a08947608bad009b9cf46",
+          "lossless_readback": true,
+          "donor_unchanged": true,
+          "evidence_sha256": "0bf02f292afa62103d889a07d585549acf7f08f71c9e4a293316c83ded8f21ef"
+        },
+        {
+          "executor": "Newton",
+          "donor_sha256": "ddb1bb80787aea0f77217a2d50f3b706c6d41027ef5cd5a3f7a196e6f5474e9f",
+          "input_size": [
+            1484,
+            1060
+          ],
+          "output_size": [
+            140,
+            100
+          ],
+          "center_crop_box": [
+            0,
+            0,
+            1484,
+            1060
+          ],
+          "method": "Isotropic donor-only LANCZOS with exact aspect ratio and zero trim",
+          "scale": 0.09433962264150944,
+          "scope": "Inspection only; original scene never resized or modified; no mask/composite/acceptance",
+          "output_sha256": "499c296e45e889d5fa9d92dea79ab8dd13b63efd27b3f3d2839d4c286cbb8dd5",
+          "lossless_readback": true,
+          "donor_unchanged": true,
+          "evidence_sha256": "ee12a5ff81769adfc1233d1cff40dab82eff6417ce941b62a7cdcc8ce2f16bb7"
+        }
+      ]
+    },
+    "joy": {
+      "preceding_source_sha256": "09ff9dae3bfb43b9917cb002896b24a34da2ef78bf97082360756e654bc20bbe",
+      "final_source_sha256": "db1577750a6efc66573cb4658b10136394a2414db1ba62ac2883b623be0cfb6d",
+      "local_executor": "Fermi",
+      "stages": [
+        {
+          "application_plan_sha256": "012377bca4a0ccfd9ec1820823419a019a95466d7f95e44b68a9392759e404d8",
+          "source_sha256": "09ff9dae3bfb43b9917cb002896b24a34da2ef78bf97082360756e654bc20bbe",
+          "donor_sha256": "f61b15f3022e8ea4dc615d2540c273a5682deb1904bd2e264c68457d8e425929",
+          "mask_sha256": "7f3d0a81f777d4725abf708769135d80a37d7de9acad8f45a77b65f28db017d1",
+          "output_sha256": "db1577750a6efc66573cb4658b10136394a2414db1ba62ac2883b623be0cfb6d",
+          "box": [
+            285,
+            495,
+            475,
+            665
+          ],
+          "changed_pixels": 178,
+          "editable_pixels": 178,
+          "outside_mask_exact": true,
+          "provenance_policy": "NEW_UNSIGNED_DERIVATIVE_OMIT_CABX"
+        }
+      ],
+      "total_changed_stage_pixels": 178,
+      "historical_finished_reviews": [
+        {
+          "reviewer": "Fermi",
+          "review_sha256": "7336fec27be6074f9c226431484090dabc6c5e9195c8ca192021b4514e391baf",
+          "decision": "CONCUR_FINISHED_SOURCE"
+        },
+        {
+          "reviewer": "Newton",
+          "review_sha256": "e85eea1c18ef8049fcb7e8a19c18bcf9a654ccce4290d3f92dfd1aa4a5513389",
+          "decision": "CONCUR_FINISHED_SCOPED_CORRECTION"
+        },
+        {
+          "reviewer": "Albert",
+          "review_sha256": "dfc4a55e2fc6322bdbe463dc8629a2272e5c02e0a7e548f3f9ff646b0a2967ba",
+          "decision": "CONCUR"
+        }
+      ],
+      "donor_preparation": [
+        {
+          "executor": "Newton",
+          "donor_sha256": "405239c46655c52c2ec59fee55438996bb364ab8461cf888bf493b1561305a5e",
+          "input_size": [
+            1326,
+            1187
+          ],
+          "output_size": [
+            190,
+            170
+          ],
+          "center_crop_box": [
+            0,
+            0.28947368421052033,
+            1326,
+            1186.7105263157896
+          ],
+          "method": "Isotropic donor-only LANCZOS after explicit fractional center trim",
+          "scale": 0.14328808446455504,
+          "scope": "Inspection only; original scene never resized or modified; no mask/composite/acceptance",
+          "output_sha256": "f61b15f3022e8ea4dc615d2540c273a5682deb1904bd2e264c68457d8e425929",
+          "lossless_readback": true,
+          "donor_unchanged": true,
+          "evidence_sha256": "e5c7d00f8a159590fc28b3d00d9e4e9d36ff380f9ff2fddfef654da62f0d3c6a"
+        }
+      ]
+    },
+    "shepherd": {
+      "preceding_source_sha256": "dda75d86ba6242df73473490429aca75f8d9ba251d4cd0157855cf8aee98d6f0",
+      "final_source_sha256": "4ae5bed79922f91dd6e136a24da712f046759f450ea03e658a5fd0fd5901c279",
+      "local_executor": "Fermi",
+      "stages": [
+        {
+          "application_plan_sha256": "7d3903f868579841508b59832e8a955999fb3fb19d033310c03105b3c6932adc",
+          "source_sha256": "dda75d86ba6242df73473490429aca75f8d9ba251d4cd0157855cf8aee98d6f0",
+          "donor_sha256": "898d236ac46078d37900970d242d6d6dd311c6fd9477dbad84ac6fe7fdc8f2eb",
+          "mask_sha256": "f7ec445d40d54fbe2379774197fe6d6623e9461a680026e43d42f23550f60fc8",
+          "output_sha256": "4ae5bed79922f91dd6e136a24da712f046759f450ea03e658a5fd0fd5901c279",
+          "box": [
+            0,
+            0,
+            1536,
+            1024
+          ],
+          "changed_pixels": 589,
+          "editable_pixels": 744,
+          "outside_mask_exact": true,
+          "provenance_policy": "NEW_UNSIGNED_DERIVATIVE_OMIT_CABX"
+        }
+      ],
+      "total_changed_stage_pixels": 589,
+      "historical_finished_reviews": [
+        {
+          "reviewer": "Fermi",
+          "review_sha256": "05d8b1c823b7725997459fbb676ecaab8603a2acf78a86446e06cfb609bd890b",
+          "decision": "CONCUR"
+        },
+        {
+          "reviewer": "Albert",
+          "review_sha256": "afbfa1ccb735197a006d47fd52b6f7fe3f26586ecedd0f5b7955a1b4402b341a",
+          "decision": "CONCUR"
+        },
+        {
+          "reviewer": "Newton",
+          "review_sha256": "20a5f64ad4de77e80170b18ae490b6602b0acd096474edde5950a54519ed459c",
+          "decision": "CONCUR_FINISHED_PRIVATE_CANDIDATE"
+        }
+      ]
+    }
+  },
+  "limits": [
+    "Local compositing is distinct from the preceding generated source; no claim of a single generation.",
+    "Current projection verifies exact local ancestry and preserved finished source-review bindings. Original generation dispatch/preflight is not reconstructed or retroactively asserted here.",
+    "Historical held stages and owner rejections remain retained privately; only final exact source reviews apply.",
+    "No new owner acceptance, assembled-context review, installation or publication is implied.",
+    "No private paths, governing prose or session content included."
+  ]
+}

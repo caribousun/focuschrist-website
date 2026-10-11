@@ -1,0 +1,45 @@
+{
+  "reviewer": "Newton",
+  "reviewed_at": "2026-10-11T22:17:40.905171+00:00",
+  "decision": "CONCUR",
+  "spec_sha256": "45a6e6a8ee95f80bf807db72b06d4b8afb1c212e87e244160da446b34ae16bae",
+  "no_individual_owner_acceptance_claim": true,
+  "evidence": [
+    {
+      "kind": "Independent recursive exact current spec diff; only context hashes changed",
+      "changes": [
+        {
+          "at": [
+            "scenes",
+            1,
+            "context",
+            4,
+            "sha256"
+          ],
+          "before": "b43065c8707d67c4c696c370739a53c4afd2856f9697c4afae6c86f178ce9b89",
+          "after": "370dace852ba8ff8a2830b790ba4f5693d4982701a8bbdfe08b321adc2b8aeaf"
+        }
+      ]
+    },
+    {
+      "kind": "Every current spec path/digest independently exact; all prior review files byte-identical",
+      "prior_record_sha256": "0c79bea9e4d1f4119d08a8628c4e363a0c801821d008dc574c625ab90d0b8ab8"
+    },
+    {
+      "kind": "Current exact3 consumer inverse and stableIDs review",
+      "sha256": "0fa4e90cd54a00731a3e14fc323cb727030467f19bf45b09c6ac5b130c89ec0e"
+    },
+    {
+      "kind": "Home-only return branch independently exact inverse and own desktop/phone retest",
+      "sha256": "b0a78d77c7ed2c3224758aa4a1e641c19f576ae448c826ccc1dc459dfc673b5e"
+    }
+  ],
+  "limits": [
+    "Current context/equivalence review only. All unchanged original source, native event, and derivative judgments are reused from genuine historical reviews, not new execution by this runtime.",
+    "No new source acceptance under later mark standards; all remaining Christmas/Star and other source holds retained. Exact Joy replacement judged only in separate THREE receipt.",
+    "No owner final acceptance, installation or publication. Prior full records and receipts must remain unchanged. Own current browser actions cover exact-three package; no newly claimed historical family browser sweep."
+  ],
+  "private_source_and_event_verification": true,
+  "derivative_pixel_review": true,
+  "assembled_context_review": true
+}
