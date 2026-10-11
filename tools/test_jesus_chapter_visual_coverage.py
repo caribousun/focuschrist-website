@@ -241,10 +241,11 @@ class SavedJourneyVisualCoverage(unittest.TestCase):
                            if n.has('jj-card')]
                 self.assertEqual([following], choices)
 
-    def test_all_twelve_birth_companion_choices_have_pictures(self):
+    def test_all_thirteen_birth_companion_choices_have_pictures(self):
         doc = self.documents['/birth-of-christ.html']
         chapters = [n for n in doc.walk() if 'data-connected-study' in n.attrs]
-        self.assertEqual(12, len(chapters))
+        self.assertEqual(13, len(chapters))
+        self.assertEqual('christ-christmas-light', chapters[-2].attrs.get('id'))
         for chapter in chapters:
             self.assertTrue(any(n.tag == 'img' and n.attrs.get('src') for n in chapter.walk()),
                             'Birth chapter has no picture: ' + chapter.attrs.get('id', ''))

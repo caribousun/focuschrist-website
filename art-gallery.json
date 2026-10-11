@@ -6123,6 +6123,50 @@
       ]
     },
     {
+      "title": "Christ and a girl share their handmade paper stars in a warmly decorated family room.",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/christ-world/christ-christmas-light-960.webp",
+      "fullImage": "/assets/page-art/christ-world/christ-christmas-light-full.webp",
+      "alt": "Christ and a girl share their handmade paper stars in a warmly decorated family room.",
+      "id": "art-38553c099f79",
+      "occurrences": [
+        {
+          "id": "source-ae0d89feea10",
+          "page": "/birth-of-christ.html",
+          "pageTitle": "The Birth of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/christ-world/christ-christmas-light-full.webp\"]:has(img[src=\"assets/page-art/christ-world/christ-christmas-light-960.webp\"])",
+          "title": "Christ and a girl share their handmade paper stars in a warmly decorated family room."
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Christ and children show their own paper snowflakes beside a warm fire while snow falls outside.",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/christ-world/christ-winter-laughter-960.webp",
+      "fullImage": "/assets/page-art/christ-world/christ-winter-laughter-full.webp",
+      "alt": "Christ and children show their own paper snowflakes beside a warm fire while snow falls outside.",
+      "id": "art-241f2738ced0",
+      "occurrences": [
+        {
+          "id": "source-4a00abb9dbb7",
+          "page": "/answers/why-families-are-important.html",
+          "pageTitle": "Families",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/christ-world/christ-winter-laughter-full.webp\"]:has(img[src=\"../assets/page-art/christ-world/christ-winter-laughter-960.webp\"])",
+          "title": "Christ and children show their own paper snowflakes beside a warm fire while snow falls outside."
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Christ answers in the grainfield",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/bible-together/christ-sabbath-grainfield-960.webp",
@@ -23127,14 +23171,14 @@
     }
   ],
   "stats": {
-    "artworks": 1041,
-    "occurrences": 1048,
+    "artworks": 1043,
+    "occurrences": 1050,
     "byKind": {
       "artwork": 63,
       "hero": 45,
       "legacy": 39,
       "missionary": 13,
-      "topic": 941
+      "topic": 943
     }
   }
 }
