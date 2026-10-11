@@ -121,10 +121,10 @@ test('invalid grouping fails open with every original section and navigation lin
  const s=setup('',false);try{s.d.querySelector('#come-and-see').dataset.chapterGroup='missing';s.w.eval(code);assert.equal(shown(s).length,9);assert.equal(s.d.querySelector('.jj-chapter-controls'),null);assert([...s.d.querySelectorAll('.jj-local-nav a')].every(x=>!x.hidden));assert.deepEqual(s.errors,[])}finally{s.close()}
 });
 
-test('Birth preserves all twelve bookmarks, narrative opening pictures and reader focus',async()=>{
+test('Birth preserves all thirteen bookmarks, narrative opening pictures and reader focus',async()=>{
  const route='birth-of-christ.html';const s=setup('',false,route);
  try{
-  const cs=chapters(s);assert.equal(cs.length,12);assert(cs.every(c=>c.matches('[data-connected-study].jj-chapter')&&!c.hidden));
+  const cs=chapters(s);assert.equal(cs.length,13);assert(cs.every(c=>c.matches('[data-connected-study].jj-chapter')&&!c.hidden));
   const nav=s.d.querySelector('.jj-local-nav');assert.equal(nav.nextElementSibling,cs[0]);assert.equal(nav.previousElementSibling.tagName,'P');assert.equal(nav.previousElementSibling.textContent,'Follow the scriptural promises and witnesses surrounding the birth of Jesus Christ. As you read, notice what each witness tells us and what questions remain.');
   for(const c of cs.slice(0,-1)){let node=c.querySelector('h2').nextElementSibling,paragraphs=0;while(node&&node.tagName!=='FIGURE'){paragraphs+=node.tagName==='P'?1:node.querySelectorAll('p').length;node=node.nextElementSibling;}assert(node&&paragraphs<=2,c.id+' picture within two opening paragraphs');}
   assert.equal(s.d.querySelector('#mary-and-elisabeth figure').dataset.birthArt,'08-annunciation');
@@ -132,8 +132,9 @@ test('Birth preserves all twelve bookmarks, narrative opening pictures and reade
   assert.equal(s.d.querySelectorAll('#continue-study img').length,4);
   s.w.eval(code);assert.deepEqual(shown(s),['promised-son']);
   for(const c of cs){s.w.location.hash='#'+c.id;await tick();assert.deepEqual(shown(s),[c.id]);}
-  s.d.querySelector('.jj-mode').click();assert.equal(shown(s).length,12);
+  s.d.querySelector('.jj-mode').click();assert.equal(shown(s).length,13);
   s.d.querySelector('.jj-mode').click();assert.deepEqual(shown(s),['continue-study']);
+  s.d.querySelector('.jj-chapter-steps button').click();assert.equal(s.d.activeElement,s.d.querySelector('#christ-christmas-light h2'));
   s.d.querySelector('.jj-chapter-steps button').click();assert.equal(s.d.activeElement,s.d.querySelector('#word-made-flesh h2'));
   assert.equal(s.errors.length,0);
  }finally{s.close()}
