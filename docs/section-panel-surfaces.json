@@ -96,7 +96,8 @@
     "note": "Merlin Life of Christ standalone experience, preserved by Wyatt on 2026-10-02; scoped inline design and dedicated Timeline runtime checks own this surface.",
     "research-feature-study": "Joseph research feature comparison surface owned by joseph-smith-research.css; groups original artwork, physical evidence and reasoning. Uses shared border/radius tokens; scoped desktop and phone review verifies its own layout and contrast.",
     "fc-guided-path": "Three guided study paths on Answers use open columns, quiet separators and one continuous blue-teal reading surface in screen-only #guided-studies rules owned by guided-studies.css; preserve existing content, controls, Emma companion and print consumers.",
-    "fc-companion": "Four printable companion disclosures on Answers and Emma are owned by guided-studies.css; transparent border-bottom disclosure styling and print rules are preserved, not shared section-panel overrides."
+    "fc-companion": "Four printable companion disclosures on Answers and Emma are owned by guided-studies.css; transparent border-bottom disclosure styling and print rules are preserved, not shared section-panel overrides.",
+    "fc-attributed-story": "Three named attributed-story asides on Conference, Stand Forever and Settle; exact screen-only targeted-six.css owns reviewed teal surface and prose rhythm."
   },
   "excluded_classes": {
     "research-comparison-note": "Inline limitations attached to separately labelled source views; plain reading note, not a section panel.",
@@ -148,7 +149,8 @@
     "joseph-life-reflection": "Inline reflection paragraph in Joseph family narrative; a left reading accent only, not an enclosing panel. Page-owned typography and responsive review apply.",
     "joseph-life-source-note": "Inline provenance paragraph in the remembrance closing; no independent panel surface. Preserve reading flow and source context.",
     "fc-companion-notes": "Blank handwritten-note area inside four printable companions, owned by guided-studies.css; border-block and writing height are print affordances, not a filled section panel.",
-    "timeline-coordinate-note": "Inline coordinate/separator spans in the Life story paragraph; typography only, without an enclosing surface, border or fill. Timeline reader contrast and responsive QA own this text."
+    "timeline-coordinate-note": "Inline coordinate/separator spans in the Life story paragraph; typography only, without an enclosing surface, border or fill. Timeline reader contrast and responsive QA own this text.",
+    "fc-story-reflection": "Single reflection paragraph and top divider within the three attributed stories; no independent filled or rounded panel."
   },
   "runtime_selectors": {
     ".cfm-month": {

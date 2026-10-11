@@ -198,6 +198,38 @@ def visitor_viewer_sources():
             if not set(p.relative_to(ROOT).parts) & {'tools', '.git', 'node_modules', 'focuschrist-repo'}}
 
 # Exact new chalk figure surface only; this does not widen the hero CSS allowance.
+# Exact six-owner screen-only presentation; no generic CSS exclusion.
+SIX_PRESENTATION_OWNERS = {
+    'answers/jesus-christ-latter-day-saint-beliefs.html': 'jesus',
+    'answers/who-was-joseph-smith.html': 'joseph',
+    'general-conference.html': 'conference',
+    'answers/stand-forever.html': 'stand',
+    'answers/settle-this-in-your-hearts.html': 'settle',
+    'history/emma-hale-smith.html': 'emma',
+}
+
+
+def reviewed_six_presentation_style(data, sources):
+    if hashlib.sha256(data).hexdigest() != '6234f992191650a688b93dc452215778b783fe9b3e0a9ed030a79641c4b0edc6':
+        return False
+    name = 'targeted-six.css'
+    consumers = {page: text for page, text in sources.items() if name in text}
+    opted = {page for page, text in sources.items() if page.endswith('.html') and 'data-focus-six' in text}
+    if set(consumers) != set(SIX_PRESENTATION_OWNERS) or opted != set(SIX_PRESENTATION_OWNERS):
+        return False
+    for page, identity in SIX_PRESENTATION_OWNERS.items():
+        text = consumers[page]
+        tags = Tags(text).tags
+        refs = [(tag, attrs) for tag, attrs in tags if name in attrs.get('href', '') or name in attrs.get('src', '')]
+        href = ('../' if '/' in page else '') + name + '?v=20261010-six-review-1'
+        if text.count(name) != 1 or refs != [('link', {'rel': 'stylesheet', 'href': href})]:
+            return False
+        opted_tags = [(tag, attrs.get('data-focus-six')) for tag, attrs in tags if 'data-focus-six' in attrs]
+        if text.count('data-focus-six') != 1 or opted_tags != [('body', identity)]:
+            return False
+    return True
+
+
 def reviewed_four_scene_style(data, sources):
     if hashlib.sha256(data).hexdigest() != 'dfa23731ddbf2f7bfc039204e880ebd7e612519d698c6be96c0185ea696a98b9':
         return False
@@ -909,6 +941,8 @@ def main():
     excluded_styles.add(VIEWER_STYLE)
     check(reviewed_four_scene_style((ROOT/'four-scene-artwork.css').read_bytes(), visitor_viewer_sources()), 'Four-scene chalk surface differs from exact reviewed rule/bytes/sole owner')
     excluded_styles.add('four-scene-artwork.css')
+    check(reviewed_six_presentation_style((ROOT/'targeted-six.css').read_bytes(), visitor_viewer_sources()), 'Six-page presentation differs from exact screen-only stylesheet/owner opt-ins')
+    excluded_styles.add('targeted-six.css')
     check(reviewed_gallery_dialog_style((ROOT/'art-gallery.css').read_bytes()), 'Gallery viewport stylesheet differs from exact reviewed width inverse')
     excluded_styles.add('art-gallery.css')
     picture_pill_bytes = (ROOT/'artwork-actions.css').read_bytes()

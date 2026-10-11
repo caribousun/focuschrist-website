@@ -977,6 +977,19 @@
       "disposition": "shared_surface",
       "reason": "Named existing section panel; shared Home-derived surface only."
     },
+    "fc-story-reflection": {
+      "count": 3,
+      "pages": [
+        "answers/settle-this-in-your-hearts.html",
+        "answers/stand-forever.html",
+        "general-conference.html"
+      ],
+      "tags": [
+        "p"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Single reflection paragraph and top divider within the three attributed stories; no independent filled or rounded panel."
+    },
     "fc-study-panel": {
       "count": 35,
       "pages": [
@@ -1817,6 +1830,17 @@
         "art-study/the-living-christ.html"
       ],
       "disposition": "shared_surface"
+    },
+    "fc-attributed-story": {
+      "stylesheets": [
+        "targeted-six.css"
+      ],
+      "pages": [
+        "answers/settle-this-in-your-hearts.html",
+        "answers/stand-forever.html",
+        "general-conference.html"
+      ],
+      "disposition": "coordinated_stylesheet_owner"
     },
     "fc-bible-reference": {
       "stylesheets": [
