@@ -1,0 +1,71 @@
+/* Six unique, accessible artwork owners within the approved illustrated layout. */
+.fc-answers-unique-art { display: none; }
+@media screen {
+  body.fc-site #connected-study {
+    position: relative; isolation: isolate; overflow: hidden;
+    padding: 250px 28px 28px;
+    background: #16313d !important;
+    border: 1px solid rgba(243,207,131,.28) !important;
+  }
+  body.fc-site .fc-answers-unique-art { display: block; margin: 0; padding: 0; border: 0; }
+  .fc-answers-unique-art a { display: block; position: relative; width: 100%; height: 100%; }
+  .fc-answers-unique-art img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+  .fc-answers-unique-art a:focus-visible { outline: 3px solid #f3cf83; outline-offset: -5px; }
+  .fc-answers-unique-art__action { position: absolute; top: 10px; right: 10px; padding: 7px 12px; border: 1px solid #f3cf8380; border-radius: 999px; background: #102833ed; color: #fff3d9; font: 600 13px/1.4 Arial,sans-serif; }
+  body.fc-site .fc-answers-unique-art--banner { position: absolute; inset: 0 0 auto; height: 340px; }
+  .fc-answers-unique-art--banner::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg,transparent 25%,rgba(22,49,61,.12) 50%,#16313d 100%); }
+  body.fc-site #connected-study > :not(.fc-answers-unique-art), body.fc-site #study-companions > :not(.fc-answers-unique-art) { position: relative; }
+  body.fc-site #connected-study > h2 { margin-top: 0; }
+  body.fc-site #connected-study .fc-study-grid { align-items: stretch; gap: 24px; margin: 28px 0; grid-template-columns: repeat(3,minmax(0,1fr)); }
+  body.fc-site #connected-study .fc-study-grid > article { overflow: hidden; grid-column: auto !important; padding: 0 20px 22px; background: rgba(10,31,42,.65); border: 1px solid rgba(243,207,131,.2); border-radius: 12px; text-align: left; }
+  body.fc-site #connected-study .fc-answers-unique-art--card { height: auto; margin: 0 -20px 20px; border-bottom: 2px solid rgba(243,207,131,.55); }
+  .fc-answers-unique-art--card img { height: auto; }
+  body.fc-site #connected-study .fc-study-grid > article > :is(h3,p) { text-align: left; margin-inline: 0; }
+  body.fc-site #connected-study .fc-study-grid > article > h3 { margin-top: 0; }
+  body.fc-site #saved-studies { position: relative; isolation: isolate; padding: 28px 32px 28px 220px; min-height: 210px; border: 1px solid rgba(243,207,131,.25); border-radius: 14px; background: #16313d; margin-block: 36px; }
+  body.fc-site .fc-answers-unique-art--saved { position: absolute; inset: 0 auto 0 0; width: 220px; overflow: hidden; border-radius: 14px 0 0 14px; }
+  .fc-answers-unique-art--saved img { object-position: left center; }
+  .fc-answers-unique-art--saved::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg,rgba(22,49,61,.05),#16313d); }
+  .fc-answers-unique-art--saved .fc-answers-unique-art__action { right: auto; left: 10px; z-index: 1; }
+  body.fc-site #saved-studies > h2 { margin-top: 0; }
+  body.fc-site #saved-studies > p { margin-block: 10px; }
+  body.fc-site #saved-studies .fc-saved-list { margin-block: 16px; }
+  body.fc-site #study-companions { position: relative; isolation: isolate; padding: 285px 28px 28px; border: 1px solid rgba(243,207,131,.25); border-radius: 14px; overflow: hidden; background: #16313d; margin-block: 36px; }
+  body.fc-site #study-companions .fc-answers-unique-art--banner { height: 350px; }
+  #study-companions .fc-answers-unique-art--banner::after { background: linear-gradient(180deg,transparent 40%,#16313d 100%); }
+  body.fc-site #study-companions > h2 { margin-top: 0; }
+  body.fc-site #study-companions .fc-companion { background: rgba(8,29,39,.62); border-color: rgba(243,207,131,.28); border-left: 3px solid #d7b772; margin-block: 14px; }
+  @media(max-width:999px) { body.fc-site #connected-study .fc-study-grid { grid-template-columns: 1fr; } }
+  @media(max-width:700px) {
+    body.fc-site #connected-study { padding: 210px 20px 24px; }
+    body.fc-site .fc-answers-unique-art--banner { height: 280px; }
+    body.fc-site #saved-studies { padding: 140px 22px 24px; }
+    body.fc-site .fc-answers-unique-art--saved { inset: 0 0 auto; width: 100%; height: 200px; border-radius: 14px 14px 0 0; }
+    .fc-answers-unique-art--saved img { object-fit: contain; object-position: left top; }
+    .fc-answers-unique-art--saved::after { background: linear-gradient(180deg,transparent,#16313d 170px); }
+    body.fc-site #saved-studies > :not(.fc-answers-unique-art) { position: relative; }
+    body.fc-site #study-companions { padding: 225px 20px 24px; }
+    body.fc-site #study-companions .fc-answers-unique-art--banner { height: 280px; }
+  }
+}
+
+@media screen {
+  .fc-answers-unique-art--card .fc-answers-unique-art__action { position: static; display: block; text-align: center; border-radius: 0; padding: 7px 12px; }
+}
+@media screen and (max-width:700px) {
+  body.fc-site #connected-study > .fc-answers-unique-art--banner { height: 240px; }
+  #answers-connected-conversation img { object-position: 54% center; }
+}
+
+@media screen { #saved-studies, #study-companions, .fc-answers-unique-art { scroll-margin-top: var(--fc-anchor-offset,68px); } }
+
+/* Exact six Answers studies: compact, centered phone actions. */
+@media screen and (max-width:820px) {
+  #artworkDetailDialog:has(#artworkDetailImage:is([src="assets/page-art/answers-study/answers-connected-conversation-960.webp"],[src="assets/page-art/answers-study/answers-neighbor-service-960.webp"],[src="assets/page-art/answers-study/answers-two-witnesses-960.webp"],[src="assets/page-art/answers-study/answers-family-hopes-960.webp"],[src="assets/page-art/answers-study/answers-keep-your-place-960.webp"],[src="assets/page-art/answers-study/answers-companion-bench-960.webp"])) .fc-artwork-detail-actions { grid-template-columns: minmax(0,1fr); grid-auto-rows: auto; justify-items: center; gap: 6px; }
+  #artworkDetailDialog:has(#artworkDetailImage:is([src="assets/page-art/answers-study/answers-connected-conversation-960.webp"],[src="assets/page-art/answers-study/answers-neighbor-service-960.webp"],[src="assets/page-art/answers-study/answers-two-witnesses-960.webp"],[src="assets/page-art/answers-study/answers-family-hopes-960.webp"],[src="assets/page-art/answers-study/answers-keep-your-place-960.webp"],[src="assets/page-art/answers-study/answers-companion-bench-960.webp"])) .fc-artwork-detail-actions > :is(a,button) { min-height: 44px; padding: 6px 12px; text-align: center; }
+}
+
+/* Preserve reading space and reachable controls when text is enlarged. */
+@media screen and (max-width:820px) {
+  #artworkDetailDialog:has(#artworkDetailImage:is([src="assets/page-art/answers-study/answers-connected-conversation-960.webp"],[src="assets/page-art/answers-study/answers-neighbor-service-960.webp"],[src="assets/page-art/answers-study/answers-two-witnesses-960.webp"],[src="assets/page-art/answers-study/answers-family-hopes-960.webp"],[src="assets/page-art/answers-study/answers-keep-your-place-960.webp"],[src="assets/page-art/answers-study/answers-companion-bench-960.webp"])) .fc-artwork-detail-body { grid-template-rows: auto auto minmax(8rem,1fr) auto; overflow-y: auto; }
+}

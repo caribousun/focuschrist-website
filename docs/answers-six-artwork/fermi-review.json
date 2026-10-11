@@ -1,0 +1,48 @@
+{
+  "reviewer": "Fermi",
+  "decision": "CONCUR",
+  "reviewed_at": "2026-10-11T13:26:48.475208+00:00",
+  "spec_sha256": "e42e6b1db22d392892b0c561d8d1a487d154e3ba8bb336fd6394e69ef46a6f2c",
+  "no_individual_owner_acceptance_claim": true,
+  "derivative_pixel_review": true,
+  "assembled_context_review": true,
+  "complete_owner_classification": true,
+  "private_source_and_event_verification": true,
+  "scope": "Current exact Answers e42 source/native-event, retained source/derivative/census and actual loaded-stable assembled context equivalence.",
+  "evidence": [
+    {
+      "path": "work\\fermi\\ANSWERS-V2-PIXELS-INVENTORY-REVIEW.json",
+      "sha256": "99558acb8b7d6bb0f1ff3f73dce7cfb4d14eb4bba79704b6baf12ea43890d636"
+    },
+    {
+      "path": "work\\fermi\\ANSWERS-V3-SCOPED-BROWSER-REVIEW.json",
+      "sha256": "340df5ba3b9d31e977fc183df17e1ea823ad4c4be0ee823d9887a16aafeec722"
+    },
+    {
+      "path": "work\\fermi\\ANSWERS-V4-BOUNDED-LAYOUT-REVIEW.json",
+      "sha256": "baf1fe2b5bed7338d42baa08f929a4ec3034c5e3c24c790e5b8a268751dd5cbc"
+    },
+    {
+      "path": "work\\fermi\\ANSWERS-V4-FINAL-LOADED-FLOWS.json",
+      "sha256": "174a0aaa1e59d57f59d277292b294bdfd9970160795f781652f4e10ec9803f6d"
+    },
+    {
+      "path": "work\\fermi\\ANSWERS-NINE-NODE-FERMI-ACTUAL-AUDIT.json",
+      "sha256": "a2cf0ea4aa477af23316e16a58fc58bd8f3d737279bcffb3ed8b4c91ca9ff9b1"
+    }
+  ],
+  "limits": [
+    "Earlier4257 synthetic rapid startup miss remains unresolved; no universal first-click guarantee, product fix or exclusive provider causality.",
+    "Full prior source/derivative and census reviews are retained against unchanged24raster bytes; actual current26candidate hashes all match.",
+    "No publication or individual owner acceptance.",
+    "Native initial output prints composition summary; full initial prompt identity rests on hash-bound source JSON plus actual native load/store/dispatch, not an invented full-prompt output.",
+    "Batch completion timestamps are orchestration completion, not individual internal image times.",
+    "Historical conditional Engine brief or exact three-role preflight completion not established by this audit; no reconstructed approval.",
+    "Held ancestors remain held; actual event occurrence is not current image acceptance or publication."
+  ],
+  "supersedes_scope_only": {
+    "path": "work\\fermi\\ANSWERS-E42-FINAL-SCOPED-REVIEW.json",
+    "sha256": "9dd3b7605ef6ce12132de76de7596cadc9231fcc950b03f214896555f2e26d08",
+    "reason": "Adds newly completed independent nine-node event audit; earlier scoped receipt preserved."
+  }
+}

@@ -150,7 +150,8 @@
     "joseph-life-source-note": "Inline provenance paragraph in the remembrance closing; no independent panel surface. Preserve reading flow and source context.",
     "fc-companion-notes": "Blank handwritten-note area inside four printable companions, owned by guided-studies.css; border-block and writing height are print affordances, not a filled section panel.",
     "timeline-coordinate-note": "Inline coordinate/separator spans in the Life story paragraph; typography only, without an enclosing surface, border or fill. Timeline reader contrast and responsive QA own this text.",
-    "fc-story-reflection": "Single reflection paragraph and top divider within the three attributed stories; no independent filled or rounded panel."
+    "fc-story-reflection": "Single reflection paragraph and top divider within the three attributed stories; no independent filled or rounded panel.",
+    "fc-answers-unique-art--card": "Artwork figure; preserve framing and reviewed Answers picture-study behavior."
   },
   "runtime_selectors": {
     ".cfm-month": {
