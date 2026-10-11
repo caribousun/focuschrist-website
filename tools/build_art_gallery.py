@@ -18,6 +18,27 @@ from build_jesus_journey import validate_artwork_review
 ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = 'https://focuschrist.com'
 
+# Exact owner-approved Birth replacements retain existing shared story IDs.
+BIRTH_REPLACEMENTS = {
+    "07-zacharias-owner-20261011": "07-zacharias",
+    "08-annunciation-owner-20261011": "08-annunciation",
+}
+
+def birth_source_identity(page, kind, selector):
+    if page == '/birth-of-christ.html' and kind == 'topic':
+        for current, previous in BIRTH_REPLACEMENTS.items():
+            expected = 'a[href="assets/page-art/birth-of-christ/' + current + '-full.webp"]:has(img[src="assets/page-art/birth-of-christ/' + current + '-800.webp"])'
+            if selector == expected:
+                return selector.replace(current, previous)
+    return selector
+
+def birth_art_identity(identity):
+    for current, previous in BIRTH_REPLACEMENTS.items():
+        if identity == '/assets/page-art/birth-of-christ/' + current + '-full':
+            return '/assets/page-art/birth-of-christ/' + previous + '-full'
+    return identity
+
+
 
 def text(node):
     return re.sub(r'\s+', ' ', node.text()).strip() if node else ''
@@ -167,7 +188,7 @@ def build():
             title = title or alt or page_title
             entries.append({'fullImage': full, 'thumbnail': thumb, 'title': title, 'alt': alt or title,
                             'category': category(page), 'occurrence': {
-                                'id': stable('source-', page + '|' + kind + '|' + selector),
+                                'id': stable('source-', page + '|' + kind + '|' + birth_source_identity(page, kind, selector)),
                                 'page': page, 'pageTitle': page_title, 'category': category(page), 'kind': kind, 'selector': selector, 'title': title,
                                 **({'sensitiveGate': sensitive_gate} if sensitive_gate else {})}})
     # The full-size URL is authoritative; exact duplicate files share an identity too.
@@ -192,7 +213,7 @@ def build():
         if Path(chosen['fullImage']).suffix.lower() == '.svg':
             item['mediaType'] = 'analytical-svg'
             item['countsAsPhotographicArtwork'] = False
-        item['id'] = stable('art-', identity)
+        item['id'] = stable('art-', birth_art_identity(identity))
         item['occurrences'] = list({e['occurrence']['id']: e['occurrence'] for e in group}.values())
         item['categories'] = sorted({e['category'] for e in group})
         artworks.append(item)
