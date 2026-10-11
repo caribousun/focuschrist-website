@@ -49,6 +49,51 @@ reading_art_self_test()
 reading_art_assets=[]
 
 
+# The approved Winter scene is the only seasonal addition on an Answer page.
+# Its exact family remains separate from the unchanged legacy 99/3 baseline.
+WINTER_OWNER='answers/why-families-are-important.html'
+WINTER_KEY='christ-winter-laughter'
+WINTER_FULL='assets/page-art/christ-world/christ-winter-laughter-full.webp'
+WINTER_FIGURE_SHA='99227e589a6095a88ae67fd84309aafbb386b66f4b7c65849c38eb9cc337a8bf'
+WINTER_ASSETS={
+ 'assets/page-art/christ-world/christ-winter-laughter-640.webp':'0357025d0b8b4772e16a7df7ca7f8c6171826114e1187954be9e631759f0a108',
+ 'assets/page-art/christ-world/christ-winter-laughter-960.webp':'2c3e9b8067d4fcdf2b283981ca48e06e48395e8b75d7a3ebb7b82ecbc5e39fe9',
+ WINTER_FULL:'c88c3ff2656c7fd1a0e44e462b073b4ab3643978085f43249a742f7ce5b59d04',
+ 'assets/page-art/christ-world/masters/christ-winter-laughter.png':'9d4bc85cd2f4b6977926688a2e4c5385c96284874c937ffd46bed54bed5b63a5'
+}
+def check_winter_art(route,source,verify_assets=True):
+ from bs4 import BeautifulSoup
+ soup=BeautifulSoup(source,'html.parser')
+ candidates=[f for f in soup.find_all('figure') if f.get('data-exclusive-artwork')==WINTER_KEY or any(Path(a).name in str(f) for a in WINTER_ASSETS)]
+ assert len(candidates)==(1 if route==WINTER_OWNER else 0),route+': missing, duplicate or wrong-owner Winter artwork'
+ if route!=WINTER_OWNER:return
+ figure=candidates[0];anchor=figure.find('a')
+ assert anchor and anchor.get('aria-haspopup')=='dialog' and not anchor.has_attr('data-full-image-viewer'),'Winter must open shared study details first'
+ assert anchor.get('data-topic-study')=='#hope-reflection','Winter surrounding study destination changed'
+ assert hashlib.sha256(str(figure).encode()).hexdigest()==WINTER_FIGURE_SHA,'Winter reviewed figure changed'
+ if verify_assets:
+  for asset,digest in WINTER_ASSETS.items():
+   assert hashlib.sha256((ROOT/asset).read_bytes()).hexdigest()==digest,asset+': Winter reviewed bytes changed'
+
+def winter_art_self_test():
+ from bs4 import BeautifulSoup
+ source=(ROOT/WINTER_OWNER).read_text(encoding='utf-8')
+ figure=str(BeautifulSoup(source,'html.parser').select_one('figure[data-exclusive-artwork="'+WINTER_KEY+'"]'))
+ for kind in ('missing','duplicate','markup','asset','wrong-owner','dialog','direct-viewer','study-target'):
+  soup=BeautifulSoup(source,'html.parser');current=soup.select_one('figure[data-exclusive-artwork="'+WINTER_KEY+'"]')
+  if kind=='missing':current.decompose()
+  elif kind=='duplicate':soup.append(BeautifulSoup(figure,'html.parser'))
+  elif kind=='markup':current['data-exclusive-artwork']='unreviewed'
+  elif kind=='asset':current.find('img')['src']='unreviewed.webp'
+  elif kind=='dialog':current.find('a')['aria-haspopup']='false'
+  elif kind=='direct-viewer':current.find('a')['data-full-image-viewer']=''
+  elif kind=='study-target':current.find('a')['data-topic-study']='#unreviewed'
+  try:check_winter_art('answers/unreviewed.html' if kind=='wrong-owner' else WINTER_OWNER,str(soup),False)
+  except AssertionError:pass
+  else:raise AssertionError('Winter artwork mutation escaped: '+kind)
+winter_art_self_test()
+winter_art_assets=[]
+
 def local_asset(page,href):
  u=urlsplit(href)
  assert not u.scheme and not u.netloc, 'Body artwork must be local'
@@ -117,6 +162,7 @@ relocated_names={'aaronic-priesthood','joseph-baptizes-oliver','oliver-baptizes-
 for page in [*sorted((ROOT/'answers').glob('*.html')),ROOT/'general-conference.html']:
  source=page.read_text(encoding='utf-8')
  check_reading_art(page.relative_to(ROOT).as_posix(),source)
+ check_winter_art(page.relative_to(ROOT).as_posix(),source)
  d=Document();d.feed(source);ns=list(d.root.walk())
  if page.relative_to(ROOT).as_posix()=='answers/race-priesthood-and-temple-blessings.html':
   # Official source media open their Church destinations; they are not original
@@ -150,6 +196,10 @@ for page in [*sorted((ROOT/'answers').glob('*.html')),ROOT/'general-conference.h
   if relative_asset in REVIEWED_READING_ART:
    assert page.relative_to(ROOT).as_posix()==REVIEWED_READING_ART[relative_asset]['owner'], 'Reading artwork owner mismatch'
    reading_art_assets.append(relative_asset)
+  elif relative_asset==WINTER_FULL:
+   assert page.relative_to(ROOT).as_posix()==WINTER_OWNER and container.attrs.get('data-exclusive-artwork')==WINTER_KEY, 'Winter exact owner/key mismatch'
+   assert a.attrs.get('aria-haspopup')=='dialog' and 'data-full-image-viewer' not in a.attrs and a.attrs.get('data-topic-study')=='#hope-reflection', 'Winter study-first adapter mismatch'
+   winter_art_assets.append(relative_asset)
   elif relative_asset in first_topic_review:
    record=first_topic_review[relative_asset]
    assert page.relative_to(ROOT).as_posix()==record['route'], 'FIRST topic owner mismatch'
@@ -279,7 +329,9 @@ assert len(temple_assets)==len(set(temple_assets))==len(temple_review)==21 and s
 assert len(joseph_assets)==len(set(joseph_assets))==26 and set(joseph_assets)==joseph_review, 'All reviewed Joseph family pictures must reach study details exactly once'
 assert len(first_topic_assets)==len(set(first_topic_assets))==len(first_topic_review) and set(first_topic_assets)==set(first_topic_review), 'Exact additive FIRST topic family required'
 assert len(reading_art_assets)==len(set(reading_art_assets))==3 and set(reading_art_assets)==set(REVIEWED_READING_ART), 'Exact Stand two and Temple one inventory required'
-assert (count-len(reading_art_assets)-len(first_topic_assets)-len(joseph_assets)-len(temple_assets)-len(father_assets)-len(plan_assets)-len(hg_assets)-len(covenant_assets)-len(journey_assets)-len(bible_assets)-len(settle_assets)-len(life_assets)-len(gap_assets)-len(sitewide_assets)-len(focused_assets)-len(relocated_assets)-len(bom_assets),preserved)==(99,3),(count,preserved)
+assert winter_art_assets==[WINTER_FULL], 'Exactly one reviewed Winter Answer picture required'
+print('PASS: exact Winter owner, figure, four rasters and study-first adapter;8 negative mutations; unchanged legacy99/3 baseline')
+assert (count-len(winter_art_assets)-len(reading_art_assets)-len(first_topic_assets)-len(joseph_assets)-len(temple_assets)-len(father_assets)-len(plan_assets)-len(hg_assets)-len(covenant_assets)-len(journey_assets)-len(bible_assets)-len(settle_assets)-len(life_assets)-len(gap_assets)-len(sitewide_assets)-len(focused_assets)-len(relocated_assets)-len(bom_assets),preserved)==(99,3),(count,preserved)
 # Life After Death lifted its old illustrated feature panel into full reading
 # sections. All twelve remaining panels still undergo the structural checks.
 assert set(plan_assets)==set(plan_review) and len(plan_assets)==16, 'All sixteen Plan originals must reach the shared study adapter'

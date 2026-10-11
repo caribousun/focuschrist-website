@@ -93,6 +93,42 @@ for(const route of new Set(readingFigures.map(row=>row[0]))){
  invertReadingFigures(extra,route);
  assert.equal(extra.querySelectorAll(selectors[0]).length,1,'Unrelated source control must remain visible to baseline coverage');
 }
+// The two reviewed seasonal figures add one source pill each. Validate their
+// exact current DOM and owner before taking this narrow baseline inverse.
+const seasonalFigures=[
+ ['birth-of-christ.html','christ-christmas-light','c242de105262e87b1f3476c48faf7b3a26246733785bca189753d85c742fc196'],
+ ['answers/why-families-are-important.html','christ-winter-laughter','247279f2f731ef3653baa95887e391669b9b7e572fb886828c89fe6aab6e0b6b']
+];
+function invertSeasonalFigures(doc,route){
+ let added=0;
+ for(const [owner,key,sha] of seasonalFigures){
+  const figures=[...doc.querySelectorAll('figure')].filter(f=>f.getAttribute('data-exclusive-artwork')===key||f.outerHTML.includes(key+'-960.webp')||f.outerHTML.includes(key+'-full.webp'));
+  assert.equal(figures.length,owner===route?1:0,route+': missing, duplicate or wrong-owner seasonal figure '+key);
+  if(owner!==route)continue;
+  const figure=figures[0];assert.equal(digest(figure.outerHTML),sha,route+': reviewed seasonal figure changed '+key);
+  assert.equal(figure.querySelectorAll(selectors[0]).length,1,key+': exact added source-control count');
+  for(const selector of selectors.slice(1))assert.equal(figure.querySelectorAll(selector).length,0,key+': unrelated control family entered inverse');
+  added++;figure.remove();
+ }
+ return added;
+}
+for(const [route,key] of seasonalFigures){
+ const original=JSDOM.fragment(read(route));
+ const fixtureHtml=original.querySelector('figure[data-exclusive-artwork="'+key+'"]').outerHTML;
+ for(const kind of ['missing','duplicate','key','href','caption','wrong-owner']){
+  const doc=JSDOM.fragment(fixtureHtml),figure=doc.querySelector('figure');
+  if(kind==='missing')figure.remove();
+  if(kind==='duplicate')doc.append(figure.cloneNode(true));
+  if(kind==='key')figure.setAttribute('data-exclusive-artwork','unknown');
+  if(kind==='href')figure.querySelector('a').setAttribute('href','unknown.webp');
+  if(kind==='caption')figure.querySelector('figcaption').append('Changed');
+  assert.throws(()=>invertSeasonalFigures(doc,kind==='wrong-owner'?'unreviewed.html':route),assert.AssertionError,kind+': '+key);
+ }
+ const extra=JSDOM.fragment(fixtureHtml+'<p class="fc-study-visual-sources"><a href="unexpected">Extra control</a></p>');
+ invertSeasonalFigures(extra,route);
+ assert.equal(extra.querySelectorAll(selectors[0]).length,1,'Unrelated source control must remain visible to baseline coverage');
+}
+let seasonalSourceControls=0;
 let readingSourceControls=0;
 const inventory={canonical_pages:pages.length,selectors:{},numbered_navigation:{}};
 for(const s of selectors)inventory.selectors[s]={count:0,pages:[]};
@@ -100,6 +136,7 @@ for(const page of pages){
  const dom=new JSDOM(read(page)),doc=dom.window.document;
  assertNoLooseSourceSeparators(doc);
  readingSourceControls+=invertReadingFigures(doc,page);
+ seasonalSourceControls+=invertSeasonalFigures(doc,page);
  for(const s of selectors){const nodes=[...doc.querySelectorAll(s)];if(nodes.length){inventory.selectors[s].count+=nodes.length;inventory.selectors[s].pages.push(page);for(const n of nodes)assert.equal(n.tagName,'A');}}
  for(const s of ['.watch-topic-index a','nav[aria-label="Pioneer study sections"] a','.bom-story-directory a']){
   const nodes=[...doc.querySelectorAll(s)];if(nodes.length)inventory.numbered_navigation[page+' '+s]=nodes.map(n=>({href:n.getAttribute('href'),label:n.textContent.trim().replace(/\s+/g,' ')}));
@@ -108,6 +145,8 @@ for(const page of pages){
  dom.window.close();
 }
 assert.equal(readingSourceControls,5,'Exactly five named source controls in six reviewed reading figures');
+assert.equal(seasonalSourceControls,2,'Exactly two named source controls in two reviewed seasonal figures');
+console.log('PASS: two exact seasonal figures, unchanged legacy inventory;12 negative mutations and2 unrelated-control retention fixtures.');
 for(const [s,a] of Object.entries(inventory.selectors))if(!a.count){const runtime=config.runtime_selectors[s];assert(runtime,`Unused selector ${s}`);assert(read(runtime.source).includes(runtime.marker));}
 const file=path.join(root,'docs/study-link-control-inventory.json');
 if(process.argv.includes('--write-inventory'))fs.writeFileSync(file,JSON.stringify(inventory,null,2)+'\n');
