@@ -4,7 +4,7 @@
 var registry={
   "life": {
     "0": {
-      "src": "/assets/page-art/birth-of-christ/08-annunciation-800.webp",
+      "src": "/assets/page-art/birth-of-christ/08-annunciation-owner-20261011-800.webp",
       "alt": "Mary listens to Gabriel in a modest room.",
       "href": "/birth-of-christ.html#mary-and-elisabeth",
       "caption": "Mary listens to Gabriel in a modest room.",

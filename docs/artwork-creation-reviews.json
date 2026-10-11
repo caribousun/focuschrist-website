@@ -5439,7 +5439,7 @@
           },
           {
             "path": "timelines/willie-and-martin-handcart-map.html",
-            "sha256": "5fe891c3ccd544b3bec085c1357354aeaad717be8710f93620b9430f27415f6a"
+            "sha256": "fe8e1610154b47e2d92c85c5fe7627e4a8655db252d105efed1bffbcd94b7269"
           },
           {
             "path": "topic-art.css",
@@ -5458,7 +5458,7 @@
           "stage": "finished",
           "verdict": "PASS",
           "withdrawn": false,
-          "binding_sha256": "63cf35e613054bc564da9b0225eb40c3c0ffb4a0ca2d63499932bfa3e4f9a31a",
+          "binding_sha256": "75eb28e003ac891df28a0c9352cd216a4eb3f8f45593e7863b7727e09496922f",
           "reviewed_at": "2026-10-07T04:33:17.364483+00:00",
           "observations": "Current Fermi receiver read exact live Master/protected foundation, current 00B/Focus and applicable repository mandates. Original-resolution and face-detail checks below explicitly reuse prior Fermi hash-bound pixel inspection; this turn independently verified unchanged source/decoded-pixel/derivative hashes and inspected current rendered screenshot pixels and visitor copy. No regeneration or new owner approval. Actual browser interaction claims belong to root/UI receipts, not my screenshot inspection. No unresolved scoped finding; publication, Newton concurrence and owner aesthetic acceptance remain separate.",
           "checks": {
@@ -5539,7 +5539,7 @@
             },
             {
               "path": "timelines/willie-and-martin-handcart-map.html",
-              "sha256": "5fe891c3ccd544b3bec085c1357354aeaad717be8710f93620b9430f27415f6a"
+              "sha256": "fe8e1610154b47e2d92c85c5fe7627e4a8655db252d105efed1bffbcd94b7269"
             },
             {
               "path": "topic-art.css",
@@ -5668,7 +5668,8 @@
             ],
             "basis": "Exact previously paired-reviewed timeline cache-token inverse.",
             "review_attribution": "Root and independent reviewers inspect this exact amendment before installation; original review dates unchanged."
-          }
+          },
+"gabriel_context_review": {"reviewed_at": "2026-10-11T20:38:26.606957+00:00", "scope": "Exact cache-token context inverse only. Previous pixel observations and dates are historical and retained.", "receipt": {"path": "docs/gabriel-owner-20261011/context-fermi-review.json", "sha256": "39a076cf40f99d1ec4075d34fddff73a23d65e76ed6510203353d2b8285e9289"}, "binding_sha256": "75eb28e003ac891df28a0c9352cd216a4eb3f8f45593e7863b7727e09496922f"}
         },
         {
           "reviewer": "Newton",
@@ -5676,7 +5677,7 @@
           "stage": "finished",
           "verdict": "PASS",
           "withdrawn": false,
-          "binding_sha256": "63cf35e613054bc564da9b0225eb40c3c0ffb4a0ca2d63499932bfa3e4f9a31a",
+          "binding_sha256": "75eb28e003ac891df28a0c9352cd216a4eb3f8f45593e7863b7727e09496922f",
           "reviewed_at": "2026-10-07T04:33:04.687947+00:00",
           "full_resolution_inspected": true,
           "face_details_inspected": true,
@@ -5785,13 +5786,14 @@
             ],
             "basis": "Exact previously paired-reviewed timeline cache-token inverse.",
             "review_attribution": "Root and independent reviewers inspect this exact amendment before installation; original review dates unchanged."
-          }
+          },
+"gabriel_context_review": {"reviewed_at": "2026-10-11T20:35:23.565570+00:00", "scope": "Exact cache-token context inverse only. Previous pixel observations and dates are historical and retained.", "receipt": {"path": "docs/gabriel-owner-20261011/handcart-newton-review.json", "sha256": "b6fba8bcbd49b756fb2bbd69f8a1ecc182e9b8c7d938c35941f56d262f75d636"}, "binding_sha256": "75eb28e003ac891df28a0c9352cd216a4eb3f8f45593e7863b7727e09496922f"}
         }
       ],
       "root_review": {
         "reviewer": "Albert",
         "verdict": "PASS",
-        "binding_sha256": "63cf35e613054bc564da9b0225eb40c3c0ffb4a0ca2d63499932bfa3e4f9a31a",
+        "binding_sha256": "75eb28e003ac891df28a0c9352cd216a4eb3f8f45593e7863b7727e09496922f",
         "observations": "Personally operated all six artwork panels and fullsize paths on desktop1280x900 and phone412x915, inspected exact download hrefs, Escape focus return and Continue Lesson. History scripture reader loaded verse121:9. Eleazer phone/desktop selector switches used exact original/desktop source; labels and48px controls coherent. Personally inspected saved desktop/phone placement screenshots and current desktop panel pixels; reused original/face pixel inspection documented by prior root and both independent reviewers. Current root screenshots saved immediately after actions sometimes capture preceding panel state; these are not represented as viewer screenshots. Phone/desktop placement and all relevant current HTML/CSS integrity verified by independent UI report. No product pixels regenerated. Prose semantic delta read personally; concise invitations preserve sources and historical/devotional distinctions.",
         "evidence": {
           "desktop": [
@@ -5888,7 +5890,8 @@
           ],
           "basis": "Exact previously paired-reviewed timeline cache-token inverse.",
           "review_attribution": "Root and independent reviewers inspect this exact amendment before installation; original review dates unchanged."
-        }
+        },
+"gabriel_context_review": {"reviewed_at": "2026-10-11T20:33:08.205935+00:00", "scope": "Exact Handcart script query token only; current root Birth browser evidence is separate, no new Handcart pixel claim.", "receipt": {"path": "docs/gabriel-owner-20261011/context-albert-review.json", "sha256": "2a447f119e4b692fdf394e269dc718de7701e4f930eaa83491df1af8de9caaca"}, "binding_sha256": "75eb28e003ac891df28a0c9352cd216a4eb3f8f45593e7863b7727e09496922f"}
       },
       "prior_page_context_bindings": [
         {

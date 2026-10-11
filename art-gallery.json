@@ -8887,8 +8887,8 @@
     {
       "title": "Gabriel speaks to Zacharias",
       "category": "Gospel Studies",
-      "thumbnail": "/assets/page-art/birth-of-christ/07-zacharias-800.webp",
-      "fullImage": "/assets/page-art/birth-of-christ/07-zacharias-full.webp",
+      "thumbnail": "/assets/page-art/birth-of-christ/07-zacharias-owner-20261011-800.webp",
+      "fullImage": "/assets/page-art/birth-of-christ/07-zacharias-owner-20261011-full.webp",
       "alt": "Gabriel addresses Zacharias beside the altar of incense.",
       "id": "art-5bfaa3be779a",
       "occurrences": [
@@ -8898,7 +8898,7 @@
           "pageTitle": "The Birth of Jesus Christ",
           "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"assets/page-art/birth-of-christ/07-zacharias-full.webp\"]:has(img[src=\"assets/page-art/birth-of-christ/07-zacharias-800.webp\"])",
+          "selector": "a[href=\"assets/page-art/birth-of-christ/07-zacharias-owner-20261011-full.webp\"]:has(img[src=\"assets/page-art/birth-of-christ/07-zacharias-owner-20261011-800.webp\"])",
           "title": "Gabriel speaks to Zacharias"
         }
       ],
@@ -14576,8 +14576,8 @@
     {
       "title": "Mary receives Gabriel’s message",
       "category": "Gospel Studies",
-      "thumbnail": "/assets/page-art/birth-of-christ/08-annunciation-800.webp",
-      "fullImage": "/assets/page-art/birth-of-christ/08-annunciation-full.webp",
+      "thumbnail": "/assets/page-art/birth-of-christ/08-annunciation-owner-20261011-800.webp",
+      "fullImage": "/assets/page-art/birth-of-christ/08-annunciation-owner-20261011-full.webp",
       "alt": "Mary listens to Gabriel in a modest room.",
       "id": "art-ff990be3450b",
       "occurrences": [
@@ -14587,7 +14587,7 @@
           "pageTitle": "The Birth of Jesus Christ",
           "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"assets/page-art/birth-of-christ/08-annunciation-full.webp\"]:has(img[src=\"assets/page-art/birth-of-christ/08-annunciation-800.webp\"])",
+          "selector": "a[href=\"assets/page-art/birth-of-christ/08-annunciation-owner-20261011-full.webp\"]:has(img[src=\"assets/page-art/birth-of-christ/08-annunciation-owner-20261011-800.webp\"])",
           "title": "Mary receives Gabriel’s message"
         }
       ],

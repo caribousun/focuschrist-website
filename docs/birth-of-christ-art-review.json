@@ -166,24 +166,24 @@
       "caption": "Zacharias hears that Elisabeth will bear a son. John’s life will help prepare a people to receive the Lord.",
       "scripture": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/1?id=p8-p19&lang=eng#p8",
       "label": "Luke 1:8–19",
-      "asset": "assets/page-art/birth-of-christ/07-zacharias-full.webp",
-      "thumbnail": "assets/page-art/birth-of-christ/07-zacharias-800.webp",
-      "source_file": "exec-a2edf5b0-dc87-436e-873c-387d9f810be5.png",
-      "source_sha256": "879392be143b8847310327c9082ad7a5075ee8dbfa12822240e55db7509fec67",
-      "sha256": "fca9e54e4431a56cb052a1e9198b97f314c5ac30af8eab6396dd8c71b0986f33",
-      "thumbnail_sha256": "0e8b8d1976bb8e98f8eb148db4089594fc7f039223a85da6aa29b37d6193e66c",
+      "asset": "assets/page-art/birth-of-christ/07-zacharias-owner-20261011-full.webp",
+      "thumbnail": "assets/page-art/birth-of-christ/07-zacharias-owner-20261011-800.webp",
+      "source_file": "07-zacharias-owner-20261011.png",
+      "source_sha256": "5315c94322adca83c8d3c75dad74f647f2fe395c9e0c751541aeec11461c73b4",
+      "sha256": "b6a1a46cd9df66799eefbb7ad704168e97325558dfb645d720d582527a950564",
+      "thumbnail_sha256": "22a2c7b1a96dab3d5f0cb346f4c0d87fa5fcf790686ff0e5a53d5311ff5fa5c8",
       "width": 1536,
       "height": 1024,
       "reviewed": true,
       "technical_review_passed": true,
       "owner_approval": true,
       "review": {
-        "independent": "Exact source filename and SHA-256 independently visually reviewed in docs/birth-of-christ-art-review.md. Source, expression, anatomy, gaze and narrative variety passed.",
-        "continuity": "Recurring Mary, Joseph and Gabriel compared with working character references; infant and toddler are age-appropriate artistic interpretations.",
-        "source": "Exact scripture ranges and caption claims separately reviewed; ancient appearances and environments are artistic interpretations.",
-        "delivery": "Full WebP decoded RGB pixels equal reviewed original PNG; thumbnail is a proportional delivery variant."
+        "independent": "Fermi and Newton reviewed exact finished source and face details; current derivative/context review required before release. Prior record retained at docs/gabriel-owner-20261011/prior-birth-of-christ-art-review.json",
+        "continuity": "Owner-directed Gabriel correction; approved source identity and existing scene preserved.",
+        "source": "Existing Luke scripture and narrative unchanged.",
+        "delivery": "Full WebP decoded RGB equals approved PNG;800px proportional Lanczos thumbnail encoded losslessly."
       },
-      "owner_approval_evidence": "Wyatt, active task2026-09-19: all of these images are wonderful and enriched as the user likes. Good job. Feel free to create more if it further enhances the stories and I hope you are using all the ones you have created."
+      "owner_approval_evidence": "Wyatt explicitly approved this exact source image on2026-10-11; source SHA256 5315c94322adca83c8d3c75dad74f647f2fe395c9e0c751541aeec11461c73b4"
     },
     {
       "key": "08-annunciation",
@@ -192,24 +192,24 @@
       "caption": "The announcement comes to Mary with an invitation to trust God. Her question and willing response are part of the account Luke asks us to hear.",
       "scripture": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/1?id=p26-p38&lang=eng#p26",
       "label": "Luke 1:26–38",
-      "asset": "assets/page-art/birth-of-christ/08-annunciation-full.webp",
-      "thumbnail": "assets/page-art/birth-of-christ/08-annunciation-800.webp",
-      "source_file": "exec-374079c5-7619-410e-a454-88e34454c365.png",
-      "source_sha256": "7ce248f4ed3caf65e4d70a50c3ac8fb2cda89e2b63bdb4e506f71b3dd96e7585",
-      "sha256": "a643f31dbb22808a66b266c90604403274847aab70acaa741d090bb56c22773e",
-      "thumbnail_sha256": "6495e93753139bffc6f94563545958aac56c267ecbca43fcddce09aee40242d4",
+      "asset": "assets/page-art/birth-of-christ/08-annunciation-owner-20261011-full.webp",
+      "thumbnail": "assets/page-art/birth-of-christ/08-annunciation-owner-20261011-800.webp",
+      "source_file": "08-annunciation-owner-20261011.png",
+      "source_sha256": "d0b7ccfc5fc16b6697e0c54e488d3869eab003e8f10fe326511a0fbe7394fa4a",
+      "sha256": "2c5c097e3f6d1f6ee16f0ddaefed596caf3ecac56f65678dce61ca9a2a446670",
+      "thumbnail_sha256": "e897ca2e97d7d547033c0b160d27ca8613c7b2c57660729a6c22d966806bc0ef",
       "width": 1536,
       "height": 1024,
       "reviewed": true,
       "technical_review_passed": true,
       "owner_approval": true,
       "review": {
-        "independent": "Exact source filename and SHA-256 independently visually reviewed in docs/birth-of-christ-art-review.md. Source, expression, anatomy, gaze and narrative variety passed.",
-        "continuity": "Recurring Mary, Joseph and Gabriel compared with working character references; infant and toddler are age-appropriate artistic interpretations.",
-        "source": "Exact scripture ranges and caption claims separately reviewed; ancient appearances and environments are artistic interpretations.",
-        "delivery": "Full WebP decoded RGB pixels equal reviewed original PNG; thumbnail is a proportional delivery variant."
+        "independent": "Fermi and Newton reviewed exact finished source and face details; current derivative/context review required before release. Prior record retained at docs/gabriel-owner-20261011/prior-birth-of-christ-art-review.json",
+        "continuity": "Owner-directed Gabriel correction; approved source identity and existing scene preserved.",
+        "source": "Existing Luke scripture and narrative unchanged.",
+        "delivery": "Full WebP decoded RGB equals approved PNG;800px proportional Lanczos thumbnail encoded losslessly."
       },
-      "owner_approval_evidence": "Wyatt, active task2026-09-19: all of these images are wonderful and enriched as the user likes. Good job. Feel free to create more if it further enhances the stories and I hope you are using all the ones you have created."
+      "owner_approval_evidence": "Wyatt explicitly approved this exact source image on2026-10-11; source SHA256 d0b7ccfc5fc16b6697e0c54e488d3869eab003e8f10fe326511a0fbe7394fa4a"
     },
     {
       "key": "09-mary-elisabeth",

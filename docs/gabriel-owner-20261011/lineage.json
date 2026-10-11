@@ -1,0 +1,77 @@
+{
+  "projection_author": "Lightning",
+  "reviewer": "Newton",
+  "status": "VERIFIED_BOUNDED_NATIVE_AND_LOCAL_LINEAGE",
+  "approved_outputs": {
+    "07-zacharias": "5315c94322adca83c8d3c75dad74f647f2fe395c9e0c751541aeec11461c73b4",
+    "08-annunciation": "d0b7ccfc5fc16b6697e0c54e488d3869eab003e8f10fe326511a0fbe7394fa4a"
+  },
+  "generation_events": [
+    {
+      "loaded_at": "2026-10-11T19:26:54.989Z",
+      "dispatched_at": "2026-10-11T19:32:52.724Z",
+      "completed_at": "2026-10-11T19:34:27.489Z",
+      "load_event_sha256": "38d1fa9ac991da81a7b40cedea9bb07800765e7005c5d5da6358535919ac4efa",
+      "dispatch_event_sha256": "6a6c35b4bdf8435802451f75641643014ca90cfde51bfecb12db8c448ff5b791",
+      "completion_event_sha256": "90b62b777316fabd93e6b9a88bdc2d0b102c81307422655f0755fa1f3a8efb37",
+      "prompt_sha256": "c7b022d3a1172374e9ba2fe76932186a3a42c2c9868616664033bd263f0c95cb",
+      "output_sha256": "5315c94322adca83c8d3c75dad74f647f2fe395c9e0c751541aeec11461c73b4"
+    },
+    {
+      "loaded_at": "2026-10-11T19:26:54.989Z",
+      "dispatched_at": "2026-10-11T19:32:52.724Z",
+      "completed_at": "2026-10-11T19:35:01.370Z",
+      "load_event_sha256": "38d1fa9ac991da81a7b40cedea9bb07800765e7005c5d5da6358535919ac4efa",
+      "dispatch_event_sha256": "6a6c35b4bdf8435802451f75641643014ca90cfde51bfecb12db8c448ff5b791",
+      "completion_event_sha256": "71b95bd4f94b7835c1b44936bb336ce23319dc015f54c71a0b63decb982d86e5",
+      "prompt_sha256": "9f8ee5dd4a5ddca44830f1f2b65ba6593de6522f1a12d0cfd20e24906a588cee",
+      "output_sha256": "de731190eaa5849ac3f8eab5fc46b44ba0a78b5af426b2e1f6adb1d603566b5c"
+    },
+    {
+      "loaded_at": "2026-10-11T19:51:27.570Z",
+      "dispatched_at": "2026-10-11T19:54:00.211Z",
+      "completed_at": "2026-10-11T19:54:19.871Z",
+      "load_event_sha256": "e55059586de45269737c9389ed105d6d9be152ac4588b6b2b6dc9d62acffe43b",
+      "dispatch_event_sha256": "337160b9429b80a5aae666d8ec2e7abb2f764a0423ceeffcf4559567b6b81295",
+      "completion_event_sha256": "833ed583138d1fee96835268968dbcda2f7e72723e6469a35722d190dd116f19",
+      "prompt_sha256": "5c8af227842510d2ea262c86e9f89a75ecb467d4bf584147254fd32fe2ae7d5c",
+      "output_sha256": "66d303e00e559d46b4f5e756282808e2f012deb50c1fa8d18f9f928ab5f0750e"
+    }
+  ],
+  "original_references": {
+    "07-zacharias": "fca9e54e4431a56cb052a1e9198b97f314c5ac30af8eab6396dd8c71b0986f33",
+    "08-annunciation": "a643f31dbb22808a66b266c90604403274847aab70acaa741d090bb56c22773e"
+  },
+  "mary": {
+    "base_sha256": "de731190eaa5849ac3f8eab5fc46b44ba0a78b5af426b2e1f6adb1d603566b5c",
+    "native_crop_sha256": "e42952d7acff4c16b3ee484a91d1caacf5989d5a618a649a7e0a5ddfc059df68",
+    "crop_box": [
+      475,
+      145,
+      565,
+      220
+    ],
+    "donor_sha256": "66d303e00e559d46b4f5e756282808e2f012deb50c1fa8d18f9f928ab5f0750e",
+    "reduced_donor_sha256": "ea6ea3c6ec6eeb5c7451f76b1b3dd7a37bae33f4b90d0069c7396de1af8b76d6",
+    "reduction": "1374x1145 to90x75 exact-aspect donor-only Lanczos",
+    "mask_sha256": "811522abf50ec343d9022e4c8ce992c4b9af818c17cb22fa44e7fde3222c2965",
+    "application_plan_sha256": "9a0c8911138d84444e190b8b561c1627b1846da83c7bc72d2f11fcf4251965a4",
+    "changed_pixels": 164,
+    "editable_pixels": 166,
+    "outside_mask_exact": true
+  },
+  "private_evidence_sha256": [
+    "d8172276740386496d097633965bf0751b22a0ee8b61810fd5974348d2e333d3",
+    "03189fc26db314f818e4626db6acf0f10d1f95ee18fce18bae8528b00400f5a4",
+    "4dc45d05a1e90abd580f8c813176535455fb48976d6355c356a953e716114cfa"
+  ],
+  "limits": [
+    "Actual generation load/store/dispatch/completion chain; no invented literal tool argument in variable dispatch.",
+    "Mary local compositing is separate provenance and not a single generation.",
+    "Historical rejected v7 and prior iterations excluded from accepted lineage.",
+    "Public projection omits private native session paths and local commands.",
+    "No historical canonical gate/precreation approval invented; current exact owner sources accepted separately.",
+    "No optical3D gaze proof or release claim."
+  ],
+  "reviewed_at": "2026-10-11T20:23:48.734432+00:00"
+}

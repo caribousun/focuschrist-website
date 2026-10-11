@@ -391,7 +391,7 @@ def run(root, mode='release', scene=None, page_overrides=None):
     correction_record = json.loads((root / 'docs/artwork-correction-reviews.json').read_text(encoding='utf-8'))
     from artwork_owner_closure import validate as validate_owner_closure
     validate_owner_closure(root, correction_record['owner_requirement_closure'],
-        'c15823c000319ef44237fd001f5dec1aacf3239a940104145a2a15222f9aa030', pixel_hash)
+        '284dec4c1ba904cad2679368e4d716f607f5ba348708f75219db6e0a8fd297f1', pixel_hash)
     corrections, correction_hashes, correction_pixels = validate_reviewed_corrections(
         root, correction_record, approved_corrections_binding, added, covered, rejected, pixel_hash, inventory)
     require(not (correction_hashes & originals) and not (correction_pixels & original_pixels), 'Correction family duplicates another creation')
@@ -400,7 +400,7 @@ def run(root, mode='release', scene=None, page_overrides=None):
     original_pixels |= correction_pixels
     # Exact seasonal lineage is additive; it grants no generic preflight waiver.
     from artwork_seasonal_delivery import validate as validate_seasonal_delivery
-    approved_seasonal_binding = '3669227db900326af34da0d2a6b3a31a2a594ea843ad6f91be529b34e256b6e0'
+    approved_seasonal_binding = '19b8385d8bb003ac630139a283bfa7a6d82c4ed1479245df882555ceaa4e5e16'
     seasonal_record = json.loads((root / 'docs/artwork-seasonal-delivery-reviews.json').read_text(encoding='utf-8'))
     seasonal, seasonal_hashes, seasonal_pixels = validate_seasonal_delivery(
         root, seasonal_record, approved_seasonal_binding, added, covered, rejected, pixel_hash, page_dependencies)
@@ -438,8 +438,18 @@ def run(root, mode='release', scene=None, page_overrides=None):
     covered |= six_scene
     originals |= six_scene_hashes
     original_pixels |= six_scene_pixels
+    # Exact owner-approved Gabriel replacements; immutable originals remain covered.
+    from artwork_gabriel_owner_delivery import validate as validate_gabriel_owner_delivery
+    approved_gabriel_binding = '2ac5a5c997d5e87aec2fd98c0dc6df2a7e7aa344e69d34058351d3511b882a57'
+    gabriel_record = json.loads((root / 'docs/artwork-gabriel-owner-delivery-reviews.json').read_text(encoding='utf-8'))
+    gabriel, gabriel_hashes, gabriel_pixels = validate_gabriel_owner_delivery(
+        root, gabriel_record, approved_gabriel_binding, added, covered, rejected, pixel_hash, page_dependencies)
+    require(not (gabriel_hashes & originals) and not (gabriel_pixels & original_pixels), 'Gabriel family duplicates another creation')
+    covered |= gabriel
+    originals |= gabriel_hashes
+    original_pixels |= gabriel_pixels
     require(added == covered, 'New artwork missing exact review coverage: ' + ', '.join(sorted(added - covered)))
-    if creations or historical or corrections or seasonal or four_scene or answers_six or six_scene:
+    if creations or historical or corrections or seasonal or four_scene or answers_six or six_scene or gabriel:
         for name in inventory:
             path = root / name
             if path.suffix.lower() in RASTERS:
