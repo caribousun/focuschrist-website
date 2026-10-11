@@ -26,6 +26,8 @@ def tree(n):
 
 def errors(text,baseline,root=ROOT):
     try:
+        from six_scene_legacy_contracts import legacy_text
+        text = legacy_text('missionary.html', text, root)
         assert_current_opening('missionary.html', text)
         text=restore_reviewed_opening('missionary.html', text)
     except AssertionError as error:

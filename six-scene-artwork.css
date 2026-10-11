@@ -1,0 +1,32 @@
+#christ-under-countless-stars > figure > a,
+#christ-earthquake-community > figure > a,
+#christ-hospital-corridor > figure > a,
+#christ-caregiver-night > figure > a,
+#christ-last-bus > figure > a,
+#christ-responder-rest > figure > a {
+    display: block;
+}
+#christ-under-countless-stars > figure > a > img,
+#christ-earthquake-community > figure > a > img,
+#christ-hospital-corridor > figure > a > img,
+#christ-caregiver-night > figure > a > img,
+#christ-last-bus > figure > a > img,
+#christ-responder-rest > figure > a > img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+#christ-under-countless-stars > figure.fc-art-story,
+#christ-caregiver-night > figure.fc-art-story,
+#christ-last-bus > figure.fc-art-story {
+    background: transparent;
+}
+
+#christ-earthquake-community {
+    scroll-margin-top: 16px;
+}
+@media (min-width: 1021px) {
+    #christ-earthquake-community {
+        scroll-margin-top: 68px;
+    }
+}
