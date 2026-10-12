@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-12",
+  "scope": "Latest public four Short selection and new visitor copy; preserve previous full Watch substantive review",
+  "source_observation": {
+    "path": "LATEST-PUBLIC-SHORTS.json",
+    "sha256": "49849ab16a80a32f68f99d9c29119bea0e69a42a2e9a29598c6d5e1c01d9a6af"
+  },
+  "source": "https://www.youtube.com/@theRisen636/shorts",
+  "sort": "Latest",
+  "ordered_ids": [
+    "xzAenmOZ1Yk",
+    "vRzEDllHvlE",
+    "OSgN-cSJOPs",
+    "5g-I2nbz2d4"
+  ],
+  "candidate": [
+    {
+      "path": "watch-latest-release\\docs\\watch-shorts.json",
+      "sha256": "2bc92b515b4b33375913ea3ef2c606106470a30635e68dcd4076abc788bf97c8"
+    },
+    {
+      "path": "watch-latest-release\\watch.html",
+      "sha256": "d7a8ca47b2b1fb5cced6aac240beab62c8f43280a40be10b0ff1c2ab86b40538"
+    },
+    {
+      "path": "watch-latest-release\\site-search-index.json",
+      "sha256": "7243712e2ce07d71537b11eff4a1bf3b601f2cfae96364e725ab431952777551"
+    }
+  ],
+  "reviews": [
+    {
+      "reviewer": "Fermi",
+      "status": "CONCUR_SOURCE_AND_COPY",
+      "evidence": {
+        "path": "fermi\\WATCH-LATEST-SOURCE-REVIEW.md",
+        "sha256": "e0bfc94a59a610d8cc09e60f8d232d73e9a8671b1d31e35dc01abce7732c487e"
+      }
+    },
+    {
+      "reviewer": "Newton",
+      "status": "CONCUR_SOURCE_AND_COPY",
+      "evidence": {
+        "path": "newton\\WATCH-LATEST-REVIEW.md",
+        "sha256": "af8ff0fdc6f2dbdce74e12f9e0225434ccea3e5a388d21073d3ef8eb4c97f997"
+      }
+    },
+    {
+      "reviewer": "Thunder",
+      "status": "PASS_DATA_GENERATION_ENGINEERING",
+      "evidence": {
+        "path": "thunder\\SOUNDTRACK-WATCH-REVIEW.md",
+        "sha256": "a36bb1e0521b0e4555df33b544777b3c989921d6fd0a5599d2c5d96947d2560c"
+      }
+    }
+  ],
+  "limitations": [
+    "Root live-channel observation supports selection; reviewers did not independently publish videos.",
+    "Actual rendered desktop clipping finding remains open; no visual or release acceptance claimed.",
+    "Stubbed runtime checks do not prove provider playback."
+  ]
+}
