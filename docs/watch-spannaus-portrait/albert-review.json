@@ -1,0 +1,24 @@
+{
+  "reviewer": "Albert",
+  "decision": "CONCUR_ASSEMBLED_OWNER_APPROVED",
+  "spec_sha256": "1752cb5d8b47dce0c70d6ca076a69ddff88513fc3fcb46a3f9342c3a0cfd600f",
+  "historical_pupil_uncertainty_preserved": true,
+  "desktop_phone_inspected": true,
+  "direct_browser_interactions": true,
+  "observations": [
+    "Personally inspected actual desktop and390x844phone local correctedportrait, fullscenerytoedges,nobars,allfaces/title/name/portrait/wordmarkvisible.",
+    "Phone actualcorrectSpannausplayeradvanced0:02to0:28of0:52; close removesiframe and restores Play God Is at Your Side focus.",
+    "Nohorizontaloverflow:390viewport375document width.",
+    "Regeneratedpixels andprecisepupiluncertainty andcentralhairfringecropcaveatpreserved; owner exactversionapproved."
+  ],
+  "evidence": {
+    "desktop": {
+      "sha256": "edb565a622f289a0e96f245820a409e58fa4dcb34c1fa50747b5b99cd9cf6ecd",
+      "description": "Root actual local correctedportrait desktop screenshot"
+    },
+    "phone": {
+      "sha256": "a19ac580a8efcf231e644e1fffe3d65dfefd41d87aa5b3f4dbfa37a70f93608a",
+      "description": "Root actual local correctedportrait phone screenshot"
+    }
+  }
+}

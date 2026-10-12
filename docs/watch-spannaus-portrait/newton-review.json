@@ -1,0 +1,23 @@
+{
+  "reviewer": "Newton",
+  "decision": "CONCUR_ASSEMBLED_OWNER_APPROVED",
+  "spec_sha256": "1752cb5d8b47dce0c70d6ca076a69ddff88513fc3fcb46a3f9342c3a0cfd600f",
+  "reviewed_at": "2026-10-12T18:21:25.496771+00:00",
+  "historical_pupil_uncertainty_preserved": true,
+  "desktop_phone_inspected": true,
+  "observations": [
+    "Personally inspected native941x1672 portrait and actual desktop/phone assembled screenshots. Full scenic card removes rejected dark bars while preserving all faces/title/speaker portrait/name/wordmark in this full-height presentation.",
+    "Exact78f547 portrait approved by Wyatt after disclosed pupil-target uncertainty and upper hair-fringe center-square crop limitation. No exact original pixel preservation or unconditional gaze approval claimed.",
+    "Current asset/context and retained square delivery pins independently match. Search index and content audit remain byte-identical to HEAD. Prior square retained as historical artifact, not current Watch fit acceptance."
+  ],
+  "evidence": {
+    "desktop": {
+      "sha256": "24d7c297e280681da6d9b6b507ce5bbc186d495c8da6e38f45c8236c3b561a14",
+      "description": "Actual assembled desktop screenshot personally inspected; full scenic portrait without bars."
+    },
+    "phone": {
+      "sha256": "4ce59af3c09befefbb77ac8b6aac9c789a7b89614b1e21ef7f6b0c51ffd924ff",
+      "description": "Actual assembled phone screenshot personally inspected; full scenic portrait without bars."
+    }
+  }
+}

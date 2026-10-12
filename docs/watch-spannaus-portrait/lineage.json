@@ -1,0 +1,15 @@
+{
+  "tool": "built-in image_gen.imagegen",
+  "executor": "Albert",
+  "source_asset_sha256": "4c0e9bd8ab7d06d588c78c35e3862705313fd869d11baac501e6525d38a56154",
+  "prompt_sha256": "95df8c96de6d983c06540fdde76dece9f45afd0fa1ac2f33569428dade8498b6",
+  "private_lineage_sha256": "8524fb8aeab377161e51a0f9c29c47d472e060b5238af6199b35fbaa95bea474",
+  "output_sha256": "78f547b0f541f33e97cb8d8be33a7ea6dfdac8a10516c8712a8b08e19be1ab63",
+  "dimensions": [
+    941,
+    1672
+  ],
+  "transparent_background": false,
+  "scope": "Full-height scenic regeneration at owner request after rejection of bars; no original pixel identity claim. Portrait fits existing Watch card.",
+  "reviews": "Fermi, Newton and Albert inspected actual full-size portrait; no bars, complete title/name/wordmark and friendly expression. Precise reciprocal pupil intersection uncertain. Central square trims approximately15px uppermost hair fringe; face and text remain inside. Owner informed and explicitly approved exact image for YouTube and website."
+}

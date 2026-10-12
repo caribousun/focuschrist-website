@@ -5,22 +5,22 @@ import tempfile
 import unittest
 from pathlib import Path
 from artwork_creation_gate import pixel_hash, page_dependencies
-from artwork_watch_thumbnail_delivery import ASSET, SOURCE_SHA256, bound, canonical, validate
+from artwork_watch_thumbnail_delivery import ASSET, SOURCE_SHA256, PREVIOUS_ASSET, PREVIOUS_SHA256, bound, canonical, validate
 
 ROOT = Path(__file__).resolve().parents[1]
 
 class WatchThumbnailDelivery(unittest.TestCase):
     def setUp(self):
-        self.record = json.loads((ROOT / 'docs/watch-spannaus-thumbnail/delivery.json').read_text(encoding='utf8'))
+        self.record = json.loads((ROOT / 'docs/watch-spannaus-portrait/delivery.json').read_text(encoding='utf8'))
 
     def run_record(self, record, binding=None):
-        return validate(ROOT, record, binding or canonical(record['spec']), {ASSET}, set(), set(), pixel_hash, page_dependencies)
+        return validate(ROOT, record, binding or canonical(record['spec']), {ASSET, PREVIOUS_ASSET}, set(), set(), pixel_hash, page_dependencies)
 
     def test_exact_current_record_passes(self):
         assets, hashes, pixels = self.run_record(self.record)
-        self.assertEqual(assets, {ASSET})
-        self.assertEqual(hashes, {SOURCE_SHA256})
-        self.assertEqual(len(pixels), 1)
+        self.assertEqual(assets, {ASSET, PREVIOUS_ASSET})
+        self.assertEqual(hashes, {SOURCE_SHA256, PREVIOUS_SHA256})
+        self.assertEqual(len(pixels), 2)
 
     def test_changed_destination_and_asset_rejected(self):
         for field, value, message in [('video_id', 'xzAenmOZ1Yk', 'wrong destination'), ('route', 'index.html', 'wrong destination')]:
@@ -47,6 +47,18 @@ class WatchThumbnailDelivery(unittest.TestCase):
     def test_stale_specification_rejected(self):
         with self.assertRaisesRegex(ValueError, 'unreviewed specification'):
             self.run_record(self.record, '0' * 64)
+
+    def test_missing_retained_square_record_rejected(self):
+        changed = copy.deepcopy(self.record)
+        changed['spec']['retained_square_delivery']['path'] = 'docs/watch-spannaus-portrait/missing.json'
+        with self.assertRaisesRegex(ValueError, 'missing or escaped evidence'):
+            self.run_record(changed)
+
+    def test_historical_context_cannot_be_claimed_current(self):
+        changed = copy.deepcopy(self.record)
+        changed['spec']['historical_square_scope'] = 'Current artwork acceptance'
+        with self.assertRaisesRegex(ValueError, 'missing historical scope'):
+            self.run_record(changed)
 
     def test_changed_evidence_bytes_rejected(self):
         with tempfile.TemporaryDirectory() as folder:

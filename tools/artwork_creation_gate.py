@@ -459,9 +459,9 @@ def run(root, mode='release', scene=None, page_overrides=None):
     original_pixels |= three_pixels
     # One existing social cover explicitly accepted by Wyatt, with candid review limits.
     from artwork_watch_thumbnail_delivery import validate as validate_watch_thumbnail
-    watch_record = json.loads((root / 'docs/watch-spannaus-thumbnail/delivery.json').read_text(encoding='utf-8'))
+    watch_record = json.loads((root / 'docs/watch-spannaus-portrait/delivery.json').read_text(encoding='utf-8'))
     watch, watch_hashes, watch_pixels = validate_watch_thumbnail(
-        root, watch_record, 'ea7f86749d8ff6fd06e0fdc6be0f8154f948d52abb48cf51fac33cdf96b148ec', added, covered, rejected, pixel_hash, page_dependencies)
+        root, watch_record, '1752cb5d8b47dce0c70d6ca076a69ddff88513fc3fcb46a3f9342c3a0cfd600f', added, covered, rejected, pixel_hash, page_dependencies)
     require(not (watch_hashes & originals) and not (watch_pixels & original_pixels), 'Watch cover duplicates another creation')
     covered |= watch
     originals |= watch_hashes

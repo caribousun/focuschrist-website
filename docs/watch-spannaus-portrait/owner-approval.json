@@ -1,0 +1,18 @@
+{
+  "owner": "Wyatt",
+  "scope": "Replace exact God Is at Your Side YouTube thumbnail and website thumbnail with presented full-height version",
+  "sha256": "78f547b0f541f33e97cb8d8be33a7ea6dfdac8a10516c8712a8b08e19be1ab63",
+  "executor": "Albert using built-in image_gen",
+  "finished_reviewers": [
+    "Fermi",
+    "Newton",
+    "Albert"
+  ],
+  "limitations": "Regenerated pixels; precise reciprocal pupil intersection uncertain. Central square trims about 15px highest hair fringe but retains faces and all text. Owner informed before approval.",
+  "prior_bar_fit": "Owner rejected dark bars after seeing live Watch. New approval supersedes bar-padded presentation for these placements.",
+  "status": "OWNER_APPROVED_EXACT_PORTRAIT",
+  "exact_messages": [
+    "Approve this full-height version"
+  ],
+  "review_limits": "Fermi and Newton retained uncertainty about precise reciprocal pupil targets. Wyatt explicitly accepted this exact image; their historical findings are not rewritten as unconditional gaze approval."
+}
