@@ -11044,24 +11044,24 @@
       "scope": "Only three Watch search records changed; exact artwork consumer pairs and all other search records unchanged.",
       "prior_record": {
         "path": "docs/watch-search-context-20261012/prior-artwork-correction-reviews.json",
-        "sha256": "442ba7ce1147d05f22489692e806b9b3c097a43e9fd2050a765a74b19bee6c3c"
+        "sha256": "fcbd3de02a4b3bb1f1c35798eca7ef63b6c6a585df2f468cdfebbc31a350ae79"
       },
       "evidence": {
         "path": "docs/watch-search-context-20261012/search-delta.json",
-        "sha256": "75d827e55056b8709df233ae458b23217faf885adf5c4a1afb01145245be2dd9"
+        "sha256": "c954b24bdb50effa29b1a58f54f4369ef9a347a20bc126639347a5436e855631"
       },
       "reviews": [
         {
           "path": "docs/watch-search-context-20261012/closure-albert-current-review.json",
-          "sha256": "79495e62eabd076a3593ea75dfe4de3f377fe54da9920649f7db98a3e9ee1240"
+          "sha256": "05e71d72fb14054ef60885289cf31d941cc22eb60bb7059179e9abeb33c92c81"
         },
         {
           "path": "docs/watch-search-context-20261012/fermi-closure-context-review.json",
-          "sha256": "f5cff0201edee8a0a60a66aa96982086217a65961f57496fe068756d577f9fe9"
+          "sha256": "390418ca27e00aaead1baae3174f031958ee9bbdcb6679ba649387efa818de9c"
         },
         {
           "path": "docs/watch-search-context-20261012/closure-newton-current-review.json",
-          "sha256": "735fa6ca0d16d03b327bab63d64723f405395d33855a0a4bc839d1541d5d1c89"
+          "sha256": "4e87f25c03cc10fb83834249921b690762e0df3426baa92a125fe33f7e088ad7"
         }
       ],
       "no_new_owner_acceptance": true

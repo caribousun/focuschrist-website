@@ -308,15 +308,15 @@
   "reviews": [
     {
       "path": "docs/watch-search-context-20261012/three-albert-current-review.json",
-      "sha256": "cf3ccd788ec54fd9b39525f6abf7eeed52df26f0bef452fbc4b3a141b3549352"
+      "sha256": "ff20dc2f09fdc50dc6ba7554f76b77f95ae4b9a1054a6c43ab310e0549b6cf98"
     },
     {
       "path": "docs/watch-search-context-20261012/three-fermi-current-review.json",
-      "sha256": "f36d14ce1815ee6b92a7ba9c6247cbd7cdc5e5527838b1a8bd0e19931aa7991e"
+      "sha256": "32b147add2487be2156bf1ae6764dd9419efca41ec11f23abd365d32b980b952"
     },
     {
       "path": "docs/watch-search-context-20261012/three-newton-current-review.json",
-      "sha256": "7604db8c23a4567518c8f1c34b9b0e75f3966a7962f67df2990bfc057ffbe228"
+      "sha256": "f402243f504759290661ac53c56480d52c05c863e7f214229e7f86ce54a836c4"
     }
   ],
   "current_review_projection": {
@@ -357,11 +357,11 @@
     "scope": "Only three Watch search records changed; unchanged artwork and historical attributed reviews explicitly retained.",
     "prior_record": {
       "path": "docs/watch-search-context-20261012/prior-artwork-three-reviewed-delivery-reviews.json",
-      "sha256": "01451c4bf05bc7ea16b9a901de138959aa1591257f825c16a09a25e7a2545ed4"
+      "sha256": "9122a46be5c397b8e3f989fce834dc3a057887d85aacdd6ffbd1b7bc687ec658"
     },
     "evidence": {
       "path": "docs/watch-search-context-20261012/search-delta.json",
-      "sha256": "75d827e55056b8709df233ae458b23217faf885adf5c4a1afb01145245be2dd9"
+      "sha256": "c954b24bdb50effa29b1a58f54f4369ef9a347a20bc126639347a5436e855631"
     },
     "no_historical_approval_transfer": true,
     "holds": "All existing holds including Shepherd outer-host glow retained. No new owner acceptance or artwork appearance judgment."
