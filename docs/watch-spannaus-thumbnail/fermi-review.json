@@ -1,0 +1,22 @@
+{
+  "reviewer": "Fermi",
+  "decision": "CONCUR_ASSEMBLED_OWNER_APPROVED",
+  "spec_sha256": "ea7f86749d8ff6fd06e0fdc6be0f8154f948d52abb48cf51fac33cdf96b148ec",
+  "historical_pupil_uncertainty_preserved": true,
+  "desktop_phone_inspected": true,
+  "observations": [
+    "Actual desktop screenshot shows four cards in requested order, with approved square centered and fully contained in first portrait card. Plain margins preserve all scene/title/speaker/wordmark pixels.",
+    "Actual phone screenshot shows complete square without clipped title, face, name or wordmark; card copy agrees with the source invitation to keep baptismal covenants.",
+    "Fullsize historical pupil-direction uncertainty remains; direct Wyatt acceptance binds exact approved image, not a newly claimed unconditional gaze pass."
+  ],
+  "evidence": {
+    "desktop": {
+      "sha256": "a5776da38ab7f0c7a5869798ec3281a0c1d617f4c769f943bc1ce934554786d6",
+      "description": "Personally inspected actual assembled desktop screenshot; scoped visual review only."
+    },
+    "phone": {
+      "sha256": "933492eddf7511851edf78cd6bed53d379cc993949dac7cb844014c47c44125f",
+      "description": "Personally inspected actual assembled phone screenshot; scoped visual review only."
+    }
+  }
+}

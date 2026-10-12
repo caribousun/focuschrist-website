@@ -2,8 +2,20 @@
   "channel": "https://www.youtube.com/@theRisen636/shorts",
   "channel_id": "UC4Fr98iGGtL60UpfXYXR1pQ",
   "verified_at": "2026-10-12",
-  "verification": "Actual public channel Shorts tab with Latest selected; first four cards, order and native portrait thumbnail URLs inspected by Albert in browser on 12 October 2026.",
+  "verification": "Lightning independently inspected the public channel Shorts tab with Latest selected on 12 October 2026: Spannaus, Renlund, Kearon, Wilcox. The newest card uses Wyatt’s exact approved square thumbnail; older native YouTube previews remain unchanged.",
   "shorts": [
+    {
+      "id": "zIntX6aoq1g",
+      "title": "God Is at Your Side",
+      "speaker": "Sister Andrea Muñoz Spannaus",
+      "description": "God is at your side. Hear Sister Spannaus’s invitation to stay faithful to your baptismal covenant.",
+      "thumbnail": "assets/shorts/god-is-at-your-side-approved-20261012.png",
+      "thumbnail_sha256": "4c0e9bd8ab7d06d588c78c35e3862705313fd869d11baac501e6525d38a56154",
+      "thumbnail_dimensions": [
+        1254,
+        1254
+      ]
+    },
     {
       "id": "xzAenmOZ1Yk",
       "title": "God’s Promises Include You",
@@ -24,13 +36,6 @@
       "speaker": "Bradley R. Wilcox",
       "description": "A word of encouragement to keep going with faith in Jesus Christ.",
       "thumbnail": "https://i.ytimg.com/vi/OSgN-cSJOPs/sardefault.jpg?sqp=-oaymwEoCJUDENAFSFqQAgHyq4qpAxcIARUAAIhC2AEB4gEKCBgQAhgGOAFAAQ==&rs=AOn4CLBdi5dmvy5mcpxFGlwweBs8Dx0MHw"
-    },
-    {
-      "id": "5g-I2nbz2d4",
-      "title": "Joseph Smith: Faithful to the End",
-      "speaker": "Elder Jeffrey R. Holland",
-      "description": "Hear Elder Holland's witness of Joseph Smith's faithfulness.",
-      "thumbnail": "https://i.ytimg.com/vi/5g-I2nbz2d4/sardefault.jpg?sqp=-oaymwEoCJUDENAFSFqQAgHyq4qpAxcIARUAAIhC2AEB4gEKCBgQAhgGOAFAAQ==&rs=AOn4CLAWYPMAo_4QX3BrLXr6weyElh1AQA"
     }
   ]
 }

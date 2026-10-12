@@ -239,7 +239,9 @@ class EvidenceTests(unittest.TestCase):
             ('artwork_answers_six_delivery', 'artwork-answers-six-delivery-reviews.json'),
             ('artwork_gabriel_owner_delivery', 'artwork-gabriel-owner-delivery-reviews.json'),
             ('artwork_three_reviewed_delivery', 'artwork-three-reviewed-delivery-reviews.json'),
+            ('artwork_watch_thumbnail_delivery', 'watch-spannaus-thumbnail/delivery.json'),
         ]:
+            (docs / filename).parent.mkdir(parents=True, exist_ok=True)
             (docs / filename).write_text(json.dumps({'fixture': 'empty adapter coverage', 'owner_requirement_closure': {'fixture': 'synthetic owner closure'}}))
             adapter = patch(module + '.validate', return_value=(set(), set(), set()))
             self.adapter_mocks[module] = adapter.start()

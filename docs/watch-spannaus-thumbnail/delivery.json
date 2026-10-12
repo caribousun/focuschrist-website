@@ -1,0 +1,99 @@
+{
+  "spec": {
+    "route": "watch.html",
+    "video_id": "zIntX6aoq1g",
+    "asset": {
+      "path": "assets/shorts/god-is-at-your-side-approved-20261012.png",
+      "sha256": "4c0e9bd8ab7d06d588c78c35e3862705313fd869d11baac501e6525d38a56154",
+      "pixel_sha256": "0ba3ca5f414730d6d4a768c59cfe13bfee2197d1f6a08defee15aad86473fbf8"
+    },
+    "owner_approval": {
+      "path": "docs/watch-spannaus-thumbnail/owner-approval.json",
+      "sha256": "b24242a1410fe9d9601bf8b10e2b01945b3c1ff7c07553805aa593572effb09d"
+    },
+    "lineage": {
+      "path": "docs/watch-spannaus-thumbnail/lineage.json",
+      "sha256": "e4b4c5b1619b87d49cbc9110cea19fbc6f5d676b8630d62bfab17dca78bc2ba0"
+    },
+    "context": [
+      {
+        "path": "artwork-actions.css",
+        "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+      },
+      {
+        "path": "artwork-details.css",
+        "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+      },
+      {
+        "path": "complete-card-rows.css",
+        "sha256": "7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"
+      },
+      {
+        "path": "connected-study.css",
+        "sha256": "6b61c50c1d8e005074beb2db8fa800377377e6a3c9b955678dd836538fcb48cd"
+      },
+      {
+        "path": "docs/watch-shorts.json",
+        "sha256": "1e6d50cb1b0b2111f32ec223c6d0e6239ad0fe59b790c59c9248f7e58985cc97"
+      },
+      {
+        "path": "full-image-viewer.css",
+        "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+      },
+      {
+        "path": "hero-details.css",
+        "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+      },
+      {
+        "path": "resource-cards.css",
+        "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+      },
+      {
+        "path": "site-header.css",
+        "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+      },
+      {
+        "path": "site-search.css",
+        "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+      },
+      {
+        "path": "site-system.css",
+        "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+      },
+      {
+        "path": "watch-experience.css",
+        "sha256": "ec9e99bdb5c0e39daa0b59c65866b1cbd09ed6b451ffafc15f76b60778846f3e"
+      },
+      {
+        "path": "watch-library.css",
+        "sha256": "e099a991410a860c8beba5b091e35814d3f51254549b1113767eb57d03fd5c44"
+      },
+      {
+        "path": "watch-shorts.css",
+        "sha256": "c4cd8a75214c0feb49ad9d97d50a6eff3407d46efc80540629cc302f1fec3f15"
+      },
+      {
+        "path": "watch-shorts.js",
+        "sha256": "73a044dfa59c3bc177d6c49e8d071a78bf6dc6965e908638e70acf0c8e92ec07"
+      },
+      {
+        "path": "watch.html",
+        "sha256": "239ddb03e0350d84d39aae5a2b57fd316eed7a931221c5091e9b18ee667ee7c4"
+      }
+    ]
+  },
+  "reviews": [
+    {
+      "path": "docs/watch-spannaus-thumbnail/albert-review.json",
+      "sha256": "35d230a8454eaaefe7ca087736fce896cdb630f2ff5103746471801c6b5c3293"
+    },
+    {
+      "path": "docs/watch-spannaus-thumbnail/fermi-review.json",
+      "sha256": "7baade5854eb9fbf56ab3ccd6d4aedc9fb5cc89a2f2ed6537580a555bd67f131"
+    },
+    {
+      "path": "docs/watch-spannaus-thumbnail/newton-review.json",
+      "sha256": "fa46b9f706542ae65db2da574c51abc7c7a51f0b60b74c544f05a8783dd88f79"
+    }
+  ]
+}

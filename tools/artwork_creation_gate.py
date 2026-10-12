@@ -391,7 +391,7 @@ def run(root, mode='release', scene=None, page_overrides=None):
     correction_record = json.loads((root / 'docs/artwork-correction-reviews.json').read_text(encoding='utf-8'))
     from artwork_owner_closure import validate as validate_owner_closure
     validate_owner_closure(root, correction_record['owner_requirement_closure'],
-        '5a4a6a8c9b69161083d8bb662de022490f12922ec38dc9b97283dd9d9bb6c839', pixel_hash)
+        '3cbd563d548c141ec79fa29109047afcad7478da69e7dfef9c5134355c222960', pixel_hash)
     corrections, correction_hashes, correction_pixels = validate_reviewed_corrections(
         root, correction_record, approved_corrections_binding, added, covered, rejected, pixel_hash, inventory)
     require(not (correction_hashes & originals) and not (correction_pixels & original_pixels), 'Correction family duplicates another creation')
@@ -440,7 +440,7 @@ def run(root, mode='release', scene=None, page_overrides=None):
     original_pixels |= six_scene_pixels
     # Exact owner-approved Gabriel replacements; immutable originals remain covered.
     from artwork_gabriel_owner_delivery import validate as validate_gabriel_owner_delivery
-    approved_gabriel_binding = '9101c7fe6bc44f90a4f755879247441b9bd0535a4d5db4e9553e252a57311250'
+    approved_gabriel_binding = '6b569822dbbef41469fd11746e32948e18fed0278620f31393c3e959eac3f85d'
     gabriel_record = json.loads((root / 'docs/artwork-gabriel-owner-delivery-reviews.json').read_text(encoding='utf-8'))
     gabriel, gabriel_hashes, gabriel_pixels = validate_gabriel_owner_delivery(
         root, gabriel_record, approved_gabriel_binding, added, covered, rejected, pixel_hash, page_dependencies)
@@ -452,11 +452,20 @@ def run(root, mode='release', scene=None, page_overrides=None):
     from artwork_three_reviewed_delivery import validate as validate_three_reviewed_delivery
     three_record = json.loads((root / 'docs/artwork-three-reviewed-delivery-reviews.json').read_text(encoding='utf-8'))
     three, three_hashes, three_pixels = validate_three_reviewed_delivery(
-        root, three_record, '82f3b78a056ac0773ecde322dba3efbf267b4b83e112b972660f8bc7d4157af3', added, covered, rejected, pixel_hash, page_dependencies)
+        root, three_record, 'ee229d7a58e14cf8b67628df2ba55feae9082575f1dfbb05a2897b20354b6613', added, covered, rejected, pixel_hash, page_dependencies)
     require(not (three_hashes & originals) and not (three_pixels & original_pixels), 'Three-scene family duplicates another creation')
     covered |= three
     originals |= three_hashes
     original_pixels |= three_pixels
+    # One existing social cover explicitly accepted by Wyatt, with candid review limits.
+    from artwork_watch_thumbnail_delivery import validate as validate_watch_thumbnail
+    watch_record = json.loads((root / 'docs/watch-spannaus-thumbnail/delivery.json').read_text(encoding='utf-8'))
+    watch, watch_hashes, watch_pixels = validate_watch_thumbnail(
+        root, watch_record, 'ea7f86749d8ff6fd06e0fdc6be0f8154f948d52abb48cf51fac33cdf96b148ec', added, covered, rejected, pixel_hash, page_dependencies)
+    require(not (watch_hashes & originals) and not (watch_pixels & original_pixels), 'Watch cover duplicates another creation')
+    covered |= watch
+    originals |= watch_hashes
+    original_pixels |= watch_pixels
     require(added == covered, 'New artwork missing exact review coverage: ' + ', '.join(sorted(added - covered)))
     if creations or historical or corrections or seasonal or four_scene or answers_six or six_scene or gabriel or three:
         for name in inventory:

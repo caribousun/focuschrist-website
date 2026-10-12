@@ -1,0 +1,288 @@
+{
+  "schema": 1,
+  "prepared_at": "2026-10-12T15:45:45.712798+00:00",
+  "spec": {
+    "classification": "owner-approved-scripture-illustrations",
+    "registration_class": "EXACT_OWNER_APPROVED_REPLACEMENTS",
+    "historical_preparation_claim": false,
+    "route": "birth-of-christ.html",
+    "scenes": [
+      {
+        "key": "07-zacharias",
+        "source_sha256": "5315c94322adca83c8d3c75dad74f647f2fe395c9e0c751541aeec11461c73b4",
+        "assets": [
+          {
+            "path": "assets/page-art/birth-of-christ/masters/07-zacharias-owner-20261011.png",
+            "source_sha256": "5315c94322adca83c8d3c75dad74f647f2fe395c9e0c751541aeec11461c73b4",
+            "sha256": "5315c94322adca83c8d3c75dad74f647f2fe395c9e0c751541aeec11461c73b4",
+            "kind": "original",
+            "width": 1536,
+            "height": 1024,
+            "pixel_sha256": "2be25f629a217fcc716640b70784014934104822292aedc9ab848a0c5141dfee"
+          },
+          {
+            "path": "assets/page-art/birth-of-christ/07-zacharias-owner-20261011-full.webp",
+            "source_sha256": "5315c94322adca83c8d3c75dad74f647f2fe395c9e0c751541aeec11461c73b4",
+            "sha256": "b6a1a46cd9df66799eefbb7ad704168e97325558dfb645d720d582527a950564",
+            "kind": "full",
+            "width": 1536,
+            "height": 1024,
+            "decoded_rgb_sha256": "4f001cc8dbcea8e84f39e318b4e31f7334954de8a81fbb6508ecb95aba7d122a",
+            "pixel_sha256": "2be25f629a217fcc716640b70784014934104822292aedc9ab848a0c5141dfee"
+          },
+          {
+            "path": "assets/page-art/birth-of-christ/07-zacharias-owner-20261011-800.webp",
+            "source_sha256": "5315c94322adca83c8d3c75dad74f647f2fe395c9e0c751541aeec11461c73b4",
+            "sha256": "22a2c7b1a96dab3d5f0cb346f4c0d87fa5fcf790686ff0e5a53d5311ff5fa5c8",
+            "kind": "800",
+            "width": 800,
+            "height": 533,
+            "decoded_rgb_sha256": "dde8d968c7c6402c6eee570b354665af76d2287ec2459f3f57db0d4e3454713e",
+            "pixel_sha256": "b084f245310dd89df5e8ad0e8454120da969abce6d8c82bc15d9e23dc2fd767f"
+          }
+        ],
+        "owner_approval": {
+          "path": "docs/gabriel-owner-20261011/zacharias-owner-approval.json",
+          "sha256": "a81131524180c85cf16375051501f474a5eb48e3f7f0fa438e760e07f58ee614"
+        }
+      },
+      {
+        "key": "08-annunciation",
+        "source_sha256": "d0b7ccfc5fc16b6697e0c54e488d3869eab003e8f10fe326511a0fbe7394fa4a",
+        "assets": [
+          {
+            "path": "assets/page-art/birth-of-christ/masters/08-annunciation-owner-20261011.png",
+            "source_sha256": "d0b7ccfc5fc16b6697e0c54e488d3869eab003e8f10fe326511a0fbe7394fa4a",
+            "sha256": "d0b7ccfc5fc16b6697e0c54e488d3869eab003e8f10fe326511a0fbe7394fa4a",
+            "kind": "original",
+            "width": 1536,
+            "height": 1024,
+            "pixel_sha256": "642e7d4889cc3db5e5f166b851fcc6ecd19596688d17495c9486eb0ae528c1e9"
+          },
+          {
+            "path": "assets/page-art/birth-of-christ/08-annunciation-owner-20261011-full.webp",
+            "source_sha256": "d0b7ccfc5fc16b6697e0c54e488d3869eab003e8f10fe326511a0fbe7394fa4a",
+            "sha256": "2c5c097e3f6d1f6ee16f0ddaefed596caf3ecac56f65678dce61ca9a2a446670",
+            "kind": "full",
+            "width": 1536,
+            "height": 1024,
+            "decoded_rgb_sha256": "61e072a9974370d2e6f47daf1dcaeb836a03178175186753014e09b2f50223af",
+            "pixel_sha256": "642e7d4889cc3db5e5f166b851fcc6ecd19596688d17495c9486eb0ae528c1e9"
+          },
+          {
+            "path": "assets/page-art/birth-of-christ/08-annunciation-owner-20261011-800.webp",
+            "source_sha256": "d0b7ccfc5fc16b6697e0c54e488d3869eab003e8f10fe326511a0fbe7394fa4a",
+            "sha256": "e897ca2e97d7d547033c0b160d27ca8613c7b2c57660729a6c22d966806bc0ef",
+            "kind": "800",
+            "width": 800,
+            "height": 533,
+            "decoded_rgb_sha256": "8e277c1d68ef4f7306bdc3a9916fc7f45545f71798039f65de3d891b6633291f",
+            "pixel_sha256": "5f8a6174183e6aac727b575f6693e3c4516391948934c8548e60f73bb1270f8d"
+          }
+        ],
+        "owner_approval": {
+          "path": "docs/gabriel-owner-20261011/mary-owner-approval.json",
+          "sha256": "61249570ff00e48a038cc64bc8a47ef3c32a3acf141cf436edd87c4c522e7cfd"
+        }
+      }
+    ],
+    "lineage": {
+      "path": "docs/gabriel-owner-20261011/lineage.json",
+      "sha256": "530a1dc1bbe4fe11f609432b31f9c5aa7f3768829b9da5008c1e5fb11094efcd"
+    },
+    "context": [
+      {
+        "path": "answer-navigation.css",
+        "sha256": "8112ad6d52ada3bd0b373633fc2e60f5ada7d47fb2204c28e1a09ae01be66a57"
+      },
+      {
+        "path": "answer-styles.css",
+        "sha256": "82dc51b82d56a129be803420cae47630f053f7af1259c659113fbd7fcd76d6ad"
+      },
+      {
+        "path": "art-gallery.js",
+        "sha256": "8fe8d7c537755f80dec6839f64f17339049e2a4d26151ba5959cd5cde0af3174"
+      },
+      {
+        "path": "art-gallery.json",
+        "sha256": "5fb9f428a7e4bbf63cd9b5721ca7e576b14bbfa8334c073343f84e49efb8fcb1"
+      },
+      {
+        "path": "artwork-actions.css",
+        "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+      },
+      {
+        "path": "artwork-details.css",
+        "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+      },
+      {
+        "path": "birth-of-christ.html",
+        "sha256": "370dace852ba8ff8a2830b790ba4f5693d4982701a8bbdfe08b321adc2b8aeaf"
+      },
+      {
+        "path": "complete-card-rows.css",
+        "sha256": "7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"
+      },
+      {
+        "path": "connected-study.css",
+        "sha256": "6b61c50c1d8e005074beb2db8fa800377377e6a3c9b955678dd836538fcb48cd"
+      },
+      {
+        "path": "desktop-hero-repairs.css",
+        "sha256": "36270651fecfb57cb371580f1fd4df3c2910942665e356245ddf451e5c4d9ecb"
+      },
+      {
+        "path": "full-image-viewer.css",
+        "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+      },
+      {
+        "path": "header-scroll.js",
+        "sha256": "0b7f3695f74928283f1d2f8d1932528e5a5f674d3819ae02284d15ae87a358f3"
+      },
+      {
+        "path": "hero-details.css",
+        "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+      },
+      {
+        "path": "jesus-journey.css",
+        "sha256": "6e28d3399deedd09b74341d232ef5e57fc6800f513d644b073192a8724fbcbf7"
+      },
+      {
+        "path": "resource-cards.css",
+        "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+      },
+      {
+        "path": "site-common.js",
+        "sha256": "fc0ae667fd977c6cd66ef2e649ef9da2cbcf5eee4201094dd90ed48b551e6488"
+      },
+      {
+        "path": "site-header.css",
+        "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+      },
+      {
+        "path": "site-search-index.json",
+        "sha256": "7243712e2ce07d71537b11eff4a1bf3b601f2cfae96364e725ab431952777551"
+      },
+      {
+        "path": "site-search.css",
+        "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+      },
+      {
+        "path": "site-system.css",
+        "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+      },
+      {
+        "path": "timeline-images.js",
+        "sha256": "2b0601379d8f5416f4fc8353820c0e1e3c54cc80661cab5dd2f29b1b2fa55e2f"
+      },
+      {
+        "path": "timelines/latter-day-saint-church-history-timeline.html",
+        "sha256": "e5ed96eb0d69768241a55ccadc693c5066bc09953ced618ecc3c7e5113f3b72e"
+      },
+      {
+        "path": "timelines/life-of-christ-journey-map.html",
+        "sha256": "7a003eb4ed27d65f08e3983650473aadb5d09800c3991d60c6d5cd8dfc40910f"
+      },
+      {
+        "path": "timelines/willie-and-martin-handcart-map.html",
+        "sha256": "fe8e1610154b47e2d92c85c5fe7627e4a8655db252d105efed1bffbcd94b7269"
+      },
+      {
+        "path": "tools/build_art_gallery.py",
+        "sha256": "f21b8a39171e7f9a998c34f66896bdcba922146f80825bae3f7d60372b3d804c"
+      },
+      {
+        "path": "topic-art.css",
+        "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"
+      },
+      {
+        "path": "topic-artwork-details.css",
+        "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+      },
+      {
+        "path": "topic-artwork-details.js",
+        "sha256": "face1939c8ba140a6a65348c0199f3eadd23c122e49a92d6079fd3320a182261"
+      },
+      {
+        "path": "topic-study-pages.css",
+        "sha256": "99e1df87cfdcd11751bb16e0ea293a5048cd6f5f73245a791d20492226299236"
+      },
+      {
+        "path": "unified-opening.js",
+        "sha256": "3745ded2cb4e92e7b876bb8c8cd217d808da0a933575cf30c3712dc9f35d6dbe"
+      }
+    ]
+  },
+  "reviews": [
+    {
+      "path": "docs/watch-search-context-20261012/gabriel-albert-current-review.json",
+      "sha256": "52dd88133fc826d3bf44c1246f484777c661dbfdee3933233395dc4432f192ef"
+    },
+    {
+      "path": "docs/watch-search-context-20261012/gabriel-fermi-current-review.json",
+      "sha256": "6cd2c61f376d82fa977b79254ad5cb8bd32484d21558c0be2862809de5f8d96a"
+    },
+    {
+      "path": "docs/watch-search-context-20261012/gabriel-newton-current-review.json",
+      "sha256": "1cc57facf27f7f99e497a8c1db7dd896f87eaf1e1d81ce77650e4bad2669f262"
+    }
+  ],
+  "prior_context_record": {
+    "path": "docs/three-reviewed-20261011/prior-artwork-gabriel-owner-delivery-reviews.json",
+    "sha256": "a60b7c8ab47c4a7f289bf6579856e80efa1f11aedc73ebff4d3bf7e268fe0e06"
+  },
+  "context_change_scope": "Current exact three source substitutions and scoped Home heading return; historical source, pixel and owner judgments preserved in the complete prior record. No new individual owner acceptance.",
+  "current_review_projection": {
+    "executor": "Lightning",
+    "scope": "Public copies omit only private actor_session metadata. Original author, decision, evidence, limitations and all review fields otherwise unchanged; complete originals retained privately.",
+    "receipts": [
+      {
+        "public_path": "docs/three-reviewed-20261011/gabriel-fermi-review.json",
+        "original_receipt_sha256": "aa93f72b2be5cadb1e0f06f4dc50f6b549d71729601892d0349c08bdde00ca2a",
+        "omitted_fields": [
+          "actor_session"
+        ]
+      },
+      {
+        "public_path": "docs/three-reviewed-20261011/gabriel-albert-review.json",
+        "original_receipt_sha256": "5c23aa951fff5028cfd481113e8c789cfbcbb934c2cb8e3d81273bffebb83845",
+        "omitted_fields": [
+          "actor_session"
+        ]
+      }
+    ]
+  },
+  "current_author_receipt_correction": {
+    "reviewer": "Albert",
+    "prior_public_receipt_sha256": "d755d8249cf296974e40d3774072958323174deaf062bcfcd8386f41cae76840",
+    "current_original_receipt_sha256": "5c23aa951fff5028cfd481113e8c789cfbcbb934c2cb8e3d81273bffebb83845",
+    "scope": "Original author supplies mandatory source-and-derivative/current-context verification fields with bounded historical reuse; no image, vote or owner acceptance change."
+  },
+  "art39_search_context_rebinding": {
+    "status": "REVIEWED_CURRENT_CONTEXT_ONLY",
+    "prior_record": {
+      "path": "docs/art39-search-context-20261012/prior-artwork-gabriel-owner-delivery-reviews.json",
+      "sha256": "d5da0db6a12fc7d762a61a1672a7c571c2d4cb02004b2c6116caa3aa2be87d8e"
+    },
+    "evidence": {
+      "path": "docs/art39-search-context-20261012/search-delta.json",
+      "sha256": "8469bb6b3e36993e059317931a06e3f2362bb488bfc366700fec7f80dfd446bd"
+    },
+    "scope": "Only main Art introduction search text changes; all artwork/search destinations and asset references unchanged.",
+    "holds": "Shepherd outer-host glow owner concern remains unresolved; historical technical registration does not approve its current appearance. All other holds retained.",
+    "no_historical_approval_transfer": true
+  },
+  "watch_search_context_rebinding": {
+    "scope": "Only three Watch search records changed; unchanged artwork and historical attributed reviews explicitly retained.",
+    "prior_record": {
+      "path": "docs/watch-search-context-20261012/prior-artwork-gabriel-owner-delivery-reviews.json",
+      "sha256": "03835765414e59e7636655f78d9f5dbaae14a1114f5b92538eca585c77c54b59"
+    },
+    "evidence": {
+      "path": "docs/watch-search-context-20261012/search-delta.json",
+      "sha256": "c954b24bdb50effa29b1a58f54f4369ef9a347a20bc126639347a5436e855631"
+    },
+    "no_historical_approval_transfer": true,
+    "holds": "All existing holds including Shepherd outer-host glow retained. No new owner acceptance or artwork appearance judgment."
+  }
+}

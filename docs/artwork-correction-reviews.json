@@ -2873,7 +2873,7 @@
         },
         {
           "path": "site-search-index.json",
-          "sha256": "7243712e2ce07d71537b11eff4a1bf3b601f2cfae96364e725ab431952777551"
+          "sha256": "c5f48fb9492a773bc3c9dd5d2b6c339d674446fbb5b13a802f6f7f3149dcc06c"
         },
         {
           "path": "timeline-images.js",
@@ -11043,25 +11043,25 @@
     "watch_search_context_rebinding": {
       "scope": "Only three Watch search records changed; exact artwork consumer pairs and all other search records unchanged.",
       "prior_record": {
-        "path": "docs/watch-search-context-20261012/prior-artwork-correction-reviews.json",
-        "sha256": "fcbd3de02a4b3bb1f1c35798eca7ef63b6c6a585df2f468cdfebbc31a350ae79"
+        "path": "docs/watch-spannaus-context-20261012/prior-artwork-correction-reviews.json",
+        "sha256": "fa04cce40c6860544b5ff65ca0d51ab983842299e4bac6f984a91b31bc9f2bce"
       },
       "evidence": {
-        "path": "docs/watch-search-context-20261012/search-delta.json",
-        "sha256": "c954b24bdb50effa29b1a58f54f4369ef9a347a20bc126639347a5436e855631"
+        "path": "docs/watch-spannaus-context-20261012/search-delta.json",
+        "sha256": "8522e0e12ea986d01126f0bfe15530f59ef200bf717a94b5a4ddc6baf0ccb607"
       },
       "reviews": [
         {
-          "path": "docs/watch-search-context-20261012/closure-albert-current-review.json",
-          "sha256": "05e71d72fb14054ef60885289cf31d941cc22eb60bb7059179e9abeb33c92c81"
+          "path": "docs/watch-spannaus-context-20261012/closure-albert-current-review.json",
+          "sha256": "5b67cf2a936bab2a662fe7d6d8f81ca01b9ad8f2ee812a32db7cea6c50f4616d"
         },
         {
-          "path": "docs/watch-search-context-20261012/fermi-closure-context-review.json",
-          "sha256": "390418ca27e00aaead1baae3174f031958ee9bbdcb6679ba649387efa818de9c"
+          "path": "docs/watch-spannaus-context-20261012/closure-fermi-current-review.json",
+          "sha256": "fe79e152d6708d00771b1b3bf41e78219e38cfb5b64e74610261291205080cb8"
         },
         {
-          "path": "docs/watch-search-context-20261012/closure-newton-current-review.json",
-          "sha256": "4e87f25c03cc10fb83834249921b690762e0df3426baa92a125fe33f7e088ad7"
+          "path": "docs/watch-spannaus-context-20261012/closure-newton-current-review.json",
+          "sha256": "e11149f3157d88919471f75222792ba2b58e73c5bb3700205ca2f69400ae1092"
         }
       ],
       "no_new_owner_acceptance": true

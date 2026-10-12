@@ -10,6 +10,7 @@ from pathlib import Path
 from urllib.parse import urlsplit
 from answer_study_qa import Document
 from hero_introductions_qa import assert_current_opening, restore_reviewed_opening
+from build_watch_shorts import thumbnail_size
 
 ROOT = Path(__file__).resolve().parents[1]
 BASELINE = '0c1a128074455293c59d2ee10591e53e842be87f'
@@ -46,9 +47,11 @@ class WatchShorts(unittest.TestCase):
                 image = next(n for n in children if n.tag == 'img')
                 self.assertEqual(image.attrs['src'], record['thumbnail'])
                 thumbnail = urlsplit(image.attrs['src'])
-                self.assertEqual((thumbnail.scheme, thumbnail.netloc), ('https', 'i.ytimg.com'))
-                self.assertTrue(thumbnail.path.startswith('/vi/' + record['id'] + '/'))
-                self.assertEqual((image.attrs['width'], image.attrs['height']), ('405', '720'))
+                if thumbnail.scheme:
+                    self.assertEqual((thumbnail.scheme, thumbnail.netloc), ('https', 'i.ytimg.com'))
+                    self.assertTrue(thumbnail.path.startswith('/vi/' + record['id'] + '/'))
+                expected = thumbnail_size(record)
+                self.assertEqual((image.attrs['width'], image.attrs['height']), tuple(map(str, expected)))
                 self.assertEqual(next(n.text() for n in children if n.tag == 'h3'), record['title'])
                 links = [n for n in children if n.tag == 'a']
                 self.assertEqual(len(links), 3)
@@ -100,6 +103,11 @@ class WatchShorts(unittest.TestCase):
             (temporary / 'docs').mkdir()
             shutil.copyfile(ROOT / 'tools/build_watch_shorts.py', temporary / 'tools/build_watch_shorts.py')
             shutil.copyfile(ROOT / 'docs/watch-shorts.json', temporary / 'docs/watch-shorts.json')
+            for record in self.data['shorts']:
+                if not urlsplit(record['thumbnail']).scheme:
+                    target = temporary / record['thumbnail']
+                    target.parent.mkdir(parents=True, exist_ok=True)
+                    shutil.copyfile(ROOT / record['thumbnail'], target)
             stale = self.page.replace('Latest from Focus Shorts', 'Stale saved heading', 1)
             self.assertNotEqual(stale, self.page)
             page = temporary / 'watch.html'
@@ -109,6 +117,18 @@ class WatchShorts(unittest.TestCase):
             self.assertNotEqual(result.returncode, 0)
             self.assertIn('stale', result.stdout + result.stderr)
             self.assertEqual(page.read_bytes(), before)
+
+    def test_local_thumbnail_rejects_wrong_bytes_dimensions_and_path(self):
+        record = next(r for r in self.data['shorts'] if not urlsplit(r['thumbnail']).scheme)
+        self.assertEqual(thumbnail_size(record), (1254, 1254))
+        for changes, reason in (
+            ({'thumbnail_sha256': '0' * 64}, 'Local thumbnail hash mismatch'),
+            ({'thumbnail_dimensions': [405, 720]}, 'Local thumbnail dimensions mismatch'),
+            ({'thumbnail': 'assets/shorts/../../outside.png'}, 'Invalid local thumbnail path'),
+            ({'thumbnail': 'https://example.com/thumbnail.png'}, 'Invalid local thumbnail path'),
+        ):
+            with self.subTest(changes=changes), self.assertRaisesRegex(AssertionError, reason):
+                thumbnail_size(dict(record, **changes))
 
 
 if __name__ == '__main__':
