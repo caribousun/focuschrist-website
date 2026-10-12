@@ -1,0 +1,342 @@
+{
+  "schema": 1,
+  "prepared_at": "2026-10-11T22:16:29.828681+00:00",
+  "spec": {
+    "registration_class": "EXACT_THREE_REVIEWED_LOCAL_COMPOSITES",
+    "owner_final_image_acceptance": "not-claimed",
+    "historical_generation_preflight": "not-claimed-by-this-registration",
+    "scenes": [
+      {
+        "key": "seek",
+        "route": "index.html",
+        "section": "home-seek-study",
+        "source_sha256": "9b482deb6a3f8a80bf97f4481a4bcbc239b35a353ff0c9de78c34b398d0e70b1",
+        "assets": [
+          {
+            "scene": "seek",
+            "path": "assets/page-art/masters/home-seek-study-four-marks-20261011.png",
+            "source_sha256": "9b482deb6a3f8a80bf97f4481a4bcbc239b35a353ff0c9de78c34b398d0e70b1",
+            "sha256": "9b482deb6a3f8a80bf97f4481a4bcbc239b35a353ff0c9de78c34b398d0e70b1",
+            "kind": "original",
+            "width": 1774,
+            "height": 887,
+            "pixel_sha256": "286f6ad774a8b6fabcbd07f52f1b3a294e36641ddf387e83bc5ecc2991bc56a2"
+          },
+          {
+            "scene": "seek",
+            "path": "assets/page-art/home-seek-study-four-marks-20261011-full.webp",
+            "source_sha256": "9b482deb6a3f8a80bf97f4481a4bcbc239b35a353ff0c9de78c34b398d0e70b1",
+            "sha256": "5ad1e94b505079eadc34d6486fb3a2090feb74f756c7472a29de76a788b11ceb",
+            "kind": "full",
+            "width": 1774,
+            "height": 887,
+            "decoded_rgb_sha256": "18560d36d8a6c448fd93217a7f313cbe030dc0e96785bbc6b926fe19f9fefb4c",
+            "pixel_sha256": "286f6ad774a8b6fabcbd07f52f1b3a294e36641ddf387e83bc5ecc2991bc56a2"
+          }
+        ],
+        "preserved_originals": [
+          {
+            "path": "assets/page-art/home-seek-study-remember.webp",
+            "sha256": "d174a69669405778fcf5e1ea69ca49aa8a64b0ca114f38e7a2224e1528ceb49c"
+          }
+        ]
+      },
+      {
+        "key": "joy",
+        "route": "answers/faith-in-jesus-christ-during-trials.html",
+        "section": "christ-homecoming-celebration",
+        "source_sha256": "db1577750a6efc66573cb4658b10136394a2414db1ba62ac2883b623be0cfb6d",
+        "assets": [
+          {
+            "scene": "joy",
+            "path": "assets/page-art/christ-world/masters/christ-homecoming-celebration-dorsal-20261011.png",
+            "source_sha256": "db1577750a6efc66573cb4658b10136394a2414db1ba62ac2883b623be0cfb6d",
+            "sha256": "db1577750a6efc66573cb4658b10136394a2414db1ba62ac2883b623be0cfb6d",
+            "kind": "original",
+            "width": 1585,
+            "height": 992,
+            "pixel_sha256": "e79c6949e8aad3e5c1aa22069aa31511a73e627a32e6ca1d350fa0ebb68fcf50"
+          },
+          {
+            "scene": "joy",
+            "path": "assets/page-art/christ-world/christ-homecoming-celebration-dorsal-20261011-full.webp",
+            "source_sha256": "db1577750a6efc66573cb4658b10136394a2414db1ba62ac2883b623be0cfb6d",
+            "sha256": "57da3e567b0d305279d01c05e619fc806ab96459c513cd77c0579aaa2949b9e9",
+            "kind": "full",
+            "width": 1585,
+            "height": 992,
+            "decoded_rgb_sha256": "48aea753283866e4175d1a698dda23d7e75c9a0c93ef944a9676e9dcba987b3a",
+            "pixel_sha256": "e79c6949e8aad3e5c1aa22069aa31511a73e627a32e6ca1d350fa0ebb68fcf50"
+          },
+          {
+            "scene": "joy",
+            "path": "assets/page-art/christ-world/christ-homecoming-celebration-dorsal-20261011-960.webp",
+            "source_sha256": "db1577750a6efc66573cb4658b10136394a2414db1ba62ac2883b623be0cfb6d",
+            "sha256": "6216f96c96f81c11b55e48a649a30b43560eafa57abfab593881801ed8ad625f",
+            "kind": "960",
+            "width": 960,
+            "height": 601,
+            "decoded_rgb_sha256": "c991dbd8483b8e1164e1a2151676487c140477efea942c3ff759f0d4f85fb6f8",
+            "pixel_sha256": "6eddf5303591bcae1d4d8c0b8ec5a0e509474fa6d246937f06b6964149967479"
+          },
+          {
+            "scene": "joy",
+            "path": "assets/page-art/christ-world/christ-homecoming-celebration-dorsal-20261011-480.webp",
+            "source_sha256": "db1577750a6efc66573cb4658b10136394a2414db1ba62ac2883b623be0cfb6d",
+            "sha256": "50d2c1cc2e356e51bfaf2ae296782addea7cdeae0c1e2830c889530110c47b46",
+            "kind": "480",
+            "width": 480,
+            "height": 300,
+            "decoded_rgb_sha256": "efbeff0f55919d4acd59776cfed16da488d66fc83644529debf7e093fe0f6137",
+            "pixel_sha256": "247a0781b859b4879ea2bb526729db5c12ff5da2d59ad00945f711c00e235fbb"
+          }
+        ],
+        "preserved_originals": [
+          {
+            "path": "assets/page-art/christ-world/masters/christ-homecoming-celebration.png",
+            "sha256": "d835e757765039247138af12a5fae27cf5655692757254be009dc61576093920"
+          },
+          {
+            "path": "assets/page-art/christ-world/christ-homecoming-celebration-full.webp",
+            "sha256": "fd968aac0a69a982f8301aa775291bd86f2f6e4067fa040cca03b43de54f38f6"
+          },
+          {
+            "path": "assets/page-art/christ-world/christ-homecoming-celebration-960.webp",
+            "sha256": "dc3013031c5490e2e1bb173e92a672c59be31b8caa24f60e73d9cae03d8fd659"
+          },
+          {
+            "path": "assets/page-art/christ-world/christ-homecoming-celebration-480.webp",
+            "sha256": "68641bc39651fb610b78a485205d556287729f816de6f9b1d309088f1f004753"
+          }
+        ]
+      },
+      {
+        "key": "shepherd",
+        "route": "birth-of-christ.html",
+        "section": "13-shepherds-message",
+        "source_sha256": "4ae5bed79922f91dd6e136a24da712f046759f450ea03e658a5fd0fd5901c279",
+        "assets": [
+          {
+            "scene": "shepherd",
+            "path": "assets/page-art/birth-of-christ/masters/13-shepherds-message-mixed-host-20261011.png",
+            "source_sha256": "4ae5bed79922f91dd6e136a24da712f046759f450ea03e658a5fd0fd5901c279",
+            "sha256": "4ae5bed79922f91dd6e136a24da712f046759f450ea03e658a5fd0fd5901c279",
+            "kind": "original",
+            "width": 1536,
+            "height": 1024,
+            "pixel_sha256": "41e84d60ec1ff7cbfbae31dbea036531d5a764834506ef67542adba7107fb434"
+          },
+          {
+            "scene": "shepherd",
+            "path": "assets/page-art/birth-of-christ/13-shepherds-message-mixed-host-20261011-full.webp",
+            "source_sha256": "4ae5bed79922f91dd6e136a24da712f046759f450ea03e658a5fd0fd5901c279",
+            "sha256": "65b40399cff54e2e4ead0bd31121d7a65018629228203b1612460153091bb186",
+            "kind": "full",
+            "width": 1536,
+            "height": 1024,
+            "decoded_rgb_sha256": "8576d3831ccd36e17074b1cb4bc437ea3037b3c7e006a1764adc5954163334e4",
+            "pixel_sha256": "41e84d60ec1ff7cbfbae31dbea036531d5a764834506ef67542adba7107fb434"
+          },
+          {
+            "scene": "shepherd",
+            "path": "assets/page-art/birth-of-christ/13-shepherds-message-mixed-host-20261011-800.webp",
+            "source_sha256": "4ae5bed79922f91dd6e136a24da712f046759f450ea03e658a5fd0fd5901c279",
+            "sha256": "21af54d8347085d152e53343465336a69ff075dc9c02f79f1812a0a12e29be74",
+            "kind": "800",
+            "width": 800,
+            "height": 533,
+            "decoded_rgb_sha256": "bc942d3b25486145f256e3498d0f629e1244f6c9a99fbc2afc9ffaf534f3ef86",
+            "pixel_sha256": "6db4e372c139719e386f21ac53b5efd74c34fb097c7f08837a85c773e19e3ae1"
+          }
+        ],
+        "preserved_originals": [
+          {
+            "path": "assets/page-art/birth-of-christ/13-shepherds-message-full.webp",
+            "sha256": "da2d4741684bb2172f273bc98f079e2821879261c879d8c66c0f84f68fc7d301"
+          },
+          {
+            "path": "assets/page-art/birth-of-christ/13-shepherds-message-800.webp",
+            "sha256": "2c85a0a6bb317a1899fc9c0c156f895630878f47702e0304e769369e3a4d6bf3"
+          }
+        ]
+      }
+    ],
+    "lineage": {
+      "path": "docs/three-reviewed-20261011/local-lineage.json",
+      "sha256": "0be071a9e513376a722935fbca3e1a19445acfa353814aa7d5d6188f0b34fe69"
+    },
+    "context": [
+      {
+        "path": "answer-navigation.css",
+        "sha256": "8112ad6d52ada3bd0b373633fc2e60f5ada7d47fb2204c28e1a09ae01be66a57"
+      },
+      {
+        "path": "answer-opening.css",
+        "sha256": "0356c038ad2adcec7206bfcb3d57915b9e2be2cd42024770560f3d9875cc94fb"
+      },
+      {
+        "path": "answer-styles.css",
+        "sha256": "82dc51b82d56a129be803420cae47630f053f7af1259c659113fbd7fcd76d6ad"
+      },
+      {
+        "path": "answers/faith-in-jesus-christ-during-trials.html",
+        "sha256": "f5e43e47b46b83c05e5663d579bdeedeed10e03d88d915706919909db2d4643d"
+      },
+      {
+        "path": "art-gallery.json",
+        "sha256": "5fb9f428a7e4bbf63cd9b5721ca7e576b14bbfa8334c073343f84e49efb8fcb1"
+      },
+      {
+        "path": "artwork-actions.css",
+        "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+      },
+      {
+        "path": "artwork-details.css",
+        "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+      },
+      {
+        "path": "artwork-details.js",
+        "sha256": "27b6e27ba2399f4e0f1c680b50630ea8cfe4887375ed942290bf7248005d4f76"
+      },
+      {
+        "path": "birth-of-christ.html",
+        "sha256": "370dace852ba8ff8a2830b790ba4f5693d4982701a8bbdfe08b321adc2b8aeaf"
+      },
+      {
+        "path": "complete-card-rows.css",
+        "sha256": "7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"
+      },
+      {
+        "path": "connected-study.css",
+        "sha256": "6b61c50c1d8e005074beb2db8fa800377377e6a3c9b955678dd836538fcb48cd"
+      },
+      {
+        "path": "desktop-hero-repairs.css",
+        "sha256": "36270651fecfb57cb371580f1fd4df3c2910942665e356245ddf451e5c4d9ecb"
+      },
+      {
+        "path": "four-scene-artwork.js",
+        "sha256": "c6099732d2f2ab858e3dead5b6a99c96fb74068925bce17263c98caf19c5101a"
+      },
+      {
+        "path": "full-image-viewer.css",
+        "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+      },
+      {
+        "path": "full-image-viewer.js",
+        "sha256": "01d17afd6b3f4bd205292d2544683ba9884b73fa350401cd0e299512b5458152"
+      },
+      {
+        "path": "hero-details.css",
+        "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+      },
+      {
+        "path": "home-presentation.css",
+        "sha256": "40f23bc00b39bff593fe58c9f967e6f3750de43935547e88ef75249cd44866bc"
+      },
+      {
+        "path": "home.css",
+        "sha256": "2109d62a0a88b22912224c3c359f263cd907f33914967479db1c9d02c5a11980"
+      },
+      {
+        "path": "index.html",
+        "sha256": "07e35b3de16a22ff1bb23f15dd312c98d96666d6e21803135c05be9111e2ed4e"
+      },
+      {
+        "path": "jesus-journey.css",
+        "sha256": "6e28d3399deedd09b74341d232ef5e57fc6800f513d644b073192a8724fbcbf7"
+      },
+      {
+        "path": "resource-cards.css",
+        "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+      },
+      {
+        "path": "site-common.js",
+        "sha256": "fc0ae667fd977c6cd66ef2e649ef9da2cbcf5eee4201094dd90ed48b551e6488"
+      },
+      {
+        "path": "site-header.css",
+        "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+      },
+      {
+        "path": "site-search-index.json",
+        "sha256": "0580850c55f433ef70faa25f085e70dc81cdf648795bd674dd5ca978812a86a6"
+      },
+      {
+        "path": "site-search.css",
+        "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+      },
+      {
+        "path": "site-system.css",
+        "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+      },
+      {
+        "path": "study-reading-balance.css",
+        "sha256": "fb547af5c883050d743204c0d05372863143a1fa0dffd2df370b728f1a9ff005"
+      },
+      {
+        "path": "tools/build_art_gallery.py",
+        "sha256": "f21b8a39171e7f9a998c34f66896bdcba922146f80825bae3f7d60372b3d804c"
+      },
+      {
+        "path": "topic-art.css",
+        "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"
+      },
+      {
+        "path": "topic-artwork-details.css",
+        "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+      },
+      {
+        "path": "topic-artwork-details.js",
+        "sha256": "face1939c8ba140a6a65348c0199f3eadd23c122e49a92d6079fd3320a182261"
+      },
+      {
+        "path": "topic-heroes.css",
+        "sha256": "c0cd96bafe94455fd41d8b6c8357baaa12a0556ce204ba058a1264160acae632"
+      },
+      {
+        "path": "topic-study-pages.css",
+        "sha256": "99e1df87cfdcd11751bb16e0ea293a5048cd6f5f73245a791d20492226299236"
+      },
+      {
+        "path": "unified-opening.js",
+        "sha256": "3745ded2cb4e92e7b876bb8c8cd217d808da0a933575cf30c3712dc9f35d6dbe"
+      }
+    ],
+    "scope": "Exactly Home Seek, Joy and original Birth13 Shepherd replacements. No other held imagery, source prose, hero, layout or onward destination changed. Home Continue Lesson returns to its owning heading with actual header clearance; ordinary Close and non-Home return behavior preserved."
+  },
+  "reviews": [
+    {
+      "path": "docs/three-reviewed-20261011/three-albert-review.json",
+      "sha256": "ca240823eb92c3398886b04e7ab324e769ce4528b2476ac8916d4aa7b100bd07"
+    },
+    {
+      "path": "docs/three-reviewed-20261011/three-fermi-review.json",
+      "sha256": "3ffef79b34a5fbf285646a2e1f4f9b548e5c6af5f4c39805432135f1e4b86374"
+    },
+    {
+      "path": "docs/three-reviewed-20261011/three-newton-review.json",
+      "sha256": "c3e00577b6c4c99c67bcaf3a82a5d56d5bedfbb58f619f23ac79c328c0cb44c4"
+    }
+  ],
+  "current_review_projection": {
+    "executor": "Lightning",
+    "scope": "Public copies omit only private actor_session metadata. Original author, decision, evidence, limitations and all review fields otherwise unchanged; complete originals retained privately.",
+    "receipts": [
+      {
+        "public_path": "docs/three-reviewed-20261011/three-albert-review.json",
+        "original_receipt_sha256": "4fcc7979e7f5a1d02742460eac16546db196ff80920b56ab84c7d4f4e3d99434",
+        "omitted_fields": [
+          "actor_session"
+        ]
+      },
+      {
+        "public_path": "docs/three-reviewed-20261011/three-fermi-review.json",
+        "original_receipt_sha256": "307d0ec66b37bf42cc221c3f59cbe035c99e44d5faf13056abd4686fcebb5a6f",
+        "omitted_fields": [
+          "actor_session"
+        ]
+      }
+    ]
+  }
+}

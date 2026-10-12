@@ -340,7 +340,7 @@
     <link rel="stylesheet" href="full-image-viewer.css?v=20261007-viewer-controls-1">
     <script src="artwork-details.js?v=20260905-home-study" defer></script>
     <script src="full-image-viewer.js?v=20261009-titled-downloads-1" defer></script>
-    <script src="art-study-router.js?v=20261009-picture-reflections-1" data-focuschrist-art-study-router="true" defer></script>
+    <script src="art-study-router.js?v=20261011-prepared-picture-stories-1" data-focuschrist-art-study-router="true" defer></script>
 <link rel="stylesheet" href="artwork-actions.css?v=20261004-explicit-grid-1">
 <link rel="stylesheet" href="connected-study.css?v=20261008-promotion-spacing-1">
 <link rel="stylesheet" href="hero-details.css?v=20260909-warm">
@@ -384,7 +384,7 @@
             <p class="fc-eyebrow">Pause and remember Him</p>
             <h1 class="fc-display" id="art-page-title">Inspirational Art</h1>
             <p class="fc-page-intro-copy">Reflect on Jesus Christ through art, scripture, faith, and hope.</p>
-            <p class="fc-art-study-hint" data-focuschrist-art-study-hint="true">Open an artwork to view it full-size, study its gospel theme on the official Church website, or ask follow-up questions without losing your place in the gallery.</p>
+            <p class="fc-art-study-hint" data-focuschrist-art-study-hint="true">Open a picture and choose About this picture to read its story, explore the scripture behind it, and linger with what speaks to you.</p>
             <a class="fc-art-continue" href="#art-gallery" aria-label="Continue to the art gallery"><span>Continue</span><span aria-hidden="true">↓</span></a>
         </div>
     </section>
@@ -710,6 +710,8 @@
         }
         
         document.addEventListener('keydown', function(e) {
+            // A scripture dialog owns its keyboard interaction while it is open.
+            if (document.querySelector('#fc-scripture-reader[open]')) return;
             if (document.getElementById('imageModal').classList.contains('active')) {
                 if (e.key === 'Tab') {
                     const modal = document.getElementById('imageModal');
