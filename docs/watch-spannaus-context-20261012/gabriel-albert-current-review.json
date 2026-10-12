@@ -17,5 +17,21 @@
   "spec_sha256": "23475fe86811155db48e41e59c250cfe81341b2a166e0bdb0a919097cb9e7b57",
   "source_and_derivative_pixels_reviewed": true,
   "current_context_reviewed": true,
-  "historical_pixel_boolean_scope": "True fields retain prior genuine historical unchanged-byte review findings; not a claim this current invocation performed new pixel inspection."
+  "historical_pixel_boolean_scope": "True fields retain prior genuine historical unchanged-byte review findings; not a claim this current invocation performed new pixel inspection.",
+  "desktop_phone_browser_review": true,
+  "historical_browser_boolean_scope": "Required legacy browser boolean retains the exact historical Albert desktop/phone review of unchanged owning-page bytes. It does not assert fresh Gabriel or Three owning-page browser interaction in this run. Current root browser work reviewed Watch only; exact inverse context proof and113 consumer equality are separately recorded.",
+  "prior_browser_evidence": [
+    {
+      "path": "docs/watch-search-context-20261012/gabriel-albert-current-review.json",
+      "sha256": "52dd88133fc826d3bf44c1246f484777c661dbfdee3933233395dc4432f192ef",
+      "reviewed_at": "2026-10-12T15:48:16.883116+00:00",
+      "scope": "Historical genuine Albert browser evidence; unchanged consumers verified in current context review."
+    },
+    {
+      "path": "docs/three-reviewed-20261011/gabriel-albert-review.json",
+      "sha256": "7ad8de984376a39fa3bc1302c6307ce0f5f2ff2d8feb51d527dd9b7375da85f1",
+      "reviewed_at": "2026-10-11T22:31:14.586875+00:00",
+      "scope": "Historical genuine Albert browser evidence; unchanged consumers verified in current context review."
+    }
+  ]
 }

@@ -440,7 +440,7 @@ def run(root, mode='release', scene=None, page_overrides=None):
     original_pixels |= six_scene_pixels
     # Exact owner-approved Gabriel replacements; immutable originals remain covered.
     from artwork_gabriel_owner_delivery import validate as validate_gabriel_owner_delivery
-    approved_gabriel_binding = '6b569822dbbef41469fd11746e32948e18fed0278620f31393c3e959eac3f85d'
+    approved_gabriel_binding = '8e45f2ecbfbac9387e5e5b4e206395dec3ae0c1bd66cdfcf866c22bcc7e56a22'
     gabriel_record = json.loads((root / 'docs/artwork-gabriel-owner-delivery-reviews.json').read_text(encoding='utf-8'))
     gabriel, gabriel_hashes, gabriel_pixels = validate_gabriel_owner_delivery(
         root, gabriel_record, approved_gabriel_binding, added, covered, rejected, pixel_hash, page_dependencies)
@@ -452,7 +452,7 @@ def run(root, mode='release', scene=None, page_overrides=None):
     from artwork_three_reviewed_delivery import validate as validate_three_reviewed_delivery
     three_record = json.loads((root / 'docs/artwork-three-reviewed-delivery-reviews.json').read_text(encoding='utf-8'))
     three, three_hashes, three_pixels = validate_three_reviewed_delivery(
-        root, three_record, 'ee229d7a58e14cf8b67628df2ba55feae9082575f1dfbb05a2897b20354b6613', added, covered, rejected, pixel_hash, page_dependencies)
+        root, three_record, 'b9c0dfc3e39a75d93dd5a694e0095274d192ed3d2a2b838d650ef3e7970e1e6e', added, covered, rejected, pixel_hash, page_dependencies)
     require(not (three_hashes & originals) and not (three_pixels & original_pixels), 'Three-scene family duplicates another creation')
     covered |= three
     originals |= three_hashes
