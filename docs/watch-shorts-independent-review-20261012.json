@@ -38,10 +38,10 @@
     },
     {
       "reviewer": "Newton",
-      "status": "CONCUR_SOURCE_AND_COPY",
+      "status": "CONCUR_SOURCE_COPY_AND_SETTLED_DESKTOP_VISUAL",
       "evidence": {
         "path": "newton\\WATCH-LATEST-REVIEW.md",
-        "sha256": "af8ff0fdc6f2dbdce74e12f9e0225434ccea3e5a388d21073d3ef8eb4c97f997"
+        "sha256": "31d7767f2d7f9674876be68c7d758ded6e0d0217eb0bb80be824218f0283405e"
       }
     },
     {
@@ -55,7 +55,11 @@
   ],
   "limitations": [
     "Root live-channel observation supports selection; reviewers did not independently publish videos.",
-    "Actual rendered desktop clipping finding remains open; no visual or release acceptance claimed.",
     "Stubbed runtime checks do not prove provider playback."
-  ]
+  ],
+  "settled_desktop_review": "Initial screenshot suggested clipped direct links. Newton independently inspected his supported Chrome task, actual scrolling and root settled screenshots. All four rounded card bottoms and direct links visible; clipping not reproduced after settling. No CSS change. Root broader viewport/interaction and public-release checks remain distinct.",
+  "settled_screenshot": {
+    "path": "../outputs/Watch-Desktop-Settled-Bottoms.jpg",
+    "sha256": "20ba938816fb3ff8fc288849dc39b35823a31bbf928e8d34b78eba747916844c"
+  }
 }
