@@ -2873,7 +2873,7 @@
         },
         {
           "path": "site-search-index.json",
-          "sha256": "12ac02554f980a577a49f9e5ec9eb88e5689e0001fb20e687a309c6d1c30161b"
+          "sha256": "7243712e2ce07d71537b11eff4a1bf3b601f2cfae96364e725ab431952777551"
         },
         {
           "path": "timeline-images.js",
@@ -11038,6 +11038,32 @@
       ],
       "status": "REVIEWED_CURRENT_CONTEXT_ONLY",
       "consumer_pairs": 113,
+      "no_new_owner_acceptance": true
+    },
+    "watch_search_context_rebinding": {
+      "scope": "Only three Watch search records changed; exact artwork consumer pairs and all other search records unchanged.",
+      "prior_record": {
+        "path": "docs/watch-search-context-20261012/prior-artwork-correction-reviews.json",
+        "sha256": "442ba7ce1147d05f22489692e806b9b3c097a43e9fd2050a765a74b19bee6c3c"
+      },
+      "evidence": {
+        "path": "docs/watch-search-context-20261012/search-delta.json",
+        "sha256": "75d827e55056b8709df233ae458b23217faf885adf5c4a1afb01145245be2dd9"
+      },
+      "reviews": [
+        {
+          "path": "docs/watch-search-context-20261012/closure-albert-current-review.json",
+          "sha256": "79495e62eabd076a3593ea75dfe4de3f377fe54da9920649f7db98a3e9ee1240"
+        },
+        {
+          "path": "docs/watch-search-context-20261012/fermi-closure-context-review.json",
+          "sha256": "f5cff0201edee8a0a60a66aa96982086217a65961f57496fe068756d577f9fe9"
+        },
+        {
+          "path": "docs/watch-search-context-20261012/closure-newton-current-review.json",
+          "sha256": "735fa6ca0d16d03b327bab63d64723f405395d33855a0a4bc839d1541d5d1c89"
+        }
+      ],
       "no_new_owner_acceptance": true
     }
   }

@@ -391,7 +391,7 @@ def run(root, mode='release', scene=None, page_overrides=None):
     correction_record = json.loads((root / 'docs/artwork-correction-reviews.json').read_text(encoding='utf-8'))
     from artwork_owner_closure import validate as validate_owner_closure
     validate_owner_closure(root, correction_record['owner_requirement_closure'],
-        '78543ab662dfcb65a6c2474f52dc9ec453f21584391df53b41db2ce7f9757231', pixel_hash)
+        '5a4a6a8c9b69161083d8bb662de022490f12922ec38dc9b97283dd9d9bb6c839', pixel_hash)
     corrections, correction_hashes, correction_pixels = validate_reviewed_corrections(
         root, correction_record, approved_corrections_binding, added, covered, rejected, pixel_hash, inventory)
     require(not (correction_hashes & originals) and not (correction_pixels & original_pixels), 'Correction family duplicates another creation')
@@ -440,7 +440,7 @@ def run(root, mode='release', scene=None, page_overrides=None):
     original_pixels |= six_scene_pixels
     # Exact owner-approved Gabriel replacements; immutable originals remain covered.
     from artwork_gabriel_owner_delivery import validate as validate_gabriel_owner_delivery
-    approved_gabriel_binding = '4591bca7da687514fda31825fb867ef49b6fd1f871a7d4412c8d25671450aaea'
+    approved_gabriel_binding = '90ad2cc8cd3d73f7b55fe52932b7807eda0311b033757cd9e970c8b7f3a23936'
     gabriel_record = json.loads((root / 'docs/artwork-gabriel-owner-delivery-reviews.json').read_text(encoding='utf-8'))
     gabriel, gabriel_hashes, gabriel_pixels = validate_gabriel_owner_delivery(
         root, gabriel_record, approved_gabriel_binding, added, covered, rejected, pixel_hash, page_dependencies)
@@ -452,7 +452,7 @@ def run(root, mode='release', scene=None, page_overrides=None):
     from artwork_three_reviewed_delivery import validate as validate_three_reviewed_delivery
     three_record = json.loads((root / 'docs/artwork-three-reviewed-delivery-reviews.json').read_text(encoding='utf-8'))
     three, three_hashes, three_pixels = validate_three_reviewed_delivery(
-        root, three_record, 'da1c6f4c274b8a2cbf04c1b4ea724661d818ea13f3a0ced03387171a9094c4b4', added, covered, rejected, pixel_hash, page_dependencies)
+        root, three_record, '401891a61d1d7a74020dfea57a6a950822ea79c3f1d51e1670e7ceec47256c8e', added, covered, rejected, pixel_hash, page_dependencies)
     require(not (three_hashes & originals) and not (three_pixels & original_pixels), 'Three-scene family duplicates another creation')
     covered |= three
     originals |= three_hashes
