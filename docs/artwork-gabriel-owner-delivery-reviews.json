@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "prepared_at": "2026-10-12T02:07:15.865730+00:00",
+  "prepared_at": "2026-10-12T15:45:45.712798+00:00",
   "spec": {
     "classification": "owner-approved-scripture-illustrations",
     "registration_class": "EXACT_OWNER_APPROVED_REPLACEMENTS",
@@ -161,7 +161,7 @@
       },
       {
         "path": "site-search-index.json",
-        "sha256": "12ac02554f980a577a49f9e5ec9eb88e5689e0001fb20e687a309c6d1c30161b"
+        "sha256": "7243712e2ce07d71537b11eff4a1bf3b601f2cfae96364e725ab431952777551"
       },
       {
         "path": "site-search.css",
@@ -215,16 +215,16 @@
   },
   "reviews": [
     {
-      "path": "docs/art39-search-context-20261012/gabriel-albert-current-review.json",
-      "sha256": "a1f8d0bcccd9ab6eda5bd3152125dec12481e34cd7195f7b648be517dc05eda1"
+      "path": "docs/watch-search-context-20261012/gabriel-albert-current-review.json",
+      "sha256": "52dd88133fc826d3bf44c1246f484777c661dbfdee3933233395dc4432f192ef"
     },
     {
-      "path": "docs/art39-search-context-20261012/gabriel-fermi-current-review.json",
-      "sha256": "d969b12475e17c44dd0ae6532b09e30f00ee7051ddd33f09aef7f07d33ebf880"
+      "path": "docs/watch-search-context-20261012/gabriel-fermi-current-review.json",
+      "sha256": "6cd2c61f376d82fa977b79254ad5cb8bd32484d21558c0be2862809de5f8d96a"
     },
     {
-      "path": "docs/art39-search-context-20261012/gabriel-newton-current-review.json",
-      "sha256": "12fa8121bb23c02dd48609e78ef907925198079374c552bb1ad20e855458e898"
+      "path": "docs/watch-search-context-20261012/gabriel-newton-current-review.json",
+      "sha256": "1cc57facf27f7f99e497a8c1db7dd896f87eaf1e1d81ce77650e4bad2669f262"
     }
   ],
   "prior_context_record": {
@@ -271,5 +271,18 @@
     "scope": "Only main Art introduction search text changes; all artwork/search destinations and asset references unchanged.",
     "holds": "Shepherd outer-host glow owner concern remains unresolved; historical technical registration does not approve its current appearance. All other holds retained.",
     "no_historical_approval_transfer": true
+  },
+  "watch_search_context_rebinding": {
+    "scope": "Only three Watch search records changed; unchanged artwork and historical attributed reviews explicitly retained.",
+    "prior_record": {
+      "path": "docs/watch-search-context-20261012/prior-artwork-gabriel-owner-delivery-reviews.json",
+      "sha256": "03835765414e59e7636655f78d9f5dbaae14a1114f5b92538eca585c77c54b59"
+    },
+    "evidence": {
+      "path": "docs/watch-search-context-20261012/search-delta.json",
+      "sha256": "c954b24bdb50effa29b1a58f54f4369ef9a347a20bc126639347a5436e855631"
+    },
+    "no_historical_approval_transfer": true,
+    "holds": "All existing holds including Shepherd outer-host glow retained. No new owner acceptance or artwork appearance judgment."
   }
 }

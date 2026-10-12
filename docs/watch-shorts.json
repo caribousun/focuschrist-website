@@ -1,9 +1,23 @@
 {
   "channel": "https://www.youtube.com/@theRisen636/shorts",
   "channel_id": "UC4Fr98iGGtL60UpfXYXR1pQ",
-  "verified_at": "2026-09-23",
-  "verification": "Actual public channel Shorts tab with Latest selected; first four cards and native 405 by 720 thumbnails inspected in browser.",
+  "verified_at": "2026-10-12",
+  "verification": "Actual public channel Shorts tab with Latest selected; first four cards, order and native portrait thumbnail URLs inspected by Albert in browser on 12 October 2026.",
   "shorts": [
+    {
+      "id": "xzAenmOZ1Yk",
+      "title": "God’s Promises Include You",
+      "speaker": "Elder Dale G. Renlund",
+      "description": "God’s promised blessings include you. Hear Elder Renlund’s reminder to trust His promises.",
+      "thumbnail": "https://i.ytimg.com/vi/xzAenmOZ1Yk/sardefault.jpg?sqp=-oaymwEoCJUDENAFSFqQAgHyq4qpAxcIARUAAIhC2AEB4gEKCBgQAhgGOAFAAQ==&rs=AOn4CLAW2q51waleKkgJhG7KxPfG3iboGw"
+    },
+    {
+      "id": "vRzEDllHvlE",
+      "title": "Jesus Lives to Lift",
+      "speaker": "Elder Patrick Kearon",
+      "description": "Hear Elder Kearon’s reminder that Jesus Christ lives to lift us.",
+      "thumbnail": "https://i.ytimg.com/vi/vRzEDllHvlE/sardefault.jpg?sqp=-oaymwEoCJUDENAFSFqQAgHyq4qpAxcIARUAAIhC2AEB4gEKCBgQAhgGOAFAAQ==&rs=AOn4CLC30DOHUeu-VqD8TWL5SsqvgQyucw"
+    },
     {
       "id": "OSgN-cSJOPs",
       "title": "You've Got This Because Jesus Christ Has Got You",
@@ -17,20 +31,6 @@
       "speaker": "Elder Jeffrey R. Holland",
       "description": "Hear Elder Holland's witness of Joseph Smith's faithfulness.",
       "thumbnail": "https://i.ytimg.com/vi/5g-I2nbz2d4/sardefault.jpg?sqp=-oaymwEoCJUDENAFSFqQAgHyq4qpAxcIARUAAIhC2AEB4gEKCBgQAhgGOAFAAQ==&rs=AOn4CLAWYPMAo_4QX3BrLXr6weyElh1AQA"
-    },
-    {
-      "id": "wRLfRFzUCEA",
-      "title": "Joseph Smith: Called by God",
-      "speaker": "Elder Lawrence E. Corbridge",
-      "description": "Pause with Elder Corbridge's message about Joseph Smith's calling.",
-      "thumbnail": "https://i.ytimg.com/vi/wRLfRFzUCEA/sardefault.jpg?sqp=-oaymwEoCJUDENAFSFqQAgHyq4qpAxcIARUAAIhC2AEB4gEKCBgQAhgGOAFAAQ==&rs=AOn4CLBc7ja0taT5368qRzN-fbjrPMmq-w"
-    },
-    {
-      "id": "V_-RkAMO1uU",
-      "title": "You Are Loved",
-      "speaker": "Dieter F. Uchtdorf",
-      "description": "Take a quiet moment with this reminder that you are loved.",
-      "thumbnail": "https://i.ytimg.com/vi/V_-RkAMO1uU/sardefault.jpg?sqp=-oaymwEoCJUDENAFSFqQAgHyq4qpAxcIARUAAIhC2AEB4gEKCBgQAhgGOAFAAQ==&rs=AOn4CLANsIUKcZN55FWXdlvmKw_Ef9dWFQ"
     }
   ]
 }
