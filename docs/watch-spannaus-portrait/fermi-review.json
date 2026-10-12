@@ -1,0 +1,23 @@
+{
+  "reviewer": "Fermi",
+  "decision": "CONCUR_ASSEMBLED_OWNER_APPROVED",
+  "spec_sha256": "1752cb5d8b47dce0c70d6ca076a69ddff88513fc3fcb46a3f9342c3a0cfd600f",
+  "historical_pupil_uncertainty_preserved": true,
+  "desktop_phone_inspected": true,
+  "observations": [
+    "Personally inspected actual current desktop and phone screenshots: scenic portrait fills entire first card without top/bottom bars. Full heads, title, speaker inset/name and focusChrist.com visible.",
+    "Warm palette, sand/copper clothing and friendly expressions consistent with actual separately reviewed owner-approved portrait. Other cards/order visually retained.",
+    "Exact reciprocal pupil alignment remains uncertain; no perfect-gaze claim. Center-square crop could clip roughly10–16px highest hair fringe; actual Watch portrait view shown here does not apply that square crop.",
+    "Scoped assembled image review only, no new playback/deployment assertion."
+  ],
+  "evidence": {
+    "desktop": {
+      "sha256": "24d7c297e280681da6d9b6b507ce5bbc186d495c8da6e38f45c8236c3b561a14",
+      "description": "Fermi personally inspected actual desktop screenshot of assembled portrait card."
+    },
+    "phone": {
+      "sha256": "4ce59af3c09befefbb77ac8b6aac9c789a7b89614b1e21ef7f6b0c51ffd924ff",
+      "description": "Fermi personally inspected actual phone screenshot of assembled portrait card."
+    }
+  }
+}

@@ -120,7 +120,7 @@ class WatchShorts(unittest.TestCase):
 
     def test_local_thumbnail_rejects_wrong_bytes_dimensions_and_path(self):
         record = next(r for r in self.data['shorts'] if not urlsplit(r['thumbnail']).scheme)
-        self.assertEqual(thumbnail_size(record), (1254, 1254))
+        self.assertEqual(thumbnail_size(record), (941, 1672))
         for changes, reason in (
             ({'thumbnail_sha256': '0' * 64}, 'Local thumbnail hash mismatch'),
             ({'thumbnail_dimensions': [405, 720]}, 'Local thumbnail dimensions mismatch'),
