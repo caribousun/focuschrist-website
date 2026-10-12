@@ -17,46 +17,479 @@
     "Widows Mite": "The Widow's Mite"
 };
 
-    const PICTURE_REFLECTIONS = {
-    "Divine Push": "Jesus helps a woman move a handcart while two children rest inside. Consider the burdens someone near you is carrying, and one way you could help.",
-    "Forever Friends": "Jesus walks beside a smiling man along a sunlit forest path. A quiet walk with someone can be a simple gift of friendship.",
-    "Forever": "Jesus kneels beside a man and woman in a cemetery, drawing them close. In a time of loss, a loving presence can matter more than finding the right words.",
-    "Jesus and His Mother Mary": "Jesus and Mary embrace beneath olive trees in the evening light. Their closeness invites a moment of gratitude for the people who have cared for us.",
-    "Jesus Baptized": "John baptizes Jesus as people watch from the riverbank. Consider what it means to follow His example.",
-    "Jesus with His Disciples at Sea": "Jesus stands among His disciples in a boat while waves rise around them. The scene invites reflection on turning toward Him when life feels unsettled.",
-    "Jesus Feeding People": "Bread and fish fill a basket as Jesus offers food to a waiting crowd. Notice how care for people's daily needs can become part of following Him.",
-    "Jesus Feeding the Fish": "Jesus scatters food toward fish in the shallow water. This quiet scene invites us to notice and care for the living things around us.",
-    "Joy Beside the Lake": "Jesus smiles beside a lakeside village filled with boats, people, and daily work. There can be room for gratitude and joy in an ordinary day.",
-    "Jesus in Africa": "Adults and children gather around Jesus beneath a broad tree near thatched homes. Consider the Savior's invitation to welcome and love people across nations and cultures.",
-    "The Healing Touch of Jesus": "Jesus reaches toward a man and rests a hand gently on his head. Compassion often begins with drawing near and giving someone our attention.",
-    "Learning to Forgive": "Jesus rests His arm around a man as they talk together. Forgiveness can begin with a willingness to listen and take another step together.",
-    "Jesus Walking Jerusalem": "Jesus walks with a group of men along a stone street in Jerusalem. Imagine how paying attention to Him might change the way you walk through your own day.",
-    "Walking with the Apostles": "Jesus and His apostles walk together through sunflowers in the evening light. Think of the people whose companionship helps you keep following Him.",
-    "Little Friends": "Two young children lean close as Jesus holds them in His arms. Their embrace invites us to consider how we help children feel welcomed and loved.",
-    "Never Alone": "Jesus rests a hand on a woman's shoulder beside her hospital bed. A visit, a listening ear, or a quiet prayer can offer comfort during illness.",
-    "Now I See": "Jesus touches an older man's closed eyes while others watch nearby. Pause with the scene and consider what it means to seek His help with hope.",
-    "Palms": "Jesus raises His hands before a crowd carrying palm branches. The words from Isaiah offer the reassurance that we are remembered and loved.",
-    "Posterity": "An older man and woman stand close to Jesus beneath golden clouds. Consider the love shared across generations and the hope you bring to your family relationships.",
-    "Suffer the Little Children": "Children gather around Jesus beside olive trees, some holding small flowers. Their welcome invites us to give children patient attention and a place beside us.",
-    "The Garden": "Jesus kneels in prayer against an olive tree while others rest nearby. In a difficult hour, prayer can begin with simply turning to the Father.",
-    "The Good Shepherd": "Jesus smiles on a busy market street as daily life continues around Him. His care reaches into the ordinary needs of our lives.",
-    "The Living Christ": "A warm smile fills this portrait of Jesus against a golden sky. Take a quiet moment to consider what it means to draw closer to the living Christ.",
-    "Tranquil Morning": "Jesus and a young girl sit beside a pond, feeding ducks and ducklings at sunrise. A small, peaceful moment can remind us to slow down and notice what is good.",
-    "The Widow's Mite": "An older woman places a coin into an offering box while Jesus stands nearby. Her small offering invites reflection on giving with a willing heart.",
-    "Let It Go": "Jesus walks beside a troubled man with a hand resting on his shoulder. Consider a burden you might bring to Him in prayer today.",
-    "Be Still": "Jesus walks beside a man through a crowded city street. Even in a busy day, a brief pause can help us turn our attention toward Him.",
-    "The Savior's Invitation": "Jesus extends an open hand beside the water in the evening light. Consider one small step you could take toward Him today.",
-    "Rest in the Lord, Trust in the Lord": "Jesus reaches out among sunflowers as children run behind Him. The words on the picture invite us to rest in the Lord and practice trusting Him.",
-    "See That Ye Be Not Troubled": "Jesus holds out His hand in a landscape of storm clouds, lightning, and distant fires. The picture's words invite us to seek steadiness in Him when the world feels troubled.",
-    "Joy Cometh in the Morning": "A woman embraces a smiling child among flowers while Jesus stands nearby. The words about morning joy offer hope to hold beside seasons of sorrow.",
-    "Blessed Be the Name of the Lord": "Jesus sits beside a man among sunflowers. Job's words give us much to ponder about faith through both receiving and losing.",
-    "There Is a Green Hill Far Away": "A walled city and three crosses on a distant hill appear behind Jesus. The hymn's words invite a quiet moment to remember His sacrifice.",
-    "Make a Joyful Noise Unto God": "Children and adults laugh beside a stream where Jesus sits with them. Gratitude for shared joy is one way to begin praising God.",
-    "In the Name of the Lord of Hosts": "Jesus rests His hands on a boy holding a sling while an armored warrior stands behind them. The words from David's story invite reflection on courage and trust in the Lord.",
-    "There Is a Greater Victory Ahead": "Jesus extends His hand toward an armored warrior. The invitation to turn and follow Him asks us to consider what kind of victory we are seeking.",
-    "His Strength and Redeeming Power": "Jesus extends His hands above a woman in golden light and a bowed figure in shadow. The words on the picture invite reflection on His strength and redeeming power.",
-    "God Will Feel After You": "Jesus walks beside a stream toward a sunlit tree. The words about God's care invite us to keep seeking Him through the trials we face.",
-    "Jesus Christ": "This portrait shows Jesus in the warm light of sunset. Let the quiet image be an invitation to remember Him and the way He taught us to live."
+    const PICTURE_STORIES = {
+    "Divine Push": {
+        "paragraphs": [
+            "The woman keeps her hands on the handcart while two children rest inside. Behind her, Christ bends to help move its weight over the rocky ground. The long trail remains, but the effort is shared. In this tender picture of pioneer endurance, His help is close enough to touch the very burden she carries.",
+            "Mosiah 24:14–15 tells how the Lord strengthened Alma's people to bear their burdens before their deliverance came. That promise gives the scene its spiritual meaning. Sometimes help arrives as renewed strength, a willing neighbor, or enough courage for the next step. The children can rest while the adults keep going; care itself becomes part of the journey."
+        ],
+        "sources": [
+            {
+                "label": "Mosiah 24:14–15",
+                "href": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/24?lang=eng&id=p14-p15#p14"
+            }
+        ]
+    },
+    "Forever Friends": {
+        "paragraphs": [
+            "A forest path, an easy smile, and a hand resting on a shoulder make this meeting feel wonderfully familiar. The man's blue suit brings the scene into everyday life. Christ walks beside him as a companion, and their shared smile gives friendship a place in the picture of discipleship.",
+            "In John 15:12–15, Jesus asks His disciples to love one another and calls them His friends. His friendship includes truth, sacrifice, and a life shaped by love. The warmth here invites us to think of prayer as honest conversation and of following Him as a relationship that can deepen through ordinary days, as well as difficult ones."
+        ],
+        "sources": [
+            {
+                "label": "John 15:12–15",
+                "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/15?lang=eng&id=p12-p15#p12"
+            }
+        ]
+    },
+    "Forever": {
+        "paragraphs": [
+            "Christ kneels between two grieving people beside a grave marked Forever. He is down at their level, holding them close. The sunset reaches across the cemetery, but the sorrow has not been hurried away. The picture gives quiet space to both love and loss.",
+            "At Lazarus's death, Jesus wept with those who mourned, even as He testified of resurrection. John 11:25–35 holds those truths together: hope in Him and tears belong in the same story. For someone missing a loved one, this embrace can be a reminder that grief need not be faced alone and that Christ's promise reaches beyond the grave."
+        ],
+        "sources": [
+            {
+                "label": "John 11:25–35",
+                "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/11?lang=eng&id=p25-p35#p25"
+            }
+        ]
+    },
+    "Jesus and His Mother Mary": {
+        "paragraphs": [
+            "Mary leans into her Son's embrace beneath the olive trees. Their smiles give the scene the warmth of a family bond, with years of care suggested by the closeness of their faces and hands. Here the Savior who blesses multitudes also has time for His mother.",
+            "John 19:25–27 records His concern for Mary even from the cross, when He entrusted her to the beloved disciple's care. The peaceful embrace gives us a moment to linger over that enduring love. Honoring those who have cared for us can be a deeply practical part of following Christ: making time, listening carefully, and offering affection while we can."
+        ],
+        "sources": [
+            {
+                "label": "John 19:25–27",
+                "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/19?lang=eng&id=p25-p27#p25"
+            }
+        ]
+    },
+    "Jesus Baptized": {
+        "paragraphs": [
+            "John stands with Jesus in the river as people watch from the bank and a white dove appears above. The water and the attentive figures draw us toward a quiet act of obedience at the beginning of the Savior's ministry.",
+            "Matthew 3:13–17 tells of Jesus coming from Galilee to John at the Jordan. He chose baptism to fulfill righteousness; afterward the Spirit descended like a dove, and the Father declared His love for His Son. The scene gathers those witnesses around Jesus. Baptism becomes a willing beginning: turning toward God and following the path His Son has shown."
+        ],
+        "sources": [
+            {
+                "label": "Matthew 3:13–17",
+                "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/3?lang=eng&id=p13-p17#p13"
+            }
+        ]
+    },
+    "Jesus with His Disciples at Sea": {
+        "paragraphs": [
+            "Waves press against the wooden boat, and the men around Jesus look toward Him with urgency. His presence holds the center of the scene while the water remains restless. The contrast makes the disciples' need for help feel immediate.",
+            "In Mark 4:35–41, a storm fills the disciples' boat with water. They wake Jesus, He stills the wind and sea, and they marvel at His power. Their frightened question is part of the account, too. We can bring our own fear honestly to Him. This picture invites trust in the Savior who hears a cry for help, even before the storm has passed."
+        ],
+        "sources": [
+            {
+                "label": "Mark 4:35–41",
+                "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/4?lang=eng&id=p35-p41#p35"
+            }
+        ]
+    },
+    "Jesus Feeding People": {
+        "paragraphs": [
+            "Bread and fish pass from Christ's hands toward people gathered on the hillside. Faces, baskets, and outstretched hands bring a great miracle close to the scale of one person's hunger. The crowd is made up of people who each need to eat.",
+            "John 6:5–13 begins with a question about feeding the multitude and a boy's five barley loaves and two fish. Jesus gives thanks, the people are fed, and the remaining bread fills twelve baskets. His abundance meets an ordinary bodily need. Sharing a meal, noticing an empty cupboard, or welcoming someone to our table can become a small, sincere response to that generosity."
+        ],
+        "sources": [
+            {
+                "label": "John 6:5–13",
+                "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/6?lang=eng&id=p5-p13#p5"
+            }
+        ]
+    },
+    "Jesus Feeding the Fish": {
+        "paragraphs": [
+            "Small fish gather in the shallows as Jesus scatters food into the water. The gentle movement, the basket, and the people watching from the bank turn our attention to life that could easily pass unnoticed beneath the surface.",
+            "This playful moment opens a reflection on care for God's creation. In Matthew 6:26–30, Jesus asks His listeners to notice birds and flowers as they learn to trust their Heavenly Father. Looking closely can become a form of gratitude. The scene encourages a kindness that reaches into small daily choices, including how we treat living things and the places we share with them."
+        ],
+        "sources": [
+            {
+                "label": "Matthew 6:26–30",
+                "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6?lang=eng&id=p26-p30#p26"
+            }
+        ]
+    },
+    "Joy Beside the Lake": {
+        "paragraphs": [
+            "Jesus smiles beside a busy lakeside village, with nets, boats, and the work of the shore around Him. The setting gives joy an ordinary home. It belongs among neighbors and daily tasks, not only at the end of a difficult story.",
+            "Jesus told His disciples that He wanted His joy to remain in them and their joy to be full in John 15:9–12. He connected that joy with abiding in His love and loving one another. The smile in this picture invites a grateful pause: companionship, honest work, and simple pleasures can all become occasions to receive and share the goodness of God."
+        ],
+        "sources": [
+            {
+                "label": "John 15:9–12",
+                "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/15?lang=eng&id=p9-p12#p9"
+            }
+        ]
+    },
+    "Jesus in Africa": {
+        "paragraphs": [
+            "Children and adults gather closely around Jesus in the shade of a tree. Patterned clothing, nearby homes, and the circle of attentive faces give this African setting warmth and life. Christ sits among the people, within their conversation and companionship.",
+            "The scene brings His invitation into a community far beyond the places named in the Gospel accounts. In 2 Nephi 26:33, the invitation to come to Him includes everyone, and all are alike unto God. No nation or people stands outside His love. We can practice that welcome ourselves by honoring each person's dignity and making room for their voice."
+        ],
+        "sources": [
+            {
+                "label": "2 Nephi 26:33",
+                "href": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/26?lang=eng&id=p33#p33"
+            }
+        ]
+    },
+    "The Healing Touch of Jesus": {
+        "paragraphs": [
+            "Jesus bends close to a man in worn clothing and reaches toward his face. The man's lowered posture and Christ's careful attention make the encounter personal. Before our eyes settle on illness, the picture asks us to notice the person being met with compassion.",
+            "Mark 1:40–42 tells of a man with leprosy who asked whether Jesus was willing to make him clean. Jesus responded with compassion, touch, and healing. His willingness matters as much as His power in this encounter. For those who have felt avoided or reduced to a condition, the story offers the dignity of being seen and approached with love."
+        ],
+        "sources": [
+            {
+                "label": "Mark 1:40–42",
+                "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/1?lang=eng&id=p40-p42#p40"
+            }
+        ]
+    },
+    "Learning to Forgive": {
+        "paragraphs": [
+            "An arm around a shoulder keeps this conversation close. Jesus gestures as the man beside Him listens, and the quiet exchange suggests teaching offered with patience. Learning a difficult way of living can begin in just such a moment of attention.",
+            "In Matthew 18:21–35, Peter asks how often he should forgive. Jesus answers beyond Peter's proposed limit and tells of a servant who receives great mercy but refuses it to another. The teaching asks us to remember mercy received as we learn to offer mercy ourselves. Forgiveness can take patient work; Christ's example gives that work a direction rooted in compassion rather than keeping score."
+        ],
+        "sources": [
+            {
+                "label": "Matthew 18:21–35",
+                "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/18?lang=eng&id=p21-p35#p21"
+            }
+        ]
+    },
+    "Jesus Walking Jerusalem": {
+        "paragraphs": [
+            "Jesus moves through a narrow stone street among the people of the city. The walls, doorways, and seated figure at the side keep the setting human in scale. His ministry comes into places where people live, pass one another, and carry their concerns.",
+            "Luke 8:1 describes Jesus traveling through cities and villages, proclaiming the good news of God's kingdom with the Twelve. Along this Jerusalem street, we can picture that ministry at walking pace, close enough for a person to approach Him. It also turns our attention toward our own familiar streets, where someone may need a greeting, a listening ear, or help that requires us to stop."
+        ],
+        "sources": [
+            {
+                "label": "Luke 8:1",
+                "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/8?lang=eng&id=p1#p1"
+            }
+        ]
+    },
+    "Walking with the Apostles": {
+        "paragraphs": [
+            "Sunflowers line the path as Jesus walks with His companions in the evening light. Faces turn toward one another, and the shared smiles make the journey feel full of friendship. The bright field gives this devotional scene a joyful character.",
+            "In John 15:12–17, Jesus calls His disciples friends and commands them to love one another. Their calling includes service and sacrifice, yet it is held within His love. The picture lets us dwell on the companionship of discipleship: people learning together, encouraging one another, and discovering that following Christ can fill a shared life with gladness."
+        ],
+        "sources": [
+            {
+                "label": "John 15:12–17",
+                "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/15?lang=eng&id=p12-p17#p12"
+            }
+        ]
+    },
+    "Little Friends": {
+        "paragraphs": [
+            "Two children wrap their arms around Jesus while He holds them securely. One nestles close to His face; the other rests against His shoulder. His broad smile makes their welcome unmistakable. Nothing in the moment suggests that they need to be older or more important to belong.",
+            "Mark 10:13–16 tells how Jesus welcomed children when others tried to keep them away, then took them in His arms and blessed them. The embrace here gives that welcome a tender immediacy. Children deserve our attention, patience, and delight. Receiving them kindly is one way to honor the Savior who made time for them."
+        ],
+        "sources": [
+            {
+                "label": "Mark 10:13–16",
+                "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng&id=p13-p16#p13"
+            }
+        ]
+    },
+    "Never Alone": {
+        "paragraphs": [
+            "A hospital room surrounds the resting woman with the ordinary signs of medical care. Jesus sits beside her, His hand gently on her shoulder. The quiet bedside presence brings the picture's promise close to anyone who knows the long hours of illness or waiting.",
+            "Alma 7:11–12 teaches that Christ took upon Himself pain, sickness, and infirmity so He could succor His people. The modern setting carries that assurance into a place many families recognize. His compassion can be remembered alongside the care of nurses, physicians, loved ones, and friends. A visit or a patient hour beside someone may help them feel less alone."
+        ],
+        "sources": [
+            {
+                "label": "Alma 7:11–12",
+                "href": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng&id=p11-p12#p11"
+            }
+        ]
+    },
+    "Now I See": {
+        "paragraphs": [
+            "Jesus reaches toward an older man's closed eyes while others watch from the stone passageway. The encounter is close and unhurried, with the man's face turned toward the One helping him. The picture draws our attention to the wonder of sight and the tenderness of personal care.",
+            "The title recalls the witness of the man healed in John 9:1–7, 25. Jesus sent him to wash in the pool of Siloam, and he returned seeing. Later, amid questioning, he held to what he knew of the change in his life. His story invites us to value honest testimony and to keep learning from the light we have received."
+        ],
+        "sources": [
+            {
+                "label": "John 9:1–7, 25",
+                "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/9?lang=eng&id=p1-p7,p25#p1"
+            }
+        ]
+    },
+    "Palms": {
+        "paragraphs": [
+            "Palm branches rise behind Jesus as He lifts His open hands. The picture places two meanings of palms together: the branches of welcome and the hands extended toward us. Its inscription leads us to Isaiah's words about being remembered by the Lord.",
+            "In Isaiah 49:14–16, Zion fears that God has forgotten her. The Lord answers with a mother's compassion and the image of His people graven upon His hands. That assurance gives the open hands here their tenderness. When we feel overlooked, this passage invites us to return to a love that remembers us personally and faithfully."
+        ],
+        "sources": [
+            {
+                "label": "Isaiah 49:14–16",
+                "href": "https://www.churchofjesuschrist.org/study/scriptures/ot/isa/49?lang=eng&id=p14-p16#p14"
+            }
+        ]
+    },
+    "Posterity": {
+        "paragraphs": [
+            "An older man and woman stand smiling with Christ's arms around their shoulders. Golden light opens behind them, and a distant gathering stretches across the background. Their familiar clothing keeps the joy personal, like the pleasure of being welcomed among people we love.",
+            "Doctrine and Covenants 130:2 teaches that the relationships we enjoy here can continue with eternal glory. The picture gives that hope the warmth of recognizable faces and shared affection. We can cherish those whose love has shaped us and pass something of that love to another generation through patience, faithfulness, and everyday acts of care."
+        ],
+        "sources": [
+            {
+                "label": "Doctrine and Covenants 130:2",
+                "href": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/130?lang=eng&id=p2#p2"
+            }
+        ]
+    },
+    "Suffer the Little Children": {
+        "paragraphs": [
+            "Six children gather around Jesus beneath the olive trees, two holding small white flowers. They have room to sit close, smile, and be themselves. His open gesture welcomes their company, and the scene feels as peaceful as an afternoon spent with someone who is glad to see them.",
+            "In Mark 10:13–16, the word suffer means to allow: Jesus tells His disciples to let the children come. He receives and blesses them rather than treating them as an interruption. The flowers and smiling faces help us linger over that welcome. Giving a child our full attention can turn a simple moment into a lasting experience of love."
+        ],
+        "sources": [
+            {
+                "label": "Mark 10:13–16",
+                "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng&id=p13-p16#p13"
+            }
+        ]
+    },
+    "The Garden": {
+        "paragraphs": [
+            "Jesus kneels against an olive tree in the darkness, His hands clasped and His face drawn with sorrow. Three companions rest behind Him. The stillness of the garden makes His solitary prayer feel especially weighty.",
+            "Matthew 26:36–46 records His prayer in Gethsemane, His request that the disciples watch with Him, and His submission to the Father's will. This is a moment for reverent attention to the Savior's willing sacrifice. His suffering gives depth to our trust in Him: the One to whom we bring anguish has entered anguish Himself, and His love did not turn away from the work of redemption."
+        ],
+        "sources": [
+            {
+                "label": "Matthew 26:36–46",
+                "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng&id=p36-p46#p36"
+            }
+        ]
+    },
+    "The Good Shepherd": {
+        "paragraphs": [
+            "The Savior's smile meets us in the middle of a busy market street. People, stalls, and a laden donkey remain behind Him, but His face is the point of welcome. The title brings shepherding into a scene of ordinary human life.",
+            "In John 10:11–15, Jesus calls Himself the Good Shepherd who knows His sheep and gives His life for them. His care is personal and costly. Here that teaching can be felt in the simple thought of being recognized amid a crowd. Following His voice means learning to trust His love and to extend attentive care to people who might otherwise go unnoticed."
+        ],
+        "sources": [
+            {
+                "label": "John 10:11–15",
+                "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng&id=p11-p15#p11"
+            }
+        ]
+    },
+    "The Living Christ": {
+        "paragraphs": [
+            "Light fills the sky behind this close portrait, but the warmth of Christ's face holds our attention. His smile gives the title a feeling of welcome and life. We are invited to think of a Savior whose relationship with His disciples continues beyond the events of His mortal ministry.",
+            "John 20:19–20 tells how the risen Jesus came to His disciples, offered peace, and showed them His hands and side. Their fear gave way to gladness when they saw Him. This portrait is a quiet place to remember that joyful witness and the Christian hope it carries: Jesus Christ lives, and His love remains a source of peace."
+        ],
+        "sources": [
+            {
+                "label": "John 20:19–20",
+                "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/20?lang=eng&id=p19-p20#p19"
+            }
+        ]
+    },
+    "Tranquil Morning": {
+        "paragraphs": [
+            "A girl sits beside Jesus at the water's edge while ducks and ducklings gather for food. Their feet rest near the pond, and the rising sun spreads across the water. His arm around her and their shared smiles make this small activity feel precious.",
+            "In Matthew 6:26–30, Jesus draws attention to birds and flowers when teaching about the Father's care. The picture turns that attentiveness into a quiet morning together. Wonder often begins with something small: a moving ripple, a hungry duckling, a child's delight. Taking time to notice can help gratitude become part of the way we live."
+        ],
+        "sources": [
+            {
+                "label": "Matthew 6:26–30",
+                "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6?lang=eng&id=p26-p30#p26"
+            }
+        ]
+    },
+    "The Widow's Mite": {
+        "paragraphs": [
+            "The older woman's hand reaches toward the offering box with a small coin, while other people stand nearby with their gifts. Jesus is close in the composition, drawing our attention to someone whose offering might otherwise seem slight.",
+            "Mark 12:41–44 records that Jesus watched the treasury and called His disciples to notice a poor widow's two small coins. He understood what her gift cost her. The account encourages a deeper kind of attention: generosity cannot be measured by size alone. A modest gift, a careful act of service, or time freely given may carry love that is easy to miss."
+        ],
+        "sources": [
+            {
+                "label": "Mark 12:41–44",
+                "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/12?lang=eng&id=p41-p44#p41"
+            }
+        ]
+    },
+    "Let It Go": {
+        "paragraphs": [
+            "The man beside Jesus looks weighed down as they walk a sunlit hillside path. Christ rests a hand on his shoulder and turns toward him. The gesture offers company while the man's expression remains thoughtful; the picture allows a burden to be acknowledged before it is released.",
+            "Matthew 11:28–30 invites the weary to come to Christ and learn from Him. The invitation is gentle, and it asks for a relationship of trust. Letting go may begin with an honest prayer, accepting help, or taking one faithful step instead of trying to solve everything at once. The road ahead is still there, but the man no longer walks it alone."
+        ],
+        "sources": [
+            {
+                "label": "Matthew 11:28–30",
+                "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/11?lang=eng&id=p28-p30#p28"
+            }
+        ]
+    },
+    "Be Still": {
+        "paragraphs": [
+            "The city keeps moving around a man in a dark T-shirt and the Savior walking beside him. Christ's hand rests on his shoulder as they look toward one another. Their conversation creates a small place of attention within the crowd.",
+            "Psalm 46:1–10 speaks of God's refuge amid upheaval and calls His people to be still and know Him. The modern street brings that invitation into a busy day. Stillness may begin as a moment of prayer or a deliberate pause before the next demand. We can learn to turn toward God while life continues around us, receiving enough peace to meet the next person with care."
+        ],
+        "sources": [
+            {
+                "label": "Psalm 46:1–10",
+                "href": "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng&id=p1-p10#p1"
+            }
+        ]
+    },
+    "The Savior's Invitation": {
+        "paragraphs": [
+            "An open hand reaches toward us beside the water, with the evening sky glowing behind Christ. His face and gesture make the invitation personal. There is space in the picture for the viewer to become part of the encounter.",
+            "Matthew 11:28–30 records His invitation to those who labor and are burdened. Coming to Him includes learning from His meekness and trusting His care. The outstretched hand encourages a beginning wherever we are today. We do not need perfect words for a first prayer or complete understanding before we take a sincere step toward Him."
+        ],
+        "sources": [
+            {
+                "label": "Matthew 11:28–30",
+                "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/11?lang=eng&id=p28-p30#p28"
+            }
+        ]
+    },
+    "Rest in the Lord, Trust in the Lord": {
+        "paragraphs": [
+            "Children run along a path through sunflowers while Christ extends His hand toward us. Warm light, growing things, and the freedom of their movement give the scene a sense of welcome. Rest here has room for gladness and life.",
+            "Psalm 37:3–7 joins trust with doing good, committing our way to God, and waiting patiently for Him. The picture draws those ideas together in a bright invitation. Trust can free us to keep doing the good that is within reach, even when we cannot settle every concern. A moment of delight may become one way to receive the day as a gift."
+        ],
+        "sources": [
+            {
+                "label": "Psalm 37:3–7",
+                "href": "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/37?lang=eng&id=p3-p7#p3"
+            }
+        ]
+    },
+    "See That Ye Be Not Troubled": {
+        "paragraphs": [
+            "Lightning, dark clouds, and distant fires fill the landscape behind Jesus. His open hand reaches into the foreground, nearer than the turmoil. The contrast gives the picture its steady center without hiding the troubled world around Him.",
+            "In Matthew 24:4–8, Jesus warns His disciples about deception and news of wars, while cautioning them against alarm and hasty conclusions. His steady presence in the picture gives those words a personal warmth. We can seek trustworthy understanding, care for those affected by suffering, and continue following Christ without letting every frightening report decide the condition of our hearts."
+        ],
+        "sources": [
+            {
+                "label": "Matthew 24:4–8",
+                "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/24?lang=eng&id=p4-p8#p4"
+            }
+        ]
+    },
+    "Joy Cometh in the Morning": {
+        "paragraphs": [
+            "A woman and child hold each other close among the flowers, their faces bright with affection. Jesus stands behind them with a smile. The embrace makes joy feel tangible: the warmth of another person, a welcome held for a little longer.",
+            "Psalm 30:5, 11–12 moves from weeping to renewed gladness and thanksgiving. Its hope gives the morning light in this picture a deeper meaning. Joy can return to a life that has known sorrow, sometimes in quiet and unexpected ways. We can cherish those moments without rushing anyone's grief or placing a deadline on healing."
+        ],
+        "sources": [
+            {
+                "label": "Psalm 30:5, 11–12",
+                "href": "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/30?lang=eng&id=p5,p11-p12#p5"
+            }
+        ]
+    },
+    "Blessed Be the Name of the Lord": {
+        "paragraphs": [
+            "Jesus sits among sunflowers with His arm around another man. The man's face turns toward Him, and their closeness gives warmth to the solemn words above them. The scene invites us to think about companionship in seasons when gratitude and sorrow meet.",
+            "Job 1:20–22 places Job's blessing of the Lord alongside his grief after devastating loss. His worship does not erase his mourning. Bringing these words beside Christ's embrace offers a reflection on faith that can speak honestly through pain. We may hold tightly to God while also receiving comfort, asking difficult questions, and accepting the help of people who care."
+        ],
+        "sources": [
+            {
+                "label": "Job 1:20–22",
+                "href": "https://www.churchofjesuschrist.org/study/scriptures/ot/job/1?lang=eng&id=p20-p22#p20"
+            }
+        ]
+    },
+    "There Is a Green Hill Far Away": {
+        "paragraphs": [
+            "Christ stands before a walled city with three crosses on a distant hill. The quiet foreground and the far-off crosses bring His living presence and His sacrifice into one reflective composition. The green mantle and subdued expression keep the mood reverent.",
+            "Cecil Frances Alexander's hymn There Is a Green Hill Far Away directs our thoughts to the Savior's redeeming love. John 19:16–20 records His Crucifixion at Golgotha, near the city. The picture invites a grateful response to that sacrifice: trust in Him, remembrance of His love, and a willingness to let that love shape how we treat others."
+        ],
+        "sources": [
+            {
+                "label": "There Is a Green Hill Far Away",
+                "href": "https://www.churchofjesuschrist.org/study/manual/hymns/there-is-a-green-hill-far-away?lang=eng"
+            },
+            {
+                "label": "John 19:16–20",
+                "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/19?lang=eng&id=p16-p20#p16"
+            }
+        ]
+    },
+    "Make a Joyful Noise Unto God": {
+        "paragraphs": [
+            "Laughter passes through the gathering beside the stream. Children lean close to Jesus, and the adults share their delight among the flowers. The scene gives us a welcome reminder that joy and reverence can belong together.",
+            "Psalm 66:1–5 calls the whole earth to praise God and come see His works. Here the invitation finds an echo in shared happiness and gratitude for life. Praise can be sung, spoken, or lived through generous attention to another person. The picture encourages us to receive wholesome joy gladly and let gratitude become something we share."
+        ],
+        "sources": [
+            {
+                "label": "Psalm 66:1–5",
+                "href": "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/66?lang=eng&id=p1-p5#p1"
+            }
+        ]
+    },
+    "In the Name of the Lord of Hosts": {
+        "paragraphs": [
+            "The boy holds a sling while an armored warrior towers behind him. Christ's hands rest on the boy's shoulders, bringing reassurance into a scene of danger. The composition gives visible form to the courage of trusting the Lord when the odds seem overwhelming.",
+            "In 1 Samuel 17:40–47, David faces Goliath with a sling and confidence in the God of Israel. The picture brings that ancient testimony together with a Christian reflection on the Savior's sustaining presence. Its strongest invitation is to trust God while acting faithfully with the means we have, rather than measuring every challenge only by its size."
+        ],
+        "sources": [
+            {
+                "label": "1 Samuel 17:40–47",
+                "href": "https://www.churchofjesuschrist.org/study/scriptures/ot/1-sam/17?lang=eng&id=p40-p47#p40"
+            }
+        ]
+    },
+    "There Is a Greater Victory Ahead": {
+        "paragraphs": [
+            "A heavily armed warrior stands before the Savior's outstretched hand. The spear and armor suggest a life prepared for conflict; Christ offers another direction with a gentle, open gesture. The picture places a choice before us rather than showing a battle won.",
+            "The words from Matthew 11:28–30 turn our attention toward rest, meekness, and learning from Jesus. In this scene, a greater victory can be understood as accepting His invitation and allowing a life to change. Courage may be needed to loosen our grip on pride or anger and choose the patient work of becoming more like Him."
+        ],
+        "sources": [
+            {
+                "label": "Matthew 11:28–30",
+                "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/11?lang=eng&id=p28-p30#p28"
+            }
+        ]
+    },
+    "His Strength and Redeeming Power": {
+        "paragraphs": [
+            "The picture moves from a bowed figure in shadow toward a woman rising into golden light beneath Christ's welcoming arms. That upward movement gives a visual language to hope and renewal. The Savior's open hands remain the center of the change.",
+            "In Overcome the World and Find Rest, President Russell M. Nelson taught that a covenant relationship with Jesus Christ gives access to His strengthening and redeeming power. He also made clear that covenants do not remove all opposition. We can seek that strength through faithful connection with Him, remembering that spiritual growth can continue even while difficult circumstances remain."
+        ],
+        "sources": [
+            {
+                "label": "Overcome the World and Find Rest",
+                "href": "https://www.churchofjesuschrist.org/study/general-conference/2022/10/47nelson?lang=eng"
+            }
+        ]
+    },
+    "God Will Feel After You": {
+        "paragraphs": [
+            "Jesus walks beside a stream toward a sunlit tree, with rough ground still beneath His feet. The path and the flowing water give the picture a sense of continuing onward. Its light offers hope beside words that speak seriously about trials.",
+            "In Stand Fast through the Storms of Life, John Taylor recalls Joseph Smith teaching the Twelve that faith would be tested deeply. The chapter also preserves Joseph's confidence that God would support His people in affliction. Read together, these teachings encourage faithful endurance sustained by divine help. As we keep walking with Christ, we can offer companionship to those whose present path is hard."
+        ],
+        "sources": [
+            {
+                "label": "Stand Fast through the Storms of Life",
+                "href": "https://www.churchofjesuschrist.org/study/manual/teachings-joseph-smith/chapter-19?lang=eng"
+            }
+        ]
+    },
+    "Jesus Christ": {
+        "paragraphs": [
+            "The portrait brings us close to the Savior's face, with the evening landscape softly behind Him. His attentive gaze and gentle expression invite a quiet pause. There is no crowd or dramatic action to follow, only the opportunity to turn our attention toward Him.",
+            "In John 14:6–9, Jesus teaches that He is the way to the Father and that knowing Him reveals the Father. A portrait can begin a moment of reflection, while His words and life deepen it. As we study His compassion, truthfulness, and willing service, we come to know more of the love He invites us to receive and practice."
+        ],
+        "sources": [
+            {
+                "label": "John 14:6–9",
+                "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/14?lang=eng&id=p6-p9#p6"
+            }
+        ]
+    }
 };
 
     const FEATURED = {
@@ -134,11 +567,11 @@
             .fc-art-study-button{position:absolute;left:22px;bottom:18px;z-index:1002;min-height:42px;padding:8px 15px;border:1px solid var(--fc-line-strong);border-radius:999px;background:var(--fc-bg-warm);color:var(--fc-gold-light);font:inherit;font-size:.82rem;font-weight:700;cursor:pointer;backdrop-filter:blur(8px)}
             .fc-art-study-button:hover,.fc-art-study-button:focus-visible{background:var(--fc-surface);color:var(--fc-cream);outline:none}
             .fc-art-study-drawer{position:absolute;left:18px;right:18px;bottom:72px;z-index:1003;display:none;max-width:780px;margin:0 auto;padding:16px;border:1px solid var(--fc-line);border-radius:14px;background:var(--fc-bg-deep);box-shadow:var(--fc-shadow);cursor:default}
-            #imageModal .fc-art-viewer-actions{position:absolute;left:max(12px,env(safe-area-inset-left));right:max(12px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));display:grid;grid-template-columns:1.4fr 1fr .8fr;gap:8px;max-width:560px;margin:0 auto;z-index:1002;cursor:default}
-            #imageModal .fc-art-viewer-actions>*{position:static;transform:none;box-sizing:border-box;display:flex;align-items:center;justify-content:center;min-width:0;width:100%;height:44px;min-height:44px;margin:0;padding:6px;border:1px solid var(--fc-line-strong);border-radius:999px;background:var(--fc-bg-warm);color:var(--fc-cream);font:inherit;font-size:.78rem;font-weight:700;line-height:1.2;text-align:center;text-decoration:none;white-space:nowrap;cursor:pointer;backdrop-filter:blur(8px)}
+            #imageModal .fc-art-viewer-actions{position:absolute;left:max(12px,env(safe-area-inset-left));right:max(12px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));display:grid;grid-template-columns:1.2fr 1.1fr 1fr;gap:8px;max-width:560px;margin:0 auto;z-index:1002;cursor:default}
+            #imageModal .fc-art-viewer-actions>*{position:static;transform:none;box-sizing:border-box;display:flex;align-items:center;justify-content:center;min-width:0;width:100%;height:auto;min-height:44px;margin:0;padding:6px;border:1px solid var(--fc-line-strong);border-radius:999px;background:var(--fc-bg-warm);color:var(--fc-cream);font:inherit;font-size:.78rem;font-weight:700;line-height:1.2;text-align:center;text-decoration:none;white-space:normal;overflow-wrap:anywhere;cursor:pointer;backdrop-filter:blur(8px)}
             #imageModal .fc-art-viewer-actions>*:hover,#imageModal .fc-art-viewer-actions>*:focus-visible{background:var(--fc-surface);color:var(--fc-cream);outline:3px solid var(--fc-line-strong);outline-offset:2px}
-            #imageModal .image-counter{bottom:calc(max(18px,env(safe-area-inset-bottom)) + 52px);font-size:.8rem;line-height:1.2;pointer-events:none;width:fit-content;padding:4px 8px;border-radius:999px;background:var(--fc-bg-warm)}
-            #imageModal .fc-art-study-drawer{bottom:calc(max(18px,env(safe-area-inset-bottom)) + 68px + .96rem);max-height:calc(100dvh - 120px);overflow-y:auto;box-sizing:border-box}
+            #imageModal .image-counter{bottom:calc(max(18px,env(safe-area-inset-bottom)) + var(--fc-art-actions-height,44px) + 8px);font-size:.8rem;line-height:1.2;pointer-events:none;width:fit-content;padding:4px 8px;border-radius:999px;background:var(--fc-bg-warm)}
+            #imageModal .fc-art-study-drawer{bottom:calc(max(18px,env(safe-area-inset-bottom)) + var(--fc-art-actions-height,44px) + 24px + .96rem);max-height:calc(100dvh - max(18px,env(safe-area-inset-bottom)) - var(--fc-art-actions-height,44px) - 24px - .96rem - 18px);overflow-y:auto;box-sizing:border-box}
             .fc-art-study-drawer.open{display:block}
             .fc-art-study-title{margin:0 0 8px;color:var(--fc-gold-light);font-family:var(--fc-font-display);font-size:1.15rem}
             .fc-art-study-copy{margin:0 0 16px;color:var(--fc-text);font-size:.84rem;line-height:1.55}
@@ -159,7 +592,7 @@
         const hint = document.createElement('p');
         hint.className = 'fc-art-study-hint';
         hint.setAttribute('data-focuschrist-art-study-hint', 'true');
-        hint.textContent = 'Open an artwork to view it full-size, study its gospel theme on the official Church website, or ask follow-up questions without losing your place in the gallery.';
+        hint.textContent = 'Open a picture and choose About this picture to read its story, explore the scripture behind it, and linger with what speaks to you.';
         gallery.insertAdjacentElement('beforebegin', hint);
     }
 
@@ -184,6 +617,31 @@
         window.history.replaceState(null, '', url.pathname + '?' + url.searchParams.toString());
     }
 
+    function appendLinkedText(parent, text, sources) {
+        let remaining = text;
+        while (remaining) {
+            const matches = sources.map(function (source) {
+                return { source: source, index: remaining.indexOf(source.label) };
+            }).filter(function (match) { return match.index >= 0; });
+            matches.sort(function (a, b) {
+                return a.index - b.index || b.source.label.length - a.source.label.length;
+            });
+            const match = matches[0];
+            if (!match) {
+                parent.appendChild(document.createTextNode(remaining));
+                break;
+            }
+            parent.appendChild(document.createTextNode(remaining.slice(0, match.index)));
+            const link = document.createElement('a');
+            link.href = match.source.href;
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+            link.textContent = match.source.label;
+            parent.appendChild(link);
+            remaining = remaining.slice(match.index + match.source.label.length);
+        }
+    }
+
     function buildDrawer(drawer, route) {
         drawer.replaceChildren();
         const title = document.createElement('h3');
@@ -191,27 +649,28 @@
         title.textContent = route.caption;
         drawer.appendChild(title);
 
-        const copy = document.createElement('p');
-        copy.className = 'fc-art-study-copy';
-        copy.textContent = PICTURE_REFLECTIONS[route.caption] || document.getElementById('modalImage').alt;
-        drawer.appendChild(copy);
+        const story = PICTURE_STORIES[route.caption];
+        const paragraphs = story ? story.paragraphs : [document.getElementById('modalImage').alt];
+        const sources = story ? story.sources : [];
+        paragraphs.forEach(function (paragraph) {
+            const copy = document.createElement('p');
+            copy.className = 'fc-art-study-copy';
+            appendLinkedText(copy, paragraph, sources);
+            drawer.appendChild(copy);
+        });
 
         const links = document.createElement('div');
         links.className = 'fc-art-study-links';
 
-        const official = document.createElement('a');
-        official.href = officialSearch(route.query);
-        official.target = '_blank';
-        official.rel = 'noopener noreferrer';
-        official.textContent = 'Church study resources';
-        official.setAttribute('data-art-official-study', 'true');
-        links.appendChild(official);
-
-        const ask = document.createElement('a');
-        ask.href = askUrl(route);
-        ask.textContent = 'Ask about this picture';
-        ask.setAttribute('data-art-ask', 'true');
-        links.appendChild(ask);
+        sources.forEach(function (source) {
+            const link = document.createElement('a');
+            link.href = source.href;
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+            link.textContent = source.label;
+            link.setAttribute('data-art-picture-source', 'true');
+            links.appendChild(link);
+        });
 
         if (route.focus) {
             const focus = document.createElement('a');
@@ -264,7 +723,8 @@
         });
         button.setAttribute('aria-expanded', 'false');
 
-        drawer.addEventListener('click', function (event) { event.stopPropagation(); });
+        // Let the shared scripture reader receive source-link clicks.
+        // The artwork backdrop closes only when its own surface is clicked.
         const actions = document.createElement('div');
         actions.className = 'fc-art-viewer-actions';
         const save = document.createElement('a');
@@ -278,8 +738,20 @@
         modal.appendChild(actions);
         modal.appendChild(drawer);
 
+        function syncActionLayout() {
+            const height = Math.ceil(actions.getBoundingClientRect().height);
+            if (height > 0) modal.style.setProperty('--fc-art-actions-height', height + 'px');
+        }
+        if (typeof ResizeObserver === 'function') {
+            new ResizeObserver(syncActionLayout).observe(actions);
+        }
+        window.addEventListener('resize', syncActionLayout);
+
         const observer = new MutationObserver(function () {
-            if (modal.classList.contains('active')) refreshModalRoute(drawer);
+            if (modal.classList.contains('active')) {
+                syncActionLayout();
+                refreshModalRoute(drawer);
+            }
             else {
                 drawer.classList.remove('open');
                 button.setAttribute('aria-expanded', 'false');

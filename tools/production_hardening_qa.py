@@ -385,9 +385,12 @@ def main() -> int:
     art_router = read("art-study-router.js", errors)
     art_ask = read("art-ask-context.js", errors)
     require(art_router, "art-study-router.js", (
-        "About this picture", "Church study resources", "Ask about this picture",
+        "About this picture", "PICTURE_STORIES", "appendLinkedText", "data-art-picture-source",
         "returnUrlForCaption", "art.html?art=", "data-focuschrist-art-return-restored"
     ), errors)
+    if "ask.setAttribute('data-art-ask'" in art_router or "ask.href = askUrl(route)" in art_router:
+        errors.append("art-study-router.js must provide prepared stories without a drawer Ask action")
+
     require(art_ask, "art-ask-context.js", (
         "Studying artwork", "Return to this artwork", "data-focuschrist-art-return-float",
         "data-focuschrist-art-prefill", "data-focuschrist-art-ask-context"

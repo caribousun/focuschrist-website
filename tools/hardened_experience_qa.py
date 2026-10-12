@@ -212,8 +212,9 @@ def main() -> int:
 
     require(art_router, "art-study-router.js", (
         "About this picture",
-        "Ask about this picture",
-        "Church study resources",
+        "PICTURE_STORIES",
+        "appendLinkedText",
+        "data-art-picture-source",
         "returnUrlForCaption",
         "data-focuschrist-art-return-restored",
         "data-focuschrist-art-study-button",
@@ -221,6 +222,9 @@ def main() -> int:
         "document.readyState === 'loading'",
         "data-focuschrist-art-study-router",
     ), errors)
+
+    if "ask.setAttribute('data-art-ask'" in art_router or "ask.href = askUrl(route)" in art_router:
+        errors.append("art-study-router.js must provide prepared stories without a drawer Ask action")
 
     require(watch_enrichment, "watch-study-enrichment.js", (
         "watch-mini-media",
