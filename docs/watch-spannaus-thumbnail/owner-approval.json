@@ -1,0 +1,18 @@
+{
+  "status": "OWNER_APPROVED_EXACT_SQUARE",
+  "sha256": "4c0e9bd8ab7d06d588c78c35e3862705313fd869d11baac501e6525d38a56154",
+  "owner": "Wyatt",
+  "exact_messages": [
+    "I think the thumb looks goo",
+    "good",
+    "its a fun smile that doesn't look romantic or creepy"
+  ],
+  "scope": "Exact displayed square thumbnail, including joyful friendly expression, scene, colors, distinct clothing and focusChrist.com. Proposed gaze edit cancelled before generation. Approval does not include unfinished video or an unseen derivative.",
+  "executor": "Albert using image generation",
+  "finished_reviewers": [
+    "Fermi",
+    "Newton",
+    "Albert"
+  ],
+  "review_limits": "Fermi and Newton retained uncertainty about precise reciprocal pupil targets. Wyatt explicitly accepted this exact image; their historical findings are not rewritten as unconditional gaze approval."
+}

@@ -2,6 +2,7 @@
 import argparse
 import datetime
 import html
+import hashlib
 import json
 import re
 from pathlib import Path
@@ -10,6 +11,23 @@ from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 START = '<!-- WATCH SHORTS START -->'
 END = '<!-- WATCH SHORTS END -->'
+
+def thumbnail_size(record, root=ROOT):
+    """Accept native video previews or exact reviewed local PNG bytes."""
+    source = record['thumbnail']
+    u = urlsplit(source)
+    if u.scheme == 'https' and u.netloc == 'i.ytimg.com' and u.path.startswith('/vi/' + record['id'] + '/'):
+        return 405, 720
+    assert re.fullmatch(r'assets/shorts/[A-Za-z0-9_-]+\.png', source), 'Invalid local thumbnail path'
+    path = root / source
+    assert path.resolve().is_relative_to(root.resolve()), 'Thumbnail escapes repository'
+    content = path.read_bytes()
+    assert hashlib.sha256(content).hexdigest() == record.get('thumbnail_sha256'), 'Local thumbnail hash mismatch'
+    assert content[:8] == b'\x89PNG\r\n\x1a\n' and content[12:16] == b'IHDR', 'Local thumbnail must be PNG'
+    width, height = int.from_bytes(content[16:20], 'big'), int.from_bytes(content[20:24], 'big')
+    assert 0 < width <= 8192 and 0 < height <= 8192, 'Invalid thumbnail dimensions'
+    assert [width, height] == record.get('thumbnail_dimensions'), 'Local thumbnail dimensions mismatch'
+    return width, height
 
 def render(data):
     assert data['channel'] == 'https://www.youtube.com/@theRisen636/shorts'
@@ -20,12 +38,11 @@ def render(data):
     cards = []
     for s in records:
         assert re.fullmatch(r'[A-Za-z0-9_-]{11}', s['id']), 'Invalid video identity'
-        u = urlsplit(s['thumbnail'])
-        assert u.scheme == 'https' and u.netloc == 'i.ytimg.com' and u.path.startswith('/vi/' + s['id'] + '/'), 'Thumbnail must belong to this YouTube video'
+        width, height = thumbnail_size(s)
         assert all(isinstance(s[k], str) and s[k].strip() for k in ('title', 'speaker', 'description'))
         url = 'https://www.youtube.com/shorts/' + s['id']
         cards.append(f'''<article class="watch-short" data-short-id="{s['id']}">
-<div class="watch-short-media"><a class="watch-short-preview" data-short-play="{s['id']}" href="{url}" aria-label="Watch {esc(s['title'])}" target="_blank" rel="noopener noreferrer"><img src="{esc(s['thumbnail'])}" width="405" height="720" alt="{esc(s['title'])}: YouTube Short preview" loading="lazy" decoding="async"></a></div>
+<div class="watch-short-media"><a class="watch-short-preview" data-short-play="{s['id']}" href="{url}" aria-label="Watch {esc(s['title'])}" target="_blank" rel="noopener noreferrer"><img src="{esc(s['thumbnail'])}" width="{width}" height="{height}" alt="{esc(s['title'])}: YouTube Short preview" loading="lazy" decoding="async"></a></div>
 <div class="watch-short-copy"><a class="watch-short-open" data-short-play="{s['id']}" href="{url}" aria-label="Play {esc(s['title'])}" target="_blank" rel="noopener noreferrer">▶ Watch Short</a><p class="watch-short-speaker">{esc(s['speaker'])}</p><h3>{esc(s['title'])}</h3><p>{esc(s['description'])}</p><a href="{url}" target="_blank" rel="noopener noreferrer">Open on YouTube →</a></div>
 </article>''')
     date = datetime.date.fromisoformat(data['verified_at'])

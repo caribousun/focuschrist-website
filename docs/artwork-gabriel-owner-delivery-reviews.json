@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "prepared_at": "2026-10-12T15:45:45.712798+00:00",
+  "prepared_at": "2026-10-12T17:17:48.001304+00:00",
   "spec": {
     "classification": "owner-approved-scripture-illustrations",
     "registration_class": "EXACT_OWNER_APPROVED_REPLACEMENTS",
@@ -161,7 +161,7 @@
       },
       {
         "path": "site-search-index.json",
-        "sha256": "7243712e2ce07d71537b11eff4a1bf3b601f2cfae96364e725ab431952777551"
+        "sha256": "c5f48fb9492a773bc3c9dd5d2b6c339d674446fbb5b13a802f6f7f3149dcc06c"
       },
       {
         "path": "site-search.css",
@@ -215,16 +215,16 @@
   },
   "reviews": [
     {
-      "path": "docs/watch-search-context-20261012/gabriel-albert-current-review.json",
-      "sha256": "52dd88133fc826d3bf44c1246f484777c661dbfdee3933233395dc4432f192ef"
+      "path": "docs/watch-spannaus-context-20261012/gabriel-albert-current-review.json",
+      "sha256": "ea67867e0ab1734ea448e8f6ec2858dcb40b2a6e01aec0234a663609eb9dd392"
     },
     {
-      "path": "docs/watch-search-context-20261012/gabriel-fermi-current-review.json",
-      "sha256": "6cd2c61f376d82fa977b79254ad5cb8bd32484d21558c0be2862809de5f8d96a"
+      "path": "docs/watch-spannaus-context-20261012/gabriel-fermi-current-review.json",
+      "sha256": "25be49dcef0c283fd1e08d5f7e8d0f18597241e01f2c25a5038a3251012df3a0"
     },
     {
-      "path": "docs/watch-search-context-20261012/gabriel-newton-current-review.json",
-      "sha256": "1cc57facf27f7f99e497a8c1db7dd896f87eaf1e1d81ce77650e4bad2669f262"
+      "path": "docs/watch-spannaus-context-20261012/gabriel-newton-current-review.json",
+      "sha256": "d72cb74b67386b898aebe7a40c28043a61ae11267c7c70c1c401b7b9bbed1ae3"
     }
   ],
   "prior_context_record": {
@@ -275,12 +275,12 @@
   "watch_search_context_rebinding": {
     "scope": "Only three Watch search records changed; unchanged artwork and historical attributed reviews explicitly retained.",
     "prior_record": {
-      "path": "docs/watch-search-context-20261012/prior-artwork-gabriel-owner-delivery-reviews.json",
-      "sha256": "03835765414e59e7636655f78d9f5dbaae14a1114f5b92538eca585c77c54b59"
+      "path": "docs/watch-spannaus-context-20261012/prior-artwork-gabriel-owner-delivery-reviews.json",
+      "sha256": "eccdfb8f0e1f0c96c6b7f32161f35fdf95da3a38136e06bbe0c7cbb4ad9dce40"
     },
     "evidence": {
-      "path": "docs/watch-search-context-20261012/search-delta.json",
-      "sha256": "c954b24bdb50effa29b1a58f54f4369ef9a347a20bc126639347a5436e855631"
+      "path": "docs/watch-spannaus-context-20261012/search-delta.json",
+      "sha256": "8522e0e12ea986d01126f0bfe15530f59ef200bf717a94b5a4ddc6baf0ccb607"
     },
     "no_historical_approval_transfer": true,
     "holds": "All existing holds including Shepherd outer-host glow retained. No new owner acceptance or artwork appearance judgment."

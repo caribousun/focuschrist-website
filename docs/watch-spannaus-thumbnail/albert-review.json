@@ -1,0 +1,24 @@
+{
+  "reviewer": "Albert",
+  "decision": "CONCUR_ASSEMBLED_OWNER_APPROVED",
+  "spec_sha256": "ea7f86749d8ff6fd06e0fdc6be0f8154f948d52abb48cf51fac33cdf96b148ec",
+  "historical_pupil_uncertainty_preserved": true,
+  "desktop_phone_inspected": true,
+  "direct_browser_interactions": true,
+  "observations": [
+    "Personally inspected desktop and390x844 phone rendering; full square and readable text preserved.",
+    "Played actual Spannaus embed to advancing image/time, replaced with Renlund leaving one iframe, closed restores Play focus and removes iframe.",
+    "Phone actual Spannaus playback0:01 of0:52, close removes iframe and restores correct focus; no horizontal overflow observed.",
+    "No new artwork or historical pupil finding claimed."
+  ],
+  "evidence": {
+    "desktop": {
+      "sha256": "ad6452c263cba9dc765cbe16c80919aba5d02ed2ef6d88585af3d3df46578ba6",
+      "description": "Root actual local desktop screenshot; full approved square contained with margins, title/name/wordmark visible."
+    },
+    "phone": {
+      "sha256": "8ef6b22e74844e6660609e6b7f933a095b87d42ccf3c55a0fdc65e2add9fa4a5",
+      "description": "Root actual local phone screenshot; full approved square contained with margins, title/name/wordmark visible."
+    }
+  }
+}

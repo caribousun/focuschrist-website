@@ -1,0 +1,37 @@
+{
+  "asset_sha256": "4c0e9bd8ab7d06d588c78c35e3862705313fd869d11baac501e6525d38a56154",
+  "kind": "Existing exact owner-approved social thumbnail; no new generation or derivative",
+  "executor": "Albert using image generation",
+  "inputs": [
+    {
+      "name": "Square reflow prompt",
+      "sha256": "0ea213b001213485da8ebd670971116e513ac4d288af689a9faf61d8379bde6a"
+    },
+    {
+      "name": "Home Christ identity",
+      "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b"
+    },
+    {
+      "name": "Authentic speaker portrait",
+      "sha256": "9117e7e6b2a3ba848910dfbc900cd5b7f63a9a233561055e1a1f2f1edf3cc44b"
+    },
+    {
+      "name": "Wordmark reference",
+      "sha256": "4c0a83bcc510bd6a95ca29dc54f618dc761e46fa921317effcee305301bf6f85"
+    }
+  ],
+  "historical_reviews": {
+    "Fermi": "Layout, text, full name, wordmark and wardrobe passed; precise Christ pupil target uncertain.",
+    "Newton": "Layout, full title/name/wordmark and wardrobe passed; precise reciprocal pupil targets uncertain.",
+    "Albert": "Direct owner acceptance of exact square preserved; proposed gaze edit cancelled before generation."
+  },
+  "source_urls": [
+    "https://www.churchofjesuschrist.org/study/general-conference/2026/10/52munoz-spannaus?lang=eng",
+    "https://www.youtube.com/shorts/zIntX6aoq1g"
+  ],
+  "limits": [
+    "Historical reviewer uncertainty remains; this is not unconditional gaze approval.",
+    "Private original prompt/reference/review records retained; only digests and bounded provenance published.",
+    "No unseen derivative or future thumbnail approval."
+  ]
+}
