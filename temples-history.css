@@ -27,3 +27,26 @@
   .fc-temple-history__chapter .fc-study-visual figcaption { flex-basis: 100%; }
   .fc-temple-history__era-menu > summary { padding: 16px 18px; }
 }
+
+/* Native ordered lists retain their starts; decorative badges belong to each link. */
+.fc-temple-history__era-menu > ol { padding: 0 22px 20px; }
+.fc-temple-history__era-menu li { padding: 0; margin: 10px 0 0; }
+.fc-temple-history__era-menu li::marker { color: transparent; }
+.fc-temple-history__era-menu li > a {
+  display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: start; gap: 12px;
+  box-sizing: border-box; width: 100%; min-height: 48px; padding: 12px 14px;
+  border: 1px solid rgba(240,195,106,.4); border-radius: 12px;
+  background: #122a35; color: var(--fc-gold-light, #f3cf83);
+  text-decoration: none;
+}
+.fc-temple-history__number {
+  display: inline-grid; place-items: center; min-width: 1.8em; min-height: 1.8em;
+  padding: .1em .3em; box-sizing: border-box; border-radius: 999px;
+  background: var(--fc-gold-light, #f3cf83); color: #122a35;
+  font-size: .85em; font-weight: 700; line-height: 1.4;
+}
+.fc-temple-history__era-menu li > a:hover,
+.fc-temple-history__era-menu li > a:focus-visible { background: #234552; border-color: var(--fc-gold-light, #f3cf83); color: var(--fc-gold-light, #f3cf83); }
+@media (max-width: 700px) {
+  .fc-temple-history__era-menu > ol { padding-inline: 18px; }
+}

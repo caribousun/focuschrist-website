@@ -211,6 +211,7 @@ def historical_style_bytes(data):
     reviewed bytes. The mandatory current-file checks separately reject stale
     files and any mutation to the approved anchor-only transformation.
     """
+    data = before_ask_pill_colors(data)
     data = before_current_layout(data)
     data = before_conference_archive(data)
     data = before_art_caption_gap(data)
@@ -248,8 +249,22 @@ def historical_style_bytes(data):
     return restored if hashlib.sha256(restored).hexdigest() == record['before_sha256'] else data
 
 
+# Reviewed Ask topic option colors preserve the existing anchor transform.
+ASK_PILLS_SHA256 = 'efca1981dcc3769dd568bdbc976d86169fb44a2949b05874c68bcc20516a7300'
+ASK_PILLS_OLD = b'.ask-topic-option {\n    padding: 8px 11px;\n    border: 1px solid rgba(158,170,131,0.28);\n    border-radius: 999px;\n    background: rgba(113,128,92,.055);\n    color: #d0d8c5;\n    cursor: pointer;\n    font-family: inherit;\n    font-size: 0.78rem;\n}\n.ask-topic-option:hover,\n.ask-topic-option:focus-visible {\n    border-color: var(--ask-gold-light);\n    color: var(--ask-cream);\n}\n\n'
+ASK_PILLS_NEW = b'.ask-topic-option {\n    padding: 8px 11px;\n    border: 1px solid rgba(240,195,106,0.55);\n    border-radius: 999px;\n    background: var(--ask-bg);\n    color: var(--ask-gold-light);\n    cursor: pointer;\n    font-family: inherit;\n    font-size: 0.78rem;\n}\n.ask-topic-option:hover,\n.ask-topic-option:focus-visible {\n    border-color: var(--ask-gold-light);\n    background: var(--ask-surface-2);\n    color: var(--ask-gold-light);\n}\n\n.ask-topic-option:focus-visible {\n    outline: 2px solid var(--ask-gold-light);\n    outline-offset: 3px;\n}\n\n'
+
+def before_ask_pill_colors(data):
+    if hashlib.sha256(data).hexdigest() != ASK_PILLS_SHA256 or data.count(ASK_PILLS_NEW) != 1:
+        return data
+    prior = data.replace(ASK_PILLS_NEW, ASK_PILLS_OLD, 1)
+    return prior if hashlib.sha256(prior).hexdigest() == FILES['ask-experience.css']['after_sha256'] else data
+
+
 def reviewed_anchor_style(name, data):
     record = FILES.get(name)
+    if name == 'ask-experience.css':
+        data = before_ask_pill_colors(data)
     if name in {'connected-study.css', 'joseph-smith-likeness.css'}:
         expected = PROMOTION_SHA256 if name == 'connected-study.css' else JOSEPH_SHARED_HEIGHT_SHA256
         if hashlib.sha256(data).hexdigest() != expected: return False
@@ -320,6 +335,8 @@ def check():
         conference_pages[rel] = path.read_text(encoding='utf-8')
         for filename, version in re.findall(r'([\w-]+\.css)\?v=([\w.-]+)', conference_pages[rel]):
             expected = ART_STUDY_NAV_VERSION if filename == 'art-study-enrichment.css' else '20261008-promotion-spacing-1' if filename == 'connected-study.css' else '20261009-mobile-shared-height-1' if filename == 'joseph-smith-likeness.css' and rel in {'joseph-smith-likeness.html','joseph-smith-portrait-research.html'} else JOURNEY_PICKER_VERSION if filename == 'jesus-journey.css' else MOBILE_NAV_VERSION if filename == 'site-system.css' else SEARCH_VERSION if filename == 'site-search.css' else TOPIC_DESKTOP_VERSION if filename == 'topic-study-pages.css' else CONTRACT['version']
+            if filename == 'ask-experience.css' and rel == 'ask.html':
+                expected = '20261011-blue-gold-pills-1'
             if filename == 'general-conference-section.css':
                 expected = CONFERENCE_VERSION
             if filename in FILES and version != expected:
@@ -435,6 +452,11 @@ def self_test():
         # Change the exact appendix, not an unrelated earlier occurrence.
         changed_appendix = CONTRACT['shared_appendix'].replace(old.decode(), new.decode()).encode()
         assert not reviewed_anchor_style('site-system.css', shared[:-len(CONTRACT['shared_appendix'].encode())] + changed_appendix)
+    ask = (ROOT / 'ask-experience.css').read_bytes()
+    assert before_ask_pill_colors(ask) != ask
+    for original, changed in [(b'background: var(--ask-bg);', b'background: red;'), (b'outline-offset: 3px;', b'outline-offset: 0;'), (b'padding: 8px 11px;', b'padding: 0;')]:
+        assert original in ask
+        assert not reviewed_anchor_style('ask-experience.css', ask.replace(original, changed, 1))
     print('PASS: exact anchor transform, stale offsets, unrelated edits, unknown files, breakpoint, enlarged-text, root smooth-scroll and reduced-motion fixtures')
 
 

@@ -1,17 +1,17 @@
 {
-  "normalized_at": "2026-10-11T22:20:17.926089+00:00",
+  "normalized_at": "2026-10-11T23:59:38.907089+00:00",
   "reviews": [
     {
-      "path": "docs/three-reviewed-20261011/answers-six-albert-review.json",
-      "sha256": "51405b8eb00a62a8ab88e1042747011289c5dcb7457f65ef75427cfd0d66750a"
+      "path": "docs/companion-padding-20261011/albert-current-context-review.json",
+      "sha256": "1b4ee03d88f1d9e0f301efb415b1252accfe73211c0a0a2d7d073a5be5a5a1e2"
     },
     {
-      "path": "docs/three-reviewed-20261011/answers-six-fermi-review.json",
-      "sha256": "1be2b491adff13e469f7de6170745e84f0d47c35ebdc3ff051e4879ec932a578"
+      "path": "docs/companion-padding-20261011/fermi-current-context-review.json",
+      "sha256": "2c74c824093a034763c3ff259f19d94163e11f296cb4d085b344ffaa21f51da9"
     },
     {
-      "path": "docs/three-reviewed-20261011/answers-six-newton-review.json",
-      "sha256": "95f99c7f43621af49caafb1b11fa62a410a4fa347c678e04eb14935d2a702ade"
+      "path": "docs/companion-padding-20261011/newton-current-context-review.json",
+      "sha256": "341e732198e0404c58ec5bf97cac923604b7f0e4bcb1d9fe5308b0e5be4e46e0"
     }
   ],
   "schema": 1,
@@ -35,7 +35,7 @@
       },
       {
         "path": "answers.html",
-        "sha256": "f577f0927c8b542e7dd7fb3c99f86b7cfd04dc881fe21b2f365b29cc9f88fdc4"
+        "sha256": "952a4da5b5f09fbaeff2cc77e009255a213f65d48338201c8f01df2fda4a9e31"
       },
       {
         "path": "artwork-actions.css",
@@ -71,7 +71,7 @@
       },
       {
         "path": "guided-studies.css",
-        "sha256": "6ec6dfa3150ae158f4689972042cac9780a25cac4066fe78fe2f3312b618eea9"
+        "sha256": "45349a7b3f0524a32989f827960bb543c6003944f0781958458bb25856ed0892"
       },
       {
         "path": "hero-details.css",
@@ -866,10 +866,10 @@
     "scope": "Exact six recovered Answers families;24 raster files; no general exemption."
   },
   "prior_context_record": {
-    "path": "docs/three-reviewed-20261011/prior-artwork-answers-six-delivery-reviews.json",
-    "sha256": "b409c5ecc1d831df26e3cf6287ff8d051255174f6d3e323acf164346b29392ff"
+    "path": "docs/companion-padding-20261011/prior-answers-six-record.json",
+    "sha256": "421d71ff35ea19909ae2361aa1efb6b80f7f29b09102b96a622d36df09a46c0c"
   },
-  "context_change_scope": "Only shared artwork-details.js current context pin. Home-only heading return changes no Answers behavior, sources, images, native graph or original-owner census; historical judgments retained.",
+  "context_change_scope": "Only answers.html stylesheet cache and guided-studies.css screen-only companion padding. Source graph, all24 image assets, original-owner census and historical judgments unchanged. Current layout independently reviewed; no new creative or owner approval.",
   "current_review_projection": {
     "executor": "Lightning",
     "scope": "Public copies omit only private actor_session metadata. Original author, decision, evidence, limitations and all review fields otherwise unchanged; complete originals retained privately.",

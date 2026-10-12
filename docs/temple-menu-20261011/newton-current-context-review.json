@@ -1,0 +1,20 @@
+{
+  "reviewer": "Newton",
+  "decision": "CONCUR",
+  "reviewed_at": "2026-10-12T00:24:00.333635+00:00",
+  "spec_sha256": "4666103549bfd6aaa28d1ba4dd15dace747ee93c91a0b587c790a3fb6fdbb061",
+  "desktop_phone_direct_browser_review": true,
+  "no_individual_owner_acceptance_claim": true,
+  "scope": "Current Temple era-menu layout context only. Exactly2context pins HTML/CSS differ; original creation metadata, source/original/derivatives and owner_status not-reviewed unchanged.",
+  "evidence": [
+    "Exact original and two derivative byte hashes plus all current page_context pins verified.",
+    "All4menus/20rows inspected1280/390/320 normal and explicit200%text; no overflow; bottomclearance20.8px, inset22.8desktop/18.8phone includingborder.",
+    "Existing source/derivative/pixel judgments retained as historical evidence, not new execution.",
+    "Fullmarkup inverse reconstructs originalHTML except cache; CSS originalprefix unchanged."
+  ],
+  "limits": [
+    "No new fullsize gaze/identity or creative acceptance claim.",
+    "Native anchors preserve prior focus behavior; measured headingclearance only.",
+    "No publication approval."
+  ]
+}

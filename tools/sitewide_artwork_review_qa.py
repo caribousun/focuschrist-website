@@ -419,7 +419,17 @@ def before_current_timeline_style(name, data):
         restored = restored[:start] + prior + restored[end:]
     return restored if hashlib.sha256(restored).hexdigest() == contract[1] else data
 
+TEMPLE_MENU_SHA256 = '7ca33bda0f4f2b592d1e7e9a44a05786c0f5f4eeeec72cbbccda5cc8adb7f817'
+TEMPLE_MENU_APPENDIX = b'\n/* Native ordered lists retain their starts; decorative badges belong to each link. */\n.fc-temple-history__era-menu > ol { padding: 0 22px 20px; }\n.fc-temple-history__era-menu li { padding: 0; margin: 10px 0 0; }\n.fc-temple-history__era-menu li::marker { color: transparent; }\n.fc-temple-history__era-menu li > a {\n  display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: start; gap: 12px;\n  box-sizing: border-box; width: 100%; min-height: 48px; padding: 12px 14px;\n  border: 1px solid rgba(240,195,106,.4); border-radius: 12px;\n  background: #122a35; color: var(--fc-gold-light, #f3cf83);\n  text-decoration: none;\n}\n.fc-temple-history__number {\n  display: inline-grid; place-items: center; min-width: 1.8em; min-height: 1.8em;\n  padding: .1em .3em; box-sizing: border-box; border-radius: 999px;\n  background: var(--fc-gold-light, #f3cf83); color: #122a35;\n  font-size: .85em; font-weight: 700; line-height: 1.4;\n}\n.fc-temple-history__era-menu li > a:hover,\n.fc-temple-history__era-menu li > a:focus-visible { background: #234552; border-color: var(--fc-gold-light, #f3cf83); color: var(--fc-gold-light, #f3cf83); }\n@media (max-width: 700px) {\n  .fc-temple-history__era-menu > ol { padding-inline: 18px; }\n}\n'
+
+def before_temple_menu_rows(data):
+    if hashlib.sha256(data).hexdigest() != TEMPLE_MENU_SHA256 or not data.endswith(TEMPLE_MENU_APPENDIX):
+        return data
+    prior = data[:-len(TEMPLE_MENU_APPENDIX)]
+    return prior if hashlib.sha256(prior).hexdigest() == OWNER_20260929_STYLES['temples-history.css'][0] else data
+
 def reviewed_owner_20260929_style(name, data):
+    if name == 'temples-history.css': data = before_temple_menu_rows(data)
     if name == 'timeline-history-workspace.css': return reviewed_timeline_bottom_navigation(data)
     if name in CURRENT_TIMELINE_INVERSES and hashlib.sha256(data).hexdigest() != CURRENT_TIMELINE_INVERSES[name][0]: return False
     if name == 'timeline-reader.css': data = before_current_timeline_style(name, data)
@@ -433,6 +443,7 @@ def reviewed_owner_20260929_style(name, data):
 
 TEMPLE_RELATED_HITBOX = b'.fc-temple-history__chapter a.fc-temple-history__related-link { display: inline-block; max-width: 100%; vertical-align: top; overflow-wrap: anywhere; }\n'
 def reviewed_temple_related_hitbox(data):
+    data = before_temple_menu_rows(data)
     return (data.count(TEMPLE_RELATED_HITBOX) == 1
             and hashlib.sha256(data.replace(TEMPLE_RELATED_HITBOX, b'', 1)).hexdigest() == '764ffd7b6f877a4d5c279215a0a4d6adee464fa6eb072e7228aec1ec470f62e7')
 
@@ -453,7 +464,12 @@ def reviewed_picture_pill_style(data):
 # Exact Answers-only visual appendix; preserve raw historical bytes and owner restrictions.
 GUIDED_READING_APPENDIX = b'\r\n/* Answers guided paths share a continuous reading surface. */\n@media screen {\n  #guided-studies .fc-guided-grid {\n    background: linear-gradient(135deg, var(--fc-bg-warm), var(--fc-bg-deep));\n  }\n  #guided-studies .fc-guided-path {\n    border: 0;\n    border-left: 1px solid transparent;\n    border-radius: 0;\n    background: transparent;\n    box-shadow: none;\n  }\n  #guided-studies .fc-guided-path + .fc-guided-path {\n    border-left-color: var(--fc-line);\n  }\n  #guided-studies .fc-guided-path h3::before {\n    content: "";\n    display: block;\n    width: 32px;\n    height: 2px;\n    margin-bottom: 12px;\n    background: var(--fc-gold);\n  }\n  #guided-studies .fc-guided-path li + li {\n    margin-top: 1.75rem;\n  }\n}\n@media screen and (max-width: 900px) {\n  #guided-studies .fc-guided-path {\n    border-left: 0;\n  }\n  #guided-studies .fc-guided-path + .fc-guided-path {\n    border-top: 1px solid var(--fc-line);\n  }\n}\n'
 GUIDED_READING_SHA256 = '6ec6dfa3150ae158f4689972042cac9780a25cac4066fe78fe2f3312b618eea9'
+COMPANION_INSET_SHA256 = '45349a7b3f0524a32989f827960bb543c6003944f0781958458bb25856ed0892'
+COMPANION_INSET_APPENDIX = b'\r\n/* Shared screen inset overrides legacy Emma widths; print clones are unchanged. */\r\n@media screen {\r\n  .fc-study-tools .fc-companion > :is(summary, article, .fc-actions) {\r\n    box-sizing: border-box;\r\n    padding-inline: clamp(1rem, 2.5vw, 1.5rem) !important;\r\n  }\r\n  .fc-study-tools .fc-companion > .fc-actions { padding-bottom: 1.25rem; }\r\n}\r\n'
+
 def reviewed_guided_reading_style(data):
+    if hashlib.sha256(data).hexdigest() != COMPANION_INSET_SHA256 or not data.endswith(COMPANION_INSET_APPENDIX): return False
+    data = data[:-len(COMPANION_INSET_APPENDIX)]
     if hashlib.sha256(data).hexdigest() != GUIDED_READING_SHA256 or data.count(GUIDED_READING_APPENDIX) != 1: return False
     prior = data.replace(GUIDED_READING_APPENDIX, b'', 1)
     return hashlib.sha256(prior).hexdigest() == SCOPED_INTERFACE_STYLES['guided-studies.css'][0]
@@ -576,6 +592,9 @@ def main():
         for mutation in (timeline + TIMELINE_BOTTOM_NAV_APPENDIX, timeline[:-len(TIMELINE_BOTTOM_NAV_APPENDIX)], timeline.replace(b'gap:12px', b'gap:13px'), timeline + b'.fc-visual-hero{height:1px}'):
             assert mutation != timeline and not reviewed_timeline_bottom_navigation(mutation)
         assert not reviewed_scoped_interface_style('guided-studies.css', guided + b'body{height:1px}')
+        assert not reviewed_scoped_interface_style('guided-studies.css', guided[:-len(COMPANION_INSET_APPENDIX)] + COMPANION_INSET_APPENDIX.replace(b'@media screen {', b'@media print {', 1))
+        for old, new in [(b'padding-bottom: 1.25rem;', b'padding-bottom: 0;'), (b'padding-inline: clamp(1rem, 2.5vw, 1.5rem)', b'padding-inline: 0')]:
+            assert old in guided and not reviewed_scoped_interface_style('guided-studies.css', guided.replace(old, new, 1))
         assert not reviewed_scoped_interface_style('guided-studies.css', b'X' + guided[1:])
         assert not reviewed_scoped_interface_style('guided-studies.css', guided + GUIDED_READING_APPENDIX)
         assert not reviewed_scoped_interface_style('guided-studies.css', guided.replace(b'margin-top: 1.75rem;', b'margin-top: 9rem;', 1))
@@ -942,6 +961,8 @@ def main():
             check(reviewed_temple_related_hitbox(data), 'Temple hitbox must be the exact addition to the reviewed era stylesheet')
             check(not reviewed_temple_related_hitbox(data.replace(b'display: inline-block;', b'display: inline;')), 'Fragmented inline hitbox mutation escaped')
             check(not reviewed_temple_related_hitbox(data + b'\n.x{display:block}'), 'Unrelated Temple stylesheet mutation escaped')
+            for old, new in [(b'padding: 12px 14px;', b'padding: 0;'), (b'background: #122a35;', b'background: red;'), (b'grid-template-columns: auto minmax(0, 1fr);', b'grid-template-columns: 1fr;')]:
+                check(old in data and not reviewed_temple_related_hitbox(data.replace(old, new, 1)), 'Unreviewed Temple menu mutation escaped')
         consumers = set()
         for page in ROOT.rglob('*.html'):
             relative = page.relative_to(ROOT).as_posix()

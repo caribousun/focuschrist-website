@@ -87,3 +87,12 @@ body.fc-site .fc-study-tools button[data-save-study], body.fc-site .fc-study-too
     border-top: 1px solid var(--fc-line);
   }
 }
+
+/* Shared screen inset overrides legacy Emma widths; print clones are unchanged. */
+@media screen {
+  .fc-study-tools .fc-companion > :is(summary, article, .fc-actions) {
+    box-sizing: border-box;
+    padding-inline: clamp(1rem, 2.5vw, 1.5rem) !important;
+  }
+  .fc-study-tools .fc-companion > .fc-actions { padding-bottom: 1.25rem; }
+}

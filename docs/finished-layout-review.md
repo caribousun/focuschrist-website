@@ -1,0 +1,18 @@
+# Required independent finished-layout review for page and section work
+
+Owner request, October 11, 2026: new or changed pages and sections must receive independent finished-layout review. Within the approved verification role, Newton is accountable for this review. Another reviewer may perform it only within the existing approved role and authority arrangements, with the actual reviewer identified. This is a required creation/change and release check, not a claim that a worker runs continuously. The current companion-panel correction specifically requires inner text spacing and clearance beneath Print/Download actions across all four panels.
+
+Before release, the executor supplies the exact changed files, shared-style consumer inventory, preview URL, and test results. The reviewer records the actual candidate revision and each checked route/panel; representative template checks must be distinguished from exhaustive panel checks.
+
+- Inventory every consumer of the changed shared panel style, including generic companion panels, study-tools variants, nested containers, action rows, and print-copy behavior. Explain any exclusion.
+- Open each affected panel type and inspect both its collapsed summary and expanded heading, paragraphs, lists, note area, footer/return link, and actions. Measure real left/right clearance from panel borders; ensure marker and focus outline are not clipped.
+- Measure bottom clearance from the lowest rendered Print/Download button edge to the panel border, including wrapped actions on narrow phones and enlarged text. Wyatt's second screenshot specifically rejects action pills touching the bottom border; declared padding alone is not rendered proof.
+- Perform supported browser checks at desktop 1280px, phone 390px, and narrow phone 320px. Inspect actual screenshots as well as DOM geometry; no horizontal document or panel overflow, overlap, hidden text, or unreachable controls.
+- Check enlarged text at 200 percent using supported browser controls or an explicitly identified private accessibility fixture. Identify the method and limits; ordinary viewport resizing alone does not prove enlarged-text support.
+- Use keyboard activation and focus movement through summary and action links/buttons. Confirm visible focus, operable open/close behavior, and return control placement without changing content or destinations.
+- Check print-specific source and runtime scope: cloned printable content, footer/disclosure, note area, and screen-only actions. Distinguish static/runtime checks from actual native print/PDF rendering; do not claim native print proof without performing it.
+- Verify content, links, accessibility semantics, disclosure text, and existing image assets remain intact. Test meaningful negative cases for spacing/overflow regressions where practical.
+- Record independent PASS or HOLD per viewport/panel type, with actual measurements, observations, and unresolved limits. Required final review belongs to the finished candidate; earlier similar reviews do not establish this candidate's result.
+- After authorized deployment, verify ordinary public shared-style bytes and repeat the affected loaded public interactions and representative layout checks. Keep owner acceptance, local review, CI, deployment, and public verification separate.
+
+For other page or section changes, apply the same viewport, spacing, overflow, keyboard, enlarged-text, and evidence requirements to their actual controls and expanded states. Mark truly inapplicable companion or print checks with a reason rather than silently omitting them. A checklist is not proof of execution: record the finished review and any unresolved limits before release.

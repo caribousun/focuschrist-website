@@ -391,7 +391,7 @@ def run(root, mode='release', scene=None, page_overrides=None):
     correction_record = json.loads((root / 'docs/artwork-correction-reviews.json').read_text(encoding='utf-8'))
     from artwork_owner_closure import validate as validate_owner_closure
     validate_owner_closure(root, correction_record['owner_requirement_closure'],
-        'd682ce8c4893a0eb6b9630828a15ba34990a00bd72e5d70b2d3a6b337e8c0a2f', pixel_hash)
+        '8006c42db277c5a0c360234c72d421297e2e2348f614cc5f879013d0116cbf96', pixel_hash)
     corrections, correction_hashes, correction_pixels = validate_reviewed_corrections(
         root, correction_record, approved_corrections_binding, added, covered, rejected, pixel_hash, inventory)
     require(not (correction_hashes & originals) and not (correction_pixels & original_pixels), 'Correction family duplicates another creation')
@@ -420,7 +420,7 @@ def run(root, mode='release', scene=None, page_overrides=None):
     original_pixels |= four_scene_pixels
     # Exact six Answers studies; pending reviews cannot satisfy this gate.
     from artwork_answers_six_delivery import validate as validate_answers_six_delivery
-    approved_answers_six_binding = 'f843009032b926234122476c4accfbc1dc9d8d289ed542d22be185f5ff6c64d5'
+    approved_answers_six_binding = 'c15a5c84751000ae852a5e044727cfd1b266a9336aa4eb9c7e841b91445039a9'
     answers_six_record = json.loads((root / 'docs/artwork-answers-six-delivery-reviews.json').read_text(encoding='utf-8'))
     answers_six, answers_six_hashes, answers_six_pixels = validate_answers_six_delivery(
         root, answers_six_record, approved_answers_six_binding, added, covered, rejected, pixel_hash, page_dependencies)
