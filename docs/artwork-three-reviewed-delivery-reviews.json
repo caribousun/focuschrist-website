@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "prepared_at": "2026-10-11T22:16:29.828681+00:00",
+  "prepared_at": "2026-10-12T02:07:15.865730+00:00",
   "spec": {
     "registration_class": "EXACT_THREE_REVIEWED_LOCAL_COMPOSITES",
     "owner_final_image_acceptance": "not-claimed",
@@ -260,7 +260,7 @@
       },
       {
         "path": "site-search-index.json",
-        "sha256": "0580850c55f433ef70faa25f085e70dc81cdf648795bd674dd5ca978812a86a6"
+        "sha256": "12ac02554f980a577a49f9e5ec9eb88e5689e0001fb20e687a309c6d1c30161b"
       },
       {
         "path": "site-search.css",
@@ -307,16 +307,16 @@
   },
   "reviews": [
     {
-      "path": "docs/three-reviewed-20261011/three-albert-review.json",
-      "sha256": "ca240823eb92c3398886b04e7ab324e769ce4528b2476ac8916d4aa7b100bd07"
+      "path": "docs/art39-search-context-20261012/three-albert-current-review.json",
+      "sha256": "2abb79359fd14f25f0550e18d8d0e4cb7d7439f2b1dec96ea16860d7b128caa1"
     },
     {
-      "path": "docs/three-reviewed-20261011/three-fermi-review.json",
-      "sha256": "3ffef79b34a5fbf285646a2e1f4f9b548e5c6af5f4c39805432135f1e4b86374"
+      "path": "docs/art39-search-context-20261012/three-fermi-current-review.json",
+      "sha256": "608d687f8f1c0cf87ee63b8cbd79ad56ebc5b9a92942498cc4aaf6124ffed9f0"
     },
     {
-      "path": "docs/three-reviewed-20261011/three-newton-review.json",
-      "sha256": "c3e00577b6c4c99c67bcaf3a82a5d56d5bedfbb58f619f23ac79c328c0cb44c4"
+      "path": "docs/art39-search-context-20261012/three-newton-current-review.json",
+      "sha256": "75c2bfc24cf4eb6d1aa68ce490a5854285dec649e6fc41cbd0332cb73cf76ec4"
     }
   ],
   "current_review_projection": {
@@ -338,5 +338,19 @@
         ]
       }
     ]
+  },
+  "art39_search_context_rebinding": {
+    "status": "REVIEWED_CURRENT_CONTEXT_ONLY",
+    "prior_record": {
+      "path": "docs/art39-search-context-20261012/prior-artwork-three-reviewed-delivery-reviews.json",
+      "sha256": "30bb4e309bea93b70938642aa8fec9f6581b2d8b5bcf92f8c948dd6a55e354df"
+    },
+    "evidence": {
+      "path": "docs/art39-search-context-20261012/search-delta.json",
+      "sha256": "8469bb6b3e36993e059317931a06e3f2362bb488bfc366700fec7f80dfd446bd"
+    },
+    "scope": "Only main Art introduction search text changes; all artwork/search destinations and asset references unchanged.",
+    "holds": "Shepherd outer-host glow owner concern remains unresolved; historical technical registration does not approve its current appearance. All other holds retained.",
+    "no_historical_approval_transfer": true
   }
 }
