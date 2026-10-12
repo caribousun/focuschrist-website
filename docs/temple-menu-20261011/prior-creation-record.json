@@ -1,0 +1,2235 @@
+{
+  "spec": {
+    "id": "visual-rhythm-temple-tribute",
+    "role": "body",
+    "route": "answers/why-latter-day-saints-build-temples.html",
+    "preflight_sha256": "d991e2bb458f37b4b15cfb8d50f1dd54ff5e9249dbb1ddda12d1216633b3b765",
+    "generated_at": "2026-10-07T04:10:19.959908+00:00",
+    "owner_status": "not-reviewed",
+    "ancestor_sha256": [
+      "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+      "f6b5502c16f4a272b0e80209876366f86285c38ce5547b28d6fbe98d9849427a",
+      "830afc2a2fd928df95293e53184d7a77a8487ab4380198ec76cd4c8ba71e4d25"
+    ],
+    "original": {
+      "path": "assets/page-art/visual-rhythm-journey/temple-tribute-original.png",
+      "sha256": "e1cbd9cf09065630f8af52791c9832cf93e1c0be0f75893b138e1f4cede47195",
+      "pixel_sha256": "1c0ecb17a65256b263edc1fb4476c76c201170d3455fe0334bf3199b0204338b"
+    },
+    "derivatives": [
+      {
+        "path": "assets/page-art/visual-rhythm-journey/temple-tribute-full.webp",
+        "sha256": "de729b17b7a72a14b6f667c9a23a4f064c4d7883dab1d5d1d430f80e7f1820bf",
+        "pixel_sha256": "4ca2ce90dfcc0d6bb9517974ba6092bac31defc52c6f0871ae009c05f72c3ac5"
+      },
+      {
+        "path": "assets/page-art/visual-rhythm-journey/temple-tribute-960.webp",
+        "sha256": "fc1dff1127af137bdf0cf20d3da8833b6b6180940aa7dd019106bb022f5e050a",
+        "pixel_sha256": "c9d40120db5ff7555bdcc42058042b92d29a134da428b40d59a12a72b0b8de97"
+      }
+    ],
+    "page_context": [
+      {
+        "path": "answer-navigation.css",
+        "sha256": "8112ad6d52ada3bd0b373633fc2e60f5ada7d47fb2204c28e1a09ae01be66a57"
+      },
+      {
+        "path": "answer-opening.css",
+        "sha256": "0356c038ad2adcec7206bfcb3d57915b9e2be2cd42024770560f3d9875cc94fb"
+      },
+      {
+        "path": "answer-styles.css",
+        "sha256": "82dc51b82d56a129be803420cae47630f053f7af1259c659113fbd7fcd76d6ad"
+      },
+      {
+        "path": "answers/why-latter-day-saints-build-temples.html",
+        "sha256": "1a906ac795b333338949a171d70c9dd2a28562dc0374fd3ab1101fa0184aff9c"
+      },
+      {
+        "path": "artwork-actions.css",
+        "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+      },
+      {
+        "path": "artwork-details.css",
+        "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+      },
+      {
+        "path": "complete-card-rows.css",
+        "sha256": "7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"
+      },
+      {
+        "path": "connected-study.css",
+        "sha256": "6b61c50c1d8e005074beb2db8fa800377377e6a3c9b955678dd836538fcb48cd"
+      },
+      {
+        "path": "full-image-viewer.css",
+        "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+      },
+      {
+        "path": "hero-details.css",
+        "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+      },
+      {
+        "path": "resource-cards.css",
+        "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+      },
+      {
+        "path": "site-header.css",
+        "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+      },
+      {
+        "path": "site-search.css",
+        "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+      },
+      {
+        "path": "site-system.css",
+        "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+      },
+      {
+        "path": "temples-history.css",
+        "sha256": "c3aa901b47871dc2cc9aa2848bf31b871a93588e0b4ad141c4d1da7912b2125a"
+      },
+      {
+        "path": "topic-art.css",
+        "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"
+      },
+      {
+        "path": "topic-artwork-details.css",
+        "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+      },
+      {
+        "path": "topic-heroes.css",
+        "sha256": "c0cd96bafe94455fd41d8b6c8357baaa12a0556ce204ba058a1264160acae632"
+      },
+      {
+        "path": "topic-study-pages.css",
+        "sha256": "99e1df87cfdcd11751bb16e0ea293a5048cd6f5f73245a791d20492226299236"
+      }
+    ]
+  },
+  "reviews": [
+    {
+      "reviewer": "Fermi",
+      "receipt_id": "fermi-temple-tribute-final-context-20261007-receiver-phase1-context-20261008",
+      "stage": "finished",
+      "verdict": "PASS",
+      "withdrawn": false,
+      "binding_sha256": "67f2385abb9b747eec840a0304871407d8004313a058bf331a95fa23f9b0c369",
+      "reviewed_at": "2026-10-08T21:11:30.134022+00:00",
+      "observations": "Current Fermi receiver read exact live Master/protected foundation, current 00B/Focus and applicable repository mandates. Original-resolution and face-detail checks below explicitly reuse prior Fermi hash-bound pixel inspection; this turn independently verified unchanged source/decoded-pixel/derivative hashes and inspected current rendered screenshot pixels and visitor copy. No regeneration or new owner approval. Actual browser interaction claims belong to root/UI receipts, not my screenshot inspection. No unresolved scoped finding; publication, Newton concurrence and owner aesthetic acceptance remain separate.",
+      "checks": {
+        "identity": "Prior direct approved Home and Peter reference comparison retained Christ recognizable face; Peter only approved rear-profile continuity, no new frontal identity claim.",
+        "age": "Mortal ministry Christ appears mature adult approximately early thirties; Peter adult exact age unknown.",
+        "expression_gaze": "Christ gently speaks looking toward Peter; attentive seated two-person exchange with natural hand gesture.",
+        "atmosphere": "Domestic daylight, restrained instruction and photographic depth; no modern ordinance scene or theatrical halo.",
+        "environment": "Modest house in Capernaum, rough walls, bench, doorway and vessel are interpretive staging consistent with source.",
+        "characters_realism": "Prior full-resolution and face-detail review found natural skin, beard, hair and woven cloth; both derivative hashes preserve appearance.",
+        "period_sources": "Reused Matthew17:24-27/Exodus30:13 source review; instruction before fishing, not Caesar tribute of Matthew22. Hook/line preparation is interpretive; no fish/payment invented in pixels.",
+        "anatomy": "Prior details show coherent explanatory hand and separate bench hand; Peter grips coil with natural joins. Mortal ministry has no resurrected-scar requirement.",
+        "uniqueness": "Seated domestic two-person exchange differs from John6 standing departure, John7 temple questioning and Caesar coin event.",
+        "desktop_phone": "Independently inspected actual current desktop1280 and phone412 placement screenshots, plus targeted panel/full-size screenshot where listed. Complete3:2 picture, readable caption/source controls, natural stacking and appropriate pause in story flow. UI native actions separately verified; screenshot review does not claim interaction or200percent scaling."
+      },
+      "full_resolution_inspected": true,
+      "face_details_inspected": true,
+      "pixel_review_provenance": "Retained prior independently inspected immutable pixels; original and all derivatives verified byte and decoded-pixel identical in this review. No claim of new generation or new owner approval.",
+      "evidence": [
+        {
+          "path": "assets/page-art/visual-rhythm-journey/temple-tribute-original.png",
+          "sha256": "e1cbd9cf09065630f8af52791c9832cf93e1c0be0f75893b138e1f4cede47195"
+        },
+        {
+          "path": "assets/page-art/visual-rhythm-journey/temple-tribute-full.webp",
+          "sha256": "de729b17b7a72a14b6f667c9a23a4f064c4d7883dab1d5d1d430f80e7f1820bf"
+        },
+        {
+          "path": "assets/page-art/visual-rhythm-journey/temple-tribute-960.webp",
+          "sha256": "fc1dff1127af137bdf0cf20d3da8833b6b6180940aa7dd019106bb022f5e050a"
+        },
+        {
+          "path": "answer-navigation.css",
+          "sha256": "8112ad6d52ada3bd0b373633fc2e60f5ada7d47fb2204c28e1a09ae01be66a57"
+        },
+        {
+          "path": "answer-opening.css",
+          "sha256": "0356c038ad2adcec7206bfcb3d57915b9e2be2cd42024770560f3d9875cc94fb"
+        },
+        {
+          "path": "answer-styles.css",
+          "sha256": "82dc51b82d56a129be803420cae47630f053f7af1259c659113fbd7fcd76d6ad"
+        },
+        {
+          "path": "answers/why-latter-day-saints-build-temples.html",
+          "sha256": "1a906ac795b333338949a171d70c9dd2a28562dc0374fd3ab1101fa0184aff9c"
+        },
+        {
+          "path": "artwork-actions.css",
+          "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+        },
+        {
+          "path": "artwork-details.css",
+          "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+        },
+        {
+          "path": "complete-card-rows.css",
+          "sha256": "7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"
+        },
+        {
+          "path": "connected-study.css",
+          "sha256": "6b61c50c1d8e005074beb2db8fa800377377e6a3c9b955678dd836538fcb48cd"
+        },
+        {
+          "path": "full-image-viewer.css",
+          "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+        },
+        {
+          "path": "hero-details.css",
+          "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+        },
+        {
+          "path": "resource-cards.css",
+          "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+        },
+        {
+          "path": "site-header.css",
+          "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+        },
+        {
+          "path": "site-search.css",
+          "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+        },
+        {
+          "path": "site-system.css",
+          "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+        },
+        {
+          "path": "temples-history.css",
+          "sha256": "c3aa901b47871dc2cc9aa2848bf31b871a93588e0b4ad141c4d1da7912b2125a"
+        },
+        {
+          "path": "topic-art.css",
+          "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"
+        },
+        {
+          "path": "topic-artwork-details.css",
+          "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+        },
+        {
+          "path": "topic-heroes.css",
+          "sha256": "c0cd96bafe94455fd41d8b6c8357baaa12a0556ce204ba058a1264160acae632"
+        },
+        {
+          "path": "topic-study-pages.css",
+          "sha256": "99e1df87cfdcd11751bb16e0ea293a5048cd6f5f73245a791d20492226299236"
+        }
+      ],
+      "screenshot_evidence": [
+        {
+          "path": ".qa-artifacts/visual-rhythm-review/temple-tribute-desktop.png",
+          "sha256": "7e0b4ff364d50d593360ab7379e31a603d216193d889dbd06a757acb76a61f60"
+        },
+        {
+          "path": ".qa-artifacts/visual-rhythm-review/temple-tribute-phone.png",
+          "sha256": "d984f5dfdaf9a64ab69397b8fac7c73db7e680782b1eb45700dda1e43c06044c"
+        },
+        {
+          "path": ".qa-artifacts/visual-rhythm-review/temple-tribute-fullsize.png",
+          "sha256": "3e70d1483f127ea5fcd090ce471e815fbb87749717b5195286b76556da3e0ce7"
+        }
+      ],
+      "mandates_read": [
+        {
+          "path": "AGENTS.md",
+          "sha256": "fe68d0e575ac67262f5693432f09e8de8c2236d1ad8e58890e24f6d358cd4bf4"
+        },
+        {
+          "path": "docs/historical-character-identity.md",
+          "sha256": "69f0f51400ba102dfb5df9a9ec9fb6e738255dc496b84dc5dd684f3f5886c8c4"
+        },
+        {
+          "path": "docs/focuschrist-enrichment-and-stewardship-prompt.md",
+          "sha256": "91cfd09d188880c849493d1752cabb6c6bf8b239d9722259b196161fb6189d14"
+        },
+        {
+          "path": "docs/supporting-artwork-standard.md",
+          "sha256": "bdf1a7b97693f15cc9d6411fd0378ea8b549f2a6d3df934d574398ecbe0966ec"
+        },
+        {
+          "path": "docs/enriched-picture-owner-mandate.md",
+          "sha256": "c237fb14c7dd57f04d7d9ad063f3f0e93daf0a5c9844f9c3682407b4c80b363d"
+        }
+      ],
+      "source_spec": "docs/reviews/visual-rhythm-new-art/temple-tribute-creation-spec.json",
+      "section_top_context_review": {
+        "reviewed_at": "2026-10-08T16:08:06.454645+00:00",
+        "scope": "Section-top navigation only: shared script cache reference, plus four explicit subject-start mappings on Church History. Independent Fermi and Newton exact inverse comparisons reconstruct all 131 previous HTML consumers. Artwork, prose, stylesheets, source records, hero geometry and original review evidence remain unchanged. This amendment reuses prior artwork/source/pixel reviews; it does not claim a new artwork inspection or owner acceptance.",
+        "changed_context": [
+          {
+            "path": "answers/why-latter-day-saints-build-temples.html",
+            "prior_sha256": "65248868ab6e77314e267a4f1057ecbc1f9411cd289bb7dffa3aedb1c32ecf7c",
+            "sha256": "03632973dc8ef44dd175af8604d231d78afea4160fe432cc985f23d523f9aaf4"
+          }
+        ],
+        "verdict": "CONCUR scoped page-context amendment",
+        "evidence_basis": "Fermi and Newton independently verified exact HTML inverse; Albert reviewed source delta and actual desktop/phone subject landings. Prior full-resolution artwork evidence and timestamps remain historical and unmodified."
+      },
+      "visible_modal_cache_context_review": {
+        "reviewed_at": "2026-10-08T17:12:36.674294+00:00",
+        "scope": "Navigation cache reference only in this page context: version 20261008-section-top-1 to version 20261008-section-top-2. The shared navigation correction ignores hidden modal markup while preserving visible modal ownership. Artwork, prose, stylesheets, source records and hero geometry remain unchanged. This amendment reuses prior artwork/source/pixel reviews; it does not claim new artwork inspection or owner acceptance.",
+        "changed_context": [
+          {
+            "path": "answers/why-latter-day-saints-build-temples.html",
+            "prior_sha256": "03632973dc8ef44dd175af8604d231d78afea4160fe432cc985f23d523f9aaf4",
+            "sha256": "649e1b5be70dbe600f2a7613f78c242cfeea047cc7f936014174487da350e38d"
+          }
+        ],
+        "verdict": "CONCUR mechanical page-context amendment only",
+        "evidence_basis": "Exact per-page byte inverse reconstructs previous reviewed HTML; prior complete spec and reviews preserved. Shared navigation behavioral acceptance is recorded separately."
+      },
+      "phase1_layout_context_review": {
+        "reviewed_at": "2026-10-08T21:11:30.134022+00:00",
+        "scope": "Only reviewed phase1 CSS spacing/body rails and associated HTML cache references. Artwork, sources, prose and prior finished-pixel evidence unchanged. No new artwork inspection or owner aesthetic acceptance claimed.",
+        "changed_context": [
+          {
+            "path": "answers/why-latter-day-saints-build-temples.html",
+            "prior": "649e1b5be70dbe600f2a7613f78c242cfeea047cc7f936014174487da350e38d",
+            "current": "4eac0751f4a7facf61fcc2287beb72c786f87bb686073011ee3102e9f38fc8f8",
+            "head": "649e1b5be70dbe600f2a7613f78c242cfeea047cc7f936014174487da350e38d",
+            "head_matches_prior": true
+          },
+          {
+            "path": "connected-study.css",
+            "prior": "513b11859f17d36a5934d323f865242b8c90beea70e94fd3056e6e2dc0af40c6",
+            "current": "6b61c50c1d8e005074beb2db8fa800377377e6a3c9b955678dd836538fcb48cd",
+            "head": "513b11859f17d36a5934d323f865242b8c90beea70e94fd3056e6e2dc0af40c6",
+            "head_matches_prior": true
+          }
+        ],
+        "verdict": "CONCUR bounded phase1 page-context amendment",
+        "evidence_basis": "Current exact CSS delta read; all127 prior changed-file hashes match. Personally inspected source-bound Church390/1722 and Eleazer1722 reflection pixels. Reused unchanged prior39full-page tiles,62artwork flows,48geometry states. Original artwork pixels/sources unchanged; no fresh identity recertification."
+      },
+      "prior_finished_reviewed_at": "2026-10-07T04:33:17.707998+00:00",
+      "final_release_context_review": {
+        "kind": "current_context_only_reconciliation",
+        "reviewer": "Fermi",
+        "actual_actor": "/root/fermi_current",
+        "verdict": "CONCUR",
+        "reviewed_at": "2026-10-10T03:54:39.978805+00:00",
+        "source_receipt_sha256": "c497b9a00b57b770edf198a5df83da80e16a9d70dcfeff0fc7c313b94534b47b",
+        "context_sha256": "1d8d1caa57f87e1bfcf0fd8aeba1e1b092a349a4cbcb8d0f14aedec71c62dbbe",
+        "review_input_sha256": "701d9789c3ee932e7f7bc5e21c2fbb3fbadc1f41afc5d8c32280f46f5501acb5",
+        "prior_binding_sha256": "be7e5d85be9f2f6c5816435ade732f0aa74f8154c025ad5f11bcb3f1188362ad",
+        "current_binding_sha256": "67f2385abb9b747eec840a0304871407d8004313a058bf331a95fa23f9b0c369",
+        "limitations": "Current page/CSS binding review only. Existing original pixel/native source inspection, evidence and original reviewed_at are preserved, not claimed as new inspection.",
+        "evidence_rebindings": [
+          {
+            "path": "answers/why-latter-day-saints-build-temples.html",
+            "prior_sha256": "4eac0751f4a7facf61fcc2287beb72c786f87bb686073011ee3102e9f38fc8f8",
+            "current_sha256": "1a906ac795b333338949a171d70c9dd2a28562dc0374fd3ab1101fa0184aff9c",
+            "scope": "Current page/CSS context only; historical pixel evidence unchanged."
+          }
+        ],
+        "evidence_rebinding_review": {
+          "actual_actor": "/root/fermi_current",
+          "received_recorded_at": "2026-10-10T04:02:30.478619+00:00",
+          "source_receipt_sha256": "ed9852c46317a36a454105f665a626a689f55735140f8384708a5d167e3fe56a",
+          "original_message_timestamp": null,
+          "original_message_digest": null,
+          "scope": "Explicit actual current concurrence on the same previously reviewed context paths; no new pixel claim."
+        }
+      }
+    },
+    {
+      "reviewer": "Newton",
+      "receipt_id": "newton-final-context-temple-tribute-20261007-phase1-context-20261008",
+      "stage": "finished",
+      "verdict": "PASS",
+      "withdrawn": false,
+      "binding_sha256": "67f2385abb9b747eec840a0304871407d8004313a058bf331a95fa23f9b0c369",
+      "reviewed_at": "2026-10-08T21:11:30.134022+00:00",
+      "full_resolution_inspected": true,
+      "face_details_inspected": true,
+      "observations": "Current independent review personally inspected both delivered WebPs, desktop/phone placements and applicable narrow panel/viewer screenshots, read current caption/source/adjacent prose, and verified complete current HTML/CSS context plus asset/pixel hashes. Exact unchanged original-resolution and face-detail inspection is reused from the named prior Newton receipt, not claimed as newly repeated. No browser operation, owner aesthetic acceptance or public verification by this reviewer.",
+      "checks": {
+        "identity": "Prior exact Home-Christ and approved Peter rescue reference comparison reused unchanged; full and960 derivatives preserve Christ facial identity and Peter rear-profile continuity.",
+        "age": "Adult mortal-ministry Christ and adult Peter; no asserted exact ancient birth date.",
+        "expression_gaze": "Christ speaking naturally to attentive Peter, coherent mutual orientation and visible eyes.",
+        "atmosphere": "Natural domestic light and detailed skin, cloth and earthen walls; no halo or painterly surfaces.",
+        "environment": "Modest house with line/hook prepares for Matthew17 fishing instruction, distinct from Caesar coin question.",
+        "anatomy": "Christ gesture and resting hands and Peter coil-holding hands remain coherent; no scars in this mortal scene.",
+        "uniqueness": "Seated indoor two-person instruction differs from John6 courtyard and John7 public temple and Matthew22 tribute coin.",
+        "period_sources": "Reused prior independent Matthew17:24-27 source readback and unchanged source record. Caption says Capernaum, temple tribute and hook, then invites reflection on Sonship; no invented room/date claim.",
+        "characters_realism": "Prior full-resolution original and face/hand crop concurrence remains valid on identical original SHA. Both delivered full/960 WebPs personally viewed now, retaining natural faces and textures. Two adults seated in modest domestic interior, natural mutual gaze and expression. Christ matches inspected Home identity with changed speaking expression; Peter retains approved rear-profile hair/beard/head continuity. Both Christ hands and Peter coil-holding hands trace coherently; no scars. Coil/hook visually supplies pre-fishing cue, no fish/coin or Caesar episode. Dusty-blue mantle and beige tunic plausible. Full native scene and face/hands/coil crops inspected.",
+        "desktop_phone": "Personally viewed current saved desktop and phone placements: native3:2 picture, readable caption/source controls and useful narrative pause. Applicable narrow panel/fullsize imagery also inspected; UI/root own executed actions. Screenshot filenames are not interaction proof."
+      },
+      "prior_review": {
+        "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-06\\focus-artwork-pill-controls-completion\\work\\newton\\temple-tribute-original-pixel-review.json",
+        "sha256": "7328c22b69b140600bbf0d1c5c8829fb835a6ad3a6ecfc8b3988586a62bcf3c2",
+        "reuse": "Exact original and preflight hashes unchanged; retain prior source/reference/full-resolution crop inspection."
+      },
+      "evidence": [
+        {
+          "path": "assets/page-art/visual-rhythm-journey/temple-tribute-original.png",
+          "sha256": "e1cbd9cf09065630f8af52791c9832cf93e1c0be0f75893b138e1f4cede47195"
+        },
+        {
+          "path": "assets/page-art/visual-rhythm-journey/temple-tribute-full.webp",
+          "sha256": "de729b17b7a72a14b6f667c9a23a4f064c4d7883dab1d5d1d430f80e7f1820bf"
+        },
+        {
+          "path": "assets/page-art/visual-rhythm-journey/temple-tribute-960.webp",
+          "sha256": "fc1dff1127af137bdf0cf20d3da8833b6b6180940aa7dd019106bb022f5e050a"
+        },
+        {
+          "path": ".qa-artifacts/visual-rhythm-review/temple-tribute-desktop.png",
+          "sha256": "7e0b4ff364d50d593360ab7379e31a603d216193d889dbd06a757acb76a61f60"
+        },
+        {
+          "path": ".qa-artifacts/visual-rhythm-review/temple-tribute-phone.png",
+          "sha256": "d984f5dfdaf9a64ab69397b8fac7c73db7e680782b1eb45700dda1e43c06044c"
+        }
+      ],
+      "section_top_context_review": {
+        "reviewed_at": "2026-10-08T16:08:06.454645+00:00",
+        "scope": "Section-top navigation only: shared script cache reference, plus four explicit subject-start mappings on Church History. Independent Fermi and Newton exact inverse comparisons reconstruct all 131 previous HTML consumers. Artwork, prose, stylesheets, source records, hero geometry and original review evidence remain unchanged. This amendment reuses prior artwork/source/pixel reviews; it does not claim a new artwork inspection or owner acceptance.",
+        "changed_context": [
+          {
+            "path": "answers/why-latter-day-saints-build-temples.html",
+            "prior_sha256": "65248868ab6e77314e267a4f1057ecbc1f9411cd289bb7dffa3aedb1c32ecf7c",
+            "sha256": "03632973dc8ef44dd175af8604d231d78afea4160fe432cc985f23d523f9aaf4"
+          }
+        ],
+        "verdict": "CONCUR scoped page-context amendment",
+        "evidence_basis": "Fermi and Newton independently verified exact HTML inverse; Albert reviewed source delta and actual desktop/phone subject landings. Prior full-resolution artwork evidence and timestamps remain historical and unmodified."
+      },
+      "visible_modal_cache_context_review": {
+        "reviewed_at": "2026-10-08T17:12:36.674294+00:00",
+        "scope": "Navigation cache reference only in this page context: version 20261008-section-top-1 to version 20261008-section-top-2. The shared navigation correction ignores hidden modal markup while preserving visible modal ownership. Artwork, prose, stylesheets, source records and hero geometry remain unchanged. This amendment reuses prior artwork/source/pixel reviews; it does not claim new artwork inspection or owner acceptance.",
+        "changed_context": [
+          {
+            "path": "answers/why-latter-day-saints-build-temples.html",
+            "prior_sha256": "03632973dc8ef44dd175af8604d231d78afea4160fe432cc985f23d523f9aaf4",
+            "sha256": "649e1b5be70dbe600f2a7613f78c242cfeea047cc7f936014174487da350e38d"
+          }
+        ],
+        "verdict": "CONCUR mechanical page-context amendment only",
+        "evidence_basis": "Exact per-page byte inverse reconstructs previous reviewed HTML; prior complete spec and reviews preserved. Shared navigation behavioral acceptance is recorded separately."
+      },
+      "phase1_layout_context_review": {
+        "reviewed_at": "2026-10-08T21:11:30.134022+00:00",
+        "scope": "Only reviewed phase1 CSS spacing/body rails and associated HTML cache references. Artwork, sources, prose and prior finished-pixel evidence unchanged. No new artwork inspection or owner aesthetic acceptance claimed.",
+        "changed_context": [
+          {
+            "path": "answers/why-latter-day-saints-build-temples.html",
+            "prior": "649e1b5be70dbe600f2a7613f78c242cfeea047cc7f936014174487da350e38d",
+            "current": "4eac0751f4a7facf61fcc2287beb72c786f87bb686073011ee3102e9f38fc8f8",
+            "head": "649e1b5be70dbe600f2a7613f78c242cfeea047cc7f936014174487da350e38d",
+            "head_matches_prior": true
+          },
+          {
+            "path": "connected-study.css",
+            "prior": "513b11859f17d36a5934d323f865242b8c90beea70e94fd3056e6e2dc0af40c6",
+            "current": "6b61c50c1d8e005074beb2db8fa800377377e6a3c9b955678dd836538fcb48cd",
+            "head": "513b11859f17d36a5934d323f865242b8c90beea70e94fd3056e6e2dc0af40c6",
+            "head_matches_prior": true
+          }
+        ],
+        "verdict": "CONCUR bounded phase1 page-context amendment",
+        "evidence_basis": "Independent122HTML cache-only inverse and8capture source bindings pass. Exact CSS read; personally inspected Church390/1905 and Eleazer390/1722 pixels. Independent candidate deep-preservation check PASS at2026-10-08T21:06:40.738881+00:00. No fresh full-scene identity recertification."
+      },
+      "prior_finished_reviewed_at": "2026-10-07T04:33:04.911416+00:00",
+      "final_release_context_review": {
+        "kind": "current_context_only_reconciliation",
+        "reviewer": "Newton",
+        "actual_actor": "newton_current",
+        "verdict": "CONCUR",
+        "reviewed_at": "2026-10-10T03:56:18.250830+00:00",
+        "source_receipt_sha256": "eac87b39ca1624d5ff66a5ea0c28a6b1cd41c9a3f8be5898f59594ddeaab77ae",
+        "context_sha256": "1d8d1caa57f87e1bfcf0fd8aeba1e1b092a349a4cbcb8d0f14aedec71c62dbbe",
+        "review_input_sha256": "701d9789c3ee932e7f7bc5e21c2fbb3fbadc1f41afc5d8c32280f46f5501acb5",
+        "prior_binding_sha256": "be7e5d85be9f2f6c5816435ade732f0aa74f8154c025ad5f11bcb3f1188362ad",
+        "current_binding_sha256": "67f2385abb9b747eec840a0304871407d8004313a058bf331a95fa23f9b0c369",
+        "limitations": "Current page/CSS binding review only. Existing original pixel/native source inspection, evidence and original reviewed_at are preserved, not claimed as new inspection."
+      }
+    }
+  ],
+  "root_review": {
+    "reviewer": "Albert",
+    "verdict": "PASS",
+    "binding_sha256": "67f2385abb9b747eec840a0304871407d8004313a058bf331a95fa23f9b0c369",
+    "observations": "Personally operated all six artwork panels and fullsize paths on desktop1280x900 and phone412x915, inspected exact download hrefs, Escape focus return and Continue Lesson. History scripture reader loaded verse121:9. Eleazer phone/desktop selector switches used exact original/desktop source; labels and48px controls coherent. Personally inspected saved desktop/phone placement screenshots and current desktop panel pixels; reused original/face pixel inspection documented by prior root and both independent reviewers. Current root screenshots saved immediately after actions sometimes capture preceding panel state; these are not represented as viewer screenshots. Phone/desktop placement and all relevant current HTML/CSS integrity verified by independent UI report. No product pixels regenerated. Prose semantic delta read personally; concise invitations preserve sources and historical/devotional distinctions.",
+    "evidence": {
+      "desktop": [
+        {
+          "path": "docs/reviews/visual-rhythm-final-context/albert-context-review.json",
+          "sha256": "cf5bb96e256207370b753a1a4c81626faf2ff6e1542c018f0864e5e5c5170a00"
+        },
+        {
+          "path": "docs/reviews/visual-rhythm-final-context/root-native.json",
+          "sha256": "db0c62141c8786814cdc6fb58c44f6f38d3e85b30f44f9a3f53eeb5634d231a0"
+        },
+        {
+          "path": "docs/reviews/visual-rhythm-final-context/ui-specialist-context-review.json",
+          "sha256": "19ba8179f7bc3379495762be75748e28f9c20e4e7e39d93a6c882474efe8c00f"
+        }
+      ],
+      "phone": [
+        {
+          "path": "docs/reviews/visual-rhythm-final-context/albert-context-review.json",
+          "sha256": "cf5bb96e256207370b753a1a4c81626faf2ff6e1542c018f0864e5e5c5170a00"
+        },
+        {
+          "path": "docs/reviews/visual-rhythm-final-context/root-native.json",
+          "sha256": "db0c62141c8786814cdc6fb58c44f6f38d3e85b30f44f9a3f53eeb5634d231a0"
+        },
+        {
+          "path": "docs/reviews/visual-rhythm-final-context/ui-specialist-context-review.json",
+          "sha256": "19ba8179f7bc3379495762be75748e28f9c20e4e7e39d93a6c882474efe8c00f"
+        }
+      ]
+    },
+    "section_top_context_review": {
+      "reviewed_at": "2026-10-08T16:08:06.454645+00:00",
+      "scope": "Section-top navigation only: shared script cache reference, plus four explicit subject-start mappings on Church History. Independent Fermi and Newton exact inverse comparisons reconstruct all 131 previous HTML consumers. Artwork, prose, stylesheets, source records, hero geometry and original review evidence remain unchanged. This amendment reuses prior artwork/source/pixel reviews; it does not claim a new artwork inspection or owner acceptance.",
+      "changed_context": [
+        {
+          "path": "answers/why-latter-day-saints-build-temples.html",
+          "prior_sha256": "65248868ab6e77314e267a4f1057ecbc1f9411cd289bb7dffa3aedb1c32ecf7c",
+          "sha256": "03632973dc8ef44dd175af8604d231d78afea4160fe432cc985f23d523f9aaf4"
+        }
+      ],
+      "verdict": "CONCUR scoped page-context amendment",
+      "evidence_basis": "Fermi and Newton independently verified exact HTML inverse; Albert reviewed source delta and actual desktop/phone subject landings. Prior full-resolution artwork evidence and timestamps remain historical and unmodified."
+    },
+    "visible_modal_cache_context_review": {
+      "reviewed_at": "2026-10-08T17:12:36.674294+00:00",
+      "scope": "Navigation cache reference only in this page context: version 20261008-section-top-1 to version 20261008-section-top-2. The shared navigation correction ignores hidden modal markup while preserving visible modal ownership. Artwork, prose, stylesheets, source records and hero geometry remain unchanged. This amendment reuses prior artwork/source/pixel reviews; it does not claim new artwork inspection or owner acceptance.",
+      "changed_context": [
+        {
+          "path": "answers/why-latter-day-saints-build-temples.html",
+          "prior_sha256": "03632973dc8ef44dd175af8604d231d78afea4160fe432cc985f23d523f9aaf4",
+          "sha256": "649e1b5be70dbe600f2a7613f78c242cfeea047cc7f936014174487da350e38d"
+        }
+      ],
+      "verdict": "CONCUR mechanical page-context amendment only",
+      "evidence_basis": "Exact per-page byte inverse reconstructs previous reviewed HTML; prior complete spec and reviews preserved. Shared navigation behavioral acceptance is recorded separately."
+    },
+    "phase1_layout_context_review": {
+      "reviewed_at": "2026-10-08T21:11:30.134022+00:00",
+      "scope": "Only reviewed phase1 CSS spacing/body rails and associated HTML cache references. Artwork, sources, prose and prior finished-pixel evidence unchanged. No new artwork inspection or owner aesthetic acceptance claimed.",
+      "changed_context": [
+        {
+          "path": "answers/why-latter-day-saints-build-temples.html",
+          "prior": "649e1b5be70dbe600f2a7613f78c242cfeea047cc7f936014174487da350e38d",
+          "current": "4eac0751f4a7facf61fcc2287beb72c786f87bb686073011ee3102e9f38fc8f8",
+          "head": "649e1b5be70dbe600f2a7613f78c242cfeea047cc7f936014174487da350e38d",
+          "head_matches_prior": true
+        },
+        {
+          "path": "connected-study.css",
+          "prior": "513b11859f17d36a5934d323f865242b8c90beea70e94fd3056e6e2dc0af40c6",
+          "current": "6b61c50c1d8e005074beb2db8fa800377377e6a3c9b955678dd836538fcb48cd",
+          "head": "513b11859f17d36a5934d323f865242b8c90beea70e94fd3056e6e2dc0af40c6",
+          "head_matches_prior": true
+        }
+      ],
+      "verdict": "CONCUR bounded phase1 page-context amendment",
+      "evidence_basis": "Exact CSS source read. Personally native browser Eleazer1905 opening/Continue/directory/first and last body;390footer/finalbody/artwork-study/fullsize/close/ContinueLesson restored heading. Church390/1722 settled promotion gap16/24px without clipping. Bounded six-context concurrence; broader wholepage/release acceptance pending."
+    },
+    "prior_finished_reviewed_at": null,
+    "reviewed_at": "2026-10-08T21:11:30.134022+00:00",
+    "receipt_id": "albert-assembled-phase1-context-20261008",
+    "final_release_context_review": {
+      "kind": "current_context_only_reconciliation",
+      "reviewer": "Albert",
+      "actual_actor": "/root",
+      "verdict": "CONCUR",
+      "reviewed_at": "2026-10-10T03:54:46.733486+00:00",
+      "source_receipt_sha256": "c563f853c7eab610c3c7001840f6e8c11955f57346510e8e02f456a90459740e",
+      "context_sha256": "1d8d1caa57f87e1bfcf0fd8aeba1e1b092a349a4cbcb8d0f14aedec71c62dbbe",
+      "review_input_sha256": "701d9789c3ee932e7f7bc5e21c2fbb3fbadc1f41afc5d8c32280f46f5501acb5",
+      "prior_binding_sha256": "be7e5d85be9f2f6c5816435ade732f0aa74f8154c025ad5f11bcb3f1188362ad",
+      "current_binding_sha256": "67f2385abb9b747eec840a0304871407d8004313a058bf331a95fa23f9b0c369",
+      "limitations": "Current page/CSS binding review only. Existing original pixel/native source inspection, evidence and original reviewed_at are preserved, not claimed as new inspection."
+    }
+  },
+  "prior_page_context_bindings": [
+    {
+      "spec": {
+        "id": "visual-rhythm-temple-tribute",
+        "role": "body",
+        "route": "answers/why-latter-day-saints-build-temples.html",
+        "preflight_sha256": "d991e2bb458f37b4b15cfb8d50f1dd54ff5e9249dbb1ddda12d1216633b3b765",
+        "generated_at": "2026-10-07T04:10:19.959908+00:00",
+        "owner_status": "not-reviewed",
+        "ancestor_sha256": [
+          "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+          "f6b5502c16f4a272b0e80209876366f86285c38ce5547b28d6fbe98d9849427a",
+          "830afc2a2fd928df95293e53184d7a77a8487ab4380198ec76cd4c8ba71e4d25"
+        ],
+        "original": {
+          "path": "assets/page-art/visual-rhythm-journey/temple-tribute-original.png",
+          "sha256": "e1cbd9cf09065630f8af52791c9832cf93e1c0be0f75893b138e1f4cede47195",
+          "pixel_sha256": "1c0ecb17a65256b263edc1fb4476c76c201170d3455fe0334bf3199b0204338b"
+        },
+        "derivatives": [
+          {
+            "path": "assets/page-art/visual-rhythm-journey/temple-tribute-full.webp",
+            "sha256": "de729b17b7a72a14b6f667c9a23a4f064c4d7883dab1d5d1d430f80e7f1820bf",
+            "pixel_sha256": "4ca2ce90dfcc0d6bb9517974ba6092bac31defc52c6f0871ae009c05f72c3ac5"
+          },
+          {
+            "path": "assets/page-art/visual-rhythm-journey/temple-tribute-960.webp",
+            "sha256": "fc1dff1127af137bdf0cf20d3da8833b6b6180940aa7dd019106bb022f5e050a",
+            "pixel_sha256": "c9d40120db5ff7555bdcc42058042b92d29a134da428b40d59a12a72b0b8de97"
+          }
+        ],
+        "page_context": [
+          {
+            "path": "answer-navigation.css",
+            "sha256": "8112ad6d52ada3bd0b373633fc2e60f5ada7d47fb2204c28e1a09ae01be66a57"
+          },
+          {
+            "path": "answer-opening.css",
+            "sha256": "0356c038ad2adcec7206bfcb3d57915b9e2be2cd42024770560f3d9875cc94fb"
+          },
+          {
+            "path": "answer-styles.css",
+            "sha256": "82dc51b82d56a129be803420cae47630f053f7af1259c659113fbd7fcd76d6ad"
+          },
+          {
+            "path": "answers/why-latter-day-saints-build-temples.html",
+            "sha256": "65248868ab6e77314e267a4f1057ecbc1f9411cd289bb7dffa3aedb1c32ecf7c"
+          },
+          {
+            "path": "artwork-actions.css",
+            "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+          },
+          {
+            "path": "artwork-details.css",
+            "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+          },
+          {
+            "path": "complete-card-rows.css",
+            "sha256": "7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"
+          },
+          {
+            "path": "connected-study.css",
+            "sha256": "513b11859f17d36a5934d323f865242b8c90beea70e94fd3056e6e2dc0af40c6"
+          },
+          {
+            "path": "full-image-viewer.css",
+            "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+          },
+          {
+            "path": "hero-details.css",
+            "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+          },
+          {
+            "path": "resource-cards.css",
+            "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+          },
+          {
+            "path": "site-header.css",
+            "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+          },
+          {
+            "path": "site-search.css",
+            "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+          },
+          {
+            "path": "site-system.css",
+            "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+          },
+          {
+            "path": "temples-history.css",
+            "sha256": "c3aa901b47871dc2cc9aa2848bf31b871a93588e0b4ad141c4d1da7912b2125a"
+          },
+          {
+            "path": "topic-art.css",
+            "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"
+          },
+          {
+            "path": "topic-artwork-details.css",
+            "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+          },
+          {
+            "path": "topic-heroes.css",
+            "sha256": "c0cd96bafe94455fd41d8b6c8357baaa12a0556ce204ba058a1264160acae632"
+          },
+          {
+            "path": "topic-study-pages.css",
+            "sha256": "99e1df87cfdcd11751bb16e0ea293a5048cd6f5f73245a791d20492226299236"
+          }
+        ]
+      },
+      "reviews": [
+        {
+          "reviewer": "Fermi",
+          "receipt_id": "fermi-temple-tribute-final-context-20261007-receiver",
+          "stage": "finished",
+          "verdict": "PASS",
+          "withdrawn": false,
+          "binding_sha256": "d2391570e3f10eccb97ee6955fac3c792e170c1ea7b6a7df1607725b2abb98f0",
+          "reviewed_at": "2026-10-07T04:33:17.707998+00:00",
+          "observations": "Current Fermi receiver read exact live Master/protected foundation, current 00B/Focus and applicable repository mandates. Original-resolution and face-detail checks below explicitly reuse prior Fermi hash-bound pixel inspection; this turn independently verified unchanged source/decoded-pixel/derivative hashes and inspected current rendered screenshot pixels and visitor copy. No regeneration or new owner approval. Actual browser interaction claims belong to root/UI receipts, not my screenshot inspection. No unresolved scoped finding; publication, Newton concurrence and owner aesthetic acceptance remain separate.",
+          "checks": {
+            "identity": "Prior direct approved Home and Peter reference comparison retained Christ recognizable face; Peter only approved rear-profile continuity, no new frontal identity claim.",
+            "age": "Mortal ministry Christ appears mature adult approximately early thirties; Peter adult exact age unknown.",
+            "expression_gaze": "Christ gently speaks looking toward Peter; attentive seated two-person exchange with natural hand gesture.",
+            "atmosphere": "Domestic daylight, restrained instruction and photographic depth; no modern ordinance scene or theatrical halo.",
+            "environment": "Modest house in Capernaum, rough walls, bench, doorway and vessel are interpretive staging consistent with source.",
+            "characters_realism": "Prior full-resolution and face-detail review found natural skin, beard, hair and woven cloth; both derivative hashes preserve appearance.",
+            "period_sources": "Reused Matthew17:24-27/Exodus30:13 source review; instruction before fishing, not Caesar tribute of Matthew22. Hook/line preparation is interpretive; no fish/payment invented in pixels.",
+            "anatomy": "Prior details show coherent explanatory hand and separate bench hand; Peter grips coil with natural joins. Mortal ministry has no resurrected-scar requirement.",
+            "uniqueness": "Seated domestic two-person exchange differs from John6 standing departure, John7 temple questioning and Caesar coin event.",
+            "desktop_phone": "Independently inspected actual current desktop1280 and phone412 placement screenshots, plus targeted panel/full-size screenshot where listed. Complete3:2 picture, readable caption/source controls, natural stacking and appropriate pause in story flow. UI native actions separately verified; screenshot review does not claim interaction or200percent scaling."
+          },
+          "full_resolution_inspected": true,
+          "face_details_inspected": true,
+          "pixel_review_provenance": "Retained prior independently inspected immutable pixels; original and all derivatives verified byte and decoded-pixel identical in this review. No claim of new generation or new owner approval.",
+          "evidence": [
+            {
+              "path": "assets/page-art/visual-rhythm-journey/temple-tribute-original.png",
+              "sha256": "e1cbd9cf09065630f8af52791c9832cf93e1c0be0f75893b138e1f4cede47195"
+            },
+            {
+              "path": "assets/page-art/visual-rhythm-journey/temple-tribute-full.webp",
+              "sha256": "de729b17b7a72a14b6f667c9a23a4f064c4d7883dab1d5d1d430f80e7f1820bf"
+            },
+            {
+              "path": "assets/page-art/visual-rhythm-journey/temple-tribute-960.webp",
+              "sha256": "fc1dff1127af137bdf0cf20d3da8833b6b6180940aa7dd019106bb022f5e050a"
+            },
+            {
+              "path": "answer-navigation.css",
+              "sha256": "8112ad6d52ada3bd0b373633fc2e60f5ada7d47fb2204c28e1a09ae01be66a57"
+            },
+            {
+              "path": "answer-opening.css",
+              "sha256": "0356c038ad2adcec7206bfcb3d57915b9e2be2cd42024770560f3d9875cc94fb"
+            },
+            {
+              "path": "answer-styles.css",
+              "sha256": "82dc51b82d56a129be803420cae47630f053f7af1259c659113fbd7fcd76d6ad"
+            },
+            {
+              "path": "answers/why-latter-day-saints-build-temples.html",
+              "sha256": "65248868ab6e77314e267a4f1057ecbc1f9411cd289bb7dffa3aedb1c32ecf7c"
+            },
+            {
+              "path": "artwork-actions.css",
+              "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+            },
+            {
+              "path": "artwork-details.css",
+              "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+            },
+            {
+              "path": "complete-card-rows.css",
+              "sha256": "7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"
+            },
+            {
+              "path": "connected-study.css",
+              "sha256": "513b11859f17d36a5934d323f865242b8c90beea70e94fd3056e6e2dc0af40c6"
+            },
+            {
+              "path": "full-image-viewer.css",
+              "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+            },
+            {
+              "path": "hero-details.css",
+              "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+            },
+            {
+              "path": "resource-cards.css",
+              "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+            },
+            {
+              "path": "site-header.css",
+              "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+            },
+            {
+              "path": "site-search.css",
+              "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+            },
+            {
+              "path": "site-system.css",
+              "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+            },
+            {
+              "path": "temples-history.css",
+              "sha256": "c3aa901b47871dc2cc9aa2848bf31b871a93588e0b4ad141c4d1da7912b2125a"
+            },
+            {
+              "path": "topic-art.css",
+              "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"
+            },
+            {
+              "path": "topic-artwork-details.css",
+              "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+            },
+            {
+              "path": "topic-heroes.css",
+              "sha256": "c0cd96bafe94455fd41d8b6c8357baaa12a0556ce204ba058a1264160acae632"
+            },
+            {
+              "path": "topic-study-pages.css",
+              "sha256": "99e1df87cfdcd11751bb16e0ea293a5048cd6f5f73245a791d20492226299236"
+            }
+          ],
+          "screenshot_evidence": [
+            {
+              "path": ".qa-artifacts/visual-rhythm-review/temple-tribute-desktop.png",
+              "sha256": "7e0b4ff364d50d593360ab7379e31a603d216193d889dbd06a757acb76a61f60"
+            },
+            {
+              "path": ".qa-artifacts/visual-rhythm-review/temple-tribute-phone.png",
+              "sha256": "d984f5dfdaf9a64ab69397b8fac7c73db7e680782b1eb45700dda1e43c06044c"
+            },
+            {
+              "path": ".qa-artifacts/visual-rhythm-review/temple-tribute-fullsize.png",
+              "sha256": "3e70d1483f127ea5fcd090ce471e815fbb87749717b5195286b76556da3e0ce7"
+            }
+          ],
+          "mandates_read": [
+            {
+              "path": "AGENTS.md",
+              "sha256": "fe68d0e575ac67262f5693432f09e8de8c2236d1ad8e58890e24f6d358cd4bf4"
+            },
+            {
+              "path": "docs/historical-character-identity.md",
+              "sha256": "69f0f51400ba102dfb5df9a9ec9fb6e738255dc496b84dc5dd684f3f5886c8c4"
+            },
+            {
+              "path": "docs/focuschrist-enrichment-and-stewardship-prompt.md",
+              "sha256": "91cfd09d188880c849493d1752cabb6c6bf8b239d9722259b196161fb6189d14"
+            },
+            {
+              "path": "docs/supporting-artwork-standard.md",
+              "sha256": "bdf1a7b97693f15cc9d6411fd0378ea8b549f2a6d3df934d574398ecbe0966ec"
+            },
+            {
+              "path": "docs/enriched-picture-owner-mandate.md",
+              "sha256": "c237fb14c7dd57f04d7d9ad063f3f0e93daf0a5c9844f9c3682407b4c80b363d"
+            }
+          ],
+          "source_spec": "docs/reviews/visual-rhythm-new-art/temple-tribute-creation-spec.json"
+        },
+        {
+          "reviewer": "Newton",
+          "receipt_id": "newton-final-context-temple-tribute-20261007",
+          "stage": "finished",
+          "verdict": "PASS",
+          "withdrawn": false,
+          "binding_sha256": "d2391570e3f10eccb97ee6955fac3c792e170c1ea7b6a7df1607725b2abb98f0",
+          "reviewed_at": "2026-10-07T04:33:04.911416+00:00",
+          "full_resolution_inspected": true,
+          "face_details_inspected": true,
+          "observations": "Current independent review personally inspected both delivered WebPs, desktop/phone placements and applicable narrow panel/viewer screenshots, read current caption/source/adjacent prose, and verified complete current HTML/CSS context plus asset/pixel hashes. Exact unchanged original-resolution and face-detail inspection is reused from the named prior Newton receipt, not claimed as newly repeated. No browser operation, owner aesthetic acceptance or public verification by this reviewer.",
+          "checks": {
+            "identity": "Prior exact Home-Christ and approved Peter rescue reference comparison reused unchanged; full and960 derivatives preserve Christ facial identity and Peter rear-profile continuity.",
+            "age": "Adult mortal-ministry Christ and adult Peter; no asserted exact ancient birth date.",
+            "expression_gaze": "Christ speaking naturally to attentive Peter, coherent mutual orientation and visible eyes.",
+            "atmosphere": "Natural domestic light and detailed skin, cloth and earthen walls; no halo or painterly surfaces.",
+            "environment": "Modest house with line/hook prepares for Matthew17 fishing instruction, distinct from Caesar coin question.",
+            "anatomy": "Christ gesture and resting hands and Peter coil-holding hands remain coherent; no scars in this mortal scene.",
+            "uniqueness": "Seated indoor two-person instruction differs from John6 courtyard and John7 public temple and Matthew22 tribute coin.",
+            "period_sources": "Reused prior independent Matthew17:24-27 source readback and unchanged source record. Caption says Capernaum, temple tribute and hook, then invites reflection on Sonship; no invented room/date claim.",
+            "characters_realism": "Prior full-resolution original and face/hand crop concurrence remains valid on identical original SHA. Both delivered full/960 WebPs personally viewed now, retaining natural faces and textures. Two adults seated in modest domestic interior, natural mutual gaze and expression. Christ matches inspected Home identity with changed speaking expression; Peter retains approved rear-profile hair/beard/head continuity. Both Christ hands and Peter coil-holding hands trace coherently; no scars. Coil/hook visually supplies pre-fishing cue, no fish/coin or Caesar episode. Dusty-blue mantle and beige tunic plausible. Full native scene and face/hands/coil crops inspected.",
+            "desktop_phone": "Personally viewed current saved desktop and phone placements: native3:2 picture, readable caption/source controls and useful narrative pause. Applicable narrow panel/fullsize imagery also inspected; UI/root own executed actions. Screenshot filenames are not interaction proof."
+          },
+          "prior_review": {
+            "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-06\\focus-artwork-pill-controls-completion\\work\\newton\\temple-tribute-original-pixel-review.json",
+            "sha256": "7328c22b69b140600bbf0d1c5c8829fb835a6ad3a6ecfc8b3988586a62bcf3c2",
+            "reuse": "Exact original and preflight hashes unchanged; retain prior source/reference/full-resolution crop inspection."
+          },
+          "evidence": [
+            {
+              "path": "assets/page-art/visual-rhythm-journey/temple-tribute-original.png",
+              "sha256": "e1cbd9cf09065630f8af52791c9832cf93e1c0be0f75893b138e1f4cede47195"
+            },
+            {
+              "path": "assets/page-art/visual-rhythm-journey/temple-tribute-full.webp",
+              "sha256": "de729b17b7a72a14b6f667c9a23a4f064c4d7883dab1d5d1d430f80e7f1820bf"
+            },
+            {
+              "path": "assets/page-art/visual-rhythm-journey/temple-tribute-960.webp",
+              "sha256": "fc1dff1127af137bdf0cf20d3da8833b6b6180940aa7dd019106bb022f5e050a"
+            },
+            {
+              "path": ".qa-artifacts/visual-rhythm-review/temple-tribute-desktop.png",
+              "sha256": "7e0b4ff364d50d593360ab7379e31a603d216193d889dbd06a757acb76a61f60"
+            },
+            {
+              "path": ".qa-artifacts/visual-rhythm-review/temple-tribute-phone.png",
+              "sha256": "d984f5dfdaf9a64ab69397b8fac7c73db7e680782b1eb45700dda1e43c06044c"
+            }
+          ]
+        }
+      ],
+      "root_review": {
+        "reviewer": "Albert",
+        "verdict": "PASS",
+        "binding_sha256": "d2391570e3f10eccb97ee6955fac3c792e170c1ea7b6a7df1607725b2abb98f0",
+        "observations": "Personally operated all six artwork panels and fullsize paths on desktop1280x900 and phone412x915, inspected exact download hrefs, Escape focus return and Continue Lesson. History scripture reader loaded verse121:9. Eleazer phone/desktop selector switches used exact original/desktop source; labels and48px controls coherent. Personally inspected saved desktop/phone placement screenshots and current desktop panel pixels; reused original/face pixel inspection documented by prior root and both independent reviewers. Current root screenshots saved immediately after actions sometimes capture preceding panel state; these are not represented as viewer screenshots. Phone/desktop placement and all relevant current HTML/CSS integrity verified by independent UI report. No product pixels regenerated. Prose semantic delta read personally; concise invitations preserve sources and historical/devotional distinctions.",
+        "evidence": {
+          "desktop": [
+            {
+              "path": "docs/reviews/visual-rhythm-final-context/albert-context-review.json",
+              "sha256": "cf5bb96e256207370b753a1a4c81626faf2ff6e1542c018f0864e5e5c5170a00"
+            },
+            {
+              "path": "docs/reviews/visual-rhythm-final-context/root-native.json",
+              "sha256": "db0c62141c8786814cdc6fb58c44f6f38d3e85b30f44f9a3f53eeb5634d231a0"
+            },
+            {
+              "path": "docs/reviews/visual-rhythm-final-context/ui-specialist-context-review.json",
+              "sha256": "19ba8179f7bc3379495762be75748e28f9c20e4e7e39d93a6c882474efe8c00f"
+            }
+          ],
+          "phone": [
+            {
+              "path": "docs/reviews/visual-rhythm-final-context/albert-context-review.json",
+              "sha256": "cf5bb96e256207370b753a1a4c81626faf2ff6e1542c018f0864e5e5c5170a00"
+            },
+            {
+              "path": "docs/reviews/visual-rhythm-final-context/root-native.json",
+              "sha256": "db0c62141c8786814cdc6fb58c44f6f38d3e85b30f44f9a3f53eeb5634d231a0"
+            },
+            {
+              "path": "docs/reviews/visual-rhythm-final-context/ui-specialist-context-review.json",
+              "sha256": "19ba8179f7bc3379495762be75748e28f9c20e4e7e39d93a6c882474efe8c00f"
+            }
+          ]
+        }
+      },
+      "binding_sha256": "d2391570e3f10eccb97ee6955fac3c792e170c1ea7b6a7df1607725b2abb98f0",
+      "note": "Exact previous review preserved before section-top navigation context amendment."
+    },
+    {
+      "spec": {
+        "id": "visual-rhythm-temple-tribute",
+        "role": "body",
+        "route": "answers/why-latter-day-saints-build-temples.html",
+        "preflight_sha256": "d991e2bb458f37b4b15cfb8d50f1dd54ff5e9249dbb1ddda12d1216633b3b765",
+        "generated_at": "2026-10-07T04:10:19.959908+00:00",
+        "owner_status": "not-reviewed",
+        "ancestor_sha256": [
+          "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+          "f6b5502c16f4a272b0e80209876366f86285c38ce5547b28d6fbe98d9849427a",
+          "830afc2a2fd928df95293e53184d7a77a8487ab4380198ec76cd4c8ba71e4d25"
+        ],
+        "original": {
+          "path": "assets/page-art/visual-rhythm-journey/temple-tribute-original.png",
+          "sha256": "e1cbd9cf09065630f8af52791c9832cf93e1c0be0f75893b138e1f4cede47195",
+          "pixel_sha256": "1c0ecb17a65256b263edc1fb4476c76c201170d3455fe0334bf3199b0204338b"
+        },
+        "derivatives": [
+          {
+            "path": "assets/page-art/visual-rhythm-journey/temple-tribute-full.webp",
+            "sha256": "de729b17b7a72a14b6f667c9a23a4f064c4d7883dab1d5d1d430f80e7f1820bf",
+            "pixel_sha256": "4ca2ce90dfcc0d6bb9517974ba6092bac31defc52c6f0871ae009c05f72c3ac5"
+          },
+          {
+            "path": "assets/page-art/visual-rhythm-journey/temple-tribute-960.webp",
+            "sha256": "fc1dff1127af137bdf0cf20d3da8833b6b6180940aa7dd019106bb022f5e050a",
+            "pixel_sha256": "c9d40120db5ff7555bdcc42058042b92d29a134da428b40d59a12a72b0b8de97"
+          }
+        ],
+        "page_context": [
+          {
+            "path": "answer-navigation.css",
+            "sha256": "8112ad6d52ada3bd0b373633fc2e60f5ada7d47fb2204c28e1a09ae01be66a57"
+          },
+          {
+            "path": "answer-opening.css",
+            "sha256": "0356c038ad2adcec7206bfcb3d57915b9e2be2cd42024770560f3d9875cc94fb"
+          },
+          {
+            "path": "answer-styles.css",
+            "sha256": "82dc51b82d56a129be803420cae47630f053f7af1259c659113fbd7fcd76d6ad"
+          },
+          {
+            "path": "answers/why-latter-day-saints-build-temples.html",
+            "sha256": "03632973dc8ef44dd175af8604d231d78afea4160fe432cc985f23d523f9aaf4"
+          },
+          {
+            "path": "artwork-actions.css",
+            "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+          },
+          {
+            "path": "artwork-details.css",
+            "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+          },
+          {
+            "path": "complete-card-rows.css",
+            "sha256": "7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"
+          },
+          {
+            "path": "connected-study.css",
+            "sha256": "513b11859f17d36a5934d323f865242b8c90beea70e94fd3056e6e2dc0af40c6"
+          },
+          {
+            "path": "full-image-viewer.css",
+            "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+          },
+          {
+            "path": "hero-details.css",
+            "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+          },
+          {
+            "path": "resource-cards.css",
+            "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+          },
+          {
+            "path": "site-header.css",
+            "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+          },
+          {
+            "path": "site-search.css",
+            "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+          },
+          {
+            "path": "site-system.css",
+            "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+          },
+          {
+            "path": "temples-history.css",
+            "sha256": "c3aa901b47871dc2cc9aa2848bf31b871a93588e0b4ad141c4d1da7912b2125a"
+          },
+          {
+            "path": "topic-art.css",
+            "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"
+          },
+          {
+            "path": "topic-artwork-details.css",
+            "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+          },
+          {
+            "path": "topic-heroes.css",
+            "sha256": "c0cd96bafe94455fd41d8b6c8357baaa12a0556ce204ba058a1264160acae632"
+          },
+          {
+            "path": "topic-study-pages.css",
+            "sha256": "99e1df87cfdcd11751bb16e0ea293a5048cd6f5f73245a791d20492226299236"
+          }
+        ]
+      },
+      "reviews": [
+        {
+          "reviewer": "Fermi",
+          "receipt_id": "fermi-temple-tribute-final-context-20261007-receiver",
+          "stage": "finished",
+          "verdict": "PASS",
+          "withdrawn": false,
+          "binding_sha256": "38cd630ed4f319cfdc719da8767df8570d71844ec8f906fc0e8d6f641351be5c",
+          "reviewed_at": "2026-10-07T04:33:17.707998+00:00",
+          "observations": "Current Fermi receiver read exact live Master/protected foundation, current 00B/Focus and applicable repository mandates. Original-resolution and face-detail checks below explicitly reuse prior Fermi hash-bound pixel inspection; this turn independently verified unchanged source/decoded-pixel/derivative hashes and inspected current rendered screenshot pixels and visitor copy. No regeneration or new owner approval. Actual browser interaction claims belong to root/UI receipts, not my screenshot inspection. No unresolved scoped finding; publication, Newton concurrence and owner aesthetic acceptance remain separate.",
+          "checks": {
+            "identity": "Prior direct approved Home and Peter reference comparison retained Christ recognizable face; Peter only approved rear-profile continuity, no new frontal identity claim.",
+            "age": "Mortal ministry Christ appears mature adult approximately early thirties; Peter adult exact age unknown.",
+            "expression_gaze": "Christ gently speaks looking toward Peter; attentive seated two-person exchange with natural hand gesture.",
+            "atmosphere": "Domestic daylight, restrained instruction and photographic depth; no modern ordinance scene or theatrical halo.",
+            "environment": "Modest house in Capernaum, rough walls, bench, doorway and vessel are interpretive staging consistent with source.",
+            "characters_realism": "Prior full-resolution and face-detail review found natural skin, beard, hair and woven cloth; both derivative hashes preserve appearance.",
+            "period_sources": "Reused Matthew17:24-27/Exodus30:13 source review; instruction before fishing, not Caesar tribute of Matthew22. Hook/line preparation is interpretive; no fish/payment invented in pixels.",
+            "anatomy": "Prior details show coherent explanatory hand and separate bench hand; Peter grips coil with natural joins. Mortal ministry has no resurrected-scar requirement.",
+            "uniqueness": "Seated domestic two-person exchange differs from John6 standing departure, John7 temple questioning and Caesar coin event.",
+            "desktop_phone": "Independently inspected actual current desktop1280 and phone412 placement screenshots, plus targeted panel/full-size screenshot where listed. Complete3:2 picture, readable caption/source controls, natural stacking and appropriate pause in story flow. UI native actions separately verified; screenshot review does not claim interaction or200percent scaling."
+          },
+          "full_resolution_inspected": true,
+          "face_details_inspected": true,
+          "pixel_review_provenance": "Retained prior independently inspected immutable pixels; original and all derivatives verified byte and decoded-pixel identical in this review. No claim of new generation or new owner approval.",
+          "evidence": [
+            {
+              "path": "assets/page-art/visual-rhythm-journey/temple-tribute-original.png",
+              "sha256": "e1cbd9cf09065630f8af52791c9832cf93e1c0be0f75893b138e1f4cede47195"
+            },
+            {
+              "path": "assets/page-art/visual-rhythm-journey/temple-tribute-full.webp",
+              "sha256": "de729b17b7a72a14b6f667c9a23a4f064c4d7883dab1d5d1d430f80e7f1820bf"
+            },
+            {
+              "path": "assets/page-art/visual-rhythm-journey/temple-tribute-960.webp",
+              "sha256": "fc1dff1127af137bdf0cf20d3da8833b6b6180940aa7dd019106bb022f5e050a"
+            },
+            {
+              "path": "answer-navigation.css",
+              "sha256": "8112ad6d52ada3bd0b373633fc2e60f5ada7d47fb2204c28e1a09ae01be66a57"
+            },
+            {
+              "path": "answer-opening.css",
+              "sha256": "0356c038ad2adcec7206bfcb3d57915b9e2be2cd42024770560f3d9875cc94fb"
+            },
+            {
+              "path": "answer-styles.css",
+              "sha256": "82dc51b82d56a129be803420cae47630f053f7af1259c659113fbd7fcd76d6ad"
+            },
+            {
+              "path": "answers/why-latter-day-saints-build-temples.html",
+              "sha256": "03632973dc8ef44dd175af8604d231d78afea4160fe432cc985f23d523f9aaf4"
+            },
+            {
+              "path": "artwork-actions.css",
+              "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+            },
+            {
+              "path": "artwork-details.css",
+              "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+            },
+            {
+              "path": "complete-card-rows.css",
+              "sha256": "7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"
+            },
+            {
+              "path": "connected-study.css",
+              "sha256": "513b11859f17d36a5934d323f865242b8c90beea70e94fd3056e6e2dc0af40c6"
+            },
+            {
+              "path": "full-image-viewer.css",
+              "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+            },
+            {
+              "path": "hero-details.css",
+              "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+            },
+            {
+              "path": "resource-cards.css",
+              "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+            },
+            {
+              "path": "site-header.css",
+              "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+            },
+            {
+              "path": "site-search.css",
+              "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+            },
+            {
+              "path": "site-system.css",
+              "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+            },
+            {
+              "path": "temples-history.css",
+              "sha256": "c3aa901b47871dc2cc9aa2848bf31b871a93588e0b4ad141c4d1da7912b2125a"
+            },
+            {
+              "path": "topic-art.css",
+              "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"
+            },
+            {
+              "path": "topic-artwork-details.css",
+              "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+            },
+            {
+              "path": "topic-heroes.css",
+              "sha256": "c0cd96bafe94455fd41d8b6c8357baaa12a0556ce204ba058a1264160acae632"
+            },
+            {
+              "path": "topic-study-pages.css",
+              "sha256": "99e1df87cfdcd11751bb16e0ea293a5048cd6f5f73245a791d20492226299236"
+            }
+          ],
+          "screenshot_evidence": [
+            {
+              "path": ".qa-artifacts/visual-rhythm-review/temple-tribute-desktop.png",
+              "sha256": "7e0b4ff364d50d593360ab7379e31a603d216193d889dbd06a757acb76a61f60"
+            },
+            {
+              "path": ".qa-artifacts/visual-rhythm-review/temple-tribute-phone.png",
+              "sha256": "d984f5dfdaf9a64ab69397b8fac7c73db7e680782b1eb45700dda1e43c06044c"
+            },
+            {
+              "path": ".qa-artifacts/visual-rhythm-review/temple-tribute-fullsize.png",
+              "sha256": "3e70d1483f127ea5fcd090ce471e815fbb87749717b5195286b76556da3e0ce7"
+            }
+          ],
+          "mandates_read": [
+            {
+              "path": "AGENTS.md",
+              "sha256": "fe68d0e575ac67262f5693432f09e8de8c2236d1ad8e58890e24f6d358cd4bf4"
+            },
+            {
+              "path": "docs/historical-character-identity.md",
+              "sha256": "69f0f51400ba102dfb5df9a9ec9fb6e738255dc496b84dc5dd684f3f5886c8c4"
+            },
+            {
+              "path": "docs/focuschrist-enrichment-and-stewardship-prompt.md",
+              "sha256": "91cfd09d188880c849493d1752cabb6c6bf8b239d9722259b196161fb6189d14"
+            },
+            {
+              "path": "docs/supporting-artwork-standard.md",
+              "sha256": "bdf1a7b97693f15cc9d6411fd0378ea8b549f2a6d3df934d574398ecbe0966ec"
+            },
+            {
+              "path": "docs/enriched-picture-owner-mandate.md",
+              "sha256": "c237fb14c7dd57f04d7d9ad063f3f0e93daf0a5c9844f9c3682407b4c80b363d"
+            }
+          ],
+          "source_spec": "docs/reviews/visual-rhythm-new-art/temple-tribute-creation-spec.json",
+          "section_top_context_review": {
+            "reviewed_at": "2026-10-08T16:08:06.454645+00:00",
+            "scope": "Section-top navigation only: shared script cache reference, plus four explicit subject-start mappings on Church History. Independent Fermi and Newton exact inverse comparisons reconstruct all 131 previous HTML consumers. Artwork, prose, stylesheets, source records, hero geometry and original review evidence remain unchanged. This amendment reuses prior artwork/source/pixel reviews; it does not claim a new artwork inspection or owner acceptance.",
+            "changed_context": [
+              {
+                "path": "answers/why-latter-day-saints-build-temples.html",
+                "prior_sha256": "65248868ab6e77314e267a4f1057ecbc1f9411cd289bb7dffa3aedb1c32ecf7c",
+                "sha256": "03632973dc8ef44dd175af8604d231d78afea4160fe432cc985f23d523f9aaf4"
+              }
+            ],
+            "verdict": "CONCUR scoped page-context amendment",
+            "evidence_basis": "Fermi and Newton independently verified exact HTML inverse; Albert reviewed source delta and actual desktop/phone subject landings. Prior full-resolution artwork evidence and timestamps remain historical and unmodified."
+          }
+        },
+        {
+          "reviewer": "Newton",
+          "receipt_id": "newton-final-context-temple-tribute-20261007",
+          "stage": "finished",
+          "verdict": "PASS",
+          "withdrawn": false,
+          "binding_sha256": "38cd630ed4f319cfdc719da8767df8570d71844ec8f906fc0e8d6f641351be5c",
+          "reviewed_at": "2026-10-07T04:33:04.911416+00:00",
+          "full_resolution_inspected": true,
+          "face_details_inspected": true,
+          "observations": "Current independent review personally inspected both delivered WebPs, desktop/phone placements and applicable narrow panel/viewer screenshots, read current caption/source/adjacent prose, and verified complete current HTML/CSS context plus asset/pixel hashes. Exact unchanged original-resolution and face-detail inspection is reused from the named prior Newton receipt, not claimed as newly repeated. No browser operation, owner aesthetic acceptance or public verification by this reviewer.",
+          "checks": {
+            "identity": "Prior exact Home-Christ and approved Peter rescue reference comparison reused unchanged; full and960 derivatives preserve Christ facial identity and Peter rear-profile continuity.",
+            "age": "Adult mortal-ministry Christ and adult Peter; no asserted exact ancient birth date.",
+            "expression_gaze": "Christ speaking naturally to attentive Peter, coherent mutual orientation and visible eyes.",
+            "atmosphere": "Natural domestic light and detailed skin, cloth and earthen walls; no halo or painterly surfaces.",
+            "environment": "Modest house with line/hook prepares for Matthew17 fishing instruction, distinct from Caesar coin question.",
+            "anatomy": "Christ gesture and resting hands and Peter coil-holding hands remain coherent; no scars in this mortal scene.",
+            "uniqueness": "Seated indoor two-person instruction differs from John6 courtyard and John7 public temple and Matthew22 tribute coin.",
+            "period_sources": "Reused prior independent Matthew17:24-27 source readback and unchanged source record. Caption says Capernaum, temple tribute and hook, then invites reflection on Sonship; no invented room/date claim.",
+            "characters_realism": "Prior full-resolution original and face/hand crop concurrence remains valid on identical original SHA. Both delivered full/960 WebPs personally viewed now, retaining natural faces and textures. Two adults seated in modest domestic interior, natural mutual gaze and expression. Christ matches inspected Home identity with changed speaking expression; Peter retains approved rear-profile hair/beard/head continuity. Both Christ hands and Peter coil-holding hands trace coherently; no scars. Coil/hook visually supplies pre-fishing cue, no fish/coin or Caesar episode. Dusty-blue mantle and beige tunic plausible. Full native scene and face/hands/coil crops inspected.",
+            "desktop_phone": "Personally viewed current saved desktop and phone placements: native3:2 picture, readable caption/source controls and useful narrative pause. Applicable narrow panel/fullsize imagery also inspected; UI/root own executed actions. Screenshot filenames are not interaction proof."
+          },
+          "prior_review": {
+            "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-06\\focus-artwork-pill-controls-completion\\work\\newton\\temple-tribute-original-pixel-review.json",
+            "sha256": "7328c22b69b140600bbf0d1c5c8829fb835a6ad3a6ecfc8b3988586a62bcf3c2",
+            "reuse": "Exact original and preflight hashes unchanged; retain prior source/reference/full-resolution crop inspection."
+          },
+          "evidence": [
+            {
+              "path": "assets/page-art/visual-rhythm-journey/temple-tribute-original.png",
+              "sha256": "e1cbd9cf09065630f8af52791c9832cf93e1c0be0f75893b138e1f4cede47195"
+            },
+            {
+              "path": "assets/page-art/visual-rhythm-journey/temple-tribute-full.webp",
+              "sha256": "de729b17b7a72a14b6f667c9a23a4f064c4d7883dab1d5d1d430f80e7f1820bf"
+            },
+            {
+              "path": "assets/page-art/visual-rhythm-journey/temple-tribute-960.webp",
+              "sha256": "fc1dff1127af137bdf0cf20d3da8833b6b6180940aa7dd019106bb022f5e050a"
+            },
+            {
+              "path": ".qa-artifacts/visual-rhythm-review/temple-tribute-desktop.png",
+              "sha256": "7e0b4ff364d50d593360ab7379e31a603d216193d889dbd06a757acb76a61f60"
+            },
+            {
+              "path": ".qa-artifacts/visual-rhythm-review/temple-tribute-phone.png",
+              "sha256": "d984f5dfdaf9a64ab69397b8fac7c73db7e680782b1eb45700dda1e43c06044c"
+            }
+          ],
+          "section_top_context_review": {
+            "reviewed_at": "2026-10-08T16:08:06.454645+00:00",
+            "scope": "Section-top navigation only: shared script cache reference, plus four explicit subject-start mappings on Church History. Independent Fermi and Newton exact inverse comparisons reconstruct all 131 previous HTML consumers. Artwork, prose, stylesheets, source records, hero geometry and original review evidence remain unchanged. This amendment reuses prior artwork/source/pixel reviews; it does not claim a new artwork inspection or owner acceptance.",
+            "changed_context": [
+              {
+                "path": "answers/why-latter-day-saints-build-temples.html",
+                "prior_sha256": "65248868ab6e77314e267a4f1057ecbc1f9411cd289bb7dffa3aedb1c32ecf7c",
+                "sha256": "03632973dc8ef44dd175af8604d231d78afea4160fe432cc985f23d523f9aaf4"
+              }
+            ],
+            "verdict": "CONCUR scoped page-context amendment",
+            "evidence_basis": "Fermi and Newton independently verified exact HTML inverse; Albert reviewed source delta and actual desktop/phone subject landings. Prior full-resolution artwork evidence and timestamps remain historical and unmodified."
+          }
+        }
+      ],
+      "root_review": {
+        "reviewer": "Albert",
+        "verdict": "PASS",
+        "binding_sha256": "38cd630ed4f319cfdc719da8767df8570d71844ec8f906fc0e8d6f641351be5c",
+        "observations": "Personally operated all six artwork panels and fullsize paths on desktop1280x900 and phone412x915, inspected exact download hrefs, Escape focus return and Continue Lesson. History scripture reader loaded verse121:9. Eleazer phone/desktop selector switches used exact original/desktop source; labels and48px controls coherent. Personally inspected saved desktop/phone placement screenshots and current desktop panel pixels; reused original/face pixel inspection documented by prior root and both independent reviewers. Current root screenshots saved immediately after actions sometimes capture preceding panel state; these are not represented as viewer screenshots. Phone/desktop placement and all relevant current HTML/CSS integrity verified by independent UI report. No product pixels regenerated. Prose semantic delta read personally; concise invitations preserve sources and historical/devotional distinctions.",
+        "evidence": {
+          "desktop": [
+            {
+              "path": "docs/reviews/visual-rhythm-final-context/albert-context-review.json",
+              "sha256": "cf5bb96e256207370b753a1a4c81626faf2ff6e1542c018f0864e5e5c5170a00"
+            },
+            {
+              "path": "docs/reviews/visual-rhythm-final-context/root-native.json",
+              "sha256": "db0c62141c8786814cdc6fb58c44f6f38d3e85b30f44f9a3f53eeb5634d231a0"
+            },
+            {
+              "path": "docs/reviews/visual-rhythm-final-context/ui-specialist-context-review.json",
+              "sha256": "19ba8179f7bc3379495762be75748e28f9c20e4e7e39d93a6c882474efe8c00f"
+            }
+          ],
+          "phone": [
+            {
+              "path": "docs/reviews/visual-rhythm-final-context/albert-context-review.json",
+              "sha256": "cf5bb96e256207370b753a1a4c81626faf2ff6e1542c018f0864e5e5c5170a00"
+            },
+            {
+              "path": "docs/reviews/visual-rhythm-final-context/root-native.json",
+              "sha256": "db0c62141c8786814cdc6fb58c44f6f38d3e85b30f44f9a3f53eeb5634d231a0"
+            },
+            {
+              "path": "docs/reviews/visual-rhythm-final-context/ui-specialist-context-review.json",
+              "sha256": "19ba8179f7bc3379495762be75748e28f9c20e4e7e39d93a6c882474efe8c00f"
+            }
+          ]
+        },
+        "section_top_context_review": {
+          "reviewed_at": "2026-10-08T16:08:06.454645+00:00",
+          "scope": "Section-top navigation only: shared script cache reference, plus four explicit subject-start mappings on Church History. Independent Fermi and Newton exact inverse comparisons reconstruct all 131 previous HTML consumers. Artwork, prose, stylesheets, source records, hero geometry and original review evidence remain unchanged. This amendment reuses prior artwork/source/pixel reviews; it does not claim a new artwork inspection or owner acceptance.",
+          "changed_context": [
+            {
+              "path": "answers/why-latter-day-saints-build-temples.html",
+              "prior_sha256": "65248868ab6e77314e267a4f1057ecbc1f9411cd289bb7dffa3aedb1c32ecf7c",
+              "sha256": "03632973dc8ef44dd175af8604d231d78afea4160fe432cc985f23d523f9aaf4"
+            }
+          ],
+          "verdict": "CONCUR scoped page-context amendment",
+          "evidence_basis": "Fermi and Newton independently verified exact HTML inverse; Albert reviewed source delta and actual desktop/phone subject landings. Prior full-resolution artwork evidence and timestamps remain historical and unmodified."
+        }
+      },
+      "binding_sha256": "38cd630ed4f319cfdc719da8767df8570d71844ec8f906fc0e8d6f641351be5c",
+      "note": "Exact previous review preserved before visible-modal navigation cache amendment."
+    },
+    {
+      "spec": {
+        "id": "visual-rhythm-temple-tribute",
+        "role": "body",
+        "route": "answers/why-latter-day-saints-build-temples.html",
+        "preflight_sha256": "d991e2bb458f37b4b15cfb8d50f1dd54ff5e9249dbb1ddda12d1216633b3b765",
+        "generated_at": "2026-10-07T04:10:19.959908+00:00",
+        "owner_status": "not-reviewed",
+        "ancestor_sha256": [
+          "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+          "f6b5502c16f4a272b0e80209876366f86285c38ce5547b28d6fbe98d9849427a",
+          "830afc2a2fd928df95293e53184d7a77a8487ab4380198ec76cd4c8ba71e4d25"
+        ],
+        "original": {
+          "path": "assets/page-art/visual-rhythm-journey/temple-tribute-original.png",
+          "sha256": "e1cbd9cf09065630f8af52791c9832cf93e1c0be0f75893b138e1f4cede47195",
+          "pixel_sha256": "1c0ecb17a65256b263edc1fb4476c76c201170d3455fe0334bf3199b0204338b"
+        },
+        "derivatives": [
+          {
+            "path": "assets/page-art/visual-rhythm-journey/temple-tribute-full.webp",
+            "sha256": "de729b17b7a72a14b6f667c9a23a4f064c4d7883dab1d5d1d430f80e7f1820bf",
+            "pixel_sha256": "4ca2ce90dfcc0d6bb9517974ba6092bac31defc52c6f0871ae009c05f72c3ac5"
+          },
+          {
+            "path": "assets/page-art/visual-rhythm-journey/temple-tribute-960.webp",
+            "sha256": "fc1dff1127af137bdf0cf20d3da8833b6b6180940aa7dd019106bb022f5e050a",
+            "pixel_sha256": "c9d40120db5ff7555bdcc42058042b92d29a134da428b40d59a12a72b0b8de97"
+          }
+        ],
+        "page_context": [
+          {
+            "path": "answer-navigation.css",
+            "sha256": "8112ad6d52ada3bd0b373633fc2e60f5ada7d47fb2204c28e1a09ae01be66a57"
+          },
+          {
+            "path": "answer-opening.css",
+            "sha256": "0356c038ad2adcec7206bfcb3d57915b9e2be2cd42024770560f3d9875cc94fb"
+          },
+          {
+            "path": "answer-styles.css",
+            "sha256": "82dc51b82d56a129be803420cae47630f053f7af1259c659113fbd7fcd76d6ad"
+          },
+          {
+            "path": "answers/why-latter-day-saints-build-temples.html",
+            "sha256": "649e1b5be70dbe600f2a7613f78c242cfeea047cc7f936014174487da350e38d"
+          },
+          {
+            "path": "artwork-actions.css",
+            "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+          },
+          {
+            "path": "artwork-details.css",
+            "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+          },
+          {
+            "path": "complete-card-rows.css",
+            "sha256": "7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"
+          },
+          {
+            "path": "connected-study.css",
+            "sha256": "513b11859f17d36a5934d323f865242b8c90beea70e94fd3056e6e2dc0af40c6"
+          },
+          {
+            "path": "full-image-viewer.css",
+            "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+          },
+          {
+            "path": "hero-details.css",
+            "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+          },
+          {
+            "path": "resource-cards.css",
+            "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+          },
+          {
+            "path": "site-header.css",
+            "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+          },
+          {
+            "path": "site-search.css",
+            "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+          },
+          {
+            "path": "site-system.css",
+            "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+          },
+          {
+            "path": "temples-history.css",
+            "sha256": "c3aa901b47871dc2cc9aa2848bf31b871a93588e0b4ad141c4d1da7912b2125a"
+          },
+          {
+            "path": "topic-art.css",
+            "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"
+          },
+          {
+            "path": "topic-artwork-details.css",
+            "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+          },
+          {
+            "path": "topic-heroes.css",
+            "sha256": "c0cd96bafe94455fd41d8b6c8357baaa12a0556ce204ba058a1264160acae632"
+          },
+          {
+            "path": "topic-study-pages.css",
+            "sha256": "99e1df87cfdcd11751bb16e0ea293a5048cd6f5f73245a791d20492226299236"
+          }
+        ]
+      },
+      "binding_sha256": "51a2e06cb2f087a690e938860b89061534fbb847c1b40cf5b4efb1238f113999",
+      "reviews": [
+        {
+          "reviewer": "Fermi",
+          "receipt_id": "fermi-temple-tribute-final-context-20261007-receiver",
+          "stage": "finished",
+          "verdict": "PASS",
+          "withdrawn": false,
+          "binding_sha256": "51a2e06cb2f087a690e938860b89061534fbb847c1b40cf5b4efb1238f113999",
+          "reviewed_at": "2026-10-07T04:33:17.707998+00:00",
+          "observations": "Current Fermi receiver read exact live Master/protected foundation, current 00B/Focus and applicable repository mandates. Original-resolution and face-detail checks below explicitly reuse prior Fermi hash-bound pixel inspection; this turn independently verified unchanged source/decoded-pixel/derivative hashes and inspected current rendered screenshot pixels and visitor copy. No regeneration or new owner approval. Actual browser interaction claims belong to root/UI receipts, not my screenshot inspection. No unresolved scoped finding; publication, Newton concurrence and owner aesthetic acceptance remain separate.",
+          "checks": {
+            "identity": "Prior direct approved Home and Peter reference comparison retained Christ recognizable face; Peter only approved rear-profile continuity, no new frontal identity claim.",
+            "age": "Mortal ministry Christ appears mature adult approximately early thirties; Peter adult exact age unknown.",
+            "expression_gaze": "Christ gently speaks looking toward Peter; attentive seated two-person exchange with natural hand gesture.",
+            "atmosphere": "Domestic daylight, restrained instruction and photographic depth; no modern ordinance scene or theatrical halo.",
+            "environment": "Modest house in Capernaum, rough walls, bench, doorway and vessel are interpretive staging consistent with source.",
+            "characters_realism": "Prior full-resolution and face-detail review found natural skin, beard, hair and woven cloth; both derivative hashes preserve appearance.",
+            "period_sources": "Reused Matthew17:24-27/Exodus30:13 source review; instruction before fishing, not Caesar tribute of Matthew22. Hook/line preparation is interpretive; no fish/payment invented in pixels.",
+            "anatomy": "Prior details show coherent explanatory hand and separate bench hand; Peter grips coil with natural joins. Mortal ministry has no resurrected-scar requirement.",
+            "uniqueness": "Seated domestic two-person exchange differs from John6 standing departure, John7 temple questioning and Caesar coin event.",
+            "desktop_phone": "Independently inspected actual current desktop1280 and phone412 placement screenshots, plus targeted panel/full-size screenshot where listed. Complete3:2 picture, readable caption/source controls, natural stacking and appropriate pause in story flow. UI native actions separately verified; screenshot review does not claim interaction or200percent scaling."
+          },
+          "full_resolution_inspected": true,
+          "face_details_inspected": true,
+          "pixel_review_provenance": "Retained prior independently inspected immutable pixels; original and all derivatives verified byte and decoded-pixel identical in this review. No claim of new generation or new owner approval.",
+          "evidence": [
+            {
+              "path": "assets/page-art/visual-rhythm-journey/temple-tribute-original.png",
+              "sha256": "e1cbd9cf09065630f8af52791c9832cf93e1c0be0f75893b138e1f4cede47195"
+            },
+            {
+              "path": "assets/page-art/visual-rhythm-journey/temple-tribute-full.webp",
+              "sha256": "de729b17b7a72a14b6f667c9a23a4f064c4d7883dab1d5d1d430f80e7f1820bf"
+            },
+            {
+              "path": "assets/page-art/visual-rhythm-journey/temple-tribute-960.webp",
+              "sha256": "fc1dff1127af137bdf0cf20d3da8833b6b6180940aa7dd019106bb022f5e050a"
+            },
+            {
+              "path": "answer-navigation.css",
+              "sha256": "8112ad6d52ada3bd0b373633fc2e60f5ada7d47fb2204c28e1a09ae01be66a57"
+            },
+            {
+              "path": "answer-opening.css",
+              "sha256": "0356c038ad2adcec7206bfcb3d57915b9e2be2cd42024770560f3d9875cc94fb"
+            },
+            {
+              "path": "answer-styles.css",
+              "sha256": "82dc51b82d56a129be803420cae47630f053f7af1259c659113fbd7fcd76d6ad"
+            },
+            {
+              "path": "answers/why-latter-day-saints-build-temples.html",
+              "sha256": "649e1b5be70dbe600f2a7613f78c242cfeea047cc7f936014174487da350e38d"
+            },
+            {
+              "path": "artwork-actions.css",
+              "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+            },
+            {
+              "path": "artwork-details.css",
+              "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+            },
+            {
+              "path": "complete-card-rows.css",
+              "sha256": "7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"
+            },
+            {
+              "path": "connected-study.css",
+              "sha256": "513b11859f17d36a5934d323f865242b8c90beea70e94fd3056e6e2dc0af40c6"
+            },
+            {
+              "path": "full-image-viewer.css",
+              "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+            },
+            {
+              "path": "hero-details.css",
+              "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+            },
+            {
+              "path": "resource-cards.css",
+              "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+            },
+            {
+              "path": "site-header.css",
+              "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+            },
+            {
+              "path": "site-search.css",
+              "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+            },
+            {
+              "path": "site-system.css",
+              "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+            },
+            {
+              "path": "temples-history.css",
+              "sha256": "c3aa901b47871dc2cc9aa2848bf31b871a93588e0b4ad141c4d1da7912b2125a"
+            },
+            {
+              "path": "topic-art.css",
+              "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"
+            },
+            {
+              "path": "topic-artwork-details.css",
+              "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+            },
+            {
+              "path": "topic-heroes.css",
+              "sha256": "c0cd96bafe94455fd41d8b6c8357baaa12a0556ce204ba058a1264160acae632"
+            },
+            {
+              "path": "topic-study-pages.css",
+              "sha256": "99e1df87cfdcd11751bb16e0ea293a5048cd6f5f73245a791d20492226299236"
+            }
+          ],
+          "screenshot_evidence": [
+            {
+              "path": ".qa-artifacts/visual-rhythm-review/temple-tribute-desktop.png",
+              "sha256": "7e0b4ff364d50d593360ab7379e31a603d216193d889dbd06a757acb76a61f60"
+            },
+            {
+              "path": ".qa-artifacts/visual-rhythm-review/temple-tribute-phone.png",
+              "sha256": "d984f5dfdaf9a64ab69397b8fac7c73db7e680782b1eb45700dda1e43c06044c"
+            },
+            {
+              "path": ".qa-artifacts/visual-rhythm-review/temple-tribute-fullsize.png",
+              "sha256": "3e70d1483f127ea5fcd090ce471e815fbb87749717b5195286b76556da3e0ce7"
+            }
+          ],
+          "mandates_read": [
+            {
+              "path": "AGENTS.md",
+              "sha256": "fe68d0e575ac67262f5693432f09e8de8c2236d1ad8e58890e24f6d358cd4bf4"
+            },
+            {
+              "path": "docs/historical-character-identity.md",
+              "sha256": "69f0f51400ba102dfb5df9a9ec9fb6e738255dc496b84dc5dd684f3f5886c8c4"
+            },
+            {
+              "path": "docs/focuschrist-enrichment-and-stewardship-prompt.md",
+              "sha256": "91cfd09d188880c849493d1752cabb6c6bf8b239d9722259b196161fb6189d14"
+            },
+            {
+              "path": "docs/supporting-artwork-standard.md",
+              "sha256": "bdf1a7b97693f15cc9d6411fd0378ea8b549f2a6d3df934d574398ecbe0966ec"
+            },
+            {
+              "path": "docs/enriched-picture-owner-mandate.md",
+              "sha256": "c237fb14c7dd57f04d7d9ad063f3f0e93daf0a5c9844f9c3682407b4c80b363d"
+            }
+          ],
+          "source_spec": "docs/reviews/visual-rhythm-new-art/temple-tribute-creation-spec.json",
+          "section_top_context_review": {
+            "reviewed_at": "2026-10-08T16:08:06.454645+00:00",
+            "scope": "Section-top navigation only: shared script cache reference, plus four explicit subject-start mappings on Church History. Independent Fermi and Newton exact inverse comparisons reconstruct all 131 previous HTML consumers. Artwork, prose, stylesheets, source records, hero geometry and original review evidence remain unchanged. This amendment reuses prior artwork/source/pixel reviews; it does not claim a new artwork inspection or owner acceptance.",
+            "changed_context": [
+              {
+                "path": "answers/why-latter-day-saints-build-temples.html",
+                "prior_sha256": "65248868ab6e77314e267a4f1057ecbc1f9411cd289bb7dffa3aedb1c32ecf7c",
+                "sha256": "03632973dc8ef44dd175af8604d231d78afea4160fe432cc985f23d523f9aaf4"
+              }
+            ],
+            "verdict": "CONCUR scoped page-context amendment",
+            "evidence_basis": "Fermi and Newton independently verified exact HTML inverse; Albert reviewed source delta and actual desktop/phone subject landings. Prior full-resolution artwork evidence and timestamps remain historical and unmodified."
+          },
+          "visible_modal_cache_context_review": {
+            "reviewed_at": "2026-10-08T17:12:36.674294+00:00",
+            "scope": "Navigation cache reference only in this page context: version 20261008-section-top-1 to version 20261008-section-top-2. The shared navigation correction ignores hidden modal markup while preserving visible modal ownership. Artwork, prose, stylesheets, source records and hero geometry remain unchanged. This amendment reuses prior artwork/source/pixel reviews; it does not claim new artwork inspection or owner acceptance.",
+            "changed_context": [
+              {
+                "path": "answers/why-latter-day-saints-build-temples.html",
+                "prior_sha256": "03632973dc8ef44dd175af8604d231d78afea4160fe432cc985f23d523f9aaf4",
+                "sha256": "649e1b5be70dbe600f2a7613f78c242cfeea047cc7f936014174487da350e38d"
+              }
+            ],
+            "verdict": "CONCUR mechanical page-context amendment only",
+            "evidence_basis": "Exact per-page byte inverse reconstructs previous reviewed HTML; prior complete spec and reviews preserved. Shared navigation behavioral acceptance is recorded separately."
+          }
+        },
+        {
+          "reviewer": "Newton",
+          "receipt_id": "newton-final-context-temple-tribute-20261007",
+          "stage": "finished",
+          "verdict": "PASS",
+          "withdrawn": false,
+          "binding_sha256": "51a2e06cb2f087a690e938860b89061534fbb847c1b40cf5b4efb1238f113999",
+          "reviewed_at": "2026-10-07T04:33:04.911416+00:00",
+          "full_resolution_inspected": true,
+          "face_details_inspected": true,
+          "observations": "Current independent review personally inspected both delivered WebPs, desktop/phone placements and applicable narrow panel/viewer screenshots, read current caption/source/adjacent prose, and verified complete current HTML/CSS context plus asset/pixel hashes. Exact unchanged original-resolution and face-detail inspection is reused from the named prior Newton receipt, not claimed as newly repeated. No browser operation, owner aesthetic acceptance or public verification by this reviewer.",
+          "checks": {
+            "identity": "Prior exact Home-Christ and approved Peter rescue reference comparison reused unchanged; full and960 derivatives preserve Christ facial identity and Peter rear-profile continuity.",
+            "age": "Adult mortal-ministry Christ and adult Peter; no asserted exact ancient birth date.",
+            "expression_gaze": "Christ speaking naturally to attentive Peter, coherent mutual orientation and visible eyes.",
+            "atmosphere": "Natural domestic light and detailed skin, cloth and earthen walls; no halo or painterly surfaces.",
+            "environment": "Modest house with line/hook prepares for Matthew17 fishing instruction, distinct from Caesar coin question.",
+            "anatomy": "Christ gesture and resting hands and Peter coil-holding hands remain coherent; no scars in this mortal scene.",
+            "uniqueness": "Seated indoor two-person instruction differs from John6 courtyard and John7 public temple and Matthew22 tribute coin.",
+            "period_sources": "Reused prior independent Matthew17:24-27 source readback and unchanged source record. Caption says Capernaum, temple tribute and hook, then invites reflection on Sonship; no invented room/date claim.",
+            "characters_realism": "Prior full-resolution original and face/hand crop concurrence remains valid on identical original SHA. Both delivered full/960 WebPs personally viewed now, retaining natural faces and textures. Two adults seated in modest domestic interior, natural mutual gaze and expression. Christ matches inspected Home identity with changed speaking expression; Peter retains approved rear-profile hair/beard/head continuity. Both Christ hands and Peter coil-holding hands trace coherently; no scars. Coil/hook visually supplies pre-fishing cue, no fish/coin or Caesar episode. Dusty-blue mantle and beige tunic plausible. Full native scene and face/hands/coil crops inspected.",
+            "desktop_phone": "Personally viewed current saved desktop and phone placements: native3:2 picture, readable caption/source controls and useful narrative pause. Applicable narrow panel/fullsize imagery also inspected; UI/root own executed actions. Screenshot filenames are not interaction proof."
+          },
+          "prior_review": {
+            "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-06\\focus-artwork-pill-controls-completion\\work\\newton\\temple-tribute-original-pixel-review.json",
+            "sha256": "7328c22b69b140600bbf0d1c5c8829fb835a6ad3a6ecfc8b3988586a62bcf3c2",
+            "reuse": "Exact original and preflight hashes unchanged; retain prior source/reference/full-resolution crop inspection."
+          },
+          "evidence": [
+            {
+              "path": "assets/page-art/visual-rhythm-journey/temple-tribute-original.png",
+              "sha256": "e1cbd9cf09065630f8af52791c9832cf93e1c0be0f75893b138e1f4cede47195"
+            },
+            {
+              "path": "assets/page-art/visual-rhythm-journey/temple-tribute-full.webp",
+              "sha256": "de729b17b7a72a14b6f667c9a23a4f064c4d7883dab1d5d1d430f80e7f1820bf"
+            },
+            {
+              "path": "assets/page-art/visual-rhythm-journey/temple-tribute-960.webp",
+              "sha256": "fc1dff1127af137bdf0cf20d3da8833b6b6180940aa7dd019106bb022f5e050a"
+            },
+            {
+              "path": ".qa-artifacts/visual-rhythm-review/temple-tribute-desktop.png",
+              "sha256": "7e0b4ff364d50d593360ab7379e31a603d216193d889dbd06a757acb76a61f60"
+            },
+            {
+              "path": ".qa-artifacts/visual-rhythm-review/temple-tribute-phone.png",
+              "sha256": "d984f5dfdaf9a64ab69397b8fac7c73db7e680782b1eb45700dda1e43c06044c"
+            }
+          ],
+          "section_top_context_review": {
+            "reviewed_at": "2026-10-08T16:08:06.454645+00:00",
+            "scope": "Section-top navigation only: shared script cache reference, plus four explicit subject-start mappings on Church History. Independent Fermi and Newton exact inverse comparisons reconstruct all 131 previous HTML consumers. Artwork, prose, stylesheets, source records, hero geometry and original review evidence remain unchanged. This amendment reuses prior artwork/source/pixel reviews; it does not claim a new artwork inspection or owner acceptance.",
+            "changed_context": [
+              {
+                "path": "answers/why-latter-day-saints-build-temples.html",
+                "prior_sha256": "65248868ab6e77314e267a4f1057ecbc1f9411cd289bb7dffa3aedb1c32ecf7c",
+                "sha256": "03632973dc8ef44dd175af8604d231d78afea4160fe432cc985f23d523f9aaf4"
+              }
+            ],
+            "verdict": "CONCUR scoped page-context amendment",
+            "evidence_basis": "Fermi and Newton independently verified exact HTML inverse; Albert reviewed source delta and actual desktop/phone subject landings. Prior full-resolution artwork evidence and timestamps remain historical and unmodified."
+          },
+          "visible_modal_cache_context_review": {
+            "reviewed_at": "2026-10-08T17:12:36.674294+00:00",
+            "scope": "Navigation cache reference only in this page context: version 20261008-section-top-1 to version 20261008-section-top-2. The shared navigation correction ignores hidden modal markup while preserving visible modal ownership. Artwork, prose, stylesheets, source records and hero geometry remain unchanged. This amendment reuses prior artwork/source/pixel reviews; it does not claim new artwork inspection or owner acceptance.",
+            "changed_context": [
+              {
+                "path": "answers/why-latter-day-saints-build-temples.html",
+                "prior_sha256": "03632973dc8ef44dd175af8604d231d78afea4160fe432cc985f23d523f9aaf4",
+                "sha256": "649e1b5be70dbe600f2a7613f78c242cfeea047cc7f936014174487da350e38d"
+              }
+            ],
+            "verdict": "CONCUR mechanical page-context amendment only",
+            "evidence_basis": "Exact per-page byte inverse reconstructs previous reviewed HTML; prior complete spec and reviews preserved. Shared navigation behavioral acceptance is recorded separately."
+          }
+        }
+      ],
+      "root_review": {
+        "reviewer": "Albert",
+        "verdict": "PASS",
+        "binding_sha256": "51a2e06cb2f087a690e938860b89061534fbb847c1b40cf5b4efb1238f113999",
+        "observations": "Personally operated all six artwork panels and fullsize paths on desktop1280x900 and phone412x915, inspected exact download hrefs, Escape focus return and Continue Lesson. History scripture reader loaded verse121:9. Eleazer phone/desktop selector switches used exact original/desktop source; labels and48px controls coherent. Personally inspected saved desktop/phone placement screenshots and current desktop panel pixels; reused original/face pixel inspection documented by prior root and both independent reviewers. Current root screenshots saved immediately after actions sometimes capture preceding panel state; these are not represented as viewer screenshots. Phone/desktop placement and all relevant current HTML/CSS integrity verified by independent UI report. No product pixels regenerated. Prose semantic delta read personally; concise invitations preserve sources and historical/devotional distinctions.",
+        "evidence": {
+          "desktop": [
+            {
+              "path": "docs/reviews/visual-rhythm-final-context/albert-context-review.json",
+              "sha256": "cf5bb96e256207370b753a1a4c81626faf2ff6e1542c018f0864e5e5c5170a00"
+            },
+            {
+              "path": "docs/reviews/visual-rhythm-final-context/root-native.json",
+              "sha256": "db0c62141c8786814cdc6fb58c44f6f38d3e85b30f44f9a3f53eeb5634d231a0"
+            },
+            {
+              "path": "docs/reviews/visual-rhythm-final-context/ui-specialist-context-review.json",
+              "sha256": "19ba8179f7bc3379495762be75748e28f9c20e4e7e39d93a6c882474efe8c00f"
+            }
+          ],
+          "phone": [
+            {
+              "path": "docs/reviews/visual-rhythm-final-context/albert-context-review.json",
+              "sha256": "cf5bb96e256207370b753a1a4c81626faf2ff6e1542c018f0864e5e5c5170a00"
+            },
+            {
+              "path": "docs/reviews/visual-rhythm-final-context/root-native.json",
+              "sha256": "db0c62141c8786814cdc6fb58c44f6f38d3e85b30f44f9a3f53eeb5634d231a0"
+            },
+            {
+              "path": "docs/reviews/visual-rhythm-final-context/ui-specialist-context-review.json",
+              "sha256": "19ba8179f7bc3379495762be75748e28f9c20e4e7e39d93a6c882474efe8c00f"
+            }
+          ]
+        },
+        "section_top_context_review": {
+          "reviewed_at": "2026-10-08T16:08:06.454645+00:00",
+          "scope": "Section-top navigation only: shared script cache reference, plus four explicit subject-start mappings on Church History. Independent Fermi and Newton exact inverse comparisons reconstruct all 131 previous HTML consumers. Artwork, prose, stylesheets, source records, hero geometry and original review evidence remain unchanged. This amendment reuses prior artwork/source/pixel reviews; it does not claim a new artwork inspection or owner acceptance.",
+          "changed_context": [
+            {
+              "path": "answers/why-latter-day-saints-build-temples.html",
+              "prior_sha256": "65248868ab6e77314e267a4f1057ecbc1f9411cd289bb7dffa3aedb1c32ecf7c",
+              "sha256": "03632973dc8ef44dd175af8604d231d78afea4160fe432cc985f23d523f9aaf4"
+            }
+          ],
+          "verdict": "CONCUR scoped page-context amendment",
+          "evidence_basis": "Fermi and Newton independently verified exact HTML inverse; Albert reviewed source delta and actual desktop/phone subject landings. Prior full-resolution artwork evidence and timestamps remain historical and unmodified."
+        },
+        "visible_modal_cache_context_review": {
+          "reviewed_at": "2026-10-08T17:12:36.674294+00:00",
+          "scope": "Navigation cache reference only in this page context: version 20261008-section-top-1 to version 20261008-section-top-2. The shared navigation correction ignores hidden modal markup while preserving visible modal ownership. Artwork, prose, stylesheets, source records and hero geometry remain unchanged. This amendment reuses prior artwork/source/pixel reviews; it does not claim new artwork inspection or owner acceptance.",
+          "changed_context": [
+            {
+              "path": "answers/why-latter-day-saints-build-temples.html",
+              "prior_sha256": "03632973dc8ef44dd175af8604d231d78afea4160fe432cc985f23d523f9aaf4",
+              "sha256": "649e1b5be70dbe600f2a7613f78c242cfeea047cc7f936014174487da350e38d"
+            }
+          ],
+          "verdict": "CONCUR mechanical page-context amendment only",
+          "evidence_basis": "Exact per-page byte inverse reconstructs previous reviewed HTML; prior complete spec and reviews preserved. Shared navigation behavioral acceptance is recorded separately."
+        }
+      },
+      "note": "Exact prior approval evidence preserved before independently reviewed phase1 layout context amendment."
+    },
+    {
+      "spec": {
+        "id": "visual-rhythm-temple-tribute",
+        "role": "body",
+        "route": "answers/why-latter-day-saints-build-temples.html",
+        "preflight_sha256": "d991e2bb458f37b4b15cfb8d50f1dd54ff5e9249dbb1ddda12d1216633b3b765",
+        "generated_at": "2026-10-07T04:10:19.959908+00:00",
+        "owner_status": "not-reviewed",
+        "ancestor_sha256": [
+          "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+          "f6b5502c16f4a272b0e80209876366f86285c38ce5547b28d6fbe98d9849427a",
+          "830afc2a2fd928df95293e53184d7a77a8487ab4380198ec76cd4c8ba71e4d25"
+        ],
+        "original": {
+          "path": "assets/page-art/visual-rhythm-journey/temple-tribute-original.png",
+          "sha256": "e1cbd9cf09065630f8af52791c9832cf93e1c0be0f75893b138e1f4cede47195",
+          "pixel_sha256": "1c0ecb17a65256b263edc1fb4476c76c201170d3455fe0334bf3199b0204338b"
+        },
+        "derivatives": [
+          {
+            "path": "assets/page-art/visual-rhythm-journey/temple-tribute-full.webp",
+            "sha256": "de729b17b7a72a14b6f667c9a23a4f064c4d7883dab1d5d1d430f80e7f1820bf",
+            "pixel_sha256": "4ca2ce90dfcc0d6bb9517974ba6092bac31defc52c6f0871ae009c05f72c3ac5"
+          },
+          {
+            "path": "assets/page-art/visual-rhythm-journey/temple-tribute-960.webp",
+            "sha256": "fc1dff1127af137bdf0cf20d3da8833b6b6180940aa7dd019106bb022f5e050a",
+            "pixel_sha256": "c9d40120db5ff7555bdcc42058042b92d29a134da428b40d59a12a72b0b8de97"
+          }
+        ],
+        "page_context": [
+          {
+            "path": "answer-navigation.css",
+            "sha256": "8112ad6d52ada3bd0b373633fc2e60f5ada7d47fb2204c28e1a09ae01be66a57"
+          },
+          {
+            "path": "answer-opening.css",
+            "sha256": "0356c038ad2adcec7206bfcb3d57915b9e2be2cd42024770560f3d9875cc94fb"
+          },
+          {
+            "path": "answer-styles.css",
+            "sha256": "82dc51b82d56a129be803420cae47630f053f7af1259c659113fbd7fcd76d6ad"
+          },
+          {
+            "path": "answers/why-latter-day-saints-build-temples.html",
+            "sha256": "4eac0751f4a7facf61fcc2287beb72c786f87bb686073011ee3102e9f38fc8f8"
+          },
+          {
+            "path": "artwork-actions.css",
+            "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+          },
+          {
+            "path": "artwork-details.css",
+            "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+          },
+          {
+            "path": "complete-card-rows.css",
+            "sha256": "7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"
+          },
+          {
+            "path": "connected-study.css",
+            "sha256": "6b61c50c1d8e005074beb2db8fa800377377e6a3c9b955678dd836538fcb48cd"
+          },
+          {
+            "path": "full-image-viewer.css",
+            "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+          },
+          {
+            "path": "hero-details.css",
+            "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+          },
+          {
+            "path": "resource-cards.css",
+            "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+          },
+          {
+            "path": "site-header.css",
+            "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+          },
+          {
+            "path": "site-search.css",
+            "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+          },
+          {
+            "path": "site-system.css",
+            "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+          },
+          {
+            "path": "temples-history.css",
+            "sha256": "c3aa901b47871dc2cc9aa2848bf31b871a93588e0b4ad141c4d1da7912b2125a"
+          },
+          {
+            "path": "topic-art.css",
+            "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"
+          },
+          {
+            "path": "topic-artwork-details.css",
+            "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+          },
+          {
+            "path": "topic-heroes.css",
+            "sha256": "c0cd96bafe94455fd41d8b6c8357baaa12a0556ce204ba058a1264160acae632"
+          },
+          {
+            "path": "topic-study-pages.css",
+            "sha256": "99e1df87cfdcd11751bb16e0ea293a5048cd6f5f73245a791d20492226299236"
+          }
+        ]
+      },
+      "binding_sha256": "be7e5d85be9f2f6c5816435ade732f0aa74f8154c025ad5f11bcb3f1188362ad",
+      "reviews": [
+        {
+          "reviewer": "Fermi",
+          "receipt_id": "fermi-temple-tribute-final-context-20261007-receiver-phase1-context-20261008",
+          "stage": "finished",
+          "verdict": "PASS",
+          "withdrawn": false,
+          "binding_sha256": "be7e5d85be9f2f6c5816435ade732f0aa74f8154c025ad5f11bcb3f1188362ad",
+          "reviewed_at": "2026-10-08T21:11:30.134022+00:00",
+          "observations": "Current Fermi receiver read exact live Master/protected foundation, current 00B/Focus and applicable repository mandates. Original-resolution and face-detail checks below explicitly reuse prior Fermi hash-bound pixel inspection; this turn independently verified unchanged source/decoded-pixel/derivative hashes and inspected current rendered screenshot pixels and visitor copy. No regeneration or new owner approval. Actual browser interaction claims belong to root/UI receipts, not my screenshot inspection. No unresolved scoped finding; publication, Newton concurrence and owner aesthetic acceptance remain separate.",
+          "checks": {
+            "identity": "Prior direct approved Home and Peter reference comparison retained Christ recognizable face; Peter only approved rear-profile continuity, no new frontal identity claim.",
+            "age": "Mortal ministry Christ appears mature adult approximately early thirties; Peter adult exact age unknown.",
+            "expression_gaze": "Christ gently speaks looking toward Peter; attentive seated two-person exchange with natural hand gesture.",
+            "atmosphere": "Domestic daylight, restrained instruction and photographic depth; no modern ordinance scene or theatrical halo.",
+            "environment": "Modest house in Capernaum, rough walls, bench, doorway and vessel are interpretive staging consistent with source.",
+            "characters_realism": "Prior full-resolution and face-detail review found natural skin, beard, hair and woven cloth; both derivative hashes preserve appearance.",
+            "period_sources": "Reused Matthew17:24-27/Exodus30:13 source review; instruction before fishing, not Caesar tribute of Matthew22. Hook/line preparation is interpretive; no fish/payment invented in pixels.",
+            "anatomy": "Prior details show coherent explanatory hand and separate bench hand; Peter grips coil with natural joins. Mortal ministry has no resurrected-scar requirement.",
+            "uniqueness": "Seated domestic two-person exchange differs from John6 standing departure, John7 temple questioning and Caesar coin event.",
+            "desktop_phone": "Independently inspected actual current desktop1280 and phone412 placement screenshots, plus targeted panel/full-size screenshot where listed. Complete3:2 picture, readable caption/source controls, natural stacking and appropriate pause in story flow. UI native actions separately verified; screenshot review does not claim interaction or200percent scaling."
+          },
+          "full_resolution_inspected": true,
+          "face_details_inspected": true,
+          "pixel_review_provenance": "Retained prior independently inspected immutable pixels; original and all derivatives verified byte and decoded-pixel identical in this review. No claim of new generation or new owner approval.",
+          "evidence": [
+            {
+              "path": "assets/page-art/visual-rhythm-journey/temple-tribute-original.png",
+              "sha256": "e1cbd9cf09065630f8af52791c9832cf93e1c0be0f75893b138e1f4cede47195"
+            },
+            {
+              "path": "assets/page-art/visual-rhythm-journey/temple-tribute-full.webp",
+              "sha256": "de729b17b7a72a14b6f667c9a23a4f064c4d7883dab1d5d1d430f80e7f1820bf"
+            },
+            {
+              "path": "assets/page-art/visual-rhythm-journey/temple-tribute-960.webp",
+              "sha256": "fc1dff1127af137bdf0cf20d3da8833b6b6180940aa7dd019106bb022f5e050a"
+            },
+            {
+              "path": "answer-navigation.css",
+              "sha256": "8112ad6d52ada3bd0b373633fc2e60f5ada7d47fb2204c28e1a09ae01be66a57"
+            },
+            {
+              "path": "answer-opening.css",
+              "sha256": "0356c038ad2adcec7206bfcb3d57915b9e2be2cd42024770560f3d9875cc94fb"
+            },
+            {
+              "path": "answer-styles.css",
+              "sha256": "82dc51b82d56a129be803420cae47630f053f7af1259c659113fbd7fcd76d6ad"
+            },
+            {
+              "path": "answers/why-latter-day-saints-build-temples.html",
+              "sha256": "4eac0751f4a7facf61fcc2287beb72c786f87bb686073011ee3102e9f38fc8f8"
+            },
+            {
+              "path": "artwork-actions.css",
+              "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+            },
+            {
+              "path": "artwork-details.css",
+              "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+            },
+            {
+              "path": "complete-card-rows.css",
+              "sha256": "7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"
+            },
+            {
+              "path": "connected-study.css",
+              "sha256": "6b61c50c1d8e005074beb2db8fa800377377e6a3c9b955678dd836538fcb48cd"
+            },
+            {
+              "path": "full-image-viewer.css",
+              "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+            },
+            {
+              "path": "hero-details.css",
+              "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+            },
+            {
+              "path": "resource-cards.css",
+              "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+            },
+            {
+              "path": "site-header.css",
+              "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+            },
+            {
+              "path": "site-search.css",
+              "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+            },
+            {
+              "path": "site-system.css",
+              "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+            },
+            {
+              "path": "temples-history.css",
+              "sha256": "c3aa901b47871dc2cc9aa2848bf31b871a93588e0b4ad141c4d1da7912b2125a"
+            },
+            {
+              "path": "topic-art.css",
+              "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"
+            },
+            {
+              "path": "topic-artwork-details.css",
+              "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+            },
+            {
+              "path": "topic-heroes.css",
+              "sha256": "c0cd96bafe94455fd41d8b6c8357baaa12a0556ce204ba058a1264160acae632"
+            },
+            {
+              "path": "topic-study-pages.css",
+              "sha256": "99e1df87cfdcd11751bb16e0ea293a5048cd6f5f73245a791d20492226299236"
+            }
+          ],
+          "screenshot_evidence": [
+            {
+              "path": ".qa-artifacts/visual-rhythm-review/temple-tribute-desktop.png",
+              "sha256": "7e0b4ff364d50d593360ab7379e31a603d216193d889dbd06a757acb76a61f60"
+            },
+            {
+              "path": ".qa-artifacts/visual-rhythm-review/temple-tribute-phone.png",
+              "sha256": "d984f5dfdaf9a64ab69397b8fac7c73db7e680782b1eb45700dda1e43c06044c"
+            },
+            {
+              "path": ".qa-artifacts/visual-rhythm-review/temple-tribute-fullsize.png",
+              "sha256": "3e70d1483f127ea5fcd090ce471e815fbb87749717b5195286b76556da3e0ce7"
+            }
+          ],
+          "mandates_read": [
+            {
+              "path": "AGENTS.md",
+              "sha256": "fe68d0e575ac67262f5693432f09e8de8c2236d1ad8e58890e24f6d358cd4bf4"
+            },
+            {
+              "path": "docs/historical-character-identity.md",
+              "sha256": "69f0f51400ba102dfb5df9a9ec9fb6e738255dc496b84dc5dd684f3f5886c8c4"
+            },
+            {
+              "path": "docs/focuschrist-enrichment-and-stewardship-prompt.md",
+              "sha256": "91cfd09d188880c849493d1752cabb6c6bf8b239d9722259b196161fb6189d14"
+            },
+            {
+              "path": "docs/supporting-artwork-standard.md",
+              "sha256": "bdf1a7b97693f15cc9d6411fd0378ea8b549f2a6d3df934d574398ecbe0966ec"
+            },
+            {
+              "path": "docs/enriched-picture-owner-mandate.md",
+              "sha256": "c237fb14c7dd57f04d7d9ad063f3f0e93daf0a5c9844f9c3682407b4c80b363d"
+            }
+          ],
+          "source_spec": "docs/reviews/visual-rhythm-new-art/temple-tribute-creation-spec.json",
+          "section_top_context_review": {
+            "reviewed_at": "2026-10-08T16:08:06.454645+00:00",
+            "scope": "Section-top navigation only: shared script cache reference, plus four explicit subject-start mappings on Church History. Independent Fermi and Newton exact inverse comparisons reconstruct all 131 previous HTML consumers. Artwork, prose, stylesheets, source records, hero geometry and original review evidence remain unchanged. This amendment reuses prior artwork/source/pixel reviews; it does not claim a new artwork inspection or owner acceptance.",
+            "changed_context": [
+              {
+                "path": "answers/why-latter-day-saints-build-temples.html",
+                "prior_sha256": "65248868ab6e77314e267a4f1057ecbc1f9411cd289bb7dffa3aedb1c32ecf7c",
+                "sha256": "03632973dc8ef44dd175af8604d231d78afea4160fe432cc985f23d523f9aaf4"
+              }
+            ],
+            "verdict": "CONCUR scoped page-context amendment",
+            "evidence_basis": "Fermi and Newton independently verified exact HTML inverse; Albert reviewed source delta and actual desktop/phone subject landings. Prior full-resolution artwork evidence and timestamps remain historical and unmodified."
+          },
+          "visible_modal_cache_context_review": {
+            "reviewed_at": "2026-10-08T17:12:36.674294+00:00",
+            "scope": "Navigation cache reference only in this page context: version 20261008-section-top-1 to version 20261008-section-top-2. The shared navigation correction ignores hidden modal markup while preserving visible modal ownership. Artwork, prose, stylesheets, source records and hero geometry remain unchanged. This amendment reuses prior artwork/source/pixel reviews; it does not claim new artwork inspection or owner acceptance.",
+            "changed_context": [
+              {
+                "path": "answers/why-latter-day-saints-build-temples.html",
+                "prior_sha256": "03632973dc8ef44dd175af8604d231d78afea4160fe432cc985f23d523f9aaf4",
+                "sha256": "649e1b5be70dbe600f2a7613f78c242cfeea047cc7f936014174487da350e38d"
+              }
+            ],
+            "verdict": "CONCUR mechanical page-context amendment only",
+            "evidence_basis": "Exact per-page byte inverse reconstructs previous reviewed HTML; prior complete spec and reviews preserved. Shared navigation behavioral acceptance is recorded separately."
+          },
+          "phase1_layout_context_review": {
+            "reviewed_at": "2026-10-08T21:11:30.134022+00:00",
+            "scope": "Only reviewed phase1 CSS spacing/body rails and associated HTML cache references. Artwork, sources, prose and prior finished-pixel evidence unchanged. No new artwork inspection or owner aesthetic acceptance claimed.",
+            "changed_context": [
+              {
+                "path": "answers/why-latter-day-saints-build-temples.html",
+                "prior": "649e1b5be70dbe600f2a7613f78c242cfeea047cc7f936014174487da350e38d",
+                "current": "4eac0751f4a7facf61fcc2287beb72c786f87bb686073011ee3102e9f38fc8f8",
+                "head": "649e1b5be70dbe600f2a7613f78c242cfeea047cc7f936014174487da350e38d",
+                "head_matches_prior": true
+              },
+              {
+                "path": "connected-study.css",
+                "prior": "513b11859f17d36a5934d323f865242b8c90beea70e94fd3056e6e2dc0af40c6",
+                "current": "6b61c50c1d8e005074beb2db8fa800377377e6a3c9b955678dd836538fcb48cd",
+                "head": "513b11859f17d36a5934d323f865242b8c90beea70e94fd3056e6e2dc0af40c6",
+                "head_matches_prior": true
+              }
+            ],
+            "verdict": "CONCUR bounded phase1 page-context amendment",
+            "evidence_basis": "Current exact CSS delta read; all127 prior changed-file hashes match. Personally inspected source-bound Church390/1722 and Eleazer1722 reflection pixels. Reused unchanged prior39full-page tiles,62artwork flows,48geometry states. Original artwork pixels/sources unchanged; no fresh identity recertification."
+          },
+          "prior_finished_reviewed_at": "2026-10-07T04:33:17.707998+00:00"
+        },
+        {
+          "reviewer": "Newton",
+          "receipt_id": "newton-final-context-temple-tribute-20261007-phase1-context-20261008",
+          "stage": "finished",
+          "verdict": "PASS",
+          "withdrawn": false,
+          "binding_sha256": "be7e5d85be9f2f6c5816435ade732f0aa74f8154c025ad5f11bcb3f1188362ad",
+          "reviewed_at": "2026-10-08T21:11:30.134022+00:00",
+          "full_resolution_inspected": true,
+          "face_details_inspected": true,
+          "observations": "Current independent review personally inspected both delivered WebPs, desktop/phone placements and applicable narrow panel/viewer screenshots, read current caption/source/adjacent prose, and verified complete current HTML/CSS context plus asset/pixel hashes. Exact unchanged original-resolution and face-detail inspection is reused from the named prior Newton receipt, not claimed as newly repeated. No browser operation, owner aesthetic acceptance or public verification by this reviewer.",
+          "checks": {
+            "identity": "Prior exact Home-Christ and approved Peter rescue reference comparison reused unchanged; full and960 derivatives preserve Christ facial identity and Peter rear-profile continuity.",
+            "age": "Adult mortal-ministry Christ and adult Peter; no asserted exact ancient birth date.",
+            "expression_gaze": "Christ speaking naturally to attentive Peter, coherent mutual orientation and visible eyes.",
+            "atmosphere": "Natural domestic light and detailed skin, cloth and earthen walls; no halo or painterly surfaces.",
+            "environment": "Modest house with line/hook prepares for Matthew17 fishing instruction, distinct from Caesar coin question.",
+            "anatomy": "Christ gesture and resting hands and Peter coil-holding hands remain coherent; no scars in this mortal scene.",
+            "uniqueness": "Seated indoor two-person instruction differs from John6 courtyard and John7 public temple and Matthew22 tribute coin.",
+            "period_sources": "Reused prior independent Matthew17:24-27 source readback and unchanged source record. Caption says Capernaum, temple tribute and hook, then invites reflection on Sonship; no invented room/date claim.",
+            "characters_realism": "Prior full-resolution original and face/hand crop concurrence remains valid on identical original SHA. Both delivered full/960 WebPs personally viewed now, retaining natural faces and textures. Two adults seated in modest domestic interior, natural mutual gaze and expression. Christ matches inspected Home identity with changed speaking expression; Peter retains approved rear-profile hair/beard/head continuity. Both Christ hands and Peter coil-holding hands trace coherently; no scars. Coil/hook visually supplies pre-fishing cue, no fish/coin or Caesar episode. Dusty-blue mantle and beige tunic plausible. Full native scene and face/hands/coil crops inspected.",
+            "desktop_phone": "Personally viewed current saved desktop and phone placements: native3:2 picture, readable caption/source controls and useful narrative pause. Applicable narrow panel/fullsize imagery also inspected; UI/root own executed actions. Screenshot filenames are not interaction proof."
+          },
+          "prior_review": {
+            "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-10-06\\focus-artwork-pill-controls-completion\\work\\newton\\temple-tribute-original-pixel-review.json",
+            "sha256": "7328c22b69b140600bbf0d1c5c8829fb835a6ad3a6ecfc8b3988586a62bcf3c2",
+            "reuse": "Exact original and preflight hashes unchanged; retain prior source/reference/full-resolution crop inspection."
+          },
+          "evidence": [
+            {
+              "path": "assets/page-art/visual-rhythm-journey/temple-tribute-original.png",
+              "sha256": "e1cbd9cf09065630f8af52791c9832cf93e1c0be0f75893b138e1f4cede47195"
+            },
+            {
+              "path": "assets/page-art/visual-rhythm-journey/temple-tribute-full.webp",
+              "sha256": "de729b17b7a72a14b6f667c9a23a4f064c4d7883dab1d5d1d430f80e7f1820bf"
+            },
+            {
+              "path": "assets/page-art/visual-rhythm-journey/temple-tribute-960.webp",
+              "sha256": "fc1dff1127af137bdf0cf20d3da8833b6b6180940aa7dd019106bb022f5e050a"
+            },
+            {
+              "path": ".qa-artifacts/visual-rhythm-review/temple-tribute-desktop.png",
+              "sha256": "7e0b4ff364d50d593360ab7379e31a603d216193d889dbd06a757acb76a61f60"
+            },
+            {
+              "path": ".qa-artifacts/visual-rhythm-review/temple-tribute-phone.png",
+              "sha256": "d984f5dfdaf9a64ab69397b8fac7c73db7e680782b1eb45700dda1e43c06044c"
+            }
+          ],
+          "section_top_context_review": {
+            "reviewed_at": "2026-10-08T16:08:06.454645+00:00",
+            "scope": "Section-top navigation only: shared script cache reference, plus four explicit subject-start mappings on Church History. Independent Fermi and Newton exact inverse comparisons reconstruct all 131 previous HTML consumers. Artwork, prose, stylesheets, source records, hero geometry and original review evidence remain unchanged. This amendment reuses prior artwork/source/pixel reviews; it does not claim a new artwork inspection or owner acceptance.",
+            "changed_context": [
+              {
+                "path": "answers/why-latter-day-saints-build-temples.html",
+                "prior_sha256": "65248868ab6e77314e267a4f1057ecbc1f9411cd289bb7dffa3aedb1c32ecf7c",
+                "sha256": "03632973dc8ef44dd175af8604d231d78afea4160fe432cc985f23d523f9aaf4"
+              }
+            ],
+            "verdict": "CONCUR scoped page-context amendment",
+            "evidence_basis": "Fermi and Newton independently verified exact HTML inverse; Albert reviewed source delta and actual desktop/phone subject landings. Prior full-resolution artwork evidence and timestamps remain historical and unmodified."
+          },
+          "visible_modal_cache_context_review": {
+            "reviewed_at": "2026-10-08T17:12:36.674294+00:00",
+            "scope": "Navigation cache reference only in this page context: version 20261008-section-top-1 to version 20261008-section-top-2. The shared navigation correction ignores hidden modal markup while preserving visible modal ownership. Artwork, prose, stylesheets, source records and hero geometry remain unchanged. This amendment reuses prior artwork/source/pixel reviews; it does not claim new artwork inspection or owner acceptance.",
+            "changed_context": [
+              {
+                "path": "answers/why-latter-day-saints-build-temples.html",
+                "prior_sha256": "03632973dc8ef44dd175af8604d231d78afea4160fe432cc985f23d523f9aaf4",
+                "sha256": "649e1b5be70dbe600f2a7613f78c242cfeea047cc7f936014174487da350e38d"
+              }
+            ],
+            "verdict": "CONCUR mechanical page-context amendment only",
+            "evidence_basis": "Exact per-page byte inverse reconstructs previous reviewed HTML; prior complete spec and reviews preserved. Shared navigation behavioral acceptance is recorded separately."
+          },
+          "phase1_layout_context_review": {
+            "reviewed_at": "2026-10-08T21:11:30.134022+00:00",
+            "scope": "Only reviewed phase1 CSS spacing/body rails and associated HTML cache references. Artwork, sources, prose and prior finished-pixel evidence unchanged. No new artwork inspection or owner aesthetic acceptance claimed.",
+            "changed_context": [
+              {
+                "path": "answers/why-latter-day-saints-build-temples.html",
+                "prior": "649e1b5be70dbe600f2a7613f78c242cfeea047cc7f936014174487da350e38d",
+                "current": "4eac0751f4a7facf61fcc2287beb72c786f87bb686073011ee3102e9f38fc8f8",
+                "head": "649e1b5be70dbe600f2a7613f78c242cfeea047cc7f936014174487da350e38d",
+                "head_matches_prior": true
+              },
+              {
+                "path": "connected-study.css",
+                "prior": "513b11859f17d36a5934d323f865242b8c90beea70e94fd3056e6e2dc0af40c6",
+                "current": "6b61c50c1d8e005074beb2db8fa800377377e6a3c9b955678dd836538fcb48cd",
+                "head": "513b11859f17d36a5934d323f865242b8c90beea70e94fd3056e6e2dc0af40c6",
+                "head_matches_prior": true
+              }
+            ],
+            "verdict": "CONCUR bounded phase1 page-context amendment",
+            "evidence_basis": "Independent122HTML cache-only inverse and8capture source bindings pass. Exact CSS read; personally inspected Church390/1905 and Eleazer390/1722 pixels. Independent candidate deep-preservation check PASS at2026-10-08T21:06:40.738881+00:00. No fresh full-scene identity recertification."
+          },
+          "prior_finished_reviewed_at": "2026-10-07T04:33:04.911416+00:00"
+        }
+      ],
+      "root_review": {
+        "reviewer": "Albert",
+        "verdict": "PASS",
+        "binding_sha256": "be7e5d85be9f2f6c5816435ade732f0aa74f8154c025ad5f11bcb3f1188362ad",
+        "observations": "Personally operated all six artwork panels and fullsize paths on desktop1280x900 and phone412x915, inspected exact download hrefs, Escape focus return and Continue Lesson. History scripture reader loaded verse121:9. Eleazer phone/desktop selector switches used exact original/desktop source; labels and48px controls coherent. Personally inspected saved desktop/phone placement screenshots and current desktop panel pixels; reused original/face pixel inspection documented by prior root and both independent reviewers. Current root screenshots saved immediately after actions sometimes capture preceding panel state; these are not represented as viewer screenshots. Phone/desktop placement and all relevant current HTML/CSS integrity verified by independent UI report. No product pixels regenerated. Prose semantic delta read personally; concise invitations preserve sources and historical/devotional distinctions.",
+        "evidence": {
+          "desktop": [
+            {
+              "path": "docs/reviews/visual-rhythm-final-context/albert-context-review.json",
+              "sha256": "cf5bb96e256207370b753a1a4c81626faf2ff6e1542c018f0864e5e5c5170a00"
+            },
+            {
+              "path": "docs/reviews/visual-rhythm-final-context/root-native.json",
+              "sha256": "db0c62141c8786814cdc6fb58c44f6f38d3e85b30f44f9a3f53eeb5634d231a0"
+            },
+            {
+              "path": "docs/reviews/visual-rhythm-final-context/ui-specialist-context-review.json",
+              "sha256": "19ba8179f7bc3379495762be75748e28f9c20e4e7e39d93a6c882474efe8c00f"
+            }
+          ],
+          "phone": [
+            {
+              "path": "docs/reviews/visual-rhythm-final-context/albert-context-review.json",
+              "sha256": "cf5bb96e256207370b753a1a4c81626faf2ff6e1542c018f0864e5e5c5170a00"
+            },
+            {
+              "path": "docs/reviews/visual-rhythm-final-context/root-native.json",
+              "sha256": "db0c62141c8786814cdc6fb58c44f6f38d3e85b30f44f9a3f53eeb5634d231a0"
+            },
+            {
+              "path": "docs/reviews/visual-rhythm-final-context/ui-specialist-context-review.json",
+              "sha256": "19ba8179f7bc3379495762be75748e28f9c20e4e7e39d93a6c882474efe8c00f"
+            }
+          ]
+        },
+        "section_top_context_review": {
+          "reviewed_at": "2026-10-08T16:08:06.454645+00:00",
+          "scope": "Section-top navigation only: shared script cache reference, plus four explicit subject-start mappings on Church History. Independent Fermi and Newton exact inverse comparisons reconstruct all 131 previous HTML consumers. Artwork, prose, stylesheets, source records, hero geometry and original review evidence remain unchanged. This amendment reuses prior artwork/source/pixel reviews; it does not claim a new artwork inspection or owner acceptance.",
+          "changed_context": [
+            {
+              "path": "answers/why-latter-day-saints-build-temples.html",
+              "prior_sha256": "65248868ab6e77314e267a4f1057ecbc1f9411cd289bb7dffa3aedb1c32ecf7c",
+              "sha256": "03632973dc8ef44dd175af8604d231d78afea4160fe432cc985f23d523f9aaf4"
+            }
+          ],
+          "verdict": "CONCUR scoped page-context amendment",
+          "evidence_basis": "Fermi and Newton independently verified exact HTML inverse; Albert reviewed source delta and actual desktop/phone subject landings. Prior full-resolution artwork evidence and timestamps remain historical and unmodified."
+        },
+        "visible_modal_cache_context_review": {
+          "reviewed_at": "2026-10-08T17:12:36.674294+00:00",
+          "scope": "Navigation cache reference only in this page context: version 20261008-section-top-1 to version 20261008-section-top-2. The shared navigation correction ignores hidden modal markup while preserving visible modal ownership. Artwork, prose, stylesheets, source records and hero geometry remain unchanged. This amendment reuses prior artwork/source/pixel reviews; it does not claim new artwork inspection or owner acceptance.",
+          "changed_context": [
+            {
+              "path": "answers/why-latter-day-saints-build-temples.html",
+              "prior_sha256": "03632973dc8ef44dd175af8604d231d78afea4160fe432cc985f23d523f9aaf4",
+              "sha256": "649e1b5be70dbe600f2a7613f78c242cfeea047cc7f936014174487da350e38d"
+            }
+          ],
+          "verdict": "CONCUR mechanical page-context amendment only",
+          "evidence_basis": "Exact per-page byte inverse reconstructs previous reviewed HTML; prior complete spec and reviews preserved. Shared navigation behavioral acceptance is recorded separately."
+        },
+        "phase1_layout_context_review": {
+          "reviewed_at": "2026-10-08T21:11:30.134022+00:00",
+          "scope": "Only reviewed phase1 CSS spacing/body rails and associated HTML cache references. Artwork, sources, prose and prior finished-pixel evidence unchanged. No new artwork inspection or owner aesthetic acceptance claimed.",
+          "changed_context": [
+            {
+              "path": "answers/why-latter-day-saints-build-temples.html",
+              "prior": "649e1b5be70dbe600f2a7613f78c242cfeea047cc7f936014174487da350e38d",
+              "current": "4eac0751f4a7facf61fcc2287beb72c786f87bb686073011ee3102e9f38fc8f8",
+              "head": "649e1b5be70dbe600f2a7613f78c242cfeea047cc7f936014174487da350e38d",
+              "head_matches_prior": true
+            },
+            {
+              "path": "connected-study.css",
+              "prior": "513b11859f17d36a5934d323f865242b8c90beea70e94fd3056e6e2dc0af40c6",
+              "current": "6b61c50c1d8e005074beb2db8fa800377377e6a3c9b955678dd836538fcb48cd",
+              "head": "513b11859f17d36a5934d323f865242b8c90beea70e94fd3056e6e2dc0af40c6",
+              "head_matches_prior": true
+            }
+          ],
+          "verdict": "CONCUR bounded phase1 page-context amendment",
+          "evidence_basis": "Exact CSS source read. Personally native browser Eleazer1905 opening/Continue/directory/first and last body;390footer/finalbody/artwork-study/fullsize/close/ContinueLesson restored heading. Church390/1722 settled promotion gap16/24px without clipping. Bounded six-context concurrence; broader wholepage/release acceptance pending."
+        },
+        "prior_finished_reviewed_at": null,
+        "reviewed_at": "2026-10-08T21:11:30.134022+00:00",
+        "receipt_id": "albert-assembled-phase1-context-20261008"
+      },
+      "note": "Exact prior assembled-context objects retained before final release source/cache reconciliation. Original pixel review dates and evidence remain historical."
+    }
+  ]
+}

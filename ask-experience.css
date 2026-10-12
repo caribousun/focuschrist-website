@@ -582,10 +582,10 @@ body {
 
 .ask-topic-option {
     padding: 8px 11px;
-    border: 1px solid rgba(158,170,131,0.28);
+    border: 1px solid rgba(240,195,106,0.55);
     border-radius: 999px;
-    background: rgba(113,128,92,.055);
-    color: #d0d8c5;
+    background: var(--ask-bg);
+    color: var(--ask-gold-light);
     cursor: pointer;
     font-family: inherit;
     font-size: 0.78rem;
@@ -593,7 +593,13 @@ body {
 .ask-topic-option:hover,
 .ask-topic-option:focus-visible {
     border-color: var(--ask-gold-light);
-    color: var(--ask-cream);
+    background: var(--ask-surface-2);
+    color: var(--ask-gold-light);
+}
+
+.ask-topic-option:focus-visible {
+    outline: 2px solid var(--ask-gold-light);
+    outline-offset: 3px;
 }
 
 .ask-continue-grid {

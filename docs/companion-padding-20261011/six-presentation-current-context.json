@@ -1,0 +1,658 @@
+{
+  "schema": 1,
+  "kind": "six-page-screen-presentation-current-context",
+  "prepared_at": "2026-10-11T11:46:51.407754+00:00",
+  "presentation_manifest_sha256": "4524b297f33aed319dda925814b8d0460de07d7d0798f7509ccc98adb5775c27",
+  "context_specs_sha256": "7a6bcbaf4c5012ba23cf6a5f026fa6f7f59c1d03c5c9a18eec6e7a6af93ebd4a",
+  "files": [
+    {
+      "path": "answers/jesus-christ-latter-day-saint-beliefs.html",
+      "before_sha256": "109414b6905a971f260dad6c990258f26723289dc71e00d006f40b7f8718130d",
+      "after_sha256": "40c7f4c32630594c247aac3391fc875f38be30bc06d1778915f004ff4838eee2",
+      "historical_candidate_sha256": "720ac59639ff8dcbb8a86632e1b62e84481de1ba99ff1fe7df4295fc84033acc",
+      "exact_inverse": true,
+      "current_cache_tokens_preserved": [
+        {
+          "old": "connected-study.css?v=20261011-list-reading-1",
+          "current": "connected-study.css?v=20261008-promotion-spacing-1"
+        }
+      ],
+      "unchanged_existing_images": 40,
+      "new_attributed_stories": 0
+    },
+    {
+      "path": "answers/who-was-joseph-smith.html",
+      "before_sha256": "3ccb9ab354ba8828169d6803f23e5abd8d4ae06b0f802f3cd3c6da8595687d0b",
+      "after_sha256": "64f413f98de25efa715be285d1f56b4e3deaaab2b147ea41e1b547281e5f6308",
+      "historical_candidate_sha256": "f94211dea7b2def8cd43d91a4d4a5928f53688ff2c63988321275da43529260d",
+      "exact_inverse": true,
+      "current_cache_tokens_preserved": [
+        {
+          "old": "connected-study.css?v=20261011-list-reading-1",
+          "current": "connected-study.css?v=20261008-promotion-spacing-1"
+        }
+      ],
+      "unchanged_existing_images": 35,
+      "new_attributed_stories": 0
+    },
+    {
+      "path": "general-conference.html",
+      "before_sha256": "1e1d773c6e77fac39fd7bf05fa953189b9fd587fe6af2c56b15daff61ab7222f",
+      "after_sha256": "c4c3b18e505109d07578aa69c6ed5d7d1c72cbe9758ad394ae20e0cd2eca1978",
+      "historical_candidate_sha256": "854aaa59b46fd3a2f5cc6e6056970150ab80f8c1a4a065d2f43f973e21407bfd",
+      "exact_inverse": true,
+      "current_cache_tokens_preserved": [],
+      "unchanged_existing_images": 101,
+      "new_attributed_stories": 1,
+      "v2_sentence_inverse": true
+    },
+    {
+      "path": "answers/stand-forever.html",
+      "before_sha256": "1dd8e2e4c8270d98d7fdeeedc800f4e60584137dd218551d9560bc95e1a4136a",
+      "after_sha256": "7fdba6b054db149d2e7abf7000352cf41a8169526a7d3345ed8ef1fcb94761d5",
+      "historical_candidate_sha256": "8a4fc442abd970414e3a8b671c24054cb59335fa96379038e042a1ae59daccb4",
+      "exact_inverse": true,
+      "current_cache_tokens_preserved": [
+        {
+          "old": "connected-study.css?v=20261011-list-reading-1",
+          "current": "connected-study.css?v=20261008-promotion-spacing-1"
+        }
+      ],
+      "unchanged_existing_images": 16,
+      "new_attributed_stories": 1,
+      "v2_sentence_inverse": true
+    },
+    {
+      "path": "answers/settle-this-in-your-hearts.html",
+      "before_sha256": "73adee9c72e3a20f9beda56cfa3b139f14239b3100648cf9bba86c0f164f24ca",
+      "after_sha256": "7e7c422e36b53e71cbf86d017c58851f6a6ea7df134a77a3f60deeb92eb838f6",
+      "historical_candidate_sha256": "d38ca85b69cbc6228a140182d7803b63df12067025a14414aa60b2e65818634b",
+      "exact_inverse": true,
+      "current_cache_tokens_preserved": [
+        {
+          "old": "connected-study.css?v=20261011-list-reading-1",
+          "current": "connected-study.css?v=20261008-promotion-spacing-1"
+        }
+      ],
+      "unchanged_existing_images": 23,
+      "new_attributed_stories": 1
+    },
+    {
+      "path": "history/emma-hale-smith.html",
+      "before_sha256": "140ba3313e5de6e33600428827927e6f312ad828acd3b5ead859a04b0ae7fd54",
+      "after_sha256": "7bb4172e4cf6d7fc1ba7ab17cbf5872da4afe5178496f8b26e50b8ad4df6a92b",
+      "historical_candidate_sha256": "6a8b83cc01f8fa9e85159ccae8d97d0843748f58aa375f5f35a3f2126e3dab9d",
+      "exact_inverse": true,
+      "current_cache_tokens_preserved": [
+        {
+          "old": "connected-study.css?v=20261011-list-reading-1",
+          "current": "connected-study.css?v=20261008-promotion-spacing-1"
+        },
+        {
+          "old": "guided-studies.css?v=20261011-list-reading-1",
+          "current": "guided-studies.css?v=20261008-study-tools-1"
+        }
+      ],
+      "unchanged_existing_images": 11,
+      "new_attributed_stories": 0
+    },
+    {
+      "path": "targeted-six.css",
+      "before_sha256": null,
+      "after_sha256": "6234f992191650a688b93dc452215778b783fe9b3e0a9ed030a79641c4b0edc6",
+      "historical_bytes_unchanged": true
+    }
+  ],
+  "contexts": [
+    {
+      "kind": "existing_creation_current_context_only",
+      "record": "docs/artwork-creation-reviews.json",
+      "index": 0,
+      "prior_binding_sha256": "3514753865b8fc5879b5d1895f7e8843843be48e9b718faca9752270d32016a6",
+      "current_binding_sha256": "0a4487c15ceca2c9f7c3099f862c85661c1aa623963797504191d5ee17ba57bf",
+      "spec": {
+        "id": "stand-forever-john6",
+        "role": "body",
+        "route": "answers/stand-forever.html",
+        "preflight_sha256": "5933e7189b46beadf1f4894aba41f540cfc79e1e697b48edbf100cfd72ae4f13",
+        "generated_at": "2026-10-07T03:45:38.474721+00:00",
+        "owner_status": "not-reviewed",
+        "ancestor_sha256": [
+          "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+          "f6b5502c16f4a272b0e80209876366f86285c38ce5547b28d6fbe98d9849427a",
+          "ff37365ef49832338774b77c6717d841983891612b8e17d67ef317941939c82f"
+        ],
+        "original": {
+          "path": "assets/page-art/stand-forever-journey/stand-john6-remain-original.png",
+          "sha256": "3384d4a1a3599ab7c789ab1f1a712c66519f01851f9e46d23bd1e1d51eda709b",
+          "pixel_sha256": "27e8e37e8ed13a21f6fe115ff4bcd72236fe4b49ef15585ab0a08894a65a12b4"
+        },
+        "derivatives": [
+          {
+            "path": "assets/page-art/stand-forever-journey/stand-john6-remain-full.webp",
+            "sha256": "f9bc997a86d7f85695eeb32cabf1ae9e76e88122ff6a6efba8a247a408bd78a6",
+            "pixel_sha256": "7dccb1d668e3a8cf6ee5022db54066de316932b686e706aaa0c3005100fcddfd"
+          },
+          {
+            "path": "assets/page-art/stand-forever-journey/stand-john6-remain-960.webp",
+            "sha256": "bcbfa7bb0face64659185fe097bf8ae213e100b14b3de8765a549b15dc113aab",
+            "pixel_sha256": "b28817d5b41b04cda7f399abfcd08e6c1cc1da04313b928f57a89f3359159e99"
+          }
+        ],
+        "page_context": [
+          {
+            "path": "answer-navigation.css",
+            "sha256": "8112ad6d52ada3bd0b373633fc2e60f5ada7d47fb2204c28e1a09ae01be66a57"
+          },
+          {
+            "path": "answer-opening.css",
+            "sha256": "0356c038ad2adcec7206bfcb3d57915b9e2be2cd42024770560f3d9875cc94fb"
+          },
+          {
+            "path": "answer-styles.css",
+            "sha256": "82dc51b82d56a129be803420cae47630f053f7af1259c659113fbd7fcd76d6ad"
+          },
+          {
+            "path": "answers/stand-forever.html",
+            "sha256": "7fdba6b054db149d2e7abf7000352cf41a8169526a7d3345ed8ef1fcb94761d5"
+          },
+          {
+            "path": "artwork-actions.css",
+            "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+          },
+          {
+            "path": "artwork-details.css",
+            "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+          },
+          {
+            "path": "complete-card-rows.css",
+            "sha256": "7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"
+          },
+          {
+            "path": "connected-study.css",
+            "sha256": "6b61c50c1d8e005074beb2db8fa800377377e6a3c9b955678dd836538fcb48cd"
+          },
+          {
+            "path": "foundation-study.css",
+            "sha256": "8d212cf661236bcaf3da52954257551613dd8356e9483eacdee5f55a03372c6d"
+          },
+          {
+            "path": "full-image-viewer.css",
+            "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+          },
+          {
+            "path": "hero-details.css",
+            "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+          },
+          {
+            "path": "resource-cards.css",
+            "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+          },
+          {
+            "path": "site-header.css",
+            "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+          },
+          {
+            "path": "site-search.css",
+            "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+          },
+          {
+            "path": "site-system.css",
+            "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+          },
+          {
+            "path": "stand-forever-study.css",
+            "sha256": "27d14a4abc1b10c50068043d70ec8f0fda3860ce0953d5d2922d33e1a7317d7b"
+          },
+          {
+            "path": "topic-art.css",
+            "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"
+          },
+          {
+            "path": "topic-artwork-details.css",
+            "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+          },
+          {
+            "path": "topic-heroes.css",
+            "sha256": "c0cd96bafe94455fd41d8b6c8357baaa12a0556ce204ba058a1264160acae632"
+          },
+          {
+            "path": "topic-study-pages.css",
+            "sha256": "99e1df87cfdcd11751bb16e0ea293a5048cd6f5f73245a791d20492226299236"
+          },
+          {
+            "path": "targeted-six.css",
+            "sha256": "6234f992191650a688b93dc452215778b783fe9b3e0a9ed030a79641c4b0edc6"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "existing_creation_current_context_only",
+      "record": "docs/artwork-creation-reviews.json",
+      "index": 1,
+      "prior_binding_sha256": "4ffe5ae139ceb64395a0c90f5f79d12e4319029897a8520aaab00a5228fb9375",
+      "current_binding_sha256": "a50ad24895ef2bbadbf88c2a36faadd4e634da389bfce358df0eba9559772372",
+      "spec": {
+        "id": "stand-forever-john7",
+        "role": "body",
+        "route": "answers/stand-forever.html",
+        "preflight_sha256": "943646f6084c8b5fe050762a7d76265bc904d8bb87ab35c4841b67b67057c700",
+        "generated_at": "2026-10-07T03:45:45.306829+00:00",
+        "owner_status": "not-reviewed",
+        "ancestor_sha256": [
+          "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+          "ff37365ef49832338774b77c6717d841983891612b8e17d67ef317941939c82f"
+        ],
+        "original": {
+          "path": "assets/page-art/stand-forever-journey/stand-john7-do-his-will-original.png",
+          "sha256": "d04caa98a349c66f1112930b89869196bf1dce9e3590f8445c48fc0f71c86072",
+          "pixel_sha256": "2559dce8ef9f91563a786cfab5a22d4613ebc3446890325bda6f3003a1d216c8"
+        },
+        "derivatives": [
+          {
+            "path": "assets/page-art/stand-forever-journey/stand-john7-do-his-will-full.webp",
+            "sha256": "fb9cd7f0a0c4f1612f428375729bcd3685046427da82b3cdbda13a91be0f9029",
+            "pixel_sha256": "0a54485f9306a63188d7fb9960bd9b642485d0673ea0e95d708d9c9e4a98f374"
+          },
+          {
+            "path": "assets/page-art/stand-forever-journey/stand-john7-do-his-will-960.webp",
+            "sha256": "43be5dbb873b53460c987d8cfc06a6342a1c5f2c208da6e3fa3cb8d2828f31b8",
+            "pixel_sha256": "d97e9589e66bf5403b50b97446561eefbe7aef795a5cf71d7d384e92752ed4c0"
+          }
+        ],
+        "page_context": [
+          {
+            "path": "answer-navigation.css",
+            "sha256": "8112ad6d52ada3bd0b373633fc2e60f5ada7d47fb2204c28e1a09ae01be66a57"
+          },
+          {
+            "path": "answer-opening.css",
+            "sha256": "0356c038ad2adcec7206bfcb3d57915b9e2be2cd42024770560f3d9875cc94fb"
+          },
+          {
+            "path": "answer-styles.css",
+            "sha256": "82dc51b82d56a129be803420cae47630f053f7af1259c659113fbd7fcd76d6ad"
+          },
+          {
+            "path": "answers/stand-forever.html",
+            "sha256": "7fdba6b054db149d2e7abf7000352cf41a8169526a7d3345ed8ef1fcb94761d5"
+          },
+          {
+            "path": "artwork-actions.css",
+            "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+          },
+          {
+            "path": "artwork-details.css",
+            "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+          },
+          {
+            "path": "complete-card-rows.css",
+            "sha256": "7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"
+          },
+          {
+            "path": "connected-study.css",
+            "sha256": "6b61c50c1d8e005074beb2db8fa800377377e6a3c9b955678dd836538fcb48cd"
+          },
+          {
+            "path": "foundation-study.css",
+            "sha256": "8d212cf661236bcaf3da52954257551613dd8356e9483eacdee5f55a03372c6d"
+          },
+          {
+            "path": "full-image-viewer.css",
+            "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+          },
+          {
+            "path": "hero-details.css",
+            "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+          },
+          {
+            "path": "resource-cards.css",
+            "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+          },
+          {
+            "path": "site-header.css",
+            "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+          },
+          {
+            "path": "site-search.css",
+            "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+          },
+          {
+            "path": "site-system.css",
+            "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+          },
+          {
+            "path": "stand-forever-study.css",
+            "sha256": "27d14a4abc1b10c50068043d70ec8f0fda3860ce0953d5d2922d33e1a7317d7b"
+          },
+          {
+            "path": "topic-art.css",
+            "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"
+          },
+          {
+            "path": "topic-artwork-details.css",
+            "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+          },
+          {
+            "path": "topic-heroes.css",
+            "sha256": "c0cd96bafe94455fd41d8b6c8357baaa12a0556ce204ba058a1264160acae632"
+          },
+          {
+            "path": "topic-study-pages.css",
+            "sha256": "99e1df87cfdcd11751bb16e0ea293a5048cd6f5f73245a791d20492226299236"
+          },
+          {
+            "path": "targeted-six.css",
+            "sha256": "6234f992191650a688b93dc452215778b783fe9b3e0a9ed030a79641c4b0edc6"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "existing_native_source_current_context_only",
+      "record": "docs/conference-2026-10-native-review.json",
+      "prior_binding_sha256": "d9e01ac4e79e5c105438ccc433d831a665a27566630e1e31c8f14279eb5e6ed2",
+      "current_binding_sha256": "700294a0f19978db5f916bb529e22a4661b680de1ec312903955ef6672d3bd66",
+      "spec": {
+        "kind": "official-native-conference-thumbnails",
+        "collection": "https://www.churchofjesuschrist.org/study/general-conference/2026/10?lang=eng",
+        "ledger_sha256": "2c3c7d4f75f508f5cafb1aede25069a2c561f9ba9fa1a1ddfbfb1e97aea60c80",
+        "items_sha256": "fe829c991e76048e6b7d138b3d003023fe430aa3aab9751f68ab69d25088a1ba",
+        "page_context": [
+          {
+            "path": "general-conference.html",
+            "sha256": "c4c3b18e505109d07578aa69c6ed5d7d1c72cbe9758ad394ae20e0cd2eca1978"
+          },
+          {
+            "path": "general-conference-section.css",
+            "sha256": "c479d3f126ad31347635f6c66c727b6fb0db89b584609a983b1af65cc48f2adb"
+          },
+          {
+            "path": "targeted-six.css",
+            "sha256": "6234f992191650a688b93dc452215778b783fe9b3e0a9ed030a79641c4b0edc6"
+          }
+        ]
+      }
+    }
+  ],
+  "current_reviews": {
+    "Fermi": {
+      "receipt_sha256": "6a17e9af6a7010af8661eab8f77492417d72830fdffc20a3dc64053d004b0749",
+      "receipt": {
+        "reviewer": "Fermi",
+        "reviewed_at": "2026-10-11T11:44:08.111427+00:00",
+        "decision": "CONCUR_CURRENT_PROSE_DELTA_AND_CONTEXT",
+        "manifest_sha256": "4524b297f33aed319dda925814b8d0460de07d7d0798f7509ccc98adb5775c27",
+        "current_context_specs_sha256": "7a6bcbaf4c5012ba23cf6a5f026fa6f7f59c1d03c5c9a18eec6e7a6af93ebd4a",
+        "prior_review": "work/fermi/SIX-PRESENTATION-CURRENT-REVIEW.json",
+        "actual_checks": [
+          "Both complete revised paragraphs read in candidate HTML",
+          "Both exact literal inverse reconstructions independently match prior candidate SHA256",
+          "Each replacement appears once, each old phrase absent",
+          "All seven current candidate file hashes match current manifest",
+          "Replacements preserve source sense and warm direct prose"
+        ],
+        "files": [
+          {
+            "path": "answers/jesus-christ-latter-day-saint-beliefs.html",
+            "match": true
+          },
+          {
+            "path": "answers/who-was-joseph-smith.html",
+            "match": true
+          },
+          {
+            "path": "general-conference.html",
+            "match": true
+          },
+          {
+            "path": "answers/stand-forever.html",
+            "match": true
+          },
+          {
+            "path": "answers/settle-this-in-your-hearts.html",
+            "match": true
+          },
+          {
+            "path": "history/emma-hale-smith.html",
+            "match": true
+          },
+          {
+            "path": "targeted-six.css",
+            "match": true
+          }
+        ],
+        "limits": [
+          "Narrow source/text/context delta review; prior actual six-page desktop/phone presentation review retained for unchanged scope",
+          "No repeat rendered inspection of these two sentence revisions claimed",
+          "No new asset/native pixel review or owner acceptance",
+          "Dependencies/CI/publication remain separate"
+        ],
+        "no_individual_owner_acceptance_claim": true
+      },
+      "prior_unchanged_scope_receipt_sha256": "0b97a5f20dbc8cec501492d0e3f5db2dfab919cbea445a51aa6116559cfaa54e",
+      "prior_unchanged_scope": {
+        "reviewer": "Fermi",
+        "reviewed_at": "2026-10-11T11:40:21.6335200Z",
+        "decision": "SCOPED_ASSEMBLED_AND_SOURCE_PROSE_CONCUR",
+        "manifest_sha256": "451777ff2f89c2fced52a669b7400a7f1d798b0945759d84e76e5db3190a162d",
+        "current_context_specs_sha256": "cdba26c244dfbd51d8c393f5a17b79761a1aaf5389355826379ff223eff50034",
+        "actual_checks": [
+          "All seven candidate files independently rehashed against manifest",
+          "Own IAB desktop1280x900 and phone390x844 views of all six changed sections",
+          "Christ and Joseph foundational sections dark teal with readable text and gold links, no observed horizontal overflow",
+          "Three attributed story paragraphs read in actual desktop/phone layouts",
+          "Emma companion actually expanded: two desktop columns and one phone column, readable links",
+          "Complete current-context specifications read: Stand John6/John7 and native Conference context bindings only",
+          "Three story facts independently checked against exact official source articles"
+        ],
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/general-conference/2026/04/14yee?lang=eng",
+          "https://www.churchofjesuschrist.org/study/general-conference/2013/04/lord-i-believe?lang=eng",
+          "https://www.churchofjesuschrist.org/study/liahona/2012/01/recognizing-gods-hand-in-our-daily-blessings?lang=eng"
+        ],
+        "prose_findings": [
+          "Yee father, recurring invitation and rides, and later temple service accurately paraphrased",
+          "Holland fourteen-year-old belief account accurately paraphrased without upgrading belief to knowledge",
+          "Christofferson prolonged financial difficulty and daily help accurately paraphrased without promising immediate relief"
+        ],
+        "editorial_notes": [
+          "Stand leaves room for a sincere beginning could be more direct: His experience encourages a sincere beginning",
+          "Conference gave their invitation room to grow could be more concrete: They kept visiting and inviting him, and remained his close friends",
+          "These are voice suggestions rather than factual defects or a blanket prohibition on the word room"
+        ],
+        "limits": [
+          "Current assembled presentation review only; existing artwork/native-source pixel reviews remain historical, not newly performed",
+          "No new owner acceptance or generation approval",
+          "No native print, enlarged-text, ultrawide, or exhaustive interaction review claimed",
+          "No dependency closure, installation, CI or public release approval",
+          "Public PR477 verification awaits successful Pages deployment"
+        ],
+        "browser_cleanup": "Owned tab8 closed; viewport reset",
+        "product_writes": false,
+        "no_individual_owner_acceptance_claim": true
+      }
+    },
+    "Newton": {
+      "receipt_sha256": "b25f54cfef2eeea5679032a15f49d552db8a852f897511d1a3fa9b874fef4924",
+      "receipt": {
+        "reviewer": "Newton",
+        "at": "2026-10-11T11:46:13.603838+00:00",
+        "decision": "CONCUR_V2_CURRENT_TECHNICAL_AND_PROSE_DELTA",
+        "presentation_manifest_sha256": "4524b297f33aed319dda925814b8d0460de07d7d0798f7509ccc98adb5775c27",
+        "context_specs_sha256": "7a6bcbaf4c5012ba23cf6a5f026fa6f7f59c1d03c5c9a18eec6e7a6af93ebd4a",
+        "binding_sha256s": [
+          "0a4487c15ceca2c9f7c3099f862c85661c1aa623963797504191d5ee17ba57bf",
+          "a50ad24895ef2bbadbf88c2a36faadd4e634da389bfce358df0eba9559772372",
+          "700294a0f19978db5f916bb529e22a4661b680de1ec312903955ef6672d3bd66"
+        ],
+        "actual_review": "Read both complete precise replacements in their already-reviewed three story contexts. Independently reversed each exact new sentence and recovered prior page hashes. Both retain source meaning and improve directness. Previous technical/source-byte review retained for unchanged scope.",
+        "prior_review": "SIX-PRESENTATION-CURRENT-DEPENDENCY-REVIEW.json",
+        "limits": [
+          "No new Newton native browser or independent official-source retrieval in this delta.",
+          "No new image pixel vote or owner acceptance.",
+          "Final candidate records and gate/installer still require final package review."
+        ]
+      },
+      "prior_unchanged_scope_receipt_sha256": "6169b7c4fbf9e4a58407f151ff110467a2c7f5475e1583175fa77413a95f7b30",
+      "prior_unchanged_scope": {
+        "reviewer": "Newton",
+        "at": "2026-10-11T11:38:50.824746+00:00",
+        "decision": "CONCUR_CURRENT_TECHNICAL_CONTEXT_AND_PRIVATE_FINALIZATION",
+        "context_specs_sha256": "cdba26c244dfbd51d8c393f5a17b79761a1aaf5389355826379ff223eff50034",
+        "binding_sha256s": [
+          "27c9e065419b92a5ce8bd2ecd1a3b2c273b794b91fae8b34d1d06982e5498fa5",
+          "5a1b6e001fc13ccc68bada5fd88033ae4c891c7d1be1a7417dff4097616cf49a",
+          "e7f2fe8bbd2aafd37d59ea00f902ade66c7b5130ebc14389cbef08d01e8a9428"
+        ],
+        "css_candidate_sha256": "b434527f476140688970299dcef324facb9e2d251c71d3640189416ba9eefef3",
+        "closure_candidate_sha256": "f1dedc2aa2763ca73096d16c7726a671156df9c7fd5db2fee42a7f3acd449125",
+        "actual_checks": [
+          "All three noncontext specification portions independently equal installed originals. Every current context hash verified against actual candidate/current bytes.",
+          "Full closure semantic diff independently limited to3consumer hashes, one exact prior-contract append and current note.",
+          "Exact CSS source recognition reviewed: fullhash, sole six link/body consumers, existing unrelated assertions retained;30negative results inspected.",
+          "All three attributed prose blocks fully read; no factual/editorial objection. Official retrieval verification belongs to Thunder; no independent new official-source fetch claimed.",
+          "Browser recovery addendum and actual Thunder report read; appropriate observed-host limits and separate actor attribution."
+        ],
+        "scope_limits": [
+          "No fresh historical artwork pixel vote or individual owner acceptance.",
+          "No direct Newton browser interaction in this pass.",
+          "Final assembled review, full gate, final manifest and installer remain required before root installation.",
+          "Recovery evidence establishes reported supported current-session success, not universal cross-host capability."
+        ]
+      }
+    },
+    "Albert": {
+      "receipt_sha256": "915f1d3cb913e711c4c514da6275726de15d9ab44976457fbf78ccaf5993f9d0",
+      "receipt": {
+        "reviewer": "Albert",
+        "at": "2026-10-11T11:45:07.467587+00:00",
+        "decision": "CONCUR_TWO_SENTENCE_V2_READBACK",
+        "manifest_sha256": "4524b297f33aed319dda925814b8d0460de07d7d0798f7509ccc98adb5775c27",
+        "context_sha256": "7a6bcbaf4c5012ba23cf6a5f026fa6f7f59c1d03c5c9a18eec6e7a6af93ebd4a",
+        "actual": [
+          "Full Stand two paragraphs read in actual1440desktop browser; replacement correct and readable",
+          "Full Conference two paragraphs read in actual390phone browser; replacement correct and readable"
+        ],
+        "screenshots": [
+          "outputs/six-page-review/stand-v2-desktop.png",
+          "outputs/six-page-review/conference-v2-phone.png"
+        ],
+        "prior_review": "work/ROOT-SIX-PRESENTATION-ASSEMBLED-REVIEW.json",
+        "limits": "Prior sixpage review retained for unchangedscope; no fresh historicalimage approval/nativeprintclaim/publication"
+      },
+      "prior_unchanged_scope_receipt_sha256": "f698c9a4b2c5d075614e8ea5b69c31552b97731b7947daebaca1bdfb1f85b78a",
+      "prior_unchanged_scope": {
+        "reviewer": "Albert",
+        "at": "2026-10-11T11:20:25.707031+00:00",
+        "manifest_sha256": "451777ff2f89c2fced52a669b7400a7f1d798b0945759d84e76e5db3190a162d",
+        "decision": "SCOPED_ASSEMBLED_VISUAL_CONCURRENCE",
+        "preview": "http://127.0.0.1:4253",
+        "desktop": [
+          1440,
+          1000
+        ],
+        "phone": [
+          390,
+          844
+        ],
+        "actual_checks": [
+          "Viewed all six changed page areas on desktop and phone, saved12principal screenshots",
+          "Read three new attributed story sections in rendered paragraphs; source verification is separate Thunder/Newton scope",
+          "Gold source links readable against dark teal, no white panel introduced",
+          "All six phone pages document scrollWidth375 at viewport390; no horizontal overflow observed",
+          "Emma companion actual disclosure expanded both widths; desktoptwo-column links, phoneone-column links",
+          "Stand Forever wholepanel and inquirylist additionalphone screenshots; bodyinquiry backgroundrgb22,49,61",
+          "Nine conference details computed backgroundrgb22,49,61; actual current-session and archiveexpandedphone screenshots"
+        ],
+        "screenshots": [
+          "outputs/six-page-review/christ-desktop.png",
+          "outputs/six-page-review/christ-phone.png",
+          "outputs/six-page-review/conference-archive-phone.png",
+          "outputs/six-page-review/conference-desktop.png",
+          "outputs/six-page-review/conference-phone.png",
+          "outputs/six-page-review/conference-sessions-phone.png",
+          "outputs/six-page-review/emma-desktop.png",
+          "outputs/six-page-review/emma-phone.png",
+          "outputs/six-page-review/inquiry-phone.png",
+          "outputs/six-page-review/joseph-desktop.png",
+          "outputs/six-page-review/joseph-phone.png",
+          "outputs/six-page-review/settle-desktop.png",
+          "outputs/six-page-review/settle-phone.png",
+          "outputs/six-page-review/stand-desktop.png",
+          "outputs/six-page-review/stand-panel-phone.png",
+          "outputs/six-page-review/stand-phone.png"
+        ],
+        "limits": [
+          "Private seven-file candidate only; dependencyclosure/CI/publication pending",
+          "No native print result or new image acceptance",
+          "No claim all external source links clicked or enlargedtext tested in this pass",
+          "Thunder ownbrowser unavailable; cannotcredit him with root screenshots"
+        ]
+      }
+    }
+  },
+  "scope": "Six existing pages, screen-only stylesheet, three sourced attributed stories and two directness refinements. No raster changes or new owner image acceptance. Historical source/pixel reviews remain historical; current reviews concern only changed assembled context and prose.",
+  "source_review": [
+    {
+      "path": "answers/settle-this-in-your-hearts.html",
+      "before_sha256": "1e20d5b9998ed308e26d15f0309aa2110565236c1f4509f529db5fb0834cf741",
+      "current_text_sha256": "c825a9f0f53fc88c43d7ffed7bc3d51218787b464deae08731e9eb5c80554524",
+      "source": "https://www.churchofjesuschrist.org/study/liahona/2012/01/recognizing-gods-hand-in-our-daily-blessings?lang=eng",
+      "source_already_listed": false
+    },
+    {
+      "path": "answers/stand-forever.html",
+      "before_sha256": "9e9fcfdeddfbdc1e07a2f69fed875930b5a25775309c06bef8b5ff02bce77d6d",
+      "current_text_sha256": "dcb789e2686da25887c74b4cef381f7f17df6d46b52c892631b5ab97704eafa3",
+      "source": "https://www.churchofjesuschrist.org/study/general-conference/2013/04/lord-i-believe?lang=eng",
+      "source_already_listed": true
+    },
+    {
+      "path": "general-conference.html",
+      "before_sha256": "e436e30e225ee27546ac3f77f734639db47aa8de38d9c4a7141c9751e413cea8",
+      "current_text_sha256": "da671e4cf52ca45731f802ab32ca73683052ff9a704bae733d9a1a5d870bb917",
+      "source": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/14yee?lang=eng",
+      "source_already_listed": true
+    }
+  ],
+  "limits": [
+    "No native print result, enlarged-text or ultrawide claim.",
+    "No public release or owner aesthetic acceptance is established by this current-context receipt."
+  ],
+  "companion_padding_current_context": {
+    "prepared_at": "2026-10-11T23:59:38.907089+00:00",
+    "prior_record": {
+      "path": "docs/companion-padding-20261011/prior-six-presentation-context.json",
+      "sha256": "7ee3e0499f4889183aea567a46426ed8113c64df6942341dde4b57ca48e5ad07"
+    },
+    "files": [
+      {
+        "path": "history/emma-hale-smith.html",
+        "before_sha256": "7bb4172e4cf6d7fc1ba7ab17cbf5872da4afe5178496f8b26e50b8ad4df6a92b",
+        "after_sha256": "fd2675b5f757284688ba9ce3949a51c43caee0ae8ed0d1af52b999517ddb3213"
+      },
+      {
+        "path": "guided-studies.css",
+        "before_sha256": "6ec6dfa3150ae158f4689972042cac9780a25cac4066fe78fe2f3312b618eea9",
+        "after_sha256": "45349a7b3f0524a32989f827960bb543c6003944f0781958458bb25856ed0892"
+      }
+    ],
+    "reviews": [
+      {
+        "path": "docs/companion-padding-20261011/albert-current-context-review.json",
+        "sha256": "1b4ee03d88f1d9e0f301efb415b1252accfe73211c0a0a2d7d073a5be5a5a1e2"
+      },
+      {
+        "path": "docs/companion-padding-20261011/fermi-current-context-review.json",
+        "sha256": "2c74c824093a034763c3ff259f19d94163e11f296cb4d085b344ffaa21f51da9"
+      },
+      {
+        "path": "docs/companion-padding-20261011/newton-current-context-review.json",
+        "sha256": "341e732198e0404c58ec5bf97cac923604b7f0e4bcb1d9fe5308b0e5be4e46e0"
+      }
+    ],
+    "scope": "Supplemental current screen-padding context only. Original six-page files, observations and limitations below remain dated historical evidence; no retrospective expanded-scope review."
+  }
+}

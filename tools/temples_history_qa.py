@@ -41,7 +41,12 @@ def check():
     assert [len(item.select('li a')) for item in era_menus] == [6, 7, 5, 2]
     assert [a['href'] for item in era_menus for a in item.select('li a')] == ['#temple-' + c['id'] for c in chapters], 'Preserve all chapter IDs and chronological order'
     assert len(directory.select('.fc-button')) == 1 and directory.select_one('.fc-button')['href'] == '#temple-beginnings-eden', 'Single gold begin action, not twenty chapter pills'
-    assert soup.select_one('link[href="../temples-history.css?v=20260929-related-hitbox-1"]')
+    assert soup.select_one('link[href="../temples-history.css?v=20261011-era-menu-rows-1"]')
+    assert [int(menu.select_one('ol')['start']) for menu in era_menus] == [1, 7, 14, 19]
+    links = [a for menu in era_menus for a in menu.select('li > a')]
+    assert [a.select_one('.fc-temple-history__number').get_text() for a in links] == [str(n) for n in range(1, 21)]
+    assert all(a.select_one('.fc-temple-history__number').get('aria-hidden') == 'true' for a in links)
+    assert [a.find_all('span', recursive=False)[1].get_text() for a in links] == [c['title'] for c in chapters]
     ready = json.loads((ROOT / 'docs/temples/art-ready.json').read_text(encoding='utf-8-sig'))
     nephi_review = json.loads((ROOT / 'docs/temples/nephi-source-first-review-20260929.json').read_text(encoding='utf-8'))
     rejected_hashes = {item['sha256'] for item in nephi_review['rejected']}

@@ -59,8 +59,8 @@ def build():
     eras = [('Scriptural beginnings', 0, 6), ('Jesus Christ and temple worship', 6, 13), ('Restoration and pioneer temples', 13, 18), ('Temples throughout the world', 18, 20)]
     for label, start, end in eras:
         output.append(f'<details class="fc-temple-history__era-menu"><summary><span>{esc(label)}</span><span class="fc-temple-history__range">Sections {start + 1}–{end}</span></summary><ol start="{start + 1}">')
-        for chapter in chapters[start:end]:
-            output.append(f'<li><a href="#temple-{esc(chapter["id"])}">{esc(chapter["title"])}</a></li>')
+        for number, chapter in enumerate(chapters[start:end], start + 1):
+            output.append(f'<li><a href="#temple-{esc(chapter["id"])}"><span class="fc-temple-history__number" aria-hidden="true">{number}</span><span>{esc(chapter["title"])}</span></a></li>')
         output.append('</ol></details>')
     output.append('<div class="fc-actions"><a class="fc-button fc-button--primary" href="#temple-beginnings-eden">Begin temple story</a></div></nav>')
     for i, chapter in enumerate(chapters, 1):
@@ -107,7 +107,7 @@ def build():
         assert anchor in content
         content = content.replace(anchor, block + '\n' + anchor, 1)
         content = content.replace('<a href="#watch-study">Watch and study</a>', '<a href="#temple-history">Temples through time</a><a href="#watch-study">Watch and study</a>', 1)
-    style = '<link rel="stylesheet" href="../temples-history.css?v=20260929-related-hitbox-1">'
+    style = '<link rel="stylesheet" href="../temples-history.css?v=20261011-era-menu-rows-1">'
     if re.search(r'<link rel="stylesheet" href="\.\./temples-history\.css\?v=[^"]+">', content):
         content = re.sub(r'<link rel="stylesheet" href="\.\./temples-history\.css\?v=[^"]+">', style, content)
     elif style not in content:

@@ -1,0 +1,18 @@
+{
+  "reviewer": "Albert",
+  "decision": "CONCUR",
+  "spec_sha256": "713e90a8e2817c85a7f2bcf27a03a61205d5147f6731d8d3d8626cd30e114275",
+  "reviewed_at": "2026-10-12T00:00:31.795823+00:00",
+  "desktop_phone_direct_browser_review": true,
+  "no_individual_owner_acceptance_claim": true,
+  "evidence": [
+    "Exact inverse confirmed only guided-studies.css and answers.html context pins changed; all other spec fields identical.",
+    "All24 raster hashes rechecked unchanged. Original source/pixel review attribution retained.",
+    "Root actual four companion panels at1280/390/320: gutters24/16 and bottomgap at least20.79px, no overflow and visible keyboardfocus.",
+    "Only CSS and stylesheetcache references changed; picture controls and locked hero/Continue markup unchanged."
+  ],
+  "limits": [
+    "Scoped companion screen-spacing review, not fresh creative review or owner acceptance of six images.",
+    "Private candidate evidence; native print/PDF and publicrelease proof separate."
+  ]
+}
