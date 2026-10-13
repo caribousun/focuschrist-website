@@ -240,6 +240,7 @@ class EvidenceTests(unittest.TestCase):
             ('artwork_gabriel_owner_delivery', 'artwork-gabriel-owner-delivery-reviews.json'),
             ('artwork_three_reviewed_delivery', 'artwork-three-reviewed-delivery-reviews.json'),
             ('artwork_watch_thumbnail_delivery', 'watch-spannaus-portrait/delivery.json'),
+            ('artwork_bednar_watch_delivery', 'watch-bednar/delivery.json'),
         ]:
             (docs / filename).parent.mkdir(parents=True, exist_ok=True)
             (docs / filename).write_text(json.dumps({'fixture': 'empty adapter coverage', 'owner_requirement_closure': {'fixture': 'synthetic owner closure'}}))
@@ -261,7 +262,7 @@ class EvidenceTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'owner appearance closure remains OPEN'): gate.run(self.root)
 
     def test_required_adapter_ledgers_cannot_be_missing(self):
-        for filename in ['artwork-historical-delivery-reviews.json', 'artwork-correction-reviews.json', 'artwork-seasonal-delivery-reviews.json', 'artwork-four-scene-delivery-reviews.json', 'artwork-answers-six-delivery-reviews.json', 'artwork-six-scene-delivery-reviews.json', 'artwork-gabriel-owner-delivery-reviews.json', 'artwork-three-reviewed-delivery-reviews.json']:
+        for filename in ['artwork-historical-delivery-reviews.json', 'artwork-correction-reviews.json', 'artwork-seasonal-delivery-reviews.json', 'artwork-four-scene-delivery-reviews.json', 'artwork-answers-six-delivery-reviews.json', 'artwork-six-scene-delivery-reviews.json', 'artwork-gabriel-owner-delivery-reviews.json', 'artwork-three-reviewed-delivery-reviews.json', 'watch-bednar/delivery.json']:
             with self.subTest(filename=filename):
                 self.registry()
                 (self.root / 'docs' / filename).unlink()
@@ -269,7 +270,7 @@ class EvidenceTests(unittest.TestCase):
                     with self.assertRaises(FileNotFoundError): gate.run(self.root)
 
     def test_adapter_rejections_propagate(self):
-        for module in ['artwork_historical_delivery', 'artwork_reviewed_corrections', 'artwork_seasonal_delivery', 'artwork_four_scene_delivery', 'artwork_answers_six_delivery', 'artwork_six_scene_delivery', 'artwork_gabriel_owner_delivery', 'artwork_three_reviewed_delivery']:
+        for module in ['artwork_historical_delivery', 'artwork_reviewed_corrections', 'artwork_seasonal_delivery', 'artwork_four_scene_delivery', 'artwork_answers_six_delivery', 'artwork_six_scene_delivery', 'artwork_gabriel_owner_delivery', 'artwork_three_reviewed_delivery', 'artwork_bednar_watch_delivery']:
             with self.subTest(module=module):
                 self.registry()
                 self.adapter_mocks[module].side_effect = ValueError('adapter rejects exact evidence')

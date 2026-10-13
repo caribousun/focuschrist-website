@@ -1,0 +1,15 @@
+{
+  "source_sha256": "039bdeba99cd441f548e6fb1db61dc458dba814340821914c9e6a8f93f830eb1",
+  "derivative_sha256": "440b4a9f6388dbb0a0791745e4d7a21a8763b908b82cf64a4b57a37ab3c9d6a0",
+  "source_dimensions": [
+    3764,
+    6688
+  ],
+  "dimensions": [
+    941,
+    1672
+  ],
+  "method": "Exact quarter-size Lanczos3 resampling; no crop, compositing, repaint or sharpening.",
+  "executor": "Lightning",
+  "independent_export_review": "Newton independently regenerated matching bytes and inspected the actual finished PNG. Website context review remains separately recorded."
+}

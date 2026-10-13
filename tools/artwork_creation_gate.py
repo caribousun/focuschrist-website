@@ -391,7 +391,7 @@ def run(root, mode='release', scene=None, page_overrides=None):
     correction_record = json.loads((root / 'docs/artwork-correction-reviews.json').read_text(encoding='utf-8'))
     from artwork_owner_closure import validate as validate_owner_closure
     validate_owner_closure(root, correction_record['owner_requirement_closure'],
-        '3cbd563d548c141ec79fa29109047afcad7478da69e7dfef9c5134355c222960', pixel_hash)
+        '4acbd23141f1e6d73ed8932d5bea1ee5b4091b230fd4c0ec6a16ecf98565ffff', pixel_hash)
     corrections, correction_hashes, correction_pixels = validate_reviewed_corrections(
         root, correction_record, approved_corrections_binding, added, covered, rejected, pixel_hash, inventory)
     require(not (correction_hashes & originals) and not (correction_pixels & original_pixels), 'Correction family duplicates another creation')
@@ -440,7 +440,7 @@ def run(root, mode='release', scene=None, page_overrides=None):
     original_pixels |= six_scene_pixels
     # Exact owner-approved Gabriel replacements; immutable originals remain covered.
     from artwork_gabriel_owner_delivery import validate as validate_gabriel_owner_delivery
-    approved_gabriel_binding = '8e45f2ecbfbac9387e5e5b4e206395dec3ae0c1bd66cdfcf866c22bcc7e56a22'
+    approved_gabriel_binding = '71aed7074b6f12ad7a31945499842353e39e8c1d72f3d7cd8d387c186749d4c0'
     gabriel_record = json.loads((root / 'docs/artwork-gabriel-owner-delivery-reviews.json').read_text(encoding='utf-8'))
     gabriel, gabriel_hashes, gabriel_pixels = validate_gabriel_owner_delivery(
         root, gabriel_record, approved_gabriel_binding, added, covered, rejected, pixel_hash, page_dependencies)
@@ -452,7 +452,7 @@ def run(root, mode='release', scene=None, page_overrides=None):
     from artwork_three_reviewed_delivery import validate as validate_three_reviewed_delivery
     three_record = json.loads((root / 'docs/artwork-three-reviewed-delivery-reviews.json').read_text(encoding='utf-8'))
     three, three_hashes, three_pixels = validate_three_reviewed_delivery(
-        root, three_record, 'b9c0dfc3e39a75d93dd5a694e0095274d192ed3d2a2b838d650ef3e7970e1e6e', added, covered, rejected, pixel_hash, page_dependencies)
+        root, three_record, 'c92953089792f3a980aaef1e0529b10fd6e436ea462f1c0c898cde1766b89724', added, covered, rejected, pixel_hash, page_dependencies)
     require(not (three_hashes & originals) and not (three_pixels & original_pixels), 'Three-scene family duplicates another creation')
     covered |= three
     originals |= three_hashes
@@ -466,6 +466,15 @@ def run(root, mode='release', scene=None, page_overrides=None):
     covered |= watch
     originals |= watch_hashes
     original_pixels |= watch_pixels
+    # Current four-card evidence is separate from preserved historical Spannaus review.
+    from artwork_bednar_watch_delivery import validate as validate_bednar_watch
+    bednar_record = json.loads((root / 'docs/watch-bednar/delivery.json').read_text(encoding='utf-8'))
+    bednar, bednar_hashes, bednar_pixels = validate_bednar_watch(
+        root, bednar_record, '10d75cbc80b6bfadd7a49cd4d4fffa6f5ee8f8e8f9834f9d185124e4a61bd2e9', added, covered, rejected, pixel_hash, page_dependencies)
+    require(not (bednar_hashes & originals) and not (bednar_pixels & original_pixels), 'Bednar cover duplicates another creation')
+    covered |= bednar
+    originals |= bednar_hashes
+    original_pixels |= bednar_pixels
     require(added == covered, 'New artwork missing exact review coverage: ' + ', '.join(sorted(added - covered)))
     if creations or historical or corrections or seasonal or four_scene or answers_six or six_scene or gabriel or three:
         for name in inventory:

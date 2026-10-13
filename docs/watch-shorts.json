@@ -1,9 +1,21 @@
 {
   "channel": "https://www.youtube.com/@theRisen636/shorts",
   "channel_id": "UC4Fr98iGGtL60UpfXYXR1pQ",
-  "verified_at": "2026-10-12",
-  "verification": "Lightning independently inspected the public channel Shorts tab with Latest selected on 12 October 2026: Spannaus, Renlund, Kearon, Wilcox. The newest card uses Wyatt’s exact approved square thumbnail; older native YouTube previews remain unchanged.",
+  "verified_at": "2026-10-13",
+  "verification": "Albert directly inspected the public channel Shorts tab with Latest selected on 13 October 2026: Bednar, Spannaus, Renlund, Kearon. The new Bednar preview is a proportional export of Wyatt's exact approved cover; prior three records and artwork remain unchanged.",
   "shorts": [
+    {
+      "id": "-LvOxhI8YY0",
+      "title": "Is It the Holy Ghost or Me?",
+      "speaker": "Elder David A. Bednar",
+      "description": "Hear Elder Bednar’s counsel on recognizing the Holy Ghost in everyday life.",
+      "thumbnail": "assets/shorts/bednar-holy-ghost-or-me-approved-20261013.png",
+      "thumbnail_sha256": "440b4a9f6388dbb0a0791745e4d7a21a8763b908b82cf64a4b57a37ab3c9d6a0",
+      "thumbnail_dimensions": [
+        941,
+        1672
+      ]
+    },
     {
       "id": "zIntX6aoq1g",
       "title": "God Is at Your Side",
@@ -29,13 +41,6 @@
       "speaker": "Elder Patrick Kearon",
       "description": "Hear Elder Kearon’s reminder that Jesus Christ lives to lift us.",
       "thumbnail": "https://i.ytimg.com/vi/vRzEDllHvlE/sardefault.jpg?sqp=-oaymwEoCJUDENAFSFqQAgHyq4qpAxcIARUAAIhC2AEB4gEKCBgQAhgGOAFAAQ==&rs=AOn4CLC30DOHUeu-VqD8TWL5SsqvgQyucw"
-    },
-    {
-      "id": "OSgN-cSJOPs",
-      "title": "You've Got This Because Jesus Christ Has Got You",
-      "speaker": "Bradley R. Wilcox",
-      "description": "A word of encouragement to keep going with faith in Jesus Christ.",
-      "thumbnail": "https://i.ytimg.com/vi/OSgN-cSJOPs/sardefault.jpg?sqp=-oaymwEoCJUDENAFSFqQAgHyq4qpAxcIARUAAIhC2AEB4gEKCBgQAhgGOAFAAQ==&rs=AOn4CLBdi5dmvy5mcpxFGlwweBs8Dx0MHw"
     }
   ]
 }
