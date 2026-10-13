@@ -1,4 +1,4 @@
-"""Exact owner-approved Spannaus cover delivery; no general artwork exception."""
+"""Exact historical Spannaus cover delivery; current Watch review is separate."""
 import hashlib
 import json
 from pathlib import Path
@@ -9,6 +9,10 @@ PREVIOUS_SHA256 = '4c0e9bd8ab7d06d588c78c35e3862705313fd869d11baac501e6525d38a56
 ASSET = 'assets/shorts/god-is-at-your-side-portrait-20261012.png'
 SOURCE_SHA256 = '78f547b0f541f33e97cb8d8be33a7ea6dfdac8a10516c8712a8b08e19be1ab63'
 VIDEO_ID = 'zIntX6aoq1g'
+HISTORICAL_CONTEXT = {
+    'watch.html': 'docs/watch-bednar/history/watch.html.txt',
+    'docs/watch-shorts.json': 'docs/watch-bednar/history/watch-shorts.json',
+}
 
 def require(value, message):
     if not value:
@@ -53,8 +57,10 @@ def validate(root, record, approved_binding, added, covered, rejected, pixel_has
     require(len({x['path'] for x in context}) == len(context), 'duplicate context')
     require(page_dependencies(root, 'watch.html') <= {x['path'] for x in context}, 'missing page context')
     for item in context:
-        bound(root, item)
-    data = json.loads((root / 'docs/watch-shorts.json').read_text(encoding='utf8'))
+        # Preserve the exact originally reviewed context, not a retroactive review.
+        saved = {**item, 'path': HISTORICAL_CONTEXT.get(item['path'], item['path'])}
+        bound(root, saved)
+    data = json.loads((root / HISTORICAL_CONTEXT['docs/watch-shorts.json']).read_text(encoding='utf8'))
     first = data['shorts'][0]
     require([x['id'] for x in data['shorts']] == [VIDEO_ID, 'xzAenmOZ1Yk', 'vRzEDllHvlE', 'OSgN-cSJOPs'], 'wrong latest-four selection')
     require(first['thumbnail'] == ASSET and first['thumbnail_sha256'] == SOURCE_SHA256, 'card asset mismatch')

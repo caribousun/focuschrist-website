@@ -260,7 +260,7 @@
       },
       {
         "path": "site-search-index.json",
-        "sha256": "c5f48fb9492a773bc3c9dd5d2b6c339d674446fbb5b13a802f6f7f3149dcc06c"
+        "sha256": "5744d3b23308c419732bac77811620c2ca68b30e4dc22a1eb0775a120ddbd103"
       },
       {
         "path": "site-search.css",
@@ -307,16 +307,16 @@
   },
   "reviews": [
     {
-      "path": "docs/watch-spannaus-context-20261012/three-albert-current-review.json",
-      "sha256": "b5f8b0ef2dab10f033b1aa16fa3ea1def068d414a95ba118858db6ca01b6e0c1"
+      "path": "docs/watch-bednar-search-context/three-albert-current-review.json",
+      "sha256": "f5cc9ee0e6fe80af76ef56410a137dd6ea2ef818e326b831803a659b9a45173a"
     },
     {
-      "path": "docs/watch-spannaus-context-20261012/three-fermi-current-review.json",
-      "sha256": "289d5aa24c88ebf2e852d7e47a82ec767a0e8512bed12b77765005ece452d014"
+      "path": "docs/watch-bednar-search-context/three-fermi-current-review.json",
+      "sha256": "f73ef62d5c6ec4fee1d07108439fe0ed5377d63a2e6f0a48e394d251b355d9b6"
     },
     {
-      "path": "docs/watch-spannaus-context-20261012/three-newton-current-review.json",
-      "sha256": "e32e47fdcba4bf07869ce6b110c920d162157184c36da323380cc9ed4aa30ed5"
+      "path": "docs/watch-bednar-search-context/three-newton-current-review.json",
+      "sha256": "c744bc8baeaceb65a993ecf94aecfd4a5468897ecd099d1419668ecb38727a10"
     }
   ],
   "current_review_projection": {
@@ -356,12 +356,12 @@
   "watch_search_context_rebinding": {
     "scope": "Only three Watch search records changed; unchanged artwork and historical attributed reviews explicitly retained.",
     "prior_record": {
-      "path": "docs/watch-spannaus-context-20261012/prior-artwork-three-reviewed-delivery-reviews.json",
-      "sha256": "91743251ade2a9b0e8e43a41dcba25b17b47990821fc43f79c075a3023250964"
+      "path": "docs/watch-bednar-search-context/prior-artwork-three-reviewed-delivery-reviews.json",
+      "sha256": "3a532f99b1d71efda264d84ff032f061ea22882808638beb48cd505065c3e687"
     },
     "evidence": {
-      "path": "docs/watch-spannaus-context-20261012/search-delta.json",
-      "sha256": "8522e0e12ea986d01126f0bfe15530f59ef200bf717a94b5a4ddc6baf0ccb607"
+      "path": "docs/watch-bednar-search-context/search-delta.json",
+      "sha256": "71d35234e18d935b556dde67cd30787856d60762a665d03b92bf595fda0b345d"
     },
     "no_historical_approval_transfer": true,
     "holds": "All existing holds including Shepherd outer-host glow retained. No new owner acceptance or artwork appearance judgment."

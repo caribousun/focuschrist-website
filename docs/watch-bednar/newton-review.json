@@ -1,0 +1,20 @@
+{
+  "reviewer": "Newton",
+  "decision": "CONCUR_CURRENT_WATCH",
+  "spec_sha256": "10d75cbc80b6bfadd7a49cd4d4fffa6f5ee8f8e8f9834f9d185124e4a61bd2e9",
+  "desktop_phone_inspected": true,
+  "all_four_cards_inspected": true,
+  "historical_spannaus_limits_preserved": true,
+  "direct_browser_interactions": false,
+  "observations": [
+    "Personally inspected current desktop and expanded phone screenshots of all four cards: Bednar, Spannaus, Renlund and Kearon. Full cover compositions, names, titles and links are retained without visible cropping or overlap.",
+    "Inspected additional1280desktop,390phone,320narrow and200percent HTML-font-size fixture screenshots, plus visible keyboard-focus screenshot. Narrow text wraps within its card; enlarged text remains readable and flows vertically. This is screenshot review, not my own browser interaction or native zoom/print testing.",
+    "Independently reproduced exact approved Bednar derivative bytes from approved master039bdeba99cd441f548e6fb1db61dc458dba814340821914c9e6a8f93f830eb1. Export440b4a9f6388dbb0a0791745e4d7a21a8763b908b82cf64a4b57a37ab3c9d6a0 preserves the full scene by proportional resampling.",
+    "Reviewed source binding to actual new Short-LvOxhI8YY0, current four-card order and preserved original three records. Public/channel observation is attributed to Albert, not independently claimed by Newton.",
+    "Reviewed old Spannaus context redirection to exact originally bound historical snapshots. No historical image approval, source uncertainty or Shepherd HOLD is cleared. Current Watch gate remains separate from preserved prior evidence."
+  ],
+  "evidence": {
+    "desktop": {"sha256": "a523b7ac27199c40406afc1b788484e8bac0ba4cae40450b9ddc816f8479b1c8", "description": "Personally inspected current work/watch-prep/desktop-all-four.png; all four complete cards and dated section."},
+    "phone": {"sha256": "2210fa1b591e18f4559dfa9e0707ba0f65c1d4ac275e21a3064d7def4f4bb3cd", "description": "Personally inspected current work/watch-prep/phone-all-four.png plus separate390,320,enlarged and keyboard-focus captures; screenshot-only evidence."}
+  }
+}

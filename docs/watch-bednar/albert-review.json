@@ -1,0 +1,19 @@
+{
+  "reviewer": "Albert",
+  "decision": "CONCUR_CURRENT_WATCH",
+  "spec_sha256": "10d75cbc80b6bfadd7a49cd4d4fffa6f5ee8f8e8f9834f9d185124e4a61bd2e9",
+  "desktop_phone_inspected": true,
+  "all_four_cards_inspected": true,
+  "historical_spannaus_limits_preserved": true,
+  "direct_browser_interactions": true,
+  "observations": [
+    "Direct IAB review at 1440x1000 and390x844. Complete approved Bednar composition and lettering retained with no cover crop or text overlap.",
+    "All four desktop cards inspected: Bednar, Spannaus, Renlund, Kearon, matching the actual public channel Latest order. Retained historical approvals and uncertainty are not expanded by this layout review.",
+    "Mobile Show3more Shorts expands all three retained cards; new Bednar Play link opens actual YouTube iframe, visibly playing approved film insert; Close video restores card. No extra caption overlay visible in observed playback. No subjective listening claim.",
+    "Original high-view YouTube video is not edited; new public -LvOxhI8YY0 is the first card."
+  ],
+  "evidence": {
+    "desktop": {"sha256": "811e474d27c6bb54f6c42e4fb579150c955a3eb142d135741dff0226e09a7d4f", "description": "Root direct IAB screenshot work/watch-bednar-desktop.jpg with all four full covers, headings and links."},
+    "phone": {"sha256": "5639cb404bee61f9bc8dbabc9e41e7a09b4772e76cdb450d01de67cc6ba73a54", "description": "Root direct IAB screenshot work/watch-bednar-phone.jpg, full approved Bednar cover at390px; additional player screenshot f5882fa7f4e12f84cff43bd191be747c2be87d63bb39926b678ed8b298f6f363."}
+  }
+}
