@@ -40,7 +40,7 @@ for record in [*inventory['pages'], {'path': 'history/emma-hale-smith.html', 'he
     assert actual == record['hero'], record['path'] + ': opening hero inventory drift'
     assert_common_version(record['path'], doc)
 common = (ROOT / 'site-common.js').read_text(encoding='utf8')
-assert common.count("relativeAssetHref('unified-opening.css?v=20261006-balanced-opening-1')") == 1
+assert common.count("relativeAssetHref('unified-opening.css?v=20261016-luminous-continue-1')") == 1
 assert common.count("relativeAssetHref('unified-opening.js?v=20261006-introductions-1')") == 1
 script = (ROOT / 'unified-opening.js').read_text(encoding='utf8')
 assert '\\u2193' in script and 'Ãƒ' not in script, 'Continue arrow encoding'

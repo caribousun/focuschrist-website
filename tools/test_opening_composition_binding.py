@@ -11,7 +11,7 @@ BASE_CSS = '7fcb1456b4ff2c3372238e0baaccfa6083e4232e328956eff1e1d43f178c96e6'
 FINAL_CSS = '722f64b471e3219bc3ec3c11bb0ceaec09fc55fa4d031dd1e52f1422d0d129ee'
 BASE_COMMON = '4ef7e6851ebf885557d241aa389825f38585fe435fedc4454134d435482a30ad'
 INVENTORY = '1e2a014c1a3b7fb3995855abaa4587441c95efdef640801d7bf49ee3d3239b78'
-NEW = '20261006-balanced-opening-1'
+NEW = '20261016-luminous-continue-1'
 OLD = '20261002-timeline-1'
 COMMON_VERSION = '20261008-section-top-2'
 ROUTE_COMMON_VERSIONS = {
@@ -40,6 +40,11 @@ def digest(text):
 
 
 def assert_css(css):
+    # Wyatt selected E on 2026-10-16. Remove only its exact reviewed skin;
+    # every original geometry/composition byte remains bound below.
+    skin = re.findall(r'/\* Continue appearance E.*?/\* End Continue appearance E\. \*/\n\n', css, re.S)
+    assert len(skin) == 1 and digest(skin[0]) == '572a36763b0bf0af9e8b9d3fdfd5748dde395bb28b22bb756dd80c191c35e068', 'Exact owner-selected Continue skin required'
+    css = css.replace(skin[0], '', 1)
     assert css.count(DELTA) == 1 and css.endswith(DELTA), 'Exact appended composition rule required'
     assert digest(css.removesuffix(DELTA)) == BASE_CSS, 'Unrelated CSS or cue geometry changed'
     assert digest(css) == FINAL_CSS, 'Unreviewed composition stylesheet'
@@ -97,6 +102,10 @@ class CompositionBindingTests(unittest.TestCase):
 
     def test_mutated_styles_fail(self):
         cases = {
+            'edited skin': self.css.replace('#22b6b5', '#00ffff'),
+            'edited halo': self.css.replace('#063c50', '#fff'),
+            'missing skin': re.sub(r'/\* Continue appearance E.*?/\* End Continue appearance E\. \*/\n\n', '', self.css, flags=re.S),
+            'duplicate skin': self.css + re.search(r'/\* Continue appearance E.*?/\* End Continue appearance E\. \*/\n\n', self.css, re.S).group(),
             'stale': self.css.removesuffix(DELTA),
             'duplicate': self.css + DELTA,
             'moved': DELTA + self.css.removesuffix(DELTA),

@@ -429,6 +429,13 @@ def before_temple_menu_rows(data):
     return prior if hashlib.sha256(prior).hexdigest() == OWNER_20260929_STYLES['temples-history.css'][0] else data
 
 def reviewed_owner_20260929_style(name, data):
+    if name == 'unified-opening.css':
+        from test_opening_composition_binding import assert_css
+        try:
+            assert_css(data.decode('utf-8'))
+            return True
+        except (AssertionError, UnicodeError):
+            return False
     if name == 'temples-history.css': data = before_temple_menu_rows(data)
     if name == 'timeline-history-workspace.css': return reviewed_timeline_bottom_navigation(data)
     if name in CURRENT_TIMELINE_INVERSES and hashlib.sha256(data).hexdigest() != CURRENT_TIMELINE_INVERSES[name][0]: return False
@@ -951,7 +958,7 @@ def main():
         check(reviewed_owner_20260929_style(name, (ROOT/name).read_bytes()), 'Owner-reviewed stylesheet bytes changed: '+name)
         if name == 'unified-opening.css':
             common = (ROOT/'site-common.js').read_text(encoding='utf-8')
-            check(common.count("relativeAssetHref('unified-opening.css?v=20261006-balanced-opening-1')") == 1, 'Unified opening CSS requires its exact shared loader/version')
+            check(common.count("relativeAssetHref('unified-opening.css?v=20261016-luminous-continue-1')") == 1, 'Unified opening CSS requires its exact shared loader/version')
             check(common.count("relativeAssetHref('unified-opening.js?v=20261006-introductions-1')") == 1, 'Unified opening JS requires its exact shared loader/version')
         if name == 'footer-navigation.css':
             common = (ROOT/'site-common.js').read_text(encoding='utf-8')
