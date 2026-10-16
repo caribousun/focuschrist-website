@@ -958,7 +958,7 @@ def main():
         check(reviewed_owner_20260929_style(name, (ROOT/name).read_bytes()), 'Owner-reviewed stylesheet bytes changed: '+name)
         if name == 'unified-opening.css':
             common = (ROOT/'site-common.js').read_text(encoding='utf-8')
-            check(common.count("relativeAssetHref('unified-opening.css?v=20261016-luminous-continue-1')") == 1, 'Unified opening CSS requires its exact shared loader/version')
+            check(common.count("relativeAssetHref('unified-opening.css?v=20261006-balanced-opening-1')") == 1, 'Unified opening CSS requires its exact shared loader/version')
             check(common.count("relativeAssetHref('unified-opening.js?v=20261006-introductions-1')") == 1, 'Unified opening JS requires its exact shared loader/version')
         if name == 'footer-navigation.css':
             common = (ROOT/'site-common.js').read_text(encoding='utf-8')
