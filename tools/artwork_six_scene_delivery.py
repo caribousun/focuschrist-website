@@ -18,16 +18,9 @@ def local(root,name):
     require(p.is_file(),'missing local file '+name)
     return p
 def digest(p):
-    data = p.read_bytes()
-    if p.name == 'unified-opening.css':
-        # Only the exact owner-selected appearance may reverse to the original
-        # reviewed geometry; changed/missing/duplicate skin cannot qualify.
-        from test_opening_composition_binding import assert_css
-        try:
-            data = assert_css(data.decode('utf-8').replace('\r\n', '\n')).encode('utf-8')
-        except (AssertionError, UnicodeError):
-            pass
-    return hashlib.sha256(data).hexdigest()
+    from test_opening_composition_binding import reviewed_opening_bytes
+    return hashlib.sha256(reviewed_opening_bytes(p) if p.name in {'unified-opening.css', 'unified-opening.js'} else p.read_bytes()).hexdigest()
+
 def time(value):return dt.datetime.fromisoformat(value.replace('Z','+00:00'))
 
 def validate(root,record,approved_binding,added,covered,rejected,pixel_hash,page_dependencies):

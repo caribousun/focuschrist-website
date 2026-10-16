@@ -40,6 +40,9 @@ def digest(text):
 
 
 def assert_css(css):
+    deeper = re.findall(r'/\* Continue appearance B.*?/\* End Continue appearance B\. \*/\n\n', css, re.S)
+    assert len(deeper) == 1 and digest(deeper[0]) == '5f7c21bbcc8ec14e07c1ecc0a93360c58d11838a23c92bae83bd3fd74c531862', 'Exact owner-selected B skin required'
+    css = css.replace(deeper[0], '', 1)
     # Wyatt selected E on 2026-10-16. Remove only its exact reviewed skin;
     # every original geometry/composition byte remains bound below.
     skin = re.findall(r'/\* Continue appearance E.*?/\* End Continue appearance E\. \*/\n\n', css, re.S)
@@ -49,6 +52,30 @@ def assert_css(css):
     assert digest(css.removesuffix(DELTA)) == BASE_CSS, 'Unrelated CSS or cue geometry changed'
     assert digest(css) == FINAL_CSS, 'Unreviewed composition stylesheet'
     return css
+
+
+ORIGINAL_JS = '3745ded2cb4e92e7b876bb8c8cd217d808da0a933575cf30c3712dc9f35d6dbe'
+ARROWLESS_JS = '0268e3ff1586ce4d29fb77441bcf14f6b2244078c8e96a532a62cba4663143f8'
+
+
+def assert_js(script):
+    blocks = re.findall(r'\n/\* Begin owner-selected arrowless Continue label .*?/\* End owner-selected arrowless Continue label\. \*/\n', script, re.S)
+    assert len(blocks) == 1 and digest(blocks[0]) == ARROWLESS_JS, 'Exact owner-selected arrowless append required'
+    assert script.endswith(blocks[0]), 'Arrowless append must remain last'
+    original = script[:-len(blocks[0])]
+    assert digest(original) == ORIGINAL_JS, 'Original opening behavior changed'
+    return original
+
+
+def reviewed_opening_bytes(p):
+    data = p.read_bytes()
+    verifier = {'unified-opening.css': assert_css, 'unified-opening.js': assert_js}.get(p.name)
+    if verifier:
+        try:
+            return verifier(data.decode('utf-8').replace('\r\n', '\n')).encode('utf-8')
+        except (AssertionError, UnicodeError):
+            pass
+    return data
 
 
 def assert_loader(common):
@@ -88,6 +115,7 @@ class CompositionBindingTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.css = (ROOT / 'unified-opening.css').read_text(encoding='utf-8')
+        cls.script = (ROOT / 'unified-opening.js').read_text(encoding='utf-8')
         cls.common = (ROOT / 'site-common.js').read_text(encoding='utf-8')
         cls.inventory = (ROOT / 'docs/unified-opening-inventory.json').read_text(encoding='utf-8')
         cls.documents = {r['path']: (ROOT/r['path']).read_text(encoding='utf-8') for r in json.loads(cls.inventory)['pages']}
@@ -108,6 +136,34 @@ class CompositionBindingTests(unittest.TestCase):
                 target.write_bytes(candidate.encode('utf-8'))
                 self.assertNotEqual(context_digest(target), FINAL_CSS)
 
+    def test_exact_arrowless_script_and_rejected_changes(self):
+        self.assertEqual(digest(assert_js(self.script)), ORIGINAL_JS)
+        block = re.search(r'\n/\* Begin owner-selected arrowless Continue label .*?/\* End owner-selected arrowless Continue label\. \*/\n', self.script, re.S).group()
+        for candidate in [self.script.replace(block, ''), self.script + block,
+                          self.script.replace("'visibility', 'hidden'", "'visibility', 'visible'"),
+                          self.script.replace('innerHeight - 20', 'innerHeight - 30'),
+                          self.script + '\nalert(1);\n']:
+            with self.assertRaises(AssertionError): assert_js(candidate)
+
+    def test_all_artwork_context_inverses_reject_unreviewed_changes(self):
+        from tempfile import TemporaryDirectory
+        from artwork_six_scene_delivery import digest as six
+        from artwork_gabriel_owner_delivery import digest as gabriel
+        from artwork_three_reviewed_delivery import digest as three
+        with TemporaryDirectory() as folder:
+            target = Path(folder) / 'unified-opening.js'
+            for context_digest in [six, gabriel, three]:
+                target.write_bytes(self.script.encode('utf-8'))
+                self.assertEqual(context_digest(target), ORIGINAL_JS)
+                for candidate in [self.script.replace('innerHeight - 20', 'innerHeight - 30'),
+                                  self.script.replace("'visibility', 'hidden'", "'visibility', 'visible'"),
+                                  self.script + '\nalert(1);\n']:
+                    target.write_bytes(candidate.encode('utf-8'))
+                    self.assertNotEqual(context_digest(target), ORIGINAL_JS)
+            target = Path(folder) / 'unrelated.js'
+            target.write_bytes(self.script.encode('utf-8'))
+            self.assertEqual(reviewed_opening_bytes(target), self.script.encode('utf-8'))
+
     def test_exact_shared_loader_inverse(self):
         assert_loader(self.common)
 
@@ -116,6 +172,9 @@ class CompositionBindingTests(unittest.TestCase):
 
     def test_mutated_styles_fail(self):
         cases = {
+            'edited B skin': self.css.replace('#148f91', '#00ffff'),
+            'missing B skin': re.sub(r'/\* Continue appearance B.*?/\* End Continue appearance B\. \*/\n\n', '', self.css, flags=re.S),
+            'duplicate B skin': self.css + re.search(r'/\* Continue appearance B.*?/\* End Continue appearance B\. \*/\n\n', self.css, re.S).group(),
             'edited skin': self.css.replace('#22b6b5', '#00ffff'),
             'edited halo': self.css.replace('#063c50', '#fff'),
             'missing skin': re.sub(r'/\* Continue appearance E.*?/\* End Continue appearance E\. \*/\n\n', '', self.css, flags=re.S),
