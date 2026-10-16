@@ -103,3 +103,55 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();
 })();
+
+/* Begin owner-selected arrowless Continue label — 2026-10-16. */
+(() => {
+  function initArrowlessContinue() {
+    const cues = [...document.querySelectorAll('.fc-unified-continue,.fc-scroll-cue,.fc-mobile-scroll-cue,.fc-art-continue,.fc-covenant-continue')];
+    const labels = [];
+    for (const cue of cues) {
+      const arrows = [...cue.querySelectorAll('[aria-hidden="true"]')];
+      if (!arrows.length) continue;
+      // Retain the decorative footprint so intrinsic capsule geometry is unchanged.
+      arrows.forEach(arrow => arrow.style.setProperty('visibility', 'hidden', 'important'));
+      let label = [...cue.children].find(child => !child.matches('[aria-hidden="true"]'));
+      if (!label) {
+        const text = [...cue.childNodes].find(node => node.nodeType === Node.TEXT_NODE && node.textContent.trim());
+        if (!text) continue;
+        label = document.createElement('span');
+        // Anonymous flex text used the capsule font, not decorative-span rules.
+        label.style.setProperty('font', 'inherit', 'important');
+        label.style.setProperty('letter-spacing', 'inherit', 'important');
+        text.before(label);
+        label.append(text);
+      }
+      labels.push({cue, label});
+    }
+    let queued = false;
+    function centerLabels() {
+      queued = false;
+      for (const {cue, label} of labels) {
+        label.style.setProperty('translate', '0px');
+        const capsule = cue.getBoundingClientRect();
+        if (!capsule.width || !capsule.height) continue;
+        const text = label.getBoundingClientRect();
+        const delta = capsule.x + capsule.width / 2 - text.x - text.width / 2;
+        label.style.setProperty('translate', `${delta}px`);
+      }
+    }
+    function schedule() {
+      if (!queued) { queued = true; requestAnimationFrame(centerLabels); }
+    }
+    window.addEventListener('resize', schedule);
+    window.addEventListener('pageshow', schedule);
+    if (document.fonts) document.fonts.ready.then(schedule);
+    if (window.ResizeObserver) {
+      const observer = new ResizeObserver(schedule);
+      labels.forEach(({cue}) => observer.observe(cue));
+    }
+    centerLabels();
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initArrowlessContinue);
+  else initArrowlessContinue();
+})();
+/* End owner-selected arrowless Continue label. */

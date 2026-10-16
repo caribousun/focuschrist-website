@@ -18,6 +18,19 @@ body.fc-site.fc-site.fc-site.fc-site :is(.fc-unified-continue, .fc-scroll-cue, .
 }
 /* End Continue appearance E. */
 
+/* Continue appearance B was approved by Wyatt on 2026-10-16.
+   Deeper teal and a softer highlight; preserve each existing capsule box. */
+body.fc-site.fc-site.fc-site.fc-site :is(.fc-unified-continue, .fc-scroll-cue, .fc-mobile-scroll-cue, .fc-art-continue, .fc-covenant-continue),
+body.fc-site.fc-site.fc-site.fc-site .fc-study-nav a[href="#continue-study"],
+body.fc-site.fc-site.fc-site.fc-site :is([data-artwork-detail-continue], [data-topic-art-continue]) {
+  background: linear-gradient(180deg, #148f91, #10546c) !important;
+  box-shadow: inset 0 1px 0 #8be0d538, 0 3px 8px #0003 !important;
+}
+body.fc-site.fc-site.fc-site.fc-site :is(.fc-unified-continue, .fc-scroll-cue, .fc-mobile-scroll-cue, .fc-art-continue, .fc-covenant-continue) > [aria-hidden="true"] {
+  visibility: hidden !important;
+}
+/* End Continue appearance B. */
+
 body.fc-site [data-unified-opening][data-unified-opening][data-unified-opening] {
   display: flex !important;
   flex-direction: column !important;
