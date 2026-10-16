@@ -48,6 +48,7 @@ def assert_css(css):
     assert css.count(DELTA) == 1 and css.endswith(DELTA), 'Exact appended composition rule required'
     assert digest(css.removesuffix(DELTA)) == BASE_CSS, 'Unrelated CSS or cue geometry changed'
     assert digest(css) == FINAL_CSS, 'Unreviewed composition stylesheet'
+    return css
 
 
 def assert_loader(common):
@@ -93,6 +94,19 @@ class CompositionBindingTests(unittest.TestCase):
 
     def test_exact_css_and_inverse(self):
         assert_css(self.css)
+
+    def test_artwork_context_inverse_is_exact(self):
+        from tempfile import TemporaryDirectory
+        from artwork_six_scene_delivery import digest as context_digest
+        with TemporaryDirectory() as folder:
+            target = Path(folder) / 'unified-opening.css'
+            target.write_bytes(self.css.encode('utf-8'))
+            self.assertEqual(context_digest(target), FINAL_CSS)
+            for candidate in [self.css.replace('#22b6b5', '#00ffff'),
+                              self.css.replace('100svh', '95svh'),
+                              self.css + '\nbody{display:none}\n']:
+                target.write_bytes(candidate.encode('utf-8'))
+                self.assertNotEqual(context_digest(target), FINAL_CSS)
 
     def test_exact_shared_loader_inverse(self):
         assert_loader(self.common)
