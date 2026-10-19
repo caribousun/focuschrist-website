@@ -1,0 +1,90 @@
+{
+  "status": "PASS",
+  "cases": 6,
+  "rows": [
+    {
+      "width": 1440,
+      "dpr": 1,
+      "hero": {
+        "bg": "radial-gradient(at 50% 22%, rgb(213, 168, 78) 0%, rgb(128, 98, 36) 34%, rgba(0, 0, 0, 0) 61%), linear-gradient(90deg, rgb(12, 52, 64) 0%, rgb(27, 70, 80) 25%, rgb(109, 87, 39) 50%, rgb(27, 70, 80) 75%, rgb(12, 52, 64) 100%)",
+        "before": "url(\"http://127.0.0.1:4179/assets/heroes/home-christ-signature-approved-20260907-display.webp\")"
+      },
+      "current": {
+        "src": "http://127.0.0.1:4179/assets/page-art/home-seek-study-four-marks-20261011-640.webp",
+        "natural": 640,
+        "rendered": 627.96875
+      },
+      "checks": "hero single-display download; DPR sufficient; Continue; detail/full original; two Watch sources; CFM current link"
+    },
+    {
+      "width": 1440,
+      "dpr": 2,
+      "hero": {
+        "bg": "radial-gradient(at 50% 22%, rgb(213, 168, 78) 0%, rgb(128, 98, 36) 34%, rgba(0, 0, 0, 0) 61%), linear-gradient(90deg, rgb(12, 52, 64) 0%, rgb(27, 70, 80) 25%, rgb(109, 87, 39) 50%, rgb(27, 70, 80) 75%, rgb(12, 52, 64) 100%)",
+        "before": "url(\"http://127.0.0.1:4179/assets/heroes/home-christ-signature-approved-20260907-display.webp\")"
+      },
+      "current": {
+        "src": "http://127.0.0.1:4179/assets/page-art/home-seek-study-four-marks-20261011-1280.webp",
+        "natural": 640,
+        "rendered": 627.96875
+      },
+      "checks": "hero single-display download; DPR sufficient; Continue; detail/full original; two Watch sources; CFM current link"
+    },
+    {
+      "width": 1440,
+      "dpr": 3,
+      "hero": {
+        "bg": "radial-gradient(at 50% 22%, rgb(213, 168, 78) 0%, rgb(128, 98, 36) 34%, rgba(0, 0, 0, 0) 61%), linear-gradient(90deg, rgb(12, 52, 64) 0%, rgb(27, 70, 80) 25%, rgb(109, 87, 39) 50%, rgb(27, 70, 80) 75%, rgb(12, 52, 64) 100%)",
+        "before": "url(\"http://127.0.0.1:4179/assets/heroes/home-christ-signature-approved-20260907-display.webp\")"
+      },
+      "current": {
+        "src": "http://127.0.0.1:4179/assets/page-art/home-seek-study-four-marks-20261011-full.webp",
+        "natural": 640,
+        "rendered": 627.96875
+      },
+      "checks": "hero single-display download; DPR sufficient; Continue; detail/full original; two Watch sources; CFM current link"
+    },
+    {
+      "width": 390,
+      "dpr": 1,
+      "hero": {
+        "bg": "radial-gradient(at 50% 22%, rgb(213, 168, 78) 0%, rgb(128, 98, 36) 34%, rgba(0, 0, 0, 0) 61%), linear-gradient(90deg, rgb(12, 52, 64) 0%, rgb(27, 70, 80) 25%, rgb(109, 87, 39) 50%, rgb(27, 70, 80) 75%, rgb(12, 52, 64) 100%)",
+        "before": "url(\"http://127.0.0.1:4179/assets/heroes/home-christ-signature-approved-20260907-display.webp\")"
+      },
+      "current": {
+        "src": "http://127.0.0.1:4179/assets/page-art/home-seek-study-four-marks-20261011-640.webp",
+        "natural": 390,
+        "rendered": 356
+      },
+      "checks": "hero single-display download; DPR sufficient; Continue; detail/full original; two Watch sources; CFM current link"
+    },
+    {
+      "width": 390,
+      "dpr": 2,
+      "hero": {
+        "bg": "radial-gradient(at 50% 22%, rgb(213, 168, 78) 0%, rgb(128, 98, 36) 34%, rgba(0, 0, 0, 0) 61%), linear-gradient(90deg, rgb(12, 52, 64) 0%, rgb(27, 70, 80) 25%, rgb(109, 87, 39) 50%, rgb(27, 70, 80) 75%, rgb(12, 52, 64) 100%)",
+        "before": "url(\"http://127.0.0.1:4179/assets/heroes/home-christ-signature-approved-20260907-display.webp\")"
+      },
+      "current": {
+        "src": "http://127.0.0.1:4179/assets/page-art/home-seek-study-four-marks-20261011-1280.webp",
+        "natural": 390,
+        "rendered": 356
+      },
+      "checks": "hero single-display download; DPR sufficient; Continue; detail/full original; two Watch sources; CFM current link"
+    },
+    {
+      "width": 390,
+      "dpr": 3,
+      "hero": {
+        "bg": "radial-gradient(at 50% 22%, rgb(213, 168, 78) 0%, rgb(128, 98, 36) 34%, rgba(0, 0, 0, 0) 61%), linear-gradient(90deg, rgb(12, 52, 64) 0%, rgb(27, 70, 80) 25%, rgb(109, 87, 39) 50%, rgb(27, 70, 80) 75%, rgb(12, 52, 64) 100%)",
+        "before": "url(\"http://127.0.0.1:4179/assets/heroes/home-christ-signature-approved-20260907-display.webp\")"
+      },
+      "current": {
+        "src": "http://127.0.0.1:4179/assets/page-art/home-seek-study-four-marks-20261011-1280.webp",
+        "natural": 390,
+        "rendered": 356
+      },
+      "checks": "hero single-display download; DPR sufficient; Continue; detail/full original; two Watch sources; CFM current link"
+    }
+  ]
+}

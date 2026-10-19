@@ -118,3 +118,8 @@ body.fc-home-presentation .fc-home-purpose-paths { margin-top: 24px; }
 @media(max-width:700px){
  body.fc-home-presentation .fc-home-featured-art.fc-content-artwork > figcaption{position:static;padding:16px 17px;background:#102b36;}
 }
+
+/* Exact approved Home hero pixels, served as a lossless display copy. */
+body.fc-home-presentation .fc-home-hero::before {
+    background-image: url("assets/heroes/home-christ-signature-approved-20260907-display.webp");
+}

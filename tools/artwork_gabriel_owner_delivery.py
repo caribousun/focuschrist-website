@@ -13,7 +13,8 @@ def require(ok,message):
 def canonical(v):return hashlib.sha256((json.dumps(v,sort_keys=True,separators=(',',':'),ensure_ascii=False)+'\n').encode()).hexdigest()
 def digest(p):
     from test_opening_composition_binding import reviewed_opening_bytes
-    return hashlib.sha256(reviewed_opening_bytes(p) if p.name == 'unified-opening.js' else p.read_bytes()).hexdigest()
+    from artwork_display_delivery import reviewed_bytes
+    return hashlib.sha256(reviewed_opening_bytes(p) if p.name == 'unified-opening.js' else reviewed_bytes(p)).hexdigest()
 def local(root,name):
  require(isinstance(name,str)and not Path(name).is_absolute()and '\\'not in name and ':'not in name,'unsafe path')
  p=(root/name).resolve();require(p.is_relative_to(root.resolve())and p.is_file(),'missing local evidence '+name);return p

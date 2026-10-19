@@ -12,6 +12,20 @@ ROOT = Path(__file__).resolve().parents[1]
 START = '<!-- WATCH SHORTS START -->'
 END = '<!-- WATCH SHORTS END -->'
 
+# Only these exact already-reviewed PNGs have lossless display siblings.
+DISPLAY_COPIES = {
+    'assets/shorts/bednar-holy-ghost-or-me-approved-20261013.png': 'assets/shorts/bednar-holy-ghost-or-me-approved-20261013-display.webp',
+    'assets/shorts/god-is-at-your-side-portrait-20261012.png': 'assets/shorts/god-is-at-your-side-portrait-20261012-display.webp',
+}
+
+def thumbnail_markup(record, width, height):
+    esc = html.escape
+    image = f'<img src="{esc(record["thumbnail"])}" width="{width}" height="{height}" alt="{esc(record["title"])}: YouTube Short preview" loading="lazy" decoding="async">'
+    display = DISPLAY_COPIES.get(record['thumbnail'])
+    if display:
+        return f'<picture style="display: block; width: 100%; height: 100%;"><source srcset="{display}" type="image/webp">{image}</picture>'
+    return image
+
 def thumbnail_size(record, root=ROOT):
     """Accept native video previews or exact reviewed local PNG bytes."""
     source = record['thumbnail']
@@ -42,7 +56,7 @@ def render(data):
         assert all(isinstance(s[k], str) and s[k].strip() for k in ('title', 'speaker', 'description'))
         url = 'https://www.youtube.com/shorts/' + s['id']
         cards.append(f'''<article class="watch-short" data-short-id="{s['id']}">
-<div class="watch-short-media"><a class="watch-short-preview" data-short-play="{s['id']}" href="{url}" aria-label="Watch {esc(s['title'])}" target="_blank" rel="noopener noreferrer"><img src="{esc(s['thumbnail'])}" width="{width}" height="{height}" alt="{esc(s['title'])}: YouTube Short preview" loading="lazy" decoding="async"></a></div>
+<div class="watch-short-media"><a class="watch-short-preview" data-short-play="{s['id']}" href="{url}" aria-label="Watch {esc(s['title'])}" target="_blank" rel="noopener noreferrer">{thumbnail_markup(s, width, height)}</a></div>
 <div class="watch-short-copy"><a class="watch-short-open" data-short-play="{s['id']}" href="{url}" aria-label="Play {esc(s['title'])}" target="_blank" rel="noopener noreferrer">▶ Watch Short</a><p class="watch-short-speaker">{esc(s['speaker'])}</p><h3>{esc(s['title'])}</h3><p>{esc(s['description'])}</p><a href="{url}" target="_blank" rel="noopener noreferrer">Open on YouTube →</a></div>
 </article>''')
     date = datetime.date.fromisoformat(data['verified_at'])

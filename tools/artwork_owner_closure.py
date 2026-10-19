@@ -31,7 +31,8 @@ def local(root, name):
 
 def bound(root, item):
     p = local(root, item['path'])
-    require(hashlib.sha256(p.read_bytes()).hexdigest() == item['sha256'], 'Stale closure hash: ' + item['path'])
+    from artwork_display_delivery import reviewed_bytes
+    require(hashlib.sha256(reviewed_bytes(p)).hexdigest() == item['sha256'], 'Stale closure hash: ' + item['path'])
     return p
 
 

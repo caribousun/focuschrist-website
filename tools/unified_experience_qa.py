@@ -350,8 +350,13 @@ def main() -> int:
 
     home = (ROOT / "index.html").read_text(encoding="utf-8")
     home_art = "assets/page-art/home-seek-study-four-marks-20261011-full.webp"
-    if not re.search(r'src="' + re.escape(home_art) + r'(?:\?[^"\s]*)?"', home) or 'class="fc-content-artwork fc-home-purpose-art"' not in home:
+    from artwork_display_delivery import NEW_IMAGE, validate_pixels
+    if home.count(NEW_IMAGE) != 1 or 'class="fc-content-artwork fc-home-purpose-art"' not in home:
         fail(errors, "index.html: approved supporting artwork missing or not wired")
+    try:
+        validate_pixels(ROOT)
+    except (ValueError, OSError) as error:
+        fail(errors, str(error))
     for marker in ('href="home.css?v=', 'class="fc-home-purpose-split"', 'class="fc-home-purpose-copy"'):
         if marker not in home:
             fail(errors, f"index.html: Missionary-style Home composition marker missing: {marker}")

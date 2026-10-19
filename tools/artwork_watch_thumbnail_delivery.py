@@ -26,7 +26,8 @@ def bound(root, item):
     require(isinstance(name, str) and '\\' not in name and ':' not in name and '..' not in Path(name).parts, 'unsafe evidence path')
     path = root / name
     require(path.resolve().is_relative_to(root.resolve()) and path.is_file() and not path.is_symlink(), 'missing or escaped evidence')
-    require(hashlib.sha256(path.read_bytes()).hexdigest() == item['sha256'], 'changed evidence: ' + name)
+    from artwork_display_delivery import reviewed_bytes
+    require(hashlib.sha256(reviewed_bytes(path)).hexdigest() == item['sha256'], 'changed evidence: ' + name)
     return path
 
 def validate(root, record, approved_binding, added, covered, rejected, pixel_hash, page_dependencies):

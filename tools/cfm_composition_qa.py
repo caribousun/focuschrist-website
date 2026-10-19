@@ -27,6 +27,12 @@ def check(html=None,css=None,controls=None):
  expected=Counter(CONTRACT['hrefs']);expected[CONTRACT['removed_duplicate_href']]-=1
  assert Counter(x['href'] for x in s.select('a[href]'))==+expected,'Destination changed beyond approved duplicate removal'
  expected_text=Counter(CONTRACT['prior_main_text']);expected_text.subtract(CONTRACT['removed_text']);expected_text.update(CONTRACT['added_text'])
+ # Reviewed October 2026 collection currentness correction, preserving the
+ # immutable dated composition proof and every other visitor-facing phrase.
+ old='Explore the April 2026 General Conference study collection. Follow a message that relates to the principle you are studying.'
+ new='Explore the October 2026 General Conference study collection. Follow a message that relates to the principle you are studying.'
+ assert expected_text[old]==1,'Historical conference description binding changed'
+ expected_text[old]-=1;expected_text[new]+=1
  assert Counter(t.strip() for t in s.select_one('main').stripped_strings)==+expected_text,'Study prose changed beyond approved labels'
  assert sorted(n['id'] for n in s.select('[id]'))==CONTRACT['prior_ids'],'Study target changed'
  assert sorted([n.name,k,str(v)] for n in s.select('*') for k,v in n.attrs.items() if k.startswith('data-cfm-') or k=='data-week-move')==CONTRACT['prior_hooks'],'Weekly hook changed'

@@ -10,7 +10,8 @@ def require(ok,message):
 def canonical(v):return hashlib.sha256((json.dumps(v,sort_keys=True,separators=(',',':'),ensure_ascii=False)+'\n').encode()).hexdigest()
 def digest(p):
     from test_opening_composition_binding import reviewed_opening_bytes
-    return hashlib.sha256(reviewed_opening_bytes(p) if p.name == 'unified-opening.js' else p.read_bytes()).hexdigest()
+    from artwork_display_delivery import reviewed_bytes
+    return hashlib.sha256(reviewed_opening_bytes(p) if p.name == 'unified-opening.js' else reviewed_bytes(p)).hexdigest()
 def local(root,name):
  require(isinstance(name,str) and not Path(name).is_absolute() and '\\'not in name and ':'not in name,'unsafe path')
  p=(root/name).resolve();require(p.is_relative_to(root.resolve()) and p.is_file(),'missing local file '+name);return p
@@ -45,7 +46,8 @@ def validate(root,record,approved_binding,added,covered,rejected,pixel_hash,page
   require(scene['preserved_originals'],'missing original preservation')
   for row in scene['preserved_originals']:bound(root,row)
   require(lineage['scenes'][key]['final_source_sha256']==SOURCES[key],'lineage source drift')
-  soup=BeautifulSoup(local(root,route).read_text(encoding='utf8'),'html.parser')
+  from artwork_display_delivery import inverse
+  soup=BeautifulSoup(inverse(route,local(root,route).read_bytes()).decode('utf8'),'html.parser')
   selector='a[data-artwork-detail="home-seek-study"]'if key=='seek'else'figure[data-exclusive-artwork="christ-homecoming-celebration"] > a'if key=='joy'else'figure[data-birth-art="13-shepherds-message"] > a'
   matches=soup.select(selector);require(len(matches)==1,'owner figure absent/duplicated');a=matches[0];require(stem+'-full.webp'in a['href'],'wrong active full')
   im=a.find('img');label='full'if key=='seek'else'960'if key=='joy'else'800';require(im and stem+'-'+label+'.webp'in im.get('src',''),'wrong thumbnail')

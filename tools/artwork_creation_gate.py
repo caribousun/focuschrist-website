@@ -66,7 +66,8 @@ def checked_overrides(root, overrides, mode='use'):
 def content_bytes(root, name, page_overrides=None):
     if page_overrides and name in page_overrides:
         return page_overrides[name]
-    return local(root, name).read_bytes()
+    from artwork_display_delivery import inverse
+    return inverse(name, local(root, name).read_bytes())
 
 
 def files(root, entries, rejected, page_overrides=None):
@@ -475,6 +476,8 @@ def run(root, mode='release', scene=None, page_overrides=None):
     covered |= bednar
     originals |= bednar_hashes
     original_pixels |= bednar_pixels
+    from artwork_display_delivery import validate as validate_display_delivery
+    covered |= validate_display_delivery(root, added, covered)
     require(added == covered, 'New artwork missing exact review coverage: ' + ', '.join(sorted(added - covered)))
     if creations or historical or corrections or seasonal or four_scene or answers_six or six_scene or gabriel or three:
         for name in inventory:

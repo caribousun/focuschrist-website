@@ -1,0 +1,61 @@
+{
+  "scope": "Exact corrected pseudo-element image-delivery maintenance review. Actual source screenshots privately retained, no new artwork or latency claim.",
+  "captures": [
+    {
+      "capture": "conference-card-390.png",
+      "sha256": "999e649154afb0976eaccc60d5003fa6655890781dffe95135277b123d1bb230",
+      "purpose": "Actual settled desktop or phone candidate inspected by Albert, Fermi and Newton; original screenshots retained privately"
+    },
+    {
+      "capture": "fourmarks-1440.png",
+      "sha256": "a047ef7a1ffd2a9faab22a99dfe08838afa49b33af61c4325ded0913b832f628",
+      "purpose": "Actual settled desktop or phone candidate inspected by Albert, Fermi and Newton; original screenshots retained privately"
+    },
+    {
+      "capture": "fourmarks-390.png",
+      "sha256": "1951be9d9b28d76568c68c7f5e48804a1db78819abcb8345613c56613aca2e40",
+      "purpose": "Actual settled desktop or phone candidate inspected by Albert, Fermi and Newton; original screenshots retained privately"
+    },
+    {
+      "capture": "index.html-1440.png",
+      "sha256": "4e7e73ae682eb5d2c546e827f8bd8dd99553a8fca0121889d974c32ac0e96b63",
+      "purpose": "Actual settled desktop or phone candidate inspected by Albert, Fermi and Newton; original screenshots retained privately"
+    },
+    {
+      "capture": "index.html-390.png",
+      "sha256": "2afed3bf6753ca60490d9c492f299d93704885f2cd3ec5e637818f5928b3b961",
+      "purpose": "Actual settled desktop or phone candidate inspected by Albert, Fermi and Newton; original screenshots retained privately"
+    },
+    {
+      "capture": "short-0-390.png",
+      "sha256": "89b85cb4feccc159b54002ab2335dac3507231802cb73483d6a8acc404add74a",
+      "purpose": "Actual settled desktop or phone candidate inspected by Albert, Fermi and Newton; original screenshots retained privately"
+    },
+    {
+      "capture": "short-1-1440.png",
+      "sha256": "f998dbe9f4771d942965827838bab1607854cf24381acc2256c30f0a74267987",
+      "purpose": "Actual settled desktop or phone candidate inspected by Albert, Fermi and Newton; original screenshots retained privately"
+    },
+    {
+      "capture": "short-1-390.png",
+      "sha256": "cd238dce882877033d7bc151fda9753844491b620db06754b83fb68175cb33b4",
+      "purpose": "Actual settled desktop or phone candidate inspected by Albert, Fermi and Newton; original screenshots retained privately"
+    }
+  ],
+  "geometry": {
+    "status": "PASS",
+    "cases": 6,
+    "hero_and_continue_exact": true,
+    "overflow": false,
+    "opening_pixels": [
+      {
+        "width": 1440,
+        "whole_opening_pixel_difference_bounds": null
+      },
+      {
+        "width": 390,
+        "whole_opening_pixel_difference_bounds": null
+      }
+    ]
+  }
+}

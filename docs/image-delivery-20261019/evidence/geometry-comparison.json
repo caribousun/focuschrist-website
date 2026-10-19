@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "cases": 6,
+  "hero_and_continue_exact": true,
+  "overflow": false,
+  "opening_pixels": [
+    {
+      "width": 1440,
+      "whole_opening_pixel_difference_bounds": null
+    },
+    {
+      "width": 390,
+      "whole_opening_pixel_difference_bounds": null
+    }
+  ]
+}
