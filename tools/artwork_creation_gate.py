@@ -476,8 +476,11 @@ def run(root, mode='release', scene=None, page_overrides=None):
     covered |= bednar
     originals |= bednar_hashes
     original_pixels |= bednar_pixels
-    from artwork_display_delivery import validate as validate_display_delivery
-    covered |= validate_display_delivery(root, added, covered)
+    from artwork_display_delivery import ASSETS as DISPLAY_ASSETS, validate as validate_display_delivery
+    # Synthetic independent sites need no production delivery family. Any
+    # registered record or any named display raster still requires the full gate.
+    if (root / 'docs/image-delivery-20261019.json').exists() or added & {row['path'] for row in DISPLAY_ASSETS}:
+        covered |= validate_display_delivery(root, added, covered)
     require(added == covered, 'New artwork missing exact review coverage: ' + ', '.join(sorted(added - covered)))
     if creations or historical or corrections or seasonal or four_scene or answers_six or six_scene or gabriel or three:
         for name in inventory:
