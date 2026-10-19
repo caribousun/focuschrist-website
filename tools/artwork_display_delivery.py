@@ -33,6 +33,14 @@ def inverse(name, data):
         restored = data.replace(current, previous, 1)
         require(sha(restored) == '5744d3b23308c419732bac77811620c2ca68b30e4dc22a1eb0775a120ddbd103', 'search inverse failed original binding')
         return restored
+    if name == 'tools/build_art_gallery.py' and sha(data) == '1b0fdf7b8c97d949dea025e99cdf57a1f06c58fa69f53a61587ae9818b1228d5':
+        current = "        from artwork_display_delivery import inverse\n        # Display-only Home sizes do not replace the gallery's full original.\n        name = page.lstrip('/')\n        doc.feed(inverse(name, (ROOT / name).read_bytes()).decode('utf-8'))"
+        previous = "        doc.feed((ROOT / page.lstrip('/')).read_text(encoding='utf-8'))"
+        text = data.decode('utf8')
+        require(text.count(current) == 1, 'ambiguous gallery builder inverse')
+        restored = text.replace(current, previous, 1).encode('utf8')
+        require(sha(restored) == 'f21b8a39171e7f9a998c34f66896bdcba922146f80825bae3f7d60372b3d804c', 'gallery builder inverse drift')
+        return restored
     if name not in CONSUMERS or sha(data) != CONSUMERS[name]: return data
     text = data.decode('utf8')
     changes = []

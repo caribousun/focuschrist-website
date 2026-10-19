@@ -8,6 +8,16 @@ import artwork_display_delivery as delivery
 ROOT=Path(__file__).resolve().parents[1]
 
 class DisplayDelivery(unittest.TestCase):
+    def test_gallery_builder_inverse_rejects_unknown_changes_and_other_paths(self):
+        name='tools/build_art_gallery.py';data=(ROOT/name).read_bytes()
+        restored=delivery.inverse(name,data)
+        self.assertNotEqual(restored,data)
+        self.assertIn(b"doc.feed((ROOT / page.lstrip('/')).read_text(encoding='utf-8'))",restored)
+        self.assertNotIn(b'from artwork_display_delivery import inverse',restored)
+        for bad in [data+b'\n# unknown edit',data.replace(b'original.',b'other.',1)]:
+            self.assertEqual(delivery.inverse(name,bad),bad)
+        self.assertEqual(delivery.inverse('other/build_art_gallery.py',data),data)
+
     def test_hero_display_copy_overrides_only_the_artwork_pseudo_element(self):
         css=(ROOT/'home-presentation.css').read_text(encoding='utf8')
         self.assertEqual(css.count(delivery.CSS),1)
