@@ -96,6 +96,8 @@ def watch_shorts_style_reference_allowed(relative, text):
     return relative == "watch.html" or WATCH_SHORTS_STYLE not in text
 
 def reviewed_home_style(data):
+    from artwork_display_delivery import inverse
+    data = inverse(HOME_STYLE, data)
     # Exact approved full-picture containment; retain the prior byte contract.
     if hashlib.sha256(data).hexdigest() == "40f23bc00b39bff593fe58c9f967e6f3750de43935547e88ef75249cd44866bc":
         rule = b'body.fc-home-presentation .fc-home-illustrated-card[data-home-reference="history"] > img {\n    aspect-ratio: 16 / 9;\n    object-fit: contain;\n}\n'
@@ -690,7 +692,8 @@ def main():
         assert not watch_shorts_style_reference_allowed('index.html', WATCH_SHORTS_STYLE)
         assert not watch_shorts_style_reference_allowed('shared.css', '@import "' + WATCH_SHORTS_STYLE + '";')
         assert not watch_shorts_style_reference_allowed('shared.js', WATCH_SHORTS_STYLE)
-        home_css = (ROOT/HOME_STYLE).read_bytes()
+        from artwork_display_delivery import inverse
+        home_css = inverse(HOME_STYLE, (ROOT/HOME_STYLE).read_bytes())
         assert reviewed_home_style(home_css)
         gallery_css = (ROOT/'art-gallery.css').read_bytes()
         assert reviewed_gallery_dialog_style(gallery_css)

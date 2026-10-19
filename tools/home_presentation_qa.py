@@ -85,6 +85,9 @@ def check(home, baseline, manifest, root=ROOT):
     # Preserve every other protected figure/detail field and the frozen baseline.
     baseline = baseline.replace('assets/page-art/home-seek-study-remember.webp?v=20260905-study-review',
         'assets/page-art/home-seek-study-four-marks-20261011-full.webp')
+    from artwork_display_delivery import OLD_IMAGE, NEW_IMAGE
+    assert baseline.count(OLD_IMAGE) == 1, 'Ambiguous original Home display image'
+    baseline = baseline.replace(OLD_IMAGE, NEW_IMAGE, 1)
     nodes, old = list(parse(home).walk()), list(parse(baseline).walk())
     protected = {
         'approved hero': lambda n: n.has('fc-home-hero'),

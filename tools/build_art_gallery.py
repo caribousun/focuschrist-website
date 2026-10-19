@@ -121,7 +121,10 @@ def build():
     entries = []
     for page in pages:
         doc = Document()
-        doc.feed((ROOT / page.lstrip('/')).read_text(encoding='utf-8'))
+        from artwork_display_delivery import inverse
+        # Display-only Home sizes do not replace the gallery's full original.
+        name = page.lstrip('/')
+        doc.feed(inverse(name, (ROOT / name).read_bytes()).decode('utf-8'))
         nodes = list(doc.root.walk())
         page_title = text(first(doc.root, lambda n: n.tag == 'h1')) or text(first(doc.root, lambda n: n.tag == 'title')).split('|')[0].strip()
         records = {(key, n.attrs[key]): n for n in nodes for key in

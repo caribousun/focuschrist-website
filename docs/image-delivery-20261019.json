@@ -1,0 +1,208 @@
+{
+  "schema": 1,
+  "scope": "Five deterministic display derivatives only; original masters and historical approvals unchanged. No new artwork or gaze acceptance.",
+  "assets": [
+    {
+      "source": "assets/heroes/home-christ-signature-approved-20260907.png",
+      "source_sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+      "source_bytes": 2440189,
+      "path": "assets/heroes/home-christ-signature-approved-20260907-display.webp",
+      "sha256": "f8c8877274bb3fe97e01ecffbc17b102cd47376444b49941610b6e6f7a325eb6",
+      "bytes": 1165988,
+      "dimensions": [
+        2048,
+        684
+      ],
+      "source_decoded_rgba_sha256": "49c6dda8a8cafec36cc7cdbd2fabf72de1869de91ff901f7d35eebbe89e22dd9",
+      "decoded_rgba_sha256": "49c6dda8a8cafec36cc7cdbd2fabf72de1869de91ff901f7d35eebbe89e22dd9",
+      "method": "same-dimension exact RGBA lossless WebP"
+    },
+    {
+      "source": "assets/shorts/bednar-holy-ghost-or-me-approved-20261013.png",
+      "source_sha256": "440b4a9f6388dbb0a0791745e4d7a21a8763b908b82cf64a4b57a37ab3c9d6a0",
+      "source_bytes": 4140257,
+      "path": "assets/shorts/bednar-holy-ghost-or-me-approved-20261013-display.webp",
+      "sha256": "e6257d461722c0d8f9c722d818e6be8dbb121aabcad104de9fd18183076ea23f",
+      "bytes": 2281632,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "source_decoded_rgba_sha256": "714883fa94f2458af310c9ee9c33801bd9203918f9eda4e967a2c8aa355f2dc2",
+      "decoded_rgba_sha256": "714883fa94f2458af310c9ee9c33801bd9203918f9eda4e967a2c8aa355f2dc2",
+      "method": "same-dimension exact RGBA lossless WebP"
+    },
+    {
+      "source": "assets/shorts/god-is-at-your-side-portrait-20261012.png",
+      "source_sha256": "78f547b0f541f33e97cb8d8be33a7ea6dfdac8a10516c8712a8b08e19be1ab63",
+      "source_bytes": 2713244,
+      "path": "assets/shorts/god-is-at-your-side-portrait-20261012-display.webp",
+      "sha256": "370556ca791ed494259ba327a0bd4c67f679d85a17fb529d47b7d9c51a9a0c91",
+      "bytes": 2051718,
+      "dimensions": [
+        941,
+        1672
+      ],
+      "source_decoded_rgba_sha256": "95a57b1928d94995beb3db347a5de4f60d416d805eed4978f130851edf9a751b",
+      "decoded_rgba_sha256": "95a57b1928d94995beb3db347a5de4f60d416d805eed4978f130851edf9a751b",
+      "method": "same-dimension exact RGBA lossless WebP"
+    },
+    {
+      "source": "assets/page-art/home-seek-study-four-marks-20261011-full.webp",
+      "source_sha256": "5ad1e94b505079eadc34d6486fb3a2090feb74f756c7472a29de76a788b11ceb",
+      "source_bytes": 1667204,
+      "path": "assets/page-art/home-seek-study-four-marks-20261011-640.webp",
+      "sha256": "061fa74114918d76c306b710faf8a2f104cddf91f1c3cc1bdbd33abfb6070607",
+      "bytes": 271500,
+      "dimensions": [
+        640,
+        320
+      ],
+      "source_decoded_rgba_sha256": "8e036443974b57451cdaa204f35bb18830edb41c2af0d721679f5763277565e6",
+      "decoded_rgba_sha256": "9c40883c9c60361d2eaae85c2f01851b979c84e11aefa1d7bd2f05f7a91ac3e4",
+      "method": "proportional Lanczos3 resampling followed by exact lossless WebP"
+    },
+    {
+      "source": "assets/page-art/home-seek-study-four-marks-20261011-full.webp",
+      "source_sha256": "5ad1e94b505079eadc34d6486fb3a2090feb74f756c7472a29de76a788b11ceb",
+      "source_bytes": 1667204,
+      "path": "assets/page-art/home-seek-study-four-marks-20261011-1280.webp",
+      "sha256": "67813d87651e8ae07f689eebcf15d19338264225334cfdfda03c267b27467151",
+      "bytes": 960388,
+      "dimensions": [
+        1280,
+        640
+      ],
+      "source_decoded_rgba_sha256": "8e036443974b57451cdaa204f35bb18830edb41c2af0d721679f5763277565e6",
+      "decoded_rgba_sha256": "314542df4864004cc79668407fb060b5ff4466b9fd18248b9a87b8a7174de8c2",
+      "method": "proportional Lanczos3 resampling followed by exact lossless WebP"
+    }
+  ],
+  "consumers": {
+    "index.html": "ee2d3bfe99fb3617bb6514b08dc822315e340d4ef8c8c867e71dec993817014f",
+    "home-presentation.css": "08ce2b28f20963868cc093ad59b23d865282858009c262d976b2900019b99656",
+    "watch.html": "f7cae4fd922eeca0f2faff144383d3fabe378b89150813f60e92a3c52523eb2e",
+    "come-follow-me.html": "11de2b2c31ab4dc9f784eb014df1bcb46188c7bb01a9191bef6875d0f33fadb3",
+    "tools/build_watch_shorts.py": "759bc6ba83e68350b2e0073915fd157b86581d2aaa4bd4688718c9e821fabd45"
+  },
+  "reviews": [
+    {
+      "reviewer": "Albert",
+      "decision": "CONCUR",
+      "binding_sha256": "56928bf717801715f52b88f0d1bb5c71d706515938f825ebfcfffea34c2dd23b",
+      "source_and_derivative_pixels_inspected": true,
+      "desktop_phone_inspected": true,
+      "observations": "Actual root reviewed preserved source/derivative displayed artwork and desktop/phone composites. Root personally opened Home hero study and full-size original PNG2048, then Fourmarks study/detail/full-size original. Automated actual Chrome6viewport/DPRcases verified single optimized hero request, original gradients, sufficient responsive sources, Continue, original full viewer, two Watch WebP sources and October CFM destination. Six before/after hero and Continue rectangles exactly match; whole Home opening rendered pixel difference absent at1440and390. Root caught and required correction of initial wrong hero paint layer before acceptance. Exact decoded RGBA matching of three lossless copies and exact Lanczos two responsive copies independently verified. Source master bytes, footer/prose/links/layout unchanged except named October phrase. Current AGENTS, historical identity, enrichment, design mandate and protected Foundation/reaffirmation preserved.",
+      "limits": "This is a bounded preservation/delivery review, not new artwork, source/face/gaze approval, whole-site acceptance, measured latency gain or autonomous runtime. Historical Spannaus uncertainty retained. Publication/CI/live/canonical checks remain separate.",
+      "evidence": [
+        {
+          "path": "docs/image-delivery-20261019/visual-evidence.json",
+          "sha256": "b45b10c01495066981012218e3da77dd0b1f6a3c169eec2fca347c28ca1a659a"
+        },
+        {
+          "path": "docs/image-delivery-20261019/evidence/geometry-comparison.json",
+          "sha256": "bb0016e66d27d8f830166e3ee2fc2a036ef2242b76620e46e45ffb98b6b0a5c2"
+        },
+        {
+          "path": "docs/image-delivery-20261019/evidence/interactions.json",
+          "sha256": "c9f921e97e3f68f876461074436f138dc25721a73058907a09955de4e4fab2d4"
+        }
+      ]
+    },
+    {
+      "reviewer": "Fermi",
+      "decision": "CONCUR",
+      "binding_sha256": "56928bf717801715f52b88f0d1bb5c71d706515938f825ebfcfffea34c2dd23b",
+      "source_and_derivative_pixels_inspected": true,
+      "desktop_phone_inspected": true,
+      "observations": "Read current Master protected Foundation and TEAM FOUNDATION REAFFIRMATION, Focus Engine context and applicable AGENTS/historical identity/enriched picture/supporting art/panel mandates. Independently inspected exact five source and derivative full scenes, including faces, visible hands, text and composition. Three same-dimension lossless files preserve exact RGBA including alpha; two Fourmarks proportional Lanczos copies preserve scene and clarity at intended widths. Renewed actual corrected Home1440/390 screenshots after root identified the wrong paint-layer defect: final CSS targets only .fc-home-hero::before, keeping original element gradients, framing and Continue. Root report independently read: six width/DPR cases select sufficient640/1280/1774 Fourmarks source, download only optimized hero before full viewing, retain original full viewer and exact Home opening pixels/geometry. Actual loaded desktop/phone Fourmarks, both Watch full portrait covers and CFM October2026 card inspected; typography, natural faces, composition, existing mobile central crop and warm visitor prose preserved. Exact helper/search inverse and ninth pseudo-element regression test reviewed; original historical specs remain unchanged. Own9display tests,14Watch,15Home,9ThreeReviewed,25ownerclosure and unified/artworkDetails/mediaVoice/productionHardening pass within recorded scopes. Final bounded CI follow-up review: gallery builder feeds only exact normalized historical Home display bytes through existing discovery, retaining full original gallery selector/source and output; exact whole-builder current SHA and count1 four-line inverse restore the original builder SHA. Unknown extra edits remain untouched and rejected by original historical binding. Actual positive/extra-edit inverse assertions passed. No product image, source, consumer or visual binding changed. Reviewed tenth gallery-inverse regression: actual original feed and absent adapter import restored; extra bytes, near-match edits and alternate path retain unnormalized bytes. Concur with this bounded rejection coverage.",
+      "limits": "Fermi implemented image delivery and preservation integration; Newton is independent finished reviewer. Actual saved pixels and root executable network/interaction evidence inspected, not my own native browser execution. Earlier element-target hero review is superseded by this corrected-pseudo-element review. Root owns actual native interactions, exact-headCI/deployment/public/canonical verification. No new source/gaze/likeness acceptance, fullsite enrichment acceptance, measured latency or future scheduling claim. Historical Spannaus reciprocal-pupil uncertainty remains preserved. Public reports bind privately retained actual screenshot hashes; hashes and records alone cannot judge aesthetics or authenticate reviewers.",
+      "evidence": [
+        {
+          "path": "docs/image-delivery-20261019/visual-evidence.json",
+          "sha256": "b45b10c01495066981012218e3da77dd0b1f6a3c169eec2fca347c28ca1a659a"
+        },
+        {
+          "path": "docs/image-delivery-20261019/evidence/geometry-comparison.json",
+          "sha256": "bb0016e66d27d8f830166e3ee2fc2a036ef2242b76620e46e45ffb98b6b0a5c2"
+        },
+        {
+          "path": "docs/image-delivery-20261019/evidence/interactions.json",
+          "sha256": "c9f921e97e3f68f876461074436f138dc25721a73058907a09955de4e4fab2d4"
+        },
+        {
+          "path": "tools/artwork_display_delivery.py",
+          "sha256": "ecce82fcd932502d3f5aedb5382432a151791e69ec9f3108c94dc8eedfe0e66f"
+        },
+        {
+          "path": "tools/test_display_delivery.py",
+          "sha256": "387fea58b6096a09b4f939058b88b5dbf496f89b91a16b782d7ed0c93c69df47"
+        }
+      ],
+      "reviewed_at": "2026-10-19T20:30:03.473195+00:00"
+    },
+    {
+      "reviewer": "Newton",
+      "decision": "CONCUR",
+      "binding_sha256": "56928bf717801715f52b88f0d1bb5c71d706515938f825ebfcfffea34c2dd23b",
+      "source_and_derivative_pixels_inspected": true,
+      "desktop_phone_inspected": true,
+      "observations": "Actual independent full source and all five finished derivative pixels inspected. Three same-dimension WebP copies preserve exact RGBA including alpha; two proportional Fourmarks copies exactly match deterministic Lanczos resampling and retain the scene. Inspected settled desktop1440 and phone390 Home hero, Fourmarks, both local Watch covers and corrected CFM October conference card. Reinspected corrected Home screenshots after the actual hero consumer was fixed to ::before; gradients, framing, labels, Continue baseline and all six measured hero/Continue rectangles remain unchanged. Historical bindings remain immutable; exact consumer inverse and search inverse reject unknown edits, source/alpha drift, unsupported extra rasters and missing finished reviews. Independently executed nine final display tests PASS. Search semantic delta is one April-to-October phrase; only CFM content-audit row changes with appended narrow review. Source masters, full-image destinations, artwork identity, accessible labels, footer and all other study text remain preserved.",
+      "limits": "This is exact scoped preservation concurrence, not new artwork, gaze/likeness/scar approval, fullsite enrichment acceptance, owner aesthetic acceptance or measured latency improvement. Original1774px Fourmarks remains maximum source at high DPR. Native interactions and six DPR/network/computed-style cases were executed by Albert; Newton inspected their actual reports and independently inspected saved rendered pixels, not a separately driven native browser session. Historical Spannaus gaze uncertainty is retained. CI, merge, deployment, ordinary public bytes and live canonical verification remain separate release gates. Same-privilege editable records are bounded evidence, not authenticated identities or continuous enforcement.",
+      "evidence": [
+        {
+          "path": "docs/image-delivery-20261019/visual-evidence.json",
+          "sha256": "b45b10c01495066981012218e3da77dd0b1f6a3c169eec2fca347c28ca1a659a"
+        },
+        {
+          "path": "docs/image-delivery-20261019/evidence/geometry-comparison.json",
+          "sha256": "bb0016e66d27d8f830166e3ee2fc2a036ef2242b76620e46e45ffb98b6b0a5c2"
+        },
+        {
+          "path": "docs/image-delivery-20261019/evidence/interactions.json",
+          "sha256": "c9f921e97e3f68f876461074436f138dc25721a73058907a09955de4e4fab2d4"
+        },
+        {
+          "path": "index.html",
+          "sha256": "ee2d3bfe99fb3617bb6514b08dc822315e340d4ef8c8c867e71dec993817014f"
+        },
+        {
+          "path": "home-presentation.css",
+          "sha256": "08ce2b28f20963868cc093ad59b23d865282858009c262d976b2900019b99656"
+        },
+        {
+          "path": "watch.html",
+          "sha256": "f7cae4fd922eeca0f2faff144383d3fabe378b89150813f60e92a3c52523eb2e"
+        },
+        {
+          "path": "come-follow-me.html",
+          "sha256": "11de2b2c31ab4dc9f784eb014df1bcb46188c7bb01a9191bef6875d0f33fadb3"
+        },
+        {
+          "path": "tools/build_watch_shorts.py",
+          "sha256": "759bc6ba83e68350b2e0073915fd157b86581d2aaa4bd4688718c9e821fabd45"
+        },
+        {
+          "path": "assets/heroes/home-christ-signature-approved-20260907-display.webp",
+          "sha256": "f8c8877274bb3fe97e01ecffbc17b102cd47376444b49941610b6e6f7a325eb6"
+        },
+        {
+          "path": "assets/shorts/bednar-holy-ghost-or-me-approved-20261013-display.webp",
+          "sha256": "e6257d461722c0d8f9c722d818e6be8dbb121aabcad104de9fd18183076ea23f"
+        },
+        {
+          "path": "assets/shorts/god-is-at-your-side-portrait-20261012-display.webp",
+          "sha256": "370556ca791ed494259ba327a0bd4c67f679d85a17fb529d47b7d9c51a9a0c91"
+        },
+        {
+          "path": "assets/page-art/home-seek-study-four-marks-20261011-640.webp",
+          "sha256": "061fa74114918d76c306b710faf8a2f104cddf91f1c3cc1bdbd33abfb6070607"
+        },
+        {
+          "path": "assets/page-art/home-seek-study-four-marks-20261011-1280.webp",
+          "sha256": "67813d87651e8ae07f689eebcf15d19338264225334cfdfda03c267b27467151"
+        }
+      ]
+    }
+  ]
+}
