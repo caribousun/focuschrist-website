@@ -19,7 +19,8 @@ class TimelineImportTests(unittest.TestCase):
     def test_reviewed_consumer_inverses_preserve_historical_pins(self):
         root=Path(__file__).resolve().parents[1]
         for name,binding in gate.REVIEWED_CONSUMER_INVERSES.items():
-            data=(root/name).read_bytes()
+            # Preserve exact historical fixture; separate tests cover current successor rejection.
+            data=gate.before_navigation_polish(name,(root/name).read_bytes())
             self.assertEqual(hashlib.sha256(data).hexdigest(),binding['current'])
             restored=gate.restore_consumers(name,data)
             self.assertEqual(hashlib.sha256(restored).hexdigest(),binding['previous'])

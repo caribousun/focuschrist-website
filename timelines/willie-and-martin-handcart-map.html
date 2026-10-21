@@ -179,7 +179,7 @@
 </style>
 <link rel="stylesheet" href="../site-search.css?v=20260929-result-hitbox-1"><script src="../site-search.js?v=20260919-focused-answers-1" defer></script>
 <link rel="stylesheet" href="../site-header.css?v=20260926-toolbar-readability-1">
-<link rel="stylesheet" href="../timeline-experiences.css?v=20261020-intro-canvas-1">
+<link rel="stylesheet" href="../timeline-experiences.css?v=20261020-navigation-polish-1">
 <link rel="stylesheet" href="../timeline-workspace.css?v=20261010-all-bottom-1">
 <script src="../timeline-workspace.js?v=20261010-all-bottom-1" defer></script>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
@@ -761,6 +761,7 @@
         filterGeneration++;currentFilter='all';chips.forEach(function(c){c.setAttribute('aria-pressed',String(c.getAttribute('data-filter')==='all'));});rows=buildRows();mount(rows);
       }
       var row=currentRows.find(function(r){return r.index===index;});selectStop(index,row.el,false);
+      if(window.matchMedia("(min-width:901px)").matches){if(window.TimelineWorkspace)window.TimelineWorkspace.scrollRow(row.el);else row.el.scrollIntoView({block:"nearest"});}
     },
     get current(){return currentIndex;}
   };

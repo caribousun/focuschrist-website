@@ -1,3 +1,13 @@
+# Albert: timeline control correction review
+
+Decision: CONCUR for specification 51fcc28a25bba1c9711371b204728df5fa7e4090191a75735b7725aec42600fe, page SHA256 79e8766bb3fd2b4493bf9679644654ad91a17090bb1f70373e88ae7e7b12d972.
+
+I executed seven actual browser cases at 1900/390/320 and legacy1536/390, including scrolled-view to map, related-entry Back restoring reading position, Close restoring phone list position, and ten actual Next advances to later stops. I personally inspected the resulting settings1900, related320, Handcartstop11desktop and Calvin long-group desktop pixels. They show usable settings/Close, readable related rows, and selected Handcart stop11 in the scrolled list. Original missed-state findings remain acknowledged; this is bounded correction acceptance, not exhaustive site acceptance. Root browser evidence binds aa043; the exact successor adds only explicit accessible full placement labels, independently source-reviewed by Newton. Calvin independently tested474member lists desktop/phone and allrow text fits; Hobbes reproduced and retested actual scroll/history failures.
+
+I read current applicable Master/Foundation/Directive and website mandates, including exact established palette/type, locked opening geometry, named study controls, truthful source/copyright and actual finished desktop/phone review. Existing193photo credits,197asset references,730DATA records,10routes and world outline are unchanged with exact preservation evidence. No new artwork or historical assertions. Earlier source/rights review remains applicable only to these unchanged assets. Fermi and Newton must independently author their finished reviews before sealing. Companion sections, updated data and PDF exports are separately required pending work assigned to Merlin; not delivered or included in this concurrence. CI, deployment and public verification remain required.
+
+## Historical prior release review
+
 # Albert: finished integration and existing-media import review
 
 Decision: CONCUR for specification `873cefc4d5de61071db6186ff325c17e2fd7b4c16735f5054f0f9d30a075db32`, page SHA256 `d427e7f8e578b880a6b512bdfbe9b455c9192026a7e9e80893afc6559c8f6494`.

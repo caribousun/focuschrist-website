@@ -114,3 +114,8 @@ body.fc-site.fc-timeline-experience .timeline-life-overview > .timeline-navigati
  body.fc-site.fc-timeline-experience .timeline-life-intro[data-unified-opening][data-unified-opening]{gap:17.5px!important}
  body.fc-site.fc-timeline-experience .timeline-life-intro[data-unified-opening][data-unified-opening]:not(:has(> .fc-page-intro-copy)){gap:22px!important}
 }
+
+/* Keep story navigation separate from its title, metadata and first paragraph. */
+body.fc-timeline-experience [data-timeline-pane="detail"] .timeline-event-navigation-slot{margin-block:12px}
+body.fc-timeline-experience [data-timeline-pane="detail"] .detail-top>.timeline-event-navigation-slot{flex-basis:100%;margin-top:0}
+body.fc-timeline-experience [data-timeline-pane="detail"] .timeline-event-navigation-slot>.timeline-event-navigation{margin:0}

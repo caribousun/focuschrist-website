@@ -7,7 +7,7 @@
     "archive_sha256": "034a982736431a818956851a00b0dcd568c84707f435b826cc7065e43690bc1b",
     "page": {
       "path": "timelines/world-and-scripture-timeline.html",
-      "sha256": "d427e7f8e578b880a6b512bdfbe9b455c9192026a7e9e80893afc6559c8f6494"
+      "sha256": "79e8766bb3fd2b4493bf9679644654ad91a17090bb1f70373e88ae7e7b12d972"
     },
     "credits": {
       "path": "docs/world-scripture-import/photo-credits.json",
@@ -2201,34 +2201,34 @@
     {
       "reviewer": "Albert",
       "decision": "CONCUR",
-      "spec_sha256": "873cefc4d5de61071db6186ff325c17e2fd7b4c16735f5054f0f9d30a075db32",
+      "spec_sha256": "51fcc28a25bba1c9711371b204728df5fa7e4090191a75735b7725aec42600fe",
       "finished_pixels": true,
       "source_rights_checked": true,
       "evidence": {
         "path": "docs/world-scripture-import/albert-review.md",
-        "sha256": "4e276c7aeb456a8fee589bb7cf7e0ccd09348233951401c12bb471b805738afa"
+        "sha256": "d4f3cf3c5c266e9f4fdeccea6ab48107ffd7743525d94c6ec8d50071ef74cf4a"
       }
     },
     {
       "reviewer": "Fermi",
       "decision": "CONCUR",
-      "spec_sha256": "873cefc4d5de61071db6186ff325c17e2fd7b4c16735f5054f0f9d30a075db32",
+      "spec_sha256": "51fcc28a25bba1c9711371b204728df5fa7e4090191a75735b7725aec42600fe",
       "finished_pixels": true,
       "source_rights_checked": true,
       "evidence": {
         "path": "docs/world-scripture-import/fermi-review.md",
-        "sha256": "606a205dbf9bde537590c1b1de4a5dcd02d92ffc5b8dd9d75dbef169d9c42833"
+        "sha256": "41bc3f5d0327be3141c48914592b55c95a267b1e0ff26e04ee246e214390b1db"
       }
     },
     {
       "reviewer": "Newton",
       "decision": "CONCUR",
-      "spec_sha256": "873cefc4d5de61071db6186ff325c17e2fd7b4c16735f5054f0f9d30a075db32",
+      "spec_sha256": "51fcc28a25bba1c9711371b204728df5fa7e4090191a75735b7725aec42600fe",
       "finished_pixels": true,
       "source_rights_checked": true,
       "evidence": {
         "path": "docs/world-scripture-import/newton-review.md",
-        "sha256": "3d10dfae2fc84239c05947912d572ed14046ceac09a34f072ab546c2feadc223"
+        "sha256": "063fad87edbb69a5d4fdbfffbfb3308b90ec567a54d7e6ca4a35cd4172de6f94"
       }
     }
   ]

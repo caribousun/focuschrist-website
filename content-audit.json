@@ -10325,18 +10325,24 @@
     {
       "path": "timelines/world-and-scripture-timeline.html",
       "status": "verified",
-      "published_text_sha256": "fcddcee44df01f85ff38b5b069e493f2d9806ad18e4980d55cce37f61a6c9384",
-      "reviewed_inline_script_sha256": "a84e9d99054e32c19694bd881614a32636099524e7ffd0900d876e8f416336b7",
-      "reviewed_source_sha256": "d427e7f8e578b880a6b512bdfbe9b455c9192026a7e9e80893afc6559c8f6494",
+      "published_text_sha256": "c9dc8d5b56f715a3882345670d513816263db0bd22403d8a4c4afae8d553f98e",
+      "reviewed_inline_script_sha256": "d0d55863c4fa87b4085f9b750e8233519de615c0eea01ed7a4c56a3c51bf5f87",
+      "reviewed_source_sha256": "79e8766bb3fd2b4493bf9679644654ad91a17090bb1f70373e88ae7e7b12d972",
       "reviewed_on": "2026-10-20",
       "review_scope": "targeted-existing-source-import-and-interface-not-comprehensive-date-verification",
-      "review_standard": "Bounded existing-source import and finished interface review by Albert, Fermi and Newton; exact delivery specification and independent receipts in docs/world-scripture-import. Existing730 records and their original source qualifications retained; modeled geography remains hypothetical and unplaced entries remain unplaced. Verified denotes this scoped import, attribution, wording and behavior review, not newly comprehensive verification of every historical date or assertion. Existing193 Commons photographs retain individual attribution records and licenses; no invented generation preflight. Static wording, inline scripts and full page bytes bound separately. Release and live verification remain separate.",
+      "review_standard": "Bounded existing-source import and finished interface review by Albert, Fermi and Newton; exact delivery specification and independent receipts in docs/world-scripture-import. Existing730 records and their original source qualifications retained; modeled geography remains hypothetical and unplaced entries remain unplaced. Verified denotes this scoped import, attribution, wording and behavior review, not newly comprehensive verification of every historical date or assertion. Existing193 Commons photographs retain individual attribution records and licenses; no invented generation preflight. Static wording, inline scripts and full page bytes bound separately. Release and live verification remain separate. Navigation-polish source review preserves all730 DATA records,10 routes, world outline and197 asset references; exact authored interface controls/history/scroll changes are scoped corrections. Finished integrated pixels, delivery review seal, CI and public verification for this successor remain pending; source binding is not publication approval.",
       "authoritative_sources": [
         "docs/world-scripture-import/delivery.json",
         "docs/world-scripture-import/newton-review.md",
         "docs/world-scripture-import/fermi-review.md",
         "docs/world-scripture-import/albert-review.md"
-      ]
+      ],
+      "prior_published_review": {
+        "published_text_sha256": "fcddcee44df01f85ff38b5b069e493f2d9806ad18e4980d55cce37f61a6c9384",
+        "reviewed_inline_script_sha256": "a84e9d99054e32c19694bd881614a32636099524e7ffd0900d876e8f416336b7",
+        "reviewed_source_sha256": "d427e7f8e578b880a6b512bdfbe9b455c9192026a7e9e80893afc6559c8f6494",
+        "review_standard": "Bounded existing-source import and finished interface review by Albert, Fermi and Newton; exact delivery specification and independent receipts in docs/world-scripture-import. Existing730 records and their original source qualifications retained; modeled geography remains hypothetical and unplaced entries remain unplaced. Verified denotes this scoped import, attribution, wording and behavior review, not newly comprehensive verification of every historical date or assertion. Existing193 Commons photographs retain individual attribution records and licenses; no invented generation preflight. Static wording, inline scripts and full page bytes bound separately. Release and live verification remain separate."
+      }
     }
   ]
 }

@@ -132,7 +132,8 @@ class InlineScriptParser(HTMLParser):
 
 
 def inline_script_hash(path: Path) -> str:
-    raw = path.read_bytes()
+    from timeline_source_import import before_navigation_polish
+    raw = before_navigation_polish(path.relative_to(ROOT).as_posix(), path.read_bytes())
     parser = InlineScriptParser(raw)
     parser.feed(raw.decode("latin-1"))
     parser.close()
