@@ -530,6 +530,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: timeline-experiences
-          path: .qa-artifacts/timeline/
+          path: |
+            .qa-artifacts/timeline/
+            .qa-artifacts/continue-motion/
           include-hidden-files: true
           if-no-files-found: ignore
