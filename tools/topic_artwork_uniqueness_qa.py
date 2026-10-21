@@ -122,6 +122,29 @@ def hero_registry_source(text, key):
     selected = [rule for rule in rules if rule['route'] == '/' + key]
     return text[:start] + json.dumps(selected) + text[start + length:]
 
+def script_image_urls(text, page_key=None):
+    """Read complete same-quote literals; never start at an inner apostrophe."""
+    declarations=list(re.finditer(r'\bconst\s+PHOTO_CREDITS\s*=\s*',text))
+    if declarations and page_key=='timelines/world-and-scripture-timeline.html':
+        if len(declarations)!=1:raise ValueError('Ambiguous PHOTO_CREDITS declaration')
+        start=declarations[0].end()
+        credits,length=json.JSONDecoder().raw_decode(text[start:])
+        fields={'title','author','credit','license','license_url','source','original','notice'}
+        if not isinstance(credits,dict) or len(credits)!=193:raise ValueError('Unexpected PHOTO_CREDITS inventory')
+        for key,row in credits.items():
+            if not re.fullmatch(r'/assets/world-scripture/[0-9a-f]{64}\.(?:jpg|png|webp|gif)',key) or not isinstance(row,dict) or set(row)!=fields or not all(isinstance(v,str)for v in row.values()):
+                raise ValueError('Unexpected PHOTO_CREDITS schema')
+        # Only this exact static schema distinguishes descriptions from URLs.
+        # Asset keys and every URL-bearing field still enter the normal scanner.
+        urls={key:{k:row[k]for k in ('source','original','license_url')}for key,row in credits.items()}
+        text=text[:start]+json.dumps(urls)+text[start+length:]
+    literals = re.finditer(r'''(?P<quote>["'`])(?P<value>(?:\\.|(?!(?P=quote))[^\\\n])*)(?P=quote)''', text)
+    for match in literals:
+        value = re.sub(r'''\\(["'`\\/])''', r'\1', match.group('value'))
+        if '${' not in value and re.fullmatch(r'.+\.(?:png|jpe?g|webp|avif|gif|svg)(?:[?#].*)?', value, re.I):
+            yield value
+
+
 def scan(root=ROOT):
     pages=public_pages(root);parsed={};references=[];asset_paths=set();asset_issues={}
     def add_reference(page, value, key, tag, attr):
@@ -131,8 +154,8 @@ def scan(root=ROOT):
     def script_refs(text, page, key):
         # Literal image URLs used by DOM image/detail setters resolve against the document.
         # Computed template paths require the separate browser interaction gate.
-        for value in re.findall(r"[\"'`]([^\"'`\n]+\.(?:png|jpe?g|webp|avif|gif|svg)(?:[?#][^\"'`\n]*)?)[\"'`]",text,re.I):
-            if '${' not in value:add_reference(page,value,key,'script','literal-image-url')
+        for value in script_image_urls(text, key):
+            add_reference(page,value,key,'script','literal-image-url')
     def css_refs(file, key, seen):
         if file in seen or not file.is_file():return
         seen.add(file)

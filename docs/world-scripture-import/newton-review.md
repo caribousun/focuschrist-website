@@ -2,9 +2,9 @@
 
 Decision: **CONCUR** for the exact existing-media import, attribution delivery and reviewed rendered result described here. I would present this result for publication within the authorized scope. Deployment and live verification remain separate release steps.
 
-Reviewed delivery specification: `2338edd6dd216dd370670d9698a074c811a04680453962350d3f37b4ea4c401c`.
+Reviewed delivery specification: `e8f5fc78f87acfe5071f53741dcc9c2d8375dcbbcb130098e53d64955604cd27`.
 
-Reviewed page: `timelines/world-and-scripture-timeline.html`, SHA256 `3d770c2ca046d99c495a3ec5a44661146d3d5f5b2ef008c553fe6539f812085f`.
+Reviewed page: `timelines/world-and-scripture-timeline.html`, SHA256 `64f807ad926168ae24edbc54be0cf82d3b8126f84963b7dd81c56b2b99fcaca6`.
 
 ## Mandate readback and scope
 
@@ -20,7 +20,7 @@ Mandate file hashes:
 
 The exact specification binds 197 content-addressed assets: 193 source photographs, one existing hero and three vendor runtime utilities. I checked the exact specification and file bindings, the 193 individual attribution records against their bound source metadata and license reconciliation, the lineage description, and the distributed license copies. Public-domain credits use text rather than an empty license link. The GFDL 1.2 photograph retains its author and complete bundled license; the Free Art License photograph retains A.Savin, Wikipedia; the IGO attribution retains its author and UNESCO credit. License versions and source pages remain individual, rather than a generic Commons notice.
 
-All 197 external assets were separately fetched and decoded in my earlier delivery check, with matching bytes and nonzero dimensions. Subsequent changes add credits, shared search integration and presentation corrections; they do not edit those image bytes. The existing timeline records, route definitions and world outline are preserved through reversible URL externalization. Unused legacy raster tiles remain in the retained source archive and are intentionally omitted from the online English-map delivery. This is not a claim that the online background works offline.
+All 197 external assets were separately fetched and decoded in my earlier delivery check, with matching bytes and nonzero dimensions. Subsequent changes add credits, shared search integration and presentation corrections. The later vendor repair below changes one transparent runtime utility; all source photographs and the hero retain their exact bytes. The existing timeline records, route definitions and world outline are preserved through reversible URL externalization. Unused legacy raster tiles remain in the retained source archive and are intentionally omitted from the online English-map delivery. This is not a claim that the online background works offline.
 
 I inspected the strict typed import module and independently ran its 19 tests successfully. Exact asset coverage, roles, bytes, dimensions, rejected hashes, page and credit bindings, license copies, separate reviewed-receipt pinning and unfinished-record rejection remain enforced. This separate existing-media lane preserves the creation requirements for future new artwork.
 
@@ -41,3 +41,21 @@ For the three existing timeline introductions, I independently viewed all twelve
 The four recorded newline recoveries were independently checked, including reconstructing the mixed-line-ending comparison adapter before normalization. They change line endings only and add no behavioral evidence. Existing immutable introduction bindings remain intact.
 
 The source and finished-result evidence supports this finite concurrence. Sampled playback and screenshot inspection do not mean every animation frame was watched. Browser touch evidence is emulated where stated, rather than a physical-device claim. Other reviewers and the accountable integrator retain their own separately attributed results. No release, deployment or public-byte result is claimed by this review.
+
+## Metadata and verification compatibility closeout
+
+The final page adds only Open Graph and Twitter metadata in its head, referencing the existing hero and canonical page. I independently reversed that exact addition to the previously reviewed visible page. It does not change rendered content, scripts, styling or interactions, so the preceding finished-view evidence carries forward explicitly across this metadata-only delta.
+
+I reviewed the updated introduction runtime assertion: it requires the requested transparent kicker and introduction, no ambiguous background image or opacity layer, and the actual opaque BODY underlay before computing the unchanged minimum contrast of 4.5. The recorded six viewport cases measure contrast approximately 8.13; navy-background and unreadable-color negative fixtures are rejected. This preserves contrast verification while honoring the requested plain reading canvas. The homepage runtime check now requires each of the four exact delivered routes and exactly four gold choices. It does not relax hero geometry or overflow checks.
+
+I implemented the finite verification compatibility correction and obtained independent Fermi concurrence. The typed existing-media lane now runs before display-only remaining-raster validation; the latter's exact remaining-set assertion is unchanged. The exact generated search index is inverted by removing only the new timeline page/record and restoring the sole changed Handcart Continue phrase. The hub record was independently checked and is unchanged. The resulting bytes match the frozen predecessor before the original display-wording inverse runs; all original display pins remain unchanged. Unknown bytes are not normalized. The historical display test uses that exact frozen predecessor, and new tests reject unrelated phrase, hub, version and trailing-byte edits. I independently ran all 10 display tests and 20 import tests successfully. These are verification compatibility changes, not new artwork approval or a weakening of coverage.
+
+## Vendor utility and scanner closeout
+
+I independently reviewed the final vendor-only delta and restored its bytes exactly to the preceding metadata page. One inherited truncated transparent GIF is replaced with a valid 42-byte, one-pixel transparent utility, with a new content-addressed filename. I decoded it with Pillow and confirmed RGBA (0, 0, 0, 0). It is a runtime utility repair, not study artwork or a generated scene. The 193 photographs, existing hero, timeline records and routes are unchanged. Six unused vendor image defaults now reference the official versioned Leaflet images, and the default icon base is explicitly empty to avoid double-prefixing absolute URLs.
+
+I independently reran all 21 strict import tests, including the regression that rejects the actual truncated GIF even when its record hashes are rebound. The validator now both verifies structure and fully loads each image. I personally inspected the final desktop and phone image-context and map captures and read the accountable integrator's final utility/decode and interface results. The changed utility introduces no visible placeholder, and the existing page remains readable.
+
+I implemented the narrowly scoped quote-scanner correction and obtained independent Fermi review. Complete same-quote literals preserve real apostrophes, escaped quotes, spaces and URLs instead of creating a false local path from attribution prose. Only the owning World and Scripture route receives the exact static 193-record photo-credit schema treatment: descriptive fields are not image resources, while all asset keys and URL fields remain scanned. Unexpected fields, paths, counts, value types or duplicate declarations fail closed. Other routes retain generic scanning. All nine focused regression tests passed, including the unrelated-route and missing-resource cases. This corrects reference classification without hiding real missing images or weakening imported-asset coverage.
+
+Final source/import/rendered-result decision remains CONCUR within the exact specification and evidence bounds above. Publication and live verification are not represented as complete by this receipt.

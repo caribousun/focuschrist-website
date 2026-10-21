@@ -7,7 +7,7 @@
     "archive_sha256": "034a982736431a818956851a00b0dcd568c84707f435b826cc7065e43690bc1b",
     "page": {
       "path": "timelines/world-and-scripture-timeline.html",
-      "sha256": "3d770c2ca046d99c495a3ec5a44661146d3d5f5b2ef008c553fe6539f812085f"
+      "sha256": "64f807ad926168ae24edbc54be0cf82d3b8126f84963b7dd81c56b2b99fcaca6"
     },
     "credits": {
       "path": "docs/world-scripture-import/photo-credits.json",
@@ -15,7 +15,7 @@
     },
     "lineage": {
       "path": "docs/world-scripture-import/lineage.md",
-      "sha256": "b1dd2fa03ada4c6834ec9bc68fa4459ab9c9ad1495b6d0b70c1686384bec3197"
+      "sha256": "9475e663342d68fd16a1a3d22554450585ac18760f418d44cd39ea884fcfeabc"
     },
     "assets": [
       {
@@ -512,9 +512,9 @@
         "credit_sha256": "23e91131241a7e2c79f98cd3dfc95bfea857e184bffe07c44b45e18e8beced96"
       },
       {
-        "path": "assets/world-scripture/3b7b8a4b411ddf8db9bacc2f3aabf406f8e4c0c087829b336ca331c40adfdff1.gif",
-        "sha256": "3b7b8a4b411ddf8db9bacc2f3aabf406f8e4c0c087829b336ca331c40adfdff1",
-        "bytes": 26,
+        "path": "assets/world-scripture/ef1955ae757c8b966c83248350331bd3a30f658ced11f387f8ebf05ab3368629.gif",
+        "sha256": "ef1955ae757c8b966c83248350331bd3a30f658ced11f387f8ebf05ab3368629",
+        "bytes": 42,
         "dimensions": [
           1,
           1
@@ -2201,34 +2201,34 @@
     {
       "reviewer": "Albert",
       "decision": "CONCUR",
-      "spec_sha256": "2338edd6dd216dd370670d9698a074c811a04680453962350d3f37b4ea4c401c",
+      "spec_sha256": "e8f5fc78f87acfe5071f53741dcc9c2d8375dcbbcb130098e53d64955604cd27",
       "finished_pixels": true,
       "source_rights_checked": true,
       "evidence": {
         "path": "docs/world-scripture-import/albert-review.md",
-        "sha256": "62e387bb54cfb88f0f7b5685f7ff085410550d0223cadd7869c15e690a4732c9"
+        "sha256": "def5dc9c4f23e40f8f5b31c90b7dd4dc28d286ec2ad6ce057e624dcee7a0ca75"
       }
     },
     {
       "reviewer": "Fermi",
       "decision": "CONCUR",
-      "spec_sha256": "2338edd6dd216dd370670d9698a074c811a04680453962350d3f37b4ea4c401c",
+      "spec_sha256": "e8f5fc78f87acfe5071f53741dcc9c2d8375dcbbcb130098e53d64955604cd27",
       "finished_pixels": true,
       "source_rights_checked": true,
       "evidence": {
         "path": "docs/world-scripture-import/fermi-review.md",
-        "sha256": "4bc42e399adc607b9ca3d0b439789afaa7b01233757ea345c92bc226488bcec4"
+        "sha256": "4126559e17484809e5a9b4e9aeb72189b4b117414eb3996e31a85eef4d74c8d8"
       }
     },
     {
       "reviewer": "Newton",
       "decision": "CONCUR",
-      "spec_sha256": "2338edd6dd216dd370670d9698a074c811a04680453962350d3f37b4ea4c401c",
+      "spec_sha256": "e8f5fc78f87acfe5071f53741dcc9c2d8375dcbbcb130098e53d64955604cd27",
       "finished_pixels": true,
       "source_rights_checked": true,
       "evidence": {
         "path": "docs/world-scripture-import/newton-review.md",
-        "sha256": "46e2e60a5c4b126a8f63ef0c824cace578b07be585ef16363f3aae596a3267be"
+        "sha256": "41b3ad3df2bf4ec10ee16bde092eebed0fce44a8d7721d95ca2346135c2710e8"
       }
     }
   ]

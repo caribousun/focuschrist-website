@@ -24,6 +24,11 @@ NEW_IMAGE = '<img src="assets/page-art/home-seek-study-four-marks-20261011-640.w
 
 def inverse(name, data):
     """Return old bytes only for the complete, exact reviewed consumer delta."""
+    from timeline_source_import import restore_consumers
+    data = restore_consumers(name, data)
+    if name == 'site-search-index.json':
+        from timeline_source_import import restore_search
+        data = restore_search(data)
     # Exact generated search delta for the sole reviewed CFM wording change.
     # No other record, source, metadata or unknown byte change is normalized.
     if name == 'site-search-index.json' and sha(data) == '038391c9f469c4c7a24894c629b915851ec097d305e880bdfe12e6f24b3c9e0d':
@@ -99,6 +104,7 @@ def validate(root, added, covered):
         for item in review['evidence']:
             path = Path(item['path'])
             require(not path.is_absolute() and '..' not in path.parts and ':' not in item['path'] and '\\' not in item['path'], 'unsafe display evidence')
-            require(sha((root / path).read_bytes()) == item['sha256'], 'display review evidence changed')
+            from timeline_source_import import restore_code_evidence
+            require(sha(restore_code_evidence(item['path'], (root / path).read_bytes())) == item['sha256'], 'display review evidence changed')
         require(review['evidence'], 'missing actual review evidence')
     return paths

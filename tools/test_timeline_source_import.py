@@ -4,6 +4,48 @@ from pathlib import Path
 import timeline_source_import as gate
 
 class TimelineImportTests(unittest.TestCase):
+    def test_reviewed_code_evidence_restores_only_exact_hooks(self):
+        root=Path(__file__).resolve().parents[1]
+        for name,binding in gate.REVIEWED_CODE_INVERSES.items():
+            data=(root/name).read_bytes()
+            self.assertEqual(hashlib.sha256(data).hexdigest(),binding['current'])
+            restored=gate.restore_code_evidence(name,data)
+            self.assertEqual(hashlib.sha256(restored).hexdigest(),binding['previous'])
+            for bad in [data+b'\n# unrelated edit',data.replace(b'restore_search',b'unknown_search',1)]:
+                self.assertNotEqual(bad,data)
+                self.assertEqual(gate.restore_code_evidence(name,bad),bad)
+            self.assertEqual(gate.restore_code_evidence('other/'+name,data),data)
+
+    def test_reviewed_consumer_inverses_preserve_historical_pins(self):
+        root=Path(__file__).resolve().parents[1]
+        for name,binding in gate.REVIEWED_CONSUMER_INVERSES.items():
+            data=(root/name).read_bytes()
+            self.assertEqual(hashlib.sha256(data).hexdigest(),binding['current'])
+            restored=gate.restore_consumers(name,data)
+            self.assertEqual(hashlib.sha256(restored).hexdigest(),binding['previous'])
+            self.assertEqual(gate.restore_consumers(name,restored),restored)
+            self.assertEqual(gate.restore_consumers('other/'+name,data),data)
+            edits=[data+b'\n# unknown',data.replace(b'transparent',b'red',1)] if name.endswith('.css') else [data+b' ',data.replace(b'Continue <',b'Continue now <',1),data.replace(b'href=',b'data-href=',1),data.replace(b'20261020-intro-canvas-1',b'unknown-cache',1)]
+            for bad in edits:
+                self.assertNotEqual(bad,data)
+                self.assertEqual(gate.restore_consumers(name,bad),bad)
+
+    def test_exact_search_route_inverse_restores_frozen_predecessor(self):
+        data=(Path(__file__).resolve().parents[1]/'site-search-index.json').read_bytes()
+        restored=gate.restore_search(data)
+        self.assertEqual(hashlib.sha256(restored).hexdigest(),'038391c9f469c4c7a24894c629b915851ec097d305e880bdfe12e6f24b3c9e0d')
+        current=json.loads(data);prior=json.loads(restored)
+        route='/timelines/world-and-scripture-timeline.html'
+        self.assertEqual([p for p in current['pages'] if p!=route],prior['pages'])
+        records=[copy.deepcopy(r) for r in current['records'] if r.get('url')!=route]
+        handcart=next(r for r in records if r.get('url')=='/timelines/willie-and-martin-handcart-map.html')
+        handcart['text']=handcart['text'].replace('dates. Continue Two companies','dates. Continue below Two companies',1)
+        self.assertEqual(records,prior['records'])
+        self.assertEqual([r for r in current['records'] if r.get('url')=='/timeline.html'],[r for r in prior['records'] if r.get('url')=='/timeline.html'])
+        for bad in [data+b' ',data.replace(b'Explore the October',b'Explore the November',1),data.replace(b'/timeline.html',b'/unknown.html',1),data.replace(b'"version":1',b'"version":2',1)]:
+            self.assertNotEqual(bad,data)
+            self.assertEqual(gate.restore_search(bad),bad)
+
     @classmethod
     def setUpClass(cls):
         cls.tmp=tempfile.TemporaryDirectory();cls.root=Path(cls.tmp.name)
@@ -31,6 +73,23 @@ class TimelineImportTests(unittest.TestCase):
         return gate.validate(self.root,self.paths,covered or set(),rejected or set(),expected,gate.canonical(record['reviews'] if repin else original['reviews']))
 
     def test_positive_exact_fixture(self):self.assertEqual(self.run_record(copy.deepcopy(self.record)),self.paths)
+
+    def test_header_valid_but_truncated_gif_rejected(self):
+        r=copy.deepcopy(self.record)
+        item=next(a for a in r['spec']['assets'] if a['path'].endswith('.gif'))
+        old=item['path'];raw=bytes.fromhex('4749463839610100010000ff002c00000000010001000002003b')
+        digest=hashlib.sha256(raw).hexdigest();name='assets/world-scripture/'+digest+'.gif'
+        (self.root/name).write_bytes(raw)
+        page=self.root/gate.PAGE;saved=page.read_bytes();paths=self.paths
+        try:
+            page.write_bytes(saved.replace(old.encode(),name.encode()))
+            item.update(path=name,sha256=digest,bytes=len(raw),dimensions=[1,1])
+            r['spec']['page']['sha256']=hashlib.sha256(page.read_bytes()).hexdigest()
+            self.paths=(paths-{old})|{name}
+            with self.assertRaisesRegex(OSError,'truncated'):
+                self.run_record(r,repin=True)
+        finally:
+            self.paths=paths;page.write_bytes(saved);(self.root/name).unlink()
 
     def test_pending_cannot_pass(self):
         r=copy.deepcopy(self.record);r['status']='PENDING_FINISHED_REVIEW'

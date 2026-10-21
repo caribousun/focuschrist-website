@@ -41,6 +41,7 @@ jobs:
         run: |
           python -m unittest discover -s tools -p test_artwork_creation_gate.py
           python -m unittest discover -s tools -p test_timeline_source_import.py
+          python -m unittest discover -s tools -p test_script_image_urls.py
           python -m unittest discover -s tools -p test_watch_thumbnail_delivery.py
           python -m unittest discover -s tools -p test_artwork_owner_closure.py
           python -m unittest discover -s tools -p test_history_hero_build_gate.py
