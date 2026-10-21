@@ -481,6 +481,11 @@ def run(root, mode='release', scene=None, page_overrides=None):
     # registered record or any named display raster still requires the full gate.
     if (root / 'docs/image-delivery-20261019.json').exists() or added & {row['path'] for row in DISPLAY_ASSETS}:
         covered |= validate_display_delivery(root, added, covered)
+    # Exact existing photographs/selected hero/vendor probes are imported media,
+    # never retroactively represented as newly generated artwork preflight.
+    from timeline_source_import import MANIFEST as TIMELINE_IMPORT, validate as validate_timeline_import
+    if (root / TIMELINE_IMPORT).exists() or any(p.startswith('assets/world-scripture/') for p in added):
+        covered |= validate_timeline_import(root, added, covered, rejected)
     require(added == covered, 'New artwork missing exact review coverage: ' + ', '.join(sorted(added - covered)))
     if creations or historical or corrections or seasonal or four_scene or answers_six or six_scene or gabriel or three:
         for name in inventory:

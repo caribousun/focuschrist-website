@@ -27,11 +27,11 @@ body.fc-timeline-experience .timeline-mobile [data-timeline-pane="map"]{border:1
 body.fc-timeline-experience .timeline-life-hero{display:block;position:relative;width:100%;height:auto;min-height:0;aspect-ratio:2048/684;overflow:hidden;background:#10252d}
 body.fc-timeline-experience .timeline-life-hero picture{display:block;position:absolute;inset:0}
 body.fc-timeline-experience .timeline-life-hero img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
-body.fc-timeline-experience .timeline-life-intro{box-sizing:border-box;min-height:max(0px,calc(100dvh - 52px - 33.3984375vw + 8px));padding:clamp(8px,1.25dvh,14px) 0 24px;background:#10252d}
+body.fc-timeline-experience .timeline-life-intro{box-sizing:border-box;min-height:max(0px,calc(100dvh - 52px - 33.3984375vw + 8px));padding:clamp(8px,1.25dvh,14px) 0 24px;background:transparent}
 body.fc-timeline-experience .timeline-life-intro h1{font-size:clamp(2.05rem,3.7dvh,2.95rem);line-height:1.12}
-body.fc-timeline-experience .timeline-life-intro .kicker{color:#f0c36a;background:#10252d;line-height:1.5}
-body.fc-timeline-experience .timeline-history-opening-copy{background:#10252d;border-radius:14px;padding:24px; margin-block:24px;max-width:1080px}
-body.fc-timeline-experience .timeline-history-opening-copy .kicker{color:#f0c36a;background:#10252d;line-height:1.5}
+body.fc-timeline-experience .timeline-life-intro .kicker{color:#f0c36a;background:transparent;line-height:1.5}
+body.fc-timeline-experience .timeline-history-opening-copy{background:transparent;border-radius:14px;padding:24px; margin-block:24px;max-width:1080px}
+body.fc-timeline-experience .timeline-history-opening-copy .kicker{color:#f0c36a;background:transparent;line-height:1.5}
 @media(max-width:1020px){body.fc-timeline-experience .timeline-life-intro{min-height:max(0px,calc(100dvh - 62px - 33.3984375vw + 8px))}}
 @media(max-width:700px){
  body.fc-timeline-experience .timeline-life-hero{aspect-ratio:auto;height:max(180px,min(115vw,600px,calc(100svh - 62px - 280px)))}
