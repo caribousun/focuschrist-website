@@ -430,7 +430,16 @@ def before_temple_menu_rows(data):
     prior = data[:-len(TEMPLE_MENU_APPENDIX)]
     return prior if hashlib.sha256(prior).hexdigest() == OWNER_20260929_STYLES['temples-history.css'][0] else data
 
+def before_reviewed_timeline_release(name, data):
+    from timeline_source_import import restore_consumers
+    data = restore_consumers(name, data)
+    if name == 'timeline.css' and hashlib.sha256(data).hexdigest() == '4a1a9643a4e6ecce611712028460106fcb40e40d4b43153058b7a67aa06c1412':
+        data = data.replace(b'.fc-timeline-choices {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;width:100%;max-width:900px;margin:0 auto;}', b'.fc-timeline-choices {gap:16px; width:100%; margin:0 auto;}').replace(b'grid-template-columns:minmax(0,1fr);align-items:stretch;', b'flex-direction:column;align-items:stretch;')
+        assert hashlib.sha256(data).hexdigest() == SCOPED_INTERFACE_STYLES['timeline.css'][0]
+    return data
+
 def reviewed_owner_20260929_style(name, data):
+    data = before_reviewed_timeline_release(name, data)
     if name == 'unified-opening.css':
         from test_opening_composition_binding import assert_css
         try:
@@ -502,6 +511,7 @@ def reviewed_journey_bottom_navigation(data):
     return hashlib.sha256(data[:-len(JOURNEY_BOTTOM_NAV_APPENDIX)]).hexdigest() == OWNER_20260929_STYLES['timeline-workspace.css'][0]
 
 def reviewed_scoped_interface_style(name, data):
+    data = before_reviewed_timeline_release(name, data)
     if name == 'guided-studies.css': return reviewed_guided_reading_style(data)
     if name in CURRENT_REVIEWED_STYLE_INVERSES and hashlib.sha256(data).hexdigest() != CURRENT_REVIEWED_STYLE_INVERSES[name][0]: return False
     data = before_current_reviewed_style(name, data)
@@ -547,6 +557,10 @@ RELEASE_STYLE_BINDINGS = {
 
 def release_style_binding_allowed(name, page, tags):
     owners, expected = RELEASE_STYLE_BINDINGS[name]
+    if name == 'timeline-experiences.css' and page in owners:
+        from timeline_source_import import restore_consumers
+        raw=(ROOT/page).read_bytes()
+        if restore_consumers(page,raw) != raw: expected = '../timeline-experiences.css?v=20261020-intro-canvas-1'
     if name == 'history-stories.css' and page == 'history/emma-hale-smith.html': expected = '../history-stories.css?v=20261008-standard-body-1'
     refs = [a.get('href', '') for t, a in tags if t == 'link' and a.get('rel') == 'stylesheet' and name in a.get('href', '')]
     return refs == ([expected] if page in owners else [])
@@ -556,6 +570,10 @@ def release_style_binding_self_test():
         tags = lambda refs: [('link', {'rel': 'stylesheet', 'href': ref}) for ref in refs]
         for page in owners:
             expected = '../history-stories.css?v=20261008-standard-body-1' if name == 'history-stories.css' and page == 'history/emma-hale-smith.html' else RELEASE_STYLE_BINDINGS[name][1]
+            if name == 'timeline-experiences.css':
+                from timeline_source_import import restore_consumers
+                raw=(ROOT/page).read_bytes()
+                if restore_consumers(page,raw) != raw: expected='../timeline-experiences.css?v=20261020-intro-canvas-1'
             assert release_style_binding_allowed(name, page, tags([expected]))
             stale = expected.split('?')[0] + '?v=stale'
             for refs in ([], [stale], [expected + '-unknown'], [expected.split('?')[0]], [expected, expected], [expected, stale], ['wrong/' + expected]):

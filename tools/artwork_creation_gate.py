@@ -476,9 +476,13 @@ def run(root, mode='release', scene=None, page_overrides=None):
     covered |= bednar
     originals |= bednar_hashes
     original_pixels |= bednar_pixels
+    # Exact existing photographs/selected hero/vendor probes are imported media,
+    # never retroactively represented as newly generated artwork preflight.
+    from timeline_source_import import MANIFEST as TIMELINE_IMPORT, validate as validate_timeline_import
+    if (root / TIMELINE_IMPORT).exists() or any(p.startswith('assets/world-scripture/') for p in added):
+        covered |= validate_timeline_import(root, added, covered, rejected)
     from artwork_display_delivery import ASSETS as DISPLAY_ASSETS, validate as validate_display_delivery
-    # Synthetic independent sites need no production delivery family. Any
-    # registered record or any named display raster still requires the full gate.
+    # The display family still owns exactly the remaining added rasters.
     if (root / 'docs/image-delivery-20261019.json').exists() or added & {row['path'] for row in DISPLAY_ASSETS}:
         covered |= validate_display_delivery(root, added, covered)
     require(added == covered, 'New artwork missing exact review coverage: ' + ', '.join(sorted(added - covered)))

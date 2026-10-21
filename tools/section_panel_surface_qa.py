@@ -1,5 +1,5 @@
 """Inventory named panel surfaces; reject accidental geometry/image/control styling."""
-import collections, json, re, sys
+import collections, hashlib, json, re, sys
 from pathlib import Path
 from urllib.parse import urlsplit, parse_qs
 import xml.etree.ElementTree as ET
@@ -8,6 +8,16 @@ ROOT=Path(__file__).resolve().parents[1]
 CONFIG=ROOT/'docs/section-panel-surfaces.json'
 INVENTORY=ROOT/'docs/section-panel-inventory.json'
 PATTERN=re.compile(r'card|panel|callout|reflection|note|tile|pathway')
+STANDALONE_ROUTE='timelines/world-and-scripture-timeline.html'
+STANDALONE_SHA='d427e7f8e578b880a6b512bdfbe9b455c9192026a7e9e80893afc6559c8f6494'
+
+def assert_standalone(route, data):
+    assert route == STANDALONE_ROUTE, 'Unknown standalone route'
+    assert hashlib.sha256(data).hexdigest() == STANDALONE_SHA, 'Standalone review binding drift'
+    text=data.decode('utf-8')
+    for token in ('class="topsec"', 'id="top"', '11467c16130c032b79654dc22de4bf55abdafed6e546967b320b56c6f54444fe.webp', '/site-search.css?v=20260929-result-hitbox-1', '/site-search.js?v=20260919-focused-answers-1', '.panelsub{', '.cards{', '.mapnote{'):
+        assert token in text, 'Standalone reviewed component missing: '+token
+
 
 def canonical():
     return sorted({urlsplit(e.text).path.lstrip('/') or 'index.html'
@@ -112,6 +122,9 @@ def check(config,actual):
     for columns in ('repeat(4, minmax(0, 1fr))','repeat(2, minmax(0, 1fr))','1fr'):
         assert re.search(r'\.fc-missionary-work-grid\s*\{[^{}]*grid-template-columns:\s*'+re.escape(columns)+r'\s*;',mission),'Mission responsive columns changed'
     for p in actual['canonical_pages']:
+        if p == STANDALONE_ROUTE:
+            assert_standalone(p,(ROOT/p).read_bytes())
+            continue
         d=Document();d.feed((ROOT/p).read_text(encoding='utf-8'))
         links=[n.attrs.get('href','') for n in d.root.walk() if n.tag=='link' and urlsplit(n.attrs.get('href','')).path.endswith('site-system.css')]
         assert len(links)==1 and parse_qs(urlsplit(links[0]).query).get('v')==[config['version']],p+' missing current shared stylesheet'

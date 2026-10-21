@@ -26,7 +26,10 @@ class DisplayDelivery(unittest.TestCase):
 
     def test_search_inverse_is_single_reviewed_phrase_and_rejects_other_changes(self):
         import json
-        data=(ROOT/'site-search-index.json').read_bytes()
+        from timeline_source_import import restore_search
+        # Freeze the predecessor fixture for this historical CFM-only inverse.
+        data=restore_search((ROOT/'site-search-index.json').read_bytes())
+        self.assertEqual(hashlib.sha256(data).hexdigest(),'038391c9f469c4c7a24894c629b915851ec097d305e880bdfe12e6f24b3c9e0d')
         restored=delivery.inverse('site-search-index.json',data)
         current=json.loads(data);prior=json.loads(restored)
         self.assertEqual(current['pages'],prior['pages'])

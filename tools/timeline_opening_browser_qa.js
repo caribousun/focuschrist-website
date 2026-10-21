@@ -17,7 +17,17 @@ module.exports=async function(page,origin,out){
    }
    if(kind==='history'){
     assert(r.image.src.endsWith('assets/timelines/church-history-grove.webp'));
-    r.kicker=await page.locator('.fc-page-intro .kicker').evaluate(n=>{const c=getComputedStyle(n);return {color:c.color,background:c.backgroundColor,text:n.textContent};});const rgb=s=>s.match(/[\d.]+/g).map(Number),fg=rgb(r.kicker.color),bg=rgb(r.kicker.background);assert(bg.length===3||bg[3]===1,'Kicker uses explicit opaque contrast surface');const lum=c=>c.slice(0,3).map(x=>x/255).map(x=>x<=.04045?x/12.92:((x+.055)/1.055)**2.4).reduce((a,x,i)=>a+x*[.2126,.7152,.0722][i],0);r.contrast=(Math.max(lum(fg),lum(bg))+.05)/(Math.min(lum(fg),lum(bg))+.05);assert(r.contrast>=4.5,'History kicker has readable normal-text contrast');
+    r.kicker=await page.locator('.fc-page-intro .kicker').evaluate(n=>{
+     const c=getComputedStyle(n),layers=[];let e=n;
+     while(e){const s=getComputedStyle(e);layers.push({tag:e.tagName,color:s.backgroundColor,image:s.backgroundImage,opacity:s.opacity});if(e===document.body)break;e=e.parentElement;}
+     return {color:c.color,background:c.backgroundColor,text:n.textContent,introBackground:getComputedStyle(n.closest('.fc-page-intro')).backgroundColor,layers};
+    });const rgb=s=>s.match(/[\d.]+/g).map(Number),fg=rgb(r.kicker.color);
+    assert.equal(rgb(r.kicker.background)[3],0,'Owner-requested kicker canvas remains transparent');
+    assert.equal(rgb(r.kicker.introBackground)[3],0,'Owner-requested introduction canvas remains transparent');
+    assert(r.kicker.layers.every(x=>x.image==='none'&&Number(x.opacity)===1),'Contrast is measured on an unambiguous uncomposited canvas');
+    const underlay=r.kicker.layers.find(x=>{const c=rgb(x.color);return c.length===3||c[3]===1;});
+    assert(underlay&&underlay.tag==='BODY','Transparent introduction uses the actual opaque page canvas');
+    const bg=rgb(underlay.color);const lum=c=>c.slice(0,3).map(x=>x/255).map(x=>x<=.04045?x/12.92:((x+.055)/1.055)**2.4).reduce((a,x,i)=>a+x*[.2126,.7152,.0722][i],0);r.contrast=(Math.max(lum(fg),lum(bg))+.05)/(Math.min(lum(fg),lum(bg))+.05);assert(r.contrast>=4.5,'History kicker has readable normal-text contrast');
    }
    {
     const hero=page.locator('.fc-visual-hero'),study={life:'../answers/jesus-christ-latter-day-saint-beliefs.html#nested-page-title',history:'../church-history.html#history-first-vision-title',handcart:'../pioneers.html#pioneer-page-title'}[kind],fallback={life:'../assets/heroes/topics/jesus-full.webp',history:'../assets/timelines/church-history-grove.webp',handcart:'../assets/heroes/pioneers.webp'}[kind];

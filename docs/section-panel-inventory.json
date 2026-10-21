@@ -130,6 +130,7 @@
     "timelines/latter-day-saint-church-history-timeline.html",
     "timelines/life-of-christ-journey-map.html",
     "timelines/willie-and-martin-handcart-map.html",
+    "timelines/world-and-scripture-timeline.html",
     "watch.html"
   ],
   "candidate_classes": {
@@ -187,6 +188,17 @@
       ],
       "disposition": "coordinated_stylesheet_owner",
       "reason": "Merlin standalone timeline experience, preserved by Wyatt on 2026-10-02; scoped inline design and timeline runtime checks own this surface."
+    },
+    "cards": {
+      "count": 1,
+      "pages": [
+        "timelines/world-and-scripture-timeline.html"
+      ],
+      "tags": [
+        "div"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "World and Scripture timeline Detailed-view grid layout container; individual card surfaces retain their existing delegated inline owner."
     },
     "cfm-library-card": {
       "count": 9,
@@ -1405,6 +1417,17 @@
       "disposition": "excluded_with_reason",
       "reason": "Life of Christ map explanatory text for visual pin separation; plain reading copy, not a card or panel."
     },
+    "mapnote": {
+      "count": 1,
+      "pages": [
+        "timelines/world-and-scripture-timeline.html"
+      ],
+      "tags": [
+        "p"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "World and Scripture timeline geographic provenance paragraph beneath the map; inline map annotation styling and tested scenario disclosure, not a study section panel."
+    },
     "note": {
       "count": 2,
       "pages": [
@@ -1417,15 +1440,27 @@
       "reason": "Merlin Life of Christ standalone experience, preserved by Wyatt on 2026-10-02; scoped inline design and dedicated Timeline runtime checks own this surface."
     },
     "panel": {
-      "count": 1,
+      "count": 2,
       "pages": [
-        "timelines/life-of-christ-journey-map.html"
+        "timelines/life-of-christ-journey-map.html",
+        "timelines/world-and-scripture-timeline.html"
       ],
       "tags": [
         "div"
       ],
       "disposition": "coordinated_stylesheet_owner",
       "reason": "Merlin Life of Christ standalone experience, preserved by Wyatt on 2026-10-02; scoped inline design and dedicated Timeline runtime checks own this surface."
+    },
+    "panelsub": {
+      "count": 1,
+      "pages": [
+        "timelines/world-and-scripture-timeline.html"
+      ],
+      "tags": [
+        "p"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "World and Scripture timeline panel subtitle paragraph; typography-only text, not an independent panel surface."
     },
     "pioneer-art-card": {
       "count": 10,
@@ -1776,7 +1811,8 @@
       "pages": [
         "timelines/latter-day-saint-church-history-timeline.html",
         "timelines/life-of-christ-journey-map.html",
-        "timelines/willie-and-martin-handcart-map.html"
+        "timelines/willie-and-martin-handcart-map.html",
+        "timelines/world-and-scripture-timeline.html"
       ],
       "disposition": "excluded_with_reason",
       "reason": "Timeline filter controls reset their mobile border, radius and background to zero/none; this is a control group, not a section panel. Requires the three Timeline runtime profiles and rendered review."
@@ -2324,6 +2360,7 @@
         "timelines/latter-day-saint-church-history-timeline.html",
         "timelines/life-of-christ-journey-map.html",
         "timelines/willie-and-martin-handcart-map.html",
+        "timelines/world-and-scripture-timeline.html",
         "watch.html"
       ],
       "disposition": "excluded_with_reason",
@@ -2506,7 +2543,8 @@
         "jesus-christ/redeemer-and-risen-lord.html",
         "jesus-christ/restoration-and-today.html",
         "jesus-christ/risen-savior-in-the-book-of-mormon.html",
-        "jesus-christ/teachings-and-parables.html"
+        "jesus-christ/teachings-and-parables.html",
+        "timelines/world-and-scripture-timeline.html"
       ],
       "disposition": "excluded_with_reason",
       "reason": "Accessibility navigation control."
@@ -2770,6 +2808,7 @@
         "timelines/latter-day-saint-church-history-timeline.html",
         "timelines/life-of-christ-journey-map.html",
         "timelines/willie-and-martin-handcart-map.html",
+        "timelines/world-and-scripture-timeline.html",
         "watch.html"
       ],
       "disposition": "excluded_with_reason",

@@ -33,6 +33,8 @@ jobs:
       - name: Reject unreviewed or stale new artwork
         run: |
           python -m unittest discover -s tools -p test_artwork_creation_gate.py
+          python -m unittest discover -s tools -p test_timeline_source_import.py
+          python -m unittest discover -s tools -p test_script_image_urls.py
           python -m unittest discover -s tools -p test_watch_thumbnail_delivery.py
           python -m unittest discover -s tools -p test_display_delivery.py
           python -m unittest discover -s tools -p test_artwork_owner_closure.py
@@ -111,6 +113,7 @@ jobs:
       - name: Run focusChrist unified experience QA
         run: |
           python tools/unified_experience_qa.py
+          python -m unittest discover -s tools -p test_section_panel_standalone.py
           python tools/section_panel_surface_qa.py --self-test
 
       - name: Run site-wide artwork detail QA

@@ -5,6 +5,7 @@ from urllib.parse import urlsplit
 import xml.etree.ElementTree as ET
 from bs4 import BeautifulSoup
 from hero_introductions_qa import ROUTES as INTRODUCTION_ROUTES
+from section_panel_surface_qa import STANDALONE_ROUTE, assert_standalone
 
 ROOT = Path(__file__).resolve().parents[1]
 HERO_ROUTES = frozenset(p['path'] for p in json.loads((ROOT / 'docs/unified-opening-inventory.json').read_text())['pages'] if p['hero'])
@@ -25,9 +26,9 @@ def assert_common_version(route, doc):
 
 inventory = json.loads((ROOT / 'docs/unified-opening-inventory.json').read_text(encoding='utf8'))
 pages = [urlsplit(n.text).path.lstrip('/') or 'index.html' for n in ET.parse(ROOT / 'sitemap.xml').findall('{*}url/{*}loc')]
-assert len(pages) == len(set(pages)) == 131
+assert len(pages) == len(set(pages)) == 132
 assert len(inventory['pages']) == len({p['path'] for p in inventory['pages']}) == 130
-assert set(pages) == {p['path'] for p in inventory['pages']} | {'history/emma-hale-smith.html'}
+assert set(pages) == {p['path'] for p in inventory['pages']} | {'history/emma-hale-smith.html', STANDALONE_ROUTE}
 assert sum(bool(p['hero']) for p in inventory['pages']) == inventory['hero_count']
 assert sum(not p['hero'] for p in inventory['pages']) == inventory['excluded_count']
 assert inventory['hero_count'] == 51 and inventory['excluded_count'] == 79
@@ -39,6 +40,11 @@ for record in [*inventory['pages'], {'path': 'history/emma-hale-smith.html', 'he
     actual = bool(doc.select_one('.fc-visual-hero,[data-covenant-hero-slot],.cfm-desktop-picture,.gc-intro-visual'))
     assert actual == record['hero'], record['path'] + ': opening hero inventory drift'
     assert_common_version(record['path'], doc)
+# The separately reviewed standalone opening embeds its own header controller.
+assert_standalone(STANDALONE_ROUTE, (ROOT / STANDALONE_ROUTE).read_bytes())
+standalone_doc = BeautifulSoup((ROOT / STANDALONE_ROUTE).read_text(encoding='utf8'), 'html.parser')
+assert standalone_doc.select_one('section.topsec#top img[alt]'), 'Standalone illustrated opening missing'
+assert [x.get('src') for x in standalone_doc.select('script[src]')] == ['/site-search.js?v=20260919-focused-answers-1']
 common = (ROOT / 'site-common.js').read_text(encoding='utf8')
 assert common.count("relativeAssetHref('unified-opening.css?v=20261006-balanced-opening-1')") == 1
 assert common.count("relativeAssetHref('unified-opening.js?v=20261006-introductions-1')") == 1
@@ -46,4 +52,4 @@ script = (ROOT / 'unified-opening.js').read_text(encoding='utf8')
 assert '\\u2193' in script and 'Ãƒ' not in script, 'Continue arrow encoding'
 assert "opening.matches('.jj-opening') ? []" in script, 'Covenant invitation must remain in opening'
 assert 'getBoundingClientRect().bottom + scrollY' in script, 'Fit must use document coordinates'
-print('UNIFIED OPENING STATIC PASS: 131 canonical routes, 52 illustrated openings, 79 explicit exclusions, current shared versions and protected Covenant invitation')
+print('UNIFIED OPENING STATIC PASS: 132 canonical routes, 53 illustrated openings, 79 explicit exclusions, current shared versions and protected Covenant invitation')

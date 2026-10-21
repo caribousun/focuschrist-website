@@ -151,7 +151,10 @@
     "fc-companion-notes": "Blank handwritten-note area inside four printable companions, owned by guided-studies.css; border-block and writing height are print affordances, not a filled section panel.",
     "timeline-coordinate-note": "Inline coordinate/separator spans in the Life story paragraph; typography only, without an enclosing surface, border or fill. Timeline reader contrast and responsive QA own this text.",
     "fc-story-reflection": "Single reflection paragraph and top divider within the three attributed stories; no independent filled or rounded panel.",
-    "fc-answers-unique-art--card": "Artwork figure; preserve framing and reviewed Answers picture-study behavior."
+    "fc-answers-unique-art--card": "Artwork figure; preserve framing and reviewed Answers picture-study behavior.",
+    "panelsub": "World and Scripture timeline panel subtitle paragraph; typography-only text, not an independent panel surface.",
+    "cards": "World and Scripture timeline Detailed-view grid layout container; individual card surfaces retain their existing delegated inline owner.",
+    "mapnote": "World and Scripture timeline geographic provenance paragraph beneath the map; inline map annotation styling and tested scenario disclosure, not a study section panel."
   },
   "runtime_selectors": {
     ".cfm-month": {

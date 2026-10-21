@@ -158,6 +158,30 @@ def validated_record(route, registry=None):
     return record
 
 
+def restore_timeline_continue_label(route, text, expected, start, end):
+    """Invert only Wyatt's exact three-route Continue wording correction.
+
+    The original introduction/nav bindings stay immutable. This accepts the
+    already reviewed opening or its one exact authored label replacement;
+    no href, geometry, prose, second cue or unknown route is normalized.
+    """
+    targets = {
+        'timelines/life-of-christ-journey-map.html': '#life-journey-overview',
+        'timelines/willie-and-martin-handcart-map.html': '#handcart-journey-overview',
+        'timelines/latter-day-saint-church-history-timeline.html': '#history-journey-overview',
+    }
+    assert route in targets, 'Unregistered timeline label inverse'
+    previous = '<a class="fc-scroll-cue timeline-opening-continue" href="' + targets[route] + '">Continue below <span aria-hidden="true">&#8595;</span></a>'
+    current = previous.replace('Continue below ', 'Continue ', 1)
+    assert expected.count(previous) == 1, 'Original authored cue is not uniquely bound'
+    opening = text[start:end]
+    if opening == expected:
+        return text
+    assert opening.count(current) == 1, 'Current authored Continue is missing or duplicated'
+    assert opening == expected.replace(previous, current, 1), 'Unreviewed timeline label or opening delta'
+    return text[:start] + expected + text[end:]
+
+
 def restore_timeline_navigation(route, text, record):
     """Invert only the three owner-authorized navigation moves, not prose edits.
 
@@ -178,6 +202,8 @@ def restore_timeline_navigation(route, text, record):
     expected = record['new_opening'].replace(line, '', 1)
     assert digest(expected) == binding['current_opening_sha256']
     start, end = opening_range(route, text)
+    text = restore_timeline_continue_label(route, text, expected, start, end)
+    end = start + len(expected)
     assert text[start:end] == expected, route + ': unreviewed timeline opening change'
     assert text.count(nav) == 1, route + ': timeline navigation missing or duplicated'
     soup = BeautifulSoup(text, 'html.parser')
