@@ -196,7 +196,9 @@ const server = http.createServer((req, res) => {
     await gallery.close();
     const oldSkipPage = await browser.newPage({viewport:{width:390,height:844},reducedMotion:'reduce'});
     await oldSkipPage.route(url => url.protocol === 'https:', route => route.abort());
-    const oldSkip = currentHeader.replace("window.addEventListener('click', function (event) {", "window.addEventListener('click', function (event) { if (event.defaultPrevented) return;");
+    // Target the landing listener, not the separate Continue cancellation listener.
+    const oldSkip = currentHeader.replace(/window\.addEventListener\('click', function \(event\) \{(\r?\n)([ ]*)if \(event\.button/,
+      "window.addEventListener('click', function (event) {$1$2if (event.defaultPrevented) return;$1$2if (event.button");
     assert.notEqual(oldSkip, currentHeader);
     await oldSkipPage.route('**/header-scroll.js*', route => route.fulfill({contentType:'text/javascript',body:oldSkip}));
     await oldSkipPage.goto(`${base}/timelines/willie-and-martin-handcart-map.html`, {waitUntil:'load'});
