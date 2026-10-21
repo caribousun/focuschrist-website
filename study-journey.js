@@ -25,7 +25,7 @@
     function scrollToTarget(target, focusInput, behaviorOverride) {
         if (!target) return;
         const top = target.getBoundingClientRect().top + window.scrollY - headerOffset();
-        window.scrollTo({ top: Math.max(0, top), behavior: behaviorOverride || (reducedMotion() ? 'auto' : 'smooth') });
+        window.scrollTo({ top: Math.max(0, top), behavior: behaviorOverride || 'instant' });
         if (focusInput) {
             window.setTimeout(function () {
                 const input = document.getElementById('userInput');

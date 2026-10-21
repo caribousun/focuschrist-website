@@ -706,7 +706,7 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:'Segoe UI',Taho
 .sitenav .links a:hover{color:var(--gold-strong)}
 .sitenav .links a.active{color:var(--gold-strong);text-decoration:underline;text-decoration-color:rgba(240,195,106,.75);text-underline-offset:7px}
 .sitenav .links a.pill{padding:9px 14px;border:1px solid rgba(240,195,106,.65);border-radius:999px;background:rgba(240,195,106,.12);color:var(--gold-strong);letter-spacing:.6px}
-html{scroll-behavior:smooth}
+html{scroll-behavior:auto}
 .topsec{display:flex;flex-direction:column;min-height:calc(100vh - 68px);min-height:calc(100dvh - 68px)}
 .heroband{line-height:0;height:min(300px,38vh);overflow:hidden;border-radius:14px}
 .heroband img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
@@ -3145,7 +3145,7 @@ eraJump.addEventListener("change", ()=>{
   }
   if (viewMode !== "river") setMode("river");
   const el = document.getElementById("era-" + k);
-  if (el) el.scrollIntoView({ behavior:"smooth", block:"start" });
+  if (el) el.scrollIntoView({ behavior:"instant", block:"start" });
   eraJump.value = "";
 });
 
@@ -3213,7 +3213,7 @@ function showDetail(e, navigation = {}){
     if (target) target.focus({preventScroll:true});
   } else if (navigation.related){ d.querySelector('h2').focus({preventScroll:true}); }
   if (viewMode === "map" && matchMedia("(max-width:900px)").matches) d.scrollIntoView({behavior:"instant",block:"center"});
-  else if (viewMode !== "map" && !navigation.restore) d.scrollIntoView({behavior:"smooth", block:"nearest"});
+  else if (viewMode !== "map" && !navigation.restore) d.scrollIntoView({behavior:"instant", block:"nearest"});
 }
 function syncCatUI(){
   document.querySelectorAll("[data-cat]").forEach(ch=> { const on = state.cats.has(ch.dataset.cat); ch.classList.toggle("on", on); ch.setAttribute("aria-pressed", on ? "true" : "false"); });
@@ -4538,5 +4538,6 @@ context.addEventListener('close',()=>{
 });
 })();</script>
 <script id="timeline-layout-controller">(function(){const summary=document.getElementById('workspaceFilterState'),scenario=document.getElementById('workspaceScenarioState');function sync(){const records=Array.from(document.querySelectorAll('#catChips button[data-cat]')).filter(b=>b.getAttribute('aria-pressed')==='true').map(b=>b.dataset.cat==='bom'?'Book of Mormon':b.dataset.cat==='bible'?'Bible':'World');const region=document.getElementById('regionSel');summary.textContent=(records.length===3?'All records':records.length?records.join(', '):'No records')+' · '+(region.options[region.selectedIndex]?.text||'All regions');const active=document.querySelector('#modelSeg button[aria-pressed="true"]');scenario.textContent='Book of Mormon geography: '+(active?active.textContent:'Both settings');}new MutationObserver(sync).observe(document.getElementById('catChips'),{subtree:true,attributes:true,attributeFilter:['aria-pressed']});new MutationObserver(sync).observe(document.getElementById('modelSeg'),{subtree:true,attributes:true,attributeFilter:['aria-pressed']});document.getElementById('regionSel').addEventListener('change',sync);sync();})();</script>
+<script src="/header-scroll.js?v=20261021-continue-motion-1"></script>
 </body>
 </html>

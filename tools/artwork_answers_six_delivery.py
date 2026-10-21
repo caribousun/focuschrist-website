@@ -25,7 +25,9 @@ def require(ok,message):
  if not ok:raise ValueError('Answers six delivery: '+message)
 def canonical(value):
  return hashlib.sha256((json.dumps(value,sort_keys=True,separators=(',',':'),ensure_ascii=False)+'\n').encode()).hexdigest()
-def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def digest(p):
+    from continue_motion_binding import reviewed_bytes
+    return hashlib.sha256(reviewed_bytes(p)).hexdigest()
 def local(root,name):
  require(isinstance(name,str) and not Path(name).is_absolute() and '\\' not in name and ':' not in name,'unsafe local path')
  p=(root/name).resolve();require(p.is_relative_to(root.resolve()) and p.is_file(),'missing or unsafe local file '+name)

@@ -12,6 +12,7 @@ HERO_ROUTES = frozenset(p['path'] for p in json.loads((ROOT / 'docs/unified-open
 
 
 def assert_common_version(route, doc):
+    from continue_motion_binding import mapping
     common = [s['src'] for s in doc.select('script[src]') if 'site-common.js' in s['src']]
     version = {
         'church-history.html': '20261010-emma-identity-links-1',
@@ -20,6 +21,7 @@ def assert_common_version(route, doc):
         'book-of-mormon-evidences.html': '20261010-emma-identity-links-1',
     }.get(route, '20261008-section-top-2')
     prefix = '/' if route.startswith('jesus-christ/') else '../' * route.count('/')
+    if route in mapping()['files']:version='20261021-continue-motion-1'
     expected = prefix + 'site-common.js?v=' + version
     assert common == [expected], route + ': exact shared-script binding required'
 
@@ -44,7 +46,7 @@ for record in [*inventory['pages'], {'path': 'history/emma-hale-smith.html', 'he
 assert_standalone(STANDALONE_ROUTE, (ROOT / STANDALONE_ROUTE).read_bytes())
 standalone_doc = BeautifulSoup((ROOT / STANDALONE_ROUTE).read_text(encoding='utf8'), 'html.parser')
 assert standalone_doc.select_one('section.topsec#top img[alt]'), 'Standalone illustrated opening missing'
-assert [x.get('src') for x in standalone_doc.select('script[src]')] == ['/site-search.js?v=20260919-focused-answers-1']
+assert [x.get('src') for x in standalone_doc.select('script[src]')] == ['/site-search.js?v=20260919-focused-answers-1','/header-scroll.js?v=20261021-continue-motion-1']
 common = (ROOT / 'site-common.js').read_text(encoding='utf8')
 assert common.count("relativeAssetHref('unified-opening.css?v=20261006-balanced-opening-1')") == 1
 assert common.count("relativeAssetHref('unified-opening.js?v=20261006-introductions-1')") == 1

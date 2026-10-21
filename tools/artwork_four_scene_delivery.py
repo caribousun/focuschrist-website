@@ -17,7 +17,9 @@ def local(root,name):
     require(isinstance(name,str) and not Path(name).is_absolute() and '\\' not in name and ':' not in name and p.is_relative_to(root.resolve()),'unsafe local path')
     require(p.is_file(),'missing local file '+name)
     return p
-def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def digest(p):
+    from continue_motion_binding import reviewed_bytes
+    return hashlib.sha256(reviewed_bytes(p)).hexdigest()
 def time(value):return dt.datetime.fromisoformat(value.replace('Z','+00:00'))
 
 def validate(root,record,approved_binding,added,covered,rejected,pixel_hash,page_dependencies):

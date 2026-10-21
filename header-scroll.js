@@ -61,6 +61,66 @@
         }
         return offset;
     }
+
+    // Only Continue controls animate. Ordinary navigation keeps an immediate landing.
+    var motionFrame = 0, motionToken = 0;
+    var immediateStyle = document.createElement('style');
+    immediateStyle.textContent = 'html,.fc-history-chat{scroll-behavior:auto!important}';
+    document.head.appendChild(immediateStyle);
+    function isContinue(link) {
+        return !!link && (link.matches('.fc-unified-continue,.fc-scroll-cue,.fc-mobile-scroll-cue,.fc-art-continue,.fc-covenant-continue,.timeline-opening-continue,.scrollcue') ||
+            (link.matches('.fc-button,.cta') && /^Continue(?:\s|$)/i.test(link.textContent.trim())));
+    }
+    function cancelMotion() {
+        motionToken++;
+        cancelAnimationFrame(motionFrame);
+    }
+    function continueTo(target, options) {
+        if (!target || !target.isConnected) return;
+        options = options || {};
+        cancelMotion(); cancelLanding();
+        var token = motionToken;
+        for (var parent = target.parentElement; parent; parent = parent.parentElement) {
+            if (parent.tagName === 'DETAILS') parent.open = true;
+        }
+        // Focus without scrolling so keyboard reading resumes at the destination.
+        if (options.focus !== false) {
+            if (!target.hasAttribute('tabindex')) {
+                target.setAttribute('tabindex', '-1');
+                target.addEventListener('blur', function () { target.removeAttribute('tabindex'); }, { once: true });
+            }
+            target.focus({ preventScroll: true });
+        }
+        var start = window.scrollY, started = performance.now();
+        var duration = matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 560;
+        function destination() {
+            var offset = typeof options.offset === 'function' ? options.offset() : options.offset;
+            if (offset == null) offset = Math.max(landingOffset(target, false), parseFloat(getComputedStyle(target).scrollMarginTop) || 0);
+            return Math.max(0, Math.min(window.scrollY + target.getBoundingClientRect().top - offset,
+                Math.max(0, document.documentElement.scrollHeight - window.innerHeight)));
+        }
+        function step(now) {
+            if (token !== motionToken || !target.isConnected || document.querySelector('dialog[open]')) return;
+            var progress = duration ? Math.min(1, (now - started) / duration) : 1;
+            var eased = progress < .5 ? 4 * progress * progress * progress : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+            window.scrollTo({ top: start + (destination() - start) * eased, behavior: 'instant' });
+            if (progress < 1) motionFrame = requestAnimationFrame(step);
+        }
+        if (duration) motionFrame = requestAnimationFrame(step); else step(started);
+    }
+    window.FocusContinueScroll = { to: continueTo, isContinue: isContinue, cancel: cancelMotion };
+    window.addEventListener('click', function (event) {
+        var link = event.target.closest && event.target.closest('a[href]');
+        if (link && isContinue(link)) cancelLanding();
+        else cancelMotion();
+    }, true);
+    ['wheel', 'touchstart', 'touchmove', 'pointerdown', 'popstate', 'hashchange', 'resize'].forEach(function (type) {
+        window.addEventListener(type, cancelMotion, { capture: true, passive: true });
+    });
+    window.addEventListener('keydown', function (event) {
+        if (['ArrowUp','ArrowDown','PageUp','PageDown','Home','End',' ','Tab','Escape'].indexOf(event.key) !== -1) cancelMotion();
+    }, true);
+
     function canAlign(target, generatedSkip, storyBookmark, askContentBookmark) {
         var dialogs = document.querySelectorAll('dialog[open], [role="dialog"][aria-modal="true"]');
         for (var i = 0; i < dialogs.length; i++) {
@@ -129,9 +189,7 @@
     }
 
     // Native navigation/history uses the shared instant root scroll behavior.
-    // After delegated controllers, softly reveal only a distant content destination.
-    var jumpToken = 0;
-    var fade = null;
+    // Continue alone animates after destination-specific controllers.
     window.addEventListener('click', function (event) {
         if (event.button || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
         var link = event.target.closest && event.target.closest('a[href]');
@@ -145,24 +203,19 @@
         // The generated skip control already focuses main and replaces history.
         // Correct only its landing; other prevented controllers retain ownership.
         var generatedSkip = link.getAttribute('data-focuschrist-skip-link') === 'true' && target.matches('main, [role="main"]');
-        if ((event.defaultPrevented && !generatedSkip) || (/\/ask\.html$/.test(location.pathname) && !generatedSkip && !isAskContentBookmark(url.hash))) return;
+        if (event.defaultPrevented && !generatedSkip) return;
+        if (!isContinue(link) && /\/ask\.html$/.test(location.pathname) && !generatedSkip && !isAskContentBookmark(url.hash)) return;
+        if (isContinue(link)) {
+            var continuation = targetForHash(url.hash);
+            if (!continuation) return;
+            event.preventDefault();
+            if (location.hash !== url.hash) history.pushState(null, '', url.hash);
+            continueTo(continuation);
+            return;
+        }
+        cancelMotion();
         alignLanding(url.hash, event, generatedSkip);
-        if (generatedSkip) return;
-        var distance = Math.abs(target.getBoundingClientRect().top);
-        if (distance <= Math.max(320, window.innerHeight / 2)) return;
-        var token = ++jumpToken;
-        requestAnimationFrame(function () {
-            requestAnimationFrame(function () {
-                if (token !== jumpToken) return;
-                // A chapter, disclosure or study-dialog controller may own this click.
-                if (event.defaultPrevented || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-                var content = target.closest('section, article') || target;
-                if (content.closest('.nav, dialog, [role="dialog"], [hidden]') || !content.getClientRects().length) return;
-                if (typeof content.animate !== 'function') return;
-                if (fade) fade.cancel();
-                fade = content.animate([{ opacity: 0.72 }, { opacity: 1 }], { duration: 200, easing: 'ease-out' });
-            });
-        });
+
     });
 
     window.addEventListener('scroll', schedule, { passive: true });

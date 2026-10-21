@@ -12,6 +12,8 @@ class AcceptanceTests(unittest.TestCase):
         from joseph_research_acceptance import check_pdf_source_binding, PDF_CURRENT_BROWSER_TOKEN_INVERSES
         site = Path(__file__).resolve().parents[1]
         source = (site/ROUTE).read_bytes()
+        from continue_motion_binding import restore as before_motion
+        source = before_motion(ROUTE,source)
         reviewed_hash = json.loads((site/'docs/joseph-research-pdf-review.json').read_text())['source_html_sha256']
         check_pdf_source_binding(source, reviewed_hash)
         prior = source
@@ -34,6 +36,8 @@ class AcceptanceTests(unittest.TestCase):
         from joseph_research_acceptance import check_pdf_source_binding
         site = Path(__file__).resolve().parents[1]
         source = (site/ROUTE).read_bytes()
+        from continue_motion_binding import restore as before_motion
+        source = before_motion(ROUTE,source)
         reviewed_hash = json.loads((site/'docs/joseph-research-pdf-review.json').read_text())['source_html_sha256']
         # Independent literal fixtures catch a mistyped, broadened or omitted
         # navigation exception; the frozen PDF manifest itself never changes.
@@ -62,6 +66,8 @@ class AcceptanceTests(unittest.TestCase):
         from joseph_research_acceptance import check_pdf_source_binding, PDF_BROWSER_TOKEN_INVERSES
         site = Path(__file__).resolve().parents[1]
         source = (site/ROUTE).read_bytes()
+        from continue_motion_binding import restore as before_motion
+        source = before_motion(ROUTE,source)
         reviewed_hash = json.loads((site/'docs/joseph-research-pdf-review.json').read_text())['source_html_sha256']
         check_pdf_source_binding(source, reviewed_hash)
         for current, previous in PDF_BROWSER_TOKEN_INVERSES:

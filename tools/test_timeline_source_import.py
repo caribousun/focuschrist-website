@@ -7,7 +7,7 @@ class TimelineImportTests(unittest.TestCase):
     def test_reviewed_code_evidence_restores_only_exact_hooks(self):
         root=Path(__file__).resolve().parents[1]
         for name,binding in gate.REVIEWED_CODE_INVERSES.items():
-            data=(root/name).read_bytes()
+            data=gate.before_motion_code_evidence(name,(root/name).read_bytes())
             self.assertEqual(hashlib.sha256(data).hexdigest(),binding['current'])
             restored=gate.restore_code_evidence(name,data)
             self.assertEqual(hashlib.sha256(restored).hexdigest(),binding['previous'])

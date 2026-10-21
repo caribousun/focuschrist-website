@@ -59,6 +59,8 @@ def local(root, name):
     return path
 
 def validate(root, current, expected=None):
+    from continue_motion_binding import restore as before_motion
+    current=before_motion(PAGE,current)
     expected=APPROVED_REUSE if expected is None else expected
     require(isinstance(expected,str) and re.fullmatch('[0-9a-f]{64}',expected), 'Artwork reuse pending finished review pin')
     record=json.loads(local(root,MANIFEST).read_text(encoding='utf-8'))

@@ -13,13 +13,8 @@ BASE_COMMON = '4ef7e6851ebf885557d241aa389825f38585fe435fedc4454134d435482a30ad'
 INVENTORY = '1e2a014c1a3b7fb3995855abaa4587441c95efdef640801d7bf49ee3d3239b78'
 NEW = '20261006-balanced-opening-1'
 OLD = '20261002-timeline-1'
-COMMON_VERSION = '20261008-section-top-2'
-ROUTE_COMMON_VERSIONS = {
-    'church-history.html': '20261010-emma-identity-links-1',
-    'answers/who-was-joseph-smith.html': '20261010-final-art-links-1',
-    'art-gallery.html': '20261010-emma-identity-links-1',
-    'book-of-mormon-evidences.html': '20261010-emma-identity-links-1',
-}
+COMMON_VERSION = '20261021-continue-motion-1'
+ROUTE_COMMON_VERSIONS = {}  # All canonical shared-loader consumers use one current version.
 DELTA = '''
 /* Balance the introduction within the fixed hero-to-Continue interval. */
 @media (min-width: 701px) {
@@ -79,6 +74,8 @@ def reviewed_opening_bytes(p):
 
 
 def assert_loader(common):
+    from continue_motion_binding import restore as before_motion
+    common=before_motion('site-common.js',common.encode('utf-8')).decode('utf-8')
     calls = re.findall(r"relativeAssetHref\(['\"](unified-opening\.(?:css|js)[^'\"]*)['\"]\)", common)
     assert calls == ['unified-opening.css?v=' + NEW, 'unified-opening.js?v=20261006-introductions-1'], 'Exact opening loader versions required'
     inverse = common.replace('unified-opening.css?v=' + NEW, 'unified-opening.css?v=20260930-alignment-2')

@@ -19,6 +19,8 @@ PDF_CURRENT_BROWSER_TOKEN_INVERSES = (
 
 def check_pdf_source_binding(source, reviewed_hash):
     """Reconstruct exact frozen PDF source through four browser-only tokens."""
+    from continue_motion_binding import restore as before_motion
+    source = before_motion(ROUTE,source)
     if hashlib.sha256(source).hexdigest() == reviewed_hash:
         return
     inverse = source

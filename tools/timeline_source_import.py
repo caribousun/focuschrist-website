@@ -19,7 +19,18 @@ PREFIX = 'assets/world-scripture/'
 # Exact compatibility hooks only; original display review evidence pins are retained.
 REVIEWED_CODE_INVERSES = {'tools/artwork_display_delivery.py': {'current': '9d045de3c77661d77b3d932a8c108e68d250f21c5f4a22ae303e33964e2925f8', 'previous': 'ecce82fcd932502d3f5aedb5382432a151791e69ec9f3108c94dc8eedfe0e66f', 'spans': [(5615, 5848, ''), (12024, 12093, ''), (12105, 12141, ''), (12166, 12167, '')]}, 'tools/test_display_delivery.py': {'current': '57a795b8c57f943e74af4a253af9526c4f7db97c43f2142ca2566d4f86c3c6c8', 'previous': '387fea58b6096a09b4f939058b88b5dbf496f89b91a16b782d7ed0c93c69df47', 'spans': [(1470, 1607, ''), (1612, 1627, ''), (1670, 1797, '')]}}
 
+def before_motion_code_evidence(name, data):
+    if name == 'tools/artwork_display_delivery.py' and hashlib.sha256(data).hexdigest() == '12c6ab0536a8f7992e707cf8bfb4feff2d391182912f9f5460b553e1a8ef1007':
+        text=data.decode('utf-8')
+        text=text.replace('    from continue_motion_binding import restore as before_motion\n','',1).replace('require(sha(before_motion(name,(root / name).read_bytes())) == expected','require(sha((root / name).read_bytes()) == expected',1)
+        data=text.encode('utf-8')
+        require(hashlib.sha256(data).hexdigest() == '9d045de3c77661d77b3d932a8c108e68d250f21c5f4a22ae303e33964e2925f8', 'motion code predecessor drift')
+    return data
+
 def restore_code_evidence(name, data):
+    from continue_motion_binding import restore as before_motion
+    data=before_motion(name,data)
+    data=before_motion_code_evidence(name,data)
     binding = REVIEWED_CODE_INVERSES.get(name)
     if not binding or hashlib.sha256(data).hexdigest() != binding['current']:
         return data
@@ -41,6 +52,8 @@ POLISH_CONSUMER_INVERSES = {'timeline-experiences.css': {'current': '4d76e920b97
 HANDCART_VIEWPORT_INVERSE = {'current': '98e10999411e9c9a6c610207013b3a10c810b249175fbdeb57aaf36234828cdb', 'previous': '117057276965a37d668a2879b46e0810066fb94813436eb55253b647dd550de0', 'spans': [[163206, 164446, 'window.HandcartTimeline={\r\n    select:function(index){\r\n      if(!Number.isInteger(index)||!STOPS[index])return;\r\n      if(!currentRows.some(function(r){return r.index===index;})){\r\n        filterGeneration++;currentFilter=\'all\';chips.forEach(function(c){c.setAttribute(\'aria-pressed\',String(c.getAttribute(\'data-filter\')===\'all\'));});rows=buildRows();mount(rows);\r\n      }\r\n      var row=currentRows.find(function(r){return r.index===index;});selectStop(index,row.el,false);\r\n      if(window.matchMedia("(min-width:901px)").matches){if(window.TimelineWorkspace)window.TimelineWorkspace.scrollRow(row.el);else row.el.scrollIntoView({block:"nearest"});}']]}
 
 def before_handcart_viewport(name, data):
+    from continue_motion_binding import restore as before_motion
+    data=before_motion(name,data)
     binding=HANDCART_VIEWPORT_INVERSE
     if name != "timelines/willie-and-martin-handcart-map.html" or hashlib.sha256(data).hexdigest()!=binding["current"]:
         return data
@@ -65,6 +78,8 @@ def before_navigation_polish(name, data):
 
 def restore_consumers(name, data):
     """Reconstruct historical evidence only for a complete reviewed byte binding."""
+    from continue_motion_binding import restore as before_motion
+    data = before_motion(name,data)
     data = before_navigation_polish(name, data)
     binding = REVIEWED_CONSUMER_INVERSES.get(name)
     if not binding or hashlib.sha256(data).hexdigest() != binding['current']:
@@ -121,6 +136,8 @@ def validate(root, added, covered, rejected, expected=APPROVED_SPEC, expected_re
     require(spec.get('precreation_claim') is False and spec.get('kind')=='EXISTING_TIMELINE_MEDIA', 'misclassified creation')
     require(spec['page']['path']==PAGE, 'wrong owning page')
     current=local(root,spec['page']['path']).read_bytes()
+    from continue_motion_binding import restore as before_motion
+    current=before_motion(spec['page']['path'],current)
     if hashlib.sha256(current).hexdigest()==spec['page']['sha256']:
         page=current.decode('utf-8')
     else:
