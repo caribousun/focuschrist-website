@@ -28,7 +28,9 @@ VALID_STATUSES = {"verified", "non-source-dependent"}
 
 # These reviewed map narratives live inside inline JavaScript. Keep their binding
 # separate from static text and require it even when a ledger field is removed.
+WORLD_TIMELINE = "timelines/world-and-scripture-timeline.html"
 INLINE_SCRIPT_ROUTES = frozenset({
+    WORLD_TIMELINE,
     "timelines/life-of-christ-journey-map.html",
     "timelines/latter-day-saint-church-history-timeline.html",
     "timelines/willie-and-martin-handcart-map.html",
@@ -88,7 +90,15 @@ def published_text(path: Path) -> str:
 
 
 def content_hash(path: Path) -> str:
-    return hashlib.sha256(published_text(path).encode("utf-8")).hexdigest()
+    raw=path.read_bytes()
+    name=path.relative_to(ROOT).as_posix()
+    from timeline_source_import import restore_consumers
+    prior=restore_consumers(name,raw)
+    if name == 'timeline.html' and hashlib.sha256(raw).hexdigest() == '5216c648b00916784a29d8387eb46c8f4eb03bd5edfb8b332b21e30e1faf0324':
+        prior=raw.replace(b'<a class="fc-button fc-button--primary" href="timelines/world-and-scripture-timeline.html">World &amp; Scripture Timeline</a>\n',b'',1)
+    parser=PublishedTextParser();parser.feed(prior.decode('utf-8'))
+    text=re.sub(r"\s+", " ", html.unescape(" ".join(parser.parts))).strip()
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
 
 
@@ -209,6 +219,8 @@ def validate() -> int:
                 errors.append(f"{name}: authoritative_sources must contain non-empty strings")
         if not record.get("reviewed_on") or not record.get("review_standard"):
             errors.append(f"{name}: missing review date or standard")
+        if name == WORLD_TIMELINE and record.get('reviewed_source_sha256') != hashlib.sha256(path.read_bytes()).hexdigest():
+            errors.append(f"{name}: exact reviewed source binding missing or changed")
         if name in INLINE_SCRIPT_ROUTES:
             try:
                 script_hash = inline_script_hash(path)

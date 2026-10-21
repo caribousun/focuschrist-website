@@ -30,6 +30,9 @@ class ScriptBindingTests(unittest.TestCase):
             path.write_bytes(self.raw)
             record = {'path':name, 'status':'non-source-dependent', 'reviewed_on':'2026-10-04',
                       'review_standard':'synthetic test fixture', 'published_text_sha256':audit.content_hash(path)}
+            if name == audit.WORLD_TIMELINE:
+                import hashlib
+                record['reviewed_source_sha256']=hashlib.sha256(self.raw).hexdigest()
             if name in audit.INLINE_SCRIPT_ROUTES:
                 record['reviewed_inline_script_sha256'] = audit.inline_script_hash(path)
             self.records.append(record)
@@ -89,6 +92,11 @@ class ScriptBindingTests(unittest.TestCase):
             self.validate(1, 'published wording changed after review')
             path.write_bytes(self.raw)
 
+    def test_new_route_source_binding_required(self):
+        record=next(r for r in self.records if r['path']==audit.WORLD_TIMELINE)
+        record.pop('reviewed_source_sha256');self.save()
+        self.validate(1,'exact reviewed source binding missing or changed')
+
     def test_raw_parser_boundaries(self):
         raw = b'<!-- <script>ignored</script> --><SCRIPT data-x=">">a &amp; b\r\n</SCRIPT><script src="x.js"></script><script>c</script>'
         parser = audit.InlineScriptParser(raw)
@@ -100,6 +108,22 @@ class ScriptBindingTests(unittest.TestCase):
         path.write_bytes(self.raw + b'<script>unterminated')
         self.validate(1, 'unterminated inline script')
 
+
+class ExistingTimelineInverseTests(unittest.TestCase):
+    def test_exact_existing_wording_and_unknown_prose(self):
+        original_root=audit.ROOT
+        ledger=json.loads((original_root/'content-audit.json').read_text(encoding='utf-8'))
+        records={r['path']:r for r in ledger['documents']}
+        routes=['timeline.html','timelines/life-of-christ-journey-map.html','timelines/latter-day-saint-church-history-timeline.html','timelines/willie-and-martin-handcart-map.html']
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder)
+            for route in routes:
+                path=root/route;path.parent.mkdir(parents=True,exist_ok=True)
+                raw=(original_root/route).read_bytes();path.write_bytes(raw)
+                with patch.object(audit,'ROOT',root):
+                    self.assertEqual(audit.content_hash(path),records[route]['published_text_sha256'])
+                    path.write_bytes(raw+b'<p>Unreviewed additional assertion.</p>')
+                    self.assertNotEqual(audit.content_hash(path),records[route]['published_text_sha256'])
 
 if __name__ == '__main__':
     unittest.main()

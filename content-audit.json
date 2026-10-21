@@ -10321,6 +10321,22 @@
         "https://www.churchofjesuschrist.org/study/scriptures/nt/john/6?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/14?lang=eng"
       ]
+    },
+    {
+      "path": "timelines/world-and-scripture-timeline.html",
+      "status": "verified",
+      "published_text_sha256": "fcddcee44df01f85ff38b5b069e493f2d9806ad18e4980d55cce37f61a6c9384",
+      "reviewed_inline_script_sha256": "a84e9d99054e32c19694bd881614a32636099524e7ffd0900d876e8f416336b7",
+      "reviewed_source_sha256": "d427e7f8e578b880a6b512bdfbe9b455c9192026a7e9e80893afc6559c8f6494",
+      "reviewed_on": "2026-10-20",
+      "review_scope": "targeted-existing-source-import-and-interface-not-comprehensive-date-verification",
+      "review_standard": "Bounded existing-source import and finished interface review by Albert, Fermi and Newton; exact delivery specification and independent receipts in docs/world-scripture-import. Existing730 records and their original source qualifications retained; modeled geography remains hypothetical and unplaced entries remain unplaced. Verified denotes this scoped import, attribution, wording and behavior review, not newly comprehensive verification of every historical date or assertion. Existing193 Commons photographs retain individual attribution records and licenses; no invented generation preflight. Static wording, inline scripts and full page bytes bound separately. Release and live verification remain separate.",
+      "authoritative_sources": [
+        "docs/world-scripture-import/delivery.json",
+        "docs/world-scripture-import/newton-review.md",
+        "docs/world-scripture-import/fermi-review.md",
+        "docs/world-scripture-import/albert-review.md"
+      ]
     }
   ]
 }
