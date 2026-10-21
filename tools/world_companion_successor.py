@@ -58,7 +58,8 @@ def advance(name,raw,root=ROOT):
     require(sha(result)==row['after_sha256'],'Successor forward digest mismatch')
     return result
 def check(root=ROOT):
-    row=mapping(root);raw=local(root,PAGE).read_bytes()
+    from settings_successor import restore as restore_settings
+    row=mapping(root);raw=restore_settings(PAGE,local(root,PAGE).read_bytes(),root)
     require(sha(raw)==row['after_sha256'],'Changed successor page')
     require(sha(restore(PAGE,raw,root))==BEFORE,'Successor predecessor mismatch')
     require(sha(local(root,ASSET).read_bytes())==ASSET_SHA,'Changed successor map asset')

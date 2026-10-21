@@ -1,0 +1,59 @@
+{
+  "schema": 1,
+  "files": {
+    "timelines/world-and-scripture-timeline.html": {
+      "before_sha256": "2aee89b976da080c2c363da3a32967061f93ac6abd0e2f140362b0338d3fe65d",
+      "after_sha256": "a6f0a9fb82e16405a0cf32e25cbd7889ad0a56b5af4e9003fca40bd985ad93fd",
+      "spans": [
+        {
+          "start": 15739,
+          "end": 15851,
+          "previous_b64": "LnRpbWVsaW5lLWNvbXBhbmlvbnMgLmNvbXBhbmlvbi1hY3Rpb25ze2Rpc3BsYXk6ZmxleDtmbGV4LXdyYXA6d3JhcDthbGlnbi1pdGVtczpjZW50ZXI7Z2FwOjAgMThweDttYXJnaW4tdG9wOmF1dG99Cg==",
+          "current_b64": "LnRpbWVsaW5lLWNvbXBhbmlvbnMgLmNvbXBhbmlvbi1hY3Rpb25ze2Rpc3BsYXk6ZmxleDtmbGV4LXdyYXA6d3JhcDthbGlnbi1pdGVtczpjZW50ZXI7Z2FwOjAgMThweDttYXJnaW4tdG9wOjB9Cg=="
+        },
+        {
+          "start": 238879,
+          "end": 239330,
+          "previous_b64": "LndvcmtzcGFjZS1kaXNjbG9zdXJlPnN1bW1hcnk6OmFmdGVye2NvbnRlbnQ6J+KMhCc7Zm9udC1zaXplOjFyZW19Ci53b3Jrc3BhY2UtZGlzY2xvc3VyZVtvcGVuXT5zdW1tYXJ5OjphZnRlcntjb250ZW50OifijIMnfQo=",
+          "current_b64": "LndvcmtzcGFjZS1kaXNjbG9zdXJlPnN1bW1hcnk6OmFmdGVye2NvbnRlbnQ6Jyc7ZGlzcGxheTpibG9jazt3aWR0aDoxMnB4O2hlaWdodDoxMnB4O2ZsZXg6MCAwIDEycHg7YmFja2dyb3VuZDpjdXJyZW50Q29sb3I7bWFzazp1cmwoImRhdGE6aW1hZ2Uvc3ZnK3htbCwlM0NzdmcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB2aWV3Qm94PScwIDAgMTYgMTYnJTNFJTNDcGF0aCBkPSdNMyA1LjUgOCAxMC41IDEzIDUuNScgZmlsbD0nbm9uZScgc3Ryb2tlPSdibGFjaycgc3Ryb2tlLXdpZHRoPScyJyBzdHJva2UtbGluZWNhcD0ncm91bmQnIHN0cm9rZS1saW5lam9pbj0ncm91bmQnLyUzRSUzQy9zdmclM0UiKSBjZW50ZXIvY29udGFpbiBuby1yZXBlYXR9Ci53b3Jrc3BhY2UtZGlzY2xvc3VyZVtvcGVuXT5zdW1tYXJ5OjphZnRlcnt0cmFuc2Zvcm06cm90YXRlKDE4MGRlZyl9Cg=="
+        },
+        {
+          "start": 1308884,
+          "end": 1309071,
+          "previous_b64": "I3ZpZXdlciAubWFwc2V0dGluZ3MgLm1hcHRvb2xze2Rpc3BsYXk6Z3JpZDtncmlkLXRlbXBsYXRlLWNvbHVtbnM6cmVwZWF0KDIsbWlubWF4KDAsMWZyKSk7Z2FwOjhweDtwYWRkaW5nOjEwcHggMH0K",
+          "current_b64": "I3ZpZXdlciAubWFwc2V0dGluZ3MgLm1hcHRvb2xze2Rpc3BsYXk6Z3JpZDtncmlkLXRlbXBsYXRlLWNvbHVtbnM6cmVwZWF0KGF1dG8tZml0LG1pbm1heChtaW4oMTAwJSwyMDBweCksMWZyKSk7Z2FwOjEwcHg7cGFkZGluZzoxMHB4IDB9CiN2aWV3ZXIgLm1hcHNldHRpbmdzICNlcmFKdW1wQnRue2dyaWQtY29sdW1uOjEvLTF9Cg=="
+        },
+        {
+          "start": 1311151,
+          "end": 1311244,
+          "previous_b64": "",
+          "current_b64": "QG1lZGlhKG1heC13aWR0aDo0ODBweCl7I3ZpZXdlciAubWFwc2V0dGluZ3MgI21vZGVsU2Vne2dyaWQtdGVtcGxhdGUtY29sdW1uczptaW5tYXgoMCwxZnIpfX0K"
+        },
+        {
+          "start": 1324734,
+          "end": 1324959,
+          "previous_b64": "",
+          "current_b64": "ICAgIDxidXR0b24gY2xhc3M9ImZidG4iIGRhdGEtZ290bz0iLTIzNDgiPkZsb29kIMK3IDIzNDggQkM8L2J1dHRvbj4NCiAgICA8YnV0dG9uIGNsYXNzPSJmYnRuIiBkYXRhLWdvdG89Ii0yMjQ2Ij5Ub3dlciBvZiBCYWJlbCDCtyAyMjQ2IEJDPC9idXR0b24+DQogICAgPGJ1dHRvbiBjbGFzcz0iZmJ0biIgZGF0YS1nb3RvPSItMTk5NiI+QWJyYWhhbSAvIEphcmVkaXRlIGVyYTwvYnV0dG9uPg0K"
+        },
+        {
+          "start": 1989684,
+          "end": 1989931,
+          "previous_b64": "ZnVuY3Rpb24gbWFwT2tFKGUpeyByZXR1cm4gY2F0T2tFKGUpICYmIHBlb3BsZU9rKGUpOyB9Cg==",
+          "current_b64": "ZnVuY3Rpb24gbWFwT2tFKGUpewogIGlmIChzdGF0ZS5yZWdpb24gJiYgZS5yZWdpb24gIT09IHN0YXRlLnJlZ2lvbikgcmV0dXJuIGZhbHNlOwogIGlmIChzdGF0ZS5xICYmICEoZS5zaXRlLnRvTG93ZXJDYXNlKCkuaW5jbHVkZXMoc3RhdGUucSkgfHwgKGUuY291bnRyeSB8fCAiIikudG9Mb3dlckNhc2UoKS5pbmNsdWRlcyhzdGF0ZS5xKSkpIHJldHVybiBmYWxzZTsKICByZXR1cm4gY2F0T2tFKGUpICYmIHBlb3BsZU9rKGUpOwp9Cg=="
+        }
+      ]
+    },
+    "timelines/life-of-christ-journey-map.html": {
+      "before_sha256": "eea836a5698693a84f76d2e79e153055b8c7d7a198b11141b1df75c1e98d4a62",
+      "after_sha256": "e8e6124f50a19d7cac839ec8b405e33b036284c57b8182d2e7776dc8af90c418",
+      "spans": [
+        {
+          "start": 6015,
+          "end": 6165,
+          "previous_b64": "LmpvdXJuZXktbmF2e2Rpc3BsYXk6ZmxleDtnYXA6OHB4O2FsaWduLWl0ZW1zOmNlbnRlcn0K",
+          "current_b64": "LmpvdXJuZXktbmF2LCNkZXRhaWwgLnRpbWVsaW5lLWV2ZW50LW5hdmlnYXRpb24tc2xvdD4udGltZWxpbmUtZXZlbnQtbmF2aWdhdGlvbi5qb3VybmV5LW5hdntkaXNwbGF5OmZsZXg7Z2FwOjEycHg7YWxpZ24taXRlbXM6Y2VudGVyO21hcmdpbi10b3A6MTJweH0K"
+        }
+      ]
+    }
+  }
+}

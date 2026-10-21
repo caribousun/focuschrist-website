@@ -39,7 +39,8 @@ def reviewed_bytes(path):
 
 def restore(name,data,root=ROOT):
     from world_companion_successor import restore as restore_world
-    data=restore_world(name,data,root)
+    from settings_successor import restore as restore_settings
+    data=restore_world(name,restore_settings(name,data,root),root)
     record=mapping(root)['files'].get(name)
     if not record or sha(data)!=record['after_sha256']:return data
     restored=data
@@ -57,7 +58,8 @@ def advance(name,data,root=ROOT):
     """Generate only the exact enumerated successor from an exact predecessor."""
     record=mapping(root)['files'].get(name)
     from world_companion_successor import advance as advance_world
-    if not record or sha(data)!=record['before_sha256']:return advance_world(name,data,root)
+    from settings_successor import advance as advance_settings
+    if not record or sha(data)!=record['before_sha256']:return advance_settings(name,advance_world(name,data,root),root)
     replacements=[];delta=0
     for span in record['spans']:
         previous=base64.b64decode(span['previous_b64'],validate=True)
@@ -69,15 +71,16 @@ def advance(name,data,root=ROOT):
     result=data
     for start,end,current in reversed(replacements):result=result[:start]+current+result[end:]
     require(sha(result)==record['after_sha256'],'Motion successor reconstruction drift')
-    return advance_world(name,result,root)
+    return advance_settings(name,advance_world(name,result,root),root)
 
 def check(root=ROOT):
     from world_companion_successor import check as check_world,restore as restore_world
+    from settings_successor import restore as restore_settings,check as check_settings
     data=mapping(root)
     for name,row in data['files'].items():
         path=(root/name).resolve()
         require(path.is_relative_to(root.resolve()) and path.is_file(),'Missing/outside motion consumer')
-        current=restore_world(name,path.read_bytes(),root)
+        current=restore_world(name,restore_settings(name,path.read_bytes(),root),root)
         require(sha(current)==row['after_sha256'],'Motion candidate changed: '+name)
         require(sha(restore(name,current,root))==row['before_sha256'],'Motion inverse failed: '+name)
     require(APPROVED_REVIEWS is not None,'Motion finished review PENDING')
@@ -92,6 +95,7 @@ def check(root=ROOT):
         require(path.is_relative_to(root.resolve()) and path.is_file(),'Missing/outside motion review evidence')
         require(sha(path.read_bytes())==item['sha256'],'Motion review evidence changed')
     check_world(root)
+    check_settings(root)
     return {'status':'EXACT_MOTION_EVIDENCE_PASS','files':len(data['files']),'limits':'Technical evidence binding only; does not authenticate reviewers or grant publication approval.'}
 
 if __name__=='__main__':

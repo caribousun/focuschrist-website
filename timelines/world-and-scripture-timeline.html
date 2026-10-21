@@ -676,7 +676,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .timeline-companions .companion-grid article{display:flex;flex-direction:column;min-width:0;padding:20px;border:1px solid var(--line);border-radius:12px;background:var(--panel2)}
 .timeline-companions .companion-grid h2{font-family:var(--fc-font-display,Georgia,serif);font-size:22px;line-height:1.3;margin:0 0 10px;color:var(--gold-light)}
 .timeline-companions .companion-grid p{font-size:15px;line-height:1.6;margin:0 0 12px}
-.timeline-companions .companion-actions{display:flex;flex-wrap:wrap;align-items:center;gap:0 18px;margin-top:auto}
+.timeline-companions .companion-actions{display:flex;flex-wrap:wrap;align-items:center;gap:0 18px;margin-top:0}
 .timeline-companions .companion-grid a{display:inline-flex;align-items:center;box-sizing:border-box;min-height:44px;padding:8px 0;line-height:1.5;color:var(--gold-light);text-underline-offset:4px;overflow-wrap:anywhere}
 .timeline-companions .companion-grid a:focus-visible,.timeline-companions>summary:focus-visible{outline:2px solid var(--gold-light);outline-offset:4px;border-radius:3px}
 .timeline-companions .companion-grid .companion-note{font-size:13px;line-height:1.5;color:var(--muted);margin:10px 0 0}
@@ -2293,8 +2293,8 @@ body.fc-site .fc-page-intro .fc-button:not(.fc-button--primary):focus-visible {
 .workspace-toolbar .workspace-search{flex:1 1 220px;max-width:360px;min-width:160px}
 .workspace-disclosure{position:relative;flex:0 0 auto;color:var(--text)}
 .workspace-disclosure>summary{display:flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:8px 16px;cursor:pointer;list-style:none;border:1px solid var(--line-strong);border-radius:999px;background:var(--panel2);color:var(--gold-light);font-size:.88rem;font-weight:600}
-.workspace-disclosure>summary::after{content:'⌄';font-size:1rem}
-.workspace-disclosure[open]>summary::after{content:'⌃'}
+.workspace-disclosure>summary::after{content:'';display:block;width:12px;height:12px;flex:0 0 12px;background:currentColor;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 5.5 8 10.5 13 5.5' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat}
+.workspace-disclosure[open]>summary::after{transform:rotate(180deg)}
 .workspace-disclosure>summary:focus-visible{outline:3px solid #f3cf83;outline-offset:4px}
 .workspace-disclosure .disclosure-body{position:absolute;right:0;top:calc(100% + 8px);width:min(640px,calc(100vw - 32px));max-height:min(50vh,360px);overflow:auto;padding:18px;border:1px solid var(--line-strong);border-radius:14px;background:#102b36;box-shadow:0 16px 38px #04101675;z-index:120}
 .workspace-disclosure .controls{justify-content:flex-start;gap:10px}
@@ -2725,7 +2725,8 @@ L.Icon.Default.imagePath = ""; // Versioned absolute default icon URLs.
 #viewer .mapsettings .disclosure-body{width:min(470px,calc(100vw - 40px));padding:16px;max-height:min(50dvh,420px)}
 #viewer .mapsettings .settings-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}
 #viewer .mapsettings .settings-heading strong{font-size:15px;color:var(--gold-light)}
-#viewer .mapsettings .maptools{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:10px 0}
+#viewer .mapsettings .maptools{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:10px;padding:10px 0}
+#viewer .mapsettings #eraJumpBtn{grid-column:1/-1}
 #viewer .mapsettings .flabel,#viewer .mapsettings #modelSeg,#viewer .mapsettings #anchoredCta{grid-column:1/-1}
 #viewer .mapsettings .fbtn{min-height:44px;padding:7px 10px;font-size:12px;line-height:1.4;white-space:normal}
 #viewer .mapsettings #modelSeg{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;border-radius:12px;overflow:hidden}
@@ -2741,6 +2742,7 @@ L.Icon.Default.imagePath = ""; // Versioned absolute default icon URLs.
 #viewer .mapplayback{padding:8px;box-sizing:border-box}
 #viewer .mapsettings .settings-heading{position:sticky;top:-16px;background:#102b36;z-index:2;padding:8px 0;margin-top:-8px}
 @media(max-width:900px){#viewer .mapsettings .settings-heading{position:static;margin-top:0;padding:0}}
+@media(max-width:480px){#viewer .mapsettings #modelSeg{grid-template-columns:minmax(0,1fr)}}
 </style>
 <style id="timeline-content-rows">
 #viewer .mapwrap:has(.cluster-pop) .yearbanner,#viewer .mapwrap:has(.cluster-pop) .leaflet-top.leaflet-left{visibility:hidden}
@@ -2859,6 +2861,9 @@ L.Icon.Default.imagePath = ""; // Versioned absolute default icon URLs.
   </div><div class="map-options-row"><span class="scenario-current" id="workspaceScenarioState"></span><button class="fbtn" id="frameBtn" style="margin-top:6px">Frame the promised land</button><details class="workspace-disclosure mapsettings"><summary>Map settings &amp; jump</summary><div class="disclosure-body"><div class="settings-heading"><strong>Map settings</strong><button type="button" class="fbtn" id="mapSettingsClose">Close settings</button></div><div class="maptools" style="margin-top:8px">
     <span class="flabel">Go to:</span>
     <button class="fbtn" data-goto="-2500">Pyramids · 2500 BC</button>
+    <button class="fbtn" data-goto="-2348">Flood · 2348 BC</button>
+    <button class="fbtn" data-goto="-2246">Tower of Babel · 2246 BC</button>
+    <button class="fbtn" data-goto="-1996">Abraham / Jaredite era</button>
     <button class="fbtn" data-goto="-1010">David · 1010 BC</button>
     <button class="fbtn" data-goto="-600">Nephi · 600 BC</button>
     <button class="fbtn" data-goto="33">Christ · AD 33</button>
@@ -3298,7 +3303,11 @@ function aliveAt(e, y){ if (e.start === null) return false; const en = (e.end ==
 function pinState(e, y){ if (e.start === null || e.start > y) return null; return aliveAt(e, y) ? "now" : "past"; }
 function catOkE(e){ return e.cats.some(c => state.cats.has(c)); }
 function peopleOk(e){ return !mapState.people || e.people === mapState.people; }
-function mapOkE(e){ return catOkE(e) && peopleOk(e); }
+function mapOkE(e){
+  if (state.region && e.region !== state.region) return false;
+  if (state.q && !(e.site.toLowerCase().includes(state.q) || (e.country || "").toLowerCase().includes(state.q))) return false;
+  return catOkE(e) && peopleOk(e);
+}
 function segD(p1, p2){
   const [x1, y1] = proj(p1[0], p1[1]); const [x2, y2] = proj(p2[0], p2[1]);
   if (Math.abs(p2[1] - p1[1]) <= 180) return `M${x1.toFixed(1)},${y1.toFixed(1)}L${x2.toFixed(1)},${y2.toFixed(1)}`;
