@@ -35,6 +35,7 @@ jobs:
           python -m unittest discover -s tools -p test_artwork_creation_gate.py
           python -m unittest discover -s tools -p test_timeline_source_import.py
           python tools/test_continue_motion_binding.py
+          python tools/test_world_companion_successor.py
           python tools/continue_motion_binding.py
           python -m unittest discover -s tools -p test_navigation_polish_bindings.py
           python -m unittest discover -s tools -p test_script_image_urls.py
@@ -525,6 +526,8 @@ jobs:
         run: NODE_PATH=/tmp/focus-timeline-qa/node_modules node tools/timeline_runtime_qa.js
       - name: Verify Continue-only animated scrolling in the browser
         run: NODE_PATH=/tmp/focus-timeline-qa/node_modules node tools/continue_motion_runtime_qa.js
+      - name: Verify World alphabetical lists, reading links and playback
+        run: NODE_PATH=/tmp/focus-timeline-qa/node_modules node tools/world_refinement_runtime_qa.js
       - name: Save Timeline interaction and rendering evidence
         if: always()
         uses: actions/upload-artifact@v4
