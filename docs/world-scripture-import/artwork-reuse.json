@@ -1,0 +1,48 @@
+{
+  "schema": 1,
+  "status": "REVIEWED_EXISTING_ARTWORK_REUSE",
+  "page_sha256": "523560bb698f11abf503aa44187ce2cf2b8a571f8b5129f3e70760e9df9d39c4",
+  "baseline_sha256": "79e8766bb3fd2b4493bf9679644654ad91a17090bb1f70373e88ae7e7b12d972",
+  "asset_sha256": "fecacbeca9d2c885707a1feadb25d8b4e502fe3c308aefe15b68a61fdd02e495",
+  "owner_page": "https://focuschrist.com/atonement.html",
+  "retired": [
+    "/assets/world-scripture/2e7a94b04030b1dc99ae1d6921bacecd2a602f2e8be09867f123c0d140afa53d.jpg",
+    "/assets/world-scripture/ba562fe56fbeb6bd97a5e6ecb753c5555b50dc5fba63fa398bcba989bcf32cbd.jpg"
+  ],
+  "reviews": [
+    {
+      "reviewer": "Fermi",
+      "decision": "CONCUR",
+      "page_sha256": "523560bb698f11abf503aa44187ce2cf2b8a571f8b5129f3e70760e9df9d39c4",
+      "finished_pixels": true,
+      "source_rights_checked": true,
+      "evidence": {
+        "path": "docs/world-scripture-import/companions-20261021/fermi-review.md",
+        "sha256": "8a6b59c634fcbd72da85abacc1b722d1e137dd40898506b0f686f807bac36f1b"
+      }
+    },
+    {
+      "reviewer": "Newton",
+      "decision": "CONCUR",
+      "page_sha256": "523560bb698f11abf503aa44187ce2cf2b8a571f8b5129f3e70760e9df9d39c4",
+      "finished_pixels": true,
+      "source_rights_checked": true,
+      "evidence": {
+        "path": "docs/world-scripture-import/companions-20261021/newton-review.md",
+        "sha256": "7b8aaa25ec4a3e42bb9fd33434346482d2f60a09ebb73674285d5d316448267f"
+      }
+    },
+    {
+      "reviewer": "Albert",
+      "decision": "CONCUR",
+      "page_sha256": "523560bb698f11abf503aa44187ce2cf2b8a571f8b5129f3e70760e9df9d39c4",
+      "finished_pixels": true,
+      "source_rights_checked": true,
+      "evidence": {
+        "path": "docs/world-scripture-import/companions-20261021/albert-review.md",
+        "sha256": "31a0d8da056fbd90240824c3897940ea90e4194b1e1703873c670cc2633cfbac"
+      }
+    }
+  ],
+  "publication_approval": "PENDING_OWNER_ACTUAL_OUTCOME"
+}

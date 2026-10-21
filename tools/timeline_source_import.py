@@ -120,7 +120,20 @@ def validate(root, added, covered, rejected, expected=APPROVED_SPEC, expected_re
     require(canonical(spec)==expected, 'unreviewed exact specification')
     require(spec.get('precreation_claim') is False and spec.get('kind')=='EXISTING_TIMELINE_MEDIA', 'misclassified creation')
     require(spec['page']['path']==PAGE, 'wrong owning page')
-    page=bound_file(root,spec['page']).decode('utf-8')
+    current=local(root,spec['page']['path']).read_bytes()
+    if hashlib.sha256(current).hexdigest()==spec['page']['sha256']:
+        page=current.decode('utf-8')
+    else:
+        # A successor cannot rewrite historical import approval. Its separately
+        # pinned finished evidence validates live reuse; old coverage still uses
+        # the exact original page, including the two retained archival photos.
+        from timeline_artwork_reuse import validate as validate_reuse
+        try:
+            prior=validate_reuse(root,current)
+        except (ValueError, OSError, KeyError, TypeError) as error:
+            raise ValueError('changed bytes: '+spec['page']['path']+'; successor evidence rejected: '+str(error)) from error
+        require(hashlib.sha256(prior).hexdigest()==spec['page']['sha256'], 'wrong historical import baseline')
+        page=prior.decode('utf-8')
     credits=json.loads(bound_file(root,spec['credits']).decode('utf-8'))
     require(spec['credits']['path']=='docs/world-scripture-import/photo-credits.json' and len(credits)==193, 'wrong credit inventory')
     require(spec['archive_sha256']=='034a982736431a818956851a00b0dcd568c84707f435b826cc7065e43690bc1b', 'changed source archive')
