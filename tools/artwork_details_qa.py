@@ -210,8 +210,8 @@ def history_topic_hero_errors(relative, page, story, ready):
         anchors = figure.select('a.fc-visual-hero')
         if len(anchors) != 1 or anchors[0].get('href') != '../' + ready[unit]['full'] or not figure.select_one('figcaption[data-picture-panel-copy][hidden]'):
             errors.append(f'{relative}: hero source or study metadata differs')
-    topic_version = '20261009-settled-continue-2'
-    if page.count('../topic-artwork-details.js?v=' + topic_version) != 1 or 'hero-details.js' in page or 'data-hero-viewer' in page:
+    topic_version = '20261021-continue-motion-1'
+    if [s.get('src') for s in dom.select('script[src]') if 'topic-artwork-details.js' in s.get('src', '')] != ['../topic-artwork-details.js?v=' + topic_version] or 'hero-details.js' in page or 'data-hero-viewer' in page:
         errors.append(f'{relative}: hero must have exactly one topic controller')
     return errors
 
@@ -247,7 +247,7 @@ def emma_reference_errors(page, history):
         errors.append("Emma Harmony destination heading must exist exactly once")
     for marker in (
         'src="../full-image-viewer.js?v=20261009-titled-downloads-1"',
-        'src="../topic-artwork-details.js?v=20261009-settled-continue-2"',
+        'src="../topic-artwork-details.js?v=20261021-continue-motion-1"',
     ):
         if page.count(marker) != 1:
             errors.append("Emma study dependency missing or duplicated: " + marker)
@@ -292,7 +292,7 @@ def main() -> int:
         if re.search(r'id="artworkDetailStudy"[^>]*href=', text):
             errors.append(f"{relative}: hidden study action must not have a default destination")
         prefix = "../" if "/" in relative else ""
-        detail_version = "20261011-home-lesson-return-1" if relative == "index.html" else "20260908-continue-lesson" if relative in {"answers/death-of-a-child.html", "answers/divorce-and-faith.html"} else "20260905-home-study"
+        detail_version = "20261021-continue-motion-1"
         for marker in (
             'href="artwork-details.css?v=20260909-warm"',
             f'src="artwork-details.js?v={detail_version}"',
@@ -518,13 +518,14 @@ def main() -> int:
                 ('class="fc-life-hero"', 'class="wrong-hero"'),
                 (f'href="../{ready[unit]["full"]}"', 'href="../assets/heroes/home.webp"'),
                 ('data-picture-panel-copy hidden', 'data-picture-panel-copy'),
-                ('../topic-artwork-details.js?v=20261009-settled-continue-2', '../topic-artwork-details.js?v=unknown'),
+                ('../topic-artwork-details.js?v=20261021-continue-motion-1', '../topic-artwork-details.js?v=unknown'),
+                ('../topic-artwork-details.js?v=20261021-continue-motion-1', '../topic-artwork-details.js?v=20261009-settled-continue-2'),
             ):
                 mutated = page.replace(original, replacement, 1)
                 assert mutated != page
                 assert history_topic_hero_errors(relative, mutated, story, ready), 'History hero mutation escaped'
             assert history_topic_hero_errors(relative, page + '<figure class="fc-life-hero"></figure>', story, ready)
-            assert history_topic_hero_errors(relative, page + '<script src="../topic-artwork-details.js?v=20261009-settled-continue-2"></script>', story, ready)
+            assert history_topic_hero_errors(relative, page + '<script src="../topic-artwork-details.js?v=20261021-continue-motion-1"></script>', story, ready)
             assert history_topic_hero_errors(relative, page, dict(story, hero=dict(story['units'][0], id='wrong-scene')), ready)
             hero_pages -= 1  # Preserve the separate 41-page legacy controller baseline.
             continue

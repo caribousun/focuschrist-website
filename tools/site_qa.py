@@ -347,7 +347,7 @@ def main() -> int:
             fail(errors, f"Ask redesigned experience marker missing/duplicated: {marker}")
     if '<link rel="stylesheet" href="ask-experience.css?v=20261011-blue-gold-pills-1">' not in ask:
         fail(errors, "Ask experience stylesheet missing")
-    if '<script src="ask-experience.js?v=20260927-growing-composer-1" defer></script>' not in ask:
+    if re.findall(r'<script\b[^>]*src="([^"]*ask-experience\.js[^"]*)"[^>]*>', ask) != ['ask-experience.js?v=20261021-continue-motion-1']:
         fail(errors, "Ask experience controller missing")
     if ask.count('data-ask-starter') < 6:
         fail(errors, "Ask starter question set unexpectedly incomplete")

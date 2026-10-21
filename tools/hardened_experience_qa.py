@@ -52,7 +52,7 @@ def main() -> int:
         "Gospel Topics Essays",
         "Book of Mormon Videos",
         "loadStudyJourney",
-        "study-journey.js?v=20260923-sensitive-welcome-1",
+        "study-journey.js?v=20261021-continue-motion-1",
         "study-intelligence-v3.js?v=20260923-sensitive-welcome-1",
         "window.focusChristSourceIntegrity",
         "unreviewed-source-dependent-generation",

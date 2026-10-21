@@ -15,6 +15,14 @@ class MotionBindingTests(unittest.TestCase):
             self.assertEqual(gate.sha(current),row['after_sha256'],name)
             self.assertEqual(gate.sha(gate.restore(name,current)),row['before_sha256'],name)
 
+    def test_exact_successors_and_unknown_input_rejected(self):
+        for name,row in gate.mapping()['files'].items():
+            current=(gate.ROOT/name).read_bytes()
+            old=gate.restore(name,current)
+            self.assertEqual(gate.advance(name,old),current,name)
+            self.assertEqual(gate.advance(name,old+b' '),old+b' ',name)
+            self.assertEqual(gate.advance('unknown/'+name,old),old,name)
+
     def test_unknown_route_not_normalized(self):
         raw=(gate.ROOT/'index.html').read_bytes()
         self.assertEqual(gate.restore('unknown.html',raw),raw)

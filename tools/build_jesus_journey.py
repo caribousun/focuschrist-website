@@ -187,7 +187,9 @@ def render(page,registry,strict):
     rendered = f'''<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{E(page['title'])} | focusChrist</title>{head}</head><body class="fc-site fc-jesus-journey"><a class="fc-skip-link" data-focuschrist-skip-link="true" href="#main-content">Skip to study</a>{nav}<header class="jj-opening"><div class="jj-wrap">{breadcrumb}<p class="fc-eyebrow">{E(page.get('eyebrow','Come to know Jesus Christ'))}</p><h1>{E(page['title'])}</h1><p class="lede">{E(page['intro'])}</p><a class="fc-button" href="#main-content">Begin the study ↓</a></div></header><main class="jj-wrap jj-main" id="main-content">{local}{''.join(sections)}<nav class="jj-actions jj-return fc-actions" aria-label="Return to the journey"><a href="{E(crumbs[-1][0])}">Return to {E(crumbs[-1][1])}</a><a href="{PARENT}#jesus-journey">Explore the whole Jesus Christ journey</a></nav></main>{footer}<script>function toggleMenu(){{var m=document.getElementById('hamburgerMenu');if(m)m.classList.toggle('show');}}</script>{''.join(f'<script src="/{s}" defer></script>' for s in scripts)}</body></html>'''
 
     from six_scene_journey_render import apply as apply_six_scene_journey
-    return apply_six_scene_journey(ROOT, page['url'].lstrip('/'), rendered, strict)
+    result = apply_six_scene_journey(ROOT, page['url'].lstrip('/'), rendered, strict)
+    from continue_motion_binding import advance
+    return advance(page['url'].lstrip('/'), result.encode()).decode() if strict else result
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--strict',action='store_true');ap.add_argument('--check',action='store_true');args=ap.parse_args()

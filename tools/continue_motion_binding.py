@@ -51,6 +51,23 @@ def restore(name,data,root=ROOT):
     require(sha(restored)==record['before_sha256'],'Motion predecessor reconstruction drift')
     return restored
 
+def advance(name,data,root=ROOT):
+    """Generate only the exact enumerated successor from an exact predecessor."""
+    record=mapping(root)['files'].get(name)
+    if not record or sha(data)!=record['before_sha256']:return data
+    replacements=[];delta=0
+    for span in record['spans']:
+        previous=base64.b64decode(span['previous_b64'],validate=True)
+        current=base64.b64decode(span['current_b64'],validate=True)
+        start=span['start']+delta
+        require(data[start:start+len(previous)]==previous,'Motion successor byte mismatch')
+        replacements.append((start,start+len(previous),current))
+        delta+=len(previous)-len(current)
+    result=data
+    for start,end,current in reversed(replacements):result=result[:start]+current+result[end:]
+    require(sha(result)==record['after_sha256'],'Motion successor reconstruction drift')
+    return result
+
 def check(root=ROOT):
     data=mapping(root)
     for name,row in data['files'].items():

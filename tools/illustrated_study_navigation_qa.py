@@ -12,26 +12,34 @@ VISIBLE_TOPIC_ROUTES = frozenset({
     'history/john-rowe-moyle.html',
     'history/john-tanner.html',
 })
+def current_controller_bindings():
+    from continue_motion_binding import mapping
+    historical=json.loads((ROOT/'docs/topic-artwork-controller-bindings.json').read_text(encoding='utf8'))
+    assert all(len(refs)==1 and refs[0].endswith('topic-artwork-details.js?v=20261009-settled-continue-2') for refs in historical.values())
+    rows=mapping()['files']
+    assert set(historical)<=set(rows)
+    return {route:[ref.replace('20261009-settled-continue-2','20261021-continue-motion-1') for ref in refs] for route,refs in historical.items()}
+
 def assert_controller_bindings(actual):
-    expected = json.loads((ROOT/'docs/topic-artwork-controller-bindings.json').read_text(encoding='utf8'))
+    expected = current_controller_bindings()
     assert len(expected) == 120
-    assert all(len(refs) == 1 and refs[0].endswith('topic-artwork-details.js?v=20261009-settled-continue-2') for refs in expected.values())
+    assert all(len(refs) == 1 and refs[0].endswith('topic-artwork-details.js?v=20261021-continue-motion-1') for refs in expected.values())
     assert actual == expected, 'Exact120 topic controller owners/single references required'
 
 def controller_binding_self_test():
-    expected = json.loads((ROOT/'docs/topic-artwork-controller-bindings.json').read_text(encoding='utf8'))
+    expected = current_controller_bindings()
     assert_controller_bindings(expected)
     owner = 'pioneers.html'; ref = expected[owner][0]
     mutations = [dict(expected, **{owner: []}), dict(expected, **{owner: [ref, ref]}),
-                 dict(expected, **{owner: [ref, ref.replace('20261009-settled-continue-2','20260930-history-records-1')]}),
-                 dict(expected, **{owner: [ref.replace('20261009-settled-continue-2','unknown')]}),
+                 dict(expected, **{owner: [ref, ref.replace('20261021-continue-motion-1','20260930-history-records-1')]}),
+                 dict(expected, **{owner: [ref.replace('20261021-continue-motion-1','unknown')]}),
                  dict(expected, **{'unreviewed.html': [ref]})]
     missing = dict(expected); del missing[owner]; mutations.append(missing)
     mission_ref = expected['missionary.html'][0]
     mutations.extend([dict(expected, **{'missionary.html': []}),
                       dict(expected, **{'missionary.html': [mission_ref, mission_ref]}),
                       dict(expected, **{'missionary.html': ['/topic-artwork-details.js']}),
-                      dict(expected, **{'missionary.html': [mission_ref.replace('settled-continue-2', 'unknown')]})])
+                      dict(expected, **{'missionary.html': [mission_ref.replace('20261021-continue-motion-1', 'unknown')]})])
     for mutation in mutations:
         try: assert_controller_bindings(mutation)
         except AssertionError: pass
@@ -53,7 +61,7 @@ def check():
         assert dest.h1 and dest.h1.get_text(' ',strip=True) == r['target_title'], r
         if u.fragment: assert dest.find(id=u.fragment), r
     generic = re.compile(r'(?:open|follow) (?:this|the) illustrated study', re.I)
-    controller_version = '20261009-settled-continue-2'
+    controller_version = '20261021-continue-motion-1'
     consumers = 0
     actual_bindings = {}
     for page in ROOT.rglob('*.html'):
@@ -69,7 +77,11 @@ def check():
     assert_controller_bindings(actual_bindings)
     controller_binding_self_test()
     for name in ['build_jesus_journey.py', 'build_jesus_parent.py', 'build_temples_history.py']:
-        assert 'topic-artwork-details.js?v='+controller_version in (ROOT/'tools'/name).read_text(encoding='utf8'), name
+        builder=(ROOT/'tools'/name).read_text(encoding='utf8')
+        if name in {'build_jesus_journey.py','build_jesus_parent.py'}:
+            assert 'topic-artwork-details.js?v=20261009-settled-continue-2' in builder and 'advance(' in builder, name
+        else:
+            assert 'topic-artwork-details.js?v='+controller_version in builder, name
     print(f'PICTURE CACHE PASS: {consumers} consumers and three authoritative builders use {controller_version}.')
     print('ILLUSTRATED NAVIGATION PASS: 92 specific labels plus two explicitly retired Joseph references, exact destination titles/fragments, no generic CTA recurrence.')
 if __name__ == '__main__': check()

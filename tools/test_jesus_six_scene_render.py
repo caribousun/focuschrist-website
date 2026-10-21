@@ -2,6 +2,7 @@
 from pathlib import Path
 import json,shutil,tempfile,unittest
 from six_scene_journey_render import apply
+from continue_motion_binding import reviewed_bytes
 ROOT=Path(__file__).resolve().parents[1]
 class SixSceneJourneyRender(unittest.TestCase):
     def setUp(self):
@@ -12,15 +13,15 @@ class SixSceneJourneyRender(unittest.TestCase):
             target=self.root/name;target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(ROOT/name,target)
         self.rows=json.loads((self.root/names[1]).read_bytes())
     def baseline(self,route):
-        text=(ROOT/route).read_text(encoding='utf8');row=self.rows[route]
+        text=reviewed_bytes(ROOT/route).decode('utf8');row=self.rows[route]
         for key in ['section','style','script']:
             self.assertEqual(text.count(row[key]),1);text=text.replace(row[key],'',1)
         return text
     def test_two_exact_current_outputs(self):
-        for route in self.rows:self.assertEqual(apply(self.root,route,self.baseline(route),True),(ROOT/route).read_text(encoding='utf8'))
+        for route in self.rows:self.assertEqual(apply(self.root,route,self.baseline(route),True),reviewed_bytes(ROOT/route).decode('utf8'))
     def test_altered_baseline_and_replayed_output_rejected(self):
         for route in self.rows:
-            for text in [self.baseline(route)+' ',(ROOT/route).read_text(encoding='utf8')]:
+            for text in [self.baseline(route)+' ',reviewed_bytes(ROOT/route).decode('utf8')]:
                 with self.assertRaises(ValueError):apply(self.root,route,text,True)
     def test_missing_duplicate_or_wrong_anchor_rejected(self):
         for route,row in self.rows.items():

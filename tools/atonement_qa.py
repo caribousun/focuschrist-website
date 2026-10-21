@@ -42,7 +42,14 @@ for fig in figures:
 require(len(set(assets))==len(assets) and len(set(hashes))==len(hashes),'Responsive aliases must not inflate artwork count')
 for other in ROOT.rglob('*.html'):
     if other==page or '.git' in other.parts:continue
-    require(not any(asset in other.read_text(encoding='utf-8') for asset in assets),'Supporting art must be page-exclusive')
+    other_text=other.read_text(encoding='utf-8')
+    if other.relative_to(ROOT).as_posix()=='timelines/world-and-scripture-timeline.html':
+        from timeline_artwork_reuse import validate
+        validate(ROOT,other.read_bytes())
+        # The separately reviewed reuse gate permits only two exact First Hope references.
+        require(not any(asset in other_text for asset in assets if asset!='assets/page-art/atonement/first-hope.webp'),'Unapproved additional Atonement reuse')
+    else:
+        require(not any(asset in other_text for asset in assets),'Supporting art must be page-exclusive')
 for canon in ['pgp','ot','nt','bofm','dc-testament']:
     require('/study/scriptures/'+canon+'/' in text,'Missing standard-work witness: '+canon)
 for passage in ['pgp/a-of-f/1','dc-testament/dc/138','bofm/moro/4','bofm/moro/5','nt/john/19','nt/john/20']:

@@ -11,7 +11,8 @@ SPEC.loader.exec_module(mandate)
 
 # Preserve historical token tests against the exact page preceding the reviewed chalk addition.
 def historical_test_bytes(route):
-    raw = (ROOT / route).read_bytes()
+    from continue_motion_binding import restore
+    raw = restore(route, (ROOT / route).read_bytes())
     from six_scene_legacy_contracts import legacy_text, NEW_REVIEWS
     if route in NEW_REVIEWS:
         # Exercise the existing token inverses on their exact historical inputs.
@@ -121,7 +122,8 @@ class ExactFeaturedBinding(unittest.TestCase):
             with self.subTest(route=route):
                 raw = (ROOT / route).read_bytes()
                 expected = inventory['pages'][route]['html_sha256']
-                self.assertEqual(hashlib.sha256(raw).hexdigest(), expected)
+                from continue_motion_binding import restore
+                self.assertEqual(hashlib.sha256(restore(route,raw)).hexdigest(), expected)
                 self.assertNotEqual(expected, mandate.REVIEWED_PAGE_HASHES[route])
                 self.assertTrue(mandate.reviewed_page_binding(BytesPage(raw), route, expected))
                 scene = review['asset'].split('/')[-1].removesuffix('-full.webp').encode()
