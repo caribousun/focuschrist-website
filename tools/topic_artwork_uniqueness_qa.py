@@ -249,6 +249,9 @@ def scan(root=ROOT):
                     if asset:
                         asset_paths.add(asset);references.append({'page':key,'asset':asset,'tag':'style','attribute':'css-url'})
             for attr,value in n.attrs.items():
+                # On links, download specifies the saved filename, not a fetched URL.
+                # href/src and unrelated data-* attributes retain normal validation.
+                if n.tag in {'a','area'} and attr=='download':continue
                 values=[]
                 if attr=='style':values=re.findall(r'url\([\s\"\']*([^\)\"\']+)',value)
                 elif isinstance(value,str):
