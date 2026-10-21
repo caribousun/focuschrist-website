@@ -27,6 +27,25 @@ class ScriptImageURLs(unittest.TestCase):
         credit='This file was derived from: Alma Being Carried to His Father\'s House, October1925.png. <a href="https://commons.wikimedia.org/example.png">Source</a>'
         self.assertEqual(list(script_image_urls('const credits='+json.dumps({'credit':credit})+';')),[])
 
+    def test_download_name_is_not_an_image_url(self):
+        for value in ['"book-of-mormon-internal-map.png"', "'book-of-mormon-internal-map.png'", 'book-of-mormon-internal-map.png']:
+            html='<a href="/assets/timeline/book-of-mormon-internal-map.png" download='+value+'>Download</a>'
+            self.assertEqual(list(script_image_urls(html)),['/assets/timeline/book-of-mormon-internal-map.png'])
+
+    def test_real_script_filename_survives_download_name_mask(self):
+        html='<a href="/assets/map.png" download="map.png">Save</a><script>const image="map.png";</script>'
+        self.assertEqual(list(script_image_urls(html)),['/assets/map.png','map.png'])
+        self.assertEqual(list(script_image_urls('const download="map.png";')),['map.png'])
+
+    def test_missing_url_attributes_still_reported(self):
+        html='<a download="map.png" href="missing-map.png">Save</a><img src="missing-image.png">'
+        self.assertEqual(list(script_image_urls(html)),['missing-map.png','missing-image.png'])
+
+    def test_download_like_text_does_not_hide_other_attribute_or_script(self):
+        self.assertEqual(list(script_image_urls('<a data-download="missing.png" download>Save</a>')),['missing.png'])
+        self.assertEqual(list(script_image_urls('<script>const value="download=map.png"; const image="missing.png";</script>')),['download=map.png','missing.png'])
+        self.assertEqual(list(script_image_urls('<a href="missing.png" download="/unknown/image.png">Save</a>')),['missing.png','/unknown/image.png'])
+
     def credits_fixture(self):
         return {f'/assets/world-scripture/{i:064x}.jpg':{'title':'Title.png','author':'Creator','credit':"This file was derived from: Father's House, October1925.png",'license':'Public domain','license_url':'','source':'https://example.org/source.png','original':'https://example.org/original.jpg','notice':'Existing copy'}for i in range(193)}
 

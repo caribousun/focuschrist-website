@@ -7,6 +7,7 @@ This gate does not grant visual approval to an unreviewed or altered image.
 """
 import hashlib,json,re,sys
 from pathlib import Path
+from html.parser import HTMLParser
 from PIL import Image, ImageOps
 from urllib.parse import urlsplit,unquote
 from answer_study_qa import Document
@@ -122,8 +123,35 @@ def hero_registry_source(text, key):
     selected = [rule for rule in rules if rule['route'] == '/' + key]
     return text[:start] + json.dumps(selected) + text[start + length:]
 
+def without_download_filenames(text):
+    """Mask only filename-valued HTML download attributes, never script literals."""
+    offsets=[0]
+    for match in re.finditer('\n',text):offsets.append(match.end())
+    spans=[]
+    class DownloadNames(HTMLParser):
+        def handle_starttag(self,tag,attrs):
+            if tag not in {'a','area'}:return
+            raw=self.get_starttag_text();line,col=self.getpos();base=offsets[line-1]+col
+            # Consume complete attribute tokens so download text inside another
+            # quoted attribute cannot be mistaken for a real download attribute.
+            pattern=r"""([^\s=/>]+)(?:\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+)))?"""
+            start=re.match(r'<\s*[^\s/>]+',raw).end()
+            for item in re.finditer(pattern,raw[start:]):
+                if item.group(1).lower()!='download':continue
+                group=next((n for n in (2,3,4) if item.group(n) is not None),None)
+                if group is None:continue
+                value=item.group(group)
+                if value and not any(c in value for c in '/\\:?#'):
+                    a,b=item.span(group);spans.append((base+start+a,base+start+b))
+        handle_startendtag=handle_starttag
+    parser=DownloadNames(convert_charrefs=False);parser.feed(text)
+    for a,b in reversed(spans):text=text[:a]+' '*(b-a)+text[b:]
+    return text
+
+
 def script_image_urls(text, page_key=None):
     """Read complete same-quote literals; never start at an inner apostrophe."""
+    text=without_download_filenames(text)
     declarations=list(re.finditer(r'\bconst\s+PHOTO_CREDITS\s*=\s*',text))
     if declarations and page_key=='timelines/world-and-scripture-timeline.html':
         if len(declarations)!=1:raise ValueError('Ambiguous PHOTO_CREDITS declaration')
