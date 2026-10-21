@@ -23,6 +23,14 @@ class MotionBindingTests(unittest.TestCase):
             self.assertEqual(gate.advance(name,old+b' '),old+b' ',name)
             self.assertEqual(gate.advance('unknown/'+name,old),old,name)
 
+    def test_prospective_override_uses_exact_same_historical_chain(self):
+        from artwork_creation_gate import content_bytes
+        name='church-history.html'
+        raw=(gate.ROOT/name).read_bytes()
+        expected=content_bytes(gate.ROOT,name)
+        self.assertEqual(content_bytes(gate.ROOT,name,{name:raw}),expected)
+        self.assertEqual(content_bytes(gate.ROOT,name,{name:raw+b' '}),raw+b' ')
+
     def test_unknown_route_not_normalized(self):
         raw=(gate.ROOT/'index.html').read_bytes()
         self.assertEqual(gate.restore('unknown.html',raw),raw)

@@ -143,6 +143,8 @@ def build():
             output.write_text(content, encoding='utf-8', newline='\n')
         print('PREVIEW ONLY: isolated output; finished artwork and release review still required')
         return
+    from continue_motion_binding import advance
+    rendered = {p: advance(p.relative_to(ROOT).as_posix(), c.encode('utf-8')).decode('utf-8') for p, c in rendered.items()}
     artwork_gate(ROOT, 'use', page_overrides={p.relative_to(ROOT).as_posix(): c.encode('utf-8') for p, c in rendered.items()})
     for path, content in rendered.items():
         if '--check' in sys.argv:

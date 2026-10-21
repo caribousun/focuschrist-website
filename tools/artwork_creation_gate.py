@@ -64,9 +64,9 @@ def checked_overrides(root, overrides, mode='use'):
 
 
 def content_bytes(root, name, page_overrides=None):
-    if page_overrides and name in page_overrides:
-        return page_overrides[name]
     from artwork_display_delivery import inverse
+    if page_overrides and name in page_overrides:
+        return inverse(name, page_overrides[name])
     return inverse(name, local(root, name).read_bytes())
 
 
