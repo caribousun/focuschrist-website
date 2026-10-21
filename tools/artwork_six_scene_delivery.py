@@ -19,7 +19,8 @@ def local(root,name):
     return p
 def digest(p):
     from test_opening_composition_binding import reviewed_opening_bytes
-    return hashlib.sha256(reviewed_opening_bytes(p) if p.name in {'unified-opening.css', 'unified-opening.js'} else p.read_bytes()).hexdigest()
+    from continue_motion_binding import reviewed_bytes
+    return hashlib.sha256(reviewed_opening_bytes(p) if p.name in {'unified-opening.css', 'unified-opening.js'} else reviewed_bytes(p)).hexdigest()
 
 def time(value):return dt.datetime.fromisoformat(value.replace('Z','+00:00'))
 

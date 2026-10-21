@@ -61,38 +61,34 @@
         let returnFocus = null;
         let continueTarget = null;
         let cancelContinueAlignment = function () {};
-        function afterClosedLayout(target, align) {
-            cancelContinueAlignment();
-            let frame = 0;
-            let first = true;
-            const timers = [];
-            const inputs = ['wheel', 'touchstart', 'touchmove', 'pointerdown', 'keydown'];
-            function cancel() {
-                window.cancelAnimationFrame(frame);
-                timers.forEach(function (timer) { window.clearTimeout(timer); });
-                inputs.forEach(function (type) { window.removeEventListener(type, cancel, true); });
-                if (cancelContinueAlignment === cancel) cancelContinueAlignment = function () {};
-            }
-            function measureAndAlign() {
-                if (dialog.open || !target.isConnected || document.querySelector('dialog[open]')) { cancel(); return; }
-                align(first);
-                first = false;
-            }
-            cancelContinueAlignment = cancel;
-            inputs.forEach(function (type) { window.addEventListener(type, cancel, { capture: true, passive: true }); });
-            // Scrollbar restoration and late image/font layout can move the lesson
-            // after close. Re-measure briefly, unless the reader takes control.
-            frame = window.requestAnimationFrame(function () {
-                frame = window.requestAnimationFrame(measureAndAlign);
-            });
-            [120, 350, 800].forEach(function (delay) {
-                timers.push(window.setTimeout(function () {
-                    measureAndAlign();
-                    if (delay === 800) cancel();
-                }, delay));
-            });
-        }
-
+        function afterClosedLayout(target, align) {
+            cancelContinueAlignment();
+            let frame = 0;
+            let first = true;
+            const timers = [];
+            const inputs = ['wheel', 'touchstart', 'touchmove', 'pointerdown', 'keydown'];
+            function cancel() {
+                window.cancelAnimationFrame(frame);
+                timers.forEach(function (timer) { window.clearTimeout(timer); });
+                inputs.forEach(function (type) { window.removeEventListener(type, cancel, true); });
+                if (cancelContinueAlignment === cancel) cancelContinueAlignment = function () {};
+            }
+            function measureAndAlign() {
+                if (dialog.open || !target.isConnected || document.querySelector('dialog[open]')) { cancel(); return; }
+                align(first);
+                cancel();
+                first = false;
+            }
+            cancelContinueAlignment = cancel;
+            inputs.forEach(function (type) { window.addEventListener(type, cancel, { capture: true, passive: true }); });
+            // Scrollbar restoration and late image/font layout can move the lesson
+            // after close. Re-measure briefly, unless the reader takes control.
+            frame = window.requestAnimationFrame(function () {
+                frame = window.requestAnimationFrame(measureAndAlign);
+            });
+
+        }
+
         function officialLinks(container) {
             if (!container) return [];
             return Array.from(container.querySelectorAll('a[href]')).filter(function (link) {
@@ -283,21 +279,22 @@
                         target.addEventListener('blur', function () { target.removeAttribute('tabindex'); }, { once: true });
                     }
                     if (first) target.focus({ preventScroll: true });
-                    const header = document.querySelector('.nav[data-focuschrist-header="standard"]');
-                    const headerPosition = header && window.getComputedStyle(header).position;
-                    const headerClearance = (headerPosition === 'fixed' || headerPosition === 'sticky'
-                        ? Math.ceil(header.getBoundingClientRect().height) : 0) + 16;
-                    const targetMargin = parseFloat(window.getComputedStyle(target).scrollMarginTop) || 0;
-                    let clearance = Math.max(targetMargin, headerClearance);
-                    const studyNav = main.classList.contains('fc-art-study-page') && main.querySelector('.fc-study-nav');
-                    const navStyle = studyNav && window.getComputedStyle(studyNav);
-                    if (navStyle && (navStyle.position === 'sticky' || navStyle.position === 'fixed')) {
-                        const navTop = parseFloat(navStyle.top) || 0;
-                        clearance = Math.max(clearance, navTop + studyNav.getBoundingClientRect().height + 16);
-                    }
-                    const maximum = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
-                    const destination = Math.max(0, Math.min(window.scrollY + target.getBoundingClientRect().top - clearance, maximum));
-                    if (Math.abs(window.scrollY - destination) > 1) window.scrollTo({ top: destination, behavior: 'instant' });
+                    const header = document.querySelector('.nav[data-focuschrist-header="standard"]');
+                    const headerPosition = header && window.getComputedStyle(header).position;
+                    const headerClearance = (headerPosition === 'fixed' || headerPosition === 'sticky'
+                        ? Math.ceil(header.getBoundingClientRect().height) : 0) + 16;
+                    const targetMargin = parseFloat(window.getComputedStyle(target).scrollMarginTop) || 0;
+                    let clearance = Math.max(targetMargin, headerClearance);
+                    const studyNav = main.classList.contains('fc-art-study-page') && main.querySelector('.fc-study-nav');
+                    const navStyle = studyNav && window.getComputedStyle(studyNav);
+                    if (navStyle && (navStyle.position === 'sticky' || navStyle.position === 'fixed')) {
+                        const navTop = parseFloat(navStyle.top) || 0;
+                        clearance = Math.max(clearance, navTop + studyNav.getBoundingClientRect().height + 16);
+                    }
+                    const maximum = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+                    const destination = Math.max(0, Math.min(window.scrollY + target.getBoundingClientRect().top - clearance, maximum));
+                    if (window.FocusContinueScroll) window.FocusContinueScroll.to(target, { offset: clearance });
+                    else if (Math.abs(window.scrollY - destination) > 1) window.scrollTo({ top: destination, behavior: 'instant' });
                 });
             } else if (returnFocus) returnFocus.focus({ preventScroll: true });
             returnFocus = null;

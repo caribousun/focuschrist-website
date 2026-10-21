@@ -21,6 +21,7 @@ dialog.querySelector = () => close;
 dialog.showModal = () => { dialog.open = true; };
 dialog.close = () => { dialog.open = false; dialog.listeners.close(); };
 const figure = new Element();
+figure.isConnected = true;
 const bodyTrigger = new Element();
 bodyTrigger.dataset.artworkDetail = 'body';
 bodyTrigger.href = '/body.webp';
@@ -41,7 +42,10 @@ const document = {
     querySelectorAll: () => [bodyTrigger, otherTrigger],
     body: { classList: { add: n => classes.add(n), remove: n => classes.delete(n) } },
 };
-vm.runInNewContext(fs.readFileSync('artwork-details.js','utf8'), { document, window: {location: {pathname:'/answers/death-of-a-child.html'}}, URLSearchParams });
+const frames = [];
+const window = {location: {pathname:'/answers/death-of-a-child.html'}};
+function flushFrames() { while (frames.length) frames.shift()(); }
+vm.runInNewContext(fs.readFileSync('artwork-details.js','utf8'), { document, window, requestAnimationFrame: fn => frames.push(fn), URLSearchParams });
 function open(trigger) { trigger.listeners.click({button:0, preventDefault() {}}); }
 const resume = ids.artworkDetailFullImage.afterNode;
 assert.equal(resume.textContent, 'Continue Lesson');
@@ -51,7 +55,10 @@ assert.equal(ids.artworkDetailSource.href, record.dataset.detailSource);
 assert.equal(ids.artworkDetailStudy.href, '/study.html');
 assert.equal(ids.artworkDetailFullImage.href, '/body.webp');
 resume.listeners.click();
+assert.equal(figure.scrollOptions, undefined, 'Return waits for dialog layout frames');
+flushFrames();
 assert(!dialog.open && bodyTrigger.focused, 'Continue Lesson must close and restore invoking picture focus');
+assert.equal(figure.scrollOptions.behavior, 'instant', 'Absent shared helper must use safe instant fallback');
 assert.equal(figure.scrollOptions.block, 'start', 'Continue Lesson must scroll its figure back into view');
 assert(!classes.has('fc-dialog-open'));
 figure.scrollOptions = null;
@@ -62,4 +69,15 @@ open(otherTrigger);
 assert(resume.hidden, 'Non-body artwork must not gain an unrelated lesson action');
 close.listeners.click();
 assert(otherTrigger.focused, 'Existing close focus behavior must remain');
+let animatedTarget = null;
+window.FocusContinueScroll = {to: target => { animatedTarget = target; }};
+open(bodyTrigger);
+resume.listeners.click();
+flushFrames();
+assert.equal(animatedTarget, figure, 'Continue delegates to shared animation owner');
+animatedTarget = null;
+open(bodyTrigger);
+close.listeners.click();
+flushFrames();
+assert.equal(animatedTarget, null, 'Ordinary close cannot animate');
 console.log('Legacy artwork runtime QA passed: body lesson return, focus, regular close, existing destinations, non-body scope.');

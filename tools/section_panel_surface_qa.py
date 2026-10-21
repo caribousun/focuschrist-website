@@ -9,9 +9,11 @@ CONFIG=ROOT/'docs/section-panel-surfaces.json'
 INVENTORY=ROOT/'docs/section-panel-inventory.json'
 PATTERN=re.compile(r'card|panel|callout|reflection|note|tile|pathway')
 STANDALONE_ROUTE='timelines/world-and-scripture-timeline.html'
-STANDALONE_SHA='79e8766bb3fd2b4493bf9679644654ad91a17090bb1f70373e88ae7e7b12d972'
+STANDALONE_SHA='523560bb698f11abf503aa44187ce2cf2b8a571f8b5129f3e70760e9df9d39c4'
 
 def assert_standalone(route, data):
+    from continue_motion_binding import restore as before_motion
+    data=before_motion(route,data)
     assert route == STANDALONE_ROUTE, 'Unknown standalone route'
     assert hashlib.sha256(data).hexdigest() == STANDALONE_SHA, 'Standalone review binding drift'
     text=data.decode('utf-8')

@@ -102,7 +102,7 @@
         let url;
         try { url = new URL(link.href, window.location.href); } catch (_) { return; }
         if (url.origin !== window.location.origin || url.pathname !== window.location.pathname || url.search !== window.location.search) return;
-        revealFragment(url.hash);
+        if (!(window.FocusContinueScroll && window.FocusContinueScroll.isContinue(link))) revealFragment(url.hash);
     });
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', revealCurrent, { once: true });
     else revealCurrent();

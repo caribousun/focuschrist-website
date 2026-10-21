@@ -7,7 +7,7 @@ class TimelineImportTests(unittest.TestCase):
     def test_reviewed_code_evidence_restores_only_exact_hooks(self):
         root=Path(__file__).resolve().parents[1]
         for name,binding in gate.REVIEWED_CODE_INVERSES.items():
-            data=(root/name).read_bytes()
+            data=gate.before_motion_code_evidence(name,(root/name).read_bytes())
             self.assertEqual(hashlib.sha256(data).hexdigest(),binding['current'])
             restored=gate.restore_code_evidence(name,data)
             self.assertEqual(hashlib.sha256(restored).hexdigest(),binding['previous'])
@@ -60,7 +60,15 @@ class TimelineImportTests(unittest.TestCase):
         cls.record=json.loads((real/gate.MANIFEST).read_text(encoding='utf-8'))
         spec=cls.record['spec']
         for item in spec['assets']+spec['licenses']+[spec['page'],spec['credits'],spec['lineage']]:
-            dest=cls.root/item['path'];dest.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(real/item['path'],dest)
+            dest=cls.root/item['path'];dest.parent.mkdir(parents=True,exist_ok=True)
+            # These tests exercise the unchanged historical import contract,
+            # not the separately reviewed successor overlay.
+            source=real/item['path']
+            if item is spec['page']:
+                from timeline_artwork_reuse import BASELINE
+                source=real/BASELINE
+                assert hashlib.sha256(source.read_bytes()).hexdigest()==item['sha256']
+            shutil.copyfile(source,dest)
         cls.record['status']='REVIEWED_EXACT_SOURCE_IMPORT';cls.record['reviews']=[]
         for role in ['Albert','Fermi','Newton']:
             name='docs/world-scripture-import/synthetic-'+role+'.txt';raw=b'Synthetic test fixture, not actual concurrence.'
@@ -121,6 +129,14 @@ class TimelineImportTests(unittest.TestCase):
     def test_bad_bytes_rejected(self):
         r=copy.deepcopy(self.record);r['spec']['assets'][0]['sha256']='0'*64
         with self.assertRaisesRegex(ValueError,'changed bytes'):self.run_record(r,repin=True)
+
+    def test_unreviewed_page_drift_reports_byte_rejection(self):
+        page=self.root/gate.PAGE;saved=page.read_bytes()
+        try:
+            page.write_bytes(saved+b' ')
+            with self.assertRaisesRegex(ValueError,'changed bytes: .*successor evidence rejected'):
+                self.run_record(copy.deepcopy(self.record))
+        finally:page.write_bytes(saved)
 
     def test_path_escape_rejected(self):
         r=copy.deepcopy(self.record);r['spec']['lineage']['path']='../escape.md'

@@ -92,6 +92,8 @@ def published_text(path: Path) -> str:
 def content_hash(path: Path) -> str:
     raw=path.read_bytes()
     name=path.relative_to(ROOT).as_posix()
+    from continue_motion_binding import restore as before_motion
+    raw=before_motion(name,raw)
     from timeline_source_import import restore_consumers
     prior=restore_consumers(name,raw)
     if name == 'timeline.html' and hashlib.sha256(raw).hexdigest() == '5216c648b00916784a29d8387eb46c8f4eb03bd5edfb8b332b21e30e1faf0324':
@@ -133,7 +135,9 @@ class InlineScriptParser(HTMLParser):
 
 def inline_script_hash(path: Path) -> str:
     from timeline_source_import import before_navigation_polish
-    raw = before_navigation_polish(path.relative_to(ROOT).as_posix(), path.read_bytes())
+    from continue_motion_binding import restore as before_motion
+    name=path.relative_to(ROOT).as_posix()
+    raw = before_navigation_polish(name, before_motion(name,path.read_bytes()))
     parser = InlineScriptParser(raw)
     parser.feed(raw.decode("latin-1"))
     parser.close()
@@ -220,7 +224,8 @@ def validate() -> int:
                 errors.append(f"{name}: authoritative_sources must contain non-empty strings")
         if not record.get("reviewed_on") or not record.get("review_standard"):
             errors.append(f"{name}: missing review date or standard")
-        if name == WORLD_TIMELINE and record.get('reviewed_source_sha256') != hashlib.sha256(path.read_bytes()).hexdigest():
+        from continue_motion_binding import restore as before_motion
+        if name == WORLD_TIMELINE and record.get('reviewed_source_sha256') != hashlib.sha256(before_motion(name,path.read_bytes())).hexdigest():
             errors.append(f"{name}: exact reviewed source binding missing or changed")
         if name in INLINE_SCRIPT_ROUTES:
             try:

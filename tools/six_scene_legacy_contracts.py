@@ -15,7 +15,10 @@ def bound(root):
 def legacy_text(route,text,root):
     if route not in ROWS:return text
     bound(root);row=ROWS[route]
-    if sha((root/route).read_bytes())!=row['current_sha256']:raise ValueError('Six-scene owner bytes changed')
+    from continue_motion_binding import restore
+    text=restore(route,text.encode()).decode()
+    from continue_motion_binding import restore
+    if sha(restore(route,(root/route).read_bytes()))!=row['current_sha256']:raise ValueError('Six-scene owner bytes changed')
     for after,before in reversed(row['reverse']):
         if text.count(after)!=1:raise ValueError('Six-scene inverse missing/duplicate/changed exact addition')
         text=text.replace(after,before,1)

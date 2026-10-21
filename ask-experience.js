@@ -281,7 +281,7 @@
     }
 
     function preferredScrollBehavior() {
-        return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+        return 'instant';
     }
 
     function fixedHeaderOffset() {

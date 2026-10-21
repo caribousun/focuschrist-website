@@ -266,6 +266,17 @@
       "disposition": "coordinated_stylesheet_owner",
       "reason": "Merlin standalone map surface, preserved by owner direction 2026-10-02; scoped inline styles and timeline interaction review."
     },
+    "companion-note": {
+      "count": 2,
+      "pages": [
+        "timelines/world-and-scripture-timeline.html"
+      ],
+      "tags": [
+        "p"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "World and Scripture companion link explanatory paragraph; ordinary typography-only reading text, not an independent filled section panel."
+    },
     "count-note": {
       "count": 1,
       "pages": [

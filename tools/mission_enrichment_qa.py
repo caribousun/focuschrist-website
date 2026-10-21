@@ -81,9 +81,13 @@ def errors(text,baseline,root=ROOT):
 class MissionEnrichment(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.page=(ROOT/'missionary.html').read_text(encoding='utf-8')
+        cls.current=(ROOT/'missionary.html').read_text(encoding='utf-8')
+        from continue_motion_binding import restore
+        cls.page=restore('missionary.html',cls.current.encode()).decode()
         cls.baseline=subprocess.check_output(['git','show',BASELINE+':missionary.html'],cwd=ROOT).decode('utf-8')
-    def test_actual(self):self.assertEqual(errors(self.page,self.baseline),[])
+    def test_actual(self):
+        self.assertEqual(errors(self.current,self.baseline),[])
+        self.assertEqual(errors(self.page,self.baseline),[])
     def test_unreviewed_caption_change(self):
         broken=self.page.replace('Then turn to Matthew 28 and His charge', 'Then ignore Matthew 28 and His charge')
         self.assertNotEqual(broken,self.page);self.assertIn('Original detail records changed/missing/duplicated',errors(broken,self.baseline))

@@ -1,0 +1,11 @@
+# Albert finished Continue-motion integration review
+
+Executor and accountable integrator: Albert. Exact predecessor-map canonical SHA256: 010f24f44c70beaab3dbfe2b92832cdc28adbb79343dcb34c144191154f4312a. Decision: CONCUR for this finite motion correction and unchanged timeline-companion integration.
+
+Personally implemented the Continue-only animated path and cooperating timeline/image-study handlers. Ordinary same-document links, Ask/composer navigation and World event/detail navigation remain immediate. Reduced motion lands immediately; reader input cancels motion. No pill design, destination or locked opening geometry was intentionally altered.
+
+Actual local browser execution: 16 opening cases across eight routes at desktop/phone, 22 separately executable browser regression cases (Continue trajectory, reduced motion, ordinary Atonement chapter navigation), and four topic image-study/World close-only cases. Actual nested full image closes back into the topic study before Continue Lesson animates; World context Continue still only closes/restores its opener. An initial optional test selector skipped nested full image; the corrected mandatory real control test was then executed at both viewports and passed. Exact original/new World hero, introduction and Continue rectangles equal at1905x987 and390x844. Personally inspected Home/answer/World/topic dialog/landed desktop/phone screenshots; readable and no horizontal clipping in those captures.
+
+Existing exact companions retain their prior separately reviewed content and 730-entry/838-placement reconciliation, printable reader/evidence editions, compact28-page PDF and formatted workbook. No new historical-truth, native-Excel, physical-phone, every-PDF-pixel or whole-site ten-artwork compliance claim. Fermi and Newton performed independent finished reviews with their exact scopes recorded alongside this file. Runtime compatibility and negative tests preserve original review evidence, rather than silently approving new behavior.
+
+Owner directly instructed “continue and publish” after the Continue-only request. Exact-head CI, merge, deployment and ordinary public/live verification remain separate subsequent release evidence.

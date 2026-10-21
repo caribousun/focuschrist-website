@@ -92,8 +92,9 @@ def validate(root, added, covered):
     paths = validate_pixels(root)
     require(paths <= added and not paths & covered, 'display coverage overlap or omission')
     require(paths == added - covered, 'unsupported additional display raster')
+    from continue_motion_binding import restore as before_motion
     for name, expected in CONSUMERS.items():
-        require(sha((root / name).read_bytes()) == expected, 'current consumer drift: ' + name)
+        require(sha(before_motion(name,(root / name).read_bytes())) == expected, 'current consumer drift: ' + name)
     record = json.loads((root / 'docs/image-delivery-20261019.json').read_text(encoding='utf8'))
     require(record['schema'] == 1 and record['assets'] == ASSETS and record['consumers'] == CONSUMERS, 'unreviewed delivery manifest')
     binding = sha(json.dumps({'assets': ASSETS, 'consumers': CONSUMERS}, sort_keys=True, separators=(',', ':')).encode())

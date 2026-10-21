@@ -154,7 +154,8 @@
     "fc-answers-unique-art--card": "Artwork figure; preserve framing and reviewed Answers picture-study behavior.",
     "panelsub": "World and Scripture timeline panel subtitle paragraph; typography-only text, not an independent panel surface.",
     "cards": "World and Scripture timeline Detailed-view grid layout container; individual card surfaces retain their existing delegated inline owner.",
-    "mapnote": "World and Scripture timeline geographic provenance paragraph beneath the map; inline map annotation styling and tested scenario disclosure, not a study section panel."
+    "mapnote": "World and Scripture timeline geographic provenance paragraph beneath the map; inline map annotation styling and tested scenario disclosure, not a study section panel.",
+    "companion-note": "World and Scripture companion link explanatory paragraph; ordinary typography-only reading text, not an independent filled section panel."
   },
   "runtime_selectors": {
     ".cfm-month": {

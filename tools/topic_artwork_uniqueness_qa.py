@@ -130,7 +130,14 @@ def script_image_urls(text, page_key=None):
         start=declarations[0].end()
         credits,length=json.JSONDecoder().raw_decode(text[start:])
         fields={'title','author','credit','license','license_url','source','original','notice'}
-        if not isinstance(credits,dict) or len(credits)!=193:raise ValueError('Unexpected PHOTO_CREDITS inventory')
+        if not isinstance(credits,dict) or len(credits) not in (191,193):raise ValueError('Unexpected PHOTO_CREDITS inventory')
+        if len(credits)==191:
+            from timeline_artwork_reuse import RETIRED,ASSET,OWNER,declaration
+            data=declaration(text,'DATA')
+            if len(data)!=730 or set(credits)&RETIRED or any(p in text for p in RETIRED):
+                raise ValueError('Unexpected active PHOTO_CREDITS retirement')
+            if any(data[i].get('img')!=ASSET or data[i].get('imgpage')!=OWNER or data[i].get('credit')!='Artwork: focuschrist.com' for i in (25,28)):
+                raise ValueError('Missing exact existing-artwork replacement')
         for key,row in credits.items():
             if not re.fullmatch(r'/assets/world-scripture/[0-9a-f]{64}\.(?:jpg|png|webp|gif)',key) or not isinstance(row,dict) or set(row)!=fields or not all(isinstance(v,str)for v in row.values()):
                 raise ValueError('Unexpected PHOTO_CREDITS schema')
@@ -155,7 +162,20 @@ def scan(root=ROOT):
         # Literal image URLs used by DOM image/detail setters resolve against the document.
         # Computed template paths require the separate browser interaction gate.
         for value in script_image_urls(text, key):
-            add_reference(page,value,key,'script','literal-image-url')
+            if key=='timelines/world-and-scripture-timeline.html' and value=='/assets/page-art/atonement/first-hope.webp':
+                # Exact selected existing-artwork references, not a general
+                # exemption for runtime images or ownership inferred by name.
+                from timeline_artwork_reuse import ASSET,OWNER,declaration
+                data=declaration(text,'DATA')
+                selected=[i for i,row in enumerate(data) if row.get('img')==ASSET]
+                if selected!=[25,28] or any(data[i].get('imgpage')!=OWNER or data[i].get('credit')!='Artwork: focuschrist.com' for i in selected):
+                    raise ValueError('Unbound timeline existing-artwork reference')
+                asset=local_asset(page,value,root)
+                if asset:
+                    asset_paths.add(asset)
+                    references.append({'page':key,'asset':asset,'tag':'script','attribute':'literal-image-url','linked_reference':{'owner':'atonement.html','fragment':''}})
+            else:
+                add_reference(page,value,key,'script','literal-image-url')
     def css_refs(file, key, seen):
         if file in seen or not file.is_file():return
         seen.add(file)

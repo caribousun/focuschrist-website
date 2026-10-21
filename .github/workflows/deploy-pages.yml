@@ -41,6 +41,8 @@ jobs:
         run: |
           python -m unittest discover -s tools -p test_artwork_creation_gate.py
           python -m unittest discover -s tools -p test_timeline_source_import.py
+          python tools/test_continue_motion_binding.py
+          python tools/continue_motion_binding.py
           python -m unittest discover -s tools -p test_navigation_polish_bindings.py
           python -m unittest discover -s tools -p test_script_image_urls.py
           python -m unittest discover -s tools -p test_watch_thumbnail_delivery.py

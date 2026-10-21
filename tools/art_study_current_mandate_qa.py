@@ -48,6 +48,8 @@ VISIBLE_ART_ROUTES = frozenset({
 
 def reviewed_page_binding(page, route, expected):
     raw = page.read_bytes()
+    from continue_motion_binding import restore as before_motion
+    raw = before_motion(route,raw)
     if hashlib.sha256(raw).hexdigest() == expected:
         return True
     if expected != REVIEWED_PAGE_HASHES.get(route):

@@ -129,10 +129,16 @@
                     const clearance = (position === 'fixed' || position === 'sticky' ? Math.ceil(header.getBoundingClientRect().height) : 0) + 16;
                     const top = window.scrollY + target.getBoundingClientRect().top - clearance;
                     const maximum = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
-                    window.scrollTo({ top: Math.max(0, Math.min(top, maximum)), behavior: 'instant' });
+                    if (window.FocusContinueScroll) window.FocusContinueScroll.to(target, { offset: clearance });
+                    else window.scrollTo({ top: Math.max(0, Math.min(top, maximum)), behavior: 'instant' });
                 }); });
             } else {
-                lessonFigure.scrollIntoView({ block: 'start', behavior: 'auto' });
+                const target = lessonFigure;
+                requestAnimationFrame(function () { requestAnimationFrame(function () {
+                    if (dialog.open || !target.isConnected) return;
+                    if (window.FocusContinueScroll) window.FocusContinueScroll.to(target);
+                    else target.scrollIntoView({ block: 'start', behavior: 'instant' });
+                }); });
             }
         }
         returnFocus = null;
