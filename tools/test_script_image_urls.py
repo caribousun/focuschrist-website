@@ -1,6 +1,8 @@
 """Literal scanner regressions; these are not browser interaction evidence."""
-import unittest,json
-from topic_artwork_uniqueness_qa import script_image_urls
+import unittest,json,tempfile
+from pathlib import Path
+from PIL import Image
+from topic_artwork_uniqueness_qa import script_image_urls,scan
 
 class ScriptImageURLs(unittest.TestCase):
     def test_remote_url_apostrophe_does_not_become_local_tail(self):
@@ -26,6 +28,45 @@ class ScriptImageURLs(unittest.TestCase):
     def test_attribution_html_inside_json_is_not_a_local_image(self):
         credit='This file was derived from: Alma Being Carried to His Father\'s House, October1925.png. <a href="https://commons.wikimedia.org/example.png">Source</a>'
         self.assertEqual(list(script_image_urls('const credits='+json.dumps({'credit':credit})+';')),[])
+
+    def test_download_name_is_not_an_image_url(self):
+        for value in ['"book-of-mormon-internal-map.png"', "'book-of-mormon-internal-map.png'", 'book-of-mormon-internal-map.png']:
+            html='<a href="/assets/timeline/book-of-mormon-internal-map.png" download='+value+'>Download</a>'
+            self.assertEqual(list(script_image_urls(html)),['/assets/timeline/book-of-mormon-internal-map.png'])
+
+    def test_real_script_filename_survives_download_name_mask(self):
+        html='<a href="/assets/map.png" download="map.png">Save</a><script>const image="map.png";</script>'
+        self.assertEqual(list(script_image_urls(html)),['/assets/map.png','map.png'])
+        self.assertEqual(list(script_image_urls('const download="map.png";')),['map.png'])
+
+    def test_missing_url_attributes_still_reported(self):
+        html='<a download="map.png" href="missing-map.png">Save</a><img src="missing-image.png">'
+        self.assertEqual(list(script_image_urls(html)),['missing-map.png','missing-image.png'])
+
+    def test_download_like_text_does_not_hide_other_attribute_or_script(self):
+        self.assertEqual(list(script_image_urls('<a data-download="missing.png" download>Save</a>')),['missing.png'])
+        self.assertEqual(list(script_image_urls('<script>const value="download=map.png"; const image="missing.png";</script>')),['download=map.png','missing.png'])
+        self.assertEqual(list(script_image_urls('<a href="missing.png" download="/unknown/image.png">Save</a>')),['missing.png','/unknown/image.png'])
+
+    def test_scan_download_filename_vs_real_image_references(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp);(root/'assets').mkdir()
+            Image.new('RGB',(2,2),'white').save(root/'assets/map.png')
+            (root/'index.html').write_text('<a href="/assets/map.png" download="suggested.png">Save</a>'
+                '<area href="/assets/map.png" download=area-name.png>'
+                '<a href="missing-href.png" download="other-name.png">Missing</a>'
+                '<img src="missing-src.png"><a data-download="missing-data.png">Data</a>'
+                '<script>const image="suggested.png";</script>',encoding='utf8')
+            result=scan(root);issues=result['assetIssues']
+            self.assertEqual(set(issues),{'suggested.png','missing-href.png','missing-src.png','missing-data.png'})
+            self.assertTrue(all(v=='Missing public image asset' for v in issues.values()))
+            refs=[r for family in result['familyUsages'].values() for r in family['references']]
+            self.assertFalse(any(r['attribute']=='download' for r in refs))
+            self.assertTrue(any(r['asset']=='assets/map.png' and r['attribute']=='href' for r in refs))
+            self.assertTrue(any(r['asset']=='suggested.png' and r['tag']=='script' for r in refs))
+            # Without the genuine script URL, that identical filename is not an asset.
+            page=root/'index.html';page.write_text(page.read_text(encoding='utf8').replace('<script>const image="suggested.png";</script>',''),encoding='utf8')
+            self.assertNotIn('suggested.png',scan(root)['assetIssues'])
 
     def credits_fixture(self):
         return {f'/assets/world-scripture/{i:064x}.jpg':{'title':'Title.png','author':'Creator','credit':"This file was derived from: Father's House, October1925.png",'license':'Public domain','license_url':'','source':'https://example.org/source.png','original':'https://example.org/original.jpg','notice':'Existing copy'}for i in range(193)}

@@ -669,15 +669,23 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	}
 
 
+.timeline-companions .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .timeline-companions{box-sizing:border-box;max-width:1180px;margin:0 auto 18px;padding:0 20px;color:var(--text)}
 .timeline-companions>summary{width:fit-content;margin:auto;min-height:44px;display:list-item;cursor:pointer;color:var(--gold-light);padding:10px 12px;line-height:1.5}
-.companion-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;padding:16px 0}
-.companion-grid article{min-width:0;padding:0 8px}
-.companion-grid h2{font-family:var(--fc-font-display,Georgia,serif);font-size:24px;line-height:1.3;margin:0 0 12px;color:var(--gold-light)}
-.companion-grid p{font-size:16px;line-height:1.6;margin:0 0 12px}
-.companion-grid a{display:block;padding:10px 0;min-height:44px;box-sizing:border-box;line-height:1.5;color:var(--gold-light);text-underline-offset:4px;overflow-wrap:anywhere}
-.companion-grid .companion-note{font-size:14px;color:var(--muted);margin-top:8px}
-@media(max-width:750px){.companion-grid{grid-template-columns:1fr;gap:24px}.timeline-companions{padding:0 16px}}
+.timeline-companions .companion-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;padding:16px 0}
+.timeline-companions .companion-grid article{display:flex;flex-direction:column;min-width:0;padding:20px;border:1px solid var(--line);border-radius:12px;background:var(--panel2)}
+.timeline-companions .companion-grid h2{font-family:var(--fc-font-display,Georgia,serif);font-size:22px;line-height:1.3;margin:0 0 10px;color:var(--gold-light)}
+.timeline-companions .companion-grid p{font-size:15px;line-height:1.6;margin:0 0 12px}
+.timeline-companions .companion-actions{display:flex;flex-wrap:wrap;align-items:center;gap:0 18px;margin-top:auto}
+.timeline-companions .companion-grid a{display:inline-flex;align-items:center;box-sizing:border-box;min-height:44px;padding:8px 0;line-height:1.5;color:var(--gold-light);text-underline-offset:4px;overflow-wrap:anywhere}
+.timeline-companions .companion-grid a:focus-visible,.timeline-companions>summary:focus-visible{outline:2px solid var(--gold-light);outline-offset:4px;border-radius:3px}
+.timeline-companions .companion-grid .companion-note{font-size:13px;line-height:1.5;color:var(--muted);margin:10px 0 0}
+.timeline-companions .companion-map-body{display:grid;grid-template-columns:84px minmax(0,1fr);align-items:start;gap:16px;margin-bottom:4px}
+.timeline-companions .companion-grid a.companion-map-preview{display:block;min-height:0;padding:0}
+.timeline-companions .companion-map-preview img{display:block;width:84px;height:auto;aspect-ratio:2/3;border:1px solid var(--line);border-radius:6px;box-sizing:border-box}
+@media(max-width:700px){.timeline-companions{padding:0 16px}.timeline-companions .companion-grid{grid-template-columns:1fr;gap:12px}.timeline-companions .companion-grid article{padding:16px}.timeline-companions .companion-grid h2{font-size:21px}}
+.timeline-companions>.companion-note{text-align:center;color:var(--muted);font-size:14px;line-height:1.5;margin:6px 0 0}
+#speedSeg{display:flex;flex-direction:column;align-items:stretch;gap:2px;min-width:0;border:0;background:none;overflow:visible}#speedSeg select{width:100%;max-width:100%;min-width:80px;min-height:44px;padding:8px 24px 8px 12px}#speedSeg label{text-align:center;font-size:12px;line-height:1.2;color:var(--gold-light)}
 
 </style>
 <script>/* @preserve
@@ -2766,10 +2774,41 @@ L.Icon.Default.imagePath = ""; // Versioned absolute default icon URLs.
 <nav aria-label="Timeline navigation" style="text-align:center;padding:12px"><a class="fbtn" href="/timeline.html#choose-timeline">Back to Timeline</a></nav>
 <details class="timeline-companions" id="study-companions">
   <summary>Study companions &amp; downloads</summary>
+  <p class="companion-note">Reading links open in a new tab so you can keep your place in the timeline.</p>
   <div class="companion-grid">
-    <article><h2>Read through the timeline</h2><p>Follow the entries, browse the people index, and keep each entry’s dates, notes and sources together.</p><a href="/downloads/world-scripture/World_Scripture_Timeline_Companion_20261021.html">Open the reader companion</a><p class="companion-note">Use Print / Save PDF in the reader to keep a copy.</p></article>
-    <article><h2>Explore the evidence</h2><p>Compare the recorded notes and source links, including traditional dates and proposed locations.</p><a href="/downloads/world-scripture/World_Scripture_Timeline_Evidence_Companion_20261021.html">Open the evidence companion</a><p class="companion-note">Use Print / Save PDF in the companion to export it.</p></article>
-    <article><h2>Dates &amp; locations</h2><p>Take the compact index with you, or sort and filter the full spreadsheet.</p><a href="/downloads/world-scripture/World_Scripture_Timeline_Dates_and_Locations_20261021_NAV.pdf">Open the PDF index</a><a href="/downloads/world-scripture/World_Scripture_Timeline_Dates_and_Locations_20261021_NAV.pdf" download>Download PDF</a><a href="/downloads/world-scripture/World_Scripture_Timeline_Dates_Locations_20261021_FINAL.xlsx" download>Download spreadsheet (.xlsx)</a></article>
+    <article>
+      <h2>Read through the timeline</h2>
+      <p>Follow the entries and people index, with each entry’s dates, notes and sources together.</p>
+      <div class="companion-actions"><a href="/downloads/world-scripture/World_Scripture_Timeline_Companion_20261021.html" target="_blank" rel="noopener noreferrer">Open reader <span class="sr-only">(opens in a new tab)</span></a></div>
+      <p class="companion-note">Use Print / Save PDF in the reader to keep a copy.</p>
+    </article>
+    <article>
+      <h2>Explore the evidence</h2>
+      <p>Compare the notes and source links, including traditional dates and proposed locations.</p>
+      <div class="companion-actions"><a href="/downloads/world-scripture/World_Scripture_Timeline_Evidence_Companion_20261021.html" target="_blank" rel="noopener noreferrer">Open evidence companion <span class="sr-only">(opens in a new tab)</span></a></div>
+      <p class="companion-note">Use Print / Save PDF in the companion to keep a copy.</p>
+    </article>
+    <article>
+      <h2>Dates &amp; locations</h2>
+      <p>Keep the compact index at hand, or sort and filter the full spreadsheet.</p>
+      <div class="companion-actions">
+        <a href="/downloads/world-scripture/World_Scripture_Timeline_Dates_and_Locations_20261021_NAV.pdf" target="_blank" rel="noopener noreferrer">Open PDF index <span class="sr-only">(opens in a new tab)</span></a>
+        <a href="/downloads/world-scripture/World_Scripture_Timeline_Dates_and_Locations_20261021_NAV.pdf" download>Download PDF</a>
+        <a href="/downloads/world-scripture/World_Scripture_Timeline_Dates_Locations_20261021_FINAL.xlsx" download>Download spreadsheet</a>
+      </div>
+      <p class="companion-note">PDF for reading · XLSX for sorting and filtering.</p>
+    </article>
+    <article>
+      <h2>Book of Mormon study map</h2>
+      <div class="companion-map-body">
+        <a class="companion-map-preview" href="/assets/timeline/book-of-mormon-internal-map.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size Book of Mormon study map in a new tab"><img src="/assets/timeline/book-of-mormon-internal-map.png" width="3072" height="4608" loading="lazy" alt="Book of Mormon internal geography study map"></a>
+        <p>Explore the places and their relationships in the text. This interpretive map does not identify modern locations.</p>
+      </div>
+      <div class="companion-actions">
+        <a href="/assets/timeline/book-of-mormon-internal-map.png" target="_blank" rel="noopener noreferrer">Open full-size map <span class="sr-only">(opens in a new tab)</span></a>
+        <a href="/assets/timeline/book-of-mormon-internal-map.png" download="book-of-mormon-internal-map.png">Download map</a>
+      </div>
+    </article>
   </div>
 </details>
 
@@ -2816,9 +2855,7 @@ L.Icon.Default.imagePath = ""; // Versioned absolute default icon URLs.
     <div class="seg" id="timeSeg" role="group" aria-label="Time mode" style="flex:1 1 100%">
       <button data-tmode="year" class="on" aria-pressed="true">Through selected year</button><button data-tmode="all" aria-pressed="false">Show all years</button>
     </div>
-    <div class="seg" id="speedSeg" role="group" aria-label="Play speed">
-      <button data-speed="1" class="on" aria-pressed="true">1×</button><button data-speed="2" aria-pressed="false">2×</button>
-    </div>
+    <div id="speedSeg"><label for="playSpeed">Speed</label><select id="playSpeed" aria-label="Playback speed"><option value="0.25">¼×</option><option value="0.5">½×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="5">5×</option><option value="10">10×</option></select></div>
   </div><div class="map-options-row"><span class="scenario-current" id="workspaceScenarioState"></span><button class="fbtn" id="frameBtn" style="margin-top:6px">Frame the promised land</button><details class="workspace-disclosure mapsettings"><summary>Map settings &amp; jump</summary><div class="disclosure-body"><div class="settings-heading"><strong>Map settings</strong><button type="button" class="fbtn" id="mapSettingsClose">Close settings</button></div><div class="maptools" style="margin-top:8px">
     <span class="flabel">Go to:</span>
     <button class="fbtn" data-goto="-2500">Pyramids · 2500 BC</button>
@@ -4098,10 +4135,11 @@ function renderMapSVG(){
   renderMomentList(y);
 }
 function renderMomentList(y){
+  const byName = (a,b) => a.site.localeCompare(b.site, "en", { sensitivity: "base" });
   const alive = mapState.allYears ? DATA.filter(e => mapOkE(e) && entryLL(e)) : DATA.filter(e => mapOkE(e) && aliveAt(e, y));
   const past = mapState.allYears ? [] : DATA.filter(e => mapOkE(e) && pinState(e, y) === "past");
   document.getElementById("momentHead").textContent = mapState.allYears ? `All years · ${alive.length} entries plotted on the map` : `By ${fmtY(y)} · ${alive.length + past.length} appeared`;
-  const exact = mapState.allYears ? [] : alive.filter(e => e.start === y);
+  const exact = mapState.allYears ? [] : alive.filter(e => e.start === y).sort(byName);
   const naEl = document.getElementById("newAt");
   if (naEl){
     if (!mapState.allYears && exact.length){
@@ -4132,13 +4170,13 @@ function renderMomentList(y){
   let h = "";
   if (exact.length) h += `<h4>Happening this year</h4><div class="mchips">${exact.map(e => chip(e, "exact")).join("")}</div>`;
   [["world", "World"], ["bible", "Bible"], ["bom", "Book of Mormon"]].forEach(([c, label]) => {
-    const list = alive.filter(e => e.cats.includes(c) && (mapState.allYears || e.start !== y));
+    const list = alive.filter(e => e.cats.includes(c) && (mapState.allYears || e.start !== y)).sort(byName);
     if (!list.length) return;
     h += `<h4>${mapState.allYears ? label + " (" + list.length + ")" : label + ": also on the earth (" + list.length + ")"}</h4><div class="mchips">${list.slice(0, 60).map(e => chip(e)).join("")}${list.length > 60 ? `<span> and ${list.length - 60} more</span>` : ""}</div>`;
   });
-  if (past.length) h += `<h4>Already in the past by ${fmtY(y)}, in muted colors on the map (${past.length})</h4><div class="mchips">${past.slice(0, 60).map(e => chip(e)).join("")}${past.length > 60 ? `<span> and ${past.length - 60} more</span>` : ""}</div>`;
+  if (past.length) h += `<h4>Already in the past by ${fmtY(y)}, in muted colors on the map (${past.length})</h4><div class="mchips">${past.slice().sort(byName).slice(0, 60).map(e => chip(e)).join("")}${past.length > 60 ? `<span> and ${past.length - 60} more</span>` : ""}</div>`;
   const unplacedList = DATA.filter(e => mapOkE(e) && !e.ll && !e.llm && (mapState.allYears || e.start === null || e.start <= y));
-  if (unplacedList.length) h += `<h4>Unplaced: no map location in the current data (${unplacedList.length})</h4><div class="mchips">${unplacedList.map(e => chip(e)).join("")}</div>`;
+  if (unplacedList.length) h += `<h4>Unplaced: no map location in the current data (${unplacedList.length})</h4><div class="mchips">${unplacedList.sort(byName).map(e => chip(e)).join("")}</div>`;
   if (mapState.allYears){
     const noPin = DATA.filter(e => mapOkE(e) && !entryLL(e)).length;
     if (noPin) h += `<p class="src" style="margin-top:10px">${noPin} entries have no pin under this setting (${DATA.filter(e => mapOkE(e) && e.llm && !entryLL(e)).length} follow a Book of Mormon setting; the rest have no settled placement).</p>`;
@@ -4148,29 +4186,17 @@ function renderMomentList(y){
   ml.querySelectorAll("button[data-i]").forEach(b => b.addEventListener("click", () => { const e = DATA[+b.dataset.i]; state.selected = +b.dataset.i; showDetail(e); syncMomentSel(); }));
 }
 function stopPlay(){ if (mapState.timer){ clearTimeout(mapState.timer); mapState.timer = null; } mapState.playing = false; document.getElementById("playBtn").textContent = "▶ Play"; }
-function nextAdvanceDelay(){
-  const y = mapState.year;
-  if (PLAYKEYS.indexOf(y) >= 0) return (BOMKEYS.indexOf(y) >= 0 ? 250 : 160) / mapState.speed;
-  return 80 / mapState.speed;
-}
+function nextAdvanceDelay(){ return 1000 / mapState.speed; }
 function playTick(){
   mapState.timer = null;
   if (!mapState.playing) return;
   const y = mapState.year;
-  const nk = PLAYKEYS.find(k => k > y && k <= 1700);
-  // Advance between visible entry starts. AD 1700 is the terminal display bound.
-  if (nk === undefined){
-    mapState.year = 1700;
-    render();
-    stopPlay();
-    return;
-  }
-  mapState.year = clampMapYear(nk);
+  const nextEvent = PLAYKEYS.find(k => k > y && k <= 1700);
+  // At most ten years per step; stop at every intervening entry year.
+  mapState.year = clampMapYear(Math.min(y + 10, nextEvent === undefined ? 1700 : nextEvent, 1700));
   render();
-  const delay = BOMKEYS.indexOf(nk) >= 0 ? 250 : 160;
-  if (!mapState.playing) return;
   if (mapState.year >= 1700){ stopPlay(); return; }
-  mapState.timer = setTimeout(playTick, delay / mapState.speed);
+  if (mapState.playing) mapState.timer = setTimeout(playTick, nextAdvanceDelay());
 }
 function chainRestart(){
   if (!mapState.playing) return;
@@ -4190,11 +4216,13 @@ document.getElementById("playBtn").addEventListener("click", () => {
   if (mapState.timer){ clearTimeout(mapState.timer); mapState.timer = null; }
   mapState.timer = setTimeout(playTick, nextAdvanceDelay());
 });
-document.querySelectorAll("#speedSeg button").forEach(b => b.addEventListener("click", () => {
-  mapState.speed = +b.dataset.speed;
-  document.querySelectorAll("#speedSeg button").forEach(x => { const on = x === b; x.classList.toggle("on", on); x.setAttribute("aria-pressed", on ? "true" : "false"); });
+document.getElementById("playSpeed").addEventListener("change", ev => {
+  const speed = Number(ev.target.value);
+  if (![0.25, 0.5, 1, 2, 5, 10].includes(speed)) return;
+  mapState.speed = speed;
   chainRestart();
-}));
+});
+
 document.querySelectorAll("[data-goto]").forEach(b => b.addEventListener("click", () => gotoMoment(+b.dataset.goto)));
 document.querySelectorAll("#modelSeg button").forEach(b => b.addEventListener("click", () => {
   mapState.model = b.dataset.model;

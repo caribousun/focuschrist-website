@@ -1,0 +1,39 @@
+{
+  "source_sha256": "bb45d06812b0798951b5a54f5552752e6d43760501a7d64e0ec7fc7899d73626",
+  "page_sha256": "2aee89b976da080c2c363da3a32967061f93ac6abd0e2f140362b0338d3fe65d",
+  "reviews": [
+    {
+      "reviewer": "Albert",
+      "decision": "CONCUR",
+      "finished_pixels": true,
+      "finished_behavior": true,
+      "page_sha256": "2aee89b976da080c2c363da3a32967061f93ac6abd0e2f140362b0338d3fe65d",
+      "evidence": {
+        "path": "docs/world-companion-successor/albert-finished-review.md",
+        "sha256": "aee74e37f99d2f18789318913a25926c9d8274cc127463cfd243674d1ece0ee8"
+      }
+    },
+    {
+      "reviewer": "Fermi",
+      "decision": "CONCUR",
+      "finished_pixels": true,
+      "finished_behavior": true,
+      "page_sha256": "2aee89b976da080c2c363da3a32967061f93ac6abd0e2f140362b0338d3fe65d",
+      "evidence": {
+        "path": "docs/world-companion-successor/fermi-finished-review.md",
+        "sha256": "6a0f78008ec50486b5698f395e468b335e96fff8b88bb8f308bd0daa0c4e9119"
+      }
+    },
+    {
+      "reviewer": "Newton",
+      "decision": "CONCUR",
+      "finished_pixels": true,
+      "finished_behavior": true,
+      "page_sha256": "2aee89b976da080c2c363da3a32967061f93ac6abd0e2f140362b0338d3fe65d",
+      "evidence": {
+        "path": "docs/world-companion-successor/newton-finished-review.md",
+        "sha256": "e588337f34c22889317254182a0370f6920663d0d95eee2ad08f1982e5abccde"
+      }
+    }
+  ]
+}
