@@ -9,7 +9,7 @@ CONFIG=ROOT/'docs/section-panel-surfaces.json'
 INVENTORY=ROOT/'docs/section-panel-inventory.json'
 PATTERN=re.compile(r'card|panel|callout|reflection|note|tile|pathway')
 STANDALONE_ROUTE='timelines/world-and-scripture-timeline.html'
-STANDALONE_SHA='d427e7f8e578b880a6b512bdfbe9b455c9192026a7e9e80893afc6559c8f6494'
+STANDALONE_SHA='79e8766bb3fd2b4493bf9679644654ad91a17090bb1f70373e88ae7e7b12d972'
 
 def assert_standalone(route, data):
     assert route == STANDALONE_ROUTE, 'Unknown standalone route'

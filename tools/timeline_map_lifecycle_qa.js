@@ -5,7 +5,7 @@ function setup(provider=true){
  const dom=new JSDOM(html,{url:'https://focuschrist.com/timelines/willie-and-martin-handcart-map.html',runScripts:'outside-only'}),w=dom.window,d=w.document;
  w.HTMLElement.prototype.scrollIntoView=function(){};w.matchMedia=()=>({matches:true});
  const state={markers:[],routes:[],events:[],filters:[],shows:0,invalidations:0,removed:0,fits:[],flies:[],layers:new Set(),handlers:{},tile:{},popup:null,width:640,height:480,projections:0};
- w.TimelineWorkspace={showStory(){state.shows++;},scrollRow(){}};
+ w.TimelineWorkspace={showStory(){state.shows++;},scrollRow(row){(state.revealed||(state.revealed=[])).push(Number(row.dataset.stopIndex));}};
  w.addEventListener('timeline:select',e=>state.events.push(e.detail));w.addEventListener('timeline:filter',e=>state.filters.push(e.detail));
  const map={setView(){return this;},on(names,fn){names.split(' ').forEach(n=>state.handlers[n]=fn);return this;},getZoom(){return 5;},flyTo(coords,zoom){assert(state.width>0&&state.height>0,"No camera movement on collapsed renderer");state.flies.push({coords,zoom});return this;},fitBounds(coords,options){assert(state.width>0&&state.height>0,"No bounds movement on collapsed renderer");state.fits.push({coords,options});return this;},latLngToContainerPoint(coords){assert(state.width>0&&state.height>0,"No projection on collapsed renderer");state.projections++;return {x:coords[1]*5,y:coords[0]*5};},hasLayer(m){return state.layers.has(m);},removeLayer(m){state.layers.delete(m);},closePopup(){state.popup=null;},invalidateSize(){state.invalidations++;},remove(){state.removed++;}};
  if(provider)w.L={map(renderer){if(provider==='constructor-failure')throw Error('constructor failure');state.renderer=renderer;Object.defineProperties(renderer,{clientWidth:{get:()=>state.width},clientHeight:{get:()=>state.height}});state.child=d.createElement('div');renderer.appendChild(state.child);return map;},tileLayer(url){state.url=url;return {on(n,fn){state.tile[n]=fn;return this;},addTo(){return this;}};},geoJSON(data,options){state.routes.push({data,options});return {addTo(){return this;}};},divIcon:o=>o,latLngBounds:x=>x,marker(coords,options){const element=d.createElement('div');element.innerHTML=options.icon.html;const m={coords,options,handlers:{},element,on(n,fn){this.handlers[n]=fn;return this;},addTo(){state.layers.add(this);return this;},setIcon(icon){this.options.icon=icon;element.innerHTML=icon.html;return this;},getElement(){return element;}};state.markers.push(m);return m;},popup(){return {setLatLng(){return this;},setContent(content){this.content=content;return this;},openOn(){state.popup=this.content;return this;}};}};
@@ -23,6 +23,14 @@ const coordinates=original.map(m=>JSON.stringify(m.coords));assert.equal(coordin
 assert.equal(w.HandcartTimeline.current,0);assert.equal(s.events.at(-1).showStory,false);assert.equal(s.shows,0);
 const titles=new Map([...d.querySelectorAll('.stop-card')].map(c=>[Number(c.dataset.stopIndex),c.querySelector('h3').textContent]));
 function selected(i){assert.equal(w.HandcartTimeline.current,i);assert.equal(d.querySelector('#detail-title').textContent,titles.get(i));assert(d.querySelector('#detail-kicker').textContent.startsWith('Stop '+(i+1)+' of 33'));assert.equal(s.events.at(-1).index,i);}
+// Chronological controls must reveal the same selected stop in the desktop list.
+w.TimelineNavigationAdapter.select(24);selected(24);
+assert.equal(s.revealed?.at(-1),24,'Desktop Next/Previous adapter reveals the actual selected Handcart row');
+assert.equal(JSON.stringify(s.flies.at(-1).coords),coordinates[24],'Row reveal retains map recentering');
+const reveals=s.revealed.length;w.matchMedia=()=>({matches:false});
+w.TimelineNavigationAdapter.select(25);selected(25);
+assert.equal(s.revealed.length,reveals,'Phone navigation does not scroll a hidden Events pane');
+w.matchMedia=()=>({matches:true});w.HandcartTimeline.select(0);
 for(const filter of ['all','willie','martin','shared','sea']){
  d.querySelector('[data-filter="'+filter+'"]').click();const cards=[...d.querySelectorAll('.stop-card')],visible=cards.map(c=>Number(c.dataset.stopIndex));
  assert.deepEqual(Array.from(s.filters.at(-1).indices),visible);assert.equal(s.events.at(-1).showStory,false);

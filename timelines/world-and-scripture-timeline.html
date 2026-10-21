@@ -2688,6 +2688,54 @@ L.Icon.Default.imagePath = ""; // Versioned absolute default icon URLs.
 <meta property="og:url" content="https://focuschrist.com/timelines/world-and-scripture-timeline.html">
 <meta property="og:image" content="https://focuschrist.com/assets/world-scripture/11467c16130c032b79654dc22de4bf55abdafed6e546967b320b56c6f54444fe.webp">
 <meta name="twitter:card" content="summary_large_image">
+<style id="timeline-readable-controls">
+#detail .src{overflow-wrap:anywhere}
+
+/* Owner-requested readable event rows and compact, padded map settings. */
+#viewer .maprail{padding:10px;gap:10px;box-sizing:border-box}
+#viewer .maprail .maptools{padding:8px;gap:8px}
+#viewer .maprail .momenthead{padding:2px 4px;line-height:1.5}
+#viewer .maprail .momentlist{padding:2px 5px 12px;scroll-padding:8px}
+#viewer .momentlist h4{margin:16px 0 10px;line-height:1.5;font-size:12px;letter-spacing:.4px}
+#viewer .momentlist .mchips{display:flex;flex-direction:column;align-items:stretch;gap:8px}
+#viewer .momentlist .mchips button{display:block;width:100%;min-height:44px;box-sizing:border-box;border-radius:10px;padding:10px 12px;text-align:left;font-size:13px;line-height:1.45;white-space:normal;overflow-wrap:anywhere}
+#viewer .maprail .newat,#viewer .maprail .quietline{margin:0;padding:10px 12px;line-height:1.5}
+#viewer .maprail .legend-disclosure{margin:0}
+#viewer .maptoolband{padding:12px 16px;gap:10px}
+#viewer .mapsettings .disclosure-body{width:min(470px,calc(100vw - 40px));padding:16px;max-height:min(50dvh,420px)}
+#viewer .mapsettings .settings-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}
+#viewer .mapsettings .settings-heading strong{font-size:15px;color:var(--gold-light)}
+#viewer .mapsettings .maptools{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:10px 0}
+#viewer .mapsettings .flabel,#viewer .mapsettings #modelSeg,#viewer .mapsettings #anchoredCta{grid-column:1/-1}
+#viewer .mapsettings .fbtn{min-height:44px;padding:7px 10px;font-size:12px;line-height:1.4;white-space:normal}
+#viewer .mapsettings #modelSeg{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;border-radius:12px;overflow:hidden}
+#viewer .mapsettings #modelSeg button{min-width:0;min-height:44px;padding:7px 8px;font-size:12px;line-height:1.4;white-space:normal}
+#viewer .hintwrap{display:flex;flex-direction:column;align-items:flex-start;gap:8px;margin:8px 0 0}
+#viewer .quietline .hintbtn,#viewer .hintwrap .hintbtn{position:static;display:inline-flex;align-items:center;justify-content:center;width:auto;height:auto;min-height:44px;max-width:100%;padding:7px 12px;border-radius:10px;font-size:12px;line-height:1.4;white-space:normal;margin:8px 0 0}
+#viewer .quietline{padding-right:12px}
+#viewer .detail-actions{display:flex;justify-content:flex-end;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+#viewer .detail-actions button{position:static;min-height:44px;min-width:44px;width:auto;padding:8px 14px;line-height:1.4}
+.fc-button[data-image-continue]{background:linear-gradient(180deg,#148f91,#10546c)!important;border-color:#f7cc70!important;color:#fff!important;box-shadow:inset 0 1px 0 #8be0d538,0 3px 8px #0003!important;text-align:center;text-shadow:-1px -1px 0 #063c50,0 -1px 0 #063c50,1px -1px 0 #063c50,-1px 0 0 #063c50,1px 0 0 #063c50,-1px 1px 0 #063c50,0 1px 0 #063c50,1px 1px 0 #063c50!important}
+@media(max-width:900px){#viewer .mapsettings .disclosure-body{width:100%;max-height:none;padding:12px}#viewer .maprail{padding:12px}#viewer .maprail .momentlist{height:340px;max-height:380px}#viewer .maptoolband{padding:12px}}
+
+#viewer .mapplayback{padding:8px;box-sizing:border-box}
+#viewer .mapsettings .settings-heading{position:sticky;top:-16px;background:#102b36;z-index:2;padding:8px 0;margin-top:-8px}
+@media(max-width:900px){#viewer .mapsettings .settings-heading{position:static;margin-top:0;padding:0}}
+</style>
+<style id="timeline-content-rows">
+#viewer .mapwrap:has(.cluster-pop) .yearbanner,#viewer .mapwrap:has(.cluster-pop) .leaflet-top.leaflet-left{visibility:hidden}
+
+/* Content lists grow to fit text; scrolling belongs to the list, not each row. */
+#viewer .cluster-pop .cplist,#viewer #detail .overlap{display:flex;flex-direction:column;align-items:stretch;gap:8px;padding:3px;box-sizing:border-box}
+#viewer .cluster-pop .cplist button,#viewer #detail .overlap button{display:block;flex:0 0 auto;width:100%;height:auto;min-height:44px;max-height:none;box-sizing:border-box;white-space:normal;overflow-wrap:anywhere;overflow:visible;border-radius:10px;padding:10px 12px;text-align:left;font-size:13px;line-height:1.45}
+#viewer .cluster-pop .placement-title{display:block;font-weight:700;color:var(--gold-light)}
+#viewer .cluster-pop .placement-meta{display:block;margin-top:4px;font-size:12px;line-height:1.5;color:var(--text)}
+#viewer .cluster-pop .nearbybtn,#viewer .cluster-pop .backbtn{display:block;min-height:44px;height:auto;max-height:none;white-space:normal;overflow-wrap:anywhere;border-radius:10px;padding:8px 12px;line-height:1.45}
+#viewer .cluster-pop .leaflet-popup-content{max-width:calc(100vw - 64px)}
+#viewer .cluster-pop .leaflet-popup-content h5{padding-right:38px}
+#viewer .cluster-pop .leaflet-popup-close-button{width:44px;height:44px;line-height:44px;color:var(--gold-light)}
+
+</style>
 </head>
 <body class="fc-site">
 <a class="fc-skip-link" href="#viewer">Skip to timeline</a>
@@ -2750,7 +2798,7 @@ L.Icon.Default.imagePath = ""; // Versioned absolute default icon URLs.
     <div class="seg" id="speedSeg" role="group" aria-label="Play speed">
       <button data-speed="1" class="on" aria-pressed="true">1×</button><button data-speed="2" aria-pressed="false">2×</button>
     </div>
-  </div><div class="map-options-row"><span class="scenario-current" id="workspaceScenarioState"></span><button class="fbtn" id="frameBtn" style="margin-top:6px">Frame the promised land</button><details class="workspace-disclosure mapsettings"><summary>Map settings &amp; jump</summary><div class="disclosure-body"><div class="maptools" style="margin-top:8px">
+  </div><div class="map-options-row"><span class="scenario-current" id="workspaceScenarioState"></span><button class="fbtn" id="frameBtn" style="margin-top:6px">Frame the promised land</button><details class="workspace-disclosure mapsettings"><summary>Map settings &amp; jump</summary><div class="disclosure-body"><div class="settings-heading"><strong>Map settings</strong><button type="button" class="fbtn" id="mapSettingsClose">Close settings</button></div><div class="maptools" style="margin-top:8px">
     <span class="flabel">Go to:</span>
     <button class="fbtn" data-goto="-2500">Pyramids · 2500 BC</button>
     <button class="fbtn" data-goto="-1010">David · 1010 BC</button>
@@ -3033,6 +3081,7 @@ function render(){
   else { renderCards(); }
 }
 function setMode(m){
+  const modeChanged = viewMode !== m;
   viewMode = m;
   document.getElementById("river").style.display = m==="river" ? "" : "none";
   document.getElementById("gwrap").style.display = m==="overview" ? "" : "none";
@@ -3048,6 +3097,8 @@ function setMode(m){
   document.getElementById("modeMap").classList.toggle("on", m==="map");
   if (m !== "map" && typeof stopPlay === "function"){ stopPlay(); if (typeof clearPulseRegistry === "function") clearPulseRegistry(); }
   render();
+  // Each view owns a different scrollable surface; never inherit a hidden view offset.
+  if (modeChanged) document.getElementById("viewpane").scrollTop = 0;
 }
 document.getElementById("modeChart").addEventListener("click", ()=> setMode("river"));
 document.getElementById("modeOverview").addEventListener("click", ()=> setMode("overview"));
@@ -3076,10 +3127,16 @@ eraJump.addEventListener("change", ()=>{
 });
 
 let detailReturnFocus = null;
+let detailEntryIndex = null;
+let detailPageReturn = null;
+const detailHistory = [];
 function closeDetail(){
   const d = document.getElementById("detail");
   d.classList.remove("show");
-  if (detailReturnFocus && document.contains(detailReturnFocus)) detailReturnFocus.focus();
+  if (detailPageReturn && matchMedia("(max-width:900px)").matches) window.scrollTo({left:detailPageReturn.x,top:detailPageReturn.y,behavior:"instant"});
+  detailPageReturn = null;
+  detailHistory.length = 0; detailEntryIndex = null;
+  if (detailReturnFocus && document.contains(detailReturnFocus)) detailReturnFocus.focus({preventScroll:true});
   else if (viewMode === "map"){ const lm = document.getElementById("leafmap"); if (lm) lm.focus(); }
 }
 function canonicalPlacementText(e){
@@ -3092,8 +3149,12 @@ function canonicalPlacementText(e){
   }
   return '';
 }
-function showDetail(e){
+function showDetail(e, navigation = {}){
   const d = document.getElementById("detail");
+  if (navigation.related && detailEntryIndex !== null){
+    detailHistory.push({index:detailEntryIndex, scroll:d.scrollTop, focusIndex:DATA.indexOf(e)});
+  } else if (!navigation.restore){ detailHistory.length = 0; detailPageReturn = {x:scrollX,y:scrollY}; }
+  detailEntryIndex = DATA.indexOf(e);
   const ae = document.activeElement;
   if (ae && ae.tagName === "BUTTON" && !d.contains(ae)) detailReturnFocus = ae;
   const tags = e.cats.map(c=>`<span class="tag" style="background:${COLORS[c]}">${LABELS[c]}</span>`).join("") + (e.people ? `<span class="tag" style="background:#54707f">${e.people}</span>` : "");
@@ -3102,7 +3163,7 @@ function showDetail(e){
   const others = DATA.filter(o=> o!==e && o.start!==null && e.start!==null &&
      (o.end===null ? o.start : o.end) >= e.start && o.start <= (e.end===null ? e.start : e.end) && vis(o))
      .sort((a,b)=>a.start-b.start).slice(0, 40);
-  d.innerHTML = `<button class="fbtn" id="detailClose" style="float:right;min-height:44px;padding:6px 12px">Close ✕</button><h2>${e.site.replace(/\*\*\*/g,"")}</h2>
+  d.innerHTML = `<div class="detail-actions" style="position:sticky;top:0;z-index:2;background:var(--panel,#17323d)"><button class="fbtn" id="detailBack" ${detailHistory.length ? "" : 'hidden style="display:none"'}>Back to previous entry</button><button class="fbtn" id="detailClose" style="min-height:44px;padding:6px 12px">Close ✕</button></div><h2 tabindex="-1">${e.site.replace(/\*\*\*/g,"")}</h2>
     <div class="meta">${tags} ${when}${place ? " &nbsp;|&nbsp; "+place : ""}</div>
     ${e.comments ? `<p>${e.comments}</p>` : ""}
     ${e.source ? `<p class="src">Basis: ${e.source.replace(/^Basis:\s*/i, "")}</p>` : ""}
@@ -3113,12 +3174,23 @@ function showDetail(e){
   const canonicalText=canonicalPlacementText(e);
   if(canonicalText){const placement=document.createElement('p');placement.className='src canonical-placement';placement.textContent=canonicalText;d.querySelector('.meta').insertAdjacentElement('afterend',placement);}
   d.classList.add("show");
-  d.querySelectorAll(".overlap button").forEach(b=> b.addEventListener("click", ()=>{ const o = DATA[+b.dataset.i]; state.selected = +b.dataset.i; showDetail(o); markSelected(); }));
+  d.querySelectorAll(".overlap button").forEach(b=> b.addEventListener("click", ()=>{ const o = DATA[+b.dataset.i]; state.selected = +b.dataset.i; showDetail(o, {related:true}); markSelected(); }));
   const mb = d.querySelector("#momentBtn");
   if (mb) mb.addEventListener("click", ()=> gotoMoment(e.start));
   const cb = d.querySelector("#detailClose");
   if (cb) cb.addEventListener("click", closeDetail);
-  if (viewMode !== "map") d.scrollIntoView({behavior:"smooth", block:"nearest"});
+  d.querySelector("#detailBack").addEventListener("click", () => {
+    const previous = detailHistory.pop(); if (!previous) return;
+    state.selected = previous.index;
+    showDetail(DATA[previous.index], {restore:previous}); markSelected();
+  });
+  d.scrollTop = navigation.restore ? navigation.restore.scroll : 0;
+  if (navigation.restore){
+    const target = d.querySelector(`.overlap button[data-i="${navigation.restore.focusIndex}"]`);
+    if (target) target.focus({preventScroll:true});
+  } else if (navigation.related){ d.querySelector('h2').focus({preventScroll:true}); }
+  if (viewMode === "map" && matchMedia("(max-width:900px)").matches) d.scrollIntoView({behavior:"instant",block:"center"});
+  else if (viewMode !== "map" && !navigation.restore) d.scrollIntoView({behavior:"smooth", block:"nearest"});
 }
 function syncCatUI(){
   document.querySelectorAll("[data-cat]").forEach(ch=> { const on = state.cats.has(ch.dataset.cat); ch.classList.toggle("on", on); ch.setAttribute("aria-pressed", on ? "true" : "false"); });
@@ -3443,6 +3515,16 @@ function memberBtnText(m){
   const tag = scenarioTag(m);
   return m.e.site + " · " + fmtY(m.e.start) + (m.e.type === "span" ? " to " + fmtY(m.e.end) : "") + (tag ? " · " + tag : "");
 }
+function setPlacementButtonContent(btn, m, categorySuffix){
+  btn.setAttribute("aria-label", memberBtnText(m) + (categorySuffix || ""));
+  const title = document.createElement("span");
+  title.className = "placement-title";
+  title.textContent = m.e.site;
+  const meta = document.createElement("span");
+  meta.className = "placement-meta";
+  meta.textContent = memberBtnText(m).slice(m.e.site.length + 3) + (categorySuffix || "");
+  btn.append(title, meta);
+}
 // Popup height budget. Leaflet seats a popup by its TOTAL height inside
 // the map: content height + wrapper/tip chrome (measured 28px) + the
 // container's 20px bottom margin, less the autoPan padding (5px x 2).
@@ -3501,11 +3583,11 @@ function openClusterPopup(latlng, members, cat, openerEl, nearbyInfo){
   const label = cat ? CATLABEL2[cat] : "Multiple categories";
   const div = document.createElement("div");
   const h5 = document.createElement("h5");
-  h5.textContent = n + " nearby displayed placements grouped · " + label;
+  h5.textContent = n + " grouped placements · " + label;
   div.appendChild(h5);
   const note = document.createElement("p");
   note.style.margin = "0 0 8px";
-  note.textContent = "Grouped by screen proximity at this zoom. Badges may be moved slightly for clarity; a dotted connector marks the group’s original center. Each member keeps its own coordinate and setting provenance in its detail card.";
+  note.textContent = "Nearby placements are grouped at this zoom. Choose an entry to read its story and location details, or zoom in to explore the group.";
   div.appendChild(note);
   if (nearbyInfo){
     // Separate ambiguity selector (criterion 3(b)): the member list below
@@ -3545,7 +3627,7 @@ function openClusterPopup(latlng, members, cat, openerEl, nearbyInfo){
     btn.setAttribute("data-placement-key", placementKey(m));
     btn.setAttribute("data-phase", m.cls);
     btn.setAttribute("data-category", m.cat);
-    btn.textContent = memberBtnText(m) + (cat ? "" : " · " + CATLABEL2[m.cat]);
+    setPlacementButtonContent(btn, m, cat ? "" : " · " + CATLABEL2[m.cat]);
     btn.addEventListener("click", () => { leafMapObj.closePopup(); selectEntry(m.i, null); });
     list.appendChild(btn);
   });
@@ -3578,7 +3660,7 @@ function openNearbyPopup(bh, nearby, openerEl){
     btn.setAttribute("data-placement-key", placementKey(m));
     btn.setAttribute("data-phase", m.cls);
     btn.setAttribute("data-category", m.cat);
-    btn.textContent = memberBtnText(m);
+    setPlacementButtonContent(btn, m, "");
     btn.addEventListener("click", () => { leafMapObj.closePopup(); selectEntry(m.i, null); });
     list.appendChild(btn);
   });
@@ -4116,15 +4198,30 @@ document.getElementById("hintMore").addEventListener("click", () => {
   const btn = document.getElementById("hintMore");
   const clamped = t.classList.toggle("clamped");
   btn.setAttribute("aria-expanded", clamped ? "false" : "true");
-  btn.textContent = clamped ? "More" : "Less";
+  btn.textContent = clamped ? "About these geography settings" : "Show less about geography";
 });
 document.getElementById("quietMore").addEventListener("click", () => {
   const q = document.getElementById("quietLine");
   const btn = document.getElementById("quietMore");
   const clamped = q.classList.toggle("clamped");
   btn.setAttribute("aria-expanded", clamped ? "false" : "true");
-  btn.textContent = clamped ? "More" : "Less";
+  btn.textContent = clamped ? "About this interval" : "Show less about this interval";
 });
+
+
+// Keep the native disclosure contract, with explicit close and local Escape return.
+{
+  const settings = document.querySelector('.mapsettings');
+  const summary = settings.querySelector('summary');
+  const close = document.getElementById('mapSettingsClose');
+  const closeSettings = () => { settings.open = false; summary.focus({preventScroll:true}); };
+  if (close) close.addEventListener('click', closeSettings);
+  settings.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && settings.open){ event.preventDefault(); event.stopPropagation(); closeSettings(); }
+  });
+  document.getElementById('hintMore').textContent = 'About these geography settings';
+  document.getElementById('quietMore').textContent = 'About this interval';
+}
 
 const peopleSel = document.getElementById("peopleSel");
 {

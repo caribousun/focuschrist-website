@@ -2,9 +2,9 @@
 
 Decision: **CONCUR** for the exact existing-media import, attribution delivery and reviewed rendered result described here. I would present this result for publication within the authorized scope. Deployment and live verification remain separate release steps.
 
-Reviewed delivery specification: `873cefc4d5de61071db6186ff325c17e2fd7b4c16735f5054f0f9d30a075db32`.
+Reviewed delivery specification: `51fcc28a25bba1c9711371b204728df5fa7e4090191a75735b7725aec42600fe`.
 
-Reviewed page: `timelines/world-and-scripture-timeline.html`, SHA256 `d427e7f8e578b880a6b512bdfbe9b455c9192026a7e9e80893afc6559c8f6494`.
+Reviewed page: `timelines/world-and-scripture-timeline.html`, SHA256 `79e8766bb3fd2b4493bf9679644654ad91a17090bb1f70373e88ae7e7b12d972`.
 
 ## Mandate readback and scope
 
@@ -65,3 +65,11 @@ Final source/import/rendered-result decision remains CONCUR within the exact spe
 The final successor changes exactly two CSS declarations: the narrow-screen mode grid uses zero-minimum equal columns with wrapping button labels, and long reference prose can wrap within its reading column. I independently reversed both exact changes and recovered the preceding reviewed page byte for byte. No script, timeline record, image, source attribution, hero or destination changes occur in this delta.
 
 I personally inspected the supplied desktop and phone captures and the 320-pixel enlarged-text captures. All four mode labels remain visible inside the control group, and the long reference wraps inside its entry. The executor's measured canonical checks report zero horizontal overflow and zero clipped mode buttons at 1366 pixels, 390 pixels and 320 pixels with doubled text. This is a finished visual review of supplied captures; the executor performed those browser measurements. My prior actual playback and image-context observations carry forward only for the unchanged scripts and media.
+
+## Finished navigation and control correction
+
+I independently reviewed the final source and personally inspected the supplied desktop and phone settings, related-entry panel, legacy journey navigation, and long-title grouped-list captures. Full-width member rows now wrap titles and date/setting/category metadata separately. The actual tested group contained474 placements; no exact484-count reproduction is claimed. Popup headings remain clear of year/zoom controls. The settings Close control is visible, explanatory toggles have descriptive labels, and related-entry panels provide Back and Close. The supplied integrated seven-case browser result records mode-scroll reset, reference containment, Back scroll restoration and ten chronological Next selections; the executor performed those browser actions. I reviewed the actual output and its source binding.
+
+The final successor adds an explicit accessible label using the original complete member text and category suffix; that single line changes no visible pixels. My finished visual review is bound to the immediately preceding aa043 source with that explicitly attributed, source-reviewed accessibility-only carryforward. The existing730 records,10 routes, world outline and197 image references remain exact. Legacy stylesheet and Handcart behavior changes retain exact historical byte inverses and executable negative checks.
+
+CONCUR for this finite control-correction release. This does not claim completion of the owner's newly requested companion sections, updated source data or PDF exports; those remain required, pending work. No whole-project acceptance is inferred. Final CI, deployment and public verification for this correction remain release requirements.

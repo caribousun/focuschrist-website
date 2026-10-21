@@ -12,8 +12,8 @@ from pathlib import Path
 
 MANIFEST = 'docs/world-scripture-import/delivery.json'
 PAGE = 'timelines/world-and-scripture-timeline.html'
-APPROVED_SPEC = '873cefc4d5de61071db6186ff325c17e2fd7b4c16735f5054f0f9d30a075db32'
-APPROVED_REVIEWS = '34ba7eca7a13d034016cfbdaedcfc6bd16faa9bc679697df6f0c805f58b6f898'
+APPROVED_SPEC = '51fcc28a25bba1c9711371b204728df5fa7e4090191a75735b7725aec42600fe'
+APPROVED_REVIEWS = '30b5f43bc98a28b677a281780912b8097e62c09b98bfe3183e813104a1e90ee3'
 PREFIX = 'assets/world-scripture/'
 
 # Exact compatibility hooks only; original display review evidence pins are retained.
@@ -35,8 +35,23 @@ REVIEWED_CONSUMER_INVERSES = {'timeline-experiences.css': {'current': 'ea1726660
 
 REVIEWED_CONSUMER_INVERSES['art-gallery.json'] = {'current': '2fc81791182ae590d34b9d926d63aa4b794b0bba5b1f30691f1f4660b0251be9', 'previous': '5fb9f428a7e4bbf63cd9b5721ca7e576b14bbfa8334c073343f84e49efb8fcb1', 'edits': [['', '    "/timelines/world-and-scripture-timeline.html",\n']]}
 
+# Exact owner-requested navigation correction; compose before historical pins.
+POLISH_CONSUMER_INVERSES = {'timeline-experiences.css': {'current': '4d76e920b978b14ffd360fc8007c848f7f39ca327408f50385b37a1ff7d3349b', 'previous': 'ea1726660d8b9fb9e7f679c05fee370748df99408876ab559eda2fda5d15253a', 'spans': [[11173, 11625, '']]}, 'timelines/willie-and-martin-handcart-map.html': {'current': '117057276965a37d668a2879b46e0810066fb94813436eb55253b647dd550de0', 'previous': '1ed6267e763ffbeecd1f897463688469546a97f31b29d78bff89fef5f45d2e0c', 'spans': [[108759, 108849, '<link rel="stylesheet" href="../timeline-experiences.css?v=20261020-intro-canvas-1">\n'], [163683, 163860, '']]}, 'timelines/life-of-christ-journey-map.html': {'current': '9d22d5bcc74289ed60b2000bceb53af8b89ea2afb2165fac39dc6b5be0968acf', 'previous': 'ce1f2fb1e17b1d333ff3f1340c3140abb6490357157c40c81c6ebdd22370fb5e', 'spans': [[10295, 10385, '<link rel="stylesheet" href="../timeline-experiences.css?v=20261020-intro-canvas-1">\n']]}, 'timelines/latter-day-saint-church-history-timeline.html': {'current': '6d3b5a98c83512547000f83e140c89d6db8baec9755337c7600d583cd02f1ac6', 'previous': '647c75794179cfaaf4b586011fe2a2e1e51c66563c470f7d8e930b136fcc4de8', 'spans': [[12698, 12789, '<link rel="stylesheet" href="../timeline-experiences.css?v=20261020-intro-canvas-1">\r\n']]}}
+
+def before_navigation_polish(name, data):
+    binding=POLISH_CONSUMER_INVERSES.get(name)
+    if not binding or hashlib.sha256(data).hexdigest()!=binding['current']:
+        return data
+    text=data.decode('utf-8')
+    for start,end,previous in reversed(binding['spans']):
+        text=text[:start]+previous+text[end:]
+    prior=text.encode('utf-8')
+    require(hashlib.sha256(prior).hexdigest()==binding['previous'], 'navigation predecessor drift: '+name)
+    return prior
+
 def restore_consumers(name, data):
     """Reconstruct historical evidence only for a complete reviewed byte binding."""
+    data = before_navigation_polish(name, data)
     binding = REVIEWED_CONSUMER_INVERSES.get(name)
     if not binding or hashlib.sha256(data).hexdigest() != binding['current']:
         return data

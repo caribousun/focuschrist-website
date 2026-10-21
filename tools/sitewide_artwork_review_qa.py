@@ -558,9 +558,9 @@ RELEASE_STYLE_BINDINGS = {
 def release_style_binding_allowed(name, page, tags):
     owners, expected = RELEASE_STYLE_BINDINGS[name]
     if name == 'timeline-experiences.css' and page in owners:
-        from timeline_source_import import restore_consumers
+        from timeline_source_import import restore_consumers, before_navigation_polish
         raw=(ROOT/page).read_bytes()
-        if restore_consumers(page,raw) != raw: expected = '../timeline-experiences.css?v=20261020-intro-canvas-1'
+        if restore_consumers(page,raw) != raw: expected = '../timeline-experiences.css?v=' + ('20261020-navigation-polish-1' if before_navigation_polish(page,raw)!=raw else '20261020-intro-canvas-1')
     if name == 'history-stories.css' and page == 'history/emma-hale-smith.html': expected = '../history-stories.css?v=20261008-standard-body-1'
     refs = [a.get('href', '') for t, a in tags if t == 'link' and a.get('rel') == 'stylesheet' and name in a.get('href', '')]
     return refs == ([expected] if page in owners else [])
@@ -571,9 +571,9 @@ def release_style_binding_self_test():
         for page in owners:
             expected = '../history-stories.css?v=20261008-standard-body-1' if name == 'history-stories.css' and page == 'history/emma-hale-smith.html' else RELEASE_STYLE_BINDINGS[name][1]
             if name == 'timeline-experiences.css':
-                from timeline_source_import import restore_consumers
+                from timeline_source_import import restore_consumers, before_navigation_polish
                 raw=(ROOT/page).read_bytes()
-                if restore_consumers(page,raw) != raw: expected='../timeline-experiences.css?v=20261020-intro-canvas-1'
+                if restore_consumers(page,raw) != raw: expected='../timeline-experiences.css?v=' + ('20261020-navigation-polish-1' if before_navigation_polish(page,raw)!=raw else '20261020-intro-canvas-1')
             assert release_style_binding_allowed(name, page, tags([expected]))
             stale = expected.split('?')[0] + '?v=stale'
             for refs in ([], [stale], [expected + '-unknown'], [expected.split('?')[0]], [expected, expected], [expected, stale], ['wrong/' + expected]):

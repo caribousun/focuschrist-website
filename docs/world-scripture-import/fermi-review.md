@@ -3,8 +3,8 @@
 Reviewer: Fermi
 Decision: CONCUR for the exact existing-media import and visitor attribution delivery.
 
-Page SHA256: `d427e7f8e578b880a6b512bdfbe9b455c9192026a7e9e80893afc6559c8f6494`
-Import specification SHA256: `873cefc4d5de61071db6186ff325c17e2fd7b4c16735f5054f0f9d30a075db32`
+Page SHA256: `79e8766bb3fd2b4493bf9679644654ad91a17090bb1f70373e88ae7e7b12d972`
+Import specification SHA256: `51fcc28a25bba1c9711371b204728df5fa7e4090191a75735b7725aec42600fe`
 
 I independently compared all193 public photograph credit records with retrieved Wikimedia Commons source metadata. Titles, named creators, source credits, exact versioned licenses, original-image links and file pages match. Missing creators are described truthfully without invented attribution. The Free Art License photograph carries the specific A.Savin, Wikipedia credit. The GFDL1.2 photograph credits Ralf Roletschek and links the complete bundled license. The UNESCO photograph retains Jim Williams, provider credit and the CC BY-SA3.0IGO license. The Newgrange photograph retains Shira and the CC BY2.5Poland license. Public-domain records without a license URL display plain text with source evidence rather than empty license links.
 
@@ -120,3 +120,33 @@ Additional personally inspected screenshot SHA256 bindings:
 - `root-narrow-final/image-context-390.png`: `be0d9a5b662eea74ea5fe7a6cdf12a6c01348aecc77374b3fdadbaac8224f12d`
 
 Current root browser result SHA256: `8299e14a7ed50bce7f835c3f81968585da0767b3a8f85a529fd78214f84ba8c4`.
+
+## Finished control-correction review
+
+CONCUR for the exact current control-correction candidate79e8766 and specification51fcc28a above. This is scoped source and finished-pixel acceptance of these controls, not all-project completion, companion/PDF/data delivery, or publication proof.
+
+I independently inspected the actual changed source and verified unchanged730DATA records,10ROUTES,59887world-outline values,193creditobjects and197media references against the published predecessor. All197asset bytes and public credit/license/lineage specification bindings match. The prior rare-license attribution review applies to unchanged credits and images. No regenerated artwork or new historical/source claims.
+
+I personally inspected seven actual finished screenshots: Handcart desktop stop11 after10Next; Life phone stop11; related-entry panel at320px; mapsettings at1900px and320px; and the long-title474-placement popup at1536px and390px. Handcart selected stop11 is shown in its advanced list and the recorded entire row fits inside its scrolling pane. Legacy Previous/Next controls are separated from metadata and story text. Related-entry Back and Close fit the narrow panel. Settings use padded grouped controls with an explicit close action. Long member titles and date/scenario/category metadata wrap independently across fullwidth rows. Visible row fragments at scrolling-list boundaries are natural viewport boundaries, not internally cropped labels. Map popup heading is unobscured and map attribution remains visible. I would present these inspected control states.
+
+Root executed the seven integrated cases on aa043d: world1900/390/320 have no JSerrors, sourcewidth equals clientwidth and related Back restores recorded panel scroll; Handcart and Life at1536/390 each advanced10Next. Only Handcartdesktop has explicit selected-row bounds in that report; I do not invent corresponding bounds for the other three legacy cases. Calvin executed the actual474-member group, not a claimed484 reproduction: all474rows have no internalclipping at both widths, finalmember571 selects571 and year/zoom controls return after close. I read those exact result records; I did not execute their browsers.
+
+Current79e8766 is exactly the aa043d visually tested predecessor plus one aria-label line. I independently removed that line to recover the exact aa043d hash. It restores the complete original memberBtnText plus category suffix for accessible names while preserving the inspected two-span appearance. No additional visible behavior is assumed. Shared navigation-pill colors are retained in the inspected legacy screenshots; standalone list/settings colors remain legible. Image-dialog Continue Lesson now uses the known shared teal/white Continue CSS by source inspection; no new image-dialog screenshot is among these seven, so this paragraph does not claim fresh runtime pixel verification of that separate state.
+
+I also reviewed the historical fixture's exact before_navigation_polish restoration before oldpin assertions. All original source/narrative pins and old negativefixtures remain unchanged; the separate currentconsumer/path/tamper/composition tests cover the successor. Earlier two focused navigation-binding tests and eight content tests passed in my execution. No generic guard relaxation.
+
+The companion/PDF/data owner request is separate and pending; it is not accepted or marked complete by this control correction. Full CI, explicit authorized release and subsequent live verification remain separate gates. My earlier missed legacy navigation integration and screenshot coverage are documented candidly in the independent team coverage account; they are not erased by this new review.
+
+Personally inspected final screenshot SHA256 bindings:
+
+- `root-polish/willie-and-martin-handcart-map-1536.png`: `83a0a789bfa73d4f7ecb00e996845318c74739cf1e1cb77365a5fe822ceafcee`
+- `root-polish/life-of-christ-journey-map-390.png`: `22482c9c81080a9652c142a6380a88350084b78b2838022c34ffdb76c36e25bb`
+- `root-polish/related-320.png`: `b61bb3af50a5317b7b003e116e5997dea90214c3561c61c6cac0d50ba0b3b6f4`
+- `root-polish/settings-1900.png`: `fc0705009fe602989ecbd146eb6a9cc01e35a2eef823465534a2378509f907ee`
+- `root-polish/settings-320.png`: `eeec02991be79eb267ea73fceae4a9d505bcb3b71c4724f0ff0274d66a6a5cd2`
+- `calvin-cluster/long-1536.png`: `f31109812452600e75147f48c06645f1d2371effe715a84c37924cc1be83fc80`
+- `calvin-cluster/long-390.png`: `f92b50fd7cbbc1c8b0d6679192ad3bb040b821fac10f31f89df53e7cb61c8519`
+
+Result `root-polish/result.json` SHA256 `04da80b531bdcb2573800810addd392f027d74006f16a751e124496280c1d0ed`.
+
+Result `calvin-cluster/result.json` SHA256 `9db857d60fb7e050cdaa58c17846db305754e6ba3aa5d1c49713fa06a7d95894`.
