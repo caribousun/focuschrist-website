@@ -26,6 +26,12 @@ class TimelineImportTests(unittest.TestCase):
             self.assertEqual(gate.restore_consumers(name,restored),restored)
             self.assertEqual(gate.restore_consumers('other/'+name,data),data)
             edits=[data+b'\n# unknown',data.replace(b'transparent',b'red',1)] if name.endswith('.css') else [data+b' ',data.replace(b'Continue <',b'Continue now <',1),data.replace(b'href=',b'data-href=',1),data.replace(b'20261020-intro-canvas-1',b'unknown-cache',1)]
+            if name=='art-gallery.json':
+                edits=[data+b' ',data.replace(b'"version": 1',b'"version": 2',1),data.replace(b'/timeline.html',b'/unknown.html',1),data.replace(b'"artworks": [',b'"artworks": [null,',1)]
+                restored_json=json.loads(restored);current_json=json.loads(data)
+                self.assertEqual(current_json['artworks'],restored_json['artworks'])
+                self.assertEqual(current_json['stats'],restored_json['stats'])
+                self.assertEqual([p for p in current_json['pages'] if p!='/timelines/world-and-scripture-timeline.html'],restored_json['pages'])
             for bad in edits:
                 self.assertNotEqual(bad,data)
                 self.assertEqual(gate.restore_consumers(name,bad),bad)
