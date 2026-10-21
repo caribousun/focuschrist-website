@@ -6,6 +6,7 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 import continue_motion_binding as gate
+import settings_successor as settings
 
 class MotionBindingTests(unittest.TestCase):
     def test_every_exact_predecessor(self):
@@ -13,14 +14,14 @@ class MotionBindingTests(unittest.TestCase):
         for name,row in data['files'].items():
             current=(gate.ROOT/name).read_bytes()
             from world_companion_successor import restore as restore_world
-            self.assertEqual(gate.sha(restore_world(name,current)),row['after_sha256'],name)
+            self.assertEqual(gate.sha(restore_world(name,settings.restore(name,current))),row['after_sha256'],name)
             self.assertEqual(gate.sha(gate.restore(name,current)),row['before_sha256'],name)
 
     def test_exact_successors_and_unknown_input_rejected(self):
         for name,row in gate.mapping()['files'].items():
             current=(gate.ROOT/name).read_bytes()
             old=gate.restore(name,current)
-            self.assertEqual(gate.advance(name,old),current,name)
+            self.assertEqual(gate.advance(name,old),settings.advance(name,current),name)
             self.assertEqual(gate.advance(name,old+b' '),old+b' ',name)
             self.assertEqual(gate.advance('unknown/'+name,old),old,name)
 

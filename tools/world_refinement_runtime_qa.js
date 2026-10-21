@@ -16,6 +16,17 @@ const {chromium}=require(process.env.QA_PLAYWRIGHT_MODULE||'playwright'),root=pa
    assert.equal(links.filter(n=>n.download).length,3);assert(links.every(n=>n.download?!n.target:n.target==='_blank'&&n.rel.split(/\s+/).includes('noopener')));
    const parent=page.url(),popupPromise=page.waitForEvent('popup');await page.locator('#study-companions a').first().click();const popup=await popupPromise;await popup.waitForLoadState();assert(await popup.evaluate(()=>opener===null));assert.equal(page.url(),parent);await popup.close();
    await page.locator('#study-companions>summary').click();await page.locator('#modeMap').click();
+   // A region selection must change the visible map count and entry list.
+   await page.locator('#yearInput').fill('-600');await page.locator('#yearInput').dispatchEvent('change');
+   const filters=page.locator('#regionSel').locator('xpath=ancestor::details');await filters.locator('summary').click();
+   await page.locator('#regionSel').selectOption('Africa');assert.match(await page.locator('#count').innerText(),/^18 displayed placements/);
+   const regions=await page.locator('#momentList button[data-i]').evaluateAll(nodes=>nodes.map(n=>DATA[+n.dataset.i].region));assert(regions.length);assert(regions.every(n=>n==='Africa'));
+   await page.locator('#q').fill('Egypt');assert.match(await page.locator('#count').innerText(),/^12 displayed placements/);
+   await page.locator('#q').fill('unmatched-region-query');assert.match(await page.locator('#count').innerText(),/^0 displayed placements/);
+   await page.locator('#q').fill('');await page.locator('#regionSel').selectOption('');assert.match(await page.locator('#count').innerText(),/^233 displayed placements/);await filters.locator('summary').click();
+   const settings=page.locator('.mapsettings');await settings.locator('summary').click();
+   for(const year of [-2348,-2246,-1996]){await settings.locator('[data-goto="'+year+'"]').click();assert.equal(await page.evaluate(()=>mapState.year),year);}
+   await page.locator('#mapSettingsClose').click();assert(!(await settings.evaluate(n=>n.open)));assert(await settings.locator('summary').evaluate(n=>document.activeElement===n));
    for(const year of [-600,-3900,33]){
     await page.locator('#yearInput').fill(String(year));await page.locator('#yearInput').dispatchEvent('change');
     const groups=await page.locator('#momentList>h4').evaluateAll(a=>a.map(h=>[...h.nextElementSibling.querySelectorAll('button[data-i]')].map(n=>n.textContent)));
@@ -33,8 +44,8 @@ const {chromium}=require(process.env.QA_PLAYWRIGHT_MODULE||'playwright'),root=pa
    fs.writeFileSync(path.join(out,'transitions-'+width+'.json'),JSON.stringify(transitions,null,2));assert(transitions.length>=5);assert(transitions.every(r=>r.to>r.from&&r.to-r.from<=10&&!r.skipped));
    await page.locator('#yearInput').fill('1697');await page.locator('#yearInput').dispatchEvent('change');await page.locator('#playBtn').click();await page.waitForFunction(()=>mapState.year===1700&&!mapState.playing);
    assert(!(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1)));
-   results.push({width,groupsSorted:true,newTabReader:true,links,slowPauseMs:4300,transitions,terminal:1700});await page.close();
+   results.push({width,regionFilter:true,regionSearch:true,quickJumps:true,groupsSorted:true,newTabReader:true,links,slowPauseMs:4300,transitions,terminal:1700});await page.close();
   }
-  console.log('WORLD REFINEMENT BROWSER PASS: desktop/phone alphabetical groups, new-tab reader, slow cancellation, fast event-preserving steps and terminal stop');
+  console.log('WORLD REFINEMENT BROWSER PASS: desktop/phone region/search filters, quick jumps, alphabetical groups, new-tab reader, slow cancellation, fast event-preserving steps and terminal stop');
  }finally{if(browser)await browser.close();await new Promise(r=>server.close(r));fs.writeFileSync(path.join(out,'results.json'),JSON.stringify(results,null,2));}
 })().catch(e=>{console.error(e);process.exitCode=1});

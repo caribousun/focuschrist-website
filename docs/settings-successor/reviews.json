@@ -1,0 +1,51 @@
+{
+  "source_sha256": "b786e625d7efb888512d0f492e2d1ffbb9916a28b724057cd0dedb40d5fa2793",
+  "page_hashes": {
+    "timelines/world-and-scripture-timeline.html": "a6f0a9fb82e16405a0cf32e25cbd7889ad0a56b5af4e9003fca40bd985ad93fd",
+    "timelines/life-of-christ-journey-map.html": "e8e6124f50a19d7cac839ec8b405e33b036284c57b8182d2e7776dc8af90c418"
+  },
+  "reviews": [
+    {
+      "reviewer": "Albert",
+      "decision": "CONCUR",
+      "finished_pixels": true,
+      "finished_behavior": true,
+      "page_hashes": {
+        "timelines/world-and-scripture-timeline.html": "a6f0a9fb82e16405a0cf32e25cbd7889ad0a56b5af4e9003fca40bd985ad93fd",
+        "timelines/life-of-christ-journey-map.html": "e8e6124f50a19d7cac839ec8b405e33b036284c57b8182d2e7776dc8af90c418"
+      },
+      "evidence": {
+        "path": "docs/settings-successor/evidence/albert.md",
+        "sha256": "d659431b35d5a10c2efdca9bf05f80af601be676498ffa8ace3f290011b3986e"
+      }
+    },
+    {
+      "reviewer": "Fermi",
+      "decision": "CONCUR",
+      "finished_pixels": true,
+      "finished_behavior": true,
+      "page_hashes": {
+        "timelines/world-and-scripture-timeline.html": "a6f0a9fb82e16405a0cf32e25cbd7889ad0a56b5af4e9003fca40bd985ad93fd",
+        "timelines/life-of-christ-journey-map.html": "e8e6124f50a19d7cac839ec8b405e33b036284c57b8182d2e7776dc8af90c418"
+      },
+      "evidence": {
+        "path": "docs/settings-successor/evidence/fermi.md",
+        "sha256": "34b1c4c55877b637742b46f44e1c9daa979ab6b84c0afa42f641931745770f3e"
+      }
+    },
+    {
+      "reviewer": "Newton",
+      "decision": "CONCUR",
+      "finished_pixels": true,
+      "finished_behavior": true,
+      "page_hashes": {
+        "timelines/world-and-scripture-timeline.html": "a6f0a9fb82e16405a0cf32e25cbd7889ad0a56b5af4e9003fca40bd985ad93fd",
+        "timelines/life-of-christ-journey-map.html": "e8e6124f50a19d7cac839ec8b405e33b036284c57b8182d2e7776dc8af90c418"
+      },
+      "evidence": {
+        "path": "docs/settings-successor/evidence/newton.md",
+        "sha256": "f11f8af5773225ca3128d1c94f8160c95a0b96b0758af4d44ab4981465d1de9f"
+      }
+    }
+  ]
+}
