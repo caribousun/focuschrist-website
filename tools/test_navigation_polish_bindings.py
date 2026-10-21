@@ -17,4 +17,11 @@ class NavigationBindings(unittest.TestCase):
   for name in t.POLISH_CONSUMER_INVERSES:
    actual=t.restore_consumers(name,(root/name).read_bytes())
    self.assertEqual(hashlib.sha256(actual).hexdigest(),t.REVIEWED_CONSUMER_INVERSES[name]['previous'])
+ def test_handcart_viewport_exact_and_tampering(self):
+  name="timelines/willie-and-martin-handcart-map.html"
+  raw=(Path(__file__).resolve().parents[1]/name).read_bytes()
+  self.assertEqual(hashlib.sha256(t.before_handcart_viewport(name,raw)).hexdigest(),t.HANDCART_VIEWPORT_INVERSE["previous"])
+  for altered in [raw+b" ",raw.replace(b"window.innerHeight",b"window.innerHeight+20",1)]:
+   self.assertEqual(t.before_handcart_viewport(name,altered),altered)
+  self.assertEqual(t.before_handcart_viewport("unknown/"+name,raw),raw)
 if __name__=='__main__':unittest.main()
