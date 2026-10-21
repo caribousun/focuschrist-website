@@ -24,11 +24,17 @@ const out=path.join(root,'.qa-artifacts/continue-motion');
     assert(await cue.count(),route+': real visible Continue cue required');
     await cue.scrollIntoViewIfNeeded();
     const href=await cue.getAttribute('href'),initial=await page.evaluate(()=>scrollY);
-    await page.evaluate(()=>{window.qaMotion=[];const start=performance.now();function tick(){qaMotion.push([performance.now()-start,scrollY]);if(performance.now()-start<1000)requestAnimationFrame(tick)}requestAnimationFrame(tick)});
-    await cue.click();await page.waitForTimeout(1050);
+    // Actionability waits precede the real click. Start the clock at dispatch so
+    // a busy runner cannot consume the animation/settling measurement window.
+    await cue.evaluate(node=>node.addEventListener('click',()=>{window.qaMotion=[];const start=performance.now();function tick(){qaMotion.push([performance.now()-start,scrollY]);if(performance.now()-start<1350)requestAnimationFrame(tick)}requestAnimationFrame(tick)},{capture:true,once:true}));
+    await cue.click();await page.waitForTimeout(1450);
     const samples=await page.evaluate(()=>qaMotion),positions=new Set(samples.map(x=>Math.round(x[1])));
+    const trace={route,width,initial,samples};
+    fs.writeFileSync(path.join(out,'trace-'+width+'-'+route.replace(/[^a-z0-9]+/gi,'-')+'.json'),JSON.stringify(trace,null,2));
     assert(positions.size>4,route+': actual intermediate Continue positions required');
-    assert(Math.abs(samples.at(-1)[1]-samples.at(-5)[1])<=1,route+': no late snap-back');
+    const plateau=samples.filter(([time])=>time>=850);
+    assert(plateau.length>=2 && plateau.at(-1)[0]-plateau[0][0]>=300,route+': measured post-animation settling interval required');
+    assert(Math.max(...plateau.map(x=>x[1]))-Math.min(...plateau.map(x=>x[1]))<=1,route+': no late snap-back');
     assert.equal(await cue.getAttribute('href'),href);
     assert(!(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1)));
     results.push({route,width,kind:'Continue',initial,positions:positions.size,final:samples.at(-1)[1]});
