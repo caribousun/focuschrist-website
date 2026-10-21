@@ -38,7 +38,21 @@ REVIEWED_CONSUMER_INVERSES['art-gallery.json'] = {'current': '2fc81791182ae590d3
 # Exact owner-requested navigation correction; compose before historical pins.
 POLISH_CONSUMER_INVERSES = {'timeline-experiences.css': {'current': '4d76e920b978b14ffd360fc8007c848f7f39ca327408f50385b37a1ff7d3349b', 'previous': 'ea1726660d8b9fb9e7f679c05fee370748df99408876ab559eda2fda5d15253a', 'spans': [[11173, 11625, '']]}, 'timelines/willie-and-martin-handcart-map.html': {'current': '117057276965a37d668a2879b46e0810066fb94813436eb55253b647dd550de0', 'previous': '1ed6267e763ffbeecd1f897463688469546a97f31b29d78bff89fef5f45d2e0c', 'spans': [[108759, 108849, '<link rel="stylesheet" href="../timeline-experiences.css?v=20261020-intro-canvas-1">\n'], [163683, 163860, '']]}, 'timelines/life-of-christ-journey-map.html': {'current': '9d22d5bcc74289ed60b2000bceb53af8b89ea2afb2165fac39dc6b5be0968acf', 'previous': 'ce1f2fb1e17b1d333ff3f1340c3140abb6490357157c40c81c6ebdd22370fb5e', 'spans': [[10295, 10385, '<link rel="stylesheet" href="../timeline-experiences.css?v=20261020-intro-canvas-1">\n']]}, 'timelines/latter-day-saint-church-history-timeline.html': {'current': '6d3b5a98c83512547000f83e140c89d6db8baec9755337c7600d583cd02f1ac6', 'previous': '647c75794179cfaaf4b586011fe2a2e1e51c66563c470f7d8e930b136fcc4de8', 'spans': [[12698, 12789, '<link rel="stylesheet" href="../timeline-experiences.css?v=20261020-intro-canvas-1">\r\n']]}}
 
+HANDCART_VIEWPORT_INVERSE = {'current': '98e10999411e9c9a6c610207013b3a10c810b249175fbdeb57aaf36234828cdb', 'previous': '117057276965a37d668a2879b46e0810066fb94813436eb55253b647dd550de0', 'spans': [[163206, 164446, 'window.HandcartTimeline={\r\n    select:function(index){\r\n      if(!Number.isInteger(index)||!STOPS[index])return;\r\n      if(!currentRows.some(function(r){return r.index===index;})){\r\n        filterGeneration++;currentFilter=\'all\';chips.forEach(function(c){c.setAttribute(\'aria-pressed\',String(c.getAttribute(\'data-filter\')===\'all\'));});rows=buildRows();mount(rows);\r\n      }\r\n      var row=currentRows.find(function(r){return r.index===index;});selectStop(index,row.el,false);\r\n      if(window.matchMedia("(min-width:901px)").matches){if(window.TimelineWorkspace)window.TimelineWorkspace.scrollRow(row.el);else row.el.scrollIntoView({block:"nearest"});}']]}
+
+def before_handcart_viewport(name, data):
+    binding=HANDCART_VIEWPORT_INVERSE
+    if name != "timelines/willie-and-martin-handcart-map.html" or hashlib.sha256(data).hexdigest()!=binding["current"]:
+        return data
+    text=data.decode("utf-8")
+    for start,end,previous in reversed(binding["spans"]):
+        text=text[:start]+previous+text[end:]
+    prior=text.encode("utf-8")
+    require(hashlib.sha256(prior).hexdigest()==binding["previous"], "Handcart viewport predecessor drift")
+    return prior
+
 def before_navigation_polish(name, data):
+    data=before_handcart_viewport(name, data)
     binding=POLISH_CONSUMER_INVERSES.get(name)
     if not binding or hashlib.sha256(data).hexdigest()!=binding['current']:
         return data

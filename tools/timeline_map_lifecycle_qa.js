@@ -81,3 +81,22 @@ for(const mode of ['constructor-failure','terrain-construction-failure']){const 
  const selectedMarker=selectedMarkers[0];if(selectedMarker.options.title.startsWith('Stop ')){assert.equal(selectedMarker.getElement().querySelector('[data-stop-number]').dataset.stopNumber,'2');assert(selectedMarker.options.icon.html.includes('pin--on'));}else{let selectedChoices=null;const originalShowChoices=w.TimelineWorkspace.showChoices;w.TimelineWorkspace.showChoices=(title,choices)=>{selectedChoices=choices;return true;};try{selectedMarker.handlers.click();}finally{w.TimelineWorkspace.showChoices=originalShowChoices;}assert(selectedChoices&&selectedChoices.some(choice=>choice.index===1),'Active selected cluster contains current Stop 2');}
  bottom().querySelector('[data-event-direction="1"]').click();assert.equal(w.HandcartTimeline.current,2);assert.equal(state.flies.length,flights+1,'Visible map retains camera behavior');assert.equal(d.querySelector('[data-timeline-image]').dataset.timelineImage,'2');assert.deepEqual(errors,[]);f.close();
 }
+
+// Pane bounds may extend below the actual viewport or behind the fixed header.
+{
+ const f=setup(),{w,d,state}=f,pane=d.getElementById('stop-list'),row=d.querySelector('[data-stop-index="10"]'),header=d.querySelector('nav[data-focuschrist-header="standard"]');
+ Object.defineProperty(w,'innerHeight',{value:844,configurable:true});
+ pane.getBoundingClientRect=()=>({top:225.59375,bottom:892.5});
+ header.getBoundingClientRect=()=>({bottom:52});
+ row.getBoundingClientRect=()=>({top:787.59375-pane.scrollTop,bottom:889.59375-pane.scrollTop});
+ pane.scrollTop=0;w.TimelineNavigationAdapter.select(10);
+ assert.equal(pane.scrollTop,48.59375,'Selected row is revealed inside viewport, not merely the oversized pane');
+ assert(row.getBoundingClientRect().bottom<=w.innerHeight-3);
+ pane.getBoundingClientRect=()=>({top:0,bottom:892.5});pane.scrollTop=100;
+ row.getBoundingClientRect=()=>({top:130-pane.scrollTop,bottom:232-pane.scrollTop});
+ w.TimelineNavigationAdapter.select(10);
+ assert.equal(row.getBoundingClientRect().top,55,'Previous/upward selection clears the fixed header');
+ const scroll=pane.scrollTop;w.matchMedia=()=>({matches:false});w.TimelineNavigationAdapter.select(10);
+ assert.equal(pane.scrollTop,scroll,'Phone reader never scrolls its hidden event list');
+ f.close();
+}
