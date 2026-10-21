@@ -1,6 +1,6 @@
 # Albert: finished integration and existing-media import review
 
-Decision: CONCUR for specification `e8f5fc78f87acfe5071f53741dcc9c2d8375dcbbcb130098e53d64955604cd27`, page SHA256 `64f807ad926168ae24edbc54be0cf82d3b8126f84963b7dd81c56b2b99fcaca6`.
+Decision: CONCUR for specification `873cefc4d5de61071db6186ff325c17e2fd7b4c16735f5054f0f9d30a075db32`, page SHA256 `d427e7f8e578b880a6b512bdfbe9b455c9192026a7e9e80893afc6559c8f6494`.
 
 Albert is the integration and repair executor. Fermi and Newton independently review the actual source and finished output; Calvin and Hobbes supplied separate playback, navigation and usability evidence. This record does not claim deployment or replace the owner's separate authority.
 
@@ -29,3 +29,9 @@ Newton also corrected the script image scanner to consume complete matching-quot
 The full site scan exposed an incomplete Leaflet empty-image GIF and unresolved default icon paths. I replaced only that utility with a strictly decoded fully transparent 1 by 1 GIF (42 bytes), corrected six default icon URLs to the official versioned Leaflet distribution, and fixed the default base path so absolute URLs resolve correctly. All photographs, the selected hero, other probes, records and page styles remain unchanged. The source inverse is recorded separately; the lineage explicitly discloses this utility repair rather than claiming all imported bytes unchanged. The strict import check now fully decodes images, and a test proves the original truncated GIF is rejected even with accurately rebound synthetic hashes.
 
 On final page 64f807ad926168ae24edbc54be0cf82d3b8126f84963b7dd81c56b2b99fcaca6 I executed desktop and phone homepage navigation, hero, shared Search, all 193 credits, focus visibility, nested image-dialog Escape and focus return, and the English map. Both sizes decoded the one-pixel utility and the correct official default marker image. I personally inspected the resulting phone hero/map and desktop image context/map pixels. All checks passed; no deployment or live verification is claimed here.
+
+## Narrow-screen enlarged-text correction
+
+On page d427e7f8e578b880a6b512bdfbe9b455c9192026a7e9e80893afc6559c8f6494, specification 873cefc4d5de61071db6186ff325c17e2fd7b4c16735f5054f0f9d30a075db32, I corrected two actual failures found by the unchanged canonical presentation inspector at 320 pixels with 200 percent root text: minimum sizing and padding clipped two mode controls, and a long reference URL overflowed. The only source changes are the responsive grid minimums/button padding/wrapping and reference-text wrapping. Reversing these two exact CSS edits reproduces the prior reviewed64f source bytes. Hero, media, data, scripts and destinations remain unchanged.
+
+I reran the actual canonical presentation inspector at1366,390 and320/enlarged text: zero horizontal overflow, clipped controls, clipped captions, broken loaded images or pending local images. I personally inspected the finished320 enlarged controls and reference pixels,390 controls and1536 map. The controls retain the gold/teal website palette and readable labels, and the long reference now wraps inside its card. The full1536/390 navigation, Search,193 credits, keyboard focus, nested image dialogs, English map and vendor utility decode checks passed again on this exact successor. Actual evidence is retained separately; earlier tests remain attributed to their original versions. CONCUR for this finite successor, with public deployment and public verification still pending.

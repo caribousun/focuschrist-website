@@ -12,8 +12,8 @@ from pathlib import Path
 
 MANIFEST = 'docs/world-scripture-import/delivery.json'
 PAGE = 'timelines/world-and-scripture-timeline.html'
-APPROVED_SPEC = 'e8f5fc78f87acfe5071f53741dcc9c2d8375dcbbcb130098e53d64955604cd27'
-APPROVED_REVIEWS = 'cdabb6f7099bf1f5c8f66de8daa4b1fd75eb60cd1c012fd13e9055207b5703e3'
+APPROVED_SPEC = '873cefc4d5de61071db6186ff325c17e2fd7b4c16735f5054f0f9d30a075db32'
+APPROVED_REVIEWS = '34ba7eca7a13d034016cfbdaedcfc6bd16faa9bc679697df6f0c805f58b6f898'
 PREFIX = 'assets/world-scripture/'
 
 # Exact compatibility hooks only; original display review evidence pins are retained.

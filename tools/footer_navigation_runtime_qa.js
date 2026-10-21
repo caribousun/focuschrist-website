@@ -7,10 +7,11 @@ const root = path.resolve(__dirname, '..');
 const read = name => fs.readFileSync(path.join(root,name),'utf8');
 const artworkDisclosure = 'Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.';
 const pages = [...read('sitemap.xml').matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>new URL(m[1]).pathname);
-assert.equal(pages.length,131);
+assert.equal(pages.length,132);
+assert.ok(pages.includes('/timelines/world-and-scripture-timeline.html'),'World and Scripture timeline receives the shared footer test');
 const historicalRoutes=JSON.parse(fs.readFileSync(path.join(root,'docs/unified-opening-inventory.json'),'utf8')).pages.map(p=>p.path);
 assert.equal(historicalRoutes.length,130);assert.equal(new Set(historicalRoutes).size,130);
-assert.deepEqual(pages.map(p=>p==='/'?'index.html':p.replace(/^\//,'')).sort(),[...historicalRoutes,'history/emma-hale-smith.html'].sort(),'Exact historical routes plus reviewed Emma addition');
+assert.deepEqual(pages.map(p=>p==='/'?'index.html':p.replace(/^\//,'')).sort(),[...historicalRoutes,'history/emma-hale-smith.html','timelines/world-and-scripture-timeline.html'].sort(),'Exact historical routes plus reviewed Emma and World and Scripture additions');
 assert.ok(pages.includes('/joseph-smith-portrait-research.html'),'Joseph research study receives the shared footer test');
 assert.ok(pages.includes('/answers/race-priesthood-and-temple-blessings.html'),'new dependent study must receive the shared footer test');
 let bareGalleryEntries=0;
@@ -37,7 +38,8 @@ for(const route of [...pages, '/404.html']){
  if(artCase!==0){const p=d.createElement('p'),a=d.createElement('a');a.setAttribute('data-focuschrist-art-gallery','');a.href=artCase===1?'/art-gallery.html':'/art.html';a.textContent='Art Gallery';p.append(a);d.querySelector('.fc-footer[data-focuschrist-footer="standard"]').append(p);}
  const savedDisclosure=d.querySelectorAll('footer [data-focuschrist-artwork-disclosure="footer"]');
  assert.equal(savedDisclosure.length,1,file+' saved footer disclosure must work without scripts');
- assert.equal(savedDisclosure[0].textContent,artworkDisclosure,file+' exact artwork disclosure');
+ const savedExpectedDisclosure=file==='timelines/world-and-scripture-timeline.html' ? artworkDisclosure+' Site photographs credited on this page are real photographs from Wikimedia Commons.' : artworkDisclosure;
+ assert.equal(savedDisclosure[0].textContent,savedExpectedDisclosure,file+' exact artwork disclosure');
  const independence=[...d.querySelectorAll('footer p')].find(p=>p.textContent.startsWith('focusChrist is an independent faith-based website'));
  assert(independence,file+' existing independence notice');
  assert.equal(independence.nextElementSibling,savedDisclosure[0],file+' notices must be adjacent');

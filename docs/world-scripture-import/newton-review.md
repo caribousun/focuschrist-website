@@ -2,9 +2,9 @@
 
 Decision: **CONCUR** for the exact existing-media import, attribution delivery and reviewed rendered result described here. I would present this result for publication within the authorized scope. Deployment and live verification remain separate release steps.
 
-Reviewed delivery specification: `e8f5fc78f87acfe5071f53741dcc9c2d8375dcbbcb130098e53d64955604cd27`.
+Reviewed delivery specification: `873cefc4d5de61071db6186ff325c17e2fd7b4c16735f5054f0f9d30a075db32`.
 
-Reviewed page: `timelines/world-and-scripture-timeline.html`, SHA256 `64f807ad926168ae24edbc54be0cf82d3b8126f84963b7dd81c56b2b99fcaca6`.
+Reviewed page: `timelines/world-and-scripture-timeline.html`, SHA256 `d427e7f8e578b880a6b512bdfbe9b455c9192026a7e9e80893afc6559c8f6494`.
 
 ## Mandate readback and scope
 
@@ -59,3 +59,9 @@ I independently reran all 21 strict import tests, including the regression that 
 I implemented the narrowly scoped quote-scanner correction and obtained independent Fermi review. Complete same-quote literals preserve real apostrophes, escaped quotes, spaces and URLs instead of creating a false local path from attribution prose. Only the owning World and Scripture route receives the exact static 193-record photo-credit schema treatment: descriptive fields are not image resources, while all asset keys and URL fields remain scanned. Unexpected fields, paths, counts, value types or duplicate declarations fail closed. Other routes retain generic scanning. All nine focused regression tests passed, including the unrelated-route and missing-resource cases. This corrects reference classification without hiding real missing images or weakening imported-asset coverage.
 
 Final source/import/rendered-result decision remains CONCUR within the exact specification and evidence bounds above. Publication and live verification are not represented as complete by this receipt.
+
+## Narrow-screen correction reviewed
+
+The final successor changes exactly two CSS declarations: the narrow-screen mode grid uses zero-minimum equal columns with wrapping button labels, and long reference prose can wrap within its reading column. I independently reversed both exact changes and recovered the preceding reviewed page byte for byte. No script, timeline record, image, source attribution, hero or destination changes occur in this delta.
+
+I personally inspected the supplied desktop and phone captures and the 320-pixel enlarged-text captures. All four mode labels remain visible inside the control group, and the long reference wraps inside its entry. The executor's measured canonical checks report zero horizontal overflow and zero clipped mode buttons at 1366 pixels, 390 pixels and 320 pixels with doubled text. This is a finished visual review of supplied captures; the executor performed those browser measurements. My prior actual playback and image-context observations carry forward only for the unchanged scripts and media.

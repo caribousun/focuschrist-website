@@ -113,6 +113,7 @@ jobs:
       - name: Run focusChrist unified experience QA
         run: |
           python tools/unified_experience_qa.py
+          python -m unittest discover -s tools -p test_section_panel_standalone.py
           python tools/section_panel_surface_qa.py --self-test
 
       - name: Run site-wide artwork detail QA

@@ -101,6 +101,7 @@ jobs:
           node --check art-gallery.js
           node --check art-gallery-bridge.js
           python tools/artwork_details_qa.py
+          python -m unittest discover -s tools -p test_section_panel_standalone.py
           python tools/sitewide_artwork_review_qa.py --self-test
           python tools/sitewide_artwork_review_qa.py
           python tools/art_study_enrichment_qa.py

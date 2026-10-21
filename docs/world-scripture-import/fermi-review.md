@@ -3,8 +3,8 @@
 Reviewer: Fermi
 Decision: CONCUR for the exact existing-media import and visitor attribution delivery.
 
-Page SHA256: `64f807ad926168ae24edbc54be0cf82d3b8126f84963b7dd81c56b2b99fcaca6`
-Import specification SHA256: `e8f5fc78f87acfe5071f53741dcc9c2d8375dcbbcb130098e53d64955604cd27`
+Page SHA256: `d427e7f8e578b880a6b512bdfbe9b455c9192026a7e9e80893afc6559c8f6494`
+Import specification SHA256: `873cefc4d5de61071db6186ff325c17e2fd7b4c16735f5054f0f9d30a075db32`
 
 I independently compared all193 public photograph credit records with retrieved Wikimedia Commons source metadata. Titles, named creators, source credits, exact versioned licenses, original-image links and file pages match. Missing creators are described truthfully without invented attribution. The Free Art License photograph carries the specific A.Savin, Wikipedia credit. The GFDL1.2 photograph credits Ralf Roletschek and links the complete bundled license. The UNESCO photograph retains Jim Williams, provider credit and the CC BY-SA3.0IGO license. The Newgrange photograph retains Shira and the CC BY2.5Poland license. Public-domain records without a license URL display plain text with source evidence rather than empty license links.
 
@@ -101,3 +101,22 @@ Current browser-result SHA256: `38fef134a5096c8e58e709f09a9559c82b94c2eba43ccd7c
 I independently reviewed the same-quote script literal scanner and ran all nine regression tests; all passed. Apostrophes inside double-quoted source URLs no longer become false local filenames. The descriptive-credit distinction is restricted to the exact owning timeline route and a strict193-row staticPHOTO_CREDITS schema. All193 asset keys and source/original/license URL fields still enter ordinary reference scanning. Unknown fields, counts, types, paths or duplicate declarations fail closed. An unrelated page retains generic scanning, including image-like title strings. Real apostrophe-containing filenames, escaped quotes/slashes, all quote delimiters, URL queries and unknown missing-image literals remain covered. These are parser/source checks rather than browser interaction evidence.
 
 Both site QA and Pages deployment workflows now explicitly run the nine scanner regressions. I reviewed the actual workflow delta: one unittest invocation added to each existing test block, with prior checks retained. Full-site QA is a separate execution and is not asserted by this receipt.
+
+## Narrow and enlarged-text correction
+
+CONCUR on the current d427 page and873c specification. I independently verified that reversing exactly two CSS replacements recovers the visually reviewed64f predecessor. Mode-control columns now use minmax(0,1fr) with bounded padding and wrapping at phone widths; long existing reference text can wrap. No JavaScript, data, media, destinations, credits or hero geometry changes. All197 asset and public rights bindings remain exact.
+
+I personally inspected the actual1366px and390px control screenshots,320px/200%text mode-control screenshot and320px/200%text long-reference screenshot. All four mode labels remain complete, and the previously overflowing reference wraps within its card. I additionally inspected current d427 desktop/phone maps, phone credits and phone image context; content and controls remain readable. Root executed the canonical three-profile checks and current1536/390flows. Its recorded credit directories retain193rows, zero emptylinks/overflow and visiblefocus; both repaired utility/defaulticon decoders pass. Earlier untouched artwork, rare-license credit and image-focus observations carry forward through the exact CSS inverse; no independent browser execution by me is claimed.
+
+Additional personally inspected screenshot SHA256 bindings:
+
+- `narrow-controls-1366-1.png`: `3a5ecc30cce22f84030131b8e7fff9073efe5ca60d18c6107a1bc89dee393290`
+- `narrow-controls-390-1.png`: `c258a2510b035e1af64106badeeb7b8a171adc36c2a81529a8215a0720ea1351`
+- `narrow-controls-320-2.png`: `29a8d20d703afb2c4171498d78056aacba16b2548d39aa1961b7375bad7155e2`
+- `narrow-reference-320-2.png`: `a70abec8d892ec81e66f2b6c545884d6755c37d8cb47e546e83fdab4c04130a8`
+- `root-narrow-final/map-1536.png`: `96d60d8b568cad61a8039a0a368ed4cdf2ba4c92ffd467ad69bf4aa8ce1c9792`
+- `root-narrow-final/map-390.png`: `6ec4f4fb995cb91ccdef039de8007c206982b2cb041d3bb9377ea03966e09d5f`
+- `root-narrow-final/credits-390.png`: `e9461ae07bebd8dd2ca2bc28f2d60e80c1e8e99ee55a9977419790941e426845`
+- `root-narrow-final/image-context-390.png`: `be0d9a5b662eea74ea5fe7a6cdf12a6c01348aecc77374b3fdadbaac8224f12d`
+
+Current root browser result SHA256: `8299e14a7ed50bce7f835c3f81968585da0767b3a8f85a529fd78214f84ba8c4`.
