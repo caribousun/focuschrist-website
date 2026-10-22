@@ -495,7 +495,19 @@ def reviewed_guided_reading_style(data):
 TIMELINE_BOTTOM_NAV_APPENDIX = b'\n/* Phone readers can continue after the complete story and its picture. */\n.history-workspace .timeline-event-navigation-bottom-slot{display:none}\n@media(max-width:1099px){\n  .history-workspace .timeline-event-navigation-bottom-slot{display:block;margin-top:24px;padding-top:16px;border-top:1px solid #c8c0a8}\n  body.fc-timeline-experience .history-workspace .timeline-event-navigation-bottom-slot .timeline-event-navigation{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0}\n  .history-workspace .timeline-event-navigation-bottom-slot button{width:100%;min-width:0}\n}\n'
 TIMELINE_BOTTOM_NAV_SHA256 = '0bdb5fd44de731349ea4bc975ae97134eceef78662761d24390468d539b6a661'
 
+# Exact place-choice display repair, layered above the preserved history chain.
+TIMELINE_PLACE_CHOICES_APPENDIX = b'\n/* Map place choices reuse the directory buttons but carry no number circle;\n   their labels belong in one full-width column, not the 36px number column. */\n#eventDirectory .timeline-place-choices button{display:block}\n'
+TIMELINE_PLACE_CHOICES_SHA256 = '55d8dbce8fa573efb5acac2e18f9bcb97b05a4661ef9a93d0412ab90fdfa5dd1'
+
+def before_timeline_place_choices(data):
+    if hashlib.sha256(data).hexdigest() != TIMELINE_PLACE_CHOICES_SHA256 or not data.endswith(TIMELINE_PLACE_CHOICES_APPENDIX):
+        return data
+    prior = data[:-len(TIMELINE_PLACE_CHOICES_APPENDIX)]
+    return prior if hashlib.sha256(prior).hexdigest() == ENLARGED_HISTORY_SHA else data
+
 def reviewed_timeline_bottom_navigation(data):
+    if hashlib.sha256(data).hexdigest() != TIMELINE_PLACE_CHOICES_SHA256: return False
+    data = before_timeline_place_choices(data)
     if hashlib.sha256(data).hexdigest() != ENLARGED_HISTORY_SHA: return False
     data = before_enlarged_history_style(data)
     if hashlib.sha256(data).hexdigest() != CURRENT_TIMELINE_INVERSES['timeline-history-workspace.css'][0]: return False
@@ -615,8 +627,10 @@ def main():
             assert mutation != journey and not reviewed_journey_bottom_navigation(mutation)
         timeline = (ROOT/'timeline-history-workspace.css').read_bytes()
         assert reviewed_timeline_bottom_navigation(timeline)
-        assert hashlib.sha256(before_current_timeline_style('timeline-history-workspace.css', timeline)[:-len(TIMELINE_BOTTOM_NAV_APPENDIX)]).hexdigest() == OWNER_20260929_STYLES['timeline-history-workspace.css'][0]
-        for mutation in (timeline + TIMELINE_BOTTOM_NAV_APPENDIX, timeline[:-len(TIMELINE_BOTTOM_NAV_APPENDIX)], timeline.replace(b'gap:12px', b'gap:13px'), timeline + b'.fc-visual-hero{height:1px}'):
+        prior_timeline = before_timeline_place_choices(timeline)
+        assert prior_timeline != timeline and hashlib.sha256(prior_timeline).hexdigest() == ENLARGED_HISTORY_SHA
+        assert hashlib.sha256(before_current_timeline_style('timeline-history-workspace.css', prior_timeline)[:-len(TIMELINE_BOTTOM_NAV_APPENDIX)]).hexdigest() == OWNER_20260929_STYLES['timeline-history-workspace.css'][0]
+        for mutation in (timeline + TIMELINE_BOTTOM_NAV_APPENDIX, timeline[:-len(TIMELINE_PLACE_CHOICES_APPENDIX)], timeline.replace(TIMELINE_PLACE_CHOICES_APPENDIX, TIMELINE_PLACE_CHOICES_APPENDIX.replace(b'display:block', b'display:grid')), timeline.replace(b'gap:12px', b'gap:13px'), timeline + b'.fc-visual-hero{height:1px}'):
             assert mutation != timeline and not reviewed_timeline_bottom_navigation(mutation)
         assert not reviewed_scoped_interface_style('guided-studies.css', guided + b'body{height:1px}')
         assert not reviewed_scoped_interface_style('guided-studies.css', guided[:-len(COMPANION_INSET_APPENDIX)] + COMPANION_INSET_APPENDIX.replace(b'@media screen {', b'@media print {', 1))

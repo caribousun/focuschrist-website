@@ -53,3 +53,7 @@
   body.fc-timeline-experience .history-workspace .timeline-event-navigation-bottom-slot .timeline-event-navigation{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0}
   .history-workspace .timeline-event-navigation-bottom-slot button{width:100%;min-width:0}
 }
+
+/* Map place choices reuse the directory buttons but carry no number circle;
+   their labels belong in one full-width column, not the 36px number column. */
+#eventDirectory .timeline-place-choices button{display:block}
