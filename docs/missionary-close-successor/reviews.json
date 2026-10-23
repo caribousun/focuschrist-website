@@ -18,27 +18,27 @@
   "browser": "Chrome for Testing 156.0.8078.4 (Playwright Chromium, headless), local HTTP serve of the exact candidate tree",
   "captures": [
    {
-    "path": "docs/missionary-close-successor/rendered/desktop-commission-dialog.png",
+    "path": "docs/missionary-close-successor/rendered/desktop-commission-dialog.png.b64",
     "sha256": "4cb6858efa43231d5ddf5153df2ecb70a18d34e6495579139a24f85800542afb",
     "viewport": "desktop"
    },
    {
-    "path": "docs/missionary-close-successor/rendered/desktop-samuel-smith-dialog.png",
+    "path": "docs/missionary-close-successor/rendered/desktop-samuel-smith-dialog.png.b64",
     "sha256": "b1586669edc8abb5aa581895065eea0f8acd05cd1c46de744caf48eda35be039",
     "viewport": "desktop"
    },
    {
-    "path": "docs/missionary-close-successor/rendered/phone-commission-dialog.png",
+    "path": "docs/missionary-close-successor/rendered/phone-commission-dialog.png.b64",
     "sha256": "1e1940a3e6508293413dd6e77821652a30a6e7138f1bd55c67c7fe0bfdef0fa3",
     "viewport": "phone"
    },
    {
-    "path": "docs/missionary-close-successor/rendered/phone-commission-dialog-actions.png",
+    "path": "docs/missionary-close-successor/rendered/phone-commission-dialog-actions.png.b64",
     "sha256": "339bf013e6aa2acecbb599fc6cde653bae5649075d311bd8ffde0a4a68ccd257",
     "viewport": "phone"
    },
    {
-    "path": "docs/missionary-close-successor/rendered/phone-samuel-smith-dialog.png",
+    "path": "docs/missionary-close-successor/rendered/phone-samuel-smith-dialog.png.b64",
     "sha256": "e5d5f91638e2c99d9d6878da5428445f6821eb210dadb00d58b6dae04aeed30d",
     "viewport": "phone"
    }

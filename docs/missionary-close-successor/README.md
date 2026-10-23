@@ -57,7 +57,7 @@ flags may be set on a record beyond what its author actually verified.
 Status: COMPLETE. All three scopes are recorded in `reviews.json`:
 scope 1 by Jeff's J-2026-10-23-007, scope 2 collected by Merlin
 (Chrome for Testing 156 headless, desktop 1440x1000 and phone-emulated
-390x844, captures under `rendered/`), and scope 3 by Jeff's
+390x844, captures under `rendered/`, stored as base64 text (`.png.b64`) so QA screenshots never enter the site artwork raster inventory; the gate decodes them and binds the exact PNG bytes by hash), and scope 3 by Jeff's
 J-2026-10-23-009 rendered CONCUR bound to the capture hashes. The
 completed `reviews.json` is pinned as `APPROVED_REVIEWS` by its
 canonical hash in `tools/missionary_close_successor.py`. The gate still

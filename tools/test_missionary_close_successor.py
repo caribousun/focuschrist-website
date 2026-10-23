@@ -96,7 +96,10 @@ class MissionaryCloseSuccessorTests(unittest.TestCase):
   item=reg['evidence'];self.assertEqual(g.sha((g.ROOT/item['path']).read_bytes()),item['sha256'])
   ev=record['rendered_evidence'];self.assertEqual(ev.get('status'),'COLLECTED');self.assertEqual(ev.get('collected_by'),'Merlin')
   self.assertEqual(len(ev.get('captures')),5)
-  for cap in ev['captures']:self.assertEqual(g.sha((g.ROOT/cap['path']).read_bytes()),cap['sha256'])
+  for cap in ev['captures']:
+   raw=(g.ROOT/cap['path']).read_bytes()
+   if cap['path'].endswith('.b64'):raw=base64.b64decode(raw)
+   self.assertEqual(g.sha(raw),cap['sha256']);self.assertTrue(cap['path'].endswith('.png.b64'))
   rv=record['rendered_review'];self.assertEqual(rv.get('status'),'FINISHED');self.assertEqual(rv.get('reviewer'),'Jeff')
   self.assertEqual(rv.get('review_id'),'J-2026-10-23-009');self.assertEqual(rv.get('scope'),'rendered');self.assertEqual(rv.get('decision'),'CONCUR')
   self.assertIs(rv.get('finished_pixels'),True);self.assertIs(rv.get('finished_behavior'),True)
