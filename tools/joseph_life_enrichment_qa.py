@@ -10,8 +10,8 @@ ROOT=Path(__file__).resolve().parents[1]
 EXPECTED={'marriage-partnership-1827','household-gift-harmony-1828','emma-early-scribe-1828','hyrum-reading-before-carthage-1844','emma-relief-service-1842','care-after-loss-1828','emma-family-letter-1838','joseph-household-labor-1828','journey-to-harmony-1827','emma-prayer-during-arrest-1830'}
 def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 CORRECTION_SCENES={'household-gift-harmony-1828': 'SITE10', 'journey-to-harmony-1827': 'SITE07_EXPRESSION', 'care-after-loss-1828': 'SITE09', 'emma-family-letter-1838': 'SITE12', 'emma-early-scribe-1828': 'SITE08','emma-prayer-during-arrest-1830': 'SITE11'}
-CORRECTION_RECORDS={'SITE07', 'SITE08', 'SITE11', 'SITE01_IDENTITY', 'SITE10', 'SITE05_IDENTITY', 'SITE01', 'SITE12', 'SITE09', 'SITE07_EXPRESSION', 'SITE02_IDENTITY'}
-CURRENT_SCENES={'SITE01': 'SITE01_IDENTITY', 'SITE07': 'SITE07_EXPRESSION', 'SITE08': 'SITE08', 'SITE09': 'SITE09', 'SITE10': 'SITE10', 'SITE12': 'SITE12', 'SITE11': 'SITE11', 'SITE02': 'SITE02_IDENTITY', 'SITE05': 'SITE05_IDENTITY'}
+CORRECTION_RECORDS={'SITE07', 'SITE08', 'SITE11', 'SITE01_IDENTITY', 'SITE10', 'SITE05_IDENTITY', 'SITE01', 'SITE12', 'SITE09', 'SITE07_EXPRESSION', 'SITE02_IDENTITY', 'MISSION-HAND'}
+CURRENT_SCENES={'SITE01': 'SITE01_IDENTITY', 'SITE07': 'SITE07_EXPRESSION', 'SITE08': 'SITE08', 'SITE09': 'SITE09', 'SITE10': 'SITE10', 'SITE12': 'SITE12', 'SITE11': 'SITE11', 'SITE02': 'SITE02_IDENTITY', 'SITE05': 'SITE05_IDENTITY', 'MISSION-HAND': 'MISSION-HAND'}
 CURRENT_BINDING='f99cafef97cb2ab349732444ad6e23d52387471cec849575822b82e4c8be4140'
 SITE10_BINDING='6f9510c88845fbef288289a33beab1a841f414ea65ab1212577c02e284d27a75'
 def current_corrections():
@@ -19,7 +19,7 @@ def current_corrections():
  assert record['schema']==1 and record['status']=='REVIEWED_EXACT_EVIDENCE'
  assert record['approved_binding']==CURRENT_BINDING
  assert correction_canonical(record['spec'])==CURRENT_BINDING,'Unreviewed correction specification'
- families=record['spec']['families'];assert len(families)==11 and {f['id'] for f in families}==CORRECTION_RECORDS
+ families=record['spec']['families'];assert len(families)==12 and {f['id'] for f in families}==CORRECTION_RECORDS
  assert record['spec']['current_scene_records']==CURRENT_SCENES
  resolved={}
  for family in families:
