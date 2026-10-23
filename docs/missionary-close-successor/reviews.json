@@ -1,1 +1,83 @@
-{"page_sha256":"e5696e60b60faef5f456647ff2a153b939871acb895a6671d3d95a718d2ad55a","registration_review":{"behavior_scope":"source wiring only; rendered pixels and rendered behavior not inspected and not claimed (per Jeff's stated scope limits in J-2026-10-23-007)","decision":"CONCUR","evidence":{"path":"docs/missionary-close-successor/jeff-registration-review-j007.json","sha256":"79b70d913e0f83029e51227b3e4131d09c1b5d364a8c0057f8d35ffecf01318c"},"finished_behavior":true,"finished_pixels":false,"page_sha256":"e5696e60b60faef5f456647ff2a153b939871acb895a6671d3d95a718d2ad55a","review_id":"J-2026-10-23-007","reviewer":"Jeff","scope":"registration-source"},"rendered_evidence":{"captures":[],"collected_by":null,"status":"PENDING"},"rendered_review":{"decision":null,"finished_behavior":false,"finished_pixels":false,"reviewer":null,"status":"PENDING"},"required_reviewers":["Jeff"],"source_sha256":"5def8841bee12decbe14be551c896794493dd944d8b15cf1fbb9d7f585400b41","status":"PENDING"}
+{
+ "page_sha256": "e5696e60b60faef5f456647ff2a153b939871acb895a6671d3d95a718d2ad55a",
+ "registration_review": {
+  "behavior_scope": "source wiring only; rendered pixels and rendered behavior not inspected and not claimed (per Jeff's stated scope limits in J-2026-10-23-007)",
+  "decision": "CONCUR",
+  "evidence": {
+   "path": "docs/missionary-close-successor/jeff-registration-review-j007.json",
+   "sha256": "79b70d913e0f83029e51227b3e4131d09c1b5d364a8c0057f8d35ffecf01318c"
+  },
+  "finished_behavior": true,
+  "finished_pixels": false,
+  "page_sha256": "e5696e60b60faef5f456647ff2a153b939871acb895a6671d3d95a718d2ad55a",
+  "review_id": "J-2026-10-23-007",
+  "reviewer": "Jeff",
+  "scope": "registration-source"
+ },
+ "rendered_evidence": {
+  "browser": "Chrome for Testing 156.0.8078.4 (Playwright Chromium, headless), local HTTP serve of the exact candidate tree",
+  "captures": [
+   {
+    "path": "docs/missionary-close-successor/rendered/desktop-commission-dialog.png",
+    "sha256": "4cb6858efa43231d5ddf5153df2ecb70a18d34e6495579139a24f85800542afb",
+    "viewport": "desktop"
+   },
+   {
+    "path": "docs/missionary-close-successor/rendered/desktop-samuel-smith-dialog.png",
+    "sha256": "b1586669edc8abb5aa581895065eea0f8acd05cd1c46de744caf48eda35be039",
+    "viewport": "desktop"
+   },
+   {
+    "path": "docs/missionary-close-successor/rendered/phone-commission-dialog.png",
+    "sha256": "1e1940a3e6508293413dd6e77821652a30a6e7138f1bd55c67c7fe0bfdef0fa3",
+    "viewport": "phone"
+   },
+   {
+    "path": "docs/missionary-close-successor/rendered/phone-commission-dialog-actions.png",
+    "sha256": "339bf013e6aa2acecbb599fc6cde653bae5649075d311bd8ffde0a4a68ccd257",
+    "viewport": "phone"
+   },
+   {
+    "path": "docs/missionary-close-successor/rendered/phone-samuel-smith-dialog.png",
+    "sha256": "e5d5f91638e2c99d9d6878da5428445f6821eb210dadb00d58b6dae04aeed30d",
+    "viewport": "phone"
+   }
+  ],
+  "collected_by": "Merlin",
+  "details_js_sha256": "55bb051609d1bb1b1793eb44539d812e71b1c62f789617c0f5b36c1b1a47f17a",
+  "observations": {
+   "path": "docs/missionary-close-successor/rendered/observations.json",
+   "sha256": "a045105bbd36638b211a5b5324d54ad4f481b1106b343404b614a81b89eddd27"
+  },
+  "page_sha256": "e5696e60b60faef5f456647ff2a153b939871acb895a6671d3d95a718d2ad55a",
+  "phone_note": "Phone captures are Chromium device emulation at 390x844 with touch, not a physical phone.",
+  "served_git_head": "f15039d5103dcbe0da86f13a1f7284def8948f3b",
+  "status": "COLLECTED"
+ },
+ "rendered_review": {
+  "capture_sha256": [
+   "4cb6858efa43231d5ddf5153df2ecb70a18d34e6495579139a24f85800542afb",
+   "b1586669edc8abb5aa581895065eea0f8acd05cd1c46de744caf48eda35be039",
+   "1e1940a3e6508293413dd6e77821652a30a6e7138f1bd55c67c7fe0bfdef0fa3",
+   "339bf013e6aa2acecbb599fc6cde653bae5649075d311bd8ffde0a4a68ccd257",
+   "e5d5f91638e2c99d9d6878da5428445f6821eb210dadb00d58b6dae04aeed30d"
+  ],
+  "decision": "CONCUR",
+  "evidence": {
+   "path": "docs/missionary-close-successor/jeff-rendered-review-j009.json",
+   "sha256": "20acaf7cd9ef6907d3e6e8e48560b742d043418be7e0f2fb2fd5533d9a511eb5"
+  },
+  "finished_behavior": true,
+  "finished_pixels": true,
+  "page_sha256": "e5696e60b60faef5f456647ff2a153b939871acb895a6671d3d95a718d2ad55a",
+  "review_id": "J-2026-10-23-009",
+  "reviewer": "Jeff",
+  "scope": "rendered",
+  "status": "FINISHED"
+ },
+ "required_reviewers": [
+  "Jeff"
+ ],
+ "source_sha256": "5def8841bee12decbe14be551c896794493dd944d8b15cf1fbb9d7f585400b41",
+ "status": "COMPLETE"
+}

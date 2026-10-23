@@ -86,22 +86,29 @@ class MissionaryCloseSuccessorTests(unittest.TestCase):
   record=copy.deepcopy(self.record);del record['rendered_review']
   with self.resealed(record):
    with self.assertRaisesRegex(ValueError,'rendered review MISSING'):g.check(self.root)
- def test_real_candidate_record_truthful_and_blocks_only_on_rendered(self):
+ def test_real_candidate_record_truthful_and_completed(self):
   record=json.loads((g.ROOT/g.REVIEWS).read_text(encoding='utf-8'))
-  self.assertEqual(record.get('status'),'PENDING');self.assertEqual(record.get('required_reviewers'),['Jeff'])
+  self.assertEqual(record.get('status'),'COMPLETE');self.assertEqual(record.get('required_reviewers'),['Jeff'])
   reg=record.get('registration_review')
   self.assertEqual(reg.get('reviewer'),'Jeff');self.assertEqual(reg.get('review_id'),'J-2026-10-23-007');self.assertEqual(reg.get('scope'),'registration-source');self.assertEqual(reg.get('decision'),'CONCUR')
   self.assertIs(reg.get('finished_pixels'),False);self.assertIs(reg.get('finished_behavior'),True)
   self.assertEqual(reg.get('page_sha256'),REAL_AFTER)
   item=reg['evidence'];self.assertEqual(g.sha((g.ROOT/item['path']).read_bytes()),item['sha256'])
-  self.assertEqual(record['rendered_evidence'].get('status'),'PENDING');self.assertEqual(record['rendered_evidence'].get('captures'),[])
-  self.assertEqual(record['rendered_review'].get('status'),'PENDING');self.assertIsNone(record['rendered_review'].get('reviewer'))
+  ev=record['rendered_evidence'];self.assertEqual(ev.get('status'),'COLLECTED');self.assertEqual(ev.get('collected_by'),'Merlin')
+  self.assertEqual(len(ev.get('captures')),5)
+  for cap in ev['captures']:self.assertEqual(g.sha((g.ROOT/cap['path']).read_bytes()),cap['sha256'])
+  rv=record['rendered_review'];self.assertEqual(rv.get('status'),'FINISHED');self.assertEqual(rv.get('reviewer'),'Jeff')
+  self.assertEqual(rv.get('review_id'),'J-2026-10-23-009');self.assertEqual(rv.get('scope'),'rendered');self.assertEqual(rv.get('decision'),'CONCUR')
+  self.assertIs(rv.get('finished_pixels'),True);self.assertIs(rv.get('finished_behavior'),True)
+  self.assertEqual(rv.get('capture_sha256'),[cap['sha256'] for cap in ev['captures']])
+  item=rv['evidence'];self.assertEqual(g.sha((g.ROOT/item['path']).read_bytes()),item['sha256'])
   source=(g.ROOT/'tools/missionary_close_successor.py').read_text(encoding='utf-8')
-  self.assertIn('APPROVED_REVIEWS=None',source)
+  self.assertIn("APPROVED_REVIEWS='"+g.canonical(record)+"'",source)
+  self.assertIsNotNone(g.APPROVED_REVIEWS)
   manifest=json.loads((g.ROOT/g.MANIFEST).read_text(encoding='utf-8'))
   self.assertEqual(record.get('source_sha256'),g.canonical(manifest));self.assertIn(record.get('source_sha256'),source)
   with patch.multiple(g,BEFORE=REAL_BEFORE,AFTER=REAL_AFTER,SOURCE_SHA=REAL_SOURCE_SHA,APPROVED_REVIEWS=None):
-   with self.assertRaisesRegex(ValueError,'rendered review MISSING'):g.check(g.ROOT)
+   with self.assertRaisesRegex(ValueError,'finished review PENDING'):g.check(g.ROOT)
  def test_tampered_jeff_record_rejected_even_if_resealed(self):
   for edit in ['pending','fabricatedpixels','unfinished','wrongreviewer','wrongscope','wrongpage','wronghash','badhash']:
    row=copy.deepcopy(self.record)

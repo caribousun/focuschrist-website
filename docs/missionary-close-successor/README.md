@@ -30,7 +30,7 @@ flags may be set on a record beyond what its author actually verified.
    in `reviews.json`. Source wiring is not rendered behavior and is never
    relabeled as such.
 
-2. **Merlin rendered evidence collection (PENDING).** Before merge, Merlin
+2. **Merlin rendered evidence collection (COLLECTED).** Before merge, Merlin
    renders the exact candidate bytes (served from the candidate Git head,
    not current production) on a desktop viewport and a narrow phone
    viewport (phone emulation is acceptable if honestly labeled), opens the
@@ -43,7 +43,7 @@ flags may be set on a record beyond what its author actually verified.
    as `rendered_evidence`. Collection is evidence gathering, not approval:
    Merlin is the executor and cannot approve his own rendered result.
 
-3. **Independent rendered review (PENDING).** Jeff may independently
+3. **Independent rendered review (FINISHED).** Jeff may independently
    inspect the captured pixels and results and author a new review bound to
    the exact capture/evidence hashes; browser ownership is not required for
    image review, but actual visual inspection is. If Jeff cannot view the
@@ -54,11 +54,15 @@ flags may be set on a record beyond what its author actually verified.
 
 ## Gate and pin status
 
-Status: PENDING. `reviews.json` records scope 1 as complete and scopes 2
-and 3 as explicitly unfilled, so `tools/missionary_close_successor.py`
-fails closed with exactly: "Missionary close successor rendered review
-MISSING". The gate also rejects absent, wrong-scope, wrong-actor,
-unfinished, or tampered records in any scope, even if resealed.
+Status: COMPLETE. All three scopes are recorded in `reviews.json`:
+scope 1 by Jeff's J-2026-10-23-007, scope 2 collected by Merlin
+(Chrome for Testing 156 headless, desktop 1440x1000 and phone-emulated
+390x844, captures under `rendered/`), and scope 3 by Jeff's
+J-2026-10-23-009 rendered CONCUR bound to the capture hashes. The
+completed `reviews.json` is pinned as `APPROVED_REVIEWS` by its
+canonical hash in `tools/missionary_close_successor.py`. The gate still
+rejects absent, wrong-scope, wrong-actor, unfinished, or tampered
+records in any scope, even if resealed.
 
 This gate/schema change itself requires a fresh independent Jeff source and
 test review before any pin. Only after every scope is complete with actual

@@ -8,7 +8,7 @@ AFTER='e5696e60b60faef5f456647ff2a153b939871acb895a6671d3d95a718d2ad55a'
 MANIFEST='docs/missionary-close-successor/manifest.json'
 REVIEWS='docs/missionary-close-successor/reviews.json'
 SOURCE_SHA='5def8841bee12decbe14be551c896794493dd944d8b15cf1fbb9d7f585400b41'  # Integrator pins exact candidate spans; this is not review approval.
-APPROVED_REVIEWS=None  # Pin only after every A002 scope is complete and the gate change itself has a fresh Jeff review.
+APPROVED_REVIEWS='cca8d768a9291bbf02fb606e322f7c11be26b4b1a24fd99eedb6926226d2a6b0'  # Canonical hash of the completed reviews.json: J007 registration (pixels false), Merlin rendered evidence, Jeff J009 rendered CONCUR; gate change reviewed in J008.
 def sha(raw):return hashlib.sha256(raw).hexdigest()
 def canonical(x):return sha(json.dumps(x,sort_keys=True,separators=(',',':'),ensure_ascii=False).encode())
 def require(ok,message):
