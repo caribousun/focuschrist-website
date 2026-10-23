@@ -23,7 +23,8 @@ class MissionaryCloseSuccessorTests(unittest.TestCase):
  def test_exact_round_trip_and_gate(self):
   self.assertEqual(g.restore(g.PAGE,self.new,self.root),self.old);self.assertEqual(g.advance(g.PAGE,self.old,self.root),self.new);self.assertEqual(g.check(self.root)['status'],'MISSIONARY_CLOSE_SUCCESSOR_EVIDENCE_PASS')
  def test_real_candidate_exact_round_trip(self):
-  raw=(g.ROOT/g.PAGE).read_bytes()
+  from commission_hand_successor import restore as restore_hand
+  raw=restore_hand(g.PAGE,(g.ROOT/g.PAGE).read_bytes(),g.ROOT)
   self.assertEqual(g.sha(raw),'e5696e60b60faef5f456647ff2a153b939871acb895a6671d3d95a718d2ad55a')
   with patch.multiple(g,BEFORE=REAL_BEFORE,AFTER=REAL_AFTER,SOURCE_SHA=REAL_SOURCE_SHA):
    old=g.restore(g.PAGE,raw,g.ROOT)
@@ -110,8 +111,14 @@ class MissionaryCloseSuccessorTests(unittest.TestCase):
   self.assertIsNotNone(g.APPROVED_REVIEWS)
   manifest=json.loads((g.ROOT/g.MANIFEST).read_text(encoding='utf-8'))
   self.assertEqual(record.get('source_sha256'),g.canonical(manifest));self.assertIn(record.get('source_sha256'),source)
-  with patch.multiple(g,BEFORE=REAL_BEFORE,AFTER=REAL_AFTER,SOURCE_SHA=REAL_SOURCE_SHA,APPROVED_REVIEWS=None):
-   with self.assertRaisesRegex(ValueError,'finished review PENDING'):g.check(g.ROOT)
+  import shutil,tempfile
+  from commission_hand_successor import restore as restore_hand
+  with tempfile.TemporaryDirectory() as td:
+   view=Path(td);(view/g.PAGE).write_bytes(restore_hand(g.PAGE,(g.ROOT/g.PAGE).read_bytes(),g.ROOT))
+   shutil.copy2(g.ROOT/'missionary-details.js',view/'missionary-details.js')
+   shutil.copytree(g.ROOT/'docs/missionary-close-successor',view/'docs/missionary-close-successor')
+   with patch.multiple(g,BEFORE=REAL_BEFORE,AFTER=REAL_AFTER,SOURCE_SHA=REAL_SOURCE_SHA,APPROVED_REVIEWS=None):
+    with self.assertRaisesRegex(ValueError,'finished review PENDING'):g.check(view)
  def test_tampered_jeff_record_rejected_even_if_resealed(self):
   for edit in ['pending','fabricatedpixels','unfinished','wrongreviewer','wrongscope','wrongpage','wronghash','badhash']:
    row=copy.deepcopy(self.record)

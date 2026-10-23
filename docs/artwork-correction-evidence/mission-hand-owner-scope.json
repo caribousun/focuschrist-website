@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "mission-hand-owner-scope",
+  "family": "MISSION-HAND",
+  "stage": "owner_scope",
+  "actual_actor": "Merlin worker",
+  "verdict": "RECORDED",
+  "withdrawn": false,
+  "source_report_sha256": "67b88bf7df5ea76cea3b633e82faade99ca144e87e6556cf0ed036e313b2294b",
+  "source_recorded_at": "2026-10-23T13:06:00Z",
+  "normalized_at": "2026-10-23T21:20:00Z",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "7b0dfc36b7f338b2da7f8ca755262d9f703c45683ea1bd315111039d850f1f7d",
+  "findings": "Owner defect report and acceptance standard recorded in CHECKPOINT-1: the raised hand of Christ in the missionary commission picture has fused digits, and the owner later refined the light standard (soft warm sunlight shading passes; hard near-pure-white lines in the inter-finger gaps fail). Scope is a bounded repair of that hand only; the frozen original renditions stay byte-identical.",
+  "pixels_inspected": false,
+  "limits": "Scope record only; it does not approve any candidate pixels."
+}

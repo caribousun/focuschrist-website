@@ -262,8 +262,9 @@ def validate(root, record, approved_binding, added, existing_coverage, rejected,
         validated_families[identity] = family
     if 'SITE07_EXPRESSION' in validated_families:
         expected = {'SITE01': 'SITE01', 'SITE07': 'SITE07_EXPRESSION', 'SITE08': 'SITE08',
-                    'SITE09': 'SITE09', 'SITE10': 'SITE10', 'SITE11': 'SITE11', 'SITE12': 'SITE12'}
-        original_records = {'SITE01', 'SITE07', 'SITE07_EXPRESSION', 'SITE08', 'SITE09', 'SITE10', 'SITE11', 'SITE12'}
+                    'SITE09': 'SITE09', 'SITE10': 'SITE10', 'SITE11': 'SITE11', 'SITE12': 'SITE12',
+                    'MISSION-HAND': 'MISSION-HAND'}
+        original_records = {'SITE01', 'SITE07', 'SITE07_EXPRESSION', 'SITE08', 'SITE09', 'SITE10', 'SITE11', 'SITE12', 'MISSION-HAND'}
         present_identity = set(validated_families) & set(identity_ids)
         check(not present_identity or present_identity == set(identity_ids), 'Incomplete exact identity batch')
         if present_identity:

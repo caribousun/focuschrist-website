@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "mission-hand-source-finished-executor",
+  "family": "MISSION-HAND",
+  "stage": "source_finished",
+  "actual_actor": "Merlin worker",
+  "verdict": "CONCUR",
+  "withdrawn": false,
+  "source_report_sha256": "cb3707615ef329d248be3172fc305ccc851ede841523c03424455b579e0969cb",
+  "source_recorded_at": "2026-10-23T20:24:00Z",
+  "normalized_at": "2026-10-23T21:20:00Z",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "b9d4a70895f0739f71bb8061c16f1d0c5c6ccb4fcaa4a6722c10a6124ee600f3",
+  "findings": "The candidate 8 composite is the family final source. The delivered source PNG is a byte-identical copy of it (sha256 verified equal at delivery).",
+  "pixels_inspected": true,
+  "limits": "Producer record."
+}

@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "status": "REVIEWED_EXACT_EVIDENCE",
-  "approved_binding": "42ba0b7b149470f37c30c7677946b43695cf8f991f6158f7e97fe6b09b4f2691",
+  "approved_binding": "f99cafef97cb2ab349732444ad6e23d52387471cec849575822b82e4c8be4140",
   "spec": {
     "kind": "reviewed_local_corrections",
     "precreation_claim": false,
@@ -2743,6 +2743,260 @@
             "role": "derivative"
           }
         ]
+      },
+      {
+        "id": "MISSION-HAND",
+        "authority_kind": "reviewed_local_correction",
+        "precreation_claim": false,
+        "exclusion_reason": "Candidate 1-7 composites and donor variant B contributed no pixels to the approved candidate 8 composite; all are excluded from reuse.",
+        "asset_allowlist": [
+          "assets/missionary/christ-teaches-apostles-home-likeness-20260914-hand-repair-v2.png",
+          "assets/missionary/christ-teaches-apostles-home-likeness-20260914-hand-repair-v2-full.webp",
+          "assets/missionary/christ-teaches-apostles-home-likeness-20260914-hand-repair-v2-1100.webp",
+          "assets/missionary/christ-teaches-apostles-home-likeness-20260914-hand-repair-v2-900.webp"
+        ],
+        "immutable_originals": [
+          {
+            "path": "assets/missionary/christ-teaches-apostles-home-likeness-20260914-full.webp",
+            "sha256": "7b0dfc36b7f338b2da7f8ca755262d9f703c45683ea1bd315111039d850f1f7d"
+          },
+          {
+            "path": "assets/missionary/christ-teaches-apostles-home-likeness-20260914-1100.webp",
+            "sha256": "86bc32e00b893a4c5bd4e3c26b18222f79f7c2bc00b167ac70c059461e6a9b18"
+          },
+          {
+            "path": "assets/missionary/christ-teaches-apostles-home-likeness-20260914-900.webp",
+            "sha256": "3fa122b0a34fdfdde59e30430c18d25528e4a882d09b699702708a58539726f2"
+          }
+        ],
+        "lineage": [
+          {
+            "id": "original-full",
+            "kind": "original",
+            "sha256": "7b0dfc36b7f338b2da7f8ca755262d9f703c45683ea1bd315111039d850f1f7d",
+            "parents": []
+          },
+          {
+            "id": "donor-v8a",
+            "kind": "generated_donor",
+            "sha256": "8bbe76f34264aafc19bcdc43ebec04d07460cabac7829689f3ee95e0facfa161",
+            "parents": [
+              "original-full"
+            ]
+          },
+          {
+            "id": "composite-candidate8",
+            "kind": "masked_composite",
+            "sha256": "b9d4a70895f0739f71bb8061c16f1d0c5c6ccb4fcaa4a6722c10a6124ee600f3",
+            "parents": [
+              "original-full",
+              "donor-v8a"
+            ]
+          }
+        ],
+        "body_source_id": "composite-candidate8",
+        "final_source_id": "composite-candidate8",
+        "excluded_pixel_ancestors": [
+          "e03679ee1476213754cea54bcf053f594faa96e04cb5a38abd6ad0eb80af7575",
+          "71444ecdeaeb2fcea8c8371bc23cc7777468e0974f0d879c2273a2a5f4f420ff",
+          "b73d45dfa54a1b6210daeb56fe63e07d82c6502975a6bb2a1bc31ca95b8386f4",
+          "46866f68512663858def276cf770465bf1cfbdf9b6e20e6217670921a9d8aac1",
+          "b7fb2583f9dcb2bc630c96792cde5c173e5a93cd7ff099aff2bda9b71a8f491f",
+          "fb856e0d8977991623a1a2fa36a10e711359d3826a223fb472af46959951833c",
+          "1209c6ef6e7e6c9922dfd447cb75d60688ff135f146cbd3834e68e98ed17c146",
+          "c5fa75ef789cb365933967d7a7d3b3986e1b29ea71d3b2a96cd7fdd91941e62a"
+        ],
+        "current_reviewers": {
+          "executor": "Merlin worker",
+          "independent": "Jeff",
+          "root": "Wyatt Fowler (site owner)"
+        },
+        "stage_subjects": {
+          "owner_scope": "7b0dfc36b7f338b2da7f8ca755262d9f703c45683ea1bd315111039d850f1f7d",
+          "donor_preflight": "bdf2d4de85307cc868fe190508c49cc243ee21b853c863554457d9d4f7288667",
+          "donor_result": "8bbe76f34264aafc19bcdc43ebec04d07460cabac7829689f3ee95e0facfa161",
+          "composite_preflight": "3d26edfa68fe1663c540f60b1ecf292d379f1f6704a31d530127b1603e15a2ab",
+          "composite_result": "b9d4a70895f0739f71bb8061c16f1d0c5c6ccb4fcaa4a6722c10a6124ee600f3",
+          "body_finished": "b9d4a70895f0739f71bb8061c16f1d0c5c6ccb4fcaa4a6722c10a6124ee600f3",
+          "source_finished": "b9d4a70895f0739f71bb8061c16f1d0c5c6ccb4fcaa4a6722c10a6124ee600f3",
+          "encoding_preflight": "3e4dfbde2e6ca8977fd6e1eee0299479b66c780cb004e11bbcda390f9a34cfd3",
+          "encoding_result": "2e38db7fd708a8a15c06ce49822aef01fe2e0a0b97755d6facb1a950600ed98b",
+          "delivery_finished": "998c7992e66576bffbc23d87a8842b54ee46e8489d9d7e047ea1976f098f52a7"
+        },
+        "assets": [
+          {
+            "path": "assets/missionary/christ-teaches-apostles-home-likeness-20260914-hand-repair-v2.png",
+            "role": "source",
+            "format": "PNG",
+            "sha256": "b9d4a70895f0739f71bb8061c16f1d0c5c6ccb4fcaa4a6722c10a6124ee600f3",
+            "pixel_sha256": "b0359d888c671e19316c794bb0d28f03c4f5f81eebe72e21b8d7ea520abb1e2b",
+            "bytes": 2803226,
+            "dimensions": [
+              1672,
+              941
+            ],
+            "mode": "RGB",
+            "source_sha256": "b9d4a70895f0739f71bb8061c16f1d0c5c6ccb4fcaa4a6722c10a6124ee600f3"
+          },
+          {
+            "path": "assets/missionary/christ-teaches-apostles-home-likeness-20260914-hand-repair-v2-full.webp",
+            "role": "derivative",
+            "format": "WEBP",
+            "sha256": "5f4d3d8019af09563753c528596e0852deddd549fb0acf87088db2f4295fd23d",
+            "pixel_sha256": "55245c73dece3864795ae47a8ac53a855f7ec6e2413f9e8fd8e1a79a4b6db513",
+            "bytes": 498358,
+            "dimensions": [
+              1672,
+              941
+            ],
+            "mode": "RGB",
+            "source_sha256": "b9d4a70895f0739f71bb8061c16f1d0c5c6ccb4fcaa4a6722c10a6124ee600f3"
+          },
+          {
+            "path": "assets/missionary/christ-teaches-apostles-home-likeness-20260914-hand-repair-v2-1100.webp",
+            "role": "derivative",
+            "format": "WEBP",
+            "sha256": "a86485e0096d916cbe6aeed872589da516bf2665d496cf93e5f1231f080e6007",
+            "pixel_sha256": "90f24903bf6eb21856702739c7f9cd61f99329fbbb890aed0b6b2ab9b3446931",
+            "bytes": 115896,
+            "dimensions": [
+              1100,
+              619
+            ],
+            "mode": "RGB",
+            "source_sha256": "b9d4a70895f0739f71bb8061c16f1d0c5c6ccb4fcaa4a6722c10a6124ee600f3"
+          },
+          {
+            "path": "assets/missionary/christ-teaches-apostles-home-likeness-20260914-hand-repair-v2-900.webp",
+            "role": "derivative",
+            "format": "WEBP",
+            "sha256": "9523ad5e449ffd132583321b4c384bfc1f5e5a52f95340876d5eac33b8cb1051",
+            "pixel_sha256": "e1f7d651888ce1839abce878638e14e1c571bf4c94e9579c765362ccc721a551",
+            "bytes": 118830,
+            "dimensions": [
+              900,
+              507
+            ],
+            "mode": "RGB",
+            "source_sha256": "b9d4a70895f0739f71bb8061c16f1d0c5c6ccb4fcaa4a6722c10a6124ee600f3"
+          }
+        ],
+        "evidence": [
+          {
+            "path": "docs/artwork-correction-evidence/mission-hand-owner-scope.json",
+            "sha256": "1e9aed3730b5bbe4a25c9dea68de209b7b391de026c0fabf211a5d4f83a850d8",
+            "actual_actor": "Merlin worker",
+            "stage": "owner_scope"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/mission-hand-donor-preflight-jeff.json",
+            "sha256": "2df53905772794880171101a589ba61bbf12a2511c8700d58c4d38b747001958",
+            "actual_actor": "Jeff",
+            "stage": "donor_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/mission-hand-donor-preflight-owner.json",
+            "sha256": "def7056fb5a2555adf58a83347326c5cfd0288209d2f0cc0b4e87030bff8e5f7",
+            "actual_actor": "Wyatt Fowler (site owner)",
+            "stage": "donor_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/mission-hand-donor-result.json",
+            "sha256": "0671c9271c4bca29c40cce97a54d758228cb32bee2942984f2f90bf8d79d8f30",
+            "actual_actor": "Merlin worker",
+            "stage": "donor_result"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/mission-hand-composite-preflight-jeff.json",
+            "sha256": "caf13802b7aa1e10779044d72fc5312c3d05d2557fd65755380d99023d8de411",
+            "actual_actor": "Jeff",
+            "stage": "composite_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/mission-hand-composite-preflight-owner.json",
+            "sha256": "b868d7638a20d9ba35bf5f2cff473d92a516e6d94a66a35fdd699ebabda3b4eb",
+            "actual_actor": "Wyatt Fowler (site owner)",
+            "stage": "composite_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/mission-hand-composite-result.json",
+            "sha256": "7bf8180a3867d722d7c29ea356b2983bfa77382e954fe1bfd08c8e8f7d46ba55",
+            "actual_actor": "Merlin worker",
+            "stage": "composite_result"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/mission-hand-body-finished-executor.json",
+            "sha256": "5ea07c959997c5a35efa73a291ce4a73c1f209bce037a91154aaa1240e35f8d2",
+            "actual_actor": "Merlin worker",
+            "stage": "body_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/mission-hand-body-finished-jeff.json",
+            "sha256": "2d4afea408ef584ec22695e0680277e6d704fe509ace70aa434cad48bc5815a3",
+            "actual_actor": "Jeff",
+            "stage": "body_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/mission-hand-body-finished-owner.json",
+            "sha256": "9c28e8f91512b115918b7fb2f4a22139a68d83ff89fb0f7893b283a7f684beaf",
+            "actual_actor": "Wyatt Fowler (site owner)",
+            "stage": "body_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/mission-hand-source-finished-executor.json",
+            "sha256": "509510a1468ecc302cb0296800b4942aa76bbe8c0c8773c8a50eb636926c28d1",
+            "actual_actor": "Merlin worker",
+            "stage": "source_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/mission-hand-source-finished-jeff.json",
+            "sha256": "0368c84732a2358081d53f3051e29eebafcfcd7330caa5be35798a79d1335ccc",
+            "actual_actor": "Jeff",
+            "stage": "source_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/mission-hand-source-finished-owner.json",
+            "sha256": "fe2a1e6144d16e251f6b63bb3e15e840ba6b3bb298824c807d6f31030604a2e5",
+            "actual_actor": "Wyatt Fowler (site owner)",
+            "stage": "source_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/mission-hand-encoding-preflight-executor.json",
+            "sha256": "fa65390b1a27f9df8168b3ee3611dbc8f3f56cf72f11fec01cdd5a9fc857752a",
+            "actual_actor": "Merlin worker",
+            "stage": "encoding_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/mission-hand-encoding-preflight-jeff.json",
+            "sha256": "989a321bd1737ab1d762be44d3c1b0f71282cd978d6b866ac6f8c14175682ab9",
+            "actual_actor": "Jeff",
+            "stage": "encoding_preflight"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/mission-hand-encoding-result.json",
+            "sha256": "75f87990ac4df48077e323fa567a67f5d892cd1ba0ad5a373f3e5b18f6d4a6b7",
+            "actual_actor": "Merlin worker",
+            "stage": "encoding_result"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/mission-hand-delivery-finished-executor.json",
+            "sha256": "88544f5bde2f18f18ac29e43a04babd01897c098bc58261a705b3568b055ec67",
+            "actual_actor": "Merlin worker",
+            "stage": "delivery_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/mission-hand-delivery-finished-jeff.json",
+            "sha256": "342febfb62345d32a090223de79b06344b2b4a1571e99b5e647917d580c0d057",
+            "actual_actor": "Jeff",
+            "stage": "delivery_finished"
+          },
+          {
+            "path": "docs/artwork-correction-evidence/mission-hand-delivery-finished-owner.json",
+            "sha256": "3e6d7454007c08ed4b09c854da22e65a37df5bb628664a0150676ea7b663a876",
+            "actual_actor": "Wyatt Fowler (site owner)",
+            "stage": "delivery_finished"
+          }
+        ]
       }
     ],
     "current_scene_records": {
@@ -2754,7 +3008,8 @@
       "SITE12": "SITE12",
       "SITE11": "SITE11",
       "SITE02": "SITE02_IDENTITY",
-      "SITE05": "SITE05_IDENTITY"
+      "SITE05": "SITE05_IDENTITY",
+      "MISSION-HAND": "MISSION-HAND"
     }
   },
   "owner_requirement_closure": {

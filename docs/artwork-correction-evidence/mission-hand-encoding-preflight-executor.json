@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "mission-hand-encoding-preflight-executor",
+  "family": "MISSION-HAND",
+  "stage": "encoding_preflight",
+  "actual_actor": "Merlin worker",
+  "verdict": "CONCUR",
+  "withdrawn": false,
+  "source_report_sha256": "3e4dfbde2e6ca8977fd6e1eee0299479b66c780cb004e11bbcda390f9a34cfd3",
+  "source_recorded_at": "2026-10-23T20:40:00Z",
+  "normalized_at": "2026-10-23T21:20:00Z",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "3e4dfbde2e6ca8977fd6e1eee0299479b66c780cb004e11bbcda390f9a34cfd3",
+  "findings": "Authored the encoding specification bound here: derivatives come only from the approved composite, Pillow libwebp method 6, quality matched per rendition by re-encode size bracketing against the original rendition bytes, with an unchanged-original control as the containment floor. The 900 rendition derivation (Lanczos downscale, quality 81 by control bracketing, 118,834 bytes inside the site 120,000-byte budget) follows the same specification.",
+  "pixels_inspected": true,
+  "limits": "Specification authorship; independent concurrence is recorded separately."
+}

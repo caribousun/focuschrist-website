@@ -30,6 +30,11 @@ class TimelineImportTests(unittest.TestCase):
             if name=='art-gallery.json':
                 edits=[data+b' ',data.replace(b'"version": 1',b'"version": 2',1),data.replace(b'/timeline.html',b'/unknown.html',1),data.replace(b'"artworks": [',b'"artworks": [null,',1)]
                 restored_json=json.loads(restored);current_json=json.loads(data)
+                taught=[a for a in current_json['artworks'] if a.get('id')=='art-5e9eaab4f27d']
+                self.assertEqual(len(taught),1)
+                prior=[a for a in restored_json['artworks'] if a.get('title')==taught[0]['title']]
+                self.assertEqual(len(prior),1)
+                current_json['artworks'][current_json['artworks'].index(taught[0])]=prior[0]
                 self.assertEqual(current_json['artworks'],restored_json['artworks'])
                 self.assertEqual(current_json['stats'],restored_json['stats'])
                 self.assertEqual([p for p in current_json['pages'] if p!='/timelines/world-and-scripture-timeline.html'],restored_json['pages'])
@@ -45,6 +50,9 @@ class TimelineImportTests(unittest.TestCase):
         route='/timelines/world-and-scripture-timeline.html'
         self.assertEqual([p for p in current['pages'] if p!=route],prior['pages'])
         records=[copy.deepcopy(r) for r in current['records'] if r.get('url')!=route]
+        gallery=[r for r in records if 'art-5e9eaab4f27d' in r.get('url','')]
+        self.assertEqual(len(gallery),1);gallery[0]['url']=gallery[0]['url'].replace('art-5e9eaab4f27d','art-3559c7c6b5f8')
+        gallery[0]['thumbnail']=gallery[0]['thumbnail'].replace('christ-teaches-apostles-home-likeness-20260914-hand-repair-v2-1100.webp','christ-teaches-apostles-home-likeness-20260914-1100.webp')
         handcart=next(r for r in records if r.get('url')=='/timelines/willie-and-martin-handcart-map.html')
         handcart['text']=handcart['text'].replace('dates. Continue Two companies','dates. Continue below Two companies',1)
         self.assertEqual(records,prior['records'])

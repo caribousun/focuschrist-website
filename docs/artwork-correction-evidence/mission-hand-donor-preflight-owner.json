@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "mission-hand-donor-preflight-owner",
+  "family": "MISSION-HAND",
+  "stage": "donor_preflight",
+  "actual_actor": "Wyatt Fowler (site owner)",
+  "verdict": "CONCUR",
+  "withdrawn": false,
+  "source_report_sha256": "47506ac438b3033eab874b43430eeccce3bf7f25ece0418bcd68936f4c37242b",
+  "source_recorded_at": "2026-10-23T20:07:00Z",
+  "normalized_at": "2026-10-23T21:20:00Z",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "bdf2d4de85307cc868fe190508c49cc243ee21b853c863554457d9d4f7288667",
+  "findings": "The owner directed another attempt on 2026-10-23 under the revised three gates recorded in the lesson record bound here (native-resolution separation first, likeness second, scans as backstop; smear and diffusion fixes forbidden) expressly so the team would learn from candidates 1-7. The donor specification implements that direction.",
+  "pixels_inspected": true,
+  "limits": "Owner direction and gate-setting, not a pixel review of the donor."
+}

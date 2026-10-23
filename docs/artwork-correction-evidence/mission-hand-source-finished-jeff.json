@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "mission-hand-source-finished-jeff",
+  "family": "MISSION-HAND",
+  "stage": "source_finished",
+  "actual_actor": "Jeff",
+  "verdict": "CONCUR",
+  "withdrawn": false,
+  "source_report_sha256": "30fc93d8eb97ec66fdb2dcdedc89b8a3faf1699a23af5ce0783c4ee4c760d454",
+  "source_recorded_at": "2026-10-23T20:20:00Z",
+  "normalized_at": "2026-10-23T21:20:00Z",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "b9d4a70895f0739f71bb8061c16f1d0c5c6ccb4fcaa4a6722c10a6124ee600f3",
+  "findings": "Review J-2026-10-23-017 concurs on the exact finished source sha256 bound here.",
+  "pixels_inspected": true,
+  "limits": "Concurrence covers the finished source pixels."
+}

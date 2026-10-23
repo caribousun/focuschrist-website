@@ -12,7 +12,7 @@ def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 CORRECTION_SCENES={'household-gift-harmony-1828': 'SITE10', 'journey-to-harmony-1827': 'SITE07_EXPRESSION', 'care-after-loss-1828': 'SITE09', 'emma-family-letter-1838': 'SITE12', 'emma-early-scribe-1828': 'SITE08','emma-prayer-during-arrest-1830': 'SITE11'}
 CORRECTION_RECORDS={'SITE07', 'SITE08', 'SITE11', 'SITE01_IDENTITY', 'SITE10', 'SITE05_IDENTITY', 'SITE01', 'SITE12', 'SITE09', 'SITE07_EXPRESSION', 'SITE02_IDENTITY'}
 CURRENT_SCENES={'SITE01': 'SITE01_IDENTITY', 'SITE07': 'SITE07_EXPRESSION', 'SITE08': 'SITE08', 'SITE09': 'SITE09', 'SITE10': 'SITE10', 'SITE12': 'SITE12', 'SITE11': 'SITE11', 'SITE02': 'SITE02_IDENTITY', 'SITE05': 'SITE05_IDENTITY'}
-CURRENT_BINDING='42ba0b7b149470f37c30c7677946b43695cf8f991f6158f7e97fe6b09b4f2691'
+CURRENT_BINDING='f99cafef97cb2ab349732444ad6e23d52387471cec849575822b82e4c8be4140'
 SITE10_BINDING='6f9510c88845fbef288289a33beab1a841f414ea65ab1212577c02e284d27a75'
 def current_corrections():
  record=json.loads((ROOT/'docs/artwork-correction-reviews.json').read_text(encoding='utf-8'))

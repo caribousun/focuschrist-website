@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "mission-hand-body-finished-executor",
+  "family": "MISSION-HAND",
+  "stage": "body_finished",
+  "actual_actor": "Merlin worker",
+  "verdict": "CONCUR",
+  "withdrawn": false,
+  "source_report_sha256": "cb3707615ef329d248be3172fc305ccc851ede841523c03424455b579e0969cb",
+  "source_recorded_at": "2026-10-23T20:24:00Z",
+  "normalized_at": "2026-10-23T21:20:00Z",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "b9d4a70895f0739f71bb8061c16f1d0c5c6ccb4fcaa4a6722c10a6124ee600f3",
+  "findings": "Producer finished-body record in CHECKPOINT-candidate8: likeness metrics match the figure (deep-shadow skin share 24.2 percent versus 23.6 percent in the original; median skin tone within two points per channel); the disclosed difference from the original gesture is slightly longer, more spread fingers, which was put in front of the owner before approval.",
+  "pixels_inspected": true,
+  "limits": "Producer record; independent and owner concurrences are recorded separately."
+}

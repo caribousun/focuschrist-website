@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "id": "mission-hand-encoding-result",
+  "family": "MISSION-HAND",
+  "stage": "encoding_result",
+  "actual_actor": "Merlin worker",
+  "verdict": "RECORDED",
+  "withdrawn": false,
+  "source_report_sha256": "2e38db7fd708a8a15c06ce49822aef01fe2e0a0b97755d6facb1a950600ed98b",
+  "source_recorded_at": "2026-10-23T21:05:00Z",
+  "normalized_at": "2026-10-23T21:20:00Z",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "2e38db7fd708a8a15c06ce49822aef01fe2e0a0b97755d6facb1a950600ed98b",
+  "findings": "Three WEBP derivatives produced per the bound specification and recorded in the encoding execution record bound here, with per-rendition bytes, sha256, and containment measurements against the unchanged-original control floor.",
+  "pixels_inspected": true,
+  "limits": "Executor execution record; independent concurrence is recorded at the delivery stage.",
+  "spec_sha256": "3e4dfbde2e6ca8977fd6e1eee0299479b66c780cb004e11bbcda390f9a34cfd3"
+}

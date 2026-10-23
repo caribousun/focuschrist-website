@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "mission-hand-donor-preflight-jeff",
+  "family": "MISSION-HAND",
+  "stage": "donor_preflight",
+  "actual_actor": "Jeff",
+  "verdict": "CONCUR",
+  "withdrawn": false,
+  "source_report_sha256": "fb7b5466d1a2f9013f6531ca0ac1b3bce4c53cea164685bb09604350a2412721",
+  "source_recorded_at": "2026-10-23T19:52:00Z",
+  "normalized_at": "2026-10-23T21:20:00Z",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "bdf2d4de85307cc868fe190508c49cc243ee21b853c863554457d9d4f7288667",
+  "findings": "In review J-2026-10-23-016 the independent reviewer applied the revised gates to candidate 7 and concurred that the next donor must be the figure own smooth, youthful hand with traced native-resolution separation between every digit pair. The donor specification bound here is that requirement set, and it is the brief that was executed for candidate 8.",
+  "pixels_inspected": true,
+  "limits": "Concurrence is on the donor brief and gate set, recorded before candidate 8 was generated; the reviewer did not pre-inspect the candidate 8 donor file itself."
+}

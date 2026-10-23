@@ -15,7 +15,8 @@ class MotionBindingTests(unittest.TestCase):
             current=(gate.ROOT/name).read_bytes()
             from world_companion_successor import restore as restore_world
             from missionary_close_successor import restore as restore_close
-            self.assertEqual(gate.sha(restore_world(name,settings.restore(name,restore_close(name,current)))),row['after_sha256'],name)
+            from commission_hand_successor import restore as restore_hand
+            self.assertEqual(gate.sha(restore_world(name,settings.restore(name,restore_close(name,restore_hand(name,current))))),row['after_sha256'],name)
             self.assertEqual(gate.sha(gate.restore(name,current)),row['before_sha256'],name)
 
     def test_exact_successors_and_unknown_input_rejected(self):
