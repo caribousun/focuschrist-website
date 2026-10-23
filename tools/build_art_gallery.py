@@ -124,7 +124,13 @@ def build():
         from artwork_display_delivery import inverse
         # Display-only Home sizes do not replace the gallery's full original.
         name = page.lstrip('/')
-        doc.feed(inverse(name, (ROOT / name).read_bytes()).decode('utf-8'))
+        if name == 'missionary.html':
+            # The commission hand successor is a reviewed content delivery
+            # change, not a presentation layer: the gallery records the
+            # renditions the page actually serves, so parse it as served.
+            doc.feed((ROOT / name).read_bytes().decode('utf-8'))
+        else:
+            doc.feed(inverse(name, (ROOT / name).read_bytes()).decode('utf-8'))
         nodes = list(doc.root.walk())
         page_title = text(first(doc.root, lambda n: n.tag == 'h1')) or text(first(doc.root, lambda n: n.tag == 'title')).split('|')[0].strip()
         records = {(key, n.attrs[key]): n for n in nodes for key in
