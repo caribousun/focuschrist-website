@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "mission-hand-composite-preflight-jeff",
+  "family": "MISSION-HAND",
+  "stage": "composite_preflight",
+  "actual_actor": "Jeff",
+  "verdict": "CONCUR",
+  "withdrawn": false,
+  "source_report_sha256": "fb7b5466d1a2f9013f6531ca0ac1b3bce4c53cea164685bb09604350a2412721",
+  "source_recorded_at": "2026-10-23T19:52:00Z",
+  "normalized_at": "2026-10-23T21:20:00Z",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "3d26edfa68fe1663c540f60b1ecf292d379f1f6704a31d530127b1603e15a2ab",
+  "findings": "Across reviews J-2026-10-23-013 through J-2026-10-23-016 the independent reviewer enforced the standing bounded-composite method bound here (feathered mask over the crop box only, no pixel patching or tonal edits after compositing) on candidates 4-7 before candidate 8 was composited.",
+  "pixels_inspected": true,
+  "limits": "Method concurrence from the reviewers candidate 4-7 record; candidate 8 itself is covered by the composite result and finished receipts."
+}

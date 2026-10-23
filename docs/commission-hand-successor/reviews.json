@@ -1,0 +1,92 @@
+{
+  "layer": "commission_hand_successor",
+  "registration_review": {
+    "date": "2026-10-23T21:31:57Z",
+    "decision": "CONCUR",
+    "finished_behavior": true,
+    "finished_pixels": false,
+    "review_id": "J-2026-10-23-020",
+    "reviewer": "Jeff",
+    "scope": "registration-source",
+    "status": "CONCUR"
+  },
+  "rendered_evidence": {
+    "captures": [
+      {
+        "height": 800,
+        "media": "desktop 1280x800",
+        "path": "docs/commission-hand-successor/rendered/index-mission-card-desktop.png.b64",
+        "screen": "index-mission-card-desktop",
+        "sha256": "04ae78b6e42251d6b61c471dd6ab8aa60e69663ba57135a8048041fbb90df55c",
+        "width": 1280
+      },
+      {
+        "height": 844,
+        "media": "phone 390x844",
+        "path": "docs/commission-hand-successor/rendered/index-mission-card-phone.png.b64",
+        "screen": "index-mission-card-phone",
+        "sha256": "ad82a93398cc693f69717b79ad0ded5f4953c4603a715d516eac9348575da394",
+        "width": 390
+      },
+      {
+        "height": 800,
+        "media": "desktop 1280x800",
+        "path": "docs/commission-hand-successor/rendered/missionary-detail-desktop.png.b64",
+        "screen": "missionary-detail-desktop",
+        "sha256": "6cbdb6d739318d0da6481e848aed174bc8ccda57c69f85e7d28bbf269d760ddd",
+        "width": 1280
+      },
+      {
+        "height": 844,
+        "media": "phone 390x844",
+        "path": "docs/commission-hand-successor/rendered/missionary-detail-phone.png.b64",
+        "screen": "missionary-detail-phone",
+        "sha256": "bbb99ded713897337ccf25c87e81c4b90c8679ad734e7e0ee0dacedeaf3fcbab",
+        "width": 390
+      },
+      {
+        "height": 800,
+        "media": "desktop 1280x800",
+        "path": "docs/commission-hand-successor/rendered/missionary-figure-desktop.png.b64",
+        "screen": "missionary-figure-desktop",
+        "sha256": "193936eca3187ba61d717fa1d6f26f3c9595f49101c8f5b343e4cbb11b1078b2",
+        "width": 1280
+      },
+      {
+        "height": 844,
+        "media": "phone 390x844",
+        "path": "docs/commission-hand-successor/rendered/missionary-figure-phone.png.b64",
+        "screen": "missionary-figure-phone",
+        "sha256": "6dd65a3b6e84072209b839c465150d2ce93567bb62cf55e38dd91de05b3b39c0",
+        "width": 390
+      }
+    ],
+    "collected_by": "Merlin worker",
+    "details_js_sha256": "55bb051609d1bb1b1793eb44539d812e71b1c62f789617c0f5b36c1b1a47f17a",
+    "observations_sha256": "7481e9a14fda38f820a20d31e09dd173452c57571ced8bb447bea5a4f4a5caba",
+    "pages_sha256": {
+      "index.html": "643f45d05c5e8fb549be4761d52cf08ff7faccdb1dc01547d98b87f3ab819949",
+      "missionary.html": "865336671f5dfebe8e004e19c57b1436fb46c90d79216a264a7ccee7ef454041"
+    },
+    "served_git_head": "d67d41c13fb76c513a327d4ecf68042c0ca03479"
+  },
+  "rendered_review": {
+    "capture_hashes": {
+      "index-mission-card-desktop": "04ae78b6e42251d6b61c471dd6ab8aa60e69663ba57135a8048041fbb90df55c",
+      "index-mission-card-phone": "ad82a93398cc693f69717b79ad0ded5f4953c4603a715d516eac9348575da394",
+      "missionary-detail-desktop": "6cbdb6d739318d0da6481e848aed174bc8ccda57c69f85e7d28bbf269d760ddd",
+      "missionary-detail-phone": "bbb99ded713897337ccf25c87e81c4b90c8679ad734e7e0ee0dacedeaf3fcbab",
+      "missionary-figure-desktop": "193936eca3187ba61d717fa1d6f26f3c9595f49101c8f5b343e4cbb11b1078b2",
+      "missionary-figure-phone": "6dd65a3b6e84072209b839c465150d2ce93567bb62cf55e38dd91de05b3b39c0"
+    },
+    "date": "2026-10-23T21:31:57Z",
+    "decision": "CONCUR",
+    "finished_behavior": true,
+    "finished_pixels": true,
+    "review_id": "J-2026-10-23-021",
+    "reviewer": "Jeff",
+    "scope": "rendered-review",
+    "status": "CONCUR"
+  },
+  "schema": 1
+}

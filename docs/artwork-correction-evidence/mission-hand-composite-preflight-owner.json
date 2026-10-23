@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "mission-hand-composite-preflight-owner",
+  "family": "MISSION-HAND",
+  "stage": "composite_preflight",
+  "actual_actor": "Wyatt Fowler (site owner)",
+  "verdict": "CONCUR",
+  "withdrawn": false,
+  "source_report_sha256": "ca951a85321754e3ac11d5c055224961d3e577c810136ac2af8fa88ec5e3005c",
+  "source_recorded_at": "2026-10-23T19:45:00Z",
+  "normalized_at": "2026-10-23T21:20:00Z",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "3d26edfa68fe1663c540f60b1ecf292d379f1f6704a31d530127b1603e15a2ab",
+  "findings": "The owner hard-rejected candidate 5 on 2026-10-23 because it looked erased rather than rebuilt, which set the operative rule the bound specification encodes: no smear, erasure, or diffusion fixes; the fingers must be genuinely rebuilt inside the bounded crop.",
+  "pixels_inspected": true,
+  "limits": "Owner standard-setting from the candidate 5 rejection; not a review of the candidate 8 composite."
+}

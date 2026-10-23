@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "mission-hand-delivery-finished-jeff",
+  "family": "MISSION-HAND",
+  "stage": "delivery_finished",
+  "actual_actor": "Jeff",
+  "verdict": "CONCUR",
+  "withdrawn": false,
+  "source_report_sha256": "908cd238bb12c00ed635279df9eb7f5c2e0ba9fa4c096cca4278e41b68ae6fe0",
+  "source_recorded_at": "2026-10-23T21:21:05Z",
+  "normalized_at": "2026-10-23T21:20:00Z",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "998c7992e66576bffbc23d87a8842b54ee46e8489d9d7e047ea1976f098f52a7",
+  "findings": "The independent reviewer first returned DO NOT CONCUR on this stage (J-2026-10-23-018) because a plain downscale merged the ring and little fingers at 900 width. In re-review J-2026-10-23-019, after the disclosed channel-preserving re-derivation of the 900 rendition recorded in the encoding result, he recomputed the delivered files hashes himself and inspected the raised hand at native resolution in the full and cured 900 renditions before concurring on the delivery set bound here.",
+  "pixels_inspected": true,
+  "limits": "Per the limits stated in J-2026-10-23-019."
+}

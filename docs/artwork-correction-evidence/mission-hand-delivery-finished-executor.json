@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "mission-hand-delivery-finished-executor",
+  "family": "MISSION-HAND",
+  "stage": "delivery_finished",
+  "actual_actor": "Merlin worker",
+  "verdict": "CONCUR",
+  "withdrawn": false,
+  "source_report_sha256": "2e38db7fd708a8a15c06ce49822aef01fe2e0a0b97755d6facb1a950600ed98b",
+  "source_recorded_at": "2026-10-23T21:05:00Z",
+  "normalized_at": "2026-10-23T21:20:00Z",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "998c7992e66576bffbc23d87a8842b54ee46e8489d9d7e047ea1976f098f52a7",
+  "findings": "Delivered set: the source PNG byte-identical to the approved composite plus the three WEBP derivatives in the asset list bound as this stage subject. The 900 derivative carries the disclosed channel-preserving derivation recorded in the encoding result (the plain downscale merged the ring and little fingers at 900 width). Every consumer was re-pointed to the corrected renditions: the missionary page figure and detail record, the art gallery record (full view and thumbnail), the home page mission card, the regenerated search index, and the art-study review record.",
+  "pixels_inspected": true,
+  "limits": "Producer delivery record; independent and owner concurrences are recorded separately."
+}

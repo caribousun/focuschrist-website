@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "id": "mission-hand-body-finished-owner",
+  "family": "MISSION-HAND",
+  "stage": "body_finished",
+  "actual_actor": "Wyatt Fowler (site owner)",
+  "verdict": "CONCUR",
+  "withdrawn": false,
+  "source_report_sha256": "cb3707615ef329d248be3172fc305ccc851ede841523c03424455b579e0969cb",
+  "source_recorded_at": "2026-10-23T20:30:00Z",
+  "normalized_at": "2026-10-23T21:20:00Z",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "b9d4a70895f0739f71bb8061c16f1d0c5c6ccb4fcaa4a6722c10a6124ee600f3",
+  "findings": "The owner approved candidate 8 on 2026-10-23 with the longer, more spread finger disclosure in front of him and directed that it be published.",
+  "pixels_inspected": true,
+  "limits": "Owner acceptance of the finished picture; rendition-level inspection is recorded by the executor and independent receipts."
+}

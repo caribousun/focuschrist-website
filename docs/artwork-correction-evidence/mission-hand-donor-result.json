@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "id": "mission-hand-donor-result",
+  "family": "MISSION-HAND",
+  "stage": "donor_result",
+  "actual_actor": "Merlin worker",
+  "verdict": "RECORDED",
+  "withdrawn": false,
+  "source_report_sha256": "be505c550310c93829a921f82c8a319c7432b645f8453f6eae797e37d1f49420",
+  "source_recorded_at": "2026-10-23T20:16:00Z",
+  "normalized_at": "2026-10-23T21:20:00Z",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "8bbe76f34264aafc19bcdc43ebec04d07460cabac7829689f3ee95e0facfa161",
+  "findings": "Donor variant A was generated from the original hand crop under the bound specification (generation record bound as the source). Variant B was rejected by the producer at Gate 1 before compositing because a test composite showed a silvery-blue line in the inter-finger gaps; it was never composited for review and is recorded as an excluded ancestor.",
+  "pixels_inspected": true,
+  "limits": "Executor production record; independent finished-pixel concurrence is recorded at the finished stages.",
+  "spec_sha256": "bdf2d4de85307cc868fe190508c49cc243ee21b853c863554457d9d4f7288667"
+}

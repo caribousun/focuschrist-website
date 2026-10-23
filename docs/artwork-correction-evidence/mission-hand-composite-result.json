@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "id": "mission-hand-composite-result",
+  "family": "MISSION-HAND",
+  "stage": "composite_result",
+  "actual_actor": "Merlin worker",
+  "verdict": "RECORDED",
+  "withdrawn": false,
+  "source_report_sha256": "cb3707615ef329d248be3172fc305ccc851ede841523c03424455b579e0969cb",
+  "source_recorded_at": "2026-10-23T20:24:00Z",
+  "normalized_at": "2026-10-23T21:20:00Z",
+  "evidence_class": "direct_saved_record",
+  "subject_sha256": "b9d4a70895f0739f71bb8061c16f1d0c5c6ccb4fcaa4a6722c10a6124ee600f3",
+  "findings": "Masked composite produced per the bound specification from the frozen original and donor variant A. Gate 1 was traced on the full composite at native resolution: continuous robe channels between all four adjacent digit pairs, the little finger clearly shortest with its own fingertip and nail bed. Changed pixels 115,121 with zero outside the crop box.",
+  "pixels_inspected": true,
+  "limits": "Executor measurement record; independent concurrence is recorded at the finished stages.",
+  "spec_sha256": "3d26edfa68fe1663c540f60b1ecf292d379f1f6704a31d530127b1603e15a2ab",
+  "protected_pixel_checks": {
+    "changed_pixels": 115121,
+    "outside_changed_pixels": 0,
+    "protected_changed_pixels": 0
+  }
+}

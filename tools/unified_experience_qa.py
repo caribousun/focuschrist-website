@@ -591,7 +591,7 @@ def main() -> int:
             "assets/missionary/early-missionaries-liverpool-1400.webp",
             "assets/missionary/sister-missionaries-teaching-1400.webp",
             "assets/missionary/service-missionaries-food-pantry-1400.webp",
-            "assets/missionary/christ-teaches-apostles-home-likeness-20260914-full.webp",
+            "assets/missionary/christ-teaches-apostles-home-likeness-20260914-hand-repair-v2-full.webp",
         ),
     }
     for relative, assets in supporting_art_links.items():
@@ -610,8 +610,8 @@ def main() -> int:
         "assets/missionary/sister-missionaries-teaching-1400.webp",
         "assets/missionary/service-missionaries-food-pantry-800.webp",
         "assets/missionary/service-missionaries-food-pantry-1400.webp",
-        "assets/missionary/christ-teaches-apostles-home-likeness-20260914-900.webp",
-        "assets/missionary/christ-teaches-apostles-home-likeness-20260914-1100.webp",
+        "assets/missionary/christ-teaches-apostles-home-likeness-20260914-hand-repair-v2-900.webp",
+        "assets/missionary/christ-teaches-apostles-home-likeness-20260914-hand-repair-v2-1100.webp",
     )
     for asset in missionary_art_variants:
         path = ROOT / asset
