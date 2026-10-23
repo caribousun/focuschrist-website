@@ -20,7 +20,7 @@ MANIFEST = "docs/commission-hand-successor/manifest.json"
 REVIEWS = "docs/commission-hand-successor/reviews.json"
 RENDERED_DIR = "docs/commission-hand-successor/rendered"
 SOURCE_SHA = "d7fdbb0ec36ec5c318c58277eefe9301fd9e83076ec216e171fba64939527eb5"
-APPROVED_REVIEWS = None  # PENDING until Jeff's rendered review is pinned.
+APPROVED_REVIEWS = "4aecfe596e44f868416ce3ea7b2ce8f50cc80c8643f1154e74f8794fdbd48657"
 DETAILS_JS = "missionary-details.js"
 SCREENS = {
     "missionary-figure-desktop",

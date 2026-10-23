@@ -1,0 +1,150 @@
+{
+  "collector": "Merlin worker",
+  "method": "Playwright (Chromium headless) served the assembled candidate tree over local HTTP; phone is an emulated 390x844 touch viewport, not a physical phone.",
+  "assembly_note": "Captures were collected from the local assembly of the exact tree pushed as the pull request registration head; assembly and pushed tree were verified byte-identical by tree hash before the bookkeeping commit.",
+  "checks": "All 12 collector checks passed on desktop and phone: detail record image/full point at the corrected renditions, the corrected rendition file was requested over the network, the commission dialog opens and its image is the corrected 1100 rendition, and the home page mission card serves the corrected 1100 rendition.",
+  "cases": [
+    {
+      "viewport": "desktop",
+      "checks": [
+        {
+          "label": "detail record image is corrected 1100",
+          "pass": true,
+          "detail": "assets/missionary/christ-teaches-apostles-home-likeness-20260914-hand-repair-v2-1100.webp"
+        },
+        {
+          "label": "detail record full is corrected full",
+          "pass": true,
+          "detail": "assets/missionary/christ-teaches-apostles-home-likeness-20260914-hand-repair-v2-full.webp"
+        },
+        {
+          "label": "corrected rendition requested",
+          "pass": true,
+          "detail": "[\"http://127.0.0.1:8792/assets/missionary/christ-teaches-apostles-home-likeness-20260914-hand-repair-v2-1100.webp\"]"
+        },
+        {
+          "label": "commission dialog opens",
+          "pass": true,
+          "detail": ""
+        },
+        {
+          "label": "dialog image is corrected 1100",
+          "pass": true,
+          "detail": "assets/missionary/christ-teaches-apostles-home-likeness-20260914-hand-repair-v2-1100.webp"
+        },
+        {
+          "label": "home mission card is corrected 1100",
+          "pass": true,
+          "detail": "assets/missionary/christ-teaches-apostles-home-likeness-20260914-hand-repair-v2-1100.webp"
+        }
+      ],
+      "screenshots": [
+        {
+          "file": "missionary-figure-desktop.png",
+          "sha256": "193936eca3187ba61d717fa1d6f26f3c9595f49101c8f5b343e4cbb11b1078b2"
+        },
+        {
+          "file": "missionary-detail-desktop.png",
+          "sha256": "6cbdb6d739318d0da6481e848aed174bc8ccda57c69f85e7d28bbf269d760ddd"
+        },
+        {
+          "file": "index-mission-card-desktop.png",
+          "sha256": "04ae78b6e42251d6b61c471dd6ab8aa60e69663ba57135a8048041fbb90df55c"
+        }
+      ],
+      "console_errors": [
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)"
+      ]
+    },
+    {
+      "viewport": "phone",
+      "checks": [
+        {
+          "label": "detail record image is corrected 1100",
+          "pass": true,
+          "detail": "assets/missionary/christ-teaches-apostles-home-likeness-20260914-hand-repair-v2-1100.webp"
+        },
+        {
+          "label": "detail record full is corrected full",
+          "pass": true,
+          "detail": "assets/missionary/christ-teaches-apostles-home-likeness-20260914-hand-repair-v2-full.webp"
+        },
+        {
+          "label": "corrected rendition requested",
+          "pass": true,
+          "detail": "[\"http://127.0.0.1:8792/assets/missionary/christ-teaches-apostles-home-likeness-20260914-hand-repair-v2-900.webp\"]"
+        },
+        {
+          "label": "commission dialog opens",
+          "pass": true,
+          "detail": ""
+        },
+        {
+          "label": "dialog image is corrected 1100",
+          "pass": true,
+          "detail": "assets/missionary/christ-teaches-apostles-home-likeness-20260914-hand-repair-v2-1100.webp"
+        },
+        {
+          "label": "home mission card is corrected 1100",
+          "pass": true,
+          "detail": "assets/missionary/christ-teaches-apostles-home-likeness-20260914-hand-repair-v2-1100.webp"
+        }
+      ],
+      "screenshots": [
+        {
+          "file": "missionary-figure-phone.png",
+          "sha256": "6dd65a3b6e84072209b839c465150d2ce93567bb62cf55e38dd91de05b3b39c0"
+        },
+        {
+          "file": "missionary-detail-phone.png",
+          "sha256": "bbb99ded713897337ccf25c87e81c4b90c8679ad734e7e0ee0dacedeaf3fcbab"
+        },
+        {
+          "file": "index-mission-card-phone.png",
+          "sha256": "ad82a93398cc693f69717b79ad0ded5f4953c4603a715d516eac9348575da394"
+        }
+      ],
+      "console_errors": [
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)"
+      ]
+    }
+  ]
+}
