@@ -1,4 +1,4 @@
-"""Synthetic binding negatives plus real-candidate round trip; no claim of actual finished review approval."""
+"""Synthetic binding negatives plus real-candidate round trip; A002 split scopes, no claim of approval beyond recorded evidence."""
 import base64,copy,json,tempfile,unittest
 from pathlib import Path
 from unittest.mock import patch
@@ -7,14 +7,19 @@ REAL_BEFORE=g.BEFORE;REAL_AFTER=g.AFTER;REAL_SOURCE_SHA=g.SOURCE_SHA
 class MissionaryCloseSuccessorTests(unittest.TestCase):
  def setUp(self):
   self.temp=tempfile.TemporaryDirectory();self.addCleanup(self.temp.cleanup);self.root=Path(self.temp.name)
-  self.old=b'before page';self.new=b'before NEW page';self.proof=b'test-only Jeff proof'
+  self.old=b'before page';self.new=b'before NEW page';self.proof=b'test-only Jeff proof';self.script=b'test-only details script';self.capd=b'test-only desktop capture';self.capp=b'test-only phone capture';self.revproof=b'test-only rendered review proof'
   self.patch=patch.multiple(g,BEFORE=g.sha(self.old),AFTER=g.sha(self.new));self.patch.start();self.addCleanup(self.patch.stop)
   self.row={'schema':1,'page':g.PAGE,'before_sha256':g.sha(self.old),'after_sha256':g.sha(self.new),'spans':[{'start':7,'end':11,'previous_b64':'','current_b64':base64.b64encode(b'NEW ').decode()}]}
-  self.record={'source_sha256':g.canonical(self.row),'page_sha256':g.sha(self.new),'status':'FINISHED','required_reviewers':['Jeff'],'reviews':[{'reviewer':'Jeff','decision':'CONCUR','finished_pixels':True,'finished_behavior':True,'page_sha256':g.sha(self.new),'evidence':{'path':'proof.txt','sha256':g.sha(self.proof)}}]}
-  for name,raw in [(g.PAGE,self.new),('proof.txt',self.proof),(g.MANIFEST,json.dumps(self.row).encode()),(g.REVIEWS,json.dumps(self.record).encode())]:self.write(name,raw)
+  self.record={'source_sha256':g.canonical(self.row),'page_sha256':g.sha(self.new),'status':'FINISHED','required_reviewers':['Jeff'],
+   'registration_review':{'reviewer':'Jeff','review_id':'J-TEST-001','scope':'registration-source','decision':'CONCUR','finished_pixels':False,'finished_behavior':True,'page_sha256':g.sha(self.new),'evidence':{'path':'proof.txt','sha256':g.sha(self.proof)}},
+   'rendered_evidence':{'status':'COLLECTED','collected_by':'Merlin','page_sha256':g.sha(self.new),'served_git_head':'a'*40,'details_js_sha256':g.sha(self.script),'captures':[{'path':'cap-desktop.txt','sha256':g.sha(self.capd),'viewport':'desktop'},{'path':'cap-phone.txt','sha256':g.sha(self.capp),'viewport':'phone'}]},
+   'rendered_review':{'status':'FINISHED','reviewer':'Jeff','scope':'rendered','decision':'CONCUR','finished_pixels':True,'finished_behavior':True,'page_sha256':g.sha(self.new),'capture_sha256':[g.sha(self.capd),g.sha(self.capp)],'evidence':{'path':'revproof.txt','sha256':g.sha(self.revproof)}}}
+  for name,raw in [(g.PAGE,self.new),('proof.txt',self.proof),('missionary-details.js',self.script),('cap-desktop.txt',self.capd),('cap-phone.txt',self.capp),('revproof.txt',self.revproof),(g.MANIFEST,json.dumps(self.row).encode()),(g.REVIEWS,json.dumps(self.record).encode())]:self.write(name,raw)
   self.pins=patch.multiple(g,SOURCE_SHA=g.canonical(self.row),APPROVED_REVIEWS=g.canonical(self.record));self.pins.start();self.addCleanup(self.pins.stop)
  def write(self,name,raw):
   p=self.root/name;p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(raw)
+ def resealed(self,record):
+  self.write(g.REVIEWS,json.dumps(record).encode());return patch.object(g,'APPROVED_REVIEWS',g.canonical(record))
  def test_exact_round_trip_and_gate(self):
   self.assertEqual(g.restore(g.PAGE,self.new,self.root),self.old);self.assertEqual(g.advance(g.PAGE,self.old,self.root),self.new);self.assertEqual(g.check(self.root)['status'],'MISSIONARY_CLOSE_SUCCESSOR_EVIDENCE_PASS')
  def test_real_candidate_exact_round_trip(self):
@@ -68,30 +73,74 @@ class MissionaryCloseSuccessorTests(unittest.TestCase):
    p=self.root/name;raw=p.read_bytes();p.unlink()
    with self.assertRaises((ValueError,OSError)):g.check(self.root)
    self.write(name,raw)
- def test_pending_and_absent_review_blocks_real_gate(self):
+ def test_pending_pin_blocks_even_when_all_scopes_complete(self):
   with patch.object(g,'APPROVED_REVIEWS',None):
    with self.assertRaisesRegex(ValueError,'PENDING'):g.check(self.root)
- def test_real_candidate_reviews_stay_pending(self):
+ def test_jeff_record_accepted_but_gate_blocks_only_on_rendered(self):
+  for slot in ['rendered_evidence','rendered_review']:
+   record=copy.deepcopy(self.record)
+   if slot=='rendered_evidence':record['rendered_evidence']={'status':'PENDING','collected_by':None,'captures':[]}
+   else:record['rendered_review']={'status':'PENDING','reviewer':None,'decision':None,'finished_pixels':False,'finished_behavior':False}
+   with self.resealed(record):
+    with self.assertRaisesRegex(ValueError,'rendered review MISSING'):g.check(self.root)
+  record=copy.deepcopy(self.record);del record['rendered_review']
+  with self.resealed(record):
+   with self.assertRaisesRegex(ValueError,'rendered review MISSING'):g.check(self.root)
+ def test_real_candidate_record_truthful_and_blocks_only_on_rendered(self):
   record=json.loads((g.ROOT/g.REVIEWS).read_text(encoding='utf-8'))
-  self.assertEqual(record.get('status'),'PENDING');self.assertEqual(record.get('required_reviewers'),['Jeff']);self.assertEqual(record.get('reviews'),[])
+  self.assertEqual(record.get('status'),'PENDING');self.assertEqual(record.get('required_reviewers'),['Jeff'])
+  reg=record.get('registration_review')
+  self.assertEqual(reg.get('reviewer'),'Jeff');self.assertEqual(reg.get('review_id'),'J-2026-10-23-007');self.assertEqual(reg.get('scope'),'registration-source');self.assertEqual(reg.get('decision'),'CONCUR')
+  self.assertIs(reg.get('finished_pixels'),False);self.assertIs(reg.get('finished_behavior'),True)
+  self.assertEqual(reg.get('page_sha256'),REAL_AFTER)
+  item=reg['evidence'];self.assertEqual(g.sha((g.ROOT/item['path']).read_bytes()),item['sha256'])
+  self.assertEqual(record['rendered_evidence'].get('status'),'PENDING');self.assertEqual(record['rendered_evidence'].get('captures'),[])
+  self.assertEqual(record['rendered_review'].get('status'),'PENDING');self.assertIsNone(record['rendered_review'].get('reviewer'))
   source=(g.ROOT/'tools/missionary_close_successor.py').read_text(encoding='utf-8')
   self.assertIn('APPROVED_REVIEWS=None',source)
   manifest=json.loads((g.ROOT/g.MANIFEST).read_text(encoding='utf-8'))
   self.assertEqual(record.get('source_sha256'),g.canonical(manifest));self.assertIn(record.get('source_sha256'),source)
- def test_incorrect_reviewer_evidence_rejected_even_if_resealed(self):
-  for edit in ['pending','unfinished','wrongreviewer','extra','wrongpage','wronghash','badhash']:
+  with patch.multiple(g,BEFORE=REAL_BEFORE,AFTER=REAL_AFTER,SOURCE_SHA=REAL_SOURCE_SHA,APPROVED_REVIEWS=None):
+   with self.assertRaisesRegex(ValueError,'rendered review MISSING'):g.check(g.ROOT)
+ def test_tampered_jeff_record_rejected_even_if_resealed(self):
+  for edit in ['pending','fabricatedpixels','unfinished','wrongreviewer','wrongscope','wrongpage','wronghash','badhash']:
    row=copy.deepcopy(self.record)
-   if edit=='pending':row['reviews'][0]['decision']='PENDING'
-   if edit=='unfinished':row['reviews'][0]['finished_behavior']=False
-   if edit=='wrongreviewer':row['reviews'][0]['reviewer']='Albert'
-   if edit=='extra':row['reviews'].append(copy.deepcopy(row['reviews'][0]))
-   if edit=='wrongpage':row['reviews'][0]['page_sha256']='0'*64
+   if edit=='pending':row['registration_review']['decision']='PENDING'
+   if edit=='fabricatedpixels':row['registration_review']['finished_pixels']=True
+   if edit=='unfinished':row['registration_review']['finished_behavior']=False
+   if edit=='wrongreviewer':row['registration_review']['reviewer']='Albert'
+   if edit=='wrongscope':row['registration_review']['scope']='rendered'
+   if edit=='wrongpage':row['registration_review']['page_sha256']='0'*64
    if edit=='wronghash':row['page_sha256']='0'*64
-   if edit=='badhash':row['reviews'][0]['evidence']['sha256']='0'*64
-   self.write(g.REVIEWS,json.dumps(row).encode())
-   with patch.object(g,'APPROVED_REVIEWS',g.canonical(row)):
+   if edit=='badhash':row['registration_review']['evidence']['sha256']='0'*64
+   with self.resealed(row):
     with self.assertRaises(ValueError):g.check(self.root)
   self.write(g.REVIEWS,json.dumps(self.record).encode())
+ def test_fabricated_or_wrong_rendered_review_rejected(self):
+  row=copy.deepcopy(self.record);row['rendered_evidence']={'status':'PENDING','collected_by':None,'captures':[]}
+  with self.resealed(row):
+   with self.assertRaisesRegex(ValueError,'rendered review MISSING'):g.check(self.root)
+  for edit in ['wrongactor','unfinished','wrongscope','unbound','badhash']:
+   row=copy.deepcopy(self.record)
+   if edit=='wrongactor':row['rendered_review']['reviewer']='Merlin'
+   if edit=='unfinished':row['rendered_review']['decision']='PENDING'
+   if edit=='wrongscope':row['rendered_review']['scope']='registration-source'
+   if edit=='unbound':row['rendered_review']['capture_sha256']=['0'*64,'0'*64]
+   if edit=='badhash':row['rendered_review']['evidence']['sha256']='0'*64
+   with self.resealed(row):
+    with self.assertRaises(ValueError):g.check(self.root)
+  row=copy.deepcopy(self.record);row['rendered_evidence']['collected_by']='Jeff'
+  with self.resealed(row):
+   with self.assertRaises(ValueError):g.check(self.root)
+  row=copy.deepcopy(self.record);del row['rendered_evidence']['captures'][1]
+  with self.resealed(row):
+   with self.assertRaises(ValueError):g.check(self.root)
+  self.write(g.REVIEWS,json.dumps(self.record).encode())
+ def test_tampered_rendered_evidence_file_rejected(self):
+  raw=(self.root/'cap-desktop.txt').read_bytes();self.write('cap-desktop.txt',raw+b'x')
+  with self.assertRaisesRegex(ValueError,'Changed successor rendered evidence'):g.check(self.root)
+  self.write('cap-desktop.txt',raw)
+  self.assertEqual(g.check(self.root)['status'],'MISSIONARY_CLOSE_SUCCESSOR_EVIDENCE_PASS')
  def test_wrong_manifest_hashes_rejected_even_if_resealed(self):
   for field in ['before_sha256','after_sha256']:
    row=copy.deepcopy(self.row);row[field]='0'*64;self.write(g.MANIFEST,json.dumps(row).encode())
@@ -99,10 +148,11 @@ class MissionaryCloseSuccessorTests(unittest.TestCase):
     with self.assertRaises(ValueError):g.mapping(self.root)
   self.write(g.MANIFEST,json.dumps(self.row).encode())
  def test_evidence_path_escaping_repository_rejected(self):
-  row=copy.deepcopy(self.record);row['reviews'][0]['evidence']['path']='../outside.txt';self.write(g.REVIEWS,json.dumps(row).encode())
-  with patch.object(g,'APPROVED_REVIEWS',g.canonical(row)):
+  row=copy.deepcopy(self.record);row['registration_review']['evidence']['path']='../outside.txt'
+  with self.resealed(row):
    with self.assertRaisesRegex(ValueError,'outside'):g.check(self.root)
-  row=copy.deepcopy(self.record);row['reviews'][0]['evidence']['path']='/tmp/outside.txt';self.write(g.REVIEWS,json.dumps(row).encode())
-  with patch.object(g,'APPROVED_REVIEWS',g.canonical(row)):
+  row=copy.deepcopy(self.record);row['rendered_evidence']['captures'][0]['path']='/tmp/outside.txt'
+  with self.resealed(row):
    with self.assertRaisesRegex(ValueError,'outside'):g.check(self.root)
+  self.write(g.REVIEWS,json.dumps(self.record).encode())
 if __name__=='__main__':unittest.main()

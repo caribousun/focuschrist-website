@@ -12,23 +12,57 @@ the Mission detail dialog in `missionary.html` (PR 500).
   `SOURCE_SHA`. That pin records the exact candidate spans only. It is not
   review approval.
 
-## Review evidence status: PENDING
+## Review evidence model (A-2026-10-23-002 amended split)
 
-The required independent reviewer for this layer is Jeff, as designated by
-Wyatt for Merlin-carried work. `reviews.json` stays PENDING with no finished
-flags set and no review entry until Jeff's own finished review exists.
+Albert's A-2026-10-23-002 decision amended the evidence route for this layer.
+The gate now requires three separate, explicitly scoped, hash-bound records
+in `reviews.json`. No scope may stand in for another, and no blanket true
+flags may be set on a record beyond what its author actually verified.
 
-Jeff's finished review is a separate, receiver-authored step after this
-registration candidate. It must cover two scopes:
+1. **Jeff registration/source review (RECORDED).** Jeff is the independent
+   registration and source-behavior reviewer. His receiver-authored review
+   J-2026-10-23-007 (decision CONCUR) is recorded with
+   `finished_pixels: false`, exactly as he reported it: he verified the
+   diff, hashes, composition, tests, and the source-level wiring (13
+   triggers, one shared dialog, the pill wired to `dialog.close()`), and he
+   did NOT inspect rendered pixels. His exact review bytes are the evidence
+   file `jeff-registration-review-j007.json` in this directory, hash-bound
+   in `reviews.json`. Source wiring is not rendered behavior and is never
+   relabeled as such.
 
-1. The page change itself: source, placement, and wiring review bound to the
-   unchanged candidate page SHA above (the scope of Jeff's earlier
-   J-2026-10-22-006 review on the channel).
-2. A new finished registration review bound to the final code-file hashes,
-   the manifest canonical hash, the complete test results, and the page SHA,
-   including Jeff's own check of the actual Close behavior and pixels.
+2. **Merlin rendered evidence collection (PENDING).** Before merge, Merlin
+   renders the exact candidate bytes (served from the candidate Git head,
+   not current production) on a desktop viewport and a narrow phone
+   viewport (phone emulation is acceptable if honestly labeled), opens the
+   commission panel plus representative other shared-dialog triggers, and
+   verifies: Close visible and in bounds; ordinary pointer/touch activation
+   actually closes the dialog; keyboard operation and returned focus;
+   Continue Lesson and the X control retained; 13 trigger/content parity.
+   Actual screenshots and observed results, with viewport, browser, and
+   served Git head / page / script hashes, are recorded here and hash-bound
+   as `rendered_evidence`. Collection is evidence gathering, not approval:
+   Merlin is the executor and cannot approve his own rendered result.
 
-Only after that review says CONCUR may its evidence file be added here by its
-author, recorded in `reviews.json`, and pinned as `APPROVED_REVIEWS` in
-`tools/missionary_close_successor.py`. No evidence file for Jeff is authored
-as part of this registration candidate.
+3. **Independent rendered review (PENDING).** Jeff may independently
+   inspect the captured pixels and results and author a new review bound to
+   the exact capture/evidence hashes; browser ownership is not required for
+   image review, but actual visual inspection is. If Jeff cannot view the
+   images, Albert performs this finished-image/result review instead. The
+   record must name the actual reviewer (Jeff or Albert), scope `rendered`,
+   decision CONCUR, and `finished_pixels` / `finished_behavior` true, bound
+   to the capture hashes. Wyatt is not the required premerge tester.
+
+## Gate and pin status
+
+Status: PENDING. `reviews.json` records scope 1 as complete and scopes 2
+and 3 as explicitly unfilled, so `tools/missionary_close_successor.py`
+fails closed with exactly: "Missionary close successor rendered review
+MISSING". The gate also rejects absent, wrong-scope, wrong-actor,
+unfinished, or tampered records in any scope, even if resealed.
+
+This gate/schema change itself requires a fresh independent Jeff source and
+test review before any pin. Only after every scope is complete with actual
+reviews may the finished `reviews.json` be recorded and pinned as
+`APPROVED_REVIEWS` in `tools/missionary_close_successor.py`, followed by CI
+green at the same final reviewed head, an expected-head merge, deployment,
+and ordinary public byte and live desktop/phone verification.

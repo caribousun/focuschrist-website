@@ -8,7 +8,7 @@ AFTER='e5696e60b60faef5f456647ff2a153b939871acb895a6671d3d95a718d2ad55a'
 MANIFEST='docs/missionary-close-successor/manifest.json'
 REVIEWS='docs/missionary-close-successor/reviews.json'
 SOURCE_SHA='5def8841bee12decbe14be551c896794493dd944d8b15cf1fbb9d7f585400b41'  # Integrator pins exact candidate spans; this is not review approval.
-APPROVED_REVIEWS=None  # Only after actual finished Jeff review.
+APPROVED_REVIEWS=None  # Pin only after every A002 scope is complete and the gate change itself has a fresh Jeff review.
 def sha(raw):return hashlib.sha256(raw).hexdigest()
 def canonical(x):return sha(json.dumps(x,sort_keys=True,separators=(',',':'),ensure_ascii=False).encode())
 def require(ok,message):
@@ -56,19 +56,51 @@ def advance(name,raw,root=ROOT):
     for a,b,new in reversed(replacements):result=result[:a]+new+result[b:]
     require(sha(result)==row['after_sha256'],'Successor forward digest mismatch')
     return result
+RENDERED_MISSING='Missionary close successor rendered review MISSING'
+def _rendered(root,record,after):
+    """A002 split: rendered evidence collection and the independent rendered
+    review are separate scopes from Jeff's registration/source review.
+    Returns False only when a slot is absent or still unfilled; anything
+    present but wrong-scope, wrong-actor, unfinished, or tampered raises."""
+    ev=record.get('rendered_evidence')
+    if not isinstance(ev,dict) or ev.get('status')!='COLLECTED' or not ev.get('captures'):return False
+    require(ev.get('collected_by')=='Merlin','Wrong successor rendered evidence collector')
+    require(ev.get('page_sha256')==after,'Wrong successor rendered evidence page')
+    head=ev.get('served_git_head');require(isinstance(head,str) and len(head)==40,'Missing successor rendered evidence served head')
+    require(ev.get('details_js_sha256')==sha(local(root,'missionary-details.js').read_bytes()),'Successor rendered evidence script mismatch')
+    caps=ev['captures'];viewports={c.get('viewport') for c in caps}
+    require('desktop' in viewports and 'phone' in viewports,'Successor rendered evidence must cover desktop and phone viewports')
+    hashes=[]
+    for cap in caps:
+        require(sha(local(root,cap['path']).read_bytes())==cap['sha256'],'Changed successor rendered evidence')
+        hashes.append(cap['sha256'])
+    rv=record.get('rendered_review')
+    if not isinstance(rv,dict) or rv.get('status')!='FINISHED':return False
+    require(rv.get('reviewer') in ('Jeff','Albert'),'Wrong successor rendered reviewer')
+    require(rv.get('scope')=='rendered','Wrong successor rendered review scope')
+    require(rv.get('decision')=='CONCUR','Unfinished successor rendered review')
+    require(rv.get('finished_pixels') is True and rv.get('finished_behavior') is True,'Unfinished successor rendered review')
+    require(rv.get('page_sha256')==after,'Wrong successor rendered reviewer page')
+    require(rv.get('capture_sha256')==hashes,'Successor rendered review not bound to rendered evidence captures')
+    item=rv['evidence'];require(sha(local(root,item['path']).read_bytes())==item['sha256'],'Changed successor rendered review evidence')
+    return True
 def check(root=ROOT):
     row=mapping(root);raw=local(root,PAGE).read_bytes()
     require(sha(raw)==row['after_sha256'],'Changed successor page')
     require(sha(restore(PAGE,raw,root))==BEFORE,'Successor predecessor mismatch')
-    require(APPROVED_REVIEWS is not None,'Missionary close successor finished review PENDING')
     record=json.loads(local(root,REVIEWS).read_bytes())
-    require(canonical(record)==APPROVED_REVIEWS,'Changed successor reviews')
+    if APPROVED_REVIEWS is not None:require(canonical(record)==APPROVED_REVIEWS,'Changed successor reviews')
     require(record.get('source_sha256')==SOURCE_SHA and record.get('page_sha256')==row['after_sha256'],'Wrong successor review binding')
     require(record.get('required_reviewers')==['Jeff'],'Wrong successor required reviewers')
-    reviews=record.get('reviews',[])
-    require(len(reviews)==1 and {r.get('reviewer') for r in reviews}=={'Jeff'},'Missing/duplicate successor reviewers')
-    for review in reviews:
-        require(review.get('decision')=='CONCUR' and review.get('finished_pixels') is True and review.get('finished_behavior') is True,'Unfinished successor review')
-        require(review.get('page_sha256')==row['after_sha256'],'Wrong reviewer page')
-        item=review['evidence'];require(sha(local(root,item['path']).read_bytes())==item['sha256'],'Changed successor review evidence')
+    reg=record.get('registration_review')
+    require(isinstance(reg,dict),'Missing successor registration review')
+    require(reg.get('reviewer')=='Jeff','Wrong successor registration reviewer')
+    require(reg.get('scope')=='registration-source','Wrong successor registration review scope')
+    require(reg.get('decision')=='CONCUR','Unfinished successor registration review')
+    require(reg.get('finished_pixels') is False,'Successor registration review must record finished_pixels=false (A002)')
+    require(reg.get('finished_behavior') is True,'Unfinished successor registration behavior review')
+    require(reg.get('page_sha256')==row['after_sha256'],'Wrong successor registration reviewer page')
+    item=reg['evidence'];require(sha(local(root,item['path']).read_bytes())==item['sha256'],'Changed successor registration review evidence')
+    require(_rendered(root,record,row['after_sha256']),RENDERED_MISSING)
+    require(APPROVED_REVIEWS is not None,'Missionary close successor finished review PENDING')
     return {'status':'MISSIONARY_CLOSE_SUCCESSOR_EVIDENCE_PASS','page_sha256':row['after_sha256']}

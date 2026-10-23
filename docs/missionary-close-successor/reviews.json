@@ -1,9 +1,1 @@
-{
-  "source_sha256": "5def8841bee12decbe14be551c896794493dd944d8b15cf1fbb9d7f585400b41",
-  "page_sha256": "e5696e60b60faef5f456647ff2a153b939871acb895a6671d3d95a718d2ad55a",
-  "status": "PENDING",
-  "required_reviewers": [
-    "Jeff"
-  ],
-  "reviews": []
-}
+{"page_sha256":"e5696e60b60faef5f456647ff2a153b939871acb895a6671d3d95a718d2ad55a","registration_review":{"behavior_scope":"source wiring only; rendered pixels and rendered behavior not inspected and not claimed (per Jeff's stated scope limits in J-2026-10-23-007)","decision":"CONCUR","evidence":{"path":"docs/missionary-close-successor/jeff-registration-review-j007.json","sha256":"79b70d913e0f83029e51227b3e4131d09c1b5d364a8c0057f8d35ffecf01318c"},"finished_behavior":true,"finished_pixels":false,"page_sha256":"e5696e60b60faef5f456647ff2a153b939871acb895a6671d3d95a718d2ad55a","review_id":"J-2026-10-23-007","reviewer":"Jeff","scope":"registration-source"},"rendered_evidence":{"captures":[],"collected_by":null,"status":"PENDING"},"rendered_review":{"decision":null,"finished_behavior":false,"finished_pixels":false,"reviewer":null,"status":"PENDING"},"required_reviewers":["Jeff"],"source_sha256":"5def8841bee12decbe14be551c896794493dd944d8b15cf1fbb9d7f585400b41","status":"PENDING"}
