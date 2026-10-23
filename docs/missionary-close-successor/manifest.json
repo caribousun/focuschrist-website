@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "page": "missionary.html",
+  "before_sha256": "028f7bc23aa9c7a21e8cc2def40c429ba5ea628880347653292974e8fe7caa31",
+  "after_sha256": "e5696e60b60faef5f456647ff2a153b939871acb895a6671d3d95a718d2ad55a",
+  "spans": [
+    {
+      "start": 55116,
+      "end": 55220,
+      "current_b64": "ICAgICAgICAgICAgICAgICAgICA8YnV0dG9uIGNsYXNzPSJmYy1idXR0b24iIHR5cGU9ImJ1dHRvbiIgZGF0YS1taXNzaW9uYXJ5LWRldGFpbC1jbG9zZT5DbG9zZTwvYnV0dG9uPgo=",
+      "previous_b64": ""
+    }
+  ]
+}

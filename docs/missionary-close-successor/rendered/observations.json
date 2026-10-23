@@ -1,0 +1,185 @@
+{
+  "url": "http://127.0.0.1:8791/missionary.html",
+  "cases": [
+    {
+      "viewport": "desktop",
+      "trigger_count": 13,
+      "checks": [
+        {
+          "label": "commission dialog opens",
+          "pass": true,
+          "detail": ""
+        },
+        {
+          "label": "Close pill present",
+          "pass": true,
+          "detail": "[{\"text\": \"\\u00d7\", \"aria\": \"Close detail window\"}, {\"text\": \"Continue Lesson\", \"aria\": null}, {\"text\": \"Close\", \"aria\": null}]"
+        },
+        {
+          "label": "Close pill in bounds",
+          "pass": true,
+          "detail": "{\"x\": 1038.03125, \"y\": 739.40625, \"width\": 190.96875, \"height\": 48}"
+        },
+        {
+          "label": "Close pill closes dialog",
+          "pass": true,
+          "detail": ""
+        },
+        {
+          "label": "focus returns to trigger after pill close",
+          "pass": true,
+          "detail": "commission"
+        },
+        {
+          "label": "X closes dialog",
+          "pass": true,
+          "detail": ""
+        },
+        {
+          "label": "Continue Lesson closes dialog",
+          "pass": true,
+          "detail": ""
+        },
+        {
+          "label": "keyboard Enter on Close pill closes dialog",
+          "pass": true,
+          "detail": ""
+        },
+        {
+          "label": "second trigger dialog has Close pill",
+          "pass": true,
+          "detail": ""
+        },
+        {
+          "label": "second dialog closes via pill",
+          "pass": true,
+          "detail": ""
+        }
+      ],
+      "commission_action_row": [
+        {
+          "text": "\u00d7",
+          "aria": "Close detail window"
+        },
+        {
+          "text": "Continue Lesson",
+          "aria": null
+        },
+        {
+          "text": "Close",
+          "aria": null
+        }
+      ],
+      "screenshots": [
+        {
+          "file": "desktop-commission-dialog.png",
+          "sha256": "4cb6858efa43231d5ddf5153df2ecb70a18d34e6495579139a24f85800542afb"
+        },
+        {
+          "file": "desktop-samuel-smith-dialog.png",
+          "sha256": "b1586669edc8abb5aa581895065eea0f8acd05cd1c46de744caf48eda35be039"
+        }
+      ],
+      "resource_load_notes": [
+        "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "Failed to load resource: the server responded with a status of 404 (File not found)"
+      ]
+    },
+    {
+      "viewport": "phone",
+      "trigger_count": 13,
+      "checks": [
+        {
+          "label": "commission dialog opens",
+          "pass": true,
+          "detail": ""
+        },
+        {
+          "label": "Close pill present",
+          "pass": true,
+          "detail": "[{\"text\": \"\\u00d7\", \"aria\": \"Close detail window\"}, {\"text\": \"Continue Lesson\", \"aria\": null}, {\"text\": \"Close\", \"aria\": null}]"
+        },
+        {
+          "label": "Close pill in bounds",
+          "pass": true,
+          "detail": "{\"x\": 31, \"y\": 861.53125, \"width\": 328, \"height\": 48}"
+        },
+        {
+          "label": "Close pill closes dialog",
+          "pass": true,
+          "detail": ""
+        },
+        {
+          "label": "focus returns to trigger after pill close",
+          "pass": true,
+          "detail": "commission"
+        },
+        {
+          "label": "X closes dialog",
+          "pass": true,
+          "detail": ""
+        },
+        {
+          "label": "Continue Lesson closes dialog",
+          "pass": true,
+          "detail": ""
+        },
+        {
+          "label": "keyboard Enter on Close pill closes dialog",
+          "pass": true,
+          "detail": ""
+        },
+        {
+          "label": "second trigger dialog has Close pill",
+          "pass": true,
+          "detail": ""
+        },
+        {
+          "label": "second dialog closes via pill",
+          "pass": true,
+          "detail": ""
+        }
+      ],
+      "commission_action_row": [
+        {
+          "text": "\u00d7",
+          "aria": "Close detail window"
+        },
+        {
+          "text": "Continue Lesson",
+          "aria": null
+        },
+        {
+          "text": "Close",
+          "aria": null
+        }
+      ],
+      "screenshots": [
+        {
+          "file": "phone-commission-dialog.png",
+          "sha256": "1e1940a3e6508293413dd6e77821652a30a6e7138f1bd55c67c7fe0bfdef0fa3"
+        },
+        {
+          "file": "phone-samuel-smith-dialog.png",
+          "sha256": "e5d5f91638e2c99d9d6878da5428445f6821eb210dadb00d58b6dae04aeed30d"
+        },
+        {
+          "file": "phone-commission-dialog-actions.png",
+          "sha256": "339bf013e6aa2acecbb599fc6cde653bae5649075d311bd8ffde0a4a68ccd257",
+          "note": "commission dialog scrolled to action row; Close pill visible in bounds"
+        }
+      ],
+      "resource_load_notes": [
+        "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+        "Failed to load resource: the server responded with a status of 404 (File not found)"
+      ]
+    }
+  ],
+  "console_errors": [],
+  "browser": "Chrome for Testing 156.0.8078.4 (Playwright Chromium, headless)",
+  "served_page_sha256": "e5696e60b60faef5f456647ff2a153b939871acb895a6671d3d95a718d2ad55a",
+  "served_details_js_sha256": "55bb051609d1bb1b1793eb44539d812e71b1c62f789617c0f5b36c1b1a47f17a",
+  "served_from": "PR 500 head f15039d5103dcbe0da86f13a1f7284def8948f3b candidate tree served locally over HTTP on 127.0.0.1:8791",
+  "phone_viewport_note": "Phone captures use Chromium device emulation at 390x844 with touch (viewport emulation, not a physical phone), honestly labeled.",
+  "uncaught_page_errors": "none; the two resource-load notes per viewport are an external fetch tunnel failure and one 404 (favicon), not page script errors"
+}
