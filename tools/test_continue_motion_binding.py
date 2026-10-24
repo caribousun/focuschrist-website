@@ -18,7 +18,8 @@ class MotionBindingTests(unittest.TestCase):
             from commission_hand_successor import restore as restore_hand
             from answer_bank_successor import restore as restore_bank
             from display_gate_successor import restore as restore_gate
-            self.assertEqual(gate.sha(restore_world(name,settings.restore(name,restore_close(name,restore_hand(name,restore_bank(name,restore_gate(name,current))))))),row['after_sha256'],name)
+            from citation_rendering_successor import restore as restore_citation
+            self.assertEqual(gate.sha(restore_world(name,settings.restore(name,restore_close(name,restore_hand(name,restore_bank(name,restore_gate(name,restore_citation(name,current)))))))),row['after_sha256'],name)
             self.assertEqual(gate.sha(gate.restore(name,current)),row['before_sha256'],name)
 
     def test_exact_successors_and_unknown_input_rejected(self):
@@ -95,6 +96,18 @@ class MotionBindingTests(unittest.TestCase):
             root=Path(td);p=root/gate.MAP;p.parent.mkdir(parents=True)
             data=copy.deepcopy(gate.mapping());data['files']['index.html']['before_sha256']='0'*64;p.write_text(json.dumps(data))
             with self.assertRaisesRegex(ValueError,'Unknown motion predecessor map'):gate.mapping(root)
+
+    def test_ask_html_citation_chain_composes(self):
+        from citation_rendering_successor import restore as restore_citation
+        from answer_bank_successor import restore as restore_bank
+        name='ask.html'
+        row=gate.mapping()['files'][name]
+        current=(gate.ROOT/name).read_bytes()
+        projected=restore_citation(name,current)
+        self.assertEqual(gate.sha(projected),'735ccd0d56d7931a651ec8c06759cc849e7895fa55311f8d9d7d6bb36b419612',name)
+        self.assertEqual(gate.sha(restore_bank(name,projected)),row['after_sha256'],name)
+        self.assertEqual(gate.sha(gate.restore(name,current)),row['before_sha256'],name)
+        self.assertEqual(gate.advance(name,gate.restore(name,current)),current,name)
 
     def test_pending_review_cannot_pass(self):
         with patch.object(gate,'APPROVED_REVIEWS',None):
