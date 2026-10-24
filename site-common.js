@@ -97,15 +97,57 @@
       return { allowed: true, kind: 'brief-sensitive-topic', response: 'You are welcome to ask about ' + subject + '. What would be most helpful: understanding Church teachings, finding support, or supporting someone else? You can choose a starting question or write your own. You do not need to share private details.', options: options };
     }
 
+    // Token-boundary profanity matching (A047): the whitespace-stripped
+    // compact string is never tested as a whole, because joining across
+    // ordinary words creates false hits (the compact form of "publish its"
+    // contains "shit"). A letter-repetition pattern counts inside one
+    // token, or across tokens only when the match starts at a token
+    // boundary, which retains spellings with optional separators between
+    // the letters of one word ("f.u.c.k", "sh it", "fu ck").
+    function compactProfanityHit(normalized) {
+        const patterns = [/f+u+c+k+/, /s+h+i+t+/, /b+i+t+c+h+/];
+        const tokens = normalized.split(' ');
+        for (const token of tokens) {
+            if (patterns.some(function (pattern) { return pattern.test(token); })) return true;
+        }
+        for (let i = 0; i < tokens.length; i++) {
+            let joined = '';
+            for (let j = i; j < tokens.length && joined.length <= 16; j++) {
+                joined += tokens[j];
+                const startsAtBoundary = patterns.some(function (pattern) {
+                    const match = pattern.exec(joined);
+                    return match !== null && match.index === 0;
+                });
+                if (startsAtBoundary) return true;
+            }
+        }
+        return false;
+    }
+
+    // A past-tense "hurt me" is released from the urgent-safety claim only
+    // inside a forgiveness question where the harm is stated as a completed
+    // act in a subordinate construction ("someone who has hurt me",
+    // "someone who hurt me"): that is the aftermath the forgiveness
+    // teaching addresses. Every other urgent form is unchanged. "hurting
+    // me" stays a claim, a main-clause disclosure ("He hurt me last
+    // night") stays a claim, and any stated future, threatened, or
+    // intended harm ("going to hurt me", "threatened to hurt me",
+    // "threatens to hurt me", "promised to hurt me") stays a claim.
+    function pastHurtForgivenessRelease(normalized) {
+        if (!/\bforgiv\w*\b/.test(normalized)) return false;
+        if (!/(?:\bhas hurt me\b|\bhad hurt me\b|\bwho hurt me\b|\bthat hurt me\b)/.test(normalized)) return false;
+        if (/\b(?:going to|about to|will|wants? to|threatened to|threatening to|threatens to|plans to|intends to|promised to|trying to) hurt me\b/.test(normalized)) return false;
+        return true;
+    }
+
     function evaluateQuestionSafety(value) {
         const normalized = normalizeQuestionSafetyText(value);
-        const compact = normalized.replace(/\s+/g, '');
         const supportIntent = nonExplicitSupportIntent(normalized);
         const briefTopic = briefSensitiveTopic(value);
         const urgentSafety = matchesAny(normalized, [
             /\b(?:sexual abuse|sexually abused|rape|raped|molest|molested|assaulted)\b/,
-            /\b(?:immediate danger|being threatened|threatening me|hurt me|hurting me|kill me|being abused)\b/
-        ]);
+            /\b(?:immediate danger|being threatened|threatening me|hurting me|kill me|being abused)\b/
+        ]) || (/\bhurt me\b/.test(normalized) && !pastHurtForgivenessRelease(normalized));
         if (urgentSafety) {
             return { allowed: false, kind: 'urgent-safety', response: URGENT_SAFETY_RESPONSE };
         }
@@ -116,11 +158,7 @@
         const profanity = matchesAny(normalized, [
             /\b(?:fuck|fucking|fucked|motherfucker|shit|bullshit|bitch|bastard|ass|asshole|whore|slut|piss|dick|cock|pussy|faggot|nigger|retard|wtf|stfu)\b/,
             /\b(?:damn|crap)\b/
-        ]) || matchesAny(compact, [
-            /f+u+c+k+/,
-            /s+h+i+t+/,
-            /b+i+t+c+h+/
-        ]);
+        ]) || compactProfanityHit(normalized);
 
         const explicitSexual = matchesAny(normalized, [
             /\b(?:sex|sexual|porn|pornography|nude|nudes|naked|intercourse|masturbat(?:e|ion|ing)|orgasm|genitals?)\b/,
