@@ -140,22 +140,24 @@
      * `related` targets as canonical questions, in the record's own
      * order, taken only from the matcher's followUpChips() over the
      * pinned loaded bank, so a target the load excluded never
-     * appears. The matcher does not exclude a sensitive served
-     * record, so the exclusion lives here: a sensitive record
-     * (spec 4.4) renders no chips for its own serve, because its
-     * serve is never attached to a composition surface. Its
-     * canonical question may still appear as a chip target in other
-     * records' lists (spec 4.4), where a tap is the visitor's
-     * deliberate new request through Step S. The list is capped at
-     * five, the top of the range spec 3.5 drafts `related` lists in
-     * (typically 2 to 5); the shipped bank's longest list is three,
-     * so the cap binds nothing today and bounds future data. */
+     * appears. A sensitive record's own serve returns its chips
+     * like any other serve: spec 4.4's stated interactions are
+     * exhaustive and remove no adjunct from the served record
+     * itself, and the addendum's sensitive exclusion (2.3 rule 3)
+     * is scoped to answer components, barring a sensitive record
+     * from another artifact's composition, not from its own P1
+     * adjunct. A sensitive record's canonical question may also
+     * appear as a chip target in other records' lists (spec 4.4),
+     * where a tap is the visitor's deliberate new request through
+     * Step S. The list is capped at five, the top of the range
+     * spec 3.5 drafts `related` lists in (typically 2 to 5); the
+     * shipped bank's longest list is four, so the cap binds
+     * nothing today and bounds future data. */
     var FOLLOW_UP_CHIP_LIMIT = 5;
     function followUpChips(recordId) {
         if (typeof recordId !== 'string' || !recordId) return [];
         var record = loaded.bank.byId.get(recordId);
         if (!record) return [];
-        if (record.raw && record.raw.sensitive === true) return [];
         return matcher.followUpChips(recordId).slice(0, FOLLOW_UP_CHIP_LIMIT);
     }
 

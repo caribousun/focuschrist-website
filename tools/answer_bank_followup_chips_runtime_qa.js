@@ -17,12 +17,14 @@
  *   own chips under it (conversations chain).
  * - A suggestion outcome renders its clarification options and no
  *   follow-up chips.
- * - A sensitive record's serve renders its answer and no chips, even
- *   though the matcher derives chips for it: the lane's exclusion is
- *   what suppresses them.
+ * - A sensitive record's serve renders its answer AND its own chips:
+ *   spec 4.4's stated interactions are exhaustive, and the addendum's
+ *   sensitive exclusion (2.3 rule 3) is scoped to a sensitive record
+ *   used as a component of another artifact's composition, so
+ *   nothing suppresses the served record's own P1 adjunct.
  * - Census: for every record in the shipped bank, the lane's chips
- *   are exactly the matcher's chips (capped at five), minus the
- *   sensitive records' own lists; and every rendered chip's canonical
+ *   are exactly the matcher's chips (capped at five), sensitive
+ *   records included, with nothing suppressed; and every rendered chip's canonical
  *   question serves its target record through the matcher running
  *   the production Step S evaluator, with any exception enumerated
  *   and required to be a Step S claim, never a matching failure.
@@ -247,29 +249,29 @@ function chipGroups(scope) { return findByClass(scope, 'ask-followup-chips'); }
 (async () => {
     /* ---------- census: lane chips vs matcher chips ---------- */
     const lane = sandbox.FocusChristAnswerBankLane;
-    let matcherTotal = 0, laneTotal = 0, sensitiveChipsSuppressed = 0;
+    let matcherTotal = 0, laneTotal = 0, recordsWithChips = 0, maxList = 0, sensitiveRecords = 0;
     for (const record of records) {
         const raw = prodMatcher.followUpChips(record.id);
         matcherTotal += raw.length;
+        if (raw.length) recordsWithChips++;
+        if (raw.length > maxList) maxList = raw.length;
+        if (record.sensitive === true) sensitiveRecords++;
         const viaLane = lane.followUpChips(record.id);
-        if (record.sensitive === true) {
-            /* Lane values are built inside the vm realm; compare by
-             * canonical JSON, as the display-gate QA does. */
-            assert.equal(JSON.stringify(viaLane), '[]', 'a sensitive record must expose no chips through the lane: ' + record.id);
-            sensitiveChipsSuppressed += raw.length;
-        } else {
-            assert.deepEqual(JSON.parse(JSON.stringify(viaLane)), JSON.parse(JSON.stringify(raw.slice(0, 5))),
-                'lane chips must be the matcher chips in order (cap 5): ' + record.id);
-            laneTotal += viaLane.length;
-        }
+        /* Lane values are built inside the vm realm; compare by
+         * canonical JSON, as the display-gate QA does. Sensitive
+         * records are held to the same equality: their own serves
+         * carry their chips like any other serve (spec 4.4). */
+        assert.deepEqual(JSON.parse(JSON.stringify(viaLane)), JSON.parse(JSON.stringify(raw.slice(0, 5))),
+            'lane chips must be the matcher chips in order (cap 5): ' + record.id);
+        laneTotal += viaLane.length;
     }
-    assert.ok(sensitiveChipsSuppressed > 0, 'the shipped bank must actually exercise the sensitive exclusion');
-    console.log(`CENSUS PASS: lane chips ${laneTotal} rendered-eligible; matcher total ${matcherTotal}; sensitive lists suppressed ${sensitiveChipsSuppressed}`);
+    assert.equal(laneTotal, matcherTotal,
+        'at this bank the cap binds nothing, so every matcher chip must be rendered-eligible');
+    console.log(`CENSUS PASS: lane chips ${laneTotal} rendered-eligible of matcher total ${matcherTotal}; suppressed 0; records with at least one chip ${recordsWithChips}; sensitive records ${sensitiveRecords}; longest list ${maxList}`);
 
     /* ---------- census: every rendered chip serves its target ---------- */
     let taps = 0; const stepSClaims = [];
     for (const record of records) {
-        if (record.sensitive === true) continue;
         for (const chip of lane.followUpChips(record.id)) {
             const res = prodMatcher.answer({ question_text: chip.question, profile: 'ask' });
             if (res.status === 'serve' && res.record_id === chip.record_id) { taps++; continue; }
@@ -326,15 +328,25 @@ function chipGroups(scope) { return findByClass(scope, 'ask-followup-chips'); }
     assert.ok(findByClass(box, 'ask-clarification-options').length >= 1, 'the suggestion options themselves must still render');
     console.log('PROBE PASS: suggestion renders its options and no follow-up chips');
 
-    /* ---------- composed probe: a sensitive serve renders no chips ---------- */
+    /* ---------- composed probe: a sensitive serve renders its chips ---------- */
     const suf = byId.get('ask-why-does-god-allow-suffering-and-evil');
     assert.equal(suf.sensitive, true, 'probe record must be sensitive');
-    assert.equal(prodMatcher.followUpChips(suf.id).length, 2, 'the matcher must derive chips for the sensitive record (exclusion is the lane\u2019s)');
+    const sufChips = JSON.parse(JSON.stringify(lane.followUpChips(suf.id)));
+    assert.equal(sufChips.length, 2, 'the sensitive record must carry two chips through the lane');
+    assert.equal(prodMatcher.followUpChips(suf.id).length, 2, 'the matcher must derive the same two chips for the sensitive record');
     const sufNode = await ask('Why does God allow suffering and evil if He loves us?');
     assert.ok(sufNode.textContent.includes(suf.answer), 'the sensitive serve must render its pinned answer');
-    assert.equal(findByClass(box, 'ask-followup-chips').length, 0, 'a sensitive serve must render no follow-up chips');
-    console.log('PROBE PASS: sensitive serve renders its answer and no chips');
+    const sufGroups = chipGroups(sufNode);
+    assert.equal(sufGroups.length, 1, 'the sensitive serve must render its follow-up chip group');
+    assert.equal(sufGroups[0].getAttribute('data-followup-for'), suf.id, 'the sensitive chip group must name the served record');
+    const sufButtons = sufGroups[0].children;
+    assert.equal(sufButtons.length, sufChips.length, 'one chip button per lane chip on the sensitive serve');
+    sufButtons.forEach((button, i) => {
+        assert.equal(button.textContent, sufChips[i].question, 'sensitive chip label must be the target canonical question, in order');
+        assert.equal(button.getAttribute('data-followup-target'), sufChips[i].record_id, 'sensitive chip must name its target record');
+    });
+    console.log('PROBE PASS: sensitive serve renders its answer with its own chips');
 
     assert.equal(fetchCalls, 0, 'no probe may reach the research Worker');
-    console.log('PASS: answer bank follow-up chips composed chain — serves render chips, taps chain through the send path, suggestions and sensitive serves render none.');
+    console.log('PASS: answer bank follow-up chips composed chain — serves render chips, taps chain through the send path, suggestions render none, and sensitive serves render their own chips.');
 })().catch(error => { console.error(error); process.exitCode = 1; });
