@@ -1,0 +1,285 @@
+{
+ "collector": "Merlin worker",
+ "status": "COLLECTED",
+ "served_git_head": "80a27c371de79a6fc3837c4bc916b8cf2aab032c",
+ "served_note": "Working tree at ~/workspace/fcfix2/step1-release/repo served locally; its three registered files hash to the successor AFTER pins below (verified before capture).",
+ "pages_sha256": {
+  "ask.html": "735ccd0d56d7931a651ec8c06759cc849e7895fa55311f8d9d7d6bb36b419612",
+  "pioneers.html": "b2b988d240a7d54b60b2d2701fde26f54fa6ca1b63261b3d7f7f9e89377a3bf5",
+  "pioneer-experience.js": "b1f6f02625377c9f28850e88d707c4e9837c0d6c183510463b65448294cfb9cb"
+ },
+ "captures": [
+  {
+   "screen": "ask-bank-serve-desktop",
+   "width": 1280,
+   "height": 800,
+   "sha256": "216fe71c8b1e5f78462b283109c461979a89d04271dc3e71ecdb27d512d6de97",
+   "path": "docs/answer-bank-successor/rendered/ask-bank-serve-desktop.png.b64",
+   "media": "desktop 1280x800",
+   "shows": "Ask page after submitting the tithing question: the reviewed bank record answer for \"What is tithing?\" is served and visible in the chat, with its sources.",
+   "interactions": "Opened ask.html, waited for study-intelligence v3, typed \"What is tithing?\" into #userInput, clicked #sendBtn, waited for the new bot message text to stabilize, scrolled it into view, screenshotted the viewport."
+  },
+  {
+   "screen": "ask-bank-serve-sensitive-desktop",
+   "width": 1280,
+   "height": 800,
+   "sha256": "9c3e362ce8ecae4aaf3fc4c2200850e934c119df4d4cef7136100f4515c77015",
+   "path": "docs/answer-bank-successor/rendered/ask-bank-serve-sensitive-desktop.png.b64",
+   "media": "desktop 1280x800",
+   "shows": "Ask page after submitting the sensitive priesthood question: the pinned sensitive bank record serves exactly and is visible in the chat.",
+   "interactions": "Typed \"Why don't women hold the priesthood?\" into #userInput, clicked #sendBtn, waited for the new bot message text to stabilize, scrolled it into view, screenshotted the viewport."
+  },
+  {
+   "screen": "ask-suggestion-desktop",
+   "width": 1280,
+   "height": 800,
+   "sha256": "29ff604ff79a675baae47bdaa4e1dc8be14d9c2a67af6ebcf27fb9f48caad814",
+   "path": "docs/answer-bank-successor/rendered/ask-suggestion-desktop.png.b64",
+   "media": "desktop 1280x800",
+   "shows": "Ask page after the together probe question: only suggestion options are offered, headed by the Bible and Book of Mormon together record question; no record answer is rendered as an answer.",
+   "interactions": "Typed \"How do the Bible and Book of Mormon work together in your faith?\" into #userInput, clicked #sendBtn, waited for the new bot message text to stabilize, scrolled it into view, screenshotted the viewport."
+  },
+  {
+   "screen": "ask-fallthrough-desktop",
+   "width": 1280,
+   "height": 800,
+   "sha256": "bb2ece65331aac5f0a5352f6a53b0cdb21d5fffbae332af4bada244e8740f4f8",
+   "path": "docs/answer-bank-successor/rendered/ask-fallthrough-desktop.png.b64",
+   "media": "desktop 1280x800",
+   "shows": "Ask page after an uncovered question (weather in Tooele): the pre-existing fall-through outcome is shown; no bank record is served.",
+   "interactions": "Typed \"What is the weather in Tooele today?\" into #userInput, clicked #sendBtn, waited for the new bot message text to stabilize, scrolled it into view, screenshotted the viewport."
+  },
+  {
+   "screen": "pioneer-item-disclosure-desktop",
+   "width": 1280,
+   "height": 800,
+   "sha256": "cd49d4e7b72fec107fe90f00eff9acb907cfc89702a030cbda3ac64219b93536",
+   "path": "docs/answer-bank-successor/rendered/pioneer-item-disclosure-desktop.png.b64",
+   "media": "desktop 1280x800",
+   "shows": "Pioneers page with the Exodus item disclosure OPEN in frame: the container is marked reviewed-bank and the served pinned bank answer text is visible inside the opened disclosure (not the page hero). Framing measured: {\"top\": 69.921875, \"bottom\": 560.375, \"height\": 490.453125, \"viewport_height\": 800, \"scrollY\": 4962, \"text_visible_in_viewport\": true}",
+   "interactions": "Opened pioneers.html, waited for window.FocusChristAnswerBankLane, opened the pioneer timeline group containing the item by clicking its <summary> (the item sits inside a closed <details>; unopened, the served disclosure does not paint), dispatched a click on the [data-topic=\"exodus\"] control (the event the page disclosure handler receives), waited until its .ai-response container carried data-focuschrist-loaded=\"reviewed-bank\" and its rendered innerText contained the record answer, stabilized the scroll with the opened disclosure at 70px from the viewport top across repeated measures, verified answer text rects intersect the viewport, screenshotted the viewport."
+  },
+  {
+   "screen": "pioneer-fallthrough-desktop",
+   "width": 1280,
+   "height": 800,
+   "sha256": "97500b0bab261883ff6f41b96d2ed0d13e84ae7a4b550ceabcb0c403d0c45f04",
+   "path": "docs/answer-bank-successor/rendered/pioneer-fallthrough-desktop.png.b64",
+   "media": "desktop 1280x800",
+   "shows": "Pioneers page after the same uncovered free-form question: the pre-existing fall-through outcome is shown; no bank record is served.",
+   "interactions": "Typed \"What is the weather in Tooele today?\" into the Pioneer ask input (#userInput), clicked #sendBtn, waited for the new bot message text to stabilize, screenshotted the viewport."
+  },
+  {
+   "screen": "ask-bank-serve-phone",
+   "width": 390,
+   "height": 844,
+   "sha256": "402b653f4aa234017b49ab925188a640c4657e06bbf0de2f0c1006a956972d6a",
+   "path": "docs/answer-bank-successor/rendered/ask-bank-serve-phone.png.b64",
+   "media": "phone 390x844",
+   "shows": "Ask page after submitting the tithing question: the reviewed bank record answer for \"What is tithing?\" is served and visible in the chat, with its sources.",
+   "interactions": "Opened ask.html, waited for study-intelligence v3, typed \"What is tithing?\" into #userInput, clicked #sendBtn, waited for the new bot message text to stabilize, scrolled it into view, screenshotted the viewport."
+  },
+  {
+   "screen": "ask-bank-serve-sensitive-phone",
+   "width": 390,
+   "height": 844,
+   "sha256": "8b788de345b62e6624452a6476d362b68fdb672ff0bad4b7db8255f9ca9f2202",
+   "path": "docs/answer-bank-successor/rendered/ask-bank-serve-sensitive-phone.png.b64",
+   "media": "phone 390x844",
+   "shows": "Ask page after submitting the sensitive priesthood question: the pinned sensitive bank record serves exactly and is visible in the chat.",
+   "interactions": "Typed \"Why don't women hold the priesthood?\" into #userInput, clicked #sendBtn, waited for the new bot message text to stabilize, scrolled it into view, screenshotted the viewport."
+  },
+  {
+   "screen": "ask-suggestion-phone",
+   "width": 390,
+   "height": 844,
+   "sha256": "6892e56d8007675cbedf5a23312c296b146ca8e11945dc626e9195d98257ed51",
+   "path": "docs/answer-bank-successor/rendered/ask-suggestion-phone.png.b64",
+   "media": "phone 390x844",
+   "shows": "Ask page after the together probe question: only suggestion options are offered, headed by the Bible and Book of Mormon together record question; no record answer is rendered as an answer.",
+   "interactions": "Typed \"How do the Bible and Book of Mormon work together in your faith?\" into #userInput, clicked #sendBtn, waited for the new bot message text to stabilize, scrolled it into view, screenshotted the viewport."
+  },
+  {
+   "screen": "ask-fallthrough-phone",
+   "width": 390,
+   "height": 844,
+   "sha256": "43a57134722b52ea5ba3821a285205241f6849a4f5965d73613305083ff3b61d",
+   "path": "docs/answer-bank-successor/rendered/ask-fallthrough-phone.png.b64",
+   "media": "phone 390x844",
+   "shows": "Ask page after an uncovered question (weather in Tooele): the pre-existing fall-through outcome is shown; no bank record is served.",
+   "interactions": "Typed \"What is the weather in Tooele today?\" into #userInput, clicked #sendBtn, waited for the new bot message text to stabilize, scrolled it into view, screenshotted the viewport."
+  },
+  {
+   "screen": "pioneer-item-disclosure-phone",
+   "width": 390,
+   "height": 844,
+   "sha256": "a767ac838d3a894d5664f4f98e22e60ba6e9b82bef1a91cc526532e3dc73d729",
+   "path": "docs/answer-bank-successor/rendered/pioneer-item-disclosure-phone.png.b64",
+   "media": "phone 390x844",
+   "shows": "Pioneers page with the Exodus item disclosure OPEN in frame: the container is marked reviewed-bank and the served pinned bank answer text is visible inside the opened disclosure (not the page hero). Framing measured: {\"top\": 69.78125, \"bottom\": 1381.703125, \"height\": 1311.921875, \"viewport_height\": 844, \"scrollY\": 7494, \"text_visible_in_viewport\": true}",
+   "interactions": "Opened pioneers.html, waited for window.FocusChristAnswerBankLane, opened the pioneer timeline group containing the item by clicking its <summary> (the item sits inside a closed <details>; unopened, the served disclosure does not paint), dispatched a click on the [data-topic=\"exodus\"] control (the event the page disclosure handler receives), waited until its .ai-response container carried data-focuschrist-loaded=\"reviewed-bank\" and its rendered innerText contained the record answer, stabilized the scroll with the opened disclosure at 70px from the viewport top across repeated measures, verified answer text rects intersect the viewport, screenshotted the viewport."
+  },
+  {
+   "screen": "pioneer-fallthrough-phone",
+   "width": 390,
+   "height": 844,
+   "sha256": "f657d09ee759c96fc3b256bba4023161646fd948dd29ae67acf8f9614261f1d1",
+   "path": "docs/answer-bank-successor/rendered/pioneer-fallthrough-phone.png.b64",
+   "media": "phone 390x844",
+   "shows": "Pioneers page after the same uncovered free-form question: the pre-existing fall-through outcome is shown; no bank record is served.",
+   "interactions": "Typed \"What is the weather in Tooele today?\" into the Pioneer ask input (#userInput), clicked #sendBtn, waited for the new bot message text to stabilize, screenshotted the viewport."
+  }
+ ],
+ "page_errors": {
+  "ask.html (desktop)": [],
+  "pioneers.html (desktop)": [],
+  "ask.html (phone)": [],
+  "pioneers.html (phone)": []
+ },
+ "console_errors": {
+  "ask.html (desktop)": [
+   "Failed to load resource: the server responded with a status of 404 (File not found)",
+   "Failed to load resource: the server responded with a status of 404 (File not found)",
+   "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+   "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+   "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+   "focusChrist Study Intelligence v3 failed: TypeError: Failed to fetch\n    at request (http://127.0.0.1:8793/study-intelligence-v3.js?v=20260923-sensitive-welcome-1:385:36)\n    at requestWithRetry (http://127.0.0.1:8793/study-intelligence-v3.js?v=20260923-sensitive-welcome-1:449:34)\n    at async askV3 (http://127.0.0.1:8793/study-intelligence-v3.js?v=20260923-sensitive-welcome-1:657:36)\n    at async window.sendMessage (http://127.0.0.1:8793/study-intelligence-v3.js?v=20260923-sensitive-welcome-1:781:32)"
+  ],
+  "pioneers.html (desktop)": [
+   "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+   "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+   "Pioneer conversation error: TypeError: Failed to fetch\n    at requestPioneerAI (http://127.0.0.1:8793/pioneer-experience.js?v=20261021-continue-motion-1:365:36)\n    at async window.sendMessage (http://127.0.0.1:8793/pioneer-experience.js?v=20261021-continue-motion-1:975:30)"
+  ],
+  "ask.html (phone)": [
+   "Failed to load resource: the server responded with a status of 404 (File not found)",
+   "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+   "Failed to load resource: the server responded with a status of 404 (File not found)",
+   "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+   "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+   "focusChrist Study Intelligence v3 failed: TypeError: Failed to fetch\n    at request (http://127.0.0.1:8793/study-intelligence-v3.js?v=20260923-sensitive-welcome-1:385:36)\n    at requestWithRetry (http://127.0.0.1:8793/study-intelligence-v3.js?v=20260923-sensitive-welcome-1:449:34)\n    at async askV3 (http://127.0.0.1:8793/study-intelligence-v3.js?v=20260923-sensitive-welcome-1:657:36)\n    at async window.sendMessage (http://127.0.0.1:8793/study-intelligence-v3.js?v=20260923-sensitive-welcome-1:781:32)"
+  ],
+  "pioneers.html (phone)": [
+   "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+   "Failed to load resource: net::ERR_TUNNEL_CONNECTION_FAILED",
+   "Pioneer conversation error: TypeError: Failed to fetch\n    at requestPioneerAI (http://127.0.0.1:8793/pioneer-experience.js?v=20261021-continue-motion-1:365:36)\n    at async window.sendMessage (http://127.0.0.1:8793/pioneer-experience.js?v=20261021-continue-motion-1:975:30)"
+  ]
+ },
+ "checks": [
+  {
+   "check": "page hash equals AFTER pin: ask.html",
+   "pass": true,
+   "detail": "735ccd0d56d7931a651ec8c06759cc849e7895fa55311f8d9d7d6bb36b419612"
+  },
+  {
+   "check": "page hash equals AFTER pin: pioneers.html",
+   "pass": true,
+   "detail": "b2b988d240a7d54b60b2d2701fde26f54fa6ca1b63261b3d7f7f9e89377a3bf5"
+  },
+  {
+   "check": "page hash equals AFTER pin: pioneer-experience.js",
+   "pass": true,
+   "detail": "b1f6f02625377c9f28850e88d707c4e9837c0d6c183510463b65448294cfb9cb"
+  },
+  {
+   "check": "desktop ask: bank load report",
+   "pass": true,
+   "detail": "{\"header\": {\"bank_version\": \"1.0.0\", \"dataset\": {\"file\": \"bank-dataset-v3.json\", \"item_records\": 29, \"question_records\": 139, \"records\": 168"
+  },
+  {
+   "check": "desktop ask serve: tithing",
+   "pass": true,
+   "detail": "Tithing is giving one-tenth of your income to the Lord's Church. The Church's Tithing topic defines "
+  },
+  {
+   "check": "desktop ask serve: sensitive priesthood record",
+   "pass": true,
+   "detail": "In the Church's practice, ordination to priesthood office is given to men, and women exercise priest"
+  },
+  {
+   "check": "desktop ask probe: suggestions headed by together record",
+   "pass": true,
+   "detail": "[\"How do the Bible and the Book of Mormon work together?\", \"Who were the Nephites and Lamanites?\", \"Who was Moroni in the Book of Mormon?\"]"
+  },
+  {
+   "check": "desktop ask probe: record answer not rendered as an answer",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "desktop ask fall-through: not a bank serve",
+   "pass": true,
+   "detail": "Your question is valid, but the answer service is temporarily unavailable. Please try again in a mom"
+  },
+  {
+   "check": "desktop pioneer timeline group opened",
+   "pass": true,
+   "detail": "{\"found\": true, \"was_open\": false, \"summary\": \"1846\\u20131896 \\u00b7 Journey timeline \\u00b7 9 milestones\"}"
+  },
+  {
+   "check": "desktop pioneer item serve: exodus marked reviewed-bank with record answer rendered",
+   "pass": true,
+   "detail": "The first wagons left Nauvoo on February 4, 1846, ferried across the Mississippi River into Iowa. Ch"
+  },
+  {
+   "check": "desktop pioneer disclosure framed in viewport",
+   "pass": true,
+   "detail": "{\"top\": 69.921875, \"bottom\": 560.375, \"height\": 490.453125, \"viewport_height\": 800, \"scrollY\": 4962, \"text_visible_in_viewport\": true}"
+  },
+  {
+   "check": "desktop pioneer fall-through: not a bank serve",
+   "pass": true,
+   "detail": "I could not complete that pioneer-history answer just now.\n\nPlease try again or continue with the ve"
+  },
+  {
+   "check": "phone ask: bank load report",
+   "pass": true,
+   "detail": "{\"header\": {\"bank_version\": \"1.0.0\", \"dataset\": {\"file\": \"bank-dataset-v3.json\", \"item_records\": 29, \"question_records\": 139, \"records\": 168"
+  },
+  {
+   "check": "phone ask serve: tithing",
+   "pass": true,
+   "detail": "Tithing is giving one-tenth of your income to the Lord's Church. The Church's Tithing topic defines "
+  },
+  {
+   "check": "phone ask serve: sensitive priesthood record",
+   "pass": true,
+   "detail": "In the Church's practice, ordination to priesthood office is given to men, and women exercise priest"
+  },
+  {
+   "check": "phone ask probe: suggestions headed by together record",
+   "pass": true,
+   "detail": "[\"How do the Bible and the Book of Mormon work together?\", \"Who were the Nephites and Lamanites?\", \"Who was Moroni in the Book of Mormon?\"]"
+  },
+  {
+   "check": "phone ask probe: record answer not rendered as an answer",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "phone ask fall-through: not a bank serve",
+   "pass": true,
+   "detail": "Your question is valid, but the answer service is temporarily unavailable. Please try again in a mom"
+  },
+  {
+   "check": "phone pioneer timeline group opened",
+   "pass": true,
+   "detail": "{\"found\": true, \"was_open\": false, \"summary\": \"1846\\u20131896 \\u00b7 Journey timeline \\u00b7 9 milestones\"}"
+  },
+  {
+   "check": "phone pioneer item serve: exodus marked reviewed-bank with record answer rendered",
+   "pass": true,
+   "detail": "The first wagons left Nauvoo on February 4, 1846, ferried across the Mississippi River into Iowa. Ch"
+  },
+  {
+   "check": "phone pioneer disclosure framed in viewport",
+   "pass": true,
+   "detail": "{\"top\": 69.78125, \"bottom\": 1381.703125, \"height\": 1311.921875, \"viewport_height\": 844, \"scrollY\": 7494, \"text_visible_in_viewport\": true}"
+  },
+  {
+   "check": "phone pioneer fall-through: not a bank serve",
+   "pass": true,
+   "detail": "I could not complete that pioneer-history answer just now.\n\nPlease try again or continue with the ve"
+  }
+ ],
+ "browser": "Chrome for Testing (Playwright Chromium, headless)"
+}

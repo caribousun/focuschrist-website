@@ -1,0 +1,42 @@
+{
+  "files": {
+    "ask.html": {
+      "after_sha256": "735ccd0d56d7931a651ec8c06759cc849e7895fa55311f8d9d7d6bb36b419612",
+      "before_sha256": "4a5f73ee35fb5cd8d1a9d30109f7daf9f85f7e3913fb5e3cc012a996d6058db3",
+      "spans": [
+        {
+          "current_b64": "ICAgIDxzY3JpcHQgc3JjPSJhbnN3ZXItYmFuay1kYXRhLmpzP3Y9MjAyNjEwMjMtYW5zd2VyLWJhbmstMSIgZGVmZXI+PC9zY3JpcHQ+CiAgICA8c2NyaXB0IHNyYz0iYW5zd2VyLWJhbmstbWF0Y2hlci5qcz92PTIwMjYxMDIzLWFuc3dlci1iYW5rLTEiIGRlZmVyPjwvc2NyaXB0PgogICAgPHNjcmlwdCBzcmM9ImFuc3dlci1iYW5rLWd1YXJkcy5qcz92PTIwMjYxMDIzLWFuc3dlci1iYW5rLTEiIGRlZmVyPjwvc2NyaXB0PgogICAgPHNjcmlwdCBzcmM9ImFuc3dlci1iYW5rLWxhbmUuanM/dj0yMDI2MTAyMy1hbnN3ZXItYmFuay0xIiBkZWZlcj48L3NjcmlwdD4K",
+          "end": 10028,
+          "previous_b64": "",
+          "start": 9707
+        }
+      ]
+    },
+    "pioneer-experience.js": {
+      "after_sha256": "b1f6f02625377c9f28850e88d707c4e9837c0d6c183510463b65448294cfb9cb",
+      "before_sha256": "229d4698dd9316af84047e295134636f77ed9965291c5444c03183fa54487593",
+      "spans": [
+        {
+          "current_b64": "ICAgICAgICAvLyBSZXZpZXdlZCBhbnN3ZXIgYmFuayAoc3RlcCAxKTogYSBwaW5uZWQgYmFuayBlbnRyeSBmb3IgdGhpcwogICAgICAgIC8vIGNhcmQgc2VydmVzIGxvY2FsbHk7IGFueXRoaW5nIGVsc2UgY29udGludWVzIHRvIHRoZSBleGlzdGluZwogICAgICAgIC8vIHJlc2VhcmNoIHBhdGggYmVsb3csIHVuY2hhbmdlZC4KICAgICAgICBpZiAod2luZG93LkZvY3VzQ2hyaXN0QW5zd2VyQmFua0xhbmUgJiYgdHlwZW9mIHdpbmRvdy5Gb2N1c0NocmlzdEFuc3dlckJhbmtMYW5lLnNlcnZlRGlzY2xvc3VyZSA9PT0gJ2Z1bmN0aW9uJwogICAgICAgICAgICAmJiB3aW5kb3cuRm9jdXNDaHJpc3RBbnN3ZXJCYW5rTGFuZS5zZXJ2ZURpc2Nsb3N1cmUoY29udHJvbCwgYWlSZXNwb25zZSkpIHJldHVybjsK",
+          "end": 71411,
+          "previous_b64": "",
+          "start": 71012
+        }
+      ]
+    },
+    "pioneers.html": {
+      "after_sha256": "b2b988d240a7d54b60b2d2701fde26f54fa6ca1b63261b3d7f7f9e89377a3bf5",
+      "before_sha256": "57fe21dc3a92dde1b5c51cddcf872cabe62d1e88a7ec259fc135afaa80cb8b81",
+      "spans": [
+        {
+          "current_b64": "ICAgIDxzY3JpcHQgc3JjPSJhbnN3ZXItYmFuay1kYXRhLmpzP3Y9MjAyNjEwMjMtYW5zd2VyLWJhbmstMSIgZGVmZXI+PC9zY3JpcHQ+CiAgICA8c2NyaXB0IHNyYz0iYW5zd2VyLWJhbmstbWF0Y2hlci5qcz92PTIwMjYxMDIzLWFuc3dlci1iYW5rLTEiIGRlZmVyPjwvc2NyaXB0PgogICAgPHNjcmlwdCBzcmM9ImFuc3dlci1iYW5rLWd1YXJkcy5qcz92PTIwMjYxMDIzLWFuc3dlci1iYW5rLTEiIGRlZmVyPjwvc2NyaXB0PgogICAgPHNjcmlwdCBzcmM9ImFuc3dlci1iYW5rLWxhbmUuanM/dj0yMDI2MTAyMy1hbnN3ZXItYmFuay0xIiBkZWZlcj48L3NjcmlwdD4K",
+          "end": 16586,
+          "previous_b64": "",
+          "start": 16265
+        }
+      ]
+    }
+  },
+  "layer": "answer_bank_successor",
+  "schema": 1
+}

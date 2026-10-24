@@ -809,6 +809,11 @@
 
     async function researchDisclosure(control, aiResponse, mappedTopic, kind) {
         if (aiResponse.dataset.focuschristResearchState === 'pending') return;
+        // Reviewed answer bank (step 1): a pinned bank entry for this
+        // card serves locally; anything else continues to the existing
+        // research path below, unchanged.
+        if (window.FocusChristAnswerBankLane && typeof window.FocusChristAnswerBankLane.serveDisclosure === 'function'
+            && window.FocusChristAnswerBankLane.serveDisclosure(control, aiResponse)) return;
         aiResponse.dataset.focuschristResearchState = 'pending';
         control.setAttribute('data-focuschrist-disclosure-mode', 'loading');
         aiResponse.setAttribute('aria-busy', 'true');
