@@ -11,6 +11,11 @@
  * - A reviewed-bank serve renders the served record's follow-up chips
  *   inside the answer's message node: the lane's chips, in record
  *   order, as buttons carrying the targets' canonical questions.
+ * - Directly above the chip group, inside the same message node, a
+ *   section heading reads exactly "Additional questions" (Wyatt,
+ *   2026-10-24: a group of question pills never renders without its
+ *   section label). The heading carries the page's sources-title
+ *   section-label treatment. A suggestion renders no heading.
  * - A chip tap submits the canonical question through the normal send
  *   path: a new user turn, a new pinned bank serve of the target
  *   record rendered in full through the display gate, and the target's
@@ -245,6 +250,16 @@ async function ask(question) {
     return node;
 }
 function chipGroups(scope) { return findByClass(scope, 'ask-followup-chips'); }
+function chipHeadings(scope) { return findByClass(scope, 'ask-followup-chips-title'); }
+function assertChipsHeading(node, group, label) {
+    const headings = chipHeadings(node);
+    assert.equal(headings.length, 1, label + ': the answer message must carry exactly one chips heading');
+    assert.equal(headings[0].textContent, 'Additional questions', label + ': the chips heading text must be exact');
+    assert.ok(hasClass(headings[0], 'sources-title'), label + ': the chips heading must carry the section-label treatment class');
+    const siblings = node.children;
+    assert.equal(siblings[siblings.indexOf(group) - 1], headings[0],
+        label + ': the heading must sit directly above the chip group');
+}
 
 (async () => {
     /* ---------- census: lane chips vs matcher chips ---------- */
@@ -292,6 +307,7 @@ function chipGroups(scope) { return findByClass(scope, 'ask-followup-chips'); }
     const groups = chipGroups(node);
     assert.equal(groups.length, 1, 'the answer message must carry exactly one follow-up chip group');
     assert.equal(groups[0].getAttribute('data-followup-for'), gtf.id, 'chip group must name the served record');
+    assertChipsHeading(node, groups[0], 'serve probe');
     const buttons = groups[0].children;
     assert.equal(buttons.length, gtfChips.length, 'one chip button per lane chip');
     buttons.forEach((button, i) => {
@@ -318,6 +334,7 @@ function chipGroups(scope) { return findByClass(scope, 'ask-followup-chips'); }
     const followGroups = chipGroups(followNode);
     assert.equal(followGroups.length, 1, 'the follow-up answer must carry its own chips (chaining)');
     assert.equal(followGroups[0].getAttribute('data-followup-for'), target.id, 'chained chips must belong to the follow-up record');
+    assertChipsHeading(followNode, followGroups[0], 'tap probe');
     console.log('PROBE PASS: chip tap submits through the send path and the follow-up answer renders in full with its own chips');
 
     /* ---------- composed probe: a suggestion renders no follow-up chips ---------- */
@@ -325,6 +342,7 @@ function chipGroups(scope) { return findByClass(scope, 'ask-followup-chips'); }
     assert.ok(sugNode.textContent.includes('I do not have a reviewed answer for that exact question yet'),
         'the suggestion probe must take the suggestion path');
     assert.equal(findByClass(box, 'ask-followup-chips').length, 0, 'a suggestion must render no follow-up chips');
+    assert.equal(chipHeadings(box).length, 0, 'a suggestion must render no chips heading');
     assert.ok(findByClass(box, 'ask-clarification-options').length >= 1, 'the suggestion options themselves must still render');
     console.log('PROBE PASS: suggestion renders its options and no follow-up chips');
 
@@ -339,6 +357,7 @@ function chipGroups(scope) { return findByClass(scope, 'ask-followup-chips'); }
     const sufGroups = chipGroups(sufNode);
     assert.equal(sufGroups.length, 1, 'the sensitive serve must render its follow-up chip group');
     assert.equal(sufGroups[0].getAttribute('data-followup-for'), suf.id, 'the sensitive chip group must name the served record');
+    assertChipsHeading(sufNode, sufGroups[0], 'sensitive probe');
     const sufButtons = sufGroups[0].children;
     assert.equal(sufButtons.length, sufChips.length, 'one chip button per lane chip on the sensitive serve');
     sufButtons.forEach((button, i) => {
@@ -348,5 +367,5 @@ function chipGroups(scope) { return findByClass(scope, 'ask-followup-chips'); }
     console.log('PROBE PASS: sensitive serve renders its answer with its own chips');
 
     assert.equal(fetchCalls, 0, 'no probe may reach the research Worker');
-    console.log('PASS: answer bank follow-up chips composed chain — serves render chips, taps chain through the send path, suggestions render none, and sensitive serves render their own chips.');
+    console.log('PASS: answer bank follow-up chips composed chain — serves render chips under an "Additional questions" heading, taps chain through the send path, suggestions render neither chips nor a heading, and sensitive serves render their own chips.');
 })().catch(error => { console.error(error); process.exitCode = 1; });
