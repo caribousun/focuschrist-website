@@ -135,7 +135,7 @@
         const subject = topic || art;
         if (generic) {
             const query = new URLSearchParams(window.location.search);
-            const explicitQuestion = query.get('q') || query.get('search-question');
+            const explicitQuestion = query.get('q') || query.get('search-question') || query.get('question');
             input.value = explicitQuestion && explicitQuestion.trim() ? explicitQuestion : 'Help me study ' + subject + '. What do the scriptures and official Church resources teach?';
             input.setAttribute('data-focuschrist-art-prefill', 'true');
             return;
@@ -153,7 +153,21 @@
         const study = !watch && !params.get('art') && ['Book of Mormon Evidences', 'Abrahamic Covenant'].includes(params.get('study')) ? params.get('study') : '';
         const generic = !params.get('art') && !watch && !study && (params.get('topic') || '').trim().slice(0, 180);
         const art = (params.get('art') || watch || study || generic).trim().slice(0, 180);
-        if (!art) return;
+        if (!art) {
+            // A standalone ?question= link (for example a study page's
+            // "Ask about this study" action) carries no artwork, Watch,
+            // study, or topic context. Honor it the way the generic branch
+            // honors q and search-question: prefill only, never submit.
+            const question = (params.get('question') || '').trim();
+            if (question) {
+                const input = document.getElementById('userInput');
+                if (input && !input.value.trim()) {
+                    input.value = question;
+                    input.setAttribute('data-focuschrist-art-prefill', 'true');
+                }
+            }
+            return;
+        }
         const topic = (params.get('topic') || art).trim().slice(0, 180);
         const returnUrl = generic ? safeTopicReturn(params.get('return')) : study ? safeStudyReturn(params.get('return'), study) : watch ? safeWatchReturn(params.get('return')) : safeReturnUrl(params.get('return'), art);
         ensureStyles();
