@@ -47,6 +47,9 @@ const REQUEST_BUDGET_MS = 60000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
 const OFFICIAL_FETCH_LIMIT_MS = 9000;
+const REVIEWED_PIONEER_FETCH_LIMIT_MS = 12000;
+const REVIEWED_PIONEER_RESPONSE_RESERVE_MS = 2000;
+const REVIEWED_PIONEER_REQUEST_LIMIT_MS = 24000;
 const OFFICIAL_HTML_BYTE_LIMIT = 1500000;
 const REQUEST_BODY_BYTE_LIMIT = 65536;
 const REQUEST_MESSAGE_LIMIT = 16;
@@ -1038,12 +1041,22 @@ async function fetchOfficialSource(candidate, question, deadline, counters = nul
       }
     }
   } catch (_cacheError) {}
+  // Only server-constructed, single-source reviewed Pioneer readings receive
+  // the extra retrieval time; their exact-source review never invokes an LLM.
+  const reviewedPioneer = candidate.pioneerDisclosure === true && candidate.reviewedSourceRequired === true;
+  const fetchAvailable = reviewedPioneer ? remainingBudget(deadline) - REVIEWED_PIONEER_RESPONSE_RESERVE_MS : available - 100;
+  if (reviewedPioneer && fetchAvailable < 300) {
+    recordOfficialFailure(counters, 'budget');
+    if (counters) counters.transportFailures = Number(counters.transportFailures || 0) + 1;
+    return null;
+  }
+  const fetchLimit = reviewedPioneer ? REVIEWED_PIONEER_FETCH_LIMIT_MS : OFFICIAL_FETCH_LIMIT_MS;
   if (counters) {
     counters.attempts += 1;
     counters.cacheMisses += 1;
   }
   const controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
-  const timer = controller ? setTimeout(() => controller.abort(), Math.max(200, Math.min(OFFICIAL_FETCH_LIMIT_MS, available - 100))) : null;
+  const timer = controller ? setTimeout(() => controller.abort(), Math.max(200, Math.min(fetchLimit, fetchAvailable))) : null;
   try {
     const response = await fetch(candidate.url, {
       redirect: 'manual',
@@ -2048,7 +2061,8 @@ function providerDiagnostic(result) {
 
 export default {
   async fetch(request, env) {
-    const deadline = Date.now() + REQUEST_BUDGET_MS;
+    const requestStartedAt = Date.now();
+    let deadline = requestStartedAt + REQUEST_BUDGET_MS;
     const localScriptures = createScriptureLibrary(scriptureCatalog, path => scriptureFetch(path, deadline));
     const origin = request.headers.get('Origin') || '';
     if (!ALLOWED_ORIGINS.has(origin)) return new Response('Origin not allowed', { status: 403 });
@@ -2076,6 +2090,7 @@ export default {
       return jsonResponse({ error: `Use no more than ${REQUEST_MESSAGE_LIMIT} conversation messages.` }, 400, origin, deadline, localScriptures);
     }
     const sanitized = sanitizePayload(payload || {});
+    if (sanitized.scope.pioneerTopicKey) deadline = Math.min(deadline, requestStartedAt + REVIEWED_PIONEER_REQUEST_LIMIT_MS);
     if (!sanitized.scope.question) return jsonResponse({ error: 'A user message is required' }, 400, origin, deadline, localScriptures);
     if (sanitized.scope.question.length > 1200) {
       return jsonResponse({ error: 'Please shorten the question to 1,200 characters or fewer.' }, 400, origin, deadline, localScriptures);
