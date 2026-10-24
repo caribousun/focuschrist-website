@@ -762,6 +762,55 @@
         box.appendChild(choices);
     }
 
+    function appendFollowUpChips(result, box, input, messageNode) {
+        // Reviewed follow-up chips (spec 3.5; addendum pattern P1,
+        // primary plus related): after a reviewed-bank serve, offer
+        // the served record's curated related questions as chips in
+        // the answer's message area. The chips come only from the
+        // bank lane's followUpChips() for the served record, which is
+        // also where the sensitive-record exclusion lives, so
+        // suggestions, other lanes, and a sensitive record's own
+        // serve render none, and no chip is invented here. A chip tap
+        // submits the canonical question through the normal send path
+        // (the same route the follow-up dock uses), so the follow-up
+        // passes the send-path safety evaluation, askV3, Step S
+        // inside the matcher, and the display gate exactly like
+        // typed text. Chip labels are the records' reviewed canonical
+        // questions; no heading or framing text is added.
+        if (!result || result.bankLocal !== true) return;
+        if (result.bankMode !== 'focuschrist-answer-bank' || result.bankProvenance !== 'reviewed-bank') return;
+        if (typeof result.bankRecordId !== 'string' || !result.bankRecordId) return;
+        const lane = window.FocusChristAnswerBankLane;
+        if (!lane || typeof lane.followUpChips !== 'function') return;
+        const chips = lane.followUpChips(result.bankRecordId);
+        if (!Array.isArray(chips) || !chips.length) return;
+        const group = document.createElement('div');
+        group.className = 'ask-clarification-options ask-followup-chips';
+        group.setAttribute('role', 'group');
+        group.setAttribute('aria-label', 'Follow-up questions');
+        group.setAttribute('data-followup-for', result.bankRecordId);
+        chips.forEach(function (chip) {
+            if (!chip || typeof chip.question !== 'string' || !chip.question) return;
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.className = 'ask-followup-button';
+            button.textContent = chip.question;
+            if (chip.record_id) button.setAttribute('data-followup-target', chip.record_id);
+            button.addEventListener('click', function () {
+                if (input.disabled) return;
+                input.value = chip.question;
+                if (typeof window.sendMessage === 'function') window.sendMessage();
+            });
+            group.appendChild(button);
+        });
+        if (!group.children.length) return;
+        const host = messageNode && messageNode.nodeType === 1
+            && typeof box.contains === 'function' && box.contains(messageNode)
+            ? messageNode : box;
+        host.appendChild(group);
+        box.scrollTop = box.scrollHeight;
+    }
+
     function loadingNode() {
         const node = document.createElement('div');
         node.className = 'loading';
@@ -804,8 +853,9 @@
                 if (requestId !== askRequestSerial) return;
                 if (loading.isConnected) loading.remove();
                 remember(question, result.answer, result);
-                window.addMessage(result.answer, false, result.sources, reviewedBankServeMarker(result));
+                const answerNode = window.addMessage(result.answer, false, result.sources, reviewedBankServeMarker(result));
                 appendClarificationOptions(result, box, input);
+                appendFollowUpChips(result, box, input, answerNode);
             } catch (error) {
                 if (requestId !== askRequestSerial) return;
                 console.error('focusChrist Ask v3 error:', error);

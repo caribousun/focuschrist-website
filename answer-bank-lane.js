@@ -135,6 +135,32 @@
         return null;
     }
 
+    /* Follow-up chips for a served record (spec 3.5; addendum
+     * pattern P1, primary plus related): the served record's reviewed
+     * `related` targets as canonical questions, in the record's own
+     * order, taken only from the matcher's followUpChips() over the
+     * pinned loaded bank, so a target the load excluded never
+     * appears. A sensitive record's own serve returns its chips
+     * like any other serve: spec 4.4's stated interactions are
+     * exhaustive and remove no adjunct from the served record
+     * itself, and the addendum's sensitive exclusion (2.3 rule 3)
+     * is scoped to answer components, barring a sensitive record
+     * from another artifact's composition, not from its own P1
+     * adjunct. A sensitive record's canonical question may also
+     * appear as a chip target in other records' lists (spec 4.4),
+     * where a tap is the visitor's deliberate new request through
+     * Step S. The list is capped at five, the top of the range
+     * spec 3.5 drafts `related` lists in (typically 2 to 5); the
+     * shipped bank's longest list is four, so the cap binds
+     * nothing today and bounds future data. */
+    var FOLLOW_UP_CHIP_LIMIT = 5;
+    function followUpChips(recordId) {
+        if (typeof recordId !== 'string' || !recordId) return [];
+        var record = loaded.bank.byId.get(recordId);
+        if (!record) return [];
+        return matcher.followUpChips(recordId).slice(0, FOLLOW_UP_CHIP_LIMIT);
+    }
+
     /* Pioneer timeline card disclosure: Step 0 item lookup by the
      * card's stable data-topic key, rendered into the card's existing
      * .ai-response container with the same paragraph, source-link, and
@@ -197,6 +223,7 @@
 
     global.FocusChristAnswerBankLane = Object.freeze({
         answer: answer,
+        followUpChips: followUpChips,
         serveDisclosure: serveDisclosure,
         loadReport: global.FocusChristAnswerBankLoadReport
     });
