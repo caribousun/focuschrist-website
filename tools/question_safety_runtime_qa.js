@@ -15,6 +15,9 @@ assert(safety && typeof safety.evaluate === 'function', 'shared question-safety 
 
 for (const specimen of [
     'This is f.u.c.k.i.n.g ridiculous',
+    'This is f-u-c-k ridiculous',
+    'sh.it happens every time',
+    'fuuuck this noise',
     'Can you provide pornography?',
     'Why are Catholics stupid?',
     'All Muslims are inferior',
@@ -36,7 +39,10 @@ for (const specimen of [
     'How can Christians and Muslims show respect for one another?',
     'How did harmful political rhetoric affect immigrants historically?',
     'What does the Bible teach about chastity?',
-    'How can I forgive someone who called my faith evil?'
+    'How can I forgive someone who called my faith evil?',
+    'Does the Church publish its finances?',
+    'How can I forgive someone who has hurt me deeply?',
+    'How do I forgive someone who hurt me?'
 ]) {
     const result = safety.evaluate(specimen);
     assert(result.allowed === true,
@@ -45,7 +51,10 @@ for (const specimen of [
 
 for (const specimen of [
     'I am being sexually abused and need help',
-    'Someone is threatening me and I may be in immediate danger'
+    'Someone is threatening me and I may be in immediate danger',
+    'He is hurting me and I do not know how to forgive him',
+    'He threatened to hurt me; should I forgive him?',
+    'He hurt me last night'
 ]) {
     const result = safety.evaluate(specimen);
     assert(result.allowed === false && result.kind === 'urgent-safety'

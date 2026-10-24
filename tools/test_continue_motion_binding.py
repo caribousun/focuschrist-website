@@ -18,7 +18,8 @@ class MotionBindingTests(unittest.TestCase):
             from commission_hand_successor import restore as restore_hand
             from answer_bank_successor import restore as restore_bank
             from display_gate_successor import restore as restore_gate
-            self.assertEqual(gate.sha(restore_world(name,settings.restore(name,restore_close(name,restore_hand(name,restore_bank(name,restore_gate(name,current))))))),row['after_sha256'],name)
+            from evaluator_corrections_successor import restore as restore_eval
+            self.assertEqual(gate.sha(restore_world(name,settings.restore(name,restore_close(name,restore_hand(name,restore_bank(name,restore_gate(name,restore_eval(name,current)))))))),row['after_sha256'],name)
             self.assertEqual(gate.sha(gate.restore(name,current)),row['before_sha256'],name)
 
     def test_exact_successors_and_unknown_input_rejected(self):
