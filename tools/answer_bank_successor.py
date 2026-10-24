@@ -31,7 +31,7 @@ AFTER = {
     "pioneers.html": "b2b988d240a7d54b60b2d2701fde26f54fa6ca1b63261b3d7f7f9e89377a3bf5",
     "pioneer-experience.js": "b1f6f02625377c9f28850e88d707c4e9837c0d6c183510463b65448294cfb9cb",
 }
-APPROVED_REVIEWS = None  # Only after actual finished Jeff reviews of this registration (registration-source and rendered scopes).
+APPROVED_REVIEWS = "ed646f1ccb999eb71433619bfa6d1d4ce4dbf3483eede4dfe4d487fd02c8c9a0"  # Finished Jeff reviews of this registration: J-2026-10-23-048 (registration-source) and J-2026-10-23-049 (rendered).
 
 
 def sha(raw):

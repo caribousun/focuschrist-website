@@ -6,9 +6,10 @@ full chain reproduces the motion map's before pin, a duplicated
 insertion, a truncated insertion, one altered token inside the
 insertion, one altered older-layer token, and an unrelated append are
 all rejected. The shipped record test asserts the layer's real state
-truthfully: while this file's completed-scope fixtures pass, the real
-reviews.json stays PENDING and the module pin stays None until Jeff's
-actual registration and rendered reviews land.
+truthfully: Jeff's finished registration-source review (J-2026-10-23-048)
+and rendered review (J-2026-10-23-049) are recorded in the real
+reviews.json, its status is COMPLETE, and the module pin equals the
+record's canonical hash.
 """
 import base64
 import copy
@@ -167,18 +168,59 @@ class AnswerBankSuccessorTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "PENDING"):
                 g.check(self.root)
 
-    def test_shipped_record_is_truthfully_pending(self):
+    def test_shipped_record_is_truthfully_complete(self):
         record = json.loads((g.ROOT / g.REVIEWS).read_text(encoding="utf-8"))
-        self.assertEqual(record.get("status"), "PENDING")
-        self.assertNotIn("registration_review", record)
-        self.assertNotIn("rendered_evidence", record)
-        self.assertNotIn("rendered_review", record)
+        self.assertEqual(record.get("status"), "COMPLETE")
         self.assertEqual(record.get("required_reviewers"), ["Jeff"])
         self.assertEqual(record.get("source_sha256"), REAL_SOURCE_SHA)
         self.assertEqual(record.get("files"), REAL_AFTER)
+        registration = record.get("registration_review")
+        self.assertIsInstance(registration, dict)
+        self.assertEqual(registration.get("reviewer"), "Jeff")
+        self.assertEqual(registration.get("review_id"), "J-2026-10-23-048")
+        self.assertEqual(registration.get("scope"), "registration-source")
+        self.assertEqual(registration.get("decision"), "CONCUR")
+        self.assertIs(registration.get("finished_pixels"), False)
+        self.assertIs(registration.get("finished_behavior"), True)
+        self.assertEqual(registration.get("files"), REAL_AFTER)
+        item = registration["evidence"]
+        self.assertEqual(item["path"], "docs/answer-bank-successor/J-2026-10-23-048-step1-answer-bank-successor-registration-review.json")
+        self.assertEqual(g.sha((g.ROOT / item["path"]).read_bytes()), item["sha256"])
+        evidence = record.get("rendered_evidence")
+        self.assertIsInstance(evidence, dict)
+        self.assertEqual(evidence.get("status"), "COLLECTED")
+        self.assertEqual(evidence.get("collected_by"), "Merlin worker")
+        self.assertEqual(evidence.get("pages_sha256"), REAL_AFTER)
+        captures = evidence.get("captures")
+        self.assertEqual(len(captures), 12)
+        for cap in captures:
+            self.assertEqual(set(cap), {"height", "media", "path", "screen", "sha256", "width"})
+            decoded = base64.b64decode((g.ROOT / cap["path"]).read_bytes(), validate=False)
+            self.assertEqual(g.sha(decoded), cap["sha256"])
+        observations = evidence.get("observations")
+        self.assertEqual(observations["path"], g.RENDERED_DIR + "/observations.json")
+        self.assertEqual(g.sha((g.ROOT / observations["path"]).read_bytes()), observations["sha256"])
+        review = record.get("rendered_review")
+        self.assertIsInstance(review, dict)
+        self.assertEqual(review.get("status"), "FINISHED")
+        self.assertEqual(review.get("reviewer"), "Jeff")
+        self.assertEqual(review.get("review_id"), "J-2026-10-23-049")
+        self.assertEqual(review.get("scope"), "rendered-review")
+        self.assertEqual(review.get("decision"), "CONCUR")
+        self.assertIs(review.get("finished_pixels"), True)
+        self.assertIs(review.get("finished_behavior"), True)
+        self.assertEqual(review.get("files"), REAL_AFTER)
+        self.assertEqual(review.get("capture_sha256"), [cap["sha256"] for cap in captures])
+        item = review["evidence"]
+        self.assertEqual(item["path"], "docs/answer-bank-successor/J-2026-10-23-049-step1-answer-bank-successor-rendered-review.json")
+        self.assertEqual(g.sha((g.ROOT / item["path"]).read_bytes()), item["sha256"])
         source = (g.ROOT / "tools/answer_bank_successor.py").read_text(encoding="utf-8")
-        self.assertIn("APPROVED_REVIEWS = None", source)
+        self.assertIn('APPROVED_REVIEWS = "' + g.canonical(record) + '"', source)
+        self.assertNotIn("APPROVED_REVIEWS = None", source)
         self.assertIn('SOURCE_SHA = "' + REAL_SOURCE_SHA + '"', source)
+        with patch.multiple(g, BEFORE=REAL_BEFORE, AFTER=REAL_AFTER, SOURCE_SHA=REAL_SOURCE_SHA,
+                            APPROVED_REVIEWS=g.canonical(record)):
+            self.assertEqual(g.check(g.ROOT)["status"], "ANSWER_BANK_SUCCESSOR_EVIDENCE_PASS")
 
     def _real_tree(self):
         root = Path(self.temp.name) / "real"
