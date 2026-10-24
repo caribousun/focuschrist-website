@@ -1,3 +1,4 @@
+import { recordOfficialFailure, mergeOfficialFailureDiagnostics } from './official-fetch-diagnostics.js';
 import { fingerprintReviewedParagraphs, verifyReviewedReading, REVIEWED_SOURCE_EXTRACTION_VERSION } from './reviewed-readings.js';
 import { SELF_HELP_SUPPORT_POLICY, reviewedSupportKey, REVIEWED_SUPPORT_SOURCES } from './self-help-support.js';
 import { needsMissingSubjectClarification } from './missing-subject.js';
@@ -1001,6 +1002,7 @@ async function fetchOfficialSource(candidate, question, deadline, counters = nul
   if (!isAllowedOfficialFetchUrl(candidate.url, candidate.deterministic === true, candidate.researched === true)) return null;
   const available = remainingBudget(deadline);
   if (available < 300) {
+    recordOfficialFailure(counters, 'budget');
     if (counters) counters.transportFailures = Number(counters.transportFailures || 0) + 1;
     return null;
   }
@@ -1049,11 +1051,12 @@ async function fetchOfficialSource(candidate, question, deadline, counters = nul
       signal: controller ? controller.signal : undefined,
     });
     if (!response.ok || response.status >= 300) {
+      recordOfficialFailure(counters, response.status === 429 ? 'http429' : response.status >= 500 ? 'http5xx' : 'httpOther');
       if (counters && (response.status === 429 || response.status >= 500)) counters.transportFailures = Number(counters.transportFailures || 0) + 1;
       return null;
     }
     const contentType = String(response.headers.get('content-type') || '').toLowerCase();
-    if (!contentType.includes('text/html')) return null;
+    if (!contentType.includes('text/html')) { recordOfficialFailure(counters, 'contentType'); return null; }
     const html = await readBoundedText(response, OFFICIAL_HTML_BYTE_LIMIT);
     const titleMatch = html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i) || html.match(/<title\b[^>]*>([\s\S]*?)<\/title>/i);
     const title = candidate.researched && titleMatch
@@ -1062,7 +1065,7 @@ async function fetchOfficialSource(candidate, question, deadline, counters = nul
     const paragraphs = extractVisibleParagraphs(html, candidate);
     const reviewedSnapshot = candidate.reviewedSourceRequired ? await fingerprintReviewedParagraphs(candidate.url, paragraphs) : null;
     const content = relevantParagraphText(paragraphs, question, candidate);
-    if (!content || !evidenceAdmissionSufficient(candidate, content, question)) return null;
+    if (!content || !evidenceAdmissionSufficient(candidate, content, question)) { recordOfficialFailure(counters, 'noEvidence'); return null; }
     if (cache && cacheKey) {
       try {
         await cache.put(cacheKey, new Response(JSON.stringify({ title, paragraphs: compactParagraphPack(paragraphs, candidate, question), ...(reviewedSnapshot ? {reviewedParagraphs:reviewedSnapshot.paragraphs,sourceSha256:reviewedSnapshot.sourceSha256,sourceExtractionVersion:reviewedSnapshot.extractionVersion} : {}) }), {
@@ -1079,6 +1082,7 @@ async function fetchOfficialSource(candidate, question, deadline, counters = nul
     }
     return source;
   } catch (_error) {
+    recordOfficialFailure(counters, String(_error?.message || '') === 'official_html_too_large' ? 'oversize' : controller?.signal.aborted || _error?.name === 'AbortError' || _error?.name === 'TimeoutError' ? 'timeout' : 'network');
     if (counters && String(_error?.message || '') !== 'official_html_too_large') counters.transportFailures = Number(counters.transportFailures || 0) + 1;
     return null;
   } finally {
@@ -1098,6 +1102,7 @@ async function hydrateResearchEvidence(sources, question, deadline, diagnostic =
     return { ...result, sourceClass: isOfficialChurchSource(result) ? 'official-church' : 'attributed-lds-study' };
   }));
   if (diagnostic) {
+    mergeOfficialFailureDiagnostics(diagnostic, counters);
     diagnostic.focuschrist_source_transport_failures = Number(diagnostic.focuschrist_source_transport_failures || 0) + Number(counters.transportFailures || 0);
     diagnostic.focuschrist_official_fetch_calls = Number(diagnostic.focuschrist_official_fetch_calls || 0) + counters.attempts;
     diagnostic.focuschrist_official_cache_hits = Number(diagnostic.focuschrist_official_cache_hits || 0) + counters.cacheHits;
@@ -1154,6 +1159,7 @@ async function retrieveIndexedChurchEvidence(question, page, deadline, pioneerTo
     cacheHits: counters.cacheHits,
     cacheMisses: counters.cacheMisses,
     transportFailures: Number(counters.transportFailures || 0),
+    officialFailureClasses: counters.officialFailureClasses || {},
     deterministicScripture: Boolean(deterministicScripture),
     deterministicHistoryTopic: Boolean(deterministicHistoryTopic),
     namedGospelTopic: Boolean(namedGospelTopic),
@@ -2257,6 +2263,7 @@ export default {
         retrievalDiagnostic.focuschrist_official_fetch_calls = counters.attempts;
         retrievalDiagnostic.focuschrist_official_cache_hits = counters.cacheHits;
         retrievalDiagnostic.focuschrist_official_cache_misses = counters.cacheMisses;
+        mergeOfficialFailureDiagnostics(retrievalDiagnostic, counters);
         retrievalDiagnostic.focuschrist_source_transport_failures = Number(retrievalDiagnostic.focuschrist_source_transport_failures || 0) + Number(counters.transportFailures || 0);
       }
 
@@ -2271,6 +2278,7 @@ export default {
         retrievalDiagnostic.focuschrist_official_fetch_calls = indexed.fetchCalls;
         retrievalDiagnostic.focuschrist_official_cache_hits = indexed.cacheHits;
         retrievalDiagnostic.focuschrist_official_cache_misses = indexed.cacheMisses;
+        mergeOfficialFailureDiagnostics(retrievalDiagnostic, indexed);
         retrievalDiagnostic.focuschrist_source_transport_failures = Number(retrievalDiagnostic.focuschrist_source_transport_failures || 0) + Number(indexed.transportFailures || 0);
         if (indexed.evidence.length) {
           evidence = indexed.evidence;
