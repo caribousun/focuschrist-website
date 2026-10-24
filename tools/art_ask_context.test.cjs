@@ -68,6 +68,13 @@ test('Emma topic returns to her reflection without submitting and rejects unsafe
   assert.deepEqual(d.actions,{submit:0,fetch:0,send:0});d.window.close();
  }
 });
+test('standalone question parameter prefills the composer with no context and no submit',()=>{
+ const dom=open('question=What+do+official+Church+sources+teach+about+the+1978+revelation%3F');const v=values(dom);
+ assert.equal(v.value,'What do official Church sources teach about the 1978 revelation?');assert.equal(v.context,undefined);assert.equal(v.float,false);
+ assert.deepEqual(dom.actions,{submit:0,fetch:0,send:0});dom.window.close();
+ const drafted=open('question=A+composed+question','Typed draft');assert.equal(values(drafted).value,'Typed draft');drafted.window.close();
+ const generic=open('topic=Faith&question=My+question');assert.equal(values(generic).value,'My question');generic.window.close();
+});
 test('existing artwork, Watch, evidences and covenant contracts remain intact',()=>{
  for(const [q,label,pattern,float] of [['art=The+Sower&topic=Faith','Return to this artwork',/artwork "The Sower"/,true],['watch=Prayer&topic=Prayer','Return to Watch study',/What do the scriptures/,false],['study=Book+of+Mormon+Evidences&topic=Witnesses','Return to Evidences study',/scholarly interpretations/,false],['study=Abrahamic+Covenant&topic=Abraham','Return to Covenant study',/Help me understand/,false]]){const d=open(q);const v=values(d);assert.equal(v.label,label);assert.match(v.value,pattern);assert.equal(v.float,float);d.window.close();}
 });
