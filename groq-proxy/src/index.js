@@ -208,12 +208,13 @@ function compactProfanityHit(normalized) {
 // "someone who hurt me"): that is the aftermath the forgiveness
 // teaching addresses. Every other urgent form is unchanged. "hurting
 // me" stays a claim, a main-clause disclosure ("He hurt me last
-// night") stays a claim, and any stated future or threatened harm
-// ("going to hurt me", "threatened to hurt me") stays a claim.
+// night") stays a claim, and any stated future, threatened, or
+// intended harm ("going to hurt me", "threatened to hurt me",
+// "threatens to hurt me", "promised to hurt me") stays a claim.
 function pastHurtForgivenessRelease(normalized) {
   if (!/\bforgiv\w*\b/.test(normalized)) return false;
   if (!/(?:\bhas hurt me\b|\bhad hurt me\b|\bwho hurt me\b|\bthat hurt me\b)/.test(normalized)) return false;
-  if (/\b(?:going to|about to|will|wants? to|threatened to|threatening to|trying to) hurt me\b/.test(normalized)) return false;
+  if (/\b(?:going to|about to|will|wants? to|threatened to|threatening to|threatens to|plans to|intends to|promised to|trying to) hurt me\b/.test(normalized)) return false;
   return true;
 }
 
