@@ -767,16 +767,19 @@
         // primary plus related): after a reviewed-bank serve, offer
         // the served record's curated related questions as chips in
         // the answer's message area. The chips come only from the
-        // bank lane's followUpChips() for the served record, which is
-        // also where the sensitive-record exclusion lives, so
-        // suggestions, other lanes, and a sensitive record's own
-        // serve render none, and no chip is invented here. A chip tap
+        // bank lane's followUpChips() for the served record, so
+        // suggestions and other lanes render none, and no chip is
+        // invented here. A chip tap
         // submits the canonical question through the normal send path
         // (the same route the follow-up dock uses), so the follow-up
         // passes the send-path safety evaluation, askV3, Step S
         // inside the matcher, and the display gate exactly like
         // typed text. Chip labels are the records' reviewed canonical
-        // questions; no heading or framing text is added.
+        // questions. Directly above the group, a small section
+        // heading reads "Additional questions" (Wyatt, 2026-10-24):
+        // a group of question pills never renders without its
+        // section label. The heading reuses the page's established
+        // sources-title section-label treatment.
         if (!result || result.bankLocal !== true) return;
         if (result.bankMode !== 'focuschrist-answer-bank' || result.bankProvenance !== 'reviewed-bank') return;
         if (typeof result.bankRecordId !== 'string' || !result.bankRecordId) return;
@@ -807,6 +810,10 @@
         const host = messageNode && messageNode.nodeType === 1
             && typeof box.contains === 'function' && box.contains(messageNode)
             ? messageNode : box;
+        const heading = document.createElement('div');
+        heading.className = 'sources-title ask-followup-chips-title';
+        heading.textContent = 'Additional questions';
+        host.appendChild(heading);
         host.appendChild(group);
         box.scrollTop = box.scrollHeight;
     }
