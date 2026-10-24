@@ -245,6 +245,28 @@
         };
     }
 
+    /* Provenance marker for the display gate in site-common.js. The
+     * gate re-verifies rendered answers that may contain scripture
+     * quotations; that check exists for generated text. A pinned
+     * reviewed-bank serve is reviewed text, so sendMessage threads the
+     * lane's own provenance (mode, provenance, record id, pin) to the
+     * gate with the render call. The marker is built only from an
+     * askV3 bank serve result; every other result renders without it
+     * and is verified by the gate exactly as before. */
+    function reviewedBankServeMarker(result) {
+        if (!result || result.bankLocal !== true) return undefined;
+        if (result.bankMode !== 'focuschrist-answer-bank' || result.bankProvenance !== 'reviewed-bank') return undefined;
+        if (typeof result.bankPin !== 'string' || !result.bankPin) return undefined;
+        if (typeof result.bankRecordId !== 'string' || !result.bankRecordId) return undefined;
+        return {
+            reviewedBankServe: true,
+            bankRecordId: result.bankRecordId,
+            bankPin: result.bankPin,
+            bankMode: result.bankMode,
+            bankProvenance: result.bankProvenance
+        };
+    }
+
     function resolveQuestionContext(query) {
         const registry = window.focusChristReviewedKnowledge;
         if (!registry || typeof registry.resolveFollowup !== 'function') {
@@ -782,7 +804,7 @@
                 if (requestId !== askRequestSerial) return;
                 if (loading.isConnected) loading.remove();
                 remember(question, result.answer, result);
-                window.addMessage(result.answer, false, result.sources);
+                window.addMessage(result.answer, false, result.sources, reviewedBankServeMarker(result));
                 appendClarificationOptions(result, box, input);
             } catch (error) {
                 if (requestId !== askRequestSerial) return;

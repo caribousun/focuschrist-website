@@ -1,0 +1,30 @@
+{
+  "files": {
+    "site-common.js": {
+      "after_sha256": "9090c0bf19a4093f881bf0d1f9f95236ec1db8d61a7072251d807f5c9ce3a041",
+      "before_sha256": "4a7e22262e1a62e9b9e119cc83b70f02f6fc2902a935d03ffec77f67333911a9",
+      "spans": [
+        {
+          "current_b64": "ICAgIHdpbmRvdy5mb2N1c0NocmlzdFZlcmlmeVNjcmlwdHVyZUFuc3dlciA9IGFzeW5jIGZ1bmN0aW9uICh0ZXh0LCBzb3VyY2VzLCBleHRyYSkgewogICAgICAgIGlmIChpc1Bpbm5lZFJldmlld2VkQmFua1NlcnZlKGV4dHJhKSkgcmV0dXJuIHtvazp0cnVlLGFuc3dlcjpTdHJpbmcodGV4dCB8fCAnJyl9Owo=",
+          "end": 60870,
+          "previous_b64": "ICAgIHdpbmRvdy5mb2N1c0NocmlzdFZlcmlmeVNjcmlwdHVyZUFuc3dlciA9IGFzeW5jIGZ1bmN0aW9uICh0ZXh0LCBzb3VyY2VzKSB7Cg==",
+          "start": 60694
+        },
+        {
+          "current_b64": "ICAgIGZ1bmN0aW9uIGlzUGlubmVkUmV2aWV3ZWRCYW5rU2VydmUoZXh0cmEpIHsKICAgICAgICAvLyBUaGUgc2NyaXB0dXJlIGNoZWNrIGFib3ZlIGV4aXN0cyBmb3IgZ2VuZXJhdGVkIHRleHQuIEEgcGlubmVkCiAgICAgICAgLy8gcmV2aWV3ZWQtYmFuayBzZXJ2ZSBpcyByZXZpZXdlZCB0ZXh0IHdob3NlIHdob2xlLWVudHJ5IHBpbiB0aGUKICAgICAgICAvLyBhbnN3ZXIgYmFuayBsYW5lIHZlcmlmaWVkIGJlZm9yZSBzZXJ2aW5nLCBzbyB0aGUgY2hlY2sgZG9lcwogICAgICAgIC8vIG5vdCBhcHBseSB0byBpdC4gVGhlIGV4ZW1wdGlvbiBrZXlzIG9ubHkgb24gdGhlIGxhbmUncyBvd24KICAgICAgICAvLyBwcm92ZW5hbmNlIGZpZWxkcyBjYXJyaWVkIGZyb20gdGhlIHNlcnZlIHJlc3VsdCAobW9kZSwKICAgICAgICAvLyBwcm92ZW5hbmNlLCByZWNvcmQgaWQsIHBpbik7IGV2ZXJ5IG90aGVyIGFuc3dlciBpcyBjaGVja2VkCiAgICAgICAgLy8gZXhhY3RseSBhcyBiZWZvcmUuCiAgICAgICAgcmV0dXJuICEhZXh0cmEKICAgICAgICAgICAgJiYgZXh0cmEucmV2aWV3ZWRCYW5rU2VydmUgPT09IHRydWUKICAgICAgICAgICAgJiYgZXh0cmEuYmFua01vZGUgPT09ICdmb2N1c2NocmlzdC1hbnN3ZXItYmFuaycKICAgICAgICAgICAgJiYgZXh0cmEuYmFua1Byb3ZlbmFuY2UgPT09ICdyZXZpZXdlZC1iYW5rJwogICAgICAgICAgICAmJiB0eXBlb2YgZXh0cmEuYmFua1JlY29yZElkID09PSAnc3RyaW5nJyAmJiBleHRyYS5iYW5rUmVjb3JkSWQubGVuZ3RoID4gMAogICAgICAgICAgICAmJiB0eXBlb2YgZXh0cmEuYmFua1BpbiA9PT0gJ3N0cmluZycgJiYgZXh0cmEuYmFua1Bpbi5sZW5ndGggPiAwOwogICAgfQo=",
+          "end": 62287,
+          "previous_b64": "",
+          "start": 61427
+        },
+        {
+          "current_b64": "ICAgICAgICAgICAgd2luZG93LmZvY3VzQ2hyaXN0VmVyaWZ5U2NyaXB0dXJlQW5zd2VyKHRleHQsIHNvdXJjZXMsIGV4dHJhKS50aGVuKHJlc3VsdCA9PiB7Cg==",
+          "end": 63162,
+          "previous_b64": "ICAgICAgICAgICAgd2luZG93LmZvY3VzQ2hyaXN0VmVyaWZ5U2NyaXB0dXJlQW5zd2VyKHRleHQsIHNvdXJjZXMpLnRoZW4ocmVzdWx0ID0+IHsK",
+          "start": 63071
+        }
+      ]
+    }
+  },
+  "layer": "display_gate_successor",
+  "schema": 1
+}

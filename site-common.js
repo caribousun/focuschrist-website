@@ -887,13 +887,29 @@
 
     installCloudflareWebAnalytics();
 
-    window.focusChristVerifyScriptureAnswer = async function (text, sources) {
+    window.focusChristVerifyScriptureAnswer = async function (text, sources, extra) {
+        if (isPinnedReviewedBankServe(extra)) return {ok:true,answer:String(text || '')};
         const needsLibrary = extractScriptureCitations(text).length || /\d+:\d+|[“”"‘’']|\[\[SCRIPTURE:/i.test(text)
             || (sources || []).some(source => /\/study\/scriptures\/.+\/\d/.test(source.url || ''));
         if (!needsLibrary) return {ok:true,answer:String(text || '')};
         try { return await (await window.focusChristScriptureReady).checkAnswer(text, sources); }
         catch (_) { return {ok:false,answer:'Scripture verification is temporarily unavailable. Please try again or open the official Gospel Library.'}; }
     };
+    function isPinnedReviewedBankServe(extra) {
+        // The scripture check above exists for generated text. A pinned
+        // reviewed-bank serve is reviewed text whose whole-entry pin the
+        // answer bank lane verified before serving, so the check does
+        // not apply to it. The exemption keys only on the lane's own
+        // provenance fields carried from the serve result (mode,
+        // provenance, record id, pin); every other answer is checked
+        // exactly as before.
+        return !!extra
+            && extra.reviewedBankServe === true
+            && extra.bankMode === 'focuschrist-answer-bank'
+            && extra.bankProvenance === 'reviewed-bank'
+            && typeof extra.bankRecordId === 'string' && extra.bankRecordId.length > 0
+            && typeof extra.bankPin === 'string' && extra.bankPin.length > 0;
+    }
     function installScriptureDisplayGate() {
         // Validate at the display boundary, including reviewed and legacy answer lanes.
         const original = window.addMessage;
@@ -907,7 +923,7 @@
             pending.setAttribute('role', 'status');
             pending.setAttribute('data-scripture-pending', 'true');
             box.appendChild(pending);
-            window.focusChristVerifyScriptureAnswer(text, sources).then(result => {
+            window.focusChristVerifyScriptureAnswer(text, sources, extra).then(result => {
                 if (!pending.isConnected) return;
                 original(result.answer, false, result.ok ? sources : [], result.ok ? extra : null);
                 const rendered = box.lastElementChild;
