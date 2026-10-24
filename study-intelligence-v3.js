@@ -205,6 +205,46 @@
         });
     }
 
+    function bankKnowledgeReference(query) {
+        // Reviewed answer bank (step 1): consulted only on pages that
+        // load the bank lane. The lane runs the production safety
+        // evaluator as Step S inside the matcher; a serve is the pinned
+        // reviewed record, a suggestion set stays a suggestion, and any
+        // other outcome returns null so the existing lanes run unchanged.
+        const lane = window.FocusChristAnswerBankLane;
+        if (!lane || typeof lane.answer !== 'function') return null;
+        const result = lane.answer({
+            question_text: query,
+            profile: currentMode() === 'pioneers' ? 'pioneers' : 'ask',
+            history: recentHistory()
+        });
+        if (!result) return null;
+        if (result.status === 'suggestion') {
+            return {
+                suggestion: true,
+                answer: 'I do not have a reviewed answer for that exact question yet. One of these reviewed topics may be close:',
+                options: (result.suggestions || []).map(function (item) {
+                    return { label: item.question, question: item.question };
+                }),
+                bankMode: result.mode,
+                bankReason: result.reason
+            };
+        }
+        if (result.status !== 'serve') return null;
+        return {
+            answer: result.answer,
+            sources: result.sources,
+            localMatch: result.record_id,
+            bankLocal: true,
+            bankRecordId: result.record_id,
+            bankPin: result.pin,
+            bankMode: result.mode,
+            bankProvenance: result.provenance,
+            bankLayer: result.layer,
+            canonicalQuestion: result.canonicalQuestion
+        };
+    }
+
     function resolveQuestionContext(query) {
         const registry = window.focusChristReviewedKnowledge;
         if (!registry || typeof registry.resolveFollowup !== 'function') {
@@ -534,6 +574,34 @@
         const groundedLocalReference = localReference.found && localReference.verified
             ? localReference
             : { found: false, answer: '', sources: [], verified: false };
+        // The reviewed answer bank is the first of the local answer
+        // lanes (spec 5.1 dual-lane order): it serves only pinned
+        // reviewed records, renders similarity outcomes as suggestions,
+        // and otherwise leaves the lanes below exactly as they were.
+        const bankReference = allowContextualLocalMatch
+            ? bankKnowledgeReference(effectiveQuery)
+            : null;
+        if (bankReference && bankReference.suggestion) {
+            return {
+                answer: bankReference.answer,
+                sources: [],
+                clarification: true,
+                clarificationOptions: bankReference.options,
+                profile: profile,
+                bankSuggestion: true,
+                contextResolved: contextResolution.resolved === true,
+                contextEntryId: contextResolution.entryId || null,
+                contextQuestion: contextResolution.contextQuestion || null
+            };
+        }
+        if (bankReference) {
+            return Object.assign({}, bankReference, {
+                profile: profile,
+                contextResolved: contextResolution.resolved === true,
+                contextEntryId: bankReference.bankRecordId,
+                contextQuestion: bankReference.canonicalQuestion || null
+            });
+        }
         const verifiedContext = profile === 'faith-study' || profile === 'pioneer-study' ? verifiedContextFor(effectiveQuery) : '';
 
         // The shared reviewed registry is the first answer lane for the free-form

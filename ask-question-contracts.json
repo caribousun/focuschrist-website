@@ -127,6 +127,24 @@
         "How did Joseph Smith’s letters from Liberty Jail become Doctrine and Covenants 121–123?",
         "What can death masks, portraits, and historical descriptions tell us about Joseph Smith’s appearance, and what remains uncertain?"
       ]
+    },
+    "answer_bank": {
+      "source": "answer-bank-data.js (generated from bank-dataset-v3.json and assignments-v2.json)",
+      "final_owner": "answer-bank-lane.js:window.focusChristAnswerBankLane",
+      "lane": "focuschrist-answer-bank",
+      "mode": "focuschrist-answer-bank",
+      "provenance": "reviewed-bank",
+      "records": 168,
+      "question_records": 139,
+      "item_records": 29,
+      "surfaces": [
+        "ask.html free-form through study-intelligence-v3.js askV3 (first local lane, before reviewed-ask-knowledge.js)",
+        "pioneers.html timeline card disclosure through pioneer-experience.js researchDisclosure (Step 0 item lookup by data-topic)"
+      ],
+      "safety": "Step S is the production evaluator window.focusChristQuestionSafety.evaluate (site-common.js), injected into the matcher; no serve occurs for any non-allowed outcome",
+      "integrity": "Every record carries a whole-entry sha256 pin verified at load by loadBank; unverified records are excluded fail-closed. Bank serves never set focuschrist_source_integrity_verified.",
+      "layer3": "Suggestion-only; similarity never serves directly in this release",
+      "bank_version": "UNASSIGNED (assigned by the integrator at release assembly)"
     }
   }
 }
