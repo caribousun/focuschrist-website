@@ -759,6 +759,16 @@
             });
             choices.appendChild(choice);
         });
+        // The clarification options group gets its own visible
+        // section label, in the page's sources-title treatment,
+        // directly above the group and only when a pill renders.
+        // The text matches the group's existing aria-label.
+        if (choices.children.length) {
+            const heading = document.createElement('div');
+            heading.className = 'sources-title ask-clarification-options-title';
+            heading.textContent = 'Choose a starting question';
+            box.appendChild(heading);
+        }
         box.appendChild(choices);
     }
 
