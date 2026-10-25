@@ -580,6 +580,29 @@
         // Recovery support needs an answer to this person's concern, not a loose
         // keyword match to a general doctrinal or chastity entry.
         const allowContextualLocalMatch = contextResolution.genericContext !== true && !deathAsBackground && !supportRequest;
+        // A complete, self-contained question that the reviewed bank
+        // itself serves on the visitor's original wording is not an
+        // elliptical follow-up, even when it contains a referential
+        // token ("What does it mean to endure to the end?"). The
+        // generic-context guard exists so the augmented query cannot
+        // replay the antecedent's answer through the local lanes; it
+        // must not suppress the bank for the visitor's own wording.
+        // Match the bank on the original wording first, and serve
+        // only an actual serve (never a suggestion set): a question
+        // the bank does not itself serve keeps the contextual flow
+        // below unchanged, so genuinely elliptical follow-ups still
+        // resolve from their antecedent.
+        if (contextResolution.genericContext === true && !deathAsBackground && !supportRequest) {
+            const originalBankReference = bankKnowledgeReference(query);
+            if (originalBankReference && !originalBankReference.suggestion) {
+                return Object.assign({}, originalBankReference, {
+                    profile: profile,
+                    contextResolved: contextResolution.resolved === true,
+                    contextEntryId: originalBankReference.bankRecordId,
+                    contextQuestion: originalBankReference.canonicalQuestion || null
+                });
+            }
+        }
         const reviewedReference = allowContextualLocalMatch
             ? reviewedKnowledgeReference(effectiveQuery, contextResolution)
             : null;
