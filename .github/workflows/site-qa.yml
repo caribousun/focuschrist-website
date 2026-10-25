@@ -186,6 +186,7 @@ jobs:
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/topic_artwork_sources_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/scripture_display_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/ask_composer_scroll_runtime_qa.js
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/ask_entry_scroll_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node --test tools/art_ask_context.test.cjs
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node --test tools/ask_growing_composer.test.cjs
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node --test tools/holy_ghost_video.test.cjs
