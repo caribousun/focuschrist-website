@@ -109,25 +109,30 @@ jobs:
         run: sleep 15
 
       - name: Run live AI response matrix
+        id: live_matrix
         if: ${{ !cancelled() && steps.deploy_worker.outcome == 'success' && github.event_name == 'workflow_dispatch' && inputs.run_live_verification == true }}
         shell: bash
         run: node tools/live_ai_response_matrix.js 2>&1 | tee "$RUNNER_TEMP/focus-ai-matrix.log"
 
       - name: Allow live Ask rate limit to reset
+        id: live_pause
         if: ${{ !cancelled() && steps.deploy_worker.outcome == 'success' && github.event_name == 'workflow_dispatch' && inputs.run_live_verification == true }}
         run: sleep 70
 
       - name: Verify conversation follow-ups
+        id: live_followups
         if: ${{ !cancelled() && steps.deploy_worker.outcome == 'success' && github.event_name == 'workflow_dispatch' && inputs.run_live_verification == true }}
         shell: bash
         run: node tools/conversation_followup_live_qa.mjs 2>&1 | tee "$RUNNER_TEMP/focus-followups.log"
 
       - name: Verify all Pioneer topic answers
+        id: live_pioneer
         if: ${{ !cancelled() && steps.deploy_worker.outcome == 'success' && github.event_name == 'workflow_dispatch' && inputs.run_live_verification == true }}
         shell: bash
         run: node tools/pioneer_disclosure_live_qa.js 2>&1 | tee "$RUNNER_TEMP/focus-pioneer-topics.log"
 
       - name: Preserve live verification evidence
+        id: live_evidence
         if: ${{ !cancelled() && steps.deploy_worker.outcome == 'success' && github.event_name == 'workflow_dispatch' && inputs.run_live_verification == true }}
         uses: actions/upload-artifact@v4
         with:
@@ -138,20 +143,50 @@ jobs:
             ${{ runner.temp }}/focus-pioneer-topics.log
           if-no-files-found: error
 
-      - name: Record live verification opt-out
-        if: ${{ cancelled() || steps.deploy_worker.outcome != 'success' || github.event_name != 'workflow_dispatch' || inputs.run_live_verification != true }}
+      - name: Record live verification opt-out or deployment-not-ready
+        if: ${{ !cancelled() && steps.live_matrix.outcome == 'skipped' && steps.live_pause.outcome == 'skipped' && steps.live_followups.outcome == 'skipped' && steps.live_pioneer.outcome == 'skipped' && steps.live_evidence.outcome == 'skipped' && (github.event_name != 'workflow_dispatch' || inputs.run_live_verification != true || steps.deploy_worker.outcome != 'success') }}
         run: |
           {
-            echo "## Live verification: NOT_RUN_OPT_OUT"
+            echo "## Live verification: NOT_RUN"
             echo ""
-            echo "The paid live verification steps (live AI response matrix, conversation follow-ups, Pioneer topic battery, and the live-evidence artifact) did not run in this workflow run."
-            echo "This record is NOT a live verification PASS."
+            echo "The five paid live verification steps did not run in this workflow run. That statement is reconciled against their actual step outcomes, and every one of the five outcomes printed below is skipped:"
+            echo ""
+            echo "- Live AI response matrix outcome: ${{ steps.live_matrix.outcome }}"
+            echo "- Live Ask rate limit pause outcome: ${{ steps.live_pause.outcome }}"
+            echo "- Conversation follow-ups outcome: ${{ steps.live_followups.outcome }}"
+            echo "- Pioneer topic battery outcome: ${{ steps.live_pioneer.outcome }}"
+            echo "- Live-evidence artifact outcome: ${{ steps.live_evidence.outcome }}"
+            echo ""
+            echo "Why they did not run is one of two cases, and the event, the input, and the deploy outcome below show which case this run is:"
+            echo "- Genuine opt-out: the event is not workflow_dispatch, or the run_live_verification input is not true."
+            echo "- Deployment-not-ready: the event is workflow_dispatch and the input is true, but the deploy step outcome is not success."
             echo ""
             echo "- Event: ${{ github.event_name }}"
             echo "- workflow_dispatch input run_live_verification: ${{ inputs.run_live_verification }}"
             echo "- Deploy step outcome: ${{ steps.deploy_worker.outcome }}"
             echo ""
-            echo "Live verification runs only when this workflow is started manually with workflow_dispatch and the run_live_verification input is set to true, and then only after a successful deployment."
+            echo "This record is NOT a live verification PASS."
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Record live verification cancelled run
+        if: ${{ cancelled() }}
+        run: |
+          {
+            echo "## Live verification: CANCELLED_PARTIAL_OR_UNKNOWN"
+            echo ""
+            echo "This workflow run was cancelled. What the live verification steps did in this run is partial or unknown, exactly as their actual step outcomes below show, and those outcomes are preserved as they stand:"
+            echo ""
+            echo "- Live AI response matrix outcome: ${{ steps.live_matrix.outcome }}"
+            echo "- Live Ask rate limit pause outcome: ${{ steps.live_pause.outcome }}"
+            echo "- Conversation follow-ups outcome: ${{ steps.live_followups.outcome }}"
+            echo "- Pioneer topic battery outcome: ${{ steps.live_pioneer.outcome }}"
+            echo "- Live-evidence artifact outcome: ${{ steps.live_evidence.outcome }}"
+            echo "- Deploy step outcome: ${{ steps.deploy_worker.outcome }}"
+            echo ""
+            echo "- Event: ${{ github.event_name }}"
+            echo "- workflow_dispatch input run_live_verification: ${{ inputs.run_live_verification }}"
+            echo ""
+            echo "This record asserts nothing categorical about whether live work occurred in this run. It is NOT a live verification PASS and it is not a finished live verification record. If this record itself does not execute, no finished record exists for this run and the outcome stays unknown."
           } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Report missing deployment authorization
