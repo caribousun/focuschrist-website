@@ -80,6 +80,20 @@ def fixture_manifest():
                       for name, pair in FIXTURE_PAIRS.items()}}
 
 
+def projected_current(name):
+    """The bytes this layer registers for a file, projected out of the
+    shipped tree. ask.html carries the entry-scroll successor above
+    this layer, so the registered state is the entry-scroll restore
+    of the shipped file (the same projection the continue-motion
+    binding's decoupling view uses); other files ship at this
+    layer's own state."""
+    raw = (g.ROOT / name).read_bytes()
+    if name == "ask.html":
+        from entry_scroll_successor import restore as restore_scroll
+        raw = restore_scroll(name, raw, g.ROOT)
+    return raw
+
+
 class BankServeDecouplingSuccessorTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
@@ -109,12 +123,23 @@ class BankServeDecouplingSuccessorTests(unittest.TestCase):
         manifest = json.loads((g.ROOT / g.MANIFEST).read_text(encoding="utf-8"))
         self.assertEqual(g.canonical(manifest), REAL_SOURCE_SHA)
         for name, row in manifest["files"].items():
-            current = (g.ROOT / name).read_bytes()
+            current = projected_current(name)
             self.assertEqual(g.sha(current), row["after_sha256"], name)
             with patch.multiple(g, BEFORE=REAL_BEFORE, AFTER=REAL_AFTER, SOURCE_SHA=REAL_SOURCE_SHA):
                 restored = g.restore(name, current, g.ROOT)
                 self.assertEqual(g.sha(restored), row["before_sha256"], name)
                 self.assertEqual(g.advance(name, restored, g.ROOT), current, name)
+
+    def test_chips_adjunct_lives_inside_the_registered_span(self):
+        manifest = json.loads((g.ROOT / g.MANIFEST).read_text(encoding="utf-8"))
+        current = projected_current("ask.html")
+        self.assertIn(b"ask-followup-chips", current)
+        self.assertIn(b"Additional questions", current)
+        with patch.multiple(g, BEFORE=REAL_BEFORE, AFTER=REAL_AFTER, SOURCE_SHA=REAL_SOURCE_SHA):
+            restored = g.restore("ask.html", current, g.ROOT)
+            self.assertEqual(g.sha(restored), manifest["files"]["ask.html"]["before_sha256"])
+            self.assertNotIn(b"ask-followup-chips", restored)
+            self.assertEqual(g.advance("ask.html", restored, g.ROOT), current)
 
     def test_composed_chain_round_trips(self):
         import continue_motion_binding as gate
@@ -146,6 +171,7 @@ class BankServeDecouplingSuccessorTests(unittest.TestCase):
         cases = {
             "ask.html": {
                 "altered-inside": lambda raw: raw.replace(b"bankResult.pin", b"bankResult.pim", 1),
+                "altered-chips-token": lambda raw: raw.replace(b"data-followup-for", b"data-followup-f0r", 1),
                 "altered-older-layer": lambda raw: raw[:100] + bytes([raw[100] ^ 1]) + raw[101:],
                 "unrelated-append": lambda raw: raw + b" ",
             },

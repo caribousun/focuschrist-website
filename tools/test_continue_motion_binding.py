@@ -110,7 +110,7 @@ class MotionBindingTests(unittest.TestCase):
         name='ask.html'
         row=gate.mapping()['files'][name]
         current=(gate.ROOT/name).read_bytes()
-        self.assertEqual(gate.sha(restore_scroll(name,current)),'b6831d0fbe534cea363bd208db73226672e82788fccc8f403ba7fc76cd837198',name)
+        self.assertEqual(gate.sha(restore_scroll(name,current)),'1c15ee0e7e65072c9d788b9573becd8cd9c599298f75ee4c8fac1dafdf78e095',name)
         self.assertEqual(gate.sha(restore_decoupling(name,restore_scroll(name,current))),'0d9a5f1ba3a6bf815084ef3df330b25b771332dfa837dd2f21e74b133a9cfc90',name)
         self.assertEqual(gate.sha(restore_legacy(name,restore_decoupling(name,restore_scroll(name,current)))),'4881b5a20ed045b1d45dd1c393d3204c56cf46692d7fa4837e5257346aa4e7a9',name)
         projected=restore_citation(name,restore_legacy(name,restore_decoupling(name,restore_scroll(name,current))))

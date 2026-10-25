@@ -32,3 +32,28 @@ spans; `tools/bank_serve_decoupling_successor.py` verifies bytes,
 spans, and the round trips. The pin is not review approval: the
 independent exact-head review of the PR carrying this registration
 (Jeff, with Newton's parallel review) gates merge.
+
+Amendment (2026-10-25): the ask.html span now also renders the
+served record's follow-up chips. The only chips renderer lived
+inside study-intelligence-v3.js, which replaces the inline
+controller only once it loads; a bank serve completed by the inline
+controller therefore rendered the full reviewed answer and sources
+with no chips, permanently for that serve (diagnosis:
+fcfix2/chips-diagnosis, 78 instrumented probes; chips presence
+separated perfectly on which controller owned the submit). Inside
+the existing span, the inline serve captures the node `addMessage`
+returns (the display gate's pending node, whose synchronously
+appended children survive its verified-content swap, the mechanics
+the v3 renderer relies on) and appends the identical adjunct the v3
+renderer builds: the "Additional questions" heading as the group's
+sibling, then the `ask-followup-chips` group carrying
+`data-followup-for`, one button per chip from the lane's
+`followUpChips()` with its `data-followup-target`, wired to set the
+input and call `window.sendMessage()`. The block runs only on the
+inline lane serve, which returns before the v3 controller can serve
+the same submit, so no serve can render two groups. The span's
+previous bytes, this layer's BEFORE states, and the site-common.js
+registration are unchanged; the span's current bytes grow in place
+and the entry-scroll successor above it is re-pinned mechanically
+with its span bytes unchanged. Proof: tools/ask_bank_serve_chips_runtime_qa.js
+exercises both controllers against the shipped bank.

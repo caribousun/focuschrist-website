@@ -17,6 +17,18 @@ decoupling fix:
   marker, a wrong pin, an edited answer, or a stale, unreviewed, or
   missing record earns no exemption.
 
+Amendment (2026-10-25, follow-up chips): the ask.html span's inline
+serve also renders the served record's follow-up chips adjunct, the
+identical heading and chip group the v3 controller's
+appendFollowUpChips builds, appended into the node addMessage
+returns. Only the v3 controller could render chips, and it owns the
+submit only once study-intelligence-v3.js loads; a submit the inline
+controller owned served the full reviewed answer with no chips, and
+no later install repaired that serve. The amendment is confined to
+this layer's existing ask.html span: the span's previous bytes and
+this layer's BEFORE states are unchanged, and the site-common.js
+registration is untouched.
+
 This layer is the outermost successor over both files. For ask.html
 its BEFORE state is the legacy answer repairs successor's AFTER state
 (which itself composes over the citation rendering successor's AFTER
@@ -42,13 +54,13 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = "docs/bank-serve-decoupling-successor/manifest.json"
-SOURCE_SHA = "67f376a3b1a924fcec1b496e2adfa69c826f2cda0650e38cd27e7e6addd8a57b"  # Integrator pins exact candidate spans; this is not review approval.
+SOURCE_SHA = "9b76f71f1f4892b4a0e1bfa39f3195d805807b84d46e950a551955bd72d614c8"  # Integrator pins exact candidate spans; this is not review approval.
 BEFORE = {
     "ask.html": "0d9a5f1ba3a6bf815084ef3df330b25b771332dfa837dd2f21e74b133a9cfc90",
     "site-common.js": "54cfb9fc5de9c5ab76133cb32843053ee6c5700ff0fe11d8bedd470de3412a77",
 }
 AFTER = {
-    "ask.html": "b6831d0fbe534cea363bd208db73226672e82788fccc8f403ba7fc76cd837198",
+    "ask.html": "1c15ee0e7e65072c9d788b9573becd8cd9c599298f75ee4c8fac1dafdf78e095",
     "site-common.js": "62e8d576062521da340ad6b0a82f58b151829c21b6868b684e6491b04c723f73",
 }
 
