@@ -2,6 +2,12 @@ name: Deploy focusChrist Worker
 
 on:
   workflow_dispatch:
+    inputs:
+      run_live_verification:
+        description: "Run the paid live verification steps after deployment (live AI response matrix, conversation follow-ups, Pioneer topic battery, and the live-evidence artifact). Default false. Turning this on makes billable live requests, and turning it on is not itself cost authority: enabling paid live validation still requires explicit existing cost authority. This gate authorizes containment, not new billable tests (decision A-2026-10-25-CI-PAID-VALIDATION-GATE-01)."
+        required: false
+        default: false
+        type: boolean
   push:
     branches:
       - main
@@ -103,26 +109,26 @@ jobs:
         run: sleep 15
 
       - name: Run live AI response matrix
-        if: ${{ !cancelled() && steps.deploy_worker.outcome == 'success' }}
+        if: ${{ !cancelled() && steps.deploy_worker.outcome == 'success' && github.event_name == 'workflow_dispatch' && inputs.run_live_verification == true }}
         shell: bash
         run: node tools/live_ai_response_matrix.js 2>&1 | tee "$RUNNER_TEMP/focus-ai-matrix.log"
 
       - name: Allow live Ask rate limit to reset
-        if: ${{ !cancelled() && steps.deploy_worker.outcome == 'success' }}
+        if: ${{ !cancelled() && steps.deploy_worker.outcome == 'success' && github.event_name == 'workflow_dispatch' && inputs.run_live_verification == true }}
         run: sleep 70
 
       - name: Verify conversation follow-ups
-        if: ${{ !cancelled() && steps.deploy_worker.outcome == 'success' }}
+        if: ${{ !cancelled() && steps.deploy_worker.outcome == 'success' && github.event_name == 'workflow_dispatch' && inputs.run_live_verification == true }}
         shell: bash
         run: node tools/conversation_followup_live_qa.mjs 2>&1 | tee "$RUNNER_TEMP/focus-followups.log"
 
       - name: Verify all Pioneer topic answers
-        if: ${{ !cancelled() && steps.deploy_worker.outcome == 'success' }}
+        if: ${{ !cancelled() && steps.deploy_worker.outcome == 'success' && github.event_name == 'workflow_dispatch' && inputs.run_live_verification == true }}
         shell: bash
         run: node tools/pioneer_disclosure_live_qa.js 2>&1 | tee "$RUNNER_TEMP/focus-pioneer-topics.log"
 
       - name: Preserve live verification evidence
-        if: ${{ !cancelled() && steps.deploy_worker.outcome == 'success' }}
+        if: ${{ !cancelled() && steps.deploy_worker.outcome == 'success' && github.event_name == 'workflow_dispatch' && inputs.run_live_verification == true }}
         uses: actions/upload-artifact@v4
         with:
           name: focus-live-verification-${{ github.sha }}
@@ -131,6 +137,22 @@ jobs:
             ${{ runner.temp }}/focus-followups.log
             ${{ runner.temp }}/focus-pioneer-topics.log
           if-no-files-found: error
+
+      - name: Record live verification opt-out
+        if: ${{ cancelled() || steps.deploy_worker.outcome != 'success' || github.event_name != 'workflow_dispatch' || inputs.run_live_verification != true }}
+        run: |
+          {
+            echo "## Live verification: NOT_RUN_OPT_OUT"
+            echo ""
+            echo "The paid live verification steps (live AI response matrix, conversation follow-ups, Pioneer topic battery, and the live-evidence artifact) did not run in this workflow run."
+            echo "This record is NOT a live verification PASS."
+            echo ""
+            echo "- Event: ${{ github.event_name }}"
+            echo "- workflow_dispatch input run_live_verification: ${{ inputs.run_live_verification }}"
+            echo "- Deploy step outcome: ${{ steps.deploy_worker.outcome }}"
+            echo ""
+            echo "Live verification runs only when this workflow is started manually with workflow_dispatch and the run_live_verification input is set to true, and then only after a successful deployment."
+          } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Report missing deployment authorization
         if: env.CLOUDFLARE_API_TOKEN == '' || env.CLOUDFLARE_ACCOUNT_ID == ''
