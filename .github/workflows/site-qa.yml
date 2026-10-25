@@ -396,6 +396,7 @@ jobs:
         run: |
           node tools/pioneer_ask_runtime_qa.js
           node tools/pioneer_composer_scroll_runtime_qa.js
+          node tools/pioneer_entry_scroll_runtime_qa.js
 
       - name: Exercise Church History Ask final owner
         run: node tools/church_history_ask_runtime_qa.js

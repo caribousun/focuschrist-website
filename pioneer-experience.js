@@ -209,6 +209,15 @@
         return '#';
     }
 
+    function bringPioneerEntryIntoView(entry) {
+        if (!entry || typeof entry.scrollIntoView !== 'function') return;
+        try {
+            entry.scrollIntoView({ behavior: 'auto', block: 'start' });
+        } catch (error) {
+            entry.scrollIntoView();
+        }
+    }
+
     window.addMessage = function (text, isUser, sources = [], extraBtn = null) {
         const box = chatBox();
         if (!box) return null;
@@ -280,6 +289,7 @@
         }
 
         box.appendChild(message);
+        bringPioneerEntryIntoView(message);
         return message;
     };
 
