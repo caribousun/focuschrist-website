@@ -57,3 +57,45 @@ registration are unchanged; the span's current bytes grow in place
 and the entry-scroll successor above it is re-pinned mechanically
 with its span bytes unchanged. Proof: tools/ask_bank_serve_chips_runtime_qa.js
 exercises both controllers against the shipped bank.
+
+Amendment (2026-10-25, lane readiness): the ask.html span's inline
+controller now waits for the bank lane before producing any
+outcome when the lane has not arrived yet. The bank scripts are
+deferred and answer-bank-data.js alone is about 800 KB; on a slow
+connection a visitor who types and submits in the first seconds
+reached the controller while window.FocusChristAnswerBankLane
+was still unset, fell through to the legacy askAI stub, and was
+shown its "couldn't find a supported answer" verdict for
+questions the bank answers (diagnosis:
+fcfix2/endure-pill-diagnosis, defect 2; the failing attempt
+instrumented lanePresent=false and bankDataPresent=false at
+submit, and the failure reproduced under Slow 4G throttling in
+two independent probes). Inside the existing span: when the lane
+is absent at submit, the controller polls every 100 ms for up to
+10 seconds (the window the throttled probes measured the lane
+arriving in) and then consults the lane exactly as before. The
+visitor's question is already rendered and the existing loading
+indicator already runs; both stay through the wait, and no new
+visitor-facing wording is introduced. If a newer submit or a
+chat clear replaced the exchange during the wait (this submit's
+loading node is no longer in the chat box), the superseded
+submit renders nothing further, so repeated interaction can
+never produce two answers. If the lane never arrives inside the
+bound, the controller renders the temporary state the site
+already uses when its approved study sources cannot be checked
+(the v3 controller's SOURCE_UNAVAILABLE message, word for word)
+and returns: the legacy lookup never runs on that path, so a
+bank that was never asked is not treated as a proven miss, and
+there is no fallthrough to any research leg as a substitute for
+waiting. Readiness is the lane's presence with an answer
+function: the lane script publishes the lane only after its
+fail-closed loadBank has verified every record's whole-entry
+pin, so presence is the validation-completed signal. Once the
+lane is present, behavior is unchanged, including the fallthrough
+of a genuine non-serve to the legacy lookup. The span's previous
+bytes, this layer's BEFORE states, and the site-common.js
+registration are unchanged; the entry-scroll successor above is
+re-pinned mechanically with its span bytes unchanged. Proof:
+tools/ask_bank_lane_readiness_runtime_qa.js exercises
+delayed-lane, ready-lane, genuine-miss, readiness-failure, and
+repeated-submit paths against the shipped bank.

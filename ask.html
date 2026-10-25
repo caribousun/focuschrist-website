@@ -1244,9 +1244,44 @@
         // a serve renders with the same reviewed-bank provenance marker
         // the v3 controller passes to the display gate, so the gate's
         // exemption applies identically. Any other lane outcome
-        // (suggestion, no match, lane absent) falls through to the
-        // legacy lookup below, unchanged.
-        const bankLane = window.FocusChristAnswerBankLane;
+        // (suggestion, no match) falls through to the legacy lookup
+        // below, unchanged; a lane that has not arrived yet is
+        // waited for first (see lane readiness below), and if it
+        // never arrives the lookup does not run at all.
+        let bankLane = window.FocusChristAnswerBankLane;
+        if (!(bankLane && typeof bankLane.answer === 'function')) {
+            // Lane readiness (defect 2): the deferred bank scripts
+            // (answer-bank-data.js alone is about 800 KB) can still
+            // be in flight when a visitor on a slow connection
+            // submits in the first seconds, and a lane that has not
+            // arrived yet is not a bank miss: the legacy lookup
+            // below would call the unasked bank a proven miss and
+            // show its "couldn't find a supported answer" verdict
+            // for questions the bank answers. Wait for the lane,
+            // bounded, before any outcome is produced. The lane
+            // script publishes window.FocusChristAnswerBankLane
+            // only after its fail-closed, pin-verified load has
+            // completed, so the lane's presence with an answer
+            // function is the readiness signal. The wait polls for
+            // up to 10 seconds, the window the throttled probes
+            // measured the lane arriving in on a slow connection;
+            // the visitor's question is already on screen and the
+            // loading indicator already runs, and both stay as
+            // they are through the wait. If a newer submit (or a
+            // chat clear) has replaced this exchange in the
+            // meantime, this submit's loading node is gone from
+            // the chat box: stop without rendering, so the newer
+            // submit owns the display and a repeated interaction
+            // can never produce two answers.
+            const bankWaitDeadline = Date.now() + 10000;
+            while (Date.now() < bankWaitDeadline) {
+                await new Promise(function (bankWaitResolve) { setTimeout(bankWaitResolve, 100); });
+                bankLane = window.FocusChristAnswerBankLane;
+                if (bankLane && typeof bankLane.answer === 'function') break;
+            }
+            const bankWaitBox = document.getElementById('chatBox');
+            if (!bankWaitBox || !bankWaitBox.contains(l)) { b.disabled = false; return; }
+        }
         if (bankLane && typeof bankLane.answer === 'function') {
             const bankResult = bankLane.answer({ question_text: q, profile: 'ask', history: [] });
             if (bankResult && bankResult.status === 'serve' && typeof bankResult.answer === 'string' && bankResult.answer) {
@@ -1315,6 +1350,21 @@
                 }
                 return;
             }
+        }
+        if (!(bankLane && typeof bankLane.answer === 'function')) {
+            // The lane never arrived inside the bound: the bank
+            // was never consulted, so the legacy lookup below must
+            // not run. Its only other outcome would be the stub's
+            // "couldn't find a supported answer" verdict, which
+            // would be false for any bank question: a bank that
+            // was never asked is not a proven miss. Show the
+            // temporary state the site already uses when its
+            // approved study sources cannot be checked (the v3
+            // controller's SOURCE_UNAVAILABLE message, word for
+            // word) and stop.
+            l.remove(); b.disabled = false;
+            addMessage('I’m unable to check our approved study sources right now. Please try again in a moment.', false, []);
+            return;
         }
         
         // First check database for relevant entries

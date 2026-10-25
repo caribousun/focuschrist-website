@@ -14,7 +14,7 @@ the first exchange in the box, which is where a follow-up chip click
 left the view. Spans are in AFTER-byte coordinates. Restoration
 removes only this layer and reproduces the exact bytes the
 bank-serve decoupling successor pins as its AFTER state for
-ask.html (1c15ee0e...), which itself composes over the
+ask.html (42329b80...), which itself composes over the
 legacy-answer-repairs successor's AFTER state, and the exact
 bytes the continue-motion predecessor map pins as current for
 ask-experience.js (its after hash, 62f17066...); the older
@@ -31,6 +31,13 @@ also renders the follow-up chips adjunct), so this layer's
 ask.html BEFORE and AFTER pins moved with it; this layer's span
 byte contents are unchanged.
 
+Re-pin note (2026-10-25, second): the bank-serve decoupling
+successor's ask.html AFTER state was amended in place again
+(its inline controller now waits, bounded, for the bank lane
+before producing any outcome when the lane has not arrived
+yet), so this layer's ask.html BEFORE and AFTER pins moved
+with it again; this layer's span byte contents are unchanged.
+
 Review model: this module pins the exact candidate spans only
 (SOURCE_SHA); that pin is not review approval. The independent
 review of this registration is Jeff's exact-head review of the PR
@@ -45,13 +52,13 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = "docs/entry-scroll-successor/manifest.json"
-SOURCE_SHA = "7f3d8eaab80cbbf4da0c3de64d9ddf5af968522c76965569286127fd7421b168"  # Integrator pins exact candidate spans; this is not review approval.
+SOURCE_SHA = "9ed42a5cc9aeb838a4c02ed132d15f292b5900b7382a25fadddf2e25309ced41"  # Integrator pins exact candidate spans; this is not review approval.
 BEFORE = {
-    "ask.html": "1c15ee0e7e65072c9d788b9573becd8cd9c599298f75ee4c8fac1dafdf78e095",
+    "ask.html": "42329b80eaeb28c89d7c1bcab62215e914f2e10e1e9c01eb35d1c9268d32d41d",
     "ask-experience.js": "62f17066d8d50d8e8ec417190f026111b628f11e8221f2babd7b40d257ea2fab",
 }
 AFTER = {
-    "ask.html": "433894ff5af81933cfe4088fd1aba57f3ca1cff2be7b6101659ea1689bbc2381",
+    "ask.html": "3595a295f5df683c2cc842f3ae51705eed08963face03b90bd85a8fe9246ad1f",
     "ask-experience.js": "9aba64e444ddc89f1b0c3a5dfc5fdae3b77e6933a28cc83901059b8041e34b8d",
 }
 

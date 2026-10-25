@@ -46,10 +46,10 @@ The fix:
 Registered spans (candidate-byte coordinates):
 
 - ask.html: predecessor SHA-256
-  `1c15ee0e7e65072c9d788b9573becd8cd9c599298f75ee4c8fac1dafdf78e095`,
+  `42329b80eaeb28c89d7c1bcab62215e914f2e10e1e9c01eb35d1c9268d32d41d`,
   candidate SHA-256
-  `433894ff5af81933cfe4088fd1aba57f3ca1cff2be7b6101659ea1689bbc2381`
-  (444,308 bytes). Two spans:
+  `3595a295f5df683c2cc842f3ae51705eed08963face03b90bd85a8fe9246ad1f`
+  (447,429 bytes). Two spans:
   - [430971, 431234): the `bringEntryIntoView` helper inserted
     (263 bytes, empty previous bytes) directly above `addMessage`.
   - [436670, 436703): the bottom-force line
@@ -116,6 +116,13 @@ chips-amended bank-serve decoupling AFTER state (predecessor
 inline serve gained the follow-up chips adjunct inside its own
 span, below both of this layer's spans, so this layer's span byte
 contents and coordinates are again unchanged.
+On 2026-10-25 the registration was re-pinned once more,
+mechanically, onto the lane-readiness-amended bank-serve
+decoupling AFTER state (predecessor `42329b80...`, candidate
+`3595a295...`): the decoupling layer's inline controller gained
+the bounded bank-lane readiness wait inside its own span, below
+both of this layer's spans, so this layer's span byte contents
+and coordinates are unchanged once more.
 
 ## Review model
 

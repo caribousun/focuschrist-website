@@ -29,6 +29,28 @@ this layer's existing ask.html span: the span's previous bytes and
 this layer's BEFORE states are unchanged, and the site-common.js
 registration is untouched.
 
+Amendment (2026-10-25, lane readiness wait): the ask.html span's
+inline controller now waits, bounded, for the bank lane before
+any outcome when the lane has not arrived yet. On a slow
+connection a visitor who submits in the first seconds found the
+lane still null and fell through to the legacy stub, whose
+"couldn't find a supported answer" verdict is false for bank
+questions (diagnosis: fcfix2/endure-pill-diagnosis, defect 2;
+reproduced under Slow 4G throttling in two independent probes).
+Inside the existing span, the controller polls for the installed
+lane for up to 10 seconds; the visitor's question and the
+loading indicator are already on screen and stay as they are
+through the wait. A submit superseded during the wait (its
+loading node replaced by a newer submit or a chat clear)
+renders nothing further. If the lane never arrives, the
+controller shows the site's existing SOURCE_UNAVAILABLE
+temporary message and stops: the legacy lookup does not run,
+so an unasked bank is never converted into a proven miss. Once
+the lane is present its outcome decides exactly as before, and
+a non-serve still falls through to the legacy lookup unchanged.
+The span's previous bytes and this layer's BEFORE states are
+unchanged, and the site-common.js registration is untouched.
+
 This layer is the outermost successor over both files. For ask.html
 its BEFORE state is the legacy answer repairs successor's AFTER state
 (which itself composes over the citation rendering successor's AFTER
@@ -54,13 +76,13 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = "docs/bank-serve-decoupling-successor/manifest.json"
-SOURCE_SHA = "9b76f71f1f4892b4a0e1bfa39f3195d805807b84d46e950a551955bd72d614c8"  # Integrator pins exact candidate spans; this is not review approval.
+SOURCE_SHA = "5dbd21192ce13adafcc67b652d9883b62a3f243cd2c71b616bfded5500017d60"  # Integrator pins exact candidate spans; this is not review approval.
 BEFORE = {
     "ask.html": "0d9a5f1ba3a6bf815084ef3df330b25b771332dfa837dd2f21e74b133a9cfc90",
     "site-common.js": "54cfb9fc5de9c5ab76133cb32843053ee6c5700ff0fe11d8bedd470de3412a77",
 }
 AFTER = {
-    "ask.html": "1c15ee0e7e65072c9d788b9573becd8cd9c599298f75ee4c8fac1dafdf78e095",
+    "ask.html": "42329b80eaeb28c89d7c1bcab62215e914f2e10e1e9c01eb35d1c9268d32d41d",
     "site-common.js": "62e8d576062521da340ad6b0a82f58b151829c21b6868b684e6491b04c723f73",
 }
 
