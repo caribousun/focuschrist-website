@@ -62,12 +62,13 @@ Registered spans (candidate-byte coordinates):
 - pioneer-experience.js: predecessor SHA-256
   `b1f6f02625377c9f28850e88d707c4e9837c0d6c183510463b65448294cfb9cb`,
   candidate SHA-256
-  `51fa2de4014b7acd0e7309af5670609fc92518c6ae53e71162412708563eb487`
-  (86,998 bytes). Two spans:
-  - [39308, 39595): the `bringPioneerEntryIntoView` helper
-    inserted (287 bytes, empty previous bytes) directly above
-    `window.addMessage`.
-  - [42900, 42978): the append line
+  `2baf4d3cef128337fb687f99299d21ebdcf4831cd781d5fa8b72fee6955f00cd`
+  (87156 bytes). Two spans:
+  - [39308, 39753): the `bringPioneerEntryIntoView` helper
+    inserted (445 bytes, empty previous bytes) directly above
+    `window.addMessage`. The helper text is the amended text
+    described under "Composer-path amendment" below.
+  - [43058, 43136): the append line
     `box.appendChild(message);` (34 bytes, with its indent and
     newline) replaced with the append plus the
     `bringPioneerEntryIntoView(message);` call (78 bytes).
@@ -114,6 +115,63 @@ includes PR #516 (the legacy answer repairs layer), PR #518
 scroll layer this fix parallels). Neither pioneer file was
 touched by those PRs' content changes beyond the layers already
 registered above them.
+
+## Composer-path amendment (2026-10-25)
+
+The original registration above shipped in PR #522. Its finisher's
+live watch then caught a regression on the typed composer path:
+after a first exchange, a second typed question left the panel
+scrolled to the middle of the previous answer, with the promoted
+newest exchange entirely above the visible region. Swapping only
+pioneer-experience.js back to the pre-#522 bytes anchored
+correctly, isolating the cause to this layer's append-time
+scrollIntoView. An instrumented live probe (wrapped
+scrollIntoView/scrollTo with stacks) pinned the mechanism:
+site-common's scripture display gate wraps window.addMessage, so
+a bot answer is first rendered as a [data-scripture-pending]
+placeholder; the caller positions that placeholder
+(positionAnswer promotes the exchange and sets the panel scroll);
+only then does the gate call the real addMessage, whose
+append-time scrollIntoView fired after positioning and dragged
+the panel to the appended element's position at the end of the
+transcript (observed scrollTop 13 -> 2502 -> 3285). The
+answer-ready listener's re-positioning is suppressed when an
+earlier exchange follows the promoted one in DOM order, so the
+wrong scroll stood. In the topic path the same late scroll is
+repaired by that listener, which is why topic appends looked
+correct, and the pre-#522 bytes never scroll on the late append
+at all.
+
+The amendment changes one span: the helper text in span 1. The
+helper is called immediately after the append, so the entry's
+parent is the chat box; when that box still holds a
+[data-scripture-pending] placeholder, this append is the gate's
+real-answer append (or a concurrent append inside the same gate
+window) whose content is transplanted into the already
+positioned placeholder, and the helper returns without
+scrolling. Every append with no gate placeholder pending keeps
+the original scrollIntoView anchor unchanged, so the
+choice-list, story, and error appends that never call
+positionAnswer are still anchored: directly at append time when
+no gate placeholder is pending, and through the placeholder's
+own positioning (caller positionAnswer and the answer-ready
+listener) when one is. positionAnswer,
+promoteLatestExchangeToTop, the append-returns-element
+contract, and the helper's null and scroll-less guards are
+unchanged. pioneers.html is not changed by the amendment: its
+own addMessage has no positionAnswer composition, and its
+appends keep the immediate anchor.
+
+The layer's BEFORE pins are unchanged (pioneers.html
+06748550..., pioneer-experience.js b1f6f026...); only the
+pioneer-experience.js AFTER pin and span 1 moved, with a new
+SOURCE_SHA. tools/pioneer_entry_scroll_runtime_qa.js is extended
+with a composed scenario that runs the real helper, addMessage,
+promoteLatestExchangeToTop, positionAnswer, and the answer-ready
+listener together through a simulated display-gate wrapper, so
+the composer path is exercised as a composition, not in
+isolation; the pre-amendment bytes fail that scenario's composer
+case and the amended bytes pass it.
 
 ## Review model
 
