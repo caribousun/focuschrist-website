@@ -48,7 +48,8 @@ def restore(name,data,root=ROOT):
     from citation_rendering_successor import restore as restore_citation
     from legacy_answer_repairs_successor import restore as restore_legacy
     from bank_serve_decoupling_successor import restore as restore_decoupling
-    data=restore_world(name,restore_settings(name,restore_close(name,restore_hand(name,restore_bank(name,restore_gate(name,restore_eval(name,restore_citation(name,restore_legacy(name,restore_decoupling(name,data,root),root),root),root),root),root),root),root),root),root)
+    from entry_scroll_successor import restore as restore_scroll
+    data=restore_world(name,restore_settings(name,restore_close(name,restore_hand(name,restore_bank(name,restore_gate(name,restore_eval(name,restore_citation(name,restore_legacy(name,restore_decoupling(name,restore_scroll(name,data,root),root),root),root),root),root),root),root),root),root),root)
     record=mapping(root)['files'].get(name)
     if not record or sha(data)!=record['after_sha256']:return data
     restored=data
@@ -75,7 +76,8 @@ def advance(name,data,root=ROOT):
     from citation_rendering_successor import advance as advance_citation
     from legacy_answer_repairs_successor import advance as advance_legacy
     from bank_serve_decoupling_successor import advance as advance_decoupling
-    if not record or sha(data)!=record['before_sha256']:return advance_decoupling(name,advance_legacy(name,advance_citation(name,advance_eval(name,advance_gate(name,advance_bank(name,advance_hand(name,advance_close(name,advance_settings(name,advance_world(name,data,root),root),root),root),root),root),root),root),root),root)
+    from entry_scroll_successor import advance as advance_scroll
+    if not record or sha(data)!=record['before_sha256']:return advance_scroll(name,advance_decoupling(name,advance_legacy(name,advance_citation(name,advance_eval(name,advance_gate(name,advance_bank(name,advance_hand(name,advance_close(name,advance_settings(name,advance_world(name,data,root),root),root),root),root),root),root),root),root),root),root)
     replacements=[];delta=0
     for span in record['spans']:
         previous=base64.b64decode(span['previous_b64'],validate=True)
@@ -87,7 +89,7 @@ def advance(name,data,root=ROOT):
     result=data
     for start,end,current in reversed(replacements):result=result[:start]+current+result[end:]
     require(sha(result)==record['after_sha256'],'Motion successor reconstruction drift')
-    return advance_decoupling(name,advance_legacy(name,advance_citation(name,advance_eval(name,advance_gate(name,advance_bank(name,advance_hand(name,advance_close(name,advance_settings(name,advance_world(name,result,root),root),root),root),root),root),root),root),root),root)
+    return advance_scroll(name,advance_decoupling(name,advance_legacy(name,advance_citation(name,advance_eval(name,advance_gate(name,advance_bank(name,advance_hand(name,advance_close(name,advance_settings(name,advance_world(name,result,root),root),root),root),root),root),root),root),root),root),root)
 
 def check(root=ROOT):
     from missionary_close_successor import check as check_close,restore as restore_close
@@ -100,11 +102,12 @@ def check(root=ROOT):
     from citation_rendering_successor import check as check_citation,restore as restore_citation
     from legacy_answer_repairs_successor import check as check_legacy,restore as restore_legacy
     from bank_serve_decoupling_successor import check as check_decoupling,restore as restore_decoupling
+    from entry_scroll_successor import check as check_scroll,restore as restore_scroll
     data=mapping(root)
     for name,row in data['files'].items():
         path=(root/name).resolve()
         require(path.is_relative_to(root.resolve()) and path.is_file(),'Missing/outside motion consumer')
-        current=restore_world(name,restore_settings(name,restore_close(name,restore_hand(name,restore_bank(name,restore_gate(name,restore_eval(name,restore_citation(name,restore_legacy(name,restore_decoupling(name,path.read_bytes(),root),root),root),root),root),root),root),root),root),root)
+        current=restore_world(name,restore_settings(name,restore_close(name,restore_hand(name,restore_bank(name,restore_gate(name,restore_eval(name,restore_citation(name,restore_legacy(name,restore_decoupling(name,restore_scroll(name,path.read_bytes(),root),root),root),root),root),root),root),root),root),root),root)
         require(sha(current)==row['after_sha256'],'Motion candidate changed: '+name)
         require(sha(restore(name,current,root))==row['before_sha256'],'Motion inverse failed: '+name)
     require(APPROVED_REVIEWS is not None,'Motion finished review PENDING')
@@ -131,7 +134,7 @@ def check(root=ROOT):
     with tempfile.TemporaryDirectory() as td:
         view=Path(td)
         for bank_name in ('ask.html','pioneers.html','pioneer-experience.js'):
-            (view/bank_name).write_bytes(restore_citation(bank_name,restore_legacy(bank_name,restore_decoupling(bank_name,(root/bank_name).read_bytes(),root),root),root))
+            (view/bank_name).write_bytes(restore_citation(bank_name,restore_legacy(bank_name,restore_decoupling(bank_name,restore_scroll(bank_name,(root/bank_name).read_bytes(),root),root),root),root))
         shutil.copytree(root/'docs/answer-bank-successor',view/'docs/answer-bank-successor')
         check_bank(view)
     with tempfile.TemporaryDirectory() as td:
@@ -141,7 +144,7 @@ def check(root=ROOT):
         check_gate(view)
     with tempfile.TemporaryDirectory() as td:
         view=Path(td)
-        (view/'ask.html').write_bytes(restore_legacy('ask.html',restore_decoupling('ask.html',(root/'ask.html').read_bytes(),root),root))
+        (view/'ask.html').write_bytes(restore_legacy('ask.html',restore_decoupling('ask.html',restore_scroll('ask.html',(root/'ask.html').read_bytes(),root),root),root))
         shutil.copytree(root/'docs/citation-rendering-successor',view/'docs/citation-rendering-successor')
         check_citation(view)
     with tempfile.TemporaryDirectory() as td:
@@ -152,10 +155,16 @@ def check(root=ROOT):
     with tempfile.TemporaryDirectory() as td:
         view=Path(td)
         for legacy_name in ('ask.html','pioneers.html'):
-            (view/legacy_name).write_bytes(restore_decoupling(legacy_name,(root/legacy_name).read_bytes(),root))
+            (view/legacy_name).write_bytes(restore_decoupling(legacy_name,restore_scroll(legacy_name,(root/legacy_name).read_bytes(),root),root))
         shutil.copytree(root/'docs/legacy-answer-repairs-successor',view/'docs/legacy-answer-repairs-successor')
         check_legacy(view)
-    check_decoupling(root)
+    with tempfile.TemporaryDirectory() as td:
+        view=Path(td)
+        for decoupling_name in ('ask.html','site-common.js'):
+            (view/decoupling_name).write_bytes(restore_scroll(decoupling_name,(root/decoupling_name).read_bytes(),root))
+        shutil.copytree(root/'docs/bank-serve-decoupling-successor',view/'docs/bank-serve-decoupling-successor')
+        check_decoupling(view)
+    check_scroll(root)
     return {'status':'EXACT_MOTION_EVIDENCE_PASS','files':len(data['files']),'limits':'Technical evidence binding only; does not authenticate reviewers or grant publication approval.'}
 
 if __name__=='__main__':

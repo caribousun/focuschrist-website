@@ -1118,6 +1118,14 @@
 
         return { answer: "That's a great question! We invite you to learn more by visiting the official Church website.", sources: [{text:'🕍 Come Unto Christ',url:'https://www.churchofjesuschrist.org/comeuntochrist'}] };
     }
+    function bringEntryIntoView(entry) {
+      if (!entry || typeof entry.scrollIntoView !== 'function') return;
+      try {
+        entry.scrollIntoView({ behavior: 'auto', block: 'start' });
+      } catch (error) {
+        entry.scrollIntoView();
+      }
+    }
     function addMessage(text, isUser, sources = []) {
     const chatBox = document.getElementById('chatBox');
     const message = document.createElement('div');
@@ -1218,7 +1226,7 @@
     }
 
     chatBox.appendChild(message);
-    chatBox.scrollTop = chatBox.scrollHeight;
+    bringEntryIntoView(message);
 }
     async function sendMessage(){
         const i=document.getElementById('userInput'),b=document.getElementById('sendBtn'),q=i.value.trim();
