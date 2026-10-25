@@ -22,8 +22,9 @@ class MotionBindingTests(unittest.TestCase):
             from legacy_answer_repairs_successor import restore as restore_legacy
             from bank_serve_decoupling_successor import restore as restore_decoupling
             from entry_scroll_successor import restore as restore_scroll
+            from pioneer_entry_scroll_successor import restore as restore_pioneer_scroll
             from evaluator_corrections_successor import restore as restore_eval
-            self.assertEqual(gate.sha(restore_world(name,settings.restore(name,restore_close(name,restore_hand(name,restore_bank(name,restore_gate(name,restore_eval(name,restore_citation(name,restore_legacy(name,restore_decoupling(name,restore_scroll(name,current)))))))))))),row['after_sha256'],name)
+            self.assertEqual(gate.sha(restore_world(name,settings.restore(name,restore_close(name,restore_hand(name,restore_bank(name,restore_gate(name,restore_eval(name,restore_citation(name,restore_legacy(name,restore_decoupling(name,restore_scroll(name,restore_pioneer_scroll(name,current))))))))))))),row['after_sha256'],name)
             self.assertEqual(gate.sha(gate.restore(name,current)),row['before_sha256'],name)
 
     def test_exact_successors_and_unknown_input_rejected(self):
@@ -139,6 +140,27 @@ class MotionBindingTests(unittest.TestCase):
         self.assertEqual(gate.sha(projected),'54cfb9fc5de9c5ab76133cb32843053ee6c5700ff0fe11d8bedd470de3412a77',name)
         self.assertEqual(gate.sha(restore_eval(name,projected)),'9090c0bf19a4093f881bf0d1f9f95236ec1db8d61a7072251d807f5c9ce3a041',name)
         self.assertEqual(gate.sha(restore_gate(name,restore_eval(name,projected))),row['after_sha256'],name)
+        self.assertEqual(gate.sha(gate.restore(name,current)),row['before_sha256'],name)
+        self.assertEqual(gate.advance(name,gate.restore(name,current)),current,name)
+
+    def test_pioneer_entry_scroll_chain_composes(self):
+        from pioneer_entry_scroll_successor import restore as restore_pioneer_scroll
+        from legacy_answer_repairs_successor import restore as restore_legacy
+        from answer_bank_successor import restore as restore_bank
+        name='pioneers.html'
+        row=gate.mapping()['files'][name]
+        current=(gate.ROOT/name).read_bytes()
+        self.assertEqual(gate.sha(restore_pioneer_scroll(name,current)),'0674855075616de71f8b89b8b6e3b0145a48e80cc7e7f1b8b7a64874b77fa05d',name)
+        projected=restore_legacy(name,restore_pioneer_scroll(name,current))
+        self.assertEqual(gate.sha(projected),'b2b988d240a7d54b60b2d2701fde26f54fa6ca1b63261b3d7f7f9e89377a3bf5',name)
+        self.assertEqual(gate.sha(restore_bank(name,projected)),row['after_sha256'],name)
+        self.assertEqual(gate.sha(gate.restore(name,current)),row['before_sha256'],name)
+        self.assertEqual(gate.advance(name,gate.restore(name,current)),current,name)
+        name='pioneer-experience.js'
+        row=gate.mapping()['files'][name]
+        current=(gate.ROOT/name).read_bytes()
+        self.assertEqual(gate.sha(restore_pioneer_scroll(name,current)),'b1f6f02625377c9f28850e88d707c4e9837c0d6c183510463b65448294cfb9cb',name)
+        self.assertEqual(gate.sha(restore_bank(name,restore_pioneer_scroll(name,current))),row['after_sha256'],name)
         self.assertEqual(gate.sha(gate.restore(name,current)),row['before_sha256'],name)
         self.assertEqual(gate.advance(name,gate.restore(name,current)),current,name)
 
