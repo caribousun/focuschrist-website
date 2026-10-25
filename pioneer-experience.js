@@ -211,6 +211,8 @@
 
     function bringPioneerEntryIntoView(entry) {
         if (!entry || typeof entry.scrollIntoView !== 'function') return;
+        const box = entry.parentElement;
+        if (box && typeof box.querySelector === 'function' && box.querySelector('[data-scripture-pending]')) return;
         try {
             entry.scrollIntoView({ behavior: 'auto', block: 'start' });
         } catch (error) {
