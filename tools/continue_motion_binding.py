@@ -72,6 +72,7 @@ def advance(name,data,root=ROOT):
     from display_gate_successor import advance as advance_gate
     from evaluator_corrections_successor import advance as advance_eval
     from citation_rendering_successor import advance as advance_citation
+    from bank_serve_decoupling_successor import advance as advance_decoupling
     if not record or sha(data)!=record['before_sha256']:return advance_decoupling(name,advance_citation(name,advance_eval(name,advance_gate(name,advance_bank(name,advance_hand(name,advance_close(name,advance_settings(name,advance_world(name,data,root),root),root),root),root),root),root),root),root)
     replacements=[];delta=0
     for span in record['spans']:
