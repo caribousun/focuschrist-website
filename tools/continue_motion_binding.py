@@ -144,7 +144,12 @@ def check(root=ROOT):
         (view/'ask.html').write_bytes(restore_legacy('ask.html',restore_scroll('ask.html',(root/'ask.html').read_bytes(),root),root))
         shutil.copytree(root/'docs/citation-rendering-successor',view/'docs/citation-rendering-successor')
         check_citation(view)
-    check_legacy(root)
+    with tempfile.TemporaryDirectory() as td:
+        view=Path(td)
+        for legacy_name in ('ask.html','pioneers.html'):
+            (view/legacy_name).write_bytes(restore_scroll(legacy_name,(root/legacy_name).read_bytes(),root))
+        shutil.copytree(root/'docs/legacy-answer-repairs-successor',view/'docs/legacy-answer-repairs-successor')
+        check_legacy(view)
     check_eval(root)
     check_scroll(root)
     return {'status':'EXACT_MOTION_EVIDENCE_PASS','files':len(data['files']),'limits':'Technical evidence binding only; does not authenticate reviewers or grant publication approval.'}

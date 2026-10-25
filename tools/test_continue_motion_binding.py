@@ -115,6 +115,7 @@ class MotionBindingTests(unittest.TestCase):
         self.assertEqual(gate.advance(name,gate.restore(name,current)),current,name)
 
     def test_entry_scroll_experience_chain(self):
+        from entry_scroll_successor import restore as restore_scroll
         name='ask-experience.js'
         row=gate.mapping()['files'][name]
         current=(gate.ROOT/name).read_bytes()
