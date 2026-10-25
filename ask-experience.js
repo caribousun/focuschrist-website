@@ -408,9 +408,17 @@
         const answer = answerCandidate && answerCandidate.classList && answerCandidate.classList.contains('bot-message')
             ? answerCandidate
             : (typeof promoteLatestExchangeToTop === 'function' ? answers[0] : answers[answers.length - 1]);
-        const userMessages = chatBox.querySelectorAll('.user-message');
-        const latestUserMessage = userMessages.length ? userMessages[0] : null;
-        const exchangeStart = latestUserMessage || answer;
+        // Anchor the exchange that owns this answer: its own
+        // preceding user message when it has one, wherever the
+        // latest-first promotion has placed the pair. Taking the
+        // first user message in the box here anchored every later
+        // exchange to the first question whenever a follow-up
+        // arrived by a chip click, the one send path that does not
+        // clear the latest-first marker, so no promotion runs for it.
+        const exchangeStart = answer.previousElementSibling && answer.previousElementSibling.classList
+            && answer.previousElementSibling.classList.contains('user-message')
+            ? answer.previousElementSibling
+            : answer;
         const exchangeTopInsideChat = exchangeStart.getBoundingClientRect().top
             - chatBox.getBoundingClientRect().top + chatBox.scrollTop;
         chatBox.scrollTo({
@@ -442,8 +450,10 @@
         const chatBox = document.getElementById('chatBox');
         if (!chatBox || !answer || !answer.isConnected) return;
         if (typeof promoteLatestExchangeToTop === 'function') promoteLatestExchangeToTop(answer);
-        const userMessages = chatBox.querySelectorAll('.user-message');
-        const exchangeStart = userMessages.length ? userMessages[0] : answer;
+        const exchangeStart = answer.previousElementSibling && answer.previousElementSibling.classList
+            && answer.previousElementSibling.classList.contains('user-message')
+            ? answer.previousElementSibling
+            : answer;
         const exchangeTopInsideChat = exchangeStart.getBoundingClientRect().top
             - chatBox.getBoundingClientRect().top + chatBox.scrollTop;
         chatBox.scrollTo({ top: Math.max(0, exchangeTopInsideChat - 18), behavior: 'instant' });
@@ -530,17 +540,23 @@
         }) || null;
     }
 
-    function addRelatedStudyToLatestAnswer() {
+    function addRelatedStudyToLatestAnswer(answerCandidate) {
         const chatBox = document.getElementById('chatBox');
         if (!chatBox) return;
         const answers = chatBox.querySelectorAll('.bot-message');
         if (!answers.length) return;
-        const answer = answers[0];
+        const answer = answerCandidate && answerCandidate.classList && answerCandidate.classList.contains('bot-message')
+            ? answerCandidate
+            : answers[0];
         if (answer.querySelector('.ask-related-study')) return;
 
+        const pairedUser = answer.previousElementSibling && answer.previousElementSibling.classList
+            && answer.previousElementSibling.classList.contains('user-message')
+            ? answer.previousElementSibling
+            : null;
         const userMessages = chatBox.querySelectorAll('.user-message');
-        if (!userMessages.length) return;
-        const question = userMessages[0].textContent || '';
+        if (!pairedUser && !userMessages.length) return;
+        const question = (pairedUser || userMessages[0]).textContent || '';
         const related = findRelatedStudy(question);
         if (!related) return;
 
@@ -565,7 +581,7 @@
                     return Boolean(event.target.compareDocumentPosition(question) & 4);
                 });
                 if (newerQuestion) return;
-                addRelatedStudyToLatestAnswer();
+                addRelatedStudyToLatestAnswer(event.target);
                 setFollowupVisible(true);
                 setFollowupBusy(false);
                 focusLatestAnswer(event.target);
@@ -573,22 +589,26 @@
             }, 60);
         });
         const observer = new MutationObserver(function (mutations) {
-            const addedAnswer = mutations.some(function (mutation) {
-                return Array.from(mutation.addedNodes || []).some(function (node) {
-                    if (node.nodeType !== 1) return false;
-                    if (!node.isConnected || node.hasAttribute('data-scripture-pending')) return false;
-                    if (node.classList && node.classList.contains('bot-message')) return true;
-                    return typeof node.querySelector === 'function' && Boolean(node.querySelector('.bot-message'));
+            let addedAnswer = null;
+            mutations.forEach(function (mutation) {
+                if (addedAnswer) return;
+                Array.from(mutation.addedNodes || []).forEach(function (node) {
+                    if (addedAnswer || node.nodeType !== 1) return;
+                    if (!node.isConnected || node.hasAttribute('data-scripture-pending')) return;
+                    if (node.classList && node.classList.contains('bot-message')) {
+                        addedAnswer = node;
+                    } else if (typeof node.querySelector === 'function') {
+                        addedAnswer = node.querySelector('.bot-message');
+                    }
                 });
             });
             if (addedAnswer) {
                 window.setTimeout(function () {
-                    const latestAnswer = chatBox.querySelector('.bot-message');
-                    if (latestAnswer && latestAnswer.hasAttribute('data-scripture-pending')) return;
-                    addRelatedStudyToLatestAnswer();
+                    if (addedAnswer.hasAttribute('data-scripture-pending')) return;
+                    addRelatedStudyToLatestAnswer(addedAnswer);
                     setFollowupVisible(true);
                     setFollowupBusy(false);
-                    focusLatestAnswer();
+                    focusLatestAnswer(addedAnswer);
                     if (typeof focusFollowupComposer === 'function') focusFollowupComposer();
                 }, 60);
             }
