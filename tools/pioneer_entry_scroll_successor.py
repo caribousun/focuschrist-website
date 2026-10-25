@@ -1,8 +1,9 @@
 """Exact Pioneer entry scroll-follow successor and registration binding.
 
 Registers one exact change set (branch
-feature/pioneer-entry-scroll-follow-2026-10-25): the Pioneer
-conversation scroll follow fix in pioneers.html and
+feature/pioneer-entry-scroll-follow-2026-10-25, amended by
+branch feature/pioneer-composer-scroll-followup-2026-10-25):
+the Pioneer conversation scroll follow fix in pioneers.html and
 pioneer-experience.js, the Pioneers counterpart of the Ask entry
 scroll fix in PR #520. In pioneers.html, the page's own addMessage
 ended by forcing the transcript to its absolute top
@@ -14,7 +15,22 @@ to a new bringPioneerEntryIntoView helper immediately after the
 append, so every append anchors its own entry (composer answers
 already receive the exchange-level positionAnswer refinement;
 the choice-list, story, and error appends that never call it now
-anchor too). Spans are in AFTER-byte coordinates. Restoration
+anchor too). Amendment: the helper now defers to the scripture
+display gate. site-common wraps window.addMessage so a bot answer
+is first rendered as a [data-scripture-pending] placeholder,
+which the caller positions with positionAnswer, and the real
+answer is appended afterwards and transplanted into the
+placeholder. The append-time scrollIntoView also fired on that
+late real append, after positioning, and dragged the panel to
+the appended position; when an earlier exchange followed the
+promoted one, the answer-ready re-positioning is suppressed and
+the wrong scroll stood (the composer-path regression the #522
+finisher's live watch caught). The helper therefore returns
+without scrolling when the entry's parent box still holds a
+[data-scripture-pending] placeholder: that append's content is
+bound for the already-positioned placeholder. Appends with no
+gate placeholder pending keep the original anchor unchanged.
+Spans are in AFTER-byte coordinates. Restoration
 removes only this layer and reproduces the exact bytes the
 legacy-answer-repairs successor pins as its AFTER state for
 pioneers.html (06748550...), which itself composes over the
@@ -43,14 +59,14 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = "docs/pioneer-entry-scroll-successor/manifest.json"
-SOURCE_SHA = "15ddc16f964f35e5bed6bf7721facbac3a3108ca975fb223045bf1f341162326"  # Integrator pins exact candidate spans; this is not review approval.
+SOURCE_SHA = "b4b19d29bb489612f35a2acc6cca18d9dceb980c22576006629c4fa5a704445f"  # Integrator pins exact candidate spans; this is not review approval.
 BEFORE = {
     "pioneers.html": "0674855075616de71f8b89b8b6e3b0145a48e80cc7e7f1b8b7a64874b77fa05d",
     "pioneer-experience.js": "b1f6f02625377c9f28850e88d707c4e9837c0d6c183510463b65448294cfb9cb",
 }
 AFTER = {
     "pioneers.html": "b9275099d3a124a940e3c402d905c7994be2fbaf6fe69caebf28481e84078e4f",
-    "pioneer-experience.js": "51fa2de4014b7acd0e7309af5670609fc92518c6ae53e71162412708563eb487",
+    "pioneer-experience.js": "2baf4d3cef128337fb687f99299d21ebdcf4831cd781d5fa8b72fee6955f00cd",
 }
 
 
