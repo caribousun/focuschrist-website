@@ -565,13 +565,6 @@
             return { answer: 'Which passage or interpretations would you like to compare? Please share the reference or the two views.',
                 sources: [], clarification: true, profile: currentMode() };
         }
-        if (window.focusChristScriptureReady) {
-            try {
-                const library = await window.focusChristScriptureReady;
-                const direct = await library.lookupRequest(query);
-                if (direct) return direct;
-            } catch (_) { /* The normal guarded answer lane retains a useful fallback. */ }
-        }
         const contextResolution = resolveQuestionContext(query);
         const effectiveQuery = contextResolution.query || query;
         const profile = classifyQuestion(effectiveQuery);
@@ -603,6 +596,34 @@
         const bankReference = allowContextualLocalMatch
             ? bankKnowledgeReference(effectiveQuery)
             : null;
+        if (bankReference && !bankReference.suggestion) {
+            return Object.assign({}, bankReference, {
+                profile: profile,
+                contextResolved: contextResolution.resolved === true,
+                contextEntryId: bankReference.bankRecordId,
+                contextQuestion: bankReference.canonicalQuestion || null
+            });
+        }
+        // The live scripture lookup runs only when the reviewed bank
+        // did not serve: a genuine bank serve precedes it and renders
+        // without any dependency on the library or the Church fetch
+        // behind it. The wait is bounded so a hung (never-settling)
+        // library promise cannot stall the remaining lanes; a timeout
+        // takes the same fall-through path as a rejected promise.
+        if (window.focusChristScriptureReady) {
+            try {
+                const directAttempt = (async () => {
+                    const library = await window.focusChristScriptureReady;
+                    return library.lookupRequest(query);
+                })();
+                directAttempt.catch(() => {});
+                const direct = await Promise.race([
+                    directAttempt,
+                    new Promise((_, reject) => setTimeout(() => reject(new Error('Scripture library lookup wait exceeded')), 3000))
+                ]);
+                if (direct) return direct;
+            } catch (_) { /* The normal guarded answer lane retains a useful fallback. */ }
+        }
         if (bankReference && bankReference.suggestion) {
             return {
                 answer: bankReference.answer,
@@ -615,14 +636,6 @@
                 contextEntryId: contextResolution.entryId || null,
                 contextQuestion: contextResolution.contextQuestion || null
             };
-        }
-        if (bankReference) {
-            return Object.assign({}, bankReference, {
-                profile: profile,
-                contextResolved: contextResolution.resolved === true,
-                contextEntryId: bankReference.bankRecordId,
-                contextQuestion: bankReference.canonicalQuestion || null
-            });
         }
         const verifiedContext = profile === 'faith-study' || profile === 'pioneer-study' ? verifiedContextFor(effectiveQuery) : '';
 

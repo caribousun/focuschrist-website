@@ -221,10 +221,57 @@
         return true;
     }
 
+    /* Display-gate binding for reviewed-bank serves: the gate in
+     * site-common.js exempts a marked serve from the scripture check
+     * only when this function confirms, against the loaded pin-checked
+     * bank, that the claimed record id, whole-entry pin, exact answer
+     * text, and sources are a genuine serve of the current bank. A
+     * record the load excluded or never carried, a wrong pin, or any
+     * edit to the answer or its sources fails the binding. Variant
+     * serves (a record's followup block, inside the same pinned whole
+     * entry) verify against their variant's answer and sources. */
+    function verifyPinnedServe(claim) {
+        if (!claim || typeof claim !== 'object') return false;
+        if (typeof claim.record_id !== 'string' || !claim.record_id) return false;
+        if (typeof claim.pin !== 'string' || !claim.pin) return false;
+        if (typeof claim.answer !== 'string') return false;
+        var record = loaded.bank.byId.get(claim.record_id);
+        if (!record || !record.raw) return false;
+        if (claim.pin !== record.raw.integrity) return false;
+        var candidates = [{
+            answer: record.raw.answer,
+            sources: {
+                site: Array.isArray(record.raw.sources_site) ? record.raw.sources_site : [],
+                church: Array.isArray(record.raw.sources_church) ? record.raw.sources_church : []
+            }
+        }];
+        var block = record.raw.followup;
+        if (block && Array.isArray(block.variants)) {
+            block.variants.forEach(function (variant) {
+                candidates.push({
+                    answer: variant.answer,
+                    sources: variant.sources || { site: [], church: [] }
+                });
+            });
+        }
+        var actual = Array.isArray(claim.sources) ? claim.sources : null;
+        if (!actual) return false;
+        return candidates.some(function (candidate) {
+            if (claim.answer !== candidate.answer) return false;
+            var expected = mapSources(candidate.sources);
+            if (actual.length !== expected.length) return false;
+            for (var i = 0; i < expected.length; i++) {
+                if (!actual[i] || actual[i].text !== expected[i].text || actual[i].url !== expected[i].url) return false;
+            }
+            return true;
+        });
+    }
+
     global.FocusChristAnswerBankLane = Object.freeze({
         answer: answer,
         followUpChips: followUpChips,
         serveDisclosure: serveDisclosure,
+        verifyPinnedServe: verifyPinnedServe,
         loadReport: global.FocusChristAnswerBankLoadReport
     });
 })(typeof globalThis !== 'undefined' ? globalThis : this);
