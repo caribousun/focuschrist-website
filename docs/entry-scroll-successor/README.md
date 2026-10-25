@@ -46,10 +46,10 @@ The fix:
 Registered spans (candidate-byte coordinates):
 
 - ask.html: predecessor SHA-256
-  `b6831d0fbe534cea363bd208db73226672e82788fccc8f403ba7fc76cd837198`,
+  `1c15ee0e7e65072c9d788b9573becd8cd9c599298f75ee4c8fac1dafdf78e095`,
   candidate SHA-256
-  `ac44c92fcf38d328a40db0cdefc23acb7626628d7ae77701ead30ff024ff9f55`
-  (440,446 bytes). Two spans:
+  `433894ff5af81933cfe4088fd1aba57f3ca1cff2be7b6101659ea1689bbc2381`
+  (444,308 bytes). Two spans:
   - [430971, 431234): the `bringEntryIntoView` helper inserted
     (263 bytes, empty previous bytes) directly above `addMessage`.
   - [436670, 436703): the bottom-force line
@@ -109,7 +109,13 @@ ask.html and merged before this PR (merge commit
 layer's ask.html registration was re-pinned onto the post-#518
 ask.html (predecessor `b6831d0f...`), with the span byte contents
 unchanged, for a bounded re-review of the re-pin before merge.
-ask-experience.js is untouched by either PR.
+ask-experience.js is untouched by either PR. On 2026-10-25 the
+registration was re-pinned again, mechanically, onto the
+chips-amended bank-serve decoupling AFTER state (predecessor
+`1c15ee0e...`, candidate `433894ff...`): the decoupling layer's
+inline serve gained the follow-up chips adjunct inside its own
+span, below both of this layer's spans, so this layer's span byte
+contents and coordinates are again unchanged.
 
 ## Review model
 

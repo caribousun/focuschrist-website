@@ -1251,13 +1251,68 @@
             const bankResult = bankLane.answer({ question_text: q, profile: 'ask', history: [] });
             if (bankResult && bankResult.status === 'serve' && typeof bankResult.answer === 'string' && bankResult.answer) {
                 l.remove(); b.disabled = false;
-                addMessage(bankResult.answer, false, Array.isArray(bankResult.sources) ? bankResult.sources : [], {
+                const bankNode = addMessage(bankResult.answer, false, Array.isArray(bankResult.sources) ? bankResult.sources : [], {
                     reviewedBankServe: true,
                     bankMode: bankResult.mode,
                     bankProvenance: bankResult.provenance,
                     bankRecordId: bankResult.record_id,
                     bankPin: bankResult.pin
                 });
+                // Follow-up chips: the v3 controller renders this
+                // adjunct after its bank serves (appendFollowUpChips in
+                // study-intelligence-v3.js), but this inline controller
+                // owns the ask until that script loads, and a serve it
+                // completes is never revisited. Render the identical
+                // adjunct here so a reviewed-bank serve carries its
+                // chips whichever controller owns the submit. The chips
+                // come only from the lane's followUpChips() for the
+                // served record, and the group renders under its
+                // "Additional questions" section heading: a group of
+                // question pills never renders without its section
+                // label. The node addMessage returns is the display
+                // gate's pending node; children appended synchronously
+                // are carried across its verified-content swap, the
+                // same mechanics the v3 renderer relies on. This block
+                // runs only on this controller's own lane serve, which
+                // returns before the v3 controller can serve the same
+                // submit, so a serve can never render two groups.
+                if (typeof bankResult.record_id === 'string' && bankResult.record_id
+                    && typeof bankLane.followUpChips === 'function') {
+                    const bankChips = bankLane.followUpChips(bankResult.record_id);
+                    if (Array.isArray(bankChips) && bankChips.length) {
+                        const bankBox = document.getElementById('chatBox');
+                        const bankGroup = document.createElement('div');
+                        bankGroup.className = 'ask-clarification-options ask-followup-chips';
+                        bankGroup.setAttribute('role', 'group');
+                        bankGroup.setAttribute('aria-label', 'Follow-up questions');
+                        bankGroup.setAttribute('data-followup-for', bankResult.record_id);
+                        bankChips.forEach(function (chip) {
+                            if (!chip || typeof chip.question !== 'string' || !chip.question) return;
+                            const bankButton = document.createElement('button');
+                            bankButton.type = 'button';
+                            bankButton.className = 'ask-followup-button';
+                            bankButton.textContent = chip.question;
+                            if (chip.record_id) bankButton.setAttribute('data-followup-target', chip.record_id);
+                            bankButton.addEventListener('click', function () {
+                                if (i.disabled) return;
+                                i.value = chip.question;
+                                if (typeof window.sendMessage === 'function') window.sendMessage();
+                            });
+                            bankGroup.appendChild(bankButton);
+                        });
+                        if (bankGroup.children.length && bankBox) {
+                            const bankHost = bankNode && bankNode.nodeType === 1
+                                && typeof bankBox.contains === 'function' && bankBox.contains(bankNode)
+                                ? bankNode : bankBox;
+                            const bankHeading = document.createElement('div');
+                            bankHeading.className = 'sources-title ask-followup-chips-title';
+                            bankHeading.textContent = 'Additional questions';
+                            bankHost.appendChild(bankHeading);
+                            bankHost.appendChild(bankGroup);
+                            bankBox.scrollTop = bankBox.scrollHeight;
+                        }
+                    }
+                }
                 return;
             }
         }
