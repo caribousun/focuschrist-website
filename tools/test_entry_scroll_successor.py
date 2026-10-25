@@ -2,9 +2,10 @@
 
 Synthetic fixture round trips plus the real-candidate round trip, the
 full historical chain round trip through the continue-motion binding
-(for ask.html: the legacy-repairs after state, the citation-rendering
-after state, the answer-bank after state, the motion map's after
-state, then the motion map's before pin; for ask-experience.js: the
+(for ask.html: the bank-serve decoupling after state, the
+legacy-repairs after state, the citation-rendering after state,
+the answer-bank after state, the motion map's after state, then
+the motion map's before pin; for ask-experience.js: the
 motion map's after state, then its before pin), and the required
 mutations: an altered token
 inside a registered span, an altered older-layer token, and an
@@ -138,6 +139,7 @@ class EntryScrollSuccessorTests(unittest.TestCase):
     def test_historical_chain_round_trip(self):
         import continue_motion_binding as gate
         from legacy_answer_repairs_successor import restore as restore_legacy
+        from bank_serve_decoupling_successor import restore as restore_decoupling
         from citation_rendering_successor import restore as restore_citation
         from answer_bank_successor import restore as restore_bank
         with patch.multiple(c, BEFORE=REAL_BEFORE, AFTER=REAL_AFTER, SOURCE_SHA=REAL_SOURCE_SHA):
@@ -146,6 +148,8 @@ class EntryScrollSuccessorTests(unittest.TestCase):
             current = (gate.ROOT / name).read_bytes()
             projected = c.restore(name, current, gate.ROOT)
             self.assertEqual(c.sha(projected), REAL_BEFORE[name])
+            projected = restore_decoupling(name, projected, gate.ROOT)
+            self.assertEqual(c.sha(projected), "0d9a5f1ba3a6bf815084ef3df330b25b771332dfa837dd2f21e74b133a9cfc90")
             projected = restore_legacy(name, projected, gate.ROOT)
             self.assertEqual(c.sha(projected), "4881b5a20ed045b1d45dd1c393d3204c56cf46692d7fa4837e5257346aa4e7a9")
             projected = restore_citation(name, projected, gate.ROOT)

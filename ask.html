@@ -1236,6 +1236,32 @@
         if(containsInappropriate(q)){i.value='';addMessage("focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.",false,[]);return}
         b.disabled=true;addMessage(q,true);i.value='';const l=document.createElement('div');l.className='loading';l.innerHTML='<p>Looking for relevant scriptures and study sources…</p>';document.getElementById('chatBox').appendChild(l);
         
+        // Reviewed answer bank first (step 1 lane): this inline controller
+        // owns the ask until study-intelligence-v3.js loads, and a reviewed
+        // bank serve must not depend on that script arriving or on the
+        // scripture library being reachable. The lane runs the production
+        // Step S safety evaluation inside its matcher before any serve;
+        // a serve renders with the same reviewed-bank provenance marker
+        // the v3 controller passes to the display gate, so the gate's
+        // exemption applies identically. Any other lane outcome
+        // (suggestion, no match, lane absent) falls through to the
+        // legacy lookup below, unchanged.
+        const bankLane = window.FocusChristAnswerBankLane;
+        if (bankLane && typeof bankLane.answer === 'function') {
+            const bankResult = bankLane.answer({ question_text: q, profile: 'ask', history: [] });
+            if (bankResult && bankResult.status === 'serve' && typeof bankResult.answer === 'string' && bankResult.answer) {
+                l.remove(); b.disabled = false;
+                addMessage(bankResult.answer, false, Array.isArray(bankResult.sources) ? bankResult.sources : [], {
+                    reviewedBankServe: true,
+                    bankMode: bankResult.mode,
+                    bankProvenance: bankResult.provenance,
+                    bankRecordId: bankResult.record_id,
+                    bankPin: bankResult.pin
+                });
+                return;
+            }
+        }
+        
         // First check database for relevant entries
         const dbResult = findAnswer(q);
         let ai;

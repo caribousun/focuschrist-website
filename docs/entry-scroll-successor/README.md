@@ -46,10 +46,10 @@ The fix:
 Registered spans (candidate-byte coordinates):
 
 - ask.html: predecessor SHA-256
-  `0d9a5f1ba3a6bf815084ef3df330b25b771332dfa837dd2f21e74b133a9cfc90`,
+  `b6831d0fbe534cea363bd208db73226672e82788fccc8f403ba7fc76cd837198`,
   candidate SHA-256
-  `1c6b962d3b0066a8503b3f9075509594cc2e260a8c60c1d0720a7276852a3f8c`
-  (438,913 bytes). Two spans:
+  `ac44c92fcf38d328a40db0cdefc23acb7626628d7ae77701ead30ff024ff9f55`
+  (440,446 bytes). Two spans:
   - [430971, 431234): the `bringEntryIntoView` helper inserted
     (263 bytes, empty previous bytes) directly above `addMessage`.
   - [436670, 436703): the bottom-force line
@@ -67,10 +67,14 @@ Registered spans (candidate-byte coordinates):
   MutationObserver's capture and use of the added answer node.
 
 The ask.html predecessor hash is exactly the after hash the
-legacy-answer-repairs successor layer
-(docs/legacy-answer-repairs-successor/manifest.json) pins for
-ask.html; this layer strips back to it, the legacy layer then
-strips back to the citation-rendering layer's after state
+bank-serve decoupling successor layer
+(docs/bank-serve-decoupling-successor/manifest.json) pins for
+ask.html; this layer strips back to it, the decoupling layer
+then strips back to the legacy-answer-repairs layer's after
+state
+(`0d9a5f1ba3a6bf815084ef3df330b25b771332dfa837dd2f21e74b133a9cfc90`),
+the legacy layer then strips back to the citation-rendering
+layer's after state
 (`4881b5a20ed045b1d45dd1c393d3204c56cf46692d7fa4837e5257346aa4e7a9`),
 the citation layer strips back to the answer-bank layer's after
 state
@@ -97,12 +101,14 @@ validates those layers against restored projections of ask.html
 (temporary views) rather than the raw final bytes, without
 altering those layers themselves.
 
-Sequencing note: this layer is built on main
+Sequencing note: this layer was built on main
 `b0c8f8ba585280e919c82de71fd484b2d0ea541d`, which already includes
-PR #516 (the legacy answer repairs layer). PR #518 also changes
-ask.html and merges before this PR; this layer's ask.html spans
-will be re-pinned onto the post-#518 head, with a bounded
-re-review of the re-pin, before this PR merges.
+PR #516 (the legacy answer repairs layer). PR #518 also changed
+ask.html and merged before this PR (merge commit
+`cb487c0df561ce17c80eccd87e660fe01b5e3bce`); on 2026-10-25 this
+layer's ask.html registration was re-pinned onto the post-#518
+ask.html (predecessor `b6831d0f...`), with the span byte contents
+unchanged, for a bounded re-review of the re-pin before merge.
 ask-experience.js is untouched by either PR.
 
 ## Review model

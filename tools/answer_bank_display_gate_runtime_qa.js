@@ -16,7 +16,8 @@
  *   gate, with or without a bank answer's text: the exemption keys on
  *   the lane provenance marker only, never on answer text, and a
  *   marker missing its pin earns nothing.
- * - No probe reaches the research Worker (fetch must stay unused).
+ * - No bank serve reaches the research Worker: fetch stays unused until
+ *   the intentional no-bank case, which must make exactly its two attempts.
  */
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
@@ -277,6 +278,154 @@ const PROBES = [
     assert.equal(userNode.textContent, 'A visitor message with "quotes" and John 3:16.',
         'user messages must pass through untouched');
     console.log('CONTROL PASS: user message untouched');
+
+    /* ---- Concurrence cases: A-2026-10-24-ASK-DECOUPLING-CONCURRENCE-01 ----
+     * The exemption is bound through the bank-owning code, and a genuine
+     * serve precedes the live lookup. The discriminator for exemption is
+     * the library-down state: an exempt serve renders as served, anything
+     * else becomes the gate's fail-closed fallback text. */
+    const GATE_FALLBACK = 'Scripture verification is temporarily unavailable.';
+    const readyGood = sandbox.focusChristScriptureReady;
+    sandbox.focusChristScriptureReady = Promise.reject(new Error('library down'));
+    sandbox.focusChristScriptureReady.catch(() => {});
+
+    node = sandbox.addMessage(gs.answer, false, gsSources, {
+        reviewedBankServe: true, bankMode: 'focuschrist-answer-bank',
+        bankProvenance: 'reviewed-bank', bankRecordId: gs.id, bankPin: gs.integrity,
+    });
+    await settled(node);
+    assert.equal(node.textContent, gs.answer,
+        'a genuine lane-verified serve must render with the library down');
+    console.log('CONTROL PASS: genuine serve renders with library down');
+
+    node = sandbox.addMessage(gs.answer, false, gsSources, {
+        reviewedBankServe: true, bankMode: 'focuschrist-answer-bank',
+        bankProvenance: 'reviewed-bank', bankRecordId: gs.id,
+        bankPin: 'sha256:0000000000000000000000000000000000000000000000000000000000000000',
+    });
+    await settled(node);
+    assert.ok(node.textContent.includes(GATE_FALLBACK) && node.textContent !== gs.answer,
+        'a wrong pin must earn no exemption');
+    console.log('CONTROL PASS: wrong pin earns no exemption');
+
+    node = sandbox.addMessage(gs.answer, false, gsSources, {
+        reviewedBankServe: true, bankMode: 'focuschrist-answer-bank',
+        bankProvenance: 'reviewed-bank', bankRecordId: 'ask-no-such-record',
+        bankPin: gs.integrity,
+    });
+    await settled(node);
+    assert.ok(node.textContent.includes(GATE_FALLBACK),
+        'a record the bank never carried must earn no exemption');
+    console.log('CONTROL PASS: missing record earns no exemption');
+
+    const stalePin = gs.integrity.replace(/.$/, c => (c === '0' ? '1' : '0'));
+    node = sandbox.addMessage(gs.answer, false, gsSources, {
+        reviewedBankServe: true, bankMode: 'focuschrist-answer-bank',
+        bankProvenance: 'reviewed-bank', bankRecordId: gs.id, bankPin: stalePin,
+    });
+    await settled(node);
+    assert.ok(node.textContent.includes(GATE_FALLBACK),
+        'a stale pin that no longer matches the loaded entry must earn no exemption');
+    console.log('CONTROL PASS: stale pin earns no exemption');
+
+    const editedAnswer = gs.answer + ' Amen.';
+    node = sandbox.addMessage(editedAnswer, false, gsSources, {
+        reviewedBankServe: true, bankMode: 'focuschrist-answer-bank',
+        bankProvenance: 'reviewed-bank', bankRecordId: gs.id, bankPin: gs.integrity,
+    });
+    await settled(node);
+    assert.ok(node.textContent.includes(GATE_FALLBACK) && node.textContent !== editedAnswer,
+        'an edited answer must earn no exemption');
+    console.log('CONTROL PASS: edited answer earns no exemption');
+
+    /* A genuine composed serve with the library promise rejected: the
+     * bank precedes the lookup, so the serve is unaffected. */
+    const shepherdNode = await ask('Who is the Good Shepherd?');
+    assert.equal(shepherdNode.textContent, gs.answer,
+        'composed bank serve must render with the library down');
+    console.log('CONTROL PASS: composed serve with library rejected');
+
+    /* A genuine composed serve with the library promise never settling:
+     * before the fix, askV3 awaited the lookup before the bank and the
+     * ask stalled here. */
+    sandbox.focusChristScriptureReady = new Promise(() => {});
+    const dcRecord = byId.get('ask-what-does-doctrine-and-covenants-6-36-teach');
+    const hangAsk = ask('What does Doctrine and Covenants 6:36 teach?');
+    const hangOutcome = await Promise.race([
+        hangAsk.then(node => ({ node })),
+        new Promise(resolve => setTimeout(() => resolve({ timeout: true }), 12000)),
+    ]);
+    assert.ok(!hangOutcome.timeout, 'bank serve must not stall on a hung library promise');
+    assert.equal(hangOutcome.node.textContent, dcRecord.answer,
+        'composed bank serve must render with the library hung');
+    console.log('CONTROL PASS: composed serve with library hung');
+    sandbox.focusChristScriptureReady = readyGood;
+
+    /* Topic render: a topic-card phrasing served by the bank renders
+     * its pinned record exactly, marker included (checked by the gate). */
+    const topicCandidates = ['Tell me about temples', 'Tell me about the Book of Mormon',
+        'Tell me about Jesus Christ', 'Tell me about prayer', 'Tell me about faith'];
+    let topicServed = null;
+    for (const topicQuestion of topicCandidates) {
+        const topicNode = await ask(topicQuestion);
+        const served = records.find(r => r.answer === topicNode.textContent);
+        if (served) { topicServed = served; break; }
+    }
+    assert.ok(topicServed, 'at least one topic phrasing must serve its pinned bank record');
+    console.log('CONTROL PASS: topic serve renders pinned record', topicServed.id);
+
+    /* Follow-up render: a follow-up chip's canonical question, asked as
+     * the visitor's next question, serves its pinned record exactly. */
+    const father = byId.get('ask-who-is-god-the-father');
+    assert.ok(father, 'dataset record missing: ask-who-is-god-the-father');
+    const fatherNode = await ask(father.question);
+    assert.equal(fatherNode.textContent, father.answer, 'antecedent serve must render exactly');
+    const chips = sandbox.FocusChristAnswerBankLane.followUpChips(father.id);
+    assert.ok(Array.isArray(chips) && chips.length > 0, 'served record must offer follow-up chips');
+    const chip = chips[0];
+    const chipQuestion = typeof chip === 'string' ? chip : chip.question;
+    const chipRecord = records.find(r => r.question === chipQuestion);
+    assert.ok(chipRecord, 'chip target must be a shipped record: ' + chipQuestion);
+    const chipNode = await ask(chipQuestion);
+    assert.equal(chipNode.textContent, chipRecord.answer,
+        'follow-up chip question must serve its pinned record exactly');
+    console.log('CONTROL PASS: follow-up chip serve renders pinned record', chipRecord.id);
+
+    /* Step S still stops at the lane: a safety-flagged question is not
+     * a bank serve, whatever it resembles. */
+    const lane = sandbox.FocusChristAnswerBankLane;
+    assert.equal(lane.answer({ question_text: 'How do I kill myself?', profile: 'ask', history: [] }), null,
+        'Step S must stop a flagged question before bank matching');
+    console.log('CONTROL PASS: Step S stops flagged question at the lane');
+
+    /* Ambiguity control still precedes the lanes: a bare-Joseph death
+     * question earns the clarification, not an answer. */
+    const ambNode = await ask('When did Joseph die?');
+    assert.ok(ambNode.textContent.includes('Which Joseph do you mean'),
+        'ambiguity clarification must be preserved');
+    console.log('CONTROL PASS: ambiguity clarification preserved');
+
+    /* Every serve above is a composed bank serve or a gate control, and
+     * none of them may reach the research Worker: the bank precedes the
+     * lookup, so fetch stays unused until the intentional no-bank case
+     * below makes its own attempts. */
+    assert.equal(fetchCalls, 0, 'no composed serve in this harness may reach the research Worker');
+
+    /* Ordinary no-bank question: keeps the honest research-unavailable
+     * behavior (the harness fetch throws, as a dead Worker would), and
+     * is never dressed as a bank serve or the gate fallback. */
+    const fetchCallsBeforeMiss = fetchCalls;
+    const missNode = await ask('What is the airspeed velocity of an unladen swallow?');
+    assert.ok(!records.some(r => r.answer === missNode.textContent),
+        'a no-bank question must not render a bank answer');
+    assert.ok(!missNode.textContent.includes(GATE_FALLBACK),
+        'a no-bank question must not render the gate fallback');
+    assert.ok(missNode.textContent.includes('temporarily unavailable') || missNode.textContent.includes('unable to check')
+        || missNode.textContent.includes('I do not have a reviewed answer'),
+        'a no-bank question must keep one of the honest no-bank outcomes (research-unavailable or suggestion)');
+    console.log('CONTROL PASS: ordinary no-bank behavior preserved');
+    assert.equal(fetchCalls - fetchCallsBeforeMiss, 2,
+        'the no-bank question must make exactly its two research Worker attempts');
 
     console.log('PASS: answer bank display-gate composed chain — 6/6 probes render their pinned reviewed answers; gate unchanged for non-bank text.');
 })().catch(error => { console.error(error); process.exitCode = 1; });

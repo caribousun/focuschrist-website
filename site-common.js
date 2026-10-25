@@ -926,27 +926,41 @@
     installCloudflareWebAnalytics();
 
     window.focusChristVerifyScriptureAnswer = async function (text, sources, extra) {
-        if (isPinnedReviewedBankServe(extra)) return {ok:true,answer:String(text || '')};
+        if (isPinnedReviewedBankServe(extra, text, sources)) return {ok:true,answer:String(text || '')};
         const needsLibrary = extractScriptureCitations(text).length || /\d+:\d+|[“”"‘’']|\[\[SCRIPTURE:/i.test(text)
             || (sources || []).some(source => /\/study\/scriptures\/.+\/\d/.test(source.url || ''));
         if (!needsLibrary) return {ok:true,answer:String(text || '')};
         try { return await (await window.focusChristScriptureReady).checkAnswer(text, sources); }
         catch (_) { return {ok:false,answer:'Scripture verification is temporarily unavailable. Please try again or open the official Gospel Library.'}; }
     };
-    function isPinnedReviewedBankServe(extra) {
+    function isPinnedReviewedBankServe(extra, text, sources) {
         // The scripture check above exists for generated text. A pinned
         // reviewed-bank serve is reviewed text whose whole-entry pin the
         // answer bank lane verified before serving, so the check does
-        // not apply to it. The exemption keys only on the lane's own
-        // provenance fields carried from the serve result (mode,
-        // provenance, record id, pin); every other answer is checked
-        // exactly as before.
-        return !!extra
+        // not apply to it. The marker fields alone never exempt: they
+        // only identify the claim. The exemption is bound through the
+        // bank-owning code, which must confirm that the claimed record
+        // id, whole-entry pin, exact answer text, and sources are a
+        // genuine serve of the current loaded, pin-checked bank. A
+        // forged marker, a wrong pin, an edited answer, or a record
+        // the load excluded or never carried earns no exemption, and
+        // the answer is checked exactly as before.
+        if (!(!!extra
             && extra.reviewedBankServe === true
             && extra.bankMode === 'focuschrist-answer-bank'
             && extra.bankProvenance === 'reviewed-bank'
             && typeof extra.bankRecordId === 'string' && extra.bankRecordId.length > 0
-            && typeof extra.bankPin === 'string' && extra.bankPin.length > 0;
+            && typeof extra.bankPin === 'string' && extra.bankPin.length > 0)) return false;
+        const lane = window.FocusChristAnswerBankLane;
+        if (!lane || typeof lane.verifyPinnedServe !== 'function') return false;
+        try {
+            return lane.verifyPinnedServe({
+                record_id: extra.bankRecordId,
+                pin: extra.bankPin,
+                answer: String(text || ''),
+                sources: Array.isArray(sources) ? sources : []
+            }) === true;
+        } catch (_) { return false; }
     }
     function installScriptureDisplayGate() {
         // Validate at the display boundary, including reviewed and legacy answer lanes.
