@@ -141,6 +141,17 @@ class BankServeDecouplingSuccessorTests(unittest.TestCase):
             self.assertNotIn(b"ask-followup-chips", restored)
             self.assertEqual(g.advance("ask.html", restored, g.ROOT), current)
 
+    def test_readiness_wait_lives_inside_the_registered_span(self):
+        manifest = json.loads((g.ROOT / g.MANIFEST).read_text(encoding="utf-8"))
+        current = projected_current("ask.html")
+        self.assertIn(b"bankWaitDeadline", current)
+        self.assertIn(b"unable to check our approved study sources", current)
+        with patch.multiple(g, BEFORE=REAL_BEFORE, AFTER=REAL_AFTER, SOURCE_SHA=REAL_SOURCE_SHA):
+            restored = g.restore("ask.html", current, g.ROOT)
+            self.assertEqual(g.sha(restored), manifest["files"]["ask.html"]["before_sha256"])
+            self.assertNotIn(b"bankWaitDeadline", restored)
+            self.assertEqual(g.advance("ask.html", restored, g.ROOT), current)
+
     def test_composed_chain_round_trips(self):
         import continue_motion_binding as gate
         with patch.multiple(g, BEFORE=REAL_BEFORE, AFTER=REAL_AFTER, SOURCE_SHA=REAL_SOURCE_SHA):
