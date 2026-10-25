@@ -118,18 +118,19 @@ class BankServeDecouplingSuccessorTests(unittest.TestCase):
 
     def test_composed_chain_round_trips(self):
         import continue_motion_binding as gate
-        current_ask = (gate.ROOT / "ask.html").read_bytes()
-        citation = json.loads((gate.ROOT / "docs/citation-rendering-successor/manifest.json").read_text(encoding="utf-8"))
-        self.assertEqual(citation["files"]["ask.html"]["after_sha256"], REAL_BEFORE["ask.html"])
-        ask_row = gate.mapping()["files"]["ask.html"]
-        self.assertEqual(gate.sha(gate.restore("ask.html", current_ask)), ask_row["before_sha256"])
-        self.assertEqual(gate.advance("ask.html", gate.restore("ask.html", current_ask)), current_ask)
-        current_sc = (gate.ROOT / "site-common.js").read_bytes()
-        evaluator = json.loads((gate.ROOT / "docs/evaluator-corrections-successor/manifest.json").read_text(encoding="utf-8"))
-        self.assertEqual(evaluator["files"]["site-common.js"]["after_sha256"], REAL_BEFORE["site-common.js"])
-        sc_row = gate.mapping()["files"]["site-common.js"]
-        self.assertEqual(gate.sha(gate.restore("site-common.js", current_sc)), sc_row["before_sha256"])
-        self.assertEqual(gate.advance("site-common.js", gate.restore("site-common.js", current_sc)), current_sc)
+        with patch.multiple(g, BEFORE=REAL_BEFORE, AFTER=REAL_AFTER, SOURCE_SHA=REAL_SOURCE_SHA):
+            current_ask = (gate.ROOT / "ask.html").read_bytes()
+            legacy = json.loads((gate.ROOT / "docs/legacy-answer-repairs-successor/manifest.json").read_text(encoding="utf-8"))
+            self.assertEqual(legacy["files"]["ask.html"]["after_sha256"], REAL_BEFORE["ask.html"])
+            ask_row = gate.mapping()["files"]["ask.html"]
+            self.assertEqual(gate.sha(gate.restore("ask.html", current_ask)), ask_row["before_sha256"])
+            self.assertEqual(gate.advance("ask.html", gate.restore("ask.html", current_ask)), current_ask)
+            current_sc = (gate.ROOT / "site-common.js").read_bytes()
+            evaluator = json.loads((gate.ROOT / "docs/evaluator-corrections-successor/manifest.json").read_text(encoding="utf-8"))
+            self.assertEqual(evaluator["files"]["site-common.js"]["after_sha256"], REAL_BEFORE["site-common.js"])
+            sc_row = gate.mapping()["files"]["site-common.js"]
+            self.assertEqual(gate.sha(gate.restore("site-common.js", current_sc)), sc_row["before_sha256"])
+            self.assertEqual(gate.advance("site-common.js", gate.restore("site-common.js", current_sc)), current_sc)
 
     def test_wrong_route_not_normalized(self):
         self.assertEqual(g.restore("unknown.html", NEW_ASK, self.root), NEW_ASK)

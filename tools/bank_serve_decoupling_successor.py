@@ -18,9 +18,10 @@ decoupling fix:
   missing record earns no exemption.
 
 This layer is the outermost successor over both files. For ask.html
-its BEFORE state is the citation rendering successor's AFTER state;
-for site-common.js its BEFORE state is the evaluator corrections
-successor's AFTER state. Restoration removes only this layer and
+its BEFORE state is the legacy answer repairs successor's AFTER state
+(which itself composes over the citation rendering successor's AFTER
+state); for site-common.js its BEFORE state is the evaluator
+corrections successor's AFTER state. Restoration removes only this layer and
 reproduces those exact bytes; the composed binding chain then
 reconstructs the earlier states. No predecessor map, MAP_SHA, or
 motion APPROVED_REVIEWS is re-pinned here, and predecessor recovery
@@ -41,13 +42,13 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = "docs/bank-serve-decoupling-successor/manifest.json"
-SOURCE_SHA = "517a1d5bd339441661f4d5f62796cdd9b542c955ec294fdc4b253439719eaa90"  # Integrator pins exact candidate spans; this is not review approval.
+SOURCE_SHA = "67f376a3b1a924fcec1b496e2adfa69c826f2cda0650e38cd27e7e6addd8a57b"  # Integrator pins exact candidate spans; this is not review approval.
 BEFORE = {
-    "ask.html": "4881b5a20ed045b1d45dd1c393d3204c56cf46692d7fa4837e5257346aa4e7a9",
+    "ask.html": "0d9a5f1ba3a6bf815084ef3df330b25b771332dfa837dd2f21e74b133a9cfc90",
     "site-common.js": "54cfb9fc5de9c5ab76133cb32843053ee6c5700ff0fe11d8bedd470de3412a77",
 }
 AFTER = {
-    "ask.html": "7e316e8901de722fc06a5972a786a45c36ddfa07dcc26578d496239c76bc404f",
+    "ask.html": "b6831d0fbe534cea363bd208db73226672e82788fccc8f403ba7fc76cd837198",
     "site-common.js": "62e8d576062521da340ad6b0a82f58b151829c21b6868b684e6491b04c723f73",
 }
 

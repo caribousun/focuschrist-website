@@ -19,9 +19,10 @@ class MotionBindingTests(unittest.TestCase):
             from answer_bank_successor import restore as restore_bank
             from display_gate_successor import restore as restore_gate
             from citation_rendering_successor import restore as restore_citation
+            from legacy_answer_repairs_successor import restore as restore_legacy
             from bank_serve_decoupling_successor import restore as restore_decoupling
             from evaluator_corrections_successor import restore as restore_eval
-            self.assertEqual(gate.sha(restore_world(name,settings.restore(name,restore_close(name,restore_hand(name,restore_bank(name,restore_gate(name,restore_eval(name,restore_citation(name,restore_decoupling(name,current)))))))))),row['after_sha256'],name)
+            self.assertEqual(gate.sha(restore_world(name,settings.restore(name,restore_close(name,restore_hand(name,restore_bank(name,restore_gate(name,restore_eval(name,restore_citation(name,restore_legacy(name,restore_decoupling(name,current))))))))))),row['after_sha256'],name)
             self.assertEqual(gate.sha(gate.restore(name,current)),row['before_sha256'],name)
 
     def test_exact_successors_and_unknown_input_rejected(self):
@@ -101,13 +102,15 @@ class MotionBindingTests(unittest.TestCase):
 
     def test_ask_html_citation_chain_composes(self):
         from citation_rendering_successor import restore as restore_citation
+        from legacy_answer_repairs_successor import restore as restore_legacy
         from bank_serve_decoupling_successor import restore as restore_decoupling
         from answer_bank_successor import restore as restore_bank
         name='ask.html'
         row=gate.mapping()['files'][name]
         current=(gate.ROOT/name).read_bytes()
-        self.assertEqual(gate.sha(restore_decoupling(name,current)),'4881b5a20ed045b1d45dd1c393d3204c56cf46692d7fa4837e5257346aa4e7a9',name)
-        projected=restore_citation(name,restore_decoupling(name,current))
+        self.assertEqual(gate.sha(restore_decoupling(name,current)),'0d9a5f1ba3a6bf815084ef3df330b25b771332dfa837dd2f21e74b133a9cfc90',name)
+        self.assertEqual(gate.sha(restore_legacy(name,restore_decoupling(name,current))),'4881b5a20ed045b1d45dd1c393d3204c56cf46692d7fa4837e5257346aa4e7a9',name)
+        projected=restore_citation(name,restore_legacy(name,restore_decoupling(name,current)))
         self.assertEqual(gate.sha(projected),'735ccd0d56d7931a651ec8c06759cc849e7895fa55311f8d9d7d6bb36b419612',name)
         self.assertEqual(gate.sha(restore_bank(name,projected)),row['after_sha256'],name)
         self.assertEqual(gate.sha(gate.restore(name,current)),row['before_sha256'],name)

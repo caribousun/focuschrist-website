@@ -16,7 +16,8 @@
  *   gate, with or without a bank answer's text: the exemption keys on
  *   the lane provenance marker only, never on answer text, and a
  *   marker missing its pin earns nothing.
- * - No probe reaches the research Worker (fetch must stay unused).
+ * - No bank serve reaches the research Worker: fetch stays unused until
+ *   the intentional no-bank case, which must make exactly its two attempts.
  */
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
@@ -404,9 +405,16 @@ const PROBES = [
         'ambiguity clarification must be preserved');
     console.log('CONTROL PASS: ambiguity clarification preserved');
 
+    /* Every serve above is a composed bank serve or a gate control, and
+     * none of them may reach the research Worker: the bank precedes the
+     * lookup, so fetch stays unused until the intentional no-bank case
+     * below makes its own attempts. */
+    assert.equal(fetchCalls, 0, 'no composed serve in this harness may reach the research Worker');
+
     /* Ordinary no-bank question: keeps the honest research-unavailable
      * behavior (the harness fetch throws, as a dead Worker would), and
      * is never dressed as a bank serve or the gate fallback. */
+    const fetchCallsBeforeMiss = fetchCalls;
     const missNode = await ask('What is the airspeed velocity of an unladen swallow?');
     assert.ok(!records.some(r => r.answer === missNode.textContent),
         'a no-bank question must not render a bank answer');
@@ -416,7 +424,8 @@ const PROBES = [
         || missNode.textContent.includes('I do not have a reviewed answer'),
         'a no-bank question must keep one of the honest no-bank outcomes (research-unavailable or suggestion)');
     console.log('CONTROL PASS: ordinary no-bank behavior preserved');
-    assert.equal(fetchCalls, 0, 'no composed serve in this harness may reach the research Worker');
+    assert.equal(fetchCalls - fetchCallsBeforeMiss, 2,
+        'the no-bank question must make exactly its two research Worker attempts');
 
     console.log('PASS: answer bank display-gate composed chain — 6/6 probes render their pinned reviewed answers; gate unchanged for non-bank text.');
 })().catch(error => { console.error(error); process.exitCode = 1; });

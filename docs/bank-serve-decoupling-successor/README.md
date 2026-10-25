@@ -23,7 +23,8 @@ which is not a pinned file; this layer registers the two pinned files
 the fix touches.
 
 The layer sits outermost over both files: its ask.html BEFORE state
-is the citation rendering successor's AFTER state, and its
+is the legacy answer repairs successor's AFTER state (which composes
+over the citation rendering successor's AFTER state), and its
 site-common.js BEFORE state is the evaluator corrections successor's
 AFTER state. The continue-motion binding composes it innermost on
 restore and outermost on advance. `manifest.json` pins the exact
