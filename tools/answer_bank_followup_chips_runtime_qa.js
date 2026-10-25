@@ -11,12 +11,20 @@
  * - A reviewed-bank serve renders the served record's follow-up chips
  *   inside the answer's message node: the lane's chips, in record
  *   order, as buttons carrying the targets' canonical questions.
+ * - Directly above the chip group, inside the same message node, a
+ *   section heading reads exactly "Additional questions" (Wyatt,
+ *   2026-10-24: a group of question pills never renders without its
+ *   section label). The heading carries the page's sources-title
+ *   section-label treatment. A suggestion renders no chips heading.
  * - A chip tap submits the canonical question through the normal send
  *   path: a new user turn, a new pinned bank serve of the target
  *   record rendered in full through the display gate, and the target's
  *   own chips under it (conversations chain).
- * - A suggestion outcome renders its clarification options and no
- *   follow-up chips.
+ * - A suggestion outcome renders its clarification options under
+ *   the visible section label "Choose a starting question", matching
+ *   the group's existing aria-label, and renders no follow-up chips
+ *   or "Additional questions" heading. Both pill groups are therefore
+ *   asserted framed in this harness.
  * - A sensitive record's serve renders its answer AND its own chips:
  *   spec 4.4's stated interactions are exhaustive, and the addendum's
  *   sensitive exclusion (2.3 rule 3) is scoped to a sensitive record
@@ -28,6 +36,12 @@
  *   question serves its target record through the matcher running
  *   the production Step S evaluator, with any exception enumerated
  *   and required to be a Step S claim, never a matching failure.
+ * - Suggestion census: every canonical question and phrasing is
+ *   checked through the lane, and every one-word deletion variant of
+ *   each canonical question is checked as a near miss; every
+ *   suggestion outcome must carry at least one reviewed option
+ *   naming a shipped record, so the composed suggestion probe's
+ *   labeled group is representative of the bank suggestion path.
  * - No bank probe reaches the research Worker (fetch stays unused).
  */
 const assert = require('node:assert/strict');
@@ -245,6 +259,36 @@ async function ask(question) {
     return node;
 }
 function chipGroups(scope) { return findByClass(scope, 'ask-followup-chips'); }
+function chipHeadings(scope) { return findByClass(scope, 'ask-followup-chips-title'); }
+function suggestionGroups(scope) {
+    return findByClass(scope, 'ask-clarification-options')
+        .filter(node => !hasClass(node, 'ask-followup-chips'));
+}
+function suggestionHeadings(scope) { return findByClass(scope, 'ask-clarification-options-title'); }
+function assertNoSuggestionHeading(scope, label) {
+    assert.equal(suggestionHeadings(scope).length, 0,
+        label + ': no clarification-options heading may render when no clarification options group renders');
+}
+function assertSuggestionHeading(scope, group, label) {
+    const headings = suggestionHeadings(scope);
+    assert.equal(headings.length, 1, label + ': the suggestion must carry exactly one visible section heading');
+    assert.equal(headings[0].textContent, 'Choose a starting question',
+        label + ': the suggestion heading text must be the group label exactly');
+    assert.ok(hasClass(headings[0], 'sources-title'),
+        label + ': the suggestion heading must carry the section-label treatment class');
+    const siblings = scope.children;
+    assert.equal(siblings[siblings.indexOf(group) - 1], headings[0],
+        label + ': the suggestion heading must sit directly above the option group');
+}
+function assertChipsHeading(node, group, label) {
+    const headings = chipHeadings(node);
+    assert.equal(headings.length, 1, label + ': the answer message must carry exactly one chips heading');
+    assert.equal(headings[0].textContent, 'Additional questions', label + ': the chips heading text must be exact');
+    assert.ok(hasClass(headings[0], 'sources-title'), label + ': the chips heading must carry the section-label treatment class');
+    const siblings = node.children;
+    assert.equal(siblings[siblings.indexOf(group) - 1], headings[0],
+        label + ': the heading must sit directly above the chip group');
+}
 
 (async () => {
     /* ---------- census: lane chips vs matcher chips ---------- */
@@ -283,6 +327,39 @@ function chipGroups(scope) { return findByClass(scope, 'ask-followup-chips'); }
     }
     console.log(`CENSUS PASS: ${taps} chip taps serve their target through the production Step S path; Step S-claimed targets: ${JSON.stringify(stepSClaims)}`);
 
+    /* ---------- census: bank suggestion outcomes ---------- */
+    let suggestionQueries = 0, suggestionOutcomes = 0, suggestionOptions = 0;
+    for (const record of records) {
+        const queries = [record.question, ...(Array.isArray(record.phrasings) ? record.phrasings : [])];
+        /* Suggestion outcomes are for near misses, not exact bank
+         * strings, so the census also checks every one-word deletion
+         * variant of each canonical question. Any outcome the lane
+         * classifies as a suggestion must carry reviewed options in
+         * the shape the labeled renderer consumes. */
+        const canonicalWords = String(record.question).split(/\s+/).filter(Boolean);
+        canonicalWords.forEach(function (_word, index) {
+            const variant = canonicalWords.filter(function (_w, j) { return j !== index; });
+            if (variant.length >= 3) queries.push(variant.join(' '));
+        });
+        for (const query of queries) {
+            suggestionQueries++;
+            const outcome = lane.answer({ question_text: query, profile: 'ask' });
+            if (!outcome || outcome.status !== 'suggestion') continue;
+            suggestionOutcomes++;
+            assert.ok(Array.isArray(outcome.suggestions) && outcome.suggestions.length,
+                'every bank suggestion outcome must carry at least one option: ' + query);
+            outcome.suggestions.forEach(function (item) {
+                assert.ok(item && byId.has(item.record_id),
+                    'every bank suggestion option must name a shipped record: ' + query);
+                assert.equal(item.question, byId.get(item.record_id).question,
+                    'every bank suggestion option must use the target canonical question: ' + query);
+                suggestionOptions++;
+            });
+        }
+    }
+    assert.ok(suggestionOutcomes > 0, 'the bank suggestion census must find suggestion outcomes');
+    console.log(`CENSUS PASS: ${suggestionOutcomes} bank suggestion outcomes across ${suggestionQueries} canonical/phrasing/near-miss queries; ${suggestionOptions} reviewed options, all naming shipped records by canonical question`);
+
     /* ---------- composed probe: a serve renders its chips ---------- */
     const gtf = byId.get('ask-who-is-god-the-father');
     const gtfChips = JSON.parse(JSON.stringify(lane.followUpChips(gtf.id)));
@@ -292,6 +369,8 @@ function chipGroups(scope) { return findByClass(scope, 'ask-followup-chips'); }
     const groups = chipGroups(node);
     assert.equal(groups.length, 1, 'the answer message must carry exactly one follow-up chip group');
     assert.equal(groups[0].getAttribute('data-followup-for'), gtf.id, 'chip group must name the served record');
+    assertChipsHeading(node, groups[0], 'serve probe');
+    assertNoSuggestionHeading(box, 'serve probe');
     const buttons = groups[0].children;
     assert.equal(buttons.length, gtfChips.length, 'one chip button per lane chip');
     buttons.forEach((button, i) => {
@@ -318,15 +397,21 @@ function chipGroups(scope) { return findByClass(scope, 'ask-followup-chips'); }
     const followGroups = chipGroups(followNode);
     assert.equal(followGroups.length, 1, 'the follow-up answer must carry its own chips (chaining)');
     assert.equal(followGroups[0].getAttribute('data-followup-for'), target.id, 'chained chips must belong to the follow-up record');
+    assertChipsHeading(followNode, followGroups[0], 'tap probe');
+    assertNoSuggestionHeading(box, 'tap probe');
     console.log('PROBE PASS: chip tap submits through the send path and the follow-up answer renders in full with its own chips');
 
-    /* ---------- composed probe: a suggestion renders no follow-up chips ---------- */
+    /* ---------- composed probe: a suggestion frames its options and renders no follow-up chips ---------- */
     const sugNode = await ask('Who is our Heavenly Father?');
     assert.ok(sugNode.textContent.includes('I do not have a reviewed answer for that exact question yet'),
         'the suggestion probe must take the suggestion path');
     assert.equal(findByClass(box, 'ask-followup-chips').length, 0, 'a suggestion must render no follow-up chips');
-    assert.ok(findByClass(box, 'ask-clarification-options').length >= 1, 'the suggestion options themselves must still render');
-    console.log('PROBE PASS: suggestion renders its options and no follow-up chips');
+    assert.equal(chipHeadings(box).length, 0, 'a suggestion must render no chips heading');
+    const sugGroups = suggestionGroups(box);
+    assert.equal(sugGroups.length, 1, 'the suggestion must render exactly one clarification options group');
+    assert.ok(sugGroups[0].children.length >= 1, 'the suggestion options group must render at least one pill');
+    assertSuggestionHeading(box, sugGroups[0], 'suggestion probe');
+    console.log('PROBE PASS: suggestion renders its options under a "Choose a starting question" heading and no follow-up chips');
 
     /* ---------- composed probe: a sensitive serve renders its chips ---------- */
     const suf = byId.get('ask-why-does-god-allow-suffering-and-evil');
@@ -339,6 +424,8 @@ function chipGroups(scope) { return findByClass(scope, 'ask-followup-chips'); }
     const sufGroups = chipGroups(sufNode);
     assert.equal(sufGroups.length, 1, 'the sensitive serve must render its follow-up chip group');
     assert.equal(sufGroups[0].getAttribute('data-followup-for'), suf.id, 'the sensitive chip group must name the served record');
+    assertChipsHeading(sufNode, sufGroups[0], 'sensitive probe');
+    assertNoSuggestionHeading(box, 'sensitive probe');
     const sufButtons = sufGroups[0].children;
     assert.equal(sufButtons.length, sufChips.length, 'one chip button per lane chip on the sensitive serve');
     sufButtons.forEach((button, i) => {
@@ -348,5 +435,5 @@ function chipGroups(scope) { return findByClass(scope, 'ask-followup-chips'); }
     console.log('PROBE PASS: sensitive serve renders its answer with its own chips');
 
     assert.equal(fetchCalls, 0, 'no probe may reach the research Worker');
-    console.log('PASS: answer bank follow-up chips composed chain — serves render chips, taps chain through the send path, suggestions render none, and sensitive serves render their own chips.');
+    console.log('PASS: answer bank follow-up chips composed chain — serves render chips under an "Additional questions" heading, taps chain through the send path, suggestions frame their options under a "Choose a starting question" heading and render no follow-up chips, and sensitive serves render their own chips.');
 })().catch(error => { console.error(error); process.exitCode = 1; });
