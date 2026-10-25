@@ -1141,21 +1141,50 @@
         sourceTitle.textContent = 'Sources';
         sourceBox.appendChild(sourceTitle);
 
-        const officialGroup = document.createElement('div');
-        officialGroup.className = 'sources-group sources-group--official';
-        const officialTitle = document.createElement('div');
-        officialTitle.className = 'sources-group-title';
-        officialTitle.textContent = 'Official Church sources';
-        const officialList = document.createElement('div');
-        officialList.className = 'sources-list';
-        officialGroup.appendChild(officialTitle);
-        officialGroup.appendChild(officialList);
+        // A047 citation correction: classify every source by its ACTUAL
+        // URL host at render time and keep the groups' provenance apart.
+        // Only official Church hosts render under 'Official Church
+        // sources', whatever the source data claims. focusChrist's own
+        // pages render once, in the 'Related focusChrist study' group,
+        // carrying the data-focuschrist-answer-source marker the
+        // study-source router's dedupe guard keys off, so its rule-based
+        // 'Read ...' pill never renders the same destination a second
+        // time. Any other host renders under 'Referenced sources' (the
+        // Pioneer renderer's neutral title), never as an official
+        // Church source. The Church host set is churchofjesuschrist.org
+        // and its subdomains, plus two Church-owned domains carried in
+        // the reviewed data's church group: lds.org (the Church's own
+        // legacy domain; it redirects to churchofjesuschrist.org) and
+        // josephsmithpapers.org (the Church History Department's
+        // official project domain).
+        const CHURCH_HOST_DOMAINS = ['churchofjesuschrist.org', 'lds.org', 'josephsmithpapers.org'];
+        function hostMatchesDomain(hostname, domain) {
+            return hostname === domain || hostname.endsWith('.' + domain);
+        }
+        function makeSourcesGroup(groupClass, groupTitleText) {
+            const group = document.createElement('div');
+            group.className = 'sources-group ' + groupClass;
+            const groupTitle = document.createElement('div');
+            groupTitle.className = 'sources-group-title';
+            groupTitle.textContent = groupTitleText;
+            const list = document.createElement('div');
+            list.className = 'sources-list';
+            group.appendChild(groupTitle);
+            group.appendChild(list);
+            return { group: group, list: list };
+        }
+        const officialGroupParts = makeSourcesGroup('sources-group--official', 'Official Church sources');
+        const relatedGroupParts = makeSourcesGroup('sources-group--focuschrist', 'Related focusChrist study');
+        const referencedGroupParts = makeSourcesGroup('sources-group--referenced', 'Referenced sources');
 
+        const renderedSourceUrls = new Set();
         sources.forEach(function (source) {
             if (!source || !source.url) return;
             try {
                 const parsed = new URL(source.url, window.location.href);
                 if (parsed.protocol !== 'https:' && parsed.protocol !== 'http:') return;
+                if (renderedSourceUrls.has(parsed.href)) return;
+                renderedSourceUrls.add(parsed.href);
                 const link = document.createElement('a');
                 const isInternal = parsed.origin === window.location.origin;
                 link.className = isInternal ? 'source-link source-link--internal' : 'source-link';
@@ -1165,13 +1194,26 @@
                     link.rel = 'noopener noreferrer';
                 }
                 link.textContent = String(source.text || 'Source');
-                officialList.appendChild(link);
+                const isChurchSource = CHURCH_HOST_DOMAINS.some(function (domain) {
+                    return hostMatchesDomain(parsed.hostname, domain);
+                });
+                const isSiteSource = isInternal || hostMatchesDomain(parsed.hostname, 'focuschrist.com');
+                if (isChurchSource) {
+                    officialGroupParts.list.appendChild(link);
+                } else if (isSiteSource) {
+                    link.setAttribute('data-focuschrist-answer-source', parsed.href);
+                    relatedGroupParts.list.appendChild(link);
+                } else {
+                    referencedGroupParts.list.appendChild(link);
+                }
             } catch (error) {
                 console.warn('Skipped invalid source URL');
             }
         });
 
-        if (officialList.querySelector('.source-link')) sourceBox.appendChild(officialGroup);
+        if (officialGroupParts.list.querySelector('.source-link')) sourceBox.appendChild(officialGroupParts.group);
+        if (relatedGroupParts.list.querySelector('.source-link')) sourceBox.appendChild(relatedGroupParts.group);
+        if (referencedGroupParts.list.querySelector('.source-link')) sourceBox.appendChild(referencedGroupParts.group);
         if (sourceBox.querySelector('.source-link')) message.appendChild(sourceBox);
     }
 

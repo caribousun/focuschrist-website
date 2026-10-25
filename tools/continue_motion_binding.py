@@ -45,7 +45,8 @@ def restore(name,data,root=ROOT):
     from answer_bank_successor import restore as restore_bank
     from display_gate_successor import restore as restore_gate
     from evaluator_corrections_successor import restore as restore_eval
-    data=restore_world(name,restore_settings(name,restore_close(name,restore_hand(name,restore_bank(name,restore_gate(name,restore_eval(name,data,root),root),root),root),root),root),root)
+    from citation_rendering_successor import restore as restore_citation
+    data=restore_world(name,restore_settings(name,restore_close(name,restore_hand(name,restore_bank(name,restore_gate(name,restore_eval(name,restore_citation(name,data,root),root),root),root),root),root),root),root)
     record=mapping(root)['files'].get(name)
     if not record or sha(data)!=record['after_sha256']:return data
     restored=data
@@ -69,7 +70,8 @@ def advance(name,data,root=ROOT):
     from answer_bank_successor import advance as advance_bank
     from display_gate_successor import advance as advance_gate
     from evaluator_corrections_successor import advance as advance_eval
-    if not record or sha(data)!=record['before_sha256']:return advance_eval(name,advance_gate(name,advance_bank(name,advance_hand(name,advance_close(name,advance_settings(name,advance_world(name,data,root),root),root),root),root),root),root)
+    from citation_rendering_successor import advance as advance_citation
+    if not record or sha(data)!=record['before_sha256']:return advance_citation(name,advance_eval(name,advance_gate(name,advance_bank(name,advance_hand(name,advance_close(name,advance_settings(name,advance_world(name,data,root),root),root),root),root),root),root),root)
     replacements=[];delta=0
     for span in record['spans']:
         previous=base64.b64decode(span['previous_b64'],validate=True)
@@ -81,7 +83,7 @@ def advance(name,data,root=ROOT):
     result=data
     for start,end,current in reversed(replacements):result=result[:start]+current+result[end:]
     require(sha(result)==record['after_sha256'],'Motion successor reconstruction drift')
-    return advance_eval(name,advance_gate(name,advance_bank(name,advance_hand(name,advance_close(name,advance_settings(name,advance_world(name,result,root),root),root),root),root),root),root)
+    return advance_citation(name,advance_eval(name,advance_gate(name,advance_bank(name,advance_hand(name,advance_close(name,advance_settings(name,advance_world(name,result,root),root),root),root),root),root),root),root)
 
 def check(root=ROOT):
     from missionary_close_successor import check as check_close,restore as restore_close
@@ -91,11 +93,12 @@ def check(root=ROOT):
     from answer_bank_successor import check as check_bank,restore as restore_bank
     from display_gate_successor import check as check_gate,restore as restore_gate
     from evaluator_corrections_successor import check as check_eval,restore as restore_eval
+    from citation_rendering_successor import check as check_citation,restore as restore_citation
     data=mapping(root)
     for name,row in data['files'].items():
         path=(root/name).resolve()
         require(path.is_relative_to(root.resolve()) and path.is_file(),'Missing/outside motion consumer')
-        current=restore_world(name,restore_settings(name,restore_close(name,restore_hand(name,restore_bank(name,restore_gate(name,restore_eval(name,path.read_bytes(),root),root),root),root),root),root),root)
+        current=restore_world(name,restore_settings(name,restore_close(name,restore_hand(name,restore_bank(name,restore_gate(name,restore_eval(name,restore_citation(name,path.read_bytes(),root),root),root),root),root),root),root),root)
         require(sha(current)==row['after_sha256'],'Motion candidate changed: '+name)
         require(sha(restore(name,current,root))==row['before_sha256'],'Motion inverse failed: '+name)
     require(APPROVED_REVIEWS is not None,'Motion finished review PENDING')
@@ -119,12 +122,18 @@ def check(root=ROOT):
         shutil.copytree(root/'docs/missionary-close-successor',view/'docs/missionary-close-successor')
         check_close(view)
     check_hand(root)
-    check_bank(root)
+    with tempfile.TemporaryDirectory() as td:
+        view=Path(td)
+        for bank_name in ('ask.html','pioneers.html','pioneer-experience.js'):
+            (view/bank_name).write_bytes(restore_citation(bank_name,(root/bank_name).read_bytes(),root))
+        shutil.copytree(root/'docs/answer-bank-successor',view/'docs/answer-bank-successor')
+        check_bank(view)
     with tempfile.TemporaryDirectory() as td:
         view=Path(td)
         (view/'site-common.js').write_bytes(restore_eval('site-common.js',(root/'site-common.js').read_bytes(),root))
         shutil.copytree(root/'docs/display-gate-successor',view/'docs/display-gate-successor')
         check_gate(view)
+    check_citation(root)
     check_eval(root)
     return {'status':'EXACT_MOTION_EVIDENCE_PASS','files':len(data['files']),'limits':'Technical evidence binding only; does not authenticate reviewers or grant publication approval.'}
 
