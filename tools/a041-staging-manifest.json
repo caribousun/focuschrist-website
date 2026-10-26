@@ -1,0 +1,1565 @@
+{
+ "manifest": "a041-staging-manifest",
+ "site_main_head": "72a8c9c5c6a08e28c9ee135d031cda76cd762189",
+ "generated": "2026-10-26",
+ "file_count": 222,
+ "total_bytes": 91332695,
+ "files": [
+  {
+   "path": "art.html",
+   "tier": 1,
+   "bytes": 56016,
+   "blob": null,
+   "sha256": "6220ff12cac654f2e2bbe13c786f4056f8b5e979c68165ebbc95e13f55547b65",
+   "source": "A041 candidate v2 (replaces main art.html blob 627d8c92ba45a36bd8a319999b08242faaae73bc)"
+  },
+  {
+   "path": "art-experience.css",
+   "tier": 1,
+   "bytes": 4407,
+   "blob": "345a9c66e44e6353150991fa22f30bb34ea56669",
+   "sha256": "ef21dea3b87e8b3e59454aba32726210a783d87d556928201ef375a3627b1c74"
+  },
+  {
+   "path": "art-hero.css",
+   "tier": 1,
+   "bytes": 1308,
+   "blob": "a66522ec115061ce4e2178a0298786f5d57618a7",
+   "sha256": "da1529522f233dfcfad3452487e40b8b24d4200f044401b184581c38cd5f161b"
+  },
+  {
+   "path": "art-opening.css",
+   "tier": 1,
+   "bytes": 1901,
+   "blob": "01d6ed5f59342c5c587c8c00c0e6901c6d8e32b3",
+   "sha256": "f1457bb255b14b98e122d485760d548d4802374b0e00005c05e5292bc87d6e34"
+  },
+  {
+   "path": "artwork-actions.css",
+   "tier": 1,
+   "bytes": 2273,
+   "blob": "0be216fbd1107d25796d2eef9ed415f58c9255a3",
+   "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+  },
+  {
+   "path": "artwork-details.css",
+   "tier": 1,
+   "bytes": 3925,
+   "blob": "2f82a2c3da3c50e3abede4b259055cdc0c3f073f",
+   "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+  },
+  {
+   "path": "complete-card-rows.css",
+   "tier": 1,
+   "bytes": 1573,
+   "blob": "4a6c82dfacbe9fc1d0523bd11b461ef8ee4d2024",
+   "sha256": "7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"
+  },
+  {
+   "path": "connected-study.css",
+   "tier": 1,
+   "bytes": 2190,
+   "blob": "06910edf87e2b4415c94c22a4672e70bcec70d4a",
+   "sha256": "6b61c50c1d8e005074beb2db8fa800377377e6a3c9b955678dd836538fcb48cd"
+  },
+  {
+   "path": "full-image-viewer.css",
+   "tier": 1,
+   "bytes": 4959,
+   "blob": "dcbb7478b98cf47a1670a89c1632c00e5ce24148",
+   "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+  },
+  {
+   "path": "hero-details.css",
+   "tier": 1,
+   "bytes": 2916,
+   "blob": "cde4ab3abf0685031ef0368a0b65b3b5e5830aa0",
+   "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+  },
+  {
+   "path": "resource-cards.css",
+   "tier": 1,
+   "bytes": 6287,
+   "blob": "4cf5e336075f7360a661cc5797ad1e7e1fc06101",
+   "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+  },
+  {
+   "path": "site-header.css",
+   "tier": 1,
+   "bytes": 14894,
+   "blob": "4b603c57daa2c20175f01e69b539668d2959cba9",
+   "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+  },
+  {
+   "path": "site-search.css",
+   "tier": 1,
+   "bytes": 5516,
+   "blob": "1ef31eb479ad03dbfd956f7a5953a984ebe90c07",
+   "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+  },
+  {
+   "path": "site-system.css",
+   "tier": 1,
+   "bytes": 88817,
+   "blob": "bf2b326352f5a4b57cdf8195d9331264844b9c41",
+   "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+  },
+  {
+   "path": "art-study-router.js",
+   "tier": 1,
+   "bytes": 55163,
+   "blob": "3a6d2f52eb77b8c83a0776660110aa84c0a47b05",
+   "sha256": "13305e05c382228df7833709db91f82a1cda85d78bd152ad1681968be61015fe"
+  },
+  {
+   "path": "artwork-details.js",
+   "tier": 1,
+   "bytes": 7516,
+   "blob": "8291b9178089c0bccaf4901f9025244cf16f41c4",
+   "sha256": "7766a3d0e26bf0e40f746868f91afd269608b62ac0c4509bc9ea3d37f7db2d3e"
+  },
+  {
+   "path": "full-image-viewer.js",
+   "tier": 1,
+   "bytes": 7674,
+   "blob": "97178a1c9e0bed665c70744cc828046601e2c5d1",
+   "sha256": "01d17afd6b3f4bd205292d2544683ba9884b73fa350401cd0e299512b5458152"
+  },
+  {
+   "path": "hero-details.js",
+   "tier": 1,
+   "bytes": 38890,
+   "blob": "53aed677ce841f75f6e7727903e29ec109e343c8",
+   "sha256": "fff59dbfbd64325aeae947755e7a013a0ae51883c05b959bfaac1865c312f8cf"
+  },
+  {
+   "path": "hero-image-source.js",
+   "tier": 1,
+   "bytes": 19699,
+   "blob": "272edbee8aa99984a3f3115920ccb623da8ad617",
+   "sha256": "2f8f62cbbffb4f5d5e663b3128aed45fdd35e1deec484589bbfba4e6bbc62704"
+  },
+  {
+   "path": "site-common.js",
+   "tier": 1,
+   "bytes": 88574,
+   "blob": "a335ffa999db24984d53f5052efce4b6b92dfc14",
+   "sha256": "62e8d576062521da340ad6b0a82f58b151829c21b6868b684e6491b04c723f73"
+  },
+  {
+   "path": "site-search.js",
+   "tier": 1,
+   "bytes": 12485,
+   "blob": "5e38ec107dad17810c653a1fd4d3c3432606e7d7",
+   "sha256": "2722b477848556bb05ecf0487b890c1d0e25840f912f8ea6140382a340eae099"
+  },
+  {
+   "path": "art-study/be-still.html",
+   "tier": 1,
+   "bytes": 43737,
+   "blob": "33a101ac163f611890df7dd69a405c2744421515",
+   "sha256": "6f3e48fc253a326d82bf9502d3ffa42ab1daf1d11181ba0b580a653ce4d284c1"
+  },
+  {
+   "path": "art-study/suffer-the-little-children.html",
+   "tier": 1,
+   "bytes": 41479,
+   "blob": "ab3a53f31336a20634349ca7706a90b7225bbde5",
+   "sha256": "03dc1326f48aded6161eb7dc21f99a3941dabee3c2c84902a973ffca88f8c03d"
+  },
+  {
+   "path": "art-study/the-good-shepherd.html",
+   "tier": 1,
+   "bytes": 41178,
+   "blob": "c79fcf0c987bc3b6fad4983512f29b35cbd3594f",
+   "sha256": "a09a933fca703a391b5b595266379123a98300367e5bc40342c7c8f02fbd9838"
+  },
+  {
+   "path": "art-study/the-living-christ.html",
+   "tier": 1,
+   "bytes": 35304,
+   "blob": "988900b4f18ee56e15e1fe43a09b0aacebe094fb",
+   "sha256": "4bfae0feb11fe653e47fd405a0318ad57c4f43e4bda8d85d378d683e673fc1d1"
+  },
+  {
+   "path": "site-search-index.json",
+   "tier": 1,
+   "bytes": 3320093,
+   "blob": "fa72d8f312fe6cc33f57299d1bbd6986e84e3195",
+   "sha256": "85c5c413d2a293b9e61bc569a63663d959472c1f085e9f9f86e35839eb4fc970"
+  },
+  {
+   "path": "art/Be-Still.png",
+   "tier": 1,
+   "bytes": 2311197,
+   "blob": "2da75e162c978df887d3cf9dbd2c19ccf7dcd2ca",
+   "sha256": null
+  },
+  {
+   "path": "art/Divine-Push.png",
+   "tier": 1,
+   "bytes": 1857866,
+   "blob": "29bcf2060529b970b491657c36e4c8ed43bdaa49",
+   "sha256": null
+  },
+  {
+   "path": "art/Forever-Friends.png",
+   "tier": 1,
+   "bytes": 2518243,
+   "blob": "5ae9af1fb09f40e1b35c5d84849e9e5dc0627239",
+   "sha256": null
+  },
+  {
+   "path": "art/Forever.png",
+   "tier": 1,
+   "bytes": 2633868,
+   "blob": "4ee39fddb1d874e8af6cdb537899a6f871d06ff1",
+   "sha256": null
+  },
+  {
+   "path": "art/Jesus-and-Mary-his-mom.jpg",
+   "tier": 1,
+   "bytes": 315178,
+   "blob": "691fedd50452251c44b73697a6d2d48024af6aac",
+   "sha256": null
+  },
+  {
+   "path": "art/Jesus-baptized.png",
+   "tier": 1,
+   "bytes": 1905269,
+   "blob": "a92445ff3bffa48985c89b0448790dbda382adda",
+   "sha256": null
+  },
+  {
+   "path": "art/Jesus-boat.png",
+   "tier": 1,
+   "bytes": 1686731,
+   "blob": "1333365359ac418c0a0a67215b9322ce0ddf8ab5",
+   "sha256": null
+  },
+  {
+   "path": "art/Jesus-feeding-people.png",
+   "tier": 1,
+   "bytes": 2036089,
+   "blob": "fccec5b96486af2436c5938179f0a07fe2cf3223",
+   "sha256": null
+  },
+  {
+   "path": "art/Jesus-feeding-the-fish.png",
+   "tier": 1,
+   "bytes": 1927769,
+   "blob": "065770b066c0e7613bda8c81eac38645561760df",
+   "sha256": null
+  },
+  {
+   "path": "art/Jesus-fun.png",
+   "tier": 1,
+   "bytes": 2079068,
+   "blob": "6bd53f6b2598accea54084cb17240e0428f1416b",
+   "sha256": null
+  },
+  {
+   "path": "art/Jesus-in-Africa.png",
+   "tier": 1,
+   "bytes": 3034882,
+   "blob": "7649ac014c55aa055512d1e32ebccf5bdabce348",
+   "sha256": null
+  },
+  {
+   "path": "art/Jesus-leper.jpg",
+   "tier": 1,
+   "bytes": 1523847,
+   "blob": "1e4fe96610ee65ea4fb23f878b4898f568349b52",
+   "sha256": null
+  },
+  {
+   "path": "art/Jesus-seven-times-seven.png",
+   "tier": 1,
+   "bytes": 1773206,
+   "blob": "ada2aefd4e56ddf167ec2f7d2f90787f8b714b62",
+   "sha256": null
+  },
+  {
+   "path": "art/Jesus-walking-Jerusalem.jpg",
+   "tier": 1,
+   "bytes": 402727,
+   "blob": "eb59c78c989d9d90a15e7b8568ac8304597ed938",
+   "sha256": null
+  },
+  {
+   "path": "art/Jesus-with-apostles-sunflowers.png",
+   "tier": 1,
+   "bytes": 2394066,
+   "blob": "291b47d6d8393ee04e725b602b82ad8a1e9ff494",
+   "sha256": null
+  },
+  {
+   "path": "art/Let-It-Go.png",
+   "tier": 1,
+   "bytes": 2188813,
+   "blob": "cd4c0425c681b14c53d7ab0b13c111e7c0462430",
+   "sha256": null
+  },
+  {
+   "path": "art/Little-Friends.jpg",
+   "tier": 1,
+   "bytes": 239423,
+   "blob": "d4053f33799885fcf195cf0a06fd8faeec4bb815",
+   "sha256": null
+  },
+  {
+   "path": "art/Never-Alone.png",
+   "tier": 1,
+   "bytes": 2993473,
+   "blob": "28486ced6634c446557dc83d40721ca2ced56d9a",
+   "sha256": null
+  },
+  {
+   "path": "art/Now-I-see.png",
+   "tier": 1,
+   "bytes": 2257655,
+   "blob": "b8cd9b7f5a231c014015489b01ed4605e7475782",
+   "sha256": null
+  },
+  {
+   "path": "art/Palms.jpg",
+   "tier": 1,
+   "bytes": 315314,
+   "blob": "02ad87d67db8f4fd6b9eb4bdf2457448dad4e9ed",
+   "sha256": null
+  },
+  {
+   "path": "art/Posterity.png",
+   "tier": 1,
+   "bytes": 1870859,
+   "blob": "837f1023c70424f982577b77ada6ff501b791449",
+   "sha256": null
+  },
+  {
+   "path": "art/Suffer-the-Little-Children-approved-20260929.webp",
+   "tier": 1,
+   "bytes": 1744340,
+   "blob": "110b5c32e594801e37b6ea76cc151307c1c25b90",
+   "sha256": null
+  },
+  {
+   "path": "art/The-Garden.png",
+   "tier": 1,
+   "bytes": 1941797,
+   "blob": "252f3c050fde06ce78a1b6afe65c4fdf7a6e0aa1",
+   "sha256": null
+  },
+  {
+   "path": "art/The-Good-Shephard.jpg",
+   "tier": 1,
+   "bytes": 273272,
+   "blob": "f47e8ded9db66d1c75a041424eaad6aa1eb63f45",
+   "sha256": null
+  },
+  {
+   "path": "art/The-Living-Christ.png",
+   "tier": 1,
+   "bytes": 1682157,
+   "blob": "f216f21edcade4ba00c7a5fbcd9de50805c6a8cc",
+   "sha256": null
+  },
+  {
+   "path": "art/Tranquil-Morning.png",
+   "tier": 1,
+   "bytes": 1983763,
+   "blob": "f717606e0f374bf751411f4fa82a14315623eb95",
+   "sha256": null
+  },
+  {
+   "path": "art/Widows-Mite.jpg",
+   "tier": 1,
+   "bytes": 324740,
+   "blob": "9feebd3804819b692c4e25527fc30ac0e878099d",
+   "sha256": null
+  },
+  {
+   "path": "art/new/blessed-be-the-name-of-the-lord-job-1-21.webp",
+   "tier": 1,
+   "bytes": 383140,
+   "blob": "d538fd1b2c82ae440fd21346944b0b2f187b2c29",
+   "sha256": null
+  },
+  {
+   "path": "art/new/god-will-feel-after-you-joseph-smith.webp",
+   "tier": 1,
+   "bytes": 654572,
+   "blob": "de6f2456633362f81ca80b51bf5c6a24a8971222",
+   "sha256": null
+  },
+  {
+   "path": "art/new/his-strength-and-redeeming-power-russell-m-nelson.webp",
+   "tier": 1,
+   "bytes": 351186,
+   "blob": "ebf9a06374e10e310099faaf5dbc5d060d34faa5",
+   "sha256": null
+  },
+  {
+   "path": "art/new/in-the-name-of-the-lord-of-hosts-1-samuel-17-45.webp",
+   "tier": 1,
+   "bytes": 451612,
+   "blob": "9c6d1a38aee831701b5c474d1e1f22d76aa03ed4",
+   "sha256": null
+  },
+  {
+   "path": "art/new/jesus-christ-portrait.webp",
+   "tier": 1,
+   "bytes": 1663438,
+   "blob": "5d9a2b7535b852361baa4ae96172c2ecb6a6e884",
+   "sha256": null
+  },
+  {
+   "path": "art/new/joy-cometh-in-the-morning-psalm-30-5.webp",
+   "tier": 1,
+   "bytes": 384612,
+   "blob": "d250597ca34b1011b400b08f346c2b1d37b10a01",
+   "sha256": null
+  },
+  {
+   "path": "art/new/make-a-joyful-noise-unto-god-psalm-66-1-2.webp",
+   "tier": 1,
+   "bytes": 391554,
+   "blob": "493550f2f3ccb155dcf408f743deb631d6ea6362",
+   "sha256": null
+  },
+  {
+   "path": "art/new/rest-in-the-lord-trust-in-the-lord-psalms-37-7.webp",
+   "tier": 1,
+   "bytes": 429052,
+   "blob": "32e5f9f88bbbfb4b91730d0731b3d94c674c2fc8",
+   "sha256": null
+  },
+  {
+   "path": "art/new/see-that-ye-be-not-troubled-matthew-24-6.webp",
+   "tier": 1,
+   "bytes": 415804,
+   "blob": "990554f4593149aca9c69a636c85ee6e1bf8c20e",
+   "sha256": null
+  },
+  {
+   "path": "art/new/the-saviors-invitation.webp",
+   "tier": 1,
+   "bytes": 319994,
+   "blob": "a15b7ec91ee77623c61659484c6ba756f0430e68",
+   "sha256": null
+  },
+  {
+   "path": "art/new/there-is-a-greater-victory-ahead.webp",
+   "tier": 1,
+   "bytes": 371694,
+   "blob": "372f94b4cac469a931d2140ff9999fe9fd5db884",
+   "sha256": null
+  },
+  {
+   "path": "art/new/there-is-a-green-hill-far-away.webp",
+   "tier": 1,
+   "bytes": 341196,
+   "blob": "5a68874bfef29690fc8c2f5eb0393c3822203ab2",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/Be-Still.webp",
+   "tier": 1,
+   "bytes": 40724,
+   "blob": "9e440c16107265571e182262c19b8aff03102c10",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/Divine-Push.webp",
+   "tier": 1,
+   "bytes": 41036,
+   "blob": "5a06d8cdfc3d40e768019e1e9ed75a09ccceda5e",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/Forever-Friends.webp",
+   "tier": 1,
+   "bytes": 64028,
+   "blob": "e704bff977273d04fd8e83002147a1b49dea938f",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/Forever.webp",
+   "tier": 1,
+   "bytes": 32804,
+   "blob": "43eb25621781e5f77221d276ffdcce2a9cdda562",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/Jesus-and-Mary-his-mom.webp",
+   "tier": 1,
+   "bytes": 34378,
+   "blob": "d3a17162eb009bfcca70a998abac7661f3ab0f88",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/Jesus-baptized.webp",
+   "tier": 1,
+   "bytes": 46678,
+   "blob": "27d8f8f069b31837d64404a209860387363001c4",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/Jesus-boat.webp",
+   "tier": 1,
+   "bytes": 31824,
+   "blob": "980d7cb85a1457ce6f6e89371a89a79180bf5e9d",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/Jesus-feeding-people.webp",
+   "tier": 1,
+   "bytes": 53360,
+   "blob": "f0b1aec1a23d109f66c4dc918418732f08c28db6",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/Jesus-feeding-the-fish.webp",
+   "tier": 1,
+   "bytes": 45280,
+   "blob": "e766c14196af83d2130fa67a46e1e7160329a21f",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/Jesus-fun.webp",
+   "tier": 1,
+   "bytes": 49956,
+   "blob": "be5c540b4f48e396dd8f72fd8c9705d4775945fa",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/Jesus-in-Africa.webp",
+   "tier": 1,
+   "bytes": 67300,
+   "blob": "fe797f619c7330306d27b637b4e25c2683765a81",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/Jesus-leper.webp",
+   "tier": 1,
+   "bytes": 31340,
+   "blob": "896145ba53d06a4519e19c7542e3afe921beff9c",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/Jesus-seven-times-seven.webp",
+   "tier": 1,
+   "bytes": 37300,
+   "blob": "4b2cd04806536b8758678c3d61ca634af2bc6a3a",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/Jesus-walking-Jerusalem.webp",
+   "tier": 1,
+   "bytes": 44140,
+   "blob": "f7e2e8a9833ddfe85ab26e22fc3010cf0a13d5e4",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/Jesus-with-apostles-sunflowers.webp",
+   "tier": 1,
+   "bytes": 49236,
+   "blob": "8089090a28fc71e51b9659cf0d76115ed0ad98c0",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/Let-It-Go.webp",
+   "tier": 1,
+   "bytes": 41478,
+   "blob": "c2842dd7a4187e0d0c4540f30e95b62adec28543",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/Little-Friends.webp",
+   "tier": 1,
+   "bytes": 19452,
+   "blob": "a3caef571439f117ccfeea2d341a05012f064714",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/Never-Alone.webp",
+   "tier": 1,
+   "bytes": 31702,
+   "blob": "776ca83ff498a1fc652196a0dfb28a7b16c5fa5d",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/Now-I-see.webp",
+   "tier": 1,
+   "bytes": 35396,
+   "blob": "2a53c9ec72f639040fc69f6b3bf92718e2e4a723",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/Palms.webp",
+   "tier": 1,
+   "bytes": 34896,
+   "blob": "9d88f64ac393ade478198a552ee21909963a7605",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/Posterity.webp",
+   "tier": 1,
+   "bytes": 33968,
+   "blob": "31b5eb97f274913dbc96e5bad09a15e94f703e61",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/Suffer-the-Little-Children-approved-20260929.webp",
+   "tier": 1,
+   "bytes": 65020,
+   "blob": "fb98c6b8870e54943c264242fb6d5d1265b6743e",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/The-Garden.webp",
+   "tier": 1,
+   "bytes": 45310,
+   "blob": "2256437b09e88c10f9467ea520c3a46e9230c884",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/The-Good-Shephard.webp",
+   "tier": 1,
+   "bytes": 33346,
+   "blob": "9c392e7c389e57d03fbc4563b7d94ff3d5460eff",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/The-Living-Christ.webp",
+   "tier": 1,
+   "bytes": 23472,
+   "blob": "e2745e81907c3d592597933a0d072c2312f20b81",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/Tranquil-Morning.webp",
+   "tier": 1,
+   "bytes": 50390,
+   "blob": "d6cf53b6821fe000f4064021b9c251f9c0230697",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/Widows-Mite.webp",
+   "tier": 1,
+   "bytes": 32548,
+   "blob": "cb4e55a69158b4aa67c7f729ae6896fd9b97f1ab",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/new/blessed-be-the-name-of-the-lord-job-1-21.webp",
+   "tier": 1,
+   "bytes": 58994,
+   "blob": "fdfdaef72f912e70930fa4265cf1fd4d029aec0b",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/new/god-will-feel-after-you-joseph-smith.webp",
+   "tier": 1,
+   "bytes": 81150,
+   "blob": "a8b4833b06338eea79df12c46326b84c756de01c",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/new/his-strength-and-redeeming-power-russell-m-nelson.webp",
+   "tier": 1,
+   "bytes": 49024,
+   "blob": "b28a41a7ededcad6aeba538b59c23a92b676f8af",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/new/in-the-name-of-the-lord-of-hosts-1-samuel-17-45.webp",
+   "tier": 1,
+   "bytes": 73402,
+   "blob": "1ea6bfa1db3f98eaa41a3b0adcb4d3a15792bf45",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/new/jesus-christ-portrait.webp",
+   "tier": 1,
+   "bytes": 20978,
+   "blob": "da96d8d6dd06bbb8aad6ca1864fdbc29e07eb50d",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/new/joy-cometh-in-the-morning-psalm-30-5.webp",
+   "tier": 1,
+   "bytes": 53786,
+   "blob": "105e48eef7d3c8f0751fc1703c024dafbbd0a41c",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/new/make-a-joyful-noise-unto-god-psalm-66-1-2.webp",
+   "tier": 1,
+   "bytes": 74808,
+   "blob": "e23b71b938e30bdd458b599059d891b062ce4cbc",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/new/rest-in-the-lord-trust-in-the-lord-psalms-37-7.webp",
+   "tier": 1,
+   "bytes": 77222,
+   "blob": "d8477bf01d749b4b054e790eedcce3832afea42d",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/new/see-that-ye-be-not-troubled-matthew-24-6.webp",
+   "tier": 1,
+   "bytes": 60046,
+   "blob": "e09403dd19471ea7783a3b70e52aeab58fabf223",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/new/the-saviors-invitation.webp",
+   "tier": 1,
+   "bytes": 46230,
+   "blob": "0fb9584fd7bf70ed999998ba8462c2a102ce4eb0",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/new/there-is-a-greater-victory-ahead.webp",
+   "tier": 1,
+   "bytes": 54670,
+   "blob": "7b1d07c1118aacb4c716214b75d393d2c9119882",
+   "sha256": null
+  },
+  {
+   "path": "art/thumbs/new/there-is-a-green-hill-far-away.webp",
+   "tier": 1,
+   "bytes": 43198,
+   "blob": "c9a0a0626df35a8fd09ba147ded4cdda16b63f3f",
+   "sha256": null
+  },
+  {
+   "path": "assets/heroes/art.webp",
+   "tier": 1,
+   "bytes": 493992,
+   "blob": "50bf54130b8e6567082c6be8d0a4dfcb1ce7c07a",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/uniqueness-repairs/art-children-welcome-card-960.webp",
+   "tier": 1,
+   "bytes": 110436,
+   "blob": "bf88f3aa3102a34438a1e8cabde79ddf0c0d96ac",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/uniqueness-repairs/art-living-testimony-card-960.webp",
+   "tier": 1,
+   "bytes": 159758,
+   "blob": "dfd81a312e193747daa500ab8fc689a56ad549ed",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/uniqueness-repairs/art-shepherd-care-card-960.webp",
+   "tier": 1,
+   "bytes": 231110,
+   "blob": "016d6887ef5d91cd7dcc786d9fcacbf41237f14c",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/uniqueness-repairs/art-stillness-card-960.webp",
+   "tier": 1,
+   "bytes": 175912,
+   "blob": "6dd636af3c78bd732cc3011eb2936ce83a87fb62",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/uniqueness-repairs/art-children-welcome-card-full.webp",
+   "tier": 1,
+   "bytes": 310626,
+   "blob": "0ce318e23f9d1c1950e515d4b31bd51bc175bb0c",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/uniqueness-repairs/art-living-testimony-card-full.webp",
+   "tier": 1,
+   "bytes": 452718,
+   "blob": "269ef9e6b8ace90b8154d13973eecef1258986bd",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/uniqueness-repairs/art-shepherd-care-card-full.webp",
+   "tier": 1,
+   "bytes": 491744,
+   "blob": "d0afc4eb17756d6d8511b148799ffdfaeb7f0b1f",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/uniqueness-repairs/art-stillness-card-full.webp",
+   "tier": 1,
+   "bytes": 430352,
+   "blob": "00dc72f63bcb4afdbe443e1ed3c3f50e136cc0df",
+   "sha256": null
+  },
+  {
+   "path": "assets/resources/art-lively-resurrection-hope.jpg",
+   "tier": 1,
+   "bytes": 11860,
+   "blob": "f9379c518558b2cc52b79c3893e7d7592f225995",
+   "sha256": null
+  },
+  {
+   "path": "answer-styles.css",
+   "tier": 2,
+   "bytes": 6259,
+   "blob": "d515b56731cbf1db5e1b1ade82f4e74debb8c658",
+   "sha256": "82dc51b82d56a129be803420cae47630f053f7af1259c659113fbd7fcd76d6ad"
+  },
+  {
+   "path": "art-study-enrichment.css",
+   "tier": 2,
+   "bytes": 6050,
+   "blob": "980f15874faed0da44543120f0386a2948aeb996",
+   "sha256": "b6d58dbb0c04984177a330db8686f0f5be03dff468b6ec2496ef5931b1da91d3"
+  },
+  {
+   "path": "art-study-page.css",
+   "tier": 2,
+   "bytes": 1544,
+   "blob": "7f6bdf89ae522f6cdd1de51ed4a43e5a1caf2894",
+   "sha256": "49e67a7ac8aef05938a10a09d60bce11f227953a9676729ea5390f46259e3af3"
+  },
+  {
+   "path": "desktop-hero-repairs.css",
+   "tier": 2,
+   "bytes": 3524,
+   "blob": "e6830e95231e6c9551aa62d46280de6ef1be3b35",
+   "sha256": "36270651fecfb57cb371580f1fd4df3c2910942665e356245ddf451e5c4d9ecb"
+  },
+  {
+   "path": "four-scene-artwork.css",
+   "tier": 2,
+   "bytes": 85,
+   "blob": "753df1c388a9ecf26a33231484fa20bf5713910b",
+   "sha256": "dfa23731ddbf2f7bfc039204e880ebd7e612519d698c6be96c0185ea696a98b9"
+  },
+  {
+   "path": "four-scene-artwork.js",
+   "tier": 2,
+   "bytes": 5723,
+   "blob": "f95da8f3a724318c3015c22534b76b301b83bc6e",
+   "sha256": "c6099732d2f2ab858e3dead5b6a99c96fb74068925bce17263c98caf19c5101a"
+  },
+  {
+   "path": "six-scene-artwork.css",
+   "tier": 2,
+   "bytes": 928,
+   "blob": "f9b623f1e8f642211a6348a59e0674637617f087",
+   "sha256": "658c22fa104b970fe652961c5c13a860cc593e125b2b3102a591a826510ce311"
+  },
+  {
+   "path": "six-scene-artwork.js",
+   "tier": 2,
+   "bytes": 5010,
+   "blob": "3cb6e671c1f7041c9a0207c062f4d43526917d15",
+   "sha256": "80c7225992af01d1e8855f61cd7cf75f17c3b7c064a1b7897f2d62d93cfe279f"
+  },
+  {
+   "path": "topic-artwork-details.css",
+   "tier": 2,
+   "bytes": 869,
+   "blob": "97859a4b061b9dff6d3ab437a7fc0f1a52564dc6",
+   "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+  },
+  {
+   "path": "topic-artwork-details.js",
+   "tier": 2,
+   "bytes": 21103,
+   "blob": "2400805d4e084bff5420411466c97abcc261d7d4",
+   "sha256": "2f512cfc8692db55c31100e4b1cdda2db056df9f6dec32bc88c3bce0399d25ee"
+  },
+  {
+   "path": "topic-heroes.css",
+   "tier": 2,
+   "bytes": 868,
+   "blob": "6e05ae5a4ed1690dc15fa60fce68792fe6b4575f",
+   "sha256": "c0cd96bafe94455fd41d8b6c8357baaa12a0556ce204ba058a1264160acae632"
+  },
+  {
+   "path": "assets/heroes/topics/living-christ-full.webp",
+   "tier": 2,
+   "bytes": 1612126,
+   "blob": "c06c05b00e328f897efbf0fcc21ebdef0674e0cc",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/children-accessible-game-20261004.webp",
+   "tier": 2,
+   "bytes": 309242,
+   "blob": "1b75c712fc50063c37bdc3c6cb11f21e8aa42441",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/children-gather-close.webp",
+   "tier": 2,
+   "bytes": 158148,
+   "blob": "d7007e2958333945cb026730497d2bb82ce0f4ce",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/children-listen-at-home-20260919.webp",
+   "tier": 2,
+   "bytes": 280058,
+   "blob": "372a390fd384827b533a9b68614290d7d00b9a14",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/children-listen-under-tree.webp",
+   "tier": 2,
+   "bytes": 162564,
+   "blob": "cfb80767d8a91b48515af3295a68c3edf7557274",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/children-quiet-water.webp",
+   "tier": 2,
+   "bytes": 153170,
+   "blob": "08e85e6c96d2469394ee73486102ded18c85c6ed",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/children-quiet-welcome-20261004.webp",
+   "tier": 2,
+   "bytes": 279752,
+   "blob": "8cfdc4689ba6f0e36c75b622135bd1cb3426d04d",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/children-share-snack-20261004.webp",
+   "tier": 2,
+   "bytes": 245670,
+   "blob": "add43da8a7ade8ab0b53c5920e0aa6042506c6a6",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/children-temple-praise-20261004.webp",
+   "tier": 2,
+   "bytes": 366292,
+   "blob": "e803d2bd98736e2c87ee6d1b4515e0d265d65192",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/children-toy-repair-20261004.webp",
+   "tier": 2,
+   "bytes": 328492,
+   "blob": "6e0da1c8628d3808b507e12506f2db3c2d9755d9",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/children-welcome-shy-child.webp",
+   "tier": 2,
+   "bytes": 149492,
+   "blob": "e8edf2d1352071d8483344be13952d4e9df00848",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/living-beside-grief.webp",
+   "tier": 2,
+   "bytes": 140432,
+   "blob": "db6b5f0b81884f11c6402e2c2cf3f9b7bf8b9abf",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/living-breakfast-shore-20260919.webp",
+   "tier": 2,
+   "bytes": 370482,
+   "blob": "1a8f051036e9b61c4d5196cc48c5702aed5d82fb",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/living-mary-at-tomb.webp",
+   "tier": 2,
+   "bytes": 134906,
+   "blob": "01b1488ef5d2f3a72e9b0a8c7668bf23c9628751",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/living-mary-reports-20261004.webp",
+   "tier": 2,
+   "bytes": 1461210,
+   "blob": "286f1255e0970d245d2e7efe2c65f3f6ce0a75a6",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/living-newness-baptism-20261004.webp",
+   "tier": 2,
+   "bytes": 1259986,
+   "blob": "143917f6c9a098ef0998249449b5224bb55aff38",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/living-paul-courage-20261004.webp",
+   "tier": 2,
+   "bytes": 1471376,
+   "blob": "f4f7d0a5058f8761520a2719d43f5f3518a42ab3",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/living-peace-to-disciples.webp",
+   "tier": 2,
+   "bytes": 99264,
+   "blob": "c9e4b00b7f04ba57a681dbbd66030c76ebb047fe",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/living-steadfast-service-20261004.webp",
+   "tier": 2,
+   "bytes": 1852140,
+   "blob": "b4d61408a91472be03fe05311c216623e2c68855",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/living-thomas-witness.webp",
+   "tier": 2,
+   "bytes": 117600,
+   "blob": "81672636bd9eeec14e61e71bc338ae371f29b2a5",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/shepherd-audio-access-20261004.webp",
+   "tier": 2,
+   "bytes": 289838,
+   "blob": "5fe8ad156d2433707dfccb8c181f69fcb3161a6f",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/shepherd-binds-hurt-20261004.webp",
+   "tier": 2,
+   "bytes": 282482,
+   "blob": "72daa81e444bc09ccd35e63f5209776bec7b834a",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/shepherd-calls-zacchaeus.webp",
+   "tier": 2,
+   "bytes": 127256,
+   "blob": "9a28a4f1177d9c5bb2b948cefa41f59b86c15a65",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/shepherd-carries-lamb.webp",
+   "tier": 2,
+   "bytes": 164840,
+   "blob": "3ab847c06155a61d2913b6d9cff45a9d77ac93a6",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/shepherd-coat-repair-20261004.webp",
+   "tier": 2,
+   "bytes": 337608,
+   "blob": "9a64123ae3c98327f41ccb73e5e7b37a5706980b",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/shepherd-key-recovery-20261004.webp",
+   "tier": 2,
+   "bytes": 312848,
+   "blob": "38bb2f757e005d73f69f49ab83eeaaafa8a861b6",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/shepherd-room-at-water-20261004.webp",
+   "tier": 2,
+   "bytes": 714494,
+   "blob": "d88515dfc62d8d34d9ccd7173e04d4acfc28afc2",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/shepherd-seeks-one-20260919.webp",
+   "tier": 2,
+   "bytes": 435008,
+   "blob": "aa61b260745537d55a6d66ec16dbb5a858dd3299",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/shepherd-sees-one.webp",
+   "tier": 2,
+   "bytes": 157364,
+   "blob": "16fdd703c36281d8fc9120e29161a702636d9577",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/shepherd-shares-burden.webp",
+   "tier": 2,
+   "bytes": 208848,
+   "blob": "bee33a36b02fbbab6cfc11f1b24f71aa27881f9b",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/still-city-companion.webp",
+   "tier": 2,
+   "bytes": 151302,
+   "blob": "e7db882342ec5bbfb88a882fcfaac01ef452f972",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/still-depart-for-rest-20261004.webp",
+   "tier": 2,
+   "bytes": 344810,
+   "blob": "dce4f99e38a0fc38f8a9cbbf5225be4841a773ee",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/still-lakeside-pause.webp",
+   "tier": 2,
+   "bytes": 130610,
+   "blob": "86898f8ce9cdf3dc446d031b2cb5a36a9c451b94",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/still-listen-workshop-20261004.webp",
+   "tier": 2,
+   "bytes": 239334,
+   "blob": "d4c94a02c47235fbc0a20352a48687ac56c4255a",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/still-neighbor-peace-20261004.webp",
+   "tier": 2,
+   "bytes": 257638,
+   "blob": "67fa2694338a9fda0a76ded66b6369e94972f287",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/still-pause-work-20261004.webp",
+   "tier": 2,
+   "bytes": 285456,
+   "blob": "7344d8271d1553d4ec7cd91ee4ab83f828cba9a7",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/still-phone-down-scripture-20260919.webp",
+   "tier": 2,
+   "bytes": 281538,
+   "blob": "ddcc9683042ce14d6cb1e5491bc4ac5f3226ba8b",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/still-shared-lift.webp",
+   "tier": 2,
+   "bytes": 110158,
+   "blob": "774b712ee74e9b4bada5c3a687134bb17fef66fc",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/still-storm-boat.webp",
+   "tier": 2,
+   "bytes": 197384,
+   "blob": "86262ad246ccb3e087260245377d9e7a15dccbab",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/full/still-wars-cease-20261004.webp",
+   "tier": 2,
+   "bytes": 502090,
+   "blob": "b2e046da211bbc825c96de968f6d18e626a76934",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/children-accessible-game-20261004.webp",
+   "tier": 2,
+   "bytes": 96030,
+   "blob": "5c0a3039e817a15a9e08592dd6d47a541f323bc9",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/children-gather-close.webp",
+   "tier": 2,
+   "bytes": 65510,
+   "blob": "9d43f744e5179463a53a993ec9353700ec267a23",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/children-listen-at-home-20260919.webp",
+   "tier": 2,
+   "bytes": 91130,
+   "blob": "1a7bf398ada025eac556b092ff6021f698b8d2b7",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/children-listen-under-tree.webp",
+   "tier": 2,
+   "bytes": 67992,
+   "blob": "e400d9e6357b92f774df90120ea132ab06b0f6d4",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/children-quiet-water.webp",
+   "tier": 2,
+   "bytes": 55858,
+   "blob": "1915e6c4890307ab23e9032b0df704852e74e855",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/children-quiet-welcome-20261004.webp",
+   "tier": 2,
+   "bytes": 85838,
+   "blob": "1b646666b05d0e4c9692c5264d7df9fe08f1a260",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/children-share-snack-20261004.webp",
+   "tier": 2,
+   "bytes": 67964,
+   "blob": "3a8b23d76dc199a428745fc40c37a49482b4874e",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/children-temple-praise-20261004.webp",
+   "tier": 2,
+   "bytes": 99418,
+   "blob": "c3b4795bc4bc31311fec92d10d06eb3dc38a8b0f",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/children-toy-repair-20261004.webp",
+   "tier": 2,
+   "bytes": 99086,
+   "blob": "efb32fbfb5934b09b615e905f650327c14d0eb86",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/children-welcome-shy-child.webp",
+   "tier": 2,
+   "bytes": 60876,
+   "blob": "b5dce4d30f83d8445b05fc4262df85b02b9e3b00",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/living-beside-grief.webp",
+   "tier": 2,
+   "bytes": 52372,
+   "blob": "0ee696813e8da28c58941c951e9cb849d3bb9442",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/living-breakfast-shore-20260919.webp",
+   "tier": 2,
+   "bytes": 139286,
+   "blob": "f507e4382f944d2bdffc2ae4d2b9be660c7d1a0a",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/living-mary-at-tomb.webp",
+   "tier": 2,
+   "bytes": 56712,
+   "blob": "47dbd5be325dd28649c7146bd95c41ec0ad8828f",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/living-mary-reports-20261004.webp",
+   "tier": 2,
+   "bytes": 131260,
+   "blob": "d5c2d6fa4b5d52e420cc714c5f4b5f14e581673f",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/living-newness-baptism-20261004.webp",
+   "tier": 2,
+   "bytes": 88484,
+   "blob": "956beafe74a0eced40d8a3002a4015a7fa5485f2",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/living-paul-courage-20261004.webp",
+   "tier": 2,
+   "bytes": 119954,
+   "blob": "841a7868a748567f5f704864aa19efc8f9eb5f20",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/living-peace-to-disciples.webp",
+   "tier": 2,
+   "bytes": 38696,
+   "blob": "716543ac57dd72b26c573a20cd6d73a2e95f19fe",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/living-steadfast-service-20261004.webp",
+   "tier": 2,
+   "bytes": 163636,
+   "blob": "48c1ed4d43c527ddf62f8bdac021f83a3c7674c7",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/living-thomas-witness.webp",
+   "tier": 2,
+   "bytes": 44018,
+   "blob": "1bf0e0f79f652af72f3a3db210ec10f5530c9098",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/shepherd-audio-access-20261004.webp",
+   "tier": 2,
+   "bytes": 78366,
+   "blob": "e769e897cf3024e3c1799ecd50909ccd5ce616dd",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/shepherd-binds-hurt-20261004.webp",
+   "tier": 2,
+   "bytes": 88590,
+   "blob": "bbed973a7b39c28a13f0bb2819f979f3afbe735f",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/shepherd-calls-zacchaeus.webp",
+   "tier": 2,
+   "bytes": 52208,
+   "blob": "c13e831de63f301fb9cf2c09ad569bd46eddceb8",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/shepherd-carries-lamb.webp",
+   "tier": 2,
+   "bytes": 67524,
+   "blob": "28648ac12852965565041ac31951b59d97199e85",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/shepherd-coat-repair-20261004.webp",
+   "tier": 2,
+   "bytes": 98634,
+   "blob": "0d5a41fa1b90338146a80b5fed6e2faa9bcca2b0",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/shepherd-key-recovery-20261004.webp",
+   "tier": 2,
+   "bytes": 102526,
+   "blob": "e4cf77d6c6089a8eef1ed60976486184c43d4eb9",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/shepherd-room-at-water-20261004.webp",
+   "tier": 2,
+   "bytes": 198294,
+   "blob": "4dc47b028fdb432eccd7037be87523eff698c150",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/shepherd-seeks-one-20260919.webp",
+   "tier": 2,
+   "bytes": 154656,
+   "blob": "8a8341649ba57eb4c6467e256f1ca7d318db5699",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/shepherd-sees-one.webp",
+   "tier": 2,
+   "bytes": 63486,
+   "blob": "e25d7b920ce30ddb74ee22fbf97771ad11e55720",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/shepherd-shares-burden.webp",
+   "tier": 2,
+   "bytes": 83988,
+   "blob": "9c419118cccad5b0be8e62c7ad5793e96979ccf5",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/still-city-companion.webp",
+   "tier": 2,
+   "bytes": 57626,
+   "blob": "abba02131d3d08b124dd20d61881b7e7bc5fd8e0",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/still-depart-for-rest-20261004.webp",
+   "tier": 2,
+   "bytes": 103422,
+   "blob": "95903d164376cd084cb0928a582ee674fdf53e3e",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/still-lakeside-pause.webp",
+   "tier": 2,
+   "bytes": 46822,
+   "blob": "dd393976bb8fde8f9fb160722387281b832f7b3c",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/still-listen-workshop-20261004.webp",
+   "tier": 2,
+   "bytes": 66000,
+   "blob": "32f3fd1691874d5db935edd6f9bbe80dee1512b1",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/still-neighbor-peace-20261004.webp",
+   "tier": 2,
+   "bytes": 62220,
+   "blob": "7cab6b7663347d7bc48a330c91f837d1c88589e9",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/still-pause-work-20261004.webp",
+   "tier": 2,
+   "bytes": 76940,
+   "blob": "4debed2d793df3b2f34422800938d3fe75777e78",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/still-phone-down-scripture-20260919.webp",
+   "tier": 2,
+   "bytes": 99334,
+   "blob": "32996b0dac098fe929837981a95dd62fb5e99461",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/still-shared-lift.webp",
+   "tier": 2,
+   "bytes": 40982,
+   "blob": "defeca250a53669a6dce54eaf864a382bb2aa27f",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/still-storm-boat.webp",
+   "tier": 2,
+   "bytes": 80576,
+   "blob": "5bd71817948a1524606ed29f97fb7dd6ea82cb75",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/art-study/thumbs/still-wars-cease-20261004.webp",
+   "tier": 2,
+   "bytes": 143224,
+   "blob": "b76170a94021b220d5096e8a6b09a27a466d6433",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/christ-world/christ-caregiver-night-960.webp",
+   "tier": 2,
+   "bytes": 610282,
+   "blob": "9e60fa0a2e77461cc9351c176dc29d711a25393d",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/christ-world/christ-caregiver-night-full.webp",
+   "tier": 2,
+   "bytes": 1553616,
+   "blob": "1ed0816b1e4b6e7a3df3321b35e4e0895513ecb5",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/christ-world/christ-children-colorful-day-960.webp",
+   "tier": 2,
+   "bytes": 759100,
+   "blob": "237ae64ed4ed00f16fccbe52c4d91a70b667f5cf",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/christ-world/christ-children-colorful-day-full.webp",
+   "tier": 2,
+   "bytes": 1822656,
+   "blob": "de0256c7de13159bd4b886ddeaca2d63896a7054",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/christ-world/christ-last-bus-960.webp",
+   "tier": 2,
+   "bytes": 676968,
+   "blob": "c6193605caabe82ec340265bf1a209e263032e8e",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/christ-world/christ-last-bus-full.webp",
+   "tier": 2,
+   "bytes": 1617650,
+   "blob": "09fd89c621473503b893df46a07606946152fa93",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/christ-world/christ-under-countless-stars-960.webp",
+   "tier": 2,
+   "bytes": 756080,
+   "blob": "1a33d720428974f7cf94a58a87e21fb9b9a06dfc",
+   "sha256": null
+  },
+  {
+   "path": "assets/page-art/christ-world/christ-under-countless-stars-full.webp",
+   "tier": 2,
+   "bytes": 1918202,
+   "blob": "d98e04f28f1cf604a5176abaf8a9f4447ee33966",
+   "sha256": null
+  },
+  {
+   "path": "assets/resources/children-heartfelt-prayer.jpg",
+   "tier": 2,
+   "bytes": 102893,
+   "blob": "34c3f809a9b573e0b89ab09481b0cf0b7e54d168",
+   "sha256": null
+  },
+  {
+   "path": "assets/resources/children-lords-love.jpg",
+   "tier": 2,
+   "bytes": 62708,
+   "blob": "7769928e1a0f47775fe1c7b364b6db70aec6f208",
+   "sha256": null
+  },
+  {
+   "path": "assets/resources/good-shepherd.jpg",
+   "tier": 2,
+   "bytes": 42966,
+   "blob": "79ac9a3e2e9920b9f8761f1e467671656a1149bb",
+   "sha256": null
+  },
+  {
+   "path": "assets/resources/living-he-is-risen-2025.jpg",
+   "tier": 2,
+   "bytes": 33008,
+   "blob": "f1da4d45b91c220f62ca093bb9fcce4ba18d7abe",
+   "sha256": null
+  },
+  {
+   "path": "assets/resources/living-powerful-testimony.jpg",
+   "tier": 2,
+   "bytes": 151254,
+   "blob": "f4857ee2e9c3a16d6999486eaec6a86ff6fc988e",
+   "sha256": null
+  },
+  {
+   "path": "assets/resources/shepherd-abiding-compassion.jpg",
+   "tier": 2,
+   "bytes": 77563,
+   "blob": "49686a226c8e74f96fac70bcf51903af14808124",
+   "sha256": null
+  },
+  {
+   "path": "assets/resources/still-bednar-be-still.jpg",
+   "tier": 2,
+   "bytes": 76360,
+   "blob": "661f5e57aa61c78ea793334d787590a4a448aa9d",
+   "sha256": null
+  },
+  {
+   "path": "assets/resources/still-personal-peace.jpg",
+   "tier": 2,
+   "bytes": 105320,
+   "blob": "8171e0464841073cdf78c4100cfc069dc6c395d5",
+   "sha256": null
+  },
+  {
+   "path": "assets/resources/still-principles-prayer.jpg",
+   "tier": 2,
+   "bytes": 79093,
+   "blob": "fba916cfb597ef21088cf5099777a284b235e109",
+   "sha256": null
+  },
+  {
+   "path": "a041-frame.html",
+   "tier": 1,
+   "bytes": 1549,
+   "blob": null,
+   "sha256": "f967a2db8cf5ea0c725363e6335891e721136b405547eeca1c58bfd96fee55d6",
+   "source": "staging-only wrapper, new file"
+  }
+ ]
+}

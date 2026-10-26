@@ -1,0 +1,155 @@
+name: Gallery staging preview (A041)
+
+# Staging-only workflow, corrected revision. It lives on the branch
+# staging/a041-gallery-close-v2 and nowhere else. Production workflows
+# (deploy-pages.yml, deploy-worker.yml, site-qa.yml) are main-scoped
+# and are not touched or invoked by this file. No pull request is
+# opened by this plan. There is no manual dispatch trigger: the only
+# trigger is a push to the reviewed staging branch, and the trigger
+# guard binds every run to the reviewed payload and a single attempt.
+#
+# What it does, in order:
+#   1. install   - reads the Wrangler version pinned by the repository
+#                  at groq-proxy/package.json (wrangler 4.126.0) and
+#                  installs exactly that version from npm.
+#   2. guard     - tools/gallery_staging_guard.mjs, using NO secrets:
+#                  branch, first-attempt, reviewed manifest pin,
+#                  reviewed candidate and wrapper pins, and the exact
+#                  reviewed delta against the pinned base must all
+#                  match, or the run stops before any secret is read.
+#   3. preflight - read-only Cloudflare JSON metadata checks
+#                  (tools/gallery_staging_preflight.mjs). Any finite
+#                  stop condition ends the run BEFORE upload. The
+#                  receipt is saved as an artifact either way.
+#   4. assemble  - copies only the positively enumerated manifest
+#                  files into staging-dist/ and verifies size, Git
+#                  blob hash, and sha256 (tools/gallery_staging_assemble.mjs).
+#   5. upload    - writes an attempt marker, then one wrangler
+#                  versions upload with the preview alias a041-v2 and
+#                  the staging config (wrangler.staging.jsonc: existing
+#                  Worker name "workspace", assets directory
+#                  ./staging-dist, no bindings). There is NO deploy
+#                  step anywhere in this workflow, and no retry.
+#   6. postcheck - tools/gallery_staging_postcheck.mjs, run on every
+#                  outcome: reconciles the attempt, proves the active
+#                  deployment is unchanged, records the exact version
+#                  id when captured or marks the effect UNKNOWN, and
+#                  writes the final receipt. The original upload
+#                  failure is preserved by the final gate step.
+#
+# Call inventory (the complete list of external effects):
+#   - One npm registry fetch installing the repository-pinned
+#     Wrangler 4.126.0 (build tooling only; no Cloudflare effect).
+#   - Cloudflare API GETs in the preflight and postcheck steps.
+#   - One wrangler versions upload (creates a non-deployed version).
+#   - GitHub artifact upload of the receipts, retained 14 days.
+# No purchase endpoint, no plan change, no DNS change, no deploy.
+
+on:
+  push:
+    branches:
+      - staging/a041-gallery-close-v2
+
+permissions:
+  contents: read
+
+concurrency:
+  group: gallery-staging-preview-a041
+  cancel-in-progress: false
+
+jobs:
+  staging-preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out the staging branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install the repository-pinned Wrangler
+        run: |
+          WRANGLER_VERSION=$(node -p "require('./groq-proxy/package.json').devDependencies.wrangler")
+          echo "Repository-pinned wrangler: $WRANGLER_VERSION"
+          npm install --no-save "wrangler@$WRANGLER_VERSION"
+
+      - name: Trigger guard (reviewed payload, single attempt, no secrets)
+        env:
+          REVIEWED_MANIFEST_SHA256: 33385a6dba15bf0e31a121faae32f14d6368bce6b8f3cdaa5f71672d81ad5c4d
+          REVIEWED_CANDIDATE_SHA256: 6220ff12cac654f2e2bbe13c786f4056f8b5e979c68165ebbc95e13f55547b65
+          REVIEWED_FRAME_SHA256: f967a2db8cf5ea0c725363e6335891e721136b405547eeca1c58bfd96fee55d6
+          REVIEWED_BASE_REF: 72a8c9c5c6a08e28c9ee135d031cda76cd762189
+        run: node tools/gallery_staging_guard.mjs
+
+      - name: Preflight (read-only, stop conditions enforced)
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: node tools/gallery_staging_preflight.mjs
+
+      - name: Save the preflight receipt either way
+        if: always()
+        run: cp preflight-receipt.json preflight-before.json
+
+      - name: Assemble the manifest set (fail-closed)
+        run: node tools/gallery_staging_assemble.mjs
+
+      - name: Write the upload attempt marker
+        run: |
+          node -e "require('fs').writeFileSync('upload-attempt.json', JSON.stringify({tool:'a041-upload-attempt', run_id: process.env.GITHUB_RUN_ID, run_attempt: process.env.GITHUB_RUN_ATTEMPT, head_sha: process.env.GITHUB_SHA, alias: 'a041-v2', started_at: new Date().toISOString()}, null, 2))"
+
+      - name: Upload the staging version (no deploy)
+        id: upload
+        continue-on-error: true
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          set -o pipefail
+          npx wrangler versions upload \
+            --config wrangler.staging.jsonc \
+            --preview-alias a041-v2 \
+            --message "A041 gallery close v2 staging candidate" \
+            2>&1 | tee upload-output.txt
+
+      - name: Postcheck and final receipt (every outcome)
+        id: postcheck
+        if: always()
+        continue-on-error: true
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          UPLOAD_OUTCOME: ${{ steps.upload.outcome }}
+        run: node tools/gallery_staging_postcheck.mjs
+
+      - name: Save receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: a041-staging-receipts
+          retention-days: 14
+          path: |
+            preflight-receipt.json
+            preflight-before.json
+            upload-attempt.json
+            upload-output.txt
+            final-receipt.json
+          if-no-files-found: warn
+
+      - name: Final gate (the original failure is preserved)
+        if: always()
+        run: |
+          if [ "${{ steps.upload.outcome }}" != "success" ]; then
+            echo "upload step outcome: ${{ steps.upload.outcome }}"
+            exit 1
+          fi
+          if [ "${{ steps.postcheck.outcome }}" != "success" ]; then
+            echo "postcheck step outcome: ${{ steps.postcheck.outcome }}"
+            exit 1
+          fi
+          echo "staging run reconciled: upload succeeded and the active deployment is unchanged"

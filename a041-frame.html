@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A041 staging frames - not a public page</title>
+<style>
+  body { font-family: Georgia, serif; margin: 24px; background: #f6f1e7; color: #251c14; }
+  h1 { font-size: 20px; }
+  p.note { max-width: 70ch; }
+  .frames { display: flex; gap: 32px; align-items: flex-start; flex-wrap: wrap; }
+  figure { margin: 0; }
+  figcaption { font-size: 14px; margin-bottom: 8px; }
+  iframe { border: 2px solid #a35a32; background: #fff; height: 844px; display: block; }
+  iframe.w390 { width: 390px; }
+  iframe.w320 { width: 320px; }
+</style>
+</head>
+<body>
+<h1>A041 Gallery Close staging frames</h1>
+<p class="note">Staging-only wrapper for the A041 browser cases. Each frame loads the staged
+art.html at an exact layout width (390px and 320px), so the page's own width rules,
+including the max-width:700px drawer rules, genuinely engage at phone layout widths.
+Layout-width evidence only: no touch, device-pixel-ratio, or mobile browser chrome
+emulation is claimed. The frames are served from the same staged version as art.html,
+under the same preview alias.</p>
+<div class="frames">
+  <figure>
+    <figcaption>390px layout width</figcaption>
+    <iframe class="w390" src="art.html" title="Staged art.html at 390 pixels"></iframe>
+  </figure>
+  <figure>
+    <figcaption>320px layout width</figcaption>
+    <iframe class="w320" src="art.html" title="Staged art.html at 320 pixels"></iframe>
+  </figure>
+</div>
+</body>
+</html>
