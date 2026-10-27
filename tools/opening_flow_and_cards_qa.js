@@ -7,7 +7,21 @@ const source = fs.readFileSync('site-common.js', 'utf8');
 const fn = source.slice(source.indexOf('    function initMobileOpening('), source.indexOf('    function initExternalLinks('));
 const pages = [...fs.readFileSync('sitemap.xml', 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)]
   .map(m => new URL(m[1]).pathname.slice(1) || 'index.html');
-let openings = 0;
+const ADAMS_INTRO = 'timelines/adams-1881-introduction.html';
+const openingPages = [];
+function checkOpeningInventory(found) {
+  assert.equal(new Set(found).size, found.length, 'Canonical opening routes must be unique');
+  assert.equal(found.filter(page => page === ADAMS_INTRO).length, 1, 'Adams must retain its canonical opening invitation');
+  assert.equal(found.filter(page => page !== ADAMS_INTRO).length, 46, 'The 46 historical canonical openings must retain their invitations');
+}
+function selfTestOpeningInventory() {
+  const historical = Array.from({length:46}, (_, i) => `historical-${i}.html`);
+  checkOpeningInventory([...historical, ADAMS_INTRO]);
+  for (const mutation of [historical, [...historical.slice(1), ADAMS_INTRO], [...historical, ADAMS_INTRO, ADAMS_INTRO], [...historical, ADAMS_INTRO, 'extra.html']]) {
+    assert.throws(() => checkOpeningInventory(mutation), 'Opening inventory regression escaped');
+  }
+}
+selfTestOpeningInventory();
 const sectionCopyPages = new Set([
   'answers/what-is-eternal-marriage.html',
   'answers/look-unto-me-doctrine-and-covenants-6-36.html',
@@ -71,7 +85,14 @@ for (const page of pages) {
       assert.equal(restoredCopy.textContent.replace(/\s+/g, ' ').trim(), originalText, page + ': individual study opening must remain untouched');
       assert.equal(w.document.querySelectorAll('.fc-mobile-opening-notes, [data-fc-mobile-label]').length, 0, page + ': main-page redesign escaped its scope');
     }
-    openings++;
+    if (page === ADAMS_INTRO) {
+      const timelineCues = opening.querySelectorAll('.timeline-opening-continue');
+      assert.equal(timelineCues.length, 1, 'Adams must retain its one original Timeline Continue');
+      assert.equal(timelineCues[0].getAttribute('href'), '#adams-overview', 'Adams original Continue must reach its overview');
+      assert(timelineCues[0].classList.contains('fc-desktop-scroll-cue'), 'Adams original cue must be recognized by the mobile initializer');
+      assert.equal(cue.getAttribute('href'), '#adams-overview', 'Adams generated mobile cue must preserve the same target');
+    }
+    openingPages.push(page);
     media.matches = false;
     listeners.forEach(listener => listener());
     const desktopCopy = opening.cloneNode(true);
@@ -97,5 +118,6 @@ assert(pages.includes('answers/holy-ghost.html'), 'New Holy Ghost opening must b
 assert(pages.includes('answers/plan-of-salvation.html'), 'New Plan of Salvation opening must be included');
 assert(pages.includes('timeline.html'), 'New Timeline opening must be included');
 for(const page of ['timelines/latter-day-saint-church-history-timeline.html','timelines/willie-and-martin-handcart-map.html','timelines/life-of-christ-journey-map.html'])assert(pages.includes(page),'New timeline experience opening must be included: '+page);
-assert.equal(openings, 46, 'Every canonical opening, including the three timeline experiences, must retain its invitation');
-console.log('Opening flow and cards QA PASS: 46 opening invitations and the compact Joseph gateway; complete Answers rows.');
+assert.equal(pages.filter(page => page === ADAMS_INTRO).length, 1, 'Adams introduction must be canonical exactly once');
+checkOpeningInventory(openingPages);
+console.log('Opening flow and cards QA PASS: 46 historical and one Adams opening invitation; compact Joseph gateway; complete Answers rows.');

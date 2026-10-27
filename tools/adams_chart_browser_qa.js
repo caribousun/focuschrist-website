@@ -2,17 +2,19 @@
 'use strict';
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 const W=50195,H=5347,TILE=1024;
-const EXPECTED_CHART_SHA256='95802a989d818d0ff7297660274c62f18140950b0bf58fc96a90277ef1e1cb90';
-const EXPECTED_LANDING_SHA256='fa3b12da544899f8935874508b9abe64b84b6fd2af1e5bfec8a368ce6a638578';
+const EXPECTED_CHART_SHA256='b90c19dd9f77c3966843b41d514319816a194deee86b87235909f6b2c742130c';
+const EXPECTED_LANDING_SHA256='c910ae58c2f8feccf1d59f44b154d31f224436b79538e86bf73774c65b0b8c4c';
+const INTEGRATED_SOURCES=[{"path":"adams-integration.css","bytes":5292,"sha256":"3c8a2390e93e94f5d67d3b7a4356f018d78df7ea5c654a3841366549df76d131"},{"path":"adams-integration.js","bytes":2267,"sha256":"334a8395213a4e561cdffc747bf92b6872902486b055a36824cf834784dffb7b"},{"path":"timeline.html","bytes":8828,"sha256":"c910ae58c2f8feccf1d59f44b154d31f224436b79538e86bf73774c65b0b8c4c"},{"path":"timelines/adams-1881-chart.html","bytes":66076,"sha256":"b90c19dd9f77c3966843b41d514319816a194deee86b87235909f6b2c742130c"},{"path":"timelines/adams-1881-introduction.html","bytes":8126,"sha256":"742d429e6a674ce5d47889aab964a6bde60f3509bd9518e159499be6616112be"}];
 const ASSET_SET_SHA256='6092f3c930ebb6cae7c25b3f881fc93ef590642500e419b539124cacd89bca0f';
 const CREDIT='Sebastian C. Adams, Synchronological Chart (1881). Chart image from Wikimedia Commons, courtesy of the David Rumsey Map Collection. The image is in the public domain.';
 const COMMONS='https://commons.wikimedia.org/wiki/File:Adams_Synchronological_Chart,_1881.jpg';
-const CHOICES=['latter-day-saint-church-history-timeline.html','willie-and-martin-handcart-map.html','life-of-christ-journey-map.html','world-and-scripture-timeline.html','adams-1881-chart.html'];
+const CHOICES=['latter-day-saint-church-history-timeline.html','willie-and-martin-handcart-map.html','life-of-christ-journey-map.html','world-and-scripture-timeline.html','adams-1881-introduction.html'];
 const PROFILES=[{name:'desktop',width:1280,height:900,touch:false},{name:'phone',width:390,height:844,touch:true},{name:'narrow-phone',width:320,height:568,touch:true},{name:'phone-landscape',width:844,height:390,touch:true}];
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 const near=(a,b,why,t=.08)=>assert(Math.abs(a-b)<=t,`${why}: ${a} != ${b}`);
 
 function inspectAssets(root){
+ for(const r of INTEGRATED_SOURCES){const b=fs.readFileSync(path.join(root,r.path));assert.equal(b.length,r.bytes);assert.equal(sha(b),r.sha256,'Exact integrated source '+r.path);}
  const html=fs.readFileSync(path.join(root,'timelines/adams-1881-chart.html'),'utf8');
  assert.equal(sha(Buffer.from(html)),EXPECTED_CHART_SHA256,'Exact reviewed metadata-correct chart');
  assert.equal(sha(fs.readFileSync(path.join(root,'timeline.html'))),EXPECTED_LANDING_SHA256,'Exact reviewed Timeline landing');
@@ -127,11 +129,17 @@ module.exports=async function adamsChartQA(existingPage,origin,parentOut){
     const response=await page.goto(origin+'/timeline.html',{waitUntil:'load'});assert.equal(response.status(),200);
     const choices=page.locator('#choose-timeline .fc-timeline-choices a');assert.equal(await choices.count(),5);
     assert.deepEqual(await choices.evaluateAll(a=>a.map(n=>n.getAttribute('href'))),CHOICES.map(n=>'timelines/'+n));
-    const doorway=page.locator('#choose-timeline a[href="timelines/adams-1881-chart.html"]');await doorway.scrollIntoViewIfNeeded();await capture('landing');
-    if(profile.touch)await doorway.tap();else await doorway.click();await page.waitForURL(origin+'/timelines/adams-1881-chart.html');
-    assert.equal(await page.locator('.fc-adams-back').getAttribute('href'),'../timeline.html#choose-timeline');
-    assert.equal(await page.locator('.fc-adams-home').getAttribute('href'),'../index.html');
-    assert.equal(await page.locator('.fc-adams-home').innerText(),'FocusChrist Home');
+    const doorway=page.locator('#choose-timeline a[href="timelines/adams-1881-introduction.html"]');await doorway.scrollIntoViewIfNeeded();await capture('landing');
+    if(profile.touch)await doorway.tap();else await doorway.click();await page.waitForURL(origin+'/timelines/adams-1881-introduction.html');
+    await Promise.all(pending);const viewerResponseStart=network.length;record.preViewerTileResponses=network.filter(n=>n.profile===profile.name).length;
+    await act('#adams-open-chart');await page.waitForURL(origin+'/timelines/adams-1881-chart.html');
+    await page.waitForFunction(async()=>{if(document.fonts)await document.fonts.ready;await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));return true;});
+    assert.equal(await page.locator('nav[data-focuschrist-header=standard]').count(),1);
+    assert.equal(await page.locator('nav[data-focuschrist-header=standard] .nav-logo').getAttribute('href'),'../index.html');
+    assert.equal(await page.locator('footer .fc-adams-footer-links a[href="../timeline.html#adams-1881"]').count(),1);
+    assert.equal(await page.locator('footer .fc-adams-footer-links a[href="adams-1881-introduction.html"]').count(),1);
+    assert.equal(await page.locator('.fc-adams-strip').count(),0);
+    assert.equal(await page.locator('main#adams-chart-main #viewport').count(),1);
     assert.equal(await page.locator('h1').count(),1,'One semantic chart heading');
     assert.equal(await page.locator('h1.title').innerText(),'Adams’ Chart · 1881');
     assert(await page.locator('h1.title').isVisible(),'Chart heading remains visibly rendered');
@@ -142,7 +150,7 @@ module.exports=async function adamsChartQA(existingPage,origin,parentOut){
     assert(!/user-scalable\s*=\s*no|maximum-scale\s*=\s*1(?:,|$)/i.test(await page.locator('meta[name="viewport"]').getAttribute('content')),'Browser zoom not locked');
     assert.equal(await page.locator('iframe').count(),0);
     let s=await state('initial-fit');checkFit(s);
-    const initialRequests=network.filter(n=>n.profile===profile.name).length;assert(initialRequests<=6,'Initial view must not download all 331 tiles');
+    const initialRequests=network.slice(viewerResponseStart).filter(n=>n.profile===profile.name).length;assert(initialRequests<=6,'Initial view must not download all 331 tiles');
     record.initialTileResponses=initialRequests;
     // Check actual control boxes, not only hidden document overflow.
     const compact=profile.width<=899&&profile.height<=700;
@@ -159,20 +167,37 @@ module.exports=async function adamsChartQA(existingPage,origin,parentOut){
     const integration=await page.evaluate(()=>{
      const rect=n=>{const r=n.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height,right:r.right,bottom:r.bottom};};
      const bar=document.getElementById('toolbar'),cs=getComputedStyle(bar);
-     return {strip:rect(bar.querySelector('.fc-adams-strip')),titleRow:rect(bar.querySelector('.toprow')),controls:rect(bar.querySelector('.controls')),innerWidth:bar.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight),overlays:['navDock','mini','progress','showNav'].map(id=>{const n=document.getElementById(id);return {id,...rect(n),display:getComputedStyle(n).display};})};
+     // Progress intentionally ignores pointer input: test its real text/known occluders,
+     // not elementFromPoint, which would skip pointer-events:none even when visible.
+     const progress=document.getElementById('progress'),pr=rect(progress),ancestors=[];
+     for(let n=progress;n;n=n.parentElement){const st=getComputedStyle(n);ancestors.push({tag:n.tagName,id:n.id,display:st.display,visibility:st.visibility,opacity:st.opacity});}
+     const fragments=[],walker=document.createTreeWalker(progress,NodeFilter.SHOW_TEXT);let node;
+     while((node=walker.nextNode()))if(node.textContent.trim()){const range=document.createRange();range.selectNodeContents(node);for(const r of range.getClientRects())if(r.width>0&&r.height>0)fragments.push({x:r.x,y:r.y,right:r.right,bottom:r.bottom,width:r.width,height:r.height});}
+     const occluders=[document.querySelector('nav[data-focuschrist-header=standard]'),bar,...bar.querySelectorAll('.toprow,.controls'),...['navDock','mini','showNav'].map(id=>document.getElementById(id))].filter(n=>n&&!n.contains(progress)).map(n=>{const r=rect(n),st=getComputedStyle(n);return {id:n.id||n.className,...r,visible:st.display!=='none'&&st.visibility!=='hidden'&&Number(st.opacity)!==0,overlapArea:Math.max(0,Math.min(r.right,pr.right)-Math.max(r.x,pr.x))*Math.max(0,Math.min(r.bottom,pr.bottom)-Math.max(r.y,pr.y))};});
+     const progressEvidence={text:progress.textContent.trim(),parentID:progress.parentElement.id,rect:pr,fragments,ancestors,occluders,method:'Read-only text rectangles and known header/control/dock/map overlap; pointer hit testing deliberately not used.'};
+     return {progress:progressEvidence,header:rect(document.querySelector('nav[data-focuschrist-header=standard]')),main:rect(document.getElementById('adams-chart-main')),footerPresent:!!document.querySelector('footer[data-focuschrist-footer=standard]'),titleRow:rect(bar.querySelector('.toprow')),controls:rect(bar.querySelector('.controls')),innerWidth:bar.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight),overlays:['navDock','mini','progress','showNav'].map(id=>{const n=document.getElementById(id);return {id,...rect(n),display:getComputedStyle(n).display};})};
     });record.integration=integration;
+    const progress=integration.progress;
+    assert(progress.text.length>0&&progress.fragments.length>0,'Progress has nonempty rendered text fragments');
+    assert(progress.ancestors.every(n=>n.display!=='none'&&n.visibility!=='hidden'&&n.visibility!=='collapse'&&Number(n.opacity)!==0),'Progress and ancestors visibly rendered');
+    assert(progress.rect.width>0&&progress.rect.height>0&&progress.rect.x>=-1&&progress.rect.y>=-1&&progress.rect.right<=profile.width+1&&progress.rect.bottom<=profile.height+1,'Progress box remains inside actual viewport');
+    for(const r of progress.fragments)assert(r.x>=progress.rect.x-1&&r.y>=progress.rect.y-1&&r.right<=progress.rect.right+1&&r.bottom<=progress.rect.bottom+1,'Progress text stays inside visible status box');
+    assert.deepEqual(progress.occluders.filter(n=>n.visible&&n.width>0&&n.height>0&&n.overlapArea>0),[],'Progress must not be hidden by known header/control/dock/map boxes');
+    assert.equal(progress.parentID,compact?'toolbar':'adams-chart-main','Same status node uses compact toolbar row only');
+    if(compact)assert(progress.rect.y>=integration.controls.bottom-1&&progress.rect.bottom<=s.toolbar.bottom+1,'Compact progress row follows controls inside toolbar');
     const semantics=await page.evaluate(()=>{
      const read=selector=>{const n=document.querySelector(selector),r=n.getBoundingClientRect(),cs=getComputedStyle(n),hit=document.elementFromPoint(r.x+r.width/2,r.y+r.height/2);return {selector,tag:n.tagName,text:n.textContent.trim(),href:n.getAttribute('href'),x:r.x,y:r.y,right:r.right,bottom:r.bottom,width:r.width,height:r.height,visible:cs.display!=='none'&&cs.visibility!=='hidden'&&Number(cs.opacity)!==0,hit:!!hit&&(n===hit||n.contains(hit)),fontSize:parseFloat(cs.fontSize),fontWeight:cs.fontWeight,fontFamily:cs.fontFamily,lineHeight:cs.lineHeight,margins:[cs.marginTop,cs.marginRight,cs.marginBottom,cs.marginLeft]};};
-     return {heading:read('h1.title'),continuations:[read('.fc-adams-back'),read('.fc-adams-home')]};
+     return {heading:read('h1.title'),continuations:[read('nav[data-focuschrist-header=standard] .nav-logo')],footerDestinations:[...document.querySelectorAll('footer .fc-adams-footer-links a')].map(n=>({href:n.getAttribute('href'),text:n.textContent.trim()}))};
     });record.semantics=semantics;
     checkControls([semantics.heading,...semantics.continuations]);
     assert.equal(semantics.heading.tag,'H1');assert.equal(semantics.heading.fontWeight,'700');
     assert(semantics.heading.fontFamily.includes('Georgia'),'Existing title font retained');
     assert.deepEqual(semantics.heading.margins,['0px','0px','0px','0px'],'No browser heading margins');
     near(semantics.heading.fontSize,profile.width>=900?22:Math.min(23,Math.max(16,profile.width*.048)),'Existing responsive title size',.02);
-    assert(semantics.continuations.every(n=>n.bottom<=s.viewport.y+1),'Both continuations stay above chart viewport');
-    assert.equal(new Set(semantics.continuations.map(n=>new URL(n.href,origin+'/timelines/adams-1881-chart.html').pathname)).size,2,'Two distinct local continuation destinations');
-    if(profile.width>=900){near(integration.strip.width,integration.innerWidth,'Added strip full-width row',1);assert(integration.strip.bottom<=Math.min(integration.titleRow.y,integration.controls.y)+1,'Added strip must be above original title/controls');}
+    assert(semantics.continuations.every(n=>n.bottom<=s.viewport.y+1),'Canonical Home control stays above chart viewport');
+    assert.deepEqual(semantics.footerDestinations.map(n=>n.href),['adams-1881-introduction.html','../timeline.html#adams-1881']);
+    assert.equal(new Set(semantics.footerDestinations.map(n=>new URL(n.href,origin+'/timelines/adams-1881-chart.html').pathname)).size,2,'Two distinct visible footer continuations');
+    assert(integration.footerPresent);assert(integration.header.bottom<=semantics.heading.y+1,'Canonical header above original chart title');
     const chart={x:s.viewport.x+s.x,y:s.viewport.y+s.y,right:s.viewport.x+s.x+W*s.z,bottom:s.viewport.y+s.y+H*s.z};
     record.initialFitOverlayOverlap=integration.overlays.map(o=>({id:o.id,area:o.display==='none'?0:Math.max(0,Math.min(o.right,chart.right)-Math.max(o.x,chart.x))*Math.max(0,Math.min(o.bottom,chart.bottom)-Math.max(o.y,chart.y))})).filter(o=>o.area>0);
     assert.deepEqual(record.initialFitOverlayOverlap,[],'Initial fitted chart must not be obscured by dock/map/status/restore controls');
@@ -218,6 +243,13 @@ module.exports=async function adamsChartQA(existingPage,origin,parentOut){
     assert.equal(await page.locator('#toggleMini').innerText(),'Hide Map');assert.equal(await page.locator('#toggleMini').getAttribute('aria-pressed'),'true');
     before=await state('restore-map');const mapBox=await page.locator('#mini').boundingBox(),mapView=await page.locator('#miniview').boundingBox();
     assert(mapBox&&mapView&&mapView.width>0&&mapView.height>0,'Restored map has rendered viewport indicator');
+    // The restored map must be fully reachable beside the actual toolbar and dock.
+    const mapLayout=await page.evaluate(()=>{const ids=['mini','toolbar','navDock'];return Object.fromEntries(ids.map(id=>{const n=document.getElementById(id),r=n.getBoundingClientRect(),cs=getComputedStyle(n);return [id,{x:r.x,y:r.y,right:r.right,bottom:r.bottom,width:r.width,height:r.height,visible:cs.display!=='none'&&cs.visibility!=='hidden'&&Number(cs.opacity)!==0}];}));});
+    record.restoredMapLayout=mapLayout;
+    const overlap=(a,b)=>Math.max(0,Math.min(a.right,b.right)-Math.max(a.x,b.x))*Math.max(0,Math.min(a.bottom,b.bottom)-Math.max(a.y,b.y));
+    assert(mapLayout.mini.visible&&mapLayout.mini.width>=44&&mapLayout.mini.height>=44&&mapLayout.mini.x>=-1&&mapLayout.mini.y>=-1&&mapLayout.mini.right<=profile.width+1&&mapLayout.mini.bottom<=profile.height+1,'Restored map is fully visible with a usable target');
+    assert.equal(overlap(mapLayout.mini,mapLayout.toolbar),0,'Restored map clears toolbar');
+    if(mapLayout.navDock.visible)assert.equal(overlap(mapLayout.mini,mapLayout.navDock),0,'Restored map clears expanded directional dock');
     const point={x:mapBox.width*.75,y:mapBox.height*.5};
     if(profile.touch)await page.locator('#mini').tap({position:point});else await page.locator('#mini').click({position:point});
     s=await state('map-navigation');near(s.z,before.z,'Map preserves zoom',1e-8);assert(Math.abs(s.x-before.x)>1,'Map actually pans');
@@ -228,11 +260,12 @@ module.exports=async function adamsChartQA(existingPage,origin,parentOut){
      await act('#hideNav');assert.equal(await page.locator('#navDock').isVisible(),false);assert.equal(await page.locator('#mini').isVisible(),false);
      s=await state('compact-clear-fit');checkFit(s);checkControls(await measureControls([...toolbarIDs,'showNav']));await capture('compact-clear-fit');
     }
-    if(profile.touch)await page.locator('.fc-adams-back').tap();else await page.locator('.fc-adams-back').click();
-    await page.waitForURL(origin+'/timeline.html#choose-timeline');assert(await page.locator('#choose-timeline').isVisible());
+    await page.locator('footer .fc-adams-footer-links').scrollIntoViewIfNeeded();
+    await act('footer .fc-adams-footer-links a[href="../timeline.html#adams-1881"]');
+    await page.waitForURL(origin+'/timeline.html#adams-1881');assert(await page.locator('#adams-1881').isVisible());
     await page.goBack({waitUntil:'load'});await page.waitForURL(origin+'/timelines/adams-1881-chart.html');checkFit(await state('history-back-viewer'));
     await page.reload({waitUntil:'load'});checkFit(await state('reload-viewer'));
-    const [homeResponse]=await Promise.all([page.waitForNavigation({waitUntil:'load'}),act('.fc-adams-home')]);
+    const [homeResponse]=await Promise.all([page.waitForNavigation({waitUntil:'load'}),act('nav[data-focuschrist-header=standard] .nav-logo')]);
     assert(homeResponse&&homeResponse.status()===200,'Home continuation document succeeds');
     assert.equal(page.url(),origin+'/index.html','Visible Home link reaches real local Home');
     await page.goBack({waitUntil:'load'});await page.waitForURL(origin+'/timelines/adams-1881-chart.html');checkFit(await state('home-history-back-viewer'));
@@ -242,7 +275,7 @@ module.exports=async function adamsChartQA(existingPage,origin,parentOut){
   }
  }finally{
   clearTimeout(timer);for(const c of active)await c.close().catch(()=>{});
-  const report={sourceSHA256:fixture.sourceSHA256,landingSHA256:fixture.landingSHA256,assetSetSHA256:ASSET_SET_SHA256,assetCount:331,assetBytes:fixture.total,timedOut,results,network,blocked,requestCount,tileResponseBytes:tileBytes,screenshots:shots,screenshotBytes:outputBytes,limits:['Hosted Chromium emulation, not deployed or physical-device acceptance.','No native touch drag/pinch, browser chrome fullscreen, accessibility certification or enlarged-text result claimed.','No external providers fetched; every observed chart response must be exact same-origin owner-supplied JPEG bytes.']};
+  const report={integratedSources:INTEGRATED_SOURCES,sourceSHA256:fixture.sourceSHA256,landingSHA256:fixture.landingSHA256,assetSetSHA256:ASSET_SET_SHA256,assetCount:331,assetBytes:fixture.total,timedOut,results,network,blocked,requestCount,tileResponseBytes:tileBytes,screenshots:shots,screenshotBytes:outputBytes,limits:['Hosted Chromium emulation, not deployed or physical-device acceptance.','No native touch drag/pinch, browser chrome fullscreen, accessibility certification or enlarged-text result claimed.','No external providers fetched; every observed chart response must be exact same-origin owner-supplied JPEG bytes.']};
   const bytes=Buffer.from(JSON.stringify(report,null,2)+'\n');assert(bytes.length<=1024*1024,'Report exceeds 1 MiB');assert(outputBytes+bytes.length<=24*1024*1024,'Adams evidence exceeds 24 MiB');fs.writeFileSync(path.join(out,'report.json'),bytes,{flag:'wx'});
  }
  assert(!timedOut,'Adams suite exceeded 240-second bound');assert.equal(results.length,4);assert(results.every(r=>r.pass),'Every Adams profile must pass: '+JSON.stringify(results.filter(r=>!r.pass).map(r=>({profile:r.profile.name,error:r.error}))));

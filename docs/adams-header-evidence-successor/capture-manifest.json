@@ -1,0 +1,130 @@
+{
+  "raw_report_sha256": "cfbcea98545f981c47f1e681dba956fa98f35fe65ba3bc01da2d790a87a0eba7",
+  "run_id": "40588766214",
+  "artifact_id": "12774100264",
+  "artifact_bytes": 1843171,
+  "artifact_sha256": "48ae83c37baac3eedb74f5427c76910c61629fd1243c8221b4fbf8c96394ac6b",
+  "capture_count": 24,
+  "captures": [
+    {
+      "file": "desktop-landing.jpg",
+      "bytes": 115387,
+      "sha256": "b82381f52f3b2a71311697bd0a94af8dc08549d5b82f58cb6dfa3e26f08d8819"
+    },
+    {
+      "file": "desktop-fit.jpg",
+      "bytes": 120164,
+      "sha256": "04c3f834146417c0dfe39b991368ea838bc4dbbe51d2e3096ba1004410498bf5"
+    },
+    {
+      "file": "desktop-one-to-one.jpg",
+      "bytes": 296388,
+      "sha256": "4d3123af2035e48d137b503c1d448f5b5165249079388553c5be1770cdd1a5a7"
+    },
+    {
+      "file": "desktop-end.jpg",
+      "bytes": 307262,
+      "sha256": "7c283295ef4bb00302574833288bdf2bf277aad86a373bde2c66234bb6320019"
+    },
+    {
+      "file": "desktop-controls-hidden.jpg",
+      "bytes": 251237,
+      "sha256": "32b65737ee893272a6d13f719b48ccae4390e8a98d716d0b80ce5a5f2bdf87cb"
+    },
+    {
+      "file": "phone-landing.jpg",
+      "bytes": 48356,
+      "sha256": "8759ffc2dd09f9b84b32fdb097618ab0ca5beeb2d39d4591e0b94067e74f2e34"
+    },
+    {
+      "file": "phone-fit.jpg",
+      "bytes": 35673,
+      "sha256": "31ef91d8f5667a366baf7f40b9c397e0decba4c5cfd52b944eb5161139a4db09"
+    },
+    {
+      "file": "phone-one-to-one.jpg",
+      "bytes": 86108,
+      "sha256": "05f3c9443e63bbbcaeee7fa340c4a9da3fde41cafa3dab3d5885387ef14d593c"
+    },
+    {
+      "file": "phone-end.jpg",
+      "bytes": 68555,
+      "sha256": "f227930a0c07d75c896e22048fbec398b9f2def8c6fd43a8e5835cab3c8cde05"
+    },
+    {
+      "file": "phone-controls-hidden.jpg",
+      "bytes": 90102,
+      "sha256": "89c60ba98398e5b42d885cf300f4c3dcf6335a423cb2efc7663c80c2bf157c5e"
+    },
+    {
+      "file": "narrow-phone-landing.jpg",
+      "bytes": 24661,
+      "sha256": "916081e07476ece144f907c83fa738d127dc4d3bb5241761fe3567df43cde962"
+    },
+    {
+      "file": "narrow-phone-fit.jpg",
+      "bytes": 20054,
+      "sha256": "80fc76aabbad5dd4f150ebea5d50a510c68c2cf129e22a0e5c5daf1308a28e29"
+    },
+    {
+      "file": "narrow-phone-expanded-controls.jpg",
+      "bytes": 26370,
+      "sha256": "aa7e8a8cc21808c0fa760d0b8671162cd557c0eb1ac536640258c1c161d60b49"
+    },
+    {
+      "file": "narrow-phone-one-to-one.jpg",
+      "bytes": 42520,
+      "sha256": "7bcc427259a8c02b44470836845362f1dd2931649382633a35c8914f0f23bba4"
+    },
+    {
+      "file": "narrow-phone-end.jpg",
+      "bytes": 35337,
+      "sha256": "445513d6ad038ff61ee579bc9b17d2d9a83531b9334b2eb5a5572622573e938f"
+    },
+    {
+      "file": "narrow-phone-controls-hidden.jpg",
+      "bytes": 44162,
+      "sha256": "e3b6fddfbc6b4ffd9c87a71e8586559390e1304cba19c9bafb63cce94a1664e5"
+    },
+    {
+      "file": "narrow-phone-compact-clear-fit.jpg",
+      "bytes": 20054,
+      "sha256": "80fc76aabbad5dd4f150ebea5d50a510c68c2cf129e22a0e5c5daf1308a28e29"
+    },
+    {
+      "file": "phone-landscape-landing.jpg",
+      "bytes": 29245,
+      "sha256": "96f47632bb9d15e3186ca59b2b9722b4bbdbe27c426934181bf3108947b75c33"
+    },
+    {
+      "file": "phone-landscape-fit.jpg",
+      "bytes": 49193,
+      "sha256": "5fd7e37bf5fcfd196feed4b4985f033d11e8bc1edbcbccc5e95e68b685fd6bc4"
+    },
+    {
+      "file": "phone-landscape-expanded-controls.jpg",
+      "bytes": 42179,
+      "sha256": "29e74dbd5e4b3bbfafa631ce465ea9cf671d214b863ec719edcd4b8b271bb670"
+    },
+    {
+      "file": "phone-landscape-one-to-one.jpg",
+      "bytes": 46667,
+      "sha256": "485a4698ed6f987f59d9b57f32dc83b340ece2384adad4934e610e5b2b78eb9a"
+    },
+    {
+      "file": "phone-landscape-end.jpg",
+      "bytes": 44022,
+      "sha256": "8d02836ba69ba0f5cac1e4e1f2b2bbe82665034d8361e9a6e190fef1a43b55c8"
+    },
+    {
+      "file": "phone-landscape-controls-hidden.jpg",
+      "bytes": 57684,
+      "sha256": "deef3760f004cea17d5c2c43b0ffbb71ad64d42870d3272f8841d418e7341c93"
+    },
+    {
+      "file": "phone-landscape-compact-clear-fit.jpg",
+      "bytes": 49193,
+      "sha256": "5fd7e37bf5fcfd196feed4b4985f033d11e8bc1edbcbccc5e95e68b685fd6bc4"
+    }
+  ]
+}

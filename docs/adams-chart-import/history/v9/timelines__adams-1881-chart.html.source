@@ -1,0 +1,619 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Adams 1881 · Gold Edition Interactive Chart</title>
+<link rel="canonical" href="https://focuschrist.com/timelines/adams-1881-chart.html">
+<meta name="description" content="This nineteenth century chart sets the history of the Bible and the history of the nations side by side across one long timeline, inviting the reader to follow both together.">
+<meta property="og:title" content="Adams 1881 · Gold Edition Interactive Chart">
+<meta property="og:description" content="This nineteenth century chart sets the history of the Bible and the history of the nations side by side across one long timeline, inviting the reader to follow both together.">
+<meta property="og:url" content="https://focuschrist.com/timelines/adams-1881-chart.html">
+<meta property="og:image" content="https://focuschrist.com/assets/adams-chart/adams-64-0-0.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{color-scheme:dark;--gold:#eac06b;--subgold:#b78a40;--ink:#071723;--safe:env(safe-area-inset-bottom,0px);font-family:system-ui,-apple-system,Segoe UI,sans-serif}*{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#06131b;color:#f6edda}button,input{font:inherit}button{touch-action:none;cursor:pointer}button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.bar{position:absolute;left:0;right:0;top:0;z-index:40;padding:calc(7px + env(safe-area-inset-top,0px)) 10px 7px;background:linear-gradient(180deg,#0c2332,#061722);border-bottom:1px solid #a17e43;display:flex;flex-direction:column;gap:7px;box-shadow:0 4px 16px #0007}
+.toprow,.controls,.zoomBox{display:flex;gap:7px;align-items:center}.toprow{justify-content:space-between}.title{margin:0;font-weight:700;color:var(--gold);font-size:15px;white-space:nowrap}.controls{flex-wrap:wrap}.btn{color:#f8deb0;background:linear-gradient(#172d3a,#0b1c29);border:1px solid #af8949;border-radius:11px;min-height:38px;padding:6px 12px;font-size:12px;white-space:nowrap}.btn:active,.btn.held{background:linear-gradient(#345263,#183141);box-shadow:inset 0 0 0 1px var(--gold),0 0 9px #d7a65255}.controls>.btn{flex:1}.zoomBox{flex:1 1 100%;padding:2px 5px;background:#10222b;border:1px solid #54606a;border-radius:11px;min-width:0}.zoomBox .btn{min-width:38px;min-height:32px;height:32px;font-size:20px;padding:0!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;line-height:1!important;text-align:center!important;vertical-align:middle!important;flex:0 0 38px!important}.range{flex:1;min-width:40px;accent-color:var(--gold)}.zoom{width:48px;text-align:center;font-size:12px;color:#efd29a;font-variant-numeric:tabular-nums}
+#viewport{position:absolute;left:0;right:0;top:100px;bottom:0;background:#07131a;overflow:hidden;cursor:grab;touch-action:none}#viewport.drag{cursor:grabbing}.checker{position:absolute;inset:0;background:radial-gradient(ellipse,#19303b,#07131a)}.tile{position:absolute;max-width:none;pointer-events:none;user-select:none;image-rendering:auto}
+.minimap{position:absolute;right:11px;bottom:calc(91px + var(--safe));width:145px;height:52px;z-index:29;border:1px solid var(--gold);border-radius:7px;overflow:hidden;background:#162b32;box-shadow:0 4px 12px #0009}.minimap.hidden{display:none}.minimap img{width:100%;height:100%;object-fit:fill;pointer-events:none}.miniview{position:absolute;border:2px solid #ffec9c;background:#ffd76b24;pointer-events:none}
+.loading{position:absolute;right:11px;bottom:calc(155px + var(--safe));z-index:30;background:#071823c9;padding:4px 7px;border-radius:8px;font-size:10px;color:#d6bf94;pointer-events:none;max-width:170px}
+.touchDock{position:absolute;bottom:calc(8px + var(--safe));left:50%;transform:translateX(-50%);z-index:38;pointer-events:none;width:max-content;max-width:calc(100vw - 12px)}.touchWrap{pointer-events:auto;display:flex;align-items:center;justify-content:center;gap:9px;padding:7px 11px;background:linear-gradient(180deg,#0a2130f2,#081923f5);border:1px solid #9c7a44;border-radius:21px;box-shadow:0 8px 24px #0009;backdrop-filter:blur(10px)}.navGroup{display:flex;align-items:center;gap:5px}.navBtn{height:44px;width:44px;min-height:44px;padding:0;display:grid;place-items:center;border-radius:50%;border:1.7px solid #e3b55c;color:#edc16b;font-size:27px;font-weight:800;line-height:1;box-shadow:inset 0 0 7px #f5c46a22;background:radial-gradient(circle at 40% 35%,#1e3849,#071a27)}.navBtn svg{width:23px;height:23px;stroke:var(--gold);stroke-width:2.8;fill:none;stroke-linecap:round;stroke-linejoin:round}.fastBtn{width:37px;height:37px}.fastBtn svg{width:20px;height:20px}.upDown{display:flex;flex-direction:column;gap:3px;align-items:center}.upDown .navBtn{width:39px;height:39px}.navActions{border-left:1px solid #ab844c88;padding-left:9px;display:flex;gap:5px}.navActions .btn{padding:6px 9px;height:43px;min-height:43px}.sr{position:absolute;left:-9999px}
+@media(max-width:580px){.bar{padding-left:7px;padding-right:7px;gap:5px}.title{font-size:12px}.toprow .tip{display:none}.controls{gap:5px}.controls>.btn{padding:5px 3px;min-height:32px;font-size:11px}.zoomBox{min-height:34px}.touchWrap{gap:5px;padding:6px 7px;border-radius:18px}.navGroup{gap:3px}.navBtn{width:42px;height:42px}.fastBtn{width:34px;height:34px}.upDown .navBtn{width:35px;height:35px}.navActions{padding-left:6px;gap:4px}.navActions .btn{font-size:11px;padding:4px 6px;height:38px;min-height:38px}.minimap{bottom:calc(93px + var(--safe));width:125px;height:45px}.loading{bottom:calc(143px + var(--safe))}}
+@media(max-width:370px){.navBtn{width:36px;height:36px}.fastBtn{width:30px;height:30px}.upDown .navBtn{width:32px;height:32px}.navActions .btn{padding:4px}}
+@media(min-width:900px){.bar{flex-direction:row;padding:11px 22px;gap:20px}.title{font-size:19px}.controls{flex:1;flex-wrap:nowrap;justify-content:flex-end}.controls>.btn{flex:0 0 auto;padding:8px 18px}.zoomBox{flex:0 1 330px}.touchWrap{padding:9px 18px;gap:14px}.navGroup{gap:10px}.navBtn{width:55px;height:55px}.fastBtn{width:47px;height:47px}.upDown .navBtn{width:43px;height:43px}.navActions .btn{min-height:50px;height:50px;padding:8px 18px}.minimap{width:270px;height:80px;bottom:22px;right:22px}.loading{right:22px;bottom:110px}}
+
+/* Collapsible gold navigation */
+.touchDock{transition:opacity .16s ease,transform .16s ease;position:absolute}
+.navClose{position:absolute;left:-8px;top:-12px;z-index:4;width:28px;height:28px;min-height:28px;border-radius:50%;border:1px solid #efcb79;background:#102633;color:#ffe2a1;font-size:20px;line-height:22px;display:grid;place-items:center;box-shadow:0 3px 10px #0009;cursor:pointer;pointer-events:auto}
+.navClose:active,.navRestore:active{background:#34516a}
+.navRestore{position:absolute;bottom:calc(13px + var(--safe));left:12px;z-index:39;min-height:42px;padding:7px 12px;border-radius:13px;border:1.5px solid #e2b765;background:#102634ed;color:#f2cf8a;font-size:13px;font-weight:650;box-shadow:0 5px 16px #0009;cursor:pointer;display:none;align-items:center;gap:6px}
+body.nav-hidden .touchDock{display:none!important}
+body.nav-hidden .navRestore{display:flex}
+@media(max-width:580px){.navClose{left:-5px;top:-12px;width:29px;height:29px}}
+/* v5: section navigation, endpoint jumps, and cover-mode control */
+.controls>.btn#fillScreen{border-color:#c5a15e;color:#ffe0a0}
+.controls>.btn#fillScreen[aria-pressed="true"]{background:#755a29;color:white}
+.navBtn.sectionBtn{width:30px;height:30px;min-height:30px;border-color:#9b7944;box-shadow:inset 0 0 0 1px #b8914233;background:#142939}
+.navBtn.sectionBtn svg{width:17px;height:17px;stroke-width:2.4}
+.navGroup{gap:4px}
+.touchWrap{gap:8px}
+@media(max-width:700px){.navBtn.sectionBtn{width:27px;height:27px;min-height:27px}.navBtn.sectionBtn svg{width:16px;height:16px}.navGroup{gap:3px}.touchWrap{padding:7px 6px;gap:5px}.navActions{gap:3px}.navActions .btn{padding:5px;min-width:34px}}
+@media(max-width:390px){.navBtn.sectionBtn{width:24px;height:24px;min-height:24px}.navGroup{gap:2px}.fastBtn{width:28px;height:28px}.navBtn:not(.fastBtn):not(.sectionBtn){width:33px;height:33px}.upDown .navBtn{width:30px!important;height:30px!important}.touchWrap{padding:6px 5px}}
+#zoomIn,#zoomOut,#in,#out{display:inline-flex!important;align-items:center!important;justify-content:center!important;line-height:1!important;padding:0!important;text-align:center!important}
+/* V7 verified centered pill icons and reliable interaction styling */
+.zoomBox #in,.zoomBox #out{display:flex!important;align-items:center!important;justify-content:center!important;place-content:center!important;text-align:center!important;box-sizing:border-box!important;width:40px!important;min-width:40px!important;height:34px!important;min-height:34px!important;padding:0!important;line-height:1!important;font-family:Arial,sans-serif!important;font-size:22px!important;font-weight:400!important}
+.zoomBox .zoomGlyph{display:block;line-height:1;pointer-events:none}
+.navClose{display:flex!important;align-items:center!important;justify-content:center!important;padding:0!important;line-height:1!important;text-align:center!important}
+.navClose .closeGlyph{display:block;line-height:1;pointer-events:none}
+
+/* v8 — inset close button, centered inside navigation panel */
+.touchWrap{padding-left:45px!important}
+.navClose{left:9px!important;top:10px!important;width:27px!important;height:27px!important;min-height:27px!important;margin:0!important;display:flex!important;justify-content:center!important;align-items:center!important;padding:0!important;line-height:1!important;box-sizing:border-box!important}
+.navClose .closeGlyph{display:block!important;position:relative!important;top:-1px;font-family:Arial,sans-serif!important;font-size:19px!important;font-weight:400!important;line-height:1!important;text-align:center!important;width:100%!important}
+@media(max-width:580px){.touchWrap{padding-left:40px!important}.navClose{left:7px!important;top:8px!important;width:25px!important;height:25px!important;min-height:25px!important}}
+
+/* v9: optically and geometrically centered close-X, independent of font metrics */
+.navClose{position:absolute!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:0!important;line-height:0!important}
+.navClose .closeGlyph{position:absolute!important;inset:0!important;display:block!important;width:100%!important;height:100%!important;font-size:0!important;line-height:0!important;color:transparent!important;pointer-events:none!important}
+.navClose .closeGlyph::before,.navClose .closeGlyph::after{content:"";position:absolute;left:50%;top:50%;width:11px;height:2px;border-radius:2px;background:#ffe2a1;transform-origin:center center;box-shadow:0 0 1px #d5a84d}
+.navClose .closeGlyph::before{transform:translate(-50%,-50%) rotate(45deg)}
+.navClose .closeGlyph::after{transform:translate(-50%,-50%) rotate(-45deg)}
+
+/* Approved coordinated desktop/mobile gold interface v10 */
+.bar{background:linear-gradient(180deg,#071622,#081825)!important;border-bottom:1px solid #9c7a44!important}
+.title{font-family:Georgia,'Times New Roman',serif!important;letter-spacing:.02em;color:#f0c778!important}
+.controls>.btn{border-radius:999px!important;border-color:#d4a852!important;background:linear-gradient(#0e2634,#061824)!important;color:#f5daa2!important}
+.controls>.btn[aria-pressed="true"]{background:#765b2c!important}
+.zoomBox{border-radius:999px!important;background:#0d2432!important;border-color:#9d8155!important}
+.zoomBox #in,.zoomBox #out{border-radius:999px!important;display:flex!important;justify-content:center!important;align-items:center!important;line-height:0!important;padding:0!important;box-sizing:border-box!important}
+.zoomGlyph{display:grid!important;place-items:center!important;width:100%!important;height:100%!important;font-family:Arial,sans-serif!important;font-size:23px!important;line-height:1!important;transform:translateY(-1px)}
+.touchWrap{background:linear-gradient(180deg,#071824f8,#091c29fa)!important;border:1.25px solid #d6aa59!important;border-radius:22px!important;box-shadow:0 10px 28px #0009!important}
+.navBtn{box-sizing:border-box!important;aspect-ratio:1/1!important;flex-shrink:0!important;display:grid!important;place-items:center!important;padding:0!important;border-radius:50%!important}
+.navBtn svg{display:block!important;flex:none!important;stroke-width:2.5!important;max-width:64%!important;max-height:64%!important}
+.navClose{box-sizing:border-box!important}
+.navClose .closeGlyph::before,.navClose .closeGlyph::after{width:11px!important;height:2px!important}
+@media(min-width:900px){
+ .bar{gap:12px!important;min-height:76px!important;padding:10px 21px!important}
+ .title{font-size:22px!important}
+ .controls{gap:9px!important}
+ .controls>.btn{min-height:39px!important;padding:7px 17px!important;font-size:12px!important}
+ .zoomBox{min-height:43px!important;padding:3px 6px!important}
+ .zoomBox #in,.zoomBox #out{width:38px!important;height:34px!important;min-height:34px!important;flex:0 0 38px!important}
+ .touchWrap{gap:9px!important;padding:17px 15px 10px 46px!important}
+ .navGroup{gap:6px!important}
+ .navBtn:not(.sectionBtn):not(.fastBtn){width:49px!important;height:49px!important;min-height:49px!important}
+ .navBtn.fastBtn{width:43px!important;height:43px!important;min-height:43px!important}
+ .navBtn.sectionBtn{width:31px!important;height:31px!important;min-height:31px!important}
+ .upDown{gap:3px!important}.upDown .navBtn{width:39px!important;height:39px!important;min-height:39px!important}
+ .navActions .btn{border-radius:12px!important}
+}
+@media(max-width:899px){
+ .bar{padding:calc(8px + env(safe-area-inset-top,0px)) 9px 9px!important;gap:8px!important}
+ .toprow{justify-content:center!important;min-height:24px!important}
+ .title{font-size:clamp(16px,4.8vw,23px)!important;text-align:center!important;white-space:normal!important}
+ .toprow .tip{display:none!important}
+ .controls{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:6px!important;flex-wrap:nowrap!important;width:100%!important}
+ .controls>.btn{min-width:0!important;width:100%!important;min-height:37px!important;padding:5px 2px!important;border-radius:999px!important;font-size:clamp(10px,2.7vw,13px)!important;flex:none!important}
+ .zoomBox{grid-column:1/-1!important;width:100%!important;min-height:45px!important;height:45px!important;display:flex!important;gap:7px!important;padding:3px 6px!important;flex:none!important}
+ .zoomBox #in,.zoomBox #out{min-width:40px!important;width:40px!important;height:37px!important;min-height:37px!important;flex:0 0 40px!important}
+ .zoomBox .range{flex:1 1 auto!important;min-width:20px!important}
+ .zoomBox .zoom{width:42px!important;flex:0 0 42px!important}
+ .touchDock{left:50%!important;transform:translateX(-50%)!important;width:min(96vw,590px)!important;max-width:min(96vw,590px)!important;bottom:calc(10px + var(--safe))!important}
+ .touchWrap{width:100%!important;max-width:none!important;box-sizing:border-box!important;padding:20px 8px 10px 33px!important;gap:clamp(3px,1vw,8px)!important;min-height:100px!important;display:flex!important;align-items:center!important;justify-content:space-between!important;flex-wrap:nowrap!important}
+ .navGroup{flex:1 1 auto!important;min-width:0!important;display:flex!important;align-items:center!important;justify-content:space-evenly!important;gap:clamp(2px,.6vw,5px)!important}
+ .navBtn:not(.fastBtn):not(.sectionBtn){width:clamp(34px,10.3vw,54px)!important;height:clamp(34px,10.3vw,54px)!important;min-height:0!important}
+ .fastBtn{width:clamp(28px,8vw,42px)!important;height:clamp(28px,8vw,42px)!important;min-height:0!important}
+ .navBtn.sectionBtn{width:clamp(24px,7vw,34px)!important;height:clamp(24px,7vw,34px)!important;min-height:0!important}
+ .upDown{display:flex!important;flex:0 0 auto!important;gap:3px!important;align-items:center!important;flex-direction:column!important}
+ .upDown .navBtn{width:clamp(32px,9vw,45px)!important;height:clamp(32px,9vw,45px)!important;min-height:0!important}
+ .navBtn svg{width:56%!important;height:56%!important}
+ .navActions{flex:0 0 auto!important;display:flex!important;align-items:center!important;gap:4px!important;padding-left:6px!important}
+ .navActions .btn{width:clamp(30px,8vw,44px)!important;min-width:0!important;height:40px!important;min-height:40px!important;padding:0 2px!important;border-radius:12px!important;font-size:11px!important}
+ .navClose{left:9px!important;top:7px!important;width:27px!important;height:27px!important;min-height:27px!important}
+ .minimap{bottom:calc(122px + var(--safe))!important}
+ .loading{bottom:calc(182px + var(--safe))!important}
+}
+@media(max-width:390px){
+ .touchWrap{padding-left:32px!important;padding-right:5px!important;gap:2px!important}
+ .navGroup{gap:1px!important}
+ .navActions{padding-left:3px!important;gap:2px!important}
+ .navActions .btn{width:29px!important;height:35px!important;min-height:35px!important;font-size:10px!important}
+ .navBtn:not(.fastBtn):not(.sectionBtn){width:33px!important;height:33px!important}
+ .fastBtn{width:27px!important;height:27px!important}
+ .navBtn.sectionBtn{width:23px!important;height:23px!important}
+ .upDown .navBtn{width:31px!important;height:31px!important}
+}
+
+/* V11: approved arrow design, balanced clearance from the dock's gold border. */
+.touchWrap { padding-top: 16px !important; padding-bottom: 16px !important; }
+@media (max-width: 580px) { .touchWrap { padding-top: 14px !important; padding-bottom: 14px !important; } }
+@media (max-height: 550px) { .touchWrap { padding-top: 12px !important; padding-bottom: 12px !important; } }
+.fc-adams-strip{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline;width:100%}.fc-adams-back,.fc-adams-home{color:var(--gold);text-decoration:none;font-weight:600;white-space:nowrap;font-size:12px}.fc-adams-note{margin:0;color:#cfc4a5;font-size:11px;line-height:1.45}.fc-adams-note a{color:var(--gold)}.fc-adams-credit{flex-basis:100%;color:#b8a887;font-size:10.5px}
+/* The added context stays above, not beside, the original desktop controls. */
+@media(min-width:900px){#toolbar{flex-wrap:wrap;row-gap:7px}#toolbar>.fc-adams-strip{flex:0 0 100%}}
+/* Keep the existing restore control out of the chart on short mobile screens. */
+@media(max-width:899px) and (max-height:700px){#toolbar #showNav{position:static;flex:0 0 auto}}
+</style></head><body>
+<div id="toolbar" class="bar"><div class="fc-adams-strip"><a class="fc-adams-back" href="../timeline.html#choose-timeline">Back to timelines</a><a class="fc-adams-home" href="../index.html">FocusChrist Home</a><p class="fc-adams-note">focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit <a href="https://www.churchofjesuschrist.org/" target="_blank" rel="noopener noreferrer">ChurchofJesusChrist.org</a>.</p><p class="fc-adams-note fc-adams-credit">Sebastian C. Adams, <i>Synchronological Chart</i> (1881). Chart image from <a href="https://commons.wikimedia.org/wiki/File:Adams_Synchronological_Chart,_1881.jpg" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>, courtesy of the David Rumsey Map Collection. The image is in the public domain.</p></div><div class="toprow"><h1 class="title">Adams’ Chart · 1881</h1><div class="tip" style="color:#b8a887;font-size:11px">Mouse: drag to move · Wheel: zoom · Shift+wheel: horizontal pan · Ctrl+wheel: zoom</div></div><div class="controls"><button class="btn" id="fit" aria-pressed="false">Full View</button><button class="btn" id="fillScreen" aria-pressed="false">Fill Screen</button><button class="btn" id="full" aria-pressed="false">Fullscreen</button><button class="btn" id="toggleMini" aria-pressed="true">Hide Map</button><div class="zoomBox"><button class="btn" id="out" aria-label="Zoom out"><span class="zoomGlyph">−</span></button><input id="slider" class="range" type="range" min="-8.5" max="2" step=".01" value="-6" aria-label="Zoom"><button class="btn" id="in" aria-label="Zoom in"><span class="zoomGlyph">+</span></button><span class="zoom" id="zoom">Fit</span></div></div><span class="sr" id="status"></span></div>
+<div id="viewport" tabindex="0" aria-label="Interactive chart viewer"><div class="checker"></div><div id="tiles"></div></div><div id="mini" class="minimap"><img id="overview" alt="Chart overview"><div id="miniview" class="miniview"></div></div><div id="progress" class="loading">Loading tiles…</div>
+<div class="touchDock" id="navDock"><button class="navClose" id="hideNav" type="button" aria-label="Hide directional controls" title="Hide controls"><span class="closeGlyph">×</span></button><div class="touchWrap" aria-label="Chart navigation. Hold arrows to pan continuously"><div class="navGroup">
+<button class="navBtn fastBtn" id="fastLeft" aria-label="Pan left faster"><svg viewBox="0 0 24 24"><path d="M11 6 5 12l6 6M20 6l-6 6 6 6"/></svg></button>
+<button class="navBtn" id="left" aria-label="Pan left"><svg viewBox="0 0 24 24"><path d="M18 12H5m7-7-7 7 7 7"/></svg></button>
+<div class="upDown"><button class="navBtn" id="up" aria-label="Pan up"><svg viewBox="0 0 24 24"><path d="M12 19V5m-7 7 7-7 7 7"/></svg></button><button class="navBtn" id="down" aria-label="Pan down"><svg viewBox="0 0 24 24"><path d="M12 5v14m-7-7 7 7 7-7"/></svg></button></div>
+<button class="navBtn" id="right" aria-label="Pan right"><svg viewBox="0 0 24 24"><path d="M6 12h13m-7-7 7 7-7 7"/></svg></button>
+<button class="navBtn fastBtn" id="fastRight" aria-label="Pan right faster"><svg viewBox="0 0 24 24"><path d="m4 6 6 6-6 6m9-12 6 6-6 6"/></svg></button>
+</div><div class="navActions"><button class="btn" id="homeBtn">Fit</button><button class="btn" id="zoom100">1:1</button></div></div></div><button class="navRestore" id="showNav" type="button" aria-label="Show directional controls">✥ Arrows</button>
+<script>const TILE=1024,W=50195,H=5347,levels=[1,4,16,64];let assets=Object.create(null);</script>
+<script>assets["64:0:0"]="/assets/adams-chart/adams-64-0-0.jpg"</script>
+<script>assets["16:0:0"]="/assets/adams-chart/adams-16-0-0.jpg"</script>
+<script>assets["16:1:0"]="/assets/adams-chart/adams-16-1-0.jpg"</script>
+<script>assets["16:2:0"]="/assets/adams-chart/adams-16-2-0.jpg"</script>
+<script>assets["16:3:0"]="/assets/adams-chart/adams-16-3-0.jpg"</script>
+<script>assets["4:0:0"]="/assets/adams-chart/adams-4-0-0.jpg"</script>
+<script>assets["4:1:0"]="/assets/adams-chart/adams-4-1-0.jpg"</script>
+<script>assets["4:2:0"]="/assets/adams-chart/adams-4-2-0.jpg"</script>
+<script>assets["4:3:0"]="/assets/adams-chart/adams-4-3-0.jpg"</script>
+<script>assets["4:4:0"]="/assets/adams-chart/adams-4-4-0.jpg"</script>
+<script>assets["4:5:0"]="/assets/adams-chart/adams-4-5-0.jpg"</script>
+<script>assets["4:6:0"]="/assets/adams-chart/adams-4-6-0.jpg"</script>
+<script>assets["4:7:0"]="/assets/adams-chart/adams-4-7-0.jpg"</script>
+<script>assets["4:8:0"]="/assets/adams-chart/adams-4-8-0.jpg"</script>
+<script>assets["4:9:0"]="/assets/adams-chart/adams-4-9-0.jpg"</script>
+<script>assets["4:10:0"]="/assets/adams-chart/adams-4-10-0.jpg"</script>
+<script>assets["4:11:0"]="/assets/adams-chart/adams-4-11-0.jpg"</script>
+<script>assets["4:12:0"]="/assets/adams-chart/adams-4-12-0.jpg"</script>
+<script>assets["4:0:1"]="/assets/adams-chart/adams-4-0-1.jpg"</script>
+<script>assets["4:1:1"]="/assets/adams-chart/adams-4-1-1.jpg"</script>
+<script>assets["4:2:1"]="/assets/adams-chart/adams-4-2-1.jpg"</script>
+<script>assets["4:3:1"]="/assets/adams-chart/adams-4-3-1.jpg"</script>
+<script>assets["4:4:1"]="/assets/adams-chart/adams-4-4-1.jpg"</script>
+<script>assets["4:5:1"]="/assets/adams-chart/adams-4-5-1.jpg"</script>
+<script>assets["4:6:1"]="/assets/adams-chart/adams-4-6-1.jpg"</script>
+<script>assets["4:7:1"]="/assets/adams-chart/adams-4-7-1.jpg"</script>
+<script>assets["4:8:1"]="/assets/adams-chart/adams-4-8-1.jpg"</script>
+<script>assets["4:9:1"]="/assets/adams-chart/adams-4-9-1.jpg"</script>
+<script>assets["4:10:1"]="/assets/adams-chart/adams-4-10-1.jpg"</script>
+<script>assets["4:11:1"]="/assets/adams-chart/adams-4-11-1.jpg"</script>
+<script>assets["4:12:1"]="/assets/adams-chart/adams-4-12-1.jpg"</script>
+<script>assets["1:0:0"]="/assets/adams-chart/adams-1-0-0.jpg"</script>
+<script>assets["1:1:0"]="/assets/adams-chart/adams-1-1-0.jpg"</script>
+<script>assets["1:2:0"]="/assets/adams-chart/adams-1-2-0.jpg"</script>
+<script>assets["1:3:0"]="/assets/adams-chart/adams-1-3-0.jpg"</script>
+<script>assets["1:4:0"]="/assets/adams-chart/adams-1-4-0.jpg"</script>
+<script>assets["1:5:0"]="/assets/adams-chart/adams-1-5-0.jpg"</script>
+<script>assets["1:6:0"]="/assets/adams-chart/adams-1-6-0.jpg"</script>
+<script>assets["1:7:0"]="/assets/adams-chart/adams-1-7-0.jpg"</script>
+<script>assets["1:8:0"]="/assets/adams-chart/adams-1-8-0.jpg"</script>
+<script>assets["1:9:0"]="/assets/adams-chart/adams-1-9-0.jpg"</script>
+<script>assets["1:10:0"]="/assets/adams-chart/adams-1-10-0.jpg"</script>
+<script>assets["1:11:0"]="/assets/adams-chart/adams-1-11-0.jpg"</script>
+<script>assets["1:12:0"]="/assets/adams-chart/adams-1-12-0.jpg"</script>
+<script>assets["1:13:0"]="/assets/adams-chart/adams-1-13-0.jpg"</script>
+<script>assets["1:14:0"]="/assets/adams-chart/adams-1-14-0.jpg"</script>
+<script>assets["1:15:0"]="/assets/adams-chart/adams-1-15-0.jpg"</script>
+<script>assets["1:16:0"]="/assets/adams-chart/adams-1-16-0.jpg"</script>
+<script>assets["1:17:0"]="/assets/adams-chart/adams-1-17-0.jpg"</script>
+<script>assets["1:18:0"]="/assets/adams-chart/adams-1-18-0.jpg"</script>
+<script>assets["1:19:0"]="/assets/adams-chart/adams-1-19-0.jpg"</script>
+<script>assets["1:20:0"]="/assets/adams-chart/adams-1-20-0.jpg"</script>
+<script>assets["1:21:0"]="/assets/adams-chart/adams-1-21-0.jpg"</script>
+<script>assets["1:22:0"]="/assets/adams-chart/adams-1-22-0.jpg"</script>
+<script>assets["1:23:0"]="/assets/adams-chart/adams-1-23-0.jpg"</script>
+<script>assets["1:24:0"]="/assets/adams-chart/adams-1-24-0.jpg"</script>
+<script>assets["1:25:0"]="/assets/adams-chart/adams-1-25-0.jpg"</script>
+<script>assets["1:26:0"]="/assets/adams-chart/adams-1-26-0.jpg"</script>
+<script>assets["1:27:0"]="/assets/adams-chart/adams-1-27-0.jpg"</script>
+<script>assets["1:28:0"]="/assets/adams-chart/adams-1-28-0.jpg"</script>
+<script>assets["1:29:0"]="/assets/adams-chart/adams-1-29-0.jpg"</script>
+<script>assets["1:30:0"]="/assets/adams-chart/adams-1-30-0.jpg"</script>
+<script>assets["1:31:0"]="/assets/adams-chart/adams-1-31-0.jpg"</script>
+<script>assets["1:32:0"]="/assets/adams-chart/adams-1-32-0.jpg"</script>
+<script>assets["1:33:0"]="/assets/adams-chart/adams-1-33-0.jpg"</script>
+<script>assets["1:34:0"]="/assets/adams-chart/adams-1-34-0.jpg"</script>
+<script>assets["1:35:0"]="/assets/adams-chart/adams-1-35-0.jpg"</script>
+<script>assets["1:36:0"]="/assets/adams-chart/adams-1-36-0.jpg"</script>
+<script>assets["1:37:0"]="/assets/adams-chart/adams-1-37-0.jpg"</script>
+<script>assets["1:38:0"]="/assets/adams-chart/adams-1-38-0.jpg"</script>
+<script>assets["1:39:0"]="/assets/adams-chart/adams-1-39-0.jpg"</script>
+<script>assets["1:40:0"]="/assets/adams-chart/adams-1-40-0.jpg"</script>
+<script>assets["1:41:0"]="/assets/adams-chart/adams-1-41-0.jpg"</script>
+<script>assets["1:42:0"]="/assets/adams-chart/adams-1-42-0.jpg"</script>
+<script>assets["1:43:0"]="/assets/adams-chart/adams-1-43-0.jpg"</script>
+<script>assets["1:44:0"]="/assets/adams-chart/adams-1-44-0.jpg"</script>
+<script>assets["1:45:0"]="/assets/adams-chart/adams-1-45-0.jpg"</script>
+<script>assets["1:46:0"]="/assets/adams-chart/adams-1-46-0.jpg"</script>
+<script>assets["1:47:0"]="/assets/adams-chart/adams-1-47-0.jpg"</script>
+<script>assets["1:48:0"]="/assets/adams-chart/adams-1-48-0.jpg"</script>
+<script>assets["1:49:0"]="/assets/adams-chart/adams-1-49-0.jpg"</script>
+<script>assets["1:0:1"]="/assets/adams-chart/adams-1-0-1.jpg"</script>
+<script>assets["1:1:1"]="/assets/adams-chart/adams-1-1-1.jpg"</script>
+<script>assets["1:2:1"]="/assets/adams-chart/adams-1-2-1.jpg"</script>
+<script>assets["1:3:1"]="/assets/adams-chart/adams-1-3-1.jpg"</script>
+<script>assets["1:4:1"]="/assets/adams-chart/adams-1-4-1.jpg"</script>
+<script>assets["1:5:1"]="/assets/adams-chart/adams-1-5-1.jpg"</script>
+<script>assets["1:6:1"]="/assets/adams-chart/adams-1-6-1.jpg"</script>
+<script>assets["1:7:1"]="/assets/adams-chart/adams-1-7-1.jpg"</script>
+<script>assets["1:8:1"]="/assets/adams-chart/adams-1-8-1.jpg"</script>
+<script>assets["1:9:1"]="/assets/adams-chart/adams-1-9-1.jpg"</script>
+<script>assets["1:10:1"]="/assets/adams-chart/adams-1-10-1.jpg"</script>
+<script>assets["1:11:1"]="/assets/adams-chart/adams-1-11-1.jpg"</script>
+<script>assets["1:12:1"]="/assets/adams-chart/adams-1-12-1.jpg"</script>
+<script>assets["1:13:1"]="/assets/adams-chart/adams-1-13-1.jpg"</script>
+<script>assets["1:14:1"]="/assets/adams-chart/adams-1-14-1.jpg"</script>
+<script>assets["1:15:1"]="/assets/adams-chart/adams-1-15-1.jpg"</script>
+<script>assets["1:16:1"]="/assets/adams-chart/adams-1-16-1.jpg"</script>
+<script>assets["1:17:1"]="/assets/adams-chart/adams-1-17-1.jpg"</script>
+<script>assets["1:18:1"]="/assets/adams-chart/adams-1-18-1.jpg"</script>
+<script>assets["1:19:1"]="/assets/adams-chart/adams-1-19-1.jpg"</script>
+<script>assets["1:20:1"]="/assets/adams-chart/adams-1-20-1.jpg"</script>
+<script>assets["1:21:1"]="/assets/adams-chart/adams-1-21-1.jpg"</script>
+<script>assets["1:22:1"]="/assets/adams-chart/adams-1-22-1.jpg"</script>
+<script>assets["1:23:1"]="/assets/adams-chart/adams-1-23-1.jpg"</script>
+<script>assets["1:24:1"]="/assets/adams-chart/adams-1-24-1.jpg"</script>
+<script>assets["1:25:1"]="/assets/adams-chart/adams-1-25-1.jpg"</script>
+<script>assets["1:26:1"]="/assets/adams-chart/adams-1-26-1.jpg"</script>
+<script>assets["1:27:1"]="/assets/adams-chart/adams-1-27-1.jpg"</script>
+<script>assets["1:28:1"]="/assets/adams-chart/adams-1-28-1.jpg"</script>
+<script>assets["1:29:1"]="/assets/adams-chart/adams-1-29-1.jpg"</script>
+<script>assets["1:30:1"]="/assets/adams-chart/adams-1-30-1.jpg"</script>
+<script>assets["1:31:1"]="/assets/adams-chart/adams-1-31-1.jpg"</script>
+<script>assets["1:32:1"]="/assets/adams-chart/adams-1-32-1.jpg"</script>
+<script>assets["1:33:1"]="/assets/adams-chart/adams-1-33-1.jpg"</script>
+<script>assets["1:34:1"]="/assets/adams-chart/adams-1-34-1.jpg"</script>
+<script>assets["1:35:1"]="/assets/adams-chart/adams-1-35-1.jpg"</script>
+<script>assets["1:36:1"]="/assets/adams-chart/adams-1-36-1.jpg"</script>
+<script>assets["1:37:1"]="/assets/adams-chart/adams-1-37-1.jpg"</script>
+<script>assets["1:38:1"]="/assets/adams-chart/adams-1-38-1.jpg"</script>
+<script>assets["1:39:1"]="/assets/adams-chart/adams-1-39-1.jpg"</script>
+<script>assets["1:40:1"]="/assets/adams-chart/adams-1-40-1.jpg"</script>
+<script>assets["1:41:1"]="/assets/adams-chart/adams-1-41-1.jpg"</script>
+<script>assets["1:42:1"]="/assets/adams-chart/adams-1-42-1.jpg"</script>
+<script>assets["1:43:1"]="/assets/adams-chart/adams-1-43-1.jpg"</script>
+<script>assets["1:44:1"]="/assets/adams-chart/adams-1-44-1.jpg"</script>
+<script>assets["1:45:1"]="/assets/adams-chart/adams-1-45-1.jpg"</script>
+<script>assets["1:46:1"]="/assets/adams-chart/adams-1-46-1.jpg"</script>
+<script>assets["1:47:1"]="/assets/adams-chart/adams-1-47-1.jpg"</script>
+<script>assets["1:48:1"]="/assets/adams-chart/adams-1-48-1.jpg"</script>
+<script>assets["1:49:1"]="/assets/adams-chart/adams-1-49-1.jpg"</script>
+<script>assets["1:0:2"]="/assets/adams-chart/adams-1-0-2.jpg"</script>
+<script>assets["1:1:2"]="/assets/adams-chart/adams-1-1-2.jpg"</script>
+<script>assets["1:2:2"]="/assets/adams-chart/adams-1-2-2.jpg"</script>
+<script>assets["1:3:2"]="/assets/adams-chart/adams-1-3-2.jpg"</script>
+<script>assets["1:4:2"]="/assets/adams-chart/adams-1-4-2.jpg"</script>
+<script>assets["1:5:2"]="/assets/adams-chart/adams-1-5-2.jpg"</script>
+<script>assets["1:6:2"]="/assets/adams-chart/adams-1-6-2.jpg"</script>
+<script>assets["1:7:2"]="/assets/adams-chart/adams-1-7-2.jpg"</script>
+<script>assets["1:8:2"]="/assets/adams-chart/adams-1-8-2.jpg"</script>
+<script>assets["1:9:2"]="/assets/adams-chart/adams-1-9-2.jpg"</script>
+<script>assets["1:10:2"]="/assets/adams-chart/adams-1-10-2.jpg"</script>
+<script>assets["1:11:2"]="/assets/adams-chart/adams-1-11-2.jpg"</script>
+<script>assets["1:12:2"]="/assets/adams-chart/adams-1-12-2.jpg"</script>
+<script>assets["1:13:2"]="/assets/adams-chart/adams-1-13-2.jpg"</script>
+<script>assets["1:14:2"]="/assets/adams-chart/adams-1-14-2.jpg"</script>
+<script>assets["1:15:2"]="/assets/adams-chart/adams-1-15-2.jpg"</script>
+<script>assets["1:16:2"]="/assets/adams-chart/adams-1-16-2.jpg"</script>
+<script>assets["1:17:2"]="/assets/adams-chart/adams-1-17-2.jpg"</script>
+<script>assets["1:18:2"]="/assets/adams-chart/adams-1-18-2.jpg"</script>
+<script>assets["1:19:2"]="/assets/adams-chart/adams-1-19-2.jpg"</script>
+<script>assets["1:20:2"]="/assets/adams-chart/adams-1-20-2.jpg"</script>
+<script>assets["1:21:2"]="/assets/adams-chart/adams-1-21-2.jpg"</script>
+<script>assets["1:22:2"]="/assets/adams-chart/adams-1-22-2.jpg"</script>
+<script>assets["1:23:2"]="/assets/adams-chart/adams-1-23-2.jpg"</script>
+<script>assets["1:24:2"]="/assets/adams-chart/adams-1-24-2.jpg"</script>
+<script>assets["1:25:2"]="/assets/adams-chart/adams-1-25-2.jpg"</script>
+<script>assets["1:26:2"]="/assets/adams-chart/adams-1-26-2.jpg"</script>
+<script>assets["1:27:2"]="/assets/adams-chart/adams-1-27-2.jpg"</script>
+<script>assets["1:28:2"]="/assets/adams-chart/adams-1-28-2.jpg"</script>
+<script>assets["1:29:2"]="/assets/adams-chart/adams-1-29-2.jpg"</script>
+<script>assets["1:30:2"]="/assets/adams-chart/adams-1-30-2.jpg"</script>
+<script>assets["1:31:2"]="/assets/adams-chart/adams-1-31-2.jpg"</script>
+<script>assets["1:32:2"]="/assets/adams-chart/adams-1-32-2.jpg"</script>
+<script>assets["1:33:2"]="/assets/adams-chart/adams-1-33-2.jpg"</script>
+<script>assets["1:34:2"]="/assets/adams-chart/adams-1-34-2.jpg"</script>
+<script>assets["1:35:2"]="/assets/adams-chart/adams-1-35-2.jpg"</script>
+<script>assets["1:36:2"]="/assets/adams-chart/adams-1-36-2.jpg"</script>
+<script>assets["1:37:2"]="/assets/adams-chart/adams-1-37-2.jpg"</script>
+<script>assets["1:38:2"]="/assets/adams-chart/adams-1-38-2.jpg"</script>
+<script>assets["1:39:2"]="/assets/adams-chart/adams-1-39-2.jpg"</script>
+<script>assets["1:40:2"]="/assets/adams-chart/adams-1-40-2.jpg"</script>
+<script>assets["1:41:2"]="/assets/adams-chart/adams-1-41-2.jpg"</script>
+<script>assets["1:42:2"]="/assets/adams-chart/adams-1-42-2.jpg"</script>
+<script>assets["1:43:2"]="/assets/adams-chart/adams-1-43-2.jpg"</script>
+<script>assets["1:44:2"]="/assets/adams-chart/adams-1-44-2.jpg"</script>
+<script>assets["1:45:2"]="/assets/adams-chart/adams-1-45-2.jpg"</script>
+<script>assets["1:46:2"]="/assets/adams-chart/adams-1-46-2.jpg"</script>
+<script>assets["1:47:2"]="/assets/adams-chart/adams-1-47-2.jpg"</script>
+<script>assets["1:48:2"]="/assets/adams-chart/adams-1-48-2.jpg"</script>
+<script>assets["1:49:2"]="/assets/adams-chart/adams-1-49-2.jpg"</script>
+<script>assets["1:0:3"]="/assets/adams-chart/adams-1-0-3.jpg"</script>
+<script>assets["1:1:3"]="/assets/adams-chart/adams-1-1-3.jpg"</script>
+<script>assets["1:2:3"]="/assets/adams-chart/adams-1-2-3.jpg"</script>
+<script>assets["1:3:3"]="/assets/adams-chart/adams-1-3-3.jpg"</script>
+<script>assets["1:4:3"]="/assets/adams-chart/adams-1-4-3.jpg"</script>
+<script>assets["1:5:3"]="/assets/adams-chart/adams-1-5-3.jpg"</script>
+<script>assets["1:6:3"]="/assets/adams-chart/adams-1-6-3.jpg"</script>
+<script>assets["1:7:3"]="/assets/adams-chart/adams-1-7-3.jpg"</script>
+<script>assets["1:8:3"]="/assets/adams-chart/adams-1-8-3.jpg"</script>
+<script>assets["1:9:3"]="/assets/adams-chart/adams-1-9-3.jpg"</script>
+<script>assets["1:10:3"]="/assets/adams-chart/adams-1-10-3.jpg"</script>
+<script>assets["1:11:3"]="/assets/adams-chart/adams-1-11-3.jpg"</script>
+<script>assets["1:12:3"]="/assets/adams-chart/adams-1-12-3.jpg"</script>
+<script>assets["1:13:3"]="/assets/adams-chart/adams-1-13-3.jpg"</script>
+<script>assets["1:14:3"]="/assets/adams-chart/adams-1-14-3.jpg"</script>
+<script>assets["1:15:3"]="/assets/adams-chart/adams-1-15-3.jpg"</script>
+<script>assets["1:16:3"]="/assets/adams-chart/adams-1-16-3.jpg"</script>
+<script>assets["1:17:3"]="/assets/adams-chart/adams-1-17-3.jpg"</script>
+<script>assets["1:18:3"]="/assets/adams-chart/adams-1-18-3.jpg"</script>
+<script>assets["1:19:3"]="/assets/adams-chart/adams-1-19-3.jpg"</script>
+<script>assets["1:20:3"]="/assets/adams-chart/adams-1-20-3.jpg"</script>
+<script>assets["1:21:3"]="/assets/adams-chart/adams-1-21-3.jpg"</script>
+<script>assets["1:22:3"]="/assets/adams-chart/adams-1-22-3.jpg"</script>
+<script>assets["1:23:3"]="/assets/adams-chart/adams-1-23-3.jpg"</script>
+<script>assets["1:24:3"]="/assets/adams-chart/adams-1-24-3.jpg"</script>
+<script>assets["1:25:3"]="/assets/adams-chart/adams-1-25-3.jpg"</script>
+<script>assets["1:26:3"]="/assets/adams-chart/adams-1-26-3.jpg"</script>
+<script>assets["1:27:3"]="/assets/adams-chart/adams-1-27-3.jpg"</script>
+<script>assets["1:28:3"]="/assets/adams-chart/adams-1-28-3.jpg"</script>
+<script>assets["1:29:3"]="/assets/adams-chart/adams-1-29-3.jpg"</script>
+<script>assets["1:30:3"]="/assets/adams-chart/adams-1-30-3.jpg"</script>
+<script>assets["1:31:3"]="/assets/adams-chart/adams-1-31-3.jpg"</script>
+<script>assets["1:32:3"]="/assets/adams-chart/adams-1-32-3.jpg"</script>
+<script>assets["1:33:3"]="/assets/adams-chart/adams-1-33-3.jpg"</script>
+<script>assets["1:34:3"]="/assets/adams-chart/adams-1-34-3.jpg"</script>
+<script>assets["1:35:3"]="/assets/adams-chart/adams-1-35-3.jpg"</script>
+<script>assets["1:36:3"]="/assets/adams-chart/adams-1-36-3.jpg"</script>
+<script>assets["1:37:3"]="/assets/adams-chart/adams-1-37-3.jpg"</script>
+<script>assets["1:38:3"]="/assets/adams-chart/adams-1-38-3.jpg"</script>
+<script>assets["1:39:3"]="/assets/adams-chart/adams-1-39-3.jpg"</script>
+<script>assets["1:40:3"]="/assets/adams-chart/adams-1-40-3.jpg"</script>
+<script>assets["1:41:3"]="/assets/adams-chart/adams-1-41-3.jpg"</script>
+<script>assets["1:42:3"]="/assets/adams-chart/adams-1-42-3.jpg"</script>
+<script>assets["1:43:3"]="/assets/adams-chart/adams-1-43-3.jpg"</script>
+<script>assets["1:44:3"]="/assets/adams-chart/adams-1-44-3.jpg"</script>
+<script>assets["1:45:3"]="/assets/adams-chart/adams-1-45-3.jpg"</script>
+<script>assets["1:46:3"]="/assets/adams-chart/adams-1-46-3.jpg"</script>
+<script>assets["1:47:3"]="/assets/adams-chart/adams-1-47-3.jpg"</script>
+<script>assets["1:48:3"]="/assets/adams-chart/adams-1-48-3.jpg"</script>
+<script>assets["1:49:3"]="/assets/adams-chart/adams-1-49-3.jpg"</script>
+<script>assets["1:0:4"]="/assets/adams-chart/adams-1-0-4.jpg"</script>
+<script>assets["1:1:4"]="/assets/adams-chart/adams-1-1-4.jpg"</script>
+<script>assets["1:2:4"]="/assets/adams-chart/adams-1-2-4.jpg"</script>
+<script>assets["1:3:4"]="/assets/adams-chart/adams-1-3-4.jpg"</script>
+<script>assets["1:4:4"]="/assets/adams-chart/adams-1-4-4.jpg"</script>
+<script>assets["1:5:4"]="/assets/adams-chart/adams-1-5-4.jpg"</script>
+<script>assets["1:6:4"]="/assets/adams-chart/adams-1-6-4.jpg"</script>
+<script>assets["1:7:4"]="/assets/adams-chart/adams-1-7-4.jpg"</script>
+<script>assets["1:8:4"]="/assets/adams-chart/adams-1-8-4.jpg"</script>
+<script>assets["1:9:4"]="/assets/adams-chart/adams-1-9-4.jpg"</script>
+<script>assets["1:10:4"]="/assets/adams-chart/adams-1-10-4.jpg"</script>
+<script>assets["1:11:4"]="/assets/adams-chart/adams-1-11-4.jpg"</script>
+<script>assets["1:12:4"]="/assets/adams-chart/adams-1-12-4.jpg"</script>
+<script>assets["1:13:4"]="/assets/adams-chart/adams-1-13-4.jpg"</script>
+<script>assets["1:14:4"]="/assets/adams-chart/adams-1-14-4.jpg"</script>
+<script>assets["1:15:4"]="/assets/adams-chart/adams-1-15-4.jpg"</script>
+<script>assets["1:16:4"]="/assets/adams-chart/adams-1-16-4.jpg"</script>
+<script>assets["1:17:4"]="/assets/adams-chart/adams-1-17-4.jpg"</script>
+<script>assets["1:18:4"]="/assets/adams-chart/adams-1-18-4.jpg"</script>
+<script>assets["1:19:4"]="/assets/adams-chart/adams-1-19-4.jpg"</script>
+<script>assets["1:20:4"]="/assets/adams-chart/adams-1-20-4.jpg"</script>
+<script>assets["1:21:4"]="/assets/adams-chart/adams-1-21-4.jpg"</script>
+<script>assets["1:22:4"]="/assets/adams-chart/adams-1-22-4.jpg"</script>
+<script>assets["1:23:4"]="/assets/adams-chart/adams-1-23-4.jpg"</script>
+<script>assets["1:24:4"]="/assets/adams-chart/adams-1-24-4.jpg"</script>
+<script>assets["1:25:4"]="/assets/adams-chart/adams-1-25-4.jpg"</script>
+<script>assets["1:26:4"]="/assets/adams-chart/adams-1-26-4.jpg"</script>
+<script>assets["1:27:4"]="/assets/adams-chart/adams-1-27-4.jpg"</script>
+<script>assets["1:28:4"]="/assets/adams-chart/adams-1-28-4.jpg"</script>
+<script>assets["1:29:4"]="/assets/adams-chart/adams-1-29-4.jpg"</script>
+<script>assets["1:30:4"]="/assets/adams-chart/adams-1-30-4.jpg"</script>
+<script>assets["1:31:4"]="/assets/adams-chart/adams-1-31-4.jpg"</script>
+<script>assets["1:32:4"]="/assets/adams-chart/adams-1-32-4.jpg"</script>
+<script>assets["1:33:4"]="/assets/adams-chart/adams-1-33-4.jpg"</script>
+<script>assets["1:34:4"]="/assets/adams-chart/adams-1-34-4.jpg"</script>
+<script>assets["1:35:4"]="/assets/adams-chart/adams-1-35-4.jpg"</script>
+<script>assets["1:36:4"]="/assets/adams-chart/adams-1-36-4.jpg"</script>
+<script>assets["1:37:4"]="/assets/adams-chart/adams-1-37-4.jpg"</script>
+<script>assets["1:38:4"]="/assets/adams-chart/adams-1-38-4.jpg"</script>
+<script>assets["1:39:4"]="/assets/adams-chart/adams-1-39-4.jpg"</script>
+<script>assets["1:40:4"]="/assets/adams-chart/adams-1-40-4.jpg"</script>
+<script>assets["1:41:4"]="/assets/adams-chart/adams-1-41-4.jpg"</script>
+<script>assets["1:42:4"]="/assets/adams-chart/adams-1-42-4.jpg"</script>
+<script>assets["1:43:4"]="/assets/adams-chart/adams-1-43-4.jpg"</script>
+<script>assets["1:44:4"]="/assets/adams-chart/adams-1-44-4.jpg"</script>
+<script>assets["1:45:4"]="/assets/adams-chart/adams-1-45-4.jpg"</script>
+<script>assets["1:46:4"]="/assets/adams-chart/adams-1-46-4.jpg"</script>
+<script>assets["1:47:4"]="/assets/adams-chart/adams-1-47-4.jpg"</script>
+<script>assets["1:48:4"]="/assets/adams-chart/adams-1-48-4.jpg"</script>
+<script>assets["1:49:4"]="/assets/adams-chart/adams-1-49-4.jpg"</script>
+<script>assets["1:0:5"]="/assets/adams-chart/adams-1-0-5.jpg"</script>
+<script>assets["1:1:5"]="/assets/adams-chart/adams-1-1-5.jpg"</script>
+<script>assets["1:2:5"]="/assets/adams-chart/adams-1-2-5.jpg"</script>
+<script>assets["1:3:5"]="/assets/adams-chart/adams-1-3-5.jpg"</script>
+<script>assets["1:4:5"]="/assets/adams-chart/adams-1-4-5.jpg"</script>
+<script>assets["1:5:5"]="/assets/adams-chart/adams-1-5-5.jpg"</script>
+<script>assets["1:6:5"]="/assets/adams-chart/adams-1-6-5.jpg"</script>
+<script>assets["1:7:5"]="/assets/adams-chart/adams-1-7-5.jpg"</script>
+<script>assets["1:8:5"]="/assets/adams-chart/adams-1-8-5.jpg"</script>
+<script>assets["1:9:5"]="/assets/adams-chart/adams-1-9-5.jpg"</script>
+<script>assets["1:10:5"]="/assets/adams-chart/adams-1-10-5.jpg"</script>
+<script>assets["1:11:5"]="/assets/adams-chart/adams-1-11-5.jpg"</script>
+<script>assets["1:12:5"]="/assets/adams-chart/adams-1-12-5.jpg"</script>
+<script>assets["1:13:5"]="/assets/adams-chart/adams-1-13-5.jpg"</script>
+<script>assets["1:14:5"]="/assets/adams-chart/adams-1-14-5.jpg"</script>
+<script>assets["1:15:5"]="/assets/adams-chart/adams-1-15-5.jpg"</script>
+<script>assets["1:16:5"]="/assets/adams-chart/adams-1-16-5.jpg"</script>
+<script>assets["1:17:5"]="/assets/adams-chart/adams-1-17-5.jpg"</script>
+<script>assets["1:18:5"]="/assets/adams-chart/adams-1-18-5.jpg"</script>
+<script>assets["1:19:5"]="/assets/adams-chart/adams-1-19-5.jpg"</script>
+<script>assets["1:20:5"]="/assets/adams-chart/adams-1-20-5.jpg"</script>
+<script>assets["1:21:5"]="/assets/adams-chart/adams-1-21-5.jpg"</script>
+<script>assets["1:22:5"]="/assets/adams-chart/adams-1-22-5.jpg"</script>
+<script>assets["1:23:5"]="/assets/adams-chart/adams-1-23-5.jpg"</script>
+<script>assets["1:24:5"]="/assets/adams-chart/adams-1-24-5.jpg"</script>
+<script>assets["1:25:5"]="/assets/adams-chart/adams-1-25-5.jpg"</script>
+<script>assets["1:26:5"]="/assets/adams-chart/adams-1-26-5.jpg"</script>
+<script>assets["1:27:5"]="/assets/adams-chart/adams-1-27-5.jpg"</script>
+<script>assets["1:28:5"]="/assets/adams-chart/adams-1-28-5.jpg"</script>
+<script>assets["1:29:5"]="/assets/adams-chart/adams-1-29-5.jpg"</script>
+<script>assets["1:30:5"]="/assets/adams-chart/adams-1-30-5.jpg"</script>
+<script>assets["1:31:5"]="/assets/adams-chart/adams-1-31-5.jpg"</script>
+<script>assets["1:32:5"]="/assets/adams-chart/adams-1-32-5.jpg"</script>
+<script>assets["1:33:5"]="/assets/adams-chart/adams-1-33-5.jpg"</script>
+<script>assets["1:34:5"]="/assets/adams-chart/adams-1-34-5.jpg"</script>
+<script>assets["1:35:5"]="/assets/adams-chart/adams-1-35-5.jpg"</script>
+<script>assets["1:36:5"]="/assets/adams-chart/adams-1-36-5.jpg"</script>
+<script>assets["1:37:5"]="/assets/adams-chart/adams-1-37-5.jpg"</script>
+<script>assets["1:38:5"]="/assets/adams-chart/adams-1-38-5.jpg"</script>
+<script>assets["1:39:5"]="/assets/adams-chart/adams-1-39-5.jpg"</script>
+<script>assets["1:40:5"]="/assets/adams-chart/adams-1-40-5.jpg"</script>
+<script>assets["1:41:5"]="/assets/adams-chart/adams-1-41-5.jpg"</script>
+<script>assets["1:42:5"]="/assets/adams-chart/adams-1-42-5.jpg"</script>
+<script>assets["1:43:5"]="/assets/adams-chart/adams-1-43-5.jpg"</script>
+<script>assets["1:44:5"]="/assets/adams-chart/adams-1-44-5.jpg"</script>
+<script>assets["1:45:5"]="/assets/adams-chart/adams-1-45-5.jpg"</script>
+<script>assets["1:46:5"]="/assets/adams-chart/adams-1-46-5.jpg"</script>
+<script>assets["1:47:5"]="/assets/adams-chart/adams-1-47-5.jpg"</script>
+<script>assets["1:48:5"]="/assets/adams-chart/adams-1-48-5.jpg"</script>
+<script>assets["1:49:5"]="/assets/adams-chart/adams-1-49-5.jpg"</script>
+<script>
+const vp=document.getElementById('viewport'),layer=document.getElementById('tiles'),prog=document.getElementById('progress'),slider=document.getElementById('slider'),zlab=document.getElementById('zoom'),fitBtn=document.getElementById('fit'),fullBtn=document.getElementById('full'),statusLab=document.getElementById('status'),mini=document.getElementById('mini');
+let zoom=.01,x=0,y=0,currentLevel=null,frame=null,drag=null,cache=new Map(),fullView=false,savedView=null;
+const pointers=new Map(); let pinch=null, wasPinching=false;
+
+function getImg(level,col,row){return assets[level+':'+col+':'+row]||null;}
+function fitCoords(){const top=toolbarHeight();const vw=vp.clientWidth,vh=vp.clientHeight;const z=Math.min(vw/W,vh/H);return {zoom:z,x:(vw-W*z)/2,y:(vh-H*z)/2};}
+function toolbarHeight(){return document.getElementById('toolbar').getBoundingClientRect().height;}
+function minZoom(){return Math.min(fitCoords().zoom*.9,.01);} // allow slightly beyond full-fit for overview
+function maxZoom(){return 4;} // allows zoom beyond 1:1 if desired
+function clamp(){const vw=vp.clientWidth,vh=vp.clientHeight;const sw=W*zoom,sh=H*zoom;if(sw<=vw)x=(vw-sw)/2;else x=Math.min(0,Math.max(vw-sw,x));if(sh<=vh)y=(vh-sh)/2;else y=Math.min(0,Math.max(vh-sh,y));}
+function setStatus(t){statusLab.textContent=t;}
+function disableFullViewIfNeeded(){if(fullView){fullView=false;fitBtn.textContent='Full View';fitBtn.setAttribute('aria-pressed','false');savedView=null;}}
+function setZoom(newZoom,cx=vp.clientWidth/2,cy=vp.clientHeight/2){const z=Math.max(minZoom(),Math.min(maxZoom(),newZoom));const worldX=(cx-x)/zoom, worldY=(cy-y)/zoom;zoom=z;x=cx-worldX*zoom;y=cy-worldY*zoom;disableFullViewIfNeeded();render();}
+function pan(dx,dy){x+=dx;y+=dy;disableFullViewIfNeeded();render();}
+function setFullView(on){if(on){if(!fullView) savedView={zoom,x,y};fullView=true;fitBtn.textContent='Exit Full View';fitBtn.setAttribute('aria-pressed','true');const v=fitCoords();zoom=v.zoom;x=v.x;y=v.y;setStatus('Full View active · Tap “Exit Full View” to return');render();}else{fullView=false;fitBtn.textContent='Full View';fitBtn.setAttribute('aria-pressed','false');if(savedView){zoom=savedView.zoom;x=savedView.x;y=savedView.y;}else{const v=fitCoords();zoom=v.zoom;x=v.x;y=v.y;}savedView=null;setStatus(isTouchLike()?'Touch: drag to pan · pinch to zoom':'Wheel zooms · Shift+wheel horizontal · Drag to pan');render();}}
+function isTouchLike(){return window.matchMedia('(pointer:coarse)').matches || navigator.maxTouchPoints>0;}
+function lod(){return levels.filter(l=>zoom*l<=1.25).pop()||1;} // choose sharper source earlier
+function render(){clamp();if(frame!==null)return;frame=requestAnimationFrame(draw);}
+function draw(){frame=null;const level=lod();if(level!==currentLevel){layer.replaceChildren();cache.clear();currentLevel=level;}const tileWorld=TILE*level,tileScreen=tileWorld*zoom;let x0=Math.max(0,Math.floor(-x/tileScreen)-1),x1=Math.min(Math.ceil(W/tileWorld),Math.ceil((vp.clientWidth-x)/tileScreen)+1),y0=Math.max(0,Math.floor(-y/tileScreen)-1),y1=Math.min(Math.ceil(H/tileWorld),Math.ceil((vp.clientHeight-y)/tileScreen)+1);const active=new Set();let count=0;for(let row=y0;row<y1;row++)for(let col=x0;col<x1;col++){const id=level+':'+col+':'+row;active.add(id);let el=cache.get(id);if(!el){const src=getImg(level,col,row);if(!src)continue;el=document.createElement('img');el.className='tile';el.draggable=false;el.decoding='async';el.src=src;layer.appendChild(el);cache.set(id,el);}const left=x+col*tileWorld*zoom,top=y+row*tileWorld*zoom,iw=Math.min(tileWorld,W-col*tileWorld)*zoom,ih=Math.min(tileWorld,H-row*tileWorld)*zoom;el.style.left=left+'px';el.style.top=top+'px';el.style.width=iw+'px';el.style.height=ih+'px';count++;}
+for(const [id,el] of cache){if(!active.has(id)){el.remove();cache.delete(id);}}
+const ratio=zoom*100;zlab.textContent=ratio<1?ratio.toFixed(2)+'%':ratio<10?ratio.toFixed(1)+'%':Math.round(ratio)+'%';slider.value=Math.log2(zoom);const box=mini.getBoundingClientRect(),mx=box.width/W,my=box.height/H,rect=document.getElementById('miniview');const left=Math.max(0,-x/zoom),top=Math.max(0,-y/zoom),right=Math.min(W,(vp.clientWidth-x)/zoom),bottom=Math.min(H,(vp.clientHeight-y)/zoom);rect.style.left=left*mx+'px';rect.style.top=top*my+'px';rect.style.width=Math.max(1,(right-left)*mx)+'px';rect.style.height=Math.max(1,(bottom-top)*my)+'px';const sourcePct=Math.round(100/level);prog.textContent=count+' visible tiles · '+sourcePct+'% source-resolution level';}
+
+function beginDrag(px,py){drag={px,py,x,y};vp.classList.add('drag');vp.focus({preventScroll:true});}
+function endDrag(){drag=null;vp.classList.remove('drag');}
+function ptMid(){const vals=[...pointers.values()];if(vals.length<2)return null;return {x:(vals[0].x+vals[1].x)/2,y:(vals[0].y+vals[1].y)/2};}
+function ptDist(){const vals=[...pointers.values()];if(vals.length<2)return 0;const dx=vals[0].x-vals[1].x,dy=vals[0].y-vals[1].y;return Math.hypot(dx,dy);} 
+
+vp.addEventListener('wheel',e=>{e.preventDefault();if(e.shiftKey&&!e.ctrlKey&&!e.metaKey){pan(-(e.deltaX||e.deltaY),0);}else{const b=vp.getBoundingClientRect();setZoom(zoom*Math.exp(-e.deltaY*.002),e.clientX-b.left,e.clientY-b.top);}},{passive:false});
+
+vp.addEventListener('pointerdown',e=>{pointers.set(e.pointerId,{x:e.clientX,y:e.clientY,type:e.pointerType});vp.setPointerCapture(e.pointerId);if(pointers.size===1){beginDrag(e.clientX,e.clientY);}else if(pointers.size===2){endDrag();const m=ptMid();pinch={dist:ptDist(),zoom,x,y,mid:m};wasPinching=true;disableFullViewIfNeeded();setStatus('Pinch to zoom · drag to pan');}});
+vp.addEventListener('pointermove',e=>{if(!pointers.has(e.pointerId))return;pointers.set(e.pointerId,{x:e.clientX,y:e.clientY,type:e.pointerType});if(pointers.size>=2){const d=ptDist();if(!pinch){const m=ptMid();pinch={dist:d,zoom,x,y,mid:m};}const m=ptMid();const rect=vp.getBoundingClientRect();const cx=m.x-rect.left,cy=m.y-rect.top;const startWorldX=(cx-pinch.x)/pinch.zoom,startWorldY=(cy-pinch.y)/pinch.zoom;zoom=Math.max(minZoom(),Math.min(maxZoom(),pinch.zoom*(d/Math.max(10,pinch.dist))));x=cx-startWorldX*zoom;y=cy-startWorldY*zoom;render();return;} if(drag){x=drag.x+e.clientX-drag.px;y=drag.y+e.clientY-drag.py;render();}});
+function clearPointer(e){pointers.delete(e.pointerId);if(pointers.size<2)pinch=null;if(pointers.size===1){const rem=[...pointers.values()][0];beginDrag(rem.x,rem.y);}else if(pointers.size===0){endDrag();if(wasPinching){wasPinching=false;setTimeout(()=>setStatus(isTouchLike()?'Touch: drag to pan · pinch to zoom':'Wheel zooms · Shift+wheel horizontal · Drag to pan'),400);}}}
+vp.addEventListener('pointerup',clearPointer);vp.addEventListener('pointercancel',clearPointer);vp.addEventListener('pointerleave',e=>{if(e.pointerType==='mouse'&&drag&&pointers.size<=1){} });
+
+let lastTap=0;vp.addEventListener('click',e=>{const now=Date.now();if(now-lastTap<280 && !wasPinching){const rect=vp.getBoundingClientRect();const cx=e.clientX-rect.left,cy=e.clientY-rect.top;setZoom(zoom*1.8,cx,cy);}lastTap=now;});
+
+document.getElementById('in').onclick=()=>setZoom(zoom*1.6);document.getElementById('out').onclick=()=>setZoom(zoom/1.6);fitBtn.onclick=()=>setFullView(!fullView);document.getElementById('homeBtn').onclick=()=>setFullView(true);document.getElementById('zoom100').onclick=()=>setZoom(1);slider.oninput=e=>setZoom(Math.pow(2,+e.target.value));
+fullBtn.onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await document.documentElement.requestFullscreen();}catch(err){prog.textContent='Fullscreen unavailable in this browser';}};
+document.addEventListener('fullscreenchange',()=>{const yes=!!document.fullscreenElement;fullBtn.textContent=yes?'Exit Fullscreen':'Fullscreen';fullBtn.setAttribute('aria-pressed',String(yes));render();});
+const miniToggle=document.getElementById('toggleMini');
+function setMiniHidden(hidden){mini.classList.toggle('hidden',hidden);miniToggle.textContent=hidden?'Show Map':'Hide Map';miniToggle.setAttribute('aria-pressed',String(!hidden));render();}
+if(miniToggle)miniToggle.onclick=()=>setMiniHidden(!mini.classList.contains('hidden'));
+document.getElementById('mini').addEventListener('click',e=>{const b=e.currentTarget.getBoundingClientRect();x=vp.clientWidth/2-(e.clientX-b.left)/b.width*W*zoom;y=vp.clientHeight/2-(e.clientY-b.top)/b.height*H*zoom;disableFullViewIfNeeded();render()});
+// Accelerating-free continuous panning: immediate response, then steady animation until release.
+const navigationVectors={left:[1,0],right:[-1,0],up:[0,1],down:[0,-1],fastLeft:[2.5,0],fastRight:[-2.5,0]};
+let navHeld=null,navRaf=0,navLast=0;
+function finishNav(){navHeld=null;navLast=0;if(navRaf){cancelAnimationFrame(navRaf);navRaf=0;}document.querySelectorAll('.navBtn.held').forEach(b=>b.classList.remove('held'));}
+function navStep(t){if(!navHeld)return;const dt=Math.min(60,navLast? t-navLast:16.67);navLast=t;pan(navHeld.v[0]*dt*.58,navHeld.v[1]*dt*.58);navRaf=requestAnimationFrame(navStep);}
+for(const [id,v] of Object.entries(navigationVectors)){
+ const b=document.getElementById(id);if(!b)continue;
+ b.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse'&&e.button!==0)return;e.preventDefault();finishNav();navHeld={v};b.classList.add('held');try{b.setPointerCapture(e.pointerId);}catch(err){}pan(v[0]*9,v[1]*9);navRaf=requestAnimationFrame(navStep);});
+ for(const ev of ['pointerup','pointercancel','lostpointercapture'])b.addEventListener(ev,finishNav);
+ b.addEventListener('click',e=>{if(e.detail===0)pan(v[0]*90,v[1]*90);});
+ b.addEventListener('contextmenu',e=>e.preventDefault());
+}
+window.addEventListener('blur',finishNav);
+document.addEventListener('visibilitychange',()=>{if(document.hidden)finishNav();});
+window.addEventListener('keydown',e=>{if(['INPUT','BUTTON'].includes(document.activeElement.tagName)&&e.key!=='Escape')return;const step=e.shiftKey?550:180;let handled=true;switch(e.key){case'ArrowLeft':pan(step,0);break;case'ArrowRight':pan(-step,0);break;case'ArrowUp':pan(0,step);break;case'ArrowDown':pan(0,-step);break;case'+':case'=':setZoom(zoom*1.4);break;case'-':setZoom(zoom/1.4);break;case'f':case'F':setFullView(!fullView);break;case'Escape':if(fullView)setFullView(false);else handled=false;break;default:handled=false;}if(handled)e.preventDefault();});
+window.addEventListener('resize',()=>{vp.style.top=toolbarHeight()+'px';if(fullView){const v=fitCoords();zoom=v.zoom;x=v.x;y=v.y;}render()});
+
+document.getElementById('overview').src=getImg(64,0,0);vp.style.top=toolbarHeight()+'px';
+if(isTouchLike())setStatus('Touch: drag to pan · pinch to zoom · double-tap to zoom in');else setStatus('Wheel zooms · Shift+wheel horizontal · Drag to pan');
+setFullView(true);
+
+// Toggle only the arrow dock. Map touch gestures and desktop navigation stay active.
+const hideNavButton=document.getElementById('hideNav');
+const showNavButton=document.getElementById('showNav');
+function toggleNavigation(hidden){document.body.classList.toggle('nav-hidden',hidden);hideNavButton.setAttribute('aria-expanded',String(!hidden));showNavButton.setAttribute('aria-expanded',String(!hidden));}
+hideNavButton.addEventListener('click',()=>toggleNavigation(true));
+showNavButton.addEventListener('click',()=>toggleNavigation(false));
+</script><script>
+// Endpoint buttons jump instantly to the actual beginning or end without modifying zoom.
+function jumpEdge(end){disableFullViewIfNeeded();x=end==='left'?0:vp.clientWidth-W*zoom;render();}
+for(const [id,end] of [['fastLeft','left'],['fastRight','right']]){
+ const old=document.getElementById(id);
+ const fresh=old.cloneNode(true);old.replaceWith(fresh);
+ fresh.setAttribute('aria-label',end==='left'?'Go to start of chart':'Go to end of chart');
+ fresh.title=end==='left'?'Beginning of chart':'End of chart';
+ fresh.addEventListener('pointerdown',e=>{e.preventDefault();e.stopPropagation();});
+ fresh.addEventListener('click',e=>{e.preventDefault();jumpEdge(end);});
+}
+// Section-step navigation. Each press moves by ~85% of the current screen width.
+function sectionStep(direction){pan(direction*vp.clientWidth*.85,0);}
+const sectionIconLeft='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5 3 12l5 7M21 12H5"/></svg>';
+const sectionIconRight='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m16 5 5 7-5 7M3 12h16"/></svg>';
+const sectionLeft=document.createElement('button');sectionLeft.type='button';sectionLeft.id='sectionLeft';sectionLeft.className='navBtn sectionBtn';sectionLeft.innerHTML=sectionIconLeft;sectionLeft.title='Previous section';sectionLeft.setAttribute('aria-label','Previous section');
+const sectionRight=document.createElement('button');sectionRight.type='button';sectionRight.id='sectionRight';sectionRight.className='navBtn sectionBtn';sectionRight.innerHTML=sectionIconRight;sectionRight.title='Next section';sectionRight.setAttribute('aria-label','Next section');
+document.getElementById('left').before(sectionLeft);
+document.getElementById('fastRight').before(sectionRight);
+sectionLeft.addEventListener('click',()=>sectionStep(1));
+sectionRight.addEventListener('click',()=>sectionStep(-1));
+
+// Fill Screen is distinct from Full View (contain) and Fullscreen (browser chrome).
+// Cover means the image fully covers the viewport while preserving its aspect ratio.
+const fillButton=document.getElementById('fillScreen');
+let fillScreen=false, savedFillState=null;
+function setFillScreen(enabled){
+ if(enabled){
+  if(!fillScreen)savedFillState={zoom,x,y,fullView,savedView:savedView?{...savedView}:null};
+  if(fullView)disableFullViewIfNeeded();
+  fillScreen=true;
+  const oldCenterX=(vp.clientWidth/2-x)/zoom;
+  const oldCenterY=(vp.clientHeight/2-y)/zoom;
+  zoom=Math.max(vp.clientWidth/W,vp.clientHeight/H);
+  x=vp.clientWidth/2-oldCenterX*zoom;
+  y=vp.clientHeight/2-oldCenterY*zoom;
+  fillButton.textContent='Exit Fill Screen';fillButton.setAttribute('aria-pressed','true');
+ }else{
+  fillScreen=false;
+  if(savedFillState){zoom=savedFillState.zoom;x=savedFillState.x;y=savedFillState.y;
+   fullView=savedFillState.fullView;savedView=savedFillState.savedView;
+   fitBtn.textContent=fullView?'Exit Full View':'Full View';fitBtn.setAttribute('aria-pressed',String(fullView));}
+  savedFillState=null;
+  fillButton.textContent='Fill Screen';fillButton.setAttribute('aria-pressed','false');
+ }
+ render();
+}
+fillButton.addEventListener('click',()=>setFillScreen(!fillScreen));
+// Integration strip and control labels can reflow the toolbar after startup.
+// Keep the chart viewport below its actual height without changing chart assets.
+function syncToolbarViewport(){
+ const top=toolbarHeight()+'px';
+ if(vp.style.top===top)return;
+ const centerX=(vp.clientWidth/2-x)/zoom,centerY=(vp.clientHeight/2-y)/zoom;
+ vp.style.top=top;
+ if(fullView){const v=fitCoords();zoom=v.zoom;x=v.x;y=v.y;}
+ else if(fillScreen){zoom=Math.max(vp.clientWidth/W,vp.clientHeight/H);x=vp.clientWidth/2-centerX*zoom;y=vp.clientHeight/2-centerY*zoom;}
+ render();
+}
+if(window.ResizeObserver)new ResizeObserver(syncToolbarViewport).observe(document.getElementById('toolbar'));
+syncToolbarViewport();
+// Short-screen default is a clear chart, not an already-expanded overlay.
+// Existing controls still explicitly restore/use/close both dock and map.
+const compactOverlays=matchMedia('(max-width:899px) and (max-height:700px)');
+function applyOverlayDefaults(){
+ const compact=compactOverlays.matches;
+ if(compact)document.querySelector('#toolbar .toprow').append(showNavButton);
+ else document.body.append(showNavButton);
+ toggleNavigation(compact);
+ setMiniHidden(compact);
+ syncToolbarViewport();
+}
+compactOverlays.addEventListener('change',applyOverlayDefaults);
+applyOverlayDefaults();
+</script><script>if(window.matchMedia&&matchMedia('(pointer: coarse)').matches){var fcTip=document.querySelector('.tip');if(fcTip){fcTip.textContent='Touch: drag to pan · Pinch to zoom';}}</script></body></html>

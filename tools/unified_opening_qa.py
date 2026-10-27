@@ -8,7 +8,7 @@ from hero_introductions_qa import ROUTES as INTRODUCTION_ROUTES
 from section_panel_surface_qa import STANDALONE_ROUTE, assert_standalone
 
 from emma_story_consumers import EMMA_STORY_ROUTES, COMMON_REF, historical_routes, assert_story_opening
-from adams_standalone_opening import ADAMS_ROUTE, without_adams_route
+from owner_integration_contract import CHART as ADAMS_ROUTE, without_integrated_adams_routes as without_adams_route
 ROOT = Path(__file__).resolve().parents[1]
 HERO_ROUTES = frozenset(p['path'] for p in json.loads((ROOT / 'docs/unified-opening-inventory.json').read_text())['pages'] if p['hero'])
 
@@ -63,4 +63,4 @@ script = (ROOT / 'unified-opening.js').read_text(encoding='utf8')
 assert '\\u2193' in script and 'Ãƒ' not in script, 'Continue arrow encoding'
 assert "opening.matches('.jj-opening') ? []" in script, 'Covenant invitation must remain in opening'
 assert 'getBoundingClientRect().bottom + scrollY' in script, 'Fit must use document coordinates'
-print('UNIFIED OPENING STATIC PASS: 132 historical routes, 53 historical illustrated openings, 79 historical exclusions; 5 additional reading-first Emma stories and 1 exact Adams standalone, current shared versions and protected Covenant invitation')
+print('UNIFIED OPENING STATIC PASS: 132 historical routes, 53 historical illustrated openings, 79 historical exclusions; 5 additional reading-first Emma stories and 2 source-validated integrated Adams pages, current shared versions and protected Covenant invitation')

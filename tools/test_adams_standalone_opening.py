@@ -1,3 +1,5 @@
+# Stage156: these unchanged assertions exercise explicit historical a36 fixtures.
+# Current integrated source/DOM/panels/search/resource checks run separately.
 """Focused standalone successor tests; no QA CLI/browser execution."""
 import hashlib
 import json
@@ -8,7 +10,8 @@ import xml.etree.ElementTree as ET
 import adams_standalone_opening as a
 import emma_story_consumers as e
 
-ROOT = Path(__file__).resolve().parents[1]
+from owner_integration_test_fixtures import historical_root
+ROOT = historical_root(Path(__file__).resolve().parents[1])
 
 
 class AdamsOpeningTests(unittest.TestCase):

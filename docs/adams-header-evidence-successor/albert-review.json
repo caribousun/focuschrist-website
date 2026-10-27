@@ -1,0 +1,66 @@
+{
+  "schema": 1,
+  "reviewer": "Albert",
+  "reviewed_at": "2026-10-27T21:51:40+00:00",
+  "decision": "CONCUR",
+  "spec_sha256": "8f3e13f9de807b116ad82fcc17ccf98a9c3924413539ce7dccb76d7e9939352c",
+  "source_rights_checked": true,
+  "finished_pixels": true,
+  "desktop_phone_inspected": true,
+  "mandate_readback": {
+    "files": [
+      {
+        "path": "AGENTS.md",
+        "sha256": "e70c3fdc59032a8db0ff3f331855b174e5721457ade9e87f0f76a61a8442bd1d"
+      }
+    ],
+    "applicable_requirements": [
+      "Preserve approved historical asset identity and attribution; no new artwork generation or provenance claim.",
+      "Standard Timeline header and hero; exact normal hero and Continue geometry; direct owner approval allows only the measured 52px narrow enlarged-text header reflow.",
+      "Actual rendered source-bound evidence and independent finished review; no passing claim from source-only tests.",
+      "Production and personal live-browser verification remain separate."
+    ]
+  },
+  "finished_candidate_follows_mandates": true,
+  "observations": "Inspected exact current CSS append and unchanged source identities, actual current header desktop/phone/enlarged screenshots, fresh owner report and sampled Timeline choices/Emma context images, and fresh viewer desktop fit, narrow expanded controls and landscape fit pixels. Actual header report shows zero overflow, exact normal geometry and owner-authorized +52px enlarged reflow; four keyboard menu/search checks pass. Viewer source and control design preserved; rights and credit fields checked against preserved approved provenance and unchanged asset pins. Continue remains visible and scroll-reachable in landscape at the same coordinates as the existing reference; visible is not represented as above-fold. This is a finite exact-spec source/output concurrence, not release completion.",
+  "limits": [
+    "Not full release acceptance; broad required CI and personal live-browser checks remain pending.",
+    "No physical device claim.",
+    "Source rights checked by preservation of existing approved provenance and attribution, not new original-download-chain evidence or legal determination.",
+    "Landscape intro Continue below initial viewport like reference; no all-content-above-fold claim.",
+    "Existing small viewer controls and 40px desktop menu retained; not blanket accessibility compliance.",
+    "Enlarged menu bottom-item reachability not exercised by bounded header diagnostic.",
+    "Original artwork and likeness approval records unchanged; no new image generation or new comprehensive likeness reassessment."
+  ],
+  "evidence": [
+    {
+      "path": "docs/adams-header-evidence-successor/viewer-report.json",
+      "bytes": 426299,
+      "sha256": "cfbcea98545f981c47f1e681dba956fa98f35fe65ba3bc01da2d790a87a0eba7"
+    },
+    {
+      "path": "docs/adams-header-evidence-successor/run-identity.json",
+      "bytes": 525,
+      "sha256": "6ce9a186bd93f2bb030493e5f8c8246bddce38e7d7bc433aaa806af4428bdefd"
+    },
+    {
+      "path": "docs/adams-header-evidence-successor/capture-manifest.json",
+      "bytes": 4172,
+      "sha256": "80d2e61824fa474e1302b7c2c00b6521d87362b44d809a7a10c9611d3155fbbd"
+    },
+    {
+      "path": "docs/adams-header-evidence-successor/owner-report.json",
+      "bytes": 481835,
+      "sha256": "8d431ecc06fc793658c0bfa317c2d22d5eb24474bb77bf291821e6ad320d6c29"
+    },
+    {
+      "path": "docs/adams-header-evidence-successor/owner-capture-manifest.json",
+      "bytes": 18749,
+      "sha256": "49a9cec8682822e3cb2fd901498e092c59f4caf2b7246acda29fefba320f5007"
+    }
+  ],
+  "review_role": "Albert",
+  "author_id": "/root",
+  "role_scope": "Task-specific review role; not a claim about historical reviewer identity.",
+  "role_assignment_sha256": "4624118c89d927e838f1762c73b8a172d4b79f55778236ced9a16c4b382c9231"
+}

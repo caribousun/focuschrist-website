@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "reviewer": "Newton",
+  "reviewed_at": "2026-10-27T19:07:18.662881+00:00",
+  "decision": "CONCUR",
+  "spec_sha256": "5fb32aca33885b60b334ca5bcc4bede36663fe3ecd8557300bfea67155e1c5dc",
+  "source_rights_checked": true,
+  "finished_pixels": true,
+  "desktop_phone_inspected": true,
+  "mandate_snapshot_sha256": "e70c3fdc59032a8db0ff3f331855b174e5721457ade9e87f0f76a61a8442bd1d",
+  "observations": [
+    "Read the current applicable mandate snapshot, including fixed hero/Continue geometry, warm human voice, footer disclosure, pill containment and independent finished-candidate review. Current source and hosted evidence are consistent with these bounded requirements; this concurrence is not owner aesthetic acceptance.",
+    "Personally inspected all 24 current viewer capture pixels across desktop 1280×900, phone 390×844, narrow 320×568 and landscape 844×390, plus actual desktop and phone introduction and narrow and landscape viewer openings. Initial short-screen fit shows the chart with status above it; expanded controls overlay chart content and closed controls restore a clear view. Landing choices, title, chart tile detail, fit and end states render visibly.",
+    "Rehashed the exact 1,843,170-byte viewer artifact and verified all 25 archive members byte-for-byte against extracted files and their receipt pins. Four profile PASS results contain 101 states, zero initial-fit overlay intersections and 24 captured images. Report lists 408 same-origin tile responses, all status 200 and equal to the pinned asset size/hash; 32 Cloudflare telemetry requests were blocked, not claimed as external provider proof.",
+    "Five integrated source rows match exact current producer source bytes and raw report. The owner report and capture manifests match their specified bytes and SHA-256; four profiles report passing with no errors, including tested opening comparison, header/search and timeline-introduction-chart journey. I read the actual CSS and JavaScript for compact status relocation and measured toolbar/map positioning; restored landscape map is below toolbar and beside the dock in this report.",
+    "The retained chart original, work, canvas and all 331 asset rows match the earlier reviewed import spec. Personally rechecked the named Wikimedia Commons source and its 1881 Adams attribution, David Rumsey credit and US public-domain/PD-Art statement. No independent download-chain or worldwide-rights claim is made.",
+    "The exact earlier reviewed V9 chart CSS and current chart share the same compact navigation size rules. The 390px report records section-arrow 23×23 and fast/close 27×27 hit boxes, with successful emulated hit tests. These are retained original controls, not newly introduced pill geometry; no 44px or accessibility-conformance claim is made.",
+    "Independently checked the corrected current spec against its prior version: the legacy standalone Back/Home and pre-chart strip are accurately distinguished from current canonical header/footer; the added ninth shared dependency timeline-mobile-study.css matches exact current bytes. No visual evidence or five integrated sources changed."
+  ],
+  "limits": [
+    "Hosted Chromium emulation and screenshots do not establish physical-phone native touch-drag or pinch, browser-chrome fullscreen, increased-text accessibility, every breakpoint or full accessibility compliance. Small original chart targets and expanded overlays remain practical limitations.",
+    "Report-driven journeys are not my own hands-on live browser interaction. The authorized owner release order requires Albert’s hands-on live browser check immediately after publication, after remaining tests and team reviews pass.",
+    "Source/rights check uses retained owner-supplied source lineage and the named Commons listing; I did not redownload the original files or rehash all 331 JPEGs in this review. No fresh independent verification of every chart date, owner acceptance, deployment or full-site CI is claimed.",
+    "Earlier Newton fourth-focused receipt is a predecessor-authored record and is preserved separately; it is not represented as a new review by me. Material source or evidence changes require renewed review."
+  ],
+  "evidence": [
+    {
+      "path": "docs/adams-integrated-context/viewer-report.json",
+      "bytes": 426299,
+      "sha256": "25448b567f9e1675641e30e5a0947649d8439bb73524ed002e9b7ac6a5bf45c4"
+    },
+    {
+      "path": "docs/adams-integrated-context/owner-report.json",
+      "bytes": 481925,
+      "sha256": "b73e052b4121c52ea9d68557af48b28ecda4ee64e11846973d6c46deaf122d8f"
+    },
+    {
+      "path": "docs/adams-integrated-context/run-identity.json",
+      "bytes": 525,
+      "sha256": "40fc2c76955a5690b876d1d898a3263fd0b657775bb6ca3c4603c3712bbf5506"
+    },
+    {
+      "path": "docs/adams-integrated-context/capture-manifest.json",
+      "bytes": 4172,
+      "sha256": "cc615611a065da6e7999c6097f4407f4683007bbb89440651b8e9eef3fbb87d7"
+    },
+    {
+      "path": "docs/adams-integrated-context/owner-capture-manifest.json",
+      "bytes": 18749,
+      "sha256": "6fd71bc8401562dd52624dcbeb168abf17b658ae0f5d195a534b88a23fb47172"
+    }
+  ],
+  "rights_source": "https://commons.wikimedia.org/wiki/File:Adams_Synchronological_Chart,_1881.jpg#Licensing"
+}

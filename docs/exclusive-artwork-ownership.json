@@ -2811,7 +2811,16 @@
           "decoded_rgb_sha256": "f0e5a58efa11baefa32102ce9c5a88a8c8c8c9cf1e5903196c997cbaaba383b3"
         }
       ],
-      "status": "approved"
+      "status": "approved",
+      "prior_placement": {
+        "page": "history/emma-hale-smith.html",
+        "slotId": "picture-emma-c2",
+        "description": "The disciples urge Jesus to eat. He speaks with them about the work of His Father, while the ordinary care of bringing food remains close at hand."
+      },
+      "placement_source_sha256": "50c334379066722ef6e80e97d70f0f2ca431777b5857eb15b998da65cc1783cf",
+      "current_placement": null,
+      "placement_status": "retired",
+      "placement_note": "Removed from the current Emma journey; page and slotId describe the historical placement, not an active owner. Existing artwork approval and files are retained."
     },
     {
       "title": "A hymn before the road ahead",
@@ -3036,7 +3045,16 @@
           "decoded_rgb_sha256": "eed5dee9c5d372a72149ee9f052073a641169b0e3308c8e36645fef814208ffa"
         }
       ],
-      "status": "approved"
+      "status": "approved",
+      "prior_placement": {
+        "page": "history/emma-hale-smith.html",
+        "slotId": "picture-emma-h2",
+        "description": "Emma works with the words of hymns. The collection she selected gave the Saints songs for worship, gathering and daily faith."
+      },
+      "placement_source_sha256": "50c334379066722ef6e80e97d70f0f2ca431777b5857eb15b998da65cc1783cf",
+      "current_placement": null,
+      "placement_status": "retired",
+      "placement_note": "The former hymnal figure is retired; page and slotId describe its historical placement. Its legacy fragment remains a navigation anchor, not an artwork owner. Existing artwork approval and files are retained."
     },
     {
       "title": "A letter across the separation",
@@ -3176,9 +3194,9 @@
     {
       "name": "emma-story1-ride",
       "title": "A ride to warn Joseph",
-      "description": "Family history tells how Emma learned that men were plotting to steal the gold plates, took a spare horse, and rode more than an hour to warn Joseph so he could move the record to safety. Lucy Mack Smith told the story years afterward. It is not a moment anyone stood by to witness. It is a true family memory of a young wife who was watchful, practical, and willing to go herself.",
+      "description": "Emma rides along a hillside in autumn. Lucy Mack Smith later told how Emma learned of a plan to steal the gold plates, borrowed a horse, and rode more than an hour to warn Joseph. He moved the record to safety.",
       "alt": "Emma Smith at twenty three, wearing a long blue dress, rides sidesaddle at a gallop on a brown horse up a leaf covered slope in autumn, leaning forward with both hands on the reins and her eyes on the path ahead.",
-      "page": "history/emma-elect-lady.html",
+      "page": "history/emma-hale-smith.html",
       "slotId": "picture-emma-story1-ride",
       "source": "https://www.churchofjesuschrist.org/study/liahona/2021/03/emma-protected-scripture?lang=eng",
       "source_path": "assets/page-art/emma-life/emma-story1-ride-review-1536.webp",
@@ -3207,14 +3225,26 @@
           "decoded_rgb_sha256": "9df5bd924838bc9a737890eccc138a28905d09564f59690b07b2120e3f11fc5a"
         }
       ],
-      "status": "approved"
+      "status": "approved",
+      "prior_placement": {
+        "page": "history/emma-elect-lady.html",
+        "slotId": "picture-emma-story1-ride",
+        "description": "Family history tells how Emma learned that men were plotting to steal the gold plates, took a spare horse, and rode more than an hour to warn Joseph so he could move the record to safety. Lucy Mack Smith told the story years afterward. It is not a moment anyone stood by to witness. It is a true family memory of a young wife who was watchful, practical, and willing to go herself."
+      },
+      "placement_source_sha256": "50c334379066722ef6e80e97d70f0f2ca431777b5857eb15b998da65cc1783cf",
+      "current_placement": {
+        "page": "history/emma-hale-smith.html",
+        "slotId": "picture-emma-story1-ride"
+      },
+      "placement_status": "active",
+      "placement_note": "The hub is the owning page; the former story page links to this figure. Existing artwork approval and asset lineage are unchanged."
     },
     {
       "name": "emma-story2-hymnal",
       "title": "The finished hymnbook",
       "description": "The little book in her hands is the finished work: A Collection of Sacred Hymns, the selection of sacred hymns she was charged to make in Doctrine and Covenants 25. The edition is dated 1835, and the printed books reached the Saints early in 1836. What she holds here is the completed collection, ninety hymns she chose, small enough to carry into any home or meeting room where the Saints sang together.",
       "alt": "Emma Smith at thirty one, wearing a brown dress, stands by a window holding a small bound book in both hands and looking down at it.",
-      "page": "history/emma-hymns.html",
+      "page": "history/emma-hale-smith.html",
       "slotId": "picture-emma-story2-hymnal",
       "source": "https://www.josephsmithpapers.org/paper-summary/collection-of-sacred-hymns-1835/1",
       "source_path": "assets/page-art/emma-life/emma-story2-hymnal-review-1536.webp",
@@ -3243,14 +3273,26 @@
           "decoded_rgb_sha256": "26456155f0a3340097c16b60f8e293d59ad33813e3cd15684818c5db95d98259"
         }
       ],
-      "status": "approved"
+      "status": "approved",
+      "prior_placement": {
+        "page": "history/emma-hymns.html",
+        "slotId": "picture-emma-story2-hymnal",
+        "description": "The little book in her hands is the finished work: A Collection of Sacred Hymns, the selection of sacred hymns she was charged to make in Doctrine and Covenants 25. The edition is dated 1835, and the printed books reached the Saints early in 1836. What she holds here is the completed collection, ninety hymns she chose, small enough to carry into any home or meeting room where the Saints sang together."
+      },
+      "placement_source_sha256": "50c334379066722ef6e80e97d70f0f2ca431777b5857eb15b998da65cc1783cf",
+      "current_placement": {
+        "page": "history/emma-hale-smith.html",
+        "slotId": "picture-emma-story2-hymnal"
+      },
+      "placement_status": "active",
+      "placement_note": "The hub is the owning page; the former story page links to this figure. Existing artwork approval and asset lineage are unchanged."
     },
     {
       "name": "emma-story3-quincy",
       "title": "Emma in Quincy",
-      "description": "This portrait belongs to Emma's Quincy season, the weeks after the crossing. It is not the crossing itself. It is the woman who wrote from Quincy on March 7, 1839, that she was still living and still willing. Her hands rest in her lap, work worn and uninjured: the hands that had carried her children over the ice and then picked up a pen.",
+      "description": "Emma sits with her hands resting in her lap. After bringing her children across the Mississippi, she wrote to Joseph from Quincy on March 7, 1839. Her letter tells of separation, the children's needs and the kindness that helped the family carry on.",
       "alt": "Emma Smith at thirty four, wearing a gray dress, sits by a window with her hands folded in her lap and her gaze lowered.",
-      "page": "history/emma-winter-crossing.html",
+      "page": "history/emma-hale-smith.html",
       "slotId": "picture-emma-story3-quincy",
       "source": "https://www.josephsmithpapers.org/paper-summary/letter-from-emma-smith-7-march-1839/1",
       "source_path": "assets/page-art/emma-life/emma-story3-quincy-review-1536.webp",
@@ -3279,14 +3321,26 @@
           "decoded_rgb_sha256": "8ef2e184a5fb238a0637cdf9110109b9a84c0492f43f54e47aee7cfb5fb33202"
         }
       ],
-      "status": "approved"
+      "status": "approved",
+      "prior_placement": {
+        "page": "history/emma-winter-crossing.html",
+        "slotId": "picture-emma-story3-quincy",
+        "description": "This portrait belongs to Emma's Quincy season, the weeks after the crossing. It is not the crossing itself. It is the woman who wrote from Quincy on March 7, 1839, that she was still living and still willing. Her hands rest in her lap, work worn and uninjured: the hands that had carried her children over the ice and then picked up a pen."
+      },
+      "placement_source_sha256": "50c334379066722ef6e80e97d70f0f2ca431777b5857eb15b998da65cc1783cf",
+      "current_placement": {
+        "page": "history/emma-hale-smith.html",
+        "slotId": "picture-emma-story3-quincy"
+      },
+      "placement_status": "active",
+      "placement_note": "The hub is the owning page; the former story page links to this figure. Existing artwork approval and asset lineage are unchanged."
     },
     {
       "name": "emma-story4-hospitality",
       "title": "An open door",
-      "description": "Across her Nauvoo years, Emma opened her home again and again to the sick, the orphaned, and the homeless. It was a practice, not one day's kindness: a door held open by the woman of the house, with the welcome ready before anyone is seen. She stands in her doorway with one hand resting on the open door, ready for whoever needed shelter next.",
+      "description": "Emma stands beside an open door. In Nauvoo she welcomed people who were sick, orphaned or without a home. Her care for neighbors belonged to the same years in which she led the Relief Society.",
       "alt": "Emma Smith at thirty eight, wearing a dark green dress, stands in the open doorway of her home with one hand resting on the door.",
-      "page": "history/emma-relief-society.html",
+      "page": "history/emma-hale-smith.html",
       "slotId": "picture-emma-story4-hospitality",
       "source": "https://www.churchofjesuschrist.org/study/history/topics/female-relief-society-of-nauvoo?lang=eng",
       "source_path": "assets/page-art/emma-life/emma-story4-hospitality-review-1536.webp",
@@ -3315,14 +3369,26 @@
           "decoded_rgb_sha256": "8c009d6788fc955f5dd112c746234c41964d8268f7918432102a042e0f56a9da"
         }
       ],
-      "status": "approved"
+      "status": "approved",
+      "prior_placement": {
+        "page": "history/emma-relief-society.html",
+        "slotId": "picture-emma-story4-hospitality",
+        "description": "Across her Nauvoo years, Emma opened her home again and again to the sick, the orphaned, and the homeless. It was a practice, not one day's kindness: a door held open by the woman of the house, with the welcome ready before anyone is seen. She stands in her doorway with one hand resting on the open door, ready for whoever needed shelter next."
+      },
+      "placement_source_sha256": "50c334379066722ef6e80e97d70f0f2ca431777b5857eb15b998da65cc1783cf",
+      "current_placement": {
+        "page": "history/emma-hale-smith.html",
+        "slotId": "picture-emma-story4-hospitality"
+      },
+      "placement_status": "active",
+      "placement_note": "The hub is the owning page; the former story page links to this figure. Existing artwork approval and asset lineage are unchanged."
     },
     {
       "name": "emma-story5-testimony",
       "title": "Her testimony",
-      "description": "Near the end of her life, Emma spoke with her son Joseph III about the Book of Mormon, and after her death his account of their conversation was published. As her son Joseph III recorded it, her words were plain: 'My belief is that the Book of Mormon is of divine authenticity—I have not the slightest doubt of it.' That testimony was not new at seventy four. It was the same witness she had carried since Harmony, kept to the end of her life.",
+      "description": "Emma sits near a window in her later years. Her son Joseph III recorded an interview near the end of her life and published it after her death. Speaking of the Book of Mormon, she said, “My belief is that the Book of Mormon is of divine authenticity. I have not the slightest doubt of it.”",
       "alt": "Emma Smith at seventy four, wearing a dark gray dress, sits speaking, one hand raised in conversation, her gaze toward the one she is speaking with.",
-      "page": "history/emma-last-testimony.html",
+      "page": "history/emma-hale-smith.html",
       "slotId": "picture-emma-story5-testimony",
       "source": "https://www.churchofjesuschrist.org/study/ensign/1992/08/my-great-great-grandmother-emma-hale-smith?lang=eng",
       "source_path": "assets/page-art/emma-life/emma-story5-testimony-review-1536.webp",
@@ -3351,7 +3417,19 @@
           "decoded_rgb_sha256": "923a0997ea23650bcff1c0513873bf51c5db0264b4a8479192e4f52e6496e633"
         }
       ],
-      "status": "approved"
+      "status": "approved",
+      "prior_placement": {
+        "page": "history/emma-last-testimony.html",
+        "slotId": "picture-emma-story5-testimony",
+        "description": "Near the end of her life, Emma spoke with her son Joseph III about the Book of Mormon, and after her death his account of their conversation was published. As her son Joseph III recorded it, her words were plain: 'My belief is that the Book of Mormon is of divine authenticity—I have not the slightest doubt of it.' That testimony was not new at seventy four. It was the same witness she had carried since Harmony, kept to the end of her life."
+      },
+      "placement_source_sha256": "50c334379066722ef6e80e97d70f0f2ca431777b5857eb15b998da65cc1783cf",
+      "current_placement": {
+        "page": "history/emma-hale-smith.html",
+        "slotId": "picture-emma-story5-testimony"
+      },
+      "placement_status": "active",
+      "placement_note": "The hub is the owning page; the former story page links to this figure. Existing artwork approval and asset lineage are unchanged."
     }
   ]
 }

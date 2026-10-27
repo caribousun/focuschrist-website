@@ -1,0 +1,77 @@
+{
+  "schema": 1,
+  "reviewer": "Newton",
+  "review_role": "Newton",
+  "author_id": "/root/repair_adams_hero_classification/subsequent_qa/css_dependency_mapping/index_successor_review",
+  "role_assignment_sha256": "4624118c89d927e838f1762c73b8a172d4b79f55778236ced9a16c4b382c9231",
+  "role_scope": "Explicitly appointed task-specific review role; not a claim to be the historical Newton agent.",
+  "reviewed_at": "2026-10-27T21:54:14.913907+00:00",
+  "decision": "CONCUR",
+  "spec_sha256": "8f3e13f9de807b116ad82fcc17ccf98a9c3924413539ce7dccb76d7e9939352c",
+  "source_rights_checked": true,
+  "finished_pixels": true,
+  "desktop_phone_inspected": true,
+  "mandate_readback": {
+    "files": [
+      {
+        "path": "stage156/AGENTS-current-source.md",
+        "sha256": "e70c3fdc59032a8db0ff3f331855b174e5721457ade9e87f0f76a61a8442bd1d"
+      },
+      {
+        "path": "stage156/OWNER-ENLARGED-HEADER-REFLOW-APPROVAL.json",
+        "sha256": "59bca797621e3c3da14a547ae56c685c82f1aaefe32407c1dd9648b277744dda"
+      }
+    ],
+    "applicable_requirements": [
+      "Preserve original chart assets, controls, source attribution, and prior evidence; no synthetic provider or review claims.",
+      "Maintain hero and Continue geometry and normal phone/desktop visibility; only owner-authorized 52px narrow enlarged text reflow.",
+      "Independently inspect actual finished desktop and phone pixels, behavior and source; no release acceptance from diagnostic evidence alone."
+    ]
+  },
+  "finished_candidate_follows_mandates": true,
+  "observations": [
+    "Independently examined all 24 viewer screenshots and eight owner intro/footer screenshots; file SHA-256s and detailed observations recorded in local independent report SHA256 bbd3eeeb1bca68972e54ca43527f6a90e868b6ddcda7a2d41ba4c61bc5daa6ec.",
+    "Four viewer and four owner profiles report PASS; normal opening coordinates match reference. At 320×1000 root 200%, prior-to-current hero and Continue y shift exactly +52px; prior combined text-bottom is derived as max of actual two fragment bounds, with current bottom +52px.",
+    "At 844×390 the Continue control is below the initial viewport; its 127.578125×44 box matches the reference at identical coordinates. The source-based owner journey scrolls it into view, clicks it and confirms the target; no claim of above-fold visibility in landscape.",
+    "Supported GitHub reads confirm PR531 head, merge/tree/parents, success of distinct Timeline and owner jobs and artifact IDs; overall workflow was failure. Actual ZIP sizes and SHA-256 match provider records and every ZIP member matches the 24/74 screenshot files and reports.",
+    "Source and rights check: retained 331 asset rows and historical work records are unchanged; Wikimedia Commons attributes the 1881 chart to Adams, cites David Rumsey, and identifies US public-domain status. No worldwide or independent download-chain assertion."
+  ],
+  "limits": [
+    "Scoped rendered and source review; no full CI pass, owner aesthetic acceptance, deployment or physical-device certification.",
+    "I did not personally operate the live site or test native touch pinch/drag, browser chrome fullscreen, search submission, menu bottom reachability or every breakpoint.",
+    "I inspected all 24 chart images and eight owner images, not all 74 owner images; all 74 owner screenshot hashes matched the ZIP and report.",
+    "No independent rehash or decoding of all 331 chart JPEGs or verification of each historical claim was performed.",
+    "The landscape Continue is below the initial viewport; accessibility after scrolling is supported by the automated journey, not personal interaction."
+  ],
+  "evidence": [
+    {
+      "path": "docs/adams-header-evidence-successor/viewer-report.json",
+      "bytes": 426299,
+      "sha256": "cfbcea98545f981c47f1e681dba956fa98f35fe65ba3bc01da2d790a87a0eba7"
+    },
+    {
+      "path": "docs/adams-header-evidence-successor/run-identity.json",
+      "bytes": 525,
+      "sha256": "6ce9a186bd93f2bb030493e5f8c8246bddce38e7d7bc433aaa806af4428bdefd"
+    },
+    {
+      "path": "docs/adams-header-evidence-successor/capture-manifest.json",
+      "bytes": 4172,
+      "sha256": "80d2e61824fa474e1302b7c2c00b6521d87362b44d809a7a10c9611d3155fbbd"
+    },
+    {
+      "path": "docs/adams-header-evidence-successor/owner-report.json",
+      "bytes": 481835,
+      "sha256": "8d431ecc06fc793658c0bfa317c2d22d5eb24474bb77bf291821e6ad320d6c29"
+    },
+    {
+      "path": "docs/adams-header-evidence-successor/owner-capture-manifest.json",
+      "bytes": 18749,
+      "sha256": "49a9cec8682822e3cb2fd901498e092c59f4caf2b7246acda29fefba320f5007"
+    }
+  ],
+  "independent_report_local": {
+    "path": "stage156/adams-current-evidence-successor-v1/INDEPENDENT-SECOND-CHART-ACTUAL-REVIEW.md",
+    "sha256": "bbd3eeeb1bca68972e54ca43527f6a90e868b6ddcda7a2d41ba4c61bc5daa6ec"
+  }
+}

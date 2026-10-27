@@ -97,7 +97,8 @@
     "research-feature-study": "Joseph research feature comparison surface owned by joseph-smith-research.css; groups original artwork, physical evidence and reasoning. Uses shared border/radius tokens; scoped desktop and phone review verifies its own layout and contrast.",
     "fc-guided-path": "Three guided study paths on Answers use open columns, quiet separators and one continuous blue-teal reading surface in screen-only #guided-studies rules owned by guided-studies.css; preserve existing content, controls, Emma companion and print consumers.",
     "fc-companion": "Four printable companion disclosures on Answers and Emma are owned by guided-studies.css; transparent border-bottom disclosure styling and print rules are preserved, not shared section-panel overrides.",
-    "fc-attributed-story": "Three named attributed-story asides on Conference, Stand Forever and Settle; exact screen-only targeted-six.css owns reviewed teal surface and prose rhythm."
+    "fc-attributed-story": "Three named attributed-story asides on Conference, Stand Forever and Settle; exact screen-only targeted-six.css owns reviewed teal surface and prose rhythm.",
+    "fc-adams-timeline-card": "One exact Timeline Adams introduction card; scoped adams-integration.css uses canonical panel fill, border, shadow and gold edge tokens. Current source and owner validated separately; rendered geometry remains required."
   },
   "excluded_classes": {
     "research-comparison-note": "Inline limitations attached to separately labelled source views; plain reading note, not a section panel.",
@@ -157,7 +158,8 @@
     "mapnote": "World and Scripture timeline geographic provenance paragraph beneath the map; inline map annotation styling and tested scenario disclosure, not a study section panel.",
     "companion-note": "World and Scripture companion link explanatory paragraph; ordinary typography-only reading text, not an independent filled section panel.",
     "fc-life-reflections--two": "Two-column responsive layout modifier on bare fc-life-reflections containers in the five Emma story pages; only grid-template-columns changes. Child fc-life-reflection panels retain their existing history-stories.css surface owner; no independent painted surface.",
-    "fc-adams-note": "Exactly two disclaimer/credit paragraphs in the byte-pinned Adams standalone toolbar, not shared study cards. Existing chart controls and inline presentation retain their separate finished desktop/phone review."
+    "fc-adams-note": "Historical a36 standalone classification retained for provenance only; current inventory explicitly rejects this obsolete class on every page. Exact old two-paragraph contract is exercised only in the archived historical fixture.",
+    "fc-life-scripture-reflection": "Exact four current Emma hub scripture-reflection modifiers on existing fc-life-reflection painted panels; scoped inline heading/paragraph/spacing rules only, not an independent painted surface. Current owner/count and complete source are validated separately."
   },
   "runtime_selectors": {
     ".cfm-month": {

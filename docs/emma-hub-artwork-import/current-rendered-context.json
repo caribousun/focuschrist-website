@@ -1,0 +1,75 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "spec_sha256": "5f1de193844aeeb108e8a474723188e8b5cf464eeacfa203f2cfe8802686baf9",
+  "producer_head": "87cce928c366f3f5820fce1ae19bc989a952d982",
+  "artifact_sha256": "20a753a327c0842504b403e30a2655207b3c1f4da68dd40d76ce4d4a2fa0fb26",
+  "qa_contract": {
+    "path": "docs/emma-hub-artwork-import/current-qa-contract.json",
+    "bytes": 22584,
+    "sha256": "dfd79763625196b8851b52e8c99e1cb1a65258a77a7f926d38790af38bed6ed1"
+  },
+  "raw_report": {
+    "path": "docs/emma-hub-artwork-import/current-raw-report.json",
+    "bytes": 481925,
+    "sha256": "b73e052b4121c52ea9d68557af48b28ecda4ee64e11846973d6c46deaf122d8f"
+  },
+  "artifact_binding": {
+    "path": "docs/emma-hub-artwork-import/current-artifact-binding.json",
+    "bytes": 518,
+    "sha256": "bb6352203e37bdb8235d0dabe229d0c0b9b04686c23f41e473205dcccbb7de57"
+  },
+  "capture_membership": {
+    "path": "docs/emma-hub-artwork-import/current-capture-membership.json",
+    "bytes": 1946,
+    "sha256": "0f1dd9be91661828dd7d87e0a6265d697dcc104d44ada1f39990f4cdc679179f"
+  },
+  "viewports": {
+    "desktop": {
+      "scene_ids": [
+        "ride",
+        "hymnal",
+        "quincy",
+        "hospitality",
+        "testimony"
+      ],
+      "reference_journeys": true,
+      "detail_reader_fullsize_focus": true,
+      "evidence": [
+        {
+          "path": "docs/emma-hub-artwork-import/current-raw-report.json",
+          "bytes": 481925,
+          "sha256": "b73e052b4121c52ea9d68557af48b28ecda4ee64e11846973d6c46deaf122d8f"
+        },
+        {
+          "path": "docs/emma-hub-artwork-import/current-capture-membership.json",
+          "bytes": 1946,
+          "sha256": "0f1dd9be91661828dd7d87e0a6265d697dcc104d44ada1f39990f4cdc679179f"
+        }
+      ]
+    },
+    "phone": {
+      "scene_ids": [
+        "ride",
+        "hymnal",
+        "quincy",
+        "hospitality",
+        "testimony"
+      ],
+      "reference_journeys": true,
+      "detail_reader_fullsize_focus": true,
+      "evidence": [
+        {
+          "path": "docs/emma-hub-artwork-import/current-raw-report.json",
+          "bytes": 481925,
+          "sha256": "b73e052b4121c52ea9d68557af48b28ecda4ee64e11846973d6c46deaf122d8f"
+        },
+        {
+          "path": "docs/emma-hub-artwork-import/current-capture-membership.json",
+          "bytes": 1946,
+          "sha256": "0f1dd9be91661828dd7d87e0a6265d697dcc104d44ada1f39990f4cdc679179f"
+        }
+      ]
+    }
+  }
+}

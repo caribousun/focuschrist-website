@@ -133,6 +133,7 @@
     "/search.html",
     "/timeline.html",
     "/timelines/adams-1881-chart.html",
+    "/timelines/adams-1881-introduction.html",
     "/timelines/latter-day-saint-church-history-timeline.html",
     "/timelines/life-of-christ-journey-map.html",
     "/timelines/willie-and-martin-handcart-map.html",
@@ -2285,9 +2286,9 @@
       "id": "art-a1a4f80569b3",
       "occurrences": [
         {
-          "id": "source-5d08bf624431",
-          "page": "/history/emma-elect-lady.html",
-          "pageTitle": "An Elect Lady: Emma at Harmony",
+          "id": "source-fca5670c3531",
+          "page": "/history/emma-hale-smith.html",
+          "pageTitle": "Emma Hale Smith: a life of faith, work, and care",
           "category": "Church History",
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/emma-life/emma-story1-ride-review-1536.webp\"]:has(img[src=\"/assets/page-art/emma-life/emma-story1-ride-review-960.webp\"])",
@@ -3792,9 +3793,9 @@
       "id": "art-1176e412c568",
       "occurrences": [
         {
-          "id": "source-59a806351c1d",
-          "page": "/history/emma-relief-society.html",
-          "pageTitle": "Something Extraordinary: Emma and the Relief Society of Nauvoo",
+          "id": "source-5d492d1de74f",
+          "page": "/history/emma-hale-smith.html",
+          "pageTitle": "Emma Hale Smith: a life of faith, work, and care",
           "category": "Church History",
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/emma-life/emma-story4-hospitality-review-1536.webp\"]:has(img[src=\"/assets/page-art/emma-life/emma-story4-hospitality-review-960.webp\"])",
@@ -7966,9 +7967,9 @@
       "id": "art-63cc118e41a8",
       "occurrences": [
         {
-          "id": "source-05e8f17ed2af",
-          "page": "/history/emma-winter-crossing.html",
-          "pageTitle": "The Winter Crossing: Emma Leads Her Children to Quincy",
+          "id": "source-d4a5175afa82",
+          "page": "/history/emma-hale-smith.html",
+          "pageTitle": "Emma Hale Smith: a life of faith, work, and care",
           "category": "Church History",
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/emma-life/emma-story3-quincy-review-1536.webp\"]:has(img[src=\"/assets/page-art/emma-life/emma-story3-quincy-review-960.webp\"])",
@@ -8713,28 +8714,6 @@
       ],
       "categories": [
         "Gospel Studies"
-      ]
-    },
-    {
-      "title": "Food beside the well",
-      "category": "Church History",
-      "thumbnail": "/assets/page-art/emma-life/emma-c2-review-960.webp",
-      "fullImage": "/assets/page-art/emma-life/emma-c2-review-1536.webp",
-      "alt": "Disciples offer food to Jesus beside a well.",
-      "id": "art-c502d172fcc3",
-      "occurrences": [
-        {
-          "id": "source-4733dce58059",
-          "page": "/history/emma-hale-smith.html",
-          "pageTitle": "Emma Hale Smith: a life of faith, work, and care",
-          "category": "Church History",
-          "kind": "topic",
-          "selector": "a[href=\"/assets/page-art/emma-life/emma-c2-review-1536.webp\"]:has(img[src=\"/assets/page-art/emma-life/emma-c2-review-960.webp\"])",
-          "title": "Food beside the well"
-        }
-      ],
-      "categories": [
-        "Church History"
       ]
     },
     {
@@ -10616,9 +10595,9 @@
       "id": "art-74c2c18c300c",
       "occurrences": [
         {
-          "id": "source-5526e80b7f54",
-          "page": "/history/emma-last-testimony.html",
-          "pageTitle": "Her Own Witness: Emma's Later Years in Nauvoo",
+          "id": "source-5872c58d8b2b",
+          "page": "/history/emma-hale-smith.html",
+          "pageTitle": "Emma Hale Smith: a life of faith, work, and care",
           "category": "Church History",
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/emma-life/emma-story5-testimony-review-1536.webp\"]:has(img[src=\"/assets/page-art/emma-life/emma-story5-testimony-review-960.webp\"])",
@@ -19733,9 +19712,9 @@
       "id": "art-1a552d9bd3f4",
       "occurrences": [
         {
-          "id": "source-8f874f03b61a",
-          "page": "/history/emma-hymns.html",
-          "pageTitle": "The Song of the Heart: Emma and the First Hymnbook",
+          "id": "source-e83acbd40cce",
+          "page": "/history/emma-hale-smith.html",
+          "pageTitle": "Emma Hale Smith: a life of faith, work, and care",
           "category": "Church History",
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/emma-life/emma-story2-hymnal-review-1536.webp\"]:has(img[src=\"/assets/page-art/emma-life/emma-story2-hymnal-review-960.webp\"])",
@@ -23419,28 +23398,6 @@
       ]
     },
     {
-      "title": "Words for a community to sing",
-      "category": "Church History",
-      "thumbnail": "/assets/page-art/emma-life/emma-h2-review-960.webp",
-      "fullImage": "/assets/page-art/emma-life/emma-h2-review-1536.webp",
-      "alt": "Emma considers hymn pages at a table.",
-      "id": "art-15898d972558",
-      "occurrences": [
-        {
-          "id": "source-4c4bbf202539",
-          "page": "/history/emma-hale-smith.html",
-          "pageTitle": "Emma Hale Smith: a life of faith, work, and care",
-          "category": "Church History",
-          "kind": "topic",
-          "selector": "a[href=\"/assets/page-art/emma-life/emma-h2-review-1536.webp\"]:has(img[src=\"/assets/page-art/emma-life/emma-h2-review-960.webp\"])",
-          "title": "Words for a community to sing"
-        }
-      ],
-      "categories": [
-        "Church History"
-      ]
-    },
-    {
       "title": "Words for a scattered people",
       "category": "Church History",
       "thumbnail": "/assets/page-art/church-history/liberty-letter-960.webp",
@@ -23640,14 +23597,14 @@
     }
   ],
   "stats": {
-    "artworks": 1064,
-    "occurrences": 1071,
+    "artworks": 1062,
+    "occurrences": 1069,
     "byKind": {
       "artwork": 69,
       "hero": 45,
       "legacy": 39,
       "missionary": 13,
-      "topic": 958
+      "topic": 956
     }
   }
 }

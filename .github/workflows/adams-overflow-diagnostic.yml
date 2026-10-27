@@ -1,0 +1,39 @@
+name: Adams overflow diagnostic (not release acceptance)
+on:
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  adams-overflow:
+    if: github.event.pull_request.number == 531
+    name: Adams narrow enlarged-text diagnostic only
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out the same PR merge tree as site QA
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Verify existing dependency contract
+        run: python tools/qa_dependency_contract.py --self-test
+      - name: Install existing pinned browser dependencies
+        run: |
+          npm install --prefix /tmp/focus-row-qa --no-save --package-lock=false --ignore-scripts playwright@1.55.1 leaflet@1.9.4
+          /tmp/focus-row-qa/node_modules/.bin/playwright install --with-deps chromium
+      - name: Record checkout and capture Adams overflow evidence
+        env:
+          EXPECTED_CHECKOUT_SHA: ${{ github.sha }}
+          NODE_PATH: /tmp/focus-row-qa/node_modules
+        run: |
+          test "$(git rev-parse HEAD)" = "$EXPECTED_CHECKOUT_SHA"
+          timeout --signal=TERM --kill-after=10s 120s node tools/adams_overflow_diagnostic.js
+      - name: Preserve diagnostic evidence, including failure details
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: adams-overflow-diagnostic
+          path: .qa-artifacts/adams-overflow-diagnostic/
+          include-hidden-files: true
+          if-no-files-found: warn
+          retention-days: 7

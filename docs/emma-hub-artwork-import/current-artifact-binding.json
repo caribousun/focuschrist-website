@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "source": "PROVIDER_ARTIFACT_DOWNLOAD",
+  "artifact_id": 12760828508,
+  "run_id": 40562650871,
+  "producer_head": "87cce928c366f3f5820fce1ae19bc989a952d982",
+  "zip_bytes": 5077241,
+  "zip_sha256": "20a753a327c0842504b403e30a2655207b3c1f4da68dd40d76ce4d4a2fa0fb26",
+  "report": {
+    "archive_member": "report.json",
+    "bytes": 481925,
+    "sha256": "b73e052b4121c52ea9d68557af48b28ecda4ee64e11846973d6c46deaf122d8f"
+  },
+  "zip_sha256_computed": true,
+  "report_member_readback_verified": true
+}

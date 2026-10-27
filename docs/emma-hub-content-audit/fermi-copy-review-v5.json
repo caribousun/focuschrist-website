@@ -1,0 +1,61 @@
+{
+  "reviewer": "Fermi, local AI editorial review",
+  "decision": "CONCUR_COPY_AND_NARRATIVE_STRUCTURE",
+  "reviewed_on": "2026-10-27",
+  "sources": [
+    {
+      "path": "history/emma-elect-lady.html",
+      "bytes": 14734,
+      "sha256": "f32c79609f15d51e9c85b2f4bc941de38d2626c944e33f1876fc574f46f7986c"
+    },
+    {
+      "path": "history/emma-hale-smith.html",
+      "bytes": 66144,
+      "sha256": "50c334379066722ef6e80e97d70f0f2ca431777b5857eb15b998da65cc1783cf"
+    },
+    {
+      "path": "history/emma-hymns.html",
+      "bytes": 15103,
+      "sha256": "719bc7f899ebc188f33322c4c7c6bea9e326b209e28e2d49855543185e12aedb"
+    },
+    {
+      "path": "history/emma-last-testimony.html",
+      "bytes": 15464,
+      "sha256": "ff608df4a3bb994d29834e253daac97b1721ecf2b3209a621e284f16ca91eb70"
+    },
+    {
+      "path": "history/emma-relief-society.html",
+      "bytes": 15000,
+      "sha256": "e90e7b25239973e2488f32e57482fd5cfbdabb6a7f3f1746599aded9cd546ebb"
+    },
+    {
+      "path": "history/emma-winter-crossing.html",
+      "bytes": 14477,
+      "sha256": "a2c6003789eaaf4458bb3f431943c2d4602908b19324054ef8ca9f0aab30a417"
+    }
+  ],
+  "observations": [
+    "Five additional Emma scenes and substantive stories are integrated into the chronological hub, not only linked as teasers.",
+    "Four retained Christ scenes are clearly scripture reflections with contextual connections to prayer, hymns, relief and bereavement. The food-beside-the-well scene is removed from this journey.",
+    "Warning-ride, Quincy, hospitality and testimony captions use direct description and natural source attribution rather than unsupported absolutes or repeated artwork disclaimers.",
+    "Testimony quotation punctuation and Lucy Mack Smith quotation wording match the cited Ensign source. Duplicate affiliation prose and unnecessary evidence-status narration are removed.",
+    "The five added originals have one owning hub figure each; their separate story pages link directly to those owning fragments."
+  ],
+  "authoritative_sources": [
+    "https://www.churchofjesuschrist.org/study/liahona/2021/03/emma-protected-scripture?lang=eng",
+    "https://www.josephsmithpapers.org/paper-summary/letter-from-emma-smith-7-march-1839/1",
+    "https://www.churchofjesuschrist.org/study/ensign/1992/08/my-great-great-grandmother-emma-hale-smith?lang=eng"
+  ],
+  "limits": [
+    "Editorial/source-structure review only; not rendered desktop/phone acceptance or publication approval.",
+    "No new image generation or pixel alteration reviewed.",
+    "Not a fresh exhaustive historical-source audit of every unchanged claim.",
+    "Whole-site ownership registration, actual image/context inspection and interaction evidence remain separate."
+  ],
+  "inventory": {
+    "owned_emma": 9,
+    "owned_christ": 4,
+    "owned_total": 13,
+    "existing_hero_reference": 1
+  }
+}

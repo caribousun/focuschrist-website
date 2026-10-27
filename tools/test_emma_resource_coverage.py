@@ -1,3 +1,5 @@
+# Stage156: these unchanged assertions exercise explicit historical a36 fixtures.
+# Current integrated source/DOM/panels/search/resource checks run separately.
 """Focused additive registration tests; full resource-thumbnail QA remains required."""
 import hashlib
 import json
@@ -7,7 +9,8 @@ import unittest
 from urllib.parse import urlsplit
 from xml.etree import ElementTree as ET
 from adams_resource_coverage import ADAMS_ROUTE, without_adams_resource_owner
-ROOT = Path(__file__).resolve().parents[1]
+from owner_integration_test_fixtures import historical_root
+ROOT = historical_root(Path(__file__).resolve().parents[1])
 OWNERS = tuple('history/emma-' + name + '.html' for name in (
     'elect-lady', 'hymns', 'winter-crossing', 'relief-society', 'last-testimony'))
 HISTORICAL_SHA = 'ea7157cbddb5b62c0211f27ef1e8722a08764de947d874fa682eae25d400c8f2'

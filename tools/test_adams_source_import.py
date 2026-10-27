@@ -13,7 +13,7 @@ import os
 from pathlib import Path
 import tempfile
 import unittest
-import adams_source_import as family
+import adams_source_import_v9 as family
 import artwork_creation_gate as creation
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -40,6 +40,7 @@ class AdamsSourceImportTests(unittest.TestCase):
         for name in (family.MANIFEST, 'tools/artwork_creation_gate.py'):
             raw = (ROOT / name).read_bytes()
             expected[name] = {'bytes': len(raw), 'sha256': hashlib.sha256(raw).hexdigest()}
+        historical_sources = {'timelines/adams-1881-chart.html': 'docs/adams-chart-import/history/v9/timelines__adams-1881-chart.html.source', 'timeline.html': 'docs/adams-chart-import/history/v9/timeline.html.source', 'tools/adams_chart_browser_qa.js': 'docs/adams-chart-import/history/v9/tools__adams_chart_browser_qa.js.source'}
         source_map = None
         if os.environ.get('ADAMS_TEST_INPUT_MAP'):
             source_map = json.loads(Path(os.environ['ADAMS_TEST_INPUT_MAP']).read_text(encoding='utf-8'))
@@ -49,7 +50,7 @@ class AdamsSourceImportTests(unittest.TestCase):
         cls.inputs = []
         try:
             for name, pin in expected.items():
-                source = Path(source_map[name]['source']) if source_map else ROOT / name
+                source = Path(source_map[name]['source']) if source_map else ROOT / historical_sources.get(name, name)
                 if source_map:
                     assert source_map[name]['bytes'] == pin['bytes'] and source_map[name]['sha256'] == pin['sha256']
                 assert source.is_file() and not source.is_symlink(), 'Source must be regular'
@@ -284,3 +285,4 @@ class AdamsSourceImportTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+

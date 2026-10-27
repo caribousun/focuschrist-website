@@ -1,0 +1,56 @@
+/* Page-scoped integration of the original Adams chart; shared styles unchanged. */
+body.fc-adams-chart-page { height:auto; min-height:100svh; overflow-x:hidden; overflow-y:auto; padding-top:var(--adams-header-height,62px); }
+html:has(body.fc-adams-chart-page) { height:auto; overflow-x:hidden; overflow-y:auto; }
+body.fc-adams-chart-page #adams-chart-main { position:relative; width:100%; height:max(240px,calc(100svh - var(--adams-header-height,62px))); min-height:240px; overflow:hidden; }
+body.fc-adams-chart-page #toolbar { top:0; }
+body.fc-adams-chart-page > .fc-footer { position:relative; margin:0; padding:28px max(20px,calc((100vw - 1038px)/2)); text-align:center; }
+body.fc-adams-chart-page .fc-adams-credit { font-size:inherit; line-height:1.6; color:inherit; }
+body.fc-adams-chart-page .fc-adams-footer-links { display:flex; flex-wrap:wrap; justify-content:center; gap:12px 24px; margin-block:16px; }
+body.fc-adams-intro-page .fc-adams-overview { scroll-margin-top:90px; }
+body.fc-adams-intro-page .fc-adams-overview .fc-actions { margin-top:24px; }
+body.fc-adams-intro-page .fc-adams-source-note { margin-top:28px; font-size:.95rem; line-height:1.65; }
+body.fc-timeline-page #adams-1881 { scroll-margin-top:90px; }
+body.fc-timeline-page .fc-adams-timeline-card { border:1px solid var(--fc-line-strong); border-radius:var(--fc-radius); padding:clamp(20px,3vw,36px); background:var(--fc-panel-fill); border-color:var(--fc-panel-border); border-left:4px solid var(--fc-gold); box-shadow:var(--fc-panel-shadow); }
+body.fc-timeline-page .fc-adams-timeline-card img { display:block; width:100%; height:auto; margin-block:20px; border:1px solid var(--fc-panel-border); }
+body.fc-timeline-page .fc-adams-timeline-card p { max-width:68ch; }
+@media(max-width:700px) {
+ body.fc-adams-chart-page #adams-chart-main { min-height:240px; }
+}
+body.fc-adams-intro-page .fc-adams-overview-image { display:block; width:100%; height:auto; margin-block:24px; }
+body.fc-adams-intro-page #adams-introduction-main > .wrap { box-sizing:border-box; width:100%; max-width:calc(var(--fc-standard) + 2 * var(--fc-body-gutter)); padding-inline:var(--fc-body-gutter); margin-inline:auto; }
+
+/* Canonical mobile/tablet header is in normal flow; reserve space only for fixed desktop header. */
+@media(max-width:1020px) { body.fc-adams-chart-page { padding-top:0; } }
+
+/* Equal-level Timeline choices: paired rows and a centered final choice. */
+body.fc-timeline-page .fc-timeline-choices { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); grid-auto-rows:1fr; gap:16px; align-items:stretch; }
+body.fc-timeline-page .fc-timeline-choices > a.fc-button { grid-column:span 2; box-sizing:border-box; width:100%; min-width:0; min-height:56px; height:auto; padding:14px 20px; border:1px solid var(--fc-gold); border-radius:var(--fc-radius-lg); background:var(--fc-bg-warm); background:color-mix(in srgb,var(--fc-sky) 22%,var(--fc-bg-warm)); color:var(--fc-cream) !important; box-shadow:none; white-space:normal; overflow-wrap:anywhere; text-align:center; line-height:1.5; }
+body.fc-timeline-page .fc-timeline-choices > a.fc-button:last-child:nth-child(odd) { grid-column:2 / span 2; }
+body.fc-timeline-page .fc-timeline-choices > a.fc-button:hover { background:var(--fc-bg-warm); color:var(--fc-cream) !important; border-color:var(--fc-gold-light); }
+body.fc-timeline-page .fc-timeline-choices > a.fc-button:focus-visible { background:var(--fc-bg-warm); outline:3px solid var(--fc-gold-light); outline-offset:4px; color:var(--fc-cream) !important; }
+@media(max-width:700px) {
+ body.fc-timeline-page .fc-timeline-choices { grid-template-columns:minmax(0,1fr); }
+ body.fc-timeline-page .fc-timeline-choices > a.fc-button,
+ body.fc-timeline-page .fc-timeline-choices > a.fc-button:last-child:nth-child(odd) { grid-column:1; }
+}
+
+/* Original chart tiles retain engine-assigned pixel sizes, not shared content-image clamping. */
+body.fc-adams-chart-page #tiles > img.tile { max-width:none; }
+/* Compact status is a real toolbar row, never an overlay on chart or controls. */
+@media(max-width:899px) and (max-height:700px) {
+ body.fc-adams-chart-page #toolbar > #progress { position:static; bottom:auto !important; align-self:flex-end; max-width:100%; margin:0; }
+}
+
+/* Match the reference Timeline introduction's kicker without changing the shared hero. */
+body.fc-adams-intro-page .kicker { letter-spacing:.14em; text-transform:uppercase; font-size:12px; font-weight:700; }
+/* In short landscape, the map fits beside the restored dock and below the measured toolbar. */
+@media (min-width:701px) and (max-width:899px) and (max-height:550px) {
+ body.fc-adams-chart-page #navDock { width:min(96vw,590px,calc(100vw - 118px)) !important; max-width:min(96vw,590px,calc(100vw - 118px)) !important; }
+ body.fc-adams-chart-page #mini { top:calc(var(--adams-toolbar-height, 0px) + 8px); bottom:auto !important; width:min(145px,calc((100% - min(96vw,590px,calc(100vw - 118px))) / 2 - 15px)); }
+}
+
+/* Let the Adams intro's existing Timeline header reflow when enlarged text needs room. */
+@media (max-width:1020px) {
+ body.fc-adams-intro-page .nav[data-focuschrist-header="standard"] { flex-wrap:wrap; row-gap:8px; }
+ body.fc-adams-intro-page .nav[data-focuschrist-header="standard"] .hamburger-wrap { margin-left:auto; }
+}

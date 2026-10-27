@@ -1,3 +1,5 @@
+# Stage156: these unchanged assertions exercise explicit historical a36 fixtures.
+# Current integrated source/DOM/panels/search/resource checks run separately.
 """Twelve finite Adams panel/standalone tests; full inventory equality stays in CI."""
 import copy
 import hashlib
@@ -7,10 +9,12 @@ import re
 import tempfile
 import unittest
 from unittest.mock import patch
-import section_panel_surface_qa as q
 from adams_standalone_opening import ADAMS_ROUTE
 
-ROOT = Path(__file__).resolve().parents[1]
+from owner_integration_test_fixtures import historical_root
+ROOT = historical_root(Path(__file__).resolve().parents[1])
+from owner_integration_test_fixtures import historical_panel_module
+q = historical_panel_module(ROOT)
 
 
 class AdamsPanelTests(unittest.TestCase):

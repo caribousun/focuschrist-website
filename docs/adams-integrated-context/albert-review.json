@@ -1,0 +1,52 @@
+{
+  "schema": 1,
+  "reviewer": "Albert",
+  "actual_author": "Albert, actual root reviewer in current cloud session",
+  "reviewed_at": "2026-10-27T19:07:57.908295+00:00",
+  "decision": "CONCUR",
+  "spec_sha256": "5fb32aca33885b60b334ca5bcc4bede36663fe3ecd8557300bfea67155e1c5dc",
+  "source_rights_checked": true,
+  "finished_pixels": true,
+  "desktop_phone_inspected": true,
+  "observations": [
+    "Personally opened the exact Wikimedia Commons source page and read author Sebastian C. Adams,1881, David Rumsey source and U.S. public-domain/PD-Art description. Current source/footer credit matches; other-jurisdiction qualification remains and no download-chain claim is made.",
+    "Personally inspected actual desktop/phone chart fit and narrow/landscape expanded-control screenshots from this exact verified artifact. Normal header precedes chart title, old pretitle notice block is absent, original chart controls are contained and chart tiles are visible.",
+    "Read raw viewer report: 331 source assets, no timeout, 24 captures and four passing profiles totaling101 states (28+23+25+25). Actual landscape restored map rectangle721,256.09375 to833,308.09375 lies below toolbar248.09375 and beside dock ending717; actual map tap/navigation assertion passes. This is report-observed browser behavior, not a claim of personal replay.",
+    "Personally inspected current desktop/phone introduction screenshots and the source-bound focused four-profile passing report. Hero/Continue geometry matches established reference. Short landscape Continue is below fold as in reference, with ordinary scroll/click journey passing and secondary copy retained.",
+    "Personally inspected Timeline choice screenshots: two equal pairs with centered fifth on desktop, uniform phone stack and visible focus. Current source/asset bytes and original chart controls remain preserved through reviewed exact binding.",
+    "Current v3 spec explicitly separates historical standalone navigation from current canonical header/footer and guarded keyboard/toolbar synchronization. Newly loaded timeline-mobile-study.css is pinned with allnine shared dependencies."
+  ],
+  "limits": [
+    "Finite source, rights, actual rendered pixels and hosted browser report concurrence only. No physical-device or comprehensive accessibility certification.",
+    "Unchanged original portrait controls include23/27px hit boxes; do not claim44px targets. Expanded overlays intentionally cover part of chart and remain closable. This review does not redesign the owner-supplied control scheme.",
+    "Final fullQA and actual331asset positive checks, ordinary deployment and immediate root hands-on live-browser verification remain required. Owner specifically approved the latter after publication; it is not skipped."
+  ],
+  "evidence": [
+    {
+      "path": "docs/adams-integrated-context/viewer-report.json",
+      "bytes": 426299,
+      "sha256": "25448b567f9e1675641e30e5a0947649d8439bb73524ed002e9b7ac6a5bf45c4"
+    },
+    {
+      "path": "docs/adams-integrated-context/run-identity.json",
+      "bytes": 525,
+      "sha256": "40fc2c76955a5690b876d1d898a3263fd0b657775bb6ca3c4603c3712bbf5506"
+    },
+    {
+      "path": "docs/adams-integrated-context/capture-manifest.json",
+      "bytes": 4172,
+      "sha256": "cc615611a065da6e7999c6097f4407f4683007bbb89440651b8e9eef3fbb87d7"
+    },
+    {
+      "path": "docs/adams-integrated-context/owner-report.json",
+      "bytes": 481925,
+      "sha256": "b73e052b4121c52ea9d68557af48b28ecda4ee64e11846973d6c46deaf122d8f"
+    },
+    {
+      "path": "docs/adams-integrated-context/owner-capture-manifest.json",
+      "bytes": 18749,
+      "sha256": "6fd71bc8401562dd52624dcbeb168abf17b658ae0f5d195a534b88a23fb47172"
+    }
+  ],
+  "source_url": "https://commons.wikimedia.org/wiki/File:Adams_Synchronological_Chart,_1881.jpg"
+}

@@ -56,8 +56,11 @@ const pages=[...new Set(urls)].sort();
 const emmaControls=require('./emma_study_link_controls');
 const emmaValidated=[];
 const adamsControls=require('./adams_study_link_controls'),adamsValidated=[];
-require('./test_adams_study_link_controls')(JSDOM,read,selectors);
-require('./test_emma_study_link_controls')(JSDOM,read,selectors);
+const integration=require('./owner_integration_navigation'),pastRead=integration.historicalRead(read);
+const currentRoutes=urls.map(p=>p==='index.html'?'/':'/'+p);
+require('./test_owner_integration_navigation').selfTest(currentRoutes,read,JSDOM);
+require('./test_adams_study_link_controls')(JSDOM,pastRead,selectors);
+require('./test_emma_study_link_controls')(JSDOM,pastRead,selectors);
 // Six frozen artwork figures add exactly five named source controls. The Stand
 // scripture links remain inline prose. Validate these additions before taking
 // their exact inverse for the unchanged control-coverage baseline.
@@ -207,12 +210,12 @@ for(const s of selectors)inventory.selectors[s]={count:0,pages:[]};
 for(const page of pages){
  const dom=new JSDOM(read(page)),doc=dom.window.document;
  assertNoLooseSourceSeparators(doc);
- if([adamsControls.owner,adamsControls.landing].includes(page)){adamsControls.validate(doc,page,selectors,read(page),read);adamsValidated.push(page);}
+ if([adamsControls.owner,adamsControls.landing].includes(page)){const old=new JSDOM(pastRead(page));try{adamsControls.validate(old.window.document,page,selectors,pastRead(page),pastRead);adamsValidated.push(page);}finally{old.window.close();}}
  readingSourceControls+=invertReadingFigures(doc,page);
  seasonalSourceControls+=invertSeasonalFigures(doc,page);
  fourSceneSourceControls+=invertFourSceneFigures(doc,page);
  sixSceneSourceControls+=invertSixSceneFigures(doc,page);
- if(emmaControls.owners.includes(page)){emmaControls.validate(doc,page,selectors,read(page));emmaValidated.push(page);}
+ if(emmaControls.owners.includes(page)){const old=new JSDOM(pastRead(page));try{emmaControls.validate(old.window.document,page,selectors,pastRead(page));emmaValidated.push(page);}finally{old.window.close();}}
  for(const s of selectors){const nodes=[...doc.querySelectorAll(s)];if(nodes.length){inventory.selectors[s].count+=nodes.length;inventory.selectors[s].pages.push(page);for(const n of nodes)assert.equal(n.tagName,'A');}}
  for(const s of ['.watch-topic-index a','nav[aria-label="Pioneer study sections"] a','.bom-story-directory a']){
   const nodes=[...doc.querySelectorAll(s)];if(nodes.length)inventory.numbered_navigation[page+' '+s]=nodes.map(n=>({href:n.getAttribute('href'),label:n.textContent.trim().replace(/\s+/g,' ')}));
@@ -228,7 +231,8 @@ console.log('PASS: six exact current figures, six added controls;36 negative mut
 console.log('PASS: two exact seasonal figures, unchanged legacy inventory;12 negative mutations and2 unrelated-control retention fixtures.');
 for(const [s,a] of Object.entries(inventory.selectors))if(!a.count){const runtime=config.runtime_selectors[s];assert(runtime,`Unused selector ${s}`);assert(read(runtime.source).includes(runtime.marker));}
 // Invert only five independently validated contributions; keep full current scan intact.
-const beforeEmma=adamsControls.beforeEmmaInventory(inventory,adamsValidated,urls.map(p=>p==='index.html'?'/':'/'+p),read);
+const beforeIntegration=integration.historicalControlInventory(inventory,selectors,adamsControls.numbered,read,JSDOM);
+const beforeEmma=adamsControls.beforeEmmaInventory(beforeIntegration,adamsValidated,currentRoutes.filter(p=>p!=='/'+integration.intro),pastRead);
 const historicalInventory=emmaControls.historicalInventory(beforeEmma,emmaValidated);
 const file=path.join(root,'docs/study-link-control-inventory.json');
 if(process.argv.includes('--write-inventory'))fs.writeFileSync(file,JSON.stringify(historicalInventory,null,2)+'\n');

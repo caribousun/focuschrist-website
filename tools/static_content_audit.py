@@ -25,6 +25,7 @@ LEDGER = ROOT / "content-audit.json"
 SKIP_TAGS = {"script", "style", "svg", "noscript", "template"}
 PUBLISHED_ATTRIBUTES = ("alt", "aria-label", "placeholder", "title")
 VALID_STATUSES = {"verified", "non-source-dependent"}
+CURRENT_INTEGRATION_ROUTES = frozenset({'history/emma-relief-society.html', 'history/emma-last-testimony.html', 'history/emma-elect-lady.html', 'timeline.html', 'timelines/adams-1881-introduction.html', 'history/emma-hale-smith.html', 'timelines/adams-1881-chart.html', 'history/emma-hymns.html', 'history/emma-winter-crossing.html'})
 
 # These reviewed map narratives live inside inline JavaScript. Keep their binding
 # separate from static text and require it even when a ledger field is removed.
@@ -92,6 +93,14 @@ def published_text(path: Path) -> str:
 def content_hash(path: Path) -> str:
     raw=path.read_bytes()
     name=path.relative_to(ROOT).as_posix()
+    # Current integrated visitor copy has its own genuine ledger records.
+    # Historical inverses remain below for unchanged routes, never current prose.
+    if name in CURRENT_INTEGRATION_ROUTES:
+        from owner_integration_contract import validate_file
+        validate_file(name, raw, ROOT)
+        parser = PublishedTextParser(); parser.feed(raw.decode('utf-8'))
+        text = re.sub(r"\s+", " ", html.unescape(" ".join(parser.parts))).strip()
+        return hashlib.sha256(text.encode('utf-8')).hexdigest()
     from continue_motion_binding import restore as before_motion
     raw=before_motion(name,raw)
     from timeline_source_import import restore_consumers
@@ -213,6 +222,8 @@ def validate() -> int:
         record = by_path.get(name)
         if not record:
             continue
+        if name in CURRENT_INTEGRATION_ROUTES and record.get('reviewed_source_sha256') != hashlib.sha256(path.read_bytes()).hexdigest():
+            errors.append(f"{name}: current integrated source binding missing or changed")
         status = record.get("status")
         if status not in VALID_STATUSES:
             errors.append(f"{name}: invalid or incomplete audit status {status!r}")

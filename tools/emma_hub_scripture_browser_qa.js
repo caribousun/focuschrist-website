@@ -7,11 +7,11 @@ const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 const route='history/emma-hale-smith.html';
 const cases=[
  {label:'Luke 6:12–16',key:'nt/luke/6',start:12,end:16,sha:'b8ad2f2a8ea945fcef6482351505cb67ef0c6e236a69c01a03946bf790447ccc',mode:'keyboard'},
- {label:'John 4:31–34',key:'nt/john/4',start:31,end:34,sha:'e43aaf5c1f3e89a1b1e9dfda98a6064521bfd724ee61c12fddbe0e31b34bdaab',mode:'click'}
+ {label:'Matthew 26:26–30',linkLabel:'Read Matthew 26:26–30',key:'nt/matt/26',start:26,end:30,sha:'18b5e040e096a7b8a46c7a9a5c3643efe29c3285dec1c4635409c42aea28f8b2',mode:'click'}
 ];
 (async()=>{
  assert.equal(process.env.CI,'true','Hosted CI only');
- const hub=fs.readFileSync(path.join(root,route));assert.equal(sha(hub),'0d825d6c9d0648006ca4ba12f496b49540a6aa065f8ec82063df643da8a0fe9d');
+ const hub=fs.readFileSync(path.join(root,route));assert.equal(sha(hub),'50c334379066722ef6e80e97d70f0f2ca431777b5857eb15b998da65cc1783cf');
  for(const c of cases){const raw=fs.readFileSync(path.join(root,'scripture-data',c.key+'.json'));assert.equal(sha(raw),c.sha);c.chapter=JSON.parse(raw);}
  const report={scope:'Two hub citation interactions only; not artwork or release approval',status:'INCOMPLETE',source_sha256:sha(hub),results:[],captures:[],pageErrors:[]};
  fs.mkdirSync(out,{recursive:true});
@@ -27,10 +27,12 @@ const cases=[
    await page.setViewportSize({width,height:900});
    await page.goto(`http://127.0.0.1:${server.address().port}/${route}`,{waitUntil:'domcontentloaded'});
    await page.waitForSelector('#fc-scripture-reader',{state:'attached'});
+   assert.equal(await page.locator('#reflection-c2, #picture-emma-c2').count(),0,'Removed weak-fit scene is not retained on current hub');
+   assert.equal(await page.locator('main a.fc-inline-scripture[href*="/nt/john/4?"]:visible').count(),0,'Removed John4 citation is historical, not a current journey');
    for(const [index,c]of cases.entries()){
     const href=`https://www.churchofjesuschrist.org/study/scriptures/${c.key}?lang=eng&id=p${c.start}-p${c.end}#p${c.start}`;
     const link=page.locator(`main p > a.fc-inline-scripture[href="${href}"]:visible`);
-    assert.equal(await link.count(),1);assert.equal(await link.textContent(),c.label);assert.equal(await link.getAttribute('target'),'_blank');assert.equal(await link.getAttribute('rel'),'noopener noreferrer');
+    assert.equal(await link.count(),1);assert.equal(await link.textContent(),c.linkLabel||c.label);assert.equal(await link.getAttribute('target'),'_blank');assert.equal(await link.getAttribute('rel'),'noopener noreferrer');
     await link.scrollIntoViewIfNeeded();await link.focus();
     const box=await link.evaluate(n=>{const r=n.getBoundingClientRect();return{x:r.x,y:r.y,width:r.width,height:r.height,right:r.right,bottom:r.bottom};});assert(box.width>0&&box.height>0&&box.x>=-1&&box.right<=width+1);
     await capture(`hub-link-${index}-${width}.jpg`);

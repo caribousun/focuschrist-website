@@ -70,6 +70,28 @@ def chronology(record, normalized):
 
 
 def validate(root, record, added, covered, rejected, pixel_hash, page_dependencies):
+    if record.get('schema') == 2:
+        from artwork_emma_hub_delivery import validate as validate_hub
+        return validate_hub(root, record, added, covered, rejected, pixel_hash,
+                            page_dependencies, _validate_historical)
+    return _validate_historical(root, record, added, covered, rejected,
+                                pixel_hash, page_dependencies)
+
+
+def _validate_historical(root, record, added, covered, rejected, pixel_hash, page_dependencies,
+                         historical_page_bytes=None):
+    # Only the five exact predecessor page bodies may be supplied. Their existing
+    # evidence hashes still apply; all assets/CSS/receipts remain actual disk bytes.
+    historical_page_bytes = historical_page_bytes or {}
+    require(set(historical_page_bytes) <= {v[0] for v in SCENES.values()}, 'unknown historical page projection')
+    require(all(isinstance(raw, bytes) for raw in historical_page_bytes.values()), 'nonbyte historical projection')
+    def context_bound(item):
+        if item['path'] not in historical_page_bytes:
+            return bound(root, item)
+        local(root, item['path'])  # Preserve safe-path/existence/symlink checks.
+        raw = historical_page_bytes[item['path']]
+        require(len(raw) == item['bytes'] and sha(raw) == item['sha256'], 'changed historical page endpoint')
+        return raw
     require(APPROVED_RECORD_SHA256 is not None, 'pending independent/root exact record review')
     require(canonical(record) == APPROVED_RECORD_SHA256, 'unreviewed record bytes')
     require(record.get('schema') == 1 and record.get('status') == 'REVIEWED_EXACT_CURRENT_EQUIVALENCE', 'unfinished record')
@@ -112,7 +134,7 @@ def validate(root, record, added, covered, rejected, pixel_hash, page_dependenci
         require(len({a['path'] for a in context}) == len(context), 'duplicate context')
         require(page_dependencies(root,route) <= {a['path'] for a in context}, 'missing page/CSS context')
         for item in context:
-            bound(root,item)
+            context_bound(item)
         class Sources(HTMLParser):
             paths = None
             def handle_starttag(self, tag, attrs):
@@ -127,7 +149,8 @@ def validate(root, record, added, covered, rejected, pixel_hash, page_dependenci
                 if target.hostname == 'focuschrist.com':
                     self.paths.add(unquote(target.path).lstrip('/'))
         parser = Sources(); parser.paths = set()
-        parser.feed(local(root,route).read_text(encoding='utf-8'))
+        parser.feed(historical_page_bytes[route].decode('utf-8') if route in historical_page_bytes
+                    else local(root,route).read_text(encoding='utf-8'))
         require(expected_derivatives <= parser.paths, 'derivative not consumed by scene')
     require(len(assets) == 20 and assets <= added and not assets & covered, 'coverage overlap/omission')
     binding = canonical(spec)

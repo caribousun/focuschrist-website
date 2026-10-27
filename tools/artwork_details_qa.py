@@ -256,6 +256,73 @@ def emma_reference_errors(page, history):
     return errors
 
 
+ADAMS_INTRO = "timelines/adams-1881-introduction.html"
+
+
+def adams_chart_reference_errors(page: str) -> list[str]:
+    """The Adams opening links to an interactive chart, not an artwork modal."""
+    from bs4 import BeautifulSoup
+    dom = BeautifulSoup(page, "html.parser")
+    errors = []
+    heroes = dom.select(".fc-visual-hero")
+    if len(heroes) != 1:
+        errors.append(f"{ADAMS_INTRO}: expected one direct chart-link hero")
+    else:
+        hero = heroes[0]
+        if hero.name != "a" or hero.get("href") != "adams-1881-chart.html" or not hero.get("aria-label", "").strip():
+            errors.append(f"{ADAMS_INTRO}: hero must be an accessible link to the chart")
+        if not {"timeline-life-hero", "timeline-history-hero", "fc-adams-intro-hero"}.issubset(hero.get("class", [])):
+            errors.append(f"{ADAMS_INTRO}: shared timeline hero classes missing")
+        if any(hero.has_attr(a) for a in ("data-hero-viewer", "data-full-image-viewer", "data-artwork-detail", "onclick", "aria-haspopup")):
+            errors.append(f"{ADAMS_INTRO}: chart link must not be a local artwork modal")
+        images = hero.select("img")
+        if len(images) != 1 or images[0].get("src") != "../assets/adams-chart/adams-16-0-0.jpg" or not images[0].get("alt", "").strip():
+            errors.append(f"{ADAMS_INTRO}: chart hero image or alternative text differs")
+    opening = dom.select(".fc-page-intro.timeline-life-intro.timeline-history-intro.fc-adams-opening")
+    controls = dom.select(".timeline-opening-continue")
+    overviews = dom.select("#adams-overview")
+    if (len(opening) != 1 or len(controls) != 1 or controls[0].name != "a"
+            or "fc-scroll-cue" not in controls[0].get("class", [])
+            or controls[0].get("href") != "#adams-overview"
+            or controls[0].find_parent(class_="fc-adams-opening") is not opening[0]
+            or len(overviews) != 1):
+        errors.append(f"{ADAMS_INTRO}: timeline opening or Continue destination missing or duplicated")
+    chart_links = dom.select("#adams-open-chart")
+    if (len(chart_links) != 1 or chart_links[0].name != "a"
+            or chart_links[0].get("href") != "adams-1881-chart.html"
+            or len(overviews) != 1 or chart_links[0].find_parent(id="adams-overview") is not overviews[0]):
+        errors.append(f"{ADAMS_INTRO}: overview chart link missing, duplicated or incorrect")
+    path = ROOT / ADAMS_INTRO
+    for target in ("adams-1881-chart.html", "../assets/adams-chart/adams-16-0-0.jpg"):
+        if not local_target(path, target).is_file():
+            errors.append(f"{ADAMS_INTRO}: chart target or hero asset missing: {target}")
+    return errors
+
+
+def adams_chart_reference_self_test(page: str) -> None:
+    # Mutation checks keep the new exception from becoming an unchecked skip.
+    from bs4 import BeautifulSoup
+    from copy import deepcopy
+    def mutation(selector, action):
+        dom = BeautifulSoup(page, "html.parser")
+        node = dom.select_one(selector)
+        assert node is not None, f"Adams self-test fixture missing {selector}"
+        action(dom, node)
+        assert adams_chart_reference_errors(str(dom)), f"Adams chart-reference mutation escaped: {selector}"
+
+    mutation(".fc-visual-hero", lambda d, n: n.decompose())
+    mutation(".fc-visual-hero", lambda d, n: n.insert_after(deepcopy(n)))
+    mutation(".fc-visual-hero", lambda d, n: n.__setitem__("href", "../index.html"))
+    mutation(".fc-visual-hero", lambda d, n: n.__setitem__("aria-label", ""))
+    mutation(".fc-visual-hero", lambda d, n: n.__setitem__("data-hero-viewer", ""))
+    mutation(".fc-visual-hero img", lambda d, n: n.__setitem__("src", "../assets/heroes/home.webp"))
+    mutation(".fc-visual-hero img", lambda d, n: n.__setitem__("alt", ""))
+    mutation(".timeline-opening-continue", lambda d, n: n.__setitem__("href", "#wrong"))
+    mutation(".timeline-opening-continue", lambda d, n: n.insert_after(deepcopy(n)))
+    mutation("#adams-open-chart", lambda d, n: n.__setitem__("href", "../index.html"))
+    mutation("#adams-open-chart", lambda d, n: n.insert_after(deepcopy(n)))
+
+
 def main() -> int:
     assert local_target(ROOT / "404.html", "/assets/heroes/home.webp") == (ROOT / "assets/heroes/home.webp").resolve()
     assert local_target(ROOT / "answers/example.html", "../assets/heroes/home.webp?x=1") == (ROOT / "assets/heroes/home.webp").resolve()
@@ -323,6 +390,12 @@ def main() -> int:
         errors.append(f"site-wide non-Mission artwork detail total must be exactly {63 + answers_extra}")
     if len(set(all_trigger_keys)) != 63 + answers_extra or len(set(all_record_keys)) != 63 + answers_extra:
         errors.append("site-wide artwork detail keys must be unique")
+
+    adams_page = (ROOT / ADAMS_INTRO).read_text(encoding="utf-8")
+    adams_errors = adams_chart_reference_errors(adams_page)
+    errors.extend(adams_errors)
+    if not adams_errors:
+        adams_chart_reference_self_test(adams_page)
 
     history_text = (ROOT / "church-history.html").read_text(encoding="utf-8")
     errors.extend(emma_portrait_errors(history_text))
@@ -492,6 +565,10 @@ def main() -> int:
             continue
         hero_pages += 1
         relative = path.relative_to(ROOT).as_posix()
+        if relative == ADAMS_INTRO:
+            # Unconditionally validated above; interactive-chart link, not a modal.
+            hero_pages -= 1
+            continue
         if relative == "history/emma-hale-smith.html":
             # Validated unconditionally above, including missing/duplicate hero.
             hero_pages -= 1  # Linked Harmony reference is outside the 43 local modals.
@@ -692,3 +769,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
+

@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "purpose": "Exact a36 historical consumer source fixtures, never current UI evidence",
+  "files": {
+    "tools/unified_opening_qa.py": {
+      "file": "tools__unified_opening_qa.py.source",
+      "bytes": 4961,
+      "sha256": "21a744113f63a3159c9ec86be213c9b76b9c6351b7a62f7623a36a759a077967"
+    },
+    "tools/emma_story_consumers.py": {
+      "file": "tools__emma_story_consumers.py.source",
+      "bytes": 3564,
+      "sha256": "502dc4311c1f5ee929f660cd466900c6c25dc90ba5ce4b05b304aaf08bce6f95"
+    },
+    "tools/section_panel_surface_qa.py": {
+      "file": "tools__section_panel_surface_qa.py.source",
+      "bytes": 10771,
+      "sha256": "864f4882f79af40a7a48b83919a32b07d38fa7c727d6990d4281dba265fceea8"
+    },
+    "tools/site_search_qa.py": {
+      "file": "tools__site_search_qa.py.source",
+      "bytes": 2652,
+      "sha256": "6144ca6a7c1eb8ac73bbd39dc7fba9ae3b098374e30363528ee5e3fcf0474aff"
+    },
+    "docs/section-panel-surfaces.json": {
+      "file": "docs__section-panel-surfaces.json.source",
+      "bytes": 22080,
+      "sha256": "105b1f7e364a04db62c3a432fbaae20f9d79938ce6bbffe1f81d3e9aa36fe942"
+    },
+    "docs/section-panel-inventory.json": {
+      "file": "docs__section-panel-inventory.json.source",
+      "bytes": 124970,
+      "sha256": "bb0e54d31eb8d7d44c738958991864f3bd38611c6ef28720b7ec686398712687"
+    },
+    "docs/resource-page-coverage.json": {
+      "file": "docs__resource-page-coverage.json.source",
+      "bytes": 10427,
+      "sha256": "39a10ef953d5785ca2f6a9f83dc5a480c10911d6b9b7458cbcb718a3e3b49f1f"
+    },
+    "sitemap.xml": {
+      "file": "sitemap.xml.source",
+      "bytes": 13152,
+      "sha256": "943d8e0546bad760978b6f39c81e0bb2050759168b67327c491b7702c0365e15"
+    }
+  }
+}

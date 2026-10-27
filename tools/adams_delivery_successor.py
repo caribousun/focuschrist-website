@@ -89,6 +89,8 @@ def mapping(root=ROOT):
 
 
 def restore(name, raw, root=ROOT):
+    from adams_integration_indices import restore as restore_integration
+    raw = restore_integration(name, raw, root)
     if name not in AFTER or sha(raw) != AFTER[name]:
         return raw
     row = mapping(root)["files"][name]
@@ -127,7 +129,8 @@ def advance(name, raw, root=ROOT):
 
 def check(root=ROOT):
     for name in mapping(root)["files"]:
-        raw = local(root, name).read_bytes()
+        from adams_integration_indices import restore as restore_integration
+        raw = restore_integration(name, local(root, name).read_bytes(), root)
         require(sha(raw) == AFTER[name], "changed current delivery: " + name)
         prior = restore(name, raw, root)
         require(sha(prior) == BEFORE[name], "predecessor mismatch: " + name)
@@ -151,7 +154,8 @@ def predecessor_view(root=ROOT):
     check(root)
     prior_bytes = {}
     for name in INDEX_FILES:
-        raw = local(root, name).read_bytes()
+        from adams_integration_indices import restore as restore_integration
+        raw = restore_integration(name, local(root, name).read_bytes(), root)
         require(sha(raw) == AFTER[name], "current changed before predecessor view: " + name)
         prior = restore(name, raw, root)
         require(sha(prior) == BEFORE[name] == emma.AFTER[name], "wrong historical Emma pair: " + name)
@@ -173,3 +177,4 @@ if __name__ == "__main__":
         print(json.dumps(check(), sort_keys=True))
     except (ValueError, KeyError, TypeError, OSError) as error:
         raise SystemExit("Adams delivery gate BLOCKED: " + str(error))
+

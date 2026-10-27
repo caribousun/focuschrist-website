@@ -34,8 +34,15 @@ jobs:
         run: |
           python -m unittest discover -s tools -p test_artwork_creation_gate.py
           python -m unittest discover -s tools -p test_artwork_emma_story_delivery.py
+          python -m unittest discover -s tools -p test_artwork_emma_hub_delivery.py
           python -m unittest discover -s tools -p test_emma_story_consumers.py
           python tools/test_adams_delivery_successor.py
+          python -m unittest discover -s tools -p test_adams_integrated_context.py
+          python -m unittest discover -s tools -p test_adams_integrated_qa_evidence.py
+          python -m unittest discover -s tools -p test_adams_header_evidence_successor.py
+          python -m unittest discover -s tools -p test_adams_index_producer_successor.py
+          python -m unittest discover -s tools -p test_adams_integration_indices.py
+          python -m unittest discover -s tools -p test_actual_current_index_composition.py
           python -m unittest discover -s tools -p test_adams_source_import.py
           python -m unittest discover -s tools -p test_adams_standalone_opening.py
           python -m unittest discover -s tools -p test_adams_panel_standalone.py
@@ -56,6 +63,7 @@ jobs:
           python -m unittest discover -s tools -p test_artwork_owner_closure.py
           python -m unittest discover -s tools -p test_history_hero_build_gate.py
           python -m unittest discover -s tools -p test_opening_composition_binding.py
+          timeout --signal=TERM --kill-after=5s 60s python -m unittest discover -s tools -p 'test_owner_integration*.py'
           python tools/artwork_creation_gate.py release
 
       - name: Verify reviewed human introductions and preservation fixtures
@@ -135,6 +143,7 @@ jobs:
 
       - name: Run site-wide artwork detail QA
         run: |
+          timeout --signal=TERM --kill-after=5s 60s python -m unittest discover -s tools -p test_gallery_current_integration.py -v
           python tools/build_art_gallery.py --check
           node --check art-gallery.js
           node --check art-gallery-bridge.js
@@ -169,6 +178,7 @@ jobs:
       - name: Verify every featured art supporting picture study panel
         run: |
           npm install --prefix "$RUNNER_TEMP/focuschrist-dom-qa" --no-save --package-lock=false --ignore-scripts jsdom@26.1.0
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" timeout --signal=TERM --kill-after=5s 60s node tools/test_owner_integration_navigation.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/gallery_compatibility_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/opening_flow_and_cards_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/unified_opening_runtime_qa.js
@@ -413,6 +423,7 @@ jobs:
       - name: Enforce reviewed static-content ledger
         run: |
           python tools/test_static_content_audit.py
+          python -m unittest discover -s tools -p test_current_integration_content_audit.py
           python tools/static_content_audit.py
 
       - name: Exercise source-integrity runtime guard
@@ -660,7 +671,7 @@ jobs:
 
       - name: Bind the diagnostic to the reviewed renderer and checkout
         run: |
-          printf '%s  %s\n' '28586765b6948e5de97c1e7cffaa67289f6d3af02c9b34951ce5f0081e8ac929' 'tools/emma_story_browser_qa.js' | sha256sum --check
+          printf '%s  %s\n' '0132427d0edc952456515afc61eec5d355dded5f0bf95e6ae27563d5349b5947' 'tools/emma_story_browser_qa.js' | sha256sum --check
           mkdir -p .qa-artifacts/emma-story
           {
             echo "scope=diagnostic rendering only; artwork-creation and all release gates remain required"
@@ -678,7 +689,7 @@ jobs:
 
       - name: Verify the two corrected hub scripture links
         run: |
-          printf '%s  %s\n' '63eb15d6106621f4940e53af426e998fabe100cf92543420acca555fda1a51db' 'tools/emma_hub_scripture_browser_qa.js' | sha256sum --check
+          printf '%s  %s\n' 'ba724ab720ec5d59cf2872ae3dc8fe4342c3118295e32446c5f95571931df798' 'tools/emma_hub_scripture_browser_qa.js' | sha256sum --check
           timeout --signal=TERM --kill-after=5s 120s env NODE_PATH=/tmp/focus-row-qa/node_modules node tools/emma_hub_scripture_browser_qa.js
 
       - name: Preserve actual diagnostic outcome
@@ -706,3 +717,35 @@ jobs:
           include-hidden-files: true
           if-no-files-found: ignore
           retention-days: 7
+
+  owner-integration-render:
+    name: Owner integration rendered journeys (not release acceptance)
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    permissions:
+      contents: read
+    steps:
+      - name: Check out the exact current tree
+        uses: actions/checkout@v5
+      - name: Verify existing QA dependency contract
+        run: python tools/qa_dependency_contract.py --self-test
+      - name: Install existing pinned browser dependencies
+        run: |
+          npm install --prefix /tmp/focus-row-qa --no-save --package-lock=false --ignore-scripts playwright@1.55.1 leaflet@1.9.4
+          /tmp/focus-row-qa/node_modules/.bin/playwright install --with-deps chromium
+      - name: Verify exact owner integration helper and contract
+        run: |
+          printf '%s  %s\n' 'e49d1438ad40d69d772db8b3f968a8ec56502ed00076bc3f806197775700d7cc' 'tools/owner_integration_browser_qa.js' | sha256sum --check
+          printf '%s  %s\n' '5d7614c9cb585569788c260d8fc08545b579a245a2e2ee86dd617520e3a1ddef' 'tools/owner_integration_qa_contract.json' | sha256sum --check
+      - name: Observe current hub artwork flow and Timeline introduction journeys
+        run: timeout --signal=TERM --kill-after=15s 8m env NODE_PATH=/tmp/focus-row-qa/node_modules node tools/owner_integration_browser_qa.js
+      - name: Preserve bounded actual owner integration evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: owner-integration-evidence
+          path: .qa-artifacts/owner-integration/
+          include-hidden-files: true
+          if-no-files-found: ignore
+          retention-days: 7
+          compression-level: 6

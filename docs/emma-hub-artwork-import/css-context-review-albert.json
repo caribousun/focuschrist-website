@@ -1,0 +1,32 @@
+{
+  "reviewer": "Albert",
+  "actual_author": "Albert, actual root reviewer",
+  "reviewed_at": "2026-10-27T20:05:05.388267+00:00",
+  "decision": "CONCUR_EXACT_TWO_UNCHANGED_CSS_SOURCE_CONTEXT_SUPPLEMENT",
+  "spec_sha256": "5f1de193844aeeb108e8a474723188e8b5cf464eeacfa203f2cfe8802686baf9",
+  "actual_render_producer": "87cce928c366f3f5820fce1ae19bc989a952d982",
+  "current_head": "4b5637457cd0de46838d8b49d81026232a345fe2",
+  "sources": [
+    {
+      "path": "guided-studies.css",
+      "bytes": 5688,
+      "sha256": "45349a7b3f0524a32989f827960bb543c6003944f0781958458bb25856ed0892",
+      "git_blob": "238e086c87521acbd92a78f6c84145190adb3779"
+    },
+    {
+      "path": "targeted-six.css",
+      "bytes": 3484,
+      "sha256": "6234f992191650a688b93dc452215778b783fe9b3e0a9ed030a79641c4b0edc6",
+      "git_blob": "e0a4dd4fcfe7458bb3e398efc45a1e4d7b799138"
+    }
+  ],
+  "observations": [
+    "Personally read both complete exact CSS files. Guided-studies styles define companion/guided study screen and print presentation, shared inset and existing control typography. Targeted-six scopes screen presentation to six named pages, with specific Emma companion spacing and responsive list styling.",
+    "No CSS imports or new remote dependencies are present. No source bytes or visitor layout is changed by recording their existing direct dependency.",
+    "Local file Git blobs match authenticated actual render producer tree and current-head connector readback. Existing actual finished pixel review remains separately scoped; this review does not pretend older receipts explicitly listed these two files."
+  ],
+  "limits": [
+    "Original browser report does not include CSS served-response hashes. This is exact source/checkout provenance and source inspection, not fabricated network-response proof.",
+    "Full real callback dependency validation and139-route/full-release checks must still pass in hosted checkout. No generic unknown-dependency exception is authorized."
+  ]
+}

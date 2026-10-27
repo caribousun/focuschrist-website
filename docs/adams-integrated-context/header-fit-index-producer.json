@@ -1,0 +1,119 @@
+{
+  "schema": 1,
+  "repository": "caribousun/focuschrist-website",
+  "event": "pull_request",
+  "producer_ref": "refs/pull/531/merge",
+  "head_sha": "d5688e60124a24015b1c0ab7ca638e1ba4095b8b",
+  "producer_commit": "63ed242c3e705889d43ed479f9c0c0759fb5e530",
+  "producer_tree": "3d980ae4f8e65d782edf2a15d6bab0d73ce1d3a7",
+  "producer_parents": [
+    "a36b0180d5e2e56976c3531a51852c935c246b78",
+    "d5688e60124a24015b1c0ab7ca638e1ba4095b8b"
+  ],
+  "run_id": 40588766214,
+  "job_id": 122487175563,
+  "artifact_id": 12773960035,
+  "job_conclusion": "success",
+  "artifact_bytes": 891549,
+  "artifact_sha256": "5938fbbb988061fc93a4adcec815b09e509b9ce47859846a0f65bd8c054996f6",
+  "inputs": [
+    {
+      "path": "timeline.html",
+      "git_blob_sha1": "dac5c4e08a549471646954fac7abc5b1c95d8cd1",
+      "bytes": 8828,
+      "sha256": "c910ae58c2f8feccf1d59f44b154d31f224436b79538e86bf73774c65b0b8c4c"
+    },
+    {
+      "path": "timelines/adams-1881-chart.html",
+      "git_blob_sha1": "898a0b34b9a675a15e158e60ae26d28c53464702",
+      "bytes": 66076,
+      "sha256": "b90c19dd9f77c3966843b41d514319816a194deee86b87235909f6b2c742130c"
+    },
+    {
+      "path": "timelines/adams-1881-introduction.html",
+      "git_blob_sha1": "2fa528d0015bd598b7a337325b21ad433bf1181f",
+      "bytes": 8126,
+      "sha256": "742d429e6a674ce5d47889aab964a6bde60f3509bd9518e159499be6616112be"
+    },
+    {
+      "path": "adams-integration.css",
+      "git_blob_sha1": "70a3a767c87096dbc60fc4d01f469d9dd8e54a2a",
+      "bytes": 5292,
+      "sha256": "3c8a2390e93e94f5d67d3b7a4356f018d78df7ea5c654a3841366549df76d131"
+    },
+    {
+      "path": "adams-integration.js",
+      "git_blob_sha1": "76b7f543fef7161e3a0168927eae49be01cf6471",
+      "bytes": 2267,
+      "sha256": "334a8395213a4e561cdffc747bf92b6872902486b055a36824cf834784dffb7b"
+    },
+    {
+      "path": "history/emma-hale-smith.html",
+      "git_blob_sha1": "f2c7a81c6e2ff00b3f6ee912a6a31758d5901a75",
+      "bytes": 66144,
+      "sha256": "50c334379066722ef6e80e97d70f0f2ca431777b5857eb15b998da65cc1783cf"
+    },
+    {
+      "path": "history/emma-elect-lady.html",
+      "git_blob_sha1": "2bfacf37fc0293f3a3207d52fbbbac8d20de3f45",
+      "bytes": 14734,
+      "sha256": "f32c79609f15d51e9c85b2f4bc941de38d2626c944e33f1876fc574f46f7986c"
+    },
+    {
+      "path": "history/emma-hymns.html",
+      "git_blob_sha1": "f6ac35a79ae777538d292217e345e91f27f4d845",
+      "bytes": 15103,
+      "sha256": "719bc7f899ebc188f33322c4c7c6bea9e326b209e28e2d49855543185e12aedb"
+    },
+    {
+      "path": "history/emma-winter-crossing.html",
+      "git_blob_sha1": "cbff336d9a909c4962099dbfb4fb8c7235c97cf8",
+      "bytes": 14477,
+      "sha256": "a2c6003789eaaf4458bb3f431943c2d4602908b19324054ef8ca9f0aab30a417"
+    },
+    {
+      "path": "history/emma-relief-society.html",
+      "git_blob_sha1": "8ffa4b0e48c66075a70f2b3012be051000854030",
+      "bytes": 15000,
+      "sha256": "e90e7b25239973e2488f32e57482fd5cfbdabb6a7f3f1746599aded9cd546ebb"
+    },
+    {
+      "path": "history/emma-last-testimony.html",
+      "git_blob_sha1": "b0c6128be12de69fae478133876de70c758c23eb",
+      "bytes": 15464,
+      "sha256": "ff608df4a3bb994d29834e253daac97b1721ecf2b3209a621e284f16ca91eb70"
+    },
+    {
+      "path": "tools/build_art_gallery.py",
+      "git_blob_sha1": "37d26f89066ca18d59db6e5dabed00754e8c6045",
+      "bytes": 15674,
+      "sha256": "c6a0354d6967ab85bf2a395a81cdb3bfdb5bb5e120b0acb72d03d7faebc74195"
+    },
+    {
+      "path": "tools/build_site_search.py",
+      "git_blob_sha1": "21b5e3c66f4edfcd00562c179763f9f4fecde1ae",
+      "bytes": 5671,
+      "sha256": "906b5ca7a1ef0a51d8f6f210992b3f2ae4356f35df7cd4e5f1d7a898d7c87fee"
+    },
+    {
+      "path": "sitemap.xml",
+      "git_blob_sha1": "81a7cc3333475d2a10f3b87e60f3e734c8d0a8bc",
+      "bytes": 13247,
+      "sha256": "123adeaead25a97bcab506d4867e5b225d8b0ec36606d957eae17f28011f1e1e"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "art-gallery.json",
+      "bytes": 995357,
+      "sha256": "1bf5d0adbb1a6699313cf24a599a316e800b9e62ef8aeeb7acfde8f32e867402"
+    },
+    {
+      "path": "site-search-index.json",
+      "bytes": 3455237,
+      "sha256": "a9933a9ec749aec4163a1b146f0946c54244a4f78f781e7f508cea4e51b8260a"
+    }
+  ],
+  "scope": "Successful Generate site indices diagnostic only; full Site QA failed and no artwork, rendered-context, or release approval is implied.",
+  "release_claim": false
+}

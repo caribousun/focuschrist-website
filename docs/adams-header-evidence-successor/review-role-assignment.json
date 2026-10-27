@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "appointed_by": "Albert",
+  "author_id": "/root",
+  "scope": "This exact header-source successor review only; no permanent role reassignment",
+  "roles": {
+    "Fermi": "/root/repair_adams_hero_classification/independent_review",
+    "Newton": "/root/repair_adams_hero_classification/subsequent_qa/css_dependency_mapping/index_successor_review",
+    "Albert": "/root"
+  },
+  "requirements": [
+    "Each reviewer writes their own truthful exact-spec receipt",
+    "Three distinct actual authors",
+    "Preserve all independent review and Foundation requirements",
+    "Role name is not historical agent identity"
+  ]
+}

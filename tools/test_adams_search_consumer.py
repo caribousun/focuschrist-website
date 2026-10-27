@@ -1,3 +1,5 @@
+# Stage156: these unchanged assertions exercise explicit historical a36 fixtures.
+# Current integrated source/DOM/panels/search/resource checks run separately.
 """Exact Adams shared-search registration; no generator/site JS execution."""
 import hashlib
 import json
@@ -6,7 +8,8 @@ import unittest
 from adams_search_consumer import is_adams_standalone_search_owner
 from adams_standalone_opening import ADAMS_ROUTE
 
-ROOT = Path(__file__).resolve().parents[1]
+from owner_integration_test_fixtures import historical_root
+ROOT = historical_root(Path(__file__).resolve().parents[1])
 OWNER = '/' + ADAMS_ROUTE
 
 
