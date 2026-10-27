@@ -44,6 +44,7 @@ jobs:
           python -m unittest discover -s tools -p test_timeline_source_import.py
           python tools/test_continue_motion_binding.py
           python tools/test_emma_story_successor.py
+          python -m unittest discover -s tools -p test_emma_hub_citation_successor.py
           python tools/test_emma_generated_indices_successor.py
           python tools/test_world_companion_successor.py
           python tools/test_settings_successor.py
@@ -675,6 +676,11 @@ jobs:
         id: emma_render
         run: timeout --signal=TERM --kill-after=15s 5m env NODE_PATH=/tmp/focus-row-qa/node_modules node tools/emma_story_browser_qa.js
 
+      - name: Verify the two corrected hub scripture links
+        run: |
+          printf '%s  %s\n' '63eb15d6106621f4940e53af426e998fabe100cf92543420acca555fda1a51db' 'tools/emma_hub_scripture_browser_qa.js' | sha256sum --check
+          timeout --signal=TERM --kill-after=5s 120s env NODE_PATH=/tmp/focus-row-qa/node_modules node tools/emma_hub_scripture_browser_qa.js
+
       - name: Preserve actual diagnostic outcome
         if: always()
         run: |
@@ -687,6 +693,16 @@ jobs:
         with:
           name: emma-story-render-diagnostic
           path: .qa-artifacts/emma-story/
+          include-hidden-files: true
+          if-no-files-found: ignore
+          retention-days: 7
+
+      - name: Save bounded hub citation interaction evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: emma-hub-scripture
+          path: .qa-artifacts/emma-hub-scripture/
           include-hidden-files: true
           if-no-files-found: ignore
           retention-days: 7

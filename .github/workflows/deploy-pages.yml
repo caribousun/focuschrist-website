@@ -50,6 +50,7 @@ jobs:
           python -m unittest discover -s tools -p test_emma_resource_coverage.py
           python -m unittest discover -s tools -p test_timeline_source_import.py
           python tools/test_continue_motion_binding.py
+          python -m unittest discover -s tools -p test_emma_hub_citation_successor.py
           python tools/test_world_companion_successor.py
           python tools/test_settings_successor.py
           python tools/continue_motion_binding.py

@@ -38,6 +38,8 @@ def reviewed_bytes(path):
     return restore(name,raw)
 
 def restore(name,data,root=ROOT):
+    from emma_hub_citation_successor import restore as restore_hub_citations
+    data=restore_hub_citations(name,data,root)
     from adams_delivery_successor import restore as restore_adams_delivery
     data=restore_adams_delivery(name,data,root)
     from emma_generated_indices_successor import restore as restore_emma_indices
@@ -71,6 +73,7 @@ def restore(name,data,root=ROOT):
     return restored
 
 def advance(name,data,root=ROOT):
+    from emma_hub_citation_successor import advance as advance_hub_citations
     """Generate only the exact enumerated successor from an exact predecessor."""
     record=mapping(root)['files'].get(name)
     from emma_generated_indices_successor import advance as advance_emma_indices
@@ -89,7 +92,7 @@ def advance(name,data,root=ROOT):
     from pioneer_entry_scroll_successor import advance as advance_pioneer_scroll
     from bank_context_bypass_successor import advance as advance_bypass
     from emma_story_successor import advance as advance_emma
-    if not record or sha(data)!=record['before_sha256']:return advance_adams_delivery(name,advance_emma_indices(name,advance_emma(name,advance_bypass(name,advance_pioneer_scroll(name,advance_scroll(name,advance_decoupling(name,advance_legacy(name,advance_citation(name,advance_eval(name,advance_gate(name,advance_bank(name,advance_hand(name,advance_close(name,advance_settings(name,advance_world(name,data,root),root),root),root),root),root),root),root),root),root),root),root),root),root),root),root)
+    if not record or sha(data)!=record['before_sha256']:return advance_hub_citations(name,advance_adams_delivery(name,advance_emma_indices(name,advance_emma(name,advance_bypass(name,advance_pioneer_scroll(name,advance_scroll(name,advance_decoupling(name,advance_legacy(name,advance_citation(name,advance_eval(name,advance_gate(name,advance_bank(name,advance_hand(name,advance_close(name,advance_settings(name,advance_world(name,data,root),root),root),root),root),root),root),root),root),root),root),root),root),root),root),root),root)
     replacements=[];delta=0
     for span in record['spans']:
         previous=base64.b64decode(span['previous_b64'],validate=True)
@@ -101,9 +104,10 @@ def advance(name,data,root=ROOT):
     result=data
     for start,end,current in reversed(replacements):result=result[:start]+current+result[end:]
     require(sha(result)==record['after_sha256'],'Motion successor reconstruction drift')
-    return advance_adams_delivery(name,advance_emma_indices(name,advance_emma(name,advance_bypass(name,advance_pioneer_scroll(name,advance_scroll(name,advance_decoupling(name,advance_legacy(name,advance_citation(name,advance_eval(name,advance_gate(name,advance_bank(name,advance_hand(name,advance_close(name,advance_settings(name,advance_world(name,result,root),root),root),root),root),root),root),root),root),root),root),root),root),root),root),root)
+    return advance_hub_citations(name,advance_adams_delivery(name,advance_emma_indices(name,advance_emma(name,advance_bypass(name,advance_pioneer_scroll(name,advance_scroll(name,advance_decoupling(name,advance_legacy(name,advance_citation(name,advance_eval(name,advance_gate(name,advance_bank(name,advance_hand(name,advance_close(name,advance_settings(name,advance_world(name,result,root),root),root),root),root),root),root),root),root),root),root),root),root),root),root),root),root)
 
 def check(root=ROOT):
+    from emma_hub_citation_successor import restore as restore_hub_citations, predecessor_view as hub_predecessor_view
     from adams_delivery_successor import predecessor_view as adams_predecessor_view, restore as restore_adams_delivery
     from emma_generated_indices_successor import check as check_emma_indices
     from missionary_close_successor import check as check_close,restore as restore_close
@@ -124,7 +128,7 @@ def check(root=ROOT):
     for name,row in data['files'].items():
         path=(root/name).resolve()
         require(path.is_relative_to(root.resolve()) and path.is_file(),'Missing/outside motion consumer')
-        historical_current=restore_adams_delivery(name,path.read_bytes(),root)
+        historical_current=restore_hub_citations(name,restore_adams_delivery(name,path.read_bytes(),root),root)
         current=restore_world(name,restore_settings(name,restore_close(name,restore_hand(name,restore_bank(name,restore_gate(name,restore_eval(name,restore_citation(name,restore_legacy(name,restore_decoupling(name,restore_scroll(name,restore_pioneer_scroll(name,restore_bypass(name,restore_emma(name,historical_current,root),root),root),root),root),root),root),root),root),root),root),root),root),root)
         require(sha(current)==row['after_sha256'],'Motion candidate changed: '+name)
         require(sha(restore(name,current,root))==row['before_sha256'],'Motion inverse failed: '+name)
@@ -185,7 +189,8 @@ def check(root=ROOT):
     check_scroll(root)
     check_pioneer_scroll(root)
     check_bypass(root)
-    check_emma(root)
+    with hub_predecessor_view(root) as historical_hub:
+        check_emma(historical_hub)
     # The view validates actual Adams bytes first; Emma checks historical bytes only.
     with adams_predecessor_view(root) as historical_emma:
         check_emma_indices(historical_emma)
