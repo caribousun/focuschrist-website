@@ -7,6 +7,7 @@ from urllib.parse import urlsplit, unquote, parse_qs
 import argparse, hashlib, json, re, subprocess, sys, xml.etree.ElementTree as ET
 from cfm_composition_qa import check as composition_check, self_test as composition_self_test
 from anchor_alignment_qa import FILES as ANCHOR_STYLES, historical_style_bytes, reviewed_anchor_style, self_test as anchor_self_test
+from emma_story_consumers import (EMMA_STORY_ROUTES, STORY_REF, reviewed_wrap_additions, reviewed_viewer_additions)
 ROOT = Path(__file__).resolve().parents[1]
 IMAGE_EXT = {'.png','.webp','.jpg','.jpeg','.avif','.gif','.svg'}
 BIBLE_STYLE = 'bible-together.css'
@@ -569,6 +570,9 @@ RELEASE_STYLE_BINDINGS = {
 
 def release_style_binding_allowed(name, page, tags):
     owners, expected = RELEASE_STYLE_BINDINGS[name]
+    if name == 'history-stories.css' and page in EMMA_STORY_ROUTES:
+        refs = [a.get('href', '') for t, a in tags if t == 'link' and a.get('rel') == 'stylesheet' and name in a.get('href', '')]
+        return refs == [STORY_REF]
     if name == 'timeline-experiences.css' and page in owners:
         from timeline_source_import import restore_consumers, before_navigation_polish
         raw=(ROOT/page).read_bytes()
@@ -970,7 +974,7 @@ def main():
         if refs: wrap_consumers[relative] = refs
     panel_contract = json.loads((ROOT/'docs/section-panel-surfaces.json').read_text(encoding='utf-8'))
     check(set(panel_contract['site_system_consumers']) == set(wrap_review['siteSystemConsumers']), 'Panel update changed protected shared stylesheet coverage')
-    check(reviewed_wrap_consumers(wrap_consumers, panel_contract['site_system_consumers'], panel_contract['version']), 'Shared panel stylesheet consumer list or cache versions changed')
+    check(reviewed_wrap_additions(wrap_consumers, panel_contract['site_system_consumers'], panel_contract['version'], reviewed_wrap_consumers), 'Shared panel stylesheet consumer list or cache versions changed')
     art_owners = {'art-study/the-good-shepherd.html', 'art-study/the-living-christ.html', 'art-study/suffer-the-little-children.html', 'art-study/be-still.html'}
     art_consumers = {str(p.relative_to(ROOT)).replace('\\','/'): re.findall(r'art-study-enrichment\.css\?v=([^\"\s>]+)', p.read_text(encoding='utf8')) for p in ROOT.rglob('*.html') if 'art-study-enrichment.css' in p.read_text(encoding='utf8')}
     check(set(art_consumers) == art_owners and all(v == ['20261006-caption-prose-gap-1'] for v in art_consumers.values()), 'Art reflection stylesheet consumers/version differ')
@@ -1020,7 +1024,7 @@ def main():
     check(marriage_owners=={'answers/what-is-eternal-marriage.html'}, 'Marriage stylesheet escaped its single owner')
     excluded_styles={MISSION_ENRICHMENT_STYLE,WATCH_SHORTS_STYLE,'missionary.css',HOME_STYLE,'focused-answers.css',tool_style,bom_style,pioneer_style,pioneer_ask_style,settle_style,row_style,BIBLE_STYLE,JOURNEY_STYLE,'site-system.css','site-header.css','study-navigation.css'}
     check(reviewed_viewer_style((ROOT/VIEWER_STYLE).read_bytes()), 'Full-image viewer stylesheet differs from exact reviewed bytes')
-    check(reviewed_viewer_bindings(viewer_bindings(visitor_viewer_sources())), 'Full-image viewer consumer references differ from exact reviewed bindings')
+    check(reviewed_viewer_additions(viewer_bindings(visitor_viewer_sources()), reviewed_viewer_bindings), 'Full-image viewer consumer references differ from exact reviewed bindings')
     excluded_styles.add(VIEWER_STYLE)
     check(reviewed_four_scene_style((ROOT/'four-scene-artwork.css').read_bytes(), visitor_viewer_sources()), 'Four-scene chalk surface differs from exact reviewed rule/bytes/sole owner')
     excluded_styles.add('four-scene-artwork.css')
