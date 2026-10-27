@@ -1,0 +1,69 @@
+{
+  "reviewer": "Newton",
+  "decision": "CONCUR",
+  "spec_sha256": "edf637707b70d8bef7af2c4ff614fa6bcb1c2324e01fd911349ac2a5aa222282",
+  "withdrawn": false,
+  "reviewed_at": "2026-10-27T06:25:46.673866+00:00",
+  "scope": "Exact five-scene current source, selected originals, proportional derivatives and corrected-header assembled context; not release authorization.",
+  "source_provenance_verified": true,
+  "actual_derivatives_inspected": true,
+  "assembled_context_inspected": true,
+  "checks": {
+    "identity": "I personally inspected all five selected original PNGs and all fifteen delivered WebPs, then all forty-five current rendered captures. The selected facial/design identities remain consistent within each family; this is fidelity to selected artwork, not authentication of a historical portrait or identification of a real person.",
+    "age": "The ride, hymnal, Quincy and hospitality designs retain their selected adult appearance; testimony retains visibly older facial lines and graying hair. No derivative introduces an age change. Exact historical age is not independently established by pixels.",
+    "expression_gaze": "Ride retains the intent forward/path gaze, hymnal and Quincy their downward gaze, hospitality its slight closed-mouth welcome and doorway pose, and testimony its rightward gaze, slightly open mouth and raised palm. No observed crop or re-encoding alters these expressions.",
+    "atmosphere": "Autumn riding, quiet book study, subdued seated reflection, warm open doorway and later-life testimony remain distinct in originals, derivatives and assembled views. The current teal page presentation does not obscure the selected artwork.",
+    "environment": "Framing preserves the horse/rider, closed book and hands, seated lap, doorway/hem/shoe and testimony hands/interior. At 1280, 390 and 320 CSS-pixel widths the artwork remains proportional without observed horizontal clipping. Small outputs soften fine texture without changing the composition.",
+    "characters_realism": "Clothing, faces, hands and poses remain faithful to each selected design across the inspected outputs; no introduced duplicate limb, face substitution or compression-driven expression change was observed. This is a bounded visual inspection, not proof of physical or historical realism.",
+    "period_sources": "I verified the public-safe provenance summary bindings against the retained actual historical review bytes, including the corrected four Fermi timestamps. These are source-art reviews, not retrospective canonical preflight or assembled approval. Unknown generation times remain unknown; no new period-authenticity assurance is asserted.",
+    "anatomy": "Selected hand/limb layouts are preserved. The ride still shows only three clear hoof endpoints; the far hind hoof is naturally occluded. Strict four-hoof visibility remains NOT_MET and is not converted to PASS by this concurrence.",
+    "uniqueness": "All twenty current file-byte pins were rechecked and remain the exact five originals plus three proportional derivative sizes each. Five compositions remain visually distinct. Their intended within-family similarity is not new artwork uniqueness; no generic asset exception is granted.",
+    "desktop_phone": "I inspected all forty-five current Chromium captures: fifteen canonical headers, fifteen artwork viewports, five 390-wide dialogs, three hubs, three focused skip links and four narrow menu/Search views. Headers are styled at all three widths; narrow controls and text fit. Unfocused skip is offscreen in sixty-nine observations and visible with focus outline in three. Search was not submitted. Actual renderer results contain thirty-one named completed journeys; scrollable long dialogs may place lower controls below the initial viewport."
+  },
+  "limits": [
+    "Current-equivalence review only. No historical canonical preflight, final release, merge, production publication or full-site PASS is claimed.",
+    "Desktop Chromium at 1280/390/320 CSS-pixel widths is not physical-phone hardware or a complete cross-browser/accessibility audit.",
+    "Actual diagnostic run 40459441520 succeeded; main qa in that run failed at the artwork gate and subsequent main-qa steps remained skipped. Previous failed runs and the prior raw-header finding remain historical evidence.",
+    "No Search query was submitted. Menu, Search, keyboard, dialog and journey results cover only the exact named tested paths; no live service/account mutation was exercised.",
+    "PNG originals and WebPs are not losslessly identical. Fine detail is softer in smaller derivatives; source identity, generation dates and period authenticity are not invented.",
+    "The ride far hind hoof remains occluded; strict four-hoof visibility remains NOT_MET.",
+    "Screenshot bytes were personally viewed in the retained artifact; public evidence pointers contain metadata/results and exact capture hashes, not embedded screenshot pixels.",
+    "The twenty asset pixels were previously personally inspected and re-bound to unchanged current bytes; the forty-five corrected-header captures were newly personally inspected. No other reviewer verdict substitutes for these observations."
+  ],
+  "evidence": [
+    {
+      "path": "docs/emma-story-artwork-import/evidence/v7-results.json",
+      "bytes": 3878,
+      "sha256": "eecf529298bb8d3d1cb445f23f1b414118a6721639ba289e0c8c7e1cac33d5dc"
+    },
+    {
+      "path": "docs/emma-story-artwork-import/evidence/v7-header-and-viewports.json",
+      "bytes": 99068,
+      "sha256": "9f20f28563271a39125294b55971d7135087d64bd990dd1adb03f7e7ecbd7694"
+    },
+    {
+      "path": "docs/emma-story-artwork-import/evidence/v7-diagnostic.txt",
+      "bytes": 530,
+      "sha256": "e7c51c0d52a7e5ec55e375f23eb33c093f9349b421cb676e78f50c8779291513"
+    },
+    {
+      "path": "docs/emma-story-artwork-import/evidence/v7-capture-manifest.json",
+      "bytes": 7833,
+      "sha256": "cc595b43b5c6d8abcf3b5154b749e2b5dceaff2a2bfea41d2604eb376e90112a"
+    },
+    {
+      "path": "docs/emma-story-artwork-import/evidence/v7-artifact-binding.json",
+      "bytes": 890,
+      "sha256": "c29d90bbf2a7e1724a9c56b60d778920b546dcac1c835704eb7eb979543c88a6"
+    }
+  ],
+  "producer": {
+    "head": "a0bdd6d72752cec73b8ed3c53aa44f62bfdd9a35",
+    "merge": "d45ca3cf23e70b2cb40641d1511c766a8565901b",
+    "tree": "63f6138c7d063f075608c484ddd6c9d29bbb88af",
+    "renderer_sha256": "7a5e1a77a277ffea7f315d5a36816cdc27da381c10e83fed2a89ae7cc5817272",
+    "workflow_sha256": "deb9bd7e59a44954c9238c84d7355bd802c86595bd6c73ae8bfba6b859a3e07a",
+    "diagnostic_job": 122040309340,
+    "run": 40459441520
+  }
+}

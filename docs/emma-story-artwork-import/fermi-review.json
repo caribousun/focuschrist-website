@@ -1,0 +1,74 @@
+{
+  "schema": 1,
+  "reviewer": "Fermi",
+  "decision": "CONCUR",
+  "spec_sha256": "edf637707b70d8bef7af2c4ff614fa6bcb1c2324e01fd911349ac2a5aa222282",
+  "reviewed_at": "2026-10-27T06:25:47.457872+00:00",
+  "withdrawn": false,
+  "source_provenance_verified": true,
+  "actual_derivatives_inspected": true,
+  "assembled_context_inspected": true,
+  "scope": "EXACT_FIVE_EMMA_CURRENT_EQUIVALENCE_WITH_EXPLICIT_LIMITS",
+  "historical_canonical_preflight_claim": false,
+  "generation_time": "UNKNOWN_NOT_INFERRED",
+  "strict_four_hoof_visibility": "NOT_MET_OCCLUDED",
+  "physical_phone_tested": false,
+  "overall_site_release_approved": false,
+  "checks": {
+    "identity": "The five selected PNG originals and all fifteen actual WebPs were personally compared at native full frame and enlarged face regions in the earlier actual asset inspection; their exact byte and RGBA pixel pins match this spec again. Characteristic facial relationships remain recognizably continuous with the approved artistic reference across the different angles and expressions. Current assembled views retain that continuity. This is manual artistic likeness review, not biometric equivalence or exact facial measurement.",
+    "age": "The source set retains the younger adult action/book portraits, mature Quincy and hospitality interpretations, and older speaking portrait with gray-streaked hair and facial lines. The 640 derivatives and 320-width display lose fine lines and skin detail, particularly in testimony; no exact apparent numeric age or preservation of every wrinkle is certified.",
+    "expression_gaze": "Ride remains composed and focused in the direction of travel, not camera-facing anguish; hymnal looks down toward the book; Quincy looks down toward clasped hands; hospitality retains a restrained welcoming expression and near-viewer doorway gaze; testimony remains attentive off-camera with a speaking mouth and raised hand. No derivative-only conspicuous gaze drift or expression replacement was observed. Small displays cannot support fine iris or eyelash certainty.",
+    "atmosphere": "Autumn color, forward action and valley depth make the selected ride distinct from the quiet window-lit book, seated Quincy and late-life portraits and the welcoming doorway. These images enrich their reading sections with coherent warm light and restrained colors against the dark teal/gold page design rather than repeating one interchangeable pose. No conspicuous normal-display block seam, halo or color-break artifact was observed.",
+    "environment": "All fifteen selected derivatives retain the source composition and scene geometry. Current artwork views preserve the main head, hands, horse and environmental framing without a new responsive crop; hospitality retains the threshold and visible shoe. The desktop ride capture ends about 0.36 CSS pixels before the reported artwork bottom, a viewport-boundary limitation rather than proof of a full-frame screenshot. Quincy is a representative seated post-crossing portrait, not a literal image of crossing the ice. The existing separate hub hero crops differently on phone widths and is not one of these five newly certified originals.",
+    "characters_realism": "The visible selected character, fabric, hair, light and contact relationships remain coherent at normal size. Enlarged inspection reveals expected progressive smoothing and pixel quantization in smaller WebPs, not recovered detail. Hidden body surfaces, far fingers, saddle/pelvis, exact hair topology and documentary physical dimensions are not certified; this is illustrative photorealistic artwork, not a photograph of the historical events.",
+    "period_sources": "The exact five public-safe provenance summaries were read and verified against the retained historical receipt bytes and authored time fields, including selected-source matches and the earlier actual derivative review. Modest dresses, pinned hair, small closed book, wood/plaster interiors and doorway are visibly consistent with the reviewed period-oriented illustrative design, with no conspicuous modern prop introduced by the derivatives. This does not authenticate a particular garment, building, book copy or event reconstruction. Historical source-art reviews are not retroactive canonical preflight and are not assembled-page approval; generation timestamps remain unknown.",
+    "anatomy": "Visible poses and hand contacts remain coherent within the selected artwork. The ride has three clearly readable complete hooves; the far hind hoof is naturally occluded by debris/limb overlap. Strict four-complete-hooves-visible status remains NOT_MET_OCCLUDED. Natural occlusion is accepted only within the exact owner-selected v17 scope and does not prove unseen anatomy or erase that failed visibility criterion.",
+    "uniqueness": "The final selected ride is v17 and the four other scenes are corrective v2. Their distinct hair silhouettes, dress colors, pose, gaze and environments remain intact across all fifteen derivatives and current assembled views. No generation, replacement, source edit or revival of a rejected ride variant was performed. Proportional re-encoding is not byte/pixel identity with the PNG or a lossless claim.",
+    "desktop_phone": "Personally inspected all forty-five current V7.1 captures at native display: fifteen normal headers, fifteen artwork viewports, three hub views, three focused skip-link states, two mobile menus, two mobile search dialogs and five 390-width artwork dialogs. At 1280/390/320 the corrected headers are styled, legible and separated from content; the old raw-link-header defect is absent. Search/menu controls are distinct; title/button wrapping and text gutters are readable. The focused skip link is conspicuous above the header, not an unfocused body obstruction. Search dialogs fit both phone widths with legible field, action and Close. Lower menu content and longer art dialogs can extend beyond their initial visible panel; hymnal bottom Close is partly below the initial view and testimony bottom Close is below it, while the top-right close control is visible. This is browser-width evidence, not a physical-phone, touch-keyboard, all-browser or exhaustive accessibility certification."
+  },
+  "limits": [
+    "BOUND_SCOPE: exact five selected originals, fifteen derivatives, pinned pages/CSS and the reviewed current V7.1 captures only; this receipt is not final full-site release, deployment approval or all-QA PASS.",
+    "FOUR_HOOF_VISIBILITY_NOT_MET_OCCLUDED: far hind hoof remains naturally occluded; owner-selected scope does not erase the strict negative visibility finding or certify hidden anatomy.",
+    "PHONE_WIDTH_NOT_PHYSICAL_PHONE: 1280x900, 390x900 and 320x900 browser screenshots were reviewed; no physical phone, touch keyboard, alternate browser/device or exhaustive accessibility test is claimed.",
+    "CAPTURE_LIMITS: desktop ride artwork bottom is reported at y=900.359375 in a 900-high viewport; the screenshot is not a complete subpixel boundary proof. Long art dialogs and menus may require panel scrolling. No claim that every control fits the initial viewport.",
+    "DIAGNOSTIC_NOT_FULL_RELEASE: results.json reports pass=true for 31 listed journeys; this is not independent execution by this reviewer and does not override separate registration, other QA or release gates. Search input/open/close was exercised; searchSubmitted=false, so search results/submission are not certified.",
+    "HISTORICAL_EVIDENCE_PRESERVED: earlier failed tall captures and V6 raw-header evidence remain historical. They are not used to accept the corrected V7.1 headers and are not rewritten as passes.",
+    "SOURCE_ART_ONLY_HISTORY: historical receipts identify source-art review and selection. The old provenance-summary pending language is its historical snapshot; this current receipt supplies only its own exact-spec concurrence and cannot confer another reviewer decision.",
+    "GENERATION_TIME_UNKNOWN_NOT_INFERRED: authored review times are not generation timestamps; no file modification time is substituted and no retrospective canonical preflight is claimed.",
+    "ARTISTIC_NOT_BIOMETRIC: no exact face/body dimensions, numeric age, hidden anatomy, lossless derivative equivalence or authenticated historic reconstruction is guaranteed.",
+    "PUBLIC_SAFE_METADATA: this evidence report binds privately retained screenshot files by exact hashes; it does not embed or claim publication of those screenshot bytes, private identity reference images, prompts or private source-review bodies.",
+    "HUB_SCOPE: the unchanged existing hub hero is observed only as surrounding presentation; it is not one of the five selected originals certified by this registration."
+  ],
+  "evidence": [
+    {
+      "path": "docs/emma-story-artwork-import/fermi-evidence.json",
+      "bytes": 48282,
+      "sha256": "d36bb2fc92bb24f85bd5fd73ec90a5d9ca40f3f2bebe96f965a3d62547b249d0"
+    },
+    {
+      "path": "docs/emma-story-artwork-import/evidence/v7-results.json",
+      "bytes": 3878,
+      "sha256": "eecf529298bb8d3d1cb445f23f1b414118a6721639ba289e0c8c7e1cac33d5dc"
+    },
+    {
+      "path": "docs/emma-story-artwork-import/evidence/v7-header-and-viewports.json",
+      "bytes": 99068,
+      "sha256": "9f20f28563271a39125294b55971d7135087d64bd990dd1adb03f7e7ecbd7694"
+    },
+    {
+      "path": "docs/emma-story-artwork-import/evidence/v7-diagnostic.txt",
+      "bytes": 530,
+      "sha256": "e7c51c0d52a7e5ec55e375f23eb33c093f9349b421cb676e78f50c8779291513"
+    },
+    {
+      "path": "docs/emma-story-artwork-import/evidence/v7-capture-manifest.json",
+      "bytes": 7833,
+      "sha256": "cc595b43b5c6d8abcf3b5154b749e2b5dceaff2a2bfea41d2604eb376e90112a"
+    },
+    {
+      "path": "docs/emma-story-artwork-import/evidence/v7-artifact-binding.json",
+      "bytes": 890,
+      "sha256": "c29d90bbf2a7e1724a9c56b60d778920b546dcac1c835704eb7eb979543c88a6"
+    }
+  ]
+}

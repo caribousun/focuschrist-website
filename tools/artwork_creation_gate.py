@@ -481,6 +481,22 @@ def run(root, mode='release', scene=None, page_overrides=None):
     from timeline_source_import import MANIFEST as TIMELINE_IMPORT, validate as validate_timeline_import
     if (root / TIMELINE_IMPORT).exists() or any(p.startswith('assets/world-scripture/') for p in added):
         covered |= validate_timeline_import(root, added, covered, rejected)
+    # Exact five selected Emma originals and their reviewed delivered derivatives.
+    # No generic directory waiver; this family retains current-equivalence limits.
+    from artwork_emma_story_delivery import MANIFEST as EMMA_IMPORT, validate as validate_emma
+    emma_paths = {f'assets/page-art/emma-life/originals/emma-{s}-selected.png'
+                  for s in ('ride', 'hymnal', 'quincy', 'hospitality', 'testimony')}
+    emma_paths |= {f'assets/page-art/emma-life/emma-story{i}-{s}-review-{w}.webp'
+                   for i, s in enumerate(('ride', 'hymnal', 'quincy', 'hospitality', 'testimony'), 1)
+                   for w in (640, 960, 1536)}
+    if (root / EMMA_IMPORT).exists() or added & emma_paths:
+        emma_record = json.loads((root / EMMA_IMPORT).read_text(encoding='utf-8'))
+        emma, emma_hashes, emma_pixels = validate_emma(
+            root, emma_record, added, covered, rejected, pixel_hash, page_dependencies)
+        require(not (emma_hashes & originals) and not (emma_pixels & original_pixels), 'Emma family duplicates another creation')
+        covered |= emma
+        originals |= emma_hashes
+        original_pixels |= emma_pixels
     from artwork_display_delivery import ASSETS as DISPLAY_ASSETS, validate as validate_display_delivery
     # The display family still owns exactly the remaining added rasters.
     if (root / 'docs/image-delivery-20261019.json').exists() or added & {row['path'] for row in DISPLAY_ASSETS}:

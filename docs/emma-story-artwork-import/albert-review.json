@@ -1,0 +1,79 @@
+{
+  "reviewer": "Albert",
+  "decision": "CONCUR",
+  "spec_sha256": "edf637707b70d8bef7af2c4ff614fa6bcb1c2324e01fd911349ac2a5aa222282",
+  "reviewed_at": "2026-10-27T06:30:02.999023+00:00",
+  "withdrawn": false,
+  "scope": "Exact current five-scene source/derivative/assembled equivalence only; not site release or retrospective canonical preflight.",
+  "source_provenance_verified": true,
+  "actual_derivatives_inspected": true,
+  "assembled_context_inspected": true,
+  "checks": {
+    "identity": "Selected v17 ride and four v2 scene designs remain recognizable and unchanged in the inspected direct960WebPs and actual rendered figures; no new crop or scene substitution observed.",
+    "age": "Story age labels and approved younger/older styling are retained. Appearance is not independent proof of an exact numerical age.",
+    "expression_gaze": "Ride looks along the route ahead; hymnal and Quincy look down; hospitality addresses the visitor; testimony has a speaking expression and gaze to the right. No new blank-stare drift observed.",
+    "atmosphere": "Warm autumn motion and restrained indoor lighting support the separate story moods without new visual treatment.",
+    "environment": "Selected autumn terrain and period-room/doorway settings are retained. This is bounded illustration review, not exhaustive historical reconstruction.",
+    "characters_realism": "The selected human designs, hands and clothing remain coherent in current views; smaller rendered variants soften fine detail.",
+    "period_sources": "The preserved public-safe source receipt summaries, Hannah-reviewed prose and source pointers remain bound. Unknown exact generation times are not inferred from file metadata.",
+    "anatomy": "The selected ride has three clearly visible hoof endpoints and a naturally occluded far hind hoof. Strict four-hoof visibility remains NOT_MET; no unconditional anatomy claim.",
+    "uniqueness": "Five distinct selected originals and fifteen exact derivative assets are pinned to five separate story routes. Reuse of character identity is intentional; no substituted artwork was found.",
+    "desktop_phone": "Current canonical desktop/phone-width headers, all five phone-width artwork assemblies and representative menu/Search states were personally inspected. Exact V7.1 results contain31 passing named journeys; independent Fermi/Newton viewed the full45-capture matrix. Physical phones and submitted search are outside scope."
+  },
+  "limits": [
+    "Strict ride four-hoof visibility is NOT_MET because of natural occlusion.",
+    "Browser viewport widths1280/390/320 are not physical-device testing.",
+    "Some lower dialog controls require scrolling; tested close/focus journeys passed.",
+    "Search modal/form behavior was tested without submitting a query.",
+    "Full normal QA and release review remain required; this record grants only exact artwork evidence coverage."
+  ],
+  "evidence": [
+    {
+      "path": "docs/emma-story-artwork-import/evidence/v7-results.json",
+      "bytes": 3878,
+      "sha256": "eecf529298bb8d3d1cb445f23f1b414118a6721639ba289e0c8c7e1cac33d5dc"
+    },
+    {
+      "path": "docs/emma-story-artwork-import/evidence/v7-header-and-viewports.json",
+      "bytes": 99068,
+      "sha256": "9f20f28563271a39125294b55971d7135087d64bd990dd1adb03f7e7ecbd7694"
+    },
+    {
+      "path": "docs/emma-story-artwork-import/evidence/v7-diagnostic.txt",
+      "bytes": 530,
+      "sha256": "e7c51c0d52a7e5ec55e375f23eb33c093f9349b421cb676e78f50c8779291513"
+    },
+    {
+      "path": "docs/emma-story-artwork-import/evidence/v7-capture-manifest.json",
+      "bytes": 7833,
+      "sha256": "cc595b43b5c6d8abcf3b5154b749e2b5dceaff2a2bfea41d2604eb376e90112a"
+    },
+    {
+      "path": "docs/emma-story-artwork-import/evidence/v7-artifact-binding.json",
+      "bytes": 890,
+      "sha256": "c29d90bbf2a7e1724a9c56b60d778920b546dcac1c835704eb7eb979543c88a6"
+    },
+    {
+      "path": "docs/emma-story-artwork-import/evidence/albert-desktop-observations.json",
+      "bytes": 839,
+      "sha256": "61b101984169043c682f9ab4ec56e2aa23634a8a03dde42cd51c443ccb482c1b"
+    },
+    {
+      "path": "docs/emma-story-artwork-import/evidence/albert-phone-observations.json",
+      "bytes": 2051,
+      "sha256": "49d8dab39dba2a18e97ccb6df2bb5e777f623aa51711eec54b2adaba7ec118f8"
+    }
+  ],
+  "rendered": {
+    "desktop": {
+      "path": "docs/emma-story-artwork-import/evidence/albert-desktop-observations.json",
+      "bytes": 839,
+      "sha256": "61b101984169043c682f9ab4ec56e2aa23634a8a03dde42cd51c443ccb482c1b"
+    },
+    "phone": {
+      "path": "docs/emma-story-artwork-import/evidence/albert-phone-observations.json",
+      "bytes": 2051,
+      "sha256": "49d8dab39dba2a18e97ccb6df2bb5e777f623aa51711eec54b2adaba7ec118f8"
+    }
+  }
+}
