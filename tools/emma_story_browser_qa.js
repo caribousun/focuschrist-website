@@ -34,10 +34,10 @@ const TYPES={'.html':'text/html','.css':'text/css','.js':'text/javascript','.web
  const noOverflow=async()=>{const m=await page.evaluate(()=>({sw:document.documentElement.scrollWidth,iw:innerWidth}));assert(m.sw<=m.iw+1,`horizontal overflow ${m.sw} > ${m.iw} on ${page.url()}`);};
  // Keep evidence inside the real viewport: tall element clips can include
  // offscreen fixed controls. Never mask, restyle or blur the skip link.
- const skipEvidence=[],shots=[];let screenshotBytes=0;
- const saveEvidence=()=>{const b=Buffer.from(JSON.stringify({skipEvidence,shots,screenshotBytes},null,2)+'\n');assert(b.length<=128*1024,'Skip evidence JSON bound');fs.writeFileSync(path.join(out,'skip-link-evidence.json'),b);};
+ const skipEvidence=[],headerEvidence=[],shots=[];let screenshotBytes=0;
+ const saveEvidence=()=>{const b=Buffer.from(JSON.stringify({skipEvidence,headerEvidence,shots,screenshotBytes},null,2)+'\n');assert(b.length<=128*1024,'Skip evidence JSON bound');fs.writeFileSync(path.join(out,'skip-link-evidence.json'),b);};
  const capture=async name=>{
-  assert(shots.length<26,'Emma screenshot count bound');
+  assert(shots.length<45,'Emma screenshot count bound');
   const jpeg=name.endsWith('.jpg'),data=await page.screenshot({type:jpeg?'jpeg':'png',...(jpeg?{quality:80}:{}),fullPage:false,timeout:8000});
   assert(data.length<=1024*1024,'Single Emma screenshot exceeds 1 MiB');
   assert(screenshotBytes+data.length<=23*1024*1024,'Emma screenshot evidence exceeds 23 MiB');
@@ -51,6 +51,58 @@ const TYPES={'.html':'text/html','.css':'text/css','.js':'text/javascript','.web
   });skipEvidence.push({label,page:new URL(page.url()).pathname,...data});saveEvidence();return data;
  };
  const hiddenSkip=async label=>{const s=await readSkip(label);assert(!s.missing,'Expected shared skip link');assert(!s.focused,label+': skip link unexpectedly focused');assert(!s.intersects,label+': unfocused skip link intersects the real viewport');};
+ // Canonical selectors and behavior are copied from the existing hub,
+ // site-header.css, site-common.js initNavigation and site-search.js initHeader.
+ const checkHeader=async(s,width)=>{
+  const nav=page.locator('nav.nav[data-focuschrist-header="standard"]');
+  assert.equal(await nav.count(),1,`${s.page}: canonical header missing`);
+  assert.equal(await page.locator('header.fc-header[data-site-header]').count(),0,'Alternate unstyled header remains');
+  // Shared navigation schedules its fit on load and fonts.ready, then rAF.
+  // Observe that normal lifecycle before measuring; do not force its classes.
+  await page.waitForFunction(async()=>{if(document.fonts)await document.fonts.ready;await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));return true;},null,{timeout:5000});
+  const measure=await nav.evaluate(n=>{
+   const c=getComputedStyle(n),r=n.getBoundingClientRect(),logo=n.querySelector('.nav-logo'),lc=getComputedStyle(logo);
+   const controls=['.nav-logo','.fc-search-trigger[data-site-search-trigger]','.hamburger'].map(selector=>{
+    const a=n.querySelector(selector),q=a.getBoundingClientRect(),cs=getComputedStyle(a),hit=document.elementFromPoint(q.x+q.width/2,q.y+q.height/2);
+    return {selector,x:q.x,y:q.y,right:q.right,bottom:q.bottom,width:q.width,height:q.height,display:cs.display,visibility:cs.visibility,hit:!!hit&&(a===hit||a.contains(hit))};
+   });
+   return {rect:{x:r.x,y:r.y,right:r.right,bottom:r.bottom,width:r.width,height:r.height},display:c.display,position:c.position,backgroundImage:c.backgroundImage,backgroundColor:c.backgroundColor,logoDecoration:lc.textDecorationLine,logoSpacing:lc.letterSpacing,linksDisplay:getComputedStyle(n.querySelector('.nav-links')).display,controls};
+  });headerEvidence.push({page:s.page,width,label:'normal-header',...measure});saveEvidence();
+  assert(['flex','grid'].includes(measure.display),'Canonical header layout CSS not applied');
+  assert(measure.backgroundImage!=='none'||!['transparent','rgba(0, 0, 0, 0)'].includes(measure.backgroundColor),'Header background missing');
+  assert(measure.logoDecoration==='none'&&parseFloat(measure.logoSpacing)>0,'Canonical wordmark styling missing');
+  assert(measure.rect.height>=52&&measure.rect.x>=-1&&measure.rect.right<=width+1,'Header geometry');
+  assert.equal(measure.position,width<=1020?'relative':'fixed','Shared header positioning contract');
+  assert(width<=1020?measure.linksDisplay==='none':measure.linksDisplay!=='none','Responsive navigation visibility');
+  for(const c of measure.controls)assert(c.width>0&&c.height>0&&c.x>=-1&&c.y>=-1&&c.right<=width+1&&c.bottom<=900&&c.display!=='none'&&c.visibility==='visible'&&c.hit,`Unreachable header control ${JSON.stringify(c)}`);
+  const timeline=nav.locator('a[data-focuschrist-primary-timeline]');assert((await timeline.count())>=2,'Desktop and menu Timeline destinations');
+  for(const href of await timeline.evaluateAll(a=>a.map(n=>n.getAttribute('href'))))assert.equal(href,'../timeline.html','Canonical Timeline target');
+  assert.equal(await nav.locator('a[href="../timeline/world.html"]').count(),0,'Broken alternate Timeline route remains');
+  const hamburger=nav.locator('.hamburger'),menu=nav.locator('#hamburgerMenu'),search=nav.locator('.fc-search-trigger[data-site-search-trigger]');
+  assert.equal(await hamburger.getAttribute('aria-expanded'),'false');assert.equal(await menu.isVisible(),false);
+  await capture(`${s.base}-header-${width}.jpg`);
+  if(width<=1020){
+   await hamburger.click();await menu.waitFor({state:'visible',timeout:5000});
+   await page.waitForFunction(()=>document.querySelector('.hamburger')?.getAttribute('aria-expanded')==='true',null,{timeout:5000});
+   const box=await menu.boundingBox();assert(box&&box.x>=-1&&box.y>=0&&box.x+box.width<=width+1&&box.y+box.height<=900,'Mobile menu must fit viewport');
+   if(s.page===STORIES[1].page)await capture(`emma-mobile-menu-${width}.jpg`);
+   await page.keyboard.press('Escape');
+   await page.waitForFunction(()=>{const h=document.querySelector('.hamburger'),m=document.getElementById('hamburgerMenu');return h?.getAttribute('aria-expanded')==='false'&&getComputedStyle(m).display==='none'&&document.activeElement===h;},null,{timeout:5000});
+   // Keyboard opens the same menu, then Search closes it and owns the modal.
+   await page.keyboard.press('Enter');await menu.waitFor({state:'visible',timeout:5000});
+   await search.click();const dialog=page.locator('#fc-search-dialog[open]');await dialog.waitFor({state:'visible',timeout:5000});
+   await page.waitForFunction(()=>document.activeElement===document.getElementById('fc-header-search'),null,{timeout:5000});
+   assert.equal(await menu.isVisible(),false);assert.equal(await hamburger.getAttribute('aria-expanded'),'false');
+   const form=dialog.locator('form.fc-search-form');assert.equal(await form.getAttribute('method'),'get');
+   assert.equal(await form.getAttribute('action'),origin+'/search.html');
+   const input=dialog.locator('#fc-header-search');assert.equal(await input.getAttribute('name'),'q');await input.fill('Emma');assert.equal(await input.inputValue(),'Emma');
+   if(s.page===STORIES[1].page)await capture(`emma-mobile-search-${width}.jpg`);
+   await dialog.locator('.fc-search-close').click();
+   await page.waitForFunction(()=>!document.getElementById('fc-search-dialog')?.open&&document.activeElement===document.querySelector('.fc-search-trigger[data-site-search-trigger]'),null,{timeout:5000});
+   headerEvidence.push({page:s.page,width,label:'menu-keyboard-search-close',pass:true,searchSubmitted:false});saveEvidence();
+  }
+  results.push({page:s.page,journey:width<=1020?'canonical-header-menu-search':'canonical-header',width});
+ };
  try{
   // Page-level checks at all three widths for the hub and the five stories.
   for(const width of [1280,390,320]){
@@ -61,6 +113,7 @@ const TYPES={'.html':'text/html','.css':'text/css','.js':'text/javascript','.web
    for(const s of STORIES){
     await page.goto(origin+'/'+s.page);await noOverflow();
     await hiddenSkip(`${s.base}-${width}-normal-before-tab`);
+    await checkHeader(s,width);
     await page.mouse.move(width-8,450);await page.mouse.wheel(0,240);
     await hiddenSkip(`${s.base}-${width}-pointer-reading`);
     const img=page.locator(`img[src*="${s.base}-960.webp"]`);
@@ -210,6 +263,6 @@ const TYPES={'.html':'text/html','.css':'text/css','.js':'text/javascript','.web
   assert(await hubTrigger.evaluate(n=>document.activeElement===n),'Hub close focus did not return to its artwork');
   results.push({page:HUB,journey:'hub-dialog-open-close',width:1280});
   fs.writeFileSync(path.join(out,'results.json'),JSON.stringify({results,pass:true},null,2));
-  console.log(`EMMA STORY PASS: 6 pages x 3 widths, normal viewport and 3 skip-link keyboard checks, 5 dialog/full-size/focus journeys, Continue Lesson, Escape, 5 hub link-and-back journeys`);
+  console.log(`EMMA STORY PASS: 6 pages x 3 widths, normal styled headers/menu/search, viewport and 3 skip-link keyboard checks, 5 dialog/full-size/focus journeys, Continue Lesson, Escape, 5 hub link-and-back journeys`);
  }finally{await browser.close();await new Promise(r=>server.close(r));}
 })().catch(e=>{console.error(e);process.exitCode=1;});
