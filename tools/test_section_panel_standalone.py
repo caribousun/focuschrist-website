@@ -30,4 +30,25 @@ class ReviewedTimelineStyleTests(unittest.TestCase):
    self.assertTrue(fn(name,data))
    for altered in (data+b' ',data.replace(b'16px',b'17px',1),data.replace(b'transparent',b'purple',1)):
     if altered!=data:self.assertFalse(fn(name,altered))
+class EmmaModifierClassificationTests(unittest.TestCase):
+ def emma_routes(self):
+  return ['history/emma-hale-smith.html','history/emma-elect-lady.html','history/emma-hymns.html','history/emma-winter-crossing.html','history/emma-relief-society.html','history/emma-last-testimony.html']
+ def test_all_six_emma_pages_classified(self):
+  config=json.loads(q.CONFIG.read_text(encoding='utf-8'))
+  with patch.object(q,'canonical',return_value=self.emma_routes()):actual=q.inventory(config)
+  row=actual['candidate_classes']['fc-life-reflections--two']
+  self.assertEqual(row['count'],5)
+  self.assertEqual(row['tags'],['div'])
+  self.assertEqual(row['pages'],sorted(self.emma_routes()[1:]))
+  self.assertEqual(row['disposition'],'excluded_with_reason')
+ def test_exact_modifier_classification_required(self):
+  config=json.loads(q.CONFIG.read_text(encoding='utf-8'));del config['excluded_classes']['fc-life-reflections--two']
+  with patch.object(q,'canonical',return_value=self.emma_routes()):
+   with self.assertRaisesRegex(AssertionError,'Unclassified panel-like class: fc-life-reflections--two'):q.inventory(config)
+ def test_unseen_similar_modifier_still_rejected(self):
+  config=json.loads(q.CONFIG.read_text(encoding='utf-8'))
+  with tempfile.TemporaryDirectory() as folder:
+   root=Path(folder);(root/'fixture.html').write_text('<div class="fc-life-reflections fc-life-reflections--three">x</div>',encoding='utf-8')
+   with patch.object(q,'ROOT',root),patch.object(q,'canonical',return_value=['fixture.html']):
+    with self.assertRaisesRegex(AssertionError,'Unclassified panel-like class: fc-life-reflections--three'):q.inventory(config)
 if __name__=='__main__':unittest.main()
