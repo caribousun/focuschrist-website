@@ -1,4 +1,4 @@
-"""Ten finite Adams panel/standalone tests; full inventory equality stays in CI."""
+"""Twelve finite Adams panel/standalone tests; full inventory equality stays in CI."""
 import copy
 import hashlib
 import json
@@ -85,10 +85,39 @@ class AdamsPanelTests(unittest.TestCase):
         current['canonical_pages'].remove(ADAMS_ROUTE)
         del current['candidate_classes']['fc-adams-note']
         current['styled_surface_candidates']['controls']['pages'].remove(ADAMS_ROUTE)
+        self.assertEqual(current['candidate_classes']['fc-timeline-note']['count'], 2)
+        current['candidate_classes']['fc-timeline-note']['count'] = 1
         raw = (json.dumps(current, ensure_ascii=False, indent=2) + '\n').encode()
         self.assertEqual(hashlib.sha256(raw).hexdigest(), '9c3442425c7113310b76f254853107a04b937576cc0d3f7e63bf7fa093caaadc')
         config = copy.deepcopy(self.config); del config['excluded_classes']['fc-adams-note']
         self.assertEqual(hashlib.sha256((json.dumps(config, ensure_ascii=False, indent=2) + '\n').encode()).hexdigest(), '722a3bfdb987a59b49a3a79c75d25d600ab95b2d87000d15477de0e7ee3fb6d0')
+
+    def landing_note_row(self, data):
+        # Parse only inert source through the production inventory function.
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder); (root / 'timeline.html').write_bytes(data)
+            with patch.object(q, 'ROOT', root), patch.object(q, 'canonical', return_value=['timeline.html']):
+                return q.inventory(self.config)['candidate_classes']['fc-timeline-note']
+
+    def assert_landing_note_inventory(self, data):
+        saved = json.loads((ROOT / 'docs/section-panel-inventory.json').read_text())
+        self.assertEqual(self.landing_note_row(data), saved['candidate_classes']['fc-timeline-note'], 'Landing note inventory drift')
+
+    def test_exact_landing_note_count_matches_inventory(self):
+        data = (ROOT / 'timeline.html').read_bytes()
+        self.assertEqual(hashlib.sha256(data).hexdigest(), 'fa3b12da544899f8935874508b9abe64b84b6fd2af1e5bfec8a368ce6a638578')
+        self.assertEqual(self.landing_note_row(data)['count'], 2)
+        self.assert_landing_note_inventory(data)
+
+    def test_removed_and_duplicated_landing_note_reject_inventory(self):
+        data = (ROOT / 'timeline.html').read_bytes()
+        note = b'<p class="fc-timeline-note">This nineteenth century chart sets the history of the Bible and the history of the nations side by side across one long timeline, inviting the reader to follow both together.</p>'
+        self.assertEqual(data.count(note), 1)
+        for changed, count in ((data.replace(note, b'', 1), 1), (data.replace(note, note + note, 1), 3)):
+            with self.subTest(discovered_count=count):
+                self.assertEqual(self.landing_note_row(changed)['count'], count)
+                with self.assertRaisesRegex(AssertionError, 'Landing note inventory drift'):
+                    self.assert_landing_note_inventory(changed)
 
     def test_all_historical_code_and_tests_preserved(self):
         text = (ROOT / 'tools/section_panel_surface_qa.py').read_text()
