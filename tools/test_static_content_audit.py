@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Regression controls for required map inline-script and existing text binding."""
 import contextlib
+import hashlib
 import io
 import json
 from pathlib import Path
@@ -117,13 +118,24 @@ class ExistingTimelineInverseTests(unittest.TestCase):
         routes=['timeline.html','timelines/life-of-christ-journey-map.html','timelines/latter-day-saint-church-history-timeline.html','timelines/willie-and-martin-handcart-map.html']
         with tempfile.TemporaryDirectory() as folder:
             root=Path(folder)
+            # Current integrated routes validate against the exact reviewed manifest.
+            manifest='docs/owner-integration-contract/source-manifest.json'
+            (root/manifest).parent.mkdir(parents=True,exist_ok=True)
+            (root/manifest).write_bytes((original_root/manifest).read_bytes())
             for route in routes:
                 path=root/route;path.parent.mkdir(parents=True,exist_ok=True)
                 raw=(original_root/route).read_bytes();path.write_bytes(raw)
                 with patch.object(audit,'ROOT',root):
                     self.assertEqual(audit.content_hash(path),records[route]['published_text_sha256'])
                     path.write_bytes(raw+b'<p>Unreviewed additional assertion.</p>')
-                    self.assertNotEqual(audit.content_hash(path),records[route]['published_text_sha256'])
+                    if route in audit.CURRENT_INTEGRATION_ROUTES:
+                        # The current source binding rejects the mutation before hashing;
+                        # independently retain the existing visible-wording assertion.
+                        self.assertNotEqual(hashlib.sha256(audit.published_text(path).encode('utf-8')).hexdigest(),records[route]['published_text_sha256'])
+                        with self.assertRaisesRegex(AssertionError, 'Current integration source drift'):
+                            audit.content_hash(path)
+                    else:
+                        self.assertNotEqual(audit.content_hash(path),records[route]['published_text_sha256'])
 
 if __name__ == '__main__':
     unittest.main()
