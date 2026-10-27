@@ -40,14 +40,16 @@ function readView(){
  const m=new URL(first.src).pathname.match(/adams-(\d+)-(\d+)-(\d+)\.jpg$/);if(!m)return null;
  const [level,col,row]=m.slice(1).map(Number),z=parseFloat(first.style.width)/Math.min(1024*level,50195-col*1024*level);
  const rect=n=>{const r=n.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height,right:r.right,bottom:r.bottom};};
- return {z,x:parseFloat(first.style.left)-col*1024*level*z,y:parseFloat(first.style.top)-row*1024*level*z,level,viewport:rect(vp),toolbar:rect(document.getElementById('toolbar')),fit:document.getElementById('fit').getAttribute('aria-pressed'),fill:document.getElementById('fillScreen').getAttribute('aria-pressed'),tiles:tiles.map(n=>({url:new URL(n.src).pathname,complete:n.complete,width:n.naturalWidth,height:n.naturalHeight})),documentWidth:document.documentElement.scrollWidth,innerWidth,innerHeight};
+ return {z,x:parseFloat(first.style.left)-col*1024*level*z,y:parseFloat(first.style.top)-row*1024*level*z,level,layout:{width:vp.clientWidth,height:vp.clientHeight},viewport:rect(vp),toolbar:rect(document.getElementById('toolbar')),fit:document.getElementById('fit').getAttribute('aria-pressed'),fill:document.getElementById('fillScreen').getAttribute('aria-pressed'),tiles:tiles.map(n=>({url:new URL(n.src).pathname,complete:n.complete,width:n.naturalWidth,height:n.naturalHeight})),documentWidth:document.documentElement.scrollWidth,innerWidth,innerHeight};
 }
 async function settle(page){
  await page.waitForFunction(()=>{const a=[...document.querySelectorAll('#tiles img.tile')],o=document.getElementById('overview');return a.length&&a.every(n=>n.complete&&n.naturalWidth>0)&&o&&o.complete&&o.naturalWidth>0;},{},{timeout:8000});
  await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
  return page.evaluate(readView);
 }
-function checkFit(s){near(s.z,Math.min(s.viewport.width/W,s.viewport.height/H),'full-chart contain zoom',1e-8);near(s.x,(s.viewport.width-W*s.z)/2,'fit x');near(s.y,(s.viewport.height-H*s.z)/2,'fit y');assert.equal(s.fit,'true');}
+// Viewer fitCoords/clamp use integer client dimensions; keep the fractional
+// bounding rect separately for actual placement, hit targets and screenshots.
+function checkFit(s){near(s.z,Math.min(s.layout.width/W,s.layout.height/H),'full-chart contain zoom',1e-8);near(s.x,(s.layout.width-W*s.z)/2,'fit x');near(s.y,(s.layout.height-H*s.z)/2,'fit y');assert.equal(s.fit,'true');}
 function sameView(a,b,label){near(a.z,b.z,label+' zoom',1e-8);near(a.x,b.x,label+' x');near(a.y,b.y,label+' y');}
 
 module.exports=async function adamsChartQA(existingPage,origin,parentOut){
@@ -112,15 +114,15 @@ module.exports=async function adamsChartQA(existingPage,origin,parentOut){
     before=s;await act('#left');s=await state('left-tap');assert(s.x>before.x+1,'Left control actually pans');
     before=s;await act('#down');s=await state('down-tap');assert(s.y<before.y-1,'Down control actually pans');
     before=s;await act('#up');s=await state('up-tap');assert(s.y>before.y+1,'Up control actually pans');
-    before=s;await act('#sectionRight');s=await state('next-section');near(s.x,Math.max(s.viewport.width-W*s.z,before.x-s.viewport.width*.85),'Section step');
+    before=s;await act('#sectionRight');s=await state('next-section');near(s.x,Math.max(s.layout.width-W*s.z,before.x-s.layout.width*.85),'Section step');
     await act('#fastLeft');s=await state('start');near(s.x,0,'Start endpoint');
-    await act('#fastRight');s=await state('end');near(s.x,s.viewport.width-W*s.z,'End endpoint');await capture('end');
+    await act('#fastRight');s=await state('end');near(s.x,s.layout.width-W*s.z,'End endpoint');await capture('end');
     await act('#homeBtn');s=await state('reset-fit');checkFit(s);
     before=s;await act('#in');s=await state('zoom-in');near(s.z,before.z*1.6,'Zoom in scale',1e-8);
     await act('#out');s=await state('zoom-out');near(s.z,before.z,'Zoom out inverse',1e-8);
     await act('#zoom100');before=await state('saved-view');await act('#fit');s=await state('full-view');checkFit(s);
     await act('#fit');s=await state('exit-full-view');sameView(s,before,'Full View restore');
-    await act('#fillScreen');s=await state('fill-screen');assert.equal(s.fill,'true');near(s.z,Math.max(s.viewport.width/W,s.viewport.height/H),'Cover zoom',1e-8);
+    await act('#fillScreen');s=await state('fill-screen');assert.equal(s.fill,'true');near(s.z,Math.max(s.layout.width/W,s.layout.height/H),'Cover zoom',1e-8);
     await act('#fillScreen');s=await state('exit-fill-screen');assert.equal(s.fill,'false');sameView(s,before,'Fill Screen restore');
     if(!profile.touch){
      const box=s.viewport,x=box.x+box.width*.5,y=box.y+box.height*.4;

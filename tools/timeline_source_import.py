@@ -109,6 +109,8 @@ def restore_consumers(name, data):
 
 def restore_search(data):
     """Undo only the exact generated search record for this new route."""
+    from emma_generated_indices_successor import restore as restore_emma_indices
+    data = restore_emma_indices('site-search-index.json', data)
     if hashlib.sha256(data).hexdigest() == '85c5c413d2a293b9e61bc569a63663d959472c1f085e9f9f86e35839eb4fc970':
         # Undo only the exact gallery picture id delta from the commission
         # hand successor, then the frozen route inverse below applies.

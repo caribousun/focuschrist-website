@@ -38,6 +38,8 @@ def reviewed_bytes(path):
     return restore(name,raw)
 
 def restore(name,data,root=ROOT):
+    from emma_generated_indices_successor import restore as restore_emma_indices
+    data=restore_emma_indices(name,data,root)
     from missionary_close_successor import restore as restore_close
     from commission_hand_successor import restore as restore_hand
     from world_companion_successor import restore as restore_world
@@ -69,6 +71,7 @@ def restore(name,data,root=ROOT):
 def advance(name,data,root=ROOT):
     """Generate only the exact enumerated successor from an exact predecessor."""
     record=mapping(root)['files'].get(name)
+    from emma_generated_indices_successor import advance as advance_emma_indices
     from missionary_close_successor import advance as advance_close
     from commission_hand_successor import advance as advance_hand
     from world_companion_successor import advance as advance_world
@@ -83,7 +86,7 @@ def advance(name,data,root=ROOT):
     from pioneer_entry_scroll_successor import advance as advance_pioneer_scroll
     from bank_context_bypass_successor import advance as advance_bypass
     from emma_story_successor import advance as advance_emma
-    if not record or sha(data)!=record['before_sha256']:return advance_emma(name,advance_bypass(name,advance_pioneer_scroll(name,advance_scroll(name,advance_decoupling(name,advance_legacy(name,advance_citation(name,advance_eval(name,advance_gate(name,advance_bank(name,advance_hand(name,advance_close(name,advance_settings(name,advance_world(name,data,root),root),root),root),root),root),root),root),root),root),root),root),root),root)
+    if not record or sha(data)!=record['before_sha256']:return advance_emma_indices(name,advance_emma(name,advance_bypass(name,advance_pioneer_scroll(name,advance_scroll(name,advance_decoupling(name,advance_legacy(name,advance_citation(name,advance_eval(name,advance_gate(name,advance_bank(name,advance_hand(name,advance_close(name,advance_settings(name,advance_world(name,data,root),root),root),root),root),root),root),root),root),root),root),root),root),root),root)
     replacements=[];delta=0
     for span in record['spans']:
         previous=base64.b64decode(span['previous_b64'],validate=True)
@@ -95,9 +98,10 @@ def advance(name,data,root=ROOT):
     result=data
     for start,end,current in reversed(replacements):result=result[:start]+current+result[end:]
     require(sha(result)==record['after_sha256'],'Motion successor reconstruction drift')
-    return advance_emma(name,advance_bypass(name,advance_pioneer_scroll(name,advance_scroll(name,advance_decoupling(name,advance_legacy(name,advance_citation(name,advance_eval(name,advance_gate(name,advance_bank(name,advance_hand(name,advance_close(name,advance_settings(name,advance_world(name,result,root),root),root),root),root),root),root),root),root),root),root),root),root),root)
+    return advance_emma_indices(name,advance_emma(name,advance_bypass(name,advance_pioneer_scroll(name,advance_scroll(name,advance_decoupling(name,advance_legacy(name,advance_citation(name,advance_eval(name,advance_gate(name,advance_bank(name,advance_hand(name,advance_close(name,advance_settings(name,advance_world(name,result,root),root),root),root),root),root),root),root),root),root),root),root),root),root),root)
 
 def check(root=ROOT):
+    from emma_generated_indices_successor import check as check_emma_indices
     from missionary_close_successor import check as check_close,restore as restore_close
     from commission_hand_successor import check as check_hand,restore as restore_hand
     from world_companion_successor import check as check_world,restore as restore_world
@@ -177,6 +181,7 @@ def check(root=ROOT):
     check_pioneer_scroll(root)
     check_bypass(root)
     check_emma(root)
+    check_emma_indices(root)
     return {'status':'EXACT_MOTION_EVIDENCE_PASS','files':len(data['files']),'limits':'Technical evidence binding only; does not authenticate reviewers or grant publication approval.'}
 
 if __name__=='__main__':

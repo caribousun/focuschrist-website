@@ -32,20 +32,69 @@ const TYPES={'.html':'text/html','.css':'text/css','.js':'text/javascript','.web
  const browser=await chromium.launch({headless:true}),page=await browser.newPage(),results=[];
  fs.mkdirSync(out,{recursive:true});
  const noOverflow=async()=>{const m=await page.evaluate(()=>({sw:document.documentElement.scrollWidth,iw:innerWidth}));assert(m.sw<=m.iw+1,`horizontal overflow ${m.sw} > ${m.iw} on ${page.url()}`);};
+ // Keep evidence inside the real viewport: tall element clips can include
+ // offscreen fixed controls. Never mask, restyle or blur the skip link.
+ const skipEvidence=[],shots=[];let screenshotBytes=0;
+ const saveEvidence=()=>{const b=Buffer.from(JSON.stringify({skipEvidence,shots,screenshotBytes},null,2)+'\n');assert(b.length<=128*1024,'Skip evidence JSON bound');fs.writeFileSync(path.join(out,'skip-link-evidence.json'),b);};
+ const capture=async name=>{
+  assert(shots.length<26,'Emma screenshot count bound');
+  const jpeg=name.endsWith('.jpg'),data=await page.screenshot({type:jpeg?'jpeg':'png',...(jpeg?{quality:80}:{}),fullPage:false,timeout:8000});
+  assert(data.length<=1024*1024,'Single Emma screenshot exceeds 1 MiB');
+  assert(screenshotBytes+data.length<=23*1024*1024,'Emma screenshot evidence exceeds 23 MiB');
+  fs.writeFileSync(path.join(out,name),data,{flag:'wx'});screenshotBytes+=data.length;shots.push({file:name,bytes:data.length,viewport:page.viewportSize()});saveEvidence();
+ };
+ const readSkip=async label=>{
+  const data=await page.evaluate(()=>{
+   const a=document.querySelector('[data-focuschrist-skip-link]');if(!a)return {missing:true};
+   const r=a.getBoundingClientRect(),c=getComputedStyle(a),active=document.activeElement;
+   return {rect:{x:r.x,y:r.y,width:r.width,height:r.height,right:r.right,bottom:r.bottom},viewport:{width:innerWidth,height:innerHeight},scroll:{x:scrollX,y:scrollY},focused:active===a,activeElement:{tag:active?.tagName,id:active?.id||'',className:typeof active?.className==='string'?active.className:''},transform:c.transform,position:c.position,display:c.display,visibility:c.visibility,opacity:c.opacity,outline:{style:c.outlineStyle,width:c.outlineWidth},intersects:r.right>0&&r.bottom>0&&r.left<innerWidth&&r.top<innerHeight,href:a.getAttribute('href')};
+  });skipEvidence.push({label,page:new URL(page.url()).pathname,...data});saveEvidence();return data;
+ };
+ const hiddenSkip=async label=>{const s=await readSkip(label);assert(!s.missing,'Expected shared skip link');assert(!s.focused,label+': skip link unexpectedly focused');assert(!s.intersects,label+': unfocused skip link intersects the real viewport');};
  try{
   // Page-level checks at all three widths for the hub and the five stories.
   for(const width of [1280,390,320]){
    await page.setViewportSize({width,height:900});
    await page.goto(origin+'/'+HUB);await noOverflow();
-   await page.screenshot({path:path.join(out,`emma-hub-${width}.png`),fullPage:false});
+   await hiddenSkip(`hub-${width}-normal`);
+   await capture(`emma-hub-${width}.png`);
    for(const s of STORIES){
     await page.goto(origin+'/'+s.page);await noOverflow();
+    await hiddenSkip(`${s.base}-${width}-normal-before-tab`);
+    await page.mouse.move(width-8,450);await page.mouse.wheel(0,240);
+    await hiddenSkip(`${s.base}-${width}-pointer-reading`);
     const img=page.locator(`img[src*="${s.base}-960.webp"]`);
     assert.equal(await img.count(),1,`${s.page}: story artwork image missing`);
     assert.equal(await img.getAttribute('alt'),s.alt,`${s.page}: alt text changed`);
+    // Bring lazy-loaded story artwork into view before requiring decoded pixels.
+    await img.scrollIntoViewIfNeeded();
+    await page.waitForFunction(base=>{const n=document.querySelector('img[src*="'+base+'-960.webp"]');return n&&n.complete&&n.naturalWidth>0;},s.base,{timeout:10000});
     assert(await img.evaluate(n=>n.complete&&n.naturalWidth>0),`${s.page}: artwork image did not load`);
-    await page.locator(`#${s.section}`).screenshot({path:path.join(out,`${s.base}-${width}.png`)});
+    // The artwork-centered viewport is actual reader-visible content, not a
+    // stitched whole-section image. Record its box and any viewport clipping.
+    const artwork=await img.evaluate(n=>{const r=n.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height,right:r.right,bottom:r.bottom,viewportWidth:innerWidth,viewportHeight:innerHeight};});
+    skipEvidence.push({label:`${s.base}-${width}-artwork-box`,page:s.page,artwork});
+    await hiddenSkip(`${s.base}-${width}-artwork-viewport`);
+    await capture(`${s.base}-${width}-viewport.jpg`);
+    await hiddenSkip(`${s.base}-${width}-after-capture`);
    }
+  }
+  // Real keyboard path at each existing width: first Tab reveals the
+  // first-in-body skip link; Enter focuses its main landmark and hides it again.
+  // Normal pointer/scroll evidence above was recorded before any Tab.
+  for(const width of [1280,390,320]){
+   await page.setViewportSize({width,height:900});await page.goto(origin+'/'+STORIES[1].page);
+   await hiddenSkip(`keyboard-${width}-before-tab`);
+   await page.keyboard.press('Tab');
+   await page.waitForFunction(()=>{const a=document.querySelector('[data-focuschrist-skip-link]');if(!a||document.activeElement!==a)return false;const r=a.getBoundingClientRect();return r.top>=0&&r.left>=0&&r.right<=innerWidth&&r.bottom<=innerHeight;},null,{timeout:5000});
+   const shown=await readSkip(`keyboard-${width}-focused`);
+   assert(shown.focused&&shown.intersects&&shown.visibility==='visible'&&shown.display!=='none'&&Number(shown.opacity)>0,'Keyboard-focused skip link must be visible');
+   assert(shown.outline.style!=='none'&&parseFloat(shown.outline.width)>0,'Keyboard-focused skip link must retain its focus indicator');
+   await capture(`emma-skip-keyboard-${width}.jpg`);
+   await page.keyboard.press('Enter');
+   await page.waitForFunction(()=>{const a=document.querySelector('[data-focuschrist-skip-link]'),main=document.querySelector('main');return a&&main&&document.activeElement===main&&a.getBoundingClientRect().bottom<=0;},null,{timeout:5000});
+   await hiddenSkip(`keyboard-${width}-after-enter`);
+   results.push({page:STORIES[1].page,journey:'skip-link-tab-enter-main',width});
   }
   // Composed journeys at phone width: artwork dialog, full-size viewer,
   // Continue Lesson, Close with focus return, on every story page.
@@ -63,7 +112,7 @@ const TYPES={'.html':'text/html','.css':'text/css','.js':'text/javascript','.web
    assert.equal(await source.count(),1,`${s.page}: dialog source link`);
    const dialogImg=dialog.locator('img');
    assert((await dialogImg.getAttribute('src')).includes(`${s.base}-1536.webp`),`${s.page}: dialog image is not the full-size derivative`);
-   await page.screenshot({path:path.join(out,`${s.base}-dialog-390.png`)});
+   await capture(`${s.base}-dialog-390.png`);
    // Full-size viewer layer, then back to the dialog.
    await dialog.locator('a[data-full-image-viewer]').click();
    const viewer=page.locator('dialog.fc-full-image-viewer[open]');
@@ -71,10 +120,15 @@ const TYPES={'.html':'text/html','.css':'text/css','.js':'text/javascript','.web
    assert((await viewer.locator('img').first().getAttribute('src')).includes(`${s.base}-1536.webp`),`${s.page}: full-size viewer image`);
    await viewer.locator('.fc-full-image-close').click();
    await page.waitForFunction(()=>!document.querySelector('dialog.fc-full-image-viewer[open]'));
+   await page.waitForFunction(()=>!document.body.classList.contains('fc-full-image-open')&&document.activeElement?.matches('dialog.fc-artwork-detail-dialog[open] a[data-full-image-viewer]'),null,{timeout:5000});
    assert.equal(await page.locator('dialog.fc-artwork-detail-dialog[open]').count(),1,`${s.page}: study dialog lost after full-size close`);
    // Close returns focus to the artwork trigger.
    await dialog.locator('button[data-artwork-detail-close]').click();
    await page.waitForFunction(()=>!document.querySelector('dialog.fc-artwork-detail-dialog[open]'));
+   // Native close() removes [open] before its queued close event runs.
+   // The topic dialog's close listener removes this class and restores focus.
+   // Observe that lifecycle completion; do not alter the page or waive the assertions.
+   await page.waitForFunction(()=>!document.body.classList.contains('fc-dialog-open'),null,{timeout:5000});
    assert.equal(await page.evaluate(()=>document.body.classList.contains('fc-dialog-open')),false,`${s.page}: dialog-open body class left behind`);
    assert(await trigger.evaluate(n=>document.activeElement===n),`${s.page}: focus did not return to the artwork`);
    results.push({page:s.page,journey:'dialog-fullsize-close-focus',width:390});
@@ -93,6 +147,20 @@ const TYPES={'.html':'text/html','.css':'text/css','.js':'text/javascript','.web
    // given tabindex -1) and scrolls it to the header clearance at the top
    // of the viewport. Assert exactly that, not mere section overlap.
    await page.waitForFunction(()=>{const a=document.activeElement;return a&&a.hasAttribute('data-topic-reading-target');});
+   // Topic close focuses after two frames, then header-scroll animates Continue
+   // for 560 ms. Observe the same exact landing until stable, never force scroll.
+   await page.waitForFunction(section=>new Promise(resolve=>{
+    const deadline=performance.now()+4500;let anchor=null,stableSince=0;
+    const sample=()=>{
+     const now=performance.now(),a=document.activeElement,r=a?.getBoundingClientRect(),sec=a?.closest('section');
+     const ready=a?.hasAttribute('data-topic-reading-target')&&sec?.id===section&&r.top>=-1&&r.top<=240&&!document.body.classList.contains('fc-dialog-open')&&!document.querySelector('dialog[open]');
+     if(ready){
+      if(!anchor||anchor.target!==a||Math.abs(anchor.top-r.top)>.1||Math.abs(anchor.scrollY-scrollY)>.1){anchor={target:a,top:r.top,scrollY};stableSince=now;}
+      else if(now-stableSince>=150){resolve(true);return;}
+     }else{anchor=null;stableSince=0;}
+     if(now>=deadline){resolve(false);return;}requestAnimationFrame(sample);
+    };requestAnimationFrame(sample);
+   }),s.section,{timeout:5000});
    const landing=await page.evaluate(()=>{const a=document.activeElement,r=a.getBoundingClientRect(),sec=a.closest('section');return {section:sec?sec.id:'',top:r.top};});
    assert.equal(landing.section,s.section,'Continue Lesson focus did not land on the story section reading target');
    assert(landing.top>=-1&&landing.top<=240,`Continue Lesson heading sits at ${landing.top}px, not at the reading clearance below the viewport top`);
@@ -105,6 +173,8 @@ const TYPES={'.html':'text/html','.css':'text/css','.js':'text/javascript','.web
    const dialog=page.locator('dialog.fc-artwork-detail-dialog[open]');await dialog.waitFor({state:'visible'});
    await page.keyboard.press('Escape');
    await page.waitForFunction(()=>!document.querySelector('dialog.fc-artwork-detail-dialog[open]'));
+   await page.waitForFunction(base=>{const a=document.activeElement;return !document.body.classList.contains('fc-dialog-open')&&a?.matches('a')&&a.querySelector('img[src*="'+base+'-960.webp"]');},s.base,{timeout:5000});
+   assert(await trigger.evaluate(n=>document.activeElement===n),`${s.page}: Escape focus did not return to the artwork`);
    results.push({page:s.page,journey:'escape-close',width:390});
   }
   // Hub journeys at desktop: the story doorway is the hub's story listing.
@@ -136,8 +206,10 @@ const TYPES={'.html':'text/html','.css':'text/css','.js':'text/javascript','.web
   assert((await hubDialog.locator('img').getAttribute('src')).includes('emma-c1-review-1536.webp'),'hub dialog image is not the emma-c1 full derivative');
   await hubDialog.locator('button[data-artwork-detail-close]').click();
   await page.waitForFunction(()=>!document.querySelector('dialog.fc-artwork-detail-dialog[open]'));
+  await page.waitForFunction(()=>!document.body.classList.contains('fc-dialog-open')&&document.activeElement===document.querySelector('a[data-full-image-alt]'),null,{timeout:5000});
+  assert(await hubTrigger.evaluate(n=>document.activeElement===n),'Hub close focus did not return to its artwork');
   results.push({page:HUB,journey:'hub-dialog-open-close',width:1280});
   fs.writeFileSync(path.join(out,'results.json'),JSON.stringify({results,pass:true},null,2));
-  console.log(`EMMA STORY PASS: 6 pages x 3 widths, 5 dialog/full-size/focus journeys, Continue Lesson, Escape, 5 hub link-and-back journeys`);
+  console.log(`EMMA STORY PASS: 6 pages x 3 widths, normal viewport and 3 skip-link keyboard checks, 5 dialog/full-size/focus journeys, Continue Lesson, Escape, 5 hub link-and-back journeys`);
  }finally{await browser.close();await new Promise(r=>server.close(r));}
 })().catch(e=>{console.error(e);process.exitCode=1;});

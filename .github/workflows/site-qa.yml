@@ -36,6 +36,7 @@ jobs:
           python -m unittest discover -s tools -p test_timeline_source_import.py
           python tools/test_continue_motion_binding.py
           python tools/test_emma_story_successor.py
+          python tools/test_emma_generated_indices_successor.py
           python tools/test_world_companion_successor.py
           python tools/test_settings_successor.py
           python tools/continue_motion_binding.py
@@ -557,6 +558,16 @@ jobs:
             .qa-artifacts/continue-motion/
           include-hidden-files: true
           if-no-files-found: ignore
+      - name: Save bounded Adams chart evidence separately
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: adams-chart-evidence
+          path: .qa-artifacts/timeline/adams/
+          include-hidden-files: true
+          if-no-files-found: ignore
+          retention-days: 7
+          compression-level: 6
   generate-indices:
     name: Generate site indices (diagnostic)
     runs-on: ubuntu-latest
@@ -633,7 +644,7 @@ jobs:
 
       - name: Bind the diagnostic to the reviewed renderer and checkout
         run: |
-          printf '%s  %s\n' '3d968271a56f17dbbead1c206a327091b879d3b52c654f4915bb522d96ecd5d0' 'tools/emma_story_browser_qa.js' | sha256sum --check
+          printf '%s  %s\n' '0aef3173fe3f19e745e2fd6677a4a15388c95d0064cb573336cdd2c470047bd3' 'tools/emma_story_browser_qa.js' | sha256sum --check
           mkdir -p .qa-artifacts/emma-story
           {
             echo "scope=diagnostic rendering only; artwork-creation and all release gates remain required"
