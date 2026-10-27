@@ -3,6 +3,28 @@ import copy,json,hashlib,shutil,tempfile,unittest
 from pathlib import Path
 import timeline_source_import as gate
 
+class GalleryBuilderEvidenceTests(unittest.TestCase):
+    def test_gallery_builder_evidence_successor_is_exact_and_fail_closed(self):
+        from artwork_display_delivery import inverse
+        root=Path(__file__).resolve().parents[1]
+        name='tools/build_art_gallery.py'
+        data=(root/name).read_bytes()
+        self.assertEqual(hashlib.sha256(data).hexdigest(),'c6a0354d6967ab85bf2a395a81cdb3bfdb5bb5e120b0acb72d03d7faebc74195')
+        prior=gate.before_current_gallery_builder(name,data)
+        self.assertEqual(hashlib.sha256(prior).hexdigest(),'4489874fcbe0aeac68eab1de36b9cd0739fec65ca3981edbb961ce236baa78a1')
+        self.assertEqual(hashlib.sha256(inverse(name,data)).hexdigest(),'f21b8a39171e7f9a998c34f66896bdcba922146f80825bae3f7d60372b3d804c')
+        self.assertEqual(gate.before_current_gallery_builder('other/'+name,data),data)
+        for bad in (data+b' ',data.replace(b'def gallery_source(',b'def other_source(',1),data.replace(b'gallery_source(name, (ROOT / name)',b'inverse(name, (ROOT / name)',1)):
+            self.assertNotEqual(bad,data)
+            self.assertEqual(gate.before_current_gallery_builder(name,bad),bad)
+            self.assertEqual(inverse(name,bad),bad)
+
+    def test_current_indices_still_restore_delivery_evidence_pins(self):
+        from artwork_display_delivery import inverse
+        root=Path(__file__).resolve().parents[1]
+        for name,pin in [('art-gallery.json','5fb9f428a7e4bbf63cd9b5721ca7e576b14bbfa8334c073343f84e49efb8fcb1'),('site-search-index.json','5744d3b23308c419732bac77811620c2ca68b30e4dc22a1eb0775a120ddbd103')]:
+            self.assertEqual(hashlib.sha256(inverse(name,(root/name).read_bytes())).hexdigest(),pin)
+
 class TimelineImportTests(unittest.TestCase):
     def test_reviewed_code_evidence_restores_only_exact_hooks(self):
         root=Path(__file__).resolve().parents[1]

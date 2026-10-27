@@ -91,8 +91,23 @@ def before_navigation_polish(name, data):
     require(hashlib.sha256(prior).hexdigest()==binding['previous'], 'navigation predecessor drift: '+name)
     return prior
 
+# Only the exact reviewed current-source gallery builder can reconstruct its
+# predecessor for historical delivery evidence. Unknown bytes are never normalized.
+def before_current_gallery_builder(name, data):
+    if name != 'tools/build_art_gallery.py' or hashlib.sha256(data).hexdigest() != 'c6a0354d6967ab85bf2a395a81cdb3bfdb5bb5e120b0acb72d03d7faebc74195':
+        return data
+    block = b'def gallery_source(name, raw, root=ROOT):\n    """Index actual reviewed Emma owners; historical projections stay historical."""\n    from owner_integration_contract import HUB, STORIES, CHART, INTRO, LANDING, validate_file\n    if name in {HUB, CHART, INTRO, LANDING, *STORIES}:\n        validate_file(name, raw, root)\n        return raw\n    from artwork_display_delivery import inverse\n    return inverse(name, raw)\n\n\n'
+    current = b"doc.feed(gallery_source(name, (ROOT / name).read_bytes()).decode('utf-8'))"
+    previous = b"doc.feed(inverse(name, (ROOT / name).read_bytes()).decode('utf-8'))"
+    require(data.count(block) == data.count(current) == 1, 'gallery builder successor spans drift')
+    prior = data.replace(block, b'', 1).replace(current, previous, 1)
+    require(hashlib.sha256(prior).hexdigest() == '4489874fcbe0aeac68eab1de36b9cd0739fec65ca3981edbb961ce236baa78a1', 'gallery builder predecessor drift')
+    return prior
+
+
 def restore_consumers(name, data):
     """Reconstruct historical evidence only for a complete reviewed byte binding."""
+    data = before_current_gallery_builder(name, data)
     from continue_motion_binding import restore as before_motion
     data = before_motion(name,data)
     data = before_navigation_polish(name, data)
