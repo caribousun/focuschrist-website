@@ -576,6 +576,9 @@ def reviewed_owner_consumers(name, sources, historical_owners):
     if name == 'timeline-experiences.css':
         from owner_integration_styles import timeline_consumers
         return timeline_consumers(sources, historical_owners)
+    if name == 'timeline-mobile-study.css':
+        from owner_integration_styles import timeline_mobile_consumers
+        return timeline_mobile_consumers(sources, historical_owners)
     if name != 'history-stories.css':
         return set(sources) == set(historical_owners)
     if set(sources) != set(historical_owners) | EMMA_STORY_ROUTES:
