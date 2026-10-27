@@ -151,5 +151,45 @@ class ActualViewerParserTests(unittest.TestCase):
                 self.assertFalse(e.reviewed_viewer_additions(self.parser()(sources), lambda _: True))
 
 
+class ActualHistoryOwnerTests(unittest.TestCase):
+    def check(self):
+        tree = ast.parse((ROOT / 'tools/sitewide_artwork_review_qa.py').read_text())
+        nodes = [n for n in tree.body if isinstance(n, (ast.ClassDef, ast.FunctionDef)) and n.name in {'Tags', 'reviewed_owner_consumers'}]
+        self.assertEqual(len(nodes), 2)
+        scope = {'HTMLParser': HTMLParser, 'EMMA_STORY_ROUTES': e.EMMA_STORY_ROUTES, 'STORY_REF': e.STORY_REF}
+        exec(compile(ast.Module(body=nodes, type_ignores=[]), '<actual owner predicate>', 'exec'), scope)
+        return scope['reviewed_owner_consumers']
+
+    def sources(self):
+        sources = {route: (ROOT / route).read_text() for route in e.EMMA_STORY_ROUTES}
+        for route in self.owners:
+            sources[route] = '<link rel="stylesheet" href="../history-stories.css?v=historical">'
+        return sources
+
+    owners = {'history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html', 'history/emma-hale-smith.html'}
+
+    def test_actual_five_plus_unchanged_four(self):
+        self.assertTrue(self.check()('history-stories.css', self.sources(), self.owners))
+        for route in self.owners | e.EMMA_STORY_ROUTES:
+            sources = self.sources(); del sources[route]
+            self.assertFalse(self.check()('history-stories.css', sources, self.owners))
+
+    def test_each_actual_ref_mutation_and_unknown_owner(self):
+        for route in e.EMMA_STORY_ROUTES:
+            for change in ['missing.css?v=none', e.STORY_REF + '-unknown']:
+                sources = self.sources(); self.assertIn(e.STORY_REF, sources[route]); sources[route] = sources[route].replace(e.STORY_REF, change, 1)
+                self.assertFalse(self.check()('history-stories.css', sources, self.owners))
+            for extra in ['<link rel="stylesheet" href="' + e.STORY_REF + '">', '<!-- history-stories.css -->']:
+                sources = self.sources(); sources[route] += extra
+                self.assertFalse(self.check()('history-stories.css', sources, self.owners))
+        sources = self.sources(); sources['history/unknown.html'] = sources[sorted(e.EMMA_STORY_ROUTES)[0]]
+        self.assertFalse(self.check()('history-stories.css', sources, self.owners))
+
+    def test_other_styles_keep_exact_old_owner_set(self):
+        sources = {'one.html': 'example.css'}
+        self.assertTrue(self.check()('example.css', sources, {'one.html'}))
+        self.assertFalse(self.check()('example.css', dict(sources, **{'unknown.html': 'example.css'}), {'one.html'}))
+
+
 if __name__ == '__main__':
     unittest.main()

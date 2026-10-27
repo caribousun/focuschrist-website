@@ -571,6 +571,20 @@ RELEASE_STYLE_BINDINGS = {
     'history-stories.css': ({'history/john-tanner.html', 'history/eleazer-miller.html', 'history/john-rowe-moyle.html', 'history/emma-hale-smith.html'}, '../history-stories.css?v=20261009-directory-alignment-1'),
 }
 
+def reviewed_owner_consumers(name, sources, historical_owners):
+    if name != 'history-stories.css':
+        return set(sources) == set(historical_owners)
+    if set(sources) != set(historical_owners) | EMMA_STORY_ROUTES:
+        return False
+    for owner in EMMA_STORY_ROUTES:
+        text = sources[owner]
+        refs = [a.get('href', '') for t, a in Tags(text).tags
+                if t == 'link' and a.get('rel') == 'stylesheet' and name in a.get('href', '')]
+        if refs != [STORY_REF] or text.count(name) != 1:
+            return False
+    return set(sources) - EMMA_STORY_ROUTES == set(historical_owners)
+
+
 def release_style_binding_allowed(name, page, tags):
     owners, expected = RELEASE_STYLE_BINDINGS[name]
     if name == 'history-stories.css' and page in EMMA_STORY_ROUTES:
@@ -1012,12 +1026,13 @@ def main():
             check(not reviewed_temple_related_hitbox(data + b'\n.x{display:block}'), 'Unrelated Temple stylesheet mutation escaped')
             for old, new in [(b'padding: 12px 14px;', b'padding: 0;'), (b'background: #122a35;', b'background: red;'), (b'grid-template-columns: auto minmax(0, 1fr);', b'grid-template-columns: 1fr;')]:
                 check(old in data and not reviewed_temple_related_hitbox(data.replace(old, new, 1)), 'Unreviewed Temple menu mutation escaped')
-        consumers = set()
+        consumers = {}
         for page in ROOT.rglob('*.html'):
             relative = page.relative_to(ROOT).as_posix()
             if relative.startswith(('tools/', '.git/', 'node_modules/', 'focuschrist-repo/')): continue
-            if name in page.read_text(encoding='utf-8'): consumers.add(relative)
-        check(consumers == set(owners), 'Owner-reviewed stylesheet consumer set changed: '+name)
+            text = page.read_text(encoding='utf-8')
+            if name in text: consumers[relative] = text
+        check(reviewed_owner_consumers(name, consumers, owners), 'Owner-reviewed stylesheet consumer set changed: '+name)
     for name in ANCHOR_STYLES:
         check(reviewed_anchor_style(name, (ROOT/name).read_bytes()), 'Anchor-only transformation differs from exact reviewed bytes: '+name)
     marriage_css=(ROOT/'eternal-marriage-study.css').read_bytes()
