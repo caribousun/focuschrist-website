@@ -1,10 +1,10 @@
 {
   "reviewer": "Albert",
   "decision": "CONCUR",
-  "spec_sha256": "edf637707b70d8bef7af2c4ff614fa6bcb1c2324e01fd911349ac2a5aa222282",
-  "reviewed_at": "2026-10-27T06:30:02.999023+00:00",
+  "spec_sha256": "e34b24ec9181fd5bc11e31f0c560d94a2bea6a587001b8ee56f66708caccba0a",
+  "reviewed_at": "2026-10-27T08:11:00.437164+00:00",
   "withdrawn": false,
-  "scope": "Exact current five-scene source/derivative/assembled equivalence only; not site release or retrospective canonical preflight.",
+  "scope": "New cache-token-only context equivalence. Prior own direct derivative inspections retained because all twenty exact asset hashes and pixels are unchanged; fresh actual current desktop and five phone capture inspection. Not release acceptance.",
   "source_provenance_verified": true,
   "actual_derivatives_inspected": true,
   "assembled_context_inspected": true,
@@ -18,7 +18,7 @@
     "period_sources": "The preserved public-safe source receipt summaries, Hannah-reviewed prose and source pointers remain bound. Unknown exact generation times are not inferred from file metadata.",
     "anatomy": "The selected ride has three clearly visible hoof endpoints and a naturally occluded far hind hoof. Strict four-hoof visibility remains NOT_MET; no unconditional anatomy claim.",
     "uniqueness": "Five distinct selected originals and fifteen exact derivative assets are pinned to five separate story routes. Reuse of character identity is intentional; no substituted artwork was found.",
-    "desktop_phone": "Current canonical desktop/phone-width headers, all five phone-width artwork assemblies and representative menu/Search states were personally inspected. Exact V7.1 results contain31 passing named journeys; independent Fermi/Newton viewed the full45-capture matrix. Physical phones and submitted search are outside scope."
+    "desktop_phone": "Fresh run40469437577 contains31 passing named journeys. Personally viewed both changed desktop captures and all five phone artwork captures.43of45 complete captures byte-identical prior reviewed matrix; two differences restricted to header shadow band y47..80. Artwork and body below81 unchanged. Current five page pins and all assets/styles/provenance independently hashed. No physical-device or submitted-search claim."
   },
   "limits": [
     "Strict ride four-hoof visibility is NOT_MET because of natural occlusion.",
@@ -29,51 +29,26 @@
   ],
   "evidence": [
     {
-      "path": "docs/emma-story-artwork-import/evidence/v7-results.json",
-      "bytes": 3878,
-      "sha256": "eecf529298bb8d3d1cb445f23f1b414118a6721639ba289e0c8c7e1cac33d5dc"
+      "path": "docs/emma-story-artwork-import/evidence/albert-desktop-v8.json",
+      "bytes": 1205,
+      "sha256": "f51dd8d7b89234ee363cb1edc040bac234f4bf28ed384c0c09e211b4bdb8d0ce"
     },
     {
-      "path": "docs/emma-story-artwork-import/evidence/v7-header-and-viewports.json",
-      "bytes": 99068,
-      "sha256": "9f20f28563271a39125294b55971d7135087d64bd990dd1adb03f7e7ecbd7694"
-    },
-    {
-      "path": "docs/emma-story-artwork-import/evidence/v7-diagnostic.txt",
-      "bytes": 530,
-      "sha256": "e7c51c0d52a7e5ec55e375f23eb33c093f9349b421cb676e78f50c8779291513"
-    },
-    {
-      "path": "docs/emma-story-artwork-import/evidence/v7-capture-manifest.json",
-      "bytes": 7833,
-      "sha256": "cc595b43b5c6d8abcf3b5154b749e2b5dceaff2a2bfea41d2604eb376e90112a"
-    },
-    {
-      "path": "docs/emma-story-artwork-import/evidence/v7-artifact-binding.json",
-      "bytes": 890,
-      "sha256": "c29d90bbf2a7e1724a9c56b60d778920b546dcac1c835704eb7eb979543c88a6"
-    },
-    {
-      "path": "docs/emma-story-artwork-import/evidence/albert-desktop-observations.json",
-      "bytes": 839,
-      "sha256": "61b101984169043c682f9ab4ec56e2aa23634a8a03dde42cd51c443ccb482c1b"
-    },
-    {
-      "path": "docs/emma-story-artwork-import/evidence/albert-phone-observations.json",
-      "bytes": 2051,
-      "sha256": "49d8dab39dba2a18e97ccb6df2bb5e777f623aa51711eec54b2adaba7ec118f8"
+      "path": "docs/emma-story-artwork-import/evidence/albert-phone-v8.json",
+      "bytes": 1744,
+      "sha256": "48cda8c3e75d42312200f47a7c956fe6300a84075ee696a1f69576d27efc9e9b"
     }
   ],
   "rendered": {
     "desktop": {
-      "path": "docs/emma-story-artwork-import/evidence/albert-desktop-observations.json",
-      "bytes": 839,
-      "sha256": "61b101984169043c682f9ab4ec56e2aa23634a8a03dde42cd51c443ccb482c1b"
+      "path": "docs/emma-story-artwork-import/evidence/albert-desktop-v8.json",
+      "bytes": 1205,
+      "sha256": "f51dd8d7b89234ee363cb1edc040bac234f4bf28ed384c0c09e211b4bdb8d0ce"
     },
     "phone": {
-      "path": "docs/emma-story-artwork-import/evidence/albert-phone-observations.json",
-      "bytes": 2051,
-      "sha256": "49d8dab39dba2a18e97ccb6df2bb5e777f623aa51711eec54b2adaba7ec118f8"
+      "path": "docs/emma-story-artwork-import/evidence/albert-phone-v8.json",
+      "bytes": 1744,
+      "sha256": "48cda8c3e75d42312200f47a7c956fe6300a84075ee696a1f69576d27efc9e9b"
     }
   }
 }

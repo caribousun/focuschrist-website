@@ -1,0 +1,455 @@
+{
+  "scope": "Capture identity/geometry only; actual pixels retained in original diagnostic artifact and local preservation, not embedded here. Individual actual visual reviews are separate.",
+  "captures": [
+    {
+      "filename": "emma-hub-1280.png",
+      "bytes": 627489,
+      "sha256": "662a516784c3767edecf96c7f852de2e6c6e73c494b174ec6b943e0fc9bcc281",
+      "dimensions": [
+        1280,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-hub-320.png",
+      "bytes": 181050,
+      "sha256": "c60fa0c4551898bf3d8d713f7a1f928654094281410ea518c0d48bdbe69ed190",
+      "dimensions": [
+        320,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-hub-390.png",
+      "bytes": 239021,
+      "sha256": "14cd8dabee050d3fcf68b5693b4554b58580649437c3bb23daca636c57df7d2a",
+      "dimensions": [
+        390,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-mobile-menu-320.jpg",
+      "bytes": 32342,
+      "sha256": "44962e45c1b54f9c0145144d53641e6b75fc6fe7ac1631321b82f84ab47f2480",
+      "dimensions": [
+        320,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-mobile-menu-390.jpg",
+      "bytes": 45081,
+      "sha256": "00a60a6e40f06df0e115738fd7065b788a052fe4df196ea710d911273085fa5e",
+      "dimensions": [
+        390,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-mobile-search-320.jpg",
+      "bytes": 28264,
+      "sha256": "ee807a8b44205c3a80d5fa473f30acc13e9b41ab220a29f6abfea74aff582d8a",
+      "dimensions": [
+        320,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-mobile-search-390.jpg",
+      "bytes": 32643,
+      "sha256": "5bde41422b95b168df6d415e50e952f79d4ae12f4226015906ab0080036e7174",
+      "dimensions": [
+        390,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-skip-keyboard-1280.jpg",
+      "bytes": 127449,
+      "sha256": "429f55953f0d22eee1c6f64f2119cb487d185795bc87c14ae833f1f150e37723",
+      "dimensions": [
+        1280,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-skip-keyboard-320.jpg",
+      "bytes": 54923,
+      "sha256": "e3de4d7f9007d4aaa53c34309f5c19fbd3cc7ce33529d273c0ea559fc790e015",
+      "dimensions": [
+        320,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-skip-keyboard-390.jpg",
+      "bytes": 61085,
+      "sha256": "ac24aa1b22b8734449efd5ff56a1f96593c49908570b80a5fec3a485425325da",
+      "dimensions": [
+        390,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-story1-ride-review-1280-viewport.jpg",
+      "bytes": 245473,
+      "sha256": "37bb90f2d0ce3ece42ad03cbbf2dd9e575d7c63ab2dbb9024ab34b4b82019267",
+      "dimensions": [
+        1280,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-story1-ride-review-320-viewport.jpg",
+      "bytes": 73559,
+      "sha256": "fd955a8c6f1c2c5ee069d5a66bd021d5c4df4605308161b0b67de8f53e1f89c8",
+      "dimensions": [
+        320,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-story1-ride-review-390-viewport.jpg",
+      "bytes": 97250,
+      "sha256": "88146ebfb6e7e6372032ecd5e8203126a90d1e2a6f2e0b15440c36c21a019dd2",
+      "dimensions": [
+        390,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-story1-ride-review-dialog-390.png",
+      "bytes": 404981,
+      "sha256": "cd605c80c2346912afe828b893d807aabbc38210415a5bc69225e02a16208dbd",
+      "dimensions": [
+        390,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-story1-ride-review-header-1280.jpg",
+      "bytes": 149338,
+      "sha256": "0e19186924ad4f45f2ad69f5fc5e6a2da33b97576a54215bac48c3bf16ada185",
+      "dimensions": [
+        1280,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-story1-ride-review-header-320.jpg",
+      "bytes": 54313,
+      "sha256": "1e497c60192cdec9fe8189767a4691f5ff94b9818591009281e67b70c093f55c",
+      "dimensions": [
+        320,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-story1-ride-review-header-390.jpg",
+      "bytes": 62908,
+      "sha256": "c099449f5d1304bb441ef2feec6712cbf724745a66240b6e5de340651df3a38e",
+      "dimensions": [
+        390,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-story2-hymnal-review-1280-viewport.jpg",
+      "bytes": 98334,
+      "sha256": "ab5868a2df206776eec4549b93a28bd1e013ef7b62d87a21655e9405d6bb6571",
+      "dimensions": [
+        1280,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-story2-hymnal-review-320-viewport.jpg",
+      "bytes": 66126,
+      "sha256": "9ee9c85ab85a1fa961596e5065d2f28f8a1e467c07f5fadd6e342b82281ba35a",
+      "dimensions": [
+        320,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-story2-hymnal-review-390-viewport.jpg",
+      "bytes": 75532,
+      "sha256": "9ad45d8f59e7f72b959b7d59b0a709f30ebe279a89a5e0755e4e5b0cc9bde270",
+      "dimensions": [
+        390,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-story2-hymnal-review-dialog-390.png",
+      "bytes": 323201,
+      "sha256": "78dbac492503f20b47bd00e05b291aa5e61208a603305cea6a76fe4f2373eab6",
+      "dimensions": [
+        390,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-story2-hymnal-review-header-1280.jpg",
+      "bytes": 125927,
+      "sha256": "f769a321d5951939639a48693e0a2a9b72d6bffc2bf138be1cd74e8cdf5a2942",
+      "dimensions": [
+        1280,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-story2-hymnal-review-header-320.jpg",
+      "bytes": 53544,
+      "sha256": "9d3b08544af12ff0ae2d0e80814f08a654ba50b7cbdee808d9fa047798c93a07",
+      "dimensions": [
+        320,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-story2-hymnal-review-header-390.jpg",
+      "bytes": 59679,
+      "sha256": "d77dc4669090e3b4e8fab5d1b91a80bdcef4ebcfdac9659c775875b94ecf7204",
+      "dimensions": [
+        390,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-story3-quincy-review-1280-viewport.jpg",
+      "bytes": 102258,
+      "sha256": "aaa5598307d1a5f6d59e7d311c696f1d24488d3790c3b0e71972a4a68bf85fa2",
+      "dimensions": [
+        1280,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-story3-quincy-review-320-viewport.jpg",
+      "bytes": 57904,
+      "sha256": "deb53076b80fb488cba6694623716f2c12f03e7d23dd4e90d7f7d696315119ba",
+      "dimensions": [
+        320,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-story3-quincy-review-390-viewport.jpg",
+      "bytes": 64686,
+      "sha256": "3db29c6eb1bd69e69b8cd088cab1f299df585be61122a2ba98a5bb6feab29e6d",
+      "dimensions": [
+        390,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-story3-quincy-review-dialog-390.png",
+      "bytes": 312185,
+      "sha256": "6e84e260e466ea2d39686c585fb57b6a349d4018bf19b66955833375dfe89b9f",
+      "dimensions": [
+        390,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-story3-quincy-review-header-1280.jpg",
+      "bytes": 136320,
+      "sha256": "c7ab925ecdfcda35bc1d9042fc8f04aa9db654f481402b21b79fd1b1107293ee",
+      "dimensions": [
+        1280,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-story3-quincy-review-header-320.jpg",
+      "bytes": 53757,
+      "sha256": "10694b41b546edab414a8431c39360419d4bcd2e1306c3e59f9d3eae5ba7c28b",
+      "dimensions": [
+        320,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-story3-quincy-review-header-390.jpg",
+      "bytes": 63276,
+      "sha256": "5ada2ebe7bcaf274e2e856dd2f5f869b0baa2956a344cb65e58459fd19453781",
+      "dimensions": [
+        390,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-story4-hospitality-review-1280-viewport.jpg",
+      "bytes": 123964,
+      "sha256": "f3f510c3c930c2c7d03c0e3f97b38f604b9603b13f552f04890638a749f185b3",
+      "dimensions": [
+        1280,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-story4-hospitality-review-320-viewport.jpg",
+      "bytes": 65181,
+      "sha256": "be9d9665ed0e0449e507a3a1f4a4d3257acde7cbe95309a4013bef559f4d0e96",
+      "dimensions": [
+        320,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-story4-hospitality-review-390-viewport.jpg",
+      "bytes": 81768,
+      "sha256": "da9aa6b1279e1a079c22773cd22270c6e218a5123310bf5ee30553c4b6bc6cf6",
+      "dimensions": [
+        390,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-story4-hospitality-review-dialog-390.png",
+      "bytes": 326638,
+      "sha256": "60e4c9d15dcacfb79531832aa093994a19d2dafceb5a4f73fd77ae9924f612d8",
+      "dimensions": [
+        390,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-story4-hospitality-review-header-1280.jpg",
+      "bytes": 154056,
+      "sha256": "80e9ee2956c55c2eaeb8bcbe057da59c60d7a92709a436aa3bcf07f9b43efa4d",
+      "dimensions": [
+        1280,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-story4-hospitality-review-header-320.jpg",
+      "bytes": 56445,
+      "sha256": "045208d484a012d4b9e28d3bae8363ad11bf7a72cea8a63ac4bb98cffb3af807",
+      "dimensions": [
+        320,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-story4-hospitality-review-header-390.jpg",
+      "bytes": 59803,
+      "sha256": "da06186e176ac340b649ca88e32f1e937c4ebb9167aa4673d757ddd6c962f301",
+      "dimensions": [
+        390,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-story5-testimony-review-1280-viewport.jpg",
+      "bytes": 92275,
+      "sha256": "009c0c4256a89c7cdef1f1add05b81ef5d3602737f0c1a54dcae6f26727c79d9",
+      "dimensions": [
+        1280,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-story5-testimony-review-320-viewport.jpg",
+      "bytes": 52472,
+      "sha256": "19238153012aef45c3b0a2cc48091458139b1634e1697eee3879c29083c94da0",
+      "dimensions": [
+        320,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-story5-testimony-review-390-viewport.jpg",
+      "bytes": 65187,
+      "sha256": "8d61242fd246042fef4430e2c2f42a5ff18a8a2a78ea69163158d633d7966fe8",
+      "dimensions": [
+        390,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-story5-testimony-review-dialog-390.png",
+      "bytes": 319106,
+      "sha256": "79858d455a3d36846f687c001423790bca49a62ab8444e12478cb94a914feb26",
+      "dimensions": [
+        390,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-story5-testimony-review-header-1280.jpg",
+      "bytes": 136812,
+      "sha256": "cca2cab4708d098d4cd0c728d64780f5234a3292d82ad63c749b880caf91d1db",
+      "dimensions": [
+        1280,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-story5-testimony-review-header-320.jpg",
+      "bytes": 53636,
+      "sha256": "0a6c5a02dfd863e4246b600390b016a9ae293ae2741382c2cb8606a1fee5030d",
+      "dimensions": [
+        320,
+        900
+      ],
+      "included_in_public_docs": false
+    },
+    {
+      "filename": "emma-story5-testimony-review-header-390.jpg",
+      "bytes": 63130,
+      "sha256": "13a6bddd324fefc21f93d7622a8883b8147ac37e2b5e911486934d24a4f2b4e2",
+      "dimensions": [
+        390,
+        900
+      ],
+      "included_in_public_docs": false
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "reviewer": "Albert",
+  "reviewed_at": "2026-10-27T08:11:00.433879+00:00",
+  "scope": "Fresh current rendered artwork context inspection; no release acceptance",
+  "run_id": 40469437577,
+  "head": "7d5038ad21133bbf83ffbfed7cf1cf27619dd76f",
+  "actual_observation": "Personally viewed these current captures. All five selected story images retain their approved designs and legible reading presentation. Desktop changed pixels are confined to top header shadow band y47..80; art and body below y81 are byte-identical decoded pixels. Phone captures are byte-identical prior reviewed views. No new image identity change observed.",
+  "limits": [
+    "Natural far hind hoof occlusion retained; no four-hoof PASS.",
+    "Viewport emulation, not physical phone.",
+    "Only current equivalence, not full CI or publication."
+  ],
+  "captures": [
+    {
+      "name": "emma-story1-ride-review-1280-viewport.jpg",
+      "bytes": 245473,
+      "sha256": "37bb90f2d0ce3ece42ad03cbbf2dd9e575d7c63ab2dbb9024ab34b4b82019267"
+    },
+    {
+      "name": "emma-story2-hymnal-review-1280-viewport.jpg",
+      "bytes": 98334,
+      "sha256": "ab5868a2df206776eec4549b93a28bd1e013ef7b62d87a21655e9405d6bb6571"
+    }
+  ]
+}

@@ -18,7 +18,7 @@ def source_function(name):
     assert len(nodes) == 1
     scope = {'hashlib': hashlib, 'json': json, 'EMMA_STORY_ROUTES': e.EMMA_STORY_ROUTES,
              'STORY_REF': e.STORY_REF, 'RELEASE_STYLE_BINDINGS': {
-                 'history-stories.css': ({'history/old.html'}, 'old-ref')},
+                 'history-stories.css': ({'history/old.html'}, '../history-stories.css?v=fixture-old')},
              'VIEWER_BINDINGS_SHA256': '90de3afd9212c3548ad780ae8c067d32b90f33ca82ddacfd39f3035f8c72fa2f'}
     exec(compile(ast.Module(body=nodes, type_ignores=[]), '<selected pure predicate>', 'exec'), scope)
     return scope[name]
@@ -74,7 +74,7 @@ class EmmaConsumerTests(unittest.TestCase):
             for refs in ([], tags(e.STORY_REF + '-stale'), tags(e.STORY_REF) * 2):
                 self.assertFalse(check('history-stories.css', route, refs))
         self.assertFalse(check('history-stories.css', 'history/emma-unknown.html', tags(e.STORY_REF)))
-        self.assertTrue(check('history-stories.css', 'history/old.html', tags('old-ref')))
+        self.assertTrue(check('history-stories.css', 'history/old.html', tags('../history-stories.css?v=fixture-old')))
 
     def test_routes_missing_duplicate_unknown(self):
         pages = list(e.EMMA_STORY_ROUTES) + ['old.html']
