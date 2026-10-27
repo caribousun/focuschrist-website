@@ -1,0 +1,213 @@
+{
+  "registration_class": "EXACT_FIVE_EMMA_HUB_CONTEXT_SUCCESSOR",
+  "historical_canonical_preflight_claim": false,
+  "new_asset_generation": false,
+  "private_reference_bytes_published": false,
+  "rejection_history_preserved": true,
+  "ride_limit": "Far hind hoof naturally occluded; full four-hoof visibility not established",
+  "predecessor": {
+    "path": "docs/emma-story-artwork-import/historical/ecfb-delivery.json",
+    "bytes": 28886,
+    "sha256": "8f212c5f2dd933ecc0c9267aebce5ddbe3cfbd61c718e40130a217fa7e8e424b",
+    "canonical_sha256": "4223f7ff199d317771595d2539744f05a5557a32ed3754f612914ade66b839d3",
+    "spec_sha256": "ecfb210ffbb151a881baa74ac15a1398627ca628f7b089108a5b4bf394465960"
+  },
+  "source_contract": {
+    "path": "docs/owner-integration-contract/source-manifest.json",
+    "binding_scope": "EXACT_SIX_EMMA_ENTRIES",
+    "emma_entries_sha256": "50858e96778eac7e183bbf111c8948af8674aa36bfad9048e362698cd37e29ef"
+  },
+  "sources": [
+    {
+      "path": "history/emma-elect-lady.html",
+      "bytes": 14734,
+      "sha256": "f32c79609f15d51e9c85b2f4bc941de38d2626c944e33f1876fc574f46f7986c"
+    },
+    {
+      "path": "history/emma-hale-smith.html",
+      "bytes": 66144,
+      "sha256": "50c334379066722ef6e80e97d70f0f2ca431777b5857eb15b998da65cc1783cf"
+    },
+    {
+      "path": "history/emma-hymns.html",
+      "bytes": 15103,
+      "sha256": "719bc7f899ebc188f33322c4c7c6bea9e326b209e28e2d49855543185e12aedb"
+    },
+    {
+      "path": "history/emma-last-testimony.html",
+      "bytes": 15464,
+      "sha256": "ff608df4a3bb994d29834e253daac97b1721ecf2b3209a621e284f16ca91eb70"
+    },
+    {
+      "path": "history/emma-relief-society.html",
+      "bytes": 15000,
+      "sha256": "e90e7b25239973e2488f32e57482fd5cfbdabb6a7f3f1746599aded9cd546ebb"
+    },
+    {
+      "path": "history/emma-winter-crossing.html",
+      "bytes": 14477,
+      "sha256": "a2c6003789eaaf4458bb3f431943c2d4602908b19324054ef8ca9f0aab30a417"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "ride",
+      "owner_route": "history/emma-hale-smith.html",
+      "owner_fragment": "picture-emma-story1-ride",
+      "reference_route": "history/emma-elect-lady.html",
+      "asset_family_sha256": "5987d5cfe0b3115dc8b0ed9c98b52e9726f87287ec13fa04055666ad13d88ee3"
+    },
+    {
+      "id": "hymnal",
+      "owner_route": "history/emma-hale-smith.html",
+      "owner_fragment": "picture-emma-story2-hymnal",
+      "reference_route": "history/emma-hymns.html",
+      "asset_family_sha256": "3358f7af730d24b431f1bfcbf3d387ef89cb1f300f98bdb49042df0fb82505eb"
+    },
+    {
+      "id": "quincy",
+      "owner_route": "history/emma-hale-smith.html",
+      "owner_fragment": "picture-emma-story3-quincy",
+      "reference_route": "history/emma-winter-crossing.html",
+      "asset_family_sha256": "9c66ea0a13d831862f3135bdd4a403dacc70f19cd178522ef63e2aaab5233eba"
+    },
+    {
+      "id": "hospitality",
+      "owner_route": "history/emma-hale-smith.html",
+      "owner_fragment": "picture-emma-story4-hospitality",
+      "reference_route": "history/emma-relief-society.html",
+      "asset_family_sha256": "7adbce0b26031057f0b054661b16c6b8f9dcb1e461cb0680f36ed35b3c90f997"
+    },
+    {
+      "id": "testimony",
+      "owner_route": "history/emma-hale-smith.html",
+      "owner_fragment": "picture-emma-story5-testimony",
+      "reference_route": "history/emma-last-testimony.html",
+      "asset_family_sha256": "bd7f0ed0a6bbc9cc4899bea8a5138910e072f26610374aa4938351af5099ffb5"
+    }
+  ],
+  "context": [
+    {
+      "path": "site-header.css",
+      "bytes": 14894,
+      "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+    },
+    {
+      "path": "site-system.css",
+      "bytes": 88817,
+      "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+    },
+    {
+      "path": "artwork-details.css",
+      "bytes": 3925,
+      "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+    },
+    {
+      "path": "full-image-viewer.css",
+      "bytes": 4959,
+      "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+    },
+    {
+      "path": "artwork-actions.css",
+      "bytes": 2273,
+      "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+    },
+    {
+      "path": "connected-study.css",
+      "bytes": 2190,
+      "sha256": "6b61c50c1d8e005074beb2db8fa800377377e6a3c9b955678dd836538fcb48cd"
+    },
+    {
+      "path": "hero-details.css",
+      "bytes": 2916,
+      "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+    },
+    {
+      "path": "resource-cards.css",
+      "bytes": 6287,
+      "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+    },
+    {
+      "path": "topic-art.css",
+      "bytes": 2716,
+      "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"
+    },
+    {
+      "path": "topic-artwork-details.css",
+      "bytes": 869,
+      "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+    },
+    {
+      "path": "priesthood-scenes.css",
+      "bytes": 1062,
+      "sha256": "5583b0f2d023bccbf2a318dc8c063331c4e96c9ffc7b5d754badc2c01d18ffd4"
+    },
+    {
+      "path": "site-search.css",
+      "bytes": 5516,
+      "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+    },
+    {
+      "path": "history-stories.css",
+      "bytes": 5808,
+      "sha256": "46915bd0e27fc394b68aad848cdfad37ac05959d2b7cdbac0e476a262ce1c802"
+    },
+    {
+      "path": "history/emma-elect-lady.html",
+      "bytes": 14734,
+      "sha256": "f32c79609f15d51e9c85b2f4bc941de38d2626c944e33f1876fc574f46f7986c"
+    },
+    {
+      "path": "history/emma-hale-smith.html",
+      "bytes": 66144,
+      "sha256": "50c334379066722ef6e80e97d70f0f2ca431777b5857eb15b998da65cc1783cf"
+    },
+    {
+      "path": "history/emma-hymns.html",
+      "bytes": 15103,
+      "sha256": "719bc7f899ebc188f33322c4c7c6bea9e326b209e28e2d49855543185e12aedb"
+    },
+    {
+      "path": "history/emma-last-testimony.html",
+      "bytes": 15464,
+      "sha256": "ff608df4a3bb994d29834e253daac97b1721ecf2b3209a621e284f16ca91eb70"
+    },
+    {
+      "path": "history/emma-relief-society.html",
+      "bytes": 15000,
+      "sha256": "e90e7b25239973e2488f32e57482fd5cfbdabb6a7f3f1746599aded9cd546ebb"
+    },
+    {
+      "path": "history/emma-winter-crossing.html",
+      "bytes": 14477,
+      "sha256": "a2c6003789eaaf4458bb3f431943c2d4602908b19324054ef8ca9f0aab30a417"
+    },
+    {
+      "path": "site-common.js",
+      "bytes": 88574,
+      "sha256": "62e8d576062521da340ad6b0a82f58b151829c21b6868b684e6491b04c723f73"
+    },
+    {
+      "path": "full-image-viewer.js",
+      "bytes": 7674,
+      "sha256": "01d17afd6b3f4bd205292d2544683ba9884b73fa350401cd0e299512b5458152"
+    },
+    {
+      "path": "site-search.js",
+      "bytes": 12485,
+      "sha256": "2722b477848556bb05ecf0487b890c1d0e25840f912f8ea6140382a340eae099"
+    },
+    {
+      "path": "topic-artwork-details.js",
+      "bytes": 21103,
+      "sha256": "2f512cfc8692db55c31100e4b1cdda2db056df9f6dec32bc88c3bce0399d25ee"
+    }
+  ],
+  "inventory": {
+    "owned_emma": 9,
+    "owned_christ": 4,
+    "total_owned": 13,
+    "hero_reference": 1
+  },
+  "owner_scope": "Five approved Emma scenes are integrated into the existing journey; no new Christ art. Weak-fit c2 is removed under the current owner direction. This is not a sitewide ratio waiver or a half-Christ compliance claim."
+}

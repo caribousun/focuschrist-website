@@ -1,0 +1,48 @@
+{
+  "status": "PROPOSED_CURRENT_CONTENT_RECORDS_PENDING_RENDERED_CONTEXT",
+  "extraction": "Equivalent current PublishedTextParser attribute/text semantics; raw current HTML, no legacy inverse",
+  "documents": [
+    {
+      "path": "timeline.html",
+      "status": "pending-current-context",
+      "published_text_sha256": "5ea0f95abf518f94c685649cf17d408e505ad4e8a30a73e5c0527c7d14860437",
+      "reviewed_source_sha256": "c910ae58c2f8feccf1d59f44b154d31f224436b79538e86bf73774c65b0b8c4c",
+      "reviewed_on": "2026-10-27",
+      "actual_author": "Fermi, local AI editorial review",
+      "review_scope": "Current static visitor copy and accessible labels only; current rendered acceptance pending",
+      "review_standard": "Current static visitor copy, accessible labels, metadata, title and attribution reviewed against the exact raw source and published-text hashes. The chart is presented as an 1881 historical artifact, not modern verified chronology or official Church teaching. Commons metadata identifies Sebastian C. Adams, David Rumsey provenance and public-domain reproduction status. Existing chart imagery is referenced, not newly generated or counted as a new unique picture. Gold Edition in the chart title is supplied interface wording, not an authenticated archival edition designation. Standard footer preserved. Image pixels, inline scripts, runtime behavior and rendered desktop/phone acceptance remain separate; this pending record is not publication approval.",
+      "authoritative_sources": [
+        "https://commons.wikimedia.org/wiki/File:Adams_Synchronological_Chart,_1881.jpg"
+      ],
+      "rendered_review_status": "PENDING"
+    },
+    {
+      "path": "timelines/adams-1881-introduction.html",
+      "status": "pending-current-context",
+      "published_text_sha256": "095e94c0caa5beb50b86966f1ce0e74123e208697874a0e88d55ce0378209d29",
+      "reviewed_source_sha256": "25785812f2f8d199b049ace7276a72e0e545f306f3d687792ffc1274f940af30",
+      "reviewed_on": "2026-10-27",
+      "actual_author": "Fermi, local AI editorial review",
+      "review_scope": "Current static visitor copy and accessible labels only; current rendered acceptance pending",
+      "review_standard": "Current static visitor copy, accessible labels, metadata, title and attribution reviewed against the exact raw source and published-text hashes. The chart is presented as an 1881 historical artifact, not modern verified chronology or official Church teaching. Commons metadata identifies Sebastian C. Adams, David Rumsey provenance and public-domain reproduction status. Existing chart imagery is referenced, not newly generated or counted as a new unique picture. Gold Edition in the chart title is supplied interface wording, not an authenticated archival edition designation. Standard footer preserved. Image pixels, inline scripts, runtime behavior and rendered desktop/phone acceptance remain separate; this pending record is not publication approval.",
+      "authoritative_sources": [
+        "https://commons.wikimedia.org/wiki/File:Adams_Synchronological_Chart,_1881.jpg"
+      ],
+      "rendered_review_status": "PENDING"
+    },
+    {
+      "path": "timelines/adams-1881-chart.html",
+      "status": "pending-current-context",
+      "published_text_sha256": "db6e5178945882157a01a758b89577ef11f4f8a1f431cef8a7526a598c8c3b14",
+      "reviewed_source_sha256": "b90c19dd9f77c3966843b41d514319816a194deee86b87235909f6b2c742130c",
+      "reviewed_on": "2026-10-27",
+      "actual_author": "Fermi, local AI editorial review",
+      "review_scope": "Current static visitor copy and accessible labels only; current rendered acceptance pending",
+      "review_standard": "Current static visitor copy, accessible labels, metadata, title and attribution reviewed against the exact raw source and published-text hashes. The chart is presented as an 1881 historical artifact, not modern verified chronology or official Church teaching. Commons metadata identifies Sebastian C. Adams, David Rumsey provenance and public-domain reproduction status. Existing chart imagery is referenced, not newly generated or counted as a new unique picture. Gold Edition in the chart title is supplied interface wording, not an authenticated archival edition designation. Standard footer preserved. Image pixels, inline scripts, runtime behavior and rendered desktop/phone acceptance remain separate; this pending record is not publication approval.",
+      "authoritative_sources": [
+        "https://commons.wikimedia.org/wiki/File:Adams_Synchronological_Chart,_1881.jpg"
+      ],
+      "rendered_review_status": "PENDING"
+    }
+  ]
+}

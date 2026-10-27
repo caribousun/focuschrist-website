@@ -1,0 +1,57 @@
+{
+  "schema": 1,
+  "source": "VERIFIED_PROVIDER_CAPTURE_MEMBERSHIP",
+  "member_readback_verified": true,
+  "artifact_id": 12760828508,
+  "run_id": 40562650871,
+  "producer_head": "87cce928c366f3f5820fce1ae19bc989a952d982",
+  "zip_bytes": 5077241,
+  "zip_sha256": "20a753a327c0842504b403e30a2655207b3c1f4da68dd40d76ce4d4a2fa0fb26",
+  "report": {
+    "archive_member": "report.json",
+    "bytes": 481925,
+    "sha256": "b73e052b4121c52ea9d68557af48b28ecda4ee64e11846973d6c46deaf122d8f"
+  },
+  "captures": [
+    {
+      "archive_member": "desktop-emma-christ-c1-context.jpg",
+      "bytes": 148380,
+      "sha256": "a787b36f552cb668ae337f81325b71d647492451d5f165e1eab869191af6b11f"
+    },
+    {
+      "archive_member": "desktop-emma-christ-c3-context.jpg",
+      "bytes": 125245,
+      "sha256": "bc1657b61dbc10154d4b2e2de335bd44de5c46ddda19ebcf7aca1baed74aa623"
+    },
+    {
+      "archive_member": "desktop-emma-christ-c4-context.jpg",
+      "bytes": 214687,
+      "sha256": "21d06783b6ed753f815800b99ef6fef8bc8c5b1b4a504d553c91a3a16b9e5d3c"
+    },
+    {
+      "archive_member": "desktop-emma-christ-c5-context.jpg",
+      "bytes": 150511,
+      "sha256": "6a5b2bdb06e9029e128db0f7cf0c88a67a0e786487f86ae63f964e95481a9b85"
+    },
+    {
+      "archive_member": "phone-emma-christ-c1-context.jpg",
+      "bytes": 58028,
+      "sha256": "5ec9c6f3bfa013a604598919df8fa48947993381798d07d2b93228df2bf595d3"
+    },
+    {
+      "archive_member": "phone-emma-christ-c3-context.jpg",
+      "bytes": 56470,
+      "sha256": "844bbf1fd7bbae48251750453cfe1f37e7266a8352bf072806971ae746d3c02d"
+    },
+    {
+      "archive_member": "phone-emma-christ-c4-context.jpg",
+      "bytes": 63563,
+      "sha256": "6cf3417c90dbe9bf818e3e230a5cbd895ccf7462688babe9e067774a2b466318"
+    },
+    {
+      "archive_member": "phone-emma-christ-c5-context.jpg",
+      "bytes": 57718,
+      "sha256": "04683360bfe4af28ed1babf89810053b411c4358fab00aa38bbe2e793a0a6c32"
+    }
+  ]
+}

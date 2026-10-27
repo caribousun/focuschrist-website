@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "reviewer": "Fermi, appointed local editorial reviewer",
+  "reviewed_at": "2026-10-27T19:04:44.095999+00:00",
+  "decision": "CONCUR_ADAMS_COPY_AND_SOURCE_CONTEXT",
+  "mandate_read": {
+    "sha256": "e70c3fdc59032a8db0ff3f331855b174e5721457ade9e87f0f76a61a8442bd1d",
+    "applicable": "Warm, historically honest prose; standard footer disclosure; protected opening; independent actual review."
+  },
+  "sources": [
+    {
+      "path": "timeline.html",
+      "bytes": 8828,
+      "sha256": "c910ae58c2f8feccf1d59f44b154d31f224436b79538e86bf73774c65b0b8c4c"
+    },
+    {
+      "path": "timelines/adams-1881-chart.html",
+      "bytes": 66076,
+      "sha256": "b90c19dd9f77c3966843b41d514319816a194deee86b87235909f6b2c742130c"
+    },
+    {
+      "path": "timelines/adams-1881-introduction.html",
+      "bytes": 8126,
+      "sha256": "742d429e6a674ce5d47889aab964a6bde60f3509bd9518e159499be6616112be"
+    }
+  ],
+  "observations": [
+    "I personally read the static visitor copy and accessible labels from these exact three source hashes. Timeline invites discovery; the introduction identifies a nineteenth-century view and explicitly qualifies it as an artifact, not modern chronology or official Church teaching. The current kicker is accurate in that context, notwithstanding a harmless repetition of illustrated. The standard footer and chart credit remain.",
+    "I examined actual fourth-run desktop and phone introduction pixels and desktop Timeline choices. The visible wording and controls are legible in these captured states. The full viewer credits Adams, Wikimedia Commons, and the David Rumsey collection.",
+    "I checked the named Commons file page: it identifies Sebastian C. Adams, 1881, the David Rumsey Map Collection, and describes the reproduction as public domain in the United States while noting that other jurisdictions may restrict reuse. The supplied tile chain is not independently established as a download from that file. Gold Edition is interface wording, not an authenticated archival edition designation."
+  ],
+  "authoritative_sources": [
+    "https://commons.wikimedia.org/wiki/File:Adams_Synchronological_Chart,_1881.jpg"
+  ],
+  "prior_review_reuse": "The earlier Fermi Adams copy review and V12 kicker addendum are reused as recorded prior findings, not claimed as this reviewer’s past actions. This receipt is a new review by the current appointed local Fermi reviewer.",
+  "limits": [
+    "No new exhaustive historical research or verification of all chart claims; attribution and historical framing only.",
+    "The prior Fermi Emma public copy receipt remains separate evidence against its unchanged source hashes; it is not represented as my personal past review.",
+    "Hosted Chromium captures and source review are not live or physical-device acceptance, legal advice, owner aesthetic acceptance, identity approval, or release authorization.",
+    "Viewer interaction results are reported by the bound automation; I did not personally run the controls."
+  ]
+}

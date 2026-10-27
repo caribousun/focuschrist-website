@@ -9928,11 +9928,39 @@
     },
     {
       "path": "timeline.html",
-      "status": "non-source-dependent",
-      "published_text_sha256": "4e667524adab0cd0531a714cbb11bba61a3cf8d89eafa3f597fcad1157d68e72",
-      "reviewed_on": "2026-10-06",
-      "review_standard": "Navigation hub labels, standalone destinations, independent-site footer and artwork disclosure reviewed; no historical claims added. Owner-requested standard hero review: wide and portrait generated still-life pixels independently inspected; journal/map/compass/dawn scene and alt text agree, no people or authenticated historical artifact claim. New navigation introduction and hero interpretation invite reflection rather than assert historical events. Original timeline destinations preserved; owner aesthetic acceptance and rendered geometry remain separate. 2026-10-02 owner-authorized follow-up: standard navigation added to standalone experiences; third Life of Christ hub link added. Existing narrative content unchanged by header integration; marker selection repair changes interaction only. PR460 scoped introduction review: Fermi and Newton independently read the exact 24 authored openings in docs/hero-introductions-review.json, preserving established source claims and warm explanatory voice. Only the enumerated introductory paragraphs changed; prior substantive source review remains in force. Rendered and release acceptance are separate.",
-      "review_scope": "navigation-only"
+      "status": "verified",
+      "published_text_sha256": "5ea0f95abf518f94c685649cf17d408e505ad4e8a30a73e5c0527c7d14860437",
+      "reviewed_source_sha256": "c910ae58c2f8feccf1d59f44b154d31f224436b79538e86bf73774c65b0b8c4c",
+      "reviewed_on": "2026-10-27",
+      "actual_author": "Current ledger assembly; Fermi and Newton independently reviewed the finished prose",
+      "review_scope": "Current static visitor copy, metadata, captions and accessible labels; exact raw source and published-text hashes. Rendered and release acceptance are separate.",
+      "review_standard": "The exact current static visitor prose was independently reviewed by Fermi and Newton under the current warm-prose and disclosure mandates. Fermi reviewed accessible labels; Newton reviewed visible labels and image alt attributes. A separate Newton review covered title, description and Open Graph metadata voice, reusing prior research for factual support. The chart is identified as an 1881 historical artifact, not a modern verified chronology or official Church teaching. Attribution and U.S. public-domain reproduction status are supported by the cited Commons source, which notes other jurisdictions may restrict reuse; Gold Edition is interface wording, not an authenticated archival designation. Existing chart pixels are referenced, not new artwork. Prior unchanged research is reused; image pixels, inline scripts, runtime, rendered context and release acceptance remain separate. A separate Newton source-voice review inspected nonempty static alt, aria-label, placeholder and title attributes; dynamic attributes, usability and full accessibility remain separate.",
+      "authoritative_sources": [
+        "https://commons.wikimedia.org/wiki/File:Adams_Synchronological_Chart,_1881.jpg"
+      ],
+      "rendered_review_status": "SEPARATE_RELEASE_GATE",
+      "review_evidence": [
+        {
+          "path": "docs/emma-hub-content-audit/fermi-current-adams-copy-review.json",
+          "bytes": 3021,
+          "sha256": "2810f9bcabd24ba8ea0357e39d60ab39cdf1387927e316a670c3ef6ce0e94af2"
+        },
+        {
+          "path": "docs/emma-hub-content-audit/newton-current-copy-review.json",
+          "bytes": 4057,
+          "sha256": "87c7641b58c17d4337f515f2ab3d7141d5bac49751939f2e8ff1bddf9876832c"
+        },
+        {
+          "path": "docs/emma-hub-content-audit/newton-current-metadata-review.json",
+          "bytes": 3299,
+          "sha256": "940c5f4c92639bf37de9ee213087991ff5b8a321900cfa4bf188e1190025ed0f"
+        },
+        {
+          "path": "docs/emma-hub-content-audit/newton-current-attribute-review.json",
+          "bytes": 2672,
+          "sha256": "4696b6e883b57b3fb5a34c78ffdf45bd0d969ac640b1e593c13c73b1aac06639"
+        }
+      ]
     },
     {
       "path": "timelines/latter-day-saint-church-history-timeline.html",
@@ -10299,9 +10327,12 @@
     {
       "path": "history/emma-hale-smith.html",
       "status": "verified",
-      "published_text_sha256": "68c63fffe9df21230024f73b2dd7bd4f4b3d5303205c93a351f683ff6311a7be",
-      "reviewed_on": "2026-10-09",
-      "review_standard": "Integrated text binding on 2026-10-09 reuses the exact unchanged text independently reviewed by Gary, Fermi and Newton earlier on 2026-10-09. The current published-text extractor confirms equality with that reviewed candidate, including the source-qualified likely wording about Emma’s knowledge of plural sealings. Review covers the complete 1804–1879 life narrative, difficult history, four context disclosures, five scriptural connections, ten caption and alternative-text pairs, reflections, onward and Ask wording, and inline companion. Historical sources and attributed recollections remain distinguished from illustrations and optional applications; no invented quotation or modern medical diagnosis is introduced. This records AI semantic review and its renewed integrated binding, not a new review of every underlying manuscript, artwork approval, rendered or print acceptance, publication, or owner aesthetic acceptance. Earlier unresolved historical review-binding discrepancies remain separate and are not erased by this entry.",
+      "published_text_sha256": "488acbd9b360cf4e92c9da5326111b9c15d851df8895225f37566588bbe00233",
+      "reviewed_source_sha256": "50c334379066722ef6e80e97d70f0f2ca431777b5857eb15b998da65cc1783cf",
+      "reviewed_on": "2026-10-27",
+      "actual_author": "Current ledger assembly; Fermi and Newton independently reviewed the finished prose",
+      "review_scope": "Current static visitor copy, metadata, captions and accessible labels; exact raw source and published-text hashes. Rendered and release acceptance are separate.",
+      "review_standard": "The exact current visitor prose, captions and narrative structure were independently reviewed by Fermi and Newton under the current warm-prose and disclosure mandates. Newton reviewed visible labels and image alt attributes; a separate bounded review covered title, description and Open Graph metadata voice, reusing prior research for factual support. Earlier historical/source research is reused for unchanged material; changed captions and quotations were checked against the cited sources. This is not a fresh exhaustive review of all retained claims. Rendered context, artwork identity and ownership, complete CI and release acceptance remain separate. A separate Newton source-voice review inspected nonempty static alt, aria-label, placeholder and title attributes; dynamic attributes, usability and full accessibility remain separate.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/history/topics/emma-hale-smith?lang=eng",
         "https://www.josephsmithpapers.org/person/emma-hale-smith",
@@ -10316,10 +10347,37 @@
         "https://www.churchofjesuschrist.org/study/ensign/1992/08/my-great-great-grandmother-emma-hale-smith?lang=eng",
         "https://cofchrist.org/nauvoo-illinois-usa/",
         "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/6?lang=eng",
-        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/4?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/nt/john/6?lang=eng",
-        "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/14?lang=eng"
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/14?lang=eng",
+        "https://www.churchofjesuschrist.org/study/liahona/2021/03/emma-protected-scripture?lang=eng",
+        "https://www.josephsmithpapers.org/paper-summary/collection-of-sacred-hymns-1835/113",
+        "https://www.churchofjesuschrist.org/study/manual/hymns/how-firm-a-foundation?lang=eng",
+        "https://www.churchofjesuschrist.org/study/history/topics/female-relief-society-of-nauvoo?lang=eng",
+        "https://history.churchofjesuschrist.org/media-exhibit/a-history-and-record-on-plates-of-glass/nauvoo-house-on-the-mississippi-river?from=home&lang=eng"
+      ],
+      "rendered_review_status": "SEPARATE_RELEASE_GATE",
+      "review_evidence": [
+        {
+          "path": "docs/emma-hub-content-audit/fermi-copy-review-v5.json",
+          "bytes": 2859,
+          "sha256": "19af5b5cde1e4774fd13290a5b154ff45373622927e259aafa82ca85a1455144"
+        },
+        {
+          "path": "docs/emma-hub-content-audit/newton-current-copy-review.json",
+          "bytes": 4057,
+          "sha256": "87c7641b58c17d4337f515f2ab3d7141d5bac49751939f2e8ff1bddf9876832c"
+        },
+        {
+          "path": "docs/emma-hub-content-audit/newton-current-metadata-review.json",
+          "bytes": 3299,
+          "sha256": "940c5f4c92639bf37de9ee213087991ff5b8a321900cfa4bf188e1190025ed0f"
+        },
+        {
+          "path": "docs/emma-hub-content-audit/newton-current-attribute-review.json",
+          "bytes": 2672,
+          "sha256": "4696b6e883b57b3fb5a34c78ffdf45bd0d969ac640b1e593c13c73b1aac06639"
+        }
       ]
     },
     {
@@ -10401,82 +10459,268 @@
     {
       "path": "history/emma-elect-lady.html",
       "status": "verified",
-      "published_text_sha256": "0b0cc3afab68ebe9685a08aa2e4184f622a042ce88c6b5dc3f6737000c660ea2",
-      "reviewed_source_sha256": "e5b234afe494b825f90a94b58ff8b6363e349aa94a4d51562c9d037c58906820",
+      "published_text_sha256": "80b8e87efd52f85bdbe416034ad6a209b5b1b3c5f77b82a0c16faa762d05a67f",
+      "reviewed_source_sha256": "f32c79609f15d51e9c85b2f4bc941de38d2626c944e33f1876fc574f46f7986c",
       "reviewed_on": "2026-10-27",
-      "review_standard": "Independent native AI semantic review for the bounded Jeff-role task on 2026-10-27, not an action or concurrence by the external Merlin-side worker. Read the complete current static page, including narrative, quotations, source attributions, captions, alternative text, metadata, navigation and reflections; checked the cited official publications and documentary editions. Footer-only successor review: each predecessor was fetched at 88f52f24c40333c906e0f132e818a0f95e40ad15. Exactly two noncanonical footer paragraphs are replaced by the existing canonical history-footer template (blob 491ccf695d20f5ceddcf5c40e458f281fef8c718): the independence notice with official Church link and the artwork disclosure. Exact inverse replacement reconstructs every predecessor byte. No story prose, quotation, caption, alternative, historical source link, artwork, header, script or style changes in this successor. Prior canonical-header and stylesheet-cache changes were separately reviewed; the substantive delivered story and Hannah wording remain unchanged. The full candidate is bound here by reviewed_source_sha256; no future commit or hosted result is presumed. Genuine delivered Hannah text passes and Merlin integration receipts were read and reused only within their actual text scope, not promoted into current-head release approvals. Historical recollection and optional devotional interpretation remain distinct from archival fact. This records AI semantic review and current wording binding, not examination of every underlying original manuscript, artwork perfection, full CI success, release concurrence, publication or owner aesthetic acceptance. The official Liahona account supports the warning ride and protection/scribe details; Church History Topics and Revelations in Context support early chronology, baptism and family loss; Doctrine and Covenants 25 supports the quoted calling and the explicitly interpretive reflection on its order. The ride caption retains later family-memory attribution. No claim of four visible hooves is made or accepted.",
+      "actual_author": "Current ledger assembly; Fermi and Newton independently reviewed the finished prose",
+      "review_scope": "Current static visitor copy, metadata, captions and accessible labels; exact raw source and published-text hashes. Rendered and release acceptance are separate.",
+      "review_standard": "The exact current visitor prose, captions and narrative structure were independently reviewed by Fermi and Newton under the current warm-prose and disclosure mandates. Newton reviewed visible labels and image alt attributes; a separate bounded review covered title, description and Open Graph metadata voice, reusing prior research for factual support. Earlier historical/source research is reused for unchanged material; changed captions and quotations were checked against the cited sources. This is not a fresh exhaustive review of all retained claims. Rendered context, artwork identity and ownership, complete CI and release acceptance remain separate. A separate Newton source-voice review inspected nonempty static alt, aria-label, placeholder and title attributes; dynamic attributes, usability and full accessibility remain separate.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/history/topics/emma-hale-smith?lang=eng",
         "https://www.churchofjesuschrist.org/study/liahona/2021/03/emma-protected-scripture?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/25?lang=eng",
         "https://www.churchofjesuschrist.org/study/manual/revelations-in-context/thou-art-an-elect-lady?lang=eng"
+      ],
+      "rendered_review_status": "SEPARATE_RELEASE_GATE",
+      "review_evidence": [
+        {
+          "path": "docs/emma-hub-content-audit/fermi-copy-review-v5.json",
+          "bytes": 2859,
+          "sha256": "19af5b5cde1e4774fd13290a5b154ff45373622927e259aafa82ca85a1455144"
+        },
+        {
+          "path": "docs/emma-hub-content-audit/newton-current-copy-review.json",
+          "bytes": 4057,
+          "sha256": "87c7641b58c17d4337f515f2ab3d7141d5bac49751939f2e8ff1bddf9876832c"
+        },
+        {
+          "path": "docs/emma-hub-content-audit/newton-current-metadata-review.json",
+          "bytes": 3299,
+          "sha256": "940c5f4c92639bf37de9ee213087991ff5b8a321900cfa4bf188e1190025ed0f"
+        },
+        {
+          "path": "docs/emma-hub-content-audit/newton-current-attribute-review.json",
+          "bytes": 2672,
+          "sha256": "4696b6e883b57b3fb5a34c78ffdf45bd0d969ac640b1e593c13c73b1aac06639"
+        }
       ]
     },
     {
       "path": "history/emma-hymns.html",
       "status": "verified",
-      "published_text_sha256": "d23720124819a83f1304963b6497a1965534f8eae4e75fefe8c035ca2b3963c8",
-      "reviewed_source_sha256": "ab1373de9ed550b1a7192f30f67f0222538d50c9422c4fca7168d8efe9fc754c",
+      "published_text_sha256": "06ab23987916be8d7a87c1e4e027e7dbc275b6fa0b46a562ef748c82685fa914",
+      "reviewed_source_sha256": "719bc7f899ebc188f33322c4c7c6bea9e326b209e28e2d49855543185e12aedb",
       "reviewed_on": "2026-10-27",
-      "review_standard": "Independent native AI semantic review for the bounded Jeff-role task on 2026-10-27, not an action or concurrence by the external Merlin-side worker. Read the complete current static page, including narrative, quotations, source attributions, captions, alternative text, metadata, navigation and reflections; checked the cited official publications and documentary editions. Footer-only successor review: each predecessor was fetched at 88f52f24c40333c906e0f132e818a0f95e40ad15. Exactly two noncanonical footer paragraphs are replaced by the existing canonical history-footer template (blob 491ccf695d20f5ceddcf5c40e458f281fef8c718): the independence notice with official Church link and the artwork disclosure. Exact inverse replacement reconstructs every predecessor byte. No story prose, quotation, caption, alternative, historical source link, artwork, header, script or style changes in this successor. Prior canonical-header and stylesheet-cache changes were separately reviewed; the substantive delivered story and Hannah wording remain unchanged. The full candidate is bound here by reviewed_source_sha256; no future commit or hosted result is presumed. Genuine delivered Hannah text passes and Merlin integration receipts were read and reused only within their actual text scope, not promoted into current-head release approvals. Historical recollection and optional devotional interpretation remain distinct from archival fact. This records AI semantic review and current wording binding, not examination of every underlying original manuscript, artwork perfection, full CI success, release concurrence, publication or owner aesthetic acceptance. Checked the hymn-selection charge, Phelps collaboration, ninety-text collection and the distinction between its 1835 title date and apparent early-1836 availability. The familiar hymn quotation uses the current Church hymn wording, not a claim of diplomatic spelling from the 1835 printing; the earlier collection includes that hymn. Reflections about singing and service are devotional applications rather than new historical quotations.",
+      "actual_author": "Current ledger assembly; Fermi and Newton independently reviewed the finished prose",
+      "review_scope": "Current static visitor copy, metadata, captions and accessible labels; exact raw source and published-text hashes. Rendered and release acceptance are separate.",
+      "review_standard": "The exact current visitor prose, captions and narrative structure were independently reviewed by Fermi and Newton under the current warm-prose and disclosure mandates. Newton reviewed visible labels and image alt attributes; a separate bounded review covered title, description and Open Graph metadata voice, reusing prior research for factual support. Earlier historical/source research is reused for unchanged material; changed captions and quotations were checked against the cited sources. This is not a fresh exhaustive review of all retained claims. Rendered context, artwork identity and ownership, complete CI and release acceptance remain separate. A separate Newton source-voice review inspected nonempty static alt, aria-label, placeholder and title attributes; dynamic attributes, usability and full accessibility remain separate.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/history/topics/emma-hale-smith?lang=eng",
         "https://www.josephsmithpapers.org/paper-summary/collection-of-sacred-hymns-1835/1",
         "https://www.josephsmithpapers.org/paper-summary/collection-of-sacred-hymns-1835/113",
         "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/25?lang=eng",
         "https://www.churchofjesuschrist.org/study/manual/hymns/how-firm-a-foundation?lang=eng"
+      ],
+      "rendered_review_status": "SEPARATE_RELEASE_GATE",
+      "review_evidence": [
+        {
+          "path": "docs/emma-hub-content-audit/fermi-copy-review-v5.json",
+          "bytes": 2859,
+          "sha256": "19af5b5cde1e4774fd13290a5b154ff45373622927e259aafa82ca85a1455144"
+        },
+        {
+          "path": "docs/emma-hub-content-audit/newton-current-copy-review.json",
+          "bytes": 4057,
+          "sha256": "87c7641b58c17d4337f515f2ab3d7141d5bac49751939f2e8ff1bddf9876832c"
+        },
+        {
+          "path": "docs/emma-hub-content-audit/newton-current-metadata-review.json",
+          "bytes": 3299,
+          "sha256": "940c5f4c92639bf37de9ee213087991ff5b8a321900cfa4bf188e1190025ed0f"
+        },
+        {
+          "path": "docs/emma-hub-content-audit/newton-current-attribute-review.json",
+          "bytes": 2672,
+          "sha256": "4696b6e883b57b3fb5a34c78ffdf45bd0d969ac640b1e593c13c73b1aac06639"
+        }
       ]
     },
     {
       "path": "history/emma-winter-crossing.html",
       "status": "verified",
-      "published_text_sha256": "1add914352708190d8d49adb5a13cd427f3b741c9e941e1d0be286dcce1146c2",
-      "reviewed_source_sha256": "4245bdf43ad6dd24dfa47b31c6f3ff411c407d0e9a6d7ef352cec0f815008186",
+      "published_text_sha256": "939cf57a1e485db92c67c94df64ceeb0af9b2775a17d45a85132f93988dff5cf",
+      "reviewed_source_sha256": "a2c6003789eaaf4458bb3f431943c2d4602908b19324054ef8ca9f0aab30a417",
       "reviewed_on": "2026-10-27",
-      "review_standard": "Independent native AI semantic review for the bounded Jeff-role task on 2026-10-27, not an action or concurrence by the external Merlin-side worker. Read the complete current static page, including narrative, quotations, source attributions, captions, alternative text, metadata, navigation and reflections; checked the cited official publications and documentary editions. Footer-only successor review: each predecessor was fetched at 88f52f24c40333c906e0f132e818a0f95e40ad15. Exactly two noncanonical footer paragraphs are replaced by the existing canonical history-footer template (blob 491ccf695d20f5ceddcf5c40e458f281fef8c718): the independence notice with official Church link and the artwork disclosure. Exact inverse replacement reconstructs every predecessor byte. No story prose, quotation, caption, alternative, historical source link, artwork, header, script or style changes in this successor. Prior canonical-header and stylesheet-cache changes were separately reviewed; the substantive delivered story and Hannah wording remain unchanged. The full candidate is bound here by reviewed_source_sha256; no future commit or hosted result is presumed. Genuine delivered Hannah text passes and Merlin integration receipts were read and reused only within their actual text scope, not promoted into current-head release approvals. Historical recollection and optional devotional interpretation remain distinct from archival fact. This records AI semantic review and current wording binding, not examination of every underlying original manuscript, artwork perfection, full CI success, release concurrence, publication or owner aesthetic acceptance. Checked the family separation and children's ages, frozen-river journey and protected Bible-translation manuscript, and the date, setting and quoted words of the March 7, 1839 letter. The Joseph Smith Papers presents a later letterbook copy, not an extant original letter; the page does not claim otherwise. The Quincy portrait is expressly not an image of the crossing, and reflective language is kept distinct from the letter quotation.",
+      "actual_author": "Current ledger assembly; Fermi and Newton independently reviewed the finished prose",
+      "review_scope": "Current static visitor copy, metadata, captions and accessible labels; exact raw source and published-text hashes. Rendered and release acceptance are separate.",
+      "review_standard": "The exact current visitor prose, captions and narrative structure were independently reviewed by Fermi and Newton under the current warm-prose and disclosure mandates. Newton reviewed visible labels and image alt attributes; a separate bounded review covered title, description and Open Graph metadata voice, reusing prior research for factual support. Earlier historical/source research is reused for unchanged material; changed captions and quotations were checked against the cited sources. This is not a fresh exhaustive review of all retained claims. Rendered context, artwork identity and ownership, complete CI and release acceptance remain separate. A separate Newton source-voice review inspected nonempty static alt, aria-label, placeholder and title attributes; dynamic attributes, usability and full accessibility remain separate.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/history/topics/emma-hale-smith?lang=eng",
         "https://www.churchofjesuschrist.org/study/history/topics/joseph-and-emma-hale-smith-family?lang=eng",
         "https://www.churchofjesuschrist.org/study/liahona/2021/03/emma-protected-scripture?lang=eng",
         "https://www.josephsmithpapers.org/paper-summary/letter-from-emma-smith-7-march-1839/1"
+      ],
+      "rendered_review_status": "SEPARATE_RELEASE_GATE",
+      "review_evidence": [
+        {
+          "path": "docs/emma-hub-content-audit/fermi-copy-review-v5.json",
+          "bytes": 2859,
+          "sha256": "19af5b5cde1e4774fd13290a5b154ff45373622927e259aafa82ca85a1455144"
+        },
+        {
+          "path": "docs/emma-hub-content-audit/newton-current-copy-review.json",
+          "bytes": 4057,
+          "sha256": "87c7641b58c17d4337f515f2ab3d7141d5bac49751939f2e8ff1bddf9876832c"
+        },
+        {
+          "path": "docs/emma-hub-content-audit/newton-current-metadata-review.json",
+          "bytes": 3299,
+          "sha256": "940c5f4c92639bf37de9ee213087991ff5b8a321900cfa4bf188e1190025ed0f"
+        },
+        {
+          "path": "docs/emma-hub-content-audit/newton-current-attribute-review.json",
+          "bytes": 2672,
+          "sha256": "4696b6e883b57b3fb5a34c78ffdf45bd0d969ac640b1e593c13c73b1aac06639"
+        }
       ]
     },
     {
       "path": "history/emma-relief-society.html",
       "status": "verified",
-      "published_text_sha256": "16e2e6fcf0ac1da4649ba5091bc04ede22320cf6138725cedfbf179a99449bbb",
-      "reviewed_source_sha256": "f13772d3e7aa457aef1cb02804e3c2ab86adcab870b64e2f7aa25a8cc3a70310",
+      "published_text_sha256": "376405e45ba1e1131125edf0215f9bf47d0a179696dc5fae89decaf359810ea6",
+      "reviewed_source_sha256": "e90e7b25239973e2488f32e57482fd5cfbdabb6a7f3f1746599aded9cd546ebb",
       "reviewed_on": "2026-10-27",
-      "review_standard": "Independent native AI semantic review for the bounded Jeff-role task on 2026-10-27, not an action or concurrence by the external Merlin-side worker. Read the complete current static page, including narrative, quotations, source attributions, captions, alternative text, metadata, navigation and reflections; checked the cited official publications and documentary editions. Footer-only successor review: each predecessor was fetched at 88f52f24c40333c906e0f132e818a0f95e40ad15. Exactly two noncanonical footer paragraphs are replaced by the existing canonical history-footer template (blob 491ccf695d20f5ceddcf5c40e458f281fef8c718): the independence notice with official Church link and the artwork disclosure. Exact inverse replacement reconstructs every predecessor byte. No story prose, quotation, caption, alternative, historical source link, artwork, header, script or style changes in this successor. Prior canonical-header and stylesheet-cache changes were separately reviewed; the substantive delivered story and Hannah wording remain unchanged. The full candidate is bound here by reviewed_source_sha256; no future commit or hosted result is presumed. Genuine delivered Hannah text passes and Merlin integration receipts were read and reused only within their actual text scope, not promoted into current-head release approvals. Historical recollection and optional devotional interpretation remain distinct from archival fact. This records AI semantic review and current wording binding, not examination of every underlying original manuscript, artwork perfection, full CI success, release concurrence, publication or owner aesthetic acceptance. Checked the twenty-woman founding meeting, March 17, 1842 election and counselors, attributed remarks, practical relief and fair payment for widows, membership growth, Lucy Mack Smith's testimony, Nauvoo meeting cessation and later reuse of the minute book. The hospitality caption describes a documented practice, not an invented dated visitor or arrival; its visual description does not authenticate a specific building.",
+      "actual_author": "Current ledger assembly; Fermi and Newton independently reviewed the finished prose",
+      "review_scope": "Current static visitor copy, metadata, captions and accessible labels; exact raw source and published-text hashes. Rendered and release acceptance are separate.",
+      "review_standard": "The exact current visitor prose, captions and narrative structure were independently reviewed by Fermi and Newton under the current warm-prose and disclosure mandates. Newton reviewed visible labels and image alt attributes; a separate bounded review covered title, description and Open Graph metadata voice, reusing prior research for factual support. Earlier historical/source research is reused for unchanged material; changed captions and quotations were checked against the cited sources. This is not a fresh exhaustive review of all retained claims. Rendered context, artwork identity and ownership, complete CI and release acceptance remain separate. A separate Newton source-voice review inspected nonempty static alt, aria-label, placeholder and title attributes; dynamic attributes, usability and full accessibility remain separate.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/history/topics/female-relief-society-of-nauvoo?lang=eng",
         "https://www.churchhistorianspress.org/the-first-fifty-years-of-relief-society/part-1/1-2/1-2-1?lang=eng",
         "https://www.churchofjesuschrist.org/study/history/topics/emma-hale-smith?lang=eng"
+      ],
+      "rendered_review_status": "SEPARATE_RELEASE_GATE",
+      "review_evidence": [
+        {
+          "path": "docs/emma-hub-content-audit/fermi-copy-review-v5.json",
+          "bytes": 2859,
+          "sha256": "19af5b5cde1e4774fd13290a5b154ff45373622927e259aafa82ca85a1455144"
+        },
+        {
+          "path": "docs/emma-hub-content-audit/newton-current-copy-review.json",
+          "bytes": 4057,
+          "sha256": "87c7641b58c17d4337f515f2ab3d7141d5bac49751939f2e8ff1bddf9876832c"
+        },
+        {
+          "path": "docs/emma-hub-content-audit/newton-current-metadata-review.json",
+          "bytes": 3299,
+          "sha256": "940c5f4c92639bf37de9ee213087991ff5b8a321900cfa4bf188e1190025ed0f"
+        },
+        {
+          "path": "docs/emma-hub-content-audit/newton-current-attribute-review.json",
+          "bytes": 2672,
+          "sha256": "4696b6e883b57b3fb5a34c78ffdf45bd0d969ac640b1e593c13c73b1aac06639"
+        }
       ]
     },
     {
       "path": "history/emma-last-testimony.html",
       "status": "verified",
-      "published_text_sha256": "7873390109b37f900630f02ee3074a7ef0d66baac2a85a7f3b4916766a5098ed",
-      "reviewed_source_sha256": "983a41ea229c286018be4c355f28a39b4c9f6294221b001d2985356f0fafb559",
+      "published_text_sha256": "f1d0992ad0bf2bf3a828ee458cb0daefb22739a2d7631430cacec5dfcfb51be4",
+      "reviewed_source_sha256": "ff608df4a3bb994d29834e253daac97b1721ecf2b3209a621e284f16ca91eb70",
       "reviewed_on": "2026-10-27",
-      "review_standard": "Independent native AI semantic review for the bounded Jeff-role task on 2026-10-27, not an action or concurrence by the external Merlin-side worker. Read the complete current static page, including narrative, quotations, source attributions, captions, alternative text, metadata, navigation and reflections; checked the cited official publications and documentary editions. Footer-only successor review: each predecessor was fetched at 88f52f24c40333c906e0f132e818a0f95e40ad15. Exactly two noncanonical footer paragraphs are replaced by the existing canonical history-footer template (blob 491ccf695d20f5ceddcf5c40e458f281fef8c718): the independence notice with official Church link and the artwork disclosure. Exact inverse replacement reconstructs every predecessor byte. No story prose, quotation, caption, alternative, historical source link, artwork, header, script or style changes in this successor. Prior canonical-header and stylesheet-cache changes were separately reviewed; the substantive delivered story and Hannah wording remain unchanged. The full candidate is bound here by reviewed_source_sha256; no future commit or hosted result is presumed. Genuine delivered Hannah text passes and Merlin integration receipts were read and reused only within their actual text scope, not promoted into current-head release approvals. Historical recollection and optional devotional interpretation remain distinct from archival fact. This records AI semantic review and current wording binding, not examination of every underlying original manuscript, artwork perfection, full CI success, release concurrence, publication or owner aesthetic acceptance. Checked the later-life chronology, family losses, temporary Fulton refuge, second marriage, Riverside Mansion context, separate church affiliation and final testimony. The testimony wording and em-dash presentation match Church History Topics; the Ensign presentation uses a period between the same clauses, so no punctuation-exact transcription of that Ensign version is claimed. Joseph III's recorded later testimony remains attributed, and the treatment of David avoids inventing a modern diagnosis.",
+      "actual_author": "Current ledger assembly; Fermi and Newton independently reviewed the finished prose",
+      "review_scope": "Current static visitor copy, metadata, captions and accessible labels; exact raw source and published-text hashes. Rendered and release acceptance are separate.",
+      "review_standard": "The exact current visitor prose, captions and narrative structure were independently reviewed by Fermi and Newton under the current warm-prose and disclosure mandates. Newton reviewed visible labels and image alt attributes; a separate bounded review covered title, description and Open Graph metadata voice, reusing prior research for factual support. Earlier historical/source research is reused for unchanged material; changed captions and quotations were checked against the cited sources. This is not a fresh exhaustive review of all retained claims. Rendered context, artwork identity and ownership, complete CI and release acceptance remain separate. A separate Newton source-voice review inspected nonempty static alt, aria-label, placeholder and title attributes; dynamic attributes, usability and full accessibility remain separate.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/history/topics/emma-hale-smith?lang=eng",
         "https://www.churchofjesuschrist.org/study/history/topics/joseph-and-emma-hale-smith-family?lang=eng",
         "https://www.churchofjesuschrist.org/study/ensign/1992/08/my-great-great-grandmother-emma-hale-smith?lang=eng",
         "https://history.churchofjesuschrist.org/media-exhibit/a-history-and-record-on-plates-of-glass/nauvoo-house-on-the-mississippi-river?from=home&lang=eng"
+      ],
+      "rendered_review_status": "SEPARATE_RELEASE_GATE",
+      "review_evidence": [
+        {
+          "path": "docs/emma-hub-content-audit/fermi-copy-review-v5.json",
+          "bytes": 2859,
+          "sha256": "19af5b5cde1e4774fd13290a5b154ff45373622927e259aafa82ca85a1455144"
+        },
+        {
+          "path": "docs/emma-hub-content-audit/newton-current-copy-review.json",
+          "bytes": 4057,
+          "sha256": "87c7641b58c17d4337f515f2ab3d7141d5bac49751939f2e8ff1bddf9876832c"
+        },
+        {
+          "path": "docs/emma-hub-content-audit/newton-current-metadata-review.json",
+          "bytes": 3299,
+          "sha256": "940c5f4c92639bf37de9ee213087991ff5b8a321900cfa4bf188e1190025ed0f"
+        },
+        {
+          "path": "docs/emma-hub-content-audit/newton-current-attribute-review.json",
+          "bytes": 2672,
+          "sha256": "4696b6e883b57b3fb5a34c78ffdf45bd0d969ac640b1e593c13c73b1aac06639"
+        }
       ]
     },
     {
       "path": "timelines/adams-1881-chart.html",
       "status": "verified",
-      "published_text_sha256": "b036c8198621b7f17ee8fa641244fe339747ef525d5480a664161423ca89c3e8",
-      "reviewed_source_sha256": "95802a989d818d0ff7297660274c62f18140950b0bf58fc96a90277ef1e1cb90",
+      "published_text_sha256": "db6e5178945882157a01a758b89577ef11f4f8a1f431cef8a7526a598c8c3b14",
+      "reviewed_source_sha256": "b90c19dd9f77c3966843b41d514319816a194deee86b87235909f6b2c742130c",
       "reviewed_on": "2026-10-27",
-      "review_standard": "Independent native AI semantic review for the bounded Jeff-role task, not an action or concurrence by the external Merlin-side worker. Reviewed the complete current static viewer wording, accessible control labels, metadata, title and H1, independence notice, source credit, Back to timelines and FocusChrist Home links at exact source ae03684acc0ff56d622028755d7d97ce8902288a. This entry verifies presentation of a historical artifact, attribution and interface wording; it does not verify the chart's chronology, biblical dates, geographic or cultural representations as modern historical fact or Church doctrine. The Wikimedia Commons file record identifies Sebastian C. Adams, the 1881 chart, David Rumsey Map Collection provenance and public-domain/PD-Art status; no Creative Commons noncommercial or share-alike obligation is invented. The Gold Edition wording is retained from the supplied interactive file's title, not authenticated as an archival edition designation. Genuine delivered Hannah passes were read and reused only for unchanged attribution, context and Back to timelines wording. The current Home label and semantic H1 were independently reviewed here; no new external reviewer action or final label receipt is fabricated. Fresh remote bytes match the local V9 source. Its only change from the reviewed V8 page adds target=_blank and rel=noopener noreferrer to the existing Commons credit anchor under the existing external-link contract; no published wording, CSS, inline script, tile map or asset changes. The preceding one-byte Home-label capitalization correction is preserved. Actual Merlin finished concurrence and the channel record of Hannah completed approval of the adopted alternative were read and hash-verified; no separate Hannah-authored file or current-page/render acceptance is implied by that narrow evidence. The 331 supplied JPEG assets remain separately bound by the source-import and viewer evidence; this review does not claim a newly downloaded full upstream JPEG or certify that immediate download lineage. Static published-text hashing does not inspect image pixels or inline scripts. Those, runtime behavior, current responsive captures, all CI gates, final-source reconciliation, receiver-authored release review and publication remain separate obligations. This is semantic registration only, not release or owner aesthetic acceptance.",
+      "actual_author": "Current ledger assembly; Fermi and Newton independently reviewed the finished prose",
+      "review_scope": "Current static visitor copy, metadata, captions and accessible labels; exact raw source and published-text hashes. Rendered and release acceptance are separate.",
+      "review_standard": "The exact current static visitor prose was independently reviewed by Fermi and Newton under the current warm-prose and disclosure mandates. Fermi reviewed accessible labels; Newton reviewed visible labels and image alt attributes. A separate Newton review covered title, description and Open Graph metadata voice, reusing prior research for factual support. The chart is identified as an 1881 historical artifact, not a modern verified chronology or official Church teaching. Attribution and U.S. public-domain reproduction status are supported by the cited Commons source, which notes other jurisdictions may restrict reuse; Gold Edition is interface wording, not an authenticated archival designation. Existing chart pixels are referenced, not new artwork. Prior unchanged research is reused; image pixels, inline scripts, runtime, rendered context and release acceptance remain separate. A separate Newton source-voice review inspected nonempty static alt, aria-label, placeholder and title attributes; dynamic attributes, usability and full accessibility remain separate.",
       "authoritative_sources": [
         "https://commons.wikimedia.org/wiki/File:Adams_Synchronological_Chart,_1881.jpg"
+      ],
+      "rendered_review_status": "SEPARATE_RELEASE_GATE",
+      "review_evidence": [
+        {
+          "path": "docs/emma-hub-content-audit/fermi-current-adams-copy-review.json",
+          "bytes": 3021,
+          "sha256": "2810f9bcabd24ba8ea0357e39d60ab39cdf1387927e316a670c3ef6ce0e94af2"
+        },
+        {
+          "path": "docs/emma-hub-content-audit/newton-current-copy-review.json",
+          "bytes": 4057,
+          "sha256": "87c7641b58c17d4337f515f2ab3d7141d5bac49751939f2e8ff1bddf9876832c"
+        },
+        {
+          "path": "docs/emma-hub-content-audit/newton-current-metadata-review.json",
+          "bytes": 3299,
+          "sha256": "940c5f4c92639bf37de9ee213087991ff5b8a321900cfa4bf188e1190025ed0f"
+        },
+        {
+          "path": "docs/emma-hub-content-audit/newton-current-attribute-review.json",
+          "bytes": 2672,
+          "sha256": "4696b6e883b57b3fb5a34c78ffdf45bd0d969ac640b1e593c13c73b1aac06639"
+        }
+      ]
+    },
+    {
+      "path": "timelines/adams-1881-introduction.html",
+      "status": "verified",
+      "published_text_sha256": "73953f334b891192af948f395101ee7ceaac8a84952479a856c92f91ff1d2f64",
+      "reviewed_source_sha256": "742d429e6a674ce5d47889aab964a6bde60f3509bd9518e159499be6616112be",
+      "reviewed_on": "2026-10-27",
+      "actual_author": "Current ledger assembly; Fermi and Newton independently reviewed the finished prose",
+      "review_scope": "Current static visitor copy, metadata, captions and accessible labels; exact raw source and published-text hashes. Rendered and release acceptance are separate.",
+      "review_standard": "The exact current static visitor prose was independently reviewed by Fermi and Newton under the current warm-prose and disclosure mandates. Fermi reviewed accessible labels; Newton reviewed visible labels and image alt attributes. A separate Newton review covered title, description and Open Graph metadata voice, reusing prior research for factual support. The chart is identified as an 1881 historical artifact, not a modern verified chronology or official Church teaching. Attribution and U.S. public-domain reproduction status are supported by the cited Commons source, which notes other jurisdictions may restrict reuse; Gold Edition is interface wording, not an authenticated archival designation. Existing chart pixels are referenced, not new artwork. Prior unchanged research is reused; image pixels, inline scripts, runtime, rendered context and release acceptance remain separate. A separate Newton source-voice review inspected nonempty static alt, aria-label, placeholder and title attributes; dynamic attributes, usability and full accessibility remain separate.",
+      "authoritative_sources": [
+        "https://commons.wikimedia.org/wiki/File:Adams_Synchronological_Chart,_1881.jpg"
+      ],
+      "rendered_review_status": "SEPARATE_RELEASE_GATE",
+      "review_evidence": [
+        {
+          "path": "docs/emma-hub-content-audit/fermi-current-adams-copy-review.json",
+          "bytes": 3021,
+          "sha256": "2810f9bcabd24ba8ea0357e39d60ab39cdf1387927e316a670c3ef6ce0e94af2"
+        },
+        {
+          "path": "docs/emma-hub-content-audit/newton-current-copy-review.json",
+          "bytes": 4057,
+          "sha256": "87c7641b58c17d4337f515f2ab3d7141d5bac49751939f2e8ff1bddf9876832c"
+        },
+        {
+          "path": "docs/emma-hub-content-audit/newton-current-metadata-review.json",
+          "bytes": 3299,
+          "sha256": "940c5f4c92639bf37de9ee213087991ff5b8a321900cfa4bf188e1190025ed0f"
+        },
+        {
+          "path": "docs/emma-hub-content-audit/newton-current-attribute-review.json",
+          "bytes": 2672,
+          "sha256": "4696b6e883b57b3fb5a34c78ffdf45bd0d969ac640b1e593c13c73b1aac06639"
+        }
       ]
     }
   ]

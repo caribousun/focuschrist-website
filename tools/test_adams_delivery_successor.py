@@ -9,6 +9,10 @@ from pathlib import Path
 from unittest.mock import patch
 
 import adams_delivery_successor as gate
+from adams_integration_indices import restore as restore_integration
+
+def historical_input(name):
+    return restore_integration(name, (gate.ROOT / name).read_bytes())
 
 
 def spans(before, after):
@@ -157,7 +161,7 @@ class SyntheticIndicesTests(unittest.TestCase):
 class ActualGeneratedIndicesTests(unittest.TestCase):
     def test_historical_view_checks_actual_adams_first_and_leaves_checkout_unchanged(self):
         import emma_generated_indices_successor as emma
-        before = {name: (gate.ROOT / name).read_bytes() for name in gate.AFTER}
+        before = {name: historical_input(name) for name in gate.AFTER}
         # The old gate must reject actual current Adams bytes when used directly.
         with self.assertRaisesRegex(ValueError, "changed generated index"):
             emma.check(gate.ROOT)
@@ -172,7 +176,7 @@ class ActualGeneratedIndicesTests(unittest.TestCase):
                 self.assertNotEqual(raw, (view / name).read_bytes())
         self.assertFalse(view.exists())
         for name, raw in before.items():
-            self.assertEqual((gate.ROOT / name).read_bytes(), raw)
+            self.assertEqual(historical_input(name), raw)
 
     def test_historical_view_rejects_current_drift_and_mixed_pairs(self):
         import emma_generated_indices_successor as emma
@@ -182,7 +186,7 @@ class ActualGeneratedIndicesTests(unittest.TestCase):
                 target = root / manifest
                 target.parent.mkdir(parents=True, exist_ok=True)
                 target.write_bytes((gate.ROOT / manifest).read_bytes())
-            originals = {name: (gate.ROOT / name).read_bytes() for name in gate.AFTER}
+            originals = {name: historical_input(name) for name in gate.AFTER}
             for name, raw in originals.items():
                 (root / name).write_bytes(raw)
             for name, raw in originals.items():
@@ -197,7 +201,7 @@ class ActualGeneratedIndicesTests(unittest.TestCase):
     def test_all_actual_pairs_and_checks(self):
         self.assertEqual(gate.check()["files"], sorted(gate.AFTER))
         for name, expected in gate.BEFORE.items():
-            current = (gate.ROOT / name).read_bytes()
+            current = historical_input(name)
             self.assertEqual(gate.sha(current), gate.AFTER[name])
             prior = gate.restore(name, current)
             self.assertEqual(gate.sha(prior), expected)
@@ -206,7 +210,7 @@ class ActualGeneratedIndicesTests(unittest.TestCase):
 
     def test_actual_current_mutations_not_normalized(self):
         for name in gate.AFTER:
-            current = (gate.ROOT / name).read_bytes()
+            current = historical_input(name)
             row = gate.mapping()["files"][name]
             start = row["spans"][0]["start"]
             for changed in [current + b" ", bytes([current[0] ^ 1]) + current[1:],
@@ -218,14 +222,14 @@ class ActualGeneratedIndicesTests(unittest.TestCase):
 
     def test_actual_search_composes_to_unchanged_historical_pin(self):
         import timeline_source_import as timeline
-        current = (gate.ROOT / "site-search-index.json").read_bytes()
+        current = historical_input("site-search-index.json")
         self.assertEqual(gate.sha(timeline.restore_search(current)),
                          "038391c9f469c4c7a24894c629b915851ec097d305e880bdfe12e6f24b3c9e0d")
         for changed in [current + b" ", current.replace(b'"version":1', b'"version":2', 1)]:
             self.assertNotEqual(changed, current)
             self.assertEqual(timeline.restore_search(changed), changed)
         import emma_generated_indices_successor as emma
-        current_gallery = (gate.ROOT / "art-gallery.json").read_bytes()
+        current_gallery = historical_input("art-gallery.json")
         historical_gallery = emma.restore("art-gallery.json", gate.restore("art-gallery.json", current_gallery))
         self.assertEqual(gate.sha(historical_gallery),
                          timeline.REVIEWED_CONSUMER_INVERSES["art-gallery.json"]["current"])

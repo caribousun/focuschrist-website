@@ -14,7 +14,7 @@ spec.loader.exec_module(gate)
 
 class NegativeContract(unittest.TestCase):
     def setUp(self):
-        self.record = json.loads((Path(__file__).parents[1] / gate.MANIFEST).read_text())
+        self.record = json.loads((Path(__file__).parents[1] / 'docs/emma-story-artwork-import/historical/ecfb-delivery.json').read_text())
 
     def call(self, record):
         return gate.validate(Path('.'), record, set(), set(), set(), lambda p:'', lambda r,p:set())

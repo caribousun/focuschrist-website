@@ -1,0 +1,73 @@
+{
+  "reviewer": "Newton, appointed local independent reviewer",
+  "at_utc": "2026-10-27T18:58:29.199593+00:00",
+  "decision": "CONCUR_NINE_FINISHED_SOURCE_VOICE_AND_DISCLOSURE_SCOPE_ONLY",
+  "mandate_read": {
+    "source": "Applicable current mandate snapshot",
+    "sha256": "e70c3fdc59032a8db0ff3f331855b174e5721457ade9e87f0f76a61a8442bd1d"
+  },
+  "sources": [
+    {
+      "path": "history/emma-hale-smith.html",
+      "bytes": 66144,
+      "sha256": "50c334379066722ef6e80e97d70f0f2ca431777b5857eb15b998da65cc1783cf"
+    },
+    {
+      "path": "history/emma-elect-lady.html",
+      "bytes": 14734,
+      "sha256": "f32c79609f15d51e9c85b2f4bc941de38d2626c944e33f1876fc574f46f7986c"
+    },
+    {
+      "path": "history/emma-hymns.html",
+      "bytes": 15103,
+      "sha256": "719bc7f899ebc188f33322c4c7c6bea9e326b209e28e2d49855543185e12aedb"
+    },
+    {
+      "path": "history/emma-winter-crossing.html",
+      "bytes": 14477,
+      "sha256": "a2c6003789eaaf4458bb3f431943c2d4602908b19324054ef8ca9f0aab30a417"
+    },
+    {
+      "path": "history/emma-relief-society.html",
+      "bytes": 15000,
+      "sha256": "e90e7b25239973e2488f32e57482fd5cfbdabb6a7f3f1746599aded9cd546ebb"
+    },
+    {
+      "path": "history/emma-last-testimony.html",
+      "bytes": 15464,
+      "sha256": "ff608df4a3bb994d29834e253daac97b1721ecf2b3209a621e284f16ca91eb70"
+    },
+    {
+      "path": "timeline.html",
+      "bytes": 8828,
+      "sha256": "c910ae58c2f8feccf1d59f44b154d31f224436b79538e86bf73774c65b0b8c4c"
+    },
+    {
+      "path": "timelines/adams-1881-chart.html",
+      "bytes": 66076,
+      "sha256": "b90c19dd9f77c3966843b41d514319816a194deee86b87235909f6b2c742130c"
+    },
+    {
+      "path": "timelines/adams-1881-introduction.html",
+      "bytes": 8126,
+      "sha256": "742d429e6a674ce5d47889aab964a6bde60f3509bd9518e159499be6616112be"
+    }
+  ],
+  "observations": [
+    "Personally read the current six Emma page texts and three Adams/Timeline sources, including introductions, story prose, captions/detail copy, reflections, main onward links and visible labels, using rendered evidence for current Emma/Adams context.",
+    "Emma prose narrates a chronological life in a human and respectful voice, with source links and attributed excerpts. Ordinary attribution of a recorded interview or family tradition is not a robotic disclosure; the five scene captions tell history directly. Adams introduction describes the chart as a historical artifact and does not present it as a modern chronology or official source.",
+    "No generic new-artwork badge or repeated image-disclaimer wording identified in these nine source texts or image alt attributes. All nine retain the standard footer disclosure. Emma companion has one separate closing disclosure within the printable companion in addition to the page footer, appropriate to each edition.",
+    "No site-authored em dash found in the reviewed visitor text; en dashes in references are not em dashes.",
+    "Prior unchanged historical source research, chronology, quotes and artwork identity approvals are reused against matching exact source hashes, not independently recreated; this is voice/disclosure review and does not assert that every historical fact was newly verified."
+  ],
+  "limits": [
+    "No new website-wide or PDF rendered audit, no external source re-research or live-link verification, no owner acceptance or release approval.",
+    "Art/identity validation, sitewide ownership, final source hashes after any change, whole CI and actual live browser checks remain separate."
+  ],
+  "provenance": {
+    "description": "Faithful public-safe transcription of the predecessor reviewer’s original receipt; observations and limitations are the predecessor’s, not newly performed by the transcriber. The internal local working path has been omitted.",
+    "original_receipt_sha256": "d42185149912b672eda7ea35d4f5a3fcf3a2e535ea34aa4b7549fc8382d632de",
+    "transcribed_by": "Newton successor independent local reviewer",
+    "transcribed_at_utc": "2026-10-27T19:03:48.993125+00:00"
+  }
+}

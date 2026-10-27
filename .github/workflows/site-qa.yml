@@ -34,8 +34,13 @@ jobs:
         run: |
           python -m unittest discover -s tools -p test_artwork_creation_gate.py
           python -m unittest discover -s tools -p test_artwork_emma_story_delivery.py
+          python -m unittest discover -s tools -p test_artwork_emma_hub_delivery.py
           python -m unittest discover -s tools -p test_emma_story_consumers.py
           python tools/test_adams_delivery_successor.py
+          python -m unittest discover -s tools -p test_adams_integrated_context.py
+          python -m unittest discover -s tools -p test_adams_integrated_qa_evidence.py
+          python -m unittest discover -s tools -p test_adams_integration_indices.py
+          python -m unittest discover -s tools -p test_actual_current_index_composition.py
           python -m unittest discover -s tools -p test_adams_source_import.py
           python -m unittest discover -s tools -p test_adams_standalone_opening.py
           python -m unittest discover -s tools -p test_adams_panel_standalone.py
@@ -416,6 +421,7 @@ jobs:
       - name: Enforce reviewed static-content ledger
         run: |
           python tools/test_static_content_audit.py
+          python -m unittest discover -s tools -p test_current_integration_content_audit.py
           python tools/static_content_audit.py
 
       - name: Exercise source-integrity runtime guard

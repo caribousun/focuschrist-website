@@ -181,8 +181,12 @@ def validate_source(root, record, added, covered, rejected):
 
 
 def validate(root, added, covered, rejected):
+    from adams_integrated_source_import import MANIFEST as CURRENT_MANIFEST, validate as validate_current
+    if (root / CURRENT_MANIFEST).exists():
+        return validate_current(root, added, covered, rejected)
     record = json.loads(local(root, MANIFEST).read_text(encoding='utf-8'))
     # Reject pending/stale receipts and evidence before expensive JPEG decoding.
     validate_reviews(root, record)
     validate_qa(root, record)
     return validate_source(root, record, added, covered, rejected)
+

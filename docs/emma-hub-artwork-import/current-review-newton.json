@@ -1,0 +1,60 @@
+{
+  "reviewer": "Newton",
+  "actual_author": "Newton, appointed local independent review agent",
+  "decision": "CONCUR",
+  "withdrawn": false,
+  "spec_sha256": "5f1de193844aeeb108e8a474723188e8b5cf464eeacfa203f2cfe8802686baf9",
+  "rendered_context_sha256": "b445828db4c01b62b0b14d7a365161c16caa3129622f417899c8cd522f059d52",
+  "reviewed_at": "2026-10-27T18:51:26.389918+00:00",
+  "external_worker_action_claimed": false,
+  "unchanged_source_art_reused": true,
+  "current_placement_inspected": true,
+  "checks": {
+    "identity": "The five existing Emma scenes visibly retain the same recognizable character through the journey; no new generation is claimed. Prior exact identity and owner reference reviews remain controlling, not recreated from screenshots.",
+    "age": "The ride and hymnal scenes present a younger adult and the testimony scene an older Emma; prior age/source review is retained, not inferred from the caption alone.",
+    "expression_gaze": "Ride appears intent, hymnal and Quincy reflective, doorway welcoming, later testimony earnest.",
+    "atmosphere": "Autumn riding, softly lit interiors and doorway scenes provide distinct settings; images are presented as artwork, not documentary photographs.",
+    "environment": "The five scenes appear beside the relevant story passages on desktop and phone; no new alteration of environment pixels is claimed.",
+    "characters_realism": "Inspected the actual displayed images, including natural shading and clothing; prior asset/pixel approvals and limitations govern unchanged originals.",
+    "period_sources": "Nearby contextual copy names history and sources; source/hash-matched earlier source research is retained rather than silently rerun.",
+    "anatomy": "Ride shows one far hind hoof occluded; do not claim all four visible. No new anatomy clearance or repaired image is asserted.",
+    "uniqueness": "Raw report and prior source ownership checks bind five owning hub scenes and reference return paths; no independent whole-site uniqueness audit in this review.",
+    "desktop_phone": "All five story scenes and four contextual Christ pictures personally examined at both 1280 and 390; they load and fit their reading context. This is hosted Chromium, not a physical device.",
+    "hub_ownership": "Raw report has five current owner images, matching source pins, in the chronological hub; duplicate/reference integrity relies on unchanged prior source review plus reported journeys.",
+    "reference_navigation": "Reported desktop and phone lanes pass their reference-to-hub return and image detail flows; I reviewed reported outcomes, not a separate manual click replay.",
+    "story_integration": "The five inline scenes appear in their contextual sequence, and captions/panels are reported through the unchanged tested interaction path.",
+    "christ_fit": "Four displayed Christ reflection contexts correspond to prayer, shared hymn, gathering remaining bread, and withdrawal after John\u2019s death; no unrelated well-food caption is visible."
+  },
+  "evidence": [
+    {
+      "path": "docs/emma-hub-artwork-import/current-rendered-context.json",
+      "bytes": 2446,
+      "sha256": "b445828db4c01b62b0b14d7a365161c16caa3129622f417899c8cd522f059d52"
+    },
+    {
+      "path": "docs/emma-hub-artwork-import/current-raw-report.json",
+      "bytes": 481925,
+      "sha256": "b73e052b4121c52ea9d68557af48b28ecda4ee64e11846973d6c46deaf122d8f"
+    },
+    {
+      "path": "docs/emma-hub-artwork-import/current-qa-contract.json",
+      "bytes": 22584,
+      "sha256": "dfd79763625196b8851b52e8c99e1cb1a65258a77a7f926d38790af38bed6ed1"
+    },
+    {
+      "path": "docs/emma-hub-artwork-import/current-artifact-binding.json",
+      "bytes": 518,
+      "sha256": "bb6352203e37bdb8235d0dabe229d0c0b9b04686c23f41e473205dcccbb7de57"
+    },
+    {
+      "path": "docs/emma-hub-artwork-import/current-capture-membership.json",
+      "bytes": 1946,
+      "sha256": "0f1dd9be91661828dd7d87e0a6265d697dcc104d44ada1f39990f4cdc679179f"
+    }
+  ],
+  "limits": [
+    "This is own direct inspection of finite screenshot set and raw report, not interactive hands-on browser or physical-device testing.",
+    "Prior identity, age, artwork source/acceptance, exclusivity and story-copy research is reused only where exact bytes match; no new approval, generation or historical certainty claimed.",
+    "Adams separate 101-state viewer gate, final index generation/reconciliation, broad CI, independent Fermi and Albert reviews and owner acceptance remain separate."
+  ]
+}

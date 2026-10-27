@@ -1,0 +1,722 @@
+{
+  "schema": 1,
+  "status": "REVIEWED_EXACT_CURRENT_EQUIVALENCE",
+  "normalized_at": "2026-10-27T12:38:27.210020+00:00",
+  "spec": {
+    "registration_class": "EXACT_FIVE_EMMA_CURRENT_EQUIVALENCE",
+    "historical_canonical_preflight_claim": false,
+    "private_reference_bytes_published": false,
+    "rejection_history_preserved": true,
+    "ride_limit": "Far hind hoof naturally occluded; full four-hoof visibility not established",
+    "scenes": [
+      {
+        "id": "ride",
+        "route": "history/emma-elect-lady.html",
+        "original": {
+          "path": "assets/page-art/emma-life/originals/emma-ride-selected.png",
+          "bytes": 2955092,
+          "sha256": "947d1f4be80ec82e193d8ad38164d3bbc0c1ad82e2aa31fc59a9a454936c545c",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "pixel_sha256": "7c435df016fd0b53682cf1f6bffd0a6841bdf0b838f5f7bd1b9f9b8ff3d63daa"
+        },
+        "derivatives": [
+          {
+            "path": "assets/page-art/emma-life/emma-story1-ride-review-1536.webp",
+            "bytes": 297964,
+            "sha256": "ff56c2247487ddd707d937b565a223c9b3a7220b190d84a3e845bd9a76441292",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "pixel_sha256": "58715a28a2475cf47a8b6c8d65a0d601b5e1f392a26f850ac28e1185f848e358"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-story1-ride-review-640.webp",
+            "bytes": 93744,
+            "sha256": "13c36921b70dabe2d195a6a49a1bc297b2c7d50aad3bdc8890ed8c323aa0d06b",
+            "dimensions": [
+              640,
+              427
+            ],
+            "pixel_sha256": "395469f3f5768f94f0b888924e2b5da19802e63efcb66331c2aaa30535223f77"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-story1-ride-review-960.webp",
+            "bytes": 164146,
+            "sha256": "8ac37bf27712554952c7648aed25f49d15651effdb55e0342554154ccf02bc93",
+            "dimensions": [
+              960,
+              640
+            ],
+            "pixel_sha256": "e5fd8dfa311b7bc8a89211fbf949db14f728944505dad70aee688f2cebb0807f"
+          }
+        ],
+        "historical_source_review_scope": "SOURCE_ART_ONLY_NOT_ASSEMBLED",
+        "derivative_relation": "PROPORTIONAL_REENCODING_NOT_PIXEL_IDENTICAL_LANCZOS",
+        "source_provenance": {
+          "historical_canonical_preflight": "NOT_CLAIMED",
+          "actual_receipt_pins": [
+            {
+              "path": "docs/emma-story-artwork-import/ride-provenance.json",
+              "bytes": 4042,
+              "sha256": "43528059e8184f318844562d67b1183e303ec01322135f8a895507c88580c26e"
+            }
+          ],
+          "summary_scope": "Public-safe historical receipt summary and exact hashes; independent verification is recorded separately. No private bodies copied and no retrospective canonical preflight claimed."
+        },
+        "context": [
+          {
+            "path": "history/emma-elect-lady.html",
+            "bytes": 15029,
+            "sha256": "e5b234afe494b825f90a94b58ff8b6363e349aa94a4d51562c9d037c58906820"
+          },
+          {
+            "path": "site-header.css",
+            "bytes": 14894,
+            "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+          },
+          {
+            "path": "site-system.css",
+            "bytes": 88817,
+            "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+          },
+          {
+            "path": "artwork-details.css",
+            "bytes": 3925,
+            "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+          },
+          {
+            "path": "full-image-viewer.css",
+            "bytes": 4959,
+            "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+          },
+          {
+            "path": "artwork-actions.css",
+            "bytes": 2273,
+            "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+          },
+          {
+            "path": "connected-study.css",
+            "bytes": 2190,
+            "sha256": "6b61c50c1d8e005074beb2db8fa800377377e6a3c9b955678dd836538fcb48cd"
+          },
+          {
+            "path": "hero-details.css",
+            "bytes": 2916,
+            "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+          },
+          {
+            "path": "resource-cards.css",
+            "bytes": 6287,
+            "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+          },
+          {
+            "path": "topic-art.css",
+            "bytes": 2716,
+            "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"
+          },
+          {
+            "path": "topic-artwork-details.css",
+            "bytes": 869,
+            "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+          },
+          {
+            "path": "priesthood-scenes.css",
+            "bytes": 1062,
+            "sha256": "5583b0f2d023bccbf2a318dc8c063331c4e96c9ffc7b5d754badc2c01d18ffd4"
+          },
+          {
+            "path": "site-search.css",
+            "bytes": 5516,
+            "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+          },
+          {
+            "path": "history-stories.css",
+            "bytes": 5808,
+            "sha256": "46915bd0e27fc394b68aad848cdfad37ac05959d2b7cdbac0e476a262ce1c802"
+          }
+        ],
+        "context_status": "TOKEN_ONLY_SUCCESSOR_TO_0e13daad_PENDING_ACTUAL_CURRENT_REVIEW",
+        "generation_time": {
+          "status": "UNKNOWN_NOT_INFERRED",
+          "timestamp": null,
+          "file_mtime_used": false,
+          "basis": "Exact generation timestamp not independently established by this bounded registration. Actual prompt/precreation/finished receipt chronology retained separately, not substituted with file modification time."
+        }
+      },
+      {
+        "id": "hymnal",
+        "route": "history/emma-hymns.html",
+        "original": {
+          "path": "assets/page-art/emma-life/originals/emma-hymnal-selected.png",
+          "bytes": 1957176,
+          "sha256": "b20a78f3af80f987df0220e157c32244f463cb37e25e0128aff8f5e42987e42b",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "pixel_sha256": "4c54803611deab5a839180b4c7d83e371654687aa1bbcaaf9670ed1a4960776b"
+        },
+        "derivatives": [
+          {
+            "path": "assets/page-art/emma-life/emma-story2-hymnal-review-1536.webp",
+            "bytes": 92598,
+            "sha256": "69865b606ac1c0d55f6fe1f462520159e53fafa0edd7b661ad2fc5afe272bec3",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "pixel_sha256": "0d0098c8e8300b4656bf27942436a698488711237676ca8f7e44ffc246efceb7"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-story2-hymnal-review-640.webp",
+            "bytes": 23014,
+            "sha256": "46641bb4044a58473778629a03ab8927bed90a4c72acf48f1c7656014a255316",
+            "dimensions": [
+              640,
+              427
+            ],
+            "pixel_sha256": "eb28d01dcfceb3ba36cd77535730bc2ef29bb16df05ab6a4e148189d34977eb4"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-story2-hymnal-review-960.webp",
+            "bytes": 44864,
+            "sha256": "16ed55c58fcf2c598c5f34e91a6884a33e8d7934d0f87d8982a9b59a5e6919ba",
+            "dimensions": [
+              960,
+              640
+            ],
+            "pixel_sha256": "af9d1dc7ee66cb8f344f4ac26f08a58f57b760affbd7c8f7a11989a926a59683"
+          }
+        ],
+        "historical_source_review_scope": "SOURCE_ART_ONLY_NOT_ASSEMBLED",
+        "derivative_relation": "PROPORTIONAL_REENCODING_NOT_PIXEL_IDENTICAL_LANCZOS",
+        "source_provenance": {
+          "historical_canonical_preflight": "NOT_CLAIMED",
+          "actual_receipt_pins": [
+            {
+              "path": "docs/emma-story-artwork-import/hymnal-provenance.json",
+              "bytes": 4851,
+              "sha256": "3dc451a9717cd2f9761b49f9464faf1e3748be15b4804982ba1b4a529add23b2"
+            }
+          ],
+          "summary_scope": "Public-safe historical receipt summary and exact hashes; independent verification is recorded separately. No private bodies copied and no retrospective canonical preflight claimed."
+        },
+        "context": [
+          {
+            "path": "history/emma-hymns.html",
+            "bytes": 15145,
+            "sha256": "ab1373de9ed550b1a7192f30f67f0222538d50c9422c4fca7168d8efe9fc754c"
+          },
+          {
+            "path": "site-header.css",
+            "bytes": 14894,
+            "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+          },
+          {
+            "path": "site-system.css",
+            "bytes": 88817,
+            "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+          },
+          {
+            "path": "artwork-details.css",
+            "bytes": 3925,
+            "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+          },
+          {
+            "path": "full-image-viewer.css",
+            "bytes": 4959,
+            "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+          },
+          {
+            "path": "artwork-actions.css",
+            "bytes": 2273,
+            "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+          },
+          {
+            "path": "connected-study.css",
+            "bytes": 2190,
+            "sha256": "6b61c50c1d8e005074beb2db8fa800377377e6a3c9b955678dd836538fcb48cd"
+          },
+          {
+            "path": "hero-details.css",
+            "bytes": 2916,
+            "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+          },
+          {
+            "path": "resource-cards.css",
+            "bytes": 6287,
+            "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+          },
+          {
+            "path": "topic-art.css",
+            "bytes": 2716,
+            "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"
+          },
+          {
+            "path": "topic-artwork-details.css",
+            "bytes": 869,
+            "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+          },
+          {
+            "path": "priesthood-scenes.css",
+            "bytes": 1062,
+            "sha256": "5583b0f2d023bccbf2a318dc8c063331c4e96c9ffc7b5d754badc2c01d18ffd4"
+          },
+          {
+            "path": "site-search.css",
+            "bytes": 5516,
+            "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+          },
+          {
+            "path": "history-stories.css",
+            "bytes": 5808,
+            "sha256": "46915bd0e27fc394b68aad848cdfad37ac05959d2b7cdbac0e476a262ce1c802"
+          }
+        ],
+        "context_status": "CANONICAL_SCRIPTURE_ANCHOR_SUCCESSOR_TO_2321500_PENDING_ACTUAL_CURRENT_REVIEW",
+        "generation_time": {
+          "status": "UNKNOWN_NOT_INFERRED",
+          "timestamp": null,
+          "file_mtime_used": false,
+          "basis": "Exact generation timestamp not independently established by this bounded registration. Actual prompt/precreation/finished receipt chronology retained separately, not substituted with file modification time."
+        }
+      },
+      {
+        "id": "quincy",
+        "route": "history/emma-winter-crossing.html",
+        "original": {
+          "path": "assets/page-art/emma-life/originals/emma-quincy-selected.png",
+          "bytes": 2037420,
+          "sha256": "9dd0cbe00e0e54a5b2d584a2ecdce3e7d6d83ae31117a32ed9c4e5c67545307e",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "pixel_sha256": "7de18f58581f7c4388c231e5b39bfe6a20a5778deeeb0585c5793cc394dd4437"
+        },
+        "derivatives": [
+          {
+            "path": "assets/page-art/emma-life/emma-story3-quincy-review-1536.webp",
+            "bytes": 99060,
+            "sha256": "a6b973db6d7003c4adff508aada11dff7f6523b11e2edc61570574a40bee771d",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "pixel_sha256": "9c7c932a62ad9ec1d89b0ea527daa0a9c89781e57a1cabf20390fb1696d2701c"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-story3-quincy-review-640.webp",
+            "bytes": 26554,
+            "sha256": "eed22c0e427678a354181db1f567ab5eea87b7c1489e10b8d9e3725e2fd20579",
+            "dimensions": [
+              640,
+              427
+            ],
+            "pixel_sha256": "8f0b3d8d9553e000facbb0ea93422d941a5dcac3d1ffb84ee416ed22341cb4c2"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-story3-quincy-review-960.webp",
+            "bytes": 49898,
+            "sha256": "f7ca4b56d8e924d05bf15f7e9fb651d20d3d13cbdfd23577ebb2d90b580ff558",
+            "dimensions": [
+              960,
+              640
+            ],
+            "pixel_sha256": "7681a148b95d61a796d8235afe9ba144810cc3f8b2794d172ad45daa80129145"
+          }
+        ],
+        "historical_source_review_scope": "SOURCE_ART_ONLY_NOT_ASSEMBLED",
+        "derivative_relation": "PROPORTIONAL_REENCODING_NOT_PIXEL_IDENTICAL_LANCZOS",
+        "source_provenance": {
+          "historical_canonical_preflight": "NOT_CLAIMED",
+          "actual_receipt_pins": [
+            {
+              "path": "docs/emma-story-artwork-import/quincy-provenance.json",
+              "bytes": 4851,
+              "sha256": "894c473ec6e55e3995c96647771776b143345ba346c219b1f1bd72803db817ad"
+            }
+          ],
+          "summary_scope": "Public-safe historical receipt summary and exact hashes; independent verification is recorded separately. No private bodies copied and no retrospective canonical preflight claimed."
+        },
+        "context": [
+          {
+            "path": "history/emma-winter-crossing.html",
+            "bytes": 14604,
+            "sha256": "4245bdf43ad6dd24dfa47b31c6f3ff411c407d0e9a6d7ef352cec0f815008186"
+          },
+          {
+            "path": "site-header.css",
+            "bytes": 14894,
+            "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+          },
+          {
+            "path": "site-system.css",
+            "bytes": 88817,
+            "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+          },
+          {
+            "path": "artwork-details.css",
+            "bytes": 3925,
+            "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+          },
+          {
+            "path": "full-image-viewer.css",
+            "bytes": 4959,
+            "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+          },
+          {
+            "path": "artwork-actions.css",
+            "bytes": 2273,
+            "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+          },
+          {
+            "path": "connected-study.css",
+            "bytes": 2190,
+            "sha256": "6b61c50c1d8e005074beb2db8fa800377377e6a3c9b955678dd836538fcb48cd"
+          },
+          {
+            "path": "hero-details.css",
+            "bytes": 2916,
+            "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+          },
+          {
+            "path": "resource-cards.css",
+            "bytes": 6287,
+            "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+          },
+          {
+            "path": "topic-art.css",
+            "bytes": 2716,
+            "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"
+          },
+          {
+            "path": "topic-artwork-details.css",
+            "bytes": 869,
+            "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+          },
+          {
+            "path": "priesthood-scenes.css",
+            "bytes": 1062,
+            "sha256": "5583b0f2d023bccbf2a318dc8c063331c4e96c9ffc7b5d754badc2c01d18ffd4"
+          },
+          {
+            "path": "site-search.css",
+            "bytes": 5516,
+            "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+          },
+          {
+            "path": "history-stories.css",
+            "bytes": 5808,
+            "sha256": "46915bd0e27fc394b68aad848cdfad37ac05959d2b7cdbac0e476a262ce1c802"
+          }
+        ],
+        "context_status": "TOKEN_ONLY_SUCCESSOR_TO_0e13daad_PENDING_ACTUAL_CURRENT_REVIEW",
+        "generation_time": {
+          "status": "UNKNOWN_NOT_INFERRED",
+          "timestamp": null,
+          "file_mtime_used": false,
+          "basis": "Exact generation timestamp not independently established by this bounded registration. Actual prompt/precreation/finished receipt chronology retained separately, not substituted with file modification time."
+        }
+      },
+      {
+        "id": "hospitality",
+        "route": "history/emma-relief-society.html",
+        "original": {
+          "path": "assets/page-art/emma-life/originals/emma-hospitality-selected.png",
+          "bytes": 2200837,
+          "sha256": "7429139f23722f6e6f86785fe6090b45a20c172405cd9c56207a8816f4617d3c",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "pixel_sha256": "0fe09dd31dc7321e41cad6376e8583a7768191fbe5071b18c4b64344c35e4642"
+        },
+        "derivatives": [
+          {
+            "path": "assets/page-art/emma-life/emma-story4-hospitality-review-1536.webp",
+            "bytes": 123764,
+            "sha256": "e6d21c89cd491fbe8e1c3276eab7e4cdad35d4859b626773cd80c255ffb23b48",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "pixel_sha256": "6b85cc709c556053b675aa3df49a4ed648ef2680ff176ad5d8e3d723c74d7fb6"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-story4-hospitality-review-640.webp",
+            "bytes": 29838,
+            "sha256": "b1a9dc3d1915de0426a08c62a4a8dcd83a562fe1aa340aba203d88d83d0b561e",
+            "dimensions": [
+              640,
+              427
+            ],
+            "pixel_sha256": "8a942384dc40dcb2309657d9a3ea97c4874ec5653534507b7ef46f7fae276f11"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-story4-hospitality-review-960.webp",
+            "bytes": 59416,
+            "sha256": "48a74b1e7021f2f0d53bb81e456583549ca5815103e757a895cf518acfc4029c",
+            "dimensions": [
+              960,
+              640
+            ],
+            "pixel_sha256": "6aa2ddb31c50ba553c04ac905649d8ba9b09f22485d41999c89fd1036c617bf9"
+          }
+        ],
+        "historical_source_review_scope": "SOURCE_ART_ONLY_NOT_ASSEMBLED",
+        "derivative_relation": "PROPORTIONAL_REENCODING_NOT_PIXEL_IDENTICAL_LANCZOS",
+        "source_provenance": {
+          "historical_canonical_preflight": "NOT_CLAIMED",
+          "actual_receipt_pins": [
+            {
+              "path": "docs/emma-story-artwork-import/hospitality-provenance.json",
+              "bytes": 4856,
+              "sha256": "35db92331f6a8b731fef52d059ebf58ca8135b9371aec3a5ff598327453cc0e7"
+            }
+          ],
+          "summary_scope": "Public-safe historical receipt summary and exact hashes; independent verification is recorded separately. No private bodies copied and no retrospective canonical preflight claimed."
+        },
+        "context": [
+          {
+            "path": "history/emma-relief-society.html",
+            "bytes": 15195,
+            "sha256": "f13772d3e7aa457aef1cb02804e3c2ab86adcab870b64e2f7aa25a8cc3a70310"
+          },
+          {
+            "path": "site-header.css",
+            "bytes": 14894,
+            "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+          },
+          {
+            "path": "site-system.css",
+            "bytes": 88817,
+            "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+          },
+          {
+            "path": "artwork-details.css",
+            "bytes": 3925,
+            "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+          },
+          {
+            "path": "full-image-viewer.css",
+            "bytes": 4959,
+            "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+          },
+          {
+            "path": "artwork-actions.css",
+            "bytes": 2273,
+            "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+          },
+          {
+            "path": "connected-study.css",
+            "bytes": 2190,
+            "sha256": "6b61c50c1d8e005074beb2db8fa800377377e6a3c9b955678dd836538fcb48cd"
+          },
+          {
+            "path": "hero-details.css",
+            "bytes": 2916,
+            "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+          },
+          {
+            "path": "resource-cards.css",
+            "bytes": 6287,
+            "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+          },
+          {
+            "path": "topic-art.css",
+            "bytes": 2716,
+            "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"
+          },
+          {
+            "path": "topic-artwork-details.css",
+            "bytes": 869,
+            "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+          },
+          {
+            "path": "priesthood-scenes.css",
+            "bytes": 1062,
+            "sha256": "5583b0f2d023bccbf2a318dc8c063331c4e96c9ffc7b5d754badc2c01d18ffd4"
+          },
+          {
+            "path": "site-search.css",
+            "bytes": 5516,
+            "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+          },
+          {
+            "path": "history-stories.css",
+            "bytes": 5808,
+            "sha256": "46915bd0e27fc394b68aad848cdfad37ac05959d2b7cdbac0e476a262ce1c802"
+          }
+        ],
+        "context_status": "TOKEN_ONLY_SUCCESSOR_TO_0e13daad_PENDING_ACTUAL_CURRENT_REVIEW",
+        "generation_time": {
+          "status": "UNKNOWN_NOT_INFERRED",
+          "timestamp": null,
+          "file_mtime_used": false,
+          "basis": "Exact generation timestamp not independently established by this bounded registration. Actual prompt/precreation/finished receipt chronology retained separately, not substituted with file modification time."
+        }
+      },
+      {
+        "id": "testimony",
+        "route": "history/emma-last-testimony.html",
+        "original": {
+          "path": "assets/page-art/emma-life/originals/emma-testimony-selected.png",
+          "bytes": 1965382,
+          "sha256": "c236d424cb558fff657048e286410bf1f6cb5cb841513a4568a8d0449fa34af1",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "pixel_sha256": "d3cfcf63eef1b4352d809dae7b8d4195cc5008213e42cabcb5bc9644e6424853"
+        },
+        "derivatives": [
+          {
+            "path": "assets/page-art/emma-life/emma-story5-testimony-review-1536.webp",
+            "bytes": 80384,
+            "sha256": "01454124312c44309aa3ea2c49e27fea5e13d88c1aba10b1b2b073f82574d0d3",
+            "dimensions": [
+              1536,
+              1024
+            ],
+            "pixel_sha256": "a1fbd14fb7fe0cac86ef8bbb6ad3272c0ed40c0e4c6f97e058041df2995edc40"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-story5-testimony-review-640.webp",
+            "bytes": 19246,
+            "sha256": "d2ef1a76aba46d2838fc6f8a3e9fc9f03749a7ad7221212130a793beeaebfc07",
+            "dimensions": [
+              640,
+              427
+            ],
+            "pixel_sha256": "54954e3f7704438b44879303420c74258fb7b3e120b29bbe94e128fa14a03712"
+          },
+          {
+            "path": "assets/page-art/emma-life/emma-story5-testimony-review-960.webp",
+            "bytes": 38846,
+            "sha256": "9470c0b41ca23374408e0a3cfc77061c76de1e20d02072537889c77aebabd988",
+            "dimensions": [
+              960,
+              640
+            ],
+            "pixel_sha256": "7f06c0dcd9c63977ab7c23d37934b2645c0bd0bc86f13dff80e2d99b521ffa8b"
+          }
+        ],
+        "historical_source_review_scope": "SOURCE_ART_ONLY_NOT_ASSEMBLED",
+        "derivative_relation": "PROPORTIONAL_REENCODING_NOT_PIXEL_IDENTICAL_LANCZOS",
+        "source_provenance": {
+          "historical_canonical_preflight": "NOT_CLAIMED",
+          "actual_receipt_pins": [
+            {
+              "path": "docs/emma-story-artwork-import/testimony-provenance.json",
+              "bytes": 4854,
+              "sha256": "a2f0e0918016d28c7ecca9e77926195b7fdbd8959632c325a08348a7eb60a18d"
+            }
+          ],
+          "summary_scope": "Public-safe historical receipt summary and exact hashes; independent verification is recorded separately. No private bodies copied and no retrospective canonical preflight claimed."
+        },
+        "context": [
+          {
+            "path": "history/emma-last-testimony.html",
+            "bytes": 15744,
+            "sha256": "983a41ea229c286018be4c355f28a39b4c9f6294221b001d2985356f0fafb559"
+          },
+          {
+            "path": "site-header.css",
+            "bytes": 14894,
+            "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+          },
+          {
+            "path": "site-system.css",
+            "bytes": 88817,
+            "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+          },
+          {
+            "path": "artwork-details.css",
+            "bytes": 3925,
+            "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+          },
+          {
+            "path": "full-image-viewer.css",
+            "bytes": 4959,
+            "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+          },
+          {
+            "path": "artwork-actions.css",
+            "bytes": 2273,
+            "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+          },
+          {
+            "path": "connected-study.css",
+            "bytes": 2190,
+            "sha256": "6b61c50c1d8e005074beb2db8fa800377377e6a3c9b955678dd836538fcb48cd"
+          },
+          {
+            "path": "hero-details.css",
+            "bytes": 2916,
+            "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+          },
+          {
+            "path": "resource-cards.css",
+            "bytes": 6287,
+            "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+          },
+          {
+            "path": "topic-art.css",
+            "bytes": 2716,
+            "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"
+          },
+          {
+            "path": "topic-artwork-details.css",
+            "bytes": 869,
+            "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+          },
+          {
+            "path": "priesthood-scenes.css",
+            "bytes": 1062,
+            "sha256": "5583b0f2d023bccbf2a318dc8c063331c4e96c9ffc7b5d754badc2c01d18ffd4"
+          },
+          {
+            "path": "site-search.css",
+            "bytes": 5516,
+            "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+          },
+          {
+            "path": "history-stories.css",
+            "bytes": 5808,
+            "sha256": "46915bd0e27fc394b68aad848cdfad37ac05959d2b7cdbac0e476a262ce1c802"
+          }
+        ],
+        "context_status": "TOKEN_ONLY_SUCCESSOR_TO_0e13daad_PENDING_ACTUAL_CURRENT_REVIEW",
+        "generation_time": {
+          "status": "UNKNOWN_NOT_INFERRED",
+          "timestamp": null,
+          "file_mtime_used": false,
+          "basis": "Exact generation timestamp not independently established by this bounded registration. Actual prompt/precreation/finished receipt chronology retained separately, not substituted with file modification time."
+        }
+      }
+    ]
+  },
+  "reviews": [
+    {
+      "path": "docs/emma-story-artwork-import/fermi-review.json",
+      "bytes": 10263,
+      "sha256": "609689a0a5c902c2657211a802a92d0edd41df4e16e464a53c7716780e843ea3"
+    },
+    {
+      "path": "docs/emma-story-artwork-import/newton-review.json",
+      "bytes": 8048,
+      "sha256": "1575e888a752d037eb2cf3222be037885d7140ae90431d0dcc94b54c3bfcf765"
+    },
+    {
+      "path": "docs/emma-story-artwork-import/albert-review.json",
+      "bytes": 5041,
+      "sha256": "50aed4cc7c3ff06ffd5b5831471482f39da9c8ff26ce6a066c71831ab62117d9"
+    }
+  ],
+  "pending": []
+}
