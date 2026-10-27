@@ -4,18 +4,21 @@ const root=path.resolve(__dirname,'..');
 module.exports=async function historyBodySpacing(page,origin){
   const routes=[...fs.readFileSync(path.join(root,'sitemap.xml'),'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].map(m=>new URL(m[1]).pathname.slice(1)||'index.html');
   const adjacency=[],histories=[],consumers=[];
+  const readingFirst=require('./emma_history_reading_contract'),validatedReadingFirst=[];
   const historyVersions={'history/eleazer-miller.html':'20261009-directory-alignment-1','history/john-rowe-moyle.html':'20261009-directory-alignment-1','history/john-tanner.html':'20261009-directory-alignment-1','history/emma-hale-smith.html':'20261008-standard-body-1'};
   for(const route of routes){
-    const parsed=await page.evaluate(html=>{const doc=new DOMParser().parseFromString(html,'text/html');return{matches:doc.querySelectorAll('.fc-study-promotion + .fc-study-grid').length,history:!!doc.querySelector('.fc-life-reading'),links:[...doc.querySelectorAll('link[rel="stylesheet"]')].map(n=>n.getAttribute('href'))}},fs.readFileSync(path.join(root,route),'utf8'));
+    const parsed=await page.evaluate(html=>{const doc=new DOMParser().parseFromString(html,'text/html');return{matches:doc.querySelectorAll('.fc-study-promotion + .fc-study-grid').length,history:!!doc.querySelector('.fc-life-reading'),links:[...doc.querySelectorAll('link[rel="stylesheet"]')].map(n=>n.getAttribute('href')),readingFirst:doc.body.classList.contains('fc-emma-study'),heroes:doc.querySelectorAll('.fc-life-hero').length,openings:doc.querySelectorAll('.fc-life-reading.fc-life-opening').length,bodies:doc.querySelectorAll('.fc-life-reading:not(.fc-life-opening)').length,directories:doc.querySelectorAll('.fc-life-directory').length,summaries:doc.querySelectorAll('.fc-life-directory > summary').length}},fs.readFileSync(path.join(root,route),'utf8'));
     const matches=parsed.matches;
     if(matches)adjacency.push({route,matches});
     if(parsed.history)histories.push(route);
-    for(const [file,version] of [['connected-study.css','20261008-promotion-spacing-1'],['history-stories.css',historyVersions[route]]]){
+    if(readingFirst.owners.includes(route)){readingFirst.validate(route,parsed);validatedReadingFirst.push(route);}
+    for(const [file,version] of [['connected-study.css','20261008-promotion-spacing-1'],['history-stories.css',readingFirst.owners.includes(route)?readingFirst.historyVersion:historyVersions[route]]]){
       const links=parsed.links.filter(n=>new URL(n,'https://focuschrist.com/'+route).pathname.endsWith('/'+file));
       if(links.length){assert(version,route+' unknown '+file+' consumer');assert.equal(links.length,1,route+' duplicate '+file);assert.equal(new URL(links[0],'https://focuschrist.com/'+route).searchParams.get('v'),version,route+' stale '+file);consumers.push({route,file});}
     }
   }
-  assert.deepEqual(histories.sort(),['history/eleazer-miller.html','history/emma-hale-smith.html','history/john-rowe-moyle.html','history/john-tanner.html']);
+  const historicalHistories=readingFirst.partition(histories,validatedReadingFirst);
+  assert.deepEqual(historicalHistories.sort(),['history/eleazer-miller.html','history/emma-hale-smith.html','history/john-rowe-moyle.html','history/john-tanner.html']);
   assert(adjacency.length,'Discover actual promotion/divider consumers');
   const records=[];
   const profiles=[[320,800,1],[390,844,1],[430,932,1],[1366,900,1],[1722,1000,1],[1905,1000,1],[390,844,2],[1366,900,2]];
@@ -24,7 +27,7 @@ module.exports=async function historyBodySpacing(page,origin){
     await page.setViewportSize({width,height});
     await page.goto(origin+'/index.html');await settle(scale);
     const home=await page.locator('.fc-home-purpose-paths').evaluate(n=>({x:n.getBoundingClientRect().x,width:n.getBoundingClientRect().width}));
-    for(const route of histories){
+    for(const route of historicalHistories){
       await page.goto(origin+'/'+route);await page.waitForSelector('.fc-unified-continue');await settle(scale);
       const measure=()=>{const box=n=>{const r=n.getBoundingClientRect();return{x:r.x,y:r.y+scrollY,width:r.width,height:r.height}};return{overflow:document.documentElement.scrollWidth-innerWidth,hero:box(document.querySelector('.fc-life-hero')),cue:box(document.querySelector('.fc-unified-continue')),opening:box(document.querySelector('.fc-life-opening')),bodies:[...document.querySelectorAll('.fc-life-reading:not(.fc-life-opening)')].map(n=>({box:box(n),first:box(n.firstElementChild),padding:parseFloat(getComputedStyle(n).paddingTop),lastMargin:parseFloat(getComputedStyle(n.lastElementChild).marginBottom)}))};};
       const data=await page.evaluate(measure);
@@ -34,6 +37,18 @@ module.exports=async function historyBodySpacing(page,origin){
       if(width===1722){const old=await page.addStyleTag({content:'.fc-life-story .fc-life-reading:not(.fc-life-opening){width:auto!important;max-width:860px!important;padding:30px 24px!important}'});const bad=await page.evaluate(measure);assert.notEqual(bad.bodies[0].box.width,home.width);assert.deepEqual(bad.hero,data.hero);assert.deepEqual(bad.cue,data.cue);assert.deepEqual(bad.opening,data.opening);await old.evaluate(n=>n.remove());}
       await page.locator('.fc-life-directory summary').click();assert(await page.locator('.fc-life-directory').evaluate(n=>n.open));await page.locator('.fc-life-directory summary').click();
       records.push({route,width,height,scale,home,...data});
+    }
+    // Five exact reading-first stories retain body rails, overflow and directory checks,
+    // without inventing the historical hero/Continue-cue contract on those pages.
+    for(const route of readingFirst.owners){
+      await page.goto(origin+'/'+route);await page.waitForSelector('.fc-life-reading.fc-life-opening');await settle(scale);
+      readingFirst.validate(route,await page.evaluate(readingFirst.inspect));
+      const measure=()=>{const box=n=>{const r=n.getBoundingClientRect();return{x:r.x,y:r.y+scrollY,width:r.width,height:r.height}};return{overflow:document.documentElement.scrollWidth-innerWidth,opening:box(document.querySelector('.fc-life-opening')),bodies:[...document.querySelectorAll('.fc-life-reading:not(.fc-life-opening)')].map(n=>({box:box(n),first:box(n.firstElementChild),padding:parseFloat(getComputedStyle(n).paddingTop),lastMargin:parseFloat(getComputedStyle(n.lastElementChild).marginBottom)}))};};
+      const data=await page.evaluate(measure);assert(data.bodies.length>0,route+' actual reading bodies');assert(data.overflow<=1,route+' overflow');
+      for(const b of data.bodies){assert(Math.abs(b.box.x-home.x)<1&&Math.abs(b.box.width-home.width)<1,route+' body must match Home');assert.equal(b.first.x,b.box.x,route+' no doubled gutter');assert.equal(b.lastMargin,0,route+' trailing margin stacks section gap');}
+      if(width===1722){const old=await page.addStyleTag({content:'.fc-life-story .fc-life-reading:not(.fc-life-opening){width:auto!important;max-width:860px!important;padding:30px 24px!important}'});const bad=await page.evaluate(measure);assert.notEqual(bad.bodies[0].box.width,home.width);assert.deepEqual(bad.opening,data.opening);await old.evaluate(n=>n.remove());}
+      await page.locator('.fc-life-directory summary').click();assert(await page.locator('.fc-life-directory').evaluate(n=>n.open));await page.locator('.fc-life-directory summary').click();assert(!(await page.locator('.fc-life-directory').evaluate(n=>n.open)));
+      records.push({route,kind:'reading-first-story',width,height,scale,home,...data});
     }
     for(const {route,matches}of adjacency){
       await page.goto(origin+'/'+route);await settle(scale);
