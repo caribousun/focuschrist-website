@@ -1,0 +1,9 @@
+scope=diagnostic rendering only; artwork-creation and all release gates remain required
+github_sha=30d9bbc7b89d469f1f349dedc57cc10f2a43065b
+ref=refs/pull/529/merge
+event=pull_request
+30d9bbc7b89d469f1f349dedc57cc10f2a43065b
+parents b4e023cfbe5e98b1191571f8ed3ca97c5a9f0c8b 8b4dde8ea504355fc6576872018c3f83486c0cad
+27aa881e61b0ca3b02963bd60e65918c6161244ced4d35d9f018e16306c18311  .github/workflows/site-qa.yml
+8f408a99f3b23bb7fc6863deaae17e13b24098cacdbed2794814d74fe8a21cdd  tools/emma_story_browser_qa.js
+render_outcome=success

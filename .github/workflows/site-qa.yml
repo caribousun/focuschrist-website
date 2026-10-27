@@ -638,7 +638,7 @@ jobs:
 
       - name: Bind the diagnostic to the reviewed renderer and checkout
         run: |
-          printf '%s  %s\n' '8f408a99f3b23bb7fc6863deaae17e13b24098cacdbed2794814d74fe8a21cdd' 'tools/emma_story_browser_qa.js' | sha256sum --check
+          printf '%s  %s\n' '28586765b6948e5de97c1e7cffaa67289f6d3af02c9b34951ce5f0081e8ac929' 'tools/emma_story_browser_qa.js' | sha256sum --check
           mkdir -p .qa-artifacts/emma-story
           {
             echo "scope=diagnostic rendering only; artwork-creation and all release gates remain required"

@@ -337,7 +337,7 @@ const TYPES={'.html':'text/html','.css':'text/css','.js':'text/javascript','.web
    const controls=detail.locator('.fc-artwork-detail-actions a,button[data-artwork-detail-close]');
    for(const control of await controls.all()){
     await control.scrollIntoViewIfNeeded();const m=await control.evaluate(n=>{const r=n.getBoundingClientRect(),c=getComputedStyle(n),hit=document.elementFromPoint(r.x+r.width/2,r.y+r.height/2);return {x:r.x,right:r.right,y:r.y,bottom:r.bottom,width:r.width,height:r.height,visible:c.display!=='none'&&c.visibility!=='hidden',hit:hit===n||n.contains(hit)};});
-    scriptureControlEvidence.push({width,label:await control.textContent(),...m});
+    scriptureControlEvidence.push({viewportWidth:width,label:await control.textContent(),...m});
     assert(m.visible&&m.width>0&&m.height>0&&m.x>=-1&&m.right<=width+1&&m.y>=-1&&m.bottom<=901&&m.hit,'Hymns dialog action must be reachable');
    }
    await jsp.scrollIntoViewIfNeeded();await capture(`emma-hymns-artwork-actions-${width}.jpg`);

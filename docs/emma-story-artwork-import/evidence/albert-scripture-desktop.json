@@ -1,0 +1,36 @@
+{
+  "reviewer": "Albert",
+  "reviewed_at": "2026-10-27T12:50:34.756459+00:00",
+  "spec_sha256": "ecfb210ffbb151a881baa74ac15a1398627ca628f7b089108a5b4bf394465960",
+  "run_id": 40505834080,
+  "job_id": 122194787911,
+  "artifact_id": 12734338932,
+  "archive_sha256": "95c2213844496e68545902c91c2f77c1f353664b51c462eb150c0b94061ac08b",
+  "head": "8b4dde8ea504355fc6576872018c3f83486c0cad",
+  "producer_merge": "30d9bbc7b89d469f1f349dedc57cc10f2a43065b",
+  "results": 64,
+  "captures": 75,
+  "prior_capture_comparison": {
+    "identical": 49,
+    "changed": 11,
+    "new": 15
+  },
+  "directly_viewed": [
+    {
+      "name": "emma-hymns-artwork-actions-1280.jpg",
+      "bytes": 97027,
+      "sha256": "7f49870a49a89e9b6c59c9dfec4e09fd8d21b432f742d551d615fb7ba34db77c"
+    },
+    {
+      "name": "emma-hymns-scripture-source-range-1280.jpg",
+      "bytes": 55505,
+      "sha256": "1233329025f2e69e66b2ab4ee080616b8b43be72be61f5c9bfc72806d462d397"
+    },
+    {
+      "name": "emma-story2-hymnal-review-header-1280.jpg",
+      "bytes": 125995,
+      "sha256": "5f45132f33e639023f1dd8543150ea3cf6a99c0362d05dee8f16a567820a3c84"
+    }
+  ],
+  "observations": "Exact chapter and 11\u201312 verse reader are readable with visible source and Close. New Scripture source pill and existing Joseph Smith Papers source coexist. Inline caption link is visible; artwork remains same selected bytes. Phone controls require ordinary dialog scrolling, evidenced reachable individually; no claim all controls and full artwork fit simultaneously. Desktop retains two-column artwork dialog. Raw control width is element width, not viewport; viewport groups can only be derived from fixed reviewed loop order. No physical-device or full release claim."
+}
