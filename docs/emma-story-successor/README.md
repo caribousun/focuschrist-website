@@ -38,15 +38,12 @@ figure at `#picture-emma-h4`, its artwork, caption, and id are
 byte-identical, and no existing picture, caption, or source link
 outside the registered spans changes.
 
-This layer adds no image files. The five story pages are
-scaffolding without their scene pictures: creation of the five
-distinct Emma-centered scenes is reserved to Albert's cloud image
-tool under the character-image gates (Fermi and Newton
-pre-creation concurrence on the actual approved reference and
-prompt, and their inspection of the finished pixels before use),
-with the first preview scene being Emma's autumn 1827 horseback
-warning journey. The pages gain their pictures only through a
-later registered change once those gates pass.
+This historical registration layer adds no image files; it pins only
+the hub doorway and reading-flow spans. The current assembled candidate
+separately includes the five reviewed Emma scene pictures and their WebP
+derivatives. Their image, identity, source and finished-layout review
+gates remain separate from this exact-span registration. Image creation
+and review are not authorized or proven by this module.
 
 `manifest.json` pins the exact spans;
 `tools/emma_story_successor.py` verifies bytes, spans, and the

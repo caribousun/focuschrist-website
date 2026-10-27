@@ -41,11 +41,11 @@ first and reproduces the mapped AFTER bytes, and the map spans
 then apply as before. The figure at #picture-emma-h4, its artwork,
 caption, and id are byte-identical before and after; every existing
 hub picture, caption, and source link outside the spans above is
-unchanged. This layer adds no image files: the five new story
-pages' scene pictures are held under the character-image gates
-(Fermi and Newton pre-creation concurrence and finished-pixel
-inspection, with creation reserved to Albert's cloud image tool),
-so the pages are registered as scaffolding without images.
+unchanged. This historical registration layer adds no image files:
+it pins only the hub spans. The current assembled candidate separately
+includes the five reviewed Emma scene pictures and WebP derivatives.
+Their image, identity, source and finished-layout gates remain separate;
+this exact-span module does not authorize or prove those reviews.
 
 The five story texts themselves are the concurred stage-1 drafts
 (Jeff J-2026-10-25-119 on the exact draft bytes); the new furniture

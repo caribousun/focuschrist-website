@@ -41,7 +41,12 @@
     "/come-follow-me.html",
     "/general-conference.html",
     "/history/eleazer-miller.html",
+    "/history/emma-elect-lady.html",
     "/history/emma-hale-smith.html",
+    "/history/emma-hymns.html",
+    "/history/emma-last-testimony.html",
+    "/history/emma-relief-society.html",
+    "/history/emma-winter-crossing.html",
     "/history/john-rowe-moyle.html",
     "/history/john-tanner.html",
     "/index.html",
@@ -2271,6 +2276,28 @@
       ]
     },
     {
+      "title": "A ride to warn Joseph",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/emma-life/emma-story1-ride-review-960.webp",
+      "fullImage": "/assets/page-art/emma-life/emma-story1-ride-review-1536.webp",
+      "alt": "Emma Smith at twenty three, wearing a long blue dress, rides sidesaddle at a gallop on a brown horse up a leaf covered slope in autumn, leaning forward with both hands on the reins and her eyes on the path ahead.",
+      "id": "art-a1a4f80569b3",
+      "occurrences": [
+        {
+          "id": "source-5d08bf624431",
+          "page": "/history/emma-elect-lady.html",
+          "pageTitle": "An Elect Lady: Emma at Harmony",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/emma-life/emma-story1-ride-review-1536.webp\"]:has(img[src=\"/assets/page-art/emma-life/emma-story1-ride-review-960.webp\"])",
+          "title": "A ride to warn Joseph"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
       "title": "A route back into participation",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/collection-mercy-02-960.webp",
@@ -3753,6 +3780,28 @@
       ],
       "categories": [
         "Gospel Studies"
+      ]
+    },
+    {
+      "title": "An open door",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/emma-life/emma-story4-hospitality-review-960.webp",
+      "fullImage": "/assets/page-art/emma-life/emma-story4-hospitality-review-1536.webp",
+      "alt": "Emma Smith at thirty eight, wearing a dark green dress, stands in the open doorway of her home with one hand resting on the door.",
+      "id": "art-1176e412c568",
+      "occurrences": [
+        {
+          "id": "source-59a806351c1d",
+          "page": "/history/emma-relief-society.html",
+          "pageTitle": "Something Extraordinary: Emma and the Relief Society of Nauvoo",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/emma-life/emma-story4-hospitality-review-1536.webp\"]:has(img[src=\"/assets/page-art/emma-life/emma-story4-hospitality-review-960.webp\"])",
+          "title": "An open door"
+        }
+      ],
+      "categories": [
+        "Church History"
       ]
     },
     {
@@ -7908,6 +7957,28 @@
       ]
     },
     {
+      "title": "Emma in Quincy",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/emma-life/emma-story3-quincy-review-960.webp",
+      "fullImage": "/assets/page-art/emma-life/emma-story3-quincy-review-1536.webp",
+      "alt": "Emma Smith at thirty four, wearing a gray dress, sits by a window with her hands folded in her lap and her gaze lowered.",
+      "id": "art-63cc118e41a8",
+      "occurrences": [
+        {
+          "id": "source-05e8f17ed2af",
+          "page": "/history/emma-winter-crossing.html",
+          "pageTitle": "The Winter Crossing: Emma Leads Her Children to Quincy",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/emma-life/emma-story3-quincy-review-1536.webp\"]:has(img[src=\"/assets/page-art/emma-life/emma-story3-quincy-review-960.webp\"])",
+          "title": "Emma in Quincy"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
       "title": "Emma’s work as a scribe",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-upper-bodice-v3-1536.webp",
@@ -10529,6 +10600,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/history-stories/tanner-temple-support-full.webp\"]:has(img[src=\"../assets/page-art/history-stories/tanner-temple-support-960.webp\"])",
           "title": "Helping others build a house of worship"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
+      "title": "Her testimony",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/emma-life/emma-story5-testimony-review-960.webp",
+      "fullImage": "/assets/page-art/emma-life/emma-story5-testimony-review-1536.webp",
+      "alt": "Emma Smith at seventy four, wearing a dark gray dress, sits speaking, one hand raised in conversation, her gaze toward the one she is speaking with.",
+      "id": "art-74c2c18c300c",
+      "occurrences": [
+        {
+          "id": "source-5526e80b7f54",
+          "page": "/history/emma-last-testimony.html",
+          "pageTitle": "Her Own Witness: Emma's Later Years in Nauvoo",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/emma-life/emma-story5-testimony-review-1536.webp\"]:has(img[src=\"/assets/page-art/emma-life/emma-story5-testimony-review-960.webp\"])",
+          "title": "Her testimony"
         }
       ],
       "categories": [
@@ -19631,6 +19724,28 @@
       ]
     },
     {
+      "title": "The finished hymnbook",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/emma-life/emma-story2-hymnal-review-960.webp",
+      "fullImage": "/assets/page-art/emma-life/emma-story2-hymnal-review-1536.webp",
+      "alt": "Emma Smith at thirty one, wearing a brown dress, stands by a window holding a small bound book in both hands and looking down at it.",
+      "id": "art-1a552d9bd3f4",
+      "occurrences": [
+        {
+          "id": "source-8f874f03b61a",
+          "page": "/history/emma-hymns.html",
+          "pageTitle": "The Song of the Heart: Emma and the First Hymnbook",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/emma-life/emma-story2-hymnal-review-1536.webp\"]:has(img[src=\"/assets/page-art/emma-life/emma-story2-hymnal-review-960.webp\"])",
+          "title": "The finished hymnbook"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
       "title": "The first agreement",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/laborers-vineyard-01-960.webp",
@@ -23524,14 +23639,14 @@
     }
   ],
   "stats": {
-    "artworks": 1059,
-    "occurrences": 1066,
+    "artworks": 1064,
+    "occurrences": 1071,
     "byKind": {
       "artwork": 69,
       "hero": 45,
       "legacy": 39,
       "missionary": 13,
-      "topic": 953
+      "topic": 958
     }
   }
 }

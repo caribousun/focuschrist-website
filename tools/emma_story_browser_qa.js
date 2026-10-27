@@ -37,13 +37,14 @@ const TYPES={'.html':'text/html','.css':'text/css','.js':'text/javascript','.web
   for(const width of [1280,390,320]){
    await page.setViewportSize({width,height:900});
    await page.goto(origin+'/'+HUB);await noOverflow();
+   await page.screenshot({path:path.join(out,`emma-hub-${width}.png`),fullPage:false});
    for(const s of STORIES){
     await page.goto(origin+'/'+s.page);await noOverflow();
     const img=page.locator(`img[src*="${s.base}-960.webp"]`);
     assert.equal(await img.count(),1,`${s.page}: story artwork image missing`);
     assert.equal(await img.getAttribute('alt'),s.alt,`${s.page}: alt text changed`);
     assert(await img.evaluate(n=>n.complete&&n.naturalWidth>0),`${s.page}: artwork image did not load`);
-    if(width===390)await page.locator(`#${s.section}`).screenshot({path:path.join(out,`${s.base}-390.png`)});
+    await page.locator(`#${s.section}`).screenshot({path:path.join(out,`${s.base}-${width}.png`)});
    }
   }
   // Composed journeys at phone width: artwork dialog, full-size viewer,
