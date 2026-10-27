@@ -108,6 +108,16 @@ def category(page):
             '/general-conference.html': 'General Conference'}.get(page, 'Gospel Studies')
 
 
+def gallery_source(name, raw, root=ROOT):
+    """Index actual reviewed Emma owners; historical projections stay historical."""
+    from owner_integration_contract import HUB, STORIES, CHART, INTRO, LANDING, validate_file
+    if name in {HUB, CHART, INTRO, LANDING, *STORIES}:
+        validate_file(name, raw, root)
+        return raw
+    from artwork_display_delivery import inverse
+    return inverse(name, raw)
+
+
 def build():
     pages = sorted({('/index.html' if urlsplit(x.text).path in {'', '/'} else urlsplit(x.text).path)
                     for x in ET.parse(ROOT / 'sitemap.xml').getroot().findall('{*}url/{*}loc')})
@@ -130,7 +140,7 @@ def build():
             # renditions the page actually serves, so parse it as served.
             doc.feed((ROOT / name).read_bytes().decode('utf-8'))
         else:
-            doc.feed(inverse(name, (ROOT / name).read_bytes()).decode('utf-8'))
+            doc.feed(gallery_source(name, (ROOT / name).read_bytes()).decode('utf-8'))
         nodes = list(doc.root.walk())
         page_title = text(first(doc.root, lambda n: n.tag == 'h1')) or text(first(doc.root, lambda n: n.tag == 'title')).split('|')[0].strip()
         records = {(key, n.attrs[key]): n for n in nodes for key in

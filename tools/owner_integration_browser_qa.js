@@ -42,9 +42,17 @@ async function noOverflow(page,label){
  const r=await page.evaluate(()=>({width:innerWidth,documentWidth:document.documentElement.scrollWidth,bodyWidth:document.body.scrollWidth}));
  assert(r.documentWidth<=r.width+1&&r.bodyWidth<=r.width+1,label+' horizontal overflow '+JSON.stringify(r));return r;
 }
-async function decoded(locator){
- await locator.scrollIntoViewIfNeeded();await locator.evaluate(n=>n.decode());
- assert(await locator.evaluate(n=>n.complete&&n.naturalWidth>0&&n.naturalHeight>0),'Decoded visible image required');
+async function decoded(page,locator,record){
+ const observation={pass:false,states:[]};record.imageLoads.push(observation);
+ const observe=async phase=>{const state=await locator.evaluate(n=>{const r=n.getBoundingClientRect();return {src:n.getAttribute('src'),srcset:n.getAttribute('srcset'),currentSrc:n.currentSrc?new URL(n.currentSrc).pathname:'',complete:n.complete,naturalWidth:n.naturalWidth,naturalHeight:n.naturalHeight,loading:n.loading,figure:n.closest('figure')?.id||'',rect:{x:r.x,y:r.y,width:r.width,height:r.height},scrollY};});observation.states.push({phase,...state});return state;};
+ try{
+  await observe('before-scroll');await locator.scrollIntoViewIfNeeded();await observe('after-scroll');
+  // Lazy srcset selection can change the current request after scrolling. Wait
+  // for an actually loaded, stable source; decode once, never suppress rejection.
+  await page.waitForFunction(n=>new Promise(resolve=>{const deadline=performance.now()+7500;let last='',same=0;function frame(){const ready=n.isConnected&&n.complete&&n.naturalWidth>0&&n.naturalHeight>0&&n.currentSrc;const key=ready?JSON.stringify([n.currentSrc,n.naturalWidth,n.naturalHeight]):'';same=key&&key===last?same+1:0;last=key;if(same>=3){resolve(true);return;}if(performance.now()>=deadline){resolve(false);return;}requestAnimationFrame(frame);}requestAnimationFrame(frame);}),await locator.elementHandle(),{timeout:8000});
+  const loaded=await observe('loaded-stable');await locator.evaluate(n=>n.decode());const decoded=await observe('decoded');
+  assert(decoded.complete&&decoded.naturalWidth>0&&decoded.naturalHeight>0,'Decoded visible image required');assert.equal(decoded.currentSrc,loaded.currentSrc,'Image source must remain stable through decode');observation.pass=true;
+ }catch(e){observation.error=String(e.stack||e).slice(0,1500);await observe('failure').catch(error=>observation.observationError=String(error).slice(0,300));throw e;}
 }
 async function imageFlow(img){
  return img.evaluate(n=>{const r=n.getBoundingClientRect();let a=n,hidden=[];
@@ -118,7 +126,7 @@ async function emmaJourney(page,origin,c,record,profile,capture){
  for(const s of c.emma.stories){
   const figure=page.locator(s.figure);assert.equal(await figure.count(),1,'One actual hub owner '+s.base);
   assert.equal(await figure.getAttribute('data-topic-art'),s.key);const img=figure.locator('img');assert.equal(await img.count(),1);assert.equal(await img.getAttribute('alt'),s.alt);
-  await decoded(img);await stable(page,s.figure);const m=await imageFlow(img);checkFlow(m,s.base);assert(m.documentTop>previous,'Five artworks occur in chronological scroll flow');previous=m.documentTop;
+  await decoded(page,img,record);await stable(page,s.figure);const m=await imageFlow(img);checkFlow(m,s.base);assert(m.documentTop>previous,'Five artworks occur in chronological scroll flow');previous=m.documentTop;
   assert([640,960,1536].some(w=>m.src===`/assets/page-art/emma-life/${s.base}-${w}.webp`),'Approved source derivative '+m.src);
   const section=page.locator(s.section);assert.equal(await section.count(),1);assert((await section.innerText()).replace(/\s+/g,' ').includes(s.requiredText),'Substantive integrated story text '+s.base);
   await noOverflow(page,s.base);record.images.push({base:s.base,...m});await capture('emma-hub-'+s.base);
@@ -135,7 +143,7 @@ async function emmaJourney(page,origin,c,record,profile,capture){
   for(const r of c.emma.reflections){
    const aside=page.locator(r.selector),figure=aside.locator(r.image.figure),img=figure.locator('img');assert.equal(await figure.count(),1);assert.equal(await img.count(),1);
    assert.equal(await figure.getAttribute('data-topic-art'),r.image.key);assert.equal(await img.getAttribute('src'),r.image.src);assert.equal(await img.getAttribute('srcset'),r.image.srcset);assert.equal(await img.getAttribute('alt'),r.image.alt);
-   await decoded(img);await aside.scrollIntoViewIfNeeded();await stable(page,r.selector);const image=await imageFlow(img);checkFlow(image,r.image.key);
+   await decoded(page,img,record);await aside.scrollIntoViewIfNeeded();await stable(page,r.selector);const image=await imageFlow(img);checkFlow(image,r.image.key);
    assert([640,960,1536].some(w=>image.src===`/assets/page-art/emma-life/${r.image.key}-review-${w}.webp`),'Retained approved Christ derivative');
    const context=await aside.evaluate(n=>{const box=e=>{const r=e.getBoundingClientRect();return {x:r.x,y:r.y,right:r.right,bottom:r.bottom,width:r.width,height:r.height};},previous=n.previousElementSibling;return {heading:n.querySelector(':scope > h3')?.textContent.replace(/\s+/g,' ').trim(),sectionId:n.closest('section')?.id||'',previousSibling:previous?{tag:previous.tagName,id:previous.id,text:previous.textContent.replace(/\s+/g,' ').trim().slice(0,1500)}:null,asideRect:box(n),headingRect:box(n.querySelector(':scope > h3')),textRects:[...n.querySelectorAll(':scope > p')].map(box),scrollY,viewport:{width:innerWidth,height:innerHeight}};});
    assert.equal(context.heading,r.image.heading);assert.equal(context.sectionId,r.image.sectionId);assert.deepEqual(context.previousSibling,r.image.previousSibling);await noOverflow(page,r.image.key);
@@ -144,10 +152,10 @@ async function emmaJourney(page,origin,c,record,profile,capture){
   for(const s of c.emma.stories){
    const trigger=page.locator(s.figure+' > a');await trigger.scrollIntoViewIfNeeded();await trigger.click();const detail=page.locator('dialog.fc-artwork-detail-dialog[open]');await detail.waitFor({state:'visible',timeout:8000});
    assert((await detail.innerText()).includes(s.title));assert.equal(await detail.locator('a[href="'+s.sourceHref+'"]').count(),1,'Owning dialog source preserved');
-   const img=detail.locator('img').first();await decoded(img);assert(new URL(await img.getAttribute('src'),origin).pathname.endsWith(s.base+'-1536.webp'));
+   const img=detail.locator('img').first();await decoded(page,img,record);assert(new URL(await img.getAttribute('src'),origin).pathname.endsWith(s.base+'-1536.webp'));
    await capture('emma-hub-'+s.base+'-dialog');
    if(s.reader){await scriptureJourney(page,detail.locator(s.reader.selector),s.reader,record,capture,'emma-hub-'+s.base+'-reader',true);}
-   const fullTrigger=detail.locator('a[data-full-image-viewer]');await fullTrigger.click();const full=page.locator('dialog.fc-full-image-viewer[open]');await full.waitFor({state:'visible',timeout:8000});const fullImg=full.locator('img').first();await decoded(fullImg);assert(new URL(await fullImg.getAttribute('src'),origin).pathname.endsWith(s.base+'-1536.webp'));
+   const fullTrigger=detail.locator('a[data-full-image-viewer]');await fullTrigger.click();const full=page.locator('dialog.fc-full-image-viewer[open]');await full.waitFor({state:'visible',timeout:8000});const fullImg=full.locator('img').first();await decoded(page,fullImg,record);assert(new URL(await fullImg.getAttribute('src'),origin).pathname.endsWith(s.base+'-1536.webp'));
    await full.locator('.fc-full-image-close').click();await page.waitForFunction(()=>!document.querySelector('dialog.fc-full-image-viewer[open]')&&!document.body.classList.contains('fc-full-image-open')&&document.activeElement?.matches('dialog.fc-artwork-detail-dialog[open] a[data-full-image-viewer]'),null,{timeout:5000});
    await detail.locator('button[data-artwork-detail-close]').click();await page.waitForFunction(n=>!document.querySelector('dialog.fc-artwork-detail-dialog[open]')&&!document.body.classList.contains('fc-dialog-open')&&document.activeElement===n,await trigger.elementHandle(),{timeout:5000});
    record.journeys.push({label:s.base+'-hub-details-fullsize-close',source:s.sourceHref,exactFocusReturned:true});
@@ -158,7 +166,7 @@ async function emmaJourney(page,origin,c,record,profile,capture){
  for(const s of c.emma.stories){
   await page.goto(origin+s.referenceRoute,{waitUntil:'load'});const ref=page.locator(s.referenceSelector);assert.equal(await ref.count(),1);assert.equal(await ref.getAttribute('href'),s.referenceHref);
   assert.equal(await page.locator('figure[data-topic-art="'+s.key+'"]').count(),0,'Separate page must not retain independent artwork ownership');
-  await ref.scrollIntoViewIfNeeded();await ref.click();await page.waitForURL(origin+c.emma.route+s.fragment,{timeout:12000});await decoded(page.locator(s.figure+' img'));assert.equal(await page.locator('dialog.fc-artwork-detail-dialog[open]').count(),0,'Reference navigation is not a second lightbox');await noOverflow(page,'Reference return');
+  await ref.scrollIntoViewIfNeeded();await ref.click();await page.waitForURL(origin+c.emma.route+s.fragment,{timeout:12000});await decoded(page,page.locator(s.figure+' img'),record);assert.equal(await page.locator('dialog.fc-artwork-detail-dialog[open]').count(),0,'Reference navigation is not a second lightbox');await noOverflow(page,'Reference return');
   record.journeys.push({label:s.base+'-reference-to-hub',from:s.referenceRoute,to:c.emma.route+s.fragment});
  }
 }
@@ -203,7 +211,7 @@ async function adamsJourney(page,origin,c,record,profile,capture){
  await page.goto(origin+c.adams.reference,{waitUntil:'load'});await page.locator('.timeline-life-hero img').evaluate(n=>n.decode());await stable(page,'.timeline-life-hero');await page.mouse.move(profile.width-2,profile.height-2);const reference=await openingMetrics(page);await capture('church-reference-opening');
  await page.goto(origin+c.adams.timeline,{waitUntil:'load'});await noOverflow(page,'Timeline');await headerJourney(page,record,profile,capture,'timeline',false);
  try{await timelineChoices(page,c,record,profile,capture);}catch(e){record.acceptanceErrors.push('Timeline choice geometry/focus: '+String(e));}
- const section=page.locator('#adams-1881');assert.equal(await section.count(),1);const overview=section.locator('img');assert.equal(await overview.count(),1);await decoded(overview);
+ const section=page.locator('#adams-1881');assert.equal(await section.count(),1);const overview=section.locator('img');assert.equal(await overview.count(),1);await decoded(page,overview,record);
  const pill=page.locator('#choose-timeline .fc-timeline-choices a[href="timelines/adams-1881-introduction.html"]');assert.equal(await pill.count(),1,'Existing choice enters introduction');
  assert.equal(await overview.locator('..').getAttribute('href'),'timelines/adams-1881-introduction.html','Overview image also enters introduction');
  const entry=section.locator('.fc-button--primary[href="timelines/adams-1881-introduction.html"]');assert.equal(await entry.count(),1);await entry.click();await page.waitForURL(origin+c.adams.intro,{timeout:12000});await headerJourney(page,record,profile,capture,'adams-intro',false);await page.mouse.move(profile.width-2,profile.height-2);await stable(page,'.timeline-life-hero');
@@ -226,7 +234,7 @@ async function adamsJourney(page,origin,c,record,profile,capture){
 async function main(){
  assert.equal(process.env.CI,'true','Hosted CI only; no local browser launch');assert.equal(process.argv.length,2,'No custom server/origin or options');
  const {c,checked,contractSHA256}=readContract();fs.mkdirSync(path.dirname(OUT),{recursive:true});fs.mkdirSync(OUT,{recursive:false});
- const report={scope:'Focused actual owner-integration journeys; broad CI remains required',producer:{sha:process.env.GITHUB_SHA||null,run:process.env.GITHUB_RUN_ID||null,event:process.env.GITHUB_EVENT_NAME||null},contractSHA256,checked,profiles:[],screenshots:[],network:[],blocked:[],errors:[],timedOut:false,pass:false};
+ const report={scope:'Focused actual owner-integration journeys; broad CI remains required',producer:{sha:process.env.GITHUB_SHA||null,run:process.env.GITHUB_RUN_ID||null,event:process.env.GITHUB_EVENT_NAME||null},contractSHA256,checked,profiles:[],screenshots:[],network:[],networkRequests:[],networkFailures:[],blocked:[],errors:[],timedOut:false,pass:false};
  let server,browser,timer,requests=0,servedBytes=0,shotBytes=0;const pending=[];
  try{
   server=http.createServer((req,res)=>{
@@ -240,14 +248,25 @@ async function main(){
   browser=await chromium.launch({headless:true});timer=setTimeout(()=>{report.timedOut=true;browser.close().catch(()=>{});server.closeAllConnections?.();},LIMIT.milliseconds);
   const assets=new Map(c.assets.map(r=>['/'+r.path,r]));
   for(const profile of PROFILES){
-   if(report.timedOut)break;const record={profile,pass:false,images:[],reflectionImages:[],headers:[],searchStates:[],journeys:[],acceptanceErrors:[]};report.profiles.push(record);let context,page;
+   if(report.timedOut)break;const record={profile,pass:false,images:[],imageLoads:[],reflectionImages:[],lanes:{},headers:[],searchStates:[],journeys:[],acceptanceErrors:[]};report.profiles.push(record);let context,page;
    try{
     context=await browser.newContext({viewport:{width:profile.width,height:profile.height},isMobile:profile.touch,hasTouch:profile.touch,deviceScaleFactor:1,reducedMotion:'reduce',serviceWorkers:'block'});
     await context.route('**/*',route=>{const u=new URL(route.request().url());if(u.origin!==origin){if(report.blocked.length<100)report.blocked.push({profile:profile.name,url:u.origin+u.pathname});return route.abort();}if(++requests>LIMIT.requests){report.errors.push('Request bound exceeded');return route.abort();}return route.continue();});
     page=await context.newPage();page.setDefaultTimeout(8000);page.setDefaultNavigationTimeout(12000);page.on('pageerror',e=>report.errors.push(String(e).slice(0,1000)));
+    page.on('request',request=>{const u=new URL(request.url());if(u.origin===origin&&assets.has(u.pathname)){if(report.networkRequests.length>=LIMIT.requests){report.errors.push('Asset request ledger bound exceeded');return;}report.networkRequests.push({profile:profile.name,path:u.pathname,resourceType:request.resourceType()});}});
+    page.on('requestfailed',request=>{const u=new URL(request.url());if(u.origin===origin&&assets.has(u.pathname)){const failure={profile:profile.name,path:u.pathname,error:request.failure()?.errorText||'unknown'};report.networkFailures.push({...failure,classification:'request-event-only; required source acceptance remains loaded/stable/decode and response verification'});}});
     page.on('response',response=>{const u=new URL(response.url());if(u.origin!==origin)return;if(response.status()>=400)report.errors.push('HTTP '+response.status()+' '+u.pathname);const a=assets.get(u.pathname);if(!a)return;pending.push((async()=>{const b=await response.body();assert.equal(response.status(),200);assert.equal(b.length,a.bytes);assert.equal(sha(b),a.sha256);report.network.push({profile:profile.name,path:u.pathname,status:response.status(),bytes:b.length,sha256:a.sha256});})().catch(e=>report.errors.push(String(e).slice(0,1000))));});
     const capture=async label=>{assert(report.screenshots.length<LIMIT.shots,'Capture count');const b=await page.screenshot({type:'jpeg',quality:80,fullPage:false,animations:'disabled',timeout:8000});assert(b.length<=LIMIT.shotBytes&&shotBytes+b.length<=LIMIT.allShots,'Capture byte bound');const name=profile.name+'-'+label+'.jpg';fs.writeFileSync(path.join(OUT,name),b,{flag:'wx'});shotBytes+=b.length;report.screenshots.push({file:name,bytes:b.length,sha256:sha(b),viewport:{width:profile.width,height:profile.height}});};
-    await emmaJourney(page,origin,c,record,profile,capture);await adamsJourney(page,origin,c,record,profile,capture);await Promise.all(pending);assert.deepEqual(report.errors,[],'Runtime/network errors');assert.deepEqual(record.acceptanceErrors,[],'Exact owner geometry comparisons');record.pass=true;
+    let laneFailed=false;
+    for(const [name,journey] of [['emma',emmaJourney],['adams',adamsJourney]]){
+     const lane={pass:false};record.lanes[name]=lane;const priorGeometryErrors=record.acceptanceErrors.length;
+     try{await journey(page,origin,c,record,profile,capture);assert.equal(record.acceptanceErrors.length,priorGeometryErrors,name+' exact geometry requirements');lane.pass=true;}
+     catch(e){laneFailed=true;lane.error=String(e.stack||e).slice(0,5000);lane.failureState=await page.evaluate(()=>({url:location.pathname+location.hash,dialogOpen:!!document.getElementById('fc-search-dialog')?.open,inputValue:document.getElementById('fc-header-search')?.value??null,activeId:document.activeElement?.id||'',activeTag:document.activeElement?.tagName||'',focusOnTrigger:document.activeElement===document.querySelector('[data-site-search-trigger]')})).catch(error=>({unavailable:String(error).slice(0,300)}));
+      // Failure evidence uses remaining existing capacity, never a larger cap.
+      try{await capture(name+'-failure');lane.failureCapture=profile.name+'-'+name+'-failure.jpg';}catch(error){lane.failureCaptureError=String(error).slice(0,500);}
+     }
+    }
+    await Promise.all(pending);assert.deepEqual(report.errors,[],'Runtime/network errors');assert.deepEqual(record.acceptanceErrors,[],'Exact owner geometry comparisons');assert(!laneFailed,'One or more independent owner lanes failed');record.pass=true;
    }catch(e){record.error=String(e.stack||e).slice(0,5000);if(page&&!page.isClosed())record.failureState=await page.evaluate(()=>({url:location.pathname+location.hash,dialogOpen:!!document.getElementById('fc-search-dialog')?.open,inputValue:document.getElementById('fc-header-search')?.value??null,activeId:document.activeElement?.id||'',activeTag:document.activeElement?.tagName||'',focusOnTrigger:document.activeElement===document.querySelector('[data-site-search-trigger]')})).catch(error=>({unavailable:String(error).slice(0,300)}));}finally{if(context)await context.close();}
   }
   await Promise.all(pending);report.pass=!report.timedOut&&report.profiles.length===4&&report.profiles.every(r=>r.pass)&&report.errors.length===0;

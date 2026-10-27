@@ -136,6 +136,7 @@ jobs:
 
       - name: Run site-wide artwork detail QA
         run: |
+          timeout --signal=TERM --kill-after=5s 60s python -m unittest discover -s tools -p test_gallery_current_integration.py -v
           python tools/build_art_gallery.py --check
           node --check art-gallery.js
           node --check art-gallery-bridge.js
@@ -726,8 +727,8 @@ jobs:
           /tmp/focus-row-qa/node_modules/.bin/playwright install --with-deps chromium
       - name: Verify exact owner integration helper and contract
         run: |
-          printf '%s  %s\n' '74a84f0b128c1649e38390b14af357cf1531a96e376ecd5d9b51b238a74759da' 'tools/owner_integration_browser_qa.js' | sha256sum --check
-          printf '%s  %s\n' 'da0759fb71e34f13cc7509bc368d75faae171db11938e1b4d7813ec6f2ef23a1' 'tools/owner_integration_qa_contract.json' | sha256sum --check
+          printf '%s  %s\n' '1fb392cbc9dad0c472d0ccdf615d28782a3cd8f825e0d4a80fde3c78ed98c75b' 'tools/owner_integration_browser_qa.js' | sha256sum --check
+          printf '%s  %s\n' '36d9b79b0fbf20dfb7c1a5d1e7d12b3100034f6ffd8263efd7498f03c59dbbef' 'tools/owner_integration_qa_contract.json' | sha256sum --check
       - name: Observe current hub artwork flow and Timeline introduction journeys
         run: timeout --signal=TERM --kill-after=15s 8m env NODE_PATH=/tmp/focus-row-qa/node_modules node tools/owner_integration_browser_qa.js
       - name: Preserve bounded actual owner integration evidence

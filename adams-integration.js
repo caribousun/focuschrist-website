@@ -5,6 +5,22 @@
   if (!document.body.classList.contains('fc-adams-chart-page')) return;
   const header=document.querySelector('nav[data-focuschrist-header="standard"]');
   if (!header) return;
+  // Reuse the engine's existing status node; the toolbar observer measures its row.
+  const progress=document.getElementById('progress');
+  const toolbar=document.getElementById('toolbar');
+  const originalParent=progress&&progress.parentNode;
+  const originalNext=progress&&progress.nextSibling;
+  const compact=window.matchMedia('(max-width:899px) and (max-height:700px)');
+  function placeProgress() {
+   if(!progress||!toolbar||!originalParent)return;
+   const target=compact.matches?toolbar:originalParent;
+   if(progress.parentNode===target)return;
+   if(compact.matches)toolbar.appendChild(progress);
+   else originalParent.insertBefore(progress,originalNext&&originalNext.parentNode===originalParent?originalNext:null);
+   window.dispatchEvent(new Event('resize'));
+  }
+  compact.addEventListener('change',placeProgress);
+  placeProgress();
   let last=0,frame=0;
   function sync() {
    cancelAnimationFrame(frame);

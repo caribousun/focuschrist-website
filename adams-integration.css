@@ -33,3 +33,10 @@ body.fc-timeline-page .fc-timeline-choices > a.fc-button:focus-visible { backgro
  body.fc-timeline-page .fc-timeline-choices > a.fc-button,
  body.fc-timeline-page .fc-timeline-choices > a.fc-button:last-child:nth-child(odd) { grid-column:1; }
 }
+
+/* Original chart tiles retain engine-assigned pixel sizes, not shared content-image clamping. */
+body.fc-adams-chart-page #tiles > img.tile { max-width:none; }
+/* Compact status is a real toolbar row, never an overlay on chart or controls. */
+@media(max-width:899px) and (max-height:700px) {
+ body.fc-adams-chart-page #toolbar > #progress { position:static; bottom:auto !important; align-self:flex-end; max-width:100%; margin:0; }
+}
