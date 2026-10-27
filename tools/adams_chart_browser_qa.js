@@ -2,7 +2,7 @@
 'use strict';
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 const W=50195,H=5347,TILE=1024;
-const EXPECTED_CHART_SHA256='2e3d4a2ab1f1eef1e90235c4af0629037c3372d4ea05b69d10642120a5c008ae';
+const EXPECTED_CHART_SHA256='051fecab5376895220a808a722e940b800cb37d145e9098507004cf4ba6011ca';
 const EXPECTED_LANDING_SHA256='fa3b12da544899f8935874508b9abe64b84b6fd2af1e5bfec8a368ce6a638578';
 const ASSET_SET_SHA256='6092f3c930ebb6cae7c25b3f881fc93ef590642500e419b539124cacd89bca0f';
 const CREDIT='Sebastian C. Adams, Synchronological Chart (1881). Chart image from Wikimedia Commons, courtesy of the David Rumsey Map Collection. The image is in the public domain.';
@@ -43,8 +43,19 @@ function readView(){
  return {z,x:parseFloat(first.style.left)-col*1024*level*z,y:parseFloat(first.style.top)-row*1024*level*z,level,layout:{width:vp.clientWidth,height:vp.clientHeight},viewport:rect(vp),toolbar:rect(document.getElementById('toolbar')),fit:document.getElementById('fit').getAttribute('aria-pressed'),fill:document.getElementById('fillScreen').getAttribute('aria-pressed'),tiles:tiles.map(n=>({url:new URL(n.src).pathname,complete:n.complete,width:n.naturalWidth,height:n.naturalHeight})),documentWidth:document.documentElement.scrollWidth,innerWidth,innerHeight};
 }
 async function settle(page){
- await page.waitForFunction(()=>{const a=[...document.querySelectorAll('#tiles img.tile')],o=document.getElementById('overview');return a.length&&a.every(n=>n.complete&&n.naturalWidth>0)&&o&&o.complete&&o.naturalWidth>0;},{},{timeout:8000});
- await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+ // Input handlers queue draw(); it may replace an already-loaded old tile set.
+ // Observe the current complete set and geometry across three stable frames,
+ // after queued draw/layout work. Never mark a new zero-width tile as ready.
+ await page.waitForFunction(()=>new Promise(resolve=>{
+  const deadline=performance.now()+7500;let previous='',stable=0;
+  const sample=()=>{
+   const a=[...document.querySelectorAll('#tiles img.tile')],o=document.getElementById('overview'),v=document.getElementById('viewport'),bar=document.getElementById('toolbar');
+   const ready=a.length&&a.every(n=>n.complete&&n.naturalWidth>0&&n.naturalHeight>0)&&o&&o.complete&&o.naturalWidth>0;
+   const key=ready?JSON.stringify([v.clientWidth,v.clientHeight,v.style.top,bar.getBoundingClientRect().height,...a.map(n=>[n.src,n.style.left,n.style.top,n.style.width,n.style.height,n.naturalWidth,n.naturalHeight])]):'';
+   stable=key&&key===previous?stable+1:0;previous=key;
+   if(stable>=3){resolve(true);return;}if(performance.now()>=deadline){resolve(false);return;}requestAnimationFrame(sample);
+  };requestAnimationFrame(()=>requestAnimationFrame(sample));
+ }),null,{timeout:8000});
  return page.evaluate(readView);
 }
 // Viewer fitCoords/clamp use integer client dimensions; keep the fractional
@@ -88,7 +99,7 @@ module.exports=async function adamsChartQA(existingPage,origin,parentOut){
      })().catch(e=>issues.push(String(e).slice(0,1500))));
     });
     const act=async id=>{const n=page.locator(id);if(profile.touch)await n.tap();else await n.click();};
-    const state=async label=>{const s=await settle(page);assert(s,label+' rendered tiles');for(const tile of s.tiles){const e=fixture.assets.get(tile.url);assert(e,'Known tile URL');assert.equal(tile.width,e.width);assert.equal(tile.height,e.height);}await Promise.all(pending);assert.deepEqual(issues,[],label+' errors');record.states.push({label,...s});return s;};
+    const state=async label=>{const s=await settle(page);assert(s,label+' rendered tiles');near(s.viewport.y,s.toolbar.bottom,label+' viewport below toolbar',1);for(const tile of s.tiles){assert(tile.complete,label+' current tile complete');const e=fixture.assets.get(tile.url);assert(e,'Known tile URL');assert.equal(tile.width,e.width);assert.equal(tile.height,e.height);}await Promise.all(pending);assert.deepEqual(issues,[],label+' errors');record.states.push({label,...s});return s;};
     const capture=async label=>record.screenshots.push(await save(page,profile.name+'-'+label));
     const response=await page.goto(origin+'/timeline.html',{waitUntil:'load'});assert.equal(response.status(),200);
     const choices=page.locator('#choose-timeline .fc-timeline-choices a');assert.equal(await choices.count(),5);
@@ -106,6 +117,15 @@ module.exports=async function adamsChartQA(existingPage,origin,parentOut){
     // Check actual control boxes, not only hidden document overflow.
     const geometry=await page.evaluate(()=>{const ids=['fit','fillScreen','full','toggleMini','out','slider','in','hideNav','fastLeft','sectionLeft','left','up','down','right','sectionRight','fastRight','homeBtn','zoom100'];return ids.map(id=>{const n=document.getElementById(id),r=n.getBoundingClientRect(),hit=document.elementFromPoint(r.x+r.width/2,r.y+r.height/2),cs=getComputedStyle(n);return {id,x:r.x,y:r.y,right:r.right,bottom:r.bottom,width:r.width,height:r.height,visible:cs.display!=='none'&&cs.visibility!=='hidden'&&Number(cs.opacity)!==0,hit:!!hit&&(n===hit||n.contains(hit))};});});
     record.geometry=geometry;await capture('fit');
+    const integration=await page.evaluate(()=>{
+     const rect=n=>{const r=n.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height,right:r.right,bottom:r.bottom};};
+     const bar=document.getElementById('toolbar'),cs=getComputedStyle(bar);
+     return {strip:rect(bar.querySelector('.fc-adams-strip')),titleRow:rect(bar.querySelector('.toprow')),controls:rect(bar.querySelector('.controls')),innerWidth:bar.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight),overlays:['navDock','mini','progress'].map(id=>{const n=document.getElementById(id);return {id,...rect(n),display:getComputedStyle(n).display};})};
+    });record.integration=integration;
+    if(profile.width>=900){near(integration.strip.width,integration.innerWidth,'Added strip full-width row',1);assert(integration.strip.bottom<=Math.min(integration.titleRow.y,integration.controls.y)+1,'Added strip must be above original title/controls');}
+    const chart={x:s.viewport.x+s.x,y:s.viewport.y+s.y,right:s.viewport.x+s.x+W*s.z,bottom:s.viewport.y+s.y+H*s.z};
+    record.initialFitOverlayOverlap=integration.overlays.map(o=>({id:o.id,area:o.display==='none'?0:Math.max(0,Math.min(o.right,chart.right)-Math.max(o.x,chart.x))*Math.max(0,Math.min(o.bottom,chart.bottom)-Math.max(o.y,chart.y))})).filter(o=>o.area>0);
+    if(record.initialFitOverlayOverlap.length)record.limitations.push('Initial full-chart fit intersects existing dock/map/status overlays; default-view visual acceptance remains separate. Existing hide controls are tested, not redesigned.');
     assert(s.viewport.height>0&&s.viewport.width===profile.width,'Nonempty viewport at configured width');near(s.viewport.y,s.toolbar.bottom,'Viewport below toolbar',1);
     assert(s.documentWidth<=s.innerWidth+1,'No document horizontal overflow');
     for(const g of geometry)assert(g.visible&&g.width>0&&g.height>0&&g.x>=-1&&g.y>=-1&&g.right<=profile.width+1&&g.bottom<=profile.height+1&&g.hit,`Unreachable/clipped control ${JSON.stringify(g)}`);
@@ -135,6 +155,15 @@ module.exports=async function adamsChartQA(existingPage,origin,parentOut){
     await act('#showNav');assert(await page.locator('#navDock').isVisible());assert.equal(await page.locator('#showNav').isVisible(),false);
     await act('#toggleMini');assert.equal(await page.locator('#mini').isVisible(),false);await act('#toggleMini');assert(await page.locator('#mini').isVisible());
     await act('#homeBtn');s=await state('final-reset');checkFit(s);
+    if(profile.touch&&profile.width>profile.height){
+     // Inspect the unchanged owner's existing uncluttered-reading controls on a
+     // short landscape screen; do not imply the default overlaid fit is clear.
+     await act('#hideNav');await act('#toggleMini');
+     assert.equal(await page.locator('#navDock').isVisible(),false);assert.equal(await page.locator('#mini').isVisible(),false);
+     s=await state('landscape-clear-fit');checkFit(s);await capture('landscape-clear-fit');
+     await act('#toggleMini');await act('#showNav');
+     assert(await page.locator('#navDock').isVisible());assert(await page.locator('#mini').isVisible());
+    }
     if(profile.touch)await page.locator('.fc-adams-back').tap();else await page.locator('.fc-adams-back').click();
     await page.waitForURL(origin+'/timeline.html#choose-timeline');assert(await page.locator('#choose-timeline').isVisible());
     await page.goBack({waitUntil:'load'});await page.waitForURL(origin+'/timelines/adams-1881-chart.html');checkFit(await state('history-back-viewer'));
