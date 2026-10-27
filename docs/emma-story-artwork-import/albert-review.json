@@ -1,15 +1,15 @@
 {
   "reviewer": "Albert",
   "decision": "CONCUR",
-  "spec_sha256": "a314d8a5e2c29da623852a69496ca8b4f6e6071cf10426ed8b7c847d1d9d5e73",
-  "reviewed_at": "2026-10-27T10:28:11.953266+00:00",
+  "spec_sha256": "d0fa3a446fc7d9c3a0c4f8978eb73df822d5fa30a6120d307871e590304d9e78",
+  "reviewed_at": "2026-10-27T11:45:03.832835+00:00",
   "withdrawn": false,
-  "scope": "Footer-only current context equivalence after canonical notice correction. All43 unique source/asset/style/provenance pins independently rehashed. Original asset observations retained only for identical selected bytes; new actual footer pixels and changed body views inspected. Not a release decision.",
+  "scope": "Exact five cache-token-only source successor. Root independently rehashed all 43 unique source, asset, style and provenance pins. Prior original/derivative observations reused only for identical bytes; eight current captures directly inspected including all seven changed captures and the prior ride dialog comparison. No whole-QA or production approval.",
   "source_provenance_verified": true,
   "actual_derivatives_inspected": true,
   "assembled_context_inspected": true,
   "checks": {
-    "identity": "Selected v17 ride and four v2 scene designs remain recognizable and unchanged in the inspected direct960WebPs and actual rendered figures; no new crop or scene substitution observed.",
+    "identity": "Prior selected v17 ride and four approved v2 scene designs are preserved by all 20 exact asset hashes. Current five desktop rendered figures and ride dialog show unchanged recognizable selected designs. Prior direct derivative/original review is reused only for identical bytes; no biometric exactness claim.",
     "age": "Story age labels and approved younger/older styling are retained. Appearance is not independent proof of an exact numerical age.",
     "expression_gaze": "Ride looks along the route ahead; hymnal and Quincy look down; hospitality addresses the visitor; testimony has a speaking expression and gaze to the right. No new blank-stare drift observed.",
     "atmosphere": "Warm autumn motion and restrained indoor lighting support the separate story moods without new visual treatment.",
@@ -18,37 +18,38 @@
     "period_sources": "The preserved public-safe source receipt summaries, Hannah-reviewed prose and source pointers remain bound. Unknown exact generation times are not inferred from file metadata.",
     "anatomy": "The selected ride has three clearly visible hoof endpoints and a naturally occluded far hind hoof. Strict four-hoof visibility remains NOT_MET; no unconditional anatomy claim.",
     "uniqueness": "Five distinct selected originals and fifteen exact derivative assets are pinned to five separate story routes. Reuse of character identity is intentional; no substituted artwork was found.",
-    "desktop_phone": "Actual run40487588321 diagnostic has46 passing journeys/60captures including15new canonical-footer cases. Root personally viewed seven footer captures spanning allfive390-width pages plus1280/320 representatives and both changed1280body captures.43of45 priorcaptures byte-identical; two differences restricted to header/shadow strips, no artwork pixels changed. Both canonical notices and official link visible, ordered and unclipped; current sources match exact footer-only successor. No physical-phone or fullaccessibility claim."
+    "desktop_phone": "Actual run 40497562241 diagnostic has 46 passing journeys and 60 captures; 53 are byte-identical to prior footer evidence. Root inspected all seven changed captures plus one unchanged phone footer. Six changed desktop bounds are confined to header strips; changed phone dialog retains artwork, text and visible controls. Canonical notices remain unchanged and visible. New 40-state history body-spacing test is still unexecuted because the full QA correctly rejected the previously stale context; this artwork-context concurrence is not that test result."
   },
   "limits": [
     "Strict ride four-hoof visibility is NOT_MET because of natural occlusion.",
     "Browser viewport widths1280/390/320 are not physical-device testing.",
     "Some lower dialog controls require scrolling; tested close/focus journeys passed.",
     "Search modal/form behavior was tested without submitting a query.",
-    "Full normal QA and release review remain required; this record grants only exact artwork evidence coverage."
+    "Full normal QA and release review remain required; this record grants only exact artwork evidence coverage.",
+    "The eight new-profile body-spacing tests and full normal QA remain pending; diagnostic success alone does not close them."
   ],
   "evidence": [
     {
-      "path": "docs/emma-story-artwork-import/evidence/albert-footer-desktop.json",
-      "bytes": 1767,
-      "sha256": "b978b9b39213a4a67ad272742499c2d18ec7ace9768d2e08d396bf47ca384c97"
+      "path": "docs/emma-story-artwork-import/evidence/albert-spacing-desktop.json",
+      "bytes": 2548,
+      "sha256": "bf55351968edfee78bb17add9f0c8f978f532d2b05f59dbbbc87242d82d8f4f3"
     },
     {
-      "path": "docs/emma-story-artwork-import/evidence/albert-footer-phone.json",
-      "bytes": 2291,
-      "sha256": "8ec8fd158940abbc85cd6d68f5183db03690a74b80d75c8b5d5c5d110254e6db"
+      "path": "docs/emma-story-artwork-import/evidence/albert-spacing-phone.json",
+      "bytes": 1626,
+      "sha256": "cfdd3377954222964df9d954c60827e0753b4f70bccbe179c6376ae4cad0ae3d"
     }
   ],
   "rendered": {
     "desktop": {
-      "path": "docs/emma-story-artwork-import/evidence/albert-footer-desktop.json",
-      "bytes": 1767,
-      "sha256": "b978b9b39213a4a67ad272742499c2d18ec7ace9768d2e08d396bf47ca384c97"
+      "path": "docs/emma-story-artwork-import/evidence/albert-spacing-desktop.json",
+      "bytes": 2548,
+      "sha256": "bf55351968edfee78bb17add9f0c8f978f532d2b05f59dbbbc87242d82d8f4f3"
     },
     "phone": {
-      "path": "docs/emma-story-artwork-import/evidence/albert-footer-phone.json",
-      "bytes": 2291,
-      "sha256": "8ec8fd158940abbc85cd6d68f5183db03690a74b80d75c8b5d5c5d110254e6db"
+      "path": "docs/emma-story-artwork-import/evidence/albert-spacing-phone.json",
+      "bytes": 1626,
+      "sha256": "cfdd3377954222964df9d954c60827e0753b4f70bccbe179c6376ae4cad0ae3d"
     }
   }
 }

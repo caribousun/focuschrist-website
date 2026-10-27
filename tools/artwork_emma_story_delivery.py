@@ -12,7 +12,7 @@ from urllib.parse import urljoin, urlsplit, unquote
 from PIL import Image
 
 MANIFEST = 'docs/emma-story-artwork-import/delivery.json'
-APPROVED_RECORD_SHA256 = 'e32874bd480b7f23e82ed25ad39df579e6ab30cd33fa905dd0d8e0799b997eac'  # Set only after exact independent/root finished review.
+APPROVED_RECORD_SHA256 = '52d00b1b8b2177fab0ba0b75f9549b8b026ce390817cd0c300d3666421534325'  # Set only after exact independent/root finished review.
 SCENES = {
     'ride': ('history/emma-elect-lady.html', '947d1f4be80ec82e193d8ad38164d3bbc0c1ad82e2aa31fc59a9a454936c545c'),
     'hymnal': ('history/emma-hymns.html', 'b20a78f3af80f987df0220e157c32244f463cb37e25e0128aff8f5e42987e42b'),

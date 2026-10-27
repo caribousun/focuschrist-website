@@ -2,79 +2,85 @@
   "reviewer": "Newton",
   "decision": "CONCUR",
   "withdrawn": false,
-  "scope": "Exact five-scene current-equivalence source/assets and canonical-footer assembled context at655ab413; own finished review, not final release.",
+  "scope": "Own exact five-scene current-equivalence source/assets and assembled token-successor context atc8f3a0; not fullQA or release.",
+  "spec_sha256": "d0fa3a446fc7d9c3a0c4f8978eb73df822d5fa30a6120d307871e590304d9e78",
+  "normalized_at": "2026-10-27T11:22:03.419308+00:00",
+  "reviewed_at": "2026-10-27T11:48:53.734379+00:00",
   "source_provenance_verified": true,
   "actual_derivatives_inspected": true,
   "assembled_context_inspected": true,
   "checks": {
-    "identity": "I previously personally inspected all five selected PNG originals and fifteen WebP derivatives. All20 actual current bytes, dimensions and source-convention decoded-pixel hashes are freshly reverified against this specification and the connected actual merge tree. Same selected designs, not historical portrait authentication.",
-    "age": "The ride, hymnal, Quincy and hospitality designs retain their selected adult appearance; testimony retains visibly older facial lines and graying hair. No derivative introduces an age change. Exact historical age is not independently established by pixels.",
-    "expression_gaze": "Ride retains the intent forward/path gaze, hymnal and Quincy their downward gaze, hospitality its slight closed-mouth welcome and doorway pose, and testimony its rightward gaze, slightly open mouth and raised palm. No observed crop or re-encoding alters these expressions.",
-    "atmosphere": "Autumn riding, quiet book study, subdued seated reflection, warm open doorway and later-life testimony remain distinct in originals, derivatives and assembled views. The current teal page presentation does not obscure the selected artwork.",
-    "environment": "All artwork, thirteen stylesheet files and story/main/header/script bytes remain unchanged; only two canonical footer paragraphs per story changed. The full source inverse was independently reviewed. Current five page sizes/hashes and all asset/CSS Git blobs match the actual producer merge. Artwork remains proportional in previously inspected retained captures and the two current desktop captures newly viewed.",
-    "characters_realism": "Prior personally inspected faces, clothing, hands and poses retain exact same source/derivative bytes and decoded pixels; no new artwork was generated. Current retained/newly viewed assembled captures show no introduced limb duplication, face substitution, compression-driven expression or framing change. This is bounded visual evidence, not physical or historical authenticity.",
-    "period_sources": "I verified the public-safe provenance summary bindings against the retained actual historical review bytes, including the corrected four Fermi timestamps. These are source-art reviews, not retrospective canonical preflight or assembled approval. Unknown generation times remain unknown; no new period-authenticity assurance is asserted.",
-    "anatomy": "Selected hand/limb layouts are unchanged. Ride retains only three clear hoof endpoints; far hind hoof naturally occluded. Strict four-complete-hoof visibility remains NOT_MET, not promoted to PASS.",
-    "uniqueness": "Twenty distinct exact assets remain the same five originals/fifteen derivatives with unchanged provenance and unknown generation times. Fresh complete connected merge tree has7671 entries, not truncated; all40 selected asset/context/renderer/workflow size/Git pins match inspected local bytes. No generic asset exception or historical preflight is claimed.",
-    "desktop_phone": "I personally viewed all fifteen new canonical-footer screenshots at1280/390/320 by900 and the two changed desktop artwork captures. All45 original capture names remain:43 are byte-identical to previously personally inspected evidence. Hymnal desktop differences are bounded to(127,47,776,65); testimony to(0,47,1280,88). Every pixel below the respective bands is equal, including all artwork. This is not a claim of45 newly viewed or byte-identical images. Footer notices and official Church link are readable, adjacent and unclipped at all three tested widths, without visible overlap; compact layouts wrap naturally. Existing muted footer styling is retained, not a new contrast certification."
+    "identity": "I previously personally inspected all five selected PNG originals and fifteen WebP derivatives. Their twenty current byte hashes, dimensions and decoded-pixel hashes were freshly verified again against this exact specification and actual producer tree. The selected designs are unchanged; this is not historical portrait authentication.",
+    "age": "The ride, hymnal, Quincy and hospitality designs retain their selected adult appearance, while testimony retains older facial lines and graying hair. Current viewed artwork captures show no introduced age shift; exact historical ages are not established by pixels.",
+    "expression_gaze": "Current desktop captures retain the ride intent forward/path gaze, hymnal and Quincy downward gaze, hospitality closed-mouth welcome and doorway pose, and testimony rightward gaze, slightly open mouth and raised palm. The newly viewed390px ride dialog retains the same expression, framing and pose.",
+    "atmosphere": "Autumn riding, quiet book study, subdued seated reflection, warm doorway and later-life testimony remain distinct. Current teal assembled presentation and canonical footer treatment remain as previously reviewed; no new artwork atmosphere was generated.",
+    "environment": "The five pages change only one connected-study stylesheet query token, proven by exact byte inverse to the prior canonical-footer pages. All thirteen stylesheet bytes,20assets, prose, header, footer and scripts remain unchanged. Actual merge matches all forty selected asset/context/renderer/workflow byte-size/Git pins.",
+    "characters_realism": "Previously inspected faces, hands, clothing and poses retain exact current original/derivative bytes and decoded pixels. Seven newly viewed changed captures show no new limb duplication, face substitution, crop or compression-driven expression change. This remains bounded visual/design fidelity, not physical or historical authenticity.",
+    "period_sources": "Public-safe provenance summaries were freshly rehashed and remain identical to the previously independently verified actual historical review bindings, including corrected Fermi timestamps. No new period-authenticity assurance or retrospective canonical preflight is claimed; unknown generation times remain unknown.",
+    "anatomy": "Selected hand/limb layouts are unchanged. Ride still shows only three clear hoof endpoints, with the far hind hoof naturally occluded. Strict four-complete-hoof visibility remains NOT_MET, never promoted to PASS.",
+    "uniqueness": "The same five original designs and fifteen derivatives remain byte-bound, with unchanged provenance, rejection history and generation-time limits. Fresh actual merge tree has7681entries, not truncated; all40selected asset/context/renderer/workflow bindings match. No generic asset exception or global originality assurance is introduced.",
+    "desktop_phone": "I personally viewed all seven changed current captures: five1280px story/art viewports, one1280px hospitality footer and the390px ride dialog, also comparing the previous dialog. The other53captures are byte-identical to previously personally inspected evidence, retaining all320/390/1280 layouts and fifteen footer views. Six changed desktop images differ only in bounded header-adjacent bands; dialog differences are bounded to its top288px with maximum4channel-level difference. No visible framing, reading, control or footer regression was observed. This is not a claim that all60images are newly viewed or byte-identical."
   },
-  "spec_sha256": "a314d8a5e2c29da623852a69496ca8b4f6e6071cf10426ed8b7c847d1d9d5e73",
-  "reviewed_at": "2026-10-27T10:28:53.181998+00:00",
-  "normalized_at": "2026-10-27T10:13:15.760509+00:00",
   "evidence": [
     {
-      "path": "docs/emma-story-artwork-import/evidence/footer-v1-artifact-binding.json",
-      "bytes": 1475,
-      "sha256": "81765515c5bd9c1b41f6bb86f7ade6ca472ec58b046e12e918219835865bf794"
+      "path": "docs/emma-story-artwork-import/evidence/spacing-v1-artifact-binding.json",
+      "bytes": 1557,
+      "sha256": "a9f81956469597d2975698611fdbbb2d4b9e80468b52d96b47a41c8c3d399b86"
     },
     {
-      "path": "docs/emma-story-artwork-import/evidence/footer-v1-capture-manifest.json",
-      "bytes": 16763,
-      "sha256": "c678426571aed5c6ecb627e4670816e2146ec198b49f19006ddf00158e18b7ac"
+      "path": "docs/emma-story-artwork-import/evidence/spacing-v1-capture-manifest.json",
+      "bytes": 16773,
+      "sha256": "db786c7f8fadb9ba77cf42f26bb612c5265a81131db5f285d02f2461b9f86d60"
     },
     {
-      "path": "docs/emma-story-artwork-import/evidence/footer-v1-diagnostic.txt",
+      "path": "docs/emma-story-artwork-import/evidence/spacing-v1-diagnostic.txt",
       "bytes": 530,
-      "sha256": "82b4038a53ba014aba4f4cfd7e7a27bd2e4a0ed1f5cfe839d2287eddbda5bbe4"
+      "sha256": "2082f8112da1a3ef07f7ea2a01343cd304f6accdc1f82807630057af361afd2b"
     },
     {
-      "path": "docs/emma-story-artwork-import/evidence/footer-v1-results.json",
+      "path": "docs/emma-story-artwork-import/evidence/spacing-v1-results.json",
       "bytes": 5752,
       "sha256": "8018cd602503649e3da3df1ef6e9ba793cb4a22a10db9f8719df8ce7ad069bd7"
     },
     {
-      "path": "docs/emma-story-artwork-import/evidence/footer-v1-telemetry.json",
-      "bytes": 127339,
-      "sha256": "320eb46316733ac4bc52b10911552356afc1f6b01911a14c3fe3d7b8ecf0285d"
+      "path": "docs/emma-story-artwork-import/evidence/spacing-v1-telemetry.json",
+      "bytes": 127343,
+      "sha256": "ac81bf22e8613056a17ec4e5e3072869ca9a9333f4921d168b5f77ac1f9cb275"
     }
   ],
-  "producer": {
-    "head": "655ab413f14f104c8110fd1269b0e5ad7de0cc74",
-    "actual_merge_sha": "48c865a8e507a7a57df6a8275fcd638b2da02543",
-    "actual_merge_tree": "9348952b9b3b04e6812d3f140fcc42438b11984c",
+  "actual_producer": {
+    "head": "c8f3a0c617ea16c2bb7d207f3cf8d56177db1b07",
+    "merge": "78a15875be833756ed7f9debcc7155b7ca1ed507",
+    "tree": "499199fce37810a2eebe8374cc175e5f49a0d2da",
     "parents": [
       "b4e023cfbe5e98b1191571f8ed3ca97c5a9f0c8b",
-      "655ab413f14f104c8110fd1269b0e5ad7de0cc74"
+      "c8f3a0c617ea16c2bb7d207f3cf8d56177db1b07"
     ],
-    "source_binding": "Independent connected read of actual merge commit and complete recursive tree; inspected actual bytes match40 selected Git pins.",
+    "run": 40497562241,
+    "diagnostic_job": 122166759615,
+    "artifact": 12732105672,
+    "zip_bytes": 6512874,
+    "zip_sha256": "c56a14ad28bd55c66c5a58f578072302e307b8090c6aef548620aa0d05c7a7b8",
     "renderer_sha256": "82d98b6f1c0ed5c3895d83e91b4fb481bcf28148bcb58d2cf3b7b915b70cecac",
-    "workflow_sha256": "bf0e5884032b213fa37a3ff641f241479116f2226520e3d4805b464c493da141",
-    "run": 40487588321,
-    "diagnostic_job": 122133168808,
-    "artifact": 12725288744,
-    "zip_bytes": 6512614,
-    "zip_sha256": "becef8e49fc6e80d215e20b19b9631e23b45f92014faafddf4754018402e038f",
-    "screenshots_bytes": 6734718,
-    "telemetry_bytes": 127339
+    "workflow_sha256": "b789ca3d8168ca035438bb85a09fa2c80a72e574ecbfff41adf205b1ea108eb7",
+    "source_binding": "Fresh connected complete recursive merge-tree read; forty inspected local asset/context/renderer/workflow rows independently match actual provider size/Git hashes. Raw diagnostic header and job log bind the same merge/head/base, artifact and renderer.",
+    "captures_bytes": 6734868,
+    "telemetry_bytes": 127343
+  },
+  "current_observations": {
+    "archive": "Whole ZIP hash/size/CRC and all63safe regular member bytes independently verified against extracted files;60capture size/hash/dimension metadata checked.",
+    "results": "Actual46journey pass report is byte-identical to prior46journey report. This is a fresh execution of the same renderer, not40new history-spacing states.",
+    "telemetry": "All25header records and15footer observations are exactly equal to prior actual telemetry.87skip observations retained; only six transient keyboard-observation transform/y/bottom triplets differ slightly, with unchanged semantic focus/intersection states. Seven capture-size fields and total bytes also differ.",
+    "footer": "Canonical notices/official link remain adjacent, readable and unclipped in the reviewed views; outer footer bottom may reach900.46875 within the unchanged1px tolerance. No claim of strict whole-container mathematical containment or new contrast certification.",
+    "dialog": "Own previous/current390px dialog comparison shows same picture composition, text and controls; measured top-image differences are small raster differences, not assigned an unmeasured causal explanation.",
+    "preserved_failure": "Actual normal QA log still fails changed artwork evidence at history/emma-elect-lady.html. New six-positive/eighty-negative history contract and forty-state body-spacing browser coverage were not reached and are NOT claimed passed."
   },
   "limits": [
-    "This is own exact current-equivalence concurrence, not historical canonical preflight, final record pin, full-site acceptance, merge, production, release or owner aesthetic approval.",
-    "Actual retained job receipt shows diagnostic and generator success but main QA failure; timeline was still in progress in that receipt. No current whole-run success or guessed failure cause is asserted.",
-    "Fifteen new footer images and two changed desktop images newly viewed;43 remaining captures are exact bytes of previously personally inspected images. Pixel differences are bounded, not attributed to an unmeasured timing cause.",
-    "Viewport Chromium is not a physical phone,cross-browser/full accessibility/enlarged-text or contrast certification. Search was not submitted. Footer official-link attributes checked without external navigation.",
-    "Strict four-hoof visibility remains NOT_MET. Lossy proportional derivatives are not pixel-identical originals; unknown generation timestamps remain unknown; no new identity/period or legal assurance.",
-    "Public evidence is only actual report/telemetry/diagnostic/capture hashes and binding metadata; pixels remain in the actual artifact/private preservation. No private reviewer payload or credentials copied.",
-    "Previous receipts remain historical and unchanged. No test/browser/server/install/external write or publication by this reviewer."
-  ],
-  "footer_context": "Exact artifact63 members/60 captures rehashed against the preserved ZIP. Actual results contain46 entries:the original31 unchanged plus15 footer observations. The15 observations satisfy exact canonical independence/artwork text, unique attributes, adjacent paragraphs, protected official link, positive visible viewport rectangles and no overflow. No masks/restyling or external-link navigation were introduced.87 skip observations and25 header records remain. Renderer success is corroborated by purpose-built job122133168808 and exact diagnostic/source pins, not metadata alone."
+    "Own current-equivalence concurrence only, not final record pin, canonical historical preflight, complete site acceptance, merge, publication, receiver release concurrence or owner aesthetic approval.",
+    "Desktop Chromium viewports are not physical phones, cross-browser or full accessibility/enlarged-text certification. Search was not submitted; official links were attribute-checked without external navigation.",
+    "Strict four-hoof visibility remains NOT_MET. Lossy derivatives are not pixel-identical to originals; unknown generation timestamps remain unknown.",
+    "Seven current captures newly viewed and53exact prior pixels reused; do not relabel all60as newly viewed or identical. No invented causal account for minor raster/header-band differences.",
+    "Public evidence consists only of actual metadata/report/telemetry/diagnostic/capture hashes; pixels remain in original artifact/private preservation. No private reviewer payload or credentials copied.",
+    "Previous receipts and failed attempts remain unchanged historical evidence. No test/browser/server/install/external write or publication by this reviewer."
+  ]
 }
