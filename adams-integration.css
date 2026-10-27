@@ -48,3 +48,9 @@ body.fc-adams-intro-page .kicker { letter-spacing:.14em; text-transform:uppercas
  body.fc-adams-chart-page #navDock { width:min(96vw,590px,calc(100vw - 118px)) !important; max-width:min(96vw,590px,calc(100vw - 118px)) !important; }
  body.fc-adams-chart-page #mini { top:calc(var(--adams-toolbar-height, 0px) + 8px); bottom:auto !important; width:min(145px,calc((100% - min(96vw,590px,calc(100vw - 118px))) / 2 - 15px)); }
 }
+
+/* Let the Adams intro's existing Timeline header reflow when enlarged text needs room. */
+@media (max-width:1020px) {
+ body.fc-adams-intro-page .nav[data-focuschrist-header="standard"] { flex-wrap:wrap; row-gap:8px; }
+ body.fc-adams-intro-page .nav[data-focuschrist-header="standard"] .hamburger-wrap { margin-left:auto; }
+}
