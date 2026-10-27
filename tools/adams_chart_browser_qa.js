@@ -2,7 +2,7 @@
 'use strict';
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 const W=50195,H=5347,TILE=1024;
-const EXPECTED_CHART_SHA256='4fb473064803bc9848a4813daef84c87db6dc109981afb03032e0b3161cc830e';
+const EXPECTED_CHART_SHA256='95802a989d818d0ff7297660274c62f18140950b0bf58fc96a90277ef1e1cb90';
 const EXPECTED_LANDING_SHA256='fa3b12da544899f8935874508b9abe64b84b6fd2af1e5bfec8a368ce6a638578';
 const ASSET_SET_SHA256='6092f3c930ebb6cae7c25b3f881fc93ef590642500e419b539124cacd89bca0f';
 const CREDIT='Sebastian C. Adams, Synchronological Chart (1881). Chart image from Wikimedia Commons, courtesy of the David Rumsey Map Collection. The image is in the public domain.';
@@ -137,6 +137,8 @@ module.exports=async function adamsChartQA(existingPage,origin,parentOut){
     assert(await page.locator('h1.title').isVisible(),'Chart heading remains visibly rendered');
     assert.equal((await page.locator('.fc-adams-credit').innerText()).replace(/\s+/g,' ').trim(),CREDIT);
     assert.equal(await page.locator('.fc-adams-credit a').getAttribute('href'),COMMONS);
+    assert.equal(await page.locator('.fc-adams-credit a').getAttribute('target'),'_blank','Commons opens separately under existing external-link contract');
+    assert.deepEqual((await page.locator('.fc-adams-credit a').getAttribute('rel')||'').split(/\s+/).sort(),['noopener','noreferrer'],'Commons opener/referrer protection');
     assert(!/user-scalable\s*=\s*no|maximum-scale\s*=\s*1(?:,|$)/i.test(await page.locator('meta[name="viewport"]').getAttribute('content')),'Browser zoom not locked');
     assert.equal(await page.locator('iframe').count(),0);
     let s=await state('initial-fit');checkFit(s);
