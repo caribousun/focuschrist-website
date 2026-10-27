@@ -27,6 +27,12 @@ function selfTest(routes,read,JSDOM){
  rejects(()=>contract.projectCanonicalRoutes([...routes,routes[0]],read));
  rejects(()=>contract.projectCanonicalRoutes(routes.map(p=>p==='/'+contract.intro?'/unknown.html':p),read));
  rejects(()=>contract.projectCanonicalRoutes(routes,p=>read(p)+(p===contract.chart?' ':'')));
+ const css=read('adams-integration.css'),prior=css.slice(0,4965),suffix=css.slice(4965);
+ assert.equal(Buffer.byteLength(css),5292);assert.equal(contract.assertSource('adams-integration.css',css,read).bytes,5292);
+ for(const bad of [prior,css+' ',css+suffix,css.slice(0,20)+'X'+css.slice(21),prior+suffix.replace('row-gap:8px','row-gap:9px'),suffix+prior])rejects(()=>contract.assertSource('adams-integration.css',bad,read));
+ rejects(()=>contract.assertSource('adams-integration.js',css,read));
+ rejects(()=>contract.assertSource('other/adams-integration.css',css,read));
+ assert.equal(JSON.parse(read(contract.MANIFEST)).files['adams-integration.css'].bytes,4965);
  rejects(()=>contract.assertSource('unknown.html','unknown',read));
  rejects(()=>contract.historicalSource(contract.intro,read(contract.intro),read));
  const manifest=JSON.parse(read(contract.MANIFEST));

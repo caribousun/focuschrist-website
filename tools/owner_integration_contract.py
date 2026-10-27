@@ -181,7 +181,17 @@ def manifest(root=ROOT):
 def validate_file(route, raw, root=ROOT):
     item = manifest(root)['files'].get(route)
     require(item is not None, 'Unknown integration source')
-    require(len(raw) == item['bytes'] and sha(raw) == item['sha256'], 'Current integration source drift: ' + route)
+    if route == 'adams-integration.css':
+        # Exact current CSS-only successor. Recover historical bytes solely to
+        # validate the immutable old manifest; this grants no rendered approval.
+        suffix = b'\n/* Let the Adams intro\'s existing Timeline header reflow when enlarged text needs room. */\n@media (max-width:1020px) {\n body.fc-adams-intro-page .nav[data-focuschrist-header="standard"] { flex-wrap:wrap; row-gap:8px; }\n body.fc-adams-intro-page .nav[data-focuschrist-header="standard"] .hamburger-wrap { margin-left:auto; }\n}\n'
+        require(len(raw) == 5292 and sha(raw) == '3c8a2390e93e94f5d67d3b7a4356f018d78df7ea5c654a3841366549df76d131', 'Current integration source drift: ' + route)
+        require(raw[4965:] == suffix, 'Unreviewed CSS successor append')
+        previous = raw[:4965]
+        require(len(previous) == item['bytes'] and sha(previous) == item['sha256'], 'Historical CSS prefix drift')
+        item = dict(item, bytes=len(raw), sha256=sha(raw))
+    else:
+        require(len(raw) == item['bytes'] and sha(raw) == item['sha256'], 'Current integration source drift: ' + route)
     if route in ADAMS_ROUTES:
         assert_adams_semantics(route, raw.decode('utf-8'))
     elif route == HUB or route in STORIES:

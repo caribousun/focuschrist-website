@@ -28,6 +28,24 @@ class OwnerIntegrationContractTests(unittest.TestCase):
             with self.subTest(path=path), self.assertRaises(AssertionError):
                 c.validate_file(path, raw + b' ')
 
+    def test_css_successor_is_exact_and_historical_manifest_unchanged(self):
+        current = self.raw['adams-integration.css']
+        prior = current[:4965]
+        suffix = current[4965:]
+        self.assertEqual(len(current), 5292)
+        self.assertEqual(hashlib.sha256(current).hexdigest(), '3c8a2390e93e94f5d67d3b7a4356f018d78df7ea5c654a3841366549df76d131')
+        self.assertEqual(hashlib.sha256(prior).hexdigest(), self.record['files']['adams-integration.css']['sha256'])
+        returned = c.validate_file('adams-integration.css', current)
+        self.assertEqual((returned['bytes'], returned['sha256']), (len(current), hashlib.sha256(current).hexdigest()))
+        for bad in (prior, current + b' ', current + suffix, current[:20] + b'X' + current[21:], prior + suffix.replace(b'row-gap:8px', b'row-gap:9px'), suffix + prior):
+            with self.subTest(kind=hashlib.sha256(bad).hexdigest()), self.assertRaises(AssertionError):
+                c.validate_file('adams-integration.css', bad)
+        with self.assertRaises(AssertionError):
+            c.validate_file('adams-integration.js', current)
+        with self.assertRaises(AssertionError):
+            c.validate_file('other/adams-integration.css', current)
+        self.assertEqual(self.record['files']['adams-integration.css']['bytes'], 4965)
+
     def test_unknown_source_rejected(self):
         with self.assertRaises(AssertionError):
             c.validate_file('timelines/adams-other.html', self.raw[c.CHART])

@@ -11,7 +11,16 @@ const digest=value=>crypto.createHash('sha256').update(value).digest('hex');
 const clean=n=>n.textContent.replace(/\s+/g,' ').trim();
 const bare=p=>p==='/'?'index.html':p.replace(/^\//,'');
 function manifest(read){const raw=read(MANIFEST);assert.equal(digest(raw),MANIFEST_SHA,'Exact integration manifest');const m=JSON.parse(raw);assert.equal(m.schema,1);assert.equal(Object.keys(m.files).length,11);return m;}
-function assertSource(route,source,read){const item=manifest(read).files[route];assert(item,'Known integration source');assert.equal(Buffer.byteLength(source),item.bytes,route+' bytes');assert.equal(digest(source),item.sha256,route+' current source');return item;}
+function assertSource(route,source,read){const item=manifest(read).files[route];assert(item,'Known integration source');
+ if(route==='adams-integration.css'){
+  // Exact current CSS successor; predecessor bytes only verify immutable history.
+  const raw=Buffer.from(source),suffix=Buffer.from("\n/* Let the Adams intro's existing Timeline header reflow when enlarged text needs room. */\n@media (max-width:1020px) {\n body.fc-adams-intro-page .nav[data-focuschrist-header=\"standard\"] { flex-wrap:wrap; row-gap:8px; }\n body.fc-adams-intro-page .nav[data-focuschrist-header=\"standard\"] .hamburger-wrap { margin-left:auto; }\n}\n",'utf8');
+  assert.equal(raw.length,5292,route+' bytes');assert.equal(digest(raw),'3c8a2390e93e94f5d67d3b7a4356f018d78df7ea5c654a3841366549df76d131',route+' current source');
+  assert(raw.subarray(4965).equals(suffix),'Exact CSS successor append');const prior=raw.subarray(0,4965);
+  assert.equal(prior.length,item.bytes,'Historical CSS prefix length');assert.equal(digest(prior),item.sha256,'Historical CSS prefix digest');
+  return {...item,bytes:raw.length,sha256:digest(raw)};
+ }
+ assert.equal(Buffer.byteLength(source),item.bytes,route+' bytes');assert.equal(digest(source),item.sha256,route+' current source');return item;}
 function assertCurrentDOM(route,doc){
  assert(currentPages.includes(route),'Known current integration page');
  const one=s=>{const a=doc.querySelectorAll(s);assert.equal(a.length,1,route+' unique '+s);return a[0];};
