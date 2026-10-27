@@ -9,7 +9,7 @@
       },
       "label": "Emma Protected Scripture",
       "figure": "emma-story1-ride",
-      "source_sha256": "7b01a4c66fd53274dc71c6a581963f174251557580365f1a93b56bab835229c1"
+      "source_sha256": "e5b234afe494b825f90a94b58ff8b6363e349aa94a4d51562c9d037c58906820"
     },
     "history/emma-hymns.html": {
       "attrs": {
@@ -19,7 +19,7 @@
       },
       "label": "Collection of Sacred Hymns, 1835",
       "figure": "emma-story2-hymnal",
-      "source_sha256": "56685e71d89e8596e9b14e4cfeb49889afbc7fb4534ba0efd5dc4a69c58df8c8"
+      "source_sha256": "105553bc2d6725a01025434951923749b7d326f29a7c39996f8218a038380045"
     },
     "history/emma-winter-crossing.html": {
       "attrs": {
@@ -29,7 +29,7 @@
       },
       "label": "Letter from Emma Smith, 7 March 1839",
       "figure": "emma-story3-quincy",
-      "source_sha256": "a424db4ab7ca1f0b925ec30a823cb9cc986a87e908d78967195cb132b545254f"
+      "source_sha256": "4245bdf43ad6dd24dfa47b31c6f3ff411c407d0e9a6d7ef352cec0f815008186"
     },
     "history/emma-relief-society.html": {
       "attrs": {
@@ -39,7 +39,7 @@
       },
       "label": "Female Relief Society of Nauvoo",
       "figure": "emma-story4-hospitality",
-      "source_sha256": "b8bef87968a1b6189524e80dbbcfea9e4c95e5336c1258987de22bbe33946c78"
+      "source_sha256": "f13772d3e7aa457aef1cb02804e3c2ab86adcab870b64e2f7aa25a8cc3a70310"
     },
     "history/emma-last-testimony.html": {
       "attrs": {
@@ -49,7 +49,7 @@
       },
       "label": "My Great-Great-Grandmother Emma Hale Smith",
       "figure": "emma-story5-testimony",
-      "source_sha256": "6889079338eebd271d8a25af85850873950a6462ef33c11031a3cea0ba46e710"
+      "source_sha256": "983a41ea229c286018be4c355f28a39b4c9f6294221b001d2985356f0fafb559"
     }
   }
 }
