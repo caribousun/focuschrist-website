@@ -5,6 +5,7 @@ import hashlib
 import json
 from pathlib import Path
 import unittest
+from html.parser import HTMLParser
 from bs4 import BeautifulSoup
 import emma_story_consumers as e
 
@@ -106,6 +107,48 @@ class EmmaConsumerTests(unittest.TestCase):
             self.assertNotEqual(text, changed)
             with self.assertRaises(AssertionError):
                 e.assert_story_opening(self.route, changed, BeautifulSoup(changed, 'html.parser'))
+
+
+class ActualViewerParserTests(unittest.TestCase):
+    def parser(self):
+        tree = ast.parse((ROOT / 'tools/sitewide_artwork_review_qa.py').read_text())
+        nodes = [n for n in tree.body if isinstance(n, (ast.ClassDef, ast.FunctionDef)) and n.name in {'Tags', 'viewer_bindings'}]
+        self.assertEqual(len(nodes), 2)
+        scope = {'HTMLParser': HTMLParser}
+        exec(compile(ast.Module(body=nodes, type_ignores=[]), '<actual selected viewer parser>', 'exec'), scope)
+        return scope['viewer_bindings']
+
+    def sources(self):
+        return {route: (ROOT / route).read_text() for route in e.EMMA_STORY_ROUTES}
+
+    def test_actual_five_parser_shapes_and_additive_acceptance(self):
+        bindings = self.parser()(self.sources())
+        self.assertEqual(set(bindings), e.EMMA_STORY_ROUTES)
+        for refs in bindings.values():
+            self.assertIsInstance(refs, list)
+            self.assertEqual(refs, e.VIEWER_REFS)
+            self.assertIsNone(refs[1][1]['defer'])
+        self.assertTrue(e.reviewed_viewer_additions(bindings, lambda historical: historical == {}))
+
+    def test_each_actual_omitted_or_changed_owner_rejected(self):
+        parse = self.parser()
+        for route in e.EMMA_STORY_ROUTES:
+            missing = self.sources(); del missing[route]
+            self.assertFalse(e.reviewed_viewer_additions(parse(missing), lambda _: True))
+            for old, new in [('20260922-viewer-3', 'unknown'),
+                             ('20260919-viewer-1', 'unknown'),
+                             ('full-image-viewer.js?v=20260919-viewer-1" defer', 'full-image-viewer.js?v=20260919-viewer-1" async')]:
+                changed = self.sources(); self.assertIn(old, changed[route]); changed[route] = changed[route].replace(old, new, 1)
+                self.assertFalse(e.reviewed_viewer_additions(parse(changed), lambda _: True))
+
+    def test_unknown_and_duplicate_actual_refs_rejected(self):
+        sources = self.sources(); route = sorted(sources)[0]
+        sources['history/emma-unreviewed.html'] = sources[route]
+        self.assertFalse(e.reviewed_viewer_additions(self.parser()(sources), lambda historical: historical == {}))
+        for route in e.EMMA_STORY_ROUTES:
+            for extra in ['<script src="../full-image-viewer.js?v=20260919-viewer-1" defer></script>', '<!-- full-image-viewer.js -->']:
+                sources = self.sources(); sources[route] += extra
+                self.assertFalse(e.reviewed_viewer_additions(self.parser()(sources), lambda _: True))
 
 
 if __name__ == '__main__':

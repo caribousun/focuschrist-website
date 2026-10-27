@@ -292,6 +292,9 @@ def viewer_self_test():
     assert not reviewed_viewer_style(data.replace(b'object-fit: contain', b'object-fit: cover'))
     assert not reviewed_viewer_style(data.replace(b'.fc-full-image-tools {', b'body {'))
     sources = visitor_viewer_sources()
+    # Validate exact current additions before testing the unchanged historical digest.
+    assert reviewed_viewer_additions(viewer_bindings(sources), reviewed_viewer_bindings)
+    sources = {owner: text for owner, text in sources.items() if owner not in EMMA_STORY_ROUTES}
     bindings = viewer_bindings(sources)
     assert reviewed_viewer_bindings(bindings)
     owner = 'art-study/be-still.html'
