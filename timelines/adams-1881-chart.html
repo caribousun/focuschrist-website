@@ -126,7 +126,10 @@ body.nav-hidden .navRestore{display:flex}
 @media (max-height: 550px) { .touchWrap { padding-top: 12px !important; padding-bottom: 12px !important; } }
 .fc-adams-strip{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline;width:100%}.fc-adams-back{color:var(--gold);text-decoration:none;font-weight:600;white-space:nowrap;font-size:12px}.fc-adams-note{margin:0;color:#cfc4a5;font-size:11px;line-height:1.45}.fc-adams-note a{color:var(--gold)}.fc-adams-credit{flex-basis:100%;color:#b8a887;font-size:10.5px}
 /* The added context stays above, not beside, the original desktop controls. */
-@media(min-width:900px){#toolbar{flex-wrap:wrap;row-gap:7px}#toolbar>.fc-adams-strip{flex:0 0 100%}}</style></head><body>
+@media(min-width:900px){#toolbar{flex-wrap:wrap;row-gap:7px}#toolbar>.fc-adams-strip{flex:0 0 100%}}
+/* Keep the existing restore control out of the chart on short mobile screens. */
+@media(max-width:899px) and (max-height:700px){#toolbar #showNav{position:static;flex:0 0 auto}}
+</style></head><body>
 <div id="toolbar" class="bar"><div class="fc-adams-strip"><a class="fc-adams-back" href="../timeline.html#choose-timeline">Back to timelines</a><p class="fc-adams-note">focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit <a href="https://www.churchofjesuschrist.org/" target="_blank" rel="noopener noreferrer">ChurchofJesusChrist.org</a>.</p><p class="fc-adams-note fc-adams-credit">Sebastian C. Adams, <i>Synchronological Chart</i> (1881). Chart image from <a href="https://commons.wikimedia.org/wiki/File:Adams_Synchronological_Chart,_1881.jpg">Wikimedia Commons</a>, courtesy of the David Rumsey Map Collection. The image is in the public domain.</p></div><div class="toprow"><div class="title">Adams’ Chart · 1881</div><div class="tip" style="color:#b8a887;font-size:11px">Mouse: drag to move · Wheel: zoom · Shift+wheel: horizontal pan · Ctrl+wheel: zoom</div></div><div class="controls"><button class="btn" id="fit" aria-pressed="false">Full View</button><button class="btn" id="fillScreen" aria-pressed="false">Fill Screen</button><button class="btn" id="full" aria-pressed="false">Fullscreen</button><button class="btn" id="toggleMini" aria-pressed="true">Hide Map</button><div class="zoomBox"><button class="btn" id="out" aria-label="Zoom out"><span class="zoomGlyph">−</span></button><input id="slider" class="range" type="range" min="-8.5" max="2" step=".01" value="-6" aria-label="Zoom"><button class="btn" id="in" aria-label="Zoom in"><span class="zoomGlyph">+</span></button><span class="zoom" id="zoom">Fit</span></div></div><span class="sr" id="status"></span></div>
 <div id="viewport" tabindex="0" aria-label="Interactive chart viewer"><div class="checker"></div><div id="tiles"></div></div><div id="mini" class="minimap"><img id="overview" alt="Chart overview"><div id="miniview" class="miniview"></div></div><div id="progress" class="loading">Loading tiles…</div>
 <div class="touchDock" id="navDock"><button class="navClose" id="hideNav" type="button" aria-label="Hide directional controls" title="Hide controls"><span class="closeGlyph">×</span></button><div class="touchWrap" aria-label="Chart navigation. Hold arrows to pan continuously"><div class="navGroup">
@@ -508,7 +511,9 @@ let lastTap=0;vp.addEventListener('click',e=>{const now=Date.now();if(now-lastTa
 document.getElementById('in').onclick=()=>setZoom(zoom*1.6);document.getElementById('out').onclick=()=>setZoom(zoom/1.6);fitBtn.onclick=()=>setFullView(!fullView);document.getElementById('homeBtn').onclick=()=>setFullView(true);document.getElementById('zoom100').onclick=()=>setZoom(1);slider.oninput=e=>setZoom(Math.pow(2,+e.target.value));
 fullBtn.onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await document.documentElement.requestFullscreen();}catch(err){prog.textContent='Fullscreen unavailable in this browser';}};
 document.addEventListener('fullscreenchange',()=>{const yes=!!document.fullscreenElement;fullBtn.textContent=yes?'Exit Fullscreen':'Fullscreen';fullBtn.setAttribute('aria-pressed',String(yes));render();});
-const miniToggle=document.getElementById('toggleMini');if(miniToggle)miniToggle.onclick=()=>{const hidden=mini.classList.toggle('hidden');miniToggle.textContent=hidden?'Show Map':'Hide Map';miniToggle.setAttribute('aria-pressed',String(!hidden));};
+const miniToggle=document.getElementById('toggleMini');
+function setMiniHidden(hidden){mini.classList.toggle('hidden',hidden);miniToggle.textContent=hidden?'Show Map':'Hide Map';miniToggle.setAttribute('aria-pressed',String(!hidden));render();}
+if(miniToggle)miniToggle.onclick=()=>setMiniHidden(!mini.classList.contains('hidden'));
 document.getElementById('mini').addEventListener('click',e=>{const b=e.currentTarget.getBoundingClientRect();x=vp.clientWidth/2-(e.clientX-b.left)/b.width*W*zoom;y=vp.clientHeight/2-(e.clientY-b.top)/b.height*H*zoom;disableFullViewIfNeeded();render()});
 // Accelerating-free continuous panning: immediate response, then steady animation until release.
 const navigationVectors={left:[1,0],right:[-1,0],up:[0,1],down:[0,-1],fastLeft:[2.5,0],fastRight:[-2.5,0]};
@@ -598,4 +603,17 @@ function syncToolbarViewport(){
 }
 if(window.ResizeObserver)new ResizeObserver(syncToolbarViewport).observe(document.getElementById('toolbar'));
 syncToolbarViewport();
+// Short-screen default is a clear chart, not an already-expanded overlay.
+// Existing controls still explicitly restore/use/close both dock and map.
+const compactOverlays=matchMedia('(max-width:899px) and (max-height:700px)');
+function applyOverlayDefaults(){
+ const compact=compactOverlays.matches;
+ if(compact)document.querySelector('#toolbar .toprow').append(showNavButton);
+ else document.body.append(showNavButton);
+ toggleNavigation(compact);
+ setMiniHidden(compact);
+ syncToolbarViewport();
+}
+compactOverlays.addEventListener('change',applyOverlayDefaults);
+applyOverlayDefaults();
 </script><script>if(window.matchMedia&&matchMedia('(pointer: coarse)').matches){var fcTip=document.querySelector('.tip');if(fcTip){fcTip.textContent='Touch: drag to pan · Pinch to zoom';}}</script></body></html>

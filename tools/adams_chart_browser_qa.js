@@ -2,7 +2,7 @@
 'use strict';
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 const W=50195,H=5347,TILE=1024;
-const EXPECTED_CHART_SHA256='051fecab5376895220a808a722e940b800cb37d145e9098507004cf4ba6011ca';
+const EXPECTED_CHART_SHA256='cce1020771c9f8d626ca000feb93153e189d78cf40f0110fa37174b019920a7b';
 const EXPECTED_LANDING_SHA256='fa3b12da544899f8935874508b9abe64b84b6fd2af1e5bfec8a368ce6a638578';
 const ASSET_SET_SHA256='6092f3c930ebb6cae7c25b3f881fc93ef590642500e419b539124cacd89bca0f';
 const CREDIT='Sebastian C. Adams, Synchronological Chart (1881). Chart image from Wikimedia Commons, courtesy of the David Rumsey Map Collection. The image is in the public domain.';
@@ -38,9 +38,19 @@ function readView(){
  const vp=document.getElementById('viewport'),tiles=[...document.querySelectorAll('#tiles img.tile')],first=tiles[0];
  if(!vp||!first)return null;
  const m=new URL(first.src).pathname.match(/adams-(\d+)-(\d+)-(\d+)\.jpg$/);if(!m)return null;
- const [level,col,row]=m.slice(1).map(Number),z=parseFloat(first.style.width)/Math.min(1024*level,50195-col*1024*level);
+ // Chromium 140 serializes fractional CSS px with %.6g. Read the native
+ // numeric inline value, not that rounded string; retain both for evidence.
+ // This is read-only Typed OM, not app state or a synthesized expected value.
+ const inline={},serialized={};
+ for(const name of ['width','height','left','top']){
+  serialized[name]=first.style.getPropertyValue(name);
+  const value=first.attributeStyleMap&&first.attributeStyleMap.get(name);
+  if(!value||value.unit!=='px'||!Number.isFinite(value.value))throw new Error('Native numeric inline px required: '+name+' '+serialized[name]);
+  inline[name]=value.value;
+ }
+ const [level,col,row]=m.slice(1).map(Number),z=inline.width/Math.min(1024*level,50195-col*1024*level);
  const rect=n=>{const r=n.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height,right:r.right,bottom:r.bottom};};
- return {z,x:parseFloat(first.style.left)-col*1024*level*z,y:parseFloat(first.style.top)-row*1024*level*z,level,layout:{width:vp.clientWidth,height:vp.clientHeight},viewport:rect(vp),toolbar:rect(document.getElementById('toolbar')),fit:document.getElementById('fit').getAttribute('aria-pressed'),fill:document.getElementById('fillScreen').getAttribute('aria-pressed'),tiles:tiles.map(n=>({url:new URL(n.src).pathname,complete:n.complete,width:n.naturalWidth,height:n.naturalHeight})),documentWidth:document.documentElement.scrollWidth,innerWidth,innerHeight};
+ return {z,x:inline.left-col*1024*level*z,y:inline.top-row*1024*level*z,level,firstTile:{url:new URL(first.src).pathname,inline,serialized,rect:rect(first)},layout:{width:vp.clientWidth,height:vp.clientHeight},viewport:rect(vp),toolbar:rect(document.getElementById('toolbar')),fit:document.getElementById('fit').getAttribute('aria-pressed'),fill:document.getElementById('fillScreen').getAttribute('aria-pressed'),tiles:tiles.map(n=>({url:new URL(n.src).pathname,complete:n.complete,width:n.naturalWidth,height:n.naturalHeight})),documentWidth:document.documentElement.scrollWidth,innerWidth,innerHeight};
 }
 async function settle(page){
  // Input handlers queue draw(); it may replace an already-loaded old tile set.
@@ -62,6 +72,19 @@ async function settle(page){
 // bounding rect separately for actual placement, hit targets and screenshots.
 function checkFit(s){near(s.z,Math.min(s.layout.width/W,s.layout.height/H),'full-chart contain zoom',1e-8);near(s.x,(s.layout.width-W*s.z)/2,'fit x');near(s.y,(s.layout.height-H*s.z)/2,'fit y');assert.equal(s.fit,'true');}
 function sameView(a,b,label){near(a.z,b.z,label+' zoom',1e-8);near(a.x,b.x,label+' x');near(a.y,b.y,label+' y');}
+
+function checkTileGeometry(s,label){
+ // The exact pinned viewer has untransformed, borderless absolute tiles.
+ // Independently bind declared coordinates to actual rendered border boxes.
+ // 1 CSS px = 1 device px in these explicitly deviceScaleFactor:1 contexts;
+ // all existing zoom (1e-8) and position (.08 px) assertions remain intact.
+ const {inline,rect}=s.firstTile;
+ assert(inline.width>0&&inline.height>0,label+' positive numeric tile dimensions');
+ near(rect.width,inline.width,label+' rendered tile width',1);
+ near(rect.height,inline.height,label+' rendered tile height',1);
+ near(rect.x,s.viewport.x+inline.left,label+' rendered tile x',1);
+ near(rect.y,s.viewport.y+inline.top,label+' rendered tile y',1);
+}
 
 module.exports=async function adamsChartQA(existingPage,origin,parentOut){
  assert.equal(process.env.CI,'true','Hosted CI only; do not launch locally');
@@ -99,7 +122,7 @@ module.exports=async function adamsChartQA(existingPage,origin,parentOut){
      })().catch(e=>issues.push(String(e).slice(0,1500))));
     });
     const act=async id=>{const n=page.locator(id);if(profile.touch)await n.tap();else await n.click();};
-    const state=async label=>{const s=await settle(page);assert(s,label+' rendered tiles');near(s.viewport.y,s.toolbar.bottom,label+' viewport below toolbar',1);for(const tile of s.tiles){assert(tile.complete,label+' current tile complete');const e=fixture.assets.get(tile.url);assert(e,'Known tile URL');assert.equal(tile.width,e.width);assert.equal(tile.height,e.height);}await Promise.all(pending);assert.deepEqual(issues,[],label+' errors');record.states.push({label,...s});return s;};
+    const state=async label=>{const s=await settle(page);assert(s,label+' rendered tiles');checkTileGeometry(s,label);near(s.viewport.y,s.toolbar.bottom,label+' viewport below toolbar',1);for(const tile of s.tiles){assert(tile.complete,label+' current tile complete');const e=fixture.assets.get(tile.url);assert(e,'Known tile URL');assert.equal(tile.width,e.width);assert.equal(tile.height,e.height);}await Promise.all(pending);assert.deepEqual(issues,[],label+' errors');record.states.push({label,...s});return s;};
     const capture=async label=>record.screenshots.push(await save(page,profile.name+'-'+label));
     const response=await page.goto(origin+'/timeline.html',{waitUntil:'load'});assert.equal(response.status(),200);
     const choices=page.locator('#choose-timeline .fc-timeline-choices a');assert.equal(await choices.count(),5);
@@ -115,20 +138,38 @@ module.exports=async function adamsChartQA(existingPage,origin,parentOut){
     const initialRequests=network.filter(n=>n.profile===profile.name).length;assert(initialRequests<=6,'Initial view must not download all 331 tiles');
     record.initialTileResponses=initialRequests;
     // Check actual control boxes, not only hidden document overflow.
-    const geometry=await page.evaluate(()=>{const ids=['fit','fillScreen','full','toggleMini','out','slider','in','hideNav','fastLeft','sectionLeft','left','up','down','right','sectionRight','fastRight','homeBtn','zoom100'];return ids.map(id=>{const n=document.getElementById(id),r=n.getBoundingClientRect(),hit=document.elementFromPoint(r.x+r.width/2,r.y+r.height/2),cs=getComputedStyle(n);return {id,x:r.x,y:r.y,right:r.right,bottom:r.bottom,width:r.width,height:r.height,visible:cs.display!=='none'&&cs.visibility!=='hidden'&&Number(cs.opacity)!==0,hit:!!hit&&(n===hit||n.contains(hit))};});});
+    const compact=profile.width<=899&&profile.height<=700;
+    const toolbarIDs=['fit','fillScreen','full','toggleMini','out','slider','in'],dockIDs=['hideNav','fastLeft','sectionLeft','left','up','down','right','sectionRight','fastRight','homeBtn','zoom100'];
+    const measureControls=ids=>page.evaluate(ids=>ids.map(id=>{const n=document.getElementById(id),r=n.getBoundingClientRect(),hit=document.elementFromPoint(r.x+r.width/2,r.y+r.height/2),cs=getComputedStyle(n);return {id,x:r.x,y:r.y,right:r.right,bottom:r.bottom,width:r.width,height:r.height,visible:cs.display!=='none'&&cs.visibility!=='hidden'&&Number(cs.opacity)!==0,hit:!!hit&&(n===hit||n.contains(hit))};}),ids);
+    const checkControls=items=>{for(const g of items)assert(g.visible&&g.width>0&&g.height>0&&g.x>=-1&&g.y>=-1&&g.right<=profile.width+1&&g.bottom<=profile.height+1&&g.hit,`Unreachable/clipped control ${JSON.stringify(g)}`);};
+    assert.equal(await page.locator('#navDock').isVisible(),!compact,'Responsive initial dock');
+    assert.equal(await page.locator('#mini').isVisible(),!compact,'Responsive initial map');
+    assert.equal(await page.locator('#showNav').isVisible(),compact,'Responsive restore control');
+    assert.equal(await page.locator('#toggleMini').innerText(),compact?'Show Map':'Hide Map');
+    assert.equal(await page.locator('#toggleMini').getAttribute('aria-pressed'),String(!compact));
+    const geometry=await measureControls([...toolbarIDs,...(compact?['showNav']:dockIDs)]);
     record.geometry=geometry;await capture('fit');
     const integration=await page.evaluate(()=>{
      const rect=n=>{const r=n.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height,right:r.right,bottom:r.bottom};};
      const bar=document.getElementById('toolbar'),cs=getComputedStyle(bar);
-     return {strip:rect(bar.querySelector('.fc-adams-strip')),titleRow:rect(bar.querySelector('.toprow')),controls:rect(bar.querySelector('.controls')),innerWidth:bar.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight),overlays:['navDock','mini','progress'].map(id=>{const n=document.getElementById(id);return {id,...rect(n),display:getComputedStyle(n).display};})};
+     return {strip:rect(bar.querySelector('.fc-adams-strip')),titleRow:rect(bar.querySelector('.toprow')),controls:rect(bar.querySelector('.controls')),innerWidth:bar.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight),overlays:['navDock','mini','progress','showNav'].map(id=>{const n=document.getElementById(id);return {id,...rect(n),display:getComputedStyle(n).display};})};
     });record.integration=integration;
     if(profile.width>=900){near(integration.strip.width,integration.innerWidth,'Added strip full-width row',1);assert(integration.strip.bottom<=Math.min(integration.titleRow.y,integration.controls.y)+1,'Added strip must be above original title/controls');}
     const chart={x:s.viewport.x+s.x,y:s.viewport.y+s.y,right:s.viewport.x+s.x+W*s.z,bottom:s.viewport.y+s.y+H*s.z};
     record.initialFitOverlayOverlap=integration.overlays.map(o=>({id:o.id,area:o.display==='none'?0:Math.max(0,Math.min(o.right,chart.right)-Math.max(o.x,chart.x))*Math.max(0,Math.min(o.bottom,chart.bottom)-Math.max(o.y,chart.y))})).filter(o=>o.area>0);
-    if(record.initialFitOverlayOverlap.length)record.limitations.push('Initial full-chart fit intersects existing dock/map/status overlays; default-view visual acceptance remains separate. Existing hide controls are tested, not redesigned.');
+    assert.deepEqual(record.initialFitOverlayOverlap,[],'Initial fitted chart must not be obscured by dock/map/status/restore controls');
+    record.limitations.push('Explicitly expanded dock/map remain overlays and may cover chart content on short screens; close controls restore clear reading.');
     assert(s.viewport.height>0&&s.viewport.width===profile.width,'Nonempty viewport at configured width');near(s.viewport.y,s.toolbar.bottom,'Viewport below toolbar',1);
     assert(s.documentWidth<=s.innerWidth+1,'No document horizontal overflow');
-    for(const g of geometry)assert(g.visible&&g.width>0&&g.height>0&&g.x>=-1&&g.y>=-1&&g.right<=profile.width+1&&g.bottom<=profile.height+1&&g.hit,`Unreachable/clipped control ${JSON.stringify(g)}`);
+    checkControls(geometry);
+    if(compact){
+     const restore=geometry.find(g=>g.id==='showNav');assert(restore.bottom<=s.viewport.y+1,'Restore arrows outside chart viewport');
+     assert(await page.locator('#toolbar #showNav').count(),'Existing restore control in toolbar');
+     await act('#showNav');s=await state('restore-arrows');checkFit(s);
+     assert(await page.locator('#navDock').isVisible());assert.equal(await page.locator('#showNav').isVisible(),false);
+     record.expandedGeometry=await measureControls([...toolbarIDs,...dockIDs]);checkControls(record.expandedGeometry);
+     await capture('expanded-controls');
+    }
     await act('#zoom100');s=await state('one-to-one');near(s.z,1,'1:1 scale',1e-8);await capture('one-to-one');
     let before=s;await act('#right');s=await state('right-tap');assert(s.x<before.x-1,'Right control actually pans');
     before=s;await act('#left');s=await state('left-tap');assert(s.x>before.x+1,'Left control actually pans');
@@ -153,16 +194,21 @@ module.exports=async function adamsChartQA(existingPage,origin,parentOut){
     }
     await act('#hideNav');assert.equal(await page.locator('#navDock').isVisible(),false);assert(await page.locator('#showNav').isVisible());await capture('controls-hidden');
     await act('#showNav');assert(await page.locator('#navDock').isVisible());assert.equal(await page.locator('#showNav').isVisible(),false);
-    await act('#toggleMini');assert.equal(await page.locator('#mini').isVisible(),false);await act('#toggleMini');assert(await page.locator('#mini').isVisible());
+    // Restore the map, use it to navigate, then close it for short-screen reading.
+    if(await page.locator('#mini').isVisible()){await act('#toggleMini');assert.equal(await page.locator('#mini').isVisible(),false);}
+    await act('#toggleMini');assert(await page.locator('#mini').isVisible());
+    assert.equal(await page.locator('#toggleMini').innerText(),'Hide Map');assert.equal(await page.locator('#toggleMini').getAttribute('aria-pressed'),'true');
+    before=await state('restore-map');const mapBox=await page.locator('#mini').boundingBox(),mapView=await page.locator('#miniview').boundingBox();
+    assert(mapBox&&mapView&&mapView.width>0&&mapView.height>0,'Restored map has rendered viewport indicator');
+    const point={x:mapBox.width*.75,y:mapBox.height*.5};
+    if(profile.touch)await page.locator('#mini').tap({position:point});else await page.locator('#mini').click({position:point});
+    s=await state('map-navigation');near(s.z,before.z,'Map preserves zoom',1e-8);assert(Math.abs(s.x-before.x)>1,'Map actually pans');
+    await act('#toggleMini');assert.equal(await page.locator('#mini').isVisible(),false);assert.equal(await page.locator('#toggleMini').innerText(),'Show Map');assert.equal(await page.locator('#toggleMini').getAttribute('aria-pressed'),'false');
+    if(!compact){await act('#toggleMini');assert(await page.locator('#mini').isVisible());}
     await act('#homeBtn');s=await state('final-reset');checkFit(s);
-    if(profile.touch&&profile.width>profile.height){
-     // Inspect the unchanged owner's existing uncluttered-reading controls on a
-     // short landscape screen; do not imply the default overlaid fit is clear.
-     await act('#hideNav');await act('#toggleMini');
-     assert.equal(await page.locator('#navDock').isVisible(),false);assert.equal(await page.locator('#mini').isVisible(),false);
-     s=await state('landscape-clear-fit');checkFit(s);await capture('landscape-clear-fit');
-     await act('#toggleMini');await act('#showNav');
-     assert(await page.locator('#navDock').isVisible());assert(await page.locator('#mini').isVisible());
+    if(compact){
+     await act('#hideNav');assert.equal(await page.locator('#navDock').isVisible(),false);assert.equal(await page.locator('#mini').isVisible(),false);
+     s=await state('compact-clear-fit');checkFit(s);checkControls(await measureControls([...toolbarIDs,'showNav']));await capture('compact-clear-fit');
     }
     if(profile.touch)await page.locator('.fc-adams-back').tap();else await page.locator('.fc-adams-back').click();
     await page.waitForURL(origin+'/timeline.html#choose-timeline');assert(await page.locator('#choose-timeline').isVisible());
