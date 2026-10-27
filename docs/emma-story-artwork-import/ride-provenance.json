@@ -1,0 +1,92 @@
+{
+  "schema": 1,
+  "scene": "ride",
+  "classification": "PUBLIC_SAFE_PROVENANCE_SUMMARY_NOT_ORIGINAL_PRIVATE_RECEIPTS",
+  "selected_original_sha256": "947d1f4be80ec82e193d8ad38164d3bbc0c1ad82e2aa31fc59a9a454936c545c",
+  "historical_canonical_preflight_claim": false,
+  "historical_source_review_scope": "SOURCE_ART_ONLY_NOT_ASSEMBLED",
+  "receipt_pins": [
+    {
+      "receipt_name": "ACTION-RIDE-PROMPT-v4.txt",
+      "bytes": 2915,
+      "sha256": "87deeaa7c1f49ec3916885eed598fc542f18bdc9d1b8afa98d0fbef94f0cb0cf",
+      "actual_authored_time_fields": [],
+      "time_limit": "These are receipt-authored times/approximation, not reconstructed generation timestamps."
+    },
+    {
+      "receipt_name": "PRECREATION-REVIEW-v4.json",
+      "bytes": 4951,
+      "sha256": "52be76c747c4ce665844f913576e35cdccff4f773db1ade9631f22ff81a2cae1",
+      "actual_authored_time_fields": [
+        {
+          "field": "reviewed_at_utc",
+          "value": "2026-10-26T23:10:41Z"
+        }
+      ],
+      "time_limit": "These are receipt-authored times/approximation, not reconstructed generation timestamps."
+    },
+    {
+      "receipt_name": "EMMA-ACTION-v4-PRECREATION-REVIEW.md",
+      "bytes": 5440,
+      "sha256": "7b30b4cadda14526449ce288242e0f36075d200676aaaf159f4f5753dc464af7",
+      "actual_authored_time_fields": [
+        {
+          "field": "authored approximate review time",
+          "value": "2026-10-26 approximately 23:10 UTC"
+        }
+      ],
+      "time_limit": "These are receipt-authored times/approximation, not reconstructed generation timestamps."
+    },
+    {
+      "receipt_name": "FINISHED-PIXEL-REVIEW-v17.json",
+      "bytes": 6601,
+      "sha256": "abb1ff943ddcaaabc11537aa6e3b0573cf7c5161952bc0350df90cb2de97030b",
+      "actual_authored_time_fields": [
+        {
+          "field": "reviewed_at_utc",
+          "value": "2026-10-26T23:14:04Z"
+        }
+      ],
+      "time_limit": "These are receipt-authored times/approximation, not reconstructed generation timestamps."
+    },
+    {
+      "receipt_name": "EMMA-ACTION-v17-FINISHED-REVIEW.md",
+      "bytes": 5232,
+      "sha256": "befc8d67ed2c03ed7cc9f38fd2c14bf01b3fe7e8fd4b10aa801ac3370d7fe194",
+      "actual_authored_time_fields": [
+        {
+          "field": "authored approximate review time",
+          "value": "2026-10-26 approximately 23:12\u201323:14 UTC"
+        }
+      ],
+      "time_limit": "These are receipt-authored times/approximation, not reconstructed generation timestamps."
+    },
+    {
+      "receipt_name": "OWNER-ACCEPTANCE-v17.json",
+      "bytes": 2798,
+      "sha256": "0fca7c36ebac89fd2073182a68680640ee8526847cec01e889fb6ef449baf86c",
+      "actual_authored_time_fields": [],
+      "time_limit": "These are receipt-authored times/approximation, not reconstructed generation timestamps."
+    }
+  ],
+  "actual_derivative_review": {
+    "reviewer": "Fermi",
+    "receipt_sha256": "37f113868e61ae5dba8a33b9234aae5775965f3946bf575c2282aa2504e817f5",
+    "receipt_bytes": 28994,
+    "reviewed_at": "2026-10-27T05:22:56.628619+00:00",
+    "decision": "CONCUR_EXACT_ASSET_PIXELS_WITH_LIMITS_ASSEMBLED_PENDING",
+    "scope": "20 exact files inspected; no assembled, responsive browser or full release concurrence"
+  },
+  "generation_time": {
+    "status": "UNKNOWN_NOT_INFERRED",
+    "timestamp": null,
+    "file_mtime_used": false,
+    "basis": "Exact generation timestamp not independently established by this bounded registration. Actual prompt/precreation/finished receipt chronology retained separately, not substituted with file modification time."
+  },
+  "limits": [
+    "Historical receipt hashes identify existing evidence, not authenticated signatures or new canonical bindings.",
+    "Current exact-spec Fermi/Newton/Albert assembled review remains pending.",
+    "Source artwork and WebP derivatives are proportional but not pixel-identical Lanczos outputs; no lossless claim."
+  ],
+  "history": "Selected ride v17 supersedes rejected v16/v19 and old v13 delivery selection; v17 far hind hoof remains naturally occluded."
+}

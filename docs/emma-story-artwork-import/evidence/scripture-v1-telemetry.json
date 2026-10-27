@@ -1,0 +1,5265 @@
+{
+  "skipEvidence": [
+    {
+      "label": "hub-1280-normal",
+      "page": "/history/emma-hale-smith.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "BODY",
+        "id": "",
+        "className": "fc-site fc-life-story fc-emma-study"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story1-ride-review-1280-normal-before-tab",
+      "page": "/history/emma-elect-lady.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "BODY",
+        "id": "",
+        "className": "fc-site fc-life-story fc-emma-study"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story1-ride-review-1280-pointer-reading",
+      "page": "/history/emma-elect-lady.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "BODY",
+        "id": "",
+        "className": "fc-site fc-life-story fc-emma-study"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story1-ride-review-1280-artwork-box",
+      "page": "history/emma-elect-lady.html",
+      "artwork": {
+        "x": 121,
+        "y": 208.359375,
+        "width": 1038,
+        "height": 692,
+        "right": 1159,
+        "bottom": 900.359375,
+        "viewportWidth": 1280,
+        "viewportHeight": 900
+      }
+    },
+    {
+      "label": "emma-story1-ride-review-1280-artwork-viewport",
+      "page": "/history/emma-elect-lady.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 657
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "BODY",
+        "id": "",
+        "className": "fc-site fc-life-story fc-emma-study"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story1-ride-review-1280-after-capture",
+      "page": "/history/emma-elect-lady.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 657
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "BODY",
+        "id": "",
+        "className": "fc-site fc-life-story fc-emma-study"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story2-hymnal-review-1280-normal-before-tab",
+      "page": "/history/emma-hymns.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "BODY",
+        "id": "",
+        "className": "fc-site fc-life-story fc-emma-study"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story2-hymnal-review-1280-pointer-reading",
+      "page": "/history/emma-hymns.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "BODY",
+        "id": "",
+        "className": "fc-site fc-life-story fc-emma-study"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story2-hymnal-review-1280-artwork-box",
+      "page": "history/emma-hymns.html",
+      "artwork": {
+        "x": 121,
+        "y": 104.265625,
+        "width": 1038,
+        "height": 692,
+        "right": 1159,
+        "bottom": 796.265625,
+        "viewportWidth": 1280,
+        "viewportHeight": 900
+      }
+    },
+    {
+      "label": "emma-story2-hymnal-review-1280-artwork-viewport",
+      "page": "/history/emma-hymns.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 1175
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "BODY",
+        "id": "",
+        "className": "fc-site fc-life-story fc-emma-study"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story2-hymnal-review-1280-after-capture",
+      "page": "/history/emma-hymns.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 1175
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "BODY",
+        "id": "",
+        "className": "fc-site fc-life-story fc-emma-study"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story3-quincy-review-1280-normal-before-tab",
+      "page": "/history/emma-winter-crossing.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "BODY",
+        "id": "",
+        "className": "fc-site fc-life-story fc-emma-study"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story3-quincy-review-1280-pointer-reading",
+      "page": "/history/emma-winter-crossing.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "BODY",
+        "id": "",
+        "className": "fc-site fc-life-story fc-emma-study"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story3-quincy-review-1280-artwork-box",
+      "page": "history/emma-winter-crossing.html",
+      "artwork": {
+        "x": 121,
+        "y": 103.59375,
+        "width": 1038,
+        "height": 692,
+        "right": 1159,
+        "bottom": 795.59375,
+        "viewportWidth": 1280,
+        "viewportHeight": 900
+      }
+    },
+    {
+      "label": "emma-story3-quincy-review-1280-artwork-viewport",
+      "page": "/history/emma-winter-crossing.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 1360
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "BODY",
+        "id": "",
+        "className": "fc-site fc-life-story fc-emma-study"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story3-quincy-review-1280-after-capture",
+      "page": "/history/emma-winter-crossing.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 1360
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "BODY",
+        "id": "",
+        "className": "fc-site fc-life-story fc-emma-study"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story4-hospitality-review-1280-normal-before-tab",
+      "page": "/history/emma-relief-society.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "BODY",
+        "id": "",
+        "className": "fc-site fc-life-story fc-emma-study"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story4-hospitality-review-1280-pointer-reading",
+      "page": "/history/emma-relief-society.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "BODY",
+        "id": "",
+        "className": "fc-site fc-life-story fc-emma-study"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story4-hospitality-review-1280-artwork-box",
+      "page": "history/emma-relief-society.html",
+      "artwork": {
+        "x": 121,
+        "y": 103.859375,
+        "width": 1038,
+        "height": 692,
+        "right": 1159,
+        "bottom": 795.859375,
+        "viewportWidth": 1280,
+        "viewportHeight": 900
+      }
+    },
+    {
+      "label": "emma-story4-hospitality-review-1280-artwork-viewport",
+      "page": "/history/emma-relief-society.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 1205
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "BODY",
+        "id": "",
+        "className": "fc-site fc-life-story fc-emma-study"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story4-hospitality-review-1280-after-capture",
+      "page": "/history/emma-relief-society.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 1205
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "BODY",
+        "id": "",
+        "className": "fc-site fc-life-story fc-emma-study"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story5-testimony-review-1280-normal-before-tab",
+      "page": "/history/emma-last-testimony.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "BODY",
+        "id": "",
+        "className": "fc-site fc-life-story fc-emma-study"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story5-testimony-review-1280-pointer-reading",
+      "page": "/history/emma-last-testimony.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "BODY",
+        "id": "",
+        "className": "fc-site fc-life-story fc-emma-study"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story5-testimony-review-1280-artwork-box",
+      "page": "history/emma-last-testimony.html",
+      "artwork": {
+        "x": 121,
+        "y": 103.765625,
+        "width": 1038,
+        "height": 692,
+        "right": 1159,
+        "bottom": 795.765625,
+        "viewportWidth": 1280,
+        "viewportHeight": 900
+      }
+    },
+    {
+      "label": "emma-story5-testimony-review-1280-artwork-viewport",
+      "page": "/history/emma-last-testimony.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 1749
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "BODY",
+        "id": "",
+        "className": "fc-site fc-life-story fc-emma-study"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story5-testimony-review-1280-after-capture",
+      "page": "/history/emma-last-testimony.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 1749
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "BODY",
+        "id": "",
+        "className": "fc-site fc-life-story fc-emma-study"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "hub-390-normal",
+      "page": "/history/emma-hale-smith.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "BODY",
+        "id": "",
+        "className": "fc-site fc-life-story fc-emma-study"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story1-ride-review-390-normal-before-tab",
+      "page": "/history/emma-elect-lady.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "BODY",
+        "id": "",
+        "className": "fc-site fc-life-story fc-emma-study"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story1-ride-review-390-pointer-reading",
+      "page": "/history/emma-elect-lady.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "A",
+        "id": "",
+        "className": "fc-search-trigger"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story1-ride-review-390-artwork-box",
+      "page": "history/emma-elect-lady.html",
+      "artwork": {
+        "x": 17,
+        "y": 331.4375,
+        "width": 356,
+        "height": 237.515625,
+        "right": 373,
+        "bottom": 568.953125,
+        "viewportWidth": 390,
+        "viewportHeight": 900
+      }
+    },
+    {
+      "label": "emma-story1-ride-review-390-artwork-viewport",
+      "page": "/history/emma-elect-lady.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 1158
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "A",
+        "id": "",
+        "className": "fc-search-trigger"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story1-ride-review-390-after-capture",
+      "page": "/history/emma-elect-lady.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 1158
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "A",
+        "id": "",
+        "className": "fc-search-trigger"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story2-hymnal-review-390-normal-before-tab",
+      "page": "/history/emma-hymns.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "BODY",
+        "id": "",
+        "className": "fc-site fc-life-story fc-emma-study"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story2-hymnal-review-390-pointer-reading",
+      "page": "/history/emma-hymns.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "A",
+        "id": "",
+        "className": "fc-search-trigger"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story2-hymnal-review-390-artwork-box",
+      "page": "history/emma-hymns.html",
+      "artwork": {
+        "x": 17,
+        "y": 330.828125,
+        "width": 356,
+        "height": 237.515625,
+        "right": 373,
+        "bottom": 568.34375,
+        "viewportWidth": 390,
+        "viewportHeight": 900
+      }
+    },
+    {
+      "label": "emma-story2-hymnal-review-390-artwork-viewport",
+      "page": "/history/emma-hymns.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 1923
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "A",
+        "id": "",
+        "className": "fc-search-trigger"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story2-hymnal-review-390-after-capture",
+      "page": "/history/emma-hymns.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 1923
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "A",
+        "id": "",
+        "className": "fc-search-trigger"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story3-quincy-review-390-normal-before-tab",
+      "page": "/history/emma-winter-crossing.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "BODY",
+        "id": "",
+        "className": "fc-site fc-life-story fc-emma-study"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story3-quincy-review-390-pointer-reading",
+      "page": "/history/emma-winter-crossing.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "A",
+        "id": "",
+        "className": "fc-search-trigger"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story3-quincy-review-390-artwork-box",
+      "page": "history/emma-winter-crossing.html",
+      "artwork": {
+        "x": 17,
+        "y": 330.96875,
+        "width": 356,
+        "height": 237.515625,
+        "right": 373,
+        "bottom": 568.484375,
+        "viewportWidth": 390,
+        "viewportHeight": 900
+      }
+    },
+    {
+      "label": "emma-story3-quincy-review-390-artwork-viewport",
+      "page": "/history/emma-winter-crossing.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 2238
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "A",
+        "id": "",
+        "className": "fc-search-trigger"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story3-quincy-review-390-after-capture",
+      "page": "/history/emma-winter-crossing.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 2238
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "A",
+        "id": "",
+        "className": "fc-search-trigger"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story4-hospitality-review-390-normal-before-tab",
+      "page": "/history/emma-relief-society.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "BODY",
+        "id": "",
+        "className": "fc-site fc-life-story fc-emma-study"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story4-hospitality-review-390-pointer-reading",
+      "page": "/history/emma-relief-society.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "A",
+        "id": "",
+        "className": "fc-search-trigger"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story4-hospitality-review-390-artwork-box",
+      "page": "history/emma-relief-society.html",
+      "artwork": {
+        "x": 17,
+        "y": 330.984375,
+        "width": 356,
+        "height": 237.515625,
+        "right": 373,
+        "bottom": 568.5,
+        "viewportWidth": 390,
+        "viewportHeight": 900
+      }
+    },
+    {
+      "label": "emma-story4-hospitality-review-390-artwork-viewport",
+      "page": "/history/emma-relief-society.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 2102
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "A",
+        "id": "",
+        "className": "fc-search-trigger"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story4-hospitality-review-390-after-capture",
+      "page": "/history/emma-relief-society.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 2102
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "A",
+        "id": "",
+        "className": "fc-search-trigger"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story5-testimony-review-390-normal-before-tab",
+      "page": "/history/emma-last-testimony.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "BODY",
+        "id": "",
+        "className": "fc-site fc-life-story fc-emma-study"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story5-testimony-review-390-pointer-reading",
+      "page": "/history/emma-last-testimony.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "A",
+        "id": "",
+        "className": "fc-search-trigger"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story5-testimony-review-390-artwork-box",
+      "page": "history/emma-last-testimony.html",
+      "artwork": {
+        "x": 17,
+        "y": 331.484375,
+        "width": 356,
+        "height": 237.515625,
+        "right": 373,
+        "bottom": 569,
+        "viewportWidth": 390,
+        "viewportHeight": 900
+      }
+    },
+    {
+      "label": "emma-story5-testimony-review-390-artwork-viewport",
+      "page": "/history/emma-last-testimony.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 2932
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "A",
+        "id": "",
+        "className": "fc-search-trigger"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story5-testimony-review-390-after-capture",
+      "page": "/history/emma-last-testimony.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 2932
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "A",
+        "id": "",
+        "className": "fc-search-trigger"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "hub-320-normal",
+      "page": "/history/emma-hale-smith.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "BODY",
+        "id": "",
+        "className": "fc-site fc-life-story fc-emma-study"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story1-ride-review-320-normal-before-tab",
+      "page": "/history/emma-elect-lady.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "BODY",
+        "id": "",
+        "className": "fc-site fc-life-story fc-emma-study"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story1-ride-review-320-pointer-reading",
+      "page": "/history/emma-elect-lady.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "A",
+        "id": "",
+        "className": "fc-search-trigger"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story1-ride-review-320-artwork-box",
+      "page": "history/emma-elect-lady.html",
+      "artwork": {
+        "x": 17,
+        "y": 354.21875,
+        "width": 286,
+        "height": 190.8125,
+        "right": 303,
+        "bottom": 545.03125,
+        "viewportWidth": 320,
+        "viewportHeight": 900
+      }
+    },
+    {
+      "label": "emma-story1-ride-review-320-artwork-viewport",
+      "page": "/history/emma-elect-lady.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 1389
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "A",
+        "id": "",
+        "className": "fc-search-trigger"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story1-ride-review-320-after-capture",
+      "page": "/history/emma-elect-lady.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 1389
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "A",
+        "id": "",
+        "className": "fc-search-trigger"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story2-hymnal-review-320-normal-before-tab",
+      "page": "/history/emma-hymns.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "BODY",
+        "id": "",
+        "className": "fc-site fc-life-story fc-emma-study"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story2-hymnal-review-320-pointer-reading",
+      "page": "/history/emma-hymns.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "A",
+        "id": "",
+        "className": "fc-search-trigger"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story2-hymnal-review-320-artwork-box",
+      "page": "history/emma-hymns.html",
+      "artwork": {
+        "x": 17,
+        "y": 354.109375,
+        "width": 286,
+        "height": 190.8125,
+        "right": 303,
+        "bottom": 544.921875,
+        "viewportWidth": 320,
+        "viewportHeight": 900
+      }
+    },
+    {
+      "label": "emma-story2-hymnal-review-320-artwork-viewport",
+      "page": "/history/emma-hymns.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 2236
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "A",
+        "id": "",
+        "className": "fc-search-trigger"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story2-hymnal-review-320-after-capture",
+      "page": "/history/emma-hymns.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 2236
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "A",
+        "id": "",
+        "className": "fc-search-trigger"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story3-quincy-review-320-normal-before-tab",
+      "page": "/history/emma-winter-crossing.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "BODY",
+        "id": "",
+        "className": "fc-site fc-life-story fc-emma-study"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story3-quincy-review-320-pointer-reading",
+      "page": "/history/emma-winter-crossing.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "A",
+        "id": "",
+        "className": "fc-search-trigger"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story3-quincy-review-320-artwork-box",
+      "page": "history/emma-winter-crossing.html",
+      "artwork": {
+        "x": 17,
+        "y": 354.84375,
+        "width": 286,
+        "height": 190.8125,
+        "right": 303,
+        "bottom": 545.65625,
+        "viewportWidth": 320,
+        "viewportHeight": 900
+      }
+    },
+    {
+      "label": "emma-story3-quincy-review-320-artwork-viewport",
+      "page": "/history/emma-winter-crossing.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 2580
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "A",
+        "id": "",
+        "className": "fc-search-trigger"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story3-quincy-review-320-after-capture",
+      "page": "/history/emma-winter-crossing.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 2580
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "A",
+        "id": "",
+        "className": "fc-search-trigger"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story4-hospitality-review-320-normal-before-tab",
+      "page": "/history/emma-relief-society.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "BODY",
+        "id": "",
+        "className": "fc-site fc-life-story fc-emma-study"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story4-hospitality-review-320-pointer-reading",
+      "page": "/history/emma-relief-society.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "A",
+        "id": "",
+        "className": "fc-search-trigger"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story4-hospitality-review-320-artwork-box",
+      "page": "history/emma-relief-society.html",
+      "artwork": {
+        "x": 17,
+        "y": 354.453125,
+        "width": 286,
+        "height": 190.8125,
+        "right": 303,
+        "bottom": 545.265625,
+        "viewportWidth": 320,
+        "viewportHeight": 900
+      }
+    },
+    {
+      "label": "emma-story4-hospitality-review-320-artwork-viewport",
+      "page": "/history/emma-relief-society.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 2474
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "A",
+        "id": "",
+        "className": "fc-search-trigger"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story4-hospitality-review-320-after-capture",
+      "page": "/history/emma-relief-society.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 2474
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "A",
+        "id": "",
+        "className": "fc-search-trigger"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story5-testimony-review-320-normal-before-tab",
+      "page": "/history/emma-last-testimony.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "BODY",
+        "id": "",
+        "className": "fc-site fc-life-story fc-emma-study"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story5-testimony-review-320-pointer-reading",
+      "page": "/history/emma-last-testimony.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "A",
+        "id": "",
+        "className": "fc-search-trigger"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story5-testimony-review-320-artwork-box",
+      "page": "history/emma-last-testimony.html",
+      "artwork": {
+        "x": 17,
+        "y": 354.171875,
+        "width": 286,
+        "height": 190.8125,
+        "right": 303,
+        "bottom": 544.984375,
+        "viewportWidth": 320,
+        "viewportHeight": 900
+      }
+    },
+    {
+      "label": "emma-story5-testimony-review-320-artwork-viewport",
+      "page": "/history/emma-last-testimony.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 3579
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "A",
+        "id": "",
+        "className": "fc-search-trigger"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "emma-story5-testimony-review-320-after-capture",
+      "page": "/history/emma-last-testimony.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 3579
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "A",
+        "id": "",
+        "className": "fc-search-trigger"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "keyboard-1280-before-tab",
+      "page": "/history/emma-hymns.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "BODY",
+        "id": "",
+        "className": "fc-site fc-life-story fc-emma-study"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "keyboard-1280-focused",
+      "page": "/history/emma-hymns.html",
+      "rect": {
+        "x": 14,
+        "y": 2.8677101135253906,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": 49.35208511352539
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": true,
+      "activeElement": {
+        "tag": "A",
+        "id": "",
+        "className": "fc-skip-link"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -7.13229)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "solid",
+        "width": "3px"
+      },
+      "intersects": true,
+      "href": "#main-content"
+    },
+    {
+      "label": "keyboard-1280-after-enter",
+      "page": "/history/emma-hymns.html",
+      "rect": {
+        "x": 14,
+        "y": -53.83518981933594,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -7.3508148193359375
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "MAIN",
+        "id": "main-content",
+        "className": ""
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -63.8352)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "keyboard-390-before-tab",
+      "page": "/history/emma-hymns.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "BODY",
+        "id": "",
+        "className": "fc-site fc-life-story fc-emma-study"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "keyboard-390-focused",
+      "page": "/history/emma-hymns.html",
+      "rect": {
+        "x": 14,
+        "y": 2.8858399391174316,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": 49.37021493911743
+      },
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": true,
+      "activeElement": {
+        "tag": "A",
+        "id": "",
+        "className": "fc-skip-link"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -7.11416)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "solid",
+        "width": "3px"
+      },
+      "intersects": true,
+      "href": "#main-content"
+    },
+    {
+      "label": "keyboard-390-after-enter",
+      "page": "/history/emma-hymns.html",
+      "rect": {
+        "x": 14,
+        "y": -54.071624755859375,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -7.587249755859375
+      },
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 46
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "MAIN",
+        "id": "main-content",
+        "className": ""
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -64.0716)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "keyboard-320-before-tab",
+      "page": "/history/emma-hymns.html",
+      "rect": {
+        "x": 14,
+        "y": -73.671875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -27.1875
+      },
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "BODY",
+        "id": "",
+        "className": "fc-site fc-life-story fc-emma-study"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -83.6719)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    },
+    {
+      "label": "keyboard-320-focused",
+      "page": "/history/emma-hymns.html",
+      "rect": {
+        "x": 14,
+        "y": 2.8868751525878906,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": 49.37125015258789
+      },
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 0
+      },
+      "focused": true,
+      "activeElement": {
+        "tag": "A",
+        "id": "",
+        "className": "fc-skip-link"
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -7.11312)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "solid",
+        "width": "3px"
+      },
+      "intersects": true,
+      "href": "#main-content"
+    },
+    {
+      "label": "keyboard-320-after-enter",
+      "page": "/history/emma-hymns.html",
+      "rect": {
+        "x": 14,
+        "y": -54.071502685546875,
+        "width": 171.53125,
+        "height": 46.484375,
+        "right": 185.53125,
+        "bottom": -7.587127685546875
+      },
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 46
+      },
+      "focused": false,
+      "activeElement": {
+        "tag": "MAIN",
+        "id": "main-content",
+        "className": ""
+      },
+      "transform": "matrix(1, 0, 0, 1, 0, -64.0715)",
+      "position": "fixed",
+      "display": "block",
+      "visibility": "visible",
+      "opacity": "1",
+      "outline": {
+        "style": "none",
+        "width": "0px"
+      },
+      "intersects": false,
+      "href": "#main-content"
+    }
+  ],
+  "headerEvidence": [
+    {
+      "page": "history/emma-elect-lady.html",
+      "width": 1280,
+      "label": "normal-header",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 52,
+        "width": 1280,
+        "height": 52
+      },
+      "display": "grid",
+      "position": "fixed",
+      "backgroundImage": "linear-gradient(rgb(10, 28, 37) 0%, rgb(16, 43, 54) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "logoDecoration": "none",
+      "logoSpacing": "2px",
+      "linksDisplay": "grid",
+      "controls": [
+        {
+          "selector": ".nav-logo",
+          "x": 28,
+          "y": 17.34375,
+          "right": 137.609375,
+          "bottom": 40.140625,
+          "width": 109.609375,
+          "height": 22.796875,
+          "display": "block",
+          "visibility": "visible",
+          "hit": true
+        },
+        {
+          "selector": ".fc-search-trigger[data-site-search-trigger]",
+          "x": 1120.625,
+          "y": 6.75,
+          "right": 1208,
+          "bottom": 50.75,
+          "width": 87.375,
+          "height": 44,
+          "display": "flex",
+          "visibility": "visible",
+          "hit": true
+        },
+        {
+          "selector": ".hamburger",
+          "x": 1222,
+          "y": 8.75,
+          "right": 1262,
+          "bottom": 48.75,
+          "width": 40,
+          "height": 40,
+          "display": "block",
+          "visibility": "visible",
+          "hit": true
+        }
+      ]
+    },
+    {
+      "page": "history/emma-hymns.html",
+      "width": 1280,
+      "label": "normal-header",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 52,
+        "width": 1280,
+        "height": 52
+      },
+      "display": "grid",
+      "position": "fixed",
+      "backgroundImage": "linear-gradient(rgb(10, 28, 37) 0%, rgb(16, 43, 54) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "logoDecoration": "none",
+      "logoSpacing": "2px",
+      "linksDisplay": "grid",
+      "controls": [
+        {
+          "selector": ".nav-logo",
+          "x": 28,
+          "y": 17.34375,
+          "right": 137.609375,
+          "bottom": 40.140625,
+          "width": 109.609375,
+          "height": 22.796875,
+          "display": "block",
+          "visibility": "visible",
+          "hit": true
+        },
+        {
+          "selector": ".fc-search-trigger[data-site-search-trigger]",
+          "x": 1120.625,
+          "y": 6.75,
+          "right": 1208,
+          "bottom": 50.75,
+          "width": 87.375,
+          "height": 44,
+          "display": "flex",
+          "visibility": "visible",
+          "hit": true
+        },
+        {
+          "selector": ".hamburger",
+          "x": 1222,
+          "y": 8.75,
+          "right": 1262,
+          "bottom": 48.75,
+          "width": 40,
+          "height": 40,
+          "display": "block",
+          "visibility": "visible",
+          "hit": true
+        }
+      ]
+    },
+    {
+      "page": "history/emma-winter-crossing.html",
+      "width": 1280,
+      "label": "normal-header",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 52,
+        "width": 1280,
+        "height": 52
+      },
+      "display": "grid",
+      "position": "fixed",
+      "backgroundImage": "linear-gradient(rgb(10, 28, 37) 0%, rgb(16, 43, 54) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "logoDecoration": "none",
+      "logoSpacing": "2px",
+      "linksDisplay": "grid",
+      "controls": [
+        {
+          "selector": ".nav-logo",
+          "x": 28,
+          "y": 17.34375,
+          "right": 137.609375,
+          "bottom": 40.140625,
+          "width": 109.609375,
+          "height": 22.796875,
+          "display": "block",
+          "visibility": "visible",
+          "hit": true
+        },
+        {
+          "selector": ".fc-search-trigger[data-site-search-trigger]",
+          "x": 1120.625,
+          "y": 6.75,
+          "right": 1208,
+          "bottom": 50.75,
+          "width": 87.375,
+          "height": 44,
+          "display": "flex",
+          "visibility": "visible",
+          "hit": true
+        },
+        {
+          "selector": ".hamburger",
+          "x": 1222,
+          "y": 8.75,
+          "right": 1262,
+          "bottom": 48.75,
+          "width": 40,
+          "height": 40,
+          "display": "block",
+          "visibility": "visible",
+          "hit": true
+        }
+      ]
+    },
+    {
+      "page": "history/emma-relief-society.html",
+      "width": 1280,
+      "label": "normal-header",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 52,
+        "width": 1280,
+        "height": 52
+      },
+      "display": "grid",
+      "position": "fixed",
+      "backgroundImage": "linear-gradient(rgb(10, 28, 37) 0%, rgb(16, 43, 54) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "logoDecoration": "none",
+      "logoSpacing": "2px",
+      "linksDisplay": "grid",
+      "controls": [
+        {
+          "selector": ".nav-logo",
+          "x": 28,
+          "y": 17.34375,
+          "right": 137.609375,
+          "bottom": 40.140625,
+          "width": 109.609375,
+          "height": 22.796875,
+          "display": "block",
+          "visibility": "visible",
+          "hit": true
+        },
+        {
+          "selector": ".fc-search-trigger[data-site-search-trigger]",
+          "x": 1120.625,
+          "y": 6.75,
+          "right": 1208,
+          "bottom": 50.75,
+          "width": 87.375,
+          "height": 44,
+          "display": "flex",
+          "visibility": "visible",
+          "hit": true
+        },
+        {
+          "selector": ".hamburger",
+          "x": 1222,
+          "y": 8.75,
+          "right": 1262,
+          "bottom": 48.75,
+          "width": 40,
+          "height": 40,
+          "display": "block",
+          "visibility": "visible",
+          "hit": true
+        }
+      ]
+    },
+    {
+      "page": "history/emma-last-testimony.html",
+      "width": 1280,
+      "label": "normal-header",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "right": 1280,
+        "bottom": 52,
+        "width": 1280,
+        "height": 52
+      },
+      "display": "grid",
+      "position": "fixed",
+      "backgroundImage": "linear-gradient(rgb(10, 28, 37) 0%, rgb(16, 43, 54) 100%)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "logoDecoration": "none",
+      "logoSpacing": "2px",
+      "linksDisplay": "grid",
+      "controls": [
+        {
+          "selector": ".nav-logo",
+          "x": 28,
+          "y": 17.34375,
+          "right": 137.609375,
+          "bottom": 40.140625,
+          "width": 109.609375,
+          "height": 22.796875,
+          "display": "block",
+          "visibility": "visible",
+          "hit": true
+        },
+        {
+          "selector": ".fc-search-trigger[data-site-search-trigger]",
+          "x": 1120.625,
+          "y": 6.75,
+          "right": 1208,
+          "bottom": 50.75,
+          "width": 87.375,
+          "height": 44,
+          "display": "flex",
+          "visibility": "visible",
+          "hit": true
+        },
+        {
+          "selector": ".hamburger",
+          "x": 1222,
+          "y": 8.75,
+          "right": 1262,
+          "bottom": 48.75,
+          "width": 40,
+          "height": 40,
+          "display": "block",
+          "visibility": "visible",
+          "hit": true
+        }
+      ]
+    },
+    {
+      "page": "history/emma-elect-lady.html",
+      "width": 390,
+      "label": "normal-header",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 62,
+        "width": 390,
+        "height": 62
+      },
+      "display": "flex",
+      "position": "relative",
+      "backgroundImage": "none",
+      "backgroundColor": "rgb(16, 43, 54)",
+      "logoDecoration": "none",
+      "logoSpacing": "4px",
+      "linksDisplay": "none",
+      "controls": [
+        {
+          "selector": ".nav-logo",
+          "x": 20,
+          "y": 17.546875,
+          "right": 163.578125,
+          "bottom": 43.453125,
+          "width": 143.578125,
+          "height": 25.90625,
+          "display": "block",
+          "visibility": "visible",
+          "hit": true
+        },
+        {
+          "selector": ".fc-search-trigger[data-site-search-trigger]",
+          "x": 296,
+          "y": 8.5,
+          "right": 340,
+          "bottom": 52.5,
+          "width": 44,
+          "height": 44,
+          "display": "flex",
+          "visibility": "visible",
+          "hit": true
+        },
+        {
+          "selector": ".hamburger",
+          "x": 340,
+          "y": 10.5,
+          "right": 380,
+          "bottom": 50.5,
+          "width": 40,
+          "height": 40,
+          "display": "block",
+          "visibility": "visible",
+          "hit": true
+        }
+      ]
+    },
+    {
+      "page": "history/emma-elect-lady.html",
+      "width": 390,
+      "label": "menu-keyboard-search-close",
+      "pass": true,
+      "searchSubmitted": false
+    },
+    {
+      "page": "history/emma-hymns.html",
+      "width": 390,
+      "label": "normal-header",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 62,
+        "width": 390,
+        "height": 62
+      },
+      "display": "flex",
+      "position": "relative",
+      "backgroundImage": "none",
+      "backgroundColor": "rgb(16, 43, 54)",
+      "logoDecoration": "none",
+      "logoSpacing": "4px",
+      "linksDisplay": "none",
+      "controls": [
+        {
+          "selector": ".nav-logo",
+          "x": 20,
+          "y": 17.546875,
+          "right": 163.578125,
+          "bottom": 43.453125,
+          "width": 143.578125,
+          "height": 25.90625,
+          "display": "block",
+          "visibility": "visible",
+          "hit": true
+        },
+        {
+          "selector": ".fc-search-trigger[data-site-search-trigger]",
+          "x": 296,
+          "y": 8.5,
+          "right": 340,
+          "bottom": 52.5,
+          "width": 44,
+          "height": 44,
+          "display": "flex",
+          "visibility": "visible",
+          "hit": true
+        },
+        {
+          "selector": ".hamburger",
+          "x": 340,
+          "y": 10.5,
+          "right": 380,
+          "bottom": 50.5,
+          "width": 40,
+          "height": 40,
+          "display": "block",
+          "visibility": "visible",
+          "hit": true
+        }
+      ]
+    },
+    {
+      "page": "history/emma-hymns.html",
+      "width": 390,
+      "label": "menu-keyboard-search-close",
+      "pass": true,
+      "searchSubmitted": false
+    },
+    {
+      "page": "history/emma-winter-crossing.html",
+      "width": 390,
+      "label": "normal-header",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 62,
+        "width": 390,
+        "height": 62
+      },
+      "display": "flex",
+      "position": "relative",
+      "backgroundImage": "none",
+      "backgroundColor": "rgb(16, 43, 54)",
+      "logoDecoration": "none",
+      "logoSpacing": "4px",
+      "linksDisplay": "none",
+      "controls": [
+        {
+          "selector": ".nav-logo",
+          "x": 20,
+          "y": 17.546875,
+          "right": 163.578125,
+          "bottom": 43.453125,
+          "width": 143.578125,
+          "height": 25.90625,
+          "display": "block",
+          "visibility": "visible",
+          "hit": true
+        },
+        {
+          "selector": ".fc-search-trigger[data-site-search-trigger]",
+          "x": 296,
+          "y": 8.5,
+          "right": 340,
+          "bottom": 52.5,
+          "width": 44,
+          "height": 44,
+          "display": "flex",
+          "visibility": "visible",
+          "hit": true
+        },
+        {
+          "selector": ".hamburger",
+          "x": 340,
+          "y": 10.5,
+          "right": 380,
+          "bottom": 50.5,
+          "width": 40,
+          "height": 40,
+          "display": "block",
+          "visibility": "visible",
+          "hit": true
+        }
+      ]
+    },
+    {
+      "page": "history/emma-winter-crossing.html",
+      "width": 390,
+      "label": "menu-keyboard-search-close",
+      "pass": true,
+      "searchSubmitted": false
+    },
+    {
+      "page": "history/emma-relief-society.html",
+      "width": 390,
+      "label": "normal-header",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 62,
+        "width": 390,
+        "height": 62
+      },
+      "display": "flex",
+      "position": "relative",
+      "backgroundImage": "none",
+      "backgroundColor": "rgb(16, 43, 54)",
+      "logoDecoration": "none",
+      "logoSpacing": "4px",
+      "linksDisplay": "none",
+      "controls": [
+        {
+          "selector": ".nav-logo",
+          "x": 20,
+          "y": 17.546875,
+          "right": 163.578125,
+          "bottom": 43.453125,
+          "width": 143.578125,
+          "height": 25.90625,
+          "display": "block",
+          "visibility": "visible",
+          "hit": true
+        },
+        {
+          "selector": ".fc-search-trigger[data-site-search-trigger]",
+          "x": 296,
+          "y": 8.5,
+          "right": 340,
+          "bottom": 52.5,
+          "width": 44,
+          "height": 44,
+          "display": "flex",
+          "visibility": "visible",
+          "hit": true
+        },
+        {
+          "selector": ".hamburger",
+          "x": 340,
+          "y": 10.5,
+          "right": 380,
+          "bottom": 50.5,
+          "width": 40,
+          "height": 40,
+          "display": "block",
+          "visibility": "visible",
+          "hit": true
+        }
+      ]
+    },
+    {
+      "page": "history/emma-relief-society.html",
+      "width": 390,
+      "label": "menu-keyboard-search-close",
+      "pass": true,
+      "searchSubmitted": false
+    },
+    {
+      "page": "history/emma-last-testimony.html",
+      "width": 390,
+      "label": "normal-header",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 62,
+        "width": 390,
+        "height": 62
+      },
+      "display": "flex",
+      "position": "relative",
+      "backgroundImage": "none",
+      "backgroundColor": "rgb(16, 43, 54)",
+      "logoDecoration": "none",
+      "logoSpacing": "4px",
+      "linksDisplay": "none",
+      "controls": [
+        {
+          "selector": ".nav-logo",
+          "x": 20,
+          "y": 17.546875,
+          "right": 163.578125,
+          "bottom": 43.453125,
+          "width": 143.578125,
+          "height": 25.90625,
+          "display": "block",
+          "visibility": "visible",
+          "hit": true
+        },
+        {
+          "selector": ".fc-search-trigger[data-site-search-trigger]",
+          "x": 296,
+          "y": 8.5,
+          "right": 340,
+          "bottom": 52.5,
+          "width": 44,
+          "height": 44,
+          "display": "flex",
+          "visibility": "visible",
+          "hit": true
+        },
+        {
+          "selector": ".hamburger",
+          "x": 340,
+          "y": 10.5,
+          "right": 380,
+          "bottom": 50.5,
+          "width": 40,
+          "height": 40,
+          "display": "block",
+          "visibility": "visible",
+          "hit": true
+        }
+      ]
+    },
+    {
+      "page": "history/emma-last-testimony.html",
+      "width": 390,
+      "label": "menu-keyboard-search-close",
+      "pass": true,
+      "searchSubmitted": false
+    },
+    {
+      "page": "history/emma-elect-lady.html",
+      "width": 320,
+      "label": "normal-header",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "right": 320,
+        "bottom": 62,
+        "width": 320,
+        "height": 62
+      },
+      "display": "flex",
+      "position": "relative",
+      "backgroundImage": "none",
+      "backgroundColor": "rgb(16, 43, 54)",
+      "logoDecoration": "none",
+      "logoSpacing": "4px",
+      "linksDisplay": "none",
+      "controls": [
+        {
+          "selector": ".nav-logo",
+          "x": 20,
+          "y": 17.546875,
+          "right": 163.578125,
+          "bottom": 43.453125,
+          "width": 143.578125,
+          "height": 25.90625,
+          "display": "block",
+          "visibility": "visible",
+          "hit": true
+        },
+        {
+          "selector": ".fc-search-trigger[data-site-search-trigger]",
+          "x": 226,
+          "y": 8.5,
+          "right": 270,
+          "bottom": 52.5,
+          "width": 44,
+          "height": 44,
+          "display": "flex",
+          "visibility": "visible",
+          "hit": true
+        },
+        {
+          "selector": ".hamburger",
+          "x": 270,
+          "y": 10.5,
+          "right": 310,
+          "bottom": 50.5,
+          "width": 40,
+          "height": 40,
+          "display": "block",
+          "visibility": "visible",
+          "hit": true
+        }
+      ]
+    },
+    {
+      "page": "history/emma-elect-lady.html",
+      "width": 320,
+      "label": "menu-keyboard-search-close",
+      "pass": true,
+      "searchSubmitted": false
+    },
+    {
+      "page": "history/emma-hymns.html",
+      "width": 320,
+      "label": "normal-header",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "right": 320,
+        "bottom": 62,
+        "width": 320,
+        "height": 62
+      },
+      "display": "flex",
+      "position": "relative",
+      "backgroundImage": "none",
+      "backgroundColor": "rgb(16, 43, 54)",
+      "logoDecoration": "none",
+      "logoSpacing": "4px",
+      "linksDisplay": "none",
+      "controls": [
+        {
+          "selector": ".nav-logo",
+          "x": 20,
+          "y": 17.546875,
+          "right": 163.578125,
+          "bottom": 43.453125,
+          "width": 143.578125,
+          "height": 25.90625,
+          "display": "block",
+          "visibility": "visible",
+          "hit": true
+        },
+        {
+          "selector": ".fc-search-trigger[data-site-search-trigger]",
+          "x": 226,
+          "y": 8.5,
+          "right": 270,
+          "bottom": 52.5,
+          "width": 44,
+          "height": 44,
+          "display": "flex",
+          "visibility": "visible",
+          "hit": true
+        },
+        {
+          "selector": ".hamburger",
+          "x": 270,
+          "y": 10.5,
+          "right": 310,
+          "bottom": 50.5,
+          "width": 40,
+          "height": 40,
+          "display": "block",
+          "visibility": "visible",
+          "hit": true
+        }
+      ]
+    },
+    {
+      "page": "history/emma-hymns.html",
+      "width": 320,
+      "label": "menu-keyboard-search-close",
+      "pass": true,
+      "searchSubmitted": false
+    },
+    {
+      "page": "history/emma-winter-crossing.html",
+      "width": 320,
+      "label": "normal-header",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "right": 320,
+        "bottom": 62,
+        "width": 320,
+        "height": 62
+      },
+      "display": "flex",
+      "position": "relative",
+      "backgroundImage": "none",
+      "backgroundColor": "rgb(16, 43, 54)",
+      "logoDecoration": "none",
+      "logoSpacing": "4px",
+      "linksDisplay": "none",
+      "controls": [
+        {
+          "selector": ".nav-logo",
+          "x": 20,
+          "y": 17.546875,
+          "right": 163.578125,
+          "bottom": 43.453125,
+          "width": 143.578125,
+          "height": 25.90625,
+          "display": "block",
+          "visibility": "visible",
+          "hit": true
+        },
+        {
+          "selector": ".fc-search-trigger[data-site-search-trigger]",
+          "x": 226,
+          "y": 8.5,
+          "right": 270,
+          "bottom": 52.5,
+          "width": 44,
+          "height": 44,
+          "display": "flex",
+          "visibility": "visible",
+          "hit": true
+        },
+        {
+          "selector": ".hamburger",
+          "x": 270,
+          "y": 10.5,
+          "right": 310,
+          "bottom": 50.5,
+          "width": 40,
+          "height": 40,
+          "display": "block",
+          "visibility": "visible",
+          "hit": true
+        }
+      ]
+    },
+    {
+      "page": "history/emma-winter-crossing.html",
+      "width": 320,
+      "label": "menu-keyboard-search-close",
+      "pass": true,
+      "searchSubmitted": false
+    },
+    {
+      "page": "history/emma-relief-society.html",
+      "width": 320,
+      "label": "normal-header",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "right": 320,
+        "bottom": 62,
+        "width": 320,
+        "height": 62
+      },
+      "display": "flex",
+      "position": "relative",
+      "backgroundImage": "none",
+      "backgroundColor": "rgb(16, 43, 54)",
+      "logoDecoration": "none",
+      "logoSpacing": "4px",
+      "linksDisplay": "none",
+      "controls": [
+        {
+          "selector": ".nav-logo",
+          "x": 20,
+          "y": 17.546875,
+          "right": 163.578125,
+          "bottom": 43.453125,
+          "width": 143.578125,
+          "height": 25.90625,
+          "display": "block",
+          "visibility": "visible",
+          "hit": true
+        },
+        {
+          "selector": ".fc-search-trigger[data-site-search-trigger]",
+          "x": 226,
+          "y": 8.5,
+          "right": 270,
+          "bottom": 52.5,
+          "width": 44,
+          "height": 44,
+          "display": "flex",
+          "visibility": "visible",
+          "hit": true
+        },
+        {
+          "selector": ".hamburger",
+          "x": 270,
+          "y": 10.5,
+          "right": 310,
+          "bottom": 50.5,
+          "width": 40,
+          "height": 40,
+          "display": "block",
+          "visibility": "visible",
+          "hit": true
+        }
+      ]
+    },
+    {
+      "page": "history/emma-relief-society.html",
+      "width": 320,
+      "label": "menu-keyboard-search-close",
+      "pass": true,
+      "searchSubmitted": false
+    },
+    {
+      "page": "history/emma-last-testimony.html",
+      "width": 320,
+      "label": "normal-header",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "right": 320,
+        "bottom": 62,
+        "width": 320,
+        "height": 62
+      },
+      "display": "flex",
+      "position": "relative",
+      "backgroundImage": "none",
+      "backgroundColor": "rgb(16, 43, 54)",
+      "logoDecoration": "none",
+      "logoSpacing": "4px",
+      "linksDisplay": "none",
+      "controls": [
+        {
+          "selector": ".nav-logo",
+          "x": 20,
+          "y": 17.546875,
+          "right": 163.578125,
+          "bottom": 43.453125,
+          "width": 143.578125,
+          "height": 25.90625,
+          "display": "block",
+          "visibility": "visible",
+          "hit": true
+        },
+        {
+          "selector": ".fc-search-trigger[data-site-search-trigger]",
+          "x": 226,
+          "y": 8.5,
+          "right": 270,
+          "bottom": 52.5,
+          "width": 44,
+          "height": 44,
+          "display": "flex",
+          "visibility": "visible",
+          "hit": true
+        },
+        {
+          "selector": ".hamburger",
+          "x": 270,
+          "y": 10.5,
+          "right": 310,
+          "bottom": 50.5,
+          "width": 40,
+          "height": 40,
+          "display": "block",
+          "visibility": "visible",
+          "hit": true
+        }
+      ]
+    },
+    {
+      "page": "history/emma-last-testimony.html",
+      "width": 320,
+      "label": "menu-keyboard-search-close",
+      "pass": true,
+      "searchSubmitted": false
+    }
+  ],
+  "footerEvidence": [
+    {
+      "page": "history/emma-elect-lady.html",
+      "width": 1280,
+      "footer": {
+        "x": 0,
+        "y": 559.203125,
+        "right": 1280,
+        "bottom": 899.796875,
+        "width": 1280,
+        "height": 340.59375,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independence": {
+        "x": 180,
+        "y": 695.171875,
+        "right": 1100,
+        "bottom": 738.484375,
+        "width": 920,
+        "height": 43.3125,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "artwork": {
+        "x": 180,
+        "y": 746.484375,
+        "right": 1100,
+        "bottom": 789.796875,
+        "width": 920,
+        "height": 43.3125,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independenceCount": 1,
+      "artworkCount": 1,
+      "independenceText": "focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit ChurchofJesusChrist.org.",
+      "artworkText": "Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.",
+      "adjacent": true,
+      "official": {
+        "href": "https://www.churchofjesuschrist.org/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "label": "ChurchofJesusChrist.org"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 2385
+      }
+    },
+    {
+      "page": "history/emma-hymns.html",
+      "width": 1280,
+      "footer": {
+        "x": 0,
+        "y": 559.1875,
+        "right": 1280,
+        "bottom": 899.78125,
+        "width": 1280,
+        "height": 340.59375,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independence": {
+        "x": 180,
+        "y": 695.15625,
+        "right": 1100,
+        "bottom": 738.46875,
+        "width": 920,
+        "height": 43.3125,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "artwork": {
+        "x": 180,
+        "y": 746.46875,
+        "right": 1100,
+        "bottom": 789.78125,
+        "width": 920,
+        "height": 43.3125,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independenceCount": 1,
+      "artworkCount": 1,
+      "independenceText": "focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit ChurchofJesusChrist.org.",
+      "artworkText": "Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.",
+      "adjacent": true,
+      "official": {
+        "href": "https://www.churchofjesuschrist.org/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "label": "ChurchofJesusChrist.org"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 2411
+      }
+    },
+    {
+      "page": "history/emma-winter-crossing.html",
+      "width": 1280,
+      "footer": {
+        "x": 0,
+        "y": 558.96875,
+        "right": 1280,
+        "bottom": 899.5625,
+        "width": 1280,
+        "height": 340.59375,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independence": {
+        "x": 180,
+        "y": 694.9375,
+        "right": 1100,
+        "bottom": 738.25,
+        "width": 920,
+        "height": 43.3125,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "artwork": {
+        "x": 180,
+        "y": 746.25,
+        "right": 1100,
+        "bottom": 789.5625,
+        "width": 920,
+        "height": 43.3125,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independenceCount": 1,
+      "artworkCount": 1,
+      "independenceText": "focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit ChurchofJesusChrist.org.",
+      "artworkText": "Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.",
+      "adjacent": true,
+      "official": {
+        "href": "https://www.churchofjesuschrist.org/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "label": "ChurchofJesusChrist.org"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 2353
+      }
+    },
+    {
+      "page": "history/emma-relief-society.html",
+      "width": 1280,
+      "footer": {
+        "x": 0,
+        "y": 559.375,
+        "right": 1280,
+        "bottom": 899.96875,
+        "width": 1280,
+        "height": 340.59375,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independence": {
+        "x": 180,
+        "y": 695.34375,
+        "right": 1100,
+        "bottom": 738.65625,
+        "width": 920,
+        "height": 43.3125,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "artwork": {
+        "x": 180,
+        "y": 746.65625,
+        "right": 1100,
+        "bottom": 789.96875,
+        "width": 920,
+        "height": 43.3125,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independenceCount": 1,
+      "artworkCount": 1,
+      "independenceText": "focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit ChurchofJesusChrist.org.",
+      "artworkText": "Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.",
+      "adjacent": true,
+      "official": {
+        "href": "https://www.churchofjesuschrist.org/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "label": "ChurchofJesusChrist.org"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 2470
+      }
+    },
+    {
+      "page": "history/emma-last-testimony.html",
+      "width": 1280,
+      "footer": {
+        "x": 0,
+        "y": 558.953125,
+        "right": 1280,
+        "bottom": 899.546875,
+        "width": 1280,
+        "height": 340.59375,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independence": {
+        "x": 180,
+        "y": 694.921875,
+        "right": 1100,
+        "bottom": 738.234375,
+        "width": 920,
+        "height": 43.3125,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "artwork": {
+        "x": 180,
+        "y": 746.234375,
+        "right": 1100,
+        "bottom": 789.546875,
+        "width": 920,
+        "height": 43.3125,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independenceCount": 1,
+      "artworkCount": 1,
+      "independenceText": "focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit ChurchofJesusChrist.org.",
+      "artworkText": "Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.",
+      "adjacent": true,
+      "official": {
+        "href": "https://www.churchofjesuschrist.org/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "label": "ChurchofJesusChrist.org"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 2715
+      }
+    },
+    {
+      "page": "history/emma-elect-lady.html",
+      "width": 390,
+      "footer": {
+        "x": 0,
+        "y": 473.109375,
+        "right": 390,
+        "bottom": 900.328125,
+        "width": 390,
+        "height": 427.21875,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independence": {
+        "x": 20,
+        "y": 609.078125,
+        "right": 370,
+        "bottom": 695.703125,
+        "width": 350,
+        "height": 86.625,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "artwork": {
+        "x": 20,
+        "y": 703.703125,
+        "right": 370,
+        "bottom": 790.328125,
+        "width": 350,
+        "height": 86.625,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independenceCount": 1,
+      "artworkCount": 1,
+      "independenceText": "focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit ChurchofJesusChrist.org.",
+      "artworkText": "Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.",
+      "adjacent": true,
+      "official": {
+        "href": "https://www.churchofjesuschrist.org/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "label": "ChurchofJesusChrist.org"
+      },
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 3691
+      }
+    },
+    {
+      "page": "history/emma-hymns.html",
+      "width": 390,
+      "footer": {
+        "x": 0,
+        "y": 472.640625,
+        "right": 390,
+        "bottom": 899.859375,
+        "width": 390,
+        "height": 427.21875,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independence": {
+        "x": 20,
+        "y": 608.609375,
+        "right": 370,
+        "bottom": 695.234375,
+        "width": 350,
+        "height": 86.625,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "artwork": {
+        "x": 20,
+        "y": 703.234375,
+        "right": 370,
+        "bottom": 789.859375,
+        "width": 350,
+        "height": 86.625,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independenceCount": 1,
+      "artworkCount": 1,
+      "independenceText": "focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit ChurchofJesusChrist.org.",
+      "artworkText": "Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.",
+      "adjacent": true,
+      "official": {
+        "href": "https://www.churchofjesuschrist.org/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "label": "ChurchofJesusChrist.org"
+      },
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 3815
+      }
+    },
+    {
+      "page": "history/emma-winter-crossing.html",
+      "width": 390,
+      "footer": {
+        "x": 0,
+        "y": 472.484375,
+        "right": 390,
+        "bottom": 899.703125,
+        "width": 390,
+        "height": 427.21875,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independence": {
+        "x": 20,
+        "y": 608.453125,
+        "right": 370,
+        "bottom": 695.078125,
+        "width": 350,
+        "height": 86.625,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "artwork": {
+        "x": 20,
+        "y": 703.078125,
+        "right": 370,
+        "bottom": 789.703125,
+        "width": 350,
+        "height": 86.625,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independenceCount": 1,
+      "artworkCount": 1,
+      "independenceText": "focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit ChurchofJesusChrist.org.",
+      "artworkText": "Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.",
+      "adjacent": true,
+      "official": {
+        "href": "https://www.churchofjesuschrist.org/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "label": "ChurchofJesusChrist.org"
+      },
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 3635
+      }
+    },
+    {
+      "page": "history/emma-relief-society.html",
+      "width": 390,
+      "footer": {
+        "x": 0,
+        "y": 472.796875,
+        "right": 390,
+        "bottom": 900.015625,
+        "width": 390,
+        "height": 427.21875,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independence": {
+        "x": 20,
+        "y": 608.765625,
+        "right": 370,
+        "bottom": 695.390625,
+        "width": 350,
+        "height": 86.625,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "artwork": {
+        "x": 20,
+        "y": 703.390625,
+        "right": 370,
+        "bottom": 790.015625,
+        "width": 350,
+        "height": 86.625,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independenceCount": 1,
+      "artworkCount": 1,
+      "independenceText": "focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit ChurchofJesusChrist.org.",
+      "artworkText": "Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.",
+      "adjacent": true,
+      "official": {
+        "href": "https://www.churchofjesuschrist.org/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "label": "ChurchofJesusChrist.org"
+      },
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 4085
+      }
+    },
+    {
+      "page": "history/emma-last-testimony.html",
+      "width": 390,
+      "footer": {
+        "x": 0,
+        "y": 472.4375,
+        "right": 390,
+        "bottom": 899.65625,
+        "width": 390,
+        "height": 427.21875,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independence": {
+        "x": 20,
+        "y": 608.40625,
+        "right": 370,
+        "bottom": 695.03125,
+        "width": 350,
+        "height": 86.625,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "artwork": {
+        "x": 20,
+        "y": 703.03125,
+        "right": 370,
+        "bottom": 789.65625,
+        "width": 350,
+        "height": 86.625,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independenceCount": 1,
+      "artworkCount": 1,
+      "independenceText": "focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit ChurchofJesusChrist.org.",
+      "artworkText": "Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.",
+      "adjacent": true,
+      "official": {
+        "href": "https://www.churchofjesuschrist.org/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "label": "ChurchofJesusChrist.org"
+      },
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 4248
+      }
+    },
+    {
+      "page": "history/emma-elect-lady.html",
+      "width": 320,
+      "footer": {
+        "x": 0,
+        "y": 407.3125,
+        "right": 320,
+        "bottom": 899.5,
+        "width": 320,
+        "height": 492.1875,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independence": {
+        "x": 20,
+        "y": 543.28125,
+        "right": 300,
+        "bottom": 673.21875,
+        "width": 280,
+        "height": 129.9375,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "artwork": {
+        "x": 20,
+        "y": 681.21875,
+        "right": 300,
+        "bottom": 789.5,
+        "width": 280,
+        "height": 108.28125,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independenceCount": 1,
+      "artworkCount": 1,
+      "independenceText": "focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit ChurchofJesusChrist.org.",
+      "artworkText": "Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.",
+      "adjacent": true,
+      "official": {
+        "href": "https://www.churchofjesuschrist.org/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "label": "ChurchofJesusChrist.org"
+      },
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 4405
+      }
+    },
+    {
+      "page": "history/emma-hymns.html",
+      "width": 320,
+      "footer": {
+        "x": 0,
+        "y": 407.8125,
+        "right": 320,
+        "bottom": 900,
+        "width": 320,
+        "height": 492.1875,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independence": {
+        "x": 20,
+        "y": 543.78125,
+        "right": 300,
+        "bottom": 673.71875,
+        "width": 280,
+        "height": 129.9375,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "artwork": {
+        "x": 20,
+        "y": 681.71875,
+        "right": 300,
+        "bottom": 790,
+        "width": 280,
+        "height": 108.28125,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independenceCount": 1,
+      "artworkCount": 1,
+      "independenceText": "focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit ChurchofJesusChrist.org.",
+      "artworkText": "Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.",
+      "adjacent": true,
+      "official": {
+        "href": "https://www.churchofjesuschrist.org/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "label": "ChurchofJesusChrist.org"
+      },
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 4349
+      }
+    },
+    {
+      "page": "history/emma-winter-crossing.html",
+      "width": 320,
+      "footer": {
+        "x": 0,
+        "y": 407.78125,
+        "right": 320,
+        "bottom": 899.96875,
+        "width": 320,
+        "height": 492.1875,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independence": {
+        "x": 20,
+        "y": 543.75,
+        "right": 300,
+        "bottom": 673.6875,
+        "width": 280,
+        "height": 129.9375,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "artwork": {
+        "x": 20,
+        "y": 681.6875,
+        "right": 300,
+        "bottom": 789.96875,
+        "width": 280,
+        "height": 108.28125,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independenceCount": 1,
+      "artworkCount": 1,
+      "independenceText": "focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit ChurchofJesusChrist.org.",
+      "artworkText": "Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.",
+      "adjacent": true,
+      "official": {
+        "href": "https://www.churchofjesuschrist.org/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "label": "ChurchofJesusChrist.org"
+      },
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 4217
+      }
+    },
+    {
+      "page": "history/emma-relief-society.html",
+      "width": 320,
+      "footer": {
+        "x": 0,
+        "y": 408.28125,
+        "right": 320,
+        "bottom": 900.46875,
+        "width": 320,
+        "height": 492.1875,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independence": {
+        "x": 20,
+        "y": 544.25,
+        "right": 300,
+        "bottom": 674.1875,
+        "width": 280,
+        "height": 129.9375,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "artwork": {
+        "x": 20,
+        "y": 682.1875,
+        "right": 300,
+        "bottom": 790.46875,
+        "width": 280,
+        "height": 108.28125,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independenceCount": 1,
+      "artworkCount": 1,
+      "independenceText": "focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit ChurchofJesusChrist.org.",
+      "artworkText": "Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.",
+      "adjacent": true,
+      "official": {
+        "href": "https://www.churchofjesuschrist.org/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "label": "ChurchofJesusChrist.org"
+      },
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 4865
+      }
+    },
+    {
+      "page": "history/emma-last-testimony.html",
+      "width": 320,
+      "footer": {
+        "x": 0,
+        "y": 407.796875,
+        "right": 320,
+        "bottom": 899.984375,
+        "width": 320,
+        "height": 492.1875,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independence": {
+        "x": 20,
+        "y": 543.765625,
+        "right": 300,
+        "bottom": 673.703125,
+        "width": 280,
+        "height": 129.9375,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "artwork": {
+        "x": 20,
+        "y": 681.703125,
+        "right": 300,
+        "bottom": 789.984375,
+        "width": 280,
+        "height": 108.28125,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independenceCount": 1,
+      "artworkCount": 1,
+      "independenceText": "focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit ChurchofJesusChrist.org.",
+      "artworkText": "Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.",
+      "adjacent": true,
+      "official": {
+        "href": "https://www.churchofjesuschrist.org/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "label": "ChurchofJesusChrist.org"
+      },
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 5096
+      }
+    }
+  ],
+  "shots": [
+    {
+      "file": "emma-hub-1280.png",
+      "bytes": 627489,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story1-ride-review-header-1280.jpg",
+      "bytes": 149338,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story1-ride-review-1280-viewport.jpg",
+      "bytes": 245575,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story2-hymnal-review-header-1280.jpg",
+      "bytes": 125995,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story2-hymnal-review-1280-viewport.jpg",
+      "bytes": 98284,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story3-quincy-review-header-1280.jpg",
+      "bytes": 136320,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story3-quincy-review-1280-viewport.jpg",
+      "bytes": 102168,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story4-hospitality-review-header-1280.jpg",
+      "bytes": 154056,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story4-hospitality-review-1280-viewport.jpg",
+      "bytes": 123907,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story5-testimony-review-header-1280.jpg",
+      "bytes": 136812,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story5-testimony-review-1280-viewport.jpg",
+      "bytes": 92238,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-hub-390.png",
+      "bytes": 239021,
+      "viewport": {
+        "width": 390,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story1-ride-review-header-390.jpg",
+      "bytes": 62908,
+      "viewport": {
+        "width": 390,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story1-ride-review-390-viewport.jpg",
+      "bytes": 97250,
+      "viewport": {
+        "width": 390,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story2-hymnal-review-header-390.jpg",
+      "bytes": 60038,
+      "viewport": {
+        "width": 390,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-mobile-menu-390.jpg",
+      "bytes": 45462,
+      "viewport": {
+        "width": 390,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-mobile-search-390.jpg",
+      "bytes": 32811,
+      "viewport": {
+        "width": 390,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story2-hymnal-review-390-viewport.jpg",
+      "bytes": 75553,
+      "viewport": {
+        "width": 390,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story3-quincy-review-header-390.jpg",
+      "bytes": 63276,
+      "viewport": {
+        "width": 390,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story3-quincy-review-390-viewport.jpg",
+      "bytes": 64686,
+      "viewport": {
+        "width": 390,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story4-hospitality-review-header-390.jpg",
+      "bytes": 59803,
+      "viewport": {
+        "width": 390,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story4-hospitality-review-390-viewport.jpg",
+      "bytes": 81768,
+      "viewport": {
+        "width": 390,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story5-testimony-review-header-390.jpg",
+      "bytes": 63130,
+      "viewport": {
+        "width": 390,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story5-testimony-review-390-viewport.jpg",
+      "bytes": 65187,
+      "viewport": {
+        "width": 390,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-hub-320.png",
+      "bytes": 181050,
+      "viewport": {
+        "width": 320,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story1-ride-review-header-320.jpg",
+      "bytes": 54313,
+      "viewport": {
+        "width": 320,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story1-ride-review-320-viewport.jpg",
+      "bytes": 73559,
+      "viewport": {
+        "width": 320,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story2-hymnal-review-header-320.jpg",
+      "bytes": 53544,
+      "viewport": {
+        "width": 320,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-mobile-menu-320.jpg",
+      "bytes": 32342,
+      "viewport": {
+        "width": 320,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-mobile-search-320.jpg",
+      "bytes": 28264,
+      "viewport": {
+        "width": 320,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story2-hymnal-review-320-viewport.jpg",
+      "bytes": 66298,
+      "viewport": {
+        "width": 320,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story3-quincy-review-header-320.jpg",
+      "bytes": 53757,
+      "viewport": {
+        "width": 320,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story3-quincy-review-320-viewport.jpg",
+      "bytes": 57904,
+      "viewport": {
+        "width": 320,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story4-hospitality-review-header-320.jpg",
+      "bytes": 56445,
+      "viewport": {
+        "width": 320,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story4-hospitality-review-320-viewport.jpg",
+      "bytes": 65181,
+      "viewport": {
+        "width": 320,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story5-testimony-review-header-320.jpg",
+      "bytes": 53636,
+      "viewport": {
+        "width": 320,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story5-testimony-review-320-viewport.jpg",
+      "bytes": 52472,
+      "viewport": {
+        "width": 320,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-skip-keyboard-1280.jpg",
+      "bytes": 127532,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-skip-keyboard-390.jpg",
+      "bytes": 61429,
+      "viewport": {
+        "width": 390,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-skip-keyboard-320.jpg",
+      "bytes": 54923,
+      "viewport": {
+        "width": 320,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story1-ride-review-dialog-390.png",
+      "bytes": 405136,
+      "viewport": {
+        "width": 390,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story2-hymnal-review-dialog-390.png",
+      "bytes": 332343,
+      "viewport": {
+        "width": 390,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story3-quincy-review-dialog-390.png",
+      "bytes": 312185,
+      "viewport": {
+        "width": 390,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story4-hospitality-review-dialog-390.png",
+      "bytes": 326638,
+      "viewport": {
+        "width": 390,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story5-testimony-review-dialog-390.png",
+      "bytes": 319106,
+      "viewport": {
+        "width": 390,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story1-ride-review-footer-1280.jpg",
+      "bytes": 90677,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story2-hymnal-review-footer-1280.jpg",
+      "bytes": 97169,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story3-quincy-review-footer-1280.jpg",
+      "bytes": 94732,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story4-hospitality-review-footer-1280.jpg",
+      "bytes": 101662,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story5-testimony-review-footer-1280.jpg",
+      "bytes": 92615,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story1-ride-review-footer-390.jpg",
+      "bytes": 50893,
+      "viewport": {
+        "width": 390,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story2-hymnal-review-footer-390.jpg",
+      "bytes": 54239,
+      "viewport": {
+        "width": 390,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story3-quincy-review-footer-390.jpg",
+      "bytes": 54900,
+      "viewport": {
+        "width": 390,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story4-hospitality-review-footer-390.jpg",
+      "bytes": 55315,
+      "viewport": {
+        "width": 390,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story5-testimony-review-footer-390.jpg",
+      "bytes": 52136,
+      "viewport": {
+        "width": 390,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story1-ride-review-footer-320.jpg",
+      "bytes": 46176,
+      "viewport": {
+        "width": 320,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story2-hymnal-review-footer-320.jpg",
+      "bytes": 47057,
+      "viewport": {
+        "width": 320,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story3-quincy-review-footer-320.jpg",
+      "bytes": 45815,
+      "viewport": {
+        "width": 320,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story4-hospitality-review-footer-320.jpg",
+      "bytes": 44557,
+      "viewport": {
+        "width": 320,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-story5-testimony-review-footer-320.jpg",
+      "bytes": 46284,
+      "viewport": {
+        "width": 320,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-hymns-scripture-body-first-1280.jpg",
+      "bytes": 86720,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-hymns-scripture-source-range-1280.jpg",
+      "bytes": 55505,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-hymns-scripture-caption-1280.jpg",
+      "bytes": 87494,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-hymns-scripture-source-pill-1280.jpg",
+      "bytes": 87469,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-hymns-artwork-actions-1280.jpg",
+      "bytes": 97027,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-hymns-scripture-body-first-390.jpg",
+      "bytes": 43858,
+      "viewport": {
+        "width": 390,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-hymns-scripture-source-range-390.jpg",
+      "bytes": 38504,
+      "viewport": {
+        "width": 390,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-hymns-scripture-caption-390.jpg",
+      "bytes": 44869,
+      "viewport": {
+        "width": 390,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-hymns-scripture-source-pill-390.jpg",
+      "bytes": 44853,
+      "viewport": {
+        "width": 390,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-hymns-artwork-actions-390.jpg",
+      "bytes": 62038,
+      "viewport": {
+        "width": 390,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-hymns-scripture-body-first-320.jpg",
+      "bytes": 38338,
+      "viewport": {
+        "width": 320,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-hymns-scripture-source-range-320.jpg",
+      "bytes": 34278,
+      "viewport": {
+        "width": 320,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-hymns-scripture-caption-320.jpg",
+      "bytes": 38995,
+      "viewport": {
+        "width": 320,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-hymns-scripture-source-pill-320.jpg",
+      "bytes": 38981,
+      "viewport": {
+        "width": 320,
+        "height": 900
+      }
+    },
+    {
+      "file": "emma-hymns-artwork-actions-320.jpg",
+      "bytes": 53237,
+      "viewport": {
+        "width": 320,
+        "height": 900
+      }
+    }
+  ],
+  "screenshotBytes": 7597525
+}

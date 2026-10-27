@@ -1,0 +1,55 @@
+{
+  "scope": "five current Emma story source controls; historical inventory unchanged",
+  "pages": {
+    "history/emma-elect-lady.html": {
+      "attrs": {
+        "href": "https://www.churchofjesuschrist.org/study/liahona/2021/03/emma-protected-scripture?lang=eng",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      "label": "Emma Protected Scripture",
+      "figure": "emma-story1-ride",
+      "source_sha256": "e5b234afe494b825f90a94b58ff8b6363e349aa94a4d51562c9d037c58906820"
+    },
+    "history/emma-hymns.html": {
+      "attrs": {
+        "href": "https://www.josephsmithpapers.org/paper-summary/collection-of-sacred-hymns-1835/1",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      "label": "Collection of Sacred Hymns, 1835",
+      "figure": "emma-story2-hymnal",
+      "source_sha256": "ab1373de9ed550b1a7192f30f67f0222538d50c9422c4fca7168d8efe9fc754c"
+    },
+    "history/emma-winter-crossing.html": {
+      "attrs": {
+        "href": "https://www.josephsmithpapers.org/paper-summary/letter-from-emma-smith-7-march-1839/1",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      "label": "Letter from Emma Smith, 7 March 1839",
+      "figure": "emma-story3-quincy",
+      "source_sha256": "4245bdf43ad6dd24dfa47b31c6f3ff411c407d0e9a6d7ef352cec0f815008186"
+    },
+    "history/emma-relief-society.html": {
+      "attrs": {
+        "href": "https://www.churchofjesuschrist.org/study/history/topics/female-relief-society-of-nauvoo?lang=eng",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      "label": "Female Relief Society of Nauvoo",
+      "figure": "emma-story4-hospitality",
+      "source_sha256": "f13772d3e7aa457aef1cb02804e3c2ab86adcab870b64e2f7aa25a8cc3a70310"
+    },
+    "history/emma-last-testimony.html": {
+      "attrs": {
+        "href": "https://www.churchofjesuschrist.org/study/ensign/1992/08/my-great-great-grandmother-emma-hale-smith?lang=eng",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      "label": "My Great-Great-Grandmother Emma Hale Smith",
+      "figure": "emma-story5-testimony",
+      "source_sha256": "983a41ea229c286018be4c355f28a39b4c9f6294221b001d2985356f0fafb559"
+    }
+  }
+}

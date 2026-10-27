@@ -40,8 +40,17 @@ jobs:
       - name: Reject unreviewed or stale new artwork
         run: |
           python -m unittest discover -s tools -p test_artwork_creation_gate.py
+          python -m unittest discover -s tools -p test_artwork_emma_story_delivery.py
+          python -m unittest discover -s tools -p test_emma_story_consumers.py
+          python tools/test_adams_delivery_successor.py
+          python -m unittest discover -s tools -p test_adams_source_import.py
+          python -m unittest discover -s tools -p test_adams_standalone_opening.py
+          python -m unittest discover -s tools -p test_adams_panel_standalone.py
+          python -m unittest discover -s tools -p test_adams_resource_coverage.py
+          python -m unittest discover -s tools -p test_emma_resource_coverage.py
           python -m unittest discover -s tools -p test_timeline_source_import.py
           python tools/test_continue_motion_binding.py
+          python -m unittest discover -s tools -p test_emma_hub_citation_successor.py
           python tools/test_world_companion_successor.py
           python tools/test_settings_successor.py
           python tools/continue_motion_binding.py
@@ -75,6 +84,7 @@ jobs:
 
       - name: Verify published-content search index and behavior
         run: |
+          python -m unittest discover -s tools -p test_adams_search_consumer.py
           python tools/build_site_search.py --check
           python tools/site_search_qa.py
 
@@ -139,6 +149,7 @@ jobs:
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/art_study_picture_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/temples_history_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/history_story_runtime_qa.js
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/test_emma_history_reading_contract.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/footer_navigation_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/artwork_reference_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/illustrated_study_navigation_runtime_qa.js
@@ -153,6 +164,7 @@ jobs:
 
       - name: Verify every permanent Answer study experience
         run: |
+          python -m unittest discover -s tools -p test_emma_inline_scripture.py
           python tools/topic_inline_scripture_qa.py
           python tools/answer_study_parser_qa.py
           python tools/answer_study_qa.py

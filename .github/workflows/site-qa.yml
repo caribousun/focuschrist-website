@@ -33,8 +33,19 @@ jobs:
       - name: Reject unreviewed or stale new artwork
         run: |
           python -m unittest discover -s tools -p test_artwork_creation_gate.py
+          python -m unittest discover -s tools -p test_artwork_emma_story_delivery.py
+          python -m unittest discover -s tools -p test_emma_story_consumers.py
+          python tools/test_adams_delivery_successor.py
+          python -m unittest discover -s tools -p test_adams_source_import.py
+          python -m unittest discover -s tools -p test_adams_standalone_opening.py
+          python -m unittest discover -s tools -p test_adams_panel_standalone.py
+          python -m unittest discover -s tools -p test_adams_resource_coverage.py
+          python -m unittest discover -s tools -p test_emma_resource_coverage.py
           python -m unittest discover -s tools -p test_timeline_source_import.py
           python tools/test_continue_motion_binding.py
+          python tools/test_emma_story_successor.py
+          python -m unittest discover -s tools -p test_emma_hub_citation_successor.py
+          python tools/test_emma_generated_indices_successor.py
           python tools/test_world_companion_successor.py
           python tools/test_settings_successor.py
           python tools/continue_motion_binding.py
@@ -90,6 +101,7 @@ jobs:
 
       - name: Verify published-content search index and behavior
         run: |
+          python -m unittest discover -s tools -p test_adams_search_consumer.py
           python tools/build_site_search.py --check
           python tools/site_search_qa.py
 
@@ -176,6 +188,7 @@ jobs:
           node tools/joseph_research_source_hosts_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/temples_history_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/history_story_runtime_qa.js
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/test_emma_history_reading_contract.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/footer_navigation_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/artwork_reference_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/illustrated_study_navigation_runtime_qa.js
@@ -243,7 +256,7 @@ jobs:
           NODE_PATH=/tmp/focus-row-qa/node_modules node tools/answer_opening_browser_qa.js
           NODE_PATH=/tmp/focus-row-qa/node_modules node tools/unified_opening_browser_qa.js
           NODE_PATH="/tmp/focus-row-qa/node_modules:$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/study_alignment_browser_qa.js
-          NODE_PATH=/tmp/focus-row-qa/node_modules node tools/content_boundaries_browser_qa.js
+          NODE_PATH="/tmp/focus-row-qa/node_modules:$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/content_boundaries_browser_qa.js
           NODE_PATH=/tmp/focus-row-qa/node_modules node tools/home_hero_height_browser_qa.js
           NODE_PATH=/tmp/focus-row-qa/node_modules node tools/conference_alignment_browser_qa.js
           NODE_PATH=/tmp/focus-row-qa/node_modules node tools/conference_archive_mobile_browser_qa.js
@@ -296,6 +309,18 @@ jobs:
       - name: Verify mobile study headers preserve navigation
         run: NODE_PATH=/tmp/focus-row-qa/node_modules node tools/mobile_study_header_browser_qa.js
 
+      - name: Verify Emma story pages and viewer journeys
+        run: NODE_PATH=/tmp/focus-row-qa/node_modules node tools/emma_story_browser_qa.js
+
+      - name: Save Emma story viewport evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: emma-story-render
+          path: .qa-artifacts/emma-story/
+          include-hidden-files: true
+          if-no-files-found: ignore
+
       - name: Inspect every canonical page at desktop, phone, and enlarged text
         if: ${{ !cancelled() && steps.presentation_dependencies.outcome == 'success' }}
         run: NODE_PATH=/tmp/focus-row-qa/node_modules node tools/canonical_presentation_browser_qa.js
@@ -321,6 +346,7 @@ jobs:
           python tools/holy_ghost_qa_test.py
           python tools/plan_of_salvation_qa.py --selftest
           python tools/heavenly_father_qa.py --selftest
+          python -m unittest discover -s tools -p test_emma_inline_scripture.py
           python tools/topic_inline_scripture_qa.py
           python tools/topic_artwork_qa.py
           python tools/topic_body_picture_qa.py
@@ -544,3 +570,139 @@ jobs:
             .qa-artifacts/continue-motion/
           include-hidden-files: true
           if-no-files-found: ignore
+      - name: Save bounded Adams chart evidence separately
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: adams-chart-evidence
+          path: .qa-artifacts/timeline/adams/
+          include-hidden-files: true
+          if-no-files-found: ignore
+          retention-days: 7
+          compression-level: 6
+  generate-indices:
+    name: Generate site indices (diagnostic)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+
+      - name: Verify QA dependency contract before installation
+        run: python tools/qa_dependency_contract.py --self-test
+
+      - name: Install shared QA dependencies
+        run: python -m pip install -r tools/qa-requirements.txt
+
+      - name: Record generation evidence header
+        run: |
+          {
+            echo "github_sha=${{ github.sha }}"
+            echo "ref=${{ github.ref }}"
+            echo "event=${{ github.event_name }}"
+            git rev-parse HEAD
+            git log -1 --format='parents %P'
+            sha256sum tools/build_art_gallery.py tools/build_site_search.py
+          } | tee indices-evidence.txt
+
+      - name: Generate art gallery index
+        run: python tools/build_art_gallery.py
+
+      - name: Generate site search index
+        run: python tools/build_site_search.py
+
+      - name: Diagnose all current scripture citations without changing acceptance
+        run: timeout --signal=TERM --kill-after=5s 60s python tools/topic_inline_scripture_diagnostic.py
+
+      - name: Record generated index hashes
+        if: always()
+        run: |
+          sha256sum art-gallery.json site-search-index.json >> indices-evidence.txt || true
+          wc -c art-gallery.json site-search-index.json >> indices-evidence.txt || true
+
+      - name: Upload generated indices and evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: generated-indices
+          path: |
+            art-gallery.json
+            site-search-index.json
+            indices-evidence.txt
+            scripture-citation-diagnostic.json
+          include-hidden-files: true
+          if-no-files-found: ignore
+
+  emma-render-diagnostic:
+    name: Emma rendered evidence (diagnostic, not release acceptance)
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - name: Check out the exact pull-request merge tree
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Verify QA dependency contract before installation
+        run: python tools/qa_dependency_contract.py --self-test
+
+      - name: Install shared QA dependencies
+        run: python -m pip install -r tools/qa-requirements.txt
+
+      - name: Install existing pinned browser presentation dependencies
+        run: |
+          npm install --prefix /tmp/focus-row-qa --no-save --package-lock=false --ignore-scripts playwright@1.55.1 leaflet@1.9.4
+          /tmp/focus-row-qa/node_modules/.bin/playwright install --with-deps chromium
+
+      - name: Bind the diagnostic to the reviewed renderer and checkout
+        run: |
+          printf '%s  %s\n' '28586765b6948e5de97c1e7cffaa67289f6d3af02c9b34951ce5f0081e8ac929' 'tools/emma_story_browser_qa.js' | sha256sum --check
+          mkdir -p .qa-artifacts/emma-story
+          {
+            echo "scope=diagnostic rendering only; artwork-creation and all release gates remain required"
+            echo "github_sha=${{ github.sha }}"
+            echo "ref=${{ github.ref }}"
+            echo "event=${{ github.event_name }}"
+            git rev-parse HEAD
+            git log -1 --format='parents %P'
+            sha256sum .github/workflows/site-qa.yml tools/emma_story_browser_qa.js
+          } > .qa-artifacts/emma-story/diagnostic-evidence.txt
+
+      - name: Capture reviewed Emma desktop and phone-width journeys
+        id: emma_render
+        run: timeout --signal=TERM --kill-after=15s 5m env NODE_PATH=/tmp/focus-row-qa/node_modules node tools/emma_story_browser_qa.js
+
+      - name: Verify the two corrected hub scripture links
+        run: |
+          printf '%s  %s\n' '63eb15d6106621f4940e53af426e998fabe100cf92543420acca555fda1a51db' 'tools/emma_hub_scripture_browser_qa.js' | sha256sum --check
+          timeout --signal=TERM --kill-after=5s 120s env NODE_PATH=/tmp/focus-row-qa/node_modules node tools/emma_hub_scripture_browser_qa.js
+
+      - name: Preserve actual diagnostic outcome
+        if: always()
+        run: |
+          mkdir -p .qa-artifacts/emma-story
+          echo "render_outcome=${{ steps.emma_render.outcome }}" >> .qa-artifacts/emma-story/diagnostic-evidence.txt
+
+      - name: Save diagnostic Emma render evidence without accepting release
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: emma-story-render-diagnostic
+          path: .qa-artifacts/emma-story/
+          include-hidden-files: true
+          if-no-files-found: ignore
+          retention-days: 7
+
+      - name: Save bounded hub citation interaction evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: emma-hub-scripture
+          path: .qa-artifacts/emma-hub-scripture/
+          include-hidden-files: true
+          if-no-files-found: ignore
+          retention-days: 7

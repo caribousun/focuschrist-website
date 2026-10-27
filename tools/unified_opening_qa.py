@@ -7,6 +7,8 @@ from bs4 import BeautifulSoup
 from hero_introductions_qa import ROUTES as INTRODUCTION_ROUTES
 from section_panel_surface_qa import STANDALONE_ROUTE, assert_standalone
 
+from emma_story_consumers import EMMA_STORY_ROUTES, COMMON_REF, historical_routes, assert_story_opening
+from adams_standalone_opening import ADAMS_ROUTE, without_adams_route
 ROOT = Path(__file__).resolve().parents[1]
 HERO_ROUTES = frozenset(p['path'] for p in json.loads((ROOT / 'docs/unified-opening-inventory.json').read_text())['pages'] if p['hero'])
 
@@ -22,15 +24,16 @@ def assert_common_version(route, doc):
     }.get(route, '20261008-section-top-2')
     prefix = '/' if route.startswith('jesus-christ/') else '../' * route.count('/')
     if route in mapping()['files']:version='20261021-continue-motion-1'
-    expected = prefix + 'site-common.js?v=' + version
+    expected = COMMON_REF if route in EMMA_STORY_ROUTES else prefix + 'site-common.js?v=' + version
     assert common == [expected], route + ': exact shared-script binding required'
 
 
 inventory = json.loads((ROOT / 'docs/unified-opening-inventory.json').read_text(encoding='utf8'))
 pages = [urlsplit(n.text).path.lstrip('/') or 'index.html' for n in ET.parse(ROOT / 'sitemap.xml').findall('{*}url/{*}loc')]
-assert len(pages) == len(set(pages)) == 132
+historical_pages = historical_routes(without_adams_route(pages, (ROOT / ADAMS_ROUTE).read_bytes()))
+assert len(historical_pages) == 132
 assert len(inventory['pages']) == len({p['path'] for p in inventory['pages']}) == 130
-assert set(pages) == {p['path'] for p in inventory['pages']} | {'history/emma-hale-smith.html', STANDALONE_ROUTE}
+assert historical_pages == {p['path'] for p in inventory['pages']} | {'history/emma-hale-smith.html', STANDALONE_ROUTE}
 assert sum(bool(p['hero']) for p in inventory['pages']) == inventory['hero_count']
 assert sum(not p['hero'] for p in inventory['pages']) == inventory['excluded_count']
 assert inventory['hero_count'] == 51 and inventory['excluded_count'] == 79
@@ -42,6 +45,12 @@ for record in [*inventory['pages'], {'path': 'history/emma-hale-smith.html', 'he
     actual = bool(doc.select_one('.fc-visual-hero,[data-covenant-hero-slot],.cfm-desktop-picture,.gc-intro-visual'))
     assert actual == record['hero'], record['path'] + ': opening hero inventory drift'
     assert_common_version(record['path'], doc)
+# Five reading-first additions do not alter the historical 51/79 inventory.
+for route in sorted(EMMA_STORY_ROUTES):
+    text = (ROOT / route).read_text(encoding='utf8')
+    doc = BeautifulSoup(text, 'html.parser')
+    assert_story_opening(route, text, doc)
+    assert_common_version(route, doc)
 # The separately reviewed standalone opening embeds its own header controller.
 assert_standalone(STANDALONE_ROUTE, (ROOT / STANDALONE_ROUTE).read_bytes())
 standalone_doc = BeautifulSoup((ROOT / STANDALONE_ROUTE).read_text(encoding='utf8'), 'html.parser')
@@ -54,4 +63,4 @@ script = (ROOT / 'unified-opening.js').read_text(encoding='utf8')
 assert '\\u2193' in script and 'Ãƒ' not in script, 'Continue arrow encoding'
 assert "opening.matches('.jj-opening') ? []" in script, 'Covenant invitation must remain in opening'
 assert 'getBoundingClientRect().bottom + scrollY' in script, 'Fit must use document coordinates'
-print('UNIFIED OPENING STATIC PASS: 132 canonical routes, 53 illustrated openings, 79 explicit exclusions, current shared versions and protected Covenant invitation')
+print('UNIFIED OPENING STATIC PASS: 132 historical routes, 53 historical illustrated openings, 79 historical exclusions; 5 additional reading-first Emma stories and 1 exact Adams standalone, current shared versions and protected Covenant invitation')

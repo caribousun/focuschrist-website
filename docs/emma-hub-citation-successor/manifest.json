@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "layer": "emma_hub_citation_successor",
+  "path": "history/emma-hale-smith.html",
+  "before_sha256": "e26dff780368d88ea1cdd2e5f0ed0636b9f048f2af4b88f9be1fdef03036fe0f",
+  "after_sha256": "0d825d6c9d0648006ca4ba12f496b49540a6aa065f8ec82063df643da8a0fe9d",
+  "pairs": [
+    {
+      "label": "Luke 6:12–16",
+      "before": "<p>Family tradition, recorded in Church History Topics, tells that Emma’s father overheard young Emma praying in the woods and was moved by what he heard. Luke 6:12–16 shows Jesus spending a night in prayer before choosing the Twelve. Read the passage beside Emma’s story, and let it leave room for you to bring your own decisions before God.</p>",
+      "after": "<p>Family tradition, recorded in Church History Topics, tells that Emma’s father overheard young Emma praying in the woods and was moved by what he heard. <a class=\"fc-inline-scripture\" href=\"https://www.churchofjesuschrist.org/study/scriptures/nt/luke/6?lang=eng&amp;id=p12-p16#p12\" target=\"_blank\" rel=\"noopener noreferrer\">Luke 6:12–16</a> shows Jesus spending a night in prayer before choosing the Twelve. Read the passage beside Emma’s story, and let it leave room for you to bring your own decisions before God.</p>"
+    },
+    {
+      "label": "John 4:31–34",
+      "before": "<p>At Jacob’s well, the disciples urged Jesus to eat. He spoke to them about doing His Father’s will. Read John 4:31–34 beside this part of Emma’s story: the care Emma gave in these years was work with a deep purpose, and she gave it as someone who also needed food, rest, and care.</p>",
+      "after": "<p>At Jacob’s well, the disciples urged Jesus to eat. He spoke to them about doing His Father’s will. Read <a class=\"fc-inline-scripture\" href=\"https://www.churchofjesuschrist.org/study/scriptures/nt/john/4?lang=eng&amp;id=p31-p34#p31\" target=\"_blank\" rel=\"noopener noreferrer\">John 4:31–34</a> beside this part of Emma’s story: the care Emma gave in these years was work with a deep purpose, and she gave it as someone who also needed food, rest, and care.</p>"
+    }
+  ],
+  "scope": "Exactly two visible citation anchor wrappers; all visible words, art and historical predecessor bytes preserved. Technical binding only, not release approval."
+}

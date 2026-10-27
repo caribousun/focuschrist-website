@@ -1,0 +1,31 @@
+{
+  "reviewer": "Albert",
+  "reviewed_at": "2026-10-27T10:28:11.951992+00:00",
+  "scope": "Actual current canonical-footer context inspection, not release acceptance",
+  "run_id": 40487588321,
+  "head": "655ab413f14f104c8110fd1269b0e5ad7de0cc74",
+  "observations": "Personally viewed these original current screenshots. Both canonical notices, official Church link, source links and Back to top are legible without new clipping/overlap. All five phone footers share the preserved canonical presentation; 1280 and320 representative captures show the same ordered notices. Two changed old desktop views differ only in top header/shadow strips, outside artwork. Fifteen actual DOM/footer observations and46 named journeys passed in the diagnostic.",
+  "limits": [
+    "Viewport Chromium, not physical devices or universal accessibility certification.",
+    "Footer container subpixel rounding up to0.46875px beyond900 occurs in three telemetry cases; actual notice text is within view.",
+    "Root viewed listed captures, not sixty new viewing calls.43of45 historical captures byte-identical; prior exact asset inspections reused only after rehash.",
+    "Full normal QA and release review remain required."
+  ],
+  "captures": [
+    {
+      "name": "emma-story1-ride-review-footer-1280.jpg",
+      "bytes": 90677,
+      "sha256": "655589396065909a4aeb438694be5e999da27909ef8e41a6c7328854fa77b558"
+    },
+    {
+      "name": "emma-story5-testimony-review-1280-viewport.jpg",
+      "bytes": 92340,
+      "sha256": "5623b075979ac8ee9e0bf7da29180aae27e8ba49c1fc42030616c8ca1dcae816"
+    },
+    {
+      "name": "emma-story2-hymnal-review-1280-viewport.jpg",
+      "bytes": 98368,
+      "sha256": "1630070ae6d30c58fa2a4dc327cfb1894411b2203bdc9cc51a025d4e936470b4"
+    }
+  ]
+}

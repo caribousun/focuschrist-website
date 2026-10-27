@@ -4,6 +4,7 @@ from pathlib import Path
 from urllib.parse import urlsplit, parse_qs
 import xml.etree.ElementTree as ET
 from answer_study_qa import Document
+from adams_standalone_opening import ADAMS_ROUTE, assert_adams_opening
 ROOT=Path(__file__).resolve().parents[1]
 CONFIG=ROOT/'docs/section-panel-surfaces.json'
 INVENTORY=ROOT/'docs/section-panel-inventory.json'
@@ -39,6 +40,14 @@ def matches(node, selector):
         current=current.parent
     return True
 
+def assert_adams_note_owner(page, nodes):
+    notes=[n for n in nodes if 'fc-adams-note' in n.attrs.get('class','').split()]
+    if page == ADAMS_ROUTE:
+        assert_adams_opening(page,(ROOT/page).read_bytes())
+        assert len(notes)==2 and all(n.tag=='p' and n.parent and 'fc-adams-strip' in n.parent.attrs.get('class','').split() for n in notes), 'Adams toolbar note structure changed'
+    else:
+        assert not notes, 'Adams note class used outside exact standalone owner'
+
 def inventory(config):
     candidates=collections.defaultdict(lambda:dict(count=0,pages=set(),tags=set()))
     surfaces={s:dict(count=0,pages=set(),tags=set()) for s in config['surface_selectors']}
@@ -46,6 +55,7 @@ def inventory(config):
     for page in canonical():
         d=Document();d.feed((ROOT/page).read_text(encoding='utf-8'))
         nodes=list(d.root.walk());nodes_by_page[page]=nodes
+        assert_adams_note_owner(page,nodes)
         for n in nodes:
             for c in n.attrs.get('class','').split():
                 if PATTERN.search(c):
@@ -126,6 +136,9 @@ def check(config,actual):
     for p in actual['canonical_pages']:
         if p == STANDALONE_ROUTE:
             assert_standalone(p,(ROOT/p).read_bytes())
+            continue
+        if p == ADAMS_ROUTE:
+            assert_adams_opening(p,(ROOT/p).read_bytes())
             continue
         d=Document();d.feed((ROOT/p).read_text(encoding='utf-8'))
         links=[n.attrs.get('href','') for n in d.root.walk() if n.tag=='link' and urlsplit(n.attrs.get('href','')).path.endswith('site-system.css')]

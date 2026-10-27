@@ -1,0 +1,30 @@
+{
+  "scope": "Actual diagnostic output binding only; no normal full-QA or release approval",
+  "artifact_id": 12725288744,
+  "run_id": 40487588321,
+  "head_sha": "655ab413f14f104c8110fd1269b0e5ad7de0cc74",
+  "actual_merge_sha": "48c865a8e507a7a57df6a8275fcd638b2da02543",
+  "base_parent": "b4e023cfbe5e98b1191571f8ed3ca97c5a9f0c8b",
+  "zip_bytes": 6512614,
+  "zip_sha256": "becef8e49fc6e80d215e20b19b9631e23b45f92014faafddf4754018402e038f",
+  "actual_safe_regular_members_verified_equal": 63,
+  "render_outcome": "success",
+  "reported_journeys": 46,
+  "retained_original_journeys": 31,
+  "new_footer_journeys": 15,
+  "captures": 60,
+  "retained_capture_names": 45,
+  "new_footer_captures": 15,
+  "renderer_results_pass": true,
+  "normal_qa_pass": null,
+  "normal_qa_limit": "No normal QA success asserted from the diagnostic. Current footer context record is pending own-author reviews/final pin and full normal hosted gates.",
+  "spec_sha256": "a314d8a5e2c29da623852a69496ca8b4f6e6071cf10426ed8b7c847d1d9d5e73",
+  "release_acceptance": false,
+  "scope_limits": [
+    "Desktop Chromium viewport1280/390/320 by900; not physical phones.",
+    "Far hind hoof naturally occluded; strict full-four-hoof visibility not established.",
+    "No screenshot pixels embedded or claimed committed under docs.",
+    "Prior source failures and earlier evidence remain unchanged history.",
+    "Reviewer visual observations must be separately authored, not inferred from reportPASS."
+  ]
+}

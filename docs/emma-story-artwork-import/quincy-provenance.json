@@ -1,0 +1,111 @@
+{
+  "schema": 1,
+  "scene": "quincy",
+  "classification": "PUBLIC_SAFE_PROVENANCE_SUMMARY_NOT_ORIGINAL_PRIVATE_RECEIPTS",
+  "selected_original_sha256": "9dd0cbe00e0e54a5b2d584a2ecdce3e7d6d83ae31117a32ed9c4e5c67545307e",
+  "historical_canonical_preflight_claim": false,
+  "historical_source_review_scope": "SOURCE_ART_ONLY_NOT_ASSEMBLED",
+  "receipt_pins": [
+    {
+      "receipt_name": "FOUR-EDITS-MANIFEST-v2-PRECREATION-REVIEW.json",
+      "bytes": 9611,
+      "sha256": "541ca97d6c0878c65c0225232157bad941da5ce7b3816a9d87e84a16a79b909b",
+      "actual_authored_time_fields": [
+        {
+          "field": "at_utc",
+          "value": "2026-10-26T12:22:44.910350+00:00"
+        }
+      ],
+      "time_limit": "These are receipt-authored times/approximation, not reconstructed generation timestamps."
+    },
+    {
+      "receipt_name": "FOUR-EDIT-PRECREATION-v1-REVIEW.json",
+      "bytes": 5451,
+      "sha256": "a774c5786fb1c7661010f87c0b1a53caa1d9ab00728158b3bf0373b4ef5887d2",
+      "actual_authored_time_fields": [
+        {
+          "field": "at_utc",
+          "value": "2026-10-26T12:21:15.941708+00:00"
+        }
+      ],
+      "time_limit": "These are receipt-authored times/approximation, not reconstructed generation timestamps."
+    },
+    {
+      "receipt_name": "QUINCY-v2-DELTA-PRECREATION-REVIEW.json",
+      "bytes": 845,
+      "sha256": "53a0a89fae046ed5ceaab5ab48db29b15a9cb41850bb2381846c02447b3b20d9",
+      "actual_authored_time_fields": [
+        {
+          "field": "at_utc",
+          "value": "2026-10-26T12:21:36.148482+00:00"
+        }
+      ],
+      "time_limit": "These are receipt-authored times/approximation, not reconstructed generation timestamps."
+    },
+    {
+      "receipt_name": "HYMNAL-EDIT-v2-PRECREATION-REVIEW.json",
+      "bytes": 3778,
+      "sha256": "cd651b26114d57c5a62f5d72119c5a824a8ae108f18d7ec8f161e3be5b2cc108",
+      "actual_authored_time_fields": [],
+      "time_limit": "These are receipt-authored times/approximation, not reconstructed generation timestamps."
+    },
+    {
+      "receipt_name": "HYMNAL-EDIT-v2-PRECREATION-REVIEW.json",
+      "bytes": 3385,
+      "sha256": "204180a2d7fd6976e758d887efbd89f66a90e4b5bdb2fdaae3bf84a22afe4eac",
+      "actual_authored_time_fields": [],
+      "time_limit": "These are receipt-authored times/approximation, not reconstructed generation timestamps."
+    },
+    {
+      "receipt_name": "RIDE-v13-AND-FIVE-SET-FINISHED-REVIEW.json",
+      "bytes": 6655,
+      "sha256": "fbd2c95a43194a67d78b19ab35569ecb36996bfb91eba4bc01de9fa37c14c447",
+      "actual_authored_time_fields": [
+        {
+          "field": "at_utc",
+          "value": "2026-10-26T13:27:05.097557+00:00"
+        }
+      ],
+      "time_limit": "These are receipt-authored times/approximation, not reconstructed generation timestamps."
+    },
+    {
+      "receipt_name": "RIDE-v13-AND-FIVE-SET-FINISHED-REVIEW.json",
+      "bytes": 4959,
+      "sha256": "8777fd086d47b25bdfeb23300b165031eb7ab0091bd4d5530bb6a666b3d8b57a",
+      "actual_authored_time_fields": [
+        {
+          "field": "at_utc",
+          "value": "2026-10-26T13:25:39.959152+00:00"
+        }
+      ],
+      "time_limit": "These are receipt-authored times/approximation, not reconstructed generation timestamps."
+    },
+    {
+      "receipt_name": "FOUR-EDITS-ACTUAL-RESULTS.json",
+      "bytes": 6542,
+      "sha256": "d36e19c18c085e19af1e9ba1d169bc9d3bd87b23ec39019986e754f0cc8d19c4",
+      "actual_authored_time_fields": [],
+      "time_limit": "These are receipt-authored times/approximation, not reconstructed generation timestamps."
+    }
+  ],
+  "actual_derivative_review": {
+    "reviewer": "Fermi",
+    "receipt_sha256": "37f113868e61ae5dba8a33b9234aae5775965f3946bf575c2282aa2504e817f5",
+    "receipt_bytes": 28994,
+    "reviewed_at": "2026-10-27T05:22:56.628619+00:00",
+    "decision": "CONCUR_EXACT_ASSET_PIXELS_WITH_LIMITS_ASSEMBLED_PENDING",
+    "scope": "20 exact files inspected; no assembled, responsive browser or full release concurrence"
+  },
+  "generation_time": {
+    "status": "UNKNOWN_NOT_INFERRED",
+    "timestamp": null,
+    "file_mtime_used": false,
+    "basis": "Exact generation timestamp not independently established by this bounded registration. Actual prompt/precreation/finished receipt chronology retained separately, not substituted with file modification time."
+  },
+  "limits": [
+    "Historical receipt hashes identify existing evidence, not authenticated signatures or new canonical bindings.",
+    "Current exact-spec Fermi/Newton/Albert assembled review remains pending.",
+    "Source artwork and WebP derivatives are proportional but not pixel-identical Lanczos outputs; no lossless claim."
+  ],
+  "history": "Selected corrective v2 source remains unchanged. Earlier rejected variants and prior review limitations remain history; no retrospective precreation claim."
+}

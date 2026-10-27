@@ -1,0 +1,19 @@
+{
+  "repository": "caribousun/focuschrist-website",
+  "run_id": 40486830674,
+  "head_sha": "ae03684acc0ff56d622028755d7d97ce8902288a",
+  "head_branch": "albert/adams-chart-finish-20261027",
+  "event": "pull_request",
+  "producer_checkout_sha": "5465aacfbae9c80733e41f258e213eb6f37266d6",
+  "producer_ref": "refs/pull/530/merge",
+  "producer_base_sha": "b4e023cfbe5e98b1191571f8ed3ca97c5a9f0c8b",
+  "workflow_conclusion": "failure",
+  "timeline_job_id": 122130602263,
+  "timeline_conclusion": "success",
+  "artifact_id": 12726195196,
+  "artifact_bytes": 2102256,
+  "artifact_sha256": "3276e105c71133fecdee4e4ce2e1e7f198a1cd43b809e1a20cdfd9fa629bcf32",
+  "release_claim": false,
+  "verification": "Run/job/merge identity independently read through supported GitHub GET. Same-run generated-indices metadata identifies producer merge checkout, independently verified to have recorded base/head parents. Whole ZIP/all25 extracted members independently rehashed. Report binds exact page/landing/assets; spec separately binds reviewed helper. No whole-site release claim.",
+  "producer_metadata_sha256": "9204f1a5f37049ddf5201b98389c8df7293624ede85370fbf1e9b67f08c95892"
+}

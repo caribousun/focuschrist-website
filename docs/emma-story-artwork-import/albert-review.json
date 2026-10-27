@@ -1,0 +1,55 @@
+{
+  "reviewer": "Albert",
+  "decision": "CONCUR",
+  "spec_sha256": "ecfb210ffbb151a881baa74ac15a1398627ca628f7b089108a5b4bf394465960",
+  "reviewed_at": "2026-10-27T12:50:34.756459+00:00",
+  "withdrawn": false,
+  "scope": "Exact hymns canonical-link successor, with all 43 source/asset/style/provenance pins rehashed by root. Same 20 artwork assets retain prior direct original/derivative review. Root personally viewed twelve current captures (eight new and four changed), inspected actual 64-result/75-capture report and source. New rendered link, source-pill and reader behavior accepted within this finite scope; full normal QA and production remain pending.",
+  "source_provenance_verified": true,
+  "actual_derivatives_inspected": true,
+  "assembled_context_inspected": true,
+  "checks": {
+    "identity": "All 20 selected original/derivative assets remain byte-identical. Current hymnal body/dialog retains the reviewed face, pose, book and clothing. Other selected scenes retain prior independently inspected exact bytes; no new biometric/historical identity guarantee.",
+    "age": "Story age labels and approved younger/older styling are retained. Appearance is not independent proof of an exact numerical age.",
+    "expression_gaze": "Ride looks along the route ahead; hymnal and Quincy look down; hospitality addresses the visitor; testimony has a speaking expression and gaze to the right. No new blank-stare drift observed.",
+    "atmosphere": "Warm autumn motion and restrained indoor lighting support the separate story moods without new visual treatment.",
+    "environment": "Selected autumn terrain and period-room/doorway settings are retained. This is bounded illustration review, not exhaustive historical reconstruction.",
+    "characters_realism": "The selected human designs, hands and clothing remain coherent in current views; smaller rendered variants soften fine detail.",
+    "period_sources": "The preserved public-safe source receipt summaries, Hannah-reviewed prose and source pointers remain bound. Unknown exact generation times are not inferred from file metadata.",
+    "anatomy": "The selected ride has three clearly visible hoof endpoints and a naturally occluded far hind hoof. Strict four-hoof visibility remains NOT_MET; no unconditional anatomy claim.",
+    "uniqueness": "Five distinct selected originals and fifteen exact derivative assets are pinned to five separate story routes. Reuse of character identity is intentional; no substituted artwork was found.",
+    "desktop_phone": "Actual 40505834080 diagnostic passed 64 journeys with 75 captures: prior 46 journeys plus 15 scripture interactions and three artwork action flows at 1280/390/320. Root directly viewed twelve current captures, including exact verse range at all widths, new artwork source-pill layouts at all widths, chapter reader, caption reader, body markup and menu. Runtime verified full 16 or exact two verses against chapter25, exact source URL, keyboard Enter, Escape/button close, exact focus return and retained underlying artwork dialog. All fifteen controls had actual reachable bounds/hit tests; raw width field is element width, so viewport provenance is derived from reviewed loop order, not misread as a raw field.49 prior captures are byte-identical;11 changed and15 new are preserved. Old artwork evidence is reused only on exact bytes."
+  },
+  "limits": [
+    "Strict ride four-hoof visibility remains NOT_MET because of natural occlusion.",
+    "Viewport widths are not physical-device or cross-browser tests.",
+    "Long chapter/dialog content requires scrolling; this evidence does not claim every element simultaneously visible.",
+    "New scripture URLs were checked and same-page reader used; official external source was not followed as a new live availability check.",
+    "Raw scriptureControlEvidence width collision is disclosed; element widths preserved, viewport grouping derives from fixed loop order.",
+    "Actual current full QA stopped at stale artwork context before this acceptance. Normal full QA on the accepted current source still required; prior forty-state history pass belongs to previous2321500 source."
+  ],
+  "evidence": [
+    {
+      "path": "docs/emma-story-artwork-import/evidence/albert-scripture-desktop.json",
+      "bytes": 1729,
+      "sha256": "30d5040a0d7d4ecb48a83e020de04b737f9382c209a9cf2aa662100cc82e1f55"
+    },
+    {
+      "path": "docs/emma-story-artwork-import/evidence/albert-scripture-phone.json",
+      "bytes": 2758,
+      "sha256": "9f310bdd8ca5eaf5fd75f95b7d66903d5b4872421c75a5f8e0d5e38262698fc1"
+    }
+  ],
+  "rendered": {
+    "desktop": {
+      "path": "docs/emma-story-artwork-import/evidence/albert-scripture-desktop.json",
+      "bytes": 1729,
+      "sha256": "30d5040a0d7d4ecb48a83e020de04b737f9382c209a9cf2aa662100cc82e1f55"
+    },
+    "phone": {
+      "path": "docs/emma-story-artwork-import/evidence/albert-scripture-phone.json",
+      "bytes": 2758,
+      "sha256": "9f310bdd8ca5eaf5fd75f95b7d66903d5b4872421c75a5f8e0d5e38262698fc1"
+    }
+  }
+}

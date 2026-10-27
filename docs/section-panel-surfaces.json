@@ -155,7 +155,9 @@
     "panelsub": "World and Scripture timeline panel subtitle paragraph; typography-only text, not an independent panel surface.",
     "cards": "World and Scripture timeline Detailed-view grid layout container; individual card surfaces retain their existing delegated inline owner.",
     "mapnote": "World and Scripture timeline geographic provenance paragraph beneath the map; inline map annotation styling and tested scenario disclosure, not a study section panel.",
-    "companion-note": "World and Scripture companion link explanatory paragraph; ordinary typography-only reading text, not an independent filled section panel."
+    "companion-note": "World and Scripture companion link explanatory paragraph; ordinary typography-only reading text, not an independent filled section panel.",
+    "fc-life-reflections--two": "Two-column responsive layout modifier on bare fc-life-reflections containers in the five Emma story pages; only grid-template-columns changes. Child fc-life-reflection panels retain their existing history-stories.css surface owner; no independent painted surface.",
+    "fc-adams-note": "Exactly two disclaimer/credit paragraphs in the byte-pinned Adams standalone toolbar, not shared study cards. Existing chart controls and inline presentation retain their separate finished desktop/phone review."
   },
   "runtime_selectors": {
     ".cfm-month": {

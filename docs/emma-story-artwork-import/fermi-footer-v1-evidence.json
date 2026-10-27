@@ -1,0 +1,2070 @@
+{
+  "schema": 1,
+  "classification": "PUBLIC_SAFE_CURRENT_FOOTER_REVIEW_METADATA",
+  "reviewer": "Fermi",
+  "actual_actor": "/root/review_emma_context_as_fermi",
+  "reviewed_at": "2026-10-27T10:28:47.716898+00:00",
+  "spec_sha256": "a314d8a5e2c29da623852a69496ca8b4f6e6071cf10426ed8b7c847d1d9d5e73",
+  "capture_producer": {
+    "scope": "Actual diagnostic output binding only; no normal full-QA or release approval",
+    "artifact_id": 12725288744,
+    "run_id": 40487588321,
+    "head_sha": "655ab413f14f104c8110fd1269b0e5ad7de0cc74",
+    "actual_merge_sha": "48c865a8e507a7a57df6a8275fcd638b2da02543",
+    "base_parent": "b4e023cfbe5e98b1191571f8ed3ca97c5a9f0c8b",
+    "zip_bytes": 6512614,
+    "zip_sha256": "becef8e49fc6e80d215e20b19b9631e23b45f92014faafddf4754018402e038f",
+    "actual_safe_regular_members_verified_equal": 63,
+    "render_outcome": "success",
+    "reported_journeys": 46,
+    "retained_original_journeys": 31,
+    "new_footer_journeys": 15,
+    "captures": 60,
+    "retained_capture_names": 45,
+    "new_footer_captures": 15,
+    "renderer_results_pass": true,
+    "normal_qa_pass": null,
+    "normal_qa_limit": "No normal QA success asserted from the diagnostic. Current footer context record is pending own-author reviews/final pin and full normal hosted gates.",
+    "spec_sha256": "a314d8a5e2c29da623852a69496ca8b4f6e6071cf10426ed8b7c847d1d9d5e73",
+    "release_acceptance": false,
+    "scope_limits": [
+      "Desktop Chromium viewport1280/390/320 by900; not physical phones.",
+      "Far hind hoof naturally occluded; strict full-four-hoof visibility not established.",
+      "No screenshot pixels embedded or claimed committed under docs.",
+      "Prior source failures and earlier evidence remain unchanged history.",
+      "Reviewer visual observations must be separately authored, not inferred from reportPASS."
+    ]
+  },
+  "prior_own_receipt": {
+    "sha256": "afb43ddc1edac0becdd997140de5470bc09592c4f7fc93686fca33b211b71ffe",
+    "bytes": 8940,
+    "reviewed_at": "2026-10-27T08:19:12.818129+00:00",
+    "basis": "Same native actor's actual20asset/45capture inspection; source byte/pixel pins reverified, not fresh unchanged-image viewing."
+  },
+  "authority": "Connected Master freshly re-read unchanged; protected Foundation and previously read applicable role/Focus authority preserved. No source execution or external writes.",
+  "binding_checks": {
+    "spec_changes": [
+      {
+        "field": "/scenes/0/context/0/bytes",
+        "before": 14960,
+        "after": 15021
+      },
+      {
+        "field": "/scenes/0/context/0/sha256",
+        "before": "7885d852c85fe3d8958ad50f7c39949c6a9c00a69a5d94c5368c34e3ef928664",
+        "after": "7b01a4c66fd53274dc71c6a581963f174251557580365f1a93b56bab835229c1"
+      },
+      {
+        "field": "/scenes/0/context_status",
+        "before": "EXACT_PAGE_AND_13_STYLESHEETS_NO_IMPORTS_AT_HEAD_7d5038ad21133bbf83ffbfed7cf1cf27619dd76f",
+        "after": "EXACT_FIVE_CANONICAL_FOOTER_SOURCE_PROPOSAL_FROM_88f52f24_FRESH_RENDER_AND_REVIEWS_PENDING"
+      },
+      {
+        "field": "/scenes/1/context/0/bytes",
+        "before": 14534,
+        "after": 14595
+      },
+      {
+        "field": "/scenes/1/context/0/sha256",
+        "before": "e80c58261f8d05c2027af6ea84ab46bd8dab0c44518e5f9c47ae5158b9cc3caa",
+        "after": "56685e71d89e8596e9b14e4cfeb49889afbc7fb4534ba0efd5dc4a69c58df8c8"
+      },
+      {
+        "field": "/scenes/1/context_status",
+        "before": "EXACT_PAGE_AND_13_STYLESHEETS_NO_IMPORTS_AT_HEAD_7d5038ad21133bbf83ffbfed7cf1cf27619dd76f",
+        "after": "EXACT_FIVE_CANONICAL_FOOTER_SOURCE_PROPOSAL_FROM_88f52f24_FRESH_RENDER_AND_REVIEWS_PENDING"
+      },
+      {
+        "field": "/scenes/2/context/0/bytes",
+        "before": 14535,
+        "after": 14596
+      },
+      {
+        "field": "/scenes/2/context/0/sha256",
+        "before": "1d1c1f08becae7e8fd3557f5675fc33c05829a539b69f9c0630cd621b027236d",
+        "after": "a424db4ab7ca1f0b925ec30a823cb9cc986a87e908d78967195cb132b545254f"
+      },
+      {
+        "field": "/scenes/2/context_status",
+        "before": "EXACT_PAGE_AND_13_STYLESHEETS_NO_IMPORTS_AT_HEAD_7d5038ad21133bbf83ffbfed7cf1cf27619dd76f",
+        "after": "EXACT_FIVE_CANONICAL_FOOTER_SOURCE_PROPOSAL_FROM_88f52f24_FRESH_RENDER_AND_REVIEWS_PENDING"
+      },
+      {
+        "field": "/scenes/3/context/0/bytes",
+        "before": 15126,
+        "after": 15187
+      },
+      {
+        "field": "/scenes/3/context/0/sha256",
+        "before": "dac6cfe37dde749a7a6a90bd40c20a76fa2efcd508def721b5e6f9068b416414",
+        "after": "b8bef87968a1b6189524e80dbbcfea9e4c95e5336c1258987de22bbe33946c78"
+      },
+      {
+        "field": "/scenes/3/context_status",
+        "before": "EXACT_PAGE_AND_13_STYLESHEETS_NO_IMPORTS_AT_HEAD_7d5038ad21133bbf83ffbfed7cf1cf27619dd76f",
+        "after": "EXACT_FIVE_CANONICAL_FOOTER_SOURCE_PROPOSAL_FROM_88f52f24_FRESH_RENDER_AND_REVIEWS_PENDING"
+      },
+      {
+        "field": "/scenes/4/context/0/bytes",
+        "before": 15675,
+        "after": 15736
+      },
+      {
+        "field": "/scenes/4/context/0/sha256",
+        "before": "02e05c94935d4798708b203fb4d4419611fae556a21575f826a82f7f9132ffc5",
+        "after": "6889079338eebd271d8a25af85850873950a6462ef33c11031a3cea0ba46e710"
+      },
+      {
+        "field": "/scenes/4/context_status",
+        "before": "EXACT_PAGE_AND_13_STYLESHEETS_NO_IMPORTS_AT_HEAD_7d5038ad21133bbf83ffbfed7cf1cf27619dd76f",
+        "after": "EXACT_FIVE_CANONICAL_FOOTER_SOURCE_PROPOSAL_FROM_88f52f24_FRESH_RENDER_AND_REVIEWS_PENDING"
+      }
+    ],
+    "source_files": [
+      {
+        "bytes": 2955092,
+        "sha256": "947d1f4be80ec82e193d8ad38164d3bbc0c1ad82e2aa31fc59a9a454936c545c",
+        "bound_path": "assets/page-art/emma-life/originals/emma-ride-selected.png",
+        "matches": true,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "pixel_sha256": "7c435df016fd0b53682cf1f6bffd0a6841bdf0b838f5f7bd1b9f9b8ff3d63daa"
+      },
+      {
+        "bytes": 297964,
+        "sha256": "ff56c2247487ddd707d937b565a223c9b3a7220b190d84a3e845bd9a76441292",
+        "bound_path": "assets/page-art/emma-life/emma-story1-ride-review-1536.webp",
+        "matches": true,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "pixel_sha256": "58715a28a2475cf47a8b6c8d65a0d601b5e1f392a26f850ac28e1185f848e358"
+      },
+      {
+        "bytes": 93744,
+        "sha256": "13c36921b70dabe2d195a6a49a1bc297b2c7d50aad3bdc8890ed8c323aa0d06b",
+        "bound_path": "assets/page-art/emma-life/emma-story1-ride-review-640.webp",
+        "matches": true,
+        "dimensions": [
+          640,
+          427
+        ],
+        "pixel_sha256": "395469f3f5768f94f0b888924e2b5da19802e63efcb66331c2aaa30535223f77"
+      },
+      {
+        "bytes": 164146,
+        "sha256": "8ac37bf27712554952c7648aed25f49d15651effdb55e0342554154ccf02bc93",
+        "bound_path": "assets/page-art/emma-life/emma-story1-ride-review-960.webp",
+        "matches": true,
+        "dimensions": [
+          960,
+          640
+        ],
+        "pixel_sha256": "e5fd8dfa311b7bc8a89211fbf949db14f728944505dad70aee688f2cebb0807f"
+      },
+      {
+        "bytes": 15021,
+        "sha256": "7b01a4c66fd53274dc71c6a581963f174251557580365f1a93b56bab835229c1",
+        "bound_path": "history/emma-elect-lady.html",
+        "matches": true
+      },
+      {
+        "bytes": 14894,
+        "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f",
+        "bound_path": "site-header.css",
+        "matches": true
+      },
+      {
+        "bytes": 88817,
+        "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55",
+        "bound_path": "site-system.css",
+        "matches": true
+      },
+      {
+        "bytes": 3925,
+        "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd",
+        "bound_path": "artwork-details.css",
+        "matches": true
+      },
+      {
+        "bytes": 4959,
+        "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706",
+        "bound_path": "full-image-viewer.css",
+        "matches": true
+      },
+      {
+        "bytes": 2273,
+        "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb",
+        "bound_path": "artwork-actions.css",
+        "matches": true
+      },
+      {
+        "bytes": 2190,
+        "sha256": "6b61c50c1d8e005074beb2db8fa800377377e6a3c9b955678dd836538fcb48cd",
+        "bound_path": "connected-study.css",
+        "matches": true
+      },
+      {
+        "bytes": 2916,
+        "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0",
+        "bound_path": "hero-details.css",
+        "matches": true
+      },
+      {
+        "bytes": 6287,
+        "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf",
+        "bound_path": "resource-cards.css",
+        "matches": true
+      },
+      {
+        "bytes": 2716,
+        "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5",
+        "bound_path": "topic-art.css",
+        "matches": true
+      },
+      {
+        "bytes": 869,
+        "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637",
+        "bound_path": "topic-artwork-details.css",
+        "matches": true
+      },
+      {
+        "bytes": 1062,
+        "sha256": "5583b0f2d023bccbf2a318dc8c063331c4e96c9ffc7b5d754badc2c01d18ffd4",
+        "bound_path": "priesthood-scenes.css",
+        "matches": true
+      },
+      {
+        "bytes": 5516,
+        "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669",
+        "bound_path": "site-search.css",
+        "matches": true
+      },
+      {
+        "bytes": 5808,
+        "sha256": "46915bd0e27fc394b68aad848cdfad37ac05959d2b7cdbac0e476a262ce1c802",
+        "bound_path": "history-stories.css",
+        "matches": true
+      },
+      {
+        "bytes": 4042,
+        "sha256": "43528059e8184f318844562d67b1183e303ec01322135f8a895507c88580c26e",
+        "bound_path": "docs/emma-story-artwork-import/ride-provenance.json",
+        "matches": true
+      },
+      {
+        "bytes": 1957176,
+        "sha256": "b20a78f3af80f987df0220e157c32244f463cb37e25e0128aff8f5e42987e42b",
+        "bound_path": "assets/page-art/emma-life/originals/emma-hymnal-selected.png",
+        "matches": true,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "pixel_sha256": "4c54803611deab5a839180b4c7d83e371654687aa1bbcaaf9670ed1a4960776b"
+      },
+      {
+        "bytes": 92598,
+        "sha256": "69865b606ac1c0d55f6fe1f462520159e53fafa0edd7b661ad2fc5afe272bec3",
+        "bound_path": "assets/page-art/emma-life/emma-story2-hymnal-review-1536.webp",
+        "matches": true,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "pixel_sha256": "0d0098c8e8300b4656bf27942436a698488711237676ca8f7e44ffc246efceb7"
+      },
+      {
+        "bytes": 23014,
+        "sha256": "46641bb4044a58473778629a03ab8927bed90a4c72acf48f1c7656014a255316",
+        "bound_path": "assets/page-art/emma-life/emma-story2-hymnal-review-640.webp",
+        "matches": true,
+        "dimensions": [
+          640,
+          427
+        ],
+        "pixel_sha256": "eb28d01dcfceb3ba36cd77535730bc2ef29bb16df05ab6a4e148189d34977eb4"
+      },
+      {
+        "bytes": 44864,
+        "sha256": "16ed55c58fcf2c598c5f34e91a6884a33e8d7934d0f87d8982a9b59a5e6919ba",
+        "bound_path": "assets/page-art/emma-life/emma-story2-hymnal-review-960.webp",
+        "matches": true,
+        "dimensions": [
+          960,
+          640
+        ],
+        "pixel_sha256": "af9d1dc7ee66cb8f344f4ac26f08a58f57b760affbd7c8f7a11989a926a59683"
+      },
+      {
+        "bytes": 14595,
+        "sha256": "56685e71d89e8596e9b14e4cfeb49889afbc7fb4534ba0efd5dc4a69c58df8c8",
+        "bound_path": "history/emma-hymns.html",
+        "matches": true
+      },
+      {
+        "bytes": 4851,
+        "sha256": "3dc451a9717cd2f9761b49f9464faf1e3748be15b4804982ba1b4a529add23b2",
+        "bound_path": "docs/emma-story-artwork-import/hymnal-provenance.json",
+        "matches": true
+      },
+      {
+        "bytes": 2037420,
+        "sha256": "9dd0cbe00e0e54a5b2d584a2ecdce3e7d6d83ae31117a32ed9c4e5c67545307e",
+        "bound_path": "assets/page-art/emma-life/originals/emma-quincy-selected.png",
+        "matches": true,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "pixel_sha256": "7de18f58581f7c4388c231e5b39bfe6a20a5778deeeb0585c5793cc394dd4437"
+      },
+      {
+        "bytes": 99060,
+        "sha256": "a6b973db6d7003c4adff508aada11dff7f6523b11e2edc61570574a40bee771d",
+        "bound_path": "assets/page-art/emma-life/emma-story3-quincy-review-1536.webp",
+        "matches": true,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "pixel_sha256": "9c7c932a62ad9ec1d89b0ea527daa0a9c89781e57a1cabf20390fb1696d2701c"
+      },
+      {
+        "bytes": 26554,
+        "sha256": "eed22c0e427678a354181db1f567ab5eea87b7c1489e10b8d9e3725e2fd20579",
+        "bound_path": "assets/page-art/emma-life/emma-story3-quincy-review-640.webp",
+        "matches": true,
+        "dimensions": [
+          640,
+          427
+        ],
+        "pixel_sha256": "8f0b3d8d9553e000facbb0ea93422d941a5dcac3d1ffb84ee416ed22341cb4c2"
+      },
+      {
+        "bytes": 49898,
+        "sha256": "f7ca4b56d8e924d05bf15f7e9fb651d20d3d13cbdfd23577ebb2d90b580ff558",
+        "bound_path": "assets/page-art/emma-life/emma-story3-quincy-review-960.webp",
+        "matches": true,
+        "dimensions": [
+          960,
+          640
+        ],
+        "pixel_sha256": "7681a148b95d61a796d8235afe9ba144810cc3f8b2794d172ad45daa80129145"
+      },
+      {
+        "bytes": 14596,
+        "sha256": "a424db4ab7ca1f0b925ec30a823cb9cc986a87e908d78967195cb132b545254f",
+        "bound_path": "history/emma-winter-crossing.html",
+        "matches": true
+      },
+      {
+        "bytes": 4851,
+        "sha256": "894c473ec6e55e3995c96647771776b143345ba346c219b1f1bd72803db817ad",
+        "bound_path": "docs/emma-story-artwork-import/quincy-provenance.json",
+        "matches": true
+      },
+      {
+        "bytes": 2200837,
+        "sha256": "7429139f23722f6e6f86785fe6090b45a20c172405cd9c56207a8816f4617d3c",
+        "bound_path": "assets/page-art/emma-life/originals/emma-hospitality-selected.png",
+        "matches": true,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "pixel_sha256": "0fe09dd31dc7321e41cad6376e8583a7768191fbe5071b18c4b64344c35e4642"
+      },
+      {
+        "bytes": 123764,
+        "sha256": "e6d21c89cd491fbe8e1c3276eab7e4cdad35d4859b626773cd80c255ffb23b48",
+        "bound_path": "assets/page-art/emma-life/emma-story4-hospitality-review-1536.webp",
+        "matches": true,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "pixel_sha256": "6b85cc709c556053b675aa3df49a4ed648ef2680ff176ad5d8e3d723c74d7fb6"
+      },
+      {
+        "bytes": 29838,
+        "sha256": "b1a9dc3d1915de0426a08c62a4a8dcd83a562fe1aa340aba203d88d83d0b561e",
+        "bound_path": "assets/page-art/emma-life/emma-story4-hospitality-review-640.webp",
+        "matches": true,
+        "dimensions": [
+          640,
+          427
+        ],
+        "pixel_sha256": "8a942384dc40dcb2309657d9a3ea97c4874ec5653534507b7ef46f7fae276f11"
+      },
+      {
+        "bytes": 59416,
+        "sha256": "48a74b1e7021f2f0d53bb81e456583549ca5815103e757a895cf518acfc4029c",
+        "bound_path": "assets/page-art/emma-life/emma-story4-hospitality-review-960.webp",
+        "matches": true,
+        "dimensions": [
+          960,
+          640
+        ],
+        "pixel_sha256": "6aa2ddb31c50ba553c04ac905649d8ba9b09f22485d41999c89fd1036c617bf9"
+      },
+      {
+        "bytes": 15187,
+        "sha256": "b8bef87968a1b6189524e80dbbcfea9e4c95e5336c1258987de22bbe33946c78",
+        "bound_path": "history/emma-relief-society.html",
+        "matches": true
+      },
+      {
+        "bytes": 4856,
+        "sha256": "35db92331f6a8b731fef52d059ebf58ca8135b9371aec3a5ff598327453cc0e7",
+        "bound_path": "docs/emma-story-artwork-import/hospitality-provenance.json",
+        "matches": true
+      },
+      {
+        "bytes": 1965382,
+        "sha256": "c236d424cb558fff657048e286410bf1f6cb5cb841513a4568a8d0449fa34af1",
+        "bound_path": "assets/page-art/emma-life/originals/emma-testimony-selected.png",
+        "matches": true,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "pixel_sha256": "d3cfcf63eef1b4352d809dae7b8d4195cc5008213e42cabcb5bc9644e6424853"
+      },
+      {
+        "bytes": 80384,
+        "sha256": "01454124312c44309aa3ea2c49e27fea5e13d88c1aba10b1b2b073f82574d0d3",
+        "bound_path": "assets/page-art/emma-life/emma-story5-testimony-review-1536.webp",
+        "matches": true,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "pixel_sha256": "a1fbd14fb7fe0cac86ef8bbb6ad3272c0ed40c0e4c6f97e058041df2995edc40"
+      },
+      {
+        "bytes": 19246,
+        "sha256": "d2ef1a76aba46d2838fc6f8a3e9fc9f03749a7ad7221212130a793beeaebfc07",
+        "bound_path": "assets/page-art/emma-life/emma-story5-testimony-review-640.webp",
+        "matches": true,
+        "dimensions": [
+          640,
+          427
+        ],
+        "pixel_sha256": "54954e3f7704438b44879303420c74258fb7b3e120b29bbe94e128fa14a03712"
+      },
+      {
+        "bytes": 38846,
+        "sha256": "9470c0b41ca23374408e0a3cfc77061c76de1e20d02072537889c77aebabd988",
+        "bound_path": "assets/page-art/emma-life/emma-story5-testimony-review-960.webp",
+        "matches": true,
+        "dimensions": [
+          960,
+          640
+        ],
+        "pixel_sha256": "7f06c0dcd9c63977ab7c23d37934b2645c0bd0bc86f13dff80e2d99b521ffa8b"
+      },
+      {
+        "bytes": 15736,
+        "sha256": "6889079338eebd271d8a25af85850873950a6462ef33c11031a3cea0ba46e710",
+        "bound_path": "history/emma-last-testimony.html",
+        "matches": true
+      },
+      {
+        "bytes": 4854,
+        "sha256": "a2f0e0918016d28c7ecca9e77926195b7fdbd8959632c325a08348a7eb60a18d",
+        "bound_path": "docs/emma-story-artwork-import/testimony-provenance.json",
+        "matches": true
+      }
+    ],
+    "all_source_pins_match": true,
+    "source_inverse": [
+      {
+        "route": "history/emma-elect-lady.html",
+        "canonical_notice_markup_exact": true,
+        "footer_inverse_restores_all_other_bytes": true
+      },
+      {
+        "route": "history/emma-hymns.html",
+        "canonical_notice_markup_exact": true,
+        "footer_inverse_restores_all_other_bytes": true
+      },
+      {
+        "route": "history/emma-winter-crossing.html",
+        "canonical_notice_markup_exact": true,
+        "footer_inverse_restores_all_other_bytes": true
+      },
+      {
+        "route": "history/emma-relief-society.html",
+        "canonical_notice_markup_exact": true,
+        "footer_inverse_restores_all_other_bytes": true
+      },
+      {
+        "route": "history/emma-last-testimony.html",
+        "canonical_notice_markup_exact": true,
+        "footer_inverse_restores_all_other_bytes": true
+      }
+    ],
+    "historical_receipts": [
+      {
+        "receipt_name": "ACTION-RIDE-PROMPT-v4.txt",
+        "bytes": 2915,
+        "sha256": "87deeaa7c1f49ec3916885eed598fc542f18bdc9d1b8afa98d0fbef94f0cb0cf",
+        "rehashed_unchanged": true
+      },
+      {
+        "receipt_name": "PRECREATION-REVIEW-v4.json",
+        "bytes": 4951,
+        "sha256": "52be76c747c4ce665844f913576e35cdccff4f773db1ade9631f22ff81a2cae1",
+        "rehashed_unchanged": true
+      },
+      {
+        "receipt_name": "EMMA-ACTION-v4-PRECREATION-REVIEW.md",
+        "bytes": 5440,
+        "sha256": "7b30b4cadda14526449ce288242e0f36075d200676aaaf159f4f5753dc464af7",
+        "rehashed_unchanged": true
+      },
+      {
+        "receipt_name": "FINISHED-PIXEL-REVIEW-v17.json",
+        "bytes": 6601,
+        "sha256": "abb1ff943ddcaaabc11537aa6e3b0573cf7c5161952bc0350df90cb2de97030b",
+        "rehashed_unchanged": true
+      },
+      {
+        "receipt_name": "EMMA-ACTION-v17-FINISHED-REVIEW.md",
+        "bytes": 5232,
+        "sha256": "befc8d67ed2c03ed7cc9f38fd2c14bf01b3fe7e8fd4b10aa801ac3370d7fe194",
+        "rehashed_unchanged": true
+      },
+      {
+        "receipt_name": "OWNER-ACCEPTANCE-v17.json",
+        "bytes": 2798,
+        "sha256": "0fca7c36ebac89fd2073182a68680640ee8526847cec01e889fb6ef449baf86c",
+        "rehashed_unchanged": true
+      },
+      {
+        "receipt_name": "FOUR-EDITS-MANIFEST-v2-PRECREATION-REVIEW.json",
+        "bytes": 9611,
+        "sha256": "541ca97d6c0878c65c0225232157bad941da5ce7b3816a9d87e84a16a79b909b",
+        "rehashed_unchanged": true
+      },
+      {
+        "receipt_name": "FOUR-EDIT-PRECREATION-v1-REVIEW.json",
+        "bytes": 5451,
+        "sha256": "a774c5786fb1c7661010f87c0b1a53caa1d9ab00728158b3bf0373b4ef5887d2",
+        "rehashed_unchanged": true
+      },
+      {
+        "receipt_name": "QUINCY-v2-DELTA-PRECREATION-REVIEW.json",
+        "bytes": 845,
+        "sha256": "53a0a89fae046ed5ceaab5ab48db29b15a9cb41850bb2381846c02447b3b20d9",
+        "rehashed_unchanged": true
+      },
+      {
+        "receipt_name": "HYMNAL-EDIT-v2-PRECREATION-REVIEW.json",
+        "bytes": 3778,
+        "sha256": "cd651b26114d57c5a62f5d72119c5a824a8ae108f18d7ec8f161e3be5b2cc108",
+        "rehashed_unchanged": true
+      },
+      {
+        "receipt_name": "HYMNAL-EDIT-v2-PRECREATION-REVIEW.json",
+        "bytes": 3385,
+        "sha256": "204180a2d7fd6976e758d887efbd89f66a90e4b5bdb2fdaae3bf84a22afe4eac",
+        "rehashed_unchanged": true
+      },
+      {
+        "receipt_name": "RIDE-v13-AND-FIVE-SET-FINISHED-REVIEW.json",
+        "bytes": 6655,
+        "sha256": "fbd2c95a43194a67d78b19ab35569ecb36996bfb91eba4bc01de9fa37c14c447",
+        "rehashed_unchanged": true
+      },
+      {
+        "receipt_name": "RIDE-v13-AND-FIVE-SET-FINISHED-REVIEW.json",
+        "bytes": 4959,
+        "sha256": "8777fd086d47b25bdfeb23300b165031eb7ab0091bd4d5530bb6a666b3d8b57a",
+        "rehashed_unchanged": true
+      },
+      {
+        "receipt_name": "FOUR-EDITS-ACTUAL-RESULTS.json",
+        "bytes": 6542,
+        "sha256": "d36e19c18c085e19af1e9ba1d169bc9d3bd87b23ec39019986e754f0cc8d19c4",
+        "rehashed_unchanged": true
+      }
+    ],
+    "actual_zip_rehashed": true,
+    "all63_extracted_members_equal": true,
+    "retained_captures": [
+      {
+        "name": "emma-hub-1280.png",
+        "bytes": 627489,
+        "sha256": "662a516784c3767edecf96c7f852de2e6c6e73c494b174ec6b943e0fc9bcc281",
+        "prior_sha256": "662a516784c3767edecf96c7f852de2e6c6e73c494b174ec6b943e0fc9bcc281",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-hub-320.png",
+        "bytes": 181050,
+        "sha256": "c60fa0c4551898bf3d8d713f7a1f928654094281410ea518c0d48bdbe69ed190",
+        "prior_sha256": "c60fa0c4551898bf3d8d713f7a1f928654094281410ea518c0d48bdbe69ed190",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-hub-390.png",
+        "bytes": 239021,
+        "sha256": "14cd8dabee050d3fcf68b5693b4554b58580649437c3bb23daca636c57df7d2a",
+        "prior_sha256": "14cd8dabee050d3fcf68b5693b4554b58580649437c3bb23daca636c57df7d2a",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-mobile-menu-320.jpg",
+        "bytes": 32342,
+        "sha256": "44962e45c1b54f9c0145144d53641e6b75fc6fe7ac1631321b82f84ab47f2480",
+        "prior_sha256": "44962e45c1b54f9c0145144d53641e6b75fc6fe7ac1631321b82f84ab47f2480",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-mobile-menu-390.jpg",
+        "bytes": 45081,
+        "sha256": "00a60a6e40f06df0e115738fd7065b788a052fe4df196ea710d911273085fa5e",
+        "prior_sha256": "00a60a6e40f06df0e115738fd7065b788a052fe4df196ea710d911273085fa5e",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-mobile-search-320.jpg",
+        "bytes": 28264,
+        "sha256": "ee807a8b44205c3a80d5fa473f30acc13e9b41ab220a29f6abfea74aff582d8a",
+        "prior_sha256": "ee807a8b44205c3a80d5fa473f30acc13e9b41ab220a29f6abfea74aff582d8a",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-mobile-search-390.jpg",
+        "bytes": 32643,
+        "sha256": "5bde41422b95b168df6d415e50e952f79d4ae12f4226015906ab0080036e7174",
+        "prior_sha256": "5bde41422b95b168df6d415e50e952f79d4ae12f4226015906ab0080036e7174",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-skip-keyboard-1280.jpg",
+        "bytes": 127449,
+        "sha256": "429f55953f0d22eee1c6f64f2119cb487d185795bc87c14ae833f1f150e37723",
+        "prior_sha256": "429f55953f0d22eee1c6f64f2119cb487d185795bc87c14ae833f1f150e37723",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-skip-keyboard-320.jpg",
+        "bytes": 54923,
+        "sha256": "e3de4d7f9007d4aaa53c34309f5c19fbd3cc7ce33529d273c0ea559fc790e015",
+        "prior_sha256": "e3de4d7f9007d4aaa53c34309f5c19fbd3cc7ce33529d273c0ea559fc790e015",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-skip-keyboard-390.jpg",
+        "bytes": 61085,
+        "sha256": "ac24aa1b22b8734449efd5ff56a1f96593c49908570b80a5fec3a485425325da",
+        "prior_sha256": "ac24aa1b22b8734449efd5ff56a1f96593c49908570b80a5fec3a485425325da",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-story1-ride-review-1280-viewport.jpg",
+        "bytes": 245473,
+        "sha256": "37bb90f2d0ce3ece42ad03cbbf2dd9e575d7c63ab2dbb9024ab34b4b82019267",
+        "prior_sha256": "37bb90f2d0ce3ece42ad03cbbf2dd9e575d7c63ab2dbb9024ab34b4b82019267",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-story1-ride-review-320-viewport.jpg",
+        "bytes": 73559,
+        "sha256": "fd955a8c6f1c2c5ee069d5a66bd021d5c4df4605308161b0b67de8f53e1f89c8",
+        "prior_sha256": "fd955a8c6f1c2c5ee069d5a66bd021d5c4df4605308161b0b67de8f53e1f89c8",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-story1-ride-review-390-viewport.jpg",
+        "bytes": 97250,
+        "sha256": "88146ebfb6e7e6372032ecd5e8203126a90d1e2a6f2e0b15440c36c21a019dd2",
+        "prior_sha256": "88146ebfb6e7e6372032ecd5e8203126a90d1e2a6f2e0b15440c36c21a019dd2",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-story1-ride-review-dialog-390.png",
+        "bytes": 404981,
+        "sha256": "cd605c80c2346912afe828b893d807aabbc38210415a5bc69225e02a16208dbd",
+        "prior_sha256": "cd605c80c2346912afe828b893d807aabbc38210415a5bc69225e02a16208dbd",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-story1-ride-review-header-1280.jpg",
+        "bytes": 149338,
+        "sha256": "0e19186924ad4f45f2ad69f5fc5e6a2da33b97576a54215bac48c3bf16ada185",
+        "prior_sha256": "0e19186924ad4f45f2ad69f5fc5e6a2da33b97576a54215bac48c3bf16ada185",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-story1-ride-review-header-320.jpg",
+        "bytes": 54313,
+        "sha256": "1e497c60192cdec9fe8189767a4691f5ff94b9818591009281e67b70c093f55c",
+        "prior_sha256": "1e497c60192cdec9fe8189767a4691f5ff94b9818591009281e67b70c093f55c",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-story1-ride-review-header-390.jpg",
+        "bytes": 62908,
+        "sha256": "c099449f5d1304bb441ef2feec6712cbf724745a66240b6e5de340651df3a38e",
+        "prior_sha256": "c099449f5d1304bb441ef2feec6712cbf724745a66240b6e5de340651df3a38e",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-story2-hymnal-review-1280-viewport.jpg",
+        "bytes": 98368,
+        "sha256": "1630070ae6d30c58fa2a4dc327cfb1894411b2203bdc9cc51a025d4e936470b4",
+        "prior_sha256": "ab5868a2df206776eec4549b93a28bd1e013ef7b62d87a21655e9405d6bb6571",
+        "byte_identical": false,
+        "rgb_difference_bbox": [
+          127,
+          47,
+          776,
+          65
+        ],
+        "freshly_viewed": true
+      },
+      {
+        "name": "emma-story2-hymnal-review-320-viewport.jpg",
+        "bytes": 66126,
+        "sha256": "9ee9c85ab85a1fa961596e5065d2f28f8a1e467c07f5fadd6e342b82281ba35a",
+        "prior_sha256": "9ee9c85ab85a1fa961596e5065d2f28f8a1e467c07f5fadd6e342b82281ba35a",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-story2-hymnal-review-390-viewport.jpg",
+        "bytes": 75532,
+        "sha256": "9ad45d8f59e7f72b959b7d59b0a709f30ebe279a89a5e0755e4e5b0cc9bde270",
+        "prior_sha256": "9ad45d8f59e7f72b959b7d59b0a709f30ebe279a89a5e0755e4e5b0cc9bde270",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-story2-hymnal-review-dialog-390.png",
+        "bytes": 323201,
+        "sha256": "78dbac492503f20b47bd00e05b291aa5e61208a603305cea6a76fe4f2373eab6",
+        "prior_sha256": "78dbac492503f20b47bd00e05b291aa5e61208a603305cea6a76fe4f2373eab6",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-story2-hymnal-review-header-1280.jpg",
+        "bytes": 125927,
+        "sha256": "f769a321d5951939639a48693e0a2a9b72d6bffc2bf138be1cd74e8cdf5a2942",
+        "prior_sha256": "f769a321d5951939639a48693e0a2a9b72d6bffc2bf138be1cd74e8cdf5a2942",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-story2-hymnal-review-header-320.jpg",
+        "bytes": 53544,
+        "sha256": "9d3b08544af12ff0ae2d0e80814f08a654ba50b7cbdee808d9fa047798c93a07",
+        "prior_sha256": "9d3b08544af12ff0ae2d0e80814f08a654ba50b7cbdee808d9fa047798c93a07",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-story2-hymnal-review-header-390.jpg",
+        "bytes": 59679,
+        "sha256": "d77dc4669090e3b4e8fab5d1b91a80bdcef4ebcfdac9659c775875b94ecf7204",
+        "prior_sha256": "d77dc4669090e3b4e8fab5d1b91a80bdcef4ebcfdac9659c775875b94ecf7204",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-story3-quincy-review-1280-viewport.jpg",
+        "bytes": 102258,
+        "sha256": "aaa5598307d1a5f6d59e7d311c696f1d24488d3790c3b0e71972a4a68bf85fa2",
+        "prior_sha256": "aaa5598307d1a5f6d59e7d311c696f1d24488d3790c3b0e71972a4a68bf85fa2",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-story3-quincy-review-320-viewport.jpg",
+        "bytes": 57904,
+        "sha256": "deb53076b80fb488cba6694623716f2c12f03e7d23dd4e90d7f7d696315119ba",
+        "prior_sha256": "deb53076b80fb488cba6694623716f2c12f03e7d23dd4e90d7f7d696315119ba",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-story3-quincy-review-390-viewport.jpg",
+        "bytes": 64686,
+        "sha256": "3db29c6eb1bd69e69b8cd088cab1f299df585be61122a2ba98a5bb6feab29e6d",
+        "prior_sha256": "3db29c6eb1bd69e69b8cd088cab1f299df585be61122a2ba98a5bb6feab29e6d",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-story3-quincy-review-dialog-390.png",
+        "bytes": 312185,
+        "sha256": "6e84e260e466ea2d39686c585fb57b6a349d4018bf19b66955833375dfe89b9f",
+        "prior_sha256": "6e84e260e466ea2d39686c585fb57b6a349d4018bf19b66955833375dfe89b9f",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-story3-quincy-review-header-1280.jpg",
+        "bytes": 136320,
+        "sha256": "c7ab925ecdfcda35bc1d9042fc8f04aa9db654f481402b21b79fd1b1107293ee",
+        "prior_sha256": "c7ab925ecdfcda35bc1d9042fc8f04aa9db654f481402b21b79fd1b1107293ee",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-story3-quincy-review-header-320.jpg",
+        "bytes": 53757,
+        "sha256": "10694b41b546edab414a8431c39360419d4bcd2e1306c3e59f9d3eae5ba7c28b",
+        "prior_sha256": "10694b41b546edab414a8431c39360419d4bcd2e1306c3e59f9d3eae5ba7c28b",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-story3-quincy-review-header-390.jpg",
+        "bytes": 63276,
+        "sha256": "5ada2ebe7bcaf274e2e856dd2f5f869b0baa2956a344cb65e58459fd19453781",
+        "prior_sha256": "5ada2ebe7bcaf274e2e856dd2f5f869b0baa2956a344cb65e58459fd19453781",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-story4-hospitality-review-1280-viewport.jpg",
+        "bytes": 123964,
+        "sha256": "f3f510c3c930c2c7d03c0e3f97b38f604b9603b13f552f04890638a749f185b3",
+        "prior_sha256": "f3f510c3c930c2c7d03c0e3f97b38f604b9603b13f552f04890638a749f185b3",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-story4-hospitality-review-320-viewport.jpg",
+        "bytes": 65181,
+        "sha256": "be9d9665ed0e0449e507a3a1f4a4d3257acde7cbe95309a4013bef559f4d0e96",
+        "prior_sha256": "be9d9665ed0e0449e507a3a1f4a4d3257acde7cbe95309a4013bef559f4d0e96",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-story4-hospitality-review-390-viewport.jpg",
+        "bytes": 81768,
+        "sha256": "da9aa6b1279e1a079c22773cd22270c6e218a5123310bf5ee30553c4b6bc6cf6",
+        "prior_sha256": "da9aa6b1279e1a079c22773cd22270c6e218a5123310bf5ee30553c4b6bc6cf6",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-story4-hospitality-review-dialog-390.png",
+        "bytes": 326638,
+        "sha256": "60e4c9d15dcacfb79531832aa093994a19d2dafceb5a4f73fd77ae9924f612d8",
+        "prior_sha256": "60e4c9d15dcacfb79531832aa093994a19d2dafceb5a4f73fd77ae9924f612d8",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-story4-hospitality-review-header-1280.jpg",
+        "bytes": 154056,
+        "sha256": "80e9ee2956c55c2eaeb8bcbe057da59c60d7a92709a436aa3bcf07f9b43efa4d",
+        "prior_sha256": "80e9ee2956c55c2eaeb8bcbe057da59c60d7a92709a436aa3bcf07f9b43efa4d",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-story4-hospitality-review-header-320.jpg",
+        "bytes": 56445,
+        "sha256": "045208d484a012d4b9e28d3bae8363ad11bf7a72cea8a63ac4bb98cffb3af807",
+        "prior_sha256": "045208d484a012d4b9e28d3bae8363ad11bf7a72cea8a63ac4bb98cffb3af807",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-story4-hospitality-review-header-390.jpg",
+        "bytes": 59803,
+        "sha256": "da06186e176ac340b649ca88e32f1e937c4ebb9167aa4673d757ddd6c962f301",
+        "prior_sha256": "da06186e176ac340b649ca88e32f1e937c4ebb9167aa4673d757ddd6c962f301",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-story5-testimony-review-1280-viewport.jpg",
+        "bytes": 92340,
+        "sha256": "5623b075979ac8ee9e0bf7da29180aae27e8ba49c1fc42030616c8ca1dcae816",
+        "prior_sha256": "009c0c4256a89c7cdef1f1add05b81ef5d3602737f0c1a54dcae6f26727c79d9",
+        "byte_identical": false,
+        "rgb_difference_bbox": [
+          0,
+          47,
+          1280,
+          88
+        ],
+        "freshly_viewed": true
+      },
+      {
+        "name": "emma-story5-testimony-review-320-viewport.jpg",
+        "bytes": 52472,
+        "sha256": "19238153012aef45c3b0a2cc48091458139b1634e1697eee3879c29083c94da0",
+        "prior_sha256": "19238153012aef45c3b0a2cc48091458139b1634e1697eee3879c29083c94da0",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-story5-testimony-review-390-viewport.jpg",
+        "bytes": 65187,
+        "sha256": "8d61242fd246042fef4430e2c2f42a5ff18a8a2a78ea69163158d633d7966fe8",
+        "prior_sha256": "8d61242fd246042fef4430e2c2f42a5ff18a8a2a78ea69163158d633d7966fe8",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-story5-testimony-review-dialog-390.png",
+        "bytes": 319106,
+        "sha256": "79858d455a3d36846f687c001423790bca49a62ab8444e12478cb94a914feb26",
+        "prior_sha256": "79858d455a3d36846f687c001423790bca49a62ab8444e12478cb94a914feb26",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-story5-testimony-review-header-1280.jpg",
+        "bytes": 136812,
+        "sha256": "cca2cab4708d098d4cd0c728d64780f5234a3292d82ad63c749b880caf91d1db",
+        "prior_sha256": "cca2cab4708d098d4cd0c728d64780f5234a3292d82ad63c749b880caf91d1db",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-story5-testimony-review-header-320.jpg",
+        "bytes": 53636,
+        "sha256": "0a6c5a02dfd863e4246b600390b016a9ae293ae2741382c2cb8606a1fee5030d",
+        "prior_sha256": "0a6c5a02dfd863e4246b600390b016a9ae293ae2741382c2cb8606a1fee5030d",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      },
+      {
+        "name": "emma-story5-testimony-review-header-390.jpg",
+        "bytes": 63130,
+        "sha256": "13a6bddd324fefc21f93d7622a8883b8147ac37e2b5e911486934d24a4f2b4e2",
+        "prior_sha256": "13a6bddd324fefc21f93d7622a8883b8147ac37e2b5e911486934d24a4f2b4e2",
+        "byte_identical": true,
+        "rgb_difference_bbox": null,
+        "freshly_viewed": false
+      }
+    ],
+    "new_footer_captures": [
+      {
+        "name": "emma-story1-ride-review-footer-1280.jpg",
+        "bytes": 90677,
+        "sha256": "655589396065909a4aeb438694be5e999da27909ef8e41a6c7328854fa77b558",
+        "freshly_viewed": true
+      },
+      {
+        "name": "emma-story1-ride-review-footer-320.jpg",
+        "bytes": 46176,
+        "sha256": "0fd7dccb2eccd8ebf6408211e6c5ad60192207075d81e3e628ea72c94d1e37e8",
+        "freshly_viewed": true
+      },
+      {
+        "name": "emma-story1-ride-review-footer-390.jpg",
+        "bytes": 50893,
+        "sha256": "1a82655ce072ed91ff5c889bb26064fbba7ffde17a2f78b5a3d05e8171a9a551",
+        "freshly_viewed": true
+      },
+      {
+        "name": "emma-story2-hymnal-review-footer-1280.jpg",
+        "bytes": 97169,
+        "sha256": "d2a071a417adbfb10fa09d0c020bdacc0f1d88180adf1103ed275e25088ad42b",
+        "freshly_viewed": true
+      },
+      {
+        "name": "emma-story2-hymnal-review-footer-320.jpg",
+        "bytes": 47057,
+        "sha256": "0d7bfff0aacd3e81b8f29a1652fee33c5582e1d4c7e0771fa3e23c070f5f88a8",
+        "freshly_viewed": true
+      },
+      {
+        "name": "emma-story2-hymnal-review-footer-390.jpg",
+        "bytes": 54239,
+        "sha256": "da4ce5fef6135f441b690cc8a67e17d7a42e784d95e4cb8323f71dc119e6e8d6",
+        "freshly_viewed": true
+      },
+      {
+        "name": "emma-story3-quincy-review-footer-1280.jpg",
+        "bytes": 94732,
+        "sha256": "c8be86c456e4878ed07c39395b48b34b82139ee85b0e33a5e25b24889189115d",
+        "freshly_viewed": true
+      },
+      {
+        "name": "emma-story3-quincy-review-footer-320.jpg",
+        "bytes": 45815,
+        "sha256": "a462e6f5ec0ac7f7053c2af1dea325ea3f87650ec4166b294f081a8b8d426188",
+        "freshly_viewed": true
+      },
+      {
+        "name": "emma-story3-quincy-review-footer-390.jpg",
+        "bytes": 54900,
+        "sha256": "b5eb8c9b67162c8339e4c7f2387068cf86a0656daec8291049d4d78a53a314fc",
+        "freshly_viewed": true
+      },
+      {
+        "name": "emma-story4-hospitality-review-footer-1280.jpg",
+        "bytes": 101683,
+        "sha256": "2831d7c52efdd98bf1c38273c41e982a1830fa7d4d4dee05df1144380e4848d3",
+        "freshly_viewed": true
+      },
+      {
+        "name": "emma-story4-hospitality-review-footer-320.jpg",
+        "bytes": 44557,
+        "sha256": "968dbea2823962f3e6d5327dc5104fb52a7c17e5b8aa28b20b2d7be92164dc54",
+        "freshly_viewed": true
+      },
+      {
+        "name": "emma-story4-hospitality-review-footer-390.jpg",
+        "bytes": 55315,
+        "sha256": "a0d64d1637c0249d1461877bc2d974d9e7820de2cd89caa6f457f3f562179e13",
+        "freshly_viewed": true
+      },
+      {
+        "name": "emma-story5-testimony-review-footer-1280.jpg",
+        "bytes": 92615,
+        "sha256": "88089bf1be2a750da8f030311273b8aa702cdf30c5486ef9a905d78dcf50daae",
+        "freshly_viewed": true
+      },
+      {
+        "name": "emma-story5-testimony-review-footer-320.jpg",
+        "bytes": 46284,
+        "sha256": "6a09e83215d5d357599dc223c4f7c68e9e7cf4924bd6b533deae8dd71df233b8",
+        "freshly_viewed": true
+      },
+      {
+        "name": "emma-story5-testimony-review-footer-390.jpg",
+        "bytes": 52136,
+        "sha256": "12b3c3393c7f865e2582d1ca5e28b531c0368678bbf8e6c1de8099da88d12683",
+        "freshly_viewed": true
+      }
+    ],
+    "header_metadata_unchanged": true,
+    "skip_metadata_deltas": [
+      {
+        "field": "/79/rect/bottom",
+        "before": 49.36555528640747,
+        "after": 49.37021493911743
+      },
+      {
+        "field": "/79/rect/y",
+        "before": 2.8811802864074707,
+        "after": 2.8858399391174316
+      },
+      {
+        "field": "/79/transform",
+        "before": "matrix(1, 0, 0, 1, 0, -7.11882)",
+        "after": "matrix(1, 0, 0, 1, 0, -7.11416)"
+      },
+      {
+        "field": "/80/rect/bottom",
+        "before": -7.3253936767578125,
+        "after": -7.387836456298828
+      },
+      {
+        "field": "/80/rect/y",
+        "before": -53.80976867675781,
+        "after": -53.87221145629883
+      },
+      {
+        "field": "/80/transform",
+        "before": "matrix(1, 0, 0, 1, 0, -63.8098)",
+        "after": "matrix(1, 0, 0, 1, 0, -63.8722)"
+      },
+      {
+        "field": "/82/rect/bottom",
+        "before": 49.37719964981079,
+        "after": 49.34456539154053
+      },
+      {
+        "field": "/82/rect/y",
+        "before": 2.892824649810791,
+        "after": 2.8601903915405273
+      },
+      {
+        "field": "/82/transform",
+        "before": "matrix(1, 0, 0, 1, 0, -7.10718)",
+        "after": "matrix(1, 0, 0, 1, 0, -7.13981)"
+      },
+      {
+        "field": "/83/rect/bottom",
+        "before": -7.586433410644531,
+        "after": -7.531585693359375
+      },
+      {
+        "field": "/83/rect/y",
+        "before": -54.07080841064453,
+        "after": -54.015960693359375
+      },
+      {
+        "field": "/83/transform",
+        "before": "matrix(1, 0, 0, 1, 0, -64.0708)",
+        "after": "matrix(1, 0, 0, 1, 0, -64.016)"
+      },
+      {
+        "field": "/85/rect/bottom",
+        "before": 49.368144035339355,
+        "after": 49.37849235534668
+      },
+      {
+        "field": "/85/rect/y",
+        "before": 2.8837690353393555,
+        "after": 2.8941173553466797
+      },
+      {
+        "field": "/85/transform",
+        "before": "matrix(1, 0, 0, 1, 0, -7.11623)",
+        "after": "matrix(1, 0, 0, 1, 0, -7.10588)"
+      },
+      {
+        "field": "/86/rect/bottom",
+        "before": -7.587486267089844,
+        "after": -7.533653259277344
+      },
+      {
+        "field": "/86/rect/y",
+        "before": -54.071861267089844,
+        "after": -54.018028259277344
+      },
+      {
+        "field": "/86/transform",
+        "before": "matrix(1, 0, 0, 1, 0, -64.0719)",
+        "after": "matrix(1, 0, 0, 1, 0, -64.018)"
+      }
+    ],
+    "strict_notice_bounds_and_attributes_match": true,
+    "maximum_outer_footer_rounding_below_viewport_px": 0.46875
+  },
+  "footer_observations": [
+    {
+      "page": "history/emma-elect-lady.html",
+      "width": 1280,
+      "footer": {
+        "x": 0,
+        "y": 559.203125,
+        "right": 1280,
+        "bottom": 899.796875,
+        "width": 1280,
+        "height": 340.59375,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independence": {
+        "x": 180,
+        "y": 695.171875,
+        "right": 1100,
+        "bottom": 738.484375,
+        "width": 920,
+        "height": 43.3125,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "artwork": {
+        "x": 180,
+        "y": 746.484375,
+        "right": 1100,
+        "bottom": 789.796875,
+        "width": 920,
+        "height": 43.3125,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independenceCount": 1,
+      "artworkCount": 1,
+      "independenceText": "focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit ChurchofJesusChrist.org.",
+      "artworkText": "Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.",
+      "adjacent": true,
+      "official": {
+        "href": "https://www.churchofjesuschrist.org/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "label": "ChurchofJesusChrist.org"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 2385
+      }
+    },
+    {
+      "page": "history/emma-hymns.html",
+      "width": 1280,
+      "footer": {
+        "x": 0,
+        "y": 559.1875,
+        "right": 1280,
+        "bottom": 899.78125,
+        "width": 1280,
+        "height": 340.59375,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independence": {
+        "x": 180,
+        "y": 695.15625,
+        "right": 1100,
+        "bottom": 738.46875,
+        "width": 920,
+        "height": 43.3125,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "artwork": {
+        "x": 180,
+        "y": 746.46875,
+        "right": 1100,
+        "bottom": 789.78125,
+        "width": 920,
+        "height": 43.3125,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independenceCount": 1,
+      "artworkCount": 1,
+      "independenceText": "focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit ChurchofJesusChrist.org.",
+      "artworkText": "Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.",
+      "adjacent": true,
+      "official": {
+        "href": "https://www.churchofjesuschrist.org/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "label": "ChurchofJesusChrist.org"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 2411
+      }
+    },
+    {
+      "page": "history/emma-winter-crossing.html",
+      "width": 1280,
+      "footer": {
+        "x": 0,
+        "y": 558.96875,
+        "right": 1280,
+        "bottom": 899.5625,
+        "width": 1280,
+        "height": 340.59375,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independence": {
+        "x": 180,
+        "y": 694.9375,
+        "right": 1100,
+        "bottom": 738.25,
+        "width": 920,
+        "height": 43.3125,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "artwork": {
+        "x": 180,
+        "y": 746.25,
+        "right": 1100,
+        "bottom": 789.5625,
+        "width": 920,
+        "height": 43.3125,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independenceCount": 1,
+      "artworkCount": 1,
+      "independenceText": "focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit ChurchofJesusChrist.org.",
+      "artworkText": "Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.",
+      "adjacent": true,
+      "official": {
+        "href": "https://www.churchofjesuschrist.org/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "label": "ChurchofJesusChrist.org"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 2353
+      }
+    },
+    {
+      "page": "history/emma-relief-society.html",
+      "width": 1280,
+      "footer": {
+        "x": 0,
+        "y": 559.375,
+        "right": 1280,
+        "bottom": 899.96875,
+        "width": 1280,
+        "height": 340.59375,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independence": {
+        "x": 180,
+        "y": 695.34375,
+        "right": 1100,
+        "bottom": 738.65625,
+        "width": 920,
+        "height": 43.3125,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "artwork": {
+        "x": 180,
+        "y": 746.65625,
+        "right": 1100,
+        "bottom": 789.96875,
+        "width": 920,
+        "height": 43.3125,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independenceCount": 1,
+      "artworkCount": 1,
+      "independenceText": "focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit ChurchofJesusChrist.org.",
+      "artworkText": "Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.",
+      "adjacent": true,
+      "official": {
+        "href": "https://www.churchofjesuschrist.org/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "label": "ChurchofJesusChrist.org"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 2470
+      }
+    },
+    {
+      "page": "history/emma-last-testimony.html",
+      "width": 1280,
+      "footer": {
+        "x": 0,
+        "y": 558.953125,
+        "right": 1280,
+        "bottom": 899.546875,
+        "width": 1280,
+        "height": 340.59375,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independence": {
+        "x": 180,
+        "y": 694.921875,
+        "right": 1100,
+        "bottom": 738.234375,
+        "width": 920,
+        "height": 43.3125,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "artwork": {
+        "x": 180,
+        "y": 746.234375,
+        "right": 1100,
+        "bottom": 789.546875,
+        "width": 920,
+        "height": 43.3125,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independenceCount": 1,
+      "artworkCount": 1,
+      "independenceText": "focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit ChurchofJesusChrist.org.",
+      "artworkText": "Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.",
+      "adjacent": true,
+      "official": {
+        "href": "https://www.churchofjesuschrist.org/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "label": "ChurchofJesusChrist.org"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 2715
+      }
+    },
+    {
+      "page": "history/emma-elect-lady.html",
+      "width": 390,
+      "footer": {
+        "x": 0,
+        "y": 473.109375,
+        "right": 390,
+        "bottom": 900.328125,
+        "width": 390,
+        "height": 427.21875,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independence": {
+        "x": 20,
+        "y": 609.078125,
+        "right": 370,
+        "bottom": 695.703125,
+        "width": 350,
+        "height": 86.625,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "artwork": {
+        "x": 20,
+        "y": 703.703125,
+        "right": 370,
+        "bottom": 790.328125,
+        "width": 350,
+        "height": 86.625,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independenceCount": 1,
+      "artworkCount": 1,
+      "independenceText": "focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit ChurchofJesusChrist.org.",
+      "artworkText": "Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.",
+      "adjacent": true,
+      "official": {
+        "href": "https://www.churchofjesuschrist.org/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "label": "ChurchofJesusChrist.org"
+      },
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 3691
+      }
+    },
+    {
+      "page": "history/emma-hymns.html",
+      "width": 390,
+      "footer": {
+        "x": 0,
+        "y": 472.640625,
+        "right": 390,
+        "bottom": 899.859375,
+        "width": 390,
+        "height": 427.21875,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independence": {
+        "x": 20,
+        "y": 608.609375,
+        "right": 370,
+        "bottom": 695.234375,
+        "width": 350,
+        "height": 86.625,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "artwork": {
+        "x": 20,
+        "y": 703.234375,
+        "right": 370,
+        "bottom": 789.859375,
+        "width": 350,
+        "height": 86.625,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independenceCount": 1,
+      "artworkCount": 1,
+      "independenceText": "focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit ChurchofJesusChrist.org.",
+      "artworkText": "Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.",
+      "adjacent": true,
+      "official": {
+        "href": "https://www.churchofjesuschrist.org/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "label": "ChurchofJesusChrist.org"
+      },
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 3815
+      }
+    },
+    {
+      "page": "history/emma-winter-crossing.html",
+      "width": 390,
+      "footer": {
+        "x": 0,
+        "y": 472.484375,
+        "right": 390,
+        "bottom": 899.703125,
+        "width": 390,
+        "height": 427.21875,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independence": {
+        "x": 20,
+        "y": 608.453125,
+        "right": 370,
+        "bottom": 695.078125,
+        "width": 350,
+        "height": 86.625,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "artwork": {
+        "x": 20,
+        "y": 703.078125,
+        "right": 370,
+        "bottom": 789.703125,
+        "width": 350,
+        "height": 86.625,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independenceCount": 1,
+      "artworkCount": 1,
+      "independenceText": "focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit ChurchofJesusChrist.org.",
+      "artworkText": "Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.",
+      "adjacent": true,
+      "official": {
+        "href": "https://www.churchofjesuschrist.org/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "label": "ChurchofJesusChrist.org"
+      },
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 3635
+      }
+    },
+    {
+      "page": "history/emma-relief-society.html",
+      "width": 390,
+      "footer": {
+        "x": 0,
+        "y": 472.796875,
+        "right": 390,
+        "bottom": 900.015625,
+        "width": 390,
+        "height": 427.21875,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independence": {
+        "x": 20,
+        "y": 608.765625,
+        "right": 370,
+        "bottom": 695.390625,
+        "width": 350,
+        "height": 86.625,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "artwork": {
+        "x": 20,
+        "y": 703.390625,
+        "right": 370,
+        "bottom": 790.015625,
+        "width": 350,
+        "height": 86.625,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independenceCount": 1,
+      "artworkCount": 1,
+      "independenceText": "focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit ChurchofJesusChrist.org.",
+      "artworkText": "Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.",
+      "adjacent": true,
+      "official": {
+        "href": "https://www.churchofjesuschrist.org/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "label": "ChurchofJesusChrist.org"
+      },
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 4085
+      }
+    },
+    {
+      "page": "history/emma-last-testimony.html",
+      "width": 390,
+      "footer": {
+        "x": 0,
+        "y": 472.4375,
+        "right": 390,
+        "bottom": 899.65625,
+        "width": 390,
+        "height": 427.21875,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independence": {
+        "x": 20,
+        "y": 608.40625,
+        "right": 370,
+        "bottom": 695.03125,
+        "width": 350,
+        "height": 86.625,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "artwork": {
+        "x": 20,
+        "y": 703.03125,
+        "right": 370,
+        "bottom": 789.65625,
+        "width": 350,
+        "height": 86.625,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independenceCount": 1,
+      "artworkCount": 1,
+      "independenceText": "focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit ChurchofJesusChrist.org.",
+      "artworkText": "Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.",
+      "adjacent": true,
+      "official": {
+        "href": "https://www.churchofjesuschrist.org/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "label": "ChurchofJesusChrist.org"
+      },
+      "viewport": {
+        "width": 390,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 4248
+      }
+    },
+    {
+      "page": "history/emma-elect-lady.html",
+      "width": 320,
+      "footer": {
+        "x": 0,
+        "y": 407.3125,
+        "right": 320,
+        "bottom": 899.5,
+        "width": 320,
+        "height": 492.1875,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independence": {
+        "x": 20,
+        "y": 543.28125,
+        "right": 300,
+        "bottom": 673.21875,
+        "width": 280,
+        "height": 129.9375,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "artwork": {
+        "x": 20,
+        "y": 681.21875,
+        "right": 300,
+        "bottom": 789.5,
+        "width": 280,
+        "height": 108.28125,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independenceCount": 1,
+      "artworkCount": 1,
+      "independenceText": "focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit ChurchofJesusChrist.org.",
+      "artworkText": "Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.",
+      "adjacent": true,
+      "official": {
+        "href": "https://www.churchofjesuschrist.org/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "label": "ChurchofJesusChrist.org"
+      },
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 4405
+      }
+    },
+    {
+      "page": "history/emma-hymns.html",
+      "width": 320,
+      "footer": {
+        "x": 0,
+        "y": 407.8125,
+        "right": 320,
+        "bottom": 900,
+        "width": 320,
+        "height": 492.1875,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independence": {
+        "x": 20,
+        "y": 543.78125,
+        "right": 300,
+        "bottom": 673.71875,
+        "width": 280,
+        "height": 129.9375,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "artwork": {
+        "x": 20,
+        "y": 681.71875,
+        "right": 300,
+        "bottom": 790,
+        "width": 280,
+        "height": 108.28125,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independenceCount": 1,
+      "artworkCount": 1,
+      "independenceText": "focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit ChurchofJesusChrist.org.",
+      "artworkText": "Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.",
+      "adjacent": true,
+      "official": {
+        "href": "https://www.churchofjesuschrist.org/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "label": "ChurchofJesusChrist.org"
+      },
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 4349
+      }
+    },
+    {
+      "page": "history/emma-winter-crossing.html",
+      "width": 320,
+      "footer": {
+        "x": 0,
+        "y": 407.78125,
+        "right": 320,
+        "bottom": 899.96875,
+        "width": 320,
+        "height": 492.1875,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independence": {
+        "x": 20,
+        "y": 543.75,
+        "right": 300,
+        "bottom": 673.6875,
+        "width": 280,
+        "height": 129.9375,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "artwork": {
+        "x": 20,
+        "y": 681.6875,
+        "right": 300,
+        "bottom": 789.96875,
+        "width": 280,
+        "height": 108.28125,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independenceCount": 1,
+      "artworkCount": 1,
+      "independenceText": "focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit ChurchofJesusChrist.org.",
+      "artworkText": "Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.",
+      "adjacent": true,
+      "official": {
+        "href": "https://www.churchofjesuschrist.org/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "label": "ChurchofJesusChrist.org"
+      },
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 4217
+      }
+    },
+    {
+      "page": "history/emma-relief-society.html",
+      "width": 320,
+      "footer": {
+        "x": 0,
+        "y": 408.28125,
+        "right": 320,
+        "bottom": 900.46875,
+        "width": 320,
+        "height": 492.1875,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independence": {
+        "x": 20,
+        "y": 544.25,
+        "right": 300,
+        "bottom": 674.1875,
+        "width": 280,
+        "height": 129.9375,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "artwork": {
+        "x": 20,
+        "y": 682.1875,
+        "right": 300,
+        "bottom": 790.46875,
+        "width": 280,
+        "height": 108.28125,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independenceCount": 1,
+      "artworkCount": 1,
+      "independenceText": "focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit ChurchofJesusChrist.org.",
+      "artworkText": "Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.",
+      "adjacent": true,
+      "official": {
+        "href": "https://www.churchofjesuschrist.org/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "label": "ChurchofJesusChrist.org"
+      },
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 4865
+      }
+    },
+    {
+      "page": "history/emma-last-testimony.html",
+      "width": 320,
+      "footer": {
+        "x": 0,
+        "y": 407.796875,
+        "right": 320,
+        "bottom": 899.984375,
+        "width": 320,
+        "height": 492.1875,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independence": {
+        "x": 20,
+        "y": 543.765625,
+        "right": 300,
+        "bottom": 673.703125,
+        "width": 280,
+        "height": 129.9375,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "artwork": {
+        "x": 20,
+        "y": 681.703125,
+        "right": 300,
+        "bottom": 789.984375,
+        "width": 280,
+        "height": 108.28125,
+        "display": "block",
+        "visibility": "visible",
+        "opacity": "1"
+      },
+      "independenceCount": 1,
+      "artworkCount": 1,
+      "independenceText": "focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit ChurchofJesusChrist.org.",
+      "artworkText": "Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.",
+      "adjacent": true,
+      "official": {
+        "href": "https://www.churchofjesuschrist.org/",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "label": "ChurchofJesusChrist.org"
+      },
+      "viewport": {
+        "width": 320,
+        "height": 900
+      },
+      "scroll": {
+        "x": 0,
+        "y": 5096
+      }
+    }
+  ],
+  "checks": {
+    "identity": "Reusing my own genuinely performed prior inspection bound by receipt SHA256 afb43ddc1edac0becdd997140de5470bc09592c4f7fc93686fca33b211b71ffe, after this continuation independently reverified all twenty unchanged byte/dimension/RGBA pins. I did not freshly reopen the unchanged asset files here. My prior actual approved-reference/full-frame/face-detail observations remain applicable: brow/eye, nose, mouth and chin relationships remain recognizable across poses. The footer-only change does not alter image pixels. Manual artistic continuity, not biometric equivalence.",
+    "age": "Ride and hymnal retain adult youthful fullness; Quincy and hospitality retain mature-adult interpretations; testimony retains gray-streaked hair and facial lines at source size. Small derivatives and phone display suppress fine lines. Exact apparent numeric ages and every wrinkle are not certified. No new age reconstruction or rejuvenation edit.",
+    "expression_gaze": "Ride remains composed and attentive toward travel, hymnal downward toward the book, Quincy downward toward her hands, hospitality welcoming with near-viewer gaze, and testimony speaking with attentive off-camera gaze and raised hand. No conspicuous derivative-only gaze or expression drift observed. Fine iris/eyelash certainty is limited at 640 and phone display.",
+    "atmosphere": "Autumn riding action and valley depth contrast with soft window-lit book/seated interiors and the warm doorway. Distinct lighting and restrained clothing colors fit the teal/gold presentation. No new broad color break, blocking seam or obvious halo at normal size. Compression smooths microtexture, not recovered detail.",
+    "environment": "All fifteen derivatives preserve source composition and proportional framing. Current 1280/390/320 views show no new responsive crop of the face, hands, horse or doorway/shoe. Desktop ride reaches the bottom viewport edge; the last subpixel boundary is not proved. Quincy is an illustrative post-crossing portrait, not the actual river crossing. Separate unchanged hub hero is context only, outside five-original approval.",
+    "characters_realism": "Visible character, fabric, hair, light and hand/contact relationships remain coherent as photorealistic illustration. Re-encoding smooths fine detail, increasingly at 640. Hidden fingers, pelvis/saddle, far limbs, exact hair topology and physical dimensions are not certified. No new person or face substitution was introduced.",
+    "period_sources": "The five source-provenance summaries are unchanged in this spec and their actual file hashes were reverified; all fourteen retained historical receipt bytes were rehashed again. My own earlier selected-source/receipt and owner-v17 review remains applicable, not another reviewer's authorship. This verifies linkage, not authenticated signatures, new historical research or retrospective canonical preflight. The new canonical footer explicitly identifies AI-generated artistic interpretations and denies photograph/eyewitness status, consistent with those limitations. Generation times remain UNKNOWN_NOT_INFERRED.",
+    "anatomy": "Visible poses and hand contacts remain coherent within selected art. Three complete horse hooves are clearly readable; far hind hoof is naturally occluded by debris/limb overlap. Strict four-complete-hooves-visible remains NOT_MET_OCCLUDED. Owner-selected v17 does not certify unseen anatomy, exact saddle mechanics or a temporal gait cycle.",
+    "uniqueness": "Selected ride remains v17; other four sources remain corrective v2. Distinct settings, clothing, poses and source compositions are unchanged. No generation, editing, replacement or rejected-variant revival. New spec changes only five page byte/hash pins and corresponding context labels. I independently proved each candidate inverse restores the entire prior HTML by replacing only its footer, with both canonical notice paragraphs present exactly once. The previous cache-token normalization is retained. No lossless-derivative claim.",
+    "desktop_phone": "Freshly opened all fifteen new footer captures at 1280/390/320 by900 and both changed current desktop artwork captures alongside their prior versions. Footer independence and AI-artwork paragraphs are adjacent, legible and fully uncut, with official Church link and Back to top visible; narrow navigation pills wrap without horizontal clipping. The notices match canonical template markup and metadata: one each, visible, positive size, complete viewport bounds and exact official href/target/rel. Footer outer box alone extends at most0.46875px below900 from scroll rounding in three observations; no notice/control clipping was seen. Compared all45 retained captures:43 byte-identical to my previously personally viewed set; hymnal changed bbox(127,47,776,65), testimony(0,47,1280,88), outside art. I reused my own prior view of those43 unchanged captures, not fresh viewing calls. Header telemetry identical; skip metadata changes only subpixel transitional y/bottom/transform, focused screenshots unchanged. No new artwork/context regression observed; no physical-device certification."
+  },
+  "limits": [
+    "BOUND_SCOPE: exact footer-only spec a314d8a5e2c29da623852a69496ca8b4f6e6071cf10426ed8b7c847d1d9d5e73 and current diagnostic evidence. Not full-site release/deployment approval or normal full-QA PASS.",
+    "OWN_PRIOR_INSPECTION_REUSE: same actor /root/review_emma_context_as_fermi reuses only its own original-detail inspection of20assets and45captures in afb43ddc1edac0becdd997140de5470bc09592c4f7fc93686fca33b211b71ffe, after current hashes. This continuation freshly viewed15footer captures and2changed current/prior pairs only. No fictional fresh reopening of unchanged assets or43unchanged captures.",
+    "FOUR_HOOF_VISIBILITY_NOT_MET_OCCLUDED: the far hind hoof remains naturally occluded. Owner-selected v17 does not erase this strict negative criterion or certify hidden anatomy.",
+    "UNKNOWN_GENERATION_TIME: chronology remains unknown, no mtime inference or retrospective preflight. Historical source-art-only reviews remain so.",
+    "PHONE_WIDTH_NOT_PHYSICAL_PHONE: desktop Chromium widths1280/390/320 by900, no physical phone/touch keyboard/alternate-browser/exhaustive accessibility claim. Footer gray text was visually read, not a new measured contrast certification.",
+    "FOOTER_BOUNDARY_PRECISION: full independence/artwork notice bounds are inside viewport. Outer footer bottom reaches900.46875 at most; do not claim mathematically strict whole-container containment without the observed subpixel tolerance. Canonical official href is inspected, not fresh destination-load proof.",
+    "PRIOR_LIMITS_RETAINED: desktop ride viewport edge and long dialog/menu scrolling limits stand. Search submission/results not certified. Hub hero remains surrounding context, not one of five original approvals.",
+    "DIAGNOSTIC_ONLY: actual report has46successful listed journeys including15new footer observations, not my own renderer execution. Full normal QA still fails the old context record and awaits exact current reviews/final pin/hosted gates. No normal-suite or release success is inferred.",
+    "ARTISTIC_NOT_BIOMETRIC: no exact numerical apparent age, facial/body measurement, hidden anatomy, lossless derivative or authenticated historic event reconstruction claim.",
+    "PUBLIC_SAFE_METADATA: no private source/authority bodies, reference-image pixels, prompts or screenshots included. Prior rejected images, failed captures and earlier receipts preserved unchanged."
+  ]
+}

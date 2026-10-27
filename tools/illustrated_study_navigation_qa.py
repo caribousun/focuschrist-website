@@ -1,7 +1,8 @@
 """Destination-specific picture links must retain their reviewed scene and target."""
 from pathlib import Path
 from urllib.parse import urlsplit
-import json, re, posixpath
+import json, re, posixpath, hashlib
+from emma_story_consumers import EMMA_STORY_ROUTES, historical_consumers
 from bs4 import BeautifulSoup
 ROOT = Path(__file__).resolve().parents[1]
 VISIBLE_TOPIC_ROUTES = frozenset({
@@ -12,19 +13,34 @@ VISIBLE_TOPIC_ROUTES = frozenset({
     'history/john-rowe-moyle.html',
     'history/john-tanner.html',
 })
+CONTROLLER_REF = '../topic-artwork-details.js?v=20261021-continue-motion-1'
+HISTORICAL_CONTROLLER_SHA256 = '9a683d6ce80dd982fb01418843f78f1df7462d636914804f5894fb4d055fff2a'
+
+
+def controller_bindings_from_registry(registry, rows):
+    historical = historical_consumers(registry, [CONTROLLER_REF])
+    assert historical is not None, 'Exact five current Emma controller registry bindings required'
+    assert len(historical) == 120
+    assert hashlib.sha256(json.dumps(historical, sort_keys=True, separators=(',', ':')).encode()).hexdigest() == HISTORICAL_CONTROLLER_SHA256, 'Historical120 registry bindings changed'
+    assert all(len(refs)==1 and refs[0].endswith('topic-artwork-details.js?v=20261009-settled-continue-2') for refs in historical.values())
+    assert set(historical)<=set(rows)
+    expected = {route:[ref.replace('20261009-settled-continue-2','20261021-continue-motion-1') for ref in refs] for route,refs in historical.items()}
+    return dict(expected, **{route: [CONTROLLER_REF] for route in EMMA_STORY_ROUTES})
+
+
 def current_controller_bindings():
     from continue_motion_binding import mapping
-    historical=json.loads((ROOT/'docs/topic-artwork-controller-bindings.json').read_text(encoding='utf8'))
-    assert all(len(refs)==1 and refs[0].endswith('topic-artwork-details.js?v=20261009-settled-continue-2') for refs in historical.values())
-    rows=mapping()['files']
-    assert set(historical)<=set(rows)
-    return {route:[ref.replace('20261009-settled-continue-2','20261021-continue-motion-1') for ref in refs] for route,refs in historical.items()}
+    registry=json.loads((ROOT/'docs/topic-artwork-controller-bindings.json').read_text(encoding='utf8'))
+    return controller_bindings_from_registry(registry, mapping()['files'])
+
 
 def assert_controller_bindings(actual):
     expected = current_controller_bindings()
-    assert len(expected) == 120
+    historical = historical_consumers(expected, [CONTROLLER_REF])
+    assert historical is not None and len(historical) == 120
+    assert len(expected) == 125
     assert all(len(refs) == 1 and refs[0].endswith('topic-artwork-details.js?v=20261021-continue-motion-1') for refs in expected.values())
-    assert actual == expected, 'Exact120 topic controller owners/single references required'
+    assert actual == expected, 'Exact120 historical plus five new topic controller owners/single references required'
 
 def controller_binding_self_test():
     expected = current_controller_bindings()

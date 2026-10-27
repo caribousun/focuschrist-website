@@ -8,18 +8,26 @@ const root = path.resolve(__dirname, '..');
     const types = {'.html':'text/html; charset=utf-8','.css':'text/css','.js':'text/javascript','.json':'application/json','.webp':'image/webp'};
     fs.readFile(file,(e,data) => e ? res.writeHead(404).end() : res.writeHead(200,{'Content-Type':types[path.extname(file)]||'application/octet-stream'}).end(data));
   });
+  let browser;
+  try {
   await new Promise(r=>server.listen(0,'127.0.0.1',r));
-  const browser = await chromium.launch({headless:true,...(process.env.QA_BROWSER_CHANNEL?{channel:process.env.QA_BROWSER_CHANNEL}:{})});
+  browser = await chromium.launch({headless:true,...(process.env.QA_BROWSER_CHANNEL?{channel:process.env.QA_BROWSER_CHANNEL}:{})});
   const page = await browser.newPage();
   await page.route('https://**',r=>r.abort());
   const assert=require('node:assert/strict'),results=[];
   const origin=`http://127.0.0.1:${server.address().port}`;
   const routes=[...fs.readFileSync(path.join(root,'sitemap.xml'),'utf8').matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>new URL(m[1]).pathname);
-  assert.equal(routes.length,132);
+  // Partition only the inventory assertion; keep all current routes in the source scan.
+  const {historicalBoundaryRoutes}=require('./emma_content_boundary_routes');
+  const standardRoutes=require('./adams_standalone_navigation').withoutAdamsCanonical(routes,p=>fs.readFileSync(path.join(root,p),'utf8'));
+  require('./test_adams_standalone_navigation').selfTest(routes,p=>fs.readFileSync(path.join(root,p),'utf8'));
   assert(routes.includes('/timelines/world-and-scripture-timeline.html'),'World and Scripture route included in canonical content boundaries');
   const historicalRoutes=JSON.parse(fs.readFileSync(path.join(root,'docs/unified-opening-inventory.json'),'utf8')).pages.map(p=>p.path);
+  const historicalBoundary=historicalBoundaryRoutes(standardRoutes,historicalRoutes);
+  require('./test_emma_content_boundary_routes').selfTest(standardRoutes,historicalRoutes);
+  assert.equal(historicalBoundary.length,132);
   assert.equal(historicalRoutes.length,130);assert.equal(new Set(historicalRoutes).size,130);
-  assert.deepEqual(routes.map(p=>p==='/'?'index.html':p.replace(/^\//,'')).sort(),[...historicalRoutes,'history/emma-hale-smith.html','timelines/world-and-scripture-timeline.html'].sort(),'Exact historical routes plus reviewed Emma and World and Scripture additions');
+  assert.deepEqual(historicalBoundary.map(p=>p==='/'?'index.html':p.replace(/^\//,'')).sort(),[...historicalRoutes,'history/emma-hale-smith.html','timelines/world-and-scripture-timeline.html'].sort(),'Exact historical routes plus reviewed Emma and World and Scripture additions');
   assert(routes.includes('/joseph-smith-portrait-research.html'),'Research route included in canonical content boundaries');
   let onward=0;
   for(const route of routes){const source=fs.readFileSync(path.join(root,route==='/'?'index.html':route.slice(1)),'utf8');
@@ -29,7 +37,6 @@ const root = path.resolve(__dirname, '..');
   }
   assert.equal(onward,15,'All fifteen linked fullspan onward cards inventoried');
 
-  try {
     for(const [width,height,enlarged] of [[1918,991,false],[1536,792,false],[390,844,false],[320,740,false],[1366,900,true],[390,844,true]]) {
       await page.setViewportSize({width,height});
       await page.goto(origin+'/answers.html',{waitUntil:'load'});
@@ -63,5 +70,8 @@ const root = path.resolve(__dirname, '..');
     fs.mkdirSync(path.join(root,'.qa-artifacts'),{recursive:true});
     fs.writeFileSync(path.join(root,'.qa-artifacts/content-boundaries.json'),JSON.stringify({results,mission},null,2));
     console.log('PASS six conference rail/priesthood gap profiles plus six Mission caption/label profiles');
-  } finally {await browser.close();await new Promise(r=>server.close(r));}
+  } finally {
+    try { if(browser) await browser.close(); }
+    finally { await new Promise(r=>server.close(r)); }
+  }
 })().catch(error=>{console.error(error);process.exitCode=1;});

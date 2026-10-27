@@ -3172,6 +3172,186 @@
         }
       ],
       "status": "approved"
+    },
+    {
+      "name": "emma-story1-ride",
+      "title": "A ride to warn Joseph",
+      "description": "Family history tells how Emma learned that men were plotting to steal the gold plates, took a spare horse, and rode more than an hour to warn Joseph so he could move the record to safety. Lucy Mack Smith told the story years afterward. It is not a moment anyone stood by to witness. It is a true family memory of a young wife who was watchful, practical, and willing to go herself.",
+      "alt": "Emma Smith at twenty three, wearing a long blue dress, rides sidesaddle at a gallop on a brown horse up a leaf covered slope in autumn, leaning forward with both hands on the reins and her eyes on the path ahead.",
+      "page": "history/emma-elect-lady.html",
+      "slotId": "picture-emma-story1-ride",
+      "source": "https://www.churchofjesuschrist.org/study/liahona/2021/03/emma-protected-scripture?lang=eng",
+      "source_path": "assets/page-art/emma-life/emma-story1-ride-review-1536.webp",
+      "source_sha256": "ff56c2247487ddd707d937b565a223c9b3a7220b190d84a3e845bd9a76441292",
+      "source_decoded_rgb_sha256": "4f4b8a36e220cfa4b9091ff5ebf53dd90f63f789d5e6e22a3202ce1193455506",
+      "assets": [
+        {
+          "path": "assets/page-art/emma-life/emma-story1-ride-review-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "ff56c2247487ddd707d937b565a223c9b3a7220b190d84a3e845bd9a76441292",
+          "decoded_rgb_sha256": "4f4b8a36e220cfa4b9091ff5ebf53dd90f63f789d5e6e22a3202ce1193455506"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-story1-ride-review-960.webp",
+          "width": 960,
+          "height": 640,
+          "sha256": "8ac37bf27712554952c7648aed25f49d15651effdb55e0342554154ccf02bc93",
+          "decoded_rgb_sha256": "f4faa9e7689dac2150068953572fb62cd7c99be7a11a7a9424cf0dcec6aca195"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-story1-ride-review-640.webp",
+          "width": 640,
+          "height": 427,
+          "sha256": "13c36921b70dabe2d195a6a49a1bc297b2c7d50aad3bdc8890ed8c323aa0d06b",
+          "decoded_rgb_sha256": "9df5bd924838bc9a737890eccc138a28905d09564f59690b07b2120e3f11fc5a"
+        }
+      ],
+      "status": "approved"
+    },
+    {
+      "name": "emma-story2-hymnal",
+      "title": "The finished hymnbook",
+      "description": "The little book in her hands is the finished work: A Collection of Sacred Hymns, the selection of sacred hymns she was charged to make in Doctrine and Covenants 25. The edition is dated 1835, and the printed books reached the Saints early in 1836. What she holds here is the completed collection, ninety hymns she chose, small enough to carry into any home or meeting room where the Saints sang together.",
+      "alt": "Emma Smith at thirty one, wearing a brown dress, stands by a window holding a small bound book in both hands and looking down at it.",
+      "page": "history/emma-hymns.html",
+      "slotId": "picture-emma-story2-hymnal",
+      "source": "https://www.josephsmithpapers.org/paper-summary/collection-of-sacred-hymns-1835/1",
+      "source_path": "assets/page-art/emma-life/emma-story2-hymnal-review-1536.webp",
+      "source_sha256": "69865b606ac1c0d55f6fe1f462520159e53fafa0edd7b661ad2fc5afe272bec3",
+      "source_decoded_rgb_sha256": "16923f7ba55ac20ccafa2758d85841f241f5b5ea97f4615304be20eea763a52a",
+      "assets": [
+        {
+          "path": "assets/page-art/emma-life/emma-story2-hymnal-review-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "69865b606ac1c0d55f6fe1f462520159e53fafa0edd7b661ad2fc5afe272bec3",
+          "decoded_rgb_sha256": "16923f7ba55ac20ccafa2758d85841f241f5b5ea97f4615304be20eea763a52a"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-story2-hymnal-review-960.webp",
+          "width": 960,
+          "height": 640,
+          "sha256": "16ed55c58fcf2c598c5f34e91a6884a33e8d7934d0f87d8982a9b59a5e6919ba",
+          "decoded_rgb_sha256": "97fc2fbba5a170e929ccec3ff166a19b18e689c311d8547a7cab6380a265c468"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-story2-hymnal-review-640.webp",
+          "width": 640,
+          "height": 427,
+          "sha256": "46641bb4044a58473778629a03ab8927bed90a4c72acf48f1c7656014a255316",
+          "decoded_rgb_sha256": "26456155f0a3340097c16b60f8e293d59ad33813e3cd15684818c5db95d98259"
+        }
+      ],
+      "status": "approved"
+    },
+    {
+      "name": "emma-story3-quincy",
+      "title": "Emma in Quincy",
+      "description": "This portrait belongs to Emma's Quincy season, the weeks after the crossing. It is not the crossing itself. It is the woman who wrote from Quincy on March 7, 1839, that she was still living and still willing. Her hands rest in her lap, work worn and uninjured: the hands that had carried her children over the ice and then picked up a pen.",
+      "alt": "Emma Smith at thirty four, wearing a gray dress, sits by a window with her hands folded in her lap and her gaze lowered.",
+      "page": "history/emma-winter-crossing.html",
+      "slotId": "picture-emma-story3-quincy",
+      "source": "https://www.josephsmithpapers.org/paper-summary/letter-from-emma-smith-7-march-1839/1",
+      "source_path": "assets/page-art/emma-life/emma-story3-quincy-review-1536.webp",
+      "source_sha256": "a6b973db6d7003c4adff508aada11dff7f6523b11e2edc61570574a40bee771d",
+      "source_decoded_rgb_sha256": "788caae6dc9cb63bbe545acc6b01a5f7d54834bf363dc6000bd4e0f236f69ad1",
+      "assets": [
+        {
+          "path": "assets/page-art/emma-life/emma-story3-quincy-review-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "a6b973db6d7003c4adff508aada11dff7f6523b11e2edc61570574a40bee771d",
+          "decoded_rgb_sha256": "788caae6dc9cb63bbe545acc6b01a5f7d54834bf363dc6000bd4e0f236f69ad1"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-story3-quincy-review-960.webp",
+          "width": 960,
+          "height": 640,
+          "sha256": "f7ca4b56d8e924d05bf15f7e9fb651d20d3d13cbdfd23577ebb2d90b580ff558",
+          "decoded_rgb_sha256": "4ecaf2ee99910f0ae7810422b231f85e4dd0678df568ad3087145fc4e9011b8e"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-story3-quincy-review-640.webp",
+          "width": 640,
+          "height": 427,
+          "sha256": "eed22c0e427678a354181db1f567ab5eea87b7c1489e10b8d9e3725e2fd20579",
+          "decoded_rgb_sha256": "8ef2e184a5fb238a0637cdf9110109b9a84c0492f43f54e47aee7cfb5fb33202"
+        }
+      ],
+      "status": "approved"
+    },
+    {
+      "name": "emma-story4-hospitality",
+      "title": "An open door",
+      "description": "Across her Nauvoo years, Emma opened her home again and again to the sick, the orphaned, and the homeless. It was a practice, not one day's kindness: a door held open by the woman of the house, with the welcome ready before anyone is seen. She stands in her doorway with one hand resting on the open door, ready for whoever needed shelter next.",
+      "alt": "Emma Smith at thirty eight, wearing a dark green dress, stands in the open doorway of her home with one hand resting on the door.",
+      "page": "history/emma-relief-society.html",
+      "slotId": "picture-emma-story4-hospitality",
+      "source": "https://www.churchofjesuschrist.org/study/history/topics/female-relief-society-of-nauvoo?lang=eng",
+      "source_path": "assets/page-art/emma-life/emma-story4-hospitality-review-1536.webp",
+      "source_sha256": "e6d21c89cd491fbe8e1c3276eab7e4cdad35d4859b626773cd80c255ffb23b48",
+      "source_decoded_rgb_sha256": "e7546511f79784a799f7f88f2d02996f38a7d926c4b9935e53f0b994452d08f2",
+      "assets": [
+        {
+          "path": "assets/page-art/emma-life/emma-story4-hospitality-review-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "e6d21c89cd491fbe8e1c3276eab7e4cdad35d4859b626773cd80c255ffb23b48",
+          "decoded_rgb_sha256": "e7546511f79784a799f7f88f2d02996f38a7d926c4b9935e53f0b994452d08f2"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-story4-hospitality-review-960.webp",
+          "width": 960,
+          "height": 640,
+          "sha256": "48a74b1e7021f2f0d53bb81e456583549ca5815103e757a895cf518acfc4029c",
+          "decoded_rgb_sha256": "35e4a5b4b8b46405102106a508f49c4270092547d1faace7999263239e236492"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-story4-hospitality-review-640.webp",
+          "width": 640,
+          "height": 427,
+          "sha256": "b1a9dc3d1915de0426a08c62a4a8dcd83a562fe1aa340aba203d88d83d0b561e",
+          "decoded_rgb_sha256": "8c009d6788fc955f5dd112c746234c41964d8268f7918432102a042e0f56a9da"
+        }
+      ],
+      "status": "approved"
+    },
+    {
+      "name": "emma-story5-testimony",
+      "title": "Her testimony",
+      "description": "Near the end of her life, Emma spoke with her son Joseph III about the Book of Mormon, and after her death his account of their conversation was published. As her son Joseph III recorded it, her words were plain: 'My belief is that the Book of Mormon is of divine authenticity—I have not the slightest doubt of it.' That testimony was not new at seventy four. It was the same witness she had carried since Harmony, kept to the end of her life.",
+      "alt": "Emma Smith at seventy four, wearing a dark gray dress, sits speaking, one hand raised in conversation, her gaze toward the one she is speaking with.",
+      "page": "history/emma-last-testimony.html",
+      "slotId": "picture-emma-story5-testimony",
+      "source": "https://www.churchofjesuschrist.org/study/ensign/1992/08/my-great-great-grandmother-emma-hale-smith?lang=eng",
+      "source_path": "assets/page-art/emma-life/emma-story5-testimony-review-1536.webp",
+      "source_sha256": "01454124312c44309aa3ea2c49e27fea5e13d88c1aba10b1b2b073f82574d0d3",
+      "source_decoded_rgb_sha256": "609036bf3c071e1d67d59ebccc7813a7f7b13cb42c2b3d48bd14e6ccaec2ce01",
+      "assets": [
+        {
+          "path": "assets/page-art/emma-life/emma-story5-testimony-review-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "01454124312c44309aa3ea2c49e27fea5e13d88c1aba10b1b2b073f82574d0d3",
+          "decoded_rgb_sha256": "609036bf3c071e1d67d59ebccc7813a7f7b13cb42c2b3d48bd14e6ccaec2ce01"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-story5-testimony-review-960.webp",
+          "width": 960,
+          "height": 640,
+          "sha256": "9470c0b41ca23374408e0a3cfc77061c76de1e20d02072537889c77aebabd988",
+          "decoded_rgb_sha256": "a7c9315d1af532c3a4133cace824a8df1c1d28dc23279e69a1d211545915456c"
+        },
+        {
+          "path": "assets/page-art/emma-life/emma-story5-testimony-review-640.webp",
+          "width": 640,
+          "height": 427,
+          "sha256": "d2ef1a76aba46d2838fc6f8a3e9fc9f03749a7ad7221212130a793beeaebfc07",
+          "decoded_rgb_sha256": "923a0997ea23650bcff1c0513873bf51c5db0264b4a8479192e4f52e6496e633"
+        }
+      ],
+      "status": "approved"
     }
   ]
 }

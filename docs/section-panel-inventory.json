@@ -41,7 +41,12 @@
     "come-follow-me.html",
     "general-conference.html",
     "history/eleazer-miller.html",
+    "history/emma-elect-lady.html",
     "history/emma-hale-smith.html",
+    "history/emma-hymns.html",
+    "history/emma-last-testimony.html",
+    "history/emma-relief-society.html",
+    "history/emma-winter-crossing.html",
     "history/john-rowe-moyle.html",
     "history/john-tanner.html",
     "index.html",
@@ -127,6 +132,7 @@
     "pioneers.html",
     "search.html",
     "timeline.html",
+    "timelines/adams-1881-chart.html",
     "timelines/latter-day-saint-church-history-timeline.html",
     "timelines/life-of-christ-journey-map.html",
     "timelines/willie-and-martin-handcart-map.html",
@@ -298,6 +304,17 @@
       ],
       "disposition": "coordinated_stylesheet_owner",
       "reason": "Merlin standalone timeline experience, preserved by Wyatt on 2026-10-02; scoped inline design and timeline runtime checks own this surface."
+    },
+    "fc-adams-note": {
+      "count": 2,
+      "pages": [
+        "timelines/adams-1881-chart.html"
+      ],
+      "tags": [
+        "p"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Exactly two disclaimer/credit paragraphs in the byte-pinned Adams standalone toolbar, not shared study cards. Existing chart controls and inline presentation retain their separate finished desktop/phone review."
     },
     "fc-answers-jump-panel": {
       "count": 1,
@@ -563,24 +580,35 @@
       "reason": "Approved Home image card; preserve pixels and image treatment."
     },
     "fc-life-reflection": {
-      "count": 12,
+      "count": 27,
       "pages": [
         "history/eleazer-miller.html",
+        "history/emma-elect-lady.html",
         "history/emma-hale-smith.html",
+        "history/emma-hymns.html",
+        "history/emma-last-testimony.html",
+        "history/emma-relief-society.html",
+        "history/emma-winter-crossing.html",
         "history/john-rowe-moyle.html",
         "history/john-tanner.html"
       ],
       "tags": [
+        "a",
         "div"
       ],
       "disposition": "coordinated_stylesheet_owner",
       "reason": "Dedicated History story reflection panels use the shared Home panel tokens in exact reviewed history-stories.css; four owning story pages including Emma."
     },
     "fc-life-reflections": {
-      "count": 4,
+      "count": 10,
       "pages": [
         "history/eleazer-miller.html",
+        "history/emma-elect-lady.html",
         "history/emma-hale-smith.html",
+        "history/emma-hymns.html",
+        "history/emma-last-testimony.html",
+        "history/emma-relief-society.html",
+        "history/emma-winter-crossing.html",
         "history/john-rowe-moyle.html",
         "history/john-tanner.html"
       ],
@@ -589,6 +617,21 @@
       ],
       "disposition": "excluded_with_reason",
       "reason": "Bare responsive layout for three meaningful reflection panels; no independent painted surface."
+    },
+    "fc-life-reflections--two": {
+      "count": 5,
+      "pages": [
+        "history/emma-elect-lady.html",
+        "history/emma-hymns.html",
+        "history/emma-last-testimony.html",
+        "history/emma-relief-society.html",
+        "history/emma-winter-crossing.html"
+      ],
+      "tags": [
+        "div"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Two-column responsive layout modifier on bare fc-life-reflections containers in the five Emma story pages; only grid-template-columns changes. Child fc-life-reflection panels retain their existing history-stories.css surface owner; no independent painted surface."
     },
     "fc-mission-reflection": {
       "count": 4,
@@ -1061,7 +1104,7 @@
       "reason": "Owner-requested Peter rescue figure uses shared panel tokens in the reviewed appendix; preserves the artwork viewer and intrinsic image."
     },
     "fc-timeline-note": {
-      "count": 1,
+      "count": 2,
       "pages": [
         "timeline.html"
       ],
@@ -1820,6 +1863,7 @@
         "timeline-mobile-study.css"
       ],
       "pages": [
+        "timelines/adams-1881-chart.html",
         "timelines/latter-day-saint-church-history-timeline.html",
         "timelines/life-of-christ-journey-map.html",
         "timelines/willie-and-martin-handcart-map.html",
@@ -1964,7 +2008,12 @@
         "come-follow-me.html",
         "general-conference.html",
         "history/eleazer-miller.html",
+        "history/emma-elect-lady.html",
         "history/emma-hale-smith.html",
+        "history/emma-hymns.html",
+        "history/emma-last-testimony.html",
+        "history/emma-relief-society.html",
+        "history/emma-winter-crossing.html",
         "history/john-rowe-moyle.html",
         "history/john-tanner.html",
         "index.html",
@@ -2172,7 +2221,12 @@
       ],
       "pages": [
         "history/eleazer-miller.html",
+        "history/emma-elect-lady.html",
         "history/emma-hale-smith.html",
+        "history/emma-hymns.html",
+        "history/emma-last-testimony.html",
+        "history/emma-relief-society.html",
+        "history/emma-winter-crossing.html",
         "history/john-rowe-moyle.html",
         "history/john-tanner.html"
       ],
@@ -2282,7 +2336,12 @@
         "come-follow-me.html",
         "general-conference.html",
         "history/eleazer-miller.html",
+        "history/emma-elect-lady.html",
         "history/emma-hale-smith.html",
+        "history/emma-hymns.html",
+        "history/emma-last-testimony.html",
+        "history/emma-relief-society.html",
+        "history/emma-winter-crossing.html",
         "history/john-rowe-moyle.html",
         "history/john-tanner.html",
         "index.html",
@@ -2730,7 +2789,12 @@
         "come-follow-me.html",
         "general-conference.html",
         "history/eleazer-miller.html",
+        "history/emma-elect-lady.html",
         "history/emma-hale-smith.html",
+        "history/emma-hymns.html",
+        "history/emma-last-testimony.html",
+        "history/emma-relief-society.html",
+        "history/emma-winter-crossing.html",
         "history/john-rowe-moyle.html",
         "history/john-tanner.html",
         "index.html",

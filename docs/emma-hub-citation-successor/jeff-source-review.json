@@ -1,0 +1,48 @@
+{
+  "schema": 1,
+  "reviewer": "Jeff-role independent native review task",
+  "review_kind": "Current two-anchor source and text verification",
+  "reviewed_on": "2026-10-27",
+  "route": "history/emma-hale-smith.html",
+  "base_commit": "8e7859f2e562e8300f33da55ca91cb982bc9674f",
+  "before": {
+    "bytes": 42106,
+    "sha256": "e26dff780368d88ea1cdd2e5f0ed0636b9f048f2af4b88f9be1fdef03036fe0f"
+  },
+  "after": {
+    "bytes": 42456,
+    "sha256": "0d825d6c9d0648006ca4ba12f496b49540a6aa065f8ec82063df643da8a0fe9d"
+  },
+  "verified": {
+    "exact_two_anchor_inverse": true,
+    "all_other_bytes_unchanged": true,
+    "html_data_text_unchanged": true,
+    "current_published_text_unchanged": true,
+    "current_published_text_sha256": "1d5740104da86c3bd63f04721a80ec3f1497dd7a4ebd695bd08b198673cef751",
+    "crlf_count_before_and_after": 128,
+    "canonical_chapter_and_verse_selections": true,
+    "existing_caption_destinations_reused": true,
+    "external_link_safety_attributes": true
+  },
+  "links": [
+    {
+      "label": "Luke 6:12–16",
+      "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/6?lang=eng&id=p12-p16#p12",
+      "chapter_path": "scripture-data/nt/luke/6.json",
+      "chapter_sha256": "b8ad2f2a8ea945fcef6482351505cb67ef0c6e236a69c01a03946bf790447ccc"
+    },
+    {
+      "label": "John 4:31–34",
+      "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/4?lang=eng&id=p31-p34#p31",
+      "chapter_path": "scripture-data/nt/john/4.json",
+      "chapter_sha256": "e43aaf5c1f3e89a1b1e9dfda98a6064521bfd724ee61c12fddbe0e31b34bdaab"
+    }
+  ],
+  "semantic_scope": "The two existing labels now open their already-cited exact passages. Selected verses were read against the unchanged adjacent prose. No new wording, historical claim, quotation, image, caption or alternative text was introduced.",
+  "historical_ledger": "Unchanged. This direct current-text hash is separate from the existing restored historical-text binding.",
+  "limits": [
+    "Source and text verification only; not a claim of completed current browser QA, complete site QA or release acceptance.",
+    "No new review action by previous reviewers or an external worker is asserted."
+  ]
+}
+

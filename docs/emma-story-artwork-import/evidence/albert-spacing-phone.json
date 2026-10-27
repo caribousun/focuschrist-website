@@ -1,0 +1,34 @@
+{
+  "reviewer": "Albert",
+  "reviewed_at": "2026-10-27T11:45:03.832835+00:00",
+  "spec_sha256": "d0fa3a446fc7d9c3a0c4f8978eb73df822d5fa30a6120d307871e590304d9e78",
+  "run_id": 40497562241,
+  "job_id": 122166759615,
+  "head": "c8f3a0c617ea16c2bb7d207f3cf8d56177db1b07",
+  "producer_merge": "78a15875be833756ed7f9debcc7155b7ca1ed507",
+  "artifact_id": 12732105672,
+  "artifact_sha256": "c56a14ad28bd55c66c5a58f578072302e307b8090c6aef548620aa0d05c7a7b8",
+  "actual_journeys": 46,
+  "actual_captures": 60,
+  "prior_capture_byte_identical": 53,
+  "changed_captures": 7,
+  "scope": "Actual hosted diagnostic evidence, not full QA or production acceptance.",
+  "kind": "phone",
+  "directly_viewed": [
+    "emma-story1-ride-review-dialog-390.png",
+    "emma-story1-ride-review-footer-390.jpg"
+  ],
+  "observation": "Root directly viewed changed current ride dialog and its previous counterpart plus current phone footer. The same selected ride, dialog text and all visible controls are retained; small backdrop/rounded-edge pixel differences do not show subject drift. Phone footer notices and navigation are visible and unclipped. Other current phone captures are byte-identical to previously inspected evidence; no claim of 60 fresh individual view calls.",
+  "capture_pins": [
+    {
+      "name": "emma-story1-ride-review-dialog-390.png",
+      "bytes": 405136,
+      "sha256": "770d067eb75258250d14d11ad6b536a556dac30db6cab0b777cb207791c5c489"
+    },
+    {
+      "name": "emma-story1-ride-review-footer-390.jpg",
+      "bytes": 50893,
+      "sha256": "1a82655ce072ed91ff5c889bb26064fbba7ffde17a2f78b5a3d05e8171a9a551"
+    }
+  ]
+}

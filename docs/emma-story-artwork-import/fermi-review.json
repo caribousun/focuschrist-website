@@ -1,0 +1,81 @@
+{
+  "schema": 1,
+  "reviewer": "Fermi",
+  "actual_actor": "/root/review_emma_context_as_fermi",
+  "reviewer_role": "Independent native Fermi-role artwork/context reviewer",
+  "decision": "CONCUR",
+  "withdrawn": false,
+  "source_provenance_verified": true,
+  "actual_derivatives_inspected": true,
+  "assembled_context_inspected": true,
+  "historical_canonical_preflight_claim": false,
+  "generation_time": "UNKNOWN_NOT_INFERRED",
+  "strict_four_hoof_visibility": "NOT_MET_OCCLUDED",
+  "physical_phone_tested": false,
+  "overall_site_release_approved": false,
+  "spec_sha256": "ecfb210ffbb151a881baa74ac15a1398627ca628f7b089108a5b4bf394465960",
+  "reviewed_at": "2026-10-27T12:52:25.762321+00:00",
+  "scope": "EXACT_FIVE_EMMA_HYMNAL_SCRIPTURE_LINK_CONTEXT_SUCCESSOR_WITH_EXPLICIT_LIMITS",
+  "checks": {
+    "identity": "Same native actor reuses only its own genuine approved-reference/full-frame/face-detail and all20asset inspection in afb43ddc1edac0becdd997140de5470bc09592c4f7fc93686fca33b211b71ffe, after current20asset byte/dimension/RGBA verification. No fresh asset/reference viewing calls in this continuation. New hymnal anchors do not change selected likeness/art bytes. Fresh current page/dialog images retain that face, hair, gaze and clothing; artistic continuity, not biometric equivalence.",
+    "age": "Ride and hymnal retain adult youthful fullness; Quincy and hospitality retain mature-adult interpretations; testimony retains gray-streaked hair and facial lines at source size. Small derivatives and phone display suppress fine lines. Exact apparent numeric ages and every wrinkle are not certified. No new age reconstruction or rejuvenation edit.",
+    "expression_gaze": "Ride remains composed and attentive toward travel, hymnal downward toward the book, Quincy downward toward her hands, hospitality welcoming with near-viewer gaze, and testimony speaking with attentive off-camera gaze and raised hand. No conspicuous derivative-only gaze or expression drift observed. Fine iris/eyelash certainty is limited at 640 and phone display.",
+    "atmosphere": "Autumn riding action and valley depth contrast with soft window-lit book/seated interiors and the warm doorway. Distinct lighting and restrained clothing colors fit the teal/gold presentation. No new broad color break, blocking seam or obvious halo at normal size. Compression smooths microtexture, not recovered detail.",
+    "environment": "Five originals/fifteen derivatives preserve their prior proportions/compositions. Current changed hymnal desktop/phone captures show only linked prose/action styling, with image area unchanged. New source pill enlarges dialog actions; initial390 view cannot show all lower controls at once, but actual normal scroll, hit-tests and action captures show them reachable at1280/390/320. This is dialog scrolling, not a newly cropped/replaced source. Prior desktop ride edge and illustrative post-crossing Quincy limitations stand.",
+    "characters_realism": "Visible character, fabric, hair, light and hand/contact relationships remain coherent as photorealistic illustration. Re-encoding smooths fine detail, increasingly at 640. Hidden fingers, pelvis/saddle, far limbs, exact hair topology and physical dimensions are not certified. No new person or face substitution was introduced.",
+    "period_sources": "Five unchanged source-provenance summary byte pins and all fourteen retained historical receipt byte pins reverified. This reuses my own genuine earlier selection/history inspection, not other reviewers authorship or authenticated signatures. New three chapter25 links, including cloned caption, and exact source-list25:11-12 selection point to canonical existing scripture data. Actual hosted reader checks compare displayed text to current local chapter25 and assert16whole-chapter verses or11/12 only. No new historical research or retrospective preflight claimed; generation time remains unknown.",
+    "anatomy": "Visible poses and hand contacts remain coherent within selected art. Three complete horse hooves are clearly readable; far hind hoof is naturally occluded by debris/limb overlap. Strict four-complete-hooves-visible remains NOT_MET_OCCLUDED. Owner-selected v17 does not certify unseen anatomy, exact saddle mechanics or a temporal gait cycle.",
+    "uniqueness": "Ride remains owner-selected v17; four other sources remain corrective v2. All20asset/13CSS/other4page bytes unchanged. Independently proved removing three canonical anchor wrappers and reversing one source-range href/class restores the full prior hymnal HTML exactly; concatenated text nodes, image attributes and script tags unchanged. Existing safeClone preserves inline citation and officialLinks promotes an extra primary Doctrine and Covenants25 source pill before retained JSP. That actual functional/action layout change is acknowledged, not called pixel-identical. No generation or rejected-variant revival.",
+    "desktop_phone": "Freshly viewed all15new screenshots and all11changed current/prior pairs (26current and11prior calls);49unchanged captures reused only from my own verified prior observations. New chapter/range readers legible at1280/390/320 with exact labels and source/close controls. Range11-12 shows both full verses. Actual15keyboard interactions verify both body links, caption, generated source pill and verse-range link; exact focus returns, and artwork stays open for nested caption/pill reader. Three added action/fullsize/close/Continue flows pass; JSP remains. Normal scrolling exposes lower actions without horizontal clipping. Eight changed captures only show intended linked-text styling, one artwork-dialog action/copy region, two header strips outside art. Header/footer telemetry unchanged; skip differences only subpixel transitions. No physical-device claim."
+  },
+  "limits": [
+    "BOUND_SCOPE: CONCUR exact ecfb210ffbb151a881baa74ac15a1398627ca628f7b089108a5b4bf394465960 artwork/context successor, not whole repository, normal full-QA success, final release or deployment approval.",
+    "OWN_PRIOR_REUSE: only same actor genuine prior20asset/reference and60capture observations reused after current hashes. Freshly opened26current images (15new+11changed) and11prior pairs. No fictional fresh reopening of20assets, private references or49unchanged captures.",
+    "FOUR_HOOF_VISIBILITY_NOT_MET_OCCLUDED: far hind hoof remains naturally occluded. Owner v17 selection does not certify four complete visible hooves or hidden anatomy/gait/saddle mechanics.",
+    "DIAGNOSTIC_ONLY: actual run40505834080 reports64successful listed journeys and75captures, retaining46prior journeys. Actual normal full-QA still fails old accepted history/emma-hymns.html evidence with exit1; exact final record and all hosted gates remain required. No project source executed or local browser launched by reviewer.",
+    "CONTROL_TELEMETRY_NAMING: raw control row width is measured element width because object spread overwrote the viewport field. Raw artifact preserved. Derived viewport groups1280/390/320 follow reviewed fixed loop order and match result/screenshot widths; do not read raw width as viewport. Actual producer assertions compare bounds against correct loop variable.",
+    "SCROLL_LIMITS: initial390artwork dialog does not show all actions at once; action captures use normal scrolling and may move face offscreen. Tested lower controls are reachable, not simultaneously visible with full image. Complete-chapter reader contains16verified DOM verses but screenshots show only top visible subset; no new exhaustive every-scroll-position visual review. Two-verse reader shows both verses.",
+    "ARTISTIC_NOT_BIOMETRIC: no exact numeric apparent age, facial/body measurement, fine-detail preservation, lossless derivative or authenticated event reconstruction; small derivatives smooth microdetail. Hub hero outside five-original approval.",
+    "VIEWPORT_NOT_PHYSICAL_PHONE: desktop Chromium1280/390/320 by900 only. No actual phone/touch keyboard, alternate-browser, exhaustive accessibility, new contrast measurement or live external destination proof. Source hrefs inspected and reader content checked; external source navigation not clicked.",
+    "PRIOR_LIMITS_PRESERVED: footer notices completely in viewport but outer footer subpixel bottom may extend0.46875px; prior ride viewport edge, menu/long-dialog scrolling and untested search submission limits remain.",
+    "UNKNOWN_GENERATION_TIME: no mtime inference or retrospective canonical preflight. Historical source-only approvals remain source-only.",
+    "PRESERVATION: Foundation, prior negative/rejected evidence and original afb43d/footer04ad9e/token30c05a receipts remain unchanged. Public-safe metadata only, no private authority/reference/source bodies or screenshot pixels published."
+  ],
+  "evidence": [
+    {
+      "path": "docs/emma-story-artwork-import/fermi-scripture-v1-evidence.json",
+      "bytes": 123052,
+      "sha256": "f190cca2de0f576e3323185bbd4c056a5ed9ee0faaabe2b5af6f86ed50e3242b"
+    },
+    {
+      "path": "docs/emma-story-artwork-import/evidence/scripture-v1-artifact-binding.json",
+      "bytes": 1193,
+      "sha256": "a27925383186cbec6a111bb4277500bf921d11f5e259b1f5172d06df30e8057d"
+    },
+    {
+      "path": "docs/emma-story-artwork-import/evidence/scripture-v1-capture-manifest.json",
+      "bytes": 24622,
+      "sha256": "aaf10c6807cf8da8d49ddb1c3f7700418be699bc5a890d7f6b427667a8c94b6d"
+    },
+    {
+      "path": "docs/emma-story-artwork-import/evidence/scripture-v1-diagnostic.txt",
+      "bytes": 530,
+      "sha256": "fa815b835dbc54f952e3781af753cdeb81968ca3c3616a492d744bca89f7852b"
+    },
+    {
+      "path": "docs/emma-story-artwork-import/evidence/scripture-v1-link-evidence.json",
+      "bytes": 11441,
+      "sha256": "9ed49ed292067beb1d89fc27884461d30c5a369bb22091f8ef2b400217dc4d39"
+    },
+    {
+      "path": "docs/emma-story-artwork-import/evidence/scripture-v1-results.json",
+      "bytes": 7927,
+      "sha256": "cb74e17a60f0470e5aef10dd3221738170c7ad16ed2fd0716e2e2cbeaa85a6dd"
+    },
+    {
+      "path": "docs/emma-story-artwork-import/evidence/scripture-v1-telemetry.json",
+      "bytes": 129797,
+      "sha256": "7e914456d14e4a704ad0fa41f45b01b6052cd4ad58c77c803697a1e5fcfe46d9"
+    }
+  ]
+}

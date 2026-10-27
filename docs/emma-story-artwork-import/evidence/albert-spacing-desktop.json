@@ -1,0 +1,58 @@
+{
+  "reviewer": "Albert",
+  "reviewed_at": "2026-10-27T11:45:03.832835+00:00",
+  "spec_sha256": "d0fa3a446fc7d9c3a0c4f8978eb73df822d5fa30a6120d307871e590304d9e78",
+  "run_id": 40497562241,
+  "job_id": 122166759615,
+  "head": "c8f3a0c617ea16c2bb7d207f3cf8d56177db1b07",
+  "producer_merge": "78a15875be833756ed7f9debcc7155b7ca1ed507",
+  "artifact_id": 12732105672,
+  "artifact_sha256": "c56a14ad28bd55c66c5a58f578072302e307b8090c6aef548620aa0d05c7a7b8",
+  "actual_journeys": 46,
+  "actual_captures": 60,
+  "prior_capture_byte_identical": 53,
+  "changed_captures": 7,
+  "scope": "Actual hosted diagnostic evidence, not full QA or production acceptance.",
+  "kind": "desktop",
+  "directly_viewed": [
+    "emma-story1-ride-review-1280-viewport.jpg",
+    "emma-story2-hymnal-review-1280-viewport.jpg",
+    "emma-story3-quincy-review-1280-viewport.jpg",
+    "emma-story4-hospitality-review-1280-viewport.jpg",
+    "emma-story5-testimony-review-1280-viewport.jpg",
+    "emma-story4-hospitality-review-footer-1280.jpg"
+  ],
+  "observation": "Root directly viewed all six changed desktop captures. Differences are confined to top header/shadow strips by independent pixel bounds; illustrated subject and source/footers remain unchanged. These are scrolled artwork/footer captures, not page-opening evidence. Existing sticky header overlaps content at the top viewport boundary during scrolling; no new source or artwork regression established.",
+  "capture_pins": [
+    {
+      "name": "emma-story1-ride-review-1280-viewport.jpg",
+      "bytes": 245785,
+      "sha256": "636d62cbda6c1e10bb2bef3b5a658c303d1b3febf0b9d618ebc4c7fa4ea9e650"
+    },
+    {
+      "name": "emma-story2-hymnal-review-1280-viewport.jpg",
+      "bytes": 98284,
+      "sha256": "50bddf95bc227b9361c883396cc2b0c2d85ed5cfb6ab3e8431936296af3571ad"
+    },
+    {
+      "name": "emma-story3-quincy-review-1280-viewport.jpg",
+      "bytes": 102168,
+      "sha256": "cc9c884475d7fa19d24bda14fa11c3c4dae7e3d45731cff6752fcfbc82bfe087"
+    },
+    {
+      "name": "emma-story4-hospitality-review-1280-viewport.jpg",
+      "bytes": 123907,
+      "sha256": "d7d2d7b84ed845a4b61f3cb612029e11d053c38e7e9ca6f68f190eae2add6fdb"
+    },
+    {
+      "name": "emma-story5-testimony-review-1280-viewport.jpg",
+      "bytes": 92275,
+      "sha256": "009c0c4256a89c7cdef1f1add05b81ef5d3602737f0c1a54dcae6f26727c79d9"
+    },
+    {
+      "name": "emma-story4-hospitality-review-footer-1280.jpg",
+      "bytes": 101662,
+      "sha256": "8441a005393e558a8392dc29b970e7343f7ca876a4c7c7b8779e62b41922d151"
+    }
+  ]
+}
