@@ -36,6 +36,7 @@ jobs:
           python -m unittest discover -s tools -p test_timeline_source_import.py
           python tools/test_continue_motion_binding.py
           python tools/test_emma_story_successor.py
+          python tools/test_emma_generated_indices_successor.py
           python tools/test_world_companion_successor.py
           python tools/test_settings_successor.py
           python tools/continue_motion_binding.py
@@ -633,7 +634,7 @@ jobs:
 
       - name: Bind the diagnostic to the reviewed renderer and checkout
         run: |
-          printf '%s  %s\n' '3d968271a56f17dbbead1c206a327091b879d3b52c654f4915bb522d96ecd5d0' 'tools/emma_story_browser_qa.js' | sha256sum --check
+          printf '%s  %s\n' '8b7adb807dbb84a2d012afc974d8a492e72deec22319086ac4fb6ef27a6e9f10' 'tools/emma_story_browser_qa.js' | sha256sum --check
           mkdir -p .qa-artifacts/emma-story
           {
             echo "scope=diagnostic rendering only; artwork-creation and all release gates remain required"

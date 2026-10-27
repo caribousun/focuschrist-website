@@ -43,6 +43,9 @@ const TYPES={'.html':'text/html','.css':'text/css','.js':'text/javascript','.web
     const img=page.locator(`img[src*="${s.base}-960.webp"]`);
     assert.equal(await img.count(),1,`${s.page}: story artwork image missing`);
     assert.equal(await img.getAttribute('alt'),s.alt,`${s.page}: alt text changed`);
+    // Bring lazy-loaded story artwork into view before requiring decoded pixels.
+    await img.scrollIntoViewIfNeeded();
+    await page.waitForFunction(base=>{const n=document.querySelector('img[src*="'+base+'-960.webp"]');return n&&n.complete&&n.naturalWidth>0;},s.base,{timeout:10000});
     assert(await img.evaluate(n=>n.complete&&n.naturalWidth>0),`${s.page}: artwork image did not load`);
     await page.locator(`#${s.section}`).screenshot({path:path.join(out,`${s.base}-${width}.png`)});
    }
