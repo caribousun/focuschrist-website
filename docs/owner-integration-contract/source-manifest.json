@@ -4,12 +4,12 @@
   "base_commit": "a36b0180d5e2e56976c3531a51852c935c246b78",
   "files": {
     "adams-integration.css": {
-      "bytes": 4244,
-      "sha256": "227f47555bc5f9f5444d1cf711c90dc06df338fb62b7c77115f04bf5a21504dc"
+      "bytes": 4965,
+      "sha256": "d936516926aa47c12c634b11b15278e1590502d0491d9b1f17cd90a0210fdeb1"
     },
     "adams-integration.js": {
-      "bytes": 1851,
-      "sha256": "10376303e2442aca9868cfd6233a77c815a1b2c9b9d5a1fe8c7875b70eaea9c3"
+      "bytes": 2267,
+      "sha256": "334a8395213a4e561cdffc747bf92b6872902486b055a36824cf834784dffb7b"
     },
     "timeline.html": {
       "bytes": 8828,
@@ -77,8 +77,8 @@
       }
     },
     "timelines/adams-1881-introduction.html": {
-      "bytes": 8006,
-      "sha256": "25785812f2f8d199b049ace7276a72e0e545f306f3d687792ffc1274f940af30"
+      "bytes": 8126,
+      "sha256": "742d429e6a674ce5d47889aab964a6bde60f3509bd9518e159499be6616112be"
     },
     "history/emma-elect-lady.html": {
       "bytes": 14734,

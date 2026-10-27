@@ -2,7 +2,7 @@
 // Exact current source/DOM validation; explicit old fixtures are never current UI evidence.
 const assert=require('node:assert/strict'),crypto=require('node:crypto');
 const MANIFEST='docs/owner-integration-contract/source-manifest.json';
-const MANIFEST_SHA='619571c0aae9e9371806a2b385ff7d68695b217ed7940b236d5f90cde2fb4e26';
+const MANIFEST_SHA='676ea8c34867a0d52d41e7403ff83cfb27b7bc1cba56c66490bd3ec13edbd02c';
 const ROUTE_SHA='ba19da4af6ba32219ff9555ecf5ddd466077acd9a6ee09a7d49f29c07d1f4284';
 const chart='timelines/adams-1881-chart.html',intro='timelines/adams-1881-introduction.html',landing='timeline.html',hub='history/emma-hale-smith.html';
 const stories={'history/emma-elect-lady.html':'emma-story1-ride','history/emma-hymns.html':'emma-story2-hymnal','history/emma-winter-crossing.html':'emma-story3-quincy','history/emma-relief-society.html':'emma-story4-hospitality','history/emma-last-testimony.html':'emma-story5-testimony'};

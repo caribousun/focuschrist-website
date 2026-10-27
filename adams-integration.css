@@ -40,3 +40,11 @@ body.fc-adams-chart-page #tiles > img.tile { max-width:none; }
 @media(max-width:899px) and (max-height:700px) {
  body.fc-adams-chart-page #toolbar > #progress { position:static; bottom:auto !important; align-self:flex-end; max-width:100%; margin:0; }
 }
+
+/* Match the reference Timeline introduction's kicker without changing the shared hero. */
+body.fc-adams-intro-page .kicker { letter-spacing:.14em; text-transform:uppercase; font-size:12px; font-weight:700; }
+/* In short landscape, the map fits beside the restored dock and below the measured toolbar. */
+@media (min-width:701px) and (max-width:899px) and (max-height:550px) {
+ body.fc-adams-chart-page #navDock { width:min(96vw,590px,calc(100vw - 118px)) !important; max-width:min(96vw,590px,calc(100vw - 118px)) !important; }
+ body.fc-adams-chart-page #mini { top:calc(var(--adams-toolbar-height, 0px) + 8px); bottom:auto !important; width:min(145px,calc((100% - min(96vw,590px,calc(100vw - 118px))) / 2 - 15px)); }
+}

@@ -218,7 +218,18 @@ async function adamsJourney(page,origin,c,record,profile,capture){
  const hero=page.locator('.fc-adams-intro-hero img');assert.equal(await hero.count(),1);await hero.evaluate(n=>n.decode());assert(await hero.evaluate(n=>n.complete&&n.naturalWidth>0));assert.equal(await page.locator('h1').count(),1);await noOverflow(page,'Adams introduction');
  const current=await openingMetrics(page);record.openingComparison={reference,current};await capture('adams-intro-opening');try{compareOpening(reference,current);}catch(e){record.acceptanceErrors.push(String(e));}
  // Preserve the failed comparison while continuing the independent viewer journey.
- const cue=page.locator('.timeline-opening-continue');assert.equal(await cue.getAttribute('href'),'#adams-overview');await cue.click();
+ const cue=page.locator('.timeline-opening-continue');
+ const retained=page.locator('#fc-opening-retained:not([hidden]) .fc-page-intro-copy');
+ const hasRetained=await retained.count()===1;
+ const destination=hasRetained?'#fc-opening-retained':'#adams-overview';
+ assert.equal(await cue.getAttribute('href'),destination,'Continue targets the first preserved content');
+ const preservedCopy=hasRetained?retained:page.locator('.timeline-life-intro .fc-page-intro-copy');
+ assert.equal(await preservedCopy.count(),1,'Exactly one introduction copy is present');
+ assert(await preservedCopy.isVisible(),'Introduction copy remains visibly rendered');
+ assert.equal((await preservedCopy.innerText()).trim(),"Follow the chart's long sweep of history, then look closely at the people, places, and connections its nineteenth-century author chose to show.",'Introduction copy remains intact');
+ await cue.click();
+ await page.waitForFunction(id=>{const n=document.querySelector(id),r=n&&n.getBoundingClientRect();return r&&r.top>=-1&&r.top<=240;},destination,{timeout:5000});
+ if(hasRetained)await page.locator('#adams-overview').evaluate(n=>n.scrollIntoView({block:'start'}));
  await page.waitForFunction(()=>{const n=document.getElementById('adams-overview'),r=n.getBoundingClientRect();return r.top>=-1&&r.top<=240;},null,{timeout:5000});await stable(page,'#adams-overview');await capture('adams-intro-overview');
  const open=page.locator('#adams-open-chart');assert.equal(await open.getAttribute('href'),'adams-1881-chart.html');await open.click();await page.waitForURL(origin+c.adams.chart,{timeout:12000});
  await page.waitForFunction(()=>{const a=[...document.querySelectorAll('#tiles img.tile')];return a.length>0&&a.every(n=>n.complete&&n.naturalWidth>0);},null,{timeout:10000});await stable(page,'#toolbar');await stable(page,'#tiles img.tile');await headerJourney(page,record,profile,capture,'adams-chart',true);

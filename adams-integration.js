@@ -8,6 +8,13 @@
   // Reuse the engine's existing status node; the toolbar observer measures its row.
   const progress=document.getElementById('progress');
   const toolbar=document.getElementById('toolbar');
+  // Keep an explicitly restored map below a reflowing toolbar.
+  function syncToolbarHeight() {
+   if(toolbar)document.documentElement.style.setProperty('--adams-toolbar-height',toolbar.getBoundingClientRect().height+'px');
+  }
+  if(toolbar && window.ResizeObserver)new ResizeObserver(syncToolbarHeight).observe(toolbar);
+  window.addEventListener('resize',syncToolbarHeight,{passive:true});
+  syncToolbarHeight();
   const originalParent=progress&&progress.parentNode;
   const originalNext=progress&&progress.nextSibling;
   const compact=window.matchMedia('(max-width:899px) and (max-height:700px)');

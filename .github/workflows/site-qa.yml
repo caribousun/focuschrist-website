@@ -727,8 +727,8 @@ jobs:
           /tmp/focus-row-qa/node_modules/.bin/playwright install --with-deps chromium
       - name: Verify exact owner integration helper and contract
         run: |
-          printf '%s  %s\n' '1fb392cbc9dad0c472d0ccdf615d28782a3cd8f825e0d4a80fde3c78ed98c75b' 'tools/owner_integration_browser_qa.js' | sha256sum --check
-          printf '%s  %s\n' '36d9b79b0fbf20dfb7c1a5d1e7d12b3100034f6ffd8263efd7498f03c59dbbef' 'tools/owner_integration_qa_contract.json' | sha256sum --check
+          printf '%s  %s\n' 'e49d1438ad40d69d772db8b3f968a8ec56502ed00076bc3f806197775700d7cc' 'tools/owner_integration_browser_qa.js' | sha256sum --check
+          printf '%s  %s\n' 'dfd79763625196b8851b52e8c99e1cb1a65258a77a7f926d38790af38bed6ed1' 'tools/owner_integration_qa_contract.json' | sha256sum --check
       - name: Observe current hub artwork flow and Timeline introduction journeys
         run: timeout --signal=TERM --kill-after=15s 8m env NODE_PATH=/tmp/focus-row-qa/node_modules node tools/owner_integration_browser_qa.js
       - name: Preserve bounded actual owner integration evidence

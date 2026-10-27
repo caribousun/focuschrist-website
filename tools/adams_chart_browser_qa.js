@@ -4,7 +4,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const W=50195,H=5347,TILE=1024;
 const EXPECTED_CHART_SHA256='b90c19dd9f77c3966843b41d514319816a194deee86b87235909f6b2c742130c';
 const EXPECTED_LANDING_SHA256='c910ae58c2f8feccf1d59f44b154d31f224436b79538e86bf73774c65b0b8c4c';
-const INTEGRATED_SOURCES=[{"path":"adams-integration.css","bytes":4244,"sha256":"227f47555bc5f9f5444d1cf711c90dc06df338fb62b7c77115f04bf5a21504dc"},{"path":"adams-integration.js","bytes":1851,"sha256":"10376303e2442aca9868cfd6233a77c815a1b2c9b9d5a1fe8c7875b70eaea9c3"},{"path":"timeline.html","bytes":8828,"sha256":"c910ae58c2f8feccf1d59f44b154d31f224436b79538e86bf73774c65b0b8c4c"},{"path":"timelines/adams-1881-chart.html","bytes":66076,"sha256":"b90c19dd9f77c3966843b41d514319816a194deee86b87235909f6b2c742130c"},{"path":"timelines/adams-1881-introduction.html","bytes":8006,"sha256":"25785812f2f8d199b049ace7276a72e0e545f306f3d687792ffc1274f940af30"}];
+const INTEGRATED_SOURCES=[{"path":"adams-integration.css","bytes":4965,"sha256":"d936516926aa47c12c634b11b15278e1590502d0491d9b1f17cd90a0210fdeb1"},{"path":"adams-integration.js","bytes":2267,"sha256":"334a8395213a4e561cdffc747bf92b6872902486b055a36824cf834784dffb7b"},{"path":"timeline.html","bytes":8828,"sha256":"c910ae58c2f8feccf1d59f44b154d31f224436b79538e86bf73774c65b0b8c4c"},{"path":"timelines/adams-1881-chart.html","bytes":66076,"sha256":"b90c19dd9f77c3966843b41d514319816a194deee86b87235909f6b2c742130c"},{"path":"timelines/adams-1881-introduction.html","bytes":8126,"sha256":"742d429e6a674ce5d47889aab964a6bde60f3509bd9518e159499be6616112be"}];
 const ASSET_SET_SHA256='6092f3c930ebb6cae7c25b3f881fc93ef590642500e419b539124cacd89bca0f';
 const CREDIT='Sebastian C. Adams, Synchronological Chart (1881). Chart image from Wikimedia Commons, courtesy of the David Rumsey Map Collection. The image is in the public domain.';
 const COMMONS='https://commons.wikimedia.org/wiki/File:Adams_Synchronological_Chart,_1881.jpg';
@@ -243,6 +243,13 @@ module.exports=async function adamsChartQA(existingPage,origin,parentOut){
     assert.equal(await page.locator('#toggleMini').innerText(),'Hide Map');assert.equal(await page.locator('#toggleMini').getAttribute('aria-pressed'),'true');
     before=await state('restore-map');const mapBox=await page.locator('#mini').boundingBox(),mapView=await page.locator('#miniview').boundingBox();
     assert(mapBox&&mapView&&mapView.width>0&&mapView.height>0,'Restored map has rendered viewport indicator');
+    // The restored map must be fully reachable beside the actual toolbar and dock.
+    const mapLayout=await page.evaluate(()=>{const ids=['mini','toolbar','navDock'];return Object.fromEntries(ids.map(id=>{const n=document.getElementById(id),r=n.getBoundingClientRect(),cs=getComputedStyle(n);return [id,{x:r.x,y:r.y,right:r.right,bottom:r.bottom,width:r.width,height:r.height,visible:cs.display!=='none'&&cs.visibility!=='hidden'&&Number(cs.opacity)!==0}];}));});
+    record.restoredMapLayout=mapLayout;
+    const overlap=(a,b)=>Math.max(0,Math.min(a.right,b.right)-Math.max(a.x,b.x))*Math.max(0,Math.min(a.bottom,b.bottom)-Math.max(a.y,b.y));
+    assert(mapLayout.mini.visible&&mapLayout.mini.width>=44&&mapLayout.mini.height>=44&&mapLayout.mini.x>=-1&&mapLayout.mini.y>=-1&&mapLayout.mini.right<=profile.width+1&&mapLayout.mini.bottom<=profile.height+1,'Restored map is fully visible with a usable target');
+    assert.equal(overlap(mapLayout.mini,mapLayout.toolbar),0,'Restored map clears toolbar');
+    if(mapLayout.navDock.visible)assert.equal(overlap(mapLayout.mini,mapLayout.navDock),0,'Restored map clears expanded directional dock');
     const point={x:mapBox.width*.75,y:mapBox.height*.5};
     if(profile.touch)await page.locator('#mini').tap({position:point});else await page.locator('#mini').click({position:point});
     s=await state('map-navigation');near(s.z,before.z,'Map preserves zoom',1e-8);assert(Math.abs(s.x-before.x)>1,'Map actually pans');

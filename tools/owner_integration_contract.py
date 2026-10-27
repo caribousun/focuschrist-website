@@ -12,7 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = 'docs/owner-integration-contract/source-manifest.json'
-MANIFEST_SHA256 = '619571c0aae9e9371806a2b385ff7d68695b217ed7940b236d5f90cde2fb4e26'
+MANIFEST_SHA256 = '676ea8c34867a0d52d41e7403ff83cfb27b7bc1cba56c66490bd3ec13edbd02c'
 CANONICAL_SET_SHA256 = 'ba19da4af6ba32219ff9555ecf5ddd466077acd9a6ee09a7d49f29c07d1f4284'
 CHART = 'timelines/adams-1881-chart.html'
 INTRO = 'timelines/adams-1881-introduction.html'
