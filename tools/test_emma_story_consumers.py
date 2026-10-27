@@ -191,5 +191,45 @@ class ActualHistoryOwnerTests(unittest.TestCase):
         self.assertFalse(self.check()('example.css', dict(sources, **{'unknown.html': 'example.css'}), {'one.html'}))
 
 
+class ActualControllerRegistryTests(unittest.TestCase):
+    def build(self):
+        tree = ast.parse((ROOT / 'tools/illustrated_study_navigation_qa.py').read_text())
+        nodes = [n for n in tree.body if (isinstance(n, ast.FunctionDef) and n.name == 'controller_bindings_from_registry') or (isinstance(n, ast.Assign) and any(isinstance(t, ast.Name) and t.id in {'CONTROLLER_REF', 'HISTORICAL_CONTROLLER_SHA256'} for t in n.targets))]
+        scope = {'hashlib': hashlib, 'json': json, 'historical_consumers': e.historical_consumers, 'EMMA_STORY_ROUTES': e.EMMA_STORY_ROUTES}
+        exec(compile(ast.Module(body=nodes, type_ignores=[]), '<actual registry partition>', 'exec'), scope)
+        return scope['controller_bindings_from_registry']
+
+    def inputs(self):
+        registry = json.loads((ROOT / 'docs/topic-artwork-controller-bindings.json').read_text())
+        rows = json.loads((ROOT / 'docs/continue-motion/predecessors.json').read_text())['files']
+        return registry, rows
+
+    def test_actual_registry_and_five_parser_bindings(self):
+        registry, rows = self.inputs(); expected = self.build()(registry, rows)
+        self.assertEqual(len(expected), 125)
+        for route in e.EMMA_STORY_ROUTES:
+            doc = BeautifulSoup((ROOT / route).read_text(), 'html.parser')
+            refs = [x['src'] for x in doc.select('script[src]') if 'topic-artwork-details.js' in x['src']]
+            self.assertEqual(refs, registry[route]); self.assertEqual(refs, expected[route])
+        self.assertEqual(len(set(expected) - e.EMMA_STORY_ROUTES), 120)
+
+    def test_each_new_registry_omission_duplicate_version_unknown(self):
+        registry, rows = self.inputs()
+        for route in e.EMMA_STORY_ROUTES:
+            for value in (None, [], registry[route] * 2, [registry[route][0].replace('20261021-continue-motion-1', 'unknown')]):
+                changed = copy.deepcopy(registry)
+                if value is None: del changed[route]
+                else: changed[route] = value
+                with self.assertRaises(AssertionError): self.build()(changed, rows)
+        changed = dict(registry, **{'history/unknown.html': registry[sorted(e.EMMA_STORY_ROUTES)[0]]})
+        with self.assertRaises(AssertionError): self.build()(changed, rows)
+
+    def test_historical_binding_and_predecessor_not_weakened(self):
+        registry, rows = self.inputs(); old = sorted(set(registry) - e.EMMA_STORY_ROUTES)[0]
+        changed = copy.deepcopy(registry); changed[old] = [changed[old][0].replace('20261009-settled-continue-2', 'unknown')]
+        with self.assertRaises(AssertionError): self.build()(changed, rows)
+        with self.assertRaises(AssertionError): self.build()(registry, set(rows) - {old})
+
+
 if __name__ == '__main__':
     unittest.main()
