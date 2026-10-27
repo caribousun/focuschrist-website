@@ -296,6 +296,18 @@ jobs:
       - name: Verify mobile study headers preserve navigation
         run: NODE_PATH=/tmp/focus-row-qa/node_modules node tools/mobile_study_header_browser_qa.js
 
+      - name: Verify Emma story pages and viewer journeys
+        run: NODE_PATH=/tmp/focus-row-qa/node_modules node tools/emma_story_browser_qa.js
+
+      - name: Save Emma story viewport evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: emma-story-render
+          path: .qa-artifacts/emma-story/
+          include-hidden-files: true
+          if-no-files-found: ignore
+
       - name: Inspect every canonical page at desktop, phone, and enlarged text
         if: ${{ !cancelled() && steps.presentation_dependencies.outcome == 'success' }}
         run: NODE_PATH=/tmp/focus-row-qa/node_modules node tools/canonical_presentation_browser_qa.js
@@ -542,5 +554,54 @@ jobs:
           path: |
             .qa-artifacts/timeline/
             .qa-artifacts/continue-motion/
+          include-hidden-files: true
+          if-no-files-found: ignore
+  generate-indices:
+    name: Generate site indices (diagnostic)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+
+      - name: Verify QA dependency contract before installation
+        run: python tools/qa_dependency_contract.py --self-test
+
+      - name: Install shared QA dependencies
+        run: python -m pip install -r tools/qa-requirements.txt
+
+      - name: Record generation evidence header
+        run: |
+          {
+            echo "github_sha=${{ github.sha }}"
+            echo "ref=${{ github.ref }}"
+            echo "event=${{ github.event_name }}"
+            git rev-parse HEAD
+            git log -1 --format='parents %P'
+            sha256sum tools/build_art_gallery.py tools/build_site_search.py
+          } | tee indices-evidence.txt
+
+      - name: Generate art gallery index
+        run: python tools/build_art_gallery.py
+
+      - name: Generate site search index
+        run: python tools/build_site_search.py
+
+      - name: Record generated index hashes
+        if: always()
+        run: |
+          sha256sum art-gallery.json site-search-index.json >> indices-evidence.txt || true
+          wc -c art-gallery.json site-search-index.json >> indices-evidence.txt || true
+
+      - name: Upload generated indices and evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: generated-indices
+          path: |
+            art-gallery.json
+            site-search-index.json
+            indices-evidence.txt
           include-hidden-files: true
           if-no-files-found: ignore
