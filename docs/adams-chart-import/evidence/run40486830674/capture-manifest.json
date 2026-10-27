@@ -1,0 +1,133 @@
+{
+  "schema": 1,
+  "artifact_id": 12726195196,
+  "run_id": 40486830674,
+  "artifact_bytes": 2102256,
+  "artifact_sha256": "3276e105c71133fecdee4e4ce2e1e7f198a1cd43b809e1a20cdfd9fa629bcf32",
+  "capture_count": 24,
+  "captures": [
+    {
+      "file": "desktop-controls-hidden.jpg",
+      "bytes": 256934,
+      "sha256": "229c41ebd29fa9bb85200b42d27121e108bbaf7c5c67f14f5ffff454c19192c4"
+    },
+    {
+      "file": "desktop-end.jpg",
+      "bytes": 313288,
+      "sha256": "d5b7df00834265b8b6490b93dfcae0e279a1d4805301189caea9a211789b8e41"
+    },
+    {
+      "file": "desktop-fit.jpg",
+      "bytes": 126133,
+      "sha256": "f0cd963d88ca2169878c7e1eb666fbf20893057a364eb4dbc693ee15d46baee7"
+    },
+    {
+      "file": "desktop-landing.jpg",
+      "bytes": 105630,
+      "sha256": "3c9548c46bb7e6430d2363e8ec7e69a079132f499e6190aa8748a1cc3669652f"
+    },
+    {
+      "file": "desktop-one-to-one.jpg",
+      "bytes": 302065,
+      "sha256": "5e53a6685922f984073bd7ea45f90d43b7981e0bb2c767cf0c9457a0dc5281b9"
+    },
+    {
+      "file": "narrow-phone-compact-clear-fit.jpg",
+      "bytes": 36298,
+      "sha256": "f20b8ba0bbb5353a804dcc04d5b91804b928957f18fa3b2d021dcc6f76c6e8e4"
+    },
+    {
+      "file": "narrow-phone-controls-hidden.jpg",
+      "bytes": 52065,
+      "sha256": "690510c963ca37146be1d6397b5865daea90c8fa2813c002c0dd903465afa942"
+    },
+    {
+      "file": "narrow-phone-end.jpg",
+      "bytes": 46009,
+      "sha256": "e2264650238a02ec753b0f9a108e2b61a67b7921acf02e316772943dca35759c"
+    },
+    {
+      "file": "narrow-phone-expanded-controls.jpg",
+      "bytes": 40848,
+      "sha256": "c82cc5c19b8d077606130ca7d2e5c590a4557ed041eb42071976637a5f5d21cf"
+    },
+    {
+      "file": "narrow-phone-fit.jpg",
+      "bytes": 36298,
+      "sha256": "f20b8ba0bbb5353a804dcc04d5b91804b928957f18fa3b2d021dcc6f76c6e8e4"
+    },
+    {
+      "file": "narrow-phone-landing.jpg",
+      "bytes": 31855,
+      "sha256": "32ae158370a14fa7bec8157ef76e23f8bb5c73d3e6fb13e0cf3e77536c72f5aa"
+    },
+    {
+      "file": "narrow-phone-one-to-one.jpg",
+      "bytes": 49887,
+      "sha256": "c886b84339584fefe14d02487281aec57c64a30263127999eab0e5060e03c5af"
+    },
+    {
+      "file": "phone-controls-hidden.jpg",
+      "bytes": 96284,
+      "sha256": "12a5fb095cfb269c8b3d52d3fb59253c4637f1f9a99c8c251c1a1f1465571022"
+    },
+    {
+      "file": "phone-end.jpg",
+      "bytes": 78537,
+      "sha256": "eaf56962df06a2757445a2a283cc89e9cb2f9ead52167e405e2fc1d01cffc057"
+    },
+    {
+      "file": "phone-fit.jpg",
+      "bytes": 50115,
+      "sha256": "e809696d88581fa177376657ff521bf6adcafae22bb8cc108b5a3b6d0ecc9b54"
+    },
+    {
+      "file": "phone-landing.jpg",
+      "bytes": 48047,
+      "sha256": "dd90d6471529296bd7371fbda057da5ed53c2675d1934a4289cd72075979e82c"
+    },
+    {
+      "file": "phone-landscape-compact-clear-fit.jpg",
+      "bytes": 63924,
+      "sha256": "3cc2857d69d2cd0a4a7eb0365621250fd9d437524a9bf666410d912c313e7f0a"
+    },
+    {
+      "file": "phone-landscape-controls-hidden.jpg",
+      "bytes": 72831,
+      "sha256": "2a9f2aacfed266d50ad2fd1398ec56e60ceb70ccf7ec13cce325493503115eb7"
+    },
+    {
+      "file": "phone-landscape-end.jpg",
+      "bytes": 62039,
+      "sha256": "30f94e992d79247ee21a32d300b44c1406a868ae1a0d2509d9da5b5e19ce2afc"
+    },
+    {
+      "file": "phone-landscape-expanded-controls.jpg",
+      "bytes": 57386,
+      "sha256": "f8d246567a486025772e095789b17f2da554e0e8972fd0ed156996b51a638b53"
+    },
+    {
+      "file": "phone-landscape-fit.jpg",
+      "bytes": 63924,
+      "sha256": "3cc2857d69d2cd0a4a7eb0365621250fd9d437524a9bf666410d912c313e7f0a"
+    },
+    {
+      "file": "phone-landscape-landing.jpg",
+      "bytes": 38147,
+      "sha256": "db8d3c08af46ce764a59a686c187cc3dad7168be3d38771370042f319aeccb82"
+    },
+    {
+      "file": "phone-landscape-one-to-one.jpg",
+      "bytes": 64509,
+      "sha256": "b3e65bd840124c9a73ab13293e39023d1fbd795fa84c58ba4b97444aaf8e75b6"
+    },
+    {
+      "file": "phone-one-to-one.jpg",
+      "bytes": 92436,
+      "sha256": "3627e342ae631939c45aa38869d03d7c023abde1b91cf30dcada5667214d17dc"
+    }
+  ],
+  "raw_report_sha256": "72f6dccb398425acfd5bb1c90b43aae4330ebfca64c983c6fb958f331be79749",
+  "public_pixels": false,
+  "preservation": "Actual24 JPEG pixels retained in original whole Actions artifact/private workspace; public evidence is this metadata only, no new raster coverage."
+}

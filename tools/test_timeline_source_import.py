@@ -47,7 +47,8 @@ class TimelineImportTests(unittest.TestCase):
         restored=gate.restore_search(data)
         self.assertEqual(hashlib.sha256(restored).hexdigest(),'038391c9f469c4c7a24894c629b915851ec097d305e880bdfe12e6f24b3c9e0d')
         from emma_generated_indices_successor import restore as restore_emma_indices
-        current=json.loads(restore_emma_indices('site-search-index.json', data));prior=json.loads(restored)
+        from adams_delivery_successor import restore as restore_adams_delivery
+        current=json.loads(restore_emma_indices('site-search-index.json', restore_adams_delivery('site-search-index.json', data)));prior=json.loads(restored)
         route='/timelines/world-and-scripture-timeline.html'
         self.assertEqual([p for p in current['pages'] if p!=route],prior['pages'])
         records=[copy.deepcopy(r) for r in current['records'] if r.get('url')!=route]

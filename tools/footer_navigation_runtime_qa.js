@@ -7,11 +7,17 @@ const root = path.resolve(__dirname, '..');
 const read = name => fs.readFileSync(path.join(root,name),'utf8');
 const artworkDisclosure = 'Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.';
 const pages = [...read('sitemap.xml').matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>new URL(m[1]).pathname);
-assert.equal(pages.length,132);
+const {historicalBoundaryRoutes}=require('./emma_content_boundary_routes');
+const {ADAMS_ROUTE,assertAdamsStandalone,withoutAdamsCanonical}=require('./adams_standalone_navigation');
+const standardPages=withoutAdamsCanonical(pages,read);
+require('./test_adams_standalone_navigation').selfTest(pages,read);
 assert.ok(pages.includes('/timelines/world-and-scripture-timeline.html'),'World and Scripture timeline receives the shared footer test');
 const historicalRoutes=JSON.parse(fs.readFileSync(path.join(root,'docs/unified-opening-inventory.json'),'utf8')).pages.map(p=>p.path);
+const historicalPages=historicalBoundaryRoutes(standardPages,historicalRoutes);
+require('./test_emma_content_boundary_routes').selfTest(standardPages,historicalRoutes);
+assert.equal(historicalPages.length,132);
 assert.equal(historicalRoutes.length,130);assert.equal(new Set(historicalRoutes).size,130);
-assert.deepEqual(pages.map(p=>p==='/'?'index.html':p.replace(/^\//,'')).sort(),[...historicalRoutes,'history/emma-hale-smith.html','timelines/world-and-scripture-timeline.html'].sort(),'Exact historical routes plus reviewed Emma and World and Scripture additions');
+assert.deepEqual(historicalPages.map(p=>p==='/'?'index.html':p.replace(/^\//,'')).sort(),[...historicalRoutes,'history/emma-hale-smith.html','timelines/world-and-scripture-timeline.html'].sort(),'Exact historical routes plus reviewed Emma and World and Scripture additions');
 assert.ok(pages.includes('/joseph-smith-portrait-research.html'),'Joseph research study receives the shared footer test');
 assert.ok(pages.includes('/answers/race-priesthood-and-temple-blessings.html'),'new dependent study must receive the shared footer test');
 let bareGalleryEntries=0;
@@ -30,6 +36,7 @@ assert.equal(bareGalleryEntries,1,'Art must retain its one explicit complete-gal
 for(const route of [...pages, '/404.html']){
  const file=route==='/'?'index.html':route.slice(1);
  const dom=new JSDOM(read(file),{url:'https://focuschrist.com'+route+'?from=footer#reading',runScripts:'outside-only'});
+ if(route===ADAMS_ROUTE){assertAdamsStandalone(route,read(file),dom.window.document,read('tools/adams_chart_browser_qa.js'));dom.window.close();continue;}
  const w=dom.window,d=w.document;let scroll;
  const savedArt=d.querySelectorAll('footer [data-focuschrist-art-gallery]');
  for(const a of savedArt)assert.equal(new URL(a.href).pathname,'/art.html',file+' any saved Art entry must use approved page');
@@ -108,4 +115,4 @@ const css=read('footer-navigation.css');
 assert(!/position\s*:\s*(?:fixed|absolute)/.test(css),'Footer control must remain in normal flow');
 assert(css.includes('max-width: 100%; white-space: normal;'));
 assert(css.includes(':focus-visible'));
-console.log(`PASS:${pages.length} canonical plus404 same-page footer actions, focus/route preservation, idempotence,102 removed trails and preserved return destinations`);
+console.log(`PASS:${standardPages.length} standard canonical plus404 same-page footer actions and one exact Adams standalone navigation/credit contract, focus/route preservation, idempotence,102 removed trails and preserved return destinations`);

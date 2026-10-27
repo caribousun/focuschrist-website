@@ -1,0 +1,46 @@
+{
+  "reviewer": "Albert",
+  "reviewed_at": "2026-10-27T10:28:11.952581+00:00",
+  "scope": "Actual current canonical-footer context inspection, not release acceptance",
+  "run_id": 40487588321,
+  "head": "655ab413f14f104c8110fd1269b0e5ad7de0cc74",
+  "observations": "Personally viewed these original current screenshots. Both canonical notices, official Church link, source links and Back to top are legible without new clipping/overlap. All five phone footers share the preserved canonical presentation; 1280 and320 representative captures show the same ordered notices. Two changed old desktop views differ only in top header/shadow strips, outside artwork. Fifteen actual DOM/footer observations and46 named journeys passed in the diagnostic.",
+  "limits": [
+    "Viewport Chromium, not physical devices or universal accessibility certification.",
+    "Footer container subpixel rounding up to0.46875px beyond900 occurs in three telemetry cases; actual notice text is within view.",
+    "Root viewed listed captures, not sixty new viewing calls.43of45 historical captures byte-identical; prior exact asset inspections reused only after rehash.",
+    "Full normal QA and release review remain required."
+  ],
+  "captures": [
+    {
+      "name": "emma-story1-ride-review-footer-320.jpg",
+      "bytes": 46176,
+      "sha256": "0fd7dccb2eccd8ebf6408211e6c5ad60192207075d81e3e628ea72c94d1e37e8"
+    },
+    {
+      "name": "emma-story1-ride-review-footer-390.jpg",
+      "bytes": 50893,
+      "sha256": "1a82655ce072ed91ff5c889bb26064fbba7ffde17a2f78b5a3d05e8171a9a551"
+    },
+    {
+      "name": "emma-story2-hymnal-review-footer-390.jpg",
+      "bytes": 54239,
+      "sha256": "da4ce5fef6135f441b690cc8a67e17d7a42e784d95e4cb8323f71dc119e6e8d6"
+    },
+    {
+      "name": "emma-story3-quincy-review-footer-390.jpg",
+      "bytes": 54900,
+      "sha256": "b5eb8c9b67162c8339e4c7f2387068cf86a0656daec8291049d4d78a53a314fc"
+    },
+    {
+      "name": "emma-story4-hospitality-review-footer-390.jpg",
+      "bytes": 55315,
+      "sha256": "a0d64d1637c0249d1461877bc2d974d9e7820de2cd89caa6f457f3f562179e13"
+    },
+    {
+      "name": "emma-story5-testimony-review-footer-390.jpg",
+      "bytes": 52136,
+      "sha256": "12b3c3393c7f865e2582d1ca5e28b531c0368678bbf8e6c1de8099da88d12683"
+    }
+  ]
+}

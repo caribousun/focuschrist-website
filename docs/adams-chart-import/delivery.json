@@ -1,0 +1,3681 @@
+{
+  "schema": 1,
+  "status": "REVIEWED_EXACT_SOURCE_IMPORT",
+  "spec": {
+    "kind": "EXISTING_OWNER_SUPPLIED_CHART",
+    "precreation_claim": false,
+    "page": {
+      "path": "timelines/adams-1881-chart.html",
+      "bytes": 62030,
+      "sha256": "95802a989d818d0ff7297660274c62f18140950b0bf58fc96a90277ef1e1cb90"
+    },
+    "landing": {
+      "path": "timeline.html",
+      "bytes": 8051,
+      "sha256": "fa3b12da544899f8935874508b9abe64b84b6fd2af1e5bfec8a368ce6a638578"
+    },
+    "source_originals": [
+      {
+        "variant": "Desktop v11",
+        "bytes": 159442357,
+        "sha256": "03969a54cb343ffc4ddcf83b03707f33597c05f214ce8df4950ea4d3cac8b753"
+      },
+      {
+        "variant": "Mobile v11",
+        "bytes": 159442328,
+        "sha256": "20d3f0c577568a605d96fc01201453283bafc764498a02e5a259f25b6af5ba2b"
+      }
+    ],
+    "work": {
+      "author": "Sebastian C. Adams",
+      "title": "Synchronological Chart",
+      "year": 1881,
+      "source_file_page": "https://commons.wikimedia.org/wiki/File:Adams_Synchronological_Chart,_1881.jpg",
+      "status": "Public domain in the United States (PD-Art)",
+      "collection_credit": "David Rumsey Map Collection",
+      "download_chain_claim": false
+    },
+    "transformation": "Strict base64 decode and same-origin externalization only; JPEG bytes unchanged, no resize or re-encoding.",
+    "canvas": {
+      "width": 50195,
+      "height": 5347,
+      "tile": 1024,
+      "levels": [
+        1,
+        4,
+        16,
+        64
+      ]
+    },
+    "total_images": 331,
+    "total_bytes": 119541095,
+    "assets": [
+      {
+        "key": "64:0:0",
+        "path": "assets/adams-chart/adams-64-0-0.jpg",
+        "bytes": 42199,
+        "sha256": "9e6338591371c7e978af70e3a05d7256a974c4d8dd5d9ce36fd7d8d577eedb0a",
+        "dimensions": [
+          785,
+          84
+        ]
+      },
+      {
+        "key": "16:0:0",
+        "path": "assets/adams-chart/adams-16-0-0.jpg",
+        "bytes": 178095,
+        "sha256": "00cb4975df431f79998180c469dc3444efcbda33fb95d7ee0754ce959ad6e6a0",
+        "dimensions": [
+          1024,
+          335
+        ]
+      },
+      {
+        "key": "16:1:0",
+        "path": "assets/adams-chart/adams-16-1-0.jpg",
+        "bytes": 218028,
+        "sha256": "c5fe78c97de6537f04329566e2341db1d5ff6f37269e9da0879031ac7f3ce3cf",
+        "dimensions": [
+          1024,
+          335
+        ]
+      },
+      {
+        "key": "16:2:0",
+        "path": "assets/adams-chart/adams-16-2-0.jpg",
+        "bytes": 223049,
+        "sha256": "189f8644f660871c81507838f158b9225d9ae04eadc020aa914634a2af7bf11e",
+        "dimensions": [
+          1024,
+          335
+        ]
+      },
+      {
+        "key": "16:3:0",
+        "path": "assets/adams-chart/adams-16-3-0.jpg",
+        "bytes": 11498,
+        "sha256": "6a3d8e814865035537149c95b9c0cc5f964a076a602857b3fcb29b513ca0f813",
+        "dimensions": [
+          66,
+          335
+        ]
+      },
+      {
+        "key": "4:0:0",
+        "path": "assets/adams-chart/adams-4-0-0.jpg",
+        "bytes": 482589,
+        "sha256": "827e2cddbd9a96338db91f7feeaca1855b605ba0843daf38cc86aacd8445a3e2",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "4:1:0",
+        "path": "assets/adams-chart/adams-4-1-0.jpg",
+        "bytes": 521311,
+        "sha256": "82ab46c662078740d46eedbcf28986cb320e8f153e12dc8f3fa141852033e94d",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "4:2:0",
+        "path": "assets/adams-chart/adams-4-2-0.jpg",
+        "bytes": 480737,
+        "sha256": "f5ced238b3a15f2c7df5d63ffa5458378f66268dc45160f1b3ba7a4da0aa235a",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "4:3:0",
+        "path": "assets/adams-chart/adams-4-3-0.jpg",
+        "bytes": 571363,
+        "sha256": "f6d2a11dde26ff532201c83014323690cd21d172157e3d34657b944c3be57638",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "4:4:0",
+        "path": "assets/adams-chart/adams-4-4-0.jpg",
+        "bytes": 622720,
+        "sha256": "acd30cd0ddf241c128c7beef8a400523c4c04d09fac20233f50dc9f2b05e370e",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "4:5:0",
+        "path": "assets/adams-chart/adams-4-5-0.jpg",
+        "bytes": 650388,
+        "sha256": "ea52ddf1e3ea0a8f77a0e7c83b3ea08ef4a36bde0bffeb6b873a1136648bc819",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "4:6:0",
+        "path": "assets/adams-chart/adams-4-6-0.jpg",
+        "bytes": 666371,
+        "sha256": "bcbad1a5862a24a7763ac4353c6c4d94d0f35b9da6de46a54ec1d22e9d0aa107",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "4:7:0",
+        "path": "assets/adams-chart/adams-4-7-0.jpg",
+        "bytes": 660659,
+        "sha256": "e16414f64268f20195f1f840d435bc314c53478a2411e612a5e226b0248e9dd2",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "4:8:0",
+        "path": "assets/adams-chart/adams-4-8-0.jpg",
+        "bytes": 676105,
+        "sha256": "606165ae85d15f01a0c05b4434892c4b52ff97a3f021e3f70ef9f1a5709e4e30",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "4:9:0",
+        "path": "assets/adams-chart/adams-4-9-0.jpg",
+        "bytes": 669746,
+        "sha256": "61dfbef2afc782a8992a0fcfa0ca0de31a4e9d599826a5241ff3e23ef9b0cc43",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "4:10:0",
+        "path": "assets/adams-chart/adams-4-10-0.jpg",
+        "bytes": 693866,
+        "sha256": "6422d508ce724c7063b9630cb4defe4615b1566a5e55269f3605a843bfd818ee",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "4:11:0",
+        "path": "assets/adams-chart/adams-4-11-0.jpg",
+        "bytes": 696944,
+        "sha256": "ef86d0062eab84fd1b2d58b380eefa9ff2249f8ccb8e178547174bcddf048ffd",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "4:12:0",
+        "path": "assets/adams-chart/adams-4-12-0.jpg",
+        "bytes": 149944,
+        "sha256": "d9ddf9b5bc1720cbb9e469f0451ae61895532ef13c9ead841fca2db610f27756",
+        "dimensions": [
+          261,
+          1024
+        ]
+      },
+      {
+        "key": "4:0:1",
+        "path": "assets/adams-chart/adams-4-0-1.jpg",
+        "bytes": 108300,
+        "sha256": "81df8a7b952e0cd399798e1e83b809b4b01d72e56cd08ec780d62c7eaf4d0ab9",
+        "dimensions": [
+          1024,
+          313
+        ]
+      },
+      {
+        "key": "4:1:1",
+        "path": "assets/adams-chart/adams-4-1-1.jpg",
+        "bytes": 135926,
+        "sha256": "5b3035f7da766fba9d2be85a0fda98d00460d5878440613d998d8a6a7837fd31",
+        "dimensions": [
+          1024,
+          313
+        ]
+      },
+      {
+        "key": "4:2:1",
+        "path": "assets/adams-chart/adams-4-2-1.jpg",
+        "bytes": 119188,
+        "sha256": "f70f6c15ceff4a71f2af4593f3926f70e4f9cfe53f6baab9bed5c178c9fa8a8a",
+        "dimensions": [
+          1024,
+          313
+        ]
+      },
+      {
+        "key": "4:3:1",
+        "path": "assets/adams-chart/adams-4-3-1.jpg",
+        "bytes": 135590,
+        "sha256": "9c0a1cc303273fe5fd8d1f10d36dbcec7d5c4ff4ef1ba20c29a17c1b9bcf9e31",
+        "dimensions": [
+          1024,
+          313
+        ]
+      },
+      {
+        "key": "4:4:1",
+        "path": "assets/adams-chart/adams-4-4-1.jpg",
+        "bytes": 160493,
+        "sha256": "57d56ba6eebe045be300f27f46b3823ce6afe24822aa2fb7a710b993736f2bcd",
+        "dimensions": [
+          1024,
+          313
+        ]
+      },
+      {
+        "key": "4:5:1",
+        "path": "assets/adams-chart/adams-4-5-1.jpg",
+        "bytes": 178196,
+        "sha256": "ed05a94e9eec64109f251a69c494f32cfdebfa04131441d1d91d4dff97106278",
+        "dimensions": [
+          1024,
+          313
+        ]
+      },
+      {
+        "key": "4:6:1",
+        "path": "assets/adams-chart/adams-4-6-1.jpg",
+        "bytes": 187334,
+        "sha256": "37fcd34da24705f51201ec8ec3c0e3eb4777bc9a533576509e39bdeb0704d3ee",
+        "dimensions": [
+          1024,
+          313
+        ]
+      },
+      {
+        "key": "4:7:1",
+        "path": "assets/adams-chart/adams-4-7-1.jpg",
+        "bytes": 185395,
+        "sha256": "f312f59a40d949ae44b5337550ed85fb3aa40e40cf7fcb26a7976e62d65716f3",
+        "dimensions": [
+          1024,
+          313
+        ]
+      },
+      {
+        "key": "4:8:1",
+        "path": "assets/adams-chart/adams-4-8-1.jpg",
+        "bytes": 200789,
+        "sha256": "ffb0078d0823f74a5905f79ac838253829d611014874b400e9e4cb210d3aaa1d",
+        "dimensions": [
+          1024,
+          313
+        ]
+      },
+      {
+        "key": "4:9:1",
+        "path": "assets/adams-chart/adams-4-9-1.jpg",
+        "bytes": 198761,
+        "sha256": "c370563ba635691daba2e32dd777977cd6b8e512d9156d849a54cdf52b71c253",
+        "dimensions": [
+          1024,
+          313
+        ]
+      },
+      {
+        "key": "4:10:1",
+        "path": "assets/adams-chart/adams-4-10-1.jpg",
+        "bytes": 201058,
+        "sha256": "51a78dddd0e3f10fe40107d808ea08f4ceae5b67bc8f3253116685c7087ef0f3",
+        "dimensions": [
+          1024,
+          313
+        ]
+      },
+      {
+        "key": "4:11:1",
+        "path": "assets/adams-chart/adams-4-11-1.jpg",
+        "bytes": 184607,
+        "sha256": "4e94008157fcd517384df2ec35a25d081002d7ff76cd1b4819c3afc94c00c8d7",
+        "dimensions": [
+          1024,
+          313
+        ]
+      },
+      {
+        "key": "4:12:1",
+        "path": "assets/adams-chart/adams-4-12-1.jpg",
+        "bytes": 41041,
+        "sha256": "136a9cf30314b1a0db56d053940cd2c3aed09d135db1aff58bfba9e813089e6e",
+        "dimensions": [
+          261,
+          313
+        ]
+      },
+      {
+        "key": "1:0:0",
+        "path": "assets/adams-chart/adams-1-0-0.jpg",
+        "bytes": 309326,
+        "sha256": "49ce8d675ded466fda4fcd1d30f1d5bc1448589e5454d0684c4cea2b28670c7c",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:1:0",
+        "path": "assets/adams-chart/adams-1-1-0.jpg",
+        "bytes": 362195,
+        "sha256": "196a667631398076b0fb77dfa8203a863383eac95aea07ff617ba607a9e5cb22",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:2:0",
+        "path": "assets/adams-chart/adams-1-2-0.jpg",
+        "bytes": 333140,
+        "sha256": "96ef8c6f1c8181d1eb1ac0c0b9532d90ef8282e3c91efdec161ed5cdd35ff66e",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:3:0",
+        "path": "assets/adams-chart/adams-1-3-0.jpg",
+        "bytes": 377794,
+        "sha256": "115466871d2016910406251ed52772bf846c374dc53f4f3d5e263f62ef21786b",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:4:0",
+        "path": "assets/adams-chart/adams-1-4-0.jpg",
+        "bytes": 408593,
+        "sha256": "1e239b0da8c1d6da2857f0c6ea56322e6f7243a557613d63d4fe5bcb1ce18629",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:5:0",
+        "path": "assets/adams-chart/adams-1-5-0.jpg",
+        "bytes": 360870,
+        "sha256": "0f7a59b9f9f42a33bed8590aa106dab4252a3060f6d65b22c511dc96e351a550",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:6:0",
+        "path": "assets/adams-chart/adams-1-6-0.jpg",
+        "bytes": 375879,
+        "sha256": "76b5820c47dfecbc29a4cbd1c394615de023b153e1694a2ac65f795323f23bf5",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:7:0",
+        "path": "assets/adams-chart/adams-1-7-0.jpg",
+        "bytes": 332904,
+        "sha256": "b46d8c358550fece7861597d2b50e8b0b600d4f491c4ccc92658fd616599f0ab",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:8:0",
+        "path": "assets/adams-chart/adams-1-8-0.jpg",
+        "bytes": 330375,
+        "sha256": "531390002a7be1d6dd22ec31e5dd7892d6c7177a8b512e3068c9a339af1a90bb",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:9:0",
+        "path": "assets/adams-chart/adams-1-9-0.jpg",
+        "bytes": 306793,
+        "sha256": "a36331588bd822b29bb43600905ca41ae4bbc2779ed1f3808c3481706a9a5f32",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:10:0",
+        "path": "assets/adams-chart/adams-1-10-0.jpg",
+        "bytes": 255253,
+        "sha256": "115b37be859bf486ecc4ad59e6ba13409fd84809eaed21ab6cdf9d544bd46ae0",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:11:0",
+        "path": "assets/adams-chart/adams-1-11-0.jpg",
+        "bytes": 280029,
+        "sha256": "0d772220f8316efefc56be3580ff500f34bd82107dc14bfdbb369eded5a59159",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:12:0",
+        "path": "assets/adams-chart/adams-1-12-0.jpg",
+        "bytes": 332354,
+        "sha256": "6a87b4d906bd79aa4bdf5af36a04be041a9c15732ab699e531fa235d5dd32dac",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:13:0",
+        "path": "assets/adams-chart/adams-1-13-0.jpg",
+        "bytes": 359583,
+        "sha256": "fc810240d6695355cb1b386c5e6f54163e5a975b8d63bb89b5b1bf09b9174a55",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:14:0",
+        "path": "assets/adams-chart/adams-1-14-0.jpg",
+        "bytes": 369148,
+        "sha256": "207355f64a984fa98e2f723ef005a3e324754d7aed1f1c83f330674628786aec",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:15:0",
+        "path": "assets/adams-chart/adams-1-15-0.jpg",
+        "bytes": 371719,
+        "sha256": "bd87774396f9f9d0b45c1b5efdcd4e21ff0f1b8c9c58ee4667f4268df15edd96",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:16:0",
+        "path": "assets/adams-chart/adams-1-16-0.jpg",
+        "bytes": 380146,
+        "sha256": "b1673b85114134ef1167ffa9a0c4cfa53e12acc02624ca5ec799557a92725110",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:17:0",
+        "path": "assets/adams-chart/adams-1-17-0.jpg",
+        "bytes": 430128,
+        "sha256": "4ed394d3f3e3e629d5b832a459492f724f5929f0d02443f87c97e7f6abaef422",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:18:0",
+        "path": "assets/adams-chart/adams-1-18-0.jpg",
+        "bytes": 379664,
+        "sha256": "8207cfd3e9923f9451d9c6baa5238ef916aad496ebdba4fcf8af8d6d2cd2b59a",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:19:0",
+        "path": "assets/adams-chart/adams-1-19-0.jpg",
+        "bytes": 402615,
+        "sha256": "fcb5273cd79cbf1c9a4ff9fb10d447a3259d3b42dabef2b5d82ca79f246ac36d",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:20:0",
+        "path": "assets/adams-chart/adams-1-20-0.jpg",
+        "bytes": 434601,
+        "sha256": "bc34dd563f555a5ca3761a95e87511d573e9b20b2b435e8d64565a456130d01c",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:21:0",
+        "path": "assets/adams-chart/adams-1-21-0.jpg",
+        "bytes": 451126,
+        "sha256": "61c1859c952a2f21b27c6475a927c277bc7e0ba8e0ebb6150f63031020b0a10b",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:22:0",
+        "path": "assets/adams-chart/adams-1-22-0.jpg",
+        "bytes": 377221,
+        "sha256": "4a31551dc72a7ee31657fac01bf3321af8d1f5af81915071efe510c6eacd7089",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:23:0",
+        "path": "assets/adams-chart/adams-1-23-0.jpg",
+        "bytes": 389884,
+        "sha256": "4399f223865bb0ba215b4b1608992d22211059fa0ce16be6448d6ce2c4b52fa4",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:24:0",
+        "path": "assets/adams-chart/adams-1-24-0.jpg",
+        "bytes": 432519,
+        "sha256": "07f56a3db0ccb175e7db28b6f179a28401bb844b5160766e03d89569011677c3",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:25:0",
+        "path": "assets/adams-chart/adams-1-25-0.jpg",
+        "bytes": 367330,
+        "sha256": "2156257ddd5d3645013bb648a1273a13065767d2d04d5337a728b27f1ac75bbf",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:26:0",
+        "path": "assets/adams-chart/adams-1-26-0.jpg",
+        "bytes": 417427,
+        "sha256": "f23ba4c7c01ec394f88a12bb7ac9e958e68b2709ff9b3996020cb4cb459cffa9",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:27:0",
+        "path": "assets/adams-chart/adams-1-27-0.jpg",
+        "bytes": 425134,
+        "sha256": "7700a9878303bf965fe60862c7faa990af15ec548cadec063244e06a6026f05a",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:28:0",
+        "path": "assets/adams-chart/adams-1-28-0.jpg",
+        "bytes": 404135,
+        "sha256": "63e3f6f3a98ffc82b927e35bbaf111975f0ccbfb830de55b12d51f32c8f9fbf9",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:29:0",
+        "path": "assets/adams-chart/adams-1-29-0.jpg",
+        "bytes": 399208,
+        "sha256": "954a13654eecd800df4fa463e59ba569833fc464f87e215e5f1248a0087d30da",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:30:0",
+        "path": "assets/adams-chart/adams-1-30-0.jpg",
+        "bytes": 405095,
+        "sha256": "e52f802fba0a070a086158c132eca9fc20ef89c5c91f91a5dac94f6cae3e4dcb",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:31:0",
+        "path": "assets/adams-chart/adams-1-31-0.jpg",
+        "bytes": 422769,
+        "sha256": "99893d8b89f7d3e64d88407650110fe535ac9cfc96ac6e706dd97ffa803ebb79",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:32:0",
+        "path": "assets/adams-chart/adams-1-32-0.jpg",
+        "bytes": 383469,
+        "sha256": "bce91ef2fcf424ba6e2006178a29d6f7919851041fa7e8e12fd5f755094b1db3",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:33:0",
+        "path": "assets/adams-chart/adams-1-33-0.jpg",
+        "bytes": 411825,
+        "sha256": "591bdb2d878535c921d6af2169fdd1badbe26f78befaa72140cd5fbcd0f3744b",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:34:0",
+        "path": "assets/adams-chart/adams-1-34-0.jpg",
+        "bytes": 440259,
+        "sha256": "ca96ab5782c5b2b013fd2af2c7c122785dc54b3bc3df1f77f3cc53df32614eb4",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:35:0",
+        "path": "assets/adams-chart/adams-1-35-0.jpg",
+        "bytes": 435811,
+        "sha256": "443269fe2a44741aac5b35781e62d43f0bf06e959a4ef11750524082de2b11ee",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:36:0",
+        "path": "assets/adams-chart/adams-1-36-0.jpg",
+        "bytes": 432279,
+        "sha256": "720ede716df247df4b4426e00cbd150dd83b5b4912689c3cefafa85a78a092ee",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:37:0",
+        "path": "assets/adams-chart/adams-1-37-0.jpg",
+        "bytes": 389236,
+        "sha256": "ad943b9cadb01d7de124503a86b8aa81ade8d58ba41ca762ce930820f0c933a9",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:38:0",
+        "path": "assets/adams-chart/adams-1-38-0.jpg",
+        "bytes": 391113,
+        "sha256": "e85bc2ccb59bb3c07d68fce75c1032f2cf6e9b97309079b6ae56723aa5f6ed1e",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:39:0",
+        "path": "assets/adams-chart/adams-1-39-0.jpg",
+        "bytes": 366162,
+        "sha256": "c8e38ba66a9661cb90419f45909d3503a76b7fe8f898d9a2d716de3bbd2b1250",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:40:0",
+        "path": "assets/adams-chart/adams-1-40-0.jpg",
+        "bytes": 392444,
+        "sha256": "511ff74ac9c284756652a0e6716062b72d7b12fed8075b70f823545d7b52a9a0",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:41:0",
+        "path": "assets/adams-chart/adams-1-41-0.jpg",
+        "bytes": 393718,
+        "sha256": "689009a833b5ff1eadc7ab85a2a10be88392bbda04b2952ed0ee7f31fd88fe42",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:42:0",
+        "path": "assets/adams-chart/adams-1-42-0.jpg",
+        "bytes": 398395,
+        "sha256": "ea29baf046bb4f82f91edd14988090093fda17adf28a7ff0d1794a7ef200a397",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:43:0",
+        "path": "assets/adams-chart/adams-1-43-0.jpg",
+        "bytes": 384851,
+        "sha256": "f518c6831092661b424f3ca9b3e68d0f714a3809c21e7a14a0e2f3391e20b61f",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:44:0",
+        "path": "assets/adams-chart/adams-1-44-0.jpg",
+        "bytes": 468159,
+        "sha256": "342faef3cf4b30c97426787f05d9c0ca9ba0be0e24e9e4a2c25ec6f182f2cd1d",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:45:0",
+        "path": "assets/adams-chart/adams-1-45-0.jpg",
+        "bytes": 499937,
+        "sha256": "f3d00c14be8d26f0161830f94e84bb70609087a5126f036fd377224a002b505a",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:46:0",
+        "path": "assets/adams-chart/adams-1-46-0.jpg",
+        "bytes": 470752,
+        "sha256": "e71858b983e3bb0bf724911e1744c8dff8dfad9b30b7a36645895c10106bed98",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:47:0",
+        "path": "assets/adams-chart/adams-1-47-0.jpg",
+        "bytes": 479385,
+        "sha256": "de87095ab2927ccd706c4d4cf3013927a3ed3691cfd396b89ec67aa7d2135d65",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:48:0",
+        "path": "assets/adams-chart/adams-1-48-0.jpg",
+        "bytes": 418634,
+        "sha256": "430f92c4d625001bfbcc10da77cc9f811b1cd57a8b751db3d36095f5e15f9eb7",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:49:0",
+        "path": "assets/adams-chart/adams-1-49-0.jpg",
+        "bytes": 2643,
+        "sha256": "c9dbdf6bff4ba6e3d891062c69d232e7897ff74d9b6412ea369c13b0f29f7062",
+        "dimensions": [
+          19,
+          1024
+        ]
+      },
+      {
+        "key": "1:0:1",
+        "path": "assets/adams-chart/adams-1-0-1.jpg",
+        "bytes": 392005,
+        "sha256": "8ed76e54317ddc3cd646f6b3351c7dfac09def2b33aadb7a5945643b74c8dde5",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:1:1",
+        "path": "assets/adams-chart/adams-1-1-1.jpg",
+        "bytes": 439822,
+        "sha256": "2ddf31a0f64b4a1af37f89dfdda974615d88e75c5a0f68ff5689a5d4ee01d2d9",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:2:1",
+        "path": "assets/adams-chart/adams-1-2-1.jpg",
+        "bytes": 421313,
+        "sha256": "5febdcd33a3f86f13c129f34bf0f3b477268c35440fbb1bf83d1b3083bd29117",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:3:1",
+        "path": "assets/adams-chart/adams-1-3-1.jpg",
+        "bytes": 406049,
+        "sha256": "7dab36c740c5e3df81ebc238b59729ba85d94099911c313e39624454a9adddde",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:4:1",
+        "path": "assets/adams-chart/adams-1-4-1.jpg",
+        "bytes": 380826,
+        "sha256": "345a5286104313c3d1c56afed41e6726d2d0a02b9c179475073a0a6f495c78ca",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:5:1",
+        "path": "assets/adams-chart/adams-1-5-1.jpg",
+        "bytes": 344633,
+        "sha256": "74823b9e666c5ab481baf80be33233ce1ff58f2226e863fbc5a2acf5f6752343",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:6:1",
+        "path": "assets/adams-chart/adams-1-6-1.jpg",
+        "bytes": 336535,
+        "sha256": "a4d463b239052f14ec9e067f338f11e6c7d8414fe758815a69dbe98cec495d74",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:7:1",
+        "path": "assets/adams-chart/adams-1-7-1.jpg",
+        "bytes": 353684,
+        "sha256": "23496afd4e7c8de10f684a51ca48c1b8d24284ff54800d30a55418cc2f1bbd91",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:8:1",
+        "path": "assets/adams-chart/adams-1-8-1.jpg",
+        "bytes": 376299,
+        "sha256": "0637bf62ccae10e5fc58dfe024e15ee70ac005371193afa6e0bf6b9aa6bc8200",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:9:1",
+        "path": "assets/adams-chart/adams-1-9-1.jpg",
+        "bytes": 373712,
+        "sha256": "442dbf1ddd34e277be9bd8260aa687d862f352711fd7f6701f74e94a57dbc471",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:10:1",
+        "path": "assets/adams-chart/adams-1-10-1.jpg",
+        "bytes": 348187,
+        "sha256": "3c4ca562f376c450a5351a6b651ce01ad3e902759af599322594cf9b0f02ca68",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:11:1",
+        "path": "assets/adams-chart/adams-1-11-1.jpg",
+        "bytes": 351192,
+        "sha256": "29b51134298a14b2c1e79b49be369291543c7e9089b816d08383025078d3dbbf",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:12:1",
+        "path": "assets/adams-chart/adams-1-12-1.jpg",
+        "bytes": 403175,
+        "sha256": "6f6133d3204af44cb34827828ee6342aff657ac9b94f385fcc29c004c79cfbb7",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:13:1",
+        "path": "assets/adams-chart/adams-1-13-1.jpg",
+        "bytes": 402704,
+        "sha256": "b058bfd502e932aaf9c70c41d0136df1c933d89ada7c4143adf9711896aa0b7d",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:14:1",
+        "path": "assets/adams-chart/adams-1-14-1.jpg",
+        "bytes": 415460,
+        "sha256": "b4ec3667a03e39c6474f3fecc1af6889489a577077a74992968782ae03a5e4aa",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:15:1",
+        "path": "assets/adams-chart/adams-1-15-1.jpg",
+        "bytes": 425973,
+        "sha256": "82df3f2dc4c2960080077b66b957b529a3cddb65e898fc1884ef22456778c070",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:16:1",
+        "path": "assets/adams-chart/adams-1-16-1.jpg",
+        "bytes": 404556,
+        "sha256": "87f70ba057fe55d248c1afc8be6cb68b66e60614544ed3d865040b080089e3f5",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:17:1",
+        "path": "assets/adams-chart/adams-1-17-1.jpg",
+        "bytes": 457434,
+        "sha256": "3e07c6f34024e0e93d54abad3ff5078085582bf7fb20a41894ebdf9aa1c3403e",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:18:1",
+        "path": "assets/adams-chart/adams-1-18-1.jpg",
+        "bytes": 408073,
+        "sha256": "b8cc8d058181bbf101516005176c1f00dee2289826a30021244bd8aa830ff970",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:19:1",
+        "path": "assets/adams-chart/adams-1-19-1.jpg",
+        "bytes": 448873,
+        "sha256": "9824452f78313e0f372dda35b857718ef88394bb39a265755e14c5b18b6e27ed",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:20:1",
+        "path": "assets/adams-chart/adams-1-20-1.jpg",
+        "bytes": 443565,
+        "sha256": "f4e8069a8adcc13593b68e35248de9d822e2990447c928480dfc5d5b48dfdc3f",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:21:1",
+        "path": "assets/adams-chart/adams-1-21-1.jpg",
+        "bytes": 424454,
+        "sha256": "6f9c39cc3342bdb71b7fd5e9ef814d03f8187a5ac797d63e81e3a06df3d835bf",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:22:1",
+        "path": "assets/adams-chart/adams-1-22-1.jpg",
+        "bytes": 462847,
+        "sha256": "7914693bdc94b84b57029b4022992d1af9222f7263e6abc7a1fee32ef22c9ea3",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:23:1",
+        "path": "assets/adams-chart/adams-1-23-1.jpg",
+        "bytes": 437842,
+        "sha256": "7fe4206845992281780aa826d90e0b0d3920da9a0e65447726327acee49069be",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:24:1",
+        "path": "assets/adams-chart/adams-1-24-1.jpg",
+        "bytes": 431027,
+        "sha256": "25314d8f9b4a6253ae1730e3c4d45f1514203f8d9b70013bd86165aa62f8ea0a",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:25:1",
+        "path": "assets/adams-chart/adams-1-25-1.jpg",
+        "bytes": 430071,
+        "sha256": "88ff55b07352f9b34c63eb87238170c594c2ae1c8b376958901a6b2d465c9729",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:26:1",
+        "path": "assets/adams-chart/adams-1-26-1.jpg",
+        "bytes": 495644,
+        "sha256": "fcfc7d4e2fd2b44396d2f17771ac5310da02d52d9551b7285cb9cfd3020da2b8",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:27:1",
+        "path": "assets/adams-chart/adams-1-27-1.jpg",
+        "bytes": 494702,
+        "sha256": "e07749057fabbcf72c8c60e63235c2865e068bed96edf3c2c540f3301e0275a8",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:28:1",
+        "path": "assets/adams-chart/adams-1-28-1.jpg",
+        "bytes": 455667,
+        "sha256": "c6da78bb267d385a4281340c4bafe32f06bf214c079933af7d88bc8f781f798e",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:29:1",
+        "path": "assets/adams-chart/adams-1-29-1.jpg",
+        "bytes": 481471,
+        "sha256": "6fdcb4ea5862f971be17d42197807783ae63ae65231bb04da3b0aeecea4a62fa",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:30:1",
+        "path": "assets/adams-chart/adams-1-30-1.jpg",
+        "bytes": 471636,
+        "sha256": "29802277672b6de308f3a9fbbb7e1ace04dc1c51a74f9cfb3afd1870647d2c84",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:31:1",
+        "path": "assets/adams-chart/adams-1-31-1.jpg",
+        "bytes": 464590,
+        "sha256": "5cb3dd5d5fcce5bac6982d173bcefe6b55ab330ad0fc92ba50997b5aeea8b819",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:32:1",
+        "path": "assets/adams-chart/adams-1-32-1.jpg",
+        "bytes": 461629,
+        "sha256": "9d7ce9fdb0cf65ada943c499f9ee80e8711da078904e407e858d7c0a3ec2eab1",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:33:1",
+        "path": "assets/adams-chart/adams-1-33-1.jpg",
+        "bytes": 488949,
+        "sha256": "b1b18ea6544bb16a5fab11315b3df2cba24e7576ce81faf18d9741834f48d4fb",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:34:1",
+        "path": "assets/adams-chart/adams-1-34-1.jpg",
+        "bytes": 479761,
+        "sha256": "f11352b780bd02c6f2a70b278792ed095580421862478ba91edaacb31188217a",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:35:1",
+        "path": "assets/adams-chart/adams-1-35-1.jpg",
+        "bytes": 486265,
+        "sha256": "f0865ff773f35fff3ecf98fdb6bf86c0aae334fc85227c89524fbd01a19b211e",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:36:1",
+        "path": "assets/adams-chart/adams-1-36-1.jpg",
+        "bytes": 494201,
+        "sha256": "d7e8cdd8cca98591a1820e4efe9185f36707ab8d7c93abf780b60ec8af00da6d",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:37:1",
+        "path": "assets/adams-chart/adams-1-37-1.jpg",
+        "bytes": 446885,
+        "sha256": "bc297ce2bac35f0c7edb0e35a4dbdd034811170f48ccfe29a89cc47388477c38",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:38:1",
+        "path": "assets/adams-chart/adams-1-38-1.jpg",
+        "bytes": 423625,
+        "sha256": "45bf3d2267230a037609777e1f032c59b9c23547942191e18bf86240303b79f1",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:39:1",
+        "path": "assets/adams-chart/adams-1-39-1.jpg",
+        "bytes": 455013,
+        "sha256": "e5fe57db17d93c5fc531b5ff3f6842c273e625a19dfe3ba5e87f91d17e1b41c5",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:40:1",
+        "path": "assets/adams-chart/adams-1-40-1.jpg",
+        "bytes": 486022,
+        "sha256": "92587cc89dc3526d112070254bdde0e74991bd1dc1b9a5f3ec491106cc1fc982",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:41:1",
+        "path": "assets/adams-chart/adams-1-41-1.jpg",
+        "bytes": 479553,
+        "sha256": "7fef06959e543763f4468d06a60ccd19464a0f797995a034f9ac076f47646b8b",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:42:1",
+        "path": "assets/adams-chart/adams-1-42-1.jpg",
+        "bytes": 468160,
+        "sha256": "1cd2e9cd5c248c29131d6549fb2e0db45361f1aeceea87b03659e7931dd9b0d2",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:43:1",
+        "path": "assets/adams-chart/adams-1-43-1.jpg",
+        "bytes": 483808,
+        "sha256": "b91ac33541e2b155d4c631868bbb1f20d6b0a632a4640b3a9fcf449ab89b0479",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:44:1",
+        "path": "assets/adams-chart/adams-1-44-1.jpg",
+        "bytes": 508639,
+        "sha256": "3d4edded7931dfe8e75baef2e70b3aa784b55116f49e3ed7afac3b226cd59bfc",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:45:1",
+        "path": "assets/adams-chart/adams-1-45-1.jpg",
+        "bytes": 540520,
+        "sha256": "faca8ebfdd26d5ccb92a12fc6562335d2cd66cc30e08d0343240a87d909e1640",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:46:1",
+        "path": "assets/adams-chart/adams-1-46-1.jpg",
+        "bytes": 483624,
+        "sha256": "8e4076ca834406ecfc1465a1efa34537ab2b652861d51b0597958eb9d9ca91e5",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:47:1",
+        "path": "assets/adams-chart/adams-1-47-1.jpg",
+        "bytes": 486441,
+        "sha256": "6fcd37a59fe2a8e6a1e58bff9c1e24cec75a74745bbf987f8015794e38e9ee1f",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:48:1",
+        "path": "assets/adams-chart/adams-1-48-1.jpg",
+        "bytes": 472138,
+        "sha256": "495f1e61e025640c27e048eb45b7c00b79f4478f91c4b07a22877c5563bdc55b",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:49:1",
+        "path": "assets/adams-chart/adams-1-49-1.jpg",
+        "bytes": 2585,
+        "sha256": "3a578cdc05624146c0876f32a0cb1e714de24eb62277832d774c45512af75bd6",
+        "dimensions": [
+          19,
+          1024
+        ]
+      },
+      {
+        "key": "1:0:2",
+        "path": "assets/adams-chart/adams-1-0-2.jpg",
+        "bytes": 332445,
+        "sha256": "d73a1253d766d96bd608bd2bb4d9709ed748edc4f6e4b6026cf706d93b155d01",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:1:2",
+        "path": "assets/adams-chart/adams-1-1-2.jpg",
+        "bytes": 383635,
+        "sha256": "e48860b068c581280ffb0275d24bbef62dc824156160c0e625e53dc4e8b2bf50",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:2:2",
+        "path": "assets/adams-chart/adams-1-2-2.jpg",
+        "bytes": 319392,
+        "sha256": "fab9885cad4c20c4d6a8e1a3ca703f7a871d63c3de8fe73645b3b2a36681eabb",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:3:2",
+        "path": "assets/adams-chart/adams-1-3-2.jpg",
+        "bytes": 338624,
+        "sha256": "65751d89f8302c61a19da8b5593e4c25b7ca0cbdf8fbe2c69daa3f83565a10c7",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:4:2",
+        "path": "assets/adams-chart/adams-1-4-2.jpg",
+        "bytes": 342583,
+        "sha256": "c1671541dec92b36c3d0e464fa0d14c824ae39bcf59c2e57319ac615ab2426bc",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:5:2",
+        "path": "assets/adams-chart/adams-1-5-2.jpg",
+        "bytes": 243347,
+        "sha256": "dda92243306dae414e82250382388fcac7a8bb7f6ef516c3df8df0a38f356add",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:6:2",
+        "path": "assets/adams-chart/adams-1-6-2.jpg",
+        "bytes": 320129,
+        "sha256": "217b3e55dc053b13c9abfa900664a5c59a6c428a80f8cc9cb3ff48a38c445c3f",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:7:2",
+        "path": "assets/adams-chart/adams-1-7-2.jpg",
+        "bytes": 314085,
+        "sha256": "af594122cb86df318366ecdef6b14c02e529ab317dbdf4f69978be664c00555a",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:8:2",
+        "path": "assets/adams-chart/adams-1-8-2.jpg",
+        "bytes": 385819,
+        "sha256": "8dc78f38fcd0fd356fb9bdf36343a09deaac08b6cd0ebd8f03a0b50600f011c8",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:9:2",
+        "path": "assets/adams-chart/adams-1-9-2.jpg",
+        "bytes": 314072,
+        "sha256": "5f51594647af6f16f77079d63d779133683aa11480831e97625e12281c5ea507",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:10:2",
+        "path": "assets/adams-chart/adams-1-10-2.jpg",
+        "bytes": 278666,
+        "sha256": "7eac7c6e4cd3239d0e7026e88cf28fb62bb109c1bc40e5b6507749ab34bb9594",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:11:2",
+        "path": "assets/adams-chart/adams-1-11-2.jpg",
+        "bytes": 352170,
+        "sha256": "c33de88b5b85f4467a8b64b227c81bf9a2c044c52a817a5e3daf0e3d3cf6d657",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:12:2",
+        "path": "assets/adams-chart/adams-1-12-2.jpg",
+        "bytes": 394027,
+        "sha256": "a9e94e581fb48e40f4925fc44e781982203bb6787cfcc447fcc67f3af4daf54c",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:13:2",
+        "path": "assets/adams-chart/adams-1-13-2.jpg",
+        "bytes": 395413,
+        "sha256": "155dc1e41d3f647a4008c83883492338d71dc45a1dafe07374ed1dd35a16c37c",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:14:2",
+        "path": "assets/adams-chart/adams-1-14-2.jpg",
+        "bytes": 448281,
+        "sha256": "a1fae580aa85457d82f49a963005123432c55b9a60494090f0c497d86ed04767",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:15:2",
+        "path": "assets/adams-chart/adams-1-15-2.jpg",
+        "bytes": 449686,
+        "sha256": "7feceb382e1f3acc3d743e59c9bc7332d0145004729dfe0653305033746efb54",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:16:2",
+        "path": "assets/adams-chart/adams-1-16-2.jpg",
+        "bytes": 472415,
+        "sha256": "25fde6b3d17a6b1443d1810d35c3345f6afe3b445bb71ced9c09f5e6602ff5d6",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:17:2",
+        "path": "assets/adams-chart/adams-1-17-2.jpg",
+        "bytes": 500857,
+        "sha256": "126db271356879882c8f070a2f587ba7d7534f06b0019b10679aa6696f764ae6",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:18:2",
+        "path": "assets/adams-chart/adams-1-18-2.jpg",
+        "bytes": 439286,
+        "sha256": "d8bf502f63a1841af8abdfa7f517e17c40976bdfd92a03516e16bb6d864e3a98",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:19:2",
+        "path": "assets/adams-chart/adams-1-19-2.jpg",
+        "bytes": 462287,
+        "sha256": "56d2b320844f0a5f75c8c5974a1038c765924d97e38c319053e83d68c85a2fce",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:20:2",
+        "path": "assets/adams-chart/adams-1-20-2.jpg",
+        "bytes": 494190,
+        "sha256": "3f0c7587d0add6b65ea06457ae8a809ae714a9e79e5fbd04338f7106585c24bf",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:21:2",
+        "path": "assets/adams-chart/adams-1-21-2.jpg",
+        "bytes": 465336,
+        "sha256": "1ab03a214ecd8179bf30a0f2d9a455927a0edf378cb0c143f1c4c9c649c62df3",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:22:2",
+        "path": "assets/adams-chart/adams-1-22-2.jpg",
+        "bytes": 476210,
+        "sha256": "b0277996ab074e2c7727aa3892e277940d92e483d2488b3587aa28e696155ec7",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:23:2",
+        "path": "assets/adams-chart/adams-1-23-2.jpg",
+        "bytes": 469324,
+        "sha256": "fb3ac2e3088072442c836452110371550ea8de74fbbcc2191c091e7fc049e780",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:24:2",
+        "path": "assets/adams-chart/adams-1-24-2.jpg",
+        "bytes": 476843,
+        "sha256": "3878407de28842e55f66626b091a91c2010995b101a194c6d34a0a0f7e10517c",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:25:2",
+        "path": "assets/adams-chart/adams-1-25-2.jpg",
+        "bytes": 476172,
+        "sha256": "2722d20699d3b5b5ef2cb19073499a84acdec5431eea66c833b030dd94e5f18f",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:26:2",
+        "path": "assets/adams-chart/adams-1-26-2.jpg",
+        "bytes": 499618,
+        "sha256": "55f44d0f10868dc3d581da05d1b1cf4e9de60d534a6373bdcfd1a9a3c4aa3062",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:27:2",
+        "path": "assets/adams-chart/adams-1-27-2.jpg",
+        "bytes": 536968,
+        "sha256": "faee7100e81a85e987277121a7749bbaba0e3d36d284c065e82392071d1ebca8",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:28:2",
+        "path": "assets/adams-chart/adams-1-28-2.jpg",
+        "bytes": 524673,
+        "sha256": "67c61c5bfecb5bd56b37e2a0994dc53ef4fa80f39a57682a3b8ebffa6be45bf1",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:29:2",
+        "path": "assets/adams-chart/adams-1-29-2.jpg",
+        "bytes": 497381,
+        "sha256": "425c73685bb3cd66a374d8ed966171dd006d9f3fad7cd73fa37ce9c9f1325bd6",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:30:2",
+        "path": "assets/adams-chart/adams-1-30-2.jpg",
+        "bytes": 494545,
+        "sha256": "1d3cb495fb5e77cf713637856700e0bc99f27679f67a1ab3c56306361ce1d743",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:31:2",
+        "path": "assets/adams-chart/adams-1-31-2.jpg",
+        "bytes": 521888,
+        "sha256": "0784ae512484550620f39251e440cdaa85aec867c69e4dc19115630d2db2e73f",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:32:2",
+        "path": "assets/adams-chart/adams-1-32-2.jpg",
+        "bytes": 474892,
+        "sha256": "cc41f2fb88a400160fa9283a017183357b6f9e74c43caeb1bce94ff852f0f1a5",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:33:2",
+        "path": "assets/adams-chart/adams-1-33-2.jpg",
+        "bytes": 493307,
+        "sha256": "eb70bb253cca83f9c57c2c780c6b51302ef0f9b1a770d9372f19f287a7009242",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:34:2",
+        "path": "assets/adams-chart/adams-1-34-2.jpg",
+        "bytes": 570853,
+        "sha256": "cc0ce3a1aa21a1d0a6c9343da95eb026c194369db4d3542e020c32ac861bacdf",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:35:2",
+        "path": "assets/adams-chart/adams-1-35-2.jpg",
+        "bytes": 553739,
+        "sha256": "9ada596e472747b84244c41d9b4375f6caae31e70b2ea5cef36f5b58be417976",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:36:2",
+        "path": "assets/adams-chart/adams-1-36-2.jpg",
+        "bytes": 527132,
+        "sha256": "472302aefe92bcccf19e1e3a1c4b3823ffd57258c53735cd39c0361862b97ec5",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:37:2",
+        "path": "assets/adams-chart/adams-1-37-2.jpg",
+        "bytes": 530917,
+        "sha256": "c290bead03a4725db5f9a486cbb3595499495a47092ebccf1060a43ba32b5fa6",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:38:2",
+        "path": "assets/adams-chart/adams-1-38-2.jpg",
+        "bytes": 498210,
+        "sha256": "ea91959da176c91c3ffce2022dee5f3ad1a019f2f718f73b56eae0d32f2ca4ad",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:39:2",
+        "path": "assets/adams-chart/adams-1-39-2.jpg",
+        "bytes": 528951,
+        "sha256": "3e508b7085fa48c0fe265f8e05e791f386311e36455c8d1230b6735fbee0c490",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:40:2",
+        "path": "assets/adams-chart/adams-1-40-2.jpg",
+        "bytes": 547162,
+        "sha256": "3b3a8dc8ac1d20aafdb85af1190e97a7624546ef51d7ec771704bdb54e9a3b4c",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:41:2",
+        "path": "assets/adams-chart/adams-1-41-2.jpg",
+        "bytes": 552515,
+        "sha256": "ff99a9c5621bd4eab65452416fe320dc0e9fbfc2be8a385d303335eb675e8ec5",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:42:2",
+        "path": "assets/adams-chart/adams-1-42-2.jpg",
+        "bytes": 551756,
+        "sha256": "77fe2ac7a37b106d8711385ebfb77c36900aa715a6369d2934703a81f67f758f",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:43:2",
+        "path": "assets/adams-chart/adams-1-43-2.jpg",
+        "bytes": 544132,
+        "sha256": "b46c77b861167ecc3a62f75703360da1741475e6f27f816066222358bffeb722",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:44:2",
+        "path": "assets/adams-chart/adams-1-44-2.jpg",
+        "bytes": 556727,
+        "sha256": "c06003d69d052435e0fabd300daa259e9f7b2db06632a001e5bd25d22309fab7",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:45:2",
+        "path": "assets/adams-chart/adams-1-45-2.jpg",
+        "bytes": 567938,
+        "sha256": "03fd09bb00a43a91758b107b411a51fc3d8b62e8d0d738d8abe1d0af17ff9653",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:46:2",
+        "path": "assets/adams-chart/adams-1-46-2.jpg",
+        "bytes": 530780,
+        "sha256": "55914d6460a34c627935bf49b730341a5ad84bc3818854d7b58d9841bfb9b733",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:47:2",
+        "path": "assets/adams-chart/adams-1-47-2.jpg",
+        "bytes": 491050,
+        "sha256": "af647659ad45d45339c75a757888585220b3b3d883f9a9836a0e8258eb41176e",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:48:2",
+        "path": "assets/adams-chart/adams-1-48-2.jpg",
+        "bytes": 478599,
+        "sha256": "bb5e4112e0e4e516feecf3e2df659dea81806fae22c4cf3065a69da76a0be6ca",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:49:2",
+        "path": "assets/adams-chart/adams-1-49-2.jpg",
+        "bytes": 2526,
+        "sha256": "15166b6d0766797a63b8f96da118900eadf5ca807be62b7be7b54131af9596df",
+        "dimensions": [
+          19,
+          1024
+        ]
+      },
+      {
+        "key": "1:0:3",
+        "path": "assets/adams-chart/adams-1-0-3.jpg",
+        "bytes": 239281,
+        "sha256": "9017ce6f246ea958237b89976dc61e757153b7b4181701a09b25d6e53843d238",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:1:3",
+        "path": "assets/adams-chart/adams-1-1-3.jpg",
+        "bytes": 315330,
+        "sha256": "7312125cbb7c0bcce0c976bcd0e65fd6cebc8149826b07e212da9b4a47a5633d",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:2:3",
+        "path": "assets/adams-chart/adams-1-2-3.jpg",
+        "bytes": 272127,
+        "sha256": "d7829d8cf11a443bbd49e1b944cb1f14d4c7f38393caca9e6f02295c670edd1e",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:3:3",
+        "path": "assets/adams-chart/adams-1-3-3.jpg",
+        "bytes": 388909,
+        "sha256": "cc9a9b0213081fd2ee5697275e697cc6c18c1905ccda1fda30ea2f8fa44d374d",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:4:3",
+        "path": "assets/adams-chart/adams-1-4-3.jpg",
+        "bytes": 344173,
+        "sha256": "7c54f4c198fa2b6a2d7e677804c6698135880ae56d843ce6c442ed0eb484eb01",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:5:3",
+        "path": "assets/adams-chart/adams-1-5-3.jpg",
+        "bytes": 268970,
+        "sha256": "89b9efa470e2e5d86d0222de6ab238c40645a3c564b2923b9e121ebcc4f5bce8",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:6:3",
+        "path": "assets/adams-chart/adams-1-6-3.jpg",
+        "bytes": 343355,
+        "sha256": "3541cd8354e164f2f6b2fd4a69d99bbeb84d048bdd469fcc40f4ec66b7d184cb",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:7:3",
+        "path": "assets/adams-chart/adams-1-7-3.jpg",
+        "bytes": 340534,
+        "sha256": "65c8edc803f2616281d43f0f0115454f642717cc47d9667c876cf713d7536843",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:8:3",
+        "path": "assets/adams-chart/adams-1-8-3.jpg",
+        "bytes": 346180,
+        "sha256": "3d539834452b678ee971f8c78b8baa2a91a29de5cdc1582e6ec37d85333b8120",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:9:3",
+        "path": "assets/adams-chart/adams-1-9-3.jpg",
+        "bytes": 323537,
+        "sha256": "a27d474e6cb7d59fb4911478e94da8b0a481535dde09dacd8197ae1592466dd7",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:10:3",
+        "path": "assets/adams-chart/adams-1-10-3.jpg",
+        "bytes": 312579,
+        "sha256": "cc2854339d994307327f20ec1693ac052af8f7f541abb16574f0167d7127f26f",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:11:3",
+        "path": "assets/adams-chart/adams-1-11-3.jpg",
+        "bytes": 371880,
+        "sha256": "7bcc11a4f1d57619e0d67194464857a918d17946fd4177b723928bd0b1dbb127",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:12:3",
+        "path": "assets/adams-chart/adams-1-12-3.jpg",
+        "bytes": 389084,
+        "sha256": "059ba369e6aca092ed8cbb7922bf90628b99a87c1ccfbf719a209ddcc5e88d1e",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:13:3",
+        "path": "assets/adams-chart/adams-1-13-3.jpg",
+        "bytes": 371963,
+        "sha256": "4e8f4f9b57e2a22ffc8306e1e335a536eb660e275e065e74a172219c580af01e",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:14:3",
+        "path": "assets/adams-chart/adams-1-14-3.jpg",
+        "bytes": 443486,
+        "sha256": "da2bc4099b69fd8b59224d0e3df41b6d6cc306d8007c99449ce5c3ee6430935b",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:15:3",
+        "path": "assets/adams-chart/adams-1-15-3.jpg",
+        "bytes": 480588,
+        "sha256": "324a7f71d2a58dedae101e650e41ec684c6f7d8bf9fa7dab0cb12d3104d4d153",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:16:3",
+        "path": "assets/adams-chart/adams-1-16-3.jpg",
+        "bytes": 421995,
+        "sha256": "b77be1a7a173fd87c105c78a7b371ec8522ca145bda2ca37b566ed4f860bf094",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:17:3",
+        "path": "assets/adams-chart/adams-1-17-3.jpg",
+        "bytes": 464260,
+        "sha256": "7d5b745742e1da9d6cd27a7c4c10446005700693a85372965488e0150b89f5eb",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:18:3",
+        "path": "assets/adams-chart/adams-1-18-3.jpg",
+        "bytes": 452597,
+        "sha256": "d0cae6873cecf8bdaefa08fe4f511221a9e4350fdf686ee543c5559fb6412642",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:19:3",
+        "path": "assets/adams-chart/adams-1-19-3.jpg",
+        "bytes": 459251,
+        "sha256": "0845eda50c5c62848ee32bbb96650d998bb94af0bb6432e3ebaed5c573a520e7",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:20:3",
+        "path": "assets/adams-chart/adams-1-20-3.jpg",
+        "bytes": 518322,
+        "sha256": "9e61009483ed04a120b121119633f0ad08f938cbebb194239c24b74312bbfb3a",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:21:3",
+        "path": "assets/adams-chart/adams-1-21-3.jpg",
+        "bytes": 518286,
+        "sha256": "90e86d26975200dbb3b1510a708e30b533cc41f30d34f330ac8f1b53df2ddd46",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:22:3",
+        "path": "assets/adams-chart/adams-1-22-3.jpg",
+        "bytes": 519335,
+        "sha256": "136fe45a6ed626e5a43a8fd5a1e6e09a3646397c5c19c503f8f0f191520736aa",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:23:3",
+        "path": "assets/adams-chart/adams-1-23-3.jpg",
+        "bytes": 495266,
+        "sha256": "f9b7b1019aa13d4b10561a2de721123a1c58567f69dae563dd02368080cbad1a",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:24:3",
+        "path": "assets/adams-chart/adams-1-24-3.jpg",
+        "bytes": 481907,
+        "sha256": "be49e99b2f730c6bb3264f2d482b72f5164b494528011beaf387f63f4b3e2cf4",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:25:3",
+        "path": "assets/adams-chart/adams-1-25-3.jpg",
+        "bytes": 493156,
+        "sha256": "b32c03a7f8f68b57a729e4f1e8af61b7b22368361adb95f372709f92362caa2d",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:26:3",
+        "path": "assets/adams-chart/adams-1-26-3.jpg",
+        "bytes": 534431,
+        "sha256": "ed436a0bb18906913904e39a0fef58a86ef5de1301cc033af264c6c6be178028",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:27:3",
+        "path": "assets/adams-chart/adams-1-27-3.jpg",
+        "bytes": 532945,
+        "sha256": "37badc1920e225fc09a1f36f050de6435d3fb7eeba88842e35c62ac441b58bc9",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:28:3",
+        "path": "assets/adams-chart/adams-1-28-3.jpg",
+        "bytes": 529906,
+        "sha256": "7d2fc0a97af9a2f285bcdfa49f55a959eb509cc156bd589d59f0264c32e9b781",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:29:3",
+        "path": "assets/adams-chart/adams-1-29-3.jpg",
+        "bytes": 482476,
+        "sha256": "37f212831767df363b2d3ff379b92de6e9f282c1c70530b3c03d77ab2d3fa004",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:30:3",
+        "path": "assets/adams-chart/adams-1-30-3.jpg",
+        "bytes": 498893,
+        "sha256": "03fddfafe128b4b350b980ee37ec00d89ed38649412afa048aa607d948e7e35e",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:31:3",
+        "path": "assets/adams-chart/adams-1-31-3.jpg",
+        "bytes": 518606,
+        "sha256": "f8665dcf500e07b39bad38738353e614df79284d71009258e10a486b6fa6e456",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:32:3",
+        "path": "assets/adams-chart/adams-1-32-3.jpg",
+        "bytes": 493702,
+        "sha256": "4530956f46475ed48eb581c2f3a41814d67c8b37913bd9eb6d9ba01666e4f12b",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:33:3",
+        "path": "assets/adams-chart/adams-1-33-3.jpg",
+        "bytes": 512022,
+        "sha256": "b9b10145d8af2e0fca35a9468a78be3d918892f5adee332de1a6342bedfa1314",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:34:3",
+        "path": "assets/adams-chart/adams-1-34-3.jpg",
+        "bytes": 556994,
+        "sha256": "0fa867732e3931169fd617b23596d5ce81fa46ff4a4ff27cd99f78b66574aae9",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:35:3",
+        "path": "assets/adams-chart/adams-1-35-3.jpg",
+        "bytes": 521849,
+        "sha256": "a1e302d2c119ca3738d428d1eb8061f513214a17ba1cdd834be46fb9c7dd83a3",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:36:3",
+        "path": "assets/adams-chart/adams-1-36-3.jpg",
+        "bytes": 499496,
+        "sha256": "24e2adf2e7894c29d7823c54b0eabbb50b4c9d7eabc66ad9d3e6a009155af0bc",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:37:3",
+        "path": "assets/adams-chart/adams-1-37-3.jpg",
+        "bytes": 504331,
+        "sha256": "bfbf036458115de5f1c39a236ce5ad1cb5e3c180fc9a2b16e7126ab167a070eb",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:38:3",
+        "path": "assets/adams-chart/adams-1-38-3.jpg",
+        "bytes": 493938,
+        "sha256": "773891fb8f1eed1387eb2514935083d029c6a8e77242246a73cd4a5cf872ecf6",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:39:3",
+        "path": "assets/adams-chart/adams-1-39-3.jpg",
+        "bytes": 526431,
+        "sha256": "9c411c57d573fab442ad49df6bce762a0d29079b82dbb407b28c7ef472db86f9",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:40:3",
+        "path": "assets/adams-chart/adams-1-40-3.jpg",
+        "bytes": 554996,
+        "sha256": "2dcc1878b0eedcec62404d4a52803b9605aac1b63dd71fbef91f539c41404936",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:41:3",
+        "path": "assets/adams-chart/adams-1-41-3.jpg",
+        "bytes": 533928,
+        "sha256": "ddbb5cf9584577d48ed5c289ffc57e31288acad8d930ab920ba2d8deac62a19f",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:42:3",
+        "path": "assets/adams-chart/adams-1-42-3.jpg",
+        "bytes": 538934,
+        "sha256": "6cb3d1742e9b36616f0a71adb1c09415c797dfa74f8f95b07aad377f84575cf5",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:43:3",
+        "path": "assets/adams-chart/adams-1-43-3.jpg",
+        "bytes": 524322,
+        "sha256": "092be6eabd24736074a72a5187d3c3157b2844c6cb203b0c878ee6f7e587983b",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:44:3",
+        "path": "assets/adams-chart/adams-1-44-3.jpg",
+        "bytes": 525473,
+        "sha256": "d8dd0cae45f823603c1abe7854b5c2685c542b2736cda4d5b66680c83da41bb0",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:45:3",
+        "path": "assets/adams-chart/adams-1-45-3.jpg",
+        "bytes": 554150,
+        "sha256": "469c35e3ab2468cd11be492bae0e10b6b14918b9b8272d076cf37dd7963e70e5",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:46:3",
+        "path": "assets/adams-chart/adams-1-46-3.jpg",
+        "bytes": 521588,
+        "sha256": "c4db8e4825a99f3dafad7de2f798eb5a73be4c0d1ed2425b29b8cebb2cc628fa",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:47:3",
+        "path": "assets/adams-chart/adams-1-47-3.jpg",
+        "bytes": 473436,
+        "sha256": "ef2a00b1036c844cf3df9016d38970e22afdbdcd9090acc1f9aaa602a7f81add",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:48:3",
+        "path": "assets/adams-chart/adams-1-48-3.jpg",
+        "bytes": 482264,
+        "sha256": "cc25c49033852f88e587c9105a1d296caf1ab81ac6b6ec11a3ebc2d0293a9dff",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:49:3",
+        "path": "assets/adams-chart/adams-1-49-3.jpg",
+        "bytes": 2494,
+        "sha256": "1b6a42913389b1eecc8089ac3929c65751f32220712fb7a0b4bfbd1bf1ae550f",
+        "dimensions": [
+          19,
+          1024
+        ]
+      },
+      {
+        "key": "1:0:4",
+        "path": "assets/adams-chart/adams-1-0-4.jpg",
+        "bytes": 262767,
+        "sha256": "75a73899c7ec94c52e9064d98e69bf081a3e64c2ed067c304ca2f28bff13cbc8",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:1:4",
+        "path": "assets/adams-chart/adams-1-1-4.jpg",
+        "bytes": 323300,
+        "sha256": "5155d4832028d158285c2dd49bf8bd302744e3a452eb863b8e7160924b5e2b63",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:2:4",
+        "path": "assets/adams-chart/adams-1-2-4.jpg",
+        "bytes": 270998,
+        "sha256": "a868968e22fb6e65e06de606671ed640fcdbff84aa726dca878e393733670577",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:3:4",
+        "path": "assets/adams-chart/adams-1-3-4.jpg",
+        "bytes": 340383,
+        "sha256": "f455b5bf4ad63904cc1a2e07222cd6e97b0b4b8ad52db3f6f0e69a18b73df08c",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:4:4",
+        "path": "assets/adams-chart/adams-1-4-4.jpg",
+        "bytes": 347162,
+        "sha256": "7d660c590565a92f35abace141a4a3535d29b2b385726cf46c65a8e3add68da1",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:5:4",
+        "path": "assets/adams-chart/adams-1-5-4.jpg",
+        "bytes": 335412,
+        "sha256": "734b64f5a69b8adbf5911ce96aa97d6ec8bf9ae2f04fdbbea643244f49d29f8d",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:6:4",
+        "path": "assets/adams-chart/adams-1-6-4.jpg",
+        "bytes": 340546,
+        "sha256": "ab92648c0756ba8bde72e64a670578289a27104adc582c0ab303de3c295884f0",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:7:4",
+        "path": "assets/adams-chart/adams-1-7-4.jpg",
+        "bytes": 350708,
+        "sha256": "30fd0f62d57709f91689c8c43bab14c6f1e4fa5d623e0a84ceae52141a091638",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:8:4",
+        "path": "assets/adams-chart/adams-1-8-4.jpg",
+        "bytes": 296630,
+        "sha256": "b3039a32603bc7f006174843b613fb808fdc7e1a1fb5ab87825b3276c4447c69",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:9:4",
+        "path": "assets/adams-chart/adams-1-9-4.jpg",
+        "bytes": 496942,
+        "sha256": "7b43268a31332da3b9b54f548d6e7987d55f900ffdd3cd5288794aebb3c78314",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:10:4",
+        "path": "assets/adams-chart/adams-1-10-4.jpg",
+        "bytes": 415885,
+        "sha256": "d6de13aab2f71e7b228ac6725ac0875c3ba841acfa2bd7b3ec9f363410e283a6",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:11:4",
+        "path": "assets/adams-chart/adams-1-11-4.jpg",
+        "bytes": 256032,
+        "sha256": "cfaf943a188bcedd53321be9684dc8073bd11cac7a77c4c56948cd562cdcc40b",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:12:4",
+        "path": "assets/adams-chart/adams-1-12-4.jpg",
+        "bytes": 250754,
+        "sha256": "a82e5e3f56892df090e5f75956adf02a45571f50fa595157f0cb3cc22760fc6b",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:13:4",
+        "path": "assets/adams-chart/adams-1-13-4.jpg",
+        "bytes": 331642,
+        "sha256": "f43337223bc2a41a801a3c0945b71895dfb4feb94340a324128ffff1cce7f638",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:14:4",
+        "path": "assets/adams-chart/adams-1-14-4.jpg",
+        "bytes": 398705,
+        "sha256": "22013395093448e496415e5d3f5e0b42d9025555948187d54dbb3c7671aead4f",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:15:4",
+        "path": "assets/adams-chart/adams-1-15-4.jpg",
+        "bytes": 422528,
+        "sha256": "f784125730fa79114f22edfdd305c12dec5c8f64a2d29b4b427e44a55c075be1",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:16:4",
+        "path": "assets/adams-chart/adams-1-16-4.jpg",
+        "bytes": 393499,
+        "sha256": "a35954086bde89f08366d0576db9aba3fb5f29cb86725898325ef52db2c86755",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:17:4",
+        "path": "assets/adams-chart/adams-1-17-4.jpg",
+        "bytes": 427432,
+        "sha256": "a1ba18133b28ec1993cc68d81fdfad62b022e2f7c6322eaef446b523243b4c11",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:18:4",
+        "path": "assets/adams-chart/adams-1-18-4.jpg",
+        "bytes": 417074,
+        "sha256": "e129aeb0a0ea44ddbe2e72a25a8276a0829a643b73942a7e198c49af2db32749",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:19:4",
+        "path": "assets/adams-chart/adams-1-19-4.jpg",
+        "bytes": 474080,
+        "sha256": "694af2b13c04c3cc0a3e69ae03523e6dd6634cb60badc30877e46b24f83eda9a",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:20:4",
+        "path": "assets/adams-chart/adams-1-20-4.jpg",
+        "bytes": 516894,
+        "sha256": "14f618e2b357d97789c1f6d3e73bfa0a400b34a025ebe271353b777e60e10757",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:21:4",
+        "path": "assets/adams-chart/adams-1-21-4.jpg",
+        "bytes": 526962,
+        "sha256": "e9464c443a72ee61eee925c687d7fdd9adc81a78af50fd6c96a645372fead888",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:22:4",
+        "path": "assets/adams-chart/adams-1-22-4.jpg",
+        "bytes": 485341,
+        "sha256": "560098f0bb9dea10d053d03dd5868e8147136a0d0b262ae5de3b3450ae9fa813",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:23:4",
+        "path": "assets/adams-chart/adams-1-23-4.jpg",
+        "bytes": 448005,
+        "sha256": "619ace17544d8337096f53df5d3f895b7ab308af4369ba2e0245a21484ad4dd2",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:24:4",
+        "path": "assets/adams-chart/adams-1-24-4.jpg",
+        "bytes": 496292,
+        "sha256": "495cdc2b25048ed6c06065e8c57c9e19ff576ffd7e0bb62050484d7fe53e14e6",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:25:4",
+        "path": "assets/adams-chart/adams-1-25-4.jpg",
+        "bytes": 504495,
+        "sha256": "93bd68fd483c9abe03ecb2acad81b80e2f148868e75b537447f0bdf404fb9882",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:26:4",
+        "path": "assets/adams-chart/adams-1-26-4.jpg",
+        "bytes": 527384,
+        "sha256": "4cd8564e0cd33ece4edcee2639e5f590f79710d8c5da87f1a3ab19bc95399603",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:27:4",
+        "path": "assets/adams-chart/adams-1-27-4.jpg",
+        "bytes": 517685,
+        "sha256": "1af0b7f31f300ffce7ae43f83574b459c01baca5fe1b40bb7a822943b40979c1",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:28:4",
+        "path": "assets/adams-chart/adams-1-28-4.jpg",
+        "bytes": 534673,
+        "sha256": "7528b51a75092047af81e7e10018ac08d83b023307a894cf9f0a4e3f8055f149",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:29:4",
+        "path": "assets/adams-chart/adams-1-29-4.jpg",
+        "bytes": 505426,
+        "sha256": "0fbb1d74ced20bbdf801508fe14aa90d659a44533865fba39df89e2dbb223385",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:30:4",
+        "path": "assets/adams-chart/adams-1-30-4.jpg",
+        "bytes": 504104,
+        "sha256": "51153a8f79982d87b5262e7f57215ee1492cc34d54bcd56d0d28ccad023a153f",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:31:4",
+        "path": "assets/adams-chart/adams-1-31-4.jpg",
+        "bytes": 525563,
+        "sha256": "992b8fa02609d8264273d598021890f5f8c5b22733703bea69f646904e069ff5",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:32:4",
+        "path": "assets/adams-chart/adams-1-32-4.jpg",
+        "bytes": 553287,
+        "sha256": "2a2862dc5036f57b76b142ec5e2fc9847ba05a8d49333d5ca685ac9640620d83",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:33:4",
+        "path": "assets/adams-chart/adams-1-33-4.jpg",
+        "bytes": 560562,
+        "sha256": "313727f9bbde78e722a9b02e703be11a4d573f2691a74a1346623fb06e9b604c",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:34:4",
+        "path": "assets/adams-chart/adams-1-34-4.jpg",
+        "bytes": 568343,
+        "sha256": "d5cb090e14a3de5acfa283272f5f6ca888f0fbef4cc872189079ced9782165d2",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:35:4",
+        "path": "assets/adams-chart/adams-1-35-4.jpg",
+        "bytes": 554641,
+        "sha256": "1924e271d1ee67cd852118c4b085c48e6d8050232b49d08384b8e25b4a338b37",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:36:4",
+        "path": "assets/adams-chart/adams-1-36-4.jpg",
+        "bytes": 537746,
+        "sha256": "667d1e2d56808cfc1c8ff60d89253005e6dac07b68249a4fd97e2da0d14794de",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:37:4",
+        "path": "assets/adams-chart/adams-1-37-4.jpg",
+        "bytes": 520556,
+        "sha256": "5189a19391e86b4e82ef44c0a99800da2eda9bf1dfa374efb325b87ac8a9b1d0",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:38:4",
+        "path": "assets/adams-chart/adams-1-38-4.jpg",
+        "bytes": 527815,
+        "sha256": "92a3efc0d545285df9da4c996148b7263c36ec4cfa90b412f50741cdeb65485e",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:39:4",
+        "path": "assets/adams-chart/adams-1-39-4.jpg",
+        "bytes": 536472,
+        "sha256": "4d83a958859ed05ca7b65caafe0417f3c2a4725b8ad19f07db3f115b5e726c5f",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:40:4",
+        "path": "assets/adams-chart/adams-1-40-4.jpg",
+        "bytes": 563316,
+        "sha256": "4e54f98c34bd8576d9ff045cb8879c5e1d6d721fe36bd97bbbfa34d85806bf28",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:41:4",
+        "path": "assets/adams-chart/adams-1-41-4.jpg",
+        "bytes": 559632,
+        "sha256": "44c132e19674c93e5b162640c92aa27adf2cb7dfddcd945795219e5a49fe1970",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:42:4",
+        "path": "assets/adams-chart/adams-1-42-4.jpg",
+        "bytes": 542055,
+        "sha256": "0d8478a0bb489e67f78c237d4282ee5381e6c278380dadb7797d752bf86b1211",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:43:4",
+        "path": "assets/adams-chart/adams-1-43-4.jpg",
+        "bytes": 504988,
+        "sha256": "aecd427e1999231fbaebd934caae26cc2aa6ab2301535485d162f24130aeb7d1",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:44:4",
+        "path": "assets/adams-chart/adams-1-44-4.jpg",
+        "bytes": 529932,
+        "sha256": "e1f6b41d99e866fc1c9aca083fb7d035e2311a0f8b5eb26f8a5f21a5c5707100",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:45:4",
+        "path": "assets/adams-chart/adams-1-45-4.jpg",
+        "bytes": 529255,
+        "sha256": "4e8b965610de24602671bb09c31d4729a34cc847286386d0abe3f0789056c671",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:46:4",
+        "path": "assets/adams-chart/adams-1-46-4.jpg",
+        "bytes": 501721,
+        "sha256": "f6c8f75771e456c35937a2ef4204f473b7091600de37ff494d89f20ade9fdf3c",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:47:4",
+        "path": "assets/adams-chart/adams-1-47-4.jpg",
+        "bytes": 478043,
+        "sha256": "138e200ac5304c74a6bb4e474549198db4846924da136f48d0799ece3adec647",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:48:4",
+        "path": "assets/adams-chart/adams-1-48-4.jpg",
+        "bytes": 471227,
+        "sha256": "f643dfa142a90d9f507d763edb606589b09183b8dc054c77a1aa07298fd7feb8",
+        "dimensions": [
+          1024,
+          1024
+        ]
+      },
+      {
+        "key": "1:49:4",
+        "path": "assets/adams-chart/adams-1-49-4.jpg",
+        "bytes": 2437,
+        "sha256": "6f7a2d099b43d11a81c8a3be4ac0f664a89088a5126003aa9322f529001e6381",
+        "dimensions": [
+          19,
+          1024
+        ]
+      },
+      {
+        "key": "1:0:5",
+        "path": "assets/adams-chart/adams-1-0-5.jpg",
+        "bytes": 29380,
+        "sha256": "7804c0aa8eb7f9e44bcd685c447d192e1a36c1978fd8e421f8fb550606a557b6",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:1:5",
+        "path": "assets/adams-chart/adams-1-1-5.jpg",
+        "bytes": 35707,
+        "sha256": "e122d58167cd8e91e0603d17c2ad9987f67fa34065e72691d6ecc94c82bd1895",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:2:5",
+        "path": "assets/adams-chart/adams-1-2-5.jpg",
+        "bytes": 27224,
+        "sha256": "93ec750df0c705f56c0aa78849d268cf34ed05a88600ca855bc6da49b5838cc5",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:3:5",
+        "path": "assets/adams-chart/adams-1-3-5.jpg",
+        "bytes": 26615,
+        "sha256": "10e41943067d0b253468e0c9dcb88a28d200f2d6c91de1752dc835205cc43e22",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:4:5",
+        "path": "assets/adams-chart/adams-1-4-5.jpg",
+        "bytes": 26148,
+        "sha256": "d1fa8bd5d8abb1a17951774ba470e553dfaa7c7d3a9feb25bc8ecc096d74bf59",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:5:5",
+        "path": "assets/adams-chart/adams-1-5-5.jpg",
+        "bytes": 25723,
+        "sha256": "13ea3ed240071776a16cee44d8c81dcbd1ea5f611c82d591c485772cb5a67a89",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:6:5",
+        "path": "assets/adams-chart/adams-1-6-5.jpg",
+        "bytes": 29864,
+        "sha256": "1850621c056a60ad227745a2be528f56b0765de0d821bd641f3a3ec2f02ee223",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:7:5",
+        "path": "assets/adams-chart/adams-1-7-5.jpg",
+        "bytes": 27589,
+        "sha256": "914e45686925480c94371efacebed89afa9495df9952ab4e64af7d3de4ae898d",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:8:5",
+        "path": "assets/adams-chart/adams-1-8-5.jpg",
+        "bytes": 29104,
+        "sha256": "5e464e7187605ae4fad0f834e8415127e57b30eeea5b60f5f795d189901ab150",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:9:5",
+        "path": "assets/adams-chart/adams-1-9-5.jpg",
+        "bytes": 32504,
+        "sha256": "81b3abd153f7f6698407d9df47a88df7ec24df9f4497919caad825d9a99be95d",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:10:5",
+        "path": "assets/adams-chart/adams-1-10-5.jpg",
+        "bytes": 30485,
+        "sha256": "32fd589b8599b22fc5b1ad7f5f0b053084b661e9a7c74523aa41ce29e0872c28",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:11:5",
+        "path": "assets/adams-chart/adams-1-11-5.jpg",
+        "bytes": 25801,
+        "sha256": "807a544a35bcd1016fed1bf38c19f90d876ed080b88efb81fa90e3491881b784",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:12:5",
+        "path": "assets/adams-chart/adams-1-12-5.jpg",
+        "bytes": 22383,
+        "sha256": "009a12c79987aa31215e0fc29263cbfadc953b92b58ced54856d3e12204e6122",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:13:5",
+        "path": "assets/adams-chart/adams-1-13-5.jpg",
+        "bytes": 24440,
+        "sha256": "de0c259df90c5eae53c2f697f37f3421fe944fb3f37cdb45f9a9d2598402d644",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:14:5",
+        "path": "assets/adams-chart/adams-1-14-5.jpg",
+        "bytes": 23622,
+        "sha256": "bdb2d8738e18d432c6167ea826e7cf0b5d5bc0c767391a395120f3ddbdf449a1",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:15:5",
+        "path": "assets/adams-chart/adams-1-15-5.jpg",
+        "bytes": 28775,
+        "sha256": "e1bb2246b446d123e5f7a33694db66236e7d0e70e52ba5fc80a676971812a7c8",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:16:5",
+        "path": "assets/adams-chart/adams-1-16-5.jpg",
+        "bytes": 28162,
+        "sha256": "2b65d772e7f63fe4744eaa2bea7a52cde343cbea508dd44b5f6a18d3c7a59bad",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:17:5",
+        "path": "assets/adams-chart/adams-1-17-5.jpg",
+        "bytes": 27612,
+        "sha256": "0875f06036d0b04ced7e909f3612d7f747205b152a1762e3ee4b71b90f5cff90",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:18:5",
+        "path": "assets/adams-chart/adams-1-18-5.jpg",
+        "bytes": 30148,
+        "sha256": "2f838f7377414ce4d537d8f7f67b25416710cf4347698795ff7ba4f09f2d35a4",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:19:5",
+        "path": "assets/adams-chart/adams-1-19-5.jpg",
+        "bytes": 30854,
+        "sha256": "e117e3cfdcbaa323c807f7f74f4647efeed0c1a6cb114c78cce53facce5c988f",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:20:5",
+        "path": "assets/adams-chart/adams-1-20-5.jpg",
+        "bytes": 36594,
+        "sha256": "81f2e9d77b6a516ac6d2d2c91a44897221ea16e5c93b1a1ae6a09d9938a3734a",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:21:5",
+        "path": "assets/adams-chart/adams-1-21-5.jpg",
+        "bytes": 38805,
+        "sha256": "f9ed90c273a09bc2d73d5fc91e8772f7b1ca21033d019e887a6fb2df924ff899",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:22:5",
+        "path": "assets/adams-chart/adams-1-22-5.jpg",
+        "bytes": 36367,
+        "sha256": "a6885f23e40b273fa2abbf9345a8b5394868d0747f5b6201cde516f58ba1e0c3",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:23:5",
+        "path": "assets/adams-chart/adams-1-23-5.jpg",
+        "bytes": 32136,
+        "sha256": "1d0fe9c44962df2da7e2c6d63f4b205f57194b8e0842b23eb0fd7eee95fe55de",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:24:5",
+        "path": "assets/adams-chart/adams-1-24-5.jpg",
+        "bytes": 35720,
+        "sha256": "a9c2a4773c6fe7ab868dc09f53619e1d9f492edce30aaac7c6520930c1b6b62e",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:25:5",
+        "path": "assets/adams-chart/adams-1-25-5.jpg",
+        "bytes": 36610,
+        "sha256": "3396bfdcdfea17905cea4312ea3fe2a454fcfc7739857dfea11208f7d8884099",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:26:5",
+        "path": "assets/adams-chart/adams-1-26-5.jpg",
+        "bytes": 33861,
+        "sha256": "7ed691a466dba99234fe1f870cc4af561f485a1f0f8bbc707b8cd3e9c7c93835",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:27:5",
+        "path": "assets/adams-chart/adams-1-27-5.jpg",
+        "bytes": 35714,
+        "sha256": "0420ffc6716171d1f1868670aeebcb7aeb4043513f61b6106f552435b1b5c72c",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:28:5",
+        "path": "assets/adams-chart/adams-1-28-5.jpg",
+        "bytes": 37886,
+        "sha256": "e277b8567fa6c4cc90d8819d97a2e2fc44c188f119bd2267f1e48e815f275471",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:29:5",
+        "path": "assets/adams-chart/adams-1-29-5.jpg",
+        "bytes": 35000,
+        "sha256": "c380015c46cb249d957e63bf9b4d474ee7bfe98d16525ebf11a7c422cff9b0f2",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:30:5",
+        "path": "assets/adams-chart/adams-1-30-5.jpg",
+        "bytes": 33243,
+        "sha256": "ebea4086aa28980cf9123da4447af80d60579d0d91612855bae020e54cec6924",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:31:5",
+        "path": "assets/adams-chart/adams-1-31-5.jpg",
+        "bytes": 37180,
+        "sha256": "37f126d5624da96b7bab12d96732bb6f2e33b3736e244ba660816c3b7215c54c",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:32:5",
+        "path": "assets/adams-chart/adams-1-32-5.jpg",
+        "bytes": 37010,
+        "sha256": "a910d9b3d8b76506f62bc8146cc943aa4950b4bb936d0914c75bce9958c0786e",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:33:5",
+        "path": "assets/adams-chart/adams-1-33-5.jpg",
+        "bytes": 41544,
+        "sha256": "7f6df0d0ab450ec6ca2d25add011ee9139a3242b93165ccea10e8b8741b0c30e",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:34:5",
+        "path": "assets/adams-chart/adams-1-34-5.jpg",
+        "bytes": 41705,
+        "sha256": "9294d38f0cf7acd3a099264ce5c1dc2e479ecd8504831b966250164350685bd3",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:35:5",
+        "path": "assets/adams-chart/adams-1-35-5.jpg",
+        "bytes": 39246,
+        "sha256": "0a3732256ace93f266bfeba2fe15cffdd3f9e9ea606d7cb5460f954ac741932a",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:36:5",
+        "path": "assets/adams-chart/adams-1-36-5.jpg",
+        "bytes": 36733,
+        "sha256": "46df515b8ef5fd31e3e2a98a2cd8d4e4348ab67bf484de5ea8b5580cf845b622",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:37:5",
+        "path": "assets/adams-chart/adams-1-37-5.jpg",
+        "bytes": 34992,
+        "sha256": "a604605e3bd949dbca6bc53ac5e77b1ca7858e8ab5a6168fc7618eb27f4769d5",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:38:5",
+        "path": "assets/adams-chart/adams-1-38-5.jpg",
+        "bytes": 38680,
+        "sha256": "a244773cf6fa382baa1e38e55695f778c075f2b71e244aa8948725cb86f886ef",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:39:5",
+        "path": "assets/adams-chart/adams-1-39-5.jpg",
+        "bytes": 39334,
+        "sha256": "c8381eea89e82cbb49397fe155de4884af1a18dc9b810ae02e8e026b9bfa295c",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:40:5",
+        "path": "assets/adams-chart/adams-1-40-5.jpg",
+        "bytes": 37711,
+        "sha256": "daf8be0a73c1343a6a062982276e55c6002fde78154d8ef43be53980c07ef50b",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:41:5",
+        "path": "assets/adams-chart/adams-1-41-5.jpg",
+        "bytes": 38513,
+        "sha256": "f790142c4f054cb9f80f53a986515effbe42e420d16b97c9e9e38636cd5705f1",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:42:5",
+        "path": "assets/adams-chart/adams-1-42-5.jpg",
+        "bytes": 40126,
+        "sha256": "89693f6fe3ee923f64119fda0bf45990a4e874dc3b332555d511d0a175004d01",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:43:5",
+        "path": "assets/adams-chart/adams-1-43-5.jpg",
+        "bytes": 39306,
+        "sha256": "4579f383e24bdf45798b0625ab8843105a57c6edaea2c902bcb2426f57b5a094",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:44:5",
+        "path": "assets/adams-chart/adams-1-44-5.jpg",
+        "bytes": 35230,
+        "sha256": "b9b0326d7c4ec61da60228d535a481ced7dc108e2e1fd92b08f23825c5d21fe7",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:45:5",
+        "path": "assets/adams-chart/adams-1-45-5.jpg",
+        "bytes": 37176,
+        "sha256": "e3f7f70fc727dcd67ae443883bb46c274d41e7eb7439cb69b75ccee9606c3563",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:46:5",
+        "path": "assets/adams-chart/adams-1-46-5.jpg",
+        "bytes": 26773,
+        "sha256": "1c8ccbe05c333baacd0d1f9a52c214fca474bd470b668eaaaf908db2f7ab7011",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:47:5",
+        "path": "assets/adams-chart/adams-1-47-5.jpg",
+        "bytes": 25364,
+        "sha256": "4275de64e3134ce8695461022a30df20ffc58ac9cc2d3fc5702f8df8b0e9e896",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:48:5",
+        "path": "assets/adams-chart/adams-1-48-5.jpg",
+        "bytes": 28693,
+        "sha256": "5c86c08109f12524c5dd7c28526a3f4661ded71828c69a388e423e19350f5799",
+        "dimensions": [
+          1024,
+          227
+        ]
+      },
+      {
+        "key": "1:49:5",
+        "path": "assets/adams-chart/adams-1-49-5.jpg",
+        "bytes": 705,
+        "sha256": "8cf748da1dd41c6f47fb998e5117dee083e85c4caad18d006b3a810ad50980c8",
+        "dimensions": [
+          19,
+          227
+        ]
+      }
+    ],
+    "viewer_changes": [
+      "One shared source viewer retains original chart controls/design and all JPEG bytes.",
+      "Source asset map uses same-origin JPEG files; no re-encoding or replacement.",
+      "Browser zoom lock removed; approved historical credit/context and Timeline backlink added.",
+      "Discovery metadata added, desktop context strip given full-width row, viewport resynchronized to toolbar height.",
+      "Short mobile default collapses existing overlays and locates existing Arrows restore above the chart; explicit expanded controls remain overlays.",
+      "Existing title becomes semantic H1 with identical text, class and responsive font cascade; zero heading margins preserve layout.",
+      "Visible FocusChrist Home link adds a second meaningful local continuation beside unchanged Back to timelines; both actual journeys and return Fit verified.",
+      "Existing Commons credit anchor opens separately with noopener/noreferrer, satisfying unchanged global external-link rule; href and credit wording unchanged."
+    ],
+    "qa": {
+      "helper": {
+        "path": "tools/adams_chart_browser_qa.js",
+        "bytes": 26883,
+        "sha256": "69c7e3713659f885c65fd69bc78c61b93a58a80f413c47816c3b57b84b074343"
+      },
+      "report": {
+        "path": "docs/adams-chart-import/evidence/run40486830674/report.json",
+        "bytes": 403881,
+        "sha256": "72f6dccb398425acfd5bb1c90b43aae4330ebfca64c983c6fb958f331be79749"
+      },
+      "run_identity": {
+        "path": "docs/adams-chart-import/evidence/run40486830674/run-identity.json",
+        "bytes": 1166,
+        "sha256": "3f1c36fe6e380f8803bcb0888c76a15475179b6ff0813572b41b933e25995c8b"
+      },
+      "profiles": [
+        {
+          "name": "desktop",
+          "width": 1280,
+          "height": 900,
+          "touch": false
+        },
+        {
+          "name": "phone",
+          "width": 390,
+          "height": 844,
+          "touch": true
+        },
+        {
+          "name": "narrow-phone",
+          "width": 320,
+          "height": 568,
+          "touch": true
+        },
+        {
+          "name": "phone-landscape",
+          "width": 844,
+          "height": 390,
+          "touch": true
+        }
+      ],
+      "states": 101,
+      "screenshot_count": 24,
+      "physical_device_claim": false,
+      "full_site_release_claim": false
+    },
+    "semantic_successor": {
+      "previous_page_sha256": "cce1020771c9f8d626ca000feb93153e189d78cf40f0110fa37174b019920a7b",
+      "heading": {
+        "selector": "h1.title",
+        "text": "Adams’ Chart · 1881",
+        "count": 1,
+        "font_weight": "700",
+        "margins_px": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "font_size": "22px at >=900px; clamp(16px,4.8vw,23px) below900px"
+      },
+      "continuations": [
+        {
+          "selector": ".fc-adams-back",
+          "href": "../timeline.html#choose-timeline",
+          "label": "Back to timelines"
+        },
+        {
+          "selector": ".fc-adams-home",
+          "href": "../index.html",
+          "label": "FocusChrist Home"
+        }
+      ],
+      "all_inline_scripts_unchanged_from_previous": true,
+      "old97_states_preserved": true,
+      "new_required_state": "home-history-back-viewer",
+      "new_route_checks": "Exact source-bound helper asserts Home document200 and/index.html after native click/tap before browser Back; report records returned-viewer state, not a separate Home screenshot.",
+      "copy_successor": "One-character Home capitalization adopts the exact FocusChrist Home label; no other wording changes.",
+      "commons_link": {
+        "selector": ".fc-adams-credit a",
+        "href": "https://commons.wikimedia.org/wiki/File:Adams_Synchronological_Chart,_1881.jpg",
+        "target": "_blank",
+        "rel": [
+          "noopener",
+          "noreferrer"
+        ],
+        "external_navigation_tested": false
+      }
+    }
+  },
+  "reviews": [
+    {
+      "reviewer": "Galileo",
+      "reviewed_at_utc": "2026-10-27T10:31:02.326908Z",
+      "decision": "CONCUR",
+      "scope": "Exact V9 existing-source import and personally inspected actual hosted pixels; not full-site release, physical-device testing or chart-chronology verification.",
+      "spec_sha256": "b64d24874d509ce0d6d4d8434a619b3471a45d6867008a3dc78d8ca5f315913b",
+      "source_rights_checked": true,
+      "finished_pixels": true,
+      "desktop_phone_inspected": true,
+      "observations": [
+        "Personally inspected all24 current screenshots, not just PASS. Uppercase FocusChrist Home and semantic H1 are clear in all profiles; compact initial/closed chart remains unobstructed, 1:1 details retained.",
+        "Actual4PASS/101states (28/23/25/25), including original97 plus actual native Home click/tap and browser Back/returned Fit. The source-bound helper additionally asserts exact Commons href/target/rel, without visiting external Commons.",
+        "Independently rehashed whole2102256-byte ZIP/all25 members and331 retained JPEGs totaling119541095; dimensions and all331 candidate-map keys agree with preserved manifest. All394 observed JPEG responses match source path/size/hash,71 distinct observed tiles.",
+        "Actual H1 is700 weight,Georgia,zero margins and expected responsive sizes; Back/Home are visible and hit-testable. Maximum rendered versus Typed OM residual across101states is0.01538810000000268 CSSpx; initial overlap lists are empty.",
+        "Unchanged source-rights basis: owner-provided Commons file page, Adams1881/Rumsey/PD-Art US. No new license restrictions or asserted complete original download-chain/full-JPEG lineage.",
+        "Personally read and hash-verified the actual finished exact-label coordination evidence: Merlin concurs with FocusChrist Home; the delivered record of Hannah completed review approves that adopted alternative. This is exact-label concurrence only, not a separate Hannah-authored file or current source/render release decision."
+      ],
+      "limits": [
+        "Expanded landscape dock still obscures much of chart; explicit close restores clear view. No claim of unobscured expanded controls.",
+        "24captures contain no separate Home-page or restored-map screenshot; those behaviors are exact helper/report assertions, not invented pixel evidence.",
+        "Hosted Chromium fixed viewport/touch emulation only: no physical-device/native pinch or touch drag, fullscreen browser chrome, enlarged-text, breakpoint-transition or full accessibility certification.14px-high navigation links are not claimed to meet all accessibility target-size guidance.",
+        "Workflow overall failed at other gates; current import/opening/panel code, focused tests, native label evidence and all final integrated gates remain separate. Producer merge identity is read from same-run metadata plus actual Git commit; root raw Timeline producer-log review is separate.",
+        "Only JSON report/run identity/capture hashes proposed as public evidence. V6/V7/V8 records remain historical; no old decision relabeled. Private label coordination bodies remain private; only this bounded decision and provenance metadata appear here."
+      ],
+      "evidence": [
+        {
+          "path": "docs/adams-chart-import/evidence/run40486830674/report.json",
+          "bytes": 403881,
+          "sha256": "72f6dccb398425acfd5bb1c90b43aae4330ebfca64c983c6fb958f331be79749"
+        },
+        {
+          "path": "docs/adams-chart-import/evidence/run40486830674/run-identity.json",
+          "bytes": 1166,
+          "sha256": "3f1c36fe6e380f8803bcb0888c76a15475179b6ff0813572b41b933e25995c8b"
+        },
+        {
+          "path": "docs/adams-chart-import/evidence/run40486830674/capture-manifest.json",
+          "bytes": 4377,
+          "sha256": "a7e6f81f3679a723e7743356db5249102e8dea062e0b8edcd26b525c5599746b"
+        }
+      ],
+      "rights_source": "https://commons.wikimedia.org/wiki/File:Adams_Synchronological_Chart,_1881.jpg#Licensing",
+      "personally_viewed_captures": [
+        "desktop-controls-hidden.jpg",
+        "desktop-end.jpg",
+        "desktop-fit.jpg",
+        "desktop-landing.jpg",
+        "desktop-one-to-one.jpg",
+        "narrow-phone-compact-clear-fit.jpg",
+        "narrow-phone-controls-hidden.jpg",
+        "narrow-phone-end.jpg",
+        "narrow-phone-expanded-controls.jpg",
+        "narrow-phone-fit.jpg",
+        "narrow-phone-landing.jpg",
+        "narrow-phone-one-to-one.jpg",
+        "phone-controls-hidden.jpg",
+        "phone-end.jpg",
+        "phone-fit.jpg",
+        "phone-landing.jpg",
+        "phone-landscape-compact-clear-fit.jpg",
+        "phone-landscape-controls-hidden.jpg",
+        "phone-landscape-end.jpg",
+        "phone-landscape-expanded-controls.jpg",
+        "phone-landscape-fit.jpg",
+        "phone-landscape-landing.jpg",
+        "phone-landscape-one-to-one.jpg",
+        "phone-one-to-one.jpg"
+      ],
+      "label_decision_provenance": {
+        "adopted_label": "FocusChrist Home",
+        "target": "../index.html",
+        "unchanged_other_continuation": "Back to timelines",
+        "finished_hannah_report_channel_record": "M-2026-10-27-735",
+        "record_sha256": "a174fa424968cde1886c23db3fdb954d28f64f07530a54697111b5e943c84ccc",
+        "merlin_finished_adopted_label_return": "M-2026-10-27-736",
+        "return_sha256": "53863bc04a53b0a85f183e8d1020bfcf71062125bc59177d935a7f5aeaf2d6e9",
+        "separate_hannah_authored_file_claim": false,
+        "current_page_or_release_approval_claim": false
+      }
+    },
+    {
+      "reviewer": "Newton",
+      "reviewed_at_utc": "2026-10-27T10:37:14.059619+00:00",
+      "decision": "CONCUR",
+      "scope": "Exact current V9 owner-supplied source-import specification and actual finished hosted source/pixel evidence; not final adapter approval or release.",
+      "spec_sha256": "b64d24874d509ce0d6d4d8434a619b3471a45d6867008a3dc78d8ca5f315913b",
+      "source_rights_checked": true,
+      "finished_pixels": true,
+      "desktop_phone_inspected": true,
+      "observations": [
+        "Personally viewed all24 actual current screenshots: five desktop,five390x844,seven320x568,seven844x390. H1 and uppercase FocusChrist Home are visible; Back and Home remain distinct. Initial short-screen fit and closed-control views are clear; 1:1 chart details are present. Expanded landscape dock materially overlays chart, and closing restores clear view.",
+        "Actual report has4 passing profiles and101 states(28/23/25/25); state-label order exactly equals prior101-state reviewed sequence, preserving original97 plus four Home/back-return checks. Exact source/helper asserts native Home document200,local destination and returned Fit; no separate Home screenshot is invented.",
+        "Independently rehashed whole2102256-byte ZIP and all25 safe regular members against actual extraction; all24 capture report/manifest hashes match. Report403881 bytes/SHA72f6dccb398425acfd5bb1c90b43aae4330ebfca64c983c6fb958f331be79749 binds current page/landing/assets.",
+        "All331 retained original decoded JPEG files freshly rehashed and dimensions checked,total119541095bytes. Exact current page has331 unique literal map keys equal spec; asset-set6092f3c930ebb6cae7c25b3f881fc93ef590642500e419b539124cacd89bca0f unchanged. All394 observed JPEG responses/71 distinct tiles match exact source size/hash.",
+        "Fresh connected complete recursive actual merge tree7962 entries/not truncated binds all334 selected page/helper/landing/tile Git hashes and sizes to actual inspected bytes. Retained actual run/job/merge response and raw Timeline log corroborate run40486830674,head ae03684acc0ff56d622028755d7d97ce8902288a,merge5465aacfbae9c80733e41f258e213eb6f37266d6 and parents b4e023cfbe5e98b1191571f8ed3ca97c5a9f0c8b/ae03684acc0ff56d622028755d7d97ce8902288a.",
+        "Actual title has H1 tag,700 weight,Georgia,responsive22/18.72/16/23px and zero margins. Exact Back/Home semantics and hit/visible geometry are retained. All initial chart-overlap lists empty. Maximum101-state rendered-versus-native-TypedOM position/size residual is0.01538810000000268CSSpx,within unchanged1px bound. All sampled tiles decoded/nonzero.",
+        "Actual source/helper Commons target_blank and noopener/noreferrer assertions resolve the unchanged global external-link predicate; no external Commons navigation performed. Twelve reported Cloudflare beacon attempts were blocked by the existing test route; no fabricated external provider proof.",
+        "Unchanged source-rights/original-file basis is the owner-provided1881 Adams/Rumsey Commons work previously independently read,with US public-domain/PD-Art scope. Exact Desktop/Mobile original pins and all331 asset manifest entries are unchanged from earlier independent source review; this turn rehashed tiles,not a new full319MB original transfer. No asserted complete original download chain or worldwide legal assurance."
+      ],
+      "limits": [
+        "Exact spec/source/finished-hosted concurrence only. New final delivery/adapter/opening/panel code and focused test executions still require actual source review/root release. No silent V6/V7/V8 acceptance repin.",
+        "Overall workflow failed at other gates; Timeline job122130602263 success is not full-site or production acceptance.",
+        "Expanded dock/map remain overlays. Mobile landing screenshots show scrolled entry buttons,not complete page coverage. No Home-page/restored-map screenshot; those paths rely on exact helper/report assertions.",
+        "Chromium fixed viewport/touch emulation is not physical-device/native pinch/touch-drag/fullscreen-browser-chrome/enlarged-text/breakpoint-transition or full accessibility certification.14px-high navigation links are not claimed to meet every target-size standard.",
+        "No independent verification of every historical/theological date or text in the chart. ExactJPEG preservation does not establish factual correctness or complete original scan lineage.",
+        "Public evidence is JSON report/run identity/capture hashes only; pixels remain actual artifact/private preservation. No private message bodies,credentials or new raster docs.",
+        "No project test/browser/server/install/deploy/ref write or publication by reviewer. All source/security holds remain."
+      ],
+      "evidence": [
+        {
+          "path": "docs/adams-chart-import/evidence/run40486830674/report.json",
+          "bytes": 403881,
+          "sha256": "72f6dccb398425acfd5bb1c90b43aae4330ebfca64c983c6fb958f331be79749"
+        },
+        {
+          "path": "docs/adams-chart-import/evidence/run40486830674/run-identity.json",
+          "bytes": 1166,
+          "sha256": "3f1c36fe6e380f8803bcb0888c76a15475179b6ff0813572b41b933e25995c8b"
+        },
+        {
+          "path": "docs/adams-chart-import/evidence/run40486830674/capture-manifest.json",
+          "bytes": 4377,
+          "sha256": "a7e6f81f3679a723e7743356db5249102e8dea062e0b8edcd26b525c5599746b"
+        }
+      ],
+      "producer": {
+        "run": 40486830674,
+        "run_attempt": 1,
+        "head": "ae03684acc0ff56d622028755d7d97ce8902288a",
+        "merge": "5465aacfbae9c80733e41f258e213eb6f37266d6",
+        "merge_tree": "f29f77d49c7106b72b0e73645def44657f2ebd80",
+        "timeline_job": 122130602263,
+        "artifact": 12726195196,
+        "zip_bytes": 2102256,
+        "zip_sha256": "3276e105c71133fecdee4e4ce2e1e7f198a1cd43b809e1a20cdfd9fa629bcf32",
+        "page_sha256": "95802a989d818d0ff7297660274c62f18140950b0bf58fc96a90277ef1e1cb90",
+        "helper_sha256": "69c7e3713659f885c65fd69bc78c61b93a58a80f413c47816c3b57b84b074343"
+      },
+      "label_decision_provenance": {
+        "adopted_label": "FocusChrist Home",
+        "target": "../index.html",
+        "actual_read_return": "M-2026-10-27-736",
+        "return_sha256": "53863bc04a53b0a85f183e8d1020bfcf71062125bc59177d935a7f5aeaf2d6e9",
+        "scope": "Merlin finished label concurrence plus his explicit recorded completed Hannah reference atM735; no separate Hannah-authored file exists or is claimed. Label-only,not V9 source/pixel/release approval."
+      },
+      "rights_source": "https://commons.wikimedia.org/wiki/File:Adams_Synchronological_Chart,_1881.jpg#Licensing",
+      "personally_viewed_captures": [
+        "desktop-controls-hidden.jpg",
+        "desktop-end.jpg",
+        "desktop-fit.jpg",
+        "desktop-landing.jpg",
+        "desktop-one-to-one.jpg",
+        "narrow-phone-compact-clear-fit.jpg",
+        "narrow-phone-controls-hidden.jpg",
+        "narrow-phone-end.jpg",
+        "narrow-phone-expanded-controls.jpg",
+        "narrow-phone-fit.jpg",
+        "narrow-phone-landing.jpg",
+        "narrow-phone-one-to-one.jpg",
+        "phone-controls-hidden.jpg",
+        "phone-end.jpg",
+        "phone-fit.jpg",
+        "phone-landing.jpg",
+        "phone-landscape-compact-clear-fit.jpg",
+        "phone-landscape-controls-hidden.jpg",
+        "phone-landscape-end.jpg",
+        "phone-landscape-expanded-controls.jpg",
+        "phone-landscape-fit.jpg",
+        "phone-landscape-landing.jpg",
+        "phone-landscape-one-to-one.jpg",
+        "phone-one-to-one.jpg"
+      ]
+    },
+    {
+      "reviewer": "Albert",
+      "reviewed_at_utc": "2026-10-27T10:40:52.587971+00:00",
+      "decision": "CONCUR",
+      "scope": "Exact current V9 owner-supplied chart source import and bounded hosted rendering; not whole-site, footer-contract, production release or generated-art preflight acceptance.",
+      "spec_sha256": "b64d24874d509ce0d6d4d8434a619b3471a45d6867008a3dc78d8ca5f315913b",
+      "source_rights_checked": true,
+      "finished_pixels": true,
+      "desktop_phone_inspected": true,
+      "observations": [
+        "Independently rehashed all331 retained JPEGs (119541095bytes), exact V9 page/helper and all three current evidence files. Existing owner Desktop/Mobile source lineage is unchanged; no new encoding or image substitution.",
+        "Personally viewed current V9 desktop,390phone,320narrow and844landscape Fit images plus desktop/phone1:1 views. H1 and adopted FocusChrist Home label are clear; two local exits and credit remain visible; compact default chart remains unobstructed. Independent Galileo/Newton inspected all24 actual captures.",
+        "Actual four-profile report has101 passing states including four Home/history-return journeys, no timeout, exact current source/landing hashes and retained geometric tolerances. Whole actual ZIP/producer evidence preserved; no main-QA success inferred.",
+        "Commons target=_blank and rel=noopener noreferrer are the sole V9 source change from V8. Label approval is bounded Merlin final concurrence plus recorded completed Hannah alternative reference, with no separate Hannah-authored file claimed or private bodies copied.",
+        "Original rights review remains tied to owner-provided Commons file page, SebastianC.Adams1881 and Rumsey provenance, stated public-domain image status. Historical chart chronology is reproduced, not certified as modern scholarship."
+      ],
+      "limits": [
+        "Expanded landscape navigation dock intentionally overlays chart content until closed; not claimed unobstructed while expanded.",
+        "Hosted Chromium viewport/touch emulation is not physical-device, exhaustive browser/assistive-technology or worldwide legal certification.",
+        "Only71 distinct tiles were observed in recorded HTTP responses; all331 separately byte-verified, not all visually visited.",
+        "No claim that owner HTML equals the full upstream Commons JPEG download; no new generated-art precreation claim.",
+        "New adapter semantic validation, complete composed CI, typed footer/resource/ledger requirements, independent final review and actual deployment remain separate."
+      ],
+      "evidence": [
+        {
+          "path": "docs/adams-chart-import/evidence/run40486830674/report.json",
+          "bytes": 403881,
+          "sha256": "72f6dccb398425acfd5bb1c90b43aae4330ebfca64c983c6fb958f331be79749"
+        },
+        {
+          "path": "docs/adams-chart-import/evidence/run40486830674/run-identity.json",
+          "bytes": 1166,
+          "sha256": "3f1c36fe6e380f8803bcb0888c76a15475179b6ff0813572b41b933e25995c8b"
+        },
+        {
+          "path": "docs/adams-chart-import/evidence/run40486830674/capture-manifest.json",
+          "bytes": 4377,
+          "sha256": "a7e6f81f3679a723e7743356db5249102e8dea062e0b8edcd26b525c5599746b"
+        }
+      ]
+    }
+  ]
+}

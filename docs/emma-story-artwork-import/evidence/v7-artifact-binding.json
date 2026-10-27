@@ -1,0 +1,18 @@
+{
+  "scope": "Actual diagnostic evidence metadata. Screenshot bytes were personally inspected by reviewers and retained in the original artifact and private preservation; this record does not embed them or claim physical-phone testing.",
+  "artifact_id": 12713229242,
+  "run_id": 40459441520,
+  "head_sha": "a0bdd6d72752cec73b8ed3c53aa44f62bfdd9a35",
+  "zip_bytes": 5617145,
+  "zip_sha256": "64dfe622e5d934c25aea397b35bcb9aeae8852bf6c823faa74ec0ebcdc094a19",
+  "render_outcome": "success",
+  "journeys": 31,
+  "captures": 45,
+  "release_acceptance": false,
+  "scope_limits": [
+    "Desktop Chromium at1280/390/320 widths, not physical-phone hardware.",
+    "Search modal and form were inspected without submitting a query.",
+    "Original far hind hoof remains naturally occluded; strict four-hoof visibility not established.",
+    "Full normal QA and final release remain separate."
+  ]
+}

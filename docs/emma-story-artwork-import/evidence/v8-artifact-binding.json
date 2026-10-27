@@ -1,0 +1,26 @@
+{
+  "scope": "Actual diagnostic output binding; not normal QA or release acceptance. Reviewer observations remain separately authored.",
+  "artifact_id": 12717483150,
+  "run_id": 40469437577,
+  "head_sha": "7d5038ad21133bbf83ffbfed7cf1cf27619dd76f",
+  "actual_merge_sha": "9733c2be775a0cb594f67f8cbb2c27f2893c3cdc",
+  "base_parent": "b4e023cfbe5e98b1191571f8ed3ca97c5a9f0c8b",
+  "zip_bytes": 5616879,
+  "zip_sha256": "cb2dafccc06560bbd47ddd4b3b2f8ceefc0d90720717a0692f1e91a2273e5fc2",
+  "zip_pin_status": "Actual whole ZIP bytes independently hashed; original artifact retained separately, not embedded in public docs.",
+  "render_outcome": "success",
+  "reported_journeys": 31,
+  "captures": 45,
+  "renderer_results_pass": true,
+  "normal_qa_pass": false,
+  "normal_qa_limit": "Ten consumer tests reached; one synthetic old-owner fixture failed (9/10). Artwork gate not reached on this run.",
+  "spec_sha256": "e34b24ec9181fd5bc11e31f0c560d94a2bea6a587001b8ee56f66708caccba0a",
+  "release_acceptance": false,
+  "scope_limits": [
+    "Desktop Chromium viewport widths 1280/390/320, not physical-phone hardware.",
+    "Search modal inspected without submitting query.",
+    "Far hind hoof naturally occluded; strict four-hoof visibility not established.",
+    "No screenshots embedded or claimed committed under docs; actual pixel-viewing claims belong only to independent reviewers.",
+    "Earlier v7 reports and approvals remain unchanged historical evidence."
+  ]
+}

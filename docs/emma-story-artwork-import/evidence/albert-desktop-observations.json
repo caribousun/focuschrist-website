@@ -1,0 +1,22 @@
+{
+  "reviewer": "Albert",
+  "actual_pixel_inspection": true,
+  "scope": "Representative current viewport captures personally viewed; source assets and unchanged body contexts also compared with prior exact views. Not a claim that Albert independently inspected every capture.",
+  "artifact_id": 12713229242,
+  "run_id": 40459441520,
+  "head_sha": "a0bdd6d72752cec73b8ed3c53aa44f62bfdd9a35",
+  "files": [
+    {
+      "file": "emma-story1-ride-review-header-1280.jpg",
+      "bytes": 149338,
+      "sha256": "0e19186924ad4f45f2ad69f5fc5e6a2da33b97576a54215bac48c3bf16ada185"
+    },
+    {
+      "file": "emma-story5-testimony-review-1280-viewport.jpg",
+      "bytes": 92275,
+      "sha256": "009c0c4256a89c7cdef1f1add05b81ef5d3602737f0c1a54dcae6f26727c79d9"
+    }
+  ],
+  "screenshot_bytes_embedded": false,
+  "physical_phone_tested": false
+}

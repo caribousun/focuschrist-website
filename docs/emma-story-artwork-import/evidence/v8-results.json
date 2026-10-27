@@ -1,0 +1,160 @@
+{
+  "results": [
+    {
+      "page": "history/emma-elect-lady.html",
+      "journey": "canonical-header",
+      "width": 1280
+    },
+    {
+      "page": "history/emma-hymns.html",
+      "journey": "canonical-header",
+      "width": 1280
+    },
+    {
+      "page": "history/emma-winter-crossing.html",
+      "journey": "canonical-header",
+      "width": 1280
+    },
+    {
+      "page": "history/emma-relief-society.html",
+      "journey": "canonical-header",
+      "width": 1280
+    },
+    {
+      "page": "history/emma-last-testimony.html",
+      "journey": "canonical-header",
+      "width": 1280
+    },
+    {
+      "page": "history/emma-elect-lady.html",
+      "journey": "canonical-header-menu-search",
+      "width": 390
+    },
+    {
+      "page": "history/emma-hymns.html",
+      "journey": "canonical-header-menu-search",
+      "width": 390
+    },
+    {
+      "page": "history/emma-winter-crossing.html",
+      "journey": "canonical-header-menu-search",
+      "width": 390
+    },
+    {
+      "page": "history/emma-relief-society.html",
+      "journey": "canonical-header-menu-search",
+      "width": 390
+    },
+    {
+      "page": "history/emma-last-testimony.html",
+      "journey": "canonical-header-menu-search",
+      "width": 390
+    },
+    {
+      "page": "history/emma-elect-lady.html",
+      "journey": "canonical-header-menu-search",
+      "width": 320
+    },
+    {
+      "page": "history/emma-hymns.html",
+      "journey": "canonical-header-menu-search",
+      "width": 320
+    },
+    {
+      "page": "history/emma-winter-crossing.html",
+      "journey": "canonical-header-menu-search",
+      "width": 320
+    },
+    {
+      "page": "history/emma-relief-society.html",
+      "journey": "canonical-header-menu-search",
+      "width": 320
+    },
+    {
+      "page": "history/emma-last-testimony.html",
+      "journey": "canonical-header-menu-search",
+      "width": 320
+    },
+    {
+      "page": "history/emma-hymns.html",
+      "journey": "skip-link-tab-enter-main",
+      "width": 1280
+    },
+    {
+      "page": "history/emma-hymns.html",
+      "journey": "skip-link-tab-enter-main",
+      "width": 390
+    },
+    {
+      "page": "history/emma-hymns.html",
+      "journey": "skip-link-tab-enter-main",
+      "width": 320
+    },
+    {
+      "page": "history/emma-elect-lady.html",
+      "journey": "dialog-fullsize-close-focus",
+      "width": 390
+    },
+    {
+      "page": "history/emma-hymns.html",
+      "journey": "dialog-fullsize-close-focus",
+      "width": 390
+    },
+    {
+      "page": "history/emma-winter-crossing.html",
+      "journey": "dialog-fullsize-close-focus",
+      "width": 390
+    },
+    {
+      "page": "history/emma-relief-society.html",
+      "journey": "dialog-fullsize-close-focus",
+      "width": 390
+    },
+    {
+      "page": "history/emma-last-testimony.html",
+      "journey": "dialog-fullsize-close-focus",
+      "width": 390
+    },
+    {
+      "page": "history/emma-elect-lady.html",
+      "journey": "continue-lesson",
+      "width": 390
+    },
+    {
+      "page": "history/emma-hymns.html",
+      "journey": "escape-close",
+      "width": 390
+    },
+    {
+      "page": "history/emma-elect-lady.html",
+      "journey": "hub-doorway-link-and-back",
+      "width": 1280
+    },
+    {
+      "page": "history/emma-hymns.html",
+      "journey": "hub-doorway-link-and-back",
+      "width": 1280
+    },
+    {
+      "page": "history/emma-winter-crossing.html",
+      "journey": "hub-doorway-link-and-back",
+      "width": 1280
+    },
+    {
+      "page": "history/emma-relief-society.html",
+      "journey": "hub-doorway-link-and-back",
+      "width": 1280
+    },
+    {
+      "page": "history/emma-last-testimony.html",
+      "journey": "hub-doorway-link-and-back",
+      "width": 1280
+    },
+    {
+      "page": "history/emma-hale-smith.html",
+      "journey": "hub-dialog-open-close",
+      "width": 1280
+    }
+  ],
+  "pass": true
+}

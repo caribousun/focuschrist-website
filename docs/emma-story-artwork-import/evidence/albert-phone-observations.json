@@ -1,0 +1,57 @@
+{
+  "reviewer": "Albert",
+  "actual_pixel_inspection": true,
+  "scope": "Representative current viewport captures personally viewed; source assets and unchanged body contexts also compared with prior exact views. Not a claim that Albert independently inspected every capture.",
+  "artifact_id": 12713229242,
+  "run_id": 40459441520,
+  "head_sha": "a0bdd6d72752cec73b8ed3c53aa44f62bfdd9a35",
+  "files": [
+    {
+      "file": "emma-story1-ride-review-390-viewport.jpg",
+      "bytes": 97250,
+      "sha256": "88146ebfb6e7e6372032ecd5e8203126a90d1e2a6f2e0b15440c36c21a019dd2"
+    },
+    {
+      "file": "emma-story2-hymnal-review-390-viewport.jpg",
+      "bytes": 75532,
+      "sha256": "9ad45d8f59e7f72b959b7d59b0a709f30ebe279a89a5e0755e4e5b0cc9bde270"
+    },
+    {
+      "file": "emma-story3-quincy-review-390-viewport.jpg",
+      "bytes": 64686,
+      "sha256": "3db29c6eb1bd69e69b8cd088cab1f299df585be61122a2ba98a5bb6feab29e6d"
+    },
+    {
+      "file": "emma-story4-hospitality-review-390-viewport.jpg",
+      "bytes": 81768,
+      "sha256": "da9aa6b1279e1a079c22773cd22270c6e218a5123310bf5ee30553c4b6bc6cf6"
+    },
+    {
+      "file": "emma-story5-testimony-review-390-viewport.jpg",
+      "bytes": 65187,
+      "sha256": "8d61242fd246042fef4430e2c2f42a5ff18a8a2a78ea69163158d633d7966fe8"
+    },
+    {
+      "file": "emma-story2-hymnal-review-header-390.jpg",
+      "bytes": 59679,
+      "sha256": "d77dc4669090e3b4e8fab5d1b91a80bdcef4ebcfdac9659c775875b94ecf7204"
+    },
+    {
+      "file": "emma-story3-quincy-review-header-320.jpg",
+      "bytes": 53757,
+      "sha256": "10694b41b546edab414a8431c39360419d4bcd2e1306c3e59f9d3eae5ba7c28b"
+    },
+    {
+      "file": "emma-mobile-menu-320.jpg",
+      "bytes": 32342,
+      "sha256": "44962e45c1b54f9c0145144d53641e6b75fc6fe7ac1631321b82f84ab47f2480"
+    },
+    {
+      "file": "emma-mobile-search-390.jpg",
+      "bytes": 32643,
+      "sha256": "5bde41422b95b168df6d415e50e952f79d4ae12f4226015906ab0080036e7174"
+    }
+  ],
+  "screenshot_bytes_embedded": false,
+  "physical_phone_tested": false
+}

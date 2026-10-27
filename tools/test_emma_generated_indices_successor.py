@@ -155,10 +155,19 @@ class SyntheticIndicesTests(unittest.TestCase):
 
 
 class ActualGeneratedIndicesTests(unittest.TestCase):
+    def setUp(self):
+        # These are the unchanged historical Emma-layer assertions, NOT a claim
+        # that actual current Adams files equal Emma pins. The view first checks
+        # all three actual Adams hashes and round trips; Adams tests cover current drift.
+        from adams_delivery_successor import predecessor_view
+        context = predecessor_view(gate.ROOT)
+        self.root = context.__enter__()
+        self.addCleanup(context.__exit__, None, None, None)
+
     def test_both_actual_pairs_and_checks(self):
-        self.assertEqual(gate.check()["files"], sorted(gate.AFTER))
+        self.assertEqual(gate.check(self.root)["files"], sorted(gate.AFTER))
         for name, expected in gate.BEFORE.items():
-            current = (gate.ROOT / name).read_bytes()
+            current = (self.root / name).read_bytes()
             self.assertEqual(gate.sha(current), gate.AFTER[name])
             prior = gate.restore(name, current)
             self.assertEqual(gate.sha(prior), expected)
@@ -167,7 +176,7 @@ class ActualGeneratedIndicesTests(unittest.TestCase):
 
     def test_actual_current_mutations_not_normalized(self):
         for name in gate.AFTER:
-            current = (gate.ROOT / name).read_bytes()
+            current = (self.root / name).read_bytes()
             row = gate.mapping()["files"][name]
             start = row["spans"][0]["start"]
             for changed in [current + b" ", bytes([current[0] ^ 1]) + current[1:],
@@ -179,7 +188,7 @@ class ActualGeneratedIndicesTests(unittest.TestCase):
 
     def test_actual_search_composes_to_unchanged_historical_pin(self):
         import timeline_source_import as timeline
-        current = (gate.ROOT / "site-search-index.json").read_bytes()
+        current = (self.root / "site-search-index.json").read_bytes()
         self.assertEqual(gate.sha(timeline.restore_search(current)),
                          "038391c9f469c4c7a24894c629b915851ec097d305e880bdfe12e6f24b3c9e0d")
         for changed in [current + b" ", current.replace(b'"version":1', b'"version":2', 1)]:

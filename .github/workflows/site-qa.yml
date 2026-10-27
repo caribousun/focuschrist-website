@@ -33,6 +33,14 @@ jobs:
       - name: Reject unreviewed or stale new artwork
         run: |
           python -m unittest discover -s tools -p test_artwork_creation_gate.py
+          python -m unittest discover -s tools -p test_artwork_emma_story_delivery.py
+          python -m unittest discover -s tools -p test_emma_story_consumers.py
+          python tools/test_adams_delivery_successor.py
+          python -m unittest discover -s tools -p test_adams_source_import.py
+          python -m unittest discover -s tools -p test_adams_standalone_opening.py
+          python -m unittest discover -s tools -p test_adams_panel_standalone.py
+          python -m unittest discover -s tools -p test_adams_resource_coverage.py
+          python -m unittest discover -s tools -p test_emma_resource_coverage.py
           python -m unittest discover -s tools -p test_timeline_source_import.py
           python tools/test_continue_motion_binding.py
           python tools/test_emma_story_successor.py
@@ -644,7 +652,7 @@ jobs:
 
       - name: Bind the diagnostic to the reviewed renderer and checkout
         run: |
-          printf '%s  %s\n' '0aef3173fe3f19e745e2fd6677a4a15388c95d0064cb573336cdd2c470047bd3' 'tools/emma_story_browser_qa.js' | sha256sum --check
+          printf '%s  %s\n' '82d98b6f1c0ed5c3895d83e91b4fb481bcf28148bcb58d2cf3b7b915b70cecac' 'tools/emma_story_browser_qa.js' | sha256sum --check
           mkdir -p .qa-artifacts/emma-story
           {
             echo "scope=diagnostic rendering only; artwork-creation and all release gates remain required"
