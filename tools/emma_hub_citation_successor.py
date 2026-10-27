@@ -60,12 +60,13 @@ def check(root=ROOT):
     root = Path(root).resolve()
     file = (root / NAME).resolve()
     require(file.is_relative_to(root) and file.is_file(), 'Missing/outside hub citation page')
-    raw = file.read_bytes()
+    from owner_integration_successor import restore as restore_owner
+    raw = restore_owner(NAME, file.read_bytes(), root)
     require(sha(raw) == AFTER, 'Changed hub citation current page')
     mapping(root)
     prior = restore(NAME, raw, root)
     require(sha(prior) == BEFORE and advance(NAME, prior, root) == raw, 'Hub citation round trip mismatch')
-    return {'status': 'EXACT_HUB_CITATION_BINDING', 'files': 1, 'limits': 'Exact technical registration only; not source, rendered or release approval.'}
+    return {'status': 'EXACT_HUB_CITATION_BINDING', 'files': 1, 'limits': 'Exact historical hub citation registration only; current owner source validation is separate from rendered/release approval.'}
 
 @contextmanager
 def predecessor_view(root=ROOT):
@@ -75,7 +76,8 @@ def predecessor_view(root=ROOT):
     with tempfile.TemporaryDirectory() as temp:
         view = Path(temp)
         (view / NAME).parent.mkdir(parents=True)
-        (view / NAME).write_bytes(restore(NAME, (root / NAME).read_bytes(), root))
+        from owner_integration_successor import restore as restore_owner
+        (view / NAME).write_bytes(restore(NAME, restore_owner(NAME, (root / NAME).read_bytes(), root), root))
         source = (root / 'docs/emma-story-successor').resolve()
         require(source.is_relative_to(root), 'Outside historical manifest')
         shutil.copytree(source, view / 'docs/emma-story-successor')

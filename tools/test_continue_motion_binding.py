@@ -13,6 +13,8 @@ class MotionBindingTests(unittest.TestCase):
         data=gate.mapping()
         for name,row in data['files'].items():
             current=(gate.ROOT/name).read_bytes()
+            from owner_integration_successor import restore as restore_owner
+            current=restore_owner(name,current,gate.ROOT)
             from world_companion_successor import restore as restore_world
             from missionary_close_successor import restore as restore_close
             from commission_hand_successor import restore as restore_hand

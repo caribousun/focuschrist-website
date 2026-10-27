@@ -23,6 +23,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
 import emma_story_successor as c
 from emma_hub_citation_successor import restore as restore_hub_citations
+from owner_integration_successor import restore as restore_owner
 
 REAL_BEFORE = dict(c.BEFORE)
 REAL_AFTER = dict(c.AFTER)
@@ -84,7 +85,7 @@ class EmmaStorySuccessorTests(unittest.TestCase):
         root.mkdir()
         (root / "docs/emma-story-successor").mkdir(parents=True)
         (root / c.MANIFEST).write_bytes((c.ROOT / c.MANIFEST).read_bytes())
-        raw = restore_hub_citations(NAME, (c.ROOT / NAME).read_bytes(), c.ROOT)
+        raw = restore_hub_citations(NAME, restore_owner(NAME, (c.ROOT / NAME).read_bytes(), c.ROOT), c.ROOT)
         if mutated_raw is not None:
             raw = mutated_raw
         (root / NAME).parent.mkdir(parents=True, exist_ok=True)
@@ -99,7 +100,7 @@ class EmmaStorySuccessorTests(unittest.TestCase):
     def test_real_candidate_exact_round_trip(self):
         manifest = json.loads((c.ROOT / c.MANIFEST).read_text(encoding="utf-8"))
         self.assertEqual(c.canonical(manifest), REAL_SOURCE_SHA)
-        current = restore_hub_citations(NAME, (c.ROOT / NAME).read_bytes(), c.ROOT)
+        current = restore_hub_citations(NAME, restore_owner(NAME, (c.ROOT / NAME).read_bytes(), c.ROOT), c.ROOT)
         self.assertEqual(c.sha(current), manifest["files"][NAME]["after_sha256"])
         with patch.multiple(c, BEFORE=REAL_BEFORE, AFTER=REAL_AFTER, SOURCE_SHA=REAL_SOURCE_SHA):
             restored = c.restore(NAME, current, c.ROOT)
@@ -117,7 +118,7 @@ class EmmaStorySuccessorTests(unittest.TestCase):
                 c.mapping(self.root)
 
     def test_real_file_mutations_rejected(self):
-        raw = restore_hub_citations(NAME, (c.ROOT / NAME).read_bytes(), c.ROOT)
+        raw = restore_hub_citations(NAME, restore_owner(NAME, (c.ROOT / NAME).read_bytes(), c.ROOT), c.ROOT)
         span = json.loads((c.ROOT / c.MANIFEST).read_text(encoding="utf-8"))["files"][NAME]["spans"][0]
         cases = [
             ("altered-inside", raw.replace(b"grid-column: span 2", b"grid-column: span 3", 1)),

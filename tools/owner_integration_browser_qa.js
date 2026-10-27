@@ -7,7 +7,7 @@ const ROOT=path.resolve(__dirname,'..'),OUT=path.join(ROOT,'.qa-artifacts/owner-
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 const PROFILES=[{name:'desktop',width:1280,height:900,touch:false},{name:'phone',width:390,height:844,touch:true},{name:'narrow',width:320,height:568,touch:true},{name:'landscape',width:844,height:390,touch:true}];
 const TYPES={'.html':'text/html','.css':'text/css','.js':'text/javascript','.json':'application/json','.jpg':'image/jpeg','.jpeg':'image/jpeg','.webp':'image/webp','.png':'image/png','.svg':'image/svg+xml','.woff2':'font/woff2','.ico':'image/x-icon','.xml':'application/xml'};
-const LIMIT={milliseconds:420000,requests:2500,servedBytes:384*1024*1024,shots:72,fileBytes:8*1024*1024,shotBytes:1024*1024,allShots:23*1024*1024,reportBytes:1024*1024};
+const LIMIT={milliseconds:420000,requests:2500,servedBytes:384*1024*1024,shots:80,fileBytes:8*1024*1024,shotBytes:1024*1024,allShots:23*1024*1024,reportBytes:1024*1024};
 
 function readContract(){
  const raw=fs.readFileSync(path.join(__dirname,'owner_integration_qa_contract.json'));
@@ -17,7 +17,8 @@ function readContract(){
  assert.equal(c.adams.timeline,'/timeline.html');assert.equal(c.adams.intro,'/timelines/adams-1881-introduction.html');assert.equal(c.adams.chart,'/timelines/adams-1881-chart.html');
  assert.equal(c.adams.reference,'/timelines/latter-day-saint-church-history-timeline.html');
  assert.equal(c.emma.stories.filter(s=>s.reader).length,1,'One bounded owning-caption reader');
- const plannedShots=PROFILES.reduce((n,p)=>n+12+(['desktop','phone'].includes(p.name)?7:0)+(p.name==='phone'?4:0),0);assert.equal(plannedShots,66);assert(plannedShots<=LIMIT.shots);
+ assert.deepEqual(c.emma.reflections.map(r=>r.selector),['#reflection-c1','#reflection-c3','#reflection-c4','#reflection-c5'],'Four retained Christ context views');
+ const plannedShots=PROFILES.reduce((n,p)=>n+12+(['desktop','phone'].includes(p.name)?11:0)+(p.name==='phone'?4:0),0);assert.equal(plannedShots,74);assert(plannedShots<=LIMIT.shots);
  const checked=[];
  for(const r of [...c.sources,...c.assets]){
   assert(/^[a-zA-Z0-9_./-]+$/.test(r.path)&&!r.path.split('/').includes('..')&&!r.path.startsWith('/'));
@@ -78,9 +79,21 @@ async function headerJourney(page,record,profile,capture,label,chart){
  const input=dialog.locator('#fc-header-search');await input.fill('Emma');await page.keyboard.press('ArrowRight');
  if(chart)assert.deepEqual(await chartSnapshot(page),before,'Search keys must not pan the chart');
  if(profile.name==='phone'&&(label==='emma-hub'||label==='adams-chart'))await capture(label+'-search');
- await page.keyboard.press('Escape');await page.waitForFunction(()=>!document.getElementById('fc-search-dialog')?.open&&document.activeElement===document.querySelector('[data-site-search-trigger]'),null,{timeout:5000});
- if(chart)assert.deepEqual(await chartSnapshot(page),before,'Search close must not change chart view');
- record.headers.push({label,...m,menuTested:profile.touch,searchTested:true,searchSubmitted:false,chartKeyboardGuard:!!chart});
+ // Native Chromium search inputs consume the first Escape to clear a nonempty
+ // query. Verify that real action before testing dialog cancellation and Close.
+ const observeSearch=async phase=>{const state=await page.evaluate(()=>({dialogOpen:!!document.getElementById('fc-search-dialog')?.open,inputValue:document.getElementById('fc-header-search')?.value??null,activeId:document.activeElement?.id||'',activeTag:document.activeElement?.tagName||'',focusOnTrigger:document.activeElement===document.querySelector('[data-site-search-trigger]')}));record.searchStates.push({label,phase,...state});return state;};
+ assert.equal(await input.getAttribute('type'),'search');await observeSearch('typed-query');
+ await page.keyboard.press('Escape');
+ try{await page.waitForFunction(()=>document.getElementById('fc-search-dialog')?.open&&document.getElementById('fc-header-search')?.value===''&&document.activeElement===document.getElementById('fc-header-search'),null,{timeout:5000});}finally{await observeSearch('first-escape');}
+ if(chart)assert.deepEqual(await chartSnapshot(page),before,'First Escape clears search without changing chart');
+ await page.keyboard.press('Escape');
+ try{await page.waitForFunction(()=>!document.getElementById('fc-search-dialog')?.open&&document.activeElement===document.querySelector('[data-site-search-trigger]'),null,{timeout:5000});}finally{await observeSearch('empty-field-escape');}
+ if(chart)assert.deepEqual(await chartSnapshot(page),before,'Empty-field Escape closes search without changing chart');
+ await search.click();await dialog.waitFor({state:'visible',timeout:5000});await input.fill('Emma');await observeSearch('reopened-typed-query');
+ await dialog.locator('.fc-search-close').click();
+ try{await page.waitForFunction(()=>!document.getElementById('fc-search-dialog')?.open&&document.activeElement===document.querySelector('[data-site-search-trigger]'),null,{timeout:5000});}finally{await observeSearch('explicit-close');}
+ if(chart)assert.deepEqual(await chartSnapshot(page),before,'Explicit Close must not change chart view');
+ record.headers.push({label,...m,menuTested:profile.touch,searchTested:true,searchEscapeCleared:true,searchEmptyEscapeClosed:true,searchExplicitClose:true,searchSubmitted:false,chartKeyboardGuard:!!chart});
 }
 
 async function scriptureJourney(page,trigger,expected,record,capture,label,artOpen){
@@ -117,6 +130,17 @@ async function emmaJourney(page,origin,c,record,profile,capture){
  assert(await page.locator('#reflection-c5').evaluate(n=>n.previousElementSibling?.textContent.includes('killed at Carthage')),'Grief reflection follows actual Carthage loss');
  for(const r of c.emma.reflections){const n=page.locator(r.selector);assert.equal(await n.count(),1);assert((await n.innerText()).replace(/\s+/g,' ').trim().includes(r.text));}
  if(profile.name==='desktop'||profile.name==='phone'){
+  // Eight owner-requested contextual views: actual viewport pixels, never a
+  // resized/stitched aside. Rectangles disclose any text outside this viewport.
+  for(const r of c.emma.reflections){
+   const aside=page.locator(r.selector),figure=aside.locator(r.image.figure),img=figure.locator('img');assert.equal(await figure.count(),1);assert.equal(await img.count(),1);
+   assert.equal(await figure.getAttribute('data-topic-art'),r.image.key);assert.equal(await img.getAttribute('src'),r.image.src);assert.equal(await img.getAttribute('srcset'),r.image.srcset);assert.equal(await img.getAttribute('alt'),r.image.alt);
+   await decoded(img);await aside.scrollIntoViewIfNeeded();await stable(page,r.selector);const image=await imageFlow(img);checkFlow(image,r.image.key);
+   assert([640,960,1536].some(w=>image.src===`/assets/page-art/emma-life/${r.image.key}-review-${w}.webp`),'Retained approved Christ derivative');
+   const context=await aside.evaluate(n=>{const box=e=>{const r=e.getBoundingClientRect();return {x:r.x,y:r.y,right:r.right,bottom:r.bottom,width:r.width,height:r.height};},previous=n.previousElementSibling;return {heading:n.querySelector(':scope > h3')?.textContent.replace(/\s+/g,' ').trim(),sectionId:n.closest('section')?.id||'',previousSibling:previous?{tag:previous.tagName,id:previous.id,text:previous.textContent.replace(/\s+/g,' ').trim().slice(0,1500)}:null,asideRect:box(n),headingRect:box(n.querySelector(':scope > h3')),textRects:[...n.querySelectorAll(':scope > p')].map(box),scrollY,viewport:{width:innerWidth,height:innerHeight}};});
+   assert.equal(context.heading,r.image.heading);assert.equal(context.sectionId,r.image.sectionId);assert.deepEqual(context.previousSibling,r.image.previousSibling);await noOverflow(page,r.image.key);
+   const label='emma-christ-'+r.image.key.slice(-2)+'-context';record.reflectionImages.push({selector:r.selector,image,context,capture:profile.name+'-'+label+'.jpg',wholeAsideVisibilityNotAssumed:true});await capture(label);
+  }
   for(const s of c.emma.stories){
    const trigger=page.locator(s.figure+' > a');await trigger.scrollIntoViewIfNeeded();await trigger.click();const detail=page.locator('dialog.fc-artwork-detail-dialog[open]');await detail.waitFor({state:'visible',timeout:8000});
    assert((await detail.innerText()).includes(s.title));assert.equal(await detail.locator('a[href="'+s.sourceHref+'"]').count(),1,'Owning dialog source preserved');
@@ -151,10 +175,35 @@ function compareOpening(reference,current){
  assert.equal(current.textBottom,reference.textBottom,'Reference Continue text baseline box');
 }
 
+async function timelineChoices(page,c,record,profile,capture){
+ const selector='#choose-timeline .fc-timeline-choices',group=page.locator(selector),links=group.locator(':scope > a');assert.equal(await group.count(),1);assert.equal(await links.count(),5);
+ await group.evaluate(n=>n.scrollIntoView({block:'center'}));await page.mouse.move(profile.width-2,profile.height-2);await stable(page,selector);
+ const observed=await group.evaluate(n=>{const box=e=>{const r=e.getBoundingClientRect();return {x:r.x,y:r.y,right:r.right,bottom:r.bottom,width:r.width,height:r.height};};return {group:box(n),display:getComputedStyle(n).display,gap:getComputedStyle(n).gap,pills:[...n.querySelectorAll(':scope > a')].map(a=>{const range=document.createRange();range.selectNodeContents(a);const s=getComputedStyle(a);return {href:a.getAttribute('href'),text:a.textContent.replace(/\s+/g,' ').trim(),rect:box(a),clientWidth:a.clientWidth,scrollWidth:a.scrollWidth,clientHeight:a.clientHeight,scrollHeight:a.scrollHeight,textRects:[...range.getClientRects()].map(r=>({x:r.x,y:r.y,right:r.right,bottom:r.bottom,width:r.width,height:r.height})),style:{color:s.color,background:s.backgroundColor,borderRadius:s.borderRadius,fontSize:s.fontSize,lineHeight:s.lineHeight}};})};});
+ record.timelineChoices=observed;observed.layout=profile.width<=700?'stacked':'paired-with-centered-last';observed.physicalToleranceCssPx=1;
+ try{
+ assert.equal(observed.display,'grid');assert.equal(observed.gap,'16px');assert.deepEqual(observed.pills.map(p=>({href:p.href,text:p.text})),c.adams.choices);
+ const close=(a,b,label)=>assert(Math.abs(a-b)<=1,label+' exceeds one CSS-pixel physical layout bound');
+ const boxes=observed.pills.map(p=>p.rect),g=observed.group;
+ for(const p of observed.pills){assert(p.rect.height>=56&&p.rect.width>0&&p.rect.x>=-1&&p.rect.right<=profile.width+1,'Choice control size/width');assert(p.scrollWidth<=p.clientWidth+1&&p.scrollHeight<=p.clientHeight+1,'Choice label internal overflow');assert(p.textRects.length>0&&p.textRects.every(r=>r.width>0&&r.height>0&&r.x>=p.rect.x-1&&r.right<=p.rect.right+1&&r.y>=p.rect.y-1&&r.bottom<=p.rect.bottom+1),'Complete visible label fragments');close(p.rect.width,boxes[0].width,'Equal choice width');close(p.rect.height,boxes[0].height,'Equal choice height');}
+ if(profile.width<=700){for(let i=0;i<boxes.length;i++){close(boxes[i].x,g.x,'Stack alignment');close(boxes[i].width,g.width,'Stack width');if(i)close(boxes[i].y-boxes[i-1].bottom,16,'Stack gap');}}
+ else{for(const [a,b] of [[0,1],[2,3]]){close(boxes[a].y,boxes[b].y,'Paired row top');close(boxes[a].height,boxes[b].height,'Paired row height');close(boxes[b].x-boxes[a].right,16,'Paired row gap');}close(boxes[0].x,boxes[2].x,'First-column alignment');close(boxes[1].x,boxes[3].x,'Second-column alignment');close(boxes[2].y-Math.max(boxes[0].bottom,boxes[1].bottom),16,'Second row gap');close(boxes[4].y-Math.max(boxes[2].bottom,boxes[3].bottom),16,'Last row gap');close(boxes[4].x+boxes[4].width/2,g.x+g.width/2,'Centered final choice');}
+ // Start within the already centered group, then use real Tab/Shift+Tab so all
+ // five focus-visible states are observed without changing CSS or viewport.
+ await links.nth(0).focus();await page.keyboard.press('Tab');await page.keyboard.press('Shift+Tab');observed.focus=[];
+ for(let i=0;i<5;i++){
+  if(i)await page.keyboard.press('Tab');const a=links.nth(i);assert(await a.evaluate(n=>n===document.activeElement&&n.matches(':focus-visible')),'Exact keyboard choice focus');
+  const f=await a.evaluate(n=>{const r=n.getBoundingClientRect(),s=getComputedStyle(n),spread=parseFloat(s.outlineWidth)+parseFloat(s.outlineOffset),box={left:r.left-spread,top:r.top-spread,right:r.right+spread,bottom:r.bottom+spread},clips=[];for(let p=n.parentElement;p&&p!==document.body&&p!==document.documentElement;p=p.parentElement){const c=getComputedStyle(p),q=p.getBoundingClientRect();if((c.overflowX!=='visible'&&(box.left<q.left||box.right>q.right))||(c.overflowY!=='visible'&&(box.top<q.top||box.bottom>q.bottom)))clips.push(p.tagName+'#'+p.id);}return {href:n.getAttribute('href'),outlineStyle:s.outlineStyle,outlineWidth:parseFloat(s.outlineWidth),outlineOffset:parseFloat(s.outlineOffset),box,clips};});
+  assert.equal(f.outlineStyle,'solid');assert.equal(f.outlineWidth,3);assert.equal(f.outlineOffset,4);assert.deepEqual(f.clips,[],'Focus outline ancestor clipping');assert(f.box.left>=-1&&f.box.right<=profile.width+1&&f.box.top>=-1&&f.box.bottom<=profile.height+1,'Focus outline visible in viewport');observed.focus.push(f);
+ }
+ await noOverflow(page,'Timeline choice group');
+ }finally{await capture('adams-timeline-choices');}
+}
+
 async function adamsJourney(page,origin,c,record,profile,capture){
  await page.goto(origin+c.adams.reference,{waitUntil:'load'});await page.locator('.timeline-life-hero img').evaluate(n=>n.decode());await stable(page,'.timeline-life-hero');await page.mouse.move(profile.width-2,profile.height-2);const reference=await openingMetrics(page);await capture('church-reference-opening');
  await page.goto(origin+c.adams.timeline,{waitUntil:'load'});await noOverflow(page,'Timeline');await headerJourney(page,record,profile,capture,'timeline',false);
- const section=page.locator('#adams-1881');assert.equal(await section.count(),1);const overview=section.locator('img');assert.equal(await overview.count(),1);await decoded(overview);await capture('adams-timeline-section');
+ try{await timelineChoices(page,c,record,profile,capture);}catch(e){record.acceptanceErrors.push('Timeline choice geometry/focus: '+String(e));}
+ const section=page.locator('#adams-1881');assert.equal(await section.count(),1);const overview=section.locator('img');assert.equal(await overview.count(),1);await decoded(overview);
  const pill=page.locator('#choose-timeline .fc-timeline-choices a[href="timelines/adams-1881-introduction.html"]');assert.equal(await pill.count(),1,'Existing choice enters introduction');
  assert.equal(await overview.locator('..').getAttribute('href'),'timelines/adams-1881-introduction.html','Overview image also enters introduction');
  const entry=section.locator('.fc-button--primary[href="timelines/adams-1881-introduction.html"]');assert.equal(await entry.count(),1);await entry.click();await page.waitForURL(origin+c.adams.intro,{timeout:12000});await headerJourney(page,record,profile,capture,'adams-intro',false);await page.mouse.move(profile.width-2,profile.height-2);await stable(page,'.timeline-life-hero');
@@ -191,15 +240,15 @@ async function main(){
   browser=await chromium.launch({headless:true});timer=setTimeout(()=>{report.timedOut=true;browser.close().catch(()=>{});server.closeAllConnections?.();},LIMIT.milliseconds);
   const assets=new Map(c.assets.map(r=>['/'+r.path,r]));
   for(const profile of PROFILES){
-   if(report.timedOut)break;const record={profile,pass:false,images:[],headers:[],journeys:[],acceptanceErrors:[]};report.profiles.push(record);let context;
+   if(report.timedOut)break;const record={profile,pass:false,images:[],reflectionImages:[],headers:[],searchStates:[],journeys:[],acceptanceErrors:[]};report.profiles.push(record);let context,page;
    try{
     context=await browser.newContext({viewport:{width:profile.width,height:profile.height},isMobile:profile.touch,hasTouch:profile.touch,deviceScaleFactor:1,reducedMotion:'reduce',serviceWorkers:'block'});
     await context.route('**/*',route=>{const u=new URL(route.request().url());if(u.origin!==origin){if(report.blocked.length<100)report.blocked.push({profile:profile.name,url:u.origin+u.pathname});return route.abort();}if(++requests>LIMIT.requests){report.errors.push('Request bound exceeded');return route.abort();}return route.continue();});
-    const page=await context.newPage();page.setDefaultTimeout(8000);page.setDefaultNavigationTimeout(12000);page.on('pageerror',e=>report.errors.push(String(e).slice(0,1000)));
+    page=await context.newPage();page.setDefaultTimeout(8000);page.setDefaultNavigationTimeout(12000);page.on('pageerror',e=>report.errors.push(String(e).slice(0,1000)));
     page.on('response',response=>{const u=new URL(response.url());if(u.origin!==origin)return;if(response.status()>=400)report.errors.push('HTTP '+response.status()+' '+u.pathname);const a=assets.get(u.pathname);if(!a)return;pending.push((async()=>{const b=await response.body();assert.equal(response.status(),200);assert.equal(b.length,a.bytes);assert.equal(sha(b),a.sha256);report.network.push({profile:profile.name,path:u.pathname,status:response.status(),bytes:b.length,sha256:a.sha256});})().catch(e=>report.errors.push(String(e).slice(0,1000))));});
     const capture=async label=>{assert(report.screenshots.length<LIMIT.shots,'Capture count');const b=await page.screenshot({type:'jpeg',quality:80,fullPage:false,animations:'disabled',timeout:8000});assert(b.length<=LIMIT.shotBytes&&shotBytes+b.length<=LIMIT.allShots,'Capture byte bound');const name=profile.name+'-'+label+'.jpg';fs.writeFileSync(path.join(OUT,name),b,{flag:'wx'});shotBytes+=b.length;report.screenshots.push({file:name,bytes:b.length,sha256:sha(b),viewport:{width:profile.width,height:profile.height}});};
     await emmaJourney(page,origin,c,record,profile,capture);await adamsJourney(page,origin,c,record,profile,capture);await Promise.all(pending);assert.deepEqual(report.errors,[],'Runtime/network errors');assert.deepEqual(record.acceptanceErrors,[],'Exact owner geometry comparisons');record.pass=true;
-   }catch(e){record.error=String(e.stack||e).slice(0,5000);}finally{if(context)await context.close();}
+   }catch(e){record.error=String(e.stack||e).slice(0,5000);if(page&&!page.isClosed())record.failureState=await page.evaluate(()=>({url:location.pathname+location.hash,dialogOpen:!!document.getElementById('fc-search-dialog')?.open,inputValue:document.getElementById('fc-header-search')?.value??null,activeId:document.activeElement?.id||'',activeTag:document.activeElement?.tagName||'',focusOnTrigger:document.activeElement===document.querySelector('[data-site-search-trigger]')})).catch(error=>({unavailable:String(error).slice(0,300)}));}finally{if(context)await context.close();}
   }
   await Promise.all(pending);report.pass=!report.timedOut&&report.profiles.length===4&&report.profiles.every(r=>r.pass)&&report.errors.length===0;
  }catch(e){report.errors.push(String(e.stack||e).slice(0,5000));}

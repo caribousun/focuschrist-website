@@ -23,7 +23,8 @@ class HubCitationTests(unittest.TestCase):
     def setUp(self):
         self.temp=tempfile.TemporaryDirectory();self.addCleanup(self.temp.cleanup)
         self.root=Path(self.temp.name)
-        self.raw=(c.ROOT/c.NAME).read_bytes()
+        from owner_integration_successor import restore as restore_owner
+        self.raw=restore_owner(c.NAME,(c.ROOT/c.NAME).read_bytes(),c.ROOT)
         self.manifest=(c.ROOT/c.MANIFEST).read_bytes()
         self.write(c.NAME,self.raw);self.write(c.MANIFEST,self.manifest)
     def write(self,name,data):

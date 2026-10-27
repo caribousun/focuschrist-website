@@ -133,6 +133,7 @@
     "search.html",
     "timeline.html",
     "timelines/adams-1881-chart.html",
+    "timelines/adams-1881-introduction.html",
     "timelines/latter-day-saint-church-history-timeline.html",
     "timelines/life-of-christ-journey-map.html",
     "timelines/willie-and-martin-handcart-map.html",
@@ -305,16 +306,16 @@
       "disposition": "coordinated_stylesheet_owner",
       "reason": "Merlin standalone timeline experience, preserved by Wyatt on 2026-10-02; scoped inline design and timeline runtime checks own this surface."
     },
-    "fc-adams-note": {
-      "count": 2,
+    "fc-adams-timeline-card": {
+      "count": 1,
       "pages": [
-        "timelines/adams-1881-chart.html"
+        "timeline.html"
       ],
       "tags": [
-        "p"
+        "article"
       ],
-      "disposition": "excluded_with_reason",
-      "reason": "Exactly two disclaimer/credit paragraphs in the byte-pinned Adams standalone toolbar, not shared study cards. Existing chart controls and inline presentation retain their separate finished desktop/phone review."
+      "disposition": "coordinated_stylesheet_owner",
+      "reason": "One exact Timeline Adams introduction card; scoped adams-integration.css uses canonical panel fill, border, shadow and gold edge tokens. Current source and owner validated separately; rendered geometry remains required."
     },
     "fc-answers-jump-panel": {
       "count": 1,
@@ -580,7 +581,7 @@
       "reason": "Approved Home image card; preserve pixels and image treatment."
     },
     "fc-life-reflection": {
-      "count": 27,
+      "count": 31,
       "pages": [
         "history/eleazer-miller.html",
         "history/emma-elect-lady.html",
@@ -594,6 +595,7 @@
       ],
       "tags": [
         "a",
+        "aside",
         "div"
       ],
       "disposition": "coordinated_stylesheet_owner",
@@ -632,6 +634,17 @@
       ],
       "disposition": "excluded_with_reason",
       "reason": "Two-column responsive layout modifier on bare fc-life-reflections containers in the five Emma story pages; only grid-template-columns changes. Child fc-life-reflection panels retain their existing history-stories.css surface owner; no independent painted surface."
+    },
+    "fc-life-scripture-reflection": {
+      "count": 4,
+      "pages": [
+        "history/emma-hale-smith.html"
+      ],
+      "tags": [
+        "aside"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Exact four current Emma hub scripture-reflection modifiers on existing fc-life-reflection painted panels; scoped inline heading/paragraph/spacing rules only, not an independent painted surface. Current owner/count and complete source are validated separately."
     },
     "fc-mission-reflection": {
       "count": 4,
@@ -1104,7 +1117,7 @@
       "reason": "Owner-requested Peter rescue figure uses shared panel tokens in the reviewed appendix; preserves the artwork viewer and intrinsic image."
     },
     "fc-timeline-note": {
-      "count": 2,
+      "count": 1,
       "pages": [
         "timeline.html"
       ],
@@ -1902,6 +1915,15 @@
       "disposition": "excluded_with_reason",
       "reason": "Button/control; preserve action styling."
     },
+    "fc-adams-timeline-card": {
+      "stylesheets": [
+        "adams-integration.css"
+      ],
+      "pages": [
+        "timeline.html"
+      ],
+      "disposition": "coordinated_stylesheet_owner"
+    },
     "fc-answers-art": {
       "stylesheets": [
         "answers-hero.css"
@@ -1965,6 +1987,7 @@
     },
     "fc-button": {
       "stylesheets": [
+        "adams-integration.css",
         "atonement.css",
         "pioneer-story.css",
         "site-system.css"
@@ -2099,6 +2122,7 @@
         "pioneers.html",
         "search.html",
         "timeline.html",
+        "timelines/adams-1881-introduction.html",
         "watch.html"
       ],
       "disposition": "excluded_with_reason",
@@ -2427,6 +2451,8 @@
         "pioneers.html",
         "search.html",
         "timeline.html",
+        "timelines/adams-1881-chart.html",
+        "timelines/adams-1881-introduction.html",
         "timelines/latter-day-saint-church-history-timeline.html",
         "timelines/life-of-christ-journey-map.html",
         "timelines/willie-and-martin-handcart-map.html",
@@ -2880,6 +2906,8 @@
         "pioneers.html",
         "search.html",
         "timeline.html",
+        "timelines/adams-1881-chart.html",
+        "timelines/adams-1881-introduction.html",
         "timelines/latter-day-saint-church-history-timeline.html",
         "timelines/life-of-christ-journey-map.html",
         "timelines/willie-and-martin-handcart-map.html",
@@ -3109,6 +3137,7 @@
         "timeline-experiences.css"
       ],
       "pages": [
+        "timelines/adams-1881-introduction.html",
         "timelines/latter-day-saint-church-history-timeline.html",
         "timelines/life-of-christ-journey-map.html",
         "timelines/willie-and-martin-handcart-map.html"

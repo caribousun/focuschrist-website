@@ -21,3 +21,15 @@ body.fc-adams-intro-page #adams-introduction-main > .wrap { box-sizing:border-bo
 
 /* Canonical mobile/tablet header is in normal flow; reserve space only for fixed desktop header. */
 @media(max-width:1020px) { body.fc-adams-chart-page { padding-top:0; } }
+
+/* Equal-level Timeline choices: paired rows and a centered final choice. */
+body.fc-timeline-page .fc-timeline-choices { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); grid-auto-rows:1fr; gap:16px; align-items:stretch; }
+body.fc-timeline-page .fc-timeline-choices > a.fc-button { grid-column:span 2; box-sizing:border-box; width:100%; min-width:0; min-height:56px; height:auto; padding:14px 20px; border:1px solid var(--fc-gold); border-radius:var(--fc-radius-lg); background:var(--fc-bg-warm); background:color-mix(in srgb,var(--fc-sky) 22%,var(--fc-bg-warm)); color:var(--fc-cream) !important; box-shadow:none; white-space:normal; overflow-wrap:anywhere; text-align:center; line-height:1.5; }
+body.fc-timeline-page .fc-timeline-choices > a.fc-button:last-child:nth-child(odd) { grid-column:2 / span 2; }
+body.fc-timeline-page .fc-timeline-choices > a.fc-button:hover { background:var(--fc-bg-warm); color:var(--fc-cream) !important; border-color:var(--fc-gold-light); }
+body.fc-timeline-page .fc-timeline-choices > a.fc-button:focus-visible { background:var(--fc-bg-warm); outline:3px solid var(--fc-gold-light); outline-offset:4px; color:var(--fc-cream) !important; }
+@media(max-width:700px) {
+ body.fc-timeline-page .fc-timeline-choices { grid-template-columns:minmax(0,1fr); }
+ body.fc-timeline-page .fc-timeline-choices > a.fc-button,
+ body.fc-timeline-page .fc-timeline-choices > a.fc-button:last-child:nth-child(odd) { grid-column:1; }
+}

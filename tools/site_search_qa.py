@@ -5,7 +5,8 @@ from urllib.parse import urlsplit, unquote, parse_qs
 sys.dont_write_bytecode=True
 from build_site_search import ROOT, build, visible
 from answer_study_qa import Document
-from adams_search_consumer import is_adams_standalone_search_owner
+from owner_integration_contract import validate_current_adams
+validate_current_adams(ROOT)
 
 data=build()
 actual=json.loads((ROOT/'site-search-index.json').read_text(encoding='utf-8'))
@@ -22,7 +23,6 @@ for record in data['records']:
     if record.get('thumbnail'): assert (ROOT/record['thumbnail'].lstrip('/')).is_file()
 for path in data['pages']+['/search.html','/404.html']:
     source=(ROOT/path.lstrip('/')).read_bytes()
-    if is_adams_standalone_search_owner(path, source, data['pages']): continue
     d=Document();d.feed(source.decode('utf-8'));nodes=list(d.root.walk())
     links=[n for n in nodes if 'data-site-search-trigger' in n.attrs]
     assert len(links)==1,path

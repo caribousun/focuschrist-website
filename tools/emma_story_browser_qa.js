@@ -1,7 +1,7 @@
-const fs=require('node:fs'),path=require('node:path'),http=require('node:http'),assert=require('node:assert/strict');
+const fs=require('node:fs'),path=require('node:path'),http=require('node:http'),assert=require('node:assert/strict'),crypto=require('node:crypto');
 const {chromium}=require('playwright');
 const root=path.resolve(__dirname,'..'),out=path.join(root,'.qa-artifacts/emma-story');
-// Narrowly scoped rendered verification for the Emma story finisher (A-009):
+// Contextual successor: five sole hub owners and their five separate reference pages.
 // the five new story pages and their hub at desktop, phone and narrow phone,
 // including the composed artwork-dialog, full-size-viewer and back-navigation
 // journeys. Expected titles, alt text and sources are the Hannah-reviewed
@@ -24,8 +24,13 @@ const STORIES=[
   alt:'Emma Smith at seventy four, wearing a dark gray dress, sits speaking, one hand raised in conversation, her gaze toward the one she is speaking with.',
   sourceLabel:'My Great-Great-Grandmother Emma Hale Smith',sourceHref:'https://www.churchofjesuschrist.org/study/ensign/1992/08/my-great-great-grandmother-emma-hale-smith?lang=eng'}];
 const HUB='history/emma-hale-smith.html';
+const OWNER_IDS=['picture-emma-story1-ride','picture-emma-story2-hymnal','picture-emma-story3-quincy','picture-emma-story4-hospitality','picture-emma-story5-testimony'];
+const STORY_LINKS=['#heading-elect-lady-right-person','#heading-hymns-charge','#heading-crossing-separated','#heading-relief-seamstress','#heading-testimony-kept'];
 const TYPES={'.html':'text/html','.css':'text/css','.js':'text/javascript','.webp':'image/webp','.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg','.svg':'image/svg+xml','.json':'application/json','.xml':'application/xml','.woff2':'font/woff2','.ico':'image/x-icon'};
 (async()=>{
+ assert.equal(process.env.CI,'true','Hosted CI only');
+ const expectedSources=[{"path":"history/emma-elect-lady.html","bytes":14734,"sha256":"f32c79609f15d51e9c85b2f4bc941de38d2626c944e33f1876fc574f46f7986c"},{"path":"history/emma-hale-smith.html","bytes":66144,"sha256":"50c334379066722ef6e80e97d70f0f2ca431777b5857eb15b998da65cc1783cf"},{"path":"history/emma-hymns.html","bytes":15103,"sha256":"719bc7f899ebc188f33322c4c7c6bea9e326b209e28e2d49855543185e12aedb"},{"path":"history/emma-last-testimony.html","bytes":15464,"sha256":"ff608df4a3bb994d29834e253daac97b1721ecf2b3209a621e284f16ca91eb70"},{"path":"history/emma-relief-society.html","bytes":15000,"sha256":"e90e7b25239973e2488f32e57482fd5cfbdabb6a7f3f1746599aded9cd546ebb"},{"path":"history/emma-winter-crossing.html","bytes":14477,"sha256":"a2c6003789eaaf4458bb3f431943c2d4602908b19324054ef8ca9f0aab30a417"}];
+ for(const r of expectedSources){const b=fs.readFileSync(path.join(root,r.path));assert.equal(b.length,r.bytes);assert.equal(crypto.createHash('sha256').update(b).digest('hex'),r.sha256,'Exact integrated Emma source '+r.path);}
  const server=http.createServer((req,res)=>{const file=path.resolve(root,'.'+new URL(req.url,'http://localhost').pathname);if(!file.startsWith(root+path.sep))return res.writeHead(403).end();fs.readFile(file,(e,d)=>e?res.writeHead(404).end():res.writeHead(200,{'Content-Type':TYPES[path.extname(file)]||'application/octet-stream'}).end(d));});
  await new Promise(r=>server.listen(0,'127.0.0.1',r));
  const origin=`http://127.0.0.1:${server.address().port}`;
@@ -37,7 +42,7 @@ const TYPES={'.html':'text/html','.css':'text/css','.js':'text/javascript','.web
  const skipEvidence=[],headerEvidence=[],footerEvidence=[],shots=[];let screenshotBytes=0;
  const saveEvidence=()=>{const b=Buffer.from(JSON.stringify({skipEvidence,headerEvidence,footerEvidence,shots,screenshotBytes},null,2)+'\n');assert(b.length<=128*1024,'Skip evidence JSON bound');fs.writeFileSync(path.join(out,'skip-link-evidence.json'),b);};
  const capture=async name=>{
-  assert(shots.length<75,'Emma screenshot count bound');
+  assert(shots.length<78,'Emma screenshot count bound');
   const jpeg=name.endsWith('.jpg'),data=await page.screenshot({type:jpeg?'jpeg':'png',...(jpeg?{quality:80}:{}),fullPage:false,timeout:8000});
   assert(data.length<=1024*1024,'Single Emma screenshot exceeds 1 MiB');
   assert(screenshotBytes+data.length<=23*1024*1024,'Emma screenshot evidence exceeds 23 MiB');
@@ -150,10 +155,10 @@ const TYPES={'.html':'text/html','.css':'text/css','.js':'text/javascript','.web
    results.push({page:STORIES[1].page,journey:'skip-link-tab-enter-main',width});
   }
   // Composed journeys at phone width: artwork dialog, full-size viewer,
-  // Continue Lesson, Close with focus return, on every story page.
+  // Continue Lesson, Close with focus return, on the five actual hub artwork owners.
   await page.setViewportSize({width:390,height:900});
   for(const s of STORIES){
-   await page.goto(origin+'/'+s.page);
+   await page.goto(origin+'/'+HUB);
    const trigger=page.locator(`a:has(img[src*="${s.base}-960.webp"])`);
    await trigger.scrollIntoViewIfNeeded();await trigger.click();
    const dialog=page.locator('dialog.fc-artwork-detail-dialog[open]');
@@ -184,12 +189,12 @@ const TYPES={'.html':'text/html','.css':'text/css','.js':'text/javascript','.web
    await page.waitForFunction(()=>!document.body.classList.contains('fc-dialog-open'),null,{timeout:5000});
    assert.equal(await page.evaluate(()=>document.body.classList.contains('fc-dialog-open')),false,`${s.page}: dialog-open body class left behind`);
    assert(await trigger.evaluate(n=>document.activeElement===n),`${s.page}: focus did not return to the artwork`);
-   results.push({page:s.page,journey:'dialog-fullsize-close-focus',width:390});
+   results.push({page:HUB,artwork:s.base,journey:'dialog-fullsize-close-focus',width:390});
   }
   // Continue Lesson closes the dialog and lands on the story section (story 1),
   // and Escape dismisses the dialog (story 2), at phone width.
   {
-   const s=STORIES[0];await page.goto(origin+'/'+s.page);
+   const s=STORIES[0];await page.goto(origin+'/'+HUB);
    const trigger=page.locator(`a:has(img[src*="${s.base}-960.webp"])`);
    await trigger.scrollIntoViewIfNeeded();await trigger.click();
    const dialog=page.locator('dialog.fc-artwork-detail-dialog[open]');await dialog.waitFor({state:'visible'});
@@ -217,10 +222,10 @@ const TYPES={'.html':'text/html','.css':'text/css','.js':'text/javascript','.web
    const landing=await page.evaluate(()=>{const a=document.activeElement,r=a.getBoundingClientRect(),sec=a.closest('section');return {section:sec?sec.id:'',top:r.top};});
    assert.equal(landing.section,s.section,'Continue Lesson focus did not land on the story section reading target');
    assert(landing.top>=-1&&landing.top<=240,`Continue Lesson heading sits at ${landing.top}px, not at the reading clearance below the viewport top`);
-   results.push({page:s.page,journey:'continue-lesson',width:390});
+   results.push({page:HUB,artwork:s.base,journey:'continue-lesson',width:390});
   }
   {
-   const s=STORIES[1];await page.goto(origin+'/'+s.page);
+   const s=STORIES[1];await page.goto(origin+'/'+HUB);
    const trigger=page.locator(`a:has(img[src*="${s.base}-960.webp"])`);
    await trigger.scrollIntoViewIfNeeded();await trigger.click();
    const dialog=page.locator('dialog.fc-artwork-detail-dialog[open]');await dialog.waitFor({state:'visible'});
@@ -228,22 +233,23 @@ const TYPES={'.html':'text/html','.css':'text/css','.js':'text/javascript','.web
    await page.waitForFunction(()=>!document.querySelector('dialog.fc-artwork-detail-dialog[open]'));
    await page.waitForFunction(base=>{const a=document.activeElement;return !document.body.classList.contains('fc-dialog-open')&&a?.matches('a')&&a.querySelector('img[src*="'+base+'-960.webp"]');},s.base,{timeout:5000});
    assert(await trigger.evaluate(n=>document.activeElement===n),`${s.page}: Escape focus did not return to the artwork`);
-   results.push({page:s.page,journey:'escape-close',width:390});
+   results.push({page:HUB,artwork:s.base,journey:'escape-close',width:390});
   }
-  // Hub journeys at desktop: the story doorway is the hub's story listing.
-  // It must hold exactly the five story cards; each card reaches its page
-  // and Back returns to the hub. (The hub also carries inline Continue
-  // links to the same pages in body text; those are not the listing and
-  // are deliberately not what this journey clicks.)
+  // The five hub cards now navigate to the integrated story headings.
+  // Separate pages preserve honest image references back to sole hub owners.
   await page.setViewportSize({width:1280,height:900});
   await page.goto(origin+'/'+HUB);
-  assert.equal(await page.locator('.fc-story-doorway a.fc-life-reflection').count(),5,'hub story doorway must list exactly five story cards');
-  for(const s of STORIES){
+  assert.equal(await page.locator('.fc-story-doorway a.fc-life-reflection').count(),5);
+  for(const [index,s] of STORIES.entries()){
    await page.goto(origin+'/'+HUB);
-   await page.locator(`.fc-story-doorway a.fc-life-reflection[href="${s.page.split('/').pop()}"]`).click();
-   await page.waitForURL('**/'+s.page);await noOverflow();
-   await page.goBack();await page.waitForURL('**/'+HUB);
-   results.push({page:s.page,journey:'hub-doorway-link-and-back',width:1280});
+   const href=STORY_LINKS[index];await page.locator(`.fc-story-doorway a.fc-life-reflection[href="${href}"]`).click();
+   await page.waitForURL(origin+'/'+HUB+href);assert(await page.locator(href).isVisible());await noOverflow();
+   await page.goBack();await page.waitForURL(origin+'/'+HUB);
+   await page.goto(origin+'/'+s.page);
+   const ref=page.locator('figure.fc-reference-picture[data-artwork-reference] > div > a[href="emma-hale-smith.html#'+OWNER_IDS[index]+'"]');
+   assert.equal(await ref.count(),1);assert.equal(await page.locator('figure[data-topic-art="'+OWNER_IDS[index].slice(8)+'"]').count(),0);
+   await ref.click();await page.waitForURL(origin+'/'+HUB+'#'+OWNER_IDS[index]);assert.equal(await page.locator('dialog.fc-artwork-detail-dialog[open]').count(),0);
+   results.push({page:HUB,referencePage:s.page,journey:'integrated-heading-and-reference-owner-return',width:1280});
   }
   // The hub's first artwork (emma-c1) must open the study dialog: its
   // figure carries panel copy and a source link, so the shipped topic
@@ -289,7 +295,8 @@ const TYPES={'.html':'text/html','.css':'text/css','.js':'text/javascript','.web
     results.push({page:s.page,journey:'canonical-footer-notices',width});
    }
   }
-  // Exact new hymns citation journeys; all prior 60 captures/46 results retained.
+  // Preserve three body/source citations, add the now-visible reference caption,
+  // and exercise the two artwork citations on the current hub owner.
   const scriptureEvidence=[],scriptureControlEvidence=[];
   const chapter25=JSON.parse(fs.readFileSync(path.join(root,'scripture-data/dc-testament/dc/25.json'),'utf8'));
   for(const width of [1280,390,320]){
@@ -320,14 +327,16 @@ const TYPES={'.html':'text/html','.css':'text/css','.js':'text/javascript','.web
     assert(await trigger.evaluate(n=>document.activeElement===n),'Scripture focus returns to exact citation');
     assert.equal(await page.locator('dialog.fc-artwork-detail-dialog[open]').count(),artOpen?1:0);
     assert.equal(await page.evaluate(()=>document.body.classList.contains('fc-scripture-open')),false);
-    scriptureEvidence.push({page:'history/emma-hymns.html',width,label,href,verses:numbers,keyboardEnter:true,close:label==='body-first'?'Escape':'button',exactFocusReturned:true,artworkRemainedOpen:artOpen});
-    results.push({page:'history/emma-hymns.html',journey:'scripture-'+label,width});
+    scriptureEvidence.push({page:artOpen?HUB:'history/emma-hymns.html',width,label,href,verses:numbers,keyboardEnter:true,close:label==='body-first'?'Escape':'button',exactFocusReturned:true,artworkRemainedOpen:artOpen});
+    results.push({page:artOpen?HUB:'history/emma-hymns.html',journey:'scripture-'+label,width});
    };
-   const visible=page.locator('main a.fc-inline-scripture:visible');assert.equal(await visible.count(),3);
+   const visible=page.locator('main a.fc-inline-scripture:visible:not(.fc-reference-picture a)');assert.equal(await visible.count(),3,'Three existing body/source citations retained');
    await exercise(visible.nth(0),'body-first',false,false);
    await exercise(visible.nth(1),'body-second',false,false);
    await exercise(visible.nth(2),'source-range',true,false);
-   const art=page.locator('a:has(img[src*="emma-story2-hymnal-review-960.webp"])');await art.click();
+   const referenceCaption=page.locator('figure.fc-reference-picture figcaption a.fc-inline-scripture');assert.equal(await referenceCaption.count(),1);await exercise(referenceCaption,'reference-caption',false,false);
+   await page.goto(origin+'/'+HUB);
+   const art=page.locator('#picture-emma-story2-hymnal > a');await art.scrollIntoViewIfNeeded();await art.click();
    const detail=page.locator('dialog.fc-artwork-detail-dialog[open]');await detail.waitFor({state:'visible'});
    const caption=detail.locator('.fc-artwork-detail-copy a.fc-inline-scripture[href*="/dc/25?"]');assert.equal(await caption.count(),1);
    await exercise(caption,'caption',false,true);
@@ -349,13 +358,13 @@ const TYPES={'.html':'text/html','.css':'text/css','.js':'text/javascript','.web
    await page.waitForFunction(()=>document.activeElement?.querySelector('img[src*="emma-story2-hymnal-review-960.webp"]'),null,{timeout:5000});
    await art.click();await detail.waitFor({state:'visible'});await detail.locator('a[data-topic-art-continue]').click();
    await page.waitForFunction(()=>!document.querySelector('dialog.fc-artwork-detail-dialog[open]')&&document.activeElement?.hasAttribute('data-topic-reading-target')&&document.activeElement.closest('section')?.id==='hymns-book'&&!document.body.classList.contains('fc-dialog-open'),null,{timeout:5000});
-   results.push({page:'history/emma-hymns.html',journey:'scripture-expanded-artwork-actions-fullsize-close-continue',width});
+   results.push({page:HUB,journey:'scripture-expanded-artwork-actions-fullsize-close-continue',width});
   }
-  assert.equal(scriptureEvidence.length,15);
+  assert.equal(scriptureEvidence.length,18);
   const scriptureBytes=Buffer.from(JSON.stringify({scope:'Actual same-page scripture interactions; not full release',scriptureEvidence,scriptureControlEvidence},null,2)+'\n');
   assert(scriptureBytes.length<=32*1024,'Scripture telemetry bound');fs.writeFileSync(path.join(out,'scripture-link-evidence.json'),scriptureBytes);
-  assert.equal(footerEvidence.length,15);assert.equal(shots.length,75);assert.equal(results.length,64);
+  assert.equal(footerEvidence.length,15);assert.equal(shots.length,78);assert.equal(results.length,67);
   fs.writeFileSync(path.join(out,'results.json'),JSON.stringify({results,pass:true},null,2));
-  console.log(`EMMA STORY PASS: 6 pages x 3 widths, normal styled headers/menu/search, viewport and 3 skip-link keyboard checks, 5 dialog/full-size/focus journeys, Continue Lesson, Escape, 5 hub link-and-back journeys`);
+  console.log(`EMMA STORY PASS: 6 pages x 3 widths, normal styled headers/menu/search, viewport and 3 skip-link keyboard checks, 5 dialog/full-size/focus journeys, Continue Lesson, Escape, 5 integrated heading/reference-owner-return journeys`);
  }finally{await browser.close();await new Promise(r=>server.close(r));}
 })().catch(e=>{console.error(e);process.exitCode=1;});

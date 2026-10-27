@@ -56,6 +56,7 @@ jobs:
           python -m unittest discover -s tools -p test_artwork_owner_closure.py
           python -m unittest discover -s tools -p test_history_hero_build_gate.py
           python -m unittest discover -s tools -p test_opening_composition_binding.py
+          timeout --signal=TERM --kill-after=5s 60s python -m unittest discover -s tools -p 'test_owner_integration*.py'
           python tools/artwork_creation_gate.py release
 
       - name: Verify reviewed human introductions and preservation fixtures
@@ -169,6 +170,7 @@ jobs:
       - name: Verify every featured art supporting picture study panel
         run: |
           npm install --prefix "$RUNNER_TEMP/focuschrist-dom-qa" --no-save --package-lock=false --ignore-scripts jsdom@26.1.0
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" timeout --signal=TERM --kill-after=5s 60s node tools/test_owner_integration_navigation.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/gallery_compatibility_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/opening_flow_and_cards_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/unified_opening_runtime_qa.js
@@ -660,7 +662,7 @@ jobs:
 
       - name: Bind the diagnostic to the reviewed renderer and checkout
         run: |
-          printf '%s  %s\n' '28586765b6948e5de97c1e7cffaa67289f6d3af02c9b34951ce5f0081e8ac929' 'tools/emma_story_browser_qa.js' | sha256sum --check
+          printf '%s  %s\n' '0132427d0edc952456515afc61eec5d355dded5f0bf95e6ae27563d5349b5947' 'tools/emma_story_browser_qa.js' | sha256sum --check
           mkdir -p .qa-artifacts/emma-story
           {
             echo "scope=diagnostic rendering only; artwork-creation and all release gates remain required"
@@ -678,7 +680,7 @@ jobs:
 
       - name: Verify the two corrected hub scripture links
         run: |
-          printf '%s  %s\n' '63eb15d6106621f4940e53af426e998fabe100cf92543420acca555fda1a51db' 'tools/emma_hub_scripture_browser_qa.js' | sha256sum --check
+          printf '%s  %s\n' 'ba724ab720ec5d59cf2872ae3dc8fe4342c3118295e32446c5f95571931df798' 'tools/emma_hub_scripture_browser_qa.js' | sha256sum --check
           timeout --signal=TERM --kill-after=5s 120s env NODE_PATH=/tmp/focus-row-qa/node_modules node tools/emma_hub_scripture_browser_qa.js
 
       - name: Preserve actual diagnostic outcome
@@ -710,7 +712,7 @@ jobs:
   owner-integration-render:
     name: Owner integration rendered journeys (not release acceptance)
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     permissions:
       contents: read
     steps:
@@ -724,8 +726,8 @@ jobs:
           /tmp/focus-row-qa/node_modules/.bin/playwright install --with-deps chromium
       - name: Verify exact owner integration helper and contract
         run: |
-          printf '%s  %s\n' '0eccd268266ca18691c291eb58e0bc92baa4bdf87b35c1e68a99c5addf290e0d' 'tools/owner_integration_browser_qa.js' | sha256sum --check
-          printf '%s  %s\n' '9dfb55280ee30e4ee4584f6cd3b266b7ba792b32475327dcae475953d4938b8c' 'tools/owner_integration_qa_contract.json' | sha256sum --check
+          printf '%s  %s\n' '74a84f0b128c1649e38390b14af357cf1531a96e376ecd5d9b51b238a74759da' 'tools/owner_integration_browser_qa.js' | sha256sum --check
+          printf '%s  %s\n' 'da0759fb71e34f13cc7509bc368d75faae171db11938e1b4d7813ec6f2ef23a1' 'tools/owner_integration_qa_contract.json' | sha256sum --check
       - name: Observe current hub artwork flow and Timeline introduction journeys
         run: timeout --signal=TERM --kill-after=15s 8m env NODE_PATH=/tmp/focus-row-qa/node_modules node tools/owner_integration_browser_qa.js
       - name: Preserve bounded actual owner integration evidence

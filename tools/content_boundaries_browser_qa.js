@@ -19,8 +19,10 @@ const root = path.resolve(__dirname, '..');
   const routes=[...fs.readFileSync(path.join(root,'sitemap.xml'),'utf8').matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>new URL(m[1]).pathname);
   // Partition only the inventory assertion; keep all current routes in the source scan.
   const {historicalBoundaryRoutes}=require('./emma_content_boundary_routes');
-  const standardRoutes=require('./adams_standalone_navigation').withoutAdamsCanonical(routes,p=>fs.readFileSync(path.join(root,p),'utf8'));
-  require('./test_adams_standalone_navigation').selfTest(routes,p=>fs.readFileSync(path.join(root,p),'utf8'));
+  const read=p=>fs.readFileSync(path.join(root,p),'utf8'),integration=require('./owner_integration_navigation');
+  const standardRoutes=integration.projectCanonicalRoutes(routes,read);
+  require('./test_owner_integration_navigation').selfTest(routes,read,require('jsdom').JSDOM);
+  require('./test_adams_standalone_navigation').selfTest(routes.filter(p=>p!=='/'+integration.intro),integration.historicalRead(read));
   assert(routes.includes('/timelines/world-and-scripture-timeline.html'),'World and Scripture route included in canonical content boundaries');
   const historicalRoutes=JSON.parse(fs.readFileSync(path.join(root,'docs/unified-opening-inventory.json'),'utf8')).pages.map(p=>p.path);
   const historicalBoundary=historicalBoundaryRoutes(standardRoutes,historicalRoutes);

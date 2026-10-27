@@ -35,8 +35,8 @@
     },
     {
       "path": "adams-integration.css",
-      "bytes": 2347,
-      "sha256": "262913cd500cf0ba8fae2f965ea0239595a4d8f1fe1c5079ce27783fa03debc1"
+      "bytes": 3809,
+      "sha256": "d60f8e99abe0c72bf60e4aa56c1a08e1b218c278001de291595b2937424dd6a1"
     },
     {
       "path": "adams-integration.js",
@@ -179,6 +179,66 @@
       "path": "assets/adams-chart/adams-64-0-0.jpg",
       "bytes": 42199,
       "sha256": "9e6338591371c7e978af70e3a05d7256a974c4d8dd5d9ce36fd7d8d577eedb0a"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-c1-review-640.webp",
+      "bytes": 67156,
+      "sha256": "d66385fccfc850c051beb8b925bc06675353f8a83f762f4c5f589378943796ca"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-c1-review-960.webp",
+      "bytes": 125672,
+      "sha256": "f91829d8e6bb7f275564a6e29fc52a6bddd5ecb189278df23cbd1de88b13ad69"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-c1-review-1536.webp",
+      "bytes": 1540526,
+      "sha256": "0568a1fcccfeb79f76c9c79f9c008af905c964728c31ac67de890245d8e600d3"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-c3-review-640.webp",
+      "bytes": 43606,
+      "sha256": "dc07fe08609196422782bcf64e3b2fa72b21819344a9aa22d592a5d46eda4699"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-c3-review-960.webp",
+      "bytes": 75724,
+      "sha256": "7ae9360f21bc7bdbccaf7986222512b8aa80cd95611cea51bbf39120a2939836"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-c3-review-1536.webp",
+      "bytes": 1220660,
+      "sha256": "3bede968c372a649c46e397c520ce82b6a38ba9ab01cf99290b904d1654d94df"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-c4-review-640.webp",
+      "bytes": 109704,
+      "sha256": "c74ba207ec643ffacc8a01eb51ffbf12637f09039cbc7fda684d6e5db52f6741"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-c4-review-960.webp",
+      "bytes": 211106,
+      "sha256": "1e5c08c5b4fdb1071b1460a4dac8621cca021aa089b1a5c1022bce54cadecbe0"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-c4-review-1536.webp",
+      "bytes": 1997538,
+      "sha256": "6acdf8b17dc9cbed8a780cc0894770f0f60e7022982cf7db67fb04bb6191bf93"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-c5-review-640.webp",
+      "bytes": 68870,
+      "sha256": "0e43abea649096126f97dca2923a9bd927e53816eddf3d918b1198ed2f245df8"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-c5-review-960.webp",
+      "bytes": 126060,
+      "sha256": "a30ccdda3b076d0cef767384dfbbd4f679ade71b1f739ed81f8b029e6ea11c1a"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-c5-review-1536.webp",
+      "bytes": 1582280,
+      "sha256": "8e2484ae24f643c90e5d6eb65d207ff34ff4393c4bb11938f889d9b1a1cbc5fb"
     }
   ],
   "emma": {
@@ -282,19 +342,75 @@
     "reflections": [
       {
         "selector": "#reflection-c1",
-        "text": "In Luke 6:12–16, Jesus prays through the night before choosing the Twelve. What decisions do you want to take to God in prayer?"
+        "text": "In Luke 6:12–16, Jesus prays through the night before choosing the Twelve. What decisions do you want to take to God in prayer?",
+        "image": {
+          "figure": "#picture-emma-c1",
+          "key": "emma-c1",
+          "src": "/assets/page-art/emma-life/emma-c1-review-960.webp",
+          "srcset": "/assets/page-art/emma-life/emma-c1-review-640.webp 640w, /assets/page-art/emma-life/emma-c1-review-960.webp 960w, /assets/page-art/emma-life/emma-c1-review-1536.webp 1536w",
+          "alt": "Jesus prays outdoors beneath the night sky.",
+          "heading": "Scripture reflection: A night in prayer",
+          "sectionId": "emma-beginnings",
+          "previousSibling": {
+            "tag": "P",
+            "id": "",
+            "text": "Family tradition, recorded in Church History Topics, tells that Emma’s father overheard young Emma praying in the woods and was moved by what he heard."
+          }
+        }
       },
       {
         "selector": "#reflection-c3",
-        "text": "Matthew records that Jesus and His disciples sang a hymn before leaving for the Mount of Olives. Read Matthew 26:26–30. The brief line places singing within an evening of teaching and coming sorrow. A shared song can give a community words when its members do not all know what lies ahead."
+        "text": "Matthew records that Jesus and His disciples sang a hymn before leaving for the Mount of Olives. Read Matthew 26:26–30. The brief line places singing within an evening of teaching and coming sorrow. A shared song can give a community words when its members do not all know what lies ahead.",
+        "image": {
+          "figure": "#picture-emma-c3",
+          "key": "emma-c3",
+          "src": "/assets/page-art/emma-life/emma-c3-review-960.webp",
+          "srcset": "/assets/page-art/emma-life/emma-c3-review-640.webp 640w, /assets/page-art/emma-life/emma-c3-review-960.webp 960w, /assets/page-art/emma-life/emma-c3-review-1536.webp 1536w",
+          "alt": "Jesus and His disciples sing together.",
+          "heading": "Scripture reflection: A shared hymn",
+          "sectionId": "emma-songs-separation",
+          "previousSibling": {
+            "tag": "DIV",
+            "id": "",
+            "text": "Sources for this part of Emma’s story Emma Hale Smith, Church History Topics Collection of Sacred Hymns for the Church of the Latter Day Saints, Joseph Smith Papers Doctrine and Covenants 25:11-12"
+          }
+        }
       },
       {
         "selector": "#reflection-c4",
-        "text": "After the multitude had eaten, Jesus told the disciples to gather the remaining pieces of bread so that nothing would be lost. Read John 6:10–13. Attention continued after the immediate need was met. The passage offers a companion reflection on the patient, practical work that sustains relief."
+        "text": "After the multitude had eaten, Jesus told the disciples to gather the remaining pieces of bread so that nothing would be lost. Read John 6:10–13. Attention continued after the immediate need was met. The passage offers a companion reflection on the patient, practical work that sustains relief.",
+        "image": {
+          "figure": "#picture-emma-c4",
+          "key": "emma-c4",
+          "src": "/assets/page-art/emma-life/emma-c4-review-960.webp",
+          "srcset": "/assets/page-art/emma-life/emma-c4-review-640.webp 640w, /assets/page-art/emma-life/emma-c4-review-960.webp 960w, /assets/page-art/emma-life/emma-c4-review-1536.webp 1536w",
+          "alt": "Jesus speaks to a disciple as others gather remaining bread.",
+          "heading": "Scripture reflection: Let nothing be lost",
+          "sectionId": "emma-relief-questions",
+          "previousSibling": {
+            "tag": "DIV",
+            "id": "",
+            "text": "Sources for this part of Emma’s story Female Relief Society of Nauvoo, Church History Topics Nauvoo Relief Society Minute Book, in The First Fifty Years of Relief Society, Church Historians Press Emma Hale Smith, Church History Topics"
+          }
+        }
       },
       {
         "selector": "#reflection-c5",
-        "text": "After John the Baptist’s disciples reported his death, Jesus withdrew by boat to a place apart. Read Matthew 14:12–14."
+        "text": "After John the Baptist’s disciples reported his death, Jesus withdrew by boat to a place apart. Read Matthew 14:12–14.",
+        "image": {
+          "figure": "#picture-emma-c5",
+          "key": "emma-c5",
+          "src": "/assets/page-art/emma-life/emma-c5-review-960.webp",
+          "srcset": "/assets/page-art/emma-life/emma-c5-review-640.webp 640w, /assets/page-art/emma-life/emma-c5-review-960.webp 960w, /assets/page-art/emma-life/emma-c5-review-1536.webp 1536w",
+          "alt": "Jesus departs by boat on the water.",
+          "heading": "Scripture reflection: A place apart",
+          "sectionId": "emma-relief-questions",
+          "previousSibling": {
+            "tag": "P",
+            "id": "",
+            "text": "On June 27, 1844, Joseph and his brother Hyrum were killed at Carthage. Emma was thirty-nine and pregnant. Her responsibilities now included mourning her husband and preparing to raise the child who would be born after his death."
+          }
+        }
       }
     ],
     "owners": [
@@ -331,6 +447,28 @@
     "intro": "/timelines/adams-1881-introduction.html",
     "chart": "/timelines/adams-1881-chart.html",
     "reference": "/timelines/latter-day-saint-church-history-timeline.html",
-    "credit": "Sebastian C. Adams, Synchronological Chart (1881). Chart image from Wikimedia Commons, courtesy of the David Rumsey Map Collection. The image is in the public domain."
+    "credit": "Sebastian C. Adams, Synchronological Chart (1881). Chart image from Wikimedia Commons, courtesy of the David Rumsey Map Collection. The image is in the public domain.",
+    "choices": [
+      {
+        "href": "timelines/latter-day-saint-church-history-timeline.html",
+        "text": "Church History Timeline"
+      },
+      {
+        "href": "timelines/willie-and-martin-handcart-map.html",
+        "text": "Willie and Martin Handcart Journey"
+      },
+      {
+        "href": "timelines/life-of-christ-journey-map.html",
+        "text": "Life of Christ Timeline"
+      },
+      {
+        "href": "timelines/world-and-scripture-timeline.html",
+        "text": "World & Scripture Timeline"
+      },
+      {
+        "href": "timelines/adams-1881-introduction.html",
+        "text": "Adams' 1881 Chart of History"
+      }
+    ]
   }
 }

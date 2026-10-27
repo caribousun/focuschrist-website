@@ -1,3 +1,5 @@
+# Stage156: these unchanged assertions exercise explicit historical a36 fixtures.
+# Current integrated source/DOM/panels/search/resource checks run separately.
 """Finite exact Adams resource registration negatives; full scanner unchanged."""
 import json
 from pathlib import Path
@@ -6,7 +8,8 @@ from urllib.parse import urlsplit
 from xml.etree import ElementTree as ET
 from adams_resource_coverage import ADAMS_ROUTE, Cards, without_adams_resource_owner
 
-ROOT = Path(__file__).resolve().parents[1]
+from owner_integration_test_fixtures import historical_root
+ROOT = historical_root(Path(__file__).resolve().parents[1])
 
 
 def strict_object(pairs):

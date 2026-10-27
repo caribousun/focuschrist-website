@@ -5,6 +5,7 @@ from urllib.parse import urlsplit, parse_qs
 import xml.etree.ElementTree as ET
 from answer_study_qa import Document
 from adams_standalone_opening import ADAMS_ROUTE, assert_adams_opening
+from owner_integration_contract import CHART, INTRO, LANDING, HUB, STORIES, validate_file as validate_integrated_file
 ROOT=Path(__file__).resolve().parents[1]
 CONFIG=ROOT/'docs/section-panel-surfaces.json'
 INVENTORY=ROOT/'docs/section-panel-inventory.json'
@@ -48,6 +49,15 @@ def assert_adams_note_owner(page, nodes):
     else:
         assert not notes, 'Adams note class used outside exact standalone owner'
 
+def assert_integrated_panel_owners(page, nodes):
+    # Old standalone notes remain historical; they may not reappear in current UI.
+    assert not any('fc-adams-note' in n.attrs.get('class','').split() for n in nodes), 'Obsolete standalone note returned'
+    for cls, owner, count, tag in [('fc-adams-timeline-card', 'timeline.html', 1, 'article'), ('fc-life-scripture-reflection', 'history/emma-hale-smith.html', 4, 'aside')]:
+        actual=[n for n in nodes if cls in n.attrs.get('class','').split()]
+        assert len(actual)==(count if page==owner else 0), 'Exact integrated panel owner/count changed: '+cls
+        assert all(n.tag==tag for n in actual), 'Integrated panel element changed: '+cls
+
+
 def inventory(config):
     candidates=collections.defaultdict(lambda:dict(count=0,pages=set(),tags=set()))
     surfaces={s:dict(count=0,pages=set(),tags=set()) for s in config['surface_selectors']}
@@ -55,7 +65,9 @@ def inventory(config):
     for page in canonical():
         d=Document();d.feed((ROOT/page).read_text(encoding='utf-8'))
         nodes=list(d.root.walk());nodes_by_page[page]=nodes
-        assert_adams_note_owner(page,nodes)
+        if page in {CHART, INTRO, LANDING, HUB, *STORIES}:
+            validate_integrated_file(page,(ROOT/page).read_bytes(),ROOT)
+        assert_integrated_panel_owners(page,nodes)
         for n in nodes:
             for c in n.attrs.get('class','').split():
                 if PATTERN.search(c):
@@ -136,9 +148,6 @@ def check(config,actual):
     for p in actual['canonical_pages']:
         if p == STANDALONE_ROUTE:
             assert_standalone(p,(ROOT/p).read_bytes())
-            continue
-        if p == ADAMS_ROUTE:
-            assert_adams_opening(p,(ROOT/p).read_bytes())
             continue
         d=Document();d.feed((ROOT/p).read_text(encoding='utf-8'))
         links=[n.attrs.get('href','') for n in d.root.walk() if n.tag=='link' and urlsplit(n.attrs.get('href','')).path.endswith('site-system.css')]

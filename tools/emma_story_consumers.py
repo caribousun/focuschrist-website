@@ -51,7 +51,7 @@ def historical_routes(pages):
     return set(pages) - EMMA_STORY_ROUTES
 
 
-def assert_story_opening(route, text, doc):
+def assert_historical_story_opening(route, text, doc):
     assert route in EMMA_STORY_ROUTES, 'Unknown Emma story owner'
     headers = re.findall(r'<nav\b[^>]*data-focuschrist-header="standard"[^>]*>.*?</nav>', text, re.S)
     assert len(headers) == 1 and hashlib.sha256(headers[0].encode()).hexdigest() == HEADER_SHA256, route + ': canonical header drift'
@@ -61,3 +61,19 @@ def assert_story_opening(route, text, doc):
     assert len(doc.select('main figure.fc-study-visual.fc-life-picture[data-exclusive-artwork][data-topic-art]')) == 1, route + ': body artwork missing'
     assert doc.select_one('main #reflect') and doc.select_one('main #sources') and doc.select_one('main #more-stories'), route + ': story structure missing'
     assert [s.get('src') for s in doc.select('script[src]')] == SCRIPT_REFS, route + ': exact script order/binding drift'
+
+
+def assert_story_opening(route, text, doc):
+    """Current reference stories retain every old shared opening/script check."""
+    from owner_integration_contract import assert_emma_semantics
+    assert_emma_semantics(route, text)
+    # The historical owning-picture assertion is not a current reference rule.
+    # All other original opening checks run on the actual current document.
+    headers = re.findall(r'<nav\b[^>]*data-focuschrist-header="standard"[^>]*>.*?</nav>', text, re.S)
+    assert len(headers) == 1 and hashlib.sha256(headers[0].encode()).hexdigest() == HEADER_SHA256, route + ": canonical header drift"
+    assert doc.body and set(doc.body.get("class", [])) == {"fc-site", "fc-life-story", "fc-emma-study"}, route + ": story body drift"
+    assert not doc.select(".fc-visual-hero,[data-covenant-hero-slot],.cfm-desktop-picture,.gc-intro-visual"), route + ": reading-first opening must not invent hero"
+    assert len(doc.select("main .fc-life-opening")) == 1 and doc.select_one("main .fc-life-opening h1") and doc.select_one("main .fc-life-opening .fc-page-intro-copy"), route + ": story introduction missing"
+    assert len(doc.select("main figure.fc-study-visual.fc-life-picture[data-artwork-reference][data-linked-picture-reference]")) == 1, route + ": current reference artwork missing"
+    assert doc.select_one("main #reflect") and doc.select_one("main #sources") and doc.select_one("main #more-stories"), route + ": story structure missing"
+    assert [s.get("src") for s in doc.select("script[src]")] == SCRIPT_REFS, route + ": exact script order/binding drift"
