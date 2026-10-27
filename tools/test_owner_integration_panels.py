@@ -39,9 +39,14 @@ class OwnerIntegrationPanelTests(unittest.TestCase):
                     with self.assertRaisesRegex(AssertionError, error): q.inventory(self.config())
 
     def test_missing_or_duplicate_current_modifier_is_rejected(self):
-        for route, token in [(LANDING, 'fc-adams-timeline-card'), (HUB, 'fc-life-scripture-reflection')]:
+        for route, token, attribute, count in [
+            (LANDING, 'fc-adams-timeline-card', 'class="fc-adams-timeline-card"', 1),
+            (HUB, 'fc-life-scripture-reflection', 'class="fc-life-reflection fc-life-scripture-reflection"', 4),
+        ]:
             source = (q.ROOT/route).read_text()
-            for changed in [source.replace(token, 'changed', 1), source+'<aside class="'+token+'">extra</aside>']:
+            self.assertEqual(source.count(attribute), count)
+            missing = source.replace(attribute, attribute.replace(token, 'changed'), 1)
+            for changed in [missing, source+'<aside class="'+token+'">extra</aside>']:
                 parser=q.Document();parser.feed(changed)
                 with self.assertRaises(AssertionError): q.assert_integrated_panel_owners(route, list(parser.root.walk()))
 

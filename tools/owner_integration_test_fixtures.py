@@ -16,6 +16,7 @@ from owner_integration_contract import historical_bytes, manifest, validate_file
 ARCHIVE = 'docs/owner-integration-contract/history/a36'
 FIXTURE_SHA = 'b2b7985c1bdead0e828e28a55517d3ca902a9b9e4c159730f193e25766f52c02'
 SHARED = {
+    'docs/unified-opening-inventory.json': '1b8a8fcd180c95591caff7a8cc26f90d8817942b',
     'site-system.css': 'bf2b326352f5a4b57cdf8195d9331264844b9c41',
     'missionary.css': '3c3c72d2219418525b4478a77cf96fe6de7b4055',
     'timeline-mobile-study.css': '67e3121a94784e6047f3b8a302ed8c91f4872e52',
