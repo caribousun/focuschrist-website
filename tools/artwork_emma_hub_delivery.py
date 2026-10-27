@@ -22,6 +22,41 @@ SCRIPTS = {'site-common.js', 'topic-artwork-details.js', 'full-image-viewer.js',
 PROFILES = {'desktop': (1280, 900, False), 'phone': (390, 844, True),
             'narrow': (320, 568, True), 'landscape': (844, 390, True)}
 
+# Exact supplemental context for two pre-existing hub stylesheets omitted from
+# the original receipt. Producer and current repository blobs were verified
+# equal. The retained report has no CSS response hashes; this is source-context
+# evidence, not a claim that the original receipts individually named them.
+SUPPLEMENT_SPEC_SHA256 = '5f1de193844aeeb108e8a474723188e8b5cf464eeacfa203f2cfe8802686baf9'
+SUPPLEMENT_PRODUCER = '87cce928c366f3f5820fce1ae19bc989a952d982'
+SUPPLEMENT = [
+    {'path': 'guided-studies.css', 'bytes': 5688, 'sha256': '45349a7b3f0524a32989f827960bb543c6003944f0781958458bb25856ed0892'},
+    {'path': 'targeted-six.css', 'bytes': 3484, 'sha256': '6234f992191650a688b93dc452215778b783fe9b3e0a9ed030a79641c4b0edc6'},
+]
+
+
+SUPPLEMENT_REVIEWS = [
+    {'path': 'docs/emma-hub-artwork-import/css-context-review-albert.json', 'bytes': 1984, 'sha256': 'f4b735e1264453cc9ff7b8fdd92e2d43385b0da1d28bcaeccd8351d6c8dd26d1'},
+    {'path': 'docs/emma-hub-artwork-import/css-context-review-independent.json', 'bytes': 2284, 'sha256': '72bb1082f1ce7add299a5ee6dab8813ad7307b5af6f6a21fd0416f8d73d334aa'},
+]
+
+def check_supplement_reviews(root):
+    roles = set()
+    for pointer in SUPPLEMENT_REVIEWS:
+        review = json.loads(bound(root, pointer))
+        role = review.get('reviewer')
+        require(role in {'Albert', 'independent collaborating agent'} and role not in roles, 'supplement reviewer mismatch')
+        require(review.get('decision') == 'CONCUR_EXACT_TWO_UNCHANGED_CSS_SOURCE_CONTEXT_SUPPLEMENT'
+                and review.get('spec_sha256') == SUPPLEMENT_SPEC_SHA256
+                and review.get('actual_render_producer') == SUPPLEMENT_PRODUCER, 'supplement review binding mismatch')
+        require(review.get('actual_author') and review.get('observations') and review.get('limits'), 'incomplete supplement source review')
+        stamp(review['reviewed_at'])
+        sources = review.get('sources', [])
+        require(len(sources) == len(SUPPLEMENT) and
+                [{k: row.get(k) for k in ('path','bytes','sha256')} for row in sources] == SUPPLEMENT,
+                'supplement review source mismatch')
+        roles.add(role)
+    require(roles == {'Albert', 'independent collaborating agent'}, 'supplement reviews missing')
+
 
 def require_finished(record):
     require(APPROVED_RECORD_SHA256 is not None, 'pending current hub independent/root approval')
@@ -72,7 +107,14 @@ def check_spec(root, spec, predecessor, page_dependencies):
     names = {x['path'] for x in context}
     require(len(names) == len(context) and routes | SCRIPTS <= names, 'missing/duplicate current context')
     for route in routes:
-        require(page_dependencies(root, route) <= names, 'missing current page/CSS context')
+        missing = page_dependencies(root, route) - names
+        if missing:
+            require(route == HUB and canonical(spec) == SUPPLEMENT_SPEC_SHA256
+                    and missing == {item['path'] for item in SUPPLEMENT},
+                    'missing current page/CSS context')
+            for item in SUPPLEMENT:
+                bound(root, item)
+            check_supplement_reviews(root)
     for item in context:
         bound(root, item)
     return previous_pages
@@ -333,6 +375,11 @@ def check_reviews(root, record, normalized, rendered_sha):
     require(reviewers == {'Fermi', 'Newton', 'Albert'}, 'three genuine current-context reviews required')
 
 
+def check_supplement_producer(root, pointer):
+    rendered = json.loads(bound(root, pointer))
+    require(rendered.get('producer_head') == SUPPLEMENT_PRODUCER, 'supplement producer mismatch')
+
+
 def validate(root, record, added, covered, rejected, pixel_hash, page_dependencies, historical_validate):
     normalized = require_finished(record)
     spec = record['spec']
@@ -345,6 +392,7 @@ def validate(root, record, added, covered, rejected, pixel_hash, page_dependenci
     previous_pages = check_spec(root, spec, predecessor, page_dependencies)
     check_unique_hub_owners(root)
     rendered_sha = check_rendered(root, record['rendered_context'], spec, predecessor)
+    check_supplement_producer(root, record['rendered_context'])
     check_reviews(root, record, normalized, rendered_sha)
     # Every original assertion still runs on the genuine predecessor record and
     # its exact restored five page bytes. Current sources/reviews passed above.

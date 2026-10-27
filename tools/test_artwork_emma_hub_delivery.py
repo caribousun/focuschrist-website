@@ -39,6 +39,49 @@ class EmmaHubContextTests(unittest.TestCase):
         with patch.object(hub, 'APPROVED_RECORD_SHA256', old.canonical(self.record)), self.assertRaises(ValueError):
             hub.require_finished(self.record)
 
+    def test_actual_dependency_callback_and_exact_supplement(self):
+        from artwork_creation_gate import page_dependencies
+        from owner_integration_contract import HUB
+        pages = hub.check_spec(ROOT, self.record['spec'], self.previous, page_dependencies)
+        self.assertEqual(set(pages), set(hub.STORIES))
+        actual = page_dependencies(ROOT, HUB)
+        names = {x['path'] for x in self.record['spec']['context']}
+        self.assertEqual(actual - names, {x['path'] for x in hub.SUPPLEMENT})
+        for name in {x['path'] for x in hub.SUPPLEMENT}:
+            original = Path.read_bytes; target = ROOT/name
+            def mutate(path):
+                raw = original(path)
+                return raw + b' ' if path == target else raw
+            with self.subTest(name=name), patch.object(Path,'read_bytes',mutate):
+                with self.assertRaises(ValueError):
+                    hub.check_spec(ROOT,self.record['spec'],self.previous,page_dependencies)
+        def unexpected(root, route):
+            return page_dependencies(root,route) | ({'unexpected.css'} if route == HUB else set())
+        with self.assertRaisesRegex(ValueError,'missing current page/CSS context'):
+            hub.check_spec(ROOT,self.record['spec'],self.previous,unexpected)
+        changed=copy.deepcopy(self.record['spec']);changed['owner_scope'] += ' changed'
+        with self.assertRaisesRegex(ValueError,'missing current page/CSS context'):
+            hub.check_spec(ROOT,changed,self.previous,page_dependencies)
+
+    def test_supplement_reviews_are_bound_and_tampering_rejected(self):
+        hub.check_supplement_reviews(ROOT)
+        original = Path.read_bytes
+        for item in hub.SUPPLEMENT_REVIEWS:
+            target = ROOT / item['path']
+            def mutate(path):
+                raw = original(path)
+                return raw + b' ' if path == target else raw
+            with self.subTest(path=item['path']), patch.object(Path,'read_bytes',mutate):
+                with self.assertRaises(ValueError):
+                    hub.check_supplement_reviews(ROOT)
+
+    def test_supplement_binds_actual_producer_and_rejects_other(self):
+        record = json.loads((ROOT / old.MANIFEST).read_bytes())
+        hub.check_supplement_producer(ROOT,record['rendered_context'])
+        with patch.object(hub,'bound',return_value=json.dumps({'producer_head':'0'*40}).encode()):
+            with self.assertRaisesRegex(ValueError,'supplement producer mismatch'):
+                hub.check_supplement_producer(ROOT,record['rendered_context'])
+
     def test_exact_archived_record_and_source_spec(self):
         self.assertEqual(old.sha((ROOT / hub.PREDECESSOR_PATH).read_bytes()), hub.PREDECESSOR_SHA256)
         self.assertEqual(old.canonical(self.previous), hub.PREDECESSOR_CANONICAL)
