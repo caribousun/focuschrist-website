@@ -10397,6 +10397,76 @@
         "docs/world-scripture-import/companions-20261021/albert-review.md",
         "docs/world-scripture-import/delivery.json"
       ]
+    },
+    {
+      "path": "history/emma-elect-lady.html",
+      "status": "verified",
+      "published_text_sha256": "eb428d5e2778f99c9d68ae5bf2c74df532f83e050dde78399b7e729b6b229402",
+      "reviewed_source_sha256": "7885d852c85fe3d8958ad50f7c39949c6a9c00a69a5d94c5368c34e3ef928664",
+      "reviewed_on": "2026-10-27",
+      "review_standard": "Independent native AI semantic review for the bounded Jeff-role task on 2026-10-27, not an action or concurrence by the external Merlin-side worker. Read the complete current static page, including narrative, quotations, source attributions, captions, alternative text, metadata, navigation and reflections; checked the cited official publications and documentary editions. The current source was fetched at 3db603b54a490a3ca9b4c2d702610ddf151b35b3 and matched the reviewed local bytes. Exact inverse comparisons confirm that the canonical-header substitution changed only navigation furniture and the subsequent stylesheet cache-token substitution changed no published wording; story prose, captions, alternatives and source links remain byte-identical to the delivered intake outside the header. Genuine delivered Hannah text passes and Merlin integration receipts were read and reused only within their actual text scope, not promoted into current-head release approvals. Historical recollection and optional devotional interpretation remain distinct from archival fact. This records AI semantic review and current wording binding, not examination of every underlying original manuscript, artwork perfection, full CI success, release concurrence, publication or owner aesthetic acceptance. The official Liahona account supports the warning ride and protection/scribe details; Church History Topics and Revelations in Context support early chronology, baptism and family loss; Doctrine and Covenants 25 supports the quoted calling and the explicitly interpretive reflection on its order. The ride caption retains later family-memory attribution. No claim of four visible hooves is made or accepted.",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/emma-hale-smith?lang=eng",
+        "https://www.churchofjesuschrist.org/study/liahona/2021/03/emma-protected-scripture?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/25?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/revelations-in-context/thou-art-an-elect-lady?lang=eng"
+      ]
+    },
+    {
+      "path": "history/emma-hymns.html",
+      "status": "verified",
+      "published_text_sha256": "a2434ec83011afe17288f0db869f3ae3bc8a71134a84213bb6254b8327b73e82",
+      "reviewed_source_sha256": "e80c58261f8d05c2027af6ea84ab46bd8dab0c44518e5f9c47ae5158b9cc3caa",
+      "reviewed_on": "2026-10-27",
+      "review_standard": "Independent native AI semantic review for the bounded Jeff-role task on 2026-10-27, not an action or concurrence by the external Merlin-side worker. Read the complete current static page, including narrative, quotations, source attributions, captions, alternative text, metadata, navigation and reflections; checked the cited official publications and documentary editions. The current source was fetched at 3db603b54a490a3ca9b4c2d702610ddf151b35b3 and matched the reviewed local bytes. Exact inverse comparisons confirm that the canonical-header substitution changed only navigation furniture and the subsequent stylesheet cache-token substitution changed no published wording; story prose, captions, alternatives and source links remain byte-identical to the delivered intake outside the header. Genuine delivered Hannah text passes and Merlin integration receipts were read and reused only within their actual text scope, not promoted into current-head release approvals. Historical recollection and optional devotional interpretation remain distinct from archival fact. This records AI semantic review and current wording binding, not examination of every underlying original manuscript, artwork perfection, full CI success, release concurrence, publication or owner aesthetic acceptance. Checked the hymn-selection charge, Phelps collaboration, ninety-text collection and the distinction between its 1835 title date and apparent early-1836 availability. The familiar hymn quotation uses the current Church hymn wording, not a claim of diplomatic spelling from the 1835 printing; the earlier collection includes that hymn. Reflections about singing and service are devotional applications rather than new historical quotations.",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/emma-hale-smith?lang=eng",
+        "https://www.josephsmithpapers.org/paper-summary/collection-of-sacred-hymns-1835/1",
+        "https://www.josephsmithpapers.org/paper-summary/collection-of-sacred-hymns-1835/113",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/25?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/hymns/how-firm-a-foundation?lang=eng"
+      ]
+    },
+    {
+      "path": "history/emma-winter-crossing.html",
+      "status": "verified",
+      "published_text_sha256": "21d72ad5cd25412da82c765fa93299742c4253c7a722a01fb788f45b51681076",
+      "reviewed_source_sha256": "1d1c1f08becae7e8fd3557f5675fc33c05829a539b69f9c0630cd621b027236d",
+      "reviewed_on": "2026-10-27",
+      "review_standard": "Independent native AI semantic review for the bounded Jeff-role task on 2026-10-27, not an action or concurrence by the external Merlin-side worker. Read the complete current static page, including narrative, quotations, source attributions, captions, alternative text, metadata, navigation and reflections; checked the cited official publications and documentary editions. The current source was fetched at 3db603b54a490a3ca9b4c2d702610ddf151b35b3 and matched the reviewed local bytes. Exact inverse comparisons confirm that the canonical-header substitution changed only navigation furniture and the subsequent stylesheet cache-token substitution changed no published wording; story prose, captions, alternatives and source links remain byte-identical to the delivered intake outside the header. Genuine delivered Hannah text passes and Merlin integration receipts were read and reused only within their actual text scope, not promoted into current-head release approvals. Historical recollection and optional devotional interpretation remain distinct from archival fact. This records AI semantic review and current wording binding, not examination of every underlying original manuscript, artwork perfection, full CI success, release concurrence, publication or owner aesthetic acceptance. Checked the family separation and children's ages, frozen-river journey and protected Bible-translation manuscript, and the date, setting and quoted words of the March 7, 1839 letter. The Joseph Smith Papers presents a later letterbook copy, not an extant original letter; the page does not claim otherwise. The Quincy portrait is expressly not an image of the crossing, and reflective language is kept distinct from the letter quotation.",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/emma-hale-smith?lang=eng",
+        "https://www.churchofjesuschrist.org/study/history/topics/joseph-and-emma-hale-smith-family?lang=eng",
+        "https://www.churchofjesuschrist.org/study/liahona/2021/03/emma-protected-scripture?lang=eng",
+        "https://www.josephsmithpapers.org/paper-summary/letter-from-emma-smith-7-march-1839/1"
+      ]
+    },
+    {
+      "path": "history/emma-relief-society.html",
+      "status": "verified",
+      "published_text_sha256": "24e94e649e5e5b2fcf2162f3fb158d32cf17890c7462e905dcfa9f51c5d041ae",
+      "reviewed_source_sha256": "dac6cfe37dde749a7a6a90bd40c20a76fa2efcd508def721b5e6f9068b416414",
+      "reviewed_on": "2026-10-27",
+      "review_standard": "Independent native AI semantic review for the bounded Jeff-role task on 2026-10-27, not an action or concurrence by the external Merlin-side worker. Read the complete current static page, including narrative, quotations, source attributions, captions, alternative text, metadata, navigation and reflections; checked the cited official publications and documentary editions. The current source was fetched at 3db603b54a490a3ca9b4c2d702610ddf151b35b3 and matched the reviewed local bytes. Exact inverse comparisons confirm that the canonical-header substitution changed only navigation furniture and the subsequent stylesheet cache-token substitution changed no published wording; story prose, captions, alternatives and source links remain byte-identical to the delivered intake outside the header. Genuine delivered Hannah text passes and Merlin integration receipts were read and reused only within their actual text scope, not promoted into current-head release approvals. Historical recollection and optional devotional interpretation remain distinct from archival fact. This records AI semantic review and current wording binding, not examination of every underlying original manuscript, artwork perfection, full CI success, release concurrence, publication or owner aesthetic acceptance. Checked the twenty-woman founding meeting, March 17, 1842 election and counselors, attributed remarks, practical relief and fair payment for widows, membership growth, Lucy Mack Smith's testimony, Nauvoo meeting cessation and later reuse of the minute book. The hospitality caption describes a documented practice, not an invented dated visitor or arrival; its visual description does not authenticate a specific building.",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/female-relief-society-of-nauvoo?lang=eng",
+        "https://www.churchhistorianspress.org/the-first-fifty-years-of-relief-society/part-1/1-2/1-2-1?lang=eng",
+        "https://www.churchofjesuschrist.org/study/history/topics/emma-hale-smith?lang=eng"
+      ]
+    },
+    {
+      "path": "history/emma-last-testimony.html",
+      "status": "verified",
+      "published_text_sha256": "c09709a15dca0f96561bf6b20a633cbbbb88f685cbd2bf68ece45fa15f8383e2",
+      "reviewed_source_sha256": "02e05c94935d4798708b203fb4d4419611fae556a21575f826a82f7f9132ffc5",
+      "reviewed_on": "2026-10-27",
+      "review_standard": "Independent native AI semantic review for the bounded Jeff-role task on 2026-10-27, not an action or concurrence by the external Merlin-side worker. Read the complete current static page, including narrative, quotations, source attributions, captions, alternative text, metadata, navigation and reflections; checked the cited official publications and documentary editions. The current source was fetched at 3db603b54a490a3ca9b4c2d702610ddf151b35b3 and matched the reviewed local bytes. Exact inverse comparisons confirm that the canonical-header substitution changed only navigation furniture and the subsequent stylesheet cache-token substitution changed no published wording; story prose, captions, alternatives and source links remain byte-identical to the delivered intake outside the header. Genuine delivered Hannah text passes and Merlin integration receipts were read and reused only within their actual text scope, not promoted into current-head release approvals. Historical recollection and optional devotional interpretation remain distinct from archival fact. This records AI semantic review and current wording binding, not examination of every underlying original manuscript, artwork perfection, full CI success, release concurrence, publication or owner aesthetic acceptance. Checked the later-life chronology, family losses, temporary Fulton refuge, second marriage, Riverside Mansion context, separate church affiliation and final testimony. The testimony wording and em-dash presentation match Church History Topics; the Ensign presentation uses a period between the same clauses, so no punctuation-exact transcription of that Ensign version is claimed. Joseph III's recorded later testimony remains attributed, and the treatment of David avoids inventing a modern diagnosis.",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/emma-hale-smith?lang=eng",
+        "https://www.churchofjesuschrist.org/study/history/topics/joseph-and-emma-hale-smith-family?lang=eng",
+        "https://www.churchofjesuschrist.org/study/ensign/1992/08/my-great-great-grandmother-emma-hale-smith?lang=eng",
+        "https://history.churchofjesuschrist.org/media-exhibit/a-history-and-record-on-plates-of-glass/nauvoo-house-on-the-mississippi-river?from=home&lang=eng"
+      ]
     }
   ]
 }
