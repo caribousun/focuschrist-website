@@ -78,6 +78,10 @@ const TYPES={'.html':'text/html','.css':'text/css','.js':'text/javascript','.web
    // Close returns focus to the artwork trigger.
    await dialog.locator('button[data-artwork-detail-close]').click();
    await page.waitForFunction(()=>!document.querySelector('dialog.fc-artwork-detail-dialog[open]'));
+   // Native close() removes [open] before its queued close event runs.
+   // The topic dialog's close listener removes this class and restores focus.
+   // Observe that lifecycle completion; do not alter the page or waive the assertions.
+   await page.waitForFunction(()=>!document.body.classList.contains('fc-dialog-open'),null,{timeout:5000});
    assert.equal(await page.evaluate(()=>document.body.classList.contains('fc-dialog-open')),false,`${s.page}: dialog-open body class left behind`);
    assert(await trigger.evaluate(n=>document.activeElement===n),`${s.page}: focus did not return to the artwork`);
    results.push({page:s.page,journey:'dialog-fullsize-close-focus',width:390});
