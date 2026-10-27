@@ -36,7 +36,7 @@ def bound(root, item):
     return p
 
 
-def references(root, scope, asset_paths, site_origin):
+def references(root, scope, asset_paths, site_origin, historical=False):
     """Conservative exact path occurrence census, including HTML/JSON/JS/CSS.
 
     Scope is a reviewed, hash-pinned set, not a lexical Emma search. References
@@ -46,7 +46,13 @@ def references(root, scope, asset_paths, site_origin):
     result = Counter()
     asset_names = {Path(p).name for p in asset_paths}
     for item in scope:
-        text = bound(root, item).read_text(encoding='utf-8').replace('\\/', '/')
+        path = bound(root, item)
+        if historical:
+            from artwork_display_delivery import reviewed_bytes
+            text = reviewed_bytes(path).decode('utf-8')
+        else:
+            text = path.read_text(encoding='utf-8')
+        text = text.replace('\\/', '/')
         for token in re.findall(r'''[^\\\s\"'<>(),;{}\[\]=]+''', text):
             url = urlsplit(token)
             if url.scheme or url.netloc:
@@ -66,6 +72,42 @@ def references(root, scope, asset_paths, site_origin):
             if path in asset_paths and not (candidate.is_relative_to(root.resolve()) and candidate.relative_to(root.resolve()).as_posix() == path):
                 result[(item['path'], path)] += 1
     return result
+
+
+# This successor reconciles only the reviewed current H2/C2 retirements. The
+# historical closure contract and every original receipt remain unchanged.
+OWNER_CLOSURE_CONTRACT = '4acbd23141f1e6d73ed8932d5bea1ee5b4091b230fd4c0ec6a16ecf98565ffff'
+CURRENT_SCOPE_PINS = {
+    'history/emma-hale-smith.html': '50c334379066722ef6e80e97d70f0f2ca431777b5857eb15b998da65cc1783cf',
+    'art-gallery.json': '1bf5d0adbb1a6699313cf24a599a316e800b9e62ef8aeeb7acfde8f32e867402',
+    'site-search-index.json': 'a9933a9ec749aec4163a1b146f0946c54244a4f78f781e7f508cea4e51b8260a',
+    'docs/exclusive-artwork-ownership.json': '50b114496018304f66ff1a7346f131318fd9db1172c9c0181d2ffa791fcb8aa7',
+}
+H2_REMOVED = {
+    ('art-gallery.json', 'assets/page-art/emma-life/emma-h2-review-1536.webp'): 2,
+    ('art-gallery.json', 'assets/page-art/emma-life/emma-h2-review-960.webp'): 2,
+    ('history/emma-hale-smith.html', 'assets/page-art/emma-life/emma-h2-review-1536.webp'): 2,
+    ('history/emma-hale-smith.html', 'assets/page-art/emma-life/emma-h2-review-640.webp'): 1,
+    ('history/emma-hale-smith.html', 'assets/page-art/emma-life/emma-h2-review-960.webp'): 2,
+    ('site-search-index.json', 'assets/page-art/emma-life/emma-h2-review-960.webp'): 1,
+}
+
+def current_retirement_census(root, scope, assets, origin, expected):
+    for name, pin in CURRENT_SCOPE_PINS.items():
+        require(hashlib.sha256(local(root, name).read_bytes()).hexdigest() == pin, 'Current retirement source drift: ' + name)
+    registry = json.loads(local(root, 'docs/exclusive-artwork-ownership.json').read_bytes())
+    retired_paths = set()
+    for name in ('emma-h2', 'emma-c2'):
+        rows = [r for r in registry['replacements'] if r.get('name') == name]
+        require(len(rows) == 1 and rows[0].get('placement_status') == 'retired' and rows[0].get('current_placement') is None, 'Retired ownership mismatch: ' + name)
+        retired_paths.update(a['path'] for a in rows[0]['assets'])
+    require(all(expected[pair] == count for pair, count in H2_REMOVED.items()), 'Historical H2 census drift')
+    current_expected = expected.copy()
+    for pair in H2_REMOVED:
+        del current_expected[pair]
+    actual = references(root, scope, assets | retired_paths, origin)
+    require(actual == current_expected, 'Active consumer closure mismatch')
+    return current_expected
 
 
 def validate(root, closure, expected_contract, pixel_hash, final=False):
@@ -167,8 +209,15 @@ def validate(root, closure, expected_contract, pixel_hash, final=False):
                 bound(root, item)
         require(row['root_review']['role'] == 'root' and row['root_review']['actual_actor'] not in {x['actual_actor'] for x in reviews}, 'Root review not distinct')
     require(set(all_assets) <= set(contract['known_asset_paths']), 'Unclassified active asset')
-    discovered = references(root, scope, set(contract['known_asset_paths']), contract['site_origin'])
-    require(discovered == expected, 'Active consumer closure mismatch')
+    assets = set(contract['known_asset_paths'])
+    if expected_contract == OWNER_CLOSURE_CONTRACT:
+        historical = references(root, scope, assets, contract['site_origin'], historical=True)
+        require(historical == expected, 'Historical consumer closure mismatch')
+        current_expected = current_retirement_census(root, scope, assets, contract['site_origin'], expected)
+    else:
+        current_expected = expected
+        discovered = references(root, scope, assets, contract['site_origin'])
+        require(discovered == expected, 'Active consumer closure mismatch')
     # Resolved computed/PDF consumers are separate signed-off evidence, never
     # silently guessed by this literal scanner.
     require(contract['unresolved_consumers'] == [], 'Unresolved computed/PDF consumer')
@@ -183,7 +232,7 @@ def validate(root, closure, expected_contract, pixel_hash, final=False):
         require(closure['status'] == 'owner_accepted', 'Owner acceptance still pending')
         public = closure['public_closeout']
         require(public['subject_sha256'] == canonical(rows), 'Public evidence predates correction')
-        require(public['deployment_commit'] and public['current_consumers'] == sorted([[*x, n] for x, n in expected.items()]), 'Public consumers incomplete')
+        require(public['deployment_commit'] and public['current_consumers'] == sorted([[*x, n] for x, n in current_expected.items()]), 'Public consumers incomplete')
         require(public['native_evidence'] and public['byte_evidence'], 'Current public evidence missing')
         for item in public['native_evidence'] + public['byte_evidence']:
             bound(root, item)

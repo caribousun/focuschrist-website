@@ -4,6 +4,8 @@ import hashlib
 import tempfile
 import unittest
 from pathlib import Path
+from collections import Counter
+from unittest.mock import patch
 from artwork_owner_closure import canonical, validate, references
 
 
@@ -153,6 +155,51 @@ class PortableReferenceTests(unittest.TestCase):
     def test_parent_escape_does_not_count(self):
         self.assertEqual(self.census('<img src="../assets/a.webp">'), 0)
 
+
+
+class CurrentRetirementCensusTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        import json, artwork_owner_closure as c
+        cls.gate = c
+        cls.root = Path(__file__).resolve().parents[1]
+        closure = json.loads((cls.root/'docs/artwork-correction-reviews.json').read_text())['owner_requirement_closure']
+        cls.contract = closure['contract']
+        cls.expected = Counter({(x['path'],x['asset']):x['occurrences'] for row in closure['families'] for x in row['consumers']})
+        cls.scope = cls.contract['consumer_scope']
+        cls.assets = set(cls.contract['known_asset_paths'])
+        cls.origin = cls.contract['site_origin']
+        cls.current = c.current_retirement_census(cls.root,cls.scope,cls.assets,cls.origin,cls.expected)
+
+    def test_exact_historical_and_current_censuses(self):
+        historical = self.gate.references(self.root,self.scope,self.assets,self.origin,historical=True)
+        self.assertEqual(historical,self.expected)
+        self.assertEqual((len(historical),sum(historical.values())),(113,170))
+        self.assertEqual((len(self.current),sum(self.current.values())),(107,160))
+        self.assertEqual(self.expected-self.current,Counter(self.gate.H2_REMOVED))
+
+    def test_each_current_source_or_registry_byte_drift_rejected(self):
+        original=Path.read_bytes
+        for name in self.gate.CURRENT_SCOPE_PINS:
+            target=self.root/name
+            def mutate(path):
+                raw=original(path)
+                return raw+b' ' if path==target else raw
+            with self.subTest(name=name),patch.object(Path,'read_bytes',mutate):
+                with self.assertRaisesRegex(ValueError,'Current retirement source drift'):
+                    self.gate.current_retirement_census(self.root,self.scope,self.assets,self.origin,self.expected)
+
+    def test_retired_or_unexpected_consumers_rejected(self):
+        for pair in [('history/emma-hale-smith.html','assets/page-art/emma-life/emma-h2-review-960.webp'),('history/emma-hale-smith.html','assets/page-art/emma-life/emma-c2-review-960.webp'),('index.html','assets/page-art/emma-life/emma-h1-review-960.webp')]:
+            changed=self.current.copy();changed[pair]+=1
+            with self.subTest(pair=pair),patch.object(self.gate,'references',return_value=changed):
+                with self.assertRaisesRegex(ValueError,'Active consumer closure mismatch'):
+                    self.gate.current_retirement_census(self.root,self.scope,self.assets,self.origin,self.expected)
+
+    def test_historical_removal_is_not_blanket_waived(self):
+        changed=self.expected.copy();changed[next(iter(self.gate.H2_REMOVED))]-=1
+        with self.assertRaisesRegex(ValueError,'Historical H2 census drift'):
+            self.gate.current_retirement_census(self.root,self.scope,self.assets,self.origin,changed)
 
 if __name__ == '__main__':
     unittest.main()
