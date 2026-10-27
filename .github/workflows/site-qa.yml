@@ -606,3 +606,62 @@ jobs:
             indices-evidence.txt
           include-hidden-files: true
           if-no-files-found: ignore
+
+  emma-render-diagnostic:
+    name: Emma rendered evidence (diagnostic, not release acceptance)
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - name: Check out the exact pull-request merge tree
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Verify QA dependency contract before installation
+        run: python tools/qa_dependency_contract.py --self-test
+
+      - name: Install shared QA dependencies
+        run: python -m pip install -r tools/qa-requirements.txt
+
+      - name: Install existing pinned browser presentation dependencies
+        run: |
+          npm install --prefix /tmp/focus-row-qa --no-save --package-lock=false --ignore-scripts playwright@1.55.1 leaflet@1.9.4
+          /tmp/focus-row-qa/node_modules/.bin/playwright install --with-deps chromium
+
+      - name: Bind the diagnostic to the reviewed renderer and checkout
+        run: |
+          printf '%s  %s\n' '3d968271a56f17dbbead1c206a327091b879d3b52c654f4915bb522d96ecd5d0' 'tools/emma_story_browser_qa.js' | sha256sum --check
+          mkdir -p .qa-artifacts/emma-story
+          {
+            echo "scope=diagnostic rendering only; artwork-creation and all release gates remain required"
+            echo "github_sha=${{ github.sha }}"
+            echo "ref=${{ github.ref }}"
+            echo "event=${{ github.event_name }}"
+            git rev-parse HEAD
+            git log -1 --format='parents %P'
+            sha256sum .github/workflows/site-qa.yml tools/emma_story_browser_qa.js
+          } > .qa-artifacts/emma-story/diagnostic-evidence.txt
+
+      - name: Capture reviewed Emma desktop and phone-width journeys
+        id: emma_render
+        run: timeout --signal=TERM --kill-after=15s 5m env NODE_PATH=/tmp/focus-row-qa/node_modules node tools/emma_story_browser_qa.js
+
+      - name: Preserve actual diagnostic outcome
+        if: always()
+        run: |
+          mkdir -p .qa-artifacts/emma-story
+          echo "render_outcome=${{ steps.emma_render.outcome }}" >> .qa-artifacts/emma-story/diagnostic-evidence.txt
+
+      - name: Save diagnostic Emma render evidence without accepting release
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: emma-story-render-diagnostic
+          path: .qa-artifacts/emma-story/
+          include-hidden-files: true
+          if-no-files-found: ignore
+          retention-days: 7
