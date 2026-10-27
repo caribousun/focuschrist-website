@@ -1,0 +1,35 @@
+name: Static follow-on diagnostic (not release acceptance)
+on:
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  static-diagnostic:
+    if: github.event.pull_request.number == 531
+    name: Read-only static follow-on diagnostic (not release acceptance)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out the same pull-request merge tree as site QA
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Verify QA dependency contract before installation
+        run: python tools/qa_dependency_contract.py --self-test
+      - name: Install existing shared QA dependencies
+        run: python -m pip install -r tools/qa-requirements.txt
+      - name: Run bounded static checks and record each result
+        env:
+          EXPECTED_CHECKOUT_SHA: ${{ github.sha }}
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: bash tools/static_follow_on_diagnostic.sh
+      - name: Preserve diagnostic output, including failures and timeouts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: static-follow-on-diagnostic
+          path: .qa-artifacts/static-follow-on/
+          include-hidden-files: true
+          if-no-files-found: warn
+          retention-days: 7
