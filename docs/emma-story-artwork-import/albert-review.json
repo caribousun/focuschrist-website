@@ -1,15 +1,15 @@
 {
   "reviewer": "Albert",
   "decision": "CONCUR",
-  "spec_sha256": "d0fa3a446fc7d9c3a0c4f8978eb73df822d5fa30a6120d307871e590304d9e78",
-  "reviewed_at": "2026-10-27T11:45:03.832835+00:00",
+  "spec_sha256": "ecfb210ffbb151a881baa74ac15a1398627ca628f7b089108a5b4bf394465960",
+  "reviewed_at": "2026-10-27T12:50:34.756459+00:00",
   "withdrawn": false,
-  "scope": "Exact five cache-token-only source successor. Root independently rehashed all 43 unique source, asset, style and provenance pins. Prior original/derivative observations reused only for identical bytes; eight current captures directly inspected including all seven changed captures and the prior ride dialog comparison. No whole-QA or production approval.",
+  "scope": "Exact hymns canonical-link successor, with all 43 source/asset/style/provenance pins rehashed by root. Same 20 artwork assets retain prior direct original/derivative review. Root personally viewed twelve current captures (eight new and four changed), inspected actual 64-result/75-capture report and source. New rendered link, source-pill and reader behavior accepted within this finite scope; full normal QA and production remain pending.",
   "source_provenance_verified": true,
   "actual_derivatives_inspected": true,
   "assembled_context_inspected": true,
   "checks": {
-    "identity": "Prior selected v17 ride and four approved v2 scene designs are preserved by all 20 exact asset hashes. Current five desktop rendered figures and ride dialog show unchanged recognizable selected designs. Prior direct derivative/original review is reused only for identical bytes; no biometric exactness claim.",
+    "identity": "All 20 selected original/derivative assets remain byte-identical. Current hymnal body/dialog retains the reviewed face, pose, book and clothing. Other selected scenes retain prior independently inspected exact bytes; no new biometric/historical identity guarantee.",
     "age": "Story age labels and approved younger/older styling are retained. Appearance is not independent proof of an exact numerical age.",
     "expression_gaze": "Ride looks along the route ahead; hymnal and Quincy look down; hospitality addresses the visitor; testimony has a speaking expression and gaze to the right. No new blank-stare drift observed.",
     "atmosphere": "Warm autumn motion and restrained indoor lighting support the separate story moods without new visual treatment.",
@@ -18,38 +18,38 @@
     "period_sources": "The preserved public-safe source receipt summaries, Hannah-reviewed prose and source pointers remain bound. Unknown exact generation times are not inferred from file metadata.",
     "anatomy": "The selected ride has three clearly visible hoof endpoints and a naturally occluded far hind hoof. Strict four-hoof visibility remains NOT_MET; no unconditional anatomy claim.",
     "uniqueness": "Five distinct selected originals and fifteen exact derivative assets are pinned to five separate story routes. Reuse of character identity is intentional; no substituted artwork was found.",
-    "desktop_phone": "Actual run 40497562241 diagnostic has 46 passing journeys and 60 captures; 53 are byte-identical to prior footer evidence. Root inspected all seven changed captures plus one unchanged phone footer. Six changed desktop bounds are confined to header strips; changed phone dialog retains artwork, text and visible controls. Canonical notices remain unchanged and visible. New 40-state history body-spacing test is still unexecuted because the full QA correctly rejected the previously stale context; this artwork-context concurrence is not that test result."
+    "desktop_phone": "Actual 40505834080 diagnostic passed 64 journeys with 75 captures: prior 46 journeys plus 15 scripture interactions and three artwork action flows at 1280/390/320. Root directly viewed twelve current captures, including exact verse range at all widths, new artwork source-pill layouts at all widths, chapter reader, caption reader, body markup and menu. Runtime verified full 16 or exact two verses against chapter25, exact source URL, keyboard Enter, Escape/button close, exact focus return and retained underlying artwork dialog. All fifteen controls had actual reachable bounds/hit tests; raw width field is element width, so viewport provenance is derived from reviewed loop order, not misread as a raw field.49 prior captures are byte-identical;11 changed and15 new are preserved. Old artwork evidence is reused only on exact bytes."
   },
   "limits": [
-    "Strict ride four-hoof visibility is NOT_MET because of natural occlusion.",
-    "Browser viewport widths1280/390/320 are not physical-device testing.",
-    "Some lower dialog controls require scrolling; tested close/focus journeys passed.",
-    "Search modal/form behavior was tested without submitting a query.",
-    "Full normal QA and release review remain required; this record grants only exact artwork evidence coverage.",
-    "The eight new-profile body-spacing tests and full normal QA remain pending; diagnostic success alone does not close them."
+    "Strict ride four-hoof visibility remains NOT_MET because of natural occlusion.",
+    "Viewport widths are not physical-device or cross-browser tests.",
+    "Long chapter/dialog content requires scrolling; this evidence does not claim every element simultaneously visible.",
+    "New scripture URLs were checked and same-page reader used; official external source was not followed as a new live availability check.",
+    "Raw scriptureControlEvidence width collision is disclosed; element widths preserved, viewport grouping derives from fixed loop order.",
+    "Actual current full QA stopped at stale artwork context before this acceptance. Normal full QA on the accepted current source still required; prior forty-state history pass belongs to previous2321500 source."
   ],
   "evidence": [
     {
-      "path": "docs/emma-story-artwork-import/evidence/albert-spacing-desktop.json",
-      "bytes": 2548,
-      "sha256": "bf55351968edfee78bb17add9f0c8f978f532d2b05f59dbbbc87242d82d8f4f3"
+      "path": "docs/emma-story-artwork-import/evidence/albert-scripture-desktop.json",
+      "bytes": 1729,
+      "sha256": "30d5040a0d7d4ecb48a83e020de04b737f9382c209a9cf2aa662100cc82e1f55"
     },
     {
-      "path": "docs/emma-story-artwork-import/evidence/albert-spacing-phone.json",
-      "bytes": 1626,
-      "sha256": "cfdd3377954222964df9d954c60827e0753b4f70bccbe179c6376ae4cad0ae3d"
+      "path": "docs/emma-story-artwork-import/evidence/albert-scripture-phone.json",
+      "bytes": 2758,
+      "sha256": "9f310bdd8ca5eaf5fd75f95b7d66903d5b4872421c75a5f8e0d5e38262698fc1"
     }
   ],
   "rendered": {
     "desktop": {
-      "path": "docs/emma-story-artwork-import/evidence/albert-spacing-desktop.json",
-      "bytes": 2548,
-      "sha256": "bf55351968edfee78bb17add9f0c8f978f532d2b05f59dbbbc87242d82d8f4f3"
+      "path": "docs/emma-story-artwork-import/evidence/albert-scripture-desktop.json",
+      "bytes": 1729,
+      "sha256": "30d5040a0d7d4ecb48a83e020de04b737f9382c209a9cf2aa662100cc82e1f55"
     },
     "phone": {
-      "path": "docs/emma-story-artwork-import/evidence/albert-spacing-phone.json",
-      "bytes": 1626,
-      "sha256": "cfdd3377954222964df9d954c60827e0753b4f70bccbe179c6376ae4cad0ae3d"
+      "path": "docs/emma-story-artwork-import/evidence/albert-scripture-phone.json",
+      "bytes": 2758,
+      "sha256": "9f310bdd8ca5eaf5fd75f95b7d66903d5b4872421c75a5f8e0d5e38262698fc1"
     }
   }
 }

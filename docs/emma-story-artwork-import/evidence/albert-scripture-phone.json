@@ -1,0 +1,66 @@
+{
+  "reviewer": "Albert",
+  "reviewed_at": "2026-10-27T12:50:34.756459+00:00",
+  "spec_sha256": "ecfb210ffbb151a881baa74ac15a1398627ca628f7b089108a5b4bf394465960",
+  "run_id": 40505834080,
+  "job_id": 122194787911,
+  "artifact_id": 12734338932,
+  "archive_sha256": "95c2213844496e68545902c91c2f77c1f353664b51c462eb150c0b94061ac08b",
+  "head": "8b4dde8ea504355fc6576872018c3f83486c0cad",
+  "producer_merge": "30d9bbc7b89d469f1f349dedc57cc10f2a43065b",
+  "results": 64,
+  "captures": 75,
+  "prior_capture_comparison": {
+    "identical": 49,
+    "changed": 11,
+    "new": 15
+  },
+  "directly_viewed": [
+    {
+      "name": "emma-hymns-artwork-actions-390.jpg",
+      "bytes": 62038,
+      "sha256": "a697751aa492a23eeb46399ad60c20bfe855bdc6d8a6bdfe8ad0731aa3a6bcf7"
+    },
+    {
+      "name": "emma-hymns-artwork-actions-320.jpg",
+      "bytes": 53237,
+      "sha256": "646d70be808633de7b7325d8445d058c0cf6c3630a707ccd0ce7ec9a1821226c"
+    },
+    {
+      "name": "emma-hymns-scripture-source-range-390.jpg",
+      "bytes": 38504,
+      "sha256": "8fb53c90b755e7d7f2bfae6c7cf26a2221b7b2d2f002f7e20f207217b954936b"
+    },
+    {
+      "name": "emma-hymns-scripture-source-range-320.jpg",
+      "bytes": 34278,
+      "sha256": "987506f3e253eea808a20cfd980ac7a274ee3d458a03160512569ad8afcc1f1d"
+    },
+    {
+      "name": "emma-hymns-scripture-body-first-320.jpg",
+      "bytes": 38338,
+      "sha256": "0fd491c7661c2f39676048a02cdfaf6e9b27767afa92856eee93f5ae8b01a0b4"
+    },
+    {
+      "name": "emma-hymns-scripture-caption-390.jpg",
+      "bytes": 44869,
+      "sha256": "e10bb79be0f8059a22aa1c0bfb477c9ea9bac2d50cfaceacdab1dff11a4fa108"
+    },
+    {
+      "name": "emma-story2-hymnal-review-320-viewport.jpg",
+      "bytes": 66298,
+      "sha256": "71d6c4fa52f6034ff8fa2d0f01ccca47d30d669a2668c2bbbd67d84750eb37cf"
+    },
+    {
+      "name": "emma-story2-hymnal-review-dialog-390.png",
+      "bytes": 332343,
+      "sha256": "a99d92b3d1c27066ae988e22a257d374e43d1a34665a191e0db834fd482db4a1"
+    },
+    {
+      "name": "emma-mobile-menu-390.jpg",
+      "bytes": 45462,
+      "sha256": "bee3f22154dafb14221f8b5396c2ea0a89619229c64f1bebb9ea23e256ac1579"
+    }
+  ],
+  "observations": "Exact chapter and 11\u201312 verse reader are readable with visible source and Close. New Scripture source pill and existing Joseph Smith Papers source coexist. Inline caption link is visible; artwork remains same selected bytes. Phone controls require ordinary dialog scrolling, evidenced reachable individually; no claim all controls and full artwork fit simultaneously. Desktop retains two-column artwork dialog. Raw control width is element width, not viewport; viewport groups can only be derived from fixed reviewed loop order. No physical-device or full release claim."
+}

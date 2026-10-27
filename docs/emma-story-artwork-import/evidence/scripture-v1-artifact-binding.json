@@ -1,0 +1,28 @@
+{
+  "scope": "Actual diagnostic metadata, not full QA or release acceptance",
+  "artifact_id": 12734338932,
+  "run_id": 40505834080,
+  "job_id": 122194787911,
+  "head_sha": "8b4dde8ea504355fc6576872018c3f83486c0cad",
+  "actual_merge_sha": "30d9bbc7b89d469f1f349dedc57cc10f2a43065b",
+  "base_parent": "b4e023cfbe5e98b1191571f8ed3ca97c5a9f0c8b",
+  "zip_bytes": 7309518,
+  "zip_sha256": "95c2213844496e68545902c91c2f77c1f353664b51c462eb150c0b94061ac08b",
+  "safe_regular_members_verified_equal": 79,
+  "render_outcome": "success",
+  "reported_journeys": 64,
+  "retained_journeys": 46,
+  "new_scripture_and_actions_journeys": 18,
+  "captures": 75,
+  "retained_capture_names": 60,
+  "new_captures": 15,
+  "spec_sha256": "ecfb210ffbb151a881baa74ac15a1398627ca628f7b089108a5b4bf394465960",
+  "normal_qa_pass": null,
+  "release_acceptance": false,
+  "limits": [
+    "Actual desktop Chromium viewports1280/390/320 by900, not physical phones",
+    "New caption/source pill changes action layout; own-author current review required",
+    "Far hind hoof naturally occluded; strict four-hoof visibility NOT_MET",
+    "No screenshots embedded in public metadata; previous evidence/failures preserved"
+  ]
+}

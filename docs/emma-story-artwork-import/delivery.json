@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "status": "REVIEWED_EXACT_CURRENT_EQUIVALENCE",
-  "normalized_at": "2026-10-27T11:22:03.419308+00:00",
+  "normalized_at": "2026-10-27T12:38:27.210020+00:00",
   "spec": {
     "registration_class": "EXACT_FIVE_EMMA_CURRENT_EQUIVALENCE",
     "historical_canonical_preflight_claim": false,
@@ -208,8 +208,8 @@
         "context": [
           {
             "path": "history/emma-hymns.html",
-            "bytes": 14603,
-            "sha256": "105553bc2d6725a01025434951923749b7d326f29a7c39996f8218a038380045"
+            "bytes": 15145,
+            "sha256": "ab1373de9ed550b1a7192f30f67f0222538d50c9422c4fca7168d8efe9fc754c"
           },
           {
             "path": "site-header.css",
@@ -277,7 +277,7 @@
             "sha256": "46915bd0e27fc394b68aad848cdfad37ac05959d2b7cdbac0e476a262ce1c802"
           }
         ],
-        "context_status": "TOKEN_ONLY_SUCCESSOR_TO_0e13daad_PENDING_ACTUAL_CURRENT_REVIEW",
+        "context_status": "CANONICAL_SCRIPTURE_ANCHOR_SUCCESSOR_TO_2321500_PENDING_ACTUAL_CURRENT_REVIEW",
         "generation_time": {
           "status": "UNKNOWN_NOT_INFERRED",
           "timestamp": null,
@@ -704,18 +704,18 @@
   "reviews": [
     {
       "path": "docs/emma-story-artwork-import/fermi-review.json",
-      "bytes": 9294,
-      "sha256": "30c05a99f4a50dec29aaed07a5a6658dbc7621552ccff4aa8bf98155b64f9366"
+      "bytes": 10263,
+      "sha256": "609689a0a5c902c2657211a802a92d0edd41df4e16e464a53c7716780e843ea3"
     },
     {
       "path": "docs/emma-story-artwork-import/newton-review.json",
-      "bytes": 8766,
-      "sha256": "551e9ad76887424d89abf999794894a9d403749f3474b79de7e09dba2c60a20d"
+      "bytes": 8048,
+      "sha256": "1575e888a752d037eb2cf3222be037885d7140ae90431d0dcc94b54c3bfcf765"
     },
     {
       "path": "docs/emma-story-artwork-import/albert-review.json",
-      "bytes": 4495,
-      "sha256": "fcbbe371f61d7c11e3b403af6af036eee511bbb0e1bf6633bee6a65d1f05f796"
+      "bytes": 5041,
+      "sha256": "50aed4cc7c3ff06ffd5b5831471482f39da9c8ff26ce6a066c71831ab62117d9"
     }
   ],
   "pending": []

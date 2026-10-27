@@ -255,7 +255,7 @@ jobs:
           NODE_PATH=/tmp/focus-row-qa/node_modules node tools/answer_opening_browser_qa.js
           NODE_PATH=/tmp/focus-row-qa/node_modules node tools/unified_opening_browser_qa.js
           NODE_PATH="/tmp/focus-row-qa/node_modules:$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/study_alignment_browser_qa.js
-          NODE_PATH=/tmp/focus-row-qa/node_modules node tools/content_boundaries_browser_qa.js
+          NODE_PATH="/tmp/focus-row-qa/node_modules:$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/content_boundaries_browser_qa.js
           NODE_PATH=/tmp/focus-row-qa/node_modules node tools/home_hero_height_browser_qa.js
           NODE_PATH=/tmp/focus-row-qa/node_modules node tools/conference_alignment_browser_qa.js
           NODE_PATH=/tmp/focus-row-qa/node_modules node tools/conference_archive_mobile_browser_qa.js
@@ -345,6 +345,7 @@ jobs:
           python tools/holy_ghost_qa_test.py
           python tools/plan_of_salvation_qa.py --selftest
           python tools/heavenly_father_qa.py --selftest
+          python -m unittest discover -s tools -p test_emma_inline_scripture.py
           python tools/topic_inline_scripture_qa.py
           python tools/topic_artwork_qa.py
           python tools/topic_body_picture_qa.py
@@ -654,7 +655,7 @@ jobs:
 
       - name: Bind the diagnostic to the reviewed renderer and checkout
         run: |
-          printf '%s  %s\n' '82d98b6f1c0ed5c3895d83e91b4fb481bcf28148bcb58d2cf3b7b915b70cecac' 'tools/emma_story_browser_qa.js' | sha256sum --check
+          printf '%s  %s\n' '28586765b6948e5de97c1e7cffaa67289f6d3af02c9b34951ce5f0081e8ac929' 'tools/emma_story_browser_qa.js' | sha256sum --check
           mkdir -p .qa-artifacts/emma-story
           {
             echo "scope=diagnostic rendering only; artwork-creation and all release gates remain required"

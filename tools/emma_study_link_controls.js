@@ -1,7 +1,7 @@
 'use strict';
 const assert=require('node:assert/strict'),crypto=require('node:crypto');
 const recordBytes=require('node:fs').readFileSync(require('node:path').join(__dirname,'../docs/emma-study-link-additions.json'));
-assert.equal(crypto.createHash('sha256').update(recordBytes).digest('hex'),'60cbcea5ec6b9c871d0a7028a59d16048f59af2e8ed45d487907fada749016e1','Exact reviewed Emma control manifest');
+assert.equal(crypto.createHash('sha256').update(recordBytes).digest('hex'),'0288b172a41de26b01c59b8de642f65c7fac77aac30396e76ca709475d8c1922','Exact reviewed Emma control manifest');
 const records=JSON.parse(recordBytes).pages;
 const owners=Object.freeze(['history/emma-elect-lady.html','history/emma-hymns.html','history/emma-winter-crossing.html','history/emma-relief-society.html','history/emma-last-testimony.html']);
 const sourceSelector='.fc-study-visual-sources a:not(.fc-button--primary)';

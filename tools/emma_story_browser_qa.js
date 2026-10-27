@@ -37,7 +37,7 @@ const TYPES={'.html':'text/html','.css':'text/css','.js':'text/javascript','.web
  const skipEvidence=[],headerEvidence=[],footerEvidence=[],shots=[];let screenshotBytes=0;
  const saveEvidence=()=>{const b=Buffer.from(JSON.stringify({skipEvidence,headerEvidence,footerEvidence,shots,screenshotBytes},null,2)+'\n');assert(b.length<=128*1024,'Skip evidence JSON bound');fs.writeFileSync(path.join(out,'skip-link-evidence.json'),b);};
  const capture=async name=>{
-  assert(shots.length<60,'Emma screenshot count bound');
+  assert(shots.length<75,'Emma screenshot count bound');
   const jpeg=name.endsWith('.jpg'),data=await page.screenshot({type:jpeg?'jpeg':'png',...(jpeg?{quality:80}:{}),fullPage:false,timeout:8000});
   assert(data.length<=1024*1024,'Single Emma screenshot exceeds 1 MiB');
   assert(screenshotBytes+data.length<=23*1024*1024,'Emma screenshot evidence exceeds 23 MiB');
@@ -289,7 +289,72 @@ const TYPES={'.html':'text/html','.css':'text/css','.js':'text/javascript','.web
     results.push({page:s.page,journey:'canonical-footer-notices',width});
    }
   }
-  assert.equal(footerEvidence.length,15);assert.equal(shots.length,60);assert.equal(results.length,46);
+  // Exact new hymns citation journeys; all prior 60 captures/46 results retained.
+  const scriptureEvidence=[],scriptureControlEvidence=[];
+  const chapter25=JSON.parse(fs.readFileSync(path.join(root,'scripture-data/dc-testament/dc/25.json'),'utf8'));
+  for(const width of [1280,390,320]){
+   await page.setViewportSize({width,height:900});
+   await page.goto(origin+'/history/emma-hymns.html');
+   await page.waitForSelector('#fc-scripture-reader',{state:'attached',timeout:8000});
+   const chapter='https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/25?lang=eng';
+   const exercise=async(trigger,label,range,artOpen)=>{
+    const href=await trigger.getAttribute('href');
+    assert.equal(href,chapter+(range?'&id=p11-p12#p11':''));
+    assert.equal(await trigger.getAttribute('target'),'_blank');
+    assert.equal(await trigger.getAttribute('rel'),'noopener noreferrer');
+    await trigger.scrollIntoViewIfNeeded();await trigger.focus();
+    assert(await trigger.evaluate(n=>document.activeElement===n));
+    await page.keyboard.press('Enter');
+    const reader=page.locator('#fc-scripture-reader[open]');await reader.waitFor({state:'visible',timeout:8000});
+    await page.waitForFunction(()=>document.querySelector('#fc-scripture-reader .fc-scripture-verses')?.children.length>0,null,{timeout:8000});
+    assert.equal(await reader.locator('#fc-scripture-title').textContent(),'Doctrine and Covenants 25'+(range?':11–12':''));
+    assert.equal(await reader.locator('.fc-scripture-source').getAttribute('href'),href);
+    const numbers=await reader.locator('.fc-scripture-number').allTextContents();
+    assert.deepEqual(numbers,range?['11','12']:Array.from({length:16},(_,i)=>String(i+1)));
+    const passage=await reader.locator('.fc-scripture-verse').allTextContents();
+    assert.deepEqual(passage.map(t=>t.replace(/\s+/g,' ').trim()),chapter25.verses.filter(v=>!range||[11,12].includes(v.number)).map(v=>(String(v.number)+' '+v.text).replace(/\s+/g,' ').trim()));
+    await noOverflow();
+    if(label!=='body-second')await capture(`emma-hymns-scripture-${label}-${width}.jpg`);
+    if(label==='body-first')await page.keyboard.press('Escape');else await reader.locator('.fc-scripture-x').click();
+    await page.waitForFunction(n=>!document.getElementById('fc-scripture-reader').open&&document.activeElement===n&&!document.body.classList.contains('fc-scripture-open'),await trigger.elementHandle(),{timeout:5000});
+    assert(await trigger.evaluate(n=>document.activeElement===n),'Scripture focus returns to exact citation');
+    assert.equal(await page.locator('dialog.fc-artwork-detail-dialog[open]').count(),artOpen?1:0);
+    assert.equal(await page.evaluate(()=>document.body.classList.contains('fc-scripture-open')),false);
+    scriptureEvidence.push({page:'history/emma-hymns.html',width,label,href,verses:numbers,keyboardEnter:true,close:label==='body-first'?'Escape':'button',exactFocusReturned:true,artworkRemainedOpen:artOpen});
+    results.push({page:'history/emma-hymns.html',journey:'scripture-'+label,width});
+   };
+   const visible=page.locator('main a.fc-inline-scripture:visible');assert.equal(await visible.count(),3);
+   await exercise(visible.nth(0),'body-first',false,false);
+   await exercise(visible.nth(1),'body-second',false,false);
+   await exercise(visible.nth(2),'source-range',true,false);
+   const art=page.locator('a:has(img[src*="emma-story2-hymnal-review-960.webp"])');await art.click();
+   const detail=page.locator('dialog.fc-artwork-detail-dialog[open]');await detail.waitFor({state:'visible'});
+   const caption=detail.locator('.fc-artwork-detail-copy a.fc-inline-scripture[href*="/dc/25?"]');assert.equal(await caption.count(),1);
+   await exercise(caption,'caption',false,true);
+   const chapterPill=detail.locator('.fc-artwork-detail-actions a[data-topic-art-source][href="'+chapter+'"]');
+   assert.equal(await chapterPill.count(),1);await exercise(chapterPill,'source-pill',false,true);
+   const jsp=detail.locator('.fc-artwork-detail-actions a[href="https://www.josephsmithpapers.org/paper-summary/collection-of-sacred-hymns-1835/1"]');assert.equal(await jsp.count(),1);
+   const controls=detail.locator('.fc-artwork-detail-actions a,button[data-artwork-detail-close]');
+   for(const control of await controls.all()){
+    await control.scrollIntoViewIfNeeded();const m=await control.evaluate(n=>{const r=n.getBoundingClientRect(),c=getComputedStyle(n),hit=document.elementFromPoint(r.x+r.width/2,r.y+r.height/2);return {x:r.x,right:r.right,y:r.y,bottom:r.bottom,width:r.width,height:r.height,visible:c.display!=='none'&&c.visibility!=='hidden',hit:hit===n||n.contains(hit)};});
+    scriptureControlEvidence.push({viewportWidth:width,label:await control.textContent(),...m});
+    assert(m.visible&&m.width>0&&m.height>0&&m.x>=-1&&m.right<=width+1&&m.y>=-1&&m.bottom<=901&&m.hit,'Hymns dialog action must be reachable');
+   }
+   await jsp.scrollIntoViewIfNeeded();await capture(`emma-hymns-artwork-actions-${width}.jpg`);
+   await detail.locator('a[data-full-image-viewer]').click();const full=page.locator('dialog.fc-full-image-viewer[open]');await full.waitFor({state:'visible'});
+   assert((await full.locator('img').first().getAttribute('src')).includes('emma-story2-hymnal-review-1536.webp'));
+   await full.locator('.fc-full-image-close').click();await page.waitForFunction(()=>!document.querySelector('dialog.fc-full-image-viewer[open]')&&document.activeElement?.matches('dialog.fc-artwork-detail-dialog[open] a[data-full-image-viewer]'),null,{timeout:5000});
+   await detail.locator('button[data-artwork-detail-close]').click();
+   await page.waitForFunction(()=>!document.querySelector('dialog.fc-artwork-detail-dialog[open]'));
+   await page.waitForFunction(()=>document.activeElement?.querySelector('img[src*="emma-story2-hymnal-review-960.webp"]'),null,{timeout:5000});
+   await art.click();await detail.waitFor({state:'visible'});await detail.locator('a[data-topic-art-continue]').click();
+   await page.waitForFunction(()=>!document.querySelector('dialog.fc-artwork-detail-dialog[open]')&&document.activeElement?.hasAttribute('data-topic-reading-target')&&document.activeElement.closest('section')?.id==='hymns-book'&&!document.body.classList.contains('fc-dialog-open'),null,{timeout:5000});
+   results.push({page:'history/emma-hymns.html',journey:'scripture-expanded-artwork-actions-fullsize-close-continue',width});
+  }
+  assert.equal(scriptureEvidence.length,15);
+  const scriptureBytes=Buffer.from(JSON.stringify({scope:'Actual same-page scripture interactions; not full release',scriptureEvidence,scriptureControlEvidence},null,2)+'\n');
+  assert(scriptureBytes.length<=32*1024,'Scripture telemetry bound');fs.writeFileSync(path.join(out,'scripture-link-evidence.json'),scriptureBytes);
+  assert.equal(footerEvidence.length,15);assert.equal(shots.length,75);assert.equal(results.length,64);
   fs.writeFileSync(path.join(out,'results.json'),JSON.stringify({results,pass:true},null,2));
   console.log(`EMMA STORY PASS: 6 pages x 3 widths, normal styled headers/menu/search, viewport and 3 skip-link keyboard checks, 5 dialog/full-size/focus journeys, Continue Lesson, Escape, 5 hub link-and-back journeys`);
  }finally{await browser.close();await new Promise(r=>server.close(r));}

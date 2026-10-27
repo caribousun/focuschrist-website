@@ -163,6 +163,7 @@ jobs:
 
       - name: Verify every permanent Answer study experience
         run: |
+          python -m unittest discover -s tools -p test_emma_inline_scripture.py
           python tools/topic_inline_scripture_qa.py
           python tools/answer_study_parser_qa.py
           python tools/answer_study_qa.py

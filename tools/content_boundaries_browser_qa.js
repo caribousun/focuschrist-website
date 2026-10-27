@@ -8,8 +8,10 @@ const root = path.resolve(__dirname, '..');
     const types = {'.html':'text/html; charset=utf-8','.css':'text/css','.js':'text/javascript','.json':'application/json','.webp':'image/webp'};
     fs.readFile(file,(e,data) => e ? res.writeHead(404).end() : res.writeHead(200,{'Content-Type':types[path.extname(file)]||'application/octet-stream'}).end(data));
   });
+  let browser;
+  try {
   await new Promise(r=>server.listen(0,'127.0.0.1',r));
-  const browser = await chromium.launch({headless:true,...(process.env.QA_BROWSER_CHANNEL?{channel:process.env.QA_BROWSER_CHANNEL}:{})});
+  browser = await chromium.launch({headless:true,...(process.env.QA_BROWSER_CHANNEL?{channel:process.env.QA_BROWSER_CHANNEL}:{})});
   const page = await browser.newPage();
   await page.route('https://**',r=>r.abort());
   const assert=require('node:assert/strict'),results=[];
@@ -35,7 +37,6 @@ const root = path.resolve(__dirname, '..');
   }
   assert.equal(onward,15,'All fifteen linked fullspan onward cards inventoried');
 
-  try {
     for(const [width,height,enlarged] of [[1918,991,false],[1536,792,false],[390,844,false],[320,740,false],[1366,900,true],[390,844,true]]) {
       await page.setViewportSize({width,height});
       await page.goto(origin+'/answers.html',{waitUntil:'load'});
@@ -69,5 +70,8 @@ const root = path.resolve(__dirname, '..');
     fs.mkdirSync(path.join(root,'.qa-artifacts'),{recursive:true});
     fs.writeFileSync(path.join(root,'.qa-artifacts/content-boundaries.json'),JSON.stringify({results,mission},null,2));
     console.log('PASS six conference rail/priesthood gap profiles plus six Mission caption/label profiles');
-  } finally {await browser.close();await new Promise(r=>server.close(r));}
+  } finally {
+    try { if(browser) await browser.close(); }
+    finally { await new Promise(r=>server.close(r)); }
+  }
 })().catch(error=>{console.error(error);process.exitCode=1;});
