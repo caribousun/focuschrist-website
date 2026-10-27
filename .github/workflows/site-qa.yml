@@ -706,3 +706,35 @@ jobs:
           include-hidden-files: true
           if-no-files-found: ignore
           retention-days: 7
+
+  owner-integration-render:
+    name: Owner integration rendered journeys (not release acceptance)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - name: Check out the exact current tree
+        uses: actions/checkout@v5
+      - name: Verify existing QA dependency contract
+        run: python tools/qa_dependency_contract.py --self-test
+      - name: Install existing pinned browser dependencies
+        run: |
+          npm install --prefix /tmp/focus-row-qa --no-save --package-lock=false --ignore-scripts playwright@1.55.1 leaflet@1.9.4
+          /tmp/focus-row-qa/node_modules/.bin/playwright install --with-deps chromium
+      - name: Verify exact owner integration helper and contract
+        run: |
+          printf '%s  %s\n' '0eccd268266ca18691c291eb58e0bc92baa4bdf87b35c1e68a99c5addf290e0d' 'tools/owner_integration_browser_qa.js' | sha256sum --check
+          printf '%s  %s\n' '9dfb55280ee30e4ee4584f6cd3b266b7ba792b32475327dcae475953d4938b8c' 'tools/owner_integration_qa_contract.json' | sha256sum --check
+      - name: Observe current hub artwork flow and Timeline introduction journeys
+        run: timeout --signal=TERM --kill-after=15s 8m env NODE_PATH=/tmp/focus-row-qa/node_modules node tools/owner_integration_browser_qa.js
+      - name: Preserve bounded actual owner integration evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: owner-integration-evidence
+          path: .qa-artifacts/owner-integration/
+          include-hidden-files: true
+          if-no-files-found: ignore
+          retention-days: 7
+          compression-level: 6
