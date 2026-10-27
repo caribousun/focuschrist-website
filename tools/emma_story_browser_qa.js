@@ -34,10 +34,10 @@ const TYPES={'.html':'text/html','.css':'text/css','.js':'text/javascript','.web
  const noOverflow=async()=>{const m=await page.evaluate(()=>({sw:document.documentElement.scrollWidth,iw:innerWidth}));assert(m.sw<=m.iw+1,`horizontal overflow ${m.sw} > ${m.iw} on ${page.url()}`);};
  // Keep evidence inside the real viewport: tall element clips can include
  // offscreen fixed controls. Never mask, restyle or blur the skip link.
- const skipEvidence=[],headerEvidence=[],shots=[];let screenshotBytes=0;
- const saveEvidence=()=>{const b=Buffer.from(JSON.stringify({skipEvidence,headerEvidence,shots,screenshotBytes},null,2)+'\n');assert(b.length<=128*1024,'Skip evidence JSON bound');fs.writeFileSync(path.join(out,'skip-link-evidence.json'),b);};
+ const skipEvidence=[],headerEvidence=[],footerEvidence=[],shots=[];let screenshotBytes=0;
+ const saveEvidence=()=>{const b=Buffer.from(JSON.stringify({skipEvidence,headerEvidence,footerEvidence,shots,screenshotBytes},null,2)+'\n');assert(b.length<=128*1024,'Skip evidence JSON bound');fs.writeFileSync(path.join(out,'skip-link-evidence.json'),b);};
  const capture=async name=>{
-  assert(shots.length<45,'Emma screenshot count bound');
+  assert(shots.length<60,'Emma screenshot count bound');
   const jpeg=name.endsWith('.jpg'),data=await page.screenshot({type:jpeg?'jpeg':'png',...(jpeg?{quality:80}:{}),fullPage:false,timeout:8000});
   assert(data.length<=1024*1024,'Single Emma screenshot exceeds 1 MiB');
   assert(screenshotBytes+data.length<=23*1024*1024,'Emma screenshot evidence exceeds 23 MiB');
@@ -262,6 +262,34 @@ const TYPES={'.html':'text/html','.css':'text/css','.js':'text/javascript','.web
   await page.waitForFunction(()=>!document.body.classList.contains('fc-dialog-open')&&document.activeElement===document.querySelector('a[data-full-image-alt]'),null,{timeout:5000});
   assert(await hubTrigger.evaluate(n=>document.activeElement===n),'Hub close focus did not return to its artwork');
   results.push({page:HUB,journey:'hub-dialog-open-close',width:1280});
+  // Additive footer-only observations after every existing journey/capture.
+  // Observe actual standard footer layout; do not hide/restyle any page content.
+  for(const width of [1280,390,320]){
+   await page.setViewportSize({width,height:900});
+   for(const s of STORIES){
+    await page.goto(origin+'/'+s.page);await noOverflow();
+    const footer=page.locator('footer.fc-footer[data-focuschrist-footer="standard"]');
+    assert.equal(await footer.count(),1,'One canonical story footer');
+    await footer.scrollIntoViewIfNeeded({timeout:5000});
+    await page.waitForFunction(async()=>{if(document.fonts)await document.fonts.ready;await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));return true;},null,{timeout:5000});
+    const observation=await footer.evaluate(f=>{
+     const independence=f.querySelector('[data-focuschrist-independence="footer"]'),art=f.querySelector('[data-focuschrist-artwork-disclosure="footer"]');
+     const measure=n=>{if(!n)return null;const r=n.getBoundingClientRect(),c=getComputedStyle(n);return {x:r.x,y:r.y,right:r.right,bottom:r.bottom,width:r.width,height:r.height,display:c.display,visibility:c.visibility,opacity:c.opacity};};
+     const official=independence?.querySelector('a');
+     return {footer:measure(f),independence:measure(independence),artwork:measure(art),independenceCount:f.querySelectorAll('[data-focuschrist-independence="footer"]').length,artworkCount:f.querySelectorAll('[data-focuschrist-artwork-disclosure="footer"]').length,independenceText:independence?.textContent,artworkText:art?.textContent,adjacent:independence?.nextElementSibling===art,official:official?{href:official.getAttribute('href'),target:official.getAttribute('target'),rel:official.getAttribute('rel'),label:official.textContent}:null,viewport:{width:innerWidth,height:innerHeight},scroll:{x:scrollX,y:scrollY}};
+    });
+    footerEvidence.push({page:s.page,width,...observation});saveEvidence();
+    assert.equal(observation.independenceCount,1);assert.equal(observation.artworkCount,1);assert(observation.adjacent,'Canonical notices adjacent');
+    assert.equal(observation.independenceText,'focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit ChurchofJesusChrist.org.');
+    assert.equal(observation.artworkText,'Artwork on focusChrist includes AI-generated artistic interpretations. Illustrative and reconstructed details are not photographs or eyewitness records of the people or events shown.');
+    assert.deepEqual(observation.official,{href:'https://www.churchofjesuschrist.org/',target:'_blank',rel:'noopener noreferrer',label:'ChurchofJesusChrist.org'});
+    for(const box of [observation.footer,observation.independence,observation.artwork])assert(box&&box.width>0&&box.height>0&&box.x>=-1&&box.right<=width+1&&box.y>=-1&&box.bottom<=901&&box.display!=='none'&&box.visibility==='visible'&&Number(box.opacity)>0,'Footer notices must be visible within actual viewport');
+    await noOverflow();
+    await capture(`${s.base}-footer-${width}.jpg`);
+    results.push({page:s.page,journey:'canonical-footer-notices',width});
+   }
+  }
+  assert.equal(footerEvidence.length,15);assert.equal(shots.length,60);assert.equal(results.length,46);
   fs.writeFileSync(path.join(out,'results.json'),JSON.stringify({results,pass:true},null,2));
   console.log(`EMMA STORY PASS: 6 pages x 3 widths, normal styled headers/menu/search, viewport and 3 skip-link keyboard checks, 5 dialog/full-size/focus journeys, Continue Lesson, Escape, 5 hub link-and-back journeys`);
  }finally{await browser.close();await new Promise(r=>server.close(r));}
