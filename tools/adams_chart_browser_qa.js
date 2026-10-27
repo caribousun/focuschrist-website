@@ -2,7 +2,7 @@
 'use strict';
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 const W=50195,H=5347,TILE=1024;
-const EXPECTED_CHART_SHA256='cce1020771c9f8d626ca000feb93153e189d78cf40f0110fa37174b019920a7b';
+const EXPECTED_CHART_SHA256='857723cef1e6eaf5dd48134feb1367eab4b483bf788941bee802f69e62b87182';
 const EXPECTED_LANDING_SHA256='fa3b12da544899f8935874508b9abe64b84b6fd2af1e5bfec8a368ce6a638578';
 const ASSET_SET_SHA256='6092f3c930ebb6cae7c25b3f881fc93ef590642500e419b539124cacd89bca0f';
 const CREDIT='Sebastian C. Adams, Synchronological Chart (1881). Chart image from Wikimedia Commons, courtesy of the David Rumsey Map Collection. The image is in the public domain.';
@@ -130,6 +130,11 @@ module.exports=async function adamsChartQA(existingPage,origin,parentOut){
     const doorway=page.locator('#choose-timeline a[href="timelines/adams-1881-chart.html"]');await doorway.scrollIntoViewIfNeeded();await capture('landing');
     if(profile.touch)await doorway.tap();else await doorway.click();await page.waitForURL(origin+'/timelines/adams-1881-chart.html');
     assert.equal(await page.locator('.fc-adams-back').getAttribute('href'),'../timeline.html#choose-timeline');
+    assert.equal(await page.locator('.fc-adams-home').getAttribute('href'),'../index.html');
+    assert.equal(await page.locator('.fc-adams-home').innerText(),'focusChrist Home');
+    assert.equal(await page.locator('h1').count(),1,'One semantic chart heading');
+    assert.equal(await page.locator('h1.title').innerText(),'Adams’ Chart · 1881');
+    assert(await page.locator('h1.title').isVisible(),'Chart heading remains visibly rendered');
     assert.equal((await page.locator('.fc-adams-credit').innerText()).replace(/\s+/g,' ').trim(),CREDIT);
     assert.equal(await page.locator('.fc-adams-credit a').getAttribute('href'),COMMONS);
     assert(!/user-scalable\s*=\s*no|maximum-scale\s*=\s*1(?:,|$)/i.test(await page.locator('meta[name="viewport"]').getAttribute('content')),'Browser zoom not locked');
@@ -154,6 +159,17 @@ module.exports=async function adamsChartQA(existingPage,origin,parentOut){
      const bar=document.getElementById('toolbar'),cs=getComputedStyle(bar);
      return {strip:rect(bar.querySelector('.fc-adams-strip')),titleRow:rect(bar.querySelector('.toprow')),controls:rect(bar.querySelector('.controls')),innerWidth:bar.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight),overlays:['navDock','mini','progress','showNav'].map(id=>{const n=document.getElementById(id);return {id,...rect(n),display:getComputedStyle(n).display};})};
     });record.integration=integration;
+    const semantics=await page.evaluate(()=>{
+     const read=selector=>{const n=document.querySelector(selector),r=n.getBoundingClientRect(),cs=getComputedStyle(n),hit=document.elementFromPoint(r.x+r.width/2,r.y+r.height/2);return {selector,tag:n.tagName,text:n.textContent.trim(),href:n.getAttribute('href'),x:r.x,y:r.y,right:r.right,bottom:r.bottom,width:r.width,height:r.height,visible:cs.display!=='none'&&cs.visibility!=='hidden'&&Number(cs.opacity)!==0,hit:!!hit&&(n===hit||n.contains(hit)),fontSize:parseFloat(cs.fontSize),fontWeight:cs.fontWeight,fontFamily:cs.fontFamily,lineHeight:cs.lineHeight,margins:[cs.marginTop,cs.marginRight,cs.marginBottom,cs.marginLeft]};};
+     return {heading:read('h1.title'),continuations:[read('.fc-adams-back'),read('.fc-adams-home')]};
+    });record.semantics=semantics;
+    checkControls([semantics.heading,...semantics.continuations]);
+    assert.equal(semantics.heading.tag,'H1');assert.equal(semantics.heading.fontWeight,'700');
+    assert(semantics.heading.fontFamily.includes('Georgia'),'Existing title font retained');
+    assert.deepEqual(semantics.heading.margins,['0px','0px','0px','0px'],'No browser heading margins');
+    near(semantics.heading.fontSize,profile.width>=900?22:Math.min(23,Math.max(16,profile.width*.048)),'Existing responsive title size',.02);
+    assert(semantics.continuations.every(n=>n.bottom<=s.viewport.y+1),'Both continuations stay above chart viewport');
+    assert.equal(new Set(semantics.continuations.map(n=>new URL(n.href,origin+'/timelines/adams-1881-chart.html').pathname)).size,2,'Two distinct local continuation destinations');
     if(profile.width>=900){near(integration.strip.width,integration.innerWidth,'Added strip full-width row',1);assert(integration.strip.bottom<=Math.min(integration.titleRow.y,integration.controls.y)+1,'Added strip must be above original title/controls');}
     const chart={x:s.viewport.x+s.x,y:s.viewport.y+s.y,right:s.viewport.x+s.x+W*s.z,bottom:s.viewport.y+s.y+H*s.z};
     record.initialFitOverlayOverlap=integration.overlays.map(o=>({id:o.id,area:o.display==='none'?0:Math.max(0,Math.min(o.right,chart.right)-Math.max(o.x,chart.x))*Math.max(0,Math.min(o.bottom,chart.bottom)-Math.max(o.y,chart.y))})).filter(o=>o.area>0);
@@ -214,6 +230,10 @@ module.exports=async function adamsChartQA(existingPage,origin,parentOut){
     await page.waitForURL(origin+'/timeline.html#choose-timeline');assert(await page.locator('#choose-timeline').isVisible());
     await page.goBack({waitUntil:'load'});await page.waitForURL(origin+'/timelines/adams-1881-chart.html');checkFit(await state('history-back-viewer'));
     await page.reload({waitUntil:'load'});checkFit(await state('reload-viewer'));
+    const [homeResponse]=await Promise.all([page.waitForNavigation({waitUntil:'load'}),act('.fc-adams-home')]);
+    assert(homeResponse&&homeResponse.status()===200,'Home continuation document succeeds');
+    assert.equal(page.url(),origin+'/index.html','Visible Home link reaches real local Home');
+    await page.goBack({waitUntil:'load'});await page.waitForURL(origin+'/timelines/adams-1881-chart.html');checkFit(await state('home-history-back-viewer'));
     await Promise.all(pending);assert.deepEqual(issues,[]);record.pass=true;
    }catch(e){record.error=String(e).slice(0,3000);record.issues=issues.slice(0,40);if(page&&!page.isClosed())try{record.screenshots.push(await save(page,profile.name+'-failure'));}catch(c){record.captureError=String(c).slice(0,500);}}
    finally{if(context){await context.close().catch(()=>{});active.delete(context);}await Promise.all(pending);if(issues.length){record.pass=false;record.issues=issues.slice(0,40);record.error=record.error||'Network/page errors during final cleanup';}}
