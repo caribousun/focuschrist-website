@@ -338,6 +338,7 @@ jobs:
           python tools/holy_ghost_qa_test.py
           python tools/plan_of_salvation_qa.py --selftest
           python tools/heavenly_father_qa.py --selftest
+          python -m unittest discover -s tools -p test_emma_inline_scripture.py
           python tools/topic_inline_scripture_qa.py
           python tools/topic_artwork_qa.py
           python tools/topic_body_picture_qa.py
@@ -637,7 +638,7 @@ jobs:
 
       - name: Bind the diagnostic to the reviewed renderer and checkout
         run: |
-          printf '%s  %s\n' '82d98b6f1c0ed5c3895d83e91b4fb481bcf28148bcb58d2cf3b7b915b70cecac' 'tools/emma_story_browser_qa.js' | sha256sum --check
+          printf '%s  %s\n' '8f408a99f3b23bb7fc6863deaae17e13b24098cacdbed2794814d74fe8a21cdd' 'tools/emma_story_browser_qa.js' | sha256sum --check
           mkdir -p .qa-artifacts/emma-story
           {
             echo "scope=diagnostic rendering only; artwork-creation and all release gates remain required"
