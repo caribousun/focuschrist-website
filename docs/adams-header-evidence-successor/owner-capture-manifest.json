@@ -1,0 +1,677 @@
+{
+  "raw_report_sha256": "8d431ecc06fc793658c0bfa317c2d22d5eb24474bb77bf291821e6ad320d6c29",
+  "run_id": "40588766214",
+  "job_id": "122487175476",
+  "artifact_id": "12773440728",
+  "artifact_bytes": 5077246,
+  "artifact_sha256": "7a3e50ec054b3e1750f8a43bb39a51601f6a7f28f211b99d163d0f779a681a94",
+  "capture_count": 74,
+  "captures": [
+    {
+      "file": "desktop-emma-hub-opening.jpg",
+      "bytes": 111043,
+      "sha256": "da079940cf816fd098c283e931b66cf9a74f86e4d0a1ce9bc5e39ffca08e174a",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "desktop-emma-hub-emma-story1-ride-review.jpg",
+      "bytes": 215173,
+      "sha256": "fc11a06b0ba318f742bd21e5cd92dcd60ba9ff73373d84dbeb4073fa5602331d",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "desktop-emma-hub-emma-story2-hymnal-review.jpg",
+      "bytes": 107305,
+      "sha256": "12d36219e11ea1526177e046ebe6696d3bd62a73677268513f84f5b56af9cd89",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "desktop-emma-hub-emma-story3-quincy-review.jpg",
+      "bytes": 117235,
+      "sha256": "becf878150fd88cab5a4c0941b3a0d04598381c30dc5a1d17c5a7cc9f5b24ac0",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "desktop-emma-hub-emma-story4-hospitality-review.jpg",
+      "bytes": 133042,
+      "sha256": "30c2189711ecf4e27569fd242f7ec66ba5bb7cc6dc06ab2093aeaeeb0b440334",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "desktop-emma-hub-emma-story5-testimony-review.jpg",
+      "bytes": 97192,
+      "sha256": "4b60cce84bce238c78ff6046f3c115b8f18f659a0ca1ed38cbae9f4b1ec7eab7",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "desktop-emma-christ-c1-context.jpg",
+      "bytes": 148380,
+      "sha256": "a787b36f552cb668ae337f81325b71d647492451d5f165e1eab869191af6b11f",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "desktop-emma-christ-c3-context.jpg",
+      "bytes": 125245,
+      "sha256": "bc1657b61dbc10154d4b2e2de335bd44de5c46ddda19ebcf7aca1baed74aa623",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "desktop-emma-christ-c4-context.jpg",
+      "bytes": 214687,
+      "sha256": "21d06783b6ed753f815800b99ef6fef8bc8c5b1b4a504d553c91a3a16b9e5d3c",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "desktop-emma-christ-c5-context.jpg",
+      "bytes": 150511,
+      "sha256": "6a5b2bdb06e9029e128db0f7cf0c88a67a0e786487f86ae63f964e95481a9b85",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "desktop-emma-hub-emma-story1-ride-review-dialog.jpg",
+      "bytes": 134679,
+      "sha256": "f33b5842e71cd68feb8de52ae968c8aef99acceee3b20dd61553bce78f18ccdc",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "desktop-emma-hub-emma-story2-hymnal-review-dialog.jpg",
+      "bytes": 96393,
+      "sha256": "42fe335e4fd8f946acdbe62e5ca4a0d0f1b875c40d17403305ce8ddf41cab3d2",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "desktop-emma-hub-emma-story2-hymnal-review-reader.jpg",
+      "bytes": 87662,
+      "sha256": "95682f87e6799f51c595c246081679d4c38975998abc98d9e7a60fd6725a361a",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "desktop-emma-hub-emma-story3-quincy-review-dialog.jpg",
+      "bytes": 85027,
+      "sha256": "332d4a195874a509fdd1d97a719a214aa3fee0a43a78e8b19120585e1abdfb4f",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "desktop-emma-hub-emma-story4-hospitality-review-dialog.jpg",
+      "bytes": 90543,
+      "sha256": "f9810e9097b650625b3960a5a5ef3a36613d9e9d57bc1a95b4080b11e65e3ce0",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "desktop-emma-hub-emma-story5-testimony-review-dialog.jpg",
+      "bytes": 80563,
+      "sha256": "9eaf6511895e293caf18ad0ba6f5a41d64ceb7345f7735ae463598353b2dc04e",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "desktop-emma-hub-scripture-reflection.jpg",
+      "bytes": 71362,
+      "sha256": "01b33cf2d2b628d224d086352655d84a98cc9b181fe41e51955c590dcca116a1",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "desktop-church-reference-opening.jpg",
+      "bytes": 182231,
+      "sha256": "3f9068a2fb19da19b5558ff21d06e8f258402fcb617e2772fabc9f60b887c740",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "desktop-adams-timeline-choices.jpg",
+      "bytes": 109362,
+      "sha256": "8c0e45f5c864043549645ba691cdb09502e9ec24e254565125f1c82e982482c5",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "desktop-adams-intro-opening.jpg",
+      "bytes": 174644,
+      "sha256": "e2cb89f55dd36f03b404d0980742f18fdd5016b9dae7ccf221416fca4fd853cf",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "desktop-adams-intro-overview.jpg",
+      "bytes": 118596,
+      "sha256": "ed75befcd7ed1d6cb276be736e3c7e9bf545817bf7a9d3940d07170592e47642",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "desktop-adams-chart-opening.jpg",
+      "bytes": 120164,
+      "sha256": "04c3f834146417c0dfe39b991368ea838bc4dbbe51d2e3096ba1004410498bf5",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "desktop-adams-chart-footer.jpg",
+      "bytes": 120925,
+      "sha256": "94f4bc70d7a1331ebb80e2377fa9a30897cd168abd1bcd276a5b32256b7d967b",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      }
+    },
+    {
+      "file": "phone-emma-hub-menu.jpg",
+      "bytes": 38546,
+      "sha256": "e50c7cb8eaf9b41653760e6faaa9e89aa2e3021e7dd63f788d77835db1364e05",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "phone-emma-hub-search.jpg",
+      "bytes": 28517,
+      "sha256": "5478a22fed207d70d13e796e1d166d3902ff41a0e08a9efb5e52e65cbfde50f1",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "phone-emma-hub-opening.jpg",
+      "bytes": 42984,
+      "sha256": "095f6307075e02488b33a81fd72cc8636bf0720730a3926d1a1d99786933a22f",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "phone-emma-hub-emma-story1-ride-review.jpg",
+      "bytes": 84408,
+      "sha256": "9cdb0782defbd4f0e9e1cbfa58756974e702e92a513de6c48ba965d81d06d2f1",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "phone-emma-hub-emma-story2-hymnal-review.jpg",
+      "bytes": 72960,
+      "sha256": "31bb1c8cee337e868c1e5cebbef39e0621127997e0b81b6df26ad609c091e16f",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "phone-emma-hub-emma-story3-quincy-review.jpg",
+      "bytes": 66473,
+      "sha256": "e40432c4453b50477232d71e5fe4a55651eb275f35658f4d616920e3843009da",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "phone-emma-hub-emma-story4-hospitality-review.jpg",
+      "bytes": 77193,
+      "sha256": "35b56f45f0ffd07fee80fc92fb01daac33927f851042add2b65d32d187c77cc6",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "phone-emma-hub-emma-story5-testimony-review.jpg",
+      "bytes": 62242,
+      "sha256": "0c2599472384c2f28215799b9b0522735b05f8f3902b9095e497be16c27b2622",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "phone-emma-christ-c1-context.jpg",
+      "bytes": 58028,
+      "sha256": "5ec9c6f3bfa013a604598919df8fa48947993381798d07d2b93228df2bf595d3",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "phone-emma-christ-c3-context.jpg",
+      "bytes": 56470,
+      "sha256": "844bbf1fd7bbae48251750453cfe1f37e7266a8352bf072806971ae746d3c02d",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "phone-emma-christ-c4-context.jpg",
+      "bytes": 63563,
+      "sha256": "6cf3417c90dbe9bf818e3e230a5cbd895ccf7462688babe9e067774a2b466318",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "phone-emma-christ-c5-context.jpg",
+      "bytes": 57718,
+      "sha256": "04683360bfe4af28ed1babf89810053b411c4358fab00aa38bbe2e793a0a6c32",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "phone-emma-hub-emma-story1-ride-review-dialog.jpg",
+      "bytes": 67349,
+      "sha256": "b8f8af32e932322cec56313a7a20873e534150117a17b903b27d86fbee210bb1",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "phone-emma-hub-emma-story2-hymnal-review-dialog.jpg",
+      "bytes": 59238,
+      "sha256": "73bab91dc990cb035b55f31a9baf76f350b6c39a9bc38fd2cd3e2517aaa06c22",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "phone-emma-hub-emma-story2-hymnal-review-reader.jpg",
+      "bytes": 46215,
+      "sha256": "9d450a923721b1b3d9939f4d6f804f30a02f305a65473ba03cedcfb50cb9719e",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "phone-emma-hub-emma-story3-quincy-review-dialog.jpg",
+      "bytes": 51016,
+      "sha256": "4b2dfd1d5e240f63955fcb41d7a4d6ac1b7d362d4d2ce1de620cd993d79bc5c1",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "phone-emma-hub-emma-story4-hospitality-review-dialog.jpg",
+      "bytes": 50892,
+      "sha256": "3f3d60b99c543a2748b6e6a547dd53d7dea3ddb48b9f354f2c3aef4766596884",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "phone-emma-hub-emma-story5-testimony-review-dialog.jpg",
+      "bytes": 50410,
+      "sha256": "0eb35cb466e879a1d40cb811efa36367dc0a26f131c43794fcc3a91145be6d84",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "phone-emma-hub-scripture-reflection.jpg",
+      "bytes": 46723,
+      "sha256": "e667392a02c35dd61afe80b76dea92df52b191ba3fe708f8cc537a5998ce66ef",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "phone-church-reference-opening.jpg",
+      "bytes": 69099,
+      "sha256": "caa4a9450982f7533d48966c44fd92a9e076f399285f48288f308d37ff4ceab9",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "phone-adams-timeline-choices.jpg",
+      "bytes": 49530,
+      "sha256": "ef78c37c5be1138bba3b838101f251df2b62adb1dd9df3fd4d8e57e86b990867",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "phone-adams-intro-opening.jpg",
+      "bytes": 53508,
+      "sha256": "bd6b4d90634b2b297635a8c31e832479ae05863278d1ac8ded7199c6524d00b8",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "phone-adams-intro-overview.jpg",
+      "bytes": 53688,
+      "sha256": "fd8841902d1237b1d529c38eb4acedb5c72138ee9f55d17a22cad72798da15c5",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "phone-adams-chart-menu.jpg",
+      "bytes": 38314,
+      "sha256": "b6de273332cb845ac40272c5359d141ae59450eaa4b76133ad12af3a7645bffd",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "phone-adams-chart-search.jpg",
+      "bytes": 30005,
+      "sha256": "8630c5d6a9a1260a438ddcad71e263a7ae94959eed46b0d9c8cc50a65154e320",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "phone-adams-chart-opening.jpg",
+      "bytes": 35673,
+      "sha256": "31ef91d8f5667a366baf7f40b9c397e0decba4c5cfd52b944eb5161139a4db09",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "phone-adams-chart-footer.jpg",
+      "bytes": 45940,
+      "sha256": "c66c82e0b63b5b4e63aacf89ebccd2557c433bd7f750c2838210bea7d4ecc6f1",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "file": "narrow-emma-hub-opening.jpg",
+      "bytes": 26008,
+      "sha256": "1f5311def403a4d85c433f0e62541033b5abbb7ccb8bd81c62b0ccaf9605f778",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      }
+    },
+    {
+      "file": "narrow-emma-hub-emma-story1-ride-review.jpg",
+      "bytes": 42506,
+      "sha256": "be75f4c7ecd5e0481647a2bac15ba16ae8d6059210bb14c6ae8adee17c1a1b52",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      }
+    },
+    {
+      "file": "narrow-emma-hub-emma-story2-hymnal-review.jpg",
+      "bytes": 38800,
+      "sha256": "10173652255381a6b9c06aa5141a4c7cbb24ec93bb0606b21d29a3c6ddb70857",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      }
+    },
+    {
+      "file": "narrow-emma-hub-emma-story3-quincy-review.jpg",
+      "bytes": 39350,
+      "sha256": "750f9b5dfcbf55bbee513b445d79583a69924d29468df0e697a629a2647a1625",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      }
+    },
+    {
+      "file": "narrow-emma-hub-emma-story4-hospitality-review.jpg",
+      "bytes": 39955,
+      "sha256": "06938fd5d3560c423196ba65cc9831efeac397fb04841a7b938a863a7e807e1e",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      }
+    },
+    {
+      "file": "narrow-emma-hub-emma-story5-testimony-review.jpg",
+      "bytes": 32946,
+      "sha256": "3422a3eb16afe00888b6f322bf8447cc8511318f330f9841bba00db74a8cf859",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      }
+    },
+    {
+      "file": "narrow-church-reference-opening.jpg",
+      "bytes": 40531,
+      "sha256": "e79a503c5709141d8bbce3e24c6712b3d417d004919cc29aef3d67def0c82331",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      }
+    },
+    {
+      "file": "narrow-adams-timeline-choices.jpg",
+      "bytes": 26803,
+      "sha256": "ae77c0c24c6ddd7d287a8f0bcba16fd6a5f717d6c7a0ea4d94e1a223f80c03d6",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      }
+    },
+    {
+      "file": "narrow-adams-intro-opening.jpg",
+      "bytes": 35368,
+      "sha256": "9db41e7607ac418e5a1714588f80e6579809706cb6622c9876dcc722a01461de",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      }
+    },
+    {
+      "file": "narrow-adams-intro-overview.jpg",
+      "bytes": 35033,
+      "sha256": "d9f95fe3492226067a34cf7783724070f2556e8ed35e0b6cf601c83b3f9c3ac2",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      }
+    },
+    {
+      "file": "narrow-adams-chart-opening.jpg",
+      "bytes": 20054,
+      "sha256": "80fc76aabbad5dd4f150ebea5d50a510c68c2cf129e22a0e5c5daf1308a28e29",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      }
+    },
+    {
+      "file": "narrow-adams-chart-footer.jpg",
+      "bytes": 31016,
+      "sha256": "50a96bd9cd0d339a4871237cf37537c43a8925ce12f170043408ad692cc69dd8",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      }
+    },
+    {
+      "file": "landscape-emma-hub-opening.jpg",
+      "bytes": 39521,
+      "sha256": "b767987b27c7a9fa18f356f86bd62d4b4bf46fdc9047de53d9545bf0e381f6d5",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      }
+    },
+    {
+      "file": "landscape-emma-hub-emma-story1-ride-review.jpg",
+      "bytes": 90376,
+      "sha256": "6e50853b3e52df5a5bb6df69e6ab609cbdc1d0114801bf14dd52733c9643c0f4",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      }
+    },
+    {
+      "file": "landscape-emma-hub-emma-story2-hymnal-review.jpg",
+      "bytes": 35027,
+      "sha256": "f815455a5e2681f8ca275bfb15fbb5e06352585f1c244e305810bcd6c255b336",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      }
+    },
+    {
+      "file": "landscape-emma-hub-emma-story3-quincy-review.jpg",
+      "bytes": 35408,
+      "sha256": "33cc3b34c60ad2d0db39e31a9a70bd35212ab704b8c3f20dba73c6697f8cd0af",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      }
+    },
+    {
+      "file": "landscape-emma-hub-emma-story4-hospitality-review.jpg",
+      "bytes": 41250,
+      "sha256": "3d640d62a7965d7583a8e62cac9eee73be5b92155b650da9b1f8b21ecd67ea7a",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      }
+    },
+    {
+      "file": "landscape-emma-hub-emma-story5-testimony-review.jpg",
+      "bytes": 30644,
+      "sha256": "91ebc5bd1cdbd8440373cafa71836313cd8622edcc3781c553116e98156bb460",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      }
+    },
+    {
+      "file": "landscape-church-reference-opening.jpg",
+      "bytes": 62985,
+      "sha256": "7c2b83e3c02036b5e0c232b0ba0c427720f63cd1d9004b45b4a011192c514644",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      }
+    },
+    {
+      "file": "landscape-adams-timeline-choices.jpg",
+      "bytes": 38094,
+      "sha256": "c8a1d86c033bb18205800734edb35fa97e3209d7b4c7e1a44e600fb540cb72d9",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      }
+    },
+    {
+      "file": "landscape-adams-intro-opening.jpg",
+      "bytes": 70890,
+      "sha256": "c8762f1d436cda2cbac440b3c6ce2e1ba9ba9092b4061c5311e4d14eaaee8ddf",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      }
+    },
+    {
+      "file": "landscape-adams-intro-overview.jpg",
+      "bytes": 46505,
+      "sha256": "d3edd0c557dda680921c52f19c865ada2c0240fea0a9a5964393535cb99343ca",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      }
+    },
+    {
+      "file": "landscape-adams-chart-opening.jpg",
+      "bytes": 49193,
+      "sha256": "5fd7e37bf5fcfd196feed4b4985f033d11e8bc1edbcbccc5e95e68b685fd6bc4",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      }
+    },
+    {
+      "file": "landscape-adams-chart-footer.jpg",
+      "bytes": 32125,
+      "sha256": "d821367642dfadae487e3f265f639590e8ecd7dbfaa8c9bd45329e1dd9e81a8a",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      }
+    }
+  ]
+}

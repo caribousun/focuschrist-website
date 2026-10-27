@@ -4,6 +4,7 @@ import json
 import unittest
 from pathlib import Path
 import adams_integrated_qa_evidence as gate
+import adams_header_evidence_successor as successor
 
 ROOT=Path(__file__).resolve().parents[1]
 class IntegratedReportTests(unittest.TestCase):
@@ -15,7 +16,11 @@ class IntegratedReportTests(unittest.TestCase):
         self.captures=json.loads((ROOT/qa['capture_manifest']['path']).read_bytes())
         self.owner=json.loads((ROOT/qa['owner_report']['path']).read_bytes())
     def viewer_check(self):gate.validate_qa_report(self.spec,self.viewer,self.identity,self.captures)
-    def test_actual_bound_reports(self):gate.validate_qa(ROOT,self.spec)
+    def test_actual_bound_reports_are_explicitly_historical(self):
+        # New helper and owner contract must never masquerade as old report inputs.
+        with self.assertRaises(ValueError):gate.validate_qa(ROOT,self.spec)
+        gate.validate_qa(ROOT,self.spec,helper_reader=successor.historical_reader)
+
     def test_viewer_failure_rejected(self):
         self.viewer['results'][1]['pass']=False
         with self.assertRaises(ValueError):self.viewer_check()

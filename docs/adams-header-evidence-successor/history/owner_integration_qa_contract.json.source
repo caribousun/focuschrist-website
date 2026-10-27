@@ -1,0 +1,479 @@
+{
+  "version": 1,
+  "ready": true,
+  "status": "Exact source contract for review; no run or acceptance authority",
+  "sources": [
+    {
+      "path": "history/emma-elect-lady.html",
+      "bytes": 14734,
+      "sha256": "f32c79609f15d51e9c85b2f4bc941de38d2626c944e33f1876fc574f46f7986c"
+    },
+    {
+      "path": "history/emma-hale-smith.html",
+      "bytes": 66144,
+      "sha256": "50c334379066722ef6e80e97d70f0f2ca431777b5857eb15b998da65cc1783cf"
+    },
+    {
+      "path": "history/emma-hymns.html",
+      "bytes": 15103,
+      "sha256": "719bc7f899ebc188f33322c4c7c6bea9e326b209e28e2d49855543185e12aedb"
+    },
+    {
+      "path": "history/emma-last-testimony.html",
+      "bytes": 15464,
+      "sha256": "ff608df4a3bb994d29834e253daac97b1721ecf2b3209a621e284f16ca91eb70"
+    },
+    {
+      "path": "history/emma-relief-society.html",
+      "bytes": 15000,
+      "sha256": "e90e7b25239973e2488f32e57482fd5cfbdabb6a7f3f1746599aded9cd546ebb"
+    },
+    {
+      "path": "history/emma-winter-crossing.html",
+      "bytes": 14477,
+      "sha256": "a2c6003789eaaf4458bb3f431943c2d4602908b19324054ef8ca9f0aab30a417"
+    },
+    {
+      "path": "adams-integration.css",
+      "bytes": 4965,
+      "sha256": "d936516926aa47c12c634b11b15278e1590502d0491d9b1f17cd90a0210fdeb1"
+    },
+    {
+      "path": "adams-integration.js",
+      "bytes": 2267,
+      "sha256": "334a8395213a4e561cdffc747bf92b6872902486b055a36824cf834784dffb7b"
+    },
+    {
+      "path": "timeline.html",
+      "bytes": 8828,
+      "sha256": "c910ae58c2f8feccf1d59f44b154d31f224436b79538e86bf73774c65b0b8c4c"
+    },
+    {
+      "path": "timelines/adams-1881-chart.html",
+      "bytes": 66076,
+      "sha256": "b90c19dd9f77c3966843b41d514319816a194deee86b87235909f6b2c742130c"
+    },
+    {
+      "path": "timelines/adams-1881-introduction.html",
+      "bytes": 8126,
+      "sha256": "742d429e6a674ce5d47889aab964a6bde60f3509bd9518e159499be6616112be"
+    },
+    {
+      "path": "timelines/latter-day-saint-church-history-timeline.html",
+      "bytes": 80266,
+      "sha256": "d3aa8f0ee8947f1c1f8b6402cd5e0361e9c7498de84d91c058c608998431edc5"
+    },
+    {
+      "path": "site-common.js",
+      "bytes": 88574,
+      "sha256": "62e8d576062521da340ad6b0a82f58b151829c21b6868b684e6491b04c723f73"
+    },
+    {
+      "path": "site-system.css",
+      "bytes": 88817,
+      "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+    },
+    {
+      "path": "site-header.css",
+      "bytes": 14894,
+      "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+    },
+    {
+      "path": "timeline-experiences.css",
+      "bytes": 11625,
+      "sha256": "4d76e920b978b14ffd360fc8007c848f7f39ca327408f50385b37a1ff7d3349b"
+    },
+    {
+      "path": "timeline-mobile-study.css",
+      "bytes": 12192,
+      "sha256": "3e80168cb315409779283e13c0f07f6f9055a2310221c2c90a459e59e009533d"
+    },
+    {
+      "path": "scripture-data/nt/luke/6.json",
+      "bytes": 8847,
+      "sha256": "b8ad2f2a8ea945fcef6482351505cb67ef0c6e236a69c01a03946bf790447ccc"
+    },
+    {
+      "path": "scripture-data/dc-testament/dc/25.json",
+      "bytes": 3292,
+      "sha256": "78e21fb0e7ff9291cf68af8c29631c9a6646a41ec03dc816a0abbbe0388b1d79"
+    }
+  ],
+  "assets": [
+    {
+      "path": "assets/page-art/emma-life/emma-story1-ride-review-640.webp",
+      "bytes": 93744,
+      "sha256": "13c36921b70dabe2d195a6a49a1bc297b2c7d50aad3bdc8890ed8c323aa0d06b"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-story1-ride-review-960.webp",
+      "bytes": 164146,
+      "sha256": "8ac37bf27712554952c7648aed25f49d15651effdb55e0342554154ccf02bc93"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-story1-ride-review-1536.webp",
+      "bytes": 297964,
+      "sha256": "ff56c2247487ddd707d937b565a223c9b3a7220b190d84a3e845bd9a76441292"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-story2-hymnal-review-640.webp",
+      "bytes": 23014,
+      "sha256": "46641bb4044a58473778629a03ab8927bed90a4c72acf48f1c7656014a255316"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-story2-hymnal-review-960.webp",
+      "bytes": 44864,
+      "sha256": "16ed55c58fcf2c598c5f34e91a6884a33e8d7934d0f87d8982a9b59a5e6919ba"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-story2-hymnal-review-1536.webp",
+      "bytes": 92598,
+      "sha256": "69865b606ac1c0d55f6fe1f462520159e53fafa0edd7b661ad2fc5afe272bec3"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-story3-quincy-review-640.webp",
+      "bytes": 26554,
+      "sha256": "eed22c0e427678a354181db1f567ab5eea87b7c1489e10b8d9e3725e2fd20579"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-story3-quincy-review-960.webp",
+      "bytes": 49898,
+      "sha256": "f7ca4b56d8e924d05bf15f7e9fb651d20d3d13cbdfd23577ebb2d90b580ff558"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-story3-quincy-review-1536.webp",
+      "bytes": 99060,
+      "sha256": "a6b973db6d7003c4adff508aada11dff7f6523b11e2edc61570574a40bee771d"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-story4-hospitality-review-640.webp",
+      "bytes": 29838,
+      "sha256": "b1a9dc3d1915de0426a08c62a4a8dcd83a562fe1aa340aba203d88d83d0b561e"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-story4-hospitality-review-960.webp",
+      "bytes": 59416,
+      "sha256": "48a74b1e7021f2f0d53bb81e456583549ca5815103e757a895cf518acfc4029c"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-story4-hospitality-review-1536.webp",
+      "bytes": 123764,
+      "sha256": "e6d21c89cd491fbe8e1c3276eab7e4cdad35d4859b626773cd80c255ffb23b48"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-story5-testimony-review-640.webp",
+      "bytes": 19246,
+      "sha256": "d2ef1a76aba46d2838fc6f8a3e9fc9f03749a7ad7221212130a793beeaebfc07"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-story5-testimony-review-960.webp",
+      "bytes": 38846,
+      "sha256": "9470c0b41ca23374408e0a3cfc77061c76de1e20d02072537889c77aebabd988"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-story5-testimony-review-1536.webp",
+      "bytes": 80384,
+      "sha256": "01454124312c44309aa3ea2c49e27fea5e13d88c1aba10b1b2b073f82574d0d3"
+    },
+    {
+      "path": "assets/adams-chart/adams-16-0-0.jpg",
+      "bytes": 178095,
+      "sha256": "00cb4975df431f79998180c469dc3444efcbda33fb95d7ee0754ce959ad6e6a0"
+    },
+    {
+      "path": "assets/adams-chart/adams-64-0-0.jpg",
+      "bytes": 42199,
+      "sha256": "9e6338591371c7e978af70e3a05d7256a974c4d8dd5d9ce36fd7d8d577eedb0a"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-c1-review-640.webp",
+      "bytes": 67156,
+      "sha256": "d66385fccfc850c051beb8b925bc06675353f8a83f762f4c5f589378943796ca"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-c1-review-960.webp",
+      "bytes": 125672,
+      "sha256": "f91829d8e6bb7f275564a6e29fc52a6bddd5ecb189278df23cbd1de88b13ad69"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-c1-review-1536.webp",
+      "bytes": 1540526,
+      "sha256": "0568a1fcccfeb79f76c9c79f9c008af905c964728c31ac67de890245d8e600d3"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-c3-review-640.webp",
+      "bytes": 43606,
+      "sha256": "dc07fe08609196422782bcf64e3b2fa72b21819344a9aa22d592a5d46eda4699"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-c3-review-960.webp",
+      "bytes": 75724,
+      "sha256": "7ae9360f21bc7bdbccaf7986222512b8aa80cd95611cea51bbf39120a2939836"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-c3-review-1536.webp",
+      "bytes": 1220660,
+      "sha256": "3bede968c372a649c46e397c520ce82b6a38ba9ab01cf99290b904d1654d94df"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-c4-review-640.webp",
+      "bytes": 109704,
+      "sha256": "c74ba207ec643ffacc8a01eb51ffbf12637f09039cbc7fda684d6e5db52f6741"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-c4-review-960.webp",
+      "bytes": 211106,
+      "sha256": "1e5c08c5b4fdb1071b1460a4dac8621cca021aa089b1a5c1022bce54cadecbe0"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-c4-review-1536.webp",
+      "bytes": 1997538,
+      "sha256": "6acdf8b17dc9cbed8a780cc0894770f0f60e7022982cf7db67fb04bb6191bf93"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-c5-review-640.webp",
+      "bytes": 68870,
+      "sha256": "0e43abea649096126f97dca2923a9bd927e53816eddf3d918b1198ed2f245df8"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-c5-review-960.webp",
+      "bytes": 126060,
+      "sha256": "a30ccdda3b076d0cef767384dfbbd4f679ade71b1f739ed81f8b029e6ea11c1a"
+    },
+    {
+      "path": "assets/page-art/emma-life/emma-c5-review-1536.webp",
+      "bytes": 1582280,
+      "sha256": "8e2484ae24f643c90e5d6eb65d207ff34ff4393c4bb11938f889d9b1a1cbc5fb"
+    }
+  ],
+  "emma": {
+    "route": "/history/emma-hale-smith.html",
+    "stories": [
+      {
+        "base": "emma-story1-ride-review",
+        "key": "emma-story1-ride",
+        "figure": "#picture-emma-story1-ride",
+        "fragment": "#picture-emma-story1-ride",
+        "section": "#elect-lady-right-person",
+        "alt": "Emma Smith at twenty three, wearing a long blue dress, rides sidesaddle at a gallop on a brown horse up a leaf covered slope in autumn, leaning forward with both hands on the reins and her eyes on the path ahead.",
+        "title": "A ride to warn Joseph",
+        "sourceHref": "https://www.churchofjesuschrist.org/study/liahona/2021/03/emma-protected-scripture?lang=eng",
+        "requiredText": "In the first hours of September 22, 1827, Joseph Smith prepared to go to the hill where the gold plates were buried. The angel Moroni had told him to bring the right person with him, and Joseph knew through personal revelation that the right person was Emma. She waited while he received the plates and hid them in a hollow log, and she rode home beside him as the sun rose. From the very first night of the work, Emma was not watching from a distance. She was in the carriage.",
+        "referenceRoute": "/history/emma-elect-lady.html",
+        "referenceSelector": "figure.fc-reference-picture[data-artwork-reference] > div > a[href=\"emma-hale-smith.html#picture-emma-story1-ride\"]",
+        "referenceHref": "emma-hale-smith.html#picture-emma-story1-ride"
+      },
+      {
+        "base": "emma-story2-hymnal-review",
+        "key": "emma-story2-hymnal",
+        "figure": "#picture-emma-story2-hymnal",
+        "fragment": "#picture-emma-story2-hymnal",
+        "section": "#hymns-book",
+        "alt": "Emma Smith at thirty one, wearing a brown dress, stands by a window holding a small bound book in both hands and looking down at it.",
+        "title": "The finished hymnbook",
+        "sourceHref": "https://www.josephsmithpapers.org/paper-summary/collection-of-sacred-hymns-1835/1",
+        "requiredText": "The first Latter-day Saint hymnbook was prepared at Kirtland: A Collection of Sacred Hymns for the Church of the Latter Day Saints. The edition is dated 1835, and its title page names the hymns as selected by Emma Smith. The printing ran late, though. The Joseph Smith Papers, which publishes the book, notes that although it bears an 1835 date it was apparently not available until early 1836. It held ninety hymn texts and no musical notation at all, just words, gathered so that families and branches who had no songbook and perhaps no instrument could still carry the tunes they knew and learn new ones. The little book traveled where the Saints traveled, into homes and small meeting rooms, and it treated singing as something the whole church did together, not something performed for them.",
+        "referenceRoute": "/history/emma-hymns.html",
+        "referenceSelector": "figure.fc-reference-picture[data-artwork-reference] > div > a[href=\"emma-hale-smith.html#picture-emma-story2-hymnal\"]",
+        "referenceHref": "emma-hale-smith.html#picture-emma-story2-hymnal",
+        "reader": {
+          "selector": ".fc-artwork-detail-copy a.fc-inline-scripture[href=\"https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/25?lang=eng\"]",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/25?lang=eng",
+          "title": "Doctrine and Covenants 25",
+          "numbers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+          ],
+          "data": "scripture-data/dc-testament/dc/25.json"
+        }
+      },
+      {
+        "base": "emma-story3-quincy-review",
+        "key": "emma-story3-quincy",
+        "figure": "#picture-emma-story3-quincy",
+        "fragment": "#picture-emma-story3-quincy",
+        "section": "#crossing-words",
+        "alt": "Emma Smith at thirty four, wearing a gray dress, sits by a window with her hands folded in her lap and her gaze lowered.",
+        "title": "Emma in Quincy",
+        "sourceHref": "https://www.josephsmithpapers.org/paper-summary/letter-from-emma-smith-7-march-1839/1",
+        "requiredText": "Emma was thirty-four when she wrote from Quincy in March 1839.",
+        "referenceRoute": "/history/emma-winter-crossing.html",
+        "referenceSelector": "figure.fc-reference-picture[data-artwork-reference] > div > a[href=\"emma-hale-smith.html#picture-emma-story3-quincy\"]",
+        "referenceHref": "emma-hale-smith.html#picture-emma-story3-quincy"
+      },
+      {
+        "base": "emma-story4-hospitality-review",
+        "key": "emma-story4-hospitality",
+        "figure": "#picture-emma-story4-hospitality",
+        "fragment": "#picture-emma-story4-hospitality",
+        "section": "#relief-relieved",
+        "alt": "Emma Smith at thirty eight, wearing a dark green dress, stands in the open doorway of her home with one hand resting on the door.",
+        "title": "An open door",
+        "sourceHref": "https://www.churchofjesuschrist.org/study/history/topics/female-relief-society-of-nauvoo?lang=eng",
+        "requiredText": "Joseph taught the society two purposes: it was \"not only to relieve the poor, but to save souls.\" Under Emma's presidency the women did both with their sleeves rolled up. They found families in distress, carried food and clothing to destitute immigrants arriving from Missouri and the British Isles, arranged exchanges of work so that widows could be paid fairly for their labor, and kept careful minutes of all of it. Emma insisted that care include honest dealing, not only kind feelings. At home she practiced the same pattern, opening her own door to the sick, the orphaned, and the homeless in a city where malaria moved from house to house.",
+        "referenceRoute": "/history/emma-relief-society.html",
+        "referenceSelector": "figure.fc-reference-picture[data-artwork-reference] > div > a[href=\"emma-hale-smith.html#picture-emma-story4-hospitality\"]",
+        "referenceHref": "emma-hale-smith.html#picture-emma-story4-hospitality"
+      },
+      {
+        "base": "emma-story5-testimony-review",
+        "key": "emma-story5-testimony",
+        "figure": "#picture-emma-story5-testimony",
+        "fragment": "#picture-emma-story5-testimony",
+        "section": "#testimony-kept",
+        "alt": "Emma Smith at seventy four, wearing a dark gray dress, sits speaking, one hand raised in conversation, her gaze toward the one she is speaking with.",
+        "title": "Her testimony",
+        "sourceHref": "https://www.churchofjesuschrist.org/study/ensign/1992/08/my-great-great-grandmother-emma-hale-smith?lang=eng",
+        "requiredText": "Near the end of her life, Emma sat for an interview with her son Joseph III and spoke about the Book of Mormon she had helped bring into the world as a young scribe at Harmony. This is what she said: \"My belief is that the Book of Mormon is of divine authenticity. I have not the slightest doubt of it.\"",
+        "referenceRoute": "/history/emma-last-testimony.html",
+        "referenceSelector": "figure.fc-reference-picture[data-artwork-reference] > div > a[href=\"emma-hale-smith.html#picture-emma-story5-testimony\"]",
+        "referenceHref": "emma-hale-smith.html#picture-emma-story5-testimony"
+      }
+    ],
+    "reflections": [
+      {
+        "selector": "#reflection-c1",
+        "text": "In Luke 6:12–16, Jesus prays through the night before choosing the Twelve. What decisions do you want to take to God in prayer?",
+        "image": {
+          "figure": "#picture-emma-c1",
+          "key": "emma-c1",
+          "src": "/assets/page-art/emma-life/emma-c1-review-960.webp",
+          "srcset": "/assets/page-art/emma-life/emma-c1-review-640.webp 640w, /assets/page-art/emma-life/emma-c1-review-960.webp 960w, /assets/page-art/emma-life/emma-c1-review-1536.webp 1536w",
+          "alt": "Jesus prays outdoors beneath the night sky.",
+          "heading": "Scripture reflection: A night in prayer",
+          "sectionId": "emma-beginnings",
+          "previousSibling": {
+            "tag": "P",
+            "id": "",
+            "text": "Family tradition, recorded in Church History Topics, tells that Emma’s father overheard young Emma praying in the woods and was moved by what he heard."
+          }
+        }
+      },
+      {
+        "selector": "#reflection-c3",
+        "text": "Matthew records that Jesus and His disciples sang a hymn before leaving for the Mount of Olives. Read Matthew 26:26–30. The brief line places singing within an evening of teaching and coming sorrow. A shared song can give a community words when its members do not all know what lies ahead.",
+        "image": {
+          "figure": "#picture-emma-c3",
+          "key": "emma-c3",
+          "src": "/assets/page-art/emma-life/emma-c3-review-960.webp",
+          "srcset": "/assets/page-art/emma-life/emma-c3-review-640.webp 640w, /assets/page-art/emma-life/emma-c3-review-960.webp 960w, /assets/page-art/emma-life/emma-c3-review-1536.webp 1536w",
+          "alt": "Jesus and His disciples sing together.",
+          "heading": "Scripture reflection: A shared hymn",
+          "sectionId": "emma-songs-separation",
+          "previousSibling": {
+            "tag": "DIV",
+            "id": "",
+            "text": "Sources for this part of Emma’s story Emma Hale Smith, Church History Topics Collection of Sacred Hymns for the Church of the Latter Day Saints, Joseph Smith Papers Doctrine and Covenants 25:11-12"
+          }
+        }
+      },
+      {
+        "selector": "#reflection-c4",
+        "text": "After the multitude had eaten, Jesus told the disciples to gather the remaining pieces of bread so that nothing would be lost. Read John 6:10–13. Attention continued after the immediate need was met. The passage offers a companion reflection on the patient, practical work that sustains relief.",
+        "image": {
+          "figure": "#picture-emma-c4",
+          "key": "emma-c4",
+          "src": "/assets/page-art/emma-life/emma-c4-review-960.webp",
+          "srcset": "/assets/page-art/emma-life/emma-c4-review-640.webp 640w, /assets/page-art/emma-life/emma-c4-review-960.webp 960w, /assets/page-art/emma-life/emma-c4-review-1536.webp 1536w",
+          "alt": "Jesus speaks to a disciple as others gather remaining bread.",
+          "heading": "Scripture reflection: Let nothing be lost",
+          "sectionId": "emma-relief-questions",
+          "previousSibling": {
+            "tag": "DIV",
+            "id": "",
+            "text": "Sources for this part of Emma’s story Female Relief Society of Nauvoo, Church History Topics Nauvoo Relief Society Minute Book, in The First Fifty Years of Relief Society, Church Historians Press Emma Hale Smith, Church History Topics"
+          }
+        }
+      },
+      {
+        "selector": "#reflection-c5",
+        "text": "After John the Baptist’s disciples reported his death, Jesus withdrew by boat to a place apart. Read Matthew 14:12–14.",
+        "image": {
+          "figure": "#picture-emma-c5",
+          "key": "emma-c5",
+          "src": "/assets/page-art/emma-life/emma-c5-review-960.webp",
+          "srcset": "/assets/page-art/emma-life/emma-c5-review-640.webp 640w, /assets/page-art/emma-life/emma-c5-review-960.webp 960w, /assets/page-art/emma-life/emma-c5-review-1536.webp 1536w",
+          "alt": "Jesus departs by boat on the water.",
+          "heading": "Scripture reflection: A place apart",
+          "sectionId": "emma-relief-questions",
+          "previousSibling": {
+            "tag": "P",
+            "id": "",
+            "text": "On June 27, 1844, Joseph and his brother Hyrum were killed at Carthage. Emma was thirty-nine and pregnant. Her responsibilities now included mourning her husband and preparing to raise the child who would be born after his death."
+          }
+        }
+      }
+    ],
+    "owners": [
+      "emma-c1",
+      "emma-story1-ride",
+      "emma-h1",
+      "emma-story2-hymnal",
+      "emma-c3",
+      "emma-h3",
+      "emma-story3-quincy",
+      "emma-h4",
+      "emma-story4-hospitality",
+      "emma-c4",
+      "emma-c5",
+      "emma-h5",
+      "emma-story5-testimony"
+    ],
+    "reader": {
+      "selector": "#reflection-c1 > p > a.fc-inline-scripture",
+      "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/6?lang=eng&id=p12-p16#p12",
+      "title": "Luke 6:12–16",
+      "numbers": [
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "data": "scripture-data/nt/luke/6.json"
+    }
+  },
+  "adams": {
+    "timeline": "/timeline.html",
+    "intro": "/timelines/adams-1881-introduction.html",
+    "chart": "/timelines/adams-1881-chart.html",
+    "reference": "/timelines/latter-day-saint-church-history-timeline.html",
+    "credit": "Sebastian C. Adams, Synchronological Chart (1881). Chart image from Wikimedia Commons, courtesy of the David Rumsey Map Collection. The image is in the public domain.",
+    "choices": [
+      {
+        "href": "timelines/latter-day-saint-church-history-timeline.html",
+        "text": "Church History Timeline"
+      },
+      {
+        "href": "timelines/willie-and-martin-handcart-map.html",
+        "text": "Willie and Martin Handcart Journey"
+      },
+      {
+        "href": "timelines/life-of-christ-journey-map.html",
+        "text": "Life of Christ Timeline"
+      },
+      {
+        "href": "timelines/world-and-scripture-timeline.html",
+        "text": "World & Scripture Timeline"
+      },
+      {
+        "href": "timelines/adams-1881-introduction.html",
+        "text": "Adams' 1881 Chart of History"
+      }
+    ]
+  }
+}

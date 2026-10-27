@@ -7,6 +7,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 import adams_integrated_source_import as gate
+import adams_header_evidence_successor as successor
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -18,7 +19,10 @@ class IntegratedContextTests(unittest.TestCase):
         self.record = json.loads((ROOT / gate.MANIFEST).read_bytes())
         self.spec = self.record['spec']
         for item in self.spec['context'] + self.spec['shared_dependencies']:
-            raw = (ROOT / item['path']).read_bytes()
+            # This test exercises immutable prior semantics. The actual current
+            # CSS must pass the strict successor before projecting its old prefix.
+            raw = (successor.historical_reader(ROOT,item) if item['path']==successor.CSS['path']
+                   else (ROOT / item['path']).read_bytes())
             self.assertEqual(len(raw), item['bytes'])
             self.assertEqual(hashlib.sha256(raw).hexdigest(), item['sha256'])
             p = self.root / item['path']; p.parent.mkdir(parents=True,exist_ok=True); p.write_bytes(raw)

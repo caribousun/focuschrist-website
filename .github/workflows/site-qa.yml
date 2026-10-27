@@ -39,6 +39,8 @@ jobs:
           python tools/test_adams_delivery_successor.py
           python -m unittest discover -s tools -p test_adams_integrated_context.py
           python -m unittest discover -s tools -p test_adams_integrated_qa_evidence.py
+          python -m unittest discover -s tools -p test_adams_header_evidence_successor.py
+          python -m unittest discover -s tools -p test_adams_index_producer_successor.py
           python -m unittest discover -s tools -p test_adams_integration_indices.py
           python -m unittest discover -s tools -p test_actual_current_index_composition.py
           python -m unittest discover -s tools -p test_adams_source_import.py

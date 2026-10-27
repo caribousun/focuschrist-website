@@ -135,7 +135,7 @@ FRONTEND_INPUTS = {'timeline.html','timelines/adams-1881-chart.html',
  'history/emma-winter-crossing.html','history/emma-relief-society.html','history/emma-last-testimony.html'}
 GENERATORS = {'tools/build_art_gallery.py','tools/build_site_search.py'}
 
-def validate_producer(root=ROOT):
+def validate_historical_producer(root=ROOT):
     import re
     path = Path(root) / PRODUCER_MANIFEST
     require(path.is_file() and not path.is_symlink() and path.resolve().is_relative_to(Path(root).resolve()), 'unsafe producer evidence')
@@ -165,6 +165,13 @@ def validate_producer(root=ROOT):
         raw = local(root, row['path']).read_bytes()
         require(len(raw) == row['bytes'] and sha(raw) == row['sha256'] == AFTER[row['path']], 'actual output differs from producer')
     return record
+
+def validate_producer(root=ROOT):
+    # Current evidence must never silently fall back to a historical producer.
+    # The old verifier remains separately named for explicitly historical use.
+    from adams_index_producer_successor import validate_successor
+    return validate_successor(root)
+
 
 def check_current(root=ROOT):
     validate_producer(root)

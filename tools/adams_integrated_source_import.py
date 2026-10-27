@@ -24,10 +24,10 @@ class Tags(HTMLParser):
     def handle_starttag(self, tag, attrs):
         self.tags.append((tag, dict(attrs)))
 
-def validate_context(root, spec):
+def validate_context(root, spec, source_reader=bound):
     rows = spec['context']
     require(len(rows) == len(CONTEXT_PATHS) and {r['path'] for r in rows} == CONTEXT_PATHS, 'exact five integrated context files')
-    content = {r['path']: bound(root, r) for r in rows}
+    content = {r['path']: source_reader(root, r) for r in rows}
     shared = spec['shared_dependencies']
     names = {'site-system.css','site-header.css','site-search.css','site-common.js','site-search.js','timeline-experiences.css','unified-opening.css','unified-opening.js','timeline-mobile-study.css'}
     require(len(shared) == len(names) and {r['path'] for r in shared} == names, 'exact shared dependency set')
@@ -67,7 +67,7 @@ def validate_reviews(root, record):
         require(own.get('observations') and own.get('limits') and own.get('evidence'), 'current observations/evidence/limits required')
         for item in own['evidence']: bound(root,item)
 
-def validate_source(root, record, added, covered, rejected):
+def validate_source(root, record, added, covered, rejected, context_reader=bound):
     """Data-only validation, not finished review or general release coverage."""
     require(record.get('schema') == 1, 'unknown schema')
     spec = record['spec']
@@ -76,7 +76,7 @@ def validate_source(root, record, added, covered, rejected):
     require(spec['canvas'] == {'width': 50195, 'height': 5347, 'tile': 1024, 'levels': [1, 4, 16, 64]}, 'canvas/grid drift')
     page = bound(root, spec['page']).decode('utf-8')
     bound(root, spec['landing'])
-    validate_context(root, spec)
+    validate_context(root, spec, source_reader=context_reader)
     rows = spec['assets']; paths = {r['path'] for r in rows}
     require(len(rows) == len(paths) == spec['total_images'] == 331, 'missing or duplicate assets')
     require(paths <= added and not paths & covered, 'absent or overlapping coverage')

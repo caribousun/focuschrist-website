@@ -119,9 +119,9 @@ def validate_owner_report(spec, report):
     require(sum(s['bytes'] for s in shots) == report['screenshotBytes'] <= 23*1024*1024, 'owner capture total')
     require(report['requests'] <= 2500 and report['servedBytes'] <= 384*1024*1024, 'owner request/byte bounds')
 
-def validate_qa(root, spec):
+def validate_qa(root, spec, helper_reader=bound):
     qa=spec['qa']
-    for key in ('helper','owner_helper','owner_contract'):bound(root,qa[key])
+    for key in ('helper','owner_helper','owner_contract'):helper_reader(root,qa[key])
     report=json.loads(bound(root,qa['report']))
     identity=json.loads(bound(root,qa['run_identity']))
     captures=json.loads(bound(root,qa['capture_manifest']))
