@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "status": "REVIEWED_EXACT_CURRENT_EQUIVALENCE",
-  "normalized_at": "2026-10-27T08:08:08.146758+00:00",
+  "normalized_at": "2026-10-27T10:13:15.760509+00:00",
   "spec": {
     "registration_class": "EXACT_FIVE_EMMA_CURRENT_EQUIVALENCE",
     "historical_canonical_preflight_claim": false,
@@ -70,8 +70,8 @@
         "context": [
           {
             "path": "history/emma-elect-lady.html",
-            "bytes": 14960,
-            "sha256": "7885d852c85fe3d8958ad50f7c39949c6a9c00a69a5d94c5368c34e3ef928664"
+            "bytes": 15021,
+            "sha256": "7b01a4c66fd53274dc71c6a581963f174251557580365f1a93b56bab835229c1"
           },
           {
             "path": "site-header.css",
@@ -139,7 +139,7 @@
             "sha256": "46915bd0e27fc394b68aad848cdfad37ac05959d2b7cdbac0e476a262ce1c802"
           }
         ],
-        "context_status": "EXACT_PAGE_AND_13_STYLESHEETS_NO_IMPORTS_AT_HEAD_7d5038ad21133bbf83ffbfed7cf1cf27619dd76f",
+        "context_status": "EXACT_FIVE_CANONICAL_FOOTER_SOURCE_PROPOSAL_FROM_88f52f24_FRESH_RENDER_AND_REVIEWS_PENDING",
         "generation_time": {
           "status": "UNKNOWN_NOT_INFERRED",
           "timestamp": null,
@@ -208,8 +208,8 @@
         "context": [
           {
             "path": "history/emma-hymns.html",
-            "bytes": 14534,
-            "sha256": "e80c58261f8d05c2027af6ea84ab46bd8dab0c44518e5f9c47ae5158b9cc3caa"
+            "bytes": 14595,
+            "sha256": "56685e71d89e8596e9b14e4cfeb49889afbc7fb4534ba0efd5dc4a69c58df8c8"
           },
           {
             "path": "site-header.css",
@@ -277,7 +277,7 @@
             "sha256": "46915bd0e27fc394b68aad848cdfad37ac05959d2b7cdbac0e476a262ce1c802"
           }
         ],
-        "context_status": "EXACT_PAGE_AND_13_STYLESHEETS_NO_IMPORTS_AT_HEAD_7d5038ad21133bbf83ffbfed7cf1cf27619dd76f",
+        "context_status": "EXACT_FIVE_CANONICAL_FOOTER_SOURCE_PROPOSAL_FROM_88f52f24_FRESH_RENDER_AND_REVIEWS_PENDING",
         "generation_time": {
           "status": "UNKNOWN_NOT_INFERRED",
           "timestamp": null,
@@ -346,8 +346,8 @@
         "context": [
           {
             "path": "history/emma-winter-crossing.html",
-            "bytes": 14535,
-            "sha256": "1d1c1f08becae7e8fd3557f5675fc33c05829a539b69f9c0630cd621b027236d"
+            "bytes": 14596,
+            "sha256": "a424db4ab7ca1f0b925ec30a823cb9cc986a87e908d78967195cb132b545254f"
           },
           {
             "path": "site-header.css",
@@ -415,7 +415,7 @@
             "sha256": "46915bd0e27fc394b68aad848cdfad37ac05959d2b7cdbac0e476a262ce1c802"
           }
         ],
-        "context_status": "EXACT_PAGE_AND_13_STYLESHEETS_NO_IMPORTS_AT_HEAD_7d5038ad21133bbf83ffbfed7cf1cf27619dd76f",
+        "context_status": "EXACT_FIVE_CANONICAL_FOOTER_SOURCE_PROPOSAL_FROM_88f52f24_FRESH_RENDER_AND_REVIEWS_PENDING",
         "generation_time": {
           "status": "UNKNOWN_NOT_INFERRED",
           "timestamp": null,
@@ -484,8 +484,8 @@
         "context": [
           {
             "path": "history/emma-relief-society.html",
-            "bytes": 15126,
-            "sha256": "dac6cfe37dde749a7a6a90bd40c20a76fa2efcd508def721b5e6f9068b416414"
+            "bytes": 15187,
+            "sha256": "b8bef87968a1b6189524e80dbbcfea9e4c95e5336c1258987de22bbe33946c78"
           },
           {
             "path": "site-header.css",
@@ -553,7 +553,7 @@
             "sha256": "46915bd0e27fc394b68aad848cdfad37ac05959d2b7cdbac0e476a262ce1c802"
           }
         ],
-        "context_status": "EXACT_PAGE_AND_13_STYLESHEETS_NO_IMPORTS_AT_HEAD_7d5038ad21133bbf83ffbfed7cf1cf27619dd76f",
+        "context_status": "EXACT_FIVE_CANONICAL_FOOTER_SOURCE_PROPOSAL_FROM_88f52f24_FRESH_RENDER_AND_REVIEWS_PENDING",
         "generation_time": {
           "status": "UNKNOWN_NOT_INFERRED",
           "timestamp": null,
@@ -622,8 +622,8 @@
         "context": [
           {
             "path": "history/emma-last-testimony.html",
-            "bytes": 15675,
-            "sha256": "02e05c94935d4798708b203fb4d4419611fae556a21575f826a82f7f9132ffc5"
+            "bytes": 15736,
+            "sha256": "6889079338eebd271d8a25af85850873950a6462ef33c11031a3cea0ba46e710"
           },
           {
             "path": "site-header.css",
@@ -691,7 +691,7 @@
             "sha256": "46915bd0e27fc394b68aad848cdfad37ac05959d2b7cdbac0e476a262ce1c802"
           }
         ],
-        "context_status": "EXACT_PAGE_AND_13_STYLESHEETS_NO_IMPORTS_AT_HEAD_7d5038ad21133bbf83ffbfed7cf1cf27619dd76f",
+        "context_status": "EXACT_FIVE_CANONICAL_FOOTER_SOURCE_PROPOSAL_FROM_88f52f24_FRESH_RENDER_AND_REVIEWS_PENDING",
         "generation_time": {
           "status": "UNKNOWN_NOT_INFERRED",
           "timestamp": null,
@@ -704,18 +704,18 @@
   "reviews": [
     {
       "path": "docs/emma-story-artwork-import/fermi-review.json",
-      "bytes": 8940,
-      "sha256": "afb43ddc1edac0becdd997140de5470bc09592c4f7fc93686fca33b211b71ffe"
+      "bytes": 9608,
+      "sha256": "04ad9e92f8729e3b50c69bf0d32f663a3b95c8dc9e30b69ec7a9f8f6f4b370ce"
     },
     {
       "path": "docs/emma-story-artwork-import/newton-review.json",
-      "bytes": 7239,
-      "sha256": "5b778b1d758b4e5a946520deae7b84795ee2db156e716e6f973c4456496ffd36"
+      "bytes": 8255,
+      "sha256": "e893fbf2592d71c81eb28fcd9e26c5422caf0705f8315f31c3434311eba281d0"
     },
     {
       "path": "docs/emma-story-artwork-import/albert-review.json",
-      "bytes": 3974,
-      "sha256": "5ddc29d5f0ae1be794a8081145908924a289cbd496366f65753e5ba9d50d82fe"
+      "bytes": 4160,
+      "sha256": "e7200ac000eb44933d307b1f465942a39764eb74d7ecb4734d0d9d1e04454037"
     }
   ],
   "pending": []

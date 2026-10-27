@@ -4,72 +4,72 @@
   "actual_actor": "/root/review_emma_context_as_fermi",
   "reviewer_role": "Independent native Fermi-role artwork/context reviewer",
   "decision": "CONCUR",
-  "spec_sha256": "e34b24ec9181fd5bc11e31f0c560d94a2bea6a587001b8ee56f66708caccba0a",
   "withdrawn": false,
   "source_provenance_verified": true,
   "actual_derivatives_inspected": true,
   "assembled_context_inspected": true,
-  "scope": "EXACT_FIVE_EMMA_CACHE_TOKEN_NORMALIZATION_AND_CURRENT_CONTEXT_WITH_EXPLICIT_LIMITS",
   "historical_canonical_preflight_claim": false,
   "generation_time": "UNKNOWN_NOT_INFERRED",
   "strict_four_hoof_visibility": "NOT_MET_OCCLUDED",
   "physical_phone_tested": false,
   "overall_site_release_approved": false,
+  "spec_sha256": "a314d8a5e2c29da623852a69496ca8b4f6e6071cf10426ed8b7c847d1d9d5e73",
+  "reviewed_at": "2026-10-27T10:28:47.716898+00:00",
+  "scope": "EXACT_FIVE_EMMA_FOOTER_ONLY_CURRENT_CONTEXT_SUCCESSOR_WITH_EXPLICIT_LIMITS",
   "checks": {
-    "identity": "Freshly viewed the actual approved Emma artistic reference SHA256 7d0a07cc673d244ccd54d478c53d1e68d248e39d9b1101f87dfe3681cbb839d1, five selected PNGs and all fifteen actual WebPs at original detail, plus retained face-comparison sheets. Brow/eye, nose, mouth and chin relationships remain recognizable across poses. No image pixels changed in this normalization. This is manual artistic continuity, not biometric equivalence.",
+    "identity": "Reusing my own genuinely performed prior inspection bound by receipt SHA256 afb43ddc1edac0becdd997140de5470bc09592c4f7fc93686fca33b211b71ffe, after this continuation independently reverified all twenty unchanged byte/dimension/RGBA pins. I did not freshly reopen the unchanged asset files here. My prior actual approved-reference/full-frame/face-detail observations remain applicable: brow/eye, nose, mouth and chin relationships remain recognizable across poses. The footer-only change does not alter image pixels. Manual artistic continuity, not biometric equivalence.",
     "age": "Ride and hymnal retain adult youthful fullness; Quincy and hospitality retain mature-adult interpretations; testimony retains gray-streaked hair and facial lines at source size. Small derivatives and phone display suppress fine lines. Exact apparent numeric ages and every wrinkle are not certified. No new age reconstruction or rejuvenation edit.",
     "expression_gaze": "Ride remains composed and attentive toward travel, hymnal downward toward the book, Quincy downward toward her hands, hospitality welcoming with near-viewer gaze, and testimony speaking with attentive off-camera gaze and raised hand. No conspicuous derivative-only gaze or expression drift observed. Fine iris/eyelash certainty is limited at 640 and phone display.",
     "atmosphere": "Autumn riding action and valley depth contrast with soft window-lit book/seated interiors and the warm doorway. Distinct lighting and restrained clothing colors fit the teal/gold presentation. No new broad color break, blocking seam or obvious halo at normal size. Compression smooths microtexture, not recovered detail.",
     "environment": "All fifteen derivatives preserve source composition and proportional framing. Current 1280/390/320 views show no new responsive crop of the face, hands, horse or doorway/shoe. Desktop ride reaches the bottom viewport edge; the last subpixel boundary is not proved. Quincy is an illustrative post-crossing portrait, not the actual river crossing. Separate unchanged hub hero is context only, outside five-original approval.",
     "characters_realism": "Visible character, fabric, hair, light and hand/contact relationships remain coherent as photorealistic illustration. Re-encoding smooths fine detail, increasingly at 640. Hidden fingers, pelvis/saddle, far limbs, exact hair topology and physical dimensions are not certified. No new person or face substitution was introduced.",
-    "period_sources": "Read all five unchanged public-safe provenance summaries, independently rehashed their fourteen unique historical receipt pins, and checked all five selected PNGs byte-identical to selected source files. Read exact v17 owner selection and prior scope. This verifies retained linkage, not authenticated signatures, newly researched historic reconstruction or retrospective canonical preflight. Period-oriented clothing, book and wood/plaster/doorway setting remain unchanged. Generation times remain UNKNOWN_NOT_INFERRED.",
+    "period_sources": "The five source-provenance summaries are unchanged in this spec and their actual file hashes were reverified; all fourteen retained historical receipt bytes were rehashed again. My own earlier selected-source/receipt and owner-v17 review remains applicable, not another reviewer's authorship. This verifies linkage, not authenticated signatures, new historical research or retrospective canonical preflight. The new canonical footer explicitly identifies AI-generated artistic interpretations and denies photograph/eyewitness status, consistent with those limitations. Generation times remain UNKNOWN_NOT_INFERRED.",
     "anatomy": "Visible poses and hand contacts remain coherent within selected art. Three complete horse hooves are clearly readable; far hind hoof is naturally occluded by debris/limb overlap. Strict four-complete-hooves-visible remains NOT_MET_OCCLUDED. Owner-selected v17 does not certify unseen anatomy, exact saddle mechanics or a temporal gait cycle.",
-    "uniqueness": "Selected ride remains v17; four other scenes remain corrective v2. Distinct settings, dress colors, hair silhouettes and poses persist in all derivatives and captures. No generation, replacement, rejected-variant revival or image editing. Spec changes only five page byte/hash bindings and current-head labels. HTML changes only site-system.css query token 20261010-system-1 to 20261005-mobile-study-rows-1. WebP proportional re-encoding is not PNG pixel identity or losslessness.",
-    "desktop_phone": "Freshly opened all 45 current captures: 15 headers, 15 artwork viewports, 3 hub openings, 3 focused skip links, 2 menus, 2 search dialogs and 5 art dialogs. Headers are styled and distinct from content; title/button wrapping and gutters remain readable. Focused skip link is conspicuous. Search fits both phone widths; menu lower entries and long dialogs need scrolling. Hymnal bottom Close is partly below initial view and testimony bottom Close below it; top-right close is visible. Independently verified 43/45 captures byte-identical to v7. Changed ride/hymnal desktop views differ only bbox x[0,1280), y[47,81), outside art; also opened those two prior captures. No new visible artwork/context regression. Desktop Chromium viewport evidence, not physical-phone certification."
+    "uniqueness": "Selected ride remains v17; other four sources remain corrective v2. Distinct settings, clothing, poses and source compositions are unchanged. No generation, editing, replacement or rejected-variant revival. New spec changes only five page byte/hash pins and corresponding context labels. I independently proved each candidate inverse restores the entire prior HTML by replacing only its footer, with both canonical notice paragraphs present exactly once. The previous cache-token normalization is retained. No lossless-derivative claim.",
+    "desktop_phone": "Freshly opened all fifteen new footer captures at 1280/390/320 by900 and both changed current desktop artwork captures alongside their prior versions. Footer independence and AI-artwork paragraphs are adjacent, legible and fully uncut, with official Church link and Back to top visible; narrow navigation pills wrap without horizontal clipping. The notices match canonical template markup and metadata: one each, visible, positive size, complete viewport bounds and exact official href/target/rel. Footer outer box alone extends at most0.46875px below900 from scroll rounding in three observations; no notice/control clipping was seen. Compared all45 retained captures:43 byte-identical to my previously personally viewed set; hymnal changed bbox(127,47,776,65), testimony(0,47,1280,88), outside art. I reused my own prior view of those43 unchanged captures, not fresh viewing calls. Header telemetry identical; skip metadata changes only subpixel transitional y/bottom/transform, focused screenshots unchanged. No new artwork/context regression observed; no physical-device certification."
   },
   "limits": [
-    "BOUND_SCOPE: exact spec e34b24ec9181fd5bc11e31f0c560d94a2bea6a587001b8ee56f66708caccba0a, selected five originals, fifteen derivatives, pinned pages/CSS and current diagnostic captures only. Not full-site release/deployment approval or all-QA PASS.",
-    "AUTHORSHIP: new native receipt by /root/review_emma_context_as_fermi in delegated Fermi role. Earlier Fermi receipts retain their original authorship. Their inspections are not claimed as my prior work; this turn freshly viewed all twenty assets and all forty-five current captures. Retained diagnostic face sheets were reopened, not regenerated.",
-    "PROVENANCE: source_provenance_verified means exact selected bytes and retained receipt linkage, not authenticated signatures, license adjudication, universal historical preflight or new historical research. Historical source-art-only reviews remain so. Generation times are unknown; file mtime is not substituted.",
-    "FOUR_HOOF_VISIBILITY_NOT_MET_OCCLUDED: preserve strict negative criterion. Owner selection does not prove hidden anatomy or mandate-perfect output.",
-    "PHONE_WIDTH_NOT_PHYSICAL_PHONE: no hardware phone, touch keyboard, alternate browser/device or exhaustive accessibility certification.",
-    "CAPTURE_LIMITS: desktop ride ends at viewport boundary; long menus/dialogs require scrolling. No claim all controls fit the initial panel. Search input/open/close does not certify query submission or results.",
-    "DIAGNOSTIC_NOT_RELEASE: results.json reports pass=true for 31 listed journeys. I did not execute renderer/project source. Normal hosted suite separately reached 9/10 consumer tests with old-owner fixture failure; artwork gate not reached. This review does not override remaining gates.",
-    "ARTISTIC_NOT_BIOMETRIC: exact face/body measurements, numeric apparent age, unseen anatomy, lossless derivatives and authenticated event reconstruction are not established.",
-    "PUBLIC_SAFE_METADATA: hashes/observations only. No private reference-image pixels, authority text, private review bodies, prompts or screenshots embedded for publication. Private audit paths handed to Albert separately.",
-    "HISTORY_PRESERVED: rejected variants and earlier failed captures/stale headers remain historical, not rewritten as passes. Unchanged hub hero is surrounding context, not one of five newly certified originals."
+    "BOUND_SCOPE: exact footer-only spec a314d8a5e2c29da623852a69496ca8b4f6e6071cf10426ed8b7c847d1d9d5e73 and current diagnostic evidence. Not full-site release/deployment approval or normal full-QA PASS.",
+    "OWN_PRIOR_INSPECTION_REUSE: same actor /root/review_emma_context_as_fermi reuses only its own original-detail inspection of20assets and45captures in afb43ddc1edac0becdd997140de5470bc09592c4f7fc93686fca33b211b71ffe, after current hashes. This continuation freshly viewed15footer captures and2changed current/prior pairs only. No fictional fresh reopening of unchanged assets or43unchanged captures.",
+    "FOUR_HOOF_VISIBILITY_NOT_MET_OCCLUDED: the far hind hoof remains naturally occluded. Owner-selected v17 does not erase this strict negative criterion or certify hidden anatomy.",
+    "UNKNOWN_GENERATION_TIME: chronology remains unknown, no mtime inference or retrospective preflight. Historical source-art-only reviews remain so.",
+    "PHONE_WIDTH_NOT_PHYSICAL_PHONE: desktop Chromium widths1280/390/320 by900, no physical phone/touch keyboard/alternate-browser/exhaustive accessibility claim. Footer gray text was visually read, not a new measured contrast certification.",
+    "FOOTER_BOUNDARY_PRECISION: full independence/artwork notice bounds are inside viewport. Outer footer bottom reaches900.46875 at most; do not claim mathematically strict whole-container containment without the observed subpixel tolerance. Canonical official href is inspected, not fresh destination-load proof.",
+    "PRIOR_LIMITS_RETAINED: desktop ride viewport edge and long dialog/menu scrolling limits stand. Search submission/results not certified. Hub hero remains surrounding context, not one of five original approvals.",
+    "DIAGNOSTIC_ONLY: actual report has46successful listed journeys including15new footer observations, not my own renderer execution. Full normal QA still fails the old context record and awaits exact current reviews/final pin/hosted gates. No normal-suite or release success is inferred.",
+    "ARTISTIC_NOT_BIOMETRIC: no exact numerical apparent age, facial/body measurement, hidden anatomy, lossless derivative or authenticated historic event reconstruction claim.",
+    "PUBLIC_SAFE_METADATA: no private source/authority bodies, reference-image pixels, prompts or screenshots included. Prior rejected images, failed captures and earlier receipts preserved unchanged."
   ],
-  "reviewed_at": "2026-10-27T08:19:12.818129+00:00",
   "evidence": [
     {
-      "path": "docs/emma-story-artwork-import/fermi-v8-evidence.json",
-      "bytes": 43732,
-      "sha256": "7d773df85566df3a2eb69ffc91bc80cdb1e97714459f65ad56a4de11589ebc33"
+      "path": "docs/emma-story-artwork-import/fermi-footer-v1-evidence.json",
+      "bytes": 78881,
+      "sha256": "b7a36ff645c20668bd87a58f1eab77e8582e51d93465f9fb77806150a76a3bb1"
     },
     {
-      "path": "docs/emma-story-artwork-import/evidence/v8-artifact-binding.json",
-      "bytes": 1468,
-      "sha256": "63744d481aa2970bff8cadbf04b34c54f4b47cc22c19fad1c0bffa77700b63d5"
+      "path": "docs/emma-story-artwork-import/evidence/footer-v1-artifact-binding.json",
+      "bytes": 1475,
+      "sha256": "81765515c5bd9c1b41f6bb86f7ade6ca472ec58b046e12e918219835865bf794"
     },
     {
-      "path": "docs/emma-story-artwork-import/evidence/v8-results.json",
-      "bytes": 3878,
-      "sha256": "eecf529298bb8d3d1cb445f23f1b414118a6721639ba289e0c8c7e1cac33d5dc"
+      "path": "docs/emma-story-artwork-import/evidence/footer-v1-capture-manifest.json",
+      "bytes": 16763,
+      "sha256": "c678426571aed5c6ecb627e4670816e2146ec198b49f19006ddf00158e18b7ac"
     },
     {
-      "path": "docs/emma-story-artwork-import/evidence/v8-header-and-viewports.json",
-      "bytes": 99070,
-      "sha256": "e71d50ff454a1a4bdbd213707e5c5db64a81ce658c1fce4583bb619eccbff9b1"
-    },
-    {
-      "path": "docs/emma-story-artwork-import/evidence/v8-diagnostic.txt",
+      "path": "docs/emma-story-artwork-import/evidence/footer-v1-diagnostic.txt",
       "bytes": 530,
-      "sha256": "86aa297df0f45afa2ad3519795cc967ee02249c4ca0cc429b723e77067388995"
+      "sha256": "82b4038a53ba014aba4f4cfd7e7a27bd2e4a0ed1f5cfe839d2287eddbda5bbe4"
     },
     {
-      "path": "docs/emma-story-artwork-import/evidence/v8-capture-manifest.json",
-      "bytes": 12573,
-      "sha256": "82be88a787f193b517d0c3b83c015555692dd49dcb6550c84d72e13992c32b0b"
+      "path": "docs/emma-story-artwork-import/evidence/footer-v1-results.json",
+      "bytes": 5752,
+      "sha256": "8018cd602503649e3da3df1ef6e9ba793cb4a22a10db9f8719df8ce7ad069bd7"
+    },
+    {
+      "path": "docs/emma-story-artwork-import/evidence/footer-v1-telemetry.json",
+      "bytes": 127339,
+      "sha256": "320eb46316733ac4bc52b10911552356afc1f6b01911a14c3fe3d7b8ecf0285d"
     }
   ]
 }

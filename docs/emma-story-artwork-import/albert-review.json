@@ -1,10 +1,10 @@
 {
   "reviewer": "Albert",
   "decision": "CONCUR",
-  "spec_sha256": "e34b24ec9181fd5bc11e31f0c560d94a2bea6a587001b8ee56f66708caccba0a",
-  "reviewed_at": "2026-10-27T08:11:00.437164+00:00",
+  "spec_sha256": "a314d8a5e2c29da623852a69496ca8b4f6e6071cf10426ed8b7c847d1d9d5e73",
+  "reviewed_at": "2026-10-27T10:28:11.953266+00:00",
   "withdrawn": false,
-  "scope": "New cache-token-only context equivalence. Prior own direct derivative inspections retained because all twenty exact asset hashes and pixels are unchanged; fresh actual current desktop and five phone capture inspection. Not release acceptance.",
+  "scope": "Footer-only current context equivalence after canonical notice correction. All43 unique source/asset/style/provenance pins independently rehashed. Original asset observations retained only for identical selected bytes; new actual footer pixels and changed body views inspected. Not a release decision.",
   "source_provenance_verified": true,
   "actual_derivatives_inspected": true,
   "assembled_context_inspected": true,
@@ -18,7 +18,7 @@
     "period_sources": "The preserved public-safe source receipt summaries, Hannah-reviewed prose and source pointers remain bound. Unknown exact generation times are not inferred from file metadata.",
     "anatomy": "The selected ride has three clearly visible hoof endpoints and a naturally occluded far hind hoof. Strict four-hoof visibility remains NOT_MET; no unconditional anatomy claim.",
     "uniqueness": "Five distinct selected originals and fifteen exact derivative assets are pinned to five separate story routes. Reuse of character identity is intentional; no substituted artwork was found.",
-    "desktop_phone": "Fresh run40469437577 contains31 passing named journeys. Personally viewed both changed desktop captures and all five phone artwork captures.43of45 complete captures byte-identical prior reviewed matrix; two differences restricted to header shadow band y47..80. Artwork and body below81 unchanged. Current five page pins and all assets/styles/provenance independently hashed. No physical-device or submitted-search claim."
+    "desktop_phone": "Actual run40487588321 diagnostic has46 passing journeys/60captures including15new canonical-footer cases. Root personally viewed seven footer captures spanning allfive390-width pages plus1280/320 representatives and both changed1280body captures.43of45 priorcaptures byte-identical; two differences restricted to header/shadow strips, no artwork pixels changed. Both canonical notices and official link visible, ordered and unclipped; current sources match exact footer-only successor. No physical-phone or fullaccessibility claim."
   },
   "limits": [
     "Strict ride four-hoof visibility is NOT_MET because of natural occlusion.",
@@ -29,26 +29,26 @@
   ],
   "evidence": [
     {
-      "path": "docs/emma-story-artwork-import/evidence/albert-desktop-v8.json",
-      "bytes": 1205,
-      "sha256": "f51dd8d7b89234ee363cb1edc040bac234f4bf28ed384c0c09e211b4bdb8d0ce"
+      "path": "docs/emma-story-artwork-import/evidence/albert-footer-desktop.json",
+      "bytes": 1767,
+      "sha256": "b978b9b39213a4a67ad272742499c2d18ec7ace9768d2e08d396bf47ca384c97"
     },
     {
-      "path": "docs/emma-story-artwork-import/evidence/albert-phone-v8.json",
-      "bytes": 1744,
-      "sha256": "48cda8c3e75d42312200f47a7c956fe6300a84075ee696a1f69576d27efc9e9b"
+      "path": "docs/emma-story-artwork-import/evidence/albert-footer-phone.json",
+      "bytes": 2291,
+      "sha256": "8ec8fd158940abbc85cd6d68f5183db03690a74b80d75c8b5d5c5d110254e6db"
     }
   ],
   "rendered": {
     "desktop": {
-      "path": "docs/emma-story-artwork-import/evidence/albert-desktop-v8.json",
-      "bytes": 1205,
-      "sha256": "f51dd8d7b89234ee363cb1edc040bac234f4bf28ed384c0c09e211b4bdb8d0ce"
+      "path": "docs/emma-story-artwork-import/evidence/albert-footer-desktop.json",
+      "bytes": 1767,
+      "sha256": "b978b9b39213a4a67ad272742499c2d18ec7ace9768d2e08d396bf47ca384c97"
     },
     "phone": {
-      "path": "docs/emma-story-artwork-import/evidence/albert-phone-v8.json",
-      "bytes": 1744,
-      "sha256": "48cda8c3e75d42312200f47a7c956fe6300a84075ee696a1f69576d27efc9e9b"
+      "path": "docs/emma-story-artwork-import/evidence/albert-footer-phone.json",
+      "bytes": 2291,
+      "sha256": "8ec8fd158940abbc85cd6d68f5183db03690a74b80d75c8b5d5c5d110254e6db"
     }
   }
 }
