@@ -611,6 +611,9 @@ jobs:
       - name: Generate site search index
         run: python tools/build_site_search.py
 
+      - name: Diagnose all current scripture citations without changing acceptance
+        run: timeout --signal=TERM --kill-after=5s 60s python tools/topic_inline_scripture_diagnostic.py
+
       - name: Record generated index hashes
         if: always()
         run: |
@@ -626,6 +629,7 @@ jobs:
             art-gallery.json
             site-search-index.json
             indices-evidence.txt
+            scripture-citation-diagnostic.json
           include-hidden-files: true
           if-no-files-found: ignore
 
