@@ -5,7 +5,7 @@
 const assert=require('node:assert/strict'),crypto=require('node:crypto');
 const sha=x=>crypto.createHash('sha256').update(x).digest('hex'),bare=p=>p==='/'?'index.html':p.replace(/^\//,'');
 const hub='history/emma-hale-smith.html',retired='history/emma-elect-lady.html',hymn='history/emma-hymns.html';
-const CURRENT=Object.freeze({[hub]:'7511f2d034d6117cb9e4d0da896c3ff778c1f0a2165c0425361b47c1d6fb3573',[retired]:'6de7bd0b21f0561913ba251163e552588a3fe065df83fd6cd1ccb9b6365ccbba',[hymn]:'1561a07fcbbc7e3835234fc652a70ae8bb8613e2e1bfbd7d1352a5c458c15c7f'});
+const CURRENT=Object.freeze({[hub]:'7511f2d034d6117cb9e4d0da896c3ff778c1f0a2165c0425361b47c1d6fb3573',[retired]:'6de7bd0b21f0561913ba251163e552588a3fe065df83fd6cd1ccb9b6365ccbba',[hymn]:'55ee8b1a9b57154ca074282f2b6f44c19d77d15a63abd5adcde3286174625087'});
 const PRIOR=Object.freeze({[hub]:'50c334379066722ef6e80e97d70f0f2ca431777b5857eb15b998da65cc1783cf',[retired]:'f32c79609f15d51e9c85b2f4bc941de38d2626c944e33f1876fc574f46f7986c',[hymn]:'719bc7f899ebc188f33322c4c7c6bea9e326b209e28e2d49855543185e12aedb'});
 const PRIOR_ROUTES_SHA='ba19da4af6ba32219ff9555ecf5ddd466077acd9a6ee09a7d49f29c07d1f4284';
 const KEYS=['emma-story1-ride','emma-story2-hymnal','emma-story3-quincy','emma-story4-hospitality','emma-story5-testimony','emma-h1','emma-h3','emma-h4','emma-h5','emma-journey-origin',...Array.from({length:10},(_,i)=>'emma-journey-'+String(i+3).padStart(2,'0'))];

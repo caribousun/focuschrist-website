@@ -6,7 +6,7 @@ const assert=require('node:assert/strict'),crypto=require('node:crypto');
 const CURRENT=Object.freeze(['history/emma-hymns.html','history/emma-winter-crossing.html','history/emma-relief-society.html','history/emma-last-testimony.html']);
 const RETIRED='history/emma-elect-lady.html';
 const SOURCE_HASH=Object.freeze({
- 'history/emma-hymns.html':'1561a07fcbbc7e3835234fc652a70ae8bb8613e2e1bfbd7d1352a5c458c15c7f',
+ 'history/emma-hymns.html':'55ee8b1a9b57154ca074282f2b6f44c19d77d15a63abd5adcde3286174625087',
  'history/emma-winter-crossing.html':'a2c6003789eaaf4458bb3f431943c2d4602908b19324054ef8ca9f0aab30a417',
  'history/emma-relief-society.html':'e90e7b25239973e2488f32e57482fd5cfbdabb6a7f3f1746599aded9cd546ebb',
  'history/emma-last-testimony.html':'ff608df4a3bb994d29834e253daac97b1721ecf2b3209a621e284f16ca91eb70'});

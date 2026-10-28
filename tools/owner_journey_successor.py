@@ -10,7 +10,7 @@ from pathlib import Path
 from urllib.parse import urlsplit
 from owner_integration_contract import Document, standard_chrome, one
 
-MANIFEST_SHA256='7bed4031f18d233fa0ce21f1933e8664feb6f367605fee29e36bdc6bde20c9f3'
+MANIFEST_SHA256='3ae50af644843d26abc5e794262657336b60c7a4f204cab8ed1064f0159ae0d4'
 HUB='history/emma-hale-smith.html'; RETIRED='history/emma-elect-lady.html'; HYMNS='history/emma-hymns.html'
 MANIFEST_PATH=Path(__file__).with_name('owner-successor-manifest.json')
 FIXTURES=Path(__file__).with_name('predecessors')

@@ -41,6 +41,7 @@ jobs:
           python -m unittest discover -s tools -p test_owner_journey_integration.py
           python -m unittest discover -s tools -p test_artwork_emma_journey_delivery.py
           python -m unittest discover -s tools -p test_emma_journey_creation_wiring.py
+          python -m unittest discover -s tools -p test_emma_story_journey_browser_contract.py
           python -m unittest discover -s tools -p test_emma_journey_indices_contract.py
           python -m unittest discover -s tools -p test_prepare_emma_journey_indices.py
           python -m unittest discover -s tools -p test_emma_journey_indices_full_tree_protocol.py
@@ -333,7 +334,7 @@ jobs:
         run: NODE_PATH=/tmp/focus-row-qa/node_modules node tools/mobile_study_header_browser_qa.js
 
       - name: Verify Emma story pages and viewer journeys
-        run: NODE_PATH=/tmp/focus-row-qa/node_modules node tools/emma_story_browser_qa.js
+        run: NODE_PATH=/tmp/focus-row-qa/node_modules node tools/emma_story_journey_browser_qa.js
 
       - name: Save Emma story viewport evidence
         if: always()
@@ -684,9 +685,9 @@ jobs:
           npm install --prefix /tmp/focus-row-qa --no-save --package-lock=false --ignore-scripts playwright@1.55.1 leaflet@1.9.4
           /tmp/focus-row-qa/node_modules/.bin/playwright install --with-deps chromium
 
-      - name: Bind the diagnostic to the reviewed renderer and checkout
+      - name: Bind the diagnostic to the current renderer and checkout
         run: |
-          printf '%s  %s\n' '0132427d0edc952456515afc61eec5d355dded5f0bf95e6ae27563d5349b5947' 'tools/emma_story_browser_qa.js' | sha256sum --check
+          printf '%s  %s\n' 'b3b461fbe80a8c08b7fee9fae1a3f98e2eac42293e3cbf05ea52e0cdc43776d0' 'tools/emma_story_journey_browser_qa.js' | sha256sum --check
           mkdir -p .qa-artifacts/emma-story
           {
             echo "scope=diagnostic rendering only; artwork-creation and all release gates remain required"
@@ -695,12 +696,12 @@ jobs:
             echo "event=${{ github.event_name }}"
             git rev-parse HEAD
             git log -1 --format='parents %P'
-            sha256sum .github/workflows/site-qa.yml tools/emma_story_browser_qa.js
+            sha256sum .github/workflows/site-qa.yml tools/emma_story_journey_browser_qa.js
           } > .qa-artifacts/emma-story/diagnostic-evidence.txt
 
-      - name: Capture reviewed Emma desktop and phone-width journeys
+      - name: Capture current Emma desktop and phone-width journeys
         id: emma_render
-        run: timeout --signal=TERM --kill-after=15s 5m env NODE_PATH=/tmp/focus-row-qa/node_modules node tools/emma_story_browser_qa.js
+        run: timeout --signal=TERM --kill-after=15s 5m env NODE_PATH=/tmp/focus-row-qa/node_modules node tools/emma_story_journey_browser_qa.js
 
       - name: Verify the two corrected hub scripture links
         run: |
