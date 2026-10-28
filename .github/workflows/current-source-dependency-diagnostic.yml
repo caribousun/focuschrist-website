@@ -13,6 +13,18 @@ on:
       - tools/test_current_normalizer_fail_closed.py
       - tools/artwork_owner_closure.py
       - tools/test_artwork_owner_closure.py
+      - timeline.html
+      - timeline.css
+      - tools/timeline_selector_check.py
+      - tools/timeline_selector_semantics.py
+      - tools/owner_integration_navigation.js
+      - tools/test_owner_integration_navigation.js
+      - tools/sitewide_artwork_review_qa.py
+      - tools/test_owner_integration_contract.py
+      - tools/test_owner_integration_panels.py
+      - tools/test_owner_integration_successor.py
+      - assets/page-art/jesus-journey/**
+      - assets/page-art/answers-study/**
 permissions:
   contents: read
 jobs:

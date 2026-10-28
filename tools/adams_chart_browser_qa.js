@@ -3,8 +3,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 const W=50195,H=5347,TILE=1024;
 const EXPECTED_CHART_SHA256='b90c19dd9f77c3966843b41d514319816a194deee86b87235909f6b2c742130c';
-const EXPECTED_LANDING_SHA256='c910ae58c2f8feccf1d59f44b154d31f224436b79538e86bf73774c65b0b8c4c';
-const INTEGRATED_SOURCES=[{"path":"adams-integration.css","bytes":5292,"sha256":"3c8a2390e93e94f5d67d3b7a4356f018d78df7ea5c654a3841366549df76d131"},{"path":"adams-integration.js","bytes":2267,"sha256":"334a8395213a4e561cdffc747bf92b6872902486b055a36824cf834784dffb7b"},{"path":"timeline.html","bytes":8828,"sha256":"c910ae58c2f8feccf1d59f44b154d31f224436b79538e86bf73774c65b0b8c4c"},{"path":"timelines/adams-1881-chart.html","bytes":66076,"sha256":"b90c19dd9f77c3966843b41d514319816a194deee86b87235909f6b2c742130c"},{"path":"timelines/adams-1881-introduction.html","bytes":8126,"sha256":"742d429e6a674ce5d47889aab964a6bde60f3509bd9518e159499be6616112be"}];
+const INTEGRATED_SOURCES=[{"path":"adams-integration.css","bytes":5292,"sha256":"3c8a2390e93e94f5d67d3b7a4356f018d78df7ea5c654a3841366549df76d131"},{"path":"adams-integration.js","bytes":2267,"sha256":"334a8395213a4e561cdffc747bf92b6872902486b055a36824cf834784dffb7b"},{"path":"timelines/adams-1881-chart.html","bytes":66076,"sha256":"b90c19dd9f77c3966843b41d514319816a194deee86b87235909f6b2c742130c"},{"path":"timelines/adams-1881-introduction.html","bytes":8126,"sha256":"742d429e6a674ce5d47889aab964a6bde60f3509bd9518e159499be6616112be"}];
 const ASSET_SET_SHA256='6092f3c930ebb6cae7c25b3f881fc93ef590642500e419b539124cacd89bca0f';
 const CREDIT='Sebastian C. Adams, Synchronological Chart (1881). Chart image from Wikimedia Commons, courtesy of the David Rumsey Map Collection. The image is in the public domain.';
 const COMMONS='https://commons.wikimedia.org/wiki/File:Adams_Synchronological_Chart,_1881.jpg';
@@ -13,11 +12,17 @@ const PROFILES=[{name:'desktop',width:1280,height:900,touch:false},{name:'phone'
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 const near=(a,b,why,t=.08)=>assert(Math.abs(a-b)<=t,`${why}: ${a} != ${b}`);
 
+function validateLanding(root){
+ const read=name=>fs.readFileSync(path.join(root,name),'utf8'),raw=read('timeline.html');
+ require('./owner_integration_navigation').assertSource('timeline.html',raw,read);
+ return {path:'timeline.html',bytes:Buffer.byteLength(raw),sha256:sha(Buffer.from(raw)),validation:'current Timeline source semantics; rendered behavior checked separately'};
+}
+
 function inspectAssets(root){
  for(const r of INTEGRATED_SOURCES){const b=fs.readFileSync(path.join(root,r.path));assert.equal(b.length,r.bytes);assert.equal(sha(b),r.sha256,'Exact integrated source '+r.path);}
  const html=fs.readFileSync(path.join(root,'timelines/adams-1881-chart.html'),'utf8');
  assert.equal(sha(Buffer.from(html)),EXPECTED_CHART_SHA256,'Exact reviewed metadata-correct chart');
- assert.equal(sha(fs.readFileSync(path.join(root,'timeline.html'))),EXPECTED_LANDING_SHA256,'Exact reviewed Timeline landing');
+ const landing=validateLanding(root);
  const matches=[...html.matchAll(/assets\["([0-9]+):([0-9]+):([0-9]+)"\]="(\/assets\/adams-chart\/[^"\s]+)"/g)];
  assert.equal(matches.length,331,'331 literal chart assets');
  const assets=new Map(),counts={};let total=0;
@@ -32,7 +37,7 @@ function inspectAssets(root){
  // Locale order is deliberately not used for the digest: Python/source manifest uses byte order.
  const ordered=[...assets.values()].sort((a,b)=>a.url<b.url?-1:a.url>b.url?1:0).map(r=>`${r.url.slice(1)}\0${r.bytes}\0${r.sha256}\n`).join('');
  assert.equal(sha(Buffer.from(ordered)),ASSET_SET_SHA256,'all 331 exact owner-supplied JPEG bytes');
- return {assets,sourceSHA256:sha(Buffer.from(html)),landingSHA256:sha(fs.readFileSync(path.join(root,'timeline.html'))),total};
+ return {assets,sourceSHA256:sha(Buffer.from(html)),landingSHA256:landing.sha256,landing,total};
 }
 
 // Reads rendered tile coordinates, not the app's internal variables or setter functions.
@@ -275,9 +280,10 @@ module.exports=async function adamsChartQA(existingPage,origin,parentOut){
   }
  }finally{
   clearTimeout(timer);for(const c of active)await c.close().catch(()=>{});
-  const report={integratedSources:INTEGRATED_SOURCES,sourceSHA256:fixture.sourceSHA256,landingSHA256:fixture.landingSHA256,assetSetSHA256:ASSET_SET_SHA256,assetCount:331,assetBytes:fixture.total,timedOut,results,network,blocked,requestCount,tileResponseBytes:tileBytes,screenshots:shots,screenshotBytes:outputBytes,limits:['Hosted Chromium emulation, not deployed or physical-device acceptance.','No native touch drag/pinch, browser chrome fullscreen, accessibility certification or enlarged-text result claimed.','No external providers fetched; every observed chart response must be exact same-origin owner-supplied JPEG bytes.']};
+  const report={integratedSources:INTEGRATED_SOURCES,sourceSHA256:fixture.sourceSHA256,landingSHA256:fixture.landingSHA256,landingValidation:fixture.landing,assetSetSHA256:ASSET_SET_SHA256,assetCount:331,assetBytes:fixture.total,timedOut,results,network,blocked,requestCount,tileResponseBytes:tileBytes,screenshots:shots,screenshotBytes:outputBytes,limits:['Hosted Chromium emulation, not deployed or physical-device acceptance.','No native touch drag/pinch, browser chrome fullscreen, accessibility certification or enlarged-text result claimed.','No external providers fetched; every observed chart response must be exact same-origin owner-supplied JPEG bytes.']};
   const bytes=Buffer.from(JSON.stringify(report,null,2)+'\n');assert(bytes.length<=1024*1024,'Report exceeds 1 MiB');assert(outputBytes+bytes.length<=24*1024*1024,'Adams evidence exceeds 24 MiB');fs.writeFileSync(path.join(out,'report.json'),bytes,{flag:'wx'});
  }
  assert(!timedOut,'Adams suite exceeded 240-second bound');assert.equal(results.length,4);assert(results.every(r=>r.pass),'Every Adams profile must pass: '+JSON.stringify(results.filter(r=>!r.pass).map(r=>({profile:r.profile.name,error:r.error}))));
  return {profiles:results.map(r=>r.profile.name),assetCount:331,assetSetSHA256:ASSET_SET_SHA256,screenshots:shots,evidence:'adams/report.json',nativePhoneGestures:'not tested'};
 };
+module.exports.validateLanding=validateLanding;

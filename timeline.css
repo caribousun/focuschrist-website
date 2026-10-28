@@ -6,7 +6,6 @@ body.fc-timeline-page #choose-timeline .fc-timeline-choices { display: flex; fle
 .fc-timeline-choice__link { display: flex; flex: 1; flex-direction: column; color: inherit; text-decoration: none; }
 .fc-timeline-choice__link:focus-visible { outline: 3px solid var(--fc-gold-light); outline-offset: -4px; }
 .fc-timeline-choice__link > img { display: block; width: 100%; height: auto; flex: 0 0 auto; aspect-ratio: 16 / 10; object-fit: cover; border-bottom: 1px solid var(--fc-panel-border); }
-.fc-timeline-choice:nth-child(3) img, .fc-timeline-choice:nth-child(4) img { object-fit: contain; background: #1d3b38; }
 .fc-timeline-choice__body { display: flex; flex: 1; flex-direction: column; align-items: stretch; padding: 18px; }
 .fc-timeline-choice h3 { color: var(--fc-gold-light); font: 400 clamp(1.25rem,1.65vw,1.55rem)/1.2 Georgia,'Times New Roman',serif; margin: 0; }
 .fc-timeline-choice p { color: var(--fc-text); font-size: 1rem; line-height: 1.55; margin: 12px 0 20px; }

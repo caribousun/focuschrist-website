@@ -1,5 +1,6 @@
 """Mutation fixtures only; synthetic data never constitutes current evidence."""
 import copy
+import hashlib
 import json
 import tempfile
 import unittest
@@ -75,6 +76,22 @@ class HeaderEvidenceSuccessorTests(unittest.TestCase):
     def test_old_actual_qa_and_receipts_remain_historical_only(self):
         record=json.loads((ROOT/s.prior.MANIFEST).read_bytes());s.prior.validate_reviews(ROOT,record)
         s.qa_checks.validate_qa(ROOT,record['spec'],helper_reader=s.historical_reader)
+
+    def test_header_receipt_renderer_archive_is_exact_and_fail_closed(self):
+        raw=s.header_receipt_reader(ROOT,s.HELPER)
+        self.assertEqual(hashlib.sha256(raw).hexdigest(),s.HELPER['sha256'])
+        altered=dict(s.HELPER,sha256='0'*64)
+        with self.assertRaises(ValueError):s.header_receipt_reader(ROOT,altered)
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder);archive=root/s.HEADER_RECEIPT_HELPER_ARCHIVE
+            archive.parent.mkdir(parents=True)
+            for changed in (raw+b' ',b'X'+raw[1:]):
+                archive.write_bytes(changed)
+                with self.assertRaises(ValueError):s.header_receipt_reader(root,s.HELPER)
+
+    def test_header_era_qa_receipt_stays_valid_with_archived_renderer(self):
+        record=json.loads((ROOT/s.RECORD).read_bytes())
+        s.qa_checks.validate_qa(ROOT,record['spec'],helper_reader=s.header_receipt_reader)
 
     def test_actual_role_assignment_is_exact_and_authors_distinct(self):
         assignment=json.loads((ROOT/'docs/adams-header-evidence-successor/review-role-assignment.json').read_bytes())
