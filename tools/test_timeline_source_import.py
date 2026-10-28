@@ -1,7 +1,21 @@
 """Synthetic review records test rejection, never production review approval."""
-import copy,json,hashlib,shutil,tempfile,unittest
+import copy,json,hashlib,shutil,subprocess,tempfile,unittest
+from functools import lru_cache
 from pathlib import Path
 import timeline_source_import as gate
+
+@lru_cache(maxsize=2)
+def historical_index(name):
+    """Read the pre-selector baseline for historical inverse tests only.
+
+    Current indices are checked independently by the configured generator
+    --check jobs; this historical source is never current-output evidence.
+    """
+    if name not in {'art-gallery.json', 'site-search-index.json'}:
+        raise ValueError('Unknown historical index')
+    root=Path(__file__).resolve().parents[1]
+    return subprocess.check_output(['git','-C',str(root),'show',
+        'de5f3c35505fddd4586bb0b51c17dad1389f2bf9:'+name])
 
 class GalleryBuilderEvidenceTests(unittest.TestCase):
     def test_gallery_builder_evidence_successor_is_exact_and_fail_closed(self):
@@ -19,11 +33,11 @@ class GalleryBuilderEvidenceTests(unittest.TestCase):
             self.assertEqual(gate.before_current_gallery_builder(name,bad),bad)
             self.assertEqual(inverse(name,bad),bad)
 
-    def test_current_indices_still_restore_delivery_evidence_pins(self):
+    def test_historical_indices_restore_delivery_evidence_pins(self):
         from artwork_display_delivery import inverse
         root=Path(__file__).resolve().parents[1]
         for name,pin in [('art-gallery.json','5fb9f428a7e4bbf63cd9b5721ca7e576b14bbfa8334c073343f84e49efb8fcb1'),('site-search-index.json','5744d3b23308c419732bac77811620c2ca68b30e4dc22a1eb0775a120ddbd103')]:
-            self.assertEqual(hashlib.sha256(inverse(name,(root/name).read_bytes())).hexdigest(),pin)
+            self.assertEqual(hashlib.sha256(inverse(name,historical_index(name))).hexdigest(),pin)
 
 class TimelineImportTests(unittest.TestCase):
     def test_reviewed_code_evidence_restores_only_exact_hooks(self):
@@ -65,7 +79,7 @@ class TimelineImportTests(unittest.TestCase):
                 self.assertEqual(gate.restore_consumers(name,bad),bad)
 
     def test_exact_search_route_inverse_restores_frozen_predecessor(self):
-        data=(Path(__file__).resolve().parents[1]/'site-search-index.json').read_bytes()
+        data=historical_index('site-search-index.json')
         restored=gate.restore_search(data)
         self.assertEqual(hashlib.sha256(restored).hexdigest(),'038391c9f469c4c7a24894c629b915851ec097d305e880bdfe12e6f24b3c9e0d')
         from emma_generated_indices_successor import restore as restore_emma_indices
