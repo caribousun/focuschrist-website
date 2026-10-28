@@ -115,6 +115,6 @@ def current_census(root,scope,assets,origin,expected):
     # hub bytes, keep every other source pin unchanged. This does not alter the
     # immutable historical closure contract or its prior review subject.
     revised=[dict(x,sha256=CURRENT_HUB_SHA256) if x['path']==HUB else dict(x) for x in scope]
-    actual=references(root,revised,assets|retired,origin)
+    actual=references(root,revised,assets|retired,origin,current_emma=True)
     require(actual==current_expected,'actual retained-asset consumer census changed')
     return current_expected

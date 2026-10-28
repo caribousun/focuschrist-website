@@ -81,6 +81,11 @@ class EmmaRegistryTests(unittest.TestCase):
         cls.historical = json.loads((ROOT / 'docs/emma-hub-content-audit/pre-integration-ownership-records.json').read_text())
         names = {HUB} | {r['page'] for r in cls.historical['replacements']}
         cls.pages = {name: (ROOT / name).read_bytes() for name in names}
+        # The placement registry is historical evidence; validate the actual
+        # successor first, then compare the exact pinned predecessor pages.
+        from owner_journey_successor import historical_fixture
+        for name in (HUB, 'history/emma-elect-lady.html', 'history/emma-hymns.html'):
+            cls.pages[name] = historical_fixture(name, cls.pages[name], ROOT)
 
     def check(self, registry=None, pages=None):
         check_registry(self.registry if registry is None else registry, self.historical,

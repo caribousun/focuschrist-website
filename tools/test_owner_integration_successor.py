@@ -14,6 +14,10 @@ class IntegrationSuccessorTests(unittest.TestCase):
                 s.validate_file(name,raw)
                 fixture=(s.ROOT/'docs/timeline-selector/historical-c910.txt').read_bytes()
                 self.assertEqual(s.sha(fixture),s.CURRENT[name])
+            elif name in ('history/emma-hale-smith.html', 'history/emma-elect-lady.html', 'history/emma-hymns.html'):
+                from owner_journey_successor import historical_fixture, read_manifest
+                self.assertEqual(s.sha(raw),read_manifest()['files'][name]['current_sha256'])
+                self.assertEqual(s.sha(historical_fixture(name,raw,s.ROOT)),s.CURRENT[name])
             else:
                 self.assertEqual(s.sha(raw),s.CURRENT[name])
             self.assertEqual(s.sha(old),s.BEFORE[name])
@@ -49,6 +53,19 @@ class IntegrationSuccessorTests(unittest.TestCase):
                     (root/name).write_bytes(raw)
                 with self.assertRaises(OSError):s.restore(name,raw,Path(td))
                 with self.assertRaises(OSError):s.advance(name,old,Path(td))
+
+    def test_emma_projection_rejects_tampered_actual_source_and_fixture(self):
+        import owner_journey_successor as journey
+        for name in (journey.HUB, journey.RETIRED, journey.HYMNS):
+            raw=(s.ROOT/name).read_bytes()
+            with tempfile.TemporaryDirectory() as td:
+                target=Path(td)/name; target.parent.mkdir(parents=True); target.write_bytes(raw+b' ')
+                with self.subTest(name=name), self.assertRaises(AssertionError):
+                    s.restore(name,raw,Path(td))
+            fixture=journey.predecessor_fixture(name)
+            with patch.object(journey,'predecessor_fixture',return_value=fixture+b' '):
+                with self.subTest(name=name), self.assertRaises(AssertionError):
+                    s.restore(name,raw,s.ROOT)
 
     def test_timeline_historical_fixture_tampering_rejected(self):
         raw=(s.ROOT/s.LANDING).read_bytes()

@@ -73,7 +73,7 @@ def current_index_bytes(root, name):
     return raw
 
 
-def references(root, scope, asset_paths, site_origin, historical=False):
+def references(root, scope, asset_paths, site_origin, historical=False, current_emma=False):
     """Conservative exact path occurrence census, including HTML/JSON/JS/CSS.
 
     Scope is a reviewed, hash-pinned set, not a lexical Emma search. References
@@ -85,6 +85,15 @@ def references(root, scope, asset_paths, site_origin, historical=False):
     for item in scope:
         if not historical and item['path'] in CURRENT_GENERATED_INDICES:
             text = current_index_bytes(root, item['path']).decode('utf-8')
+        elif not historical and current_emma and item['path'] == 'history/emma-hale-smith.html':
+            # The current journey census binds actual current bytes, not the
+            # separate historical inverse used by older closure receipts.
+            from emma_journey_closure_successor import CURRENT_HUB_SHA256
+            from owner_journey_successor import validate_hub
+            path = local(root, item['path']); raw = path.read_bytes()
+            require(item['sha256'] == CURRENT_HUB_SHA256 and hashlib.sha256(raw).hexdigest() == CURRENT_HUB_SHA256, 'Current Emma closure source drift')
+            validate_hub(raw, root)
+            text = raw.decode('utf-8')
         else:
             path = bound(root, item)
             if historical:

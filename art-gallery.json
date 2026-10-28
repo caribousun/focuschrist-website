@@ -41,7 +41,6 @@
     "/come-follow-me.html",
     "/general-conference.html",
     "/history/eleazer-miller.html",
-    "/history/emma-elect-lady.html",
     "/history/emma-hale-smith.html",
     "/history/emma-hymns.html",
     "/history/emma-last-testimony.html",
@@ -469,6 +468,28 @@
       ],
       "categories": [
         "Gospel Studies"
+      ]
+    },
+    {
+      "title": "A continuing faith",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/emma-journey/emma-journey-11-960.webp",
+      "fullImage": "/assets/page-art/emma-journey/emma-journey-11-1536.webp",
+      "alt": "Emma sits among people gathered in a meeting.",
+      "id": "art-c14c795cf3a5",
+      "occurrences": [
+        {
+          "id": "source-8c9045c72aa6",
+          "page": "/history/emma-hale-smith.html",
+          "pageTitle": "Emma Hale Smith: a life of faith, work, and care",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/emma-journey/emma-journey-11-1536.webp\"]:has(img[src=\"/assets/page-art/emma-journey/emma-journey-11-960.webp\"])",
+          "title": "A continuing faith"
+        }
+      ],
+      "categories": [
+        "Church History"
       ]
     },
     {
@@ -978,6 +999,28 @@
       ]
     },
     {
+      "title": "A home for Julia and Joseph",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/emma-journey/emma-journey-06-960.webp",
+      "fullImage": "/assets/page-art/emma-journey/emma-journey-06-1536.webp",
+      "alt": "Emma looks down between two cradles.",
+      "id": "art-99b77bd6f017",
+      "occurrences": [
+        {
+          "id": "source-681ef29ded04",
+          "page": "/history/emma-hale-smith.html",
+          "pageTitle": "Emma Hale Smith: a life of faith, work, and care",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/emma-journey/emma-journey-06-1536.webp\"]:has(img[src=\"/assets/page-art/emma-journey/emma-journey-06-960.webp\"])",
+          "title": "A home for Julia and Joseph"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
       "title": "A home in Nazareth",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/birth-of-christ/23-nazareth-return-800.webp",
@@ -1110,21 +1153,21 @@
       ]
     },
     {
-      "title": "A hymn before the road ahead",
+      "title": "A journey to Fulton",
       "category": "Church History",
-      "thumbnail": "/assets/page-art/emma-life/emma-c3-review-960.webp",
-      "fullImage": "/assets/page-art/emma-life/emma-c3-review-1536.webp",
-      "alt": "Jesus and His disciples sing together.",
-      "id": "art-cb5d6fe53b7d",
+      "thumbnail": "/assets/page-art/emma-journey/emma-journey-10-960.webp",
+      "fullImage": "/assets/page-art/emma-journey/emma-journey-10-1536.webp",
+      "alt": "Emma stands on the deck of a river steamer and looks toward the shore.",
+      "id": "art-d8a0b1e5f7d6",
       "occurrences": [
         {
-          "id": "source-a23ec1e87519",
+          "id": "source-5a247d9c2997",
           "page": "/history/emma-hale-smith.html",
           "pageTitle": "Emma Hale Smith: a life of faith, work, and care",
           "category": "Church History",
           "kind": "topic",
-          "selector": "a[href=\"/assets/page-art/emma-life/emma-c3-review-1536.webp\"]:has(img[src=\"/assets/page-art/emma-life/emma-c3-review-960.webp\"])",
-          "title": "A hymn before the road ahead"
+          "selector": "a[href=\"/assets/page-art/emma-journey/emma-journey-10-1536.webp\"]:has(img[src=\"/assets/page-art/emma-journey/emma-journey-10-960.webp\"])",
+          "title": "A journey to Fulton"
         }
       ],
       "categories": [
@@ -1257,6 +1300,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/emma-life/emma-h3-review-1536.webp\"]:has(img[src=\"/assets/page-art/emma-life/emma-h3-review-960.webp\"])",
           "title": "A letter across the separation"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
+      "title": "A life begins beside the Susquehanna",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/emma-journey/emma-journey-origin-960.webp",
+      "fullImage": "/assets/page-art/emma-journey/emma-journey-origin-1536.webp",
+      "alt": "A log house and garden stand above a river valley.",
+      "id": "art-4654be1a590a",
+      "occurrences": [
+        {
+          "id": "source-4d8a0575e9b4",
+          "page": "/history/emma-hale-smith.html",
+          "pageTitle": "Emma Hale Smith: a life of faith, work, and care",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/emma-journey/emma-journey-origin-1536.webp\"]:has(img[src=\"/assets/page-art/emma-journey/emma-journey-origin-960.webp\"])",
+          "title": "A life begins beside the Susquehanna"
         }
       ],
       "categories": [
@@ -1594,6 +1659,28 @@
       ]
     },
     {
+      "title": "A mother’s first loss",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/emma-journey/emma-journey-04-960.webp",
+      "fullImage": "/assets/page-art/emma-journey/emma-journey-04-1536.webp",
+      "alt": "Emma rests in bed, holding a small white cap.",
+      "id": "art-2bd5ff6501e3",
+      "occurrences": [
+        {
+          "id": "source-f93bb634eeb7",
+          "page": "/history/emma-hale-smith.html",
+          "pageTitle": "Emma Hale Smith: a life of faith, work, and care",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/emma-journey/emma-journey-04-1536.webp\"]:has(img[src=\"/assets/page-art/emma-journey/emma-journey-04-960.webp\"])",
+          "title": "A mother’s first loss"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
       "title": "A mother’s persistent plea",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/syrophoenician-woman-960.webp",
@@ -1679,28 +1766,6 @@
       ],
       "categories": [
         "Gospel Studies"
-      ]
-    },
-    {
-      "title": "A night given to prayer",
-      "category": "Church History",
-      "thumbnail": "/assets/page-art/emma-life/emma-c1-review-960.webp",
-      "fullImage": "/assets/page-art/emma-life/emma-c1-review-1536.webp",
-      "alt": "Jesus prays outdoors beneath the night sky.",
-      "id": "art-52552816f4ef",
-      "occurrences": [
-        {
-          "id": "source-9762fed31afb",
-          "page": "/history/emma-hale-smith.html",
-          "pageTitle": "Emma Hale Smith: a life of faith, work, and care",
-          "category": "Church History",
-          "kind": "topic",
-          "selector": "a[href=\"/assets/page-art/emma-life/emma-c1-review-1536.webp\"]:has(img[src=\"/assets/page-art/emma-life/emma-c1-review-960.webp\"])",
-          "title": "A night given to prayer"
-        }
-      ],
-      "categories": [
-        "Church History"
       ]
     },
     {
@@ -1809,28 +1874,6 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/emma-life/emma-h1-review-1536.webp\"]:has(img[src=\"/assets/page-art/emma-life/emma-h1-review-960.webp\"])",
           "title": "A pen beside the manuscript"
-        }
-      ],
-      "categories": [
-        "Church History"
-      ]
-    },
-    {
-      "title": "A place apart",
-      "category": "Church History",
-      "thumbnail": "/assets/page-art/emma-life/emma-c5-review-960.webp",
-      "fullImage": "/assets/page-art/emma-life/emma-c5-review-1536.webp",
-      "alt": "Jesus departs by boat on the water.",
-      "id": "art-fb81e60aaedc",
-      "occurrences": [
-        {
-          "id": "source-5d06d8d21155",
-          "page": "/history/emma-hale-smith.html",
-          "pageTitle": "Emma Hale Smith: a life of faith, work, and care",
-          "category": "Church History",
-          "kind": "topic",
-          "selector": "a[href=\"/assets/page-art/emma-life/emma-c5-review-1536.webp\"]:has(img[src=\"/assets/page-art/emma-life/emma-c5-review-960.webp\"])",
-          "title": "A place apart"
         }
       ],
       "categories": [
@@ -2586,6 +2629,28 @@
       ]
     },
     {
+      "title": "A son to come",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/emma-journey/emma-journey-09-960.webp",
+      "fullImage": "/assets/page-art/emma-journey/emma-journey-09-1536.webp",
+      "alt": "Emma sits by a window, her hands resting over her pregnant belly.",
+      "id": "art-f3128f8c2b10",
+      "occurrences": [
+        {
+          "id": "source-54c89fe709ed",
+          "page": "/history/emma-hale-smith.html",
+          "pageTitle": "Emma Hale Smith: a life of faith, work, and care",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/emma-journey/emma-journey-09-1536.webp\"]:has(img[src=\"/assets/page-art/emma-journey/emma-journey-09-960.webp\"])",
+          "title": "A son to come"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
       "title": "A song shared at the end of the day",
       "category": "Pioneers",
       "thumbnail": "/assets/pioneers/music/camp-song-800.webp",
@@ -2935,6 +3000,28 @@
       ],
       "categories": [
         "Home"
+      ]
+    },
+    {
+      "title": "A widow’s responsibilities",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/emma-journey/emma-journey-08-960.webp",
+      "fullImage": "/assets/page-art/emma-journey/emma-journey-08-1536.webp",
+      "alt": "Emma holds a folded document in a court room.",
+      "id": "art-df09294f6937",
+      "occurrences": [
+        {
+          "id": "source-85b7b689a85d",
+          "page": "/history/emma-hale-smith.html",
+          "pageTitle": "Emma Hale Smith: a life of faith, work, and care",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/emma-journey/emma-journey-08-1536.webp\"]:has(img[src=\"/assets/page-art/emma-journey/emma-journey-08-960.webp\"])",
+          "title": "A widow’s responsibilities"
+        }
+      ],
+      "categories": [
+        "Church History"
       ]
     },
     {
@@ -4159,6 +4246,28 @@
       ],
       "categories": [
         "Gospel Studies"
+      ]
+    },
+    {
+      "title": "At the water’s edge",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/emma-journey/emma-journey-05-960.webp",
+      "fullImage": "/assets/page-art/emma-journey/emma-journey-05-1536.webp",
+      "alt": "Emma steps from shallow water toward the riverbank.",
+      "id": "art-1b46a7df0af9",
+      "occurrences": [
+        {
+          "id": "source-471927337c71",
+          "page": "/history/emma-hale-smith.html",
+          "pageTitle": "Emma Hale Smith: a life of faith, work, and care",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/emma-journey/emma-journey-05-1536.webp\"]:has(img[src=\"/assets/page-art/emma-journey/emma-journey-05-960.webp\"])",
+          "title": "At the water’s edge"
+        }
+      ],
+      "categories": [
+        "Church History"
       ]
     },
     {
@@ -7981,6 +8090,28 @@
       ]
     },
     {
+      "title": "Emma’s choice",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/emma-journey/emma-journey-03-960.webp",
+      "fullImage": "/assets/page-art/emma-journey/emma-journey-03-1536.webp",
+      "alt": "Emma, in a dark red dress and cream shawl, stands with her hands together.",
+      "id": "art-4645fbf85f72",
+      "occurrences": [
+        {
+          "id": "source-c629592fcaa6",
+          "page": "/history/emma-hale-smith.html",
+          "pageTitle": "Emma Hale Smith: a life of faith, work, and care",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/emma-journey/emma-journey-03-1536.webp\"]:has(img[src=\"/assets/page-art/emma-journey/emma-journey-03-960.webp\"])",
+          "title": "Emma’s choice"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
       "title": "Emma’s work as a scribe",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/joseph-smith-likeness/family/emma-early-scribe-1828-upper-bodice-v3-1536.webp",
@@ -8956,28 +9087,6 @@
       ],
       "categories": [
         "Gospel Studies"
-      ]
-    },
-    {
-      "title": "Gather what remains",
-      "category": "Church History",
-      "thumbnail": "/assets/page-art/emma-life/emma-c4-review-960.webp",
-      "fullImage": "/assets/page-art/emma-life/emma-c4-review-1536.webp",
-      "alt": "Jesus speaks to a disciple as others gather remaining bread.",
-      "id": "art-8a39aecf9eca",
-      "occurrences": [
-        {
-          "id": "source-9594653cea84",
-          "page": "/history/emma-hale-smith.html",
-          "pageTitle": "Emma Hale Smith: a life of faith, work, and care",
-          "category": "Church History",
-          "kind": "topic",
-          "selector": "a[href=\"/assets/page-art/emma-life/emma-c4-review-1536.webp\"]:has(img[src=\"/assets/page-art/emma-life/emma-c4-review-960.webp\"])",
-          "title": "Gather what remains"
-        }
-      ],
-      "categories": [
-        "Church History"
       ]
     },
     {
@@ -17024,6 +17133,28 @@
       ]
     },
     {
+      "title": "Relief in action",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/emma-journey/emma-journey-07-960.webp",
+      "fullImage": "/assets/page-art/emma-journey/emma-journey-07-1536.webp",
+      "alt": "Emma carries a basket of bread and folded cloth along a street.",
+      "id": "art-43c23e1c0bbc",
+      "occurrences": [
+        {
+          "id": "source-fa9c551e5e4f",
+          "page": "/history/emma-hale-smith.html",
+          "pageTitle": "Emma Hale Smith: a life of faith, work, and care",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/emma-journey/emma-journey-07-1536.webp\"]:has(img[src=\"/assets/page-art/emma-journey/emma-journey-07-960.webp\"])",
+          "title": "Relief in action"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
       "title": "Remaining with the sheep",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/good-shepherd-04-960.webp",
@@ -19701,6 +19832,28 @@
       ],
       "categories": [
         "Gospel Studies"
+      ]
+    },
+    {
+      "title": "The final years",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/emma-journey/emma-journey-12-960.webp",
+      "fullImage": "/assets/page-art/emma-journey/emma-journey-12-1536.webp",
+      "alt": "Older Emma sits on a porch, looking toward the river.",
+      "id": "art-8e43f9058c95",
+      "occurrences": [
+        {
+          "id": "source-e46bc5a49bac",
+          "page": "/history/emma-hale-smith.html",
+          "pageTitle": "Emma Hale Smith: a life of faith, work, and care",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/emma-journey/emma-journey-12-1536.webp\"]:has(img[src=\"/assets/page-art/emma-journey/emma-journey-12-960.webp\"])",
+          "title": "The final years"
+        }
+      ],
+      "categories": [
+        "Church History"
       ]
     },
     {
@@ -23597,14 +23750,14 @@
     }
   ],
   "stats": {
-    "artworks": 1062,
-    "occurrences": 1069,
+    "artworks": 1069,
+    "occurrences": 1076,
     "byKind": {
       "artwork": 69,
       "hero": 45,
       "legacy": 39,
       "missionary": 13,
-      "topic": 956
+      "topic": 963
     }
   }
 }

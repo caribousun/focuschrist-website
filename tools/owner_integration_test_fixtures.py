@@ -50,7 +50,13 @@ def historical_root(current):
         if 'historical' in row:
             values[rel] = historical_bytes(rel, raw, current)
     for rel, expected in SHARED.items():
-        raw = (current/rel).read_bytes()
+        if rel == 'tools/test_section_panel_standalone.py':
+            # This test has a newer successor. Recover the exact historical
+            # test blob for this historical-only projection, never current QA.
+            import subprocess
+            raw = subprocess.check_output(['git', '-C', str(current), 'cat-file', 'blob', expected])
+        else:
+            raw = (current/rel).read_bytes()
         assert hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\0'+raw).hexdigest() == expected, 'Shared historical fixture source drift: '+rel
         values[rel] = raw
     # The new actual index must inverse to the exact unchanged predecessor. A

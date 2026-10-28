@@ -20,7 +20,8 @@ class CurrentClosureTests(unittest.TestCase):
   self.base=patch.object(j,'validated_baseline',return_value=None);self.base.start();self.addCleanup(self.base.stop)
   self.review=patch.object(j,'check_review',return_value={});self.review.start();self.addCleanup(self.review.stop)
   self.ref=patch.object(old,'references',side_effect=self.refs);self.ref.start();self.addCleanup(self.ref.stop)
- def refs(self,root,scope,assets,origin):
+ def refs(self,root,scope,assets,origin,*,current_emma=False):
+  self.assertTrue(current_emma)
   row=next(x for x in scope if x['path']==j.HUB);self.assertEqual(row['sha256'],j.CURRENT_HUB_SHA256)
   self.assertEqual({x['path']:x['sha256'] for x in scope if x['path']!=j.HUB},{x['path']:x['sha256'] for x in self.scope if x['path']!=j.HUB})
   self.assertGreater(len(assets),73);return self.current

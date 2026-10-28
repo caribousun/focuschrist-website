@@ -322,6 +322,20 @@ class ActualJourneyCensusTests(unittest.TestCase):
         self.assertEqual(got,expected)
         self.assertEqual(hashlib.sha256((self.root/self.journey.HUB).read_bytes()).hexdigest(),self.journey.CURRENT_HUB_SHA256)
 
+    def test_current_emma_census_rejects_wrong_pin_and_changed_bytes(self):
+        row = next(x for x in self.scope if x['path'] == self.journey.HUB)
+        wrong = dict(row, sha256='0' * 64)
+        with self.assertRaisesRegex(ValueError, 'Current Emma closure source drift'):
+            self.old.references(self.root, [wrong], self.assets, self.origin, current_emma=True)
+        row = dict(row, sha256=self.journey.CURRENT_HUB_SHA256)
+        target=self.root/self.journey.HUB; original=Path.read_bytes
+        def mutate(path):
+            raw=original(path)
+            return raw+b' ' if path==target else raw
+        with patch.object(Path, 'read_bytes', mutate):
+            with self.assertRaisesRegex(ValueError, 'Current Emma closure source drift'):
+                self.old.references(self.root, [row], self.assets, self.origin, current_emma=True)
+
     def test_actual_current_source_drift_fails_before_review(self):
         target=self.root/self.journey.HUB; original=Path.read_bytes
         def mutate(path):
