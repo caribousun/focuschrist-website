@@ -47,7 +47,7 @@ def historical_reader(root, item):
         # A reviewed source receipt remains historical after the approved
         # selector redesign; it never claims the old image reviews cover the
         # new card presentation.
-        archive=local(root,'docs/timeline-selector/historical-c910.html');raw=archive.read_bytes()
+        archive=local(root,'docs/timeline-selector/historical-c910.txt');raw=archive.read_bytes()
     elif name in ARCHIVES:
         archive=local(root,ARCHIVES[name]);raw=archive.read_bytes()
     else:

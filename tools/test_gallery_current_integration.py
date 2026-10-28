@@ -26,8 +26,10 @@ class CurrentGallerySourceTests(unittest.TestCase):
                     raw=(ROOT/name).read_bytes()
                     self.assertEqual(self.select(name,raw,ROOT),raw)
             inverse.assert_not_called()
-    def test_each_current_source_byte_drift_is_rejected(self):
+    def test_other_current_source_byte_drift_is_rejected(self):
         for name in NAMES:
+            if name == contract.LANDING:
+                continue  # Timeline has a current semantic, not byte-exact, contract.
             raw=(ROOT/name).read_bytes()
             variants=[raw+b' ']
             if name == contract.HUB:
@@ -35,6 +37,20 @@ class CurrentGallerySourceTests(unittest.TestCase):
             for changed in variants:
                 with self.subTest(name=name,variant=len(changed)),self.assertRaisesRegex(AssertionError,'Current integration source drift'):
                     self.select(name,changed,ROOT)
+    def test_timeline_current_semantics_accept_layout_and_reject_drift(self):
+        raw=(ROOT/contract.LANDING).read_bytes()
+        layout=raw.replace(b'fc-timeline-choice__body', b'fc-timeline-choice__body layout-v2', 1)
+        self.assertNotEqual(layout,raw)
+        self.assertEqual(self.select(contract.LANDING,layout,ROOT),layout)
+        for old,new in (
+            (b'Explore the story of the Restoration.',b'Changed visible copy.'),
+            (b'latter-day-saint-church-history-timeline.html',b'other.html'),
+            (b'church-history-grove.webp',b'other.webp'),
+        ):
+            with self.subTest(changed=old):
+                self.assertIn(old,raw)
+                with self.assertRaises(AssertionError):
+                    self.select(contract.LANDING,raw.replace(old,new,1),ROOT)
     def test_unknown_route_keeps_existing_inverse(self):
         inverse=Mock(return_value=b'historical unrelated display')
         with patch.dict(sys.modules,{'artwork_display_delivery':types.SimpleNamespace(inverse=inverse)}):

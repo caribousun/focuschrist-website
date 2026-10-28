@@ -209,7 +209,7 @@ def historical_bytes(route, current, root=ROOT):
         from timeline_selector_semantics import validate
         validate(current)
         # Read the immutable old source only for explicitly historical reconstruction.
-        fixture = Path(root) / 'docs/timeline-selector/historical-c910.html'
+        fixture = Path(root) / 'docs/timeline-selector/historical-c910.txt'
         require(fixture.is_file() and not fixture.is_symlink() and fixture.resolve().is_relative_to(Path(root).resolve()), 'Unsafe Timeline historical fixture')
         current = fixture.read_bytes()
         item = manifest(root)['files'][route]
