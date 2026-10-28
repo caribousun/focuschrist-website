@@ -123,6 +123,14 @@ class Delivery(unittest.TestCase):
     ptr=row['reviews'][key];doc=json.loads((self.root/ptr['path']).read_bytes());doc['actual_actor']=actor
     raw=json.dumps(doc,sort_keys=True).encode();name='reviews/history-'+mode+'-'+key+'.json';(self.root/name).write_bytes(raw);row['reviews'][key]={'path':name,'bytes':len(raw),'sha256':sha(raw)}
    with self.subTest(mode=mode),self.assertRaisesRegex(ValueError,'historical reviewer actor changed'):self.check(r)
+ def test_assembled_review_must_follow_both_roles_last_historical_receipt(self):
+  # Synthetic timestamps exercise the real chronology guard; they are not evidence.
+  prior={'Fermi':{'03:finished':{'reviewed_at':'2026-10-28T12:00:00Z'}},'Newton':{'12:finished':{'reviewed_at':'2026-10-28T12:50:00Z'}}}
+  for role in ('Fermi','Newton','Albert'):
+   with self.subTest(role=role),self.assertRaisesRegex(ValueError,'predates the last historical receipt'):
+    v.validate_assembled_after_prior('2026-10-28T12:40:00Z',prior)
+   v.validate_assembled_after_prior('2026-10-28T12:50:00Z',prior)
+  with self.assertRaises(ValueError):v.validate_assembled_after_prior('2026-10-28T13:00:00Z',{})
  def test_altered_prior_receipt_bytes_are_rejected(self):
   pointer=self.record['spec']['scenes'][0]['reviews']['fermi_preflight'];target=self.root/pointer['path'];original=Path.read_bytes
   def tamper(path):

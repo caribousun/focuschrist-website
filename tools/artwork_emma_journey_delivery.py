@@ -59,6 +59,11 @@ def receipt(root,pointer,expected_reviewer,stage,binding,rejected,face,mandates)
   require(set(r.get('checks',{}))==CHECKS and all(isinstance(x,str) and x.strip() for x in r['checks'].values()),'missing finished observations')
  return r
 
+def validate_assembled_after_prior(reviewed_at, prior_receipts):
+ """Every assembled review follows both roles' full prior receipt history."""
+ times=[stamp(row['reviewed_at']) for receipts in prior_receipts.values() for row in receipts.values()]
+ require(times and stamp(reviewed_at)>=max(times),'assembled review predates the last historical receipt')
+
 def validate_role_handoffs(root, pointers, spec_binding, prior_receipts, rejected):
  """Bind a new current reviewer to verified prior receipts without rewriting them.
 
@@ -182,6 +187,7 @@ def validate(root,record,added,covered,rejected,pixel_hash,page_dependencies):
   require(obj.get('mandate_bindings')==mandate_map,'assembled reviewer mandate readback mismatch')
   require(obj.get('stage')=='assembled' and obj.get('verdict')=='PASS' and obj.get('withdrawn') is False and obj.get('binding_sha256')==binding,'stale assembled review')
   require(obj.get('actual_actor') and obj.get('observations') and obj.get('evidence') and obj.get('full_context_inspected') is True,'missing assembled review evidence');stamp(obj['reviewed_at'])
+  validate_assembled_after_prior(obj['reviewed_at'],prior_receipts)
   require(obj['actual_actor'] not in current_actors,'assembled reviewers are not distinct');current_actors.add(obj['actual_actor'])
   if who in handoffs:
    require(obj['actual_actor']==handoffs[who]['actual_actor'],'assembled reviewer actor mismatch')
