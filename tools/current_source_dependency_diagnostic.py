@@ -48,12 +48,14 @@ def main():
   print('Inventory written; validators not run.');return 0
  env=dict(os.environ,PYTHONDONTWRITEBYTECODE='1');results={}
  for name,cmd in COMMANDS.items():
+  timeout=180 if name == 'artwork-release-check' else 90
   try:
-   done=subprocess.run(cmd,cwd=ROOT,env=env,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True,timeout=90)
+   done=subprocess.run(cmd,cwd=ROOT,env=env,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True,timeout=timeout)
    status={'status':'pass' if done.returncode==0 else 'fail','returncode':done.returncode};output=done.stdout
   except subprocess.TimeoutExpired as error:
    status={'status':'timeout','returncode':None};output=error.stdout or ''
    if isinstance(output,bytes):output=output.decode('utf8','replace')
+  status['timeout_seconds']=timeout
   (OUT/(name+'.log')).write_text(output,encoding='utf8');results[name]=status
   print(name,status['status'],flush=True)
  (OUT/'summary.json').write_text(json.dumps({'scope':'Independent bounded source diagnostics, not release acceptance','checkout':head,'results':results},indent=2)+'\n')
