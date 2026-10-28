@@ -106,7 +106,7 @@ def validate(root,record,added,covered,rejected,pixel_hash,page_dependencies):
  page_context=spec['page_context'];names={x['path'] for x in page_context};require(len(names)==len(page_context) and page_dependencies(root,ROUTE)<=names,'incomplete page context')
  for e in page_context:bound(root,e)
  rows=spec['scenes'];ids=[x['id'] for x in rows];require(len(ids)==len(set(ids))==11 and set(ids)==set(SCENES),'wrong or duplicate scene set')
- all_assets=set();hashes=set();pixels=set();original_hashes=set();original_pixels=set();receipt_ids=set();prior_receipts={'Fermi':{},'Newton':{}};common_mandates=None
+ all_assets=set();hashes=set();pixels=set();original_hashes=set();original_pixels=set();receipt_ids=set();historical_actors={};prior_receipts={'Fermi':{},'Newton':{}};common_mandates=None
  for row in rows:
   id=row['id'];origin=id=='origin';pre=row['preflight']
   require(row.get('kind')==('PERSON_FREE_CONTEXT' if origin else 'EMMA_CHARACTER'),'incorrect person-free/character classification')
@@ -135,8 +135,11 @@ def validate(root,record,added,covered,rejected,pixel_hash,page_dependencies):
    require(receipts[0]['actual_actor']!=receipts[1]['actual_actor'],'historical stage reviewers are not distinct')
    for r in receipts:
     require(r['receipt_id'] not in receipt_ids,'receipt reused across scenes or stages');receipt_ids.add(r['receipt_id'])
-    who=r['reviewer'];key=id+':'+stage;pointer=reviews[who.lower()+'_'+stage]
-    prior_receipts[who][key]={'pointer':pointer,'actual_actor':r['actual_actor'],'receipt_id':r['receipt_id'],'reviewed_at':r['reviewed_at']}
+    who=r['reviewer'];actor=r['actual_actor']
+    require(who not in historical_actors or historical_actors[who]==actor,'historical reviewer actor changed')
+    historical_actors[who]=actor
+    key=id+':'+stage;pointer=reviews[who.lower()+'_'+stage]
+    prior_receipts[who][key]={'pointer':pointer,'actual_actor':actor,'receipt_id':r['receipt_id'],'reviewed_at':r['reviewed_at']}
   generation=json.loads(bound(root,row['generation_lineage']))
   require(generation.get('actor')=='Albert' and generation.get('scene_id')==id and generation.get('prompt_sha256')==pre['prompt']['sha256'] and generation.get('output_sha256')==row['original']['sha256'],'generation provenance mismatch')
   require(generation.get('reference_sha256')==[x['sha256'] for x in refs] and generation.get('edit_target_sha256')==(pre['edit_target']['sha256'] if pre.get('edit_target') else None),'generation input order/target mismatch')

@@ -114,6 +114,15 @@ class Delivery(unittest.TestCase):
     if mode=='predates_prior':doc['assigned_at']='2026-10-28T11:00:00Z'
     raw=json.dumps(doc,sort_keys=True).encode();name='reviews/handoff-mutated-'+mode+'.json';(self.root/name).write_bytes(raw);r['role_handoffs'][role]={'path':name,'bytes':len(raw),'sha256':sha(raw)}
    with self.subTest(mode=mode),self.assertRaises((ValueError,KeyError)):self.check(r)
+ def test_historical_actor_cannot_change_across_scenes_or_stages_or_swap_roles(self):
+  for mode in ('different_scene','different_stage','swapped_roles'):
+   r=copy.deepcopy(self.record)
+   row=r['spec']['scenes'][1] if mode in ('different_scene','swapped_roles') else r['spec']['scenes'][0]
+   changes=[('fermi_preflight','Fermi changed synthetic')] if mode=='different_scene' else [('fermi_finished','Fermi changed synthetic')] if mode=='different_stage' else [('fermi_preflight','Newton synthetic'),('newton_preflight','Fermi synthetic')]
+   for key,actor in changes:
+    ptr=row['reviews'][key];doc=json.loads((self.root/ptr['path']).read_bytes());doc['actual_actor']=actor
+    raw=json.dumps(doc,sort_keys=True).encode();name='reviews/history-'+mode+'-'+key+'.json';(self.root/name).write_bytes(raw);row['reviews'][key]={'path':name,'bytes':len(raw),'sha256':sha(raw)}
+   with self.subTest(mode=mode),self.assertRaisesRegex(ValueError,'historical reviewer actor changed'):self.check(r)
  def test_altered_prior_receipt_bytes_are_rejected(self):
   pointer=self.record['spec']['scenes'][0]['reviews']['fermi_preflight'];target=self.root/pointer['path'];original=Path.read_bytes
   def tamper(path):
