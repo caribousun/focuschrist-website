@@ -8,6 +8,8 @@ import owner_journey_successor as s
 import artwork_emma_journey_delivery as art
 from artwork_emma_story_delivery import canonical
 PROJECT=Path(__file__).resolve().parents[1]
+SYNTHETIC_QUESTION='Synthetic conditional authorization question for test fixtures only.'
+SYNTHETIC_QUESTION_SHA256=hashlib.sha256(SYNTHETIC_QUESTION.encode()).hexdigest()
 
 def jsonbytes(o):return (json.dumps(o,sort_keys=True,indent=2)+'\n').encode()
 class ReleaseReview(unittest.TestCase):
@@ -72,6 +74,55 @@ class ReleaseReview(unittest.TestCase):
     lambda b,r,a,o:o.update(subject_sha256='0'*64)]
   for i,change in enumerate(changes):
    with self.subTest(i=i),self.assertRaises(AssertionError):self.gate(change)
+ def conditional(self,binding,owner):
+  # Entirely synthetic records: no claim about real messages or approval.
+  proof=self.write('docs/emma-journey-release/synthetic-conditional-evidence.txt',b'synthetic only')
+  source={'schema':1,'kind':'authenticated_owner_conditional_response',
+   'question':{'actor':'Albert','message_id':'synthetic-question','sent_at':'2026-10-28T10:00:00Z','text':SYNTHETIC_QUESTION},
+   'answer':{'actor':'Wyatt','message_id':'synthetic-answer','sent_at':'2026-10-28T10:01:00Z','text':'yes'},'evidence':[proof]}
+  sourceptr=self.writej('docs/emma-journey-release/synthetic-conditional-source.json',source)
+  report={'schema':1,'status':'PASS','binding_sha256':s._canonical(binding),'completed_at':'2026-10-28T12:30:00Z',
+   'checks':{name:{'status':'PASS','completed_at':'2026-10-28T12:10:00Z','evidence':[proof]} for name in s.CONDITIONAL_CHECKS}}
+  reportptr=self.writej('docs/emma-journey-release/synthetic-conditional-checks.json',report)
+  owner.update(accepted_at='2026-10-28T10:01:00Z',acceptance_mode='conditional_on_remaining_checks',
+   conditional_scope={'kind':'publish_after_remaining_checks_pass','page_sha256':binding['page_sha256'],
+    'source_manifest_sha256':binding['source_manifest_sha256'],'authorization_source':sourceptr,'checks_report':reportptr})
+  return source,report
+ def test_synthetic_conditional_acceptance_keeps_real_order(self):
+  def change(b,r,a,o):self.conditional(b,o)
+  with patch.object(s,'CONDITIONAL_QUESTION_SHA256',SYNTHETIC_QUESTION_SHA256):
+   self.assertIn('validated exact source',self.gate(change)['status'])
+ def test_conditional_acceptance_rejects_changed_subject_or_missing_checks(self):
+  for mode in ('page','art','scope','source_missing','answer_no','wrong_actor','answer_time','question_no_condition','missing_check','failed_check','missing_evidence','stale_report','early_report','future_check','early_source','unknown_mode'):
+   def change(b,r,a,o):
+    source,report=self.conditional(b,o);scope=o['conditional_scope']
+    if mode=='page':scope['page_sha256']='0'*64
+    if mode=='art':scope['source_manifest_sha256']='0'*64
+    if mode=='scope':scope['kind']='approve_now'
+    if mode=='source_missing':scope['authorization_source']={'path':'missing.json','bytes':1,'sha256':'0'*64}
+    if mode=='unknown_mode':o['acceptance_mode']='unknown'
+    if mode=='answer_no':source['answer']['text']='no'
+    if mode=='wrong_actor':source['answer']['actor']='other'
+    if mode=='answer_time':source['answer']['sent_at']='2026-10-28T10:02:00Z'
+    if mode=='question_no_condition':source['question']['text']='Approve everything now'
+    if mode in ('answer_no','wrong_actor','answer_time','question_no_condition'):
+     scope['authorization_source']=self.writej('docs/emma-journey-release/changed-conditional-source.json',source)
+    if mode=='missing_check':report['checks'].pop('search')
+    if mode=='failed_check':report['checks']['gallery']['status']='FAIL'
+    if mode=='missing_evidence':report['checks']['search']['evidence']=[]
+    if mode=='stale_report':report['binding_sha256']='0'*64
+    if mode=='early_report':report['completed_at']='2026-10-28T11:00:00Z'
+    if mode=='future_check':report['checks']['search']['completed_at']='2026-10-28T13:00:00Z'
+    if mode=='early_source':report['checks']['source_and_prose']['completed_at']='2026-10-28T11:00:00Z'
+    if mode in ('missing_check','failed_check','missing_evidence','stale_report','early_report','future_check','early_source'):
+     scope['checks_report']=self.writej('docs/emma-journey-release/changed-conditional-checks.json',report)
+   with patch.object(s,'CONDITIONAL_QUESTION_SHA256',SYNTHETIC_QUESTION_SHA256),self.subTest(mode=mode),self.assertRaises((AssertionError,OSError)):self.gate(change)
+ def test_conditional_subject_cannot_be_rebound_to_different_bytes(self):
+  for key in ('page_sha256','source_manifest_sha256'):
+   binding={'page_sha256':s.CONDITIONAL_PAGE_SHA256,'source_manifest_sha256':s.CONDITIONAL_SOURCE_MANIFEST_SHA256}
+   owner={};self.conditional(binding,owner);binding[key]='0'*64;owner['conditional_scope'][key]='0'*64
+   with self.subTest(key=key),self.assertRaisesRegex(AssertionError,'conditional acceptance subject changed'):
+    s.validate_conditional_acceptance(self.root,owner,binding,[s._time('2026-10-28T12:00:00Z')])
  def test_wrong_binding_and_render_fail_closed_even_with_rebound_hashes(self):
   changes=[lambda b,r,a,o:b.update(page_sha256='0'*64),lambda b,r,a,o:b.update(delivery_spec_sha256='0'*64),
    lambda b,r,a,o:b['rendered'].pop('phone'),lambda b,r,a,o:b['rendered']['phone'].update(viewport_width=1100),

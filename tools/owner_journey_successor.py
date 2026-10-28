@@ -176,6 +176,45 @@ def _time(value):
  except ValueError as e: raise AssertionError('invalid review time') from e
  need(t.tzinfo is not None and t.utcoffset() is not None,'review time lacks timezone');return t
 
+# A conditional owner decision does not waive any review, artwork, or CI gate.
+# The check report is separately bound evidence and must be independently
+# verified; this validator cannot authenticate message authors or test runs.
+CONDITIONAL_CHECKS={'source_and_prose','artwork_and_provenance','panel','gallery','search',
+                    'navigation_and_controls','desktop_render','phone_render','narrow_render','validator_code_review'}
+# Engineering bindings for the accepted candidate; they do not claim the owner saw hashes.
+CONDITIONAL_PAGE_SHA256='7511f2d034d6117cb9e4d0da896c3ff778c1f0a2165c0425361b47c1d6fb3573'
+CONDITIONAL_SOURCE_MANIFEST_SHA256='3ae50af644843d26abc5e794262657336b60c7a4f204cab8ed1064f0159ae0d4'
+CONDITIONAL_QUESTION_SHA256='c40296078f23c60c6cdd68fc73c228f78e37acb129d0f8e369b9ace5b8fcca17'
+
+def validate_conditional_acceptance(root, owner, binding, review_dates):
+ condition=owner.get('conditional_scope')
+ need(isinstance(condition,dict) and set(condition)=={'kind','page_sha256','source_manifest_sha256','authorization_source','checks_report'},'invalid conditional acceptance scope')
+ need(condition['kind']=='publish_after_remaining_checks_pass','conditional acceptance not explicitly scoped to checks')
+ need(condition['page_sha256']==binding['page_sha256']==CONDITIONAL_PAGE_SHA256 and condition['source_manifest_sha256']==binding['source_manifest_sha256']==CONDITIONAL_SOURCE_MANIFEST_SHA256,'conditional acceptance subject changed')
+ source=_json_bound(root,condition['authorization_source'])
+ need(source.get('schema')==1 and source.get('kind')=='authenticated_owner_conditional_response','invalid conditional authorization source')
+ question=source.get('question');answer=source.get('answer')
+ need(isinstance(question,dict) and isinstance(answer,dict),'missing conditional question or answer')
+ need(question.get('actor')=='Albert' and answer.get('actor')=='Wyatt','conditional authorization actor mismatch')
+ qid=question.get('message_id');aid=answer.get('message_id')
+ need(isinstance(qid,str) and qid.strip() and isinstance(aid,str) and aid.strip() and qid!=aid,'missing or duplicate message identity')
+ text=question.get('text');need(isinstance(text,str) and sha(text.encode('utf-8'))==CONDITIONAL_QUESTION_SHA256,'conditional owner question differs from exact authorized scope')
+ need(isinstance(answer.get('text'),str) and answer['text'].strip().casefold()=='yes','conditional authorization answer not affirmative')
+ requested=_time(question.get('sent_at'));accepted=_time(answer.get('sent_at'))
+ need(requested<=accepted and accepted==_time(owner.get('accepted_at')),'conditional authorization timing mismatch')
+ source_evidence=source.get('evidence');need(isinstance(source_evidence,list) and source_evidence,'original authorization evidence missing')
+ for entry in source_evidence:_bound(root,entry)
+ report=_json_bound(root,condition['checks_report'])
+ need(report.get('schema')==1 and report.get('status')=='PASS' and report.get('binding_sha256')==_canonical(binding),'remaining checks report mismatch')
+ completed=_time(report.get('completed_at'));need(completed>=max([accepted,*review_dates]),'remaining checks report predates acceptance or final reviews')
+ checks=report.get('checks');need(isinstance(checks,dict) and set(checks)==CONDITIONAL_CHECKS,'incomplete remaining-check coverage')
+ for name,item in checks.items():
+  need(isinstance(item,dict) and item.get('status')=='PASS','remaining check not passed: '+name)
+  check_time=_time(item.get('completed_at'));need(check_time<=completed,'remaining check postdates report: '+name)
+  if name=='source_and_prose':need(check_time>=max(review_dates),'source review check predates final reviews')
+  evidence=item.get('evidence');need(isinstance(evidence,list) and evidence,'missing remaining-check evidence: '+name)
+  for entry in evidence:_bound(root,entry)
+
 def release_gate(root=None,delivery_record=None):
  """Validate pinned actual review and direct acceptance; missing proof fails closed.
 
@@ -243,7 +282,12 @@ def release_gate(root=None,delivery_record=None):
  except (ValueError,UnicodeDecodeError) as e: raise AssertionError('malformed owner receipt') from e
  need(owner.get('kind')=='direct_owner_acceptance' and owner.get('actor')=='Wyatt' and owner.get('verdict')=='ACCEPT' and owner.get('withdrawn') is False,'direct owner acceptance missing or withdrawn')
  need(owner.get('subject_sha256')==canonical(delivery_record['spec']) and owner.get('release_review_sha256')==FINAL_SOURCE_REVIEW_SHA256,'owner accepted different delivery or final review')
- need(_time(owner.get('accepted_at'))>=max(dates),'owner acceptance predates final review')
+ mode=owner.get('acceptance_mode')
+ if mode is None:
+  need(_time(owner.get('accepted_at'))>=max(dates),'owner acceptance predates final review')
+ elif mode=='conditional_on_remaining_checks':
+  validate_conditional_acceptance(root,owner,b,dates)
+ else:need(False,'unknown acceptance mode')
  evidence=owner.get('evidence');need(isinstance(evidence,list) and evidence,'owner source evidence absent')
  for item in evidence:_bound(root,item)
  return {'status':'validated exact source/render and owner receipt; identity and visual judgment require independent verification','review_sha256':FINAL_SOURCE_REVIEW_SHA256,'owner_sha256':OWNER_ACCEPTANCE_SHA256}
