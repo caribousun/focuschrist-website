@@ -36,6 +36,43 @@ def bound(root, item):
     return p
 
 
+# Generated indices are current data, not immutable artwork receipts. Their
+# complete freshness is checked by the configured generator --check jobs.
+CURRENT_GENERATED_INDICES = frozenset({'art-gallery.json', 'site-search-index.json'})
+CURRENT_CONSUMER_SCOPE = frozenset({'answers/who-was-joseph-smith.html', 'art-gallery.json',
+    'book-of-mormon-evidences.html', 'church-history.html', 'history/emma-hale-smith.html',
+    'index.html', 'site-search-index.json', 'timeline-images.js'})
+
+
+def current_index_bytes(root, name):
+    require(name in CURRENT_GENERATED_INDICES, 'Unknown generated index')
+    raw = local(root, name).read_bytes()
+    try:
+        value = json.loads(raw)
+    except (ValueError, UnicodeError) as error:
+        raise ValueError('Malformed current index: ' + name) from error
+    require(isinstance(value, dict) and type(value.get('version')) is int and value['version'] == 1,
+            'Invalid current index schema: ' + name)
+    if name == 'site-search-index.json':
+        require(set(value) == {'version', 'pages', 'records'} and isinstance(value['pages'], list)
+                and isinstance(value['records'], list) and all(isinstance(x, str) for x in value['pages'])
+                and all(isinstance(x, dict) and isinstance(x.get('url'), str) for x in value['records']),
+                'Invalid current index schema: ' + name)
+        urls = [x['url'] for x in value['records']]
+        require(len(urls) == len(set(urls)) and len(value['pages']) == len(set(value['pages'])),
+                'Duplicate current index destination: ' + name)
+    else:
+        require(set(value) == {'version', 'pages', 'artworks', 'stats'} and isinstance(value['pages'], list)
+                and isinstance(value['artworks'], list) and isinstance(value['stats'], dict)
+                and all(isinstance(x, str) for x in value['pages'])
+                and all(isinstance(x, dict) and isinstance(x.get('id'), str) for x in value['artworks']),
+                'Invalid current index schema: ' + name)
+        ids = [x['id'] for x in value['artworks']]
+        require(len(ids) == len(set(ids)) and len(value['pages']) == len(set(value['pages'])),
+                'Duplicate current index artwork: ' + name)
+    return raw
+
+
 def references(root, scope, asset_paths, site_origin, historical=False):
     """Conservative exact path occurrence census, including HTML/JSON/JS/CSS.
 
@@ -46,12 +83,15 @@ def references(root, scope, asset_paths, site_origin, historical=False):
     result = Counter()
     asset_names = {Path(p).name for p in asset_paths}
     for item in scope:
-        path = bound(root, item)
-        if historical:
-            from artwork_display_delivery import reviewed_bytes
-            text = reviewed_bytes(path).decode('utf-8')
+        if not historical and item['path'] in CURRENT_GENERATED_INDICES:
+            text = current_index_bytes(root, item['path']).decode('utf-8')
         else:
-            text = path.read_text(encoding='utf-8')
+            path = bound(root, item)
+            if historical:
+                from artwork_display_delivery import reviewed_bytes
+                text = reviewed_bytes(path).decode('utf-8')
+            else:
+                text = path.read_text(encoding='utf-8')
         text = text.replace('\\/', '/')
         for token in re.findall(r'''[^\\\s\"'<>(),;{}\[\]=]+''', text):
             url = urlsplit(token)
@@ -79,8 +119,6 @@ def references(root, scope, asset_paths, site_origin, historical=False):
 OWNER_CLOSURE_CONTRACT = '4acbd23141f1e6d73ed8932d5bea1ee5b4091b230fd4c0ec6a16ecf98565ffff'
 CURRENT_SCOPE_PINS = {
     'history/emma-hale-smith.html': '50c334379066722ef6e80e97d70f0f2ca431777b5857eb15b998da65cc1783cf',
-    'art-gallery.json': '1bf5d0adbb1a6699313cf24a599a316e800b9e62ef8aeeb7acfde8f32e867402',
-    'site-search-index.json': 'a9933a9ec749aec4163a1b146f0946c54244a4f78f781e7f508cea4e51b8260a',
     'docs/exclusive-artwork-ownership.json': '50b114496018304f66ff1a7346f131318fd9db1172c9c0181d2ffa791fcb8aa7',
 }
 H2_REMOVED = {
@@ -93,6 +131,11 @@ H2_REMOVED = {
 }
 
 def current_retirement_census(root, scope, assets, origin, expected):
+    names = [item['path'] for item in scope]
+    require(len(names) == len(set(names)) and set(names) == CURRENT_CONSUMER_SCOPE,
+            'Current retirement consumer scope drift')
+    require(len(assets) == 73, 'Current retirement asset scope drift')
+    require(origin == 'https://focuschrist.com', 'Current retirement origin drift')
     for name, pin in CURRENT_SCOPE_PINS.items():
         require(hashlib.sha256(local(root, name).read_bytes()).hexdigest() == pin, 'Current retirement source drift: ' + name)
     registry = json.loads(local(root, 'docs/exclusive-artwork-ownership.json').read_bytes())
@@ -211,8 +254,9 @@ def validate(root, closure, expected_contract, pixel_hash, final=False):
     require(set(all_assets) <= set(contract['known_asset_paths']), 'Unclassified active asset')
     assets = set(contract['known_asset_paths'])
     if expected_contract == OWNER_CLOSURE_CONTRACT:
-        historical = references(root, scope, assets, contract['site_origin'], historical=True)
-        require(historical == expected, 'Historical consumer closure mismatch')
+        # Prior closure receipts remain historical. Validate the actual
+        # current consumer census rather than projecting today's indices into
+        # an old exact-byte record. Prior receipts are not current evidence.
         current_expected = current_retirement_census(root, scope, assets, contract['site_origin'], expected)
     else:
         current_expected = expected

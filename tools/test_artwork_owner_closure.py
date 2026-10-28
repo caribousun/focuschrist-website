@@ -1,5 +1,6 @@
 """Isolated synthetic integrity fixtures; no real pixel/owner acceptance claims."""
 import copy
+import json
 import hashlib
 import tempfile
 import unittest
@@ -171,10 +172,8 @@ class CurrentRetirementCensusTests(unittest.TestCase):
         cls.origin = cls.contract['site_origin']
         cls.current = c.current_retirement_census(cls.root,cls.scope,cls.assets,cls.origin,cls.expected)
 
-    def test_exact_historical_and_current_censuses(self):
-        historical = self.gate.references(self.root,self.scope,self.assets,self.origin,historical=True)
-        self.assertEqual(historical,self.expected)
-        self.assertEqual((len(historical),sum(historical.values())),(113,170))
+    def test_actual_current_census_and_retirement_contract(self):
+        # Prior receipts are historical; this asserts only current consumers.
         self.assertEqual((len(self.current),sum(self.current.values())),(107,160))
         self.assertEqual(self.expected-self.current,Counter(self.gate.H2_REMOVED))
 
@@ -195,6 +194,67 @@ class CurrentRetirementCensusTests(unittest.TestCase):
             with self.subTest(pair=pair),patch.object(self.gate,'references',return_value=changed):
                 with self.assertRaisesRegex(ValueError,'Active consumer closure mismatch'):
                     self.gate.current_retirement_census(self.root,self.scope,self.assets,self.origin,self.expected)
+
+    def test_generated_index_schema_and_unrelated_changes(self):
+        original=Path.read_bytes
+        for name in self.gate.CURRENT_GENERATED_INDICES:
+            target=self.root/name
+            for bad in (b'{', b'{}'):
+                def read(path): return bad if path==target else original(path)
+                with self.subTest(name=name,bad=bad),patch.object(Path,'read_bytes',read):
+                    with self.assertRaisesRegex(ValueError,'current index'):
+                        self.gate.current_retirement_census(self.root,self.scope,self.assets,self.origin,self.expected)
+            data=json.loads(original(target))
+            if name == 'site-search-index.json': data['records'][0]['text'] += ' unrelated current text'
+            else: data['artworks'][0]['title'] += ' unrelated current text'
+            changed=json.dumps(data,ensure_ascii=False).encode('utf8')
+            def read(path): return changed if path==target else original(path)
+            with self.subTest(name=name),patch.object(Path,'read_bytes',read):
+                self.assertEqual(self.gate.current_retirement_census(self.root,self.scope,self.assets,self.origin,self.expected),self.current)
+
+    def test_actual_index_retired_reference_is_rejected(self):
+        original=Path.read_bytes
+        for name in self.gate.CURRENT_GENERATED_INDICES:
+            target=self.root/name;data=json.loads(original(target))
+            if name == 'site-search-index.json': data['records'][0]['text'] += ' assets/page-art/emma-life/emma-h2-review-960.webp'
+            else: data['artworks'][0]['title'] += ' assets/page-art/emma-life/emma-c2-review-960.webp'
+            changed=json.dumps(data,ensure_ascii=False).encode('utf8')
+            def read(path): return changed if path==target else original(path)
+            with self.subTest(name=name),patch.object(Path,'read_bytes',read):
+                with self.assertRaisesRegex(ValueError,'Active consumer closure mismatch'):
+                    self.gate.current_retirement_census(self.root,self.scope,self.assets,self.origin,self.expected)
+
+    def test_actual_index_missing_active_reference_is_rejected(self):
+        original=Path.read_bytes;target=self.root/'site-search-index.json'
+        raw=original(target);needle=b'assets/page-art/bom-evidences/josephemma-identity-v4-960.webp'
+        self.assertEqual(raw.count(needle),1)
+        changed=raw.replace(needle,b'assets/removed-reference.webp',1)
+        json.loads(changed)  # The modified index is still valid JSON.
+        def read(path): return changed if path==target else original(path)
+        with patch.object(Path,'read_bytes',read):
+            with self.assertRaisesRegex(ValueError,'Active consumer closure mismatch'):
+                self.gate.current_retirement_census(self.root,self.scope,self.assets,self.origin,self.expected)
+
+    def test_duplicate_index_entries_are_rejected(self):
+        original=Path.read_bytes
+        for name in self.gate.CURRENT_GENERATED_INDICES:
+            target=self.root/name;data=json.loads(original(target))
+            if name=='site-search-index.json': data['records'].append(data['records'][0])
+            else: data['artworks'].append(data['artworks'][0])
+            changed=json.dumps(data,ensure_ascii=False).encode('utf8')
+            def read(path): return changed if path==target else original(path)
+            with self.subTest(name=name),patch.object(Path,'read_bytes',read):
+                with self.assertRaisesRegex(ValueError,'Duplicate current index'):
+                    self.gate.current_retirement_census(self.root,self.scope,self.assets,self.origin,self.expected)
+
+    def test_scope_and_origin_drift_are_rejected(self):
+        for scope in (self.scope[:-1],self.scope+[self.scope[0]]):
+            with self.assertRaisesRegex(ValueError,'consumer scope drift'):
+                self.gate.current_retirement_census(self.root,scope,self.assets,self.origin,self.expected)
+        with self.assertRaisesRegex(ValueError,'origin drift'):
+            self.gate.current_retirement_census(self.root,self.scope,self.assets,'https://other.example',self.expected)
+        with self.assertRaisesRegex(ValueError,'asset scope drift'):
+            self.gate.current_retirement_census(self.root,self.scope,set(list(self.assets)[:-1]),self.origin,self.expected)
 
     def test_historical_removal_is_not_blanket_waived(self):
         changed=self.expected.copy();changed[next(iter(self.gate.H2_REMOVED))]-=1
