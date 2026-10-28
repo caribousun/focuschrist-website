@@ -703,10 +703,10 @@ jobs:
         id: emma_render
         run: timeout --signal=TERM --kill-after=15s 5m env NODE_PATH=/tmp/focus-row-qa/node_modules node tools/emma_story_journey_browser_qa.js
 
-      - name: Verify the two corrected hub scripture links
+      - name: Verify two current hub scripture links
         run: |
-          printf '%s  %s\n' 'ba724ab720ec5d59cf2872ae3dc8fe4342c3118295e32446c5f95571931df798' 'tools/emma_hub_scripture_browser_qa.js' | sha256sum --check
-          timeout --signal=TERM --kill-after=5s 120s env NODE_PATH=/tmp/focus-row-qa/node_modules node tools/emma_hub_scripture_browser_qa.js
+          printf '%s  %s\n' '1767beaecafdf88398a34826fff84b725918e4d56c3ef8df3580473ce9c109e8' 'tools/emma_journey_scripture_browser_qa.js' | sha256sum --check
+          timeout --signal=TERM --kill-after=5s 120s env NODE_PATH=/tmp/focus-row-qa/node_modules node tools/emma_journey_scripture_browser_qa.js
 
       - name: Preserve actual diagnostic outcome
         if: always()
