@@ -40,19 +40,18 @@ jobs:
           python -m unittest discover -s tools -p test_adams_integrated_context.py
           python -m unittest discover -s tools -p test_adams_integrated_qa_evidence.py
           python -m unittest discover -s tools -p test_adams_header_evidence_successor.py
-          python -m unittest discover -s tools -p test_adams_index_producer_successor.py
-          python -m unittest discover -s tools -p test_adams_integration_indices.py
           python -m unittest discover -s tools -p test_actual_current_index_composition.py
           python -m unittest discover -s tools -p test_adams_source_import.py
           python -m unittest discover -s tools -p test_adams_standalone_opening.py
           python -m unittest discover -s tools -p test_adams_panel_standalone.py
           python -m unittest discover -s tools -p test_adams_resource_coverage.py
           python -m unittest discover -s tools -p test_emma_resource_coverage.py
-          python -m unittest discover -s tools -p test_timeline_source_import.py
-          python tools/test_continue_motion_binding.py
+          # Run current rights/review/tamper protections; archived inverses run separately.
+          python -m unittest discover -s tools -p test_run_current_mixed_regressions.py
+          python -m unittest discover -s tools -p test_current_normalizer_fail_closed.py
+          python tools/run_current_mixed_regressions.py
           python tools/test_emma_story_successor.py
           python -m unittest discover -s tools -p test_emma_hub_citation_successor.py
-          python tools/test_emma_generated_indices_successor.py
           python tools/test_world_companion_successor.py
           python tools/test_settings_successor.py
           python tools/continue_motion_binding.py
