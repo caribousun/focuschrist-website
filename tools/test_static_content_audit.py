@@ -128,7 +128,11 @@ class ExistingTimelineInverseTests(unittest.TestCase):
                 with patch.object(audit,'ROOT',root):
                     self.assertEqual(audit.content_hash(path),records[route]['published_text_sha256'])
                     path.write_bytes(raw+b'<p>Unreviewed additional assertion.</p>')
-                    if route in audit.CURRENT_INTEGRATION_ROUTES:
+                    if route == 'timeline.html':
+                        # Timeline uses semantic validation rather than an exact source
+                        # binding; the ledger must still reject unreviewed visible prose.
+                        self.assertNotEqual(audit.content_hash(path), records[route]['published_text_sha256'])
+                    elif route in audit.CURRENT_INTEGRATION_ROUTES:
                         # The current source binding rejects the mutation before hashing;
                         # independently retain the existing visible-wording assertion.
                         self.assertNotEqual(hashlib.sha256(audit.published_text(path).encode('utf-8')).hexdigest(),records[route]['published_text_sha256'])
