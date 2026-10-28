@@ -529,7 +529,7 @@ def reviewed_journey_bottom_navigation(data):
 
 # Exact current Timeline selector CSS; the archived September
 # style entry remains historical, not an alternate current acceptance.
-CURRENT_TIMELINE_SELECTOR_STYLE_SHA256 = '8d2d7b76bc5a3a5cac0c35985c872a8e23a3dce28ab4be7ce8ef5dd2f6847575'
+CURRENT_TIMELINE_SELECTOR_STYLE_SHA256 = '9a02937617eba47ff406bba63e2ecd9ed267dd6b1ffd45697f0e055eb37c5f77'
 
 def reviewed_scoped_interface_style(name, data):
     if name == 'timeline.css':
