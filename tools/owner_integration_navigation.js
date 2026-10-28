@@ -9,6 +9,10 @@ const stories={'history/emma-elect-lady.html':'emma-story1-ride','history/emma-h
 const currentPages=[chart,intro,landing,hub,...Object.keys(stories)];
 const digest=value=>crypto.createHash('sha256').update(value).digest('hex');
 const clean=n=>n.textContent.replace(/\s+/g,' ').trim();
+// Text nodes in adjacent elements have no literal separator in textContent.
+// Join nodes before normalizing so card headings, descriptions and actions
+// remain separately checked without ignoring unexpected text.
+function spacedText(n){const walker=n.ownerDocument.createTreeWalker(n,4),parts=[];let node;while((node=walker.nextNode()))parts.push(node.nodeValue);return parts.join(' ').replace(/\s+/g,' ').trim();}
 const bare=p=>p==='/'?'index.html':p.replace(/^\//,'');
 function manifest(read){const raw=read(MANIFEST);assert.equal(digest(raw),MANIFEST_SHA,'Exact integration manifest');const m=JSON.parse(raw);assert.equal(m.schema,1);assert.equal(Object.keys(m.files).length,11);return m;}
 function assertSource(route,source,read){const item=manifest(read).files[route];assert(item,'Known integration source');
@@ -69,7 +73,7 @@ function assertCurrentDOM(route,doc){
   const introText='Follow the life of Jesus Christ, the unfolding story of the Restoration, and the journeys of those who lived it. Choose a timeline to explore its stories, dates, and places.';
   const note='Open a story along the way and take time with the people behind each moment.';
   const expectedText=['Choose a timeline',introText,...expected.flatMap(([name,,,description])=>[name,description,'Explore timeline']),note].join(' ');
-  assert.equal(clean(section),expectedText,'Exact visible Timeline selector content');
+  assert.equal(spacedText(section),expectedText,'Exact visible Timeline selector content');
   cards.forEach((card,i)=>{
    const [name,href,image,description]=expected[i],links=card.querySelectorAll('a'),titles=card.querySelectorAll('h3'),images=card.querySelectorAll('img'),paragraphs=card.querySelectorAll('p');
    assert.equal(links.length,1);assert.equal(titles.length,1);assert.equal(images.length,1);assert.equal(paragraphs.length,1);

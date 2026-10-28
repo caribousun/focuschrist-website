@@ -21,6 +21,7 @@ function selfTest(routes,read,JSDOM){
   d=>d.querySelector('#choose-timeline article a').setAttribute('href','wrong.html'),
   d=>d.querySelector('#choose-timeline article img').setAttribute('src','wrong.webp'),
   d=>d.querySelector('#choose-timeline article p').textContent='Changed copy',
+  d=>d.querySelector('#choose-timeline article h3').insertAdjacentText('afterend','Unexpected text'),
   d=>d.querySelector('#choose-timeline article').setAttribute('hidden',''),
   d=>d.querySelector('#choose-timeline').setAttribute('hidden',''),
   d=>d.querySelector('main').setAttribute('aria-hidden','true'),
@@ -31,6 +32,11 @@ function selfTest(routes,read,JSDOM){
   d=>{const c=d.querySelector('#choose-timeline article');c.after(c.cloneNode(true));},
   d=>d.body.insertAdjacentHTML('beforeend','<div id="adams-1881"></div>')
  ])rejects(()=>check(contract.landing,mutation));
+ // Current markup deliberately places these text-bearing elements adjacent,
+ // without whitespace between closing/opening tags.
+ assert(read(contract.landing).includes('</h3><p>'));
+ assert(read(contract.landing).includes('</p><span'));
+ check(contract.landing);positive++;
  for(const [old,value] of [
   ['latter-day-saint-church-history-timeline.html','wrong.html'],
   ['church-history-grove.webp','wrong.webp'],
