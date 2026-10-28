@@ -36,13 +36,18 @@ QA_MUTABLE = frozenset({'helper','owner_contract','report','run_identity','captu
 
 
 def historical_reader(root, item):
-    """Only exact CSS/helper predecessor bytes; never current-render evidence."""
+    """Exact historical CSS, Timeline and helper bytes; never current-render evidence."""
     name=item['path']
     if name == CSS['path']:
         require(item == OLD_CSS, 'historical CSS record drift')
         current=bound(root, CSS)
         validate_file(name,current,root)
         raw=current[:OLD_CSS['bytes']]
+    elif name == 'timeline.html':
+        # A reviewed source receipt remains historical after the approved
+        # selector redesign; it never claims the old image reviews cover the
+        # new card presentation.
+        archive=local(root,'docs/timeline-selector/historical-c910.html');raw=archive.read_bytes()
     elif name in ARCHIVES:
         archive=local(root,ARCHIVES[name]);raw=archive.read_bytes()
     else:
@@ -151,7 +156,11 @@ def validate(root, added, covered, rejected):
     prior.validate_source(root,old,added,covered,rejected,context_reader=historical_reader)
     qa_checks.validate_qa(root,old['spec'],helper_reader=historical_reader)
     validate_spec_delta(old['spec'],spec)
-    for item in spec['context']:bound(root,item)
+    for item in spec['context']:
+        (historical_reader if item['path']=='timeline.html' else bound)(root,item)
+    # Separately check the actual current selector; never use a historical
+    # receipt as proof of its rendered appearance or current approval.
+    validate_file('timeline.html', local(root,'timeline.html').read_bytes(), root)
     qa_checks.validate_qa(root,spec)
     validate_owner_provenance(root,spec,provider)
     validate_current_reviews(root,record,APPROVED_SPEC_SHA256,spec,assignment)

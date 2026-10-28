@@ -2,19 +2,36 @@
   "base_commit": "de5f3c35505fddd4586bb0b51c17dad1389f2bf9",
   "purpose": "Bounded Timeline selector candidate; diagnostic does not replace required CI or actual generated-index/release evidence.",
   "files": {
-    ".github/workflows/timeline-selector-diagnostic.yml": "119bba473fb82c82a119371baa8fa6fc6cf853cbf45f9b5ccb7beec48d5a9a99",
+    ".github/workflows/timeline-selector-diagnostic.yml": "ed7625f66e26f1596a2a742cb490b0caedf184370c30a7fdd8eb5984c357880c",
     "docs/timeline-selector/historical-c910.html": "c910ae58c2f8feccf1d59f44b154d31f224436b79538e86bf73774c65b0b8c4c",
     "timeline.css": "fa3b1aa7e6281f91151624ce53cd2ad6b74ce2e301b867851e6a302bb555d0b5",
     "timeline.html": "050e9a1c93e05abf9132ef3eea5cd2317aca13a981ffba1f47ca724afd328baf",
-    "tools/continue_motion_binding.py": "8939992651e7b6103b00b5a8de01caf960c6a69f727f1f45064e70fa4948668b",
+    "tools/continue_motion_binding.py": "4f72f474cf21356b342b3b37efb2d9c7b58de66d53f69ceef8a287c9b4243c1e",
     "tools/owner_integration_contract.py": "e67aaa2f7f267d3ebe5ba06e8822549d0948ac4ed9a101156cad018c01083f92",
     "tools/owner_integration_successor.py": "987053e1d24ab2bee2884e14e5866d0a32378e27cf8710abb9f68fc374f541c3",
     "tools/test_timeline_selector_semantics.py": "1f45e0a5ad58545f2411ca194485a906268bc43f5f6b16c6ae90c052c83f5c03",
     "tools/timeline_selector_browser_qa.js": "1f863413b99f15aa7a85fdee606372e4f840293a87525399e0bd09ae6516e811",
     "tools/timeline_selector_check.py": "b3e131ae539b1eaa0c2218dcbad40b7d8e31610ef55f5064a99872cbebf87c21",
     "tools/timeline_selector_semantics.py": "bb21f64d116a0b711f0a8465331b0c14bdce5d456b648e94107399bed980a410",
-    "tools/adams_delivery_successor.py": "a9b58b0f0d5b3ea880bc5270294bc527625c1bfa36b4491caec5d9bcc364bbde",
-    "tools/test_adams_delivery_successor.py": "f148fc7f325108ecf30fa8d3c2830d45c1106d01aee541cd9ff93a751c5df104"
+    "tools/adams_delivery_successor.py": "ce3f216fd8485bce9ea5000886c52540731e8f28aea45c7b46ca3bff2f856ced",
+    "tools/test_adams_delivery_successor.py": "f88d6eaf7e0f9b5c0a5218869ef29a3d461a4e39952bb75371bb158ab897c78c",
+    "content-audit.json": "cd329a13845668692f8771f3b7bfda271996ea7cbcb143f0188e3fa4cc41a48a",
+    "docs/section-panel-inventory.json": "e75724fcb2942d3816ededd703fe72bbad72e569d738c297f2f84ec259f109a8",
+    "docs/section-panel-surfaces.json": "d60ef9158ccbcf2b3e43ad1bb9a0df4e8615d860d4f2c7748b7db9c87cb534d2",
+    "docs/timeline-selector/copy-review.json": "98c6f38bda359533c0d2ee58868a1c0e322b95a9ebae7480184540d5246a95fa",
+    "site-search-index.json": "2712123eff786e68f0274a4e8bd17029a35c721f1aaa9505d58d607373f9da92",
+    "tools/adams_header_evidence_successor.py": "a40d94a927a4b005ca164d5ec7c1a561f0ab5538449c8af01e7d87fe2065baa0",
+    "tools/adams_integrated_source_import.py": "fd516d3b207da061442e80018ddf6a4baa17b39ca06bc4f01ddca75989ab67a7",
+    "tools/adams_integration_indices.py": "c754396da9492505bed2d86573d8ce377ec13f73e994e74fc2db0cb801e9aa67",
+    "tools/owner_integration_test_fixtures.py": "8fc0240fe774e3ba33f7e83530f77723a78007073f3e42b9b7c909ecbf5c7965",
+    "tools/section_panel_surface_qa.py": "c4b860b8e1ab98ae319dc01ed3ff1b43071730639fc6482242987c23ad2f9c82",
+    "tools/static_content_audit.py": "c3a490607f2a231cc29040454f104c30081272fa9257248680c1c010fc5e581c",
+    "tools/test_actual_current_index_composition.py": "43186c416d9329d7362e728bebcc90443cbc4e5be30c63a2b97afd785d8d3398",
+    "tools/test_adams_integrated_context.py": "729b537bf655b4c8917acc4a44fc47acaf070754fba1cb739d9c56102d55772a",
+    "tools/test_current_integration_content_audit.py": "6231ea72d74d36ffad370bf19cd1d2f817d7ae1896bbfdeb4764f8f42e7f242d",
+    "tools/test_timeline_selector_panel_owners.py": "e6d62b083cd2819ab5cfad8f8072e50c218e72b4cf4a018f35d3fccbc32f5023",
+    "tools/timeline_current_indices.py": "e01fe15945c42ca7ad9a3aa1d3d7d1484b8e58070a72faf9572c3f88a611b3f7",
+    ".github/workflows/site-qa.yml": "c95d59eb6f4062cc0c55b1927e1a7c06487acd7719340509694300ef2f3b0898"
   },
   "dependencies": {
     "shared_current": [
@@ -52,5 +69,6 @@
     ],
     "validation_scope": "Unknown/shared inputs require broad validation. Historic owner manifest and producer receipts remain unmodified; new generator output and producer evidence must be actual, not inferred."
   },
-  "status": "local diagnostic successor; hosted render and current generated index validation pending"
+  "status": "local bounded tooling and actual second-run index; final-tree generator equivalence and configured CI pending",
+  "candidate_previous_head": "c900779a2cdf28ed9068d53a07206622b78f4326"
 }

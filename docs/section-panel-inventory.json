@@ -306,17 +306,6 @@
       "disposition": "coordinated_stylesheet_owner",
       "reason": "Merlin standalone timeline experience, preserved by Wyatt on 2026-10-02; scoped inline design and timeline runtime checks own this surface."
     },
-    "fc-adams-timeline-card": {
-      "count": 1,
-      "pages": [
-        "timeline.html"
-      ],
-      "tags": [
-        "article"
-      ],
-      "disposition": "coordinated_stylesheet_owner",
-      "reason": "One exact Timeline Adams introduction card; scoped adams-integration.css uses canonical panel fill, border, shadow and gold edge tokens. Current source and owner validated separately; rendered geometry remains required."
-    },
     "fc-answers-jump-panel": {
       "count": 1,
       "pages": [
@@ -1915,15 +1904,6 @@
       "disposition": "excluded_with_reason",
       "reason": "Button/control; preserve action styling."
     },
-    "fc-adams-timeline-card": {
-      "stylesheets": [
-        "adams-integration.css"
-      ],
-      "pages": [
-        "timeline.html"
-      ],
-      "disposition": "coordinated_stylesheet_owner"
-    },
     "fc-answers-art": {
       "stylesheets": [
         "answers-hero.css"
@@ -2121,7 +2101,6 @@
         "missionary.html",
         "pioneers.html",
         "search.html",
-        "timeline.html",
         "timelines/adams-1881-introduction.html",
         "watch.html"
       ],
@@ -2728,6 +2707,15 @@
       ],
       "pages": [
         "answers/why-latter-day-saints-build-temples.html"
+      ],
+      "disposition": "coordinated_stylesheet_owner"
+    },
+    "fc-timeline-choice": {
+      "stylesheets": [
+        "timeline.css"
+      ],
+      "pages": [
+        "timeline.html"
       ],
       "disposition": "coordinated_stylesheet_owner"
     },

@@ -203,8 +203,10 @@ def check(root=ROOT):
     with hub_predecessor_view(root) as historical_hub:
         check_emma(historical_hub)
     # The view validates actual Adams bytes first; Emma checks historical bytes only.
-    with adams_predecessor_view(root) as historical_emma:
-        check_emma_indices(historical_emma)
+    # Previous index producer bytes are historical, not current output.
+    # Configured generator --check jobs test full source/output equivalence.
+    from timeline_current_indices import validate_current
+    validate_current(root)
     return {'status':'EXACT_MOTION_EVIDENCE_PASS','files':len(data['files']),'limits':'Technical evidence binding only; does not authenticate reviewers or grant publication approval.'}
 
 if __name__=='__main__':

@@ -1,53 +1,27 @@
-"""Actual current generated indices and preserved predecessor composition.
+"""Actual current Timeline index semantics; not a historical producer claim.
 
-These tests establish exact data/producer binding, not review or publication.
-Run only after independent review, in an isolated hash-pinned test fixture.
+The configured generator --check jobs separately compare complete outputs to
+actual current source. Historical mapping and receipts remain unmodified.
 """
-import tempfile
-import unittest
+import json, tempfile, unittest
 from pathlib import Path
-
 import adams_integration_indices as current
-import adams_delivery_successor as previous
-import emma_generated_indices_successor as emma
-import timeline_source_import as timeline
-
-
+from timeline_current_indices import validate_current
+ROOT=Path(__file__).resolve().parents[1]
 class ActualCurrentIndexComposition(unittest.TestCase):
-    def test_actual_current_producer_and_exact_three_pair_round_trip(self):
-        self.assertEqual(current.check_current()['files'], sorted(current.AFTER))
-        for name in current.AFTER:
-            data = (current.ROOT / name).read_bytes()
-            old = current.restore(name, data)
-            self.assertEqual(current.sha(old), current.BEFORE[name])
-            self.assertEqual(current.advance(name, old), data)
-
-    def test_actual_composes_to_preserved_adams_emma_and_timeline_pins(self):
-        with tempfile.TemporaryDirectory() as folder:
-            root = Path(folder)
-            for name in current.AFTER:
-                (root / name).write_bytes(current.restore(name, (current.ROOT / name).read_bytes()))
-            for name in (previous.MANIFEST, emma.MANIFEST):
-                dest = root / name
-                dest.parent.mkdir(parents=True, exist_ok=True)
-                dest.write_bytes((current.ROOT / name).read_bytes())
-            self.assertEqual(previous.check(root)['files'], sorted(previous.AFTER))
-            with previous.predecessor_view(root) as view:
-                self.assertEqual(emma.check(view)['files'], sorted(emma.AFTER))
-            restored_search = (root / 'site-search-index.json').read_bytes()
-            self.assertEqual(previous.sha(timeline.restore_search(restored_search)),
-                             '038391c9f469c4c7a24894c629b915851ec097d305e880bdfe12e6f24b3c9e0d')
-            restored_gallery = (root / 'art-gallery.json').read_bytes()
-            oldest_gallery = emma.restore('art-gallery.json', previous.restore('art-gallery.json', restored_gallery, root), root)
-            self.assertEqual(previous.sha(oldest_gallery), timeline.REVIEWED_CONSUMER_INVERSES['art-gallery.json']['current'])
-
-    def test_unknown_current_bytes_are_not_normalized(self):
-        for name in current.AFTER:
-            raw = (current.ROOT / name).read_bytes()
-            for altered in (raw + b' ', bytes([raw[0] ^ 1]) + raw[1:]):
-                self.assertEqual(current.restore(name, altered), altered)
-                self.assertNotEqual(current.sha(altered), current.BEFORE[name])
-
-
-if __name__ == '__main__':
-    unittest.main()
+ def test_current_semantics_and_historical_mapping(self):
+  self.assertEqual(current.check_current()['status'],'CURRENT_TIMELINE_INDEX_SEMANTICS_PASS')
+  self.assertEqual(set(current.mapping()['files']),set(current.AFTER))
+ def test_missing_and_duplicated_index_destinations_rejected(self):
+  with tempfile.TemporaryDirectory() as td:
+   root=Path(td)
+   for name in ('timeline.html','art-gallery.json','site-search-index.json'):(root/name).write_bytes((ROOT/name).read_bytes())
+   path=root/'site-search-index.json';original=json.loads(path.read_bytes())
+   for kind in ('missing','duplicate','stale_text'):
+    value=json.loads(json.dumps(original))
+    if kind=='missing':value['records']=[r for r in value['records'] if r['url']!='/timeline.html#adams-1881']
+    elif kind=='duplicate':value['records'].append(value['records'][0])
+    else:next(r for r in value['records'] if r['url']=='/timeline.html#choose-timeline')['text']='stale' 
+    path.write_text(json.dumps(value))
+    with self.assertRaises(AssertionError):validate_current(root)
+if __name__=='__main__':unittest.main()

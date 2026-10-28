@@ -56,7 +56,13 @@ def historical_root(current):
     # The new actual index must inverse to the exact unchanged predecessor. A
     # pending/unrecognized index cannot make the historical test silently pass.
     from adams_integration_indices import restore
-    raw = restore('site-search-index.json', (current/'site-search-index.json').read_bytes(), current)
+    # Recover the immutable baseline from repository history, not today's
+    # regenerated index. This is a historical test input, not current evidence.
+    import subprocess
+    archived = subprocess.check_output(['git', '-C', str(current), 'show',
+        'de5f3c35505fddd4586bb0b51c17dad1389f2bf9:site-search-index.json'])
+    assert sha(archived) == 'a9933a9ec749aec4163a1b146f0946c54244a4f78f781e7f508cea4e51b8260a', 'Historical index source drift'
+    raw = restore('site-search-index.json', archived, current)
     assert sha(raw) == 'edbd12a7385703fa632e69af0366ce3fb7e61a23dce7a73680b225a6c3a83f76', 'Exact historical search fixture drift'
     values['site-search-index.json'] = raw
     temp = tempfile.TemporaryDirectory(prefix='focus-owner-historical-tests-')

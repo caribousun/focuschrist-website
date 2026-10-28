@@ -9929,17 +9929,25 @@
     {
       "path": "timeline.html",
       "status": "verified",
-      "published_text_sha256": "5ea0f95abf518f94c685649cf17d408e505ad4e8a30a73e5c0527c7d14860437",
-      "reviewed_source_sha256": "c910ae58c2f8feccf1d59f44b154d31f224436b79538e86bf73774c65b0b8c4c",
-      "reviewed_on": "2026-10-27",
-      "actual_author": "Current ledger assembly; Fermi and Newton independently reviewed the finished prose",
-      "review_scope": "Current static visitor copy, metadata, captions and accessible labels; exact raw source and published-text hashes. Rendered and release acceptance are separate.",
-      "review_standard": "The exact current static visitor prose was independently reviewed by Fermi and Newton under the current warm-prose and disclosure mandates. Fermi reviewed accessible labels; Newton reviewed visible labels and image alt attributes. A separate Newton review covered title, description and Open Graph metadata voice, reusing prior research for factual support. The chart is identified as an 1881 historical artifact, not a modern verified chronology or official Church teaching. Attribution and U.S. public-domain reproduction status are supported by the cited Commons source, which notes other jurisdictions may restrict reuse; Gold Edition is interface wording, not an authenticated archival designation. Existing chart pixels are referenced, not new artwork. Prior unchanged research is reused; image pixels, inline scripts, runtime, rendered context and release acceptance remain separate. A separate Newton source-voice review inspected nonempty static alt, aria-label, placeholder and title attributes; dynamic attributes, usability and full accessibility remain separate.",
+      "published_text_sha256": "b66961ad94a552592d104ae333c7e7a7846f92aa8fd05280f9452ebb5c8751e2",
+      "reviewed_source_sha256": "050e9a1c93e05abf9132ef3eea5cd2317aca13a981ffba1f47ca724afd328baf",
+      "reviewed_on": "2026-10-28",
+      "actual_author": "/root/implement_timeline_cards",
+      "review_scope": "Independent bounded review of the five card labels and short descriptions. Earlier review evidence for unchanged copy is historical. Accessibility behavior, rendered appearance and complete destination fact-check remain separate.",
+      "review_standard": "Owner approved the five-card concept and wording. An independent bounded prose assessment by /root/review_timeline_card_delta found no objection to the five labels and descriptions. The prior c910 review and its evidence remain historical and are not represented as review of the new cards. Current semantic and published-text checks protect labels, descriptions, accessible names, destinations and image references; actual rendering is checked separately.",
       "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
         "https://commons.wikimedia.org/wiki/File:Adams_Synchronological_Chart,_1881.jpg"
       ],
       "rendered_review_status": "SEPARATE_RELEASE_GATE",
       "review_evidence": [
+        {
+          "path": "docs/timeline-selector/copy-review.json",
+          "bytes": 679,
+          "sha256": "98c6f38bda359533c0d2ee58868a1c0e322b95a9ebae7480184540d5246a95fa"
+        }
+      ],
+      "historical_review_evidence": [
         {
           "path": "docs/emma-hub-content-audit/fermi-current-adams-copy-review.json",
           "bytes": 3021,

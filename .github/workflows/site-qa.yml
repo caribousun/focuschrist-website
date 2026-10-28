@@ -720,6 +720,9 @@ jobs:
 
   owner-integration-render:
     name: Owner integration rendered journeys (not release acceptance)
+    # This exact-source diagnostic belongs to PR 531's historical evidence.
+    # Current Timeline selector rendering uses timeline-selector-diagnostic.yml.
+    if: github.event_name == 'pull_request' && github.event.pull_request.number == 531
     runs-on: ubuntu-latest
     timeout-minutes: 25
     permissions:

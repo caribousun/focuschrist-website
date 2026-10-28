@@ -21,7 +21,7 @@ class IntegratedContextTests(unittest.TestCase):
         for item in self.spec['context'] + self.spec['shared_dependencies']:
             # This test exercises immutable prior semantics. The actual current
             # CSS must pass the strict successor before projecting its old prefix.
-            raw = (successor.historical_reader(ROOT,item) if item['path']==successor.CSS['path']
+            raw = (successor.historical_reader(ROOT,item) if item['path'] in (successor.CSS['path'], 'timeline.html')
                    else (ROOT / item['path']).read_bytes())
             self.assertEqual(len(raw), item['bytes'])
             self.assertEqual(hashlib.sha256(raw).hexdigest(), item['sha256'])
