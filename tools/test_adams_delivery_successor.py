@@ -15,7 +15,7 @@ def historical_input(name):
     if name == "timeline.html":
         # Historical inverse assertions use the frozen predecessor, never the
         # changed current UI as a substitute for the old receipt.
-        raw = (gate.ROOT / "docs/timeline-selector/historical-c910.html").read_bytes()
+        raw = (gate.ROOT / "docs/timeline-selector/historical-c910.txt").read_bytes()
     else:
         raw = (gate.ROOT / name).read_bytes()
     return restore_integration(name, raw)
@@ -186,7 +186,7 @@ class ActualGeneratedIndicesTests(unittest.TestCase):
             (root / 'timeline.html').write_bytes(broken)
             with self.assertRaises(AssertionError): validate_current(root)
             with self.assertRaisesRegex(ValueError, 'current Timeline/index semantics changed'): gate.check(root)
-            historical = (gate.ROOT / 'docs/timeline-selector/historical-c910.html').read_bytes()
+            historical = (gate.ROOT / 'docs/timeline-selector/historical-c910.txt').read_bytes()
             (root / 'timeline.html').write_bytes(historical)
             with self.assertRaisesRegex(ValueError, 'current Timeline/index semantics changed'): gate.check(root)
             (root / 'timeline.html').write_bytes(original)

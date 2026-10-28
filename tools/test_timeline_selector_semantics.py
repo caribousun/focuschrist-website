@@ -23,12 +23,12 @@ def main():
  if a.prior_manifest:
   with tempfile.TemporaryDirectory() as t:
    root=Path(t);(root/'docs/timeline-selector').mkdir(parents=True);(root/'docs/owner-integration-contract').mkdir(parents=True)
-   shutil.copyfile(a.root/'docs/timeline-selector/historical-c910.html',root/'docs/timeline-selector/historical-c910.html')
+   shutil.copyfile(a.root/'docs/timeline-selector/historical-c910.txt',root/'docs/timeline-selector/historical-c910.txt')
    (root/'timeline.html').write_bytes(benign)
    shutil.copyfile(a.prior_manifest,root/'docs/owner-integration-contract/source-manifest.json')
    validate_file('timeline.html',new,root);validate_file('timeline.html',benign,root)
    history=historical_bytes('timeline.html',benign,root);assert restore('timeline.html',benign,root)==history;validate(advance('timeline.html',history,root))
-   fixture=root/'docs/timeline-selector/historical-c910.html';fixture.write_bytes(fixture.read_bytes()+b' ')
+   fixture=root/'docs/timeline-selector/historical-c910.txt';fixture.write_bytes(fixture.read_bytes()+b' ')
    try: historical_bytes('timeline.html',new,root)
    except AssertionError:pass
    else:raise AssertionError('tampered historical fixture accepted')

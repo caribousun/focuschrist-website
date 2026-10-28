@@ -527,7 +527,13 @@ def reviewed_journey_bottom_navigation(data):
     if hashlib.sha256(data).hexdigest() != JOURNEY_BOTTOM_NAV_SHA256 or data.count(JOURNEY_BOTTOM_NAV_APPENDIX) != 1 or not data.endswith(JOURNEY_BOTTOM_NAV_APPENDIX): return False
     return hashlib.sha256(data[:-len(JOURNEY_BOTTOM_NAV_APPENDIX)]).hexdigest() == OWNER_20260929_STYLES['timeline-workspace.css'][0]
 
+# Exact current owner-approved Timeline selector CSS; the archived September
+# style entry remains historical, not an alternate current acceptance.
+CURRENT_TIMELINE_SELECTOR_STYLE_SHA256 = 'fa3b1aa7e6281f91151624ce53cd2ad6b74ce2e301b867851e6a302bb555d0b5'
+
 def reviewed_scoped_interface_style(name, data):
+    if name == 'timeline.css':
+        return hashlib.sha256(data).hexdigest() == CURRENT_TIMELINE_SELECTOR_STYLE_SHA256
     data = before_reviewed_timeline_release(name, data)
     if name == 'guided-studies.css': return reviewed_guided_reading_style(data)
     if name in CURRENT_REVIEWED_STYLE_INVERSES and hashlib.sha256(data).hexdigest() != CURRENT_REVIEWED_STYLE_INVERSES[name][0]: return False

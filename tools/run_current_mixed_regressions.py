@@ -23,6 +23,11 @@ HISTORICAL_ONLY = frozenset({
     'test_timeline_source_import.GalleryBuilderEvidenceTests.test_historical_indices_restore_delivery_evidence_pins',
     'test_timeline_source_import.TimelineImportTests.test_exact_search_route_inverse_restores_frozen_predecessor',
 })
+DISPLAY_HISTORICAL_ONLY = frozenset({
+    'test_display_delivery.DisplayDelivery.test_gallery_builder_inverse_rejects_unknown_changes_and_other_paths',
+    'test_display_delivery.DisplayDelivery.test_search_inverse_is_single_reviewed_phrase_and_rejects_other_changes',
+    'test_display_delivery.DisplayDelivery.test_exact_consumer_inverse_restores_original_binding',
+})
 
 def flatten(suite):
     for item in suite:
@@ -31,21 +36,24 @@ def flatten(suite):
         else:
             yield item
 
-def partition(tests):
+def partition(tests, historical_only=HISTORICAL_ONLY):
     by_id = {test.id(): test for test in tests}
     if len(by_id) != len(tests):
         raise ValueError('Duplicate test identity')
-    missing = HISTORICAL_ONLY - set(by_id)
+    missing = historical_only - set(by_id)
     if missing:
         raise ValueError('Historical selection drift: ' + ', '.join(sorted(missing)))
-    current = [test for test in tests if test.id() not in HISTORICAL_ONLY]
+    current = [test for test in tests if test.id() not in historical_only]
     if not current:
         raise ValueError('No current protections selected')
-    return current, sorted(HISTORICAL_ONLY)
+    return current, sorted(historical_only)
 
 def main():
-    tests = list(flatten(unittest.defaultTestLoader.loadTestsFromNames(MODULES)))
-    current, historical = partition(tests)
+    display_only = '--display-only' in sys.argv
+    modules = ('test_display_delivery',) if display_only else MODULES
+    historical_only = DISPLAY_HISTORICAL_ONLY if display_only else HISTORICAL_ONLY
+    tests = list(flatten(unittest.defaultTestLoader.loadTestsFromNames(modules)))
+    current, historical = partition(tests, historical_only)
     print('Current protections:', len(current), '; separately historical:', len(historical), flush=True)
     for name in historical:
         print('Historical only:', name, flush=True)

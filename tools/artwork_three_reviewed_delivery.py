@@ -63,7 +63,10 @@ def validate(root,record,approved_binding,added,covered,rejected,pixel_hash,page
  require(len(assets)==9 and assets<=added and not assets&covered,'coverage overlap/omission')
  ctx=spec['context'];require(len(ctx)==len({r['path']for r in ctx}),'duplicate context')
  require(set().union(*(page_dependencies(root,r)for r in routes))<={r['path']for r in ctx},'missing page context')
- for row in ctx:bound(root,row)
+ from historical_generated_index_context import ALLOWED, validate_context as validate_historical_index_context
+ for row in ctx:
+  if row['path'] in ALLOWED:validate_historical_index_context(root,row)
+  else:bound(root,row)
  reviews=set();require(len(record['reviews'])==3,'three current reviews required')
  for row in record['reviews']:
   review=json.loads(bound(root,row).read_bytes());who=review['reviewer'];require(who in {'Fermi','Newton','Albert'} and who not in reviews,'duplicate/unknown reviewer');reviews.add(who)

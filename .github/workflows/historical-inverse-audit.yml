@@ -32,6 +32,9 @@ jobs:
       - name: Audit historical Adams inverse pairs
         if: ${{ !cancelled() }}
         run: python -m unittest discover -s tools -p test_adams_integration_indices.py
+      - name: Audit historical display inverse evidence
+        if: ${{ !cancelled() }}
+        run: python -m unittest discover -s tools -p test_display_delivery.py
       - name: Audit historical Emma inverse pairs
         if: ${{ !cancelled() }}
         run: python tools/test_emma_generated_indices_successor.py
