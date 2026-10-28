@@ -9,9 +9,19 @@ const stories={'history/emma-elect-lady.html':'emma-story1-ride','history/emma-h
 const currentPages=[chart,intro,landing,hub,...Object.keys(stories)];
 const digest=value=>crypto.createHash('sha256').update(value).digest('hex');
 const clean=n=>n.textContent.replace(/\s+/g,' ').trim();
+// Text nodes in adjacent elements have no literal separator in textContent.
+// Join nodes before normalizing so card headings, descriptions and actions
+// remain separately checked without ignoring unexpected text.
+function spacedText(n){const walker=n.ownerDocument.createTreeWalker(n,4),parts=[];let node;while((node=walker.nextNode()))parts.push(node.nodeValue);return parts.join(' ').replace(/\s+/g,' ').trim();}
 const bare=p=>p==='/'?'index.html':p.replace(/^\//,'');
 function manifest(read){const raw=read(MANIFEST);assert.equal(digest(raw),MANIFEST_SHA,'Exact integration manifest');const m=JSON.parse(raw);assert.equal(m.schema,1);assert.equal(Object.keys(m.files).length,11);return m;}
 function assertSource(route,source,read){const item=manifest(read).files[route];assert(item,'Known integration source');
+ if(route===landing){
+  // Current Timeline is validated as actual DOM/content, not the old source hash.
+  const {JSDOM}=require('jsdom'),dom=new JSDOM(source);
+  try{assertCurrentDOM(route,dom.window.document);}finally{dom.window.close();}
+  return {...item,bytes:Buffer.byteLength(source),sha256:digest(source)};
+ }
  if(route==='adams-integration.css'){
   // Exact current CSS successor; predecessor bytes only verify immutable history.
   const raw=Buffer.from(source),suffix=Buffer.from("\n/* Let the Adams intro's existing Timeline header reflow when enlarged text needs room. */\n@media (max-width:1020px) {\n body.fc-adams-intro-page .nav[data-focuschrist-header=\"standard\"] { flex-wrap:wrap; row-gap:8px; }\n body.fc-adams-intro-page .nav[data-focuschrist-header=\"standard\"] .hamburger-wrap { margin-left:auto; }\n}\n",'utf8');
@@ -44,7 +54,37 @@ function assertCurrentDOM(route,doc){
   const hero=one('.fc-visual-hero.timeline-life-hero.timeline-history-hero');assert.equal(hero.querySelector('img').getAttribute('src'),'../assets/adams-chart/adams-16-0-0.jpg');
   const opening=one('header.fc-page-intro.timeline-life-intro.timeline-history-intro');const cue=opening.querySelectorAll('a.fc-scroll-cue.timeline-opening-continue');assert.equal(cue.length,1);assert.equal(cue[0].getAttribute('href'),'#adams-overview');one('section#adams-overview');assert.equal(one('#adams-open-chart').getAttribute('href'),'adams-1881-chart.html');
  }
- if(route===landing){const section=one('section#adams-1881');assert.equal(section.querySelectorAll('.fc-button--primary[href="timelines/adams-1881-introduction.html"]').length,1);assert.equal(section.querySelectorAll('a[href="timelines/adams-1881-introduction.html"] > img').length,1);}
+ if(route===landing){
+  const section=one('section#choose-timeline'),cards=[...section.querySelectorAll('article')];
+  const expected=[
+   ['Church History Timeline','timelines/latter-day-saint-church-history-timeline.html','assets/timelines/church-history-grove.webp','Explore the story of the Restoration.'],
+   ['Willie and Martin Handcart Journey','timelines/willie-and-martin-handcart-map.html','assets/timelines/handcart-journey.webp','Follow the Willie and Martin companies.'],
+   ['Life of Christ Timeline','timelines/life-of-christ-journey-map.html','assets/heroes/topics/jesus-desktop.webp','Walk through the Savior’s earthly ministry.'],
+   ['World & Scripture Timeline','timelines/world-and-scripture-timeline.html','assets/heroes/answers.webp','See scripture alongside world history.'],
+   ["Adams' 1881 Chart of History",'timelines/adams-1881-introduction.html','assets/adams-chart/adams-16-0-0.jpg','Explore a nineteenth-century view of history.']
+  ];
+  assert.equal(cards.length,5,'Five Timeline cards');
+  assert.equal(section.querySelectorAll('a').length,5,'Only the five Timeline destinations');
+  assert(!section.closest('[hidden],[aria-hidden="true"]'),'Timeline selector and ancestors are visible');
+  assert.equal(section.querySelectorAll('[hidden]').length,0,'No hidden Timeline content');
+  const decorative=[...section.querySelectorAll('[aria-hidden="true"]')];
+  assert.equal(decorative.length,5,'Only the five decorative card actions may be aria-hidden');
+  for(const n of decorative)assert(n.tagName==='SPAN'&&n.childElementCount===0&&clean(n)==='Explore timeline','Only decorative action text is aria-hidden');
+  const introText='Follow the life of Jesus Christ, the unfolding story of the Restoration, and the journeys of those who lived it. Choose a timeline to explore its stories, dates, and places.';
+  const note='Open a story along the way and take time with the people behind each moment.';
+  const expectedText=['Choose a timeline',introText,...expected.flatMap(([name,,,description])=>[name,description,'Explore timeline']),note].join(' ');
+  assert.equal(spacedText(section),expectedText,'Exact visible Timeline selector content');
+  cards.forEach((card,i)=>{
+   const [name,href,image,description]=expected[i],links=card.querySelectorAll('a'),titles=card.querySelectorAll('h3'),images=card.querySelectorAll('img'),paragraphs=card.querySelectorAll('p');
+   assert.equal(links.length,1);assert.equal(titles.length,1);assert.equal(images.length,1);assert.equal(paragraphs.length,1);
+   assert.equal(links[0].querySelectorAll('span[aria-hidden="true"]').length,1,'One decorative action per card');
+   assert.equal(links[0].getAttribute('href'),href);assert.equal(links[0].getAttribute('aria-label'),(i===4?'Explore ':'Explore the ')+name);
+   assert(links[0].contains(titles[0])&&links[0].contains(images[0])&&links[0].contains(paragraphs[0]),'Whole card is linked');
+   assert.equal(clean(titles[0]),name);assert.equal(clean(paragraphs[0]),description);assert.equal(images[0].getAttribute('src'),image);assert.equal(images[0].getAttribute('alt'),'');
+  });
+  assert.equal(cards[4].id,'adams-1881','Legacy Adams anchor remains on fifth card');
+  assert.equal(doc.querySelectorAll('.fc-adams-timeline-card,nav.fc-timeline-choices').length,0,'Old selector absent');
+ }
  if(route===hub){
   const owners=[...doc.querySelectorAll('figure[data-exclusive-artwork]')],expected=[...Object.values(stories),'emma-h1','emma-h3','emma-h4','emma-h5','emma-c1','emma-c3','emma-c4','emma-c5'].sort();assert.deepEqual(owners.map(n=>n.dataset.exclusiveArtwork).sort(),expected,'Exactly nine Emma/four retained Christ owners');assert.equal(doc.querySelectorAll('#picture-emma-c2').length,0);
   for(const scene of Object.values(stories)){const figure=one('#picture-'+scene+'[data-exclusive-artwork="'+scene+'"][data-topic-art="'+scene+'"]');const a=figure.querySelectorAll(':scope > a[aria-haspopup="dialog"]');assert.equal(a.length,1);assert.equal(a[0].getAttribute('href'),'/assets/page-art/emma-life/'+scene+'-review-1536.webp');assert.equal(figure.querySelectorAll(':scope > figcaption[data-picture-panel-copy][hidden]').length,1);}
@@ -57,7 +97,15 @@ function assertCurrentDOM(route,doc){
 function validateAll(read,JSDOM){const m=manifest(read);for(const [route] of Object.entries(m.files)){const source=read(route);assertSource(route,source,read);if(currentPages.includes(route)){const d=new JSDOM(source);try{assertCurrentDOM(route,d.window.document);}finally{d.window.close();}}}}
 function projectCanonicalRoutes(routes,read){const normalized=routes.map(bare);assert.equal(normalized.length,139);assert.equal(new Set(normalized).size,139);assert.equal(digest([...normalized].sort().join('\n')),ROUTE_SHA,'Exact139 canonical set');for(const route of [chart,intro,landing,'adams-integration.css','adams-integration.js'])assertSource(route,read(route),read);return routes.filter(r=>![chart,intro].includes(bare(r)));}
 function historicalSource(route,source,read){
- const item=assertSource(route,source,read),h=item.historical;assert(h,'No invented predecessor for new page');let raw=Buffer.from(source);
+ const item=assertSource(route,source,read),h=item.historical;assert(h,'No invented predecessor for new page');
+ let raw=Buffer.from(source);
+ if(route===landing){
+  // The archived fixture is only historical input, never the actual current page.
+  raw=Buffer.from(read('docs/timeline-selector/historical-c910.txt'));
+  const original=manifest(read).files[route];
+  assert.equal(raw.length,original.bytes,'Historical Timeline fixture length');
+  assert.equal(digest(raw),original.sha256,'Historical Timeline fixture digest');
+ }
  for(const s of [...h.inverse_spans].reverse()){const before=Buffer.from(s.before,'base64'),after=Buffer.from(s.after,'base64');assert(raw.subarray(s.current_offset,s.current_offset+after.length).equals(after),'Exact inverse context');raw=Buffer.concat([raw.subarray(0,s.current_offset),before,raw.subarray(s.current_offset+after.length)]);}
  assert.equal(raw.length,h.bytes);assert.equal(digest(raw),h.sha256,'Exact historical endpoint');return raw.toString('utf8');
 }
