@@ -58,7 +58,7 @@ jobs:
           python -m unittest discover -s tools -p test_navigation_polish_bindings.py
           python -m unittest discover -s tools -p test_script_image_urls.py
           python -m unittest discover -s tools -p test_watch_thumbnail_delivery.py
-          python -m unittest discover -s tools -p test_display_delivery.py
+          python tools/run_current_mixed_regressions.py --display-only
           python -m unittest discover -s tools -p test_artwork_owner_closure.py
           python -m unittest discover -s tools -p test_history_hero_build_gate.py
           python -m unittest discover -s tools -p test_opening_composition_binding.py

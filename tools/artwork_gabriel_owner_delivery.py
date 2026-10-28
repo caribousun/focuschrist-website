@@ -62,7 +62,10 @@ def validate(root,record,approved_binding,added,covered,rejected,pixel_hash,page
  require(audit['limits'],'missing audit limits')
  context=spec['context'];require(len(context)==len({r['path']for r in context}),'duplicate context')
  require(page_dependencies(root,ROUTE)<={r['path']for r in context},'incomplete actual context')
- for row in context:bound_file(root,row)
+ from historical_generated_index_context import ALLOWED, validate_context as validate_historical_index_context
+ for row in context:
+  if row['path'] in ALLOWED:validate_historical_index_context(root,row)
+  else:bound_file(root,row)
  from bs4 import BeautifulSoup
  soup=BeautifulSoup(local(root,ROUTE).read_text(encoding='utf8'),'html.parser')
  for key in SOURCES:

@@ -37,4 +37,7 @@ class CurrentNormalizerSafety(unittest.TestCase):
   name='tools/build_art_gallery.py';bad=(ROOT/name).read_bytes()+b'\n# unreviewed bytes'
   self.assertEqual(gate.before_current_gallery_builder(name,bad),bad)
   self.assertEqual(inverse(name,bad),bad)
+  actual=(ROOT/name).read_bytes();wrong='other/build_art_gallery.py'
+  self.assertEqual(gate.before_current_gallery_builder(wrong,actual),actual)
+  self.assertEqual(inverse(wrong,actual),actual)
 if __name__=='__main__':unittest.main()
