@@ -1,0 +1,54 @@
+{
+  "base_commit": "de5f3c35505fddd4586bb0b51c17dad1389f2bf9",
+  "purpose": "Bounded Timeline selector candidate; diagnostic does not replace required CI or actual generated-index/release evidence.",
+  "files": {
+    ".github/workflows/timeline-selector-diagnostic.yml": "119bba473fb82c82a119371baa8fa6fc6cf853cbf45f9b5ccb7beec48d5a9a99",
+    "docs/timeline-selector/historical-c910.html": "c910ae58c2f8feccf1d59f44b154d31f224436b79538e86bf73774c65b0b8c4c",
+    "timeline.css": "d86c4eb4c111a59e2ac3bb32d3baad6edcfe6f2ce0d6d310e9282d3690865b9c",
+    "timeline.html": "050e9a1c93e05abf9132ef3eea5cd2317aca13a981ffba1f47ca724afd328baf",
+    "tools/continue_motion_binding.py": "8939992651e7b6103b00b5a8de01caf960c6a69f727f1f45064e70fa4948668b",
+    "tools/owner_integration_contract.py": "e67aaa2f7f267d3ebe5ba06e8822549d0948ac4ed9a101156cad018c01083f92",
+    "tools/owner_integration_successor.py": "987053e1d24ab2bee2884e14e5866d0a32378e27cf8710abb9f68fc374f541c3",
+    "tools/test_timeline_selector_semantics.py": "1f45e0a5ad58545f2411ca194485a906268bc43f5f6b16c6ae90c052c83f5c03",
+    "tools/timeline_selector_browser_qa.js": "8c00ef351dbac19c75697b844e62b7bbf166bc1d0b24ce03fbd44d1e080a686b",
+    "tools/timeline_selector_check.py": "b3e131ae539b1eaa0c2218dcbad40b7d8e31610ef55f5064a99872cbebf87c21",
+    "tools/timeline_selector_semantics.py": "bb21f64d116a0b711f0a8465331b0c14bdce5d456b648e94107399bed980a410"
+  },
+  "dependencies": {
+    "shared_current": [
+      "site-system.css",
+      "site-header.css",
+      "site-common.js",
+      "unified-opening.css",
+      "unified-opening.js",
+      "adams-integration.css"
+    ],
+    "destinations": [
+      "timelines/latter-day-saint-church-history-timeline.html",
+      "timelines/willie-and-martin-handcart-map.html",
+      "timelines/life-of-christ-journey-map.html",
+      "timelines/world-and-scripture-timeline.html",
+      "timelines/adams-1881-introduction.html"
+    ],
+    "assets": [
+      "assets/timelines/church-history-grove.webp",
+      "assets/timelines/handcart-journey.webp",
+      "assets/heroes/topics/jesus-desktop.webp",
+      "assets/heroes/answers.webp",
+      "assets/adams-chart/adams-16-0-0.jpg"
+    ],
+    "affected_consumers": [
+      "tools/owner_integration_contract.py",
+      "tools/owner_integration_successor.py",
+      "tools/continue_motion_binding.py",
+      "tools/adams_integration_indices.py",
+      "tools/build_art_gallery.py",
+      "tools/build_site_search.py",
+      "content-audit.json",
+      "site-search-index.json",
+      "art-gallery.json"
+    ],
+    "validation_scope": "Unknown/shared inputs require broad validation. Historic owner manifest and producer receipts remain unmodified; new generator output and producer evidence must be actual, not inferred."
+  },
+  "status": "local diagnostic candidate only; rendered results and current generated index evidence pending"
+}

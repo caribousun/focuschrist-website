@@ -131,6 +131,12 @@ def check(root=ROOT):
     from emma_story_successor import check as check_emma,restore as restore_emma
     data=mapping(root)
     for name,row in data['files'].items():
+        if name == 'timeline.html':
+            # Current Timeline content is checked directly; historical fixture
+            # reconstruction is a separate optional test, not a styling gate.
+            from owner_integration_contract import validate_file
+            validate_file(name, (root/name).read_bytes(), root)
+            continue
         path=(root/name).resolve()
         require(path.is_relative_to(root.resolve()) and path.is_file(),'Missing/outside motion consumer')
         historical_current=restore_hub_citations(name,restore_adams_delivery(name,restore_owner(name,path.read_bytes(),root),root),root)

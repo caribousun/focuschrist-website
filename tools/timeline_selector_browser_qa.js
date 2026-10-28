@@ -1,0 +1,30 @@
+/* Diagnostic browser evidence, not release approval. Run from a full checkout:
+ * NODE_PATH=/tmp/focus-row-qa/node_modules node tools/timeline_selector_browser_qa.js
+ * Requires git history containing BASE and Playwright 1.55.1 + Chromium.
+ */
+const fs=require('fs'),path=require('path'),http=require('http'),cp=require('child_process'),assert=require('assert');
+const {chromium}=require('playwright');
+const root=process.cwd(), BASE='de5f3c35505fddd4586bb0b51c17dad1389f2bf9';
+const baseline={}; for(const f of ['timeline.html','timeline.css']) baseline[f]=cp.execFileSync('git',['show',`${BASE}:${f}`]);
+const mime={'.html':'text/html; charset=utf-8','.css':'text/css','.js':'application/javascript','.png':'image/png','.webp':'image/webp','.jpg':'image/jpeg','.json':'application/json'};
+const dest=['timelines/latter-day-saint-church-history-timeline.html','timelines/willie-and-martin-handcart-map.html','timelines/life-of-christ-journey-map.html','timelines/world-and-scripture-timeline.html','timelines/adams-1881-introduction.html'];
+const out=path.join(root,'.qa-artifacts','timeline-selector');fs.mkdirSync(out,{recursive:true});
+const server=http.createServer((req,res)=>{try {let p=decodeURIComponent(new URL(req.url,'http://x').pathname).replace(/^\//,''); const base=p.startsWith('__baseline/'); if(base)p=p.slice('__baseline/'.length); if(!p)p='timeline.html'; const file=path.resolve(root,p); if(!file.startsWith(root+path.sep))throw Error('outside root'); const data=base&&baseline[p] ? baseline[p] : fs.readFileSync(file); res.writeHead(200,{'content-type':mime[path.extname(p)]||'application/octet-stream'});res.end(data);}catch(e){res.writeHead(404);res.end('not found');}});
+function near(a,b,t=1){return Math.abs(a-b)<=t}
+(async()=>{let browser;let report={base:BASE,head:cp.execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),scenarios:[],journeys:[],status:'FAIL',limits:'Diagnostic only. Inspect screenshots; full required CI, current producer evidence and independent review remain required.'};
+try{await new Promise(r=>server.listen(0,'127.0.0.1',r));const origin=`http://127.0.0.1:${server.address().port}`;browser=await chromium.launch({headless:true});
+for(const [w,h,zoom] of [[1920,900,100],[1180,757,100],[768,900,100],[390,844,100],[320,700,100],[390,844,200]]){
+ const page=await browser.newPage({viewport:{width:w,height:h}});let measures={};
+ for(const which of ['baseline','candidate']){await page.goto(origin+(which==='baseline'?'/__baseline/timeline.html':'/timeline.html'),{waitUntil:'load'});if(zoom!==100) await page.evaluate(z=>document.documentElement.style.fontSize=z+'%',zoom);await page.waitForTimeout(350);
+ measures[which]=await page.evaluate(()=>{let R=el=>{if(!el)return null;let r=el.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height,right:r.right,bottom:r.bottom}};let cw=document.documentElement.clientWidth;let boxes=['.fc-visual-hero','.fc-page-intro','h1','.fc-page-intro-copy','.fc-unified-continue'].map(x=>R(document.querySelector(x)));let cards=[...document.querySelectorAll('.fc-timeline-choice')].map(el=>({rect:R(el),link:R(el.querySelector('a')),href:el.querySelector('a')?.getAttribute('href'),name:el.querySelector('a')?.getAttribute('aria-label'),image:!!el.querySelector('img')?.naturalWidth}));return {cw,scrollWidth:document.documentElement.scrollWidth,heroImageLoaded:!!document.querySelector('.fc-visual-hero img')?.naturalWidth,boxes,cards,centerMargins:boxes.slice(2,4).map(r=>r&&[r.x,cw-r.right])};});
+ }
+ const {baseline:b,candidate:c}=measures;assert(b.heroImageLoaded&&c.heroImageLoaded,'actual opening hero image failed to load');assert(c.scrollWidth<=c.cw,`horizontal overflow ${w}/${zoom}`);assert.equal(c.cards.length,5);assert.deepEqual(c.cards.map(x=>x.href),dest);assert(c.cards.every(x=>x.image&&x.rect.width>0&&x.rect.height>0&&x.name));
+ for(const m of c.centerMargins)assert(m&&near(m[0],m[1],1.5),`intro not centered ${w}/${zoom}: ${m}`);
+ for(let i of [0,1,2,3,4]){assert(b.boxes[i]&&c.boxes[i],`missing opening element ${i}`);for(const k of ['x','y','width','height'])assert(near(b.boxes[i][k],c.boxes[i][k],1.5),`opening ${i}.${k} changed at ${w}/${zoom}`)}
+ const groups={};for(const card of c.cards){const key=Math.round(card.rect.y);(groups[key]??=[]).push(card.rect)}for(const row of Object.values(groups))for(const r of row)assert(near(r.width,row[0].width,1.5)&&near(r.height,row[0].height,1.5),`unequal cards at ${w}/${zoom}`);
+ await page.locator('#choose-timeline').screenshot({path:path.join(out,`selector-${w}-${zoom}.png`)});report.scenarios.push({width:w,height:h,textPercent:zoom,baseline:b,candidate:c});await page.close();
+}
+const page=await browser.newPage({viewport:{width:1180,height:757}});
+for(let i=0;i<5;i++){await page.goto(origin+'/timeline.html',{waitUntil:'load'});const link=page.locator('.fc-timeline-choice__link').nth(i);await link.focus();assert(await link.evaluate(el=>el===document.activeElement));const [response]=await Promise.all([page.waitForResponse(r=>r.request().isNavigationRequest()&&r.url().endsWith('/'+dest[i]),{timeout:15000}),link.press('Enter')]);await page.waitForURL('**/'+dest[i],{timeout:15000});assert(response.ok(),`destination returned ${response.status()}: ${dest[i]}`);assert((await page.title()).trim(),`missing destination title: ${dest[i]}`);report.journeys.push({destination:dest[i],url:page.url(),status:response.status(),title:await page.title()});await page.goBack({waitUntil:'domcontentloaded'});assert(page.url().endsWith('/timeline.html'));}
+await page.goto(origin+'/timeline.html#adams-1881',{waitUntil:'load'});assert.equal(await page.locator('#adams-1881').count(),1);assert(await page.locator('#adams-1881').isVisible());await page.close();report.status='PASS';
+}catch(e){report.error=String(e.stack||e);process.exitCode=1;}finally{if(browser)await browser.close();server.close();fs.writeFileSync(path.join(out,'report.json'),JSON.stringify(report,null,2));console.log(JSON.stringify({status:report.status,error:report.error,report:path.join(out,'report.json')}));}})();
