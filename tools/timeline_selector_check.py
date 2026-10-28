@@ -14,8 +14,8 @@ ALLOWED = {'timeline.html','timeline.css','tools/timeline_selector_check.py','to
 DESTINATIONS = [
  ('Church History Timeline','timelines/latter-day-saint-church-history-timeline.html','assets/timelines/church-history-grove.webp'),
  ('Willie and Martin Handcart Journey','timelines/willie-and-martin-handcart-map.html','assets/timelines/handcart-journey.webp'),
- ('Life of Christ Timeline','timelines/life-of-christ-journey-map.html','assets/heroes/topics/jesus-desktop.webp'),
- ('World & Scripture Timeline','timelines/world-and-scripture-timeline.html','assets/heroes/answers.webp'),
+ ('Life of Christ Timeline','timelines/life-of-christ-journey-map.html','assets/page-art/jesus-journey/mm-twelve-depart-960.webp'),
+ ('World & Scripture Timeline','timelines/world-and-scripture-timeline.html','assets/page-art/answers-study/answers-two-witnesses-960.webp'),
  ("Adams' 1881 Chart of History",'timelines/adams-1881-introduction.html','assets/adams-chart/adams-16-0-0.jpg'),
 ]
 class Node:
@@ -45,7 +45,7 @@ def main():
  raw=a.baseline.read_bytes();assert hashlib.sha256(raw).hexdigest()==BASE_SHA256,'unrecognized baseline bytes'
  old=raw.decode();new=(a.root/'timeline.html').read_text();css=(a.root/'timeline.css').read_text()
  # Everything outside the requested section remains byte-identical, other than the CSS version.
- prefix_old=old.split('<section id="choose-timeline"',1)[0].replace('timeline.css?v=20261020-world-scripture-1','timeline.css?v=20261027-timeline-cards-1')
+ prefix_old=old.split('<section id="choose-timeline"',1)[0].replace('timeline.css?v=20261020-world-scripture-1','timeline.css?v=20261028-timeline-card-art-1')
  assert new.split('<section id="choose-timeline"',1)[0]==prefix_old,'opening/chrome changed'
  note='<p class="fc-timeline-note">Open a story along the way and take time with the people behind each moment.</p>'
  assert new.count(note)==1 and new.split(note,1)[1].split('</main>',1)[0]=='\n</div></section>\n','unexpected markup after selector'

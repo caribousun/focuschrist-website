@@ -59,8 +59,8 @@ function assertCurrentDOM(route,doc){
   const expected=[
    ['Church History Timeline','timelines/latter-day-saint-church-history-timeline.html','assets/timelines/church-history-grove.webp','Explore the story of the Restoration.'],
    ['Willie and Martin Handcart Journey','timelines/willie-and-martin-handcart-map.html','assets/timelines/handcart-journey.webp','Follow the Willie and Martin companies.'],
-   ['Life of Christ Timeline','timelines/life-of-christ-journey-map.html','assets/heroes/topics/jesus-desktop.webp','Walk through the Savior’s earthly ministry.'],
-   ['World & Scripture Timeline','timelines/world-and-scripture-timeline.html','assets/heroes/answers.webp','See scripture alongside world history.'],
+   ['Life of Christ Timeline','timelines/life-of-christ-journey-map.html','assets/page-art/jesus-journey/mm-twelve-depart-960.webp','Walk through the Savior’s earthly ministry.'],
+   ['World & Scripture Timeline','timelines/world-and-scripture-timeline.html','assets/page-art/answers-study/answers-two-witnesses-960.webp','See scripture alongside world history.'],
    ["Adams' 1881 Chart of History",'timelines/adams-1881-introduction.html','assets/adams-chart/adams-16-0-0.jpg','Explore a nineteenth-century view of history.']
   ];
   assert.equal(cards.length,5,'Five Timeline cards');
