@@ -1,0 +1,48 @@
+name: Timeline selector diagnostic (not release acceptance)
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+    paths:
+      - timeline.html
+      - timeline.css
+      - tools/timeline_selector_*.py
+      - tools/timeline_selector_browser_qa.js
+      - tools/test_timeline_selector_semantics.py
+      - tools/test_timeline_selector_panel_owners.py
+      - tools/section_panel_surface_qa.py
+      - docs/section-panel-surfaces.json
+      - docs/section-panel-inventory.json
+      - .github/workflows/timeline-selector-diagnostic.yml
+permissions:
+  contents: read
+jobs:
+  timeline-selector:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out exact pull-request tree and baseline history
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Verify existing QA dependency contract
+        run: python tools/qa_dependency_contract.py --self-test
+      - name: Install existing pinned browser dependency
+        run: |
+          npm install --prefix /tmp/focus-row-qa --no-save --package-lock=false --ignore-scripts playwright@1.55.1
+          /tmp/focus-row-qa/node_modules/.bin/playwright install --with-deps chromium
+      - name: Check current semantics and historical separation
+        run: |
+          python tools/test_timeline_selector_semantics.py --root .
+          python tools/test_timeline_selector_panel_owners.py
+      - name: Measure and exercise actual Timeline cards
+        run: timeout --signal=TERM --kill-after=10s 5m env NODE_PATH=/tmp/focus-row-qa/node_modules node tools/timeline_selector_browser_qa.js
+      - name: Retain evidence, including failures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: timeline-selector-diagnostic
+          path: .qa-artifacts/timeline-selector/
+          include-hidden-files: true
+          if-no-files-found: warn
+          retention-days: 7

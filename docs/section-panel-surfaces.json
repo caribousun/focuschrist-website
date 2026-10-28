@@ -98,7 +98,7 @@
     "fc-guided-path": "Three guided study paths on Answers use open columns, quiet separators and one continuous blue-teal reading surface in screen-only #guided-studies rules owned by guided-studies.css; preserve existing content, controls, Emma companion and print consumers.",
     "fc-companion": "Four printable companion disclosures on Answers and Emma are owned by guided-studies.css; transparent border-bottom disclosure styling and print rules are preserved, not shared section-panel overrides.",
     "fc-attributed-story": "Three named attributed-story asides on Conference, Stand Forever and Settle; exact screen-only targeted-six.css owns reviewed teal surface and prose rhythm.",
-    "fc-adams-timeline-card": "One exact Timeline Adams introduction card; scoped adams-integration.css uses canonical panel fill, border, shadow and gold edge tokens. Current source and owner validated separately; rendered geometry remains required."
+    "fc-timeline-choice": "Five equal Timeline navigation cards; page-scoped timeline.css uses shared panel tokens. Current content, destinations and rendered geometry are checked separately."
   },
   "excluded_classes": {
     "research-comparison-note": "Inline limitations attached to separately labelled source views; plain reading note, not a section panel.",

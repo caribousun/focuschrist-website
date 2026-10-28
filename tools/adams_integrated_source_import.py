@@ -75,7 +75,9 @@ def validate_source(root, record, added, covered, rejected, context_reader=bound
     require(spec['kind'] == 'EXISTING_OWNER_SUPPLIED_CHART' and spec['precreation_claim'] is False, 'misclassified creation')
     require(spec['canvas'] == {'width': 50195, 'height': 5347, 'tile': 1024, 'levels': [1, 4, 16, 64]}, 'canvas/grid drift')
     page = bound(root, spec['page']).decode('utf-8')
-    bound(root, spec['landing'])
+    # Landing belongs to the historical context receipt; current visitor
+    # content is validated separately by the caller, never by this projection.
+    context_reader(root, spec['landing'])
     validate_context(root, spec, source_reader=context_reader)
     rows = spec['assets']; paths = {r['path'] for r in rows}
     require(len(rows) == len(paths) == spec['total_images'] == 331, 'missing or duplicate assets')

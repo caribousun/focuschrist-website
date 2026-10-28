@@ -179,6 +179,10 @@ def manifest(root=ROOT):
 
 
 def validate_file(route, raw, root=ROOT):
+    if route == LANDING:
+        from timeline_selector_semantics import validate
+        validate(raw)
+        return {'bytes':len(raw), 'sha256':sha(raw), 'validation':'current semantics'}
     item = manifest(root)['files'].get(route)
     require(item is not None, 'Unknown integration source')
     if route == 'adams-integration.css':
@@ -201,7 +205,17 @@ def validate_file(route, raw, root=ROOT):
 
 def historical_bytes(route, current, root=ROOT):
     """An explicit historical fixture, NEVER a current frontend/render claim."""
-    item = validate_file(route, current, root)
+    if route == LANDING:
+        from timeline_selector_semantics import validate
+        validate(current)
+        # Read the immutable old source only for explicitly historical reconstruction.
+        fixture = Path(root) / 'docs/timeline-selector/historical-c910.html'
+        require(fixture.is_file() and not fixture.is_symlink() and fixture.resolve().is_relative_to(Path(root).resolve()), 'Unsafe Timeline historical fixture')
+        current = fixture.read_bytes()
+        item = manifest(root)['files'][route]
+        require(sha(current) == item['sha256'] and len(current) == item['bytes'], 'Historical Timeline fixture drift')
+    else:
+        item = validate_file(route, current, root)
     history = item.get('historical')
     require(history is not None, 'New route has no invented predecessor')
     raw = current

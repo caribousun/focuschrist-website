@@ -52,7 +52,10 @@ def assert_adams_note_owner(page, nodes):
 def assert_integrated_panel_owners(page, nodes):
     # Old standalone notes remain historical; they may not reappear in current UI.
     assert not any('fc-adams-note' in n.attrs.get('class','').split() for n in nodes), 'Obsolete standalone note returned'
-    for cls, owner, count, tag in [('fc-adams-timeline-card', 'timeline.html', 1, 'article'), ('fc-life-scripture-reflection', 'history/emma-hale-smith.html', 4, 'aside')]:
+    # The former one-off Adams panel was replaced by five equal Timeline cards.
+    # The actual Timeline content/navigation is independently validated above.
+    assert not any('fc-adams-timeline-card' in n.attrs.get('class','').split() for n in nodes), 'Obsolete Adams feature returned'
+    for cls, owner, count, tag in [('fc-timeline-choice', 'timeline.html', 5, 'article'), ('fc-life-scripture-reflection', 'history/emma-hale-smith.html', 4, 'aside')]:
         actual=[n for n in nodes if cls in n.attrs.get('class','').split()]
         assert len(actual)==(count if page==owner else 0), 'Exact integrated panel owner/count changed: '+cls
         assert all(n.tag==tag for n in actual), 'Integrated panel element changed: '+cls

@@ -127,7 +127,8 @@ def advance(name, raw, root=ROOT):
     return result
 
 
-def check(root=ROOT):
+def check_historical(root=ROOT):
+    """Exact predecessor proof, explicitly historical and never current UI evidence."""
     for name in mapping(root)["files"]:
         from adams_integration_indices import restore as restore_integration
         raw = restore_integration(name, local(root, name).read_bytes(), root)
@@ -135,23 +136,29 @@ def check(root=ROOT):
         prior = restore(name, raw, root)
         require(sha(prior) == BEFORE[name], "predecessor mismatch: " + name)
         require(advance(name, prior, root) == raw, "round trip mismatch: " + name)
-    return {"status": "EXACT_ADAMS_DELIVERY_EVIDENCE_PASS", "files": sorted(AFTER),
-            "limits": "Exact byte reconstruction only; no review or publication authorization."}
+    return {"status": "HISTORICAL_ADAMS_DELIVERY_EVIDENCE_PASS", "files": sorted(AFTER),
+            "limits": "Historical byte reconstruction only; no current or release approval."}
+
+
+def check(root=ROOT):
+    """Validate current selector and index semantics; never use old bytes as current."""
+    from timeline_current_indices import validate_current
+    try:
+        return validate_current(root)
+    except (AssertionError, KeyError, TypeError, ValueError, UnicodeError) as error:
+        raise ValueError("Adams delivery: current Timeline/index semantics changed") from error
 
 
 @contextmanager
 def predecessor_view(root=ROOT):
-    """Verify actual Adams first; yield only an exact historical Emma fixture.
+    """Yield an exact historical Emma fixture from exact historical Adams bytes.
 
-    This does NOT establish that current checkout files have Emma hashes.
-    All three actual current Adams files must pass their own complete hashes and
-    round trips before the unchanged historical layer is checked separately.
-    The real checkout is read only; the temporary view contains exactly the
-    two reconstructed indices and unchanged Emma manifest, then is removed.
+    This explicitly historical test view does not validate or describe current
+    Timeline or index output. The source checkout is never modified.
     """
     import tempfile
     import emma_generated_indices_successor as emma
-    check(root)
+    check_historical(root)
     prior_bytes = {}
     for name in INDEX_FILES:
         from adams_integration_indices import restore as restore_integration

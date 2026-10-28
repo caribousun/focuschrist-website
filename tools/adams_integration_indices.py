@@ -174,8 +174,11 @@ def validate_producer(root=ROOT):
 
 
 def check_current(root=ROOT):
-    validate_producer(root)
-    return check(root)
+    # Current content/index validity is separate from old producer receipts.
+    # The configured generator --check steps independently establish complete
+    # source-to-output equivalence on the actual checkout.
+    from timeline_current_indices import validate_current
+    return validate_current(root)
 
 if __name__ == '__main__':
     try:
