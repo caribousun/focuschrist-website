@@ -27,6 +27,7 @@ REVIEW_ASSIGNMENTS = {'Fermi':'/root/repair_adams_hero_classification/independen
 CSS = {'path':'adams-integration.css','bytes':5292,'sha256':'3c8a2390e93e94f5d67d3b7a4356f018d78df7ea5c654a3841366549df76d131'}
 OLD_CSS = {'path':'adams-integration.css','bytes':4965,'sha256':'d936516926aa47c12c634b11b15278e1590502d0491d9b1f17cd90a0210fdeb1'}
 HELPER = {'path':'tools/adams_chart_browser_qa.js','bytes':32995,'sha256':'4ddd3122c6e013b03103d5e4ec0897ededbd713267a28e664b909a54020f2186'}
+HEADER_RECEIPT_HELPER_ARCHIVE = 'docs/adams-header-evidence-successor/history/header-receipt-adams-chart-browser.js.source'
 OWNER_CONTRACT = {'path':'tools/owner_integration_qa_contract.json','bytes':22584,'sha256':'5d7614c9cb585569788c260d8fc08545b579a245a2e2ee86dd617520e3a1ddef'}
 ARCHIVES = {
  'tools/adams_chart_browser_qa.js':'docs/adams-header-evidence-successor/history/adams_chart_browser_qa.js.source',
@@ -54,6 +55,14 @@ def historical_reader(root, item):
         return bound(root,item)
     require(len(raw)==item['bytes'] and hashlib.sha256(raw).hexdigest()==item['sha256'], 'historical predecessor drift: '+name)
     return raw
+
+
+def header_receipt_reader(root, item):
+    """Read the renderer bound to the historical header receipt, not today's code."""
+    if item['path'] == HELPER['path']:
+        require(item == HELPER, 'historical header renderer record drift')
+        return bound(root, dict(item, path=HEADER_RECEIPT_HELPER_ARCHIVE))
+    return bound(root, item)
 
 
 def validate_spec_delta(old_spec, current):
@@ -161,7 +170,9 @@ def validate(root, added, covered, rejected):
     # Separately check the actual current selector; never use a historical
     # receipt as proof of its rendered appearance or current approval.
     validate_file('timeline.html', local(root,'timeline.html').read_bytes(), root)
-    qa_checks.validate_qa(root,spec)
+    # This report and its renderer are historical review evidence. The actual
+    # current renderer and current Timeline are exercised separately by CI.
+    qa_checks.validate_qa(root,spec,helper_reader=header_receipt_reader)
     validate_owner_provenance(root,spec,provider)
     validate_current_reviews(root,record,APPROVED_SPEC_SHA256,spec,assignment)
     return {r['path'] for r in spec['assets']}

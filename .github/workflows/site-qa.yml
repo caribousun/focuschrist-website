@@ -562,8 +562,10 @@ jobs:
         uses: actions/checkout@v5
       - name: Install pinned Timeline browser dependencies
         run: |
-          npm install --prefix /tmp/focus-timeline-qa --no-save --package-lock=false --ignore-scripts playwright@1.55.1 leaflet@1.9.4
+          npm install --prefix /tmp/focus-timeline-qa --no-save --package-lock=false --ignore-scripts playwright@1.55.1 leaflet@1.9.4 jsdom@26.1.0
           /tmp/focus-timeline-qa/node_modules/.bin/playwright install --with-deps chromium
+      - name: Verify current Adams landing source preflight
+        run: NODE_PATH=/tmp/focus-timeline-qa/node_modules node tools/test_adams_landing_preflight.js
       - name: Verify standalone Timeline experiences at desktop, phone, and enlarged text
         run: NODE_PATH=/tmp/focus-timeline-qa/node_modules node tools/timeline_runtime_qa.js
       - name: Verify Continue-only animated scrolling in the browser
