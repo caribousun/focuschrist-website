@@ -179,6 +179,16 @@ def manifest(root=ROOT):
 
 
 def validate_file(route, raw, root=ROOT):
+    # Explicit current Emma successor. This checks actual current bytes/DOM/assets,
+    # not owner approval; legacy manifest remains unchanged and independently pinned.
+    if route in (HUB, 'history/emma-elect-lady.html', 'history/emma-hymns.html'):
+        import owner_journey_successor as journey
+        manifest(root)
+        if route == HUB:
+            return journey.validate_hub(raw, root)
+        if route == journey.RETIRED:
+            return journey.validate_redirect(raw)
+        return journey.validate_hymns(raw)
     if route == LANDING:
         from timeline_selector_semantics import validate
         validate(raw)
@@ -214,6 +224,15 @@ def historical_bytes(route, current, root=ROOT):
         current = fixture.read_bytes()
         item = manifest(root)['files'][route]
         require(sha(current) == item['sha256'] and len(current) == item['bytes'], 'Historical Timeline fixture drift')
+    elif route in (HUB, 'history/emma-elect-lady.html', 'history/emma-hymns.html'):
+        # A historical projection is never a current page or release claim. First
+        # validate the actual current successor, then restore exact predecessor
+        # and apply the untouched earlier inverse.
+        import owner_journey_successor as journey
+        current = journey.historical_fixture(route, current, root)
+        item = manifest(root)['files'][route]
+        require(len(current) == item['bytes'] and sha(current) == item['sha256'], 'Emma predecessor fixture drift')
+        assert_emma_semantics(route, current.decode('utf-8'))
     else:
         item = validate_file(route, current, root)
     history = item.get('historical')
@@ -234,8 +253,12 @@ def validate_current_adams(root=ROOT):
 
 
 def without_integrated_adams_routes(pages, chart_source=None, root=ROOT):
-    require(len(pages) == len(set(pages)) == 139, 'Expected 139 unique current canonical routes')
-    require(sha('\n'.join(sorted(pages)).encode()) == CANONICAL_SET_SHA256, 'Current canonical route set changed')
+    # Validate actual 138-page sitemap and exact set; never reinsert the retired
+    # route into current results. The old 139-page set is available only via the
+    # explicitly named historical projection, not this current route API.
+    import owner_journey_successor as journey
+    actual = journey.validate_canonical((Path(root) / 'sitemap.xml').read_bytes())
+    require(len(pages) == len(set(pages)) == 138 and set(pages) == set(actual), 'Current canonical routes changed')
     validate_current_adams(root)
     if chart_source is not None:
         validate_file(CHART, chart_source, root)

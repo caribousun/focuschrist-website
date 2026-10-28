@@ -35,7 +35,7 @@ class CurrentGallerySourceTests(unittest.TestCase):
             if name == contract.HUB:
                 variants += [raw.replace(b'</main>', b'<img src="/assets/page-art/emma-life/'+scene+b'-review-960.webp"></main>', 1) for scene in (b'emma-h2',b'emma-c2')]
             for changed in variants:
-                with self.subTest(name=name,variant=len(changed)),self.assertRaisesRegex(AssertionError,'Current integration source drift'):
+                with self.subTest(name=name,variant=len(changed)),self.assertRaisesRegex(AssertionError, 'unreviewed current source' if name in {contract.HUB,'history/emma-elect-lady.html','history/emma-hymns.html'} else 'Current integration source drift'):
                     self.select(name,changed,ROOT)
     def test_timeline_current_semantics_accept_layout_and_reject_drift(self):
         raw=(ROOT/contract.LANDING).read_bytes()
@@ -81,7 +81,16 @@ class CurrentGallerySourceTests(unittest.TestCase):
         self.assertIn(b'<span id="picture-emma-h2" class="fc-legacy-picture-anchor"></span>',hub)
         for name,scene in contract.STORIES.items():
             raw=self.select(name,(ROOT/name).read_bytes(),ROOT)
-            self.assertIn(('data-artwork-reference="'+scene+'"').encode(),raw)
+            if name == 'history/emma-elect-lady.html':
+                self.assertIn(b'<meta name="robots" content="noindex, follow">',raw)
+                self.assertNotIn(b'data-artwork-reference=',raw)
+            else:
+                self.assertIn(('data-artwork-reference="'+scene+'"').encode(),raw)
             self.assertIn(('id="picture-'+scene+'"').encode(),hub)
+        for scene in ['origin']+['%02d'%n for n in range(3,13)]:
+            key=('emma-journey-'+scene).encode()
+            self.assertIn(b'data-exclusive-artwork="'+key+b'"',hub)
+        for scene in (b'emma-c1',b'emma-c3',b'emma-c4',b'emma-c5'):
+            self.assertNotIn(b'data-exclusive-artwork="'+scene+b'"',hub)
 
 if __name__=='__main__':unittest.main()

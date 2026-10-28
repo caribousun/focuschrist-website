@@ -56,9 +56,15 @@ const pages=[...new Set(urls)].sort();
 const emmaControls=require('./emma_study_link_controls');
 const emmaValidated=[];
 const adamsControls=require('./adams_study_link_controls'),adamsValidated=[];
-const integration=require('./owner_integration_navigation'),pastRead=integration.historicalRead(read);
+const integration=require('./owner_integration_navigation');
+const retirementNav=require('./emma_retirement_navigation_successor');
+const retirementControls=require('./emma_retirement_study_controls_successor');
 const currentRoutes=urls.map(p=>p==='index.html'?'/':'/'+p);
-require('./test_owner_integration_navigation').selfTest(currentRoutes,read,JSDOM);
+retirementNav.assertCurrent(currentRoutes,read,JSDOM);
+// These fixtures are explicit historical inputs, never current UI evidence.
+const priorRead=retirementNav.priorReader(read),pastRead=integration.historicalRead(priorRead);
+const predecessorRoutes=[...currentRoutes,'/history/emma-elect-lady.html'];
+require('./test_owner_integration_navigation').selfTest(predecessorRoutes,priorRead,JSDOM);
 require('./test_adams_study_link_controls')(JSDOM,pastRead,selectors);
 require('./test_emma_study_link_controls')(JSDOM,pastRead,selectors);
 // Six frozen artwork figures add exactly five named source controls. The Stand
@@ -215,7 +221,10 @@ for(const page of pages){
  seasonalSourceControls+=invertSeasonalFigures(doc,page);
  fourSceneSourceControls+=invertFourSceneFigures(doc,page);
  sixSceneSourceControls+=invertSixSceneFigures(doc,page);
- if(emmaControls.owners.includes(page)){const old=new JSDOM(pastRead(page));try{emmaControls.validate(old.window.document,page,selectors,pastRead(page));emmaValidated.push(page);}finally{old.window.close();}}
+ if(retirementControls.CURRENT.includes(page)){
+  retirementControls.validate(doc,page,selectors,read(page),read('docs/emma-study-link-additions.json'));
+  const old=new JSDOM(pastRead(page));try{emmaControls.validate(old.window.document,page,selectors,pastRead(page));emmaValidated.push(page);}finally{old.window.close();}
+ }
  for(const s of selectors){const nodes=[...doc.querySelectorAll(s)];if(nodes.length){inventory.selectors[s].count+=nodes.length;inventory.selectors[s].pages.push(page);for(const n of nodes)assert.equal(n.tagName,'A');}}
  for(const s of ['.watch-topic-index a','nav[aria-label="Pioneer study sections"] a','.bom-story-directory a']){
   const nodes=[...doc.querySelectorAll(s)];if(nodes.length)inventory.numbered_navigation[page+' '+s]=nodes.map(n=>({href:n.getAttribute('href'),label:n.textContent.trim().replace(/\s+/g,' ')}));
@@ -231,12 +240,18 @@ console.log('PASS: six exact current figures, six added controls;36 negative mut
 console.log('PASS: two exact seasonal figures, unchanged legacy inventory;12 negative mutations and2 unrelated-control retention fixtures.');
 for(const [s,a] of Object.entries(inventory.selectors))if(!a.count){const runtime=config.runtime_selectors[s];assert(runtime,`Unused selector ${s}`);assert(read(runtime.source).includes(runtime.marker));}
 // Invert only five independently validated contributions; keep full current scan intact.
-const beforeIntegration=integration.historicalControlInventory(inventory,selectors,adamsControls.numbered,read,JSDOM);
-const beforeEmma=adamsControls.beforeEmmaInventory(beforeIntegration,adamsValidated,currentRoutes.filter(p=>p!=='/'+integration.intro),pastRead);
+// Validate and project the actual retired-route successor before invoking
+// unchanged historical inventory checks; no old DOM is labeled current.
+const retired='history/emma-elect-lady.html',retiredOld=new JSDOM(pastRead(retired));
+try{emmaControls.validate(retiredOld.window.document,retired,selectors,pastRead(retired));emmaValidated.push(retired);}finally{retiredOld.window.close();}
+const beforeIntegration=retirementNav.historicProjection(inventory,currentRoutes,selectors,adamsControls.numbered,read,priorRead,JSDOM,integration);
+const beforeEmma=adamsControls.beforeEmmaInventory(beforeIntegration,adamsValidated,predecessorRoutes.filter(p=>p!=='/'+integration.intro),pastRead);
 const historicalInventory=emmaControls.historicalInventory(beforeEmma,emmaValidated);
 const file=path.join(root,'docs/study-link-control-inventory.json');
-if(process.argv.includes('--write-inventory'))fs.writeFileSync(file,JSON.stringify(historicalInventory,null,2)+'\n');
-else assert.deepEqual(historicalInventory,JSON.parse(fs.readFileSync(file,'utf8')),'Control coverage changed; review inventory');
+assert.deepEqual(historicalInventory,JSON.parse(fs.readFileSync(file,'utf8')),'Historical control coverage changed; review inventory');
+// Never overwrite or present a predecessor projection as a current inventory.
+// A separately reviewed current inventory producer remains required.
+if(process.argv.includes('--write-inventory'))throw new Error('Historical projection is read-only; a reviewed current inventory successor is required');
 console.log(`PASS: ${pages.length} canonical pages, ${selectors.length} named control families; protected prose/primary/Home/chapter fixtures; numbered link destinations recorded.`);
 console.log('PASS: six exact reading figures, five added source controls, unchanged legacy inventory;36 negative figure mutations and5 unrelated-control retention fixtures.');
 

@@ -32,12 +32,12 @@ class ReviewedTimelineStyleTests(unittest.TestCase):
     if altered!=data:self.assertFalse(fn(name,altered))
 class EmmaModifierClassificationTests(unittest.TestCase):
  def emma_routes(self):
-  return ['history/emma-hale-smith.html','history/emma-elect-lady.html','history/emma-hymns.html','history/emma-winter-crossing.html','history/emma-relief-society.html','history/emma-last-testimony.html']
- def test_all_six_emma_pages_classified(self):
+  return ['history/emma-hale-smith.html','history/emma-hymns.html','history/emma-winter-crossing.html','history/emma-relief-society.html','history/emma-last-testimony.html']
+ def test_five_current_emma_pages_classified(self):
   config=json.loads(q.CONFIG.read_text(encoding='utf-8'))
   with patch.object(q,'canonical',return_value=self.emma_routes()):actual=q.inventory(config)
   row=actual['candidate_classes']['fc-life-reflections--two']
-  self.assertEqual(row['count'],5)
+  self.assertEqual(row['count'],4)
   self.assertEqual(row['tags'],['div'])
   self.assertEqual(row['pages'],sorted(self.emma_routes()[1:]))
   self.assertEqual(row['disposition'],'excluded_with_reason')

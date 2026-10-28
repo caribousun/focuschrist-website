@@ -158,22 +158,58 @@ class PortableReferenceTests(unittest.TestCase):
 
 
 
-class CurrentRetirementCensusTests(unittest.TestCase):
+class ExplicitPredecessorRetirementCensusTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         import json, artwork_owner_closure as c
         cls.gate = c
-        cls.root = Path(__file__).resolve().parents[1]
-        closure = json.loads((cls.root/'docs/artwork-correction-reviews.json').read_text())['owner_requirement_closure']
+        # These tests exercise the exact pre-journey scope in an isolated
+        # predecessor tree. They do not inspect or certify current output.
+        import subprocess
+        import artwork_display_delivery as display
+        from owner_journey_successor import predecessor_fixture
+        from emma_journey_indices_contract import BASE_BLOBS, git_blob
+        actual = Path(__file__).resolve().parents[1]
+        closure = json.loads((actual/'docs/artwork-correction-reviews.json').read_text())['owner_requirement_closure']
         cls.contract = closure['contract']
         cls.expected = Counter({(x['path'],x['asset']):x['occurrences'] for row in closure['families'] for x in row['consumers']})
         cls.scope = cls.contract['consumer_scope']
         cls.assets = set(cls.contract['known_asset_paths'])
         cls.origin = cls.contract['site_origin']
+        cls.fixture = tempfile.TemporaryDirectory(prefix='emma-closure-predecessor-')
+        cls.addClassCleanup(cls.fixture.cleanup)
+        cls.root = Path(cls.fixture.name)
+        snapshots = {}; reviewed = {}
+        for name in {x['path'] for x in cls.scope} | {'docs/exclusive-artwork-ownership.json'}:
+            out=cls.root/name; out.parent.mkdir(parents=True,exist_ok=True)
+            # Pull all content from one exact named base, not the actual new
+            # visitor tree. Generated blobs additionally retain explicit pins.
+            if name in c.CURRENT_GENERATED_INDICES:
+                raw=subprocess.check_output(['git','cat-file','blob',BASE_BLOBS[name]],cwd=actual,timeout=30)
+                assert git_blob(raw)==BASE_BLOBS[name], 'wrong predecessor index blob'
+            else:
+                raw=subprocess.check_output(['git','show','63fafd9594949160f912b3c1ca0e39b52432df34:'+name],cwd=actual,timeout=30)
+            if name == 'history/emma-hale-smith.html':
+                assert raw == predecessor_fixture(name), 'wrong predecessor page fixture'
+            snapshots[name]=raw
+            # Old bound() checks the reviewed-byte view, but references() then
+            # counts the raw file. Preserve both separately in this isolated
+            # fixture, and stop mapping the moment raw bytes are altered.
+            reviewed[name]=raw if name in c.CURRENT_GENERATED_INDICES or name == 'docs/exclusive-artwork-ownership.json' else display.inverse(name,raw)
+            out.write_bytes(raw)
+        old_reviewed=display.reviewed_bytes
+        def fixture_reviewed(path):
+            path=Path(path)
+            try: name=path.resolve().relative_to(cls.root.resolve()).as_posix()
+            except ValueError: return old_reviewed(path)
+            raw=path.read_bytes()
+            return reviewed[name] if name in snapshots and raw == snapshots[name] else raw
+        cls.patch_reviewed=patch.object(display,'reviewed_bytes',side_effect=fixture_reviewed)
+        cls.patch_reviewed.start();cls.addClassCleanup(cls.patch_reviewed.stop)
         cls.current = c.current_retirement_census(cls.root,cls.scope,cls.assets,cls.origin,cls.expected)
 
-    def test_actual_current_census_and_retirement_contract(self):
-        # Prior receipts are historical; this asserts only current consumers.
+    def test_predecessor_census_and_retirement_contract(self):
+        # Exact old view only: not current visitor or generated-index evidence.
         self.assertEqual((len(self.current),sum(self.current.values())),(107,160))
         self.assertEqual(self.expected-self.current,Counter(self.gate.H2_REMOVED))
 
@@ -260,6 +296,57 @@ class CurrentRetirementCensusTests(unittest.TestCase):
         changed=self.expected.copy();changed[next(iter(self.gate.H2_REMOVED))]-=1
         with self.assertRaisesRegex(ValueError,'Historical H2 census drift'):
             self.gate.current_retirement_census(self.root,self.scope,self.assets,self.origin,changed)
+
+class ActualJourneyCensusTests(unittest.TestCase):
+    """Real current source/index census. A mocked review is never acceptance.
+
+    Runs against the full checkout and freshly generated current indices. The
+    ordinary release gate separately requires real, pinned, direct evidence.
+    """
+    @classmethod
+    def setUpClass(cls):
+        import artwork_owner_closure as old, emma_journey_closure_successor as journey
+        cls.old, cls.journey = old, journey
+        cls.root=Path(__file__).resolve().parents[1]
+        closure=json.loads((cls.root/'docs/artwork-correction-reviews.json').read_text())['owner_requirement_closure']
+        contract=closure['contract']; cls.scope=contract['consumer_scope']; cls.assets=set(contract['known_asset_paths']); cls.origin=contract['site_origin']
+        cls.expected=Counter({(x['path'],x['asset']):x['occurrences'] for row in closure['families'] for x in row['consumers']})
+
+    def test_actual_current_generated_index_and_retained_asset_census(self):
+        # Suppress only the human-review step for this technical test. All
+        # actual current source, generator and retained-census checks still run.
+        with patch.object(self.journey,'check_review',return_value={}):
+            got=self.journey.current_census(self.root,self.scope,self.assets,self.origin,self.expected)
+        expected=self.expected.copy()
+        for pair in self.old.H2_REMOVED: del expected[pair]
+        self.assertEqual(got,expected)
+        self.assertEqual(hashlib.sha256((self.root/self.journey.HUB).read_bytes()).hexdigest(),self.journey.CURRENT_HUB_SHA256)
+
+    def test_actual_current_source_drift_fails_before_review(self):
+        target=self.root/self.journey.HUB; original=Path.read_bytes
+        def mutate(path):
+            raw=original(path)
+            return raw+b' ' if path==target else raw
+        with patch.object(Path,'read_bytes',mutate), patch.object(self.journey,'check_review',side_effect=AssertionError('review must not run')):
+            with self.assertRaisesRegex(ValueError,'current hub bytes drift'):
+                self.journey.current_census(self.root,self.scope,self.assets,self.origin,self.expected)
+
+    def test_actual_current_stale_gallery_fails_before_review(self):
+        target=self.root/'art-gallery.json'; original=Path.read_bytes
+        data=json.loads(original(target)); data['artworks'][0]['title'] += ' unauthorized drift'
+        altered=json.dumps(data,ensure_ascii=False).encode('utf8')
+        def mutate(path):
+            return altered if path==target else original(path)
+        with patch.object(Path,'read_bytes',mutate), patch.object(self.journey,'check_review',side_effect=AssertionError('review must not run')):
+            with self.assertRaisesRegex(AssertionError,'gallery differs from full-tree producer'):
+                self.journey.current_census(self.root,self.scope,self.assets,self.origin,self.expected)
+
+    def test_unset_review_pin_is_pending_not_accepted(self):
+        if self.journey.APPROVED_REVIEW_SHA256 is None:
+            with self.assertRaisesRegex(ValueError,'PENDING actual current closure and owner review'):
+                self.journey.check_review(self.root)
+        else:
+            self.journey.check_review(self.root)
 
 if __name__ == '__main__':
     unittest.main()

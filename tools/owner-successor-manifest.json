@@ -1,0 +1,211 @@
+{
+  "schema": 1,
+  "status": "unreviewed DRAFT; not owner or release approval",
+  "base_commit": "63fafd9594949160f912b3c1ca0e39b52432df34",
+  "files": {
+    "history/emma-hale-smith.html": {
+      "before_sha256": "50c334379066722ef6e80e97d70f0f2ca431777b5857eb15b998da65cc1783cf",
+      "before_bytes": 66144,
+      "current_sha256": "7511f2d034d6117cb9e4d0da896c3ff778c1f0a2165c0425361b47c1d6fb3573",
+      "current_bytes": 75894
+    },
+    "history/emma-elect-lady.html": {
+      "before_sha256": "f32c79609f15d51e9c85b2f4bc941de38d2626c944e33f1876fc574f46f7986c",
+      "before_bytes": 14734,
+      "current_sha256": "6de7bd0b21f0561913ba251163e552588a3fe065df83fd6cd1ccb9b6365ccbba",
+      "current_bytes": 1611
+    },
+    "history/emma-hymns.html": {
+      "before_sha256": "719bc7f899ebc188f33322c4c7c6bea9e326b209e28e2d49855543185e12aedb",
+      "before_bytes": 15103,
+      "current_sha256": "1561a07fcbbc7e3835234fc652a70ae8bb8613e2e1bfbd7d1352a5c458c15c7f",
+      "current_bytes": 15132
+    },
+    "sitemap.xml": {
+      "before_sha256": "123adeaead25a97bcab506d4867e5b225d8b0ec36606d957eae17f28011f1e1e",
+      "before_bytes": 13247,
+      "current_sha256": "ec879ae48520169e0d1b8691fd52935d93dcf4a019fd820725e5954c810eae08",
+      "current_bytes": 13170
+    }
+  },
+  "assets": {
+    "assets/page-art/emma-journey/emma-journey-03-1536.webp": {
+      "sha256": "3c222f5e1ee493c5f01f68ee575e45428b5a82ebda957f184df602a6f741ced0",
+      "bytes": 186964
+    },
+    "assets/page-art/emma-journey/emma-journey-03-640.webp": {
+      "sha256": "061c03a361de7342a8549031ad6430e715bd2306f20c936d4bfe4d64c9bc8f5e",
+      "bytes": 52858
+    },
+    "assets/page-art/emma-journey/emma-journey-03-960.webp": {
+      "sha256": "c0f7a5d31962cfa6e61993710b45b22d23af84160655fc01d07d904dd8054ceb",
+      "bytes": 96584
+    },
+    "assets/page-art/emma-journey/emma-journey-04-1536.webp": {
+      "sha256": "ed3007f6f670f377893941b5f3b3df3bd50e610e8a24acb357f1611354c655dc",
+      "bytes": 206740
+    },
+    "assets/page-art/emma-journey/emma-journey-04-640.webp": {
+      "sha256": "463ab97730f2315496ecbf7b11893f313e3fc4e93a6221f9bfbadd3d2c737e20",
+      "bytes": 63934
+    },
+    "assets/page-art/emma-journey/emma-journey-04-960.webp": {
+      "sha256": "af060e3f8ad09525629f16bb4da73908b1d65d98b821299864574f4b80d8ba87",
+      "bytes": 116266
+    },
+    "assets/page-art/emma-journey/emma-journey-05-1536.webp": {
+      "sha256": "355787e4d3bf947505801d5c0e2f3e57049ed2b6b155107c87c642e1a20a47b2",
+      "bytes": 436064
+    },
+    "assets/page-art/emma-journey/emma-journey-05-640.webp": {
+      "sha256": "3a951162b794df4db39c1ac44e5132e23201db846b0083cc31cf56f2216200a4",
+      "bytes": 122388
+    },
+    "assets/page-art/emma-journey/emma-journey-05-960.webp": {
+      "sha256": "c9beea409684e2d05c8e89052912d034a0a829e4200417e325bf1ddd39035df3",
+      "bytes": 228792
+    },
+    "assets/page-art/emma-journey/emma-journey-06-1536.webp": {
+      "sha256": "966d4b3b7243d4b38d33416628ecfee7c5686fe8d80698c676e76f59c01f2aef",
+      "bytes": 228522
+    },
+    "assets/page-art/emma-journey/emma-journey-06-640.webp": {
+      "sha256": "6ea2f060b313f756156c46eb24209e1566a9043d1eb6c4647558e8dfe9d9cfed",
+      "bytes": 60508
+    },
+    "assets/page-art/emma-journey/emma-journey-06-960.webp": {
+      "sha256": "b87f8464f024ecc6d05fce17739945deb1953f7e0f0eb7ed6aa1f4cfb8761cc6",
+      "bytes": 114746
+    },
+    "assets/page-art/emma-journey/emma-journey-07-1536.webp": {
+      "sha256": "27db71482e58cb9eae0558cfa5265a6f6a15cf730403de9d5df3dd73a4e16cef",
+      "bytes": 353810
+    },
+    "assets/page-art/emma-journey/emma-journey-07-640.webp": {
+      "sha256": "8b6988a00c2a19c1210db55930fd8f8eaa22a38ea918e7ea5d7d156888d3a819",
+      "bytes": 94160
+    },
+    "assets/page-art/emma-journey/emma-journey-07-960.webp": {
+      "sha256": "fc972401a8b5199c113d7b084deadd99aff6346aa66fb5133d2bf7ed91086159",
+      "bytes": 174462
+    },
+    "assets/page-art/emma-journey/emma-journey-08-1536.webp": {
+      "sha256": "33f887ec5344b187d9c5deac81a84d47f9330400c3e049db2b8a9c38e2bf1043",
+      "bytes": 180132
+    },
+    "assets/page-art/emma-journey/emma-journey-08-640.webp": {
+      "sha256": "6f76dbe0ddf4879310406c2e9a5a0bb544e1f6e19d2efdf8b32777569ad75d34",
+      "bytes": 49540
+    },
+    "assets/page-art/emma-journey/emma-journey-08-960.webp": {
+      "sha256": "736fdcb2b0ab4a69ee1fc7c916ea5dc7224ef8a4dafb6f9aadde9ff76a8c9a4c",
+      "bytes": 93328
+    },
+    "assets/page-art/emma-journey/emma-journey-09-1536.webp": {
+      "sha256": "2fa6f8e98fe82c59cd877a376b59d8d55584ec23088d6c7fc71f2c55f78447be",
+      "bytes": 257584
+    },
+    "assets/page-art/emma-journey/emma-journey-09-640.webp": {
+      "sha256": "c2ed86c42cf68bac194e1b57fc0d9dd6bd9a06f40b4cedc3ffb713634d8259f2",
+      "bytes": 70918
+    },
+    "assets/page-art/emma-journey/emma-journey-09-960.webp": {
+      "sha256": "b2f4eacc2c2948020e18649e7ede96f551a5a212a85f30c190de213b6666c17a",
+      "bytes": 131754
+    },
+    "assets/page-art/emma-journey/emma-journey-10-1536.webp": {
+      "sha256": "80f32e0b48496dd703193b0cd9757d06848199af0c1144c94c859f36df7adfe8",
+      "bytes": 321378
+    },
+    "assets/page-art/emma-journey/emma-journey-10-640.webp": {
+      "sha256": "76422d1765c4ff40c6e5f75bae440916228c279201d93601cca963165d94f69b",
+      "bytes": 88694
+    },
+    "assets/page-art/emma-journey/emma-journey-10-960.webp": {
+      "sha256": "7fb0162767d3d5273ba7881a8130de175280d6ce1dd2af86d7912210cb5361f7",
+      "bytes": 159942
+    },
+    "assets/page-art/emma-journey/emma-journey-11-1536.webp": {
+      "sha256": "862e409580c342b085bc44870adc2f0ea58349336f9e93981147cb553e04bcf4",
+      "bytes": 224318
+    },
+    "assets/page-art/emma-journey/emma-journey-11-640.webp": {
+      "sha256": "a5519c39fffa0886f2525d9d4a2b6ded8e40998865e98baa80559a414092305a",
+      "bytes": 56378
+    },
+    "assets/page-art/emma-journey/emma-journey-11-960.webp": {
+      "sha256": "dd4b79f91bd74dd0391e99472c236c67195b2062a534c5ae6ffb5551b6c0ebd7",
+      "bytes": 110850
+    },
+    "assets/page-art/emma-journey/emma-journey-12-1536.webp": {
+      "sha256": "601b769c1131c2e3aebb568454010c342465d12b72ff81f36dfa8355f06ccee3",
+      "bytes": 308160
+    },
+    "assets/page-art/emma-journey/emma-journey-12-640.webp": {
+      "sha256": "1ca3bf2e2f966aa3721a8821048e910a94c1bde52dc35352d3da6c1a743d5ffa",
+      "bytes": 84698
+    },
+    "assets/page-art/emma-journey/emma-journey-12-960.webp": {
+      "sha256": "b327c3a1ef098dce9117088b56c37dddcf9cc1f5daff7dbff195d750751036f4",
+      "bytes": 156282
+    },
+    "assets/page-art/emma-journey/emma-journey-origin-1536.webp": {
+      "sha256": "c240dfc77f6232eb014a97f374d6f9d798fa93fdacfa9c624e3d4a0155ff385b",
+      "bytes": 675710
+    },
+    "assets/page-art/emma-journey/emma-journey-origin-640.webp": {
+      "sha256": "fc0faef4cbc04f25e49c7ba964c6a5432a3c225a86448bfb036a485ca017a9e1",
+      "bytes": 142090
+    },
+    "assets/page-art/emma-journey/emma-journey-origin-960.webp": {
+      "sha256": "dd6442f249f40fd7edd2c3885c897c2bc7d0db69916e7e189301683cacb19bbf",
+      "bytes": 295888
+    }
+  },
+  "original_assets": {
+    "assets/page-art/emma-journey/originals/emma-journey-03-source.png": {
+      "bytes": 2049235,
+      "sha256": "20078e5c8c66bf09168b051297548fdc9bed96c568e68438fe8609cb61b2704e"
+    },
+    "assets/page-art/emma-journey/originals/emma-journey-04-source.png": {
+      "bytes": 2130167,
+      "sha256": "dfc63b592a4b77e0d10e01869df755721a3090bc97a167c05802ad086abcec78"
+    },
+    "assets/page-art/emma-journey/originals/emma-journey-05-source.png": {
+      "bytes": 2868003,
+      "sha256": "df6252faf78f398768347dec41525ba50e490b548312b60fa03d9313f3f03e40"
+    },
+    "assets/page-art/emma-journey/originals/emma-journey-06-source.png": {
+      "bytes": 2220424,
+      "sha256": "998c0bd165b4a927ce5bf3a0af2f3ebc3bc4a9d607fc1906fcecc8886a2e2913"
+    },
+    "assets/page-art/emma-journey/originals/emma-journey-07-source.png": {
+      "bytes": 2609923,
+      "sha256": "cea514712454a148eb5f2618242acec4e505870a44bb79a9f7be6299510fb14d"
+    },
+    "assets/page-art/emma-journey/originals/emma-journey-08-source.png": {
+      "bytes": 2036340,
+      "sha256": "c749aa0edc24ed9b48b2d0db97693d4829b07f5bd09e3e08fef3d2563e4ce704"
+    },
+    "assets/page-art/emma-journey/originals/emma-journey-09-source.png": {
+      "bytes": 2204052,
+      "sha256": "99fe8d6eabe4395b80144be4f7e1bb0db9f3c7f3de672a0e5ef8bf4a4a033917"
+    },
+    "assets/page-art/emma-journey/originals/emma-journey-10-source.png": {
+      "bytes": 2374029,
+      "sha256": "e6c45ca6845c16c07e819561660ced333530de48dc9adb7c787022cf24b06037"
+    },
+    "assets/page-art/emma-journey/originals/emma-journey-11-source.png": {
+      "bytes": 2181020,
+      "sha256": "fc48b44cda30d97f397c0d3667bd5fdf7ab7dd6b1a6ba863c1719390b407de28"
+    },
+    "assets/page-art/emma-journey/originals/emma-journey-12-source.png": {
+      "bytes": 2463725,
+      "sha256": "23a03923a0670ddfd88d8bdab8dac442eb163123cf8f439f4ede4d993f93a29a"
+    },
+    "assets/page-art/emma-journey/originals/emma-journey-origin-source.png": {
+      "bytes": 3469285,
+      "sha256": "06851210684bc25e880bd4c2c1187bad1066c6bb9c740aae1e63e19388d7e7ba"
+    }
+  }
+}

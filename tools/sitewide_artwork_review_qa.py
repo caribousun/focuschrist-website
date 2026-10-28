@@ -7,7 +7,8 @@ from urllib.parse import urlsplit, unquote, parse_qs
 import argparse, hashlib, json, re, subprocess, sys, xml.etree.ElementTree as ET
 from cfm_composition_qa import check as composition_check, self_test as composition_self_test
 from anchor_alignment_qa import FILES as ANCHOR_STYLES, historical_style_bytes, reviewed_anchor_style, self_test as anchor_self_test
-from emma_story_consumers import (EMMA_STORY_ROUTES, STORY_REF, reviewed_wrap_additions, reviewed_viewer_additions)
+from emma_story_consumers import STORY_REF
+from emma_retirement_consumers_successor import (CURRENT as EMMA_STORY_ROUTES, reviewed_wrap_additions, reviewed_viewer_additions)
 from owner_integration_contract import historical_wrap_consumers
 ROOT = Path(__file__).resolve().parents[1]
 IMAGE_EXT = {'.png','.webp','.jpg','.jpeg','.avif','.gif','.svg'}

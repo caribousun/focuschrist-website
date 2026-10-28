@@ -71,6 +71,15 @@ def chronology(record, normalized):
 
 def validate(root, record, added, covered, rejected, pixel_hash, page_dependencies):
     if record.get('schema') == 2:
+        # Dispatch only the exact journey source to the narrowly scoped successor.
+        # Unknown bytes still go through the unchanged predecessor validator and
+        # fail its exact source checks; never normalize arbitrary input.
+        from owner_journey_successor import HUB, read_manifest
+        current_hub = local(root, HUB).read_bytes()
+        if sha(current_hub) == read_manifest()['files'][HUB]['current_sha256']:
+            from artwork_emma_journey_retained import validate as validate_journey_retained
+            return validate_journey_retained(root, record, added, covered, rejected,
+                                              pixel_hash, page_dependencies, _validate_historical)
         from artwork_emma_hub_delivery import validate as validate_hub
         return validate_hub(root, record, added, covered, rejected, pixel_hash,
                             page_dependencies, _validate_historical)

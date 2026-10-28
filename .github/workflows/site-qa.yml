@@ -33,9 +33,23 @@ jobs:
       - name: Reject unreviewed or stale new artwork
         run: |
           python -m unittest discover -s tools -p test_artwork_creation_gate.py
+          # V3 current-source and explicit historical evidence tests; no approval inferred.
+          python -m unittest discover -s tools -p test_artwork_emma_journey_retained.py
+          python -m unittest discover -s tools -p test_emma_journey_release_review.py
+          python -m unittest discover -s tools -p test_emma_journey_closure_successor.py
+          # New journey source and synthetic contract tests; not release approval.
+          python -m unittest discover -s tools -p test_owner_journey_integration.py
+          python -m unittest discover -s tools -p test_artwork_emma_journey_delivery.py
+          python -m unittest discover -s tools -p test_emma_journey_creation_wiring.py
+          python -m unittest discover -s tools -p test_emma_journey_indices_contract.py
+          python -m unittest discover -s tools -p test_prepare_emma_journey_indices.py
+          python -m unittest discover -s tools -p test_emma_journey_indices_full_tree_protocol.py
           python -m unittest discover -s tools -p test_artwork_emma_story_delivery.py
           python -m unittest discover -s tools -p test_artwork_emma_hub_delivery.py
-          python -m unittest discover -s tools -p test_emma_story_consumers.py
+          # Exact old five-owner test runs only against its pinned historical checkout.
+          python -m unittest discover -s tools -p test_emma_retirement_predecessor.py
+          # Four actual live story owners and 124 actual controller bindings.
+          python -m unittest discover -s tools -p test_emma_retirement_consumers.py
           python tools/test_adams_delivery_successor.py
           python -m unittest discover -s tools -p test_adams_integrated_context.py
           python -m unittest discover -s tools -p test_adams_integrated_qa_evidence.py
@@ -177,7 +191,7 @@ jobs:
       - name: Verify every featured art supporting picture study panel
         run: |
           npm install --prefix "$RUNNER_TEMP/focuschrist-dom-qa" --no-save --package-lock=false --ignore-scripts jsdom@26.1.0
-          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" timeout --signal=TERM --kill-after=5s 60s node tools/test_owner_integration_navigation.js
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" timeout --signal=TERM --kill-after=5s 60s node tools/test_emma_retirement_navigation.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/gallery_compatibility_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/opening_flow_and_cards_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/unified_opening_runtime_qa.js

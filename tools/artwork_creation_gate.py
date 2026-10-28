@@ -497,6 +497,23 @@ def run(root, mode='release', scene=None, page_overrides=None):
         covered |= emma
         originals |= emma_hashes
         original_pixels |= emma_pixels
+    # Exact current Emma journey generation. An absent/unreviewed record is a
+    # hard failure, never a prefix-based or historical-evidence waiver.
+    from artwork_emma_journey_delivery import MANIFEST as EMMA_JOURNEY_IMPORT, ASSETS as EMMA_JOURNEY_ASSETS, validate as validate_emma_journey
+    journey = set()
+    if (root / EMMA_JOURNEY_IMPORT).exists() or added & EMMA_JOURNEY_ASSETS:
+        require((root / EMMA_JOURNEY_IMPORT).is_file(), 'Emma journey record missing')
+        journey_record = json.loads((root / EMMA_JOURNEY_IMPORT).read_text(encoding='utf-8'))
+        journey, journey_hashes, journey_pixels = validate_emma_journey(
+            root, journey_record, added, covered, rejected, pixel_hash, page_dependencies)
+        require(not (journey_hashes & originals) and not (journey_pixels & original_pixels), 'Emma journey duplicates another creation')
+        covered |= journey
+        originals |= journey_hashes
+        original_pixels |= journey_pixels
+        # Source checks do not confer owner approval. This stays held until the
+        # independently reviewed direct-owner and final-page record exists.
+        from owner_journey_successor import release_gate as emma_journey_owner_release_gate
+        emma_journey_owner_release_gate(root, journey_record)
     # Exact existing Adams chart import; no generated-art preflight is claimed.
     from adams_source_import import MANIFEST as ADAMS_IMPORT, validate as validate_adams_import
     if (root / ADAMS_IMPORT).exists() or any(p.startswith('assets/adams-chart/') for p in added):
@@ -506,7 +523,7 @@ def run(root, mode='release', scene=None, page_overrides=None):
     if (root / 'docs/image-delivery-20261019.json').exists() or added & {row['path'] for row in DISPLAY_ASSETS}:
         covered |= validate_display_delivery(root, added, covered)
     require(added == covered, 'New artwork missing exact review coverage: ' + ', '.join(sorted(added - covered)))
-    if creations or historical or corrections or seasonal or four_scene or answers_six or six_scene or gabriel or three:
+    if creations or historical or corrections or seasonal or four_scene or answers_six or six_scene or gabriel or three or journey:
         for name in inventory:
             path = root / name
             if path.suffix.lower() in RASTERS:

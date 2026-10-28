@@ -7,7 +7,8 @@ from bs4 import BeautifulSoup
 from hero_introductions_qa import ROUTES as INTRODUCTION_ROUTES
 from section_panel_surface_qa import STANDALONE_ROUTE, assert_standalone
 
-from emma_story_consumers import EMMA_STORY_ROUTES, COMMON_REF, historical_routes, assert_story_opening
+from emma_story_consumers import COMMON_REF, assert_story_opening as prior_story_opening
+from emma_retirement_consumers_successor import CURRENT as EMMA_STORY_ROUTES, historical_routes, assert_story_opening
 from owner_integration_contract import CHART as ADAMS_ROUTE, without_integrated_adams_routes as without_adams_route
 ROOT = Path(__file__).resolve().parents[1]
 HERO_ROUTES = frozenset(p['path'] for p in json.loads((ROOT / 'docs/unified-opening-inventory.json').read_text())['pages'] if p['hero'])
@@ -49,7 +50,7 @@ for record in [*inventory['pages'], {'path': 'history/emma-hale-smith.html', 'he
 for route in sorted(EMMA_STORY_ROUTES):
     text = (ROOT / route).read_text(encoding='utf8')
     doc = BeautifulSoup(text, 'html.parser')
-    assert_story_opening(route, text, doc)
+    assert_story_opening(route, text, doc, (ROOT / route).read_bytes(), prior_story_opening)
     assert_common_version(route, doc)
 # The separately reviewed standalone opening embeds its own header controller.
 assert_standalone(STANDALONE_ROUTE, (ROOT / STANDALONE_ROUTE).read_bytes())

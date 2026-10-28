@@ -77,7 +77,18 @@ def check_source_contract(pointer, current_manifest):
     require(canonical(entries) == pointer.get('emma_entries_sha256'), 'changed Emma source/inverse contract')
 
 
-def check_spec(root, spec, predecessor, page_dependencies):
+def check_spec(root, spec, predecessor, page_dependencies, historical_pages=None):
+    # Explicit historical inputs are exact 63fafd predecessor source bytes.
+    # Never use them for current ownership or assembled rendering claims.
+    historical_pages = historical_pages or {}
+    require(set(historical_pages) <= {HUB, *STORIES}, 'unknown historical hub source')
+    def source_bound(item):
+        if item['path'] not in historical_pages:
+            return bound(root, item)
+        local(root, item['path'])
+        raw = historical_pages[item['path']]
+        require(isinstance(raw, bytes) and len(raw) == item['bytes'] and sha(raw) == item['sha256'], 'changed historical hub source')
+        return raw
     require(spec.get('registration_class') == 'EXACT_FIVE_EMMA_HUB_CONTEXT_SUCCESSOR', 'unknown hub family')
     for field in ('historical_canonical_preflight_claim', 'new_asset_generation', 'private_reference_bytes_published'):
         require(spec.get(field) is False, 'false hub claim: ' + field)
@@ -91,9 +102,18 @@ def check_spec(root, spec, predecessor, page_dependencies):
     check_source_contract(spec['source_contract'], manifest(root))
     previous_pages = {}
     for item in source_rows:
-        raw = bound(root, item)
-        validate_file(item['path'], raw, root)
-        previous = historical_bytes(item['path'], raw, root)
+        route = item['path']
+        raw = source_bound(item)
+        if route in historical_pages:
+            # Confirm both the actual source and its exact explicitly historical
+            # projection before running the old historical inverse.
+            from owner_journey_successor import historical_fixture
+            actual = local(root, route).read_bytes()
+            require(historical_fixture(route, actual, root) == raw, 'historical projection mismatch')
+            previous = historical_bytes(route, actual, root)
+        else:
+            validate_file(route, raw, root)
+            previous = historical_bytes(route, raw, root)
         if item['path'] in STORIES:
             previous_pages[item['path']] = previous
     expected = []
@@ -116,7 +136,7 @@ def check_spec(root, spec, predecessor, page_dependencies):
                 bound(root, item)
             check_supplement_reviews(root)
     for item in context:
-        bound(root, item)
+        source_bound(item)
     return previous_pages
 
 
@@ -398,3 +418,35 @@ def validate(root, record, added, covered, rejected, pixel_hash, page_dependenci
     # its exact restored five page bytes. Current sources/reviews passed above.
     return historical_validate(root, predecessor, added, covered, rejected,
                                pixel_hash, page_dependencies, previous_pages)
+
+
+def validate_explicit_historical(root, record, added, covered, rejected, pixel_hash,
+                                 page_dependencies, historical_validate, historical_pages):
+    """Validate the old receipt and its predecessor as historical evidence only.
+
+    The caller must first validate actual current source and corpus. This function
+    does not say the historical rendered report shows today's page.
+    """
+    from owner_journey_successor import HUB as JHUB, RETIRED, HYMNS
+    require(set(historical_pages) == {JHUB, RETIRED, HYMNS}, 'historical inputs incomplete')
+    # Independently enforce the actual current boundary even when this explicitly
+    # historical entrypoint is called outside the ordinary dispatcher.
+    from artwork_emma_journey_retained import validate_current
+    validate_current(root)
+    def old_dependencies(r, route):
+        return page_dependencies(r, route, page_overrides=historical_pages)
+    normalized = require_finished(record)
+    spec = record['spec']; pointer = spec['predecessor']
+    require(pointer['path'] == PREDECESSOR_PATH and pointer['sha256'] == PREDECESSOR_SHA256,
+            'wrong historical ecfb record')
+    predecessor = json.loads(bound(root, pointer))
+    require(canonical(predecessor) == PREDECESSOR_CANONICAL == pointer['canonical_sha256']
+            and canonical(predecessor['spec']) == pointer['spec_sha256'], 'historical record/spec changed')
+    previous_pages = check_spec(root, spec, predecessor, old_dependencies, historical_pages)
+    # Do not call the old 139-page "current" uniqueness census on today's site.
+    # The successor validates the actual current 138-route census separately.
+    rendered_sha = check_rendered(root, record['rendered_context'], spec, predecessor)
+    check_supplement_producer(root, record['rendered_context'])
+    check_reviews(root, record, normalized, rendered_sha)
+    return historical_validate(root, predecessor, added, covered, rejected, pixel_hash,
+                               old_dependencies, previous_pages)
