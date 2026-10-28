@@ -88,7 +88,15 @@ class MotionBindingTests(unittest.TestCase):
             def walk(value):
                 if isinstance(value,dict):
                     if set(value)>={'path','sha256'} and (gate.ROOT/value['path']).is_file():
-                        self.assertEqual(module.digest(gate.ROOT/value['path']),value['sha256'],stem+':'+value['path'])
+                        if stem in {'gabriel-owner','three-reviewed'} and value['path'] in {'art-gallery.json','site-search-index.json'}:
+                            # The receipt describes immutable pre-selector index
+                            # bytes, not today's independently generated index.
+                            from test_timeline_source_import import historical_index
+                            from artwork_display_delivery import inverse
+                            actual=gate.sha(inverse(value['path'],historical_index(value['path'])))
+                        else:
+                            actual=module.digest(gate.ROOT/value['path'])
+                        self.assertEqual(actual,value['sha256'],stem+':'+value['path'])
                     for child in value.values():walk(child)
                 elif isinstance(value,list):
                     for child in value:walk(child)

@@ -1,0 +1,37 @@
+name: Historical inverse audit (manual, nonblocking)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  historical-inverses:
+    name: Audit archived predecessor evidence (not current release acceptance)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out immutable pre-selector historical baseline
+        uses: actions/checkout@v5
+        with:
+          ref: de5f3c35505fddd4586bb0b51c17dad1389f2bf9
+          fetch-depth: 0
+      - name: Verify existing QA dependency contract
+        run: python tools/qa_dependency_contract.py --self-test
+      - name: Install existing QA dependencies
+        run: python -m pip install -r tools/qa-requirements.txt
+      - name: Record exact historical checkout
+        run: git rev-parse HEAD
+      - name: Audit historical Continue inverse evidence
+        if: ${{ !cancelled() }}
+        run: python tools/test_continue_motion_binding.py
+      - name: Audit historical Timeline source and inverse evidence
+        if: ${{ !cancelled() }}
+        run: python -m unittest discover -s tools -p test_timeline_source_import.py
+      - name: Audit historical Adams producer evidence
+        if: ${{ !cancelled() }}
+        run: python -m unittest discover -s tools -p test_adams_index_producer_successor.py
+      - name: Audit historical Adams inverse pairs
+        if: ${{ !cancelled() }}
+        run: python -m unittest discover -s tools -p test_adams_integration_indices.py
+      - name: Audit historical Emma inverse pairs
+        if: ${{ !cancelled() }}
+        run: python tools/test_emma_generated_indices_successor.py
