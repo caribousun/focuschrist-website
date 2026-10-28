@@ -1,0 +1,27 @@
+name: Owner navigation diagnostic (bounded)
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - .github/workflows/owner-navigation-diagnostic.yml
+      - tools/owner_integration_navigation.js
+      - tools/test_owner_integration_navigation.js
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  current-navigation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - name: Install the existing pinned DOM test dependency
+        run: npm install --prefix "$RUNNER_TEMP/focuschrist-dom-qa" --no-save --package-lock=false --ignore-scripts jsdom@26.1.0
+      - name: Current and historical navigation self-test
+        run: NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" timeout --signal=TERM --kill-after=5s 120s node tools/test_owner_integration_navigation.js
+      - name: Canonical footer runtime
+        if: always()
+        run: NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" timeout --signal=TERM --kill-after=5s 180s node tools/footer_navigation_runtime_qa.js
+      - name: Study-link controls
+        if: always()
+        run: NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" timeout --signal=TERM --kill-after=5s 180s node tools/study_link_controls_qa.js

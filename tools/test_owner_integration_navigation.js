@@ -8,8 +8,39 @@ function selfTest(routes,read,JSDOM){
  contract.validateAll(read,JSDOM);positive++;
  for(const route of contract.currentPages){check(route);positive++;
   for(const mutation of [d=>d.querySelector('[data-site-search-trigger]').remove(),d=>d.querySelector('.hamburger').remove(),d=>d.querySelector('footer[data-focuschrist-footer]').remove(),d=>d.querySelector('[data-focuschrist-independence]').remove(),d=>d.querySelector('[data-focuschrist-artwork-disclosure]').remove(),d=>d.querySelector('h1').remove()])rejects(()=>check(route,mutation));
-  rejects(()=>contract.assertSource(route,read(route)+' ',read));
+  if(route===contract.landing){
+   // Harmless whitespace/layout is not a content or navigation change.
+   assert.doesNotThrow(()=>contract.assertSource(route,read(route)+' ',read));positive++;
+   const layout=read(route).replace('fc-timeline-choice__body','fc-timeline-choice__body layout-v2');
+   assert.notEqual(layout,read(route));assert.doesNotThrow(()=>contract.assertSource(route,layout,read));positive++;
+   const wrapped=read(route).replace('<article class="fc-timeline-choice">','<div class="layout-wrapper"><article class="fc-timeline-choice">').replace('</article>','</article></div>');
+   assert.notEqual(wrapped,read(route));assert.doesNotThrow(()=>contract.assertSource(route,wrapped,read));positive++;
+  }else rejects(()=>contract.assertSource(route,read(route)+' ',read));
  }
+ for(const mutation of [
+  d=>d.querySelector('#choose-timeline article a').setAttribute('href','wrong.html'),
+  d=>d.querySelector('#choose-timeline article img').setAttribute('src','wrong.webp'),
+  d=>d.querySelector('#choose-timeline article p').textContent='Changed copy',
+  d=>d.querySelector('#choose-timeline article').setAttribute('hidden',''),
+  d=>d.querySelector('#choose-timeline').setAttribute('hidden',''),
+  d=>d.querySelector('main').setAttribute('aria-hidden','true'),
+  d=>{const h=d.querySelector('#choose-timeline article h3');h.outerHTML='<span aria-hidden="true">'+h.outerHTML+'</span>';},
+  d=>d.querySelector('#choose-timeline').insertAdjacentHTML('beforeend','<a href="wrong.html"></a>'),
+  d=>d.querySelector('#adams-1881').removeAttribute('id'),
+  d=>d.querySelector('#choose-timeline article').remove(),
+  d=>{const c=d.querySelector('#choose-timeline article');c.after(c.cloneNode(true));},
+  d=>d.body.insertAdjacentHTML('beforeend','<div id="adams-1881"></div>')
+ ])rejects(()=>check(contract.landing,mutation));
+ for(const [old,value] of [
+  ['latter-day-saint-church-history-timeline.html','wrong.html'],
+  ['church-history-grove.webp','wrong.webp'],
+  ['Explore the story of the Restoration.','Changed copy.']
+ ]){assert(read(contract.landing).includes(old));rejects(()=>contract.assertSource(contract.landing,read(contract.landing).replace(old,value),read));}
+ for(const [old,value] of [
+  ['<section id="choose-timeline"','<section hidden id="choose-timeline"'],
+  ['<main id="timeline-main">','<main aria-hidden="true" id="timeline-main">']
+ ]){assert(read(contract.landing).includes(old));rejects(()=>contract.assertSource(contract.landing,read(contract.landing).replace(old,value),read));}
+ rejects(()=>contract.historicalSource(contract.landing,read(contract.landing),p=>read(p)+(p==='docs/timeline-selector/historical-c910.txt'?' ':'')));
  for(const mutation of [d=>d.querySelector('.timeline-opening-continue').setAttribute('href','#missing'),d=>d.querySelector('.timeline-life-hero img').setAttribute('src','wrong.jpg'),d=>d.querySelector('#adams-open-chart').remove()])rejects(()=>check(contract.intro,mutation));
  for(const mutation of [d=>d.querySelector('#viewport').remove(),d=>d.querySelector('.fc-adams-credit a').removeAttribute('target'),d=>d.querySelector('.fc-adams-credit a').setAttribute('rel','noopener'),d=>d.body.insertAdjacentHTML('beforeend','<div class="fc-adams-strip">Old strip</div>')])rejects(()=>check(contract.chart,mutation));
  for(const scene of Object.values(contract.stories)){
