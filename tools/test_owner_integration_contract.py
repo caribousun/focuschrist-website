@@ -23,10 +23,38 @@ class OwnerIntegrationContractTests(unittest.TestCase):
             with self.subTest(path=path):
                 c.validate_file(path, raw)
 
-    def test_each_changed_current_byte_rejected(self):
+    def test_non_timeline_changed_current_byte_rejected(self):
         for path, raw in self.raw.items():
+            if path == c.LANDING:
+                continue  # Current Timeline uses content/navigation semantics, not a whole-page hash.
             with self.subTest(path=path), self.assertRaises(AssertionError):
                 c.validate_file(path, raw + b' ')
+
+    def test_timeline_layout_tolerance_and_semantic_drift(self):
+        from timeline_selector_check import DESTINATIONS
+        raw = self.raw[c.LANDING]
+        c.validate_file(c.LANDING, raw + b' ')
+        layout = raw.replace(b'fc-timeline-choice__body', b'fc-timeline-choice__body layout-v2', 1)
+        self.assertNotEqual(layout, raw)
+        c.validate_file(c.LANDING, layout)
+        mutations = [
+            (b'Explore the story of the Restoration.', b'Changed copy.'),
+            (DESTINATIONS[0][1].encode(), b'timelines/other.html'),
+            (DESTINATIONS[2][2].encode(), b'assets/other.webp'),
+            (b'Church History Timeline', b'Changed title'),
+            (b'id="adams-1881"', b'id="other"'),
+            (b'<article class="fc-timeline-choice">', b'<article class="fc-timeline-choice" hidden>'),
+            (b'</main>', b'<p>Unapproved content</p></main>'),
+        ]
+        for before, after in mutations:
+            self.assertIn(before, raw)
+            with self.subTest(field=before), self.assertRaises(AssertionError):
+                c.validate_file(c.LANDING, raw.replace(before, after, 1))
+        start = raw.index(b'<article class="fc-timeline-choice">')
+        stop = raw.index(b'</article>', start) + len(b'</article>')
+        for changed in (raw[:start]+raw[stop:], raw[:stop]+raw[start:stop]+raw[stop:]):
+            with self.assertRaises(AssertionError):
+                c.validate_file(c.LANDING, changed)
 
     def test_css_successor_is_exact_and_historical_manifest_unchanged(self):
         current = self.raw['adams-integration.css']
