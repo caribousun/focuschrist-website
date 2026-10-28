@@ -185,6 +185,12 @@ CONDITIONAL_CHECKS={'source_and_prose','artwork_and_provenance','panel','gallery
 CONDITIONAL_PAGE_SHA256='7511f2d034d6117cb9e4d0da896c3ff778c1f0a2165c0425361b47c1d6fb3573'
 CONDITIONAL_SOURCE_MANIFEST_SHA256='3ae50af644843d26abc5e794262657336b60c7a4f204cab8ed1064f0159ae0d4'
 CONDITIONAL_QUESTION_SHA256='c40296078f23c60c6cdd68fc73c228f78e37acb129d0f8e369b9ace5b8fcca17'
+# Commitments to the exact independently verified private readback metadata.
+# Structural bindings do not authenticate authors or independently verify messages.
+CONDITIONAL_SOURCE_METADATA_SHA256='862623b24c30f66d73abedab2b87fae4f1f9ef62639c1e3382ddda8b114c9db4'
+CONDITIONAL_ACCEPTED_AT_SHA256='21e09b456fc7aa6088598993d3cebf49f177a621e15c3fafcf50e2ac77144d59'
+# Intentionally unfilled until the private readback is independently verified.
+PRIVATE_READBACK_SHA256=None
 
 def validate_conditional_acceptance(root, owner, binding, review_dates):
  condition=owner.get('conditional_scope')
@@ -192,28 +198,44 @@ def validate_conditional_acceptance(root, owner, binding, review_dates):
  need(condition['kind']=='publish_after_remaining_checks_pass','conditional acceptance not explicitly scoped to checks')
  need(condition['page_sha256']==binding['page_sha256']==CONDITIONAL_PAGE_SHA256 and condition['source_manifest_sha256']==binding['source_manifest_sha256']==CONDITIONAL_SOURCE_MANIFEST_SHA256,'conditional acceptance subject changed')
  source=_json_bound(root,condition['authorization_source'])
- need(source.get('schema')==1 and source.get('kind')=='authenticated_owner_conditional_response','invalid conditional authorization source')
- question=source.get('question');answer=source.get('answer')
- need(isinstance(question,dict) and isinstance(answer,dict),'missing conditional question or answer')
- need(question.get('actor')=='Albert' and answer.get('actor')=='Wyatt','conditional authorization actor mismatch')
- qid=question.get('message_id');aid=answer.get('message_id')
- need(isinstance(qid,str) and qid.strip() and isinstance(aid,str) and aid.strip() and qid!=aid,'missing or duplicate message identity')
- text=question.get('text');need(isinstance(text,str) and sha(text.encode('utf-8'))==CONDITIONAL_QUESTION_SHA256,'conditional owner question differs from exact authorized scope')
- need(isinstance(answer.get('text'),str) and answer['text'].strip().casefold()=='yes','conditional authorization answer not affirmative')
- requested=_time(question.get('sent_at'));accepted=_time(answer.get('sent_at'))
- need(requested<=accepted and accepted==_time(owner.get('accepted_at')),'conditional authorization timing mismatch')
- source_evidence=source.get('evidence');need(isinstance(source_evidence,list) and source_evidence,'original authorization evidence missing')
- for entry in source_evidence:_bound(root,entry)
+ # This public attestation carries commitments only, never private message text.
+ # Its verifier must independently inspect the authenticated private readback.
+ need(isinstance(source,dict) and set(source)=={'schema','kind','question','answer','verification'} and source['schema']==1 and source['kind']=='privately_verified_conditional_authorization','invalid conditional authorization attestation')
+ question=source['question'];answer=source['answer']
+ keys={'actor','message_id_sha256','sent_at_sha256','text_sha256'}
+ need(isinstance(question,dict) and isinstance(answer,dict) and set(question)==set(answer)==keys,'invalid commitment shape')
+ need(question['actor']=='Albert' and answer['actor']=='Wyatt' and question['text_sha256']==CONDITIONAL_QUESTION_SHA256,'authorization commitment actor or scope mismatch')
+ for record in (question,answer):
+  for key in keys-{'actor'}:need(isinstance(record[key],str) and re.fullmatch(r'[0-9a-f]{64}',record[key]) is not None,'invalid authorization commitment')
+ need(_canonical({'question':question,'answer':answer})==CONDITIONAL_SOURCE_METADATA_SHA256,'authorization metadata commitments differ from reviewed readback')
+ accepted=_time(owner.get('accepted_at'))
+ from datetime import timezone
+ accepted_utc=accepted.astimezone(timezone.utc).isoformat(timespec='microseconds')
+ need(sha(accepted_utc.encode())==CONDITIONAL_ACCEPTED_AT_SHA256,'conditional authorization timing mismatch')
+ verification=source['verification']
+ need(isinstance(verification,dict) and set(verification)=={'status','actual_actor','verified_at','private_readback_sha256'} and verification['status']=='VERIFIED','invalid private-readback verification')
+ need(isinstance(verification['actual_actor'],str) and verification['actual_actor'].strip(),'missing private-readback verifier')
+ verified=_time(verification['verified_at']);need(verified>=accepted,'private-readback verification predates acceptance')
+ need(isinstance(PRIVATE_READBACK_SHA256,str) and re.fullmatch(r'[0-9a-f]{64}',PRIVATE_READBACK_SHA256) is not None and verification['private_readback_sha256']==PRIVATE_READBACK_SHA256,'PENDING independently reviewed private readback commitment')
  report=_json_bound(root,condition['checks_report'])
  need(report.get('schema')==1 and report.get('status')=='PASS' and report.get('binding_sha256')==_canonical(binding),'remaining checks report mismatch')
- completed=_time(report.get('completed_at'));need(completed>=max([accepted,*review_dates]),'remaining checks report predates acceptance or final reviews')
+ completed=_time(report.get('completed_at'));need(completed>=max([accepted,verified,*review_dates]),'remaining checks report predates acceptance, verification or final reviews')
  checks=report.get('checks');need(isinstance(checks,dict) and set(checks)==CONDITIONAL_CHECKS,'incomplete remaining-check coverage')
  for name,item in checks.items():
   need(isinstance(item,dict) and item.get('status')=='PASS','remaining check not passed: '+name)
   check_time=_time(item.get('completed_at'));need(check_time<=completed,'remaining check postdates report: '+name)
   if name=='source_and_prose':need(check_time>=max(review_dates),'source review check predates final reviews')
   evidence=item.get('evidence');need(isinstance(evidence,list) and evidence,'missing remaining-check evidence: '+name)
-  for entry in evidence:_bound(root,entry)
+  for entry in evidence:
+   if name!='artwork_and_provenance':_bound(root,entry);continue
+   need(item.get('method')=='independent_pre_release_artwork_validation','artwork check is not separate pre-release validation')
+   pre=_json_bound(root,entry)
+   need(isinstance(pre,dict) and set(pre)=={'schema','kind','status','source_manifest_sha256','delivery_spec_sha256','final_release_command_used','actual_actor','completed_at','evidence'} and pre['schema']==1 and pre['kind']=='independent_pre_release_artwork_validation' and pre['status']=='PASS','invalid pre-release artwork evidence')
+   need(pre['source_manifest_sha256']==binding['source_manifest_sha256'] and pre['delivery_spec_sha256']==binding['delivery_spec_sha256'],'pre-release artwork subject mismatch')
+   need(pre['final_release_command_used'] is False,'final release command cannot supply its own artwork evidence')
+   need(isinstance(pre['actual_actor'],str) and pre['actual_actor'].strip() and _time(pre['completed_at'])<=check_time,'invalid pre-release artwork verifier or time')
+   need(isinstance(pre['evidence'],list) and pre['evidence'],'missing pre-release artwork proof')
+   for proof in pre['evidence']:_bound(root,proof)
 
 def release_gate(root=None,delivery_record=None):
  """Validate pinned actual review and direct acceptance; missing proof fails closed.

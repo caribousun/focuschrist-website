@@ -75,37 +75,54 @@ class ReleaseReview(unittest.TestCase):
   for i,change in enumerate(changes):
    with self.subTest(i=i),self.assertRaises(AssertionError):self.gate(change)
  def conditional(self,binding,owner):
-  # Entirely synthetic records: no claim about real messages or approval.
+  # Synthetic values only; these are not actual authorization evidence.
   proof=self.write('docs/emma-journey-release/synthetic-conditional-evidence.txt',b'synthetic only')
-  source={'schema':1,'kind':'authenticated_owner_conditional_response',
-   'question':{'actor':'Albert','message_id':'synthetic-question','sent_at':'2026-10-28T10:00:00Z','text':SYNTHETIC_QUESTION},
-   'answer':{'actor':'Wyatt','message_id':'synthetic-answer','sent_at':'2026-10-28T10:01:00Z','text':'yes'},'evidence':[proof]}
+  question={'actor':'Albert','message_id_sha256':s.sha(b'fake question id'),'sent_at_sha256':s.sha(b'fake question time'),'text_sha256':SYNTHETIC_QUESTION_SHA256}
+  answer={'actor':'Wyatt','message_id_sha256':s.sha(b'fake answer id'),'sent_at_sha256':s.sha(b'fake answer time'),'text_sha256':s.sha(b'fake answer')}
+  source={'schema':1,'kind':'privately_verified_conditional_authorization','question':question,'answer':answer,
+   'verification':{'status':'VERIFIED','actual_actor':'synthetic verifier','verified_at':'2026-10-28T10:02:00Z','private_readback_sha256':'a'*64}}
   sourceptr=self.writej('docs/emma-journey-release/synthetic-conditional-source.json',source)
+  pre={'schema':1,'kind':'independent_pre_release_artwork_validation','status':'PASS','source_manifest_sha256':binding['source_manifest_sha256'],
+   'delivery_spec_sha256':binding['delivery_spec_sha256'],'final_release_command_used':False,'actual_actor':'synthetic verifier',
+   'completed_at':'2026-10-28T12:05:00Z','evidence':[proof]}
+  preptr=self.writej('docs/emma-journey-release/synthetic-pre-art.json',pre)
   report={'schema':1,'status':'PASS','binding_sha256':s._canonical(binding),'completed_at':'2026-10-28T12:30:00Z',
    'checks':{name:{'status':'PASS','completed_at':'2026-10-28T12:10:00Z','evidence':[proof]} for name in s.CONDITIONAL_CHECKS}}
+  report['checks']['artwork_and_provenance'].update(method='independent_pre_release_artwork_validation',evidence=[preptr])
   reportptr=self.writej('docs/emma-journey-release/synthetic-conditional-checks.json',report)
   owner.update(accepted_at='2026-10-28T10:01:00Z',acceptance_mode='conditional_on_remaining_checks',
    conditional_scope={'kind':'publish_after_remaining_checks_pass','page_sha256':binding['page_sha256'],
     'source_manifest_sha256':binding['source_manifest_sha256'],'authorization_source':sourceptr,'checks_report':reportptr})
-  return source,report
+  return source,report,pre
+ def synthetic_pins(self):
+  q={'actor':'Albert','message_id_sha256':s.sha(b'fake question id'),'sent_at_sha256':s.sha(b'fake question time'),'text_sha256':SYNTHETIC_QUESTION_SHA256}
+  a={'actor':'Wyatt','message_id_sha256':s.sha(b'fake answer id'),'sent_at_sha256':s.sha(b'fake answer time'),'text_sha256':s.sha(b'fake answer')}
+  return patch.multiple(s,CONDITIONAL_QUESTION_SHA256=SYNTHETIC_QUESTION_SHA256,CONDITIONAL_SOURCE_METADATA_SHA256=s._canonical({'question':q,'answer':a}),
+   CONDITIONAL_ACCEPTED_AT_SHA256=s.sha(b'2026-10-28T10:01:00.000000+00:00'),PRIVATE_READBACK_SHA256='a'*64)
  def test_synthetic_conditional_acceptance_keeps_real_order(self):
   def change(b,r,a,o):self.conditional(b,o)
-  with patch.object(s,'CONDITIONAL_QUESTION_SHA256',SYNTHETIC_QUESTION_SHA256):
-   self.assertIn('validated exact source',self.gate(change)['status'])
+  with self.synthetic_pins():self.assertIn('validated exact source',self.gate(change)['status'])
  def test_conditional_acceptance_rejects_changed_subject_or_missing_checks(self):
-  for mode in ('page','art','scope','source_missing','answer_no','wrong_actor','answer_time','question_no_condition','missing_check','failed_check','missing_evidence','stale_report','early_report','future_check','early_source','unknown_mode'):
+  modes=('page','art','scope','source_missing','answer_no','wrong_actor','answer_time','question_no_condition','raw_text','wrong_private_digest','no_verifier','unverified','future_verification','owner_time','missing_check','failed_check','missing_evidence','stale_report','early_report','future_check','early_source','unknown_mode','art_method','art_final_command','art_wrong_subject','art_wrong_delivery','art_no_evidence','art_future','art_fail')
+  for mode in modes:
    def change(b,r,a,o):
-    source,report=self.conditional(b,o);scope=o['conditional_scope']
+    source,report,pre=self.conditional(b,o);scope=o['conditional_scope']
     if mode=='page':scope['page_sha256']='0'*64
     if mode=='art':scope['source_manifest_sha256']='0'*64
     if mode=='scope':scope['kind']='approve_now'
     if mode=='source_missing':scope['authorization_source']={'path':'missing.json','bytes':1,'sha256':'0'*64}
     if mode=='unknown_mode':o['acceptance_mode']='unknown'
-    if mode=='answer_no':source['answer']['text']='no'
+    if mode=='answer_no':source['answer']['text_sha256']='0'*64
     if mode=='wrong_actor':source['answer']['actor']='other'
-    if mode=='answer_time':source['answer']['sent_at']='2026-10-28T10:02:00Z'
-    if mode=='question_no_condition':source['question']['text']='Approve everything now'
-    if mode in ('answer_no','wrong_actor','answer_time','question_no_condition'):
+    if mode=='answer_time':source['answer']['sent_at_sha256']='0'*64
+    if mode=='question_no_condition':source['question']['text_sha256']='0'*64
+    if mode=='raw_text':source['question']['text']='private text must not be committed'
+    if mode=='wrong_private_digest':source['verification']['private_readback_sha256']='0'*64
+    if mode=='no_verifier':source['verification']['actual_actor']=''
+    if mode=='unverified':source['verification']['status']='PENDING'
+    if mode=='future_verification':source['verification']['verified_at']='2026-10-28T13:00:00Z'
+    if mode=='owner_time':o['accepted_at']='2026-10-28T10:02:00Z'
+    if mode in ('answer_no','wrong_actor','answer_time','question_no_condition','raw_text','wrong_private_digest','no_verifier','unverified','future_verification'):
      scope['authorization_source']=self.writej('docs/emma-journey-release/changed-conditional-source.json',source)
     if mode=='missing_check':report['checks'].pop('search')
     if mode=='failed_check':report['checks']['gallery']['status']='FAIL'
@@ -114,12 +131,23 @@ class ReleaseReview(unittest.TestCase):
     if mode=='early_report':report['completed_at']='2026-10-28T11:00:00Z'
     if mode=='future_check':report['checks']['search']['completed_at']='2026-10-28T13:00:00Z'
     if mode=='early_source':report['checks']['source_and_prose']['completed_at']='2026-10-28T11:00:00Z'
-    if mode in ('missing_check','failed_check','missing_evidence','stale_report','early_report','future_check','early_source'):
+    if mode=='art_method':report['checks']['artwork_and_provenance']['method']='final_release'
+    if mode=='art_final_command':pre['final_release_command_used']=True
+    if mode=='art_wrong_subject':pre['source_manifest_sha256']='0'*64
+    if mode=='art_wrong_delivery':pre['delivery_spec_sha256']='0'*64
+    if mode=='art_no_evidence':pre['evidence']=[]
+    if mode=='art_future':pre['completed_at']='2026-10-28T13:00:00Z'
+    if mode=='art_fail':pre['status']='FAIL'
+    if mode.startswith('art_') and mode!='art_method':report['checks']['artwork_and_provenance']['evidence']=[self.writej('docs/emma-journey-release/changed-pre-art.json',pre)]
+    if mode in ('missing_check','failed_check','missing_evidence','stale_report','early_report','future_check','early_source') or mode.startswith('art_'):
      scope['checks_report']=self.writej('docs/emma-journey-release/changed-conditional-checks.json',report)
-   with patch.object(s,'CONDITIONAL_QUESTION_SHA256',SYNTHETIC_QUESTION_SHA256),self.subTest(mode=mode),self.assertRaises((AssertionError,OSError)):self.gate(change)
+   with self.synthetic_pins(),self.subTest(mode=mode),self.assertRaises((AssertionError,OSError)):self.gate(change)
+ def test_conditional_unpinned_private_readback_fails_closed(self):
+  def change(b,r,a,o):self.conditional(b,o)
+  with self.synthetic_pins(),patch.object(s,'PRIVATE_READBACK_SHA256',None),self.assertRaisesRegex(AssertionError,'PENDING independently reviewed private readback'):self.gate(change)
  def test_conditional_subject_cannot_be_rebound_to_different_bytes(self):
   for key in ('page_sha256','source_manifest_sha256'):
-   binding={'page_sha256':s.CONDITIONAL_PAGE_SHA256,'source_manifest_sha256':s.CONDITIONAL_SOURCE_MANIFEST_SHA256}
+   binding={'page_sha256':s.CONDITIONAL_PAGE_SHA256,'source_manifest_sha256':s.CONDITIONAL_SOURCE_MANIFEST_SHA256,'delivery_spec_sha256':'f'*64}
    owner={};self.conditional(binding,owner);binding[key]='0'*64;owner['conditional_scope'][key]='0'*64
    with self.subTest(key=key),self.assertRaisesRegex(AssertionError,'conditional acceptance subject changed'):
     s.validate_conditional_acceptance(self.root,owner,binding,[s._time('2026-10-28T12:00:00Z')])
