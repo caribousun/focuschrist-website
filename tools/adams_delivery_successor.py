@@ -130,13 +130,24 @@ def advance(name, raw, root=ROOT):
 def check(root=ROOT):
     for name in mapping(root)["files"]:
         from adams_integration_indices import restore as restore_integration
-        raw = restore_integration(name, local(root, name).read_bytes(), root)
+        actual = local(root, name).read_bytes()
+        raw = restore_integration(name, actual, root)
+        if name == "timeline.html" and sha(raw) != AFTER[name]:
+            # Timeline is now checked as actual current content/navigation, not
+            # against an old page-wide presentation digest. Historical inverse
+            # tests remain separate; do not normalize unknown content.
+            from timeline_selector_semantics import validate
+            try:
+                validate(actual)
+            except (AssertionError, UnicodeError, ValueError) as error:
+                raise ValueError("Adams delivery: changed current delivery: " + name) from error
+            continue
         require(sha(raw) == AFTER[name], "changed current delivery: " + name)
         prior = restore(name, raw, root)
         require(sha(prior) == BEFORE[name], "predecessor mismatch: " + name)
         require(advance(name, prior, root) == raw, "round trip mismatch: " + name)
-    return {"status": "EXACT_ADAMS_DELIVERY_EVIDENCE_PASS", "files": sorted(AFTER),
-            "limits": "Exact byte reconstruction only; no review or publication authorization."}
+    return {"status": "CURRENT_TIMELINE_SEMANTICS_AND_HISTORICAL_INDEX_EVIDENCE_PASS", "files": sorted(AFTER),
+            "limits": "Current Timeline semantic check and historical index reconstruction only; no rendered or release approval."}
 
 
 @contextmanager
@@ -144,8 +155,8 @@ def predecessor_view(root=ROOT):
     """Verify actual Adams first; yield only an exact historical Emma fixture.
 
     This does NOT establish that current checkout files have Emma hashes.
-    All three actual current Adams files must pass their own complete hashes and
-    round trips before the unchanged historical layer is checked separately.
+    Current Timeline semantics and exact historical index hashes/round trips
+    are checked separately before the unchanged historical layer is examined.
     The real checkout is read only; the temporary view contains exactly the
     two reconstructed indices and unchanged Emma manifest, then is removed.
     """

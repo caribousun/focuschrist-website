@@ -1,11 +1,11 @@
 /* The Timeline hero and first-screen introduction use shared Focus geometry. */
 .fc-timeline-choices-section { text-align: center; }
 .fc-timeline-intro { max-width: 660px; color: var(--fc-muted); font-size: clamp(17px,2vw,20px); line-height: 1.75; margin: 0 auto 36px; }
-.fc-timeline-choices { display: flex; flex-wrap: wrap; justify-content: center; align-items: stretch; gap: 16px; }
-.fc-timeline-choice { flex: 0 1 calc((100% - 64px) / 5); min-width: 0; display: flex; flex-direction: column; overflow: hidden; text-align: left; border: 1px solid var(--fc-panel-border); border-radius: var(--fc-radius); background: var(--fc-panel-fill); box-shadow: var(--fc-panel-shadow); }
+body.fc-timeline-page #choose-timeline .fc-timeline-choices { display: flex; flex-wrap: wrap; justify-content: center; align-items: stretch; gap: 16px; }
+.fc-timeline-choice { flex: 0 1 calc(20% - 12.8px); min-width: 0; display: flex; flex-direction: column; overflow: hidden; text-align: left; border: 1px solid var(--fc-panel-border); border-radius: var(--fc-radius); background: var(--fc-panel-fill); box-shadow: var(--fc-panel-shadow); }
 .fc-timeline-choice__link { display: flex; flex: 1; flex-direction: column; color: inherit; text-decoration: none; }
 .fc-timeline-choice__link:focus-visible { outline: 3px solid var(--fc-gold-light); outline-offset: -4px; }
-.fc-timeline-choice__link > img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-bottom: 1px solid var(--fc-panel-border); }
+.fc-timeline-choice__link > img { display: block; width: 100%; height: auto; flex: 0 0 auto; aspect-ratio: 16 / 10; object-fit: cover; border-bottom: 1px solid var(--fc-panel-border); }
 .fc-timeline-choice:nth-child(3) img, .fc-timeline-choice:nth-child(4) img { object-fit: contain; background: #1d3b38; }
 .fc-timeline-choice__body { display: flex; flex: 1; flex-direction: column; align-items: stretch; padding: 18px; }
 .fc-timeline-choice h3 { color: var(--fc-gold-light); font: 400 clamp(1.25rem,1.65vw,1.55rem)/1.2 Georgia,'Times New Roman',serif; margin: 0; }
@@ -13,5 +13,5 @@
 .fc-timeline-choice .fc-button { margin-top: auto; white-space: normal; text-align: center; min-height: 48px; height: auto; line-height: 1.4; padding: 11px 14px; max-width: 100%; }
 .fc-timeline-choice[id] { scroll-margin-top: 90px; }
 .fc-timeline-note { color: var(--fc-muted); max-width: 560px; font-size: 15px; line-height: 1.7; margin: 30px auto 0; }
-@media (max-width: 1000px) { .fc-timeline-choice { flex-basis: calc((100% - 32px) / 3); } }
+@media (max-width: 1000px) { .fc-timeline-choice { flex-basis: calc(33.333333% - 10.666667px); } }
 @media (max-width: 700px) { .fc-timeline-choices { max-width: 480px; margin-inline: auto; } .fc-timeline-choice { flex-basis: 100%; } }

@@ -4,15 +4,17 @@
   "files": {
     ".github/workflows/timeline-selector-diagnostic.yml": "119bba473fb82c82a119371baa8fa6fc6cf853cbf45f9b5ccb7beec48d5a9a99",
     "docs/timeline-selector/historical-c910.html": "c910ae58c2f8feccf1d59f44b154d31f224436b79538e86bf73774c65b0b8c4c",
-    "timeline.css": "d86c4eb4c111a59e2ac3bb32d3baad6edcfe6f2ce0d6d310e9282d3690865b9c",
+    "timeline.css": "fa3b1aa7e6281f91151624ce53cd2ad6b74ce2e301b867851e6a302bb555d0b5",
     "timeline.html": "050e9a1c93e05abf9132ef3eea5cd2317aca13a981ffba1f47ca724afd328baf",
     "tools/continue_motion_binding.py": "8939992651e7b6103b00b5a8de01caf960c6a69f727f1f45064e70fa4948668b",
     "tools/owner_integration_contract.py": "e67aaa2f7f267d3ebe5ba06e8822549d0948ac4ed9a101156cad018c01083f92",
     "tools/owner_integration_successor.py": "987053e1d24ab2bee2884e14e5866d0a32378e27cf8710abb9f68fc374f541c3",
     "tools/test_timeline_selector_semantics.py": "1f45e0a5ad58545f2411ca194485a906268bc43f5f6b16c6ae90c052c83f5c03",
-    "tools/timeline_selector_browser_qa.js": "8c00ef351dbac19c75697b844e62b7bbf166bc1d0b24ce03fbd44d1e080a686b",
+    "tools/timeline_selector_browser_qa.js": "1f863413b99f15aa7a85fdee606372e4f840293a87525399e0bd09ae6516e811",
     "tools/timeline_selector_check.py": "b3e131ae539b1eaa0c2218dcbad40b7d8e31610ef55f5064a99872cbebf87c21",
-    "tools/timeline_selector_semantics.py": "bb21f64d116a0b711f0a8465331b0c14bdce5d456b648e94107399bed980a410"
+    "tools/timeline_selector_semantics.py": "bb21f64d116a0b711f0a8465331b0c14bdce5d456b648e94107399bed980a410",
+    "tools/adams_delivery_successor.py": "a9b58b0f0d5b3ea880bc5270294bc527625c1bfa36b4491caec5d9bcc364bbde",
+    "tools/test_adams_delivery_successor.py": "f148fc7f325108ecf30fa8d3c2830d45c1106d01aee541cd9ff93a751c5df104"
   },
   "dependencies": {
     "shared_current": [
@@ -50,5 +52,5 @@
     ],
     "validation_scope": "Unknown/shared inputs require broad validation. Historic owner manifest and producer receipts remain unmodified; new generator output and producer evidence must be actual, not inferred."
   },
-  "status": "local diagnostic candidate only; rendered results and current generated index evidence pending"
+  "status": "local diagnostic successor; hosted render and current generated index validation pending"
 }

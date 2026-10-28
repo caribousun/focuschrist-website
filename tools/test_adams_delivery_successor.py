@@ -12,7 +12,13 @@ import adams_delivery_successor as gate
 from adams_integration_indices import restore as restore_integration
 
 def historical_input(name):
-    return restore_integration(name, (gate.ROOT / name).read_bytes())
+    if name == "timeline.html":
+        # Historical inverse assertions use the frozen predecessor, never the
+        # changed current UI as a substitute for the old receipt.
+        raw = (gate.ROOT / "docs/timeline-selector/historical-c910.html").read_bytes()
+    else:
+        raw = (gate.ROOT / name).read_bytes()
+    return restore_integration(name, raw)
 
 
 def spans(before, after):
@@ -159,6 +165,28 @@ class SyntheticIndicesTests(unittest.TestCase):
 
 
 class ActualGeneratedIndicesTests(unittest.TestCase):
+    def test_current_selector_semantics_without_historical_page_fixture(self):
+        import adams_integration_indices as integration
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            for name in (gate.MANIFEST, integration.MANIFEST):
+                target = root / name
+                target.parent.mkdir(parents=True, exist_ok=True)
+                target.write_bytes((gate.ROOT / name).read_bytes())
+            for name in gate.AFTER:
+                (root / name).write_bytes((gate.ROOT / name).read_bytes())
+            original = (root / 'timeline.html').read_bytes()
+            self.assertEqual(gate.check(root)['files'], sorted(gate.AFTER))
+            layout = original.replace(b'fc-timeline-choice__body', b'fc-timeline-choice__body layout-test', 1)
+            self.assertNotEqual(layout, original)
+            (root / 'timeline.html').write_bytes(layout)
+            self.assertEqual(gate.check(root)['files'], sorted(gate.AFTER))
+            broken = original.replace(b'timelines/latter-day-saint-church-history-timeline.html', b'timelines/wrong.html', 1)
+            self.assertNotEqual(broken, original)
+            (root / 'timeline.html').write_bytes(broken)
+            with self.assertRaisesRegex(ValueError, 'changed current delivery: timeline.html'):
+                gate.check(root)
+
     def test_historical_view_checks_actual_adams_first_and_leaves_checkout_unchanged(self):
         import emma_generated_indices_successor as emma
         before = {name: historical_input(name) for name in gate.AFTER}
