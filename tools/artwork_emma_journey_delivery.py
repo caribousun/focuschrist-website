@@ -59,6 +59,43 @@ def receipt(root,pointer,expected_reviewer,stage,binding,rejected,face,mandates)
   require(set(r.get('checks',{}))==CHECKS and all(isinstance(x,str) and x.strip() for x in r['checks'].values()),'missing finished observations')
  return r
 
+def validate_role_handoffs(root, pointers, spec_binding, prior_receipts, rejected):
+ """Bind a new current reviewer to verified prior receipts without rewriting them.
+
+ The caller has already independently validated every historic receipt, its
+ source, timing, mandate and sequencing. This checks an explicit documented
+ handoff, not the identity or authenticity of the person behind a record.
+ """
+ if pointers is None:pointers={}
+ require(isinstance(pointers,dict) and set(pointers)<={'Fermi','Newton'},'unknown role handoff')
+ require(set(prior_receipts)=={'Fermi','Newton'},'prior role coverage missing')
+ current={}
+ for who in ('Fermi','Newton'):
+  prior=prior_receipts[who]
+  require(len(prior)==2*len(SCENES),'prior receipt coverage missing')
+  if who not in pointers:
+   # The unchanged historic actor may continue without inventing a handoff.
+   actors={r['actual_actor'] for r in prior.values()}
+   require(len(actors)==1,'documented handoff required for changing role actors')
+   current[who]={'actual_actor':next(iter(actors)),'assigned_at':max(stamp(r['reviewed_at']) for r in prior.values())}
+   continue
+  handoff=json.loads(bound(root,pointers[who]))
+  require(handoff.get('schema')==1 and handoff.get('kind')=='documented_role_handoff','wrong handoff kind')
+  require(handoff.get('role')==who and handoff.get('assigned_by')=='Albert','handoff role or assigning authority mismatch')
+  require(handoff.get('spec_sha256')==spec_binding,'handoff subject mismatch')
+  require(handoff.get('prior_receipts')==prior,'handoff prior receipt bindings mismatch')
+  actor=handoff.get('current_actor');require(isinstance(actor,str) and actor.strip(),'missing current actor')
+  require(isinstance(handoff.get('basis'),str) and handoff['basis'].strip(),'handoff basis missing')
+  require(handoff.get('prior_receipts_reviewed') is True,'prior receipts not reviewed')
+  when=stamp(handoff.get('assigned_at'))
+  require(all(when>=stamp(r['reviewed_at']) for r in prior.values()),'handoff predates a prior receipt')
+  evidence=handoff.get('evidence');require(isinstance(evidence,list) and evidence,'handoff evidence missing')
+  for item in evidence:
+   raw=bound(root,item);require(hashlib.sha256(raw).hexdigest() not in rejected,'rejected handoff evidence')
+  current[who]={'actual_actor':actor,'assigned_at':when}
+ require(current['Fermi']['actual_actor']!=current['Newton']['actual_actor'],'current role actors are not distinct')
+ return current
+
 def validate(root,record,added,covered,rejected,pixel_hash,page_dependencies):
  require(APPROVED_RECORD_SHA256 is not None,'Emma journey exact record pending independent and owner review')
  require(canonical(record)==APPROVED_RECORD_SHA256,'Emma journey unreviewed record')
@@ -69,7 +106,7 @@ def validate(root,record,added,covered,rejected,pixel_hash,page_dependencies):
  page_context=spec['page_context'];names={x['path'] for x in page_context};require(len(names)==len(page_context) and page_dependencies(root,ROUTE)<=names,'incomplete page context')
  for e in page_context:bound(root,e)
  rows=spec['scenes'];ids=[x['id'] for x in rows];require(len(ids)==len(set(ids))==11 and set(ids)==set(SCENES),'wrong or duplicate scene set')
- all_assets=set();hashes=set();pixels=set();original_hashes=set();original_pixels=set();receipt_ids=set();reviewer_actors={};common_mandates=None
+ all_assets=set();hashes=set();pixels=set();original_hashes=set();original_pixels=set();receipt_ids=set();prior_receipts={'Fermi':{},'Newton':{}};common_mandates=None
  for row in rows:
   id=row['id'];origin=id=='origin';pre=row['preflight']
   require(row.get('kind')==('PERSON_FREE_CONTEXT' if origin else 'EMMA_CHARACTER'),'incorrect person-free/character classification')
@@ -94,10 +131,12 @@ def validate(root,record,added,covered,rejected,pixel_hash,page_dependencies):
   pre_receipts=[receipt(root,reviews[name],who,'preflight',prebind,rejected,False,mandate_map) for name,who in [('fermi_preflight','Fermi'),('newton_preflight','Newton')]]
   scene_binding=canonical({k:v for k,v in row.items() if k!='reviews'})
   finished_receipts=[receipt(root,reviews[name],who,'finished',scene_binding,rejected,not origin,mandate_map) for name,who in [('fermi_finished','Fermi'),('newton_finished','Newton')]]
-  for r in pre_receipts+finished_receipts:
-   require(r['receipt_id'] not in receipt_ids,'receipt reused across scenes or stages');receipt_ids.add(r['receipt_id'])
-   who=r['reviewer'];actor=r['actual_actor'];require(who not in reviewer_actors or reviewer_actors[who]==actor,'reviewer actor changed');reviewer_actors[who]=actor
-  require(reviewer_actors['Fermi']!=reviewer_actors['Newton'],'reviewers are not distinct')
+  for stage,receipts in (('preflight',pre_receipts),('finished',finished_receipts)):
+   require(receipts[0]['actual_actor']!=receipts[1]['actual_actor'],'historical stage reviewers are not distinct')
+   for r in receipts:
+    require(r['receipt_id'] not in receipt_ids,'receipt reused across scenes or stages');receipt_ids.add(r['receipt_id'])
+    who=r['reviewer'];key=id+':'+stage;pointer=reviews[who.lower()+'_'+stage]
+    prior_receipts[who][key]={'pointer':pointer,'actual_actor':r['actual_actor'],'receipt_id':r['receipt_id'],'reviewed_at':r['reviewed_at']}
   generation=json.loads(bound(root,row['generation_lineage']))
   require(generation.get('actor')=='Albert' and generation.get('scene_id')==id and generation.get('prompt_sha256')==pre['prompt']['sha256'] and generation.get('output_sha256')==row['original']['sha256'],'generation provenance mismatch')
   require(generation.get('reference_sha256')==[x['sha256'] for x in refs] and generation.get('edit_target_sha256')==(pre['edit_target']['sha256'] if pre.get('edit_target') else None),'generation input order/target mismatch')
@@ -134,14 +173,16 @@ def validate(root,record,added,covered,rejected,pixel_hash,page_dependencies):
   for x in row['derivative_lineage']['evidence']:bound(root,x)
   original_hashes.add(orig['sha256']);original_pixels.add(orig['pixel_sha256'])
  require(all_assets==ASSETS and all_assets<=added and not all_assets&covered,'exact 44 new assets required without overlap')
- binding=canonical(spec);reviewers=set()
+ binding=canonical(spec);handoffs=validate_role_handoffs(root,record.get('role_handoffs'),binding,prior_receipts,rejected);reviewers=set();current_actors=set()
  for pointer in record['assembled_reviews']:
   obj=json.loads(bound(root,pointer));who=obj.get('reviewer');require(who in {'Fermi','Newton','Albert'} and who not in reviewers,'duplicate or unknown assembled reviewer')
   require(obj.get('mandate_bindings')==mandate_map,'assembled reviewer mandate readback mismatch')
   require(obj.get('stage')=='assembled' and obj.get('verdict')=='PASS' and obj.get('withdrawn') is False and obj.get('binding_sha256')==binding,'stale assembled review')
   require(obj.get('actual_actor') and obj.get('observations') and obj.get('evidence') and obj.get('full_context_inspected') is True,'missing assembled review evidence');stamp(obj['reviewed_at'])
-  if who in reviewer_actors:require(obj['actual_actor']==reviewer_actors[who],'assembled reviewer actor mismatch')
-  else:require(obj['actual_actor'] not in reviewer_actors.values(),'root reviewer is not distinct');reviewer_actors[who]=obj['actual_actor']
+  require(obj['actual_actor'] not in current_actors,'assembled reviewers are not distinct');current_actors.add(obj['actual_actor'])
+  if who in handoffs:
+   require(obj['actual_actor']==handoffs[who]['actual_actor'],'assembled reviewer actor mismatch')
+   require(stamp(obj['reviewed_at'])>=handoffs[who]['assigned_at'],'assembled review predates handoff')
   require(set(obj.get('checks',{}))==CHECKS and all(isinstance(x,str) and x.strip() for x in obj['checks'].values()),'assembled review observations incomplete')
   for x in obj['evidence']:bound(root,x)
   if who=='Albert':

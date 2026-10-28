@@ -45,12 +45,21 @@ class Delivery(unittest.TestCase):
      reviews[who.lower()+'_'+phase]=j('reviews/'+id+'-'+who+'-'+phase+'.json',doc)
    row['reviews']=reviews;rows.append(row)
   spec={'route':v.ROUTE,'page_source':page,'page_context':[],'scenes':rows};binding=v.canonical(spec);assembled=[]
+  # Test-only new actors explicitly bind, but do not impersonate, the prior reviewers.
+  handoffs={}
+  for who in ('Fermi','Newton'):
+   prior={}
+   for row in rows:
+    for stage in ('preflight','finished'):
+     ptr=row['reviews'][who.lower()+'_'+stage];old=json.loads((root/ptr['path']).read_bytes())
+     prior[row['id']+':'+stage]={'pointer':ptr,'actual_actor':old['actual_actor'],'receipt_id':old['receipt_id'],'reviewed_at':old['reviewed_at']}
+   handoffs[who]=j('reviews/handoff-'+who+'.json',{'schema':1,'kind':'documented_role_handoff','role':who,'assigned_by':'Albert','spec_sha256':binding,'current_actor':who+' current synthetic','basis':'synthetic continuity only','prior_receipts_reviewed':True,'assigned_at':'2026-10-28T12:30:00Z','prior_receipts':prior,'evidence':[common]})
   for who in ('Fermi','Newton','Albert'):
-   doc={'reviewer':who,'stage':'assembled','verdict':'PASS','withdrawn':False,'binding_sha256':binding,'actual_actor':who+' synthetic','observations':'synthetic','reviewed_at':'2026-10-28T13:00:00Z','evidence':[common],'full_context_inspected':True,'checks':{x:'synthetic' for x in v.CHECKS},'mandate_bindings':mandate_map}
+   doc={'reviewer':who,'stage':'assembled','verdict':'PASS','withdrawn':False,'binding_sha256':binding,'actual_actor':(who+' current synthetic' if who in ('Fermi','Newton') else who+' synthetic'),'observations':'synthetic','reviewed_at':'2026-10-28T13:00:00Z','evidence':[common],'full_context_inspected':True,'checks':{x:'synthetic' for x in v.CHECKS},'mandate_bindings':mandate_map}
    if who=='Albert':doc['rendered']={'desktop':common,'phone':common}
    assembled.append(j('reviews/assembled-'+who+'.json',doc))
   owner=j('reviews/owner.json',{'kind':'direct_owner_acceptance','actor':'Wyatt','verdict':'ACCEPT','subject_sha256':binding,'evidence':[common]})
-  cls.record={'schema':1,'status':'REVIEWED_EXACT_EMMA_JOURNEY','spec':spec,'assembled_reviews':assembled,'owner_acceptance':owner}
+  cls.record={'schema':1,'status':'REVIEWED_EXACT_EMMA_JOURNEY','spec':spec,'role_handoffs':handoffs,'assembled_reviews':assembled,'owner_acceptance':owner}
  @classmethod
  def tearDownClass(cls):
   v.ID_MASTER,v.EXPRESSION=cls.old_pins;cls.tmp.cleanup()
@@ -60,6 +69,12 @@ class Delivery(unittest.TestCase):
    return v.validate(self.root,r,set(v.ASSETS) if added is None else added,set() if covered is None else covered,set(),pix,lambda root,route:set())
  def test_synthetic_complete_path(self):
   assets,hashes,pixels=self.check();self.assertEqual(len(assets),44);self.assertEqual(len(hashes),44);self.assertEqual(len(pixels),44)
+ def test_unchanged_historical_actors_may_continue_without_handoff(self):
+  r=copy.deepcopy(self.record);del r['role_handoffs']
+  for index,who in enumerate(('Fermi','Newton')):
+   ptr=r['assembled_reviews'][index];doc=json.loads((self.root/ptr['path']).read_bytes());doc['actual_actor']=who+' synthetic'
+   raw=json.dumps(doc,sort_keys=True).encode();name='reviews/assembled-unchanged-'+who+'.json';(self.root/name).write_bytes(raw);r['assembled_reviews'][index]={'path':name,'bytes':len(raw),'sha256':sha(raw)}
+  self.assertEqual(len(self.check(r)[0]),44)
  def test_actual_pin_is_pending(self):
   self.assertIsNone(v.APPROVED_RECORD_SHA256)
   with self.assertRaisesRegex(ValueError,'pending'):v.validate(self.root,self.record,set(v.ASSETS),set(),set(),pix,lambda root,route:set())
@@ -79,6 +94,37 @@ class Delivery(unittest.TestCase):
    r=copy.deepcopy(self.record);ptr=r['spec']['scenes'][0]['reviews']['fermi_preflight'];doc=json.loads((self.root/ptr['path']).read_bytes());doc[field]=value
    raw=json.dumps(doc,sort_keys=True).encode();name='reviews/mutated-'+field+'.json';f=self.root/name;f.write_bytes(raw);r['spec']['scenes'][0]['reviews']['fermi_preflight']={'path':name,'bytes':len(raw),'sha256':sha(raw)}
    with self.subTest(field=field),self.assertRaises(ValueError):self.check(r)
+ def test_handoff_requires_exact_prior_role_and_distinct_current_actors(self):
+  # Mutations are synthetic; none assert that a real review occurred.
+  for mode in ('missing','missing_prior','altered_hash','wrong_role','wrong_spec','same_actor','invented_prior','unread','no_evidence','predates_prior'):
+   r=copy.deepcopy(self.record)
+   if mode=='missing':
+    del r['role_handoffs']['Fermi']
+   else:
+    role='Newton' if mode=='same_actor' else 'Fermi';ptr=r['role_handoffs'][role]
+    doc=json.loads((self.root/ptr['path']).read_bytes());first=next(iter(doc['prior_receipts']))
+    if mode=='missing_prior':del doc['prior_receipts'][first]
+    if mode=='altered_hash':doc['prior_receipts'][first]['pointer']['sha256']='0'*64
+    if mode=='wrong_role':doc['role']='Newton'
+    if mode=='wrong_spec':doc['spec_sha256']='0'*64
+    if mode=='unread':doc['prior_receipts_reviewed']=False
+    if mode=='same_actor':doc['current_actor']='Fermi current synthetic'
+    if mode=='invented_prior':doc['prior_receipts'][first]['actual_actor']='invented precreation actor'
+    if mode=='no_evidence':doc['evidence']=[]
+    if mode=='predates_prior':doc['assigned_at']='2026-10-28T11:00:00Z'
+    raw=json.dumps(doc,sort_keys=True).encode();name='reviews/handoff-mutated-'+mode+'.json';(self.root/name).write_bytes(raw);r['role_handoffs'][role]={'path':name,'bytes':len(raw),'sha256':sha(raw)}
+   with self.subTest(mode=mode),self.assertRaises((ValueError,KeyError)):self.check(r)
+ def test_altered_prior_receipt_bytes_are_rejected(self):
+  pointer=self.record['spec']['scenes'][0]['reviews']['fermi_preflight'];target=self.root/pointer['path'];original=Path.read_bytes
+  def tamper(path):
+   raw=original(path)
+   return raw+b' ' if path==target else raw
+  with patch.object(Path,'read_bytes',tamper),self.assertRaises(ValueError):self.check()
+ def test_prior_stage_must_have_distinct_actual_actors(self):
+  for stage in ('preflight','finished'):
+   r=copy.deepcopy(self.record);row=r['spec']['scenes'][0];ptr=row['reviews']['newton_'+stage];doc=json.loads((self.root/ptr['path']).read_bytes());doc['actual_actor']='Fermi synthetic'
+   raw=json.dumps(doc,sort_keys=True).encode();name='reviews/prior-same-actor-'+stage+'.json';(self.root/name).write_bytes(raw);row['reviews']['newton_'+stage]={'path':name,'bytes':len(raw),'sha256':sha(raw)}
+   with self.subTest(stage=stage),self.assertRaisesRegex(ValueError,'historical stage reviewers are not distinct'):self.check(r)
  def test_different_valid_webp_is_not_a_derivative(self):
   import shutil
   with tempfile.TemporaryDirectory() as d:
