@@ -9,6 +9,8 @@ on:
       - assets/page-art/emma-journey/**
       - sitemap.xml
       - tools/emma_journey_preview_qa.js
+      - tools/emma_capture_pixel_guard.js
+      - tools/test_emma_capture_pixel_guard.js
       - .github/workflows/emma-journey-preview.yml
   workflow_dispatch:
 permissions:
@@ -29,10 +31,11 @@ jobs:
           python -m pip install -r tools/qa-requirements.txt
           npm install --prefix /tmp/focus-row-qa --no-save --package-lock=false --ignore-scripts playwright@1.55.1 leaflet@1.9.4
           /tmp/focus-row-qa/node_modules/.bin/playwright install --with-deps chromium
+          node tools/test_emma_capture_pixel_guard.js
       - name: Record exact provenance and geometry baseline
         run: |
           mkdir -p .qa-artifacts/emma-journey
-          { git rev-parse HEAD; git log -1 --format='parents %P'; sha256sum history/emma-hale-smith.html history/emma-elect-lady.html history/emma-hymns.html sitemap.xml tools/emma_journey_preview_qa.js .github/workflows/emma-journey-preview.yml; find assets/page-art/emma-journey -type f -print0 | sort -z | xargs -0 sha256sum; } > .qa-artifacts/emma-journey/provenance.txt
+          { git rev-parse HEAD; git log -1 --format='parents %P'; sha256sum history/emma-hale-smith.html history/emma-elect-lady.html history/emma-hymns.html sitemap.xml tools/emma_journey_preview_qa.js tools/emma_capture_pixel_guard.js tools/test_emma_capture_pixel_guard.js .github/workflows/emma-journey-preview.yml; find assets/page-art/emma-journey -type f -print0 | sort -z | xargs -0 sha256sum; } > .qa-artifacts/emma-journey/provenance.txt
       - name: Generate canonical panel inventory (current contract may block)
         id: panel
         continue-on-error: true
