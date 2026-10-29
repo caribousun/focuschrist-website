@@ -12,7 +12,7 @@ import timeline_search_index_successor as index
 INDEX_REVIEW_SHA256='12e8961b940808e54a41515b6294983a4af0cf6cfc29a527e84f7e5767dbebe7'
 # The previously reviewed code receipt remains on disk as historical evidence.
 # A fresh independent review must bind the exact content-ledger successor too.
-CODE_REVIEW_SHA256=None
+CODE_REVIEW_SHA256='61adfafdd692c75568f4de05d9609615c5440474b5c33666016746bc97f2f59b'
 INDEX_REVIEW='docs/timeline-controls-successor/current-index-review.json'
 CODE_REVIEW='docs/timeline-controls-successor/current-code-review.json'
 TREE_PROJECTION='docs/timeline-controls-successor/historical-tool-tree.json'
