@@ -1,7 +1,7 @@
 {
   "checks": {
     "artwork_and_provenance": {
-      "completed_at": "2026-10-29T01:35:28.731564+00:00",
+      "completed_at": "2026-10-29T02:21:07.103214+00:00",
       "evidence": [
         {
           "bytes": 622,
@@ -13,7 +13,7 @@
       "status": "PASS"
     },
     "desktop_render": {
-      "completed_at": "2026-10-29T01:35:28.731564+00:00",
+      "completed_at": "2026-10-29T02:21:07.103214+00:00",
       "evidence": [
         {
           "bytes": 1138,
@@ -30,7 +30,7 @@
       "status": "PASS"
     },
     "gallery": {
-      "completed_at": "2026-10-29T01:35:28.731564+00:00",
+      "completed_at": "2026-10-29T02:21:07.103214+00:00",
       "evidence": [
         {
           "bytes": 1507,
@@ -56,7 +56,7 @@
       "status": "PASS"
     },
     "narrow_render": {
-      "completed_at": "2026-10-29T01:35:28.731564+00:00",
+      "completed_at": "2026-10-29T02:21:07.103214+00:00",
       "evidence": [
         {
           "bytes": 1138,
@@ -68,7 +68,7 @@
       "status": "PASS"
     },
     "navigation_and_controls": {
-      "completed_at": "2026-10-29T01:35:28.731564+00:00",
+      "completed_at": "2026-10-29T02:21:07.103214+00:00",
       "evidence": [
         {
           "bytes": 1138,
@@ -95,7 +95,7 @@
       "status": "PASS"
     },
     "panel": {
-      "completed_at": "2026-10-29T01:35:28.731564+00:00",
+      "completed_at": "2026-10-29T02:21:07.103214+00:00",
       "evidence": [
         {
           "bytes": 1507,
@@ -121,7 +121,7 @@
       "status": "PASS"
     },
     "phone_render": {
-      "completed_at": "2026-10-29T01:35:28.731564+00:00",
+      "completed_at": "2026-10-29T02:21:07.103214+00:00",
       "evidence": [
         {
           "bytes": 1138,
@@ -138,7 +138,7 @@
       "status": "PASS"
     },
     "search": {
-      "completed_at": "2026-10-29T01:35:28.731564+00:00",
+      "completed_at": "2026-10-29T02:21:07.103214+00:00",
       "evidence": [
         {
           "bytes": 1507,
@@ -164,7 +164,7 @@
       "status": "PASS"
     },
     "source_and_prose": {
-      "completed_at": "2026-10-29T01:35:28.731564+00:00",
+      "completed_at": "2026-10-29T02:21:07.103214+00:00",
       "evidence": [
         {
           "bytes": 40717,
@@ -230,18 +230,18 @@
       "status": "PASS"
     },
     "validator_code_review": {
-      "completed_at": "2026-10-29T01:35:28.731564+00:00",
+      "completed_at": "2026-10-29T02:21:07.103214+00:00",
       "evidence": [
         {
           "bytes": 784,
           "path": "docs/emma-journey-public/code-review-proof.json",
-          "sha256": "2b3c6ed6fa3c282c704f0581da2b5708545680e4956223eda8c342a1b995e547"
+          "sha256": "55ac22644bdc0e5d45d697477790c4220f45fc86a2c9666d379f7e2b0c34ada2"
         }
       ],
       "status": "PASS"
     }
   },
-  "completed_at": "2026-10-29T01:35:28.731564+00:00",
+  "completed_at": "2026-10-29T02:21:07.103214+00:00",
   "limitations": [
     "not_aggregate_qa",
     "not_release_approval",
@@ -250,12 +250,13 @@
     "narrow_inspection_attributed",
     "individual_figure_capture_hashes_not_all_recorded",
     "owner_acceptance_does_not_attest_later_index_hashes",
-    "browser_caption_qa_pending_hosted"
+    "browser_caption_qa_pending_hosted",
+    "remote_preview_checks_pending_hosted"
   ],
-  "private_checks_receipt_sha256": "258288d5f63b60b9aab094a0f81d56ed413eb6009f10745b2fd7c2840cf88ae1",
+  "private_checks_receipt_sha256": "3f3c287bee2f42995949dfa5b9888d24eb30e6248648db4ebef5f12125578f54",
   "schema": "emma-public-pre-release-checks-v1",
   "status": "PASS",
   "subject_sha256": "6495aaa91690e698ea304e7cbbee3ff3e40d5b8b490d2f656190056caeabc8a0",
   "verification_sha256": "903e4289b665a8df19855e0b04e6e5bdb8989208db2b5bf3e83c496de6222613",
-  "verifier_commitment": "2b6283f0c7d06100a5cb2ae90c977f0cd66777e881c2ecbef0b8c85774d56eb7"
+  "verifier_commitment": "0bbc0130d4bb79fa938a26dc2fe0ef25f218f8ef93773192e86fc822748063af"
 }

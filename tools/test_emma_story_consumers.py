@@ -8,8 +8,17 @@ import unittest
 from html.parser import HTMLParser
 from bs4 import BeautifulSoup
 import emma_story_consumers as e
+import emma_retirement_consumers_successor as current
+from owner_journey_successor import historical_fixture, validate_redirect
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def historical_source(route):
+    raw = (ROOT / route).read_bytes()
+    if route == current.RETIRED:
+        raw = historical_fixture(route, raw, ROOT)
+    return raw.decode('utf-8')
 
 
 def source_function(name):
@@ -27,7 +36,7 @@ def source_function(name):
 
 class EmmaConsumerTests(unittest.TestCase):
     def setUp(self):
-        self.route = sorted(e.EMMA_STORY_ROUTES)[0]
+        self.route = sorted(current.CURRENT)[0]
         self.system = {p: [e.SYSTEM_REF] for p in e.EMMA_STORY_ROUTES}
         self.system['old.html'] = ['old-ref']
         self.viewer = {p: copy.deepcopy(e.VIEWER_REFS) for p in e.EMMA_STORY_ROUTES}
@@ -84,10 +93,16 @@ class EmmaConsumerTests(unittest.TestCase):
         with self.assertRaises(AssertionError): e.historical_routes(pages + [pages[0]])
         self.assertIn('unknown.html', e.historical_routes(pages + ['unknown.html']))
 
-    def test_all_actual_reading_first_pages(self):
-        for route in e.EMMA_STORY_ROUTES:
+    def test_all_actual_reading_first_pages_and_exact_redirect(self):
+        validate_redirect((ROOT / current.RETIRED).read_bytes())
+        for route in current.CURRENT:
             text = (ROOT / route).read_text()
             e.assert_story_opening(route, text, BeautifulSoup(text, 'html.parser'))
+
+    def test_retired_predecessor_opening_is_preserved_as_a_fixture(self):
+        # Match Path.read_text's universal-newline normalization for the old bytes.
+        text = historical_source(current.RETIRED).replace('\r\n', '\n').replace('\r', '\n')
+        e.assert_story_opening(current.RETIRED, text, BeautifulSoup(text, 'html.parser'))
 
     def test_unknown_opening_owner(self):
         text = (ROOT / self.route).read_text()
@@ -119,7 +134,21 @@ class ActualViewerParserTests(unittest.TestCase):
         return scope['viewer_bindings']
 
     def sources(self):
-        return {route: (ROOT / route).read_text() for route in e.EMMA_STORY_ROUTES}
+        return {route: historical_source(route) for route in e.EMMA_STORY_ROUTES}
+
+    def test_four_actual_viewer_bindings_and_verified_redirect(self):
+        validate_redirect((ROOT / current.RETIRED).read_bytes())
+        sources = {route: (ROOT / route).read_text() for route in current.CURRENT}
+        bindings = self.parser()(sources)
+        self.assertEqual(set(bindings), current.CURRENT)
+        self.assertTrue(current.reviewed_viewer_additions(bindings, lambda historical: historical == {}))
+        self.assertNotIn(current.RETIRED, self.parser()({current.RETIRED: (ROOT / current.RETIRED).read_text()}))
+        for route in current.CURRENT:
+            changed = dict(bindings); del changed[route]
+            self.assertFalse(current.reviewed_viewer_additions(changed, lambda _: True))
+            changed = copy.deepcopy(bindings); changed[route][1][1]['src'] += '-unknown'
+            self.assertFalse(current.reviewed_viewer_additions(changed, lambda _: True))
+        self.assertFalse(current.reviewed_viewer_additions(dict(bindings, **{current.RETIRED: e.VIEWER_REFS}), lambda _: True))
 
     def test_actual_five_parser_shapes_and_additive_acceptance(self):
         bindings = self.parser()(self.sources())
@@ -161,7 +190,7 @@ class ActualHistoryOwnerTests(unittest.TestCase):
         return scope['reviewed_owner_consumers']
 
     def sources(self):
-        sources = {route: (ROOT / route).read_text() for route in e.EMMA_STORY_ROUTES}
+        sources = {route: historical_source(route) for route in e.EMMA_STORY_ROUTES}
         for route in self.owners:
             sources[route] = '<link rel="stylesheet" href="../history-stories.css?v=historical">'
         return sources
@@ -207,10 +236,16 @@ class ActualControllerRegistryTests(unittest.TestCase):
     def test_actual_registry_and_five_parser_bindings(self):
         registry, rows = self.inputs(); expected = self.build()(registry, rows)
         self.assertEqual(len(expected), 125)
-        for route in e.EMMA_STORY_ROUTES:
+        validate_redirect((ROOT / current.RETIRED).read_bytes())
+        for route in current.CURRENT:
             doc = BeautifulSoup((ROOT / route).read_text(), 'html.parser')
             refs = [x['src'] for x in doc.select('script[src]') if 'topic-artwork-details.js' in x['src']]
             self.assertEqual(refs, registry[route]); self.assertEqual(refs, expected[route])
+        retired = BeautifulSoup((ROOT / current.RETIRED).read_text(), 'html.parser')
+        self.assertFalse([x for x in retired.select('script[src]') if 'topic-artwork-details.js' in x['src']])
+        live = dict(expected); del live[current.RETIRED]
+        import illustrated_study_navigation_qa as illustrated
+        illustrated.assert_controller_bindings(live)
         self.assertEqual(len(set(expected) - e.EMMA_STORY_ROUTES), 120)
 
     def test_each_new_registry_omission_duplicate_version_unknown(self):
