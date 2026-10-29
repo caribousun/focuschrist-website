@@ -3,7 +3,11 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 module.exports=async function(page,origin,out){
  assert.equal(process.env.CI,'true','Hosted CI only');
- const results=[];
+ const results=[];let desktopReference;
+ const geometry=()=>page.evaluate(()=>{
+  const bounds=(selector,parent)=>{const r=document.querySelector(selector).getBoundingClientRect(),p=document.querySelector(parent).getBoundingClientRect();return {x:r.x-p.x,y:r.y-p.y,width:r.width,height:r.height};};
+  return Object.fromEntries([['view','.view-switch','.workspace-toolbar'],['search','#q','.workspace-toolbar'],['filters','#workspaceFilterState','.workspace-toolbar'],['playback','.mapplayback','.maptoolband'],['play','#playBtn','.maptoolband'],['year','#yearInput','.maptoolband'],['time','#timeSeg','.maptoolband'],['speed','#speedSeg','.maptoolband'],['options','.map-options-row','.maptoolband']].map(([name,node,parent])=>[name,bounds(node,parent)]));
+ });
  for(const profile of [{name:'desktop',width:1366,height:900},{name:'phone',width:390,height:844}]){
   await page.setViewportSize({width:profile.width,height:profile.height});
   await page.goto(origin+'/timelines/world-and-scripture-timeline.html#viewer',{waitUntil:'load'});
@@ -13,6 +17,7 @@ module.exports=async function(page,origin,out){
   const viewPanel=page.locator('#mobileViewControls'),playPanel=page.locator('#mobilePlaybackControls');
   if(profile.width<=900){
    assert(await viewToggle.isVisible()&&await playToggle.isVisible(),'Both mobile disclosure controls are visible');
+   assert.equal(await viewToggle.getAttribute('aria-controls'),'mobileViewControls');assert.equal(await playToggle.getAttribute('aria-controls'),'mobilePlaybackControls');
    assert.equal(await viewToggle.getAttribute('aria-expanded'),'false');assert.equal(await playToggle.getAttribute('aria-expanded'),'false');
    assert(!(await viewPanel.isVisible())&&!(await playPanel.isVisible()),'Both mobile panels start compact');
    assert.match(await viewToggle.innerText(),/Moment & Map/);assert.match(await playToggle.innerText(),/Playback.*\d/);
@@ -20,17 +25,41 @@ module.exports=async function(page,origin,out){
    await page.locator('.workspace-toolbar').screenshot({path:path.join(out,'mobile-collapse-view-closed.png'),animations:'disabled'});
    await page.locator('.maptoolband').scrollIntoViewIfNeeded();await page.locator('.maptoolband').screenshot({path:path.join(out,'mobile-collapse-playback-closed.png'),animations:'disabled'});
    await viewToggle.focus();await page.keyboard.press('Enter');assert.equal(await viewToggle.getAttribute('aria-expanded'),'true');assert(await viewPanel.isVisible());
-   await page.locator('#q').fill('Egypt');await viewToggle.focus();await page.keyboard.press('Space');assert(!(await viewPanel.isVisible()));assert(await viewToggle.evaluate(n=>document.activeElement===n));
-   await viewToggle.click();assert.equal(await page.locator('#q').inputValue(),'Egypt');await page.locator('#q').fill('');
+   await page.locator('#q').fill('Egypt');await page.locator('#modeOverview').click();assert(await page.locator('#gwrap').isVisible());
+   const mobileFilter=page.locator('#workspaceFilterState');await mobileFilter.click();await page.locator('#catChips [data-cat="bible"]').click();await mobileFilter.click();
+   assert.equal(await page.locator('#catChips [data-cat="bible"]').getAttribute('aria-pressed'),'false');
+   for(let i=0;i<2;i++){
+    await viewToggle.focus();await page.keyboard.press('Space');assert(!(await viewPanel.isVisible()));assert(await viewToggle.evaluate(n=>document.activeElement===n));
+    await viewToggle.focus();await page.keyboard.press('Enter');assert(await viewPanel.isVisible());
+    assert(!(await playPanel.isVisible()),'View toggles leave playback collapsed');
+    assert.equal(await page.locator('#q').inputValue(),'Egypt');assert(await page.locator('#modeOverview').evaluate(n=>n.classList.contains('on')));
+    assert.equal(await page.locator('#catChips [data-cat="bible"]').getAttribute('aria-pressed'),'false');
+   }
+   await page.locator('#modeMap').click();assert(await page.locator('#mapview').isVisible());
    await playToggle.focus();await page.keyboard.press('Enter');assert.equal(await playToggle.getAttribute('aria-expanded'),'true');assert(await playPanel.isVisible());
-   await page.locator('#yearInput').fill('-600');await page.locator('#yearInput').dispatchEvent('change');await page.locator('#playSpeed').selectOption('2');
-   await playToggle.focus();await page.keyboard.press('Space');assert(!(await playPanel.isVisible()));assert(await playToggle.evaluate(n=>document.activeElement===n));
-   await playToggle.click();assert.equal(await page.locator('#yearInput').inputValue(),'-600');assert.equal(await page.locator('#playSpeed').inputValue(),'2');
+   const originalYear=await page.locator('#yearInput').inputValue(),originalSpeed=await page.locator('#playSpeed').inputValue();
+   const changedYear=originalYear==='-610'?'-620':'-610';assert.notEqual(changedYear,originalYear);
+   await page.locator('#yearInput').fill(changedYear);await page.locator('#yearInput').dispatchEvent('change');await page.locator('#playSpeed').selectOption('2');
+   for(let i=0;i<2;i++){
+    await playToggle.focus();await page.keyboard.press('Space');assert(!(await playPanel.isVisible()));assert(await playToggle.evaluate(n=>document.activeElement===n));
+    assert(await viewPanel.isVisible(),'Playback collapse leaves the view panel open');
+    await playToggle.focus();await page.keyboard.press('Enter');assert(await playPanel.isVisible());
+    assert.equal(await page.locator('#yearInput').inputValue(),changedYear);assert.equal(await page.locator('#playSpeed').inputValue(),'2');
+    assert.equal(await page.locator('#q').inputValue(),'Egypt');assert.equal(await page.locator('#catChips [data-cat="bible"]').getAttribute('aria-pressed'),'false');assert(await page.locator('#modeMap').evaluate(n=>n.classList.contains('on')));
+   }
+   await viewToggle.focus();await page.keyboard.press('Space');assert(!(await viewPanel.isVisible())&&await playPanel.isVisible());
+   await viewToggle.focus();await page.keyboard.press('Enter');assert(await viewPanel.isVisible()&&await playPanel.isVisible());
+   assert.equal(await page.locator('#yearInput').inputValue(),changedYear);assert.equal(await page.locator('#q').inputValue(),'Egypt');assert.equal(await page.locator('#catChips [data-cat="bible"]').getAttribute('aria-pressed'),'false');assert(await page.locator('#modeMap').evaluate(n=>n.classList.contains('on')));
+   await page.locator('#yearInput').fill(originalYear);await page.locator('#yearInput').dispatchEvent('change');await page.locator('#playSpeed').selectOption(originalSpeed);
+   await page.locator('#q').fill('');await mobileFilter.click();await page.locator('#catChips [data-cat="bible"]').click();await mobileFilter.click();
    await page.locator('.workspace-toolbar').scrollIntoViewIfNeeded();await page.locator('.workspace-toolbar').screenshot({path:path.join(out,'mobile-collapse-view-open.png'),animations:'disabled'});
    await page.locator('.maptoolband').scrollIntoViewIfNeeded();await page.locator('.maptoolband').screenshot({path:path.join(out,'mobile-collapse-playback-open.png'),animations:'disabled'});
   }else{
    assert(!(await viewToggle.isVisible())&&!(await playToggle.isVisible()),'Desktop has no mobile toggles');
    assert(await viewPanel.isVisible()&&await playPanel.isVisible(),'Desktop controls remain visible');
+   await page.evaluate(()=>document.fonts.ready);desktopReference=await geometry();
+   await page.locator('.workspace-toolbar').screenshot({path:path.join(out,'mobile-collapse-desktop-view-before.png'),animations:'disabled'});
+   await page.locator('.maptoolband').scrollIntoViewIfNeeded();await page.locator('.maptoolband').screenshot({path:path.join(out,'mobile-collapse-desktop-playback-before.png'),animations:'disabled'});
   }
   const counts=()=>page.evaluate(()=>{
    const svg=document.querySelectorAll('#worldmap .ghostpath,#worldmap .routepath,#worldmap .party,#worldmap .routelabel').length;
@@ -71,8 +100,15 @@ module.exports=async function(page,origin,out){
   await page.locator('#mapSettingsClose').click();assert(!(await settings.evaluate(n=>n.open)),'Map settings closes through its control');await page.locator('#modeChart').click();assert(await page.locator('#river').isVisible(),'Explicit Timeline remains available');
   await page.locator('#modeMap').click();assert(await page.locator('#mapview').isVisible(),'Explicit return to map remains available');
   if(profile.width<=900){
+   await filterSummary.click();await page.locator('#catChips [data-cat="bible"]').click();await filterSummary.click();
+   await page.waitForFunction(()=>document.getElementById('workspaceFilterState').textContent.trim()==='All records · All regions');
    await viewToggle.click();assert(!(await viewPanel.isVisible()));
    await page.setViewportSize({width:1366,height:900});assert(await viewPanel.isVisible()&&!(await viewToggle.isVisible()),'Desktop resize restores controls');
+   await page.evaluate(()=>document.fonts.ready);await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+   const resized=await geometry();assert(desktopReference,'Desktop reference was captured');
+   for(const key of Object.keys(desktopReference))for(const metric of ['x','y','width','height'])assert(Math.abs(resized[key][metric]-desktopReference[key][metric])<1,'Desktop geometry changed after resize: '+key+' '+metric);
+   await page.locator('.workspace-toolbar').screenshot({path:path.join(out,'mobile-collapse-desktop-view-after.png'),animations:'disabled'});
+   await page.locator('.maptoolband').scrollIntoViewIfNeeded();await page.locator('.maptoolband').screenshot({path:path.join(out,'mobile-collapse-desktop-playback-after.png'),animations:'disabled'});
    await page.locator('#q').focus();await page.setViewportSize({width:profile.width,height:profile.height});
    await page.waitForFunction(()=>document.activeElement===document.getElementById('mobileViewToggle'));
    assert(!(await viewPanel.isVisible()),'Returning to mobile restores collapsed state');
