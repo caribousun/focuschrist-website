@@ -2,6 +2,7 @@
 import json, shutil, tempfile, unittest
 from pathlib import Path
 import topic_inline_scripture_qa as qa
+from owner_journey_successor import RETIRED, validate_redirect
 ROOT=Path(__file__).resolve().parents[1]
 
 class EmmaScriptureTests(unittest.TestCase):
@@ -13,7 +14,9 @@ class EmmaScriptureTests(unittest.TestCase):
  def check(self):return qa.check_scriptures(self.root,list(qa.EMMA_STORIES),[])
  def change(self,old,new):
   p=self.root/'history/emma-hymns.html';s=p.read_text();self.assertIn(old,s);p.write_text(s.replace(old,new))
- def test_actual_five_pages(self):self.assertEqual(self.check(),5)
+ def test_actual_scripture_links_and_verified_redirect(self):
+  validate_redirect((self.root/RETIRED).read_bytes())
+  self.assertEqual(self.check(),4)
  def test_exact_nine_owners(self):self.assertEqual(qa.checked_history_routes(list(qa.HISTORICAL_STORIES+qa.EMMA_STORIES)),list(qa.HISTORICAL_STORIES+qa.EMMA_STORIES))
  def test_each_missing_owner(self):
   for name in qa.HISTORICAL_STORIES+qa.EMMA_STORIES:

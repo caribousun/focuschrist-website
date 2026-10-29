@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Gate canonical-page visual coverage and exact source/thumbnail relationships."""
 import hashlib,json
+from resource_coverage_contract import validate_coverage
 from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlsplit,unquote
@@ -22,7 +23,7 @@ sources={r['key']:r for r in json.loads((ROOT/'docs/watch-source-ledger.json').r
 sources.update({r['key']:r for r in json.loads((ROOT/'docs/resource-thumbnail-ledger.json').read_text())['resources']})
 coverage=json.loads((ROOT/'docs/resource-page-coverage.json').read_text()); errors=[];count=0
 canonical={urlsplit(x.text).path.lstrip('/') or 'index.html' for x in ET.parse(ROOT/'sitemap.xml').getroot().findall('{*}url/{*}loc')}
-assert set(coverage)==canonical,'Every canonical page needs explicit coverage'
+validate_coverage(coverage,canonical)
 # The former mask card is now a source-linked figure in the complete portrait journey.
 from bs4 import BeautifulSoup
 bridge=BeautifulSoup((ROOT/'joseph-smith-likeness.html').read_text(encoding='utf-8'),'html.parser')

@@ -1,7 +1,7 @@
 {
   "checks": {
     "artwork_and_provenance": {
-      "completed_at": "2026-10-29T01:03:20.672429+00:00",
+      "completed_at": "2026-10-29T01:35:28.731564+00:00",
       "evidence": [
         {
           "bytes": 622,
@@ -13,7 +13,7 @@
       "status": "PASS"
     },
     "desktop_render": {
-      "completed_at": "2026-10-29T01:03:20.672429+00:00",
+      "completed_at": "2026-10-29T01:35:28.731564+00:00",
       "evidence": [
         {
           "bytes": 1138,
@@ -30,7 +30,7 @@
       "status": "PASS"
     },
     "gallery": {
-      "completed_at": "2026-10-29T01:03:20.672429+00:00",
+      "completed_at": "2026-10-29T01:35:28.731564+00:00",
       "evidence": [
         {
           "bytes": 1507,
@@ -56,7 +56,7 @@
       "status": "PASS"
     },
     "narrow_render": {
-      "completed_at": "2026-10-29T01:03:20.672429+00:00",
+      "completed_at": "2026-10-29T01:35:28.731564+00:00",
       "evidence": [
         {
           "bytes": 1138,
@@ -68,7 +68,7 @@
       "status": "PASS"
     },
     "navigation_and_controls": {
-      "completed_at": "2026-10-29T01:03:20.672429+00:00",
+      "completed_at": "2026-10-29T01:35:28.731564+00:00",
       "evidence": [
         {
           "bytes": 1138,
@@ -95,7 +95,7 @@
       "status": "PASS"
     },
     "panel": {
-      "completed_at": "2026-10-29T01:03:20.672429+00:00",
+      "completed_at": "2026-10-29T01:35:28.731564+00:00",
       "evidence": [
         {
           "bytes": 1507,
@@ -121,7 +121,7 @@
       "status": "PASS"
     },
     "phone_render": {
-      "completed_at": "2026-10-29T01:03:20.672429+00:00",
+      "completed_at": "2026-10-29T01:35:28.731564+00:00",
       "evidence": [
         {
           "bytes": 1138,
@@ -138,7 +138,7 @@
       "status": "PASS"
     },
     "search": {
-      "completed_at": "2026-10-29T01:03:20.672429+00:00",
+      "completed_at": "2026-10-29T01:35:28.731564+00:00",
       "evidence": [
         {
           "bytes": 1507,
@@ -164,7 +164,7 @@
       "status": "PASS"
     },
     "source_and_prose": {
-      "completed_at": "2026-10-29T01:03:20.672429+00:00",
+      "completed_at": "2026-10-29T01:35:28.731564+00:00",
       "evidence": [
         {
           "bytes": 40717,
@@ -220,23 +220,28 @@
           "bytes": 1821,
           "path": "docs/emma-journey-public/closure-confirmations.json",
           "sha256": "b523c3467b022ac9976c69a580c7b071a6a83663e4b8ef183462cbca0313ee97"
+        },
+        {
+          "bytes": 10437,
+          "path": "docs/resource-page-coverage.json",
+          "sha256": "aed0386e0adecba3f4cb77aab707c4ca7b10f871efcc18750b71e7cd35d6235f"
         }
       ],
       "status": "PASS"
     },
     "validator_code_review": {
-      "completed_at": "2026-10-29T01:03:20.672429+00:00",
+      "completed_at": "2026-10-29T01:35:28.731564+00:00",
       "evidence": [
         {
           "bytes": 784,
           "path": "docs/emma-journey-public/code-review-proof.json",
-          "sha256": "5c790b1d2639a9db65cd1a3506e9bff6caecad2b8fc3346b3b94af6732acc780"
+          "sha256": "2b3c6ed6fa3c282c704f0581da2b5708545680e4956223eda8c342a1b995e547"
         }
       ],
       "status": "PASS"
     }
   },
-  "completed_at": "2026-10-29T01:03:20.672429+00:00",
+  "completed_at": "2026-10-29T01:35:28.731564+00:00",
   "limitations": [
     "not_aggregate_qa",
     "not_release_approval",
@@ -244,12 +249,13 @@
     "post_pin_exact_code_and_pin_review_pending",
     "narrow_inspection_attributed",
     "individual_figure_capture_hashes_not_all_recorded",
-    "owner_acceptance_does_not_attest_later_index_hashes"
+    "owner_acceptance_does_not_attest_later_index_hashes",
+    "browser_caption_qa_pending_hosted"
   ],
-  "private_checks_receipt_sha256": "4e0469d036ad41958073f42898149c2b2126d94c294caef3152df547d93370e5",
+  "private_checks_receipt_sha256": "258288d5f63b60b9aab094a0f81d56ed413eb6009f10745b2fd7c2840cf88ae1",
   "schema": "emma-public-pre-release-checks-v1",
   "status": "PASS",
   "subject_sha256": "6495aaa91690e698ea304e7cbbee3ff3e40d5b8b490d2f656190056caeabc8a0",
   "verification_sha256": "903e4289b665a8df19855e0b04e6e5bdb8989208db2b5bf3e83c496de6222613",
-  "verifier_commitment": "c4f0127672fcea2c51de2490fec98131b606bd206ca1ce82b06d460698c13631"
+  "verifier_commitment": "2b6283f0c7d06100a5cb2ae90c977f0cd66777e881c2ecbef0b8c85774d56eb7"
 }
