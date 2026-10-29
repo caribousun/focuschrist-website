@@ -15,7 +15,11 @@ module.exports=async function(page,origin,out){
    return {svg,leaflet};
   });
   const initial=await counts();assert(initial.svg+initial.leaflet>0,'Scenario routes initially present');
-  await page.locator('#workspaceFilterState').click();
+  const filterSummary=page.locator('#workspaceFilterState');
+  const filterDisclosure=filterSummary.locator('xpath=parent::details');
+  assert.equal(await filterDisclosure.count(),1,'Filter summary belongs to one disclosure');
+  assert(!(await filterDisclosure.evaluate(n=>n.open)),'Filter starts closed');
+  await filterSummary.click();assert(await filterDisclosure.evaluate(n=>n.open),'Filter opens through its summary');
   await page.locator('#catChips [data-cat="bible"]').click();await page.locator('#catChips [data-cat="bom"]').click();
   assert.deepEqual(await counts(),{svg:0,leaflet:0},'World-only removes scenario routes and party markers');
   assert(await page.locator('#routeLegend').evaluate(n=>n.hidden));
@@ -23,14 +27,15 @@ module.exports=async function(page,origin,out){
   assert(!await page.locator('[data-legend-category="world"]').evaluate(n=>n.hidden));
   assert(!/both journey paths are drawn|Book of Mormon promised-land pins/i.test(await page.locator('#mapNote').innerText()));
   await page.locator('#catChips [data-cat="bom"]').click();const restored=await counts();assert(restored.svg+restored.leaflet>0,'Book of Mormon restores scenario routes');
-  const settings=page.locator('.mapsettings');await settings.locator('summary').click();
+  await filterSummary.click();assert(!(await filterDisclosure.evaluate(n=>n.open)),'Filter closes through its summary');
+  const settings=page.locator('.mapsettings');await settings.locator('summary').click();assert(await settings.evaluate(n=>n.open),'Map settings opens after closing the filter');
   const buttons=page.locator('#modelSeg button');assert.equal(await buttons.count(),4);
   const layouts=await buttons.evaluateAll(nodes=>nodes.map(n=>{const r=n.getBoundingClientRect(),s=getComputedStyle(n);return {left:r.left,right:r.right,top:r.top,bottom:r.bottom,border:s.borderTopWidth,style:s.borderTopStyle};}));
   for(const x of layouts)assert(parseFloat(x.border)>0&&x.style!=='none','Each setting has a visible border');
   for(let i=0;i<layouts.length;i++)for(let j=i+1;j<layouts.length;j++)assert(layouts[i].right<layouts[j].left||layouts[j].right<layouts[i].left||layouts[i].bottom<layouts[j].top||layouts[j].bottom<layouts[i].top,'Settings have visible spacing');
   for(const model of ['anchored','meso','na','both']){await page.locator('#modelSeg [data-model="'+model+'"]').click();assert.equal(await page.locator('#modelSeg [data-model="'+model+'"]').getAttribute('aria-pressed'),'true');}
   await settings.scrollIntoViewIfNeeded();await page.screenshot({path:path.join(out,'requested-world-settings-'+profile.name+'.png'),animations:'disabled'});
-  await page.locator('#mapSettingsClose').click();await page.locator('#modeChart').click();assert(await page.locator('#river').isVisible(),'Explicit Timeline remains available');
+  await page.locator('#mapSettingsClose').click();assert(!(await settings.evaluate(n=>n.open)),'Map settings closes through its control');await page.locator('#modeChart').click();assert(await page.locator('#river').isVisible(),'Explicit Timeline remains available');
   await page.locator('#modeMap').click();assert(await page.locator('#mapview').isVisible(),'Explicit return to map remains available');
   await page.goto(origin+'/timelines/adams-1881-chart.html',{waitUntil:'load'});
   assert(await page.locator('#progress').evaluate(n=>n.hidden),'Tile diagnostics hidden');assert(await page.locator('#mini').isVisible(),'Minimap retained');
