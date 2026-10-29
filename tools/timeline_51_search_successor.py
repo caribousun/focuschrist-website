@@ -6,9 +6,9 @@ import hashlib,json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 MANIFEST='docs/reviews/timeline-51-search-delta.json'
-MANIFEST_SHA='ae40b275abc3f451bb88077fbe0add11b667c0d4e3c7f15932109d4b320bceb9'
+MANIFEST_SHA='1d6101c7a3ed5df4ca8aad4a252c1cd4ed3795f0995ec7f4a5fadc82277d25ab'
 BEFORE='abcd13069b734ca5f25ecc003abef56717093b73c31e336ae84bd3d647ffabf1'
-AFTER='3388888fa70489f01d3a83285d30288a71fd07d823c17b401d7334ae4e327e07'
+AFTER='cb138be2294b89e4f22bcb98fa074b85d9d3abe2dc93a8114a66e56590b14c60'
 
 def sha(b):return hashlib.sha256(b).hexdigest()
 def record_sha(r):return sha(json.dumps(r,sort_keys=True,ensure_ascii=False,separators=(',',':')).encode())

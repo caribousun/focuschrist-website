@@ -3,7 +3,7 @@
   "source_sha256": {
     "jesus-christ/mortal-ministry.html": "119fc0150bb5cfd90a3be1b68350ad515efed702144e409d05120a075f8ef892",
     "jesus-christ/restoration-and-today.html": "8e61672ff83cfefe04652e7f71456d1f5b58a35e85b04e1d1e933d9a534942cf",
-    "pioneers.html": "db9cbc8706d0c290b4c51cd302243c706f7c84e8f9b2427561546f1ba2cd94ca",
+    "pioneers.html": "ebd9444e89b0acff74bf0b761460a42c30f04a149ff8d9de9ce49f127188b3aa",
     "church-history.html": "3b82d70f453983aa9bbd17dfe604a34f8dade8d1559f128a31de146c171eb6a3"
   },
   "entries": [
@@ -196,9 +196,11 @@
       "event": "Independence Rock",
       "target": "/pioneers.html#timeline-handcart-19",
       "citations": [
+        "https://history.churchofjesuschrist.org/chd/transcript?lang=eng&name=transcript-for-james-g-willie-emigrating-company-journal-1856-may-november-16-53",
+        "https://history.churchofjesuschrist.org/chd/transcript?lang=eng&name=transcript-for-jesse-haven-journals-1852-1892-folders-4-5",
         "https://history.churchofjesuschrist.org/timeline/historic-sites/wyoming/sixth-crossing?lang=eng"
       ],
-      "limitation": null
+      "limitation": "The Willie journal records camp west of the rock on October 14; a later chronology dates the passage to October 15. Haven records the following handcart company at the rock in early November."
     },
     {
       "timeline": "handcart",

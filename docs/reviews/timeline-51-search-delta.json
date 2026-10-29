@@ -137,7 +137,7 @@
       "previous": null
     },
     "/pioneers.html": {
-      "current_record_sha256": "1cee0874774d08f7b129c16d6b368fc0d06743f1e4d38a7753421ad37f734f3e",
+      "current_record_sha256": "b35f6a0baa91ef7bdbf6003e03cfea1bb82a919c5661cf8894290d2668b77c6d",
       "previous": {
         "category": "History",
         "excerpt": "Explore Latter-day Saint pioneer stories, trail history, handcart journeys, sacrifice, faith, and devotion to Jesus Christ.",
@@ -181,7 +181,7 @@
       "previous": null
     },
     "/pioneers.html#timeline-handcart-19": {
-      "current_record_sha256": "e5a71a464c4d2c0c4c5458129a5c57c6bf9cc400ebef7647fa2850d5c9d6de50",
+      "current_record_sha256": "7ec1602752f1849461d48a26c14d79b93f205b7e1b6d0e8ebab65695b5f3397e",
       "previous": null
     },
     "/pioneers.html#timeline-handcart-2": {
@@ -253,17 +253,17 @@
       "previous": null
     },
     "/pioneers.html#timeline-handcart-study": {
-      "current_record_sha256": "4516e1a08caac28c2fffd6d628f579056f2c095e670e8eff9fef7f8633c65495",
+      "current_record_sha256": "d736da5308c3e6184a8e27f64e81bb45eb96d99d2b3baa98d5d598cb68731e92",
       "previous": null
     }
   },
-  "current_sha256": "3388888fa70489f01d3a83285d30288a71fd07d823c17b401d7334ae4e327e07",
+  "current_sha256": "cb138be2294b89e4f22bcb98fa074b85d9d3abe2dc93a8114a66e56590b14c60",
   "previous_sha256": "abcd13069b734ca5f25ecc003abef56717093b73c31e336ae84bd3d647ffabf1",
   "schema": 1,
   "source_sha256": {
     "church-history.html": "3b82d70f453983aa9bbd17dfe604a34f8dade8d1559f128a31de146c171eb6a3",
     "jesus-christ/mortal-ministry.html": "119fc0150bb5cfd90a3be1b68350ad515efed702144e409d05120a075f8ef892",
     "jesus-christ/restoration-and-today.html": "8e61672ff83cfefe04652e7f71456d1f5b58a35e85b04e1d1e933d9a534942cf",
-    "pioneers.html": "db9cbc8706d0c290b4c51cd302243c706f7c84e8f9b2427561546f1ba2cd94ca"
+    "pioneers.html": "ebd9444e89b0acff74bf0b761460a42c30f04a149ff8d9de9ce49f127188b3aa"
   }
 }

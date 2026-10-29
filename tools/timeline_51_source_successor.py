@@ -10,9 +10,9 @@ from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
 MANIFEST='docs/reviews/timeline-51-source-successor.json'
-MANIFEST_SHA='aa611f88bdba520c71520ca14eea00d86b0e9d523b062b9befe9fcaa6f5da54b'
+MANIFEST_SHA='cd56a72331d00f7cc91ff6fe79e920a4d4b380a5e8a174d5ada0d15ff351e3ab'
 FILES={'pioneers.html', 'timeline-images.js', 'timelines/life-of-christ-journey-map.html', 'jesus-christ/mortal-ministry.html', 'timelines/latter-day-saint-church-history-timeline.html', 'church-history.html', 'jesus-christ/restoration-and-today.html', 'timelines/willie-and-martin-handcart-map.html'}
-AFTER={'church-history.html': '3b82d70f453983aa9bbd17dfe604a34f8dade8d1559f128a31de146c171eb6a3', 'jesus-christ/mortal-ministry.html': '119fc0150bb5cfd90a3be1b68350ad515efed702144e409d05120a075f8ef892', 'jesus-christ/restoration-and-today.html': '8e61672ff83cfefe04652e7f71456d1f5b58a35e85b04e1d1e933d9a534942cf', 'pioneers.html': 'db9cbc8706d0c290b4c51cd302243c706f7c84e8f9b2427561546f1ba2cd94ca', 'timeline-images.js': '09b1a9b957fbe3a920dc9629c8ae1f9569c8e8b9fcfceee27d2564663e6ec9bb', 'timelines/life-of-christ-journey-map.html': 'a7e572937527036e3ff4f4b446acac70e838f7b6dbc7ecee8c200e52cefbf988', 'timelines/willie-and-martin-handcart-map.html': '249b811f0703a009288c7a187289ee696806bcc09376b046dc82ddbf5e776093', 'timelines/latter-day-saint-church-history-timeline.html': '31d69df1046ec884b109a215d9dd5627921979947874f825b17714f02a000932'}
+AFTER={'church-history.html': '3b82d70f453983aa9bbd17dfe604a34f8dade8d1559f128a31de146c171eb6a3', 'jesus-christ/mortal-ministry.html': '119fc0150bb5cfd90a3be1b68350ad515efed702144e409d05120a075f8ef892', 'jesus-christ/restoration-and-today.html': '8e61672ff83cfefe04652e7f71456d1f5b58a35e85b04e1d1e933d9a534942cf', 'pioneers.html': 'ebd9444e89b0acff74bf0b761460a42c30f04a149ff8d9de9ce49f127188b3aa', 'timeline-images.js': '09b1a9b957fbe3a920dc9629c8ae1f9569c8e8b9fcfceee27d2564663e6ec9bb', 'timelines/life-of-christ-journey-map.html': 'a7e572937527036e3ff4f4b446acac70e838f7b6dbc7ecee8c200e52cefbf988', 'timelines/willie-and-martin-handcart-map.html': 'b4f4e14bcf0a28655620f24015ca063bfcacc1ac7fe788bb10c21e0226a9adbc', 'timelines/latter-day-saint-church-history-timeline.html': '31d69df1046ec884b109a215d9dd5627921979947874f825b17714f02a000932'}
 
 def sha(data): return hashlib.sha256(data).hexdigest()
 
