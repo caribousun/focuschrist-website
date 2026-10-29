@@ -1,19 +1,19 @@
 {
-  "current_tool_tree_sha256": "006a263bba1aa522260efb72c40d8ab3a690495946ce9b0f5825188a421a50f7",
-  "historical_tree_manifest_sha256": "c3270c7b5aa8a424d40b871888cccea9b5a575873490f2348440f0dd97b2e706",
+  "current_tool_tree_sha256": "929671f585832ec0e544b52ae620b88dbd4f05545a5eedca6077bf898c7cc097",
+  "historical_tree_manifest_sha256": "b23d5581cc3c2f3cbbbf0031db0133e734796d877012822fd215e62d9546fbe9",
   "index_review_sha256": "12e8961b940808e54a41515b6294983a4af0cf6cfc29a527e84f7e5767dbebe7",
   "limits": [
     "code_review_only_not_render_or_release_approval",
-    "hosted_new_interactions_pending",
-    "full_tree_producer_and_content_audit_not_independently_run",
+    "hosted_suite_not_independently_rerun",
     "51_photo_entries_without_verified_on_site_destinations",
     "external_photo_records_not_inspected"
   ],
-  "private_receipt_sha256": "64bd9d3a337811c0437246e4317f6a9d36dc48d0605cd59b94d5a275e692500c",
-  "reviewed_at": "2026-10-29T05:09:13Z",
-  "reviewed_commit": "9b1504aef724a9ec3915717d0d3db1434d45c123",
+  "private_receipt_sha256": "0bb004611d79d07dfc28d1827e6960406274e446a4f612cd9b360609bcef4a3a",
+  "reviewed_at": "2026-10-29T05:26:41Z",
+  "reviewed_commit": "cedf9a56214e1b88bb027557ff18053bab7a47f1",
   "reviewed_delta_git_blobs": {
-    "tools/timeline_requested_browser_qa.js": "7c3de916d81a723800e4c1da1b3123c3070d1acd"
+    "docs/timeline-controls-successor/historical-tool-tree.json": "fc98cd565856113326753491da998cd584ebbe37",
+    "tools/test_gallery_current_integration.py": "15bebfa4f96840a6d5724579fc537fc1c811a54b"
   },
   "reviewer_commitment": "25275b95cc2c78a6aef8f6ac29e2400b0fac0290ab5ec12f9946448301ee8133",
   "schema": "timeline-index-successor-code-review-v1",
