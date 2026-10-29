@@ -84,8 +84,29 @@ module.exports=async function(page,origin,out){
    const frame=page.locator('#artGalleryFrame');const actual=new URL(await frame.getAttribute('src'),origin);
    assert.equal(actual.pathname,art.occurrences[0].page);assert.equal(actual.searchParams.get('gallery-art'),art.occurrences[0].id);
    assert(await frame.isVisible(),'Gallery opened its owning study panel');
+   const handle=await frame.elementHandle(),embedded=handle&&await handle.contentFrame(),source=art.occurrences[0];assert(embedded,'Owning study frame exists');
+   await embedded.waitForFunction(id=>document.documentElement.dataset.galleryArtworkReady===id||!!document.documentElement.dataset.galleryArtworkError,source.id,{timeout:18000});
+   const error=await embedded.evaluate(()=>document.documentElement.dataset.galleryArtworkError);assert(!error,'Owning artwork bridge reported an error: '+error);
+   await embedded.evaluate(()=>document.fonts.ready);
+   const selectors={hero:'#heroDetailDialog',artwork:'#artworkDetailDialog',topic:'#topicArtworkDetailDialog',missionary:'#missionaryDetailDialog',legacy:'#imageModal',full:'.fc-full-image-viewer'};
+   const selector=selectors[source.kind];assert(selector,'Known native panel type');
+   if(source.kind==='legacy'){
+    const drawer=embedded.locator('[data-focuschrist-art-study-drawer]');
+    if(!await drawer.evaluate(n=>n.classList.contains('open')))await embedded.locator('[data-focuschrist-art-study-button]').click();
+   }
+   const panel=embedded.locator(selector),picture=panel.locator('img').first();
+   assert(await panel.isVisible(),'Owning panel is rendered');
+   assert(await panel.evaluate(n=>n.open||n.classList.contains('active')),'Owning panel is open');
+   await embedded.waitForFunction(selector=>{const img=document.querySelector(selector)?.querySelector('img');return !!(img&&img.complete&&img.naturalWidth>0);},selector,{timeout:18000});
+   await picture.evaluate(img=>img.decode());
+   assert(await picture.isVisible(),'Owning panel image is rendered');
+   assert(await picture.evaluate(img=>{const r=img.getBoundingClientRect(),s=getComputedStyle(img);return s.visibility==='visible'&&s.display!=='none'&&Number(s.opacity)>0&&r.width>0&&r.height>0&&r.bottom>0&&r.right>0&&r.left<innerWidth&&r.top<innerHeight;}),'Owning panel image intersects the frame viewport');
+   assert.equal(new URL(await picture.getAttribute('src'),origin).pathname,art.fullImage,'Owning panel shows the requested artwork');
+   await embedded.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));
   }else{
    const anchor=new URL(origin+target).hash.slice(1);assert(await page.locator('#'+anchor).isVisible(),'Expected event section is visible');
+   await page.locator('#'+anchor).scrollIntoViewIfNeeded();await page.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));
+   assert(await page.locator('#'+anchor).evaluate(n=>{const r=n.getBoundingClientRect();return r.width>0&&r.height>0&&r.bottom>0&&r.right>0&&r.left<innerWidth&&r.top<innerHeight;}),'Expected section intersects the viewport');
   }
   const screenshot='requested-destination-'+kind+'-'+(index+1)+'.png';await page.screenshot({path:path.join(out,screenshot),animations:'disabled'});
   landings.push({kind,event:index+1,target,screenshot});
