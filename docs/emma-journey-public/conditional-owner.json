@@ -1,0 +1,14 @@
+{
+  "acceptance_mode": "conditional_on_remaining_checks",
+  "actual_actor": "Wyatt",
+  "binding_basis": "engineering_bindings_not_owner_claim_of_hash_review",
+  "decision": "ACCEPT",
+  "kind": "direct_owner_acceptance",
+  "page_sha256": "7511f2d034d6117cb9e4d0da896c3ff778c1f0a2165c0425361b47c1d6fb3573",
+  "reviewed_at": "2026-10-28T21:09:47.903496+00:00",
+  "source_evidence": {
+    "path": "docs/emma-journey-public/subject-draft.json",
+    "sha256": "256320ca0b63e8dd518a92d0f38447246b021315d00e18f65ee1e777055b7439"
+  },
+  "withdrawn": false
+}

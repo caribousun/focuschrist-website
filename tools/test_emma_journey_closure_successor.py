@@ -7,6 +7,54 @@ HERE=Path(__file__).resolve().parent
 import emma_journey_closure_successor as j
 import artwork_owner_closure as old
 ROOT=HERE.parent; ACTUAL=ROOT/'history/emma-hale-smith.html'; REG=ROOT/'docs/exclusive-artwork-ownership.json'
+class PublicClosureProjectionTests(unittest.TestCase):
+ """Structural checks only; fixture mutations never approve a release."""
+ @classmethod
+ def setUpClass(cls):
+  cls.record=json.loads((ROOT/'docs/emma-journey-owner-closure/current-review.json').read_bytes())
+ def run_projection(self,record):
+  return j.check_public_reviews(ROOT,record,record['reviewers'],record['root_review'])
+ def test_actual_projection_structure(self):
+  self.assertIsNone(self.run_projection(copy.deepcopy(self.record)))
+ def test_actor_output_and_evidence_drift_fail(self):
+  for change in (lambda x:x['reviewers'][0].update(actual_actor='wrong'),
+                 lambda x:x['reviewers'].reverse(),
+                 lambda x:x['gallery'].update(sha256='0'*64),
+                 lambda x:x['current_confirmation_evidence'].update(sha256='0'*64),
+                 lambda x:x['assets_manifest'].update(sha256='0'*64)):
+   x=copy.deepcopy(self.record);change(x)
+   if x['reviewers']==list(reversed(self.record['reviewers'])):
+    x['reviewers'][0]['actual_actor'],x['reviewers'][1]['actual_actor']=x['reviewers'][1]['actual_actor'],x['reviewers'][0]['actual_actor']
+   with self.assertRaises((ValueError,KeyError)):self.run_projection(x)
+ def test_confirmation_must_preserve_nonwithdrawal_and_root_signoff(self):
+  with tempfile.TemporaryDirectory() as folder:
+   path=Path(folder)/'confirmation.json';original=j.local
+   src=ROOT/'docs/emma-journey-public/closure-confirmations.json'
+   for change in (lambda x:x['fermi'].update(withdrawn=True),
+                  lambda x:x['albert'].update(withdrawn=True),
+                  lambda x:x['albert'].update(verdict='HOLD'),
+                  lambda x:x['albert'].update(section_panel_mandate_personally_read=False)):
+    proof=json.loads(src.read_bytes());change(proof);raw=json.dumps(proof).encode();path.write_bytes(raw)
+    row=copy.deepcopy(self.record);row['current_confirmation_evidence']['sha256']=hashlib.sha256(raw).hexdigest()
+    def use_test_file(root,name):return path if name=='docs/emma-journey-public/closure-confirmations.json' else original(root,name)
+    with patch.object(j,'local',side_effect=use_test_file),self.assertRaises(ValueError):self.run_projection(row)
+ def test_public_path_invokes_release_and_preserves_owner_conditions(self):
+  import emma_public_commitments as public
+  original=j.local;record=self.record;raw=json.dumps(record).encode();ownerpath=record['owner_acceptance']['path']
+  with tempfile.TemporaryDirectory() as folder:
+   tmp=Path(folder);recordfile=tmp/'record.json';recordfile.write_bytes(raw)
+   def route(root,name):return recordfile if name==j.REVIEW_RECORD else original(root,name)
+   with patch.object(j,'APPROVED_REVIEW_SHA256',hashlib.sha256(raw).hexdigest()),patch.object(j,'local',side_effect=route),patch.object(public,'validate_release') as gate:
+    j.check_review(ROOT);gate.assert_called_once_with(ROOT)
+   owner=json.loads(original(ROOT,ownerpath).read_bytes())
+   for field,value in [('acceptance_mode','unconditional'),('reviewed_at','2026-10-29T00:00:00+00:00')]:
+    bad=copy.deepcopy(owner);bad[field]=value;ownerfile=tmp/'owner.json';ownerbytes=json.dumps(bad).encode();ownerfile.write_bytes(ownerbytes)
+    mutated=copy.deepcopy(record);mutated['owner_acceptance']['sha256']=hashlib.sha256(ownerbytes).hexdigest();mutatedbytes=json.dumps(mutated).encode();recordfile.write_bytes(mutatedbytes)
+    def route_bad(root,name):return recordfile if name==j.REVIEW_RECORD else ownerfile if name==ownerpath else original(root,name)
+    with patch.object(j,'APPROVED_REVIEW_SHA256',hashlib.sha256(mutatedbytes).hexdigest()),patch.object(j,'local',side_effect=route_bad),patch.object(public,'validate_release') as gate,self.assertRaisesRegex(ValueError,'conditional owner evidence'):
+     j.check_review(ROOT)
+    gate.assert_not_called()
+
 class CurrentClosureTests(unittest.TestCase):
  def setUp(self):
   self.t=tempfile.TemporaryDirectory();self.addCleanup(self.t.cleanup);self.root=Path(self.t.name)
@@ -47,7 +95,7 @@ class CurrentClosureTests(unittest.TestCase):
   with self.assertRaisesRegex(ValueError,'consumer census'):self.run_gate()
  def test_no_review_is_not_a_pass(self):
   self.review.stop()
-  with self.assertRaisesRegex(ValueError,'PENDING actual current closure and owner review'):self.run_gate()
+  with patch.object(j,'APPROVED_REVIEW_SHA256',None),self.assertRaisesRegex(ValueError,'PENDING actual current closure and owner review'):self.run_gate()
  def test_unknown_asset_count_or_origin(self):
   self.assets.remove('a0')
   with self.assertRaisesRegex(ValueError,'asset scope/origin drift'):self.run_gate()

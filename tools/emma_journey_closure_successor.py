@@ -19,7 +19,7 @@ OLD_REGISTRY='docs/exclusive-artwork-ownership.json'
 REVIEW_RECORD='docs/emma-journey-owner-closure/current-review.json'
 # Fill only after real exact finished-source, asset, generated-output and owner
 # review; this is deliberately PENDING, not a fabricated acceptance.
-APPROVED_REVIEW_SHA256=None
+APPROVED_REVIEW_SHA256='c133a614ea8ac489c46ec738883ecde085e6ab2ddd0b1ce460a71c22a0234387'
 BASELINE_BLOBS={'art-gallery.json':'d7a9e628341f264d86227ac729d8db7ab8ef4584',
                 'site-search-index.json':'cba61442fcbed4fd1e62d61b0d90134d8237d086',
                 'docs/section-panel-inventory.json':'5a2db892aaad7e51e545e92604a8cd80b9becdc4'}
@@ -43,6 +43,47 @@ def validated_baseline(root, target):
         except (OSError,subprocess.SubprocessError) as e:raise ValueError('Emma journey current closure: baseline blob unavailable '+name) from e
         require(git_blob(raw)==expected,'historical baseline blob drift '+name)
         p=target/name;p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(raw)
+
+def check_public_reviews(root, record, reviewers, root_review):
+    """Validate bounded projections of the actual current review records.
+
+    Private reviewer identity and source documents must be independently
+    authenticated before the enclosing closure record is pinned. This does not
+    turn their bounded Emma-index review into a whole-site review.
+    """
+    from emma_public_commitments import SUBJECT, SUBJECT_SHA256, read_pinned
+    subject=read_pinned(root,SUBJECT,SUBJECT_SHA256)
+    def evidence(name):
+        item=record.get(name);require(isinstance(item,dict) and set(item)=={'path','sha256'},'missing '+name)
+        expected_paths={'index_review_evidence':'docs/emma-journey-public/index-review-commitments.json','current_confirmation_evidence':'docs/emma-journey-public/closure-confirmations.json'}
+        require(item['path']==expected_paths[name],'unexpected public review evidence path')
+        raw=local(root,item['path']).read_bytes();require(sha(raw)==item['sha256'],'changed '+name)
+        return json.loads(raw)
+    index=evidence('index_review_evidence');confirm=evidence('current_confirmation_evidence')
+    require(index.get('schema')=='emma-index-review-commitments-v1' and index.get('subject_sha256')==SUBJECT_SHA256 and index.get('scope')=='bounded_current_emma_indices_not_whole_site_review','index review subject mismatch')
+    outputs={key:record[key] for key in ('panel','gallery','search')}
+    require(index.get('hub_sha256')==CURRENT_HUB_SHA256 and index.get('outputs')==outputs,'index review outputs changed')
+    require(confirm.get('schema')=='emma-current-closure-confirmations-v1' and confirm.get('subject_sha256')==SUBJECT_SHA256 and confirm.get('index_review_sha256')==record['index_review_evidence']['sha256'] and confirm.get('scope')=='bounded_current_emma_indices_not_whole_site_review','current confirmations mismatch')
+    actors={x['role']:x['actor_commitment'] for x in subject['reviews']}
+    require(record['assets_manifest']['sha256']==subject['source_manifest_sha256'] and subject['bindings']['delivery_spec_sha256']==subject['private_spec_sha256'],'asset manifest subject mismatch')
+    expected={'Fermi':('23ad527d8d5b2a17682cb129a24be656bea072bb71ec22bebc8795cf285554cc','PASS_BOUNDED_EMMA_SCOPE','NOT_RECORDED'),
+              'Newton':('9986e43705061849930f0c8f4fd48526f87484111ea7448c23566a3f5571350e','CONCUR_WITHIN_BOUNDED_SCOPE','NOT_WITHDRAWN')}
+    entries=index.get('reviews');require(isinstance(entries,list) and len(entries)==2 and {x.get('role') for x in entries}==set(expected),'index reviewers missing')
+    for entry in entries:
+        role=entry['role'];row=next(x for x in reviewers if x['reviewer']==role)
+        require((entry.get('source_receipt_sha256'),entry.get('verdict'),entry.get('withdrawn_status'))==expected[role],'index review receipt or status mismatch')
+        require(entry.get('actor_commitment')==actors[role] and row.get('actual_actor')=='commitment:'+actors[role] and row.get('reviewed_at')==entry.get('reviewed_at') and row.get('evidence')==record['index_review_evidence'],'index reviewer association or time mismatch')
+        require(row.get('assets_manifest_binding')=='separately_reviewed_current_source_subject','index reviewer manifest scope misstated')
+    f=confirm.get('fermi');require(isinstance(f,dict) and f.get('source_receipt_sha256')=='52a3bb070acaa92899d3d9fd983b6b8bdd634c103a61b09baf6dcb7da9b6729a' and f.get('actor_commitment')==actors['Fermi'] and f.get('withdrawn') is False,'Fermi current non-withdrawal confirmation missing')
+    old=next(x for x in entries if x['role']=='Fermi');require(f.get('index_reviewed_at')==old['reviewed_at'] and datetime.fromisoformat(f['confirmed_at'].replace('Z','+00:00'))>=datetime.fromisoformat(old['reviewed_at'].replace('Z','+00:00')),'Fermi confirmation time mismatch')
+    require(next(x for x in reviewers if x['reviewer']=='Fermi').get('withdrawn_confirmed_at')==f['confirmed_at'],'Fermi withdrawal status time missing')
+    a=confirm.get('albert');require(isinstance(a,dict) and a.get('source_receipt_sha256')=='f777c0e38bbf78d1f321246ee88f4672577669ba005bdbd69634274c9c448a7a' and a.get('actor_commitment')==actors['Albert'] and a.get('verdict')=='PASS_BOUNDED_EMMA_SCOPE' and a.get('withdrawn') is False and a.get('hub_sha256')==CURRENT_HUB_SHA256 and a.get('outputs')==outputs and a.get('reviewed_at')==root_review.get('reviewed_at'),'Albert current index review mismatch')
+    require(root_review.get('assets_manifest_binding')=='separately_reviewed_current_source_subject','Albert manifest scope misstated')
+    mandate=local(root,'docs/section-panel-design-mandate.md').read_bytes()
+    require(a.get('section_panel_mandate_personally_read') is True and a.get('section_panel_mandate_sha256')==sha(mandate)=='26a8028ec7c7393d070e6f8006662861e1651643dbf925092b19d364ace797fc','Albert section-panel mandate read missing')
+    for view in ('desktop','phone'):
+        rendered=subject['bindings']['rendered'][view]['image']
+        require(root_review[view+'_evidence']=={'path':rendered['path'],'sha256':rendered['sha256']},'Albert rendered evidence mismatch')
 
 def check_review(root):
     """Review data must be authentic independently authored receipts, not a flag.
@@ -71,7 +112,8 @@ def check_review(root):
         ev=x.get('evidence');require(isinstance(ev,dict) and set(ev)=={'path','sha256'} and sha(local(root,ev['path']).read_bytes())==ev['sha256'],'reviewer evidence missing')
     owner=json.loads(local(root,r['owner_acceptance']['path']).read_bytes())
     require(owner.get('kind')=='direct_owner_acceptance' and owner.get('actual_actor')=='Wyatt' and owner.get('decision')=='ACCEPT' and owner.get('withdrawn') is False,'direct owner acceptance missing')
-    require(owner.get('page_sha256')==CURRENT_HUB_SHA256 and all(owner.get(k+'_sha256')==r[k]['sha256'] for k in ('gallery','search','panel','assets_manifest')),'owner acceptance subject mismatch')
+    public=r.get('review_mode')=='bounded_public_commitments_v1'
+    require(owner.get('page_sha256')==CURRENT_HUB_SHA256 and (public or all(owner.get(k+'_sha256')==r[k]['sha256'] for k in ('gallery','search','panel','assets_manifest'))),'owner acceptance subject mismatch')
     require(isinstance(owner.get('source_evidence'),dict) and set(owner['source_evidence'])=={'path','sha256'} and sha(local(root,owner['source_evidence']['path']).read_bytes())==owner['source_evidence']['sha256'],'owner source evidence missing')
     root_review=r.get('root_review')
     require(isinstance(root_review,dict) and root_review.get('reviewer')=='Albert' and root_review.get('decision')=='CONCUR' and root_review.get('withdrawn') is False,'assembled root review missing')
@@ -80,6 +122,11 @@ def check_review(root):
     require(root_review.get('mandate_blobs')==mandates and isinstance(root_review.get('observations'),str) and root_review['observations'].strip(),'root mandate read/observations missing')
     for view in ('desktop_evidence','phone_evidence'):
         ev=root_review.get(view);require(isinstance(ev,dict) and set(ev)=={'path','sha256'} and sha(local(root,ev['path']).read_bytes())==ev['sha256'],'root rendered evidence missing '+view)
+    if public:
+        require(r.get('owner_acceptance_mode')=='conditional_on_remaining_checks' and owner.get('acceptance_mode')=='conditional_on_remaining_checks' and owner.get('reviewed_at')=='2026-10-28T21:09:47.903496+00:00' and owner.get('binding_basis')=='engineering_bindings_not_owner_claim_of_hash_review' and not any(k+'_sha256' in owner for k in ('gallery','search','panel','assets_manifest')),'conditional owner evidence misstated')
+        check_public_reviews(root,r,reviews,root_review)
+        from emma_public_commitments import validate_release
+        validate_release(root)
     for subject in reviews+[root_review,owner]:
         try:dt=datetime.fromisoformat(subject['reviewed_at'].replace('Z','+00:00'))
         except (KeyError,TypeError,ValueError) as e:raise ValueError('Emma journey current closure: invalid review time') from e

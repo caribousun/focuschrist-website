@@ -1,0 +1,112 @@
+{
+  "assets_manifest": {
+    "path": "tools/owner-successor-manifest.json",
+    "sha256": "3ae50af644843d26abc5e794262657336b60c7a4f204cab8ed1064f0159ae0d4"
+  },
+  "current_confirmation_evidence": {
+    "path": "docs/emma-journey-public/closure-confirmations.json",
+    "sha256": "749e10dc51cf3b1920118fd3d0fec7787c37aa6c4a997596385fd0e84f330189"
+  },
+  "current_hub_sha256": "7511f2d034d6117cb9e4d0da896c3ff778c1f0a2165c0425361b47c1d6fb3573",
+  "gallery": {
+    "path": "art-gallery.json",
+    "sha256": "df6a8c33fc3bd70dbf38675fdb21b984914e5598a42f70025e67de5ddfceb4f8"
+  },
+  "index_review_evidence": {
+    "path": "docs/emma-journey-public/index-review-commitments.json",
+    "sha256": "19daa013a77ee3ea14e005080cadf56c459f43e48dfd6ada2b9dd7dd80494f30"
+  },
+  "owner_acceptance": {
+    "path": "docs/emma-journey-public/conditional-owner.json",
+    "sha256": "373498be62b8efc9a193567658a7c87ef9630076b391db1532d997448dd24479"
+  },
+  "owner_acceptance_mode": "conditional_on_remaining_checks",
+  "panel": {
+    "path": "docs/section-panel-inventory.json",
+    "sha256": "aaa49fb307fa5e3251e7ed054d2443f637db94a0361a4ba3621d267ed1ab5532"
+  },
+  "review_mode": "bounded_public_commitments_v1",
+  "reviewers": [
+    {
+      "actual_actor": "commitment:f69f5896b3628fa2c6d7505286a09af34a2beaa82bd8665f2353a65631b5399e",
+      "assets_manifest_binding": "separately_reviewed_current_source_subject",
+      "assets_manifest_sha256": "3ae50af644843d26abc5e794262657336b60c7a4f204cab8ed1064f0159ae0d4",
+      "decision": "CONCUR",
+      "evidence": {
+        "path": "docs/emma-journey-public/index-review-commitments.json",
+        "sha256": "19daa013a77ee3ea14e005080cadf56c459f43e48dfd6ada2b9dd7dd80494f30"
+      },
+      "gallery_sha256": "df6a8c33fc3bd70dbf38675fdb21b984914e5598a42f70025e67de5ddfceb4f8",
+      "mandate_blobs": {
+        "AGENTS.md": "8517aa734f89b5fb1d6cb62fa1c870ec2f5959c8",
+        "docs/historical-character-identity.md": "a2af09fc97c9205139ed0621075fb5d189cf93c5",
+        "docs/section-panel-design-mandate.md": "dd0db449995f1f636abd0b84b0da4820630c87c8"
+      },
+      "observations": "Bounded current Emma index concurrence combined with previously reviewed source and artwork bindings; no whole-site manual audit claimed.",
+      "page_sha256": "7511f2d034d6117cb9e4d0da896c3ff778c1f0a2165c0425361b47c1d6fb3573",
+      "panel_sha256": "aaa49fb307fa5e3251e7ed054d2443f637db94a0361a4ba3621d267ed1ab5532",
+      "reviewed_at": "2026-10-29T00:12:52Z",
+      "reviewer": "Fermi",
+      "search_sha256": "ba1ea0787568ce5dc6f51b7661a31ead0088c7e39f2d988286fd98697398ac67",
+      "withdrawn": false,
+      "withdrawn_confirmed_at": "2026-10-29T00:20:31Z"
+    },
+    {
+      "actual_actor": "commitment:e2dd5ce8d11f3dab0b599bea146841480dad59613497b4658f10740cdb1b51b0",
+      "assets_manifest_binding": "separately_reviewed_current_source_subject",
+      "assets_manifest_sha256": "3ae50af644843d26abc5e794262657336b60c7a4f204cab8ed1064f0159ae0d4",
+      "decision": "CONCUR",
+      "evidence": {
+        "path": "docs/emma-journey-public/index-review-commitments.json",
+        "sha256": "19daa013a77ee3ea14e005080cadf56c459f43e48dfd6ada2b9dd7dd80494f30"
+      },
+      "gallery_sha256": "df6a8c33fc3bd70dbf38675fdb21b984914e5598a42f70025e67de5ddfceb4f8",
+      "mandate_blobs": {
+        "AGENTS.md": "8517aa734f89b5fb1d6cb62fa1c870ec2f5959c8",
+        "docs/historical-character-identity.md": "a2af09fc97c9205139ed0621075fb5d189cf93c5",
+        "docs/section-panel-design-mandate.md": "dd0db449995f1f636abd0b84b0da4820630c87c8"
+      },
+      "observations": "Bounded current Emma index concurrence combined with previously reviewed source and artwork bindings; no whole-site manual audit claimed.",
+      "page_sha256": "7511f2d034d6117cb9e4d0da896c3ff778c1f0a2165c0425361b47c1d6fb3573",
+      "panel_sha256": "aaa49fb307fa5e3251e7ed054d2443f637db94a0361a4ba3621d267ed1ab5532",
+      "reviewed_at": "2026-10-29T00:13:01+00:00",
+      "reviewer": "Newton",
+      "search_sha256": "ba1ea0787568ce5dc6f51b7661a31ead0088c7e39f2d988286fd98697398ac67",
+      "withdrawn": false
+    }
+  ],
+  "root_review": {
+    "assets_manifest_binding": "separately_reviewed_current_source_subject",
+    "assets_manifest_sha256": "3ae50af644843d26abc5e794262657336b60c7a4f204cab8ed1064f0159ae0d4",
+    "decision": "CONCUR",
+    "desktop_evidence": {
+      "path": "docs/emma-journey-release/render/desktop-opening.jpg",
+      "sha256": "83b4c3bcd4b465b5a7592faf260b60ee7adf66255d87d3e091e26df89fe6b26b"
+    },
+    "desktop_inspected": true,
+    "gallery_sha256": "df6a8c33fc3bd70dbf38675fdb21b984914e5598a42f70025e67de5ddfceb4f8",
+    "mandate_blobs": {
+      "AGENTS.md": "8517aa734f89b5fb1d6cb62fa1c870ec2f5959c8",
+      "docs/historical-character-identity.md": "a2af09fc97c9205139ed0621075fb5d189cf93c5",
+      "docs/section-panel-design-mandate.md": "dd0db449995f1f636abd0b84b0da4820630c87c8"
+    },
+    "observations": "Current bounded index and mandate signoff combined with prior actual source and rendered-context review; direct live verification remains required.",
+    "page_sha256": "7511f2d034d6117cb9e4d0da896c3ff778c1f0a2165c0425361b47c1d6fb3573",
+    "panel_sha256": "aaa49fb307fa5e3251e7ed054d2443f637db94a0361a4ba3621d267ed1ab5532",
+    "phone_evidence": {
+      "path": "docs/emma-journey-release/render/phone-opening.jpg",
+      "sha256": "6950c7bc12a9deabe032d17d53306a825c5520f92b1b0bb1c114fbd76ff2f08b"
+    },
+    "phone_inspected": true,
+    "reviewed_at": "2026-10-29T00:21:07.397217+00:00",
+    "reviewer": "Albert",
+    "search_sha256": "ba1ea0787568ce5dc6f51b7661a31ead0088c7e39f2d988286fd98697398ac67",
+    "withdrawn": false
+  },
+  "schema": 1,
+  "search": {
+    "path": "site-search-index.json",
+    "sha256": "ba1ea0787568ce5dc6f51b7661a31ead0088c7e39f2d988286fd98697398ac67"
+  },
+  "status": "owner_accepted"
+}

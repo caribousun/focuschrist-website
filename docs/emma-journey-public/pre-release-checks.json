@@ -1,7 +1,7 @@
 {
   "checks": {
     "artwork_and_provenance": {
-      "completed_at": "2026-10-29T00:04:54.780347+00:00",
+      "completed_at": "2026-10-29T00:28:19.815624+00:00",
       "evidence": [
         {
           "bytes": 622,
@@ -13,7 +13,7 @@
       "status": "PASS"
     },
     "desktop_render": {
-      "completed_at": "2026-10-29T00:04:54.780347+00:00",
+      "completed_at": "2026-10-29T00:28:19.815624+00:00",
       "evidence": [
         {
           "bytes": 1138,
@@ -30,7 +30,7 @@
       "status": "PASS"
     },
     "gallery": {
-      "completed_at": "2026-10-29T00:04:54.780347+00:00",
+      "completed_at": "2026-10-29T00:28:19.815624+00:00",
       "evidence": [
         {
           "bytes": 1507,
@@ -41,12 +41,22 @@
           "bytes": 1001710,
           "path": "art-gallery.json",
           "sha256": "df6a8c33fc3bd70dbf38675fdb21b984914e5598a42f70025e67de5ddfceb4f8"
+        },
+        {
+          "bytes": 1635,
+          "path": "docs/emma-journey-public/index-review-commitments.json",
+          "sha256": "19daa013a77ee3ea14e005080cadf56c459f43e48dfd6ada2b9dd7dd80494f30"
+        },
+        {
+          "bytes": 1821,
+          "path": "docs/emma-journey-public/closure-confirmations.json",
+          "sha256": "749e10dc51cf3b1920118fd3d0fec7787c37aa6c4a997596385fd0e84f330189"
         }
       ],
       "status": "PASS"
     },
     "narrow_render": {
-      "completed_at": "2026-10-29T00:04:54.780347+00:00",
+      "completed_at": "2026-10-29T00:28:19.815624+00:00",
       "evidence": [
         {
           "bytes": 1138,
@@ -58,7 +68,7 @@
       "status": "PASS"
     },
     "navigation_and_controls": {
-      "completed_at": "2026-10-29T00:04:54.780347+00:00",
+      "completed_at": "2026-10-29T00:28:19.815624+00:00",
       "evidence": [
         {
           "bytes": 1138,
@@ -85,7 +95,7 @@
       "status": "PASS"
     },
     "panel": {
-      "completed_at": "2026-10-29T00:04:54.780347+00:00",
+      "completed_at": "2026-10-29T00:28:19.815624+00:00",
       "evidence": [
         {
           "bytes": 1507,
@@ -96,12 +106,22 @@
           "bytes": 124766,
           "path": "docs/section-panel-inventory.json",
           "sha256": "aaa49fb307fa5e3251e7ed054d2443f637db94a0361a4ba3621d267ed1ab5532"
+        },
+        {
+          "bytes": 1635,
+          "path": "docs/emma-journey-public/index-review-commitments.json",
+          "sha256": "19daa013a77ee3ea14e005080cadf56c459f43e48dfd6ada2b9dd7dd80494f30"
+        },
+        {
+          "bytes": 1821,
+          "path": "docs/emma-journey-public/closure-confirmations.json",
+          "sha256": "749e10dc51cf3b1920118fd3d0fec7787c37aa6c4a997596385fd0e84f330189"
         }
       ],
       "status": "PASS"
     },
     "phone_render": {
-      "completed_at": "2026-10-29T00:04:54.780347+00:00",
+      "completed_at": "2026-10-29T00:28:19.815624+00:00",
       "evidence": [
         {
           "bytes": 1138,
@@ -118,7 +138,7 @@
       "status": "PASS"
     },
     "search": {
-      "completed_at": "2026-10-29T00:04:54.780347+00:00",
+      "completed_at": "2026-10-29T00:28:19.815624+00:00",
       "evidence": [
         {
           "bytes": 1507,
@@ -129,12 +149,22 @@
           "bytes": 3442903,
           "path": "site-search-index.json",
           "sha256": "ba1ea0787568ce5dc6f51b7661a31ead0088c7e39f2d988286fd98697398ac67"
+        },
+        {
+          "bytes": 1635,
+          "path": "docs/emma-journey-public/index-review-commitments.json",
+          "sha256": "19daa013a77ee3ea14e005080cadf56c459f43e48dfd6ada2b9dd7dd80494f30"
+        },
+        {
+          "bytes": 1821,
+          "path": "docs/emma-journey-public/closure-confirmations.json",
+          "sha256": "749e10dc51cf3b1920118fd3d0fec7787c37aa6c4a997596385fd0e84f330189"
         }
       ],
       "status": "PASS"
     },
     "source_and_prose": {
-      "completed_at": "2026-10-29T00:04:54.780347+00:00",
+      "completed_at": "2026-10-29T00:28:19.815624+00:00",
       "evidence": [
         {
           "bytes": 40674,
@@ -170,35 +200,56 @@
           "bytes": 15111,
           "path": "history/emma-hymns.html",
           "sha256": "55ee8b1a9b57154ca074282f2b6f44c19d77d15a63abd5adcde3286174625087"
+        },
+        {
+          "bytes": 5845,
+          "path": "docs/emma-journey-owner-closure/current-review.json",
+          "sha256": "c133a614ea8ac489c46ec738883ecde085e6ab2ddd0b1ce460a71c22a0234387"
+        },
+        {
+          "bytes": 549,
+          "path": "docs/emma-journey-public/conditional-owner.json",
+          "sha256": "373498be62b8efc9a193567658a7c87ef9630076b391db1532d997448dd24479"
+        },
+        {
+          "bytes": 1635,
+          "path": "docs/emma-journey-public/index-review-commitments.json",
+          "sha256": "19daa013a77ee3ea14e005080cadf56c459f43e48dfd6ada2b9dd7dd80494f30"
+        },
+        {
+          "bytes": 1821,
+          "path": "docs/emma-journey-public/closure-confirmations.json",
+          "sha256": "749e10dc51cf3b1920118fd3d0fec7787c37aa6c4a997596385fd0e84f330189"
         }
       ],
       "status": "PASS"
     },
     "validator_code_review": {
-      "completed_at": "2026-10-29T00:04:54.780347+00:00",
+      "completed_at": "2026-10-29T00:28:19.815624+00:00",
       "evidence": [
         {
           "bytes": 784,
           "path": "docs/emma-journey-public/code-review-proof.json",
-          "sha256": "c158cd561c492cc89e9fac64feca4a35fcb705fdb3b447c0c8294dd47f2565d7"
+          "sha256": "ef7ba8ad50ded005abad428c040618289ac66765f29074fbebb630ad318dd478"
         }
       ],
       "status": "PASS"
     }
   },
-  "completed_at": "2026-10-29T00:04:54.780347+00:00",
+  "completed_at": "2026-10-29T00:28:19.815624+00:00",
   "limitations": [
     "not_aggregate_qa",
     "not_release_approval",
     "not_owner_gate_waiver",
     "post_pin_exact_code_and_pin_review_pending",
     "narrow_inspection_attributed",
-    "individual_figure_capture_hashes_not_all_recorded"
+    "individual_figure_capture_hashes_not_all_recorded",
+    "owner_acceptance_does_not_attest_later_index_hashes"
   ],
-  "private_checks_receipt_sha256": "f7845b02176c02ac9494182d5c3345da7d459559d55c1a8b6d61a06f762860b6",
+  "private_checks_receipt_sha256": "e2114dd5b7abbadfc62ee7c7e22bae63258142ca03c1bc97d27f41fb7f579b25",
   "schema": "emma-public-pre-release-checks-v1",
   "status": "PASS",
   "subject_sha256": "256320ca0b63e8dd518a92d0f38447246b021315d00e18f65ee1e777055b7439",
   "verification_sha256": "4d237256fc5f18dfa4169f106025e3d53359f75d9265ad0c47fd75d6f88e95ea",
-  "verifier_commitment": "874431211c65d79a22f05dfd8739207244dbac59963e4514b3d4bb566064479d"
+  "verifier_commitment": "fea0906369f7ff9fac69a43399cc91e77e129786dcf084430a41ae83c53ee4ae"
 }
