@@ -207,6 +207,12 @@ jobs:
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/timeline_map_lifecycle_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/timeline_history_map_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/timeline_images_qa.js
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/timeline_world_requested_controls_qa.js
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/timeline_world_image_context_qa.js
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/timeline_gallery_targets_qa.js
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/adams_hide_diagnostics_qa.js
+          python -m unittest discover -s tools -p test_timeline_controls_successor.py
+          python -m unittest discover -s tools -p test_timeline_current_review_gate.py
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/timeline_workspace_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/timeline_life_marker_qa.js
           node tools/timeline_life_restoration_qa.js

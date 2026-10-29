@@ -16,6 +16,11 @@ function spacedText(n){const walker=n.ownerDocument.createTreeWalker(n,4),parts=
 const bare=p=>p==='/'?'index.html':p.replace(/^\//,'');
 function manifest(read){const raw=read(MANIFEST);assert.equal(digest(raw),MANIFEST_SHA,'Exact integration manifest');const m=JSON.parse(raw);assert.equal(m.schema,1);assert.equal(Object.keys(m.files).length,11);return m;}
 function assertSource(route,source,read){const item=manifest(read).files[route];assert(item,'Known integration source');
+ if(route===chart){
+  const prior=require('./timeline_adams_diagnostic_successor').restore(source,read);
+  assert.equal(Buffer.byteLength(prior),item.bytes,'Historical chart source length');assert.equal(digest(prior),item.sha256,'Historical chart source digest');
+  return {...item,bytes:Buffer.byteLength(source),sha256:digest(source)};
+ }
  if(route===landing){
   // Current Timeline is validated as actual DOM/content, not the old source hash.
   const {JSDOM}=require('jsdom'),dom=new JSDOM(source);
@@ -99,6 +104,7 @@ function projectCanonicalRoutes(routes,read){const normalized=routes.map(bare);a
 function historicalSource(route,source,read){
  const item=assertSource(route,source,read),h=item.historical;assert(h,'No invented predecessor for new page');
  let raw=Buffer.from(source);
+ if(route===chart)raw=Buffer.from(require('./timeline_adams_diagnostic_successor').restore(source,read));
  if(route===landing){
   // The archived fixture is only historical input, never the actual current page.
   raw=Buffer.from(read('docs/timeline-selector/historical-c910.txt'));

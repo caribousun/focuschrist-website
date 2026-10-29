@@ -8,7 +8,12 @@ class SettingsTests(unittest.TestCase):
  def setUp(self):
   self.temp=tempfile.TemporaryDirectory();self.addCleanup(self.temp.cleanup);self.root=Path(self.temp.name)
   self.row=g.mapping()
-  for name in g.BEFORE:self.write(name,g.advance(name,(g.ROOT/name).read_bytes()))
+  for name in g.BEFORE:
+   raw=(g.ROOT/name).read_bytes()
+   if name=='timelines/world-and-scripture-timeline.html':
+    from timeline_world_controls_successor import restore
+    raw=restore(raw,g.ROOT)
+   self.write(name,g.advance(name,raw))
   self.write(g.MANIFEST,json.dumps(self.row).encode());self.write('proof.txt',b'synthetic unit-test evidence')
   hashes={n:r['after_sha256'] for n,r in self.row['files'].items()}
   self.reviews={'source_sha256':g.SOURCE_SHA,'page_hashes':hashes,'reviews':[{'reviewer':who,'decision':'CONCUR','finished_pixels':True,'finished_behavior':True,'page_hashes':hashes,'evidence':{'path':'proof.txt','sha256':g.sha(b'synthetic unit-test evidence')}} for who in ['Albert','Fermi','Newton']]}

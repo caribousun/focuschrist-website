@@ -224,6 +224,17 @@ def validate() -> int:
             continue
         if name in CURRENT_INTEGRATION_ROUTES and name != 'timeline.html' and record.get('reviewed_source_sha256') != hashlib.sha256(path.read_bytes()).hexdigest():
             errors.append(f"{name}: current integrated source binding missing or changed")
+        elif name == WORLD_TIMELINE:
+            # A historical projection does not review the later actual page.
+            from timeline_world_controls_successor import AFTER as WORLD_CONTROLS_AFTER
+            current_sha = hashlib.sha256(path.read_bytes()).hexdigest()
+            if current_sha == WORLD_CONTROLS_AFTER and record.get('reviewed_current_timeline_sha256') != current_sha:
+                errors.append(f"{name}: current Timeline controls review pending")
+        elif name == 'answers/jesus-christ-latter-day-saint-beliefs.html':
+            from timeline_nazareth_successor import AFTER as NAZARETH_AFTER
+            current_sha = hashlib.sha256(path.read_bytes()).hexdigest()
+            if current_sha == NAZARETH_AFTER and record.get('reviewed_current_timeline_sha256') != current_sha:
+                errors.append(f"{name}: current Nazareth section review pending")
         status = record.get("status")
         if status not in VALID_STATUSES:
             errors.append(f"{name}: invalid or incomplete audit status {status!r}")
