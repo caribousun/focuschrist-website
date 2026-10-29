@@ -1,25 +1,31 @@
 {
-  "current_tool_tree_sha256": "f9093d1a82683c8ec541d159543788f0c2457543954723da65ba54e1de5cc6cd",
-  "historical_tree_manifest_sha256": "d78aea4ec98baa38c10d77fa2b2fccbc753f4b56b48dd779b8d300e9d5e75c2a",
+  "current_content_ledger_sha256": "1ba70ebc7b9bb6117d91773934fe5fa4241148144aebf537beb20a9209edfbe9",
+  "current_content_review_sha256": "ee25fb9c83e81ec24580493de7a29d8f9ce94022c1b6cfc92bdebbc99acd4875",
+  "current_tool_tree_sha256": "567c6c4690d602412b8ce14362927119961ad5e48453362078c6f0d6cfd37486",
+  "historical_tree_manifest_sha256": "c3270c7b5aa8a424d40b871888cccea9b5a575873490f2348440f0dd97b2e706",
   "index_review_sha256": "12e8961b940808e54a41515b6294983a4af0cf6cfc29a527e84f7e5767dbebe7",
   "limits": [
     "code_review_only_not_render_or_release_approval",
-    "full_tree_producer_not_independently_run",
+    "full_tree_producer_and_content_audit_not_independently_run",
     "51_photo_entries_without_verified_on_site_destinations",
-    "external_photo_records_not_inspected"
+    "external_photo_records_not_inspected",
+    "synthetic_downstream_probe_not_release_evidence"
   ],
-  "private_receipt_sha256": "b8842f8e3d933b6111625851019827e95bfe2f8f84917df6878c1aea5838d32d",
-  "reviewed_at": "2026-10-29T04:43:37Z",
-  "reviewed_code_git_blobs": {
-    "tools/emma_journey_closure_successor.py": "40bceb2a8e69415ad2519a0675d9b53df36c7fcd",
-    "tools/emma_journey_indices_contract.py": "c6b4a285552e4825b519fdc20a4c48971315d27e",
-    "tools/emma_public_commitments.py": "c3a5b362a1f074dfe3f0db20505cd79105ea3649",
-    "tools/test_timeline_current_index_closure.py": "8295efa2877dfc948853b5c7600c6f0547b16f25",
-    "tools/timeline_current_index_closure.py": "2c95de60fd98bf817638eeecca642815d6379900",
-    "tools/timeline_requested_browser_qa.js": "3ad5121508f906ce0c0bd4a24f1a699923f947c0",
-    "tools/timeline_search_index_successor.py": "b6e0e61b7ffbf964cc928e6c51604f7063160f62"
+  "private_receipt_sha256": "345090c60eb3623824d704dc8b49576421bd05268d12658f6e36767c7eadcdbb",
+  "reviewed_at": "2026-10-29T04:59:53Z",
+  "reviewed_commit": "ac9352e0f93043e370d00d337e53be941a2b5a1d",
+  "reviewed_delta_git_blobs": {
+    ".github/workflows/site-qa.yml": "84f4df114390c99ebde507c776cfbe286ec96b67",
+    "tools/adams_source_import_v9.py": "ce2384f935fed9026bc359bd17217ad14d90d520",
+    "tools/artwork_gabriel_owner_delivery.py": "5594c6edc109229528e40bdbcf5ad380e364fa98",
+    "tools/artwork_owner_closure.py": "6b923d841816a277be11d223317ee4a16b38ffc5",
+    "tools/emma_public_commitments.py": "bbb2028c604054e54db077762f1c9671f8e8161e",
+    "tools/test_adams_integrated_context.py": "851d70002d281034b82313a51b9ca70a7baf13a3",
+    "tools/test_artwork_owner_closure.py": "6e576cd0e87dc1616f59d3a0487042ddc7c96e74",
+    "tools/test_timeline_content_ledger_successor.py": "cc5c3cd391ed4318dd3bd6f0c70162d6c0e87005",
+    "tools/timeline_content_ledger_successor.py": "72768625b4427c704970f149d754c01b3367c5d7",
+    "tools/timeline_current_index_closure.py": "b7b0f06880e2e49a863c62ec30ac0c80621e0c8e"
   },
-  "reviewed_commit": "5f297b8ac4c81f79b300f3bdf6234e5ac10bdc93",
   "reviewer_commitment": "25275b95cc2c78a6aef8f6ac29e2400b0fac0290ab5ec12f9946448301ee8133",
   "schema": "timeline-index-successor-code-review-v1",
   "scope": "current_successor_and_exact_tool_tree",
