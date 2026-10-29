@@ -122,6 +122,11 @@ def prepare(root):
  require(code.get('reviewer_commitment')==CODE_REVIEWER_COMMITMENT and code.get('receipt_sha256')==CODE_RECEIPT_SHA256 and CODE_REVIEWER_COMMITMENT!=INDEX_REVIEWER_COMMITMENT,'Independent code reviewer evidence differs')
  require(code.get('content_review_sha256')==CONTENT_REVIEW_SHA256 and code.get('index_review_sha256')==INDEX_REVIEW_SHA256 and code.get('content_ledger_sha256')==sha(prior_search.source(root,'content-audit.json')) and code.get('tree_manifest_sha256')==TREE_MANIFEST_SHA256,'Current code review inputs differ')
  require(old.timestamp(code.get('reviewed_at'))>=old.timestamp(index_review.get('reviewed_at')),'Code review predates index review')
- current=old.tool_tree(root);require(code.get('tool_tree_sha256')==old.canonical(current),'Current reviewed tool tree differs')
+ current=old.tool_tree(root)
+ from timeline_world_mobile_successor import PAGE as MOBILE_PAGE, AFTER as MOBILE_AFTER
+ if sha(prior_search.source(root,MOBILE_PAGE))==MOBILE_AFTER:
+  from timeline_world_mobile_release_successor import project_reviewed_tree
+  current=project_reviewed_tree(root,current)
+ require(code.get('tool_tree_sha256')==old.canonical(current),'Current reviewed tool tree differs')
  prior=project_tree(root,current)
  return {'previous_search':previous_search,'previous_ledger':previous_ledger,'previous_tool_tree':prior}

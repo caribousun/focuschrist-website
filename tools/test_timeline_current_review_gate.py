@@ -45,12 +45,13 @@ class CurrentTimelineReviewGateTests(unittest.TestCase):
     def test_current_mobile_candidate_requires_separate_review(self):
         page = audit.ROOT / world.PAGE
         record = next(r for r in audit.load_ledger()['documents'] if r['path'] == world.PAGE)
-        with patch.object(audit, 'load_ledger', return_value={'documents': [record]}), \
+        with patch.object(mobile, 'NEWTON_VISUAL_REVIEW_SHA', None), \
+             patch.object(audit, 'load_ledger', return_value={'documents': [record]}), \
              patch.object(audit, 'html_files', return_value=[page]):
             output = io.StringIO()
             with contextlib.redirect_stdout(output): result = audit.validate()
         self.assertEqual(result, 1)
-        self.assertIn('current mobile controls independent review pending', output.getvalue())
+        self.assertIn('current mobile controls independent review pending or changed', output.getvalue())
 
 
 if __name__ == '__main__':

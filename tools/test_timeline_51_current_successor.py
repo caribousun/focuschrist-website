@@ -6,6 +6,7 @@ import static_content_audit as audit
 import timeline_51_current_successor as gate
 import timeline_51_search_successor as search
 import timeline_current_index_closure as prior
+import timeline_world_mobile_release_successor as mobile_release
 
 ROOT=Path(__file__).resolve().parents[1]
 class EventSuccessorTests(unittest.TestCase):
@@ -72,7 +73,7 @@ class EventSuccessorTests(unittest.TestCase):
    altered=(json.dumps(bad,ensure_ascii=False,indent=2)+'\n').encode()
    with patch.object(gate.prior_search,'source',side_effect=lambda root,name:altered if name=='content-audit.json' else real(root,name)),self.assertRaisesRegex(ValueError,'Historical content metadata changed'):gate.project_ledger(ROOT,review)
  def test_exact_tree_projection_rejects_unknown_or_missing_paths(self):
-  current=prior.tool_tree(ROOT);old=gate.project_tree(ROOT,current)
+  current=mobile_release.project_tree(ROOT,prior.tool_tree(ROOT));old=gate.project_tree(ROOT,current)
   self.assertEqual(prior.canonical(old),gate.PRIOR_TREE)
   with self.assertRaisesRegex(ValueError,'Historical Timeline tool tree mismatch'):
    gate.project_tree(ROOT,dict(current,**{'tools/unreviewed-extra.py':'0'*64}))
@@ -83,7 +84,7 @@ class EventSuccessorTests(unittest.TestCase):
 
  def test_synthetic_current_reviews_are_all_bound_before_projection(self):
   index=self.index_fixture();current_tree={'tools/fixture.py':'f'*64};ledger=(ROOT/'content-audit.json').read_bytes();code={'schema':'timeline-51-code-review-v1','scope':'current_event_successor_and_tool_tree','verdict':'CONCUR','reviewer_commitment':'1'*64,'receipt_sha256':'2'*64,'content_review_sha256':'3'*64,'index_review_sha256':'4'*64,'content_ledger_sha256':gate.sha(ledger),'tree_manifest_sha256':gate.TREE_MANIFEST_SHA256,'reviewed_at':'2026-10-29T12:01:00Z','tool_tree_sha256':prior.canonical(current_tree)}
-  with patch.object(gate,'validate_index',return_value=(b'previous',index,{})),patch.object(gate,'validate_content',return_value={}),patch.object(gate,'project_ledger',return_value=b'ledger'),patch.object(gate,'pinned',return_value=code),patch.object(gate,'INDEX_REVIEWER_COMMITMENT','c'*64),patch.object(gate,'CODE_REVIEWER_COMMITMENT','1'*64),patch.object(gate,'CODE_RECEIPT_SHA256','2'*64),patch.object(gate,'CONTENT_REVIEW_SHA256','3'*64),patch.object(gate,'INDEX_REVIEW_SHA256','4'*64),patch.object(prior,'tool_tree',return_value=current_tree),patch.object(gate,'project_tree',return_value={'old':'fixture'}):
+  with patch.object(gate,'validate_index',return_value=(b'previous',index,{})),patch.object(gate,'validate_content',return_value={}),patch.object(gate,'project_ledger',return_value=b'ledger'),patch.object(gate,'pinned',return_value=code),patch.object(gate,'INDEX_REVIEWER_COMMITMENT','c'*64),patch.object(gate,'CODE_REVIEWER_COMMITMENT','1'*64),patch.object(gate,'CODE_RECEIPT_SHA256','2'*64),patch.object(gate,'CONTENT_REVIEW_SHA256','3'*64),patch.object(gate,'INDEX_REVIEW_SHA256','4'*64),patch.object(prior,'tool_tree',return_value=current_tree),patch.object(mobile_release,'project_reviewed_tree',return_value=current_tree),patch.object(gate,'project_tree',return_value={'old':'fixture'}):
    got=gate.prepare(ROOT);self.assertEqual(got,{'previous_search':b'previous','previous_ledger':b'ledger','previous_tool_tree':{'old':'fixture'}})
    for key,value in [('content_review_sha256','0'*64),('index_review_sha256','0'*64),('content_ledger_sha256','0'*64),('tool_tree_sha256','0'*64),('reviewed_at','2026-10-29T11:59:00Z')]:
     changed=copy.deepcopy(code);changed[key]=value

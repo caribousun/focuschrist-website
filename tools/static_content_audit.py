@@ -248,13 +248,15 @@ def validate() -> int:
         elif name == WORLD_TIMELINE:
             # A historical projection does not review the later actual page.
             from timeline_world_controls_successor import AFTER as WORLD_CONTROLS_AFTER
-            from timeline_world_mobile_successor import AFTER as WORLD_MOBILE_AFTER, validate_albert_content_review
+            from timeline_world_mobile_successor import AFTER as WORLD_MOBILE_AFTER, validate_albert_content_review, validate_newton_visual_review
             current_sha = hashlib.sha256(path.read_bytes()).hexdigest()
             if current_sha == WORLD_MOBILE_AFTER:
                 try: validate_albert_content_review(ROOT)
-                except (AssertionError, ValueError, OSError, KeyError):
+                except (AssertionError, ValueError, OSError, KeyError, TypeError):
                     errors.append(f"{name}: Albert mobile wording and scope review missing or changed")
-                errors.append(f"{name}: current mobile controls independent review pending")
+                try: validate_newton_visual_review(ROOT)
+                except (AssertionError, ValueError, OSError, KeyError, TypeError):
+                    errors.append(f"{name}: current mobile controls independent review pending or changed")
             if current_sha == WORLD_CONTROLS_AFTER and record.get('reviewed_current_timeline_sha256') != current_sha:
                 errors.append(f"{name}: current Timeline controls review pending")
         elif name == 'answers/jesus-christ-latter-day-saint-beliefs.html':
