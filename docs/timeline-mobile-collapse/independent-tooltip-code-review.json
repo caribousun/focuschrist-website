@@ -1,0 +1,23 @@
+{
+  "schema": "timeline-tooltip-independent-code-review-v1",
+  "reviewer_commitment": "25275b95cc2c78a6aef8f6ac29e2400b0fac0290ab5ec12f9946448301ee8133",
+  "receipt_sha256": "04f2508f1dd2aaf7d6973e7864c8bd60ec17c28e1da5a637fab702bb9534b19a",
+  "reviewed_at": "2026-10-29T18:57:42Z",
+  "reviewed_source_head": "b6a5f277394d672b5f234984eafcee1448d226b4",
+  "source_successor_head": "dc0bbca7ea2168c39eaf7f67637651aa894e47d0",
+  "scope": "tooltip_source_delta_and_standalone_visual_successor",
+  "verdict": "CONCUR_WITHIN_BOUNDED_CODE_SCOPE",
+  "page_sha256": "d67a067e9d90d64b992d21382d07307a91b3770132b1d6db3b451e46683c69a1",
+  "browser_test_sha256": "729bd30fcece4b72ec0bba3bbfcd61ca13765daa9ece266c6cd6f1b2161a6dd8",
+  "controller_sha256": "d1738fa1b95e3c2f2e6690175050e95f3183c9f334b8fe57e9af8a7f20170049",
+  "visual_review_sha256": "0772e94a71e6fc9a8297317a22e75985945533facf73c3754b3c6d523393c692",
+  "source_manifest_sha256": "934c65c74e0a30589abeca265dccfb158682e89aa94e63e039cd1fe3f4be6a26",
+  "successor_sha256": "36ee1be79127890a2d6b0eb46ee63bedf82ac92b5e375429d5cfcbd24a5516f9",
+  "successor_test_sha256": "87c9c12e65d4b8a2d257ee645a4dba7b411c70f538b987ed6e328bde08a332f2",
+  "limits": [
+    "no global clipping guarantee; Leaflet auto direction does not measure available text width",
+    "no personally rerun hosted browser, provider or physical-device verification",
+    "standalone source successor not yet wired into release gate; final integration review required",
+    "no owner, merge, deployment or release approval"
+  ]
+}

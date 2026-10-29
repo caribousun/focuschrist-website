@@ -23,6 +23,15 @@ class TooltipVisualSuccessorTests(unittest.TestCase):
    record=dict(receipt,**{field:value});raw=json.dumps(record).encode()
    def altered(root,name):return raw if name==gate.REVIEW else original(root,name)
    with self.subTest(field=field),patch.object(mobile,'source',side_effect=altered),patch.object(gate,'REVIEW_SHA',gate.sha(raw)),self.assertRaises(ValueError):gate.validate_visual_review()
+ def test_actual_standalone_code_review_and_mutation(self):
+  review=gate.validate_code_review()['code_review'];self.assertEqual(review['scope'],'tooltip_source_delta_and_standalone_visual_successor')
+  original=mobile.source
+  def altered(root,name):
+   raw=original(root,name)
+   return raw+b' ' if name==gate.CODE_REVIEW else raw
+  with patch.object(mobile,'source',side_effect=altered),self.assertRaisesRegex(ValueError,'Tooltip code review changed'):gate.validate_code_review()
+  with patch('timeline_world_mobile_release_successor.MOBILE_IMPLEMENTER_COMMITMENT',review['reviewer_commitment']),self.assertRaisesRegex(ValueError,'must differ from implementer'):gate.validate_code_review()
+  receipt=json.loads(original(ROOT,gate.REVIEW))
   for field in ('candidate','hosted_evidence','limits'):
    record=copy.deepcopy(receipt)
    if field=='candidate':record[field]['page_sha256']='0'*64
