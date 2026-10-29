@@ -1,0 +1,38 @@
+{
+  "schema": "timeline-mobile-collapse-code-review-projection-v1",
+  "reviewer_commitment": "25275b95cc2c78a6aef8f6ac29e2400b0fac0290ab5ec12f9946448301ee8133",
+  "reviewed_at_utc": "2026-10-29T17:30:39Z",
+  "reviewed_head": "de315b5382859a48a5c3b23f9c485130b672ed3b",
+  "prior_bounded_code_review_sha256": "c12f9480d52bff82eb8c793a41d7e2bd1d0dd5ce3de196642466ec97eba99467",
+  "prior_reviewed_head": "64c18e410febf0b761281da1457b65e8e1cf8aac",
+  "reviewed_git_blobs": {
+    ".github/workflows/site-qa.yml": "f67c5b1ff14c607e76aeac0997d143bfd965cc2a",
+    "docs/timeline-mobile-collapse/albert-content-review.json": "645bd4cd8617839464d9710469c7722f9b0631d4",
+    "tools/static_content_audit.py": "8dc40a885d858ea4ee1736064f336364763bac37",
+    "tools/test_timeline_world_mobile_successor.py": "f0c89f23d9627c842a7e03d9776c5087a583bbc7",
+    "tools/timeline_world_mobile_successor.py": "de790395bea327cbf68e050e41ff6389f974b7e0",
+    "tools/timeline_requested_browser_qa.js": "25e390cc2c9e50be9a6a14500722e90035875b76"
+  },
+  "subject_sha256": {
+    "page": "e6331171d55a522bd411bd27b58ebe23335d04313cab0426bee9b1c64f0d2805",
+    "controller": "d1738fa1b95e3c2f2e6690175050e95f3183c9f334b8fe57e9af8a7f20170049",
+    "hosted_test": "6217c553bae48a8c66804c85394e7ce2b3c7ed68f857e3ff718d327fd3a40c97",
+    "actual_content_review": "c2e89d1e0df8f5124b12f6babb7a2a7da22558bc7bea5339d7c17078a5563463"
+  },
+  "scope": [
+    "reviewed exact 84595c-to-de315b delta and reused unchanged earlier verified code and source bindings",
+    "reviewed predecessor comparison delta from 64c18e to 84595c; node syntax check passed",
+    "three mobile successor unittests passed including altered review pin and source negatives",
+    "local disposable Git test exercised missing predecessor filtered fetch, lazy blob retrieval and already-present detection; not a GitHub-hosted fetch",
+    "content review binds original 64c wording/scope review to unchanged exact page and controller, not another actor's review"
+  ],
+  "verdict": "CONCUR_WITHIN_BOUNDED_CODE_SCOPE",
+  "limits": [
+    "not_render_content_owner_or_release_approval",
+    "actual_hosted_browser_and_desktop_parity_pending",
+    "current_independent_mobile_review_gate_pending",
+    "historical_source_import_fixture_not_a_pass_or_waiver",
+    "draft_pr_authorization_pending",
+    "exact_fetch_requires_repository_origin_availability_and_checkout_credentials"
+  ]
+}
