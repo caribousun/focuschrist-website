@@ -23,6 +23,7 @@
     "tools/world_companion_successor.py": "05708e80f52e94a8e06baffd6d96e75dfda9fd150a982de38836d1556ff72821",
     "tools/world_provider_browser_diagnostic.js": null,
     "tools/world_provider_cancellation_review.js": null,
-    "tools/test_world_provider_cancellation_review.js": null
+    "tools/test_world_provider_cancellation_review.js": null,
+    ".github/workflows/deploy-pages.yml": "0e21388c506ff38d730ecb1ce826a873f99b2c8e40292e792de22d8a77b2ae84"
   }
 }
