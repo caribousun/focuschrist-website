@@ -9,6 +9,29 @@ module.exports=async function(page,origin,out){
   await page.goto(origin+'/timelines/world-and-scripture-timeline.html#viewer',{waitUntil:'load'});
   assert(await page.locator('#mapview').isVisible(),'Moment & Map opens first');
   assert(await page.locator('#modeMap').evaluate(n=>n.classList.contains('on')));
+  const viewToggle=page.locator('#mobileViewToggle'),playToggle=page.locator('#mobilePlaybackToggle');
+  const viewPanel=page.locator('#mobileViewControls'),playPanel=page.locator('#mobilePlaybackControls');
+  if(profile.width<=900){
+   assert(await viewToggle.isVisible()&&await playToggle.isVisible(),'Both mobile disclosure controls are visible');
+   assert.equal(await viewToggle.getAttribute('aria-expanded'),'false');assert.equal(await playToggle.getAttribute('aria-expanded'),'false');
+   assert(!(await viewPanel.isVisible())&&!(await playPanel.isVisible()),'Both mobile panels start compact');
+   assert.match(await viewToggle.innerText(),/Moment & Map/);assert.match(await playToggle.innerText(),/Playback.*\d/);
+   assert(await page.locator('.map-options-row').isVisible(),'Geography and map settings remain outside playback');
+   await page.locator('.workspace-toolbar').screenshot({path:path.join(out,'mobile-collapse-view-closed.png'),animations:'disabled'});
+   await page.locator('.maptoolband').scrollIntoViewIfNeeded();await page.locator('.maptoolband').screenshot({path:path.join(out,'mobile-collapse-playback-closed.png'),animations:'disabled'});
+   await viewToggle.focus();await page.keyboard.press('Enter');assert.equal(await viewToggle.getAttribute('aria-expanded'),'true');assert(await viewPanel.isVisible());
+   await page.locator('#q').fill('Egypt');await viewToggle.focus();await page.keyboard.press('Space');assert(!(await viewPanel.isVisible()));assert(await viewToggle.evaluate(n=>document.activeElement===n));
+   await viewToggle.click();assert.equal(await page.locator('#q').inputValue(),'Egypt');await page.locator('#q').fill('');
+   await playToggle.focus();await page.keyboard.press('Enter');assert.equal(await playToggle.getAttribute('aria-expanded'),'true');assert(await playPanel.isVisible());
+   await page.locator('#yearInput').fill('-600');await page.locator('#yearInput').dispatchEvent('change');await page.locator('#playSpeed').selectOption('2');
+   await playToggle.focus();await page.keyboard.press('Space');assert(!(await playPanel.isVisible()));assert(await playToggle.evaluate(n=>document.activeElement===n));
+   await playToggle.click();assert.equal(await page.locator('#yearInput').inputValue(),'-600');assert.equal(await page.locator('#playSpeed').inputValue(),'2');
+   await page.locator('.workspace-toolbar').scrollIntoViewIfNeeded();await page.locator('.workspace-toolbar').screenshot({path:path.join(out,'mobile-collapse-view-open.png'),animations:'disabled'});
+   await page.locator('.maptoolband').scrollIntoViewIfNeeded();await page.locator('.maptoolband').screenshot({path:path.join(out,'mobile-collapse-playback-open.png'),animations:'disabled'});
+  }else{
+   assert(!(await viewToggle.isVisible())&&!(await playToggle.isVisible()),'Desktop has no mobile toggles');
+   assert(await viewPanel.isVisible()&&await playPanel.isVisible(),'Desktop controls remain visible');
+  }
   const counts=()=>page.evaluate(()=>{
    const svg=document.querySelectorAll('#worldmap .ghostpath,#worldmap .routepath,#worldmap .party,#worldmap .routelabel').length;
    let leaflet=0;if(typeof leafLayerGroup!=='undefined'&&leafLayerGroup)leafLayerGroup.eachLayer(n=>{if(['routefaint','routetraveled','party'].includes(n.__kind))leaflet++;});
@@ -47,6 +70,13 @@ module.exports=async function(page,origin,out){
   await settings.scrollIntoViewIfNeeded();await page.screenshot({path:path.join(out,'requested-world-settings-'+profile.name+'.png'),animations:'disabled'});
   await page.locator('#mapSettingsClose').click();assert(!(await settings.evaluate(n=>n.open)),'Map settings closes through its control');await page.locator('#modeChart').click();assert(await page.locator('#river').isVisible(),'Explicit Timeline remains available');
   await page.locator('#modeMap').click();assert(await page.locator('#mapview').isVisible(),'Explicit return to map remains available');
+  if(profile.width<=900){
+   await viewToggle.click();assert(!(await viewPanel.isVisible()));
+   await page.setViewportSize({width:1366,height:900});assert(await viewPanel.isVisible()&&!(await viewToggle.isVisible()),'Desktop resize restores controls');
+   await page.locator('#q').focus();await page.setViewportSize({width:profile.width,height:profile.height});
+   await page.waitForFunction(()=>document.activeElement===document.getElementById('mobileViewToggle'));
+   assert(!(await viewPanel.isVisible()),'Returning to mobile restores collapsed state');
+  }
   await page.goto(origin+'/timelines/adams-1881-chart.html',{waitUntil:'load'});
   assert(await page.locator('#progress').evaluate(n=>n.hidden),'Tile diagnostics hidden');assert(await page.locator('#mini').isVisible(),'Minimap retained');
   assert(await page.locator('#viewport').isVisible());assert(await page.locator('#zoom100').count());

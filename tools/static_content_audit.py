@@ -248,7 +248,10 @@ def validate() -> int:
         elif name == WORLD_TIMELINE:
             # A historical projection does not review the later actual page.
             from timeline_world_controls_successor import AFTER as WORLD_CONTROLS_AFTER
+            from timeline_world_mobile_successor import AFTER as WORLD_MOBILE_AFTER
             current_sha = hashlib.sha256(path.read_bytes()).hexdigest()
+            if current_sha == WORLD_MOBILE_AFTER:
+                errors.append(f"{name}: current mobile controls independent review pending")
             if current_sha == WORLD_CONTROLS_AFTER and record.get('reviewed_current_timeline_sha256') != current_sha:
                 errors.append(f"{name}: current Timeline controls review pending")
         elif name == 'answers/jesus-christ-latter-day-saint-beliefs.html':

@@ -28,7 +28,11 @@ def restore(raw,root=ROOT):
   seen.add(name);binding=row['current_timeline_review'];assert binding['scope']=='source_and_destination_context_only'
   assert binding['reviewed_source_sha256']==review['source_sha256'][name] and binding['visible_text_sha256']==review['visible_text_sha256'][name] and binding['reviewed_at']==review['reviewed_at']
   assert binding['evidence']=={'path':REVIEW,'sha256':REVIEW_SHA256,'bytes':len(review_raw)}
-  assert sha(source(root,name))==review['source_sha256'][name],'Current content source changed'
+  raw_source=source(root,name)
+  if name=='timelines/world-and-scripture-timeline.html':
+   from timeline_world_mobile_successor import AFTER as MOBILE_AFTER, restore as restore_mobile
+   if sha(raw_source)==MOBILE_AFTER:raw_source=restore_mobile(raw_source,root)
+  assert sha(raw_source)==review['source_sha256'][name],'Current content source changed'
   if name==ADAMS:
    assert row['reviewed_source_sha256']==review['source_sha256'][name] and row['published_text_sha256']==review['visible_text_sha256'][name]
    previous=row['prior_timeline_diagnostic_review'];assert isinstance(previous,dict) and previous['path']==name
