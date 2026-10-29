@@ -18,13 +18,13 @@ CHECK_REPORT='docs/emma-journey-public/pre-release-checks.json'
 # be pinned. Missing pins are a hard release failure.
 SUBJECT_SHA256='256320ca0b63e8dd518a92d0f38447246b021315d00e18f65ee1e777055b7439'
 VERIFICATION_SHA256='4d237256fc5f18dfa4169f106025e3d53359f75d9265ad0c47fd75d6f88e95ea'
-CHECK_REPORT_SHA256='e64c7245984659a386c66b3ffae14d055bca5d72acedce33529d5739693538bb'
+CHECK_REPORT_SHA256='d49a3044056e86721d93c7ec9d8d72a13521b03bf2632c7b6e799c734a08692e'
 ARTWORK_DIAGNOSTIC_SHA256='d60528fb1ebb31475bc57ce70c90bb34e4307b6992d619817a2edd8118263084'
 ARTWORK_VERIFIER_COMMITMENT='8227163405734400373fd3fadabfef6bcec809a88d9d85c27718133655dabb81'
-CODE_REVIEW_RECEIPT_SHA256='475d5997d9d22816f81169ac9ccda79e36fd711e5a69c5db9900b2e785b92e00'
-CODE_REVIEWER_COMMITMENT='8a64cc9ff60e5741f6644580df6ff2f6e23d799bfaa3e5cec7a95f15d004f2a7'
-PRE_RELEASE_RECEIPT_SHA256='e2114dd5b7abbadfc62ee7c7e22bae63258142ca03c1bc97d27f41fb7f579b25'
-PRE_RELEASE_VERIFIER_COMMITMENT='fea0906369f7ff9fac69a43399cc91e77e129786dcf084430a41ae83c53ee4ae'
+CODE_REVIEW_RECEIPT_SHA256='b1774c5ee11ab20bcfcb02eded32e9e1bf54a6e6f96622de738fd944c915445d'
+CODE_REVIEWER_COMMITMENT='e98cefbf7f535752d0498e924a8ba057c10f76fe0850bc6d322470713d971b14'
+PRE_RELEASE_RECEIPT_SHA256='81f913d8012fef7b11ef14ab2cd51e1ec1ffae20dc1be7a4facc9e209d019668'
+PRE_RELEASE_VERIFIER_COMMITMENT='257be7849ca017949cf0836a75c560b1ab0336ef2138043051105f5dd295b645'
 PRIVATE_SPEC='d3d9cfbd51a6af4e699bcc39bc1fa7606e0cdb44fa47adb5704340034fdef3c8'
 OWNER_METADATA='862623b24c30f66d73abedab2b87fae4f1f9ef62639c1e3382ddda8b114c9db4'
 OWNER_READBACK='0e0e6d56df3997fdf201c5c92548c155021527b0c2dd2e47fe9ae0d75ce0b9fd'
@@ -52,14 +52,15 @@ def normalized_validator_hash(root):
  return sha(raw.encode())
 
 def reviewed_tool_tree_hash(root):
- """Bind every tool file, including importable bytecode, and the QA workflow."""
+ """Bind every tool file and the QA and deployment workflows."""
  root=Path(root).resolve();result={};require(not (root/'tools').is_symlink(),'symlink tool root')
  for path in sorted((root/'tools').rglob('*')):
   require(not path.is_symlink(),'symlink inside reviewed tool tree')
   if not path.is_file():continue
   rel=path.relative_to(root).as_posix()
   result[rel]=normalized_validator_hash(root) if rel=='tools/emma_public_commitments.py' else sha(path.read_bytes())
- result['.github/workflows/site-qa.yml']=sha(local(root,'.github/workflows/site-qa.yml').read_bytes())
+ for name in ('site-qa.yml','deploy-pages.yml'):
+  path='.github/workflows/'+name;result[path]=sha(local(root,path).read_bytes())
  return canonical(result)
 
 def validate_statement(root,subject):
@@ -181,6 +182,6 @@ def validate_release(root):
    review=json.loads(bound(root,item['evidence'][0]));require(review.get('schema')=='emma-public-validator-review-v1' and review.get('status')=='PASS' and review.get('subject_sha256')==SUBJECT_SHA256,'code review subject mismatch')
    require(issha(CODE_REVIEW_RECEIPT_SHA256) and review.get('private_receipt_sha256')==CODE_REVIEW_RECEIPT_SHA256 and issha(CODE_REVIEWER_COMMITMENT) and review.get('verifier_commitment')==CODE_REVIEWER_COMMITMENT,'code reviewer evidence pending or changed')
    require(review.get('normalized_validator_sha256')==normalized_validator_hash(root),'reviewed validator logic changed')
-   require(review.get('reviewed_tool_tree_sha256')==reviewed_tool_tree_hash(root),'reviewed tool tree or QA workflow changed')
+   require(review.get('reviewed_tool_tree_sha256')==reviewed_tool_tree_hash(root),'reviewed tool tree or workflow changed')
    require(stamp(review['completed_at'])<=stamp(item['completed_at']),'code review postdates check')
  return {'status':'validated public commitments, private attestation and conditional checks; not live verification'}

@@ -51,6 +51,7 @@ class PublicStatement(unittest.TestCase):
    root=Path(d);f=root/'tools/emma_public_commitments.py';f.parent.mkdir()
    f.write_bytes((ROOT/'tools/emma_public_commitments.py').read_bytes())
    workflow=root/'.github/workflows/site-qa.yml';workflow.parent.mkdir(parents=True);workflow.write_bytes(b'fixture')
+   (workflow.parent/'deploy-pages.yml').write_bytes(b'fixture deploy workflow')
    before=m.reviewed_tool_tree_hash(root);(root/'tools/new_module.pyc').write_bytes(b'fixture bytecode')
    self.assertNotEqual(m.reviewed_tool_tree_hash(root),before)
  def test_pinned_and_mandate_ancestor_symlinks_are_rejected(self):

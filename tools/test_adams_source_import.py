@@ -233,8 +233,12 @@ class AdamsSourceImportTests(unittest.TestCase):
         start = raw.index('    # Exact current Emma journey generation.')
         end = raw.index('    # Exact existing Adams chart import;', start)
         journey = raw[start:end]
-        self.assertEqual(hashlib.sha256(journey.encode()).hexdigest(),
-                         'dc55ae2e1c6222a008537eac1f6cff7fd54558d61f28cbe491ba06f01411b6a4')
+        # Preserve the previous independently reviewed block and recognize the
+        # separately reviewed public-evidence successor. Unknown edits still fail.
+        self.assertIn(hashlib.sha256(journey.encode()).hexdigest(), {
+            'dc55ae2e1c6222a008537eac1f6cff7fd54558d61f28cbe491ba06f01411b6a4',
+            '6d50febea139815a821d0c3498f476641ad1e3bece48f012847c69b296775f2e',
+        })
         current = '    if creations or historical or corrections or seasonal or four_scene or answers_six or six_scene or gabriel or three or journey:'
         previous = '    if creations or historical or corrections or seasonal or four_scene or answers_six or six_scene or gabriel or three:'
         self.assertEqual(raw.count(journey), 1)
