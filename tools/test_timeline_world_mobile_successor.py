@@ -19,4 +19,10 @@ class WorldMobileSuccessorTests(unittest.TestCase):
    data=original(root,name)
    return data+b' ' if name==mobile.CONTROLLER else data
   with patch.object(mobile,'source',side_effect=changed),self.assertRaisesRegex(AssertionError,'controller changed'):mobile.restore(current)
+ def test_albert_wording_review_is_exact_and_does_not_claim_render_acceptance(self):
+  review=mobile.validate_albert_content_review()
+  self.assertEqual(review['verdict'],'CONCUR_UI_WORDING_AND_TARGET_SCOPE_ONLY')
+  self.assertIn('not_render_acceptance',review['limits'])
+  with patch.object(mobile,'ALBERT_CONTENT_REVIEW_SHA','0'*64),self.assertRaisesRegex(AssertionError,'review changed'):
+   mobile.validate_albert_content_review()
 if __name__=='__main__':unittest.main()

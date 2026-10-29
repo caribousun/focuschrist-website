@@ -597,6 +597,15 @@ jobs:
         uses: actions/checkout@v5
         with:
           fetch-depth: 2
+      - name: Ensure exact World Timeline predecessor
+        run: |
+          world_predecessor=4fb9e51deda2997d6974e80a5dce86a65167841c
+          if git cat-file -e "$world_predecessor^{commit}"; then
+            echo "Exact predecessor is already available."
+          else
+            git fetch --no-tags --depth=1 --filter=blob:none origin "$world_predecessor"
+          fi
+          test "$(git rev-parse --verify "$world_predecessor^{commit}")" = "$world_predecessor"
       - name: Install pinned Timeline browser dependencies
         run: |
           npm install --prefix /tmp/focus-timeline-qa --no-save --package-lock=false --ignore-scripts playwright@1.55.1 leaflet@1.9.4 jsdom@26.1.0

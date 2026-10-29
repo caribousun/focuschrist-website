@@ -9,6 +9,8 @@ MANIFEST_SHA='4a5078da187cb1a4845e4bcd048dce70b07bbc663ca79e9b0bae9f5d274be1ed'
 BEFORE='016e9896db70ff0a8a142503f289f2e0cbd2f4d96b73d667247dbb2a2370ceef'
 AFTER='e6331171d55a522bd411bd27b58ebe23335d04313cab0426bee9b1c64f0d2805'
 CONTROLLER_SHA='d1738fa1b95e3c2f2e6690175050e95f3183c9f334b8fe57e9af8a7f20170049'
+ALBERT_CONTENT_REVIEW='docs/timeline-mobile-collapse/albert-content-review.json'
+ALBERT_CONTENT_REVIEW_SHA='c2e89d1e0df8f5124b12f6babb7a2a7da22558bc7bea5339d7c17078a5563463'
 def sha(raw):return hashlib.sha256(raw).hexdigest()
 def source(root,name):
  root=Path(root).resolve();parts=Path(name).parts;p=root.joinpath(*parts)
@@ -31,3 +33,15 @@ def restore(raw,root=ROOT):
   raw=raw.replace(after,before,1)
  assert sha(raw)==BEFORE,'Mobile predecessor mismatch'
  return raw
+
+def validate_albert_content_review(root=ROOT):
+ """Bind the actual bounded wording/scope review; rendered review remains separate."""
+ restore(source(root,PAGE),root)
+ raw=source(root,ALBERT_CONTENT_REVIEW);assert sha(raw)==ALBERT_CONTENT_REVIEW_SHA,'Albert content review changed'
+ review=json.loads(raw)
+ assert review.get('schema')=='timeline-mobile-content-review-v1' and review.get('reviewer')=='Albert'
+ assert review.get('reviewed_head')=='64c18e410febf0b761281da1457b65e8e1cf8aac'
+ assert review.get('page_sha256')==AFTER and review.get('controller_sha256')==CONTROLLER_SHA
+ assert review.get('verdict')=='CONCUR_UI_WORDING_AND_TARGET_SCOPE_ONLY'
+ assert review.get('limits')==['not_render_acceptance','not_desktop_parity_proof','not_full_historical_source_reverification','not_owner_release_approval','draft_creation_authorization_pending']
+ return review
