@@ -23,6 +23,8 @@ class MotionBindingTests(unittest.TestCase):
         for name,row in data['files'].items():
             current=(gate.ROOT/name).read_bytes()
             current=historical_timeline_source(name,current)
+            from timeline_51_source_successor import project_exact
+            current=project_exact(name,current)
             from owner_integration_successor import restore as restore_owner
             current=restore_owner(name,current,gate.ROOT)
             from world_companion_successor import restore as restore_world
@@ -110,7 +112,8 @@ class MotionBindingTests(unittest.TestCase):
                             actual=gate.sha(inverse(value['path'],historical_index(value['path'])))
                         elif value['path']=='timeline-images.js':
                             from timeline_image_links_successor import restore
-                            actual=gate.sha(restore((gate.ROOT/value['path']).read_bytes()))
+                            from timeline_51_source_successor import project_exact
+                            actual=gate.sha(restore(project_exact(value['path'],(gate.ROOT/value['path']).read_bytes())))
                         else:
                             actual=module.digest(gate.ROOT/value['path'])
                         self.assertEqual(actual,value['sha256'],stem+':'+value['path'])
@@ -180,8 +183,10 @@ class MotionBindingTests(unittest.TestCase):
         name='pioneers.html'
         row=gate.mapping()['files'][name]
         current=(gate.ROOT/name).read_bytes()
-        self.assertEqual(gate.sha(restore_pioneer_scroll(name,current)),'0674855075616de71f8b89b8b6e3b0145a48e80cc7e7f1b8b7a64874b77fa05d',name)
-        projected=restore_legacy(name,restore_pioneer_scroll(name,current))
+        from timeline_51_source_successor import project_exact
+        before_timeline=project_exact(name,current)
+        self.assertEqual(gate.sha(restore_pioneer_scroll(name,before_timeline)),'0674855075616de71f8b89b8b6e3b0145a48e80cc7e7f1b8b7a64874b77fa05d',name)
+        projected=restore_legacy(name,restore_pioneer_scroll(name,before_timeline))
         self.assertEqual(gate.sha(projected),'b2b988d240a7d54b60b2d2701fde26f54fa6ca1b63261b3d7f7f9e89377a3bf5',name)
         self.assertEqual(gate.sha(restore_bank(name,projected)),row['after_sha256'],name)
         self.assertEqual(gate.sha(gate.restore(name,current)),row['before_sha256'],name)

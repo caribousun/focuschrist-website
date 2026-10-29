@@ -1,0 +1,527 @@
+{
+  "scope": "Sourced destination evidence only; this is not visual, owner, or publication approval.",
+  "source_sha256": {
+    "jesus-christ/mortal-ministry.html": "119fc0150bb5cfd90a3be1b68350ad515efed702144e409d05120a075f8ef892",
+    "jesus-christ/restoration-and-today.html": "8e61672ff83cfefe04652e7f71456d1f5b58a35e85b04e1d1e933d9a534942cf",
+    "pioneers.html": "db9cbc8706d0c290b4c51cd302243c706f7c84e8f9b2427561546f1ba2cd94ca",
+    "church-history.html": "3b82d70f453983aa9bbd17dfe604a34f8dade8d1559f128a31de146c171eb6a3"
+  },
+  "entries": [
+    {
+      "timeline": "life",
+      "event_index": 16,
+      "event": "Peter confesses the Christ",
+      "target": "/jesus-christ/mortal-ministry.html#timeline-peters-confession",
+      "citations": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/16?lang=eng&id=p13-p17#p13"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "life",
+      "event_index": 34,
+      "event": "A shared vision among the brethren",
+      "target": "/jesus-christ/restoration-and-today.html#timeline-school-vision",
+      "citations": [
+        "https://www.josephsmithpapers.org/paper-summary/minutes-18-march-1833/2"
+      ],
+      "limitation": "Connection to the School of the Prophets is suggested by a later account."
+    },
+    {
+      "timeline": "life",
+      "event_index": 35,
+      "event": "Joseph sees the celestial kingdom",
+      "target": "/jesus-christ/restoration-and-today.html#timeline-celestial-vision",
+      "citations": [
+        "https://www.josephsmithpapers.org/paper-summary/visions-21-january-1836-dc-137/1",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/137?lang=eng"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "life",
+      "event_index": 37,
+      "event": "Lorenzo Snow’s reported vision of the Savior",
+      "target": "/jesus-christ/restoration-and-today.html#timeline-lorenzo-snow-witness",
+      "citations": [
+        "https://www.churchofjesuschrist.org/study/history/topics/lorenzo-snow?lang=eng"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "handcart",
+      "event_index": 2,
+      "event": "New York City",
+      "target": "/pioneers.html#timeline-handcart-2",
+      "citations": [
+        "https://history.churchofjesuschrist.org/timeline/historic-sites/wyoming/sixth-crossing?lang=eng"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "handcart",
+      "event_index": 3,
+      "event": "Boston, Massachusetts",
+      "target": "/pioneers.html#timeline-handcart-3",
+      "citations": [
+        "https://history.churchofjesuschrist.org/timeline/historic-sites/wyoming/sixth-crossing?lang=eng"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "handcart",
+      "event_index": 4,
+      "event": "Albany, New York",
+      "target": "/pioneers.html#timeline-handcart-4",
+      "citations": [
+        "https://rsc.byu.edu/rescued/selections-autobiography-mary-goble-pay"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "handcart",
+      "event_index": 5,
+      "event": "Buffalo, New York",
+      "target": "/pioneers.html#timeline-handcart-5",
+      "citations": [
+        "https://rsc.byu.edu/rescued/selections-autobiography-mary-goble-pay"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "handcart",
+      "event_index": 8,
+      "event": "Elkhorn River Crossing",
+      "target": "/pioneers.html#timeline-handcart-8",
+      "citations": [
+        "https://history.churchofjesuschrist.org/chd/transcript?lang=eng&name=transcript-for-levi-savage-journal-1855-march-1858-october"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "handcart",
+      "event_index": 9,
+      "event": "Loup Fork Crossing",
+      "target": "/pioneers.html#timeline-handcart-9",
+      "citations": [
+        "https://history.churchofjesuschrist.org/chd/transcript?lang=eng&name=transcript-for-levi-savage-journal-1855-march-1858-october"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "handcart",
+      "event_index": 10,
+      "event": "Wood River, Nebraska",
+      "target": "/pioneers.html#timeline-handcart-10",
+      "citations": [
+        "https://history.churchofjesuschrist.org/chd/transcript?lang=eng&name=transcript-for-levi-savage-journal-1855-march-1858-october"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "handcart",
+      "event_index": 11,
+      "event": "Fort Kearny",
+      "target": "/pioneers.html#timeline-handcart-11",
+      "citations": [
+        "https://history.churchofjesuschrist.org/chd/transcript?lang=eng&name=transcript-for-james-g-willie-emigrating-company-journal-1856-may-november-16-53"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "handcart",
+      "event_index": 12,
+      "event": "Confluence Point",
+      "target": "/pioneers.html#timeline-handcart-12",
+      "citations": [
+        "https://history.churchofjesuschrist.org/chd/transcript?lang=eng&name=transcript-for-james-g-willie-emigrating-company-journal-1856-may-november-16-53"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "handcart",
+      "event_index": 13,
+      "event": "Ash Hollow",
+      "target": "/pioneers.html#timeline-handcart-13",
+      "citations": [
+        "https://history.churchofjesuschrist.org/chd/transcript?lang=eng&name=transcript-for-levi-savage-journal-1855-march-1858-october",
+        "https://history.churchofjesuschrist.org/chd/transcript?lang=eng&name=transcript-for-james-g-willie-emigrating-company-journal-1856-may-november-16-53"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "handcart",
+      "event_index": 14,
+      "event": "Chimney Rock",
+      "target": "/pioneers.html#timeline-handcart-14",
+      "citations": [
+        "https://history.churchofjesuschrist.org/chd/transcript?lang=eng&name=transcript-for-james-g-willie-emigrating-company-journal-1856-may-november-16-53"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "handcart",
+      "event_index": 15,
+      "event": "Scotts Bluff",
+      "target": "/pioneers.html#timeline-handcart-15",
+      "citations": [
+        "https://history.churchofjesuschrist.org/chd/transcript?lang=eng&name=transcript-for-james-g-willie-emigrating-company-journal-1856-may-november-16-53",
+        "https://history.churchofjesuschrist.org/timeline/historic-sites/wyoming/sixth-crossing?lang=eng"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "handcart",
+      "event_index": 16,
+      "event": "Fort Laramie",
+      "target": "/pioneers.html#timeline-handcart-16",
+      "citations": [
+        "https://history.churchofjesuschrist.org/timeline/historic-sites/wyoming/sixth-crossing?lang=eng"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "handcart",
+      "event_index": 18,
+      "event": "Red Butte",
+      "target": "/pioneers.html#timeline-handcart-18",
+      "citations": [
+        "https://history.churchofjesuschrist.org/timeline/historic-sites/wyoming/sixth-crossing?lang=eng"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "handcart",
+      "event_index": 19,
+      "event": "Independence Rock",
+      "target": "/pioneers.html#timeline-handcart-19",
+      "citations": [
+        "https://history.churchofjesuschrist.org/timeline/historic-sites/wyoming/sixth-crossing?lang=eng"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "handcart",
+      "event_index": 20,
+      "event": "Devil's Gate",
+      "target": "/pioneers.html#timeline-handcart-20",
+      "citations": [
+        "https://history.churchofjesuschrist.org/timeline/historic-sites/wyoming/sixth-crossing?lang=eng"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "handcart",
+      "event_index": 21,
+      "event": "Martin's Cove",
+      "target": "/pioneers.html#timeline-handcart-21",
+      "citations": [
+        "https://history.churchofjesuschrist.org/timeline/historic-sites/wyoming/sixth-crossing?lang=eng"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "handcart",
+      "event_index": 22,
+      "event": "Sixth Crossing of the Sweetwater",
+      "target": "/pioneers.html#timeline-handcart-22",
+      "citations": [
+        "https://history.churchofjesuschrist.org/timeline/historic-sites/wyoming/sixth-crossing?lang=eng"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "handcart",
+      "event_index": 24,
+      "event": "South Pass",
+      "target": "/pioneers.html#timeline-handcart-24",
+      "citations": [
+        "https://history.churchofjesuschrist.org/chd/transcript?lang=eng&name=transcript-for-james-g-willie-emigrating-company-journal-1856-may-november-16-53",
+        "https://history.churchofjesuschrist.org/timeline/historic-sites/wyoming/sixth-crossing?lang=eng"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "handcart",
+      "event_index": 25,
+      "event": "Pacific Springs",
+      "target": "/pioneers.html#timeline-handcart-25",
+      "citations": [
+        "https://history.churchofjesuschrist.org/chd/transcript?lang=eng&name=transcript-for-levi-savage-journal-1855-march-1858-october",
+        "https://history.churchofjesuschrist.org/chd/transcript?lang=eng&name=transcript-for-james-g-willie-emigrating-company-journal-1856-may-november-16-53"
+      ],
+      "limitation": "Sources support expected supplies and crossing nearby; they do not establish a stop at Pacific Springs."
+    },
+    {
+      "timeline": "handcart",
+      "event_index": 26,
+      "event": "Green River Crossing",
+      "target": "/pioneers.html#timeline-handcart-26",
+      "citations": [
+        "https://history.churchofjesuschrist.org/chd/transcript?lang=eng&name=transcript-for-james-g-willie-emigrating-company-journal-1856-may-november-16-53"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "handcart",
+      "event_index": 27,
+      "event": "Fort Bridger",
+      "target": "/pioneers.html#timeline-handcart-27",
+      "citations": [
+        "https://history.churchofjesuschrist.org/chd/transcript?lang=eng&name=transcript-for-james-g-willie-emigrating-company-journal-1856-may-november-16-53",
+        "https://history.churchofjesuschrist.org/timeline/historic-sites/wyoming/sixth-crossing?lang=eng"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "handcart",
+      "event_index": 28,
+      "event": "Bear River Crossing",
+      "target": "/pioneers.html#timeline-handcart-28",
+      "citations": [
+        "https://history.churchofjesuschrist.org/chd/transcript?lang=eng&name=transcript-for-james-g-willie-emigrating-company-journal-1856-may-november-16-53"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "handcart",
+      "event_index": 29,
+      "event": "The Needles",
+      "target": null,
+      "citations": [],
+      "limitation": "No source in this audit establishes an 1856 passage of The Needles."
+    },
+    {
+      "timeline": "handcart",
+      "event_index": 30,
+      "event": "Echo Canyon",
+      "target": "/pioneers.html#timeline-handcart-30",
+      "citations": [
+        "https://history.churchofjesuschrist.org/chd/transcript?lang=eng&name=transcript-for-james-g-willie-emigrating-company-journal-1856-may-november-16-53"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "handcart",
+      "event_index": 31,
+      "event": "Big Mountain",
+      "target": "/pioneers.html#timeline-handcart-31",
+      "citations": [
+        "https://history.churchofjesuschrist.org/chd/transcript?lang=eng&name=transcript-for-james-g-willie-emigrating-company-journal-1856-may-november-16-53"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "handcart",
+      "event_index": 32,
+      "event": "Emigration Canyon",
+      "target": "/pioneers.html#timeline-handcart-32",
+      "citations": [
+        "https://history.churchofjesuschrist.org/chd/transcript?lang=eng&name=transcript-for-james-g-willie-emigrating-company-journal-1856-may-november-16-53",
+        "https://history.churchofjesuschrist.org/timeline/historic-sites/wyoming/sixth-crossing?lang=eng"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "history",
+      "event_index": 6,
+      "event": "The Church Is Organized",
+      "target": "/church-history.html#timeline-history-6",
+      "citations": [
+        "https://www.churchofjesuschrist.org/study/history/topics/founding-meeting-of-the-church-of-christ?lang=eng"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "history",
+      "event_index": 7,
+      "event": "The Saints Gather to Kirtland, Ohio",
+      "target": "/church-history.html#timeline-history-7",
+      "citations": [
+        "https://www.churchofjesuschrist.org/study/manual/latter-day-saint-history-1815-1846-teacher-material/lesson-7?lang=eng"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "history",
+      "event_index": 9,
+      "event": "The Word of Wisdom",
+      "target": "/church-history.html#timeline-history-9",
+      "citations": [
+        "https://www.josephsmithpapers.org/paper-summary/revelation-27-february-1833-dc-89/1"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "history",
+      "event_index": 10,
+      "event": "Saints Expelled from Jackson County, Missouri",
+      "target": "/church-history.html#timeline-history-10",
+      "citations": [
+        "https://www.churchofjesuschrist.org/study/history/topics/jackson-county-violence?lang=eng"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "history",
+      "event_index": 11,
+      "event": "The Quorum of the Twelve Apostles Organized",
+      "target": "/church-history.html#timeline-history-11",
+      "citations": [
+        "https://www.josephsmithpapers.org/paper-summary/minutes-14-february-1835/1"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "history",
+      "event_index": 18,
+      "event": "The Martyrdom of Joseph and Hyrum Smith",
+      "target": "/church-history.html#timeline-history-18",
+      "citations": [
+        "https://www.churchofjesuschrist.org/study/history/topics/deaths-of-joseph-and-hyrum-smith?lang=eng"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "history",
+      "event_index": 19,
+      "event": "The Twelve Lead the Church",
+      "target": "/church-history.html#timeline-history-19",
+      "citations": [
+        "https://www.churchofjesuschrist.org/study/history/topics/succession-of-church-leadership?lang=eng"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "history",
+      "event_index": 21,
+      "event": "The Mormon Battalion Marches",
+      "target": "/church-history.html#timeline-history-21",
+      "citations": [
+        "https://history.churchofjesuschrist.org/timeline/historic-sites/mormon-battalion/"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "history",
+      "event_index": 23,
+      "event": "Crickets, Seagulls, and the First Harvest",
+      "target": "/church-history.html#timeline-history-23",
+      "citations": [
+        "https://www.churchofjesuschrist.org/study/history/topics/crickets-and-seagulls?lang=eng"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "history",
+      "event_index": 25,
+      "event": "The Mountain Meadows Massacre",
+      "target": "/church-history.html#timeline-history-25",
+      "citations": [
+        "https://www.churchofjesuschrist.org/study/history/topics/mountain-meadows-massacre?lang=eng"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "history",
+      "event_index": 28,
+      "event": "The Primary Is Organized",
+      "target": "/church-history.html#timeline-history-28",
+      "citations": [
+        "https://www.churchofjesuschrist.org/learn/organizations/primary?lang=eng"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "history",
+      "event_index": 29,
+      "event": "The Manifesto and the End of Plural Marriage",
+      "target": "/church-history.html#timeline-history-29",
+      "citations": [
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics-essays/the-manifesto-and-the-end-of-plural-marriage?lang=eng"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "history",
+      "event_index": 31,
+      "event": "Utah Becomes the 45th State",
+      "target": "/church-history.html#timeline-history-31",
+      "citations": [
+        "https://archives.utah.gov/2021/01/04/utahs-road-to-statehood-125-years/"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "history",
+      "event_index": 32,
+      "event": "President Lorenzo Snow's Tithing Revelation",
+      "target": "/church-history.html#timeline-history-32",
+      "citations": [
+        "https://newsroom.churchofjesuschrist.org/article/president-lorenzo-snow-renewed-emphasis-tithing-blessed-the-church"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "history",
+      "event_index": 36,
+      "event": "One Million Members; Pioneer Centennial",
+      "target": "/church-history.html#timeline-history-36",
+      "citations": [
+        "https://www.churchofjesuschrist.org/study/manual/church-history-in-the-fulness-of-times/chapter-forty-one?lang=eng"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "history",
+      "event_index": 37,
+      "event": "Correlation Brings the Programs Together",
+      "target": "/church-history.html#timeline-history-37",
+      "citations": [
+        "https://www.churchofjesuschrist.org/study/manual/church-history-in-the-fulness-of-times/chapter-forty-three?lang=eng"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "history",
+      "event_index": 38,
+      "event": "First Area Conference Held in Manchester, England",
+      "target": "/church-history.html#timeline-history-38",
+      "citations": [
+        "https://www.churchofjesuschrist.org/study/history/global-histories/england/xe-chronology?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/presidents-of-the-church-student-manual/chapter-10?lang=eng"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "history",
+      "event_index": 44,
+      "event": "The Perpetual Education Fund Announced",
+      "target": "/church-history.html#timeline-history-44",
+      "citations": [
+        "https://www.churchofjesuschrist.org/study/ensign/2004/01/the-perpetual-education-fund-a-bright-ray-of-hope?lang=eng"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "history",
+      "event_index": 47,
+      "event": "Bicentennial of the First Vision",
+      "target": "/church-history.html#timeline-history-47",
+      "citations": [
+        "https://www.churchofjesuschrist.org/study/scriptures/the-restoration-of-the-fulness-of-the-gospel-of-jesus-christ/a-bicentennial-proclamation-to-the-world?lang=eng"
+      ],
+      "limitation": null
+    },
+    {
+      "timeline": "history",
+      "event_index": 50,
+      "event": "President Nelson Dies; President Oaks Leads the Church",
+      "target": "/church-history.html#timeline-history-50",
+      "citations": [
+        "https://newsroom.churchofjesuschrist.org/article/president-oaks-new-first-presidency"
+      ],
+      "limitation": null
+    }
+  ]
+}

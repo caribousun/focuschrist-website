@@ -335,8 +335,8 @@ var registry={
       "src": "/assets/timeline/history/lorenzo-snow-cb940d3.jpg",
       "href": "/jesus-christ/restoration-and-today.html#timeline-lorenzo-snow-witness",
       "sourceHref": "https://www.churchofjesuschrist.org/media/image/lorenzo-snow-cb940d3?lang=eng",
-      "alt": "Lorenzo Snow appears in a painted portrait, remembered here for his testimony of seeing the Savior in the temple.",
-      "caption": "Lorenzo Snow appears in a painted portrait, remembered here for his testimony of seeing the Savior in the temple.",
+      "alt": "Lorenzo Snow appears in a painted portrait; his granddaughter later recalled his account of seeing the Savior in the temple.",
+      "caption": "Lorenzo Snow appears in a painted portrait; his granddaughter later recalled his account of seeing the Savior in the temple.",
       "credit": "The Church of Jesus Christ of Latter-day Saints, Gospel Media",
       "width": 1006,
       "height": 1280
@@ -726,8 +726,8 @@ var registry={
       "src": "/assets/timeline/history/peter-whitmer-home-55a1412.jpg",
       "href": "/church-history.html#timeline-history-6",
       "sourceHref": "https://www.churchofjesuschrist.org/media/image/peter-whitmer-home-55a1412?lang=eng",
-      "alt": "The reconstructed Whitmer home stands among trees and a wooden fence, recalling the small household where the Church was organized.",
-      "caption": "The reconstructed Whitmer home stands among trees and a wooden fence, recalling the small household where the Church was organized.",
+      "alt": "The reconstructed Whitmer home stands among trees and a wooden fence; one account places the Church’s founding meeting here.",
+      "caption": "The reconstructed Whitmer home stands among trees and a wooden fence; one account places the Church’s founding meeting here.",
       "credit": "The Church of Jesus Christ of Latter-day Saints, Gospel Media",
       "width": 960,
       "height": 1280

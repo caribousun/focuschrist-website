@@ -32,9 +32,13 @@ class TimelineSourceSuccessors(unittest.TestCase):
         with self.assertRaises(AssertionError): nazareth.advance(previous + b' ')
 
     def test_exact_image_links_and_tampering(self):
+        from timeline_51_source_successor import restore as restore_current
         current = (ROOT / 'timeline-images.js').read_bytes()
-        self.assertEqual(hashlib.sha256(images.restore(current)).hexdigest(), images.BEFORE)
+        previous = restore_current('timeline-images.js',current)
+        self.assertEqual(hashlib.sha256(images.restore(previous)).hexdigest(), images.BEFORE)
         for changed in (current+b' ', current.replace(b'picture=art-4f5759d8edad', b'picture=unreviewed', 1)):
+            with self.assertRaises(ValueError): restore_current('timeline-images.js',changed)
+        for changed in (previous+b' ', previous.replace(b'picture=art-4f5759d8edad', b'picture=unreviewed', 1)):
             with self.assertRaises(AssertionError): images.restore(changed)
 
 

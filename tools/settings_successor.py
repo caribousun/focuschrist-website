@@ -57,6 +57,8 @@ def check(root=ROOT):
  data=mapping(root);hashes={}
  for name,row in data['files'].items():
   raw=local(root,name).read_bytes()
+  from timeline_51_source_successor import project_exact
+  raw=project_exact(name,raw,root)
   if name=='timelines/world-and-scripture-timeline.html':
    from timeline_world_controls_successor import restore as restore_world_controls, AFTER as WORLD_AFTER
    if sha(raw)==WORLD_AFTER: raw=restore_world_controls(raw,root)
