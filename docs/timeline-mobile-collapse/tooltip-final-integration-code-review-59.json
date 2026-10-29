@@ -1,0 +1,28 @@
+{
+  "schema": "timeline-tooltip-final-integration-code-v1",
+  "scope": "tooltip_integration_and_exact_tool_tree",
+  "verdict": "CONCUR_WITHIN_BOUNDED_CODE_SCOPE",
+  "reviewer_commitment": "25275b95cc2c78a6aef8f6ac29e2400b0fac0290ab5ec12f9946448301ee8133",
+  "implementer_commitment": "c9838294792783a14b7a2960c6284e74e319967549219eb06a3a885e40de2340",
+  "receipt_sha256": "45c0e517fcef4b12c17b2c4ff8ae665123cebdf6307b093465010d37693a699d",
+  "reviewed_head": "59c9ee2f4d2c9c730a83cc81bd9c7c650a70acf5",
+  "reviewed_at": "2026-10-29T20:10:07Z",
+  "page_sha256": "d67a067e9d90d64b992d21382d07307a91b3770132b1d6db3b451e46683c69a1",
+  "browser_test_sha256": "729bd30fcece4b72ec0bba3bbfcd61ca13765daa9ece266c6cd6f1b2161a6dd8",
+  "controller_sha256": "d1738fa1b95e3c2f2e6690175050e95f3183c9f334b8fe57e9af8a7f20170049",
+  "visual_review_sha256": "0772e94a71e6fc9a8297317a22e75985945533facf73c3754b3c6d523393c692",
+  "prior_code_review_sha256": "5a35a198921a38bf224deaa86388a186925208945d17bc4549f9b7f7012f4b41",
+  "source_manifest_sha256": "934c65c74e0a30589abeca265dccfb158682e89aa94e63e039cd1fe3f4be6a26",
+  "tree_manifest_sha256": "0a14cab0a660c5843fe00a60ffc48ef11dd0b688d7560013a9be8aa919134d88",
+  "provider_diagnostic_sha256": "59d50be056ea28d775e06e2b1309daa0cb8561dcaf87c4e13803549ced034a73",
+  "provider_diagnostic_test_sha256": "1cffcd7086dea9da14d4546b4440f80093c5414641a72ff317308d3aab6e12d7",
+  "provider_cancellation_classifier_sha256": "abc83fef1a4a25f9b5a5922bc8b3e6dd74209ae066679caa4560884f039082f9",
+  "provider_cancellation_classifier_test_sha256": "782cf66aac483cc7ad554fbbcf153551fa23e99f44173e0a9e3d700dc316369d",
+  "current_tool_tree_sha256": "f36f99573d96826305d17f09acf3830e34c05e69d81bbfdfec7da1a8af23b6eb",
+  "limitations": [
+    "The matched diagnostic returns exit zero and may be CI-green; that is not provider or release approval.",
+    "Fixed provider visual subject is one historical run, not a later run; later matched runs require independent reconciliation.",
+    "Raw desktop FAIL is unchanged; matching is correlation only, not causal proof or complete visible-tile success.",
+    "No personally replayed hosted interactions, physical-device, full-site, full CI, owner, merge, deployment or release acceptance."
+  ]
+}
