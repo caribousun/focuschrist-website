@@ -26,9 +26,11 @@ function assess(row){
  if(!start||!fetch||!response||!fulfilled||response.status!==200||fulfilled.status!==200||eventsForId.some(e=>e.kind==='route-error'||e.kind==='request-finished'))return outcome;
  if(eventsForId.some(e=>e.host!==f.host||e.path!==f.path||!sameTile(e.tile)||!Number.isSafeInteger(e.epochMs)))return outcome;
  const aborts=row.sourceEvents.filter(e=>e.type==='sourcedataabort');
- if(aborts.length!==1||row.sourceEvents.some(e=>e.type==='error'))return outcome;
- const abort=aborts[0],coord=abort.coord;
- if(abort.source!==tile.source||!coord||coord.z!==tile.z||coord.x!==tile.x||coord.y!==tile.y||!Number.isSafeInteger(abort.epochMs))return outcome;
+ const validAbort=e=>{const c=e.coord;return ['ne2_shaded','openmaptiles','terrain-dem'].includes(e.source)&&c&&Number.isInteger(c.z)&&c.z>=0&&c.z<=22&&Number.isInteger(c.x)&&c.x>=0&&c.x<2**c.z&&Number.isInteger(c.y)&&c.y>=0&&c.y<2**c.z&&Number.isSafeInteger(e.epochMs);};
+ if(row.sourceEvents.some(e=>e.type==='error')||!aborts.every(validAbort))return outcome;
+ const matches=aborts.filter(e=>e.source===tile.source&&e.coord.z===tile.z&&e.coord.x===tile.x&&e.coord.y===tile.y);
+ if(matches.length!==1)return outcome;
+ const abort=matches[0];
  // Clock timestamps must show this strict sequence; no cause is inferred from it.
  if(!(start.epochMs<=fetch.epochMs&&fetch.epochMs<abort.epochMs&&abort.epochMs<f.epochMs&&f.epochMs<response.epochMs&&response.epochMs<=fulfilled.epochMs&&f.epochMs<=row.sourceObservationCutoffEpochMs))return outcome;
  outcome.classification='MATCHED_RENDERER_CANCELLATION';

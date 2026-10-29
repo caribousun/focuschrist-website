@@ -10,6 +10,11 @@ for(const k of ['pageErrors','badResponses','blockedRequests','blockedRedirects'
 for(const k of ['sourceObserverAttached','sourceObservationComplete','sourcesLoaded','rendererLoaded','statusHidden','canvasVisible']){const r=copy();r[k]=false;no(r);}
 for(const k of ['ne2_shaded','openmaptiles','terrain-dem']){const r=copy();r.finalSourceLoaded[k]=false;no(r);}
 for(const mutate of [r=>r.denied=true,r=>r.handlerDrainTimeout=true,r=>r.failedRequests=2,r=>r.requestErrors[0].code='net::ERR_FAILED',r=>r.events[2].code='net::ERR_FAILED',r=>r.events[2].tile.x=2,r=>r.sourceEvents[0].coord.x=2,r=>r.sourceEvents[0].source='openmaptiles',r=>r.sourceEvents[0].epochMs=100,r=>r.sourceEvents[0].epochMs=200,r=>r.sourceObservationCutoffEpochMs=199,r=>r.events[3].status=503,r=>r.events[4].status=503,r=>r.sourceEvents.push({...r.sourceEvents[0]}),r=>r.sourceEvents.push({type:'error'}),r=>r.events.push({...r.events[0],id:99}),r=>r.events.push({...r.events[2]}),r=>r.events.push({...r.events[0],kind:'request-finished'}),r=>r.events[0].epochMs=NaN,r=>r.events[3].epochMs=150,r=>r.status='PASS',r=>delete r.sourceEvents]){const r=copy();mutate(r);no(r);}
+// Other identifiable source/tile aborts do not make the one matching event ambiguous.
+{const r=copy();r.sourceEvents.push({type:'sourcedataabort',source:'ne2_shaded',coord:{z:2,x:0,y:3},epochMs:149},{type:'sourcedataabort',source:'terrain-dem',coord:{z:2,x:1,y:3},epochMs:151});assert.equal(assess(r).classification,'MATCHED_RENDERER_CANCELLATION');}
+// A second match, even outside the matching request's timing window, remains ambiguous.
+{const r=copy();r.sourceEvents.push({...r.sourceEvents[0],epochMs:250});no(r);}
+for(const invalid of [{type:'sourcedataabort',source:null,coord:{z:2,x:0,y:3},epochMs:140},{type:'sourcedataabort',source:'terrain-dem',coord:null,epochMs:140},{type:'sourcedataabort',source:'terrain-dem',coord:{z:2,x:8,y:3},epochMs:140}]){const r=copy();r.sourceEvents.push(invalid);no(r);}
 // Unrelated trace errors cannot be hidden by inconsistent aggregate counters.
 {const r=copy();r.events.push(ev('route-error',250,{id:99,code:'net::ERR_FAILED'}));no(r);}
 for(const key of ['events','sourceEvents','requestErrors'])for(const invalid of [null,42,'bad',[],{}]){const r=copy();r[key].push(invalid);no(r);}
