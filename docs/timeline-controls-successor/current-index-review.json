@@ -1,0 +1,22 @@
+{
+  "changed_urls": [
+    "/answers/jesus-christ-latter-day-saint-beliefs.html",
+    "/answers/jesus-christ-latter-day-saint-beliefs.html#nazareth-childhood",
+    "/timelines/adams-1881-chart.html"
+  ],
+  "current_search_sha256": "abcd13069b734ca5f25ecc003abef56717093b73c31e336ae84bd3d647ffabf1",
+  "emma_records_unchanged": true,
+  "gallery_sha256": "df6a8c33fc3bd70dbf38675fdb21b984914e5598a42f70025e67de5ddfceb4f8",
+  "panel_sha256": "aaa49fb307fa5e3251e7ed054d2443f637db94a0361a4ba3621d267ed1ab5532",
+  "prior_search_sha256": "ba1ea0787568ce5dc6f51b7661a31ead0088c7e39f2d988286fd98697398ac67",
+  "private_receipt_sha256": "b7b2786f649f3e20c186e3cd03b11228d01b2375947223e8062202b86b42e5c7",
+  "reviewed_at": "2026-10-29T04:23:44Z",
+  "reviewer_commitment": "0313af4b58e8e5165df0b4195356279bde1b81994fd8b237fdec02497f63d2c3",
+  "schema": "timeline-current-index-review-v1",
+  "scope": "three_changed_records_and_unchanged_emma_indices",
+  "source_sha256": {
+    "answers/jesus-christ-latter-day-saint-beliefs.html": "dd071c356cb85d33bea1b717447446a2ab9f7f49d2fcb8e4eb4e458b3a7d6078",
+    "timelines/adams-1881-chart.html": "43f19fc23f4fd17e1c9fdb54003feab2885565c97b1a98abc6aefb092ec06944"
+  },
+  "verdict": "CONCUR"
+}

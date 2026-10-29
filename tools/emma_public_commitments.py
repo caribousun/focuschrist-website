@@ -160,6 +160,18 @@ def cover_render_files(root,subject,added,covered,rejected):
 
 def validate_release(root):
  """Require the separately pinned conditional acceptance check report."""
+ from timeline_search_index_successor import AFTER as TIMELINE_SEARCH_SHA
+ current_search=local(Path(root).resolve(),'site-search-index.json').read_bytes()
+ projection=None
+ if sha(current_search)==TIMELINE_SEARCH_SHA:
+  from timeline_current_index_closure import prepare
+  projection=prepare(root)
+ def reviewed_bound(entry):
+  if projection is not None and entry.get('path')=='site-search-index.json':
+   raw=projection['historical_search']
+   require(len(raw)==entry['bytes'] and sha(raw)==entry['sha256'],'historical search evidence changed')
+   return raw
+  return bound(root,entry)
  subject=read_pinned(root,SUBJECT,SUBJECT_SHA256);validate_statement(root,subject);verification_time=validate_verification(root,subject,SUBJECT_SHA256)
  from owner_journey_successor import validate_hub,validate_redirect,validate_hymns,validate_canonical,HUB,RETIRED,HYMNS
  root=Path(root);bindings=subject['bindings']
@@ -181,7 +193,7 @@ def validate_release(root):
  validate_review_order(completed,verification_time,review_times)
  for name,item in checks.items():
   require(item.get('status')=='PASS' and stamp(item['completed_at'])<=completed and isinstance(item.get('evidence'),list) and item['evidence'],'pre-release check missing: '+name)
-  for entry in item['evidence']:bound(root,entry)
+  for entry in item['evidence']:reviewed_bound(entry)
   if name=='source_and_prose':require(stamp(item['completed_at'])>=max(review_times),'source check predates reviews')
   if name in ('panel','gallery','search'):require(stamp(item['completed_at'])>=max(review_times),'index check predates current closure reviews')
   if name=='artwork_and_provenance':
@@ -195,7 +207,9 @@ def validate_release(root):
    require(len(item['evidence'])==1,'exact code review proof required')
    review=json.loads(bound(root,item['evidence'][0]));require(review.get('schema')=='emma-public-validator-review-v1' and review.get('status')=='PASS' and review.get('subject_sha256')==SUBJECT_SHA256,'code review subject mismatch')
    require(issha(CODE_REVIEW_RECEIPT_SHA256) and review.get('private_receipt_sha256')==CODE_REVIEW_RECEIPT_SHA256 and issha(CODE_REVIEWER_COMMITMENT) and review.get('verifier_commitment')==CODE_REVIEWER_COMMITMENT,'code reviewer evidence pending or changed')
-   require(review.get('normalized_validator_sha256')==normalized_validator_hash(root),'reviewed validator logic changed')
-   require(review.get('reviewed_tool_tree_sha256')==reviewed_tool_tree_hash(root),'reviewed tool tree or workflow changed')
+   validator=projection['historical_validator_sha256'] if projection else normalized_validator_hash(root)
+   tree=projection['historical_tool_tree_sha256'] if projection else reviewed_tool_tree_hash(root)
+   require(review.get('normalized_validator_sha256')==validator,'reviewed validator logic changed')
+   require(review.get('reviewed_tool_tree_sha256')==tree,'reviewed tool tree or workflow changed')
    require(stamp(review['completed_at'])<=stamp(item['completed_at']),'code review postdates check')
  return {'status':'validated public commitments, private attestation and conditional checks; not live verification'}

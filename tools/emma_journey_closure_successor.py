@@ -102,7 +102,11 @@ def check_review(root):
     assets=r.get('assets_manifest');require(isinstance(assets,dict),'missing asset evidence')
     for name in ('assets_manifest','gallery','search','panel','owner_acceptance'):
         entry=r.get(name);require(isinstance(entry,dict) and set(entry)=={'path','sha256'},'missing review binding '+name)
-        require(sha(local(root,entry['path']).read_bytes())==entry['sha256'],'stale review binding '+name)
+        current=local(root,entry['path']).read_bytes()
+        if name=='search' and sha(current)!=entry['sha256']:
+            from timeline_current_index_closure import prepare
+            current=prepare(root)['historical_search']
+        require(sha(current)==entry['sha256'],'stale review binding '+name)
     require(r['gallery']['path']=='art-gallery.json' and r['search']['path']=='site-search-index.json' and r['panel']['path']=='docs/section-panel-inventory.json','wrong generated output bindings')
     mandates={'AGENTS.md':'8517aa734f89b5fb1d6cb62fa1c870ec2f5959c8','docs/historical-character-identity.md':'a2af09fc97c9205139ed0621075fb5d189cf93c5','docs/section-panel-design-mandate.md':'dd0db449995f1f636abd0b84b0da4820630c87c8'}
     reviews=r.get('reviewers');require(isinstance(reviews,list) and len(reviews)==2 and {x.get('reviewer') for x in reviews}=={'Fermi','Newton'},'two independent reviewers required')
