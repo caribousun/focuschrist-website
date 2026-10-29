@@ -1,19 +1,19 @@
 {
   "checks": {
     "artwork_and_provenance": {
-      "completed_at": "2026-10-29T00:36:50.864219+00:00",
+      "completed_at": "2026-10-29T01:03:20.672429+00:00",
       "evidence": [
         {
           "bytes": 622,
           "path": "docs/emma-journey-public/artwork-proof.json",
-          "sha256": "d536459a54471ee061958b45405d78a393ed140f244b32ad7f167468925c384a"
+          "sha256": "4bdfad92ef6c2617581c8ea64fd17ad4a77deeb17d63ebfc34b90326a35b1808"
         }
       ],
       "method": "separate_pre_release_validation",
       "status": "PASS"
     },
     "desktop_render": {
-      "completed_at": "2026-10-29T00:36:50.864219+00:00",
+      "completed_at": "2026-10-29T01:03:20.672429+00:00",
       "evidence": [
         {
           "bytes": 1138,
@@ -30,7 +30,7 @@
       "status": "PASS"
     },
     "gallery": {
-      "completed_at": "2026-10-29T00:36:50.864219+00:00",
+      "completed_at": "2026-10-29T01:03:20.672429+00:00",
       "evidence": [
         {
           "bytes": 1507,
@@ -45,18 +45,18 @@
         {
           "bytes": 1635,
           "path": "docs/emma-journey-public/index-review-commitments.json",
-          "sha256": "19daa013a77ee3ea14e005080cadf56c459f43e48dfd6ada2b9dd7dd80494f30"
+          "sha256": "6ffb6bab787c5c587f3704c48fd22bfa89d6c74609ef48981c4ba09b95721023"
         },
         {
           "bytes": 1821,
           "path": "docs/emma-journey-public/closure-confirmations.json",
-          "sha256": "749e10dc51cf3b1920118fd3d0fec7787c37aa6c4a997596385fd0e84f330189"
+          "sha256": "b523c3467b022ac9976c69a580c7b071a6a83663e4b8ef183462cbca0313ee97"
         }
       ],
       "status": "PASS"
     },
     "narrow_render": {
-      "completed_at": "2026-10-29T00:36:50.864219+00:00",
+      "completed_at": "2026-10-29T01:03:20.672429+00:00",
       "evidence": [
         {
           "bytes": 1138,
@@ -68,7 +68,7 @@
       "status": "PASS"
     },
     "navigation_and_controls": {
-      "completed_at": "2026-10-29T00:36:50.864219+00:00",
+      "completed_at": "2026-10-29T01:03:20.672429+00:00",
       "evidence": [
         {
           "bytes": 1138,
@@ -95,7 +95,7 @@
       "status": "PASS"
     },
     "panel": {
-      "completed_at": "2026-10-29T00:36:50.864219+00:00",
+      "completed_at": "2026-10-29T01:03:20.672429+00:00",
       "evidence": [
         {
           "bytes": 1507,
@@ -110,18 +110,18 @@
         {
           "bytes": 1635,
           "path": "docs/emma-journey-public/index-review-commitments.json",
-          "sha256": "19daa013a77ee3ea14e005080cadf56c459f43e48dfd6ada2b9dd7dd80494f30"
+          "sha256": "6ffb6bab787c5c587f3704c48fd22bfa89d6c74609ef48981c4ba09b95721023"
         },
         {
           "bytes": 1821,
           "path": "docs/emma-journey-public/closure-confirmations.json",
-          "sha256": "749e10dc51cf3b1920118fd3d0fec7787c37aa6c4a997596385fd0e84f330189"
+          "sha256": "b523c3467b022ac9976c69a580c7b071a6a83663e4b8ef183462cbca0313ee97"
         }
       ],
       "status": "PASS"
     },
     "phone_render": {
-      "completed_at": "2026-10-29T00:36:50.864219+00:00",
+      "completed_at": "2026-10-29T01:03:20.672429+00:00",
       "evidence": [
         {
           "bytes": 1138,
@@ -138,7 +138,7 @@
       "status": "PASS"
     },
     "search": {
-      "completed_at": "2026-10-29T00:36:50.864219+00:00",
+      "completed_at": "2026-10-29T01:03:20.672429+00:00",
       "evidence": [
         {
           "bytes": 1507,
@@ -153,33 +153,33 @@
         {
           "bytes": 1635,
           "path": "docs/emma-journey-public/index-review-commitments.json",
-          "sha256": "19daa013a77ee3ea14e005080cadf56c459f43e48dfd6ada2b9dd7dd80494f30"
+          "sha256": "6ffb6bab787c5c587f3704c48fd22bfa89d6c74609ef48981c4ba09b95721023"
         },
         {
           "bytes": 1821,
           "path": "docs/emma-journey-public/closure-confirmations.json",
-          "sha256": "749e10dc51cf3b1920118fd3d0fec7787c37aa6c4a997596385fd0e84f330189"
+          "sha256": "b523c3467b022ac9976c69a580c7b071a6a83663e4b8ef183462cbca0313ee97"
         }
       ],
       "status": "PASS"
     },
     "source_and_prose": {
-      "completed_at": "2026-10-29T00:36:50.864219+00:00",
+      "completed_at": "2026-10-29T01:03:20.672429+00:00",
       "evidence": [
         {
-          "bytes": 40674,
+          "bytes": 40717,
           "path": "docs/emma-journey-public/subject-draft.json",
-          "sha256": "256320ca0b63e8dd518a92d0f38447246b021315d00e18f65ee1e777055b7439"
+          "sha256": "6495aaa91690e698ea304e7cbbee3ff3e40d5b8b490d2f656190056caeabc8a0"
         },
         {
-          "bytes": 873,
+          "bytes": 1186,
           "path": "docs/emma-journey-public/private-verification.json",
-          "sha256": "4d237256fc5f18dfa4169f106025e3d53359f75d9265ad0c47fd75d6f88e95ea"
+          "sha256": "903e4289b665a8df19855e0b04e6e5bdb8989208db2b5bf3e83c496de6222613"
         },
         {
-          "bytes": 1685906,
+          "bytes": 1685909,
           "path": "content-audit.json",
-          "sha256": "79394c9c7c90951d2bccd9e5e1efee75ab0f64febd1e3062c23ed94c6274f59a"
+          "sha256": "3e56b5a2eb5f86e4cc0ea19c69efdbe8861873e02d36b88ab203f99bab1a6b6d"
         },
         {
           "bytes": 10485,
@@ -204,39 +204,39 @@
         {
           "bytes": 5845,
           "path": "docs/emma-journey-owner-closure/current-review.json",
-          "sha256": "c133a614ea8ac489c46ec738883ecde085e6ab2ddd0b1ce460a71c22a0234387"
+          "sha256": "58cb5d0f09fc8d146e832ca5f42a620f9586c6fbfff9f7c4d15e3776e5d0bc6c"
         },
         {
-          "bytes": 549,
+          "bytes": 789,
           "path": "docs/emma-journey-public/conditional-owner.json",
-          "sha256": "373498be62b8efc9a193567658a7c87ef9630076b391db1532d997448dd24479"
+          "sha256": "d49de711849422969e9a0b94bcb3f4edd16f56779a3dd7660eb3c41929feb755"
         },
         {
           "bytes": 1635,
           "path": "docs/emma-journey-public/index-review-commitments.json",
-          "sha256": "19daa013a77ee3ea14e005080cadf56c459f43e48dfd6ada2b9dd7dd80494f30"
+          "sha256": "6ffb6bab787c5c587f3704c48fd22bfa89d6c74609ef48981c4ba09b95721023"
         },
         {
           "bytes": 1821,
           "path": "docs/emma-journey-public/closure-confirmations.json",
-          "sha256": "749e10dc51cf3b1920118fd3d0fec7787c37aa6c4a997596385fd0e84f330189"
+          "sha256": "b523c3467b022ac9976c69a580c7b071a6a83663e4b8ef183462cbca0313ee97"
         }
       ],
       "status": "PASS"
     },
     "validator_code_review": {
-      "completed_at": "2026-10-29T00:36:50.864219+00:00",
+      "completed_at": "2026-10-29T01:03:20.672429+00:00",
       "evidence": [
         {
           "bytes": 784,
           "path": "docs/emma-journey-public/code-review-proof.json",
-          "sha256": "149aa6efa8388989e43cccf474656929d4c8b55ebf36cb090691cbe1f3a3a41e"
+          "sha256": "5c790b1d2639a9db65cd1a3506e9bff6caecad2b8fc3346b3b94af6732acc780"
         }
       ],
       "status": "PASS"
     }
   },
-  "completed_at": "2026-10-29T00:36:50.864219+00:00",
+  "completed_at": "2026-10-29T01:03:20.672429+00:00",
   "limitations": [
     "not_aggregate_qa",
     "not_release_approval",
@@ -246,10 +246,10 @@
     "individual_figure_capture_hashes_not_all_recorded",
     "owner_acceptance_does_not_attest_later_index_hashes"
   ],
-  "private_checks_receipt_sha256": "81f913d8012fef7b11ef14ab2cd51e1ec1ffae20dc1be7a4facc9e209d019668",
+  "private_checks_receipt_sha256": "4e0469d036ad41958073f42898149c2b2126d94c294caef3152df547d93370e5",
   "schema": "emma-public-pre-release-checks-v1",
   "status": "PASS",
-  "subject_sha256": "256320ca0b63e8dd518a92d0f38447246b021315d00e18f65ee1e777055b7439",
-  "verification_sha256": "4d237256fc5f18dfa4169f106025e3d53359f75d9265ad0c47fd75d6f88e95ea",
-  "verifier_commitment": "257be7849ca017949cf0836a75c560b1ab0336ef2138043051105f5dd295b645"
+  "subject_sha256": "6495aaa91690e698ea304e7cbbee3ff3e40d5b8b490d2f656190056caeabc8a0",
+  "verification_sha256": "903e4289b665a8df19855e0b04e6e5bdb8989208db2b5bf3e83c496de6222613",
+  "verifier_commitment": "c4f0127672fcea2c51de2490fec98131b606bd206ca1ce82b06d460698c13631"
 }

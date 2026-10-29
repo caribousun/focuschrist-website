@@ -65,7 +65,7 @@ retirementNav.assertCurrent(currentRoutes,read,JSDOM);
 const priorRead=retirementNav.priorReader(read),pastRead=integration.historicalRead(priorRead);
 const predecessorRoutes=[...currentRoutes,'/history/emma-elect-lady.html'];
 require('./test_owner_integration_navigation').selfTest(predecessorRoutes,priorRead,JSDOM);
-require('./test_adams_study_link_controls')(JSDOM,pastRead,selectors);
+require('./test_adams_study_link_controls')(JSDOM,pastRead,selectors,predecessorRoutes.filter(p=>p!=='/'+integration.intro));
 require('./test_emma_study_link_controls')(JSDOM,pastRead,selectors);
 // Six frozen artwork figures add exactly five named source controls. The Stand
 // scripture links remain inline prose. Validate these additions before taking

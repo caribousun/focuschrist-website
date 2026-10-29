@@ -54,7 +54,7 @@
   "historical_decisions": 44,
   "negative_history_entries": 22,
   "original_target_ordering": "current_recovery_and_operator_attestation",
-  "owner_accepted_at": "2026-10-28T21:09:47.903496+00:00",
+  "owner_accepted_at_commitment": "21e09b456fc7aa6088598993d3cebf49f177a621e15c3fafcf50e2ac77144d59",
   "owner_metadata_commitment": "862623b24c30f66d73abedab2b87fae4f1f9ef62639c1e3382ddda8b114c9db4",
   "owner_private_readback_commitment": "0e0e6d56df3997fdf201c5c92548c155021527b0c2dd2e47fe9ae0d75ce0b9fd",
   "owner_scope": "conditional_on_required_checks",

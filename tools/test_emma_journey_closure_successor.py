@@ -47,11 +47,11 @@ class PublicClosureProjectionTests(unittest.TestCase):
    with patch.object(j,'APPROVED_REVIEW_SHA256',hashlib.sha256(raw).hexdigest()),patch.object(j,'local',side_effect=route),patch.object(public,'validate_release') as gate:
     j.check_review(ROOT);gate.assert_called_once_with(ROOT)
    owner=json.loads(original(ROOT,ownerpath).read_bytes())
-   for field,value in [('acceptance_mode','unconditional'),('reviewed_at','2026-10-29T00:00:00+00:00')]:
+   for field,value,expected in [('acceptance_mode','unconditional','conditional owner evidence'),('accepted_at_commitment','0'*64,'conditional owner evidence'),('metadata_commitment','0'*64,'conditional owner evidence'),('reviewed_at','synthetic-private-time','conditional owner commitment'),('actual_actor','synthetic-owner','conditional owner commitment')]:
     bad=copy.deepcopy(owner);bad[field]=value;ownerfile=tmp/'owner.json';ownerbytes=json.dumps(bad).encode();ownerfile.write_bytes(ownerbytes)
     mutated=copy.deepcopy(record);mutated['owner_acceptance']['sha256']=hashlib.sha256(ownerbytes).hexdigest();mutatedbytes=json.dumps(mutated).encode();recordfile.write_bytes(mutatedbytes)
     def route_bad(root,name):return recordfile if name==j.REVIEW_RECORD else ownerfile if name==ownerpath else original(root,name)
-    with patch.object(j,'APPROVED_REVIEW_SHA256',hashlib.sha256(mutatedbytes).hexdigest()),patch.object(j,'local',side_effect=route_bad),patch.object(public,'validate_release') as gate,self.assertRaisesRegex(ValueError,'conditional owner evidence'):
+    with patch.object(j,'APPROVED_REVIEW_SHA256',hashlib.sha256(mutatedbytes).hexdigest()),patch.object(j,'local',side_effect=route_bad),patch.object(public,'validate_release') as gate,self.assertRaisesRegex(ValueError,expected):
      j.check_review(ROOT)
     gate.assert_not_called()
 
@@ -109,7 +109,7 @@ class SyntheticReviewRecordTests(unittest.TestCase):
   self.refs={n:write(n,('synthetic '+n).encode()) for n in ('art-gallery.json','site-search-index.json','docs/section-panel-inventory.json','docs/assets.json','docs/fermi.json','docs/newton.json','docs/owner-source.json','docs/desktop.jpg','docs/phone.jpg')}
   mapped={'gallery':'art-gallery.json','search':'site-search-index.json','panel':'docs/section-panel-inventory.json','assets_manifest':'docs/assets.json'}
   self.bindings={k:self.refs[v] for k,v in mapped.items()};self.pins={k+'_sha256':v['sha256'] for k,v in self.bindings.items()};time='2026-10-28T17:00:00Z'
-  owner={'kind':'direct_owner_acceptance','actual_actor':'Wyatt','decision':'ACCEPT','withdrawn':False,'page_sha256':j.CURRENT_HUB_SHA256,'reviewed_at':time,'source_evidence':self.refs['docs/owner-source.json'],**self.pins}
+  owner={'kind':'direct_owner_acceptance','actual_actor':'synthetic-owner','decision':'ACCEPT','withdrawn':False,'page_sha256':j.CURRENT_HUB_SHA256,'reviewed_at':time,'source_evidence':self.refs['docs/owner-source.json'],**self.pins}
   self.owner=self.write('docs/owner.json',json.dumps(owner).encode())
   mandates={'AGENTS.md':'8517aa734f89b5fb1d6cb62fa1c870ec2f5959c8','docs/historical-character-identity.md':'a2af09fc97c9205139ed0621075fb5d189cf93c5','docs/section-panel-design-mandate.md':'dd0db449995f1f636abd0b84b0da4820630c87c8'}
   reviews=[{'reviewer':name,'actual_actor':'fixture-'+name,'decision':'CONCUR','withdrawn':False,'page_sha256':j.CURRENT_HUB_SHA256,'mandate_blobs':mandates,'observations':'synthetic test only','reviewed_at':time,'evidence':self.refs['docs/'+name.lower()+'.json'],**self.pins} for name in ('Fermi','Newton')]
@@ -117,7 +117,7 @@ class SyntheticReviewRecordTests(unittest.TestCase):
   self.record={'schema':1,'status':'owner_accepted','current_hub_sha256':j.CURRENT_HUB_SHA256,**self.bindings,'owner_acceptance':self.owner,'reviewers':reviews,'root_review':root}
  def check(self,r):
   raw=json.dumps(r).encode();self.write(j.REVIEW_RECORD,raw)
-  with patch.object(j,'APPROVED_REVIEW_SHA256',j.sha(raw)):return j.check_review(self.root)
+  with patch.object(j,'APPROVED_REVIEW_SHA256',j.sha(raw)),patch.object(j,'LEGACY_OWNER_COMMITMENT',j.sha(b'synthetic-owner')):return j.check_review(self.root)
  def test_positive_synthetic_and_unknown_record_pin(self):
   self.assertEqual(self.check(self.record),self.record)
   with patch.object(j,'APPROVED_REVIEW_SHA256','0'*64),self.assertRaisesRegex(ValueError,'unreviewed'):j.check_review(self.root)
@@ -141,6 +141,10 @@ class SyntheticReviewRecordTests(unittest.TestCase):
  def test_owner_subject_mismatch(self):
   r=copy.deepcopy(self.record);owner=json.loads((self.root/r['owner_acceptance']['path']).read_bytes());owner['page_sha256']='0'*64;r['owner_acceptance']=self.write('docs/owner.json',json.dumps(owner).encode())
   with self.assertRaisesRegex(ValueError,'owner acceptance subject mismatch'):self.check(r)
+ def test_legacy_owner_commitment_and_actor_mismatch(self):
+  self.assertEqual(j.LEGACY_OWNER_COMMITMENT,'f190d2ae997ec531a16e422d424eb756af1249ff4b88f5f29ab191b59fd6397a')
+  r=copy.deepcopy(self.record);owner=json.loads((self.root/r['owner_acceptance']['path']).read_bytes());owner['actual_actor']='different-owner';r['owner_acceptance']=self.write('docs/owner.json',json.dumps(owner).encode())
+  with self.assertRaisesRegex(ValueError,'direct owner acceptance missing'):self.check(r)
 
 class ProductionDispatchTests(unittest.TestCase):
  """Execute the real production dispatch branch with only callees mocked."""

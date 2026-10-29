@@ -21,13 +21,32 @@ class PublicStatement(unittest.TestCase):
   def no_proof(x):x['private_evidence_sha256'].pop('independent_extraction')
   def invent_time(x):x['historical_decision_times']='VERIFIED'
   def owner_waiver(x):x['owner_scope']='unconditional'
+  def owner_time_commitment(x):x['owner_accepted_at_commitment']='0'*64
+  def owner_metadata(x):x['owner_metadata_commitment']='0'*64
+  def literal_owner_time(x):x['owner_accepted_at']='synthetic-private-time'
   def no_exclusion(x):x['excluded_asset_sha256'].pop()
-  for f in (missing_decision,duplicate_actor,rejected_input,false_pixel,no_handoff,overstate_albert,no_proof,invent_time,owner_waiver,no_exclusion):
+  for f in (missing_decision,duplicate_actor,rejected_input,false_pixel,no_handoff,overstate_albert,no_proof,invent_time,owner_waiver,owner_time_commitment,owner_metadata,literal_owner_time,no_exclusion):
    bad=copy.deepcopy(self.good);f(bad)
    with self.subTest(mutation=f.__name__),self.assertRaises((ValueError,KeyError)):m.validate_statement(ROOT,bad)
  def test_pins_remain_unset_until_review(self):
   with patch.object(m,'SUBJECT_SHA256',None),self.assertRaisesRegex(ValueError,'pin pending'):
    m.read_pinned(ROOT,m.SUBJECT,m.SUBJECT_SHA256)
+ def test_private_owner_verification_and_ordering_fail_closed(self):
+  digest='a'*64;proof={'schema':'emma-independent-private-verification-v1','subject_sha256':digest,'verdict':'PASS',
+   'verdict_scope':'bounded_projection_only','verification_model':'direct_projection_with_attributed_private_verification',
+   'scope':['exact_public_projection','distinct_actual_reviewers','historical_preflight_and_finished','ordered_generation_inputs','filename_only_owner_rejection','conditional_owner_readback'],
+   'limitations':['not_provider_telemetry','historical_clock_times_unknown','not_owner_gate_waiver','not_release_approval','filename_only_identifier_comparison_not_digest'],
+   'private_receipt_sha256':'b'*64,'owner_verification_receipt_sha256':m.OWNER_VERIFICATION_RECEIPT,
+   'owner_accepted_at_commitment':m.OWNER_TIME_COMMITMENT,'owner_preceded_verification':True,
+   'owner_verifier_event_at':'2026-01-01T10:00:00+00:00','verified_at':'2026-01-01T11:00:00+00:00'}
+  with patch.object(m,'read_pinned',return_value=proof):m.validate_verification(ROOT,{},digest)
+  for change in (lambda x:x.update(owner_preceded_verification=False),lambda x:x.update(owner_accepted_at_commitment='0'*64),
+                 lambda x:x.update(owner_verification_receipt_sha256='0'*64),lambda x:x.update(owner_verifier_event_at='2026-01-01T12:00:00+00:00')):
+   bad=copy.deepcopy(proof);change(bad)
+   with patch.object(m,'read_pinned',return_value=bad),self.assertRaises(ValueError):m.validate_verification(ROOT,{},digest)
+  verification=m.stamp('2026-01-01T11:00:00+00:00');reviews=[m.stamp('2026-01-01T12:00:00+00:00')]
+  m.validate_review_order(m.stamp('2026-01-01T13:00:00+00:00'),verification,reviews)
+  with self.assertRaisesRegex(ValueError,'predates'):m.validate_review_order(m.stamp('2026-01-01T11:30:00+00:00'),verification,reviews)
  def test_new_runtime_rejection_blocks_input(self):
   import hashlib
   sp=ROOT/m.SUBJECT;vp=ROOT/m.VERIFICATION

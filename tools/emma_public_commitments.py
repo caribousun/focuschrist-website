@@ -16,18 +16,20 @@ VERIFICATION='docs/emma-journey-public/private-verification.json'
 CHECK_REPORT='docs/emma-journey-public/pre-release-checks.json'
 # Only exact statements independently checked against their private sources may
 # be pinned. Missing pins are a hard release failure.
-SUBJECT_SHA256='256320ca0b63e8dd518a92d0f38447246b021315d00e18f65ee1e777055b7439'
-VERIFICATION_SHA256='4d237256fc5f18dfa4169f106025e3d53359f75d9265ad0c47fd75d6f88e95ea'
-CHECK_REPORT_SHA256='d49a3044056e86721d93c7ec9d8d72a13521b03bf2632c7b6e799c734a08692e'
-ARTWORK_DIAGNOSTIC_SHA256='d60528fb1ebb31475bc57ce70c90bb34e4307b6992d619817a2edd8118263084'
-ARTWORK_VERIFIER_COMMITMENT='8227163405734400373fd3fadabfef6bcec809a88d9d85c27718133655dabb81'
-CODE_REVIEW_RECEIPT_SHA256='b1774c5ee11ab20bcfcb02eded32e9e1bf54a6e6f96622de738fd944c915445d'
-CODE_REVIEWER_COMMITMENT='e98cefbf7f535752d0498e924a8ba057c10f76fe0850bc6d322470713d971b14'
-PRE_RELEASE_RECEIPT_SHA256='81f913d8012fef7b11ef14ab2cd51e1ec1ffae20dc1be7a4facc9e209d019668'
-PRE_RELEASE_VERIFIER_COMMITMENT='257be7849ca017949cf0836a75c560b1ab0336ef2138043051105f5dd295b645'
+SUBJECT_SHA256='6495aaa91690e698ea304e7cbbee3ff3e40d5b8b490d2f656190056caeabc8a0'
+VERIFICATION_SHA256='903e4289b665a8df19855e0b04e6e5bdb8989208db2b5bf3e83c496de6222613'
+CHECK_REPORT_SHA256='6120f56197868116f4c6746b928b9092c732b78193e3dd194caffa8d2eb4f179'
+ARTWORK_DIAGNOSTIC_SHA256='f318c676e7924a58816ea19bac75258eaacff1e1525f2d2567840ecff5061dcc'
+ARTWORK_VERIFIER_COMMITMENT='1f57b92308976fda71c75c28b63ec09c84921753868ad3bca4ec0e548bbd8fe4'
+CODE_REVIEW_RECEIPT_SHA256='277546fa9176d7b17a21c2c66004c07832c1b9d9fbcae9bf906cd887bcf660dc'
+CODE_REVIEWER_COMMITMENT='61198775baefc66528f02a2c27ab4467e4452bf9b1dd08246902f833c0f37227'
+PRE_RELEASE_RECEIPT_SHA256='4e0469d036ad41958073f42898149c2b2126d94c294caef3152df547d93370e5'
+PRE_RELEASE_VERIFIER_COMMITMENT='c4f0127672fcea2c51de2490fec98131b606bd206ca1ce82b06d460698c13631'
 PRIVATE_SPEC='d3d9cfbd51a6af4e699bcc39bc1fa7606e0cdb44fa47adb5704340034fdef3c8'
 OWNER_METADATA='862623b24c30f66d73abedab2b87fae4f1f9ef62639c1e3382ddda8b114c9db4'
 OWNER_READBACK='0e0e6d56df3997fdf201c5c92548c155021527b0c2dd2e47fe9ae0d75ce0b9fd'
+OWNER_TIME_COMMITMENT='21e09b456fc7aa6088598993d3cebf49f177a621e15c3fafcf50e2ac77144d59'
+OWNER_VERIFICATION_RECEIPT='9c5e571a16ec53475b0e08fe1ac79fe03cb00c9377469c9cd05a3d53abc1bfa5'
 OPTIONAL_MANDATES={'docs/section-panel-design-mandate.md':'26a8028ec7c7393d070e6f8006662861e1651643dbf925092b19d364ace797fc'}
 CHECKS={'source_and_prose','artwork_and_provenance','panel','gallery','search','navigation_and_controls','desktop_render','phone_render','narrow_render','validator_code_review'}
 FINAL_CHECKS={'current_source','chronology_and_sources','retained_art','new_art','controls_and_navigation','desktop_render','phone_render'}
@@ -41,6 +43,9 @@ def read_pinned(root,path,pin):
  raw=p.read_bytes();require(sha(raw)==pin,'public evidence changed')
  return json.loads(raw)
 def issha(s):return isinstance(s,str) and re.fullmatch(r'[0-9a-f]{64}',s) is not None
+
+def validate_review_order(completed, verification_time, review_times):
+ require(review_times and completed>=max([verification_time,*review_times]),'pre-release report predates required evidence')
 
 def normalized_validator_hash(root):
  """Bind all validator code except its independently reviewed pins."""
@@ -70,7 +75,7 @@ def validate_statement(root,subject):
  require(subject.get('historical_decisions')==44 and subject.get('preflight_decisions')==22 and subject.get('negative_history_entries')==22,'historical decision coverage mismatch')
  proofs=subject.get('private_evidence_sha256');require(isinstance(proofs,dict) and set(proofs)==PRIVATE_PROOFS and all(issha(v) for v in proofs.values()),'private evidence commitments missing')
  require(subject.get('owner_metadata_commitment')==OWNER_METADATA and subject.get('owner_private_readback_commitment')==OWNER_READBACK and subject.get('owner_scope')=='conditional_on_required_checks','owner conditional commitment mismatch')
- require(stamp(subject['owner_accepted_at']).isoformat()=='2026-10-28T21:09:47.903496+00:00','owner acceptance time mismatch')
+ require(subject.get('owner_accepted_at_commitment')==OWNER_TIME_COMMITMENT and 'owner_accepted_at' not in subject,'owner acceptance time commitment mismatch')
  require(subject.get('rejected_filename_only_status')=='no_digest_recorded_distinct_traced_input_identifiers_no_global_exclusion_claim','filename-only exclusion status missing')
  require(subject.get('exclusion_scope')=='checked_creation_baseline_and_sitewide_registries_including_owner_rejections','exclusion scope mismatch')
  forbidden=subject.get('excluded_asset_sha256');require(isinstance(forbidden,list) and len(forbidden)==len(set(forbidden))==19 and all(issha(x) for x in forbidden) and {'5059b4aa414bf57dc9c46608c5c05255810c81faafb472808dfbd9370efdea73','a2bfece984203573f2d7bd1ecdbf64f97822211bf081c2ca29494e6dc0b420ff'}<=set(forbidden),'asset exclusion commitments incomplete')
@@ -107,7 +112,9 @@ def validate_verification(root,subject,subject_sha):
  require(proof.get('verdict_scope')=='bounded_projection_only' and proof.get('verification_model')=='direct_projection_with_attributed_private_verification','private verification scope overstated')
  require(proof.get('scope')==['exact_public_projection','distinct_actual_reviewers','historical_preflight_and_finished','ordered_generation_inputs','filename_only_owner_rejection','conditional_owner_readback'],'private verification scope incomplete')
  require(proof.get('limitations')==['not_provider_telemetry','historical_clock_times_unknown','not_owner_gate_waiver','not_release_approval','filename_only_identifier_comparison_not_digest'],'private verification limits changed')
- require(issha(proof.get('private_receipt_sha256')),'private verification receipt commitment missing');when=stamp(proof['verified_at']);return when
+ require(issha(proof.get('private_receipt_sha256')),'private verification receipt commitment missing')
+ require(proof.get('owner_verification_receipt_sha256')==OWNER_VERIFICATION_RECEIPT and proof.get('owner_accepted_at_commitment')==OWNER_TIME_COMMITMENT and proof.get('owner_preceded_verification') is True,'private conditional owner chronology not verified')
+ when=stamp(proof['verified_at']);require(stamp(proof['owner_verifier_event_at'])<=when,'owner verification event postdates certificate');return when
 
 def validate_artwork(root,added,covered,rejected,pixel_hash,page_dependencies):
  subject=read_pinned(root,SUBJECT,SUBJECT_SHA256);scenes,expected,_=validate_statement(root,subject);validate_verification(root,subject,SUBJECT_SHA256)
@@ -165,11 +172,18 @@ def validate_release(root):
  require(report.get('verification_sha256')==VERIFICATION_SHA256 and issha(PRE_RELEASE_RECEIPT_SHA256) and report.get('private_checks_receipt_sha256')==PRE_RELEASE_RECEIPT_SHA256 and issha(PRE_RELEASE_VERIFIER_COMMITMENT) and report.get('verifier_commitment')==PRE_RELEASE_VERIFIER_COMMITMENT,'independent pre-release verification missing')
  checks=report.get('checks');require(isinstance(checks,dict) and set(checks)==CHECKS,'pre-release checks incomplete')
  completed=stamp(report['completed_at']);review_times=[stamp(r['reconfirmed_at']) for r in subject['reviews']]+[stamp(r['final_review_at']) for r in subject['reviews']]
- require(completed>=max([verification_time,stamp(subject['owner_accepted_at']),*review_times]),'pre-release report predates required evidence')
+ source_evidence=checks['source_and_prose'].get('evidence',[]);indexed={x['path']:x for x in source_evidence if isinstance(x,dict) and 'path' in x}
+ index_path='docs/emma-journey-public/index-review-commitments.json';confirm_path='docs/emma-journey-public/closure-confirmations.json'
+ require(index_path in indexed and confirm_path in indexed,'current closure review evidence missing')
+ index=json.loads(bound(root,indexed[index_path]));confirm=json.loads(bound(root,indexed[confirm_path]))
+ require(index.get('subject_sha256')==SUBJECT_SHA256 and confirm.get('subject_sha256')==SUBJECT_SHA256,'current closure review subject changed')
+ review_times.extend(stamp(x['reviewed_at']) for x in index['reviews']);review_times.extend((stamp(confirm['fermi']['confirmed_at']),stamp(confirm['albert']['reviewed_at'])))
+ validate_review_order(completed,verification_time,review_times)
  for name,item in checks.items():
   require(item.get('status')=='PASS' and stamp(item['completed_at'])<=completed and isinstance(item.get('evidence'),list) and item['evidence'],'pre-release check missing: '+name)
   for entry in item['evidence']:bound(root,entry)
   if name=='source_and_prose':require(stamp(item['completed_at'])>=max(review_times),'source check predates reviews')
+  if name in ('panel','gallery','search'):require(stamp(item['completed_at'])>=max(review_times),'index check predates current closure reviews')
   if name=='artwork_and_provenance':
    require(item.get('method')=='separate_pre_release_validation' and len(item['evidence'])==1,'artwork validation must be separate')
    evidence=json.loads(bound(root,item['evidence'][0]))

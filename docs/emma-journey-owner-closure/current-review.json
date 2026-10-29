@@ -5,7 +5,7 @@
   },
   "current_confirmation_evidence": {
     "path": "docs/emma-journey-public/closure-confirmations.json",
-    "sha256": "749e10dc51cf3b1920118fd3d0fec7787c37aa6c4a997596385fd0e84f330189"
+    "sha256": "b523c3467b022ac9976c69a580c7b071a6a83663e4b8ef183462cbca0313ee97"
   },
   "current_hub_sha256": "7511f2d034d6117cb9e4d0da896c3ff778c1f0a2165c0425361b47c1d6fb3573",
   "gallery": {
@@ -14,11 +14,11 @@
   },
   "index_review_evidence": {
     "path": "docs/emma-journey-public/index-review-commitments.json",
-    "sha256": "19daa013a77ee3ea14e005080cadf56c459f43e48dfd6ada2b9dd7dd80494f30"
+    "sha256": "6ffb6bab787c5c587f3704c48fd22bfa89d6c74609ef48981c4ba09b95721023"
   },
   "owner_acceptance": {
     "path": "docs/emma-journey-public/conditional-owner.json",
-    "sha256": "373498be62b8efc9a193567658a7c87ef9630076b391db1532d997448dd24479"
+    "sha256": "d49de711849422969e9a0b94bcb3f4edd16f56779a3dd7660eb3c41929feb755"
   },
   "owner_acceptance_mode": "conditional_on_remaining_checks",
   "panel": {
@@ -34,7 +34,7 @@
       "decision": "CONCUR",
       "evidence": {
         "path": "docs/emma-journey-public/index-review-commitments.json",
-        "sha256": "19daa013a77ee3ea14e005080cadf56c459f43e48dfd6ada2b9dd7dd80494f30"
+        "sha256": "6ffb6bab787c5c587f3704c48fd22bfa89d6c74609ef48981c4ba09b95721023"
       },
       "gallery_sha256": "df6a8c33fc3bd70dbf38675fdb21b984914e5598a42f70025e67de5ddfceb4f8",
       "mandate_blobs": {
@@ -58,7 +58,7 @@
       "decision": "CONCUR",
       "evidence": {
         "path": "docs/emma-journey-public/index-review-commitments.json",
-        "sha256": "19daa013a77ee3ea14e005080cadf56c459f43e48dfd6ada2b9dd7dd80494f30"
+        "sha256": "6ffb6bab787c5c587f3704c48fd22bfa89d6c74609ef48981c4ba09b95721023"
       },
       "gallery_sha256": "df6a8c33fc3bd70dbf38675fdb21b984914e5598a42f70025e67de5ddfceb4f8",
       "mandate_blobs": {

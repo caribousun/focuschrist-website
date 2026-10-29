@@ -19,7 +19,8 @@ OLD_REGISTRY='docs/exclusive-artwork-ownership.json'
 REVIEW_RECORD='docs/emma-journey-owner-closure/current-review.json'
 # Fill only after real exact finished-source, asset, generated-output and owner
 # review; this is deliberately PENDING, not a fabricated acceptance.
-APPROVED_REVIEW_SHA256='c133a614ea8ac489c46ec738883ecde085e6ab2ddd0b1ce460a71c22a0234387'
+APPROVED_REVIEW_SHA256='58cb5d0f09fc8d146e832ca5f42a620f9586c6fbfff9f7c4d15e3776e5d0bc6c'
+LEGACY_OWNER_COMMITMENT='f190d2ae997ec531a16e422d424eb756af1249ff4b88f5f29ab191b59fd6397a'
 BASELINE_BLOBS={'art-gallery.json':'d7a9e628341f264d86227ac729d8db7ab8ef4584',
                 'site-search-index.json':'cba61442fcbed4fd1e62d61b0d90134d8237d086',
                 'docs/section-panel-inventory.json':'5a2db892aaad7e51e545e92604a8cd80b9becdc4'}
@@ -110,9 +111,12 @@ def check_review(root):
         require(x.get('page_sha256')==CURRENT_HUB_SHA256 and all(x.get(k+'_sha256')==r[k]['sha256'] for k in ('gallery','search','panel','assets_manifest')),'reviewer evidence binding mismatch')
         require(x.get('mandate_blobs')==mandates and isinstance(x.get('observations'),str) and x['observations'].strip(),'reviewer mandate read/observations missing')
         ev=x.get('evidence');require(isinstance(ev,dict) and set(ev)=={'path','sha256'} and sha(local(root,ev['path']).read_bytes())==ev['sha256'],'reviewer evidence missing')
-    owner=json.loads(local(root,r['owner_acceptance']['path']).read_bytes())
-    require(owner.get('kind')=='direct_owner_acceptance' and owner.get('actual_actor')=='Wyatt' and owner.get('decision')=='ACCEPT' and owner.get('withdrawn') is False,'direct owner acceptance missing')
     public=r.get('review_mode')=='bounded_public_commitments_v1'
+    owner=json.loads(local(root,r['owner_acceptance']['path']).read_bytes())
+    if public:
+        require(owner.get('kind')=='conditional_owner_commitment' and owner.get('actor_role')=='owner' and owner.get('decision')=='ACCEPT' and owner.get('withdrawn') is False and 'actual_actor' not in owner and 'reviewed_at' not in owner,'conditional owner commitment missing')
+    else:
+        actor=owner.get('actual_actor');require(owner.get('kind')=='direct_owner_acceptance' and isinstance(actor,str) and sha(actor.encode('utf-8'))==LEGACY_OWNER_COMMITMENT and owner.get('decision')=='ACCEPT' and owner.get('withdrawn') is False,'direct owner acceptance missing')
     require(owner.get('page_sha256')==CURRENT_HUB_SHA256 and (public or all(owner.get(k+'_sha256')==r[k]['sha256'] for k in ('gallery','search','panel','assets_manifest'))),'owner acceptance subject mismatch')
     require(isinstance(owner.get('source_evidence'),dict) and set(owner['source_evidence'])=={'path','sha256'} and sha(local(root,owner['source_evidence']['path']).read_bytes())==owner['source_evidence']['sha256'],'owner source evidence missing')
     root_review=r.get('root_review')
@@ -123,11 +127,12 @@ def check_review(root):
     for view in ('desktop_evidence','phone_evidence'):
         ev=root_review.get(view);require(isinstance(ev,dict) and set(ev)=={'path','sha256'} and sha(local(root,ev['path']).read_bytes())==ev['sha256'],'root rendered evidence missing '+view)
     if public:
-        require(r.get('owner_acceptance_mode')=='conditional_on_remaining_checks' and owner.get('acceptance_mode')=='conditional_on_remaining_checks' and owner.get('reviewed_at')=='2026-10-28T21:09:47.903496+00:00' and owner.get('binding_basis')=='engineering_bindings_not_owner_claim_of_hash_review' and not any(k+'_sha256' in owner for k in ('gallery','search','panel','assets_manifest')),'conditional owner evidence misstated')
+        from emma_public_commitments import OWNER_METADATA, OWNER_READBACK, OWNER_TIME_COMMITMENT
+        require(r.get('owner_acceptance_mode')=='conditional_on_remaining_checks' and owner.get('acceptance_mode')=='conditional_on_remaining_checks' and owner.get('accepted_at_commitment')==OWNER_TIME_COMMITMENT and owner.get('metadata_commitment')==OWNER_METADATA and owner.get('private_readback_commitment')==OWNER_READBACK and owner.get('binding_basis')=='engineering_bindings_not_owner_claim_of_hash_review' and not any(k+'_sha256' in owner for k in ('gallery','search','panel','assets_manifest')),'conditional owner evidence misstated')
         check_public_reviews(root,r,reviews,root_review)
         from emma_public_commitments import validate_release
         validate_release(root)
-    for subject in reviews+[root_review,owner]:
+    for subject in reviews+[root_review]+([] if public else [owner]):
         try:dt=datetime.fromisoformat(subject['reviewed_at'].replace('Z','+00:00'))
         except (KeyError,TypeError,ValueError) as e:raise ValueError('Emma journey current closure: invalid review time') from e
         require(dt.tzinfo is not None,'review time needs timezone')

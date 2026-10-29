@@ -1,12 +1,12 @@
 {
   "asset_count": 44,
-  "completed_at": "2026-10-29T00:01:02.841959+00:00",
+  "completed_at": "2026-10-29T00:57:29.828388+00:00",
   "covered_set_status": "not_checked_aggregate_pending",
   "final_release_command_used": false,
-  "private_diagnostic_sha256": "d60528fb1ebb31475bc57ce70c90bb34e4307b6992d619817a2edd8118263084",
+  "private_diagnostic_sha256": "f318c676e7924a58816ea19bac75258eaacff1e1525f2d2567840ecff5061dcc",
   "schema": "emma-independent-pre-release-artwork-v1",
   "status": "PASS",
-  "subject_sha256": "256320ca0b63e8dd518a92d0f38447246b021315d00e18f65ee1e777055b7439",
-  "verification_sha256": "4d237256fc5f18dfa4169f106025e3d53359f75d9265ad0c47fd75d6f88e95ea",
-  "verifier_commitment": "8227163405734400373fd3fadabfef6bcec809a88d9d85c27718133655dabb81"
+  "subject_sha256": "6495aaa91690e698ea304e7cbbee3ff3e40d5b8b490d2f656190056caeabc8a0",
+  "verification_sha256": "903e4289b665a8df19855e0b04e6e5bdb8989208db2b5bf3e83c496de6222613",
+  "verifier_commitment": "1f57b92308976fda71c75c28b63ec09c84921753868ad3bca4ec0e548bbd8fe4"
 }

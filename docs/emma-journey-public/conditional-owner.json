@@ -1,14 +1,16 @@
 {
   "acceptance_mode": "conditional_on_remaining_checks",
-  "actual_actor": "Wyatt",
+  "accepted_at_commitment": "21e09b456fc7aa6088598993d3cebf49f177a621e15c3fafcf50e2ac77144d59",
+  "actor_role": "owner",
   "binding_basis": "engineering_bindings_not_owner_claim_of_hash_review",
   "decision": "ACCEPT",
-  "kind": "direct_owner_acceptance",
+  "kind": "conditional_owner_commitment",
+  "metadata_commitment": "862623b24c30f66d73abedab2b87fae4f1f9ef62639c1e3382ddda8b114c9db4",
   "page_sha256": "7511f2d034d6117cb9e4d0da896c3ff778c1f0a2165c0425361b47c1d6fb3573",
-  "reviewed_at": "2026-10-28T21:09:47.903496+00:00",
+  "private_readback_commitment": "0e0e6d56df3997fdf201c5c92548c155021527b0c2dd2e47fe9ae0d75ce0b9fd",
   "source_evidence": {
     "path": "docs/emma-journey-public/subject-draft.json",
-    "sha256": "256320ca0b63e8dd518a92d0f38447246b021315d00e18f65ee1e777055b7439"
+    "sha256": "6495aaa91690e698ea304e7cbbee3ff3e40d5b8b490d2f656190056caeabc8a0"
   },
   "withdrawn": false
 }

@@ -30,7 +30,7 @@
     "source_receipt_sha256": "52a3bb070acaa92899d3d9fd983b6b8bdd634c103a61b09baf6dcb7da9b6729a",
     "withdrawn": false
   },
-  "index_review_sha256": "19daa013a77ee3ea14e005080cadf56c459f43e48dfd6ada2b9dd7dd80494f30",
+  "index_review_sha256": "6ffb6bab787c5c587f3704c48fd22bfa89d6c74609ef48981c4ba09b95721023",
   "limitations": [
     "not_whole_site_manual_review",
     "not_new_render",
@@ -39,5 +39,5 @@
   ],
   "schema": "emma-current-closure-confirmations-v1",
   "scope": "bounded_current_emma_indices_not_whole_site_review",
-  "subject_sha256": "256320ca0b63e8dd518a92d0f38447246b021315d00e18f65ee1e777055b7439"
+  "subject_sha256": "6495aaa91690e698ea304e7cbbee3ff3e40d5b8b490d2f656190056caeabc8a0"
 }
