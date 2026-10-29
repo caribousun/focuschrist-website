@@ -11,6 +11,7 @@
     "tools/test_artwork_owner_closure.py": "a974251cd4c38e22212ad74fc346f3e258dea5edee9f7d65dccf9a58817b4741",
     "tools/test_continue_motion_binding.py": "a65b7ef79da0c3f2ff2f7822f6502667a21ea2045f7832e17cc3c9349f065e8f",
     "tools/test_current_integration_content_audit.py": "6231ea72d74d36ffad370bf19cd1d2f817d7ae1896bbfdeb4764f8f42e7f242d",
+    "tools/test_emma_journey_closure_successor.py": "39baf1fe29929141faa8e714be65b2fc7142a13b5de69f71f680154d40f8b624",
     "tools/test_settings_successor.py": "fa8e493d0f327af4811601e07c55a188b9e270b4caec73ce284c462e2af5ce30",
     "tools/test_timeline_51_current_successor.py": null,
     "tools/test_timeline_51_destination_bindings.js": null,
