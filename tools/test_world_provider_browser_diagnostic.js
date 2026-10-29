@@ -1,19 +1,21 @@
 /* Synthetic classification only; it does not run a browser or prove providers. */
 'use strict';
-const assert=require('node:assert/strict'),{classify,allowedRequest,enforceRequest,makeTrace}=require('./world_provider_browser_diagnostic');
+const assert=require('node:assert/strict'),{classify,allowedRequest,enforceRequest,makeTrace,makeHandlerTracker,publicPathClass}=require('./world_provider_browser_diagnostic');
 const ok={denied:false,pageErrors:0,failedRequests:0,badResponses:0,blockedRequests:0,blockedRedirects:0,boundaryErrors:0,openfreemapResponses:1,mapterhornResponses:1,sourcesLoaded:true,rendererLoaded:true,statusHidden:true,canvasVisible:true};
 assert.equal(classify(ok),'PASS');
 for(const field of ['sourcesLoaded','rendererLoaded','statusHidden','canvasVisible','openfreemapResponses','mapterhornResponses'])assert.equal(classify({...ok,[field]:false}),'FAIL',field);
-for(const field of ['pageErrors','failedRequests','badResponses','blockedRequests','blockedRedirects','boundaryErrors'])assert.equal(classify({...ok,[field]:1}),'FAIL',field);
+for(const field of ['pageErrors','failedRequests','badResponses','blockedRequests','blockedRedirects','boundaryErrors','handlerErrors','handlerDrainTimeout'])assert.equal(classify({...ok,[field]:1}),'FAIL',field);
 assert.equal(classify({...ok,eventsDropped:1}),'FAIL');
 assert.equal(classify({...ok,error:'failure'}),'FAIL');assert.equal(classify({...ok,denied:true}),'DENIED');assert.equal(classify({}),'FAIL');
 async function routingTests(){
  const rowTrace={phase:'navigation',events:[],eventsDropped:0},trace=makeTrace(rowTrace);
- const req={url:()=>"https://tiles.openfreemap.org/tiles/1/2/3.pbf?token=secret",resourceType:()=>"fetch"};
+ const req={url:()=>"https://tiles.openfreemap.org/tiles/2/1/3.pbf?token=secret",resourceType:()=>"fetch"};
  trace.mark('request',req);rowTrace.phase='teardown';trace.mark('request-failed',req,{code:'net::ERR_ABORTED'});
- assert.equal(rowTrace.events[0].path,'/tiles/1/2/3.pbf');assert.equal(rowTrace.events[1].phase,'teardown');assert.equal(rowTrace.events[0].id,rowTrace.events[1].id);assert(!JSON.stringify(rowTrace).includes('secret'));
+ assert.equal(rowTrace.events[0].path,'/tiles/{z}/{x}/{y}.pbf');assert.equal(rowTrace.events[1].phase,'teardown');assert.equal(rowTrace.events[0].id,rowTrace.events[1].id);assert(!JSON.stringify(rowTrace).includes('secret'));
  const secretPath={url:()=>"https://tiles.openfreemap.org/token/hidden",resourceType:()=>"fetch"};trace.mark('request',secretPath);assert.equal(rowTrace.events[2].path,'[redacted]');
  const encodedSecret={url:()=>"https://tiles.openfreemap.org/%74%6f%6b%65%6e/hidden",resourceType:()=>"fetch"};trace.mark('request',encodedSecret);assert.equal(rowTrace.events[3].path,'[redacted]');
+ for(const path of ['/customer/jane-doe','/f7d602a1-49c5-49fb-8adb-a35e8fb56352','/tiles/987654321/22/44.pbf','/tiles/2/1234/3.pbf','/planet/1234567890123456','/planet/%32/1/3.pbf'])assert.equal(publicPathClass('tiles.openfreemap.org',path),'[redacted]',path);
+ assert.equal(publicPathClass('tiles.openfreemap.org','/planet'),'/planet');assert.equal(publicPathClass('tiles.mapterhorn.com','/2/1/3.webp'),'/{z}/{x}/{y}.webp');assert.equal(publicPathClass('tiles.mapterhorn.com','/planet'),'[redacted]');
  for(let i=0;i<509;i++)trace.mark('request',req);assert.equal(rowTrace.events.length,512);assert.equal(rowTrace.eventsDropped,1);
  const origin='http://127.0.0.1:12345',good=['http://127.0.0.1:12345/index.html','https://tiles.openfreemap.org/planet','https://tiles.mapterhorn.com/0/0/0.webp'];
  const bad=['http://example.com/','http://tiles.openfreemap.org/','https://tiles.openfreemap.org.evil.test/','https://tiles.openfreemap.org:444/','https://user@tiles.openfreemap.org/','http://localhost:12345/','http://127.0.0.1:12346/','data:text/plain,x'];
@@ -42,6 +44,12 @@ async function routingTests(){
  assert(deniedRow.denied);assert.equal(signalled,1);assert.deepEqual(denied.calls,[['fetch',{maxRedirects:0,maxRetries:0,timeout:15000}],'dispose','abort']);
  const after=stub(good[2],200);await enforceRequest(after.route,origin,deniedRow,()=>{});assert.deepEqual(after.calls,['abort']);
  const post=stub(good[1],200,'POST');await enforceRequest(post.route,origin,mkrow(),()=>{});assert.deepEqual(post.calls,['abort']);
+ const trackedRow={handlerErrors:0};let release;
+ const tracker=makeHandlerTracker(()=>new Promise(resolve=>{release=resolve;}),trackedRow),work=tracker.run({});await Promise.resolve();
+ const draining=tracker.drain(200);release();assert.equal(await draining,true);await work;
+ let releaseSlow;const slowRow={handlerErrors:0},slow=makeHandlerTracker(()=>new Promise(resolve=>{releaseSlow=resolve;}),slowRow),pending=slow.run({});await Promise.resolve();
+ assert.equal(await slow.drain(5),false);assert.equal(classify({...ok,handlerDrainTimeout:true}),'FAIL');releaseSlow();await pending;
+ const thrownRow={handlerErrors:0},aborts=[];const throwing=makeHandlerTracker(()=>{throw Error('synthetic');},thrownRow);await throwing.run({abort:async code=>aborts.push(code)});assert.equal(thrownRow.handlerErrors,1);assert.deepEqual(aborts,['blockedbyclient']);assert.equal(await throwing.drain(200),true);
  console.log('PASS: synthetic fail-closed request, redirect, denial and report cases; no network used.');
 }
 routingTests().catch(e=>{console.error(e);process.exitCode=1;});

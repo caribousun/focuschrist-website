@@ -11,14 +11,38 @@ function allowedRequest(url,origin){
   return u.origin===local.origin||(u.protocol==='https:'&&!u.port&&providers.has(u.hostname));
  }catch(_){return false;}
 }
+function publicPathClass(host,path){
+ if(host==='tiles.openfreemap.org'&&path==='/planet')return '/planet';
+ const templates=host==='tiles.openfreemap.org'
+  ?[[/^\/natural_earth\/ne2sr\/(\d{1,2})\/(\d{1,7})\/(\d{1,7})\.png$/,'/natural_earth/ne2sr/{z}/{x}/{y}.png'],[/^\/planet\/(\d{1,2})\/(\d{1,7})\/(\d{1,7})\.pbf$/,'/planet/{z}/{x}/{y}.pbf'],[/^\/tiles\/(\d{1,2})\/(\d{1,7})\/(\d{1,7})\.pbf$/,'/tiles/{z}/{x}/{y}.pbf']]
+  :host==='tiles.mapterhorn.com'?[[/^\/(\d{1,2})\/(\d{1,7})\/(\d{1,7})\.webp$/,'/{z}/{x}/{y}.webp']]:[];
+ for(const [pattern,label] of templates){const m=pattern.exec(path);if(!m)continue;const [z,x,y]=m.slice(1).map(Number);if(z<=22&&x<2**z&&y<2**z)return label;}
+ return '[redacted]';
+}
+function makeHandlerTracker(handler,row){
+ const pending=new Set();
+ const run=route=>{
+  const task=Promise.resolve().then(()=>handler(route)).catch(async()=>{row.handlerErrors++;await route.abort('blockedbyclient').catch(()=>{});});
+  pending.add(task);task.then(()=>pending.delete(task));return task;
+ };
+ const drain=async timeout=>{
+  const end=performance.now()+timeout;
+  for(;;){
+   if(!pending.size){await new Promise(resolve=>setImmediate(resolve));if(!pending.size)return true;}
+   const remaining=end-performance.now();if(remaining<=0)return false;
+   let timer;const done=await Promise.race([Promise.allSettled([...pending]).then(()=>true),new Promise(resolve=>{timer=setTimeout(()=>resolve(false),remaining);})]);
+   clearTimeout(timer);if(!done)return false;
+  }
+ };
+ return {run,drain};
+}
 function makeTrace(row){
  const start=performance.now(),ids=new WeakMap();let next=1;
  const mark=(kind,request,detail={})=>{
   let u;try{u=new URL(request.url());}catch(_){return;}
   if(!providers.has(u.hostname))return;
   if(!ids.has(request))ids.set(request,next++);
-  const raw=u.pathname;let decoded='';try{decoded=decodeURIComponent(raw);}catch(_){}
-  const path=raw.length<=180&&decoded&&/^\/[A-Za-z0-9._~%/+,-]*$/.test(raw)&&!/(?:token|auth|secret|api.?key)/i.test(decoded)?raw:'[redacted]';
+  const path=publicPathClass(u.hostname,u.pathname);
   const type=typeof request.resourceType==='function'?request.resourceType():'unknown';
   const record={id:ids.get(request),kind,host:u.hostname,path,resourceType:/^[a-z]{1,20}$/.test(type)?type:'unknown',phase:row.phase,ms:Math.round(performance.now()-start),...detail};
   if(row.events.length<512)row.events.push(record);else row.eventsDropped++;
@@ -55,10 +79,10 @@ async function enforceRequest(route,origin,row,onDenial,trace=()=>{}){
 }
 function classify(row){
  if(row.denied)return 'DENIED';
- if(row.error||row.pageErrors||row.failedRequests||row.badResponses||row.blockedRequests||row.blockedRedirects||row.boundaryErrors||row.eventsDropped||!row.sourcesLoaded||!row.rendererLoaded||!row.statusHidden||!row.canvasVisible||!row.openfreemapResponses||!row.mapterhornResponses)return 'FAIL';
+ if(row.error||row.pageErrors||row.failedRequests||row.badResponses||row.blockedRequests||row.blockedRedirects||row.boundaryErrors||row.handlerErrors||row.handlerDrainTimeout||row.eventsDropped||!row.sourcesLoaded||!row.rendererLoaded||!row.statusHidden||!row.canvasVisible||!row.openfreemapResponses||!row.mapterhornResponses)return 'FAIL';
  return 'PASS';
 }
-module.exports={classify,allowedRequest,enforceRequest,makeTrace};
+module.exports={classify,allowedRequest,enforceRequest,makeTrace,makeHandlerTracker,publicPathClass};
 async function run(){
  assert.equal(process.env.CI,'true','Hosted CI only');
  const {chromium}=require('playwright'),route='/timelines/world-and-scripture-timeline.html';
@@ -74,10 +98,11 @@ async function run(){
   for(const profile of [{name:'desktop',width:1366,height:900},{name:'phone',width:390,height:844}]){
    const context=await browser.newContext({viewport:{width:profile.width,height:profile.height},reducedMotion:'reduce',serviceWorkers:'block'});
    await context.routeWebSocket('**/*',socket=>socket.close());const page=await context.newPage();
-   const row={profile:profile.name,phase:'setup',events:[],eventsDropped:0,mapEvents:[],denied:false,denial:null,requestErrors:[],responseErrors:[],pageErrors:0,failedRequests:0,badResponses:0,blockedRequests:0,blockedRedirects:0,boundaryErrors:0,openfreemapResponses:0,mapterhornResponses:0};let deniedResolve;
+   const row={profile:profile.name,phase:'setup',events:[],eventsDropped:0,mapEvents:[],denied:false,denial:null,requestErrors:[],responseErrors:[],pageErrors:0,failedRequests:0,badResponses:0,blockedRequests:0,blockedRedirects:0,boundaryErrors:0,handlerErrors:0,handlerDrainTimeout:false,openfreemapResponses:0,mapterhornResponses:0};let deniedResolve;
    const trace=makeTrace(row);
    const deniedSignal=new Promise(resolve=>deniedResolve=resolve);
-   await context.route('**/*',route=>enforceRequest(route,origin,row,deniedResolve,trace.mark));
+   const tracker=makeHandlerTracker(route=>enforceRequest(route,origin,row,deniedResolve,trace.mark),row);
+   await context.route('**/*',tracker.run);
    page.on('request',request=>trace.mark('request',request));
    page.on('pageerror',()=>row.pageErrors++);
    page.on('requestfailed',request=>{const host=new URL(request.url()).hostname;if(!providers.has(host))return;row.failedRequests++;const raw=request.failure()?.errorText||'',code=/^net::ERR_[A-Z0-9_]+$/.test(raw)?raw:'unclassified';trace.mark('request-failed',request,{code});if(row.requestErrors.length<10)row.requestErrors.push({host,code});});
@@ -100,13 +125,13 @@ async function run(){
     if(!row.denied){row.phase='screenshot';await page.screenshot({path:path.join(out,profile.name+'.png'),animations:'disabled',timeout:10000});}
    }catch(error){row.error='candidate navigation, provider readiness, or screenshot did not complete';}
    if(!row.denied){row.phase='map-trace';try{const m=await page.evaluate(()=>({events:window.__providerMapTrace||[],dropped:window.__providerMapTraceDropped||0}));row.mapEvents=m.events;row.mapEventsDropped=m.dropped;}catch(_){row.error='map event trace unavailable';}}
-   row.phase='teardown';await context.close();row.phase='closed';if(row.mapEventsDropped)row.error='map event trace incomplete';row.status=classify(row);rows.push(row);
+   row.phase='teardown';await context.close();row.phase='handler-drain';row.handlerDrainTimeout=!(await tracker.drain(5000));row.phase='closed';if(row.mapEventsDropped)row.error='map event trace incomplete';row.status=classify(row);rows.push(row);
    if(row.denied)break; // Never retry an explicit provider denial in another profile.
   }
  }finally{
   if(browser)await browser.close();await new Promise(resolve=>server.close(resolve));
   for(const row of rows)row.status=classify(row);
-  fs.writeFileSync(path.join(out,'provider-diagnostic.json'),JSON.stringify({identity,rows,limits:['Provider-backed hosted Chromium only; screenshot review and physical-device verification are separate.','Map events are recorded only after monitor setup; the reported start interval bounds cross-process timing alignment.','Request failures during teardown are recorded and still fail the diagnostic.','The deterministic isolated browser suite remains separate.']},null,2)+'\n');
+  fs.writeFileSync(path.join(out,'provider-diagnostic.json'),JSON.stringify({identity,rows,limits:['Provider-backed hosted Chromium only; screenshot review and physical-device verification are separate.','Map events are recorded only after monitor setup; the reported start interval bounds cross-process timing alignment.','Request failures during teardown are recorded and still fail the diagnostic.','Handler draining is bounded; timeout or handler errors fail the diagnostic.','Provider paths are classified using fixed public templates; other paths are redacted.','The deterministic isolated browser suite remains separate.']},null,2)+'\n');
  }
  assert.equal(rows.length,2,'Both desktop and phone provider checks are required');assert(rows.every(r=>r.status==='PASS'),'Provider diagnostic failed; inspect bounded report and screenshots');
  console.log('PASS: configured map providers responded and settled on desktop and phone; visual review remains separate.');
