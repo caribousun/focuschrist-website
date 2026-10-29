@@ -8,11 +8,21 @@ from unittest.mock import patch
 import continue_motion_binding as gate
 import settings_successor as settings
 
+def historical_timeline_source(name, raw):
+    if name == 'answers/jesus-christ-latter-day-saint-beliefs.html':
+        from timeline_nazareth_successor import restore
+        return restore(raw)
+    if name == 'timelines/world-and-scripture-timeline.html':
+        from timeline_world_controls_successor import restore
+        return restore(raw)
+    return raw
+
 class MotionBindingTests(unittest.TestCase):
     def test_every_exact_predecessor(self):
         data=gate.mapping()
         for name,row in data['files'].items():
             current=(gate.ROOT/name).read_bytes()
+            current=historical_timeline_source(name,current)
             from owner_integration_successor import restore as restore_owner
             current=restore_owner(name,current,gate.ROOT)
             from world_companion_successor import restore as restore_world
@@ -30,11 +40,15 @@ class MotionBindingTests(unittest.TestCase):
             from adams_delivery_successor import restore as restore_adams_delivery
             from emma_hub_citation_successor import restore as restore_hub_citations
             self.assertEqual(gate.sha(restore_world(name,settings.restore(name,restore_close(name,restore_hand(name,restore_bank(name,restore_gate(name,restore_eval(name,restore_citation(name,restore_legacy(name,restore_decoupling(name,restore_scroll(name,restore_pioneer_scroll(name,restore_emma(name,restore_adams_delivery(name,restore_hub_citations(name,current)))))))))))))))),row['after_sha256'],name)
-            self.assertEqual(gate.sha(gate.restore(name,current)),row['before_sha256'],name)
+            # The Timeline selector's current semantic validator must see the
+            # actual source, not a fixture already projected by restore_owner.
+            source=(gate.ROOT/name).read_bytes() if name=='timeline.html' else current
+            self.assertEqual(gate.sha(gate.restore(name,source)),row['before_sha256'],name)
 
     def test_exact_successors_and_unknown_input_rejected(self):
         for name,row in gate.mapping()['files'].items():
             current=(gate.ROOT/name).read_bytes()
+            current=historical_timeline_source(name,current)
             old=gate.restore(name,current)
             from missionary_close_successor import advance as advance_close
             self.assertEqual(gate.advance(name,old),advance_close(name,settings.advance(name,current)),name)
@@ -94,6 +108,9 @@ class MotionBindingTests(unittest.TestCase):
                             from test_timeline_source_import import historical_index
                             from artwork_display_delivery import inverse
                             actual=gate.sha(inverse(value['path'],historical_index(value['path'])))
+                        elif value['path']=='timeline-images.js':
+                            from timeline_image_links_successor import restore
+                            actual=gate.sha(restore((gate.ROOT/value['path']).read_bytes()))
                         else:
                             actual=module.digest(gate.ROOT/value['path'])
                         self.assertEqual(actual,value['sha256'],stem+':'+value['path'])

@@ -47,6 +47,9 @@ jobs:
           python -m unittest discover -s tools -p test_emma_journey_creation_wiring.py
           python -m unittest discover -s tools -p test_emma_story_journey_browser_contract.py
           python -m unittest discover -s tools -p test_emma_journey_indices_contract.py
+          python -m unittest discover -s tools -p test_timeline_search_index_successor.py
+          python -m unittest discover -s tools -p test_timeline_current_index_closure.py
+          python -m unittest discover -s tools -p test_timeline_content_ledger_successor.py
           python -m unittest discover -s tools -p test_prepare_emma_journey_indices.py
           python -m unittest discover -s tools -p test_emma_journey_indices_full_tree_protocol.py
           python -m unittest discover -s tools -p test_artwork_emma_story_delivery.py
@@ -207,6 +210,12 @@ jobs:
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/timeline_map_lifecycle_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/timeline_history_map_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/timeline_images_qa.js
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/timeline_world_requested_controls_qa.js
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/timeline_world_image_context_qa.js
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/timeline_gallery_targets_qa.js
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/adams_hide_diagnostics_qa.js
+          python -m unittest discover -s tools -p test_timeline_controls_successor.py
+          python -m unittest discover -s tools -p test_timeline_current_review_gate.py
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/timeline_workspace_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/timeline_life_marker_qa.js
           node tools/timeline_life_restoration_qa.js
@@ -586,6 +595,8 @@ jobs:
         run: |
           npm install --prefix /tmp/focus-timeline-qa --no-save --package-lock=false --ignore-scripts playwright@1.55.1 leaflet@1.9.4 jsdom@26.1.0
           /tmp/focus-timeline-qa/node_modules/.bin/playwright install --with-deps chromium
+      - name: Verify Adams browser source successor
+        run: node tools/test_adams_browser_source_successor.js
       - name: Verify current Adams landing source preflight
         run: NODE_PATH=/tmp/focus-timeline-qa/node_modules node tools/test_adams_landing_preflight.js
       - name: Verify standalone Timeline experiences at desktop, phone, and enlarged text

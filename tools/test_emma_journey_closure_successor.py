@@ -40,6 +40,12 @@ class PublicClosureProjectionTests(unittest.TestCase):
     with patch.object(j,'local',side_effect=use_test_file),self.assertRaises(ValueError):self.run_projection(row)
  def test_public_path_invokes_release_and_preserves_owner_conditions(self):
   import emma_public_commitments as public
+  import timeline_current_index_closure as timeline
+  import timeline_search_index_successor as search
+  previous=search.restore((ROOT/'site-search-index.json').read_bytes())
+  # Synthetic injection exercises the historical owner checks; the separate
+  # current-index tests require real evidence before the actual gate can pass.
+  self.enterContext(patch.object(timeline,'prepare',return_value={'historical_search':previous}))
   original=j.local;record=self.record;raw=json.dumps(record).encode();ownerpath=record['owner_acceptance']['path']
   with tempfile.TemporaryDirectory() as folder:
    tmp=Path(folder);recordfile=tmp/'record.json';recordfile.write_bytes(raw)

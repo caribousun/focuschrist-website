@@ -18,6 +18,10 @@ class IntegrationSuccessorTests(unittest.TestCase):
                 from owner_journey_successor import historical_fixture, read_manifest
                 self.assertEqual(s.sha(raw),read_manifest()['files'][name]['current_sha256'])
                 self.assertEqual(s.sha(historical_fixture(name,raw,s.ROOT)),s.CURRENT[name])
+            elif name == s.CHART:
+                from timeline_adams_diagnostic_successor import AFTER, restore
+                self.assertEqual(s.sha(raw), AFTER)
+                self.assertEqual(s.sha(restore(raw)), s.CURRENT[name])
             else:
                 self.assertEqual(s.sha(raw),s.CURRENT[name])
             self.assertEqual(s.sha(old),s.BEFORE[name])
@@ -76,6 +80,14 @@ class IntegrationSuccessorTests(unittest.TestCase):
             fixture=root/'docs/timeline-selector/historical-c910.txt'
             fixture.write_bytes((s.ROOT/'docs/timeline-selector/historical-c910.txt').read_bytes()+b' ')
             with self.assertRaises(AssertionError):s.restore(s.LANDING,raw,root)
+
+    def test_adams_prior_integrated_bytes_require_the_exact_current_successor(self):
+        from timeline_adams_diagnostic_successor import restore
+        current=(s.ROOT/s.CHART).read_bytes();prior=restore(current,s.ROOT)
+        self.assertEqual(s.restore(s.CHART,prior,s.ROOT),s.restore(s.CHART,current,s.ROOT))
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(td);target=root/s.CHART;target.parent.mkdir(parents=True);target.write_bytes(current+b' ')
+            with self.assertRaises((AssertionError,OSError)):s.restore(s.CHART,prior,root)
 
     def test_full_exact_source_registration_has_no_acceptance_claim(self):
         result=s.check();self.assertEqual(result['files'],11)

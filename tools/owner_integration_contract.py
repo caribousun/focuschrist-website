@@ -195,7 +195,12 @@ def validate_file(route, raw, root=ROOT):
         return {'bytes':len(raw), 'sha256':sha(raw), 'validation':'current semantics'}
     item = manifest(root)['files'].get(route)
     require(item is not None, 'Unknown integration source')
-    if route == 'adams-integration.css':
+    if route == CHART:
+        from timeline_adams_diagnostic_successor import restore
+        previous = restore(raw, root)
+        require(len(previous) == item['bytes'] and sha(previous) == item['sha256'], 'Historical chart source drift')
+        item = dict(item, bytes=len(raw), sha256=sha(raw))
+    elif route == 'adams-integration.css':
         # Exact current CSS-only successor. Recover historical bytes solely to
         # validate the immutable old manifest; this grants no rendered approval.
         suffix = b'\n/* Let the Adams intro\'s existing Timeline header reflow when enlarged text needs room. */\n@media (max-width:1020px) {\n body.fc-adams-intro-page .nav[data-focuschrist-header="standard"] { flex-wrap:wrap; row-gap:8px; }\n body.fc-adams-intro-page .nav[data-focuschrist-header="standard"] .hamburger-wrap { margin-left:auto; }\n}\n'
@@ -235,6 +240,9 @@ def historical_bytes(route, current, root=ROOT):
         assert_emma_semantics(route, current.decode('utf-8'))
     else:
         item = validate_file(route, current, root)
+        if route == CHART:
+            from timeline_adams_diagnostic_successor import restore
+            current = restore(current, root)
     history = item.get('historical')
     require(history is not None, 'New route has no invented predecessor')
     raw = current

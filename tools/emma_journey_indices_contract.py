@@ -108,6 +108,17 @@ def validate_full_tree(root,baseline):
  cfg=json.loads((root/'docs/section-panel-surfaces.json').read_bytes())
  live_panel=section_panel_surface_qa.inventory(cfg);section_panel_surface_qa.check(cfg,live_panel)
  req(live_panel==after['panel'],'panel inventory differs from full-tree producer')
+ # A separately bound Timeline change modifies three non-Emma search rows.
+ # Keep the original no-drift comparison unchanged: validate the full current
+ # producer output first, then compare the exact reconstructed historical
+ # index to the Emma baseline. This is not current review or release approval.
+ from timeline_search_index_successor import AFTER as TIMELINE_SEARCH, restore as restore_timeline_search, sha
+ raw=(root/'site-search-index.json').read_bytes()
+ if sha(raw)==TIMELINE_SEARCH:
+  historical=dict(after,search=json.loads(restore_timeline_search(raw,root)))
+  result=check(before,historical)
+  result['timeline_search_successor']='exact mechanical projection; current review remains separate'
+  return result
  return check(before,after)
 if __name__=='__main__':
  import argparse,json

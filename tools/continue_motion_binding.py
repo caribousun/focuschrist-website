@@ -38,6 +38,13 @@ def reviewed_bytes(path):
     return restore(name,raw)
 
 def restore(name,data,root=ROOT):
+    # Project only exact, separately bound later sources for historical checks.
+    if name == 'answers/jesus-christ-latter-day-saint-beliefs.html':
+        from timeline_nazareth_successor import AFTER as NAZARETH_AFTER, restore as restore_nazareth
+        if sha(data)==NAZARETH_AFTER: data=restore_nazareth(data)
+    elif name == 'timelines/world-and-scripture-timeline.html':
+        from timeline_world_controls_successor import AFTER as WORLD_AFTER, restore as restore_world_controls
+        if sha(data)==WORLD_AFTER: data=restore_world_controls(data,root)
     from owner_integration_successor import restore as restore_owner
     data=restore_owner(name,data,root)
     from emma_hub_citation_successor import restore as restore_hub_citations
@@ -139,7 +146,18 @@ def check(root=ROOT):
             continue
         path=(root/name).resolve()
         require(path.is_relative_to(root.resolve()) and path.is_file(),'Missing/outside motion consumer')
-        historical_current=restore_hub_citations(name,restore_adams_delivery(name,restore_owner(name,path.read_bytes(),root),root),root)
+        source=path.read_bytes()
+        # Later exact successors are projected only for this historical check;
+        # their own current source and review remain separately required.
+        if name == 'answers/jesus-christ-latter-day-saint-beliefs.html':
+            from timeline_nazareth_successor import restore as restore_nazareth, BEFORE as NAZARETH_BEFORE, AFTER as NAZARETH_AFTER
+            if sha(source)==NAZARETH_AFTER: source=restore_nazareth(source)
+            else: require(sha(source)==NAZARETH_BEFORE,'Unknown Nazareth successor source')
+        elif name == 'timelines/world-and-scripture-timeline.html':
+            from timeline_world_controls_successor import restore as restore_world_controls, BEFORE as WORLD_BEFORE, AFTER as WORLD_AFTER
+            if sha(source)==WORLD_AFTER: source=restore_world_controls(source,root)
+            else: require(sha(source)==WORLD_BEFORE,'Unknown World controls source')
+        historical_current=restore_hub_citations(name,restore_adams_delivery(name,restore_owner(name,source,root),root),root)
         current=restore_world(name,restore_settings(name,restore_close(name,restore_hand(name,restore_bank(name,restore_gate(name,restore_eval(name,restore_citation(name,restore_legacy(name,restore_decoupling(name,restore_scroll(name,restore_pioneer_scroll(name,restore_bypass(name,restore_emma(name,historical_current,root),root),root),root),root),root),root),root),root),root),root),root),root),root)
         require(sha(current)==row['after_sha256'],'Motion candidate changed: '+name)
         require(sha(restore(name,current,root))==row['before_sha256'],'Motion inverse failed: '+name)

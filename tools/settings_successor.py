@@ -56,7 +56,11 @@ def advance(name,raw,root=ROOT):
 def check(root=ROOT):
  data=mapping(root);hashes={}
  for name,row in data['files'].items():
-  raw=local(root,name).read_bytes();require(sha(raw)==row['after_sha256'],'Changed settings page: '+name)
+  raw=local(root,name).read_bytes()
+  if name=='timelines/world-and-scripture-timeline.html':
+   from timeline_world_controls_successor import restore as restore_world_controls, AFTER as WORLD_AFTER
+   if sha(raw)==WORLD_AFTER: raw=restore_world_controls(raw,root)
+  require(sha(raw)==row['after_sha256'],'Changed settings page: '+name)
   require(sha(restore(name,raw,root))==BEFORE[name],'Settings predecessor mismatch');hashes[name]=sha(raw)
  require(APPROVED_REVIEWS is not None,'Settings finished reviews PENDING')
  record=json.loads(local(root,REVIEWS).read_bytes())

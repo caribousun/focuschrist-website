@@ -356,8 +356,12 @@ class ActualJourneyCensusTests(unittest.TestCase):
                 self.journey.current_census(self.root,self.scope,self.assets,self.origin,self.expected)
 
     def test_unset_review_pin_is_pending_not_accepted(self):
+        import timeline_current_index_closure as timeline
         if self.journey.APPROVED_REVIEW_SHA256 is None:
             with self.assertRaisesRegex(ValueError,'PENDING actual current closure and owner review'):
+                self.journey.check_review(self.root)
+        elif timeline.CODE_REVIEW_SHA256 is None:
+            with self.assertRaisesRegex(ValueError,'PENDING independently verified current review'):
                 self.journey.check_review(self.root)
         else:
             self.journey.check_review(self.root)

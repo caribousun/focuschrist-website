@@ -1,0 +1,24 @@
+{
+  "limits": [
+    "51_external_photo_destinations_unresolved",
+    "world_image_mapping_source_level_only",
+    "not_render_or_release_approval"
+  ],
+  "private_receipt_sha256": "b7b2786f649f3e20c186e3cd03b11228d01b2375947223e8062202b86b42e5c7",
+  "reviewed_at": "2026-10-29T04:23:44Z",
+  "reviewer_commitment": "0313af4b58e8e5165df0b4195356279bde1b81994fd8b237fdec02497f63d2c3",
+  "schema": "timeline-current-content-review-v1",
+  "scope": "source_and_destination_context_only",
+  "source_sha256": {
+    "answers/jesus-christ-latter-day-saint-beliefs.html": "dd071c356cb85d33bea1b717447446a2ab9f7f49d2fcb8e4eb4e458b3a7d6078",
+    "timeline-images.js": "0896201a1fdc35eab8333873ce9f3cd18b44fd948e9a04f2f93aa5d403618c18",
+    "timelines/adams-1881-chart.html": "43f19fc23f4fd17e1c9fdb54003feab2885565c97b1a98abc6aefb092ec06944",
+    "timelines/world-and-scripture-timeline.html": "016e9896db70ff0a8a142503f289f2e0cbd2f4d96b73d667247dbb2a2370ceef"
+  },
+  "verdict": "CONCUR_WITHIN_BOUNDED_SCOPE",
+  "visible_text_sha256": {
+    "answers/jesus-christ-latter-day-saint-beliefs.html": "5b761139d1cf850555f1551a9c22ab16e4f4ad14fefed10108accbf20f99cd4c",
+    "timelines/adams-1881-chart.html": "9fcedb2e27757c2ad697917e1d99ce7bf08add95607b0a44b6ae46c972e7acf7",
+    "timelines/world-and-scripture-timeline.html": "b44f8e133122d76e96e87b364eb0a3465011bd04ad55f403341a0b3bcc359b2d"
+  }
+}

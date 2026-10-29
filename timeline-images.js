@@ -51,7 +51,7 @@ var registry={
     "5": {
       "src": "/assets/page-art/birth-of-christ/23-nazareth-return-800.webp",
       "alt": "Joseph carries the young Jesus beside Mary at a village doorway.",
-      "href": "/birth-of-christ.html#wise-men-and-egypt",
+      "href": "/answers/jesus-christ-latter-day-saint-beliefs.html#nazareth-childhood",
       "caption": "Joseph carries the young Jesus beside Mary at a village doorway.",
       "inventoryRow": 159,
       "width": 800,
@@ -69,7 +69,7 @@ var registry={
     "7": {
       "src": "/art/thumbs/Jesus-baptized.webp",
       "alt": "John stands beside Jesus in the river while people watch from the bank.",
-      "href": "/art.html#art-gallery",
+      "href": "/art-gallery.html?picture=art-4f5759d8edad",
       "caption": "John stands beside Jesus in the river while people watch from the bank.",
       "artworkId": "art-4f5759d8edad",
       "width": 640,
@@ -96,7 +96,7 @@ var registry={
     "10": {
       "src": "/assets/page-art/ask-well-800.webp",
       "alt": "Jesus Christ speaking with the Samaritan woman at the well",
-      "href": "/ask.html#topic-heading",
+      "href": "/art-gallery.html?picture=art-3b1016debbad",
       "caption": "Jesus Christ speaking with the Samaritan woman at the well",
       "artworkId": "art-3b1016debbad",
       "width": 800,
@@ -132,7 +132,7 @@ var registry={
     "14": {
       "src": "/art/thumbs/Jesus-feeding-people.webp",
       "alt": "Jesus shares bread and fish with people gathered on the hillside.",
-      "href": "/art.html#art-gallery",
+      "href": "/art-gallery.html?picture=art-838305f993f7",
       "caption": "Jesus shares bread and fish with people gathered on the hillside.",
       "artworkId": "art-838305f993f7",
       "width": 640,
@@ -685,7 +685,7 @@ var registry={
     },
     "4": {
       "src": "/assets/history/restoration-print-shop-1400.webp",
-      "href": "/church-history.html",
+      "href": "/art-gallery.html?picture=art-6e45c602be15",
       "alt": "Printers set type and prepare sheets, with Christ portrayed beside the press.",
       "caption": "Printers set type and prepare sheets, with Christ portrayed beside the press.",
       "artworkId": "art-6e45c602be15",
@@ -1027,7 +1027,7 @@ var registry={
     },
     "42": {
       "src": "/art/thumbs/The-Living-Christ.webp",
-      "href": "/art.html#art-gallery",
+      "href": "/jesus-christ/restoration-and-today.html#living-christ",
       "alt": "The Living Christ",
       "caption": "The Savior’s portrait accompanies the Apostles’ witness that He lives.",
       "artworkId": "art-d12945c2d847",

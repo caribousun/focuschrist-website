@@ -14,7 +14,11 @@ def canonical(v):return hashlib.sha256((json.dumps(v,sort_keys=True,separators=(
 def digest(p):
     from test_opening_composition_binding import reviewed_opening_bytes
     from artwork_display_delivery import reviewed_bytes
-    return hashlib.sha256(reviewed_opening_bytes(p) if p.name == 'unified-opening.js' else reviewed_bytes(p)).hexdigest()
+    raw=reviewed_opening_bytes(p) if p.name == 'unified-opening.js' else reviewed_bytes(p)
+    if p.name=='timeline-images.js':
+        from timeline_image_links_successor import AFTER,restore
+        if hashlib.sha256(raw).hexdigest()==AFTER:raw=restore(raw)
+    return hashlib.sha256(raw).hexdigest()
 def local(root,name):
  require(isinstance(name,str)and not Path(name).is_absolute()and '\\'not in name and ':'not in name,'unsafe path')
  p=(root/name).resolve();require(p.is_relative_to(root.resolve())and p.is_file(),'missing local evidence '+name);return p

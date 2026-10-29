@@ -1,0 +1,23 @@
+{
+  "current_tool_tree_sha256": "929671f585832ec0e544b52ae620b88dbd4f05545a5eedca6077bf898c7cc097",
+  "historical_tree_manifest_sha256": "b23d5581cc3c2f3cbbbf0031db0133e734796d877012822fd215e62d9546fbe9",
+  "index_review_sha256": "12e8961b940808e54a41515b6294983a4af0cf6cfc29a527e84f7e5767dbebe7",
+  "limits": [
+    "code_review_only_not_render_or_release_approval",
+    "hosted_suite_not_independently_rerun",
+    "51_photo_entries_without_verified_on_site_destinations",
+    "external_photo_records_not_inspected"
+  ],
+  "private_receipt_sha256": "0bb004611d79d07dfc28d1827e6960406274e446a4f612cd9b360609bcef4a3a",
+  "reviewed_at": "2026-10-29T05:26:41Z",
+  "reviewed_commit": "cedf9a56214e1b88bb027557ff18053bab7a47f1",
+  "reviewed_delta_git_blobs": {
+    "docs/timeline-controls-successor/historical-tool-tree.json": "fc98cd565856113326753491da998cd584ebbe37",
+    "tools/test_gallery_current_integration.py": "15bebfa4f96840a6d5724579fc537fc1c811a54b"
+  },
+  "reviewer_commitment": "25275b95cc2c78a6aef8f6ac29e2400b0fac0290ab5ec12f9946448301ee8133",
+  "schema": "timeline-index-successor-code-review-v1",
+  "scope": "current_successor_and_exact_tool_tree",
+  "search_manifest_sha256": "92017fcda04ec298e06cff1c6b259c89b02ae43946737d0da87eea97aba2235c",
+  "verdict": "CONCUR"
+}

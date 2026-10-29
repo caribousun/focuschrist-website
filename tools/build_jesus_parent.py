@@ -14,6 +14,13 @@ body=re.search(r'<main class="jj-wrap jj-main" id="main-content">(.*?)<nav class
 target=ROOT/'answers/jesus-christ-latter-day-saint-beliefs.html'
 text=target.read_text(encoding='utf-8')
 previous=text
+from timeline_nazareth_successor import restore as restore_nazareth, advance as advance_nazareth, SECTION, MARKER
+if args.strict:
+    text=restore_nazareth(text.encode()).decode()
+else:
+    section,marker=SECTION.decode(),MARKER.decode()
+    assert text.count(section+marker)==1, 'Nazareth section missing or duplicated'
+    text=text.replace(section+marker,marker,1)
 from continue_motion_binding import restore,advance
 text=restore(target.relative_to(ROOT).as_posix(),text.encode()).decode()
 text=re.sub(r'<!-- JESUS JOURNEY BEGIN -->.*?<!-- JESUS JOURNEY END -->','',text,flags=re.S)
@@ -36,7 +43,12 @@ def structured(match):
     if data.get('@type')=='Article':data['headline']=page['title'];data['description']=page['description']
     return '<script type="application/ld+json">'+json.dumps(data,ensure_ascii=False,separators=(',',':'))+'</script>'
 text=re.sub(r'<script type="application/ld\+json">(.*?)</script>',structured,text,flags=re.S)
-if args.strict:text=advance(target.relative_to(ROOT).as_posix(),text.encode()).decode()
+if args.strict:
+    text=advance(target.relative_to(ROOT).as_posix(),text.encode()).decode()
+    text=advance_nazareth(text.encode()).decode()
+else:
+    assert text.count(marker)==1, 'Nazareth placement missing or duplicated'
+    text=text.replace(marker,section+marker,1)
 if args.check:
     if previous!=text:raise ValueError('Parent journey output is stale')
 else:target.write_text(text,encoding='utf-8',newline='\n')
