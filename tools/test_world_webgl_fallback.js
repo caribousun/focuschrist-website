@@ -1,0 +1,31 @@
+/* Actual embedded Leaflet/adapter/terrain initialization in a DOM-only fixture. */
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),{JSDOM,VirtualConsole}=require('jsdom');
+const root=path.resolve(__dirname,'..'),html=fs.readFileSync(path.join(root,'timelines/world-and-scripture-timeline.html'),'utf8');
+function script(marker){const i=html.indexOf(marker),a=html.lastIndexOf('<script',i),b=html.indexOf('>',a),e=html.indexOf('</script>',i);assert(i>=0&&a>=0&&b<i&&e>i,marker);return html.slice(b+1,e);}
+function mapInit(){const start=html.indexOf('function renderLeaflet(){'),end=html.indexOf('  closeHoverTip();',start);assert(start>=0&&end>start);return html.slice(start,end)+'\n}';}
+const delay=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+async function scenario(mode){
+ const errors=[],warnings=[],vc=new VirtualConsole();vc.on('jsdomError',e=>errors.push(String(e)));vc.on('warn',(...args)=>warnings.push(args.map(String).join(' ')));const dom=new JSDOM(html,{runScripts:'outside-only',pretendToBeVisual:true,url:'https://focuschrist.com/timelines/world-and-scripture-timeline.html#viewer',virtualConsole:vc});
+ const w=dom.window,d=w.document;w.addEventListener('error',e=>errors.push(String(e.error||e.message)));
+ w.matchMedia=()=>({matches:true,addEventListener(){}});const node=d.getElementById('leafmap');let width=600;Object.defineProperty(node,'clientWidth',{get:()=>width});Object.defineProperty(node,'clientHeight',{get:()=>400});
+ w.eval(script(' * Leaflet 1.9.4,'));w.L.Map.mergeOptions({zoomAnimation:false});let instance;
+ class Renderer{constructor(){if(mode==='constructor-failure')throw Error('synthetic WebGL constructor failure');instance=this;this._canvas=d.createElement('canvas');this.handlers={};this.removed=false;}on(type,fn){if((mode==='setup-failure'&&type==='load')||(mode==='post-add-failure'&&type==='sourcedata'))throw Error('synthetic post-construction setup failure');this.handlers[type]=fn;return this;}setTransformConstrain(){}once(type,fn){this.onceEvent={type,fn};return this;}jumpTo(){const event=this.onceEvent;this.onceEvent=null;if(event&&event.type==='moveend')event.fn();}getStyle(){return {sources:{}};}loaded(){return true;}isSourceLoaded(){return true;}remove(){this.removed=true;}}
+ w.maplibregl={Map:Renderer};w.eval(script('// Generated from src/leaflet-maplibre-gl.mjs.'));let terrainLayer;const factory=w.MaplibreGLLeaflet.maplibreGL;w.MaplibreGLLeaflet.maplibreGL=options=>{if(mode==='factory-failure')throw Error('synthetic layer factory failure');return terrainLayer=factory(options);};w.eval(script('/* Shared terrain background. Leaflet continues to own pins, routes and controls. */'));
+ w.eval(fs.readFileSync(path.join(root,'timeline-mobile-collapse.js'),'utf8'));
+ w.eval(`var leafMapObj=null,leafLayerGroup=null,pulseGroup=null,mapState={year:-600},TILEDATA={},viewMode='map',useLeaflet=true,lastPopupOpener=null,popupIsOpen=false,hoverSuspended=false;function updateMapCount(){}function closeHoverTip(){}function onMapHover(){}\n${mapInit()}\nrenderLeaflet();`);
+ const map=w.__leafMap,status=d.getElementById('englishMapStatus');assert(map,'actual map initialization ran');
+ const view=d.getElementById('mobileViewToggle'),panel=d.getElementById('mobileViewControls'),search=d.getElementById('q'),play=d.getElementById('mobilePlaybackToggle'),playPanel=d.getElementById('mobilePlaybackControls'),year=d.getElementById('yearInput');view.click();assert(!panel.hidden);search.value='Egypt';view.click();view.click();assert.equal(search.value,'Egypt','mobile controls retain selections');play.click();assert(!playPanel.hidden);year.value='-500';play.click();play.click();assert.equal(year.value,'-500','playback remains usable');
+ if(mode!=='success'){
+  assert.equal(status.hidden,false);assert.match(status.textContent,/Map background unavailable/);
+  let leaked=0;map.eachLayer(layer=>{if(layer instanceof w.L.MaplibreGL)leaked++;});assert.equal(leaked,0,'failed terrain layer must be removed');
+  assert.equal(node.querySelectorAll('.leaflet-gl-layer').length,0,'failed renderer container must be removed');if(terrainLayer){assert(!map.hasLayer(terrainLayer));for(const entries of Object.values(map._events||{}))for(const listener of Array.isArray(entries)?entries:[entries])assert.notEqual(listener.ctx,terrainLayer,'failed layer listeners must be removed');}if(mode==='setup-failure'||mode==='post-add-failure')assert(instance.removed,'created renderer must be removed');if(mode==='post-add-failure')assert.equal(w.__englishMap,null,'failed renderer global must be cleared');
+ }else{
+  let present=0;map.eachLayer(layer=>{if(layer instanceof w.L.MaplibreGL)present++;});assert.equal(present,1,'healthy layer remains mounted: '+JSON.stringify(warnings));assert.equal(node.querySelectorAll('.leaflet-gl-layer').length,1);
+  instance.handlers.sourcedata({sourceId:'terrain-dem',sourceDataType:'content'});instance.handlers.idle();assert(status.hidden,'healthy renderer clears fallback status');assert(!instance.removed);
+ }
+ for(let i=0;i<4;i++){width+=20;map.invalidateSize({animate:false});await delay(45);}
+ await delay(100);assert.deepEqual(errors,[],'resize must not emit uncaught errors');assert.equal(search.value,'Egypt');assert(!panel.hidden);assert.equal(year.value,'-500');assert(!playPanel.hidden);if(mode!=='success')assert(!status.hidden&&/Map background unavailable/.test(status.textContent));
+ dom.window.close();console.log('PASS:',mode,'actual source initialization and repeated resize (DOM only)');
+}
+(async()=>{for(const mode of ['constructor-failure','factory-failure','setup-failure','post-add-failure','success'])await scenario(mode);})().catch(e=>{console.error(e);process.exitCode=1;});
