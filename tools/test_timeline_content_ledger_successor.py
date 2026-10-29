@@ -5,7 +5,9 @@ from unittest.mock import patch
 import timeline_content_ledger_successor as gate
 
 class ContentLedgerSuccessorTests(unittest.TestCase):
- def setUp(self):self.raw=gate.source(gate.ROOT,'content-audit.json')
+ def setUp(self):
+  import timeline_51_current_successor as current
+  self.raw=current.project_ledger(gate.ROOT,current.validate_content(gate.ROOT))
  def test_current_to_exact_historical(self):self.assertEqual(gate.sha(gate.restore(self.raw)),gate.BEFORE)
  def test_modified_ledger_and_review_rejected(self):
   with self.assertRaisesRegex(AssertionError,'current content ledger'):gate.restore(self.raw+b' ')

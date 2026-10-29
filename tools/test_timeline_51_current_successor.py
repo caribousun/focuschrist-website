@@ -16,10 +16,14 @@ class EventSuccessorTests(unittest.TestCase):
   old=json.loads(search.restore((ROOT/'site-search-index.json').read_bytes(),ROOT));cur=json.loads((ROOT/'site-search-index.json').read_bytes());a={r['url']:r for r in old['records']};b={r['url']:r for r in cur['records']}
   return {'schema':'timeline-51-index-review-v1','scope':'actual_current_index_delta','verdict':'CONCUR','reviewer_commitment':'c'*64,'receipt_sha256':'d'*64,'prior_search_sha256':search.BEFORE,'current_search_sha256':search.AFTER,'search_manifest_sha256':search.MANIFEST_SHA,'source_sha256':search.manifest(ROOT)['source_sha256'],'changed_urls':sorted(u for u in a.keys()|b.keys() if a.get(u)!=b.get(u)),'emma_unchanged_records':71,'panel_sha256':gate.PANEL,'gallery_sha256':gate.GALLERY,'reviewed_at':'2026-10-29T12:00:00Z'}
  def test_actual_producer_runs_but_missing_index_review_fails_closed(self):
-  with patch.object(search,'validate_current',wraps=search.validate_current) as producer:
+  with patch.object(gate,'INDEX_REVIEW_SHA256',None),patch.object(search,'validate_current',wraps=search.validate_current) as producer:
    with self.assertRaisesRegex(ValueError,'PENDING independently verified'):gate.validate_index(ROOT)
    producer.assert_called_once()
-  with self.assertRaisesRegex(ValueError,'PENDING independently verified'):prior.prepare(ROOT)
+  with patch.object(gate,'INDEX_REVIEW_SHA256',None),self.assertRaisesRegex(ValueError,'PENDING independently verified'):prior.prepare(ROOT)
+ def test_actual_content_and_index_are_bound_but_code_review_is_pending(self):
+  content=gate.validate_content(ROOT);self.assertEqual(gate.sha(gate.project_ledger(ROOT,content)),gate.PRIOR_LEDGER)
+  previous,_,result=gate.validate_index(ROOT);self.assertEqual(gate.sha(previous),search.BEFORE);self.assertEqual(result['current_sha256'],search.AFTER)
+  with patch.object(gate,'CODE_REVIEW_SHA256',None),self.assertRaisesRegex(ValueError,'code-review.json'):prior.prepare(ROOT)
  def test_both_emma_consumers_invoke_current_event_gate_before_old_evidence(self):
   import emma_public_commitments as public
   import emma_journey_closure_successor as journey
@@ -49,7 +53,7 @@ class EventSuccessorTests(unittest.TestCase):
     with self.subTest(key=key),patch.object(gate,'pinned',return_value=changed),self.assertRaises(ValueError):gate.validate_index(ROOT)
    with patch.object(search,'validate_current',side_effect=ValueError('producer mismatch')),self.assertRaisesRegex(ValueError,'producer mismatch'):gate.validate_index(ROOT)
  def test_prior_ledger_reconstructed_only_after_exact_current_binding(self):
-  original=(ROOT/'content-audit.json').read_bytes();data=json.loads(original);review=self.content_fixture();out=[]
+  original=gate.project_ledger(ROOT,gate.validate_content(ROOT));data=json.loads(original);review=self.content_fixture();out=[]
   for row in data['documents']:
    name=row['path']
    if name in gate.CONTENT_PAGES:
