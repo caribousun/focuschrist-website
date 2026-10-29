@@ -8,6 +8,9 @@ function assess(row){
  if(!['sourcesLoaded','rendererLoaded','statusHidden','canvasVisible'].every(k=>row[k]===true)||!(row.openfreemapResponses>0&&row.mapterhornResponses>0))return outcome;
  if(!row.finalSourceLoaded||!['ne2_shaded','openmaptiles','terrain-dem'].every(k=>row.finalSourceLoaded[k]===true))return outcome;
  if(!Number.isSafeInteger(row.sourceObservationCutoffEpochMs)||!Array.isArray(row.events)||!Array.isArray(row.sourceEvents)||!Array.isArray(row.requestErrors))return outcome;
+ const record=x=>x!==null&&typeof x==='object'&&!Array.isArray(x);
+ if(!row.events.every(e=>record(e)&&typeof e.kind==='string')||!row.sourceEvents.every(e=>record(e)&&typeof e.type==='string')||!row.requestErrors.every(record))return outcome;
+ if(row.events.some(e=>e.kind==='route-error'))return outcome;
  if(row.requestErrors.length!==1||row.requestErrors[0].host!=='tiles.openfreemap.org'||row.requestErrors[0].code!=='net::ERR_ABORTED')return outcome;
  const failed=row.events.filter(e=>e.kind==='request-failed');
  if(failed.length!==1)return outcome;
