@@ -13,7 +13,8 @@ class CurrentIndexClosureTests(unittest.TestCase):
   review=self.review if review is None else review;code=self.code if code is None else code
   with patch.object(gate,'pinned',side_effect=lambda root,name,pin:review if name==gate.INDEX_REVIEW else code),patch.object(gate,'tool_tree',return_value=self.tree),patch.object(gate,'project_old_tree',return_value=self.prior):return gate.prepare(index.ROOT)
  def test_real_review_pin_absence_fails_closed(self):
-  with self.assertRaisesRegex(ValueError,'PENDING'):gate.prepare(index.ROOT)
+  with patch.object(gate,'CODE_REVIEW_SHA256',None),self.assertRaisesRegex(ValueError,'PENDING'):
+   gate.prepare(index.ROOT)
  def test_synthetic_exact_review_projection(self):
   r=self.call();self.assertEqual(index.sha(r['historical_search']),index.BEFORE)
  def test_altered_review_fails(self):
