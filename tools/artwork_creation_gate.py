@@ -520,8 +520,14 @@ def run(root, mode='release', scene=None, page_overrides=None):
         # Source checks do not confer owner approval. This stays held until the
         # independently reviewed direct-owner and final-page record exists.
         if public:
-            from emma_public_commitments import validate_release as emma_public_release_gate
+            from emma_public_commitments import (validate_release as emma_public_release_gate,
+                cover_render_files, read_pinned, SUBJECT, SUBJECT_SHA256)
             emma_public_release_gate(root)
+            # Exact browser evidence files are imported captures, not page art.
+            # Their pin, decode, dimensions and rejection status are checked;
+            # this grants no directory-level or future-raster waiver.
+            screenshot_paths = cover_render_files(root, read_pinned(root, SUBJECT, SUBJECT_SHA256), added, covered, rejected)
+            covered |= screenshot_paths
         else:
             from owner_journey_successor import release_gate as emma_journey_owner_release_gate
             emma_journey_owner_release_gate(root, journey_record)

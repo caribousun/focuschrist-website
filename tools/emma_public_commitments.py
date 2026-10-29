@@ -130,6 +130,26 @@ def validate_artwork(root,added,covered,rejected,pixel_hash,page_dependencies):
     out=BytesIO();scaled.save(out,format='WEBP',quality=92,method=6);require(out.getvalue()==bound(root,d),'derivative reproduction mismatch')
  return assets,hashes,pixels
 
+def validate_render_files(root,subject,rejected):
+ """Bind the two diagnostic screenshots as evidence, not page artwork."""
+ rendered=subject['bindings'].get('rendered')
+ require(isinstance(rendered,dict) and set(rendered)=={'desktop','phone'},'desktop and phone render bindings required')
+ expected={'desktop':'docs/emma-journey-release/render/desktop-opening.jpg','phone':'docs/emma-journey-release/render/phone-opening.jpg'}
+ paths=set()
+ for label,minimum in (('desktop',1024),('phone',240)):
+  row=rendered[label];entry=row['image'];require(entry['path']==expected[label],'unexpected render evidence path')
+  raw=bound(root,entry);require(sha(raw) not in rejected and sha(raw) not in subject['excluded_asset_sha256'],'excluded or rejected render evidence')
+  width=row['viewport_width'];height=row['viewport_height'];require(isinstance(width,int) and not isinstance(width,bool) and isinstance(height,int) and not isinstance(height,bool) and width>=minimum and height>=240 and (label!='phone' or width<=600),'invalid render viewport')
+  with Image.open(BytesIO(raw)) as im:require(im.format in ('PNG','JPEG') and im.width==width and im.height>=height and getattr(im,'n_frames',1)==1,'render dimensions or format mismatch');im.verify()
+  with Image.open(BytesIO(raw)) as im:im.load()
+  paths.add(entry['path'])
+ return paths
+
+def cover_render_files(root,subject,added,covered,rejected):
+ paths=validate_render_files(root,subject,rejected)
+ require(paths<=added and not paths&covered,'Emma render evidence overlap or omission')
+ return paths
+
 def validate_release(root):
  """Require the separately pinned conditional acceptance check report."""
  subject=read_pinned(root,SUBJECT,SUBJECT_SHA256);validate_statement(root,subject);verification_time=validate_verification(root,subject,SUBJECT_SHA256)
@@ -138,11 +158,7 @@ def validate_release(root):
  for route,key,fn in ((HUB,'page_sha256',lambda b:validate_hub(b,root)),(RETIRED,'redirect_sha256',validate_redirect),(HYMNS,'hymns_sha256',validate_hymns),('sitemap.xml','sitemap_sha256',validate_canonical)):
   raw=local(root.resolve(),route).read_bytes();require(sha(raw)==bindings[key],'current reviewed source changed');fn(raw)
  require(bindings['delivery_spec_sha256']==PRIVATE_SPEC and bindings['source_manifest_sha256']==subject['source_manifest_sha256'],'reviewed delivery binding mismatch')
- require(isinstance(bindings.get('rendered'),dict) and set(bindings['rendered'])=={'desktop','phone'},'desktop and phone render bindings required')
- for label,minimum in (('desktop',1024),('phone',240)):
-  row=bindings['rendered'][label];raw=bound(root,row['image']);width=row['viewport_width'];height=row['viewport_height'];require(width>=minimum and height>=240 and (label!='phone' or width<=600),'invalid render viewport')
-  with Image.open(BytesIO(raw)) as im:require(im.format in ('PNG','JPEG') and im.width==width and im.height>=height and getattr(im,'n_frames',1)==1,'render dimensions or format mismatch');im.verify()
-  with Image.open(BytesIO(raw)) as im:im.load()
+ validate_render_files(root,subject,set())
  report=read_pinned(root,CHECK_REPORT,CHECK_REPORT_SHA256)
  require(report.get('schema')=='emma-public-pre-release-checks-v1' and report.get('status')=='PASS' and report.get('subject_sha256')==SUBJECT_SHA256,'pre-release report absent or stale')
  require(report.get('verification_sha256')==VERIFICATION_SHA256 and issha(PRE_RELEASE_RECEIPT_SHA256) and report.get('private_checks_receipt_sha256')==PRE_RELEASE_RECEIPT_SHA256 and issha(PRE_RELEASE_VERIFIER_COMMITMENT) and report.get('verifier_commitment')==PRE_RELEASE_VERIFIER_COMMITMENT,'independent pre-release verification missing')

@@ -1,0 +1,44 @@
+{
+  "hub_sha256": "7511f2d034d6117cb9e4d0da896c3ff778c1f0a2165c0425361b47c1d6fb3573",
+  "limitations": [
+    "not_whole_site_manual_review",
+    "not_new_render",
+    "not_owner_acceptance",
+    "not_release_approval"
+  ],
+  "outputs": {
+    "gallery": {
+      "path": "art-gallery.json",
+      "sha256": "df6a8c33fc3bd70dbf38675fdb21b984914e5598a42f70025e67de5ddfceb4f8"
+    },
+    "panel": {
+      "path": "docs/section-panel-inventory.json",
+      "sha256": "aaa49fb307fa5e3251e7ed054d2443f637db94a0361a4ba3621d267ed1ab5532"
+    },
+    "search": {
+      "path": "site-search-index.json",
+      "sha256": "ba1ea0787568ce5dc6f51b7661a31ead0088c7e39f2d988286fd98697398ac67"
+    }
+  },
+  "reviews": [
+    {
+      "actor_commitment": "f69f5896b3628fa2c6d7505286a09af34a2beaa82bd8665f2353a65631b5399e",
+      "reviewed_at": "2026-10-29T00:12:52Z",
+      "role": "Fermi",
+      "source_receipt_sha256": "23ad527d8d5b2a17682cb129a24be656bea072bb71ec22bebc8795cf285554cc",
+      "verdict": "PASS_BOUNDED_EMMA_SCOPE",
+      "withdrawn_status": "NOT_RECORDED"
+    },
+    {
+      "actor_commitment": "e2dd5ce8d11f3dab0b599bea146841480dad59613497b4658f10740cdb1b51b0",
+      "reviewed_at": "2026-10-29T00:13:01+00:00",
+      "role": "Newton",
+      "source_receipt_sha256": "9986e43705061849930f0c8f4fd48526f87484111ea7448c23566a3f5571350e",
+      "verdict": "CONCUR_WITHIN_BOUNDED_SCOPE",
+      "withdrawn_status": "NOT_WITHDRAWN"
+    }
+  ],
+  "schema": "emma-index-review-commitments-v1",
+  "scope": "bounded_current_emma_indices_not_whole_site_review",
+  "subject_sha256": "256320ca0b63e8dd518a92d0f38447246b021315d00e18f65ee1e777055b7439"
+}

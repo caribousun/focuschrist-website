@@ -1,5 +1,5 @@
 """Integrity and negative tests; synthetic mutations are not review evidence."""
-import copy,json,tempfile,unittest
+import copy,json,re,tempfile,unittest
 from pathlib import Path
 from unittest.mock import patch
 import emma_public_commitments as m
@@ -41,7 +41,8 @@ class PublicStatement(unittest.TestCase):
    root=Path(d);f=root/'tools/emma_public_commitments.py';f.parent.mkdir()
    original=(ROOT/'tools/emma_public_commitments.py').read_text();f.write_text(original)
    digest=m.normalized_validator_hash(root)
-   f.write_text(original.replace('SUBJECT_SHA256=None',"SUBJECT_SHA256='"+'a'*64+"'",1));self.assertEqual(m.normalized_validator_hash(root),digest)
+   changed,n=re.subn(r"(?m)^SUBJECT_SHA256=(?:None|'[0-9a-f]{64}')$","SUBJECT_SHA256='"+'a'*64+"'",original,count=1)
+   self.assertEqual(n,1);self.assertNotEqual(changed,original);f.write_text(changed);self.assertEqual(m.normalized_validator_hash(root),digest)
    f.write_text(original+'\n# changed logic\n');self.assertNotEqual(m.normalized_validator_hash(root),digest)
    f.write_text(original+'\nSUBJECT_SHA256=None\n')
    with self.assertRaisesRegex(ValueError,'duplicate'):m.normalized_validator_hash(root)
@@ -62,4 +63,25 @@ class PublicStatement(unittest.TestCase):
    (root/'AGENTS.md').write_bytes((ROOT/'AGENTS.md').read_bytes())
    with self.assertRaisesRegex(ValueError,'symlink'):
     m.validate_statement(root,self.good)
+ def test_render_evidence_exact_paths_and_runtime_rejections(self):
+  paths=m.validate_render_files(ROOT,self.good,set())
+  self.assertEqual(paths,{'docs/emma-journey-release/render/desktop-opening.jpg','docs/emma-journey-release/render/phone-opening.jpg'})
+  changed=copy.deepcopy(self.good);changed['bindings']['rendered']['phone']['image']['path']='unrelated.jpg'
+  with self.assertRaisesRegex(ValueError,'unexpected render evidence path'):m.validate_render_files(ROOT,changed,set())
+  rejected={self.good['bindings']['rendered']['phone']['image']['sha256']}
+  with self.assertRaisesRegex(ValueError,'excluded or rejected render evidence'):m.validate_render_files(ROOT,self.good,rejected)
+  changed=copy.deepcopy(self.good);changed['bindings']['rendered']['desktop']['viewport_width']=1400
+  with self.assertRaisesRegex(ValueError,'render dimensions'):m.validate_render_files(ROOT,changed,set())
+  with self.assertRaisesRegex(ValueError,'overlap or omission'):m.cover_render_files(ROOT,self.good,paths-{'docs/emma-journey-release/render/phone-opening.jpg'},set(),set())
+  with self.assertRaisesRegex(ValueError,'overlap or omission'):m.cover_render_files(ROOT,self.good,paths,{next(iter(paths))},set())
+  changed=copy.deepcopy(self.good);changed['excluded_asset_sha256'].append(changed['bindings']['rendered']['phone']['image']['sha256'])
+  with self.assertRaisesRegex(ValueError,'excluded or rejected render evidence'):m.validate_render_files(ROOT,changed,set())
+  with tempfile.TemporaryDirectory() as d:
+   root=Path(d)
+   for path in paths:
+    out=root/path;out.parent.mkdir(parents=True,exist_ok=True);out.write_bytes((ROOT/path).read_bytes())
+   changed=copy.deepcopy(self.good);entry=changed['bindings']['rendered']['desktop']['image'];raw=b'not an image';(root/entry['path']).write_bytes(raw)
+   entry['bytes']=len(raw);entry['sha256']=m.sha(raw)
+   from PIL import UnidentifiedImageError
+   with self.assertRaises(UnidentifiedImageError):m.validate_render_files(root,changed,set())
 if __name__=='__main__':unittest.main()
