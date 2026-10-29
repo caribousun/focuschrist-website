@@ -91,8 +91,13 @@ def published_text(path: Path) -> str:
 
 
 def current_timeline_51_source_reviewed(record, raw):
-    # Structural binding only; reviewer authenticity is established separately.
-    return record.get('reviewed_timeline_51_source_sha256') == hashlib.sha256(raw).hexdigest()
+    # A mutable ledger hash alone is not evidence of independent review.
+    if record.get('reviewed_timeline_51_source_sha256') != hashlib.sha256(raw).hexdigest():return False
+    from timeline_51_current_successor import CONTENT_REVIEW, CONTENT_REVIEW_SHA256, validate_content
+    if record.get('timeline_51_content_review') != {'path':CONTENT_REVIEW,'sha256':CONTENT_REVIEW_SHA256}:return False
+    try:validate_content(ROOT)
+    except (ValueError,KeyError,TypeError,OSError):return False
+    return True
 
 
 def content_hash(path: Path) -> str:

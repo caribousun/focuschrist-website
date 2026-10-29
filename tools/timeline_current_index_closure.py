@@ -45,9 +45,12 @@ def tool_tree(root):
   if not p.is_file():continue
   name=p.relative_to(root).as_posix();raw=p.read_bytes()
   if name=='tools/emma_public_commitments.py':files[name]=public.normalized_validator_hash(root);continue
-  if name=='tools/timeline_current_index_closure.py':
+  if name in ('tools/timeline_current_index_closure.py','tools/timeline_51_current_successor.py'):
    text=raw.decode()
-   for key in ('INDEX_REVIEW_SHA256','CODE_REVIEW_SHA256'):
+   if name=='tools/timeline_51_current_successor.py':
+    from timeline_51_current_successor import PIN_NAMES as names
+   else:names=('INDEX_REVIEW_SHA256','CODE_REVIEW_SHA256')
+   for key in names:
     pattern=r'(?m)^'+key+r"=(?:None|'[0-9a-f]{64}')$"
     if len(re.findall(pattern,text))!=1:raise ValueError('missing or invalid review pin')
     text=re.sub(pattern,key+'=<REVIEWED_PIN>',text)
@@ -71,7 +74,14 @@ def project_old_tree(root,current):
 
 def prepare(root):
  """Bind genuine current receipts and verify historical and current subjects."""
- root=Path(root).resolve();review=pinned(root,INDEX_REVIEW,INDEX_REVIEW_SHA256);code=pinned(root,CODE_REVIEW,CODE_REVIEW_SHA256)
+ root=Path(root).resolve()
+ current_search=index.source(root,'site-search-index.json')
+ from timeline_51_search_successor import AFTER as EVENT_SEARCH
+ extension=None
+ if sha(current_search)==EVENT_SEARCH:
+  from timeline_51_current_successor import prepare as prepare_event
+  extension=prepare_event(root)
+ review=pinned(root,INDEX_REVIEW,INDEX_REVIEW_SHA256);code=pinned(root,CODE_REVIEW,CODE_REVIEW_SHA256)
  if review.get('schema')!='timeline-current-index-review-v1' or review.get('scope')!='three_changed_records_and_unchanged_emma_indices' or review.get('verdict')!='CONCUR':raise ValueError('current index review absent or wrong scope')
  if not all(validhash(review.get(k)) for k in ('reviewer_commitment','private_receipt_sha256')):raise ValueError('index reviewer evidence missing')
  reviewed_at=timestamp(review.get('reviewed_at'))
@@ -79,15 +89,21 @@ def prepare(root):
  if (review.get('prior_search_sha256'),review.get('current_search_sha256'))!=(index.BEFORE,index.AFTER) or review.get('source_sha256')!=index.SOURCES or not isinstance(urls,list) or len(urls)!=len(index.CHANGED) or set(urls)!=index.CHANGED or review.get('emma_records_unchanged') is not True:raise ValueError('index review subject differs')
  if review.get('panel_sha256')!=PANEL or review.get('gallery_sha256')!=GALLERY:raise ValueError('reviewed panel/gallery differ')
  if sha(index.source(root,'docs/section-panel-inventory.json'))!=PANEL or sha(index.source(root,'art-gallery.json'))!=GALLERY:raise ValueError('current panel/gallery differ')
- index.validate_current(root);historical=index.restore(index.source(root,'site-search-index.json'),root)
+ if extension is None:
+  index.validate_current(root);historical=index.restore(current_search,root)
+  ledger_bytes=index.source(root,'content-audit.json')
+ else:
+  historical=index.restore(extension['previous_search'],root)
+  ledger_bytes=extension['previous_ledger']
  from timeline_content_ledger_successor import restore as restore_ledger
- historical_ledger=restore_ledger(index.source(root,'content-audit.json'),root)
+ historical_ledger=restore_ledger(ledger_bytes,root)
  import static_content_audit
  if static_content_audit.ROOT.resolve()!=root or static_content_audit.validate()!=0:raise ValueError('current content audit failed')
  if code.get('schema')!='timeline-index-successor-code-review-v1' or code.get('scope')!='current_successor_and_exact_tool_tree' or code.get('verdict')!='CONCUR':raise ValueError('current code review absent or wrong scope')
  if not all(validhash(code.get(k)) for k in ('reviewer_commitment','private_receipt_sha256','current_tool_tree_sha256')) or code['reviewer_commitment']==review['reviewer_commitment']:raise ValueError('independent code reviewer evidence missing')
  if code.get('index_review_sha256')!=INDEX_REVIEW_SHA256 or code.get('search_manifest_sha256')!=sha(index.source(root,index.MANIFEST)) or code.get('historical_tree_manifest_sha256')!=sha(index.source(root,TREE_PROJECTION)):raise ValueError('current code review inputs differ')
  if timestamp(code.get('reviewed_at'))<reviewed_at:raise ValueError('code review predates current index review')
- current=tool_tree(root);prior=project_old_tree(root,current)
+ current=tool_tree(root) if extension is None else extension['previous_tool_tree']
+ prior=project_old_tree(root,current)
  if canonical(current)!=code['current_tool_tree_sha256']:raise ValueError('current reviewed tool tree differs')
  return {'historical_search':historical,'historical_content_audit':historical_ledger,'historical_tool_tree_sha256':canonical(prior),'historical_validator_sha256':prior['tools/emma_public_commitments.py']}

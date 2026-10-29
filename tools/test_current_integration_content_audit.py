@@ -92,7 +92,13 @@ class CurrentIntegrationContentAuditTests(unittest.TestCase):
         digest=hashlib.sha256(raw).hexdigest()
         self.assertFalse(reviewed({},raw))
         self.assertFalse(reviewed({'reviewed_timeline_51_source_sha256':digest},raw+b' '))
-        self.assertTrue(reviewed({'reviewed_timeline_51_source_sha256':digest},raw))
+        self.assertFalse(reviewed({'reviewed_timeline_51_source_sha256':digest},raw),'A mutable source hash alone must not pass')
+        import timeline_51_current_successor as event
+        record={'reviewed_timeline_51_source_sha256':digest,'timeline_51_content_review':{'path':event.CONTENT_REVIEW,'sha256':'e'*64}}
+        with patch.object(event,'CONTENT_REVIEW_SHA256','e'*64),patch.object(event,'validate_content',side_effect=ValueError('unverified')):
+            self.assertFalse(reviewed(record,raw),'An unverified review must fail')
+        with patch.object(event,'CONTENT_REVIEW_SHA256','e'*64),patch.object(event,'validate_content',return_value={}):
+            self.assertTrue(reviewed(record,raw))
         name='church-history.html'
         self.assertEqual(namespace['content_hash'](BytePath(name,raw)),raw_digest(raw))
         self.assertNotEqual(namespace['content_hash'](BytePath(name,raw)),namespace['content_hash'](BytePath(name,raw.replace(b'Sourced',b'Changed'))))

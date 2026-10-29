@@ -363,6 +363,9 @@ class ActualJourneyCensusTests(unittest.TestCase):
         elif timeline.CODE_REVIEW_SHA256 is None:
             with self.assertRaisesRegex(ValueError,'PENDING independently verified current review'):
                 self.journey.check_review(self.root)
+        elif __import__('timeline_51_current_successor').INDEX_REVIEW_SHA256 is None:
+            with self.assertRaisesRegex(ValueError,'PENDING independently verified Timeline event review'):
+                self.journey.check_review(self.root)
         else:
             self.journey.check_review(self.root)
 
