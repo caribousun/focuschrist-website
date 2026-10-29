@@ -55,6 +55,7 @@ def validate_content(root):
  require(review.get('reviewer_commitments')==CONTENT_ACTORS and len(set(CONTENT_ACTORS.values()))==3,'Current content reviewer association differs')
  require(review.get('role_scopes')==CONTENT_ROLE_SCOPES,'Current content reviewer scope differs')
  require(validhash(CONTENT_VERIFIER_COMMITMENT) and validhash(CONTENT_VERIFICATION_RECEIPT_SHA256),'PENDING content receipt verification')
+ require(CONTENT_VERIFIER_COMMITMENT not in CONTENT_ACTORS.values(),'Content receipt verifier must be independent of all content reviewers')
  require(review.get('verifier_commitment')==CONTENT_VERIFIER_COMMITMENT and review.get('verification_receipt_sha256')==CONTENT_VERIFICATION_RECEIPT_SHA256,'Current content receipt verification differs')
  paths=review.get('reviewed_file_sha256');require(isinstance(paths,dict) and set(paths)==SOURCE_FILES,'Current content source scope differs')
  for name in SOURCE_FILES:require(validhash(paths[name]) and sha(prior_search.source(root,name))==paths[name],'Current reviewed content changed: '+name)

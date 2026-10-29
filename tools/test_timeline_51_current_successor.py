@@ -38,6 +38,8 @@ class EventSuccessorTests(unittest.TestCase):
     changed=copy.deepcopy(fixture);mutation(changed[key])
     with self.subTest(key=key),patch.object(gate,'pinned',return_value=changed),self.assertRaises(ValueError):gate.validate_content(ROOT)
    with patch.object(gate,'CONTENT_VERIFICATION_RECEIPT_SHA256',None),self.assertRaisesRegex(ValueError,'PENDING content receipt verification'):gate.validate_content(ROOT)
+   for actor in gate.CONTENT_ACTORS.values():
+    with self.subTest(verifier=actor),patch.object(gate,'CONTENT_VERIFIER_COMMITMENT',actor),self.assertRaisesRegex(ValueError,'verifier must be independent'):gate.validate_content(ROOT)
  def test_index_subject_and_independent_identity_are_required(self):
   fixture=self.index_fixture()
   with patch.object(gate,'pinned',return_value=fixture),patch.object(gate,'INDEX_REVIEWER_COMMITMENT','c'*64),patch.object(gate,'INDEX_RECEIPT_SHA256','d'*64):
