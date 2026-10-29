@@ -19,6 +19,7 @@
     "tools/test_timeline_51_source_successor.py": null,
     "tools/test_timeline_content_ledger_successor.py": "813097dba5d9656effe3eae2eb076efdfd8b607cbd75c79202ce876246115101",
     "tools/test_timeline_controls_successor.py": "f964c7dd8c4b35f16991f103f4c001ab8fcf2946b144608c34bfbce6772daa3d",
+    "tools/test_timeline_current_index_closure.py": "c7712e8e67b8846e28c907d8b2fc59d07d0134c41b81cc3779c2084c4dff8fc0",
     "tools/test_timeline_search_index_successor.py": "8533a8f3ab5680f04cacfcc1636ce69817db05e8b611a0d2d5ac222dfbae7e72",
     "tools/timeline_51_current_successor.py": null,
     "tools/timeline_51_destination_bindings.js": null,
