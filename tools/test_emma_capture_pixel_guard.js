@@ -1,0 +1,10 @@
+'use strict';
+const assert=require('node:assert/strict');const {inspect}=require('./emma_capture_pixel_guard');
+const source=Array.from({length:100},(_,i)=>{const v=(i*23)%256;return [v,255-v,(v*3)%256,v,255-v,(v*3)%256]});
+assert.equal(inspect(source).samples,100);
+const jpeg=source.map(([r,g,b])=>[r,g,b,Math.min(255,r+3),g,b]);assert(inspect(jpeg).meanAbsoluteError<2);
+const blank=source.map(([r,g,b])=>[r,g,b,245,245,245]);assert.throws(()=>inspect(blank),/captured pixels differ/);
+assert.throws(()=>inspect(source.slice(0,10)),/insufficient/);
+assert.throws(()=>inspect(Array.from({length:40},()=>[10,10,10,10,10,10])),/lack enough contrast/);
+assert.throws(()=>inspect(source.map(()=>[1,2,NaN,1,2,3])),/invalid/);
+console.log('PASS screenshot pixel guard: matching, JPEG tolerance, blank, too few, flat and invalid samples');

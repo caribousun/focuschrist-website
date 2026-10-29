@@ -7,7 +7,8 @@ from urllib.parse import urlsplit, unquote, parse_qs
 import argparse, hashlib, json, re, subprocess, sys, xml.etree.ElementTree as ET
 from cfm_composition_qa import check as composition_check, self_test as composition_self_test
 from anchor_alignment_qa import FILES as ANCHOR_STYLES, historical_style_bytes, reviewed_anchor_style, self_test as anchor_self_test
-from emma_story_consumers import (EMMA_STORY_ROUTES, STORY_REF, reviewed_wrap_additions, reviewed_viewer_additions)
+from emma_story_consumers import STORY_REF
+from emma_retirement_consumers_successor import (CURRENT as EMMA_STORY_ROUTES, reviewed_wrap_additions, reviewed_viewer_additions)
 from owner_integration_contract import historical_wrap_consumers
 ROOT = Path(__file__).resolve().parents[1]
 IMAGE_EXT = {'.png','.webp','.jpg','.jpeg','.avif','.gif','.svg'}
@@ -652,6 +653,14 @@ def unique_reviewed(heroes, rejected):
             seen[identity]=h.get('key')
     return errors
 
+def exclude_verified_emma_redirect(root, expected_pages):
+    """Exclude only the exact verified noncanonical compatibility redirect."""
+    from owner_journey_successor import RETIRED, validate_redirect, validate_canonical
+    validate_redirect((root / RETIRED).read_bytes())
+    validate_canonical((root / 'sitemap.xml').read_bytes())
+    expected_pages.remove(RETIRED)
+
+
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--self-test',action='store_true');ap.add_argument('--baseline-report');args=ap.parse_args()
     composition_check()
@@ -865,6 +874,7 @@ def main():
     ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
     pages=[urlsplit(n.text).path.lstrip('/') or 'index.html' for n in ET.parse(ROOT/'sitemap.xml').findall('s:url/s:loc',ns)]
     expected_pages={p.relative_to(ROOT).as_posix() for p in [*ROOT.glob('*.html'),*ROOT.glob('answers/*.html'),*ROOT.glob('art-study/*.html'),*ROOT.glob('jesus-christ/**/*.html'),*ROOT.glob('history/*.html'),*ROOT.glob('timelines/*.html')] if p.name not in {'404.html','google3fa84a4b37862f36.html'}}
+    exclude_verified_emma_redirect(ROOT, expected_pages)
     check(len(pages)==len(set(pages)) and set(pages)==expected_pages,'Sitemap must expose every canonical destination exactly once')
     parsed={}
     for page in pages:

@@ -73,7 +73,7 @@ def current_index_bytes(root, name):
     return raw
 
 
-def references(root, scope, asset_paths, site_origin, historical=False):
+def references(root, scope, asset_paths, site_origin, historical=False, current_emma=False):
     """Conservative exact path occurrence census, including HTML/JSON/JS/CSS.
 
     Scope is a reviewed, hash-pinned set, not a lexical Emma search. References
@@ -85,6 +85,15 @@ def references(root, scope, asset_paths, site_origin, historical=False):
     for item in scope:
         if not historical and item['path'] in CURRENT_GENERATED_INDICES:
             text = current_index_bytes(root, item['path']).decode('utf-8')
+        elif not historical and current_emma and item['path'] == 'history/emma-hale-smith.html':
+            # The current journey census binds actual current bytes, not the
+            # separate historical inverse used by older closure receipts.
+            from emma_journey_closure_successor import CURRENT_HUB_SHA256
+            from owner_journey_successor import validate_hub
+            path = local(root, item['path']); raw = path.read_bytes()
+            require(item['sha256'] == CURRENT_HUB_SHA256 and hashlib.sha256(raw).hexdigest() == CURRENT_HUB_SHA256, 'Current Emma closure source drift')
+            validate_hub(raw, root)
+            text = raw.decode('utf-8')
         else:
             path = bound(root, item)
             if historical:
@@ -257,7 +266,16 @@ def validate(root, closure, expected_contract, pixel_hash, final=False):
         # Prior closure receipts remain historical. Validate the actual
         # current consumer census rather than projecting today's indices into
         # an old exact-byte record. Prior receipts are not current evidence.
-        current_expected = current_retirement_census(root, scope, assets, contract['site_origin'], expected)
+        current_hub = local(root, 'history/emma-hale-smith.html').read_bytes()
+        from emma_journey_closure_successor import CURRENT_HUB_SHA256, current_census
+        if hashlib.sha256(current_hub).hexdigest() == CURRENT_HUB_SHA256:
+            # Explicit successor validates actual current source and fresh indices;
+            # the old owner-closure contract and its receipts stay historical.
+            current_expected = current_census(root, scope, assets, contract['site_origin'], expected)
+        else:
+            # The former reviewed path remains exact and unchanged. Unknown new
+            # bytes cannot normalize into the historical census.
+            current_expected = current_retirement_census(root, scope, assets, contract['site_origin'], expected)
     else:
         current_expected = expected
         discovered = references(root, scope, assets, contract['site_origin'])

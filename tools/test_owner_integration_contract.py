@@ -105,9 +105,9 @@ class OwnerIntegrationContractTests(unittest.TestCase):
             with self.subTest(mode=mode), patch.object(c, 'manifest', return_value=value), self.assertRaises(AssertionError):
                 c.historical_bytes(c.HUB, self.raw[c.HUB])
 
-    def test_exact139_to137_partition_retains_every_other_route(self):
+    def test_exact138_to136_partition_retains_every_other_route(self):
         old = c.without_integrated_adams_routes(self.pages, self.raw[c.CHART])
-        self.assertEqual(len(old), 137)
+        self.assertEqual(len(old), 136)
         self.assertEqual(set(old), set(self.pages) - c.ADAMS_ROUTES)
 
     def test_missing_duplicate_unknown_or_replaced_route_rejected(self):
@@ -148,7 +148,11 @@ class OwnerIntegrationContractTests(unittest.TestCase):
 
     def test_reference_wrong_owner_or_recaptured_trigger_rejected(self):
         for route, scene in c.STORIES.items():
-            source = self.raw[route].decode()
+            raw = self.raw[route]
+            if route == 'history/emma-elect-lady.html':
+                from owner_journey_successor import historical_fixture
+                raw = historical_fixture(route, raw, c.ROOT)
+            source = raw.decode()
             target = 'emma-hale-smith.html#picture-' + scene
             with self.subTest(route=route, kind='target'), self.assertRaises(AssertionError):
                 c.assert_emma_semantics(route, source.replace(target, 'other.html#picture-' + scene))

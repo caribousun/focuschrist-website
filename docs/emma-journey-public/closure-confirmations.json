@@ -1,0 +1,43 @@
+{
+  "albert": {
+    "actor_commitment": "e218e45920c3c3f2049d750c2b2a5356f8692fab3f32454e257d94e97d85e8c7",
+    "hub_sha256": "7511f2d034d6117cb9e4d0da896c3ff778c1f0a2165c0425361b47c1d6fb3573",
+    "outputs": {
+      "gallery": {
+        "path": "art-gallery.json",
+        "sha256": "df6a8c33fc3bd70dbf38675fdb21b984914e5598a42f70025e67de5ddfceb4f8"
+      },
+      "panel": {
+        "path": "docs/section-panel-inventory.json",
+        "sha256": "aaa49fb307fa5e3251e7ed054d2443f637db94a0361a4ba3621d267ed1ab5532"
+      },
+      "search": {
+        "path": "site-search-index.json",
+        "sha256": "ba1ea0787568ce5dc6f51b7661a31ead0088c7e39f2d988286fd98697398ac67"
+      }
+    },
+    "reviewed_at": "2026-10-29T00:21:07.397217+00:00",
+    "section_panel_mandate_personally_read": true,
+    "section_panel_mandate_sha256": "26a8028ec7c7393d070e6f8006662861e1651643dbf925092b19d364ace797fc",
+    "source_receipt_sha256": "f777c0e38bbf78d1f321246ee88f4672577669ba005bdbd69634274c9c448a7a",
+    "verdict": "PASS_BOUNDED_EMMA_SCOPE",
+    "withdrawn": false
+  },
+  "fermi": {
+    "actor_commitment": "f69f5896b3628fa2c6d7505286a09af34a2beaa82bd8665f2353a65631b5399e",
+    "confirmed_at": "2026-10-29T00:20:31Z",
+    "index_reviewed_at": "2026-10-29T00:12:52Z",
+    "source_receipt_sha256": "52a3bb070acaa92899d3d9fd983b6b8bdd634c103a61b09baf6dcb7da9b6729a",
+    "withdrawn": false
+  },
+  "index_review_sha256": "6ffb6bab787c5c587f3704c48fd22bfa89d6c74609ef48981c4ba09b95721023",
+  "limitations": [
+    "not_whole_site_manual_review",
+    "not_new_render",
+    "not_owner_acceptance",
+    "not_release_approval"
+  ],
+  "schema": "emma-current-closure-confirmations-v1",
+  "scope": "bounded_current_emma_indices_not_whole_site_review",
+  "subject_sha256": "6495aaa91690e698ea304e7cbbee3ff3e40d5b8b490d2f656190056caeabc8a0"
+}

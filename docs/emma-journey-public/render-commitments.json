@@ -1,0 +1,17 @@
+{
+  "schema": "emma-render-commitments-v1",
+  "classification": "hosted_diagnostic_not_release_approval",
+  "run_id": 40770177207,
+  "job_id": 123104933739,
+  "artifact_id": 12852088360,
+  "artifact_sha256": "aa73503f1d69256834bdba5bb56b85ca2a1298d3b7445ac4a77f4d174edd1cf7",
+  "rendered_source_commit": "f4d65424826a403acefb2a52bcdf42ea829cee6b",
+  "page_sha256": "7511f2d034d6117cb9e4d0da896c3ff778c1f0a2165c0425361b47c1d6fb3573",
+  "opening_images": {
+    "desktop": {"sha256": "83b4c3bcd4b465b5a7592faf260b60ee7adf66255d87d3e091e26df89fe6b26b", "bytes": 108534, "viewport": [1440, 900]},
+    "phone": {"sha256": "6950c7bc12a9deabe032d17d53306a825c5520f92b1b0bb1c114fbd76ff2f08b", "bytes": 38057, "viewport": [390, 844]},
+    "narrow": {"sha256": "4b4cc02cf452e8922fd6fae53b59e58e108ed2cdf7ba7749e73f6017672faebb", "bytes": 28008, "viewport": [320, 740]}
+  },
+  "coverage": {"figure_contexts_per_viewport": 20, "opening_images": 3, "viewports": 3, "total_screenshots": 63},
+  "limits": ["Opening image hashes do not individually bind every figure screenshot.", "Live deployed behavior and aggregate release checks remain separate."]
+}

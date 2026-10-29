@@ -1,0 +1,93 @@
+name: Emma journey preview (diagnostic only)
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - history/emma-hale-smith.html
+      - history/emma-elect-lady.html
+      - history/emma-hymns.html
+      - assets/page-art/emma-journey/**
+      - sitemap.xml
+      - tools/emma_journey_preview_qa.js
+      - tools/emma_capture_pixel_guard.js
+      - tools/test_emma_capture_pixel_guard.js
+      - .github/workflows/emma-journey-preview.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Check out exact PR merge tree
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Install existing QA dependencies
+        run: |
+          python tools/qa_dependency_contract.py --self-test
+          python -m pip install -r tools/qa-requirements.txt
+          npm install --prefix /tmp/focus-row-qa --no-save --package-lock=false --ignore-scripts playwright@1.55.1 leaflet@1.9.4
+          /tmp/focus-row-qa/node_modules/.bin/playwright install --with-deps chromium
+          node tools/test_emma_capture_pixel_guard.js
+      - name: Record exact provenance and geometry baseline
+        run: |
+          mkdir -p .qa-artifacts/emma-journey
+          { git rev-parse HEAD; git log -1 --format='parents %P'; sha256sum history/emma-hale-smith.html history/emma-elect-lady.html history/emma-hymns.html sitemap.xml tools/emma_journey_preview_qa.js tools/emma_capture_pixel_guard.js tools/test_emma_capture_pixel_guard.js .github/workflows/emma-journey-preview.yml; find assets/page-art/emma-journey -type f -print0 | sort -z | xargs -0 sha256sum; } > .qa-artifacts/emma-journey/provenance.txt
+      - name: Generate canonical panel inventory (current contract may block)
+        id: panel
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          python tools/section_panel_surface_qa.py --write-inventory
+          python tools/section_panel_surface_qa.py
+      - name: Generate gallery from full checkout (current contract may block)
+        id: gallery
+        if: always()
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          python tools/build_art_gallery.py
+          python tools/build_art_gallery.py --check
+          cp art-gallery.json .qa-artifacts/emma-journey/
+          sha256sum art-gallery.json > .qa-artifacts/emma-journey/gallery.sha256
+      - name: Generate search only from successful new gallery
+        id: search
+        if: always() && steps.gallery.outcome == 'success'
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          python tools/build_site_search.py
+          python tools/build_site_search.py --check
+          python tools/site_search_qa.py
+          cp site-search-index.json .qa-artifacts/emma-journey/
+          sha256sum site-search-index.json > .qa-artifacts/emma-journey/search.sha256
+      - name: Materialize geometry baseline after index generation
+        if: always()
+        run: |
+          git show 63fafd9594949160f912b3c1ca0e39b52432df34:history/emma-hale-smith.html > history/__emma-baseline-for-qa.html
+          test "$(git hash-object history/__emma-baseline-for-qa.html)" = f2c7a81c6e2ff00b3f6ee912a6a31758d5901a75
+      - name: Render actual desktop, phone and narrow journeys
+        id: render
+        if: always()
+        continue-on-error: true
+        run: timeout --signal=TERM --kill-after=15s 10m env NODE_PATH=/tmp/focus-row-qa/node_modules node tools/emma_journey_preview_qa.js
+      - name: Retain exact diagnostic results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: emma-journey-preview-diagnostic
+          path: .qa-artifacts/emma-journey/
+          include-hidden-files: true
+          if-no-files-found: warn
+          retention-days: 7
+      - name: Propagate failures, not release approval
+        if: always()
+        env:
+          PANEL: ${{ steps.panel.outcome }}
+          GALLERY: ${{ steps.gallery.outcome }}
+          SEARCH: ${{ steps.search.outcome }}
+          RENDER: ${{ steps.render.outcome }}
+        run: test "$PANEL" = success && test "$GALLERY" = success && test "$SEARCH" = success && test "$RENDER" = success

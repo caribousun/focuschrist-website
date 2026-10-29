@@ -12,6 +12,8 @@ from unittest.mock import patch
 
 import artwork_emma_hub_delivery as hub
 import artwork_emma_story_delivery as old
+import owner_journey_successor as journey
+import artwork_emma_journey_retained as retained
 
 ROOT = Path(__file__).resolve().parents[1]
 PENDING_FIXTURE = 'docs/emma-hub-artwork-import/pending-record-fixture.json'
@@ -26,6 +28,11 @@ class EmmaHubContextTests(unittest.TestCase):
             raise AssertionError('Explicit pending negative fixture changed')
         cls.record = json.loads(raw)
         cls.previous = json.loads((ROOT / hub.PREDECESSOR_PATH).read_text())
+        cls.prior = {route: journey.historical_fixture(route, (ROOT / route).read_bytes(), ROOT)
+                     for route in (journey.HUB, journey.RETIRED, journey.HYMNS)}
+
+    def check_historical_spec(self, root, spec, predecessor, dependencies):
+        return hub.check_spec(root, spec, predecessor, dependencies, self.prior)
 
     def test_explicit_pending_fixture_cannot_pass(self):
         with patch.object(hub, 'APPROVED_RECORD_SHA256', None), self.assertRaises(ValueError):
@@ -40,9 +47,12 @@ class EmmaHubContextTests(unittest.TestCase):
             hub.require_finished(self.record)
 
     def test_actual_dependency_callback_and_exact_supplement(self):
-        from artwork_creation_gate import page_dependencies
+        from artwork_creation_gate import page_dependencies as current_page_dependencies
         from owner_integration_contract import HUB
-        pages = hub.check_spec(ROOT, self.record['spec'], self.previous, page_dependencies)
+        # Test the old receipt against exact prior bytes, never current DOM.
+        def page_dependencies(root, route):
+            return current_page_dependencies(root, route, page_overrides=self.prior)
+        pages = self.check_historical_spec(ROOT, self.record['spec'], self.previous, page_dependencies)
         self.assertEqual(set(pages), set(hub.STORIES))
         actual = page_dependencies(ROOT, HUB)
         names = {x['path'] for x in self.record['spec']['context']}
@@ -54,14 +64,14 @@ class EmmaHubContextTests(unittest.TestCase):
                 return raw + b' ' if path == target else raw
             with self.subTest(name=name), patch.object(Path,'read_bytes',mutate):
                 with self.assertRaises(ValueError):
-                    hub.check_spec(ROOT,self.record['spec'],self.previous,page_dependencies)
+                    self.check_historical_spec(ROOT,self.record['spec'],self.previous,page_dependencies)
         def unexpected(root, route):
             return page_dependencies(root,route) | ({'unexpected.css'} if route == HUB else set())
         with self.assertRaisesRegex(ValueError,'missing current page/CSS context'):
-            hub.check_spec(ROOT,self.record['spec'],self.previous,unexpected)
+            self.check_historical_spec(ROOT,self.record['spec'],self.previous,unexpected)
         changed=copy.deepcopy(self.record['spec']);changed['owner_scope'] += ' changed'
         with self.assertRaisesRegex(ValueError,'missing current page/CSS context'):
-            hub.check_spec(ROOT,changed,self.previous,page_dependencies)
+            self.check_historical_spec(ROOT,changed,self.previous,page_dependencies)
 
     def test_supplement_reviews_are_bound_and_tampering_rejected(self):
         hub.check_supplement_reviews(ROOT)
@@ -85,7 +95,7 @@ class EmmaHubContextTests(unittest.TestCase):
     def test_exact_archived_record_and_source_spec(self):
         self.assertEqual(old.sha((ROOT / hub.PREDECESSOR_PATH).read_bytes()), hub.PREDECESSOR_SHA256)
         self.assertEqual(old.canonical(self.previous), hub.PREDECESSOR_CANONICAL)
-        pages = hub.check_spec(ROOT, self.record['spec'], self.previous, lambda root, route: {route})
+        pages = self.check_historical_spec(ROOT, self.record['spec'], self.previous, lambda root, route: {route})
         self.assertEqual(set(pages), set(hub.STORIES))
         for scene in self.previous['spec']['scenes']:
             before = next(x for x in scene['context'] if x['path'] == scene['route'])
@@ -98,7 +108,7 @@ class EmmaHubContextTests(unittest.TestCase):
         for key, value in cases:
             spec = copy.deepcopy(self.record['spec']); spec[key] = value
             with self.subTest(key=key), self.assertRaises(ValueError):
-                hub.check_spec(ROOT, spec, self.previous, lambda root, route: {route})
+                self.check_historical_spec(ROOT, spec, self.previous, lambda root, route: {route})
 
     def test_missing_or_duplicate_current_source_rejected(self):
         for mode in ('missing', 'duplicate', 'unknown'):
@@ -107,12 +117,12 @@ class EmmaHubContextTests(unittest.TestCase):
             elif mode == 'duplicate': spec['sources'][-1] = spec['sources'][0]
             else: spec['sources'][-1]['path'] = 'unknown.html'
             with self.subTest(mode=mode), self.assertRaises(ValueError):
-                hub.check_spec(ROOT, spec, self.previous, lambda root, route: {route})
+                self.check_historical_spec(ROOT, spec, self.previous, lambda root, route: {route})
 
     def test_changed_current_source_hash_rejected(self):
         spec = copy.deepcopy(self.record['spec']); spec['sources'][0]['sha256'] = '0' * 64
         with self.assertRaises(ValueError):
-            hub.check_spec(ROOT, spec, self.previous, lambda root, route: {route})
+            self.check_historical_spec(ROOT, spec, self.previous, lambda root, route: {route})
 
     def test_exact_six_entry_dependency_ignores_only_unrelated_adams_change(self):
         current = hub.manifest(ROOT)
@@ -139,7 +149,7 @@ class EmmaHubContextTests(unittest.TestCase):
                            ('asset_family_sha256', '0' * 64)]:
             spec = copy.deepcopy(self.record['spec']); spec['scenes'][0][key] = value
             with self.subTest(key=key), self.assertRaises(ValueError):
-                hub.check_spec(ROOT, spec, self.previous, lambda root, route: {route})
+                self.check_historical_spec(ROOT, spec, self.previous, lambda root, route: {route})
 
     def test_missing_duplicate_or_unbound_context_rejected(self):
         for mode in ('script', 'duplicate', 'dependency'):
@@ -149,7 +159,7 @@ class EmmaHubContextTests(unittest.TestCase):
             elif mode == 'duplicate': spec['context'].append(spec['context'][0])
             else: deps = lambda root, route: {route, 'missing-import.css'}
             with self.subTest(mode=mode), self.assertRaises(ValueError):
-                hub.check_spec(ROOT, spec, self.previous, deps)
+                self.check_historical_spec(ROOT, spec, self.previous, deps)
 
     def test_missing_render_does_not_use_historical_artifact(self):
         with self.assertRaises(ValueError):
@@ -212,21 +222,29 @@ class EmmaHubContextTests(unittest.TestCase):
         with patch.object(hub, 'bound', side_effect=payload(receipts)), self.assertRaises(ValueError):
             hub.check_reviews(ROOT, record, normalized, '3' * 64)
 
-    def test_duplicate_owner_outside_six_pages_rejected(self):
-        # Real sitemap and six current sources; unrelated pages are source-only
-        # synthetic no-owner documents for this isolated corpus predicate test.
-        sources = {route: (ROOT / route).read_bytes() for route in {hub.HUB, *hub.STORIES}}
-        sources['sitemap.xml'] = (ROOT / 'sitemap.xml').read_bytes()
+    def test_explicit_historical_census_and_current_duplicate_owner_rejected(self):
+        # Historical census is exercised only against exact predecessor source
+        # fixtures and sitemap; non-Emma corpus is synthetic in both cases.
         class Source:
             def __init__(self, raw): self.raw = raw
             def read_bytes(self): return self.raw
             def read_text(self, encoding='utf-8'): return self.raw.decode(encoding)
         def resolve(values): return lambda root, name: Source(values.get(name, b'<html><body></body></html>'))
-        with patch.object(hub, 'local', side_effect=resolve(sources)):
+        historical = {route: (ROOT / route).read_bytes() for route in {hub.HUB, *hub.STORIES}}
+        historical.update(self.prior)
+        historical['sitemap.xml'] = journey.predecessor_fixture('sitemap.xml')
+        with patch.object(hub, 'local', side_effect=resolve(historical)):
             hub.check_unique_hub_owners(ROOT)
-        sources['index.html'] = b'<figure data-exclusive-artwork="emma-story1-ride"></figure>'
-        with patch.object(hub, 'local', side_effect=resolve(sources)), self.assertRaises(ValueError):
+        historical['index.html'] = b'<figure data-exclusive-artwork="emma-story1-ride"></figure>'
+        with patch.object(hub, 'local', side_effect=resolve(historical)), self.assertRaises(ValueError):
             hub.check_unique_hub_owners(ROOT)
+        current = {route: (ROOT / route).read_bytes() for route in {hub.HUB, *hub.STORIES}}
+        current['sitemap.xml'] = (ROOT / 'sitemap.xml').read_bytes()
+        with patch.object(retained, 'local', side_effect=resolve(current)):
+            retained.validate_current(ROOT)
+        current['index.html'] = b'<figure data-exclusive-artwork="emma-story1-ride"></figure>'
+        with patch.object(retained, 'local', side_effect=resolve(current)), self.assertRaises(ValueError):
+            retained.validate_current(ROOT)
 
     def test_historical_projection_rejects_unknown_page_before_assets(self):
         with self.assertRaises(ValueError):

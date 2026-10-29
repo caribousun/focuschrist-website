@@ -227,7 +227,24 @@ class AdamsSourceImportTests(unittest.TestCase):
     def test23_dispatch_preserves_emma_and_all_families(self):
         raw = (self.root / 'tools/artwork_creation_gate.py').read_text()
         self.assertEqual(raw.count(DISPATCH), 1)
-        self.assertEqual(hashlib.sha256(raw.replace(DISPATCH, '').encode()).hexdigest(), BASE_GATE_SHA256)
+        # Keep the exact historical Adams baseline pin. Reconstruct it only
+        # after recognizing the exact current Emma journey dispatch and the
+        # corresponding inventory condition, both tested independently.
+        start = raw.index('    # Exact current Emma journey generation.')
+        end = raw.index('    # Exact existing Adams chart import;', start)
+        journey = raw[start:end]
+        # Preserve the previous independently reviewed block and recognize the
+        # separately reviewed public-evidence successor. Unknown edits still fail.
+        self.assertIn(hashlib.sha256(journey.encode()).hexdigest(), {
+            'dc55ae2e1c6222a008537eac1f6cff7fd54558d61f28cbe491ba06f01411b6a4',
+            '6d50febea139815a821d0c3498f476641ad1e3bece48f012847c69b296775f2e',
+        })
+        current = '    if creations or historical or corrections or seasonal or four_scene or answers_six or six_scene or gabriel or three or journey:'
+        previous = '    if creations or historical or corrections or seasonal or four_scene or answers_six or six_scene or gabriel or three:'
+        self.assertEqual(raw.count(journey), 1)
+        self.assertEqual(raw.count(current), 1)
+        historical = raw.replace(journey, '', 1).replace(current, previous, 1)
+        self.assertEqual(hashlib.sha256(historical.replace(DISPATCH, '').encode()).hexdigest(), BASE_GATE_SHA256)
         self.assertLess(raw.index('from artwork_emma_story_delivery'), raw.index(DISPATCH))
         self.assertLess(raw.index(DISPATCH), raw.index('from artwork_display_delivery import ASSETS'))
         self.assertIn("require(added == covered, 'New artwork missing exact review coverage: '", raw)

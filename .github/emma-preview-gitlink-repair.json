@@ -1,0 +1,14 @@
+{
+  "reason": "Three unmapped gitlinks caused actions/checkout auth cleanup to fail. Remove Git index entries only; no nested repository contents are deleted. Existing files and history remain recoverable.",
+  "observed_base": "b3f2923d532d71a67bcbe340df4744bf3235c998",
+  "preserved_gitlinks": {
+    "focuschrist-repo": "bde99118c8ca34925ebb6d025c77250c45626856",
+    "focuschrist-website": "206c91e39119d073312e0f71a01378ad4e8ca4c5",
+    "focuschrist-website-temp": "59d53fe7a4dcae479efec3690cecc89166aa9087"
+  },
+  "inspection": "No .gitmodules or local submodule mapping. Directories empty in verified checkout; no tracked site consumer requiring their contents found. Origin of entries not proven.",
+  "failure_run": 40750049982,
+  "failure_job": 123034035397,
+  "preserve_security": "persist-credentials remains false; checkout failures remain fatal; no auth/network/permission changes.",
+  "verification_pending": "Rerun hosted checkout after repair."
+}

@@ -29,6 +29,11 @@ function collectPages(folder, recursive = false) {
 }
 for (const folder of ['', 'answers', 'art-study', 'history', 'timelines']) collectPages(folder);
 collectPages('jesus-christ', true);
+// The only noncanonical HTML file is the byte-verified retired Emma redirect.
+require('./emma_retirement_navigation_successor').assertCurrent(canonical,read,JSDOM);
+const retired='/history/emma-elect-lady.html';
+assert.equal(canonicalFiles.filter(route=>route===retired).length,1,'Exact retired redirect present');
+canonicalFiles.splice(canonicalFiles.indexOf(retired),1);
 assert.equal(canonical.length, new Set(canonical).size, 'Canonical inventory has no duplicate URLs');
 assert.deepEqual(new Set(canonical), new Set(canonicalFiles), 'Discover the complete canonical inventory');
 const click = (window, node) => node.dispatchEvent(new window.MouseEvent('click', { bubbles: true, cancelable: true, button: 0 }));

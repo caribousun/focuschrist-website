@@ -1,0 +1,261 @@
+{
+  "checks": {
+    "artwork_and_provenance": {
+      "completed_at": "2026-10-29T01:35:28.731564+00:00",
+      "evidence": [
+        {
+          "bytes": 622,
+          "path": "docs/emma-journey-public/artwork-proof.json",
+          "sha256": "4bdfad92ef6c2617581c8ea64fd17ad4a77deeb17d63ebfc34b90326a35b1808"
+        }
+      ],
+      "method": "separate_pre_release_validation",
+      "status": "PASS"
+    },
+    "desktop_render": {
+      "completed_at": "2026-10-29T01:35:28.731564+00:00",
+      "evidence": [
+        {
+          "bytes": 1138,
+          "path": "docs/emma-journey-public/render-commitments.json",
+          "sha256": "61a003b68efccc71710eddf83ac52c4e030117dbd196a16dc0e8b8a5cb03a416"
+        },
+        {
+          "bytes": 108534,
+          "path": "docs/emma-journey-release/render/desktop-opening.jpg",
+          "sha256": "83b4c3bcd4b465b5a7592faf260b60ee7adf66255d87d3e091e26df89fe6b26b"
+        }
+      ],
+      "scope": "opening_directly_inspected_other_contexts_attributed",
+      "status": "PASS"
+    },
+    "gallery": {
+      "completed_at": "2026-10-29T01:35:28.731564+00:00",
+      "evidence": [
+        {
+          "bytes": 1507,
+          "path": "docs/emma-journey-public/index-checks.json",
+          "sha256": "cba6f47d1d6a02a18372fe6025812396ef343f0fa916b37d48f47d7c4c48990f"
+        },
+        {
+          "bytes": 1001710,
+          "path": "art-gallery.json",
+          "sha256": "df6a8c33fc3bd70dbf38675fdb21b984914e5598a42f70025e67de5ddfceb4f8"
+        },
+        {
+          "bytes": 1635,
+          "path": "docs/emma-journey-public/index-review-commitments.json",
+          "sha256": "6ffb6bab787c5c587f3704c48fd22bfa89d6c74609ef48981c4ba09b95721023"
+        },
+        {
+          "bytes": 1821,
+          "path": "docs/emma-journey-public/closure-confirmations.json",
+          "sha256": "b523c3467b022ac9976c69a580c7b071a6a83663e4b8ef183462cbca0313ee97"
+        }
+      ],
+      "status": "PASS"
+    },
+    "narrow_render": {
+      "completed_at": "2026-10-29T01:35:28.731564+00:00",
+      "evidence": [
+        {
+          "bytes": 1138,
+          "path": "docs/emma-journey-public/render-commitments.json",
+          "sha256": "61a003b68efccc71710eddf83ac52c4e030117dbd196a16dc0e8b8a5cb03a416"
+        }
+      ],
+      "scope": "hosted_diagnostic_and_specialist_inspection_attributed",
+      "status": "PASS"
+    },
+    "navigation_and_controls": {
+      "completed_at": "2026-10-29T01:35:28.731564+00:00",
+      "evidence": [
+        {
+          "bytes": 1138,
+          "path": "docs/emma-journey-public/render-commitments.json",
+          "sha256": "61a003b68efccc71710eddf83ac52c4e030117dbd196a16dc0e8b8a5cb03a416"
+        },
+        {
+          "bytes": 10207,
+          "path": "tools/emma_journey_preview_qa.js",
+          "sha256": "e351377e01433fc9c99461040769d9cb5fc7d8659b3ce483c17ec744bbcea8f1"
+        },
+        {
+          "bytes": 4301,
+          "path": ".github/workflows/emma-journey-preview.yml",
+          "sha256": "8aa4dc1778a0d7bce1fb9e7ed795df071449cee06473f8a50b42e0c465c323ec"
+        },
+        {
+          "bytes": 1611,
+          "path": "history/emma-elect-lady.html",
+          "sha256": "6de7bd0b21f0561913ba251163e552588a3fe065df83fd6cd1ccb9b6365ccbba"
+        }
+      ],
+      "scope": "hosted_diagnostic_not_manual_interaction",
+      "status": "PASS"
+    },
+    "panel": {
+      "completed_at": "2026-10-29T01:35:28.731564+00:00",
+      "evidence": [
+        {
+          "bytes": 1507,
+          "path": "docs/emma-journey-public/index-checks.json",
+          "sha256": "cba6f47d1d6a02a18372fe6025812396ef343f0fa916b37d48f47d7c4c48990f"
+        },
+        {
+          "bytes": 124766,
+          "path": "docs/section-panel-inventory.json",
+          "sha256": "aaa49fb307fa5e3251e7ed054d2443f637db94a0361a4ba3621d267ed1ab5532"
+        },
+        {
+          "bytes": 1635,
+          "path": "docs/emma-journey-public/index-review-commitments.json",
+          "sha256": "6ffb6bab787c5c587f3704c48fd22bfa89d6c74609ef48981c4ba09b95721023"
+        },
+        {
+          "bytes": 1821,
+          "path": "docs/emma-journey-public/closure-confirmations.json",
+          "sha256": "b523c3467b022ac9976c69a580c7b071a6a83663e4b8ef183462cbca0313ee97"
+        }
+      ],
+      "status": "PASS"
+    },
+    "phone_render": {
+      "completed_at": "2026-10-29T01:35:28.731564+00:00",
+      "evidence": [
+        {
+          "bytes": 1138,
+          "path": "docs/emma-journey-public/render-commitments.json",
+          "sha256": "61a003b68efccc71710eddf83ac52c4e030117dbd196a16dc0e8b8a5cb03a416"
+        },
+        {
+          "bytes": 38057,
+          "path": "docs/emma-journey-release/render/phone-opening.jpg",
+          "sha256": "6950c7bc12a9deabe032d17d53306a825c5520f92b1b0bb1c114fbd76ff2f08b"
+        }
+      ],
+      "scope": "opening_directly_inspected_other_contexts_attributed",
+      "status": "PASS"
+    },
+    "search": {
+      "completed_at": "2026-10-29T01:35:28.731564+00:00",
+      "evidence": [
+        {
+          "bytes": 1507,
+          "path": "docs/emma-journey-public/index-checks.json",
+          "sha256": "cba6f47d1d6a02a18372fe6025812396ef343f0fa916b37d48f47d7c4c48990f"
+        },
+        {
+          "bytes": 3442903,
+          "path": "site-search-index.json",
+          "sha256": "ba1ea0787568ce5dc6f51b7661a31ead0088c7e39f2d988286fd98697398ac67"
+        },
+        {
+          "bytes": 1635,
+          "path": "docs/emma-journey-public/index-review-commitments.json",
+          "sha256": "6ffb6bab787c5c587f3704c48fd22bfa89d6c74609ef48981c4ba09b95721023"
+        },
+        {
+          "bytes": 1821,
+          "path": "docs/emma-journey-public/closure-confirmations.json",
+          "sha256": "b523c3467b022ac9976c69a580c7b071a6a83663e4b8ef183462cbca0313ee97"
+        }
+      ],
+      "status": "PASS"
+    },
+    "source_and_prose": {
+      "completed_at": "2026-10-29T01:35:28.731564+00:00",
+      "evidence": [
+        {
+          "bytes": 40717,
+          "path": "docs/emma-journey-public/subject-draft.json",
+          "sha256": "6495aaa91690e698ea304e7cbbee3ff3e40d5b8b490d2f656190056caeabc8a0"
+        },
+        {
+          "bytes": 1186,
+          "path": "docs/emma-journey-public/private-verification.json",
+          "sha256": "903e4289b665a8df19855e0b04e6e5bdb8989208db2b5bf3e83c496de6222613"
+        },
+        {
+          "bytes": 1685909,
+          "path": "content-audit.json",
+          "sha256": "3e56b5a2eb5f86e4cc0ea19c69efdbe8861873e02d36b88ab203f99bab1a6b6d"
+        },
+        {
+          "bytes": 10485,
+          "path": "docs/emma-journey-public/previous-content-ledger.json",
+          "sha256": "c1706329d61dbbae022487efcd2069b3ca62f61177fdaabd392a0969e1672551"
+        },
+        {
+          "bytes": 75894,
+          "path": "history/emma-hale-smith.html",
+          "sha256": "7511f2d034d6117cb9e4d0da896c3ff778c1f0a2165c0425361b47c1d6fb3573"
+        },
+        {
+          "bytes": 1611,
+          "path": "history/emma-elect-lady.html",
+          "sha256": "6de7bd0b21f0561913ba251163e552588a3fe065df83fd6cd1ccb9b6365ccbba"
+        },
+        {
+          "bytes": 15111,
+          "path": "history/emma-hymns.html",
+          "sha256": "55ee8b1a9b57154ca074282f2b6f44c19d77d15a63abd5adcde3286174625087"
+        },
+        {
+          "bytes": 5845,
+          "path": "docs/emma-journey-owner-closure/current-review.json",
+          "sha256": "58cb5d0f09fc8d146e832ca5f42a620f9586c6fbfff9f7c4d15e3776e5d0bc6c"
+        },
+        {
+          "bytes": 789,
+          "path": "docs/emma-journey-public/conditional-owner.json",
+          "sha256": "d49de711849422969e9a0b94bcb3f4edd16f56779a3dd7660eb3c41929feb755"
+        },
+        {
+          "bytes": 1635,
+          "path": "docs/emma-journey-public/index-review-commitments.json",
+          "sha256": "6ffb6bab787c5c587f3704c48fd22bfa89d6c74609ef48981c4ba09b95721023"
+        },
+        {
+          "bytes": 1821,
+          "path": "docs/emma-journey-public/closure-confirmations.json",
+          "sha256": "b523c3467b022ac9976c69a580c7b071a6a83663e4b8ef183462cbca0313ee97"
+        },
+        {
+          "bytes": 10437,
+          "path": "docs/resource-page-coverage.json",
+          "sha256": "aed0386e0adecba3f4cb77aab707c4ca7b10f871efcc18750b71e7cd35d6235f"
+        }
+      ],
+      "status": "PASS"
+    },
+    "validator_code_review": {
+      "completed_at": "2026-10-29T01:35:28.731564+00:00",
+      "evidence": [
+        {
+          "bytes": 784,
+          "path": "docs/emma-journey-public/code-review-proof.json",
+          "sha256": "2b3c6ed6fa3c282c704f0581da2b5708545680e4956223eda8c342a1b995e547"
+        }
+      ],
+      "status": "PASS"
+    }
+  },
+  "completed_at": "2026-10-29T01:35:28.731564+00:00",
+  "limitations": [
+    "not_aggregate_qa",
+    "not_release_approval",
+    "not_owner_gate_waiver",
+    "post_pin_exact_code_and_pin_review_pending",
+    "narrow_inspection_attributed",
+    "individual_figure_capture_hashes_not_all_recorded",
+    "owner_acceptance_does_not_attest_later_index_hashes",
+    "browser_caption_qa_pending_hosted"
+  ],
+  "private_checks_receipt_sha256": "258288d5f63b60b9aab094a0f81d56ed413eb6009f10745b2fd7c2840cf88ae1",
+  "schema": "emma-public-pre-release-checks-v1",
+  "status": "PASS",
+  "subject_sha256": "6495aaa91690e698ea304e7cbbee3ff3e40d5b8b490d2f656190056caeabc8a0",
+  "verification_sha256": "903e4289b665a8df19855e0b04e6e5bdb8989208db2b5bf3e83c496de6222613",
+  "verifier_commitment": "2b6283f0c7d06100a5cb2ae90c977f0cd66777e881c2ecbef0b8c85774d56eb7"
+}

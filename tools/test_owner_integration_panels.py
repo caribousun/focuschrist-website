@@ -13,28 +13,27 @@ class OwnerIntegrationPanelTests(unittest.TestCase):
         return json.loads(q.CONFIG.read_text())
 
     def current(self, config=None):
-        with patch.object(q, 'canonical', return_value=[CHART, INTRO, LANDING, HUB, *STORIES]):
+        with patch.object(q, 'canonical', return_value=[CHART, INTRO, LANDING, HUB, *(p for p in STORIES if p != 'history/emma-elect-lady.html')]):
             return q.inventory(config or self.config())
 
-    def test_actual_nine_current_sources_and_explicit_counts(self):
+    def test_actual_eight_current_sources_and_explicit_counts(self):
         result = self.current()
         self.assertNotIn('fc-adams-note', result['candidate_classes'])
         self.assertNotIn('fc-adams-timeline-card', result['candidate_classes'])
         self.assertEqual(result['styled_surface_candidates']['fc-timeline-choice']['pages'], [LANDING])
         self.assertIn('timeline.css', result['styled_surface_candidates']['fc-timeline-choice']['stylesheets'])
         self.assertEqual(result['styled_surface_candidates']['fc-timeline-choice']['disposition'], 'coordinated_stylesheet_owner')
-        self.assertEqual(result['candidate_classes']['fc-life-scripture-reflection']['count'], 4)
-        self.assertEqual(result['candidate_classes']['fc-life-scripture-reflection']['pages'], [HUB])
+        self.assertNotIn('fc-life-scripture-reflection', result['candidate_classes'])
         self.assertEqual(result['candidate_classes']['fc-timeline-note']['count'], 1)
 
     def test_each_new_explicit_classification_is_required(self):
-        for group, name, error in [('delegated_classes', 'fc-timeline-choice', 'Unclassified rounded/bordered/filled surface'), ('excluded_classes', 'fc-life-scripture-reflection', 'Unclassified panel-like class')]:
+        for group, name, error in [('delegated_classes', 'fc-timeline-choice', 'Unclassified rounded/bordered/filled surface')]:
             changed = self.config(); del changed[group][name]
             with self.assertRaisesRegex(AssertionError, error + ': ' + name):
                 self.current(changed)
 
     def test_unknown_or_escaped_classes_are_not_excused(self):
-        for token, error in [('fc-adams-note', 'Obsolete standalone note'), ('fc-adams-timeline-card', 'Obsolete Adams feature'), ('fc-timeline-choice', 'Exact integrated panel owner'), ('fc-life-scripture-reflection', 'Exact integrated panel owner'), ('fc-adams-unreviewed-card', 'Unclassified panel-like class')]:
+        for token, error in [('fc-adams-note', 'Obsolete standalone note'), ('fc-adams-timeline-card', 'Obsolete Adams feature'), ('fc-timeline-choice', 'Exact integrated panel owner'), ('fc-life-scripture-reflection', 'Retired Emma reflection class returned'), ('fc-adams-unreviewed-card', 'Unclassified panel-like class')]:
             with tempfile.TemporaryDirectory() as folder:
                 root = Path(folder); (root/'other.html').write_text('<div class="'+token+'">x</div>')
                 with patch.object(q, 'ROOT', root), patch.object(q, 'canonical', return_value=['other.html']):
@@ -43,7 +42,6 @@ class OwnerIntegrationPanelTests(unittest.TestCase):
     def test_missing_or_duplicate_current_modifier_is_rejected(self):
         for route, token, attribute, count in [
             (LANDING, 'fc-timeline-choice', 'class="fc-timeline-choice"', 5),
-            (HUB, 'fc-life-scripture-reflection', 'class="fc-life-reflection fc-life-scripture-reflection"', 4),
         ]:
             source = (q.ROOT/route).read_text()
             self.assertEqual(source.count(attribute), count)
@@ -51,6 +49,10 @@ class OwnerIntegrationPanelTests(unittest.TestCase):
             for changed in [missing, source+'<aside class="'+token+'">extra</aside>']:
                 parser=q.Document();parser.feed(changed)
                 with self.assertRaises(AssertionError): q.assert_integrated_panel_owners(route, list(parser.root.walk()))
+        # A retired modifier is rejected even if placed back on its old owner.
+        parser=q.Document();parser.feed((q.ROOT/HUB).read_text()+'<aside class="fc-life-scripture-reflection">extra</aside>')
+        with self.assertRaisesRegex(AssertionError,'Retired Emma reflection class returned'):
+            q.assert_integrated_panel_owners(HUB,list(parser.root.walk()))
 
 if __name__ == '__main__':
     unittest.main()

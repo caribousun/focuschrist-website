@@ -1,0 +1,140 @@
+{
+  "schema": "emma-previous-content-ledger-v1",
+  "records": [
+    {
+      "path": "history/emma-hale-smith.html",
+      "status": "verified",
+      "published_text_sha256": "488acbd9b360cf4e92c9da5326111b9c15d851df8895225f37566588bbe00233",
+      "reviewed_source_sha256": "50c334379066722ef6e80e97d70f0f2ca431777b5857eb15b998da65cc1783cf",
+      "reviewed_on": "2026-10-27",
+      "actual_author": "Current ledger assembly; Fermi and Newton independently reviewed the finished prose",
+      "review_scope": "Current static visitor copy, metadata, captions and accessible labels; exact raw source and published-text hashes. Rendered and release acceptance are separate.",
+      "review_standard": "The exact current visitor prose, captions and narrative structure were independently reviewed by Fermi and Newton under the current warm-prose and disclosure mandates. Newton reviewed visible labels and image alt attributes; a separate bounded review covered title, description and Open Graph metadata voice, reusing prior research for factual support. Earlier historical/source research is reused for unchanged material; changed captions and quotations were checked against the cited sources. This is not a fresh exhaustive review of all retained claims. Rendered context, artwork identity and ownership, complete CI and release acceptance remain separate. A separate Newton source-voice review inspected nonempty static alt, aria-label, placeholder and title attributes; dynamic attributes, usability and full accessibility remain separate.",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/emma-hale-smith?lang=eng",
+        "https://www.josephsmithpapers.org/person/emma-hale-smith",
+        "https://www.churchofjesuschrist.org/study/history/topics/joseph-and-emma-hale-smith-family?lang=eng",
+        "https://www.josephsmithpapers.org/paper-summary/letter-from-emma-smith-7-march-1839/1",
+        "https://www.josephsmithpapers.org/paper-summary/collection-of-sacred-hymns-1835/1",
+        "https://www.churchhistorianspress.org/the-first-fifty-years-of-relief-society/part-1/1-2/1-2-1?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/revelations-in-context/thou-art-an-elect-lady?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/25?lang=eng",
+        "https://www.churchofjesuschrist.org/study/church-historians-press/jsp-revelations/dc-047-1831_03_08_005?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics-essays/plural-marriage-in-kirtland-and-nauvoo?lang=eng",
+        "https://www.churchofjesuschrist.org/study/ensign/1992/08/my-great-great-grandmother-emma-hale-smith?lang=eng",
+        "https://cofchrist.org/nauvoo-illinois-usa/",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/6?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/6?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/14?lang=eng",
+        "https://www.churchofjesuschrist.org/study/liahona/2021/03/emma-protected-scripture?lang=eng",
+        "https://www.josephsmithpapers.org/paper-summary/collection-of-sacred-hymns-1835/113",
+        "https://www.churchofjesuschrist.org/study/manual/hymns/how-firm-a-foundation?lang=eng",
+        "https://www.churchofjesuschrist.org/study/history/topics/female-relief-society-of-nauvoo?lang=eng",
+        "https://history.churchofjesuschrist.org/media-exhibit/a-history-and-record-on-plates-of-glass/nauvoo-house-on-the-mississippi-river?from=home&lang=eng"
+      ],
+      "rendered_review_status": "SEPARATE_RELEASE_GATE",
+      "review_evidence": [
+        {
+          "path": "docs/emma-hub-content-audit/fermi-copy-review-v5.json",
+          "bytes": 2859,
+          "sha256": "19af5b5cde1e4774fd13290a5b154ff45373622927e259aafa82ca85a1455144"
+        },
+        {
+          "path": "docs/emma-hub-content-audit/newton-current-copy-review.json",
+          "bytes": 4057,
+          "sha256": "87c7641b58c17d4337f515f2ab3d7141d5bac49751939f2e8ff1bddf9876832c"
+        },
+        {
+          "path": "docs/emma-hub-content-audit/newton-current-metadata-review.json",
+          "bytes": 3299,
+          "sha256": "940c5f4c92639bf37de9ee213087991ff5b8a321900cfa4bf188e1190025ed0f"
+        },
+        {
+          "path": "docs/emma-hub-content-audit/newton-current-attribute-review.json",
+          "bytes": 2672,
+          "sha256": "4696b6e883b57b3fb5a34c78ffdf45bd0d969ac640b1e593c13c73b1aac06639"
+        }
+      ]
+    },
+    {
+      "path": "history/emma-elect-lady.html",
+      "status": "verified",
+      "published_text_sha256": "80b8e87efd52f85bdbe416034ad6a209b5b1b3c5f77b82a0c16faa762d05a67f",
+      "reviewed_source_sha256": "f32c79609f15d51e9c85b2f4bc941de38d2626c944e33f1876fc574f46f7986c",
+      "reviewed_on": "2026-10-27",
+      "actual_author": "Current ledger assembly; Fermi and Newton independently reviewed the finished prose",
+      "review_scope": "Current static visitor copy, metadata, captions and accessible labels; exact raw source and published-text hashes. Rendered and release acceptance are separate.",
+      "review_standard": "The exact current visitor prose, captions and narrative structure were independently reviewed by Fermi and Newton under the current warm-prose and disclosure mandates. Newton reviewed visible labels and image alt attributes; a separate bounded review covered title, description and Open Graph metadata voice, reusing prior research for factual support. Earlier historical/source research is reused for unchanged material; changed captions and quotations were checked against the cited sources. This is not a fresh exhaustive review of all retained claims. Rendered context, artwork identity and ownership, complete CI and release acceptance remain separate. A separate Newton source-voice review inspected nonempty static alt, aria-label, placeholder and title attributes; dynamic attributes, usability and full accessibility remain separate.",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/emma-hale-smith?lang=eng",
+        "https://www.churchofjesuschrist.org/study/liahona/2021/03/emma-protected-scripture?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/25?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/revelations-in-context/thou-art-an-elect-lady?lang=eng"
+      ],
+      "rendered_review_status": "SEPARATE_RELEASE_GATE",
+      "review_evidence": [
+        {
+          "path": "docs/emma-hub-content-audit/fermi-copy-review-v5.json",
+          "bytes": 2859,
+          "sha256": "19af5b5cde1e4774fd13290a5b154ff45373622927e259aafa82ca85a1455144"
+        },
+        {
+          "path": "docs/emma-hub-content-audit/newton-current-copy-review.json",
+          "bytes": 4057,
+          "sha256": "87c7641b58c17d4337f515f2ab3d7141d5bac49751939f2e8ff1bddf9876832c"
+        },
+        {
+          "path": "docs/emma-hub-content-audit/newton-current-metadata-review.json",
+          "bytes": 3299,
+          "sha256": "940c5f4c92639bf37de9ee213087991ff5b8a321900cfa4bf188e1190025ed0f"
+        },
+        {
+          "path": "docs/emma-hub-content-audit/newton-current-attribute-review.json",
+          "bytes": 2672,
+          "sha256": "4696b6e883b57b3fb5a34c78ffdf45bd0d969ac640b1e593c13c73b1aac06639"
+        }
+      ]
+    },
+    {
+      "path": "history/emma-hymns.html",
+      "status": "verified",
+      "published_text_sha256": "06ab23987916be8d7a87c1e4e027e7dbc275b6fa0b46a562ef748c82685fa914",
+      "reviewed_source_sha256": "719bc7f899ebc188f33322c4c7c6bea9e326b209e28e2d49855543185e12aedb",
+      "reviewed_on": "2026-10-27",
+      "actual_author": "Current ledger assembly; Fermi and Newton independently reviewed the finished prose",
+      "review_scope": "Current static visitor copy, metadata, captions and accessible labels; exact raw source and published-text hashes. Rendered and release acceptance are separate.",
+      "review_standard": "The exact current visitor prose, captions and narrative structure were independently reviewed by Fermi and Newton under the current warm-prose and disclosure mandates. Newton reviewed visible labels and image alt attributes; a separate bounded review covered title, description and Open Graph metadata voice, reusing prior research for factual support. Earlier historical/source research is reused for unchanged material; changed captions and quotations were checked against the cited sources. This is not a fresh exhaustive review of all retained claims. Rendered context, artwork identity and ownership, complete CI and release acceptance remain separate. A separate Newton source-voice review inspected nonempty static alt, aria-label, placeholder and title attributes; dynamic attributes, usability and full accessibility remain separate.",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/emma-hale-smith?lang=eng",
+        "https://www.josephsmithpapers.org/paper-summary/collection-of-sacred-hymns-1835/1",
+        "https://www.josephsmithpapers.org/paper-summary/collection-of-sacred-hymns-1835/113",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/25?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/hymns/how-firm-a-foundation?lang=eng"
+      ],
+      "rendered_review_status": "SEPARATE_RELEASE_GATE",
+      "review_evidence": [
+        {
+          "path": "docs/emma-hub-content-audit/fermi-copy-review-v5.json",
+          "bytes": 2859,
+          "sha256": "19af5b5cde1e4774fd13290a5b154ff45373622927e259aafa82ca85a1455144"
+        },
+        {
+          "path": "docs/emma-hub-content-audit/newton-current-copy-review.json",
+          "bytes": 4057,
+          "sha256": "87c7641b58c17d4337f515f2ab3d7141d5bac49751939f2e8ff1bddf9876832c"
+        },
+        {
+          "path": "docs/emma-hub-content-audit/newton-current-metadata-review.json",
+          "bytes": 3299,
+          "sha256": "940c5f4c92639bf37de9ee213087991ff5b8a321900cfa4bf188e1190025ed0f"
+        },
+        {
+          "path": "docs/emma-hub-content-audit/newton-current-attribute-review.json",
+          "bytes": 2672,
+          "sha256": "4696b6e883b57b3fb5a34c78ffdf45bd0d969ac640b1e593c13c73b1aac06639"
+        }
+      ]
+    }
+  ]
+}

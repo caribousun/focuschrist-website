@@ -4,7 +4,7 @@ const root=path.resolve(__dirname,'..');
 module.exports=async function historyBodySpacing(page,origin){
   const routes=[...fs.readFileSync(path.join(root,'sitemap.xml'),'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].map(m=>new URL(m[1]).pathname.slice(1)||'index.html');
   const adjacency=[],histories=[],consumers=[];
-  const readingFirst=require('./emma_history_reading_contract'),validatedReadingFirst=[];
+  const readingFirst=require('./emma_retirement_reading_successor'),validatedReadingFirst=[];
   const historyVersions={'history/eleazer-miller.html':'20261009-directory-alignment-1','history/john-rowe-moyle.html':'20261009-directory-alignment-1','history/john-tanner.html':'20261009-directory-alignment-1','history/emma-hale-smith.html':'20261008-standard-body-1'};
   for(const route of routes){
     const parsed=await page.evaluate(html=>{const doc=new DOMParser().parseFromString(html,'text/html');return{matches:doc.querySelectorAll('.fc-study-promotion + .fc-study-grid').length,history:!!doc.querySelector('.fc-life-reading'),links:[...doc.querySelectorAll('link[rel="stylesheet"]')].map(n=>n.getAttribute('href')),readingFirst:doc.body.classList.contains('fc-emma-study'),heroes:doc.querySelectorAll('.fc-life-hero').length,openings:doc.querySelectorAll('.fc-life-reading.fc-life-opening').length,bodies:doc.querySelectorAll('.fc-life-reading:not(.fc-life-opening)').length,directories:doc.querySelectorAll('.fc-life-directory').length,summaries:doc.querySelectorAll('.fc-life-directory > summary').length}},fs.readFileSync(path.join(root,route),'utf8'));
@@ -38,7 +38,7 @@ module.exports=async function historyBodySpacing(page,origin){
       await page.locator('.fc-life-directory summary').click();assert(await page.locator('.fc-life-directory').evaluate(n=>n.open));await page.locator('.fc-life-directory summary').click();
       records.push({route,width,height,scale,home,...data});
     }
-    // Five exact reading-first stories retain body rails, overflow and directory checks,
+    // Four exact current reading-first stories retain body rails, overflow and directory checks,
     // without inventing the historical hero/Continue-cue contract on those pages.
     for(const route of readingFirst.owners){
       await page.goto(origin+'/'+route);await page.waitForSelector('.fc-life-reading.fc-life-opening');await settle(scale);

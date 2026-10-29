@@ -35,15 +35,23 @@ def current_controller_bindings():
 
 
 def assert_controller_bindings(actual):
+    # Preserve the old 125-owner registry and all 120 historical assertions,
+    # then validate the exact retired compatibility source before removing its
+    # one obsolete consumer from the ACTUAL current expected set.
     expected = current_controller_bindings()
     historical = historical_consumers(expected, [CONTROLLER_REF])
     assert historical is not None and len(historical) == 120
     assert len(expected) == 125
     assert all(len(refs) == 1 and refs[0].endswith('topic-artwork-details.js?v=20261021-continue-motion-1') for refs in expected.values())
-    assert actual == expected, 'Exact120 historical plus five new topic controller owners/single references required'
+    retired = 'history/emma-elect-lady.html'
+    assert hashlib.sha256((ROOT/retired).read_bytes()).hexdigest() == '6de7bd0b21f0561913ba251163e552588a3fe065df83fd6cd1ccb9b6365ccbba', 'retired compatibility source drift'
+    assert expected.pop(retired) == [CONTROLLER_REF]
+    assert len(expected) == 124
+    assert actual == expected, 'Exact120 historical plus four live Emma topic-controller owners required'
 
 def controller_binding_self_test():
     expected = current_controller_bindings()
+    del expected['history/emma-elect-lady.html']
     assert_controller_bindings(expected)
     owner = 'pioneers.html'; ref = expected[owner][0]
     mutations = [dict(expected, **{owner: []}), dict(expected, **{owner: [ref, ref]}),

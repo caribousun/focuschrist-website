@@ -55,10 +55,14 @@ def assert_integrated_panel_owners(page, nodes):
     # The former one-off Adams panel was replaced by five equal Timeline cards.
     # The actual Timeline content/navigation is independently validated above.
     assert not any('fc-adams-timeline-card' in n.attrs.get('class','').split() for n in nodes), 'Obsolete Adams feature returned'
-    for cls, owner, count, tag in [('fc-timeline-choice', 'timeline.html', 5, 'article'), ('fc-life-scripture-reflection', 'history/emma-hale-smith.html', 4, 'aside')]:
-        actual=[n for n in nodes if cls in n.attrs.get('class','').split()]
-        assert len(actual)==(count if page==owner else 0), 'Exact integrated panel owner/count changed: '+cls
-        assert all(n.tag==tag for n in actual), 'Integrated panel element changed: '+cls
+    # Timeline's unrelated exact structure is unchanged by the Emma successor.
+    actual=[n for n in nodes if 'fc-timeline-choice' in n.attrs.get('class','').split()]
+    assert len(actual)==(5 if page=='timeline.html' else 0), 'Exact integrated panel owner/count changed: fc-timeline-choice'
+    assert all(n.tag=='article' for n in actual), 'Integrated panel element changed: fc-timeline-choice'
+    # The four loosely paired Christ reflections were retired only from Emma's
+    # current page. They had no other canonical owner under the predecessor.
+    # Do not restore historical panels to the current inventory.
+    assert not any('fc-life-scripture-reflection' in n.attrs.get('class','').split() for n in nodes), 'Retired Emma reflection class returned'
 
 
 def inventory(config):

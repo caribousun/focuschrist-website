@@ -1,0 +1,28 @@
+{
+  "limitations": [
+    "not_provider_telemetry",
+    "historical_clock_times_unknown",
+    "not_owner_gate_waiver",
+    "not_release_approval",
+    "filename_only_identifier_comparison_not_digest"
+  ],
+  "owner_accepted_at_commitment": "21e09b456fc7aa6088598993d3cebf49f177a621e15c3fafcf50e2ac77144d59",
+  "owner_preceded_verification": true,
+  "owner_verification_receipt_sha256": "9c5e571a16ec53475b0e08fe1ac79fe03cb00c9377469c9cd05a3d53abc1bfa5",
+  "owner_verifier_event_at": "2026-10-28T23:29:04.688585+00:00",
+  "private_receipt_sha256": "571525874078a6a5e2355e20502c7f7265f07367a7fbee3eb90a7184dd2ce0a0",
+  "schema": "emma-independent-private-verification-v1",
+  "scope": [
+    "exact_public_projection",
+    "distinct_actual_reviewers",
+    "historical_preflight_and_finished",
+    "ordered_generation_inputs",
+    "filename_only_owner_rejection",
+    "conditional_owner_readback"
+  ],
+  "subject_sha256": "6495aaa91690e698ea304e7cbbee3ff3e40d5b8b490d2f656190056caeabc8a0",
+  "verdict": "PASS",
+  "verdict_scope": "bounded_projection_only",
+  "verification_model": "direct_projection_with_attributed_private_verification",
+  "verified_at": "2026-10-29T00:55:23.531670+00:00"
+}

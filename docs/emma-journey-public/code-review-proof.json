@@ -1,0 +1,16 @@
+{
+  "completed_at": "2026-10-29T01:35:28.717443+00:00",
+  "limitations": [
+    "post_pin_exact_values_review_pending",
+    "not_aggregate_qa",
+    "not_release_approval"
+  ],
+  "normalized_validator_sha256": "add3caa45d4b2debd4f6989b35dec4c39a42ce3257df911f2a10de43927a5610",
+  "private_receipt_sha256": "808a9ce01dacb449c542685d0b8d4dc457bcbe904b1cae347544215b435b679d",
+  "reviewed_tool_tree_sha256": "d47a2e870733b2b33b9ea1983a3af61fb547d2fab9fbbc35903cc2d25f0c8e0d",
+  "schema": "emma-public-validator-review-v1",
+  "scope": "bounded_normalized_validator_and_tool_tree_review",
+  "status": "PASS",
+  "subject_sha256": "6495aaa91690e698ea304e7cbbee3ff3e40d5b8b490d2f656190056caeabc8a0",
+  "verifier_commitment": "3177c81eb4080d303909d02437e1520708aaeddea9ed53709f1cbbfa7909258a"
+}
