@@ -1,0 +1,28 @@
+{
+  "current_tool_tree_sha256": "f9093d1a82683c8ec541d159543788f0c2457543954723da65ba54e1de5cc6cd",
+  "historical_tree_manifest_sha256": "d78aea4ec98baa38c10d77fa2b2fccbc753f4b56b48dd779b8d300e9d5e75c2a",
+  "index_review_sha256": "12e8961b940808e54a41515b6294983a4af0cf6cfc29a527e84f7e5767dbebe7",
+  "limits": [
+    "code_review_only_not_render_or_release_approval",
+    "full_tree_producer_not_independently_run",
+    "51_photo_entries_without_verified_on_site_destinations",
+    "external_photo_records_not_inspected"
+  ],
+  "private_receipt_sha256": "b8842f8e3d933b6111625851019827e95bfe2f8f84917df6878c1aea5838d32d",
+  "reviewed_at": "2026-10-29T04:43:37Z",
+  "reviewed_code_git_blobs": {
+    "tools/emma_journey_closure_successor.py": "40bceb2a8e69415ad2519a0675d9b53df36c7fcd",
+    "tools/emma_journey_indices_contract.py": "c6b4a285552e4825b519fdc20a4c48971315d27e",
+    "tools/emma_public_commitments.py": "c3a5b362a1f074dfe3f0db20505cd79105ea3649",
+    "tools/test_timeline_current_index_closure.py": "8295efa2877dfc948853b5c7600c6f0547b16f25",
+    "tools/timeline_current_index_closure.py": "2c95de60fd98bf817638eeecca642815d6379900",
+    "tools/timeline_requested_browser_qa.js": "3ad5121508f906ce0c0bd4a24f1a699923f947c0",
+    "tools/timeline_search_index_successor.py": "b6e0e61b7ffbf964cc928e6c51604f7063160f62"
+  },
+  "reviewed_commit": "5f297b8ac4c81f79b300f3bdf6234e5ac10bdc93",
+  "reviewer_commitment": "25275b95cc2c78a6aef8f6ac29e2400b0fac0290ab5ec12f9946448301ee8133",
+  "schema": "timeline-index-successor-code-review-v1",
+  "scope": "current_successor_and_exact_tool_tree",
+  "search_manifest_sha256": "92017fcda04ec298e06cff1c6b259c89b02ae43946737d0da87eea97aba2235c",
+  "verdict": "CONCUR"
+}

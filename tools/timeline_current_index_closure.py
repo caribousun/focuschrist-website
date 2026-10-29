@@ -10,6 +10,8 @@ from datetime import datetime
 import timeline_search_index_successor as index
 
 INDEX_REVIEW_SHA256='12e8961b940808e54a41515b6294983a4af0cf6cfc29a527e84f7e5767dbebe7'
+# The previously reviewed code receipt remains on disk as historical evidence.
+# A fresh independent review must bind the exact content-ledger successor too.
 CODE_REVIEW_SHA256=None
 INDEX_REVIEW='docs/timeline-controls-successor/current-index-review.json'
 CODE_REVIEW='docs/timeline-controls-successor/current-code-review.json'
@@ -78,10 +80,14 @@ def prepare(root):
  if review.get('panel_sha256')!=PANEL or review.get('gallery_sha256')!=GALLERY:raise ValueError('reviewed panel/gallery differ')
  if sha(index.source(root,'docs/section-panel-inventory.json'))!=PANEL or sha(index.source(root,'art-gallery.json'))!=GALLERY:raise ValueError('current panel/gallery differ')
  index.validate_current(root);historical=index.restore(index.source(root,'site-search-index.json'),root)
+ from timeline_content_ledger_successor import restore as restore_ledger
+ historical_ledger=restore_ledger(index.source(root,'content-audit.json'),root)
+ import static_content_audit
+ if static_content_audit.ROOT.resolve()!=root or static_content_audit.validate()!=0:raise ValueError('current content audit failed')
  if code.get('schema')!='timeline-index-successor-code-review-v1' or code.get('scope')!='current_successor_and_exact_tool_tree' or code.get('verdict')!='CONCUR':raise ValueError('current code review absent or wrong scope')
  if not all(validhash(code.get(k)) for k in ('reviewer_commitment','private_receipt_sha256','current_tool_tree_sha256')) or code['reviewer_commitment']==review['reviewer_commitment']:raise ValueError('independent code reviewer evidence missing')
  if code.get('index_review_sha256')!=INDEX_REVIEW_SHA256 or code.get('search_manifest_sha256')!=sha(index.source(root,index.MANIFEST)) or code.get('historical_tree_manifest_sha256')!=sha(index.source(root,TREE_PROJECTION)):raise ValueError('current code review inputs differ')
  if timestamp(code.get('reviewed_at'))<reviewed_at:raise ValueError('code review predates current index review')
  current=tool_tree(root);prior=project_old_tree(root,current)
  if canonical(current)!=code['current_tool_tree_sha256']:raise ValueError('current reviewed tool tree differs')
- return {'historical_search':historical,'historical_tool_tree_sha256':canonical(prior),'historical_validator_sha256':prior['tools/emma_public_commitments.py']}
+ return {'historical_search':historical,'historical_content_audit':historical_ledger,'historical_tool_tree_sha256':canonical(prior),'historical_validator_sha256':prior['tools/emma_public_commitments.py']}

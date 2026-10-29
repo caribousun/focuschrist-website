@@ -167,9 +167,9 @@ def validate_release(root):
   from timeline_current_index_closure import prepare
   projection=prepare(root)
  def reviewed_bound(entry):
-  if projection is not None and entry.get('path')=='site-search-index.json':
-   raw=projection['historical_search']
-   require(len(raw)==entry['bytes'] and sha(raw)==entry['sha256'],'historical search evidence changed')
+  if projection is not None and entry.get('path') in ('site-search-index.json','content-audit.json'):
+   raw=projection['historical_search' if entry['path']=='site-search-index.json' else 'historical_content_audit']
+   require(len(raw)==entry['bytes'] and sha(raw)==entry['sha256'],'historical index or content evidence changed')
    return raw
   return bound(root,entry)
  subject=read_pinned(root,SUBJECT,SUBJECT_SHA256);validate_statement(root,subject);verification_time=validate_verification(root,subject,SUBJECT_SHA256)

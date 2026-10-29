@@ -49,6 +49,7 @@ jobs:
           python -m unittest discover -s tools -p test_emma_journey_indices_contract.py
           python -m unittest discover -s tools -p test_timeline_search_index_successor.py
           python -m unittest discover -s tools -p test_timeline_current_index_closure.py
+          python -m unittest discover -s tools -p test_timeline_content_ledger_successor.py
           python -m unittest discover -s tools -p test_prepare_emma_journey_indices.py
           python -m unittest discover -s tools -p test_emma_journey_indices_full_tree_protocol.py
           python -m unittest discover -s tools -p test_artwork_emma_story_delivery.py
