@@ -1,8 +1,9 @@
 /* Synthetic classification only; it does not run a browser or prove providers. */
 'use strict';
-const assert=require('node:assert/strict'),{classify,allowedRequest,enforceRequest,makeTrace,makeHandlerTracker,publicPathClass,publicTile,installEarlySourceObserver}=require('./world_provider_browser_diagnostic');
+const assert=require('node:assert/strict'),{classify,qualifiedStatus,allowedRequest,enforceRequest,makeTrace,makeHandlerTracker,publicPathClass,publicTile,installEarlySourceObserver}=require('./world_provider_browser_diagnostic');
 const ok={denied:false,pageErrors:0,failedRequests:0,badResponses:0,blockedRequests:0,blockedRedirects:0,boundaryErrors:0,openfreemapResponses:1,mapterhornResponses:1,sourcesLoaded:true,rendererLoaded:true,statusHidden:true,canvasVisible:true,sourceObserverAttached:true,sourceObservationComplete:true};
-assert.equal(classify(ok),'PASS');
+assert.equal(classify(ok),'PASS');assert.equal(qualifiedStatus(ok).status,'PASS');
+assert.equal(qualifiedStatus({...ok,failedRequests:1}).status,'FAIL');
 for(const field of ['sourcesLoaded','rendererLoaded','statusHidden','canvasVisible','openfreemapResponses','mapterhornResponses','sourceObserverAttached','sourceObservationComplete'])assert.equal(classify({...ok,[field]:false}),'FAIL',field);
 for(const field of ['pageErrors','failedRequests','badResponses','blockedRequests','blockedRedirects','boundaryErrors','handlerErrors','handlerDrainTimeout','sourceTraceDropped','sourceErrors'])assert.equal(classify({...ok,[field]:1}),'FAIL',field);
 assert.equal(classify({...ok,eventsDropped:1}),'FAIL');

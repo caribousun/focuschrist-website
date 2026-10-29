@@ -11,13 +11,18 @@ import timeline_world_mobile_successor as mobile
 from timeline_world_mobile_release_successor import MOBILE_IMPLEMENTER_COMMITMENT
 ROOT=Path(__file__).resolve().parents[1]
 MANIFEST='docs/timeline-mobile-collapse/tooltip-tool-tree.json'
-MANIFEST_SHA256='950282bcd7ceebe0adb8ad35073a969763e71d3852f61e05b4711db6c070e044'
+MANIFEST_SHA256='0a14cab0a660c5843fe00a60ffc48ef11dd0b688d7560013a9be8aa919134d88'
 PRIOR_TREE='69f383f0133a0e52ebe77f1762fd8f144acd32e3df3278bdff0c90df135cd1bc'
 CODE_REVIEW='docs/timeline-mobile-collapse/tooltip-final-integration-code-review.json'
 CODE_REVIEW_SHA256=None
 CODE_REVIEWER_COMMITMENT=None
 CODE_RECEIPT_SHA256=None
-PIN_NAMES=('CODE_REVIEW_SHA256','CODE_REVIEWER_COMMITMENT','CODE_RECEIPT_SHA256')
+# Actual independent provider screenshot review remains pending until supplied.
+PROVIDER_REVIEW='docs/timeline-mobile-collapse/independent-provider-visual-review.json'
+PROVIDER_REVIEW_SHA256=None
+PROVIDER_REVIEWER_COMMITMENT=None
+PROVIDER_RECEIPT_SHA256=None
+PIN_NAMES=('CODE_REVIEW_SHA256','CODE_REVIEWER_COMMITMENT','CODE_RECEIPT_SHA256','PROVIDER_REVIEW_SHA256','PROVIDER_REVIEWER_COMMITMENT','PROVIDER_RECEIPT_SHA256')
 def sha(raw):return hashlib.sha256(raw).hexdigest()
 def validhash(value):return isinstance(value,str) and re.fullmatch(r'[0-9a-f]{64}',value) is not None
 def require(value,message):
@@ -34,6 +39,18 @@ def project_tree(root,current):
  require(old.canonical(previous)==PRIOR_TREE,'Tooltip historical tool tree differs')
  return previous
 
+def validate_provider_visual_review(root):
+ """Structural binding only; the genuine reviewer and receipt require independent verification."""
+ require(all(validhash(x) for x in (PROVIDER_REVIEW_SHA256,PROVIDER_REVIEWER_COMMITMENT,PROVIDER_RECEIPT_SHA256)), 'PENDING independent provider visual review')
+ require(validhash(MOBILE_IMPLEMENTER_COMMITMENT) and PROVIDER_REVIEWER_COMMITMENT!=MOBILE_IMPLEMENTER_COMMITMENT,'Provider visual reviewer must differ from a valid implementer')
+ raw=mobile.source(root,PROVIDER_REVIEW);require(sha(raw)==PROVIDER_REVIEW_SHA256,'Provider visual review changed');review=json.loads(raw)
+ require(review.get('schema')=='timeline-provider-visual-review-v1' and review.get('scope')=='provider_desktop_phone_pixels' and review.get('verdict')=='CONCUR_WITHIN_BOUNDED_VISUAL_SCOPE','Provider visual review scope differs')
+ require(review.get('reviewer_commitment')==PROVIDER_REVIEWER_COMMITMENT and review.get('receipt_sha256')==PROVIDER_RECEIPT_SHA256,'Provider visual reviewer evidence differs')
+ require(review.get('page_sha256')==tooltip.PAGE_AFTER,'Provider visual review page differs')
+ for field in ('artifact_sha256','report_sha256','desktop_screenshot_sha256','phone_screenshot_sha256'):
+  require(validhash(review.get(field)),'Provider visual review evidence missing: '+field)
+ return review
+
 def project_reviewed_tree(root,current):
  """Check the actual current review before restoring prior code bytes."""
  import timeline_current_index_closure as old
@@ -46,8 +63,9 @@ def project_reviewed_tree(root,current):
  require(review.get('implementer_commitment')==MOBILE_IMPLEMENTER_COMMITMENT,'Final tooltip implementer association differs')
  require(review.get('page_sha256')==tooltip.PAGE_AFTER and review.get('browser_test_sha256')==tooltip.TEST_AFTER and review.get('controller_sha256')==mobile.CONTROLLER_SHA,'Final tooltip source differs')
  require(review.get('visual_review_sha256')==tooltip.REVIEW_SHA and review.get('prior_code_review_sha256')==tooltip.CODE_REVIEW_SHA and review.get('source_manifest_sha256')==tooltip.MANIFEST_SHA and review.get('tree_manifest_sha256')==MANIFEST_SHA256,'Final tooltip review inputs differ')
- for field,name in (('provider_diagnostic_sha256','tools/world_provider_browser_diagnostic.js'),('provider_diagnostic_test_sha256','tools/test_world_provider_browser_diagnostic.js')):
+ for field,name in (('provider_diagnostic_sha256','tools/world_provider_browser_diagnostic.js'),('provider_diagnostic_test_sha256','tools/test_world_provider_browser_diagnostic.js'),('provider_cancellation_classifier_sha256','tools/world_provider_cancellation_review.js'),('provider_cancellation_classifier_test_sha256','tools/test_world_provider_cancellation_review.js')):
   require(review.get(field)==sha(mobile.source(root,name)),'Final tooltip diagnostic subject differs')
  require(review.get('current_tool_tree_sha256')==old.canonical(current),'Final reviewed tooltip tool tree differs')
  require(old.timestamp(review.get('reviewed_at'))>=old.timestamp('2026-10-29T18:57:42Z'),'Final tooltip review predates prior review')
+ validate_provider_visual_review(root)
  return project_tree(root,current)

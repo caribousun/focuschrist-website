@@ -625,6 +625,7 @@ jobs:
         if: ${{ !cancelled() }}
         run: |
           node tools/test_world_provider_browser_diagnostic.js
+          node tools/test_world_provider_cancellation_review.js
           NODE_PATH=/tmp/focus-timeline-qa/node_modules node tools/world_provider_browser_diagnostic.js
       - name: Save Timeline interaction and rendering evidence
         if: always()
