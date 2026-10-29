@@ -18,10 +18,22 @@ function validateLanding(root){
  return {path:'timeline.html',bytes:Buffer.byteLength(raw),sha256:sha(Buffer.from(raw)),validation:'current Timeline source semantics; rendered behavior checked separately'};
 }
 
+function validateIntegratedSource(record,raw,read){
+ const successor=require('./timeline_adams_diagnostic_successor');
+ const prior=record.path==='timelines/adams-1881-chart.html'&&sha(raw)===successor.AFTER
+  ? Buffer.from(successor.restore(raw,read)) : raw;
+ assert.equal(prior.length,record.bytes,'Exact integrated source length '+record.path);
+ assert.equal(sha(prior),record.sha256,'Exact integrated source '+record.path);
+ return {currentSha256:sha(raw),historicalSha256:sha(prior)};
+}
 function inspectAssets(root){
- for(const r of INTEGRATED_SOURCES){const b=fs.readFileSync(path.join(root,r.path));assert.equal(b.length,r.bytes);assert.equal(sha(b),r.sha256,'Exact integrated source '+r.path);}
+ for(const r of INTEGRATED_SOURCES){const b=fs.readFileSync(path.join(root,r.path));validateIntegratedSource(r,b,name=>fs.readFileSync(path.join(root,name)));}
  const html=fs.readFileSync(path.join(root,'timelines/adams-1881-chart.html'),'utf8');
- assert.equal(sha(Buffer.from(html)),EXPECTED_CHART_SHA256,'Exact reviewed metadata-correct chart');
+ // The diagnostic-only successor is projected to the exact historical chart
+ // before applying the original pin. This does not imply current review.
+ const current=Buffer.from(html),successor=require('./timeline_adams_diagnostic_successor');
+ const prior=sha(current)===successor.AFTER?Buffer.from(successor.restore(current,name=>fs.readFileSync(path.join(root,name)))):current;
+ assert.equal(sha(prior),EXPECTED_CHART_SHA256,'Exact reviewed metadata-correct chart or verified diagnostic successor');
  const landing=validateLanding(root);
  const matches=[...html.matchAll(/assets\["([0-9]+):([0-9]+):([0-9]+)"\]="(\/assets\/adams-chart\/[^"\s]+)"/g)];
  assert.equal(matches.length,331,'331 literal chart assets');
@@ -179,10 +191,14 @@ module.exports=async function adamsChartQA(existingPage,origin,parentOut){
      const fragments=[],walker=document.createTreeWalker(progress,NodeFilter.SHOW_TEXT);let node;
      while((node=walker.nextNode()))if(node.textContent.trim()){const range=document.createRange();range.selectNodeContents(node);for(const r of range.getClientRects())if(r.width>0&&r.height>0)fragments.push({x:r.x,y:r.y,right:r.right,bottom:r.bottom,width:r.width,height:r.height});}
      const occluders=[document.querySelector('nav[data-focuschrist-header=standard]'),bar,...bar.querySelectorAll('.toprow,.controls'),...['navDock','mini','showNav'].map(id=>document.getElementById(id))].filter(n=>n&&!n.contains(progress)).map(n=>{const r=rect(n),st=getComputedStyle(n);return {id:n.id||n.className,...r,visible:st.display!=='none'&&st.visibility!=='hidden'&&Number(st.opacity)!==0,overlapArea:Math.max(0,Math.min(r.right,pr.right)-Math.max(r.x,pr.x))*Math.max(0,Math.min(r.bottom,pr.bottom)-Math.max(r.y,pr.y))};});
-     const progressEvidence={text:progress.textContent.trim(),parentID:progress.parentElement.id,rect:pr,fragments,ancestors,occluders,method:'Read-only text rectangles and known header/control/dock/map overlap; pointer hit testing deliberately not used.'};
+     const progressEvidence={hidden:progress.hidden,text:progress.textContent.trim(),parentID:progress.parentElement.id,rect:pr,fragments,ancestors,occluders,method:'Read-only text rectangles and known header/control/dock/map overlap; pointer hit testing deliberately not used.'};
      return {progress:progressEvidence,header:rect(document.querySelector('nav[data-focuschrist-header=standard]')),main:rect(document.getElementById('adams-chart-main')),footerPresent:!!document.querySelector('footer[data-focuschrist-footer=standard]'),titleRow:rect(bar.querySelector('.toprow')),controls:rect(bar.querySelector('.controls')),innerWidth:bar.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight),overlays:['navDock','mini','progress','showNav'].map(id=>{const n=document.getElementById(id);return {id,...rect(n),display:getComputedStyle(n).display};})};
     });record.integration=integration;
     const progress=integration.progress;
+    if(fixture.sourceSHA256===require('./timeline_adams_diagnostic_successor').AFTER){
+     assert(progress.hidden,'Routine tile diagnostics remain hidden');
+     assert.equal(progress.text,'','No tile count or resolution is rendered');
+    }else{
     assert(progress.text.length>0&&progress.fragments.length>0,'Progress has nonempty rendered text fragments');
     assert(progress.ancestors.every(n=>n.display!=='none'&&n.visibility!=='hidden'&&n.visibility!=='collapse'&&Number(n.opacity)!==0),'Progress and ancestors visibly rendered');
     assert(progress.rect.width>0&&progress.rect.height>0&&progress.rect.x>=-1&&progress.rect.y>=-1&&progress.rect.right<=profile.width+1&&progress.rect.bottom<=profile.height+1,'Progress box remains inside actual viewport');
@@ -190,6 +206,7 @@ module.exports=async function adamsChartQA(existingPage,origin,parentOut){
     assert.deepEqual(progress.occluders.filter(n=>n.visible&&n.width>0&&n.height>0&&n.overlapArea>0),[],'Progress must not be hidden by known header/control/dock/map boxes');
     assert.equal(progress.parentID,compact?'toolbar':'adams-chart-main','Same status node uses compact toolbar row only');
     if(compact)assert(progress.rect.y>=integration.controls.bottom-1&&progress.rect.bottom<=s.toolbar.bottom+1,'Compact progress row follows controls inside toolbar');
+    }
     const semantics=await page.evaluate(()=>{
      const read=selector=>{const n=document.querySelector(selector),r=n.getBoundingClientRect(),cs=getComputedStyle(n),hit=document.elementFromPoint(r.x+r.width/2,r.y+r.height/2);return {selector,tag:n.tagName,text:n.textContent.trim(),href:n.getAttribute('href'),x:r.x,y:r.y,right:r.right,bottom:r.bottom,width:r.width,height:r.height,visible:cs.display!=='none'&&cs.visibility!=='hidden'&&Number(cs.opacity)!==0,hit:!!hit&&(n===hit||n.contains(hit)),fontSize:parseFloat(cs.fontSize),fontWeight:cs.fontWeight,fontFamily:cs.fontFamily,lineHeight:cs.lineHeight,margins:[cs.marginTop,cs.marginRight,cs.marginBottom,cs.marginLeft]};};
      return {heading:read('h1.title'),continuations:[read('nav[data-focuschrist-header=standard] .nav-logo')],footerDestinations:[...document.querySelectorAll('footer .fc-adams-footer-links a')].map(n=>({href:n.getAttribute('href'),text:n.textContent.trim()}))};
@@ -287,3 +304,4 @@ module.exports=async function adamsChartQA(existingPage,origin,parentOut){
  return {profiles:results.map(r=>r.profile.name),assetCount:331,assetSetSHA256:ASSET_SET_SHA256,screenshots:shots,evidence:'adams/report.json',nativePhoneGestures:'not tested'};
 };
 module.exports.validateLanding=validateLanding;
+module.exports.validateIntegratedSource=validateIntegratedSource;

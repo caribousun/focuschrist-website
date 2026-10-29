@@ -1027,7 +1027,7 @@ var registry={
     },
     "42": {
       "src": "/art/thumbs/The-Living-Christ.webp",
-      "href": "/art-gallery.html?picture=art-d12945c2d847",
+      "href": "/jesus-christ/restoration-and-today.html#living-christ",
       "alt": "The Living Christ",
       "caption": "The Savior’s portrait accompanies the Apostles’ witness that He lives.",
       "artworkId": "art-d12945c2d847",

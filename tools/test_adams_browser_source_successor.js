@@ -1,0 +1,16 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),crypto=require('node:crypto');
+const {validateIntegratedSource}=require('./adams_chart_browser_qa');
+const successor=require('./timeline_adams_diagnostic_successor');
+const raw=fs.readFileSync('timelines/adams-1881-chart.html'),read=p=>fs.readFileSync(p);
+const record={path:'timelines/adams-1881-chart.html',bytes:66076,sha256:successor.BEFORE};
+const result=validateIntegratedSource(record,raw,read);
+assert.equal(result.currentSha256,successor.AFTER);assert.equal(result.historicalSha256,successor.BEFORE);
+const prior=Buffer.from(successor.restore(raw,read));assert.equal(prior.length,record.bytes);
+assert.equal(validateIntegratedSource(record,prior,read).currentSha256,successor.BEFORE);
+assert.throws(()=>validateIntegratedSource(record,Buffer.concat([raw,Buffer.from(' ')]),read));
+assert.throws(()=>validateIntegratedSource(record,raw,p=>Buffer.concat([read(p),Buffer.from(' ')])));
+const unrelated=Buffer.from('unrelated');const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+assert.doesNotThrow(()=>validateIntegratedSource({path:'unchanged.css',bytes:unrelated.length,sha256:sha(unrelated)},unrelated,read));
+assert.throws(()=>validateIntegratedSource({path:'unchanged.css',bytes:unrelated.length,sha256:sha(unrelated)},Buffer.from('different'),read));
+console.log('PASS: actual Adams successor is used for browser source, exact historical length/hash restored, tampering rejected; unrelated source stays pinned');
