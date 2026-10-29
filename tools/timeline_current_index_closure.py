@@ -45,7 +45,7 @@ def tool_tree(root):
   if not p.is_file():continue
   name=p.relative_to(root).as_posix();raw=p.read_bytes()
   if name=='tools/emma_public_commitments.py':files[name]=public.normalized_validator_hash(root);continue
-  if name in ('tools/timeline_current_index_closure.py','tools/timeline_51_current_successor.py','tools/timeline_world_mobile_release_successor.py','tools/timeline_world_tooltip_release_successor.py'):
+  if name in ('tools/timeline_current_index_closure.py','tools/timeline_51_current_successor.py','tools/timeline_world_mobile_release_successor.py','tools/timeline_world_tooltip_release_successor.py','tools/timeline_world_webgl_successor.py'):
    text=raw.decode()
    if name=='tools/timeline_51_current_successor.py':
     from timeline_51_current_successor import PIN_NAMES as names
@@ -53,6 +53,8 @@ def tool_tree(root):
     from timeline_world_mobile_release_successor import PIN_NAMES as names
    elif name=='tools/timeline_world_tooltip_release_successor.py':
     from timeline_world_tooltip_release_successor import PIN_NAMES as names
+   elif name=='tools/timeline_world_webgl_successor.py':
+    from timeline_world_webgl_successor import PIN_NAMES as names
    else:names=('INDEX_REVIEW_SHA256','CODE_REVIEW_SHA256')
    for key in names:
     pattern=r'(?m)^'+key+r"=(?:None|'[0-9a-f]{64}')$"
