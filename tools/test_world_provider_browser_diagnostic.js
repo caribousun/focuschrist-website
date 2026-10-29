@@ -1,12 +1,36 @@
 /* Synthetic classification only; it does not run a browser or prove providers. */
 'use strict';
-const assert=require('node:assert/strict'),{classify,allowedRequest,enforceRequest,makeTrace,makeHandlerTracker,publicPathClass}=require('./world_provider_browser_diagnostic');
-const ok={denied:false,pageErrors:0,failedRequests:0,badResponses:0,blockedRequests:0,blockedRedirects:0,boundaryErrors:0,openfreemapResponses:1,mapterhornResponses:1,sourcesLoaded:true,rendererLoaded:true,statusHidden:true,canvasVisible:true};
+const assert=require('node:assert/strict'),{classify,allowedRequest,enforceRequest,makeTrace,makeHandlerTracker,publicPathClass,publicTile,installEarlySourceObserver}=require('./world_provider_browser_diagnostic');
+const ok={denied:false,pageErrors:0,failedRequests:0,badResponses:0,blockedRequests:0,blockedRedirects:0,boundaryErrors:0,openfreemapResponses:1,mapterhornResponses:1,sourcesLoaded:true,rendererLoaded:true,statusHidden:true,canvasVisible:true,sourceObserverAttached:true};
 assert.equal(classify(ok),'PASS');
-for(const field of ['sourcesLoaded','rendererLoaded','statusHidden','canvasVisible','openfreemapResponses','mapterhornResponses'])assert.equal(classify({...ok,[field]:false}),'FAIL',field);
-for(const field of ['pageErrors','failedRequests','badResponses','blockedRequests','blockedRedirects','boundaryErrors','handlerErrors','handlerDrainTimeout'])assert.equal(classify({...ok,[field]:1}),'FAIL',field);
+for(const field of ['sourcesLoaded','rendererLoaded','statusHidden','canvasVisible','openfreemapResponses','mapterhornResponses','sourceObserverAttached'])assert.equal(classify({...ok,[field]:false}),'FAIL',field);
+for(const field of ['pageErrors','failedRequests','badResponses','blockedRequests','blockedRedirects','boundaryErrors','handlerErrors','handlerDrainTimeout','sourceTraceDropped','sourceErrors'])assert.equal(classify({...ok,[field]:1}),'FAIL',field);
 assert.equal(classify({...ok,eventsDropped:1}),'FAIL');
 assert.equal(classify({...ok,error:'failure'}),'FAIL');assert.equal(classify({...ok,denied:true}),'DENIED');assert.equal(classify({}),'FAIL');
+function earlyObserverTests(){
+ const originalWindow=global.window;global.window={};
+ try{
+  installEarlySourceObserver();
+  class MapStub{constructor(){this.listeners={};}on(name,fn){this.listeners[name]=fn;return this;}emit(name,event){this.listeners[name](event);}}
+  window.maplibregl={Map:MapStub};assert(window.__providerSourceTrace.installed);
+  const map=new window.maplibregl.Map();assert(window.__providerSourceTrace.attached);
+  map.emit('sourcedataabort',{sourceId:'ne2_shaded',coord:{canonical:{z:2,x:1,y:3}}});
+  map.emit('error',{sourceId:'private-source-name',coord:{z:2,x:9,y:3},error:{message:'private error'}});
+  const records=window.__providerSourceTrace.events;
+  assert.deepEqual(records[0].coord,{z:2,x:1,y:3});assert.equal(records[0].source,'ne2_shaded');
+  assert.equal(records[1].source,null);assert.equal(records[1].coord,null);assert(!JSON.stringify(records).includes('private'));
+  assert(Number.isInteger(records[0].epochMs));
+  for(let i=0;i<255;i++)map.emit('error',{});assert.equal(records.length,256);assert.equal(window.__providerSourceTrace.dropped,1);
+  assert.equal(classify({...ok,sourceTraceDropped:1}),'FAIL');assert.equal(classify({...ok,sourceErrors:1}),'FAIL');
+  assert.equal(classify({...ok,failedRequests:1}),'FAIL'); // A matched or unmatched abort never becomes PASS.
+  assert.deepEqual(publicTile('tiles.openfreemap.org','/natural_earth/ne2sr/2/1/3.png'),{source:'ne2_shaded',z:2,x:1,y:3});
+  assert.deepEqual(publicTile('tiles.openfreemap.org','/planet/2/1/3.pbf'),{source:'openmaptiles',z:2,x:1,y:3});
+  assert.deepEqual(publicTile('tiles.mapterhorn.com','/2/1/3.webp'),{source:'terrain-dem',z:2,x:1,y:3});
+  for(const path of ['/customer/private','/natural_earth/ne2sr/2/99/3.png','/natural_earth/ne2sr/%32/1/3.png'])assert.equal(publicTile('tiles.openfreemap.org',path),null);
+  assert.equal(publicTile('example.com','/2/1/3.webp'),null);
+ }finally{global.window=originalWindow;}
+}
+earlyObserverTests();
 async function routingTests(){
  const rowTrace={phase:'navigation',events:[],eventsDropped:0},trace=makeTrace(rowTrace);
  const req={url:()=>"https://tiles.openfreemap.org/tiles/2/1/3.pbf?token=secret",resourceType:()=>"fetch"};

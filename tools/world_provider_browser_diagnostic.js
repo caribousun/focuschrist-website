@@ -19,6 +19,41 @@ function publicPathClass(host,path){
  for(const [pattern,label] of templates){const m=pattern.exec(path);if(!m)continue;const [z,x,y]=m.slice(1).map(Number);if(z<=22&&x<2**z&&y<2**z)return label;}
  return '[redacted]';
 }
+// Installed before navigation. Uses only the documented Map constructor and event API.
+// Constructor-internal synchronous events cannot be observed by a post-construction listener.
+function installEarlySourceObserver(){
+ const allowed=new Set(['ne2_shaded','openmaptiles','terrain-dem']);
+ const state={installed:false,attached:false,events:[],dropped:0};
+ window.__providerSourceTrace=state;
+ let exported;
+ function coordinates(value){
+  const c=value&&value.canonical||value;if(!c)return null;
+  const {z,x,y}=c;
+  return Number.isInteger(z)&&z>=0&&z<=22&&Number.isInteger(x)&&x>=0&&x<2**z&&Number.isInteger(y)&&y>=0&&y<2**z?{z,x,y}:null;
+ }
+ function observe(map){
+  state.attached=true;
+  for(const type of ['sourcedataabort','error'])map.on(type,event=>{
+   const source=allowed.has(event.sourceId)?event.sourceId:null;
+   const record={type,source,coord:coordinates(event.coord),epochMs:Date.now()};
+   if(state.events.length<256)state.events.push(record);else state.dropped++;
+  });
+ }
+ Object.defineProperty(window,'maplibregl',{configurable:true,enumerable:true,get(){return exported;},set(value){
+  if(!value||typeof value.Map!=='function'){exported=value;return;}
+  const original=value.Map;
+  const wrapped=new Proxy(original,{construct(target,args,newTarget){const map=Reflect.construct(target,args,newTarget);observe(map);return map;}});
+  // An ordinary export assignment is expected in the vendored UMD bundle.
+  const descriptor=Object.getOwnPropertyDescriptor(value,'Map');
+  if(!descriptor||!descriptor.writable){exported=value;return;}
+  value.Map=wrapped;exported=value;state.installed=true;
+ }});
+}
+function publicTile(host,path){
+ const sources=[['tiles.openfreemap.org',/^\/natural_earth\/ne2sr\/(\d{1,2})\/(\d{1,7})\/(\d{1,7})\.png$/,'ne2_shaded'],['tiles.openfreemap.org',/^\/(?:planet|tiles)\/(\d{1,2})\/(\d{1,7})\/(\d{1,7})\.pbf$/,'openmaptiles'],['tiles.mapterhorn.com',/^\/(\d{1,2})\/(\d{1,7})\/(\d{1,7})\.webp$/,'terrain-dem']];
+ for(const [h,re,source] of sources){if(host!==h)continue;const m=re.exec(path);if(!m)continue;const [z,x,y]=m.slice(1).map(Number);if(z<=22&&x<2**z&&y<2**z)return {source,z,x,y};}
+ return null;
+}
 function makeHandlerTracker(handler,row){
  const pending=new Set();
  const run=route=>{
@@ -44,7 +79,7 @@ function makeTrace(row){
   if(!ids.has(request))ids.set(request,next++);
   const path=publicPathClass(u.hostname,u.pathname);
   const type=typeof request.resourceType==='function'?request.resourceType():'unknown';
-  const record={id:ids.get(request),kind,host:u.hostname,path,resourceType:/^[a-z]{1,20}$/.test(type)?type:'unknown',phase:row.phase,ms:Math.round(performance.now()-start),...detail};
+  const record={id:ids.get(request),kind,host:u.hostname,path,resourceType:/^[a-z]{1,20}$/.test(type)?type:'unknown',tile:publicTile(u.hostname,u.pathname),phase:row.phase,ms:Math.round(performance.now()-start),epochMs:Date.now(),...detail};
   if(row.events.length<512)row.events.push(record);else row.eventsDropped++;
  };
  return {mark,elapsed:()=>Math.round(performance.now()-start)};
@@ -79,10 +114,10 @@ async function enforceRequest(route,origin,row,onDenial,trace=()=>{}){
 }
 function classify(row){
  if(row.denied)return 'DENIED';
- if(row.error||row.pageErrors||row.failedRequests||row.badResponses||row.blockedRequests||row.blockedRedirects||row.boundaryErrors||row.handlerErrors||row.handlerDrainTimeout||row.eventsDropped||!row.sourcesLoaded||!row.rendererLoaded||!row.statusHidden||!row.canvasVisible||!row.openfreemapResponses||!row.mapterhornResponses)return 'FAIL';
+ if(row.error||row.pageErrors||row.failedRequests||row.badResponses||row.blockedRequests||row.blockedRedirects||row.boundaryErrors||row.handlerErrors||row.handlerDrainTimeout||row.eventsDropped||row.sourceTraceDropped||row.sourceErrors||!row.sourceObserverAttached||!row.sourcesLoaded||!row.rendererLoaded||!row.statusHidden||!row.canvasVisible||!row.openfreemapResponses||!row.mapterhornResponses)return 'FAIL';
  return 'PASS';
 }
-module.exports={classify,allowedRequest,enforceRequest,makeTrace,makeHandlerTracker,publicPathClass};
+module.exports={classify,allowedRequest,enforceRequest,makeTrace,makeHandlerTracker,publicPathClass,publicTile,installEarlySourceObserver};
 async function run(){
  assert.equal(process.env.CI,'true','Hosted CI only');
  const {chromium}=require('playwright'),route='/timelines/world-and-scripture-timeline.html';
@@ -97,7 +132,7 @@ async function run(){
   browser=await chromium.launch({headless:true});
   for(const profile of [{name:'desktop',width:1366,height:900},{name:'phone',width:390,height:844}]){
    const context=await browser.newContext({viewport:{width:profile.width,height:profile.height},reducedMotion:'reduce',serviceWorkers:'block'});
-   await context.routeWebSocket('**/*',socket=>socket.close());const page=await context.newPage();
+   await context.routeWebSocket('**/*',socket=>socket.close());await context.addInitScript(installEarlySourceObserver);const page=await context.newPage();
    const row={profile:profile.name,phase:'setup',events:[],eventsDropped:0,mapEvents:[],denied:false,denial:null,requestErrors:[],responseErrors:[],pageErrors:0,failedRequests:0,badResponses:0,blockedRequests:0,blockedRedirects:0,boundaryErrors:0,handlerErrors:0,handlerDrainTimeout:false,openfreemapResponses:0,mapterhornResponses:0};let deniedResolve;
    const trace=makeTrace(row);
    const deniedSignal=new Promise(resolve=>deniedResolve=resolve);
@@ -124,14 +159,14 @@ async function run(){
     }
     if(!row.denied){row.phase='screenshot';await page.screenshot({path:path.join(out,profile.name+'.png'),animations:'disabled',timeout:10000});}
    }catch(error){row.error='candidate navigation, provider readiness, or screenshot did not complete';}
-   if(!row.denied){row.phase='map-trace';try{const m=await page.evaluate(()=>({events:window.__providerMapTrace||[],dropped:window.__providerMapTraceDropped||0}));row.mapEvents=m.events;row.mapEventsDropped=m.dropped;}catch(_){row.error='map event trace unavailable';}}
+   if(!row.denied){row.phase='map-trace';try{const m=await page.evaluate(()=>{const t=window.__providerSourceTrace,g=window.__englishMap,ids=['ne2_shaded','openmaptiles','terrain-dem'];const sources={};for(const id of ids){try{sources[id]=g&&g.getSource(id)?g.isSourceLoaded(id):null;}catch(_){sources[id]=null;}}return {events:window.__providerMapTrace||[],dropped:window.__providerMapTraceDropped||0,sourceTrace:t?{installed:t.installed,attached:t.attached,events:t.events,dropped:t.dropped}:null,finalSources:sources};});row.mapEvents=m.events;row.mapEventsDropped=m.dropped;row.sourceObserverAttached=!!(m.sourceTrace&&m.sourceTrace.installed&&m.sourceTrace.attached);row.sourceEvents=m.sourceTrace?m.sourceTrace.events:[];row.sourceErrors=row.sourceEvents.filter(e=>e.type==='error').length;row.sourceTraceDropped=m.sourceTrace?m.sourceTrace.dropped:1;row.finalSourceLoaded=m.finalSources;}catch(_){row.error='map event trace unavailable';}}
    row.phase='teardown';await context.close();row.phase='handler-drain';row.handlerDrainTimeout=!(await tracker.drain(5000));row.phase='closed';if(row.mapEventsDropped)row.error='map event trace incomplete';row.status=classify(row);rows.push(row);
    if(row.denied)break; // Never retry an explicit provider denial in another profile.
   }
  }finally{
   if(browser)await browser.close();await new Promise(resolve=>server.close(resolve));
   for(const row of rows)row.status=classify(row);
-  fs.writeFileSync(path.join(out,'provider-diagnostic.json'),JSON.stringify({identity,rows,limits:['Provider-backed hosted Chromium only; screenshot review and physical-device verification are separate.','Map events are recorded only after monitor setup; the reported start interval bounds cross-process timing alignment.','Request failures during teardown are recorded and still fail the diagnostic.','Handler draining is bounded; timeout or handler errors fail the diagnostic.','Provider paths are classified using fixed public templates; other paths are redacted.','The deterministic isolated browser suite remains separate.']},null,2)+'\n');
+  fs.writeFileSync(path.join(out,'provider-diagnostic.json'),JSON.stringify({identity,rows,limits:['Provider-backed hosted Chromium only; screenshot review and physical-device verification are separate.','Leaflet movement events are recorded only after monitor setup; source listeners attach immediately after the documented Map constructor returns, so constructor-internal synchronous events may be missed.', 'Source event and public URL tile coordinates permit correlation only where both are available; no causation or cancellation exemption is inferred.', 'Public isSourceLoaded reports source settlement, not a complete required-visible-tile success inventory; error events may omit source or coordinates.','Request failures during teardown are recorded and still fail the diagnostic.','Handler draining is bounded; timeout or handler errors fail the diagnostic.','Provider paths are classified using fixed public templates; other paths are redacted.','The deterministic isolated browser suite remains separate.']},null,2)+'\n');
  }
  assert.equal(rows.length,2,'Both desktop and phone provider checks are required');assert(rows.every(r=>r.status==='PASS'),'Provider diagnostic failed; inspect bounded report and screenshots');
  console.log('PASS: configured map providers responded and settled on desktop and phone; visual review remains separate.');
