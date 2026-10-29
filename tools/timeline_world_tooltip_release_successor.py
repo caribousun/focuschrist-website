@@ -16,9 +16,9 @@ MANIFEST='docs/timeline-mobile-collapse/tooltip-tool-tree.json'
 MANIFEST_SHA256='7854e0dab0e4c2ed5f498c7706695f446aae7a782636b0a76a0baf7fd1b3c50c'
 PRIOR_TREE='69f383f0133a0e52ebe77f1762fd8f144acd32e3df3278bdff0c90df135cd1bc'
 CODE_REVIEW='docs/timeline-mobile-collapse/tooltip-final-integration-code-review.json'
-CODE_REVIEW_SHA256=None
-CODE_REVIEWER_COMMITMENT=None
-CODE_RECEIPT_SHA256=None
+CODE_REVIEW_SHA256='eba73fd1fb7c14a93cd88485d7d9919eaf60698da7227b86ddebaa309b29fa9e'
+CODE_REVIEWER_COMMITMENT='25275b95cc2c78a6aef8f6ac29e2400b0fac0290ab5ec12f9946448301ee8133'
+CODE_RECEIPT_SHA256='516e3f58cddad7d12956ea020aa555dd6b260948b2ef90bbd00f77f4007ceca8'
 # Actual independent provider screenshot review remains pending until supplied.
 PROVIDER_REVIEW='docs/timeline-mobile-collapse/independent-provider-visual-review.json'
 PROVIDER_REVIEW_SHA256='75f0c77147ebafd5d6457442ca5673c61530b7b9d1ca88d4e467f53ecc2b3b12'
