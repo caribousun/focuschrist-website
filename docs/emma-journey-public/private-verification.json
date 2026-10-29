@@ -1,0 +1,24 @@
+{
+  "limitations": [
+    "not_provider_telemetry",
+    "historical_clock_times_unknown",
+    "not_owner_gate_waiver",
+    "not_release_approval",
+    "filename_only_identifier_comparison_not_digest"
+  ],
+  "private_receipt_sha256": "53b644de36f130fcbc724c0df573fa4a09320219748091dbfa66b5081dfc9bdb",
+  "schema": "emma-independent-private-verification-v1",
+  "scope": [
+    "exact_public_projection",
+    "distinct_actual_reviewers",
+    "historical_preflight_and_finished",
+    "ordered_generation_inputs",
+    "filename_only_owner_rejection",
+    "conditional_owner_readback"
+  ],
+  "subject_sha256": "256320ca0b63e8dd518a92d0f38447246b021315d00e18f65ee1e777055b7439",
+  "verdict": "PASS",
+  "verdict_scope": "bounded_projection_only",
+  "verification_model": "direct_projection_with_attributed_private_verification",
+  "verified_at": "2026-10-28T23:53:38.309263+00:00"
+}

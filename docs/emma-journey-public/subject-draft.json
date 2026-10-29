@@ -1,0 +1,957 @@
+{
+  "bindings": {
+    "delivery_spec_sha256": "d3d9cfbd51a6af4e699bcc39bc1fa7606e0cdb44fa47adb5704340034fdef3c8",
+    "hymns_sha256": "55ee8b1a9b57154ca074282f2b6f44c19d77d15a63abd5adcde3286174625087",
+    "page_sha256": "7511f2d034d6117cb9e4d0da896c3ff778c1f0a2165c0425361b47c1d6fb3573",
+    "redirect_sha256": "6de7bd0b21f0561913ba251163e552588a3fe065df83fd6cd1ccb9b6365ccbba",
+    "rendered": {
+      "desktop": {
+        "image": {
+          "bytes": 108534,
+          "path": "docs/emma-journey-release/render/desktop-opening.jpg",
+          "sha256": "83b4c3bcd4b465b5a7592faf260b60ee7adf66255d87d3e091e26df89fe6b26b"
+        },
+        "viewport_height": 900,
+        "viewport_width": 1440
+      },
+      "phone": {
+        "image": {
+          "bytes": 38057,
+          "path": "docs/emma-journey-release/render/phone-opening.jpg",
+          "sha256": "6950c7bc12a9deabe032d17d53306a825c5520f92b1b0bb1c114fbd76ff2f08b"
+        },
+        "viewport_height": 844,
+        "viewport_width": 390
+      }
+    },
+    "sitemap_sha256": "ec879ae48520169e0d1b8691fd52935d93dcf4a019fd820725e5954c810eae08",
+    "source_manifest_sha256": "3ae50af644843d26abc5e794262657336b60c7a4f204cab8ed1064f0159ae0d4"
+  },
+  "classification": "commitments_to_privately_verified_evidence",
+  "excluded_asset_sha256": [
+    "23510387446e223e7e63e999a17fcf410106e1d183bd2ab39da4b6d5577bf439",
+    "2d5ca860f3773ac2de8f3f07b78447d120d09a716987ab868385c859cc1b6cfd",
+    "2e2b65b65f665eda7894840af45b0d59675e372e05307c882bb2ab1cf89423c8",
+    "30806b6701a5254f60cce99690da01b194100adcf448dc765f69fb27b0f9eec8",
+    "3302e876193cfc900e410cc07fbb3af149feba526ba5d6b29521f0489f363050",
+    "5059b4aa414bf57dc9c46608c5c05255810c81faafb472808dfbd9370efdea73",
+    "543c7b2fac435fa973a404a5105256f3d18c144499aac1b7a350d6756eb12ad5",
+    "7ee2d00f147f7c4ff1a55ace706a21b62584cac4b015b9fad3ff67651924a27e",
+    "93830b668a279e50762492e260ef3641199bb63650382f2ad7122572e9fcb9ec",
+    "9d6415739e88162e0240c55d497a7f9e5255432063ecb6c2d497500005cc221a",
+    "a2bfece984203573f2d7bd1ecdbf64f97822211bf081c2ca29494e6dc0b420ff",
+    "b8559ec189d88a1af14a8c3a8ee00858207e986a374ecee73959ef2df72d1dd2",
+    "b961325c6ba6dbf33337d2c103cdb55eb4c13a951853057906b7c5e2009070e9",
+    "c388d54a90d5ab498c506ff7a4c8923744a7699fcb00bd17ac06ead9844d9683",
+    "c642792bbe8c8dfc0eadb361fc42ffb3fed8e158ce2dc9ec6d580150ffc650b2",
+    "c8d0627c8c0d082f116b026b17aed8ccaab93aef9dc0284468f86efccbb84068",
+    "f3ec57ab3fb1148a0b4e448465d25ca1207acfe68e5f7bea15e8f2cab5fb4f6a",
+    "fc33ec33a53be919f4bba7463aab7a7a7fe9e8073c4c3816df7ee67883e1e4f5",
+    "fdad847eb37ed8199e21d3f5030b9a52c1b627c562ec1661fdc5aafe071108d3"
+  ],
+  "exclusion_scope": "checked_creation_baseline_and_sitewide_registries_including_owner_rejections",
+  "historical_decision_times": "UNKNOWN",
+  "historical_decisions": 44,
+  "negative_history_entries": 22,
+  "original_target_ordering": "current_recovery_and_operator_attestation",
+  "owner_accepted_at": "2026-10-28T21:09:47.903496+00:00",
+  "owner_metadata_commitment": "862623b24c30f66d73abedab2b87fae4f1f9ef62639c1e3382ddda8b114c9db4",
+  "owner_private_readback_commitment": "0e0e6d56df3997fdf201c5c92548c155021527b0c2dd2e47fe9ae0d75ce0b9fd",
+  "owner_scope": "conditional_on_required_checks",
+  "page_context": [
+    {
+      "bytes": 2273,
+      "path": "artwork-actions.css",
+      "sha256": "fb1e31a06b600333bded4d73fc309cf4fcf288a71f484c48bd5cee9b83db30cb"
+    },
+    {
+      "bytes": 3925,
+      "path": "artwork-details.css",
+      "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+    },
+    {
+      "bytes": 2190,
+      "path": "connected-study.css",
+      "sha256": "6b61c50c1d8e005074beb2db8fa800377377e6a3c9b955678dd836538fcb48cd"
+    },
+    {
+      "bytes": 4959,
+      "path": "full-image-viewer.css",
+      "sha256": "b0db559e14d5e39f4854451d9f39624ef52c5dec41be8ade8cbea37c5575a706"
+    },
+    {
+      "bytes": 5688,
+      "path": "guided-studies.css",
+      "sha256": "45349a7b3f0524a32989f827960bb543c6003944f0781958458bb25856ed0892"
+    },
+    {
+      "bytes": 2916,
+      "path": "hero-details.css",
+      "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+    },
+    {
+      "bytes": 5808,
+      "path": "history-stories.css",
+      "sha256": "46915bd0e27fc394b68aad848cdfad37ac05959d2b7cdbac0e476a262ce1c802"
+    },
+    {
+      "bytes": 75894,
+      "path": "history/emma-hale-smith.html",
+      "sha256": "7511f2d034d6117cb9e4d0da896c3ff778c1f0a2165c0425361b47c1d6fb3573"
+    },
+    {
+      "bytes": 1062,
+      "path": "priesthood-scenes.css",
+      "sha256": "5583b0f2d023bccbf2a318dc8c063331c4e96c9ffc7b5d754badc2c01d18ffd4"
+    },
+    {
+      "bytes": 6287,
+      "path": "resource-cards.css",
+      "sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf"
+    },
+    {
+      "bytes": 14894,
+      "path": "site-header.css",
+      "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+    },
+    {
+      "bytes": 5516,
+      "path": "site-search.css",
+      "sha256": "90b1db933fd169c470084e19b465e26a4dc6f7bd37f4896da9fc05492dfac669"
+    },
+    {
+      "bytes": 88817,
+      "path": "site-system.css",
+      "sha256": "180472aa7aaa2009115976caec3d5838c76275d4c25f63523901224255859e55"
+    },
+    {
+      "bytes": 3484,
+      "path": "targeted-six.css",
+      "sha256": "6234f992191650a688b93dc452215778b783fe9b3e0a9ed030a79641c4b0edc6"
+    },
+    {
+      "bytes": 2716,
+      "path": "topic-art.css",
+      "sha256": "97906c75cd9c3ed3dd58e9f24e8a5b79a687064f240ee64a64687d79a8167ee5"
+    },
+    {
+      "bytes": 869,
+      "path": "topic-artwork-details.css",
+      "sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637"
+    }
+  ],
+  "preflight_decisions": 22,
+  "private_evidence_sha256": {
+    "coordination_report": "a77bbeb9b6c075daa98b9ae27a66c623ee4fbc841a75be7d36046e26df593ed8",
+    "independent_extraction": "323f0ac765990dcf84c8c7c3873eccb72d674fb2f9b498317ea79a9b4fcb4144",
+    "independent_lineage": "b8e03780c573acc1ad19175be407b2c22acde445e7395ec61e43144eb5a0c795",
+    "operator_certificate": "32a824b27f04ec867cb30978a7a0d683c1c58c3c733e14e010ac88b27be8495e",
+    "original_target_map": "0fdd5c924e9cb1cffce5c6c5c510c0340c104fbae8f1b39930219cd44aacd2fb",
+    "original_target_recovery": "87c2bb4f3b4598dac8e1274181b725efc53e4332eab84cde947aff92f9eee283",
+    "portable_policy": "3b6adb0e574c73e474d5658dff3fe16e1123e4add8bd23d1a81edfee9de8f8a6",
+    "reference_recovery": "dd1dd70b8a92c2532357099b0a6ca41e8e998deefff2dcd92fcfa0f3aa910768",
+    "review_manifest": "0620b0f1e174f39ab091eb7be90dfaf720971672996f33474017aeff45ad04e4",
+    "selected_field_map": "9296ad80c01962ba33308338f0a9d4ba4fdc856c57937b2b869bf2df999c7314",
+    "selected_preflight_description": "05cba711c3daff65b6da95b7b0f669c986842acd2e35ad9c9e492c05d6ba5218"
+  },
+  "private_spec_sha256": "d3d9cfbd51a6af4e699bcc39bc1fa7606e0cdb44fa47adb5704340034fdef3c8",
+  "provider_telemetry": "UNKNOWN",
+  "rejected_filename_only_status": "no_digest_recorded_distinct_traced_input_identifiers_no_global_exclusion_claim",
+  "reviews": [
+    {
+      "actor_commitment": "f69f5896b3628fa2c6d7505286a09af34a2beaa82bd8665f2353a65631b5399e",
+      "assembled_receipt_sha256": "ed3e5b4cd5e55a9810938e84589866d6ce53f5a5edb25480d7c44ade2e6a1976",
+      "face_details_inspected": true,
+      "face_scene_ids": [
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "11",
+        "12"
+      ],
+      "final_checks": [
+        "chronology_and_sources",
+        "controls_and_navigation",
+        "current_source",
+        "desktop_render",
+        "new_art",
+        "phone_render",
+        "retained_art"
+      ],
+      "final_receipt_sha256": "13f45f9d7c958fa7f2d4d98e3259718e524f7ddb3e6305f3f032a24ae41c23a7",
+      "final_review_at": "2026-10-28T23:20:05Z",
+      "full_resolution_inspected": true,
+      "handoff_receipt_sha256": "1504ab52a4f7eef3ada014b607483de5dffda9c85d45fc0e06e2b38835a2c362",
+      "mandate_bindings": {
+        "AGENTS.md": "fe68d0e575ac67262f5693432f09e8de8c2236d1ad8e58890e24f6d358cd4bf4",
+        "docs/focuschrist-enrichment-and-stewardship-prompt.md": "91cfd09d188880c849493d1752cabb6c6bf8b239d9722259b196161fb6189d14",
+        "docs/historical-character-identity.md": "69f0f51400ba102dfb5df9a9ec9fb6e738255dc496b84dc5dd684f3f5886c8c4"
+      },
+      "reconfirmed_at": "2026-10-28T23:36:39Z",
+      "role": "Fermi",
+      "scene_source_sha256": {
+        "03": "20078e5c8c66bf09168b051297548fdc9bed96c568e68438fe8609cb61b2704e",
+        "04": "dfc63b592a4b77e0d10e01869df755721a3090bc97a167c05802ad086abcec78",
+        "05": "df6252faf78f398768347dec41525ba50e490b548312b60fa03d9313f3f03e40",
+        "06": "998c0bd165b4a927ce5bf3a0af2f3ebc3bc4a9d607fc1906fcecc8886a2e2913",
+        "07": "cea514712454a148eb5f2618242acec4e505870a44bb79a9f7be6299510fb14d",
+        "08": "c749aa0edc24ed9b48b2d0db97693d4829b07f5bd09e3e08fef3d2563e4ce704",
+        "09": "99fe8d6eabe4395b80144be4f7e1bb0db9f3c7f3de672a0e5ef8bf4a4a033917",
+        "10": "e6c45ca6845c16c07e819561660ced333530de48dc9adb7c787022cf24b06037",
+        "11": "fc48b44cda30d97f397c0d3667bd5fdf7ab7dd6b1a6ba863c1719390b407de28",
+        "12": "23a03923a0670ddfd88d8bdab8dac442eb163123cf8f439f4ede4d993f93a29a",
+        "origin": "06851210684bc25e880bd4c2c1187bad1066c6bb9c740aae1e63e19388d7e7ba"
+      }
+    },
+    {
+      "actor_commitment": "e2dd5ce8d11f3dab0b599bea146841480dad59613497b4658f10740cdb1b51b0",
+      "assembled_receipt_sha256": "8f757fe13e408c880afde4873391575dc50fa89aeae965e7864709ebb409e437",
+      "face_details_inspected": true,
+      "face_scene_ids": [
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "11",
+        "12"
+      ],
+      "final_checks": [
+        "chronology_and_sources",
+        "controls_and_navigation",
+        "current_source",
+        "desktop_render",
+        "new_art",
+        "phone_render",
+        "retained_art"
+      ],
+      "final_receipt_sha256": "0bb7f4aacfafbccf77166e9c627935c9c91030355ef9a015481f65f557376a80",
+      "final_review_at": "2026-10-28T23:23:03Z",
+      "full_resolution_inspected": true,
+      "handoff_receipt_sha256": "e46875df442fbd534c7c8b8029ffb3b95c11822e31f7dc2412055f0bb18486c0",
+      "mandate_bindings": {
+        "AGENTS.md": "fe68d0e575ac67262f5693432f09e8de8c2236d1ad8e58890e24f6d358cd4bf4",
+        "docs/focuschrist-enrichment-and-stewardship-prompt.md": "91cfd09d188880c849493d1752cabb6c6bf8b239d9722259b196161fb6189d14",
+        "docs/historical-character-identity.md": "69f0f51400ba102dfb5df9a9ec9fb6e738255dc496b84dc5dd684f3f5886c8c4",
+        "docs/section-panel-design-mandate.md": "26a8028ec7c7393d070e6f8006662861e1651643dbf925092b19d364ace797fc"
+      },
+      "reconfirmed_at": "2026-10-28T23:36:46+00:00",
+      "role": "Newton",
+      "scene_source_sha256": {
+        "03": "20078e5c8c66bf09168b051297548fdc9bed96c568e68438fe8609cb61b2704e",
+        "04": "dfc63b592a4b77e0d10e01869df755721a3090bc97a167c05802ad086abcec78",
+        "05": "df6252faf78f398768347dec41525ba50e490b548312b60fa03d9313f3f03e40",
+        "06": "998c0bd165b4a927ce5bf3a0af2f3ebc3bc4a9d607fc1906fcecc8886a2e2913",
+        "07": "cea514712454a148eb5f2618242acec4e505870a44bb79a9f7be6299510fb14d",
+        "08": "c749aa0edc24ed9b48b2d0db97693d4829b07f5bd09e3e08fef3d2563e4ce704",
+        "09": "99fe8d6eabe4395b80144be4f7e1bb0db9f3c7f3de672a0e5ef8bf4a4a033917",
+        "10": "e6c45ca6845c16c07e819561660ced333530de48dc9adb7c787022cf24b06037",
+        "11": "fc48b44cda30d97f397c0d3667bd5fdf7ab7dd6b1a6ba863c1719390b407de28",
+        "12": "23a03923a0670ddfd88d8bdab8dac442eb163123cf8f439f4ede4d993f93a29a",
+        "origin": "06851210684bc25e880bd4c2c1187bad1066c6bb9c740aae1e63e19388d7e7ba"
+      }
+    },
+    {
+      "actor_commitment": "e218e45920c3c3f2049d750c2b2a5356f8692fab3f32454e257d94e97d85e8c7",
+      "assembled_receipt_sha256": "979a80570f7a0a49061f622a6e20449d41643e57e465bf9d024d6520f0c6b836",
+      "face_details_inspected": false,
+      "face_scene_ids": [],
+      "final_checks": [
+        "chronology_and_sources",
+        "controls_and_navigation",
+        "current_source",
+        "desktop_render",
+        "new_art",
+        "phone_render",
+        "retained_art"
+      ],
+      "final_receipt_sha256": "053d031e4447a4cb42b62681a8071e0dcbaa72a97a66018ee9a4f616eee8a578",
+      "final_review_at": "2026-10-28T23:21:25.965920+00:00",
+      "full_resolution_inspected": false,
+      "handoff_receipt_sha256": null,
+      "mandate_bindings": {
+        "AGENTS.md": "fe68d0e575ac67262f5693432f09e8de8c2236d1ad8e58890e24f6d358cd4bf4",
+        "docs/focuschrist-enrichment-and-stewardship-prompt.md": "91cfd09d188880c849493d1752cabb6c6bf8b239d9722259b196161fb6189d14",
+        "docs/historical-character-identity.md": "69f0f51400ba102dfb5df9a9ec9fb6e738255dc496b84dc5dd684f3f5886c8c4"
+      },
+      "reconfirmed_at": "2026-10-28T23:35:56.256604+00:00",
+      "role": "Albert",
+      "scene_source_sha256": {
+        "03": "20078e5c8c66bf09168b051297548fdc9bed96c568e68438fe8609cb61b2704e",
+        "04": "dfc63b592a4b77e0d10e01869df755721a3090bc97a167c05802ad086abcec78",
+        "05": "df6252faf78f398768347dec41525ba50e490b548312b60fa03d9313f3f03e40",
+        "06": "998c0bd165b4a927ce5bf3a0af2f3ebc3bc4a9d607fc1906fcecc8886a2e2913",
+        "07": "cea514712454a148eb5f2618242acec4e505870a44bb79a9f7be6299510fb14d",
+        "08": "c749aa0edc24ed9b48b2d0db97693d4829b07f5bd09e3e08fef3d2563e4ce704",
+        "09": "99fe8d6eabe4395b80144be4f7e1bb0db9f3c7f3de672a0e5ef8bf4a4a033917",
+        "10": "e6c45ca6845c16c07e819561660ced333530de48dc9adb7c787022cf24b06037",
+        "11": "fc48b44cda30d97f397c0d3667bd5fdf7ab7dd6b1a6ba863c1719390b407de28",
+        "12": "23a03923a0670ddfd88d8bdab8dac442eb163123cf8f439f4ede4d993f93a29a",
+        "origin": "06851210684bc25e880bd4c2c1187bad1066c6bb9c740aae1e63e19388d7e7ba"
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "decision_commitments": {
+        "fermi_finished": "e4e146fb85361c5af35f8193268215608c14b343605141039be425e4f07a15a1",
+        "fermi_preflight": "e91932f658049daa27dfc4da0591aa2da9fa39d993b80bef8483a4dbae000dbc",
+        "newton_finished": "f96d663c83b6e7247cbdfda83a1a8a9f0dcab027805b21d8fe902291c497ba21",
+        "newton_preflight": "0f7f6f26776161f5885b918fc7deea2aeda64a8e3bf42f5a87b1d8861582ecfb"
+      },
+      "decision_timestamp_status": "UNKNOWN",
+      "derivatives": [
+        {
+          "bytes": 52858,
+          "dimensions": [
+            640,
+            427
+          ],
+          "path": "assets/page-art/emma-journey/emma-journey-03-640.webp",
+          "pixel_sha256": "22a92e3fbdb82975a2da47918b28c96f26161bafb79a0608559d0b0257f897f1",
+          "sha256": "061c03a361de7342a8549031ad6430e715bd2306f20c936d4bfe4d64c9bc8f5e"
+        },
+        {
+          "bytes": 96584,
+          "dimensions": [
+            960,
+            640
+          ],
+          "path": "assets/page-art/emma-journey/emma-journey-03-960.webp",
+          "pixel_sha256": "48638a6849b43514089824079261fae2ff2dcf3615530d6a8a465c6ed4ec464e",
+          "sha256": "c0f7a5d31962cfa6e61993710b45b22d23af84160655fc01d07d904dd8054ceb"
+        },
+        {
+          "bytes": 186964,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "path": "assets/page-art/emma-journey/emma-journey-03-1536.webp",
+          "pixel_sha256": "190e0a23bf2d97ec65f3cf407f123ae78a40b90095daa8a4baae7357e82a2a31",
+          "sha256": "3c222f5e1ee493c5f01f68ee575e45428b5a82ebda957f184df602a6f741ced0"
+        }
+      ],
+      "id": "03",
+      "input_sha256_in_order": [
+        "8840b1b86129b4641cec123bd39250c63b9c3a225134d62c737a342ff7aca3a8",
+        "7d0a07cc673d244ccd54d478c53d1e68d248e39d9b1101f87dfe3681cbb839d1",
+        "f6d2493babf5d2ab7a6e118a57827f7db05e6aea934feb5739256987ec186688"
+      ],
+      "kind": "EMMA_CHARACTER",
+      "operation": "edit",
+      "original": {
+        "bytes": 2049235,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "path": "assets/page-art/emma-journey/originals/emma-journey-03-source.png",
+        "pixel_sha256": "5e13370c9c7a9339ded362a0e9fb96a5279d239b99f32520b4dfdd1486befb25",
+        "sha256": "20078e5c8c66bf09168b051297548fdc9bed96c568e68438fe8609cb61b2704e"
+      },
+      "prompt_sha256": "d565247630f8b1f81da53567687c365ad2631316f0740d20a1e8010a86e599b1"
+    },
+    {
+      "decision_commitments": {
+        "fermi_finished": "f3ad93ee9948defe7564da056e1146fe5d54e05e0d13ce8656330c975d3641bd",
+        "fermi_preflight": "7b612dccbe5d504469330f4de146a791a1859f889fe09d45ffb8e42d5063f4cd",
+        "newton_finished": "bf7b05f878084c73885d472910978406dcadc31c7382b20d0ca815ede48d161e",
+        "newton_preflight": "c7c05e51cd177737467cc65758efe2c1b0090140d365457d7323899e4eb7f21f"
+      },
+      "decision_timestamp_status": "UNKNOWN",
+      "derivatives": [
+        {
+          "bytes": 63934,
+          "dimensions": [
+            640,
+            427
+          ],
+          "path": "assets/page-art/emma-journey/emma-journey-04-640.webp",
+          "pixel_sha256": "1d6da77ed5a5c6827ec4d64ed1a8ee8604aa7782d5fd097e353804a2b765beb3",
+          "sha256": "463ab97730f2315496ecbf7b11893f313e3fc4e93a6221f9bfbadd3d2c737e20"
+        },
+        {
+          "bytes": 116266,
+          "dimensions": [
+            960,
+            640
+          ],
+          "path": "assets/page-art/emma-journey/emma-journey-04-960.webp",
+          "pixel_sha256": "79646b6120d31cf90aece48deacf3793c2e9ae4989efd426ed33cbda5e9591bd",
+          "sha256": "af060e3f8ad09525629f16bb4da73908b1d65d98b821299864574f4b80d8ba87"
+        },
+        {
+          "bytes": 206740,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "path": "assets/page-art/emma-journey/emma-journey-04-1536.webp",
+          "pixel_sha256": "be680b012a99f4bdc6fb292a2340550c861355ded1b43b341138e884ce4f778b",
+          "sha256": "ed3007f6f670f377893941b5f3b3df3bd50e610e8a24acb357f1611354c655dc"
+        }
+      ],
+      "id": "04",
+      "input_sha256_in_order": [
+        "d9a24520da49ce37ede178d5603f2ed4068c3ea45aee857f2ce6ab2d5f731450",
+        "7d0a07cc673d244ccd54d478c53d1e68d248e39d9b1101f87dfe3681cbb839d1",
+        "f6d2493babf5d2ab7a6e118a57827f7db05e6aea934feb5739256987ec186688"
+      ],
+      "kind": "EMMA_CHARACTER",
+      "operation": "edit",
+      "original": {
+        "bytes": 2130167,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "path": "assets/page-art/emma-journey/originals/emma-journey-04-source.png",
+        "pixel_sha256": "abb5b3a49daf954af24081da6e8c4688fb2ca1d86530ad538393ad77b37ec08d",
+        "sha256": "dfc63b592a4b77e0d10e01869df755721a3090bc97a167c05802ad086abcec78"
+      },
+      "prompt_sha256": "f88b66a44ab5ba7c92ead2b6b014cb3ff39be33687aca2b031880af22951101a"
+    },
+    {
+      "decision_commitments": {
+        "fermi_finished": "45ec3947d7dcef5d8293295cb37852c68504a4c383bf44adfe93c1d17c939b69",
+        "fermi_preflight": "e21e02be29b6ed3e6d49b2f47d3576918d7256a501ef7bb8769d3ba2426ead64",
+        "newton_finished": "7a0337926305f9af8c7d5f872131830d7dbaedf75c53801a87e1e5bb68b8f217",
+        "newton_preflight": "a8794f67293f8ba5d621201fcdb6734d60b42f899a669a6ff010906026eae2f3"
+      },
+      "decision_timestamp_status": "UNKNOWN",
+      "derivatives": [
+        {
+          "bytes": 122388,
+          "dimensions": [
+            640,
+            427
+          ],
+          "path": "assets/page-art/emma-journey/emma-journey-05-640.webp",
+          "pixel_sha256": "c8504d3d518cfe3928ad11f2c1106f93c4ce16f38363823ce02b9ad2e215d620",
+          "sha256": "3a951162b794df4db39c1ac44e5132e23201db846b0083cc31cf56f2216200a4"
+        },
+        {
+          "bytes": 228792,
+          "dimensions": [
+            960,
+            640
+          ],
+          "path": "assets/page-art/emma-journey/emma-journey-05-960.webp",
+          "pixel_sha256": "a313f29cbc2af4fed506e51e50ff2a81f401400487b6edbda701089e8178c8d7",
+          "sha256": "c9beea409684e2d05c8e89052912d034a0a829e4200417e325bf1ddd39035df3"
+        },
+        {
+          "bytes": 436064,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "path": "assets/page-art/emma-journey/emma-journey-05-1536.webp",
+          "pixel_sha256": "11264594356c3bb05e68ca52076eea6d61454d54af765bf2418598507f2c2c4b",
+          "sha256": "355787e4d3bf947505801d5c0e2f3e57049ed2b6b155107c87c642e1a20a47b2"
+        }
+      ],
+      "id": "05",
+      "input_sha256_in_order": [
+        "698bcfc16ed6e4b596819560fc4e78ae5edfacfaf52f6d3c03e17e92b8b6a79f",
+        "7d0a07cc673d244ccd54d478c53d1e68d248e39d9b1101f87dfe3681cbb839d1",
+        "f6d2493babf5d2ab7a6e118a57827f7db05e6aea934feb5739256987ec186688"
+      ],
+      "kind": "EMMA_CHARACTER",
+      "operation": "edit",
+      "original": {
+        "bytes": 2868003,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "path": "assets/page-art/emma-journey/originals/emma-journey-05-source.png",
+        "pixel_sha256": "dbc8bbe439218d12a421cf93dbd888de50dec6e2b9ffeea7941ac67ad541272a",
+        "sha256": "df6252faf78f398768347dec41525ba50e490b548312b60fa03d9313f3f03e40"
+      },
+      "prompt_sha256": "379b161189d4008bf80bd5a214de8eaf314928032a119717b28c698c533d78a8"
+    },
+    {
+      "decision_commitments": {
+        "fermi_finished": "fafb07b6cf982bea2a18bb4508fbff2d304bfcd887dbe67d5e10ed0acc3377a6",
+        "fermi_preflight": "ac3b97bcf99a0d3a072089413e139fab34af0e8b641490257d9d3462a1b8b605",
+        "newton_finished": "e1800855a07b8552680373e0a4383d81301821db5de166b225781a1c295bfc96",
+        "newton_preflight": "98edeb9b232a7663e654bd5e2c4494b64680e4db16bfcf2aed862840c32c77c0"
+      },
+      "decision_timestamp_status": "UNKNOWN",
+      "derivatives": [
+        {
+          "bytes": 60508,
+          "dimensions": [
+            640,
+            427
+          ],
+          "path": "assets/page-art/emma-journey/emma-journey-06-640.webp",
+          "pixel_sha256": "a27ddfc70255e65428c9c004fb41c8656534a47e2dfad13e7b0c21b521956b73",
+          "sha256": "6ea2f060b313f756156c46eb24209e1566a9043d1eb6c4647558e8dfe9d9cfed"
+        },
+        {
+          "bytes": 114746,
+          "dimensions": [
+            960,
+            640
+          ],
+          "path": "assets/page-art/emma-journey/emma-journey-06-960.webp",
+          "pixel_sha256": "4d86e63a900e930704d7ded653d8ebf310de7f56edabcc2b328c83457c5f09e2",
+          "sha256": "b87f8464f024ecc6d05fce17739945deb1953f7e0f0eb7ed6aa1f4cfb8761cc6"
+        },
+        {
+          "bytes": 228522,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "path": "assets/page-art/emma-journey/emma-journey-06-1536.webp",
+          "pixel_sha256": "f3a68b3bc40f658b1bb42ee69035bb5f19f70b0202a1113d93491c0c0f8d5f1a",
+          "sha256": "966d4b3b7243d4b38d33416628ecfee7c5686fe8d80698c676e76f59c01f2aef"
+        }
+      ],
+      "id": "06",
+      "input_sha256_in_order": [
+        "7d0a07cc673d244ccd54d478c53d1e68d248e39d9b1101f87dfe3681cbb839d1",
+        "f6d2493babf5d2ab7a6e118a57827f7db05e6aea934feb5739256987ec186688"
+      ],
+      "kind": "EMMA_CHARACTER",
+      "operation": "generate",
+      "original": {
+        "bytes": 2220424,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "path": "assets/page-art/emma-journey/originals/emma-journey-06-source.png",
+        "pixel_sha256": "e7c6171f01244d862438b423008accc083f4822b3dc8e70158ee2d821492519e",
+        "sha256": "998c0bd165b4a927ce5bf3a0af2f3ebc3bc4a9d607fc1906fcecc8886a2e2913"
+      },
+      "prompt_sha256": "0aff5a6bbd222e184176a217baaf67d607931a6ec6ba5722c449bebe3161c222"
+    },
+    {
+      "decision_commitments": {
+        "fermi_finished": "a1fe4564b2a93778396fbd9ac02ab409e8a4a4edde9fb0eaeb8325773cc8dfbd",
+        "fermi_preflight": "b8e4af0bdbfc1a9341b0aa8bffdf68564c9bf4e8cd9718ee5388372ce75f7355",
+        "newton_finished": "5d9141b95532efb7d16e2c8c1de09d7e8a2a75d97eb7086a08d1d6d24bf5a440",
+        "newton_preflight": "f45180b6d57bbdb474b2f788fa5fb947fcddfff4fc6d4cec4ac9e827513cf30a"
+      },
+      "decision_timestamp_status": "UNKNOWN",
+      "derivatives": [
+        {
+          "bytes": 94160,
+          "dimensions": [
+            640,
+            427
+          ],
+          "path": "assets/page-art/emma-journey/emma-journey-07-640.webp",
+          "pixel_sha256": "8e7869e59cf7ac88b7ce83b7a4a1c85559c488d606aa94dce9dde9c1bd9fee1d",
+          "sha256": "8b6988a00c2a19c1210db55930fd8f8eaa22a38ea918e7ea5d7d156888d3a819"
+        },
+        {
+          "bytes": 174462,
+          "dimensions": [
+            960,
+            640
+          ],
+          "path": "assets/page-art/emma-journey/emma-journey-07-960.webp",
+          "pixel_sha256": "758eac05b0dc76403a36327ea99ab86f511d96dacc54271bf36eb194cb7fa8d1",
+          "sha256": "fc972401a8b5199c113d7b084deadd99aff6346aa66fb5133d2bf7ed91086159"
+        },
+        {
+          "bytes": 353810,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "path": "assets/page-art/emma-journey/emma-journey-07-1536.webp",
+          "pixel_sha256": "4e1948201254353c73fa9abb77f00f5a65701a89375430d558069dc7f8e72962",
+          "sha256": "27db71482e58cb9eae0558cfa5265a6f6a15cf730403de9d5df3dd73a4e16cef"
+        }
+      ],
+      "id": "07",
+      "input_sha256_in_order": [
+        "7d0a07cc673d244ccd54d478c53d1e68d248e39d9b1101f87dfe3681cbb839d1",
+        "f6d2493babf5d2ab7a6e118a57827f7db05e6aea934feb5739256987ec186688"
+      ],
+      "kind": "EMMA_CHARACTER",
+      "operation": "generate",
+      "original": {
+        "bytes": 2609923,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "path": "assets/page-art/emma-journey/originals/emma-journey-07-source.png",
+        "pixel_sha256": "0680cde7d4e9df797f55eff90742d1385b53e13a86fcd7546e60911f2cd49ae2",
+        "sha256": "cea514712454a148eb5f2618242acec4e505870a44bb79a9f7be6299510fb14d"
+      },
+      "prompt_sha256": "e53a083efbe65cb0ef5405a7e47bd425fb0cb13a1205fdf2653f8c981fb69fbb"
+    },
+    {
+      "decision_commitments": {
+        "fermi_finished": "4863c35a4aecdab77f30e9b67e767d21107896d55ee09b9b30b9b2c4867ce1a1",
+        "fermi_preflight": "a4a81da27290fc380f71b82e936018ccce88624d27e42bd0a5dcc0579163ad09",
+        "newton_finished": "54d72d7063d099b34ac507a38ba8db1fd3fcd0d51613895f5b28ba10e7ee2870",
+        "newton_preflight": "5ce18911046b6fc9d445d197200242cbe0642f9333076e4e25a37784cf1c1629"
+      },
+      "decision_timestamp_status": "UNKNOWN",
+      "derivatives": [
+        {
+          "bytes": 49540,
+          "dimensions": [
+            640,
+            427
+          ],
+          "path": "assets/page-art/emma-journey/emma-journey-08-640.webp",
+          "pixel_sha256": "ec31098a0becc3df869b15437013249a082bad1fbf72f1b98201abcc78e09ae7",
+          "sha256": "6f76dbe0ddf4879310406c2e9a5a0bb544e1f6e19d2efdf8b32777569ad75d34"
+        },
+        {
+          "bytes": 93328,
+          "dimensions": [
+            960,
+            640
+          ],
+          "path": "assets/page-art/emma-journey/emma-journey-08-960.webp",
+          "pixel_sha256": "3c21096b6fad173374f259520f2910bcb15580e5383de3063f6226c64a2820f9",
+          "sha256": "736fdcb2b0ab4a69ee1fc7c916ea5dc7224ef8a4dafb6f9aadde9ff76a8c9a4c"
+        },
+        {
+          "bytes": 180132,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "path": "assets/page-art/emma-journey/emma-journey-08-1536.webp",
+          "pixel_sha256": "ed9817ffe5fcf3ade9fbfced701b205303ca40cf436548e4ef595ffccfb6770b",
+          "sha256": "33f887ec5344b187d9c5deac81a84d47f9330400c3e049db2b8a9c38e2bf1043"
+        }
+      ],
+      "id": "08",
+      "input_sha256_in_order": [
+        "7d0a07cc673d244ccd54d478c53d1e68d248e39d9b1101f87dfe3681cbb839d1",
+        "f6d2493babf5d2ab7a6e118a57827f7db05e6aea934feb5739256987ec186688"
+      ],
+      "kind": "EMMA_CHARACTER",
+      "operation": "generate",
+      "original": {
+        "bytes": 2036340,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "path": "assets/page-art/emma-journey/originals/emma-journey-08-source.png",
+        "pixel_sha256": "46261eb0912df3f8605419051f0746990d572ab3f1f32c5ef63b4910ce5a9d6c",
+        "sha256": "c749aa0edc24ed9b48b2d0db97693d4829b07f5bd09e3e08fef3d2563e4ce704"
+      },
+      "prompt_sha256": "86d96164db0104952b49501e4bd7cea6fd474f986b8c2a881a37623772eaacf7"
+    },
+    {
+      "decision_commitments": {
+        "fermi_finished": "5baea39381709fd038b90dbdadc00b667c95f62401da946bf9ff128d3aaa76e4",
+        "fermi_preflight": "aacdbe357cdf26145d231c70b7e81ac3ac8d8e31395be728b45bbd57088d403c",
+        "newton_finished": "a263fd2928b7df2a1bdd04f097a771464749ffa53e58c83b496853b145ed0344",
+        "newton_preflight": "83b850685ff08a89298d88b549df3e3cece96e5ba4e9be3216bf98c2378c691d"
+      },
+      "decision_timestamp_status": "UNKNOWN",
+      "derivatives": [
+        {
+          "bytes": 70918,
+          "dimensions": [
+            640,
+            427
+          ],
+          "path": "assets/page-art/emma-journey/emma-journey-09-640.webp",
+          "pixel_sha256": "fd66bee55eb5fcd49dc7e57617fb0db5b8fceb1f89ae5e06d87fbe0c1f479f76",
+          "sha256": "c2ed86c42cf68bac194e1b57fc0d9dd6bd9a06f40b4cedc3ffb713634d8259f2"
+        },
+        {
+          "bytes": 131754,
+          "dimensions": [
+            960,
+            640
+          ],
+          "path": "assets/page-art/emma-journey/emma-journey-09-960.webp",
+          "pixel_sha256": "1957bea2aa144b8b85b59375d16e2f0ab0e2513b8d5204cadff98069260b85eb",
+          "sha256": "b2f4eacc2c2948020e18649e7ede96f551a5a212a85f30c190de213b6666c17a"
+        },
+        {
+          "bytes": 257584,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "path": "assets/page-art/emma-journey/emma-journey-09-1536.webp",
+          "pixel_sha256": "be3acfae9b3e98044484131c3f215ec5c97d7a78a947d5d6232b2c38f21d31cb",
+          "sha256": "2fa6f8e98fe82c59cd877a376b59d8d55584ec23088d6c7fc71f2c55f78447be"
+        }
+      ],
+      "id": "09",
+      "input_sha256_in_order": [
+        "82be656a218e9941d6b74c28dbcb0b6aa615d4a2f6e2429e111485963c5f53ab",
+        "7d0a07cc673d244ccd54d478c53d1e68d248e39d9b1101f87dfe3681cbb839d1",
+        "f6d2493babf5d2ab7a6e118a57827f7db05e6aea934feb5739256987ec186688"
+      ],
+      "kind": "EMMA_CHARACTER",
+      "operation": "edit",
+      "original": {
+        "bytes": 2204052,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "path": "assets/page-art/emma-journey/originals/emma-journey-09-source.png",
+        "pixel_sha256": "dd23297dbd40ddce476c7ece1c87fa598713496d4d2cbd2f7eeba6c24d3d26c4",
+        "sha256": "99fe8d6eabe4395b80144be4f7e1bb0db9f3c7f3de672a0e5ef8bf4a4a033917"
+      },
+      "prompt_sha256": "c55f7edb6324a329fd2ef8f14c5594c590b942a75f74c79c58e62bc0868f38c3"
+    },
+    {
+      "decision_commitments": {
+        "fermi_finished": "249a50a78a09ed9972e7e3a709b4de2cbb6c984e8ce3a537a94ee21c470e3f66",
+        "fermi_preflight": "33499f4f225dc08ebb8f197f52bb22a41ffc4fb31b6bf22ae0f3fa414b05894e",
+        "newton_finished": "82670f9d8602281fef455df3cad866d3b0a3f4f2040290708aa01dc1b8c7db29",
+        "newton_preflight": "67146bb89e65cad54ee8a70ff06e4b9720e9667af483f919013b028598796ae6"
+      },
+      "decision_timestamp_status": "UNKNOWN",
+      "derivatives": [
+        {
+          "bytes": 88694,
+          "dimensions": [
+            640,
+            427
+          ],
+          "path": "assets/page-art/emma-journey/emma-journey-10-640.webp",
+          "pixel_sha256": "c76a7add6cd8ea4059441ef4c582a6848dcf0ec122a5f3273ae7241f5bb896a2",
+          "sha256": "76422d1765c4ff40c6e5f75bae440916228c279201d93601cca963165d94f69b"
+        },
+        {
+          "bytes": 159942,
+          "dimensions": [
+            960,
+            640
+          ],
+          "path": "assets/page-art/emma-journey/emma-journey-10-960.webp",
+          "pixel_sha256": "b5ecbd529aa61d57fd4ca9d567c124cf6e79a204a8f1f2b9de4d84f40475f64f",
+          "sha256": "7fb0162767d3d5273ba7881a8130de175280d6ce1dd2af86d7912210cb5361f7"
+        },
+        {
+          "bytes": 321378,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "path": "assets/page-art/emma-journey/emma-journey-10-1536.webp",
+          "pixel_sha256": "fefa4ac7015b5cde40ff31ac3d0f311a67bfebb036593d10e82efb3c59aa52a6",
+          "sha256": "80f32e0b48496dd703193b0cd9757d06848199af0c1144c94c859f36df7adfe8"
+        }
+      ],
+      "id": "10",
+      "input_sha256_in_order": [
+        "6d943c54282845d4fa36e499db80dfb320dfc5936c119e366c436b524fb0b66d",
+        "7d0a07cc673d244ccd54d478c53d1e68d248e39d9b1101f87dfe3681cbb839d1",
+        "f6d2493babf5d2ab7a6e118a57827f7db05e6aea934feb5739256987ec186688"
+      ],
+      "kind": "EMMA_CHARACTER",
+      "operation": "edit",
+      "original": {
+        "bytes": 2374029,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "path": "assets/page-art/emma-journey/originals/emma-journey-10-source.png",
+        "pixel_sha256": "92b7b495e68a3d44a2fd9a345f2321b08deb01c676670e34096404f10ed8f73f",
+        "sha256": "e6c45ca6845c16c07e819561660ced333530de48dc9adb7c787022cf24b06037"
+      },
+      "prompt_sha256": "924d6d8c59bc52f9de21627448e94500bf35615075e761c4c226433fb74fc88a"
+    },
+    {
+      "decision_commitments": {
+        "fermi_finished": "85aca99f254c043ef89b103da633f43d5b9da81312ad6f16f04708502deab8e9",
+        "fermi_preflight": "5710d14f2b1a61341bc57cade2ec14002d361264035d8c0655203cada9496fc5",
+        "newton_finished": "fb22038988815ae70967527ece7282ca2b54e23f67af3bf1f69eee13f9d7aa23",
+        "newton_preflight": "4306659bd538fe276dbb4373bf05089df3b48d083a6d818bba2871a21c2eb441"
+      },
+      "decision_timestamp_status": "UNKNOWN",
+      "derivatives": [
+        {
+          "bytes": 56378,
+          "dimensions": [
+            640,
+            427
+          ],
+          "path": "assets/page-art/emma-journey/emma-journey-11-640.webp",
+          "pixel_sha256": "a6374f0823d910d07a9d26fa5943c27d8d9fb5456e418e6a217f2ef9642c723c",
+          "sha256": "a5519c39fffa0886f2525d9d4a2b6ded8e40998865e98baa80559a414092305a"
+        },
+        {
+          "bytes": 110850,
+          "dimensions": [
+            960,
+            640
+          ],
+          "path": "assets/page-art/emma-journey/emma-journey-11-960.webp",
+          "pixel_sha256": "4b3bde6f71bf7956727d2e665663c61a48ee3eb0c7e5a83074c79b6a38ab57c1",
+          "sha256": "dd4b79f91bd74dd0391e99472c236c67195b2062a534c5ae6ffb5551b6c0ebd7"
+        },
+        {
+          "bytes": 224318,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "path": "assets/page-art/emma-journey/emma-journey-11-1536.webp",
+          "pixel_sha256": "20b3f1c428688c67840aa972b479fedb760ed41ffcce757353cc41bf925e999b",
+          "sha256": "862e409580c342b085bc44870adc2f0ea58349336f9e93981147cb553e04bcf4"
+        }
+      ],
+      "id": "11",
+      "input_sha256_in_order": [
+        "7d0a07cc673d244ccd54d478c53d1e68d248e39d9b1101f87dfe3681cbb839d1",
+        "f6d2493babf5d2ab7a6e118a57827f7db05e6aea934feb5739256987ec186688"
+      ],
+      "kind": "EMMA_CHARACTER",
+      "operation": "generate",
+      "original": {
+        "bytes": 2181020,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "path": "assets/page-art/emma-journey/originals/emma-journey-11-source.png",
+        "pixel_sha256": "a2c279ca64c803bfb5ccb391a25f5ce03775c8bc684db72c7e2222202c4ae78f",
+        "sha256": "fc48b44cda30d97f397c0d3667bd5fdf7ab7dd6b1a6ba863c1719390b407de28"
+      },
+      "prompt_sha256": "561fc5051520f7335540ebae1b1eac1bd6c21355c6586ef1aba7da306f48c7db"
+    },
+    {
+      "decision_commitments": {
+        "fermi_finished": "78133093231711248afd202de6b63c83cf334fa6860381fc423dc3fa793244de",
+        "fermi_preflight": "c43a1af699cf2da7b8e295ca0370109e65f8e5ae891806c7c64288903d3e3050",
+        "newton_finished": "dc6e04a686c1d0727f6a45cf71a246efdf05db562eea876eac3fd3fd6a68ae47",
+        "newton_preflight": "2961bf6ec9df5a7019a420823de5501322d24002f2f87efbab9bb0b7dbae82e3"
+      },
+      "decision_timestamp_status": "UNKNOWN",
+      "derivatives": [
+        {
+          "bytes": 84698,
+          "dimensions": [
+            640,
+            427
+          ],
+          "path": "assets/page-art/emma-journey/emma-journey-12-640.webp",
+          "pixel_sha256": "72f182e1e50fb3021b462c47c50c0b541cd7e2ca29885eed0326c396df3a9ff8",
+          "sha256": "1ca3bf2e2f966aa3721a8821048e910a94c1bde52dc35352d3da6c1a743d5ffa"
+        },
+        {
+          "bytes": 156282,
+          "dimensions": [
+            960,
+            640
+          ],
+          "path": "assets/page-art/emma-journey/emma-journey-12-960.webp",
+          "pixel_sha256": "6482f00c260e06636a8a598ccddf2d0d15cb3ca8cc143cb9914339d683e611bf",
+          "sha256": "b327c3a1ef098dce9117088b56c37dddcf9cc1f5daff7dbff195d750751036f4"
+        },
+        {
+          "bytes": 308160,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "path": "assets/page-art/emma-journey/emma-journey-12-1536.webp",
+          "pixel_sha256": "78f6aaeeca10e5dbbfa5f6cf9abe5a551f82e94234a7bce37a84a01e812bcccb",
+          "sha256": "601b769c1131c2e3aebb568454010c342465d12b72ff81f36dfa8355f06ccee3"
+        }
+      ],
+      "id": "12",
+      "input_sha256_in_order": [
+        "7d0a07cc673d244ccd54d478c53d1e68d248e39d9b1101f87dfe3681cbb839d1",
+        "f6d2493babf5d2ab7a6e118a57827f7db05e6aea934feb5739256987ec186688"
+      ],
+      "kind": "EMMA_CHARACTER",
+      "operation": "generate",
+      "original": {
+        "bytes": 2463725,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "path": "assets/page-art/emma-journey/originals/emma-journey-12-source.png",
+        "pixel_sha256": "1eb96313d1d1c9f61c95ed959159c2be8f5c6a26076583375590a67af4c7a8e7",
+        "sha256": "23a03923a0670ddfd88d8bdab8dac442eb163123cf8f439f4ede4d993f93a29a"
+      },
+      "prompt_sha256": "cc9fa7aa5c0cc7a076b2ed9232a556a85426fc4cb0a0aae2353a05110d34e98c"
+    },
+    {
+      "decision_commitments": {
+        "fermi_finished": "270d93b0742a423b73489cbf562dc85e0cd71c6de3dfe483905040ddba2b037e",
+        "fermi_preflight": "2eed9f45eb979e2607ed419c91dd8ddf14af3871f78647d475f7ceac0ed9ec43",
+        "newton_finished": "dcd40483e0e338cd14383c85a9337a0f9de2b6e1a35ec5c5594eff729df8ca20",
+        "newton_preflight": "c2946badaad114dc808fa365203c0f5ffe12829922f26bc0d3ec046654d9133c"
+      },
+      "decision_timestamp_status": "UNKNOWN",
+      "derivatives": [
+        {
+          "bytes": 142090,
+          "dimensions": [
+            640,
+            427
+          ],
+          "path": "assets/page-art/emma-journey/emma-journey-origin-640.webp",
+          "pixel_sha256": "c375b60745c51132764872600965b2be56594f2a9ee62a912a6c11c387348641",
+          "sha256": "fc0faef4cbc04f25e49c7ba964c6a5432a3c225a86448bfb036a485ca017a9e1"
+        },
+        {
+          "bytes": 295888,
+          "dimensions": [
+            960,
+            640
+          ],
+          "path": "assets/page-art/emma-journey/emma-journey-origin-960.webp",
+          "pixel_sha256": "dadd3c28057b9ea87ca97b4d596144c529f74a028ec6b792994153eddeee28e0",
+          "sha256": "dd6442f249f40fd7edd2c3885c897c2bc7d0db69916e7e189301683cacb19bbf"
+        },
+        {
+          "bytes": 675710,
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "path": "assets/page-art/emma-journey/emma-journey-origin-1536.webp",
+          "pixel_sha256": "d0f0ce09231a551b72769ba109cef7dbf6cb80a49a030e8cdb67ada115bd25d1",
+          "sha256": "c240dfc77f6232eb014a97f374d6f9d798fa93fdacfa9c624e3d4a0155ff385b"
+        }
+      ],
+      "id": "origin",
+      "input_sha256_in_order": [],
+      "kind": "PERSON_FREE_CONTEXT",
+      "operation": "generate",
+      "original": {
+        "bytes": 3469285,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "path": "assets/page-art/emma-journey/originals/emma-journey-origin-source.png",
+        "pixel_sha256": "11ca57a6dd2957d0087ac0c3195ed4750155f1704b9b7256b3da4390b4e4c61e",
+        "sha256": "06851210684bc25e880bd4c2c1187bad1066c6bb9c740aae1e63e19388d7e7ba"
+      },
+      "prompt_sha256": "f5593e90366b4518bd0bbb4c7f5b958295fb1bc707e8497155b36dd78e89566b"
+    }
+  ],
+  "schema": "emma-public-subject-v1",
+  "source_manifest_sha256": "3ae50af644843d26abc5e794262657336b60c7a4f204cab8ed1064f0159ae0d4"
+}
