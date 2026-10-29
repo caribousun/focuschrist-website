@@ -2472,8 +2472,12 @@ return maplibregl$1;
 			if (this._map._proxy && this._map.options.zoomAnimation) L.DomEvent.off(this._map._proxy, L.DomUtil.TRANSITION_END, this._transitionEnd, this);
 			var paneName = this.getPaneName(), pane = map.getPane(paneName);
 			if (this._container && this._container.parentNode === pane) pane.removeChild(this._container);
-			if (this._glMap) this._glMap.remove();
+			var renderer = this._glMap;
 			this._glMap = null;
+			if (renderer) {
+				try { renderer.remove(); }
+				catch (error) { if (window.console) console.warn("Terrain renderer cleanup failed", error); }
+			}
 		},
 		getEvents: function() {
 			return {
