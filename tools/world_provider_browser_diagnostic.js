@@ -25,7 +25,7 @@ function installEarlySourceObserver(){
  const allowed=new Set(['ne2_shaded','openmaptiles','terrain-dem']);
  const state={installed:false,attached:false,events:[],dropped:0};
  window.__providerSourceTrace=state;
- let exported;
+ let exported,finished=false;const listeners=[];
  function coordinates(value){
   const c=value&&value.canonical||value;if(!c)return null;
   const {z,x,y}=c;
@@ -33,12 +33,24 @@ function installEarlySourceObserver(){
  }
  function observe(map){
   state.attached=true;
-  for(const type of ['sourcedataabort','error'])map.on(type,event=>{
-   const source=allowed.has(event.sourceId)?event.sourceId:null;
-   const record={type,source,coord:coordinates(event.coord),epochMs:Date.now()};
-   if(state.events.length<256)state.events.push(record);else state.dropped++;
-  });
+  for(const type of ['sourcedataabort','error']){
+   const listener=event=>{
+    const source=allowed.has(event.sourceId)?event.sourceId:null;
+    const record={type,source,coord:coordinates(event.coord),epochMs:Date.now()};
+    if(state.events.length<256)state.events.push(record);else state.dropped++;
+   };
+   map.on(type,listener);listeners.push({map,type,listener});
+  }
  }
+ // One synchronous page task defines the observation cutoff: all earlier event
+ // callbacks have run, then listeners are removed before a snapshot is returned.
+ state.finish=()=>{
+  if(finished)throw new Error('source observer already finished');
+  finished=true;
+  if(!state.installed||!state.attached||!listeners.length)throw new Error('source observer unavailable');
+  for(const item of listeners)item.map.off(item.type,item.listener);
+  return {installed:state.installed,attached:state.attached,complete:true,cutoffEpochMs:Date.now(),events:state.events.slice(),dropped:state.dropped};
+ };
  Object.defineProperty(window,'maplibregl',{configurable:true,enumerable:true,get(){return exported;},set(value){
   if(!value||typeof value.Map!=='function'){exported=value;return;}
   const original=value.Map;
@@ -114,7 +126,7 @@ async function enforceRequest(route,origin,row,onDenial,trace=()=>{}){
 }
 function classify(row){
  if(row.denied)return 'DENIED';
- if(row.error||row.pageErrors||row.failedRequests||row.badResponses||row.blockedRequests||row.blockedRedirects||row.boundaryErrors||row.handlerErrors||row.handlerDrainTimeout||row.eventsDropped||row.sourceTraceDropped||row.sourceErrors||!row.sourceObserverAttached||!row.sourcesLoaded||!row.rendererLoaded||!row.statusHidden||!row.canvasVisible||!row.openfreemapResponses||!row.mapterhornResponses)return 'FAIL';
+ if(row.error||row.pageErrors||row.failedRequests||row.badResponses||row.blockedRequests||row.blockedRedirects||row.boundaryErrors||row.handlerErrors||row.handlerDrainTimeout||row.eventsDropped||row.sourceTraceDropped||row.sourceErrors||!row.sourceObservationComplete||!row.sourceObserverAttached||!row.sourcesLoaded||!row.rendererLoaded||!row.statusHidden||!row.canvasVisible||!row.openfreemapResponses||!row.mapterhornResponses)return 'FAIL';
  return 'PASS';
 }
 module.exports={classify,allowedRequest,enforceRequest,makeTrace,makeHandlerTracker,publicPathClass,publicTile,installEarlySourceObserver};
@@ -159,14 +171,14 @@ async function run(){
     }
     if(!row.denied){row.phase='screenshot';await page.screenshot({path:path.join(out,profile.name+'.png'),animations:'disabled',timeout:10000});}
    }catch(error){row.error='candidate navigation, provider readiness, or screenshot did not complete';}
-   if(!row.denied){row.phase='map-trace';try{const m=await page.evaluate(()=>{const t=window.__providerSourceTrace,g=window.__englishMap,ids=['ne2_shaded','openmaptiles','terrain-dem'];const sources={};for(const id of ids){try{sources[id]=g&&g.getSource(id)?g.isSourceLoaded(id):null;}catch(_){sources[id]=null;}}return {events:window.__providerMapTrace||[],dropped:window.__providerMapTraceDropped||0,sourceTrace:t?{installed:t.installed,attached:t.attached,events:t.events,dropped:t.dropped}:null,finalSources:sources};});row.mapEvents=m.events;row.mapEventsDropped=m.dropped;row.sourceObserverAttached=!!(m.sourceTrace&&m.sourceTrace.installed&&m.sourceTrace.attached);row.sourceEvents=m.sourceTrace?m.sourceTrace.events:[];row.sourceErrors=row.sourceEvents.filter(e=>e.type==='error').length;row.sourceTraceDropped=m.sourceTrace?m.sourceTrace.dropped:1;row.finalSourceLoaded=m.finalSources;}catch(_){row.error='map event trace unavailable';}}
+   if(!row.denied){row.phase='map-trace';try{const m=await page.evaluate(()=>{const t=window.__providerSourceTrace,g=window.__englishMap,ids=['ne2_shaded','openmaptiles','terrain-dem'];const sourceTrace=t?t.finish():null;const sources={};for(const id of ids){try{sources[id]=g&&g.getSource(id)?g.isSourceLoaded(id):null;}catch(_){sources[id]=null;}}return {events:window.__providerMapTrace||[],dropped:window.__providerMapTraceDropped||0,sourceTrace,finalSources:sources};});row.mapEvents=m.events;row.mapEventsDropped=m.dropped;row.sourceObserverAttached=!!(m.sourceTrace&&m.sourceTrace.installed&&m.sourceTrace.attached);row.sourceObservationComplete=!!(m.sourceTrace&&m.sourceTrace.complete&&Number.isInteger(m.sourceTrace.cutoffEpochMs));row.sourceObservationCutoffEpochMs=m.sourceTrace?m.sourceTrace.cutoffEpochMs:null;row.sourceEvents=m.sourceTrace?m.sourceTrace.events:[];row.sourceErrors=row.sourceEvents.filter(e=>e.type==='error').length;row.sourceTraceDropped=m.sourceTrace?m.sourceTrace.dropped:1;row.finalSourceLoaded=m.finalSources;}catch(_){row.error='map event trace unavailable';}}
    row.phase='teardown';await context.close();row.phase='handler-drain';row.handlerDrainTimeout=!(await tracker.drain(5000));row.phase='closed';if(row.mapEventsDropped)row.error='map event trace incomplete';row.status=classify(row);rows.push(row);
    if(row.denied)break; // Never retry an explicit provider denial in another profile.
   }
  }finally{
   if(browser)await browser.close();await new Promise(resolve=>server.close(resolve));
   for(const row of rows)row.status=classify(row);
-  fs.writeFileSync(path.join(out,'provider-diagnostic.json'),JSON.stringify({identity,rows,limits:['Provider-backed hosted Chromium only; screenshot review and physical-device verification are separate.','Leaflet movement events are recorded only after monitor setup; source listeners attach immediately after the documented Map constructor returns, so constructor-internal synchronous events may be missed.', 'Source event and public URL tile coordinates permit correlation only where both are available; no causation or cancellation exemption is inferred.', 'Public isSourceLoaded reports source settlement, not a complete required-visible-tile success inventory; error events may omit source or coordinates.','Request failures during teardown are recorded and still fail the diagnostic.','Handler draining is bounded; timeout or handler errors fail the diagnostic.','Provider paths are classified using fixed public templates; other paths are redacted.','The deterministic isolated browser suite remains separate.']},null,2)+'\n');
+  fs.writeFileSync(path.join(out,'provider-diagnostic.json'),JSON.stringify({identity,rows,limits:['Provider-backed hosted Chromium only; screenshot review and physical-device verification are separate.','Leaflet movement events are recorded only after monitor setup; source listeners attach immediately after the documented Map constructor returns, so constructor-internal synchronous events may be missed.', 'Source observation ends atomically at the reported cutoff before context teardown; later renderer events are outside the observed interval. Request events and handler draining continue through teardown.', 'Source event and public URL tile coordinates permit correlation only where both are available; no causation or cancellation exemption is inferred.', 'Public isSourceLoaded reports source settlement, not a complete required-visible-tile success inventory; error events may omit source or coordinates.','Request failures during teardown are recorded and still fail the diagnostic.','Handler draining is bounded; timeout or handler errors fail the diagnostic.','Provider paths are classified using fixed public templates; other paths are redacted.','The deterministic isolated browser suite remains separate.']},null,2)+'\n');
  }
  assert.equal(rows.length,2,'Both desktop and phone provider checks are required');assert(rows.every(r=>r.status==='PASS'),'Provider diagnostic failed; inspect bounded report and screenshots');
  console.log('PASS: configured map providers responded and settled on desktop and phone; visual review remains separate.');

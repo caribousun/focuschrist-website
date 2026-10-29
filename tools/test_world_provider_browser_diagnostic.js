@@ -1,9 +1,9 @@
 /* Synthetic classification only; it does not run a browser or prove providers. */
 'use strict';
 const assert=require('node:assert/strict'),{classify,allowedRequest,enforceRequest,makeTrace,makeHandlerTracker,publicPathClass,publicTile,installEarlySourceObserver}=require('./world_provider_browser_diagnostic');
-const ok={denied:false,pageErrors:0,failedRequests:0,badResponses:0,blockedRequests:0,blockedRedirects:0,boundaryErrors:0,openfreemapResponses:1,mapterhornResponses:1,sourcesLoaded:true,rendererLoaded:true,statusHidden:true,canvasVisible:true,sourceObserverAttached:true};
+const ok={denied:false,pageErrors:0,failedRequests:0,badResponses:0,blockedRequests:0,blockedRedirects:0,boundaryErrors:0,openfreemapResponses:1,mapterhornResponses:1,sourcesLoaded:true,rendererLoaded:true,statusHidden:true,canvasVisible:true,sourceObserverAttached:true,sourceObservationComplete:true};
 assert.equal(classify(ok),'PASS');
-for(const field of ['sourcesLoaded','rendererLoaded','statusHidden','canvasVisible','openfreemapResponses','mapterhornResponses','sourceObserverAttached'])assert.equal(classify({...ok,[field]:false}),'FAIL',field);
+for(const field of ['sourcesLoaded','rendererLoaded','statusHidden','canvasVisible','openfreemapResponses','mapterhornResponses','sourceObserverAttached','sourceObservationComplete'])assert.equal(classify({...ok,[field]:false}),'FAIL',field);
 for(const field of ['pageErrors','failedRequests','badResponses','blockedRequests','blockedRedirects','boundaryErrors','handlerErrors','handlerDrainTimeout','sourceTraceDropped','sourceErrors'])assert.equal(classify({...ok,[field]:1}),'FAIL',field);
 assert.equal(classify({...ok,eventsDropped:1}),'FAIL');
 assert.equal(classify({...ok,error:'failure'}),'FAIL');assert.equal(classify({...ok,denied:true}),'DENIED');assert.equal(classify({}),'FAIL');
@@ -11,7 +11,7 @@ function earlyObserverTests(){
  const originalWindow=global.window;global.window={};
  try{
   installEarlySourceObserver();
-  class MapStub{constructor(){this.listeners={};}on(name,fn){this.listeners[name]=fn;return this;}emit(name,event){this.listeners[name](event);}}
+  class MapStub{constructor(){this.listeners={};}on(name,fn){this.listeners[name]=fn;return this;}off(name,fn){assert.equal(this.listeners[name],fn);delete this.listeners[name];return this;}emit(name,event){if(this.listeners[name])this.listeners[name](event);}}
   window.maplibregl={Map:MapStub};assert(window.__providerSourceTrace.installed);
   const map=new window.maplibregl.Map();assert(window.__providerSourceTrace.attached);
   map.emit('sourcedataabort',{sourceId:'ne2_shaded',coord:{canonical:{z:2,x:1,y:3}}});
@@ -22,6 +22,16 @@ function earlyObserverTests(){
   assert(Number.isInteger(records[0].epochMs));
   for(let i=0;i<255;i++)map.emit('error',{});assert.equal(records.length,256);assert.equal(window.__providerSourceTrace.dropped,1);
   assert.equal(classify({...ok,sourceTraceDropped:1}),'FAIL');assert.equal(classify({...ok,sourceErrors:1}),'FAIL');
+  // An error arriving after prior inspection but before the cutoff must be in the returned snapshot.
+  installEarlySourceObserver();window.maplibregl={Map:MapStub};const lateMap=new window.maplibregl.Map(),late=window.__providerSourceTrace;
+  assert.equal(late.events.length,0);lateMap.emit('error',{sourceId:'ne2_shaded'});
+  const snapshot=late.finish();assert(snapshot.complete);assert.equal(snapshot.events.length,1);assert.equal(snapshot.events[0].type,'error');
+  assert.equal(classify({...ok,sourceErrors:snapshot.events.filter(e=>e.type==='error').length}),'FAIL');
+  lateMap.emit('error',{sourceId:'ne2_shaded'});assert.equal(snapshot.events.length,1); // Outside the explicit cutoff.
+  assert.throws(()=>late.finish(),/already finished/);
+  installEarlySourceObserver();window.maplibregl={Map:MapStub};const broken=new window.maplibregl.Map();broken.off=()=>{throw Error('synthetic detach failure');};
+  assert.throws(()=>window.__providerSourceTrace.finish(),/detach failure/);
+  assert.equal(classify({...ok,sourceObservationComplete:false}),'FAIL');
   assert.equal(classify({...ok,failedRequests:1}),'FAIL'); // A matched or unmatched abort never becomes PASS.
   assert.deepEqual(publicTile('tiles.openfreemap.org','/natural_earth/ne2sr/2/1/3.png'),{source:'ne2_shaded',z:2,x:1,y:3});
   assert.deepEqual(publicTile('tiles.openfreemap.org','/planet/2/1/3.pbf'),{source:'openmaptiles',z:2,x:1,y:3});
