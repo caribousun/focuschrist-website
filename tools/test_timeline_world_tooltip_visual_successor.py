@@ -9,6 +9,15 @@ class TooltipVisualSuccessorTests(unittest.TestCase):
  def test_actual_receipt_and_predecessors(self):
   result=gate.validate_visual_review();self.assertEqual(gate.sha(result['previous_sources'][mobile.PAGE]),mobile.AFTER);self.assertEqual(gate.sha(result['previous_sources'][mobile.BROWSER_TEST]),mobile.BROWSER_TEST_SHA)
   self.assertIn('not release or owner approval',result['review']['verdict'])
+ def test_resize_test_successor_reconstructs_exact_reviewed_bytes(self):
+  current=mobile.source(ROOT,mobile.BROWSER_TEST)
+  self.assertEqual(gate.sha(current),gate.RESIZE_TEST_AFTER)
+  old=gate.restore_browser_test(current,ROOT);self.assertEqual(gate.sha(old),gate.TEST_AFTER)
+  self.assertEqual(gate.restore_browser_test(old,ROOT),old)
+  with patch.object(gate,'sha',return_value=mobile.BROWSER_TEST_SHA):self.assertEqual(gate.restore_browser_test(b'historical fixture',ROOT),b'historical fixture')
+  for bad in (current+b' ',current[:-1]):
+   with self.assertRaisesRegex(ValueError,'Unreviewed tooltip source'):gate.restore_browser_test(bad,ROOT)
+  with patch.object(gate,'RESIZE_TEST_MANIFEST_SHA','0'*64),self.assertRaisesRegex(ValueError,'Changed resize test manifest'):gate.restore_browser_test(current,ROOT)
  def test_changed_sources_are_rejected(self):
   original=mobile.source
   for target in (mobile.PAGE,mobile.BROWSER_TEST,mobile.CONTROLLER,gate.MANIFEST,gate.REVIEW):

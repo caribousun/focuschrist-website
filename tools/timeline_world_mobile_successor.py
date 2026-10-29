@@ -57,7 +57,8 @@ def validate_newton_visual_review(root=ROOT):
  """Bind Newton's actual bounded visual review, not owner or release approval."""
  restore(source(root,PAGE),root)
  test=source(root,BROWSER_TEST)
- from timeline_world_tooltip_visual_successor import TEST_AFTER as TOOLTIP_TEST_AFTER,validate_code_review
+ from timeline_world_tooltip_visual_successor import TEST_AFTER as TOOLTIP_TEST_AFTER,validate_code_review,restore_browser_test
+ test=restore_browser_test(test,root)
  if sha(test)==TOOLTIP_TEST_AFTER:test=validate_code_review(root)['visual_review']['previous_sources'][BROWSER_TEST]
  assert sha(test)==BROWSER_TEST_SHA,'Reviewed mobile browser test changed'
  raw=source(root,NEWTON_VISUAL_REVIEW);assert sha(raw)==NEWTON_VISUAL_REVIEW_SHA,'Newton visual review changed'

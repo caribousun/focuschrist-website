@@ -16,9 +16,9 @@ MANIFEST='docs/timeline-mobile-collapse/tooltip-tool-tree.json'
 MANIFEST_SHA256='0a14cab0a660c5843fe00a60ffc48ef11dd0b688d7560013a9be8aa919134d88'
 PRIOR_TREE='69f383f0133a0e52ebe77f1762fd8f144acd32e3df3278bdff0c90df135cd1bc'
 CODE_REVIEW='docs/timeline-mobile-collapse/tooltip-final-integration-code-review.json'
-CODE_REVIEW_SHA256='baaa1e5b071ab972492b8fbe975d4f52bc0fc3fc4ea3a1e69ed1cdcc982073f9'
-CODE_REVIEWER_COMMITMENT='25275b95cc2c78a6aef8f6ac29e2400b0fac0290ab5ec12f9946448301ee8133'
-CODE_RECEIPT_SHA256='45c0e517fcef4b12c17b2c4ff8ae665123cebdf6307b093465010d37693a699d'
+CODE_REVIEW_SHA256=None
+CODE_REVIEWER_COMMITMENT=None
+CODE_RECEIPT_SHA256=None
 # Actual independent provider screenshot review remains pending until supplied.
 PROVIDER_REVIEW='docs/timeline-mobile-collapse/independent-provider-visual-review.json'
 PROVIDER_REVIEW_SHA256='75f0c77147ebafd5d6457442ca5673c61530b7b9d1ca88d4e467f53ecc2b3b12'
@@ -81,6 +81,7 @@ def project_reviewed_tree(root,current):
  require(review.get('visual_review_sha256')==tooltip.REVIEW_SHA and review.get('prior_code_review_sha256')==tooltip.CODE_REVIEW_SHA and review.get('source_manifest_sha256')==tooltip.MANIFEST_SHA and review.get('tree_manifest_sha256')==MANIFEST_SHA256,'Final tooltip review inputs differ')
  for field,name in (('provider_diagnostic_sha256','tools/world_provider_browser_diagnostic.js'),('provider_diagnostic_test_sha256','tools/test_world_provider_browser_diagnostic.js'),('provider_cancellation_classifier_sha256','tools/world_provider_cancellation_review.js'),('provider_cancellation_classifier_test_sha256','tools/test_world_provider_cancellation_review.js')):
   require(review.get(field)==sha(mobile.source(root,name)),'Final tooltip diagnostic subject differs')
+ require(review.get('current_browser_test_sha256')==sha(mobile.source(root,mobile.BROWSER_TEST)) and review.get('resize_test_manifest_sha256')==tooltip.RESIZE_TEST_MANIFEST_SHA,'Final resize test review inputs differ')
  require(review.get('current_tool_tree_sha256')==old.canonical(current),'Final reviewed tooltip tool tree differs')
  require(old.timestamp(review.get('reviewed_at'))>=old.timestamp('2026-10-29T18:57:42Z'),'Final tooltip review predates prior review')
  validate_provider_visual_review(root)

@@ -18,7 +18,29 @@ BASE='adcad6a89a114917461305cba82178719e20b310'
 HEAD='b6a5f277394d672b5f234984eafcee1448d226b4'
 PAGE_AFTER='d67a067e9d90d64b992d21382d07307a91b3770132b1d6db3b451e46683c69a1'
 TEST_AFTER='729bd30fcece4b72ec0bba3bbfcd61ca13765daa9ece266c6cd6f1b2161a6dd8'
+RESIZE_TEST_AFTER='fa0e8d855aed131dfb9851b69d2aebcfa9e04638e3ee15a12c543c87424bd686'
+RESIZE_TEST_MANIFEST='docs/timeline-mobile-collapse/resize-test-delta.json'
+RESIZE_TEST_MANIFEST_SHA='d02106dbe39fea2782cf5e9751e493d2daca2123baa45e8217794de91067496b'
 def sha(raw):return hashlib.sha256(raw).hexdigest()
+def restore_browser_test(raw,root=ROOT):
+ """Restore the exact reviewed test for historical receipts; never accept drift."""
+ if sha(raw) in (TEST_AFTER,mobile.BROWSER_TEST_SHA):return raw
+ if sha(raw)!=RESIZE_TEST_AFTER:raise ValueError('Unreviewed tooltip source: '+mobile.BROWSER_TEST)
+ data=mobile.source(root,RESIZE_TEST_MANIFEST)
+ if sha(data)!=RESIZE_TEST_MANIFEST_SHA:raise ValueError('Changed resize test manifest')
+ doc=json.loads(data)
+ if doc.get('schema')!=1 or doc.get('path')!=mobile.BROWSER_TEST or doc.get('previous_sha256')!=TEST_AFTER or doc.get('current_sha256')!=RESIZE_TEST_AFTER:raise ValueError('Invalid resize test manifest')
+ changes=doc.get('changes')
+ if not isinstance(changes,list) or len(changes)!=2:raise ValueError('Invalid resize test changes')
+ for item in reversed(changes):
+  if set(item)!={'before_b64','after_b64'}:raise ValueError('Invalid resize test change')
+  try:before=base64.b64decode(item['before_b64'],validate=True);after=base64.b64decode(item['after_b64'],validate=True)
+  except (ValueError,TypeError) as exc:raise ValueError('Invalid resize test encoding') from exc
+  if not after or before==after or raw.count(after)!=1:raise ValueError('Resize test context differs')
+  raw=raw.replace(after,before,1)
+ if sha(raw)!=TEST_AFTER:raise ValueError('Resize test predecessor differs')
+ return raw
+
 def reconstruct(root=ROOT):
  root=Path(root).resolve();raw=mobile.source(root,MANIFEST)
  if sha(raw)!=MANIFEST_SHA:raise ValueError('Changed tooltip source manifest')
@@ -31,6 +53,7 @@ def reconstruct(root=ROOT):
   name=row['path'];before_hash,after_hash,n=expected[name]
   if row.get('before_sha256')!=before_hash or row.get('after_sha256')!=after_hash:raise ValueError('Tooltip source hashes differ')
   current=mobile.source(root,name)
+  if name==mobile.BROWSER_TEST:current=restore_browser_test(current,root)
   if sha(current)!=after_hash:raise ValueError('Unreviewed tooltip source: '+name)
   changes=row.get('changes')
   if not isinstance(changes,list) or len(changes)!=n:raise ValueError('Invalid tooltip source changes')

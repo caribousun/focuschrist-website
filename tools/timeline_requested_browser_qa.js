@@ -181,7 +181,18 @@ module.exports=async function(page,origin,out){
    await filterSummary.click();await page.locator('#catChips [data-cat="bible"]').click();await filterSummary.click();
    await page.waitForFunction(()=>document.getElementById('workspaceFilterState').textContent.trim()==='All records · All regions');
    await viewToggle.click();assert(!(await viewPanel.isVisible()));
-   await page.setViewportSize({width:1366,height:900});assert(await viewPanel.isVisible()&&!(await viewToggle.isVisible()),'Desktop resize restores controls');
+   const waitForDesktopControls=async()=>{
+    try{
+     await page.waitForFunction(()=>!matchMedia('(max-width:900px)').matches&&!document.getElementById('mobileViewControls').hidden&&!document.getElementById('mobilePlaybackControls').hidden&&document.getElementById('mobileViewToggle').hidden&&document.getElementById('mobilePlaybackToggle').hidden,null,{timeout:5000});
+     await viewPanel.waitFor({state:'visible',timeout:5000});await viewToggle.waitFor({state:'hidden',timeout:5000});
+     assert(await viewPanel.isVisible()&&!(await viewToggle.isVisible()),'Desktop resize restores controls');
+     assert(await playPanel.isVisible()&&!(await playToggle.isVisible()),'Desktop resize restores playback controls');
+    }catch(error){
+     const state=await page.evaluate(()=>Object.fromEntries(['mobileViewControls','mobileViewToggle','mobilePlaybackControls','mobilePlaybackToggle'].map(id=>{const n=document.getElementById(id),s=getComputedStyle(n);return [id,{hidden:n.hidden,display:s.display,visibility:s.visibility}];}).concat([['mobileQuery',matchMedia('(max-width:900px)').matches],['width',innerWidth]])));
+     throw new Error('Desktop resize controls did not settle: '+JSON.stringify(state)+'; '+String(error));
+    }
+   };
+   await page.setViewportSize({width:1366,height:900});await waitForDesktopControls();
    await page.evaluate(()=>document.fonts.ready);await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
    const resized=await geometry(page);assert(desktopReference.candidateGeometry,'Desktop reference was captured');
    compareGeometry(resized,desktopReference.candidateGeometry,'Desktop after resize');
@@ -191,6 +202,12 @@ module.exports=async function(page,origin,out){
    await page.locator('#q').focus();await page.setViewportSize({width:profile.width,height:profile.height});
    await page.waitForFunction(()=>document.activeElement===document.getElementById('mobileViewToggle'));
    assert(!(await viewPanel.isVisible()),'Returning to mobile restores collapsed state');
+   assert(await playPanel.isVisible()&&await playToggle.isVisible(),'Returning to mobile retains the open playback controls');
+   await page.setViewportSize({width:1366,height:900});await waitForDesktopControls();
+   await page.locator('#q').focus();await page.setViewportSize({width:profile.width,height:profile.height});
+   await page.waitForFunction(()=>document.activeElement===document.getElementById('mobileViewToggle')&&document.getElementById('mobileViewControls').hidden&&!document.getElementById('mobileViewToggle').hidden,null,{timeout:5000});
+   assert(!(await viewPanel.isVisible())&&await viewToggle.isVisible(),'Repeated desktop-to-mobile resize restores the collapsed view');
+   assert(await playPanel.isVisible()&&await playToggle.isVisible(),'Repeated resize preserves open playback controls');
   }
   await page.goto(origin+'/timelines/adams-1881-chart.html',{waitUntil:'load'});
   assert(await page.locator('#progress').evaluate(n=>n.hidden),'Tile diagnostics hidden');assert(await page.locator('#mini').isVisible(),'Minimap retained');
