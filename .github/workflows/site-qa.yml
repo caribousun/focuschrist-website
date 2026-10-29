@@ -621,6 +621,11 @@ jobs:
         run: NODE_PATH=/tmp/focus-timeline-qa/node_modules node tools/continue_motion_runtime_qa.js
       - name: Verify World alphabetical lists, reading links and playback
         run: NODE_PATH=/tmp/focus-timeline-qa/node_modules node tools/world_refinement_runtime_qa.js
+      - name: Diagnose real World map providers at desktop and phone widths
+        if: ${{ !cancelled() }}
+        run: |
+          node tools/test_world_provider_browser_diagnostic.js
+          NODE_PATH=/tmp/focus-timeline-qa/node_modules node tools/world_provider_browser_diagnostic.js
       - name: Save Timeline interaction and rendering evidence
         if: always()
         uses: actions/upload-artifact@v4
