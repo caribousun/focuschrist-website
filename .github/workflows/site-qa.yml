@@ -595,6 +595,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v5
+        with:
+          fetch-depth: 2
       - name: Install pinned Timeline browser dependencies
         run: |
           npm install --prefix /tmp/focus-timeline-qa --no-save --package-lock=false --ignore-scripts playwright@1.55.1 leaflet@1.9.4 jsdom@26.1.0

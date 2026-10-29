@@ -1,13 +1,42 @@
 /* Hosted rendered checks for the requested Timeline controls. */
 'use strict';
-const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),os=require('node:os'),crypto=require('node:crypto'),{execFileSync}=require('node:child_process');
 module.exports=async function(page,origin,out){
  assert.equal(process.env.CI,'true','Hosted CI only');
  const results=[];let desktopReference;
- const geometry=()=>page.evaluate(()=>{
-  const bounds=(selector,parent)=>{const r=document.querySelector(selector).getBoundingClientRect(),p=document.querySelector(parent).getBoundingClientRect();return {x:r.x-p.x,y:r.y-p.y,width:r.width,height:r.height};};
+ const geometry=target=>target.evaluate(()=>{
+  const bounds=(selector,parent)=>{const n=document.querySelector(selector),r=n.getBoundingClientRect(),p=document.querySelector(parent).getBoundingClientRect(),s=getComputedStyle(n);return {x:r.x-p.x,y:r.y-p.y,width:r.width,height:r.height,appearance:[s.display,s.color,s.backgroundColor,s.backgroundImage,s.borderTopColor,s.borderTopWidth,s.borderTopStyle,s.borderRadius,s.fontFamily,s.fontSize,s.fontWeight,s.lineHeight,s.padding]};};
   return Object.fromEntries([['view','.view-switch','.workspace-toolbar'],['search','#q','.workspace-toolbar'],['filters','#workspaceFilterState','.workspace-toolbar'],['playback','.mapplayback','.maptoolband'],['play','#playBtn','.maptoolband'],['year','#yearInput','.maptoolband'],['time','#timeSeg','.maptoolband'],['speed','#speedSeg','.maptoolband'],['options','.map-options-row','.maptoolband']].map(([name,node,parent])=>[name,bounds(node,parent)]));
  });
+ const compareGeometry=(actual,expected,label)=>{
+  for(const key of Object.keys(expected)){
+   for(const metric of ['x','y','width','height'])assert(Math.abs(actual[key][metric]-expected[key][metric])<1,label+': '+key+' '+metric);
+   assert.deepEqual(actual[key].appearance,expected[key].appearance,label+': '+key+' appearance');
+  }
+ };
+ // Render the exact Git predecessor in a temporary isolated copy. Its shared
+ // local JS/CSS must also match the predecessor before comparing appearance.
+ const base='4fb9e51deda2997d6974e80a5dce86a65167841c',route='timelines/world-and-scripture-timeline.html';
+ const repo=path.resolve(__dirname,'..');
+ assert.equal(execFileSync('git',['rev-parse',base],{cwd:repo,encoding:'utf8'}).trim(),base,'Exact predecessor commit is available');
+ const baseHtml=execFileSync('git',['show',base+':'+route],{cwd:repo,maxBuffer:8*1024*1024});
+ assert.equal(crypto.createHash('sha256').update(baseHtml).digest('hex'),'016e9896db70ff0a8a142503f289f2e0cbd2f4d96b73d667247dbb2a2370ceef','Exact predecessor World page');
+ const dir=fs.mkdtempSync(path.join(os.tmpdir(),'focus-world-predecessor-')),copy=path.join(dir,'world.html'),predecessor=await page.context().newPage();
+ fs.writeFileSync(copy,baseHtml);
+ try{
+  await predecessor.setViewportSize({width:1366,height:900});
+  await predecessor.route('**/timelines/world-and-scripture-timeline.html',route=>route.fulfill({path:copy,contentType:'text/html; charset=utf-8'}));
+  await predecessor.goto(origin+'/'+route+'#viewer',{waitUntil:'load'});await predecessor.evaluate(()=>document.fonts.ready);
+  const assets=await predecessor.evaluate(()=>[...document.querySelectorAll('script[src],link[rel="stylesheet"][href]')].map(n=>new URL(n.getAttribute('src')||n.getAttribute('href'),location.href)).filter(u=>u.origin===location.origin).map(u=>decodeURIComponent(u.pathname).replace(/^\//,'')));
+  assert.deepEqual([...new Set(assets)].sort(),['header-scroll.js','site-search.css','site-search.js']);
+  const dependencyHashes={};
+  for(const asset of assets){const old=execFileSync('git',['show',base+':'+asset],{cwd:repo,maxBuffer:8*1024*1024});assert.deepEqual(fs.readFileSync(path.join(repo,asset)),old,'Predecessor shared asset drift: '+asset);dependencyHashes[asset]=crypto.createHash('sha256').update(old).digest('hex');}
+  await predecessor.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+  assert(await predecessor.locator('#mapview').isVisible());const predecessorGeometry=await geometry(predecessor);
+  await predecessor.locator('.workspace-toolbar').scrollIntoViewIfNeeded();await predecessor.screenshot({path:path.join(out,'mobile-collapse-predecessor-desktop-toolbar-viewport.png'),fullPage:false,animations:'disabled'});
+  await predecessor.locator('.maptoolband').scrollIntoViewIfNeeded();await predecessor.screenshot({path:path.join(out,'mobile-collapse-predecessor-desktop-playback-viewport.png'),fullPage:false,animations:'disabled'});
+  desktopReference={predecessorGeometry,dependencyHashes};
+ }finally{await predecessor.close();fs.rmSync(dir,{recursive:true,force:true});}
  for(const profile of [{name:'desktop',width:1366,height:900},{name:'phone',width:390,height:844}]){
   await page.setViewportSize({width:profile.width,height:profile.height});
   await page.goto(origin+'/timelines/world-and-scripture-timeline.html#viewer',{waitUntil:'load'});
@@ -22,9 +51,22 @@ module.exports=async function(page,origin,out){
    assert(!(await viewPanel.isVisible())&&!(await playPanel.isVisible()),'Both mobile panels start compact');
    assert.match(await viewToggle.innerText(),/Moment & Map/);assert.match(await playToggle.innerText(),/Playback.*\d/);
    assert(await page.locator('.map-options-row').isVisible(),'Geography and map settings remain outside playback');
+   await page.evaluate(()=>{if(document.activeElement instanceof HTMLElement)document.activeElement.blur();});
+   let reachedView=false;
+   for(let i=0;i<120;i++){await page.keyboard.press('Tab');if(await viewToggle.evaluate(n=>document.activeElement===n)){reachedView=true;break;}}
+   assert(reachedView,'View disclosure is reachable by Tab');
+   await page.keyboard.press('Tab');assert(await playToggle.evaluate(n=>document.activeElement===n),'Tab reaches playback after the collapsed view panel');
+   await page.keyboard.press('Tab');assert(await page.locator('#frameBtn').evaluate(n=>document.activeElement===n),'Tab continues to map options');
+   await page.locator('.workspace-toolbar').scrollIntoViewIfNeeded();await page.screenshot({path:path.join(out,'mobile-collapse-phone-closed-viewport.png'),fullPage:false,animations:'disabled'});
    await page.locator('.workspace-toolbar').screenshot({path:path.join(out,'mobile-collapse-view-closed.png'),animations:'disabled'});
    await page.locator('.maptoolband').scrollIntoViewIfNeeded();await page.locator('.maptoolband').screenshot({path:path.join(out,'mobile-collapse-playback-closed.png'),animations:'disabled'});
    await viewToggle.focus();await page.keyboard.press('Enter');assert.equal(await viewToggle.getAttribute('aria-expanded'),'true');assert(await viewPanel.isVisible());
+   await page.locator('.workspace-toolbar').scrollIntoViewIfNeeded();await page.screenshot({path:path.join(out,'mobile-collapse-phone-view-open-viewport.png'),fullPage:false,animations:'disabled'});
+   await viewToggle.focus();await page.keyboard.press('Space');assert(!(await viewPanel.isVisible()));
+   await playToggle.focus();await page.keyboard.press('Enter');assert(await playPanel.isVisible());
+   await page.locator('.maptoolband').scrollIntoViewIfNeeded();await page.screenshot({path:path.join(out,'mobile-collapse-phone-playback-open-viewport.png'),fullPage:false,animations:'disabled'});
+   await playToggle.focus();await page.keyboard.press('Space');assert(!(await playPanel.isVisible()));
+   await viewToggle.focus();await page.keyboard.press('Enter');assert(await viewPanel.isVisible());
    await page.locator('#q').fill('Egypt');await page.locator('#modeOverview').click();assert(await page.locator('#gwrap').isVisible());
    const mobileFilter=page.locator('#workspaceFilterState');await mobileFilter.click();await page.locator('#catChips [data-cat="bible"]').click();await mobileFilter.click();
    assert.equal(await page.locator('#catChips [data-cat="bible"]').getAttribute('aria-pressed'),'false');
@@ -57,9 +99,12 @@ module.exports=async function(page,origin,out){
   }else{
    assert(!(await viewToggle.isVisible())&&!(await playToggle.isVisible()),'Desktop has no mobile toggles');
    assert(await viewPanel.isVisible()&&await playPanel.isVisible(),'Desktop controls remain visible');
-   await page.evaluate(()=>document.fonts.ready);desktopReference=await geometry();
+   await page.evaluate(()=>document.fonts.ready);await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+   const candidateGeometry=await geometry(page);compareGeometry(candidateGeometry,desktopReference.predecessorGeometry,'Predecessor versus candidate desktop');desktopReference.candidateGeometry=candidateGeometry;
    await page.locator('.workspace-toolbar').screenshot({path:path.join(out,'mobile-collapse-desktop-view-before.png'),animations:'disabled'});
+   await page.locator('.workspace-toolbar').scrollIntoViewIfNeeded();await page.screenshot({path:path.join(out,'mobile-collapse-candidate-desktop-toolbar-viewport.png'),fullPage:false,animations:'disabled'});
    await page.locator('.maptoolband').scrollIntoViewIfNeeded();await page.locator('.maptoolband').screenshot({path:path.join(out,'mobile-collapse-desktop-playback-before.png'),animations:'disabled'});
+   await page.screenshot({path:path.join(out,'mobile-collapse-candidate-desktop-playback-viewport.png'),fullPage:false,animations:'disabled'});
   }
   const counts=()=>page.evaluate(()=>{
    const svg=document.querySelectorAll('#worldmap .ghostpath,#worldmap .routepath,#worldmap .party,#worldmap .routelabel').length;
@@ -105,8 +150,9 @@ module.exports=async function(page,origin,out){
    await viewToggle.click();assert(!(await viewPanel.isVisible()));
    await page.setViewportSize({width:1366,height:900});assert(await viewPanel.isVisible()&&!(await viewToggle.isVisible()),'Desktop resize restores controls');
    await page.evaluate(()=>document.fonts.ready);await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
-   const resized=await geometry();assert(desktopReference,'Desktop reference was captured');
-   for(const key of Object.keys(desktopReference))for(const metric of ['x','y','width','height'])assert(Math.abs(resized[key][metric]-desktopReference[key][metric])<1,'Desktop geometry changed after resize: '+key+' '+metric);
+   const resized=await geometry(page);assert(desktopReference.candidateGeometry,'Desktop reference was captured');
+   compareGeometry(resized,desktopReference.candidateGeometry,'Desktop after resize');
+   fs.writeFileSync(path.join(out,'mobile-collapse-desktop-parity.json'),JSON.stringify({predecessor:base,predecessorSourceSha256:'016e9896db70ff0a8a142503f289f2e0cbd2f4d96b73d667247dbb2a2370ceef',dependencyHashes:desktopReference.dependencyHashes,predecessorGeometry:desktopReference.predecessorGeometry,candidateGeometry:desktopReference.candidateGeometry,candidateAfterResize:resized,limitations:['External map providers blocked; no owner acceptance.']},null,2)+'\n');
    await page.locator('.workspace-toolbar').screenshot({path:path.join(out,'mobile-collapse-desktop-view-after.png'),animations:'disabled'});
    await page.locator('.maptoolband').scrollIntoViewIfNeeded();await page.locator('.maptoolband').screenshot({path:path.join(out,'mobile-collapse-desktop-playback-after.png'),animations:'disabled'});
    await page.locator('#q').focus();await page.setViewportSize({width:profile.width,height:profile.height});
