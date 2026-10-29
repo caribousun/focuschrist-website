@@ -26,6 +26,16 @@ module.exports=async function(page,origin,out){
   for(const c of ['bible','bom','dual'])assert(await page.locator('[data-legend-category="'+c+'"]').evaluate(n=>n.hidden));
   assert(!await page.locator('[data-legend-category="world"]').evaluate(n=>n.hidden));
   assert(!/both journey paths are drawn|Book of Mormon promised-land pins/i.test(await page.locator('#mapNote').innerText()));
+  // Capture the actual World-only state before restoring Book of Mormon.
+  // The map and the legend may be far apart on a phone, so retain each as
+  // a separate actual browser capture instead of composing or resizing them.
+  await filterSummary.click();assert(!(await filterDisclosure.evaluate(n=>n.open)),'Filter closes for World-only evidence');
+  const map=page.locator('.mapwrap');await map.scrollIntoViewIfNeeded();
+  await map.screenshot({path:path.join(out,'requested-world-only-map-'+profile.name+'.png'),animations:'disabled'});
+  const legend=page.locator('.legend-disclosure');await legend.locator('summary').click();assert(await legend.evaluate(n=>n.open));
+  await legend.scrollIntoViewIfNeeded();await legend.screenshot({path:path.join(out,'requested-world-only-legend-'+profile.name+'.png'),animations:'disabled'});
+  await legend.locator('summary').click();assert(!(await legend.evaluate(n=>n.open)));
+  await filterSummary.click();assert(await filterDisclosure.evaluate(n=>n.open));
   await page.locator('#catChips [data-cat="bom"]').click();const restored=await counts();assert(restored.svg+restored.leaflet>0,'Book of Mormon restores scenario routes');
   await filterSummary.click();assert(!(await filterDisclosure.evaluate(n=>n.open)),'Filter closes through its summary');
   const settings=page.locator('.mapsettings');await settings.locator('summary').click();assert(await settings.evaluate(n=>n.open),'Map settings opens after closing the filter');
@@ -49,5 +59,37 @@ module.exports=async function(page,origin,out){
   assert.equal(await page.locator('#progress').innerText(),'Fullscreen unavailable in this browser');
   results.push({profile:profile.name,initial,restored,settings:layouts,providerTiles:'not verified; external requests blocked'});
  }
+ // The image coverage suite checks image/link attributes, but does not click
+ // those links. Activate each corrected link and verify its actual landing.
+ const catalog=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../art-gallery.json'),'utf8'));
+ const destinations=[
+  ['life','life-of-christ-journey-map.html','LifeTimeline',5,'/answers/jesus-christ-latter-day-saint-beliefs.html#nazareth-childhood'],
+  ['life','life-of-christ-journey-map.html','LifeTimeline',7,'/art-gallery.html?picture=art-4f5759d8edad'],
+  ['life','life-of-christ-journey-map.html','LifeTimeline',10,'/art-gallery.html?picture=art-3b1016debbad'],
+  ['life','life-of-christ-journey-map.html','LifeTimeline',14,'/art-gallery.html?picture=art-838305f993f7'],
+  ['history','latter-day-saint-church-history-timeline.html','HistoryTimeline',4,'/art-gallery.html?picture=art-6e45c602be15'],
+  ['history','latter-day-saint-church-history-timeline.html','HistoryTimeline',42,'/jesus-christ/restoration-and-today.html#living-christ']
+ ];
+ const landings=[];await page.setViewportSize({width:1366,height:900});
+ for(const [kind,route,api,index,target] of destinations){
+  await page.goto(origin+'/timelines/'+route,{waitUntil:'load'});
+  await page.waitForFunction(api=>window[api]&&window.TimelineImages,api);
+  await page.evaluate(({api,index})=>window[api].select(index),{api,index});
+  const figure=page.locator('[data-timeline-image="'+index+'"]');await figure.waitFor({state:'visible'});
+  const link=figure.locator('a').first();assert.equal(await link.getAttribute('href'),target);
+  await Promise.all([page.waitForURL(origin+target),link.click()]);
+  if(target.startsWith('/art-gallery.html?')){
+   const id=new URL(origin+target).searchParams.get('picture'),art=catalog.artworks.find(a=>a.id===id);assert(art&&art.occurrences.length);
+   await page.waitForFunction(()=>document.getElementById('artGalleryDialog').open,{},{timeout:20000});
+   const frame=page.locator('#artGalleryFrame');const actual=new URL(await frame.getAttribute('src'),origin);
+   assert.equal(actual.pathname,art.occurrences[0].page);assert.equal(actual.searchParams.get('gallery-art'),art.occurrences[0].id);
+   assert(await frame.isVisible(),'Gallery opened its owning study panel');
+  }else{
+   const anchor=new URL(origin+target).hash.slice(1);assert(await page.locator('#'+anchor).isVisible(),'Expected event section is visible');
+  }
+  const screenshot='requested-destination-'+kind+'-'+(index+1)+'.png';await page.screenshot({path:path.join(out,screenshot),animations:'disabled'});
+  landings.push({kind,event:index+1,target,screenshot});
+ }
+ results.push({scope:'corrected_link_landings',landings});
  fs.writeFileSync(path.join(out,'requested-controls-report.json'),JSON.stringify(results,null,2)+'\n');return results;
 };
