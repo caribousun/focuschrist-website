@@ -4,12 +4,44 @@ const assert=require('node:assert/strict'),crypto=require('node:crypto'),fs=requ
 const root=path.resolve(__dirname,'..'),out=path.join(root,'.qa-artifacts/timeline/provider');
 const providers=new Set(['tiles.openfreemap.org','tiles.mapterhorn.com']);
 const sha=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
+function allowedRequest(url,origin){
+ try{
+  const u=new URL(url),local=new URL(origin);
+  if(u.username||u.password||local.username||local.password||local.protocol!=='http:'||local.hostname!=='127.0.0.1'||!local.port)return false;
+  return u.origin===local.origin||(u.protocol==='https:'&&!u.port&&providers.has(u.hostname));
+ }catch(_){return false;}
+}
+async function enforceRequest(route,origin,row,onDenial){
+ const request=route.request(),url=request.url(),method=request.method();
+ if(row.denied||!allowedRequest(url,origin)||!['GET','HEAD'].includes(method)){
+  row.blockedRequests++;return route.abort('blockedbyclient');
+ }
+ const host=new URL(url).hostname;let response;
+ try{
+  response=await route.fetch({maxRedirects:0,maxRetries:0,timeout:15000});
+  const status=response.status();
+  if(status>=300&&status<400){
+   row.blockedRedirects++;if(row.responseErrors.length<10)row.responseErrors.push({host,status});
+   await response.dispose();return route.abort('blockedbyclient');
+  }
+  if([401,403,451].includes(status)){
+   row.denied=true;row.denial={host,status};row.badResponses++;
+   if(row.responseErrors.length<10)row.responseErrors.push({host,status});
+   onDenial();await response.dispose();return route.abort('blockedbyclient');
+  }
+  await route.fulfill({response});await response.dispose();
+ }catch(_){
+  row.boundaryErrors++;
+  if(response)await response.dispose().catch(()=>{});
+  await route.abort('blockedbyclient').catch(()=>{});
+ }
+}
 function classify(row){
  if(row.denied)return 'DENIED';
- if(row.error||row.pageErrors||row.failedRequests||row.badResponses||!row.sourcesLoaded||!row.rendererLoaded||!row.statusHidden||!row.canvasVisible||!row.openfreemapResponses||!row.mapterhornResponses)return 'FAIL';
+ if(row.error||row.pageErrors||row.failedRequests||row.badResponses||row.blockedRequests||row.blockedRedirects||row.boundaryErrors||!row.sourcesLoaded||!row.rendererLoaded||!row.statusHidden||!row.canvasVisible||!row.openfreemapResponses||!row.mapterhornResponses)return 'FAIL';
  return 'PASS';
 }
-module.exports={classify};
+module.exports={classify,allowedRequest,enforceRequest};
 async function run(){
  assert.equal(process.env.CI,'true','Hosted CI only');
  const {chromium}=require('playwright'),route='/timelines/world-and-scripture-timeline.html';
@@ -23,10 +55,11 @@ async function run(){
  try{
   browser=await chromium.launch({headless:true});
   for(const profile of [{name:'desktop',width:1366,height:900},{name:'phone',width:390,height:844}]){
-   const context=await browser.newContext({viewport:{width:profile.width,height:profile.height},reducedMotion:'reduce'}),page=await context.newPage();
-   const row={profile:profile.name,denied:false,denial:null,requestErrors:[],responseErrors:[],pageErrors:0,failedRequests:0,badResponses:0,openfreemapResponses:0,mapterhornResponses:0};let deniedResolve;
+   const context=await browser.newContext({viewport:{width:profile.width,height:profile.height},reducedMotion:'reduce',serviceWorkers:'block'});
+   await context.routeWebSocket('**/*',socket=>socket.close());const page=await context.newPage();
+   const row={profile:profile.name,denied:false,denial:null,requestErrors:[],responseErrors:[],pageErrors:0,failedRequests:0,badResponses:0,blockedRequests:0,blockedRedirects:0,boundaryErrors:0,openfreemapResponses:0,mapterhornResponses:0};let deniedResolve;
    const deniedSignal=new Promise(resolve=>deniedResolve=resolve);
-   await context.route('https://**',route=>{const host=new URL(route.request().url()).hostname;return providers.has(host)?route.continue():route.abort();});
+   await context.route('**/*',route=>enforceRequest(route,origin,row,deniedResolve));
    page.on('pageerror',()=>row.pageErrors++);
    page.on('requestfailed',request=>{const host=new URL(request.url()).hostname;if(!providers.has(host))return;row.failedRequests++;const code=request.failure()?.errorText||'';if(row.requestErrors.length<10)row.requestErrors.push({host,code:/^net::ERR_[A-Z0-9_]+$/.test(code)?code:'unclassified'});});
    page.on('response',response=>{const host=new URL(response.url()).hostname;if(!providers.has(host))return;const status=response.status();if(status===401||status===403||status===451){row.denied=true;row.denial={host,status};deniedResolve();}if(status<200||status>=300){row.badResponses++;if(row.responseErrors.length<10)row.responseErrors.push({host,status});}else if(host==='tiles.openfreemap.org')row.openfreemapResponses++;else row.mapterhornResponses++;});
