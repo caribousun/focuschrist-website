@@ -5,7 +5,9 @@ from unittest.mock import patch
 import timeline_content_ledger_successor as gate
 
 class ContentLedgerSuccessorTests(unittest.TestCase):
- def setUp(self):self.raw=gate.source(gate.ROOT,'content-audit.json')
+ def setUp(self):
+  import timeline_51_current_successor as current
+  self.raw=current.project_ledger(gate.ROOT,current.validate_content(gate.ROOT))
  def test_current_to_exact_historical(self):self.assertEqual(gate.sha(gate.restore(self.raw)),gate.BEFORE)
  def test_modified_ledger_and_review_rejected(self):
   with self.assertRaisesRegex(AssertionError,'current content ledger'):gate.restore(self.raw+b' ')
@@ -24,6 +26,8 @@ class ContentLedgerSuccessorTests(unittest.TestCase):
   current=gate.source(gate.ROOT,'timeline-images.js')
   with tempfile.TemporaryDirectory() as folder:
    root=Path(folder);path=root/'timeline-images.js';path.write_bytes(current)
+   from timeline_51_source_successor import MANIFEST
+   manifest=root/MANIFEST;manifest.parent.mkdir(parents=True);manifest.write_bytes((gate.ROOT/MANIFEST).read_bytes())
    item={'path':'timeline-images.js','sha256':images.BEFORE}
    self.assertEqual(closure.bound(root,item),path)
    self.assertEqual(gabriel.digest(path),images.BEFORE)

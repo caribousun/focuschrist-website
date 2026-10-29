@@ -14,9 +14,16 @@ import static_content_audit as audit
 
 class ScriptBindingTests(unittest.TestCase):
     def setUp(self):
+        import timeline_51_current_successor as event_review
+        from timeline_51_source_successor import FILES as event_files
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
+        # Only the independent-review lookup is synthetic in this fixture;
+        # source-byte and ledger-reference checks still run in the real audit.
+        review_patch = patch.object(event_review, 'validate_content', return_value={})
+        review_patch.start()
+        self.addCleanup(review_patch.stop)
         for name, value in [('ROOT', self.root), ('LEDGER', self.root/'content-audit.json')]:
             patcher = patch.object(audit, name, value)
             patcher.start()
@@ -32,10 +39,12 @@ class ScriptBindingTests(unittest.TestCase):
             record = {'path':name, 'status':'non-source-dependent', 'reviewed_on':'2026-10-04',
                       'review_standard':'synthetic test fixture', 'published_text_sha256':audit.content_hash(path)}
             if name == audit.WORLD_TIMELINE:
-                import hashlib
                 record['reviewed_source_sha256']=hashlib.sha256(self.raw).hexdigest()
             if name in audit.INLINE_SCRIPT_ROUTES:
                 record['reviewed_inline_script_sha256'] = audit.inline_script_hash(path)
+            if name in event_files:
+                record['reviewed_timeline_51_source_sha256'] = hashlib.sha256(self.raw).hexdigest()
+                record['timeline_51_content_review'] = {'path':event_review.CONTENT_REVIEW, 'sha256':event_review.CONTENT_REVIEW_SHA256}
             self.records.append(record)
         self.save()
 
@@ -97,6 +106,16 @@ class ScriptBindingTests(unittest.TestCase):
         record=next(r for r in self.records if r['path']==audit.WORLD_TIMELINE)
         record.pop('reviewed_source_sha256');self.save()
         self.validate(1,'exact reviewed source binding missing or changed')
+
+    def test_current_event_review_binding_required(self):
+        import timeline_51_current_successor as event_review
+        record=next(r for r in self.records if 'timeline_51_content_review' in r)
+        for field in ('timeline_51_content_review','reviewed_timeline_51_source_sha256'):
+            saved=record.pop(field);self.save()
+            self.validate(1,'current timeline event source review pending or changed')
+            record[field]=saved;self.save()
+        with patch.object(event_review,'validate_content',side_effect=ValueError('synthetic review rejected')):
+            self.validate(1,'current timeline event source review pending or changed')
 
     def test_raw_parser_boundaries(self):
         raw = b'<!-- <script>ignored</script> --><SCRIPT data-x=">">a &amp; b\r\n</SCRIPT><script src="x.js"></script><script>c</script>'

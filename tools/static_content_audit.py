@@ -90,9 +90,27 @@ def published_text(path: Path) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
+def current_timeline_51_source_reviewed(record, raw):
+    # A mutable ledger hash alone is not evidence of independent review.
+    if record.get('reviewed_timeline_51_source_sha256') != hashlib.sha256(raw).hexdigest():return False
+    from timeline_51_current_successor import CONTENT_REVIEW, CONTENT_REVIEW_SHA256, validate_content
+    if record.get('timeline_51_content_review') != {'path':CONTENT_REVIEW,'sha256':CONTENT_REVIEW_SHA256}:return False
+    try:validate_content(ROOT)
+    except (ValueError,KeyError,TypeError,OSError):return False
+    return True
+
+
 def content_hash(path: Path) -> str:
     raw=path.read_bytes()
     name=path.relative_to(ROOT).as_posix()
+    # The new event prose must be audited as actual current text, never the
+    # reconstructed historical page. Its independent finished reviews remain
+    # a separate requirement in the ledger.
+    from timeline_51_source_successor import FILES as TIMELINE_51_FILES
+    if name in TIMELINE_51_FILES:
+        parser=PublishedTextParser();parser.feed(raw.decode('utf-8'))
+        text=re.sub(r'\s+', ' ', html.unescape(' '.join(parser.parts))).strip()
+        return hashlib.sha256(text.encode('utf-8')).hexdigest()
     # Current integrated visitor copy has its own genuine ledger records.
     # Historical inverses remain below for unchanged routes, never current prose.
     if name in CURRENT_INTEGRATION_ROUTES:
@@ -222,6 +240,9 @@ def validate() -> int:
         record = by_path.get(name)
         if not record:
             continue
+        from timeline_51_source_successor import FILES as TIMELINE_51_FILES
+        if name in TIMELINE_51_FILES and not current_timeline_51_source_reviewed(record,path.read_bytes()):
+            errors.append(f'{name}: current timeline event source review pending or changed')
         if name in CURRENT_INTEGRATION_ROUTES and name != 'timeline.html' and record.get('reviewed_source_sha256') != hashlib.sha256(path.read_bytes()).hexdigest():
             errors.append(f"{name}: current integrated source binding missing or changed")
         elif name == WORLD_TIMELINE:

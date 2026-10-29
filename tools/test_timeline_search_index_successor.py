@@ -2,11 +2,13 @@
 import copy, json, unittest
 from unittest.mock import patch
 import timeline_search_index_successor as s
+import timeline_51_search_successor as current
 
 class SearchSuccessorTests(unittest.TestCase):
- def setUp(self):self.raw=s.source(s.ROOT,'site-search-index.json')
+ def setUp(self):self.actual=s.source(s.ROOT,'site-search-index.json');self.raw=current.restore(self.actual)
  def test_real_output_and_exact_previous(self):
-  result=s.validate_current();self.assertEqual(result['current_sha256'],s.AFTER);self.assertEqual(result['previous_sha256'],s.BEFORE)
+  result=current.validate_current();self.assertEqual(result['current_sha256'],current.AFTER);self.assertEqual(result['previous_sha256'],s.AFTER)
+  self.assertEqual(s.sha(s.restore(self.raw)),s.BEFORE)
   old=json.loads(s.restore(self.raw));new=json.loads(self.raw)
   a={r['url']:r for r in old['records']};b={r['url']:r for r in new['records']}
   self.assertEqual({u for u in a.keys()|b.keys() if a.get(u)!=b.get(u)},s.CHANGED)
@@ -24,7 +26,7 @@ class SearchSuccessorTests(unittest.TestCase):
  def test_stale_producer_rejected(self):
   import build_site_search
   with patch.object(build_site_search,'build',return_value={}):
-   with self.assertRaisesRegex(AssertionError,'full-tree producer'):s.validate_current()
+   with self.assertRaisesRegex(ValueError,'producer mismatch'):current.validate_current()
  def test_same_count_unrelated_change_cannot_be_projected(self):
   data=json.loads(self.raw);m=copy.deepcopy(s.manifest());r=next(r for r in data['records'] if r['url'] not in s.CHANGED);r['text']+=' unrelated change'
   changed=(json.dumps(data,ensure_ascii=False,separators=(',',':'))+'\n').encode()

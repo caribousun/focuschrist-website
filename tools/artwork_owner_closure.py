@@ -34,6 +34,8 @@ def bound(root, item):
     from artwork_display_delivery import reviewed_bytes
     raw = reviewed_bytes(p)
     if item['path'] == 'timeline-images.js':
+        from timeline_51_source_successor import project_exact
+        raw=project_exact(item['path'],raw,root)
         from timeline_image_links_successor import AFTER, restore
         if hashlib.sha256(raw).hexdigest() == AFTER:
             raw = restore(raw)

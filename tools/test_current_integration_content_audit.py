@@ -20,7 +20,7 @@ namespace = {'__file__': str(ROOT / 'tools/static_content_audit.py'), 'Path': Pa
 names = {'ROOT', 'LEDGER', 'SKIP_TAGS', 'PUBLISHED_ATTRIBUTES', 'CURRENT_INTEGRATION_ROUTES'}
 for node in ast.parse(SOURCE).body:
     selected = isinstance(node, ast.Assign) and any(isinstance(t, ast.Name) and t.id in names for t in node.targets)
-    selected |= isinstance(node, (ast.FunctionDef, ast.ClassDef)) and node.name in {'PublishedTextParser', 'published_text', 'content_hash'}
+    selected |= isinstance(node, (ast.FunctionDef, ast.ClassDef)) and node.name in {'PublishedTextParser', 'published_text', 'content_hash', 'current_timeline_51_source_reviewed'}
     if selected:
         exec(compile(ast.Module(body=[node], type_ignores=[]), 'actual-current-content-extractor', 'exec'), namespace)
 
@@ -86,15 +86,44 @@ class CurrentIntegrationContentAuditTests(unittest.TestCase):
             self.assertNotEqual(raw_digest(base), raw_digest(base.replace(before, after)))
         self.assertEqual(raw_digest(base), raw_digest(base + b'<script>unexecuted()</script><style>body{color:red}</style>'))
 
+    def test_timeline_current_source_binding_is_fail_closed(self):
+        raw=b'<section><h2>Current event</h2><p>Sourced words.</p></section>'
+        reviewed=namespace['current_timeline_51_source_reviewed']
+        digest=hashlib.sha256(raw).hexdigest()
+        self.assertFalse(reviewed({},raw))
+        self.assertFalse(reviewed({'reviewed_timeline_51_source_sha256':digest},raw+b' '))
+        self.assertFalse(reviewed({'reviewed_timeline_51_source_sha256':digest},raw),'A mutable source hash alone must not pass')
+        import timeline_51_current_successor as event
+        record={'reviewed_timeline_51_source_sha256':digest,'timeline_51_content_review':{'path':event.CONTENT_REVIEW,'sha256':'e'*64}}
+        with patch.object(event,'CONTENT_REVIEW_SHA256','e'*64),patch.object(event,'validate_content',side_effect=ValueError('unverified')):
+            self.assertFalse(reviewed(record,raw),'An unverified review must fail')
+        with patch.object(event,'CONTENT_REVIEW_SHA256','e'*64),patch.object(event,'validate_content',return_value={}):
+            self.assertTrue(reviewed(record,raw))
+        name='church-history.html'
+        self.assertEqual(namespace['content_hash'](BytePath(name,raw)),raw_digest(raw))
+        self.assertNotEqual(namespace['content_hash'](BytePath(name,raw)),namespace['content_hash'](BytePath(name,raw.replace(b'Sourced',b'Changed'))))
+
     def test_original_validator_assertions_preserved(self):
         original = ast.parse((ROOT / 'docs/emma-hub-content-audit/static-content-audit-a36.py.source').read_text())
         current = ast.parse(SOURCE)
         old = next(n for n in original.body if isinstance(n, ast.FunctionDef) and n.name == 'validate')
         new = next(n for n in current.body if isinstance(n, ast.FunctionDef) and n.name == 'validate')
-        # The one additional exact raw-source assertion is the only changed node.
+        # The current-event guard must actually call the exact binding helper;
+        # otherwise removing it from the historical AST would hide a bypass.
+        guards=[n for n in ast.walk(new) if isinstance(n,ast.If) and 'current timeline event source review pending or changed' in ast.unparse(n)]
+        expected=ast.parse("if name in TIMELINE_51_FILES and not current_timeline_51_source_reviewed(record,path.read_bytes()):\n    errors.append(f'{name}: current timeline event source review pending or changed')").body[0]
+        self.assertEqual(len(guards),1)
+        self.assertEqual(ast.dump(guards[0],include_attributes=False),ast.dump(expected,include_attributes=False))
+        imports=[n for n in ast.walk(new) if isinstance(n,ast.ImportFrom) and n.module=='timeline_51_source_successor']
+        self.assertEqual(len(imports),1)
+        self.assertEqual([(x.name,x.asname) for x in imports[0].names],[('FILES','TIMELINE_51_FILES')])
+        # Remove only separately checked additions before comparing the old AST.
         class RemoveCurrentSourceAssertion(ast.NodeTransformer):
+            def visit_ImportFrom(self, node):
+                if node.module == 'timeline_51_source_successor': return None
+                return self.generic_visit(node)
             def visit_If(self, node):
-                if 'current integrated source binding missing or changed' in ast.unparse(node):
+                if 'current integrated source binding missing or changed' in ast.unparse(node) or 'current timeline event source review pending or changed' in ast.unparse(node):
                     return None
                 return self.generic_visit(node)
         new = RemoveCurrentSourceAssertion().visit(new)

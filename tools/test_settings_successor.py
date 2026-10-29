@@ -10,6 +10,8 @@ class SettingsTests(unittest.TestCase):
   self.row=g.mapping()
   for name in g.BEFORE:
    raw=(g.ROOT/name).read_bytes()
+   from timeline_51_source_successor import project_exact
+   raw=project_exact(name,raw,g.ROOT)
    if name=='timelines/world-and-scripture-timeline.html':
     from timeline_world_controls_successor import restore
     raw=restore(raw,g.ROOT)

@@ -1,0 +1,50 @@
+{
+  "limits": {
+    "code": false,
+    "index": false,
+    "needles": "unresolved",
+    "owner": false,
+    "pacific_springs": "context_only",
+    "primary_exhaustive": false,
+    "release": false,
+    "rights": false,
+    "runtime": false,
+    "visual": false,
+    "whole_site": false
+  },
+  "reviewed_file_sha256": {
+    "church-history.html": "3b82d70f453983aa9bbd17dfe604a34f8dade8d1559f128a31de146c171eb6a3",
+    "docs/reviews/timeline-51-destination-bindings.json": "239a9200fd3c8deaff47663d0d35f469df2abfe6bfedcabbbe65bbd839fbd992",
+    "docs/reviews/timeline-51-event-destinations-20261029.csv": "ff24d896751d6e0f9b4707bdf9bb9ae07038bb54793aa4a14f0ae8b215347250",
+    "docs/reviews/timeline-51-source-evidence.json": "21e63296b0905d8f63c007ca0eb0aefd40d3ec65e62bf3305932fdf331562a7e",
+    "jesus-christ/mortal-ministry.html": "119fc0150bb5cfd90a3be1b68350ad515efed702144e409d05120a075f8ef892",
+    "jesus-christ/restoration-and-today.html": "8e61672ff83cfefe04652e7f71456d1f5b58a35e85b04e1d1e933d9a534942cf",
+    "pioneers.html": "ebd9444e89b0acff74bf0b761460a42c30f04a149ff8d9de9ce49f127188b3aa",
+    "timeline-images.js": "09b1a9b957fbe3a920dc9629c8ae1f9569c8e8b9fcfceee27d2564663e6ec9bb",
+    "timelines/latter-day-saint-church-history-timeline.html": "31d69df1046ec884b109a215d9dd5627921979947874f825b17714f02a000932",
+    "timelines/life-of-christ-journey-map.html": "a7e572937527036e3ff4f4b446acac70e838f7b6dbc7ecee8c200e52cefbf988",
+    "timelines/willie-and-martin-handcart-map.html": "b4f4e14bcf0a28655620f24015ca063bfcacc1ac7fe788bb10c21e0226a9adbc"
+  },
+  "reviewer_commitments": {
+    "albert": "94a6b447580330f9f2b609422537b04239ff3a39df9137e32efd559f1a2935cb",
+    "fermi": "8276c460675434ee0641f18e14c9c558a28112c85692b94c8ed299c898f886a8",
+    "newton": "0313af4b58e8e5165df0b4195356279bde1b81994fd8b237fdec02497f63d2c3"
+  },
+  "role_scopes": {
+    "albert": "prior_fifty_sections_and_bounded_editorial_delta",
+    "fermi": "fifty_prior_sections_plus_independence_rock_and_audit_delta",
+    "newton": "forty_nine_prior_sections_plus_independence_rock_and_audit_delta"
+  },
+  "schema": "timeline-51-content-review-v1",
+  "scope": "bounded_current_source_content",
+  "source_head": "79e8d90a490ac97f8d6cf7fc90b5271f58c2db4a",
+  "source_receipts": {
+    "albert_delta": "dc6cd2550a673756d0988f696e2bc73173371f271dc5d74d61ef039ad6540f21",
+    "albert_prior": "95845eff27c74e014fa7b9b04271b76d2b3bdfec8d993bfc0414583a64851d2a",
+    "fermi": "ad27c554ce249e9a727dabe22347136f3c9119f68e9cb547cff3d7fd44f9f6b1",
+    "newton": "cb99d44e6727519765d048914eead52e6610062ebbf8d23856fa6078945a1f34"
+  },
+  "verdict": "CONCUR",
+  "verification_receipt_sha256": "a06a04a3f602b9ce40f1c8e69b4bd5d0fd29d8395fa77961465fdd5ee31df913",
+  "verifier_commitment": "25275b95cc2c78a6aef8f6ac29e2400b0fac0290ab5ec12f9946448301ee8133"
+}

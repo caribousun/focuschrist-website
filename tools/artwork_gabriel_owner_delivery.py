@@ -16,6 +16,8 @@ def digest(p):
     from artwork_display_delivery import reviewed_bytes
     raw=reviewed_opening_bytes(p) if p.name == 'unified-opening.js' else reviewed_bytes(p)
     if p.name=='timeline-images.js':
+        from timeline_51_source_successor import project_exact
+        raw=project_exact('timeline-images.js',raw)
         from timeline_image_links_successor import AFTER,restore
         if hashlib.sha256(raw).hexdigest()==AFTER:raw=restore(raw)
     return hashlib.sha256(raw).hexdigest()

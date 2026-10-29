@@ -114,6 +114,9 @@ def validate_full_tree(root,baseline):
  # index to the Emma baseline. This is not current review or release approval.
  from timeline_search_index_successor import AFTER as TIMELINE_SEARCH, restore as restore_timeline_search, sha
  raw=(root/'site-search-index.json').read_bytes()
+ from timeline_51_search_successor import AFTER as EVENT_SEARCH, restore as restore_event_search
+ if sha(raw)==EVENT_SEARCH:
+  raw=restore_event_search(raw,root)  # Exact historical projection; actual producer already checked above.
  if sha(raw)==TIMELINE_SEARCH:
   historical=dict(after,search=json.loads(restore_timeline_search(raw,root)))
   result=check(before,historical)

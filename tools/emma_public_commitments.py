@@ -161,9 +161,10 @@ def cover_render_files(root,subject,added,covered,rejected):
 def validate_release(root):
  """Require the separately pinned conditional acceptance check report."""
  from timeline_search_index_successor import AFTER as TIMELINE_SEARCH_SHA
+ from timeline_51_search_successor import AFTER as EVENT_SEARCH_SHA
  current_search=local(Path(root).resolve(),'site-search-index.json').read_bytes()
  projection=None
- if sha(current_search)==TIMELINE_SEARCH_SHA:
+ if sha(current_search) in (TIMELINE_SEARCH_SHA,EVENT_SEARCH_SHA):
   from timeline_current_index_closure import prepare
   projection=prepare(root)
  def reviewed_bound(entry):

@@ -38,6 +38,8 @@ def reviewed_bytes(path):
     return restore(name,raw)
 
 def restore(name,data,root=ROOT):
+    from timeline_51_source_successor import project_exact
+    data=project_exact(name,data,root)
     # Project only exact, separately bound later sources for historical checks.
     if name == 'answers/jesus-christ-latter-day-saint-beliefs.html':
         from timeline_nazareth_successor import AFTER as NAZARETH_AFTER, restore as restore_nazareth
@@ -82,6 +84,7 @@ def restore(name,data,root=ROOT):
     return restored
 
 def advance(name,data,root=ROOT):
+    from timeline_51_source_successor import advance_exact as advance_timeline
     from owner_integration_successor import advance as advance_owner
     from emma_hub_citation_successor import advance as advance_hub_citations
     """Generate only the exact enumerated successor from an exact predecessor."""
@@ -102,7 +105,7 @@ def advance(name,data,root=ROOT):
     from pioneer_entry_scroll_successor import advance as advance_pioneer_scroll
     from bank_context_bypass_successor import advance as advance_bypass
     from emma_story_successor import advance as advance_emma
-    if not record or sha(data)!=record['before_sha256']:return advance_owner(name,advance_hub_citations(name,advance_adams_delivery(name,advance_emma_indices(name,advance_emma(name,advance_bypass(name,advance_pioneer_scroll(name,advance_scroll(name,advance_decoupling(name,advance_legacy(name,advance_citation(name,advance_eval(name,advance_gate(name,advance_bank(name,advance_hand(name,advance_close(name,advance_settings(name,advance_world(name,data,root),root),root),root),root),root),root),root),root),root),root),root),root),root),root),root),root),root)
+    if not record or sha(data)!=record['before_sha256']:return advance_timeline(name,advance_owner(name,advance_hub_citations(name,advance_adams_delivery(name,advance_emma_indices(name,advance_emma(name,advance_bypass(name,advance_pioneer_scroll(name,advance_scroll(name,advance_decoupling(name,advance_legacy(name,advance_citation(name,advance_eval(name,advance_gate(name,advance_bank(name,advance_hand(name,advance_close(name,advance_settings(name,advance_world(name,data,root),root),root),root),root),root),root),root),root),root),root),root),root),root),root),root),root),root),root)
     replacements=[];delta=0
     for span in record['spans']:
         previous=base64.b64decode(span['previous_b64'],validate=True)
@@ -114,7 +117,7 @@ def advance(name,data,root=ROOT):
     result=data
     for start,end,current in reversed(replacements):result=result[:start]+current+result[end:]
     require(sha(result)==record['after_sha256'],'Motion successor reconstruction drift')
-    return advance_owner(name,advance_hub_citations(name,advance_adams_delivery(name,advance_emma_indices(name,advance_emma(name,advance_bypass(name,advance_pioneer_scroll(name,advance_scroll(name,advance_decoupling(name,advance_legacy(name,advance_citation(name,advance_eval(name,advance_gate(name,advance_bank(name,advance_hand(name,advance_close(name,advance_settings(name,advance_world(name,result,root),root),root),root),root),root),root),root),root),root),root),root),root),root),root),root),root),root)
+    return advance_timeline(name,advance_owner(name,advance_hub_citations(name,advance_adams_delivery(name,advance_emma_indices(name,advance_emma(name,advance_bypass(name,advance_pioneer_scroll(name,advance_scroll(name,advance_decoupling(name,advance_legacy(name,advance_citation(name,advance_eval(name,advance_gate(name,advance_bank(name,advance_hand(name,advance_close(name,advance_settings(name,advance_world(name,result,root),root),root),root),root),root),root),root),root),root),root),root),root),root),root),root),root),root),root)
 
 def check(root=ROOT):
     from owner_integration_successor import restore as restore_owner, check as check_owner
@@ -147,6 +150,8 @@ def check(root=ROOT):
         path=(root/name).resolve()
         require(path.is_relative_to(root.resolve()) and path.is_file(),'Missing/outside motion consumer')
         source=path.read_bytes()
+        from timeline_51_source_successor import project_exact
+        source=project_exact(name,source,root)
         # Later exact successors are projected only for this historical check;
         # their own current source and review remain separately required.
         if name == 'answers/jesus-christ-latter-day-saint-beliefs.html':
@@ -185,7 +190,7 @@ def check(root=ROOT):
     with tempfile.TemporaryDirectory() as td:
         view=Path(td)
         for bank_name in ('ask.html','pioneers.html','pioneer-experience.js'):
-            (view/bank_name).write_bytes(restore_citation(bank_name,restore_legacy(bank_name,restore_decoupling(bank_name,restore_scroll(bank_name,restore_pioneer_scroll(bank_name,(root/bank_name).read_bytes(),root),root),root),root),root))
+            (view/bank_name).write_bytes(restore_citation(bank_name,restore_legacy(bank_name,restore_decoupling(bank_name,restore_scroll(bank_name,restore_pioneer_scroll(bank_name,project_exact(bank_name,(root/bank_name).read_bytes(),root),root),root),root),root),root))
         shutil.copytree(root/'docs/answer-bank-successor',view/'docs/answer-bank-successor')
         check_bank(view)
     with tempfile.TemporaryDirectory() as td:
@@ -206,7 +211,7 @@ def check(root=ROOT):
     with tempfile.TemporaryDirectory() as td:
         view=Path(td)
         for legacy_name in ('ask.html','pioneers.html'):
-            (view/legacy_name).write_bytes(restore_decoupling(legacy_name,restore_scroll(legacy_name,restore_pioneer_scroll(legacy_name,(root/legacy_name).read_bytes(),root),root),root))
+            (view/legacy_name).write_bytes(restore_decoupling(legacy_name,restore_scroll(legacy_name,restore_pioneer_scroll(legacy_name,project_exact(legacy_name,(root/legacy_name).read_bytes(),root),root),root),root))
         shutil.copytree(root/'docs/legacy-answer-repairs-successor',view/'docs/legacy-answer-repairs-successor')
         check_legacy(view)
     with tempfile.TemporaryDirectory() as td:
@@ -216,7 +221,12 @@ def check(root=ROOT):
         shutil.copytree(root/'docs/bank-serve-decoupling-successor',view/'docs/bank-serve-decoupling-successor')
         check_decoupling(view)
     check_scroll(root)
-    check_pioneer_scroll(root)
+    with tempfile.TemporaryDirectory() as td:
+        view=Path(td)
+        (view/'pioneers.html').write_bytes(project_exact('pioneers.html',(root/'pioneers.html').read_bytes(),root))
+        shutil.copy2(root/'pioneer-experience.js',view/'pioneer-experience.js')
+        shutil.copytree(root/'docs/pioneer-entry-scroll-successor',view/'docs/pioneer-entry-scroll-successor')
+        check_pioneer_scroll(view)
     check_bypass(root)
     with hub_predecessor_view(root) as historical_hub:
         check_emma(historical_hub)
