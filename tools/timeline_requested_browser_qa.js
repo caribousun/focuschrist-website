@@ -112,6 +112,39 @@ module.exports=async function(page,origin,out){
    return {svg,leaflet};
   });
   const initial=await counts();assert(initial.svg+initial.leaflet>0,'Scenario routes initially present');
+  if(profile.width<=900){
+   // Exercise the real permanent route label at each horizontal edge. This
+   // moves the map, not the label, so the normal moveend handler must update it.
+   const initialized=await page.evaluate(()=>{
+    const map=window.__leafMap;let marker=null;
+    if(!map||!leafLayerGroup)return false;
+    leafLayerGroup.eachLayer(layer=>{if(!marker&&layer.__kind==='party'&&layer.getTooltip()&&layer.getTooltip().getContent()==="Lehi's family")marker=layer;});
+    if(!marker)return false;
+    window.__routeTooltipQA={map,marker,center:map.getCenter(),zoom:map.getZoom()};
+    return true;
+   });
+   assert(initialized,'An actual Lehi route tooltip is present');
+   await page.locator('#leafmap').scrollIntoViewIfNeeded();
+   for(const edge of ['left','right']){
+    await page.evaluate(edge=>{
+     const {map,marker,zoom}=window.__routeTooltipQA;
+     map.setView(marker.getLatLng(),zoom,{animate:false});
+     const point=map.latLngToContainerPoint(marker.getLatLng()),target=edge==='left'?12:map.getSize().x-12;
+     map.panBy([point.x-target,0],{animate:false});
+    },edge);
+    await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+    const bounds=await page.evaluate(()=>{
+     const {map,marker}=window.__routeTooltipQA,tip=marker.getTooltip().getElement();
+     const r=tip.getBoundingClientRect(),m=map.getContainer().getBoundingClientRect();
+     return {text:tip.textContent,classes:tip.className,left:r.left,right:r.right,mapLeft:m.left,mapRight:m.right};
+    });
+    assert.equal(bounds.text,"Lehi's family");
+    assert(bounds.classes.includes('leaflet-tooltip-'+(edge==='left'?'right':'left')),'Tooltip faces inward at '+edge+' edge');
+    assert(bounds.left>=bounds.mapLeft-1&&bounds.right<=bounds.mapRight+1,'Complete route label fits within the map at '+edge+' edge: '+JSON.stringify(bounds));
+    await page.locator('#leafmap').screenshot({path:path.join(out,'route-tooltip-'+edge+'-phone.png'),animations:'disabled'});
+   }
+   await page.evaluate(()=>{const {map,center,zoom}=window.__routeTooltipQA;map.setView(center,zoom,{animate:false});delete window.__routeTooltipQA;});
+  }
   const filterSummary=page.locator('#workspaceFilterState');
   const filterDisclosure=filterSummary.locator('xpath=parent::details');
   assert.equal(await filterDisclosure.count(),1,'Filter summary belongs to one disclosure');

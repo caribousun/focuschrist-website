@@ -3810,6 +3810,16 @@ function renderLeaflet(){
       englishStatus.textContent = "Map background unavailable. The timeline entries and lists remain available.";
     }).addTo(leafMapObj);
     leafMapObj.on("zoomend", () => { if (viewMode === "map" && useLeaflet){ renderLeaflet(); updateMapCount(); } });
+    // Permanent route labels choose the side with space. Re-evaluate after a
+    // pan or resize so a label does not remain on the clipped side of the map.
+    leafMapObj.on("moveend resize", () => {
+      if (!leafLayerGroup) return;
+      leafLayerGroup.eachLayer(layer => {
+        if (layer.__kind !== "party" || !layer.getTooltip) return;
+        const tip = layer.getTooltip();
+        if (tip && leafMapObj.hasLayer(tip)) tip.update();
+      });
+    });
     leafMapObj.on("popupclose", () => { if (lastPopupOpener && document.contains(lastPopupOpener)){ const el = lastPopupOpener; lastPopupOpener = null; try { el.focus({ preventScroll: true }); } catch(_){} } });
     leafMapObj.on("popupopen", () => { popupIsOpen = true; closeHoverTip(); });
     leafMapObj.on("popupclose", () => { popupIsOpen = false; });
@@ -4027,7 +4037,7 @@ function renderLeaflet(){
     modelKeys().forEach(mk => {
       const t = traveledLL(rt, mk);
       t.lines.forEach(seg => { const pl = L.polyline(seg, { color: "#c4502e", weight: 3, dashArray: "6 5", opacity: .95, interactive: false }).addTo(leafLayerGroup); pl.__kind = "routetraveled"; });
-      if (t.dot){ const m = L.circleMarker([t.dot[0], t.dot[1]], { radius: 8, color: "#c4502e", weight: 3, fillColor: "#ffffff", fillOpacity: 1, interactive: false }).addTo(leafLayerGroup); m.__kind = "party"; m.bindTooltip(rt.name, { permanent: true, direction: "right", className: "party-tip" }); }
+      if (t.dot){ const m = L.circleMarker([t.dot[0], t.dot[1]], { radius: 8, color: "#c4502e", weight: 3, fillColor: "#ffffff", fillOpacity: 1, interactive: false }).addTo(leafLayerGroup); m.__kind = "party"; m.bindTooltip(rt.name, { permanent: true, direction: "auto", className: "party-tip" }); }
     });
   });
   // Draw step 5: fresh pins. Draw step 6: new-this-year pins.
