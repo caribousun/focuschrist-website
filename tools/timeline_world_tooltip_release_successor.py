@@ -3,6 +3,8 @@
 Review pins must be populated only from a genuine independently reviewed final
 candidate. Provider-backed visual verification and owner release approval remain
 separate; this structural adapter does not authenticate people or approve release.
+A later matched run requires independent review or reconciliation; the pinned
+subject proves only which static run and source the submitted review addresses.
 """
 import hashlib,json,re
 from pathlib import Path
@@ -22,7 +24,8 @@ PROVIDER_REVIEW='docs/timeline-mobile-collapse/independent-provider-visual-revie
 PROVIDER_REVIEW_SHA256=None
 PROVIDER_REVIEWER_COMMITMENT=None
 PROVIDER_RECEIPT_SHA256=None
-PIN_NAMES=('CODE_REVIEW_SHA256','CODE_REVIEWER_COMMITMENT','CODE_RECEIPT_SHA256','PROVIDER_REVIEW_SHA256','PROVIDER_REVIEWER_COMMITMENT','PROVIDER_RECEIPT_SHA256')
+PROVIDER_SUBJECT_SHA256=None
+PIN_NAMES=('CODE_REVIEW_SHA256','CODE_REVIEWER_COMMITMENT','CODE_RECEIPT_SHA256','PROVIDER_REVIEW_SHA256','PROVIDER_REVIEWER_COMMITMENT','PROVIDER_RECEIPT_SHA256','PROVIDER_SUBJECT_SHA256')
 def sha(raw):return hashlib.sha256(raw).hexdigest()
 def validhash(value):return isinstance(value,str) and re.fullmatch(r'[0-9a-f]{64}',value) is not None
 def require(value,message):
@@ -41,14 +44,27 @@ def project_tree(root,current):
 
 def validate_provider_visual_review(root):
  """Structural binding only; the genuine reviewer and receipt require independent verification."""
- require(all(validhash(x) for x in (PROVIDER_REVIEW_SHA256,PROVIDER_REVIEWER_COMMITMENT,PROVIDER_RECEIPT_SHA256)), 'PENDING independent provider visual review')
+ require(all(validhash(x) for x in (PROVIDER_REVIEW_SHA256,PROVIDER_REVIEWER_COMMITMENT,PROVIDER_RECEIPT_SHA256,PROVIDER_SUBJECT_SHA256)), 'PENDING independent provider visual review')
  require(validhash(MOBILE_IMPLEMENTER_COMMITMENT) and PROVIDER_REVIEWER_COMMITMENT!=MOBILE_IMPLEMENTER_COMMITMENT,'Provider visual reviewer must differ from a valid implementer')
  raw=mobile.source(root,PROVIDER_REVIEW);require(sha(raw)==PROVIDER_REVIEW_SHA256,'Provider visual review changed');review=json.loads(raw)
  require(review.get('schema')=='timeline-provider-visual-review-v1' and review.get('scope')=='provider_desktop_phone_pixels' and review.get('verdict')=='CONCUR_WITHIN_BOUNDED_VISUAL_SCOPE','Provider visual review scope differs')
  require(review.get('reviewer_commitment')==PROVIDER_REVIEWER_COMMITMENT and review.get('receipt_sha256')==PROVIDER_RECEIPT_SHA256,'Provider visual reviewer evidence differs')
- require(review.get('page_sha256')==tooltip.PAGE_AFTER,'Provider visual review page differs')
- for field in ('artifact_sha256','report_sha256','desktop_screenshot_sha256','phone_screenshot_sha256'):
-  require(validhash(review.get(field)),'Provider visual review evidence missing: '+field)
+ diagnostic=review.get('observed_diagnostic');offline=review.get('offline_evaluation')
+ require(isinstance(diagnostic,dict) and isinstance(offline,dict),'Provider visual source or correlation missing')
+ # These are selected unchanged fields from the independently authored record.
+ subject={key:review.get(key) for key in ('run_id','timeline_job_id','artifact_id','head','checkout','page_sha256','artifact_sha256','report_sha256','desktop_screenshot_sha256','phone_screenshot_sha256','raw_status')}
+ subject.update({'diagnostic_source_commit':diagnostic.get('source_commit'),'diagnostic_sha256':diagnostic.get('sha256'),'offline_classifier_sha256':offline.get('classifier_sha256'),'offline_receipt_sha256':offline.get('receipt_sha256'),'desktop_correlation':offline.get('desktop_classification')})
+ import timeline_current_index_closure as old
+ require(old.canonical(subject)==PROVIDER_SUBJECT_SHA256,'Provider visual review subject differs')
+ for field in ('run_id','timeline_job_id','artifact_id'):
+  require(type(subject[field]) is int and subject[field]>0,'Provider visual run identity invalid: '+field)
+ for field in ('head','checkout','diagnostic_source_commit'):
+  require(isinstance(subject[field],str) and re.fullmatch(r'[0-9a-f]{40}',subject[field]) is not None,'Provider visual source identity invalid: '+field)
+ require(subject['diagnostic_source_commit']==subject['head'],'Provider diagnostic source commit differs')
+ require(subject['page_sha256']==tooltip.PAGE_AFTER,'Provider visual review page differs')
+ for field in ('diagnostic_sha256','artifact_sha256','report_sha256','desktop_screenshot_sha256','phone_screenshot_sha256','offline_classifier_sha256','offline_receipt_sha256'):
+  require(validhash(subject[field]),'Provider visual review evidence missing: '+field)
+ require(subject['raw_status']=='Historical run and desktop diagnostic FAIL; phone diagnostic PASS. No historical job result was changed.' and subject['desktop_correlation']=='MATCHED_RENDERER_CANCELLATION','Provider visual diagnostic outcomes differ')
  return review
 
 def project_reviewed_tree(root,current):

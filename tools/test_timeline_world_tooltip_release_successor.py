@@ -31,14 +31,28 @@ class TooltipReleaseSuccessorTests(unittest.TestCase):
   with self.assertRaises(ValueError):run(synthetic,reviewer='4'*64)
  def test_provider_visual_review_pending_and_synthetic_scope(self):
   with patch.object(gate,'PROVIDER_REVIEW_SHA256',None),self.assertRaisesRegex(ValueError,'PENDING independent provider visual review'):gate.validate_provider_visual_review(ROOT)
-  review={'schema':'timeline-provider-visual-review-v1','scope':'provider_desktop_phone_pixels','verdict':'CONCUR_WITHIN_BOUNDED_VISUAL_SCOPE','reviewer_commitment':'4'*64,'receipt_sha256':'5'*64,'page_sha256':tooltip.PAGE_AFTER,'artifact_sha256':'6'*64,'report_sha256':'7'*64,'desktop_screenshot_sha256':'8'*64,'phone_screenshot_sha256':'9'*64}
-  def run(row,reviewer='4'*64,implementer='3'*64):
+  review={'schema':'timeline-provider-visual-review-v1','scope':'provider_desktop_phone_pixels','verdict':'CONCUR_WITHIN_BOUNDED_VISUAL_SCOPE','reviewer_commitment':'4'*64,'receipt_sha256':'5'*64,'run_id':123456,'timeline_job_id':123457,'artifact_id':123458,'head':'a'*40,'checkout':'c'*40,'page_sha256':tooltip.PAGE_AFTER,'artifact_sha256':'6'*64,'report_sha256':'7'*64,'desktop_screenshot_sha256':'8'*64,'phone_screenshot_sha256':'9'*64,'raw_status':'Historical run and desktop diagnostic FAIL; phone diagnostic PASS. No historical job result was changed.','observed_diagnostic':{'source_commit':'a'*40,'sha256':'b'*64},'offline_evaluation':{'classifier_sha256':'d'*64,'receipt_sha256':'e'*64,'desktop_classification':'MATCHED_RENDERER_CANCELLATION'}}
+  def subject_of(row):
+   result={k:row.get(k) for k in ('run_id','timeline_job_id','artifact_id','head','checkout','page_sha256','artifact_sha256','report_sha256','desktop_screenshot_sha256','phone_screenshot_sha256','raw_status')}
+   diag=row['observed_diagnostic'];offline=row['offline_evaluation'];result.update({'diagnostic_source_commit':diag.get('source_commit'),'diagnostic_sha256':diag.get('sha256'),'offline_classifier_sha256':offline.get('classifier_sha256'),'offline_receipt_sha256':offline.get('receipt_sha256'),'desktop_correlation':offline.get('desktop_classification')});return result
+  subject_pin=old.canonical(subject_of(review))
+  def run(row,reviewer='4'*64,implementer='3'*64,pin=subject_pin):
    raw=json.dumps(row).encode()
-   with patch.object(mobile,'source',return_value=raw),patch.object(gate,'PROVIDER_REVIEW_SHA256',gate.sha(raw)),patch.object(gate,'PROVIDER_REVIEWER_COMMITMENT',reviewer),patch.object(gate,'PROVIDER_RECEIPT_SHA256','5'*64),patch.object(gate,'MOBILE_IMPLEMENTER_COMMITMENT',implementer):return gate.validate_provider_visual_review(ROOT)
+   with patch.object(mobile,'source',return_value=raw),patch.object(gate,'PROVIDER_REVIEW_SHA256',gate.sha(raw)),patch.object(gate,'PROVIDER_REVIEWER_COMMITMENT',reviewer),patch.object(gate,'PROVIDER_RECEIPT_SHA256','5'*64),patch.object(gate,'PROVIDER_SUBJECT_SHA256',pin),patch.object(gate,'MOBILE_IMPLEMENTER_COMMITMENT',implementer):return gate.validate_provider_visual_review(ROOT)
   self.assertEqual(run(review),review)
-  for key,value in [('verdict','RELEASE_APPROVED'),('scope','all_pages'),('page_sha256','0'*64),('reviewer_commitment','0'*64),('receipt_sha256','0'*64),('artifact_sha256','invalid'),('report_sha256',None),('desktop_screenshot_sha256',None),('phone_screenshot_sha256','0')]:
+  for key,value in [('verdict','RELEASE_APPROVED'),('scope','all_pages'),('reviewer_commitment','0'*64),('receipt_sha256','0'*64),('observed_diagnostic',None),('offline_evaluation',None)]:
    changed=copy.deepcopy(review);changed[key]=value
    with self.subTest(field=key),self.assertRaises(ValueError):run(changed)
+  for key,value in [('run_id',999999),('timeline_job_id',999999),('artifact_id',999999),('head','0'*40),('checkout','0'*40),('page_sha256','0'*64),('artifact_sha256','0'*64),('report_sha256','0'*64),('desktop_screenshot_sha256','0'*64),('phone_screenshot_sha256','0'*64),('raw_status','PASS')]:
+   changed=copy.deepcopy(review);changed[key]=value
+   with self.subTest(subject_field=key),self.assertRaises(ValueError):run(changed)
+  for parent,key,value in [('observed_diagnostic','sha256','0'*64),('observed_diagnostic','source_commit','0'*40),('offline_evaluation','classifier_sha256','0'*64),('offline_evaluation','receipt_sha256','0'*64),('offline_evaluation','desktop_classification','UNRESOLVED')]:
+   changed=copy.deepcopy(review);changed[parent][key]=value
+   with self.subTest(subject_field=key),self.assertRaises(ValueError):run(changed)
+  # A self-consistent but malformed subject is rejected even when its digest is pinned.
+  for key,value in [('run_id','oops'),('timeline_job_id',True),('head','not-a-commit'),('page_sha256','0'*64),('raw_status','PASS')]:
+   changed=copy.deepcopy(review);changed[key]=value
+   with self.subTest(invalid_subject_field=key),self.assertRaises(ValueError):run(changed,pin=old.canonical(subject_of(changed)))
   with self.assertRaises(ValueError):run(review,implementer='4'*64)
   with self.assertRaises(ValueError):run(review,reviewer='not-a-hash')
 if __name__=='__main__':unittest.main()
