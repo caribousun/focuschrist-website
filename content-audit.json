@@ -1100,7 +1100,19 @@
         "chapter_picture_review": "docs/jesus-journey/chapter-picture-source-review-20260923.json"
       },
       "chapter_picture_review": "docs/jesus-journey/chapter-picture-source-review-20260923.json",
-      "paragraph_rhythm_review": "docs/jesus-journey/paragraph-rhythm-source-review-20260923.json"
+      "paragraph_rhythm_review": "docs/jesus-journey/paragraph-rhythm-source-review-20260923.json",
+      "reviewed_current_timeline_sha256": "dd071c356cb85d33bea1b717447446a2ab9f7f49d2fcb8e4eb4e458b3a7d6078",
+      "current_timeline_review": {
+        "reviewed_source_sha256": "dd071c356cb85d33bea1b717447446a2ab9f7f49d2fcb8e4eb4e458b3a7d6078",
+        "visible_text_sha256": "5b761139d1cf850555f1551a9c22ab16e4f4ad14fefed10108accbf20f99cd4c",
+        "reviewed_at": "2026-10-29T04:23:44Z",
+        "scope": "source_and_destination_context_only",
+        "evidence": {
+          "path": "docs/timeline-controls-successor/current-content-review.json",
+          "sha256": "ee25fb9c83e81ec24580493de7a29d8f9ce94022c1b6cfc92bdebbc99acd4875",
+          "bytes": 1381
+        }
+      }
     },
     {
       "path": "answers/look-unto-me-doctrine-and-covenants-6-36.html",
@@ -10420,6 +10432,18 @@
           "reviewed_source_sha256": "d427e7f8e578b880a6b512bdfbe9b455c9192026a7e9e80893afc6559c8f6494",
           "review_standard": "Bounded existing-source import and finished interface review by Albert, Fermi and Newton; exact delivery specification and independent receipts in docs/world-scripture-import. Existing730 records and their original source qualifications retained; modeled geography remains hypothetical and unplaced entries remain unplaced. Verified denotes this scoped import, attribution, wording and behavior review, not newly comprehensive verification of every historical date or assertion. Existing193 Commons photographs retain individual attribution records and licenses; no invented generation preflight. Static wording, inline scripts and full page bytes bound separately. Release and live verification remain separate."
         }
+      },
+      "reviewed_current_timeline_sha256": "016e9896db70ff0a8a142503f289f2e0cbd2f4d96b73d667247dbb2a2370ceef",
+      "current_timeline_review": {
+        "reviewed_source_sha256": "016e9896db70ff0a8a142503f289f2e0cbd2f4d96b73d667247dbb2a2370ceef",
+        "visible_text_sha256": "b44f8e133122d76e96e87b364eb0a3465011bd04ad55f403341a0b3bcc359b2d",
+        "reviewed_at": "2026-10-29T04:23:44Z",
+        "scope": "source_and_destination_context_only",
+        "evidence": {
+          "path": "docs/timeline-controls-successor/current-content-review.json",
+          "sha256": "ee25fb9c83e81ec24580493de7a29d8f9ce94022c1b6cfc92bdebbc99acd4875",
+          "bytes": 1381
+        }
       }
     },
     {
@@ -10632,12 +10656,12 @@
     {
       "path": "timelines/adams-1881-chart.html",
       "status": "verified",
-      "published_text_sha256": "db6e5178945882157a01a758b89577ef11f4f8a1f431cef8a7526a598c8c3b14",
-      "reviewed_source_sha256": "b90c19dd9f77c3966843b41d514319816a194deee86b87235909f6b2c742130c",
-      "reviewed_on": "2026-10-27",
+      "published_text_sha256": "9fcedb2e27757c2ad697917e1d99ce7bf08add95607b0a44b6ae46c972e7acf7",
+      "reviewed_source_sha256": "43f19fc23f4fd17e1c9fdb54003feab2885565c97b1a98abc6aefb092ec06944",
+      "reviewed_on": "2026-10-29",
       "actual_author": "Current ledger assembly; Fermi and Newton independently reviewed the finished prose",
       "review_scope": "Current static visitor copy, metadata, captions and accessible labels; exact raw source and published-text hashes. Rendered and release acceptance are separate.",
-      "review_standard": "The exact current static visitor prose was independently reviewed by Fermi and Newton under the current warm-prose and disclosure mandates. Fermi reviewed accessible labels; Newton reviewed visible labels and image alt attributes. A separate Newton review covered title, description and Open Graph metadata voice, reusing prior research for factual support. The chart is identified as an 1881 historical artifact, not a modern verified chronology or official Church teaching. Attribution and U.S. public-domain reproduction status are supported by the cited Commons source, which notes other jurisdictions may restrict reuse; Gold Edition is interface wording, not an authenticated archival designation. Existing chart pixels are referenced, not new artwork. Prior unchanged research is reused; image pixels, inline scripts, runtime, rendered context and release acceptance remain separate. A separate Newton source-voice review inspected nonempty static alt, aria-label, placeholder and title attributes; dynamic attributes, usability and full accessibility remain separate.",
+      "review_standard": "The exact current static visitor prose was independently reviewed by Fermi and Newton under the current warm-prose and disclosure mandates. Fermi reviewed accessible labels; Newton reviewed visible labels and image alt attributes. A separate Newton review covered title, description and Open Graph metadata voice, reusing prior research for factual support. The chart is identified as an 1881 historical artifact, not a modern verified chronology or official Church teaching. Attribution and U.S. public-domain reproduction status are supported by the cited Commons source, which notes other jurisdictions may restrict reuse; Gold Edition is interface wording, not an authenticated archival designation. Existing chart pixels are referenced, not new artwork. Prior unchanged research is reused; image pixels, inline scripts, runtime, rendered context and release acceptance remain separate. A separate Newton source-voice review inspected nonempty static alt, aria-label, placeholder and title attributes; dynamic attributes, usability and full accessibility remain separate. Bounded independent source review covers the removal of routine tile and source-resolution diagnostics; prior prose and image reviews remain historical. Rendered review and release are separate.",
       "authoritative_sources": [
         "https://commons.wikimedia.org/wiki/File:Adams_Synchronological_Chart,_1881.jpg"
       ],
@@ -10663,7 +10687,54 @@
           "bytes": 2672,
           "sha256": "4696b6e883b57b3fb5a34c78ffdf45bd0d969ac640b1e593c13c73b1aac06639"
         }
-      ]
+      ],
+      "prior_timeline_diagnostic_review": {
+        "path": "timelines/adams-1881-chart.html",
+        "status": "verified",
+        "published_text_sha256": "db6e5178945882157a01a758b89577ef11f4f8a1f431cef8a7526a598c8c3b14",
+        "reviewed_source_sha256": "b90c19dd9f77c3966843b41d514319816a194deee86b87235909f6b2c742130c",
+        "reviewed_on": "2026-10-27",
+        "actual_author": "Current ledger assembly; Fermi and Newton independently reviewed the finished prose",
+        "review_scope": "Current static visitor copy, metadata, captions and accessible labels; exact raw source and published-text hashes. Rendered and release acceptance are separate.",
+        "review_standard": "The exact current static visitor prose was independently reviewed by Fermi and Newton under the current warm-prose and disclosure mandates. Fermi reviewed accessible labels; Newton reviewed visible labels and image alt attributes. A separate Newton review covered title, description and Open Graph metadata voice, reusing prior research for factual support. The chart is identified as an 1881 historical artifact, not a modern verified chronology or official Church teaching. Attribution and U.S. public-domain reproduction status are supported by the cited Commons source, which notes other jurisdictions may restrict reuse; Gold Edition is interface wording, not an authenticated archival designation. Existing chart pixels are referenced, not new artwork. Prior unchanged research is reused; image pixels, inline scripts, runtime, rendered context and release acceptance remain separate. A separate Newton source-voice review inspected nonempty static alt, aria-label, placeholder and title attributes; dynamic attributes, usability and full accessibility remain separate.",
+        "authoritative_sources": [
+          "https://commons.wikimedia.org/wiki/File:Adams_Synchronological_Chart,_1881.jpg"
+        ],
+        "rendered_review_status": "SEPARATE_RELEASE_GATE",
+        "review_evidence": [
+          {
+            "path": "docs/emma-hub-content-audit/fermi-current-adams-copy-review.json",
+            "bytes": 3021,
+            "sha256": "2810f9bcabd24ba8ea0357e39d60ab39cdf1387927e316a670c3ef6ce0e94af2"
+          },
+          {
+            "path": "docs/emma-hub-content-audit/newton-current-copy-review.json",
+            "bytes": 4057,
+            "sha256": "87c7641b58c17d4337f515f2ab3d7141d5bac49751939f2e8ff1bddf9876832c"
+          },
+          {
+            "path": "docs/emma-hub-content-audit/newton-current-metadata-review.json",
+            "bytes": 3299,
+            "sha256": "940c5f4c92639bf37de9ee213087991ff5b8a321900cfa4bf188e1190025ed0f"
+          },
+          {
+            "path": "docs/emma-hub-content-audit/newton-current-attribute-review.json",
+            "bytes": 2672,
+            "sha256": "4696b6e883b57b3fb5a34c78ffdf45bd0d969ac640b1e593c13c73b1aac06639"
+          }
+        ]
+      },
+      "current_timeline_review": {
+        "reviewed_source_sha256": "43f19fc23f4fd17e1c9fdb54003feab2885565c97b1a98abc6aefb092ec06944",
+        "visible_text_sha256": "9fcedb2e27757c2ad697917e1d99ce7bf08add95607b0a44b6ae46c972e7acf7",
+        "reviewed_at": "2026-10-29T04:23:44Z",
+        "scope": "source_and_destination_context_only",
+        "evidence": {
+          "path": "docs/timeline-controls-successor/current-content-review.json",
+          "sha256": "ee25fb9c83e81ec24580493de7a29d8f9ce94022c1b6cfc92bdebbc99acd4875",
+          "bytes": 1381
+        }
+      }
     },
     {
       "path": "timelines/adams-1881-introduction.html",
