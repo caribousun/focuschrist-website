@@ -18,7 +18,8 @@ CODE_REVIEW='docs/timeline-mobile-collapse/current-code-review.json'
 MOBILE_CODE_REVIEW_SHA256=None
 MOBILE_CODE_REVIEWER_COMMITMENT=None
 MOBILE_CODE_REVIEW_RECEIPT_SHA256=None
-PIN_NAMES=('MOBILE_CODE_REVIEW_SHA256','MOBILE_CODE_REVIEWER_COMMITMENT','MOBILE_CODE_REVIEW_RECEIPT_SHA256')
+MOBILE_IMPLEMENTER_COMMITMENT=None
+PIN_NAMES=('MOBILE_CODE_REVIEW_SHA256','MOBILE_CODE_REVIEWER_COMMITMENT','MOBILE_CODE_REVIEW_RECEIPT_SHA256','MOBILE_IMPLEMENTER_COMMITMENT')
 def sha(raw):return hashlib.sha256(raw).hexdigest()
 def validhash(value):return isinstance(value,str) and re.fullmatch(r'[0-9a-f]{64}',value) is not None
 def require(value,message):
@@ -41,10 +42,13 @@ def project_reviewed_tree(root,current):
  root=Path(root).resolve();mobile.validate_albert_content_review(root);mobile.validate_newton_visual_review(root)
  prior=source(root,PRIOR_CODE_REVIEW);require(sha(prior)==PRIOR_CODE_REVIEW_SHA256,'Prior bounded mobile code review changed')
  require(all(validhash(x) for x in (MOBILE_CODE_REVIEW_SHA256,MOBILE_CODE_REVIEWER_COMMITMENT,MOBILE_CODE_REVIEW_RECEIPT_SHA256)),'PENDING independently verified current mobile code review')
+ require(validhash(MOBILE_IMPLEMENTER_COMMITMENT),'PENDING independently verified mobile implementer commitment')
+ require(MOBILE_CODE_REVIEWER_COMMITMENT!=MOBILE_IMPLEMENTER_COMMITMENT,'Mobile code reviewer must be distinct from implementer')
  raw=source(root,CODE_REVIEW);require(sha(raw)==MOBILE_CODE_REVIEW_SHA256,'Current mobile code review changed')
  review=json.loads(raw)
  require(review.get('schema')=='timeline-mobile-current-code-review-v1' and review.get('scope')=='mobile_visual_gate_and_tool_tree_successor' and review.get('verdict')=='CONCUR_WITHIN_BOUNDED_CODE_SCOPE','Current mobile code review scope differs')
  require(review.get('reviewer_commitment')==MOBILE_CODE_REVIEWER_COMMITMENT and review.get('receipt_sha256')==MOBILE_CODE_REVIEW_RECEIPT_SHA256,'Current mobile reviewer evidence differs')
+ require(review.get('implementer_commitment')==MOBILE_IMPLEMENTER_COMMITMENT,'Current mobile implementer association differs')
  require(review.get('page_sha256')==mobile.AFTER and review.get('controller_sha256')==mobile.CONTROLLER_SHA and review.get('browser_test_sha256')==mobile.BROWSER_TEST_SHA,'Current mobile reviewed subject differs')
  require(review.get('albert_review_sha256')==mobile.ALBERT_CONTENT_REVIEW_SHA and review.get('newton_review_sha256')==mobile.NEWTON_VISUAL_REVIEW_SHA and review.get('prior_code_review_sha256')==PRIOR_CODE_REVIEW_SHA256,'Current mobile review evidence differs')
  require(review.get('tree_manifest_sha256')==TREE_MANIFEST_SHA256 and review.get('current_tool_tree_sha256')==old.canonical(current),'Current reviewed mobile tool tree differs')
