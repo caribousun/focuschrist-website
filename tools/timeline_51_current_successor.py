@@ -124,7 +124,12 @@ def prepare(root):
  require(old.timestamp(code.get('reviewed_at'))>=old.timestamp(index_review.get('reviewed_at')),'Code review predates index review')
  current=old.tool_tree(root)
  from timeline_world_mobile_successor import PAGE as MOBILE_PAGE, AFTER as MOBILE_AFTER
- if sha(prior_search.source(root,MOBILE_PAGE))==MOBILE_AFTER:
+ from timeline_world_tooltip_visual_successor import PAGE_AFTER as TOOLTIP_AFTER
+ current_page=sha(prior_search.source(root,MOBILE_PAGE))
+ if current_page==TOOLTIP_AFTER:
+  from timeline_world_tooltip_release_successor import project_reviewed_tree as project_tooltip_reviewed_tree
+  current=project_tooltip_reviewed_tree(root,current)
+ if current_page in (MOBILE_AFTER,TOOLTIP_AFTER):
   from timeline_world_mobile_release_successor import project_reviewed_tree
   current=project_reviewed_tree(root,current)
  require(code.get('tool_tree_sha256')==old.canonical(current),'Current reviewed tool tree differs')

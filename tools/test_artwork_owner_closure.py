@@ -373,6 +373,9 @@ class ActualJourneyCensusTests(unittest.TestCase):
         elif __import__('timeline_world_mobile_release_successor').MOBILE_IMPLEMENTER_COMMITMENT is None:
             with self.assertRaisesRegex(ValueError,'PENDING independently verified mobile implementer commitment'):
                 self.journey.check_review(self.root)
+        elif __import__('timeline_world_tooltip_release_successor').CODE_REVIEW_SHA256 is None:
+            with self.assertRaisesRegex(ValueError,'PENDING independent final tooltip integration code review'):
+                self.journey.check_review(self.root)
         else:
             self.journey.check_review(self.root)
 

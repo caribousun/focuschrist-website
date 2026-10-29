@@ -62,7 +62,8 @@ def check(root=ROOT):
   if name=='timelines/world-and-scripture-timeline.html':
    from timeline_world_controls_successor import restore as restore_world_controls, AFTER as WORLD_AFTER
    from timeline_world_mobile_successor import AFTER as MOBILE_AFTER
-   if sha(raw) in (WORLD_AFTER, MOBILE_AFTER): raw=restore_world_controls(raw,root)
+   from timeline_world_tooltip_visual_successor import PAGE_AFTER as TOOLTIP_AFTER
+   if sha(raw) in (WORLD_AFTER, MOBILE_AFTER, TOOLTIP_AFTER): raw=restore_world_controls(raw,root)
   require(sha(raw)==row['after_sha256'],'Changed settings page: '+name)
   require(sha(restore(name,raw,root))==BEFORE[name],'Settings predecessor mismatch');hashes[name]=sha(raw)
  require(APPROVED_REVIEWS is not None,'Settings finished reviews PENDING')

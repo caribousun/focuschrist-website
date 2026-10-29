@@ -23,6 +23,9 @@ def source(root,name):
  assert p.is_file() and p.resolve().is_relative_to(root),'Missing or unsafe mobile source'
  return p.read_bytes()
 def restore(raw,root=ROOT):
+ from timeline_world_tooltip_visual_successor import PAGE_AFTER as TOOLTIP_AFTER,validate_code_review
+ if sha(raw)==TOOLTIP_AFTER:
+  raw=validate_code_review(root)['visual_review']['previous_sources'][PAGE]
  manifest=source(root,MANIFEST);assert sha(manifest)==MANIFEST_SHA,'Mobile source manifest changed'
  row=json.loads(manifest);assert set(row)=={'schema','path','before_sha256','after_sha256','controller_path','controller_sha256','changes'}
  assert row['schema']==1 and row['path']==PAGE and row['before_sha256']==BEFORE and row['after_sha256']==AFTER
@@ -53,7 +56,10 @@ def validate_albert_content_review(root=ROOT):
 def validate_newton_visual_review(root=ROOT):
  """Bind Newton's actual bounded visual review, not owner or release approval."""
  restore(source(root,PAGE),root)
- assert sha(source(root,BROWSER_TEST))==BROWSER_TEST_SHA,'Reviewed mobile browser test changed'
+ test=source(root,BROWSER_TEST)
+ from timeline_world_tooltip_visual_successor import TEST_AFTER as TOOLTIP_TEST_AFTER,validate_code_review
+ if sha(test)==TOOLTIP_TEST_AFTER:test=validate_code_review(root)['visual_review']['previous_sources'][BROWSER_TEST]
+ assert sha(test)==BROWSER_TEST_SHA,'Reviewed mobile browser test changed'
  raw=source(root,NEWTON_VISUAL_REVIEW);assert sha(raw)==NEWTON_VISUAL_REVIEW_SHA,'Newton visual review changed'
  review=json.loads(raw)
  assert review.get('schema')==1 and review.get('reviewer_role')=='Newton independent visual reviewer'

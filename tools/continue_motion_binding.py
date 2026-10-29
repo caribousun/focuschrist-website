@@ -47,7 +47,8 @@ def restore(name,data,root=ROOT):
     elif name == 'timelines/world-and-scripture-timeline.html':
         from timeline_world_controls_successor import AFTER as WORLD_AFTER, restore as restore_world_controls
         from timeline_world_mobile_successor import AFTER as MOBILE_AFTER
-        if sha(data) in (WORLD_AFTER, MOBILE_AFTER): data=restore_world_controls(data,root)
+        from timeline_world_tooltip_visual_successor import PAGE_AFTER as TOOLTIP_AFTER
+        if sha(data) in (WORLD_AFTER, MOBILE_AFTER, TOOLTIP_AFTER): data=restore_world_controls(data,root)
     from owner_integration_successor import restore as restore_owner
     data=restore_owner(name,data,root)
     from emma_hub_citation_successor import restore as restore_hub_citations
@@ -162,7 +163,8 @@ def check(root=ROOT):
         elif name == 'timelines/world-and-scripture-timeline.html':
             from timeline_world_controls_successor import restore as restore_world_controls, BEFORE as WORLD_BEFORE, AFTER as WORLD_AFTER
             from timeline_world_mobile_successor import AFTER as MOBILE_AFTER
-            if sha(source) in (WORLD_AFTER, MOBILE_AFTER): source=restore_world_controls(source,root)
+            from timeline_world_tooltip_visual_successor import PAGE_AFTER as TOOLTIP_AFTER
+            if sha(source) in (WORLD_AFTER, MOBILE_AFTER, TOOLTIP_AFTER): source=restore_world_controls(source,root)
             else: require(sha(source)==WORLD_BEFORE,'Unknown World controls source')
         historical_current=restore_hub_citations(name,restore_adams_delivery(name,restore_owner(name,source,root),root),root)
         current=restore_world(name,restore_settings(name,restore_close(name,restore_hand(name,restore_bank(name,restore_gate(name,restore_eval(name,restore_citation(name,restore_legacy(name,restore_decoupling(name,restore_scroll(name,restore_pioneer_scroll(name,restore_bypass(name,restore_emma(name,historical_current,root),root),root),root),root),root),root),root),root),root),root),root),root),root)

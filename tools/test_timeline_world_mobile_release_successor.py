@@ -5,9 +5,10 @@ from unittest.mock import patch
 import timeline_current_index_closure as old
 import timeline_world_mobile_release_successor as gate
 import timeline_world_mobile_successor as mobile
+import timeline_world_tooltip_release_successor as tooltip_release
 ROOT=Path(__file__).resolve().parents[1]
 class MobileReleaseSuccessorTests(unittest.TestCase):
- def setUp(self):self.current=old.tool_tree(ROOT)
+ def setUp(self):self.current=tooltip_release.project_tree(ROOT,old.tool_tree(ROOT))
  def test_exact_historical_tree_and_unknown_changes_fail(self):
   previous=gate.project_tree(ROOT,self.current);self.assertEqual(old.canonical(previous),gate.PRIOR_TREE)
   with self.assertRaisesRegex(ValueError,'historical tool tree differs'):gate.project_tree(ROOT,dict(self.current,**{'tools/unreviewed.py':'0'*64}))
@@ -34,6 +35,7 @@ class MobileReleaseSuccessorTests(unittest.TestCase):
   raw=json.dumps(synthetic).encode()
   def read(root,name):return raw if name==gate.CODE_REVIEW else original(root,name)
   for missing in ('MOBILE_IMPLEMENTER_COMMITMENT',):
-   with self.subTest(missing=missing),patch.object(gate,'source',side_effect=read),patch.object(gate,'MOBILE_CODE_REVIEW_SHA256',gate.sha(raw)),patch.object(gate,'MOBILE_CODE_REVIEWER_COMMITMENT','1'*64),patch.object(gate,'MOBILE_CODE_REVIEW_RECEIPT_SHA256','2'*64),patch.object(gate,'MOBILE_IMPLEMENTER_COMMITMENT','3'*64),patch.object(gate,missing,None),self.assertRaisesRegex(ValueError,'PENDING independently verified mobile implementer commitment'):
+   # Isolate the historical guard; actual successor reviews are exercised above.
+   with self.subTest(missing=missing),patch.object(mobile,'validate_albert_content_review',return_value={}),patch.object(mobile,'validate_newton_visual_review',return_value={}),patch.object(gate,'source',side_effect=read),patch.object(gate,'MOBILE_CODE_REVIEW_SHA256',gate.sha(raw)),patch.object(gate,'MOBILE_CODE_REVIEWER_COMMITMENT','1'*64),patch.object(gate,'MOBILE_CODE_REVIEW_RECEIPT_SHA256','2'*64),patch.object(gate,'MOBILE_IMPLEMENTER_COMMITMENT','3'*64),patch.object(gate,missing,None),self.assertRaisesRegex(ValueError,'PENDING independently verified mobile implementer commitment'):
     gate.project_reviewed_tree(ROOT,self.current)
 if __name__=='__main__':unittest.main()

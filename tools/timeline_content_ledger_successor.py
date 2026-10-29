@@ -31,7 +31,8 @@ def restore(raw,root=ROOT):
   raw_source=source(root,name)
   if name=='timelines/world-and-scripture-timeline.html':
    from timeline_world_mobile_successor import AFTER as MOBILE_AFTER, restore as restore_mobile
-   if sha(raw_source)==MOBILE_AFTER:raw_source=restore_mobile(raw_source,root)
+   from timeline_world_tooltip_visual_successor import PAGE_AFTER as TOOLTIP_AFTER
+   if sha(raw_source) in (MOBILE_AFTER,TOOLTIP_AFTER):raw_source=restore_mobile(raw_source,root)
   assert sha(raw_source)==review['source_sha256'][name],'Current content source changed'
   if name==ADAMS:
    assert row['reviewed_source_sha256']==review['source_sha256'][name] and row['published_text_sha256']==review['visible_text_sha256'][name]

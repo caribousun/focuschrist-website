@@ -26,7 +26,8 @@ def restore(raw, root=ROOT):
     assert record['schema'] == 1 and record['path'] == PAGE
     assert record['before_sha256'] == BEFORE and record['after_sha256'] == AFTER
     from timeline_world_mobile_successor import AFTER as MOBILE_AFTER, restore as restore_mobile
-    if sha(raw) == MOBILE_AFTER: raw = restore_mobile(raw, root)
+    from timeline_world_tooltip_visual_successor import PAGE_AFTER as TOOLTIP_AFTER
+    if sha(raw) in (MOBILE_AFTER, TOOLTIP_AFTER): raw = restore_mobile(raw, root)
     assert sha(raw) == AFTER, 'Unreviewed World controls source'
     assert len(record['changes']) == 7
     for item in reversed(record['changes']):

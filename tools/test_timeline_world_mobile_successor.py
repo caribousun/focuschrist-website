@@ -18,7 +18,7 @@ class WorldMobileSuccessorTests(unittest.TestCase):
   def changed(root,name):
    data=original(root,name)
    return data+b' ' if name==mobile.CONTROLLER else data
-  with patch.object(mobile,'source',side_effect=changed),self.assertRaisesRegex(AssertionError,'controller changed'):mobile.restore(current)
+  with patch.object(mobile,'source',side_effect=changed),self.assertRaisesRegex((AssertionError,ValueError),'[Cc]ontroller changed'):mobile.restore(current)
  def test_albert_wording_review_is_exact_and_does_not_claim_render_acceptance(self):
   review=mobile.validate_albert_content_review()
   self.assertEqual(review['verdict'],'CONCUR_UI_WORDING_AND_TARGET_SCOPE_ONLY')
@@ -50,6 +50,6 @@ class WorldMobileSuccessorTests(unittest.TestCase):
     mobile.validate_newton_visual_review()
   def changed_test(root,name):
    data=original(root,name);return data+b' ' if name==mobile.BROWSER_TEST else data
-  with patch.object(mobile,'source',side_effect=changed_test),self.assertRaisesRegex(AssertionError,'browser test changed'):
+  with patch.object(mobile,'source',side_effect=changed_test),self.assertRaisesRegex((AssertionError,ValueError),'browser test changed|Unreviewed tooltip source'):
    mobile.validate_newton_visual_review()
 if __name__=='__main__':unittest.main()
