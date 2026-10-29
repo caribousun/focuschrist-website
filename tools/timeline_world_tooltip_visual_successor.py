@@ -67,8 +67,8 @@ def validate_code_review(root=ROOT):
  if review.get('visual_review_sha256')!=REVIEW_SHA or review.get('source_manifest_sha256')!=MANIFEST_SHA:raise ValueError('Tooltip code review inputs differ')
  if review.get('successor_sha256')!='36ee1be79127890a2d6b0eb46ee63bedf82ac92b5e375429d5cfcbd24a5516f9' or review.get('successor_test_sha256')!='87c9c12e65d4b8a2d257ee645a4dba7b411c70f538b987ed6e328bde08a332f2':raise ValueError('Tooltip code review historic inputs differ')
  if review.get('reviewer_commitment')!='25275b95cc2c78a6aef8f6ac29e2400b0fac0290ab5ec12f9946448301ee8133' or review.get('receipt_sha256')!='04f2508f1dd2aaf7d6973e7864c8bd60ec17c28e1da5a637fab702bb9534b19a' or review.get('reviewed_at')!='2026-10-29T18:57:42Z':raise ValueError('Tooltip code reviewer differs')
- from timeline_world_mobile_release_successor import MOBILE_IMPLEMENTER_COMMITMENT
- if not MOBILE_IMPLEMENTER_COMMITMENT or review['reviewer_commitment']==MOBILE_IMPLEMENTER_COMMITMENT:raise ValueError('Tooltip code reviewer must differ from implementer')
+ from timeline_world_mobile_release_successor import MOBILE_IMPLEMENTER_COMMITMENT,validhash
+ if not validhash(MOBILE_IMPLEMENTER_COMMITMENT) or review['reviewer_commitment']==MOBILE_IMPLEMENTER_COMMITMENT:raise ValueError('Tooltip code reviewer must differ from implementer with a valid commitment')
  limits=review.get('limits',[])
  if not any('not yet wired into release gate' in line for line in limits) or not any('provider' in line and 'verification' in line for line in limits):raise ValueError('Tooltip code review limits missing')
  return {'code_review':review,'visual_review':visual}

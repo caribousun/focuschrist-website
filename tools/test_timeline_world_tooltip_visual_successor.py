@@ -31,6 +31,8 @@ class TooltipVisualSuccessorTests(unittest.TestCase):
    return raw+b' ' if name==gate.CODE_REVIEW else raw
   with patch.object(mobile,'source',side_effect=altered),self.assertRaisesRegex(ValueError,'Tooltip code review changed'):gate.validate_code_review()
   with patch('timeline_world_mobile_release_successor.MOBILE_IMPLEMENTER_COMMITMENT',review['reviewer_commitment']),self.assertRaisesRegex(ValueError,'must differ from implementer'):gate.validate_code_review()
+  for invalid in (None,'','not-a-hash','A'*64,'0'*63):
+   with self.subTest(implementer=invalid),patch('timeline_world_mobile_release_successor.MOBILE_IMPLEMENTER_COMMITMENT',invalid),self.assertRaisesRegex(ValueError,'valid commitment'):gate.validate_code_review()
   receipt=json.loads(original(ROOT,gate.REVIEW))
   for field in ('candidate','hosted_evidence','limits'):
    record=copy.deepcopy(receipt)
