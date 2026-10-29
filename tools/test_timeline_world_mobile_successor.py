@@ -25,6 +25,22 @@ class WorldMobileSuccessorTests(unittest.TestCase):
   self.assertIn('not_render_acceptance',review['limits'])
   with patch.object(mobile,'ALBERT_CONTENT_REVIEW_SHA','0'*64),self.assertRaisesRegex(AssertionError,'review changed'):
    mobile.validate_albert_content_review()
+ def test_standalone_scripts_reject_unknown_missing_duplicate_and_reordered_sources(self):
+  import ast
+  from bs4 import BeautifulSoup
+  from section_panel_surface_qa import assert_standalone
+  source=(ROOT/'tools/unified_opening_qa.py').read_text();tree=ast.parse(source)
+  matches=[n for n in tree.body if isinstance(n,ast.Assert) and "standalone_doc.select('script[src]')" in ast.unparse(n.test)]
+  self.assertEqual(len(matches),1)
+  expression=compile(ast.Expression(matches[0].test),'<actual standalone script contract>','eval')
+  current=(ROOT/mobile.PAGE).read_bytes();doc=BeautifulSoup(current,'html.parser')
+  self.assertTrue(eval(expression,{'standalone_doc':doc}));assert_standalone(mobile.PAGE,current)
+  search=b'/site-search.js?v=20260919-focused-answers-1';controller=b'/timeline-mobile-collapse.js?v=20261029-1';header=b'/header-scroll.js?v=20261021-continue-motion-1'
+  for old,new in ((header,b''),(header,b'/unknown.js'),(header,b'/header-scroll.js?v=unknown'),(controller,b'/unknown.js'),(header,header+b'"></script><script src="'+header),(header,header+b'"></script><script src="/unknown.js'),(controller,header),(search,controller)):
+   with self.subTest(old=old,new=new):
+    self.assertEqual(current.count(old),1);changed=current.replace(old,new,1)
+    self.assertFalse(eval(expression,{'standalone_doc':BeautifulSoup(changed,'html.parser')}))
+    with self.assertRaises((AssertionError,ValueError)):assert_standalone(mobile.PAGE,changed)
  def test_actual_newton_visual_review_retains_its_limits(self):
   review=mobile.validate_newton_visual_review()
   self.assertEqual(review['candidate']['head'],'4680e7f9271aa6f85c0509af447e5245d3245555')

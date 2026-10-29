@@ -56,7 +56,7 @@ for route in sorted(EMMA_STORY_ROUTES):
 assert_standalone(STANDALONE_ROUTE, (ROOT / STANDALONE_ROUTE).read_bytes())
 standalone_doc = BeautifulSoup((ROOT / STANDALONE_ROUTE).read_text(encoding='utf8'), 'html.parser')
 assert standalone_doc.select_one('section.topsec#top img[alt]'), 'Standalone illustrated opening missing'
-assert [x.get('src') for x in standalone_doc.select('script[src]')] == ['/site-search.js?v=20260919-focused-answers-1','/header-scroll.js?v=20261021-continue-motion-1']
+assert [x.get('src') for x in standalone_doc.select('script[src]')] == ['/site-search.js?v=20260919-focused-answers-1','/timeline-mobile-collapse.js?v=20261029-1','/header-scroll.js?v=20261021-continue-motion-1']
 common = (ROOT / 'site-common.js').read_text(encoding='utf8')
 assert common.count("relativeAssetHref('unified-opening.css?v=20261006-balanced-opening-1')") == 1
 assert common.count("relativeAssetHref('unified-opening.js?v=20261006-introductions-1')") == 1

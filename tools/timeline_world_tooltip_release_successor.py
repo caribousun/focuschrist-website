@@ -13,12 +13,12 @@ import timeline_world_mobile_successor as mobile
 from timeline_world_mobile_release_successor import MOBILE_IMPLEMENTER_COMMITMENT
 ROOT=Path(__file__).resolve().parents[1]
 MANIFEST='docs/timeline-mobile-collapse/tooltip-tool-tree.json'
-MANIFEST_SHA256='5a4deb7627d333842606f0de24cbf3ba633b892957466034de4ae99948765ca4'
+MANIFEST_SHA256='ccf99722bdfa4be5d0fed8fbbcb7d660a58cd8a9640f278ebb19a170a9a40f7d'
 PRIOR_TREE='69f383f0133a0e52ebe77f1762fd8f144acd32e3df3278bdff0c90df135cd1bc'
 CODE_REVIEW='docs/timeline-mobile-collapse/tooltip-final-integration-code-review.json'
-CODE_REVIEW_SHA256='de406f193dda251b6f8c656d13d1550990201317e5baf74a3834611d6c5e94f1'
-CODE_REVIEWER_COMMITMENT='25275b95cc2c78a6aef8f6ac29e2400b0fac0290ab5ec12f9946448301ee8133'
-CODE_RECEIPT_SHA256='73d5e8ca611a9290c1eec6d8f21c6023be0d510281971e532a915b63362f67cf'
+CODE_REVIEW_SHA256=None
+CODE_REVIEWER_COMMITMENT=None
+CODE_RECEIPT_SHA256=None
 # Actual independent provider screenshot review remains pending until supplied.
 PROVIDER_REVIEW='docs/timeline-mobile-collapse/independent-provider-visual-review.json'
 PROVIDER_REVIEW_SHA256='75f0c77147ebafd5d6457442ca5673c61530b7b9d1ca88d4e467f53ecc2b3b12'
