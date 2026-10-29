@@ -1,0 +1,23 @@
+{
+  "schema": "timeline-mobile-current-code-review-v1",
+  "scope": "mobile_visual_gate_and_tool_tree_successor",
+  "verdict": "CONCUR_WITHIN_BOUNDED_CODE_SCOPE",
+  "reviewer_commitment": "25275b95cc2c78a6aef8f6ac29e2400b0fac0290ab5ec12f9946448301ee8133",
+  "implementer_commitment": "c9838294792783a14b7a2960c6284e74e319967549219eb06a3a885e40de2340",
+  "receipt_sha256": "afe5d0a97a5f1adb0f6d1fc2e761e4e1828d3441c358e06597595e45abe8bd29",
+  "reviewed_head": "2d0c0b7b5127c719c5fba2a5d62b0115a76886bf",
+  "page_sha256": "e6331171d55a522bd411bd27b58ebe23335d04313cab0426bee9b1c64f0d2805",
+  "controller_sha256": "d1738fa1b95e3c2f2e6690175050e95f3183c9f334b8fe57e9af8a7f20170049",
+  "browser_test_sha256": "6217c553bae48a8c66804c85394e7ce2b3c7ed68f857e3ff718d327fd3a40c97",
+  "albert_review_sha256": "c2e89d1e0df8f5124b12f6babb7a2a7da22558bc7bea5339d7c17078a5563463",
+  "newton_review_sha256": "71ae439b9d9af95d9d57f8911e65506dc5cff29e769758f74ea9a3825a0eaf7d",
+  "prior_code_review_sha256": "bc6b5dec753b3f67405003d2e4613e22f0394845e715bb875e59a867993844c7",
+  "tree_manifest_sha256": "2365c9e4ba678edb61c7a0eada4ee6ef3c85f81b170214ad9b402b13c3537bea",
+  "current_tool_tree_sha256": "69f383f0133a0e52ebe77f1762fd8f144acd32e3df3278bdff0c90df135cd1bc",
+  "reviewed_at": "2026-10-29T18:14:47Z",
+  "limitations": [
+    "not owner or release approval; not a full-CI or physical-device test",
+    "Newton reported unknown tooltip cause and unverified provider tiles; no hosted browser actions personally rerun",
+    "role commitments are structural and do not authenticate their actors"
+  ]
+}

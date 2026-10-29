@@ -2740,6 +2740,14 @@ L.Icon.Default.imagePath = ""; // Versioned absolute default icon URLs.
 @media(max-width:900px){#viewer .mapsettings .disclosure-body{width:100%;max-height:none;padding:12px}#viewer .maprail{padding:12px}#viewer .maprail .momentlist{height:340px;max-height:380px}#viewer .maptoolband{padding:12px}}
 
 #viewer .mapplayback{padding:8px;box-sizing:border-box}
+#viewer .mobile-controls-content{display:contents}
+#viewer .mobile-controls-content[hidden],#viewer .mapplayback[hidden],#viewer .mobile-timeline-toggle[hidden]{display:none!important}
+@media(max-width:900px){
+ #viewer .mobile-timeline-toggle{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;min-height:44px;padding:8px 16px;border:1px solid var(--line-strong);border-radius:999px;background:var(--panel2);color:var(--gold-light);font-size:.88rem;font-weight:600;text-align:left;white-space:normal}
+ #viewer .mobile-timeline-toggle::after{content:'⌄';flex:none;font-size:18px;line-height:1}
+ #viewer .mobile-timeline-toggle[aria-expanded="true"]::after{transform:rotate(180deg)}
+ #viewer .mobile-timeline-toggle:focus-visible{outline:3px solid #f3cf83;outline-offset:4px}
+}
 #viewer .mapsettings .settings-heading{position:sticky;top:-16px;background:#102b36;z-index:2;padding:8px 0;margin-top:-8px}
 @media(max-width:900px){#viewer .mapsettings .settings-heading{position:static;margin-top:0;padding:0}}
 @media(max-width:480px){#viewer .mapsettings #modelSeg{grid-template-columns:minmax(0,1fr)}}
@@ -2815,7 +2823,7 @@ L.Icon.Default.imagePath = ""; // Versioned absolute default icon URLs.
 </details>
 
 <div class="workspace" id="viewer">
-<div class="panel workspace-toolbar"><div class="view-switch"><div class="seg">
+<div class="panel workspace-toolbar"><button class="fbtn mobile-timeline-toggle" id="mobileViewToggle" type="button" aria-controls="mobileViewControls" aria-expanded="true" hidden>View and filters</button><div id="mobileViewControls" class="mobile-controls-content"><div class="view-switch"><div class="seg">
       <button id="modeChart" class="on">Timeline</button><button id="modeOverview">Overview</button><button id="modeCards">Detailed view</button><button id="modeMap">Moment &amp; Map</button>
     </div></div><input class="workspace-search" type="search" id="q" aria-label="Search timeline places and events" placeholder="Search a place or event..." size="22"><details class="workspace-disclosure"><summary id="workspaceFilterState">Records, regions &amp; information</summary><div class="disclosure-body"><div class="controls" id="catChips">
     <span class="flabel">Show:</span>
@@ -2827,7 +2835,7 @@ L.Icon.Default.imagePath = ""; // Versioned absolute default icon URLs.
     
     <span class="count" id="count"></span>
     <p class="panelsub">Click any entry for its details, and to see everything else on the earth at the same time.</p>
-  <select id="eraJump" aria-label="Jump to an era"><option value="">Jump to era...</option></select></div></div></details></div>
+  <select id="eraJump" aria-label="Jump to an era"><option value="">Jump to era...</option></select></div></div></details></div></div>
 <div class="viewpane" id="viewpane">
 <div id="river"></div>
 <div class="gwrap" id="gwrap" style="display:none">
@@ -2846,7 +2854,7 @@ L.Icon.Default.imagePath = ""; // Versioned absolute default icon URLs.
   <div class="gscroll" id="gscroll"><div class="ginner" id="ginner"><div class="gaxis" id="gaxis"></div><div id="grows"></div></div></div>
 </div>
 <div class="cards" id="cards" style="display:none"></div>
-<div id="mapview" style="display:none"><div class="maptoolband"><div class="maptools mapplayback">
+<div id="mapview" style="display:none"><div class="maptoolband"><button class="fbtn mobile-timeline-toggle" id="mobilePlaybackToggle" type="button" aria-controls="mobilePlaybackControls" aria-expanded="true" hidden>Playback</button><div class="maptools mapplayback" id="mobilePlaybackControls">
     <button class="fbtn" id="playBtn">▶ Play</button>
     <div class="slidercol">
       <input type="range" id="yearSlider" min="0" max="2000" value="1886">
@@ -3802,6 +3810,16 @@ function renderLeaflet(){
       englishStatus.textContent = "Map background unavailable. The timeline entries and lists remain available.";
     }).addTo(leafMapObj);
     leafMapObj.on("zoomend", () => { if (viewMode === "map" && useLeaflet){ renderLeaflet(); updateMapCount(); } });
+    // Permanent route labels choose the side with space. Re-evaluate after a
+    // pan or resize so a label does not remain on the clipped side of the map.
+    leafMapObj.on("moveend resize", () => {
+      if (!leafLayerGroup) return;
+      leafLayerGroup.eachLayer(layer => {
+        if (layer.__kind !== "party" || !layer.getTooltip) return;
+        const tip = layer.getTooltip();
+        if (tip && leafMapObj.hasLayer(tip)) tip.update();
+      });
+    });
     leafMapObj.on("popupclose", () => { if (lastPopupOpener && document.contains(lastPopupOpener)){ const el = lastPopupOpener; lastPopupOpener = null; try { el.focus({ preventScroll: true }); } catch(_){} } });
     leafMapObj.on("popupopen", () => { popupIsOpen = true; closeHoverTip(); });
     leafMapObj.on("popupclose", () => { popupIsOpen = false; });
@@ -4019,7 +4037,7 @@ function renderLeaflet(){
     modelKeys().forEach(mk => {
       const t = traveledLL(rt, mk);
       t.lines.forEach(seg => { const pl = L.polyline(seg, { color: "#c4502e", weight: 3, dashArray: "6 5", opacity: .95, interactive: false }).addTo(leafLayerGroup); pl.__kind = "routetraveled"; });
-      if (t.dot){ const m = L.circleMarker([t.dot[0], t.dot[1]], { radius: 8, color: "#c4502e", weight: 3, fillColor: "#ffffff", fillOpacity: 1, interactive: false }).addTo(leafLayerGroup); m.__kind = "party"; m.bindTooltip(rt.name, { permanent: true, direction: "right", className: "party-tip" }); }
+      if (t.dot){ const m = L.circleMarker([t.dot[0], t.dot[1]], { radius: 8, color: "#c4502e", weight: 3, fillColor: "#ffffff", fillOpacity: 1, interactive: false }).addTo(leafLayerGroup); m.__kind = "party"; m.bindTooltip(rt.name, { permanent: true, direction: "auto", className: "party-tip" }); }
     });
   });
   // Draw step 5: fresh pins. Draw step 6: new-this-year pins.
@@ -4581,6 +4599,7 @@ context.addEventListener('close',()=>{
 });
 })();</script>
 <script id="timeline-layout-controller">(function(){const summary=document.getElementById('workspaceFilterState'),scenario=document.getElementById('workspaceScenarioState');function sync(){const records=Array.from(document.querySelectorAll('#catChips button[data-cat]')).filter(b=>b.getAttribute('aria-pressed')==='true').map(b=>b.dataset.cat==='bom'?'Book of Mormon':b.dataset.cat==='bible'?'Bible':'World');const region=document.getElementById('regionSel');summary.textContent=(records.length===3?'All records':records.length?records.join(', '):'No records')+' · '+(region.options[region.selectedIndex]?.text||'All regions');const active=document.querySelector('#modelSeg button[aria-pressed="true"]');scenario.textContent='Book of Mormon geography: '+(active?active.textContent:'Both settings');}new MutationObserver(sync).observe(document.getElementById('catChips'),{subtree:true,attributes:true,attributeFilter:['aria-pressed']});new MutationObserver(sync).observe(document.getElementById('modelSeg'),{subtree:true,attributes:true,attributeFilter:['aria-pressed']});document.getElementById('regionSel').addEventListener('change',sync);sync();})();</script>
+<script src="/timeline-mobile-collapse.js?v=20261029-1"></script>
 <script src="/header-scroll.js?v=20261021-continue-motion-1"></script>
 </body>
 </html>

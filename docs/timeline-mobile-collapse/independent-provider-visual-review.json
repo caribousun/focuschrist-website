@@ -1,0 +1,44 @@
+{
+  "schema": "timeline-provider-visual-review-v1",
+  "scope": "provider_desktop_phone_pixels",
+  "verdict": "CONCUR_WITHIN_BOUNDED_VISUAL_SCOPE",
+  "reviewer_commitment": "525f8397911fea9f0d93b899cc987fd2a84c7aa01374e7735bc5622336381da6",
+  "receipt_sha256": "102e91434dfd855d911546f6c6b9bc6353ba3128f994fa46e5a1ef377a5b2789",
+  "page_sha256": "d67a067e9d90d64b992d21382d07307a91b3770132b1d6db3b451e46683c69a1",
+  "artifact_sha256": "8ee66c5b95e8572052024e1675c579993c7ad38bb892e3d90fedec73e98916ef",
+  "report_sha256": "6fb3c19fac7812f9e3c040969a797bc183162b758577a55b2356cd5e23c6545e",
+  "desktop_screenshot_sha256": "cb37b5d550bfe5cffc5e03dca6f9c7ad9bf3fbd663b0e145894434068c84a7af",
+  "phone_screenshot_sha256": "a7a302a656d43d8a258ff534782e6d52588f66e1bf762cb1e46c274bdf85e829",
+  "reviewer_role": "Newton independent visual reviewer",
+  "commitment_description": "SHA-256 of UTF-8 domain-prefixed actual actor identifier; identifier commitment, not authentication.",
+  "original_pixel_inspection_at_utc": "2026-10-29T19:14:00Z (approximately)",
+  "source_observer_review_at_utc": "2026-10-29T19:54:00Z (approximately)",
+  "projection_created_at_utc": "2026-10-29T20:06:14.942622+00:00",
+  "run_id": 40942384697,
+  "timeline_job_id": 123688837573,
+  "artifact_id": 12926689654,
+  "head": "0bfae1aa15bc8d0ade69cb8ec55302ed936230ba",
+  "checkout": "e3c36a55f21dfab0c49022eb121806efff58ff35",
+  "checkout_tree": "4bb3acd9cb3c899ea5656f9ce50239504d7dcbdc",
+  "pixel_evidence": "The desktop and phone frames are byte-identical to the images personally inspected in earlier run 40936490921. Each frame shows a populated geographic map, readable labels and provider credits, without a fallback banner; phone shows the complete Lehi family tooltip.",
+  "raw_status": "Historical run and desktop diagnostic FAIL; phone diagnostic PASS. No historical job result was changed.",
+  "offline_evaluation": {
+    "classifier_commit": "88357e80a3de96752e2624f942a1015d7e8e5057",
+    "classifier_sha256": "2995abdeaf17d40d580fbbe483f0b8d006c90c9cf5cd71efc365a7408fc31abb",
+    "receipt_sha256": "65246cff2266dabc74b1b6a79653fb2cba2f39c3cd4a0a5c0d6385bf7a29e613",
+    "desktop_classification": "MATCHED_RENDERER_CANCELLATION",
+    "details": "One source abort and one browser request match ne2_shaded z2/x1/y3; five other source aborts concern other tiles. Correlation only, not causal proof. The helper does not assess original PASS rows; phone PASS remains separate."
+  },
+  "limits": [
+    "Two single captured frames, not proof of all visible tile delivery, future availability, or physical-device behavior.",
+    "Source observation begins after the Map constructor returns and ends at its recorded pre-teardown cutoff; earlier and later renderer events are outside the observation window.",
+    "No new browser/provider request, new run, production change, owner approval, release authorization, or general CI pass is claimed.",
+    "This static review applies only to the exact recorded run and frames; it does not establish the visual result of a later run."
+  ],
+  "observed_diagnostic": {
+    "source_commit": "0bfae1aa15bc8d0ade69cb8ec55302ed936230ba",
+    "repository_path": "tools/world_provider_browser_diagnostic.js",
+    "sha256": "011d23c7bd0d4ffede53d536f12d5469b60aaccacd63c51f9056b1888e791155",
+    "git_blob": "d6395dade9f76f7409bc1cafb2f7d23350cbaf5c"
+  }
+}

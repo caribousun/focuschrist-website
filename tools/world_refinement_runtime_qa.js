@@ -15,7 +15,10 @@ const {chromium}=require(process.env.QA_PLAYWRIGHT_MODULE||'playwright'),root=pa
    const links=await page.locator('#study-companions a[href]').evaluateAll(a=>a.map(n=>({href:n.getAttribute('href'),target:n.target,rel:n.rel,download:n.hasAttribute('download')})));
    assert.equal(links.filter(n=>n.download).length,3);assert(links.every(n=>n.download?!n.target:n.target==='_blank'&&n.rel.split(/\s+/).includes('noopener')));
    const parent=page.url(),popupPromise=page.waitForEvent('popup');await page.locator('#study-companions a').first().click();const popup=await popupPromise;await popup.waitForLoadState();assert(await popup.evaluate(()=>opener===null));assert.equal(page.url(),parent);await popup.close();
-   await page.locator('#study-companions>summary').click();await page.locator('#modeMap').click();
+   await page.locator('#study-companions>summary').click();
+   if(width<=900){assert.equal(await page.locator('#mobileViewToggle').getAttribute('aria-expanded'),'false');await page.locator('#mobileViewToggle').click();}
+   await page.locator('#modeMap').click();
+   if(width<=900){assert.equal(await page.locator('#mobilePlaybackToggle').getAttribute('aria-expanded'),'false');await page.locator('#mobilePlaybackToggle').click();}
    // A region selection must change the visible map count and entry list.
    await page.locator('#yearInput').fill('-600');await page.locator('#yearInput').dispatchEvent('change');
    const filters=page.locator('#regionSel').locator('xpath=ancestor::details');await filters.locator('summary').click();

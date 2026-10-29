@@ -1,0 +1,47 @@
+{
+  "schema": 1,
+  "reviewer_role": "Newton independent visual reviewer",
+  "reviewed_at_utc": "2026-10-29T18:46:52Z",
+  "verdict": "Pass for the inspected tooltip and disclosure pixels and the reported hosted interaction scope only; not release or owner approval.",
+  "candidate": {
+    "repository": "caribousun/focuschrist-website",
+    "pull_request": 544,
+    "head": "b6a5f277394d672b5f234984eafcee1448d226b4",
+    "checkout": "9f250c270a06d363f3bce9930f0966695f345129",
+    "checkout_tree": "b43ea5edcd8e07ac70283a38a32bd37f129822e0",
+    "page_sha256": "d67a067e9d90d64b992d21382d07307a91b3770132b1d6db3b451e46683c69a1",
+    "page_git_blob": "430d803186475a1c40d598df3195feefa788409b",
+    "controller_sha256": "d1738fa1b95e3c2f2e6690175050e95f3183c9f334b8fe57e9af8a7f20170049",
+    "test_sha256": "729bd30fcece4b72ec0bba3bbfcd61ca13765daa9ece266c6cd6f1b2161a6dd8",
+    "test_git_blob": "e83c4a34350c3c25078a339445a6af31ac49357c"
+  },
+  "hosted_evidence": {
+    "run_id": 40931777047,
+    "timeline_job_id": 123652298134,
+    "timeline_job_conclusion": "success",
+    "artifact_id": 12924265396,
+    "artifact_sha256": "ae2859e7dc9f39898e065114fc38b2b57de65bd53c201b0e47c0342b40100fdb",
+    "report_sha256": "eac4479d0f2b3f9d57558ed36b3f5b32b51311e2d45c000e58b34a7c84228510",
+    "controls_report_sha256": "f7f26e2488813619811584ddfa17c74e4adbfc17870c76edfae452ee6b5bd485",
+    "desktop_parity_report_sha256": "302db4e5cfe66825cde8d687947c8fcb0aee3897af3d12b5702b5ec55e558d33"
+  },
+  "personally_inspected_screenshots_sha256": {
+    "route-tooltip-left-phone.png": "794319d8a0b5b6930052638bb8c251050d28df2578a97aee5deb993dbf3641a2",
+    "route-tooltip-right-phone.png": "1a26a94225acfb650dd3b424cae194eded62138f435a81c5bdfb9a88e15f385f",
+    "mobile-collapse-phone-closed-viewport.png": "2c80b3d2fb14d9dc2c7aa3f29c567a95e1ef6da49dc6b9ef5d21a1737f7ebb8c",
+    "mobile-collapse-phone-view-open-viewport.png": "e4a6e2426a3b2d931783dfb9cccc1b7bfb3d2a20d315c689cfa70a25374488a6",
+    "mobile-collapse-phone-playback-open-viewport.png": "cdac7e13b484d329dd51ce6db3b7856b3b99f031ddc75ad0f864578a350afefa",
+    "mobile-collapse-candidate-desktop-toolbar-viewport.png": "bd881ce554046e1f4d14ec8a551ce1a5227194828a908d2e8ed58ed5c949327a",
+    "mobile-collapse-predecessor-desktop-toolbar-viewport.png": "75bfa55dfc7aa490dd7459d7f7de2a298016bb2f7e13a0bfae391f09c1c8196f"
+  },
+  "observations": [
+    "At both tested phone map edges the complete Lehi's family label is visible and inward-facing; the earlier clipped label is resolved in these captures.",
+    "At 390x844 both collapsed and individually expanded disclosures remain legible, with map options outside playback and visible focus outlines.",
+    "At 1366x900 the desktop controls remain visually consistent; automated parity data reports equal selected control geometry and styles before and after resize. Full screenshots differ because the tooltip now faces inward."
+  ],
+  "limits": [
+    "The successful hosted test programmatically pans the actual map and asserts label direction and bounds at both edges. It also reports keyboard, repeated toggle, state-retention and resize assertions. These interactions were not personally replayed by this reviewer.",
+    "Hosted HTTPS provider requests were intentionally blocked; real provider-backed tiles and the current candidate in a provider-permitted environment remain unverified.",
+    "No physical-device, comprehensive accessibility, all-viewport, full-site, overall-CI, owner, merge or production acceptance is claimed."
+  ]
+}

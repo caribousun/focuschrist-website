@@ -1,0 +1,11 @@
+{
+  "schema":"timeline-mobile-content-review-v1",
+  "reviewer":"Albert",
+  "reviewed_head":"64c18e410febf0b761281da1457b65e8e1cf8aac",
+  "reviewed_at_utc":"2026-10-29T17:21:20Z",
+  "page_sha256":"e6331171d55a522bd411bd27b58ebe23335d04313cab0426bee9b1c64f0d2805",
+  "controller_sha256":"d1738fa1b95e3c2f2e6690175050e95f3183c9f334b8fe57e9af8a7f20170049",
+  "actual_review":"Personally inspected the original screenshot pixels and exact GitHub page delta and complete controller. The two targets match the toolbar and inner playback region. Geography caption and map settings remain outside. Added visible labels are View and filters with the current view and Playback with the current year. No new historical or doctrinal narrative claim was introduced by this UI delta.",
+  "verdict":"CONCUR_UI_WORDING_AND_TARGET_SCOPE_ONLY",
+  "limits":["not_render_acceptance","not_desktop_parity_proof","not_full_historical_source_reverification","not_owner_release_approval","draft_creation_authorization_pending"]
+}

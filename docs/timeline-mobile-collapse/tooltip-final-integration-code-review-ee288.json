@@ -1,0 +1,31 @@
+{
+  "schema": "timeline-tooltip-final-integration-code-v1",
+  "scope": "tooltip_integration_and_exact_tool_tree",
+  "verdict": "CONCUR_WITHIN_BOUNDED_CODE_SCOPE",
+  "reviewer_commitment": "25275b95cc2c78a6aef8f6ac29e2400b0fac0290ab5ec12f9946448301ee8133",
+  "implementer_commitment": "c9838294792783a14b7a2960c6284e74e319967549219eb06a3a885e40de2340",
+  "receipt_sha256": "73d5e8ca611a9290c1eec6d8f21c6023be0d510281971e532a915b63362f67cf",
+  "reviewed_head": "ee288b4d5da351d12a5a68a215842b85ddc75b11",
+  "reviewed_at": "2026-10-29T21:15:05Z",
+  "page_sha256": "d67a067e9d90d64b992d21382d07307a91b3770132b1d6db3b451e46683c69a1",
+  "browser_test_sha256": "729bd30fcece4b72ec0bba3bbfcd61ca13765daa9ece266c6cd6f1b2161a6dd8",
+  "controller_sha256": "d1738fa1b95e3c2f2e6690175050e95f3183c9f334b8fe57e9af8a7f20170049",
+  "visual_review_sha256": "0772e94a71e6fc9a8297317a22e75985945533facf73c3754b3c6d523393c692",
+  "prior_code_review_sha256": "5a35a198921a38bf224deaa86388a186925208945d17bc4549f9b7f7012f4b41",
+  "source_manifest_sha256": "934c65c74e0a30589abeca265dccfb158682e89aa94e63e039cd1fe3f4be6a26",
+  "tree_manifest_sha256": "5a4deb7627d333842606f0de24cbf3ba633b892957466034de4ae99948765ca4",
+  "provider_diagnostic_sha256": "59d50be056ea28d775e06e2b1309daa0cb8561dcaf87c4e13803549ced034a73",
+  "provider_diagnostic_test_sha256": "1cffcd7086dea9da14d4546b4440f80093c5414641a72ff317308d3aab6e12d7",
+  "provider_cancellation_classifier_sha256": "abc83fef1a4a25f9b5a5922bc8b3e6dd74209ae066679caa4560884f039082f9",
+  "provider_cancellation_classifier_test_sha256": "782cf66aac483cc7ad554fbbcf153551fa23e99f44173e0a9e3d700dc316369d",
+  "current_tool_tree_sha256": "ebb327c48cd6f83784bf8b99b50e5a7117650ebd8dffdd271528b38116f1af7e",
+  "limitations": [
+    "No independent full hosted step, browser/provider rerun, full CI, owner, merge, deployment or release approval.",
+    "Fixed provider visual evidence covers one historical run; later matched runs require independent reconciliation.",
+    "Matched diagnostic may be CI-green and is not provider or release approval.",
+    "Commitments alone do not authenticate reviewer or implementer identities."
+  ],
+  "current_browser_test_sha256": "fa0e8d855aed131dfb9851b69d2aebcfa9e04638e3ee15a12c543c87424bd686",
+  "resize_test_manifest_sha256": "d02106dbe39fea2782cf5e9751e493d2daca2123baa45e8217794de91067496b",
+  "prior_final_code_review_sha256": "eba73fd1fb7c14a93cd88485d7d9919eaf60698da7227b86ddebaa309b29fa9e"
+}

@@ -1,20 +1,150 @@
 /* Hosted rendered checks for the requested Timeline controls. */
 'use strict';
-const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),os=require('node:os'),crypto=require('node:crypto'),{execFileSync}=require('node:child_process');
 module.exports=async function(page,origin,out){
  assert.equal(process.env.CI,'true','Hosted CI only');
- const results=[];
+ const results=[];let desktopReference;
+ const geometry=target=>target.evaluate(()=>{
+  const bounds=(selector,parent)=>{const n=document.querySelector(selector),r=n.getBoundingClientRect(),p=document.querySelector(parent).getBoundingClientRect(),s=getComputedStyle(n);return {x:r.x-p.x,y:r.y-p.y,width:r.width,height:r.height,appearance:[s.display,s.color,s.backgroundColor,s.backgroundImage,s.borderTopColor,s.borderTopWidth,s.borderTopStyle,s.borderRadius,s.fontFamily,s.fontSize,s.fontWeight,s.lineHeight,s.padding]};};
+  return Object.fromEntries([['view','.view-switch','.workspace-toolbar'],['search','#q','.workspace-toolbar'],['filters','#workspaceFilterState','.workspace-toolbar'],['playback','.mapplayback','.maptoolband'],['play','#playBtn','.maptoolband'],['year','#yearInput','.maptoolband'],['time','#timeSeg','.maptoolband'],['speed','#speedSeg','.maptoolband'],['options','.map-options-row','.maptoolband']].map(([name,node,parent])=>[name,bounds(node,parent)]));
+ });
+ const compareGeometry=(actual,expected,label)=>{
+  for(const key of Object.keys(expected)){
+   for(const metric of ['x','y','width','height'])assert(Math.abs(actual[key][metric]-expected[key][metric])<1,label+': '+key+' '+metric);
+   assert.deepEqual(actual[key].appearance,expected[key].appearance,label+': '+key+' appearance');
+  }
+ };
+ // Render the exact Git predecessor in a temporary isolated copy. Its shared
+ // local JS/CSS must also match the predecessor before comparing appearance.
+ const base='4fb9e51deda2997d6974e80a5dce86a65167841c',route='timelines/world-and-scripture-timeline.html';
+ const repo=path.resolve(__dirname,'..');
+ assert.equal(execFileSync('git',['rev-parse',base],{cwd:repo,encoding:'utf8'}).trim(),base,'Exact predecessor commit is available');
+ const baseHtml=execFileSync('git',['show',base+':'+route],{cwd:repo,maxBuffer:8*1024*1024});
+ assert.equal(crypto.createHash('sha256').update(baseHtml).digest('hex'),'016e9896db70ff0a8a142503f289f2e0cbd2f4d96b73d667247dbb2a2370ceef','Exact predecessor World page');
+ const dir=fs.mkdtempSync(path.join(os.tmpdir(),'focus-world-predecessor-')),copy=path.join(dir,'world.html'),predecessor=await page.context().newPage();
+ fs.writeFileSync(copy,baseHtml);
+ try{
+  await predecessor.setViewportSize({width:1366,height:900});
+  await predecessor.route('**/timelines/world-and-scripture-timeline.html',route=>route.fulfill({path:copy,contentType:'text/html; charset=utf-8'}));
+  await predecessor.goto(origin+'/'+route+'#viewer',{waitUntil:'load'});await predecessor.evaluate(()=>document.fonts.ready);
+  const assets=await predecessor.evaluate(()=>[...document.querySelectorAll('script[src],link[rel="stylesheet"][href]')].map(n=>new URL(n.getAttribute('src')||n.getAttribute('href'),location.href)).filter(u=>u.origin===location.origin).map(u=>decodeURIComponent(u.pathname).replace(/^\//,'')));
+  assert.deepEqual([...new Set(assets)].sort(),['header-scroll.js','site-search.css','site-search.js']);
+  const dependencyHashes={};
+  for(const asset of assets){const old=execFileSync('git',['show',base+':'+asset],{cwd:repo,maxBuffer:8*1024*1024});assert.deepEqual(fs.readFileSync(path.join(repo,asset)),old,'Predecessor shared asset drift: '+asset);dependencyHashes[asset]=crypto.createHash('sha256').update(old).digest('hex');}
+  await predecessor.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+  assert(await predecessor.locator('#mapview').isVisible());const predecessorGeometry=await geometry(predecessor);
+  await predecessor.locator('.workspace-toolbar').scrollIntoViewIfNeeded();await predecessor.screenshot({path:path.join(out,'mobile-collapse-predecessor-desktop-toolbar-viewport.png'),fullPage:false,animations:'disabled'});
+  await predecessor.locator('.maptoolband').scrollIntoViewIfNeeded();await predecessor.screenshot({path:path.join(out,'mobile-collapse-predecessor-desktop-playback-viewport.png'),fullPage:false,animations:'disabled'});
+  desktopReference={predecessorGeometry,dependencyHashes};
+ }finally{await predecessor.close();fs.rmSync(dir,{recursive:true,force:true});}
  for(const profile of [{name:'desktop',width:1366,height:900},{name:'phone',width:390,height:844}]){
   await page.setViewportSize({width:profile.width,height:profile.height});
   await page.goto(origin+'/timelines/world-and-scripture-timeline.html#viewer',{waitUntil:'load'});
   assert(await page.locator('#mapview').isVisible(),'Moment & Map opens first');
   assert(await page.locator('#modeMap').evaluate(n=>n.classList.contains('on')));
+  const viewToggle=page.locator('#mobileViewToggle'),playToggle=page.locator('#mobilePlaybackToggle');
+  const viewPanel=page.locator('#mobileViewControls'),playPanel=page.locator('#mobilePlaybackControls');
+  if(profile.width<=900){
+   assert(await viewToggle.isVisible()&&await playToggle.isVisible(),'Both mobile disclosure controls are visible');
+   assert.equal(await viewToggle.getAttribute('aria-controls'),'mobileViewControls');assert.equal(await playToggle.getAttribute('aria-controls'),'mobilePlaybackControls');
+   assert.equal(await viewToggle.getAttribute('aria-expanded'),'false');assert.equal(await playToggle.getAttribute('aria-expanded'),'false');
+   assert(!(await viewPanel.isVisible())&&!(await playPanel.isVisible()),'Both mobile panels start compact');
+   assert.match(await viewToggle.innerText(),/Moment & Map/);assert.match(await playToggle.innerText(),/Playback.*\d/);
+   assert(await page.locator('.map-options-row').isVisible(),'Geography and map settings remain outside playback');
+   await page.evaluate(()=>{if(document.activeElement instanceof HTMLElement)document.activeElement.blur();});
+   let reachedView=false;
+   for(let i=0;i<120;i++){await page.keyboard.press('Tab');if(await viewToggle.evaluate(n=>document.activeElement===n)){reachedView=true;break;}}
+   assert(reachedView,'View disclosure is reachable by Tab');
+   await page.keyboard.press('Tab');assert(await playToggle.evaluate(n=>document.activeElement===n),'Tab reaches playback after the collapsed view panel');
+   await page.keyboard.press('Tab');assert(await page.locator('#frameBtn').evaluate(n=>document.activeElement===n),'Tab continues to map options');
+   await page.locator('.workspace-toolbar').scrollIntoViewIfNeeded();await page.screenshot({path:path.join(out,'mobile-collapse-phone-closed-viewport.png'),fullPage:false,animations:'disabled'});
+   await page.locator('.workspace-toolbar').screenshot({path:path.join(out,'mobile-collapse-view-closed.png'),animations:'disabled'});
+   await page.locator('.maptoolband').scrollIntoViewIfNeeded();await page.locator('.maptoolband').screenshot({path:path.join(out,'mobile-collapse-playback-closed.png'),animations:'disabled'});
+   await viewToggle.focus();await page.keyboard.press('Enter');assert.equal(await viewToggle.getAttribute('aria-expanded'),'true');assert(await viewPanel.isVisible());
+   await page.locator('.workspace-toolbar').scrollIntoViewIfNeeded();await page.screenshot({path:path.join(out,'mobile-collapse-phone-view-open-viewport.png'),fullPage:false,animations:'disabled'});
+   await viewToggle.focus();await page.keyboard.press('Space');assert(!(await viewPanel.isVisible()));
+   await playToggle.focus();await page.keyboard.press('Enter');assert(await playPanel.isVisible());
+   await page.locator('.maptoolband').scrollIntoViewIfNeeded();await page.screenshot({path:path.join(out,'mobile-collapse-phone-playback-open-viewport.png'),fullPage:false,animations:'disabled'});
+   await playToggle.focus();await page.keyboard.press('Space');assert(!(await playPanel.isVisible()));
+   await viewToggle.focus();await page.keyboard.press('Enter');assert(await viewPanel.isVisible());
+   await page.locator('#q').fill('Egypt');await page.locator('#modeOverview').click();assert(await page.locator('#gwrap').isVisible());
+   const mobileFilter=page.locator('#workspaceFilterState');await mobileFilter.click();await page.locator('#catChips [data-cat="bible"]').click();await mobileFilter.click();
+   assert.equal(await page.locator('#catChips [data-cat="bible"]').getAttribute('aria-pressed'),'false');
+   for(let i=0;i<2;i++){
+    await viewToggle.focus();await page.keyboard.press('Space');assert(!(await viewPanel.isVisible()));assert(await viewToggle.evaluate(n=>document.activeElement===n));
+    await viewToggle.focus();await page.keyboard.press('Enter');assert(await viewPanel.isVisible());
+    assert(!(await playPanel.isVisible()),'View toggles leave playback collapsed');
+    assert.equal(await page.locator('#q').inputValue(),'Egypt');assert(await page.locator('#modeOverview').evaluate(n=>n.classList.contains('on')));
+    assert.equal(await page.locator('#catChips [data-cat="bible"]').getAttribute('aria-pressed'),'false');
+   }
+   await page.locator('#modeMap').click();assert(await page.locator('#mapview').isVisible());
+   await playToggle.focus();await page.keyboard.press('Enter');assert.equal(await playToggle.getAttribute('aria-expanded'),'true');assert(await playPanel.isVisible());
+   const originalYear=await page.locator('#yearInput').inputValue(),originalSpeed=await page.locator('#playSpeed').inputValue();
+   const changedYear=originalYear==='-610'?'-620':'-610';assert.notEqual(changedYear,originalYear);
+   await page.locator('#yearInput').fill(changedYear);await page.locator('#yearInput').dispatchEvent('change');await page.locator('#playSpeed').selectOption('2');
+   for(let i=0;i<2;i++){
+    await playToggle.focus();await page.keyboard.press('Space');assert(!(await playPanel.isVisible()));assert(await playToggle.evaluate(n=>document.activeElement===n));
+    assert(await viewPanel.isVisible(),'Playback collapse leaves the view panel open');
+    await playToggle.focus();await page.keyboard.press('Enter');assert(await playPanel.isVisible());
+    assert.equal(await page.locator('#yearInput').inputValue(),changedYear);assert.equal(await page.locator('#playSpeed').inputValue(),'2');
+    assert.equal(await page.locator('#q').inputValue(),'Egypt');assert.equal(await page.locator('#catChips [data-cat="bible"]').getAttribute('aria-pressed'),'false');assert(await page.locator('#modeMap').evaluate(n=>n.classList.contains('on')));
+   }
+   await viewToggle.focus();await page.keyboard.press('Space');assert(!(await viewPanel.isVisible())&&await playPanel.isVisible());
+   await viewToggle.focus();await page.keyboard.press('Enter');assert(await viewPanel.isVisible()&&await playPanel.isVisible());
+   assert.equal(await page.locator('#yearInput').inputValue(),changedYear);assert.equal(await page.locator('#q').inputValue(),'Egypt');assert.equal(await page.locator('#catChips [data-cat="bible"]').getAttribute('aria-pressed'),'false');assert(await page.locator('#modeMap').evaluate(n=>n.classList.contains('on')));
+   await page.locator('#yearInput').fill(originalYear);await page.locator('#yearInput').dispatchEvent('change');await page.locator('#playSpeed').selectOption(originalSpeed);
+   await page.locator('#q').fill('');await mobileFilter.click();await page.locator('#catChips [data-cat="bible"]').click();await mobileFilter.click();
+   await page.locator('.workspace-toolbar').scrollIntoViewIfNeeded();await page.locator('.workspace-toolbar').screenshot({path:path.join(out,'mobile-collapse-view-open.png'),animations:'disabled'});
+   await page.locator('.maptoolband').scrollIntoViewIfNeeded();await page.locator('.maptoolband').screenshot({path:path.join(out,'mobile-collapse-playback-open.png'),animations:'disabled'});
+  }else{
+   assert(!(await viewToggle.isVisible())&&!(await playToggle.isVisible()),'Desktop has no mobile toggles');
+   assert(await viewPanel.isVisible()&&await playPanel.isVisible(),'Desktop controls remain visible');
+   await page.evaluate(()=>document.fonts.ready);await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+   const candidateGeometry=await geometry(page);compareGeometry(candidateGeometry,desktopReference.predecessorGeometry,'Predecessor versus candidate desktop');desktopReference.candidateGeometry=candidateGeometry;
+   await page.locator('.workspace-toolbar').screenshot({path:path.join(out,'mobile-collapse-desktop-view-before.png'),animations:'disabled'});
+   await page.locator('.workspace-toolbar').scrollIntoViewIfNeeded();await page.screenshot({path:path.join(out,'mobile-collapse-candidate-desktop-toolbar-viewport.png'),fullPage:false,animations:'disabled'});
+   await page.locator('.maptoolband').scrollIntoViewIfNeeded();await page.locator('.maptoolband').screenshot({path:path.join(out,'mobile-collapse-desktop-playback-before.png'),animations:'disabled'});
+   await page.screenshot({path:path.join(out,'mobile-collapse-candidate-desktop-playback-viewport.png'),fullPage:false,animations:'disabled'});
+  }
   const counts=()=>page.evaluate(()=>{
    const svg=document.querySelectorAll('#worldmap .ghostpath,#worldmap .routepath,#worldmap .party,#worldmap .routelabel').length;
    let leaflet=0;if(typeof leafLayerGroup!=='undefined'&&leafLayerGroup)leafLayerGroup.eachLayer(n=>{if(['routefaint','routetraveled','party'].includes(n.__kind))leaflet++;});
    return {svg,leaflet};
   });
   const initial=await counts();assert(initial.svg+initial.leaflet>0,'Scenario routes initially present');
+  if(profile.width<=900){
+   // Exercise the real permanent route label at each horizontal edge. This
+   // moves the map, not the label, so the normal moveend handler must update it.
+   const initialized=await page.evaluate(()=>{
+    const map=window.__leafMap;let marker=null;
+    if(!map||!leafLayerGroup)return false;
+    leafLayerGroup.eachLayer(layer=>{if(!marker&&layer.__kind==='party'&&layer.getTooltip()&&layer.getTooltip().getContent()==="Lehi's family")marker=layer;});
+    if(!marker)return false;
+    window.__routeTooltipQA={map,marker,center:map.getCenter(),zoom:map.getZoom()};
+    return true;
+   });
+   assert(initialized,'An actual Lehi route tooltip is present');
+   await page.locator('#leafmap').scrollIntoViewIfNeeded();
+   for(const edge of ['left','right']){
+    await page.evaluate(edge=>{
+     const {map,marker,zoom}=window.__routeTooltipQA;
+     map.setView(marker.getLatLng(),zoom,{animate:false});
+     const point=map.latLngToContainerPoint(marker.getLatLng()),target=edge==='left'?12:map.getSize().x-12;
+     map.panBy([point.x-target,0],{animate:false});
+    },edge);
+    await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+    const bounds=await page.evaluate(()=>{
+     const {map,marker}=window.__routeTooltipQA,tip=marker.getTooltip().getElement();
+     const r=tip.getBoundingClientRect(),m=map.getContainer().getBoundingClientRect();
+     return {text:tip.textContent,classes:tip.className,left:r.left,right:r.right,mapLeft:m.left,mapRight:m.right};
+    });
+    assert.equal(bounds.text,"Lehi's family");
+    assert(bounds.classes.includes('leaflet-tooltip-'+(edge==='left'?'right':'left')),'Tooltip faces inward at '+edge+' edge');
+    assert(bounds.left>=bounds.mapLeft-1&&bounds.right<=bounds.mapRight+1,'Complete route label fits within the map at '+edge+' edge: '+JSON.stringify(bounds));
+    await page.locator('#leafmap').screenshot({path:path.join(out,'route-tooltip-'+edge+'-phone.png'),animations:'disabled'});
+   }
+   await page.evaluate(()=>{const {map,center,zoom}=window.__routeTooltipQA;map.setView(center,zoom,{animate:false});delete window.__routeTooltipQA;});
+  }
   const filterSummary=page.locator('#workspaceFilterState');
   const filterDisclosure=filterSummary.locator('xpath=parent::details');
   assert.equal(await filterDisclosure.count(),1,'Filter summary belongs to one disclosure');
@@ -47,6 +177,38 @@ module.exports=async function(page,origin,out){
   await settings.scrollIntoViewIfNeeded();await page.screenshot({path:path.join(out,'requested-world-settings-'+profile.name+'.png'),animations:'disabled'});
   await page.locator('#mapSettingsClose').click();assert(!(await settings.evaluate(n=>n.open)),'Map settings closes through its control');await page.locator('#modeChart').click();assert(await page.locator('#river').isVisible(),'Explicit Timeline remains available');
   await page.locator('#modeMap').click();assert(await page.locator('#mapview').isVisible(),'Explicit return to map remains available');
+  if(profile.width<=900){
+   await filterSummary.click();await page.locator('#catChips [data-cat="bible"]').click();await filterSummary.click();
+   await page.waitForFunction(()=>document.getElementById('workspaceFilterState').textContent.trim()==='All records · All regions');
+   await viewToggle.click();assert(!(await viewPanel.isVisible()));
+   const waitForDesktopControls=async()=>{
+    try{
+     await page.waitForFunction(()=>!matchMedia('(max-width:900px)').matches&&!document.getElementById('mobileViewControls').hidden&&!document.getElementById('mobilePlaybackControls').hidden&&document.getElementById('mobileViewToggle').hidden&&document.getElementById('mobilePlaybackToggle').hidden,null,{timeout:5000});
+     await viewPanel.waitFor({state:'visible',timeout:5000});await viewToggle.waitFor({state:'hidden',timeout:5000});
+     assert(await viewPanel.isVisible()&&!(await viewToggle.isVisible()),'Desktop resize restores controls');
+     assert(await playPanel.isVisible()&&!(await playToggle.isVisible()),'Desktop resize restores playback controls');
+    }catch(error){
+     const state=await page.evaluate(()=>Object.fromEntries(['mobileViewControls','mobileViewToggle','mobilePlaybackControls','mobilePlaybackToggle'].map(id=>{const n=document.getElementById(id),s=getComputedStyle(n);return [id,{hidden:n.hidden,display:s.display,visibility:s.visibility}];}).concat([['mobileQuery',matchMedia('(max-width:900px)').matches],['width',innerWidth]])));
+     throw new Error('Desktop resize controls did not settle: '+JSON.stringify(state)+'; '+String(error));
+    }
+   };
+   await page.setViewportSize({width:1366,height:900});await waitForDesktopControls();
+   await page.evaluate(()=>document.fonts.ready);await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+   const resized=await geometry(page);assert(desktopReference.candidateGeometry,'Desktop reference was captured');
+   compareGeometry(resized,desktopReference.candidateGeometry,'Desktop after resize');
+   fs.writeFileSync(path.join(out,'mobile-collapse-desktop-parity.json'),JSON.stringify({predecessor:base,predecessorSourceSha256:'016e9896db70ff0a8a142503f289f2e0cbd2f4d96b73d667247dbb2a2370ceef',dependencyHashes:desktopReference.dependencyHashes,predecessorGeometry:desktopReference.predecessorGeometry,candidateGeometry:desktopReference.candidateGeometry,candidateAfterResize:resized,limitations:['External map providers blocked; no owner acceptance.']},null,2)+'\n');
+   await page.locator('.workspace-toolbar').screenshot({path:path.join(out,'mobile-collapse-desktop-view-after.png'),animations:'disabled'});
+   await page.locator('.maptoolband').scrollIntoViewIfNeeded();await page.locator('.maptoolband').screenshot({path:path.join(out,'mobile-collapse-desktop-playback-after.png'),animations:'disabled'});
+   await page.locator('#q').focus();await page.setViewportSize({width:profile.width,height:profile.height});
+   await page.waitForFunction(()=>document.activeElement===document.getElementById('mobileViewToggle'));
+   assert(!(await viewPanel.isVisible()),'Returning to mobile restores collapsed state');
+   assert(await playPanel.isVisible()&&await playToggle.isVisible(),'Returning to mobile retains the open playback controls');
+   await page.setViewportSize({width:1366,height:900});await waitForDesktopControls();
+   await page.locator('#q').focus();await page.setViewportSize({width:profile.width,height:profile.height});
+   await page.waitForFunction(()=>document.activeElement===document.getElementById('mobileViewToggle')&&document.getElementById('mobileViewControls').hidden&&!document.getElementById('mobileViewToggle').hidden,null,{timeout:5000});
+   assert(!(await viewPanel.isVisible())&&await viewToggle.isVisible(),'Repeated desktop-to-mobile resize restores the collapsed view');
+   assert(await playPanel.isVisible()&&await playToggle.isVisible(),'Repeated resize preserves open playback controls');
+  }
   await page.goto(origin+'/timelines/adams-1881-chart.html',{waitUntil:'load'});
   assert(await page.locator('#progress').evaluate(n=>n.hidden),'Tile diagnostics hidden');assert(await page.locator('#mini').isVisible(),'Minimap retained');
   assert(await page.locator('#viewport').isVisible());assert(await page.locator('#zoom100').count());
