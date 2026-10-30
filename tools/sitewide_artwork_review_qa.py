@@ -113,13 +113,13 @@ def reviewed_home_style(data):
 def gallery_hero_predecessor(data):
     # Accept only this exact hero candidate, then reconstruct the historical CSS.
     # This is a byte contract, not an assertion of visual or owner approval.
-    if hashlib.sha256(data).hexdigest() != 'ee5ebbe046c1effb79853d82be6ab114b7eb6ceab74929cb1b08f333d5447a84':
+    if hashlib.sha256(data).hexdigest() != 'e2f7a4aa16877c7abc14733844f5fa0c61b867d78e257d4ee5b9a2896a498f40':
         return None
-    start = b'.fc-gallery-intro {\n'
+    start = b'\n.fc-gallery-intro {\n'
     end = b'.fc-gallery-intro h1 { margin: 12px 0 18px; }'
     if data.count(start) != 1 or data.count(end) != 1:
         return None
-    first, last = data.index(start), data.index(end)
+    first, last = data.index(start)+1, data.index(end)
     if first >= last:
         return None
     original = b'.fc-gallery-intro { max-width: 760px; margin: 0 auto 32px; text-align: center; }\n'
@@ -130,7 +130,7 @@ def gallery_hero_predecessor(data):
 
 
 def reviewed_gallery_dialog_style(data):
-    if hashlib.sha256(data).hexdigest() == 'ee5ebbe046c1effb79853d82be6ab114b7eb6ceab74929cb1b08f333d5447a84':
+    if hashlib.sha256(data).hexdigest() == 'e2f7a4aa16877c7abc14733844f5fa0c61b867d78e257d4ee5b9a2896a498f40':
         data = gallery_hero_predecessor(data)
         if data is None:
             return False

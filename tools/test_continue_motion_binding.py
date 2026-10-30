@@ -9,6 +9,9 @@ import continue_motion_binding as gate
 import settings_successor as settings
 
 def historical_timeline_source(name, raw):
+    if name == 'art-gallery.html':
+        from art_gallery_hero_successor import previous_html
+        return previous_html(raw)
     if name == 'answers/jesus-christ-latter-day-saint-beliefs.html':
         from timeline_nazareth_successor import restore
         return restore(raw)
@@ -18,6 +21,18 @@ def historical_timeline_source(name, raw):
     return raw
 
 class MotionBindingTests(unittest.TestCase):
+    def test_gallery_projection_requires_current_ledger_before_inverse(self):
+        import art_gallery_hero_successor as gallery
+        name='art-gallery.html';raw=(gate.ROOT/name).read_bytes()
+        self.assertEqual(gate.sha(gate.gallery_motion_view(gate.ROOT,name,raw)),gallery.PRIOR_HTML_SHA)
+        with patch.object(gallery,'previous_ledger',side_effect=ValueError('current gallery ledger changed')),patch.object(gallery,'previous_html') as inverse:
+            with self.assertRaisesRegex(ValueError,'current gallery ledger changed'):gate.gallery_motion_view(gate.ROOT,name,raw)
+            inverse.assert_not_called()
+        changed=raw+b' '
+        self.assertEqual(gate.gallery_motion_view(gate.ROOT,name,changed),changed)
+        self.assertNotEqual(gate.sha(changed),gate.mapping()['files'][name]['after_sha256'])
+        self.assertEqual(gate.gallery_motion_view(gate.ROOT,'unknown.html',raw),raw)
+
     def test_every_exact_predecessor(self):
         data=gate.mapping()
         for name,row in data['files'].items():

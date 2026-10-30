@@ -52,15 +52,15 @@ async function listen(s){await new Promise(resolve=>s.listen(0,'127.0.0.1',resol
 async function layout(page){
  return page.evaluate(()=>{
   const rect=el=>{if(!el)return null;const r=el.getBoundingClientRect(),s=getComputedStyle(el);if(!r.width||!r.height||s.display==='none'||s.visibility==='hidden')return null;return {x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom};};
-  const cue=[...document.querySelectorAll('.fc-mobile-scroll-cue,.fc-unified-continue,.fc-scroll-cue')].find(el=>rect(el));
+  const cue=[...document.querySelectorAll('.fc-mobile-scroll-cue,.fc-unified-continue,.fc-scroll-cue,.fc-gallery-desktop-continue')].find(el=>rect(el));
   const hero=document.querySelector('.fc-gallery-hero');
-  return {intro:rect(document.querySelector('.fc-gallery-intro')),cue:rect(cue),cueHref:cue?.getAttribute('href')||null,hero:rect(hero),heroImage:hero?getComputedStyle(hero).backgroundImage:null,overflow:document.documentElement.scrollWidth>innerWidth+1};
+  return {intro:rect(document.querySelector('.fc-gallery-intro')),title:rect(document.querySelector('.fc-gallery-intro h1')),cue:rect(cue),cueHref:cue?.getAttribute('href')||null,hero:rect(hero),heroImage:hero?getComputedStyle(hero).backgroundImage:null,clientWidth:document.documentElement.clientWidth,overflow:document.documentElement.scrollWidth>innerWidth+1};
  });
 }
 async function run(){
  assertHosted(process.env);fs.mkdirSync(out,{recursive:true});
  const report={scope:'Diagnostic only; not visual or release approval. Enlarged text uses CSS root font size, not native browser zoom. Ordinary cross-origin requests and WebSockets are blocked.',predecessor,checkout:execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim(),htmlSha256:sha(safeRead('art-gallery.html')),cssSha256:sha(safeRead('art-gallery.css')),profiles:[],errors:[]};
- try{assert.equal(report.htmlSha256,'b65721663fc01ae599da4f581f266a36fc7ff5d64ce48129655933c0a9850d64');assert.equal(report.cssSha256,'ee5ebbe046c1effb79853d82be6ab114b7eb6ceab74929cb1b08f333d5447a84');}
+ try{assert.equal(report.htmlSha256,'7af78f9aceb3cf9fe8de572336bf8fae3c826ce798bc2b8b5b3bc1aacbf4a586');assert.equal(report.cssSha256,'e2f7a4aa16877c7abc14733844f5fa0c61b867d78e257d4ee5b9a2896a498f40');}
  catch(error){report.errors.push('Candidate source hash differs');fs.writeFileSync(path.join(out,'report.json'),JSON.stringify(report,null,2)+'\n');throw error;}
  const oldServer=server(true),currentServer=server(false);let browser,baseline,candidate;
  try{
@@ -80,9 +80,15 @@ async function run(){
      await page.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));
     }
     const original=await layout(before),current=await layout(after);const problems=[];
-    for(const field of ['x','y','width','height'])if(Math.abs(original.intro[field]-current.intro[field])>1)problems.push('Intro geometry changed: '+field);
-    if(!original.cue||!current.cue)problems.push('Baseline or candidate Continue is not visible');
-    else {for(const field of ['x','y','width','height'])if(Math.abs(original.cue[field]-current.cue[field])>1)problems.push('Continue geometry changed: '+field);if(original.cueHref!==current.cueHref)problems.push('Continue target changed');}
+    if(profile.width<=700){
+     for(const field of ['x','y','width','height'])if(Math.abs(original.intro[field]-current.intro[field])>1)problems.push('Phone intro geometry changed: '+field);
+     if(!original.cue||!current.cue)problems.push('Phone baseline or candidate Continue missing');
+     else {for(const field of ['x','y','width','height'])if(Math.abs(original.cue[field]-current.cue[field])>1)problems.push('Phone Continue geometry changed: '+field);if(original.cueHref!==current.cueHref)problems.push('Phone Continue target changed');}
+    }else{
+     if(!current.cue||current.cueHref!=='#fc-opening-next')problems.push('Desktop Continue missing or target changed');
+     else if(Math.abs(current.cue.bottom-(profile.height-20))>1||Math.abs(current.cue.x+current.cue.width/2-current.clientWidth/2)>1)problems.push('Desktop Continue is not at the shared baseline');
+     if(!current.hero||!current.title||Math.abs(current.hero.height-current.hero.width*724/2172)>1||current.title.y<current.hero.bottom-1)problems.push('Desktop image-first composition differs');
+    }
     if(current.overflow)problems.push('Horizontal overflow');
     if(!current.hero||!current.heroImage?.includes(profile.width<=700?'mobile-scene/art-20260920.webp':'assets/heroes/art.webp'))problems.push('Expected hero artwork missing');
     const imagePath=profile.width<=700?'/assets/heroes/mobile-scene/art-20260920.webp':'/assets/heroes/art.webp';
@@ -99,6 +105,12 @@ async function run(){
     await after.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));
     await before.screenshot({path:path.join(out,profile.name+'-before.png'),animations:'disabled'});
     await after.screenshot({path:path.join(out,profile.name+'-candidate.png'),animations:'disabled'});
+    const cue=after.locator(profile.width<=700?'.fc-mobile-scroll-cue':'.fc-gallery-desktop-continue');await cue.click();
+    await after.waitForFunction(()=>{const el=document.getElementById('fc-opening-next'),r=el.getBoundingClientRect(),nav=document.querySelector('.nav').getBoundingClientRect();return location.hash==='#fc-opening-next'&&document.activeElement===el&&r.top>=nav.bottom-1&&r.top<innerHeight-1&&r.bottom>nav.bottom;});
+    const navigation=await after.evaluate(async()=>{const el=document.getElementById('fc-opening-next'),first=el.getBoundingClientRect().top;await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));const target=el.getBoundingClientRect(),nav=document.querySelector('.nav').getBoundingClientRect();return {targetTop:target.top,headerBottom:nav.bottom,scrollY:scrollY,settled:Math.abs(first-target.top)<=1,hash:location.hash,focused:document.activeElement===el};});
+    if(!navigation.settled||navigation.hash!=='#fc-opening-next'||!navigation.focused||navigation.targetTop<navigation.headerBottom-1||navigation.targetTop>=profile.height-1)problems.push('Continue target did not settle visibly below the header');
+    await after.screenshot({path:path.join(out,profile.name+'-continue.png'),animations:'disabled'});
+    await after.evaluate(()=>scrollTo(0,0));await after.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));
     const hero=after.locator('.fc-gallery-hero');
     let focused=false;for(let i=0;i<80&&!focused;i++){await after.keyboard.press('Tab');focused=await hero.evaluate(el=>document.activeElement===el);}
     if(!focused||!await hero.evaluate(el=>el.matches(':focus-visible')))problems.push('Hero keyboard focus missing');
@@ -116,7 +128,7 @@ async function run(){
     if(!frame)problems.push('Artwork viewer frame unavailable');
     else {await frame.waitForFunction(()=>document.documentElement.dataset.galleryArtworkReady==='source-bbc2a6bdfa53',null,{timeout:18000});await frame.waitForFunction(()=>{const image=document.querySelector('#topicArtworkDetailDialog img');return !!(image&&image.complete&&image.naturalWidth>0);},null,{timeout:18000});}
     if(pageErrors.length)problems.push('Uncaught page errors');
-    report.profiles.push({profile,original,current,pageErrors,problems});report.errors.push(...problems.map(message=>profile.name+': '+message));
+    report.profiles.push({profile,original,current,navigation,pageErrors,problems});report.errors.push(...problems.map(message=>profile.name+': '+message));
    }catch(error){report.errors.push(profile.name+': '+String(error));try{await before.screenshot({path:path.join(out,profile.name+'-before-failure.png')});await after.screenshot({path:path.join(out,profile.name+'-failure.png')});}catch(_){}}
    finally{await context.close();}
   }

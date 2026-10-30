@@ -37,6 +37,15 @@ def reviewed_bytes(path):
     except ValueError:return raw
     return restore(name,raw)
 
+def gallery_motion_view(root,name,data):
+    """Project the exact gallery candidate only after its current review binding."""
+    if name == 'art-gallery.html':
+        from art_gallery_hero_successor import HTML_SHA as GALLERY_HTML_SHA, previous_html, previous_ledger
+        if sha(data)==GALLERY_HTML_SHA:
+            previous_ledger(root,(root/'content-audit.json').read_bytes())
+            return previous_html(data)
+    return data
+
 def restore(name,data,root=ROOT):
     from timeline_51_source_successor import project_exact
     data=project_exact(name,data,root)
@@ -151,7 +160,7 @@ def check(root=ROOT):
             continue
         path=(root/name).resolve()
         require(path.is_relative_to(root.resolve()) and path.is_file(),'Missing/outside motion consumer')
-        source=path.read_bytes()
+        source=gallery_motion_view(root,name,path.read_bytes())
         from timeline_51_source_successor import project_exact
         source=project_exact(name,source,root)
         # Later exact successors are projected only for this historical check;
