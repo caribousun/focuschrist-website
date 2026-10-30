@@ -37,7 +37,7 @@
   }
   .fc-gallery-hero { bottom: auto; width: 100%; height: auto; aspect-ratio: 2172 / 724; }
   .fc-gallery-intro > :is(p, h1, .fc-actions) { background: none; }
-  .fc-gallery-intro > .fc-gallery-desktop-continue {
+  .fc-gallery-intro > .fc-gallery-desktop-continue.fc-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -45,10 +45,9 @@
     margin: auto auto 0;
     padding: 10px 20px;
     border: 1px solid #f7cc70;
-    border-radius: 999px;
     background: linear-gradient(180deg, #148f91, #10546c);
     box-shadow: inset 0 1px 0 #8be0d538, 0 3px 8px #0003;
-    color: #fff;
+    color: #fff !important;
     text-shadow: -1px -1px 0 #063c50, 0 -1px 0 #063c50, 1px -1px 0 #063c50, -1px 0 0 #063c50, 1px 0 0 #063c50, -1px 1px 0 #063c50, 0 1px 0 #063c50, 1px 1px 0 #063c50;
     font: 700 .85rem/1.25 'Segoe UI', sans-serif;
     letter-spacing: .16em;

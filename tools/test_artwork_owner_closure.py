@@ -376,6 +376,9 @@ class ActualJourneyCensusTests(unittest.TestCase):
         elif __import__('timeline_world_tooltip_release_successor').CODE_REVIEW_SHA256 is None:
             with self.assertRaisesRegex(ValueError,'PENDING independent final tooltip integration code review'):
                 self.journey.check_review(self.root)
+        elif __import__('art_gallery_hero_successor').CODE_REVIEW_SHA256 is None:
+            with self.assertRaisesRegex(ValueError,'PENDING independent gallery current-code review'):
+                self.journey.check_review(self.root)
         else:
             self.journey.check_review(self.root)
 

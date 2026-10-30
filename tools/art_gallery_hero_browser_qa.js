@@ -60,7 +60,7 @@ async function layout(page){
 async function run(){
  assertHosted(process.env);fs.mkdirSync(out,{recursive:true});
  const report={scope:'Diagnostic only; not visual or release approval. Enlarged text uses CSS root font size, not native browser zoom. Ordinary cross-origin requests and WebSockets are blocked.',predecessor,checkout:execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim(),htmlSha256:sha(safeRead('art-gallery.html')),cssSha256:sha(safeRead('art-gallery.css')),profiles:[],errors:[]};
- try{assert.equal(report.htmlSha256,'7af78f9aceb3cf9fe8de572336bf8fae3c826ce798bc2b8b5b3bc1aacbf4a586');assert.equal(report.cssSha256,'e2f7a4aa16877c7abc14733844f5fa0c61b867d78e257d4ee5b9a2896a498f40');}
+ try{assert.equal(report.htmlSha256,'7af78f9aceb3cf9fe8de572336bf8fae3c826ce798bc2b8b5b3bc1aacbf4a586');assert.equal(report.cssSha256,'71e37a6611ec000184632a0536984bfa617a08b3cef61e6f6baa52a6d658f808');}
  catch(error){report.errors.push('Candidate source hash differs');fs.writeFileSync(path.join(out,'report.json'),JSON.stringify(report,null,2)+'\n');throw error;}
  const oldServer=server(true),currentServer=server(false);let browser,baseline,candidate;
  try{
@@ -110,10 +110,17 @@ async function run(){
     const navigation=await after.evaluate(async()=>{const el=document.getElementById('fc-opening-next'),first=el.getBoundingClientRect().top;await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));const target=el.getBoundingClientRect(),nav=document.querySelector('.nav').getBoundingClientRect();return {targetTop:target.top,headerBottom:nav.bottom,scrollY:scrollY,settled:Math.abs(first-target.top)<=1,hash:location.hash,focused:document.activeElement===el};});
     if(!navigation.settled||navigation.hash!=='#fc-opening-next'||!navigation.focused||navigation.targetTop<navigation.headerBottom-1||navigation.targetTop>=profile.height-1)problems.push('Continue target did not settle visibly below the header');
     await after.screenshot({path:path.join(out,profile.name+'-continue.png'),animations:'disabled'});
-    await after.evaluate(()=>scrollTo(0,0));await after.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));
+    // Start the keyboard traversal in a fresh document; Continue intentionally
+    // focused a later element and the gallery contains hundreds of links.
+    await after.goto(candidate+'/art-gallery.html',{waitUntil:'domcontentloaded'});
+    await after.evaluate(scale=>{document.documentElement.style.fontSize=scale+'%';},profile.scale);
+    await after.waitForSelector('[data-gallery-card]');await after.evaluate(()=>document.fonts.ready);
+    await after.evaluate(async src=>{const image=new Image();image.src=src;await image.decode();},imagePath);
+    await after.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));
     const hero=after.locator('.fc-gallery-hero');
     let focused=false;for(let i=0;i<80&&!focused;i++){await after.keyboard.press('Tab');focused=await hero.evaluate(el=>document.activeElement===el);}
-    if(!focused||!await hero.evaluate(el=>el.matches(':focus-visible')))problems.push('Hero keyboard focus missing');
+    if(!focused)throw Error('Hero not reachable by keyboard Tab sequence');
+    if(!await hero.evaluate(el=>el.matches(':focus-visible')))problems.push('Hero keyboard focus outline state missing');
     await after.screenshot({path:path.join(out,profile.name+'-focus.png'),animations:'disabled'});
     await after.keyboard.press('Enter');await after.waitForURL('**/art.html');
     await after.goto(candidate+'/art-gallery.html',{waitUntil:'domcontentloaded'});await after.waitForSelector('[data-gallery-card]');

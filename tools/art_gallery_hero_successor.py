@@ -8,7 +8,7 @@ from pathlib import Path
 
 HTML_SHA='7af78f9aceb3cf9fe8de572336bf8fae3c826ce798bc2b8b5b3bc1aacbf4a586'
 PRIOR_HTML_SHA='67e419a67ab8062e5a4ae2bfb397608a495e6ff94af02bdd4d9fd5e6a8d622a2'
-CSS_SHA='e2f7a4aa16877c7abc14733844f5fa0c61b867d78e257d4ee5b9a2896a498f40'
+CSS_SHA='71e37a6611ec000184632a0536984bfa617a08b3cef61e6f6baa52a6d658f808'
 PRIOR_CSS_SHA='f9bebefb1b4a70a73efdbef6344b40973394521caa5682660a472256530d151a'
 LEDGER_SHA='9045712bca0edde386b131700a8b929e6b082400cf82cf528810bf3addcabc82'
 PRIOR_LEDGER_SHA='dfbc6689ae4ad6f1fc9867efb5e9fe041cc64934fa98ccbe1c3f1932bf976ea6'
@@ -32,6 +32,7 @@ PREVIOUS_TOOLS={
  'tools/test_timeline_51_current_successor.py':'b7eefb6050fe2388e8bc3688d62455251b1ff5ad390b07cc28d2680b7e3d647b',
  'tools/continue_motion_binding.py':'54022366d3519a3042a42d28f16fafaac8e790ef632bd6c8d8e9dcab2d4a02fb',
  'tools/test_continue_motion_binding.py':'6bbc015e53403454ed20f7761cbb5bcf1f9cb226356b8fda068af7260c9a6773',
+ 'tools/test_artwork_owner_closure.py':'5577fa3fc5bd3dbf5c42c13f83b8718e90905b9bf900b176e3f28f78f25d5572',
 }
 
 def sha(raw):return hashlib.sha256(raw).hexdigest()
