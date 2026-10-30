@@ -1,6 +1,38 @@
 /* The gallery layout is scoped here. Original panels retain their own styles. */
 .fc-gallery-main { max-width: 1320px; margin: 0 auto; padding: 115px 28px 64px; }
-.fc-gallery-intro { max-width: 760px; margin: 0 auto 32px; text-align: center; }
+.fc-gallery-intro {
+  position: relative;
+  isolation: isolate;
+  max-width: 760px;
+  margin: 0 auto 32px;
+  text-align: center;
+  color: var(--fc-cream);
+  background: var(--fc-bg-warm);
+  box-shadow: inset 0 0 0 1px var(--fc-line);
+}
+/* Reference the approved Art opening and link directly to its owning page. */
+.fc-gallery-hero {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(180deg, rgba(10, 28, 36, .55), rgba(10, 28, 36, .12) 65%, rgba(10, 28, 36, .55)),
+    url('assets/heroes/art.webp') center 50% / cover no-repeat;
+}
+.fc-gallery-hero:focus-visible { outline: 3px solid var(--fc-gold-light); outline-offset: -5px; }
+.fc-gallery-intro:has(.fc-gallery-hero:focus-visible) { outline: 3px solid var(--fc-gold-light); outline-offset: 3px; }
+.fc-gallery-intro > :not(.fc-gallery-hero) { position: relative; z-index: 1; }
+.fc-gallery-intro > :is(p, h1, .fc-actions) {
+  background: rgba(10, 28, 36, .88);
+  border-radius: 6px;
+}
+@media (max-width: 700px) {
+  .fc-gallery-hero {
+    background:
+      linear-gradient(180deg, rgba(10, 28, 36, .55), rgba(10, 28, 36, .12) 65%, rgba(10, 28, 36, .55)),
+      url('assets/heroes/mobile-scene/art-20260920.webp') right center / cover no-repeat;
+  }
+}
 .fc-gallery-intro h1 { margin: 12px 0 18px; }
 .fc-gallery-intro > p { line-height: 1.75; }
 .fc-gallery-intro .fc-actions { justify-content: center; }

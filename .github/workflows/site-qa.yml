@@ -774,6 +774,39 @@ jobs:
           if-no-files-found: ignore
           retention-days: 7
 
+  gallery-hero-render-diagnostic:
+    name: Gallery hero rendering (diagnostic, not release acceptance)
+    if: github.event_name == 'pull_request' && github.head_ref == 'albert/art-gallery-hero-20261030'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - name: Check out candidate and exact predecessor
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Verify the exact gallery predecessor is available
+        run: test "$(git rev-parse --verify c131e8254ec1b0a022bc8ab8cea834f8110e3f03^{commit})" = c131e8254ec1b0a022bc8ab8cea834f8110e3f03
+      - name: Install existing pinned browser dependencies
+        run: |
+          npm install --prefix /tmp/focus-row-qa --no-save --package-lock=false --ignore-scripts playwright@1.55.1 leaflet@1.9.4
+          /tmp/focus-row-qa/node_modules/.bin/playwright install --with-deps chromium
+      - name: Verify gallery diagnostic boundary
+        run: NODE_PATH=/tmp/focus-row-qa/node_modules node tools/test_art_gallery_hero_browser_qa.js
+      - name: Capture gallery opening and interactions
+        run: timeout --signal=TERM --kill-after=15s 5m env NODE_PATH=/tmp/focus-row-qa/node_modules node tools/art_gallery_hero_browser_qa.js
+      - name: Save gallery diagnostic evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gallery-hero-render-diagnostic
+          path: .qa-artifacts/gallery-hero/
+          include-hidden-files: true
+          if-no-files-found: ignore
+          retention-days: 7
+
   owner-integration-render:
     name: Owner integration rendered journeys (not release acceptance)
     # This exact-source diagnostic belongs to PR 531's historical evidence.

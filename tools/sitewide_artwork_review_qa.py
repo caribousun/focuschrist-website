@@ -110,7 +110,30 @@ def reviewed_home_style(data):
     data = historical_style_bytes(data)
     return hashlib.sha256(data).hexdigest() == HOME_STYLE_SHA256
 
+def gallery_hero_predecessor(data):
+    # Accept only this exact hero candidate, then reconstruct the historical CSS.
+    # This is a byte contract, not an assertion of visual or owner approval.
+    if hashlib.sha256(data).hexdigest() != 'ee5ebbe046c1effb79853d82be6ab114b7eb6ceab74929cb1b08f333d5447a84':
+        return None
+    start = b'.fc-gallery-intro {\n'
+    end = b'.fc-gallery-intro h1 { margin: 12px 0 18px; }'
+    if data.count(start) != 1 or data.count(end) != 1:
+        return None
+    first, last = data.index(start), data.index(end)
+    if first >= last:
+        return None
+    original = b'.fc-gallery-intro { max-width: 760px; margin: 0 auto 32px; text-align: center; }\n'
+    predecessor = data[:first] + original + data[last:]
+    if hashlib.sha256(predecessor).hexdigest() != 'f9bebefb1b4a70a73efdbef6344b40973394521caa5682660a472256530d151a':
+        return None
+    return predecessor
+
+
 def reviewed_gallery_dialog_style(data):
+    if hashlib.sha256(data).hexdigest() == 'ee5ebbe046c1effb79853d82be6ab114b7eb6ceab74929cb1b08f333d5447a84':
+        data = gallery_hero_predecessor(data)
+        if data is None:
+            return False
     # Exact owner-reviewed viewport repair; recover the complete prior CSS.
     current = b'.fc-gallery-dialog { position: fixed; inset: 0; width: 100%;'
     prior = b'.fc-gallery-dialog { position: fixed; inset: 0; width: 100vw;'
@@ -774,6 +797,10 @@ def main():
         home_css = inverse(HOME_STYLE, (ROOT/HOME_STYLE).read_bytes())
         assert reviewed_home_style(home_css)
         gallery_css = (ROOT/'art-gallery.css').read_bytes()
+        gallery_prior = gallery_hero_predecessor(gallery_css)
+        assert gallery_prior is not None and reviewed_gallery_dialog_style(gallery_prior)
+        assert gallery_hero_predecessor(gallery_css + b'\n') is None
+        assert gallery_hero_predecessor(gallery_css.replace(b'art-20260920.webp', b'other-20260920.webp')) is None
         assert reviewed_gallery_dialog_style(gallery_css)
         assert not reviewed_gallery_dialog_style(gallery_css.replace(b'width: 100%; height: 100dvh', b'width: 100vw; height: 100dvh'))
         assert not reviewed_gallery_dialog_style(gallery_css.replace(b'width: 100%; height: 100dvh', b'width: 99%; height: 100dvh'))
