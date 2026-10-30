@@ -250,15 +250,20 @@ def validate() -> int:
             from timeline_world_controls_successor import AFTER as WORLD_CONTROLS_AFTER
             from timeline_world_mobile_successor import AFTER as WORLD_MOBILE_AFTER, validate_albert_content_review, validate_newton_visual_review
             from timeline_world_tooltip_visual_successor import PAGE_AFTER as WORLD_TOOLTIP_AFTER, validate_code_review as validate_tooltip_code_review
+            from timeline_world_webgl_successor import AFTER as WEBGL_AFTER, validate_review as validate_webgl_review
             current_sha = hashlib.sha256(path.read_bytes()).hexdigest()
-            if current_sha in (WORLD_MOBILE_AFTER, WORLD_TOOLTIP_AFTER):
+            if current_sha == WEBGL_AFTER:
+                try: validate_webgl_review(ROOT)
+                except (AssertionError, ValueError, OSError, KeyError, TypeError):
+                    errors.append(f"{name}: current WebGL code review pending or changed")
+            if current_sha in (WORLD_MOBILE_AFTER, WORLD_TOOLTIP_AFTER, WEBGL_AFTER):
                 try: validate_albert_content_review(ROOT)
                 except (AssertionError, ValueError, OSError, KeyError, TypeError):
                     errors.append(f"{name}: Albert mobile wording and scope review missing or changed")
                 try: validate_newton_visual_review(ROOT)
                 except (AssertionError, ValueError, OSError, KeyError, TypeError):
                     errors.append(f"{name}: current mobile controls independent review pending or changed")
-                if current_sha == WORLD_TOOLTIP_AFTER:
+                if current_sha in (WORLD_TOOLTIP_AFTER, WEBGL_AFTER):
                     try: validate_tooltip_code_review(ROOT)
                     except (AssertionError, ValueError, OSError, KeyError, TypeError):
                         errors.append(f"{name}: current tooltip visual and code reviews pending or changed")

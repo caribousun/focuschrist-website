@@ -20,7 +20,7 @@ class CurrentIndexClosureTests(unittest.TestCase):
  def call(self,review=None,code=None):
   review=self.review if review is None else review;code=self.code if code is None else code
   extension={'previous_search':self.previous_search,'previous_ledger':self.previous_ledger,'previous_tool_tree':self.tree}
-  with patch.object(event,'prepare',return_value=extension) as event_prepare,patch.object(gate,'pinned',side_effect=lambda root,name,pin:review if name==gate.INDEX_REVIEW else code),patch.object(gate,'tool_tree',return_value=self.tree),patch.object(gate,'project_old_tree',return_value=self.prior):
+  with patch.object(event,'prepare',return_value=extension) as event_prepare,patch.object(gate,'pinned',side_effect=lambda root,name,pin:review if name==gate.INDEX_REVIEW else code),patch.object(gate,'project_old_tree',return_value=self.prior):
    result=gate.prepare(index.ROOT);event_prepare.assert_called_once_with(index.ROOT);return result
  def test_real_review_pin_absence_fails_closed(self):
   extension={'previous_search':self.previous_search,'previous_ledger':self.previous_ledger,'previous_tool_tree':self.tree}
