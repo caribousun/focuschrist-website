@@ -8,6 +8,7 @@
     "tools/settings_successor.py": "1955d2068c2d2a1769d5d4b8554ee408dcc3ff1fd63ef6fbd49f5f11a4da712a",
     "tools/static_content_audit.py": "e005cef9b15f220b66728f179e1849567e2b01d34b7cb589c397d49ac69516f9",
     "tools/test_timeline_51_current_successor.py": "b7eefb6050fe2388e8bc3688d62455251b1ff5ad390b07cc28d2680b7e3d647b",
+    "tools/test_timeline_current_index_closure.py": "0f1ee0960a22a1a8ceb4732f437e84b9065af3bbe95ef899467f831d15778960",
     "tools/test_timeline_world_mobile_release_successor.py": "8b691405dd353e0419feaaafc09ea6e217f8fa8b26e3306b4134318616ef3613",
     "tools/test_timeline_world_tooltip_release_successor.py": "024ae79d351d0b13ff4a43f09476896af0807bdaf3a3720af728d6f702f4b6e8",
     "tools/test_timeline_world_webgl_successor.py": null,
