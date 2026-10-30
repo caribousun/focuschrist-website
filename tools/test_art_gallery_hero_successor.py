@@ -18,6 +18,8 @@ class GallerySuccessorTests(unittest.TestCase):
   for name in ('art-gallery.html','art-gallery.css'):
    with self.subTest(name=name),patch.object(gate,'source',side_effect=lambda root,path:original(root,path)+(b' ' if path==name else b'')),self.assertRaisesRegex(ValueError,'source changed'):
     gate.previous_ledger(ROOT,raw)
+  with patch.object(gate,'source',side_effect=lambda root,path:original(root,path).replace(b' - max(52px, 3.25rem)',b'') if path=='art-gallery.css' else original(root,path)),self.assertRaisesRegex(ValueError,'source changed'):
+   gate.previous_ledger(ROOT,raw)
 
  def test_exact_tree_projection_rejects_unknown_and_missing(self):
   current={name:'a'*64 for name in gate.PREVIOUS_TOOLS}

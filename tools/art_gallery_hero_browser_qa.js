@@ -60,7 +60,7 @@ async function layout(page){
 async function run(){
  assertHosted(process.env);fs.mkdirSync(out,{recursive:true});
  const report={scope:'Diagnostic only; not visual or release approval. Enlarged text uses CSS root font size, not native browser zoom. Ordinary cross-origin requests and WebSockets are blocked.',predecessor,checkout:execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim(),htmlSha256:sha(safeRead('art-gallery.html')),cssSha256:sha(safeRead('art-gallery.css')),profiles:[],errors:[]};
- try{assert.equal(report.htmlSha256,'7af78f9aceb3cf9fe8de572336bf8fae3c826ce798bc2b8b5b3bc1aacbf4a586');assert.equal(report.cssSha256,'71e37a6611ec000184632a0536984bfa617a08b3cef61e6f6baa52a6d658f808');}
+ try{assert.equal(report.htmlSha256,'7af78f9aceb3cf9fe8de572336bf8fae3c826ce798bc2b8b5b3bc1aacbf4a586');assert.equal(report.cssSha256,'c6df05a20d1fcee223be1e13064115679e1ab2be3ab7f046c2932b0c99d600dd');}
  catch(error){report.errors.push('Candidate source hash differs');fs.writeFileSync(path.join(out,'report.json'),JSON.stringify(report,null,2)+'\n');throw error;}
  const oldServer=server(true),currentServer=server(false);let browser,baseline,candidate;
  try{

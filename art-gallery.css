@@ -56,6 +56,10 @@
   }
   .fc-gallery-intro > .fc-gallery-desktop-continue:focus-visible { outline: 3px solid var(--fc-gold-light); outline-offset: 4px; }
 }
+@media (min-width: 1021px) {
+  /* The shared desktop header reserves this same space on the body. */
+  .fc-gallery-intro { min-height: max(0px, calc(100dvh - 135px - max(52px, 3.25rem))); }
+}
 @media (max-width: 700px) {
   .fc-gallery-intro > .fc-gallery-desktop-continue { display: none !important; }
   .fc-gallery-hero {
