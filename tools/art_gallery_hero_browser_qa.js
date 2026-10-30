@@ -86,7 +86,10 @@ async function run(){
      else {for(const field of ['x','y','width','height'])if(Math.abs(original.cue[field]-current.cue[field])>1)problems.push('Phone Continue geometry changed: '+field);if(original.cueHref!==current.cueHref)problems.push('Phone Continue target changed');}
     }else{
      if(!current.cue||current.cueHref!=='#fc-opening-next')problems.push('Desktop Continue missing or target changed');
-     else if(Math.abs(current.cue.bottom-(profile.height-20))>1||Math.abs(current.cue.x+current.cue.width/2-current.clientWidth/2)>1)problems.push('Desktop Continue is not at the shared baseline');
+     else {
+      if(Math.abs(current.cue.bottom-(profile.height-20))>1)problems.push('Desktop Continue vertical baseline differs');
+      if(Math.abs(current.cue.x+current.cue.width/2-current.clientWidth/2)>1)problems.push('Desktop Continue horizontal center differs');
+     }
      if(!current.hero||!current.title||Math.abs(current.hero.height-current.hero.width*724/2172)>1||current.title.y<current.hero.bottom-1)problems.push('Desktop image-first composition differs');
     }
     if(current.overflow)problems.push('Horizontal overflow');
