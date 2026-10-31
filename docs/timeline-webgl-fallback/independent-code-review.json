@@ -1,0 +1,24 @@
+{
+  "schema": "timeline-webgl-fallback-review-v1",
+  "scope": "webgl_source_test_and_tool_tree",
+  "verdict": "CONCUR_WITHIN_BOUNDED_CODE_SCOPE",
+  "reviewer_commitment": "25275b95cc2c78a6aef8f6ac29e2400b0fac0290ab5ec12f9946448301ee8133",
+  "implementer_commitment": "c9838294792783a14b7a2960c6284e74e319967549219eb06a3a885e40de2340",
+  "receipt_sha256": "7c624ad85ce1897aacf434bf56d1bb63f958a243153a50c977a035a0c7e9b2d7",
+  "source_review_receipt_sha256": "ab5ab96eda5e5f08dfffcf65ce41ef82e95a8f36e5b201fa5d1f95ef6bc41709",
+  "reviewed_head": "7506fc66c1f415bc40014886f83cddb3382a347a",
+  "reviewed_at": "2026-10-30T00:30:21Z",
+  "source_head": "1e7b1ad96278be36d0350010fff7568d0d830b6b",
+  "page_before_sha256": "d67a067e9d90d64b992d21382d07307a91b3770132b1d6db3b451e46683c69a1",
+  "page_after_sha256": "40602f8dfa0bd9683993620d1ff106cbdc192a8a200a475135e5286219772a99",
+  "regression_test_sha256": "2633b18153478a0a59621bb34d137718b3f05b92d02d5dc8b3591bd835afd3ba",
+  "source_manifest_sha256": "40ce7ebb0982c4868c4399a9a1e1619281fed8f58ed419101d604529e30f580e",
+  "tree_manifest_sha256": "398718af3075c796e99d8c188d9828c88693af42b6088e995d1e17e0e114fcd7",
+  "previous_tool_tree_sha256": "07ad3d30c0ef458edae2c44bba8d9a988277a164200e3fee4821a193d6fa4923",
+  "current_tool_tree_sha256": "ee90a6ccdd9cb9ef7fa8cd666d35027c4ea5c89116f7242207deb947ce6cf7c3",
+  "limits": [
+    "No independent full fixture, JSDOM, hosted/browser/provider, physical-device, full CI, owner or release approval.",
+    "Native GPU resource cleanup cannot be guaranteed if renderer.remove throws.",
+    "Commitments are structural, not identity authentication."
+  ]
+}

@@ -53,6 +53,9 @@ def reconstruct(root=ROOT):
   name=row['path'];before_hash,after_hash,n=expected[name]
   if row.get('before_sha256')!=before_hash or row.get('after_sha256')!=after_hash:raise ValueError('Tooltip source hashes differ')
   current=mobile.source(root,name)
+  if name==mobile.PAGE:
+   from timeline_world_webgl_successor import restore_page
+   current=restore_page(current,root)
   if name==mobile.BROWSER_TEST:current=restore_browser_test(current,root)
   if sha(current)!=after_hash:raise ValueError('Unreviewed tooltip source: '+name)
   changes=row.get('changes')

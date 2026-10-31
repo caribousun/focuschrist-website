@@ -6,9 +6,10 @@ import timeline_current_index_closure as old
 import timeline_world_mobile_release_successor as gate
 import timeline_world_mobile_successor as mobile
 import timeline_world_tooltip_release_successor as tooltip_release
+import timeline_world_webgl_successor as webgl
 ROOT=Path(__file__).resolve().parents[1]
 class MobileReleaseSuccessorTests(unittest.TestCase):
- def setUp(self):self.current=tooltip_release.project_tree(ROOT,old.tool_tree(ROOT))
+ def setUp(self):self.current=tooltip_release.project_tree(ROOT,webgl.project_tree(ROOT,old.tool_tree(ROOT)))
  def test_exact_historical_tree_and_unknown_changes_fail(self):
   previous=gate.project_tree(ROOT,self.current);self.assertEqual(old.canonical(previous),gate.PRIOR_TREE)
   with self.assertRaisesRegex(ValueError,'historical tool tree differs'):gate.project_tree(ROOT,dict(self.current,**{'tools/unreviewed.py':'0'*64}))

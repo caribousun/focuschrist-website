@@ -23,6 +23,8 @@ def source(root,name):
  assert p.is_file() and p.resolve().is_relative_to(root),'Missing or unsafe mobile source'
  return p.read_bytes()
 def restore(raw,root=ROOT):
+ from timeline_world_webgl_successor import AFTER as WEBGL_AFTER,restore_page
+ if sha(raw)==WEBGL_AFTER:raw=restore_page(raw,root)
  from timeline_world_tooltip_visual_successor import PAGE_AFTER as TOOLTIP_AFTER,validate_code_review
  if sha(raw)==TOOLTIP_AFTER:
   raw=validate_code_review(root)['visual_review']['previous_sources'][PAGE]

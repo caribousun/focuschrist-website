@@ -126,6 +126,9 @@ def prepare(root):
  from timeline_world_mobile_successor import PAGE as MOBILE_PAGE, AFTER as MOBILE_AFTER
  from timeline_world_tooltip_visual_successor import PAGE_AFTER as TOOLTIP_AFTER
  current_page=sha(prior_search.source(root,MOBILE_PAGE))
+ from timeline_world_webgl_successor import AFTER as WEBGL_AFTER,project_reviewed_tree as project_webgl_reviewed_tree
+ if current_page==WEBGL_AFTER:
+  current=project_webgl_reviewed_tree(root,current);current_page=TOOLTIP_AFTER
  if current_page==TOOLTIP_AFTER:
   from timeline_world_tooltip_release_successor import project_reviewed_tree as project_tooltip_reviewed_tree
   current=project_tooltip_reviewed_tree(root,current)

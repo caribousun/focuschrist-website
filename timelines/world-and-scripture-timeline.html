@@ -2470,10 +2470,14 @@ return maplibregl$1;
 		},
 		onRemove: function(map) {
 			if (this._map._proxy && this._map.options.zoomAnimation) L.DomEvent.off(this._map._proxy, L.DomUtil.TRANSITION_END, this._transitionEnd, this);
-			var paneName = this.getPaneName();
-			map.getPane(paneName).removeChild(this._container);
-			this._glMap.remove();
+			var paneName = this.getPaneName(), pane = map.getPane(paneName);
+			if (this._container && this._container.parentNode === pane) pane.removeChild(this._container);
+			var renderer = this._glMap;
 			this._glMap = null;
+			if (renderer) {
+				try { renderer.remove(); }
+				catch (error) { if (window.console) console.warn("Terrain renderer cleanup failed", error); }
+			}
 		},
 		getEvents: function() {
 			return {
@@ -2690,7 +2694,16 @@ L.Icon.Default.imagePath = ""; // Versioned absolute default icon URLs.
             if (!unknownFailure && !Object.keys(failedSources).length && terrainReady && gl.loaded() && gl.isSourceLoaded('terrain-dem')) emit('tileload');
           });
           gl.on('error', unavailable);
-        } catch (error) { unavailable(error); }
+        } catch (error) {
+          // Leaflet registers layer events before onAdd; roll back a partial
+          // layer if renderer construction fails, then show the fallback.
+          if (layer && map.hasLayer(layer)) {
+            try { map.removeLayer(layer); }
+            catch (cleanupError) { if (window.console) console.warn('Terrain layer cleanup failed', cleanupError); }
+          }
+          if (gl && window.__englishMap === gl) window.__englishMap = null;
+          unavailable(error);
+        }
         return this;
       }
     };
