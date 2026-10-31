@@ -1,0 +1,20 @@
+{
+  "schema": "art-gallery-current-code-review-v1",
+  "scope": "gallery_hero_and_exact_tool_tree",
+  "verdict": "CONCUR_WITHIN_BOUNDED_CODE_SCOPE",
+  "reviewer_commitment": "4e5f2f220e8f79207add8836de6eace66fc4a47fc8353a65c53920a398f0cb07",
+  "implementer_commitment": "8baa512ad0ee56a6d179f3740dcf00e57d713d66fdf847f22fb260a7de55da50",
+  "receipt_sha256": "84c109a8820bda25998e8eeac1650954b389338926be4d44e1ff96dadce451fa",
+  "html_sha256": "7af78f9aceb3cf9fe8de572336bf8fae3c826ce798bc2b8b5b3bc1aacbf4a586",
+  "css_sha256": "c6df05a20d1fcee223be1e13064115679e1ab2be3ab7f046c2932b0c99d600dd",
+  "ledger_sha256": "9045712bca0edde386b131700a8b929e6b082400cf82cf528810bf3addcabc82",
+  "current_tool_tree_sha256": "4946d8f6d56f1c88fc1b10a32ebd81bed4a498ac0fe390ceff153b266debac46",
+  "prior_tool_tree_sha256": "07ad3d30c0ef458edae2c44bba8d9a988277a164200e3fee4821a193d6fa4923",
+  "reviewed_at": "2026-10-31T00:21:47.744539Z",
+  "limitations": [
+    "Structural commitments do not authenticate identity.",
+    "No rendered, screen-reader, owner, or release approval.",
+    "The tool tree is bound exactly; this is not a semantic audit of every file.",
+    "Genuine bound-review tests and post-pin exact-file review remain pending."
+  ]
+}
