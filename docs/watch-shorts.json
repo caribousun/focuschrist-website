@@ -1,8 +1,8 @@
 {
   "channel": "https://www.youtube.com/@theRisen636/shorts",
   "channel_id": "UC4Fr98iGGtL60UpfXYXR1pQ",
-  "verified_at": "2026-10-13",
-  "verification": "Albert directly inspected the public channel Shorts tab with Latest selected on 13 October 2026: Bednar, Spannaus, Renlund, Kearon. The new Bednar preview is a proportional export of Wyatt's exact approved cover; prior three records and artwork remain unchanged.",
+  "verified_at": "2026-10-31",
+  "verification": "Selection and order follow the owner's standing instruction: Bednar first, the new Wilcox Short second, Renlund third, Kearon fourth. Ji893TPSOg8 was verified public at the top of the public channel Shorts tab with Latest selected on 31 October 2026. Its preview is a proportional export of Wyatt's exact approved cover (source cover-review5i.png, sha256 d64aab4581dab22c7281ba7cd790830d60b151e62eb1a4ce92f3d8796498769b), with Jeff's concurrence (J-2026-10-31-015) and Hannah's pass on the artwork, and Hannah's pass on this card's wording. The Bednar, Renlund and Kearon records and artwork are unchanged. The Spannaus record is replaced in this selection and preserved in Git history.",
   "shorts": [
     {
       "id": "-LvOxhI8YY0",
@@ -17,12 +17,12 @@
       ]
     },
     {
-      "id": "zIntX6aoq1g",
-      "title": "God Is at Your Side",
-      "speaker": "Sister Andrea Muñoz Spannaus",
-      "description": "God is at your side. Hear Sister Spannaus’s invitation to stay faithful to your baptismal covenant.",
-      "thumbnail": "assets/shorts/god-is-at-your-side-portrait-20261012.png",
-      "thumbnail_sha256": "78f547b0f541f33e97cb8d8be33a7ea6dfdac8a10516c8712a8b08e19be1ab63",
+      "id": "Ji893TPSOg8",
+      "title": "Please Choose to Stay",
+      "speaker": "Brad Wilcox",
+      "description": "Knowing Christ's character, Brad Wilcox testifies that the Savior pleads with us to stay and be changed by His grace.",
+      "thumbnail": "assets/shorts/please-choose-to-stay-wilcox-20261031.png",
+      "thumbnail_sha256": "8eeaff370d942f18598b921f7577298d2b3751d124c2f67e6879000bd16f6ee6",
       "thumbnail_dimensions": [
         941,
         1672
