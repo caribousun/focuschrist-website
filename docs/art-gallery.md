@@ -22,6 +22,10 @@ The desktop header previously distributed the navigation between an unequal-widt
 
 Run `node tools/header_centering_browser_qa.js` against the preview or production base documented in that script. It checks every sitemap page at desktop and phone widths, top and scrolled states, plus narrow desktop boundaries, while comparing hero geometry and font/color signatures against the prior header layout.
 
+## Gallery opening verification
+
+For a gallery hero change, inspect the actual desktop and phone captures, including the narrow-phone and enlarged-text cases. Check the artwork crop, title and label contrast, image-link keyboard focus, filter and original-study navigation, and Continue landing below the fixed header. Compare the existing phone Continue rectangle and destination with its predecessor; when adding a previously missing desktop Continue, check its centered shared baseline instead of pretending an old desktop rectangle exists. The first gallery hero diagnostic (run 41005420661, candidate `cd5aff5e1807aae0865e168baf01a203846c8001`) identified that the predecessor and initial candidate lacked a visible desktop Continue. A diagnostic result is evidence for inspection, not visual or release approval.
+
 The original deployment can be restored by reverting this scoped gallery/header release. No artwork files, original panel scripts/styles, AI provider settings, credentials, schedules, or unrelated work are changed.
 
 ## Previously shared picture links

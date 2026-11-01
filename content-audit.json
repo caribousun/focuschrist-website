@@ -2440,9 +2440,68 @@
     {
       "path": "art-gallery.html",
       "status": "non-source-dependent",
-      "published_text_sha256": "5ee7fb5b84f81c0dae5ed03bcc782434446bf72816d425cac6c87795802ace24",
-      "reviewed_on": "2026-10-02",
-      "review_standard": "Independent gallery_release_review and gallery_review checked gallery discovery, filter, original-study and loading language: functional navigation only, no new doctrinal, historical or scripture claims; original panels own all study content. Search navigation label added; prior substantive source review preserved. Navigation-only review: centered Christ’s Atonement destination; existing body and source review retained. PR385 scoped review: Ask/Answers navigation disambiguation, matching Atonement accessible name, established YouTube footer link, Ask/Answers introductions and punctuation; prior substantive source review retained. Owner-directed toolbar review: title-case navigation labels only; prior substantive source review and approved artwork retained. Independently reviewed maintenance copy: First Vision resource label matches the existing official accounts card; Art fallback footers match the established runtime welcome. Source destinations, substantive study and artwork unchanged. Owner-directed artwork disclosure relocation: Fermi and Newton independently verified the sole footer paragraph addition across 126 runtime pages and removal of 17 repeated generated-art credit paragraphs from the priesthood study; all other prose, historical source distinctions, image attributes and six official Church credits preserved. See originating outputs/format-native-review.json and independent disclosure reviews. Timeline navigation-only review (2026-10-02): exact normalized text comparison confirms only Timeline link labels added; prior substantive body review preserved. Shared script version changes add no published wording."
+      "published_text_sha256": "8a68f9ae9d38cff355b1b5058d76198968d76e188c73bf55426572b574560489",
+      "reviewed_on": "2026-10-30",
+      "review_standard": "Scoped independent technical review of the accessible Art & Study artwork link and Continue label/destination; earlier gallery reviews are preserved below. This does not assert rendered, screen-reader, Fermi/Newton, owner, or release approval.",
+      "current_gallery_label_review": {
+        "reviewer": "independent ChatGPT technical reviewer",
+        "reviewed_at_utc": "2026-10-30T05:06:43.465650088Z",
+        "source_sha256": "7af78f9aceb3cf9fe8de572336bf8fae3c826ce798bc2b8b5b3bc1aacbf4a586",
+        "predecessor_source_sha256": "67e419a67ab8062e5a4ae2bfb397608a495e6ff94af02bdd4d9fd5e6a8d622a2",
+        "predecessor_text_sha256": "5ee7fb5b84f81c0dae5ed03bcc782434446bf72816d425cac6c87795802ace24",
+        "scope": "The artwork-link label and a single visible and accessible Continue label were reviewed; the static extractor counts its aria-label and decorative text separately. Continue targets gallery search and filter controls. Browser, visual, screen-reader and release checks remain separate."
+      },
+      "prior_gallery_review": {
+        "path": "art-gallery.html",
+        "status": "non-source-dependent",
+        "published_text_sha256": "5ee7fb5b84f81c0dae5ed03bcc782434446bf72816d425cac6c87795802ace24",
+        "reviewed_on": "2026-10-02",
+        "review_standard": "Independent gallery_release_review and gallery_review checked gallery discovery, filter, original-study and loading language: functional navigation only, no new doctrinal, historical or scripture claims; original panels own all study content. Search navigation label added; prior substantive source review preserved. Navigation-only review: centered Christ’s Atonement destination; existing body and source review retained. PR385 scoped review: Ask/Answers navigation disambiguation, matching Atonement accessible name, established YouTube footer link, Ask/Answers introductions and punctuation; prior substantive source review retained. Owner-directed toolbar review: title-case navigation labels only; prior substantive source review and approved artwork retained. Independently reviewed maintenance copy: First Vision resource label matches the existing official accounts card; Art fallback footers match the established runtime welcome. Source destinations, substantive study and artwork unchanged. Owner-directed artwork disclosure relocation: Fermi and Newton independently verified the sole footer paragraph addition across 126 runtime pages and removal of 17 repeated generated-art credit paragraphs from the priesthood study; all other prose, historical source distinctions, image attributes and six official Church credits preserved. See originating outputs/format-native-review.json and independent disclosure reviews. Timeline navigation-only review (2026-10-02): exact normalized text comparison confirms only Timeline link labels added; prior substantive body review preserved. Shared script version changes add no published wording."
+      },
+      "prior_gallery_hero_record": {
+        "path": "art-gallery.html",
+        "status": "non-source-dependent",
+        "published_text_sha256": "c5298ab22f965a405824b66188c00e8a8eafdbe65247de02e9b64ea8be6bafae",
+        "reviewed_on": "2026-10-30",
+        "review_standard": "Scoped independent technical review of the accessible Art & Study artwork link and Continue label/destination; prior gallery and earlier label reviews are preserved below. This does not assert rendered, screen-reader, Fermi/Newton, owner, or release approval.",
+        "current_gallery_label_review": {
+          "reviewer": "independent ChatGPT technical reviewer",
+          "reviewed_at_utc": "2026-10-30T05:01:00.867366548Z",
+          "source_sha256": "23bc15bc6eca5b15b8397b46acd7b05f8a691b9babe7e7825395618dcc897ccd",
+          "predecessor_source_sha256": "67e419a67ab8062e5a4ae2bfb397608a495e6ff94af02bdd4d9fd5e6a8d622a2",
+          "predecessor_text_sha256": "5ee7fb5b84f81c0dae5ed03bcc782434446bf72816d425cac6c87795802ace24",
+          "scope": "The artwork-link label and Continue are the only published-text additions; Continue targets the existing gallery search and filter controls. Browser, visual, screen-reader and release checks remain separate."
+        },
+        "prior_gallery_review": {
+          "path": "art-gallery.html",
+          "status": "non-source-dependent",
+          "published_text_sha256": "5ee7fb5b84f81c0dae5ed03bcc782434446bf72816d425cac6c87795802ace24",
+          "reviewed_on": "2026-10-02",
+          "review_standard": "Independent gallery_release_review and gallery_review checked gallery discovery, filter, original-study and loading language: functional navigation only, no new doctrinal, historical or scripture claims; original panels own all study content. Search navigation label added; prior substantive source review preserved. Navigation-only review: centered Christ’s Atonement destination; existing body and source review retained. PR385 scoped review: Ask/Answers navigation disambiguation, matching Atonement accessible name, established YouTube footer link, Ask/Answers introductions and punctuation; prior substantive source review retained. Owner-directed toolbar review: title-case navigation labels only; prior substantive source review and approved artwork retained. Independently reviewed maintenance copy: First Vision resource label matches the existing official accounts card; Art fallback footers match the established runtime welcome. Source destinations, substantive study and artwork unchanged. Owner-directed artwork disclosure relocation: Fermi and Newton independently verified the sole footer paragraph addition across 126 runtime pages and removal of 17 repeated generated-art credit paragraphs from the priesthood study; all other prose, historical source distinctions, image attributes and six official Church credits preserved. See originating outputs/format-native-review.json and independent disclosure reviews. Timeline navigation-only review (2026-10-02): exact normalized text comparison confirms only Timeline link labels added; prior substantive body review preserved. Shared script version changes add no published wording."
+        },
+        "prior_gallery_hero_record": {
+          "path": "art-gallery.html",
+          "status": "non-source-dependent",
+          "published_text_sha256": "e16a2c557e23a03bc24ef1782cbf4b107a2abde30572c3246639837cc63df38e",
+          "reviewed_on": "2026-10-30",
+          "review_standard": "Scoped independent technical review of the added accessible Art & Study hero-link label only; previous gallery review is preserved in prior_gallery_review. This does not assert rendered, screen-reader, Fermi/Newton, owner, or release approval.",
+          "current_gallery_label_review": {
+            "reviewer": "independent ChatGPT technical reviewer",
+            "reviewed_at_utc": "2026-10-30T04:35:23.462294Z",
+            "source_sha256": "b65721663fc01ae599da4f581f266a36fc7ff5d64ce48129655933c0a9850d64",
+            "predecessor_source_sha256": "67e419a67ab8062e5a4ae2bfb397608a495e6ff94af02bdd4d9fd5e6a8d622a2",
+            "predecessor_text_sha256": "5ee7fb5b84f81c0dae5ed03bcc782434446bf72816d425cac6c87795802ace24",
+            "scope": "One accessible label added for a link to the existing Art & Study page; no other published text changes. Browser, visual, screen-reader and release checks remain separate."
+          },
+          "prior_gallery_review": {
+            "path": "art-gallery.html",
+            "status": "non-source-dependent",
+            "published_text_sha256": "5ee7fb5b84f81c0dae5ed03bcc782434446bf72816d425cac6c87795802ace24",
+            "reviewed_on": "2026-10-02",
+            "review_standard": "Independent gallery_release_review and gallery_review checked gallery discovery, filter, original-study and loading language: functional navigation only, no new doctrinal, historical or scripture claims; original panels own all study content. Search navigation label added; prior substantive source review preserved. Navigation-only review: centered Christ’s Atonement destination; existing body and source review retained. PR385 scoped review: Ask/Answers navigation disambiguation, matching Atonement accessible name, established YouTube footer link, Ask/Answers introductions and punctuation; prior substantive source review retained. Owner-directed toolbar review: title-case navigation labels only; prior substantive source review and approved artwork retained. Independently reviewed maintenance copy: First Vision resource label matches the existing official accounts card; Art fallback footers match the established runtime welcome. Source destinations, substantive study and artwork unchanged. Owner-directed artwork disclosure relocation: Fermi and Newton independently verified the sole footer paragraph addition across 126 runtime pages and removal of 17 repeated generated-art credit paragraphs from the priesthood study; all other prose, historical source distinctions, image attributes and six official Church credits preserved. See originating outputs/format-native-review.json and independent disclosure reviews. Timeline navigation-only review (2026-10-02): exact normalized text comparison confirms only Timeline link labels added; prior substantive body review preserved. Shared script version changes add no published wording."
+          }
+        }
+      }
     },
     {
       "path": "art-study/be-still.html",
