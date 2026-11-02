@@ -4,13 +4,14 @@ on:
   push:
     branches:
       - main
+      - watch-scoped-547-722b
 
 env:
   PYTHONDONTWRITEBYTECODE: '1'
 
 concurrency:
   group: pages-deploy
-  cancel-in-progress: true
+  cancel-in-progress: ${{ github.ref == 'refs/heads/main' }}
 
 permissions:
   pages: write
@@ -19,6 +20,7 @@ permissions:
 
 jobs:
   deploy:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-24.04
 
     steps:
@@ -353,6 +355,100 @@ jobs:
         with:
           path: ./
 
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  watch_scoped_547:
+    if: github.ref == 'refs/heads/watch-scoped-547-722b' && github.event.created == true && github.run_attempt == 1
+    runs-on: ubuntu-24.04
+    env:
+      WATCH_SCOPE_WORKFLOW_SHA256: '3d39eb372f170b509ab55c6c7dec357da0bd12c19a8c62d3222b175ebea6c9fe'
+    steps:
+      - name: Check out the one-time workflow commit
+        uses: actions/checkout@v5
+        with:
+          submodules: false
+          fetch-depth: 2
+      - name: Bind trigger, reviewed workflow and current main
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$GITHUB_EVENT_NAME" = push
+          test "$GITHUB_RUN_ATTEMPT" = 1
+          test "$GITHUB_REF" = refs/heads/watch-scoped-547-722b
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+          test "$(git rev-list --parents -n 1 HEAD)" = "$GITHUB_SHA 722b5b792575fc352a368496d5120bd23c4db70f"
+          test "$(git diff-tree --no-commit-id --name-only -r 722b5b792575fc352a368496d5120bd23c4db70f HEAD)" = .github/workflows/deploy-pages.yml
+          python - <<'PY'
+          import hashlib, os, re
+          from pathlib import Path
+          raw = Path('.github/workflows/deploy-pages.yml').read_bytes()
+          pattern = rb"(?m)^(      WATCH_SCOPE_WORKFLOW_SHA256: ')[0-9a-f]{64}(')\r?$"
+          normalized, count = re.subn(pattern, lambda m: m.group(1) + b'0' * 64 + m.group(2) + (b'\r' if m.group(0).endswith(b'\r') else b''), raw)
+          if count != 1 or hashlib.sha256(normalized).hexdigest() != os.environ['WATCH_SCOPE_WORKFLOW_SHA256']:
+              raise SystemExit('Unreviewed one-time workflow definition')
+          PY
+          test "$(git ls-remote --exit-code origin refs/heads/main | cut -f1)" = 45b90cf05d8a1e774769f9c5546cb34a8d4801b4
+      - name: Check out the approved Watch source
+        uses: actions/checkout@v5
+        with:
+          ref: 722b5b792575fc352a368496d5120bd23c4db70f
+          submodules: false
+          fetch-depth: 1
+      - name: Verify source identity and scoped Watch checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = 722b5b792575fc352a368496d5120bd23c4db70f
+          test "$(git rev-parse 'HEAD^{tree}')" = 3e6fce81a2c4ea23cdbc3e113ea064f99c25ba4d
+          verify_watch_files() {
+          python - <<'PY'
+          from pathlib import Path
+          root = Path.cwd().resolve()
+          for name in ('watch.html', 'docs/watch-shorts.json', 'site-search-index.json', 'assets/shorts/please-choose-to-stay-wilcox-20261031.png'):
+              path = root
+              for component in Path(name).parts:
+                  path = path / component
+                  if path.is_symlink():
+                      raise SystemExit('Symlink in approved Watch source: ' + name)
+              if not path.is_file() or not path.resolve().is_relative_to(root):
+                  raise SystemExit('Missing or unsafe approved Watch source: ' + name)
+          PY
+          }
+          verify_watch_files
+          python tools/build_watch_shorts.py --check
+          python tools/build_site_search.py
+          python tools/build_site_search.py --check
+          verify_watch_files
+          sha256sum --check <<'HASHES'
+          ca11d19f5cad12c2478ae875dc056e4e5247aac5e3bfde176a4aaf2472397e3b  watch.html
+          13f5ea644b1781af325aee4f0344e83e614b3fd6d1e03fe4eb5e26d25db5b664  docs/watch-shorts.json
+          b9b8a71893d3389ab9f12ed70c260e410d8fce3a74cbd85c6ddc180a9be7fc3a  site-search-index.json
+          8eeaff370d942f18598b921f7577298d2b3751d124c2f67e6879000bd16f6ee6  assets/shorts/please-choose-to-stay-wilcox-20261031.png
+          HASHES
+          {
+            echo 'One-release Watch source: 722b5b792575fc352a368496d5120bd23c4db70f.'
+            echo 'Source tree: 3e6fce81a2c4ea23cdbc3e113ea064f99c25ba4d.'
+            echo 'The following four approved SHA-256 hashes were checked after search-index generation:'
+            echo 'watch.html: ca11d19f5cad12c2478ae875dc056e4e5247aac5e3bfde176a4aaf2472397e3b'
+            echo 'docs/watch-shorts.json: 13f5ea644b1781af325aee4f0344e83e614b3fd6d1e03fe4eb5e26d25db5b664'
+            echo 'site-search-index.json: b9b8a71893d3389ab9f12ed70c260e410d8fce3a74cbd85c6ddc180a9be7fc3a'
+            echo 'assets/shorts/please-choose-to-stay-wilcox-20261031.png: 8eeaff370d942f18598b921f7577298d2b3751d124c2f67e6879000bd16f6ee6'
+            echo "Trigger commit: $GITHUB_SHA; reviewed workflow normalized SHA-256: $WATCH_SCOPE_WORKFLOW_SHA256."
+            echo 'Global Site QA and whole-artifact comparison are NOT CLAIMED; the historical global failure remains disclosed.'
+            echo 'Later main changes are not included in this release and main is not modified.'
+          } >> "$GITHUB_STEP_SUMMARY"
+      - name: Confirm main before Pages upload
+        shell: bash
+        run: test "$(git ls-remote --exit-code origin refs/heads/main | cut -f1)" = 45b90cf05d8a1e774769f9c5546cb34a8d4801b4
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./
+      - name: Confirm main before Pages deployment
+        shell: bash
+        run: test "$(git ls-remote --exit-code origin refs/heads/main | cut -f1)" = 45b90cf05d8a1e774769f9c5546cb34a8d4801b4
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
