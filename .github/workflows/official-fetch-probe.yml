@@ -1,0 +1,28 @@
+name: Observe official fetch diagnostics
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - "tools/official_fetch_probe.mjs"
+      - "tools/official_fetch_probe.test.mjs"
+      - ".github/workflows/official-fetch-probe.yml"
+permissions:
+  contents: read
+jobs:
+  one-observation:
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.head.ref == 'albert/official-fetch-probe-20261024'
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Check diagnostic collector with isolated fixtures
+        run: node tools/official_fetch_probe.test.mjs
+      - name: Observe one fixed existing production request
+        run: node tools/official_fetch_probe.mjs
+
