@@ -1,358 +1,111 @@
-name: Deploy GitHub Pages
-
+name: Publish reviewed answer bank 615 once
 on:
   push:
     branches:
-      - main
-
-env:
-  PYTHONDONTWRITEBYTECODE: '1'
-
-concurrency:
-  group: pages-deploy
-  cancel-in-progress: true
-
+      - merlin/answer-bank-615-20261109-deploy
 permissions:
   pages: write
   id-token: write
   contents: read
-
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: false
 jobs:
-  deploy:
+  publish:
+    if: github.event.created == true && github.run_attempt == 1
     runs-on: ubuntu-24.04
-
+    env:
+      EXPECTED_MAIN: a7ac761fc670e3249f93ebd212738723f79c0ff0
+      EXPECTED_WORKFLOW_SHA256: '98c9f72533ec57d4c2bcd6ca5e771df22432c7f9fa378649b7be2ed1aa72479f'
     steps:
-      - name: Check out repo
+      - name: Check out one-release workflow
         uses: actions/checkout@v5
         with:
           submodules: false
-          fetch-depth: 0
-
-      - name: Verify complete scripture library and deterministic guard
+          fetch-depth: 2
+          sparse-checkout: .github/workflows/deploy-pages.yml
+          sparse-checkout-cone-mode: false
+      - name: Verify workflow and expected parent
+        shell: bash
         run: |
-          python tools/build_scripture_catalog.py --check
-          node tools/scripture_library_qa.js
-          node tools/pioneer_composer_scroll_runtime_qa.js
-
-      - name: Verify QA dependency contract before installation
-        run: python tools/qa_dependency_contract.py --self-test
-
-      - name: Install shared QA dependencies
-        run: python -m pip install -r tools/qa-requirements.txt
-
-      - name: Reject unreviewed or stale new artwork
+          set -euo pipefail
+          test "$GITHUB_EVENT_NAME" = push
+          test "$GITHUB_REF" = refs/heads/merlin/answer-bank-615-20261109-deploy
+          test "$GITHUB_RUN_ATTEMPT" = 1
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+          test "$(git rev-list --parents -n 1 HEAD)" = "$GITHUB_SHA 722b5b792575fc352a368496d5120bd23c4db70f"
+          test "$(git diff-tree --no-commit-id --name-only -r 722b5b792575fc352a368496d5120bd23c4db70f HEAD)" = .github/workflows/deploy-pages.yml
+          python -c "import hashlib,os,re,pathlib; p=pathlib.Path('.github/workflows/deploy-pages.yml').read_bytes(); x,n=re.subn(rb'(?m)^(      EXPECTED_WORKFLOW_SHA256: .)[0-9a-f]{64}(.).?$', lambda m:m.group(1)+b'0'*64+m.group(2), p); assert n==1 and hashlib.sha256(x).hexdigest()==os.environ['EXPECTED_WORKFLOW_SHA256'], 'workflow identity differs'"
+          test "$(git ls-remote --exit-code origin refs/heads/main | cut -f1)" = "$EXPECTED_MAIN"
+      - name: Check out only reviewed answer-bank file
+        uses: actions/checkout@v5
+        with:
+          ref: a7ac761fc670e3249f93ebd212738723f79c0ff0
+          path: reviewed-bank
+          submodules: false
+          fetch-depth: 1
+          sparse-checkout: |
+            answer-bank-data.js
+            ask.html
+            pioneers.html
+          sparse-checkout-cone-mode: false
+      - name: Verify and preserve reviewed bank
+        shell: bash
         run: |
-          python -m unittest discover -s tools -p test_artwork_creation_gate.py
-          python -m unittest discover -s tools -p test_artwork_emma_story_delivery.py
-          python -m unittest discover -s tools -p test_emma_public_commitments.py
-          python -m unittest discover -s tools -p test_emma_journey_closure_successor.py
-          python -m unittest discover -s tools -p test_emma_story_consumers.py
-          python tools/test_adams_delivery_successor.py
-          python -m unittest discover -s tools -p test_adams_source_import.py
-          python -m unittest discover -s tools -p test_adams_standalone_opening.py
-          python -m unittest discover -s tools -p test_adams_panel_standalone.py
-          python -m unittest discover -s tools -p test_adams_resource_coverage.py
-          python -m unittest discover -s tools -p test_emma_resource_coverage.py
-          # Run current rights/review/tamper protections; archived inverses run separately.
-          python -m unittest discover -s tools -p test_run_current_mixed_regressions.py
-          python -m unittest discover -s tools -p test_current_normalizer_fail_closed.py
-          python tools/run_current_mixed_regressions.py
-          python -m unittest discover -s tools -p test_emma_hub_citation_successor.py
-          python tools/test_world_companion_successor.py
-          python tools/test_settings_successor.py
-          python tools/continue_motion_binding.py
-          python -m unittest discover -s tools -p test_navigation_polish_bindings.py
-          python -m unittest discover -s tools -p test_script_image_urls.py
-          python -m unittest discover -s tools -p test_watch_thumbnail_delivery.py
-          python -m unittest discover -s tools -p test_artwork_owner_closure.py
-          python -m unittest discover -s tools -p test_history_hero_build_gate.py
-          python -m unittest discover -s tools -p test_opening_composition_binding.py
-          python tools/artwork_creation_gate.py release
-
-      - name: Verify reviewed human introductions and preservation fixtures
+          set -euo pipefail
+          test "$(git -C reviewed-bank rev-parse HEAD)" = a7ac761fc670e3249f93ebd212738723f79c0ff0
+          test "$(git -C reviewed-bank rev-parse HEAD:answer-bank-data.js)" = d045d7888efcb63985c64c35a64bfbca4b10d9ad
+          echo 'a1cadbc32b35d03ad53a49be1a482dcad8963680e8db20f801fe85cf56650a46  reviewed-bank/answer-bank-data.js' | sha256sum --check
+          test "$(git -C reviewed-bank rev-parse HEAD:ask.html)" = 156f99e5559530e0dd9cbfee4533c3b7e628b7f7
+          test "$(git -C reviewed-bank rev-parse HEAD:pioneers.html)" = b535dd80c6c378edb0ecd665a71989c4c9a6d6a1
+          cp reviewed-bank/answer-bank-data.js "$RUNNER_TEMP/reviewed-answer-bank-data.js"
+          cp reviewed-bank/ask.html "$RUNNER_TEMP/reviewed-ask.html"
+          cp reviewed-bank/pioneers.html "$RUNNER_TEMP/reviewed-pioneers.html"
+      - name: Check out last published source
+        uses: actions/checkout@v5
+        with:
+          ref: 722b5b792575fc352a368496d5120bd23c4db70f
+          path: published-source
+          submodules: false
+          fetch-depth: 1
+      - name: Verify published base, overlay, and focused checks
+        shell: bash
+        working-directory: published-source
         run: |
-          python tools/hero_introductions_qa.py
-          python tools/hero_introductions_qa.py --self-test
-
-      - name: Verify Joseph studies and exact artwork review gates
-        run: |
-          python tools/joseph_smith_likeness_qa.py
-          python tools/joseph_life_enrichment_qa.py
-          python tools/joseph_lucy_stories_qa.py
-          python tools/joseph_portrait_research_qa.py
-          python -m unittest discover -s tools -p test_joseph_research_acceptance.py
-          node tools/joseph_research_source_hosts_qa.js
-
-      - name: Verify anatomy review rejection and annotation safeguards
-        run: node tools/anatomy-review/core.test.js
-
-      - name: Verify global artwork scanner regression fixtures
-        run: python tools/topic_artwork_uniqueness_runtime_qa.py
-
-      - name: Verify published-content search index and behavior
-        run: |
-          python -m unittest discover -s tools -p test_adams_search_consumer.py
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = 722b5b792575fc352a368496d5120bd23c4db70f
+          test "$(git rev-parse 'HEAD^{tree}')" = 3e6fce81a2c4ea23cdbc3e113ea064f99c25ba4d
+          test "$(git rev-parse HEAD:answer-bank-matcher.js)" = d5908cb51cd6476b867f437393345998dc0b2d01
+          test "$(git rev-parse HEAD:answer-bank-guards.js)" = 30a9ece3774143106b01a352836d02ccb3c24569
+          test "$(git rev-parse HEAD:site-common.js)" = a335ffa999db24984d53f5052efce4b6b92dfc14
+          test "$(git rev-parse HEAD:reviewed-ask-knowledge.js)" = 15783ef23f25961f31a4d9f26d3850011e815220
+          test ! -L answer-bank-data.js
+          cp "$RUNNER_TEMP/reviewed-answer-bank-data.js" answer-bank-data.js
+          cp "$RUNNER_TEMP/reviewed-ask.html" ask.html
+          cp "$RUNNER_TEMP/reviewed-pioneers.html" pioneers.html
+          node --check answer-bank-data.js
+          node -e 'const fs=require("fs"),vm=require("vm"),crypto=require("crypto");const c={window:{}};vm.runInNewContext(fs.readFileSync("answer-bank-data.js","utf8"),c);const b=c.window.FocusChristAnswerBankData;const sha=p=>crypto.createHash("sha256").update(fs.readFileSync(p)).digest("hex");if(!b||!Array.isArray(b.records)||b.records.length!==615||b.header.dataset.records!==615||sha("answer-bank-matcher.js")!==b.header.matcher.sha256||sha("reviewed-ask-knowledge.js")!==b.header.legacy_source.sha256)throw Error("answer bank or runtime binding mismatch");console.log("PASS: 615 reviewed records and runtime hash bindings")'
+          node tools/reviewed_ask_knowledge_qa.js
+          python tools/build_watch_shorts.py --check
+          python tools/build_site_search.py
           python tools/build_site_search.py --check
-          python tools/site_search_qa.py
-
-      - name: Run focusChrist structural site QA
-        run: |
-          python tools/site_qa_metadata_test.py
-          python tools/site_qa.py
-          python tools/site_flow_qa.py
-          python tools/media_voice_qa.py
-
-      - name: Run Come Follow Me hub QA
-        run: |
-          python tools/come_follow_me_qa.py
-          node tools/come_follow_me_reading_runtime_qa.js
-
-      - name: Verify General Conference study hub and filters
-        run: |
-          python tools/general_conference_qa.py
-          node tools/general_conference_runtime_qa.js
-          node --check general-conference.js
-          node tools/study_navigation_runtime_qa.js
-
-      - name: Run focusChrist unified experience QA
-        run: python tools/unified_experience_qa.py
-
-      - name: Run site-wide artwork detail QA
-        run: |
-          python tools/build_art_gallery.py --check
-          node --check art-gallery.js
-          node --check art-gallery-bridge.js
-          python tools/artwork_details_qa.py
-          python -m unittest discover -s tools -p test_section_panel_standalone.py
-          python tools/sitewide_artwork_review_qa.py --self-test
-          python tools/sitewide_artwork_review_qa.py
-          python tools/art_study_enrichment_qa.py
-          # Retained-content regression above is not full enrichment acceptance.
-          # These mutation tests test detection; they do not accept site content.
-          # Full enriched acceptance requires art_study_current_mandate_qa.py exit 0.
-          python -m unittest discover -s tools -p test_art_study_current_mandate_qa.py
-          python tools/temples_history_qa.py
-          python tools/history_service_stories_qa.py
-          python tools/history_story_pages_qa.py
-          python tools/history_service_stories_qa.py --remote-previews
-          python tools/priesthood_history_qa.py
-          python tools/priesthood_history_qa.py --remote-previews
-          python tools/desktop_hero_preservation_qa.py
-          python tools/artwork_reference_repairs_qa.py
-          python tools/illustrated_study_navigation_qa.py
-          python tools/birth_of_christ_qa.py
-          python tools/book_of_mormon_stories_qa.py --self-test
-          python tools/book_of_mormon_stories_qa.py
-          python tools/study_gap_art_qa.py
-          python tools/study_section_balance_qa.py --self-test
-          python tools/study_section_balance_qa.py
-          node tools/hero_details_runtime_qa.js
-          node tools/hero_image_source_qa.js
-
-      - name: Verify every featured art supporting picture study panel
-        run: |
-          npm install --prefix "$RUNNER_TEMP/focuschrist-dom-qa" --no-save --package-lock=false --ignore-scripts jsdom@26.1.0
-          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/gallery_compatibility_runtime_qa.js
-          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/art_study_picture_runtime_qa.js
-          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/temples_history_runtime_qa.js
-          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/history_story_runtime_qa.js
-          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/test_emma_history_reading_contract.js
-          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/footer_navigation_runtime_qa.js
-          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/artwork_reference_runtime_qa.js
-          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/illustrated_study_navigation_runtime_qa.js
-          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/desktop_hero_runtime_qa.js
-          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/sitewide_hero_runtime_qa.js
-          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/scripture_display_runtime_qa.js
-          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/ask_composer_scroll_runtime_qa.js
-          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/site_search_runtime_qa.js
-
-      - name: Verify visual resource coverage and source thumbnails
-        run: python tools/resource_thumbnail_qa.py
-
-      - name: Verify every permanent Answer study experience
-        run: |
-          python -m unittest discover -s tools -p test_emma_inline_scripture.py
-          python tools/topic_inline_scripture_qa.py
-          python tools/answer_study_parser_qa.py
-          python tools/answer_study_qa.py
-          python tools/answer_video_uniqueness_qa.py
-          python tools/global_video_uniqueness_qa.py
-
-      - name: Verify scripture reader sources and interactions
-        run: |
-          python tools/build_scripture_reader_data.py --check
-          node tools/scripture_reader_runtime_qa.js
-          node --check header-scroll.js
-
-      - name: Run focusChrist resource QA
-        run: python tools/resource_qa.py
-
-      - name: Run focusChrist Study Intelligence QA
-        run: python tools/study_intelligence_qa.py
-
-      - name: Run focusChrist hardened experience QA
-        run: python tools/hardened_experience_qa.py
-
-      - name: Run Pioneer local-first and site-wide answer routing QA
-        run: python tools/pioneer_local_first_qa.py
-
-      - name: Run focusChrist production hardening QA
-        run: python tools/production_hardening_qa.py
-
-      - name: Run Church History source and experience QA
-        run: python tools/church_history_qa.py
-
-      - name: Run scripture grounding QA
-        run: python tools/scripture_grounding_qa.py
-
-      - name: Inventory source-dependent answer paths
-        run: python tools/source_integrity_inventory.py
-
-      - name: Enforce reviewed static-content ledger
-        run: python tools/static_content_audit.py
-
-      - name: Exercise source-integrity runtime guard
-        run: node tools/source_integrity_runtime_qa.js
-
-      - name: Exercise reviewed Ask knowledge registry
-        run: node tools/reviewed_ask_knowledge_qa.js
-
-      - name: Exercise Pioneer Ask final owner
-        run: node tools/pioneer_ask_runtime_qa.js
-
-      - name: Exercise Church History Ask final owner
-        run: node tools/church_history_ask_runtime_qa.js
-
-      - name: Exercise final Study Intelligence owner
-        run: node tools/study_intelligence_v3_runtime_qa.js
-
-      - name: Exercise shared question safety boundaries
-        run: node tools/question_safety_runtime_qa.js
-
-      - name: Exercise gateway source policy
-        run: |
-          node groq-proxy/source-policy.test.js
-          node groq-proxy/conversation-context.test.js
-          node groq-proxy/research-escalation.test.js
-          node groq-proxy/scripture-evidence.test.js
-          node groq-proxy/source-discovery.test.js
-          node groq-proxy/evidence-budget.test.js
-          node groq-proxy/openai-research.test.js
-          node groq-proxy/corpus-coverage.test.js
-          node groq-proxy/corpus-evidence.test.js
-          node groq-proxy/factual-followup.test.js
-          node groq-proxy/relationship-audit.test.js
-          node groq-proxy/reviewed-source-context.test.js
-          node groq-proxy/direct-scripture-reading.test.js
-          node groq-proxy/paragraph-intent.test.js
-          node groq-proxy/source-caveat.test.js
-          node groq-proxy/missing-subject.test.js
-          node tools/scripture_quote_display_qa.js
-
-      - name: Validate shared site JavaScript
-        run: node --check site-common.js
-
-      - name: Validate artwork detail JavaScript
-        run: node --check artwork-details.js
-
-      - name: Validate full-image viewer JavaScript
-        run: node --check full-image-viewer.js
-
-      - name: Verify artwork caption DOM and legacy detail contracts
-        run: |
-          python tools/topic_artwork_caption_runtime_qa.py
-          node tools/artwork_details_runtime_qa.js
-
-      - name: Run full-image viewer runtime QA
-        run: node tools/full_image_viewer_runtime_qa.js
-
-      - name: Validate grounded Study Intelligence JavaScript
-        run: node --check study-intelligence-v3.js
-
-      - name: Validate study journey JavaScript
-        run: node --check study-journey.js
-
-      - name: Validate study source router JavaScript
-        run: node --check study-source-router.js
-
-      - name: Validate Church History experience JavaScript
-        run: node --check church-history-experience.js
-
-      - name: Validate Art study router JavaScript
-        run: node --check art-study-router.js
-
-      - name: Validate Watch study enrichment JavaScript
-        run: node --check watch-study-enrichment.js
-
-      - name: Validate Watch experience JavaScript
-        run: node --check watch-experience.js
-
-      - name: Validate Art Ask context JavaScript
-        run: node --check art-ask-context.js
-
-      - name: Validate Ask experience JavaScript
-        run: node --check ask-experience.js
-
-      - name: Validate Pioneer experience JavaScript
-        run: node --check pioneer-experience.js
-
-      - name: Install historical hero browser dependencies
-        run: |
-          npm install --prefix /tmp/focus-row-qa --no-save --package-lock=false --ignore-scripts playwright@1.55.1
-          /tmp/focus-row-qa/node_modules/.bin/playwright install --with-deps chromium
-
-      - name: Verify historical story hero pixels in Chromium
-        run: |
-          python tools/history_hero_pixels_qa.py --self-test
-          NODE_PATH=/tmp/focus-row-qa/node_modules node tools/history_hero_browser_qa.js
-          python tools/home_hero_height_qa.py
-          python tools/answer_opening_qa.py
-          NODE_PATH=/tmp/focus-row-qa/node_modules node tools/answer_opening_browser_qa.js
-          NODE_PATH=/tmp/focus-row-qa/node_modules node tools/home_hero_height_browser_qa.js
-          NODE_PATH=/tmp/focus-row-qa/node_modules node tools/conference_alignment_browser_qa.js
-          NODE_PATH=/tmp/focus-row-qa/node_modules node tools/footer_navigation_browser_qa.js
-
-      - name: Save Answer opening viewport evidence
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: answer-opening-render
-          path: .qa-artifacts/answer-openings.json
-          include-hidden-files: true
-          if-no-files-found: ignore
-
-      - name: Save footer navigation viewport evidence
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: footer-navigation-render
-          path: .qa-artifacts/footer-navigation/
-          include-hidden-files: true
-          if-no-files-found: ignore
-
-      - name: Save historical hero screenshots and raster evidence
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: history-hero-render
-          path: .qa-artifacts/history-heroes/
-          include-hidden-files: true
-          if-no-files-found: ignore
-
-      - name: Rebuild public search index for publication
-        run: python tools/build_site_search.py
-
-      - name: Verify complete Jesus Christ journey before publication
-        run: |
-          python tools/jesus_journey_qa.py
-          python tools/build_jesus_journey.py --strict --check
-          python tools/build_jesus_parent.py --strict --check
-
+          sha256sum --check <<'HASHES'
+          a1cadbc32b35d03ad53a49be1a482dcad8963680e8db20f801fe85cf56650a46  answer-bank-data.js
+          85c43f2b569f69558ee1375b5f4fd715a74cbcddfad65b6d5e8ec9309a2220cc  ask.html
+          7351763a97fe13b4bf8cc36fcdd60eb128bbc467deafaff112d6019cb21ba374  pioneers.html
+          ca11d19f5cad12c2478ae875dc056e4e5247aac5e3bfde176a4aaf2472397e3b  watch.html
+          13f5ea644b1781af325aee4f0344e83e614b3fd6d1e03fe4eb5e26d25db5b664  docs/watch-shorts.json
+          b9b8a71893d3389ab9f12ed70c260e410d8fce3a74cbd85c6ddc180a9be7fc3a  site-search-index.json
+          8eeaff370d942f18598b921f7577298d2b3751d124c2f67e6879000bd16f6ee6  assets/shorts/please-choose-to-stay-wilcox-20261031.png
+          HASHES
+          echo 'Scoped answer-bank cache release: published source 722b5b7 plus exact reviewed bank and two cache-version pages. Whole-site global QA and whole-artifact comparison are not claimed.' >> "$GITHUB_STEP_SUMMARY"
+      - name: Confirm current main before upload
+        run: test "$(git ls-remote --exit-code origin refs/heads/main | cut -f1)" = "$EXPECTED_MAIN"
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./
-
+          path: published-source
+      - name: Confirm current main before deployment
+        run: test "$(git ls-remote --exit-code origin refs/heads/main | cut -f1)" = "$EXPECTED_MAIN"
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v4
