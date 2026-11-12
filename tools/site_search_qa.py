@@ -27,7 +27,13 @@ for path in data['pages']+['/search.html','/404.html']:
     links=[n for n in nodes if 'data-site-search-trigger' in n.attrs]
     assert len(links)==1,path
     assert links[0].attrs.get('aria-label')=='Search focusChrist'
-    assert any(n.tag=='script' and n.attrs.get('src','').endswith('site-search.js?v=20260919-focused-answers-1') for n in nodes),path
+    search_version = '20261112-reviewed-answer-search-1' if path == '/search.html' else '20260919-focused-answers-1'
+    assert any(n.tag=='script' and n.attrs.get('src','').endswith('site-search.js?v='+search_version) for n in nodes),path
+    if path == '/search.html':
+        scripts=[n.attrs.get('src','').split('?')[0] for n in nodes if n.tag=='script']
+        required=['site-common.js','answer-bank-data.js','answer-bank-matcher.js','answer-bank-guards.js','site-search.js']
+        assert [x for x in scripts if x in required] == required, 'Search must load the production reviewed-bank dependencies in order'
+        assert any(n.tag=='script' and 'data-answer-bank-search' in n.attrs for n in nodes), 'Search bank marker missing'
     assert any(n.tag=='link' and n.attrs.get('href','').endswith('site-search.css?v=20260929-result-hitbox-1') for n in nodes),path
 assert '/search.html' not in data['pages']
 css=(ROOT/'site-search.css').read_text(encoding='utf-8')
@@ -37,3 +43,4 @@ fixture=Document();fixture.feed('<main><p>Visible teaching</p><nav>SECRET NAV</n
 assert 'SECRET' not in visible(fixture.root)
 assert 'Visible teaching' in visible(fixture.root)
 print(f'SEARCH QA PASS: {len(data["pages"])} public pages, {len(data["records"])} valid destinations; hidden/internal content excluded')
+

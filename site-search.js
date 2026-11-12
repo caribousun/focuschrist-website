@@ -17,7 +17,7 @@
             const score=words.reduce((sum, word) => sum+(title.includes(word)?30:0)+(keys.includes(word)?35:0)+(page.includes(word)?4:0),0)
                 +(title===phrase?100:0)+(title.includes(phrase)?40:0)+(record.url.includes('#')?2:0);
             return {record,score};
-        }).filter(Boolean).sort((a,b)=>b.score-a.score || a.record.url.localeCompare(b.record.url)).map(x=>x.record);
+        }).filter(Boolean).sort((a,b)=>Number(!!a.record.bankRecordId)-Number(!!b.record.bankRecordId) || b.score-a.score || a.record.url.localeCompare(b.record.url)).map(x=>x.record);
     }
     function excerpt(record, query) {
         const text=record.excerpt || record.text || '';
@@ -49,7 +49,29 @@
             return true;
         }),supporting};
     }
-    const api={rank,groupMatches,excerpt,normalize,terms,localURL};
+    // Discover the same reviewed records Ask can actually serve. Keep the retained
+    // page/artwork index unchanged and never expose review notes or unpinned data.
+    function reviewedBankRecords(data, bankAPI, guards, safety) {
+        if (!data || !Array.isArray(data.records) || !bankAPI || !safety || typeof safety.evaluate !== 'function') throw Error('Answer bank unavailable');
+        const loaded=bankAPI.loadBank(data.records,{assignments:data.assignments || {},guards:guards || {}});
+        const matcher=bankAPI.createMatcher(loaded.bank,{evaluateSafety:request=>safety.evaluate(request.question_text)});
+        const records=[];
+        loaded.bank.byId.forEach(record=>{
+            const raw=record.raw;
+            if (record.kind!=='question' || !record.profiles.includes('ask')) return;
+            const questions=[raw.question,...(raw.phrasings || [])].filter(q=>typeof q==='string' && q.length<=200).sort((a,b)=>a.length-b.length);
+            const question=questions.find(q=>{
+                const result=matcher.answer({question_text:q,profile:'ask'});
+                return result.status==='serve' && result.record_id===record.id;
+            });
+            if (!question) return;
+            const encoded=encodeURIComponent(question).replace(/[!'()*]/g,c=>'%'+c.charCodeAt(0).toString(16).toUpperCase());
+            records.push({url:'/ask.html?search-question='+encoded+'#ask-question',title:question,pageTitle:'Ask',category:'Answer',text:raw.answer,
+                keywords:[raw.question,...(raw.phrasings || []),...(raw.topics || [])].join(' '),bankRecordId:record.id});
+        });
+        return records;
+    }
+    const api={rank,groupMatches,excerpt,normalize,terms,localURL,reviewedBankRecords};
     if(typeof module!=='undefined' && module.exports) module.exports=api;
     if(!root || !root.document) return;
     const doc=root.document;
@@ -95,11 +117,19 @@
         const relatedHost=element('ol','fc-search-results');relatedHost.setAttribute('aria-label','Supporting references');
         const relatedMore=element('button','fc-button','Show more supporting references');relatedMore.type='button';
         related.append(summary,explanation,relatedHost,relatedMore);more.after(related);
-        let indexPromise, matching=[], supporting=[], shown=0, relatedShown=0, sequence=0, activeQuery='';
+        let indexPromise, matching=[], supporting=[], shown=0, relatedShown=0, sequence=0, activeQuery='', bankUnavailable=false;
         function getIndex(){
             if(!indexPromise) indexPromise=fetch(new URL('site-search-index.json',base),{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error('Index unavailable');return r.json();}).then(data=>{
                 if(data.version!==1 || !Array.isArray(data.records) || !data.records.length || data.records.some(r=>!localURL(r.url)||typeof r.title!=='string'||typeof r.text!=='string'))throw Error('Invalid index');
-                return data.records;
+                if (!doc.querySelector('[data-answer-bank-search]')) return data.records;
+                try {
+                    const answers=reviewedBankRecords(root.FocusChristAnswerBankData,root.FocusChristAnswerBank,root.FocusChristAnswerBankGuards,root.focusChristQuestionSafety);
+                    bankUnavailable=false;
+                    return data.records.concat(answers);
+                } catch (_) {
+                    bankUnavailable=true;
+                    return data.records;
+                }
             }).catch(e=>{indexPromise=null;throw e;});
             return indexPromise;
         }
@@ -131,12 +161,15 @@
                     if(supporting.length){related.hidden=false;summary.textContent='Supporting references ('+supporting.length+')';related.open=!matching.length;appendResults(query,true);}
                 }
             }catch(_){if(current!==sequence)return;status.textContent='Search could not load. Please try again, or browse the topics below.';retry.hidden=false;}
-            if(current===sequence)host.removeAttribute('aria-busy');
+            if(current===sequence){
+                if(bankUnavailable){status.textContent+=' Some Ask answers could not load. Reload this page to try again.';retry.hidden=false;}
+                host.removeAttribute('aria-busy');
+            }
         }
         f.addEventListener('submit',e=>{e.preventDefault();const url=new URL(root.location.href);url.searchParams.set('q',input.value.trim().slice(0,200));root.history.pushState(null,'',url);run();});
         more.addEventListener('click',()=>{const first=host.children.length;appendResults(activeQuery);const link=host.children[first]?.querySelector('h2 a');if(link)link.focus();});
         relatedMore.addEventListener('click',()=>{const first=relatedHost.children.length;appendResults(activeQuery,true);relatedHost.children[first]?.querySelector('h2 a')?.focus();});
-        retry.addEventListener('click',run);root.addEventListener('popstate',run);run();
+        retry.addEventListener('click',()=>{if(bankUnavailable)root.location.reload();else run();});root.addEventListener('popstate',run);run();
     }
     function init(){
         initHeader();initResults();
