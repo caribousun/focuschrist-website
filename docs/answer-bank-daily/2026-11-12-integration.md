@@ -7,7 +7,7 @@ Original files preserved in Drive delivery folder; publication data is a derived
 
 ## Changes
 
-Append25 reviewed question records to690:715 total,29 items and686 questions. All690 original records and assignments unchanged. No matcher, guard, safety, layout, legacy-lane or routing changes. Updated data cache references in Ask and Pioneers.
+Append25 reviewed question records to690:715 total,29 items and686 questions. All690 original records and assignments unchanged. No matcher, guard, safety, layout, legacy-lane or routing changes. Updated data cache references in Ask, Pioneers, and Search.
 
 Independent targeted integration review corrected four passages (exact replacements in companion JSON): Great Lent's forty days distinguished from Holy Week; confirmation timing bounded to baptismal service or soon afterward; varied Jewish coming-of-age observance made explicit; duplicate Jael sentence removed. Added the S&I employment FAQ already named by source review. Added GOARCH references for the Lent correction. Preserved review notes, with correction notice appended. Preserve package limitations: institute-director description is narrowed program context, not a formal duties source; Jewish comparison includes Keller as a secondary account.
 
