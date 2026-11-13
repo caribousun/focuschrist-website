@@ -46,9 +46,18 @@ def validate_current(root=ROOT):
  return {'bank_sha256':bank_sha,'pages':result}
 
 @contextmanager
-def historical_check_view(root=ROOT, include_watch=False):
+def historical_check_view(root=ROOT, include_watch=False, include_search=False):
  """Keep actual-source validation separate from unchanged legacy assertions."""
  root=Path(root).resolve();record=validate_current(root)
+ search_before=None;search_js_before=None
+ if include_search:
+  from search_historical_compatibility import project
+  search_before=project(root)
+  record['search']={'current_sha256':sha(read(root,'search.html')),'historical_sha256':sha(search_before)}
+  import subprocess
+  search_js_before=subprocess.check_output(['git','-C',str(root),'show',HISTORICAL_COMMIT+':site-search.js'])
+  record['search']['historical_js_sha256']=sha(search_js_before)
+  if sha(search_js_before)!='2722b477848556bb05ecf0487b890c1d0e25840f912f8ea6140382a340eae099':raise ValueError('Historical search JS fixture changed')
  watch_before=None
  if include_watch:
   import subprocess
@@ -76,11 +85,16 @@ def historical_check_view(root=ROOT, include_watch=False):
    from watch_current_source_qa import check_sources
    check_sources(view)
    (view/'watch.html').write_bytes(watch_before)
+  if search_before is not None:
+   from search_historical_compatibility import project
+   if project(view)!=search_before:raise ValueError('Search changed during snapshot')
+   (view/'search.html').write_bytes(search_before)
+   (view/'site-search.js').write_bytes(search_js_before)
   yield view,record
 
 if __name__=='__main__':
  import json
  import continue_motion_binding
- with historical_check_view(include_watch=True) as (view,record):
+ with historical_check_view(include_watch=True,include_search=True) as (view,record):
   result=continue_motion_binding.check(view)
-  print(json.dumps({'cache_coherence':{'bank_sha256':record['bank_sha256'],'pages':{n:{k:v for k,v in p.items() if k!='historical_bytes'} for n,p in record['pages'].items()}},'watch_source':record.get('watch'),'scope':'Projected historical diagnostic; not current behavior acceptance','historical_motion':result},sort_keys=True))
+  print(json.dumps({'cache_coherence':{'bank_sha256':record['bank_sha256'],'pages':{n:{k:v for k,v in p.items() if k!='historical_bytes'} for n,p in record['pages'].items()}},'search_source':record.get('search'),'watch_source':record.get('watch'),'scope':'Projected historical diagnostic; not current behavior acceptance','historical_motion':result},sort_keys=True))

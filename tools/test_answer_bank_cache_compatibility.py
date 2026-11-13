@@ -72,6 +72,20 @@ class CacheCompatibilityTests(unittest.TestCase):
   with patch('watch_current_source_qa.check',return_value={}),patch('subprocess.check_output',return_value=historical),patch('watch_current_source_qa.check_sources',side_effect=ValueError('changed snapshot')):
    with self.assertRaisesRegex(ValueError,'changed snapshot'):
     with adapter.historical_check_view(self.root,include_watch=True):pass
+ def test_search_snapshot_projection_preserves_originals(self):
+  import search_historical_compatibility as compat
+  for name in (*compat.DEPENDENCIES,'search.html'):
+   (self.root/name).write_bytes((adapter.ROOT/name).read_bytes())
+  # Historical git source is read from the real checkout, not this synthetic root.
+  original=subprocess.check_output
+  def historical(cmd):
+   return original(['git','-C',str(adapter.ROOT),'show',cmd[-1]])
+  before={p.name:p.read_bytes() for p in self.root.iterdir()}
+  with patch('subprocess.check_output',side_effect=historical):
+   with adapter.historical_check_view(self.root,include_search=True) as (view,record):
+    self.assertEqual(adapter.sha((view/'search.html').read_bytes()),compat.HISTORICAL_SHA)
+    self.assertEqual(adapter.sha((view/'site-search.js').read_bytes()),'2722b477848556bb05ecf0487b890c1d0e25840f912f8ea6140382a340eae099')
+  self.assertEqual(before,{p.name:p.read_bytes() for p in self.root.iterdir()})
  def test_projection_does_not_change_original_files(self):
   before={p.name:p.read_bytes() for p in self.root.iterdir()}
   with adapter.historical_check_view(self.root) as (view,record):
