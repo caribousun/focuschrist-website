@@ -37,6 +37,12 @@ jobs:
         continue-on-error: true
         run: python tools/watch_current_source_qa.py
 
+      - name: Diagnose exact historical compatibility without replacing current checks
+        continue-on-error: true
+        run: |
+          python -m unittest discover -s tools -p test_answer_bank_cache_compatibility.py
+          python tools/answer_bank_cache_compatibility.py
+
       - name: Reject unreviewed or stale new artwork
         run: |
           python -m unittest discover -s tools -p test_artwork_creation_gate.py

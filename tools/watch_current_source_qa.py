@@ -31,8 +31,14 @@ def check_sources(root=ROOT):
             raise ValueError('Changed Watch source: ' + name)
     return {'source_commit': RELEASE_COMMIT, 'files': len(SOURCE_PINS)}
 
+def check(root=ROOT):
+    root = Path(root).resolve()
+    result = check_sources(root)
+    subprocess.run([sys.executable, str(root/'tools/build_watch_shorts.py'), '--check'], cwd=root, check=True)
+    return result
+
+
 if __name__ == '__main__':
-    result = check_sources()
-    subprocess.run([sys.executable, str(ROOT/'tools/build_watch_shorts.py'), '--check'], cwd=ROOT, check=True)
+    result = check()
     print('Watch source continuity and generator PASS:', result)
     print('No release, global QA, or browser/mobile acceptance is implied.')
