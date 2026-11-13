@@ -15,7 +15,7 @@ module.exports=async function(page,origin,out){
   }
  };
  // Render the exact Git predecessor in a temporary isolated copy. Its shared
- // local JS/CSS must also match the predecessor before comparing appearance.
+ // local JS/CSS are served from that same commit, not today's shared assets.
  const base='4fb9e51deda2997d6974e80a5dce86a65167841c',route='timelines/world-and-scripture-timeline.html';
  const repo=path.resolve(__dirname,'..');
  assert.equal(execFileSync('git',['rev-parse',base],{cwd:repo,encoding:'utf8'}).trim(),base,'Exact predecessor commit is available');
@@ -26,11 +26,16 @@ module.exports=async function(page,origin,out){
  try{
   await predecessor.setViewportSize({width:1366,height:900});
   await predecessor.route('**/timelines/world-and-scripture-timeline.html',route=>route.fulfill({path:copy,contentType:'text/html; charset=utf-8'}));
+  const dependencyHashes={};
+  const expectedAssets=['header-scroll.js','site-search.css','site-search.js'];
+  for(const asset of expectedAssets){
+   const old=execFileSync('git',['show',base+':'+asset],{cwd:repo,maxBuffer:8*1024*1024});
+   dependencyHashes[asset]=crypto.createHash('sha256').update(old).digest('hex');
+   await predecessor.route(url=>url.origin===new URL(origin).origin&&url.pathname==='/'+asset,request=>request.fulfill({body:old,contentType:asset.endsWith('.css')?'text/css; charset=utf-8':'application/javascript; charset=utf-8'}));
+  }
   await predecessor.goto(origin+'/'+route+'#viewer',{waitUntil:'load'});await predecessor.evaluate(()=>document.fonts.ready);
   const assets=await predecessor.evaluate(()=>[...document.querySelectorAll('script[src],link[rel="stylesheet"][href]')].map(n=>new URL(n.getAttribute('src')||n.getAttribute('href'),location.href)).filter(u=>u.origin===location.origin).map(u=>decodeURIComponent(u.pathname).replace(/^\//,'')));
-  assert.deepEqual([...new Set(assets)].sort(),['header-scroll.js','site-search.css','site-search.js']);
-  const dependencyHashes={};
-  for(const asset of assets){const old=execFileSync('git',['show',base+':'+asset],{cwd:repo,maxBuffer:8*1024*1024});assert.deepEqual(fs.readFileSync(path.join(repo,asset)),old,'Predecessor shared asset drift: '+asset);dependencyHashes[asset]=crypto.createHash('sha256').update(old).digest('hex');}
+  assert.deepEqual([...new Set(assets)].sort(),expectedAssets);
   await predecessor.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
   assert(await predecessor.locator('#mapview').isVisible());const predecessorGeometry=await geometry(predecessor);
   await predecessor.locator('.workspace-toolbar').scrollIntoViewIfNeeded();await predecessor.screenshot({path:path.join(out,'mobile-collapse-predecessor-desktop-toolbar-viewport.png'),fullPage:false,animations:'disabled'});

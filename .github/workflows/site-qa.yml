@@ -40,6 +40,7 @@ jobs:
           python -m unittest discover -s tools -p test_artwork_emma_journey_retained.py
           python -m unittest discover -s tools -p test_emma_journey_release_review.py
           python -m unittest discover -s tools -p test_emma_journey_closure_successor.py
+          python -m unittest discover -s tools -p test_timeline_historical_search_fixture.py
           # New journey source and synthetic contract tests; not release approval.
           python -m unittest discover -s tools -p test_owner_journey_integration.py
           python -m unittest discover -s tools -p test_artwork_emma_journey_delivery.py

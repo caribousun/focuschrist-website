@@ -46,6 +46,7 @@ jobs:
           python -m unittest discover -s tools -p test_artwork_emma_story_delivery.py
           python -m unittest discover -s tools -p test_emma_public_commitments.py
           python -m unittest discover -s tools -p test_emma_journey_closure_successor.py
+          python -m unittest discover -s tools -p test_timeline_historical_search_fixture.py
           python -m unittest discover -s tools -p test_emma_story_consumers.py
           python tools/test_adams_delivery_successor.py
           python -m unittest discover -s tools -p test_adams_source_import.py
