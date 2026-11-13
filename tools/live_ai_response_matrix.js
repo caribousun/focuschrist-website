@@ -132,20 +132,26 @@ function percentile(values, fraction) {
 
 async function submit(test, messages = null) {
     const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), HARD_LIMIT_MS + 1000);
+    let clientDeadlineExpired = false;
+    const timer = setTimeout(() => { clientDeadlineExpired = true; controller.abort(); }, HARD_LIMIT_MS + 1000);
     const started = performance.now();
+    let stage = 'request';
+    let responseStatus;
     try {
         const response = await fetch(ENDPOINT, {
             method: 'POST', headers: { Origin: ORIGIN, 'Content-Type': 'application/json' },
             body: JSON.stringify({ focuschrist_page: test.page, focuschrist_profile: test.profile,
                 messages: messages || [{ role: 'user', content: test.question }] }), signal: controller.signal,
         });
-        const elapsedMs = Math.round(performance.now() - started);
+        responseStatus = response.status;
+        stage = 'response-body';
+        const headersElapsedMs = Math.round(performance.now() - started);
         const payload = await response.json();
+        stage = 'response-processing';
         const answer = String(payload?.choices?.[0]?.message?.content || '').trim();
         const sources = Array.isArray(payload.focuschrist_sources) ? payload.focuschrist_sources : [];
         return {
-            id: test.id, question: test.question, status: response.status, elapsedMs, answer,
+            id: test.id, question: test.question, status: response.status, headersElapsedMs, answer,
             gatewayMode: String(payload.focuschrist_gateway_mode || ''), policyVersion: String(payload.focuschrist_source_policy || ''),
             verifierRoute: String(payload.focuschrist_verifier_route || ''), resolvedProfile: String(payload.focuschrist_resolved_profile || ''),
             classificationMode: String(payload.focuschrist_classification_mode || ''), retrievalRoute: String(payload.focuschrist_retrieval_route || ''),
@@ -166,7 +172,22 @@ async function submit(test, messages = null) {
             namedGospelTopic: payload.focuschrist_named_gospel_topic === true,
             publicationFailure: String(payload.focuschrist_verifier_publication_failure || ''),
             reviewedRecovery: String(payload.focuschrist_reviewed_deterministic_recovery || ''),
+            elapsedMs: Math.round(performance.now() - started),
         };
+    } catch (cause) {
+        const error = new Error(cause?.message || String(cause), { cause });
+        error.name = cause?.name || 'Error';
+        error.matrixDiagnostic = {
+            elapsedMs: Math.round(performance.now() - started),
+            error: error.name,
+            failureKind: clientDeadlineExpired ? 'client-deadline'
+                : stage === 'request' ? 'request-error'
+                : stage === 'response-body' ? 'response-body-error' : 'response-processing-error',
+            failureStage: stage,
+            clientDeadlineExpired,
+            ...(responseStatus === undefined ? {} : { status: responseStatus }),
+        };
+        throw error;
     } finally { clearTimeout(timer); }
 }
 
@@ -179,6 +200,7 @@ function validate(test, result) {
 }
 
 function validateResult(test, result) {
+    assert(!result.failureKind, test.id + ' failed at ' + result.failureStage + ': ' + result.failureKind + ' after ' + result.elapsedMs + 'ms');
     assert(result.status === 200, test.id + ' returned HTTP ' + result.status);
     assert(result.policyVersion === POLICY_VERSION, test.id + ' returned Worker policy ' + result.policyVersion);
     assert(result.elapsedMs <= HARD_LIMIT_MS, test.id + ' exceeded the 25-second visitor ceiling');
@@ -341,14 +363,14 @@ async function runSequential(tests) {
             const result = await submit(tests[index]); results.push(result);
             console.log(JSON.stringify({ ...result, answer: undefined }));
         } catch (error) {
-            results.push({ id: tests[index].id, question: tests[index].question, elapsedMs: HARD_LIMIT_MS + 1000, error: error.name || error.message });
+            results.push({ id: tests[index].id, question: tests[index].question, ...error.matrixDiagnostic, error: error.name || error.message });
             console.log(JSON.stringify(results.at(-1)));
         }
     }
     return results;
 }
 
-if (process.argv.includes('--definition-check')) {
+if (require.main === module && process.argv.includes('--definition-check')) {
     console.log('Live AI response matrix definition PASS: ' + JSON.stringify({
         core: rounds.flat().length,
         holdouts: Object.fromEntries(['scripture', 'doctrine', 'pioneer', 'church-history']
@@ -359,7 +381,9 @@ if (process.argv.includes('--definition-check')) {
     process.exit(0);
 }
 
-(async () => {
+module.exports = { submit, runSequential, validateResult, HARD_LIMIT_MS };
+
+if (require.main === module) (async () => {
     await waitForDeployedPolicy();
     const selectedRounds = BASELINE_MODE ? rounds.slice(0, 1) : rounds;
     const results = [];
