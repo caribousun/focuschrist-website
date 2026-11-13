@@ -20,7 +20,7 @@
  *   source (no empty group);
  * - no source is lost and none is invented.
  *
- * Usage: node tools/answer_bank_citation_rendering_runtime_qa.js [askHtmlPath] [--report]
+ * Usage: node tools/answer_bank_current_citation_runtime_qa.js [askHtmlPath] [--report]
  * With --report, violations are counted and printed instead of failing
  * (used to census a base tree). The flagged record
  * ask-what-do-latter-day-saints-believe-about-jesus-christ is probed
