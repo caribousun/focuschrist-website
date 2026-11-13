@@ -90,8 +90,12 @@ class DisplayDelivery(unittest.TestCase):
             import json
             record=json.loads((ROOT/'docs/image-delivery-20261019.json').read_text())
             record['reviews']=[]
-            with patch.object(delivery.json,'loads',return_value=record),self.assertRaisesRegex(ValueError,'three actual finished reviewers required'):
-                delivery.validate(ROOT,paths,set())
+            from answer_bank_cache_compatibility import historical_check_view
+            # Reach the original missing-review assertion using its validated
+            # historical context, not today's unrelated later card/search edits.
+            with historical_check_view(include_watch=True,include_search=True) as (view, _):
+                with patch.object(delivery.json,'loads',return_value=record),self.assertRaisesRegex(ValueError,'three actual finished reviewers required'):
+                    delivery.validate(view,paths,set())
 
     def test_unknown_extra_raster_cannot_gain_display_coverage(self):
         paths={r['path'] for r in delivery.ASSETS}
