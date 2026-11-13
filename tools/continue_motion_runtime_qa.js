@@ -3,6 +3,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),http=require('node:http');
 const {chromium}=require(process.env.QA_PLAYWRIGHT_MODULE||'playwright'),root=path.resolve(__dirname,'..');
 const out=path.join(root,'.qa-artifacts/continue-motion');
+const {waitForFrameCadence}=require('./continue_motion_sampling');
 (async()=>{
  const server=http.createServer((req,res)=>{
   const url=new URL(req.url,'http://localhost'),file=path.resolve(root,'.'+decodeURIComponent(url.pathname==='/'?'/index.html':url.pathname));
@@ -23,13 +24,20 @@ const out=path.join(root,'.qa-artifacts/continue-motion');
     const cue=page.locator('a.fc-unified-continue:visible,a.fc-scroll-cue:visible,a.fc-mobile-scroll-cue:visible,a.timeline-opening-continue:visible,a.scrollcue:visible').first();
     assert(await cue.count(),route+': real visible Continue cue required');
     await cue.scrollIntoViewIfNeeded();
+    // Preserve startup cadence as diagnostics. This tests motion once the
+    // browser can sample frames, not the quality of startup responsiveness.
+    let readiness;
+    try{readiness=await waitForFrameCadence(page);}catch(error){
+     fs.writeFileSync(path.join(out,'readiness-'+width+'-'+route.replace(/[^a-z0-9]+/gi,'-')+'.json'),JSON.stringify({route,width,status:'sampling-unavailable',message:error.message,readiness:error.readiness||null},null,2));
+     throw error;
+    }
     const href=await cue.getAttribute('href'),initial=await page.evaluate(()=>scrollY);
     // Actionability waits precede the real click. Start the clock at dispatch so
     // a busy runner cannot consume the animation/settling measurement window.
     await cue.evaluate(node=>node.addEventListener('click',()=>{window.qaMotion=[];const start=performance.now();function tick(){qaMotion.push([performance.now()-start,scrollY]);if(performance.now()-start<1350)requestAnimationFrame(tick)}requestAnimationFrame(tick)},{capture:true,once:true}));
     await cue.click();await page.waitForTimeout(1450);
     const samples=await page.evaluate(()=>qaMotion),positions=new Set(samples.map(x=>Math.round(x[1])));
-    const trace={route,width,initial,samples};
+    const trace={route,width,initial,readiness,samples};
     fs.writeFileSync(path.join(out,'trace-'+width+'-'+route.replace(/[^a-z0-9]+/gi,'-')+'.json'),JSON.stringify(trace,null,2));
     assert(positions.size>4,route+': actual intermediate Continue positions required');
     const plateau=samples.filter(([time])=>time>=850);

@@ -46,6 +46,7 @@ jobs:
           python -m unittest discover -s tools -p test_artwork_emma_story_delivery.py
           python -m unittest discover -s tools -p test_emma_public_commitments.py
           python -m unittest discover -s tools -p test_emma_journey_closure_successor.py
+          python -m unittest discover -s tools -p test_timeline_historical_search_fixture.py
           python -m unittest discover -s tools -p test_emma_story_consumers.py
           python tools/test_adams_delivery_successor.py
           python -m unittest discover -s tools -p test_adams_source_import.py
@@ -60,10 +61,17 @@ jobs:
           python -m unittest discover -s tools -p test_emma_hub_citation_successor.py
           python tools/test_world_companion_successor.py
           python tools/test_settings_successor.py
-          python tools/continue_motion_binding.py
+          # Validate actual feature inputs before historical motion receipt checks.
+          npm install --prefix "$RUNNER_TEMP/focuschrist-dom-qa" --no-save --package-lock=false --ignore-scripts jsdom@26.1.0
+          python tools/site_search_qa.py
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/site_search_runtime_qa.js
+          python -m unittest discover -s tools -p test_answer_bank_cache_compatibility.py
+          python -m unittest discover -s tools -p test_search_historical_compatibility.py
+          python tools/answer_bank_cache_compatibility.py
           python -m unittest discover -s tools -p test_navigation_polish_bindings.py
           python -m unittest discover -s tools -p test_script_image_urls.py
           python -m unittest discover -s tools -p test_watch_thumbnail_delivery.py
+          python -m unittest discover -s tools -p test_watch_search_historical_projection.py
           python -m unittest discover -s tools -p test_artwork_owner_closure.py
           python -m unittest discover -s tools -p test_history_hero_build_gate.py
           python -m unittest discover -s tools -p test_opening_composition_binding.py

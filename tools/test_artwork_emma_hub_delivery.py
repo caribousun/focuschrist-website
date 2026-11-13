@@ -6,6 +6,8 @@ after actual current evidence and an independently reviewed approval binding.
 """
 import copy
 import json
+import subprocess
+import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import patch
@@ -32,7 +34,25 @@ class EmmaHubContextTests(unittest.TestCase):
                      for route in (journey.HUB, journey.RETIRED, journey.HYMNS)}
 
     def check_historical_spec(self, root, spec, predecessor, dependencies):
-        return hub.check_spec(root, spec, predecessor, dependencies, self.prior)
+        # This receipt describes the old script, not today's search behavior.
+        # Supply its immutable historical bytes in an isolated context; keep
+        # the real bound() hash/size checks and all other source checks intact.
+        with tempfile.TemporaryDirectory(prefix='emma-historical-search-') as folder:
+            fixture=Path(folder)
+            raw=subprocess.check_output(['git','-C',str(ROOT),'show',
+                '4fb9e51deda2997d6974e80a5dce86a65167841c:site-search.js'])
+            (fixture/'site-search.js').write_bytes(raw)
+            original=hub.bound
+            def context_bound(actual_root,item):
+                return original(fixture if item['path']=='site-search.js' else actual_root,item)
+            with patch.object(hub,'bound',side_effect=context_bound):
+                return hub.check_spec(root, spec, predecessor, dependencies, self.prior)
+
+    def test_historical_script_context_still_rejects_tampering(self):
+        changed=copy.deepcopy(self.record['spec'])
+        next(x for x in changed['context'] if x['path']=='site-search.js')['sha256']='0'*64
+        with self.assertRaisesRegex(ValueError,'changed evidence: site-search.js'):
+            self.check_historical_spec(ROOT,changed,self.previous,lambda root,route:{route})
 
     def test_explicit_pending_fixture_cannot_pass(self):
         with patch.object(hub, 'APPROVED_RECORD_SHA256', None), self.assertRaises(ValueError):

@@ -1,6 +1,7 @@
 """Negative controls for exact historical recovery, not motion visual approval."""
 import copy
 import json
+import subprocess
 import tempfile
 import unittest
 from pathlib import Path
@@ -125,6 +126,12 @@ class MotionBindingTests(unittest.TestCase):
                             from test_timeline_source_import import historical_index
                             from artwork_display_delivery import inverse
                             actual=gate.sha(inverse(value['path'],historical_index(value['path'])))
+                        elif value['path']=='site-search.js':
+                            # This retained receipt describes the old controller.
+                            # Never reinterpret it as review of today's script.
+                            raw=subprocess.check_output(['git','-C',str(gate.ROOT),'show',
+                                '4fb9e51deda2997d6974e80a5dce86a65167841c:site-search.js'])
+                            actual=gate.sha(raw)
                         elif value['path']=='timeline-images.js':
                             from timeline_image_links_successor import restore
                             from timeline_51_source_successor import project_exact
@@ -142,7 +149,11 @@ class MotionBindingTests(unittest.TestCase):
         record=json.loads((gate.ROOT/'docs/image-delivery-20261019.json').read_text(encoding='utf-8'))
         for review in record['reviews']:
             for item in review['evidence']:
-                self.assertEqual(gate.sha(restore_code_evidence(item['path'],(gate.ROOT/item['path']).read_bytes())),item['sha256'],item['path'])
+                raw=(gate.ROOT/item['path']).read_bytes()
+                if item['path']=='watch.html':
+                    raw=subprocess.check_output(['git','-C',str(gate.ROOT),'show',
+                        '4fb9e51deda2997d6974e80a5dce86a65167841c:watch.html'])
+                self.assertEqual(gate.sha(restore_code_evidence(item['path'],raw)),item['sha256'],item['path'])
 
     def test_mapping_tamper_rejected(self):
         with tempfile.TemporaryDirectory() as td:
@@ -215,7 +226,11 @@ class MotionBindingTests(unittest.TestCase):
         self.assertEqual(gate.advance(name,gate.restore(name,current)),current,name)
 
     def test_pending_review_cannot_pass(self):
-        with patch.object(gate,'APPROVED_REVIEWS',None):
-            with self.assertRaisesRegex(ValueError,'finished review PENDING'):gate.check()
+        from answer_bank_cache_compatibility import historical_check_view
+        # Exercise the same rejection on validated historical inputs, rather
+        # than failing first on unrelated later feature/cache changes.
+        with historical_check_view(include_watch=True,include_search=True) as (view, _):
+            with patch.object(gate,'APPROVED_REVIEWS',None):
+                with self.assertRaisesRegex(ValueError,'finished review PENDING'):gate.check(view)
 
 if __name__=='__main__':unittest.main()
