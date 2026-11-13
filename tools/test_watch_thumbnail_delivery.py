@@ -2,6 +2,7 @@
 import copy
 import json
 import hashlib
+import importlib.util
 import shutil
 import subprocess
 import tempfile
@@ -80,17 +81,27 @@ class BednarWatchDelivery(unittest.TestCase):
         self.folder = self.enterContext(tempfile.TemporaryDirectory())
         self.root = Path(self.folder) / 'site'
         shutil.copytree(ROOT, self.root, ignore=shutil.ignore_patterns('.git', '.qa-artifacts', '__pycache__'))
-        from artwork_display_delivery import inverse
         for item in self.record['spec']['context']:
             name = item['path']
             raw = subprocess.check_output(['git', '-C', str(ROOT), 'show',
-                '4fb9e51deda2997d6974e80a5dce86a65167841c:' + name])
-            raw = inverse(name, raw)
+                'b283b3f834d5a99697aabf6d0ccd674513e9c20e:' + name])
             self.assertEqual(hashlib.sha256(raw).hexdigest(), item['sha256'])
             (self.root / name).write_bytes(raw)
+        # Keep the original producer with the original output, not today's
+        # changed card presentation. Its actual checks are retained verbatim.
+        raw = subprocess.check_output(['git', '-C', str(ROOT), 'show',
+            'b283b3f834d5a99697aabf6d0ccd674513e9c20e:tools/build_watch_shorts.py'])
+        self.assertEqual(hashlib.sha256(raw).hexdigest(),
+            'def2ae7296dc49009b924b717764c83929f6737b9715729a4c31f8c94d6ffa59')
+        producer = self.root / 'tools/build_watch_shorts.py'
+        producer.write_bytes(raw)
+        spec = importlib.util.spec_from_file_location('historical_bednar_producer', producer)
+        self.producer = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(self.producer)
 
     def run_record(self, record):
-        return bednar.validate(self.root, record, canonical(record['spec']), {bednar.ASSET}, set(), set(), pixel_hash, page_dependencies)
+        with patch.object(bednar, 'render', self.producer.render):
+            return bednar.validate(self.root, record, canonical(record['spec']), {bednar.ASSET}, set(), set(), pixel_hash, page_dependencies)
 
     def test_historical_exact_delivery_passes(self):
         assets, hashes, pixels = self.run_record(self.record)
