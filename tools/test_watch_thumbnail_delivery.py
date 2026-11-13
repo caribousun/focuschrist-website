@@ -1,6 +1,9 @@
 """Exact positive coverage and targeted rejection cases for the approved cover."""
 import copy
 import json
+import hashlib
+import shutil
+import subprocess
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -72,15 +75,34 @@ class WatchThumbnailDelivery(unittest.TestCase):
 class BednarWatchDelivery(unittest.TestCase):
     def setUp(self):
         self.record = json.loads((ROOT / 'docs/watch-bednar/delivery.json').read_text(encoding='utf8'))
+        # This receipt predates the Wilcox card. Test its original context in
+        # an isolated fixture; current Watch is tested by its real generator.
+        self.folder = self.enterContext(tempfile.TemporaryDirectory())
+        self.root = Path(self.folder) / 'site'
+        shutil.copytree(ROOT, self.root, ignore=shutil.ignore_patterns('.git', '.qa-artifacts', '__pycache__'))
+        from artwork_display_delivery import inverse
+        for item in self.record['spec']['context']:
+            name = item['path']
+            raw = subprocess.check_output(['git', '-C', str(ROOT), 'show',
+                '4fb9e51deda2997d6974e80a5dce86a65167841c:' + name])
+            raw = inverse(name, raw)
+            self.assertEqual(hashlib.sha256(raw).hexdigest(), item['sha256'])
+            (self.root / name).write_bytes(raw)
 
     def run_record(self, record):
-        return bednar.validate(ROOT, record, canonical(record['spec']), {bednar.ASSET}, set(), set(), pixel_hash, page_dependencies)
+        return bednar.validate(self.root, record, canonical(record['spec']), {bednar.ASSET}, set(), set(), pixel_hash, page_dependencies)
 
-    def test_current_exact_delivery_passes(self):
+    def test_historical_exact_delivery_passes(self):
         assets, hashes, pixels = self.run_record(self.record)
         self.assertEqual(assets, {bednar.ASSET})
         self.assertEqual(hashes, {bednar.ASSET_SHA256})
         self.assertEqual(len(pixels), 1)
+
+    def test_historical_context_change_rejected(self):
+        p = self.root / "docs/watch-shorts.json"
+        p.write_bytes(p.read_bytes() + b" ")
+        with self.assertRaisesRegex(ValueError, "changed evidence: docs/watch-shorts.json"):
+            self.run_record(self.record)
 
     def test_changed_source_and_destination_rejected(self):
         for field, value, error in [('video_id', 'AGS45Fd9nmE', 'wrong Bednar destination'), ('route', 'index.html', 'wrong Bednar destination')]:
