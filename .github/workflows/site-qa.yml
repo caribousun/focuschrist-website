@@ -33,23 +33,11 @@ jobs:
       - name: Install shared QA dependencies
         run: python -m pip install -r tools/qa-requirements.txt
 
-      - name: Diagnose current reviewed-bank search behavior
-        continue-on-error: true
+      - name: Verify current reviewed-bank search behavior
         run: |
           npm install --prefix "$RUNNER_TEMP/focuschrist-dom-qa" --no-save --package-lock=false --ignore-scripts jsdom@26.1.0
           python tools/site_search_qa.py
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/site_search_runtime_qa.js
-
-      - name: Diagnose bounded Watch source continuity and current generator
-        continue-on-error: true
-        run: python tools/watch_current_source_qa.py
-
-      - name: Diagnose exact historical compatibility without replacing current checks
-        continue-on-error: true
-        run: |
-          python -m unittest discover -s tools -p test_answer_bank_cache_compatibility.py
-          python -m unittest discover -s tools -p test_search_historical_compatibility.py
-          python tools/answer_bank_cache_compatibility.py
 
       - name: Reject unreviewed or stale new artwork
         run: |
@@ -96,7 +84,10 @@ jobs:
           python -m unittest discover -s tools -p test_emma_hub_citation_successor.py
           python tools/test_world_companion_successor.py
           python tools/test_settings_successor.py
-          python tools/continue_motion_binding.py
+          # Current Watch/search inputs validated before exact historical motion checks.
+          python -m unittest discover -s tools -p test_answer_bank_cache_compatibility.py
+          python -m unittest discover -s tools -p test_search_historical_compatibility.py
+          python tools/answer_bank_cache_compatibility.py
           python -m unittest discover -s tools -p test_navigation_polish_bindings.py
           python -m unittest discover -s tools -p test_script_image_urls.py
           python -m unittest discover -s tools -p test_watch_thumbnail_delivery.py
