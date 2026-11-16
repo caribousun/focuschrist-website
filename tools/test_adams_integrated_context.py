@@ -2,6 +2,7 @@
 import copy
 import hashlib
 import json
+import subprocess
 from pathlib import Path
 import tempfile
 import unittest
@@ -23,6 +24,11 @@ class IntegratedContextTests(unittest.TestCase):
             # CSS must pass the strict successor before projecting its old prefix.
             if item['path'] in (successor.CSS['path'], 'timeline.html'):
                 raw = successor.historical_reader(ROOT,item)
+            elif item['path'] == 'site-search.js':
+                # The immutable receipt predates today's search controller.
+                # Retain exact size/hash assertions below on this isolated input.
+                raw = subprocess.check_output(['git','-C',str(ROOT),'show',
+                    '4fb9e51deda2997d6974e80a5dce86a65167841c:site-search.js'])
             elif item['path'] == 'timelines/adams-1881-chart.html':
                 raw = gate.bound(ROOT,item)
             else:
@@ -103,6 +109,10 @@ class IntegratedContextTests(unittest.TestCase):
     def test18_changed_shared_dependency(self):
         p=self.root/self.spec['shared_dependencies'][0]['path'];p.write_bytes(p.read_bytes()+b' ')
         with self.assertRaises(ValueError):gate.validate_context(self.root,self.spec)
+    def test20_changed_historical_search_dependency(self):
+        p=self.root/'site-search.js';p.write_bytes(p.read_bytes()+b' ')
+        with self.assertRaises(ValueError):gate.validate_context(self.root,self.spec)
+
     def test19_symlink_shared_dependency(self):
         p=self.root/self.spec['shared_dependencies'][0]['path'];target=self.root/'shared-copy';target.write_bytes(p.read_bytes());p.unlink();p.symlink_to(target)
         with self.assertRaises(ValueError):gate.validate_context(self.root,self.spec)

@@ -1,6 +1,10 @@
 """Exact positive coverage and targeted rejection cases for the approved cover."""
 import copy
 import json
+import hashlib
+import importlib.util
+import shutil
+import subprocess
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -72,15 +76,44 @@ class WatchThumbnailDelivery(unittest.TestCase):
 class BednarWatchDelivery(unittest.TestCase):
     def setUp(self):
         self.record = json.loads((ROOT / 'docs/watch-bednar/delivery.json').read_text(encoding='utf8'))
+        # This receipt predates the Wilcox card. Test its original context in
+        # an isolated fixture; current Watch is tested by its real generator.
+        self.folder = self.enterContext(tempfile.TemporaryDirectory())
+        self.root = Path(self.folder) / 'site'
+        shutil.copytree(ROOT, self.root, ignore=shutil.ignore_patterns('.git', '.qa-artifacts', '__pycache__'))
+        for item in self.record['spec']['context']:
+            name = item['path']
+            raw = subprocess.check_output(['git', '-C', str(ROOT), 'show',
+                'b283b3f834d5a99697aabf6d0ccd674513e9c20e:' + name])
+            self.assertEqual(hashlib.sha256(raw).hexdigest(), item['sha256'])
+            (self.root / name).write_bytes(raw)
+        # Keep the original producer with the original output, not today's
+        # changed card presentation. Its actual checks are retained verbatim.
+        raw = subprocess.check_output(['git', '-C', str(ROOT), 'show',
+            'b283b3f834d5a99697aabf6d0ccd674513e9c20e:tools/build_watch_shorts.py'])
+        self.assertEqual(hashlib.sha256(raw).hexdigest(),
+            'def2ae7296dc49009b924b717764c83929f6737b9715729a4c31f8c94d6ffa59')
+        producer = self.root / 'tools/build_watch_shorts.py'
+        producer.write_bytes(raw)
+        spec = importlib.util.spec_from_file_location('historical_bednar_producer', producer)
+        self.producer = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(self.producer)
 
     def run_record(self, record):
-        return bednar.validate(ROOT, record, canonical(record['spec']), {bednar.ASSET}, set(), set(), pixel_hash, page_dependencies)
+        with patch.object(bednar, 'render', self.producer.render):
+            return bednar.validate(self.root, record, canonical(record['spec']), {bednar.ASSET}, set(), set(), pixel_hash, page_dependencies)
 
-    def test_current_exact_delivery_passes(self):
+    def test_historical_exact_delivery_passes(self):
         assets, hashes, pixels = self.run_record(self.record)
         self.assertEqual(assets, {bednar.ASSET})
         self.assertEqual(hashes, {bednar.ASSET_SHA256})
         self.assertEqual(len(pixels), 1)
+
+    def test_historical_context_change_rejected(self):
+        p = self.root / "docs/watch-shorts.json"
+        p.write_bytes(p.read_bytes() + b" ")
+        with self.assertRaisesRegex(ValueError, "changed evidence: docs/watch-shorts.json"):
+            self.run_record(self.record)
 
     def test_changed_source_and_destination_rejected(self):
         for field, value, error in [('video_id', 'AGS45Fd9nmE', 'wrong Bednar destination'), ('route', 'index.html', 'wrong Bednar destination')]:

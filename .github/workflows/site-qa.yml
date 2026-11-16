@@ -33,6 +33,12 @@ jobs:
       - name: Install shared QA dependencies
         run: python -m pip install -r tools/qa-requirements.txt
 
+      - name: Verify current reviewed-bank search behavior
+        run: |
+          npm install --prefix "$RUNNER_TEMP/focuschrist-dom-qa" --no-save --package-lock=false --ignore-scripts jsdom@26.1.0
+          python tools/site_search_qa.py
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/site_search_runtime_qa.js
+
       - name: Reject unreviewed or stale new artwork
         run: |
           python -m unittest discover -s tools -p test_artwork_creation_gate.py
@@ -40,6 +46,7 @@ jobs:
           python -m unittest discover -s tools -p test_artwork_emma_journey_retained.py
           python -m unittest discover -s tools -p test_emma_journey_release_review.py
           python -m unittest discover -s tools -p test_emma_journey_closure_successor.py
+          python -m unittest discover -s tools -p test_timeline_historical_search_fixture.py
           # New journey source and synthetic contract tests; not release approval.
           python -m unittest discover -s tools -p test_owner_journey_integration.py
           python -m unittest discover -s tools -p test_artwork_emma_journey_delivery.py
@@ -77,11 +84,15 @@ jobs:
           python -m unittest discover -s tools -p test_emma_hub_citation_successor.py
           python tools/test_world_companion_successor.py
           python tools/test_settings_successor.py
-          python tools/continue_motion_binding.py
+          # Current Watch/search inputs validated before exact historical motion checks.
+          python -m unittest discover -s tools -p test_answer_bank_cache_compatibility.py
+          python -m unittest discover -s tools -p test_search_historical_compatibility.py
+          python tools/answer_bank_cache_compatibility.py
           python -m unittest discover -s tools -p test_navigation_polish_bindings.py
           python -m unittest discover -s tools -p test_script_image_urls.py
           python -m unittest discover -s tools -p test_watch_thumbnail_delivery.py
           python tools/run_current_mixed_regressions.py --display-only
+          python -m unittest discover -s tools -p test_watch_search_historical_projection.py
           python -m unittest discover -s tools -p test_artwork_owner_closure.py
           python -m unittest discover -s tools -p test_history_hero_build_gate.py
           python -m unittest discover -s tools -p test_opening_composition_binding.py
@@ -618,7 +629,7 @@ jobs:
       - name: Verify standalone Timeline experiences at desktop, phone, and enlarged text
         run: NODE_PATH=/tmp/focus-timeline-qa/node_modules node tools/timeline_runtime_qa.js
       - name: Verify Continue-only animated scrolling in the browser
-        run: NODE_PATH=/tmp/focus-timeline-qa/node_modules node tools/continue_motion_runtime_qa.js
+        run: node tools/test_continue_motion_sampling.js && NODE_PATH=/tmp/focus-timeline-qa/node_modules node tools/continue_motion_runtime_qa.js
       - name: Verify World alphabetical lists, reading links and playback
         run: NODE_PATH=/tmp/focus-timeline-qa/node_modules node tools/world_refinement_runtime_qa.js
       - name: Record World map provider diagnostics (visual review required)

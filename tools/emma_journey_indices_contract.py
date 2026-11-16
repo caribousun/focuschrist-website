@@ -115,6 +115,9 @@ def validate_full_tree(root,baseline):
  from timeline_search_index_successor import AFTER as TIMELINE_SEARCH, restore as restore_timeline_search, sha
  raw=(root/'site-search-index.json').read_bytes()
  from timeline_51_search_successor import AFTER as EVENT_SEARCH, restore as restore_event_search
+ from watch_search_historical_projection import AFTER as WATCH_SEARCH, restore as restore_watch_search
+ if sha(raw)==WATCH_SEARCH:
+  raw=restore_watch_search(raw,root)  # Only three Watch text rows; not a renewed review.
  if sha(raw)==EVENT_SEARCH:
   raw=restore_event_search(raw,root)  # Exact historical projection; actual producer already checked above.
  if sha(raw)==TIMELINE_SEARCH:

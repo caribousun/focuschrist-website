@@ -27,7 +27,7 @@ class SelectionTests(unittest.TestCase):
         self.assertFalse(ids.intersection(runner.HISTORICAL_ONLY))
         self.assertEqual(len(ids)+len(historical),len(all_tests))
     def test_display_split_keeps_current_pixel_review_and_tamper_checks(self):
-        all_tests=list(runner.flatten(unittest.defaultTestLoader.loadTestsFromNames(('test_display_delivery',))))
+        all_tests=list(runner.flatten(unittest.defaultTestLoader.loadTestsFromNames(('test_display_delivery_current',))))
         current,historical=runner.partition(all_tests,runner.DISPLAY_HISTORICAL_ONLY)
         ids={test.id() for test in current}
         self.assertEqual(set(historical),runner.DISPLAY_HISTORICAL_ONLY)
@@ -37,7 +37,7 @@ class SelectionTests(unittest.TestCase):
                        'test_missing_actual_finished_reviews_blocks_release',
                        'test_unknown_extra_raster_cannot_gain_display_coverage',
                        'test_extra_edits_near_matches_and_duplicate_deltas_are_not_normalized'):
-            self.assertIn('test_display_delivery.DisplayDelivery.'+suffix,ids)
+            self.assertIn('test_display_delivery_current.DisplayDelivery.'+suffix,ids)
         self.assertEqual(len(ids)+len(historical),len(all_tests))
     def test_new_test_is_current_by_default(self):
         tests=[Dummy(n) for n in runner.HISTORICAL_ONLY]+[Dummy('future.NewTest.test_new')]

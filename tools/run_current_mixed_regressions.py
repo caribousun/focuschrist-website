@@ -24,9 +24,9 @@ HISTORICAL_ONLY = frozenset({
     'test_timeline_source_import.TimelineImportTests.test_exact_search_route_inverse_restores_frozen_predecessor',
 })
 DISPLAY_HISTORICAL_ONLY = frozenset({
-    'test_display_delivery.DisplayDelivery.test_gallery_builder_inverse_rejects_unknown_changes_and_other_paths',
-    'test_display_delivery.DisplayDelivery.test_search_inverse_is_single_reviewed_phrase_and_rejects_other_changes',
-    'test_display_delivery.DisplayDelivery.test_exact_consumer_inverse_restores_original_binding',
+    'test_display_delivery_current.DisplayDelivery.test_gallery_builder_inverse_rejects_unknown_changes_and_other_paths',
+    'test_display_delivery_current.DisplayDelivery.test_search_inverse_is_single_reviewed_phrase_and_rejects_other_changes',
+    'test_display_delivery_current.DisplayDelivery.test_exact_consumer_inverse_restores_original_binding',
 })
 
 def flatten(suite):
@@ -50,7 +50,7 @@ def partition(tests, historical_only=HISTORICAL_ONLY):
 
 def main():
     display_only = '--display-only' in sys.argv
-    modules = ('test_display_delivery',) if display_only else MODULES
+    modules = ('test_display_delivery_current',) if display_only else MODULES
     historical_only = DISPLAY_HISTORICAL_ONLY if display_only else HISTORICAL_ONLY
     tests = list(flatten(unittest.defaultTestLoader.loadTestsFromNames(modules)))
     current, historical = partition(tests, historical_only)

@@ -43,14 +43,16 @@ class PublicClosureProjectionTests(unittest.TestCase):
   import timeline_current_index_closure as timeline
   import timeline_search_index_successor as search
   import timeline_51_search_successor as events
-  current=(ROOT/'site-search-index.json').read_bytes()
+  from timeline_historical_search_fixture import historical_search_root
+  fixture=self.enterContext(historical_search_root(ROOT))
+  current=(fixture/'site-search-index.json').read_bytes()
   # Reconstruct each exact predecessor in order; neither successor accepts
   # unknown current bytes, even in this synthetic owner-condition test.
   with self.assertRaisesRegex(ValueError,'Unreviewed event search index'):
-   events.restore(current+b' ')
+   events.restore(current+b' ',fixture)
   with patch.object(events,'MANIFEST_SHA','0'*64),self.assertRaisesRegex(ValueError,'Changed event search delta manifest'):
-   events.restore(current)
-  previous=search.restore(events.restore(current))
+   events.restore(current,fixture)
+  previous=search.restore(events.restore(current,fixture),fixture)
   # Synthetic injection exercises the historical owner checks; the separate
   # current-index tests require real evidence before the actual gate can pass.
   self.enterContext(patch.object(timeline,'prepare',return_value={'historical_search':previous}))
