@@ -583,6 +583,7 @@ jobs:
         run: |
           node --check tools/live_ai_response_matrix.js
           node tools/live_ai_capacity_contract.test.js
+          node tools/live_ai_error_diagnostics.test.js
 
       - name: Validate generated Church source index JavaScript
         run: node --check groq-proxy/src/church-source-index.js
