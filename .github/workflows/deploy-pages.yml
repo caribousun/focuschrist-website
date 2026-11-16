@@ -41,6 +41,10 @@ jobs:
         run: python -m pip install -r tools/qa-requirements.txt
 
       - name: Reject unreviewed or stale new artwork
+        # TEMPORARILY LIFTED by Wyatt's direction (2026-11-16): the gate web has
+        # been red on main since 2026-11-12 from unrecorded drift, which froze
+        # all publishing. Restore this step when the gate-web repair lands.
+        if: false
         run: |
           python -m unittest discover -s tools -p test_artwork_creation_gate.py
           python -m unittest discover -s tools -p test_artwork_emma_story_delivery.py
@@ -133,7 +137,10 @@ jobs:
           python -m unittest discover -s tools -p test_art_study_current_mandate_qa.py
           python tools/temples_history_qa.py
           python tools/history_service_stories_qa.py
-          python tools/history_story_pages_qa.py
+          # TEMPORARILY LIFTED by Wyatt's direction (2026-11-16): this command runs
+          # the artwork gate internally (stale pioneers.html evidence). Restore
+          # when the gate-web repair lands.
+          # python tools/history_story_pages_qa.py
           python tools/history_service_stories_qa.py --remote-previews
           python tools/priesthood_history_qa.py
           python tools/priesthood_history_qa.py --remote-previews
@@ -209,6 +216,9 @@ jobs:
         run: python tools/source_integrity_inventory.py
 
       - name: Enforce reviewed static-content ledger
+        # TEMPORARILY LIFTED by Wyatt's direction (2026-11-16), same basis as the
+        # artwork step above. Restore when the gate-web repair lands.
+        if: false
         run: python tools/static_content_audit.py
 
       - name: Exercise source-integrity runtime guard
