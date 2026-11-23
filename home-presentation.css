@@ -3,7 +3,8 @@ body.fc-home-presentation main { overflow-wrap: anywhere; }
 body.fc-home-presentation main > .fc-section:not(.fc-page-intro) {
     padding-block: clamp(28px, 4vw, 48px);
 }
-body.fc-home-presentation .fc-home-journey { padding-top: 20px; }
+body.fc-home-presentation main > .fc-section.fc-home-journey { padding-top: 12px; }
+body.fc-home-presentation .fc-unified-opening-continuation { padding-block: 10px; }
 body.fc-home-presentation .fc-home-journey .fc-home-featured-art--invitation {
     margin-bottom: 20px !important;
 }
