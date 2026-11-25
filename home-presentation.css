@@ -124,3 +124,8 @@ body.fc-home-presentation .fc-home-purpose-paths { margin-top: 24px; }
 body.fc-home-presentation .fc-home-hero::before {
     background-image: url("assets/heroes/home-christ-signature-approved-20260907-display.webp");
 }
+
+/* Home invitation artwork: show the full phone portrait on small screens (2026-11-24) */
+@media (max-width: 700px) {
+  body.fc-home-presentation .fc-home-featured-art--invitation img { aspect-ratio: 1122 / 1402; }
+}
